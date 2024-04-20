@@ -13,3 +13,4 @@ Downloads most recent translation files from this git.
 
 **Notes**
 - If you'd like to contribute to any of these translation files, fork the project and make a pull request with your edits!
+- GitHub has a 5 minute cache on most recent commits. If a recent commit is less than that time the changes will not be downloaded.
