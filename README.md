@@ -13,4 +13,3 @@ Downloads most recent translation files from this git.
 
 **Notes**
 - If you'd like to contribute to any of these translation files, fork the project and make a pull request with your edits!
-- If you'd like to be an approver a specific language edits please @Jay-Jay in the P5X Worldwide Discord!
