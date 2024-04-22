@@ -92,8 +92,10 @@ sr:"(.*?) <color\=#0F69CB>Lv.(\d+)</color>"=$1 <color\=#0F69CB>Lv.$2</color>
 부후라=Bufula
 부후다인=Bufudyne
 마하부후=Mabufu
+마하부흐=Mabufu
 마하부후라=Mabufula
 마하부후다인=Mabufudyne
+마하부흐다인=Mabufudyne
 다이아몬드 더스트=Diamond Dust
 아기=Agi
 아기라오=Agilao
@@ -167,6 +169,51 @@ sr:"(.*?) <color\=#0F69CB>Lv.(\d+)</color>"=$1 <color\=#0F69CB>Lv.$2</color>
 리캄=Recarm
 사마리캄=Samarecarm
 리캄드라=Recarmdra
+
+++++ ----- Common Combat Phrases ----- ++++
+전투 설정=Battle Settings
+방어=Defense
+근접 공격=Melee Attacks
+페르소나 전환=Switching Personas
+페르소나=Personas
+총기=Firearms
+총공격=All-Out-Attack
+서포트=Support
+자동 전투=Auto-Battle
+가속=Fast-Forward
+감전=Electric Shock
+스킬 효과=Skill Effects
+상태 정보=Status Information
+공격력 감소=Attack Reduction
+총격 단일= Single-Target Shot
+특공=Special Attacks
+크리티컬 확률=Critical Rate
+크리티컬 효과=Critical Damage
+SP 회복=SP Recovery Bonus
+효과 명중=Effect Hit Rate Bonus
+효과 저항=Effect Resist Bonus
+치료 효과=Outgoing Healing Bonus
+받는 치료 효과=Incoming Healing Bonus
+실드 효과=Outgoing Shield Bonus
+받는 실드 효과=Incoming Shield Bonus
+물리 대미지=Phys Damage
+총격 대미지=Gun Damage
+화염 대미지=Fire Damage
+빙결 대미지=Ice Damage
+전격 대미지=Electric Damage
+질풍 대미지=Wind Damage
+염동 대미지=Psychokinesis Damage
+핵열 대미지=Nuclear Damage
+축복 대미지=Bless Damage
+주원 대미지=Curse Damage
+만능 대미지=Almighty Damage
+총알 수: =Bullet Count: 
+기본 크리티컬 확률: =Base Critical Chance: 
+공격력=ATK
+생명=HP
+방어력=DEF
+속도=SPD
+페르소나 레벨=Persona levels
 
 ++++ ----- Persona Passive Skills ----- ++++
 명중 강화Ⅰ=Accuracy Boost I
@@ -250,6 +297,57 @@ SP 회복 효율이 3.1% 증가한다.=SP Recovery Boost increased by 3.1%.
 전격의 징계=Electric Punishment
 폭발 충돌=Explosive Collision
 오장폭발권=Five Finger Explosion
+r:"준비 시간: 행동 8회\n모든 동료가 <color\=#FFFC40>(\d+)</color>의 SP를 회복한다. <link\=\"s|141\"><u>『리듬』</u></link>을 3개 획득한다.\n<b><size\=28><color\=#850101>스포트라이트 아래서 리듬을 타지 않을 사람은 아무도 없다. 멜로디에 몸을 맡기고 박자에 맞춰 음악의 매력을 마음껏 느껴보자!</color></size></b>"=Prep Time: Act 8\nAll party members restore <color\=#FFFC40>$1</color> SP, and Okyann obtains 3 stacks of <link\=s|141><u>Rhythm</u></link>.\n<b><size\=28><color\=#850101>There's no one who wouldn't get into the rhythm under a spotlight. Give yourself up to the melody and feel the beat!</color></size></b>
+r:"적 <color\=#FFFF00>1명</color>에게 공격력 (\d+\.\d+%)의 총격 속성 대미지를 주고, 75%의 고정 확률로 적이 『조준』을 획득한다."=Deals $1 Gun damage to <color\=#FFFF00>1</color> Enemy, with a 75% fixed chance to Target the enemy.
+r:"<color\=#FFFF00>모든</color> 적에게 공격력 (\d+\.\d+%)의 축복 속성 대미지를 주고, 생명이 가장 낮은 동료가 공격 (\d+\.\d+%)의 생명을 회복한다."=Deals $1 ATK Bless damage to <color\=#FFFF00>all</color> enemies, and heals the lowest Health ally for $2 of ATK.
+r:"<color\=#FFFF00>모든</color> 적에게 공격력 (\d+\.\d+%)의 3단 총격 속성 대미지를 준다. 필드에 조준당한 적이 있을 시 해당 스킬의 공격력이 (\d+\.\d+%) 증가하고, 크리티컬 효과가 (\d+\.\d+%) 증가한다."=Deals 3x $1 ATK Gun damage to <color\=#FFFF00>all</color> enemies, with $2 more damage and $3 more Critical Damage when Targeted enemies are on the field.
+r:"<color\=#FFFF00>모든</color> 적에게 공격력 (\d+\.\d+%)의 주원 속성 대미지를 준다. (\d+%)의 기본 확률로 적이 주원 효과를 1중첩 획득하고, 『살기』를 (\d)개 획득한다."=Deals $1 ATK Elemental damage to <color\=#FFFF00>all</color> enemies with a $2 base chance to grant the enemy a stack of Elemental effects and gain $3 Life.
+r:"적 <color\=#FFFF00>1명</color>에게 공격력 (\d+\.\d+%)의 주원 속성 대미지를 준다. 필드에 적이 <color\=#FFFF00>1명</color>만 있을 시 『살기』를 (\d)개 획득한다."=Deals $1 ATK Elemental damage to <color\=#FFFF00>1</color> enemy. If there is <color\=#FFFF00>1</color> enemy on the field, gain $2 Life.
+r:"<color\=#FFFF00>모든</color> 적에게 공격력 (\d+\.\d+%)의 주원 속성 대미지를 준다. 적에게 디버프 효과가 있을 시 주는 대미지가 (\d+%) 증가하고, 추가 턴에서는 해당 효과가 (\d+%)까지 증가한다."=Deals $1 ATK Elemental damage to <color\=#FFFF00>all</color> enemies. Increases the damage dealt by $2 if the enemy is debuffed, and increases the effect to $3 for additional turns.
+r:"적 <color\=#FFFF00>1명</color>에게 공격력 (\d+\.\d+%)의 질풍 대미지를 주고, (\d+%)의 기본 확률로 적을 풍습 상태로 만든다."=Deals $1 ATK Wind damage to <color\=#FFFF00>1</color> enemy with a 100% base chance to inflict Weaken.
+r:"<color\=#FFFF00>모든</color> 동료의 공격력 (\d+\.\d+%)\+생명 (\d+)를 회복시키고, 모든 동료의 원소 이상 상태 1개를 제거한다."=Heals <color\=#FFFF00>all</color> allies for HP equal to $1 ATK + $2 and removes 1 Elemental Ailment from all allies.
+r:"적 <color\=#FFFF00>1명</color>에게 공격력 (\d+\.\d+%)의 물리 대미지를 주고, 크리티컬 확률이 (\d+%) 증가하며 명중률이 (\d+%) 감소한다."=Deals $1 ATK Physical damage to <color\=#FFFF00>1</color> enemy. Critical rate increases by $2, but hit rate decreases by $3.
+r:"<color\=#FFFF00>임의의</color> 적에게 공격력 (\d+\.\d+%)의 (\d+)단 전격 속성 대미지를 주고, 100%의 기본 확률로 메인 목표를 감전 상태에 빠뜨린다."=Deals $2x $1 ATK Electric damage to <color\=#FFFF00>random</color> enemies, with a 100% chance to Shock the primary target.
+r:"<color\=#FFFF00>1명</color>의 적에게 공격력 (\d+\.\d+%)의 전격 속성 대미지를 주고, (\d+)턴 동안 모든 동료가 주는 전격 속성 대미지를 (\d+\.\d+%) 증가시킨다."=Deals $1 ATK Electric damage to <color\=#FFFF00>1</color> enemy, and increases Electric damage from all teammates by $3 for $2 turns.
+r:"<color\=#FFFF00>모든</color> 적에게 공격력 (\d+\.\d+%)의 전격 속성 대미지를 준다. 임의의 적이 감전 상태인 경우 <color\=#FFFF00>모든</color> 적에게 공격력 (\d+\.\d+%)에 해당하는 추가 대미지를 준다."=Deals $1 ATK Electric damage to <color\=#FFFF00>all</color> enemies. If any enemy is Shocked, deals an additional $2 ATK damage to <color\=#FFFF00>all</color> enemies.
+r:"적 <color\=#FFFF00>1명</color>에게 공격력 (\d+\.\d+%)의 화염 속성 대미지를 주고, (\d+%)의 기본 확률로 적을 화상 상태로 만든다."=Deal $1 ATK Fire damage to <color\=#FFFF00>1</color> enemy with a $2 chance to inflict Burn.
+r:"동료 <color\=#FFFF00>1명</color>의 공격력 (\d+\.\d+%)\+생명 (\d+)를 회복시킨다. 동료의 생명이 (\d+%) 미만이면 치료 효과가 (\d+%) 증가한다."=Heals <color\=#FFFF00>1</color> ally for HP equal to $1 ATK + $2. If the ally's HP is less than $3, healing increases by $4.
+r:"<color\=#FFFF00>모든</color> 동료의 공격력 %\+(\d+\.\d+%)의 생명을 회복하고, 메인 목표 동료에게 주는 치료 효과가 (\d+) 증가한다."=Heals <color\=#FFFF00>all</color> allies for HP equal to $1 ATK and increases the healing to the primary target ally by $2.
+r:"적 <color\=#FFFF00>1명</color>에게 공격력 (\d+\.\d+%)의 물리 속성 대미지를 (\d+)회 주고, 자신의 생명이 (\d+%) 초과 시 해당 스킬은 생명 (\d+%)를 추가 소모하고 대미지가 (\d+%) 증가한다."=Deals $2x $1 ATK Physical damage to <color\=#FFFF00>1</color> enemy. If your HP is over $3, this skill consumes an additional $4 HP and increases damage dealt by $5.
+r:"<color\=#FFFF00>모든</color> 적에게 공격력 (\d+\.\d+%)의 전격 대미지를 주고, (\d+\.\d+%)의 기본 확률로 적을 감전 상태에 빠뜨린다. 『리바운드』가 있을 경우 확률이 (\d+\.\d+%)까지 증가한다."=Deals $1 ATK Electric damage to <color\=#FFFF00>all</color> enemies with a $2 base probability to inflict Shock. If Rebound is applied, this probability increases to $3.
+r:"적 <color\=#FFFF00>1명</color>을 선택해 차지한 후 다음 턴에서 공격 시 공격력 (\d+\.\d+%)의 물리 속성 대미지를 준다. 대미지를 입힐 시 자신이 『리바운드』 효과가 있으면 해당 스킬은 무조건 크리티컬이 발동한다."=Waits, then deals $1 ATK Physical damage to <color\=#FFFF00>1</color> enemy on the following turn. If Rebound is applied, this skill will always deal Critical damage.
+
+++++ ----- Battle Quotes ----- ++++
+좋은~ 기회야! 다들 놈을 해치워~!=This is your chance! Everybody, take them out!
+지금부터 나를 잘 보고 있어!=Keep an eye on me from now on!
+이야~! 신~난~다!=Yay! This is so exciting!
+총알이 부족합니다.=You're out of bullets.
+오! 정말 강력한 일격이었어!=Oh! What a powerful blow!
+역시 오빠야~!=That's my onii-sama~!
+내가 있잖아. 이건 당연한 결과야~!=With me here, victory is a given~!
+오빠, 나 준비됐어!=Onii-sama, I'm ready to go!
+힘을 내! 너 괜찮아? ?=Come on! Are you okay?
+후... 괜찮다니 다행이다.=Phew... glad to hear you're okay.
+만세! 적이 쓰러졌어!=Hooray! The enemies are down!
+공연의 하이라이트다!=And here comes the highlight!
+큰일이야! 괜찮지? ?=This looks bad! Are you okay?
+와... 순식간에 쓰러졌어...=Wow... It went down in a flash...
+전력을 다하자!=Let's go all out!
+대단해~!=That was amazing!
+오, 좋은데. 엄청 귀한 걸 얻었어!=How wonderful! This looks valuable!
+정신 차리고 탐색을 시작하자...=Let us go and explore further.
+클로저는 이제 괜찮아=Closer seems fine now.
+하지만, 예고하기 전에\n너희들에게 확인하고 싶은 것이 있다.=However, before we move on, I want to confirm something with you guys.
+화려하게 가자=Let's go out in a big way!
+…헉?! 내가?=...Huh?! Me?
+
+++++ ----- Field/Mementos Quotes ----- ++++
+근처에 좋은 게 있는 것 같아.\n찾아보자!=I think there's something good nearby, let's find it!
+그래. 맞지 않도록 조심하며\n앞으로 나아가자.=Okay, let's move forward, while being careful to not get hit.
+아, 세이프 룸이야.\n쉴까?=Ah, a safe room.\nShould we take a break?
+가져갈까?=Should we take it?
+오빠, 난 언제든 나설 수 있어!=Onii-sama, I'm always ready to go!
+상자야. 어서 열어보자!=It's a treasure chest. Let us open it!
 
 +++++ ----- Combat Information ----- +++++
 1턴=1 Turn
