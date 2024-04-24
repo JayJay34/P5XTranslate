@@ -195,8 +195,30 @@ CV.盧婷=CV.Lu Ting (Ru Thing)
 sr:"(.*?) Lv.(\d+)"=$1 Lv.$2
 sr:"(.*?) <color\=#0F69CB>Lv.(\d+)</color>"=$1 <color\=#0F69CB>Lv.$2</color>
 
+增益=Buff
+減益=Debuff
+
+// Elemental Debuffs
+<color\=#66ccff>風襲</color>=<color\=#66ccff>Winded</color>
+
 // Physical
 突擊=Assault
+栽倒痛擊=Skull Cracker
+幸運拳=Lucky Punch
+大切斷=Giant Slice
+夢鄉針=Dream Needle
+猛烈巨錘=Sledgehammer
+橫衝直撞=Rampage
+忘殺突襲=Memory Blow
+二連牙=Double Fangs
+窮鼠之牙=Cornered Fang
+俯衝突擊=Assault Dive
+死亡界線=Deathbound
+加倍斬擊=Rising Slash
+血祭=Bloodbath
+灼熱波浪=Heat Wave
+五月雨斬=Tempest Slash
+絕望敲打=Bad Beat
 
 // Gun
 
@@ -309,14 +331,15 @@ sr:"(.*?) <color\=#0F69CB>Lv.(\d+)</color>"=$1 <color\=#0F69CB>Lv.$2</color>
 // Passives
 攻擊強化Ⅰ=Attack Boost Ⅰ
 火焰強化Ⅰ=Fire Boost Ⅰ
-?????????=Ice Boost Ⅰ
+冰凍強化Ⅰ=Ice Boost Ⅰ
 ?????????=Elec Boost Ⅰ
 疾風強化Ⅰ=Wind Boost Ⅰ
 ?????????=Pyschic Boost Ⅰ
 ?????????=Nuclear Boost Ⅰ
 ?????????=Bless Boost Ⅰ
-?????????=Curse Boost Ⅰ
+詛咒強化Ⅰ=Curse Boost Ⅰ
 ?????????=Almighty Boost Ⅰ
+防禦強化Ⅰ=Defense Boost Ⅰ
 ?????????=Resist Physical Ⅰ
 ?????????=Resist Fire Ⅰ
 冰凍識破Ⅰ=Resist Frozen Ⅰ
@@ -324,12 +347,15 @@ sr:"(.*?) <color\=#0F69CB>Lv.(\d+)</color>"=$1 <color\=#0F69CB>Lv.$2</color>
 ?????????=Resist Wind Ⅰ
 ?????????=Resist Pyschic Ⅰ
 ?????????=Resist Nuclear Ⅰ
-?????????=Resist Bless Ⅰ
+祝福識破Ⅰ=Resist Bless Ⅰ
 ?????????=Resist Curse Ⅰ
 ?????????=Almighty Boost Ⅰ
 建言Ⅰ=Proclamation I
 氣功Ⅰ=Pore Ⅰ
 暈眩率UPⅠ=Dizzy Boost Ⅰ
+燃燒率UPⅠ=Burn Boost Ⅰ
+觸電率UPⅠ=Electrocute Boost Ⅰ
+睡眠耐性Ⅰ=Resist Sleep Ⅰ
 
 ----- Skill Details -----
 // Physical
@@ -340,29 +366,43 @@ r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬�
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s|103"><u>燃燒</u></link>狀態，效果持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK Fire damage to <color\=#FFFF00>1</color> enemy and has a <color\=#FFFF00>$2</color> chance of inflicting <link\=s|102><u>Burning</u></link> for 2 turns.
 r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s|103"><u>燃燒</u></link>狀態，效果持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK Fire damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$2</color> chance of inflicting <link\=s|102><u>Burning</u></link> for 2 turns.
 // Ice
-r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s|103"><u>凍結</u></link>狀態，效果持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK Frozen damage to <color\=#FFFF00>1</color> enemy and has a <color\=#FFFF00>$2</color> chance of inflicting <link\=s|103><u>Freeze</u></link> for 2 turns.
-r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s|103"><u>凍結</u></link>狀態，效果持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK Frozen damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$2</color> chance of inflicting <link\=s|103><u>Freeze</u></link> for 2 turns.
+//THESE DO NOT WORK YET r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s|103"><u>凍結</u></link>狀態，效果持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK Ice damage to <color\=#FFFF00>1</color> enemy and has a <color\=#FFFF00>$2</color> chance of inflicting <link\=s|103><u>Freeze</u></link> for 2 turns.
+//THESE DO NOT WORK YET r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s|103"><u>凍結</u></link>狀態，效果持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK Ice damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$2</color> chance of inflicting <link\=s|103><u>Freeze</u></link> for 2 turns.
 
-// Lightning
+
+// Electric
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s|104"><u>觸電</u></link>狀態，效果持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK Electric damage to <color\=#FFFF00>1</color> enemy and has a <color\=#FFFF00>$2</color> chance of inflicting <link\=s|104><u>Electrocution</u></link> for 2 turns.
 // Wind
-// Psychic
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的疾風屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s|105"><u>風襲</u></link>狀態，效果持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK Wind damage to <color\=#FFFF00>1</color> enemy and has a <color\=#FFFF00>$2</color> chance of inflicting <link\=s|105><u>Winded</u></link> for 2 turns.
+// Psy
 // Nuclear
 // Bless
 // Curse
 // Almighty
 // Recovery
+
+r:"使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力+<color\=#fffc40>(\d+\.\d+%)</color>的生命值。"=Restore HP equal to <color\=#fffc40>$1</color>ATK + <color\=#fffc40>$2</color> to one ally.
 // Buffs
-r:"使1名同伴的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，自身每500攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限<color\=#fffc40>(\d+\.\d+%)</color>。效果持續3回合。"=Increase 1 ally's ATK by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 500 ATK to a maximum of <color\=#fffc40>$3</color> for 3 turns.
+r:"使1名同伴的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，自身每500攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限<color\=#fffc40>(\d+\.\d+%)</color>。效果持續3回合。"=Increases 1 ally's ATK by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 500 ATK to a maximum of <color\=#fffc40>$3</color> for 3 turns.
 // Debuffs
 // Passives
-r:"攻擊力提升(\d+\.\d+%)。"=Increase ATK by $1.
-r:"火焰屬性傷害提升(\d+\.\d+%)。"=Increase Fire damage by $1.
-r:"疾風屬性傷害提升(\d+\.\d+%)。"=Increase Wind damage by $1.
-r:"受到的冰凍屬性傷害降低(\d+\.\d+%)。"=Reduce damage from Frozen attacks by $1.
+r:"攻擊力提升(\d+\.\d+%)。"=Strengthen ATK by $1.
+r:"火焰屬性傷害提升(\d+\.\d+%)。"=Strengthen Fire attacks by $1.
+r:"疾風屬性傷害提升(\d+\.\d+%)。"=Strengthen Wind attacks by $1.
+r:"冰凍屬性傷害提升(\d+\.\d+%)。"=Strengthen Ice attacks by $1.
+r:"詛咒屬性傷害提升(\d+\.\d+%)。"=Strengthen Curse attacks by $1.
+r:"受到的冰凍屬性傷害降低(\d+\.\d+%)。"=Reduce damage from Ice attacks by $1.
+r:"受到的祝福屬性傷害降低(\d+\.\d+%)。"=Reduce damage from Bless attacks by $1.
 r:"暴擊率提升(\d+\.\d+%)。"=Increase Critical Rate by $1.
 r:"精力回復效率提升(\d+\.\d+%)。"=Increase SP Recovery by $1.
 r:"速度提升(.*?)點。"=Increase SPD by $1.
-r:"造成<link\="s|107"><u>暈眩</u></link>效果時，效果命中提升(\d+\.\d+%)。"=Increase chance of inflicting <link\=s|107><u>Dizziness</u></link> by $1.
+r:"防禦力提升(.*?)。"=Increase DEF by $1.
+r:"速度降低(.*?)點，生命值提升(.*?)。"=Reduce SPD by $1 and increases Max HP by $2.
+
+//THESE DO NOT WORK YET r:"造成<link\="s|107"><u>暈眩</u></link>效果時，效果命中提升(\d+\.\d+%)。"=Increase chance of inflicting <link\=s|107><u>Dizziness</u></link> by $1.
+//THESE DO NOT WORK YET r:"造成<link\="s|102"><u>燃燒</u></link>效果時，效果命中提升(\d+\.\d+%)。"=Increases chance of inflicting <link\=s|102><u>Burn</u></link> by $1.
+//THESE DO NOT WORK YET r:"造成<link\="s|104"><u>觸電</u></link>效果時，效果命中提升(\d+\.\d+%)。"=Increases chance of inflicting <link\="s|104"><u>Electrocution</u></link> by $1.
+//THESE DO NOT WORK YET r:"受到<link\="s|109"><u>睡眠</u></link>效果時，效果抵抗提升(\d+\.\d+%)。"=Increase resistance to <link\=s|109><u>Sleep</u></link> by $1.
 
 素早的心得Ⅰ=Agile Mindset Ⅰ
 
@@ -525,15 +565,16 @@ sr:"<color\=#FF0000>(.*?)</color>將<color\=#FF0000>(.*?)</color>移出了樂園
 消耗3點行動力 (2/3)=Consume 3 Action points (2/3)
 消耗3點行動力 (3/3)=Consume 3 Action points (3/3)
 r:"消耗120點體力 \((\d+)/120\)"=Consume 120 Stamina ($1/120)
+r:"消耗1000日元 \((\d+)/1000\)"=Spend 1000 yen ($1/1000)
 進行1次邀約 (0/1)=Spend time with a Confidant (0/1)
 進行1次邀約 (1/1)=Spend time with a Confidant (1/1)
 
 探索經驗：=EXP:
 本週上限：=7d cap:
-r:"累計消耗100000魂石 \((\d+)/100000\)"=Spend a total of 100,000 Soulstones ($1/100000)
-r:"累計消耗20000日元 \((\d+)/20000\)"=Spend a total of 20,000 yen ($1/20000)
-r:"累計消耗25點行動力 \((\d+)/25\)"=Consume a total of 25 Action points ($1/25)
-r:"累計消耗1250點體力 \((\d+)/1250\)"=Consume a total of 1,250 Stamina ($1/1250)
+r:"累計消耗100000魂石 \((\d+)/100000\)"=Spend 100000 Soulstones ($1/100000)
+r:"累計消耗20000日元 \((\d+)/20000\)"=Spend 20000 yen ($1/20000)
+r:"累計消耗25點行動力 \((\d+)/25\)"=Consume 25 Action points ($1/25)
+r:"累計消耗1250點體力 \((\d+)/1250\)"=Consume 1250 Stamina ($1/1250)
 
   ----- Stats -----
 攻擊力=ATK
