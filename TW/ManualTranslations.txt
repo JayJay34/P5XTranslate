@@ -1,6 +1,9 @@
 r:"^(.)$"=$1
 
-------- System / Options ------
+-------------------------------
+---- I. System / Options ------
+-------------------------------
+
 開始登入=Logging in...
 渲染品質=Rendering Quality
 陰影品質=Shadow Quality
@@ -32,18 +35,21 @@ r:"^(.)$"=$1
 日文配音=Japanese
 中文配音=Mandarin
 
------ Character Names -----
+---------------------------
+--- II. Character Names ---
+---------------------------
+
+// P5X Original
 梅洛普=Merope
 伊格爾=Igor
-路菲爾=Ruferu
-新井 素羽=Motoha Arai
 新井素羽=Motoha Arai
+路菲爾=Ruferu
+加納駿=Kano Shun
 琴音·蒙塔涅=Montagne Kotone
 蒙塔涅=Montagne
-加納駿=Kano Shun
-數塵老師片山=Ms. Katayama
-瑞奇姆=Ricchan
-高卷杏=Ann Takamaki
+琴音=Kotone
+數塵老師片山=Katayama-sensei
+瑞奇姆=Marthym
 李瑤鈴=Li Yaoling
 野性毛雨披=Tomoko Noge
 阴木内= Takeyuki Kiuchi
@@ -58,7 +64,12 @@ r:"^(.)$"=$1
 藤川雪實=Fujikawa Yukimi
 黑谷清=Kurotani Sei
 
+// Original Phantom Thieves
 雨宮蓮=Amamiya Ren
+高卷杏=Takamaki Ann
+坂本竜司=Sakamoto Ryuji
+モルガナ=Morgana
+モナ=Mona
 
 ----- Weapon Equip by Codename -----
 WONDER使用=Wonder's Dagger
@@ -160,46 +171,57 @@ CV.盧婷=CV.Lu Ting (Ru Thing)
 協同者=Confidant
 人格面具=Persona
 印象空間=Cognitive World
+
 疊層=Stacks
-群傷=Multi-Target
-單傷=Single-Target
+群傷=AOE
+單傷=ST
+生存=Support
+主動=Active
+潛能=Potential
+意識=Awareness
+
+ONE MORE：技能傷害=ONE MORE: ATK% DMG
+r:"提升(\d+\.\d%)"=$1
+
+HIGHLIGHT：技能傷害倍率=HIGHLIGHT: ATK% DMG
+近戰攻擊：技能傷害=Melee: ATK% DMG
+槍械射擊：技能傷害=Gun: ATK% DMG
+
 物理=Physical
-物理屬性傷害=Physical damage
+物理屬性傷害=Physical DMG
 射擊=Gun
-射擊屬性傷害=Gun damage
+射擊屬性傷害=Gun DMG
 火焰=Fire
-火焰屬性傷害=Fire damage
+火焰屬性傷害=Fire DMG
 冰凍=Ice
-冰凍屬性傷害=Ice damage
+冰凍屬性傷害=Ice DMG
 疾風=Wind
-疾風屬性傷害=Wind damage
+疾風屬性傷害=Wind DMG
 電擊=Electric
-電擊屬性傷害=Electric damage
+電擊屬性傷害=Electric DMG
 念動=Psi
-念動屬性傷害=Psi damage
+念動屬性傷害=Psi DMG
 核熱=Nuclear
-核熱屬性傷害=Nuclear damage
+核熱屬性傷害=Nuclear DMG
 祝福=Bless
-祝福屬性傷害=Bless damage
+祝福屬性傷害=Bless DMG
 詛咒=Curse
-詛咒屬性傷害=Curse damage
+詛咒屬性傷害=Curse DMG
 萬能=Almighty
-萬能屬性傷害=Almighty damage
-屬性傷害= Damage
+萬能屬性傷害=Almighty DMG
+屬性傷害= DMG
 
 讟= 
 儁= 
 
 ----- General Skills -----
-戰鬥技巧=Combat Skills
-sr:"(.*?) Lv.(\d+)"=$1 Lv.$2
-sr:"(.*?) <color\=#0F69CB>Lv.(\d+)</color>"=$1 <color\=#0F69CB>Lv.$2</color>
+// sr:"(.*?) Lv.(\d+)"=$1 Lv.$2
+// sr:"(.*?) <color\=#0F69CB>Lv.(\d+)</color>"=$1 // <color\=#0F69CB>Lv.$2</color>
 
 // Physical
 突擊=Assault
 
 // Gun
-
 
 // Fire
 亞基=Agi
@@ -500,6 +522,76 @@ r:"造成<link\="s|107"><u>暈眩</u></link>效果時，效果命中提升(\d+\.
 傑克霜精=Jack Frost
 天使= Angel
 
+--------------------------------------
+--- IV. Character-specific Skills ----
+--------------------------------------
+// Skill names are in Substitutions
+
+//////////////////////////////
+///// Kano Shun / Soy ////////
+//////////////////////////////
+
+
+// Passive
+受到敵方攻擊的機率提高，受到攻擊後會獲得『{{A}}』，回合結束消耗『{{A}}』並回復自身部分已損生命值。=When attacked, gain a "Wild Savior" unique buff. This buff heals Soy for 30% HP at the end of his turn.
+
+// Skill 1: Iceberg Shake
+
+r:"對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的冰凍屬性傷害，並有<color\=#FFFC40>(\d+%)</color>的基礎機率使敵人陷入<link\=\"s|103\"><u>凍結</u></link>狀態。\n<b><size\=28><color\=#850101>拔地而起的冰山，對敵人造成冰屬性傷害，還會讓敵人感到愈加的寒冷。"=Deals <color\=#FFFC40>$1</color> ATK Ice Elemental DMG to 1 target with a <color\=#FFFC40>$2</color> base chance to inflict a Frozen debuff. \n\n<b><size\=28><color\=#850101>Chilly twin axes strike the enemy, making them feel colder.</color></size></b>
+
+// Skill 2: Vanguard Assault
+
+r:"對1名敵人造成<color\=#FFFC40>(\d+\.\d%)</color>最大生命值的物理屬性傷害，並使目標敵人的防禦力降低<color\=#FFFC40>(\d+\.\d%)</color>，效果持續2回合。處於<link\="s|151"><u>『荒野救星』</u></link>狀態下時，防禦力降低值提升至<color\=#FFFC40>(\d+\.\d%)</color>。\n<b><size\=28><color\=#850101>先鋒精神勢不可擋，在烈馬的啼鳴中對敵人造成難以抵擋的物理傷害。</color></size></b>"=Deals <color\=#FFFC40>$1</color> MAX HP Physical Damage and inflicts a <color\=#FFFC40>$2</color> DEF Down debuff that lasts for 2 turns to 1 target. When using this skill while <u>Wild Savior</u> is active, the DEF Down debuff becomes twice as powerful.
+
+// Skill 3: Zero Healing
+
+r:"使所有同伴的最大生命值提升，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+%)</color>（最多計入<color\=#FFFC40>(\d+)</color>點最大生命值），同時自身受到攻擊的機率大幅提升，效果持續2回合。回復所有同伴生命值，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d%)</color>。\n冷卻時間：1回合。\n<b><size\=28><color\=#850101>極寒的冰域展開，絕對的低溫有助於保持頭腦清醒和身體健康。</color></size></b>"=<color\=#FFFC40>Cooldown after use: 1 turn</color> \nIncreases the party's MAX HP by <color\=#FFFC40>$1</color> up to <color\=#FFFC40>$2 HP</color>, heals the party <color\=#FFFC40>$3</color> of Kano Shun's MAX HP, and increases the likelihood of being attacked. The effect lasts for 2 turns.\n
+
+// Skill 4: Combat Skills
+r:"『ONE MORE』：對1名敵人造成冰凍屬性傷害。\n『HIGHLIGHT』：使所有同伴的最大生命值提升，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d%)</color>（最多計入<color\=#FFFC40>(\d+)</color>點最大生命值）。回復所有同伴生命值，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d%)</color>。同時對1名敵人造成<color\=#FFFC40>(\d+\.\d%)</color>最大生命值的冰凍屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成6次射擊屬性傷害，子彈可能會發生偏移。對同一目標造成傷害會衰減。"=ONE MORE: Ice Elemental DMG on 1 target.\nHIGHLIGHT: Increases the party's MAX HP by <color\=#FFFC40>$1</color> of Kano Shun's MAX HP up to <color\=#FFFC40>$2</color>, heals the party <color\=#FFFC40>$3</color> of Kano Shun's MAX HP. Deals <color\=#FFFC40>$4</color> Ice Elemental DMG to 1 target.\n\nLeveling up Combat Skills also improves Melee Attack and Gun Attack DMG.
+
+// Soy's Combat Skills Upgrade
+HIGHLIGHT：計入生命值上限=HIGHLIGHT: MAX HP Cap
+HIGHLIGHT：生命值回復倍率=HIGHLIGHT: HP% Heal
+
+// Passives
+
+// Wild
+r:"槍械子彈數量提升<color\=#FFFC40>(\d+)</color>，並且槍械射擊每發子彈有<color\=#FFFC40>(\d+\.\d%)</color>固定機率附帶自身<color\=#FFFC40>(\d+%)</color>最大生命值傷害且使敵人防禦降低<color\=#FFFC40>(\d+%)</color>，效果持續3回合。槍械傷害對同一目標有衰減。"=Gun Ammo: 24+<color\=#FFFC40>$1</color>\nEach shot has a fixed <color\=#FFFC40>$2</color> chance to deal extra <color\=#FFFC40>$3</color> MAX HP DMG and inflicts a <color\=#FFFC40>$4</color> DEF Down Debuff. The effect lasts for 3 turns, and the Gun DMG is reduced for the same target.
+
+// Courage (It seems this skill can't be translated)
+//r:"釋放『零度治癒』技能後每次受到攻擊，有<color\=#FFFC40>(\d+\.\d%)</color>固定機率觸發<link\="s|151\"><u>『荒野救星』</u></link>的回復效果，效果持續2回合。"=Whenever you are attacked after releasing "Zero Healing" skill, you will have<color\=#FFFC40>$1</color>Fixed chance of triggering Wild Savior's unique buff for 2 turns instead of 1.
+
+// Awareness 0
+勇敢者的遊戲=Hero's Game
+加納駿受到敵方攻擊的機率提高，受到攻擊後會獲得『荒野救星』。\n加納駿的回合結束時，會消耗『荒野救星』並回復自身已損生命值的30%。=When attacked, gain a "Wild Savior" unique buff. This buff heals Soy for 30% HP at the end of his turn.
+
+// Awareness 1
+下戰書=Declaration of War
+加納駿處於<link\="s|151"><u>『荒野救星』</u></link>狀態時，受到傷害降低8%。=When Kano Shun's <link\="s|151"><u>"Wild Savior"</u></link> is active, he receives 8% less DMG from enemies.
+
+// Awareness 2
+危險對峙=Dangerous Showdown
+『冰山撼動』、『先鋒突擊』的技能等級提升2級，至多提升至15級。=Increase the skill level of "Iceberg Shake" and "Vanguard Assault" by 2 levels, up to a maximum of 15 levels.
+
+// Awareness 3
+熱血的硝煙=Piping-Hot Smoke
+加納駿的生命值低於50%時，受到的治療效果提升25%。=When Kano Shun's HP is less than 50%, he will receive 25% more healing.
+
+// Awareness 4
+一決勝負=The Winner is Determined
+『零度治癒』、『戰鬥技巧』的技能等級提升2級，至多提升至15級。=Increase the skill level of "Zero Degree Healing" and "Combat Skill" by 2 levels, up to a maximum of 15 levels.
+
+// Awareness 5
+暴力處決=Violent Execution
+HIGHLIGHT效果提升：使所有同伴受到傷害降低16%，效果持續2回合。=HIGHLIGHT Effect Boost: Reduces damage taken by all companions by 16%. The effect lasts for 2 turns.
+
+// Awareness 6
+勝利者榮光=Winner's Glory
+加納駿處於<link\="s|151"><u>『荒野救星』</u></link>狀態下攻擊敵人時，會額外附帶基於加納駿最大生命值10%的傷害並回復等量生命值。=While Kano Shun's <link\="s|151"><u>"Wild Savior"</u></link> is active, deal an extra 10% of Kano Shun's MAX HP as damage and restore the same amount of HP.
+
+
+
 ----- Menu / UI Elements -----
 
 --- Guild ---
@@ -550,6 +642,10 @@ r:"累計消耗1250點體力 \((\d+)/1250\)"=Consume a total of 1,250 Stamina ($
 治療效果=Healing Boost
 暴擊效果=CRIT DMG
 精力回復=Energy Rate
+
+生命成長率=HP Growth
+攻擊成長率=ATK Growth
+防禦成長率=DEF Growth
 
   ----- Metaverse Farm -----
 武器突破材料=Weapon Ascension
