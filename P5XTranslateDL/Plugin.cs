@@ -7,6 +7,8 @@ using System.Net.Http;
 using System.Text.Json.Nodes;
 using System.Diagnostics;
 using System.IO.Compression;
+using System.Threading.Tasks;
+using System.Xml;
 
 namespace P5XTranslateDL;
 
@@ -53,7 +55,7 @@ public class Plugin : BasePlugin
                 {
                     var fileDownload = await client.GetByteArrayAsync(obj["browser_download_url"].ToString());
                     await File.WriteAllBytesAsync(pathString + obj["name"].ToString(), fileDownload);
-                    ZipFile.ExtractToDirectory(@pathString + obj["name"].ToString(), pathString, true);
+                    await Task.Run(() => ZipFile.ExtractToDirectory(@pathString + obj["name"].ToString(), pathString, true));
                     File.Delete(pathString + "P5XDL.zip");
                     dlVersion.Value = obj["node_id"].ToString();
                     Config.Save();

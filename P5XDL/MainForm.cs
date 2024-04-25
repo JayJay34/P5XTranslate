@@ -28,11 +28,11 @@ namespace P5XDLForm
             var pathString = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\";
             pathString = pathString.Replace("plugins\\", "Translation\\en\\Text\\");
 
-            var langauge = ConfigurationManager.AppSettings["Langauge"].ToString();
+            var language = ConfigurationManager.AppSettings["Language"].ToString();
             bool includeAutoGen = Boolean.Parse(ConfigurationManager.AppSettings["AutoGen"]);
             bool downloadImages = Boolean.Parse(ConfigurationManager.AppSettings["DownloadImages"]);
 
-            var fileString = "https://api.github.com/repos/JayJay34/P5XTranslate/contents/" + langauge;
+            var fileString = "https://api.github.com/repos/JayJay34/P5XTranslate/contents/" + language;
 
             using var client = new HttpClient();
             {
