@@ -1,6 +1,6 @@
 +++++ ----- Skills ----- +++++
 
-++++ ----- Combat Skills ----- ++++
+++++ ----- Phantom Thief Combat Skills ----- ++++
 sr:"(.*?) Lv.(\d+)"=$1 Lv.$2
 sr:"(.*?) <color\=#0F69CB>Lv.(\d+)</color>"=$1 <color\=#0F69CB>Lv.$2</color>
 전투 기술=Combat Arts
@@ -87,7 +87,9 @@ sr:"(.*?) <color\=#0F69CB>Lv.(\d+)</color>"=$1 <color\=#0F69CB>Lv.$2</color>
 피안의 덤불=Underworld Thicket
 나룻배 사공=Ferry Boatman
 유유한 망천수=Leisurely Oblivion
-##### Persona Combat Skills
+
+
+++++ ----- Generic Combat Skills ----- ++++
 부흐=Bufu
 부후라=Bufula
 부후다인=Bufudyne
@@ -181,7 +183,7 @@ sr:"(.*?) <color\=#0F69CB>Lv.(\d+)</color>"=$1 <color\=#0F69CB>Lv.$2</color>
 페르소나 전환=Switching Personas
 페르소나=Personas
 총기=Firearms
-총공격=All-Out-Attack
+총공격=All-Out Attack
 서포트=Support
 자동 전투=Auto-Battle
 가속=Fast-Forward
@@ -193,7 +195,7 @@ sr:"(.*?) <color\=#0F69CB>Lv.(\d+)</color>"=$1 <color\=#0F69CB>Lv.$2</color>
 특공=Special Attacks
 크리티컬 확률=Critical Rate
 크리티컬 효과=Critical Damage
-SP 회복=SP Recovery Bonus
+SP 회복=SP Recovery
 효과 명중=Effect Hit Rate Bonus
 효과 저항=Effect Resist Bonus
 치료 효과=Outgoing Healing Bonus
@@ -218,6 +220,10 @@ SP 회복=SP Recovery Bonus
 방어력=DEF
 속도=SPD
 페르소나 레벨=Persona levels
+
+++++ ----- Stat Descriptions ----- ++++
+SP 회복은 괴도의 턴별 기본 SP 회복치를 높입니다.=SP Recovery increases the amount of SP the Phantom Thief regains per turn, in addition to the base amount.
+속도는 전투 돌입 시 행동 순서에 영향을 미칩니다. 또한 스킬 명중률은 공격자와 피격자 사이의 속도 차이로 결정됩니다.=Speed affects the turn order when entering combat. Additionally, Skill hit rate is determined by the Speed difference between the attacker and the target.
 
 ++++ ----- Persona Passive Skills ----- ++++
 명중 강화Ⅰ=Accuracy Boost I
@@ -367,3 +373,4 @@ r:"적 <color\=#FFFF00>1명</color>을 선택해 차지한 후 다음 턴에서 
 r:"^(\d+)턴$"=$1 Turns
 sr:"<color\=#FF0000>(.*?)</color>이\(가\) 야노식에게 조준되어 방어력이 감소합니다..."=<color\=#FF0000>$1</color> has been targeted by Janosik, reducing its defense...
 sr:"<color\=#FF0000>(.*?)</color>이\(가\) 다운 상태에서 회복되었습니다."=<color\=#FF0000>$1</color> recovered from being Downed.
+기본 수치=Basic Stats
