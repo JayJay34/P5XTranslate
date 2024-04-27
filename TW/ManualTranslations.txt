@@ -643,19 +643,37 @@ sr:"<color\=#FF0000>(.*?)</color>將<color\=#FF0000>(.*?)</color>移出了樂園
 自由暢玩=Casual
 
 --- Challenges ---
-r:"登入遊戲 ((\d)/(\d))"=Log in to the game ($1 / $2)
-r:"進行1次人格面具合成 ((\d)/(\d))"=Fuse 1 Persona ($1 / $2)
-r:"消耗3點行動力 ((\d)/(\d))"=Consume 3 Action points ($1 / $2)
-r:"消耗120點體力 \((\d+)/120\)"=Consume 120 Stamina ($1 / 120)
-r:"進行1次邀約 ((\d)/(\d))"=Spend time with a Confidant ($1 / $2)
-r:"進行1次邀約 ((\d)/(\d))"=Spend time with a Confidant ($1 / $2)
-
-探索經驗：=EXP:
+探索經驗：=BP EXP:
 本週上限：=7d cap:
-r:"累計消耗100000魂石 \((\d+)/100000\)"=Spend a total of 100,000 Soulstones ($1/100000)
-r:"累計消耗20000日元 \((\d+)/20000\)"=Spend a total of 20,000 yen ($1/20000)
-r:"累計消耗25點行動力 \((\d+)/25\)"=Consume a total of 25 Action points ($1/25)
-r:"累計消耗1250點體力 \((\d+)/1250\)"=Consume a total of 1,250 Stamina ($1/1250)
+
+// DAILY //
+每次完成今日計畫可獲得=Complete daily tasks to receive useful rewards:
+今日剩餘領取次數=Dailies left to complete:
+
+r:"登入遊戲"=Log in to the game.
+r:"進行1次人格面具合成"=Fuse 1 Persona
+r:"完成1次「人格面具」挑戰 \((\d)\/(\d)\)"=Complete a Persona Farm. ($1 / $2)\n<color\=#8F8D8D>(Stamina Cost depending on Rank)</color>
+r:"進行1次打工 \((\d)\/(\d)\)"=Complete a Part-time job. ($1 / $2)\n<color\=#8F8D8D>(1 Activity After School)</color>
+r:"消耗3點行動力 \((\d)\/(\d)\)"=Consume 3 Action points ($1 / $2)
+r:"消耗120點體力 \((\d+)\/120\)"=Consume 120 Stamina ($1 / 120)
+r:"進行1次邀約"=Spend time with a Confidant 1 time.
+r:"完成1次「啟示套裝」挑戰 \((\d)\/(\d)\)"=Complete a Revelation Farm. ($1 / $2)\n<color\=#8F8D8D>(Stamina Cost: 40)</color>
+r:"完成1次「旖旎香調」挑戰 \((\d)\/(\d)\)"=Complete a Fragrance Farm. ($1 / $2)\n<color\=#8F8D8D>(Stamina Cost: 30)</color>
+r:"進行1次人格面具育成 \((\d)\/(\d)\)"=Inherit a Persona skill to another. ($1 / $2)
+
+// WEEKLY //
+r:"累計消耗(\d+)魂石 \((\d+)\/(\d+)\)"=Spend a total of $1 Soulstones this week.\n($2 / 100000)
+r:"累計消耗(\d+)日元 \((\d+)\/(\d+)\)"=Spend a total of 20,000¥ this week. \n($2¥ / 20000¥)
+r:"累計消耗(\d+)點行動力 \((\d+)\/(\d+)\)"=Consume a total of 25 Action points this week. \n($2 / 25)
+r:"累計消耗(\d+)點體力 \((\d+)\/(\d+)\)"=Consume a total of 1,250 Stamina this week.\n($2 / 1250)
+r:"完成1次「往日回溯」 \((\d)\/(\d)\)"=Complete a Past Palace Boss challenge. ($1 / $2)
+
+// Seasonal //
+r:"在「命運交錯之時」中通關「收下慾望」 \((\d)\/(\d)\)"=Pass the Final Mission in the \nPhantom Thieves event. ($1 / $2)
+r:"在「怪盜交易所」中消耗3000個怪盜徽記 \((\d+)\/(\d+)\)"=Consume 3,000 Phantom Thieves Emblems\nin the Event Exchange. ($1 / $2)
+r:"累計進行50次「角色簽約」&「武器補給」 \((\d+)\/(\d+)\)"=Perform 50 pulls in total. ($1 / $2)
+r:"在「心之海試煉」中通過「西部施工區」 \((\d)\/(\d)\)"=Pass the Western Construction Zone\nin the Sea of Souls Challenge ($1 / $2)
+r:"完成12次「在盧布朗度過」日程 \((\d+)\/(\d+)\)"=Spend time in Leblanc 12 times. ($1 / $2)
 
   ----- Stats -----
 攻擊力=ATK
