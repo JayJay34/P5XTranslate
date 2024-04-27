@@ -72,24 +72,24 @@ r:"^(.)$"=$1
 モナ=Mona
 
 ----- Weapon Equip by Codename -----
-WONDER使用=Wonder's Dagger
-琴音·蒙塔涅使用=Mont's Saber
-雨宮蓮使用=Joker's Dagger
-摩爾加納使用=Morgana's Cutlass
-佐原海夕使用=Puppet's Weapon
-野毛朋子使用=Moko's Dual Daggers
-路菲爾使用=Ruferu's Tonfas
-坂本龍司使用=Skull's Club
-富山佳代使用=Okyann's Flip Phone
-高卷杏使用=Panther's Whip
-新井素羽使用=Closer's Meteor Hammer
-黑谷清使用=Key's Push Dagger
-白鳥誠司使用=Fleuret's Rapier
-神山嶺央使用=Leo's Lance
-加納駿使用=Soy's One-Handed Axe
-藤川雪實使用=Yuki's Flail
-須見俊也使用=Sepia's Cane
-李瑤鈴使用=Rin's Bo Staff
+WONDER使用=WONDER's Dagger
+琴音·蒙塔涅使用=MONT's Saber
+雨宮蓮使用=JOKER's Dagger
+摩爾加納使用=MONA's Cutlass
+佐原海夕使用=PUPPET's Weapon
+野毛朋子使用=MOKO's Dual Daggers
+路菲爾使用=CATTLE's Tonfas
+坂本龍司使用=SKULL's Club
+富山佳代使用=OKYANN's Flip Phone
+高卷杏使用=PANTHER's Whip
+新井素羽使用=CLOSER's Meteor Hammer
+黑谷清使用=KEY's Push Dagger
+白鳥誠司使用=FLEURET's Rapier
+神山嶺央使用=LEO's Lance
+加納駿使用=SOY's One-Handed Axe
+藤川雪實使用=YUKI's Flail
+須見俊也使用=SEPIA's Cane
+李瑤鈴使用=RIN's Bo Staff
 
 ----- Playable Voice Actor / Actress -----
 CV.內山昂輝=CV.Uchiyama Koki
@@ -527,6 +527,8 @@ r:"造成<link\="s|107"><u>暈眩</u></link>效果時，效果命中提升(\d+\.
 --------------------------------------
 // Skill names are in Substitutions
 
+意識詳情=A0~A6 // Awareness Levels
+
 //////////////////////////////
 ///// Kano Shun / Soy ////////
 //////////////////////////////
@@ -537,18 +539,18 @@ r:"造成<link\="s|107"><u>暈眩</u></link>效果時，效果命中提升(\d+\.
 
 // Skill 1: Iceberg Shake
 
-r:"對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的冰凍屬性傷害，並有<color\=#FFFC40>(\d+%)</color>的基礎機率使敵人陷入<link\=\"s|103\"><u>凍結</u></link>狀態。\n<b><size\=28><color\=#850101>拔地而起的冰山，對敵人造成冰屬性傷害，還會讓敵人感到愈加的寒冷。"=Deals <color\=#FFFC40>$1</color> ATK Ice Elemental DMG to 1 target with a <color\=#FFFC40>$2</color> base chance to inflict a Frozen debuff. \n\n<b><size\=28><color\=#850101>Chilly twin axes strike the enemy, making them feel colder.</color></size></b>
+r:"對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的冰凍屬性傷害，並有<color\=#FFFC40>(\d+%)</color>的基礎機率使敵人陷入<link\=\"s|103\"><u>凍結</u></link>狀態。\n<b><size\=28><color\=#850101>拔地而起的冰山，對敵人造成冰屬性傷害，還會讓敵人感到愈加的寒冷。"=Deals <color\=#FFFC40>$1</color> MAX HP Ice Elemental DMG to 1 target with a <color\=#FFFC40>$2</color> base chance to inflict a Frozen debuff. \n\n<b><size\=28><color\=#850101>Chilly twin axes strike the enemy, making them feel colder.</color></size></b>
 
 // Skill 2: Vanguard Assault
 
 r:"對1名敵人造成<color\=#FFFC40>(\d+\.\d%)</color>最大生命值的物理屬性傷害，並使目標敵人的防禦力降低<color\=#FFFC40>(\d+\.\d%)</color>，效果持續2回合。處於<link\="s|151"><u>『荒野救星』</u></link>狀態下時，防禦力降低值提升至<color\=#FFFC40>(\d+\.\d%)</color>。\n<b><size\=28><color\=#850101>先鋒精神勢不可擋，在烈馬的啼鳴中對敵人造成難以抵擋的物理傷害。</color></size></b>"=Deals <color\=#FFFC40>$1</color> MAX HP Physical Damage and inflicts a <color\=#FFFC40>$2</color> DEF Down debuff that lasts for 2 turns to 1 target. When using this skill while <u>Wild Savior</u> is active, the DEF Down debuff becomes twice as powerful.
 
-// Skill 3: Zero Healing
+// Skill 3: Sub-zero Healing
 
 r:"使所有同伴的最大生命值提升，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+%)</color>（最多計入<color\=#FFFC40>(\d+)</color>點最大生命值），同時自身受到攻擊的機率大幅提升，效果持續2回合。回復所有同伴生命值，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d%)</color>。\n冷卻時間：1回合。\n<b><size\=28><color\=#850101>極寒的冰域展開，絕對的低溫有助於保持頭腦清醒和身體健康。</color></size></b>"=<color\=#FFFC40>Cooldown after use: 1 turn</color> \nIncreases the party's MAX HP by <color\=#FFFC40>$1</color> up to <color\=#FFFC40>$2 HP</color>, heals the party <color\=#FFFC40>$3</color> of Kano Shun's MAX HP, and increases the likelihood of being attacked. The effect lasts for 2 turns.\n
 
 // Skill 4: Combat Skills
-r:"『ONE MORE』：對1名敵人造成冰凍屬性傷害。\n『HIGHLIGHT』：使所有同伴的最大生命值提升，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d%)</color>（最多計入<color\=#FFFC40>(\d+)</color>點最大生命值）。回復所有同伴生命值，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d%)</color>。同時對1名敵人造成<color\=#FFFC40>(\d+\.\d%)</color>最大生命值的冰凍屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成6次射擊屬性傷害，子彈可能會發生偏移。對同一目標造成傷害會衰減。"=ONE MORE: Ice Elemental DMG on 1 target.\nHIGHLIGHT: Increases the party's MAX HP by <color\=#FFFC40>$1</color> of Kano Shun's MAX HP up to <color\=#FFFC40>$2</color>, heals the party <color\=#FFFC40>$3</color> of Kano Shun's MAX HP. Deals <color\=#FFFC40>$4</color> Ice Elemental DMG to 1 target.\n\nLeveling up Combat Skills also improves Melee Attack and Gun Attack DMG.
+r:"『ONE MORE』：對1名敵人造成冰凍屬性傷害。\n『HIGHLIGHT』：使所有同伴的最大生命值提升，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d%)</color>（最多計入<color\=#FFFC40>(\d+)</color>點最大生命值）。回復所有同伴生命值，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d%)</color>。同時對1名敵人造成<color\=#FFFC40>(\d+\.\d%)</color>最大生命值的冰凍屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成6次射擊屬性傷害，子彈可能會發生偏移。對同一目標造成傷害會衰減。"=ONE MORE: Ice Elemental DMG on 1 target.\nHIGHLIGHT: Increases the party's MAX HP by <color\=#FFFC40>$1</color> of SOY's MAX HP up to <color\=#FFFC40>$2</color>, heals the party <color\=#FFFC40>$3</color> of SOY's MAX HP, then deals <color\=#FFFC40>$4</color> MAX HP Ice Elemental DMG to 1 target.\n\nLeveling up Combat Skills also improves Melee Attack and Gun Attack DMG.
 
 // Soy's Combat Skills Upgrade
 HIGHLIGHT：計入生命值上限=HIGHLIGHT: MAX HP Cap
@@ -560,7 +562,7 @@ HIGHLIGHT：生命值回復倍率=HIGHLIGHT: HP% Heal
 r:"槍械子彈數量提升<color\=#FFFC40>(\d+)</color>，並且槍械射擊每發子彈有<color\=#FFFC40>(\d+\.\d%)</color>固定機率附帶自身<color\=#FFFC40>(\d+%)</color>最大生命值傷害且使敵人防禦降低<color\=#FFFC40>(\d+%)</color>，效果持續3回合。槍械傷害對同一目標有衰減。"=Gun Ammo: 24+<color\=#FFFC40>$1</color>\nEach shot has a fixed <color\=#FFFC40>$2</color> chance to deal extra <color\=#FFFC40>$3</color> MAX HP DMG and inflicts a <color\=#FFFC40>$4</color> DEF Down Debuff. The effect lasts for 3 turns, and the Gun DMG is reduced for the same target.
 
 // Courage (It seems this skill can't be translated)
-//r:"釋放『零度治癒』技能後每次受到攻擊，有<color\=#FFFC40>(\d+\.\d%)</color>固定機率觸發<link\="s|151\"><u>『荒野救星』</u></link>的回復效果，效果持續2回合。"=Whenever you are attacked after releasing "Zero Healing" skill, you will have<color\=#FFFC40>$1</color>Fixed chance of triggering Wild Savior's unique buff for 2 turns instead of 1.
+//r:"釋放『零度治癒』技能後每次受到攻擊，有<color\=#FFFC40>(\d+\.\d%)</color>固定機率觸發<link\="s|151\"><u>『荒野救星』</u></link>的回復效果，效果持續2回合。"=Whenever SOY is attacked after releasing "Zero Healing" skill, he will have<color\=#FFFC40>$1</color>Fixed chance of triggering Wild Savior's unique buff for 2 turns instead of 1.
 
 // Awareness 0
 勇敢者的遊戲=Hero's Game
@@ -568,7 +570,7 @@ r:"槍械子彈數量提升<color\=#FFFC40>(\d+)</color>，並且槍械射擊每
 
 // Awareness 1
 下戰書=Declaration of War
-加納駿處於<link\="s|151"><u>『荒野救星』</u></link>狀態時，受到傷害降低8%。=When Kano Shun's <link\="s|151"><u>"Wild Savior"</u></link> is active, he receives 8% less DMG from enemies.
+加納駿處於<link\="s|151"><u>『荒野救星』</u></link>狀態時，受到傷害降低8%。=When SOY's <link\="s|151"><u>"Wild Savior"</u></link> is active, he receives 8% less DMG from enemies.
 
 // Awareness 2
 危險對峙=Dangerous Showdown
@@ -576,11 +578,11 @@ r:"槍械子彈數量提升<color\=#FFFC40>(\d+)</color>，並且槍械射擊每
 
 // Awareness 3
 熱血的硝煙=Piping-Hot Smoke
-加納駿的生命值低於50%時，受到的治療效果提升25%。=When Kano Shun's HP is less than 50%, he will receive 25% more healing.
+加納駿的生命值低於50%時，受到的治療效果提升25%。=When SOY's HP is less than 50%, he will receive 25% more healing.
 
 // Awareness 4
 一決勝負=The Winner is Determined
-『零度治癒』、『戰鬥技巧』的技能等級提升2級，至多提升至15級。=Increase the skill level of "Zero Degree Healing" and "Combat Skill" by 2 levels, up to a maximum of 15 levels.
+『零度治癒』、『戰鬥技巧』的技能等級提升2級，至多提升至15級。=Increase the skill level of "Zero Healing" and "Combat Skill" by 2 levels, up to a maximum of 15 levels.
 
 // Awareness 5
 暴力處決=Violent Execution
@@ -588,13 +590,41 @@ HIGHLIGHT效果提升：使所有同伴受到傷害降低16%，效果持續2回�
 
 // Awareness 6
 勝利者榮光=Winner's Glory
-加納駿處於<link\="s|151"><u>『荒野救星』</u></link>狀態下攻擊敵人時，會額外附帶基於加納駿最大生命值10%的傷害並回復等量生命值。=While Kano Shun's <link\="s|151"><u>"Wild Savior"</u></link> is active, deal an extra 10% of Kano Shun's MAX HP as damage and restore the same amount of HP.
+加納駿處於<link\="s|151"><u>『荒野救星』</u></link>狀態下攻擊敵人時，會額外附帶基於加納駿最大生命值10%的傷害並回復等量生命值。=While Soy's <link\="s|151"><u>"Wild Savior"</u></link> is active, deal an extra 10% of Soy's MAX HP as damage and restore that same amount of HP.
 
 
 
 ----- Menu / UI Elements -----
 
---- Guild ---
+擁有:=Owned: 
+
+--- Guild / Paradise ---
+個人積分=Points
+總積分=Total Pts.
+積分：=Points: 
+本期歷史積分=Personal Best
+當前積分=Current Pts.
+樂園排行=Paradise Rank
+樂園活躍度=Activity Pts.
+r:"今日活躍：(\d+\/\d+)"=Today's Points: $1
+
+所屬樂園=Paradise\nName:
+樂園職位=Position:
+代理人等級=Level
+樂園人數=Members
+樂園影響力=Influence
+本樂園排名獎勵=Rank Rewards
+
+獎勵詳情=Rewards
+挑戰倒計時：=Challenge countdown:
+任意樂園成員首次參與挑戰後活躍值+1=+1 Activity Point from each member when challenging the weekly for the first time.
+r:"樂園累計活躍每達到指定值後可領取對應獎勵，當前：<color\=#eade10>(\d+)</color>"=Total accumulated Activity Points: <color\=#eade10>$1</color>
+r:"個人歷史總積分達到指定值後可領取對應獎勵，當前：<color\=#eade10>(\d+)</color>"=Receive rewards after earning a certain amount of points. Your Personal Best: <color\=#eade10>$1</color>
+已獲得本週全部獎勵=You're all set! Come back next week...\n or aim for more points!
+
+r:"近7天貢獻 (\d+)"=7d Contribution: $1
+r:"(\d+)天(\d+)時(\d+)分"=Weekly Reset:\n $1 Days $2 Hours
+ 
 <color\=#8F8D8D>1小時前線上</color>=<color\=#8F8D8D>1 Hour</color>
 <color\=#8F8D8D>1天前線上</color>=<color\=#8F8D8D>1 Day</color>
 sr:"<color\=#8F8D8D>(.*?)小時前線上</color>"=<color\=#8F8D8D>$1 Hours</color>
@@ -603,36 +633,54 @@ sr:"(.*?)人線上"=$1 Online
 sr:"<color\=#FF0000>(.*?)</color>加入了樂園。"=<color\=#FF0000>$1</color> joined the Paradise.
 sr:"<color\=#FF0000>(.*?)</color>退出了樂園。"=<color\=#FF0000>$1</color> left the Paradise.
 sr:"<color\=#FF0000>(.*?)</color>將<color\=#FF0000>(.*?)</color>移出了樂園。"=<color\=#FF0000>$1</color> made <color\=#FF0000>$2</color> move out of the Paradise.
+
 成員=Member
 代理人=Leader
 <color\=#81ea2c>線上</color>=<color\=#81ea2c>Online</color>
 
---- Challenges ---
-登入遊戲 (0/1)=Log in to the game (0/1)
-登入遊戲 (1/1)=Log in to the game (1/1)
-進行0次人格面具合成 (0/1)=Fuse 1 Persona (0/1)
-進行1次人格面具合成 (1/1)=Fuse 1 Persona (1/1)
-消耗3點行動力 (0/3)=Consume 3 Action points (0/3)
-消耗3點行動力 (1/3)=Consume 3 Action points (1/3)
-消耗3點行動力 (2/3)=Consume 3 Action points (2/3)
-消耗3點行動力 (3/3)=Consume 3 Action points (3/3)
-r:"消耗120點體力 \((\d+)/120\)"=Consume 120 Stamina ($1/120)
-進行1次邀約 (0/1)=Spend time with a Confidant (0/1)
-進行1次邀約 (1/1)=Spend time with a Confidant (1/1)
+休閒娛樂=Leisurely
+佛系玩家=Peaceful
+自由暢玩=Casual
 
-探索經驗：=EXP:
+--- Challenges ---
+探索經驗：=BP EXP:
 本週上限：=7d cap:
-r:"累計消耗100000魂石 \((\d+)/100000\)"=Spend a total of 100,000 Soulstones ($1/100000)
-r:"累計消耗20000日元 \((\d+)/20000\)"=Spend a total of 20,000 yen ($1/20000)
-r:"累計消耗25點行動力 \((\d+)/25\)"=Consume a total of 25 Action points ($1/25)
-r:"累計消耗1250點體力 \((\d+)/1250\)"=Consume a total of 1,250 Stamina ($1/1250)
+
+// DAILY //
+每次完成今日計畫可獲得=Complete daily tasks to receive useful rewards:
+今日剩餘領取次數=Dailies left to complete:
+
+r:"登入遊戲"=Log in to the game.
+r:"進行1次人格面具合成"=Fuse 1 Persona
+r:"完成1次「人格面具」挑戰 \((\d)\/(\d)\)"=Complete a Persona Farm. ($1 / $2)\n<color\=#8F8D8D>(Stamina Cost depending on Rank)</color>
+r:"進行1次打工 \((\d)\/(\d)\)"=Complete a Part-time job. ($1 / $2)\n<color\=#8F8D8D>(1 Activity After School)</color>
+r:"消耗3點行動力 \((\d)\/(\d)\)"=Consume 3 Action points ($1 / $2)
+r:"消耗120點體力 \((\d+)\/120\)"=Consume 120 Stamina ($1 / 120)
+r:"進行1次邀約"=Spend time with a Confidant 1 time.
+r:"完成1次「啟示套裝」挑戰 \((\d)\/(\d)\)"=Complete a Revelation Farm. ($1 / $2)\n<color\=#8F8D8D>(Stamina Cost: 40)</color>
+r:"完成1次「旖旎香調」挑戰 \((\d)\/(\d)\)"=Complete a Fragrance Farm. ($1 / $2)\n<color\=#8F8D8D>(Stamina Cost: 30)</color>
+r:"進行1次人格面具育成 \((\d)\/(\d)\)"=Inherit a Persona skill to another. ($1 / $2)
+
+// WEEKLY //
+r:"累計消耗(\d+)魂石 \((\d+)\/(\d+)\)"=Spend a total of $1 Soulstones this week.\n($2 / 100000)
+r:"累計消耗(\d+)日元 \((\d+)\/(\d+)\)"=Spend a total of 20,000¥ this week. \n($2¥ / 20000¥)
+r:"累計消耗(\d+)點行動力 \((\d+)\/(\d+)\)"=Consume a total of 25 Action points this week. \n($2 / 25)
+r:"累計消耗(\d+)點體力 \((\d+)\/(\d+)\)"=Consume a total of 1,250 Stamina this week.\n($2 / 1250)
+r:"完成1次「往日回溯」 \((\d)\/(\d)\)"=Complete a Past Palace Boss challenge. ($1 / $2)
+
+// Seasonal //
+r:"在「命運交錯之時」中通關「收下慾望」 \((\d)\/(\d)\)"=Pass the Final Mission in the \nPhantom Thieves event. ($1 / $2)
+r:"在「怪盜交易所」中消耗3000個怪盜徽記 \((\d+)\/(\d+)\)"=Consume 3,000 Phantom Thieves Emblems\nin the Event Exchange. ($1 / $2)
+r:"累計進行50次「角色簽約」&「武器補給」 \((\d+)\/(\d+)\)"=Perform 50 pulls in total. ($1 / $2)
+r:"在「心之海試煉」中通過「西部施工區」 \((\d)\/(\d)\)"=Pass the Western Construction Zone\nin the Sea of Souls Challenge ($1 / $2)
+r:"完成12次「在盧布朗度過」日程 \((\d+)\/(\d+)\)"=Spend time in Leblanc 12 times. ($1 / $2)
 
   ----- Stats -----
 攻擊力=ATK
 防禦力=DEF
 效果抵抗=Effect RES
 傷害加成=Damage Bonus
-護盾加成=Shield
+護盾加成=Shield Effect
 效果命中=Effect Hit Rate
 治療加成=Healing Bonus
 暴擊傷害=CRIT DMG
@@ -641,15 +689,16 @@ r:"累計消耗1250點體力 \((\d+)/1250\)"=Consume a total of 1,250 Stamina ($
 穿透=DEF Ignore
 治療效果=Healing Boost
 暴擊效果=CRIT DMG
-精力回復=Energy Rate
+精力回復=SP Recovery Rate
 
 生命成長率=HP Growth
 攻擊成長率=ATK Growth
 防禦成長率=DEF Growth
 
   ----- Metaverse Farm -----
+消耗：= 
 武器突破材料=Weapon Ascension
-掉落高級技能材料=Weekly Boss (30)
+掉落高級技能材料=Palace Boss (30)
 怪盜升級材料=Char Lv. (20)
 大量魂石=Soul Stones (20)
 面具升級材料=Persona Lv. (20)
@@ -658,12 +707,16 @@ r:"累計消耗1250點體力 \((\d+)/1250\)"=Consume a total of 1,250 Stamina ($
 技能升級材料=Skill Lv. (30)
 怪盜潛能材料=Char Ascend (30)
 武器突破材料=Wpn Ascend (30)
+
+r:"持有印記：(\d+)"=Seal Owned: $1
 未登錄=Not Registered
+
   ------ Persona Sort By -----
 面具等級=Sort Lvl.
 特色屬性=Element
 意識等級=Awakening
 面具品質=Rarity
+
   ----- Profile Menu -----
 違規檢舉=Report
 更換名片=Change Background
@@ -673,14 +726,15 @@ r:"累計消耗1250點體力 \((\d+)/1250\)"=Consume a total of 1,250 Stamina ($
 修改簽名=Change Bio
 修改名稱=Change Name
 遮罩此人=Block
+
   ----- Character Screen -----
 上陣面具屬性會全部附加至主角=Wonder's stats are his \nequipped Persona stats combined.
-主角達到40級時解鎖下一階潛能=Unlocks when Wonder is level 40
-主角達到40級可繼續突破=Unlocks when Wonder is level 40
-替換武器將自動繼承武器等級=Weapon level will\ncarry over between weapons.
+r:"主角達到(\d+)級時解鎖下一階潛能"=Unlocks when Wonder is level $1
+r:"主角達到(\d+)級可繼續突破"=Unlocks when Wonder is level $1
+替換武器將自動繼承武器等級=Weapon level will\ncarry over between equips.
 生存遊戲專賣店可獲取更多武器=Obtain more weapons at Iwai's Weapon Store
-主角40級解鎖=Level 40 Unlock
-
+r:"主角(\d+)級解鎖"=Level $1 Unlock
+r:"怪盜(\d+)級時可繼續提升"=Skill can level up at Lv. $1
 
 ----- Below are Story Cutscene Translations -----
 ----- Prelude (Casino Intro) -----
