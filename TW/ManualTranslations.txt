@@ -596,9 +596,18 @@ HIGHLIGHT效果提升：使所有同伴受到傷害降低16%，效果持續2回�
 
 ----- Menu / UI Elements -----
 
-擁有:=Owned: 
+r:"(\d+)天(\d+)時"=<color\=#FFFC40>$1 days $2 hours</color> <color\=#FFFFFF>left</color>
+r:"(\d+)天後過期"=Expires in $1 days
 
---- Guild / Paradise ---
+擁有:=Owned: 
+免費=FREE
+領獎=Claim
+已領取=Claimed
+
+////////////////////////
+/// Guild / Paradise ///
+////////////////////////
+
 個人積分=Points
 總積分=Total Pts.
 積分：=Points: 
@@ -607,6 +616,7 @@ HIGHLIGHT效果提升：使所有同伴受到傷害降低16%，效果持續2回�
 樂園排行=Paradise Rank
 樂園活躍度=Activity Pts.
 r:"今日活躍：(\d+\/\d+)"=Today's Points: $1
+r:"近7天貢獻 (\d+)"=7d Contribution: $1
 
 所屬樂園=Paradise\nName:
 樂園職位=Position:
@@ -616,14 +626,13 @@ r:"今日活躍：(\d+\/\d+)"=Today's Points: $1
 本樂園排名獎勵=Rank Rewards
 
 獎勵詳情=Rewards
-挑戰倒計時：=Challenge countdown:
+挑戰倒計時：=Weekly Reset:
 任意樂園成員首次參與挑戰後活躍值+1=+1 Activity Point from each member when challenging the weekly for the first time.
 r:"樂園累計活躍每達到指定值後可領取對應獎勵，當前：<color\=#eade10>(\d+)</color>"=Total accumulated Activity Points: <color\=#eade10>$1</color>
 r:"個人歷史總積分達到指定值後可領取對應獎勵，當前：<color\=#eade10>(\d+)</color>"=Receive rewards after earning a certain amount of points. Your Personal Best: <color\=#eade10>$1</color>
 已獲得本週全部獎勵=You're all set! Come back next week...\n or aim for more points!
 
-r:"近7天貢獻 (\d+)"=7d Contribution: $1
-r:"(\d+)天(\d+)時(\d+)分"=Weekly Reset:\n $1 Days $2 Hours
+
  
 <color\=#8F8D8D>1小時前線上</color>=<color\=#8F8D8D>1 Hour</color>
 <color\=#8F8D8D>1天前線上</color>=<color\=#8F8D8D>1 Day</color>
@@ -642,7 +651,48 @@ sr:"<color\=#FF0000>(.*?)</color>將<color\=#FF0000>(.*?)</color>移出了樂園
 佛系玩家=Peaceful
 自由暢玩=Casual
 
---- Challenges ---
+///////////////////////////
+/// Handbook Challenges ///
+///////////////////////////
+
+完成目標Ⅱ第一階段所有任務=Complete all tasks in Step 1
+完成目標Ⅱ第二階段所有任務=Complete all tasks in Step 2
+完成目標Ⅱ第三階段所有任務=Complete all tasks in Step 3
+完成目標Ⅱ第四階段所有任務=Complete all tasks in Step 4
+完成目標Ⅱ第五階段所有任務=Complete all tasks in Step 5
+完成目標Ⅱ第六階段所有任務=Complete all tasks in Step 6
+完成目標Ⅱ第七階段所有任務=Complete all tasks in Step 7
+
+完成目標Ⅱ第一階段所有任務=Complete all tasks in Step 1
+完成目標Ⅱ第二階段所有任務=Complete all tasks in Step 2
+完成目標Ⅱ第三階段所有任務=Complete all tasks in Step 3
+完成目標Ⅱ第四階段所有任務=Complete all tasks in Step 4
+完成目標Ⅱ第五階段所有任務=Complete all tasks in Step 5
+完成目標Ⅱ第六階段所有任務=Complete all tasks in Step 6
+完成目標Ⅱ第七階段所有任務=Complete all tasks in Step 7
+
+完成目標=Complete All 
+所有任務=Tasks
+自選新手五★怪盜=Pick a 5★ Character!
+自選新手五★武器=Pick a 5★ Weapon!
+完成   階段目標獲得=Completion Rewards
+
+r:"主角升至(\d+)級"=Wonder reaches level $1.
+r:"擁有(\d+)個(\d+)級的怪盜"=Have $1 level $2 Phantom Thieves.
+r:"擁有(\d+)個(\d+)級的武器"=Have $1 level $2 weapons.
+r:"擁有(\d+)張等級為(\d+)級的啟示卡"=Have $1 level $2 Revelation cards.
+r:"消耗(\d+)靈感點"=Consume $1 Inspiration Points.
+r:"通關天鵝絨試煉任意(\d+)章的第(\d+)關"=In Velvet Challenges, complete Level $1 in $2 chapters. 
+r:"進行(\d+)次足球部活動"=Join a Soccer Club activity $1 times. 
+r:"完成(\d+)次「厄抑之境」 \((\d)\/(/d)\)"=Complete $1 Revelation Farms. ($1 / $2)
+r:"擁有(\d+)個(\d+)級的階級(\d+)及以上的人格面具"=Own $1 Rank $3 Persona at level $2.
+r:"合成(\d+)個彩色品質的階級(\d)人格面具"=Fuse $1 Rainbow-quality Rank $2 Persona.
+r:"將(\d+)名怪盜的任意(\d+)個非潛能技能各升級(\d+)次"=Level up $2 of your companions' $1 skills $3 times.  
+
+/////////////////////////
+///// BP Challenges /////
+/////////////////////////
+
 探索經驗：=BP EXP:
 本週上限：=7d cap:
 
@@ -675,7 +725,10 @@ r:"累計進行50次「角色簽約」&「武器補給」 \((\d+)\/(\d+)\)"=Perf
 r:"在「心之海試煉」中通過「西部施工區」 \((\d)\/(\d)\)"=Pass the Western Construction Zone\nin the Sea of Souls Challenge ($1 / $2)
 r:"完成12次「在盧布朗度過」日程 \((\d+)\/(\d+)\)"=Spend time in Leblanc 12 times. ($1 / $2)
 
-  ----- Stats -----
+/////////////
+/// Stats ///
+/////////////
+
 攻擊力=ATK
 防禦力=DEF
 效果抵抗=Effect RES
@@ -695,7 +748,10 @@ r:"完成12次「在盧布朗度過」日程 \((\d+)\/(\d+)\)"=Spend time in Leb
 攻擊成長率=ATK Growth
 防禦成長率=DEF Growth
 
-  ----- Metaverse Farm -----
+//////////////////////
+/// Metaverse Farm ///
+//////////////////////
+
 消耗：= 
 武器突破材料=Weapon Ascension
 掉落高級技能材料=Palace Boss (30)
@@ -712,12 +768,17 @@ r:"持有印記：(\d+)"=Seal Owned: $1
 未登錄=Not Registered
 
   ------ Persona Sort By -----
+  
 面具等級=Sort Lvl.
 特色屬性=Element
 意識等級=Awakening
 面具品質=Rarity
+合成=Fuse
 
-  ----- Profile Menu -----
+////////////////////
+/// Profile Menu ///
+////////////////////
+
 違規檢舉=Report
 更換名片=Change Background
 更換相框=Change Avatar Frame
@@ -727,7 +788,21 @@ r:"持有印記：(\d+)"=Seal Owned: $1
 修改名稱=Change Name
 遮罩此人=Block
 
-  ----- Character Screen -----
+尚未加入樂園。=No Affiliation
+
+r:"提升(\d+%)防禦力=Boosts Defense by $1%
+心之海試煉=SoS Ranking
+1等星1階= 1st Tier 
+1等星2階= 2nd Tier 
+1等星3階= 3rd Tier
+1等星4階= 4th Tier
+1等星5階= 5th Tier
+都市生活天數=Days Spent
+
+////////////////////////
+/// Character Screen ///
+////////////////////////
+
 上陣面具屬性會全部附加至主角=Wonder's stats are his \nequipped Persona stats combined.
 r:"主角達到(\d+)級時解鎖下一階潛能"=Unlocks when Wonder is level $1
 r:"主角達到(\d+)級可繼續突破"=Unlocks when Wonder is level $1
@@ -736,12 +811,35 @@ r:"主角達到(\d+)級可繼續突破"=Unlocks when Wonder is level $1
 r:"主角(\d+)級解鎖"=Level $1 Unlock
 r:"怪盜(\d+)級時可繼續提升"=Skill can level up at Lv. $1
 
+/////////////
+/// Stats ///
+/////////////
+
+攻擊力=ATK
+防禦力=DEF
+效果抵抗=Effect RES
+傷害加成=Damage Bonus
+護盾加成=Shield Effect
+效果命中=Effect Hit Rate
+治療加成=Healing Bonus
+暴擊傷害=CRIT DMG
+暴擊率=CRIT Rate
+速度=Speed
+穿透=DEF Ignore
+治療效果=Healing Boost
+暴擊效果=CRIT DMG
+精力回復=SP Recovery Rate
+
+生命成長率=HP Growth
+攻擊成長率=ATK Growth
+防禦成長率=DEF Growth
+
 ----- Below are Story Cutscene Translations -----
 ----- Prelude (Casino Intro) -----
 序章=Prelude
-離開賭場=Get out of the casino.
+離開賭場=Escape the casino.
 那個叫做JOKER的人是誰？和他戰鬥的……是你？是夢吧？但那似曾相識的感覺是什麼……=Who is this "Joker"? I'm fighting... as him? It's just a dream, right? Why does this feel so... familiar?
-真實與虛幻的夾縫=Caught Between Reality and Illusion
+真實與虛幻的夾縫=Caught Between Dream and Reality
 剧情动画：阴影出现阴影出现=Plot Animation: Shadows Appear
 劇情動畫：賭場=Drama Animation: Casino
 少年般的聲音=Boyish Voice
@@ -768,70 +866,73 @@ r:"怪盜(\d+)級時可繼續提升"=Skill can level up at Lv. $1
 戴眼鏡的女性=Woman with Glasses
 片山 久未=Kumi Katayama
 
-好了，班會到此結束。\n把未來規劃志願調查表從後往前傳上來。=This concludes the class meeting. \nPlease collect the questionnaire from back to front.
+好了，班會到此結束。\n把未來規劃志願調查表從後往前傳上來。=That's all the time we have for homeroom today. \n Please pass your senior exit surveys down from back to front.
 
 總之……都記得寫名字喔！=Don't forget to write your name!
 
-雖然我是在說大家都懂的事情……\n要寫自己的真名哦，可不是寫綽號暱稱啊。=This is common sense, but everyone should write their real names, not nicknames.
+雖然我是在說大家都懂的事情……\n要寫自己的真名哦，可不是寫綽號暱稱啊。=This may be common sense, but remember to write your full names.
 比如我的話，就應該寫<color\=#ff0000>片山久未</color>。\n大家聽懂了嗎？=In my case, I'd write <color\=#ff0000>Katayama Kumi.</color>.\nDo you understand?
-要是不從這種常識講起，\n到時反而怪我說明不到位了……=If I don't tell you this, I'll be blamed for not explaining it properly...
+要是不從這種常識講起，\n到時反而怪我說明不到位了……=Something as simple as this that may seem obvious to you, \nbut I'm the one who gets blamed for not explaining things when you guys mess up anyway.
 
-……對了，你們確認一下有沒有寫名字哦。=By the way, make sure there is no name written on it.
-似乎從來沒考慮過未來……不，你甚至連去想的慾望都沒有。=Never seem to think about the future ...... No, you don't even have the desire to think about it.
-得寫上名字……=I'll write my name here. \n<color\=#ff0000>TL NOTE: Name can be changed once for free.</color>
-從未正視過的前路=The road ahead that I've never looked at before.
+……對了，你們確認一下有沒有寫名字哦。=In any case, make sure that you've written down your name.
+似乎從來沒考慮過未來……不，你甚至連去想的慾望都沒有。=The future. It's not something you ever thought about...... No, you don't even have the desire to think about it.
+得寫上名字……=I suppose I'll write my name. \n<color\=#ff0000>TL NOTE: Name can be changed once for free.</color>
+從未正視過的前路=The Unseen Path which Lies Ahead.
 在2-C教室上課=Classes are held in classroom 2-C.
 突然覺得好睏……=I suddenly feel sleepy...
 
 ----- Prelude (Velvet Room) -----
-劇情動畫：初見天鵝絨=Drama Animation: First Look at Velvet
+劇情動畫：初見天鵝絨=Drama Animation: Arrival at the Velvet Room
 
 呵呵呵=Heh heh heh
 呵呵呵……=Heh heh heh...
 
-啊，自我介紹有些遲了，請叫我<color\=#ff0000>伊格爾</color>吧。=Ah, I almost forgot to introduce myself. Please, call me <color\=#ff0000>Igor</color>. I am delighted to make your acquintance.
+啊，自我介紹有些遲了，請叫我<color\=#ff0000>伊格爾</color>吧。=Ah, It would seem that an introduction is overdue. Please, call me <color\=#ff0000>Igor</color>.
 
-然後，這個的名字是……<color\=#ff0000>梅洛普</color>。\n是服侍我的隨從。=This is <color\=#ff0000>Merope</color>. \nShe's a resident here, like myself.
+然後，這個的名字是……<color\=#ff0000>梅洛普</color>。\n是服侍我的隨從。=This is <color\=#ff0000>Merope</color>. \nShe resides here as my assistant.
 
-我是梅洛普，請多指教。=I'm Merope. Pleased to meet you.
+我是梅洛普，請多指教。=I'm Merope. It is a pleasure to make your acquaintance.
 這裡是位於夢與現實、\n精神與物質之間的狹縫之處。=This place exists between dream and reality, \nmind and matter...
 
-儘管你是生活在這種世界中的人類……\n現在只要這樣就好。=Even though you are currently a living person right now, as long as things are the way they are...
 
 長鼻子老人=Old man with a long nose
-夢中的天鵝絨房間=The Velvet Room of Your Dreams
+夢中的天鵝絨房間=The Velvet Room of Dreams
 天鵝絨房間=Velvet Room
 
-你是以某種形式做出了「選擇」吧……？=You've made a "choice", haven't you?
-所以才會作為「客人」來訪。=You shall be welcome here as a guest in the Velvet Room.
-沒錯，我想說的是，\n這是你自己做出的「選擇」……=Yes, I'd say it's a "choice" you made for yourself.
+你是以某種形式做出了「選擇」吧……？=Ah, you must be here to honor the terms of your "contract"?
+所以才會作為「客人」來訪。=It is the reason you are present as a guest, after all.
+沒錯，我想說的是，\n這是你自己做出的「選擇」……=Hmmm. Allow me to explain: \nYou are here because of a "choice" you had made for yourself.
+
+
+選擇？=A contract?
+沒錯，我想說的是，\n這是你自己做出的「選擇」……=Indeed, one borne from a "choice" that you yourself made...
+
 
 客人？=A guest?
-選擇？=A choice?
+是的，我們歡迎你以「客人」的身份來訪……=Indeed, you are being welcomed as our "guest"...
 
-居然還沒有察覺嗎……=I see you haven't realized it yet.
-原來如此，\n看到這個房間的景象，也不是不能理解。=The sight of this room... it has a meaning.
-打個比方，\n就是「在心海中開掘的海底隧道」。=It is called "an undersea tunnel dug in the sea of souls".
 
-沒錯，我想說的是，\n這是你自己做出的「選擇」……=Yes, I'd say it's a "choice" you made...
-但你憑藉自己的意志，\n向我展示了名為「想知道」的慾望。=But you have shown me a "desire to know" with your own will.
-那麼，這次就到這裡吧……\n啊，抱歉，最後再給你一個忠告……=Well then, this is it for now... \nAhh, one last piece of advice!
+居然還沒有察覺嗎……=So you have not come to realize it...
+原來如此，\n看到這個房間的景象，也不是不能理解。=I see... \nI suppose that comes not as a surprise, given the state of our surroundings.
+打個比方，\n就是「在心海中開掘的海底隧道」。=One could aptly describe us as being under "a sunken tunnel unearthed from the sea of souls".
+但你憑藉自己的意志，\n向我展示了名為「想知道」的慾望。=Yet, through your very own will, you have managed to show me a "desire to know".
+儘管你是生活在這種世界中的人類……\n現在只要這樣就好。=Which, even though you live in a world such as this, \nis certainly a comforting sight to see.
 
-「無慾」有時會導致你放棄自己……=A "Lack of Desire" can sometimes cause you to give up on yourself.
+那麼，這次就到這裡吧……\n啊，抱歉，最後再給你一個忠告……=Alas, this is as far as we should go for now. \nAh forgive me, I must impart one last piece of advice:
 
-這樣的世界還有您這樣的人……\n希望您能理解領會主人的忠告。=In such a world, there are still people like you. \nBecause of this,  please take my master's advice to heart.
+「無慾」有時會導致你放棄自己……=A "lack of desire" can sometimes cause one to give up on themselves.
 
-抱歉，留你這麼久，那麼……期待再會。=Sorry to keep you so long. \nI look forward to seeing you again.
+這樣的世界還有您這樣的人……\n希望您能理解領會主人的忠告。=In this world, there are many others like you. \nI hope you take my master's advice to heart.
 
-是的，我們歡迎你以「客人」的身份來訪……=Yes, we welcome you as a "guest"...
+抱歉，留你這麼久，那麼……期待再會。 =My apologies for keeping you. Well then, \n... Until we meet again.
 
-你做了一個奇怪的夢，伊格爾，梅洛普……他們說的話是什麼意思？=I had a strange dream... Igor, Merope... What do they mean by that?
 
-小心前方阴影！！=Watch out for the shadows ahead!
+
+你做了一個奇怪的夢，伊格爾，梅洛普……他們說的話是什麼意思？=That was such a strange dream... Igor, Merope... What could their words possibly mean?
 
 ----- Prelude (Return to Class) -----
 
-……可能就是因為這樣，\n很多孩子的狀態才不太對勁吧……=...... Maybe that's why a lot of kids aren't in the right shape ......
+……可能就是因為這樣，\n很多孩子的狀態才不太對勁吧……=...... Maybe that's why a lot of kids aren't in good shape right now......
 啊，片山老師……=Ah, Ms. Katayama ......
 名為新井的女學生=A female student named Arai.
 聽說這次沒有打勾的同學，\n統統要被算作「無志願」。=It is said that students who do not check the box this time will be counted as "unwilling".
