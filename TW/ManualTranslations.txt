@@ -804,10 +804,12 @@ r:"受到<link\="s\|107"><u>暈眩</u></link>效果時，效果抵抗提升(\d+\
 山靈=Sudama
 傑克霜精=Jack Frost
 天使= Angel
+
 --------------------------------------
 --- IV. Character-specific Skills ----
 --------------------------------------
-// Skill names are in Substitutions
+
+// Skill names are in Substitutions //
 
 意識詳情=A0~A6 // Awareness Levels
 
@@ -885,6 +887,17 @@ r:"(\d+)天後過期"=Expires in $1 days
 免費=FREE
 領獎=Claim
 已領取=Claimed
+前往=Go
+未達成=Not Yet
+r:"領取"=Get
+探索度=Get @
+可獲得=Progress
+即可獲得：=Completion:
+探索度達到=Claim Rewards on 
+主角等級=Acc Lv.
+挑戰倒計時：=Ends in  
+
+改造等級：=Reform:
 
 ////////////////////////
 /// Guild / Paradise ///
@@ -908,7 +921,7 @@ r:"近7天貢獻 (\d+)"=7d Contribution: $1
 本樂園排名獎勵=Rank Rewards
 
 獎勵詳情=Rewards
-挑戰倒計時：=Weekly Reset:
+
 任意樂園成員首次參與挑戰後活躍值+1=+1 Activity Point from each member when challenging the weekly for the first time.
 r:"樂園累計活躍每達到指定值後可領取對應獎勵，當前：<color\=#eade10>(\d+)</color>"=Total accumulated Activity Points: <color\=#eade10>$1</color>
 r:"個人歷史總積分達到指定值後可領取對應獎勵，當前：<color\=#eade10>(\d+)</color>"=Receive rewards after earning a certain amount of points. Your Personal Best: <color\=#eade10>$1</color>
@@ -1072,8 +1085,6 @@ r:"持有印記：(\d+)"=Seal Owned: $1
 遮罩此人=Block
 
 尚未加入樂園。=No Affiliation
-
-r:"提升(\d+%)防禦力=Boosts Defense by $1%
 心之海試煉=SoS Ranking
 1等星1階= 1st Tier 
 1等星2階= 2nd Tier 
@@ -1093,6 +1104,9 @@ r:"主角達到(\d+)級可繼續突破"=Unlocks when WONDER is level $1
 生存遊戲專賣店可獲取更多武器=Obtain more weapons at Iwai's Weapon Store
 r:"主角(\d+)級解鎖"=Level $1 Unlock
 r:"怪盜(\d+)級時可繼續提升"=Skill can level up at Lv $1
+
+// WONDER's Skill Tree
+r:"提升(\d+%)防禦力=Boosts Defense by $1%
 
 /////////////////////////////
 /// Banners / Pull Screen ///
@@ -1133,6 +1147,14 @@ r:"(\d+)\/(\d+)頁"=Page $1 / $2
 
 /// Mission Names
 夢想的味道之爭=The Flavor of Dreams Contest
+
+// Crepe Shop Quiz
+烙餅、放入奶油、再放草莓，\n然後把餅卷起來，再用紙包好。=Remember these steps:\nPrepare the pie, then add some cream, then strawberries, then roll up the pie. Don't forget to wrap it in paper!
+放入奶油=Cream
+放入草莓=Strawberries
+把餅卷起來=Roll up the pie
+烙餅=Prepare the pie
+用紙包好=Wrap it in paper
 
 // Friends
 輸入玩家的ID進行搜索=Search by Player ID
