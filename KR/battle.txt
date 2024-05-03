@@ -49,6 +49,8 @@ sr:"(.*?) <color\=#0F69CB>Lv.(\d+)</color>"=$1 <color\=#0F69CB>Lv.$2</color>
 공중의 나선=Aerial Spiral
 동경=Longing
 얽매임=Entanglement
+교차의 춤=Cross Dance
+태평의 노래=Song of the Sun
 여명의 거품=Foam of Dawn
 묶인 자=The Bound One
 추적=Tracking
@@ -92,10 +94,13 @@ sr:"(.*?) <color\=#0F69CB>Lv.(\d+)</color>"=$1 <color\=#0F69CB>Lv.$2</color>
 ++++ ----- Generic Combat Skills ----- ++++
 부흐=Bufu
 부후라=Bufula
+부흐라=Bufula
 부후다인=Bufudyne
+부흐다인=Bufudyne
 마하부후=Mabufu
 마하부흐=Mabufu
 마하부후라=Mabufula
+마하부흐라=Mabufula
 마하부후다인=Mabufudyne
 마하부흐다인=Mabufudyne
 다이아몬드 더스트=Diamond Dust
@@ -126,7 +131,7 @@ sr:"(.*?) <color\=#0F69CB>Lv.(\d+)</color>"=$1 <color\=#0F69CB>Lv.$2</color>
 마하사이=Mapsi
 마하사이오=Mapsio
 마하사이다인=Mapsiodyne
-사이코포스=Psycho Force
+사이코 포스=Psycho Force
 프레이=Frei
 프레이라=Freila
 프레이다인=Freidyne
@@ -135,12 +140,13 @@ sr:"(.*?) <color\=#0F69CB>Lv.(\d+)</color>"=$1 <color\=#0F69CB>Lv.$2</color>
 마하프레이라=Mafreila
 마하프레이다인=Mafreidyne
 코즈믹 플레어=Cosmic Flare
-타루카자=Tarukaja
-라쿠카자=Rakukaja
-스쿠카자=Sukukaja
-마하타루카=Matarukaja
-마하라쿠카자=Marakukaja
-마하스쿠카자=Masukukaja
+타루카쟈=Tarukaja
+라쿠카가=Rakukaja
+스쿠카가=Sukukaja
+마하타루카쟈=Matarukaja
+마하라쿠카쟈=Marakukaja
+마하스쿠카쟈=Masukukaja
+마하라쿠카 오토=Auto-Maraku
 하마=Hama
 하마온=Hamaon
 마한마=Mahama
@@ -161,10 +167,13 @@ sr:"(.*?) <color\=#0F69CB>Lv.(\d+)</color>"=$1 <color\=#0F69CB>Lv.$2</color>
 마하무드=Mamudo
 무드온=Mudoon
 마하무드온=Mamudoon
+죽어 줄래? =Die For Me!
 메기도=Megido
 메기도라=Megidola
 메기도라온=Megidolaon
 메기도라다인=Megidoladyne
+흡혈=Life Drain
+흡마=Spirit Drain
 디아=Dia
 디아라마=Diarama
 디아라한=Diarahan
@@ -177,8 +186,43 @@ sr:"(.*?) <color\=#0F69CB>Lv.(\d+)</color>"=$1 <color\=#0F69CB>Lv.$2</color>
 리캄=Recarm
 사마리캄=Samarecarm
 리캄드라=Recarmdra
+파트라=Patra
+바이스디=Baisudi
 방전의 벽=Elec Wall
+화염 내성 제거=Fire Break
+전격 내성 제거=Elec Break
 이연아=Giant Slice
+지탄=Snap
+열풍파=Heat Wave
+어설트 다이브=Assault Dive
+난동 부리기=Rampage
+폴 다운=Skull Cracker
+히스테리 싸대기=Hysterical Slap
+망살 러시=Memory Blow
+박치기=Headbutt
+트리플 다운=Triple Down
+브레인 버스터=Brainbuster
+브레인 셰이크=Brain Shake
+원 샷 킬=One-shot Kills
+몽향침=Dream Needle
+도르민 러시=Dormin Rush
+현기증 침=Dizzy Needle
+타룬다=Tarunda
+라쿤다=Rakunda
+마하타룬다=Matarunda
+데쿤다=Dekunda
+분노의 가세=Taunt
+선전 포고=Wage War
+현기증=Dazzler
+도르민=Dormina
+슬립 송=Lullaby
+컨센트레이트=Concentrate
+
+기원의 힘=Power of Origin
+염동 파괴=Telekinetic Destruction
+전류의 흐름=Current Flow
+벽사=Execution
+왕생의 심판=Royal Judgement
 
 
 ++++ ----- Common Combat Phrases ----- ++++
@@ -381,6 +425,14 @@ r:"<color\=#FFFF00>모든</color> 적에게 공격력 (\d+\.\d+%)의 화염 속�
 r:"<color\=#FFFF00>1명</color>의 적에게 공격력 (\d+\.\d+%)의 화염 속성 대미지를 준다. 『몰두』 상태에는 생명이 (\d+%) 미만인 적에게 주는 대미지가 (\d+%) 증가하고, (\d+%)의 기본 확률로 적을 화상 상태에 빠뜨린다."=Deals $1  ATK Fire damage to <color\=#FFFF00>1</color> enemy, dealing $2 more damage to enemies below $3 health. Has a $4 base chance to inflict Burn on Captivated enemies.
 r:"<color\=#FFFF00>모든</color> 적에게 공격력 (\d+\.\d+%)의 화염 속성 대미지를 준다. 몰두 상태에는 주는 대미지가 (\d+%) 증가하고, (\d+%)의 기본 확률로 적을 화상 상태에 빠뜨린다."=Deals $1 ATK Fire damage to <color\=#FFFF00>all</color> enemies, dealing $2 more damage to Captivated enemies. Has a $3 base chance to inflict Burn.
 
+++ ----- Yaoling Li ----- ++
+r:"^<color\=#FFFF00>모든</color> 적에게 공격력 (\d+\.?\d*)\%의 주원 속성 대미지를 주고, 자신의 속도에 따라 적의 방어력을 최대 (\d+\.?\d*)\% 감소시킨다. 해당 스킬로 적을 명중시킬 때마다 『추억』 4포인트를 획득한다.$"=Deals $1% ATK as Curse damage to <color\=#FFFF00>All</color> enemies. For 2 turns, reduces all target enemy's DEF based on the user's SPD, up to a maxium of $2%. Gain 4 points of 『Memories』 for each enemy hit by this skill.
+r:"^적 <color\=#FFFF00>1명</color>에게 공격력 (\d+\.?\d*)\%의 주원 속성 대미지를 주고, 이상 상태인 적에게 주는 대미지가 20% 증가한다. 『맹파탕』을 보유할 시 100%의 기본 확률로 스킬 메인 목표를 망각 상태에 빠뜨린다.$"=Deals $1% ATK as Curse damage to <color\=#FFFF00>1</color> enemy, and 20% increased damage to debuffed enemies. Consuming 『Maeun-tang』 adds a 100% base chance of inflicting Forget for 2 turns.
+r:"^<color\=#FFFF00>모든</color> 적에게 공격력 (\d+\.?\d*)\%의 주원 속성 대미지를 주고 『피안화』를 획득하게 한다. 자신의 속도에 따라 적이 받는 대미지가 최대 (\d+\.?\d*)\% 증가하며, 해당 효과는 대미지를 2회 받거나 2턴이 지나면 제거된다. 『맹파탕』 보유 시 『피안화』의 효과가 2배가 된다.$"=Deals $1% ATK as Curse damage to <color\=#FFFF00>All</color> enemies and inflicts 『Bloody Flower』, increasing damage taken by enemies based on the user's SPD, up to a maximum of $2%. This effect is removed after 2 instances of damage or after 2 turns. Consuming 『Maeun-tang』 doubles the damage increase effect of 『Bloody Flower』.
+r:"^<color\=#FFFF00>모든</color> 적에게 공격력 (\d+\.?\d*)\%의 주원 속성 대미지를 준다. 다음에 받는 대미지가 (\d+\.?\d*)\% 증가하며, 30%의 기본 확률로 망각 상태에 빠뜨린다. 효과는 2턴 동안 증가한다.$"=Deals $1% ATK as Curse damage to <color\=#FFFF00>All</color> enemies and increases their next damage taken by $2%. 30% base chance to inflict Forget for 2 turns.
+총기로 1명의 적을 사격한다. 매번 임의 적에게 3발을 사격하여 총격 속성 대미지를 준다. 총알 개수에 따라 여러 번 사격할 수 있다.=Shoot 1 enemy with a firearm. Each time, fire 3 shots at an enemy, dealing Gun damage. You can shoot multiple times depending on the number of bullets.
+<color\=#FF0000>리 야오링</color>이(가) 맹파탕을 획득했습니다...=<color\=#FF0000>Yaoling Li</color> has gained Maeun-tang...
+추억 40 도달 시 맹파탕을 획득한다.=Grants Maeun-tang when you reach 40 memories.
 
 
 ++++ ----- Battle Quotes ----- ++++
@@ -408,6 +460,8 @@ r:"<color\=#FFFF00>모든</color> 적에게 공격력 (\d+\.\d+%)의 화염 속�
 화려하게 가자=Let's go out in a big way!
 …헉?! 내가?=...Huh?! Me?
 좋은 HIGHLIGHT 기회야~! 날려버려~!=It's a great HIGHLIGHT opportunity~! Blow 'em away~!
+괴도단이 순조롭게 승리했어.\n축하해야지~=A glorious victory for the Phantom Thieves! Let's celebrate!
+이런, 허를 찔렸어! ? 다들 조심해!=Oh no, we were backstabbed!\n Everyone, be careful!
 
 ++++ ----- Field/Mementos Quotes ----- ++++
 근처에 좋은 게 있는 것 같아.\n찾아보자!=I think there's something good nearby, let's find it!
@@ -418,6 +472,7 @@ r:"<color\=#FFFF00>모든</color> 적에게 공격력 (\d+\.\d+%)의 화염 속�
 상자야. 어서 열어보자!=It's a treasure chest. Let us open it!
 여기에 마침 세이프 룸이 있어!=There's a safe room here!
 근처에 상자가 있어~\n근처에 상자가 있어~♪=There's a chest nearby~\nThere's a chest nearby~♪
+보아하니 근처에서 제일 강력한 적인 것 같아.=Apparently, it's the strongest enemy in this area.
 
 +++++ ----- Combat Information ----- +++++
 1턴=1 Turn
@@ -439,3 +494,14 @@ sr:"<color\=#FF0000>(.*?)</color>이\(가\) 풍습 이상 상태에서 회복되
 sr:"<color\=#FF0000>(.*?)</color>이\(가\) 동결 상태에 진입했습니다..."=<color\=#FF0000>$1</color> was Frozen...
 sr:"<color\=#FF0000>(.*?)</color>이\(가\) 화상 이상 상태에서 회복되었습니다."=<color\=#FF0000>$1</color> is no longer Burned.
 sr:"<color\=#FF0000>(.*?)</color>이\(가\) 차지 상태에 진입했습니다..."=<color\=#FF0000>$1</color> is waiting...
+sr:"<color\=#FF0000>(.*?\s*)</color>이(가) 망각 상태에 진입했습니다...=<color\=#FF0000>$1</color> entered a Forgetful state...
+sr:"<color\=#FF0000>(.*?\s*)</color>이(가) 망각 이상 상태에서 회복되었습니다.=<color\=#FF0000>$1</color> recovered from their Forgetful state.
+
++++ ----- Popup Text ----- +++
+다<color\=#000000>운</color>=Do<color\=#000000>w</color>n
+연<color\=#000000>소</color>=Bu<color\=#000000>r</color>n
+망<color\=#000000>각</color>=Fo<color\=#000000>r</color>get
+살<color\=#000000>기</color>=Fu<color\=#000000>r</color>y
+맹<color\=#000000>파</color>탕=M<color\=#000000>ae</color>un-tang
+방<color\=#000000>어</color> 감소=De<color\=#000000>c</color>rease DEF
+받<color\=#000000>는</color> 대미지 증가=In<color\=#000000>c</color>rease Damage Taken

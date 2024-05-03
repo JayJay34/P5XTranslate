@@ -21,6 +21,24 @@
 획득 경로=Acquisition Path
 구매 수량: =Purchase Quantity: 
 총 지출: =Total Spent: 
+이름을 입력하세요.=Enter your name.
+
+++++ ----- Quests ----- ++++
+20레벨 괴도 3명 보유=Have 3 level 20 Phantom Thieves
+40레벨 괴도 6명 보유=Have 6 level 40 Phantom Thieves
+20레벨 괴도 1명 보유=Have 1 level 20 Phantom Thief
+40레벨 괴도 8명 보유=Have 8 level 40 Phantom Thieves
+50레벨 괴도 1명 보유=Have 1 level 50 Phantom Thief
+50레벨 괴도 2명 보유=Have 2 level 50 Phantom Thieves
+50레벨 괴도 4명 보유=Have 4 level 50 Phantom Thieves
+50레벨 괴도 6명 보유=Have 6 level 50 Phantom Thieves
+50레벨 괴도 8명 보유=Have 8 level 50 Phantom Thieves
+
+++++ ----- Defeat Screen ----- ++++
+괴도 캐릭터 스킬의 강도 비교적 낮음=Phantom Thieves' skills are relatively weak
+괴도 캐릭터 <color\=#EF0000>무기</color>、스킬의 강도 비교적 낮음=Phantom Thieves' <color\=#EF0000>Weapon</color>、Skill strength is relatively low
+주인공 <color\=#EF0000>영감</color>、<color\=#EF0000>페르소나</color>、무기의 강도 비교적 낮음=Protagonist's <color\=#EF0000>Inspiration</color>, <color\=#EF0000>Persona</color>, Weapon strength is relatively low
+
 
 ++++ ----- Social Stats and Free Time ----- ++++
 지식=Knowledge
@@ -35,6 +53,13 @@
 「매력」=『Charm』
 
 ++++ ----- Metaverse Menu ----- ++++
+고급 스킬 재료=<size\=21> Advanced\n Level Up Materials</size>
+주간 한정: 0/2=<size\=21>Weekly only: 0/2</size>
+주간 한정: 0/1=<size\=21>Weekly only: 0/1</size>
+주간 한정: 1/1=<size\=21>Weekly only: 1/1</size>
+주간 한정: 1/2=<size\=21>Weekly only: 1/2</size>
+주간 한정: 2/2=<size\=21>Weekly only: 2/2</size>
+「미야자와 히로무·팰리스」\n붕괴 후 도전 활성화=<size\=20>Challenge will enable \n after the collapse\n of Hiromu Miyazawa's Palace</size>
 스킬 레벨업 재료=<size\=22>Skill Level Up Material</size>
 무기 돌파 재료=<size\=22>Weapon Ascension\nMaterial</size>
 무기 레벨업 재료=<size\=22>Weapon Level Up\nMaterial</size>
@@ -74,7 +99,7 @@
 더빙=Voices
 효과음=Sound Effects
 배경음=Background Sounds
-전체=Master
+전체=All
 
 +++ ----- Gameplay Settings ----- +++
 패드 시각 감도=<size\=24>Controller Camera\nSensitivity</size>
@@ -104,6 +129,7 @@ HightLight 연출=<size\=24>Hightlight Direction</size>
 키우치 타케유키의 모든 추억 확인 완료=Kiuchi Takeyuki's Memories Completed
 『키우치 타케유키·팰리스』로 첫 진입=Enter 『Kiuchi Takeyuki's Palace』
 벨벳 룸으로 첫 진입=First Entry into the Velvet Room
+참여하고, 바꾸고, 해내고 싶은 것=What you want to get involved with,\nchange, and accomplish
 각성 후 조시가야에 있는 자택으로 돌아가기=Return to your home in Zoshigaya\nafter Awakening
 아라이 모토하의 SNS 획득=Receive Motoha Arai's SNS Information
 아라이 모토하가 각성해 괴도로 변신=Motoha Arai Awakened and Transformed\ninto a Phantom Thief
@@ -276,6 +302,22 @@ r:"주인공 (\d+)레벨 달성 시 계속 돌파 가능"=Available at Protagoni
 이름이 같은 무기만 소모 가능=Uses: Weapons of the same Name
 sr:"(.*?) 수정만 소모 가능"=Uses: $1 Crystals
 
+++ ----- Yaoling Li Skills ----- ++
+맹파탕=Maeun-tang
+추억=Memories
+<color\=#66ccff>『추억』</color>=<color\=#66ccff>『Memories』</color>
+<color\=#66ccff>『맹파탕』</color>=<color\=#66ccff>『Maeun-tang』</color>
+<color\=#66ccff>망각</color>=<color\=#66ccff>Forget</color>
+자신의 턴 시작 시 속도에 따라 『추억』을 획득한다. 『추억』을 수집하면 『맹파탕』을 획득하며, 다음에 시전하는 스킬이 강화된다.=Gain 『Memories』 at the start of your turn based on your SPD. Collecting 『Memories』 grants 『Maeun-tang』 which can buff your next skill.
+r:"^모든 적에게 공격력 <color\=#FFFC40>(\d+\.?\d*)\%</color>의 주원 속성 대미지를 준다. 2턴 동안 자신의 속도 10포인트마다 목표 적의 방어력이 3% 감소되며, 최대 <color\=#FFFC40>(\d+\.?\d*)\%</color> 감소된다. 해당 스킬이 적 1명을 명중할 때마다 자신은 <link\="s\|159"><u>『추억』</u></link> 4포인트를 획득한다.\\n<b><size\=28><color\=#850101>선홍색 주문에서 적의 영혼을 갈기갈기 찢는 힘이 터져 나와 파괴적인 대미지를 준다.</color></size></b>$"=Deals <color\=#FFFC40>$1%</color> ATK as Curse damage to all enemies. For 2 turns, reduces all target enemy's DEF by 3% for every 10 points of the user's SPD, up to a maxium of <color\=#FFFC40>$2%</color>. Gain 4 points of <link\=s|159><u>『Memories』</u></link> for each enemy hit by this skill.\n<b><size\=28><color\=#850101>Crimson spells burst forth with soul-shredding power, dealing devastating damage.</color></size></b>
+『추억』이 40포인트 도달 시 『맹파탕』을 획득한다. 다음에 시전하는 액티브 스킬에 일정 확률로 망각 효과가 추가되고, 일부 스킬이 강화된다.=Gain 『Maeun-tang』 when your 『Memories』 reach 40 points. Your next active skill has a chance to inflict Forget, and some skills are buffed.
+r:"^1명의 적에게 공격력 <color\=#FFFC40>(\d+\.?\d*)\%</color>의 주원 속성 대미지를 준다. 적이 임의의 디버프 효과를 보유할 시 해당 스킬로 주는 대미지가 20% 증가한다. <link\="s\|127"><u>『맹파탕』</u></link>의 추가 효과로 메인 목표를 100%의 기본 확률로 2턴 동안 <link\="s\|108"><u>망각</u></link> 상태에 빠뜨린다.\\n<b><size\=28><color\=#850101>피에 굶주린 만주사화가 온 땅에 퍼지고, 피처럼 아름다운 색은 적의 발밑에서 스멀스멀 올라와 강력한 주원 대미지를 준다.</color></size></b>$"=Deals <color\=#FFFC40>$1%</color> ATK as Curse damage to one enemy, and 20% increased damage to debuffed enemies. Consuming <link\=s|127><u>『Maeun-tang』</u></link> adds a 100% base chance of inflicting <link\=s|108><u>Forget</u></link> for 2 turns.\n<b><size\=28><color\=#850101>Bloodthirsty Manchurian Tigers spread across the land. Their beautiful crimson hues rise like blood under the enemy's feet as they deal powerful Curse damage.</color></size></b>
+정신 이상, 스킬을 사용할 수 없다.=Mental ailment, unable to use skills.
+r:"^모든 적에게 공격력 <color\=#FFFC40>(\d+\.?\d*)\%</color>의 주원 속성 대미지를 주고, 『피안화』 효과를 부여하여 자신의 속도 10포인트마다 적이 받는 대미지가 3% 증가한다. 상한은 <color\=#FFFC40>(\d+\.?\d*)\%</color>이다. 해당 효과는 대미지를 2회 받거나 2턴이 지나면 제거된다. <link\="s\|127"><u>『맹파탕』</u></link>의 추가 효과는 『피안화』의 대미지 증가 효과가 2배로 증가한다.\\n<b><size\=28><color\=#850101>장난꾸러기 사자가 명령에 따라 훌쩍 뛰어올라 이 세상을 뒤숭숭하게 만들어, 말을 듣지 않는 적에게 제멋대로 큰 대미지를 준다.</color></size></b>$"=Deals <color\=#FFFC40>$1%</color> ATK as Curse damage to all enemies and inflicts 『Bloody Flower』, increasing damage taken by enemies by 3% for every 10 points of the user's SPD, up to a maximum of <color\=#FFFC40>$2%</color>. This effect is removed after 2 instances of damage or after 2 turns. Consuming 『Maeun-tang』 doubles the damage increase effect of 『Bloody Flower』.\n<b><size\=28><color\=#850101>This mischievous lion leaps to life on command, shaking up the world and dealing massive damage to unruly enemies who don't listen.</color></size></b>
+r:"^속도 2포인트마다 자신의 공격력이 1% 증가한다. 이 방식으로 공격력이 최대 <color\=#FFFC40>(\d+\.?\d*)\%</color> 증가한다.$"=Every 2 points of SPD increases your damage by 1%, up to a maximum of <color\=#FFFC40>$1%</color>.
+r:"^필드에서 생명이 50% 이상인 적이 받는 주원 대미지가 <color\=#FFFC40>(\d+\.?\d*)\%</color> 증가한다.$"=Curse damage dealt to enemies with 50% or more HP is increased by <color\=#FFFC40>$1%</color>.
+r:"^『ONE MORE』：1명의 적에게 주원 속성 대미지를 준다.\\n『HIGHLIGHT』：모든 적에게 공격력 <color\=#FFFC40>(\d+\.?\d*)\%</color>의 주원 속성 대미지를 주고, 모든 적이 다음에 받는 대미지가 <color\=#FFFC40>(\d+\.?\d*)\%</color> 증가한다. 30%의 기본 확률로 모든 적을 2턴 동안 <link\="s\|108"><u>망각</u></link> 상태에 빠뜨린다.\\n근접 공격：근거리 무기를 사용하여 1명의 적에게 소량의 물리 속성 대미지를 준다.\\n총기 사격：총기로 1명의 적을 사격한다. 매번 임의 적에게 3발을 사격하여 총격 속성 대미지를 준다. 총알 개수에 따라 여러 번 사격할 수 있다.$"=『ONE MORE』：Deals Curse damage to 1 enemy.\n『HIGHLIGHT』：Deals <color\=#FFFC40>$1%</color> ATK as Curse damage to all enemies and increases their next damage taken by <color\=#FFFC40>$2%</color>. 30% base chance to inflict <link\=s|108><u>Forget</u></link> for 2 turns.\nMelee Attack: Use a melee weapon to deal a small amount of Physical damage to 1 enemy.\nFirearm Shot: Shoot 1 enemy with a firearm. Each time, fire 3 shots at an enemy, dealing Gun damage. You can shoot multiple times depending on the number of bullets.
+
 ++++ ----- Contract Menu ----- ++++
 [이계 엠버] 1500개를 사용해\n[미래의 운명] 10장을 구매하려고?=Do you want to spend 1500 Metaverse Crystals to buy 10 Future's Destiny?
 [이계 엠버] 100개를 사용해\n[정해진 코인] 1장을 구매하려고?=Do you want to spend 100 Metaverse Crystals to buy 1 Coin Set?
@@ -333,16 +375,6 @@ r:"^협력자와의 관계 랭크 『([0-9]{1,2})』 달성 시 해제됩니다.
 소울메이트 관계가 됩니다=Become Soulmates
 전속 안내원 관계가 됩니다=Become a Personal Attendant
 절친 관계가 됩니다=Become Best Friends
-해제 조건=<size\=20>Release Conditions</size>
-현재 레벨업 불가능=Unable to Level Up
-다음의 조건 충족 시 랭크 레벨업 가능=You can level up in rank if you meet the following conditions
-sr:"^([\S\s]+)와\(과\)의 관계 심화 데이트 완료$"=Complete a relationship deepening date with $1
-r:"^도시 파라미터 지식 ([0-9]{1,2})/([0-9]{1,2})레벨 달성$"=Reach Knowledge Level $1/$2
-r:"^도시 파라미터 배짱 ([0-9]{1,2})/([0-9]{1,2})레벨 달성$"=Reach Guts Level $1/$2
-r:"^도시 파라미터 친절 ([0-9]{1,2})/([0-9]{1,2})레벨 달성$"=Reach Kindness Level $1/$2
-r:"^도시 파라미터 재주 ([0-9]{1,2})/([0-9]{1,2})레벨 달성$"=Reach Proficiency Level $1/$2
-r:"^도시 파라미터 매력 ([0-9]{1,2})/([0-9]{1,2})레벨 달성$"=Reach Charm Level $1/$2
-럭키 펀치 스킬을 보유한 잭 프로스트=Jack Frost with the Lucky Punch skill
 ??월 ??일=?? Month ?? Day
 별자리=Constellation
 혈액형=Blood Type
@@ -353,12 +385,26 @@ r:"^개인 자료 ([0-9]{1,2})$"=Personal Data $1
 「목표」에 대해=About 『Goals』
 「우리」에 대해=About 『Us』
 
++++ ----- Confidant Rank Up Conditions ----- +++
+현재 레벨업 불가능=Unable to Level Up
+해제 조건=<size\=20>Release Conditions</size>
+다음의 조건 충족 시 랭크 레벨업 가능=You can level up in rank if you meet the following conditions
+sr:"^([\S\s]+)와\(과\)의 관계 심화 데이트 완료$"=Complete a relationship deepening date with $1
+r:"^도시 파라미터 지식 ([0-9]{1,2})/([0-9]{1,2})레벨 달성$"=Reach Knowledge Level $1/$2
+r:"^도시 파라미터 배짱 ([0-9]{1,2})/([0-9]{1,2})레벨 달성$"=Reach Guts Level $1/$2
+r:"^도시 파라미터 친절 ([0-9]{1,2})/([0-9]{1,2})레벨 달성$"=Reach Kindness Level $1/$2
+r:"^도시 파라미터 재주 ([0-9]{1,2})/([0-9]{1,2})레벨 달성$"=Reach Proficiency Level $1/$2
+r:"^도시 파라미터 매력 ([0-9]{1,2})/([0-9]{1,2})레벨 달성$"=Reach Charm Level $1/$2
+럭키 펀치 스킬을 보유한 잭 프로스트=Jack Frost with the Lucky Punch skill
+타루카쟈 스킬을 보유한 네코쇼군=Neko Shogun with the Tarukaja skill
+
 ++++ ----- City Tasks & Free Time ----- ++++
 <color\=#FFFF00>지식</color> 부족=<size\=28>Lacking <color\=#FFFF00>Knowledge</color></size>
 <color\=#FFFF00>배짱</color> 부족=<size\=28>Lacking <color\=#FFFF00>Guts</color></size>
 <color\=#FFFF00>친절</color> 부족=<size\=28>Lacking <color\=#FFFF00>Kindness</color></size>
 <color\=#FFFF00>재주</color> 부족=<size\=28>Lacking <color\=#FFFF00>Proficiency</color></size>
 <color\=#FFFF00>매력</color> 부족=<size\=28>Lacking <color\=#FFFF00>Charm</color></size>
+관둘래=Quit
 
 ++++ ----- Phone ----- ++++
 
@@ -382,6 +428,20 @@ ID 복사=Copy User ID
 조회할 내용을 입력해 보세요.=Enter what you want to search for.
 <size\=71>어</size>떤 <size\=71>정</size><size\=54>보를 찾나요?</size>=<size\=34>What information are you looking for?</size>
 r:"해제 완료한 튜토리얼: <color\=#FFBE7E>([0-9]{1,2})</color>개"=Disabled Tutorials: <color\=#FFBE7E>$1</color>
+괴도-무기=Phantom Thieves - Weapons
+괴도·무기=Phantom Thieves - Weapons
+괴도-영감=Phantom Thieves - Inspiration
+괴도·영감=Phantom Thieves - Inspiration
+괴도·계시=Phantom Thieves - Revelations
+괴도-계시=Phantom Thieves - Revelations
+괴도·페르소나=Phantom Thieves - Personas
+괴도·페르소나 사용=Using Phantom Thieves - Personas
+35레벨에 「<color\=#ff0000>계시 카드</color>」가 오픈되면 괴도의 전투력이 대폭 상승한다.=At Level 35, "<color\=#ff0000>Revelation Cards</color>" are unlocked, with them Phantom Thieves' combat power increases dramatically.
+
++++ ----- Phantom Thief Tutorials ----- +++
+<color\=#ff3b37>LEADER</color> 표식이 있는 괴도는 특별한 자질을 가지고 있어\n동시에 <color\=#ff3b37>최대 3개</color>의 각기 다른 페르소나를 장착할 수 있습니다.=<color\=#ff3b37>LEADER</color> Marked Phantom Thieves have special qualities that allow them to use <color\=#ff3b37>up to three</color> different personas at the same time.
+페르소나를 도감에 수록한 후 <color\=#ff3b37>영감 포인트</color>를 획득할 수 있습니다.\n영감 포인트를 사용하면 <color\=#ff3b37>영감 스킬 레벨</color>을 해제하고 올릴 수 있습니다.=<size\=27>After personas are registered in the compendium, you acquire <color\=#ff3b37>Inspiration Points</color> which you can use to unlock and raise <color\=#ff3b37>Inspiration skills</color> that will affect the abilities of your Phantom Thief.</size>
+영혼석을 소모해 <color\=#ff3b37>영감 리셋</color>을 진행할 수 있습니다.\n리셋 후 소모한 영감 포인트가 모두 반환됩니다.=<color\=#ff3b37>Inspiration Reset</color> consumes Soul Gems. After the reset, all spent Inspiration points are returned.
 
 +++ ----- Gamepad Roulette ----- +++
 게임패드 룰렛=Gamepad Roulette
@@ -390,9 +450,159 @@ r:"해제 완료한 튜토리얼: <color\=#FFBE7E>([0-9]{1,2})</color>개"=Disab
 
 ++ ----- Weakness and ONE MORE ----- ++
 약점과 ONE MORE=Weaknesses and ONE MORE
-스킬마다 속성이 있으며, 적은 <color\=#ff3b37>약점</color> 속성이 있습니다.\n약점 속성으로 공격하면 「<color\=#ff3b37>WEAK</color>」를 발동시킬 수 있습니다.\n「WEAK」: 더 많은 대미지를 주고 적을 <color\=#ff3b37>다운</color>시킵니다.=Each skill has attributes, and enemies have 「<color\=#ff3b37>Weaknesses</color>」 Attacking with the enemies Weakness attribute will result in a 「<color\=#ff3b37>Down</color>」: Deals more damage and can knock <color\=#ff3b37>down</color> the enemy.
-적을 다운시킨 후 추가 공격하는 것을 「<color\=#ff3b37>ONE MORE</color>」이라고 합니다.\n「ONE MORE」는 시전 시간에 제한이 있으며, 초과 시 <color\=#ff3b37>자동 시전</color>됩니다.=After knocking an enemy down, an additional attack is called 「<color\=#ff3b37>ONE MORE</color>」 has a limited casting time, and if it exceeds it, it will be <color\=#ff3b37>automatically cast</color>
-「ONE MORE」는 <color\=#ff3b37>다운되지 않은</color> 적을 우선 공격합니다.\n다시 다운시키면 더 강력한 「ONE MORE」를 시전합니다.\n연속으로 적을 다운시키면 일방적으로 공격할 수 있습니다.=「<color\=#ff3b37>ONE MORE</color>」 activates if there are <color\=#ff3b37>undowned</color> enemies. If you knock them down again, you cast a more powerful 「<color\=#ff3b37>ONE MORE</color>」. If you knock down enemies in a row, you can attack them one-on-one.
+스킬마다 속성이 있으며, 적은 <color\=#ff3b37>약점</color> 속성이 있습니다.\n약점 속성으로 공격하면 「<color\=#ff3b37>WEAK</color>」를 발동시킬 수 있습니다.\n「WEAK」: 더 많은 대미지를 주고 적을 <color\=#ff3b37>다운</color>시킵니다.=<size\=28>Each skill has attributes, and enemies have 「<color\=#ff3b37>Weaknesses</color>」 Attacking with the enemies Weakness attribute will result in a 「<color\=#ff3b37>Down</color>」: Deals more damage and can knock <color\=#ff3b37>down</color> the enemy.
+적을 다운시킨 후 추가 공격하는 것을 「<color\=#ff3b37>ONE MORE</color>」이라고 합니다.\n「ONE MORE」는 시전 시간에 제한이 있으며, 초과 시 <color\=#ff3b37>자동 시전</color>됩니다.=After knocking an enemy down, an additional attack is called 「<color\=#ff3b37>ONE MORE</color>」 has a limited casting time, and if it exceeds it, it will be <color\=#ff3b37>automatically cast</color>.
+「ONE MORE」는 <color\=#ff3b37>다운되지 않은</color> 적을 우선 공격합니다.\n다시 다운시키면 더 강력한 「ONE MORE」를 시전합니다.\n연속으로 적을 다운시키면 일방적으로 공격할 수 있습니다.=<size\=28>「<color\=#ff3b37>ONE MORE</color>」 activates if there are <color\=#ff3b37>undowned</color> enemies. If you knock them down again, you cast a more powerful 「<color\=#ff3b37>ONE MORE</color>」. If you knock down enemies in a row, you can attack them one-on-one.
+
+++ ----- HIGHLIGHT ----- ++
+괴도마다 독특한 강력 스킬을 가지고 있는데,\n이를 「<color\=#ff3b37>HIGHLIGHT</color>」 스킬이라고 부릅니다.\n「HIGHLIGHT」 스킬은 크리티컬 효과가 발동되지 않습니다.=Each Phantom Thief has a unique set of powerful skills, known as the 「<color\=#ff3b37>HIGHLIGHT</color>」, 「HIGHLIGHT」 skill does not trigger any critical effects.
+괴도의 행동 혹은 피격 시, 그리고 WEAK 부여 시\n<color\=#ff3b37>HIGHLIGHT 에너지</color>를 획득할 수 있습니다.\n에너지가 가득차면 임의의 괴도 행동 시 시전할 수\n있습니다.=<size\=28>You can acquire 「<color\=#ff3b37>HIGHLIGHT Energy</color>」 when the phantom thief acts or is attacked, and when WEAK is applied. When the energy is full, it can be cast during any phantom thief's actions.
+「HIGHLIGHT」의 사용 후에는 <color\=#ff3b37>4턴</color>의 쿨타임이 있습니다.\n쿨타임 후 해당 괴도의 HIGHLIGHT 「<color\=#ff3b37>사용 기회</color>」가\n「<color\=#ff3b37>리셋</color>」됩니다.=There is a 「<color\=#ff3b37>4 Turns</color>」 cooldown after using 「HIGHLIGHT」. After the cooldown, the phantom thief's 「<color\=#ff3b37>Opportunity</color>」 to use HIGHLIGHT is 「<color\=#ff3b37>Reset</color>」.
+
+++ ----- Defense ----- ++
+「<color\=#ff3b37>방어</color>」는 다음 받는 대미지를 대폭 감소시킬 수 있습니다.\n캐릭터의 다음 행동 전 다운 수치 1포인트를 추가로 획득하고, SP를 일정량 회복시킵니다.=「<color\=#ff3b37>Defense</color>」 can significantly reduce the next damage received.\nAcquires 1 additional down value point before the character's next action, and restores a certain amount of SP.
+
+++ ----- Home ----- ++
+자택=Home
+불가사의한 하루를 보냈습니다! 휴식을 취하며 집에서의 생활을 즐기세요!=You've had an amazing day! Relax and enjoy your life at home!
+
+
+
+++ ----- Confidants ----- ++
+<color\=#ff3b37>협력자</color>는 주인공의 도시 생활의 조력자로,\n특정 조력 사건을 완료한 후 주인공과 협동 관계를 맺습니다.=<color\=#ff3b37>Confidants</color> are partners in the protagonist's life in the city, who enter into a cooperative relationship with the protagonist after completing certain assisted events.
+협력자와의 <color\=#ff3b37>데이트</color>로 호감도를 올릴 수 있습니다.\n데이트 시 <color\=#ff3b37>선물 증정</color>은 빠르게 호감도를 올릴 수 있는 비결입니다.\n루페르는 가이드이니 데이트를 할 필요가 없습니다.=<size\=23>You can increase your favorability rating by going on a <color\=#ff3b37>Date</color> with your confidants. \n<color\=#ff3b37>Giving a gift</color> during a date is the secret to quickly increasing your favorability rating.\nYou don't need to go on a date with Ruferu, He's your guide.
+
+++ ----- Closet ----- ++
+필드마다 해당하는 생활 의상으로 전환됩니다.\n휴식 및 도시를 거닐 때는 <color\=#ff3b37>평상복</color>을 입습니다.\n집에 돌아가서 쉴 때는 <color\=#ff3b37>실내복</color>으로 갈아입습니다.\n옷은 장면에 따라 설정할 수 있습니다.=For each field, you will be switched to the corresponding lifestyle clothes. For relaxing and walking around the city, wear your <color\=#ff3b37>Casual Clothes</color> when you're at home and rest, change into <color\=#ff3b37>Indoor Clothes</color>. Clothes can be set according to the scene.
+
+++ ----- Goals ----- ++
+일일 비즈니스 목표를 달성해 해당하는 희귀 보상을 획득하세요!=Meet daily business goals to earn corresponding rare rewards!
+목표=Goals
+++ ----- ObjectiveⅠ----- ++
+목표 Ⅰ 1단계의 모든 임무 완료=<size\=25>Objective Ⅰ Complete all missions in Phase 1
+초보 5★ 무기 선택=<size\=13>Beginner 5★ Weapon Selection
+초보 5★ 괴도 선택=<size\=11>Beginner 5★ Select Phantom Thief
+완료 시=<size\=18>Upon completion
+수령 완료=Received
+비즈니스=<size\=20>Business
+단계 목표 완료 후 획득=<size\=13>Earned after completing a stage goal
+이동=Move
+메인 임무 「숨겨진 세계의 증명」 완료=<size\=20>Completed the main mission "Proof of the Hidden World"
+주인공 12레벨 달성=Reached Protagonist Level 12
+아라이 모토하의 각성 목격=<size\=26>Witnessing the Awakening of Arai Motoha
+계약 10회 진행=10 Contracts
+10레벨 괴도 2명 보유=Owns 2 level 10 Phantom Thieves
+잠재력 I 괴도 3명 보유=Has 3 potential I Phantom Thieves
+20레벨 페르소나 1개 보유=Have one level 20 Persona
+
+++ ----- Contracts ----- ++
+계약=Contracts
+운명의 계약을 체결하고, 정해진 파트너와 이곳에서 만나세요!=Sign a fateful contract, and meet your destined partner here!
+<size\=56>¬</size> 「<color\=#ff3b37>계약</color>」을 조회하세요.=<size\=56>¬</size> Search for “<color\=#ff3b37>Contract</color>”.
+계약으로 「<color\=#ff3b37>괴도</color>」와 「하급 2성 페르소나」를 획득할 수 있습니다.\n<color\=#ff3b37>계약 10회마다 반드시 4성 이상 괴도 캐릭터가 나옵니다.</color>\n「<color\=#ff3b37>마음의 괴도단</color>」은 신입 추첨 계약으로,\n계약 50회 안에 반드시 1개 이상의 <color\=#ff3b37>5성 캐릭터</color>를 획득합니다.=Contracting with "<color\=#ff3b37>Persona</color>" and lower 2-star personas from contracts.\n<color\=#ff3b37>Every 10 contracts, you will receive a 4-star or higher Phantom Thief character.</color>\n「<color\=#ff3b37>Phantom Thieves of Hearts</color>"is a new lottery contract that requires at least one 5-star character in every 50 contracts. <color\=#ff3b37>5-star character</color>within 50 contracts.
+계약 10회마다 4성 이상의 괴도 캐릭터를 확정 획득합니다. 계약 50회 시 5성 괴도 캐릭터를 선택 획득할 수 있습니다. 자세한 내용은 [설명]을 참조하세요.=For every 10 contracts, you are guaranteed to obtain a 4-star or higher Phantom Thief character. You can select and acquire a 5-star phantom thief character by completing 50 contracts. For more details, see [Description].
+
+++ ----- Phantom Thieves ----- ++
+괴도=<size\=28>Phantom Thieves
+스킬, 무기, 영감 등의 방식을 통해 괴도를 성장시킬 수 있습니다.=You can grow your phantom thief through skills, weapons, inspiration, and more.
+임의의 괴도를 레벨업해라=Level up a random phantom thief
+「<color\=#ff3b37>괴도</color>」 1명을 선택하세요.=Select one person: 「<color\=#ff3b37>Phantom Thief</color>」.
+「<color\=#ff3b37>성장</color>」을 선택하세요.=Select 「<color\=#ff3b37>Growth</color>」.
+「<color\=#ff3b37>레벨업</color>」을 선택합니다.=Select 「<color\=#ff3b37>Level Up</color>」.
+「<color\=#ff3b37>레벨업</color>」을 진행하세요.=Proceed with 「<color\=#ff3b37>Level Up</color>」.
+재료를 선택해 주세요.=Please select the material.
+「<color\=#ff3b37>재료를 선택</color>」하세요.=Please 「<color\=#ff3b37>Select a material</color>」.
+<size\=56>¬</size> 「<color\=#ff3b37>더 많이 선택</color>」하세요.=<size\=56>¬</size> 「<color\=#ff3b37>Select more</color>」
+길게 눌러 「<color\=#ff3b37>더 많이 선택</color>」하세요.=Press and hold to “<color\=#ff3b37>Select more</color>”.
+잠재력 1레벨 달성 시 괴도를 계속 레벨업시킬 수 있습니다=When you reach level 1 potential, you can continue to level up your Phantom Thief.
+
+++ ----- Attribute Conflicts ----- ++
+
+속성 상극=Attribute Conflicts
+적과 페르소나가 주는 대미지 모두 속성을 보유하고 있습니다.\n왼쪽에서 오른쪽 순서로:\n<color\=#ff3b37>물</color>, <color\=#ff3b37>총</color>, <color\=#ff3b37>화</color>, <color\=#ff3b37>빙</color>, <color\=#ff3b37>전</color>, <color\=#ff3b37>풍</color>, <color\=#ff3b37>염</color>, <color\=#ff3b37>핵</color>, <color\=#ff3b37>축</color>, <color\=#ff3b37>주</color>=Both enemy and persona damage have properties. From left to right:\n<color\=#ff3b37>Physical</color>, <color\=#ff3b37>Gun</color>, <color\=#ff3b37>Fire</color>, <color\=#ff3b37>Ice</color>, <color\=#ff3b37>Elec</color>, <color\=#ff3b37>Wind</color>, <color\=#ff3b37>Psy</color>, <color\=#ff3b37>Nuke</color>, <color\=#ff3b37>Bless</color>, <color\=#ff3b37>Curse</color>
+적과 페르소나는 각각 속성의 상극이 있습니다.\n상세정보에서 자신과 적의 상극을 확인할 수 있습니다.\n속성의 5가지 상극 효과: <color\=#ff3b37>약</color>, <color\=#ff3b37>내</color>, <color\=#ff3b37>무</color>, <color\=#ff3b37>반</color>, <color\=#ff3b37>흡</color>=Enemies and Personas have an attribute counterpart. You can see counterparts in Details. The 5 counteracting effects of attributes: <color\=#ff3b37>Weak</color>, <color\=#ff3b37>Resist</color>, <color\=#ff3b37>Null</color>, <color\=#ff3b37>Reflect</color>, <color\=#ff3b37>Drain</color>
+「<color\=#ff3b37>약점</color>」: 받는 대미지가 증가하고 동시에 실드값이 삭감됩니다.\n「<color\=#ff3b37>내성</color>」: 받는 대미지가 감소합니다.\n「<color\=#ff3b37>무효</color>」: 공격을 받지 않습니다.\n「<color\=#ff3b37>반사</color>」: 받은 대미지를 시전자에게 반사합니다.\n「<color\=#ff3b37>흡수</color>」: 공격을 받을 시 대미지를 흡수하고 자신의 생명을 회복합니다.=「<color\=#ff3b37>Weaknesses</color>」: Increases damage taken and reduces shield value at the same time. 「<color\=#ff3b37>Resistant</color>」: Reduces damage taken.\n「<color\=#ff3b37>Invulnerable</color>」: You will not be attacked.\n"Reflect"<color\=#ff3b37>Reflect</color>": Reflects incoming damage back to the caster. "<color\=#ff3b37>Absorb</color>": Absorbs damage and restores your health when attacked.
+
+++ ----- Turn ----- ++
+
+행동 대열=Turn
+<color\=#ff3b37>행동 바</color>에서 적과 아군의 캐릭터의 행동 순서를 볼 수 있습니다.=You can see the turn of enemy and friendly characters in the <color\=#ff3b37>Turn Bar</color>.
+<color\=#ff3b37>전투 유닛</color> 또는 전투 유닛의 <color\=#ff3b37>프로필</color>을 길게 누르면\n유닛의 상세정보를 조회할 수 있습니다.=You can view detailed information about a <color\=#ff3b37>Enemies or Allies</color> or the <color\=#ff3b37>Status</color> of the Enemies or your Allies by pressing and holding it.
+
+++ ----- Workbench ----- ++
+
+작업대에서 잡임 아이템과 각종 소재를 제작해 탐험에서 사용하세요.=Craft miscellaneous items and various materials at the workbench and use them in exploration.
+해당하는 재료를 소모하면\n<color\=#ff3b37>작업대</color>를 사용하여 탐색 아이템을 제작할 수 있습니다.\n아이템을 처음 제작할 때 <color\=#ff3b37>재주</color>도 획득할 수 있습니다.=After consuming the corresponding materials You can use the <color\=#ff3b37>Workbench</color> to craft exploration items. When you first craft an item, you will obtain <color\=#ff3b37>Proficiency</color>.
+
+++ ----- Metaverse ----- ++
+이세계=Metaverse
+괴도가 되어 동료와 함께 메멘토스와 욕망 팰리스를 탐험하세요!=Become a phantom thief and explore Mementos and the Desire Palace with your friends!
+
+++ ----- Plans ----- ++
+플랜=Plans
+플랜을 통해 성장 보상을 획득해 보세요!=Earn growth rewards through your plan!
+<size\=56>¬</size>「<color\=#ff3b37>버드 플랜</color>」을 조회하세요.=<size\=56>¬</size>View 「<color\=#ff3b37>Bird Plan</color>」.
+
+++ ----- Grappling Hook ----- ++
+와이어 사용=Using Grappling Hook
+와이어 구역에 다가가면 <color\=#ff3b37>와이어</color> 버튼이 표시됩니다.\n버튼을 사용하면 와이어를 사용해 빠르게 목표 에어리어까지 이동할 수 있습니다.=When you approach a grappling area, a <color\=#ff3b37>Grappling Hook</color> button will appear. Using the button allows you to quickly move to the target area using the grappling hook.
+
+++ ----- Boxes ----- ++
+상자=Boxes
+메멘토스와 팰리스에 다양한 「<color\=#ff0000>상자</color>」가 분포해 있습니다.\n탐색 중 열어보면 진귀한 보상을 획득할 수 있을지도 모릅니다.=Mementos and Palace have a variety of 「<color\=#ff0000>Boxes</color>」 are scattered throughout Mementos and the Palace, and opening them while exploring may yield rare rewards.
+
+++ ----- Shadow ----- ++
+이세계에서 <color\=#ff3b37>섀도</color>를 만날 수 있습니다.=In metaverse, you can meet <color\=#ff3b37>Shadow</color>.
+<color\=#ff3b37>공격</color> 명령을 사용해 섀도를 공격하면\n전투에 진입할 수 있습니다.=You can enter battle by attacking the shadow using the <color\=#ff3b37>Attack</color> command.
+
+++ ----- All-Out Attack ----- ++
+현장에 있는 모든 적을 다운시키면,\n아군 전원이 「<color\=#ff3b37>총공격</color>」을 가할 수 있습니다.=When you take down all enemies on the field, all allies will receive a "<color\=#ff3b37>All-Out Attack</color>" that deals heavy damage to all enemies.
+「<color\=#ff3b37>총공격</color>」은 모든 적에게 대량의 대미지를 주는 필살 공격입니다.\n총공격의 대미지는 참전 괴도의 레벨에 따라 정해지며, 주인공이 행동 불가 상태이거나 주인공만 행동 가능한 경우 발동할 수 없습니다.=The 「<color\=#ff3b37>All-Out Attack</color>」 is a special attack that inflicts a large amount of damage to all enemies.\nThe damage of the all-out attack is determined by the level of the participating phantom thief, and cannot be activated if the main character is unable to act or only the main character can act.
+
+++ ----- Stealth and Ambush ----- ++
+은신과 기습=Stealth and Ambush
+필드의 장애물에 아이콘 표식이 나타날 시에는\n이곳이 <color\=#ff3b37>은신이 가능한 장소</color>임을 의미합니다.=When an obstacle in a field is marked with an icon, it indicates that this is a <color\=#ff3b37>hiding place</color> for hiding.
+은신을 사용하면 <color\=#ff3b37>은신</color> 상태에 진입시킬 수 있습니다.\n해당 상태에서는 <color\=#ff3b37>적에게 발견되지 않습니다</color>.\n주의: 적에게 추격당하고 있는 상태에서는 은신할 수\n없습니다.=Stealth allows you to use the <color\=#ff3b37>Stealth</color> state, which makes you <color\=#ff3b37>undetectable by enemies</color>\nCaution: You cannot enter Stealth while being pursued by enemies.
+은신 시 근처에 다른 은신가능한 장소가 있으면\n새로운 은신 지점까지 <color\=#ff3b37>빠르게 이동</color>할 수 있습니다.=When hiding, if there is another hiding place nearby, you can <color\=#ff3b37>move quickly</color> to the new hiding spot.
+은신 취소를 사용하면 은신 상태를 <color\=#ff3b37>취소</color>할 수 있습니다.=Cancel Stealth allows you to <color\=#ff3b37>cancel</color> your stealth state.
+적이 자신이 있는 은신 장소에 접근할 시,\n아이콘이 사용 가능 상태로 바뀌며,\n이때 적을 <color\=#ff3b37>기습</color>을 할 수 있습니다.=When an enemy approaches your hiding place, the icon changes to usable, and you can <color\=#ff3b37>ambush</color> the enemy.
+기습으로 전투에 진입하면 <color\=#ff3b37>선제공격</color>으로 간주되어\n전투 중 아군이 먼저 공격할 수 있습니다.=If you enter a battle by ambush, it is considered a <color\=#ff3b37>preemptive strike</color> and your allies can attack first during the battle.
+
+++ ----- Safe Rooms ----- ++
+세이프 룸=Safe Rooms
+발견한 세이프 룸과 상호작용으로 해제할 수 있습니다.\n이세계 내비게이션을 통해 이미 개방된 세이프 룸으로\n<color\=#ff3b37>간편 이동</color>할 수 있습니다.=<size\=28>Interact with a discovered Safe Room to unlock it. Navigate to an already open Safe Room via Metaverse Navigation <color\=#ff3b37>Quick Travel</color> to a new hiding spot.
+<color\=#ff3b37>세이프 룸</color>은 괴도단의 휴식처입니다.\n세이프 룸에 들어가면 모든 동료의 <color\=#ff3b37>상태를 회복</color>시킬 수\n있습니다.=<color\=#ff3b37>Safe Room</color> is the resting place of the Phantom Thieves. Once you enter the Safe Room, you can <color\=#ff3b37>recover</color> the condition of all your allies.
+세이프 룸에서는 <color\=#ff3b37>괴도 육성</color>과 <color\=#ff3b37>페르소나 육성</color>이 가능하며,\n<color\=#ff3b37>라인업 변경</color>도 할 수 있습니다.=In the Safe Room <color\=#ff3b37>Train Phantom Thieves</color>, <color\=#ff3b37>Persona Development</color> are possible in the Safe Room, You can also <color\=#ff3b37>Change Lineup</color>.
+
+++ ----- Personas ----- ++
+마음속 욕망을 마주 보고, 각성한 페르소나를 훈련하고 재건하세요!=Face your heart's desires, train and rebuild your awakened persona!
+
+++ ----- Third Eye ----- ++
+<color\=#ff3b37>관찰 모드</color>를 오픈하면 육안으로는 볼 수 없는\n물건을 발견하고, 각종 <color\=#ff3b37>정보</color>를 찾을 수 있습니다.\n행동 목표를 찾을 수 없을 시 관찰 모드를 잘 이용해\n보세요.=When you use <color\=#ff3b37>Third Eye</color>, you can discover objects that cannot be seen with the naked eye and find various <color\=#ff3b37>Information</color>. If you can't find your target, try using third eye.
+
+++ ----- Exploration Items ----- ++
+물품 탐색=Exploration Items
+팰리스 안에서 <color\=#ff3b37>관찰 모드</color>를 사용합니다.\n아이템이 숨겨진 <color\=#ff3b37>탐색 물품</color>을 찾을 수 있습니다.=Use <color\=#ff3b37>Third Eye</color> inside the palace.\nYou can find <color\=#ff3b37>Exploration Items</color> with hidden items.
+
+++ ----- Lineup ----- ++
+라인업=Lineup
+라인업·캐릭터=Lineup - Characters
+라인업·설정=Lineup - Settings
+라인업을 통해:\n현재 출전한 <color\=#ff3b37>괴도</color>를 선택할 수 있습니다.\n원더의 출전 <color\=#ff3b37>페르소나</color>를 설정합니다.=Through the lineup:\nYou can select the <color\=#ff3b37>Phantom Thief</color> currently participating.\nSet Wonder's <color\=#ff3b37>Persona</color>.
+라인업·소나타=Lineup - Sonata
+원더와 괴도의 출전 페르소나 속성에 따라 해당하는 <color\=#ff3b37>욕망 소나타</color>가 활성화됩니다.\n같은 속성이 2개 존재할 시 해당 속성의 <color\=#ff3b37>이중주</color>가 활성화됩니다.\n같은 속성이 3개 이상 존재할 시 해당 속성의 <color\=#ff3b37>다중주</color>가 활성화됩니다.\n4종 이상의 다른 속성이 존재할 시 <color\=#ff3b37>페르소나 협주</color>가 활성화됩니다.=Depending on the persona attributes of Wonder and the Phantom Thief, the corresponding <color\=#ff3b37>Desire Sonata</color> will be activated. When two of the same attribute exist, a <color\=#ff3b37>Duets</color> of that attribute will be activated. If three or more of the same attribute exist, a <color\=#ff3b37>Multistate</color> of that attribute is activated. <color\=#ff3b37>Persona Quartet</color> is activated when 4 or more different attributes are present.
+라인업·프리셋=Lineup - Presets
+사전에 여러 라인업을 설정해\n다양한 콘텐츠에서 빠르게 전환할 수 있습니다.\n이세계 탐색 시 설정한 <color\=#ff3b37>기본 라인업</color>을 사용합니다.=You can set multiple lineups in advance.\nYou can quickly switch between various contents.\nUse the <color\=#ff3b37>default lineup</color> you set when exploring metaverse.
+
+++ ----- Down Value ----- ++
+다운 수치=Down Value
+강력한 몬스터는 「<color\=#ff3b37>다운 수치</color>」를 보유하고 있습니다.\n다운 대미지를 주면 다운 수치를 우선 삭감합니다.\n다운 수치가 제거될 시 <color\=#ff3b37>다운</color>됩니다.=Powerful shadows have a 「<color\=#ff3b37>Down Value</color>」.\nIf you inflict down damage, the down value is reduced first. When the down value is removed, you can <color\=#ff3b37>down</color> the shadows.
+
+++ ----- Space of Oppression ----- ++
+억압의 공간=<size\=26>Space of Oppression
+억압의 공간에 도전해 육성 재료를 획득하고, 빠르게 괴도단의 실력을 강화하세요!=Challenge the space of oppression, acquire training materials, and quickly strengthen the skills of the Phantom Thieves!
+섀도가 메멘토스에 모여 「<color\=#ff3b37>억압의 공간</color>」이라고 하는\n특수한 공간을 형성했습니다.\n괴도단은 이곳에서 왜곡된 욕망을 바로잡아야 하며,\n성장에 필수인 「<color\=#ff3b37>재료</color>」도 획득할 수 있습니다.=「<color\=#ff3b37>Space of Oppression</color>」, a specialized space where the Phantom Thieves must correct Shadows distorted desires, and where they can find the 「<color\=#ff3b37>Material</color>」 essential to their growth.
+<size\=56>¬</size>「<color\=#ff3b37>억압의 공간</color>」 선택=<size\=56>¬</size>「<color\=#ff3b37>Space of Oppression</color>" selected
 
 ++ ----- Tutorials Tutorial ----- ++
 튜토리얼=Tutorials
@@ -415,3 +625,4 @@ r:"해제 완료한 튜토리얼: <color\=#FFBE7E>([0-9]{1,2})</color>개"=Disab
 미등록=Unregistered
 보유: =Have: 
 r:"잔여 (\d+)일 (\d+)시간 (\d+)분"=$1D $2H $3M Remaining
+협력자 버프=Confidants Buffs
