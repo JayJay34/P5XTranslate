@@ -140,7 +140,7 @@ r:"(.*?)…\n이름을 적었다."=$1...\nI wrote down my name.
 앞자리 여학생=Girl in the front row
 @Motoha Arai
 r:"(.*?), 왜 그래\?\n갑자기 멍해져서는."=$1, are you alright? You look like a zombie.
-진로에 아무것도 안 적은 것 같은데…?=I don't see anything written about your career path...?
+진로에 아무것도 안 적은 것 같은데…?=I don't see anything written about your career ...?
 @Wonder
 진로… 장래…=Career... Future...
 생각이 잘 정리되질 않는다…=I can't organize my thoughts...
@@ -197,7 +197,7 @@ HR이 끝나자마자 또 불러서 미안해.\n오래 걸리지 않을 거야.=
 @Kumi Katayama
 …그래, 괜찮아.=...Yeah, I'm fine.
 예상 밖이지만… 넣어둘까…=Damn it... Gotta keep cool...
-아, 진로 말인데.\n생각이 바뀌면 언제든지 말해줘.=Oh, about your career path. Let me know if you change your mind.
+아, 진로 말인데.\n생각이 바뀌면 언제든지 말해줘.=Oh, about your career . Let me know if you change your mind.
 얘기해줘서 고마워.\n조심히 돌아가렴.=Thanks for talking with me.\nHave a safe trip home
 
 ++ ----- School Quest Data ----- ++
@@ -567,7 +567,7 @@ r:"너의 이름은 알고 있다…\n(.*?), 맞나?"=I know your name... It's $
 입구가 가깝군.=The entrance is close.
 곧 출구가 나올 텐데…=There should be an exit soon...
 잠깐.=Wait.
-…거기 있는 건 알고 있다.\n한심하게 숨지 말고 나와라.=...I know you're there, come out of your pathetic hiding place.
+…거기 있는 건 알고 있다.\n한심하게 숨지 말고 나와라.=...I know you're there, come out of your etic hiding place.
 헉?!=Huh?!
 …아, 아니, 나의 예상이 틀렸군.\n이 녀석은 내가 감지하고 있던 녀석이 아니다.=...Ah, no, I was wrong, this is not the one I was detecting.
 하지만 이 근처에서 욕망을 빼앗긴 사건과\n깊은 연관이 있는듯하군.=But it seems to have a strong connection to the events that took away your desire in this neighborhood.
@@ -1346,7 +1346,8 @@ r:"(.*?)…?\n이런 데서 뭘 한 거지?"=$1\nWhat is he doing in a place lik
 메멘토스에 처음 들어가라=Entering Mementos for the first time
 
 ++ ----- Mementos Dialogue ----- ++
-사상을 잃은 길 에어리어 1=The Lost Path Area 1
+r:"사상을 잃은 길 에어리어 (\d+)"=Path of the Lost A$1
+r:"조화를 잃은 길 에어리어 (\d+)"=Path of Disharmony A$1
 @Ruferu
 …그럼, 본격적으로 일을 시작하지.\n지금부터는 서로를 <color\=#ff0000>코드네임</color>으로 부르겠다.=...So, let's get down to business: from now on, we're going to refer to each other as <color\=#ff0000>Codenames</color> from now on.
 @Wonder
