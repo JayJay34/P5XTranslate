@@ -55,17 +55,18 @@ r:"^(.)$"=$1
 瑞奇姆=Marthym
 李瑤鈴=Li Yaoling
 野性毛雨披=Tomoko Noge
-阴木内= Takeyuki Kiuchi
+阴木内=Takeyuki Kiuchi
 木雄之=Kiuchi
 野毛朋子= Noge Tomoko
 頭像·須見俊也=Toshiya Sumi
 西森陽菜=Hina Nishimori
 白鳥誠司=Seiji Shiratori
-富山佳代= Tomiyama Kayo
-神山嶺央= Kamiyama Reo
+富山佳代=Tomiyama Kayo
+神山嶺央=Kamiyama Reo
 佐原海夕=Sahara Miyu 
 藤川雪實=Fujikawa Yukimi
 黑谷清=Kurotani Sei
+YUI=YUI
 
 // Original Phantom Thieves //
 
@@ -92,34 +93,34 @@ r:"^(.)$"=$1
 涅梅爾特斯=Nemertes
 戈爾吉拉=Gorgyra
 戴伊拉=Daeira
+艾普蘇黛絲=Apseudes
 亞森=Arsene
 基德船長=Captain Kidd
 蘇洛=Zorro
 卡門=Carmen
-// YUI's Persona TBA
 // Minami's Persona TBA
 
 // Playable Voice Actor & Actress //
 
-CV.內山昂輝=CV.Uchiyama Koki
-CV.下地紫野=CV.Shimoji Shino
-CV.市之瀨加那=CV.Ichinose Kana
-CV.大谷育江=CV.Ōtani Ikue
-CV.明坂聰美=CV.Akesaka Satomi
-CV.野中藍=CV.Nonaka Ai
-CV.宮野真守=CV.Miyano Mamoru
-CV.福山潤=CV.Fukuyama Jun
-CV.田中敦子=CV.Tanaka Atsuko
-CV.水樹奈奈=CV.Mizuki Nana
-CV.本渡楓=CV.Hondo Kaede
-CV.小林裕介=CV.Kobayashi Yūsuke
-CV.豐永利行=CV.Toyonaga Toshiyuki
-CV.伊瀨茉莉也=CV.Mariya Ise
-CV.小西克幸=CV.Konishi Katsuyuki
-CV.諏訪彩花=CV.Suwa Ayaka
-CV.榎木淳彌=CV.Enoki Junya
-CV.盧婷=CV.Lu Ting (Ru Thing)
-// YUI TBA
+CV.內山昂輝=CV. Uchiyama Koki
+CV.下地紫野=CV. Shimoji Shino
+CV.市之瀨加那=CV. Ichinose Kana
+CV.大谷育江=CV. Ōtani Ikue
+CV.明坂聰美=CV. Akesaka Satomi
+CV.野中藍=CV. Nonaka Ai
+CV.宮野真守=CV. Miyano Mamoru
+CV.福山潤=CV. Fukuyama Jun
+CV.田中敦子=CV. Tanaka Atsuko
+CV.水樹奈奈=CV. Mizuki Nana
+CV.本渡楓=CV. Hondo Kaede
+CV.小林裕介=CV. Kobayashi Yūsuke
+CV.豐永利行=CV. Toyonaga Toshiyuki
+CV.伊瀨茉莉也=CV. Mariya Ise
+CV.小西克幸=CV. Konishi Katsuyuki
+CV.諏訪彩花=CV. Suwa Ayaka
+CV.榎木淳彌=CV. Enoki Junya
+CV.盧婷=CV. Lu Ting (Ru Thing)
+CV.安濟知佳=CV. Anzai Chika
 // MINAMI TBA
 
 ------------------------------------------
@@ -232,6 +233,7 @@ r:"主角達到(\d+)級可繼續突破"=Unlocks when WONDER is level $1
 r:"主角(\d+)級解鎖"=Level $1 Unlock
 r:"怪盜(\d+)級時可繼續提升"=Skill can level up at Lv $1
 不羈能力發覺後解鎖=<size\=16>Gain levels to unlock</size>
+長按怪盜可便捷進行培養=<size\=25>Hold press on the party\nmember to customize</size>
 
 // Stats //
 
@@ -338,6 +340,16 @@ sr:"(.*?)人線上"=$1 Online
 sr:"<color\=#FF0000>(.*)</color>加入了樂園。"=<color\=#FF0000>$1</color> joined the Paradise.
 sr:"<color\=#FF0000>(.*)</color>退出了樂園。"=<color\=#FF0000>$1</color> left the Paradise.
 sr:"<color\=#FF0000>(.*)</color>將<color\=#FF0000>(.*?)</color>移出了樂園。"=<color\=#FF0000>$1</color> made <color\=#FF0000>$2</color> move out of the Paradise.
+
+挑戰難度·普通=Normal
+挑戰難度·困難=Hard
+基礎傷害積分=Base DMG
+虛弱期傷害積分=Weakness DMG
+首領擊殺積分=Defeated Leader
+難度係數=Difficulty Multiplier
+r:"難度係數：<color\=#0e68c9>(\d+)</color>"=<size\=25>Multiplier: <color\=#0e68c9>$1x</color></size>
+r:"難度係數：<color\=#0e68c9>(\d+\.\d+)</color>"=<size\=25>Multiplier: <color\=#0e68c9>$1x</color></size>
+BOSS總積分：=Current Score:
 
 成員=Member
 代理人=Leader
@@ -1096,6 +1108,9 @@ HIGHLIGHT效果提升：使所有同伴受到傷害降低16%，效果持續2回�
 // Awareness 6
 勝利者榮光=Winner's Glory
 加納駿處於<link\="s|151"><u>『荒野救星』</u></link>狀態下攻擊敵人時，會額外附帶基於加納駿最大生命值10%的傷害並回復等量生命值。=While Soy's <link\="s|151"><u>"Wild Savior"</u></link> is active, deal an extra 10% of Soy's MAX HP as damage and restore that same amount of HP.
+
+// In-Battle Quotes
+<color\=#FF0000>全體怪盜</color>生命值上限提高……=MAX HP increased for the <color\=#FF0000>entire party</color>!
 
 /////////////////////////////////
 /// d. MONT - Montagne Kotone ///
