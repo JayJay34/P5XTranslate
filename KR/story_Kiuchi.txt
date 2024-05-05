@@ -1010,8 +1010,8 @@ r:"나와 눈이 마주친 (.*), 대답해 봐."=$1, who made eye contact with m
 다시 한번\n지갑을 주워줘서 고마워. =Once again\nThank you for picking up my wallet. 
 난 D반의 『<color\=#ff0000>노게 토모코</color>』야.\n모토하랑은 가장 친한 친구고. 잘 부탁해. =I'm 『<color\=#ff0000>Tomoko Noge</color>』 from class D.\nMotoha and I are best friends, so please take care of her.
 @Wonder
-r:"내 이름은 (.*)"=My name is $1
-r:"나는 (.*)"=I am $1
+r:"^내 이름은 (.*)$"=My name is $1
+r:"^나는 (.*)$"=I am $1
 @Motoha Arai
 r:"어, 어라\?\n토모코랑 (.*)… 아는 사이였구나."=Tomoko and $1 ... you knew each other.
 @Tomoko Noge
@@ -1823,7 +1823,7 @@ r:"(.*?), 욘겐자야에 가본 적 있어?"=$1, have you ever been to Yongenja
 저기, 그…=Hey, that...
 혹시, 이런 권유라든지…\n다시 생각나는 게 힘들면 무리하지 않아도…=If you're having a hard time remembering to do this... or that, you don't have to force yourself to...
 @Motoha Arai
-r:"아,(.*?)\."=Ah, $1.
+r:"^아,(.*?)\.$"=Ah, $1.
 @Tomoko Noge
 나도 모르겠어.\n아까 그 이야기를 했더니… 이러네.=I don't know either.\nI was talking about that earlier... It's like this.
 @Motoha Arai
@@ -3204,7 +3204,7 @@ r:"(.*) 왔어?\n바로 가자."=Is $1 here?\nLet's go.
 @Ruferu
 『괴도단』이라… 나쁘지 않군.=『Phantom Thieves』... Not bad.
 @Motoha Arai
-r:"『단』이니까 단장… 이 아니라 <color\=#ff0000>리더</color>를 정하자.\n(.*) 어때?"=Because it's 『Dan』, I mean... let's decide who will become the <color\=#ff0000>Leader</color>.\nHow about $1?
+r:"『단』이니까 단장… 이 아니라 <color\=#ff0000>리더</color>를 정하자.\n(.*) 어때?"=Because we're a team, let's decide who will become the <color\=#ff0000>Leader</color>.\nHow about $1?
 @Ruferu
 나도 이의는 없다.=I have no objection.
 리더가 멤버 관리도 맡는 거겠지?\n나는 내 일에만 집중하고 싶다.=I want to focus on my job, not on managing members.
@@ -3256,6 +3256,77 @@ r:"『단』이니까 단장… 이 아니라 <color\=#ff0000>리더</color>를 
 @System
 고등학생 신분으로 다채로운 캠퍼스와 도시 생활을 체험하세요!=Experience a colorful campus and city life as a high school student!
 <size\=56>¬</size>「<color\=#ff3b37>편의점 알바</color>」를 선택하세요.=<size\=56>¬</size>Please select 「<color\=#ff3b37>Convenience store part-time job</color>」.
+@Ruferu
+이 편의점에서 아르바이트하려고?\n(<color\=#ff0000>행동력 1포인트 소모</color>)=Do you want to work at this convenience store?\n(<color\=#ff0000>Consumes 1 Action point</color>)
+
+++ ----- Convenience Store Dialogue ----- ++
+@Convenience store employees
+편의점 직원=Convenience store employees
+안녕. 와 줘서 고마워.=Hi. Thanks for coming.
+r:"^이름이 (.*) 맞지\?+$"=Your name is $1, right?
+나는 테라다 와카나야.\n네 선배라고 할 수 있지.=My name is Terada Wakana, and I'm your senior.
+너도 앞으로는 계산대를 맡을 거야.\n오늘은 견습으로 일해 봐.=You too will be in charge of the cash register in the future. Try working as an apprentice today.
+내가 어떻게 하는지 보면서 배우면 돼.=You can learn by watching how I do it.
+@Wonder
+잘 부탁드려요=Please take care of me
+열심히 할게요=I'll do my best
+@Terada Wakana
+테라다 와카나=Terada Wakana
+좋아, 멋진 활약 기대할게.=Okay, I look forward to great performances.
+같이 최선을 다하자.=Let's do our best together.
+아, 가끔 <color\=#ff0000>특별 행사</color>를 하는 날이 있는데,\n그날엔 손님이 평소보다 많이 와.=Oh, sometimes there are days when we hold <color\=#ff0000>Special Events</color>, and on those days, more customers come than usual.
+더 바쁘겠지만 급여도 더 많아지지.=You may be busier, but your pay will be higher.
+한번 고려해 봐.=Consider it.
+그럼 이제 일하러 가자!=Now let's get to work!
+@Ruferu
+오, 손님을 맞이하는 실력이 대단한데.=Oh, her skills in greeting guests are amazing.
+저 소녀는 겉보기와 달리 능력이 아주 뛰어나군.=Contrary to what she looks like, that girl is very talented.
+너도 저 정도로 하려면 최선을 다해야 해.=If you want to be as good as her, you have to do your best.
+@Terada Wakana
+휴, 오늘도 손님이 많네.=Phew, we have a lot of customers today.
+첫날부터 잡무를 하느라 고생이 많았어.=From the first day, I had a hard time doing chores.
+어때, 계산대에서 일할 수 있겠어?=How about working at the register?
+@Wonder
+자신 없어요=I'm not confident
+@Terada Wakana
+괜찮아.\n내가 최선을 다해서 요령을 가르쳐 줄게.=It's okay, I'll do my best to teach you the tricks.
+같이 열심히 하자.=Let's work hard together.
+너도 피곤하겠다.=You must be tired too.
+오늘은 여기까지야. 수고했어!=That's it for today. great job!
+난 아직 할 일이 있어서.=I still have work to do.
+조심해서 돌아가.=Go back carefully.
+@Ruferu
+테라다 선배...\n상당히 좋은 욕망이 느껴지는군.=Ms. Terada... I sense a very good desire.
+이거 아주 좋은 일자리겠는데.=This would be a really good job.
+계산대에서 일하면서\n타인을 배려하는 욕망을 느낄 수 있을 거야.=While working at the cash register, you can feel the desire to be considerate of others.
+@Wonder
+옷을 갈아입고 돌아가자...=Let's change my clothes and go back...
+
+++ ----- Shibuya Shopping District Dialogue ----- ++
+@Ruferu
+…그래, 좋다. 이제 너는\n자신의 힘으로 자금을 만드는 기술을 익혔다.=...Yeah, good. Now you have mastered the art of making money on your own.
+@Wonder
+돈을 어디에 쓸까…=<size\=21>Where should I spend my money...
+오버하기는=Overdoing it is
+자신감이 생겼어=I feel more confident
+@Ruferu
+그거 잘 됐군.=That's great.
+이제 다음 단련으로 넘어가지.\n어디 보자…=Now let's move on to the next training.\nLet's see...
+역시 괴도에게 지성과 교양은 빼놓을 수 없지.\n올바르고 매력적인 우리들은 야만족이 아니다.=After all, intelligence and culture are essential to a phantom thief.\nWe who are upright and attractive are not barbarians.
+너는 학생이기도 하고.=You're also a student.
+이중생활을 보내는 데 유익한\n『공부』를 제안하지.=I suggest 『Study』 that is useful for living a double life.
+『<color\=#ff0000>패밀리 레스토랑</color>』에서\n공부하는 인간도 많은 것 같더군.=There seemed to be a lot of people studying at 『<color\=#ff0000>Family Restaurant</color>』.
+마침 주머니가 두둑하기도 하고\n이 근처에 패밀리 레스토랑이 있다.=Coincidentally, I have deep pockets\nand there is a family restaurant nearby.
+거기서 공부를 해 봐라.=Try studying there.
+이곳에서 공부하려고?=Studying here?
+@Wonder
+나중에 얘기하자=Not Now
+@Ruferu
+…그래, 좋다. 이제 너는\n자신의 의지로 공부에 열중하는 것을 익혔다.=...Yeah, good. Now you have learned to focus on your studies by your own will.
+그럼, 아직 밤까지 시간이 있는 것 같군.=Well, I guess we still have time until night.
+마침 좋은 기회다,\n지금부터의 행동은 너에게 맡기지.\n앞으로는 선택을 해 나가야 하는 입장이니까.=This is a good opportunity,\nI will leave your actions from now on to you. Because you are in a position where you have to make choices from now on.
+나는 어디든 따라가겠다.\n마음대로 행동해.=I'll follow you anywhere, do as you please.
+물론, 아무것도 하지 않고\n집으로 돌아가는 것 또한 너의 선택이다.=Of course, it's also your choice to do nothing and go home.
 
 +++ ----- Kiuchi Takeyuki's Palace Club Section----- +++
 클럽=Club
