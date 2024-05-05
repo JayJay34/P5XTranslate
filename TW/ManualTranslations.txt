@@ -1397,10 +1397,10 @@ r:"受到的治療效果提升(\d+\.\d+%)。"=Increase effects of healing magic 
 
 //Stat buffs
 r:"戰鬥開始時攻擊力提升(\d+\.\d+%)，持續2回合。"=Increase ATK by $1 at the start of battle for 2 turns.
-r:"攻擊力提升(\d+\.\d+%)。"=Increase ATK by $1.
-r:"生命值提升(.*)。"=Increase Max HP by $1.
-r:"速度提升(.*)點。"=Increase SPD by $1.
-rdd:"防禦力提升(.*)。"=Increase DEF by $1.
+r:"^攻擊力提升(\d+\.\d+%)。+$"=Increase ATK by $1.
+r:"^生命值提升(.*)。+$"=Increase Max HP by $1.
+r:"^速度提升(.*)點。+$"=Increase SPD by $1.
+r:"^防禦力提升(.*)。+$"=Increase DEF by $1.
 r:"^暴擊率提升(\d+\.\d+%)。+$"=Increase CRIT Rate by $1.
 r:"精力回復效率提升(\d+\.\d+%)。"=Increase SP Recovery by $1.
 r:"速度降低(.*)點，生命值提升(.*)。"=Reduce SPD by $1 and increase Max HP by $2.
@@ -1408,8 +1408,8 @@ r:"速度提升(.*)點，防禦力降低(.*)。"=Increase SPD by $1 and decrease
 r:"效果抵抗提升(.*)。"=
 r:"精準打擊(.*)。"=
 r:"^暴擊效果提升(.*)。+$"=Increase hit chance by $1.
-r:"造成的傷害提升(.*)。"=Increase damage dealt by $1.
-r:"效果抵抗提升(.*)。"=Increase Effect RES by $1.
+r:"^造成的傷害提升(.*)。+$"=Increase damage dealt by $1.
+r:"^效果抵抗提升(.*)+$。"=Increase Effect RES by $1.
 r:"被包圍時暴擊率提升(\d+\.\d+%)。"=Increase CRIT Rate by $1 when surrounded.
 
 //Resists
