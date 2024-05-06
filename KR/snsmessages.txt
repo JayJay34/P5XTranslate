@@ -203,6 +203,68 @@ r:"(.*?)\n일찍 일어나는 거 잘해요?"=$1\nAre you good at getting up ear
 저는 아침에 발걸음이 흩어져 아니, 몽롱하다고 해야 할까요=It was difficult to get one foot in front of the other this morning, I was still sleepy
 매일 차를 마셔야 해요\n그래야 눈이 떠지거든요=You should drink tea every day\nIt helps you wake up
 
+++++ ----- Tomoko Noge ----- ++++
+
++++ ----- Tomoko Noge 1 ----- +++
+
+@Subject
+너는 아르바이트 고를 때 어떤 걸 가장 중요하게 생각해?=What do you look for in a part-time job?
+@Tomoko Noge
+r:"^([\S*]{2,6}),\\n너는 아르바이트 고를 때 어떤 걸 가장 중요하게 생각해\?$"=$1, what do you look for in a part-time job?
+지금 아르바이트를\n찾고 있는데=I'm looking for a part-time job right now
+뭘 기준으로 선택해야 할지\n모르겠어=But I don't know what to choose based on
+@Wonder
+!!!!! Missing the other dialogue option
+쉬운 업무를 선택해=Choose easy tasks
+@Tomoko Noge
+그렇구나...\n맞아, 확실히\n역시 그게 중요하지=I see... yeah, that's definitely important
+고마워\n좋은 아르바이트 찾을게=Thank you\nI'll find a good part-time job
+
++++ ----- Tomoko Noge 2 ----- +++
+
+@Subject
+지금 혼자 살고 있지?=You're living alone now, right?
+@Tomoko Noge
+r:"^([\S*]{2,6}),\\n지금 혼자 살고 있지\?$"=$1,\nYou're living alone now, right?
+저녁은 보통 어떻게 먹어?\n힘들지 않아?=How do you usually eat dinner? Isn't it hard?
+@Wonder
+먹고 싶은 걸 해 먹어=Make what you want to eat
+배달시켜=Order delivery
+@Tomoko Noge
+그렇구나...\n혼자 살면 그렇구나=I see...\nThat's how it is when you live alone
+내가 도울 일이 있다면\n얘기해 줘=If there's anything I can do to help, let me know
+
++++ ----- Tomoko Noge 3 ----- +++
+
+@Subject
+영화 채널 회원에 대해...=About Movie Channel members...
+@Tomoko Noge
+r:"^([\S*]{2,6}),\\n혹시 영화 채널 회원이야\?$"=$1, are you a member of the movie channel?
+예전엔\n지원 영상들을 봤었는데=I used to watch support videos in the past
+팔을 다친 이후로는\n그런 영상을 볼 기분이 안나...=I'm not in the mood to watch those videos anymore since I injured my arm...
+모토하가 추천해 줘서\n유료 영화 채널에 가입했거든=I subscribed to a premium movie channel because Motoha recommended it
+그래서 다른 사람들은\n뭘 보는지 알고 싶어졌어=So I wanted to know what other people are watching
+r:"^([\S*]{2,6}),\\n어떤 영화 좋아해\?$"=$1, what kind of movies do you like?
+@Wonder
+유명한 감동의 명작=Famous emotional masterpieces
+코미디=Comedies
+@Tomoko Noge
+오? 그렇구나\n시간 나면 볼게=Oh? I see.\nI'll take a look when I get a chance.
+말해 줘서 고마워=Thanks for telling me
+다 보고 나면\n다시 연락할게=I'll get back to you after I watch them
+
++++ ----- Hold ----- +++
+
+@Subject
+갑자기 연락해서 미안.=Sorry for the surprise.
+@Tomoko Noge
+갑자기 연락해서 미안.\n오늘 시간 있어?=Sorry to reach out so suddenly.\nAre you free today?
+나랑 어디 좀 함께 가 줬으면 하는데... 혹시 할 일이 있다면 말고.=I'd like you to come with me somewhere... unless you have something to do.
+@Wonder
+!!!!! Dialogue choices accounted for elsewhere (Okay/I'll contact you later)
+@Tomoko Noge
+좋아! 고마워!\n그럼 늘 보던 데서 만나자!=Great! Thank you!\nI'll see you in the usual place!
+
 ++++ ----- YUI ----- ++++
 
 +++ ----- Ad message before confidant unlock sub quest ----- +++
@@ -264,11 +326,12 @@ r:"(.*?)\n일찍 일어나는 거 잘해요?"=$1\nAre you good at getting up ear
 
 @Subject
 지금 시간 괜찮니?=Is now a good time?
-@Kayo
+@Kayo Tomiyama
 r:"([\S*]{2,6})\n궁금한 게 있어.$"=$1\nI have a question for you.
 오늘 시간 되면\n나랑 같이 나가서 좀 걸을래?=If you have time today, would you like to go out for a walk with me?
 @Wonder
 !!!!! Dialogue choices accounted for elsewhere (Okay/I'll contact you later)
-@Kayo
+@Kayo Tomiyama
 잘 됐다!\n지금 올 수 있어?=Great!\nCan you come now?
+@Wonder
 토미야마에게 무슨 일이 있는 것 같다. 그녀를 찾아가 보자...=It seems like something is up with Tomiyama. Let's go find her...
