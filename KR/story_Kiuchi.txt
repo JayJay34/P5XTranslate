@@ -829,7 +829,7 @@ r:"(.*?),\n너에게 하이라이트를 양보하지."=$1, I'll let you do the h
 
 ++ ----- After leaving house for first time ----- ++
 @Bright Woman 
-r:"…혹시 (.*)"=...Is it $1
+r:"^…혹시 (.*)$"=...Is it $1
 @Wonder
 누구?=Who?
 맞습니다만=That's right, but
@@ -1011,7 +1011,7 @@ r:"나와 눈이 마주친 (.*), 대답해 봐."=$1, who made eye contact with m
 난 D반의 『<color\=#ff0000>노게 토모코</color>』야.\n모토하랑은 가장 친한 친구고. 잘 부탁해. =I'm 『<color\=#ff0000>Tomoko Noge</color>』 from class D.\nMotoha and I are best friends, so please take care of her.
 @Wonder
 r:"^내 이름은 (.*)$"=My name is $1
-r:"^나는 (.*)$"=I am $1
+r:"^나는 (.?*)$"=I am $1
 @Motoha Arai
 r:"어, 어라\?\n토모코랑 (.*)… 아는 사이였구나."=Tomoko and $1 ... you knew each other.
 @Tomoko Noge
@@ -3327,6 +3327,181 @@ r:"^이름이 (.*) 맞지\?+$"=Your name is $1, right?
 마침 좋은 기회다,\n지금부터의 행동은 너에게 맡기지.\n앞으로는 선택을 해 나가야 하는 입장이니까.=This is a good opportunity,\nI will leave your actions from now on to you. Because you are in a position where you have to make choices from now on.
 나는 어디든 따라가겠다.\n마음대로 행동해.=I'll follow you anywhere, do as you please.
 물론, 아무것도 하지 않고\n집으로 돌아가는 것 또한 너의 선택이다.=Of course, it's also your choice to do nothing and go home.
+
+++ ----- Home ----- ++
+@Wonder
+혼자라고 할지…=Should I say I'm alone...
+@Ruferu
+그럼, 나도 쉬어볼까.\n잠입 도구를 만들 때는 지난번처럼 도와주겠다.=Now, I'm going to take a break, but I'll help you build your infiltration tool like I did last time.
+신선한 식재료로 요리를 하세요. 숙련도가 상승하면 맛있는 요리를 얻을 수 있습니다!=Cook with fresh ingredients. As your skill level increases, you can create delicious dishes!
+@Tutorial
+<size\=56>¬</size>「<color\=#ff3b37>돈가스</color>」를 만드세요.=<size\=56>¬</size>Make 「<color\=#ff3b37>Tonkatsu</color>」.
+「<color\=#ff3b37>돈가스</color>」를 만드세요.=Make 「<color\=#ff3b37>Tonkatsu</color>」.
+「<color\=#ff3b37>선택</color>」을 확인하세요.=Please check 「<color\=#ff3b37>Selection</color>」.
+「<color\=#ff3b37>요리</color>」를 시작하세요.=Start 「<color\=#ff3b37>Cooking</color>」.
+@Wonder
+이 정도면 괜찮지...=That's good enough...
+@Tutorial
+정원의 화분에 씨앗을 심고 다양한 식자재와 꽃을 수확하세요!=Plant seeds in flower pots in the garden and harvest various ingredients and flowers!
+<size\=56>¬</size>「<color\=#ff3b37>화분</color>」을 1개 선택하세요.=<size\=56>¬</size>Choose 1 「<color\=#ff3b37>Plant</color>」.
+「<color\=#ff3b37>비료</color>」를 주세요.=Please give it 「<color\=#ff3b37>Fertilizer</color>」.
+
+++ ----- Inogami Station Dialogue ----- ++
+@Motoha Arai
+좋은 아침… 흐아암~=Good morning... Hmmmm~.
+@Wonder
+졸린 것 같네=You look sleepy
+@Motoha Arai
+무기 설명서를 읽다가 글자가 많아서\n잠들어버렸어… 잘못 자서 목 아파~=<size\=28>I was reading the weapon manual and fell asleep because there were so many words... My neck hurts from sleeping on the wrong side~.
+역시 난 실전파야. 이세계에 갈 일이 있으면\n같이 <color\=#ff0000>시험 사격</color>을 해 보러 가자.=After all, I am a practical person. If you ever need to go to metaverse, let's go do a <color\=#ff0000>test shooting</color> together.
+하지만 앞으로 여러모로 지출이 늘어나려나…?\n아르바이트라도 해야 하나…?=But I wonder if spending will increase in various ways in the future... ?\nShould I get a part-time job?
+하지만 가끔은 영화를 보면서\n쉬고 싶기도 한데…=But sometimes I want to relax while watching a movie...
+아, 그전에 우린 학생이지. 공부해야 하는데…\n아아, 하루가 너무 짧아…=Oh, before that, we are students. We have to study... \nAhh, the day is too short...
+@Station Announcements
+지금 1번 승강장으로 열차가 들어옵니다~=A train is now arriving at platform 1~.
+@Motoha Arai
+어쨌든, 오늘부터 방과 후를\n어떻게 보낼지 고민하는 거였지?=Anyway, you were thinking about how to spend your time after school starting today, right?
+나는 리더의 호출이 있기 전까지는\n마음 내키는 대로 하고 있을게.=Until the leader calls me, I'll do whatever I want.
+
+++ ----- Classroom Dialogue ----- ++
+@World History Teachers
+세계사 교사=World History Teachers
+자, 그러면… 프랑스 혁명 다음부터…=Okay then... After the French Revolution...
+권력자의 역사적인 평가가\n민중의 지지로 바뀐다는 이야기, 기억납니까?=Do you remember the story about the historical evaluation of those in power changing to the support of the people?
+살짝 다른 이야기를 하자면, 당시의 도적이\n영웅이 된 사례가 몇 가지 있습니다.=To tell a slightly different story, there are several cases in which thieves of the time became heroes.
+이른바 의적이라는 거지요.=They are so-called righteous enemies.
+r:"그럼 오늘의 강수 확률로 봤을 때…\n(.*), 대답하세요.$"=So, based on today's precipitation probability... $1, answer.
+이 중에서, 슬로바키아의 로빈 후드로\n이름을 날린 의적은 누구일까요?=Among these, who is the robber who became famous as the Robin Hood of Slovakia?
+@Wonder
+사카모토 료마=Ryoma Sakamoto
+유라이 야노식=Juraj Janosik
+모리스 르블랑=Maurice Leblanc
+@World History Teachers
+뭐, 일본에서는 아직 잘 알려지지 않았으니까요.=Well, it’s not well known in Japan yet.
+정답은 유라이 야노식.=The correct answer is Juraj Janosik.
+그의 표적은 민중을 고통스럽게 하는 부자들뿐.\n그리고 얻어낸 이익은 가난한 민중에게\n나눠주었습니다…=<size\=28>His targets are only rich people who cause suffering to the people. And he distributed the profits he made to the poor people...
+그 실적이 민중에게 지지를 받아 이야기가\n전해지며 의적 야노식 상을 만들어낸 것이겠지요.=<size\=28>His performance received support from the public, the story was passed down, and the statue of the righteous thief Jano was created.
+@Ruferu
+사리사욕에 눈이 먼 자를 제압하는 의적이라.=He is a righteous enemy who subdues those who are blinded by self-interest.
+마치 팰리스의 주인에게 도전하는\n우리 괴도단 같지 않나…? 후후.=Isn’t it like we are a group of phantom thieves challenging the owner of the palace? Hehehe.
+@Motoha Arai
+나는 도서실에 있을 건데\n이세계에 갈 때에는 연락해 줘.=I'll be in the library. Please contact me when you go to metaverse.
+@Wonder
+책을 좋아해?=Do you like books?
+도서실?=Library?
+@Motoha Arai
+효과적인 트레이닝 방법이 없는지\n조사해 보려고.=To investigate whether there is an effective training method.
+좋은 책이 있으면 빌려 갈 생각이야.=If there is a good book, I plan to borrow it.
+수업 중에 생각이 났는데…=A thought occurred to me during class...
+싸우게 된 이후로, 내가 생각해도\n한심할 정도로… 몸이 둔해졌거든.=Ever since we started fighting, I think it's so pathetic... My body became sluggish.
+토모코를 위해서라도 우리가 질 수는 없잖아…\n할 수 있는 걸 해두고 싶어.=For Tomoko's sake, we can't lose... I want to do what I can.
+겸사겸사 공부라도 해볼까?\n그건 좀 아닌가… 하하, 아무튼 그래.=Should I try studying on the side? isn’t that a bit much... Haha, anyway.
+
+++ ----- Mementos Dialogue ----- ++
+@Motoha Arai 
+아직도 이세계에 오면 긴장돼…\n아, 코드네임으로 불러야지… 원더랑 캐틀?=I still get nervous when I come to metaverse... Ah, I should call you by code name... Wonder and Cattle?
+@Ruferu
+바로 그거야, 클로저.=That's right, Closer.
+…전방에 섀도다.=...There is a shadow ahead.
+얼마 전에 클로저가 제안했던\n『시험 사격』을 하기에 딱 좋은 사냥감이군.=It's the perfect prey for the "test shooting" that Closer suggested a while ago.
+
+++ ----- Mementos Battle Dialogue ----- ++
+@Motoha Arai
+이와이 씨한테 받은 무기를 사용해 보자!=Let's use the weapon Mr. Iwai gave us!
+@Tutorial
+「<color\=#ff3b37>총기</color>」로 적을 공격합니다.=Attacks the enemy with a "<color\=#ff3b37>Gun</color>".
+총기 공격은 <color\=#ff3b37>총격 속성</color>으로 적용됩니다.=Gun attacks are applied with <color\=#ff3b37>Shooting attribute</color>.
+지정량의 탄약을 다 쏘기 전에는 <color\=#ff3b37>공격 대상을 전환</color>할 수 있습니다.=You can <color\=#ff3b37>switch attack targets</color> before the specified amount of ammunition is used up.
+@Ruferu
+약점에 대한 건 기억하고 있겠지?\n저 섀도는 총격이 약점이다. 다운시켜.=You remember about its weakness, right?\nThat Shadow's weakness is shooting. Take it down.
+@Motoha Arai
+그럼 총으로 싸우는 편이 유리하다는 거구나!=So it's better to fight with guns!
+@Ruferu
+…한 가지, 작전을 제안하지.=...One thing: I propose a plan.
+원더, 모든 적의 약점을 찔러라.\n지시는 맡기지.=Wonder, strike all enemies' weaknesses.\nI'll leave the instructions to you.
+@Tutorial
+계속 「<color\=#ff3b37>총기</color>」를 사용하세요.=Please continue to use “<color\=#ff3b37>Gun</color>”.
+@Motoha Arai
+좋았어, 팀 워크의 승리!\n승리의 달콤함에 취한다는 게 이런 걸까?=Okay, teamwork wins! Is this what it's like to be drunk on the sweetness of victory?
+@Wonder
+취한다는 느낌을 알아?=<size\=20>Do you know the feeling of being drunk?
+나쁘지 않네=Not bad
+@Motoha Arai
+아, 그런가. 생각해 보니\n『취한다』는 감각을 모르네, 아하하.=Ah, I see. Now that I think about it,\nI don’t know what it means to be “drunk”, ahaha.
+…그래도 다 같이 일제 공격을 하는 건 흥분되네. 야구를 하던 시절이 떠올랐어.=...Still, it's exciting to see us all attack in unison. It reminds me of my baseball days.
+@Ruferu
+음, 괴도『단』다워지기 시작했군.=Hmm, I'm starting to look like a "The Phantom Thieves of Hearts".
+…하지만 클로저,\n너의 공격만 한 박자 느렸다.=...but Closer, your attack was only one beat slower.
+아, 정말?\n이런~ 아직 싸우는 게 익숙하지 않아서…=Oh, really? Oops, I'm not used to fighting yet...
+
+++ ----- Velvet Room Dialogue ----- ++
+@Igor
+자네는 이런 세계에 있으면서도\n스스로가 있을 곳을 찾아낸 것 같군.=You seem to have found a place for yourself in this world.
+@Wonder
+있을 곳?=A place to be?
+@Merope
+『괴도단』을 말씀하시는 겁니다.=We're talking about "The Phantom Thieves of Hearts".
+@Igor
+…다른 이와 깊은 인연을 맺는 건,\n마음의 힘인 페르소나에게도 큰 영향을 미치지.=...Forming a deep connection with another person also has a great influence on the persona, which is the power of the heart.
+자네에게 있어서, 이 『있을 곳』이\n다가올 파멸에 대항할 힘이 될 것인지…\n아니면 재앙으로 이끌 것인지…=For you, this "place to be" will either be a force against the coming doom... or lead you to disaster...
+후후, 그건 자네 스스로의 의지로\n가늠해 보게.=Hehe, you'll have to figure that out for yourself.
+지금의 그라면, 다룰 수 있지 않겠나?=By now, he should be able to handle it, right?
+@Merope
+당신에게 페르소나의\n『<color\=#ff0000>합체</color>』를 안내해 드리겠습니다.=I will guide you through Persona's "<color\=#ff0000>Fusion</color>".
+@Wonder
+뭘 할 생각이지?=<size\=23>What are you going to do?
+합체?=Fusion?
+@Merope
+다른 이의 욕망과의 상호작용을 당신 안에서\n행한다… 그렇게 이해해 주십시오.=Interaction with other people's desires takes place within you... please understand that.
+페르소나는 당신의 안에 있는\n욕망을 품은 인격…=A persona is a personality that contains desires within you...
+그 인격과 인격의 상호작용…\n합체를 통해 새로운 인격을… 창조합니다.=The interaction between those personalities... through fusing, a new personality... created.
+@Igor
+와일드…\n자네이기에 할 수 있는 특별한 기술이다.=Wild... \nIt's a special skill that you can do because you're the one doing it.
+@Merope
+합체를 통한 새로운 페르소나와의 만남은 동시에 오래된 페르소나와의 이별이기도 합니다…=Meeting a new persona through fusion is also a farewell to an old persona...
+그렇게 이해해 주십시오.=Please understand that.
+@Igor
+자… 그럼 다시 한번.=Okay... then again.
+어서 오십시오, 벨벳 룸이라 불리는 이 장소에.=Welcome to this place called the Velvet Room.
+@Tutorial
+「<color\=#ff3b37>합체·페르소나</color>」를 선택하세요.=Select 「<color\=#ff3b37>Fuse - Persona</color>」.
+<size\=56>¬</size>「<color\=#ff3b37>합체·페르소나</color>」를 선택하세요.=<size\=56>¬</size> Select 「<color\=#ff3b37>Fuse - Persona</color>」.
+리스트의 「<color\=#ff3b37>페르소나</color>」를 선택하세요.=Select 「<color\=#ff3b37>Persona</color>」 from the list.
+<size\=56>¬</size>리스트의 「<color\=#ff3b37>페르소나</color>」를 선택하세요.=<size\=56>¬</size>Select 「<color\=#ff3b37>Persona</color>」 from the list.
+「<color\=#ff3b37>합체</color>」 를 선택하세요.= Select 「<color\=#ff3b37>Fusion</color>」.
+합체 시 4개의 스킬 추가 획득=Gain 4 additional skills when fusing
+<size\=56>¿</size>「<color\=#ff3b37>합체 시 획득하는 스킬</color>」을 조회합니다.=Search <size\=56>¿</size>「<color\=#ff3b37>Skills acquired when fusion</color>」.
+「<color\=#ff3b37>합체로 획득하는 스킬</color>」을 조회하세요.=Please look up 「<color\=#ff3b37>Skills acquired through fusion</color>」.
+「<color\=#ff3b37>합체 확인</color>」을 선택합니다.=Select 「<color\=#ff3b37>Confirm Fusion</color>」.
+@Incubus
+나는 인큐버스!=I'm Incubus!
+내가 너의 페르소나가 된 이상\n오늘 밤부터 잘 생각하지 않는 게 좋을거야!=Now that I'm your persona, you'd better not think too hard about it tonight!
+@Tutorial
+「<color\=#ff3b37>스킬 조정</color>」을 진행하세요.=Proceed with 「<color\=#ff3b37>Skill Adjustment</color>」.
+
+++ ----- Mementos Dialogue ----- ++
+@Motoha Arai
+…저기, 원더도 그렇게 생각하지?=...Hey, Wonder thinks so too, right?
+어라, 안 듣고 있었어?=Oh, weren't you listening?
+@Ruferu
+너, 또 멍하니 있었군…\n지난번에도 그러던데, 버릇인가?=You were dazed again... \nYou did that last time, is it a habit?
+@Wonder
+코가 긴 사람이…=<size\=26>A person with a long nose...
+파란 문 안에…=<size\=29>Inside the blue door...
+@Ruferu
+…뭐, 됐다. 내가 다시 한번\n아까 이야기했던 걸 공유하지.=...Well, never mind, I'll share what we talked about earlier.
+전투 지시도 그렇지만, 앞으로도 괴도단의 지휘는 리더인 너에게 맡기겠다, 원더.=As well as battle instructions, I will continue to leave command of the Phantom Thieves to you, the leader, Wonder.
+총공격이라면 강적에게도 한 번에 대미지를 줄 수 있지. 필요한 상황에서 활용해 나가라.=If it's an all-out attack, it can inflict damage to even strong enemies at once. Use it when necessary.
+@Motoha Arai
+그럼, 오늘은 이대로\n키우치의 팰리스로 가는 거야?=So, are we still going to Kiuchi's Palace today?
+아… 하지만 팰리스는 얼마 전에 우리가\n발견되고 나서 경비가 삼엄해졌다고 했지?=Ah... but the Palace has been on high alert since we were discovered a while ago, right?
+@Ruferu
+그렇겠지. 덧붙이자면,\n클로저는 아직 전투에 익숙하지 않아.=I guess so. Additionally, Closer is not yet familiar with combat.
+먼저 메멘토스에서 적과의 싸움에\n익숙해지는 것이 좋을지도 모르겠군.=You might want to familiarize yourself with fighting enemies in Mementos first.
+나도 이세계의 모든 것을 아는 것은 아니지만…\n경험을 쌓기에 적합한 공간도 있는 모양이다.=I don't know everything in this metaverse either, but there are places... where it's good to gain experience.
+이대로 팰리스 공격에 나서도 된다.\n갈 생각이라면 태워 주지.=You can attack the Palace as you are. I'll give you a ride if you want to go.
+판단은 맡기겠다, 원더.=I'll let you be the judge, Wonder.
+
 
 +++ ----- Kiuchi Takeyuki's Palace Club Section----- +++
 클럽=Club
