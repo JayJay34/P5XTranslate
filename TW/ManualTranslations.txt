@@ -196,6 +196,21 @@ r:"領取"=Get
 意識等級=Awakening
 面具品質=Rarity
 合成=Fuse
+永久=∞
+月限=<size\=16>Every Month</size>
+日限=<size\=16>Daily</size>
+週限=<size\=13>Weekly</size>
+r:"(\d+)天後刷新"=Refresh in $1 days
+r:"(\d+)分後刷新"=Refresh in $1 minutes
+r:"(\d+)天後下架"=Expires in $1 days
+r:"角色(\d+)級可購買"=Unlock at Acc Lv. $1
+r:"持有：(\d+)"=Held: $1
+持有：=Held:
+購買數量:=Quantity
+花費合計：=Cost
+r:(\d+)魂石=$1 Soul Stones
+操作模式切換為鍵鼠。=Mouse & Keyboard Mode
+操作模式切換為手把。=Controller Mode
 
 ///////////////////////
 /// b. Profile Menu ///
@@ -321,7 +336,25 @@ r:"近7天貢獻 (\d+)"=7d Contribution: $1
 
 成員=Member
 代理人=Leader
+副手=Associate
 <color\=#81ea2c>線上</color>=<color\=#81ea2c>Online</color>
+
+挑戰難度·簡單=Easy
+挑戰難度·普通=Normal
+挑戰難度·困難=Hard
+挑戰難度·挑戰=Challenge
+挑戰難度·噩夢=Nightmare
+基礎傷害積分=Base DMG
+虛弱期傷害積分=Weakness DMG
+首領擊殺積分=Defeated Leader
+難度係數=Difficulty Multiplier
+r:"難度係數：<color\=#0e68c9>(\d+)</color>"=<size\=25>Multiplier: <color\=#0e68c9>$1x</color></size>
+r:"難度係數：<color\=#0e68c9>(\d+\.\d+)</color>"=<size\=25>Multiplier: <color\=#0e68c9>$1x</color></size>
+BOSS總積分：=Current Score:
+長按怪盜可便捷進行培養=<size\=25>Hold press on the party\nmember to customize</size>
+可用協助次數：=Assist Units\nAvailable
+樂園=<size\=32>Paradise</size>
+鎖定陣容=<size\=20>Team Lineup</size>
 
 獎勵詳情=Rewards
 
@@ -339,10 +372,8 @@ sr:"<color\=#8F8D8D>(.*)天前線上</color>"=<color\=#8F8D8D>$1 Days</color>
 sr:"(.*?)人線上"=$1 Online
 sr:"<color\=#FF0000>(.*)</color>加入了樂園。"=<color\=#FF0000>$1</color> joined the Paradise.
 sr:"<color\=#FF0000>(.*)</color>退出了樂園。"=<color\=#FF0000>$1</color> left the Paradise.
-sr:"<color\=#FF0000>(.*)</color>將<color\=#FF0000>(.*?)</color>移出了樂園。"=<color\=#FF0000>$1</color> made <color\=#FF0000>$2</color> move out of the Paradise.
+sr:"<color\=#FF0000>(.*)</color>將<color\=#FF0000>(.*?)</color>移出了樂園。"=<color\=#FF0000>$1</color> kicked <color\=#FF0000>$2</color> from the Paradise.
 
-挑戰難度·普通=Normal
-挑戰難度·困難=Hard
 基礎傷害積分=Base DMG
 虛弱期傷害積分=Weakness DMG
 首領擊殺積分=Defeated Leader
@@ -353,6 +384,7 @@ BOSS總積分：=Current Score:
 
 成員=Member
 代理人=Leader
+副手=Associate
 <color\=#81ea2c>線上</color>=<color\=#81ea2c>Online</color>
 
 // Paradise Tags //
@@ -534,10 +566,57 @@ r:"(\d+)\/(\d+)頁"=Page $1 / $2
 
 r:"持有印記：(\d+)"=Seal Owned: $1
 
+////////////////////////////////////
+///// i. Resources & Shop Items ////
+////////////////////////////////////
+
+枚異界原晶=Gems
+首次=First Time
+未來之命運=Future Fate
+既定之命運=Destiny Fate
+非凡之硬幣=Future Token
+既定之硬幣=Destiny Token
+
+傳記全書=L Biography
+傳記斷章=M Biography
+傳記殘頁=S Biography
+
+萬用零件·中=M Weapon Parts
+萬用零件·大=L Weapon Parts
+萬用零件·小=S Weapon Parts
+
+金絲香=L Incense
+r:"香塔(.*)"=$1 Incense
+鳶尾花濃香=Fine Perfume
+鳶尾花之香=Perfume
+
+優質礦石=High-quality Ore
+粗製礦石=Ore
+人格面具精魄=L Persona Essence
+人格面具精碎=M Persona Essence
+人格面具精末=S Persona Essence
+日升=L Bead 
+月盈=M Bead
+星伴=S Bead
+
+未知宿命橙·宙=Random 4★ Arcana
+未知宿命紫·宙=Random 3★ Arcana
+未知宿命藍·接納=2★ Arcana • Acceptance
+未知宿命藍·和諧=2★ Arcana • Harmony
+未知宿命藍·信任=2★ Arcana • Trust
+未知宿命藍·信念=2★ Arcana • Belief
+未知宿命藍·專注=2★ Arcana • Focus
+未知宿命藍·成長=2★ Arcana • Growth
+未知宿命藍·啟程=2★ Arcana • Departure
+未知宿命藍·覺知=2★ Arcana • Awareness
+
+
 ////////////////////////////
-/// i. Velvet Challenges ///
+/// j. Velvet Challenges ///
 ////////////////////////////
 -- All score objectives will be translated soon
+
+//////////////////////////
 
 /////////////////
 /// z. Others ///
@@ -728,7 +807,7 @@ WONDER使用=WONDER's Dagger
 藤川雪實使用=YUKI's Flail
 須見俊也使用=SEPIA's Cane
 李瑤鈴使用=RIN's Bo Staff
-// YUI's Dual Chakrams
+YUI使用=BUI's Dual Chakrams
 
 // Weapon Skill Name (4 Spaces for correct spacing, in order of 5* to 2*)
 // JOKER
