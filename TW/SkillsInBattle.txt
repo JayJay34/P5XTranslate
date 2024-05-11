@@ -1,0 +1,557 @@
+// Skill Level up Description //
+
+ONE MORE：技能傷害=ONE MORE: ATK% DMG
+r:"^提升(\d+\.\d%)+$"=$1
+
+HIGHLIGHT：技能傷害倍率=HIGHLIGHT: ATK% DMG
+近戰攻擊：技能傷害=Melee: ATK% DMG
+槍械射擊：技能傷害=Gun: ATK% DMG
+r:"面具(.*)級時可解鎖"=Unlocks when this persona is LV.$1
+
+讟=
+儁=
+
+戰鬥技巧=Combat Skills
+sr:"(.*?) Lv.(\d+)"=$1 Lv.$2
+sr:"(.*?) <color\=#0F69CB>Lv.(\d+)</color>"=$1 <color\=#0F69CB>Lv.$2</color>
+
+// Elemental & Psychological Ailments //
+
+<color\=#66ccff>精神異常</color>=<color\=#66ccff>Mental Ailment</color>
+<color\=#66ccff>元素異常</color>=<color\=#66ccff>Elemental Ailment</color>
+
+<color\=#66ccff>燃燒</color>=<color\=#FF8C35>Burn</color>
+<color\=#66ccff>凍結</color>=<color\=#DFFFFF>Freeze</color>
+<color\=#66ccff>觸電</color>=<color\=#FCE54E>Shock</color>
+<color\=#66ccff>風襲</color>=<color\=#52E54E>Winded</color>
+
+<color\=#66ccff>暈眩</color>=<color\=#FBF6C1>Dizzy</color>
+<color\=#66ccff>遺忘</color>=<color\=#80EEED>Forget</color>
+<color\=#66ccff>睡眠</color>=<color\=#E59FFF>Sleep</color>
+<color\=#66ccff>混亂</color>=<color\=#C0F081>Confuse</color>
+<color\=#66ccff>恐懼</color>=<color\=#FCC6FA>Fear</color>
+<color\=#66ccff>絕望</color>=<color\=#B69ABB>Despair</color>
+<color\=#66ccff>狂怒</color>=<color\=#F77F76>Rage</color>
+<color\=#66ccff>洗腦</color>=<color\=#AF4FA6>Brainwash</color>
+
+<color\=#66ccff>詛咒</color>=<color\=#FF0037>Cursed</color>
+<color\=#66ccff>祝福</color>=<color\=#FFFF9E>Blessed</color>
+
+// Elemental & Mental Ailments Descriptions //
+
+r:"燃燒、冰凍、觸電、風襲，以上4種狀態屬於元素異常。"=<color\=#FF8C35>Burn</color>, <color\=#DFFFFF>Freeze</color>, <color\=#FCE54E>Shock</color>, <color\=#52E54E>Winded</color>.
+r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以上8種狀態屬於精神異常。"=<color\=#FBF6C1>Dizzy</color>, <color\=#80EEED>Forget</color>, <color\=#E59FFF>Sleep</color>, <color\=#F77F76>Rage</color>, <color\=#B69ABB>Despair</color>, <color\=#FCC6FA>Fear</color>, <color\=#C0F081>Confuse</color>, <color\=#AF4FA6>Brainwash</color>
+
+元素異常，每回合損失5%生命值，效果持續2回合。=Lose 5% of Max HP each turn for 2 turns.
+元素異常，受到暴擊率提升10%，效果持續2回合。=Increase chance of receiving a CRIT Hit by 10% for 2 turns.
+元素異常，防禦力降低12%，效果持續2回合。=Reduce DEF by 12% for 2 turns.
+元素異常，攻擊力降低12%，效果持續2回合。=Reduce ATK by 12% for 2 turns.
+
+精神異常，無法行動。=Unable to take actions.
+精神異常，無法行動並且每回合回復5%生命值和5%精力值，受到傷害後清除。=Unable to take actions.\nRestore 5% of Max HP and 5% of Max SP each turn.\nThis ailment clears upon taking damage.
+精神異常，無法使用技能。=Unable to use skills.
+精神異常，無法行動，會丟棄一定數量的魂石。=Unable to take actions.\nDiscards Soulstones each turn.
+精神異常，有一定機率無法行動，若干回合後逃跑。=High chance of being unable to act.\nEscape from battle after a few turns.
+精神異常，無法行動，每回合扣除一定精力值，若干回合後死亡。=Unable to take actions.\nLose 5% Max SP each turn.\nInflicted will die after a few turns.
+精神異常，攻擊力提升，防禦力降低，只能使用近戰攻擊，攻擊隨機目標。=Increase ATK, and decrease DEF.\nCan only use melee attacks.\nAttack random targets.
+精神異常，無法行動，並會攻擊同伴。=Will attack allies each turn.
+每回合恢復1%最大生命值，效果持續2回合。=Restore 1% Max HP each turn for 2 turns.
+每回合受到相當於1%最大生命值的傷害，效果持續2回合。=Lose 1% Max HP each turn for 2 turns.
+
+---------------------------------------------
+--- VI. Character-specific Skill Details ----
+---------------------------------------------
+// Skill names are in Substitutions //
+意識詳情=A0~A6 // Awareness Levels
+
+-- NOTE: Translate the 3 Phantom Thieves first, then translate the cognitive ones.
+////////////////////////////////
+///// a. CATTLE - Ruferu ///////
+////////////////////////////////
+
+// Passive
+// Skill 1: Iceberg Shake
+// Skill 2: Vanguard Assault
+// Skill 3: Sub-zero Healing
+// Skill 4: Combat Skills
+// Potential Passives
+
+// Awareness 0
+// Awareness 1
+// Awareness 2
+// Awareness 3
+// Awareness 4
+// Awareness 5
+// Awareness 6
+
+///////////////////////////////
+/// b. CLOSER - Motoha Arai ///
+///////////////////////////////
+
+// Passive
+// Skill 1: Iceberg Shake
+// Skill 2: Vanguard Assault
+// Skill 3: Sub-zero Healing
+// Skill 4: Combat Skills
+// Potential Passives
+
+// Awareness 0
+// Awareness 1
+// Awareness 2
+// Awareness 3
+// Awareness 4
+// Awareness 5
+// Awareness 6
+
+//////////////////////////////
+/// c. SOY - Kano Shun ///////
+//////////////////////////////
+
+// Passive
+受到敵方攻擊的機率提高，受到攻擊後會獲得『{{A}}』，回合結束消耗『{{A}}』並回復自身部分已損生命值。=When attacked, gain a "Wild Savior" unique buff. This buff heals Soy for 30% HP at the end of his turn.
+
+// Skill 1: Iceberg Shake
+
+r:"對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的冰凍屬性傷害，並有<color\=#FFFC40>(\d+%)</color>的基礎機率使敵人陷入<link\=\"s|103\"><u>凍結</u></link>狀態。\n<b><size\=28><color\=#850101>拔地而起的冰山，對敵人造成冰屬性傷害，還會讓敵人感到愈加的寒冷。"=Deals <color\=#FFFC40>$1</color> MAX HP Ice Elemental DMG to 1 target with a <color\=#FFFC40>$2</color> base chance to inflict a Frozen debuff. \n\n<b><size\=28><color\=#850101>Chilly twin axes strike the enemy, making them feel colder.</color></size></b>
+
+// Skill 2: Vanguard Assault
+
+r:"對1名敵人造成<color\=#FFFC40>(\d+\.\d%)</color>最大生命值的物理屬性傷害，並使目標敵人的防禦力降低<color\=#FFFC40>(\d+\.\d%)</color>，效果持續2回合。處於<link\="s|151"><u>『荒野救星』</u></link>狀態下時，防禦力降低值提升至<color\=#FFFC40>(\d+\.\d%)</color>。\n<b><size\=28><color\=#850101>先鋒精神勢不可擋，在烈馬的啼鳴中對敵人造成難以抵擋的物理傷害。</color></size></b>"=Deals <color\=#FFFC40>$1</color> MAX HP Physical Damage and inflicts a <color\=#FFFC40>$2</color> DEF Down debuff that lasts for 2 turns to 1 target. When using this skill while <u>Wild Savior</u> is active, the DEF Down debuff becomes twice as powerful.
+
+// Skill 3: Sub-zero Healing
+
+r:"使所有同伴的最大生命值提升，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+%)</color>（最多計入<color\=#FFFC40>(\d+)</color>點最大生命值），同時自身受到攻擊的機率大幅提升，效果持續2回合。回復所有同伴生命值，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d%)</color>。\n冷卻時間：1回合。\n<b><size\=28><color\=#850101>極寒的冰域展開，絕對的低溫有助於保持頭腦清醒和身體健康。</color></size></b>"=<color\=#FFFC40>Cooldown after use: 1 turn</color> \nIncreases the party's MAX HP by <color\=#FFFC40>$1</color> up to <color\=#FFFC40>$2 HP</color>, heals the party <color\=#FFFC40>$3</color> of Kano Shun's MAX HP, and increases the likelihood of being attacked. The effect lasts for 2 turns.\n
+
+// Skill 4: Combat Skills
+r:"『ONE MORE』：對1名敵人造成冰凍屬性傷害。\n『HIGHLIGHT』：使所有同伴的最大生命值提升，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d%)</color>（最多計入<color\=#FFFC40>(\d+)</color>點最大生命值）。回復所有同伴生命值，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d%)</color>。同時對1名敵人造成<color\=#FFFC40>(\d+\.\d%)</color>最大生命值的冰凍屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成6次射擊屬性傷害，子彈可能會發生偏移。對同一目標造成傷害會衰減。"=ONE MORE: Ice Elemental DMG on 1 target.\nHIGHLIGHT: Increases the party's MAX HP by <color\=#FFFC40>$1</color> of SOY's MAX HP up to <color\=#FFFC40>$2</color>, heals the party <color\=#FFFC40>$3</color> of SOY's MAX HP, then deals <color\=#FFFC40>$4</color> MAX HP Ice Elemental DMG to 1 target.\n\nLeveling up Combat Skills also improves Melee Attack and Gun Attack DMG.
+
+// Soy's Combat Skills Upgrade
+HIGHLIGHT：計入生命值上限=HIGHLIGHT: MAX HP Cap
+HIGHLIGHT：生命值回復倍率=HIGHLIGHT: HP% Heal
+
+// Potential Passives //
+
+// Wild
+r:"槍械子彈數量提升<color\=#FFFC40>(\d+)</color>，並且槍械射擊每發子彈有<color\=#FFFC40>(\d+\.\d%)</color>固定機率附帶自身<color\=#FFFC40>(\d+%)</color>最大生命值傷害且使敵人防禦降低<color\=#FFFC40>(\d+%)</color>，效果持續3回合。槍械傷害對同一目標有衰減。"=Gun Ammo: 24+<color\=#FFFC40>$1</color>\nEach shot has a fixed <color\=#FFFC40>$2</color> chance to deal extra <color\=#FFFC40>$3</color> MAX HP DMG and inflicts a <color\=#FFFC40>$4</color> DEF Down Debuff. The effect lasts for 3 turns, and the Gun DMG is reduced for the same target.
+
+// Courage (It seems this skill can't be translated)
+//r:"釋放『零度治癒』技能後每次受到攻擊，有<color\=#FFFC40>(\d+\.\d%)</color>固定機率觸發<link\="s|151\"><u>『荒野救星』</u></link>的回復效果，效果持續2回合。"=Whenever SOY is attacked after releasing "Zero Healing" skill, he will have<color\=#FFFC40>$1</color>Fixed chance of triggering Wild Savior's unique buff for 2 turns instead of 1.
+
+// Awareness //
+
+// Awareness 0
+勇敢者的遊戲=Hero's Game
+加納駿受到敵方攻擊的機率提高，受到攻擊後會獲得『荒野救星』。\n加納駿的回合結束時，會消耗『荒野救星』並回復自身已損生命值的30%。=When attacked, gain a "Wild Savior" unique buff. This buff heals Soy for 30% HP at the end of his turn.
+
+// Awareness 1
+下戰書=Declaration of War
+加納駿處於<link\="s|151"><u>『荒野救星』</u></link>狀態時，受到傷害降低8%。=When SOY's <link\="s|151"><u>"Wild Savior"</u></link> is active, he receives 8% less DMG from enemies.
+
+// Awareness 2
+危險對峙=Dangerous Showdown
+『冰山撼動』、『先鋒突擊』的技能等級提升2級，至多提升至15級。=Increase the skill level of "Iceberg Shake" and "Vanguard Assault" by 2 levels, up to a maximum of 15 levels.
+
+// Awareness 3
+熱血的硝煙=Piping-Hot Smoke
+加納駿的生命值低於50%時，受到的治療效果提升25%。=When SOY's HP is less than 50%, he will receive 25% more healing.
+
+// Awareness 4
+一決勝負=The Winner is Determined
+『零度治癒』、『戰鬥技巧』的技能等級提升2級，至多提升至15級。=Increase the skill level of "Zero Healing" and "Combat Skill" by 2 levels, up to a maximum of 15 levels.
+
+// Awareness 5
+暴力處決=Violent Execution
+HIGHLIGHT效果提升：使所有同伴受到傷害降低16%，效果持續2回合。=HIGHLIGHT Effect Boost: Reduces damage taken by all companions by 16%. The effect lasts for 2 turns.
+
+// Awareness 6
+勝利者榮光=Winner's Glory
+加納駿處於<link\="s|151"><u>『荒野救星』</u></link>狀態下攻擊敵人時，會額外附帶基於加納駿最大生命值10%的傷害並回復等量生命值。=While Soy's <link\="s|151"><u>"Wild Savior"</u></link> is active, deal an extra 10% of Soy's MAX HP as damage and restore that same amount of HP.
+
+// In-Battle Quotes
+<color\=#FF0000>全體怪盜</color>生命值上限提高……=MAX HP increased for the <color\=#FF0000>entire party</color>!
+
+/////////////////////////////////
+/// d. MONT - Montagne Kotone ///
+/////////////////////////////////
+
+// Passive
+// Skill 1: 
+// Skill 2: 
+// Skill 3: 
+// Skill 4: Combat Skills
+// Potential Passives
+
+// Awareness 0
+// Awareness 1
+// Awareness 2
+// Awareness 3
+// Awareness 4
+// Awareness 5
+// Awareness 6
+
+/////////////////////////////////
+///// e. JOKER - Amamiya Ren ////
+/////////////////////////////////
+
+// Passive
+// Skill 1: 
+// Skill 2: 
+// Skill 3: 
+// Skill 4: Combat Skills
+// Potential Passives
+
+// Awareness 0
+// Awareness 1
+// Awareness 2
+// Awareness 3
+// Awareness 4
+// Awareness 5
+// Awareness 6
+
+--------------------------------------------------
+------ VII. WONDER's Persona Skill Details -------
+--------------------------------------------------
+
+--- Combat Skills ---
+
+//ST ONE MORE, ST HIGHLIGHT
+sr:"『ONE MORE』：對1名敵人造成(.*)屬性傷害。\n『HIGHLIGHT』：對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。"=ONE MORE: Deals $1 damage to <color\=#FFFF00>1</color> enemy. HIGHLIGHT: Deals <color\=#FFFC40>$2</color> ATK $3 damage to <color\=#FFFF00>1</color> enemy.
+
+//ST ONE MORE, AoE HIGHLIGHT
+sr:"『ONE MORE』：對1名敵人造成(.*)屬性傷害。\n『HIGHLIGHT』：對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。"=ONE MORE: Deals $1 damage to <color\=#FFFF00>1</color> enemy. HIGHLIGHT: Deals <color\=#FFFC40>$2</color> ATK $3 damage to <color\=#FFFF00>all</color> enemies.
+
+//ST ONE MORE, AoE with increased damage taken HIGHLIGHT
+sr:"『ONE MORE』：對1名敵人造成(.*)屬性傷害。\n『HIGHLIGHT』：對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，並使其受到的傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。"=ONE MORE: Deals $1 damage to <color\=#FFFF00>1</color> enemy. HIGHLIGHT: Deals <color\=#FFFC40>$2</color> ATK $3 damage to <color\=#FFFF00>all</color> enemies and increase their damage taken by <color\=#FFFC40>$4</color> for 2 turns.
+
+//ST ONE MORE, Increase damage dealt by allies HIGHLIGHT
+sr:"『ONE MORE』：對1名敵人造成(.*)屬性傷害。\n『HIGHLIGHT』：使所有同伴造成的傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續2回合。"=ONE MORE: Deals $1 damage to <color\=#FFFF00>1</color> enemy. HIGHLIGHT: Increase damage dealt by all allies by <color\=#FFFF00>$2</color> for 2 turns.
+
+//ST ONE MORE, AoE Restore HIGHLIGHT
+sr:"『ONE MORE』：對1名敵人造成(.*)屬性傷害。\n『HIGHLIGHT』：使所有同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(.*)</color>的生命值。"=ONE MORE: Deals $1 damage to <color\=#FFFF00>1</color> enemy. HIGHLIGHT: Restore HP equal to <color\=#fffc40>$2</color> ATK + <color\=#fffc40>$3</color> to all allies.
+
+//ST ONE MORE, AoE Shield HIGHLIGHT
+sr:"『ONE MORE』：對1名敵人造成(.*)屬性傷害。\n『HIGHLIGHT』：使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(.*)</color>的護盾，效果持續2回合。"=ONE MORE: Deals $1 damage to <color\=#FFFF00>1</color> enemy. HIGHLIGHT: Generate a shield equal to <color\=#fffc40>$2</color> ATK + <color\=#fffc40>$3</color> to all allies.
+
+--- Normal Generalized Skills ---
+
+//ST
+sr:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>1</color> enemy.
+
+//ST Multi-Hit Constant
+sr:"對<color\=#FFFF00>1名</color>敵人造成(\d+)次(\d+\.\d+%)攻擊力的(.*)屬性傷害。"=Deals <color\=#FFFF00>$2</color> ATK $3 damage to <color\=#FFFF00>1</color> enemy $1x.
+
+//ST Multi-Hit Random
+sr:"對<color\=#FFFF00>1名</color>敵人造成(\d+\~\d+)次(\d+\.\d+%)攻擊力的(.*)屬性傷害。"=Deals <color\=#FFFF00>$2</color> ATK $3 damage to <color\=#FFFF00>1</color> enemy $1x.
+
+//ST + Ailment
+sr:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的(.*)屬性傷害，(\d+\.\d+%)基礎機率機率使敵人(.*)。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>1</color> enemy and has a <color\=#FFFF00>$3</color> chance of inflicting $4 for 2 turns.
+
+//AoE
+sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies.
+
+//AoE Multi-Hit Random
+sr:"對所有敵人造成(\d+\~\d+)次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。"=Deals <color\=#FFFF00>$2</color> ATK $3 damage to <color\=#FFFF00>all</color> enemies $1x.
+
+//AoE + Ailment (2 turns)
+sr:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的(.*)屬性傷害，(\d+\.\d+%)基礎機率機率使敵人(.*)。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$3</color> chance of inflicting $4 for 2 turns.
+
+//AoE + Ailment (3 turns)
+sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，效果持續3回合。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$3</color> chance of inflicting $4 for 3 turns.
+
+//AoE + Reduce DEF
+sr:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的(.*)屬性傷害，並降低敵人(\d+\.\d+%)防禦力，效果持續2回合。"=Deals <color\=#FFFC40>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and reduce their DEF by <color\=#FFFC40>$3</color> for 2 turns.
+
+//AoE + Ailment on main target
+sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，並有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使主目標敵人陷入(.*)狀態，效果持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$3</color> chance of inflicting $4 to the main target for 2 turns.
+
+//AoE + Guaranteed Ailment on main target
+sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有100%的固定機率使技能主目標陷入(.*)狀態。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a 100% fixed chance of inflicting $3 to the main target for 2 turns.
+
+//Ailment Boost
+sr:"造成(.*)效果時，效果命中提升(\d+\.\d+%)。"=Increase chance of inflicting $1 by $2.
+
+//Ailment Resist
+sr:"受到(.*)效果時，效果抵抗提升(\d+\.\d+%)。"=Increase resistance to $1 by $2.
+
+//ST Ailment
+sr:"有(\d+\.\d+%)基礎機率使<color\=#FFFF00>1名</color>敵人在2回合間陷入(.*)"=<color\=#FFFF00>$1</color> chance of inflicting $2 to <color\=#FFFF00>1</color> enemy for 2 turns.
+
+//AoE Ailment敵人在2回合間陷入(.*)
+sr:"有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使所有敵人陷入(.*)，效果持續2回合。"=<color\=#FFFF00>$1</color> chance of inflicting $2 to <color\=#FFFF00>all</color> enemies for 2 turns.
+
+//Damage Resist
+sr:"受到的(.*)屬性傷害降低(\d+\.\d+%)。"=Reduce damage from $1 attacks by $2.
+
+--- Physical ---
+
+//Lucky Punch
+r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的物理屬性傷害，暴擊率提升20%，命中率下降20%"=Deals <color\=#FFFF00>$1</color> ATK Physical damage to <color\=#FFFF00>1</color> enemy with a 20% increase in Crit Rate, and 20% decrease in Hit Rate.
+
+//Mind Slice because it has a comma at the end instead of a period???
+sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，效果持續2回合，"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$3</color> chance of inflicting $4 for 2 turns.
+
+//Memory Blow
+sr:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的(.*)屬性傷害，有(\d+\.\d+%)基礎機率使其陷入(.*)狀態，持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$3</color> chance of inflicting $4 for 2 turns.
+
+--- Gun ---
+
+//One-Shot Kill
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊點射擊屬性傷害，暴擊率提升(\d*\.?\d+%)。"=Deals <color\=#FFFF00>$1</color> ATK Gun damage to <color\=#FFFF00>1</color> enemy with a $2 increase in CRIT Rate.
+
+// Snap
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，暴擊率提升(\d*\.?\d+%)。"=Deals <color\=#FFFF00>$1</color> ATK Gun damage to <color\=#FFFF00>1</color> enemy with a $2 decrease in Hit Rate.
+
+//Triple Down
+r:"對<color\=#FFFF00>所有</color>敵人造成3次(\d+\.\d+%)攻擊力的射擊屬性傷害，暴擊率提升(\d*\.?\d+%)，命中率降低(\d*\.?\d+%)."=Deals <color\=#FFFF00>$1</color> ATK Gun damage to <color\=#FFFF00>all</color> enemies with a $2 increase in CRIT Rate and $3 decrease in Hit Rate 3x.
+
+//Seth's Funny Move
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，若造成了暴擊，則額外造成1點倒地值傷害。"=
+
+--- Fire ---
+
+//Fire Festival
+r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的火焰屬性傷害，(\d+\.\d+%)基礎機率使敵人燃燒，持續2回合，若場上沒有敵人處於燃燒狀態則命中機率翻倍。"=<size\=21>Deals <color\=#FFFF00>$1</color> ATK Fire damage to <color\=#FFFF00>1</color> enemy and has a <color\=#FFFF00>$2</color> chance of inflicting <link\=s|102><u>Burn</u></link> for 2 turns. If there are no enemies inflicted by <link\=s|102><u>Burn</u></link>, then the chance of inflicting is doubled. </size>
+
+//Hell's Stolen Flame
+r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的火焰屬性傷害，若其處於燃燒狀態，則造成(\d+\.\d+%)攻擊力的額外傷害，並重置其燃燒效果的持續時間。"=<size\=22>Deals <color\=#FFFF00>$1</color> ATK Fire damage to <color\=#FFFF00>1</color> enemy. If the enemy is inflicted with Burn, deals an additional <color\=#FFFF00>$1</color> ATK Fire damage and reset the duration of Burn.</size>
+
+--- Ice ---
+
+--- Electric ---
+
+//Electric Current
+r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，(\d+\.\d+%)基礎機率使敵人觸電，持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK Electric damage to <color\=#FFFF00>1</color> enemy and has a <color\=#FFFF00>$2</color> chance of inflicting <link\=s|104><u>Shock</u></link> for 2 turns.
+
+//some thor move or smth
+r:"對隨機敵人造成3段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，對同一目標的後續攻擊僅造成15%傷害。『雷神威勢』為滿層時，額外使所有同伴造成的電擊屬性傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續1回合。"=<size\=27>Deals <color\=#FFFF00>$1</color> ATK Electric damage to <color\=#FFFF00>1</color> random enemy 3x.\nSubsequent attacks on the same enemy deal only 15% of the original damage.\nWhen 'Thunder God's Might' is at maximum, increase Electric damage dealt by all allies by <color\=#FFFF00>$2</color> for 1 turn.</size>
+
+--- Wind ---
+
+//Goddamnit Magarula why are you worded differently???
+sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$3</color> chance of inflicting $4 for 2 turns.
+
+--- Psy ---
+
+//ST
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人傷害提升(\d+%)。"=Deals <color\=#FFFF00>$1</color> ATK Psi damage to <color\=#FFFF00>1</color> enemy. Increase damage dealt by $2 if enemy is inflicted by any Mental Ailment.
+
+//AoE
+r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，對精神異常的敵人傷害提升(\d+%)。"=Deals <color\=#FFFF00>$1</color> ATK Psi damage to <color\=#FFFF00>all</color> enemies. Increase damage dealt by $2 to each enemy inflicted by any Mental Ailment.
+
+--- Nuke ---
+
+//Basic Nuke ST
+r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，對元素異常的敵人傷害提升(.*)。"=Deals <color\=#FFFF00>$1</color> ATK Nuclear damage to <color\=#FFFF00>1</color> enemy. Increase damage dealt by $2 if enemy is inflicted by any Elemental Ailment.
+
+//Basic Nuke AoE
+r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，對元素異常的敵人傷害提升(.*)。"=Deals <color\=#FFFF00>$1</color> ATK Nuclear damage to <color\=#FFFF00>all</color> enemies. Increase damage dealt by $2 to each enemy inflicted by any Elemental Ailment.
+
+--- Bless ---
+
+//ST Bless with varying stacks
+r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，機率賦予自身(\d+\~\d+)個祝福效果"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>1</color> enemy and gains $2 stack(s) of Blessed.
+
+//ST Bless with constant stacks
+r:"對<color\=#FFFF00>1名</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>1</color> enemy and gains $2 stack(s) of Blessed.
+
+//AoE Bless with varying stacks
+r:"對<color\=#FFFF00>所有</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+\~\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>all</color> enemies and gains $2 stack(s) of Blessed.
+
+//ST Bless Instakill
+r:"對<color\=#FFFF00>1名</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，對50%生命值以下的敵人附加低機率祝福屬性即死效果，生命值越低機率越高。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>1</color> enemy with a chance of Instant Death to enemies under 50% HP. The lower the HP, the higher the chance.
+
+//AoE Bless Instakill
+r:"對<color\=#FFFF00>所有</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，對50%生命值以下的敵人附加低機率祝福屬性即死效果，生命值越低機率越高。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>all</color> enemies with a chance of Instant Death to enemies under 50% HP. The lower the HP, the higher the chance.
+
+--- Curse ---
+
+// Single Target Basic Curses (2 types exist to consider either flat rate of curse stacks, or chance between 2 values)
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得(\d+\~\d+)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>1</color> enemy and inflicts $2 stack(s) of <link\=s|112><u>Cursed</u></link>.
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得(.*)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>1</color> enemy and inflicts $2 stack(s) of Cursed.
+
+// AoE Basic Curses
+r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，有機率使敵人獲得(\d+\~\d+)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and inflicts $2 stack(s) of <link\=s|112><u>Cursed</u></link>.
+r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得(.*)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and inflicts $2 stack(s) of <link\=s|112><u>Cursed</u></link>.
+
+//Brand of Malice (p5x decided to use - instead of ~ for this one so using some stupid methods to make things consistent...
+r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，並使其獲得(\d+)(.*)(\d+)個詛咒效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and inflicts $2~$4 stack(s) of <link\=s|112><u>Cursed</u></link>.
+
+// Maeiga because it's worded very slightly differently for some reason???
+r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，中機率賦予敵人(\d+)個詛咒效果"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and inflicts $2 stack(s) of <link\=s|112><u>Cursed</u></link>.
+
+r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，有機率使敵人獲得(\d+)個<link\="s\|112"><u>詛咒</u></link>效果。"=
+
+// Single Target Basic Insta-kills
+r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，對低生命敵人機率造成即死效果"=<size\=24>Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>1</color> enemy with a chance of Instant Death to enemies under 50% HP. The lower the HP, the higher the chance.</size>
+
+// AoE Curse Instakill
+r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，對低生命敵人機率造成即死效果"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies with a chance of Instant Death to enemies under 50% HP. The lower the HP, the higher the chance.
+
+//???
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得1層『地獄火』，並使其身上的所有『地獄火』立刻結算一次，該次結算傷害提升200%。"=
+
+//"Die For Me!"
+r:"使所有敵人受到的詛咒屬性傷害提升<color\=#fffc40>(\d+\.\d+%)</color>\+每有30%效果命中額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)，效果持續2回合。敵人生命值低於50%時，高機率附加即死效果。"=Increase Curse damage received by <color\=#FFFF00>all</color> enemies by <color\=#FFFF00>$1</color> + <color\=#FFFF00>$2</color> for every 30% Effect Hit Rate Wonder has to a maximum of <color\=#FFFF00>$3</color> for 2 turns.\nChance of Instant Death to enemies under 50% HP. The lower the HP, the higher the chance.
+
+--- Almighty ---
+
+// AoE Almighty
+r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的萬能屬性傷害，無視其防禦力。"=Deals <color\=#fffc40>$1</color> ATK Almighty damage to <color\=#fffc40>all</color> enemies, ignoring DEF.
+
+//ST Almighty
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的萬能屬性傷害，無視其防禦力。"=Deals <color\=#fffc40>$1</color> ATK Almighty damage to <color\=#fffc40>1</color> enemy, ignoring DEF.
+
+//Spirit Drain
+r:"吸收1名敵人<color\=#fffc40>(.*)</color>點精力值。"=Drains <color\=#fffc40>$1</color> SP from 1 enemy.
+
+//Life Drain
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的萬能屬性傷害，無視其防禦力，並使自身恢復<color\=#fffc40>37.3%</color>攻擊力的生命值。"=Deals <color\=#fffc40>$1</color> ATK Almighty damage to <color\=#fffc40>1</color> enemy, ignoring DEF\nRestore HP equal to <color\=#fffc40>$1</color> ATK.
+
+
+--- Recovery ---
+
+// ST Heal
+r:"^使<color\=#FFFF00>1名</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值。+$"=Restore HP equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to 1 ally.
+
+// AoE Heal
+r:"^使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值。+$"=Restore HP equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to all allies.
+
+// Lotus
+r:"使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，並使自身獲得2層『蓮華』，『蓮華』存在期間，任意單位行動後，若有同伴生命值低於50%，則消耗一層『蓮華』，使其恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，『蓮華』持續1回合。"=<size\=30>Restore HP equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to 1 ally and gain 2 stacks of Lotus Juice for 1 turn. If an ally is below 50% Max HP after their turn while Lotus Juice is present, consume one stack and recover that ally's HP equal to <color\=#fffc40>$3</color> ATK + <color\=#fffc40>$4</color></size>.
+
+//Titania idk
+r:"使所有同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，對生命值低於50%的同伴造成的治療效果提升25%。並使所有同伴回復(\d+)點精力值。"=Restore HP equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to all allies.\nIncrease healing effect by 25% on allies under 50% HP.\nRestore $3 SP to all allies.
+
+// Patra
+r:"^驅散1名同伴的<link\="s\|107"><u>暈眩</u></link>、<link\="s\|109"><u>睡眠</u></link>、<link\="s\|108"><u>遺忘</u></link>效果。$"=Cures <link\=s|107><u>Dizzy</u></link>/<link\=s|109><u>Sleep</u></link>/<link\=s|108><u>Forget</u></link> for 1 ally.
+
+//Energy Drop
+r:"^驅散1名同伴的<link\="s\|156"><u>混亂</u></link>、<link\="s\|157"><u>恐懼</u></link>、<link\="s\|155"><u>絕望</u></link>、<link\="s\|110"><u>狂怒</u></link>、<link\="s\|158"><u>洗腦</u></link>效果。$"=Cures <link\=s|156><u>Confuse</u></link>/<link\=s|157><u>Fear</u></link>/<link\=s|155><u>Despair</u></link>/<link\=s|110><u>Rage</u></link>/<link\=s|158><u>Brainwash</u></link> for 1 ally.
+
+//Baisudi
+r:"^驅散1名同伴的<link\="s\|102"><u>燃燒</u></link>、<link\="s\|103"><u>凍結</u></link>、<link\="s\|104"><u>觸電</u></link>、<link\="s\|105"><u>風襲</u></link>效果。$"=Cures <link\=s|102><u>Burn</u></link>/<link\=s|103><u>Freeze</u></link>/<link\=s|104><u>Shock</u></link>/<link\=s|105><u>Winded</u></link> for 1 ally.
+
+//
+r:"使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(.*)的生命值，並驅散1個元素異常效果。"=Restore HP equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to all allies and cure 1 <link\=s|101><u>Elemental Ailment</u></link>.
+
+//
+r:"使<color\=#FFFF00>1名</color>同伴恢復(\d+\.\d+%)攻擊力\+(.*)的生命值。並驅散1個元素異常效果。"=Restore HP equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to 1 ally and cure 1 <link\=s|101><u>Elemental Ailment</u></link>.
+
+//
+r:"使<color\=#FFFF00>1名</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值。並驅散其身上1個隨機減益效果，驅散成功後，使其額外恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值。"=<size\=23>Restore HP equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to 1 ally and cure 1 <link\=s|101><u>Elemental Ailment</u></link>. If an <link\=s|101><u>Elemental Ailment</u></link> was cured, restore additional HP equal to <color\=#fffc40>$3</color> ATK + <color\=#fffc40>$4</color>.</size>
+
+--- Buffs ---
+
+// Tarukaja
+r:"使<color\=#FFFF00>1名</color>同伴的攻擊力提升(\d+\.\d+%)，自身每500點攻擊力額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續3回合。"=Increase 1 ally's ATK by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 500 ATK Wonder has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
+
+// Matarukaja
+r:"使<color\=#FFFF00>所有</color>同伴的攻擊力提升(\d+\.\d+%)，自身每500點攻擊力額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續3回合。"=Increase all allies ATK by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 500 ATK Wonder has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
+
+//Rakukaja
+r:"使1名同伴的防禦力提升<color\=#fffc40>(\d+\.\d+%)</color>，自身每500防禦力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限<color\=#fffc40>(\d+\.\d+%)</color>。效果持續3回合。"=Increase 1 ally's DEF by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 500 DEF Wonder has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
+
+// Marakukaja
+r:"使<color\=#FFFF00>所有</color>同伴的防禦力提升(\d+\.\d+%)，自身每500點防禦力額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續3回合。"=Increase all allies DEF by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 500 DEF Wonder has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
+
+// Sukukaja
+r:"使1名同伴的效果命中、效果抵抗提升<color\=#fffc40>(\d+\.\d+%)</color>，自身每25%效果命中額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限<color\=#fffc40>(\d+\.\d+%)</color>。效果持續3回合。"=Increase 1 ally's Effect Hit Rate and Effect RES by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 25% Effect Hit Rate Wonder has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
+
+// Masukukaja
+r:"使所有同伴的效果命中、效果抵抗提升<color\=#fffc40>(\d+\.\d+%)</color>，自身每25%效果命中額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限<color\=#fffc40>(\d+\.\d+%)</color>。效果持續3回合。"=Increase all allies Effect Hit Rate and Effect RES by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 25% Effect Hit Rate Wonder has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
+
+//Rebellion
+r:"使1名同伴的暴擊率提升<color\=#fffc40>(\d+\.\d+%)</color>，自身每10%暴擊率額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限<color\=#fffc40>(\d+\.\d+%)</color>。效果持續3回合。"=Increase 1 ally's CRIT Rate by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 10% CRIT Rate Wonder has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
+
+//Revolution
+r:"使所有同伴的暴擊率提升<color\=#fffc40>(\d+\.\d+%)</color>，自身每10%暴擊率額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+\.\d+%)。效果持續3回合。"=Increase all allies CRIT Rate by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 10% CRIT Rate Wonder has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
+
+// Hunter's Code
+r:"使<color\=#FFFF00>1名</color>同伴造成的傷害提升(\d+\.\d+%)，並根據目標同伴的效果命中額外提升效果。每20%提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續2回合。"=Increase 1 ally's damage dealt by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 20% Effect Hit Rate the ally has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
+
+//Concentrate
+r:"使自身下1次造成的魔法屬性傷害提升<color\=#fffc40>(\d+\.\d+%)</color> ，效果持續1回合。"=Increase Wonder's next Magic attack damage by <color\=#fffc40>$1</color> for 1 turn.
+
+//(dominion)
+r:"使所有同伴的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每500攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)，效果持續2回合。並使技能主目標造成的傷害額外提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每500攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)。效果持續1回合。"=Increase all allies ATK by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 500 ATK Wonder has to a maximum of <color\=#fffc40>$3</color> for 3 turns. Increase ATK of the main target by an additional <color\=#fffc40>$4</color> + <color\=#fffc40>$5</color> for every 500 ATK Wonder has to a maximum of <color\=#fffc40>$6</color> for 1 turn.
+
+//norn
+r:"使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的護盾，效果持續2回合。護盾受到傷害時，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使傷害來源陷入<link\="s\|105"><u>風襲</u></link>狀態。"=Generate a shield equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to all allies for 2 turns. Allies under the shield have a <color\=#fffc40>$3</color> chance to inflict <link\=s|105><u>Winded</u></link> on enemies who attack them.
+
+--- Debuffs ---
+
+//Rakunda
+使<color\=#FFFF00>1名</color>敵人的防禦力降低34.9%，持續3回合。
+r:"使<color\=#FFFF00>1名</color>敵人的防禦力降低(\d+\.\d+%)，持續3回合。"=Decrease DEF of 1 enemy by <color\=#fffc40>$1</color> for 3 turns.
+
+// Marakunda
+r:"使<color\=#FFFF00>所有</color>敵人的防禦力降低(\d+\.\d+%)，持續3回合。"=Decrease DEF of all enemies by <color\=#fffc40>$1</color> for 3 turns.
+
+//Tarunda
+r:"使<color\=#FFFF00>1名</color>敵人的攻擊力降低(\d+\.\d+%)，持續3回合。"=Decrease ATK of 1 enemy by <color\=#fffc40>$1</color> for 3 turns.
+
+// Matarunda
+r:"使<color\=#FFFF00>所有</color>敵人的攻擊力降低(\d+\.\d+%)，持續3回合。"=Decrease ATK of all enemies by <color\=#fffc40>$1</color> for 3 turns.
+
+// Debilitate
+r:"使<color\=#FFFF00>1名</color>敵方攻擊、防禦、效果命中、效果抵抗降低(\d+\.\d+%)，效果持續3回合。"=Decrease ATK, DEF, Effect Hit Rate, and Effect RES of 1 enemy by <color\=#fffc40>$1</color> for 3 turns.
+
+--- Dispel ---
+驅散<color\=#FFFF00>所有</color>同伴的1個屬性降低效果。=Negate 1 stat reducing effect for all allies.
+驅散<color\=#FFFF00>所有</color>敵人的1個屬性提升效果。=Negate 1 stat increasing effect for all enemies.
+
+--- Passives ---
+
+// Skill buffs
+r:"物理屬性傷害提升(\d+\.\d+%)。"=Strengthen Physical attacks by $1.
+r:"火焰屬性傷害提升(\d+\.\d+%)。"=Strengthen Fire attacks by $1.
+r:"冰凍屬性傷害提升(\d+\.\d+%)。"=Strengthen Ice attacks by $1.
+r:"電擊屬性傷害提升(\d+\.\d+%)。"=Strengthen Electric attacks by $1.
+r:"疾風屬性傷害提升(\d+\.\d+%)。"=Strengthen Wind attacks by $1.
+r:"念動屬性傷害提升(\d+\.\d+%)。"=Strengthen Psy attacks by $1.
+r:"詛咒屬性傷害提升(\d+\.\d+%)。"=Strengthen Curse attacks by $1.
+r:"祝福屬性傷害提升(\d+\.\d+%)。"=Strengthen Bless attacks by $1.
+r:"核熱屬性傷害提升(\d+\.\d+%)。"=Strengthen Nuclear attacks by $1.
+r:"槍械傷害提升(\d+\.\d+%)。"=Strengthen Gun attacks by $1.
+r:"萬能屬性傷害提升(\d+\.\d+%)。"=Strengthen Almighty attacks by $1.
+r:"造成治療效果提升(\d+\.\d+%)。"=Effects of healing magic are increased by $1.
+r:"受到的治療效果提升(\d+\.\d+%)。"=Increase effects of healing magic received by $1.
+r:"槍械攻擊暴擊率提升(\d+\.\d+%)。"=Increase CRIT Rate of Gun attacks by $1.
+r:"即死技能成功率上升(\d+\.\d+%)。"=Increase chance of Instant Death with skills by $1.
+r:"護盾效果提升(\d+\.\d+%)。"=Increase Shield Effect by $1.
+
+//Stat buffs
+r:"戰鬥開始時攻擊力提升(\d+\.\d+%)，持續2回合。"=Increase ATK by $1 at the start of battle for 2 turns.
+r:"戰鬥開始時全員攻擊力提升(\d+\.\d+%)，持續2回合。"=Increase ATK for all allies by $1 at the start of battle for 2 turns.
+r:"戰鬥開始時全員防禦力提升(\d+\.\d+%)，持續2回合。"=Increase DEF for all allies by $1 at the start of battle for 2 turns.
+r:"戰鬥開始時防禦力提升(\d+\.\d+%)，持續2回合。"=Increase DEF by $1 at the start of battle for 2 turns.
+r:"^攻擊力提升(\d+\.\d+%)。+$"=Increase ATK by $1.
+r:"^生命值提升(\d*\.?\d+%)。+$"=Increase Max HP by $1.
+r:"^速度提升(\d*\.?\d+%)點。+$"=Increase SPD by $1.
+r:"^防禦力提升(\d*\.?\d+%)。+$"=Increase DEF by $1.
+r:"^暴擊率提升(\d*\.?\d+%)。$"=Increase CRIT Rate by $1.
+r:"精力回復效率提升(\d+\.\d+%)。"=Increase SP Recovery by $1.
+r:"速度降低(.*)點，生命值提升(.*)。"=Reduce SPD by $1 and increase Max HP by $2.
+r:"速度提升(.*)點，防禦力降低(.*)。"=Increase SPD by $1 and decrease DEF by $2.
+r:"^暴擊效果提升(\d*\.?\d+%)。+$"=Increase CRIT damage by $1.
+r:"^效果命中提升(\d*\.?\d+%)。+$"=Increase Hit Rate by $1.
+r:"^造成的傷害提升(\d*\.?\d+%)。$"=Increase damage dealt by $1.
+r:"^效果抵抗提升(\d*\.?\d+%)。+$"=Increase Effect RES by $1.
+r:"被包圍時暴擊率提升(\d*\.?\d+%)。"=Increase CRIT Rate by $1 when surrounded.
+r:"先制攻擊時暴擊率提升(\d*\.?\d+%)。"=Increase CRIT Rate by $1 during an ambush.
+
+//Resists
+r:"^受到的傷害降低(\d+\.\d+%)。$"=Reduce damage from attacks by $1.
+r:"受到的暴擊率降低(\d*\.?\d+%)。"=Reduce chance of receiving CRIT hits by $1.
+
+//Status Inflict Buffs
+r:"下雨時，造成異常效果時，效果命中提升(\d*\.?\d+%)。"=Increase inflicting rate of all status effects during rainy days by $1.
+
+//Other
+r:"技能消耗的HP降低(\d+\.\d+%)。"=Reduce HP consumption of skills by $1.
+r:"技能消耗的SP降低(\d+\.\d+%)。"=Reduce SP consumption of skills by $1.
+r:"每回合開始時，回復(\d+\.\d+%)最大生命值。"=Restore $1 of Max HP at the start of each turn.
+r:"先制攻擊時回復(\d+\.\d+%)最大生命值和(.*)點精力值。"=Restore $1 of Max HP and $2 SP at the start of each preemptive turn.
+r:"戰鬥勝利後回復(\d+\.\d+%)最大生命值和精力值。"=Restore $1 of Max HP and SP after winning a battle.
+r:"下雨時受到的傷害降低(\d+\.\d+%)。"=Reduce damage from attacks during rainy days by $1.
+r:"物理攻擊(\d+%)機率反射，造成(\d+%)攻擊力物理屬性傷害。"=Physical attacks have a $1 chance to reflect, dealing $2 of the attacks damage back as Physical damage.
