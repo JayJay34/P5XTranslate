@@ -357,11 +357,11 @@ BOSS總積分：=Current Score:
 鎖定陣容=<size\=20>Team Lineup</size>
 
 獎勵詳情=Rewards
-
 任意樂園成員首次參與挑戰後活躍值+1=+1 Activity Point from each member when challenging the weekly for the first time.
 r:"樂園累計活躍每達到指定值後可領取對應獎勵，當前：<color\=#eade10>(\d+)</color>"=Total accumulated Activity Points: <color\=#eade10>$1</color>
 r:"個人歷史總積分達到指定值後可領取對應獎勵，當前：<color\=#eade10>(\d+)</color>"=Receive rewards after earning a certain amount of points. Your Personal Best: <color\=#eade10>$1</color>
 已獲得本週全部獎勵=You're all set! Come back next week...\n or aim for more points!
+積分計算規則：\n當前積分\=挑戰積分*難度係數\n同一BOSS多個難度只記錄歷史最高分數=Score Formula:\nChallenge Score * Multiplier\n\nOnly the highest score is saved between runs.
 
 <color\=#8F8D8D>1分鐘前線上</color>=<color\=#8F8D8D>1 Minute</color>
 <color\=#8F8D8D>1小時前線上</color>=<color\=#8F8D8D>1 Hour</color>
@@ -587,10 +587,12 @@ r:"持有印記：(\d+)"=Seal Owned: $1
 
 金絲香=L Incense
 r:"香塔(.*)"=$1 Incense
+鳶尾花醇香=Hi-Class Perfume
 鳶尾花濃香=Fine Perfume
 鳶尾花之香=Perfume
 
-優質礦石=High-quality Ore
+頂尖礦石=Exquisite Ore
+優質礦石=Quality Ore
 粗製礦石=Ore
 人格面具精魄=L Persona Essence
 人格面具精碎=M Persona Essence
@@ -611,10 +613,56 @@ r:"香塔(.*)"=$1 Incense
 未知宿命藍·覺知=2★ Arcana • Awareness
 
 
-////////////////////////////
-/// j. Velvet Challenges ///
-////////////////////////////
--- All score objectives will be translated soon
+///////////////////////////////////////////
+/// j. Velvet Challenges & Sea of Souls ///
+///////////////////////////////////////////
+
+段位狀態：=Status:
+<color\=#FFFFFF>下期保級</color>=At Risk
+<color\=#FFF000>下期晉級</color>=<color\=#FFF000>Promoted!</color>
+6等星=6th Star
+7等星=7th Star
+5等星=5th Star
+4等星=4th Star
+3等星=3rd Star
+2等星=2nd Star
+1等星=1st Star
+r:"(\d)等星(\d)階"=$1-Star Tier $2
+首次晉級至新段位後可獲得=Upon promotion to a new Star rank for the first time, you can earn the following rewards.
+排名獎勵=<size\=36>Ranking</size>
+本期試煉結束後郵件發放，參與一次試煉可獲得=Rewards will be given on the end of this trial.
+僅展示當前段位前999名怪盜團資訊=Shows up to 999 players in the current trial.
+總分數：=Score:
+本期排名：=Top: 
+排名：=Top
+以後=^
+段位獎勵=<size\=28>Rank Awards</size>
+
+晉級條件：=<size\=24>Requirement:</size>
+r:"累計獲得<color\=#FFF000> (\d+) </color>顆星"=<color\=#FFF000>$1 </color>Stars
+剩餘時間：=Time Left:
+r:"(\d+)回合內取得勝利"=Win in $1 action(s)
+
+挑戰獎勵=<size\=36>Rewards</size>
+累計星級=<size\=24>Total Stars</size>
+r:"累計獲得星數（(\d+)\/(\d+)）"=Stars Earned: ($1/$2)
+
+積分係數：=Multiplier:
+成功抵禦次數：=Cycles Limit:
+r:"(\d+)次行動內完成"=Win in $1 action(s)
+當前有保存的進度，是否繼續挑戰？=Do you want to continue the challenge where you left off?
+選擇「清空進度」會清除保存的記錄並重新挑戰。=Select "Clear Progress" to reset the score and then you can make team adjustments.
+
+造成WEAK/總攻擊時獲得分數=Enemy Weakness Attack Score
+火焰/念動屬性隊員攻擊時獲得分數=Fire / Psy Attack Score
+冰凍/核熱屬性隊員攻擊時獲得分數=Ice / Nuclear Attack Score
+電擊/祝福屬性隊員攻擊時獲得分數=Elec / Bless Attack Score
+疾風/詛咒屬性隊員攻擊時獲得分數=Wind / Curse Attack Score
+陣亡人數不超過0人=Have no downed characters
+r:"X(\d+)倍"=x$1
+獎勵=<size\=36>Rewards</size>
+章節獎勵=<size\=36>Rewards</size>
+累計獲得異界晶珀：=<size\=32>Total Gems Earned:</size>
 
 //////////////////////////
 
@@ -622,6 +670,11 @@ r:"香塔(.*)"=$1 Incense
 /// z. Others ///
 /////////////////
 -- UI Menus that only need a tiny amount of change.
+// E-Mail
+P5X營運團隊=P5X Team
+獎勵發放管理員=System
+刪除已讀=<size\=24>Delete Read</size>
+收取全部=<size\=28> Claim All</size>
 
 // Mission Screen
 全部=All
@@ -807,3 +860,17 @@ WONDER使用=WONDER's Dagger
 藤川雪實使用=YUKI's Flail
 須見俊也使用=SEPIA's Cane
 李瑤鈴使用=RIN's Bo Staff
+
+// Special Mechanics
+
+// Sea of Souls
+使用人格面具技能或觸發追加效果時，獲得1層『強化印記』，最多可疊加3層；全體怪盜行動一輪後，獲得『強化印記』層數*15%的傷害加成並移除1層『強化印記』。=<size\=24>When a Persona skill is used, or a Follow-up attack is triggered, you gain 1 layer of the stackable Enhanced Buff. After all party members have acted, gain 15% DMG Bonus per stack and remove 1 layer of Enhanced Buff.</size>
+
+// Raids
+所有敵人對<color\=#fbff37>電擊</color>屬性的適應性變為弱=All enemies become weak to <color\=#fbff37>Electric</color> DMG
+所有怪盜<color\=#FFFC40>追加效果</color>造成的傷害提升50%=All Party Members' <color\=#FFFC40>Follow-up Attacks</color> DMG +50%
+處於<color\=#ff381d>燃燒</color>狀態的敵人受到的傷害提高20%=Enemies afflicted with <color\=#ff381d>Burn</color> +20% DMG Taken
+所有怪盜<color\=#ff0036>詛咒</color>傷害降低20%=All Party Members' <color\=#ff0036>Curse</color> DMG -20%
+<color\=#FFFC40>支配</color>怪盜造成傷害提高20%=<color\=#FFFC40>Domination</color> All Party Members' DMG +20%
+
+
