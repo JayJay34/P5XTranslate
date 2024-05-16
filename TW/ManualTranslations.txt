@@ -5,6 +5,7 @@ r:"^(.)$"=$1
 -------------------------------
 // Description: Settings Translation, important system messages, or whatever can be shown before logging in
 
+r:"更新本地文件\((\d+)\/(\d+)\)"=<b>Applying Update ($1 / $2)</b>
 開始登入=Logging in...
 渲染品質=Rendering Quality
 陰影品質=Shadow Quality
@@ -539,6 +540,7 @@ r:"完成12次「在盧布朗度過」日程 \((\d+)\/(\d+)\)"=Spend time in Leb
 獎勵名稱=Name
 契約類型=Banner Type
 簽約時間=Time of Pull
+r:"剩餘時間：(\d+)時(\d+)分"=<color\=#ff0000>Ends in $1h $2m</color>
 
 r:"當前保底進度(\d+)\/(\d+)"=Current Pull Count: $1 / $2 \n<color\=#FFDF00>50% chance to win the RATE UP 5★</color>
 r:"當前保底進度(\d+)\/(\d+)，下次出5星時必出"=Current Pull Count: $1 / $2 \nNext 5★ is guaranteed RATE UP
@@ -548,8 +550,39 @@ r:"(\d+)\/(\d+)頁"=Page $1 / $2
 角色活動契約=Limited Character Banner
 角色普通契約=Standard Banner
 
+////////////////////////
+/// h. Activities //////
+////////////////////////
+SNS還有沒回復的消息，要直接睡覺嗎？=It's getting late. Do you want to go to sleep now?
+
+去澡堂泡澡=<size\=24>Bathe in\nan Onsen</size>
+去健身房鍛煉=<size\=24>Work out \nat the gym</size>
+去四軒茶屋看電影=<size\=24>Watch a movie\nin Yongen-Jaya</size>
+去澀谷看電影=<size\=24>Watch a movie\nin Shibuya</size>
+去新宿看電影=<size\=24>Watch a movie\nin Shinjuku</size>
+在家裡讀書=<size\=24>Read a book\nat home</size>
+在圖書館讀書=<size\=24>Read a book\nin the Library</size>
+在家裡學習=<size\=24>Study at home</size>
+打掃家裡的衛生=<size\=24>Clean up\nmy house</size>
+在盧布朗度過=<size\=24>Spend time\nin Leblanc</size>
+足球部練習=<size\=24>Train at the\nSoccer Club</size>
+輕音部練習=<size\=24>Perform at the\nMusic Club</size>
+在家裡玩遊戲=<size\=24>Play video games\nat home</size></size>
+去遊戲中心玩遊戲=<size\=24>Play video games\nin the Arcade</size>
+
+去便利商店打工=<size\=24>Work part-time\nat a Convenience Store</size> 
+去可麗餅店打工=<size\=24>Work part-time\nat a Crepe Store</size>
+去牛丼店打工=<size\=24>Work part-time\nat a Donburi Restaurant</size> 
+
+和李瑤鈴一起度過=<size\=24>Hang out with\nLi Yaoling</size> 
+和素羽出去玩吧=<size\=24>Hang out with\nMotoha Arai</size>
+和YUI一起玩吧=<size\=24>Play together\nwith YUI</size> 
+
+讀書進度=<size\=24> Reading\n Progress</size> 
+閱讀消耗：= 
+
 /////////////////////////
-/// h. Metaverse Farm ///
+/// i. Metaverse Farm ///
 /////////////////////////
 
 消耗：= 
@@ -567,7 +600,7 @@ r:"(\d+)\/(\d+)頁"=Page $1 / $2
 r:"持有印記：(\d+)"=Seal Owned: $1
 
 ////////////////////////////////////
-///// i. Resources & Shop Items ////
+///// j. Resources & Shop Items ////
 ////////////////////////////////////
 
 枚異界原晶=Gems
@@ -614,7 +647,7 @@ r:"香塔(.*)"=$1 Incense
 
 
 ///////////////////////////////////////////
-/// j. Velvet Challenges & Sea of Souls ///
+/// k. Velvet Challenges & Sea of Souls ///
 ///////////////////////////////////////////
 
 段位狀態：=Status:
@@ -646,6 +679,7 @@ r:"(\d+)回合內取得勝利"=Win in $1 action(s)
 挑戰獎勵=<size\=36>Rewards</size>
 累計星級=<size\=24>Total Stars</size>
 r:"累計獲得星數（(\d+)\/(\d+)）"=Stars Earned: ($1/$2)
+r:"累計獲得（(\d+)\/(\d+)）分"=Accumulated ($1 / $2) Points
 
 積分係數：=Multiplier:
 成功抵禦次數：=Cycles Limit:
