@@ -192,7 +192,6 @@ r:"領取"=Get
 挑戰倒計時：=Ends in  
 主角等級=Acc Lv.
 未登錄=Not Registered
-面具等級=Sort Lvl
 特色屬性=Element
 意識等級=Awakening
 面具品質=Rarity
@@ -710,6 +709,22 @@ P5X營運團隊=P5X Team
 刪除已讀=<size\=24>Delete Read</size>
 收取全部=<size\=28> Claim All</size>
 
+//Skill Filter
+技能篩選=<size\=33>Skill Filter</size>
+輸入技能名稱搜索…=<size\=18>Enter a skill name to search for...</size>
+/屬性=<size\=24>    /Type</size>
+/定位=<size\=24>    /Effect</size>
+妨害=<size\=20>Boost</size>
+攻擊=<size\=20>Attack</size>
+防禦=<size\=19>Defense</size>
+特殊=<size\=20>Special</size>
+生存=<size\=19>Support</size>
+添加印記可能獲得對應技能=<size\=31>Consuming a Seal will transfer a skill</size>
+隨機獲得1個以下技能=<size\=27>Randomly gain 1 of the following skills:</size>
+sr:"^(.*)無法習得(.*)類型技能。$"=$1 cannot learn $2 type skills.
+面具階級=Class
+面具等級=Level
+
 // Mission Screen
 全部=All
 主要=Main
@@ -735,6 +750,7 @@ P5X營運團隊=P5X Team
 ----- IV. Velvet Room Personas -----
 ------------------------------------
 
+sr:"(.*)印記"=$1 Seal
 埃力格=Berith
 單卡拉比=Decarabia
 密特拉=Mithra
@@ -901,10 +917,26 @@ WONDER使用=WONDER's Dagger
 使用人格面具技能或觸發追加效果時，獲得1層『強化印記』，最多可疊加3層；全體怪盜行動一輪後，獲得『強化印記』層數*15%的傷害加成並移除1層『強化印記』。=<size\=24>When a Persona skill is used, or a Follow-up attack is triggered, you gain 1 layer of the stackable Enhanced Buff. After all party members have acted, gain 15% DMG Bonus per stack and remove 1 layer of Enhanced Buff.</size>
 
 // Raids
+r:"(\d+)時(\d+)分(\d+)秒"=$1:$2:$3
 所有敵人對<color\=#fbff37>電擊</color>屬性的適應性變為弱=All enemies become weak to <color\=#fbff37>Electric</color> DMG
 所有怪盜<color\=#FFFC40>追加效果</color>造成的傷害提升50%=All Party Members' <color\=#FFFC40>Follow-up Attacks</color> DMG +50%
 處於<color\=#ff381d>燃燒</color>狀態的敵人受到的傷害提高20%=Enemies afflicted with <color\=#ff381d>Burn</color> +20% DMG Taken
 所有怪盜<color\=#ff0036>詛咒</color>傷害降低20%=All Party Members' <color\=#ff0036>Curse</color> DMG -20%
 <color\=#FFFC40>支配</color>怪盜造成傷害提高20%=<color\=#FFFC40>Domination</color> All Party Members' DMG +20%
 
+--- In-Battle Buffs/Debuffs ---
 
+//Popups
+核<color\=#000000>熱</color>弱化=Nu<color\=#000000>k</color>e Weaken
+海<color\=#000000>之</color>守護=G<color\=#000000>ua</color>rdian of the Sea
+生<color\=#000000>命</color>連結=Li<color\=#000000>fe</color> Link
+
+//In-Analyze
+核熱弱化=Nuke Weaken
+免疫精神異常=<size\=23>Mental Ailment Immunity</size>
+免疫即死=<size\=24>Instant Death Immunity</size>
+
+//Descriptions
+sr:"(.*)傷害降低(\d+%)"=Reduce $1 damage dealt by $2.
+免疫精神異常效果=Immune to Mental Ailments.
+免疫即死效果=Immune to Instant Death effects.
