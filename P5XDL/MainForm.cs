@@ -29,8 +29,21 @@ namespace P5XDLForm
 
             var pathString = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\";
             pathString = pathString.Replace("plugins\\", "Translation\\en\\Text\\");
+            var appConf = pathString.Replace("BepInEx\\Translation\\en\\Text\\", "P5X_Data\\");
+            var clientL = File.ReadAllLines(appConf + "app.info").Skip(1).FirstOrDefault();
 
-            var language = config.AppSettings.Settings["Language"].Value;
+            //Set Client Language
+            if (clientL == "p5x") { clientL = "CN"; }
+            else
+            {
+                clientL = clientL.Substring(clientL.IndexOf("_"));
+                clientL = clientL.ToUpper();
+                clientL = clientL.Substring(1, clientL.Length - 1);
+            }
+
+            var language = config.AppSettings.Settings["Language"].Value = clientL;
+            config.Save();
+
             bool includeAutoGen = Boolean.Parse(config.AppSettings.Settings["AutoGen"].Value);
             bool downloadImages = Boolean.Parse(config.AppSettings.Settings["DownloadImages"].Value);
             var latestCommit = config.AppSettings.Settings["LatestCommit"].Value;
