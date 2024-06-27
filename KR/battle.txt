@@ -461,6 +461,27 @@ r:"<color\=#FFFF00>모든</color> 적에게 방어력 (\d+\.\d+%) 축복 속성 
 r:"<color\=#FFFF00>1명</color>의 동료가 방어력 (\d+\.\d+%)\+(\d+)의 실드를 획득하고, 2턴 동안 방어력이 최대 (\d+) 증가한다. 또한 해당 동료와 『맹세』가 생겨나고 동료가 축복 효과를 1중첩 획득한다."=Grants a shield to <color\=#FFFF00>1</color> ally equal to $1 + $2 DEF and increases their DEF by up to $3 for 2 turns. Additionally, grants the ally Oath and one stack of Blessing.
 r:"<color\=#FFFF00>1명</color>의 적에게 방어력 (\d+\.\d+%)의 축복 속성 대미지를 준다. 『에너지 충전』이 2중첩 이상일 시, 해당 스킬은 모든 『에너지 충전』을 소모한다. 1턴 동안 『에너지 충전』을 소모할 때마다 모든 동료의 대미지가 (\d+\.\d+%)\*중첩수만큼 증가하며, 2턴 동안 모든 동료가 방어력 (\d+\.\d+%)의 실드를 획득한다."=Deals $1 DEF Bless damage to <color\=#FFFF00>1</color> enemy. If 2 or more stacks of Energy Charge are present, this skill consumes all Energy Charge and increases the damage of all allies by $2 * the amount of Blessing stacks for an amount of turns equal to the amount of Energy Charge stacks consumed, and increases DEF of all allies by $3 for 2 turns.
 
+++ ----- Vino ----- ++
+시그널 폭탄=Marker Bomb
+융단 폭격=Carpet Bombing
+대지 집중 폭격=Concentrated Fire
+r:"<color\=#FFFF00>1명</color>의 적에게 공격력 (\d+\.\d+%)의 핵열 속성 대미지를 준다. 자신의 효과 명중에 따라 적의 방어력을 감소시키며, 최대 (\d+\.\d+%) 감소한다. 또한 적에게 100%의 기본 확률로 적이 보유하고 있지 않은 임의의 원소 이상 상태를 부여한다."=Deals $1 ATK Nuclear damage to <color\=#FFFF00>1</color> enemy and reduces their DEF by $2 of Vino's Effect Hit Rate. Additionally, Vino has a 100% base chance to inflict a random Elemental Ailment on the enemy that they do not already possess.
+r:"<color\=#FFFF00>모든</color> 적에게 공격력 (\d+\.\d+%)의 핵열 속성 대미지를 주고, 적에게 40%의 기본 확률로 적이 보유하고 있지 않은 원소 이상 상태를 부여한다."=Deals $1 ATK Nuclear damage to <color\=#FFFF00>all</color> enemies. Vino has a 40% base chance to inflict a random Elemental Ailment that the enemies do not already possess.
+r:"<color\=#FFFF00>1명</color>의 적에게 공격력 (\d+\.\d+%)의 핵열 속성 대미지를 준다. 목표가 원소 이상을 1종 보유할 때마다 자신의 효과 명중에 따라 2턴 동안 적이 받는 대미지가 증가하며, 최대 (\d+\.\d+%) 증가한다\(3회 중첩 가능\)."=Deals $1 ATK Nuclear damage to <color\=#FFFF00>1</color> enemy. For every 1 Elemental Ailment on the target, one stack of damage amplification is applied to the target, increasing the damage they recive up to a maximum of $2 for 2 turns (maximum 3 stacks).
+
+
+++ ----- Makoto ----- ++
+펄스 연타=Pulse Combo
+핵열 공진=Nuclear Resonance
+핵열 치명타=Nuclear Burst
+철의 의지=Iron Will
+핵융합 과부하=Fusion Overload
+r:"<color\=#FFFF00>임의의 적</color>에게 공격력 (\d+\.\d+%)의 핵열 속성 대미지를 5회 주고, 동일 목표에게 여러 회 피해를 줄 경우 <color\=#FFFC40>(\d+%)</color>의 피해만 준다. 메인 목표가 원소 이상 상태일 경우 공격력 (\d+\.\d+%)의 핵열 속성 대미지를 추가로 1회 준다. 100%의 기본 확률로 메인 목표를 <link\=\"s|179"><u>\『방사선\』</u></link> 상태에 빠뜨린다."=Deals 5x $1 Nuclear damage to <color\=#FFFF00>random</color> enemies, with consecutive hits on the same target reducing damage dealt by <color\=#FFFC40>$2</color>. If the primary target is affected by an Elemental Ailment, deal an additional $3 ATK Nuclear damage. This skill has a 100% base chance to Irradiate the target.
+r:"<color\=#FFFF00>1명</color>의 동료에게 공격력 (\d+\.\d+%)\+(\d+)의 생명을 회복시킨다. 자신의 공격력이 (\d+\.\d+%) 증가하고 다음 턴까지 지속된다.\n자신이 <link\="s|177"><u>『강인』</u></link> 효과 2중첩을 획득하고, 적이 보유한 원소 이상 종류에 따라 상응한 수량의 <link\="s|177"><u>『강인』</u></link> 효과를 획득한다."=Heals <color\=#FFFF00>1</color> ally for $1 ATK + $2 HP and increases Queen's ATK by $3 until the end of the next turn. Queen gains 2 stacks of Tenacity, and gains 1 additional Tenacity if the enemy is affected by an Elemental Ailment.
+r:"<color\=#FFFF00>1명</color>의 적에게 공격력 (\d+\.\d+%)의 핵열 속성 대미지를 주며, 목표가 원소 이상 상태일 경우 추가로 1단계의 공격력 (\d+\.\d+%)의 핵열 속성 대미지를 준다. 자신이 <link\="s|177"><u>『강인』</u></link> 효과 2중첩을 획득한다."=Deals $1 ATK Nuclear damage to <color\=#FFFF00>1</color> enemy. If the target is affected by an Elemental Ailment, deals an additional $2 ATK Nuclear damage. Queen gains 2 Tenacity.
+r:"<color\=#FFFF00>1명</color>의 적에게 공격력 (\d+\.\d+%)의 핵열 속성 대미지를 준다. 목표에게 원소 이상 효과가 1종 있을 때마다 추가로 1단계의 공격력 (\d+\.\d+%)의 핵열 속성 대미지를 주며, 최대 3단계의 추가 대미지를 줄 수 있다."=Deals $1 ATK Nuclear damage to <color\=#FFFF00>1</color> enemy. For each Elemental Ailment the target has, deals an additional instance of $2 ATK Nuclear damage, with a maximum of 3 additional instances of damage.
+
+
 
 ++++ ----- Battle Quotes ----- ++++
 좋은~ 기회야! 다들 놈을 해치워~!=This is your chance! Everybody, take them out!
