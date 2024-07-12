@@ -1,0 +1,1480 @@
+----------
+STARTING PAGE
+----------
+
+r:"消耗(\d+)點體力\((\d+)\/(\d+)\)"=Consume $1 points of stamina ($2 / $3)
+在「心軌擇行」中完成1次挑戰=Complete 1 challenge in "Heart Rails".
+心軌擇行=Heart Rails
+r:"調度等級：(\d+)\/(\d+)"=<size\=21>Dispatch Level: $1 / $2</size>
+r:"解鎖：(\d+)\/(\d+)"=Upgrades: $1/$2
+r:"獎勵：(\d+)\/(\d+)"=Gems: $1/$2
+r:"挑戰：(\d+)\/(\d+)"=Challenges: $1/$2
+調度指標=<size\=25>Dispatch Level</size>
+挑戰進度：=<size\=20>Progress:</size>
+
+----------
+SKILL TREE
+----------
+
+r:"已解鎖加成效果：(\d+)\/(\d+)"=Upgrades Unlocked: $1/$2
+車輛改造=<size\=30>Train Upgrade</size>
+解锁条件配置吧=Unlock upgrades
+『改造券』\n提供列車改造服務的許可券，可用於在改造升級列車能力。="Modification Ticket" is a ticket used for train modification service, which can be used to upgrade the train's ability.
+啟動成功。=Upgrade success.
+啟動全部前置技能後解鎖。=Unlock after acquiring all previous upgrades.
+所有角色攻擊力+2%。=Increase ATK by 2%.
+所有角色生命值上限+2%。=Increase Max HP by 2%.
+所有角色防禦力+2%。=Increase DEF by 2%.
+所有角色暴擊率+2%。=Increase CRIT by 2%.
+所有角色暴擊傷害+4%。=Increase CRIT DMG by 2%.
+開局時，攜帶鐵道硬幣+10=Gain 10 Railroad Coins at the start.
+開局時，獲得一個「勾玉」（戰鬥結束後復活1名不能戰鬥的同伴）。=Gain a Jade (A consumable that revives a fallen teammate) at the start.
+陣容秒殺等級+3=Insta-kill level +3
+所有角色效果抵抗+5%。=Increase Effect RES by 5%.
+所有角色效果命中+5%。=Increase Effect Hit Rate by 5%.
+獲得積分效率+5%。=Increase score by 5%.
+商店購買時，免費刷新次數+1。=Gain a free reroll at the store.
+本次免費=<size\=21>Free once</size>
+戰鬥後，所有角色回復5%生命值。=Heal 5% HP after battle.
+商店購買時，售賣的御守數+2。=2 more Omamori are available for purchase in the store.
+挑戰最終BOSS前，回復滿HP，SP，HL能量。=Fully restore HP, SP and HIGHLIGHT before the final boss.
+所有角色造成的傷害+3%。=Increase DMG dealt by 3%.
+所有角色受到的傷害-3%。=Decrease DMG Taken by 3%.
+開局時，攜帶地鐵硬幣+20=Gain 20 Railroad Coins at the start.
+獲得積分效率+15%。=Increase score by 15%.
+
+----------
+ALL OMAMORIS
+----------
+
+御守=Omamori
+全部線路=All tracks
+欲念之軌=<size\=22>Track of Desire</size>
+希冀之軌=<size\=24>Track of Hope</size>
+r:"已收集御守:<color\=#edae10>(\d+)\/(\d+)</color>"=Collected: <color\=#edae10>$1/$2</color></size>
+r:"可生效御守（(\d+)\/(\d+)）"=Omamori ($1/$2)
+【御守效果】=Omamori Effect
+【套裝效果】=[Set Effect]
+【收集獎勵】=[Collection Reward]
+r:"已集齊套裝:<color\=#edae10>(\d+)\/(\d+)</color>"=Sets Collected: <color\=#edae10>$1/$2</color>
+當前擁有「御守」已達上限。=You have reached the cap for Omamori.
+攜帶「御守」數量超出生效上限。=The number of Omamori you can carried has exceeded the limit.
+是否確認放棄「御守選擇機會」？\n將返還「鐵道硬幣*40」。=<size\=26>Do you want to skip the Omamori? \nYou will receive 40 Railroad Coins in turn.</size>
+是否確認放棄「御守選擇機會」？\n將返還「鐵道硬幣*64」。=<size\=26>Do you want to skip the Omamori? \nYou will receive 64 Railroad Coins in turn.</size>
+是否確認放棄「御守選擇機會」？\n將返還「鐵道硬幣*120」。=<size\=25>Do you want to skip the Omamori? \nYou will receive 120 Railroad Coins in turn.</size>
+r:"擴容背包需要消耗「鐵道硬幣\*(\d+)」，\n是否確認？"=<size\=26>Expanding the backpack requires spending $1 Railroad Coins, are you sure?</size>
+
+濯心·其一=<size\=22>Scarlet One</size>
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，使攻擊力提升\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)，持續1回合。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, increase the ATK of all allies by (<color\=#50b50d>$1</color>/$2/$3) for 1 turn.</nobr>"
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，使攻擊力提升\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)，持續1回合。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, increase the ATK of all allies by ($1/<color\=#c900e4>$2</color>/$3) for 1 turn.</nobr>"
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，使攻擊力提升\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)，持續1回合。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, increase the ATK of all allies by ($1/$2/<color\=#e9cb2f>$3</color>)) for 1 turn.</nobr>"
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，使攻擊力提升<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>，持續1回合。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, increase the ATK of all allies by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> for 1 turn.</nobr>"
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，使攻擊力提升<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>，持續1回合。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, increase the ATK of all allies by <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> for 1 turn.</nobr>"
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，使攻擊力提升(\d+\.\d+%)，持續1回合。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, increase the ATK of all allies by $1 for 1 turn.</nobr>"
+
+濯心·其二=<size\=22>Scarlet Two</size>
+r:"^<nobr>敵方受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，使防禦力降低\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)，持續1回合。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, decrease the DEF of all enemies by (<color\=#50b50d>$1</color>/$2/$3) for 1 turn.</nobr>"
+r:"^<nobr>敵方受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，使防禦力降低\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)，持續1回合。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, decrease the DEF of all enemies by ($1/<color\=#c900e4>$2</color>/$3) for 1 turn.</nobr>"
+r:"^<nobr>敵方受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，使防禦力降低\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)，持續1回合。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, decrease the DEF of all enemies by ($1/$2/<color\=#e9cb2f>$3</color>) for 1 turn.</nobr>"
+r:"^<nobr>敵方受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，使防禦力降低<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>，持續1回合。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, decrease the DEF of all enemies by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> for 1 turn.</nobr>"
+r:"^<nobr>敵方受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，使防禦力降低<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>，持續1回合。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, decrease the DEF of all enemies by <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> for 1 turn.</nobr>"
+r:"^<nobr>敵方受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，使防禦力降低(\d+\.\d+%)，持續1回合。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, decrease the DEF of all enemies by $1 for 1 turn.</nobr>"
+
+濯心·其三=<size\=22>Scarlet Three</size>
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，回復\(<color\=#50b50d>(\d+)</color>/(\d+)/(\d+)\)點精力值。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, all allies recover (<color\=#50b50d>$1</color>/$2/$3) SP.</nobr>"
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，回復\((\d+)/<color\=#c900e4>(\d+)</color>/(\d+)\)點精力值。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, all allies recover ($1/<color\=#c900e4>$2</color>/$3) SP.</nobr>"
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，回復\((\d+)/(\d+)/<color\=#e9cb2f>(\d+)</color>\)點精力值。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, all allies recover ($1/$2/<color\=#e9cb2f>$3</color>) SP.</nobr>"
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，回復<color\=#50b50d>(\d+)</color>→<color\=#c900e4>(\d+)</color>點精力值。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, all allies recover <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> SP.</nobr>"
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，回復<color\=#c900e4>(\d+)</color>→<color\=#e9cb2f>(\d+)</color>點精力值。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, all allies recover <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> SP.</nobr>"
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，回復(\d+)點精力值。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, all allies recover $1 SP.</nobr>"
+
+(Typo by devs?)
+濯心·其四=<size\=22>Scarlet Four</size>
+r:"^<nobr>WONDER受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，有\(<color\=#50b50d>(\d+%)</color>/(\d+%)\)機率使使解明怪盜的準備時間減少1次行動。</nobr>$"="<nobr>After WONDER has taken damage from <link\="s|170"><u>Scarlet Tide</u></link>, there is a (<color\=#50b50d>$1</color>/$2) chance to decrease the cooldown of the Navigator by 1 turn.</nobr>"
+r:"^<nobr>WONDER受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，有\((\d+%)/<color\=#c900e4>(\d+%)</color>\)機率使使解明怪盜的準備時間減少1次行動。</nobr>$"="<nobr>After WONDER has taken damage from <link\="s|170"><u>Scarlet Tide</u></link>, there is a ($1/<color\=#c900e4>$2</color>) chance to decrease the cooldown of the Navigator by 1 turn.</nobr>"
+r:"^<nobr>WONDER受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，有<color\=#50b50d>(\d+%)</color>→<color\=#c900e4>(\d+%)</color>機率使使解明怪盜的準備時間減少1次行動。</nobr>$"="<nobr>After WONDER has taken damage from <link\="s|170"><u>Scarlet Tide</u></link>, there is a <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> chance to decrease the cooldown of the Navigator by 1 turn.</nobr>"
+r:"^<nobr>WONDER受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，有(\d+%)機率使使解明怪盜的準備時間減少1次行動。</nobr>$"="<nobr>After WONDER has taken damage from <link\="s|170"><u>Scarlet Tide</u></link>, there is a $1 chance to decrease the cooldown of the Navigator by 1 turn.</nobr>"
+
+(Old version backup just in case)
+濯心·其四=<size\=22>Scarlet Four</size>
+<nobr>WONDER受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，有(<color\=#50b50d>30%</color>/60%)機率使解明怪盜的準備時間減少1次行動</nobr>=<nobr>After WONDER has taken damage from <link\="s|170"><u>Scarlet Tide</u></link>, there is a (<color\=#50b50d>30%</color>/60%) chance to reduce the cooldown of the Navigator by 1 turn.</nobr>
+<nobr>WONDER受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，有<color\=#50b50d>30%</color>→<color\=#c900e4>60%</color>機率使解明怪盜的準備時間減少1次行動</nobr>=<nobr>After WONDER has taken damage from <link\="s|170"><u>Scarlet Tide</u></link>, there is a <color\=#50b50d>30%</color>→<color\=#c900e4>60%</color> chance to reduce the cooldown of the Navigator by 1 turn.</nobr>
+<nobr>WONDER受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，有(30%/<color\=#c900e4>60%</color>)機率使解明怪盜的準備時間減少1次行動</nobr>=<nobr>After WONDER has taken damage from <link\="s|170"><u>Scarlet Tide</u></link>, there is a (30%/<color\=#c900e4>60%</color>) chance to reduce the cooldown of the Navigator by 1 turn.</nobr>
+<nobr>WONDER受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，有30%機率使解明怪盜的準備時間減少1次行動</nobr>=<nobr>After WONDER has taken damage from <link\="s|170"><u>Scarlet Tide</u></link>, there is a 30% chance to reduce the cooldown of the Navigator by 1 turn.</nobr>
+<nobr>WONDER受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，有60%機率使解明怪盜的準備時間減少1次行動</nobr>=<nobr>After WONDER has taken damage from <link\="s|170"><u>Scarlet Tide</u></link>, there is a 60% chance to reduce the cooldown of the Navigator by 1 turn.</nobr>
+
+濯心·其五=<size\=22>Scarlet Five</size>
+r:"^<nobr>WONDER受到<link\="s\|170"><u>『猩紅潮汐』</u></link>時，使全隊恢復\(<color\=#50b50d>(\d+%)</color>/(\d+%)\)HL能量。</nobr>$"="When WONDER is hit by <link\="s|170"><u>Scarlet Tide</u></link>, recover (<color\=#50b50d>$1</color>/$2) HIGHLIGHT Energy."
+r:"^<nobr>WONDER受到<link\="s\|170"><u>『猩紅潮汐』</u></link>時，使全隊恢復\((\d+%)/<color\=#c900e4>(\d+%)</color>\)HL能量。</nobr>$"="When WONDER is hit by <link\="s|170"><u>Scarlet Tide</u></link>, recover ($1/<color\=#c900e4>$2</color>) HIGHLIGHT Energy."
+r:"^<nobr>WONDER受到<link\="s\|170"><u>『猩紅潮汐』</u></link>時，使全隊恢復<color\=#50b50d>(\d+%)</color>→<color\=#c900e4>(\d+%)</color>HL能量。</nobr>$"="When WONDER is hit by <link\="s|170"><u>Scarlet Tide</u></link>, recover <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> HIGHLIGHT Energy."
+r:"^<nobr>WONDER受到<link\="s\|170"><u>『猩紅潮汐』</u></link>時，使全隊恢復(\d+%)HL能量。</nobr>$"="When WONDER is hit by <link\="s|170"><u>Scarlet Tide</u></link>, recover $1 HIGHLIGHT Energy."
+
+濯心·其六=<size\=22>Scarlet Six</size>
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>時，隨機獲得以下buff之一：弱點傷害提升(\d+%)、穿透提升(\d+%)、傷害提升(\d+%)，永久持續，可疊加。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, all allies will randomly get one of the following buffs: Increase Weakness DMG by $1, Increase DEF Ignore by $2, Increase DMG dealt by $3, the buffs are permanent and can be stacked.</nobr>"
+
+
+
+濁身·其一=<size\=22>Impurity One</size>
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，使防禦力提升\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)，持續1回合。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, increase the DEF of all allies by (<color\=#50b50d>$1</color>/$2/$3) for 1 turn.</nobr>"
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，使防禦力提升\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)，持續1回合。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, increase the DEF of all allies by ($1/<color\=#c900e4>$2</color>/$3) for 1 turn.</nobr>"
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，使防禦力提升\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)，持續1回合。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, increase the DEF of all allies by ($1/$2/<color\=#e9cb2f>$3</color>) for 1 turn.</nobr>"
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，使防禦力提升<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>，持續1回合。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, increase the DEF of all allies by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> for 1 turn.</nobr>"
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，使防禦力提升<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>，持續1回合。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, increase the DEF of all allies by <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> for 1 turn.</nobr>"
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，使防禦力提升(\d+\.\d+%)，持續1回合。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, increase the DEF of all allies by $1 for 1 turn.</nobr>"
+
+濁身·其二=<size\=22>Impurity Two</size>
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害降低\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)</nobr>$"="<size\=24><nobr>All allies take (<color\=#50b50d>$1</color>/$2/$3) less damage from <link\="s|170"><u>Scarlet Tide</u></link>.</nobr></size>"
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害降低\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)</nobr>$"="<size\=24><nobr>All allies take ($1/<color\=#c900e4>$2</color>/$3) less damage from <link\="s|170"><u>Scarlet Tide</u></link>.</nobr></size>"
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害降低\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)</nobr>$"="<size\=24><nobr>All allies take ($1/$2/<color\=#e9cb2f>$3</color>) less damage from <link\="s|170"><u>Scarlet Tide</u></link>.</nobr></size>"
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害降低<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>。</nobr>$"="<size\=24><nobr>All allies take <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> less damage from <link\="s|170"><u>Scarlet Tide</u></link>.</nobr></size>"
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害降低<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>。</nobr>$"="<size\=24><nobr>All allies take <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> less damage from <link\="s|170"><u>Scarlet Tide</u></link>.</nobr></size>"
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害降低(\d+\.\d+%)。</nobr>$"="<nobr>All allies take $1 less damage from <link\="s|170"><u>Scarlet Tide</u></link>.</nobr>"
+
+濁身·其三=<size\=22>Impurity Three</size>
+r:"^<nobr>敵方受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害提高\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)。</nobr>$"="<size\=24><nobr>All enemies take (<color\=#50b50d>$1</color>/$2/$3) more damage from <link\="s|170"><u>Scarlet Tide</u></link>.</nobr></size>"
+r:"^<nobr>敵方受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害提高\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)。</nobr>$"="<size\=24><nobr>All enemies take ($1/<color\=#c900e4>$2</color>/$3) more damage from <link\="s|170"><u>Scarlet Tide</u></link>.</nobr></size>"
+r:"^<nobr>敵方受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害提高\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)。</nobr>$"="<size\=24><nobr>All enemies take ($1/$2/<color\=#e9cb2f>$3</color>) more damage from <link\="s|170"><u>Scarlet Tide</u></link>.</nobr></size>"
+r:"^<nobr>敵方受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害提高<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>。</nobr>$"="<size\=24><nobr>All enemies take <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> more damage from <link\="s|170"><u>Scarlet Tide</u></link>.</nobr></size>"
+r:"^<nobr>敵方受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害提高<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>。</nobr>$"="<size\=24><nobr>All enemies take <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> more damage from <link\="s|170"><u>Scarlet Tide</u></link>.</nobr></size>"
+r:"^<nobr>敵方受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害提高(\d+\.\d+%)。</nobr>$"="<nobr>All enemies take $1 more damage from <link\="s|170"><u>Scarlet Tide</u></link>.</nobr>"
+
+濁身·其四=<size\=22>Impurity Four</size>
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，獲得\(<color\=#50b50d>(\d+)</color>/(\d+)\)護盾。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, all allies gain (<color\=#50b50d>$1</color>/$2) Shield.</nobr>"
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，獲得\((\d+)/<color\=#c900e4>(\d+)</color>\)護盾。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, all allies gain ($1/<color\=#c900e4>$2</color>) Shield.</nobr>"
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，獲得<color\=#50b50d>(\d+)</color>→<color\=#c900e4>(\d+)</color>護盾。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, all allies gain <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> Shield.</nobr>"
+r:"^<nobr>我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後，獲得(\d+)護盾。</nobr>$"="<nobr>After taking damage from <link\="s|170"><u>Scarlet Tide</u></link>, all allies gain $1 Shield.</nobr>"
+
+濁身·其五=<size\=22>Impurity Five</size>
+r:"^<nobr>敵方生命值百分比越低，受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害越高。在生命值百分比低於30%時獲得最大加成，使受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害提升\(<color\=#50b50d>(\d+%)</color>/(\d+%)\)。</nobr>$"="<nobr>The lower the enemy's HP%, the more damage they take from <link\="s|170"><u>Scarlet Tide</u></link>, up to a cap of (<color\=#50b50d>$1</color>/$2) damage increase at less than 30% HP.</nobr>"
+r:"^<nobr>敵方生命值百分比越低，受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害越高。在生命值百分比低於30%時獲得最大加成，使受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害提升\((\d+%)/<color\=#c900e4>(\d+%)</color>\)。</nobr>$"="<nobr>The lower the enemy's HP%, the more damage they take from <link\="s|170"><u>Scarlet Tide</u></link>, up to a cap of ($1/<color\=#c900e4>$2</color>) damage increase at less than 30% HP.</nobr>"
+r:"^<nobr>敵方生命值百分比越低，受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害越高。在生命值百分比低於30%時獲得最大加成，使受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害提升<color\=#50b50d>(\d+%)</color>→<color\=#c900e4>(\d+%)</color>。</nobr>$"="<nobr>The lower the enemy's HP%, the more damage they take from <link\="s|170"><u>Scarlet Tide</u></link>, up to a cap of <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> damage increase at less than 30% HP.</nobr>"
+r:"^<nobr>敵方生命值百分比越低，受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害越高。在生命值百分比低於30%時獲得最大加成，使受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害提升(\d+%)。</nobr>$"="<nobr>The lower the enemy's HP%, the more damage they take from <link\="s|170"><u>Scarlet Tide</u></link>, up to a cap of $1 damage increase at less than 30% HP.</nobr>"
+
+濁身·其六=<size\=22>Impurity Six</size>
+r:"^<nobr>我方怪盜行動後，有(\d+%)機率額外觸發一次<link\="s\|170"><u>『猩紅潮汐』</u></link>。</nobr>$"="After an ally acts, there is a $1 chance to trigger <link\="s|170"><u>Scarlet Tide</u></link>."
+
+
+重祭·其一=<size\=22>Sacrifice One</size>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性一致時，使全隊回復\(<color\=#50b50d>(\d+)</color>/(\d+)/(\d+)\)點生命值。</nobr>"=<nobr>When any allies deal skill damage, which is the same element that caused skill damage last time, restore (<color\=#50b50d>$1</color>/$2/$3) HP to all allies.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性一致時，使全隊回復\((\d+)/<color\=#c900e4>(\d+)</color>/(\d+)\)點生命值。</nobr>"=<nobr>When any allies deal skill damage, which is the same element that caused skill damage last time, restore ($1/<color\=#c900e4>$2</color>/$3) HP to all allies.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性一致時，使全隊回復\((\d+)/(\d+)/<color\=#e9cb2f>(\d+)</color>\)點生命值。</nobr>"=<nobr>When any allies deal skill damage, which is the same element that caused skill damage last time, restore ($1/$2/<color\=#e9cb2f>$3</color>) HP to all allies.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性一致時，使全隊回復<color\=#50b50d>(\d+)</color>→<color\=#c900e4>(\d+)</color>點生命值。</nobr>"=<nobr>When any allies deal skill damage, which is the same element that caused skill damage last time, restore <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> HP to all allies.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性一致時，使全隊回復<color\=#c900e4>(\d+)</color>→<color\=#e9cb2f>(\d+)</color>點生命值。</nobr>"=<nobr>When any allies deal skill damage, which is the same element that caused skill damage last time, restore <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> HP to all allies.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性一致時，使全隊回復(\d+)點生命值。</nobr>"=<nobr>When any allies deal skill damage, which is the same element that caused skill damage last time, restore $1 HP to all allies.</nobr>
+
+重祭·其二=<size\=22>Sacrifice Two</size>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性一致時，有\(<color\=#50b50d>(\d+%)</color>/(\d+%)/(\d+%)\)機率使解明怪盜的準備時間減少1次行動。</nobr>"=<nobr>When any allies deal skill damage, which is the same element that caused skill damage last time, there is a (<color\=#50b50d>$1</color>/$2/$3) chance to chance to reduce the cooldown of the Navigator by 1 turn.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性一致時，有\((\d+%)/<color\=#c900e4>(\d+%)</color>/(\d+%)\)機率使解明怪盜的準備時間減少1次行動。</nobr>"=<nobr>When any allies deal skill damage, which is the same element that caused skill damage last time, there is a ($1/<color\=#c900e4>$2</color>/$3) chance to chance to reduce the cooldown of the Navigator by 1 turn.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性一致時，有\((\d+%)/(\d+%)/<color\=#e9cb2f>(\d+%)</color>\)機率使解明怪盜的準備時間減少1次行動。</nobr>"=<nobr>When any allies deal skill damage, which is the same element that caused skill damage last time, there is a ($1/$2/<color\=#e9cb2f>$3</color>) chance to chance to reduce the cooldown of the Navigator by 1 turn.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性一致時，有<color\=#50b50d>(\d+%)</color>→<color\=#c900e4>(\d+%)</color>機率使解明怪盜的準備時間減少1次行動。</nobr>"{=<nobr><nobr>When any allies deal skill damage, which is the same element that caused skill damage last time, there is a <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> chance to chance to reduce the cooldown of the Navigator by 1 turn.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性一致時，有<color\=#c900e4>(\d+%)</color>→<color\=#e9cb2f>(\d+%)</color>機率使解明怪盜的準備時間減少1次行動。</nobr>"{=<nobr><nobr>When any allies deal skill damage, which is the same element that caused skill damage last time, there is a <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> chance to chance to reduce the cooldown of the Navigator by 1 turn.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性一致時，有(\d+%)機率使解明怪盜的準備時間減少1次行動。</nobr>"=When any allies deal skill damage, which is the same element that caused skill damage last time, there is a $1 chance to chance to reduce the cooldown of the Navigator by 1 turn.</nobr>
+
+重祭·其三=<size\=22>Sacrifice Three</size>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性一致時，自身攻擊力提高\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)，持續至下回合末。</nobr>"=<nobr>When any allies deal skill damage, which is the same element that caused skill damage last time, increase ATK by (<color\=#50b50d>$1</color>/$2/$3) until the end of the next turn.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性一致時，自身攻擊力提高\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)，持續至下回合末。</nobr>"=<nobr>When any allies deal skill damage, which is the same element that caused skill damage last time, increase ATK by ($1/<color\=#c900e4>$2</color>/$3) until the end of the next turn.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性一致時，自身攻擊力提高\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)，持續至下回合末。</nobr>"=<nobr>When any allies deal skill damage, which is the same element that caused skill damage last time, increase ATK by ($1/$2/<color\=#e9cb2f>$3</color>) until the end of the next turn.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性一致時，自身攻擊力提高<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>，持續至下回合末。</nobr>"=<nobr>When any allies deal skill damage, which is the same element that caused skill damage last time, increase ATK by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> until the end of the next turn.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性一致時，自身攻擊力提高<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>，持續至下回合末。</nobr>"=<nobr>When any allies deal skill damage, which is the same element that caused skill damage last time, increase ATK by <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> until the end of the next turn.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性一致時，自身攻擊力提高(\d+\.\d+%)，持續至下回合末。</nobr>"=<nobr>When any allies deal skill damage, which is the same element that caused skill damage last time, increase ATK by $1 until the end of the next turn.</nobr>
+
+重祭·其四=<size\=22>Sacrifice Four</size>
+r:"^<nobr>任意怪盜獲得<link\="s\|186"><u>『屬性烙印』</u></link>時，使全隊該屬性傷害提升\(<color\=#50b50d>(\d+%)</color>/(\d+%)\)，持續2回合，可疊加6層。</nobr>$"="<nobr>When any allies gain <link\="s|186"><u>Elemental Brand</u></link>, increase that element's damage for all allies by (<color\=#50b50d>$1</color>/$2) for 2 turns, cap at 6 stacks.</nobr>"
+r:"^<nobr>任意怪盜獲得<link\="s\|186"><u>『屬性烙印』</u></link>時，使全隊該屬性傷害提升\((\d+%)/<color\=#c900e4>(\d+%)</color>\)，持續2回合，可疊加6層。</nobr>$"="<nobr>When any allies gain <link\="s|186"><u>Elemental Brand</u></link>, increase that element's damage for all allies by ($1/<color\=#c900e4>$2</color>) for 2 turns, cap at 6 stacks.</nobr>"
+r:"^<nobr>任意怪盜獲得<link\="s\|186"><u>『屬性烙印』</u></link>時，使全隊該屬性傷害提升<color\=#50b50d>(\d+%)</color>→<color\=#c900e4>(\d+%)</color>，持續2回合，可疊加6層。</nobr>$"="<nobr>When any allies gain <link\="s|186"><u>Elemental Brand</u></link>, increase that element's damage for all allies by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> for 2 turns, cap at 6 stacks.</nobr>"
+r:"^<nobr>任意怪盜獲得<link\="s\|186"><u>『屬性烙印』</u></link>時，使全隊該屬性傷害提升(\d+%)，持續2回合，可疊加6層。</nobr>$"="<nobr>When any allies gain <link\="s|186"><u>Elemental Brand</u></link>, increase that element's damage for all allies by $1 for 2 turns, cap at 6 stacks.</nobr>"
+
+重祭·其五=<size\=22>Sacrifice Five</size>
+r:"^<nobr>任意怪盜造成技能傷害時，有\(<color\=#50b50d>(\d+%)</color>/(\d+%)\)機率額外獲得1個對應的<link\="s\|186"><u>『屬性烙印』</u></link>。</nobr>$"="<nobr>When any allies deal skill damage, there is a (<color\=#50b50d>$1</color>/$2) chance to gain an additional <link\="s|186"><u>Elemental Brand</u></link>.</nobr>"
+r:"^<nobr>任意怪盜造成技能傷害時，有\((\d+%)/<color\=#c900e4>(\d+%)</color>\)機率額外獲得1個對應的<link\="s\|186"><u>『屬性烙印』</u></link>。</nobr>$"="<nobr>When any allies deal skill damage, there is a ($1/<color\=#c900e4>$2</color>) chance to gain an additional <link\="s|186"><u>Elemental Brand</u></link>.</nobr>"
+r:"^<nobr>任意怪盜造成技能傷害時，有<color\=#50b50d>(\d+%)</color>→<color\=#c900e4>(\d+%)</color>機率額外獲得1個對應的<link\="s\|186"><u>『屬性烙印』</u></link>。</nobr>$"="<nobr>When any allies deal skill damage, there is a <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> chance to gain an additional <link\="s|186"><u>Elemental Brand</u></link>.</nobr>"
+r:"^<nobr>任意怪盜造成技能傷害時，有(\d+%)機率額外獲得1個對應的<link\="s\|186"><u>『屬性烙印』</u></link>。</nobr>$"="<nobr>When any allies deal skill damage, there is a $1 chance to gain an additional <link\="s|186"><u>Elemental Brand</u></link>.</nobr>"
+
+重祭·其六=<size\=22>Sacrifice Six</size>
+r:"^<nobr><link\="s\|185"><u>『蝕刻星隕』</u></link>造成傷害提升(\d+%)，每清除1個相同的<link\="s\|186"><u>『屬性烙印』</u></link>，使<link\="s\|185"><u>『蝕刻星隕』</u></link>的傷害增加1段，最多增加5段。</nobr>$"="<nobr>Increase DMG dealt by <link\="s|185"><u>Eclipse Meteor</u></link> by $1. For each same <link\="s|186"><u>Elemental Brand</u></link> used, deal another instance of dmage from <link\="s|185"><u>Eclipse Meteor</u></link>, cap at 5 instances.</nobr>"
+
+
+
+響祭·其一=<size\=22>Hibiki One</size>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性不一致時，使全隊回復\(<color\=#50b50d>(\d+)</color>/(\d+)/(\d+)\)點生命值。</nobr>"=<nobr>When any allies deal skill damage, which is different than the element that caused skill damage last time, restore (<color\=#50b50d>$1</color>/$2/$3) HP to all allies.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性不一致時，使全隊回復\((\d+)/<color\=#c900e4>(\d+)</color>/(\d+)\)點生命值。</nobr>"=<nobr>When any allies deal skill damage, which is different than the element that caused skill damage last time, restore ($1/<color\=#c900e4>$2</color>/$3) HP to all allies.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性不一致時，使全隊回復\((\d+)/(\d+)/<color\=#e9cb2f>(\d+)</color>\)點生命值。</nobr>"=<nobr>When any allies deal skill damage, which is different than the element that caused skill damage last time, restore ($1/$2/<color\=#e9cb2f>$3</color>) HP to all allies.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性不一致時，使全隊回復<color\=#50b50d>(\d+)</color>→<color\=#c900e4>(\d+)</color>點生命值。</nobr>"=<nobr>When any allies deal skill damage, which is different than the element that caused skill damage last time, restore <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> HP to all allies.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性不一致時，使全隊回復<color\=#c900e4>(\d+)</color>→<color\=#e9cb2f>(\d+)</color>點生命值。</nobr>"=<nobr>When any allies deal skill damage, which is different than the element that caused skill damage last time, restore <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> HP to all allies.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性不一致時，使全隊回復(\d+)點生命值。</nobr>"=<nobr>When any allies deal skill damage, which is different than the element that caused skill damage last time, restore $1 HP to all allies.</nobr>
+
+響祭·其二=<size\=22>Hibiki Two</size>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性不一致時，有\(<color\=#50b50d>(\d+%)</color>/(\d+%)/(\d+%)\)機率使解明怪盜的準備時間減少1次行動。</nobr>"=<nobr>When any allies deal skill damage, which is different than the element that caused skill damage last time, there is a (<color\=#50b50d>$1</color>/$2/$3) chance to chance to reduce the cooldown of the Navigator by 1 turn.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性不一致時，有\((\d+%)/<color\=#c900e4>(\d+%)</color>/(\d+%)\)機率使解明怪盜的準備時間減少1次行動。</nobr>"=<nobr>When any allies deal skill damage, which is different than the element that caused skill damage last time, there is a ($1/<color\=#c900e4>$2</color>/$3) chance to chance to reduce the cooldown of the Navigator by 1 turn.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性不一致時，有\((\d+%)/(\d+%)/<color\=#e9cb2f>(\d+%)</color>\)機率使解明怪盜的準備時間減少1次行動。</nobr>"=<nobr>When any allies deal skill damage, which is different than the element that caused skill damage last time, there is a ($1/$2/<color\=#e9cb2f>$3</color>) chance to chance to reduce the cooldown of the Navigator by 1 turn.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性不一致時，有<color\=#50b50d>(\d+%)</color>→<color\=#c900e4>(\d+%)</color>機率使解明怪盜的準備時間減少1次行動。</nobr>"=<nobr>When any allies deal skill damage, which is different than the element that caused skill damage last time, there is a <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> chance to chance to reduce the cooldown of the Navigator by 1 turn.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性不一致時，有<color\=#c900e4>(\d+%)</color>→<color\=#e9cb2f>(\d+%)</color>機率使解明怪盜的準備時間減少1次行動。</nobr>"=<nobr>When any allies deal skill damage, which is different than the element that caused skill damage last time, there is a <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> chance to chance to reduce the cooldown of the Navigator by 1 turn.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性不一致時，有(\d+%)機率使解明怪盜的準備時間減少1次行動。</nobr>"=<nobr>When any allies deal skill damage, which is different than the element that caused skill damage last time, there is a $1 chance to chance to reduce the cooldown of the Navigator by 1 turn.</nobr>
+
+響祭·其三=<size\=22>Hibiki Three</size>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性不一致時，自身攻擊力提高\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)，持續至下回合末。</nobr>"=<nobr>When any allies deal skill damage, which is different than the element that caused skill damage last time, increase ATK by (<color\=#50b50d>$1</color>/$2/$3) until the end of the next turn.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性不一致時，自身攻擊力提高\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)，持續至下回合末。</nobr>"=<nobr>When any allies deal skill damage, which is different than the element that caused skill damage last time, increase ATK by ($1/<color\=#c900e4>$2</color>/$3) until the end of the next turn.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性不一致時，自身攻擊力提高\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)，持續至下回合末。</nobr>"=<nobr>When any allies deal skill damage, which is different than the element that caused skill damage last time, increase ATK by ($1/$2/<color\=#e9cb2f>$3</color>) until the end of the next turn.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性不一致時，自身攻擊力提高<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>，持續至下回合末。</nobr>"=<nobr>When any allies deal skill damage, which is different than the element that caused skill damage last time, increase ATK by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> until the end of the next turn.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性不一致時，自身攻擊力提高<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>，持續至下回合末。</nobr>"=<nobr>When any allies deal skill damage, which is different than the element that caused skill damage last time, increase ATK by <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> until the end of the next turn.</nobr>
+r:"<nobr>任意怪盜造成技能傷害，與全隊上次造成技能傷害的屬性不一致時，自身攻擊力提高(\d+\.\d+%)，持續至下回合末。</nobr>"=<nobr>When any allies deal skill damage, which is different than the element that caused skill damage last time, increase ATK by $1 until the end of the next turn.</nobr>
+
+響祭·其四=<size\=22>Hibiki Four</size>
+r:"^<nobr>任意怪盜獲得<link\="s\|186"><u>『屬性烙印』</u></link>時，使自身該屬性傷害提升\(<color\=#50b50d>(\d+%)</color>/(\d+%)\)，持續3回合，可疊加3層。</nobr>$"="<nobr>When any allies gain <link\="s|186"><u>Elemental Brand</u></link>, increase that element's damage for yourself by (<color\=#50b50d>$1</color>/$2) for 3 turns, cap at 3 stacks.</nobr>"
+r:"^<nobr>任意怪盜獲得<link\="s\|186"><u>『屬性烙印』</u></link>時，使自身該屬性傷害提升\((\d+%)/<color\=#c900e4>(\d+%)</color>\)，持續3回合，可疊加3層。</nobr>$"="<nobr>When any allies gain <link\="s|186"><u>Elemental Brand</u></link>, increase that element's damage for yourself by ($1/<color\=#c900e4>$2</color>) for 3 turns, cap at 3 stacks.</nobr>"
+r:"^<nobr>任意怪盜獲得<link\="s\|186"><u>『屬性烙印』</u></link>時，使自身該屬性傷害提升<color\=#50b50d>(\d+%)</color>→<color\=#c900e4>(\d+%)</color>，持續3回合，可疊加3層。</nobr>$"="<nobr>When any allies gain <link\="s|186"><u>Elemental Brand</u></link>, increase that element's damage for yourself by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> for 3 turns, cap at 3 stacks.</nobr>"
+r:"^<nobr>任意怪盜獲得<link\="s\|186"><u>『屬性烙印』</u></link>時，使自身該屬性傷害提升(\d+%)，持續3回合，可疊加3層。</nobr>$"="<nobr>When any allies gain <link\="s|186"><u>Elemental Brand</u></link>, increase that element's damage for yourself by $1 for 3 turns, cap at 3 stacks.</nobr>"
+
+響祭·其五=<size\=22>Hibiki Five</size>
+r:"^<nobr>任意怪盜造成技能傷害時，有\(<color\=#50b50d>(\d+%)</color>/(\d+%)\)機率額外獲得1個自己沒有的隨機<link\="s\|186"><u>『屬性烙印』</u></link>。</nobr>$"="<size\=25><nobr>When any allies deal skill damage, there is a (<color\=#50b50d>$1</color>/$2) chance to gain an extra unowned randomized <link\="s|186"><u>Elemental Brand</u></link>.</nobr></size>"
+r:"^<nobr>任意怪盜造成技能傷害時，有\((\d+%)/<color\=#c900e4>(\d+%)</color>\)機率額外獲得1個自己沒有的隨機<link\="s\|186"><u>『屬性烙印』</u></link>。</nobr>$"="<size\=25><nobr>When any allies deal skill damage, there is a ($1/<color\=#c900e4>$2</color>) chance to gain an extra unowned randomized <link\="s|186"><u>Elemental Brand</u></link>.</nobr></size>"
+r:"^<nobr>任意怪盜造成技能傷害時，有<color\=#50b50d>(\d+%)</color>→<color\=#c900e4>(\d+%)</color>機率額外獲得1個自己沒有的隨機<link\="s\|186"><u>『屬性烙印』</u></link>。</nobr>$"="<size\=25><nobr>When any allies deal skill damage, there is a <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> chance to gain an extra unowned randomized <link\="s|186"><u>Elemental Brand</u></link>.</nobr></size>"
+r:"^<nobr>任意怪盜造成技能傷害時，有(\d+%)機率額外獲得1個自己沒有的隨機<link\="s\|186"><u>『屬性烙印』</u></link>。</nobr>$"="<size\=25><nobr>When any allies deal skill damage, there is a $1 chance to gain an extra unowned randomized <link\="s|186"><u>Elemental Brand</u></link>.</nobr></size>"
+
+響祭·其六=<size\=22>Hibiki Six</size>
+r:"^<nobr><link\="s\|185"><u>『蝕刻星隕』</u></link>造成傷害提升(\d+%)，每清除1種不同的<link\="s\|186"><u>『屬性烙印』</u></link>，使<link\="s\|185"><u>『蝕刻星隕』</u></link>的傷害增加1段，最多增加5段。</nobr>$"="<nobr>Increase DMG dealt by <link\="s|185"><u>Eclipse Meteor</u></link> by $1. For each different <link\="s|186"><u>Elemental Brand</u></link> used, deal another instance of dmage from <link\="s|185"><u>Eclipse Meteor</u></link>, cap at 5 instances.</nobr>"
+
+
+
+戮命·其一=<size\=22>ST ATK One</size>
+r:"<nobr>釋放單體人格面具技能時，攻擊力提升\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)。</nobr>"=<nobr>Increase ATK by (<color\=#50b50d>$1</color>/$2/$3) when using a single target skill.</nobr>
+r:"<nobr>釋放單體人格面具技能時，攻擊力提升\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)。</nobr>"=<nobr>Increase ATK by ($1/<color\=#c900e4>$2</color>/$3) when using a single target skill.</nobr>
+r:"<nobr>釋放單體人格面具技能時，攻擊力提升\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)。</nobr>"=<nobr>Increase ATK by ($1/$2/<color\=#e9cb2f>$3</color>) when using a single target skill.</nobr>
+r:"<nobr>釋放單體人格面具技能時，攻擊力提升<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>。</nobr>"=<nobr>Increase ATK by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> when using a single target skill.</nobr>
+r:"<nobr>釋放單體人格面具技能時，攻擊力提升<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>。</nobr>"=<nobr>Increase ATK by <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> when using a single target skill.</nobr>
+r:"<nobr>釋放單體人格面具技能時，攻擊力提升(\d+\.\d+%)。</nobr>"=<nobr>Increase ATK by $1 when using a single target skill.</nobr>
+
+戮命·其二=<size\=22>ST ATK Two</size>
+r:"<nobr>場上只有1名敵人時，所有的怪盜攻擊力提升\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)。</nobr>"=<nobr>Increased ATK of all allies by (<color\=#50b50d>$1</color>/$2/$3) when there is only 1 enemy.</nobr>
+r:"<nobr>場上只有1名敵人時，所有的怪盜攻擊力提升\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)。</nobr>"=<nobr>Increased ATK of all allies by ($1/<color\=#c900e4>$2</color>/$3) when there is only 1 enemy.</nobr>
+r:"<nobr>場上只有1名敵人時，所有的怪盜攻擊力提升\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)。</nobr>"=<nobr>Increased ATK of all allies by ($1/$2/<color\=#e9cb2f>$3</color>) when there is only 1 enemy.</nobr>
+r:"<nobr>場上只有1名敵人時，所有的怪盜攻擊力提升<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>。</nobr>"=<nobr>Increased ATK of all allies by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> when there is only 1 enemy.</nobr>
+r:"<nobr>場上只有1名敵人時，所有的怪盜攻擊力提升<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>。</nobr>"=<nobr>Increased ATK of all allies by <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> when there is only 1 enemy.</nobr>
+r:"<nobr>場上只有1名敵人時，所有的怪盜攻擊力提升(\d+\.\d+%)。</nobr>"=<nobr>Increased ATK of all allies by $1 when there is only 1 enemy.</nobr>
+
+戮命·其三=<size\=22>ST ATK Three</size>
+r:"<nobr>釋放單體人格面具技能後，使目標造成的傷害降低\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)，效果持續1回合。</nobr>"=<nobr>After using a single target skill, decrease the DMG dealt by the target by (<color\=#50b50d>$1</color>/$2/$3) for 1 turn.</nobr>
+r:"<nobr>釋放單體人格面具技能後，使目標造成的傷害降低\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)，效果持續1回合。</nobr"=<nobr>After using a single target skill, decrease the DMG dealt by the target by ($1/<color\=#c900e4>$2</color>/$3) for 1 turn.</nobr>
+r:"<nobr>釋放單體人格面具技能後，使目標造成的傷害降低\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)，效果持續1回合。</nobr>"=<nobr>After using a single target skill, decrease the DMG dealt by the target by ($1/$2/<color\=#e9cb2f>$3</color>) for 1 turn.</nobr>
+r:"<nobr>釋放單體人格面具技能後，使目標造成的傷害降低<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>，效果持續1回合。</nobr>"=<nobr>After using a single target skill, decrease the DMG dealt by the target by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> for 1 turn.</nobr>
+r:"<nobr>釋放單體人格面具技能後，使目標造成的傷害降低<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>，效果持續1回合。</nobr>"=<nobr>After using a single target skill, decrease the DMG dealt by the target by <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> for 1 turn.</nobr>
+r:"<nobr>釋放單體人格面具技能後，使目標造成的傷害降低(\d+\.\d+%)，效果持續1回合。</nobr>"=<nobr>After using a single target skill, decrease the DMG dealt by the target by $1 for 1 turn.</nobr>
+
+戮命·其四=<size\=22>ST ATK Four</size>
+r:"<nobr>釋放單體人格面具技能時，對生命值低於50%的敵人造成的傷害提升\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)\)。</nobr>"=<nobr>Deal (<color\=#50b50d>$1</color>/$2) more DMG to enemies with less than 50% HP when using a single target skill.</nobr>
+r:"<nobr>釋放單體人格面具技能時，對生命值低於50%的敵人造成的傷害提升\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>\)。</nobr>"=<nobr>Deal ($1/<color\=#c900e4>$2</color>) more DMG to enemies with less than 50% HP when using a single target skill.</nobr>
+r:"<nobr>釋放單體人格面具技能時，對生命值低於50%的敵人造成的傷害提升<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>。</nobr>"=<nobr>Deal <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> more DMG to enemies with less than 50% HP when using a single target skill.</nobr>
+r:"<nobr>釋放單體人格面具技能時，對生命值低於50%的敵人造成的傷害提升(\d+\.\d+%)。</nobr>"=<nobr>Deal $1 more DMG to enemies with less than 50% HP when using a single target skill.</nobr>
+
+戮命·其五=<size\=22>ST ATK Five</size>
+r:"<nobr>釋放單體人格面具技能時，造成的弱點傷害提升\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)\)。</nobr>"=<nobr>Weakness DMG dealt is increased by (<color\=#50b50d>$1</color>/$2) when using a single target skill.</nobr>
+r:"<nobr>釋放單體人格面具技能時，造成的弱點傷害提升\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>\)。</nobr>"=<nobr>Weakness DMG dealt is increased by ($1/<color\=#c900e4>$2</color>) when using a single target skill.</nobr>
+r:"<nobr>釋放單體人格面具技能時，造成的弱點傷害提升<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>。</nobr>"=<nobr>Weakness DMG dealt is increased by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> when using a single target skill.</nobr>
+r:"<nobr>釋放單體人格面具技能時，造成的弱點傷害提升(\d+\.\d+%)。</nobr>"=<nobr>Weakness DMG dealt is increased by $1 when using a single target skill.</nobr>
+
+戮命·其六=<size\=22>ST ATK Six</size>
+r:"<nobr>釋放單體人格面具技能後，對所有敵人造成其受到的傷害(\d+%)的額外萬能屬性傷害。</nobr>"=<nobr>After using a single target skill, deal an additional 30% of the DMG dealt to all enemies as Almighty damage.</nobr>
+
+
+
+亂戰·其一=<size\=22>Aoe ATK One</size>
+r:"<nobr>以群體敵人為目標釋放人格面具技能時，攻擊力提升\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)。</nobr>"=<nobr>Increase ATK by (<color\=#50b50d>$1</color>/$2/$3) when using an AoE skill.</nobr>
+r:"<nobr>以群體敵人為目標釋放人格面具技能時，攻擊力提升\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)。</nobr>"=<nobr>Increase ATK by ($1/<color\=#c900e4>$2</color>/$3) when using an AoE skill.</nobr>
+r:"<nobr>以群體敵人為目標釋放人格面具技能時，攻擊力提升\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)。</nobr>"=<nobr>Increase ATK by ($1/$2/<color\=#e9cb2f>$3</color>) when using an AoE skill.</nobr>
+r:"<nobr>以群體敵人為目標釋放人格面具技能時，攻擊力提升<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>。</nobr>"=<nobr>Increase ATK by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> when using an AoE skill.</nobr>
+r:"<nobr>以群體敵人為目標釋放人格面具技能時，攻擊力提升<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>。</nobr>"=<nobr>Increase ATK by <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> when using an AoE skill.</nobr>
+r:"<nobr>以群體敵人為目標釋放人格面具技能時，攻擊力提升(\d+\.\d+%)。</nobr>"=<nobr>Increase ATK by $1 when using an AoE skill.</nobr>
+
+亂戰·其二=<size\=22>AoE ATK Two</size>
+r:"<nobr>釋放群攻技能後，使自身受到的傷害降低\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)，效果持續2回合。</nobr>"=<nobr>After using an AoE skill, decrease DMG Taken by (<color\=#50b50d>$1</color>/$2/$3) for 2 turns.</nobr>
+r:"<nobr>釋放群攻技能後，使自身受到的傷害降低\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)，效果持續2回合。</nobr>"=<nobr>After using an AoE skill, decrease DMG Taken by ($1/<color\=#c900e4>$2</color>/$3) for 2 turns.</nobr>
+r:"<nobr>釋放群攻技能後，使自身受到的傷害降低\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)，效果持續2回合。</nobr>"=<nobr>After using an AoE skill, decrease DMG Taken by ($1/$2/<color\=#e9cb2f>$3</color>) for 2 turns.</nobr>
+r:"<nobr>釋放群攻技能後，使自身受到的傷害降低<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>，效果持續2回合。</nobr>"=<nobr>After using an AoE skill, decrease DMG Taken by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> for 2 turns.</nobr>
+r:"<nobr>釋放群攻技能後，使自身受到的傷害降低<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>，效果持續2回合。</nobr>"=<nobr>After using an AoE skill, decrease DMG Taken by <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> for 2 turns.</nobr>
+r:"<nobr>釋放群攻技能後，使自身受到的傷害降低(\d+\.\d+%)，效果持續2回合。</nobr>"=<nobr>After using an AoE skill, decrease DMG Taken by $1 for 2 turns.</nobr>
+
+亂戰·其三=<size\=22>AoE ATK Three</size>
+r:"<nobr>場上每有1名敵人，所有角色的攻擊力提升\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)。</nobr>"=<nobr>For each enemy on the field, increase the ATK of all allies by (<color\=#50b50d>$1</color>/$2/$3).</nobr>
+r:"<nobr>場上每有1名敵人，所有角色的攻擊力提升\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)。</nobr>"=<nobr>For each enemy on the field, increase the ATK of all allies by ($1/<color\=#c900e4>$2</color>/$3).</nobr>
+r:"<nobr>場上每有1名敵人，所有角色的攻擊力提升\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)。</nobr>"=<nobr>For each enemy on the field, increase the ATK of all allies by ($1/$2/<color\=#e9cb2f>$3</color>).</nobr>
+r:"<nobr>場上每有1名敵人，所有角色的攻擊力提升<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>。</nobr>"=<nobr>For each enemy on the field, increase the ATK of all allies by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color>.</nobr>
+r:"<nobr>場上每有1名敵人，所有角色的攻擊力提升<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>。</nobr>"=<nobr>For each enemy on the field, increase the ATK of all allies by <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color>.</nobr>
+r:"<nobr>場上每有1名敵人，所有角色的攻擊力提升(\d+\.\d+%)。</nobr>"=<nobr>For each enemy on the field, increase the ATK of all allies by $1.</nobr>
+
+亂戰·其四=<size\=22>AoE ATK Four</size>
+r:"<nobr>對敵人造成傷害後，使其受到的傷害提升\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)\)，持續2回合，可疊加2層。</nobr>"=<nobr>After dealing damage to an enemy, increase their DMG Taken by (<color\=#50b50d>$1</color>/$2) for 2 turns, up to 2 stacks.</nobr>
+r:"<nobr>對敵人造成傷害後，使其受到的傷害提升\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>\)，持續2回合，可疊加2層。</nobr>"=<nobr>After dealing damage to an enemy, increase their DMG Taken by ($1/<color\=#c900e4>$2</color>) for 2 turns, up to 2 stacks.</nobr>
+r:"<nobr>對敵人造成傷害後，使其受到的傷害提升<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>，持續2回合，可疊加2層。</nobr>"=<nobr>After dealing damage to an enemy, increase their DMG Taken by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> for 2 turns, up to 2 stacks.</nobr>
+r:"<nobr>對敵人造成傷害後，使其受到的傷害提升(\d+\.\d+%)，持續2回合，可疊加2層。</nobr>"=<nobr>After dealing damage to an enemy, increase their DMG Taken by $1 for 2 turns, up to 2 stacks.</nobr>
+
+亂戰·其五=<size\=22>AoE ATK Five</size>
+r:"<nobr>以群體敵人為目標釋放人格面具技能時，對技能主目標敵人造成的傷害提升\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)\)。</nobr>"=<nobr>When using AoE skills, the DMG dealt to the main target of the skill is increased by (<color\=#50b50d>$1</color>/$2).</nobr>
+r:"<nobr>以群體敵人為目標釋放人格面具技能時，對技能主目標敵人造成的傷害提升\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>\)。</nobr>"=<nobr>When using AoE skills, the DMG dealt to the main target of the skill is increased by ($1/<color\=#c900e4>$2</color>).</nobr>
+r:"<nobr>以群體敵人為目標釋放人格面具技能時，對技能主目標敵人造成的傷害提升<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>。</nobr>"=<nobr>When using AoE skills, the DMG dealt to the main target of the skill is increased by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color>.</nobr>
+r:"<nobr>以群體敵人為目標釋放人格面具技能時，對技能主目標敵人造成的傷害提升(\d+\.\d+%)。</nobr>"=<nobr>When using AoE skills, the DMG dealt to the main target of the skill is increased by $1.</nobr>
+
+亂戰·其六=<size\=22>AoE Six</size>
+r:"<nobr>群攻技能造成的傷害提升(\d+%)，所有敵人受到的所有傷害由所有敵人分攤。</nobr>"=<nobr>Increase DMG dealt by AoE skills by $1, all DMG dealt is shared among all enemies.</nobr>
+
+
+
+療癒·其一=<size\=22>Healing One</size>
+r:"<nobr>所有角色造成的治療效果提升\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)。</nobr>"=<nobr>Increase Healing Boost by (<color\=#50b50d>$1</color>/$2/$3).</nobr>
+r:"<nobr>所有角色造成的治療效果提升\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)。</nobr>"=<nobr>Increase Healing Boost by ($1/<color\=#c900e4>$2</color>/$3).</nobr>
+r:"<nobr>所有角色造成的治療效果提升\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)。</nobr>"=<nobr>Increase Healing Boost by ($1/$2/<color\=#e9cb2f>$3</color>).</nobr>
+r:"<nobr>所有角色造成的治療效果提升<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>。</nobr>"=<nobr>Increase Healing Boost  by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color>.</nobr>
+r:"<nobr>所有角色造成的治療效果提升<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>。</nobr>"=<nobr>Increase Healing Boost  by <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color>.</nobr>
+r:"<nobr>所有角色造成的治療效果提升(\d+\.\d+%)。</nobr>"=<nobr>Increase Healing Boost by $1.</nobr>
+
+療癒·其二=<size\=22>Healing Two</size>
+r:"<nobr>使用治療技能後，對1名隨機敵人造成\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)攻擊力的萬能屬性傷害。</nobr>"=<nobr>After using a healing skill, deal (<color\=#50b50d>$1</color>/$2/$3) of their ATK as Almighty damage to 1 random enemy.</nobr>
+r:"<nobr>使用治療技能後，對1名隨機敵人造成\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)攻擊力的萬能屬性傷害。</nobr>"=<nobr>After using a healing skill, deal ($1/<color\=#c900e4>$2</color>/$3) of their ATK as Almighty damage to 1 random enemy.</nobr>
+r:"<nobr>使用治療技能後，對1名隨機敵人造成\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)攻擊力的萬能屬性傷害。</nobr>"=<nobr>After using a healing skill, deal ($1/$2/<color\=#e9cb2f>$3</color>) of their ATK as Almighty damage to 1 random enemy.</nobr>
+r:"<nobr>使用治療技能後，對1名隨機敵人造成<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>攻擊力的萬能屬性傷害。</nobr>"=<nobr>After using a healing skill, deal <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> of their ATK as Almighty damage to 1 random enemy.</nobr>
+r:"<nobr>使用治療技能後，對1名隨機敵人造成<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>攻擊力的萬能屬性傷害。</nobr>"=<nobr>After using a healing skill, deal <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> of their ATK as Almighty damage to 1 random enemy.</nobr>
+r:"<nobr>使用治療技能後，對1名隨機敵人造成(\d+\.\d+%)攻擊力的萬能屬性傷害。</nobr>"=<nobr>After using a healing skill, deal $1 of their ATK as Almighty damage to 1 random enemy.</nobr>
+
+療癒·其三=<size\=22>Healing Three</size>
+r:"<nobr>所有角色最大生命值提升\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)。</nobr>"=<nobr>Increase Max HP by (<color\=#50b50d>$1</color>/$2/$3).</nobr>
+r:"<nobr>所有角色最大生命值提升\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)。</nobr>"=<nobr>Increase Max HP by ($1/<color\=#c900e4>$2</color>/$3).</nobr>
+r:"<nobr>所有角色最大生命值提升\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)。</nobr>"=<nobr>Increase Max HP by ($1/$2/<color\=#e9cb2f>$3</color>).</nobr>
+r:"<nobr>所有角色最大生命值提升<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>。</nobr>"=<nobr>Increase Max HP by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color>.</nobr>
+r:"<nobr>所有角色最大生命值提升<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>。</nobr>"=<nobr>Increase Max HP by <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color>.</nobr>
+r:"<nobr>所有角色最大生命值提升(\d+\.\d+%)。</nobr>"=<nobr>Increase Max HP by $1.</nobr>
+
+療癒·其四=<size\=22>Healing Four</size>
+r:"<nobr>使用治療技能後，根據治療總量，對所有敵人造成\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)\)治療量的傷害。</nobr>"=<nobr>After using a healing skill, deal (<color\=#50b50d>$1</color>/$2) of the healed amount as damage to all enemies.</nobr>
+r:"<nobr>使用治療技能後，根據治療總量，對所有敵人造成\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>\)治療量的傷害。</nobr>"=<nobr>After using a healing skill, deal ($1/<color\=#c900e4>$2</color>) of the healed amount as damage to all enemies.</nobr>
+r:"<nobr>使用治療技能後，根據治療總量，對所有敵人造成<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>治療量的傷害。</nobr>"=<nobr>After using a healing skill, deal <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> of the healed amount as damage to all enemies.</nobr>
+r:"<nobr>使用治療技能後，根據治療總量，對所有敵人造成(\d+\.\d+%)治療量的傷害。</nobr>"=<nobr>After using a healing skill, deal $1 of the healed amount as damage to all enemies.</nobr>
+
+療癒·其五=<size\=22>Healing Five</size>
+r:"<nobr>使用治療技能後，使治療方與被治療方的攻擊力提升\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)\)，效果持續2回合，可疊加2層。</nobr>"=<nobr>After using a healing skill, the ATK of the user and the target is increased by (<color\=#50b50d>$1</color>/$2) for 2 turns, up to 2 stacks.</nobr>
+r:"<nobr>使用治療技能後，使治療方與被治療方的攻擊力提升\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>\)，效果持續2回合，可疊加2層。</nobr>"=<nobr>After using a healing skill, the ATK of the user and the target is increased by ($1/<color\=#c900e4>$2</color>) for 2 turns, up to 2 stacks.</nobr>
+r:"<nobr>使用治療技能後，使治療方與被治療方的攻擊力提升<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>，效果持續2回合，可疊加2層。</nobr>"=<nobr>After using a healing skill, the ATK of the user and the target is increased by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> for 2 turns, up to 2 stacks.</nobr>
+r:"<nobr>使用治療技能後，使治療方與被治療方的攻擊力提升(\d+\.\d+%)，效果持續2回合，可疊加2層。</nobr>"=<nobr>After using a healing skill, the ATK of the user and the target is increased by $1 for 2 turns, up to 2 stacks.</nobr>
+
+療癒·其六=<size\=22>Healing Six</size>
+r:"<nobr>所有角色造成的傷害根據當前生命值百分比的提升獲得提升。最高100%生命值時提升(\d+%)。</nobr>"=<nobr>All allies gain DMG dealt based on their HP%, up to a cap of $1 at 100% HP.</nobr>
+
+
+
+加護·其一=<size\=22>Protection One</size>
+r:"<nobr>角色的防禦力提升\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)。</nobr>"=<nobr>Increase DEF by (<color\=#50b50d>$1</color>/$2/$3).</nobr>
+r:"<nobr>角色的防禦力提升\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)。</nobr>"=<nobr>Increase DEF by ($1/<color\=#c900e4>$2</color>/$3).</nobr>
+r:"<nobr>角色的防禦力提升\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)。</nobr>"=<nobr>Increase DEF by ($1/$2/<color\=#e9cb2f>$3</color>).</nobr>
+r:"<nobr>角色的防禦力提升<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>。</nobr>"=<nobr>Increase DEF by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color>.</nobr>
+r:"<nobr>角色的防禦力提升<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>。</nobr>"=<nobr>Increase DEF by <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color>.</nobr>
+r:"<nobr>角色的防禦力提升(\d+\.\d+%)。</nobr>"=<nobr>Increase DEF by $1.</nobr>
+
+加護·其二=<size\=22>Protection Two</size>
+r:"<nobr>所有角色受到的護盾效果提升\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)</nobr>"=<nobr>Increase Shield Effect by (<color\=#50b50d>$1</color>/$2/$3).</nobr>
+r:"<nobr>所有角色受到的護盾效果提升\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)</nobr>"=<nobr>Increase Shield Effect by ($1/<color\=#c900e4>$2</color>/$3).</nobr>
+r:"<nobr>所有角色受到的護盾效果提升\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)</nobr>"=<nobr>Increase Shield Effect by ($1/$2/<color\=#e9cb2f>$3</color>).</nobr>
+r:"<nobr>所有角色受到的護盾效果提升<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color></nobr>"=<nobr>Increase Shield Effect by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color>.</nobr>
+r:"<nobr>所有角色受到的護盾效果提升<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color></nobr>"=<nobr>Increase Shield Effect by <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color>.</nobr>
+r:"<nobr>所有角色受到的護盾效果提升(\d+\.\d+%)</nobr>"=<nobr>Increase Shield Effect by $1.</nobr>
+
+加護·其三=<size\=22>Protection Three</size>
+r:"<nobr>持有護盾的角色，受到傷害時，對傷害來源造成1次\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)防禦力的萬能屬性傷害。</nobr>"=<nobr>When a Shielded ally takes damage, deal (<color\=#50b50d>$1</color>/$2/$3) of their DEF as Almighty damage back to the attacker.</nobr>
+r:"<nobr>持有護盾的角色，受到傷害時，對傷害來源造成1次\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)防禦力的萬能屬性傷害。</nobr>"=<nobr>When a Shielded ally takes damage, deal ($1/<color\=#c900e4>$2</color>/$3) of their DEF as Almighty damage back to the attacker.</nobr>
+r:"<nobr>持有護盾的角色，受到傷害時，對傷害來源造成1次\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)防禦力的萬能屬性傷害。</nobr>"=<nobr>When a Shielded ally takes damage, deal ($1/$2/<color\=#e9cb2f>$3</color>) of their DEF as Almighty damage back to the attacker.</nobr>
+r:"<nobr>持有護盾的角色，受到傷害時，對傷害來源造成1次<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>防禦力的萬能屬性傷害。</nobr>"=<nobr>When a Shielded ally takes damage, deal <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> of their DEF as Almighty damage back to the attacker.</nobr>
+r:"<nobr>持有護盾的角色，受到傷害時，對傷害來源造成1次<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>防禦力的萬能屬性傷害。</nobr>"=<nobr>When a Shielded ally takes damage, deal <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> of their DEF as Almighty damage back to the attacker.</nobr>
+r:"<nobr>持有護盾的角色，受到傷害時，對傷害來源造成1次(\d+\.\d+%)防禦力的萬能屬性傷害。</nobr>"=<nobr>When a Shielded ally takes damage, deal $1 of their DEF as Almighty damage back to the attacker.</nobr>
+
+加護·其四=<size\=22>Protection Four</size>
+r:"<nobr>進入戰鬥後，所有人獲得1個相當於\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)\)防禦力的護盾，持續3回合。</nobr>"=<nobr>On battle start, all allies gain a Shield equal to (<color\=#50b50d>$1</color>/$2) of their DEF for 3 turns.</nobr>
+r:"<nobr>進入戰鬥後，所有人獲得1個相當於\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>\)防禦力的護盾，持續3回合。</nobr>"=<nobr>On battle start, all allies gain a Shield equal to ($1/<color\=#c900e4>$2</color>) of their DEF for 3 turns.</nobr>
+r:"<nobr>進入戰鬥後，所有人獲得1個相當於<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>防禦力的護盾，持續3回合。</nobr>"=<nobr>On battle start, all allies gain a Shield equal to <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> of their DEF for 3 turns.</nobr>
+r:"<nobr>進入戰鬥後，所有人獲得1個相當於(\d+\.\d+%)防禦力的護盾，持續3回合。</nobr>"=<nobr>On battle start, all allies gain a Shield equal to $1 of their DEF for 3 turns.</nobr>
+
+加護·其五=<size\=22>Protection Five</size>
+r:"<nobr>角色受到護盾效果時，額外獲得1個相當於該護盾量\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)\)的護盾，持續2回合。</nobr>"=<nobr>When an ally receives a Shield, they gain an additional Shield equal to (<color\=#50b50d>$1</color>/$2) of the recieved Shield for 2 turns.</nobr>
+r:"<nobr>角色受到護盾效果時，額外獲得1個相當於該護盾量\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>\)的護盾，持續2回合。</nobr>"=<nobr>When an ally receives a Shield, they gain an additional Shield equal to ($1/<color\=#c900e4>$2</color>) of the recieved Shield for 2 turns.</nobr>
+r:"<nobr>角色受到護盾效果時，額外獲得1個相當於該護盾量<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>的護盾，持續2回合。</nobr>"=<nobr>When an ally receives a Shield, they gain an additional Shield equal to <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> of the recieved Shield for 2 turns.</nobr>
+r:"<nobr>角色受到護盾效果時，額外獲得1個相當於該護盾量(\d+\.\d+%)的護盾，持續2回合。</nobr>"=<nobr>When an ally receives a Shield, they gain an additional Shield equal to $1 of the recieved Shield for 2 turns.</nobr>
+
+加護·其六=<size\=22>Protection Six</size>
+r:"<nobr>角色的每回合開始時，獲得相當於(\d+%)防禦力的護盾，效果持續2回合，處於該護盾下時，角色造成的傷害提升25%。</nobr>"=<nobr>At the start of each ally's turn, gain Shield equal to $1 of their DEF for 2 turns, allies deal 25% more DMG when Shielded.</nobr>
+
+
+
+福佑·其一=<size\=22>Blessing One</size>
+r:"<nobr>角色受到增益效果時，攻擊力提升\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)，效果持續1回合。</nobr>"=<nobr>When an ally recieves buffs, increase their ATK by (<color\=#50b50d>$1</color>/$2/$3) for 1 turn.</nobr>
+r:"<nobr>角色受到增益效果時，攻擊力提升\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)，效果持續1回合。</nobr>"=<nobr>When an ally recieves buffs, increase their ATK by ($1/<color\=#c900e4>$2</color>/$3) for 1 turn.</nobr>
+r:"<nobr>角色受到增益效果時，攻擊力提升\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)，效果持續1回合。</nobr>"=<nobr>When an ally recieves buffs, increase their ATK by ($1/$2/<color\=#e9cb2f>$3</color>) for 1 turn.</nobr>
+r:"<nobr>角色受到增益效果時，攻擊力提升<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>，效果持續1回合。</nobr>"=<nobr>When an ally recieves buffs, increase their ATK by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> for 1 turn.</nobr>
+r:"<nobr>角色受到增益效果時，攻擊力提升<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>，效果持續1回合。</nobr>"=<nobr>When an ally recieves buffs, increase their ATK by <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> for 1 turn.</nobr>
+r:"<nobr>角色受到增益效果時，攻擊力提升(\d+\.\d+%)，效果持續1回合。</nobr>"=<nobr>When an ally recieves buffs, increase their ATK by $1 for 1 turn.</nobr>
+
+福佑·其二=<size\=22>Blessing Two</size>
+r:"<nobr>所有同伴都有來自怪盜的增益效果時，造成的傷害提升\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)。</nobr>"=<nobr>When all allies have a buff, increase their DMG dealt by (<color\=#50b50d>$1</color>/$2/$3).</nobr>
+r:"<nobr>所有同伴都有來自怪盜的增益效果時，造成的傷害提升\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)。</nobr>"=<nobr>When all allies have a buff, increase their DMG dealt by ($1/<color\=#c900e4>$2</color>/$3).</nobr>
+r:"<nobr>所有同伴都有來自怪盜的增益效果時，造成的傷害提升\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)。</nobr>"=<nobr>When all allies have a buff, increase their DMG dealt by ($1/$2/<color\=#e9cb2f>$3</color>).</nobr>
+r:"<nobr>所有同伴都有來自怪盜的增益效果時，造成的傷害提升<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>。</nobr>"=<nobr>When all allies have a buff, increase their DMG dealt by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color>.</nobr>
+r:"<nobr>所有同伴都有來自怪盜的增益效果時，造成的傷害提升<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>。</nobr>"=<nobr>When all allies have a buff, increase their DMG dealt by <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color>.</nobr>
+r:"<nobr>所有同伴都有來自怪盜的增益效果時，造成的傷害提升(\d+\.\d+%)。</nobr>"=<nobr>When all allies have a buff, increase their DMG dealt by $1	.</nobr>
+
+福佑·其三=<size\=22>Blessing Three</size>
+r:"<nobr>角色受到來自同伴的增益效果後，防禦力提升\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)，效果持續2回合。</nobr>"=<nobr>After receiving a buff, increase DEF by (<color\=#50b50d>$1</color>/$2/$3) for 2 turns.</nobr>
+r:"<nobr>角色受到來自同伴的增益效果後，防禦力提升\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)，效果持續2回合。</nobr>"=<nobr>After receiving a buff, increase DEF by ($1/<color\=#c900e4>$2</color>/$3) for 2 turns.</nobr>
+r:"<nobr>角色受到來自同伴的增益效果後，防禦力提升\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)，效果持續2回合。</nobr>"=<nobr>After receiving a buff, increase DEF by ($1/$2/<color\=#e9cb2f>$3</color>) for 2 turns.</nobr>
+r:"<nobr>角色受到來自同伴的增益效果後，防禦力提升<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>，效果持續2回合。</nobr>"=<nobr>After receiving a buff, increase DEF by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> for 2 turns.</nobr>
+r:"<nobr>角色受到來自同伴的增益效果後，防禦力提升<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>，效果持續2回合。</nobr>"=<nobr>After receiving a buff, increase DEF by <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> for 2 turns.</nobr>
+r:"<nobr>角色受到來自同伴的增益效果後，防禦力提升(\d+\.\d+%)，效果持續2回合。</nobr>"=<nobr>After receiving a buff, increase DEF by $1 for 2 turns.</nobr>
+
+福佑·其四=<size\=22>Blessing Four</size>
+r:"<nobr>角色釋放技能後若未造成傷害，則使所有同伴造成的傷害提升\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)\)，效果持續1回合，最多疊加3層。</nobr>"=<nobr>If an ally did not deal damage after using a skill, increase all ally's DMG dealt by (<color\=#50b50d>$1</color>/$2) for 1 turn, up to 3 stacks.</nobr>
+r:"<nobr>角色釋放技能後若未造成傷害，則使所有同伴造成的傷害提升\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>\)，效果持續1回合，最多疊加3層。</nobr>"=<nobr>If an ally did not deal damage after using a skill, increase all ally's DMG dealt by ($1/<color\=#c900e4>$2</color>) for 1 turn, up to 3 stacks.</nobr>
+r:"<nobr>角色釋放技能後若未造成傷害，則使所有同伴造成的傷害提升<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>，效果持續1回合，最多疊加3層。</nobr>"=<nobr>If an ally did not deal damage after using a skill, increase all ally's DMG dealt by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> for 1 turn, up to 3 stacks.</nobr>
+r:"<nobr>角色釋放技能後若未造成傷害，則使所有同伴造成的傷害提升(\d+\.\d+%)，效果持續1回合，最多疊加3層。</nobr>"=<nobr>If an ally did not deal damage after using a skill, increase all ally's DMG dealt by $1 for 1 turn, up to 3 stacks.</nobr>
+
+福佑·其五=<size\=22>Blessing Five</size>
+r:"<nobr>角色行動時，基於上一名行動的怪盜的攻擊力的\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)\)，獲得攻擊力提升，效果持續1回合。</nobr>"=<nobr>When an ally acts, increase their ATK based on (<color\=#50b50d>$1</color>/$2) of the ATK of the previously acted ally for 1 turn.</nobr>
+r:"<nobr>角色行動時，基於上一名行動的怪盜的攻擊力的\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>\)，獲得攻擊力提升，效果持續1回合。</nobr>"=<nobr>When an ally acts, increase their ATK based on ($1/<color\=#c900e4>$2</color>) of the ATK of the previously acted ally for 1 turn.</nobr>
+r:"<nobr>角色行動時，基於上一名行動的怪盜的攻擊力的<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>，獲得攻擊力提升，效果持續1回合。</nobr>"=<nobr>When an ally acts, increase their ATK based on <color\=#50b50d>32.0%</color>→<color\=#c900e4>40.0%</color> of the ATK of the previously acted ally for 1 turn.</nobr>
+r:"<nobr>角色行動時，基於上一名行動的怪盜的攻擊力的(\d+\.\d+%)，獲得攻擊力提升，效果持續1回合。</nobr>"=<nobr>When an ally acts, increase their ATK based on $1 of the ATK of the previously acted ally for 1 turn.</nobr>
+
+福佑·其六=<size\=22>Blessing Six</size>
+r:"<nobr>所有角色每受到1次增益技能，則使自身的攻擊力永久提升(\d+%)。上限5層。</nobr>"=<nobr>Permanently incease ATK by $1 after receiving a buff, cap at 5 stacks.</nobr>
+
+
+
+驅邪·其一=<size\=22>Exorcism One</size>
+r:"^<nobr>敵人受到減益效果時，有\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)固定機率獲得一層<link\="s\|167"><u>『痛楚』</u></link>。</nobr>$"="<size\=24><nobr>When an enemy receives a debuff, there is a fixed (<color\=#50b50d>$1</color>/$2/$3) chance that they will gain a stack of <link\="s|167"><u>Pain</u></link>.</nobr></size>"
+r:"^<nobr>敵人受到減益效果時，有\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)固定機率獲得一層<link\="s\|167"><u>『痛楚』</u></link>。</nobr>$"="<size\=24><nobr>When an enemy receives a debuff, there is a fixed ($1/<color\=#c900e4>$2</color>/$3) chance that they will gain a stack of <link\="s|167"><u>Pain</u></link>.</nobr></size>"
+r:"^<nobr>敵人受到減益效果時，有\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)固定機率獲得一層<link\="s\|167"><u>『痛楚』</u></link>。</nobr>$"="<size\=24><nobr>When an enemy receives a debuff, there is a fixed ($1/$2/<color\=#e9cb2f>$3</color>) chance that they will gain a stack of <link\="s|167"><u>Pain</u></link>.</nobr></size>"
+r:"^<nobr>敵人受到減益效果時，有<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>固定機率獲得一層<link\="s\|167"><u>『痛楚』</u></link>。</nobr>"="<size\=24><nobr>When an enemy receives a debuff, there is a fixed <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> chance that they will gain a stack of <link\="s|167"><u>Pain</u></link>.</nobr></size>"
+r:"^<nobr>敵人受到減益效果時，有<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>固定機率獲得一層<link\="s\|167"><u>『痛楚』</u></link>。</nobr>"="<size\=24><nobr>When an enemy receives a debuff, there is a fixed <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> chance that they will gain a stack of <link\="s|167"><u>Pain</u></link>.</nobr></size>"
+r:"^<nobr>敵人受到減益效果時，有(\d+\.\d+%)固定機率獲得一層<link\="s\|167"><u>『痛楚』</u></link>。</nobr>"="<nobr>When an enemy receives a debuff, there is a fixed $1 chance that they will gain a stack of <link\="s|167"><u>Pain</u></link>.</nobr>"
+
+驅邪·其二=<size\=22>Exorcism Two</size>
+r:"<nobr>敵人受到的所有持續性傷害效果的傷害提升\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)。</nobr>"=<nobr>Enemies take (<color\=#50b50d>$1</color>/$2/$3) more damage from damage over time effects.</nobr>
+r:"<nobr>敵人受到的所有持續性傷害效果的傷害提升\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)。</nobr>"=<nobr>Enemies take ($1/<color\=#c900e4>$2</color>/$3) more damage from damage over time effects.</nobr>
+r:"<nobr>敵人受到的所有持續性傷害效果的傷害提升\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)。</nobr>"=<nobr>Enemies take ($1/$2/<color\=#e9cb2f>$3</color>) more damage from damage over time effects.</nobr>
+r:"<nobr>敵人受到的所有持續性傷害效果的傷害提升<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>。</nobr>"=<nobr>Enemies take <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> more damage from damage over time effects.</nobr>
+r:"<nobr>敵人受到的所有持續性傷害效果的傷害提升<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>。</nobr>"=<nobr>Enemies take <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> more damage from damage over time effects.</nobr>
+r:"<nobr>敵人受到的所有持續性傷害效果的傷害提升(\d+\.\d+%)。</nobr>"="<nobr>Enemies take $1 more damage from damage over time effects.</nobr>"
+
+驅邪·其三=<size\=22>Exorcism Three</size>
+r:"^<nobr>敵人身上每有1層<link\="s\|167"><u>『痛楚』</u></link>，則防禦力降低\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)。</nobr>$"="<nobr>Decrease enemy DEF by (<color\=#50b50d>$1</color>/$2/$3) for each stack of <link\="s|167"><u>Pain</u></link> it has.</nobr>"
+r:"^<nobr>敵人身上每有1層<link\="s\|167"><u>『痛楚』</u></link>，則防禦力降低\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)。</nobr>$"="<nobr>Decrease enemy DEF by ($1/<color\=#c900e4>$2</color>/$3) for each stack of <link\="s|167"><u>Pain</u></link> it has.</nobr>"
+r:"^<nobr>敵人身上每有1層<link\="s\|167"><u>『痛楚』</u></link>，則防禦力降低\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)。</nobr>$"="<nobr>Decrease enemy DEF by ($1/$2/<color\=#e9cb2f>$3</color>) for each stack of <link\="s|167"><u>Pain</u></link> it has.</nobr>"
+r:"^<nobr>敵人身上每有1層<link\="s\|167"><u>『痛楚』</u></link>，則防禦力降低<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>。</nobr>$"="<nobr>Decrease enemy DEF by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> for each stack of <link\="s|167"><u>Pain</u></link> it has.</nobr>"
+r:"^<nobr>敵人身上每有1層<link\="s\|167"><u>『痛楚』</u></link>，則防禦力降低<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>。</nobr>$"="<nobr>Decrease enemy DEF by <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> for each stack of <link\="s|167"><u>Pain</u></link> it has.</nobr>"
+r:"^<nobr>敵人身上每有1層<link\="s\|167"><u>『痛楚』</u></link>，則防禦力降低(\d+\.\d+%)。</nobr>$"="<nobr>Decrease enemy DEF by $1 for each stack of <link\="s|167"><u>Pain</u></link> it has.</nobr>"
+
+驅邪·其四=<size\=22>Exorcism Four</size>
+r:"^<nobr>擊敗敵人後，使所有其他敵人獲得\(<color\=#50b50d>(\d+)</color>/(\d+)\)層<link\="s\|167"><u>『痛楚』</u></link>。</nobr>$"="<nobr>After defeating an enemy, all other enemies gain (<color\=#50b50d>$1</color>/$2) stacks of <link\="s|167"><u>Pain</u></link>.</nobr>"
+r:"^<nobr>擊敗敵人後，使所有其他敵人獲得\((\d+)/<color\=#c900e4>(\d+)</color>\)層<link\="s\|167"><u>『痛楚』</u></link>。</nobr>$"="<nobr>After defeating an enemy, all other enemies gain ($1/<color\=#c900e4>$2</color>) stacks of <link\="s|167"><u>Pain</u></link>.</nobr>"
+r:"^<nobr>擊敗敵人後，使所有其他敵人獲得<color\=#50b50d>(\d+)</color>→<color\=#c900e4>(\d+)</color>層<link\="s\|167"><u>『痛楚』</u></link>。</nobr>$"="<nobr>After defeating an enemy, all other enemies gain <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> stacks of <link\="s|167"><u>Pain</u></link>.</nobr>"
+r:"^<nobr>擊敗敵人後，使所有其他敵人獲得(\d+)層<link\="s\|167"><u>『痛楚』</u></link>。</nobr>$"="<nobr>After defeating an enemy, all other enemies gain $1 stacks of <link\="s|167"><u>Pain</u></link>.</nobr>"
+
+驅邪·其五=<size\=22>Exorcism Five</size>
+r:"^<nobr>敵人受到元素異常效果後，獲得\(<color\=#50b50d>(\d+)</color>/(\d+)\)層<link\="s\|167"><u>『痛楚』</u></link>。</nobr>$"="After an enemy receives an Elemental Abnormal effect, it gains (<color\=#50b50d>$1</color>/$2) stacks of <link\="s|167"><u>Pain</u></link>."
+r:"^<nobr>敵人受到元素異常效果後，獲得\((\d+)/<color\=#c900e4>(\d+)</color>\)層<link\="s\|167"><u>『痛楚』</u></link>。</nobr>$"="After an enemy receives an Elemental Abnormal effect, it gains ($1/<color\=#c900e4>$2</color>) stacks of <link\="s|167"><u>Pain</u></link>."
+r:"^<nobr>敵人受到元素異常效果後，獲得<color\=#50b50d>(\d+)</color>→<color\=#c900e4>(\d+)</color>層<link\="s\|167"><u>『痛楚』</u></link>。</nobr>$"="After an enemy receives an Elemental Abnormal effect, it gains <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> stacks of <link\="s|167"><u>Pain</u></link>."
+r:"^<nobr>敵人受到元素異常效果後，獲得(\d+)層<link\="s\|167"><u>『痛楚』</u></link>。</nobr>$"="After an enemy receives an Elemental Abnormal effect, it gains $1 stacks of <link\="s|167"><u>Pain</u></link>."
+
+驅邪·其六=<size\=22>Exorcism Six</size>
+r:"^<nobr>敵人每次受到<link\="s\|167"><u>『痛楚』</u></link>時，有(\d+%)的固定機率再次獲得<link\="s\|167"><u>『痛楚』</u></link>，可多次觸發，至多觸發到敵人身上有(\d+)層<link\="s\|167"><u>『痛楚』</u></link>。</nobr>$"="<nobr>Every time an enemy receives <link\="s|167"><u>Pain</u></link>, there is a fixed $1 chance of them receiving more <link\="s|167"><u>Pain</u></link>, this can be triggered multiple times, up to a maximum of $2 stacks of <link\="s|167"><u>Pain</u></link> on the same enemy.</nobr>"
+
+御守套裝『驅邪』的專屬效果，每層對敵人造成1%最大生命值的傷害，持續2回合。=Lose 1% MAX HP damage per stack for 2 turns.
+
+
+
+緣結·其一=<size\=22>Navi One</size>
+r:"<nobr>解明怪盜行動後，使當前生命值最低的同伴回復\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)最大生命值。</nobr>"=<nobr>After the Navigator acts, the ally with the lowest HP heals (<color\=#50b50d>$1</color>/$2/$3) of their Max HP.</nobr>
+r:"<nobr>解明怪盜行動後，使當前生命值最低的同伴回復\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)最大生命值。</nobr>"=<nobr>After the Navigator acts, the ally with the lowest HP heals ($1/<color\=#c900e4>$2</color>/$3) of their Max HP.</nobr>
+r:"<nobr>解明怪盜行動後，使當前生命值最低的同伴回復\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)最大生命值。</nobr>"=<nobr>After the Navigator acts, the ally with the lowest HP heals ($1/$2/<color\=#e9cb2f>$3</color>) of their Max HP.</nobr>
+r:"<nobr>解明怪盜行動後，使當前生命值最低的同伴回復<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>最大生命值。</nobr>"=<nobr>After the Navigator acts, the ally with the lowest HP heals <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> of their Max HP.</nobr>
+r:"<nobr>解明怪盜行動後，使當前生命值最低的同伴回復<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>最大生命值。</nobr>"=<nobr>After the Navigator acts, the ally with the lowest HP heals <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> of their Max HP.</nobr>
+r:"<nobr>解明怪盜行動後，使當前生命值最低的同伴回復(\d+\.\d+%)最大生命值。</nobr>"=<nobr>After the Navigator acts, the ally with the lowest HP heals $1 of their Max HP.</nobr>
+
+緣結·其二=<size\=22>Navi Two</size>
+r:"<nobr>解明怪盜行動後，使所有同伴攻擊力提升\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)，效果持續1回合。</nobr>"=<nobr>After the Navigator acts, increase all ally's ATK by (<color\=#50b50d>$1</color>/$2/$3) for 1 turn.</nobr>
+r:"<nobr>解明怪盜行動後，使所有同伴攻擊力提升\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)，效果持續1回合。</nobr>"=<nobr>After the Navigator acts, increase all ally's ATK by ($1/<color\=#c900e4>$2</color>/$3) for 1 turn.</nobr>
+r:"<nobr>解明怪盜行動後，使所有同伴攻擊力提升\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)，效果持續1回合。</nobr>"=<nobr>After the Navigator acts, increase all ally's ATK by ($1/$2/<color\=#e9cb2f>$3</color>) for 1 turn.</nobr>
+r:"<nobr>解明怪盜行動後，使所有同伴攻擊力提升<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>，效果持續1回合。</nobr>"=<nobr>After the Navigator acts, increase all ally's ATK by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> for 1 turn.</nobr>
+r:"<nobr>解明怪盜行動後，使所有同伴攻擊力提升<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>，效果持續1回合。</nobr>"=<nobr>After the Navigator acts, increase all ally's ATK by <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> for 1 turn.</nobr>
+r:"<nobr>解明怪盜行動後，使所有同伴攻擊力提升(\d+\.\d+%)，效果持續1回合。</nobr>"=<nobr>After the Navigator acts, increase all ally's ATK by $1 for 1 turn.</nobr>
+
+緣結·其三=<size\=22>Navi Three</size>
+r:"<nobr>解明怪盜行動後，怪盜造成的傷害提升\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)，效果持續1回合。</nobr>"=<nobr>After the Navigator acts, increase all ally's DMG dealt by (<color\=#50b50d>$1</color>/$2/$3) for 1 turn.</nobr>
+r:"<nobr>解明怪盜行動後，怪盜造成的傷害提升\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)，效果持續1回合。</nobr>"=<nobr>After the Navigator acts, increase all ally's DMG dealt by ($1/<color\=#c900e4>$2</color>/$3) for 1 turn.</nobr>
+r:"<nobr>解明怪盜行動後，怪盜造成的傷害提升\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)，效果持續1回合。</nobr>"=<nobr>After the Navigator acts, increase all ally's DMG dealt by ($1/$2/<color\=#e9cb2f>$3</color>) for 1 turn.</nobr>
+r:"<nobr>解明怪盜行動後，怪盜造成的傷害提升<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>，效果持續1回合。</nobr>"=<nobr>After the Navigator acts, increase all ally's DMG dealt by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> for 1 turn.</nobr>
+r:"<nobr>解明怪盜行動後，怪盜造成的傷害提升<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>，效果持續1回合。</nobr>"=<nobr>After the Navigator acts, increase all ally's DMG dealt by <color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color> for 1 turn.</nobr>
+r:"<nobr>解明怪盜行動後，怪盜造成的傷害提升(\d+\.\d+%)，效果持續1回合。</nobr>"=<nobr>After the Navigator acts, increase all ally's DMG dealt by $1 for 1 turn.</nobr>
+
+緣結·其四=<size\=22>Navi Four</size>
+r:"<nobr>戰鬥開始時，解明怪盜的準備時間減少\(<color\=#50b50d>(\d+)</color>/(\d+)\)回合。</nobr>"=<nobr>At the start of the battle, decrease the cooldown of the Navigator by (<color\=#50b50d>$1</color>/$2) turns.</nobr>
+r:"<nobr>戰鬥開始時，解明怪盜的準備時間減少\((\d+)/<color\=#c900e4>(\d+)</color>\)回合。</nobr>"=<nobr>At the start of the battle, decrease the cooldown of the Navigator by ($1/<color\=#c900e4>$2</color>) turns.</nobr>
+r:"<nobr>戰鬥開始時，解明怪盜的準備時間減少<color\=#50b50d>(\d+)</color>→<color\=#c900e4>(\d+)</color>回合。</nobr>"=<nobr>At the start of the battle, decrease the cooldown of the Navigator by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> turns.</nobr>
+r:"<nobr>戰鬥開始時，解明怪盜的準備時間減少(\d+)回合。</nobr>"=<nobr>At the start of the battle, decrease the cooldown of the Navigator by $1 turns.</nobr>
+
+緣結·其五=<size\=22>Navi Five</size>
+r:"<nobr>任一怪盜行動後，有\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)\)固定機率使解明怪盜的準備時間減少1回合。</nobr>"=<nobr>After any ally acts, there is a (<color\=#50b50d>$1</color>/$2) fixed chance to decrease the cooldown of the Navigator by 1 turn.</nobr>
+r:"<nobr>任一怪盜行動後，有\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>\)固定機率使解明怪盜的準備時間減少1回合。</nobr>"=<nobr>After any ally acts, there is a ($1/<color\=#c900e4>$2</color>) fixed chance to decrease the cooldown of the Navigator by 1 turn.</nobr>
+r:"<nobr>任一怪盜行動後，有<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>固定機率使解明怪盜的準備時間減少1回合。</nobr>"=<nobr>After any ally acts, there is a <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> fixed chance to decrease the cooldown of the Navigator by 1 turn.</nobr>
+r:"<nobr>任一怪盜行動後，有(\d+\.\d+%)固定機率使解明怪盜的準備時間減少1回合。</nobr>"=<nobr>After any ally acts, there is a $1 fixed chance to decrease the cooldown of the Navigator by 1 turn.</nobr>
+
+緣結·其六=<size\=22>Navi Six</size>
+r:"<nobr>解明怪盜每行動2次，就使得所有怪盜造成的傷害提升(\d+%)，持續1回合。</nobr>"=<nobr>After the Navigator has acted 2 times, increase all DMG dealt by 100% for 1 turn.</nobr>
+
+----------
+SET BONUSES
+----------
+
+4件套=4-piece set
+2件套=2-piece set
+
+濁身套裝=<size\=20>Impurity Set</size>
+r:"^2件套：<link\="s\|170"><u>『猩紅潮汐』</u></link>造成傷害提升(\d+%)，我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後有(\d+%)機率獲得免疫倒地狀態，持續1回合。$"="<size\=25>2-piece set: Increase <link\="s|170"><u>Scarlet Tide</u></link> DMG dealt by $1. There is a $2 for all allies to gain down immunity for 1 turn after getting hit by <link\="s|170"><u>Scarlet Tide</u></link>.</size>"
+r:"^<link\="s\|170"><u>『猩紅潮汐』</u></link>造成傷害提升(\d+%)，我方怪盜受到<link\="s\|170"><u>『猩紅潮汐』</u></link>後有(\d+%)機率獲得免疫倒地狀態，持續1回合。$"="<size\=25>Increase <link\="s|170"><u>Scarlet Tide</u></link> DMG dealt by $1. There is a $2 for all allies to gain down immunity for 1 turn after getting hit by <link\="s|170"><u>Scarlet Tide</u></link>.</size>"
+r:"^4件套：「狂熱之力」產生額外效果，每層使我方受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害額外提升(\d+%)，敵方受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害額外提升(\d+%)。$"="<size\=25>4-piece set: Each stack of Frenzy now causes enemy to take $2 more DMG from <link\="s|170"><u>Scarlet Tide</u></link> and allies to take $1 more DMG from <link\="s|170"><u>Scarlet Tide</u></link>.</size>"
+r:"^「狂熱之力」產生額外效果，每層使我方受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害額外提升(\d+%)，敵方受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害額外提升(\d+%)。$"="<size\=25>4-piece set: Each stack of Frenzy now causes enemy to take $2 more DMG from <link\="s|170"><u>Scarlet Tide</u></link> and allies to take $1 more DMG from <link\="s|170"><u>Scarlet Tide</u></link>.</size>"
+
+濯心套裝=<size\=20>Scarlet Set</size>
+r:"^2件套：敵我雙方受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害降低(\d+%)，<link\="s\|170"><u>『猩紅潮汐』</u></link>觸發頻率提升，變為每(\d+)個回合觸發一次。$"="<size\=25>2-piece set: Decreases DMG of <link\="s|170"><u>Scarlet Tide</u></link> by $1. Now triggers every $2 turns.</size>"
+r:"^敵我雙方受到<link\="s\|170"><u>『猩紅潮汐』</u></link>傷害降低(\d+%)，<link\="s\|170"><u>『猩紅潮汐』</u></link>觸發頻率提升，變為每(\d+)個回合觸發一次。$"="<size\=25>Decreases DMG of <link\="s|170"><u>Scarlet Tide</u></link> by $1. Now triggers every $2 turns.</size>"
+r:"^4件套：「狂熱之力」產生額外效果，每層使我方受到傷害額外提升(\d+%)，敵方受到傷害額外提升(\d+%)。$"="<size\=25>4-piece set: Each stack of Frenzy now gives an additional $2 DMG Taken to enemies and $1 DMG Taken to allies.</size>"
+r:"^「狂熱之力」產生額外效果，每層使我方受到傷害額外提升(\d+%)，敵方受到傷害額外提升(\d+%)。$"="<size\=25>Each stack of Frenzy now gives an additional $2 DMG Taken to enemies and $1 DMG Taken to allies.</size>"
+
+重祭套裝=<size\=20>Sacrifice Set</size>
+2件套：<link\="s|185"><u>『蝕刻星隕』</u></link>造成的每段傷害，使敵人受弱點傷害提升5%，持續2回合，可疊加5層。=2-piece set: Each instance of damage from <link\="s|185"><u>Eclipse Meteor</u></link> increase enemy's Weakness DMG by 5% for 2 turns, cap at 5 stacks.
+<link\="s|185"><u>『蝕刻星隕』</u></link>造成的每段傷害，使敵人受弱點傷害提升5%，持續2回合，可疊加5層。= Each instance of damage from <link\="s|185"><u>Eclipse Meteor</u></link> increase enemy's Weakness DMG by 5% for 2 turns, cap at 5 stacks.
+4件套：敵人累計受到5段<link\="s|185"><u>『蝕刻星隕』</u></link>的傷害時，會使自身對全屬性的適應性變為弱，受到傷害提升30%，持續1回合。=4-piece set: When an enemy has taken 5 instances of damage from <link\="s|185"><u>Eclipse Meteor</u></link>, make them weak to all element and increase DMG Taken by 30% for 1 turn.
+敵人累計受到5段<link\="s|185"><u>『蝕刻星隕』</u></link>的傷害時，會使自身對全屬性的適應性變為弱，受到傷害提升30%，持續1回合。=When an enemy has taken 5 instances of damage from <link\="s|185"><u>Eclipse Meteor</u></link>, make them weak to all element and increase DMG Taken by 30% for 1 turn.
+
+響祭套裝=<size\=20>Hibiki Set</size>
+2件套：<link\="s|185"><u>『蝕刻星隕』</u></link>造成的每段傷害，使敵人受弱點傷害提升5%，持續2回合，可疊加5層。=2-piece set: Each instance of damage from <link\="s|185"><u>Eclipse Meteor</u></link> increase enemy's Weakness DMG by 5% for 2 turns, cap at 5 stacks.
+<link\="s|185"><u>『蝕刻星隕』</u></link>造成的每段傷害，使敵人受弱點傷害提升5%，持續2回合，可疊加5層。= Each instance of damage from <link\="s|185"><u>Eclipse Meteor</u></link> increase enemy's Weakness DMG by 5% for 2 turns, cap at 5 stacks.
+4件套：敵人累計受到4段<link\="s|185"><u>『蝕刻星隕』</u></link>的傷害時，會使自身對隨機一種屬性的適應性變為弱，受到傷害提升5%，可疊加10層，適應性改變與受傷害提升效果持續永久。=4-piece set: When an enemy has taken 4 instances of damage from <link\="s|185"><u>Eclipse Meteor</u></link>, make them weak to 1 random element and increase DMG Taken by 5% permanently, cap at 10 stacks.
+敵人累計受到4段<link\="s|185"><u>『蝕刻星隕』</u></link>的傷害時，會使自身對隨機一種屬性的適應性變為弱，受到傷害提升5%，可疊加10層，適應性改變與受傷害提升效果持續永久。=When an enemy has taken 4 instances of damage from <link\="s|185"><u>Eclipse Meteor</u></link>, make them weak to 1 random element and increase DMG Taken by 5% permanently, cap at 10 stacks.
+
+戮命套裝=<size\=20>ST ATK Set</size>
+2件套：以1名敵人為目標釋放人格面具技能時，無視敵人30%防禦力。=<size\=25>2-piece set: Ignore 30% of the enemy's DEF when using a single target skill.</size>
+以1名敵人為目標釋放人格面具技能時，無視敵人30%防禦力。=<size\=25>Ignore 30% of the enemy's DEF when using a single target skill.</size>
+4件套：釋放單體人格面具技能後，使技能目標獲得1次相當於其受到的傷害70%的額外萬能屬性傷害。=<size\=25>4-piece set: After using a single target skill, the target would take 70% almighty DMG based on the DMG dealt.</size>
+釋放單體人格面具技能後，使技能目標獲得1次相當於其受到的傷害70%的額外萬能屬性傷害。=<size\=25>After using a single target skill, the target would take 70% almighty DMG based on the DMG dealt.</size>
+
+亂戰套裝=<size\=20>AoE ATK Set</size>
+2件套：場上每有一名敵人，就使自身造成的傷害提升15%。=<size\=25>2-piece set: Increase DMG dealt by 15% for each enemy on the field.</size>
+場上每有一名敵人，就使自身造成的傷害提升15%。=<size\=25>Increase DMG dealt by 15% for each enemy on the field.</size>
+4件套：技能每攻擊多1個目標，造成的傷害提升15%，釋放群體技能時，計算敵人目標數時，額外增加2。=<size\=25>4-piece set: Skills deal 15% more DMG for each additional target, increase the target count by 2 with using AoE skills.</size>
+技能每攻擊多1個目標，造成的傷害提升15%，釋放群體技能時，計算敵人目標數時，額外增加2。=<size\=25>Skills deal 15% more DMG for each additional target, increase the target count by 2 with using AoE skills.</size>
+
+療癒套裝=<size\=20>Healing Set</size>
+2件套：所有角色每回合開始時回復10%最大生命值。=<size\=25>2-piece set: Allies heal 10% of their Max HP at the start of their turn.</size>
+所有角色每回合開始時回復10%最大生命值。=<size\=25>Allies heal 10% of their Max HP at the start of their turn.</size>
+4件套：所有角色使用治療技能後，會對隨機1名敵人造成相當於溢出治療量300%的傷害。=<size\=25>4-piece set: After using a healing skill, deal 300% of the Overhealled amount as DMG to a random enemy.</size>
+所有角色使用治療技能後，會對隨機1名敵人造成相當於溢出治療量300%的傷害。=<size\=25>After using a healing skill, deal 300% of the Overhealled amount as DMG to a random enemy.</size>
+
+加護套裝=<size\=20>Protection Set</size>
+2件套：處於護盾下的同伴，防禦力提升35%。=<size\=25>2-piece set: Increase DEF of Shielded allies by 35%.</size>
+處於護盾下的同伴，防禦力提升35%。=<size\=25>Increase DEF of Shielded allies by 35%.</size>
+4件套：角色釋放技能造成傷害或受到傷害後，根據自身的護盾量，對技能主目標或傷害來源方造成一次70%護盾量的萬能屬性傷害。=<size\=25>4-piece set: When an ally deals DMG with a skill or receives DMG, deal 70% of the ally's current Shield amount as Almighty DMG to the target enemy.</size>
+角色釋放技能造成傷害或受到傷害後，根據自身的護盾量，對技能主目標或傷害來源方造成一次70%護盾量的萬能屬性傷害。=<size\=25>When an ally deals DMG with a skill or receives DMG, deal 70% of the ally's current Shield amount as Almighty DMG to the target enemy.</size>
+
+福佑套裝=<size\=20>Blessing Set</size>
+2件套：角色行動時，根據所有同伴的增益效果總數提升造成的傷害，每層3%，上限10層。=<size\=25>2-piece set: Increase DMG dealt by 3% for each buff all allies have, cap at 10 stacks.</size>
+角色行動時，根據所有同伴的增益效果總數提升造成的傷害，每層3%，上限10層。=<size\=25>Increase DMG dealt by 3% for each buff all allies have, cap at 10 stacks.</size>
+4件套：所有角色造成的傷害提升25%。自身每有1個增益效果，則造成的傷害提升7.2%。上限8層。=<size\=25>4-piece set: Increase DMG dealt by 25%. Increase DMG dealt by 7.2% for each buff an ally has, cap at 8 stacks.</size>
+所有角色造成的傷害提升25%。自身每有1個增益效果，則造成的傷害提升7.2%。上限8層。=<size\=25>Increase DMG dealt by 25%. Increase DMG dealt by 7.2% for each buff an ally has, cap at 8 stacks.</size>
+
+驅邪套裝=<size\=20>Exorcism Set</size>
+2件套：持有<link\="s|167"><u>『痛楚』</u></link>的敵人，受到的傷害提升30%。=<size\=25>2-piece set: Enemies with <link\="s|167"><u>Pain</u></link> take 30% more DMG.</size>
+持有<link\="s|167"><u>『痛楚』</u></link>的敵人，受到的傷害提升30%。=<size\=25>Enemies with <link\="s|167"><u>Pain</u></link> take 30% more DMG.</size>
+4件套：對敵人釋放技能造成傷害後，結算其所有的<link\="s|167"><u>『痛楚』</u></link>效果。=<size\=25>4-piece set: After dealing damage to an enemy with a skill, detonate all of their <link\="s|167"><u>Pain</u></link> stacks.</size>
+對敵人釋放技能造成傷害後，結算其所有的<link\="s|167"><u>『痛楚』</u></link>效果。=<size\=25>After dealing damage to an enemy with a skill, detonate all of their <link\="s|167"><u>Pain</u></link> stacks.</size>
+
+緣結套裝=<size\=20>Navi Set</size>
+r:"2件套：解明怪盜行動後，使攻擊力最高的怪盜攻擊力提升(\d+%)，防禦力最高的怪盜防禦力提升(\d+%)，效果持續1回合。"=<size\=25>2-piece set: After the navi acts, increase the highest ATK ally's ATK by $1 and increase the highest DEF ally's DEF $2 for 1 turn.</size>
+r:"解明怪盜行動後，使攻擊力最高的怪盜攻擊力提升(\d+%)，防禦力最高的怪盜防禦力提升(\d+%)，效果持續1回合。"=<size\=25>After the navi acts, increase the highest ATK ally's ATK by $1 and increase the highest DEF ally's DEF $2 for 1 turn.</size>
+r:"4件套：解明怪盜行動後，有(\d+%)的固定機率可以立刻行動，不能重複觸發。"=<size\=25>4-piece set: After the navi acts, there is a fixed $1 chance they can act again. This cannot be triggered consecutively.</size>
+r:"解明怪盜行動後，有(\d+%)的固定機率可以立刻行動，不能重複觸發。"=<size\=25>After the navi acts, there is a fixed $1 chance they can act again. This cannot be triggered consecutively.</size>
+
+----------
+ALL LOST ITEMS
+----------
+
+鐵道硬幣=Railway Coins
+勾玉=Jade
+<color\=#66ccff>『勾玉』</color>=<color\=#66ccff>Jade</color>
+r:"消耗1個「勾玉」，將陣容全體角色生命恢復至上限。\n<color\=#ff3b37>當前擁有 (\d+) 個</color>\n<color\=#ffd700>點擊主介面「陣容區域」使用</color>"=Use 1 Jade to fully restores the HP of all allies. \n<color\=#ff3b37>Currently have $1</color>\n<color\=#ffd700>Click on your team's formation to use it.</color>
+陣容角色生命已滿，無法使用「勾玉」。=All allies are already at full HP, cannot use Jade.
+已無「勾玉」可使用。=You have no Jade to use
+是否消耗1個「<color\=#ff3b37>勾玉</color>」，\n將陣容全體角色生命恢復至上限？\n點擊「<color\=#ff3b37>陣容區域</color>」可主動使用=Do you want to use 1 <color\=#ff3b37>Jade</color> to fully restore the HP of all allies?
+【遺失物效果】= Lost Item Effect
+r:"已收集遺失物：<color\=#edae10>(\d+)/(\d+)</color>"=<size\=23>Collected Lost Items: <color\=#edae10>$1/$2</color></size>
+r:"戰鬥勝利後，獲得的鐵道硬幣增加(\d+%)，持續5個月臺。"=After winning a battle, increase the amount of Railroad Coins you receive by $1 for 5 platforms.
+每有100枚鐵道硬幣，\n就使全體怪盜攻擊力提升5.5%。=For every 100 Railroad Coins you have, increase all ally's ATK by 5.5%.
+戰鬥勝利後，使當前攜帶的鐵道硬幣增加3%。=After each battle, increase the amount of Railroad Coins you have by 3%.
+r:"後續5個月臺無法獲得鐵道硬幣，然後攜帶的鐵道硬幣增加(\d+%)。"=<size\=20>You will not be able to gain any Railroad Coins for the next 5 platforms. Increase the amount of Railroad Coins you have by $1 after 5 platforms.</size>
+被盜走的名畫=Stolen Painting
+失去身上的所有鐵道硬幣；每失去100枚，全體怪盜造成的傷害提升10%。=<size\=25>Lose all Railroad Coins, incease all ally's DMG dealt by 1% for every 10 Railroad Coins you've lost.</size>
+下一場戰鬥勝利後，\n一定會獲得1個橙色御守。=After winning the next battle, gain an Orange Omamori.
+立刻獲得1-2個藍色御守。=Gain 1-2 Blue Omamori immediately.
+戰鬥結束選擇御守時，增加1次免費刷新機會。=You can reroll once for free when choosing Omamori after battle.
+戰鬥結束選擇御守時，額外增加1個選擇。=You have 1 additional Omamori \nto choose from after battle.
+儀式通靈板=Ceremonial Ouija Board
+接下來的3場戰鬥後，「<link\="s|1013"><u>隨機強化</u></link>」擁有的1個御守。=After the next 3 battles, <link\="s|1013"><u>Random Upgrade</u></link> 1 Omamori.
+立即「<link\="s|1013"><u>隨機強化</u></link>」1-5個御守。=Immediately <link\="s|1013"><u>Random Upgrade</u></link> 1-5 Omamori.
+<color\=#66ccff>『隨機強化』</color>=<color\=#66ccff>Random Upgrade</color>
+在擁有的可強化御守中隨機，無法強化也會消耗次數。=Randomly upgrade available Omamori, will still be used even if no upgrade is available.
+獲得該遺失物時，立刻將1個已有御守隨機換成別的御守。=When you gain a Lost Item, randomly replace one of your existing Omamori with a different one immediately.
+立刻獲得60枚鐵道硬幣。=Gain 60 Railroad Coins immediately.
+r:"每場戰鬥後，恢復全體怪盜(\d+%)最大生命值。"=Restore $1 of all ally's Max HP after every battle.
+戰鬥失敗視為勝利，並將所有怪盜恢復至生命上限。可生效1次。\n最終挑戰無效。=<size\=20>Losing a battle will still count as a victory and will fully restore all ally's Max HP. This can only happens once and does not work on the final boss.</size>
+獲得一個「<link\="rg|1008"><u>勾玉</u></link>」。=Gain a <color\=#00A36C><link\="rg|1008"><u>Jade</u></link></color>
+失去所有「<link\="rg|1008"><u>勾玉</u></link>」，並使後續無法獲得；造成的傷害提升20%；受到的傷害降低20%。=Increase DMG dealt by 20% and decrease DMG Taken by 20%. You can no longer gain <link\="rg|1008"><u>Jade</u></link> and lose all <link\="rg|1008"><u>Jade</u></link>.
+所有角色最大生命值降低25%，\n造成的傷害提升30%。=Decrease Max HP by 25% on all allies and increase their DMG dealt increased by 30%.
+所有角色最大生命值降低25%，\n每回合回復20%自身最大生命。=Decrease Max HP by 25% on all allies and they heal 20% of their Max HP per turn.
+戰鬥開始時，對己方角色生效：將隨機1個屬性變為吸；隨機1個屬性變成弱。=At the start of battle, all allies gain Absorb and Weak on a random element.
+詭奇骰子=Strange Dice
+戰鬥開始時，所有己方角色「<link\="s|1012"><u>某項屬性</u></link>」提升30%。「<link\="s|1012"><u>某項屬性</u></link>」降低15%。=<size\=20>At the start of a battle, increase <link\="s|1012"><u>Certain Stats</u></link> of all allies by 30%. Decrease <link\="s|1012"><u>Certain Stats</u></link> of all allies by 15%.</size>
+<color\=#66ccff>『某項屬性』</color>=<color\=#66ccff>Certain Stats</color>
+包含：攻擊力、防禦力、生命上限、暴擊率、暴擊效果=Include: ATK, DEF, Max HP, CRIT, CRIT damage
+戰術目鏡=Tactical Goggles
+戰鬥開始時，\n給所有敵人添加一個弱點，能被隨機我方怪盜克制。但是所有怪盜受到的傷害提升20%。=<size\=20>At the start of a battle, all enemies gain a Weakness that can be covered by an ally, but increase DMG Taken of all allies by 20%.</size>
+每有一個不同職業的怪盜，\n進入戰鬥時，\n所有怪盜的弱點傷害提升10%。=Increase Weakness DMG by 10% for each different role your allies have.
+下一個「<link\="s|1010"><u>交易月臺</u></link>」開始：所有物品降價30%；但每購買1個物品，漲價5%。=<size\=20>Start at the next <link\="s|1010"><u>Shopping Platform</u></link>: All items in the store are discounted by 30%, but for every item purchased, increase the price by 5%.</size>
+集換式卡牌#1=Collectible Cards #1
+造成的傷害提升25%，受到的傷害提升15%。集齊3張後，不再觸發負面效果。=<size\=25>Increase DMG dealt by 25% and DMG Taken by 15%. Remove the debuff when 3 cards are collected.</size>
+集換式卡牌#2=Collectible Cards #2
+生命值提升25%，攻擊力降低15%。集齊3張後，不再觸發負面效果。=<size\=25>Increase HP by 25% and decrease ATK by 15%. Remove the debuff when 3 cards are collected.</size>
+集換式卡牌#3=Collectible Cards #3
+受到的傷害降低25%，造成的傷害降低15%。集齊3張後，不再觸發負面效果。=<size\=25>Decrease DMG Taken by 25% and DMG dealt by 15%. Remove the debuff when 3 cards are collected.</size>
+集換式卡牌#4=Collectible Cards #4
+攻擊力提升25%，生命值降低15%。集齊3張後，不再觸發負面效果。=<size\=25>Increase ATK by 25% and decrease HP by 15%. Remove the debuff when 3 cards are collected.</size>
+下一個「<link\="s|1010"><u>交易月臺</u></link>」購買的第1個物品免費。=The next item you buy from <link\="s|1010"><u>Shopping Platform</u></link> is free. Works once.
+返利福袋=Lucky Bag
+同一「<link\="s|1010"><u>交易月臺</u></link>」購買3件商品，隨機獲得1個遺失物，可生效1次。=After purchasing 3 items in the same <link\="s|1010"><u>Shopping Platform</u></link>, get a random Lost Item once.
+每次戰鬥勝利後使所有同伴攻擊力、防禦力提升10%。但是無法透過戰鬥獲得鐵道硬幣。=<size\=20>After winning a battle, increase all ally's ATK and DEF by 10%. You can no longer gain Railroad Coins after battle.</size>
+祭典團扇=Festival Fan
+所有同伴的攻擊力降低10%。但每進入一個「<link\="s|1011"><u>殘影月臺</u></link>」，所有同伴的最大生命值提升10%。=<size\=25>Decrease ATK by 10%. After arriving at a <link\="s|1011"><u>Shadow Platform</u></link>, increase all ally's Max HP by 10%.</size>
+每進入一個月臺，獲得以下效果中的一個：獲得30枚鐵道硬幣；全員攻擊力+10%；全員恢復20%生命值；全員扣除20%生命值（最低扣除至1%）。=<size\=20>After arriving at a platform, gain one of the following effects: Gain 30 Railroad Coins; All allies gain 10% ATK; All allies heal 20% HP; All allies lose 20% HP (cap at 1%).</size>
+考驗的集章卡=<size\=30>Challenge Stamp Card</size>
+後續4個月臺，受到的傷害提升30%。完成後獲得150枚鐵道硬幣。=For the next 4 platforms, increase DMG Taken by 30%. Gain 150 Railroad Coins afterwards.
+立刻獲得等於當前鐵道硬幣數量30%的鐵道硬幣。=Immediately gain Railroad Coins equal to 30% of the Railroad Coins you have.
+接下來的2場戰鬥勝利後，失去御守選擇機會，直接額外獲得100枚鐵道硬幣。=For the next 2 battle rewards, gain 100 Railroad Coins instead of choosing Omamori.
+所有怪盜最大生命值提升15%、攻擊力提升15%=Increase Max HP by 15% and ATK by 15%.
+所有怪盜效果命中提升20%、造成傷害提升10%=Increase Hit Rate by 20% and DMG dealt by 10%.
+所有怪盜暴擊率提升10%、暴擊效果提升20%=Increase CRIT by 10% and CRIT DMG by 20%.
+所有怪盜防禦力提升30%、受到傷害降低10%=Increase DEF by 30% and decrease DMG Taken by 10%.
+獲得該遺失物時，每有1個「<link\="rg|1008"><u>勾玉</u></link>」，則獲得50枚鐵道硬幣。=Upon pick up, gain 50 Railroad Coins for each <link\="rg|1008"><u>Jade</u></link> you have.
+戰鬥開始時，怪盜方每有一個相同屬性的怪盜，所有怪盜弱點傷害提升8%。=At the start of a battle, increase Weakness DMG by 8% for each allies with the same element.
+戰鬥開始時，怪盜方每有一個不同屬性的怪盜，所有怪盜耐性穿透提升8%。=At the start of a battle, increase DEF Ignore by 8% for each allies with a different element.
+守護神劄=Protection Letter
+戰鬥開始時，所有怪盜受到傷害降低90%，持續3回合。=At the start of a battle, \nall allies take 90% less damage for 3 turns.
+瑪奇姆的積分卡=<size\=28>Marthym's Point Card</size>
+背包數量超過12時，每多一格背包，所有怪盜造成傷害提升10%。=When the backpack space exceed 12, increase DMG dealt by 10% for each 1 over 12.
+r:"造成傷害提升(\d+%)=Increase DMG dealt by $1
+瑪奇姆的購物袋=<size\=30>Marthym's Shopping Bag</size>
+獲得該遺失物時，立刻擴容兩格背包。=Upon pick up, immediately expand your backpack by 2.
+全村最好的盾=<size\=30>Best shield in the village</size>
+所有同伴受到的傷害降低3%。=All allies reduce DMG Taken by 3%.
+
+r:"剩餘生效次數：(\d+)"=Uses left: $1
+「遺失物」負面效果：無法獲得「鐵道硬幣」=Lost Item Negative Effect: You can no longer gain Railroad Coins
+
+----------
+CHALLENGES
+----------
+
+特殊作業=<size\=30>Challenges</size>
+在「難度6」中通過「任意終點站」=Beat any Terminal on Difficulty 6
+在「難度5」中通過「任意終點站」=Beat any Terminal on Difficulty 5
+在任意難度中通過「終點站四」=Beat the 4th Terminal
+在任意難度中通過「終點站三」=Beat the 3rd Terminal
+在任意難度中通過「終點站二」=Beat the 2nd Terminal
+在任意難度中通過「終點站一」=Beat the 1st Terminal
+至少攜帶2名<size\=46><sprite\=20 tint\=1></size>屬性怪盜=Bring at least 2 <size\=46><sprite\=20 tint\=1></size> Thieves
+至少攜帶2名<size\=46><sprite\=9 tint\=1></size>屬性怪盜=Bring at least 2 <size\=46><sprite\=9 tint\=1></size> Thieves
+至少攜帶2名<size\=46><sprite\=8 tint\=1></size>屬性怪盜=Bring at least 2 <size\=46><sprite\=8 tint\=1></size> Thieves
+至少攜帶2名<size\=46><sprite\=14 tint\=1></size>屬性怪盜=Bring at least 2 <size\=46><sprite\=14 tint\=1></size> Thieves
+可攜帶面具無特殊限制=Persona is not restricted
+琴音·蒙塔涅特有的特殊战斗资源，当数= 
+念动超能= 
+使用「<link\="t|1002"><u>咒屬性陣容</u></link>」通過「難度4」=<size\=27>Beat Difficulty 4 using a <link\="t|1002"><u>Curse Team</u></link></size>
+使用「<link\="t|1003"><u>電屬性陣容</u></link>」通過「難度4」=<size\=27>Beat Difficulty 4 using an <link\="t|1003"><u>Electricity Team</u></link></size>
+使用「<link\="t|1004"><u>冰屬性陣容</u></link>」通過「難度4」=<size\=27>Beat Difficulty 4 using an <link\="t|1004"><u>Ice Team</u></link></size>
+使用「<link\="t|1005"><u>火屬性陣容</u></link>」通過「難度4」=<size\=27>Beat Difficulty 4 using a <link\="t|1005"><u>Fire Team</u></link></size>
+使用「<link\="t|1002"><u>咒屬性陣容</u></link>」通過「難度6」=<size\=27>Beat Difficulty 6 using a <link\="t|1002"><u>Curse Team</u></link></size>
+使用「<link\="t|1003"><u>電屬性陣容</u></link>」通過「難度6」=<size\=27>Beat Difficulty 6 using an <link\="t|1003"><u>Electricity Team</u></link></size>
+使用「<link\="t|1005"><u>火屬性陣容</u></link>」通過「難度6」=<size\=27>Beat Difficulty 6 using a <link\="t|1005"><u>Fire Team</u></link></size>
+使用「<link\="t|1004"><u>冰屬性陣容</u></link>」通過「難度6」=<size\=27>Beat Difficulty 6 using an <link\="t|1004"><u>Ice Team</u></link></size>
+在「難度7」中通過「任意終點站」=Beat any Terminal on Difficulty 7
+使用「<link\="t|1006"><u>核屬性陣容</u></link>」通過「難度4」=<size\=27>Beat Difficulty 4 using a <link\="t|1006"><u>Nuclear Team</u></link></size>
+使用「<link\="t|1006"><u>核屬性陣容</u></link>」通過「難度6」=<size\=27>Beat Difficulty 6 using a <link\="t|1006"><u>Nuclear Team</u></link></size>
+在「難度8」中通過「任意終點站」=Beat any Terminal on Difficulty 8
+
+----------
+DIFFICULTIES
+----------
+
+心軌擇行的全域效果，戰鬥開始以及每經過5個回合，對全體造成一次固定傷害，並使全體獲得一層「狂熱之力」：受到傷害提升5%，可被驅散，可疊加15層。=Deals fixed damage to ALL units indiscriminately every start of battle and every 5 turns. Everyone gains a level of Frenzy: DMG Taken +5%, stackable up to 15 times. Can be dispelled.
+戰鬥開始以及每經過5個回合，對全體造成一次固定傷害，並使全體獲得一層<color\=#FFFC40>「狂熱之力」</color>：受到傷害提升5%，可被驅散，可疊加15層。=<size\=25>Deals fixed damage to ALL units indiscriminately every start of battle and every 5 turns. Everyone gains a level of <color\=#FFFC40>Frenzy</color>: DMG Taken +5%, stackable up to 15 times. Can be dispelled.</size>
+狂熱之力=Frenzy
+怪盜使用技能造成傷害後，會使自身獲得1個對應的「屬性烙印」。我方總「屬性烙印」數量達到7時，會清除全部「屬性烙印」並觸發「蝕刻星隕」：對隨機敵人共造成7段萬能屬性傷害，同一敵人受到多段傷害會衰減。=After dealing damage to an enemy with a skill, gain 1 stack of Elemental Brand equal to it's element. When you have 7 stacks of Elemental Brand, use all of them to trigger Eclipse Meteor: Deal 7 instances of Almighty damage to enemies randomly, deal decreased damage when targeting the same enemy.
+怪盜使用技能造成傷害後，會使自身獲得1個對應適應性屬性的「屬性烙印」。我方總「屬性烙印」數量達到7時，會清除全部「屬性烙印」並觸發「蝕刻星隕」：對隨機敵人共造成7段萬能屬性傷害，同一敵人受到多段傷害會衰減。=After dealing damage to an enemy with a skill, gain 1 stack of Elemental Brand equal to it's element. When you have 7 stacks of Elemental Brand, use all of them to trigger Eclipse Meteor: Deal 7 instances of Almighty damage to enemies randomly, deal decreased damage when targeting the same enemy.
+怪盜使用人格面具技能/追加效果/HIGHLIGHT造成傷害後，會使自身獲得1個對應適應性屬性的「屬性烙印」。=After an ally uses Persona skill/Follow up/HIGHLIGHT, gain 1 Elemental Brand from the corresponding element.
+屬性烙印=Elemental Brand
+屬性烙印：=Elemental Brand:
+<color\=#66ccff>『屬性烙印』</color>=<color\=#66ccff>Elemental Brand</color>
+蝕刻星隕=Eclipse Meteor
+<color\=#FF0000>「蝕刻星隕」</color>=<color\=#FF0000>Eclipse Meteor</color>
+1、怪盜使用技能造成傷害後，會使自身獲得1個對應的<color\=#FF0000>「屬性烙印」</color>。\n2、我方總<color\=#FF0000>「屬性烙印」</color>數量達到7時，會清除全部<color\=#FF0000>「屬性烙印」</color>並觸發<color\=#FF0000>「蝕刻星隕」</color>：對隨機敵人共造成7段萬能屬性傷害，同一敵人受到多段傷害會衰減。=1. After dealing damage to an enemy with a skill, gain 1 stack of <color\=#FF0000>Elemental Brand</color> equal to it's element. \n2. When you have 7 stacks of <color\=#FF0000>Elemental Brand</color>, use all of them to trigger <color\=#FF0000>Eclipse Meteor</color>: Deal 7 instances of Almighty damage to enemies randomly, deal decreased damage when targeting the same enemy.
+一路瞬殺=<size\=25>Insta-kill all</size>
+部分瞬殺=<size\=20>Insta-kill some</size>
+無法瞬殺=<size\=20>Can't Insta-kill</size>
+
+受到傷害提升5%=Increases DMG Taken by 5%
+受百分比傷害降低=<size\=20>Decreases DMG Taken%</size>
+受到百分比傷害降低=Decreses damage taken percentage
+免疫即死=<size\=28>Instant Kill Immunity</size>
+免疫即死效果=Immunity to instant kill effects
+免疫精神異常=<size\=23>Mental Ailment Immunity</size>
+免疫精神異常效果=Immunity to mental ailment effects
+免疫倒地=Down Immunity
+免疫倒地值傷害=Immunity to getting downed
+
+得分效率：=<size\=20>Bonus Score:</size>
+最基礎的調度難度，無額外戰鬥效果。=Normal difficulty with no additional combat effects.
+新「遺失物」開放。=New "Lost Items" available.
+所有敵人生命值+5%。=All enemies gain 5% HP.
+所有敵人攻擊力+5%；=All enemies gain 5% ATK.
+所有敵人生命值+5%；=All enemies gain 5% HP.
+所有角色SP消耗提升5%。=Increase SP cost by 5%.
+所有敵人生命值+10%；=All enemies gain 10% HP.
+所有敵人攻擊力+10%；=All enemies gain 10% ATK.
+所有敵人攻擊力+15%；=All enemies gain 10% ATK.
+所有敵人生命值+15%；=All enemies gain 15% HP.
+所有角色SP消耗提升10%。=Increase SP cost by 10%.
+所有敵人攻擊力+20%；=All enemies gain 20% ATK.
+所有敵人生命值+20%；=All enemies gain 20% HP.
+所有角色SP消耗提升10%；=Increase SP cost by 10%.
+
+----------
+FINAL BOSSES
+----------
+
+奧伯隆與蒂妲尼亞的其中一方被擊敗後，另一方會陷入悲傷、無法行動，持續2回合。\n隨後其會振作起來，造成傷害<color\=#FF0000>超大幅提升</color>，請小心應對。=When either Oberon or Titania is defeated, the other one will become unable to act for 2 turns. Afterwards they will <color\=#FF0000>massively increase their DMG dealt.</color>
+<color\=#FFAF00>被黑暗氣息籠罩的終點站，\n肅清終點站台後，完成本次地鐵調度。</color>\n奧伯隆與蒂妲尼亞的其中一方被擊敗後，另一方會陷入悲傷、無法行動，持續2回合。\n隨後其會振作起來，造成傷害<color\=#FF0000>超大幅提升</color>，請小心應對。=<color\=#FFAF00>A terminal shrounded by a dark presence, \ndefeating them will finish the dispatch.</color>\nWhen either Oberon or Titania is defeated, the other one will become unable to act for 2 turns. Afterwards they will <color\=#FF0000>massively increase their DMG dealt.</color>
+刹那五月雨斬=Myriad Slashes
+2~3次物理=2~3 times Physical
+芙雷達因=Freidyne
+
+聖潔的主天使=Dominion
+<color\=#FFAF00>被黑暗氣息籠罩的終點站，\n肅清終點站台後，完成本次地鐵調度。</color>\n主天使、能天使、權天使、大天使處於<color\=#ff3b37>「生命連結」</color>狀態，並擁有<color\=#ff3b37>「聖潔領域」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n「聖潔領域」：每有一個<color\=#FFFC40>負面狀態</color>，受到的傷害提升6%，最多使其受到的傷害提升30%=<color\=#FFAF00>A terminal shrounded by a dark presence, \ndefeating them will finish the dispatch.</color>\nAll angels are under <color\=#ff3b37>"Lifelink"</color> and have <color\=#ff3b37>"Sacred Realm"</color> \n"Lifelink": The unit with Lifelink will share their DMG Taken among all other units based on the HP% lost from the attack. \n"Sacred Domain": For every <color\=#FFFC40>debuff</color>, increase DMG Taken by 6%, up to a cap of 30%.
+聖潔的能天使=Power
+聖潔的權天使=Principality
+聖潔的大天使=Archangel
+主天使、能天使、權天使、大天使處於<color\=#ff3b37>「生命連結」</color>狀態，並擁有<color\=#ff3b37>「聖潔領域」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n「聖潔領域」：每有一個<color\=#FFFC40>負面狀態</color>，受到的傷害提升6%，最多使其受到的傷害提升30%=All angels are under <color\=#ff3b37>"Lifelink"</color> and have <color\=#ff3b37>"Sacred Realm"</color> \n"Lifelink": The unit with Lifelink will share their DMG Taken among all other units based on the HP% lost from the attack. \n"Sacred Domain": For every <color\=#FFFC40>debuff</color>, increase DMG Taken by 6%, up to a cap of 30%.
+生命連結=Lifelink
+米吉朵拉=Megidola
+勇氣之聲=Brave Blade
+瑪哈斯庫卡加=Masukukaja
+金剛迸發=Vajra Blast
+
+英勇的庫夫林=Cu Chulainn
+1、庫夫林受到<color\=#ff3b37>暴擊傷害</color>提升30%，受到非暴擊傷害降低50%。\n2、庫夫林會釋放「英雄之力」：獲得一定護盾，增加自身的傷害，同時鎖定一名怪盜，下回合對其釋放<color\=#ff3b37>「迦耶伯格」</color>，造成高額傷害並附帶即死效果。\n<color\=#ff3b37>擊破護盾</color>可使庫夫林退出「英雄之力」狀態並取消對怪盜的鎖定。=1. Cu Chulainn takes 30% more <color\=#ff3b37>CRIT DMG</color>, and takes 50% less non CRIT DMG. \n2. Cu Chulainn will use Hero's Strength: Gains Shield, increases Damage Bonus, and locks on an ally. Next turn they will use <color\=#ff3b37>"Gae Bulg"</color>, which deals high damage with a chance of instant kill. \n<color\=#ff3b37>Breaking the Shield</color> will break them out of Hero's Strength and remove the lock on.
+<color\=#FFAF00>被黑暗氣息籠罩的終點站，\n肅清終點站台後，完成本次地鐵調度。</color>\n1、庫夫林受到<color\=#ff3b37>暴擊傷害</color>提升30%，受到非暴擊傷害降低50%。\n2、庫夫林會釋放「英雄之力」：獲得一定護盾，增加自身的傷害，同時鎖定一名怪盜，下回合對其釋放<color\=#ff3b37>「迦耶伯格」</color>，造成高額傷害並附帶即死效果。\n<color\=#ff3b37>擊破護盾</color>可使庫夫林退出「英雄之力」狀態並取消對怪盜的鎖定。=<color\=#FFAF00>A terminal shrounded by a dark presence, \ndefeating them will finish the dispatch.</color>\n1. Cu Chulainn takes 30% more <color\=#ff3b37>CRIT DMG</color>, and takes 50% less non CRIT DMG. \n2. Cu Chulainn will use Hero's Strength: Gains Shield, increases Damage Bonus, and locks on an ally. Next turn they will use <color\=#ff3b37>"Gae Bulg"</color>, which deals high damage with a chance of instant kill. \n<color\=#ff3b37>Breaking the Shield</color> will break them out of Hero's Strength and remove the lock on.
+烈風波=Vicious Strike
+迦耶伯格=Gae Bulg
+對被鎖定的敵人釋放，造成高額傷害並附帶即死效果=Targets the locked on enemy, deals high damage with a chance of instant kill.
+英雄之力=Hero's Strength
+獲得一定護盾與傷害加成，並鎖定一名敵人，下回合對其釋放「迦耶伯格」。護盾被擊破後失去傷害加成並退出鎖定狀態。=Gains Shield, increases Damage Bonus, and locks on an enemy. Next turn uses "Gae Bulg" against them. Breaking the Shield removes the Damage Bonus and the lock on.
+
+1、八岐大蛇擁有著八個蛇頭，分別對應著八種屬性的力量，怪盜方每擊敗一個蛇頭，八岐大蛇的能力、適應性均會發生變化，依次為<color\=#ff381d>「烈焰之蛇」</color><color\=#00aeff>「冰霜之蛇」</color><color\=#fbff37>「雷霆之蛇」</color><color\=#81ea2c>「颶風之蛇」</color><color\=#ff63ff>「念動之蛇」</color><color\=#00fcff>「核熱之蛇」</color><color\=#fffea0>「祝福之蛇」</color><color\=#ff0036>「詛咒之蛇」</color>\n2、擊敗四個蛇頭後，八岐大蛇會進入蓄力狀態，同時「蛇尾」會暴露出來。\n3、擊敗「蛇尾」，怪盜方會獲得「<color\=#ff3b37>天叢雲</color>」狀態，下次攻擊附帶高額傷害。\n4、八岐大蛇被擊敗後，剩餘的四個蛇頭會分裂成四條蛇，每次攻擊會附帶「蛇毒」。\n「蛇毒」：每回合流失一定生命值，可疊加。=1. Yamata-no-Orochi has eight heads that has eight forms. For every head that the party defeats, Yamata-no-Orochi's abilities and resistances will change in the following order<color\=#ff381d>"Serpent of Fire"</color><color\=#00aeff>"Serpent of Ice"</color><color\=#fbff37>"Serpent of Electricity"</color><color\=#81ea2c>"Serpent of Wind"</color><color\=#ff63ff>"Serpent of Psychokinesis"</color><color\=#00fcff>"Serpent of Nuclear"</color><color\=#fffea0>"Serpent of Bless"</color><color\=#ff0036>"Serpent of Curse"</color>\n2. After defeating four heads, Yamata-no-Orochi will enter charge, and its tail will be exposed. 3. Defeating the tail will give all allies <color\=#ff3b37>"Ame-no-Murakumo"</color>, which highly boosts the DMG of their next attack. 4. After defeating Yamata-no-Orochi, the remaining four heads will split into four snakes, and their attack will apply "Snake Venom", a stackable statue that makes the target lose a certain amount of HP per turn.
+<color\=#FFAF00>被黑暗氣息籠罩的終點站，\n肅清終點站台後，完成本次地鐵調度。</color>\n1、八岐大蛇擁有著八個蛇頭，分別對應著八種屬性的力量，怪盜方每擊敗一個蛇頭，八岐大蛇的能力、適應性均會發生變化，依次為<color\=#ff381d>「烈焰之蛇」</color><color\=#00aeff>「冰霜之蛇」</color><color\=#fbff37>「雷霆之蛇」</color><color\=#81ea2c>「颶風之蛇」</color><color\=#ff63ff>「念動之蛇」</color><color\=#00fcff>「核熱之蛇」</color><color\=#fffea0>「祝福之蛇」</color><color\=#ff0036>「詛咒之蛇」</color>\n2、擊敗四個蛇頭後，八岐大蛇會進入蓄力狀態，同時「蛇尾」會暴露出來。\n3、擊敗「蛇尾」，怪盜方會獲得「<color\=#ff3b37>天叢雲</color>」狀態，下次攻擊附帶高額傷害。\n4、八岐大蛇被擊敗後，剩餘的四個蛇頭會分裂成四條蛇，每次攻擊會附帶「蛇毒」。\n「蛇毒」：每回合流失一定生命值，可疊加。=<color\=#FFAF00>A terminal shrounded by a dark presence, \ndefeating them will finish the dispatch.</color>\n1. Yamata-no-Orochi has eight heads that has eight forms. For every head that the party defeats, Yamata-no-Orochi's abilities and resistances will change in the following order<color\=#ff381d>"Serpent of Fire"</color><color\=#00aeff>"Serpent of Ice"</color><color\=#fbff37>"Serpent of Electricity"</color><color\=#81ea2c>"Serpent of Wind"</color><color\=#ff63ff>"Serpent of Psychokinesis"</color><color\=#00fcff>"Serpent of Nuclear"</color><color\=#fffea0>"Serpent of Bless"</color><color\=#ff0036>"Serpent of Curse"</color>\n2. After defeating four heads, Yamata-no-Orochi will enter charge, and its tail will be exposed. 3. Defeating the tail will give all allies <color\=#ff3b37>"Ame-no-Murakumo"</color>, which highly boosts the DMG of their next attack. 4. After defeating Yamata-no-Orochi, the remaining four heads will split into four snakes, and their attack will apply "Snake Venom", a stackable statue that makes the target lose a certain amount of HP per turn.
+
+烈焰之蛇=Serpent of Fire
+掌握了烈焰之力，會釋放火焰屬性的技能=Gains mastery over Fire, will use Fire skills.
+冰霜之蛇=Serpent of Ice
+掌握了冰霜之力，會釋放凍結屬性的技能=Gains mastery over Ice, will use Ice skills.
+雷霆之蛇=<size\=28>Serpent of Electricity</size>
+掌握了雷霆之力，會釋放電擊屬性的技能=Gains mastery over Electricity, will use Electricity skills.
+颶風之蛇=Serpent of Wind
+掌握了颶風之力，會釋放疾風屬性的技能=Gains mastery over Wind, will use Wind skills.
+
+蓄力=Charge
+下次造成傷害大幅提升=Heavily increases damage of your next attack.
+大蛇之護=<size\=32>Serpent's Protection</size>
+受到傷害大幅降低=Heavily decreases damage taken.
+大蛇狂舞=Serpent Dance
+蓄力兩次後釋放，對全體怪盜造成巨額傷害=Skill is used after 2 turns of charging, deals colossal damage to all enemies.
+
+「蛇尾」=Serpent's Tail
+大蛇之尾=Serpent's Tail
+擊敗後貌似會有意外的收穫=Gives an unexpected reward upon defeat.
+
+「詛咒之蛇」=Serpent of Curse
+蛇牙=Serpent Fang
+造成傷害時會附帶蛇毒=Inflicts Snake Venom after dealing damage.
+「祝福之蛇」=Serpent of Bless
+「核熱之蛇」=Serpent of Nuclear
+「念動之蛇」=Serpent of Psychokinesis
+
+<color\=#FFAF00>被黑暗氣息籠罩的終點站，\n肅清終點站台後，完成本次地鐵調度。</color>\n1、荒霸吐與建御名方受到人格面具技能/追加效果/HIGHLIGHT造成的傷害時會記錄該傷害的屬性。（同一回合內受到多種屬性的傷害會隨機記錄其中一種）\n2、受到與記錄傷害<color\=#ff3b37>相同屬性</color>的傷害時，荒霸吐<color\=#ff3b37>受到傷害提高</color>，可疊加；受到與記錄傷害不同屬性的傷害時，清除荒霸吐的受到傷害提高效果，並使荒霸吐造成傷害提高。\n3、受到與記錄傷害<color\=#ff3b37>不同屬性</color>的傷害時，建御名方<color\=#ff3b37>受到傷害提高</color>，可疊加；受到與記錄傷害相同屬性的傷害時，清除建御名方的受到傷害提高效果，並使建御名方造成傷害提高。=<color\=#FFAF00>A terminal shrounded by a dark presence, \ndefeating them will finish the dispatch.</color>\n1. Arahabaki and Take-Minakata will remember the element of the damage they took from Persona skill/Follow up/HIGHLIGHT (When taking damage from multiple elements in the same round, one of them will be remembered randomly). \n2. When taking damage from the <color\=#ff3b37>same element</color> as the one remembered, Arahabaki will <color\=#ff3b37>increase DMG Taken</color>, can be stacked. When taking damage from an element different than the one remembered, Arahabaki will remove the DMG Taken debuff and increase own DMG dealt. \n3. When taking damage from the <color\=#ff3b37>same element</color> as the one remembered, Take-Minakata will <color\=#ff3b37>increase DMG Taken</color>, can be stacked. When taking damage from an element different than the one remembered, Take-Minakata will remove the DMG Taken debuff and increase own DMG dealt.
+荒霸吐受到人格面具技能/追加效果/HIGHLIGHT造成的傷害時會記錄該傷害的屬性。（同一回合內受到多種屬性的傷害會隨機記錄其中一種）\n受到與記錄傷害<color\=#ff3b37>相同屬性</color>的傷害時，荒霸吐<color\=#ff3b37>受到傷害提高</color>，可疊加；受到與記錄傷害不同屬性的傷害時，清除荒霸吐的受到傷害提高效果，並使荒霸吐造成傷害提高。=Arahabaki will remember the element of the damage they took from Persona skill/Follow up/HIGHLIGHT (When taking damage from multiple elements in the same round, one of them will be remembered randomly).\nWhen Arahakabi take damage from the <color\=#ff3b37>same element</color> as the one remembered, <color\=#ff3b37>increase DMG Taken</color>, can be stacked. When taking damage from an element different than the one remembered, remove the DMG Taken debuff and increase own DMG dealt.
+建御名方=Take-Minakata
+建御名方受到人格面具技能/追加效果/HIGHLIGHT造成的傷害時會記錄該傷害的屬性。（同一回合內受到多種屬性的傷害會隨機記錄其中一種）\n受到與記錄傷害<color\=#ff3b37>不同屬性</color>的傷害時，建御名方<color\=#ff3b37>受到傷害提高</color>，可疊加；受到與記錄傷害相同屬性的傷害時，清除建御名方的受到傷害提高效果，並使建御名方造成傷害提高。=Take-Minakata will remember the element of the damage they took from Persona skill/Follow up/HIGHLIGHT (When taking damage from multiple elements in the same round, one of them will be remembered randomly).\nWhen Take-Minakata take damage from the <color\=#ff3b37>same element</color> as the one remembered, <color\=#ff3b37>increase DMG Taken</color>, can be stacked. When taking damage from an element different than the one remembered, remove the DMG Taken debuff and increase own DMG dealt.
+受到傷害提高=<size\=30>Increase DMG Taken</size>
+每層提高20%受到傷害，可疊加5層=Increases damage taken by 20% per stack, cap at 5 stack.
+傷害提高=<size\=30>Increase DMG dealt</size>
+每層提高20%造成傷害=Increase DMG dealt by 20% per stack.
+
+莊嚴的黃龍=Kohryu
+黃龍在戰鬥中，會召喚「青龍」之影、「白虎」之影、「朱雀」之影、「玄武」之影。擊敗對應的神獸之影，可以獲得相應的能力。\n擊敗「青龍」之影：怪盜每回合獲得相當於10%最大生命值的護盾。\n擊敗「白虎」之影：怪盜攻擊力提升20%。\n擊敗「朱雀」之影：怪盜造成傷害提升20%。\n擊敗「玄武」之影：怪盜防禦力提升20%。=Kohryu will summon Seiryu, Byakko, Suzaku and Genbu in battle. Defeating the corresponding beast will give the following effect. \nSeiryu: Gain Shield equal to 10% Max HP at the start of each ally's turn. \nByakko: Increase ATK by 20%. \nSuzaku: Increase DMG dealt by 20%. \nGenbu: Increase DEF by 20%.
+<color\=#FFAF00>被黑暗氣息籠罩的終點站，\n肅清終點站台後，完成本次地鐵調度。</color>\n黃龍在戰鬥中，會召喚「青龍」之影、「白虎」之影、「朱雀」之影、「玄武」之影。擊敗對應的神獸之影，可以獲得相應的能力。\n擊敗「青龍」之影：怪盜每回合獲得相當於10%最大生命值的護盾\n擊敗「白虎」之影：怪盜攻擊力提升20%\n擊敗「朱雀」之影：怪盜造成傷害提升20%\n擊敗「玄武」之影：怪盜防禦力提升20%=<color\=#FFAF00>A terminal shrounded by a dark presence, \ndefeating them will finish the dispatch.</color>\nKohryu will summon Seiryu, Byakko, Suzaku and Genbu in battle. Defeating the corresponding beast will give the following effect. \nSeiryu: Gain Shield equal to 10% Max HP at the start of each ally's turn. \nByakko: Increase ATK by 20%. \nSuzaku: Increase DMG dealt by 20%. \nGenbu: Increase DEF by 20%.
+「白虎」之影=Byakko
+「青龍」之影=Seiryu
+「玄武」之影=Genbu
+「朱雀」之影=Suzaku
+白虎之力=Power of Byakko
+攻擊力提升20%=Increase ATK by 20%
+青龍之力=Power of Seiryu
+每回合獲得相當於10%最大生命值的護盾=Gain Shield equal to 10% Max HP at the start of turn
+玄武之力=Power of Genbu
+防禦力提升20%=Increase DEF by 20%
+朱雀之力=Power of Suzaku
+造成傷害提升20%=Increase DMG dealt by 20%
+
+<color\=#FFAF00>被黑暗氣息籠罩的終點站，\n肅清終點站台後，完成本次地鐵調度。</color>\n1、可羅索會使用「命運之絲·纏繞」，使隨機我方怪盜被纏繞上命運之絲。\n2、拉克西斯會使用「命運之線·編織」，使怪盜身上的命運之絲被編織成<color\=#ff3b37>「命運之線」</color>。\n「命運之線」：被命運之線所束縛，攻擊力提升\n3、命運三女神們會在特定時機召喚出「命運之靈」，擊敗「命運之靈」會使命運之線發生交錯，<color\=#ff3b37>產生額外的增益效果</color>。\n4、阿特羅波斯會在特定的時機揮舞命運之鐮，<color\=#ff3b37>切斷所有的命運之線</color>。\n（1）阿特羅波斯行動10次後\n（2）可羅索、拉克西斯被擊敗後\n（3）阿特羅波斯被擊敗時=<color\=#FFAF00>A terminal shrounded by a dark presence, \ndefeating them will finish the dispatch.</color>\n1. Clotho will use "Silk of Fate - Entanglement" to entangle a random ally. \n2. Lachesis will use "Threads of Fate - Weave" to weave the Silk of Fate from an ally into <color\=#ff3b37>Threads of Fate</color>. \n3. The three fates will summon the Spirit of Fate at a specific time, defeating the Spirit of Fate will intertwine the Threads of Fate. <color\=#ff3b37>Giving bonus buffs</color>. \n4. Atropos will use the Scissors of Fate at certain time, <color\=#ff3b37>cutting all Threads of Fate</color>. \n(1) After Atropos has acted 10 times \n(2) After Clotho or Lachesis have been defeated \n(3) When Atropos has been defeated
+阿特羅波斯會在特定的時機揮舞命運之鐮，<color\=#ff3b37>切斷所有的命運之線</color>。\n（1）阿特羅波斯行動10次後\n（2）可羅索、拉克西斯被擊敗後\n（3）阿特羅波斯被擊敗時=Atropos will use the Scissors of Fate at certain time, <color\=#ff3b37>cutting all Threads of Fate</color>. \n(1) After Atropos has acted 10 times \n(2) After Clotho or Lachesis have been defeated \n(3) When Atropos has been defeated
+可羅索會使用「命運之絲·纏繞」，使隨機我方怪盜被纏繞上命運之絲。=Clotho will use "Silk of Fate - Entanglement" to entangle a random ally.
+拉克西斯會使用「命運之線·編織」，使怪盜身上的命運之絲被編織成<color\=#ff3b37>「命運之線」</color>。\n「命運之線」：被命運之線所束縛，攻擊力提升。=Lachesis will use "Threads of Fate - Weave" to weave the Silk of Fate from an ally into <color\=#ff3b37>Threads of Fate</color>. \n"Thread of Fate": Increase ATK when being bounded by a Thread of Fate.
+1、可羅索會使用「命運之絲·纏繞」，使隨機我方怪盜被纏繞上命運之絲。\n2、拉克西斯會使用「命運之線·編織」，使怪盜身上的命運之絲被編織成<color\=#ff3b37>「命運之線」</color>。\n「命運之線」：被命運之線所束縛，攻擊力提升\n3、命運三女神們會在特定時機召喚出「命運之靈」，擊敗「命運之靈」會使命運之線發生交錯，<color\=#ff3b37>產生額外的增益效果</color>。\n4、阿特羅波斯會在特定的時機揮舞命運之鐮，<color\=#ff3b37>切斷所有的命運之線</color>。\n（1）阿特羅波斯行動10次後\n（2）可羅索、拉克西斯被擊敗後\n（3）阿特羅波斯被擊敗時=1. Clotho will use "Silk of Fate - Entanglement" to entangle a random ally. \n2. Lachesis will use "Threads of Fate - Weave" to weave the Silk of Fate from an ally into <color\=#ff3b37>Threads of Fate</color>. \n3. The three fates will summon the Spirit of Fate at a specific time, defeating the Spirit of Fate will intertwine the Threads of Fate. <color\=#ff3b37>Giving bonus buffs</color>. \n4. Atropos will use the Scissors of Fate at certain time, <color\=#ff3b37>cutting all Threads of Fate</color>. \n(1) After Atropos has acted 10 times \n(2) After Clotho or Lachesis have been defeated \n(3) When Atropos has been defeated
+r:"阿特羅波斯將在(\d+)輪後揮動鐮刀，切斷所有命運之線……"=Atropos will use the Scissors of Fate after $1 turns, cutting all Threads of Fate...
+阿特羅波斯下回合將復仇，揮動鐮刀切斷所有命運之線……=Atropos will use the Scissors of Fate as revenge next turn!
+
+命運之絲=Threads of Fate
+被命運之絲所纏繞…=Entangled by the Silk of Fate...
+命運之靈將在一回合後消失，請把握住改寫命運的機會=The Spirit of Fate will disappear after 1 round, so take the chance to change your fate!
+命運之靈Ⅰ=Spirit of Fate I
+擊敗了命運之靈Ⅰ，我方的命運之線發生了交錯，造成傷害、治療量提高……=Defeated the Spirit of Fate Ⅰ, ally's Threads of Fate are intertwined. Increase DMG dealt and Healing Effect...
+命運之靈Ⅱ=Spirit of Fate II
+擊敗了命運之靈Ⅱ，我方的命運之線發生了交錯，暴擊率提高……=Defeated the Spirit of Fate II, ally's Threads of Fate are intertwined. Increase CRIT...
+命運之靈Ⅲ=Spirit of Fate III
+擊敗了命運之靈Ⅲ，我方的命運之線發生了交錯，暴擊傷害提高……=Defeated the Spirit of Fate III, ally's Threads of Fate are intertwined. Increase CRIT damage...
+命運之靈Ⅳ=Spirit of Fate IV
+擊敗了命運之靈Ⅳ，我方的命運之線發生了交錯，造成傷害大幅提高……=Defeated the Spirit of Fate III, ally's Threads of Fate are intertwined. Heavily increase DMG dealt...
+
+擊敗後可以使命運之線交錯，產生意想不到的效果=After defeat, you can intertwine the Threads of Fate to create unexpected effects.
+命運交錯Ⅰ=Fate Intertwine I
+命運之線發生了交錯，造成傷害、治療效果提高…=The Threads of Fate have intertwined, increase DMG dealt and Healing Effect...
+命運交錯Ⅱ=<size\=30>Fate Intertwine II</size>
+命運之線發生了交錯，暴擊率提高50%…=The Threads of Fate have intertwined, increase CRIT by 50%...
+命運交錯Ⅲ=<size\=30>Fate Intertwine III</size>
+命運之線發生了交錯，暴擊傷害提高50%…=The Threads of Fate have intertwined, increase CRIT damage by 50%...
+命運交錯Ⅳ=<size\=30>Fate Intertwine IV</size>
+命運之線發生了交錯，造成傷害提高100%…=The Threads of Fate have intertwined, increase DMG dealt by 100%...
+
+----------
+NODES
+----------
+
+心軌啟程=Starting station
+心軌啟程第一站，\n請謹慎選擇並妥善保管遺失物。\n=First stop of Heart Rails, \nplease choose your first Lost Item.\n
+霧間匿處=Foggy Platform
+被迷霧遮擋，進入後可能出現任意月臺。\n未進入前無法查看具體的情況。\n=The platform is enveloped by fog, \nand you may encounter any shadows, treasures, stores, or something entirely different.\n
+妄想殘影=Obsessed Shadow
+執念的殘影佇立著，等待聆聽之人到來。\n只會遇到正面傾向的事件。\n=An obsessed shadow is waiting to be heard. \nYou can only encounter positive events here.\n
+詭秘殘影=Mysterious Shadow
+詭異的殘影佇立著，靜候聆聽之人到來。\n會遇到隨機傾向的事件。\n=A mysterious shadow is waiting to be heard. \nYou can encounter random events here.\n
+<color\=#66ccff>『殘影月臺』</color>=<color\=#66ccff>Shadow Platform</color>
+包括「妄想殘影」、「詭秘殘影」類型月臺。=Include "Obsessed Shadow" and "Mysterious Shadow" type platforms.
+安全的月臺=Safe Platform
+危險的月臺=<size\=21>Dangerous Platform</size>
+奇怪的月臺=<size\=25>Strange Platform</size>
+終點站：=<size\=20>Terminal:</size>
+奇蹟福引=Miracle Vault
+月臺上散落著大量寶箱，\n請選擇一個帶走吧。\n=The platform is scattered with treasures, \nyou can take 1 with you.\n
+命運櫥窗=Destiny Showcase
+商人正出售遺失物和御守，\n準備好鐵道硬幣吧。\n=Marthym is selling Lost Items and Omamori here, \nget your Railroad Coins ready.\n
+命運交易所=Destiny Store
+最終的交易所，商人正在等待你。\n強化遺失物和御守，前往終點站吧。\n=Marthym is waiting for you at the final store, \nupgrade your Lost Items and Omamori \nand head towards the terminal.
+<color\=#66ccff>『交易月臺』</color>=<color\=#66ccff>Shopping Platform</color>
+包括「命運櫥窗」、「命運交易所」類型月臺。=Includes "Destiny Showcase" and "Destiny Store" type platforms.
+撤退後可以返回月臺重新挑戰。\n是否暫時撤退？=Do you want to retreat? \n<size\=24>You can retry after returning to the platform.</size>
+
+請選擇一個遺失物=Select a Lost Item
+請選擇一個御守=Select an Omamori
+r:"剩餘(\d+)次"=Reroll($1)
+繼<color\=#ff0000ff>續</color>前行=Continue
+離開=Leave
+离开=Leave
+
+紛擾者=Disturber
+礪艱者=Challenger
+厄命者=Misfortune Bringer
+食夢者=Dream Eater
+肅清此月臺後可選擇一次御守。\n=You can choose an Omamori after battle.\n
+肅清此月臺後有機率獲得遺失物選擇機會。\n=<size\=25>You have a chance of choosing a Lost Item after battle.\n</size>
+肅清此月臺後必定獲得橙色御守和遺失物。\n完成後請選擇列車最終行程。\n=You can choose an Orange Omamori \nand a Lost Item after battle.\n
+被黑暗氣息籠罩的終點站，\n肅清終點站台後，完成本次地鐵調度。\n=A terminal shrounded by a dark presence, \ndefeating them will finish the dispatch.\n
+
+肅清此月臺後可選擇一次御守。\n<color\=#ccb009>選擇御守時，必定包含「濯心套裝」。\n長按月臺可查看御守套裝效果。</color>=You can choose an Omamori after battle.<size\=24>\n<color\=#ccb009>You will be offered an Omamori from the "Scarlet Set".</size><size\=27>\nClick and hold on the platform to check the set effect.</color></size>
+肅清此月臺後可選擇一次御守。\n<color\=#ccb009>選擇御守時，必定包含「濁身套裝」。\n長按月臺可查看御守套裝效果。</color>=You can choose an Omamori after battle.<size\=24>\n<color\=#ccb009>You will be offered an Omamori from the "Impurity Set".</size><size\=27>\nClick and hold on the platform to check the set effect.</color></size>
+肅清此月臺後可選擇一次御守。\n<color\=#ccb009>選擇御守時，必定包含「響祭套裝」。\n長按月臺可查看御守套裝效果。</color>=You can choose an Omamori after battle.<size\=24>\n<color\=#ccb009>You will be offered an Omamori from the "Hibiki Set". </size><size\=27>\nClick and hold on the platform to check the set effect.</color></size>
+肅清此月臺後可選擇一次御守。\n<color\=#ccb009>選擇御守時，必定包含「重祭套裝」。\n長按月臺可查看御守套裝效果。</color>=You can choose an Omamori after battle.<size\=24>\n<color\=#ccb009>You will be offered an Omamori from the "Sacrifice Set". </size><size\=27>\nClick and hold on the platform to check the set effect.</color></size>
+肅清此月臺後可選擇一次御守。\n<color\=#ccb009>選擇御守時，必定包含「戮命套裝」。\n長按月臺可查看御守套裝效果。</color>=You can choose an Omamori after battle.<size\=24>\n<color\=#ccb009>You will be offered an Omamori from the "ST ATK Set".</size><size\=27>\nClick and hold on the platform to check the set effect.</color></size>
+肅清此月臺後可選擇一次御守。\n<color\=#ccb009>選擇御守時，必定包含「亂戰套裝」。\n長按月臺可查看御守套裝效果。</color>=You can choose an Omamori after battle.<size\=24>\n<color\=#ccb009>You will be offered an Omamori from the "AoE ATK Set".</size><size\=27>\nClick and hold on the platform to check the set effect.</color></size>
+肅清此月臺後可選擇一次御守。\n<color\=#ccb009>選擇御守時，必定包含「療癒套裝」。\n長按月臺可查看御守套裝效果。</color>=You can choose an Omamori after battle.<size\=24>\n<color\=#ccb009>You will be offered an Omamori from the "Healing Set".</size><size\=27>\nClick and hold on the platform to check the set effect.</color></size>
+肅清此月臺後可選擇一次御守。\n<color\=#ccb009>選擇御守時，必定包含「加護套裝」。\n長按月臺可查看御守套裝效果。</color>=You can choose an Omamori after battle.<size\=24>\n<color\=#ccb009>You will be offered an Omamori from the "Protection Set".</size><size\=27>\nClick and hold on the platform to check the set effect.</color></size>
+肅清此月臺後可選擇一次御守。\n<color\=#ccb009>選擇御守時，必定包含「福佑套裝」。\n長按月臺可查看御守套裝效果。</color>=You can choose an Omamori after battle.<size\=24>\n<color\=#ccb009>You will be offered an Omamori from the "Blessing Set".</size><size\=27>\nClick and hold on the platform to check the set effect.</color></size>
+肅清此月臺後可選擇一次御守。\n<color\=#ccb009>選擇御守時，必定包含「驅邪套裝」。\n長按月臺可查看御守套裝效果。</color>=You can choose an Omamori after battle.<size\=24>\n<color\=#ccb009>You will be offered an Omamori from the "Exorcism Set".</size><size\=27>\nClick and hold on the platform to check the set effect.</color></size>
+肅清此月臺後可選擇一次御守。\n<color\=#ccb009>選擇御守時，必定包含「緣結套裝」。\n長按月臺可查看御守套裝效果。</color>=You can choose an Omamori after battle.<size\=24>\n<color\=#ccb009>You will be offered an Omamori from the "Navi Set".</size><size\=27>\nClick and hold on the platform to check the set effect.</color></size>
+
+肅清此月臺後有機率獲得遺失物選擇機會。\n<color\=#ccb009>選擇御守時，必定包含「濯心套裝」。\n長按月臺可查看御守套裝效果。</color>=<size\=25>You have a chance of choosing a Lost Item after battle.</size><size\=24>\n<color\=#ccb009>You will be offered an Omamori from the "Scarlet Set".</size><size\=27>\nClick and hold on the platform to check the set effect.</color></size>
+肅清此月臺後有機率獲得遺失物選擇機會。\n<color\=#ccb009>選擇御守時，必定包含「濁身套裝」。\n長按月臺可查看御守套裝效果。</color>=<size\=25>You have a chance of choosing a Lost Item after battle.</size><size\=24>\n<color\=#ccb009>You will be offered an Omamori from the "Impurity Set".</size><size\=27>\nClick and hold on the platform to check the set effect.</color></size>
+肅清此月臺後有機率獲得遺失物選擇機會。\n<color\=#ccb009>選擇御守時，必定包含「響祭套裝」。\n長按月臺可查看御守套裝效果。</color>=<size\=25>You have a chance of choosing a Lost Item after battle.</size><size\=24>\n<color\=#ccb009>You will be offered an Omamori from the "Hibiki Set".</size><size\=27>\nClick and hold on the platform to check the set effect.</color></size>
+肅清此月臺後有機率獲得遺失物選擇機會。\n<color\=#ccb009>選擇御守時，必定包含「重祭套裝」。\n長按月臺可查看御守套裝效果。</color>=<size\=25>You have a chance of choosing a Lost Item after battle.</size><size\=24>\n<color\=#ccb009>You will be offered an Omamori from the "Sacrifice Set".</size><size\=27>\nClick and hold on the platform to check the set effect.</color></size>
+肅清此月臺後有機率獲得遺失物選擇機會。\n<color\=#ccb009>選擇御守時，必定包含「戮命套裝」。\n長按月臺可查看御守套裝效果。</color>=<size\=25>You have a chance of choosing a Lost Item after battle.</size><size\=24>\n<color\=#ccb009>You will be offered an Omamori from the "ST ATK Set".</size><size\=27>\nClick and hold on the platform to check the set effect.</color></size>
+肅清此月臺後有機率獲得遺失物選擇機會。\n<color\=#ccb009>選擇御守時，必定包含「亂戰套裝」。\n長按月臺可查看御守套裝效果。</color>=<size\=25>You have a chance of choosing a Lost Item after battle.</size><size\=24>\n<color\=#ccb009>You will be offered an Omamori from the "AoE ATK Set".</size><size\=27>\nClick and hold on the platform to check the set effect.</color></size>
+肅清此月臺後有機率獲得遺失物選擇機會。\n<color\=#ccb009>選擇御守時，必定包含「療癒套裝」。\n長按月臺可查看御守套裝效果。</color>=<size\=25>You have a chance of choosing a Lost Item after battle.</size><size\=24>\n<color\=#ccb009>You will be offered an Omamori from the "Healing Set".</size><size\=27>\nClick and hold on the platform to check the set effect.</color></size>
+肅清此月臺後有機率獲得遺失物選擇機會。\n<color\=#ccb009>選擇御守時，必定包含「加護套裝」。\n長按月臺可查看御守套裝效果。</color>=<size\=25>You have a chance of choosing a Lost Item after battle.</size><size\=24>\n<color\=#ccb009>You will be offered an Omamori from the "Protection Set".</size><size\=27>\nClick and hold on the platform to check the set effect.</color></size>
+肅清此月臺後有機率獲得遺失物選擇機會。\n<color\=#ccb009>選擇御守時，必定包含「福佑套裝」。\n長按月臺可查看御守套裝效果。</color>=<size\=25>You have a chance of choosing a Lost Item after battle.</size><size\=24>\n<color\=#ccb009>You will be offered an Omamori from the "Blessing Set".</size><size\=27>\nClick and hold on the platform to check the set effect.</color></size>
+肅清此月臺後有機率獲得遺失物選擇機會。\n<color\=#ccb009>選擇御守時，必定包含「驅邪套裝」。\n長按月臺可查看御守套裝效果。</color>=<size\=25>You have a chance of choosing a Lost Item after battle.</size><size\=24>\n<color\=#ccb009>You will be offered an Omamori from the "Exorcism Set".</size><size\=27>\nClick and hold on the platform to check the set effect.</color></size>
+肅清此月臺後有機率獲得遺失物選擇機會。\n<color\=#ccb009>選擇御守時，必定包含「緣結套裝」。\n長按月臺可查看御守套裝效果。</color>=<size\=25>You have a chance of choosing a Lost Item after battle.</size><size\=24>\n<color\=#ccb009>You will be offered an Omamori from the "Navi Set".</size><size\=27>\nClick and hold on the platform to check the set effect.</color></size>
+
+----------
+MINI BOSSES
+----------
+
+<color\=#FFAF00>肅清此月臺後必定獲得橙色御守和遺失物。\n完成後請選擇列車最終行程。</color>\n1、歐賽會進入<color\=#ff3b37>「反擊架勢」</color>，期間受到一切傷害都會反擊。<color\=#ff3b37>「反擊架勢」</color>持續2回合。反擊成功後提升自身攻擊力。\n2、<color\=#ff3b37>「反擊架勢」</color>結束後，歐賽會嘲諷受到其反擊的敵人。=<color\=#FFAF00>You can choose an Orange Omamori \nand a Lost Item after battle.</color>\n1. Ose will enters <color\=#ff3b37>"Counter Stance"</color>, and will counter after taking damage.<color\=#ff3b37>"Counter Stance"</color> lasts for 2 turns. Increases ATK after a sucessful counter. \n2.  After <color\=#ff3b37>"Counter Stance"</color> ends, Ose will taunt all countered enemies.
+1、歐賽會進入<color\=#ff3b37>「反擊架勢」</color>，期間受到一切傷害都會反擊。<color\=#ff3b37>「反擊架勢」</color>持續2回合。反擊成功後提升自身攻擊力。\n2、<color\=#ff3b37>「反擊架勢」</color>結束後，歐賽會嘲諷受到其反擊的敵人。=1. Ose will enters <color\=#ff3b37>"Counter Stance"</color>, and will counter after taking damage.<color\=#ff3b37>"Counter Stance"</color> lasts for 2 turns. Increases ATK after a sucessful counter. \n2.  After <color\=#ff3b37>"Counter Stance"</color> ends, Ose will taunt all countered enemies.
+
+進入反擊架勢，受到傷害時反擊傷害者，並使自身攻擊力提升，效果持續2回合，可疊加8層。=Enters Counter Stance, aftering taking damage will counters the attacker and increases ATK for 2 turns, up to 8 stacks.
+嘲諷突襲=Taunt Rush
+對所有敵人造成中量物理屬性傷害，並使得所有受到過歐賽反擊的敵人陷入嘲諷狀態，效果持續1回合。=Deals medium Physical damage to all enemies and inflicts taunt to all enemies that got countered for 1 turn.
+瑪哈拉庫卡加=Marakukaja
+有極高基礎機率使1名敵人陷入狂怒狀態，效果持續1回合。=Inflicts Rage (high odds) to 1 enemy, \nthe ailment lasts for 1 turn.
+
+
+霜精之王=King Frost
+1、霜精之王不會攻擊，會不斷的召喚傑克霜精和邪惡霜精。擊敗一輪後霜精之王減少30%生命值。\n2、傑克霜精和邪惡霜精在場的時間越長，攻擊力，防禦力越高。=1. King Frost does not attack, but will summon Jack Frost and Black Frost. Defeating all summons will decrease King Frost's HP by 30%. \n2. Jack Frost and Black Frost increase their ATK and DEF the longer they live.
+<color\=#FFAF00>肅清此月臺後必定獲得橙色御守和遺失物。\n完成後請選擇列車最終行程。</color>\n1、霜精之王不會攻擊，會不斷的召喚傑克霜精和邪惡霜精。擊敗一輪後霜精之王減少30%生命值。\n2、傑克霜精和邪惡霜精在場的時間越長，攻擊力，防禦力越高。=<color\=#FFAF00>You can choose an Orange Omamori \nand a Lost Item after battle.</color>\n1. King Frost does not attack, but will summon Jack Frost and Black Frost. Defeating all summons will decrease King Frost's HP by 30%. \n2. Jack Frost and Black Frost increase their ATK and DEF the longer they live.
+
+思考=Thinking
+<color\=#FF0000>霜精之王</color>正在思考……=<color\=#FF0000>King Frost</color> is thinking...
+越戰越勇=<size\=28>Go from strength to strength</size>
+自身回合開始時，提升攻擊力與防禦力。=Increases ATK and DEF at the start of turn.
+
+
+<color\=#FFAF00>肅清此月臺後必定獲得橙色御守和遺失物。\n完成後請選擇列車最終行程。</color>\n1、白虎的技能<color\=#ff3b37>「惡齒斬」</color>會使得所有敵人進入<color\=#ff3b37>「裂傷」</color>狀態，防禦力降低，受到的傷害提升。使用防禦指令可以驅散<color\=#ff3b37>「裂傷」</color>狀態。\n2、白虎的技能<color\=#ff3b37>「利爪強襲」</color>，該技能鎖定生命值最低的怪盜，若目標怪盜身上有<color\=#ff3b37>「裂傷」</color>狀態，則傷害提升。若該技能擊敗了敵人，則立刻再次釋放。=<color\=#FFAF00>You can choose an Orange Omamori \nand a Lost Item after battle.</color>\n1. Byakko's skill <color\=#ff3b37>"Vicious Teeth Slash"</color> will inflict enemies with <color\=#ff3b37>"Laceration"</color>, decreasing their DEF and increasing their DMG Taken. Using the Guard command can dispels <color\=#ff3b37>"Laceration"</color>. \n2. Byakko's skills <color\=#ff3b37>"Claws Assult"</color>, this skill locks on the enemy with the lowest DEF. Increases this skill's damage if they have <color\=#ff3b37>"Laceration"</color>. This skill will immediately be used again if it defeats an enemy.
+
+惡齒斬=Vicious Teeth Slash
+對所有角色造成中量物理屬性傷害，並使所有角色進入『裂傷』狀態，防禦力少量降低，並每回合損失一定生命值，效果持續三回合。釋放防禦指令可以驅散。=Deals medium Physical damage to all enemies and inflicts "Laceration", lightly decreases their DEF and causes them to lose HP every turn for 3 turns. Can be dispelled by using the Guard command.
+利爪強襲-鎖定=Claws Assult - Lock On
+對當前生命值最低的敵人造成少量物理屬性傷害，並鎖定這名敵人。=Deals light Physical damage to the enemy with the lowest HP and locks on them.
+利爪強襲=Claw Assult
+對處於鎖定狀態的敵人造成大量物理屬性傷害，該技能附帶斬殺效果，敵人身上每有一種持續傷害類效果，則傷害提升30%。該技能若擊敗了敵人，則白虎獲得一個額外回合並立刻釋放該技能。=Deals heavy Physical damage to the locked on enemy. This has an execution effect that increases damage by 30% for each damage over time effects the enemy have. If this skill defeats an enemy, Byakko gains an extra turn and immediately uses the same skill.
+對1名敵人造成中量火焰屬性傷害，有高機率使其陷入燃燒狀態。=Deals medium Fire damage to 1 enemy, with a high chance of inflicting Burn.
+裂傷=Laceration
+防禦力降低，每回合扣除一定生命值。=Decreases DEF, loses HP every turn.
+鎖定=Lock On
+被白虎鎖定了=Being locked on by Byakko.
+
+
+<color\=#FFAF00>肅清此月臺後必定獲得橙色御守和遺失物。\n完成後請選擇列車最終行程。</color>\n1、場上權天使數量小於2時，能天使會清除所有的<color\=#ff3b37>「軍團之力」</color>，召喚2個權天使。戰鬥中最多召喚2次。\n2、<color\=#ff3b37>「軍團之力」</color>5層時，能天使會釋放強力群體技能。\n3、敵人釋放某些技能時，所有敵人獲得<color\=#ff3b37>「軍團之力」</color>。=<color\=#FFAF00>You can choose an Orange Omamori \nand a Lost Item after battle.</color>\n1. When the number of Principality on the field is less than 2, Power will remove all <color\=#ff3b37>"Legion's Strength"</color> and summon 2 Principality, up to a maximum of 2 times this battle. \n2, When <color\=#ff3b37>"Legion's Strength"</color> is at 5 stacks, Power will use a powerful AoE skill. \n3. When the enemies use certain skills, all enemies will gain <color\=#ff3b37>"Legion's Strength"</color>.
+1、場上權天使數量小於2時，能天使會清除所有的<color\=#ff3b37>「軍團之力」</color>，召喚2個權天使。戰鬥中最多召喚2次。\n2、<color\=#ff3b37>「軍團之力」</color>5層時，能天使會釋放強力群體技能。\n3、敵人釋放某些技能時，所有敵人獲得<color\=#ff3b37>「軍團之力」</color>。=1. When the number of Principality on the field is less than 2, Power will remove all <color\=#ff3b37>"Legion's Strength"</color> and summon 2 Principality, up to a maximum of 2 times this battle. \n2, When <color\=#ff3b37>"Legion's Strength"</color> is at 5 stacks, Power will use a powerful AoE skill. \n3. When the enemies use certain skills, all enemies will gain <color\=#ff3b37>"Legion's Strength"</color>.
+
+軍團之力-行軍=<size\=28>Legion's Strength - Marching</size>
+對所有敵人造成中量祝福屬性傷害，使所有同伴獲得1層『軍團之力』。=Deals medium Bless damage to all enemies, all allies gain 1 stack of "Legion's Strength".
+軍團之力-摧枯拉朽=<size\=25>Legion's Strength - Devastation</size>
+『軍團之力』達到5層時釋放，對所有敵人造成大量祝福屬性傷害。=Skill is used when "Legion's Strength" reaches 5 stacks, deals heavy Bless damage to all enemies.
+軍團之力-戰鬥續行=<size\=25>Legion's Strength - Fight On</size>
+使所有同伴恢復少量生命值，並使所有同伴獲得1層『軍團之力』。=Restores a small amount of HP to all allies, they gain 1 stack of "Legion's Strength".
+軍團之力-單點爆發=<size\=28>Legion's Strength - Burst</size>
+『軍團之力』達到5層時釋放，對1名敵人造成大量祝福屬性傷害。=Skill is used when "Legion's Strength" reaches 5 stacks, deals heavy Bless damage to 1 enemy.
+
+<color\=#FFAF00>肅清此月臺後必定獲得橙色御守和遺失物。\n完成後請選擇列車最終行程。</color>\n1、黑騎士與蒼白騎士受到致命傷害後不會立刻死亡，保留1生命值進入<color\=#ff3b37>「假死」</color>狀態。若二者同時處於假死狀態，則同時死亡。\n2、黑騎士或蒼白騎士的回合開始時，若另外一方處於<color\=#ff3b37>「假死」</color>狀態，則會釋放技能復活對方。並使得對方的攻擊力，生命上限提升。\n3、黑騎士能力：<color\=#ff3b37>「黑之舞」</color>：使雙子騎士造成的傷害提升，受到的傷害降低，擊敗2者中的任意1人驅散。\n4、黑騎士能力：<color\=#ff3b37>「黑與白之輪舞·黑」</color>：被復活超過2次後，會釋放<color\=#ff3b37>「黑與白之輪舞·黑」</color>：造成強力群體傷害，並使得當前生命值最低的角色陷入遺忘狀態。\n5、蒼白騎士能力：<color\=#ff3b37>「白之舞」</color>：對防禦力最低的怪盜造成一定傷害並鎖定之。\n6、蒼白騎士能力：<color\=#ff3b37>「黑與白之輪舞·白」</color>：釋放<color\=#ff3b37>「白之舞」</color>後的下1回合，若場上黑白騎士都不處於<color\=#ff3b37>「假死」</color>狀態，則對被<color\=#ff3b37>「白之舞」</color>鎖定的敵人造成大量傷害。=<color\=#FFAF00>You can choose an Orange Omamori \nand a Lost Item after battle.</color>\n1. Black Rider and White Rider will not die immediately after taking fatal damage, instead they will stay at 1 HP and enter <color\=#ff3b37>"Faked Death"</color>. Both will die if they are both in <color\=#ff3b37>"Faked Death"</color>. \n2. At the start of Black Rider's or White Rider's turn, if one of them is in <color\=#ff3b37>"Faked Death"</color>, they will use a skill that revives the other Rider and increases their ATK and Max HP. \n3. Black Rider ability:<color\=#ff3b37>"Dance of Black"</color>: Increases DMG dealt and decreases  DMG Taken of both Riders, dispels when either Rider is at 1 HP. \n4. Black Rider ability:<color\=#ff3b37>"Black and White Wheel Dance - Black"</color>: After being revived for more than 2 times, it will be use <color\=#ff3b37>"Black and White Wheel Dance - Black"</color>: Deals heavy AoE damage and inflicts the lowest DEF character with Forget. \n5. White Rider ability:<color\=#ff3b37>"Dance of White"</color>: Deals damage and locks on an ally with the lowest DEF. \n6.White Rider ability:<color\=#ff3b37>"Black and White Wheel Dance - White"</color>: After using <color\=#ff3b37>"Dance of White</color> , if neither Black Rider or White Rider is in <color\=#ff3b37>"Faked Death"</color>, then deals heavy damage to an ally being locked on by <color\=#ff3b37>"Dance of White"</color>.
+1、黑騎士與蒼白騎士受到致命傷害後不會立刻死亡，保留1生命值進入<color\=#ff3b37>「假死」</color>狀態。若二者同時處於假死狀態，則同時死亡。\n2、黑騎士或蒼白騎士的回合開始時，若另外一方處於<color\=#ff3b37>「假死」</color>狀態，則會釋放技能復活對方。並使得對方的攻擊力，生命上限提升。\n3、黑騎士能力：<color\=#ff3b37>「黑之舞」</color>：使雙子騎士造成的傷害提升，受到的傷害降低，擊敗2者中的任意1人驅散。\n4、黑騎士能力：<color\=#ff3b37>「黑與白之輪舞·黑」</color>：被復活超過2次後，會釋放<color\=#ff3b37>「黑與白之輪舞·黑」</color>：造成強力群體傷害，並使得當前生命值最低的角色陷入遺忘狀態。=1. Black Rider and White Rider will not die immediately after taking fatal damage, instead they will stay at 1 HP and enter <color\=#ff3b37>"Faked Death"</color>. Both will die if they are both in <color\=#ff3b37>"Faked Death"</color>. \n2. At the start of Black Rider's or White Rider's turn, if one of them is in <color\=#ff3b37>"Faked Death"</color>, they will use a skill that revives the other Rider and increases their ATK and Max HP. \n3. Black Rider ability:<color\=#ff3b37>"Dance of Black"</color>: Increases DMG dealt and decreases  DMG Taken of both Riders, dispels when either Rider is at 1 HP. \n4. Black Rider ability:<color\=#ff3b37>"Black and White Wheel Dance - Black"</color>: After being revived for more than 2 times, it will be use <color\=#ff3b37>"Black and White Wheel Dance - Black"</color>: Deals heavy AoE damage and inflicts the lowest DEF character with Forget.
+1、黑騎士與蒼白騎士受到致命傷害後不會立刻死亡，保留1生命值進入<color\=#ff3b37>「假死」</color>狀態。若二者同時處於假死狀態，則同時死亡。\n2、黑騎士或蒼白騎士的回合開始時，若另外一方處於<color\=#ff3b37>「假死」</color>狀態，則會釋放技能復活對方。並使得對方的攻擊力，生命上限提升。\n3、蒼白騎士能力：<color\=#ff3b37>「白之舞」</color>：對生命值最低的怪盜造成一定傷害並鎖定之。\n4、蒼白騎士能力：<color\=#ff3b37>「黑與白之輪舞·白」</color>：釋放<color\=#ff3b37>「白之舞」</color>後的下1回合，若場上黑白騎士都不處於<color\=#ff3b37>「假死」</color>狀態，則對被<color\=#ff3b37>「白之舞」</color>鎖定的敵人造成大量傷害。=1. Black Rider and White Rider will not die immediately after taking fatal damage, instead they will stay at 1 HP and enter <color\=#ff3b37>"Faked Death"</color>. Both will die if they are both in <color\=#ff3b37>"Faked Death"</color>. \n2. At the start of Black Rider's or White Rider's turn, if one of them is in <color\=#ff3b37>"Faked Death"</color>, they will use a skill that revives the other Rider and increases their ATK and Max HP. \n3. White Rider ability:<color\=#ff3b37>"Dance of White"</color>: Deals damage and locks on an ally with the lowest DEF. \n4.White Rider ability:<color\=#ff3b37>"Black and White Wheel Dance - White"</color>: After using <color\=#ff3b37>"Dance of White</color> , if neither Black Rider or White Rider is in <color\=#ff3b37>"Faked Death"</color>, then deals heavy damage to an ally being locked on by <color\=#ff3b37>"Dance of White"</color>.
+1、黑騎士與蒼白騎士受到致命傷害後不會立刻死亡，保留1生命值進入<color\=#ff3b37>「假死」</color>狀態。若二者同時處於假死狀態，則同時死亡。\n2、黑騎士或蒼白騎士的回合開始時，若另外一方處於<color\=#ff3b37>「假死」</color>狀態，則會釋放技能復活對方。並使得對方的攻擊力，生命上限提升。\n3、黑騎士能力：<color\=#ff3b37>「黑之舞」</color>：使雙子騎士造成的傷害提升，受到的傷害降低，擊敗2者中的任意1人驅散。\n4、黑騎士能力：<color\=#ff3b37>「黑與白之輪舞·黑」</color>：被復活超過2次後，會釋放<color\=#ff3b37>「黑與白之輪舞·黑」</color>：造成強力群體傷害，並使得當前生命值最低的角色陷入遺忘狀態。\n5、蒼白騎士能力：<color\=#ff3b37>「白之舞」</color>：對防禦力最低的怪盜造成一定傷害並鎖定之。\n6、蒼白騎士能力：<color\=#ff3b37>「黑與白之輪舞·白」</color>：釋放<color\=#ff3b37>「白之舞」</color>後的下1回合，若場上黑白騎士都不處於<color\=#ff3b37>「假死」</color>狀態，則對被<color\=#ff3b37>「白之舞」</color>鎖定的敵人造成大量傷害。=1. Black Rider and White Rider will not die immediately after taking fatal damage, instead they will stay at 1 HP and enter <color\=#ff3b37>"Faked Death"</color>. Both will die if they are both in <color\=#ff3b37>"Faked Death"</color>. \n2. At the start of Black Rider's or White Rider's turn, if one of them is in <color\=#ff3b37>"Faked Death"</color>, they will use a skill that revives the other Rider and increases their ATK and Max HP. \n3. Black Rider ability:<color\=#ff3b37>"Dance of Black"</color>: Increases DMG dealt and decreases  DMG Taken of both Riders, dispels when either Rider is at 1 HP. \n4. Black Rider ability:<color\=#ff3b37>"Black and White Wheel Dance - Black"</color>: After being revived for more than 2 times, it will be use <color\=#ff3b37>"Black and White Wheel Dance - Black"</color>: Deals heavy AoE damage and inflicts the lowest DEF character with Forget. \n5. White Rider ability:<color\=#ff3b37>"Dance of White"</color>: Deals damage and locks on an ally with the lowest DEF. \n6.White Rider ability:<color\=#ff3b37>"Black and White Wheel Dance - White"</color>: After using <color\=#ff3b37>"Dance of White</color> , if neither Black Rider or White Rider is in <color\=#ff3b37>"Faked Death"</color>, then deals heavy damage to an ally being locked on by <color\=#ff3b37>"Dance of White"</color>.
+
+免死=Death Immunity
+受到致命傷害後，進入假死狀態。=Enters "Faked Death" upon taking fatal damage.
+黑之舞=Dance of Black
+使黑白騎士造成的傷害提升，受到的傷害降低，擊敗2者中的任意1人驅散。=Increases DMG dealt and decreases DMG Taken of both Riders, dispels when either Rider is at 1 HP.
+黑與白之輪舞：黑=<size\=22>Black and White Wheel Dance - Black</size>
+被白騎士復活超過2次後才會釋放，對所有敵人造成大量詛咒屬性傷害。=Skill is used after being revived for more than 2 times, deals heavy Curse damage to all enemies
+沉默之舞=Dance of Silence
+對1名敵人造成中量詛咒屬性傷害，有高機率使目標陷入遺忘狀態，效果持續2回合。=Deals medium Curse damage to 1 enemy with a high chance of inflicting Forget for 2 turns.
+白之舞=Dance of White
+對防禦力最低的敵人造成少量詛咒屬性傷害，並鎖定該敵人，下回合開始時，對其釋放『黑與白之輪舞：白』。=Deals light Curse damage to the enemy with the lowest DEF, locks on to them, and next turn uses "Black and White Wheel Dance - White" on them.
+黑與白之輪舞：白=<size\=22>Black and White Wheel Dance - White</size>
+對被鎖定的敵人造成超特大詛咒屬性傷害。=Deals colossal Curse damage to the locked on enemy.
+沉默追擊=Silent Pursuit
+對1名敵人造成中量詛咒屬性傷害，優先攻擊處於遺忘狀態的敵人，並對處於遺忘狀態的敵人造成的傷害提升。=Deals medium Curse damage to 1 enemy, prioritizing enemy with Forget, and deals increased damage to enemy with Forget.
+
+----------
+EVENTS (GAIN)
+----------
+
+孤<color\=#ff0000ff>零</color>零的長椅=Lonely bench
+好像有什麼東西\n掉在椅子下面……=Looks like something was dropped underneath the bench...
+好在意……不過……=It caught my attention... But...
+查看座椅下方=Look under the bench.
+獲得30枚鐵道硬幣。=Gain 30 Railroad Coins.
+坐下休息=Sit down and rest.
+全體隊員生命恢復30%。=All allies heal 30% HP.
+
+上<color\=#ff0000ff>班</color>族的陰影=Salaryman's Shadow
+呃……好累……\n好睏……好難受……=Uh... So tired... \nSleepy... Uncomfortable...
+不對……\n我不能離開工位……=No... \nI can't leave my workstation...
+我還要校對三萬字的文檔，\n做五十頁的演示簡報……=<size\=27>I also have to proofread a 30,000 word document, \nand make a 50 page presentation...</size>
+那是……膠囊睡眠艙……\n我該不該去休息一下……呃……=That's... a sleeping capule... \nShould I go rest for a bit... Uh...
+馬無夜草不肥=<size\=25>A horse doesn't get fat without extra feed.</size>
+全體隊員生命恢復50%。=Allies heal 50% HP.
+睡眠……睡眠……\n需要睡眠……=Sleep... Sleep... \nNeed sleep...
+再努努力吧=Try harder.
+
+小<color\=#ff0000ff>賣</color>部老闆的陰影=Store owner's Shadow
+這就是、人們都喜歡來買的刮刮樂獎券。\n聽說中獎率挺高的咧。=This is the scratch-off ticket that people like to buy, heard it has a good chance of winning.
+俺啊、雖然自己開的店裡也出售。\n但是俺一次都沒嘗試過咧。=Even though I also sell it here, I've never tried it myself.
+昨天那個客人，刮開就中一百倍獎金。\n他的大嗓門朋友、嚷嚷得全世界都曉得咧。=<size\=28>A customer won the 100 times jackpot from a ticket yesterday and his friend's scream was so loud that the whole world could've heard it.</size>
+還有前天那個客人啊，一來就買了兩打。\n俺一看、整整二十四張咧。=And there was this customer on the day before yesterday, he bought two dozen of them.
+雖然覺得碰運氣啥的很荒唐……\n但俺要不要刮一張試試咧？=I think it's ridiculous to try your luck... but maybe I should give one a try?
+想做就做=Do what you want.
+老實做生意吧=<size\=23>Let's do business honestly.</size>
+獲得50枚鐵道硬幣。=Gain 50 Railroad Coins.
+沒必要碰運氣=<size\=29>No need to try your luck.</size>
+當然要刮！=Of course!
+10%機率獲得500枚鐵道硬幣，90%機率什麼都不會獲得=<size\=22>10% chance to gain 500 Railroad Coins, \n90% chance to get nothing.</size>
+雖然沒有中大獎……\n不過嘛，總比啥都沒有要好咧。=I didn't win the jackpot... still, it's better than nothing.
+是這樣啊……\n果然是俺太自信了嗎……=I see... \nOf course it's me being too confident...
+說的也是……\n像俺、俺這種人，怎麼可能會有運氣。=Of course... \nPeople like me, how can I be lucky.
+
+硬<color\=#ff0000ff>漢</color>的陰影=Tough guy's Shadow
+來這裡，小哥！\n我跟你說個秘密……=Come here, brother!\nI'll tell you a secret...
+你知道水杯中的大腦嗎！\n就是一種能讓人以為自己醒著的裝置！=<size\=28>You know the brain within the glass of water! \nIt's a device that makes you think you're awake!</size>
+你明白的吧？\n我明白你明白！因為我也明白！=You do know, don't you? \nI know that you know! Because I know, too!
+我們不能繼續這樣了，\n我們要一起前往新世界！=We can't continue like this. \nLet us go the new world together!
+怎麼樣，你是想和我們一起醒來？\n還是要繼續沉睡下去！=So, do you want to wake up with us? \nOr do you want to stay asleep?
+選紅色膠囊=<size\=26>Choose the red capsule.</size>
+獲得遺失物「<link\="ri|22"><u>紅色膠囊</u></link>」。=<size\=26>Gain the Lost Item <link\="ri|22"><u>Red Capsule</u></link>.</size>
+我就知道你會選這個！\n讓我們新世界再見！=I knew you'd choose this one!\nLet us meet again in the new world!
+選藍色膠囊=<size\=26>Choose the blue capsule.</size>
+獲得遺失物「<link\="ri|23"><u>藍色膠囊</u></link>」。=<size\=26>Gain the Lost Item <link\="ri|23"><u>Blue Capsule</u></link>.</size>
+這樣啊……\n沒關係，希望你以後會改變主意。=I see... \nThat's okay, I hope you'll change your mind.
+選他口袋裡的=<size\=22>Choose the one in his pocket.</size>
+獲得20枚鐵道硬幣。=Gain 20 Railroad Coins.
+恭喜你選擇了——安慰劑！\n……才怪啊！真是浪費時間！=Congrats you have chosen... a placebo! \n... No way! What a waste of time!
+
+啊、客人，歡迎光臨呐～=Ah, welcome customer～
+最近呀，瑪奇姆我呢，\n學到了一種新的經營方法哦～=Recently, I've learned a new way to run a business～
+在這張卡和紙袋上印上名字，\n就能讓我的商店更有吸引力呢～=<size\=28>Printing a name on this card and paper bag \nhas made my store more appealing～</size>
+這種方式，似乎被稱為品牌化～=This method seems to be called branding～
+為了宣傳，\n希望客人您也能帶走一些呢～=For promotion.\nI hope you can take some with you～
+請給我積分卡=<size\=20>Please give me the point card.</size>
+獲得遺失物 「<link\="ri|59"><u>瑪奇姆的積分卡</u></link>」。=<size\=28>Gain the Lost Item \n<link\="ri|59"><u>Marthym's Point Card</u></link>.</size>
+請給我紙袋=<size\=20>Please give me the paper bag.</size>
+獲得遺失物 「<link\="ri|60"><u>瑪奇姆的購物袋</u></link>」。=<size\=28>Gain the Lost Item \n<link\="ri|60"><u>Marthym's Shopping Bag</u></link>.</size>
+謝謝惠顧，請拿好～\n感謝客人您每次都這麼照顧我生意呢～=Thank you, here you go～ \nThank you for your patronage～
+
+女<color\=#ff0000ff>性</color>玩家的陰影=Female player's Shadow
+……等等。=... Wait.
+……這個，給你。\n最好的，盾。=... This one's for you.\nThe best, shield.
+我想……自己去冒險。=I'd... like to venture out on my own.
+但右邊的膝蓋，\n已經不行了……=But my right knee.\nIt's not working anymore...
+代替我，去冒險吧。=Take my place. Go on an adventure.
+好的=Okay
+獲得遺失物「<link\="ri|38"><u>全村最好的盾</u></link>」=Gain the Lost Item <link\="ri|38"><u>Best shield in the village</u></link>.
+算了=Never mind
+獲得40枚鐵道硬幣。=Gain 40 Railroad Coins.
+太好了……\n那麼，一路順風。=Great... \nWell, bon voyage.
+是嗎……\n那麼至少，收下這個。=Really?... \nWell, at least take this.
+
+幹<color\=#ff0000ff>練</color>的女性陰影=Capable woman's Shadow
+實、實驗資料居然全部被弄丟了！=I've lost all the data on the experiments!
+啊啊，我該怎麼辦……=Ahhh, what should I do...
+測試綠色唱片=Test the green record.
+推論值發表吧=It's worth publishing.
+獲得遺失物「寧靜的樂章」。=Gain the Lost Item "Peaceful Moment"
+你願意幫助我測試嗎！？\n謝謝你！=You're willing to help me test!? \nThank you!
+
+模擬測試的資料已經達到合格指標，\n這下總算能開展正式實驗了！=<size\=25>The data from the simulation test has reached the qualification index, \nand now we can finally start the formal experiment!</size>
+可是，時間已經不多了，\n沒辦法把四張唱片全部測試一遍啊！=However, time is running out \nand I can't test all four records!
+打、打起精神來。\n能測試一張唱片已經是萬幸了！=<size\=25>Cheer, cheer up. \nYou're already very lucky being able to test one record!</size>
+到底要測試哪張唱片的資料才好……\n啊啊，我該怎麼辦……=Which record's data should I test... \nAh, what should I do...
+測試霜凍唱片=Test Frosty Record
+獲得遺失物 「<link\="ri|53"><u>霜凍唱片</u></link>」。=<size\=26>Gain the Lost Item <link\="ri|53"><u>Frost Record</u></link>.</size>
+測試脈衝唱片=Test Pulse Record
+獲得遺失物 「<link\="ri|54"><u>脈衝唱片</u></link>」。=<size\=26>Gain the Lost Item <link\="ri|54"><u>Pulse Records</u></link>.</size>
+測試恐慌唱片=Test Panic Record
+獲得遺失物 「<link\="ri|55"><u>恐慌唱片</u></link>」。=<size\=26>Gain the Lost Item <link\="ri|55"><u>Panic Records</u></link>.</size>
+
+霜凍唱片=Frosty Record
+使所有敵人獲得冰凍、核熱屬性弱點，但是對隨機一種其他屬性的適應性變為無。=Give all enemies Ice and Nuclear weakness, \nbut make them null another element randomly.
+脈衝唱片=Pulse Record
+使所有敵人獲得電擊、祝福屬性弱點，但是對隨機一種其他屬性的適應性變為無。=Give all enemies Electricity and Bless weakness, \nbut make them null another element randomly.
+恐慌唱片=Panic Record
+使所有敵人獲得疾風、詛咒屬性弱點，但是對隨機一種其他屬性的適應性變為無。=Give all enemies Wind and Curse weakness, \nbut make them null another element randomly.
+
+----------
+EVENT (CHANCE)
+----------
+
+客人，歡迎光臨～=Welcome, customer～
+今天要給店裡的常客提供特別優惠服務～=We're offering a special discount service to our regular customers today～
+請選一個喜歡的東西吧～=Please choose one of the following～
+客戶回饋禮包=Rebate Gift Bag
+100%機率啟動\n一個御守之絆的二件套效果。=100% chance to activate an Omamori 2-piece set effect.
+客戶幸運禮包=Lucky Gift Bag
+20%機率啟動\n一個御守之絆的四件套效果。=20% chance to activate an Omamori 4-piece set effect.
+今後也請繼續光顧～=Please continue your patronage～
+哎呀，沒抽中，真可惜……\n不過今後也請繼續光顧哦～=Oops, you didn't win, what a pity... \nBut please continue your patronage～
+
+躊<color\=#ff0000ff>躇</color>的男性陰影=Hesitant man's Shadow
+明天，一起打工的前輩要請我吃飯。=My senior at work is going to treat me a meal tomorrow.
+問我要吃炸豬排還是牛排！=Asking me whether I want to have pork chop or steak!
+這我怎麼選得出來啊！？\n兩個我都愛吃啊！=How can I choose?\nI like them both!
+可是，已經沒有時間了……\n必須選一個！=But I'm running out of time... \nI must choose one!
+我……我該選哪個才好！？=Which one should I choose!?
+炸豬排更好吃=Pork chop is better.
+隨機獲得1~2個御守。=Randomly gain 1 or 2 Omamori.
+牛排更好吃=Steak is better.
+50%機率獲得1個隨機遺失物。=50% chance to get a random Lost Item.
+我知道了，我會選牛排的！\n可是炸豬排也……好糾結～=I know, I'll go with the steak! \nBut pork chop is... I'm not sure～
+啊啊……牛排店沒開門！\n我就知道不該選牛排的！=Ahhh... the steakhouse is not open! \nI knew I shouldn't have chosen steak!
+
+男<color\=#ff0000ff>孩</color>的陰影=Boy's Shadow
+要來一局嗎？=Want to play a game?
+可流行了，我們全班都在玩。=It's so popular, our whole class is playing it.
+但是他們不喜歡我，\n都不帶我玩……=But they don't like me. \nThey don't even play with me...
+我有很多卡，還有玩具！\n都可以分給你，陪我玩吧！=I have a lot of cards, and toys! \nI can share them with you, come play with me!
+選一張卡牌=Pick a card
+獲得一張「<link\="s|1014"><u>集換式卡牌</u></link>」。=Gain a <link\="s|1014"><u>Collectible Card</u></link>.
+<color\=#66ccff>『集換式卡牌』</color>=<color\=#66ccff>Collectible Card</color>
+包含4張不同卡牌，每張均有正面效果和負面效果。集齊3張以上時，後續不再觸發負面效果。。=Have 4 different cards, each wtith a buff and debuff. Remove the debuff when 3 cards are collected.
+拿一個玩具=Take a toy.
+抱歉，我很忙=Sorry, I'm busy.
+啊，他們叫我了，我得帶玩具過去。\n抱歉啦，下次再一起玩吧，大哥哥！=<size\=29>Ah, they're calling me, I have to bring the toys. \nSorry, let's play together next time, big brother!</size>
+
+賽<color\=#ff0000ff>馬</color>迷的陰影=Horse racing fan's Shadow
+馬場如戰場，賽馬如人生。=Racecourse is like a battleground, \nand horse racing is like life.
+我看中的馬，\n還一次都沒有在比賽裡贏過……=None of the horses I chose have won...
+今天的比賽，\n我也不覺得能贏。=I don't think I'll win the bet today.
+但是，今天一定……\n今天一定不會讓我失望的！我是知道的！=However, today... \ntoday is not going to let me down!
+所以，我應該下注，試著賭一把！\n你也是這麼想的對吧！？=So I should place a bet and try my luck! You think so too, don't you!
+要有信心=Have faith.
+消耗50枚鐵道硬幣，\n有30%機率獲得200枚鐵道硬幣，\n有70%機率血本無歸。=<size\=25>Spend 50 Railroad Coins, \n30% chance to gain 200 Railroad Coins and 70% to get nothing.</size>
+還是算了吧=<size\=29>Let's just forget about it.</size>
+我就知道你懂我！\n好，我去買啦！=I knew you understand me!\nOkay, I'll go buy it!
+輸光了！兜裡一分錢都沒有了！\n完了，這下全完了……=I've lost everything! I don't have a penny left in my pocket! It's over, it's all over...
+你也覺得贏不了嗎……\n我再仔細考慮看看……=You think I can't win too?... \nI'll think about it more carefully...
+
+理<color\=#ff0000ff>財</color>推銷員的陰影=Saleman's Shadow
+哎唷，人家手上這次的產品可真是太棒了呢～=I've got a great product on my hands!
+走勢良好、盈利強勁，\n搞得人家也好心動噢～=It's a trendsetter and making great profits, this is so exciting!
+可是人家啊，跟那些客戶不一樣呢。\n人家沒有那麼多本金……=But I'm not like those stores. \nI don't have that much capital...
+只能從兩個最心動的裡面選了呢～=You can only choose between two of my favorites!
+一個是保本的低收益產品。\n一個是高風險的高收益產品。=One is low risk, low reward. \nThe other is high risk, high reward.
+到底要選哪個，人家真的很難抉擇呢～=<size\=28>It's really hard to decide which one to choose.</size>
+無風險低收益=Low risk low reward.
+高風險高回報=High risk high reward.
+50%機率獲得120枚鐵道硬幣；\n50%機率失去20枚鐵道硬幣。=<size\=22>50% chance to gain 120 Railroad Coins; \n50% chance to lose 20 Railroad Coins.</size>
+哎唷，無虧損什麼的，\n人家最喜歡了啦～=Oh, no loss whatsoever.\nThat's my favorite!
+哎唷，偶爾大膽一次，\n人家也覺得很過癮了啦～=Oh, I'm having fun being bold once in a while!
+可惡，偶爾大膽一次，\n沒想到上天也不眷顧人家啊～=Damn, I chose to be bold, \nbut fortune didn't favor me.
+
+星<color\=#ff0000ff>座</color>愛好者的陰影=Zodiac enthusiast's Shadow
+睡醒，來看看今天的運勢……=Just woke up let's check today's fortune...
+怎麼回事，我的命運正在被蒙塵！=What's going on, my fate is being clouded!
+該死的！\n因為水逆的緣故，我看不清我的星盤了！=Damn it! I can't read my astrolabe because of the Mercury retrograde!
+怎麼辦……\n沒有運勢指導的話，不知道該做什麼……=What to do... I don't know what to do without my fortune guiding me...
+換工作吧=Change your job.
+50%機率獲得150枚鐵道硬幣，\n50%機率失去所有角色70%生命=<size\=25>50% chance to gain 150 Railroad Coins, 50% chance to lose 70% HP on all allies.</size>
+搬家好了=Relocate your house.
+50%機率獲得80枚鐵道硬幣，\n50%機率失去所有角色20%生命=<size\=25>50% chance to gain 80 Railroad Coins, 50% chance to lose 20% HP on all allies.</size>
+大掃除=Clean your house.
+50%機率獲得10枚鐵道硬幣，\n50%機率失去所有角色1%生命=<size\=25>50% chance to gain 10 Railroad Coins, 50% chance to lose 1% HP on all allies.</size>
+什麼也不做=Do nothing.
+果然，星盤再次清晰了！\n這下我就能放心出門了！=<size\=28>Sure enough, the astrolabe is cleared once again! \nNow I can safely go out!</size>
+不！星盤徹底被遮擋了！\n完蛋了，我的人生一片灰暗……=No! The astrolabe is completely blocked! \nIt's over, my life is in ruins...
+啊啊……\n我該怎麼辦……=Ahhh... \nWhat should I do...
+
+老<color\=#ff0000ff>者</color>玩家的陰影=Elderly man's Shadow
+究竟是什麼樣的誘惑……奪走了人們許願的想法……=Now what kind of temptation... can takes away people's idea on praying...
+沒有許願之力的話……神會憤怒，神會讓災禍降臨……=Without the power to pray... God will be angry and bring forth calamities...
+現在是應該向人們闡明許願的重要性呢……=Maybe it's time to educate people about the importance of praying...
+還是應該接受時代的變化呢……=Or should I just accept the change...
+老夫究竟該如何是好……=What should an old man like me do...
+許願很重要=Praying is important.
+20%機率減少一枚「勾玉」，\n80%機率獲得一枚「勾玉」\n（戰鬥後可以復活1名同伴）。=<size\=21>20% chance to lose a Jade, \n80% chance to gain a Jade (A consumable that revives a fallen teammate).</size>
+接受變化吧=Accept the change.
+說的是啊……\n雖然不知道會不會順利，但老夫試試看吧。=That's right... \nThough I don't know if this will go well, but I'll give it a try.
+不好，神大人生氣了！\n一定是你的心不誠……=Not good, God is angry! \nIt must be because you weren't sincere...
+或許這麼做比較好啊……=Maybe it's for the best...
+
+----------
+EVENT (SPEND)
+----------
+
+少<color\=#ff0000ff>女</color>的陰影=Young girl's Shadow
+什麼是愛呢……=What is love...
+愛並不是彼此凝視，\n而是一同注視同一方向吧……=Love is not about staring at each other, \nit's about staring in the same direction...
+我們一定是能夠生活在一起的人，\n他會是我無法離開的人……=We must be people who can live together, he's a person I can't leave...
+已經等他，1000多天了呢……\n他真的會回來嗎？=I've been waiting for him for more than 1000 days... Will he really comes back?
+要相信對方=Trust each other.
+獲得一枚「<link\="rg|1008"><u>勾玉</u></link>」。=Gain a <link\="rg|1008"><u>Jade</u></link>.
+也有別的選擇=<size\=30>There are other choices.</size>
+他逃跑了吧=<size\=25>He ran away, didn't he?</size>
+全體隊員失去50%生命值，獲得50枚鐵道硬幣=All allies lose 50% HP, gain 50 Railroad Coins.
+嗯，我會的，他也一定會回來的。=Um, I will, he'll be back for sure.
+這是我家鄉的祝福之物，\n願你順遂平安。=This Jade is a blessing from my hometown.\nSafe travels.
+……你說的對。\n我稍微考慮看看，謝謝你。=... You are right.\nI'll think about it, thank you.
+好過分！怎麼能這樣說話呢！\n像、像你這樣的……是不會懂的！=How can you talk like that? \nPeople like you... won't understand!
+我們對彼此來說是如同生命般重要的人，\n無論如何我都不會放棄的！=<size\=28>We are as important as our life to each other. \nI won't give up no matter what!</size>
+
+少<color\=#ff0000ff>年</color>的陰影=Young man's Shadow
+已經……離開她一千多天了……=I have been away from her... For more than a thousand days...
+她……還在等著我嗎……？=Is she... Still waiting for me...?
+……=...
+我是否應該放過彼此，也放她自由？=Should I let her go and set her free?
+去見她吧=Go see her.
+獲得一枚「<link\="rg|1008"><u>勾玉</u></link>」。=Gain a <link\="rg|1008"><u>Jade</u></link>.
+放棄也是選擇=Giving up is a choice.
+全體隊員生命恢復60%。=All allies heal 60% HP.
+失去一枚「<link\="rg|1008"><u>勾玉</u></link>」，獲得50枚鐵道硬幣。=Lose a <link\="rg|1008"><u>Jade</u></link>, \ngain 50 Railroad Coins.
+我也這麼想！\n謝謝你，這個就送你吧。=That's what I thought!\nThank you. This is for you.
+嗯……是啊。\n我會仔細考慮看看的，謝謝你。=Well... yeah. \nI'll think carefully on it, thank you.
+是啊……你說的對，我也正因此迷茫。\n但現在，我已經下定決心。=<size\=28>Yeah... you're right. \nI was at a loss, but now I've made up my mind. </size>
+我們對彼此來說是如同生命般重要的人，\n我絕對，要回去見她！=<size\=29>We are as important as our life to each other. \nI must go back and see her!</size>
+
+股<color\=#ff0000ff>票</color>投資者的陰影=Investor's Shadow
+啊啊……失敗、失敗、失敗、失敗……=Ahhh... Fail, fail, fail, fail...
+為什麼我總是失敗？！！=Why do I always fail?!!
+已經全部投進去了、全部！\n現在怎麼辦……=I've given in everything, everything! \nWhat do I do now...
+對了、對了，我可以贖回來……\n可以、一點點、慢慢地……=Right, right, I can still get it back... \nLittle by little, slowly...
+但是每一次！\n每一次都是虧損！=But every time! \nEvery time it's in the reds!
+虧損就像要我的命一樣痛苦！=The loss is as painful as my life!
+怎麼辦、怎麼辦啊？！=What to do, what to do?!
+贖回一部分=Redempt a bit.
+全體隊員失去10%生命，\n獲得15枚鐵道硬幣。=All allies lose 10% HP, \ngain 15 Railroad Coins.
+眼不見心不煩=<size\=28>Out of sight, out of mind.</size>
+
+做<color\=#ff0000ff>生</color>意的女性陰影=Businesswoman's Shadow
+
+請等一下！\n這位看起來就很有眼光的小哥！=<size\=29>Please wait! \nYou look like you're a person with great taste!</size>
+這兩個盒子裡，有您絕對無法拒絕的好東西！\n相信我！=These two boxes are filled with goodies that you just can't resist! Trust me!
+雖然是二手貨，但我保證絕對物超所值！\n買下它吧，您不會後悔的！=It's used, but I promise it's of great value! \nBuy it, you won't regret it!
+如果是您的話，\n一定能夠理解我這絕妙的商業思路的，對吧！=I'm sure someone like you would understand my brilliant business idea, right?
+買下1號盒子=Buy Box 1
+消耗75枚鐵道硬幣，\n隨機獲得1個紫色御守。=Spend 75 Railroad Coins to get 1 random purple Omamori.
+感謝惠顧！\n現在它是您的了！=Thank you for your patronage!\nIt's yours now!
+買下2號盒子=Buy box 2.
+消耗125枚鐵道硬幣，\n隨機獲得1個遺失物。=Spend 125 Railroad Coins to get 1 random Lost Item.
+我沒錢=<size\=30>I don't have any money.</size>
+
+請等一下，\n這位看起來就很有眼光的小哥！=<size\=29>Please wait! \nYou look like you're a person with great taste!</size>
+現在正在舉辦「以物易物」的活動，\n只需要一點點東西就能換到福袋！=There is currently a bartering event, \nyou can get a goody bag if you give a little!
+還有哦！我偷偷跟你說，\n福袋裡面的東西絕對物超所值啦。=Oh! Let me tell you, \nthe stuff in the bag is worth every penny.
+怎麼樣，你有閒置的物品嗎？\n我這就剩下最後兩個福袋了哦。=Well, do you have any unused items? \nI'm down to my last two bags.
+兩個我都要了=I'll take both.
+回收兩個遺失物，獲得兩個隨機遺失物=Choose 2 Lost Items to recycle \nand choose 2 Lost Items.
+只要一個就好=Just one is fine.
+回收一個遺失物，獲得一個隨機遺失物=Choose 1 Lost Item to recycle \nand choose 1 Lost Item.
+不感興趣=Not interested.
+不進行回收=Leave.
+r:"^請選擇遺失物放棄((\d+)/(\d+))$"="Please select lost items to discard ($1/$2)"
+謝謝！這是您的貨物～\n下次也要再來支持我們活動哦。=Thank you! Here are your items～ \nCome back and support us next time!
+
+專<color\=#ff0000ff>案</color>經理人的陰影=Project manager's Shadow
+
+呼呼……我們的項目終於要完成了。\n現在是帶領大家衝刺的階段。=Zzz... Our project almost finished. \nNow's the time to lead the final push.
+可是近來身體狀態不太好……=However, my health hasn't been good lately...
+醫生說最好暫時休息一陣子……\n但，都走到這一步了，我不想放棄啊……=The doctor said I should rest... \nBut I've come this far, I don't want to quit...
+現在擺在我面前的，是三個選擇。=There are three choices in front of me.
+一、\n帶領大家完成專案，安排好他們的退路。=One, \nLead everyone on finishing the project, making sure they can fall back.
+二！\n先奮力一搏把這個項目做成公司的頭牌。=Two! \nGo all out in trying to make this project the star of the company.
+三……\n不逞強，讓身體休息一下。=Three... \nDon't push it, let my body rest.
+呼呼……\n該怎麼選才好啊……=Zzz... \nWhat should I choose...
+及時完成就行=<size\=25>Get it done in time.</size>
+全體隊員失去20%生命，\n獲得80枚鐵道硬幣。=All allies lose 20% HP, gain 80 Railroad Coins.
+必須做到最好=<size\=25>Have to do the best.</size>
+全體隊員失去50%生命，\n有70%機率獲得1個遺失物。=All allies lose 50% HP, 70% chance to gain a Lost Item.
+健康更重要=<size\=23>Health is more important.</size>
+全體隊員生命恢復20%。=All allies restore 20% HP.
+哦哦哦、燃起來了！=Oh, I'm all fired up!
+
+想<color\=#ff0000ff>跳</color>槽男性的陰影=Job hopper's Shadow
+我的人生……這樣下去沒問題嗎？=My life... Can it continue like this?
+我並不討厭現在的工作……\n可是……=I don't hate my current job... \nBut...
+應該存在更能讓我發揮能力的工作吧？=There must be a job where I can do more, right?
+要換工作的話，就要趁現在！\n但是，萬一失敗了……=Now's the chance if I want to change my job! But if I fail...
+可惡！是應該下定決心放手去做呢？\n還是應該打消這個念頭呢！？=<size\=30>Argh! Should I make up my mind and do it? \nOr should I give up on this idea?</size>
+豁出去了！=<size\=25>Go out on a limb!</size>
+全體隊員失去60%生命，\n80%機率隨機獲得1個遺失物。=<size\=26>All allies lose 60% HP, \n80% chance to gain a Lost Item.</size>
+還是不要吧=Better not.
+說得對！\n人生只有一次，只能放手一搏了！=You're right!\nYou only live once. I got to give it a shot!
+說得對……\n現在的工作也不差……=That's right... \nMy current job isn't so bad...
+
+興<color\=#ff0000ff>奮</color>的霜精=Excited Jack Frost
+嘿吼！=Hee-ho!
+嘿吼嘿吼！！=Hee-ho hee-ho!!
+他盯著鐵道硬幣看……是想要嗎？=He's staring at the Railroad coins... Does he want it?
+嘿吼嘿吼！嘿——吼！=Hee-ho hee-ho! Hee-ho!
+給他的話，\n或許願意交換些什麼給我……=Maybe he's willing to trade something if I give him some...
+似乎不太夠，要不要再給一些？=It doesn't seem to be enough, should I give him some more?
+給它鐵道硬幣=<size\=21>Give him some Railroad coins.</size>
+給它更多=Give him more.
+繼續給它更多=Keep giving him more.
+消耗50枚鐵道硬幣，\n有20%機率獲得1個遺失物。=<size\=26>Spend 50 Railroad Coins, \n20% chance to gain a Lost Item.</size>
+消耗50枚鐵道硬幣，\n有40%機率獲得1個遺失物。=<size\=26>Spend 50 Railroad Coins, \n40% chance to gain a Lost Item.</size>
+消耗50枚鐵道硬幣，\n有60%機率獲得1個遺失物。=<size\=26>Spend 50 Railroad Coins, \n60% chance to gain a Lost Item.</size>
+消耗50枚鐵道硬幣，\n有80%機率獲得1個遺失物。=<size\=26>Spend 50 Railroad Coins, \n80% chance to gain a Lost Item.</size>
+什麼也不給=Give him nothing.
+
+創<color\=#ff0000ff>業</color>者的陰影= Entrepreneur's Shadow
+
+紅海、紅海、前方一片紅海！=Red ocean, red ocean. \nAhead it's a red ocean!
+現在下場就是商業混戰，\n但是我怎麼會輸呢？=Now it's a business free-for-all, \nbut how can I lose?
+就算輸了、也不會死掉！=Even if I lose, I won't die!
+擴大、擴大、持續擴大經營吧！=Expand, expand, \nand keep expanding the operations!
+這麼天才的決策是誰做出來的呢？=Who made with such a genius decision?
+上市代表誰來當，我來當好了！=Who will be the listing representative? \nI will do it!
+要！！=Yes!
+不要！！=No!!
+失去所有「<link\="rg|1008"><u>勾玉</u></link>」，\n獲得一個橙色品質御守。=Lose all <link\="rg|1008"><u>Jade</u></link>. \nGain an orange Omamori.
+
+為什麼大家都不願意工作啊，\n是不是因為沒有工作經驗所以找不到？=Why don't people want to work? \nIs it because they lack work experience so they can't find a job?
+開一個公司就好了，\n讓沒有工作的人交錢來上班！=Just start a company, then let the people without jobs pay for work!
+然後他們就有工作經驗了！\n這麼天才的創意到底是誰想出來的啊？=Then they would have work experience! \nWho came up with this brilliant idea?
+哦——原來是我自己！=Oh- Of course it's me!
+這個公司誰來開，我來開好了！=Who's going to start this company? \nI'll do it!
+要不要呢，要不要呢，要不要呢？=Well? Are you in?
+要=Yes.
+消耗所有鐵道硬幣，\n獲得一個橙色品質御守。=Spend all Railroad Coins \nto gain a Gold Omamori.
+不要=No.
+
+公司需要能落地的產品，\n那種能讓人看到就立刻愛上的東西。=Companies need products that land, \nthings that people will see and fall in love with immediately.
+果然是那個吧，「夢想販賣」計畫！=Of course it's this, project "dream seller"!
+只要客戶想，\n我們就可以為客戶定製出一切！=We can customize anything to the customer's wishes.
+前方，一片藍海！=Ahead, a blue ocean!
+這麼天才的概念是誰想出來的呢？=Who came up with such a genius concept?
+領頭人誰來當比較好，我來當好了！=Who's going to be the boss? I'll do it!
+要不要呢，要不要呢，要不要呢？！=Well? Are you in?!
+要！=Yes!
+失去兩件遺失物，\n獲得一個橙色品質御守。=Lose 2 Lost Items \nto gain a Gold Omamori.
+不要！=No!
+
+拼搏！努力！公司正是關鍵的轉型階段！=Work hard! The company is in a critical stage of transformation!
+我們要不斷開發使用者想要的產品！\n讓他們為我們瘋狂！=<size\=28>We have to keep developing products that our users want! \nLet them go crazy for us!</size>
+為了這個偉大的目標，員工要更加團結！\n凝聚！奮鬥！拼命工作吧！=In order to achieve this great goal, employees should be more united! Cohesive! Struggle! Work hard!
+這麼天才的規劃到底是誰做出來的呢？=Who made such a genius plan?
+噢——原來是我自己！=Oh- Of course it's me!
+行業明燈誰來當，我來當好了！=Who is going to be the beacon of the industry? I'll do it!
+要！！！=Yes!!!
+已持有鐵道硬幣50%機率增加一半，50%機率減少一半（上限5次）=<size\=23>50% chance to increase your Railroad Coins by 50%, \n50% chance to decrease it by 50% (Up to 5 times)</size>
+已持有鐵道硬幣50%機率增加一半，50%機率減少一半（上限4次）=<size\=23>50% chance to increase your Railroad Coins by 50%, \n50% chance to decrease it by 50% (Up to 4 times)</size>
+已持有鐵道硬幣50%機率增加一半，50%機率減少一半（上限3次）=<size\=23>50% chance to increase your Railroad Coins by 50%, \n50% chance to decrease it by 50% (Up to 3 times)</size>
+已持有鐵道硬幣50%機率增加一半，50%機率減少一半（上限2次）=<size\=23>50% chance to increase your Railroad Coins by 50%, \n50% chance to decrease it by 50% (Up to 2 times)</size>
+已持有鐵道硬幣50%機率增加一半，50%機率減少一半（上限1次）=<size\=23>50% chance to increase your Railroad Coins by 50%, \n50% chance to decrease it by 50% (Up to 1 times)</size>
+不要！！！=No!!!
+
+
+----------
+EVENTS (FIGHT)
+----------
+
+扮<color\=#ff0000ff>演</color>鬼怪的陰影=Horror actress' Shadow
+啊嗚嗚嗚嗚～=Oooo～
+剛、剛才對面好像傳出什麼聲音了……\n嗚嗚嗚……真的好嚇人啊……=What, what noise was that... \nOooo... So scary...
+要是在這裡逃跑，就成不了英雄了……=If I run now then I can't be a hero...
+可是，我真的好害怕啊……究竟該怎麼辦……=But I'm really scared... What should I do...
+愛崗敬業=Keep working hard.
+偷懶也沒關係=It's okay to be lazy.
+你說得對，躺平也是種人生哲學呢。=You're right. Being indifferent is a way of living afterall.
+謝謝你的意見，\n英雄愛誰當誰當！=Thank you for your opinion.\nHeroes are whoever they want to be!
+
+憧<color\=#ff0000ff>憬</color>英雄的少年陰影=Hero loving boy's Shadow
+剛、剛才對面好像傳出聲音了……\n嗚嗚嗚……真的好嚇人啊……=What, what noise was that... \nOooo... So scary...
+前進還是後退，這是個問題……=Advance or retreat, that is the question...
+成為英雄=Become a hero.
+逃避並不可恥=No shame in running.
+你說得對！\n反正我往地上一躺就過去了，愛誰誰吧！=<size\=30>You're right! \nI'll just lie down on the floor and get over it, I can love whoever I want!</size>
+
+抱<color\=#ff0000ff>怨</color>的男性陰影=Complainer's Shadow
+為什麼又是我？\n討厭、討厭、討厭討厭討厭……=Why me again? I hate it, I hate it , I hate it...
+什麼都不做，什麼都推給我……=Not doing anything, pushing it all to me...
+說什麼「順便」，\n還不是因為我好欺負……=What do you mean "on the hoof"?\nIt's because I'm easy to bully...
+真是受夠了、受夠了！=I have suffered enough!
+我不會再幫任何人的忙了！\n我這麼做並沒有錯吧！？=I'm not doing any more favors! \nI'm not doing anything wrong, am I?
+冷靜下來=Calm down.
+有50%機率獲得一個遺失物，\n50%機率進入戰鬥。=<size\=26>50% chance to gain a Lost Item, \n50% chance to enter battle.</size>
+再也、不想、承擔別人的錯誤了……=I don't want to own up to other people's mistakes anymore...
+想怎樣都可以=Do whatever you want.
+我做不到、我做不到啊……=I can't do it, I can't do it...
+
+說<color\=#ff0000ff>謊</color>者的陰影=Liar's Shadow
+哈？這些人都懂什麼啊？=Huh? What do these people know?
+出門在外，身份都是自己給的啊！=When you're out in real the world, \nyou make your own identity!
+你沒聽過平行時空嗎，在平行時空！\n我可以是任何人！=Haven't you heard of parallel universes? \nIn a different universe! I can be anybody!
+哈哈哈哈，我才不是窩囊廢！\n我是……有錢人啊！=Ha ha ha ha, I'm not some loser! \nI'm... a rich man!
+是誰！到底是誰！偷走了我的富二代人生？！\n是不是你？說啊，是不是你？=Who is it! Who stole my rich life away?! \nIs it you? Tell me, is it you?
+讓他清醒點=<size\=22>Make him come to his senses</size>
+隨他的便=Leave him be.
+70%機率逃跑成功，\n30%機率逃跑失敗。=70% chance to escape, \n30% chance of failure.
+可惡啊啊啊啊！別讓我在遇到你！！=Damn it! Don't let me see you again!
+
+外<color\=#ff0000ff>賣</color>配送員的陰影=Takeaway driver's Shadow
+
+好著急啊、好著急啊！=I'm in a rush, in a rush!
+結單時間馬上就要到了，\n但是前面的路卻因為修整被封死了！=I'm almost out of time, but the road in front of me is blocked due to construction!
+衝過去、有點困難啊，阻力好大！=It's a bit difficult to get through. \nA lot of things in the way.
+如果不在咖啡的冰化之前送到，\n還會收到客人的差評！=<size\=28>If the coffee is not delivered before the ice melts, \nI will receive a bad review from the customer!</size>
+是碰碰運氣開足馬力迂迴呢，\n還是花點錢買個保溫設備？！=Should I take my chances and take a detour, or spend some money on a insulated bag?
+開足馬力吧=Up the horsepower.
+進入一場艱難的戰鬥，\n勝利後獲得高價值遺失物。=Enter a tough battle \nto gain a high value Lost Item.
+買保溫設備吧=Buy the insulated bag.
+失去20枚鐵道硬幣。=Lose 20 Railroad Coins.
+就算會稍微遲到一點，\n但這樣不容易被罵吧……=Even if I'm a little bit late, \nI won't get yelled at easily, right?...
+
+結單時間馬上就要到了！\n但是現在突然下雪了，地面好滑！=I'm almost out of time, but the road is slippery due to the sudden snow!
+火速趕往、有點困難啊。\n刹不住車就完蛋了！=It's a bit difficult to rush. \nIf I can't stop the scooter in time I'm screwed!
+如果不在熱拿鐵涼下來之前送到，\n還會收到客人的負評！=<size\=26>If the hot latte is not delivered before it cools down, \nI will receive a bad review from the customer!</size>
+不過，要是滑倒了把拿鐵灑了，\n就雞飛蛋打了。=However, if I slip and spill the latte, \nit's going to be over for me.
+是頂著風險趕路呢，\n還是應該慎重行事呢……=Should I take the risk and hurry, \nor should I proceed with caution...
+不要害怕，衝=Don't be afraid, go.
+慎重行事吧=Proceed with caution.
+全體隊員減少30%最大生命。=All allies lose 30% HP
+
+事件已全部完成，請繼續前行。=The event is completed, please continue.
+消耗不足，無法選擇。=You can't spend enough to select this option.
+魔羅=Mara
+
+(\d+) (\d+%)  (\d+\.\d+%)
+Tier 1
+\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)
+(<color\=#50b50d>$1</color>/$2/$3)
+Tier2
+\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)
+($1/<color\=#c900e4>$2</color>/$3)
+Tier 3
+\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)
+($1/$2/<color\=#e9cb2f>$3</color>)
+
+Tier 1 (Purple)
+\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)\)
+(<color\=#50b50d>$1</color>/$2)
+Tier 2 (Purple)
+\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>\)
+($1/<color\=#c900e4>$2</color>)
+
+Upgrade 1
+<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>
+<color\=#50b50d>$1</color>→<color\=#c900e4>$2</color>
+Upgrade 2 (Blue only)
+<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>
+<color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color>
+
+green: <color\=#c900e4>
+purple: <color\=#50b50d>
+<size\=20>
+</size>
