@@ -5,7 +5,7 @@ r:"^(.)$"=$1
 -------------------------------
 // Description: Settings Translation, important system messages, or whatever can be shown before logging in
 
-r:"更新本地文件\((\d+)\/(\d+)\)"=<b>Applying Update ($1 / $2)</b>
+r:"更新本地文件\((\d+)\/(\d+)\)"=<b>Applying Update ($1/$2)</b>
 開始登入=Logging in...
 渲染品質=Rendering Quality
 陰影品質=Shadow Quality
@@ -46,18 +46,22 @@ r:"更新本地文件\((\d+)\/(\d+)\)"=<b>Applying Update ($1 / $2)</b>
 
 梅洛普=Merope
 伊格爾=Igor
+路菲爾=Ruferu
 新井素羽=Motoha Arai
+素羽=Motoha
 路菲爾=Ruferu
 加納駿=Shun Kano
 琴音·蒙塔涅=Montagne Kotone
 蒙塔涅=Montagne
 琴音=Kotone
 數塵老師片山=Katayama-sensei
-瑞奇姆=Marthym
+片山=Katayama
+瑪奇姆=Marthym
 李瑤鈴=Yaoling Li
 木内雄之=Takeyuki Kiuchi
 木内=Kiuchi
 野毛朋子=Tomoko Noge
+朋子=Tomoko
 須見俊也=Toshiya Sumi
 西森陽菜=Haruna Nishimori
 白鳥誠司=Seiji Shiratori
@@ -79,6 +83,8 @@ YUI=YUI
 坂本龍司=Ryuji Sakamoto
 モルガナ=Morgana
 モナ=Mona
+喜多川祐介=Yusuke Kitagawa
+新島真=Makoto Niijima
 
 // Character-specific Persona // 
 
@@ -129,8 +135,13 @@ CV.小西克幸=CV. Konishi Katsuyuki
 CV.諏訪彩花=CV. Suwa Ayaka
 CV.榎木淳彌=CV. Enoki Junya
 CV.盧婷=CV. Lu Ting (Ru Thing)
+CV.小倉唯=CV.Yui Ogura
 CV.安濟知佳=CV. Anzai Chika
-// MINAMI TBA
+CV.佐藤聰美=CV.Satomi Sato
+CV.杉田智和=CV.Tomokazu Sugita
+CV.佐藤利奈=CV.Sato Rina
+CV.勝生真沙子=CV.Masako Katsuki
+CV.原由實=CV.Yumi Hara
 
 ------------------------------------------
 -------- III. Worldbuilding Terms --------
@@ -183,7 +194,7 @@ CV.安濟知佳=CV. Anzai Chika
 ///////////////////////////////////////////////
 -- Terms that appear in multiple UI menus and also sort terms.
 
-r:"(\d+)天(\d+)時"=<color\=#FFFC40>$1 days $2 hours</color> <color\=#FFFFFF>left</color>
+r:"(\d+)天(\d+)時"= <color\=#FFFC40>$1 days $2 hours</color>
 r:"(\d+)天後過期"=Expires in $1 days
 
 擁有:=Owned: 
@@ -209,6 +220,8 @@ r:"^領取%"="Get"
 月限=<size\=16>Every Month</size>
 日限=<size\=16>Daily</size>
 週限=<size\=13>Weekly</size>
+r:"^本周限定次数：(\d+)/(\d+)$"="Weekly Limit: $1/$2"
+r:"^週領獎次數：<color\=#0665ca>(\d+)/(\d+)</color>$"=Weekly Limit: <color\=#0665ca>$1/$2</color>
 r:"還可領取(\d+)天"=Available for $1 days
 r:"(\d+)天後刷新"=Refresh in $1 days
 r:"(\d+)分後刷新"=Refresh in $1 minutes
@@ -437,7 +450,7 @@ r:"擁有(\d+)張等級為(\d+)級的啟示卡"=Have $1 level $2 Revelation card
 r:"消耗(\d+)靈感點"=Consume $1 Inspiration Points
 r:"通關天鵝絨試煉任意(\d+)章的第(\d+)關"=In Velvet Challenges, complete Stage $2 in $1 chapters
 r:"進行(\d+)次足球部活動"=Join a Soccer Club activity $1 times.
-r:"完成(\d+)次「厄抑之境」 \((\d)\/(/d)\)"=Complete $1 Revelation Farms. ($1 / $2)
+r:"完成(\d+)次「厄抑之境」 \((\d)\/(/d)\)"=Complete $1 Revelation Farms. ($1/$2)
 r:"擁有(\d+)個(\d+)級的階級(\d+)及以上的人格面具"=Own $1 Rank $3 Persona at level $2
 r:"合成(\d+)個彩色品質的階級(\d)人格面具"=Fuse $1 Rainbow-quality Rank $2 Persona
 r:"將(\d+)名怪盜的任意(\d+)個非潛能技能各升級(\d+)次"=Level up $2 of your companions' $1 skills $3 times. 
@@ -461,7 +474,7 @@ r:"擁有(\d+)張等級為(\d+)級的宙位啟示卡"=Own $1 Lv. $2 Arcana Revel
 通關榮級求索Ⅰ（或更高難度）=Finish the 1st (or higher) Character EXP Farm once
 通關輜械求索Ⅰ（或更高難度）=Finish the 1st (or higher) Weapon EXP Farm once
 與李瑤鈴成為協同者關係=Form a confidant with Li Yaoling
-消耗5點行動力=Consume 5 action points
+消耗5點行動力=Consume 5 Action Points
 主動添加1名好友=Add a friend
 更換1次頭像=Change your avatar in the Profile menu
 
@@ -514,37 +527,53 @@ r:"擁有(\d+)張等級為(\d+)級的宙位啟示卡"=Own $1 Lv. $2 Arcana Revel
 ///// f. Battle Pass Challenges /////
 /////////////////////////////////////
 
+本期剩餘時間：=BP Time left:
 探索經驗：=BP EXP:
 本週上限：=7d cap:
 本期剩餘時間=BP Time:
 每次完成今日計畫可獲得=Complete daily tasks to receive useful rewards:
 今日剩餘領取次數=Dailies left to complete:
+每次完成今日計畫可領獎，剩餘   次=Daily task rewards: You have   task(s) left.
+本週累計「今日計畫」領獎次數\n「<color\=#ff3b37>明日登入</color>」領取對應「補給禮包」=<size\=22>Number of dailys completed this week\n<color\=#ff3b37>Log in Tomorrow</color> to get the Gift Box</size>
+距離下次領取剩餘：=Time until next Gift Box:
+r:"(\d+)時(\d+)"=" $1 Hours $2 Minutes"
+「下週一」登錄即可領取=Log in next Monday to claim!
+r:"^本週累計今日計畫領獎次數\（(\d+)/(\d+)\），可額外領取$"="Bonus rewards after completing ($1/$2) dailys"
+r:"^本週累計今日計畫領獎次數\（(\d+)/(\d+)\），再額外領取$"="Bonus rewards after completing ($1/$2) dailys"
+
+r:"^本週累計今日計畫領獎次數\((\d)\/(\d)\)，可額外領取$"="Number of dailys completed this week ($1/$2), you can receive additional rewards"
 
 // DAILY //
 r:"登入遊戲"=Log in to the game
 r:"進行1次人格面具合成"=Fuse 1 Persona
-r:"完成1次「人格面具」挑戰 \((\d)\/(\d)\)"=Complete a Persona Farm ($1 / $2)\n<color\=#8F8D8D>(Stamina Cost depending on Rank)</color>
-r:"進行1次打工 \((\d)\/(\d)\)"=Complete a Part-time job ($1 / $2)\n<color\=#8F8D8D>(1 Activity After School)</color>
-r:"消耗3點行動力 \((\d)\/(\d)\)"=Consume 3 Action points ($1 / $2)
-r:"消耗120點體力 \((\d+)\/120\)"=Consume 120 Stamina ($1 / 120)
+r:"完成1次「人格面具」挑戰 \((\d)\/(\d)\)"=Complete a Persona Farm ($1/$2)\n<color\=#8F8D8D>(Stamina Cost depending on Rank)</color>
+r:"進行1次打工 \((\d)\/(\d)\)"=Complete a Part-time job ($1/$2)\n<color\=#8F8D8D>(1 Activity After School)</color>
+r:"消耗3點行動力 \((\d)\/(\d)\)"=Consume 3 Action Points ($1/$2)
+r:"消耗120點體力 \((\d+)\/120\)"=Consume 120 Stamina ($1/120)
 r:"進行1次邀約"=Spend time with a Confidant 1 time\n<color\=#8F8D8D>(Remember to buy a gift!)</color>
-r:"完成1次「啟示套裝」挑戰 \((\d)\/(\d)\)"=Complete a Revelation Farm ($1 / $2)\n<color\=#8F8D8D>(Stamina Cost: 40)</color>
-r:"完成1次「旖旎香調」挑戰 \((\d)\/(\d)\)"=Complete a Fragrance Farm ($1 / $2)\n<color\=#8F8D8D>(Stamina Cost: 30)</color>
-r:"進行1次人格面具育成 \((\d)\/(\d)\)"=Inherit a Persona skill to another ($1 / $2)\n<color\=#8F8D8D>This consumes a Persona seal</color>
+r:"完成1次「啟示套裝」挑戰 \((\d)\/(\d)\)"=Complete a Revelation Farm ($1/$2)\n<color\=#8F8D8D>(Stamina Cost: 40)</color>
+r:"完成1次「旖旎香調」挑戰 \((\d)\/(\d)\)"=Complete a Fragrance Farm ($1/$2)\n<color\=#8F8D8D>(Stamina Cost: 30)</color>
+r:"完成1次「裝配冶藝」挑戰 \((\d)\/(\d)\)"=Complete an Ore Farm ($1/$2)\n<color\=#8F8D8D>(Stamina Cost: 30)</color>
+r:"進行1次人格面具育成 \((\d)\/(\d)\)"=Inherit a Persona skill to another ($1/$2)\n<color\=#8F8D8D>This consumes a Persona seal</color>
+r:"^完成1次「往日回溯」挑戰 \((\d)\/(\d)\)$"="Complete a Palace Boss Challenge ($1/$2)"
+r:"^通關1次「閼凶夢之扉」 \((\d)\/(\d)\)$"="Complete 1 Guild Battle ($1/$2)"
+r:"^完成1次「心之海試煉」 \((\d)\/(\d)\)$"="Complete 1 Sea of Souls Trial ($1/$2)"
 
 // WEEKLY //
-r:"累計消耗(\d+)魂石 \((\d+)\/(\d+)\)"=Spend a total of $1 Soulstones this week\n($2 / 100000)
-r:"累計消耗(\d+)日元 \((\d+)\/(\d+)\)"=Spend a total of 20,000¥ this week \n($2¥ / 20000¥)
-r:"累計消耗(\d+)點行動力 \((\d+)\/(\d+)\)"=Consume a total of 25 Action points this week \n($2 / 25)
-r:"累計消耗(\d+)點體力 \((\d+)\/(\d+)\)"=Consume a total of 1,250 Stamina this week\n($2 / 1250)
-r:"完成1次「往日回溯」 \((\d)\/(\d)\)"=Complete a Past Palace Boss challenge ($1 / $2)
+r:"累計消耗(\d+)魂石 \((\d+)\/(\d+)\)"=Spend a total of $1 Soulstones ($2/100000)
+r:"累計消耗(\d+)日元 \((\d+)\/(\d+)\)"=Spend a total of 20,000¥ ($2¥/20000¥)
+r:"累計消耗(\d+)點行動力 \((\d+)\/(\d+)\)"=Consume a total of 25 Action Points ($2/25)
+r:"累計消耗(\d+)點體力 \((\d+)\/(\d+)\)"=Consume a total of 1,250 Stamina ($2/1250)
+r:"^累計完成12次「厄抑之境」 \((\d+)\/(\d+)\)$"=Complete $1 Farming Domain ($1/12)
+r:"完成1次「往日回溯」 \((\d)\/(\d)\)"=Complete a Past Palace Boss challenge ($1/$2)
+r:"^達到「閼凶夢之扉」第4檔積分要求 \((\d)\/(\d)\)$"="Reach the 4th score bracket in Guild Battle ($1/$2)"
 
 // SEASON //
-r:"在「命運交錯之時」中通關「收下慾望」 \((\d)\/(\d)\)"=Complete the Final Mission in the \nPhantom Thieves event ($1 / $2)
-r:"在「怪盜交易所」中消耗3000個怪盜徽記 \((\d+)\/(\d+)\)"=Consume 3,000 Phantom Thieves Emblems\nin the Event Exchange ($1 / $2)
-r:"累計進行50次「角色簽約」&「武器補給」 \((\d+)\/(\d+)\)"=Perform 50 pulls in total ($1 / $2)
-r:"在「心之海試煉」中通過「西部施工區」 \((\d)\/(\d)\)"=Pass the Western Construction Zone\nin the Sea of Souls Challenge ($1 / $2)
-r:"完成12次「在盧布朗度過」日程 \((\d+)\/(\d+)\)"=Spend time in Leblanc 12 times ($1 / $2)
+r:"在「命運交錯之時」中通關「收下慾望」 \((\d)\/(\d)\)"=Complete the Final Mission in the \nPhantom Thieves event ($1/$2)
+r:"在「怪盜交易所」中消耗3000個怪盜徽記 \((\d+)\/(\d+)\)"=Consume 3,000 Phantom Thieves Emblems\nin the Event Exchange ($1/$2)
+r:"累計進行50次「角色簽約」&「武器補給」 \((\d+)\/(\d+)\)"=Perform 50 pulls in total ($1/$2)
+r:"在「心之海試煉」中通過「西部施工區」 \((\d)\/(\d)\)"=Pass the Western Construction Zone\nin the Sea of Souls Trial ($1/$2)
+r:"完成12次「在盧布朗度過」日程 \((\d+)\/(\d+)\)"=Spend time in Leblanc 12 times ($1/$2)
 
 
 ////////////////////////////////
@@ -671,6 +700,9 @@ r:"香塔(.*)"=$1 Incense
 未知宿命藍·啟程=2★ Arcana • Departure
 未知宿命藍·覺知=2★ Arcana • Awareness
 
+瑪奇姆可沒在裡面放可怕的東西哦～？=I didn't put anything scary in there～
+確定買這個嗎？=Are you sure you want to buy this?
+看清楚啦～不要買錯了阿！=Look closely～\nDon’t buy the wrong one!
 
 ///////////////////////////////////////////
 /// k. Velvet Challenges & Sea of Souls ///
@@ -705,7 +737,7 @@ r:"(\d+)回合內取得勝利"=Win in $1 action(s)
 挑戰獎勵=<size\=36>Rewards</size>
 累計星級=<size\=24>Total Stars</size>
 r:"累計獲得星數（(\d+)\/(\d+)）"=Stars Earned: ($1/$2)
-r:"累計獲得（(\d+)\/(\d+)）分"=Accumulated ($1 / $2) Points
+r:"累計獲得（(\d+)\/(\d+)）分"=Accumulated ($1/$2) Points
 
 積分係數：=Multiplier:
 成功抵禦次數：=Cycles Limit:
