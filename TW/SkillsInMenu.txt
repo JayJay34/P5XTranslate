@@ -89,10 +89,11 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 心念切斷=Mind Slice
 碎腦擊=Brain Buster
 電光石火=Swift Strike
-死亡遊戲=
+死亡遊戲=Deadly Game
 頭槌=Headbutt
 永眠突襲=Dormin Rush
 斬擊=Slash
+勇氣之聲=Voice of Courage
 
 --- Gun ---
 
@@ -100,6 +101,8 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 一槍斃命=One-Shot Kill
 指彈=Snap
 劈射=Seth's Funny Move
+子彈時間=Bullet Time
+(Janosik)絕地反擊=
 
 --- Fire ---
 
@@ -108,7 +111,7 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 亞基達因=Agidyne
 瑪哈拉基=Maragi
 瑪哈拉基翁=Maragion
-瑪哈亞基達因=Maragidyne
+玛哈亚吉达因=Maragidyne
 地獄劫火=Hell's Stolen Flame
 極熱=Overheat
 火祭=Fire Festival
@@ -181,6 +184,8 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 哈瑪翁=Hamaon
 瑪翰瑪=Mahama
 神之審判=Divine Judgement
+黑白無界=Black & White
+(Daisoujou)迴轉說法=
 
 --- Curse --- 
 
@@ -224,21 +229,22 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 派特拉=Patra
 梅帕特拉=Me Patra
 能量水滴=Energy Drop
-瑪哈歐洛斯=
+瑪哈歐洛斯=Mahaeurus
 拜斯提=Baisudi
-歐洛斯=
-不染塵埃=
+歐洛斯=Eurus
+不染塵埃=Deep Cleanse
 詠蓮=Lotus Bloom
-(Titania)振奮愛撫=
+振奮愛撫=Uplifting Cure
+神母的吟誦=Divine Chant
 
 --- Buff Skills ---
 
 塔爾卡加=Tarukaja
 拉庫卡加=Rakukaja
 斯庫卡加=Sukukaja
-馬哈塔爾卡加=Matarukaja
-馬哈拉庫卡加=Marakukaja
-馬哈斯庫卡加=Masukukaja
+瑪哈塔爾卡加=Matarukaja
+瑪哈拉庫卡加=Marakukaja
+瑪哈斯庫卡加=Masukukaja
 迪卡加=Dekaja
 迪坤達=Dekunda
 反叛=Rebellion
@@ -251,7 +257,7 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 --- Debuff Skills ---
 
 塔倫達=Tarunda
-馬哈塔倫達=Matarunda
+瑪哈塔倫達=Matarunda
 斯坤達=Sukunda
 瑪哈斯坤達=Masukunda
 拉昆達=Rakunda
@@ -259,6 +265,9 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 迪卡加=Dekaja
 迪坤達=Dekunda
 女巫詛咒=Debilitate
+
+--- Break Skills ---
+消除電擊耐性=Shock Break
 
 --- Status Ailments ---
 暈眩=Dazzler
@@ -273,94 +282,96 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 --- Passives ---
 
 // Skill Boosts
-r:"攻擊強化(.*)"=Attack Boost $1
-r:"物理強化(.*)"=Physical Boost $1
-r:"精密射擊(.*)"=Gun Boost $1
-r:"火焰強化(.*)"=Fire Boost $1
-r:"冰凍強化(.*)"=Ice Boost $1
-r:"電擊強化(.*)"=Elec Boost $1
-r:"疾風強化(.*)"=Wind Boost $1
-r:"念動強化(.*)"=Psy Boost $1
-r:"核熱強化(.*)"=Nuke Boost $1
+r:"^攻擊強化(.*)$"=Attack Boost $1
+r:"^物理強化(.*)$"=Physical Boost $1
+r:"^精密射擊(.*)$"=Gun Boost $1
+r:"^火焰強化(.*)$"=Fire Boost $1
+r:"^冰凍強化(.*)$"=Ice Boost $1
+r:"^電擊強化(.*)$"=Elec Boost $1
+r:"^疾風強化(.*)$"=Wind Boost $1
+r:"^念動強化(.*)$"=Psy Boost $1
+r:"^核熱強化(.*)$"=Nuke Boost $1
 r:"^祝福強化(.*)$"=Bless Boost $1
-r:"詛咒強化(.*)"=Curse Boost $1
-r:"萬能強化(.*)"=Almighty Boost $1
-r:"瑪哈成功率UP(.*)"=Hama Boost $1
-r:"姆多成功率UP(.*)"=Mudo Boost $1
-r:"治療強化(.*)"=Healing Boost $1
-r:"天公不作美(.*)"=Ambient Aid $1
-r:"魔導的才能(.*)"=Magic Ability $1 
-r:"魔術的資質(.*)"=Spell Master $1
-r:"抵抗強化(.*)"=Effect RES Boost $1
-r:"逆境的覺悟(.*)"=Adverse Resolve $1
-r:"精準打擊(.*)"=Precise Strike $1
-r:"槍彈狂熱(.*)"=Trigger Happy $1
-r:"護盾強化(.*)"=Shield Boost $1
+r:"^詛咒強化(.*)$"=Curse Boost $1
+r:"^萬能強化(.*)$"=Almighty Boost $1
+r:"^哈瑪成功率UP(.*)$"=Hama Boost $1
+r:"^姆多成功率UP(.*)$"=Mudo Boost $1
+r:"^治療強化(.*)$"=Healing Boost $1
+r:"^天公不作美(.*)$"=Ambient Aid $1
+r:"^魔導的才能(.*)$"=Magic Ability $1 
+r:"^魔術的資質(.*)$"=Spell Master $1
+r:"^抵抗強化(.*)$"=Effect RES Boost $1
+r:"^逆境的覺悟(.*)$"=Adverse Resolve $1
+r:"^精準打擊(.*)$"=Precise Strike $1
+r:"^槍彈狂熱(.*)$"=Trigger Happy $1
+r:"^護盾強化(.*)$"=Shield Boost $1
 
 //Stat Boosts
-r:"攻擊的心得(.*)"=Attack Master $1
-r:"防禦的心得(.*)"=Defense Master $1
-r:"素早的心得(.*)"=Speed Master $1
+r:"^攻擊的心得(.*)$"=Attack Master $1
+r:"^防禦的心得(.*)$"=Defense Master $1
+r:"^素早的心得(.*)$"=Speed Master $1
+r:"^敏捷的心得(.*)$"=Agile Insight $1
 r:"^自動瑪哈塔爾卡(.*)$"=Auto-Mataru $1
 r:"^自動瑪哈拉庫卡(.*)$"=Auto-Maraku $1
 r:"^瑪哈塔爾卡(.*)$"=Auto-Mataru $1
-r:"防禦強化(.*)"=Defense Boost $1
-r:"生命強化(.*)"=Life Boost $1
-r:"不動如山(.*)"=Firm Stance $1
-r:"^建言(.*)+$"=Apt Pupil $1
-r:"^氣功(.*)+$"=SP Recovery $1
-r:"^教練(.*)+$"=Sharp Student $1
-r:"諸神庇護(.*)"=Divine Grace $1
-r:"高壓電流(.*)"=Fortified Moxy $1
-r:"命中強化(.*)"=Hit Rate Boost $1
+r:"^防禦強化(.*)$"=Defense Boost $1
+r:"^生命強化(.*)$"=Life Boost $1
+r:"^不動如山(.*)$"=Firm Stance $1
+r:"^建言(.*)$"=Apt Pupil $1
+r:"^氣功(.*)$"=SP Recovery $1
+r:"^教練(.*)$"=Sharp Student $1
+r:"^諸神庇護(.*)$"=Divine Grace $1
+r:"^高壓電流(.*)$"=Fortified Moxy $1
+r:"^命中強化(.*)$"=Hit Rate Boost $1
+r:"^餘孽收割(.*)$"=Reaper $1
 
 //Skill Resists
-r:"免傷強化(.*)"=Resist Damage $1
-r:"物理識破(.*)"=Resist Phys $1
-r:"槍械識破(.*)"=Resist Gun $1
-r:"火焰識破(.*)"=Resist Fire $1
-r:"冰凍識破(.*)"=Resist Ice $1
+r:"^免傷強化(.*)$"=Resist Damage $1
+r:"^物理識破(.*)$"=Resist Phys $1
+r:"^槍械識破(.*)$"=Resist Gun $1
+r:"^火焰識破(.*)$"=Resist Fire $1
+r:"^冰凍識破(.*)$"=Resist Ice $1
 r:"^電擊識破(.*)$"=Resist Elec $1
 r:"^疾風識破(.*)$"=Resist Wind $1
-r:"念動識破(.*)"=Resist Psy $1
-r:"核熱識破(.*)"=Resist Nuke $1
-r:"祝福識破(.*)"=Resist Bless $1
-r:"詛咒識破(.*)"=Resist Curse $1
+r:"^念動識破(.*)$"=Resist Psy $1
+r:"^核熱識破(.*)$"=Resist Nuke $1
+r:"^祝福識破(.*)$"=Resist Bless $1
+r:"^詛咒識破(.*)$"=Resist Curse $1
 
 //Status Boosts
-r:"燃燒率UP(.*)"=Burn Boost $1
+r:"^燃燒率UP(.*)$"=Burn Boost $1
 r:"^冰凍率UP(.*)$"=Freeze Boost $1
-r:"觸電率UP(.*)"=Shock Boost $1
-r:"睡眠率UP(.*)"=Sleep Boost $1
-r:"遺忘率UP(.*)"=Forget Boost $1
-r:"暈眩率UP(.*)"=Dizzy Boost $1
-r:"混亂率UP(.*)"=Confuse Boost $1
-r:"恐懼率UP(.*)"=Fear Boost $1
-r:"絶望率UP(.*)"=Despair Boost $1
-r:"狂怒率UP(.*)"=Rage Boost $1
-r:"洗脳率UP(.*)"=Brainwash Boost $1
-r:"疾風率UP(.*)"=Winded Boost $1
+r:"^觸電率UP(.*)$"=Shock Boost $1
+r:"^睡眠率UP(.*)$"=Sleep Boost $1
+r:"^遺忘率UP(.*)$"=Forget Boost $1
+r:"^暈眩率UP(.*)$"=Dizzy Boost $1
+r:"^混亂率UP(.*)$"=Confuse Boost $1
+r:"^恐懼率UP(.*)$"=Fear Boost $1
+r:"^絶望率UP(.*)$"=Despair Boost $1
+r:"^狂怒率UP(.*)$"=Rage Boost $1
+r:"^洗脳率UP(.*)$"=Brainwash Boost $1
+r:"^疾風率UP(.*)$"=Winded Boost $1
 
 //Status Resists
-r:"燃燒耐性(.*)"=Resist Burn $1
+r:"^燃燒耐性(.*)$"=Resist Burn $1
 r:"^冰凍耐性(.*)$"=Resist Freeze $1
-r:"觸電耐性(.*)"=Resist Shock $1
-r:"睡眠耐性(.*)"=Resist Sleep $1
-r:"遺忘耐性(.*)"=Resist Forget $1
-r:"暈眩耐性(.*)"=Resist Dizzy $1
-r:"混亂耐性(.*)"=Resist Confuse $1
-r:"恐懼耐性(.*)"=Resist Fear $1
-r:"狂怒耐性(.*)"=Resist Rage $1
-r:"絶望耐性(.*)"=Resist Despair $1
-r:"洗脳耐性(.*)"=Resist Brainwash $1
+r:"^觸電耐性(.*)$"=Resist Shock $1
+r:"^睡眠耐性(.*)$"=Resist Sleep $1
+r:"^遺忘耐性(.*)$"=Resist Forget $1
+r:"^暈眩耐性(.*)$"=Resist Dizzy $1
+r:"^混亂耐性(.*)$"=Resist Confuse $1
+r:"^恐懼耐性(.*)$"=Resist Fear $1
+r:"^狂怒耐性(.*)$"=Resist Rage $1
+r:"^絶望耐性(.*)$"=Resist Despair $1
+r:"^洗脳耐性(.*)$"=Resist Brainwash $1
 
 //Other
-r:"武道的心得(.*)"=Arms Master $1
-r:"治療促進(.*)"=Regenerate $1
-r:"^亢奮(.*)+$"=Heat Up $1
-r:"^反擊(.*)+$"=Counter $1
-r:"雨歌(.*)"=Climate Decorum $1
-r:"勝利的氣息(.*)"=Breath of Victory $1
+r:"^武道的心得(.*)$"=Arms Master $1
+r:"^治療促進(.*)$"=Regenerate $1
+r:"^亢奮(.*)$"=Heat Up $1
+r:"^反擊(.*)$"=Counter $1
+r:"^雨歌(.*)$"=Climate Decorum $1
+r:"^勝利的氣息(.*)$"=Breath of Victory $1
 
 ---------------------------------------------
 --- VI. Character-specific Skill Details ----
@@ -406,6 +417,33 @@ r:"勝利的氣息(.*)"=Breath of Victory $1
 // Awareness 4
 // Awareness 5
 // Awareness 6
+
+//////////////////////////////
+/// c. RIN - Yaoling Li //////
+//////////////////////////////
+擺渡者=Ferryman
+彼岸之叢=Distant Shore Gathering
+頑獅鬧=Playful Lioness' Dance
+嬉鬧=Roughhousing
+怒放=Anger Blossom
+// Skill 1: Ferryman
+r:"對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，自身每有10點速度，就使目標敵人的防禦力降低3%，上限<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。該技能每命中一個敵人，就使自身獲得4點<link\="s\|159"><u>『回憶』</u></link>。\n<b><size\=28><color\=#850101>猩紅色的咒語，攜著撕碎敵人靈魂的力量炸裂開來，並帶去毀滅性傷害。</color></size></b>"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies. For every 10 SPD Rin has, reduce enemies' DEF by 3% up to a maximum of <color\=#FFFF00>$2</color> for 2 turns. For every opponent hit, gain 4 stacks of <link\=s|159><u>Memory</u></link>.
+
+// Skill 2: Distant Shore Gathering
+sr:"對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害。若敵人帶有任意減益效果，則使該技能造成的傷害提升20%。<link\="s\|127"><u>『孟婆湯』</u></link>額外效果：使主目標有100%的基礎機率陷入(.*)狀態，效果持續2回合。\n<b><size\=28><color\=#850101>嗜血的曼珠沙華遍生滿地，血一般的豔麗之色自敵人腳下不斷攀升，造成強力的詛咒傷害。</color></size></b>"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>1</color> enemy. If the target is inflicted with a debuff, increase damage dealt by 20%. <link\=s|127><u>[Meng Po Soup]</u></link> now has a 100% chance to inflict $2 for 2 turns.
+
+// Skill 3: Playful Lioness' Dance
+sr:"對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，並使所有敵人獲得『彼岸花』效果：自身每有10點速度，使敵人受到的傷害提升3%，上限<color\=#FFFC40>(\d+\.\d+%)</color>。該效果在受到2次傷害或2回合後清除。<link\="s\|127"><u>『孟婆湯』</u></link>額外效果：『彼岸花』的增傷效果翻倍。\n<b><size\=28><color\=#850101>頑皮的小獅子聽令號召，一躍而騰，把這天地鬧個不安寧才好，放肆地對那不聽話的敵人造成劇烈傷害。</color></size></b>"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and inflict [Crosshore Lycoris]. For every 10 SPD, damage taken by all enemies is increased by 3% to a maximum of $2. [Crosshore Lycoris] is cleared after the enemy takes damage twice or after 2 turns. <link\=s|127><u>[Meng Po Soup]</u></link> now doubles the effect of [Crosshore Lycoris].
+
+// Combat Skills
+sr:"『ONE MORE』：對1名敵人造成詛咒屬性傷害。\n『HIGHLIGHT』：對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，並使所有敵人下一次受到的傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。有30%的基礎機率使得所有敵人陷入(.*)狀態，效果持續2回合。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，每次向隨機敵人射擊3發，造成射擊屬性傷害，根據子彈數量可以射擊多次。"=ONE MORE: Deals Curse damage to <color\=#FFFF00>1</color> enemy. HIGHLIGHT: Deals <color\=#FFFC40>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and increase their damage taken by $2 with a 30% chance of inflicting $3 for 2 turns.
+
+// Passive 1: Roughhousing
+r:"每有2點速度，則提升自身1%攻擊力，透過這種方式最多提升<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力。"=For every 2 SPD, increase ATK by 1% to a maximum of <color\=#FFFC40>$1</color>.
+
+// Passive 2: Anger Blossom
+r:"使場上生命值高於50%的敵人受到的詛咒傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。"=Increase Curse damage dealt to enemies with over 50% HP by <color\=#FFFC40>$1</color>.
+
 
 //////////////////////////////
 /// c. SOY - Kano Shun ///////
@@ -829,7 +867,7 @@ r:"戰鬥開始時全員防禦力提升(\d+\.\d+%)，持續2回合。"=Increase 
 r:"戰鬥開始時防禦力提升(\d+\.\d+%)，持續2回合。"=Increase DEF by $1 at the start of battle for 2 turns.
 r:"^攻擊力提升(\d+\.\d+%)。+$"=Increase ATK by $1.
 r:"^生命值提升(\d*\.?\d+%)。+$"=Increase Max HP by $1.
-r:"^速度提升(\d*\.?\d+%)點。+$"=Increase SPD by $1.
+r:"^速度提升(\d+)點。$"=Increase SPD by $1.
 r:"^防禦力提升(\d*\.?\d+%)。+$"=Increase DEF by $1.
 r:"^暴擊率提升(\d*\.?\d+%)。$"=Increase CRIT Rate by $1.
 r:"精力回復效率提升(\d+\.\d+%)。"=Increase SP Recovery by $1.
