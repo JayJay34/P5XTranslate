@@ -63,112 +63,104 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 ---------------------------------------------
 // Skill names are in Substitutions //
 意識詳情=A0~A6 // Awareness Levels
+技能=Skills
+r:"^(\d+)回合$"="$1 turn"
 
--- NOTE: Translate the 3 Phantom Thieves first, then translate the cognitive ones.
-////////////////////////////////
-///// a. CATTLE - Ruferu ///////
-////////////////////////////////
+----------
+CATTLE - Ruferu
+----------
 
-// Passive
-// Skill 1: Iceberg Shake
-// Skill 2: Vanguard Assault
-// Skill 3: Sub-zero Healing
-// Skill 4: Combat Skills
-// Potential Passives
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的火焰屬性傷害，有(\d+%)基礎機率使敵人燃燒。$"="Deals $1 ATK Fire damage to <color\=#FFFF00>1</color> enemy, with a $2 base chance to inflict Burn."
+r:"^對1名敵人造成\<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的<color\=#FFFC40>火焰屬性</color>傷害，有(\d+%)基礎機率使敵人陷入<link\="s\|102"><u>燃燒</u></link>狀態，效果持續(\d+)回合。$"="Deals <color\=#FFFC40>$1</color> ATK <color\=#FFFC40>Fire</color> damage, with a $2 base chance to inflict <link\="s|102"><u>Burn</u></link> for $3 turns."
 
-// Awareness 0
-// Awareness 1
-// Awareness 2
-// Awareness 3
-// Awareness 4
-// Awareness 5
-// Awareness 6
+r:"^使<color\=#FFFF00>1名</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值，同伴生命值低於(\d+%)則治療效果提升(\d+%)。$"="Restores $1 ATK + $2 HP to <color\=#FFFF00>1</color> ally, increases healing by $4 if the target is under $3 HP."
+r:"^使1名同伴恢復<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力\+<color\=#FFFC40>(\d+)</color>的生命值。目標生命值低於(\d+%)時，治療效果提升<color\=#FFFC40>(\d+%)</color>。$"="Restores <color\=#FFFC40>$1</color> ATK + <color\=#FFFC40>$2</color> HP to an ally. Increases healing by <color\=#FFFC40>$4</color> if the target is under $3 HP."
 
-///////////////////////////////
-/// b. CLOSER - Motoha Arai ///
-///////////////////////////////
+r:"^使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值，對主要目標同伴造成的治療效果提升(\d+%)。$"="Restores $1 ATK + $1 HP to <color\=#FFFF00>all</color> allies, increase healing by $3 to the main target."
+r:"^使所有同伴恢復<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力\+<color\=#FFFC40>(\d+)</color>的生命值，對主要目標同伴的治療效果提升<color\=#FFFC40>(\d+%)</color>。$"="Restores <color\=#FFFC40>$1</color>ATK + <color\=#FFFC40>$2</color> HP to all allies, increase healing by <color\=#FFFC40>$3</color> to the main target."
 
-// Passive
-// Skill 1: Iceberg Shake
-// Skill 2: Vanguard Assault
-// Skill 3: Sub-zero Healing
-// Skill 4: Combat Skills
-// Potential Passives
+r:"^使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值，使<color\=#FFFF00>所有</color>同伴的攻擊力提升(\d+\.\d+%)。$"="Restores $1 ATK + $2 HP to <color\=#FFFF00>all</color> allies, increases <color\=#FFFF00>all</color> ally's ATK by $3."
 
-// Awareness 0
-// Awareness 1
-// Awareness 2
-// Awareness 3
-// Awareness 4
-// Awareness 5
-// Awareness 6
+星之火I=Starfire I
+屬性提升，結束時獲得星之火II=Attribute boost, gain Starfire II when the effect ends
+星之火II=Starfire II
+屬性提升，結束時獲得星之火III=Attribute boost, gain Starfire III when the effect ends
+星之火III=Starfire III
+屬性提升=Attribute boost
+
+r:"^攻擊力提升(\d+\.\d+%)$"="Increase ATK by $1"
+r:"^火焰傷害提升(\d+%)$"="Increase Fire damage by $1"
+
+Combat pop ups
+星<color\=#000000>之</color>火I=St<color\=#000000>ar</color>fire I
+星<color\=#000000>之</color>火II=St<color\=#000000>ar</color>fire II
+星<color\=#000000>之</color>火III=St<color\=#000000>ar</color>fire III
+
+----------
+CLOSER - Motoha Arai
+----------
+
+r:"^對<color\=#FFFF00>隨機</color>敵人造成(\d+)段(\d+\.\d+%)攻擊力的電擊屬性傷害，對主目標有(\d+%)基礎機率使其觸電。$"="Deals $1 <color\=#FFFF00>random</color> hits of $2 ATK Electricity damage, with a $3 base chance of inflicting Shock to the main target."
+r:"^發射(\d+)道天雷，造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，對技能主目標有100%的基礎機率使其陷入<link\="s\|104"><u>觸電</u></link>狀態。對同一目標的後續攻擊只會造成<color\=#FFFC40>(\d+%)</color>的傷害，天雷會優先選擇未攻擊過的目標。$"="Shoots $1 thunderbolts, dealing <color\=#FFFC40>$2</color> ATK Electricity damage and has a 100% base chance to inflict <link\="s|104"><u>Shock</u></link> to the skill's main target. Deals <color\=#FFFC40>$3</color> damage when hitting the same target, the thunderbolts will prioritize targets that have not been attacked yet."
+
+r:"^對<color\=#FFFF00>(\d+)名</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，並使所有同伴造成的電擊屬性傷害提升(\d+\.\d+%)，持續2回合。$"="Deals $2 ATK Electricity damage to <color\=#FFFF00>$1</color> enemy, and increases all ally's Electricity DMG Dealt by $3 for 2 turns."
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，並使所有同伴造成的電擊屬性傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。$"="Deals <color\=#FFFC40>$1</color> ATK Electricity damage to 1 enemy, increases all ally's Electricity DMG Dealt by <color\=#FFFC40>$2</color> for 2 turns."
+
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，若任意敵人處於觸電狀態，則對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的額外傷害。$"="Deals $2 ATK Electricity damage to <color\=#FFFF00>all</color> enemies, If there is an enemy inflicted with Shock, deals $2 ATK as bonus damage to <color\=#FFFF00>all</color> enemies."
+r:"^對所有敵人造成\<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害。若場上存在處於<link\="s\|104"><u>觸電</u></link>狀態的敵人，則對所有敵人造成1次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的額外電擊屬性傷害。$"="Deals <color\=#FFFC40>$2</color> ATK Electricity damage to all enemies. If there is an enemy inflicted with <link\="s|104"><u>Shock</u></link>, then deals another hit of <color\=#FFFC40>$1</color> ATK Electricity damage to all enemies."
+
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，有100%的固定機率使技能主目標陷入觸電狀態，並使其受到的電擊屬性傷害提升(\d+%)，持續2回合。$"="Deals $1 ATK Electricity damage to <color\=#FFFF00>all</color> enemies, there is a 100% fixed chance to inflict the main target with Shock, and increases their Electricity DMG Taken by $2 for 2 turns."
+
+觸電=Shock
+存在處於觸電狀態的敵人=There is an enemy with Shock
+電擊傷害提升=<size\=28>Increase Elec damage</size>
+r:"^造成的電擊屬性傷害提升(\d+%)$"="Increase Elec DMG Dealt by $1"
+受電擊傷害提升=<size\=24>Increase Elec DMG Taken</size>
+r:"^受到電擊傷害提升(\d+%)$"="Increase Elec DMG Taken by $1"
+
+Combat pop ups
+電<color\=#000000>擊</color>傷害提升=In<color\=#000000>cr</color>ease Elec Damage
+受<color\=#000000>到</color>電傷提升=In<color\=#000000>cr</color>ease Elec DMG Taken
+
+----------
+SOY - Shun Kano
+----------
+
+r:"^對<color\=#FFFF00>(\d+)名</color>敵人造成(\d+\.\d+%)最大生命值的冰凍屬性傷害，有(\d+%)基礎機率使敵人凍結。$"="Deals $2 Max HP Ice damage to <color\=#FFFF00>$1</color> enemy, with a $3 base chance to inflict freeze."
+sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的冰凍屬性傷害，並有<color\=#FFFC40>(\d+%)</color>的基礎機率使敵人陷入<link\="s\|103"><u>(.*)</u></link>狀態。$"="Deals <color\=#FFFC40>$1</color> Max HP Ice damage to 1 enemy, with a <color\=#FFFC40>$2</color> base chance to inflict <link\="s|103"><u>$3</u></link>."
+
+sr:"^對<color\=#FFFF00>(\d+)名</color>敵人造成(\d+\.\d+%)最大生命值的物理屬性傷害，並降低目標敵人(\d+\.\d+%)防禦力，效果持續2回合，處於『(.*)』下該效果提升至(\d+\.\d+%)。$"="Deals $2 Max HP Physical damage to <color\=#FFFF00>$1</color> enemy and decreases their DEF by $3 for 2 turns, increases the effect to $5 when in $4."
+sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的物理屬性傷害，並使目標敵人的防禦力降低<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。處於<link\="s\|151"><u>『(.*)』</u></link>狀態下時，防禦力降低值提升至<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Deals <color\=#FFFC40>$1</color> Max HP Physical damage to 1 enemy, decrease the target's DEF by <color\=#FFFC40>$2</color> for 2 turns. When in the <link\="s|151"><u>$3</u></link> state, increase the DEF down debuff to <color\=#FFFC40>$4</color>."
+
+r:"^使<color\=#FFFF00>所有</color>同伴的最大生命值提升，數值相當於加納駿最大生命值的(\d+%)（最多計入(\d+)點最大生命值），同時自身受到攻擊的機率大幅提升，效果持續2回合。回復所有同伴生命值，數值相當於加納駿最大生命值的(\d+\.\d+%)。$"="Increases <color\=#FFFF00>all</color> ally's Max HP based on $1 of Shun Kano's Max HP (up to $2 Max HP), increases the chance of being attacked for 2 turns. Restores all ally's HP equal to $3 of Shun Kano's Max HP."
+r:"^使所有同伴的最大生命值提升，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+%)</color>（最多計入<color\=#FFFC40>(\d+)</color>點最大生命值），同時自身受到攻擊的機率大幅提升，效果持續2回合。回復所有同伴生命值，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d+%)</color>。\n冷卻時間：1回合。$"="Increases all ally's Max HP equal to <color\=#FFFC40>$1</color> of Shun Kano's Max HP (Up to <color\=#FFFC40>$2</color> Max HP), increases the chance of being attacked for 2 turns. Restores all ally's HP equal to <color\=#FFFC40>$1</color> of Shun Kano's Max HP. \nCooldown: 1 turn."
+
+受攻擊機率大幅提升=Heavily increase the chance of getting attacked
+r:"^生命值上限提高(\d+)$"="Increase Max HP by $1"
+
+In-Battle Quotes
+<color\=#FF0000>全體怪盜</color>生命值上限提高……=Increase Max HP for <color\=#FF0000>all allies</color>!
+<color\=#FF0000>加納駿</color>受攻擊機率大幅提高……=<size\=25><color\=#FF0000>Shun Kano's</color> chance of attacked is heavily increased!</size>
+
+Combat Pop-ups
+生<color\=#000000>命</color>上限提升=In<color\=#000000>cr</color>ease Max HP
+受<color\=#000000>攻</color>擊機率提升=In<color\=#000000>cr</color>ease Chance of Attacked
 
 //////////////////////////////
-/// c. SOY - Kano Shun ///////
+/// c. RIN - Yaoling Li //////
 //////////////////////////////
 
-// Passive
-受到敵方攻擊的機率提高，受到攻擊後會獲得『{{A}}』，回合結束消耗『{{A}}』並回復自身部分已損生命值。=When attacked, gain a "Wild Savior" unique buff. This buff heals Soy for 30% HP at the end of his turn.
+// Skill 1: Ferryman
+r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，根據自身速度至多降低敵人(\d+\.\d+%)防禦力。該技能每命中1個敵人則獲得4點『回憶』。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies. For every 10 SPD Rin has, reduce enemies' DEF by 3% up to a maximum of <color\=#FFFF00>$2</color> for 2 turns. For every opponent hit, gain 4 stacks of <link\=s|159><u>Memory</u></link>.
 
-// Skill 1: Iceberg Shake
+// Skill 2: Distant Shore Gathering
+sr:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，對處於異常狀態的敵人造成的傷害提升20%；持有『孟婆湯』時有100%基礎機率使技能主目標陷入(.*)。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>1</color> enemy. If the target is inflicted with a debuff, increase damage dealt by 20%. <link\=s|127><u>[Meng Po Soup]</u></link> now has a 100% chance to inflict $2 for 2 turns.
 
-r:"對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的冰凍屬性傷害，並有<color\=#FFFC40>(\d+%)</color>的基礎機率使敵人陷入<link\=\"s|103\"><u>凍結</u></link>狀態。\n<b><size\=28><color\=#850101>拔地而起的冰山，對敵人造成冰屬性傷害，還會讓敵人感到愈加的寒冷。"=Deals <color\=#FFFC40>$1</color> MAX HP Ice Elemental DMG to 1 target with a <color\=#FFFC40>$2</color> base chance to inflict a Frozen debuff. \n\n<b><size\=28><color\=#850101>Chilly twin axes strike the enemy, making them feel colder.</color></size></b>
+// Skill 3: Playful Lioness' Dance
+sr:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，並使其獲得『彼岸花』，自身每有10點速度使其受到的傷害提升(\d+\.\d+%)，該效果在受到2次傷害或2回合後清除。持有『孟婆湯』時『彼岸花』效果翻倍。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and inflict [Crosshore Lycoris]. For every 10 SPD, damage taken by all enemies is increased by 3%. [Crosshore Lycoris] is cleared after the enemy takes damage twice or after 2 turns. <link\=s|127><u>[Meng Po Soup]</u></link> now doubles the effect of [Crosshore Lycoris].
 
-// Skill 2: Vanguard Assault
-
-r:"對1名敵人造成<color\=#FFFC40>(\d+\.\d%)</color>最大生命值的物理屬性傷害，並使目標敵人的防禦力降低<color\=#FFFC40>(\d+\.\d%)</color>，效果持續2回合。處於<link\="s|151"><u>『荒野救星』</u></link>狀態下時，防禦力降低值提升至<color\=#FFFC40>(\d+\.\d%)</color>。\n<b><size\=28><color\=#850101>先鋒精神勢不可擋，在烈馬的啼鳴中對敵人造成難以抵擋的物理傷害。</color></size></b>"=Deals <color\=#FFFC40>$1</color> MAX HP Physical Damage and inflicts a <color\=#FFFC40>$2</color> DEF Down debuff that lasts for 2 turns to 1 target. When using this skill while <u>Wild Savior</u> is active, the DEF Down debuff becomes twice as powerful.
-
-// Skill 3: Sub-zero Healing
-
-r:"使所有同伴的最大生命值提升，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+%)</color>（最多計入<color\=#FFFC40>(\d+)</color>點最大生命值），同時自身受到攻擊的機率大幅提升，效果持續2回合。回復所有同伴生命值，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d%)</color>。\n冷卻時間：1回合。\n<b><size\=28><color\=#850101>極寒的冰域展開，絕對的低溫有助於保持頭腦清醒和身體健康。</color></size></b>"=<color\=#FFFC40>Cooldown after use: 1 turn</color> \nIncreases the party's MAX HP by <color\=#FFFC40>$1</color> up to <color\=#FFFC40>$2 HP</color>, heals the party <color\=#FFFC40>$3</color> of Kano Shun's MAX HP, and increases the likelihood of being attacked. The effect lasts for 2 turns.\n
-
-// Skill 4: Combat Skills
-r:"『ONE MORE』：對1名敵人造成冰凍屬性傷害。\n『HIGHLIGHT』：使所有同伴的最大生命值提升，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d%)</color>（最多計入<color\=#FFFC40>(\d+)</color>點最大生命值）。回復所有同伴生命值，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d%)</color>。同時對1名敵人造成<color\=#FFFC40>(\d+\.\d%)</color>最大生命值的冰凍屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成6次射擊屬性傷害，子彈可能會發生偏移。對同一目標造成傷害會衰減。"=ONE MORE: Ice Elemental DMG on 1 target.\nHIGHLIGHT: Increases the party's MAX HP by <color\=#FFFC40>$1</color> of SOY's MAX HP up to <color\=#FFFC40>$2</color>, heals the party <color\=#FFFC40>$3</color> of SOY's MAX HP, then deals <color\=#FFFC40>$4</color> MAX HP Ice Elemental DMG to 1 target.\n\nLeveling up Combat Skills also improves Melee Attack and Gun Attack DMG.
-
-// Soy's Combat Skills Upgrade
-HIGHLIGHT：計入生命值上限=HIGHLIGHT: MAX HP Cap
-HIGHLIGHT：生命值回復倍率=HIGHLIGHT: HP% Heal
-
-// Potential Passives //
-
-// Wild
-r:"槍械子彈數量提升<color\=#FFFC40>(\d+)</color>，並且槍械射擊每發子彈有<color\=#FFFC40>(\d+\.\d%)</color>固定機率附帶自身<color\=#FFFC40>(\d+%)</color>最大生命值傷害且使敵人防禦降低<color\=#FFFC40>(\d+%)</color>，效果持續3回合。槍械傷害對同一目標有衰減。"=Gun Ammo: 24+<color\=#FFFC40>$1</color>\nEach shot has a fixed <color\=#FFFC40>$2</color> chance to deal extra <color\=#FFFC40>$3</color> MAX HP DMG and inflicts a <color\=#FFFC40>$4</color> DEF Down Debuff. The effect lasts for 3 turns, and the Gun DMG is reduced for the same target.
-
-// Courage (It seems this skill can't be translated)
-//r:"釋放『零度治癒』技能後每次受到攻擊，有<color\=#FFFC40>(\d+\.\d%)</color>固定機率觸發<link\="s|151\"><u>『荒野救星』</u></link>的回復效果，效果持續2回合。"=Whenever SOY is attacked after releasing "Zero Healing" skill, he will have<color\=#FFFC40>$1</color>Fixed chance of triggering Wild Savior's unique buff for 2 turns instead of 1.
-
-// Awareness //
-
-// Awareness 0
-勇敢者的遊戲=Hero's Game
-加納駿受到敵方攻擊的機率提高，受到攻擊後會獲得『荒野救星』。\n加納駿的回合結束時，會消耗『荒野救星』並回復自身已損生命值的30%。=When attacked, gain a "Wild Savior" unique buff. This buff heals Soy for 30% HP at the end of his turn.
-
-// Awareness 1
-下戰書=Declaration of War
-加納駿處於<link\="s|151"><u>『荒野救星』</u></link>狀態時，受到傷害降低8%。=When SOY's <link\="s|151"><u>"Wild Savior"</u></link> is active, he receives 8% less DMG from enemies.
-
-// Awareness 2
-危險對峙=Dangerous Showdown
-『冰山撼動』、『先鋒突擊』的技能等級提升2級，至多提升至15級。=Increase the skill level of "Iceberg Shake" and "Vanguard Assault" by 2 levels, up to a maximum of 15 levels.
-
-// Awareness 3
-熱血的硝煙=Piping-Hot Smoke
-加納駿的生命值低於50%時，受到的治療效果提升25%。=When SOY's HP is less than 50%, he will receive 25% more healing.
-
-// Awareness 4
-一決勝負=The Winner is Determined
-『零度治癒』、『戰鬥技巧』的技能等級提升2級，至多提升至15級。=Increase the skill level of "Zero Healing" and "Combat Skill" by 2 levels, up to a maximum of 15 levels.
-
-// Awareness 5
-暴力處決=Violent Execution
-HIGHLIGHT效果提升：使所有同伴受到傷害降低16%，效果持續2回合。=HIGHLIGHT Effect Boost: Reduces damage taken by all companions by 16%. The effect lasts for 2 turns.
-
-// Awareness 6
-勝利者榮光=Winner's Glory
-加納駿處於<link\="s|151"><u>『荒野救星』</u></link>狀態下攻擊敵人時，會額外附帶基於加納駿最大生命值10%的傷害並回復等量生命值。=While Soy's <link\="s|151"><u>"Wild Savior"</u></link> is active, deal an extra 10% of Soy's MAX HP as damage and restore that same amount of HP.
-
-// In-Battle Quotes
-<color\=#FF0000>全體怪盜</color>生命值上限提高……=MAX HP increased for the <color\=#FF0000>entire party</color>!
+// Combat Skills
+sr:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，使其下1次受到的傷害提升(\d+\.\d+%)，並有30%基礎機率使其陷入(.*)狀態，持續2回合。"=Deals <color\=#FFFC40>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and increase their damage taken by $2 with a 30% chance of inflicting $3 for 2 turns.
 
 /////////////////////////////////
 /// d. MONT - Montagne Kotone ///
