@@ -428,6 +428,7 @@ r:"^自身最大生命值轉化為治療效果，最多<color\=#FFFC40>(\d+)</co
 
 無聲偷襲=Silent Ambush
 『天使的憐憫』、『{{A}}』的技能等級提升2級，至多提升至15級。=Angel's Mercy, {{A}} level +2, up to a maximum of level 15.
+『天使的憐憫』、『戰鬥技巧』的技能等級提升2級，至多提升至15級。=Angel's Mercy, Combat Skills level +2, up to a maximum of level 15.
 
 利爪突擊=Claw Assault
 HIGHLIGHT效果提升：使所有同伴造成的火焰屬性傷害提升32%，效果持續1回合=HIGHLIGHT Effect Improvement: Increases Fire damage of all allies by 32% for 1 round.
@@ -477,6 +478,7 @@ r:"^受到來自處於<link\="s\|104"><u>觸電</u></link>狀態的敵人的傷�
 
 無限超越=Infinite Transcendence
 『電鳴狂鯊』、『{{A}}』的技能等級提升2級，至多提升至15級。=Electric Shark, {{A}} level +2, up to a maximum of level 15.
+『電鳴狂鯊』、『戰鬥技巧』的技能等級提升2級，至多提升至15級。=Electric Shark, Combat Skills level +2, up to a maximum of level 15.
 
 得分！=Score!
 r:"^HIGHLIGHT效果提升：使所有敵人受到的電擊屬性傷害提升(\d+%)，效果持續2回合。$"="HIGHLIGHT Effect Improvement: Increase Electricity DMG Taken of all enemies by $1 for 2 turns."
@@ -488,7 +490,7 @@ r:"^使場上處於<link\="s\|104"><u>觸電</u></link>狀態的敵人受到的�
 SOY - Shun Kano
 ----------
 
-sr:"^受到敵方攻擊的機率提高，受到攻擊後會獲得『(.*)』，回合結束消耗『(.*)』並回復自身部分已損生命值。$"="<size\=25>Increase the chance of being attacked by enemies and gain $1 when attacked. Consume $2 and restore HP at the end of your turn.</size>"
+sr:"^受到敵方攻擊的機率提高，受到攻擊後會獲得『(.*)』，回合結束消耗『(.*)』並回復自身部分已損生命值。$"="<size\=25>Increase the chance of being attacked by enemies and gain [$1] when attacked. Consume [$2] and restore HP at the end of your turn.</size>"
 冰山撼動=Iceberg Tremor
 先鋒突擊=Vanguard Assault
 零度治癒=<size\=22>Absolute Zero Healing</size>
@@ -499,12 +501,12 @@ r:"^冰山撼動 <color\=#0F69CB>Lv.(\d+)</color>$"="Iceberg Tremor <color\=#0F6
 sr:"^對1名敵人造成\<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的冰凍屬性傷害，並有\<color\=#FFFC40>(\d+%)</color>的基礎機率使敵人陷入<link\="s\|103"><u>(.*)</u></link>狀態。\n<b><size\=28><color\=#850101>拔地而起的冰山，對敵人造成冰屬性傷害，還會讓敵人感到愈加的寒冷。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> Max HP Ice damage to 1 enemy, with a <color\=#FFFC40>$2</color> base chance to inflict <link\="s|103"><u>$3</u></link>.\n<b><size\=28><color\=#850101>Rising icebergs deal ice damage to enemies and make them feel colder.</color></size></b>"
 
 r:"^先鋒突擊 <color\=#0F69CB>Lv.(\d+)</color>$"="Vanguard Assault <color\=#0F69CB>Lv.$1</color>"
-sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的物理屬性傷害，並使目標敵人的防禦力降低<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。處於<link\="s\|151"><u>『(.*)』</u></link>狀態下時，防禦力降低值提升至<color\=#FFFC40>(\d+\.\d+%)</color>。\n<b><size\=28><color\=#850101>先鋒精神勢不可擋，在烈馬的啼鳴中對敵人造成難以抵擋的物理傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> Max HP Physical damage to 1 enemy, decrease the target's DEF by <color\=#FFFC40>$2</color> for 2 turns. When in the <link\="s|151"><u>$3</u></link> state, increase the DEF down debuff to <color\=#FFFC40>$4</color>. \n<b><size\=28><color\=#850101>Pioneer Spirit is unstoppable, dealing irresistible physical damage to enemies with the roar of the horses.</color></size></b>"
+sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的物理屬性傷害，並使目標敵人的防禦力降低<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。處於<link\="s\|151"><u>『(.*)』</u></link>狀態下時，防禦力降低值提升至<color\=#FFFC40>(\d+\.\d+%)</color>。\n<b><size\=28><color\=#850101>先鋒精神勢不可擋，在烈馬的啼鳴中對敵人造成難以抵擋的物理傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> Max HP Physical damage to 1 enemy, decrease the target's DEF by <color\=#FFFC40>$2</color> for 2 turns. When in the <link\="s|151"><u>[$3]</u></link> state, increase the DEF down debuff to <color\=#FFFC40>$4</color>. \n<b><size\=28><color\=#850101>Pioneer Spirit is unstoppable, dealing irresistible physical damage to enemies with the roar of the horses.</color></size></b>"
 
 r:"^零度治癒 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=25>Absolute Zero Healing</size> <color\=#0F69CB>Lv.$1</color>"
 r:"^使所有同伴的最大生命值提升，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+%)</color>（最多計入<color\=#FFFC40>(\d+)</color>點最大生命值），同時自身受到攻擊的機率大幅提升，效果持續2回合。回復所有同伴生命值，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d+%)</color>。\n冷卻時間：1回合。\n<b><size\=28><color\=#850101>極寒的冰域展開，絕對的低溫有助於保持頭腦清醒和身體健康。</color></size></b>$"="Increases all ally's Max HP equal to <color\=#FFFC40>$1</color> of Shun Kano's Max HP (Up to <color\=#FFFC40>$2</color> Max HP), increases the chance of being attacked for 2 turns. Restores all ally's HP equal to <color\=#FFFC40>$1</color> of Shun Kano's Max HP. \nCooldown: 1 turn.\n<b><size\=28><color\=#850101>An extremely cold field of ice opens up, and the absolute low temperature helps to keep the mind and body clear.</color></size></b>"
 
-荒野救星=[Wilderness Savior]
+荒野救星=<size\=26>Wilderness Savior</size>
 『荒野救星』=Wilderness Savior
 sr:"^加納駿受到攻擊後獲得，自身回合結束時，消耗『(.*)』回復自身一定生命值。$"="Gain after Shun Kano is attacked. At the end of your turn, consume $1 to restore HP."
 
@@ -517,10 +519,10 @@ r:"^勇謀 Lv.(\d+)$"="Bold Strategy Lv.$1"
 sr:"^釋放『零度治癒』技能後每次受到攻擊，有<color\=#FFFC40>(\d+\.\d+%)</color>固定機率觸發<link\="s\|151"><u>『(.*)』</u></link>的回復效果，效果持續2回合。$"="After using [Absolute Zero Healing] and getting attacked, there is a <color\=#FFFC40>$1</color> fixed chance to trigger the healing effect of <link\="s|151"><u>$2</u></link> for 2 turns."
 
 勇敢者的遊戲=Brave's Game
-sr:"加納駿受到敵方攻擊的機率提高，受到攻擊後會獲得『(.*)』。\n加納駿的回合結束時，會消耗『(.*)』並回復自身已損生命值的(\d+%)。"="Increase the change of Shun Kano being attacked by enemies and gain $1 when attacked. \nWhen Shun Kano's turn ends, consume $2 and restore $3 HP."
+sr:"加納駿受到敵方攻擊的機率提高，受到攻擊後會獲得『(.*)』。\n加納駿的回合結束時，會消耗『(.*)』並回復自身已損生命值的(\d+%)。"="<size\=30>Increase the change of Shun Kano being attacked by enemies and gain [$1] when attacked. \nWhen Shun Kano's turn ends, consume [$2] and restore $3 missing HP.</size>"
 
 下戰書=Declaration of War
-sr:"加納駿處於<link\="s\|151"><u>『(.*)』</u></link>狀態時，受到傷害降低(\d+%)。"="Decrease DMG Taken by $2 when Shun Kano is in <link\="s|151"><u>$1</u></link>."
+sr:"加納駿處於<link\="s\|151"><u>『(.*)』</u></link>狀態時，受到傷害降低(\d+%)。"="Decrease DMG Taken by $2 when Shun Kano is in <link\="s|151"><u>[$1]</u></link>."
 
 危險對峙=Dangerous Standoff
 『冰山撼動』、『先鋒突擊』的技能等級提升2級，至多提升至15級。=Iceberg Tremor, Vanguard Assault level +2, up to a maximum of level 15.
@@ -529,13 +531,14 @@ sr:"加納駿處於<link\="s\|151"><u>『(.*)』</u></link>狀態時，受到傷
 r:"^加納駿的生命值低於(\d+%)時，受到的治療效果提升(\d+%)。$"="When Shun Kano is under $1 HP, increase Healing Received by $2."
 
 一決勝負=Final Showdown
+『零度治癒』、『戰鬥技巧』的技能等級提升2級，至多提升至15級。=Absolute Zero Healing, Combat Skills level +2, up to a maximum of level 15.
 『零度治癒』、『{{A}}』的技能等級提升2級，至多提升至15級。=Absolute Zero Healing, {{A}} level +2, up to a maximum of level 15.
 
 暴力處決=Violent Execution
 r:"^HIGHLIGHT效果提升：使所有同伴受到傷害降低(\d+%)，效果持續(\d+)回合。$"="HIGHLIGHT Effect Improvement: Decrease DMG Taken for all allies by $1 for $2 turns."
 
 勝利者榮光=Victor's Glory
-sr:"^加納駿處於<link\="s\|151"><u>『(.*)』</u></link>狀態下攻擊敵人時，會額外附帶基於加納駿最大生命值(\d+%)的傷害並回復等量生命值。$"="When Shun Kano is in <link\="s|151"><u>$1</u></link> and attacks an enemy, deal an additional $2 Max HP as damage and restore the same amount of HP."
+sr:"^加納駿處於<link\="s\|151"><u>『(.*)』</u></link>狀態下攻擊敵人時，會額外附帶基於加納駿最大生命值(\d+%)的傷害並回復等量生命值。$"="When Shun Kano is in <link\="s|151"><u>[$1]</u></link> and attacks an enemy, deal an additional $2 Max HP as damage and restore the same amount of HP."
 
 Soy's Combat Skills Upgrade
 HIGHLIGHT：計入生命值上限=HIGHLIGHT: Max HP Cap
