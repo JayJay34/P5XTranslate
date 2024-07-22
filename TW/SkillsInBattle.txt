@@ -64,7 +64,7 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 // Skill names are in Substitutions //
 意識詳情=A0~A6 // Awareness Levels
 技能=Skills
-r:"^(\d+)回合$"="$1 turn"
+r:"^(\d+)回合$"="$1 CD"
 
 ----------
 CATTLE - Ruferu
@@ -129,20 +129,23 @@ SOY - Shun Kano
 r:"^對<color\=#FFFF00>(\d+)名</color>敵人造成(\d+\.\d+%)最大生命值的冰凍屬性傷害，有(\d+%)基礎機率使敵人凍結。$"="Deals $2 Max HP Ice damage to <color\=#FFFF00>$1</color> enemy, with a $3 base chance to inflict freeze."
 sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的冰凍屬性傷害，並有<color\=#FFFC40>(\d+%)</color>的基礎機率使敵人陷入<link\="s\|103"><u>(.*)</u></link>狀態。$"="Deals <color\=#FFFC40>$1</color> Max HP Ice damage to 1 enemy, with a <color\=#FFFC40>$2</color> base chance to inflict <link\="s|103"><u>$3</u></link>."
 
-sr:"^對<color\=#FFFF00>(\d+)名</color>敵人造成(\d+\.\d+%)最大生命值的物理屬性傷害，並降低目標敵人(\d+\.\d+%)防禦力，效果持續2回合，處於『(.*)』下該效果提升至(\d+\.\d+%)。$"="Deals $2 Max HP Physical damage to <color\=#FFFF00>$1</color> enemy and decreases their DEF by $3 for 2 turns, increases the effect to $5 when in $4."
-sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的物理屬性傷害，並使目標敵人的防禦力降低<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。處於<link\="s\|151"><u>『(.*)』</u></link>狀態下時，防禦力降低值提升至<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Deals <color\=#FFFC40>$1</color> Max HP Physical damage to 1 enemy, decrease the target's DEF by <color\=#FFFC40>$2</color> for 2 turns. When in the <link\="s|151"><u>$3</u></link> state, increase the DEF down debuff to <color\=#FFFC40>$4</color>."
+sr:"^對<color\=#FFFF00>(\d+)名</color>敵人造成(\d+\.\d+%)最大生命值的物理屬性傷害，並降低目標敵人(\d+\.\d+%)防禦力，效果持續2回合，處於『(.*)』下該效果提升至(\d+\.\d+%)。$"="Deals $2 Max HP Physical damage to <color\=#FFFF00>$1</color> enemy and decreases their DEF by $3 for 2 turns, increases the effect to $5 when in [$4]."
+sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的物理屬性傷害，並使目標敵人的防禦力降低<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。處於<link\="s\|151"><u>『(.*)』</u></link>狀態下時，防禦力降低值提升至<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Deals <color\=#FFFC40>$1</color> Max HP Physical damage to 1 enemy, decrease the target's DEF by <color\=#FFFC40>$2</color> for 2 turns. When in the <link\="s|151"><u>[$3]</u></link> state, increase the DEF down debuff to <color\=#FFFC40>$4</color>."
 
 r:"^使<color\=#FFFF00>所有</color>同伴的最大生命值提升，數值相當於加納駿最大生命值的(\d+%)（最多計入(\d+)點最大生命值），同時自身受到攻擊的機率大幅提升，效果持續2回合。回復所有同伴生命值，數值相當於加納駿最大生命值的(\d+\.\d+%)。$"="Increases <color\=#FFFF00>all</color> ally's Max HP based on $1 of Shun Kano's Max HP (up to $2 Max HP), increases the chance of being attacked for 2 turns. Restores all ally's HP equal to $3 of Shun Kano's Max HP."
 r:"^使所有同伴的最大生命值提升，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+%)</color>（最多計入<color\=#FFFC40>(\d+)</color>點最大生命值），同時自身受到攻擊的機率大幅提升，效果持續2回合。回復所有同伴生命值，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d+%)</color>。\n冷卻時間：1回合。$"="Increases all ally's Max HP equal to <color\=#FFFC40>$1</color> of Shun Kano's Max HP (Up to <color\=#FFFC40>$2</color> Max HP), increases the chance of being attacked for 2 turns. Restores all ally's HP equal to <color\=#FFFC40>$1</color> of Shun Kano's Max HP. \nCooldown: 1 turn."
 
+受攻擊後獲得，回合結束消耗『荒野救星』恢復已損生命值=Gain after attacked. At the end of your turn, consume [Wilderness Savior] and restore HP
 受攻擊機率大幅提升=Heavily increase the chance of getting attacked
 r:"^生命值上限提高(\d+)$"="Increase Max HP by $1"
 
 In-Battle Quotes
+<color\=#FF0000>加納駿</color>進入了荒野救星狀態，回合結束恢復已損生命值……=<color\=#FF0000>Shun Kano</color> entered Wilderness Savior state, restore missing HP at the end of turn!
 <color\=#FF0000>全體怪盜</color>生命值上限提高……=Increase Max HP for <color\=#FF0000>all allies</color>!
 <color\=#FF0000>加納駿</color>受攻擊機率大幅提高……=<size\=25><color\=#FF0000>Shun Kano's</color> chance of attacked is heavily increased!</size>
 
 Combat Pop-ups
+荒<color\=#000000>野</color>救星=W<color\=#000000>ild</color>erness Savior
 生<color\=#000000>命</color>上限提升=In<color\=#000000>cr</color>ease Max HP
 受<color\=#000000>攻</color>擊機率提升=In<color\=#000000>cr</color>ease Chance of Attacked
 
