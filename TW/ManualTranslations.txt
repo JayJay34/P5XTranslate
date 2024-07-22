@@ -5,7 +5,7 @@ r:"^(.)$"=$1
 -------------------------------
 // Description: Settings Translation, important system messages, or whatever can be shown before logging in
 
-r:"更新本地文件\((\d+)\/(\d+)\)"=<b>Applying Update ($1 / $2)</b>
+r:"更新本地文件\((\d+)\/(\d+)\)"=<b>Applying Update ($1/$2)</b>
 開始登入=Logging in...
 渲染品質=Rendering Quality
 陰影品質=Shadow Quality
@@ -46,18 +46,22 @@ r:"更新本地文件\((\d+)\/(\d+)\)"=<b>Applying Update ($1 / $2)</b>
 
 梅洛普=Merope
 伊格爾=Igor
+路菲爾=Ruferu
 新井素羽=Motoha Arai
+素羽=Motoha
 路菲爾=Ruferu
 加納駿=Shun Kano
 琴音·蒙塔涅=Montagne Kotone
 蒙塔涅=Montagne
 琴音=Kotone
 數塵老師片山=Katayama-sensei
-瑞奇姆=Marthym
+片山=Katayama
+瑪奇姆=Marthym
 李瑤鈴=Yaoling Li
 木内雄之=Takeyuki Kiuchi
 木内=Kiuchi
 野毛朋子=Tomoko Noge
+朋子=Tomoko
 須見俊也=Toshiya Sumi
 西森陽菜=Haruna Nishimori
 白鳥誠司=Seiji Shiratori
@@ -79,6 +83,8 @@ YUI=YUI
 坂本龍司=Ryuji Sakamoto
 モルガナ=Morgana
 モナ=Mona
+喜多川祐介=Yusuke Kitagawa
+新島真=Makoto Niijima
 
 // Character-specific Persona // 
 
@@ -129,8 +135,13 @@ CV.小西克幸=CV. Konishi Katsuyuki
 CV.諏訪彩花=CV. Suwa Ayaka
 CV.榎木淳彌=CV. Enoki Junya
 CV.盧婷=CV. Lu Ting (Ru Thing)
+CV.小倉唯=CV.Yui Ogura
 CV.安濟知佳=CV. Anzai Chika
-// MINAMI TBA
+CV.佐藤聰美=CV.Satomi Sato
+CV.杉田智和=CV.Tomokazu Sugita
+CV.佐藤利奈=CV.Sato Rina
+CV.勝生真沙子=CV.Masako Katsuki
+CV.原由實=CV.Yumi Hara
 
 ------------------------------------------
 -------- III. Worldbuilding Terms --------
@@ -183,7 +194,7 @@ CV.安濟知佳=CV. Anzai Chika
 ///////////////////////////////////////////////
 -- Terms that appear in multiple UI menus and also sort terms.
 
-r:"(\d+)天(\d+)時"=<color\=#FFFC40>$1 days $2 hours</color> <color\=#FFFFFF>left</color>
+r:"(\d+)天(\d+)時"= <color\=#FFFC40>$1 days $2 hours</color>
 r:"(\d+)天後過期"=Expires in $1 days
 
 擁有:=Owned: 
@@ -199,6 +210,7 @@ r:"^領取%"="Get"
 探索度達到=Claim Rewards on 
 挑戰倒計時：=Ends in  
 主角等級=Acc Lv.
+主角經驗=Wonder EXP
 未登錄=Not Registered
 面具等級=Sort Lvl
 特色屬性=Element
@@ -209,6 +221,8 @@ r:"^領取%"="Get"
 月限=<size\=16>Every Month</size>
 日限=<size\=16>Daily</size>
 週限=<size\=13>Weekly</size>
+r:"^本周限定次数：(\d+)/(\d+)$"="Weekly Limit: $1/$2"
+r:"^週領獎次數：<color\=#0665ca>(\d+)/(\d+)</color>$"=Weekly Limit: <color\=#0665ca>$1/$2</color>
 r:"還可領取(\d+)天"=Available for $1 days
 r:"(\d+)天後刷新"=Refresh in $1 days
 r:"(\d+)分後刷新"=Refresh in $1 minutes
@@ -218,7 +232,7 @@ r:"持有：(\d+)"=Held: $1
 持有：=Held:
 購買數量:=Quantity
 花費合計：=Cost
-r:(\d+)魂石=$1 Soul Stones
+r:(\d+)魂石=$1 Soulstones
 操作模式切換為鍵鼠。=Mouse & Keyboard Mode
 操作模式切換為手把。=Controller Mode
 
@@ -313,7 +327,7 @@ r:"需要(\d+)<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>才可
 
 // INSPIRATION TUTORIAL //
 『靈感』說明=Inspiration
-<color\=#FFD145>靈感提升</color>\n人格面具錄入面具全書後，可以領取靈感點。\n使用靈感點，可以解鎖並提升靈感技能等級。\n\n<color\=#FFD145>靈感重置</color>\n靈感技能可以消耗魂石進行重置。\n重置後返還所有已消耗的靈感點。=<color\=#FFD145>Inspiration</color>\nWith every new Persona recorded in the book, you will earn Inspiration Points, which can be used to unlock and upgrade WONDER's skill tree. More skills and levels are unlocked as you level up further.\n\n<color\=#FFD145>Inspiration Reset</color>\nYou can reset your skill tree by consuming Soul Stones, which will return all the Inspiration Points you have consumed.
+<color\=#FFD145>靈感提升</color>\n人格面具錄入面具全書後，可以領取靈感點。\n使用靈感點，可以解鎖並提升靈感技能等級。\n\n<color\=#FFD145>靈感重置</color>\n靈感技能可以消耗魂石進行重置。\n重置後返還所有已消耗的靈感點。=<color\=#FFD145>Inspiration</color>\nWith every new Persona recorded in the book, you will earn Inspiration Points, which can be used to unlock and upgrade WONDER's skill tree. More skills and levels are unlocked as you level up further.\n\n<color\=#FFD145>Inspiration Reset</color>\nYou can reset your skill tree by spending Soulstones, which will return all the Inspiration Points you have used.
 
 // Character Potential Terms (Text shrunk to fit box) //
 
@@ -434,10 +448,10 @@ r:"主角升至(\d+)級"=Wonder reaches level $1
 r:"擁有(\d+)個(\d+)級的怪盜"=Have $1 level $2 Phantom Thieves
 r:"擁有(\d+)個(\d+)級的武器"=Have $1 level $2 weapons
 r:"擁有(\d+)張等級為(\d+)級的啟示卡"=Have $1 level $2 Revelation cards
-r:"消耗(\d+)靈感點"=Consume $1 Inspiration Points
+r:"消耗(\d+)靈感點"=Use $1 Inspiration Points
 r:"通關天鵝絨試煉任意(\d+)章的第(\d+)關"=In Velvet Challenges, complete Stage $2 in $1 chapters
 r:"進行(\d+)次足球部活動"=Join a Soccer Club activity $1 times.
-r:"完成(\d+)次「厄抑之境」 \((\d)\/(/d)\)"=Complete $1 Revelation Farms. ($1 / $2)
+r:"完成(\d+)次「厄抑之境」 \((\d)\/(/d)\)"=Complete $1 Revelation Farms. ($1/$2)
 r:"擁有(\d+)個(\d+)級的階級(\d+)及以上的人格面具"=Own $1 Rank $3 Persona at level $2
 r:"合成(\d+)個彩色品質的階級(\d)人格面具"=Fuse $1 Rainbow-quality Rank $2 Persona
 r:"將(\d+)名怪盜的任意(\d+)個非潛能技能各升級(\d+)次"=Level up $2 of your companions' $1 skills $3 times. 
@@ -461,7 +475,7 @@ r:"擁有(\d+)張等級為(\d+)級的宙位啟示卡"=Own $1 Lv. $2 Arcana Revel
 通關榮級求索Ⅰ（或更高難度）=Finish the 1st (or higher) Character EXP Farm once
 通關輜械求索Ⅰ（或更高難度）=Finish the 1st (or higher) Weapon EXP Farm once
 與李瑤鈴成為協同者關係=Form a confidant with Li Yaoling
-消耗5點行動力=Consume 5 action points
+消耗5點行動力=Spend 5 Energy Points
 主動添加1名好友=Add a friend
 更換1次頭像=Change your avatar in the Profile menu
 
@@ -514,45 +528,68 @@ r:"擁有(\d+)張等級為(\d+)級的宙位啟示卡"=Own $1 Lv. $2 Arcana Revel
 ///// f. Battle Pass Challenges /////
 /////////////////////////////////////
 
+本期剩餘時間：=BP Time left:
 探索經驗：=BP EXP:
 本週上限：=7d cap:
 本期剩餘時間=BP Time:
+計畫等級提升=BP LEVEL UP
 每次完成今日計畫可獲得=Complete daily tasks to receive useful rewards:
 今日剩餘領取次數=Dailies left to complete:
+每次完成今日計畫可領獎，剩餘   次=Daily task rewards: You have   task(s) left.
+伴手禮=Gift Bag
+禮包=Gift Bag
+成長經驗=BP EXP
+本週累計「今日計畫」領獎次數\n「下週一」領取對應「補給禮包」=<size\=22>Number of dailys completed this week\nLog in next Monday to get the Gift Box</size>
+本週累計「今日計畫」領獎次數\n「<color\=#ff3b37>明日登入</color>」領取對應「補給禮包」=<size\=22>Number of dailys completed this week\n<color\=#ff3b37>Log in Tomorrow</color> to get the Gift Box</size>
+距離下次領取剩餘：=Time until next Gift Box:
+r:"(\d+)時(\d+)"=" $1 hours $2 minutes"
+「下週一」登錄即可領取=Log in next Monday to claim!
+r:"^本週累計今日計畫領獎次數\（(\d+)/(\d+)\），可額外領取$"="Bonus rewards after completing ($1/$2) dailys"
+r:"^本週累計今日計畫領獎次數\（(\d+)/(\d+)\），再額外領取$"="Bonus rewards after completing ($1/$2) dailys"
+
+r:"^本週累計今日計畫領獎次數\((\d)\/(\d)\)，可額外領取$"="Number of dailys completed this week ($1/$2), you can receive additional rewards"
 
 // DAILY //
 r:"登入遊戲"=Log in to the game
 r:"進行1次人格面具合成"=Fuse 1 Persona
-r:"完成1次「人格面具」挑戰 \((\d)\/(\d)\)"=Complete a Persona Farm ($1 / $2)\n<color\=#8F8D8D>(Stamina Cost depending on Rank)</color>
-r:"進行1次打工 \((\d)\/(\d)\)"=Complete a Part-time job ($1 / $2)\n<color\=#8F8D8D>(1 Activity After School)</color>
-r:"消耗3點行動力 \((\d)\/(\d)\)"=Consume 3 Action points ($1 / $2)
-r:"消耗120點體力 \((\d+)\/120\)"=Consume 120 Stamina ($1 / 120)
+r:"完成1次「人格面具」挑戰 \((\d)\/(\d)\)"=Complete a Persona Farm ($1/$2)\n<color\=#8F8D8D>(Stamina Cost depending on Rank)</color>
+r:"進行1次打工 \((\d)\/(\d)\)"=Complete a Part-time job ($1/$2)\n<color\=#8F8D8D>(1 Activity After School)</color>
+r:"消耗1000日元 \((\d+)\/1000\)"=Spend $1¥ ($1¥/1000¥)
+r:"消耗3點行動力 \((\d)\/(\d)\)"=Spend 3 Energy Points ($1/$2)
+r:"消耗120點體力 \((\d+)\/120\)"=Spend 120 Stamina ($1/120)
 r:"進行1次邀約"=Spend time with a Confidant 1 time\n<color\=#8F8D8D>(Remember to buy a gift!)</color>
-r:"完成1次「啟示套裝」挑戰 \((\d)\/(\d)\)"=Complete a Revelation Farm ($1 / $2)\n<color\=#8F8D8D>(Stamina Cost: 40)</color>
-r:"完成1次「旖旎香調」挑戰 \((\d)\/(\d)\)"=Complete a Fragrance Farm ($1 / $2)\n<color\=#8F8D8D>(Stamina Cost: 30)</color>
-r:"進行1次人格面具育成 \((\d)\/(\d)\)"=Inherit a Persona skill to another ($1 / $2)\n<color\=#8F8D8D>This consumes a Persona seal</color>
+r:"完成1次「啟示套裝」挑戰 \((\d)\/(\d)\)"=Complete a Revelation Farm ($1/$2)\n<color\=#8F8D8D>(Stamina Cost: 40)</color>
+r:"完成1次「旖旎香調」挑戰 \((\d)\/(\d)\)"=Complete a Fragrance Farm ($1/$2)\n<color\=#8F8D8D>(Stamina Cost: 30)</color>
+r:"完成1次「裝配冶藝」挑戰 \((\d)\/(\d)\)"=Complete an Ore Farm ($1/$2)\n<color\=#8F8D8D>(Stamina Cost: 30)</color>
+r:"完成1次「靈之參悟」挑戰 \((\d)\/(\d)\)"=Complete a Incense farm ($1/$2)\n<color\=#8F8D8D>(Stamina Cost: 30)</color>
+r:"進行1次人格面具育成 \((\d)\/(\d)\)"=Inherit a Persona skill ($1/$2)\n<color\=#8F8D8D>This uses a Persona Mark</color>
+r:"^完成1次「往日回溯」挑戰 \((\d)\/(\d)\)$"="Complete a Palace Boss Challenge ($1/$2)\n<color\=#8F8D8D>(Stamina Cost: 30)</color>"
+r:"^通關1次「閼凶夢之扉」 \((\d)\/(\d)\)$"="Complete 1 Guild Battle ($1/$2)"
+r:"^完成1次「心之海試煉」 \((\d)\/(\d)\)$"="Complete 1 Sea of Souls Trial ($1/$2)"
 
 // WEEKLY //
-r:"累計消耗(\d+)魂石 \((\d+)\/(\d+)\)"=Spend a total of $1 Soulstones this week\n($2 / 100000)
-r:"累計消耗(\d+)日元 \((\d+)\/(\d+)\)"=Spend a total of 20,000¥ this week \n($2¥ / 20000¥)
-r:"累計消耗(\d+)點行動力 \((\d+)\/(\d+)\)"=Consume a total of 25 Action points this week \n($2 / 25)
-r:"累計消耗(\d+)點體力 \((\d+)\/(\d+)\)"=Consume a total of 1,250 Stamina this week\n($2 / 1250)
-r:"完成1次「往日回溯」 \((\d)\/(\d)\)"=Complete a Past Palace Boss challenge ($1 / $2)
+r:"累計消耗(\d+)魂石 \((\d+)\/(\d+)\)"=Spend a total of $1 Soulstones ($2/100000)
+r:"累計消耗(\d+)日元 \((\d+)\/(\d+)\)"=Spend a total of 20,000¥ ($2¥/20000¥)
+r:"累計消耗(\d+)點行動力 \((\d+)\/(\d+)\)"=Spend a total of 25 Energy Points ($2/25)
+r:"累計消耗(\d+)點體力 \((\d+)\/(\d+)\)"=Spend a total of 1,250 Stamina ($2/1250)
+r:"^累計完成12次「厄抑之境」 \((\d+)\/(\d+)\)$"=Complete 12 Farming Domain ($1/12)
+r:"完成1次「往日回溯」 \((\d)\/(\d)\)"=Complete a Past Palace Boss challenge ($1/$2)
+r:"^達到「閼凶夢之扉」第4檔積分要求 \((\d)\/(\d)\)$"="Reach the 4th score bracket in Guild Battle ($1/$2)"
 
 // SEASON //
-r:"在「命運交錯之時」中通關「收下慾望」 \((\d)\/(\d)\)"=Complete the Final Mission in the \nPhantom Thieves event ($1 / $2)
-r:"在「怪盜交易所」中消耗3000個怪盜徽記 \((\d+)\/(\d+)\)"=Consume 3,000 Phantom Thieves Emblems\nin the Event Exchange ($1 / $2)
-r:"累計進行50次「角色簽約」&「武器補給」 \((\d+)\/(\d+)\)"=Perform 50 pulls in total ($1 / $2)
-r:"在「心之海試煉」中通過「西部施工區」 \((\d)\/(\d)\)"=Pass the Western Construction Zone\nin the Sea of Souls Challenge ($1 / $2)
-r:"完成12次「在盧布朗度過」日程 \((\d+)\/(\d+)\)"=Spend time in Leblanc 12 times ($1 / $2)
+r:"在「命運交錯之時」中通關「收下慾望」 \((\d)\/(\d)\)"=Complete the Final Mission in the \nPhantom Thieves event ($1/$2)
+r:"在「怪盜交易所」中消耗3000個怪盜徽記 \((\d+)\/(\d+)\)"=Spend 3,000 Phantom Thieves Emblems\nin the Event Exchange ($1/$2)
+r:"累計進行50次「角色簽約」&「武器補給」 \((\d+)\/(\d+)\)"=Perform 50 pulls in total ($1/$2)
+r:"在「心之海試煉」中通過「西部施工區」 \((\d)\/(\d)\)"=Pass the Western Construction Zone\nin the Sea of Souls Trial ($1/$2)
+r:"完成12次「在盧布朗度過」日程 \((\d+)\/(\d+)\)"=Spend time in Leblanc 12 times ($1/$2)
 
 
 ////////////////////////////////
 /// g. Banners / Pull Screen ///
 ////////////////////////////////
 
-異界晶珀=Gems
-異界原晶=Premium Gems
+異界晶珀=Ambers
+異界原晶=Premium Ambers
 
 每10次簽約必出四星或以上怪盜角色。活動限定五星角色僅在UP期間，透過對應簽約獲得。具體內容查看【說明】=<b><color\=#FFDF00>Limited Character Banner</color></b>\nEvery 80 pulls will guarantee a 5★ character. 0.8% Chance.\nEvery 10 pulls will guarantee a 4★ character. 6.2% Chance. \n\nEvery 4★ and 5★ has a 50% chance to be from this banner. If not, then the next one will.\n\n<color\=#FFDF00>The current RATE UP character is only available in this banner.</color> The pull count will carry between banners.
 
@@ -577,9 +614,30 @@ r:"(\d+)\/(\d+)頁"=Page $1 / $2
 角色普通契約=Standard Banner
 
 ////////////////////////
-/// h. Activities //////
+/// h. Confidants and City Activities //////
 ////////////////////////
-SNS還有沒回復的消息，要直接睡覺嗎？=It's getting late. Do you want to go to sleep now?
+消耗=Spend
+
+都市五維=Social Stats
+知識=Knowledge
+魅力=Charm
+勇氣=Guts
+體貼=Kindness
+靈巧=Proficiency
+
+協同者RANK暫時無法提升=Cannot Rank Up
+解鎖條件=<size\=30>Conditions</size>
+達成以下條件可繼續提升RANK=You can rank up by fulfilling the following conditions
+sr:"^都市五維(.*)達到(\d+)/(\d+)級$"="$1 Reach Rank $2/$3"
+sr:"完成與(.*)的關係加深約會"=Hang out with $1
+
+可選擇與協同者成為心靈伴侶=Can become Soulmates
+與協同者成為親密摯友=Becomes your Close Friend
+協同者成為您的私人接待員=Becomes your Personal Receptionist
+
+當前已設置密友，要更換嗎？=You have already set a favourite, \ndo you want to change it?
+
+sr:"^<color\=#FFFF00>(.*)</color>不足$"="<size\=24>Not enough <color\=#FFFF00>$1</color></size>"
 
 去澡堂泡澡=<size\=24>Bathe in\nan Onsen</size>
 去健身房鍛煉=<size\=24>Work out \nat the gym</size>
@@ -588,24 +646,86 @@ SNS還有沒回復的消息，要直接睡覺嗎？=It's getting late. Do you wa
 去新宿看電影=<size\=24>Watch a movie\nin Shinjuku</size>
 在家裡讀書=<size\=24>Read a book\nat home</size>
 在圖書館讀書=<size\=24>Read a book\nin the Library</size>
+在圖書室學習=<size\=24>Study in \nthe Library</size>
+在家庭餐廳學習=<size\=24>Study at \na family restaurant</size>
+打掃家裡的衛生=<size\=24>Clean up\nmy house</siz
 在家裡學習=<size\=24>Study at home</size>
 打掃家裡的衛生=<size\=24>Clean up\nmy house</size>
 在盧布朗度過=<size\=24>Spend time\nin Leblanc</size>
 足球部練習=<size\=24>Train at the\nSoccer Club</size>
-輕音部練習=<size\=24>Perform at the\nMusic Club</size>
+輕音部練習=<size\=24>Practice at the\nMusic Club</size>
 在家裡玩遊戲=<size\=24>Play video games\nat home</size></size>
 去遊戲中心玩遊戲=<size\=24>Play video games\nin the Arcade</size>
+拉麵力士對決=<size\=24>Do the \nRamen Challenge</size>
+御船千早的占卜=<size\=24>Fortune-telling \nfrom Chihaya Mifune</size>
 
+打工=Work
+(One is in the city menu, the other is on the confirm page)
 去便利商店打工=<size\=24>Work part-time\nat a Convenience Store</size> 
-去可麗餅店打工=<size\=24>Work part-time\nat a Crepe Store</size>
-去牛丼店打工=<size\=24>Work part-time\nat a Donburi Restaurant</size> 
+在便利商店打工=<size\=24>Work part-time\nat a Convenience Store</size> 
+要在這家便利商店打工嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to work part-time \nat this Convenience Store?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
 
-和李瑤鈴一起度過=<size\=24>Hang out with\nLi Yaoling</size> 
-和素羽出去玩吧=<size\=24>Hang out with\nMotoha Arai</size>
-和YUI一起玩吧=<size\=24>Play together\nwith YUI</size> 
+去可麗餅店打工=<size\=24>Work part-time\nat a Crepe Store</size>
+要在這家可麗餅店打工嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to work part-time \nat this Crepe Store?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
+
+花店=Flower Shop
+在花店打工=<size\=24>Work part-time\nat a Flower Shop</size>
+要在這家花店打工嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to work part-time \nat this Flower Shop?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
+
+去牛丼店打工=<size\=24>Work part-time\nat a Donburi Restaurant</size>
+要在這家牛丼店打工嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to work part-time \nat this 椎名Donburi Restaurant?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
+
+去藥妝店打工=<size\=24>Work part-time\nat a Drug Store</size>
+在藥妝店打工=<size\=24>Work part-time\nat a Drug Store</size>
+要在這家藥妝店打工嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to work part-time \nat this Drug Store?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
+
+和素羽出去玩吧=<size\=24>Hang out with\nMotoha</size>
+和朋子一起度過=<size\=24>Hang out with\nTomoko</size>
+和加納駿一起度過=<size\=24>Hang out with\nShun Kano</size>
+加<color\=#ff0000ff>納</color> 駿=Shun <color\=#ff0000ff>Ka</color>no
+和清一起度過=<size\=24>Hang out with\nKiyoshi</size>
+黑<color\=#ff0000ff>谷</color> 清=Kiyoshi <color\=#ff0000ff>Kuro</color>tani
+
+和梅洛普一起度過=<size\=24>Hang out with\nMerope</size> 
+梅洛普的好奇心=<size\=24>Merope's curiosity</size>
+梅洛普的邀約=Merope's Invitation
+和李瑤鈴一起度過=<size\=24>Hang out with\nYaoling Li</size>
+和富山一起度過=<size\=24>Hang out with\nTomiyama</size>
+富<color\=#ff0000ff>山</color> 佳代=Kayo <color\=#ff0000ff>Tomi</color>yama
+
+和YUI一起玩吧=<size\=24>Play together\nwith YUI</size>
+和椎名悠美一起度過=<size\=24>Hang out with\nYumi Shiina</size>
+椎<color\=#ff0000ff>名</color>悠美=Yumi <color\=#ff0000ff>Shii</color>na
+
+讓我想想=Let me think
 
 讀書進度=<size\=24> Reading\n Progress</size> 
 閱讀消耗：= 
+
+擁有攜帶吸魔技能的大僧正=Daisoujou with Life Drain
+
+合體<color\=#FFC000>指定人格面具</color>，好像能受到梅洛普的關注=<size\=25>Fusing <color\=#FFC000>Certain Personas</color> might attract Merope's attention</size>
+磨練<color\=#FFC000>靈巧</color>的話，好像更能受到素羽的關注=<size\=25>Increasing <color\=#FFC000>Proficiency</color> might attract Motoha's attention</size>
+去太平堂書店逛一逛，或許能買到有用的書籍=<size\=25>A visit to the Shibuya Bookstore might yield useful books</size>
+聽說有新電影在上映=I hear there's a new movie coming out
+聽說在新宿街頭，有一位神秘的占卜師=<size\=25>I heard there's a mysterious fortune-teller in Shinjuku</size> 
+聽說澀谷有一個瀟灑的吉他少女在演唱=<size\=25>I heard there's a chic girl in Shibuya who plays the guitar</size>
+聽說在澀谷，有一個小女孩在進行募捐=<size\=25>I heard there's a little girl collecting donations in Shibuya</size> 
+
+今天的事情處理的差不多了，是否上床睡覺呢？=Let's call it a day. \nAre you going to bed?
+SNS還有沒回復的消息，要直接睡覺嗎？=You didn't reply to your SNS yet, \ngo to sleep immediately?
+
+----------
+City UI
+----------
+
+潛入道具=Infiltration Tools
+戰鬥道具=Combat Tools
+禮物=Gifts
+材料=Materials
+
+r:"^(\d+)天後重置$"="Reset after $1 day(s)"
+阿薩姆紅茶=Assam Tea
 
 /////////////////////////
 /// i. Metaverse Farm ///
@@ -615,7 +735,7 @@ SNS還有沒回復的消息，要直接睡覺嗎？=It's getting late. Do you wa
 武器突破材料=Weapon Ascension
 掉落高級技能材料=Palace Boss (30)
 怪盜升級材料=Char Lv (20)
-大量魂石=Soul Stones (20)
+大量魂石=Soulstones (20)
 面具升級材料=Persona Lv (20)
 武器升級材料=Weapon Lv (20)
 
@@ -623,13 +743,15 @@ SNS還有沒回復的消息，要直接睡覺嗎？=It's getting late. Do you wa
 怪盜潛能材料=Char Ascend (30)
 武器突破材料=Wpn Ascend (30)
 
-r:"持有印記：(\d+)"=Seal Owned: $1
+r:"持有印記：(\d+)"=Mark Owned: $1
 
 ////////////////////////////////////
 ///// j. Resources & Shop Items ////
 ////////////////////////////////////
 
-枚異界原晶=Gems
+枚異界原晶=Ambers
+現金=Yen
+魂石=Soulstones
 首次=First Time
 未來之命運=Future Fate
 既定之命運=Destiny Fate
@@ -671,6 +793,9 @@ r:"香塔(.*)"=$1 Incense
 未知宿命藍·啟程=2★ Arcana • Departure
 未知宿命藍·覺知=2★ Arcana • Awareness
 
+瑪奇姆可沒在裡面放可怕的東西哦～？=I didn't put anything scary in there～
+確定買這個嗎？=Are you sure you want to buy this?
+看清楚啦～不要買錯了阿！=Look closely～\nDon’t buy the wrong one!
 
 ///////////////////////////////////////////
 /// k. Velvet Challenges & Sea of Souls ///
@@ -700,16 +825,16 @@ r:"(\d)等星(\d)階"=$1-Star Tier $2
 晉級條件：=<size\=24>Requirement:</size>
 r:"累計獲得<color\=#FFF000> (\d+) </color>顆星"=<color\=#FFF000>$1 </color>Stars
 剩餘時間：=Time Left:
-r:"(\d+)回合內取得勝利"=Win in $1 action(s)
+r:"(\d+)回合內取得勝利"=Win in $1 turn(s)
 
 挑戰獎勵=<size\=36>Rewards</size>
 累計星級=<size\=24>Total Stars</size>
 r:"累計獲得星數（(\d+)\/(\d+)）"=Stars Earned: ($1/$2)
-r:"累計獲得（(\d+)\/(\d+)）分"=Accumulated ($1 / $2) Points
+r:"累計獲得（(\d+)\/(\d+)）分"=Accumulated ($1/$2) Points
 
 積分係數：=Multiplier:
 成功抵禦次數：=Cycles Limit:
-r:"(\d+)次行動內完成"=Win in $1 action(s)
+r:"(\d+)次行動內完成"=Win in $1 turn(s)
 當前有保存的進度，是否繼續挑戰？=Do you want to continue the challenge where you left off?
 選擇「清空進度」會清除保存的記錄並重新挑戰。=Select "Clear Progress" to reset the score and then you can make team adjustments.
 
@@ -720,9 +845,9 @@ r:"(\d+)次行動內完成"=Win in $1 action(s)
 疾風/詛咒屬性隊員攻擊時獲得分數=Wind / Curse Attack Score
 陣亡人數不超過0人=Have no downed characters
 r:"X(\d+)倍"=x$1
-獎勵=<size\=36>Rewards</size>
+獎勵=<size\=24>Rewards</size>
 章節獎勵=<size\=36>Rewards</size>
-累計獲得異界晶珀：=<size\=32>Total Gems Earned:</size>
+累計獲得異界晶珀：=<size\=32>Total Ambers Earned:</size>
 
 //////////////////////////
 

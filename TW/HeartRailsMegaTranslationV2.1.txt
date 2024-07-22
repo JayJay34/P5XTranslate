@@ -1509,11 +1509,11 @@ r:"^進入一場艱難的戰鬥，\n勝利後獲得(\d+)枚鐵道硬幣。$"="En
 ----------
 MENU BUFFS/ DEBUFFS
 ----------
-r:"防禦力降低(\d+%)"=Decrease DEF by $1
-r:"受弱點傷害提升(\d+%)"=Increase Weakness DMG by $1
+r:"^防禦力降低(\d+%)$"="Decrease DEF by $1"
+r:"^受弱點傷害提升(\d+%)$"="Increase Weakness DMG by $1"
 r:"^耐性穿透提升(\d+%)$"="Increase Effect RES Ignore by $1"
 
-(\d+) (\d+%)  (\d+\.\d+%)
+(\d+)  (\d+%)  (\d+\.\d+%)
 Tier 1
 \(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)
 (<color\=#50b50d>$1</color>/$2/$3)
