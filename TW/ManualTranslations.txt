@@ -343,7 +343,10 @@ r:"需要(\d+)<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>才可
 個人積分=Points
 總積分=Total Pts.
 積分：=Points: 
-本期歷史積分=Personal Best
+本期歷史積分=Personal Best	
+歷史積分用於領取積分獎勵、參與挑戰排名\n重置挑戰不會清除歷史積分=<size\=28>Total Pts. are used for challenge rewards and paradise ranking. \nReseting the fight won't delete your Total Pts.</size>
+積分統計進度=Boss Beaten
+積分統計進度會記錄本期分數<color\=#ef0000>最高</color>的<color\=#ef0000>2個</color>首領的積分總和=<size\=29>Only the sum of your <color\=#ef0000>2 highest</color> scores will count toward your Total Pts.</size>
 當前積分=Current Pts.
 樂園排行=Paradise Rank
 樂園活躍度=Activity Pts.
@@ -450,7 +453,7 @@ r:"擁有(\d+)張等級為(\d+)級的啟示卡"=Have $1 level $2 Revelation card
 r:"消耗(\d+)靈感點"=Use $1 Inspiration Points
 r:"通關天鵝絨試煉任意(\d+)章的第(\d+)關"=In Velvet Challenges, complete Stage $2 in $1 chapters
 r:"進行(\d+)次足球部活動"=Join a Soccer Club activity $1 times.
-r:"完成(\d+)次「厄抑之境」 \((\d)\/(/d)\)"=Complete $1 Revelation Farms. ($1/$2)
+r:"完成(\d+)次「厄抑之境」 \((\d)\/(/d)\)"=Complete $1 Metaverse Farms. ($1/$2)
 r:"擁有(\d+)個(\d+)級的階級(\d+)及以上的人格面具"=Own $1 Rank $3 Persona at level $2
 r:"合成(\d+)個彩色品質的階級(\d)人格面具"=Fuse $1 Rainbow-quality Rank $2 Persona
 r:"將(\d+)名怪盜的任意(\d+)個非潛能技能各升級(\d+)次"=Level up $2 of your companions' $1 skills $3 times. 
@@ -481,7 +484,7 @@ r:"擁有(\d+)張等級為(\d+)級的宙位啟示卡"=Own $1 Lv. $2 Arcana Revel
 // Part I Step 3
 擊敗木內雄之=Defeat Kiuchi
 合體2次人格面具=Fuse 2 Persona
-通關旖旎香調Ⅱ（或更高難度）=Finish the 2nd (or higher) Ascension Farm once
+通關旖旎香調Ⅱ（或更高難度）=Finish the 2nd (or higher) Character Ascension Farm once
 通關任意厄抑之境-人格面具=Finish any Persona Farm once
 完成支線任務「愛與MUSCLE」=Complete Anderson's side mission "Love and MUSCLE"
 加入或者創建任意樂園=Create or join any guild
@@ -617,6 +620,7 @@ r:"(\d+)\/(\d+)頁"=Page $1 / $2
 ////////////////////////
 消耗=Spend
 
+人格指數=Social Stats
 都市五維=Social Stats
 知識=Knowledge
 魅力=Charm
@@ -635,6 +639,7 @@ sr:"完成與(.*)的關係加深約會"=Hang out with $1
 協同者成為您的私人接待員=Becomes your Personal Receptionist
 
 好感度等級解鎖內容=Rank Rewards
+好感度=Confidant Points
 
 <color\=#FF0000>梅洛普</color>能為你提供更多<color\=#FF0000>天鵝絨房間的服務</color>，可以幫助你育成更強大的人格面具。=<color\=#FF0000>Merope</color> can offer you more <color\=#FF0000>Velvet Room services</color>, helping you fuse stronger Personas.
 偶像之路=Road to Idol
@@ -789,15 +794,117 @@ sr:"^<color\=#FFFF00>(.*)</color>不足$"="<size\=24>Not enough <color\=#FFFF00>
 在家裡玩遊戲=<size\=24>Play video games\nat home</size></size>
 去遊戲中心玩遊戲=<size\=24>Play video games\nin the Arcade</size>
 拉麵力士對決=<size\=24>Do the \nRamen Challenge</size>
+
+----------
+Chihaya's Fortune (Tarot)
+----------
+
 御船千早的占卜=<size\=24>Fortune-telling \nfrom Chihaya Mifune</size>
+御<color\=#ff0000ff>船</color> 千早=Chi<color\=#ff0000ff>haya</color> Mifune
+歡迎光臨～\n今天要進行占卜嗎？=Welcome～\nWould you like to get a reading today?
+「本日運勢占卜」一次1000元。=Fortune reading will cost 1000 yen.
+本日運勢占卜=Get a fortune reading
+當前的占卜增益是…=<size\=26>What is the current reading?</size>
+sr:"^運勢占卜：(.*)『(.*)』$"="Reading: The $1 $2"
+當前沒有「本日運勢占卜」的增益效果。=There is no reading active
+明白了。\n那麼，請坐下來吧。=Ok. Please take a seat.
+『本日運勢占卜』\n提升運勢，獲得各種各樣的增益效果。=Fortune reading will improve your luck, giving you a variety of benefits.
+好的，現在就來占卜你的運勢吧。=Ok, let's read your fortune now.
+請保持內心平靜，\n選擇一張塔羅牌。=Please keep your mind calm.\nChoose a tarot card.
+將塔羅牌拖拽至此=<size\=25>Drag the tarot card here</size>
+神聖之力啊～\n今日的運勢☆歡迎光臨！=O divine power!\nBring forth today's fortune!
+命運是絕對的……=Fate is absolute...
+得到了你想要的結果嗎。\n期待你的再次光臨。=Did you get the results you wanted?\nI look forward to seeing you again.
+額外獲得！=Bonus!
+
+sr:"是(.*)的『(.*)』。$"="It's the $1 $2."
+sr:"是(.*)的『(.*)』。$"="It's the $1 $2."
+
+正位=upright
+逆位=reversed
+
+愚者=Fool
+sr:"^在下次透過『(.*)』獲得人格面具時，額外獲得大量獎勵。$"="The next time you complete a $1, gain lots of bonus rewards."
+sr:"^在下次透過『(.*)』獲得人格面具時，額外獲得大量獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you complete a $1, gain lots of bonus rewards.\n<color\=#FFC000>（$2 time(s) left）</color>"
+
+魔術師=Magician
+在接下來4次透過工作台合成道具時，額外產出少量道具。=The next 4 times you craft at the workbench, gain some bonus items.
+r:"^在接下來4次透過工作台合成道具時，額外產出少量道具。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 4 times you craft at the workbench, gain some bonus items.\n<color\=#FFC000>（$1 time(s) left）</color>"
+
+女祭祀=Priestess
+在接下來3次學校『上課答題』時，額外獲得更多『人格指數』。=Gain more Social Stats from the next 3 classroom answers.
+r:"^在接下來3次學校『上課答題』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="Gain more Social Stats from the next 3 classroom answers.\n<color\=#FFC000>（$1 time(s) left）</color>"
+
+皇帝=Emperor
+在接下來3次透過都市日程進行『打工』獲得現金時，額外獲得更多現金。=The next 3 times you work, gain more yen.
+r:"^在接下來3次透過都市日程進行『打工』獲得現金時，額外獲得更多現金。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 3 times you work, gain more yen.\n<color\=#FFC000>（$1 time(s) left）</color>"
+
+教皇=Hierophant
+sr:"^在接下來4次透過都市日程獲得『(.*)』人格指數時，額外獲得更多『人格指數』。$"="The next 4 times you gain $1 from daily activities, gain more Social Stats."
+sr:"^在接下來4次透過都市日程獲得『(.*)』人格指數時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 4 times you gain $1 from daily activities, gain more Social Stats.\n<color\=#FFC000>（$2 time(s) left）</color>"
+
+戀人=Lovers
+在接下來3次透過都市日程『邀約任意協同者』獲得好感時，額外更多好感度。=The next 3 times you gain Confidant Points from daily activities, gain more Confidant Points.
+r:"^在接下來3次透過都市日程『邀約任意協同者』獲得好感時，額外更多好感度。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 3 times you gain Confidant Points from daily activities, gain more Confidant Points.\n<color\=#FFC000>（$1 time(s) left）</color>"
+
+戰車=Chariot
+
+正義=Justice
+在下次透過都市日程, 幫助其他角色時，額外獲得獎勵。=The next time you help other characters from daily activities, gain more rewards.
+r:"^在下次透過都市日程, 幫助其他角色時，額外獲得獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you help other characters from daily activities, gain more rewards.\n<color\=#FFC000>（$1 time(s) left）</color>"
+
+隱者=Hermit
+在接下來3次透過都市日程在『家裡』學習、打遊戲、打掃衛生時，額外獲得更多『人格指數』。=The next 3 times you study, game or clean at home, gain more Social Stats.
+r:"^在接下來3次透過都市日程在『家裡』學習、打遊戲、打掃衛生時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 3 times you study, game or clean at home, gain more Social Stats.\n<color\=#FFC000>（$1 time(s) left）</color>"
+
+命運之輪=Fortune
+在下次透過都市日程獲得『任意人格指數』時，額外獲得更多『人格指數』。=The next time you gain Social Stats from daily activities, gain more Social Stats.
+r:"^在下次透過都市日程獲得『任意人格指數』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you gain Social Stats from daily activities, gain more Social Stats.\n<color\=#FFC000>（$1 time(s) left）</color>"
+
+力量=Strength
+在接下來2次透過都市日程進行『健身房』鍛鍊時，額外獲得更多『人格指數』。=The next 2 times you workout in the gym from daily activities, gain more Social Stats.
+r:"^在接下來2次透過都市日程進行『健身房』鍛鍊時，額外獲得更多『人格指數』。$"="The next 2 times you workout in the gym from daily activities, gain more Social Stats.\n<color\=#FFC000>（$1 time(s) left）</color>"
+
+倒吊人=Hanged Man
+
+死神=Death
+sr:"^在下次通過『(.*)』、『(.*)』、『(.*)』關卡時，額外獲得大量獎勵。$"="The next time you complete a $1, $2 or $3, gain lots of bonus rewards."
+sr:"^在下次通過『(.*)』、『(.*)』、『(.*)』關卡時，額外獲得大量獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you complete a $1, $2 or $3, gain lots of bonus rewards.\n<color\=#FFC000>（$4 time(s) left）</color>"
+
+節制=Temperance
+
+惡魔=Devil
+sr:"^在下次通過『(.*)』、『(.*)』關卡時，額外獲得大量獎勵。$"="The next time you complete a $1 or $2, gain lots of bonus rewards."
+sr:"^在下次通過『(.*)』、『(.*)』關卡時，額外獲得大量獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you complete a $1 or $2, gain lots of bonus rewards.\n<color\=#FFC000>（$3 time(s) left）</color>"
+
+塔=Tower
+
+星星=Star
+
+月亮=Moon
+在接下來2次『夜晚』進行都市行程獲得『任意人格指數』時，額外獲得更多『人格指數』。=The next 2 times you gain Social Stats from daily activities at nighttime, gain more Social Stats.
+r:"^在接下來2次『夜晚』進行都市行程獲得『任意人格指數』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you gain Social Stats from daily activities at nighttime, gain more Social Stats.\n<color\=#FFC000>（$1 time(s) left）</color>"
+
+太陽=Sun
+在接下來2次『放學後』或『下午』進行都市行程獲得『任意人格指數』時，額外獲得更多『人格指數』。=The next 2 times you gain Social Stats from daily activities at daytime, gain more Social Stats.
+r:"^在接下來2次『放學後』或『下午』進行都市行程獲得『任意人格指數』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you gain Social Stats from daily activities at daytime, gain more Social Stats.\n<color\=#FFC000>（$1 time(s) left）</color>"
+
+審判=Judgement
+在接下來2次透過都市日程『邀約任意怪盜團成員』獲得好感度時，額外更多好感度。=The next 2 times you gain Confidant Points with a Phantom Thief from daily activities, gain more Confidant Points.
+r:"^在接下來2次透過都市日程『邀約任意怪盜團成員』獲得好感度時，額外更多好感度。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you gain Confidant Points with a Phantom Thief from daily activities, gain more Confidant Points.\n<color\=#FFC000>（$1 time(s) left）</color>"
+
+世界=World
+在接下來2次透過都市日程獲得『任意人格指數』時，額外獲得更多『人格指數』。=The next 2 times you gain Social Stats from daily activities, gain more Social Stats.
+r:"^在接下來2次透過都市日程獲得『任意人格指數』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you gain Social Stats from daily activities, gain more Social Stats.\n<color\=#FFC000>（$1 time(s) left）</color>"
 
 打工=Work
-(One is in the city menu, the other is on the confirm page)
+(First one is in the city menu, second one is on the confirm page)
 去便利商店打工=<size\=24>Work part-time\nat a Convenience Store</size> 
-在便利商店打工=<size\=24>Work part-time\nat a Convenience Store</size> 
+在便利商店打工=<size\=24>Work part-time\nat this Convenience Store</size> 
 要在這家便利商店打工嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to work part-time \nat this Convenience Store?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
 
 去可麗餅店打工=<size\=24>Work part-time\nat a Crepe Shop</size>
+在可麗餅店打工=<size\=24>Work part-time\nat this Crepe Shop</size>
 要在這家可麗餅店打工嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to work part-time \nat this Crepe Shop?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
 
 花店=Flower Shop
@@ -808,7 +915,7 @@ sr:"^<color\=#FFFF00>(.*)</color>不足$"="<size\=24>Not enough <color\=#FFFF00>
 要在這家牛丼店打工嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to work part-time \nat this 椎名Donburi Restaurant?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
 
 去藥妝店打工=<size\=24>Work part-time\nat a Drug Store</size>
-在藥妝店打工=<size\=24>Work part-time\nat a Drug Store</size>
+在藥妝店打工=<size\=24>Work part-time\nat this Drug Store</size>
 要在這家藥妝店打工嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to work part-time \nat this Drug Store?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
 
 和素羽出去玩吧=<size\=24>Hang out with\nMotoha</size>
@@ -870,12 +977,30 @@ City UI
 殘寶檢測儀·愛慾=Treasure Seeker - Lust
 殘寶檢測儀·虛榮=Treasure Seeker - Vanity
 
+商店=Shop
 r:"^(\d+)天後重置$"="Reset after $1 day(s)"
 阿薩姆紅茶=Assam Tea
 
 /////////////////////////
 /// i. Metaverse Farm ///
 /////////////////////////
+
+『暗影獵域』=Persona Farm
+暗影獵域=Persona Farm
+『旖旎香調』=Character Ascension Farm
+旖旎香調=Character Ascension Farm
+裝配冶藝=Weapon Ascension Farm
+『裝配冶藝』=Weapon Ascension Farm
+『靈之參悟』=Incense Farm
+靈之參悟=Incense Farm
+『榮級求索』=Character EXP Farm
+榮級求索=Character EXP Farm
+『輜械求索』=Weapon EXP Farm
+輜械求索=Weapon EXP Farm
+『人格求索』=Persona EXP Farm
+人格求索=Persona EXP Farm
+『財賂求索』=Soul Gem Farm
+財賂求索=Soul Gem Farm
 
 消耗：= 
 武器突破材料=Weapon Ascension
@@ -1177,8 +1302,7 @@ P5X營運團隊=P5X Team
 默基瑟德=Melchizedek
 霜精之王=King Frost
 毘沙門天=Bishamonten
-
-
+八房=Yatsufusa
 
 -----------------------------------------
 ------ V. Metaverse Combat Terms --------
