@@ -234,7 +234,6 @@ r:"持有：(\d+)"=Held: $1
 持有：=Held:
 購買數量:=Quantity
 花費合計：=Cost
-r:(\d+)魂石=$1 Soul Gems
 操作模式切換為鍵鼠。=Mouse & Keyboard Mode
 操作模式切換為手把。=Controller Mode
 
@@ -560,6 +559,8 @@ r:"進行1次人格面具合成"=Fuse 1 Persona
 r:"完成1次「人格面具」挑戰 \((\d)\/(\d)\)"=Complete a Persona Farm ($1/$2)\n<color\=#8F8D8D>(Stamina Cost depending on Rank)</color>
 r:"進行1次打工 \((\d)\/(\d)\)"=Complete a Part-time job ($1/$2)\n<color\=#8F8D8D>(1 Activity After School)</color>
 r:"消耗1000日元 \((\d+)\/1000\)"=Spend $1¥ ($1¥/1000¥)
+r:"^消耗5000魂石 \((\d+)\/5000\)$"=Spend 5000 Soul Gens ($1/5000)
+
 r:"消耗3點行動力 \((\d)\/(\d)\)"=Spend 3 Energy Points ($1/$2)
 r:"消耗120點體力 \((\d+)\/120\)"=Spend 120 Stamina ($1/120)
 r:"進行1次邀約"=Spend time with a Confidant 1 time\n<color\=#8F8D8D>(Remember to buy a gift!)</color>
@@ -834,7 +835,7 @@ sr:"人格指數「(.*)」達到(\d+)級解鎖$"="Unlock when $1 reached rank $2
 在藥妝店打工=<size\=24>Work part-time\nat this Drug Store</size>
 要在這家藥妝店打工嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to work part-time \nat this Drug Store?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
 
-由於掌握了打工『觀察的心得』，因此獲得了額外收益。=<size\=25>Because I have mastered Observation Insights, I have gained more Social Stats.</size> 
+由於掌握了打工『觀察的心得』，因此獲得了額外收益。=<size\=28>Because I have mastered Observation Insights, I have gained more Social Stats.</size> 
 由於掌握了打工『觀察的心得』,掌握了打工『服務的心得』，因此獲得了額外收益。=<size\=25>Because I have mastered Observation Insights and Service Insights, \nI have gained more Social Stats.</size> 
 
 和素羽出去玩吧=<size\=24>Hang out with\nMotoha</size>
@@ -842,10 +843,12 @@ sr:"人格指數「(.*)」達到(\d+)級解鎖$"="Unlock when $1 reached rank $2
 和加納駿一起度過=<size\=24>Hang out with\nShun Kano</size>
 加<color\=#ff0000ff>納</color> 駿=Shun <color\=#ff0000ff>Ka</color>no
 和清一起度過=<size\=24>Hang out with\nKiyoshi</size>
+與清一起展開各種調查吧！=Let's conduct various \ninvestigations with Kiyoshi!
 黑<color\=#ff0000ff>谷</color> 清=Kiyoshi <color\=#ff0000ff>Kuro</color>tani
 
 和梅洛普一起度過=<size\=24>Hang out with\nMerope</size> 
 梅洛普的好奇心=<size\=24>Merope's curiosity</size>
+梅洛普對於現代都市中的很多事物都感到好奇，希望能和你一起體驗=Merope is curious about many things in a modern city and would like to experience them with you.
 梅<color\=#ff0000ff>洛</color>普=Me<color\=#ff0000ff>ro</color>pe
 梅洛普的邀約=Merope's Invitation
 和李瑤鈴一起度過=<size\=24>Hang out with\nYaoling Li</size>
@@ -1032,6 +1035,7 @@ r:"^工作臺合成（可合成：(\d+)個）$"="Workbench crafting (Available: 
 前<color\=#ff0000ff>往</color>四軒茶屋=Go <color\=#ff0000ff>to</color> Yongen-Jaya
 
 商店=Shop
+購物=Shop
 r:"^(\d+)天後重置$"="Reset after $1 day(s)"
 阿薩姆紅茶=Assam Tea
 
