@@ -50,7 +50,7 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 精神異常，無法行動。=Unable to take actions.
 精神異常，無法行動並且每回合回復5%生命值和5%精力值，受到傷害後清除。=Unable to take actions.\nRestore 5% of Max HP and 5% of Max SP each turn.\nThis ailment clears upon taking damage.
 精神異常，無法使用技能。=Unable to use skills.
-精神異常，無法行動，會丟棄一定數量的魂石。=Unable to take actions.\nDiscards Soulstones each turn.
+精神異常，無法行動，會丟棄一定數量的魂石。=Unable to take actions.\nDiscards Soul Gems each turn.
 精神異常，有一定機率無法行動，若干回合後逃跑。=High chance of being unable to act.\nEscape from battle after a few turns.
 精神異常，無法行動，每回合扣除一定精力值，若干回合後死亡。=Unable to take actions.\nLose 5% Max SP each turn.\nInflicted will die after a few turns.
 精神異常，攻擊力提升，防禦力降低，只能使用近戰攻擊，攻擊隨機目標。=Increase ATK, and decrease DEF.\nCan only use melee attacks.\nAttack random targets.
@@ -64,7 +64,7 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 // Skill names are in Substitutions //
 意識詳情=A0~A6 // Awareness Levels
 技能=Skills
-r:"^(\d+)回合$"="$1 CD"
+r:"^(\d+)回合$"="$1 turn"
 
 ----------
 CATTLE - Ruferu
@@ -100,16 +100,16 @@ Combat pop ups
 CLOSER - Motoha Arai
 ----------
 
-r:"^對<color\=#FFFF00>隨機</color>敵人造成(\d+)段(\d+\.\d+%)攻擊力的電擊屬性傷害，對主目標有(\d+%)基礎機率使其觸電。$"="Deals $1 <color\=#FFFF00>random</color> hits of $2 ATK Electricity damage, with a $3 base chance of inflicting Shock to the main target."
-r:"^發射(\d+)道天雷，造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，對技能主目標有100%的基礎機率使其陷入<link\="s\|104"><u>觸電</u></link>狀態。對同一目標的後續攻擊只會造成<color\=#FFFC40>(\d+%)</color>的傷害，天雷會優先選擇未攻擊過的目標。$"="Shoots $1 thunderbolts, dealing <color\=#FFFC40>$2</color> ATK Electricity damage and has a 100% base chance to inflict <link\="s|104"><u>Shock</u></link> to the skill's main target. Deals <color\=#FFFC40>$3</color> damage when hitting the same target, the thunderbolts will prioritize targets that have not been attacked yet."
+r:"^對<color\=#FFFF00>隨機</color>敵人造成(\d+)段(\d+\.\d+%)攻擊力的電擊屬性傷害，對主目標有(\d+%)基礎機率使其觸電。$"="Deals $1 <color\=#FFFF00>random</color> hits of $2 ATK Electric damage, with a $3 base chance of inflicting Shock to the main target."
+r:"^發射(\d+)道天雷，造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，對技能主目標有100%的基礎機率使其陷入<link\="s\|104"><u>觸電</u></link>狀態。對同一目標的後續攻擊只會造成<color\=#FFFC40>(\d+%)</color>的傷害，天雷會優先選擇未攻擊過的目標。$"="Shoots $1 thunderbolts, dealing <color\=#FFFC40>$2</color> ATK Electric damage and has a 100% base chance to inflict <link\="s|104"><u>Shock</u></link> to the skill's main target. Deals <color\=#FFFC40>$3</color> damage when hitting the same target, the thunderbolts will prioritize targets that have not been attacked yet."
 
-r:"^對<color\=#FFFF00>(\d+)名</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，並使所有同伴造成的電擊屬性傷害提升(\d+\.\d+%)，持續2回合。$"="Deals $2 ATK Electricity damage to <color\=#FFFF00>$1</color> enemy, and increases all ally's Electricity DMG Dealt by $3 for 2 turns."
-r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，並使所有同伴造成的電擊屬性傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。$"="Deals <color\=#FFFC40>$1</color> ATK Electricity damage to 1 enemy, increases all ally's Electricity DMG Dealt by <color\=#FFFC40>$2</color> for 2 turns."
+r:"^對<color\=#FFFF00>(\d+)名</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，並使所有同伴造成的電擊屬性傷害提升(\d+\.\d+%)，持續2回合。$"="Deals $2 ATK Electric damage to <color\=#FFFF00>$1</color> enemy, and increases all allies' Electric DMG Dealt by $3 for 2 turns."
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，並使所有同伴造成的電擊屬性傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。$"="Deals <color\=#FFFC40>$1</color> ATK Electric damage to 1 enemy, increases all allies' Electric DMG Dealt by <color\=#FFFC40>$2</color> for 2 turns."
 
-r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，若任意敵人處於觸電狀態，則對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的額外傷害。$"="Deals $2 ATK Electricity damage to <color\=#FFFF00>all</color> enemies, If there is an enemy inflicted with Shock, deals $2 ATK as bonus damage to <color\=#FFFF00>all</color> enemies."
-r:"^對所有敵人造成\<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害。若場上存在處於<link\="s\|104"><u>觸電</u></link>狀態的敵人，則對所有敵人造成1次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的額外電擊屬性傷害。$"="Deals <color\=#FFFC40>$2</color> ATK Electricity damage to all enemies. If there is an enemy inflicted with <link\="s|104"><u>Shock</u></link>, then deals another hit of <color\=#FFFC40>$1</color> ATK Electricity damage to all enemies."
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，若任意敵人處於觸電狀態，則對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的額外傷害。$"="Deals $2 ATK Electric damage to <color\=#FFFF00>all</color> enemies, If there is an enemy inflicted with Shock, deals $2 ATK as bonus damage to <color\=#FFFF00>all</color> enemies."
+r:"^對所有敵人造成\<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害。若場上存在處於<link\="s\|104"><u>觸電</u></link>狀態的敵人，則對所有敵人造成1次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的額外電擊屬性傷害。$"="Deals <color\=#FFFC40>$2</color> ATK Electric damage to all enemies. If there is an enemy inflicted with <link\="s|104"><u>Shock</u></link>, then deals another hit of <color\=#FFFC40>$1</color> ATK Electric damage to all enemies."
 
-r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，有100%的固定機率使技能主目標陷入觸電狀態，並使其受到的電擊屬性傷害提升(\d+%)，持續2回合。$"="Deals $1 ATK Electricity damage to <color\=#FFFF00>all</color> enemies, there is a 100% fixed chance to inflict the main target with Shock, and increases their Electricity DMG Taken by $2 for 2 turns."
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，有100%的固定機率使技能主目標陷入觸電狀態，並使其受到的電擊屬性傷害提升(\d+%)，持續2回合。$"="Deals $1 ATK Electric damage to <color\=#FFFF00>all</color> enemies, there is a 100% fixed chance to inflict the main target with Shock, and increases their Electric DMG Taken by $2 for 2 turns."
 
 觸電=Shock
 存在處於觸電狀態的敵人=There is an enemy with Shock
@@ -132,8 +132,8 @@ sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的冰
 sr:"^對<color\=#FFFF00>(\d+)名</color>敵人造成(\d+\.\d+%)最大生命值的物理屬性傷害，並降低目標敵人(\d+\.\d+%)防禦力，效果持續2回合，處於『(.*)』下該效果提升至(\d+\.\d+%)。$"="Deals $2 Max HP Physical damage to <color\=#FFFF00>$1</color> enemy and decreases their DEF by $3 for 2 turns, increases the effect to $5 when in [$4]."
 sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的物理屬性傷害，並使目標敵人的防禦力降低<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。處於<link\="s\|151"><u>『(.*)』</u></link>狀態下時，防禦力降低值提升至<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Deals <color\=#FFFC40>$1</color> Max HP Physical damage to 1 enemy, decrease the target's DEF by <color\=#FFFC40>$2</color> for 2 turns. When in the <link\="s|151"><u>[$3]</u></link> state, increase the DEF down debuff to <color\=#FFFC40>$4</color>."
 
-r:"^使<color\=#FFFF00>所有</color>同伴的最大生命值提升，數值相當於加納駿最大生命值的(\d+%)（最多計入(\d+)點最大生命值），同時自身受到攻擊的機率大幅提升，效果持續2回合。回復所有同伴生命值，數值相當於加納駿最大生命值的(\d+\.\d+%)。$"="Increases <color\=#FFFF00>all</color> ally's Max HP based on $1 of Shun Kano's Max HP (up to $2 Max HP), increases the chance of being attacked for 2 turns. Restores all ally's HP equal to $3 of Shun Kano's Max HP."
-r:"^使所有同伴的最大生命值提升，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+%)</color>（最多計入<color\=#FFFC40>(\d+)</color>點最大生命值），同時自身受到攻擊的機率大幅提升，效果持續2回合。回復所有同伴生命值，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d+%)</color>。\n冷卻時間：1回合。$"="Increases all ally's Max HP equal to <color\=#FFFC40>$1</color> of Shun Kano's Max HP (Up to <color\=#FFFC40>$2</color> Max HP), increases the chance of being attacked for 2 turns. Restores all ally's HP equal to <color\=#FFFC40>$1</color> of Shun Kano's Max HP. \nCooldown: 1 turn."
+r:"^使<color\=#FFFF00>所有</color>同伴的最大生命值提升，數值相當於加納駿最大生命值的(\d+%)（最多計入(\d+)點最大生命值），同時自身受到攻擊的機率大幅提升，效果持續2回合。回復所有同伴生命值，數值相當於加納駿最大生命值的(\d+\.\d+%)。$"="Increases <color\=#FFFF00>all</color> ally's Max HP based on $1 of Shun Kano Max HP (up to $2 Max HP), increases the chance of being attacked for 2 turns. Restores all allies' HP equal to $3 of Shun Kano Max HP."
+r:"^使所有同伴的最大生命值提升，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+%)</color>（最多計入<color\=#FFFC40>(\d+)</color>點最大生命值），同時自身受到攻擊的機率大幅提升，效果持續2回合。回復所有同伴生命值，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d+%)</color>。\n冷卻時間：1回合。$"="Increases all allies' Max HP equal to <color\=#FFFC40>$1</color> of Shun Kano Max HP (Up to <color\=#FFFC40>$2</color> Max HP), increases the chance of being attacked for 2 turns. Restores all allies' HP equal to <color\=#FFFC40>$1</color> of Shun Kano Max HP. \nCooldown: 1 turn."
 
 受攻擊後獲得，回合結束消耗『荒野救星』恢復已損生命值=Gain after attacked. At the end of your turn, consume [Wilderness Savior] and restore HP
 受攻擊機率大幅提升=Heavily increase the chance of getting attacked
@@ -142,7 +142,7 @@ r:"^生命值上限提高(\d+)$"="Increase Max HP by $1"
 In-Battle Quotes
 <color\=#FF0000>加納駿</color>進入了荒野救星狀態，回合結束恢復已損生命值……=<color\=#FF0000>Shun Kano</color> entered Wilderness Savior state, restore missing HP at the end of turn!
 <color\=#FF0000>全體怪盜</color>生命值上限提高……=Increase Max HP for <color\=#FF0000>all allies</color>!
-<color\=#FF0000>加納駿</color>受攻擊機率大幅提高……=<size\=25><color\=#FF0000>Shun Kano's</color> chance of attacked is heavily increased!</size>
+<color\=#FF0000>加納駿</color>受攻擊機率大幅提高……=<size\=25><color\=#FF0000>Shun Kano</color> chance of attacked is heavily increased!</size>
 
 Combat Pop-ups
 荒<color\=#000000>野</color>救星=W<color\=#000000>ild</color>erness Savior
