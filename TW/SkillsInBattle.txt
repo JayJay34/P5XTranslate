@@ -24,6 +24,16 @@ sr:"(.*?) <color\=#0F69CB>Lv.(\d+)</color>"=$1 <color\=#0F69CB>Lv.$2</color>
 <color\=#66ccff>凍結</color>=<color\=#DFFFFF>Freeze</color>
 <color\=#66ccff>觸電</color>=<color\=#FCE54E>Shock</color>
 <color\=#66ccff>風襲</color>=<color\=#52E54E>Winded</color>
+<color\=#66ccff>輻射</color>=<color\=#01F8FD>Radiation</color>
+<color\=#66ccff>『輻射』</color>=<color\=#01F8FD>Radiation</color>
+
+
+燃燒=Burn
+凍結=Freeze
+觸電
+風襲=Winded
+輻射=Radiation
+受到的傷害提升15%，被視為一種元素異常。=Increase DMG Taken by 15%.
 
 <color\=#66ccff>暈眩</color>=<color\=#FBF6C1>Dizzy</color>
 <color\=#66ccff>遺忘</color>=<color\=#80EEED>Forget</color>
@@ -46,6 +56,7 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 元素異常，受到暴擊率提升10%，效果持續2回合。=Increase chance of receiving a CRIT Hit by 10% for 2 turns.
 元素異常，防禦力降低12%，效果持續2回合。=Reduce DEF by 12% for 2 turns.
 元素異常，攻擊力降低12%，效果持續2回合。=Reduce ATK by 12% for 2 turns.
+使敵人受到傷害提升15%，被視為1種元素異常。=Increase DMG Taken by 15% for 2 turns.
 
 精神異常，無法行動。=Unable to take actions.
 精神異常，無法行動並且每回合回復5%生命值和5%精力值，受到傷害後清除。=Unable to take actions.\nRestore 5% of Max HP and 5% of Max SP each turn.\nThis ailment clears upon taking damage.
@@ -92,9 +103,9 @@ r:"^攻擊力提升(\d+\.\d+%)$"="Increase ATK by $1"
 r:"^火焰傷害提升(\d+%)$"="Increase Fire damage by $1"
 
 Combat pop ups
-星<color\=#000000>之</color>火I=St<color\=#000000>ar</color>fire I
-星<color\=#000000>之</color>火II=St<color\=#000000>ar</color>fire II
-星<color\=#000000>之</color>火III=St<color\=#000000>ar</color>fire III
+r:"^星<color\=#000000>之</color>火I$"="St<color\=#000000>ar</color>fire I"
+r:"^星<color\=#000000>之</color>火II$"="St<color\=#000000>ar</color>fire II"
+r:"^星<color\=#000000>之</color>火III$"="St<color\=#000000>ar</color>fire III"
 
 ----------
 CLOSER - Motoha Arai
@@ -113,14 +124,14 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊�
 
 觸電=Shock
 存在處於觸電狀態的敵人=There is an enemy with Shock
-電擊傷害提升=<size\=28>Increase Elec damage</size>
+電擊傷害提升=<size\=28>Increase Elec Damage</size>
 r:"^造成的電擊屬性傷害提升(\d+%)$"="Increase Elec DMG Dealt by $1"
 受電擊傷害提升=<size\=24>Increase Elec DMG Taken</size>
 r:"^受到電擊傷害提升(\d+%)$"="Increase Elec DMG Taken by $1"
 
 Combat pop ups
-電<color\=#000000>擊</color>傷害提升=In<color\=#000000>cr</color>ease Elec Damage
-受<color\=#000000>到</color>電傷提升=In<color\=#000000>cr</color>ease Elec DMG Taken
+r:"^電<color\=#000000>擊</color>傷害提升$"="In<color\=#000000>cr</color>ease Elec Damage"
+r:"^受<color\=#000000>到</color>電傷提升$"="In<color\=#000000>cr</color>ease Elec DMG Taken"
 
 ----------
 SOY - Shun Kano
@@ -145,9 +156,9 @@ In-Battle Quotes
 <color\=#FF0000>加納駿</color>受攻擊機率大幅提高……=<size\=25><color\=#FF0000>Shun Kano</color> chance of attacked is heavily increased!</size>
 
 Combat Pop-ups
-荒<color\=#000000>野</color>救星=W<color\=#000000>ild</color>erness Savior
-生<color\=#000000>命</color>上限提升=In<color\=#000000>cr</color>ease Max HP
-受<color\=#000000>攻</color>擊機率提升=In<color\=#000000>cr</color>ease Chance of Attacked
+r:"^荒<color\=#000000>野</color>救星$"="W<color\=#000000>ild</color>erness Savior"
+r:"^生<color\=#000000>命</color>上限提升$"="In<color\=#000000>cr</color>ease Max HP"
+r:"^受<color\=#000000>攻</color>擊機率提升$"="In<color\=#000000>cr</color>ease Chance of Attacked"
 
 //////////////////////////////
 /// c. RIN - Yaoling Li //////
@@ -164,6 +175,9 @@ sr:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒�
 
 // Combat Skills
 sr:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，使其下1次受到的傷害提升(\d+\.\d+%)，並有30%基礎機率使其陷入(.*)狀態，持續2回合。"=Deals <color\=#FFFC40>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and increase their damage taken by $2 with a 30% chance of inflicting $3 for 2 turns.
+
+In-Battle Quotes
+<color\=#FF0000>李瑤鈴</color>獲得了孟婆湯……=<color\=#FF0000>Yaoling Li</color> gained Meng Po Soup!
 
 /////////////////////////////////
 /// d. MONT - Montagne Kotone ///
@@ -550,3 +564,19 @@ r:"先制攻擊時回復(\d+\.\d+%)最大生命值和(.*)點精力值。"=Restor
 r:"戰鬥勝利後回復(\d+\.\d+%)最大生命值和精力值。"=Restore $1 of Max HP and SP after winning a battle.
 r:"下雨時受到的傷害降低(\d+\.\d+%)。"=Reduce damage from attacks during rainy days by $1.
 r:"物理攻擊(\d+%)機率反射，造成(\d+%)攻擊力物理屬性傷害。"=Physical attacks have a $1 chance to reflect, dealing $2 of the attacks damage back as Physical damage.
+
+----------
+Combat Pop-ups for ailments
+----------
+r:"^燃<color\=#000000>燒</color>$"="Bu<color\=#000000>r</color>n"
+r:"^凍<color\=#000000>結</color>$"="Fr<color\=#000000>e</color>eze"
+r:"^觸<color\=#000000>電</color>$"="Sh<color\=#000000>o</color>ck"
+r:"^風<color\=#000000>襲</color>$"="W<color\=#000000>in</color>ded"
+r:"^輻<color\=#000000>射</color>$"="Ra<color\=#000000>d</color>iation"
+
+r:"^倒<color\=#000000>地</color>$"="Do<color\=#000000>w</color>n"
+----------
+Inspect Details
+----------
+
+sr:"^(.*)力降低(\d+\.\d+%)$"="Decrease $1 by $2"
