@@ -29,6 +29,7 @@ sr:"(.*?) <color\=#0F69CB>Lv.(\d+)</color>"=$1 <color\=#0F69CB>Lv.$2</color>
 
 
 燃燒=Burn
+r:"^行動後損失生命值$"="Lose HP after action"
 凍結=Freeze
 觸電
 風襲=Winded
@@ -97,7 +98,6 @@ r:"^使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的�
 星之火II=Starfire II
 屬性提升，結束時獲得星之火III=Attribute boost, gain Starfire III when the effect ends
 星之火III=Starfire III
-屬性提升=Attribute boost
 
 r:"^攻擊力提升(\d+\.\d+%)$"="Increase ATK by $1"
 r:"^火焰傷害提升(\d+%)$"="Increase Fire damage by $1"
@@ -130,8 +130,8 @@ r:"^造成的電擊屬性傷害提升(\d+%)$"="Increase Elec DMG Dealt by $1"
 r:"^受到電擊傷害提升(\d+%)$"="Increase Elec DMG Taken by $1"
 
 Combat pop ups
-r:"^電<color\=#000000>擊</color>傷害提升$"="In<color\=#000000>cr</color>ease Elec Damage"
-r:"^受<color\=#000000>到</color>電傷提升$"="In<color\=#000000>cr</color>ease Elec DMG Taken"
+r:"^電<color\=#000000>擊</color>傷害提升$"="El<color\=#000000>ec</color> DMG Up"
+r:"^受<color\=#000000>到</color>電傷提升$"="El<color\=#000000>ec</color> DMG Taken Up"
 
 ----------
 SOY - Shun Kano
@@ -157,8 +157,42 @@ In-Battle Quotes
 
 Combat Pop-ups
 r:"^荒<color\=#000000>野</color>救星$"="W<color\=#000000>ild</color>erness Savior"
-r:"^生<color\=#000000>命</color>上限提升$"="In<color\=#000000>cr</color>ease Max HP"
+r:"^生<color\=#000000>命</color>上限提升$"="M<color\=#000000>ax</color> HP Up"
 r:"^受<color\=#000000>攻</color>擊機率提升$"="In<color\=#000000>cr</color>ease Chance of Attacked"
+
+----------
+Wind - Riko Tanemura
+----------
+
+r:"^使<color\=#FFFF00>所有</color>敵人防禦力降低(\d+\.\d+%)，若理子速度大於100點，每超過10點防禦力額外降低(\d+\.\d+%)，最多額外降低(\d+\.\d+%)，持續2回合；同時使主目標暴露『破綻』。$"="Decrease the DEF of <color\=#FFFF00>all</color> enemies by $1 for 2 turns, increase the DEF down debuff by $2 for every 10 SPD you have that's over 100, up to a cap of $3; Expose a [Vulnerability] on the main target."
+sr:"^準備時間：4次行動\n使所有敵人防禦力降低<color\=#FFFC40>(\d+\.\d+%)</color>，若理子速度大於100點，每超過10點，防禦力額外降低(\d+\.\d+%)，最多額外降低<color\=#FFFC40>(\d+\.\d+%)</color>，持續2回合；同時使主目標暴露<link\="s\|188"><u>『(.*)』</u></link>。$"="Preparation Time: 4 Actions\nDecrease the DEF of all enemies by <color\=#FFFC40>$1</color> for 2 turns, increase the DEF down debuff by $2 for every 10 SPD you have that's over 100, up to a cap of <color\=#FFFC40>$3</color>; Expose a <link\="s|188"><u>[$4]</u></link> on the main target."
+
+r:"^使<color\=#FFFF00>所有</color>敵人受到的傷害提升(\d+\.\d+%)，持續2回合；\n友方怪盜削減倒地值或完成擊倒時，該技能準備時間減少1次行動，技能準備時間為0次行動時立即自動釋放1次。$"="Increase the DMG Taken of <color\=#FFFF00>all</color> enemies by $1 for 2 turns. \nWhen an ally decreases Knockdown Count or downs an enemy, reduce this skill's Preparation Time by 1 action; Automatically use this skill once when its Preparation Time reaches 0."
+r:"^準備時間：8次行動\n使所有敵人受到的傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續2回合。\n友方怪盜削減倒地值或完成擊倒時，釋放該技能後所需的準備時間減少1次行動；所需的準備時間減至0次行動時，理子立即自動釋放一次該技能。$"="Preparation Time: 8 Actions\nIncrease the DMG Taken of all enemies by <color\=#FFFC40>$1</color> for 2 turns. \nWhen an ally decreases Knockdown Count or downs an enemy, reduce this skill's Preparation Time by 1 action; Automatically use this skill once when its Preparation Time reaches 0."
+
+r:"^消耗所有『情報』使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)的生命值並獲得『傲放』。『傲放』：造成傷害提升(\d+\.\d+%)，消耗的每份『情報』提供額外的造成傷害提升（若理子速度大於100點，每超過10點，造成傷害提升(\d+\.\d+%)，最多提升(\d+\.\d+%)），持續1回合。$"="Consume all [Intel] to give <color\=#FFFF00>all</color> allies [Pride] and restore $1 HP to the main target. Pride: Increase DMG Dealt by $2  for 1 turn. Increase the DMG Dealt buff with every [Intel] consumed (Increase DMG Dealt by $3 for every 10 SPD you have that's over 100, up to a cap of $4)."
+
+
+sr:"^準備時間：8次行動（<link\="s\|187"><u>『(.*)』</u></link>數量低於5層時不能使用）\n消耗所有<link\="s\|187"><u>『(.*)』</u></link>使所有同伴獲得『傲放』並使主目標恢復<color\=#FFFC40>(\d+\.\d+%)</color>的生命值。『傲放』：造成傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，消耗的每份<link\="s\|187"><u>『(.*)』</u></link>提供額外的傷害提升（若理子速度大於100點，每超過10點，造成傷害提升(\d+\.\d+%)，最多提升<color\=#FFFC40>(\d+\.\d+%)</color>），持續1回合。$"="Preparation Time: 8 Actions (Cannot be used when you have less than 5 stacks of <link\="s|187"><u>[$1]</u></link>)\nConsume all <link\="s|187"><u>[$2]</u></link> to give all allies [Pride] and restore <color\=#FFFC40>$3</color> HP to the main target. Pride: Increase DMG Dealt by <color\=#FFFC40>$4</color>  for 1 turn. Increase the DMG Dealt buff with every <link\="s|187"><u>[$5]</u></link> consumed (Increase DMG Dealt by $6 for every 10 SPD you have that's over 100, up to a cap of <color\=#FFFC40>$7</color>)."
+
+支援效果=Support Effect
+
+擊破敵方破綻獲取的戰鬥情報=Gained after beaking Vulnerability
+
+r:"^受到的傷害提升(\d+%)$"="Increase DMG Taken by $1"
+
+速步=Quick Pace
+氣合=Kiai
+r:"^受到ONEMORE及總攻擊傷害提升(\d+%)$"="Increase DMG Taken from One More and All-Out Attack by $1"
+傲放=Pride
+
+In-Battle Quotes
+r:"^<color\=#FF0000>多禰村理子</color>獲得了『情報』……$"="<color\=#FF0000>Riko Tanemura</color> gained [Intel]!"
+sr:"^<color\=#FF0000>(.*)</color>的『破綻』被擊破……$"="<size\=25><color\=#FF0000>$1</color>'s Vulnerability has been broken!</size>"
+
+Combat Pop-ups
+r:"^破<color\=#000000>綻</color>$"=" V<color\=#000000>u</color>lnerability"
+
 
 //////////////////////////////
 /// c. RIN - Yaoling Li //////
@@ -565,6 +599,8 @@ r:"戰鬥勝利後回復(\d+\.\d+%)最大生命值和精力值。"=Restore $1 of
 r:"下雨時受到的傷害降低(\d+\.\d+%)。"=Reduce damage from attacks during rainy days by $1.
 r:"物理攻擊(\d+%)機率反射，造成(\d+%)攻擊力物理屬性傷害。"=Physical attacks have a $1 chance to reflect, dealing $2 of the attacks damage back as Physical damage.
 
+r:"^該技能尚未達到使用條件$"="You have not reached the condition to use this skill"
+
 ----------
 Combat Pop-ups for ailments
 ----------
@@ -575,8 +611,29 @@ r:"^風<color\=#000000>襲</color>$"="W<color\=#000000>in</color>ded"
 r:"^輻<color\=#000000>射</color>$"="Ra<color\=#000000>d</color>iation"
 
 r:"^倒<color\=#000000>地</color>$"="Do<color\=#000000>w</color>n"
+
+----------
+Combat Pop-ups for buffs
+----------
+r:"^攻<color\=#000000>擊</color>力提升$"="AT<color\=#000000>K</color> Up"
+r:"^防<color\=#000000>禦</color>力提升$"="DE<color\=#000000>F</color> Up"
+r:"^最<color\=#000000>大</color>生命值提升$"="M<color\=#000000>ax</color> HP Up"
+
+r:"^造<color\=#000000>成</color>傷害提升$"="In<color\=#000000>cer</color>ease DMG Dealt"
+r:"^生命值提升(\d+)$"="Increase HP by $1"
+r:"攻擊力提升(\d+)$"="Increase ATK by $1"
+r:"防禦力提升(\d+)$"="Increase DEF by $1"
+
+----------
+Combat Pop-ups for debuffs
+----------
+r:"^防<color\=#000000>禦</color>降低$"=" D<color\=#000000>E</color>F Down"
+r:"^防<color\=#000000>禦</color>力降低$"=" D<color\=#000000>E</color>F Down"
+r:"^受<color\=#000000>到</color>傷害提升$"=" D<color\=#000000>M</color>G Taken Up"
+
 ----------
 Inspect Details
 ----------
+r:"^造成的傷害提升(\d+\.\d+%)$"="Increase DMG Dealt by $1"
 
-sr:"^(.*)力降低(\d+\.\d+%)$"="Decrease $1 by $2"
+r:"^防禦力降低(\d+\.\d+%)$"="Decrease DEF by $1"

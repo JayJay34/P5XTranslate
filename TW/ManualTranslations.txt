@@ -56,6 +56,9 @@ r:"^新<color\=#ff0000ff>井</color>素羽$"="Mo<color\=#ff0000ff>to</color>ha A
 加納=Kano
 加納 駿=Shun Kano
 r:"^加<color\=#ff0000ff>納</color> 駿$"="Sh<color\=#ff0000ff>un</color> Kano"
+多禰村理子=Riko Tanemura
+多禰村=Tanemura
+理子=Riko
 數塵老師片山=Katayama-sensei
 片山=Katayama
 瑪奇姆=Marthym
@@ -112,6 +115,7 @@ r:"^摩爾加納$"="Morgana"
 羅布羅伊=Rob Roy
 阿爾維達=Awilda
 曼德蘭=Mandrin
+千代女=Chiyome
 琉科忒亞=Leucothea
 忒耳普西科瑞=Terpsichore
 斯堤克斯=Styx
@@ -156,6 +160,7 @@ CV.杉田智和=CV.Tomokazu Sugita
 CV.佐藤利奈=CV.Sato Rina
 CV.勝生真沙子=CV.Masako Katsuki
 CV.原由實=CV.Yumi Hara
+CV.種崎敦美=CV.Atsumi Tanezaki
 
 ------------------------------------------
 -------- III. Worldbuilding Terms --------
@@ -206,6 +211,8 @@ City UI
 工<color\=#ff0000ff>作</color>臺=Wo<color\=#ff0000ff>rk</color>bench
 展示櫃=Showcase
 展<color\=#ff0000ff>示</color>櫃=Sh<color\=#ff0000ff>ow</color>case
+自宅  臥室=Home Bedroom
+自宅  客廳=Home Living Room
 澀谷  中央大街=Shibuya Central Street
 四軒茶屋  小巷=Yongen-Jaya Alleyway
 社團佈告欄=Club Bulletin Board
@@ -223,6 +230,8 @@ City UI
 扭蛋機·雜司谷=Gachapon - Zōshigaya
 雜司谷  表參道=<size\=32>Zōshigaya Omotesan Street</size>
 扭蛋機·新宿=Gachapon - Shinjuku
+扭蛋機·吉祥寺=Gachapon - Kichijoji
+扭蛋機·吉祥寺=Twister-Kichijoji
 地鐵站=Subway
 
 潛入道具=Infiltration Tools
@@ -262,6 +271,8 @@ r:"^工作臺合成（可合成：(\d+)個）$"="Workbench crafting (Available: 
 
 <color\=#ff0000ff>澡</color>堂=Ba<color\=#ff0000ff>th</color>house
 在澡堂泡澡=<size\=28>Bathe in the bathhouse</size>
+
+吉祥寺=Kichijoji
 
 <color\=#ff0000ff>離</color>開=L<color\=#ff0000ff>ea</color>ve
 
@@ -967,6 +978,8 @@ sr:"人格指數「(.*)」達到(\d+)級解鎖$"="Unlock when $1 reached rank $2
 在家裡玩遊戲=<size\=24>Play video games\nat home</size></size>
 去遊戲中心玩遊戲=<size\=24>Play video games\nin the Arcade</size>
 拉麵力士對決=<size\=24>Do the \nRamen Challenge</size>
+嘗試新口味咖啡=<size\=24>Try new \ncoffee flavors</size>
+去卡拉OK唱歌=<size\=24>Sing Karaoke \nin Kichijoji</size>
 
 打工=Work
 (First one is in the city menu, second one is on the confirm page)
@@ -990,6 +1003,8 @@ sr:"人格指數「(.*)」達到(\d+)級解鎖$"="Unlock when $1 reached rank $2
 在藥妝店打工=<size\=24>Work part-time\nat this Drug Store</size>
 要在這家藥妝店打工嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to work part-time \nat this Drug Store?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
 
+去炸物專賣店打工=<size\=24>Work part-time\nat a Fried Food Store</size>
+
 由於掌握了打工『觀察的心得』，因此獲得了額外收益。=<size\=28>Because I have mastered Observation Insights, I have gained more Social Stats.</size> 
 由於掌握了打工『觀察的心得』,掌握了打工『服務的心得』，因此獲得了額外收益。=<size\=25>Because I have mastered Observation Insights and Service Insights, \nI have gained more Social Stats.</size> 
 
@@ -997,7 +1012,7 @@ sr:"人格指數「(.*)」達到(\d+)級解鎖$"="Unlock when $1 reached rank $2
 今天探險嗎？=<size\=24>Going on an adventure today?</size>
 
 和素羽出去玩吧=<size\=24>Hang out with\nMotoha</size>
-和朋子一起度過=<size\=24>Hang out with\nTomoko</size>
+sr:"^和(.*)一起度過$"=<size\=24>Hang out with\n$1</size>
 與朋子一起度過放學後的時間吧=Let's spend time \nwith Tomoko after school 
 和加納駿一起度過=<size\=24>Hang out with\nShun Kano</size>
 和清一起度過=<size\=24>Hang out with\nKiyoshi</size>
@@ -1054,6 +1069,9 @@ sr:"^確定要和<color\=#F7F95C>(.*)</color>成為「(.*)」關係？\n※該�
 
 直到野毛的心痊癒為止=<size\=28>Until Tomoko's heart is healed</size>
 我會一直陪在朋子旁邊=<size\=28>I'll always be by Tomoko's side</size>
+
+悠美小姐是我重要的人=<size\=28>Yumi-san is \nan important to me</size>
+我被椎名小姐的本領迷住了=<size\=28>I've been mesmerized by \nShiina-san's skills</size>
 
 今天的事情處理的差不多了，是否上床睡覺呢？=Let's call it a day. \nAre you going to bed?
 SNS還有沒回復的消息，要直接睡覺嗎？=You didn't reply to your SNS yet, \ngo to sleep immediately?
@@ -1507,7 +1525,6 @@ Metaverse Combat Terms
 MENU BUFFS/ DEBUFFS
 ----------
 r:"^攻擊力提升(\d+%)$"="Increase ATK by $1"
-防禦力提升=Defense Increase
 r:"^防禦力提升(\d+%)$"="Increase DEF by $1"
 r:"^攻擊力降低(\d+%)$"="Decrease ATK by $1"
 r:"^防禦力降低(\d+%)$"="Decrease DEF by $1"

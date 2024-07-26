@@ -389,12 +389,15 @@ CATTLE - Ruferu
 光明=Radience
 希望=Hope
 
+r:"^雀躍火梟 Lv.(\d+)$"="Caper Fire Owl Lv.$1"
 r:"^雀躍火梟 <color\=#0F69CB>Lv.(\d+)</color>$"="Caper Fire Owl <color\=#0F69CB>Lv.$1</color>"
 r:"^對1名敵人造成\<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的<color\=#FFFC40>火焰屬性</color>傷害，有(\d+%)基礎機率使敵人陷入<link\="s\|102"><u>燃燒</u></link>狀態，效果持續(\d+)回合。\n<b><size\=28><color\=#850101>跳動的火舌在信念的催生下，彙聚成為奪目的金色火球，瞬間吞噬敵人造成火焰傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK <color\=#FFFC40>Fire</color> damage, with a $2 base chance to inflict <link\="s|102"><u>Burn</u></link> for $3 turns.\n<b><size\=28><color\=#850101>The dancing tongues of fire, fueled by faith, converge into an eye-catching golden ball of fire that instantly engulfs enemies and deals flaming damage.</color></size></b>"
 
+r:"^希望光束 Lv.(\d+)$"="Beam of Hope Lv.$1"
 r:"^希望光束 <color\=#0F69CB>Lv.(\d+)</color>$"="Beam of Hope <color\=#0F69CB>Lv.$1</color>"
 r:"^使1名同伴恢復<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力\+<color\=#FFFC40>(\d+)</color>的生命值。目標生命值低於(\d+%)時，治療效果提升<color\=#FFFC40>(\d+%)</color>。\n<b><size\=28><color\=#850101>蘊藏著無限生機的光環，溫柔地籠罩住同伴，源源不斷地施展療癒力量，再猙獰的傷口也不在話下。</color></size></b>$"="Restores <color\=#FFFC40>$1</color> ATK + <color\=#FFFC40>$2</color> HP to an ally. Increases healing by <color\=#FFFC40>$4</color> if the target is under $3 HP. \n<b><size\=28><color\=#850101>An aura of infinite vitality gently envelops your companion, continuously delivering healing power to even the most grievous of wounds.</color></size></b>"
 
+r:"^天使的憐憫 Lv.(\d+)$"="Angel's Mercy Lv.$1"
 r:"^天使的憐憫 <color\=#0F69CB>Lv.(\d+)</color>$"="Angel's Mercy <color\=#0F69CB>Lv.$1</color>"
 r:"^使所有同伴恢復<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力\+<color\=#FFFC40>(\d+)</color>的生命值，對主要目標同伴的治療效果提升<color\=#FFFC40>(\d+%)</color>。\n<b><size\=28><color\=#850101>聖潔的光芒孕育著點點星光，賜予所有同伴不滅的希望，如神鳥般展開雙翅才得以一窺神跡。</color></size></b>$"="Restores <color\=#FFFC40>$1</color>ATK + <color\=#FFFC40>$2</color> HP to all allies, increase healing by <color\=#FFFC40>$3</color> to the main target. \n<b><size\=28><color\=#850101>The holy light of the stars gives all companions an unending hope, spreading its wings like a bird to catch a glimpse of the miracle.</color></size></b>"
 
@@ -416,14 +419,14 @@ r:"^自身最大生命值轉化為治療效果，最多<color\=#FFFC40>(\d+)</co
 處於任意<link\="s|115"><u>『星之火』</u></link>狀態下的同伴，造成元素異常時，效果命中提升33%。=Allies with <link\="s|115"><u>[Starfire]</u></link> increase Effect Hit Rate by 33% when inflicting Elemental Ailments.
 
 耳羽輕顫=Ear Feather Quiver
-『雀躍火梟』、『希望光束』的技能等級提升2級，至多提升至15級。=Caper Fire Owl, Beam of Hope level +2, up to a maximum of level 15.
+『雀躍火梟』、『希望光束』的技能等級提升2級，至多提升至15級。=[Caper Fire Owl], [Beam of Hope] level +2, up to a maximum of level 15.
 
 獵物現身=Prey Appear
 <link\="s|115"><u>『星之火II』</u></link>獲得額外效果，處於該狀態下的同伴受到治療效果提升10%。=<link\="s|115"><u>[Starfire II]</u></link> gains an additional effect that increases Healing Received by 10%.
 
 無聲偷襲=Silent Ambush
-『天使的憐憫』、『{{A}}』的技能等級提升2級，至多提升至15級。=Angel's Mercy, {{A}} level +2, up to a maximum of level 15.
-『天使的憐憫』、『戰鬥技巧』的技能等級提升2級，至多提升至15級。=Angel's Mercy, Combat Skills level +2, up to a maximum of level 15.
+『天使的憐憫』、『{{A}}』的技能等級提升2級，至多提升至15級。=[Angel's Mercy], [{{A}}] level +2, up to a maximum of level 15.
+『天使的憐憫』、『戰鬥技巧』的技能等級提升2級，至多提升至15級。=[Angel's Mercy], [Combat Skills] level +2, up to a maximum of level 15.
 
 利爪突擊=Claw Assault
 HIGHLIGHT效果提升：使所有同伴造成的火焰屬性傷害提升32%，效果持續1回合=HIGHLIGHT Effect Improvement: Increases Fire damage of all allies by 32% for 1 round.
@@ -442,12 +445,15 @@ CLOSER - Motoha Arai
 力量=Strength
 守護=Protect
 
+r:"^雷霆之怒 Lv.(\d+)$"="Thunder's Fury Lv.$1"
 r:"^雷霆之怒 <color\=#0F69CB>Lv.(\d+)</color>$"="Thunder's Fury <color\=#0F69CB>Lv.$1</color>"
 r:"^發射(\d+)道天雷，造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，對技能主目標有100%的基礎機率使其陷入<link\="s\|104"><u>觸電</u></link>狀態。對同一目標的後續攻擊只會造成\<color\=#FFFC40>(\d+%)</color>的傷害，天雷會優先選擇未攻擊過的目標。\n<b><size\=28><color\=#850101>幾道天雷從天而降，以足以擊碎地面的雷霆之力擊向敵人，造成難以想像的電擊傷害。</color></size></b>$"="Shoots $1 thunderbolts, dealing <color\=#FFFC40>$2</color> ATK Electricity damage and has a 100% base chance to inflict <link\="s|104"><u>Shock</u></link> to the skill's main target. Deals <color\=#FFFC40>$3</color> damage when hitting the same target, the thunderbolts will prioritize targets that have not been attacked yet.\n<b><size\=28><color\=#850101>Thunderbolts fall from the sky, striking enemies with enough force to shatter the ground and cause unimaginable electrical damage.</color></size></b>"
 
+r:"^超速電擊 Lv.(\d+)$"="<size\=28>Hypervelocity Shock</size> Lv.$1"
 r:"^超速電擊 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=28>Hypervelocity Shock</size> <color\=#0F69CB>Lv.$1</color>"
 r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，並使所有同伴造成的電擊屬性傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。\n<b><size\=28><color\=#850101>從天而降的閃電擊打在敵人身上，並迅速聚攏形成巨大的電球，不消片刻便爆炸造成電擊傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Electricity damage to 1 enemy, increases all ally's Electricity DMG Dealt by <color\=#FFFC40>$2</color> for 2 turns.\n<b><size\=28><color\=#850101>A bolt of lightning from the sky strikes an enemy and quickly gathers to form a giant ball of electricity, which explodes within moments to deal electrical damage.</color></size></b>"
 
+r:"^電鳴狂鯊 Lv.(\d+)$"="Electric Shark Lv.$1"
 r:"^電鳴狂鯊 <color\=#0F69CB>Lv.(\d+)</color>$"="Electric Shark <color\=#0F69CB>Lv.$1</color>"
 r:"^對所有敵人造成\<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害。若場上存在處於<link\="s\|104"><u>觸電</u></link>狀態的敵人，則對所有敵人造成1次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的額外電擊屬性傷害。\n<b><size\=28><color\=#850101>電流密佈的鯊魚張開滿是利齒的血口，衝向敵人撕咬造成電擊傷害，還有可能使敵人附著元素異常。</color></size></b>$"="Deals <color\=#FFFC40>$2</color> ATK Electricity damage to all enemies. If there is an enemy inflicted with <link\="s|104"><u>Shock</u></link>, then deals another hit of <color\=#FFFC40>$1</color> ATK Electricity damage to all enemies.\n<b><size\=28><color\=#850101>An electric shark opens its bloody, toothy mouth and rushes at enemies, biting them for electrical damage and potentially causing them to attach to an elemental abnormality.</color></size></b>"
 
@@ -466,14 +472,14 @@ r:"^對敵人造成電擊屬性傷害後，有(\d+%)基礎機率使敵人陷入<
 r:"^『雷霆之怒』的段數增加1段，對同一敵人的連續攻擊造成(\d+%)傷害。$"="Increase the number of hits from Thunder's Fury by 1, dealing $1 damage when hitting the same enemy."
 
 全力一擊=Full Blow
-『雷霆之怒』、『超速電擊』的技能等級提升2級，至多提升至15級。=Thunder's Fury, Hypervelocity Shock level +2, up to a maximum of level 15.
+『雷霆之怒』、『超速電擊』的技能等級提升2級，至多提升至15級。=[Thunder's Fury], [Hypervelocity Shock] level +2, up to a maximum of level 15.
 
 時速追逐=Speed Chase
 r:"^受到來自處於<link\="s\|104"><u>觸電</u></link>狀態的敵人的傷害降低(\d+%)。$"="Decrease DMG Taken by $1 when attacked by enemies with <link\="s|104"><u>Shock</u></link>."
 
 無限超越=Infinite Transcendence
-『電鳴狂鯊』、『{{A}}』的技能等級提升2級，至多提升至15級。=Electric Shark, {{A}} level +2, up to a maximum of level 15.
-『電鳴狂鯊』、『戰鬥技巧』的技能等級提升2級，至多提升至15級。=Electric Shark, Combat Skills level +2, up to a maximum of level 15.
+『電鳴狂鯊』、『{{A}}』的技能等級提升2級，至多提升至15級。=[Electric Shark], [{{A}}] level +2, up to a maximum of level 15.
+『電鳴狂鯊』、『戰鬥技巧』的技能等級提升2級，至多提升至15級。=[Electric Shark], [Combat Skills] level +2, up to a maximum of level 15.
 
 得分！=Score!
 r:"^HIGHLIGHT效果提升：使所有敵人受到的電擊屬性傷害提升(\d+%)，效果持續2回合。$"="HIGHLIGHT Effect Improvement: Increase Electricity DMG Taken of all enemies by $1 for 2 turns."
@@ -487,17 +493,20 @@ SOY - Shun Kano
 
 sr:"^受到敵方攻擊的機率提高，受到攻擊後會獲得『(.*)』，回合結束消耗『(.*)』並回復自身部分已損生命值。$"="<size\=25>Increase the chance of being attacked by enemies and gain [$1] when attacked. Consume [$2] and restore HP at the end of your turn.</size>"
 冰山撼動=Iceberg Tremor
-先鋒突擊=Vanguard Assault
+先鋒突擊=<size\=30>Vanguard Assault</size>
 零度治癒=<size\=22>Absolute Zero Healing</size>
 狂野=Wild
 勇謀=Bold Strategy
 
+r:"^冰山撼動 Lv.(\d+)$"="Iceberg Tremor Lv.$1"
 r:"^冰山撼動 <color\=#0F69CB>Lv.(\d+)</color>$"="Iceberg Tremor <color\=#0F69CB>Lv.$1</color>"
 sr:"^對1名敵人造成\<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的冰凍屬性傷害，並有\<color\=#FFFC40>(\d+%)</color>的基礎機率使敵人陷入<link\="s\|103"><u>(.*)</u></link>狀態。\n<b><size\=28><color\=#850101>拔地而起的冰山，對敵人造成冰屬性傷害，還會讓敵人感到愈加的寒冷。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> Max HP Ice damage to 1 enemy, with a <color\=#FFFC40>$2</color> base chance to inflict <link\="s|103"><u>$3</u></link>.\n<b><size\=28><color\=#850101>Rising icebergs deal ice damage to enemies and make them feel colder.</color></size></b>"
 
+r:"^先鋒突擊 Lv.(\d+)$"="Vanguard Assault Lv.$1"
 r:"^先鋒突擊 <color\=#0F69CB>Lv.(\d+)</color>$"="Vanguard Assault <color\=#0F69CB>Lv.$1</color>"
 sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的物理屬性傷害，並使目標敵人的防禦力降低<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。處於<link\="s\|151"><u>『(.*)』</u></link>狀態下時，防禦力降低值提升至<color\=#FFFC40>(\d+\.\d+%)</color>。\n<b><size\=28><color\=#850101>先鋒精神勢不可擋，在烈馬的啼鳴中對敵人造成難以抵擋的物理傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> Max HP Physical damage to 1 enemy, decrease the target's DEF by <color\=#FFFC40>$2</color> for 2 turns. When in the <link\="s|151"><u>[$3]</u></link> state, increase the DEF down debuff to <color\=#FFFC40>$4</color>. \n<b><size\=28><color\=#850101>Pioneer Spirit is unstoppable, dealing irresistible physical damage to enemies with the roar of the horses.</color></size></b>"
 
+r:"^零度治癒 Lv.(\d+)$"="<size\=25>Absolute Zero Healing</size> Lv.$1"
 r:"^零度治癒 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=25>Absolute Zero Healing</size> <color\=#0F69CB>Lv.$1</color>"
 r:"^使所有同伴的最大生命值提升，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+%)</color>（最多計入<color\=#FFFC40>(\d+)</color>點最大生命值），同時自身受到攻擊的機率大幅提升，效果持續2回合。回復所有同伴生命值，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d+%)</color>。\n冷卻時間：1回合。\n<b><size\=28><color\=#850101>極寒的冰域展開，絕對的低溫有助於保持頭腦清醒和身體健康。</color></size></b>$"="Increases all ally's Max HP equal to <color\=#FFFC40>$1</color> of Shun Kano's Max HP (Up to <color\=#FFFC40>$2</color> Max HP), increases the chance of being attacked for 2 turns. Restores all ally's HP equal to <color\=#FFFC40>$1</color> of Shun Kano's Max HP. \nCooldown: 1 turn.\n<b><size\=28><color\=#850101>An extremely cold field of ice opens up, and the absolute low temperature helps to keep the mind and body clear.</color></size></b>"
 
@@ -520,14 +529,14 @@ sr:"加納駿受到敵方攻擊的機率提高，受到攻擊後會獲得『(.*)
 sr:"加納駿處於<link\="s\|151"><u>『(.*)』</u></link>狀態時，受到傷害降低(\d+%)。"="Decrease DMG Taken by $2 when Shun Kano is in <link\="s|151"><u>[$1]</u></link>."
 
 危險對峙=Dangerous Standoff
-『冰山撼動』、『先鋒突擊』的技能等級提升2級，至多提升至15級。=Iceberg Tremor, Vanguard Assault level +2, up to a maximum of level 15.
+『冰山撼動』、『先鋒突擊』的技能等級提升2級，至多提升至15級。=[Iceberg Tremor], [Vanguard Assault] level +2, up to a maximum of level 15.
 
 熱血的硝煙=Hot-Blooded Gunsmoke
 r:"^加納駿的生命值低於(\d+%)時，受到的治療效果提升(\d+%)。$"="When Shun Kano is under $1 HP, increase Healing Received by $2."
 
 一決勝負=Final Showdown
-『零度治癒』、『戰鬥技巧』的技能等級提升2級，至多提升至15級。=Absolute Zero Healing, Combat Skills level +2, up to a maximum of level 15.
-『零度治癒』、『{{A}}』的技能等級提升2級，至多提升至15級。=Absolute Zero Healing, {{A}} level +2, up to a maximum of level 15.
+『零度治癒』、『戰鬥技巧』的技能等級提升2級，至多提升至15級。=[Absolute Zero Healing], [Combat Skills] level +2, up to a maximum of level 15.
+『零度治癒』、『{{A}}』的技能等級提升2級，至多提升至15級。=[Absolute Zero Healing], [{{A}}] level +2, up to a maximum of level 15.
 
 暴力處決=Violent Execution
 r:"^HIGHLIGHT效果提升：使所有同伴受到傷害降低(\d+%)，效果持續(\d+)回合。$"="HIGHLIGHT Effect Improvement: Decrease DMG Taken for all allies by $1 for $2 turns."
@@ -539,8 +548,66 @@ Soy's Combat Skills Upgrade
 HIGHLIGHT：計入生命值上限=HIGHLIGHT: Max HP Cap
 HIGHLIGHT：生命值回復倍率=HIGHLIGHT: HP% Heal
 
-// In-Battle Quotes
-<color\=#FF0000>全體怪盜</color>生命值上限提高……=Increase Max HP for <color\=#FF0000>all allies</color>!
+----------
+Wind - Riko Tanemura
+----------
+
+sr:"^同伴每行動3次，使倒地值最高的敵人暴露<link\="s\|188"><u>『(.*)』</u></link>。$"="After 3 allies' action, expose a <link\="s|188"><u>$1</u></link> from the enemy with the highest Knockdown Count."
+r:"^霞影之術$"="Art of Skyglow"
+r:"^梅幻之術$"="<size\=26>Art of Plum Blossom</size>"
+r:"^暗香細語$"="Aroma Whisper"
+r:"^屬性提升$"="Attribute Boost"
+蝶夢=Butterfly Dream
+雀歌=Bird Song
+
+r:"^霞影之術 Lv.(\d+)$"="Art of Skyglow Lv.$1"
+r:"^霞影之術 <color\=#0F69CB>Lv.(\d+)</color>$"="Art of Skyglow <color\=#0F69CB>Lv.$1</color>"
+sr:"^準備時間：4次行動\n使所有敵人防禦力降低<color\=#FFFC40>(\d+\.\d+%)</color>，若理子速度大於100點，每超過10點，防禦力額外降低(\d+\.\d+%)，最多額外降低<color\=#FFFC40>(\d+\.\d+%)</color>，持續2回合；同時使主目標暴露<link\="s\|188"><u>『(.*)』</u></link>。\n<b><size\=28><color\=#850101>無數鋒刃隱於煙霞之中，在彌漫的花香中傷人於無形。讓敵人失去反抗能力，任人宰割。</color></size></b>$"="Preparation Time: 4 Actions\nDecrease the DEF of all enemies by <color\=#FFFC40>$1</color> for 2 turns, increase the DEF down debuff by $2 for every 10 SPD you have that's over 100, up to a cap of <color\=#FFFC40>$3</color>; Expose a <link\="s|188"><u>[$4]</u></link> on the main target.\n<b><size\=28><color\=#850101>The blades are hidden in the haze of smoke and the scent of flowers, leaving the enemy powerless to resist and at their mercy.</color></size></b>"
+
+r:"^梅幻之術 Lv.(\d+)$"="<size\=28>Art of Plum Blossom</size> Lv.$1"
+r:"^梅幻之術 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=28>Art of Plum Blossom</size> <color\=#0F69CB>Lv.$1</color>"
+r:"^準備時間：8次行動\n使所有敵人受到的傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續2回合。\n友方怪盜削減倒地值或完成擊倒時，釋放該技能後所需的準備時間減少1次行動；所需的準備時間減至0次行動時，理子立即自動釋放一次該技能。\n<b><size\=28><color\=#850101>無數盛開的梅花花瓣飄散，亦真亦幻，使人如墜夢中，失去辨別能力。</color></size></b>$"="Preparation Time: 8 Actions\nIncrease the DMG Taken of all enemies by <color\=#FFFC40>$1</color> for 2 turns. \nWhen an ally decreases Knockdown Count or downs an enemy, reduce this skill's Preparation Time by 1 action; Automatically use this skill once when its Preparation Time reaches 0.\n<b><size\=28><color\=#850101>The petals of countless plum blossoms in full bloom are scattered, both real and illusory, causing people to fall into a dream and lose their ability to recognize them.</color></size></b>"
+
+r:"^暗香細語 Lv.(\d+)$"="Aroma Whisper Lv.$1"
+r:"^暗香細語 <color\=#0F69CB>Lv.(\d+)</color>$"="Aroma Whisper <color\=#0F69CB>Lv.$1</color>"
+sr:"^準備時間：8次行動（<link\="s\|187"><u>『(.*)』</u></link>數量低於5層時不能使用）\n消耗所有<link\="s\|187"><u>『(.*)』</u></link>使所有同伴獲得『傲放』並使主目標恢復<color\=#FFFC40>(\d+\.\d+%)</color>的生命值。『傲放』：造成傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，消耗的每份<link\="s\|187"><u>『(.*)』</u></link>提供額外的傷害提升（若理子速度大於100點，每超過10點，造成傷害提升(\d+\.\d+%)，最多提升<color\=#FFFC40>(\d+\.\d+%)</color>），持續1回合。\n<b><size\=28><color\=#850101>如風輕拂花叢，柔情綻放呢喃細語，梅之香氣若有若無，為生命之繪卷增添幾分生動與雅致。</color></size></b>$"="Preparation Time: 8 Actions (Cannot be used when you have less than 5 stacks of <link\="s|187"><u>[$1]</u></link>)\nConsume all <link\="s|187"><u>[$2]</u></link> to give all allies [Pride] and restore <color\=#FFFC40>$3</color> HP to the main target. Pride: Increase DMG Dealt by <color\=#FFFC40>$4</color>  for 1 turn. Increase the DMG Dealt buff with every <link\="s|187"><u>[$5]</u></link> consumed (Increase DMG Dealt by $6 for every 10 SPD you have that's over 100, up to a cap of <color\=#FFFC40>$7</color>).\n<b><size\=28><color\=#850101>As the wind gently brushes the flowers, the softness of the blossoms blooms and murmurs, and the fragrance of the plum adds a bit of vitality and elegance to the scroll of life.</color></size></b>"
+
+r:"^根據解明怪盜各屬性的(\d+%)提升在場的所有同伴的相應屬性值。$"="Increase all allies' stats by $1 of your stats"
+
+r:"^蝶夢 Lv.(\d+)$"="Butterfly Dream Lv.$1"
+r:"^進入戰鬥時，若理子速度大於100點，每超過1點使所有怪盜獲得(\d+)點生命值、(\d+)點攻擊力、(\d+)點防禦力的提升，最多可提升<color\=#FFFC40>(\d+)</color>點生命值、<color\=#FFFC40>(\d+)</color>點攻擊力、<color\=#FFFC40>(\d+)</color>點防禦力。$"="At the start of battle, for every 1 SPD you have that's over 100, increase all allies' HP by $1, ATK by $2 and DEF by $3, up to <color\=#FFFC40>$4</color> HP, <color\=#FFFC40>$5</color> ATK and <color\=#FFFC40>$6</color> DEF."
+
+r:"^雀歌 Lv.(\d+)$"="Bird Song Lv.$1"
+r:"^使所有敵人受到的ONEMORE及總攻擊傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Increase all enemies' DMG Taken from One More and All-Out Attack by <color\=#FFFC40>$1</color>."
+
+r:"^破綻$"=Vulnerability
+<color\=#66ccff>『破綻』</color>=<color\=#66ccff>[Vulnerability]</color>
+sr:"^受到的傷害提升(\d+%)，在受到1次攻擊後被擊破；被擊破時，理子獲得2份『(.*)』，若目標受到的是弱點傷害/普通傷害，則倒地值額外降低1點，每額外降低1點倒地值，理子額外獲得1份『(.*)』。$"="Increase DMG Taken by $1, break after attacked once; When broken, gain 2 $2. If the target took Weak Damage/ Normal Damage, decrease their Knockdown Count by 1. Gain 1 $3 after decreasing Knockdown Count with [Vulnerability]."
+
+r:"^情報$"=Intel
+<color\=#66ccff>『情報』</color>=<color\=#66ccff>[Intel]</color>
+sr:"^擊破『(.*)』獲得的資源，最多可疊加8層。多禰村理子釋放『(.*)』時，消耗所有『(.*)』，使所有同伴攻擊力造成的傷害提升。$"="Gained after breaking $1, up to 8 stacks. Consume all $3 when using [$2], increasing all allies' DMG Dealt."
+
+螢火=Firefly
+sr:"^同伴每行動3次，使倒地值最高的敵人暴露<link\="s\|188"><u>『(.*)』</u></link>；\n<link\="s\|188"><u>『(.*)』</u></link>：受到的傷害提升(\d+%)，在受到1次攻擊後被擊破；被擊破時，理子獲得2份<link\="s\|187"><u>『(.*)』</u></link>，若目標受到的是弱點傷害/普通傷害，則倒地值額外降低1點，每額外降低1點倒地值，理子額外獲得1份<link\="s\|187"><u>『(.*)』</u></link>，<link\="s|187"><u>『情報』</u></link>最多可疊加8層。$"="After 3 allies' action, expose a <link\="s|188"><u>[$1]</u></link> from the enemy with the highest Knockdown Count；\n<link\="s|188"><u>[$2]</u></link>: Increase DMG Taken by $3, break after attacked once; When broken, gain 2 <link\="s|187"><u>$4</u></link>. If the target took Weak Damage/ Normal Damage, decrease their Knockdown Count by 1. Gain 1 $5 after decreasing Knockdown Count with <link\="s|188"><u>[$1]</u></link>, up to 8 stacks."
+
+薄寒=Thin Cold
+sr:"^進入戰鬥時，使倒地值最高的敵人暴露<link\="s\|188"><u>『(.*)』</u></link>。$"="At the start of battle, expose a <link\="s|188"><u>[$1]</u></link> from the enemy with the highest Knockdown Count."
+
+素淨=Quiet Color
+『霞影之術』、『梅幻之術』的技能等級提升2級，至多提升至15級。=Art of Skyglow, Art of Plum Blossom level +2, up to a maximum of level 15.
+
+微雪=Little Snow
+sr:"^釋放『暗香細語』後，立刻使倒地值最高的敵人暴露<link\="s\|188"><u>『(.*)』</u></link>。$"="After using [Aroma Whisper], immediately expose a <link\="s|188"><u>[$1]</u></link> from the enemy with the highest Knockdown Count."
+
+清寂=Calm Silence
+『暗香細語』的技能等級提升2級，至多提升至15級。=Aroma Whisper level +2, up to a maximum of level 15.
+
+佳月=Beautiful Moon
+sr:"^任意同伴釋放HIGHLIGHT後，立刻使倒地值最高的敵人暴露<link\="s\|188"><u>『(.*)』</u></link>。$"="After any ally uses HIGHLIGHT, immediately expose a <link\="s|188"><u>[$1]</u></link> from the enemy with the highest Knockdown Count."
+
+獨秀=Lone Bloom
+r:"^釋放『暗香細語』後，若多禰村理子速度大於100點，每超過15點，解明怪盜的準備時間減少1次行動，最多可減少4次行動。$"="After using [Aroma Whisper], for every 15 SPD you have that's over 100, reduce the cooldown of the Navigator by 1 action, up to 4 actions."
 
 //////////////////////////////
 /// c. RIN - Yaoling Li //////
