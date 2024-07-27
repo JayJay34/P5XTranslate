@@ -58,6 +58,7 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 元素異常，防禦力降低12%，效果持續2回合。=Reduce DEF by 12% for 2 turns.
 元素異常，攻擊力降低12%，效果持續2回合。=Reduce ATK by 12% for 2 turns.
 使敵人受到傷害提升15%，被視為1種元素異常。=Increase DMG Taken by 15% for 2 turns.
+持續損失生命值=Lose 1% Max HP each turn for 2 turns
 
 精神異常，無法行動。=Unable to take actions.
 精神異常，無法行動並且每回合回復5%生命值和5%精力值，受到傷害後清除。=Unable to take actions.\nRestore 5% of Max HP and 5% of Max SP each turn.\nThis ailment clears upon taking damage.
@@ -126,12 +127,12 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊�
 存在處於觸電狀態的敵人=There is an enemy with Shock
 電擊傷害提升=<size\=28>Increase Elec Damage</size>
 r:"^造成的電擊屬性傷害提升(\d+%)$"="Increase Elec DMG Dealt by $1"
-受電擊傷害提升=<size\=24>Increase Elec DMG Taken</size>
+r:"^受電擊傷害提升$"="<size\=24>Increase Elec DMG Taken</size>"
 r:"^受到電擊傷害提升(\d+%)$"="Increase Elec DMG Taken by $1"
 
 Combat pop ups
-r:"^電<color\=#000000>擊</color>傷害提升$"="El<color\=#000000>ec</color> DMG Up"
-r:"^受<color\=#000000>到</color>電傷提升$"="El<color\=#000000>ec</color> DMG Taken Up"
+r:"^電<color\=#000000>擊</color>傷害提升$"="<size\=21> </size>E<color\=#000000>le</color>c DMG Up"
+r:"^受<color\=#000000>到</color>電傷提升$"="<size\=21> </size>E<color\=#000000>le</color>c DMG Taken Up"
 
 ----------
 SOY - Shun Kano
@@ -158,7 +159,7 @@ In-Battle Quotes
 Combat Pop-ups
 r:"^荒<color\=#000000>野</color>救星$"="W<color\=#000000>ild</color>erness Savior"
 r:"^生<color\=#000000>命</color>上限提升$"="M<color\=#000000>ax</color> HP Up"
-r:"^受<color\=#000000>攻</color>擊機率提升$"="In<color\=#000000>cr</color>ease Chance of Attacked"
+r:"^受<color\=#000000>攻</color>擊機率提升$"="<size\=22> </size>C<color\=#000000>h</color>ance of Attacked Up"
 
 ----------
 Wind - Riko Tanemura
@@ -191,7 +192,7 @@ r:"^<color\=#FF0000>多禰村理子</color>獲得了『情報』……$"="<color
 sr:"^<color\=#FF0000>(.*)</color>的『破綻』被擊破……$"="<size\=25><color\=#FF0000>$1</color>'s Vulnerability has been broken!</size>"
 
 Combat Pop-ups
-r:"^破<color\=#000000>綻</color>$"=" V<color\=#000000>u</color>lnerability"
+r:"^破<color\=#000000>綻</color>$"="<size\=15> </size>V<color\=#000000>ul</color>nerability"
 
 
 //////////////////////////////
@@ -604,36 +605,50 @@ r:"^該技能尚未達到使用條件$"="You have not reached the condition to u
 ----------
 Combat Pop-ups for ailments
 ----------
-r:"^燃<color\=#000000>燒</color>$"="Bu<color\=#000000>r</color>n"
-r:"^凍<color\=#000000>結</color>$"="Fr<color\=#000000>e</color>eze"
-r:"^觸<color\=#000000>電</color>$"="Sh<color\=#000000>o</color>ck"
+r:"^燃<color\=#000000>燒</color>$"="<size\=12> </size>B<color\=#000000>ur</color>n"
+r:"^凍<color\=#000000>結</color>$"="<size\=15> </size>F<color\=#000000>re</color>eze"
+r:"^觸<color\=#000000>電</color>$"=" S<color\=#000000>h</color>ock"
 r:"^風<color\=#000000>襲</color>$"="W<color\=#000000>in</color>ded"
 r:"^輻<color\=#000000>射</color>$"="Ra<color\=#000000>d</color>iation"
+r:"^詛<color\=#000000>咒</color>$"="<size\=5> </size>C<color\=#000000>ur</color>sed"
 
-r:"^倒<color\=#000000>地</color>$"="Do<color\=#000000>w</color>n"
-
+r:"^倒<color\=#000000>地</color>$"="<size\=22> </size>D<color\=#000000>o</color>wn"
+r:"^狂<color\=#000000>怒</color>$"="<size\=20> </size>R<color\=#000000>a</color>ge"
 ----------
 Combat Pop-ups for buffs
 ----------
-r:"^攻<color\=#000000>擊</color>力提升$"="AT<color\=#000000>K</color> Up"
+r:"^攻<color\=#000000>擊</color>提升$"="<size\=22> </size>A<color\=#000000>T</color>K Up"
+r:"^攻<color\=#000000>擊</color>力提升$"="<size\=22> </size>A<color\=#000000>T</color>K Up"
 r:"^防<color\=#000000>禦</color>力提升$"="DE<color\=#000000>F</color> Up"
 r:"^最<color\=#000000>大</color>生命值提升$"="M<color\=#000000>ax</color> HP Up"
+r:"^效<color\=#000000>果</color>命中提升$"=" E<color\=#000000>H</color>R Up"
+r:"^暴<color\=#000000>擊</color>率提升$"="<size\=20> </size>C<color\=#000000>R</color>IT Up"
+r:"^暴<color\=#000000>擊</color>效果提升$"="<size\=20> </size>C<color\=#000000>R</color>IT DMG Up"
+r:"^效<color\=#000000>果</color>抵抗提升$"="Ef<color\=#000000>fe</color>ct RES Up"
 
-r:"^造<color\=#000000>成</color>傷害提升$"="In<color\=#000000>cer</color>ease DMG Dealt"
-r:"^生命值提升(\d+)$"="Increase HP by $1"
-r:"攻擊力提升(\d+)$"="Increase ATK by $1"
-r:"防禦力提升(\d+)$"="Increase DEF by $1"
+r:"^傷<color\=#000000>害</color>提升$"="<size\=17> </size>D<color\=#000000>M</color>G Up"
+r:"^造<color\=#000000>成</color>傷害提升$"="In<color\=#000000>cr</color>ease DMG Dealt"
+
+r:"^護<color\=#000000>盾</color>$"="<size\=18> </size>S<color\=#000000>hi</color>eld"
 
 ----------
 Combat Pop-ups for debuffs
 ----------
-r:"^防<color\=#000000>禦</color>降低$"=" D<color\=#000000>E</color>F Down"
-r:"^防<color\=#000000>禦</color>力降低$"=" D<color\=#000000>E</color>F Down"
-r:"^受<color\=#000000>到</color>傷害提升$"=" D<color\=#000000>M</color>G Taken Up"
+r:"^防<color\=#000000>禦</color>降低$"="<size\=22> </size>D<color\=#000000>E</color>F Down"
+r:"^防<color\=#000000>禦</color>力降低$"="<size\=22> </size>D<color\=#000000>E</color>F Down"
+r:"^受<color\=#000000>到</color>傷害提升$"="<size\=20> </size>D<color\=#000000>M</color>G Taken Up"
+r:"^受<color\=#000000>到</color>電擊傷害提升$"="<size\=21> </size>E<color\=#000000>le</color>c DMG Taken Up"
+r:"^受<color\=#000000>詛</color>咒傷害提升$"="<size\=7> </size>C<color\=#000000>ur</color>se DMG Taken Up"
 
 ----------
 Inspect Details
 ----------
+r:"^生命值提升(\d+)$"="Increase HP by $1"
+r:"攻擊力提升(\d+)$"="Increase ATK by $1"
+r:"防禦力提升(\d+)$"="Increase DEF by $1"
+r:"^造成傷害提升$"="<size\=30>Increase DMG Dealt</size>"
+r:"傷害提升(\d+%)$"="Increase DMG Dealt by $1"
 r:"^造成的傷害提升(\d+\.\d+%)$"="Increase DMG Dealt by $1"
 
 r:"^防禦力降低(\d+\.\d+%)$"="Decrease DEF by $1"
+r:"^受到的傷害提升(\d+\.\d+%)$"="Increase DMG Taken by $1"
