@@ -22,15 +22,25 @@ r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。每裝配1種不同屬�
 湧動迴響=Surge Echoes
 【腎上腺素】=[Adrenaline]
 腎上腺素=Adrenaline
-r:"^治療加成、護盾加成提升<color\=#2899FF>(\d+\.\d+%)</color>。光環：主角在場時使所有怪盜獲得防禦力提升<color\=#2899FF>(\d+\.\d+%)</color>。當為隊友使用技能時，使主要技能目標獲得基於自身生命值上限<color\=#2899FF>(\d+\.\d+%)</color>的回復效果。$"="Increase Healing Bonus, Shield Effect by <color\=#2899FF>$1</color> Aura: Increase all allies' DEF by <color\=#2899FF>$2</color> when Wonder is present. When using a skill on allies, the main target restore <color\=#2899FF>$3</color> Max HP."
+r:"^治療加成、護盾加成提升<color\=#2899FF>(\d+\.\d+%)</color>。光環：主角在場時使所有怪盜獲得防禦力提升<color\=#2899FF>(\d+\.\d+%)</color>。當為隊友使用技能時，使主要技能目標獲得基於自身生命值上限<color\=#2899FF>(\d+\.\d+%)</color>的回復效果。$"="Increase Healing Bonus, Shield Effect by <color\=#2899FF>$1</color>. \nAura: Increase all allies' DEF by <color\=#2899FF>$2</color> when Wonder is present. When using a skill on allies, the main target restore <color\=#2899FF>$3</color> Max HP."
 湧動迴響晶石=Surge Echoes crystal
 僅可消耗湧動迴響晶石=Only use Surge Echoes crystal
+機械處刑者=<size\=22>Mechanical Executioner</size>
+【超頻爆發】=[Overclock Burst]
+超頻爆發=Overclock Burst
+r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，\n光環：WONDER在場時使所有怪盜提升<color\=#2899FF>(\d+)</color>點攻擊力。\n根據進入戰鬥時的人格面具獲得相應屬性傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，其他怪盜獲得相當於前者(\d+%)的效果。$"="Increase ATK by <color\=#2899FF>$1</color>. \nAura: Increase all allies' ATK by <color\=#2899FF>$2</color> when Wonder is present. \nIncrease Elemental DMG by <color\=#2899FF>$3</color> based on your starting Persona, other allies gain $4 of this effect."
+僅可消耗機械處刑者晶石=Only use Mechanical Executioner crystal
 遠古力場=<size\=22>Ancient Force Field</size>
 【自然之力】=[Force of Nature]
 自然之力=Force of Nature
 r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。使敵人附著元素異常時使自身攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，2回合。造成元素異常時，效果命中提高<color\=#2899FF>(\d+\.\d+%)</color>。\n攻擊敵人時，使敵人防禦力降低<color\=#2899FF>(\d+\.\d+%)</color>，2回合。敵人每有一種元素異常狀態，額外觸發1次該效果，最多疊加4層。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase ATK by <color\=#2899FF>$2</color> for 2 turns after inflicting Elemental Ailments. Increase Effect Hit Rate by <color\=#2899FF>$3</color> when inflicting Elemental Ailments. When attacking an enemy, decrease their DEF by <color\=#2899FF>$4</color> for 2 turns. For each Elemental Ailments that enemy has, trigger this effect again, up to 4 times."
 遠古力場晶石=<size\=16>Ancient Force Field crystal</size>
 僅可消耗遠古力場晶石=Only use Ancient Force Field crystal
+結晶遺藏=<size\=25>Crystalline Relic</size>
+【聖眷餘音】=[Holy Aftersound]
+聖眷餘音=Holy Aftersound
+r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，\n祝福屬性傷害提升、治療效果提升<color\=#2899FF>(\d+\.\d+%)</color>。\n回合開始時，為1名怪盜提供祝福效果並為其提供傷害加成<color\=#2899FF>(\d+\.\d+%)</color>；如果這名怪盜是祝福屬性怪盜，則額外獲得祝福傷害加成<color\=#2899FF>(\d+\.\d+%)</color>。\n此後每2回合觸發一次相同效果。$"="Increase ATK by <color\=#2899FF>$1</color> and increase Bless DMG, Healing Effect by <color\=#2899FF>$2</color>. \nAt the start of your turn, give 1 ally Blessed and increase their DMG Bonus by <color\=#2899FF>$3</color>; If that ally is a Bless thief, increase their Bless DMG Bonus by <color\=#2899FF>$4</color>. \nThis effect will trigger every 2 turns."
+僅可消耗結晶遺藏晶石=Only use Crystalline Relic crystal
 極晝=Midnight Sun
 致命匕首=<size\=30>Deadly Dagger</size>
 烏茲鋼刀=<size\=24>Wootz Steel Knife</size>
@@ -70,7 +80,7 @@ r:"^最大生命值提升<color\=#2899FF>(\d+\.\d+%)</color>。處於<link\="s\|
 忍具·天與刃翼=Shinobi Tool: Winged Sky Blade
 【影舞】=[Shadow Dance]
 影舞=Shadow Dance
-r:"^速度提升<color\=#2899FF>(\d+\.\d+)</color>。每擊破2個『破綻』，額外獲得<color\=#2899FF>(\d+)</color>份『情報』；同時全體夥伴獲得<color\=#2899FF>(\d+\.\d+%)</color>的傷害提升，持續1回合。『情報』上限層數提升至<color\=#2899FF>(\d+)</color>層。$"="Increase SPD by <color\=#2899FF>$1</color>. For every 2 [Vulnerability] broken, gain <color\=#2899FF>$2</color> extra stacks of [Intel] and increase all allies's DMG Dealy by <color\=#2899FF>$3</color> for 1 turn. Increase the cap of Intel to <color\=#2899FF>$4</color>."
+r:"^速度提升<color\=#2899FF>(\d+\.\d+)</color>。每擊破2個『破綻』，額外獲得<color\=#2899FF>(\d+)</color>份『情報』；同時全體夥伴獲得<color\=#2899FF>(\d+\.\d+%)</color>的傷害提升，持續1回合。『情報』上限層數提升至<color\=#2899FF>(\d+)</color>層。$"="Increase SPD by <color\=#2899FF>$1</color>. For every 2 [Vulnerability] broken, gain <color\=#2899FF>$2</color> extra stacks of [Intel] and increase all allies's DMG Dealt by <color\=#2899FF>$3</color> for 1 turn. Increase the cap of Intel to <color\=#2899FF>$4</color>."
 
 ----------
 LIMITED 5 STAR WEAPONS
