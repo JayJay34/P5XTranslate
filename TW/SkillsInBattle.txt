@@ -14,6 +14,9 @@ r:"面具(.*)級時可解鎖"=Unlocks when this persona is LV.$1
 戰鬥技巧=Combat Skills
 sr:"(.*?) Lv.(\d+)"=$1 Lv.$2
 sr:"(.*?) <color\=#0F69CB>Lv.(\d+)</color>"=$1 <color\=#0F69CB>Lv.$2</color>
+基礎數值=Base Stats
+狀態資訊=Status Information
+技能效果=Skill Effect
 
 // Elemental & Psychological Ailments //
 
@@ -89,8 +92,8 @@ r:"^對1名敵人造成\<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的<color\=#
 r:"^使<color\=#FFFF00>1名</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值，同伴生命值低於(\d+%)則治療效果提升(\d+%)。$"="Restores $1 ATK + $2 HP to <color\=#FFFF00>1</color> ally, increases healing by $4 if the target is under $3 HP."
 r:"^使1名同伴恢復<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力\+<color\=#FFFC40>(\d+)</color>的生命值。目標生命值低於(\d+%)時，治療效果提升<color\=#FFFC40>(\d+%)</color>。$"="Restores <color\=#FFFC40>$1</color> ATK + <color\=#FFFC40>$2</color> HP to an ally. Increases healing by <color\=#FFFC40>$4</color> if the target is under $3 HP."
 
-r:"^使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值，對主要目標同伴造成的治療效果提升(\d+%)。$"="Restores $1 ATK + $1 HP to <color\=#FFFF00>all</color> allies, increase healing by $3 to the main target."
-r:"^使所有同伴恢復<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力\+<color\=#FFFC40>(\d+)</color>的生命值，對主要目標同伴的治療效果提升<color\=#FFFC40>(\d+%)</color>。$"="Restores <color\=#FFFC40>$1</color>ATK + <color\=#FFFC40>$2</color> HP to all allies, increase healing by <color\=#FFFC40>$3</color> to the main target."
+r:"^使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值，對主要目標同伴造成的治療效果提升(\d+%)。$"="Restores $1 ATK + $1 HP to <color\=#FFFF00>all</color> allies, increases healing by $3 to the main target."
+r:"^使所有同伴恢復<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力\+<color\=#FFFC40>(\d+)</color>的生命值，對主要目標同伴的治療效果提升<color\=#FFFC40>(\d+%)</color>。$"="Restores <color\=#FFFC40>$1</color>ATK + <color\=#FFFC40>$2</color> HP to all allies, increases healing by <color\=#FFFC40>$3</color> to the main target."
 
 r:"^使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值，使<color\=#FFFF00>所有</color>同伴的攻擊力提升(\d+\.\d+%)。$"="Restores $1 ATK + $2 HP to <color\=#FFFF00>all</color> allies, increases <color\=#FFFF00>all</color> ally's ATK by $3."
 
@@ -142,10 +145,10 @@ r:"^對<color\=#FFFF00>(\d+)名</color>敵人造成(\d+\.\d+%)最大生命值的
 sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的冰凍屬性傷害，並有<color\=#FFFC40>(\d+%)</color>的基礎機率使敵人陷入<link\="s\|103"><u>(.*)</u></link>狀態。$"="Deals <color\=#FFFC40>$1</color> Max HP Ice damage to 1 enemy, with a <color\=#FFFC40>$2</color> base chance to inflict <link\="s|103"><u>$3</u></link>."
 
 sr:"^對<color\=#FFFF00>(\d+)名</color>敵人造成(\d+\.\d+%)最大生命值的物理屬性傷害，並降低目標敵人(\d+\.\d+%)防禦力，效果持續2回合，處於『(.*)』下該效果提升至(\d+\.\d+%)。$"="Deals $2 Max HP Physical damage to <color\=#FFFF00>$1</color> enemy and decreases their DEF by $3 for 2 turns, increases the effect to $5 when in [$4]."
-sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的物理屬性傷害，並使目標敵人的防禦力降低<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。處於<link\="s\|151"><u>『(.*)』</u></link>狀態下時，防禦力降低值提升至<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Deals <color\=#FFFC40>$1</color> Max HP Physical damage to 1 enemy, decrease the target's DEF by <color\=#FFFC40>$2</color> for 2 turns. When in the <link\="s|151"><u>[$3]</u></link> state, increase the DEF down debuff to <color\=#FFFC40>$4</color>."
+sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的物理屬性傷害，並使目標敵人的防禦力降低<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。處於<link\="s\|151"><u>『(.*)』</u></link>狀態下時，防禦力降低值提升至<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Deals <color\=#FFFC40>$1</color> Max HP Physical damage to 1 enemy, decrease the target's DEF by <color\=#FFFC40>$2</color> for 2 turns. When in the <link\="s|151"><u>[$3]</u></link> state, increases the DEF down debuff to <color\=#FFFC40>$4</color>."
 
 r:"^使<color\=#FFFF00>所有</color>同伴的最大生命值提升，數值相當於加納駿最大生命值的(\d+%)（最多計入(\d+)點最大生命值），同時自身受到攻擊的機率大幅提升，效果持續2回合。回復所有同伴生命值，數值相當於加納駿最大生命值的(\d+\.\d+%)。$"="Increases <color\=#FFFF00>all</color> ally's Max HP based on $1 of Shun Kano Max HP (up to $2 Max HP), increases the chance of being attacked for 2 turns. Restores all allies' HP equal to $3 of Shun Kano Max HP."
-r:"^使所有同伴的最大生命值提升，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+%)</color>（最多計入<color\=#FFFC40>(\d+)</color>點最大生命值），同時自身受到攻擊的機率大幅提升，效果持續2回合。回復所有同伴生命值，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d+%)</color>。\n冷卻時間：1回合。$"="Increases all allies' Max HP equal to <color\=#FFFC40>$1</color> of Shun Kano Max HP (Up to <color\=#FFFC40>$2</color> Max HP), increases the chance of being attacked for 2 turns. Restores all allies' HP equal to <color\=#FFFC40>$1</color> of Shun Kano Max HP. \nCooldown: 1 turn."
+r:"^使所有同伴的最大生命值提升，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+%)</color>（最多計入<color\=#FFFC40>(\d+)</color>點最大生命值），同時自身受到攻擊的機率大幅提升，效果持續2回合。回復所有同伴生命值，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d+%)</color>。\n冷卻時間：1回合。$"="Increases all allies' Max HP equal to <color\=#FFFC40>$1</color> of your Max HP (Up to <color\=#FFFC40>$2</color> Max HP), increases the chance of being attacked for 2 turns. Restores all allies' HP equal to <color\=#FFFC40>$1</color> of your Max HP. \nCooldown: 1 turn."
 
 受攻擊後獲得，回合結束消耗『荒野救星』恢復已損生命值=Gain after attacked. At the end of your turn, consume [Wilderness Savior] and restore HP
 受攻擊機率大幅提升=Heavily increase the chance of getting attacked
@@ -166,12 +169,12 @@ Wind - Riko Tanemura
 ----------
 
 r:"^使<color\=#FFFF00>所有</color>敵人防禦力降低(\d+\.\d+%)，若理子速度大於100點，每超過10點防禦力額外降低(\d+\.\d+%)，最多額外降低(\d+\.\d+%)，持續2回合；同時使主目標暴露『破綻』。$"="Decrease the DEF of <color\=#FFFF00>all</color> enemies by $1 for 2 turns, increase the DEF down debuff by $2 for every 10 SPD you have that's over 100, up to a cap of $3; Expose a [Vulnerability] on the main target."
-sr:"^準備時間：4次行動\n使所有敵人防禦力降低<color\=#FFFC40>(\d+\.\d+%)</color>，若理子速度大於100點，每超過10點，防禦力額外降低(\d+\.\d+%)，最多額外降低<color\=#FFFC40>(\d+\.\d+%)</color>，持續2回合；同時使主目標暴露<link\="s\|188"><u>『(.*)』</u></link>。$"="Preparation Time: 4 Actions\nDecrease the DEF of all enemies by <color\=#FFFC40>$1</color> for 2 turns, increase the DEF down debuff by $2 for every 10 SPD you have that's over 100, up to a cap of <color\=#FFFC40>$3</color>; Expose a <link\="s|188"><u>[$4]</u></link> on the main target."
+sr:"^準備時間：4次行動\n使所有敵人防禦力降低<color\=#FFFC40>(\d+\.\d+%)</color>，若理子速度大於100點，每超過10點，防禦力額外降低(\d+\.\d+%)，最多額外降低<color\=#FFFC40>(\d+\.\d+%)</color>，持續2回合；同時使主目標暴露<link\="s\|188"><u>『(.*)』</u></link>。$"="Preparation Time: 4 Actions\nDecreases the DEF of all enemies by <color\=#FFFC40>$1</color> for 2 turns, increases the DEF down debuff by $2 for every 10 SPD you have that's over 100, up to a cap of <color\=#FFFC40>$3</color>; Exposes a <link\="s|188"><u>[$4]</u></link> on the main target."
 
 r:"^使<color\=#FFFF00>所有</color>敵人受到的傷害提升(\d+\.\d+%)，持續2回合；\n友方怪盜削減倒地值或完成擊倒時，該技能準備時間減少1次行動，技能準備時間為0次行動時立即自動釋放1次。$"="Increase the DMG Taken of <color\=#FFFF00>all</color> enemies by $1 for 2 turns. \nWhen an ally decreases Knockdown Count or downs an enemy, reduce this skill's Preparation Time by 1 action; Automatically use this skill once when its Preparation Time reaches 0."
 r:"^準備時間：8次行動\n使所有敵人受到的傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續2回合。\n友方怪盜削減倒地值或完成擊倒時，釋放該技能後所需的準備時間減少1次行動；所需的準備時間減至0次行動時，理子立即自動釋放一次該技能。$"="Preparation Time: 8 Actions\nIncrease the DMG Taken of all enemies by <color\=#FFFC40>$1</color> for 2 turns. \nWhen an ally decreases Knockdown Count or downs an enemy, reduce this skill's Preparation Time by 1 action; Automatically use this skill once when its Preparation Time reaches 0."
 
-r:"^消耗所有『情報』使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)的生命值並獲得『傲放』。『傲放』：造成傷害提升(\d+\.\d+%)，消耗的每份『情報』提供額外的造成傷害提升（若理子速度大於100點，每超過10點，造成傷害提升(\d+\.\d+%)，最多提升(\d+\.\d+%)），持續1回合。$"="Consume all [Intel] to give <color\=#FFFF00>all</color> allies [Pride] and restore $1 HP to the main target. Pride: Increase DMG Dealt by $2  for 1 turn. Increase the DMG Dealt buff with every [Intel] consumed (Increase DMG Dealt by $3 for every 10 SPD you have that's over 100, up to a cap of $4)."
+r:"^消耗所有『情報』使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)的生命值並獲得『傲放』。『傲放』：造成傷害提升(\d+\.\d+%)，消耗的每份『情報』提供額外的造成傷害提升（若理子速度大於100點，每超過10點，造成傷害提升(\d+\.\d+%)，最多提升(\d+\.\d+%)），持續1回合。$"="Consumes all [Intel] to give <color\=#FFFF00>all</color> allies [Pride] and restores $1 HP to the main target. Pride: Increases DMG Dealt by $2  for 1 turn. Increases the DMG Dealt buff with every [Intel] consumed (Increase DMG Dealt by $3 for every 10 SPD you have that's over 100, up to a cap of $4)."
 
 
 sr:"^準備時間：8次行動（<link\="s\|187"><u>『(.*)』</u></link>數量低於5層時不能使用）\n消耗所有<link\="s\|187"><u>『(.*)』</u></link>使所有同伴獲得『傲放』並使主目標恢復<color\=#FFFC40>(\d+\.\d+%)</color>的生命值。『傲放』：造成傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，消耗的每份<link\="s\|187"><u>『(.*)』</u></link>提供額外的傷害提升（若理子速度大於100點，每超過10點，造成傷害提升(\d+\.\d+%)，最多提升<color\=#FFFC40>(\d+\.\d+%)</color>），持續1回合。$"="Preparation Time: 8 Actions (Cannot be used when you have less than 5 stacks of <link\="s|187"><u>[$1]</u></link>)\nConsume all <link\="s|187"><u>[$2]</u></link> to give all allies [Pride] and restore <color\=#FFFC40>$3</color> HP to the main target. Pride: Increase DMG Dealt by <color\=#FFFC40>$4</color>  for 1 turn. Increase the DMG Dealt buff with every <link\="s|187"><u>[$5]</u></link> consumed (Increase DMG Dealt by $6 for every 10 SPD you have that's over 100, up to a cap of <color\=#FFFC40>$7</color>)."
@@ -194,6 +197,23 @@ sr:"^<color\=#FF0000>(.*)</color>的『破綻』被擊破……$"="<size\=25><co
 Combat Pop-ups
 r:"^破<color\=#000000>綻</color>$"="<size\=15> </size>V<color\=#000000>ul</color>nerability"
 
+----------
+Mont - Kotone Montagne
+----------
+
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害，(\d+\.\d+%)基礎機率使敵人凍結。$"="Deals $1 ATK Ice damage to <color\=#FFFF00>all</color> enemies, with a $2 base chance to inflict Freeze."
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，有<color\=#FFFC40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s\|103"><u>凍結</u></link>狀態。$"="Deals <color\=#FFFC40>$1</color> ATK Ice damage to all enemies, with a <color\=#FFFC40>$2</color> base chance to inflict <link\="s|103"><u>Freeze</u></link>."
+
+sr:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害，獲得4顆『(.*)』。$"="Deals $1 ATK Ice damage to <color\=#FFFF00>1</color> enemy and gains 4 [$2]."
+sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，並獲得<link\="s\|119"><u>『(.*)』</u></link>4顆。$"="Deals <color\=#FFFC40>$1</color> ATK Ice damage to 1 enemy and gains 4 <link\="s|119"><u>[$2]</u></link>."
+
+sr:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害，10層『(.*)』時基於敵人的已損生命值最多提升(\d+\.\d+%)傷害。$"="Deals $1 ATK Ice damage to <color\=#FFFF00>1</color> enemy, increase damage up to $3 base on the enemy's missing HP if you have 10 stacks of [$2]."
+sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，如果<link\="s\|119"><u>『(.*)』</u></link>數量為10則該技能獲得額外傷害提升。敵人生命值越低，則傷害提升越高，最多提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Deals <color\=#FFFC40>$1</color> ATK Ice damage to 1 enemy, increases damage if you have 10 <link\="s|119"><u>[$2]</u></link>. The lower the enemy's HP is, the higher the damage will be, up to a maximum of <color\=#FFFC40>$3</color>."
+
+冰晶數目=Number of Ice Crystal(s)
+
+Combat Pop-ups
+r:"^冰<color\=#000000>晶</color>$"="<size\=5> </size>Ic<color\=#000000>e</color> Crystal"
 
 //////////////////////////////
 /// c. RIN - Yaoling Li //////
@@ -213,25 +233,6 @@ sr:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒�
 
 In-Battle Quotes
 <color\=#FF0000>李瑤鈴</color>獲得了孟婆湯……=<color\=#FF0000>Yaoling Li</color> gained Meng Po Soup!
-
-/////////////////////////////////
-/// d. MONT - Montagne Kotone ///
-/////////////////////////////////
-
-// Passive
-// Skill 1: 
-// Skill 2: 
-// Skill 3: 
-// Skill 4: Combat Skills
-// Potential Passives
-
-// Awareness 0
-// Awareness 1
-// Awareness 2
-// Awareness 3
-// Awareness 4
-// Awareness 5
-// Awareness 6
 
 /////////////////////////////////
 ///// e. JOKER - Amamiya Ren ////
@@ -649,6 +650,7 @@ r:"防禦力提升(\d+)$"="Increase DEF by $1"
 r:"^造成傷害提升$"="<size\=30>Increase DMG Dealt</size>"
 r:"傷害提升(\d+%)$"="Increase DMG Dealt by $1"
 r:"^造成的傷害提升(\d+\.\d+%)$"="Increase DMG Dealt by $1"
+r:"^凍結傷害提升(\d+\.\d+%)$"="Increase Ice DMG by $1"
 
 r:"^防禦力降低(\d+\.\d+%)$"="Decrease DEF by $1"
 r:"^受到的傷害提升(\d+\.\d+%)$"="Increase DMG Taken by $1"
