@@ -242,6 +242,9 @@ City UI
 殘寶檢測儀·虛榮=Treasure Seeker - Vanity
 r:"^工作臺合成（可合成：(\d+)個）$"="Workbench crafting (Available: $1)"
 
+r:"^渡<color\=#ff0000ff>來</color>軒$"="As<color\=#ff0000ff>sh</color>ouken"
+r:"^渡來軒$"="Asshouken"
+
 社<color\=#ff0000ff>團</color>佈告欄=Cl<color\=#ff0000ff>ub</color> Bulletin Board
 教<color\=#ff0000ff>學</color>樓=Cl<color\=#ff0000ff>as</color>sroom Building
 一樓走廊=1F Corridor
@@ -444,23 +447,25 @@ r:"怪盜(\d+)級時可繼續提升"=Skill can level up at Lv $1
 
 // Wonder Skill Tree //
 
-r:"提升(\d+)生命值。"=Increases HP by $1
-r:"提升(\d+)攻擊力。"=Increases ATK by $1
-r:"提升(\d+)防禦力。"=Increases DEF by $1
+r:"^提升(\d+)生命值。$"="Increase HP by $1"
+r:"^提升(\d+)攻擊力。$"="Increase ATK by $1"
+r:"^提升(\d+)防禦力。$"="Increase DEF by $1"
 
-r:"提升(\d+)%攻擊力。"=Increases ATK% by $1%
-r:"提升(\d+)%暴擊率。"=Increases CRIT Rate by $1%
-r:"提升(\d+)%暴擊效果。"=Increases CRIT DMG by $1%
+r:"^提升(\d+%)攻擊力。$"="Increase ATK% by $1"
+r:"^提升(\d+%)暴擊率。$"="Increase CRIT Rate by $1"
+r:"^提升(\d+%)暴擊效果。$"="Increase CRIT DMG by $1"
 
-r:"提升(\d+)%生命值。"=Increases HP% by $1%
-r:"提升(\d+\.\d)%治療效果。"=Increases Healing Effect by $1%
-r:"提升(\d+)%效果命中。"=Increases Effect Hit Rate by $1%
+r:"^提升(\d+%)生命值。$"="Increase HP% by $1"
+r:"^提升(\d+%)治療效果。$"="<size\=26>Increase Healing Effect by $1</size>"
+r:"^提升(\d+\.\d%)治療效果。$"="<size\=26>Increase Healing Effect by $1</size>"
+r:"^提升(\d+%)效果命中。$"="<size\=26>Increase Effect Hit Rate by $1</size>"
 
-r:"提升(\d+)%防禦力。"=Increases DEF% by $1%
-r:"提升(\d+\.\d)%護盾效果。"=Increases Shield Effect by $1%
-r:"提升(\d+)%效果抵抗。"=Increases Effect RES by $1%
+r:"^提升(\d+%)防禦力。$"="Increase DEF% by $1"
+r:"^提升(\d+%)護盾效果。$"="<size\=26>Increase Shield Effect by $1</size>"
+r:"^提升(\d+\.\d%)護盾效果。$"="<size\=26>Increase Shield Effect by $1</size>"
+r:"^提升(\d+%)效果抵抗。$"="Increase Effect RES by $1"
 
-ONEMORE、HIGHLIGHT、近戰攻擊、槍械效果提升。=Increase ONE MORE, HIGHLIGHT, Melee and Gun DMG
+r:"^ONEMORE、HIGHLIGHT、近戰攻擊、槍械效果提升。$"="<size\=26>Increase One More, HIGHLIGHT, Melee and Gun DMG</size>"
 r:"人格面具所有習得主動技能等級額外提升(\d+)級。"=All acquired Persona skills\nIncrease by $1 levels
 r:"人格面具特色主動技能等級額外提升(\d+)級。"=All innate Persona skills\nIncrease by $1 levels
 
@@ -470,6 +475,8 @@ r:"需要主角等級達到(\d+)級。"=This upgrade unlocks when\nWonder reache
 r:"需要(\d+)<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>才可以升級天賦。"=Requires $1<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>to upgrade this \nskill.
 r:"需要(\d+)<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>才可以啟動天賦。"=Requires $1<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>to activate this \nskill.
 獲取更多靈感點=Get Inspiration
+
+r:"^提升(\d+)生命值。\n提升(\d+)攻擊力。\n提升(\d+)防禦力。$"="Increase HP by $1 \nIncrease ATK by $2 \nIncrease DEF by $3"
 
 // INSPIRATION TUTORIAL //
 『靈感』說明=Inspiration
@@ -1004,6 +1011,8 @@ sr:"人格指數「(.*)」達到(\d+)級解鎖$"="Unlock when $1 reached rank $2
 要在這家藥妝店打工嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to work part-time \nat this Drug Store?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
 
 去炸物專賣店打工=<size\=24>Work part-time\nat a Fried Food Store</size>
+
+在渡來軒打工=<size\=24>Work part-time\nat Asshouken</size>
 
 由於掌握了打工『觀察的心得』，因此獲得了額外收益。=<size\=28>Because I have mastered Observation Insights, I have gained more Social Stats.</size> 
 由於掌握了打工『觀察的心得』,掌握了打工『服務的心得』，因此獲得了額外收益。=<size\=25>Because I have mastered Observation Insights and Service Insights, \nI have gained more Social Stats.</size> 
