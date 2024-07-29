@@ -36,6 +36,7 @@ r:"更新本地文件\((\d+)\/(\d+)\)"=<b>Applying Update ($1/$2)</b>
 配音語言=Dubbing Language
 日文配音=Japanese
 中文配音=Mandarin
+提示=Tips
 
 ---------------------------
 --- II. Character Names ---
@@ -83,13 +84,18 @@ r:"^富<color\=#ff0000ff>山</color> 佳代$"="Ka<color\=#ff0000ff>yo</color> To
 佐原海夕=Miyu Sahara
 藤川雪實=Yukimi Fujikawa 
 黑谷清=Kiyoshi Kurotani
+黑谷=Kurotani
 r:"^黑<color\=#ff0000ff>谷</color> 清$"="Ki<color\=#ff0000ff>yo</color>shi Kurotani"
 YUI=YUI
 宮下美波=Minami Miyashita
 長尾千津子=Chizuko Nagao
 椎名悠美=Yumi Shiina
+椎名=Shiina
+悠美=Yumi
 r:"^椎<color\=#ff0000ff>名</color>悠美$"="Yu<color\=#ff0000ff>mi</color> Shiina"
 坂井綾香=Ayaka Sakai
+坂井=Sakai
+綾香=Ayaka
 r:"^坂<color\=#ff0000ff>井</color>綾香$"="A<color\=#ff0000ff>ya</color>ka Sakai"
 
 // Original Phantom Thieves //
@@ -177,11 +183,11 @@ CV.種崎敦美=CV.Atsumi Tanezaki
 
 // Important Consumables //
 定製武器配裝=3* Weapon Box
-濃縮咖啡=Stamina Drink
-用於提升體力的補給飲料，使用後立即恢復60體力。=Recovers 60 stamina points immediately. \n\n1 Stamina is naturally recovered every 6 minutes. Stamina points cap at 180, and are important for strengthening characters.
+濃縮咖啡=Espresso
+用於提升體力的補給飲料，使用後立即恢復60體力。=Restores 60 Stamina Points immediately.
 由口味醇正的夏威夷咖啡豆研磨沖泡而成，芬芳四溢，對消除疲憊感有強力效果。=Brewed from ground Hawaiian coffee beans, it is aromatic and has a powerful effect on eliminating fatigue.
 能量飲料=Energy Drink
-用於提升能量的補給飲料，使用後立即恢復5行動力。=Recovers 5 Energy Points immediately.\n\nNaturally recovers 5 points daily. Energies are used for part-time jobs, as well as activities that affect your social growth and confidants.
+用於提升能量的補給飲料，使用後立即恢復5行動力。=Restores 5 Energy Points immediately.
 能夠迅速補充人體水分和電解質的運動能量飲料，對迅速恢復身體機能有強力效果。=A sports energy drink that quickly replenishes the body with water and electrolytes for a powerful recovery effect.
 
 請在以下列表中點擊選擇一位4星怪盜。=Select one of the 4-star characters in the list below.
@@ -486,9 +492,12 @@ r:"^提升(\d+)生命值。\n提升(\d+)攻擊力。\n提升(\d+)防禦力。$"=
 
 潛能=<size\=16>Potential</size>
 意識=<size\=15>Awareness</size>
+進化效果=<size\=19>Evolve Effect</size>
 突破=<size\=19>Enhance</size>
 改造=<size\=19>Reform</size>
 突破=<size\=19>Enhance</size>
+
+r:"^怪盜等級上限提升至<color\=#FFF000>LV.(\d+)</color>$"="Increase max level to <color\=#FFF000>Lv.$1</color>"
 
 //////////////////////////////
 /// d. Guild / Paradise //////
@@ -796,6 +805,8 @@ r:"(\d+)\/(\d+)頁"=Page $1 / $2
 勇氣=Guts
 體貼=Kindness
 靈巧=Proficiency
+sr:"^<color\=#FFC000>(.*)</color>的協同者等級可提升至Rank(\d+)$"="Can rank up <color\=#FFC000>$1</color> to rank $2"
+sr:"^<color\=#FFC000>(.*)</color>、<color\=#FFC000>(.*)</color>的協同者等級可提升至Rank(\d+)$"="Can rank up <color\=#FFC000>$1</color>, <color\=#FFC000>$2</color> to rank $3"
 
 協同者RANK暫時無法提升=Cannot Rank Up
 解鎖條件=<size\=30>Conditions</size>
@@ -955,12 +966,20 @@ sr:"完成與(.*)的關係加深約會"=Hang out with $1
 願與你迎來黎明=<size\=18>Greet Dawn Star with You</size>
 解鎖歌曲Wonder Light=Unlock the song Wonder Light
 
-當前已設置密友，要更換嗎？=You have already set a favourite, \ndo you want to change it?
+用於提升與協同者的親密度。=Used for granting Confidant Points \nwith a Confidant.
 
-和素羽一起度過放學後的時光吧=Let's spend some time with Motoha after school.
+r:"^作為禮物贈與協同者，可提升(\d+)點親密度，首次贈送額外增加(\d+)點親密度，『喜愛之物』額外增加(\d+)點親密度。$"="<size\=23>\nGrants $1 Confidant Points. \nFirst time bonus grants $2 Confidant Points. \n[Favourite Items] grants $3 Confidant Points.</size>"
+
+sr:"^說起來，\n手上正好有(.*)會喜歡的東西……$"="Speaking of, I've got just the thing $1 likes..."
+要送出去嗎？=Want to give them a gift?
+r:"^親密度\+(\d+)\n首次贈送額外\+(\d+)\n『喜愛之物』額外\+(\d+)。$"="Confidant Points +$1\nFirst Time Bonus +$2\n[Favourite Items] +$3"
+確定這次約會不送禮物嗎？=Are you sure you do not want to give them a gift?
+
+當前已設置密友，要更換嗎？=You have already set a favourite, \ndo you want to change it?
 
 sr:"^和(.*)的關係就要加深了……$"="The bond with $1 \nis about to deepen!"
 
+和素羽一起度過放學後的時光吧=Let's spend some time with Motoha after school
 sr:"^你怎麼想，要陪(.*)共度時光嗎？$"="What do you think? \nWant to spend time with $1?"
 sr:"^你怎麼想，要花時間陪一下(.*)嗎？$"="What do you think? \nWant to spend some time with $1?"
 
@@ -1018,11 +1037,17 @@ sr:"人格指數「(.*)」達到(\d+)級解鎖$"="Unlock when $1 reached rank $2
 由於掌握了打工『觀察的心得』，因此獲得了額外收益。=<size\=28>Because I have mastered Observation Insights, I have gained more Social Stats.</size> 
 由於掌握了打工『觀察的心得』,掌握了打工『服務的心得』，因此獲得了額外收益。=<size\=25>Because I have mastered Observation Insights and Service Insights, \nI have gained more Social Stats.</size> 
 
-陽菜的星空探險=<size\=24>Haruna's starry \nsky adventure</size>
+陽菜的星空探險=<size\=24>Haruna's Starry\nSky Adventure</size>
 今天探險嗎？=<size\=24>Going on an adventure today?</size>
+陽菜的遊樂場探險=<size\=24>Haruna's Amusement\nPark Adventure</size>
+要陪西森陽菜探險嗎(<color\=#ff0000>消耗1點行動力</color>)？=<size\=30>Do you want to accompany Haruna Nishimori on her adventure? (<color\=#ff0000>Spend 1 Energy Point</color>)</size> 
+
+阿七的遊戲=<size\=24>Game from Mascot</size>
+和阿七聊聊=Talk to the mascot
+要參與阿七的遊戲嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to play the mascot's game? (<color\=#ff0000>Spend 1 Energy Point</color>)
 
 和素羽出去玩吧=<size\=24>Hang out with\nMotoha</size>
-sr:"^和(.*)一起度過$"=<size\=24>Hang out with\n$1</size>
+sr:"^和(.*)一起度過$"="<size\=24>Hang out with\n$1</size>"
 與朋子一起度過放學後的時間吧=Let's spend time \nwith Tomoko after school 
 和加納駿一起度過=<size\=24>Hang out with\nShun Kano</size>
 和清一起度過=<size\=24>Hang out with\nKiyoshi</size>
