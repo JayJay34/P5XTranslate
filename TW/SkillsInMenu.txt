@@ -19,6 +19,9 @@ sr:"(.*?) <color\=#0F69CB>Lv.(\d+)</color>"=$1 <color\=#0F69CB>Lv.$2</color>
 
 <color\=#66ccff>精神異常</color>=<color\=#66ccff>Mental Ailment</color>
 <color\=#66ccff>元素異常</color>=<color\=#66ccff>Elemental Ailment</color>
+<color\=#66ccff>追加效果</color>=<color\=#66ccff>Follow Up</color>
+r:"^追加效果$"="Follow Up"
+滿足特定條件便可以觸發的效果。=An effect that can be triggered when certain conditions are met.
 
 <color\=#66ccff>燃燒</color>=<color\=#FF8C35>Burn</color>
 <color\=#66ccff>凍結</color>=<color\=#DFFFFF>Freeze</color>
@@ -381,6 +384,9 @@ r:"^勝利的氣息(.*)$"=Breath of Victory $1
 ----------
 CATTLE - Ruferu
 ----------
+r:"^戰鬥技巧 Lv.(\d+)$"="Combat Skills Lv.$1"
+r:"^戰鬥技巧 <color\=#0F69CB>Lv.(\d+)</color>$"="Combat Skills <color\=#0F69CB>Lv.$1</color>"
+sr:"^『(.*)』、『(.*)』的技能等級提升2級，至多提升至15級。$"="[$1], [$2] level +2, up to a maximum of level 15."
 
 主動治療時為同伴附加『星之火』效果，使同伴獲得屬性提升效果。=When healing, give your ally [Starfire], increasing their attributes.
 雀躍火梟=<size\=25>Caper Fire Owl</size>
@@ -399,37 +405,36 @@ r:"^使1名同伴恢復<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力\+<color\=#FF
 
 r:"^天使的憐憫 Lv.(\d+)$"="Angel's Mercy Lv.$1"
 r:"^天使的憐憫 <color\=#0F69CB>Lv.(\d+)</color>$"="Angel's Mercy <color\=#0F69CB>Lv.$1</color>"
-r:"^使所有同伴恢復<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力\+<color\=#FFFC40>(\d+)</color>的生命值，對主要目標同伴的治療效果提升<color\=#FFFC40>(\d+%)</color>。\n<b><size\=28><color\=#850101>聖潔的光芒孕育著點點星光，賜予所有同伴不滅的希望，如神鳥般展開雙翅才得以一窺神跡。</color></size></b>$"="Restores <color\=#FFFC40>$1</color>ATK + <color\=#FFFC40>$2</color> HP to all allies, increase healing by <color\=#FFFC40>$3</color> to the main target. \n<b><size\=28><color\=#850101>The holy light of the stars gives all companions an unending hope, spreading its wings like a bird to catch a glimpse of the miracle.</color></size></b>"
+r:"^使所有同伴恢復<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力\+<color\=#FFFC40>(\d+)</color>的生命值，對主要目標同伴的治療效果提升<color\=#FFFC40>(\d+%)</color>。\n<b><size\=28><color\=#850101>聖潔的光芒孕育著點點星光，賜予所有同伴不滅的希望，如神鳥般展開雙翅才得以一窺神跡。</color></size></b>$"="Restores <color\=#FFFC40>$1</color>ATK + <color\=#FFFC40>$2</color> HP to all allies, increases healing by <color\=#FFFC40>$3</color> to the main target. \n<b><size\=28><color\=#850101>The holy light of the stars gives all companions an unending hope, spreading its wings like a bird to catch a glimpse of the miracle.</color></size></b>"
 
 r:"^『ONE MORE』：對1名敵人造成火焰屬性傷害。\n『HIGHLIGHT』：使所有同伴恢復<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力\+<color\=#FFFC40>(\d+)</color>的生命值，並且使所有同伴的攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>，1回合。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[ONE MORE]: Deals Fire damage to 1 enemy. \n[HIGHLIGHT]: Restores <color\=#FFFC40>$1</color> ATK + <color\=#FFFC40>$2</color> HP, increases all ally's ATK by <color\=#FFFC40>$3</color> for 1 turn. \nMelee Attack: Uses a melee weapon to deal light Physical damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
 
 r:"^光明 Lv.(\d+)$"="Radience Lv.$1"
 r:"^使用人格面具技能攻擊敵人時，使隨機<color\=#FFFC40>(\d+)</color>個同伴獲得<link\="s|115"><u>『星之火』</u></link>效果。$"="When using a Persona skill to attack an enemy, make <color\=#FFFC40>$1</color> random ally(s) gain <link\="s|115"><u>[Starfire]</u></link>."
+r:"^使用人格面具技能攻擊敵人時，使隨機<color\=#0169ca>(\d+)</color>個同伴獲得<link\="s|115"><u>『星之火』</u></link>效果。$"="When using a Persona skill to attack an enemy, make <color\=#0169ca>$1</color> random ally(s) gain <link\="s|115"><u>[Starfire]</u></link>."
 
 r:"^希望 Lv.(\d+)$"="Hope Lv.$1"
 r:"^自身最大生命值轉化為治療效果，最多<color\=#FFFC40>(\d+)</color>生命值可以使治療效果提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Increase Healing Effect based on your Max HP, up to a maximum of <color\=#FFFC40>$1</color> HP to increase Healing Effect by <color\=#FFFC40>$2</color>."
+r:"^自身最大生命值轉化為治療效果，最多<color\=#0169ca>(\d+)</color>生命值可以使治療效果提升<color\=#0169ca>(\d+\.\d+%)</color>。$"="Increase Healing Effect based on your Max HP, up to a maximum of <color\=#0169ca>$1</color> HP to increase Healing Effect by <color\=#0169ca>$2</color>."
 
 <color\=#66ccff>『星之火』</color>=<color\=#66ccff>[Starfire]</color>
 通過路菲爾技能附加該狀態，為同伴提供屬性，效果持續1回合。『星之火I』效果結束時升級為『星之火II』。意識等級提升後，可以使『星之火II』效果結束時升級為『星之火III』。『星之火II』、『星之火III』有更強的屬性提升效果。=This state is added through Ruferu's skills, providing buffs to allies for 1 turn. When the effect of [Starfire I] ends, it is upgraded to [Starfire II]. When your Awareness level rises, you can upgrade [Starfire II] to [Starfire III]. [Starfire II] and [Starfire III] have even stronger buff effects.
 
-晝夜顛倒=Day and Night Reversed
-使用治療技能時，使目標同伴獲得『星之火』效果，每個同伴至多擁有一個『星之火』相關效果。\n『星之火I』：攻擊力提升，相當於路菲爾攻擊力的4%（最多提升160攻擊力），效果持續1回合，效果結束時升級為『星之火II』。\n『星之火II』：攻擊力提升，相當於路菲爾攻擊力的8%（最多提升320攻擊力），效果持續1回合。=When you use Healing skills, give the target [Starfire], each ally can only have 1 [Starfire] related effect. \n[Starfire I]: Increase ATK base on 4% of Ruferu's ATK (up to 160 ATK) for 1 turn, upgrade to [Starfire II] when the effect ends. \n[Starfire II]: Increase ATK base on 8% of Ruferu's ATK (up to 320 ATK) for 1 turn.
+晝夜顛倒=Day Night Reversal
+使用治療技能時，使目標同伴獲得『星之火』效果，每個同伴至多擁有一個『星之火』相關效果。\n『星之火I』：攻擊力提升，相當於路菲爾攻擊力的4%（最多提升160攻擊力），效果持續1回合，效果結束時升級為『星之火II』。\n『星之火II』：攻擊力提升，相當於路菲爾攻擊力的8%（最多提升320攻擊力），效果持續1回合。=When you use Healing skills, give the target [Starfire], each ally can only have 1 [Starfire] related effect. \n[Starfire I]: Increase ATK base on 4% of Ruferu's ATK (Up to 160 ATK) for 1 turn, upgrade to [Starfire II] when the effect ends. \n[Starfire II]: Increase ATK base on 8% of Ruferu's ATK (Up to 320 ATK) for 1 turn.
 
 270°旋轉=270° Rotation
 處於任意<link\="s|115"><u>『星之火』</u></link>狀態下的同伴，造成元素異常時，效果命中提升33%。=Allies with <link\="s|115"><u>[Starfire]</u></link> increase Effect Hit Rate by 33% when inflicting Elemental Ailments.
 
 耳羽輕顫=Ear Feather Quiver
-『雀躍火梟』、『希望光束』的技能等級提升2級，至多提升至15級。=[Caper Fire Owl], [Beam of Hope] level +2, up to a maximum of level 15.
 
 獵物現身=Prey Appear
 <link\="s|115"><u>『星之火II』</u></link>獲得額外效果，處於該狀態下的同伴受到治療效果提升10%。=<link\="s|115"><u>[Starfire II]</u></link> gains an additional effect that increases Healing Received by 10%.
 
 無聲偷襲=Silent Ambush
-『天使的憐憫』、『{{A}}』的技能等級提升2級，至多提升至15級。=[Angel's Mercy], [{{A}}] level +2, up to a maximum of level 15.
-『天使的憐憫』、『戰鬥技巧』的技能等級提升2級，至多提升至15級。=[Angel's Mercy], [Combat Skills] level +2, up to a maximum of level 15.
 
 利爪突擊=Claw Assault
-HIGHLIGHT效果提升：使所有同伴造成的火焰屬性傷害提升32%，效果持續1回合=HIGHLIGHT Effect Improvement: Increases Fire damage of all allies by 32% for 1 round.
+HIGHLIGHT效果提升：使所有同伴造成的火焰屬性傷害提升32%，效果持續1回合=HIGHLIGHT Effect Boost: Increases Fire damage of all allies by 32% for 1 round.
 
 滿載而歸=Return Fully Loaded
 <link\="s|115"><u>『星之火II』</u></link>結束時賦予目標『星之火III』。\n『星之火III』：攻擊力提升，相當於路菲爾攻擊力的8%，火焰傷害提升20%，受到治療效果提升10%，效果持續1回合。=<link\="s|115"><u>[Starfire II]</u></link> can be upgraded to [Starfire III]. \n[Starfire III]: Increase ATK base on 8% of Ruferu's ATK, increase Fire damage by 20%, increase Healing Received by 10% for 1 turn.
@@ -447,45 +452,44 @@ CLOSER - Motoha Arai
 
 r:"^雷霆之怒 Lv.(\d+)$"="Thunder's Fury Lv.$1"
 r:"^雷霆之怒 <color\=#0F69CB>Lv.(\d+)</color>$"="Thunder's Fury <color\=#0F69CB>Lv.$1</color>"
-r:"^發射(\d+)道天雷，造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，對技能主目標有100%的基礎機率使其陷入<link\="s\|104"><u>觸電</u></link>狀態。對同一目標的後續攻擊只會造成\<color\=#FFFC40>(\d+%)</color>的傷害，天雷會優先選擇未攻擊過的目標。\n<b><size\=28><color\=#850101>幾道天雷從天而降，以足以擊碎地面的雷霆之力擊向敵人，造成難以想像的電擊傷害。</color></size></b>$"="Shoots $1 thunderbolts, dealing <color\=#FFFC40>$2</color> ATK Electricity damage and has a 100% base chance to inflict <link\="s|104"><u>Shock</u></link> to the skill's main target. Deals <color\=#FFFC40>$3</color> damage when hitting the same target, the thunderbolts will prioritize targets that have not been attacked yet.\n<b><size\=28><color\=#850101>Thunderbolts fall from the sky, striking enemies with enough force to shatter the ground and cause unimaginable electrical damage.</color></size></b>"
+r:"^發射(\d+)道天雷，造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，對技能主目標有100%的基礎機率使其陷入<link\="s\|104"><u>觸電</u></link>狀態。對同一目標的後續攻擊只會造成\<color\=#FFFC40>(\d+%)</color>的傷害，天雷會優先選擇未攻擊過的目標。\n<b><size\=28><color\=#850101>幾道天雷從天而降，以足以擊碎地面的雷霆之力擊向敵人，造成難以想像的電擊傷害。</color></size></b>$"="Shoots $1 thunderbolts, dealing <color\=#FFFC40>$2</color> ATK Electric damage and has a 100% base chance to inflict <link\="s|104"><u>Shock</u></link> to the skill's main target. Deals <color\=#FFFC40>$3</color> damage when hitting the same target, the thunderbolts will prioritize targets that have not been attacked yet.\n<b><size\=28><color\=#850101>Thunderbolts fall from the sky, striking enemies with enough force to shatter the ground and cause unimaginable electrical damage.</color></size></b>"
 
 r:"^超速電擊 Lv.(\d+)$"="<size\=28>Hypervelocity Shock</size> Lv.$1"
 r:"^超速電擊 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=28>Hypervelocity Shock</size> <color\=#0F69CB>Lv.$1</color>"
-r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，並使所有同伴造成的電擊屬性傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。\n<b><size\=28><color\=#850101>從天而降的閃電擊打在敵人身上，並迅速聚攏形成巨大的電球，不消片刻便爆炸造成電擊傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Electricity damage to 1 enemy, increases all ally's Electricity DMG Dealt by <color\=#FFFC40>$2</color> for 2 turns.\n<b><size\=28><color\=#850101>A bolt of lightning from the sky strikes an enemy and quickly gathers to form a giant ball of electricity, which explodes within moments to deal electrical damage.</color></size></b>"
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，並使所有同伴造成的電擊屬性傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。\n<b><size\=28><color\=#850101>從天而降的閃電擊打在敵人身上，並迅速聚攏形成巨大的電球，不消片刻便爆炸造成電擊傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Electric damage to 1 enemy, increases all ally's Electric DMG Dealt by <color\=#FFFC40>$2</color> for 2 turns.\n<b><size\=28><color\=#850101>A bolt of lightning from the sky strikes an enemy and quickly gathers to form a giant ball of Electric, which explodes within moments to deal electrical damage.</color></size></b>"
 
 r:"^電鳴狂鯊 Lv.(\d+)$"="Electric Shark Lv.$1"
 r:"^電鳴狂鯊 <color\=#0F69CB>Lv.(\d+)</color>$"="Electric Shark <color\=#0F69CB>Lv.$1</color>"
-r:"^對所有敵人造成\<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害。若場上存在處於<link\="s\|104"><u>觸電</u></link>狀態的敵人，則對所有敵人造成1次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的額外電擊屬性傷害。\n<b><size\=28><color\=#850101>電流密佈的鯊魚張開滿是利齒的血口，衝向敵人撕咬造成電擊傷害，還有可能使敵人附著元素異常。</color></size></b>$"="Deals <color\=#FFFC40>$2</color> ATK Electricity damage to all enemies. If there is an enemy inflicted with <link\="s|104"><u>Shock</u></link>, then deals another hit of <color\=#FFFC40>$1</color> ATK Electricity damage to all enemies.\n<b><size\=28><color\=#850101>An electric shark opens its bloody, toothy mouth and rushes at enemies, biting them for electrical damage and potentially causing them to attach to an elemental abnormality.</color></size></b>"
+r:"^對所有敵人造成\<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害。若場上存在處於<link\="s\|104"><u>觸電</u></link>狀態的敵人，則對所有敵人造成1次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的額外電擊屬性傷害。\n<b><size\=28><color\=#850101>電流密佈的鯊魚張開滿是利齒的血口，衝向敵人撕咬造成電擊傷害，還有可能使敵人附著元素異常。</color></size></b>$"="Deals <color\=#FFFC40>$2</color> ATK Electric damage to all enemies. If there is an enemy inflicted with <link\="s|104"><u>Shock</u></link>, then deals another hit of <color\=#FFFC40>$1</color> ATK Electric damage to all enemies.\n<b><size\=28><color\=#850101>An electric shark opens its bloody, toothy mouth and rushes at enemies, biting them for electrical damage and potentially causing them to attach to an elemental abnormality.</color></size></b>"
 
-r:"^『ONE MORE』：對1名敵人造成電擊屬性傷害。\n『HIGHLIGHT』：對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，有100%的固定機率使技能主目標進入<link\="s\|104"><u>觸電</u></link>狀態，效果持續2回合。並使其受到的電擊屬性傷害提升(\d+%)，效果持續2回合。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[ONE MORE]: Deals Electricity damage to 1 enemy. \n[HIGHLIGHT]: Deals <color\=#FFFC40>$1</color> ATK Electricity damage to all enemies, there is a 100% fixed chance to inflict the main target with <link\="s|104"><u>Shock</u></link>, and increase thier Electricity DMG Taken by $2 for 2 turns. \nMelee Attack: Uses a melee weapon to deal light Physical damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
+r:"^『ONE MORE』：對1名敵人造成電擊屬性傷害。\n『HIGHLIGHT』：對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，有100%的固定機率使技能主目標進入<link\="s\|104"><u>觸電</u></link>狀態，效果持續2回合。並使其受到的電擊屬性傷害提升(\d+%)，效果持續2回合。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[ONE MORE]: Deals Electric damage to 1 enemy. \n[HIGHLIGHT]: Deals <color\=#FFFC40>$1</color> ATK Electric damage to all enemies, there is a 100% fixed chance to inflict the main target with <link\="s|104"><u>Shock</u></link>, and increase thier Electric DMG Taken by $2 for 2 turns. \nMelee Attack: Uses a melee weapon to deal light Physical damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
 
 r:"^力量 Lv.(\d+)$"="Strength Lv.$1"
 r:"^造成<link\="s\|104"><u>觸電</u></link>效果時，有<color\=#FFFC40>(\d+\.\d+%)</color>固定機率使該效果延長1回合。$"="When inflicting <link\="s|104"><u>Shock</u></link>, there is a <color\=#FFFC40>$1</color> fixed chance to extend the duration by 1 turn."
+r:"^造成<link\="s\|104"><u>觸電</u></link>效果時，有<color\=#0169ca>(\d+\.\d+%)</color>固定機率使該效果延長1回合。$"="When inflicting <link\="s|104"><u>Shock</u></link>, there is a <color\=#0169ca>$1</color> fixed chance to extend the duration by 1 turn."
 
 r:"^守護 Lv.(\d+)$"="Protect Lv.$1"
-r:"^釋放人格面具技能後，使技能主目標受到的電擊屬性傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合，可疊加2層。$"="After using a Persona skill, increase the Electricity DMG Taken of the main target by <color\=#FFFC40>$1</color> for 2 turns, up to 2 stacks."
+r:"^釋放人格面具技能後，使技能主目標受到的電擊屬性傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合，可疊加2層。$"="After using a Persona skill, increase the Electric DMG Taken of the main target by <color\=#FFFC40>$1</color> for 2 turns, up to 2 stacks."
+r:"^釋放人格面具技能後，使技能主目標受到的電擊屬性傷害提升<color\=#0169ca>(\d+\.\d+%)</color>，效果持續2回合，可疊加2層。$"="After using a Persona skill, increase the Electric DMG Taken of the main target by <color\=#0169ca>$1</color> for 2 turns, up to 2 stacks."
 
 進攻的號角=Horn of Offense
-r:"^對敵人造成電擊屬性傷害後，有(\d+%)基礎機率使敵人陷入<link\="s\|104"><u>觸電</u></link>狀態。自身攻擊處於<link\="s\|104"><u>觸電</u></link>狀態的敵人時，攻擊力提升(\d+%)。$"="After dealing Electricity damage to an enemy, there is a $1 chance to inflict <link\="s|104"><u>Shock</u></link>. Increase ATK by $2 when attacking enemies with <link\="s|104"><u>Shock</u></link>."
+r:"^對敵人造成電擊屬性傷害後，有(\d+%)基礎機率使敵人陷入<link\="s\|104"><u>觸電</u></link>狀態。自身攻擊處於<link\="s\|104"><u>觸電</u></link>狀態的敵人時，攻擊力提升(\d+%)。$"="After dealing Electric damage to an enemy, there is a $1 chance to inflict <link\="s|104"><u>Shock</u></link>. Increase ATK by $2 when attacking enemies with <link\="s|104"><u>Shock</u></link>."
 
-失控攔截=Out of Control Intercept
+失控攔截=<size\=30>Out of Control Intercept</size>
 r:"^『雷霆之怒』的段數增加1段，對同一敵人的連續攻擊造成(\d+%)傷害。$"="Increase the number of hits from Thunder's Fury by 1, dealing $1 damage when hitting the same enemy."
 
 全力一擊=Full Blow
-『雷霆之怒』、『超速電擊』的技能等級提升2級，至多提升至15級。=[Thunder's Fury], [Hypervelocity Shock] level +2, up to a maximum of level 15.
 
 時速追逐=Speed Chase
 r:"^受到來自處於<link\="s\|104"><u>觸電</u></link>狀態的敵人的傷害降低(\d+%)。$"="Decrease DMG Taken by $1 when attacked by enemies with <link\="s|104"><u>Shock</u></link>."
 
-無限超越=Infinite Transcendence
-『電鳴狂鯊』、『{{A}}』的技能等級提升2級，至多提升至15級。=[Electric Shark], [{{A}}] level +2, up to a maximum of level 15.
-『電鳴狂鯊』、『戰鬥技巧』的技能等級提升2級，至多提升至15級。=[Electric Shark], [Combat Skills] level +2, up to a maximum of level 15.
+無限超越=<size\=30>Infinite Transcendence</size>
 
 得分！=Score!
-r:"^HIGHLIGHT效果提升：使所有敵人受到的電擊屬性傷害提升(\d+%)，效果持續2回合。$"="HIGHLIGHT Effect Improvement: Increase Electricity DMG Taken of all enemies by $1 for 2 turns."
+r:"^HIGHLIGHT效果提升：使所有敵人受到的電擊屬性傷害提升(\d+%)，效果持續2回合。$"="HIGHLIGHT Effect Boost: Increase Electric DMG Taken of all enemies by $1 for 2 turns."
 
 勝利的果實=Fruits of Victory
-r:"^使場上處於<link\="s\|104"><u>觸電</u></link>狀態的敵人受到的電擊屬性傷害提升(\d+%)。"="Enemies with <link\="s|104"><u>Shock</u></link> increase Electricity DMG Taken by $1."
+r:"^使場上處於<link\="s\|104"><u>觸電</u></link>狀態的敵人受到的電擊屬性傷害提升(\d+%)。"="Enemies with <link\="s|104"><u>Shock</u></link> increase Electric DMG Taken by $1."
 
 ----------
 SOY - Shun Kano
@@ -504,23 +508,25 @@ sr:"^對1名敵人造成\<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的�
 
 r:"^先鋒突擊 Lv.(\d+)$"="Vanguard Assault Lv.$1"
 r:"^先鋒突擊 <color\=#0F69CB>Lv.(\d+)</color>$"="Vanguard Assault <color\=#0F69CB>Lv.$1</color>"
-sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的物理屬性傷害，並使目標敵人的防禦力降低<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。處於<link\="s\|151"><u>『(.*)』</u></link>狀態下時，防禦力降低值提升至<color\=#FFFC40>(\d+\.\d+%)</color>。\n<b><size\=28><color\=#850101>先鋒精神勢不可擋，在烈馬的啼鳴中對敵人造成難以抵擋的物理傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> Max HP Physical damage to 1 enemy, decrease the target's DEF by <color\=#FFFC40>$2</color> for 2 turns. When in the <link\="s|151"><u>[$3]</u></link> state, increase the DEF down debuff to <color\=#FFFC40>$4</color>. \n<b><size\=28><color\=#850101>Pioneer Spirit is unstoppable, dealing irresistible physical damage to enemies with the roar of the horses.</color></size></b>"
+sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的物理屬性傷害，並使目標敵人的防禦力降低<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。處於<link\="s\|151"><u>『(.*)』</u></link>狀態下時，防禦力降低值提升至<color\=#FFFC40>(\d+\.\d+%)</color>。\n<b><size\=28><color\=#850101>先鋒精神勢不可擋，在烈馬的啼鳴中對敵人造成難以抵擋的物理傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> Max HP Physical damage to 1 enemy, decrease the target's DEF by <color\=#FFFC40>$2</color> for 2 turns. When in the <link\="s|151"><u>[$3]</u></link> state, increases the DEF down debuff to <color\=#FFFC40>$4</color>. \n<b><size\=28><color\=#850101>Pioneer Spirit is unstoppable, dealing irresistible physical damage to enemies with the roar of the horses.</color></size></b>"
 
 r:"^零度治癒 Lv.(\d+)$"="<size\=25>Absolute Zero Healing</size> Lv.$1"
 r:"^零度治癒 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=25>Absolute Zero Healing</size> <color\=#0F69CB>Lv.$1</color>"
-r:"^使所有同伴的最大生命值提升，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+%)</color>（最多計入<color\=#FFFC40>(\d+)</color>點最大生命值），同時自身受到攻擊的機率大幅提升，效果持續2回合。回復所有同伴生命值，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d+%)</color>。\n冷卻時間：1回合。\n<b><size\=28><color\=#850101>極寒的冰域展開，絕對的低溫有助於保持頭腦清醒和身體健康。</color></size></b>$"="Increases all ally's Max HP equal to <color\=#FFFC40>$1</color> of Shun Kano's Max HP (Up to <color\=#FFFC40>$2</color> Max HP), increases the chance of being attacked for 2 turns. Restores all ally's HP equal to <color\=#FFFC40>$1</color> of Shun Kano's Max HP. \nCooldown: 1 turn.\n<b><size\=28><color\=#850101>An extremely cold field of ice opens up, and the absolute low temperature helps to keep the mind and body clear.</color></size></b>"
+r:"^使所有同伴的最大生命值提升，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+%)</color>（最多計入<color\=#FFFC40>(\d+)</color>點最大生命值），同時自身受到攻擊的機率大幅提升，效果持續2回合。回復所有同伴生命值，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d+%)</color>。\n冷卻時間：1回合。\n<b><size\=28><color\=#850101>極寒的冰域展開，絕對的低溫有助於保持頭腦清醒和身體健康。</color></size></b>$"="Increases all ally's Max HP equal to <color\=#FFFC40>$1</color> of your Max HP (Up to <color\=#FFFC40>$2</color> Max HP), increases the chance of being attacked for 2 turns. Restores all ally's HP equal to <color\=#FFFC40>$1</color> of your Max HP. \nCooldown: 1 turn.\n<b><size\=28><color\=#850101>An extremely cold field of ice opens up, and the absolute low temperature helps to keep the mind and body clear.</color></size></b>"
 
-荒野救星=<size\=26>Wilderness Savior</size>
-『荒野救星』=Wilderness Savior
+r:"^荒野救星$"="<size\=26>Wilderness Savior</size>"
+r:"^『荒野救星』$"="[Wilderness Savior]"
 sr:"^加納駿受到攻擊後獲得，自身回合結束時，消耗『(.*)』回復自身一定生命值。$"="Gain after Shun Kano is attacked. At the end of your turn, consume $1 to restore HP."
 
 r:"^『ONE MORE』：對1名敵人造成冰凍屬性傷害。\n『HIGHLIGHT』：使所有同伴的最大生命值提升，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d+%)</color>（最多計入<color\=#FFFC40>(\d+)</color>點最大生命值）。回復所有同伴生命值，數值相當於加納駿最大生命值的<color\=#FFFC40>(\d+\.\d+%)</color>。同時對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的冰凍屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成6次射擊屬性傷害，子彈可能會發生偏移。對同一目標造成傷害會衰減。$"="[ONE MORE]: Deals Ice damage to 1 enemy. \n[HIGHLIGHT]: Increases all ally's Max HP equals to Shun Kano's <color\=#FFFC40>$1</color> Max HP (Up to <color\=#FFFC40>$2</color> Max HP). Restores all ally's HP equal to Shun Kano's <color\=#FFFC40>$3</color> Max HP. Deals <color\=#FFFC40>$4</color> Max HP Ice damage to 1 enemy. \nMelee Attack: Uses a melee weapon to deal light Physical damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing 6 hits of Gun damage, the bullets can miss and deals less damage to the same target."
 
 r:"^狂野 Lv.(\d+)$"="Wild Lv.$1"
 r:"^槍械子彈數量提升<color\=#FFFC40>(\d+)</color>，並且槍械射擊每發子彈有<color\=#FFFC40>(\d+\.\d+%)</color>固定機率附帶自身<color\=#FFFC40>(\d+%)</color>最大生命值傷害且使敵人防禦降低<color\=#FFFC40>(\d+%)</color>，效果持續3回合。槍械傷害對同一目標有衰減。$"="Increase ammo by <color\=#FFFC40>$1</color>. When using Gun Attack, there is a <color\=#FFFC40>$2</color> fixed chance to deal <color\=#FFFC40>$3</color> Max HP Gun damage and decrease the enemy's DEF by <color\=#FFFC40>$4</color> for 3 turns, deal less damage to the same target."
+r:"^槍械子彈數量提升<color\=#0169ca>(\d+)</color>，並且槍械射擊每發子彈有<color\=#0169ca>(\d+\.\d+%)</color>固定機率附帶自身<color\=#0169ca>(\d+%)</color>最大生命值傷害且使敵人防禦降低<color\=#0169ca>(\d+%)</color>，效果持續3回合。槍械傷害對同一目標有衰減。$"="Increase ammo by <color\=#0169ca>$1</color>. When using Gun Attack, there is a <color\=#0169ca>$2</color> fixed chance to deal <color\=#0169ca>$3</color> Max HP Gun damage and decrease the enemy's DEF by <color\=#0169ca>$4</color> for 3 turns, deal less damage to the same target."
 
 r:"^勇謀 Lv.(\d+)$"="Bold Strategy Lv.$1"
-sr:"^釋放『零度治癒』技能後每次受到攻擊，有<color\=#FFFC40>(\d+\.\d+%)</color>固定機率觸發<link\="s\|151"><u>『(.*)』</u></link>的回復效果，效果持續2回合。$"="After using [Absolute Zero Healing] and getting attacked, there is a <color\=#FFFC40>$1</color> fixed chance to trigger the healing effect of <link\="s|151"><u>$2</u></link> for 2 turns."
+r:"^釋放『零度治癒』技能後每次受到攻擊，有<color\=#FFFC40>(\d+\.\d+%)</color>固定機率觸發<link\="s\|151"><u>『荒野救星』</u></link>的回復效果，效果持續2回合。$"="After using [Absolute Zero Healing] and getting attacked, there is a <color\=#FFFC40>$1</color> fixed chance to trigger the healing effect of <link\="s|151"><u>[Wilderness Savior]</u></link> for 2 turns."
+r:"^釋放『零度治癒』技能後每次受到攻擊，有<color\=#0169ca>(\d+\.\d+%)</color>固定機率觸發<link\="s\|151"><u>『荒野救星』</u></link>的回復效果，效果持續2回合。$"="After using [Absolute Zero Healing] and getting attacked, there is a <color\=#0169ca>$1</color> fixed chance to trigger the healing effect of <link\="s|151"><u>[Wilderness Savior]</u></link> for 2 turns."
 
 勇敢者的遊戲=Brave's Game
 sr:"加納駿受到敵方攻擊的機率提高，受到攻擊後會獲得『(.*)』。\n加納駿的回合結束時，會消耗『(.*)』並回復自身已損生命值的(\d+%)。"="<size\=30>Increase the change of Shun Kano being attacked by enemies and gain [$1] when attacked. \nWhen Shun Kano's turn ends, consume [$2] and restore $3 missing HP.</size>"
@@ -529,17 +535,14 @@ sr:"加納駿受到敵方攻擊的機率提高，受到攻擊後會獲得『(.*)
 sr:"加納駿處於<link\="s\|151"><u>『(.*)』</u></link>狀態時，受到傷害降低(\d+%)。"="Decrease DMG Taken by $2 when Shun Kano is in <link\="s|151"><u>[$1]</u></link>."
 
 危險對峙=Dangerous Standoff
-『冰山撼動』、『先鋒突擊』的技能等級提升2級，至多提升至15級。=[Iceberg Tremor], [Vanguard Assault] level +2, up to a maximum of level 15.
 
-熱血的硝煙=Hot-Blooded Gunsmoke
+熱血的硝煙=<size\=30>Hot-Blooded Gunsmoke</size>
 r:"^加納駿的生命值低於(\d+%)時，受到的治療效果提升(\d+%)。$"="When Shun Kano is under $1 HP, increase Healing Received by $2."
 
 一決勝負=Final Showdown
-『零度治癒』、『戰鬥技巧』的技能等級提升2級，至多提升至15級。=[Absolute Zero Healing], [Combat Skills] level +2, up to a maximum of level 15.
-『零度治癒』、『{{A}}』的技能等級提升2級，至多提升至15級。=[Absolute Zero Healing], [{{A}}] level +2, up to a maximum of level 15.
 
 暴力處決=Violent Execution
-r:"^HIGHLIGHT效果提升：使所有同伴受到傷害降低(\d+%)，效果持續(\d+)回合。$"="HIGHLIGHT Effect Improvement: Decrease DMG Taken for all allies by $1 for $2 turns."
+r:"^HIGHLIGHT效果提升：使所有同伴受到傷害降低(\d+%)，效果持續(\d+)回合。$"="HIGHLIGHT Effect Boost: Decrease DMG Taken for all allies by $1 for $2 turns."
 
 勝利者榮光=Victor's Glory
 sr:"^加納駿處於<link\="s\|151"><u>『(.*)』</u></link>狀態下攻擊敵人時，會額外附帶基於加納駿最大生命值(\d+%)的傷害並回復等量生命值。$"="When Shun Kano is in <link\="s|151"><u>[$1]</u></link> and attacks an enemy, deal an additional $2 Max HP as damage and restore the same amount of HP."
@@ -562,7 +565,7 @@ r:"^屬性提升$"="Attribute Boost"
 
 r:"^霞影之術 Lv.(\d+)$"="Art of Skyglow Lv.$1"
 r:"^霞影之術 <color\=#0F69CB>Lv.(\d+)</color>$"="Art of Skyglow <color\=#0F69CB>Lv.$1</color>"
-sr:"^準備時間：4次行動\n使所有敵人防禦力降低<color\=#FFFC40>(\d+\.\d+%)</color>，若理子速度大於100點，每超過10點，防禦力額外降低(\d+\.\d+%)，最多額外降低<color\=#FFFC40>(\d+\.\d+%)</color>，持續2回合；同時使主目標暴露<link\="s\|188"><u>『(.*)』</u></link>。\n<b><size\=28><color\=#850101>無數鋒刃隱於煙霞之中，在彌漫的花香中傷人於無形。讓敵人失去反抗能力，任人宰割。</color></size></b>$"="Preparation Time: 4 Actions\nDecrease the DEF of all enemies by <color\=#FFFC40>$1</color> for 2 turns, increase the DEF down debuff by $2 for every 10 SPD you have that's over 100, up to a cap of <color\=#FFFC40>$3</color>; Expose a <link\="s|188"><u>[$4]</u></link> on the main target.\n<b><size\=28><color\=#850101>The blades are hidden in the haze of smoke and the scent of flowers, leaving the enemy powerless to resist and at their mercy.</color></size></b>"
+sr:"^準備時間：4次行動\n使所有敵人防禦力降低<color\=#FFFC40>(\d+\.\d+%)</color>，若理子速度大於100點，每超過10點，防禦力額外降低(\d+\.\d+%)，最多額外降低<color\=#FFFC40>(\d+\.\d+%)</color>，持續2回合；同時使主目標暴露<link\="s\|188"><u>『(.*)』</u></link>。\n<b><size\=28><color\=#850101>無數鋒刃隱於煙霞之中，在彌漫的花香中傷人於無形。讓敵人失去反抗能力，任人宰割。</color></size></b>$"="Preparation Time: 4 Actions\nDecreases the DEF of all enemies by <color\=#FFFC40>$1</color> for 2 turns, increases the DEF down debuff by $2 for every 10 SPD you have that's over 100, up to a cap of <color\=#FFFC40>$3</color>; Exposes a <link\="s|188"><u>[$4]</u></link> on the main target.\n<b><size\=28><color\=#850101>The blades are hidden in the haze of smoke and the scent of flowers, leaving the enemy powerless to resist and at their mercy.</color></size></b>"
 
 r:"^梅幻之術 Lv.(\d+)$"="<size\=28>Art of Plum Blossom</size> Lv.$1"
 r:"^梅幻之術 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=28>Art of Plum Blossom</size> <color\=#0F69CB>Lv.$1</color>"
@@ -570,17 +573,19 @@ r:"^準備時間：8次行動\n使所有敵人受到的傷害提升<color\=#FFFC
 
 r:"^暗香細語 Lv.(\d+)$"="Aroma Whisper Lv.$1"
 r:"^暗香細語 <color\=#0F69CB>Lv.(\d+)</color>$"="Aroma Whisper <color\=#0F69CB>Lv.$1</color>"
-sr:"^準備時間：8次行動（<link\="s\|187"><u>『(.*)』</u></link>數量低於5層時不能使用）\n消耗所有<link\="s\|187"><u>『(.*)』</u></link>使所有同伴獲得『傲放』並使主目標恢復<color\=#FFFC40>(\d+\.\d+%)</color>的生命值。『傲放』：造成傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，消耗的每份<link\="s\|187"><u>『(.*)』</u></link>提供額外的傷害提升（若理子速度大於100點，每超過10點，造成傷害提升(\d+\.\d+%)，最多提升<color\=#FFFC40>(\d+\.\d+%)</color>），持續1回合。\n<b><size\=28><color\=#850101>如風輕拂花叢，柔情綻放呢喃細語，梅之香氣若有若無，為生命之繪卷增添幾分生動與雅致。</color></size></b>$"="Preparation Time: 8 Actions (Cannot be used when you have less than 5 stacks of <link\="s|187"><u>[$1]</u></link>)\nConsume all <link\="s|187"><u>[$2]</u></link> to give all allies [Pride] and restore <color\=#FFFC40>$3</color> HP to the main target. Pride: Increase DMG Dealt by <color\=#FFFC40>$4</color>  for 1 turn. Increase the DMG Dealt buff with every <link\="s|187"><u>[$5]</u></link> consumed (Increase DMG Dealt by $6 for every 10 SPD you have that's over 100, up to a cap of <color\=#FFFC40>$7</color>).\n<b><size\=28><color\=#850101>As the wind gently brushes the flowers, the softness of the blossoms blooms and murmurs, and the fragrance of the plum adds a bit of vitality and elegance to the scroll of life.</color></size></b>"
+sr:"^準備時間：8次行動（<link\="s\|187"><u>『(.*)』</u></link>數量低於5層時不能使用）\n消耗所有<link\="s\|187"><u>『(.*)』</u></link>使所有同伴獲得『傲放』並使主目標恢復<color\=#FFFC40>(\d+\.\d+%)</color>的生命值。『傲放』：造成傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，消耗的每份<link\="s\|187"><u>『(.*)』</u></link>提供額外的傷害提升（若理子速度大於100點，每超過10點，造成傷害提升(\d+\.\d+%)，最多提升<color\=#FFFC40>(\d+\.\d+%)</color>），持續1回合。\n<b><size\=28><color\=#850101>如風輕拂花叢，柔情綻放呢喃細語，梅之香氣若有若無，為生命之繪卷增添幾分生動與雅致。</color></size></b>$"="Preparation Time: 8 Actions (Cannot be used when you have less than 5 stacks of <link\="s|187"><u>[$1]</u></link>)\nConsumes all <link\="s|187"><u>[$2]</u></link> to give all allies [Pride] and restores <color\=#FFFC40>$3</color> HP to the main target. Pride: Increases DMG Dealt by <color\=#FFFC40>$4</color>  for 1 turn. Increases the DMG Dealt buff with every <link\="s|187"><u>[$5]</u></link> consumed (Increase DMG Dealt by $6 for every 10 SPD you have that's over 100, up to a cap of <color\=#FFFC40>$7</color>).\n<b><size\=28><color\=#850101>As the wind gently brushes the flowers, the softness of the blossoms blooms and murmurs, and the fragrance of the plum adds a bit of vitality and elegance to the scroll of life.</color></size></b>"
 
 r:"^根據解明怪盜各屬性的(\d+%)提升在場的所有同伴的相應屬性值。$"="Increase all allies' stats by $1 of your stats"
 
 r:"^蝶夢 Lv.(\d+)$"="Butterfly Dream Lv.$1"
 r:"^進入戰鬥時，若理子速度大於100點，每超過1點使所有怪盜獲得(\d+)點生命值、(\d+)點攻擊力、(\d+)點防禦力的提升，最多可提升<color\=#FFFC40>(\d+)</color>點生命值、<color\=#FFFC40>(\d+)</color>點攻擊力、<color\=#FFFC40>(\d+)</color>點防禦力。$"="At the start of battle, for every 1 SPD you have that's over 100, increase all allies' HP by $1, ATK by $2 and DEF by $3, up to <color\=#FFFC40>$4</color> HP, <color\=#FFFC40>$5</color> ATK and <color\=#FFFC40>$6</color> DEF."
+r:"^進入戰鬥時，若理子速度大於100點，每超過1點使所有怪盜獲得(\d+)點生命值、(\d+)點攻擊力、(\d+)點防禦力的提升，最多可提升<color\=#0169ca>(\d+)</color>點生命值、<color\=#0169ca>(\d+)</color>點攻擊力、<color\=#0169ca>(\d+)</color>點防禦力。$"="At the start of battle, for every 1 SPD you have that's over 100, increase all allies' HP by $1, ATK by $2 and DEF by $3, up to <color\=#0169ca>$4</color> HP, <color\=#0169ca>$5</color> ATK and <color\=#0169ca>$6</color> DEF."
 
 r:"^雀歌 Lv.(\d+)$"="Bird Song Lv.$1"
 r:"^使所有敵人受到的ONEMORE及總攻擊傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Increase all enemies' DMG Taken from One More and All-Out Attack by <color\=#FFFC40>$1</color>."
+r:"^使所有敵人受到的ONEMORE及總攻擊傷害提升<color\=#0169ca>(\d+\.\d+%)</color>。$"="Increase all enemies' DMG Taken from One More and All-Out Attack by <color\=#0169ca>$1</color>."
 
-r:"^破綻$"=Vulnerability
+r:"^破綻$"="Vulnerability"
 <color\=#66ccff>『破綻』</color>=<color\=#66ccff>[Vulnerability]</color>
 sr:"^受到的傷害提升(\d+%)，在受到1次攻擊後被擊破；被擊破時，理子獲得2份『(.*)』，若目標受到的是弱點傷害/普通傷害，則倒地值額外降低1點，每額外降低1點倒地值，理子額外獲得1份『(.*)』。$"="Increase DMG Taken by $1, break after attacked once; When broken, gain 2 $2. If the target took Weak Damage/ Normal Damage, decrease their Knockdown Count by 1. Gain 1 $3 after decreasing Knockdown Count with [Vulnerability]."
 
@@ -595,19 +600,193 @@ sr:"^同伴每行動3次，使倒地值最高的敵人暴露<link\="s\|188"><u>�
 sr:"^進入戰鬥時，使倒地值最高的敵人暴露<link\="s\|188"><u>『(.*)』</u></link>。$"="At the start of battle, expose a <link\="s|188"><u>[$1]</u></link> from the enemy with the highest Knockdown Count."
 
 素淨=Quiet Color
-『霞影之術』、『梅幻之術』的技能等級提升2級，至多提升至15級。=Art of Skyglow, Art of Plum Blossom level +2, up to a maximum of level 15.
 
 微雪=Little Snow
 sr:"^釋放『暗香細語』後，立刻使倒地值最高的敵人暴露<link\="s\|188"><u>『(.*)』</u></link>。$"="After using [Aroma Whisper], immediately expose a <link\="s|188"><u>[$1]</u></link> from the enemy with the highest Knockdown Count."
 
 清寂=Calm Silence
-『暗香細語』的技能等級提升2級，至多提升至15級。=Aroma Whisper level +2, up to a maximum of level 15.
+『暗香細語』的技能等級提升2級，至多提升至15級。=[Aroma Whisper] level +2, \nup to a maximum of level 15.
 
 佳月=Beautiful Moon
 sr:"^任意同伴釋放HIGHLIGHT後，立刻使倒地值最高的敵人暴露<link\="s\|188"><u>『(.*)』</u></link>。$"="After any ally uses HIGHLIGHT, immediately expose a <link\="s|188"><u>[$1]</u></link> from the enemy with the highest Knockdown Count."
 
 獨秀=Lone Bloom
 r:"^釋放『暗香細語』後，若多禰村理子速度大於100點，每超過15點，解明怪盜的準備時間減少1次行動，最多可減少4次行動。$"="After using [Aroma Whisper], for every 15 SPD you have that's over 100, reduce the cooldown of the Navigator by 1 action, up to 4 actions."
+
+----------
+MONT - Montagne Kotone
+----------
+
+sr:"^每名同伴行動時，自身會獲得『(.*)』。每次集滿『(.*)』後，可額外對當前目標造成1次強化普通攻擊。$"="<size\=25>Gain 1 [$1] after an ally acts. When you have enough [$2] you can deal an additional boosted attack to the current target.</size>"
+r:"^冰之綻放$"="Ice Bloom"
+r:"^凜冬撕裂$"="Winter Tear"
+r:"^寒冰之刃$"="Frozen Blade"
+忘我=Lose Oneself
+無境=Boundless
+
+r:"^冰之綻放 Lv.(\d+)$"="Ice Bloom Lv.$1"
+r:"^冰之綻放 <color\=#0F69CB>Lv.(\d+)</color>$"="Ice Bloom <color\=#0F69CB>Lv.$1</color>"
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，有<color\=#FFFC40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s|103"><u>凍結</u></link>狀態。\n<b><size\=28><color\=#850101>漫天飛雪孕育的花苞，所落之處綻放為璀璨冰花，對所有敵人造成冰凍傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Ice damage to all enemies, with a <color\=#FFFC40>$2</color> base chance to inflict <link\="s|103"><u>Freeze</u></link>.\n<b><size\=28><color\=#850101>A flower bud spawned by the flying snow that blossoms into a sparkling ice flower, inflicting Frozen damage to all enemies.</color></size></b>"
+
+r:"^凜冬撕裂 Lv.(\d+)$"="Winter Tear Lv.$1"
+r:"^凜冬撕裂 <color\=#0F69CB>Lv.(\d+)</color>$"="Winter Tear <color\=#0F69CB>Lv.$1</color>"
+sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，並獲得<link\="s\|119"><u>『(.*)』</u></link>4顆。\n<b><size\=28><color\=#850101>凜冬之中氤氳的寒氣逐漸成型，化作冰錐刺入目標的體內，以冰凍傷害重創目標。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Ice damage to 1 enemy and gains 4 <link\="s|119"><u>[$2]</u></link>.\n<b><size\=28><color\=#850101>"Winter's cold air gradually molds itself into an ice cone and stabs into the target's body, inflicting severe damage with ice crystals.</color></size></b>"
+
+r:"^寒冰之刃 Lv.(\d+)$"="Frozen Blade Lv.$1"
+r:"^寒冰之刃 <color\=#0F69CB>Lv.(\d+)</color>$"="Frozen Blade <color\=#0F69CB>Lv.$1</color>"
+sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，如果<link\="s\|119"><u>『(.*)』</u></link>數量為10則該技能獲得額外傷害提升。敵人生命值越低，則傷害提升越高，最多提升<color\=#FFFC40>(\d+\.\d+%)</color>。\n<b><size\=28><color\=#850101>雪色壁障之中飛出的寒冰長槍，以迅疾之速刺向目標，並造成毀滅式的冰凍傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Ice damage to 1 enemy, increases damage if you have 10 <link\="s|119"><u>[$2]</u></link>. The lower the enemy's HP is, the higher the damage will be, up to a maximum of <color\=#FFFC40>$3</color>. \n<b><size\=28><color\=#850101>A lance of ice flies out from the snow-colored barrier and stabs at the target with great speed, dealing devastating ice damage.</color></size></b>"
+
+r:"^『ONE MORE』：對1名敵人造成冰凍屬性傷害。\n『HIGHLIGHT』：對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害。敵人的生命值越低，所受到的傷害越高，當敵人的生命值低於20%時，最高可獲得30%的傷害加成。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[ONE MORE]: Deals Ice damage to 1 enemy. \n[HIGHLIGHT]: Deals <color\=#FFFC40>$1</color> ATK Ice damage to 1 enemy. The lower the enemy's HP is, the higher the damage will be, when they are at below 20% HP, gain 30% DMG Bonus. \nMelee Attack: Uses a melee weapon to deal light Physical damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
+
+r:"^忘我 Lv.(\d+)$"="Lose Oneself Lv.$1"
+sr:"^『刀尖上的舞者』發動時，有<color\=#FFFC40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s\|103"><u>凍結</u></link>狀態。$"="When using [Dancer on Knife's Edge], there is a <color\=#FFFC40>$1</color> base chance to inflict <link\="s|103"><u>Freeze</u></link>."
+sr:"^『刀尖上的舞者』發動時，有<color\=#0169ca>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s\|103"><u>凍結</u></link>狀態。$"="When using [Dancer on Knife's Edge], there is a <color\=#0169ca>$1</color> base chance to inflict <link\="s|103"><u>Freeze</u></link>."
+
+r:"^無境 Lv.(\d+)$"="Boundless Lv.$1"
+sr:"^擊敗敵人時，獲得<link\="s\|119"><u>『(.*)』</u></link><color\=#FFFC40>(\d+)</color>顆。$"="When you defeat an enemy, gain <color\=#FFFC40>$2</color> <link\="s|119"><u>[$1]</u></link>."
+sr:"^擊敗敵人時，獲得<link\="s\|119"><u>『(.*)』</u></link><color\=#0169ca>(\d+)</color>顆。$"="When you defeat an enemy, gain <color\=#0169ca>$2</color> <link\="s|119"><u>[$1]</u></link>."
+
+r:"^冰晶$"="Ice Crystal"
+r:"^<color\=#66ccff>『冰晶』</color>$"="<color\=#66ccff>[Ice Crystal]</color>"
+琴音·蒙塔涅特有的特殊戰鬥資源，『冰晶』達到一定數量後，自身回合結束時，觸發『刀尖上的舞者』。=When you have a certain amount of [Ice Crystal], use [Dancer on Knife's Edge] at the end of your turn.
+
+r:"^刀尖上的舞者$"="<size\=22>Dancer on Knife's Edge</size>"
+sr:"^同伴行動時，自身獲得『(.*)』1顆，當『(.*)』數量為10時，自身使用技能後消耗10顆『(.*)』，對目標敵人造成1次(\d+%)攻擊力的冰凍屬性<link\="s\|100"><u>追加效果</u></link>，本次攻擊必定造成暴擊$"="Gain 1 [$1] after an ally acts, when you have 10 [$2], cosume 10 [$3] after using a skill, dealing $4 ATK Ice damage as <link\="s|100"><u>Follow Up</u></link>, this attack will always CRIT."
+
+行雲流水=Flow Like Water
+r:"^回合結束時，獲得(\d+%)攻擊力的護盾，效果持續1回合。$"="At the end of your turn, gain $1 ATK Shield for 1 turn."
+
+勾手一躍=Lutz Jump
+
+空中螺旋=Flying Spin
+r:"^<link\="s\|100"><u>追加效果</u></link>根據受攻擊目標已損失生命值增加技能傷害，最高增加(\d+%)的技能傷害。$"="Increase damage of you <link\="s|100"><u>Follow Up</u></link> based on the missing HP on the target, up to $1 skill damage."
+
+熱烈舞動=Passionate Dance
+
+花樣接續步=Fancy Step Sequence
+r:"^HIGHLIGHT效果提升：HIGHLIGHT技能的傷害提升效果最高提升至(\d+%)。$"="HIGHLIGHT Effect Boost: Increase the DMG Bonus cap on your HIGHLIGHT to $1."
+
+時空定格=Time Freeze
+sr:"^戰鬥開始時，獲得『(.*)』4顆，『(.*)』最大數量提升至15。$"="At the start of the battle, gain 4 [$1]. Increase the maximum number of [$2] to 15."
+
+----------
+Okyann - Kayo Tomiyama
+----------
+
+sr:"^使用支援技能後會獲得『(.*)』，數量達到4會立刻釋放『(.*)』，使所有同伴獲得增益。$"="Gain [$1] after using support skills. Use [$2] when you have 4 stacks of [$1], giving a buff to all allies."
+派對狂歡=Party Frenzy
+華麗搖擺=Gorgeous Swing
+熱辣變奏曲=Hot Variation
+r:"^活力$"="Vigorous"
+r:"^熱忱$"="Enthusiasm"
+
+r:"^派對狂歡 Lv.(\d+)$"="Party Frenzy Lv.$1"
+r:"^派對狂歡 <color\=#0F69CB>Lv.(\d+)</color>$"="Party Frenzy <color\=#0F69CB>Lv.$1</color>"
+sr:"^準備時間：4次行動\n基於自身攻擊力的12%，提升所有同伴的攻擊力（最多計入<color\=#FFFC40>(\d+)</color>點攻擊力），並提升所有同伴<color\=#FFFC40>(\d+\.\d+%)</color>效果命中，效果持續1回合。獲得1個<link\="s\|141"><u>『(.*)』</u></link>。\n<b><size\=28><color\=#850101>夢幻迪斯可下的性感舞步引爆全場，狂歡派對永不停歇，在熱烈的舞曲中進擊吧。</color></size></b>$"="Preparation Time: 4 Actions\nIncreases all allies' ATK based on 12% ATK (Up to a maximum of <color\=#FFFC40>$1</color>) and increases all allies' Effect Hit Rate by $2 for 1 turn. Gains 1 <link\="s|141"><u>[$3]</u></link>.\n<b><size\=28><color\=#850101>The sexy dance steps under the dreamy disco will set the room on fire, and the party will never stop, so let's attack with the hot dance music.</color></size></b>"
+
+r:"^華麗搖擺 Lv.(\d+)$"="Gorgeous Swing Lv.$1"
+r:"^華麗搖擺 <color\=#0F69CB>Lv.(\d+)</color>$"="Gorgeous Swing <color\=#0F69CB>Lv.$1</color>"
+sr:"^準備時間：8次行動\n使所有同伴恢復<color\=#FFFC40>(\d+)</color>精力值。獲得3個<link\="s\|141"><u>『(.*)』</u></link>。\n<b><size\=28><color\=#850101>聚光燈下沒有人可以停止搖擺，藏進旋律的堡壘，隨著節拍盡情感受音樂的魅力吧！</color></size></b>$"="Preparation time: 8 Actions\nRestores <color\=#FFFC40>$1</color> SP to all allies. Gains 3 <link\="s|141"><u>[$2]</u></link>.\n<b><size\=28><color\=#850101>No one can stop swinging under the spotlight. Hide in the fortress of melody and enjoy the charm of music to the beat!</color></size></b>"
+
+r:"^熱辣變奏曲 Lv.(\d+)$"="Hot Variation Lv.$1"
+r:"^熱辣變奏曲 <color\=#0F69CB>Lv.(\d+)</color>$"="Hot Variation <color\=#0F69CB>Lv.$1</color>"
+sr:"^準備時間：8次行動\n使所有同伴造成傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續3回合，每225點富山佳代的攻擊力額外提供1%傷害提升（最多計入<color\=#FFFC40>(\d+)</color>點攻擊力）。對處於<link\="s\|101"><u>元素異常</u></link>狀態的敵人造成傷害時，傷害加成效果提升至1.5倍。獲得2個<link\="s\|141"><u>『(.*)』</u></link>。\n<b><size\=28><color\=#850101>華麗的舞池已經做好了充足準備！熱辣的音樂浪潮洶湧而來，引領同伴放肆起舞。</color></size></b>$"="Preparation Time: 8 Actions\nIncrease all allies' DMG Dealt by <color\=#FFFC40>$1</color> for 3 turns. Increases the DMG Dealt by 1% for every 225 ATK you have (Up to <color\=#FFFC40>$2</color>). Increases the DMG Bonus effect by 1.5 times when dealing damage to enemies who are inflicted by <link\="s|101"><u>Elemental Ailment</u></link>. Gains 2 <link\="s|141"><u>[$3]</u></link>.\n<b><size\=28><color\=#850101>The gorgeous dance floor is ready for you! The hot music is coming, and you'll be able to lead your fellow dancers to dance with abandon.</color></size></b>"
+
+r:"^活力 Lv.(\d+)$"="Vigorous Lv.$1"
+sr:"^每獲得<color\=#FFFC40>(\d+)</color>個<link\="s\|141"><u>『(.*)』</u></link>，使當前生命值最高的敵人陷入隨機1種<link\="s\|101"><u>元素異常</u></link>效果。$"="After gaining <color\=#FFFC40>$1</color> <link\="s|141"><u>[$2]</u></link> inflict the highest HP% enemy with 1 random <link\="s|101"><u>Elemental Ailment</u></link>."
+sr:"^每獲得<color\=#0169ca>(\d+)</color>個<link\="s\|141"><u>『(.*)』</u></link>，使當前生命值最高的敵人陷入隨機1種<link\="s\|101"><u>元素異常</u></link>效果。$"="After gaining <color\=#0169ca>$1</color> <link\="s|141"><u>[$2]</u></link> inflict the highest HP% enemy with 1 random <link\="s|101"><u>Elemental Ailment</u></link>."
+
+r:"^熱忱 Lv.(\d+)$"="Enthusiasm Lv.$1"
+sr:"^任意同伴釋放技能造成元素異常時，有<color\=#FFFC40>(\d+\.\d+%)</color>的固定機率使自身獲得1個<link\="s\|141"><u>『(.*)』</u></link>。$"="There is a <color\=#FFFC40>$1</color> fixed chance to gain 1 <link\="s|141"><u>[$2]</u></link> after an ally uses a skill that inflicts Elemental Ailment."
+sr:"^任意同伴釋放技能造成元素異常時，有<color\=#0169ca>(\d+\.\d+%)</color>的固定機率使自身獲得1個<link\="s\|141"><u>『(.*)』</u></link>。$"="There is a <color\=#0169ca>$1</color> fixed chance to gain 1 <link\="s|141"><u>[$2]</u></link> after an ally uses a skill that inflicts Elemental Ailment."
+
+r:"^節拍$"="Beat"
+<color\=#66ccff>『節拍』</color>=<color\=#66ccff>[Beat]</color>
+sr:"^使用技能後，富山佳代會獲得數量不等的『(.*)』；『(.*)』數量達到4後，釋放『(.*)』，提升所有同伴的多種屬性。$"="After using a skill, you will gain a certain amount of [$1]; When [$2] is at 4, use [$3] to buff all allies."
+
+r:"^勁歌熱舞$"="Hot Dance"
+<color\=#66ccff>『勁歌熱舞』</color>=<color\=#66ccff>[Hot Dance]</color>
+sr:"^『(.*)』數量達到4後，釋放『(.*)』，提升所有同伴的攻擊力、防禦力、效果命中。$"="After reaching 4 [$1], use [$2] to increase all allies' ATK, DEF and Effect Hit Rate."
+
+通往♪自由世界=To ♪ A Free World
+sr:"^富山佳代使用支援技能後會獲得數量不等的『(.*)』。『(.*)』數量達到4時，富山佳代消耗4個『(.*)』並立刻釋放<link\="s\|100"><u>(.*)</u></link>『(.*)』。\n『(.*)』：使所有同伴獲得增益（達到1、50、70級時變化），攻擊力提升10%/15%/20%；防禦力提升10%/15%/20%；效果命中提升5%/7.5%/10%，效果持續2回合，最多疊加3層。$"="After using support skills gain a certain amount of [$1]. When you have 4 [$2], consume 4 [$3] and immediately use the <link\="s|100"><u>$4</u></link> [$5]. \n[$6]: Give a buff to all allies (Change when reaching level 1, 50, 70). Increase ATK by 10%/15%/20%; Increase DEF by 10%/15%/20%; Increase Effect Hit Rate by 5%/7.5%/10% for 2 turns up to 3 stacks."
+
+放肆♪大笑跳舞=<size\=28>Liberty ♪ Laugh and Dance</size>
+sr:"^戰鬥開始時，富山佳代獲得2個<link\="s\|141"><u>『(.*)』</u></link>。$"="At the start of the battle, gain 2 <link\="s|141"><u>[$1]</u></link>."
+
+描繪♪絢爛色彩=<size\=32>Paint ♪ Brilliant Colors</size>
+
+晃動♪鐳射燈球=Shake ♪ Disco Ball
+sr:"^富山佳代釋放<link\="s\|142"><u>『(.*)』</u></link>後，有20%的固定機率返還1個<link\="s\|141"><u>『(.*)』</u></link>。$"="After using <link\="s|142"><u>[$1]</u></link>, there is a 20% fixed chance to refund 1 <link\="s|141"><u>[$2]</u></link>."
+
+碰撞♪躁動溫度=<size\=24>Impact ♪ Restless Temperature</size>
+『熱辣變奏曲』的技能等級提升2級，至多提升至15級。=[Hot Variation] level +2, \nup to a maximum of level 15.
+
+變身♪舞臺女王=<size\=24>Transform ♪ Queen of the Stage</size>
+sr:"^任意同伴釋放HIGHLIGHT技能後，富山佳代有67%的固定機率獲得1個<link\="s\|141"><u>『(.*)』</u></link>。$"="After any ally uses HIGHLIGHT, there is a 67% fixed chance to gain 1 <link\="s|141"><u>[$1]</u></link>."
+
+安可♪熱烈迴響=<size\=28>Encore ♪ Enthusiastic Echo</size>
+sr:"^富山佳代釋放<link\="s\|142"><u>『(.*)』</u></link>後，有25%的固定機率觸發『安可』：額外釋放1次<link\="s\|142"><u>『(.*)』</u></link>。額外釋放的<link\="s\|142"><u>『(.*)』</u></link>無法再次觸發『安可』。$"="After using <link\="s|142"><u>[$1]</u></link>, there is a 25% fixed chance to trigger [Encore]: Trigger <link\="s|142"><u>[$2]</u></link> again. This additional <link\="s|142"><u>[$3]</u></link> cannot trigger [Encore]."
+
+----------
+Yuki - Yukimi Fujikawa 
+----------
+
+sr:"^與1名同伴產生『(.*)』，使同伴獲得護盾，最多與1名同伴產生『(.*)』。"="Make a  [$1] with an ally to grant them Shield. Only 1 [$2] can be active."
+大義者裁決=<size\=22>Righteous Adjudication</size>
+正理之令=Order of Justice
+絕對審判=<size\=25>Absolute Judgement</size>
+r:"^憐心$"="Compassion"
+r:"^革志$"="Revolutionary Will"
+
+r:"^大義者裁決 Lv.(\d+)$"="<size\=25>Righteous Adjudication</size> Lv.$1"
+r:"^大義者裁決 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=25>Righteous Adjudication</size> <color\=#0F69CB>Lv.$1</color>"
+sr:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>防禦力的祝福屬性傷害，使自身獲得<link\="s\|111"><u>祝福</u></link>效果1層，並使處於<link\="s\|121"><u>『(.*)』</u></link>的同伴獲得<link\="s\|111"><u>祝福</u></link>效果1層。\n<b><size\=28><color\=#850101>在天空中召喚屬於大義的光之領域，凝聚成光束裁決敵方群體，造成祝福屬性傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> DEF Bless damage to all enemies, gains 1 stack of <link\="s|111"><u>Blessed</u></link> and grants the ally with <link\="s|121"><u>[$2]</u></link> 1 stack of <link\="s|111"><u>Blessed</u></link>.\n<b><size\=28><color\=#850101>Summons a field of light in the sky that is a sign of great justice, and converges it into a beam of light that damages the enemy group with the Blessing Attribute.</color></size></b>"
+
+r:"^正理之令 Lv.(\d+)$"="Order of Justice Lv.$1"
+r:"^正理之令 <color\=#0F69CB>Lv.(\d+)</color>$"="Order of Justice <color\=#0F69CB>Lv.$1</color>"
+sr:"^使1名同伴獲得<color\=#FFFC40>(\d+\.\d+%)</color>防禦力\+<color\=#FFFC40>(\d+)</color>的護盾並且獲得防禦力提升（相當於藤川雪實防禦力的(\d+%)，最多提升<color\=#FFFC40>(\d+)</color>點防禦力），效果持續2回合。並且使該同伴獲得<link\="s\|111"><u>祝福</u></link>效果2層，同時與同伴產生<link\="s\|121"><u>『(.*)』</u></link>，效果持續2回合。\n<b><size\=28><color\=#850101>正理之令化作萬千光輝，籠罩在怪盜的周圍，形成一個充滿祝福的光環。</color></size></b>$"="Grants 1 ally <color\=#FFFC40>$1</color> DEF + <color\=#FFFC40>$2</color> Shield and increases their DEF (Equal to $3 of your DEF, up to <color\=#FFFC40>$4</color> DEF) for 2 turns. Grants that ally 2 stacks of <link\="s|111"><u>Blessed</u></link>, and makes a <link\="s|121"><u>[$5]</u></link> for 2 turns.\n<b><size\=28><color\=#850101>The Order of Righteousness transforms into an aura of light that surrounds the Pirate, forming an aura full of blessings.</color></size></b>"
+
+r:"^絕對審判 Lv.(\d+)$"="<size\=28>Absolute Judgement</size> Lv.$1"
+r:"^絕對審判 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=28>Absolute Judgement</size> <color\=#0F69CB>Lv.$1</color>"
+sr:"^自身獲得<link\="s\|111"><u>祝福</u></link>效果時，會獲得<link\="s\|116"><u>『(.*)』</u></link>。當<link\="s\|116"><u>『(.*)』</u></link>不少於2層，釋放該技能時，會消耗全部<link\="s\|116"><u>『(.*)』</u></link>，對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>防禦力的祝福屬性傷害，每消耗1層<link\="s\|116"><u>『(.*)』</u></link>使所有同伴提升<color\=#FFFC40>(\d+\.\d+%)</color>的傷害，1回合；並使所有同伴獲得<color\=#FFFC40>(\d+\.\d+%)</color>防禦力的護盾，2回合。\n處於<link\="s\|121"><u>『(.*)』</u></link>狀態下的同伴獲得<link\="s\|111"><u>祝福</u></link>效果時，額外使藤川雪實獲得<link\="s\|116"><u>『(.*)』</u></link>。\n<b><size\=28><color\=#850101>審判的重錘賞罰分明，面對充滿貪慾的骯髒靈魂時，全力地一擊對敵人造成巨大衝擊。</color></size></b>$"="When gaining <link\="s|111"><u>Blessed</u></link>, gains <link\="s|116"><u>[$1]</u></link>. When <link\="s|116"><u>[$2]</u></link> is not less than 2 stacks, this skill will consumes all <link\="s|116"><u>[$3]</u></link>, dealing <color\=#FFFC40>$4</color> DEF Bless damage to 1 enemy, increase all allies' damage by <color\=#FFFC40>$6</color> with each stack of <link\="s|116"><u>[$5]</u></link> consumed for 1 turn; Grants all allies <color\=#FFFC40>$7</color> DEF Shield for 2 turns.\nAfter the ally with <link\="s|121"><u>[$8]</u></link> gains <link\="s|111"><u>Blessed</u></link>, you gain an additional <link\="s|116"><u>[$9]</u></link>.\n<b><size\=28><color\=#850101>The Judge's Hammer is a powerful blow that deals a great blow to the enemy in the face of a lustful, dirty spirit.</color></size></b>"
+
+r:"^『ONE MORE』：對1名敵人造成祝福屬性傷害。\n『HIGHLIGHT』：對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>防禦力的祝福屬性傷害，並且使所有同伴基於藤川雪實防禦力20%提升防禦力（最多提升<color\=#FFFC40>(\d+)</color>點防禦力），效果持續2回合。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[ONE MORE]: Deals Bless damage to 1 enemy. \n[HIGHLIGHT]: Deals <color\=#FFFC40>$1</color> DEF Bless Defense damage to 1 enemy and increases the DEF of all allies based on 20% of your DEF (Up to <color\=#FFFC40>$2</color> DEF) for 2 turns. \nMelee Attack: Uses a melee weapon to deal light Physical damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
+
+r:"^憐心 Lv.(\d+)$"="Compassion Lv.$1"
+sr:"^『(.*)』狀態下夥伴根據其防禦力獲得傷害加成，每(\d+)點防禦力獲得(\d+%)傷害加成（不足(\d+)點防禦力部分轉化為等比的傷害加成），最高獲得<color\=#FFFC40>(\d+\.\d+%)</color>傷害加成。$"="The ally with [$1] increase DMG Bonus based on their DEF, every $2 DEF grants $3 DMG Bonus (Less than $4 DEF will still convert into a proportional DMG Bonus), up to <color\=#FFFC40>$5</color> DMG Bonus."
+sr:"^『(.*)』狀態下夥伴根據其防禦力獲得傷害加成，每(\d+)點防禦力獲得(\d+%)傷害加成（不足(\d+)點防禦力部分轉化為等比的傷害加成），最高獲得<color\=#0169ca>(\d+\.\d+%)</color>傷害加成。$"="The ally with [$1] increase DMG Bonus based on their DEF, every $2 DEF grants $3 DMG Bonus (Less than $4 DEF will still convert into a proportional DMG Bonus), up to <color\=#0169ca>$5</color> DMG Bonus."
+
+r:"^革志 Lv.(\d+)$"="Revolutionary Will Lv.$1"
+r:"^自身回合結束時，若任意同伴生命值低於30%，則使其獲得<color\=#FFFC40>(\d+\.\d+%)</color>防禦力的護盾，並使其獲得<link\="s\|111"><u>祝福</u></link>效果1層，效果持續2回合。每場戰鬥最多觸發1次。$"="At the end of your turn, if any ally is below 30% HP, grant them <color\=#FFFC40>$1</color> DEF Shield and 1 stack of <link\="s|111"><u>Blessed</u></link> for 2 turns. Work once per battle."
+r:"^自身回合結束時，若任意同伴生命值低於30%，則使其獲得<color\=#0169ca>(\d+\.\d+%)</color>防禦力的護盾，並使其獲得<link\="s\|111"><u>祝福</u></link>效果1層，效果持續2回合。每場戰鬥最多觸發1次。$"="At the end of your turn, if any ally is below 30% HP, grant them <color\=#0169ca>$1</color> DEF Shield and 1 stack of <link\="s|111"><u>Blessed</u></link> for 2 turns. Work once per battle."
+
+r:"^誓約$"="Vow"
+<color\=#66ccff>『誓約』</color>=<color\=#66ccff>[Vow]</color>
+r:"^藤川雪實回合開始時，與隨機一名同伴產生『誓約』；雪實的回合結束時，使『誓約』狀態下的同伴獲得護盾。$"="At the start of your turn, make a [Vow] with 1 random ally; At the end of your turn, that ally gain Shield."
+
+r:"^充能$"="Vitalise"
+<color\=#66ccff>『充能』</color>=<color\=#66ccff>[Vitalise]</color>
+藤川雪實以及處於『誓約』狀態下的同伴獲得祝福效果時獲得『充能』，提升『絕對審判』技能造成的傷害。=You and the ally with [Vow] gain [Vitalise] when gaining Blessed, increase the damage of [Absolute Judgement].
+
+人之蹈道=Path of Moral
+r:"^戰鬥開始時，與隨機1名同伴產生\『誓約』。雪實的回合結束時使處於該狀態下的同伴獲得相當於雪實(\d+%)防禦力的護盾，同一時間最多與1名同伴產生『誓約』。$"="At the start of the battle, make a [Vow] with 1 random ally. At the end of your turn that ally gain a Shield based on $1 DEF, Only 1 [Vow] can be active."
+
+法之貫理=Principle of Law
+r:"^『誓約』狀態額外使隊友防禦力提升(\d+%)。$"="Allies with [Vow] increase DEF by $1"
+
+責之督實=<size\=26>Supervision of Responsibility</size>
+
+律之恪守=Abidance of Law
+r:"^每回合開始時，使處於<link\="s\|121"><u>『誓約』</u></link>的同伴獲得1層<link\="s\|111"><u>祝福</u></link>效果。$"="At the start of your turn, grant 1 stack of <link\="s|111"><u>Blessed</u></link> to the ally with <link\="s|121"><u>[Vow]</u></link>."
+
+義之踐諾=<size\=26>Promise of Righteousness</color>
+
+斷之祓厄=Judge of Purification
+r:"^HIGHLIGHT效果提升：釋放HIGHLIGHT技能後，使所有同伴獲得2層<link\="s\|111"><u>祝福</u></link>效果。$"="HIGHLIGHT Effect Boost: After using HIGHLIGHT, all allies gain 2 stacks of <link\="s|111"><u>Blessed</u></link>."
+
+仁之容情=Humanity of Mercy
+r:"^使自身與處於<link\="s\|121"><u>『誓約』</u></link>的同伴，獲得10%的傷害加成。根據雙方總祝福層數額外獲得每層2%的屬性傷害加成，最多可獲得20%的屬性傷害加成。$"="You and the ally with <link\="s|121"><u>[Vow]</u></link> gain 10% DMG Bonus. Based on the sum of Blessed stack between the two additionally gain 2% DMG Bonus per stack, up to 20% Elemental DMG Bonus."
 
 //////////////////////////////
 /// c. RIN - Yaoling Li //////
@@ -634,26 +813,6 @@ r:"每有2點速度，則提升自身1%攻擊力，透過這種方式最多提�
 
 // Passive 2: Anger Blossom
 r:"使場上生命值高於50%的敵人受到的詛咒傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。"=Increase Curse damage dealt to enemies with over 50% HP by <color\=#FFFC40>$1</color>.
-
-/////////////////////////////////
-/// d. MONT - Montagne Kotone ///
-/////////////////////////////////
-
-勾手一躍=Hook Jump
-冰之綻放=Ice Bloom
-凜冬撕裂=Tears of Winter
-寒冰之刃=Ice Blade
-忘我=Selfless
-刀尖上的舞者=Dancer on Knife's Edge
-冰晶= <link\="s|119"><u>Ice Crystal</u></link>
-
-// Awareness 0
-// Awareness 1
-// Awareness 2
-// Awareness 3
-// Awareness 4
-// Awareness 5
-// Awareness 6
 
 /////////////////////////////////
 ///// e. JOKER - Amamiya Ren ////
@@ -1033,6 +1192,7 @@ r:"物理攻擊(\d+%)機率反射，造成(\d+%)攻擊力物理屬性傷害。"=
 控制=Ailment
 單療=ST Recovery
 群療=AoE Recovery
+恢復=Recovery
 
 物理=Physical
 物理屬性傷害=Physical DMG

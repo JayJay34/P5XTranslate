@@ -25,10 +25,11 @@ r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。每裝配1種不同屬�
 r:"^治療加成、護盾加成提升<color\=#2899FF>(\d+\.\d+%)</color>。光環：主角在場時使所有怪盜獲得防禦力提升<color\=#2899FF>(\d+\.\d+%)</color>。當為隊友使用技能時，使主要技能目標獲得基於自身生命值上限<color\=#2899FF>(\d+\.\d+%)</color>的回復效果。$"="Increase Healing Bonus, Shield Effect by <color\=#2899FF>$1</color>. \nAura: Increase all allies' DEF by <color\=#2899FF>$2</color> when Wonder is present. When using a skill on allies, the main target restore <color\=#2899FF>$3</color> Max HP."
 湧動迴響晶石=Surge Echoes crystal
 僅可消耗湧動迴響晶石=Only use Surge Echoes crystal
-機械處刑者=<size\=22>Mechanical Executioner</size>
+機械處刑者=<size\=21>Mechanical Executioner</size>
 【超頻爆發】=[Overclock Burst]
 超頻爆發=Overclock Burst
 r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，\n光環：WONDER在場時使所有怪盜提升<color\=#2899FF>(\d+)</color>點攻擊力。\n根據進入戰鬥時的人格面具獲得相應屬性傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，其他怪盜獲得相當於前者(\d+%)的效果。$"="Increase ATK by <color\=#2899FF>$1</color>. \nAura: Increase all allies' ATK by <color\=#2899FF>$2</color> when Wonder is present. \nIncrease Elemental DMG by <color\=#2899FF>$3</color> based on your starting Persona, other allies gain $4 of this effect."
+機械處刑者晶石=<size\=14>Mechanical Executioner crystal</size>
 僅可消耗機械處刑者晶石=Only use Mechanical Executioner crystal
 遠古力場=<size\=22>Ancient Force Field</size>
 【自然之力】=[Force of Nature]
@@ -40,6 +41,7 @@ r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。使敵人附著元素�
 【聖眷餘音】=[Holy Aftersound]
 聖眷餘音=Holy Aftersound
 r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，\n祝福屬性傷害提升、治療效果提升<color\=#2899FF>(\d+\.\d+%)</color>。\n回合開始時，為1名怪盜提供祝福效果並為其提供傷害加成<color\=#2899FF>(\d+\.\d+%)</color>；如果這名怪盜是祝福屬性怪盜，則額外獲得祝福傷害加成<color\=#2899FF>(\d+\.\d+%)</color>。\n此後每2回合觸發一次相同效果。$"="Increase ATK by <color\=#2899FF>$1</color> and increase Bless DMG, Healing Effect by <color\=#2899FF>$2</color>. \nAt the start of your turn, give 1 ally Blessed and increase their DMG Bonus by <color\=#2899FF>$3</color>; If that ally is a Bless thief, increase their Bless DMG Bonus by <color\=#2899FF>$4</color>. \nThis effect will trigger every 2 turns."
+結晶遺藏晶石=<size\=18>Crystalline Relic crystal</size>
 僅可消耗結晶遺藏晶石=Only use Crystalline Relic crystal
 極晝=Midnight Sun
 致命匕首=<size\=30>Deadly Dagger</size>
@@ -118,7 +120,7 @@ STANDARD 5 STAR UNIT WEAPONS
 復仇者的尖齒=Avenger's Fang
 【叛逆之子】=[Rebellious Teen]
 叛逆之子=Rebellious Teen
-r:"^暴擊效果提升<color\=#2899FF>(\d+\.\d+%)</color>。每個單位的回合結束時，龍司獲得『蠻力』1層，最多獲得10層，造成傷害時，消耗所有的『蠻力』，使技能傷害提升（<color\=#2899FF>(\d+\.\d+%)</color>\*『蠻力』層數）。$"="Increase CRIT DMG by <color\=#2899FF>$1</color>. Gain 1 stacks of [Brute Strength] after each ally's turn, up to 10 stacks. When dealing damage, consume all [Brute Strength] and increase damage by (<color\=#2899FF>$2</color>*[Brute Strength] stack)."
+r:"^暴擊效果提升<color\=#2899FF>(\d+\.\d+%)</color>。每個單位的回合結束時，龍司獲得『蠻力』1層，最多獲得10層，造成傷害時，消耗所有的『蠻力』，使技能傷害提升（<color\=#2899FF>(\d+\.\d+%)</color>\*『蠻力』層數）。$"="Increase CRIT DMG by <color\=#2899FF>$1</color>. Gain 1 stacks of [Brute Strength] after a character act, up to 10 stacks. When dealing damage, consume all [Brute Strength] and increase damage by (<color\=#2899FF>$2</color>*[Brute Strength] stack)."
 蓋亞鎮壓者=Gaia Suppressor
 r:"^暴擊率提升<color\=#2899FF>(\d+\.\d+%)</color>。釋放技能造成暴擊時，若自身持有<link\="s\|130"><u>『觸底反彈』</u></link>效果，則使該技能的暴擊效果提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase CRIT by <color\=#2899FF>$1</color>. When you land a CRIT with a skill, if you have <link\="s|130"><u>[Rebound]</u></link>, increase that skill's CRIT DMG by <color\=#2899FF>$2</color>."
 摩爾加納使用=Mona's Cutlass
@@ -166,6 +168,10 @@ r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。以同伴為目標釋�
 【潮流焦點】=[Focus of Trend]
 潮流焦點=Focus of Trend
 r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。富山佳代使用<link\="s\|142"><u>『勁歌熱舞』</u></link>後，有<color\=#2899FF>(\d+\.\d+%)</color>的固定機率返還1個<link\="s\|141"><u>『節拍』</u></link>;<link\="s\|142"><u>『勁歌熱舞』</u></link>提供的屬性提升效果額外提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. When you use <link\="s|142"><u>[Hot Dance]</u></link>, there is a <color\=#2899FF>$2</color> fixed chance to refund 1 <link\="s|141"><u>[Beat]</u></link>; Increase the buffs provided by <link\="s|142"><u>[Hot Dance]</u></link> by an extra <color\=#2899FF>$3</color>."
+熒色魅惑D4u=Fluorescent Charm D4u
+【和弦彩鈴】=[Chord Ringtone]
+和弦彩鈴=Chord Ringtone
+sr:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。使用支援技能後，富山佳代有<color\=#2899FF>(\d+\.\d+%)</color>的固定機率額外獲得1個<link\="s\|141"><u>『(.*)』</u></link>。$"="Increase ATK by <color\=#2899FF>$1</color>. After using support skills, there is a <color\=#2899FF>$2</color> fixed chance to gain 1 additional <link\="s|141"><u>[$3]</u></link>."
 野毛朋子使用=Moko's Twin Daggers
 織夢者=Dreamweaver
 【幻夢交響】=[Symphony of Dream]
@@ -178,8 +184,13 @@ r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。造成<link\="s\|109"><
 r:"^生命值提升<color\=#2899FF>(\d+\.\d+%)</color>。對敵人施加<link\="s\|102"><u>燃燒</u></link>狀態時，額外使敵人受到的傷害提升<color\=#2899FF>(\d+\.\d+%)</color>；每層<link\="s\|135"><u>『獻祭者』</u></link>額外使黑谷清造成的火焰屬性傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase Max HP by <color\=#2899FF>$1</color>. When inflicting <link\="s|102"><u>Burn</u></link> to an enemy, increase their DMG Taken by <color\=#2899FF>$2</color>; Each stack of <link\="s|135"><u>[Martyr]</u></link> increase your Fire DMG by <color\=#2899FF>$3</color>."
 藤川雪實使用=Yuki's Flail
 歸淨樂土=Elysium
+【救贖鎖鏈】=[Chains of Salvation]
 救贖鎖鏈=Chains of Salvation
 r:"^防禦力提升<color\=#2899FF>(\d+\.\d+%)</color>。\n使用『絕對審判』技能時額外計入1層<link\="s\|116"><u>『充能』</u></link>並根據自身防禦力偷取目標<color\=#2899FF>(\d+\.\d+%)</color>的防禦力（最多<color\=#2899FF>(\d+)</color>防禦力），效果持續2回合。$"="Increase DEF by <color\=#2899FF>$1</color>. \nCount 1 additional stack of <link\="s|116"><u>[Vitalise]</u></link> when using [Absolute Judgment] and steal <color\=#2899FF>$2</color> DEF based on your DEF (Up to <color\=#2899FF>$3</color> DEF) from the target for 2 turns."
+萬寶重擊=Virtuous Strike
+【罪業剋星】=[Profane Nemesis]
+罪業剋星=Profane Nemesis
+r:"^防禦力提升<color\=#2899FF>(\d+\.\d+%)</color>。為生命值低於(\d+%)的同伴提供護盾時，護盾加成提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase DEF by <color\=#2899FF>$1</color>. Increase Shield Bonus by <color\=#2899FF>$3</color> when granting an ally with less than $2 HP Shield."
 白鳥誠司使用=Fleuret's Rapier
 啟明之星=Guiding Star
 【風暴來臨】=[Coming Storm]
@@ -194,7 +205,11 @@ r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。<link\="s\|154"><u>『�
 凜冬女王=Winter Queen
 【永恆冬夜】=[Eternal Winter Night]
 永恆冬夜=Eternal Winter Night
-r:"^暴擊效果提升<color\=#2899FF>(\d+\.\d+%)</color>。自身的<link\="s\|119"><u>『冰晶』</u></link>達到8顆時，就可以釋放<link\="s\|137"><u>『刀尖上的舞者』</u></link>；<link\="s\|137"><u>『刀尖上的舞者』</u></link>造成的傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。同時，當自身持有8顆<link\="s|119"><u>『冰晶』</u></link>時，<link\="s|138"><u>『寒冰之刃』</u></link>技能即可獲得強化。$"="Increase CRIT DMG by <color\=#2899FF>$1</color>. You can use <link\="s|137"><u>[Dancer on Knife Edge]</u></link> when you have 8 stacks of <link\="s|119"><u>[Ice Crystal]</u></link>; Increase DMG Dealt by <link\="s|137"><u>[Dancer on Knife Edge]</u></link> by <color\=#2899FF>$2</color>. Strengthen <link\="s|138"><u>[Ice Blade]</u></link> when you have 8 stacks of <link\="s|119"><u>[Ice Crystal]</u></link>."
+r:"^暴擊效果提升<color\=#2899FF>(\d+\.\d+%)</color>。自身的<link\="s\|119"><u>『冰晶』</u></link>達到8顆時，就可以釋放<link\="s\|137"><u>『刀尖上的舞者』</u></link>；<link\="s\|137"><u>『刀尖上的舞者』</u></link>造成的傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。同時，當自身持有8顆<link\="s|119"><u>『冰晶』</u></link>時，<link\="s|138"><u>『寒冰之刃』</u></link>技能即可獲得強化。$"="Increase CRIT DMG by <color\=#2899FF>$1</color>. You can use <link\="s|137"><u>[Dancer on Knife's Edge]</u></link> when you have 8 stacks of <link\="s|119"><u>[Ice Crystal]</u></link>; Increase DMG Dealt by <link\="s|137"><u>[Dancer on Knife's Edge]</u></link> by <color\=#2899FF>$2</color>. Strengthen <link\="s|138"><u>[Frozen Blade]</u></link> when you have 8 stacks of <link\="s|119"><u>[Ice Crystal]</u></link>."
+鳴空長歌=Sky Song
+【冰之饋贈】=[Ice Gift]
+冰之饋贈=Ice Gift
+sr:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。琴音每次獲得<link\="s\|119"><u>『(.*)』</u></link>時增加冰凍傷害<color\=#2899FF>(\d+\.\d+%)</color>，持續1回合，最多疊加10層。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase Ice DMG by <color\=#2899FF>$3</color> every time you gain <link\="s|119"><u>[$2]</u></link> for 1 turn up to 10 stacks."
 佐原海夕使用=Puppet's Sea Scooter
 幻夢泡影=Dream Bubble
 【深海共鳴】=[Deep Sea Resonance]
