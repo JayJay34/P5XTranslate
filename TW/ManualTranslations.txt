@@ -37,6 +37,7 @@ r:"更新本地文件\((\d+)\/(\d+)\)"=<b>Applying Update ($1/$2)</b>
 日文配音=Japanese
 中文配音=Mandarin
 提示=Tips
+是否退出遊戲？=Quit the game?
 
 ---------------------------
 --- II. Character Names ---
@@ -82,7 +83,8 @@ r:"^西<color\=#ff0000ff>森</color> 陽菜$"="Ha<color\=#ff0000ff>ru</color>na 
 r:"^富<color\=#ff0000ff>山</color> 佳代$"="Ka<color\=#ff0000ff>yo</color> Tomiyama"
 神山嶺央=Reo Kamiyama
 佐原海夕=Miyu Sahara
-藤川雪實=Yukimi Fujikawa 
+藤川雪實=Yukimi Fujikawa
+雪實=Yukimi
 黑谷清=Kiyoshi Kurotani
 黑谷=Kurotani
 r:"^黑<color\=#ff0000ff>谷</color> 清$"="Ki<color\=#ff0000ff>yo</color>shi Kurotani"
@@ -264,6 +266,7 @@ r:"^渡來軒$"="Asshouken"
 是你啊……今天來打算做點什麼？=It's you.. What are you doing today?
 獲取補給=Get supplies
 什麼嘛……不要隨便打擾別人生意。=What... Don't mess with other people's business.
+進入酒吧=Enter the bar
 
 武見診所=Takemi Medical Clinic
 武<color\=#ff0000ff>見</color>診所=Take<color\=#ff0000ff>mi</color> Medical Clinic
@@ -491,6 +494,7 @@ r:"^提升(\d+)生命值。\n提升(\d+)攻擊力。\n提升(\d+)防禦力。$"=
 // Character Potential Terms (Text shrunk to fit box) //
 
 潛能=<size\=16>Potential</size>
+r:"^潛能詳情$"="<size\=27>Potential Details</size>"
 意識=<size\=15>Awareness</size>
 進化效果=<size\=19>Evolve Effect</size>
 突破=<size\=19>Enhance</size>
@@ -794,9 +798,11 @@ r:"(\d+)\/(\d+)頁"=Page $1 / $2
 『行動值』\n探索都市所需的基本能量，每天會自動恢復。\n每日05:00恢復5點。=[Energy Points] \nEnergy needed for daily activities. \nAutomatically restore 5 at 05:00 every day.
 持有=Own
 
+消耗=Spend
 確定=Confirm
 稍後再說=I'm in a hurry
-消耗=Spend
+沒問題=No problem
+拒絕=Decline
 
 人格指數=Social Stats
 都市五維=Social Stats
@@ -1056,9 +1062,13 @@ sr:"^和(.*)一起度過$"="<size\=24>Hang out with\n$1</size>"
 和梅洛普一起度過=<size\=24>Hang out with\nMerope</size> 
 梅洛普的好奇心=<size\=24>Merope's curiosity</size>
 梅洛普對於現代都市中的很多事物都感到好奇，希望能和你一起體驗=Merope is curious about many things in a modern city and would like to experience them with you.
+深入了解的方式=<size\=24>Ways to \nunderstand deeper</size>
+為了更好的了解你，梅洛普提出了一個不尋常的建議……=<size\=25>In order to get to understand you better, \nMerope has made an unusual suggestion...</size> 
 梅洛普的邀約=Merope's Invitation
 要和梅洛普一起度過嗎？=<size\=28>Want to spend time with Merope?</size> 
 決定要陪梅洛普了……=<size\=26>I've decided to accompany Merope...</size> 
+要帶梅洛普回家嗎……=Want to take Merope home?
+那就帶梅洛普回家吧……=Then let's bring Merope home...
 
 和李瑤鈴一起度過=<size\=24>Hang out with\nYaoling Li</size>
 和富山一起度過=<size\=24>Hang out with\nTomiyama</size>
@@ -1566,21 +1576,11 @@ Metaverse Combat Terms
 // Special Mechanics
 
 // Sea of Souls
-使用人格面具技能或觸發追加效果時，獲得1層『強化印記』，最多可疊加3層；全體怪盜行動一輪後，獲得『強化印記』層數*15%的傷害加成並移除1層『強化印記』。=<size\=24>When a Persona skill is used, or a Follow-up attack is triggered, you gain 1 layer of the stackable Enhanced Buff. After all party members have acted, gain 15% DMG Bonus per stack and remove 1 layer of Enhanced Buff.</size>
+使用人格面具技能或觸發追加效果時，獲得1層『強化印記』，最多可疊加3層；全體怪盜行動一輪後，獲得『強化印記』層數*15%的傷害加成並移除1層『強化印記』。=<size\=24>When a Persona skill is used, or a Follow Up is triggered, you gain 1 layer of the stackable Enhanced Buff. After all party members have acted, gain 15% DMG Bonus per stack and remove 1 layer of Enhanced Buff.</size>
 
 // Raids
 所有敵人對<color\=#fbff37>電擊</color>屬性的適應性變為弱=All enemies become weak to <color\=#fbff37>Electric</color> DMG
-所有怪盜<color\=#FFFC40>追加效果</color>造成的傷害提升50%=All Party Members' <color\=#FFFC40>Follow-up Attacks</color> DMG +50%
+sr:"^所有怪盜<color\=#FFFC40>(.*)</color>造成的傷害提升50%$"="All Party Members' <color\=#FFFC40>$1</color> DMG +50%"
 處於<color\=#ff381d>燃燒</color>狀態的敵人受到的傷害提高20%=Enemies afflicted with <color\=#ff381d>Burn</color> +20% DMG Taken
 所有怪盜<color\=#ff0036>詛咒</color>傷害降低20%=All Party Members' <color\=#ff0036>Curse</color> DMG -20%
 <color\=#FFFC40>支配</color>怪盜造成傷害提高20%=<color\=#FFFC40>Domination</color> All Party Members' DMG +20%
-
-----------
-MENU BUFFS/ DEBUFFS
-----------
-r:"^攻擊力提升(\d+%)$"="Increase ATK by $1"
-r:"^防禦力提升(\d+%)$"="Increase DEF by $1"
-r:"^攻擊力降低(\d+%)$"="Decrease ATK by $1"
-r:"^防禦力降低(\d+%)$"="Decrease DEF by $1"
-r:"^受弱點傷害提升(\d+%)$"="Increase Weakness DMG by $1"
-r:"^耐性穿透提升(\d+%)$"="Increase Effect RES Ignore by $1"
