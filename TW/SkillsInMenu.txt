@@ -387,6 +387,7 @@ CATTLE - Ruferu
 r:"^戰鬥技巧 Lv.(\d+)$"="Combat Skills Lv.$1"
 r:"^戰鬥技巧 <color\=#0F69CB>Lv.(\d+)</color>$"="Combat Skills <color\=#0F69CB>Lv.$1</color>"
 sr:"^『(.*)』、『(.*)』的技能等級提升2級，至多提升至15級。$"="[$1], [$2] level +2, up to a maximum of level 15."
+sr:"^『(.*)』、『(.*)』的技能等級提升3級，至多提升至15級。$"="[$1], [$2] level +3, up to a maximum of level 15."
 
 主動治療時為同伴附加『星之火』效果，使同伴獲得屬性提升效果。=When healing, give your ally [Starfire], increasing their attributes.
 雀躍火梟=<size\=25>Caper Fire Owl</size>
@@ -690,7 +691,7 @@ sr:"^準備時間：8次行動\n使所有同伴恢復<color\=#FFFC40>(\d+)</colo
 
 r:"^熱辣變奏曲 Lv.(\d+)$"="Hot Variation Lv.$1"
 r:"^熱辣變奏曲 <color\=#0F69CB>Lv.(\d+)</color>$"="Hot Variation <color\=#0F69CB>Lv.$1</color>"
-sr:"^準備時間：8次行動\n使所有同伴造成傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續3回合，每225點富山佳代的攻擊力額外提供1%傷害提升（最多計入<color\=#FFFC40>(\d+)</color>點攻擊力）。對處於<link\="s\|101"><u>元素異常</u></link>狀態的敵人造成傷害時，傷害加成效果提升至1.5倍。獲得2個<link\="s\|141"><u>『(.*)』</u></link>。\n<b><size\=28><color\=#850101>華麗的舞池已經做好了充足準備！熱辣的音樂浪潮洶湧而來，引領同伴放肆起舞。</color></size></b>$"="Preparation Time: 8 Actions\nIncrease all allies' DMG Dealt by <color\=#FFFC40>$1</color> for 3 turns. Increases the DMG Dealt by 1% for every 225 ATK you have (Up to <color\=#FFFC40>$2</color>). Increases the DMG Bonus effect by 1.5 times when dealing damage to enemies who are inflicted by <link\="s|101"><u>Elemental Ailment</u></link>. Gains 2 <link\="s|141"><u>[$3]</u></link>.\n<b><size\=28><color\=#850101>The gorgeous dance floor is ready for you! The hot music is coming, and you'll be able to lead your fellow dancers to dance with abandon.</color></size></b>"
+sr:"^準備時間：8次行動\n使所有同伴造成傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續3回合，每225點富山佳代的攻擊力額外提供1%傷害提升（最多計入<color\=#FFFC40>(\d+)</color>點攻擊力）。對處於<link\="s\|101"><u>元素異常</u></link>狀態的敵人造成傷害時，傷害加成效果提升至1.5倍。獲得2個<link\="s\|141"><u>『(.*)』</u></link>。\n<b><size\=28><color\=#850101>華麗的舞池已經做好了充足準備！熱辣的音樂浪潮洶湧而來，引領同伴放肆起舞。</color></size></b>$"="Preparation Time: 8 Actions\nIncrease all allies' DMG Dealt by <color\=#FFFC40>$1</color> for 3 turns. Increases the DMG Dealt by 1% for every 225 ATK you have (Up to <color\=#FFFC40>$2</color>). Increases the DMG Bonus effect by 1.5 times when dealing damage to enemies who are inflicted wtih <link\="s|101"><u>Elemental Ailment</u></link>. Gains 2 <link\="s|141"><u>[$3]</u></link>.\n<b><size\=28><color\=#850101>The gorgeous dance floor is ready for you! The hot music is coming, and you'll be able to lead your fellow dancers to dance with abandon.</color></size></b>"
 
 r:"^活力 Lv.(\d+)$"="Vigorous Lv.$1"
 sr:"^每獲得<color\=#FFFC40>(\d+)</color>個<link\="s\|141"><u>『(.*)』</u></link>，使當前生命值最高的敵人陷入隨機1種<link\="s\|101"><u>元素異常</u></link>效果。$"="After gaining <color\=#FFFC40>$1</color> <link\="s|141"><u>[$2]</u></link> inflict the highest HP% enemy with 1 random <link\="s|101"><u>Elemental Ailment</u></link>."
@@ -787,6 +788,172 @@ r:"^HIGHLIGHT效果提升：釋放HIGHLIGHT技能後，使所有同伴獲得2層
 
 仁之容情=Humanity of Mercy
 r:"^使自身與處於<link\="s\|121"><u>『誓約』</u></link>的同伴，獲得10%的傷害加成。根據雙方總祝福層數額外獲得每層2%的屬性傷害加成，最多可獲得20%的屬性傷害加成。$"="You and the ally with <link\="s|121"><u>[Vow]</u></link> gain 10% DMG Bonus. Based on the sum of Blessed stack between the two additionally gain 2% DMG Bonus per stack, up to 20% Elemental DMG Bonus."
+
+----------
+Skull - Ryuji Sakamoto
+----------
+
+生命值越低，攻擊力越高。自身回合開始時，若自身生命值不高於75%，則獲得『觸底反彈』，提升下一個技能造成的傷害。=<size\=25>The lower your HP, the higher your ATK. At the start of your turn, if your HP is not higher than 75%, gain [Rebound], boosting the DMG Dealt of your next skill.</size>
+爆裂撞擊=Burst Impact
+電擊懲戒=<size\=26>Electric Punishment</size>
+蓄力一擊=Charged Blow
+特攻=Special Attack
+義氣=Loyalty
+
+r:"^爆裂撞擊 Lv.(\d+)$"="Burst Impact Lv.$1"
+r:"^爆裂撞擊 <color\=#0F69CB>Lv.(\d+)</color>$"="Burst Impact <color\=#0F69CB>Lv.$1</color>"
+sr:"^對1名敵人造成3次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，若自身沒有<link\="s\|130"><u>『(.*)』</u></link>效果，則該技能額外消耗(\d+%)最大生命值，並使該技能造成的傷害提升(\d+%)。\n<b><size\=28><color\=#850101>完全釋放的力量引發難以控制的衝擊波襲向敵人，並造成多次傷害。</color></size></b>$"="Deals 3 hits of <color\=#FFFC40>$1</color> ATK Physical damage to 1 enemy. If you don't have <link\="s|130"><u>[$2]</u></link>, consumes $3 more Max HP to increases DMG Dealt by $4.\n<b><size\=28><color\=#850101>The fully unleashed power sends an uncontrollable shockwave at the enemy, dealing multiple damage.</color></size></b>"
+
+r:"^電擊懲戒 Lv.(\d+)$"="<size\=28>Electric Punishment</size> Lv.$1"
+r:"^電擊懲戒 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=28>Electric Punishment</size> <color\=#0F69CB>Lv.$1</color>"
+sr:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，有<color\=#FFFC40>(\d+\.\d+%)</color>的基礎機率使敵人陷入<link\="s\|104"><u>觸電</u></link>狀態，若自身有<link\="s\|130"><u>『(.*)』</u></link>效果，則機率提升至<color\=#FFFC40>(\d+\.\d+%)</color>。\n<b><size\=28><color\=#850101>雷電從天而降，猛烈地砸向敵人造成電擊屬性傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Electric damage to all enemies, with a <color\=#FFFC40>$2</color> base chance to inflicts <link\="s|104"><u>Shock</u></link>. If you have <link\="s|130"><u>[$3]</u></link>, increases the chance to <color\=#FFFC40>$4</color>.\n<b><size\=28><color\=#850101>Thunderbolts fall from the sky, slamming into enemies and dealing electrical damage.</color></size></b>"
+
+r:"^蓄力一擊 Lv.(\d+)$"="Charged Blow Lv.$1"
+r:"^蓄力一擊 <color\=#0F69CB>Lv.(\d+)</color>$"="Charged Blow <color\=#0F69CB>Lv.$1</color>"
+sr:"^選擇1名敵人進行蓄力，下一回合時自動出手，對目標造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害。若自身有<link\="s\|130"><u>『(.*)』</u></link>效果，則該技能必定暴擊。若蓄力期間目標死亡，則隨機選擇另外1名敵人。若龍司處於無法行動的狀態，則延後至可以行動時出手。\n<b><size\=28><color\=#850101>以超乎尋常的力量，全力出拳痛擊敵人使其受到物理屬性傷害，此次攻擊若觸發暴擊，將會造成額外的傷害。</color></size></b>$"="Selects 1 enemy and charges, automatically attacks on your next turn. Deals <color\=#FFFC40>$1</color> ATK Physical damage to the target. If you have <link\="s|130"><u>[$2]</u></link>, this skill will always CRIT. If the target is defeated during charge, randomly select 1 enemy as the target. If you cannot act, delay the attack until you can.\n<b><size\=28><color\=#850101>With extraordinary strength, punch an enemy with all your might, causing them to take physical damage, and if this attack triggers a critical hit, it will deal additional damage.</color></size></b>"
+
+r:"^『ONE MORE』：對1名敵人造成物理屬性傷害。\n『HIGHLIGHT』：對1名敵方單位造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的物理傷害，並使自己下一個技能的傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[ONE MORE]: Deals Physical damage to 1 enemy. \n[HIGHLIGHT]: Deals <color\=#FFFC40>$1</color> ATK Physical damage to 1 enemy and increases DMG Dealt by your next skill by <color\=#FFFC40>$2</color>. \nMelee Attack: Uses a melee weapon to deal light Physical damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
+
+r:"^特攻 Lv.(\d+)$"="Special Attack Lv.$1"
+r:"^攻擊生命值百分比高於自己的敵人時，攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#FFFC40>$1</color> when attacking enemies with higher HP% than you."
+r:"^攻擊生命值百分比高於自己的敵人時，攻擊力提升<color\=#0169ca>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#0169ca>$1</color> when attacking enemies with higher HP% than you."
+
+r:"^義氣 Lv.(\d+)$"="Loyalty Lv.$1"
+sr:"^<link\="s\|130"><u>『(.*)』</u></link>效果觸發後，恢復相當於自身<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的生命值。$"="Restore <color\=#FFFC40>$2</color> ATK as HP after triggering the effect of <link\="s|130"><u>[$1]</u></link>."
+sr:"^<link\="s\|130"><u>『(.*)』</u></link>效果觸發後，恢復相當於自身<color\=#0169ca>(\d+\.\d+%)</color>攻擊力的生命值。$"="Restore <color\=#0169ca>$2</color> ATK as HP after triggering the effect of <link\="s|130"><u>[$1]</u></link>."
+
+r:"^觸底反彈$"="Rebound"
+<color\=#66ccff>『觸底反彈』</color>=<color\=#66ccff>[Rebound]</color>
+自身回合開始時，若自身生命值低於75%，則獲得該效果，提升下一個技能造成的傷害。=At the start of your turn, if your HP is below 75%, gain this effect, boosting the DMG Dealt of your next skill.
+
+五臟爆裂拳=Rupturing Punch
+sr:"^回合開始時，根據自身損失的生命值，提升龍司的攻擊力，最低提升(\d+%)。自身生命值低於(\d+%)時，獲得最高提升，攻擊力提升(\d+%)。若自身生命值不高於(\d+%)，額外獲得『(.*)』效果：下次人格面具技能造成的傷害提升(\d+%)。$"="At the start of your turn, increase your ATK based on your missing HP with a minimum of $1. Gain a maximum boost of $3 ATK increase when you have less than $2 HP. When you have less than $4 HP, gain [$5]: Increase DMG Dealt of your next skill by $6."
+
+猛虎咆哮=Tiger Roar
+sr:"^『(.*)』技能的蓄力期間使自身受到的傷害降低(\d+%)。$"="Decrease DMG Taken by $2 when charging [$1]."
+
+螺旋升天爆錘=<size\=35>Spiral Hammer Smash</size>
+
+快刀斬亂麻=Cut the Gordian Knot
+r:"^釋放技能造成暴擊時，無視敵人(\d+%)防禦力。$"="Ignore $1 DEF when landing CRIT with a skill."
+
+幻影連打=Phantom Follow Up
+
+無敵破風斬=Invincible Slash
+r:"^HIGHLIGHT效果提升：下一個技能造成的傷害提升(\d+%)、暴擊效果提升(\d+%)。$"="HIGHLIGHT Effect Boost: Increase DMG Dealt and CRIT DMG of your next skill by $1 and $2."
+
+超神絕殺=Super God Killer
+sr:"^釋放『(.*)』技能對敵人造成傷害時，使目標獲得1個『畏懼』效果：使龍司下一次對其釋放的技能的傷害提升(\d+%)。$"="After dealing damage with [$1], give the target 1 [Dread]: Increase DMG Dealt of your next skill to them by $2."
+
+----------
+Mona - Morgana
+----------
+
+sr:"^每次使用不同技能時獲得『(.*)』，同伴生命值較低時自動進行一次群體治療並消耗『(.*)』。$"="<size\=27>Gain [$1] every time you use a different skill, automatically consume [$2] to do an AoE Heal when any ally is at low HP.</size>"
+疾風強襲=Wind Assult
+療癒之術=Art of Healing
+奇蹟拳=Miracle Punch
+自信=Confidence
+羈絆=Bond
+
+r:"^疾風強襲 Lv.(\d+)$"="Wind Assult Lv.$1"
+r:"^疾風強襲 <color\=#0F69CB>Lv.(\d+)</color>$"="Wind Assult <color\=#0F69CB>Lv.$1</color>"
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的疾風屬性傷害，有<color\=#FFFC40>(\d+%)</color>基礎機率使敵人陷入<link\="s\|105"><u>風襲</u></link>狀態，效果持續2回合。\n<b><size\=28><color\=#850101>沒有人能在貓咪——不是貓！——的怒氣中全身而退，怒氣化為螺旋風暴對敵人造成傷害，並毫不留情的附著元素異常，做好承受的準備了嗎？</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Wind damage to 1 enemy, with a <color\=#FFFC40>$2</color> base chance to inflicts <link\="s|105"><u>Winded</u></link> for 2 turns.\n<b><size\=28><color\=#850101>No one can be in a cat -not a cat!\n——The anger retreats, the anger turns into a spiral storm that causes damage to the enemy, and the adhesion element is abnormal. Is it ready to be affected?</color></size></b>"
+
+r:"^療癒之術 Lv.(\d+)$"="Art of Healing Lv.$1"
+r:"^療癒之術 <color\=#0F69CB>Lv.(\d+)</color>$"="Art of Healing <color\=#0F69CB>Lv.$1</color>"
+sr:"^使所有同伴恢復<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力\+<color\=#FFFC40>(\d+)</color>的生命值，驅散所有同伴的1個<link\="s\|101"><u>元素異常</u></link>狀態。若成功驅散，則立刻獲得一層<link\="s\|150"><u>『(.*)』</u></link>。\n<b><size\=28><color\=#850101>貓咪——不是貓！——的撫慰化為一陣若無其事的細風，在所有同伴身上吹拂而過並施展治癒之術。</color></size></b>$"="Restores <color\=#FFFC40>$1</color> ATK + <color\=#FFFC40>$2</color> HP to all allies and dispels 1 <link\="s|101"><u>Elemental Ailment</u></link> for all allies.\nAfter dispelling, gains 1 stack of <link\="s|150"><u>[$3]</u></link>.\n<b><size\=28><color\=#850101>Cat -not cat!\n——This into a while of comfort, blowing and giving cure techniques on all companions.</color></size></b>"
+
+r:"^奇蹟拳 Lv.(\d+)$"="Miracle Punch Lv.$1"
+r:"^奇蹟拳 <color\=#0F69CB>Lv.(\d+)</color>$"="Miracle Punch <color\=#0F69CB>Lv.$1</color>"
+sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，該技能命中率降低<color\=#FFFC40>(\d+%)</color>，暴擊率提升<color\=#FFFC40>(\d+%)</color>。若該技能暴擊，則立刻獲得一層<link\="s\|150"><u>『(.*)』</u></link>。\n<b><size\=28><color\=#850101>圍裹著尖刺的拳頭從天而降，對敵人造成猛烈的傷害，這樣的威力絕不可小覷。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Physical damage to 1 enemy. This skill has <color\=#FFFC40>$2</color> decreased Hit Rate and <color\=#FFFC40>$3</color> increased CRIT.\nIf this skill crits, gains 1 stacks of <link\="s|150"><u>[$4]</u></link>.\n<b><size\=28><color\=#850101>The fist wrapped around the sky fell from the sky, causing violent damage to the enemy, and this power must not be underestimated.</color></size></b>"
+
+r:"^『ONE MORE』：對1名敵人造成疾風屬性傷害。\n『HIGHLIGHT』：對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的疾風屬性傷害，並且使1名同伴以1%的最大生命值復活。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[ONE More]: Deals Wind damage to 1 enemy.\n[HIGHTLIGHT]: Deals <color\=#FFFC40>$1</color> ATK Wind damage to 1 enemy, and revives an ally with 1% Max HP.\nMelee Attack: Uses a melee weapon to deal light Physical damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
+
+r:"^自信 Lv.(\d+)$"="Confidence Lv.$1"
+sr:"^<link\="s\|150"><u>『(.*)』</u></link>的治療效果可以暴擊，獲得額外暴擊率<color\=#FFFC40>(\d+\.\d+%)</color>。暴擊使得<link\="s\|150"><u>『(.*)』</u></link>的恢復量額外提升<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力\+<color\=#FFFC40>(\d+)</color>。$"="Healing from <link\="s|150"><u>[$1]</u></link> can CRIT and has <color\=#FFFC40>$2</color> bonus CRIT. Increase Healing by <color\=#FFFC40>$4</color> ATK + <color\=#FFFC40>$5</color> when CRIT Healing with <link\="s|150"><u>[$3]</u></link>."
+sr:"^<link\="s\|150"><u>『(.*)』</u></link>的治療效果可以暴擊，獲得額外暴擊率<color\=#0169ca>(\d+\.\d+%)</color>。暴擊使得<link\="s\|150"><u>『(.*)』</u></link>的恢復量額外提升<color\=#0169ca>(\d+\.\d+%)</color>攻擊力\+<color\=#0169ca>(\d+)</color>。$"="Healing from <link\="s|150"><u>[$1]</u></link> can CRIT and has <color\=#0169ca>$2</color> bonus CRIT. Increase Healing by <color\=#0169ca>$4</color> ATK + <color\=#0169ca>$5</color> when CRIT Healing with <link\="s|150"><u>[$3]</u></link>."
+
+r:"^羈絆 Lv.(\d+)$"="Bond Lv.$1"
+r:"^光環：所有同伴的精力值消耗減少<color\=#FFFC40>(\d+\.\d+%)</color>$"="Aura: Decrease SP cost for all allies by <color\=#FFFC40>$1</color>"
+r:"^光環：所有同伴的精力值消耗減少<color\=#0169ca>(\d+\.\d+%)</color>$"="Aura: Decrease SP cost for all allies by <color\=#0169ca>$1</color>"
+
+r:"^直覺$"="Instinct"
+<color\=#66ccff>『直覺』</color>=<color\=#66ccff>[Instinct]</color>
+同伴攻擊敵人時，若任意同伴生命值低於70%，則摩爾加納釋放一次群體的治療效果。=If any ally is below 70% HP when they attack an enemy, use an AoE Healing skill.
+
+靈敏嗅覺=Sensitive Smell
+sr:"^每次使用與上回合不相同技能時獲得一層『(.*)』，可疊加3層。\n『(.*)』：同伴使用技能攻擊敵人時，若任意同伴血量低於70%則摩爾加納造成<link\="s\|100"><u>追加效果</u></link>，立刻治療所有同伴(\d+%)攻擊力\+(\d+)/(\d+)/(\d+)（達到1、50、70級時變化）的生命值。$"="Gain 1 stack of [$1] every time you use a different skill, up to 3 stacks.\n[$2]: If any ally is below 70% HP when they attack an enemy, perform a <link\="s|100"><u>Follow Up</u></link>. Immediately restore $3 ATK + $4/$5/$6 HP to all allies (Change when reaching level 1, 50, 70)."
+
+精力旺盛=Energetic
+sr:"^<link\="s\|150"><u>『(.*)』</u></link>效果對(\d+%)生命值以下的隊友造成(\d+%)攻擊力的額外治療。$"="The effect of <link\="s|150"><u>[$1]</u></link> restore an additional $3 ATK as HP when the ally is below $2 HP."
+
+尾尖輕搖=Tail Wagging
+
+請勿打擾=Do Not Disturb
+sr:"^『(.*)』對主要目標治療量提升(\d+%)。$"="[$1] restore $2 more to the main target."
+
+敏捷反撲=Nimble Counterattack
+
+獵物轉移=Prey Transfer
+r:"^HIGHLIGHT效果提升：使同伴復活時，額外恢復其(\d+\.\d+%)攻擊力\+(\d+)的生命值。$"="Highlight Effect Boost: Restore $1 ATK + $2 HP when reviving an ally."
+
+好奇寶寶=Curious Baby
+sr:"^『(.*)』的命中率不再降低，並且造成暴擊後使敵人受到傷害提升(\d+%)，2回合。$"="[$1] will not decrease Hit Rate. Increase DMG Taken of the enemy by $2 after landing a CRIT for 2 turn."
+
+----------
+Panther - Ann Takamaki
+----------
+
+sr:"^敵人受到火焰屬性傷害時計數，計數達到4時使高卷杏進入『(.*)』狀態，大幅提升攻擊力並使技能強化。$"="<size\=28>Count when enemies take Fire damage. Enter [$1] when the count is at 4, heavily increase ATK and boost skills.</size>"
+繁花熱烈=Hot Blossom
+魅火術=Charming Fire
+火炎侵蝕=Flame Erosion
+r:"^慰藉$"="Comfort"
+
+r:"^繁花熱烈 Lv.(\d+)$"="Hot Blossom Lv.$1"
+r:"^繁花熱烈 <color\=#0F69CB>Lv.(\d+)</color>$"="Hot Blossom <color\=#0F69CB>Lv.$1</color>"
+sr:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，並且提升自身攻擊力(\d+%)，效果持續2回合。<link\="s\|113"><u>『(.*)』</u></link>狀態下，使敵人攻擊力基於高卷杏的攻擊力降低(\d+%)並使自身額外提升對應攻擊力，效果持續2回合。\n<b><size\=28><color\=#850101>燃燒著的火焰迅速吞噬敵人，巨大的玫瑰自地下盛放而出，綻放傲人之姿勢，對敵人造成難以抵擋的傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Fire damage to all enemies and increases ATK by $2 for 2 turns. When you're in <link\="s|113"><u>[$3]</u></link>, decreases the ATK of all enemies based on $4 your own ATK and gains the corresponding ATK for 2 turns.\n<b><size\=28><color\=#850101>The burning flames quickly devoured the enemy, and the huge roses were released from the ground, blooming proudly, causing difficult damage to the enemy.</color></size></b>"
+
+r:"^魅火術 Lv.(\d+)$"="Charming Fire Lv.$1"
+r:"^魅火術 <color\=#0F69CB>Lv.(\d+)</color>$"="Charming Fire <color\=#0F69CB>Lv.$1</color>"
+sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，有(\d+%)基礎機率使敵人陷入<link\="s\|102"><u>燃燒</u></link>狀態。<link\="s\|113"><u>『(.*)』</u></link>狀態下，若敵人的生命值低於(\d+%)，則額外造成<color\=#FFFC40>(\d+%)</color>傷害。\n<b><size\=28><color\=#850101>包裹著可愛皮囊的炮彈向敵人襲去，並在接觸的一瞬間爆裂開來，炸開的火光對敵人造成猛烈的傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Fire damage to 1 enemy, with a $2 base chance to inflicts <link\="s|102"><u>Burn</u></link>. When you're in <link\="s|113"><u>[$3]</u></link>, if the enemy is under $4 HP, deals <color\=#FFFC40>$5</color> more damage.\n<b><size\=28><color\=#850101>The artillery shells wrapped in the cute skin hit the enemy, and burst into the moment of contact. The explosive flames caused violent damage to the enemy.</color></size></b>"
+
+r:"^火炎侵蝕 Lv.(\d+)$"="Flame Erosion Lv.$1"
+r:"^火炎侵蝕 <color\=#0F69CB>Lv.(\d+)</color>$"="Flame Erosion <color\=#0F69CB>Lv.$1</color>"
+sr:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，有(\d+%)基礎機率使敵人陷入<link\="s\|102"><u>燃燒</u></link>狀態。<link\="s\|113"><u>『(.*)』</u></link>狀態下傷害提升<color\=#FFFC40>(\d+%)</color>。\n<b><size\=28><color\=#850101>火舌一觸即發，迅速的蔓延至敵人身上並造成火焰屬性傷害，滿目的紅色將敵人包裹在中心位置，承受著侵蝕之痛。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Fire damage to all enemies, with a $2 base chance to inflicts <link\="s|102"><u>Burn</u></link>. When you're in <link\="s|113"><u>[$3]</u></link> increases DMG Dealt by <color\=#FFFC40>$4</color>.\n<b><size\=28><color\=#850101>As soon as the tongue was touched, it quickly spread to the enemy and caused the flame attribute damage. The red red wrapped the enemy in the center position and endured the pain of erosion.</color></size></b>"
+
+r:"^『ONE MORE』：對1名敵人造成火焰屬性傷害。\n『HIGHLIGHT』：對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，並且使自身造成的火焰傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續1回合。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，每次向隨機敵人射擊3發，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[ONE More]: Deals Fire damage to 1 enemy. \n[HIGHLIGHT}: Deals <color\=#FFFC40>$1</color> ATK Fire damage to all enemies and increases Fire damage by <color\=#FFFC40>$2</color> for 1 turn.\nMelee Attack: Uses a melee weapon to deal light Physical damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing 3 hits of Gun damage randomly, can shoot multiple times based on ammo."
+
+r:"^對處於<link\="s\|102"><u>燃燒</u></link>狀態的敵人造成的傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Increase DMG Dealt by <color\=#FFFC40>$1</color> when attacking enemies inflicted with <link\="s|102"><u>Burn</u></link>."
+r:"^對處於<link\="s\|102"><u>燃燒</u></link>狀態的敵人造成的傷害提升<color\=#0169ca>(\d+\.\d+%)</color>。$"="Increase DMG Dealt by <color\=#0169ca>$1</color> when attacking enemies inflicted with <link\="s|102"><u>Burn</u></link>."
+
+r:"^慰藉 Lv.(\d+)$"="Comfort Lv.$1"
+sr:"^<link\="s\|113"><u>『(.*)』</u></link>狀態結束時，使生命值百分比最低的同伴恢復<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的生命值。$"="When you leave <link\="s|113"><u>[$1]</u></link>, restore <color\=#FFFC40>$2</color> ATK as HP to the lowest HP% ally."
+sr:"^<link\="s\|113"><u>『(.*)』</u></link>狀態結束時，使生命值百分比最低的同伴恢復<color\=#0169ca>(\d+\.\d+%)</color>攻擊力的生命值。$"="When you leave <link\="s|113"><u>[$1]</u></link>, restore <color\=#0169ca>$2</color> ATK as HP to the lowest HP% ally."
+
+r:"^潛心$"="Concentration"
+<color\=#66ccff>『潛心』</color>=<color\=#66ccff>[Concentration]</color>
+sr:"^敵人受到火焰屬性傷害時進行計數，計數達到4次時，高卷杏進入『(.*)』狀態，使得高卷杏獲得屬性提升以及技能強化。$"="Count when enemies take Fire damage. Enter [$1] when the count is at 4, boosting your stats and skills."
+
+魅力養成=<size\=30>Charm Development</size>
+sr:"^所有敵人受到火焰屬性傷害時進行計數，若計數達到4，則進入『(.*)』狀態，提升(\d+%)/(\d+%)/(\d+%)攻擊力（達到1、50、70級時變化），效果持續1回合。下回合不會再次進入『(.*)』狀態。每次行動高卷杏最多對4個敵人計數。$"="Count when enemies take Fire damage. Enter [$1] when the count is at 4, increase ATK by $2/$3/$4 (Change when reaching level 1, 50, 70) for 1 turn. You can't enter [$5] next turn. Each action you can get at most 4 counts."
+
+熱舞身姿=Hot Posture
+sr:"^處於<link\="s\|113"><u>『(.*)』</u></link>狀態時，所有同伴的攻擊力提升(\d+%)，效果持續1回合。$"="Increase all allies' ATK by $2 for 1 turn when you're in <link\="s|113"><u>[$1]</u></link>."
+
+美妙開場=Beautiful Opening
+
+火紅奇蹟=Fiery Miracle
+sr:"^<link\="s\|113"><u>『(.*)』</u></link>狀態結束時攻擊敵人，造成2次火焰爆發，分別對隨機敵人造成(\d+%)攻擊力的火焰傷害。$"="When <link\="s|113"><u>[$1]</u></link> end, deal 2 $2 ATK Fire damage to 2 random enemies."
+
+閃耀時刻=Shining Moment
+
+忘我境界=Pure Focus
+HIGHLIGHT效果提升：釋放HIGHLIGHT技能後，自身攻擊力提升100%，效果持續1回合。=HIGHTLIGHT Effect Boost: After using HIGHLIGHT, increase ATK by 100% for 1 turn.
+
+完美謝幕=Perfect Finale
+sr:"^攻擊敵人時，有(\d+%)機率額外使<link\="s\|113"><u>『(.*)』</u></link>獲得1次額外計數，<link\="s\|113"><u>『(.*)』</u></link>狀態下，每有1層計數，則火焰傷害提升(\d+%)，最多提升(\d+%)。$"="When attacking enemies, there is a $1 chance to gain an additional count for <link\="s|113"><u>[$2]</u></link>. When you're in <link\="s|113"><u>[$3]</u></link>, increase Fire damage by $4 per each count stacks, up to $5."
 
 //////////////////////////////
 /// c. RIN - Yaoling Li //////
@@ -932,7 +1099,7 @@ r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬�
 --- Fire ---
 
 //Fire Festival
-r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s\|102"><u>燃燒</u></link>狀態，若場上沒有敵人處於<link\="s\|102"><u>燃燒</u></link>狀態，則命中機率翻倍。"=Deals <color\=#FFFF00>$1</color> ATK Fire damage to <color\=#FFFF00>1</color> enemy and has a <color\=#FFFF00>$2</color> chance of inflicting <link\=s|102><u>Burn</u></link> for 2 turns. If there are no enemies inflicted by <link\=s|102><u>Burn</u></link>, then the chance of inflicting is doubled. 
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s\|102"><u>燃燒</u></link>狀態，若場上沒有敵人處於<link\="s\|102"><u>燃燒</u></link>狀態，則命中機率翻倍。"=Deals <color\=#FFFF00>$1</color> ATK Fire damage to <color\=#FFFF00>1</color> enemy and has a <color\=#FFFF00>$2</color> chance of inflicting <link\=s|102><u>Burn</u></link> for 2 turns. If there are no enemies inflicted with <link\=s|102><u>Burn</u></link>, then the chance of inflicting is doubled. 
 
 //Hell's Stolen Flame
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，若其處於<link\="s|102"><u>燃燒</u></link>狀態，則額外造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害並使其重置其<link\="s|102"><u>燃燒</u></link>效果時間。"=Deals <color\=#FFFF00>$1</color> ATK Fire damage to <color\=#FFFF00>1</color> enemy.\nIf the enemy is inflicted with <link\=s|102><u>Burn</u></link>, deals an additional <color\=#FFFF00>$1</color> ATK Fire damage and reset the duration of <link\=s|102><u>Burn</u></link>.
@@ -955,20 +1122,20 @@ sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬�
 --- Psy ---
 
 //ST
-r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人傷害提升(\d+%)。"=Deals <color\=#FFFF00>$1</color> ATK Psi damage to <color\=#FFFF00>1</color> enemy. Increase damage dealt by $2 if enemy is inflicted by any <link\=s|106><u>Mental Ailment</u></link>.
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人傷害提升(\d+%)。"=Deals <color\=#FFFF00>$1</color> ATK Psi damage to <color\=#FFFF00>1</color> enemy. Increase damage dealt by $2 if enemy is inflicted with any <link\=s|106><u>Mental Ailment</u></link>.
 
 //AoE
-r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人傷害提升(\d+%)。"=Deals <color\=#FFFF00>$1</color> ATK Psi damage to <color\=#FFFF00>all</color> enemies. Increase damage dealt by $2 to each enemy inflicted by any <link\=s|106><u>Mental Ailment</u></link>.
-r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊點念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成傷害提升(\d+%)。"=Deals <color\=#FFFF00>$1</color> ATK Psi damage to <color\=#FFFF00>all</color> enemies. Increase damage dealt by $2 to each enemy inflicted by any <link\=s|106><u>Mental Ailment</u></link>.
-r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成傷害提升(\d+%)。"=Deals <color\=#FFFF00>$1</color> ATK Psi damage to <color\=#FFFF00>all</color> enemies. Increase damage dealt by $2 to each enemy inflicted by any <link\=s|106><u>Mental Ailment</u></link>.
+r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人傷害提升(\d+%)。"=Deals <color\=#FFFF00>$1</color> ATK Psi damage to <color\=#FFFF00>all</color> enemies. Increase damage dealt by $2 to each enemy inflicted with any <link\=s|106><u>Mental Ailment</u></link>.
+r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊點念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成傷害提升(\d+%)。"=Deals <color\=#FFFF00>$1</color> ATK Psi damage to <color\=#FFFF00>all</color> enemies. Increase damage dealt by $2 to each enemy inflicted with any <link\=s|106><u>Mental Ailment</u></link>.
+r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成傷害提升(\d+%)。"=Deals <color\=#FFFF00>$1</color> ATK Psi damage to <color\=#FFFF00>all</color> enemies. Increase damage dealt by $2 to each enemy inflicted with any <link\=s|106><u>Mental Ailment</u></link>.
 
 --- Nuke ---
 
 //Basic Nuke ST
-r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害，對處於<link\="s\|101"><u>元素異常</u></link>狀態的敵人傷害提升(.*)。"=Deals <color\=#FFFF00>$1</color> ATK Nuclear damage to <color\=#FFFF00>1</color> enemy. Increase damage dealt by $2 if enemy is inflicted by any <link\=s|101><u>Elemental Ailment</u></link>.
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害，對處於<link\="s\|101"><u>元素異常</u></link>狀態的敵人傷害提升(.*)。"=Deals <color\=#FFFF00>$1</color> ATK Nuclear damage to <color\=#FFFF00>1</color> enemy. Increase damage dealt by $2 if enemy is inflicted with any <link\=s|101><u>Elemental Ailment</u></link>.
 
 //Basic Nuke AoE
-r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害，對處於<link\="s\|101"><u>元素異常</u></link>狀態的敵人傷害提升(.*)。"=Deals <color\=#FFFF00>$1</color> ATK Nuclear damage to <color\=#FFFF00>all</color> enemies. Increase damage dealt by $2 to each enemy inflicted by any <link\=s|101><u>Elemental Ailment</u></link>.
+r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害，對處於<link\="s\|101"><u>元素異常</u></link>狀態的敵人傷害提升(.*)。"=Deals <color\=#FFFF00>$1</color> ATK Nuclear damage to <color\=#FFFF00>all</color> enemies. Increase damage dealt by $2 to each enemy inflicted with any <link\=s|101><u>Elemental Ailment</u></link>.
 
 --- Bless ---
 

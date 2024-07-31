@@ -75,6 +75,8 @@ r:"^野<color\=#ff0000ff>毛</color> 朋子$"="To<color\=#ff0000ff>mo</color>ko 
 琴音·蒙塔涅=Kotone Montagne
 蒙塔涅=Montagne
 琴音=Kotone
+佐藤裕太=Yuta Sato
+r:"^佐<color\=#ff0000ff>藤</color> 裕太$"="Yu<color\=#ff0000ff>ta</color> Sato"
 西森陽菜=Haruna Nishimori
 r:"^西<color\=#ff0000ff>森</color> 陽菜$"="Ha<color\=#ff0000ff>ru</color>na Nishimori"
 白鳥誠司=Seiji Shiratori
@@ -1030,6 +1032,7 @@ sr:"人格指數「(.*)」達到(\d+)級解鎖$"="Unlock when $1 reached rank $2
 拉麵力士對決=<size\=24>Do the \nRamen Challenge</size>
 嘗試新口味咖啡=<size\=24>Try new \ncoffee flavors</size>
 去卡拉OK唱歌=<size\=24>Sing Karaoke \nin Kichijoji</size>
+在寺院中冥想=<size\=24>Meditate \nin a temple</size>
 在爵士俱樂部度過=<size\=24>Spent time \nin a Jazz Club</size>
 
 打工=Work
@@ -1066,12 +1069,24 @@ sr:"人格指數「(.*)」達到(\d+)級解鎖$"="Unlock when $1 reached rank $2
 陽菜的遊樂場探險=<size\=24>Haruna's Amusement\nPark Adventure</size>
 要陪西森陽菜探險嗎(<color\=#ff0000>消耗1點行動力</color>)？=<size\=30>Do you want to accompany Haruna Nishimori on her adventure? (<color\=#ff0000>Spend 1 Energy Point</color>)</size> 
 
+幫助佐藤裕太=<size\=24>Help out\nYuta Sato</size>
+
 阿七的遊戲=<size\=24>Game from Mascot</size>
 和阿七聊聊=Talk to the mascot
 要參與阿七的遊戲嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to play the mascot's game? (<color\=#ff0000>Spend 1 Energy Point</color>)
 
+sr:"^要帶(.*)回家嗎……$"="Want to take $1 home?"
+sr:"^那就帶(.*)回家吧……$"="Then let's bring $1 home..."
+
 和素羽出去玩吧=<size\=24>Hang out with\nMotoha</size>
 sr:"^和(.*)一起度過$"="<size\=24>Hang out with\n$1</size>"
+兩個人的觀影時間=<size\=24>Movie time \nfor two</size>
+在家裡和素羽一起看她推薦的電影吧=<size\=26>Let's watch the movie recommended by Motoha together at home</size>
+在家裡一起看吧=<size\=28>Let's watch it \ntogether at home</size> 
+會覺得害怕的是素羽吧=<size\=22>It's Motoha who feels scared, right?</size> 
+我就在你身邊，放心吧=<size\=24>I'm right beside you. Don't worry</size> 
+怕的話可以抓住我的手=<size\=26>Grab my hand if you're scared</size> 
+才不會害怕=I won't be afraid
 與朋子一起度過放學後的時間吧=Let's spend time \nwith Tomoko after school 
 和加納駿一起度過=<size\=24>Hang out with\nShun Kano</size>
 和清一起度過=<size\=24>Hang out with\nKiyoshi</size>
@@ -1085,8 +1100,6 @@ sr:"^和(.*)一起度過$"="<size\=24>Hang out with\n$1</size>"
 梅洛普的邀約=Merope's Invitation
 要和梅洛普一起度過嗎？=<size\=28>Want to spend time with Merope?</size> 
 決定要陪梅洛普了……=<size\=26>I've decided to accompany Merope...</size> 
-要帶梅洛普回家嗎……=Want to take Merope home?
-那就帶梅洛普回家吧……=Then let's bring Merope home...
 
 和李瑤鈴一起度過=<size\=24>Hang out with\nYaoling Li</size>
 和富山一起度過=<size\=24>Hang out with\nTomiyama</size>
@@ -1098,6 +1111,7 @@ YUI應該會在線上吧，登入遊戲一起玩吧=YUI should be online, log in
 
 讓我想想=Let me think
 再見=Goodbye
+今天很忙……=I'm busy today...
 在酒吧度過=Spend time in the bar
 另選日子吧……=Choose another day...
 
@@ -1308,12 +1322,14 @@ r:"^契約的憑證，可在特定的『怪盜契約』中使用。$"="The prove
 非凡之硬幣=Extraordinary Coin
 既定之硬幣=Established Coin
 
+r:"^傳記$"="Biography"
 傳記全書=L Biography
 傳記斷章=M Biography
 傳記殘頁=S Biography
 
-萬用零件·中=M Weapon Parts
+r:"^零件$"="Parts"
 萬用零件·大=L Weapon Parts
+萬用零件·中=M Weapon Parts
 萬用零件·小=S Weapon Parts
 
 金絲香=L Incense
