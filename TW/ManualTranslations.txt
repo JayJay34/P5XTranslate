@@ -197,10 +197,10 @@ CV.種崎敦美=CV.Atsumi Tanezaki
 用於提升能量的補給飲料，使用後立即恢復5行動力。=Restores 5 Energy Points immediately.
 能夠迅速補充人體水分和電解質的運動能量飲料，對迅速恢復身體機能有強力效果。=A sports energy drink that quickly replenishes the body with water and electrolytes for a powerful recovery effect.
 慾望之木=Wood of Desire
-極其罕見的神奇木料，可用於提升技能等級至Lv.9·Lv.10。=An extremely rare magical timber, can be used to level up skills to Lv.9-Lv.10.
+極其罕見的神奇木料，可用於提升技能等級至Lv.9·Lv.10。=<size\=28>An extremely rare magical timber, can be used to level up skills to Lv.9-Lv.10.</size>
 時序之墨=Temporal Ink
 蘊含星辰之力的墨水，可用於定制月、星、辰位置的啟示卡。=Ink that contains the power of the stars, can be used to create a customized Revelation Card.
-認知請願書 4星=Cognitive Petition 4★
+認知請願書 4星=4★ Cognitive Petition
 請在以下列表中點擊選擇一位4星怪盜。=Select one of the 4-star characters in the list below.
 宇宙的終響=Universe Echo
 來自宇宙的命運指引，打開後可自選一張橙色宙位啟示卡。=A guidance of fate from the Universe, can be used to gain 1 Orange Universe Card
@@ -243,6 +243,8 @@ City UI
 澀谷  中央大街=Shibuya Central Street
 四軒茶屋  小巷=Yongen-Jaya Alleyway
 社團佈告欄=Club Bulletin Board
+輕音部=Music Club
+足球部=Soccer Club
 己刮學園  中庭=<size\=30>Kokatsu Academy Courtyard</size>
 釣魚=Fishing
 市谷=Ichigaya
@@ -299,6 +301,8 @@ r:"^渡來軒$"="Asshouken"
 <color\=#ff0000ff>花</color>店=Fl<color\=#ff0000ff>ow</color>er Shop
 
 <color\=#ff0000ff>書</color>店=Bo<color\=#ff0000ff>ok</color>store
+健<color\=#ff0000ff>身</color>房=G<color\=#ff0000ff>y</color>m
+在健身房鍛煉=Work out in the gym
 
 <color\=#ff0000ff>澡</color>堂=Ba<color\=#ff0000ff>th</color>house
 在澡堂泡澡=<size\=28>Bathe in the bathhouse</size>
@@ -384,8 +388,8 @@ r:"(\d+)天後刷新"=Refresh in $1 days
 r:"(\d+)分後刷新"=Refresh in $1 minutes
 r:"(\d+)天後下架"=Expires in $1 days
 r:"角色(\d+)級可購買"=Unlock at Acc Lv. $1
-r:"持有：(\d+)"=Held: $1
-持有：=Held:
+r:"^持有：(\d+)$"="Have: $1"
+持有：=Have:
 購買數量:=Quantity
 花費合計：=Cost
 操作模式切換為鍵鼠。=Mouse & Keyboard Mode
@@ -399,11 +403,13 @@ r:"持有：(\d+)"=Held: $1
 違規檢舉=Report
 更換名片=Change Background
 更換相框=Change Avatar Frame
-更換頭像=Change Avatar
+更換頭像=<size\=30>Change Avatar</size>
 複製ID=Copy ID
 修改簽名=Change Bio
 修改名稱=Change Name
 遮罩此人=Block
+r:"^每日最多可獲取<color\=#FF0000>10</color>點<link\="s\|1002"><u>助戰積分</u></link>。$"="Maximum <color\=#FF0000>10</color> <link\="s|1002"><u>Assist Points</u></link> per day."
+
 
 尚未加入樂園。=No Affiliation
 心之海試煉=SoS Ranking
@@ -428,6 +434,8 @@ r:"主角(\d+)級解鎖"=Level $1 Unlock
 r:"怪盜(\d+)級時可繼續提升"=Skill can level up at Lv $1
 不羈能力發覺後解鎖=<size\=16>Gain levels to unlock</size>
 長按怪盜可便捷進行培養=<size\=25>Hold press on the party\nmember to customize</size>
+升級獎勵=Level Rewards
+sr:"^(.*)成長至(\d+)級（(\d+)/(\d+)）$"="<size\=30>Level $1 to Lv. $2 ($3/$4)</size>"
 
 // Stats //
 
@@ -443,8 +451,8 @@ r:"怪盜(\d+)級時可繼續提升"=Skill can level up at Lv $1
 穿透=DEF Ignore
 效果命中=Effect Hit Rate
 效果抵抗=Effect RES
-傷害加成=Damage Bonus
-傷害減免=Damage RES
+傷害加成=DMG Bonus
+傷害減免=DMG RES
 弱點傷害=Weak Damage
 弱點抗性=Weak RES
 耐性穿透=Resist Ignore
@@ -496,16 +504,21 @@ r:"^提升(\d+%)效果抵抗。$"="Increase Effect RES by $1"
 r:"^ONEMORE、HIGHLIGHT、近戰攻擊、槍械效果提升。$"="<size\=26>Increase One More, HIGHLIGHT, Melee and Gun DMG</size>"
 r:"人格面具所有習得主動技能等級額外提升(\d+)級。"=All acquired Persona skills\nIncrease by $1 levels
 r:"人格面具特色主動技能等級額外提升(\d+)級。"=All innate Persona skills\nIncrease by $1 levels
+需要主角超我等級達到1級。=Unlocks when Wonder \nreaches Superego level 1.
 
 前置技能尚未解鎖。=Unlock the preceding skill first.
-r:"需要主角等級達到(\d+)級。"=This upgrade unlocks when\nWonder reaches level $1.
+r:"需要主角等級達到(\d+)級。"=Unlocks when Wonder \nreaches level $1.
 技能等級不能高於前置技能。=The skill level cannot be higher\n than the preceding tree.
-r:"需要(\d+)<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>才可以升級天賦。"=Requires $1<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>to upgrade this \nskill.
-r:"需要(\d+)<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>才可以啟動天賦。"=Requires $1<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>to activate this \nskill.
+r:"需要(\d+)<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>才可以升級天賦。"=Need $1<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>to upgrade.
+r:"需要(\d+)<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>才可以啟動天賦。"=Need $1<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>to activate.
 獲取更多靈感點=Get Inspiration
+
+重置靈感需要<color\=#FFC000>10000個魂石</color>，是否確定重置？（重置後所有靈感點返還，『屬性進階』靈感技能不會被重置）=Spend <color\=#FFC000>100,000 Soul Gems</color> to reset Inspiration? (Refund all spent Inspiration Points, will not reset the [Superego] skill tree)
 
 獲得靈感輝光=<size\=25>Inspiration Glow</size>
 r:"^提升(\d+)生命值。\n提升(\d+)攻擊力。\n提升(\d+)防禦力。$"="Increase HP by $1 \nIncrease ATK by $2 \nIncrease DEF by $3"
+r:"^需要<size\=46><color\=#ffffff><sprite\=2 tint\=1></size>(\d+)</color>和<size\=46><color\=#ffffff><sprite\=17 tint\=1></size>(\d+)</color>升級天賦。$"="<size\=28>Need <size\=46><color\=#ffffff><sprite\=2 tint\=1></size>$1</color> and <size\=46><color\=#ffffff><sprite\=17 tint\=1></size>$2</color> to upgrade.</size>"
+r:"^需要<size\=46><color\=#ffffff><sprite\=30 tint\=1></size>1</color>升級天賦。$"="Need <size\=46><color\=#ffffff><sprite\=30 tint\=1></size>1</color> to upgrade."
 
 // INSPIRATION TUTORIAL //
 『靈感』說明=Inspiration
@@ -527,9 +540,9 @@ r:"^怪盜等級上限提升至<color\=#FFF000>LV.(\d+)</color>$"="Increase max 
 /// d. Guild / Paradise //////
 //////////////////////////////
 
-個人積分=Points
-總積分=Total Pts.
-積分：=Points: 
+個人積分=Score
+總積分=Total Score
+積分：=Score: 
 本期歷史積分=Personal Best	
 歷史積分用於領取積分獎勵、參與挑戰排名\n重置挑戰不會清除歷史積分=<size\=28>Total Pts. are used for challenge rewards and paradise ranking. \nReseting the fight won't delete your Total Pts.</size>
 積分統計進度=Boss Beaten
@@ -537,7 +550,7 @@ r:"^怪盜等級上限提升至<color\=#FFF000>LV.(\d+)</color>$"="Increase max 
 當前積分=Current Pts.
 樂園排行=Paradise Rank
 樂園活躍度=Activity Pts.
-r:"今日活躍：(\d+\/\d+)"=Today's Points: $1
+r:"今日活躍：(\d+\/\d+)"=Today's Score: $1
 r:"近7天貢獻 (\d+)"=7d Contribution: $1
 
 所屬樂園=Paradise\nName:
@@ -573,7 +586,7 @@ BOSS總積分：=Current Score:
 任意樂園成員首次參與挑戰後活躍值+1=+1 Activity Point from each member when challenging the weekly for the first time.
 r:"樂園累計活躍每達到指定值後可領取對應獎勵，當前：<color\=#eade10>(\d+)</color>"=Total accumulated Activity Points: <color\=#eade10>$1</color>
 r:"個人歷史總積分達到指定值後可領取對應獎勵，當前：<color\=#eade10>(\d+)</color>"=Receive rewards after earning a certain amount of points. Your Personal Best: <color\=#eade10>$1</color>
-已獲得本週全部獎勵=You're all set! Come back next week...\n or aim for more points!
+已獲得本週全部獎勵=You're all set! Come back next week...\n or aim for higher scores!
 積分計算規則：\n當前積分\=挑戰積分*難度係數\n同一BOSS多個難度只記錄歷史最高分數=Score Formula:\nChallenge Score * Multiplier\n\nOnly the highest score is saved between runs.
 
 <color\=#8F8D8D>1分鐘前線上</color>=<color\=#8F8D8D>1 Minute</color>
@@ -1068,6 +1081,9 @@ sr:"人格指數「(.*)」達到(\d+)級解鎖$"="Unlock when $1 reached rank $2
 今天探險嗎？=<size\=24>Going on an adventure today?</size>
 陽菜的遊樂場探險=<size\=24>Haruna's Amusement\nPark Adventure</size>
 要陪西森陽菜探險嗎(<color\=#ff0000>消耗1點行動力</color>)？=<size\=30>Do you want to accompany Haruna Nishimori on her adventure? (<color\=#ff0000>Spend 1 Energy Point</color>)</size> 
+陽菜的數學輔導=<size\=24>Math tutoring with \nHaruna</size>
+陽菜想要看看高中的數學知識，去陪一陪她吧……=<size\=25>Haruna wants to learn more about high school mathametics, let's study with her...</size>
+今天學習嗎？=Studying today?
 
 幫助佐藤裕太=<size\=24>Help out\nYuta Sato</size>
 
@@ -1235,7 +1251,7 @@ sr:"^在下次通過『(.*)』、『(.*)』、『(.*)』關卡時，額外獲得
 sr:"^在下次通過『(.*)』、『(.*)』關卡時，額外獲得大量獎勵。$"="The next time you complete a $1 or $2, gain lots of bonus rewards."
 sr:"^在下次通過『(.*)』、『(.*)』關卡時，額外獲得大量獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you complete a $1 or $2, gain lots of bonus rewards.\n<color\=#FFC000>（$3 time(s) left）</color>"
 
-r:"^塔$"=Tower
+r:"^塔$"="Tower"
 
 星星=Star
 
@@ -1312,6 +1328,7 @@ r:"^殿堂探索度獎勵$"="Palace Exploration Reward"
 枚異界原晶=Ambers
 現金=Yen
 魂石=Soul Gems
+r:"^(\d+)魂石$"="$1 Soul Gems"
 怪盜經驗=Thief EXP
 首次=First Time
 簽約道具=Contract Item
@@ -1321,6 +1338,9 @@ r:"^契約的憑證，可在特定的『怪盜契約』中使用。$"="The prove
 補給道具=Supply Item
 非凡之硬幣=Extraordinary Coin
 既定之硬幣=Established Coin
+要購買這件商品嗎？=Do you want to purchase this item?
+自選禮包=Customize
+r:"^領取$"="Get"
 
 r:"^傳記$"="Biography"
 傳記全書=L Biography
@@ -1349,8 +1369,9 @@ r:"香塔(.*)"=$1 Incense
 星伴=S Bead
 
 啟示=Revelation
-未知宿命橙·宙=Random 4★ Arcana
-未知宿命紫·宙=Random 3★ Arcana
+未知宿命橙·宙=Random 4★ Universe
+未知宿命紫·宙=Random 3★ Universe
+未知宿命橙·基礎=<size\=18>Random 4★ Revelation</size>
 未知宿命藍·接納=2★ Arcana • Acceptance
 未知宿命藍·和諧=2★ Arcana • Harmony
 未知宿命藍·信任=2★ Arcana • Trust
@@ -1376,14 +1397,17 @@ r:"香塔(.*)"=$1 Incense
 看清楚啦～不要買錯了阿！=Look closely～\nDon’t buy the wrong one!
 
 ///////////////////////////////////////////
-/// k. Velvet Challenges & Sea of Souls ///
+/// k. Velvet Challenges & Sea of Souls (SoS)///
 ///////////////////////////////////////////
 
 段位狀態：=Status:
-<color\=#FFFFFF>下期保級</color>=At Risk
+<color\=#FFFFFF>下期保級</color>=Relegation
 <color\=#FFF000>下期晉級</color>=<color\=#FFF000>Promoted!</color>
-6等星=6th Star
+r:"^總積分達到<color\=#FFF000> (\d+) </color>$"="Reach <color\=#FFF000> $1 </color> Total Score"
+暫無記錄=No Record
+8等星=8th Star
 7等星=7th Star
+6等星=6th Star
 5等星=5th Star
 4等星=4th Star
 3等星=3rd Star
@@ -1399,16 +1423,19 @@ r:"(\d)等星(\d)階"=$1-Star Tier $2
 排名：=Top
 以後=^
 段位獎勵=<size\=28>Rank Awards</size>
+r:"^累計獲得星數（<color\=#EF0000>(\d+)</color>/(\d+)）$"="Get (<color\=#EF0000>$1</color>/$2）Stars"
+r:"^累計獲得（<color\=#EF0000>(\d+)</color>/(\d+)）分$"="Get (<color\=#EF0000>$1</color>/$2) Points"
 
 晉級條件：=<size\=24>Requirement:</size>
-r:"累計獲得<color\=#FFF000> (\d+) </color>顆星"=<color\=#FFF000>$1 </color>Stars
+r:"累計獲得<color\=#FFF000> (\d+) </color>顆星"=<color\=#FFF000> $1 </color>Stars
 剩餘時間：=Time Left:
 r:"(\d+)回合內取得勝利"=Win in $1 turn(s)
+通關前置關卡後解鎖。=Unlock after clearing the previous stage.
 
 挑戰獎勵=<size\=36>Rewards</size>
 累計星級=<size\=24>Total Stars</size>
-r:"累計獲得星數（(\d+)\/(\d+)）"=Stars Earned: ($1/$2)
-r:"累計獲得（(\d+)\/(\d+)）分"=Accumulated ($1/$2) Points
+r:"累計獲得星數（(\d+)\/(\d+)）"=Get ($1/$2) Stars
+r:"累計獲得（(\d+)\/(\d+)）分"=Get ($1/$2) Points
 
 積分係數：=Multiplier:
 成功抵禦次數：=Cycles Limit:
@@ -1620,8 +1647,18 @@ Metaverse Combat Terms
 使用人格面具技能或觸發追加效果時，獲得1層『強化印記』，最多可疊加3層；全體怪盜行動一輪後，獲得『強化印記』層數*15%的傷害加成並移除1層『強化印記』。=<size\=24>When a Persona skill is used, or a Follow Up is triggered, you gain 1 layer of the stackable Enhanced Buff. After all party members have acted, gain 15% DMG Bonus per stack and remove 1 layer of Enhanced Buff.</size>
 
 // Raids
+鎖定提示=Tips
+以下<color\=#ef0000>怪盜、面具與啟示</color>會被鎖定到本挑戰中不可更換，是否確認出戰？=<size\=24>You cannot change the chosen <color\=#ef0000>Thieves, Personas and Revelation Cards</color> until you reset the fight</size>
+重置挑戰會解除陣容鎖定並清空當前總積分，是否繼續=<size\=28>Resetting the fight will unlock your team lineup and clear the current score, are you sure? \n(This will not clear your Personal Best)</size>
+
 所有敵人對<color\=#fbff37>電擊</color>屬性的適應性變為弱=All enemies become weak to <color\=#fbff37>Electric</color> DMG
-sr:"^所有怪盜<color\=#FFFC40>(.*)</color>造成的傷害提升50%$"="All Party Members' <color\=#FFFC40>$1</color> DMG +50%"
-處於<color\=#ff381d>燃燒</color>狀態的敵人受到的傷害提高20%=Enemies afflicted with <color\=#ff381d>Burn</color> +20% DMG Taken
-所有怪盜<color\=#ff0036>詛咒</color>傷害降低20%=All Party Members' <color\=#ff0036>Curse</color> DMG -20%
-<color\=#FFFC40>支配</color>怪盜造成傷害提高20%=<color\=#FFFC40>Domination</color> All Party Members' DMG +20%
+處於<color\=#ff381d>燃燒</color>狀態的敵人受到的傷害提高20%=Enemies inflicted with <color\=#ff381d>Burn</color> +20% DMG Taken
+<color\=#FFFC40>支配</color>怪盜造成傷害提高20%=Increase DMG Dealt of <color\=#FFFC40>AoE</color> allies by +20%
+所有怪盜無法暴擊，人格面具技能/追加效果造成的<color\=#FFFC40>最終傷害</color>提高，提高值\=暴擊率*(暴擊效果-100%)。（最多計入100%暴擊率）=<size\=22>All allies can't CRIT, increase the <color\=#FFFC40>final damage</color> of Persona Skills/ Follow Up. Increase \= \nCRIT * (CRIT DMG - 100%) (Up to 100% CRIT)</size>
+所有怪盜<color\=#ff0036>詛咒</color>傷害提高20%=Increase <color\=#ff0036>Curse</color> damage by 20%
+所有怪盜<color\=#FFFC40>射擊</color>傷害提高20%=Increase <color\=#FFFC40>Gun</color> damage by 20%
+敵人每有一個<color\=#FFFC40>負面狀態</color>，受到的傷害提升6%，最多使其受到的傷害提升30%=For every <color\=#FFFC40>debuff</color> the enemy have, increase DMG Taken by 6%, up to 30%
+所有怪盜<color\=#FFFC40>HIGHLIGHT</color>傷害提升50%=Increase <color\=#FFFC40>HIGHLIGHT</color> damage by 50%
+敵人每有一種<color\=#FFFC40>元素異常</color>狀態，受到的傷害提升10%，最多使其受到的傷害提升40%=For every <color\=#FFFC40>Elemental Ailment</color> the enemy have, Increase DMG Taken by 10%, up to 40%
+r:"^首領的適應性發生變化，所有怪盜造成<color\=#FFFC40>弱點傷害</color>提升(\d+%)$"="<size\=27>Change the affinities of the boss, increase <color\=#FFFC40>Weakness DMG</color> by $1</size>"
+r:"^<color\=#FFFC40>WONDER</color>造成<color\=#FFFC40>最終傷害</color>提高(\d+%)，其他隊員造成最終傷害降低(\d+%)"="Increase <color\=#FFFC40>final damage</color> of <color\=#FFFC40>Wonder</color> by $1, \ndecrease final damage of other allies by $2"
