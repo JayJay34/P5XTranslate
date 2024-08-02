@@ -443,7 +443,6 @@ HIGHLIGHT效果提升：使所有同伴造成的火焰屬性傷害提升32%，�
 ----------
 CLOSER - Motoha Arai
 ----------
-
 釋放技能攻擊敵人時，有機率使敵人陷入觸電狀態，自身攻擊觸電狀態下的敵人時攻擊力提升。=<size\=28>When using skills to attack enemies, there is a chance to inflict Shock, increase ATK when attacking enemies with Shock.</size>
 雷霆之怒=Thunder's Fury
 超速電擊=<size\=25>Hypervelocity Shock</size>
@@ -495,7 +494,6 @@ r:"^使場上處於<link\="s\|104"><u>觸電</u></link>狀態的敵人受到的�
 ----------
 SOY - Shun Kano
 ----------
-
 sr:"^受到敵方攻擊的機率提高，受到攻擊後會獲得『(.*)』，回合結束消耗『(.*)』並回復自身部分已損生命值。$"="<size\=25>Increase the chance of being attacked by enemies and gain [$1] when attacked. Consume [$2] and restore HP at the end of your turn.</size>"
 冰山撼動=Iceberg Tremor
 先鋒突擊=<size\=30>Vanguard Assault</size>
@@ -555,7 +553,6 @@ HIGHLIGHT：生命值回復倍率=HIGHLIGHT: HP% Heal
 ----------
 Wind - Riko Tanemura
 ----------
-
 sr:"^同伴每行動3次，使倒地值最高的敵人暴露<link\="s\|188"><u>『(.*)』</u></link>。$"="After 3 allies' action, expose a <link\="s|188"><u>$1</u></link> from the enemy with the highest Knockdown Count."
 r:"^霞影之術$"="Art of Skyglow"
 r:"^梅幻之術$"="<size\=26>Art of Plum Blossom</size>"
@@ -566,7 +563,7 @@ r:"^屬性提升$"="Attribute Boost"
 
 r:"^霞影之術 Lv.(\d+)$"="Art of Skyglow Lv.$1"
 r:"^霞影之術 <color\=#0F69CB>Lv.(\d+)</color>$"="Art of Skyglow <color\=#0F69CB>Lv.$1</color>"
-sr:"^準備時間：4次行動\n使所有敵人防禦力降低<color\=#FFFC40>(\d+\.\d+%)</color>，若理子速度大於100點，每超過10點，防禦力額外降低(\d+\.\d+%)，最多額外降低<color\=#FFFC40>(\d+\.\d+%)</color>，持續2回合；同時使主目標暴露<link\="s\|188"><u>『(.*)』</u></link>。\n<b><size\=28><color\=#850101>無數鋒刃隱於煙霞之中，在彌漫的花香中傷人於無形。讓敵人失去反抗能力，任人宰割。</color></size></b>$"="Preparation Time: 4 Actions\nDecreases the DEF of all enemies by <color\=#FFFC40>$1</color> for 2 turns, increases the DEF down debuff by $2 for every 10 SPD you have that's over 100, up to a cap of <color\=#FFFC40>$3</color>; Exposes a <link\="s|188"><u>[$4]</u></link> on the main target.\n<b><size\=28><color\=#850101>The blades are hidden in the haze of smoke and the scent of flowers, leaving the enemy powerless to resist and at their mercy.</color></size></b>"
+sr:"^準備時間：4次行動\n使所有敵人防禦力降低<color\=#FFFC40>(\d+\.\d+%)</color>，若理子速度大於100點，每超過10點，防禦力額外降低(\d+\.\d+%)，最多額外降低<color\=#FFFC40>(\d+\.\d+%)</color>，持續2回合；同時使主目標暴露<link\="s\|188"><u>『(.*)』</u></link>。\n<b><size\=28><color\=#850101>無數鋒刃隱於煙霞之中，在彌漫的花香中傷人於無形。讓敵人失去反抗能力，任人宰割。</color></size></b>$"="Preparation Time: 4 Actions\nDecreases the DEF of all enemies by <color\=#FFFC40>$1</color> for 2 turns, increases the DEF down debuff by $2 for every 10 SPD that's over 100, up to a cap of <color\=#FFFC40>$3</color>; Exposes a <link\="s|188"><u>[$4]</u></link> on the main target.\n<b><size\=28><color\=#850101>The blades are hidden in the haze of smoke and the scent of flowers, leaving the enemy powerless to resist and at their mercy.</color></size></b>"
 
 r:"^梅幻之術 Lv.(\d+)$"="<size\=28>Art of Plum Blossom</size> Lv.$1"
 r:"^梅幻之術 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=28>Art of Plum Blossom</size> <color\=#0F69CB>Lv.$1</color>"
@@ -574,13 +571,13 @@ r:"^準備時間：8次行動\n使所有敵人受到的傷害提升<color\=#FFFC
 
 r:"^暗香細語 Lv.(\d+)$"="Aroma Whisper Lv.$1"
 r:"^暗香細語 <color\=#0F69CB>Lv.(\d+)</color>$"="Aroma Whisper <color\=#0F69CB>Lv.$1</color>"
-sr:"^準備時間：8次行動（<link\="s\|187"><u>『(.*)』</u></link>數量低於5層時不能使用）\n消耗所有<link\="s\|187"><u>『(.*)』</u></link>使所有同伴獲得『傲放』並使主目標恢復<color\=#FFFC40>(\d+\.\d+%)</color>的生命值。『傲放』：造成傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，消耗的每份<link\="s\|187"><u>『(.*)』</u></link>提供額外的傷害提升（若理子速度大於100點，每超過10點，造成傷害提升(\d+\.\d+%)，最多提升<color\=#FFFC40>(\d+\.\d+%)</color>），持續1回合。\n<b><size\=28><color\=#850101>如風輕拂花叢，柔情綻放呢喃細語，梅之香氣若有若無，為生命之繪卷增添幾分生動與雅致。</color></size></b>$"="Preparation Time: 8 Actions (Cannot be used when you have less than 5 stacks of <link\="s|187"><u>[$1]</u></link>)\nConsumes all <link\="s|187"><u>[$2]</u></link> to give all allies [Pride] and restores <color\=#FFFC40>$3</color> HP to the main target. Pride: Increases DMG Dealt by <color\=#FFFC40>$4</color>  for 1 turn. Increases the DMG Dealt buff with every <link\="s|187"><u>[$5]</u></link> consumed (Increase DMG Dealt by $6 for every 10 SPD you have that's over 100, up to a cap of <color\=#FFFC40>$7</color>).\n<b><size\=28><color\=#850101>As the wind gently brushes the flowers, the softness of the blossoms blooms and murmurs, and the fragrance of the plum adds a bit of vitality and elegance to the scroll of life.</color></size></b>"
+sr:"^準備時間：8次行動（<link\="s\|187"><u>『(.*)』</u></link>數量低於5層時不能使用）\n消耗所有<link\="s\|187"><u>『(.*)』</u></link>使所有同伴獲得『傲放』並使主目標恢復<color\=#FFFC40>(\d+\.\d+%)</color>的生命值。『傲放』：造成傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，消耗的每份<link\="s\|187"><u>『(.*)』</u></link>提供額外的傷害提升（若理子速度大於100點，每超過10點，造成傷害提升(\d+\.\d+%)，最多提升<color\=#FFFC40>(\d+\.\d+%)</color>），持續1回合。\n<b><size\=28><color\=#850101>如風輕拂花叢，柔情綻放呢喃細語，梅之香氣若有若無，為生命之繪卷增添幾分生動與雅致。</color></size></b>$"="Preparation Time: 8 Actions (Cannot be used when you have less than 5 stacks of <link\="s|187"><u>[$1]</u></link>)\nConsumes all <link\="s|187"><u>[$2]</u></link> to give all allies [Pride] and restores <color\=#FFFC40>$3</color> HP to the main target. Pride: Increases DMG Dealt by <color\=#FFFC40>$4</color>  for 1 turn. Increases the DMG Dealt buff with every <link\="s|187"><u>[$5]</u></link> consumed (Increase DMG Dealt by $6 for every 10 SPD that's over 100, up to a cap of <color\=#FFFC40>$7</color>).\n<b><size\=28><color\=#850101>As the wind gently brushes the flowers, the softness of the blossoms blooms and murmurs, and the fragrance of the plum adds a bit of vitality and elegance to the scroll of life.</color></size></b>"
 
 r:"^根據解明怪盜各屬性的(\d+%)提升在場的所有同伴的相應屬性值。$"="Increase all allies' stats by $1 of your stats"
 
 r:"^蝶夢 Lv.(\d+)$"="Butterfly Dream Lv.$1"
-r:"^進入戰鬥時，若理子速度大於100點，每超過1點使所有怪盜獲得(\d+)點生命值、(\d+)點攻擊力、(\d+)點防禦力的提升，最多可提升<color\=#FFFC40>(\d+)</color>點生命值、<color\=#FFFC40>(\d+)</color>點攻擊力、<color\=#FFFC40>(\d+)</color>點防禦力。$"="At the start of battle, for every 1 SPD you have that's over 100, increase all allies' HP by $1, ATK by $2 and DEF by $3, up to <color\=#FFFC40>$4</color> HP, <color\=#FFFC40>$5</color> ATK and <color\=#FFFC40>$6</color> DEF."
-r:"^進入戰鬥時，若理子速度大於100點，每超過1點使所有怪盜獲得(\d+)點生命值、(\d+)點攻擊力、(\d+)點防禦力的提升，最多可提升<color\=#0169ca>(\d+)</color>點生命值、<color\=#0169ca>(\d+)</color>點攻擊力、<color\=#0169ca>(\d+)</color>點防禦力。$"="At the start of battle, for every 1 SPD you have that's over 100, increase all allies' HP by $1, ATK by $2 and DEF by $3, up to <color\=#0169ca>$4</color> HP, <color\=#0169ca>$5</color> ATK and <color\=#0169ca>$6</color> DEF."
+r:"^進入戰鬥時，若理子速度大於100點，每超過1點使所有怪盜獲得(\d+)點生命值、(\d+)點攻擊力、(\d+)點防禦力的提升，最多可提升<color\=#FFFC40>(\d+)</color>點生命值、<color\=#FFFC40>(\d+)</color>點攻擊力、<color\=#FFFC40>(\d+)</color>點防禦力。$"="At the start of battle, for every 1 SPD that's over 100, increase all allies' HP by $1, ATK by $2 and DEF by $3, up to <color\=#FFFC40>$4</color> HP, <color\=#FFFC40>$5</color> ATK and <color\=#FFFC40>$6</color> DEF."
+r:"^進入戰鬥時，若理子速度大於100點，每超過1點使所有怪盜獲得(\d+)點生命值、(\d+)點攻擊力、(\d+)點防禦力的提升，最多可提升<color\=#0169ca>(\d+)</color>點生命值、<color\=#0169ca>(\d+)</color>點攻擊力、<color\=#0169ca>(\d+)</color>點防禦力。$"="At the start of battle, for every 1 SPD that's over 100, increase all allies' HP by $1, ATK by $2 and DEF by $3, up to <color\=#0169ca>$4</color> HP, <color\=#0169ca>$5</color> ATK and <color\=#0169ca>$6</color> DEF."
 
 r:"^雀歌 Lv.(\d+)$"="Bird Song Lv.$1"
 r:"^使所有敵人受到的ONEMORE及總攻擊傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Increase all enemies' DMG Taken from One More and All-Out Attack by <color\=#FFFC40>$1</color>."
@@ -612,12 +609,11 @@ sr:"^釋放『暗香細語』後，立刻使倒地值最高的敵人暴露<link\
 sr:"^任意同伴釋放HIGHLIGHT後，立刻使倒地值最高的敵人暴露<link\="s\|188"><u>『(.*)』</u></link>。$"="After any ally uses HIGHLIGHT, immediately expose a <link\="s|188"><u>[$1]</u></link> from the enemy with the highest Knockdown Count."
 
 獨秀=Lone Bloom
-r:"^釋放『暗香細語』後，若多禰村理子速度大於100點，每超過15點，解明怪盜的準備時間減少1次行動，最多可減少4次行動。$"="After using [Aroma Whisper], for every 15 SPD you have that's over 100, reduce the cooldown of the Navigator by 1 action, up to 4 actions."
+r:"^釋放『暗香細語』後，若多禰村理子速度大於100點，每超過15點，解明怪盜的準備時間減少1次行動，最多可減少4次行動。$"="After using [Aroma Whisper], for every 15 SPD that's over 100, reduce the cooldown of the Navigator by 1 action, up to 4 actions."
 
 ----------
 MONT - Montagne Kotone
 ----------
-
 sr:"^每名同伴行動時，自身會獲得『(.*)』。每次集滿『(.*)』後，可額外對當前目標造成1次強化普通攻擊。$"="<size\=25>Gain 1 [$1] after an ally acts. When you have enough [$2] you can deal an additional boosted attack to the current target.</size>"
 r:"^冰之綻放$"="Ice Bloom"
 r:"^凜冬撕裂$"="Winter Tear"
@@ -673,7 +669,6 @@ sr:"^戰鬥開始時，獲得『(.*)』4顆，『(.*)』最大數量提升至15�
 ----------
 Okyann - Kayo Tomiyama
 ----------
-
 sr:"^使用支援技能後會獲得『(.*)』，數量達到4會立刻釋放『(.*)』，使所有同伴獲得增益。$"="Gain [$1] after using support skills. Use [$2] when you have 4 stacks of [$1], giving a buff to all allies."
 派對狂歡=Party Frenzy
 華麗搖擺=Gorgeous Swing
@@ -732,7 +727,6 @@ sr:"^富山佳代釋放<link\="s\|142"><u>『(.*)』</u></link>後，有25%的�
 ----------
 Yuki - Yukimi Fujikawa 
 ----------
-
 sr:"^與1名同伴產生『(.*)』，使同伴獲得護盾，最多與1名同伴產生『(.*)』。"="Make a  [$1] with an ally to grant them Shield. Only 1 [$2] can be active."
 大義者裁決=<size\=22>Righteous Adjudication</size>
 正理之令=Order of Justice
@@ -792,7 +786,6 @@ r:"^使自身與處於<link\="s\|121"><u>『誓約』</u></link>的同伴，獲�
 ----------
 Skull - Ryuji Sakamoto
 ----------
-
 生命值越低，攻擊力越高。自身回合開始時，若自身生命值不高於75%，則獲得『觸底反彈』，提升下一個技能造成的傷害。=<size\=25>The lower your HP, the higher your ATK. At the start of your turn, if your HP is not higher than 75%, gain [Rebound], boosting the DMG Dealt of your next skill.</size>
 爆裂撞擊=Burst Impact
 電擊懲戒=<size\=26>Electric Punishment</size>
@@ -848,7 +841,6 @@ sr:"^釋放『(.*)』技能對敵人造成傷害時，使目標獲得1個『畏�
 ----------
 Mona - Morgana
 ----------
-
 sr:"^每次使用不同技能時獲得『(.*)』，同伴生命值較低時自動進行一次群體治療並消耗『(.*)』。$"="<size\=27>Gain [$1] every time you use a different skill, automatically consume [$2] to do an AoE Heal when any ally is at low HP.</size>"
 疾風強襲=Wind Assult
 療癒之術=Art of Healing
@@ -904,7 +896,6 @@ sr:"^『(.*)』的命中率不再降低，並且造成暴擊後使敵人受到�
 ----------
 Panther - Ann Takamaki
 ----------
-
 sr:"^敵人受到火焰屬性傷害時計數，計數達到4時使高卷杏進入『(.*)』狀態，大幅提升攻擊力並使技能強化。$"="<size\=28>Count when enemies take Fire damage. Enter [$1] when the count is at 4, heavily increase ATK and boost skills.</size>"
 繁花熱烈=Hot Blossom
 魅火術=Charming Fire
@@ -955,31 +946,127 @@ HIGHLIGHT效果提升：釋放HIGHLIGHT技能後，自身攻擊力提升100%，�
 完美謝幕=Perfect Finale
 sr:"^攻擊敵人時，有(\d+%)機率額外使<link\="s\|113"><u>『(.*)』</u></link>獲得1次額外計數，<link\="s\|113"><u>『(.*)』</u></link>狀態下，每有1層計數，則火焰傷害提升(\d+%)，最多提升(\d+%)。$"="When attacking enemies, there is a $1 chance to gain an additional count for <link\="s|113"><u>[$2]</u></link>. When you're in <link\="s|113"><u>[$3]</u></link>, increase Fire damage by $4 per each count stacks, up to $5."
 
-//////////////////////////////
-/// c. RIN - Yaoling Li //////
-//////////////////////////////
-擺渡者=Ferryman
-彼岸之叢=Distant Shore Gathering
-頑獅鬧=Playful Lioness' Dance
-嬉鬧=Roughhousing
-怒放=Anger Blossom
-// Skill 1: Ferryman
-r:"對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，自身每有10點速度，就使目標敵人的防禦力降低3%，上限<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。該技能每命中一個敵人，就使自身獲得4點<link\="s\|159"><u>『回憶』</u></link>。\n<b><size\=28><color\=#850101>猩紅色的咒語，攜著撕碎敵人靈魂的力量炸裂開來，並帶去毀滅性傷害。</color></size></b>"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies. For every 10 SPD Rin has, reduce enemies' DEF by 3% up to a maximum of <color\=#FFFF00>$2</color> for 2 turns. For every opponent hit, gain 4 stacks of <link\=s|159><u>Memory</u></link>.
+----------
+Rin - Yaoling Li
+----------
+r:"^自身回合開始時，根據速度獲得『回憶』，收集『回憶』獲得『孟婆湯』，強化下一個釋放的技能。$"="<size\=26>At the start of your turn, gain [Memory] based on your SPD. \nGain [Meng Po Soup] when you have enough [Memory], boosting your next skill.</size>"
+擺渡者=Ferrywoman
+彼岸之叢=Lycoris Shrub
+頑獅鬧=Playful Lion Dance
+嬉鬧=Frolic
+怒放=Full Bloom
 
-// Skill 2: Distant Shore Gathering
-sr:"對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害。若敵人帶有任意減益效果，則使該技能造成的傷害提升20%。<link\="s\|127"><u>『孟婆湯』</u></link>額外效果：使主目標有100%的基礎機率陷入(.*)狀態，效果持續2回合。\n<b><size\=28><color\=#850101>嗜血的曼珠沙華遍生滿地，血一般的豔麗之色自敵人腳下不斷攀升，造成強力的詛咒傷害。</color></size></b>"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>1</color> enemy. If the target is inflicted with a debuff, increase damage dealt by 20%. <link\=s|127><u>[Meng Po Soup]</u></link> now has a 100% chance to inflict $2 for 2 turns.
+r:"^擺渡者 Lv.(\d+)$"="Ferrywoman Lv.$1"
+r:"^擺渡者 <color\=#0F69CB>Lv.(\d+)</color>$"="Ferrywoman <color\=#0F69CB>Lv.$1</color>"
+sr:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，自身每有(\d+)點速度，就使目標敵人的防禦力降低(\d+%)，上限<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。該技能每命中一個敵人，就使自身獲得4點<link\="s\|159"><u>『(.*)』</u></link>。\n<b><size\=28><color\=#850101>猩紅色的咒語，攜著撕碎敵人靈魂的力量炸裂開來，並帶去毀滅性傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Curse damage to all enemies. Decreases enemies' DEF by $3 for every $2 SPD for 2 turns, up to <color\=#FFFC40>$4</color>. Gains 4 <link\="s|159"><u>[$5]</u></link> for every enemy hit. \n<b><size\=28><color\=#850101>A scarlet-colored spell that explodes with the power to tear apart your enemy's soul and deliver devastating damage.</color></size></b>"
 
-// Skill 3: Playful Lioness' Dance
-sr:"對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，並使所有敵人獲得『彼岸花』效果：自身每有10點速度，使敵人受到的傷害提升3%，上限<color\=#FFFC40>(\d+\.\d+%)</color>。該效果在受到2次傷害或2回合後清除。<link\="s\|127"><u>『孟婆湯』</u></link>額外效果：『彼岸花』的增傷效果翻倍。\n<b><size\=28><color\=#850101>頑皮的小獅子聽令號召，一躍而騰，把這天地鬧個不安寧才好，放肆地對那不聽話的敵人造成劇烈傷害。</color></size></b>"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and inflict [Crosshore Lycoris]. For every 10 SPD, damage taken by all enemies is increased by 3% to a maximum of $2. [Crosshore Lycoris] is cleared after the enemy takes damage twice or after 2 turns. <link\=s|127><u>[Meng Po Soup]</u></link> now doubles the effect of [Crosshore Lycoris].
+r:"^彼岸之叢 Lv.(\d+)$"="Lycoris Shrub Lv.$1"
+r:"^彼岸之叢 <color\=#0F69CB>Lv.(\d+)</color>$"="Lycoris Shrub <color\=#0F69CB>Lv.$1</color>"
+sr:"對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害。若敵人帶有任意減益效果，則使該技能造成的傷害提升(\d+%)。<link\="s\|127"><u>『(.*)』</u></link>額外效果：使主目標有(\d+%)的基礎機率陷入<link\="s\|108"><u>遺忘</u></link>狀態，效果持續2回合。\n<b><size\=28><color\=#850101>嗜血的曼珠沙華遍生滿地，血一般的豔麗之色自敵人腳下不斷攀升，造成強力的詛咒傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Curse damage to 1 enemy. Increases DMG Dealt by $2 if they have any debuff. <link\="s|127"><u>[$3]</u></link> Additional Effect: There is a $4 base chance to inflicts <link\="s|108"><u>Forget</u></link> to the main target for 2 turns.\n<b><size\=28><color\=#850101>The bloodthirsty Manjusri grows all over the ground, and the color of blood rises up from under the enemy's feet, causing powerful cursed damage.</color></size></b>"
 
-// Combat Skills
-sr:"『ONE MORE』：對1名敵人造成詛咒屬性傷害。\n『HIGHLIGHT』：對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，並使所有敵人下一次受到的傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。有30%的基礎機率使得所有敵人陷入(.*)狀態，效果持續2回合。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，每次向隨機敵人射擊3發，造成射擊屬性傷害，根據子彈數量可以射擊多次。"=ONE MORE: Deals Curse damage to <color\=#FFFF00>1</color> enemy. HIGHLIGHT: Deals <color\=#FFFC40>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and increase their damage taken by $2 with a 30% chance of inflicting $3 for 2 turns.
+r:"^頑獅鬧 Lv.(\d+)$"="<size\=28>Playful Lion Dance</size> Lv.$1"
+r:"^頑獅鬧 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=28>Playful Lion Dance</size> <color\=#0F69CB>Lv.$1</color>"
+sr:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，並使所有敵人獲得『彼岸花』效果：自身每有(\d+)點速度，使敵人受到的傷害提升(\d+%)，上限<color\=#FFFC40>(\d+\.\d+%)</color>。該效果在受到2次傷害或2回合後清除。<link\="s\|127"><u>『(.*)』</u></link>額外效果：『彼岸花』的增傷效果翻倍。\n<b><size\=28><color\=#850101>頑皮的小獅子聽令號召，一躍而騰，把這天地鬧個不安寧才好，放肆地對那不聽話的敵人造成劇烈傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Curse damage to all enemies, and inflicts the [Lycoris Radiata] debuff to all enemies: Increases enemies' DMG Taken by $3 for every $2 SPD, up to <color\=#FFFC40>$4</color>. Dispel this effect after 2 instances of damage or after 2 turns. <link\="s|127"><u>[$5]</u></link> Additional Effect: Doubles the debuff of [Lycoris Radiata].\n<b><size\=28><color\=#850101>The mischievous little lion is called upon to leap up and make the world a place of peace, and recklessly inflict intense damage on the disobedient enemy.</color></size></b>"
 
-// Passive 1: Roughhousing
-r:"每有2點速度，則提升自身1%攻擊力，透過這種方式最多提升<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力。"=For every 2 SPD, increase ATK by 1% to a maximum of <color\=#FFFC40>$1</color>.
+sr:"『ONE MORE』：對1名敵人造成詛咒屬性傷害。\n『HIGHLIGHT』：對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，並使所有敵人下一次受到的傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。有(\d+%)的基礎機率使得所有敵人陷入(.*)狀態，效果持續2回合。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，每次向隨機敵人射擊3發，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[ONE MORE]: Deals Curse damage to 1 enemy. \n[HIGHLIGHT]: Deals <color\=#FFFC40>$1</color> ATK Curse damage to all enemies and increases the DMG Taken on the next instance of damage by <color\=#FFFC40>$2</color>. There is a $3 base chance to inflicts $4 for 2 turns. \nMelee Attack: Uses a melee weapon to deal light Physical damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing 3 hits of Gun damage randomly, can shoot multiple times based on ammo."
 
-// Passive 2: Anger Blossom
-r:"使場上生命值高於50%的敵人受到的詛咒傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。"=Increase Curse damage dealt to enemies with over 50% HP by <color\=#FFFC40>$1</color>.
+r:"^嬉鬧 Lv.(\d+)$"="Frolic Lv.$1"
+r:"^每有2點速度，則提升自身1%攻擊力，透過這種方式最多提升<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力。$"="For every 2 SPD, increase ATK by 1% up to <color\=#FFFC40>$1</color> ATK."
+r:"^每有2點速度，則提升自身1%攻擊力，透過這種方式最多提升<color\=#0169ca>(\d+\.\d+%)</color>攻擊力。$"="For every 2 SPD, increase ATK by 1% up to <color\=#0169ca>$1</color> ATK."
+
+r:"^怒放 Lv.(\d+)$"="Full Bloom Lv.$1"
+r:"^使場上生命值高於50%的敵人受到的詛咒傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Increase Curse DMG Dealt to enemies with over 50% HP by <color\=#FFFC40>$1</color>."
+r:"^使場上生命值高於50%的敵人受到的詛咒傷害提升<color\=#0169ca>(\d+\.\d+%)</color>。$"="Increase Curse DMG Dealt to enemies with over 50% HP by <color\=#0169ca>$1</color>."
+
+回憶=Memory
+<color\=#66ccff>『回憶』</color>=<color\=#66ccff>[Memory]</color>
+『回憶』達到40層後，獲得『孟婆湯』。使下一個釋放的主動技能有一定機率附帶遺忘效果，並強化部分技能。=Gain [Meng Po Soup] after you have 40 stacks of [Memory], boosting certain skills. Make your next skill have a certain chance to inflict Forget.
+
+孟婆湯=Meng Po Soup
+<color\=#66ccff>『孟婆湯』</color>=<color\=#66ccff>[Meng Po Soup]</color>
+使下一個釋放的主動技能有一定機率附帶遺忘效果，並強化部分技能。=Boost certain skills. Make your next skill have a certain chance to inflict Forget.
+
+彼岸花=Lycoris Radiata
+
+忘川水悠悠=<size\=25>Water of Oblivion Flows</size>
+sr:"^自身回合開始時，每有(\d+)點速度，就獲得(\d+)點『(.*)』，透過這種方式每回合最多獲得(\d+)點『(.*)』。『(.*)』到達(\d+)點時會消耗所有『(.*)』使自身獲得<link\="s\|127"><u>『(.*)』</u></link>。釋放技能時，若自己持有<link\="s\|127"><u>『(.*)』</u></link>則使部分技能獲得強化。並有(\d+%)的基礎機率使技能主目標陷入<link\="s\|108"><u>(.*)</u></link>狀態，效果持續1回合。$"="At the start of your turn, gain $2 [$3] for every $1 SPD, up to $4 [$5]. When you have $7 [$6] consume all [$8] and gain <link\="s|127"><u>[$9]</u></link>. When using skills, if you have <link\="s|127"><u>[$10]</u></link> then boost certain skills and there is a $11 base chance to inflict <link\="s|108"><u>$12</u></link> for 1 turn."
+
+魂斷無回頭=No Looking Back
+sr:"^戰鬥開始時，獲得<link\="s\|127"><u>『(.*)』</u></link>。$"="At the start of battle, gain <link\="s|127"><u>[$1]</u></link>."
+
+奈何橋寂寂=<size\=25>Lonely Bridge of Oblivion</size>
+
+離別惹漣漪=Ripples of Parting
+r:"^每對1個目標造成1次減益效果，就使李瑤鈴的攻擊力提升(\d+%)，持續2回合，上限5層。$"="Increase ATK by $1 for 2 turns after inflicting debuffs to an enemy, up to 5 stacks."
+
+孟婆湯濃濃=Thick Meng Po Soup
+
+往事如煙空=Dust in the Wind
+r:"^HIGHLIGHT效果提升：使敵人受到的傷害額外提升(\d+%)，並使所有敵人獲得一個<link\="s\|112"><u>詛咒</u></link>效果。$"="HIGHTLIGHT Effect Boost: Increase the DMG Taken debuff by 20% and inflict all enemies with 1 stack of <link\="s|112"><u>Cursed</u></link>."
+
+曼珠如煙紅=Smokelike Lycoris
+sr:"^釋放技能消耗<link\="s\|127"><u>『(.*)』</u></link>後，有(\d+%)固定機率返還<link\="s\|127"><u>『(.*)』</u></link>，該效果有1回合冷卻時間。$"="After consuming <link\="s|127"><u>[$1]</u></link>, there is a $2 fixed chance to refund <link\="s|127"><u>[$3]</u></link>, with a 1 turn cooldown."
+
+----------
+Riddle - Haruna Nishimori
+----------
+sr:"^釋放人格面具技能時，消耗所有『(.*)』，每消耗1層『(.*)』使所有同伴攻擊力提升，效果持續2回合。$"="<size\=28>Consume all [$1] when using skills. Increase all allies' ATK for 2 turns with each stack of [$2] consumed.</size>"
+笨笨的助手=Silly Assistant
+聰明的探險家=Smart Explorer
+旺盛童心=<size\=24>Exuberant Innocence</size>
+追疑=Pursue
+探究=Inquiry
+
+r:"^笨笨的助手 Lv.(\d+)$"="Silly Assistant Lv.$1"
+r:"^笨笨的助手 <color\=#0F69CB>Lv.(\d+)</color>$"="Silly Assistant <color\=#0F69CB>Lv.$1</color>"
+sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，使所有同伴進入<link\="s\|165"><u>『(.*)』</u></link>狀態：釋放人格面具技能造成傷害時，使西森獲得1層<link\="s\|164"><u>『(.*)』</u></link>，效果持續1回合。\n<b><size\=28><color\=#850101>快讓我看看你這個大傢伙都有什麼能耐！要把所~有~的~招數都使出來哦！</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Psy damage to 1 enemy, gives all allies <link\="s|165"><u>[$2]</u></link>: You gain 1 stack of <link\="s|164"><u>[$3]</u></link> when an ally deals damage with skills for 1 turn.\n<b><size\=28><color\=#850101>Let me show me what you can be able to resist!\nYou have to use what you ~ Yes ~ You can get out!</color></size></b>"
+
+r:"^聰明的探險家 Lv.(\d+)$"="Smart Explorer Lv.$1"
+r:"^聰明的探險家 <color\=#0F69CB>Lv.(\d+)</color>$"="Smart Explorer <color\=#0F69CB>Lv.$1</color>"
+sr:"^使所有同伴受到的治療效果以及受到的護盾效果提升<color\=#FFFC40>(\d+\.\d+%)</color>，防禦力提升<color\=#FFFC40>(\d+\.\d+%)</color>。效果持續2回合。釋放該技能時若<link\="s\|164"><u>『(.*)』</u></link>層數為0，則在技能結束後獲得2層<link\="s\|164"><u>『(.*)』</u></link>。\n<b><size\=28><color\=#850101>嘿嘿！準備好迎接新的冒險了嗎！接下來就是大孩子們的戰鬥時間囉——！</color></size></b>$"="Increases all allies' Healing Received and Shield Received by <color\=#FFFC40>$1</color> and increases all allies' DEF by <color\=#FFFC40>$2</color> for 2 turns. When using this skill at 0 stacks of <link\="s|164"><u>[$3]</u></link>, gains 2 stacks of <link\="s|164"><u>[$4]</u></link>.\n<b><size\=28><color\=#850101>hey-hey!\nAre you ready to welcome the new adventure!\nThe next step is the battle time of the older children!!</color></size></b>"
+
+r:"^旺盛童心 Lv.(\d+)$"="<size\=26>Exuberant Innocence</size> Lv.$1"
+r:"^旺盛童心 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=26>Exuberant Innocence</size> <color\=#0F69CB>Lv.$1</color>"
+sr:"^持有<link\="s\|164"><u>『(.*)』</u></link>時該技能開啟，使所有同伴的攻擊力提升(\d+%)，效果持續2回合。釋放該技能時若<link\="s\|164"><u>『(.*)』</u></link>不少於2層，則使所有同伴造成的傷害提升（自身每有(\d+)點攻擊力提升(\d+%)，上限<color\=#FFFC40>(\d+\.\d+%)</color>），效果持續2回合。\n<b><size\=28><color\=#850101>1！2！3！報數！聽我指令！要做好充足準備哦，尋寶才剛剛開始呢！</color></size></b>$"="Available when you have <link\="s|164"><u>[$1]</u></link>. Increases all allies' ATK by $2 for 2 turns. When you have not less than 2 stacks of <link\="s|164"><u>[$3]</u></link> when using this skill, increases all allies' DMG Dealt (For every $4 ATK increase $5) for 2 turns, up to <color\=#FFFC40>$6</color>.\n<b><size\=28><color\=#850101>1! 2! 3!\nReport!\nListen to my instructions!\nBe prepared to be sufficient, just the treasure hunt has just begun!</color></size></b>"
+
+sr:"^『ONE MORE』：對1名敵人造成念動屬性傷害。\n『HIGHLIGHT』：對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，使所有同伴造成的傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>\*當前『(.*)』層數，效果持續1回合。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械攻擊：使用槍械射擊1名敵人，造成少量射擊屬性傷害，根據子彈數量可以射擊多次。$"="[ONE MORE]: Deals Psy damage to 1 enemy. \n[HIGHLIGHT]: Deals <color\=#FFFC40>$1</color> ATK Psy damage to 1 enemy and increases all allies' DMG Dealt by <color\=#FFFC40>$2</color>*number of [$3] stacks for 1 turn.\nMelee Attack: Uses a melee weapon to deal light Physical damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
+
+r:"^追疑 Lv.(\d+)$"="Pursue Lv.$1"
+sr:"^處於<link\="s\|165"><u>『(.*)』</u></link>的同伴造成傷害時，每造成1段傷害，有<color\=#FFFC40>(\d+\.\d+%)</color>固定機率使西森獲得1層<link\="s\|164"><u>『(.*)』</u></link>。$"="When allies with <link\="s|165"><u>[$1]</u></link> deal damage, there is a <color\=#FFFC40>$2</color> fixed chance for you to gain 1 stack of <link\="s|164"><u>[$3]</u></link>."
+sr:"^處於<link\="s\|165"><u>『(.*)』</u></link>的同伴造成傷害時，每造成1段傷害，有<color\=#0169ca>(\d+\.\d+%)</color>固定機率使西森獲得1層<link\="s\|164"><u>『(.*)』</u></link>。$"="When allies with <link\="s|165"><u>[$1]</u></link> deal damage, there is a <color\=#0169ca>$2</color> fixed chance for you to gain 1 stack of <link\="s|164"><u>[$3]</u></link>."
+
+r:"^探究 Lv.(\d+)$"="Inquiry Lv.$1"
+sr:"^消耗<link\="s\|164"><u>『(.*)』</u></link>的層數大於等於3時，使得由<link\="s\|164"><u>『(.*)』</u></link>帶來的攻擊力提升效果提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="When consuming more than 3 stacks of <link\="s|164"><u>[$1]</u></link>, increase the ATK buff from <link\="s|164"><u>[$2]</u></link> by <color\=#FFFC40>$3</color>."
+sr:"^消耗<link\="s\|164"><u>『(.*)』</u></link>的層數大於等於3時，使得由<link\="s\|164"><u>『(.*)』</u></link>帶來的攻擊力提升效果提升<color\=#0169ca>(\d+\.\d+%)</color>。$"="When consuming more than 3 stacks of <link\="s|164"><u>[$1]</u></link>, increase the ATK buff from <link\="s|164"><u>[$2]</u></link> by <color\=#0169ca>$3</color>."
+
+童趣=Childlike Fun
+<color\=#66ccff>『童趣』</color>=<color\=#66ccff>[Childlike Fun]</color>
+sr:"^西森陽菜釋放技能時，消耗所有『(.*)』，使所有同伴攻擊力提升。$"="When you use a skill, consume all [$1] to increase all allies' ATK."
+
+寵愛=Pamperedness
+<color\=#66ccff>『寵愛』</color>=<color\=#66ccff>[Pamperedness]</color>
+sr:"^處於『(.*)』狀態的同伴，釋放技能造成傷害使西森陽菜獲得『(.*)』。$"="You gain [$2] when allies with [$1] deal damage with skills."
+
+好奇心爆炸=Curiosity Explosion
+
+尋寶！出發！=Treasure Hunt! Go!
+sr:"^西森釋放人格面具技能時，消耗所有<link\="s\|164"><u>『(.*)』</u></link>，每消耗1層<link\="s\|164"><u>『(.*)』</u></link>使所有同伴攻擊力提升(\d+%)，效果持續2回合。<link\="s\|164"><u>『(.*)』</u></link>上限5層。$"="Comsume all <link\="s|164"><u>[$1]</u></link> when using skills. Increase all allies' ATK by $3 for 2 turns with each stacks of <link\="s|164"><u>[$2]</u></link> consumed. <link\="s|164"><u>[$4]</u></link> caps at 5 stacks."
+
+岔路！選擇！=Fork! Select!
+r:"^同伴釋放技能造成傷害時，使西森攻擊力提升(\d+%)，上限3層，下1回合釋放技能後清除該效果。$"="Increase ATK by $1 when allies deal damage with a skill, up to 3 stacks. Dispel this effect after using a skill next turn."
+
+經驗！獲得！=Experience! Gain!
+
+助手！升級！=Assistant! Upgrade!
+sr:"^透過『(.*)』獲得<link\="s\|164"><u>『(.*)』</u></link>的固定機率提升(\d+%)。釋放『(.*)』技能時，若<link\="s\|164"><u>『(.*)』</u></link>為滿層，則額外提升所有同伴(\d+%)攻擊力。$"="Increase the chance of gaining <link\="s|164"><u>[$2]</u></link> from [$1] by $3. Increase all allies' ATK by $6 when using [$4] with max stacks of <link\="s|164"><u>[$5]</u></link>."
+
+裝備！強化！=<size\=25>Equipment! Strengthen!</size>
+
+怪物！打倒！=Monster! Defeated!
+HIGHLIGHT效果提升：傷害提升效果延長至2回合。=HIGHLIGHT Effect Boost: Extent the DMG Dealt buff to 2 turns.
+
+謎題！解開！=Puzzle! Solved!
+sr:"^每獲得5個<link\="s\|164"><u>『(.*)』</u></link>，則獲得『(.*)』：以敵人為目標釋放人格面具技能時，造成的傷害提升(\d+%)，造成傷害後清除。$"="Gain [$2] after gaining 5 stacks of <link\="s|164"><u>[$1]</u></link>: Increase DMG Dealt by $3 when dealing damage to an enemy with a skill, dispel afterwards."
 
 /////////////////////////////////
 ///// e. JOKER - Amamiya Ren ////
@@ -1347,7 +1434,7 @@ r:"下雨時受到的傷害降低(\d+\.\d+%)。"=Reduce damage from attacks duri
 r:"物理攻擊(\d+%)機率反射，造成(\d+%)攻擊力物理屬性傷害。"=Physical attacks have a $1 chance to reflect, dealing $2 of the attacks damage back as Physical damage.
 
 // Skill Characteristics (These are at the bottom cuz theyre used in skill descriptions too)//
-疊層=Stacks
+疊層=Stack
 群傷=AoE
 群攻=AoE
 單傷=ST
