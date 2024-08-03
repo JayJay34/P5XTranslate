@@ -79,6 +79,8 @@ r:"^野<color\=#ff0000ff>毛</color> 朋子$"="To<color\=#ff0000ff>mo</color>ko 
 r:"^佐<color\=#ff0000ff>藤</color> 裕太$"="Yu<color\=#ff0000ff>ta</color> Sato"
 西森陽菜=Haruna Nishimori
 r:"^西<color\=#ff0000ff>森</color> 陽菜$"="Ha<color\=#ff0000ff>ru</color>na Nishimori"
+清水陸人=Rikuto Shimizu
+r:"^清<color\=#ff0000ff>水</color> 陸人$"="Ri<color\=#ff0000ff>ku</color>to Shimizu"
 白鳥誠司=Seiji Shiratori
 須見俊也=Toshiya Sumi
 富山佳代=Kayo Tomiyama
@@ -359,11 +361,11 @@ r:"^(\d+)時(\d+)分$"="$1 hours $2 minutes"
 
 擁有:=Owned: 
 免費=FREE
-領獎=Claim
+r:"^領獎$"="Claim"
+r:"^領取$"="<size\=28>Claim</size>"
 已領取=Claimed
 前往=Go
 未達成=Not Yet
-r:"^領取%"="Get"
 探索度=Get @
 可獲得=Progress
 即可獲得：=Completion:
@@ -527,6 +529,7 @@ r:"^需要<size\=46><color\=#ffffff><sprite\=30 tint\=1></size>1</color>升級�
 // Character Potential Terms (Text shrunk to fit box) //
 
 潛能=<size\=16>Potential</size>
+覺醒=<size\=16>Potential</size>
 r:"^潛能詳情$"="<size\=27>Potential Details</size>"
 意識=<size\=15>Awareness</size>
 進化效果=<size\=19>Evolve Effect</size>
@@ -1047,6 +1050,7 @@ sr:"人格指數「(.*)」達到(\d+)級解鎖$"="Unlock when $1 reached rank $2
 去卡拉OK唱歌=<size\=24>Sing Karaoke \nin Kichijoji</size>
 在寺院中冥想=<size\=24>Meditate \nin a temple</size>
 在爵士俱樂部度過=<size\=24>Spent time \nin a Jazz Club</size>
+爵<color\=#ff0000ff>士</color>俱樂部=Ja<color\=#ff0000ff>zz</color> Club
 
 打工=Work
 (First one is in the city menu, second one is on the confirm page)
@@ -1086,6 +1090,11 @@ sr:"人格指數「(.*)」達到(\d+)級解鎖$"="Unlock when $1 reached rank $2
 今天學習嗎？=Studying today?
 
 幫助佐藤裕太=<size\=24>Help out\nYuta Sato</size>
+
+陪清水陸人拍照=<size\=24>Take photos\n with Rikuto Shimizu</size>
+要拍照嗎？=Want to take photos?
+聊聊攝影=Talk about photography
+要陪清水陸人拍攝照片嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to take photos with Rikuto Shimizu? (<color\=#ff0000>Spend 1 Energy Point</color>)
 
 阿七的遊戲=<size\=24>Game from Mascot</size>
 和阿七聊聊=Talk to the mascot
@@ -1340,7 +1349,6 @@ r:"^契約的憑證，可在特定的『怪盜契約』中使用。$"="The prove
 既定之硬幣=Established Coin
 要購買這件商品嗎？=Do you want to purchase this item?
 自選禮包=Customize
-r:"^領取$"="Get"
 
 r:"^傳記$"="Biography"
 傳記全書=L Biography

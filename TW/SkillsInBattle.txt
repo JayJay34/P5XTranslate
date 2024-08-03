@@ -45,6 +45,7 @@ r:"^行動後損失生命值$"="Lose HP after action"
 
 <color\=#66ccff>暈眩</color>=<color\=#FBF6C1>Dizzy</color>
 <color\=#66ccff>遺忘</color>=<color\=#80EEED>Forget</color>
+遺忘=Forget
 <color\=#66ccff>睡眠</color>=<color\=#E59FFF>Sleep</color>
 <color\=#66ccff>混亂</color>=<color\=#C0F081>Confuse</color>
 <color\=#66ccff>恐懼</color>=<color\=#FCC6FA>Fear</color>
@@ -54,6 +55,7 @@ r:"^行動後損失生命值$"="Lose HP after action"
 
 <color\=#66ccff>詛咒</color>=<color\=#FF0037>Cursed</color>
 <color\=#66ccff>祝福</color>=<color\=#FFFF9E>Blessed</color>
+sr:"^<color\=#FF0000>(.*)</color>從倒地狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Downed!"
 
 // Elemental & Mental Ailments Descriptions //
 
@@ -92,7 +94,6 @@ r:"^(\d+)回合$"="$1 turn"
 ----------
 CATTLE - Ruferu
 ----------
-
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的火焰屬性傷害，有(\d+%)基礎機率使敵人燃燒。$"="Deals $1 ATK Fire damage to <color\=#FFFF00>1</color> enemy, with a $2 base chance to inflict Burn."
 r:"^對1名敵人造成\<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的<color\=#FFFC40>火焰屬性</color>傷害，有(\d+%)基礎機率使敵人陷入<link\="s\|102"><u>燃燒</u></link>狀態，效果持續(\d+)回合。$"="Deals <color\=#FFFC40>$1</color> ATK <color\=#FFFC40>Fire</color> damage, with a $2 base chance to inflict <link\="s|102"><u>Burn</u></link> for $3 turns."
 
@@ -121,7 +122,6 @@ r:"^星<color\=#000000>之</color>火III$"="St<color\=#000000>ar</color>fire III
 ----------
 CLOSER - Motoha Arai
 ----------
-
 r:"^對<color\=#FFFF00>隨機</color>敵人造成(\d+)段(\d+\.\d+%)攻擊力的電擊屬性傷害，對主目標有(\d+%)基礎機率使其觸電。$"="Deals $1 <color\=#FFFF00>random</color> hits of $2 ATK Electric damage, with a $3 base chance of inflicting Shock to the main target."
 r:"^發射(\d+)道天雷，造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，對技能主目標有100%的基礎機率使其陷入<link\="s\|104"><u>觸電</u></link>狀態。對同一目標的後續攻擊只會造成<color\=#FFFC40>(\d+%)</color>的傷害，天雷會優先選擇未攻擊過的目標。$"="Shoots $1 thunderbolts, dealing <color\=#FFFC40>$2</color> ATK Electric damage and has a 100% base chance to inflict <link\="s|104"><u>Shock</u></link> to the skill's main target. Deals <color\=#FFFC40>$3</color> damage when hitting the same target, the thunderbolts will prioritize targets that have not been attacked yet."
 
@@ -147,7 +147,6 @@ r:"^受<color\=#000000>到</color>電傷提升$"="<size\=21> </size>E<color\=#00
 ----------
 SOY - Shun Kano
 ----------
-
 r:"^對<color\=#FFFF00>(\d+)名</color>敵人造成(\d+\.\d+%)最大生命值的冰凍屬性傷害，有(\d+%)基礎機率使敵人凍結。$"="Deals $2 Max HP Ice damage to <color\=#FFFF00>$1</color> enemy, with a $3 base chance to inflict freeze."
 sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的冰凍屬性傷害，並有<color\=#FFFC40>(\d+%)</color>的基礎機率使敵人陷入<link\="s\|103"><u>(.*)</u></link>狀態。$"="Deals <color\=#FFFC40>$1</color> Max HP Ice damage to 1 enemy, with a <color\=#FFFC40>$2</color> base chance to inflict <link\="s|103"><u>$3</u></link>."
 
@@ -173,7 +172,6 @@ r:"^受<color\=#000000>攻</color>擊機率提升$"="<size\=22> </size>C<color\=
 ----------
 Wind - Riko Tanemura
 ----------
-
 r:"^使<color\=#FFFF00>所有</color>敵人防禦力降低(\d+\.\d+%)，若理子速度大於100點，每超過10點防禦力額外降低(\d+\.\d+%)，最多額外降低(\d+\.\d+%)，持續2回合；同時使主目標暴露『破綻』。$"="Decrease the DEF of <color\=#FFFF00>all</color> enemies by $1 for 2 turns, increase the DEF down debuff by $2 for every 10 SPD you have that's over 100, up to a cap of $3; Expose a [Vulnerability] on the main target."
 sr:"^準備時間：4次行動\n使所有敵人防禦力降低<color\=#FFFC40>(\d+\.\d+%)</color>，若理子速度大於100點，每超過10點，防禦力額外降低(\d+\.\d+%)，最多額外降低<color\=#FFFC40>(\d+\.\d+%)</color>，持續2回合；同時使主目標暴露<link\="s\|188"><u>『(.*)』</u></link>。$"="Preparation Time: 4 Actions\nDecreases the DEF of all enemies by <color\=#FFFC40>$1</color> for 2 turns, increases the DEF down debuff by $2 for every 10 SPD you have that's over 100, up to a cap of <color\=#FFFC40>$3</color>; Exposes a <link\="s|188"><u>[$4]</u></link> on the main target."
 
@@ -204,7 +202,6 @@ r:"^破<color\=#000000>綻</color>$"="<size\=15> </size>V<color\=#000000>ul</col
 ----------
 Mont - Kotone Montagne
 ----------
-
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害，(\d+\.\d+%)基礎機率使敵人凍結。$"="Deals $1 ATK Ice damage to <color\=#FFFF00>all</color> enemies, with a $2 base chance to inflict Freeze."
 r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，有<color\=#FFFC40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s\|103"><u>凍結</u></link>狀態。$"="Deals <color\=#FFFC40>$1</color> ATK Ice damage to all enemies, with a <color\=#FFFC40>$2</color> base chance to inflict <link\="s|103"><u>Freeze</u></link>."
 
@@ -225,7 +222,6 @@ r:"^冰<color\=#000000>凍</color>傷害提升$"="<size\=5> </size>Ic<color\=#00
 ----------
 Okyann - Kayo Tomiyama
 ----------
-
 sr:"^基於自身攻擊力的12%（最多計入<color\=#FFFC40>(\d+)</color>攻擊力），提升所有同伴的攻擊力，並提升所有同伴(\d+\.\d+%)效果命中，效果持續1回合並且獲得1個『(.*)』。$"="Increases all allies' ATK based on 12% ATK (Up to a maximum of <color\=#FFFC40>$1</color>), and increases all allies' Effect Hit Rate by $2 for 1 turn. Gains 1 [$3]."
 sr:"^準備時間：4次行動\n基於自身攻擊力的12%，提升所有同伴的攻擊力（最多計入<color\=#FFFC40>(\d+)</color>點攻擊力），並提升所有同伴<color\=#FFFC40>(\d+\.\d+%)</color>效果命中，效果持續1回合。獲得1個<link\="s\|141"><u>『(.*)』</u></link>。"="Preparation Time: 4 Actions\nIncreases all allies' ATK by 12% of your own ATK (Up to a maximum of <color\=#FFFC40>$1</color>) and increases all allies' Effect Hit Rate by $2 for 1 turn. Gains 1 <link\="s|141"><u>[$3]</u></link>."
 
@@ -253,7 +249,6 @@ r:"^勁<color\=#000000>歌</color>熱舞$"="<size\=8> </size>H<color\=#000000>ot
 ----------
 Yuki - Yukimi Fujikawa 
 ----------
-
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)防禦力的祝福屬性傷害，使自身和處於『誓約』效果下的同伴獲得1層祝福效果。$"="Deals $1 DEF Bless damage to <color\=#FFFF00>all</color> enemies, grants you and the ally with [Vow] 1 stack of Blessed."
 sr:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>防禦力的祝福屬性傷害，使自身獲得<link\="s\|111"><u>祝福</u></link>效果1層，並使處於<link\="s\|121"><u>『(.*)』</u></link>的同伴獲得<link\="s\|111"><u>祝福</u></link>效果1層。$"="Deals <color\=#FFFC40>$1</color> DEF Bless damage to all enemies, gains 1 stack of <link\="s|111"><u>Blessed</u></link> and grants the ally with <link\="s|121"><u>[$2]</u></link> 1 stack of <link\="s|111"><u>Blessed</u></link>."
 
@@ -279,7 +274,6 @@ r:"^充<color\=#000000>能</color>$"="<size\=21> </size>V<color\=#000000>it</col
 ----------
 Skull - Ryuji Sakamoto
 ----------
-
 r:"^對<color\=#FFFF00>1名</color>敵人造成3次(\d+\.\d+%)攻擊力的物理屬性傷害，自身生命值高於(\d+%)時，該技能額外消耗(\d+%)最大生命值，傷害提升(\d+%)。$"="Deals 3 hits of $1 ATK Physical damage to <color\=#FFFF00>1</color> enemy. When your HP is above $2 HP, consumes $3 Max HP to increase damage by $4."
 sr:"^對1名敵人造成3次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，若自身沒有<link\="s\|130"><u>『(.*)』</u></link>效果，則該技能額外消耗(\d+%)最大生命值，並使該技能造成的傷害提升(\d+%)。$"="Deals 3 hits of <color\=#FFFC40>$1</color> ATK Physical damage to 1 enemy. If you don't have <link\="s|130"><u>[$2]</u></link>, consumes $3 more Max HP to increases DMG Dealt by $4."
 
@@ -308,7 +302,6 @@ r:"^蠻<color\=#000000>力</color>$"="<size\=12> </size>B<color\=#000000>ru</col
 ----------
 Mona - Morgana
 ----------
-
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的疾風傷害，有100%基礎機率使敵人風襲。$"="Deals $1 ATK Wind damage to <color\=#FFFF00>1</color> enemy, with a 100% base chance to inflicts Winded."
 r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的疾風屬性傷害，有<color\=#FFFC40>(\d+%)</color>基礎機率使敵人陷入<link\="s\|105"><u>風襲</u></link>狀態，效果持續2回合。$"="Deals <color\=#FFFC40>$1</color> ATK Wind damage to 1 enemy, with a <color\=#FFFC40>$2</color> base chance to inflicts <link\="s|105"><u>Winded</u></link> for 2 turns."
 
@@ -329,7 +322,6 @@ r:"^直<color\=#000000>覺</color>$"="In<color\=#000000>st</color>inct"
 ----------
 Panther - Ann Takamaki
 ----------
-
 sr:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的火焰屬性傷害並提升自身(\d+%)攻擊力，效果持續2回合。『(.*)』狀態下偷取敵人(\d+%)攻擊力。$"="Deals $1 ATK Fire damage to <color\=#FFFF00>all</color> enemies and increases ATK by $2 for 2 turns. When you're in [$3] steals $4 ATK from the enemies."
 sr:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，並且提升自身攻擊力(\d+%)，效果持續2回合。<link\="s\|113"><u>『(.*)』</u></link>狀態下，使敵人攻擊力基於高卷杏的攻擊力降低(\d+%)並使自身額外提升對應攻擊力，效果持續2回合。$"="Deals <color\=#FFFC40>$1</color> ATK Fire damage to all enemies and increases ATK by $2 for 2 turns. When you're in <link\="s|113"><u>[$3]</u></link>, decreases the ATK of all enemies based on $4 your own ATK and gains the corresponding ATK for 2 turns."
 
@@ -351,24 +343,63 @@ In-Battle Quotes
 Combat Pop-ups
 r:"^潛<color\=#000000>心</color>$"="<size\=25> </size>C<color\=#000000>o</color>ncentration"
 
-//////////////////////////////
-/// c. RIN - Yaoling Li //////
-//////////////////////////////
+----------
+Rin - Yaoling Li
+----------
+sr:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，根據自身速度至多降低敵人(\d+\.\d+%)防禦力。該技能每命中1個敵人則獲得4點『(.*)』。"="Deals <color\=#FFFC40>$1</color> ATK Curse damage to all enemies. Decreases enemies' DEF up to $2 based on your SPD. Gains 4 <link\="s|159"><u>[$3]</u></link> for every enemy hit."
+sr:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，自身每有(\d+)點速度，就使目標敵人的防禦力降低(\d+%)，上限<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。該技能每命中一個敵人，就使自身獲得4點<link\="s\|159"><u>『(.*)』</u></link>。$"="Deals <color\=#FFFC40>$1</color> ATK Curse damage to all enemies. Decreases enemies' DEF by $3 for every $2 SPD for 2 turns, up to <color\=#FFFC40>$4</color>. Gains 4 [$5] for every enemy hit."
 
-// Skill 1: Ferryman
-r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，根據自身速度至多降低敵人(\d+\.\d+%)防禦力。該技能每命中1個敵人則獲得4點『回憶』。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies. For every 10 SPD Rin has, reduce enemies' DEF by 3% up to a maximum of <color\=#FFFF00>$2</color> for 2 turns. For every opponent hit, gain 4 stacks of <link\=s|159><u>Memory</u></link>.
+sr:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，對處於異常狀態的敵人造成的傷害提升(\d+%)；持有『(.*)』時有(\d+%)基礎機率使技能主目標陷入(.*)。"="Deals $1 ATK Curse damage to <color\=#FFFF00>1</color> enemy. Increases DMG Dealt by $2 if they have any debuff. When you have [$3] there is a $4 base chance to inflicts $5."
+sr:"對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害。若敵人帶有任意減益效果，則使該技能造成的傷害提升(\d+%)。<link\="s\|127"><u>『(.*)』</u></link>額外效果：使主目標有(\d+%)的基礎機率陷入<link\="s\|108"><u>遺忘</u></link>狀態，效果持續2回合。$"="Deals <color\=#FFFC40>$1</color> ATK Curse damage to 1 enemy. Increases DMG Dealt by $2 if they have any debuff. <link\="s|127"><u>[$3]</u></link> Additional Effect: There is a $4 base chance to inflicts <link\="s|108"><u>Forget</u></link> to the main target for 2 turns."
 
-// Skill 2: Distant Shore Gathering
-sr:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，對處於異常狀態的敵人造成的傷害提升20%；持有『孟婆湯』時有100%基礎機率使技能主目標陷入(.*)。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>1</color> enemy. If the target is inflicted with a debuff, increase damage dealt by 20%. <link\=s|127><u>[Meng Po Soup]</u></link> now has a 100% chance to inflict $2 for 2 turns.
+sr:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，並使其獲得『彼岸花』，自身每有10點速度使其受到的傷害提升(\d+\.\d+%)，該效果在受到2次傷害或2回合後清除。持有『(.*)』時『彼岸花』效果翻倍。$"="Deals $1 ATK Curse damage to <color\=#FFFF00>all</color> enemies, and inflicts the [Lycoris Radiata] debuff to all enemies: Increases enemies' DMG Taken by $3 for every $2 SPD. Dispel this effect after 2 instances of damage or after 2 turns. Doubles the debuff of [Lycoris Radiata] when you have [$3]."
+sr:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，並使所有敵人獲得『彼岸花』效果：自身每有(\d+)點速度，使敵人受到的傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，上限<color\=#FFFC40>(\d+\.\d+%)</color>。該效果在受到2次傷害或2回合後清除。<link\="s\|127"><u>『(.*)』</u></link>額外效果：『彼岸花』的增傷效果翻倍。$"="Deals <color\=#FFFC40>$1</color> ATK Curse damage to all enemies, and inflicts the [Lycoris Radiata] debuff to all enemies: Increases enemies' DMG Taken by $3 for every $2 SPD, up to <color\=#FFFC40>$4</color>. Dispel this effect after 2 instances of damage or after 2 turns. [$5] Additional Effect: Doubles the debuff of [Lycoris Radiata]."
 
-// Skill 3: Playful Lioness' Dance
-sr:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，並使其獲得『彼岸花』，自身每有10點速度使其受到的傷害提升(\d+\.\d+%)，該效果在受到2次傷害或2回合後清除。持有『孟婆湯』時『彼岸花』效果翻倍。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and inflict [Crosshore Lycoris]. For every 10 SPD, damage taken by all enemies is increased by 3%. [Crosshore Lycoris] is cleared after the enemy takes damage twice or after 2 turns. <link\=s|127><u>[Meng Po Soup]</u></link> now doubles the effect of [Crosshore Lycoris].
+sr:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，使其下1次受到的傷害提升(\d+\.\d+%)，並有(\d+%)基礎機率使其陷入(.*)狀態，持續2回合。$"="Deals $1 ATK Curse damage to <color\=#FFFF00>all</color> enemies and and increases the DMG Taken on the next instance of damage by $2. There is a $3 base chance to inflicts $4 for 2 turns"
 
-// Combat Skills
-sr:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，使其下1次受到的傷害提升(\d+\.\d+%)，並有30%基礎機率使其陷入(.*)狀態，持續2回合。"=Deals <color\=#FFFC40>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and increase their damage taken by $2 with a 30% chance of inflicting $3 for 2 turns.
+下一個釋放的技能附帶額外效果=Next skill has additional effect
+回憶達到40時，獲得孟婆湯。=<size\=24>Gain Meng Po Soup when you reached 40 Memory</size>
+r:"^受到下1次傷害提升(\d+%)$"="Increase next instance of damage by $1"
+r:"^受到下1次傷害提升(\d+\.\d+%)$"="Increase next instance of damage by $1"
+r:"^受到接下來兩次傷害提升(\d+%)$"="Increase next 2 instances of damage by $1"
+r:"^受到接下來兩次傷害提升(\d+\.\d+%)$"="Increase next 2 instances of damage by $1"
+忘川水=<size\=35>Water of Oblivion</size>
 
 In-Battle Quotes
 <color\=#FF0000>李瑤鈴</color>獲得了孟婆湯……=<color\=#FF0000>Yaoling Li</color> gained Meng Po Soup!
+sr:"^<color\=#FF0000>(.*)</color>進入了遺忘狀態……$"="Inflicted <color\=#FF0000>$1</color> with Forget!"
+
+Combat Pop-ups
+r:"^孟<color\=#000000>婆</color>湯$"="M<color\=#000000>en</color>g Po Soup"
+r:"^忘<color\=#000000>川</color>水$"="W<color\=#000000>at</color>er of Oblivion"
+
+----------
+Riddle - Haruna Nishimori
+----------
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，使所有同伴進入『寵愛』狀態：釋放技能造成傷害後使西森獲得1層『童趣』，持續1回合。$"="Deals $1 ATK Psy damage to <color\=#FFFF00>1</color> enemy, gives all allies [Pamperedness]: You gain 1 stack of [Childlike Fun] when an ally deals damage with skills for 1 turn."
+sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，使所有同伴進入<link\="s\|165"><u>『(.*)』</u></link>狀態：釋放人格面具技能造成傷害時，使西森獲得1層<link\="s\|164"><u>『(.*)』</u></link>，效果持續1回合。$"="Deals <color\=#FFFC40>$1</color> ATK Psy damage to 1 enemy, gives all allies <link\="s|165"><u>[$2]</u></link>: You gain 1 stack of <link\="s|164"><u>[$3]</u></link> when an ally deals damage with skills for 1 turn."
+
+r:"^使<color\=#FFFF00>所有</color>同伴的受治療效果、受護盾效果提升(\d+\.\d+%)，防禦力提升(\d+\.\d+%)，持續2回合。若『童趣』為0層，則在釋放技能後獲得2層『童趣』。$"="Increases <color\=#FFFF00>all</color> allies' Healing Received and Shield Received by 15.1% and increases <color\=#FFFF00>all</color> allies' DEF by $2 for 2 turns. by 29.4% for 2 turns. When using this skill at 0 stacks of [Childlike Fun], gains 2 stacks of [Childlike Fun]."
+sr:"^使所有同伴受到的治療效果以及受到的護盾效果提升<color\=#FFFC40>(\d+\.\d+%)</color>，防禦力提升<color\=#FFFC40>(\d+\.\d+%)</color>。效果持續2回合。釋放該技能時若<link\="s\|164"><u>『(.*)』</u></link>層數為0，則在技能結束後獲得2層<link\="s\|164"><u>『(.*)』</u></link>。$"="Increases all allies' Healing Received and Shield Received by <color\=#FFFC40>$1</color> and increases all allies' DEF by <color\=#FFFC40>$2</color> for 2 turns. When using this skill at 0 stacks of <link\="s|164"><u>[$3]</u></link>, gains 2 stacks of <link\="s|164"><u>[$4]</u></link>."
+
+r:"^持有『童趣』時技能開啟，使<color\=#FFFF00>所有</color>同伴的攻擊力提升(\d+%)，若『童趣』不少於2層，則使所有同伴造成的傷害提升\（每(\d+)點攻擊力提升(\d+%)，上限(\d+\.\d+%)\)，持續2回合。$"="Available when you have [Childlike Fun]. Increases <color\=#FFFF00>all</color> allies' ATK by $1 for 2 turns. When you have not less than 2 stacks of [Childlike Fun], increases all allies' DMG Dealt (For every $2 ATK increase $3, up to $4) for 2 turns."
+sr:"^持有<link\="s\|164"><u>『(.*)』</u></link>時該技能開啟，使所有同伴的攻擊力提升(\d+%)，效果持續2回合。釋放該技能時若<link\="s\|164"><u>『(.*)』</u></link>不少於2層，則使所有同伴造成的傷害提升（自身每有(\d+)點攻擊力提升(\d+%)，上限<color\=#FFFC40>(\d+\.\d+%)</color>），效果持續2回合。$"="Available when you have <link\="s|164"><u>[$1]</u></link>. Increases all allies' ATK by $2 for 2 turns. When you have not less than 2 stacks of <link\="s|164"><u>[$3]</u></link> when using this skill, increases all allies' DMG Dealt (For every $4 ATK increase $5, up to <color\=#FFFC40>$6</color>) for 2 turns."
+
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，使所有同伴造成的傷害提升(\d+\.\d+%)\*當前『童趣』層數，持續1回合。$"="Deals $1 ATK Psy damage to <color\=#FFFF00>1</color> enemy and increases all allies' DMG Dealt by $2*number of [Childlike Fun] stacks for 1 turn."
+
+釋放技能造成傷害後使西森獲得『童趣』=Nishimori gains [Childlike Fun] \nafter dealing damage with a skill
+釋放技能消耗『童趣』使同伴攻擊力提升。=Consume all [Childlike Fun] after using a skill to increase all allies' ATK
+r:"^受到的治療效果提升(\d+\.\d+%)$"="Increase Healing Received by $1"
+r:"^受到的護盾效果提升(\d+\.\d+%)$"="Increase Shield Received by $1"
+奇思妙想=<size\=30>Whimsical Thoughts</size>
+使同伴下一個技能造成的傷害提升。=Increase DMG Dealt of allies' next skill
+
+Combat Pop-ups
+r:"^童<color\=#000000>趣</color>$"="<size\=14> </size>C<color\=#000000>hi</color>ldlike Fun"
+r:"^寵<color\=#000000>愛</color>$"="<size\=27> </size>P<color\=#000000>a</color>mperedness"
+r:"^受<color\=#000000>治</color>療提升$"="<size\=3> </size>H<color\=#000000>ea</color>ling Received Up"
+r:"^受<color\=#000000>護</color>盾提升$"="<size\=16> </size>S<color\=#000000>hi</color>eld Received Up"
+r:"^奇<color\=#000000>思</color>妙想$"="<size\=1> </size>W<color\=#000000>hi</color>msical Thoughts"
 
 /////////////////////////////////
 ///// e. JOKER - Amamiya Ren ////
@@ -753,6 +784,8 @@ r:"^詛<color\=#000000>咒</color>$"="<size\=8> </size>C<color\=#000000>ur</colo
 
 r:"^倒<color\=#000000>地</color>$"="<size\=22> </size>D<color\=#000000>o</color>wn"
 r:"^狂<color\=#000000>怒</color>$"="<size\=20> </size>R<color\=#000000>a</color>ge"
+r:"^遺<color\=#000000>忘</color>$"="<size\=14> </size>F<color\=#000000>or</color>get"
+
 ----------
 Combat Pop-ups for buffs
 ----------
@@ -772,7 +805,7 @@ r:"^傷<color\=#000000>害</color>提升$"="<size\=17> </size>D<color\=#000000>M
 r:"^造<color\=#000000>成</color>傷害提升$"="In<color\=#000000>cr</color>ease DMG Dealt"
 
 r:"^生<color\=#000000>命</color>上限提升$"="<size\=0.1> </size>M<color\=#000000>ax</color> HP Up"
-r:"^護<color\=#000000>盾</color>$"="<size\=18> </size>S<color\=#000000>hi</color>eld"
+r:"^護<color\=#000000>盾</color>$"="<size\=16> </size>S<color\=#000000>hi</color>eld"
 
 ----------
 Combat Pop-ups for debuffs
@@ -791,6 +824,7 @@ Inspect Details
 r:"^生命值提升(\d+)$"="Increase HP by $1"
 r:"^攻擊力提升(\d+)$"="Increase ATK by $1"
 r:"^攻擊力提升(\d+%)$"="Increase ATK by $1"
+r:"^每層提升(\d+%)的攻擊力$"="Increase ATK by $1 per stack"
 r:"^防禦力提升(\d+)$"="Increase DEF by $1"
 r:"^防禦力提升(\d+%)$"="Increase DEF by $1"
 r:"^防禦力提升(\d+\.\d+%)$"="Increase DEF by $1"
@@ -817,13 +851,16 @@ r:"^治療效果提升(\d+%)$"="Increase Healing Effect by $1"
 r:"^攻擊力降低(\d+%)$"="Decrease ATK by $1"
 r:"^防禦力降低(\d+%)$"="Decrease DEF by $1"
 r:"^防禦力降低(\d+\.\d+%)$"="Decrease DEF by $1"
+r:"^受到傷害提升(\d+%)$"="Increase DMG Taken by $1"
 r:"^受到的傷害提升(\d+\.\d+%)$"="Increase DMG Taken by $1"
 r:"^受到核熱傷害提升(\d+%)"="Increase Nuke DMG Taken by $1"
 
+r:"^攻擊力提升$"="Increase ATK"
 r:"^防禦力提升$"="Increase DEF"
 r:"^傷害提升$"="Increase Damage"
 r:"^暴擊傷害提升$"="<size\=30>Increase CRIT DMG</size>"
 r:"^造成傷害提升$"="<size\=30>Increase DMG Dealt</size>"
+r:"^受到傷害提升$"="<size\=30>Increase DMG Taken</size>"
 r:"^核熱傷害提升$"="Nuke DMG Up"
 r:"^治療效果提升$"="<size\=26>Increase Healing Effect</size>"
 
