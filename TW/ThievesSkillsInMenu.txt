@@ -9,6 +9,7 @@ Character-specific Skill Details
 技能升級=Skill Upgrade
 技能倍率=Skill Multiplier
 該技能已達最高等級=<size\=30>Skill is at highest level</size>
+該怪盜已培養至滿級！=Thief Lv. maxed!
 
 ----------
 CATTLE - Ruferu
@@ -17,6 +18,7 @@ r:"^戰鬥技巧 Lv.(\d+)$"="Combat Skills Lv.$1"
 r:"^戰鬥技巧 <color\=#0F69CB>Lv.(\d+)</color>$"="Combat Skills <color\=#0F69CB>Lv.$1</color>"
 sr:"^『(.*)』、『(.*)』的技能等級提升2級，至多提升至15級。$"="[$1], [$2] level +2, up to a maximum of level 15."
 sr:"^『(.*)』、『(.*)』的技能等級提升3級，至多提升至15級。$"="[$1], [$2] level +3, up to a maximum of level 15."
+sr:"^『(.*)』，『(.*)』的技能等級提升3級，至多提升至15級。$"="[$1], [$2] level +3, up to a maximum of level 15."
 
 主動治療時為同伴附加『星之火』效果，使同伴獲得屬性提升效果。=When healing, give your ally [Starfire], increasing their attributes.
 雀躍火梟=<size\=25>Caper Fire Owl</size>
@@ -490,7 +492,7 @@ r:"^奇蹟拳 Lv.(\d+)$"="Miracle Punch Lv.$1"
 r:"^奇蹟拳 <color\=#0F69CB>Lv.(\d+)</color>$"="Miracle Punch <color\=#0F69CB>Lv.$1</color>"
 sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，該技能命中率降低<color\=#FFFC40>(\d+%)</color>，暴擊率提升<color\=#FFFC40>(\d+%)</color>。若該技能暴擊，則立刻獲得一層<link\="s\|150"><u>『(.*)』</u></link>。\n<b><size\=28><color\=#850101>圍裹著尖刺的拳頭從天而降，對敵人造成猛烈的傷害，這樣的威力絕不可小覷。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Physical damage to 1 enemy. This skill has <color\=#FFFC40>$2</color> decreased Hit Rate and <color\=#FFFC40>$3</color> increased CRIT.\nIf this skill crits, gains 1 stacks of <link\="s|150"><u>[$4]</u></link>.\n<b><size\=28><color\=#850101>The fist wrapped around the sky fell from the sky, causing violent damage to the enemy, and this power must not be underestimated.</color></size></b>"
 
-r:"^『ONE MORE』：對1名敵人造成疾風屬性傷害。\n『HIGHLIGHT』：對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的疾風屬性傷害，並且使1名同伴以1%的最大生命值復活。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[ONE More]: Deals Wind damage to 1 enemy.\n[HIGHTLIGHT]: Deals <color\=#FFFC40>$1</color> ATK Wind damage to 1 enemy, and revives an ally with 1% Max HP.\nMelee Attack: Uses a melee weapon to deal light Physical damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
+r:"^『ONE MORE』：對1名敵人造成疾風屬性傷害。\n『HIGHLIGHT』：對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的疾風屬性傷害，並且使1名同伴以1%的最大生命值復活。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[ONE More]: Deals Wind damage to 1 enemy.\n[HIGHLIGHT]: Deals <color\=#FFFC40>$1</color> ATK Wind damage to 1 enemy, and revives an ally with 1% Max HP.\nMelee Attack: Uses a melee weapon to deal light Physical damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
 
 r:"^自信 Lv.(\d+)$"="Confidence Lv.$1"
 sr:"^<link\="s\|150"><u>『(.*)』</u></link>的治療效果可以暴擊，獲得額外暴擊率<color\=#FFFC40>(\d+\.\d+%)</color>。暴擊使得<link\="s\|150"><u>『(.*)』</u></link>的恢復量額外提升<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力\+<color\=#FFFC40>(\d+)</color>。$"="Healing from <link\="s|150"><u>[$1]</u></link> can CRIT and has <color\=#FFFC40>$2</color> bonus CRIT. Increase Healing by <color\=#FFFC40>$4</color> ATK + <color\=#FFFC40>$5</color> when CRIT Healing with <link\="s|150"><u>[$3]</u></link>."
@@ -571,7 +573,7 @@ sr:"^<link\="s\|113"><u>『(.*)』</u></link>狀態結束時攻擊敵人，造�
 閃耀時刻=Shining Moment
 
 忘我境界=Pure Focus
-HIGHLIGHT效果提升：釋放HIGHLIGHT技能後，自身攻擊力提升100%，效果持續1回合。=HIGHTLIGHT Effect Boost: After using HIGHLIGHT, increase ATK by 100% for 1 turn.
+HIGHLIGHT效果提升：釋放HIGHLIGHT技能後，自身攻擊力提升100%，效果持續1回合。=HIGHLIGHT Effect Boost: After using HIGHLIGHT, increase ATK by 100% for 1 turn.
 
 完美謝幕=Perfect Finale
 sr:"^攻擊敵人時，有(\d+%)機率額外使<link\="s\|113"><u>『(.*)』</u></link>獲得1次額外計數，<link\="s\|113"><u>『(.*)』</u></link>狀態下，每有1層計數，則火焰傷害提升(\d+%)，最多提升(\d+%)。$"="When attacking enemies, there is a $1 chance to gain an additional count for <link\="s|113"><u>[$2]</u></link>. When you're in <link\="s|113"><u>[$3]</u></link>, increase Fire damage by $4 per each count stacks, up to $5."
@@ -632,7 +634,7 @@ r:"^每對1個目標造成1次減益效果，就使李瑤鈴的攻擊力提升(\
 孟婆湯濃濃=Thick Meng Po Soup
 
 往事如煙空=Dust in the Wind
-r:"^HIGHLIGHT效果提升：使敵人受到的傷害額外提升(\d+%)，並使所有敵人獲得一個<link\="s\|112"><u>詛咒</u></link>效果。$"="HIGHTLIGHT Effect Boost: Increase the DMG Taken debuff by 20% and inflict all enemies with 1 stack of <link\="s|112"><u>Cursed</u></link>."
+r:"^HIGHLIGHT效果提升：使敵人受到的傷害額外提升(\d+%)，並使所有敵人獲得一個<link\="s\|112"><u>詛咒</u></link>效果。$"="HIGHLIGHT Effect Boost: Increase the DMG Taken debuff by 20% and inflict all enemies with 1 stack of <link\="s|112"><u>Cursed</u></link>."
 
 曼珠如煙紅=Smokelike Lycoris
 sr:"^釋放技能消耗<link\="s\|127"><u>『(.*)』</u></link>後，有(\d+%)固定機率返還<link\="s\|127"><u>『(.*)』</u></link>，該效果有1回合冷卻時間。$"="After consuming <link\="s|127"><u>[$1]</u></link>, there is a $2 fixed chance to refund <link\="s|127"><u>[$3]</u></link>, with a 1 turn cooldown."
@@ -875,3 +877,56 @@ HIGHLIGHT效果提升：獲得3個{{A}}。=HIGHLIGHT Effect Boost: Gain 3 {{A}}.
 
 奇妙秀終章=Grand Finale
 若場上存在生命值低於10%的敵人，則直接斬殺該敵人，效果上限為JOKER攻擊力的250%。每名敵人每場戰鬥最多觸發1次。額外回合釋放人格面具技能後，對全體敵人觸發一次相同的攻擊，造成JOKER攻擊力50%的詛咒傷害。=Immediately execute enemy with less than 10% HP, up to 250% ATK. This can only trigger once per enemy. After using a skill in Extra Turn, deal 50% ATK Curse damage to all enemies.
+
+----------
+Chord - Ayaka Sakai
+----------
+r:"^『終曲：音域全開』初始有1回合冷卻時間，使用該技能後提升自身攻擊力，此後該技能增加1回合冷卻時間，最多不會超過3回合。$"="<size\=27>[Finale: Range Unleash] starts with a 1 turn cooldown, increases ATK after using that skill and increases its cooldown by 1 turn, up to 3 turns.</size>"
+激情鳴奏=<size\=27>Passionate Singing</size>
+即興獨奏=Improvised Solo
+終曲：音域全開=<size\=23>Finale: Range Unleash</size>
+重音=Stress
+掃弦=Sweep Picking
+
+r:"^激情鳴奏 Lv.(\d+)$"="<size\=30>Passionate Singing</size> Lv.$1"
+r:"^激情鳴奏 <color\=#0F69CB>Lv.(\d+)</color>$"="Passionate Singing <color\=#0F69CB>Lv.$1</color>"
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害。若存在<link\="s\|190"><u>{{A}}</u></link>，則<link\="s\|190"><u>{{A}}</u></link>對技能主目標額外造成1次基於<link\="s\|190"><u>{{A}}</u></link><color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性附加傷害。\n<b><size\=28><color\=#850101>讓心跳撲通撲通，讓旋律撕裂地球，今晚的目標是「掀翻屋頂」和「電擊全世界」！</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Electric damage to all enemies. If there is a <link\="s|190"><u>[Loyal Listener]</u></link>, the <link\="s|190"><u>[Loyal Listener]</u></link> deals an additional Electric damage based on <color\=#FFFC40>$2</color> of their ATK to the main target.\n<b><size\=28><color\=#850101>Let the heartbeat flutter and let the melody tear the earth. Tonight's goal is "overturning the roof" and "electric shock all over the world"!</color></size></b>"
+
+r:"^即興獨奏 Lv.(\d+)$"="Improvised Solo Lv.$1"
+r:"^即興獨奏 <color\=#0F69CB>Lv.(\d+)</color>$"="Improvised Solo <color\=#0F69CB>Lv.$1</color>"
+r:"^選擇1名同伴成為<link\="s\|190"><u>{{A}}</u></link>，<link\="s\|190"><u>{{A}}</u></link>的攻擊力提升相當於坂井綾香攻擊力的(\d+%)，上限<color\=#FFFC40>(\d+)</color>，持續3回合。同時只能擁有1個<link\="s|190"><u>{{A}}</u></link>。\n<b><size\=28><color\=#850101>在響徹雲霄的歡呼聲中閃亮登場吧，搖滾女王絕不虧待忠實聽眾，</color></size></b>$"="Selects 1 ally to become the <link\="s|190"><u>[Loyal Listener]</u></link>，increases their ATK by $1 of your own ATK for 3 turns, up to <color\=#FFFC40>$2</color>. There can only be 1 <link\="s|190"><u>[Loyal Listener]</u></link> at a time.\n<b><size\=28><color\=#850101>Let's debut in the cheers of the sky.</color></size></b>"
+
+r:"^終曲：音域全開 Lv.(\d+)$"="<size\=25>Finale: Range Unleash</size> Lv.$1"
+r:"^終曲：音域全開 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=25>Finale: Range Unleash</size> <color\=#0F69CB>Lv.$1</color>"
+r:"^選擇1名同伴，立刻釋放其HIGHLIGHT技能，同時提升<color\=#FFFC40>(\d+\.\d+%)</color>本次HIGHLIGHT的傷害。透過該技能使用的HIGHLIGHT不會計入角色的HIGHLIGHT冷卻時間。\n<b><size\=28><color\=#850101>狂野不羈的少女主唱將要奉上今晚的壓軸歌曲，現場的氣氛已然到達最高潮！</color></size></b>$"="Selects 1 ally to immediately uses their HIGHLIGHT, increases that HIGHLIGHT damage by <color\=#FFFC40>$1</color>. HIGHLIGHT used by this skill will not count towards their HIGHLIGHT cooldown.\n<b><size\=28><color\=#850101>The wild and unruly girl vocalist is going to perform the finale song of the night, and the atmosphere has already reached its climax!</color></size></b>"
+
+r:"^『ONE MORE』：對1名敵人造成電擊屬性傷害。\n『HIGHLIGHT』：<nobr>所有同伴獲得<color\=#FFFC40>(\d+\.\d+%)</color>傷害加成，持續4個怪盜行動。期間我方怪盜行動後回復(\d+%)HIGHLIGHT能量，最多回復(\d+%)。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械攻擊：使用槍械射擊1名敵人，造成少量射擊屬性傷害，根據子彈數量可以射擊多次。$"="[ONE MORE]: Deals Electric damage to 1 enemy. \n[HIGHLIGHT]: Increases all allies' DMG Dealt by <color\=#FFFC40>$1</color> for 4 actions. Restores $2 HIGHLIGHT Energy after each allies' action, up to $3. \nMelee Attack: Uses a melee weapon to deal light Physical damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
+
+r:"^重音 Lv.(\d+)$"="Stress Lv.$1"
+r:"^友方怪盜使用HIGHLIGHT時，立刻提升其<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力，持續1回合；如果此人是{{A}}則效果提升為1.5倍。$"="When an ally uses HIGHLIGHT, immediately increase their ATK by <color\=#FFFC40>$1</color> for 1 turn; Increase this effect by 1.5x if they are the Loyal Listener."
+r:"^友方怪盜使用HIGHLIGHT時，立刻提升其<color\=#0169ca>(\d+\.\d+%)</color>攻擊力，持續1回合；如果此人是{{A}}則效果提升為1.5倍。$"="When an ally uses HIGHLIGHT, immediately increase their ATK by <color\=#0169ca>$1</color> for 1 turn; Increase this effect by 1.5x if they are the Loyal Listener."
+
+r:"^掃弦 Lv.(\d+)$"="Sweep Picking Lv.$1"
+r:"^友方怪盜使用HIGHLIGHT後，坂井綾香立刻對生命值百分比最低的同伴恢復相當於坂井<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力\+<color\=#FFFC40>(\d+)</color>的生命值。$"="After an ally uses HIGHLIGHT, restores <color\=#FFFC40>$1</color> ATK + <color\=#FFFC40>$2</color> HP to the lowest HP% ally."
+r:"^友方怪盜使用HIGHLIGHT後，坂井綾香立刻對生命值百分比最低的同伴恢復相當於坂井<color\=#0169ca>(\d+\.\d+%)</color>攻擊力\+<color\=#0169ca>(\d+)</color>的生命值。$"="After an ally uses HIGHLIGHT, restores <color\=#0169ca>$1</color> ATK + <color\=#0169ca>$2</color> HP to the lowest HP% ally."
+
+根據坂井綾香攻擊力獲得攻擊力提升。=Increase ATK based on your ATK.
+
+♪我的光芒♪=♪ My Light ♪
+r:"^進入戰鬥，『終曲：音域全開』有1回合冷卻時間。每次使用『終曲：音域全開』，永久使得自身攻擊力提升(\d+%)，最多可疊加2層，此後『終曲：音域全開』永久增加1回合冷卻時間，最多不會超過3回合。$"="At the start of battle, [Finale: Range Unleash] has a 1 turn cooldown. Permanently increases own ATK by $1 after using [Finale: Range Unleash], up to 2 stacks. Afterwards permanently increases the cooldown for [Finale: Range Unleash] by 1 turn, up to 3 turns."
+
+♪迎接黎明♪=♪ Greet My Dawn Star ♪
+r:"^戰鬥開始選擇一個同伴成為<link\="s\|190"><u>{{A}}</u></link>，優先選擇反抗、支配職業攻擊力最高的同伴，並且<link\="s\|190"><u>{{A}}</u></link>獲得額外效果：暴擊率提升(\d+%)。$"="At the start of battle, selects 1 ally to become the <link\="s|190"><u>[Loyal Listener]</u></link>, prioritizing the highest ATK Rebel or Dominate class ally. <link\="s|190"><u>[Loyal Listener]</u></link> gains additional effect: Increases CRIT by $1."
+
+♪夜幕微光♪=♪ Lonely Shimmers ♪
+
+♪啟明之星♪=♪ Mr. Light ♪
+r:"^使用『終曲：音域全開』觸發同伴HIGHLIGHT技能時，該同伴傷害立刻提升(\d+%)，持續1回合。$"="When using [Finale: Range Unleash], increases the target's damage by $1 for 1 turn."
+
+♪夢想輪廓♪=♪ Painted My Scenes ♪
+
+♪改變自己♪=♪ Change My Life ♪
+r:"^HIGHLIGHT效果提升：傷害加成持續時間提升至6個怪盜行動，HIGHLIGHT能量回復效果上限提升至(\d+%)，並且使其他怪盜的HIGHLIGHT冷卻時間減少1回合。$"="HIGHLIGHT Effect Boost: Increases Damage Bonus duration to 6 ally actions. Increases HIGHLIGHT Energy restore cap to $1 and decreases all other allies' HIGHLIGHT cooldown by 1 turn."
+
+♪我的天命先生♪=♪ My Mr. Right ♪
+r:"^進入戰鬥立刻解鎖『終曲：音域全開』。『終曲：音域全開』的冷卻時間永久減少1回合，冷卻時間上限減少至2回合。每次使用『終曲：音域全開』後，使所有怪盜傷害提升(\d+%)，最多可疊加2層。$"="[Finale: Range Unleash] is ready at the start of battle. Permanently decreases [Finale: Range Unleash] cooldown by 1 turn, up to 2 turns. Increases all allies' damage by $1 after using [Finale: Range Unleash], up to 2 stacks."

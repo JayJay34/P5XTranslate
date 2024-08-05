@@ -7,6 +7,7 @@ Character-specific Skill Details
 技能=Skills
 套裝=Set
 r:"^(\d+)回合$"="$1 turn"
+r:"^該技能(\d+)回合後準備就緒。$"="Skill is ready after $1 turn(s)"
 
 ----------
 CATTLE - Ruferu
@@ -422,3 +423,17 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒�
 
 Combat Pop-ups
 r:"^煞<color\=#000000>氣</color>$"="<size\=14> </size>F<color\=#000000>ur</color>y"
+
+----------
+Chord - Ayaka Sakai
+----------
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害。若存在<link\="s\|190"><u>{{A}}</u></link>，則<link\="s\|190"><u>{{A}}</u></link>對技能主目標額外造成1次(\d+\.\d+%)攻擊力的電擊屬性附加傷害。$"="Deals $1 ATK Electric damage to <color\=#FFFF00>all</color> enemies. If there is a <link\="s|190"><u>[Loyal Listener]</u></link>, the <link\="s|190"><u>[Loyal Listener]</u></link> deals an additional $2 ATK Electric dameg base on their own ATK to the main target."
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害。若存在<link\="s\|190"><u>{{A}}</u></link>，則<link\="s\|190"><u>{{A}}</u></link>對技能主目標額外造成1次基於<link\="s\|190"><u>{{A}}</u></link><color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性附加傷害。$"="Deals <color\=#FFFC40>$1</color> ATK Electric damage to all enemies. If there is a <link\="s|190"><u>[Loyal Listener]</u></link>, the <link\="s|190"><u>[Loyal Listener]</u></link> deals an additional Electric damage based on <color\=#FFFC40>$2</color> of their ATK to the main target."
+
+r:"^選擇<color\=#FFFF00>1名</color>同伴成為<link\="s\|190"><u>{{A}}</u></link>，<link\="s\|190"><u>{{A}}</u></link>的攻擊力提升(\d+)，持續3回合。同時只能擁有1個<link\="s\|190"><u>{{A}}</u></link>。$"="Selects <color\=#FFFF00>1</color> ally to become the <link\="s|190"><u>[Loyal Listener]</u></link>，increases their ATK by $1 for 3 turns. There can only be 1 <link\="s|190"><u>[Loyal Listener]</u></link> at a time."
+r:"^選擇1名同伴成為<link\="s\|190"><u>{{A}}</u></link>，<link\="s\|190"><u>{{A}}</u></link>的攻擊力提升相當於坂井綾香攻擊力的(\d+%)，上限<color\=#FFFC40>(\d+)</color>，持續3回合。同時只能擁有1個<link\="s\|190"><u>{{A}}</u></link>。$"="Selects 1 ally to become the <link\="s|190"><u>[Loyal Listener]</u></link>，increases their ATK by $1 of your own ATK for 3 turns, up to <color\=#FFFC40>$2</color>. There can only be 1 <link\="s|190"><u>[Loyal Listener]</u></link> at a time."
+
+r:"^選擇<color\=#FFFF00>1名</color>同伴，立刻釋放其HIGHLIGHT技能，同時提升(\d+\.\d+%)本次HIGHLIGHT的傷害。$"="Selects <color\=#FFFF00>1</color> ally, immediately uses their HIGHLIGHT and increase that HIGHLIGHT damage by $1"
+r:"^選擇1名同伴，立刻釋放其HIGHLIGHT技能，同時提升<color\=#FFFC40>(\d+\.\d+%)</color>本次HIGHLIGHT的傷害。透過該技能使用的HIGHLIGHT不會計入角色的HIGHLIGHT冷卻時間。$"="Selects 1 ally to immediately uses their HIGHLIGHT, increases that HIGHLIGHT damage by <color\=#FFFC40>$1</color>. HIGHLIGHT used by this skill will not count towards their HIGHLIGHT cooldown."
+
+r:"^使<color\=#FFFF00>所有</color>同伴獲得(\d+\.\d+%)傷害加成，持續(\d+)個怪盜行動。期間我方怪盜行動後回復(\d+%)HIGHLIGHT能量，最多回復(\d+%)。$"="Increases <color\=#FFFF00>all</color> allies' DMG Bonus by $1 for $2 actions. Restores $3 HIGHLIGHT Energy after each allies' action, up to $4."
