@@ -40,7 +40,7 @@ r:"^行動後損失生命值$"="Lose HP after action"
 受到暴擊率提升10%=Increase odds of receiving CRIT by 10%
 風襲=Winded
 輻射=Radiation
-受到的傷害提升15%，被視為一種元素異常。=Increase DMG Taken by 15%.
+受到的傷害提升15%，被視為一種元素異常。=Increase DMG Taken by 15%
 
 <color\=#66ccff>暈眩</color>=<color\=#FBF6C1>Dizzy</color>
 <color\=#66ccff>遺忘</color>=<color\=#80EEED>Forget</color>
@@ -158,6 +158,8 @@ sr:"受到的(.*)屬性傷害降低(\d+\.\d+%)。"=Reduce damage from $1 attacks
 
 //Lucky Punch
 r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的物理屬性傷害，暴擊率提升20%，命中率下降20%"=Deals <color\=#FFFF00>$1</color> ATK Physical damage to <color\=#FFFF00>1</color> enemy with a 20% increase in Crit Rate, and 20% decrease in Hit Rate.
+
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，暴擊率提升(\d+%)，命中率降低(\d+%)。$"="Deals <color\=#fffc40>$1</color> ATK Physical damage to 1 enemy with a $1 increase in CRIT, and $2 decrease in Hit Rate."
 
 //Mind Slice because it has a comma at the end instead of a period???
 sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，效果持續2回合，"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$3</color> chance of inflicting $4 for 2 turns.
@@ -333,7 +335,7 @@ r:"使1名同伴的效果命中、效果抵抗提升<color\=#fffc40>(\d+\.\d+%)<
 r:"使所有同伴的效果命中、效果抵抗提升<color\=#fffc40>(\d+\.\d+%)</color>，自身每25%效果命中額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限<color\=#fffc40>(\d+\.\d+%)</color>。效果持續3回合。"=Increase all allies Effect Hit Rate and Effect RES by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 25% Effect Hit Rate Wonder has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
 
 //Rebellion
-r:"使1名同伴的暴擊率提升<color\=#fffc40>(\d+\.\d+%)</color>，自身每10%暴擊率額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限<color\=#fffc40>(\d+\.\d+%)</color>。效果持續3回合。"=Increase 1 ally's CRIT Rate by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 10% CRIT Rate Wonder has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
+r:"使<color\=#FFFF00>1名</color>同伴的暴擊率提升(\d+\.\d+%)，自身每(\d+%)暴擊率額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續3回合。$"="Increases <color\=#FFFF00>1</color> ally's CRIT by $1 + $3 for every $2 CRIT you have up to $4 for 3 turns."
 
 //Revolution
 r:"使所有同伴的暴擊率提升<color\=#fffc40>(\d+\.\d+%)</color>，自身每10%暴擊率額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+\.\d+%)。效果持續3回合。"=Increase all allies CRIT Rate by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 10% CRIT Rate Wonder has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
@@ -349,6 +351,9 @@ r:"使所有同伴的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身�
 
 //norn
 r:"使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的護盾，效果持續2回合。護盾受到傷害時，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使傷害來源陷入<link\="s\|105"><u>風襲</u></link>狀態。"=Generate a shield equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to all allies for 2 turns. Allies under the shield have a <color\=#fffc40>$3</color> chance to inflict <link\=s|105><u>Winded</u></link> on enemies who attack them.
+
+防風之壁=Wind Wall
+撐起2回合疾風耐性的防壁。=Adds Wind resistance to one ally for 2 turns.
 
 --- Debuffs ---
 
@@ -429,11 +434,17 @@ r:"戰鬥勝利後回復(\d+\.\d+%)最大生命值和精力值。"=Restore $1 of
 r:"下雨時受到的傷害降低(\d+\.\d+%)。"=Reduce damage from attacks during rainy days by $1.
 r:"物理攻擊(\d+%)機率反射，造成(\d+%)攻擊力物理屬性傷害。"=Physical attacks have a $1 chance to reflect, dealing $2 of the attacks damage back as Physical damage.
 
+
+----------
+SPECIAL
+---------
+召喚隨從=Summon
+
 r:"^該技能尚未達到使用條件$"="You have not reached the condition to use this skill"
 
 Battle Quotes
 r:"^<color\=#FF0000>所有同伴</color>攻擊力提升……$"="<color\=#FF0000>All allies</color> ATK Up!"
-r:"^<color\=#FF0000>(.*)</color>暴擊率提升了……$"="<color\=#FF0000>$1</color> CRIT Up!"
+sr:"^<color\=#FF0000>(.*)</color>暴擊率提升了……$"="<color\=#FF0000>$1</color> CRIT Up!"
 
 ----------
 Combat Pop-ups for ailments
@@ -460,13 +471,16 @@ r:"^防<color\=#000000>禦</color>提升$"="<size\=22> </size>D<color\=#000000>E
 r:"^防<color\=#000000>禦</color>力提升$"="<size\=22> </size>D<color\=#000000>E</color>F Up"
 r:"^最<color\=#000000>大</color>生命值提升$"="<size\=0.1> </size>M<color\=#000000>ax</color> HP Up"
 r:"^效<color\=#000000>果</color>命中提升$"=" E<color\=#000000>H</color>R Up"
+r:"^傷<color\=#000000>害</color>增加$"="<size\=17> </size>D<color\=#000000>M</color>G Bonus Up"
+r:"^傷<color\=#000000>害</color>提高$"="<size\=17> </size>D<color\=#000000>M</color>G Bonus Up"
+r:"^傷<color\=#000000>害</color>提升$"="<size\=17> </size>D<color\=#000000>M</color>G Bonus Up"
+r:"^傷<color\=#000000>害</color>減免$"="<size\=17> </size>D<color\=#000000>M</color>G RES Up"
 r:"^暴<color\=#000000>擊</color>率提升$"="<size\=20> </size>C<color\=#000000>R</color>IT Up"
 r:"^暴<color\=#000000>擊</color>效果提升$"="<size\=20> </size>C<color\=#000000>R</color>IT DMG Up"
 r:"^效<color\=#000000>果</color>抵抗提升$"="Ef<color\=#000000>fe</color>ct RES Up"
 r:"^治<color\=#000000>療</color>效果提升$"="<size\=3> </size>H<color\=#000000>ea</color>ling Up"
 
-r:"^傷<color\=#000000>害</color>提高$"="<size\=17> </size>D<color\=#000000>M</color>G Up"
-r:"^傷<color\=#000000>害</color>提升$"="<size\=17> </size>D<color\=#000000>M</color>G Bonus Up"
+
 r:"^造<color\=#000000>成</color>傷害提升$"="In<color\=#000000>cr</color>ease DMG Dealt"
 
 r:"^生<color\=#000000>命</color>上限提升$"="<size\=0.1> </size>M<color\=#000000>ax</color> HP Up"
@@ -501,11 +515,14 @@ r:"^防禦力提升(\d+\.\d+%)$"="Increase DEF by $1"
 sr:"^暴擊率提升(.*)$"="Increase CRIT by $1"
 sr:"^暴擊傷害提升(.*)$"="Increase CRIT DMG by $1"
 sr:"^暴擊效果提升(.*)$"="Increase CRIT DMG by $1"
+sr:"^效果命中提升(.*)$"="Increase EHR by $1"
 r:"^傷害提升(\d+%)$"="Increase DMG Bonus by $1"
+r:"^傷害提升(\d+\.\d+%)$"="Increase DMG Bonus by $1"
 r:"^造成傷害提升(\d+%)$"="Increase DMG Dealt by $1"
 r:"^造成的傷害提升(\d+%)$"="Increase DMG Dealt by $1"
 r:"^造成的傷害提升(\d+\.\d+%)$"="Increase DMG Dealt by $1"
 r:"^所有同伴造成的傷害提升(\d+%)。$"="Increase DMG Dealt by $1"
+sr:"^傷害減免(.*)$"="Increase DMG RES by $1"
 r:"^所有同伴受到的傷害降低(\d+%)。$"="Decrease DMG Taken by $1"
 r:"^物理傷害提升(\d+%)$"="Increase Physical DMG by $1"
 r:"^物理傷害提升(\d+\.\d+%)$"="Increase Physical DMG by $1"
@@ -531,6 +548,9 @@ r:"^詛咒傷害提升(\d+%)$"="Increase Curse DMG by $1"
 r:"^詛咒傷害提升(\d+\.\d+%)$"="Increase Curse DMG by $1"
 r:"^治療效果提升(\d+%)$"="Increase Healing Effect by $1"
 
+免疫即死效果=Immunity to Instant Kill effects
+免疫精神異常效果=Immunity to Mental Ailment effects
+免疫倒地值傷害=Immunity to Down
 ----------
 Inspect Details - DEBUFF
 ----------
@@ -544,17 +564,28 @@ r:"^受到核熱傷害提升(\d+%)"="Increase Nuke DMG Taken by $1"
 ----------
 Inspect Details - TITLES
 ----------
+r:"^攻擊提升$"="Increase ATK"
 r:"^攻擊力提升$"="Increase ATK"
 r:"^防禦力提升$"="Increase DEF"
 r:"^防禦力降低$"="Decrease DEF"
+r:"^傷害增加$"="Increase Damage"
 r:"^傷害提升$"="Increase Damage"
 r:"^暴擊率提升$"="Increase CRIT"
 r:"^暴擊傷害提升$"="<size\=30>Increase CRIT DMG</size>"
 r:"^暴擊效果提升$"="<size\=30>Increase CRIT DMG</size>"
+r:"^效果命中提升$"="<size\=25>Increase Effect Hit Rate</size>"
 r:"^造成傷害提升$"="<size\=30>Increase DMG Dealt</size>"
 r:"^受到傷害提升$"="<size\=30>Increase DMG Taken</size>"
+r:"^受到百分比傷害降低$"="Decreses damage taken percentage"
+r:"^受百分比傷害降低$"="<size\=20>Decreases DMG Taken%</size>"
 r:"^核熱傷害提升$"="Nuke DMG Up"
 r:"^治療效果提升$"="<size\=26>Increase Healing Effect</size>"
 
 r:"^受弱點傷害提升(\d+%)$"="Increase Weakness DMG by $1"
 r:"^耐性穿透提升(\d+%)$"="Increase Effect RES Ignore by $1"
+
+免疫即死=<size\=28>Instant Kill Immunity</size>
+免疫精神異常=<size\=23>Mental Ailment Immunity</size>
+免疫倒地=Down Immunity
+倒地=Down
+被擊倒了！=Knocked Down!
