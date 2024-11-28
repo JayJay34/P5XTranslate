@@ -40,6 +40,8 @@ r:"^追加效果$"="Follow Up"
 <color\=#66ccff>詛咒</color>=<color\=#FF0037>Cursed</color>
 <color\=#66ccff>祝福</color>=<color\=#FFFF9E>Blessed</color>
 
+部分技能對處於特定狀態下的目標造成額外的效果被視作觸發了TECHNICAL效果。=Certain skills can trigger TECHNICAL to targets with certain status.
+
 // Elemental & Mental Ailments Descriptions //
 
 r:"燃燒、冰凍、觸電、風襲，以上4種狀態屬於元素異常。"=<color\=#FF8C35>Burn</color>, <color\=#DFFFFF>Freeze</color>, <color\=#FCE54E>Shock</color>, <color\=#52E54E>Winded</color>.
@@ -92,11 +94,12 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 永眠突襲=Dormin Rush
 斬擊=Slash
 勇氣之聲=Brave Blade
+劍舞=Sword Dance
 巨人之戰=Gigantomachia
 榮耀衝擊=Glory Impact
 靈魂禁錮=Soul Imprisonment
 八艘跳躍=Hassou Tobi
-痛苦審判=Painful Judgement
+痛苦宣判=Painful Judgement
 
 --- Gun ---
 
@@ -105,7 +108,8 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 指彈=Snap
 劈射=Cleaving Shot
 子彈時間=Bullet Time
-絕地反擊=Counterattack
+絕地反擊=Tiger Shot
+至高魔彈=Riot Gun
 
 --- Fire ---
 
@@ -154,6 +158,7 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 瑪哈加爾達因=Magarudyne
 真空波=Vacuum Wave
 俯獵=Wind Hunt
+寂滅風息=Winds of Nirvana
 
 --- Psy ---
 
@@ -168,6 +173,7 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 念動破壞=Psy Destruction
 精神波動=Mental Wave
 心魔擊=Devious Strike
+毀滅之舞=Dance of Destruction
 
 --- Nuke ---
 
@@ -267,6 +273,7 @@ r:"^反叛 Lv.(\d+)$"="Rebellion Lv.$1"
 凝聚=Cohesion
 護風罩=Wind Barrier
 雪王的庇護=Snow Aegis
+獻身之護=Guard of Devotion
 
 --- Debuff Skills ---
 
@@ -478,6 +485,10 @@ r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬�
 //Mind Slice because it has a comma at the end instead of a period???
 sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，效果持續2回合，"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$3</color> chance of inflicting $4 for 2 turns.
 
+Hassou Tobi
+r:"^對全體敵人造成8段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，每有1個敵人，該技能傷害提升(\d+%)，最多提升(\d+%)。$"="Deals <color\=#fffc40>$1</color> ATK Physical damage to all enemies 8 times. For every 1 enemy, increases skill damage by $2, up to $3."
+
+
 --- Gun ---
 
 //One-Shot Kill
@@ -491,6 +502,9 @@ r:"對所有敵人造成3次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射�
 
 Cleaving Shot
 r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，若造成了暴擊，則額外造成1點倒地值傷害。$"="Deals <color\=#fffc40>$1</color> ATK Gun damage to 1 enemy. If this skill crits, decreases an additional Knockdown Count."
+
+Tiger Shot (Janosik)
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，有(\d+%)的固定機率使敵人獲得『瞄準』:使敵人的防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。\n<b><size\=28><color\=#024068>撞針高速撞擊子彈並引爆火藥，硝煙中射出的致命一擊造成屬性傷害。若敵方處於瞄準狀態，則傷害提升。</color></size></b>$"="Deals <color\=#fffc40>$1</color> ATK Gun damage to 1 enemy, with a $2 fixed chance to inflict the enemy with [Aim]: Decrease DEF by <color\=#fffc40>$3</color> for $4 turns.\n<b><size\=28><color\=#024068>Firing Pin hits a bullet at high speed and detonates the gunpowder, resulting in a fatal blow that deals damage, which is increased if the enemy is aiming.</color></size></b>"
 
 --- Fire ---
 
@@ -515,6 +529,9 @@ r:"對隨機敵人造成3段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的電�
 //Goddamnit Magarula why are you worded differently???
 sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$3</color> chance of inflicting $4 for 2 turns.
 
+Vishnu
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的疾風屬性傷害，有(\d+%)基礎機率使敵人陷入風襲狀態；\n若敵人處於風襲狀態，則刷新持續時間、提升本次技能造成傷害<color\=#fffc40>(\d+\.\d+%)</color>並使敵人受到疾風傷害加深<color\=#fffc40>(\d+\.\d+%)</color>，(\d+)回合。$"="Deals <color\=#fffc40>$1</color> ATK Wind damage to 1 enemy, with a $2 base chance to inflict them with Winded; \nIf they are already inflicted with Winded, refreshes its duration, increases this damage by <color\=#fffc40>$3</color> and increases their Wind DMG Taken by <color\=#fffc40>$4</color> for $5 turns."
+
 --- Psy ---
 
 //ST
@@ -527,6 +544,9 @@ r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬
 
 Okuninushi
 r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於精神異常的敵人增傷20%，若目標敵人的弱點是念動屬性，則額外提升15%造成的傷害。$"="Deals <color\=#fffc40>$1</color> ATK Psy damage to all enemies. Increases DMG Dealt by 20% if the enemy is inflicted with Mental Ailments. Increases DMG Dealt by 15% if the enemy is weak to Psy."
+
+Shiva
+r:"^對全體敵人造成1段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，消耗所有的『慧識』觸發本能『因果的流轉』的若干效果。$"="Deals <color\=#fffc40>$1</color> ATK Psy damage to all enemies, consumes all stacks of [Wisdom] and trigger the effects of [Karma Reversal]."
 
 --- Nuke ---
 
@@ -686,6 +706,9 @@ r:"使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#f
 King Frost
 r:"^使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的護盾，護盾存在時防禦力提升(\d+%)，持續2回合。$"="Gives all allies <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> Shield for 2 turns. When the Shield is active increases DEF by $3."
 
+Sandalphon
+r:"^使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的護盾，主目標同伴處於該護盾下時造成的傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續2回合。$"="Gives all allies <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> Shield. Increase the main target's DMG Dealt when shielded by <color\=#fffc40>$3</color> for 2 turns."
+
 --- Debuffs ---
 
 //Rakunda
@@ -748,8 +771,8 @@ r:"精力回復效率提升(\d+\.\d+%)。"=Increase SP Recovery by $1.
 r:"速度降低(.*)點，生命值提升(.*)。"=Reduce SPD by $1 and increase Max HP by $2.
 r:"速度提升(.*)點，防禦力降低(.*)。"=Increase SPD by $1 and decrease DEF by $2.
 r:"^暴擊效果提升(\d*\.?\d+%)。+$"=Increase CRIT damage by $1.
-r:"^效果命中提升(\d*\.?\d+%)。+$"=Increase Hit Rate by $1.
-r:"^造成的傷害提升(\d*\.?\d+%)。$"=Increase damage dealt by $1.
+r:"^效果命中提升(\d*\.?\d+%)。+$"=Increase Effect Hit Rate by $1.
+r:"^造成的傷害提升(\d*\.?\d+%)。$"=Increase DMG Dealt by $1.
 r:"^效果抵抗提升(\d*\.?\d+%)。+$"=Increase Effect RES by $1.
 r:"被包圍時暴擊率提升(\d*\.?\d+%)。"=Increase CRIT Rate by $1 when surrounded.
 r:"先制攻擊時暴擊率提升(\d*\.?\d+%)。"=Increase CRIT Rate by $1 during an ambush.
