@@ -945,11 +945,15 @@ r:"在「心軌擇行」中完成1次挑戰 \((\d+)\/1\)"=Complete 1 challenge i
 天然打磨的稀有晶狀珀芯，可用於『角色契約』、『武器補給』及『購買主角體力』。=A naturally polished rare crystalline core, can be used in [Character Contract], [Weapon Supply], and [Purchase Wonder Stamina].
 異界原晶=Premium Ambers
 
+r:"^簽約$"="Pulls"
+
 每10次簽約必出四星或以上怪盜角色。50次簽約後可自選新手五星怪盜角色。具體內容查看【說明】=<b><color\=#FFDF00>Beginner Banner</color></b>\nEvery 10 pulls will guarantee a 4★ character. 6.2% Chance. Choose a 5★ Thief with 50 accumulated pulls. 
 新手推薦契約中簽約次數達到=When pull count reaches
 後可自選一名以下5★怪盜=you can choose one 5 ★ Thief
 
-每10次簽約必出四星或以上怪盜角色。活動限定五星角色僅在UP期間，透過對應簽約獲得。具體內容查看【說明】=<b><color\=#FFDF00>Limited Character Banner</color></b>\nEvery 80 pulls will guarantee a 5★ character. 0.8% Chance.\nEvery 10 pulls will guarantee a 4★ character. 6.2% Chance. \nEvery 4★ and 5★ has a 50% chance to be from this banner. If not, then the next one will.\n\n<color\=#FFDF00>The current RATE UP character is only available in this banner.</color> The pull count will carry between banners.
+每10次簽約必出四星或以上怪盜角色。活動限定五星角色僅在UP期間，透過對應簽約獲得。具體內容查看【說明】。=<b><color\=#FFDF00>Limited Character Banner</color></b>\nEvery 80 pulls will guarantee a 5★ character. 0.8% Chance.\nEvery 10 pulls will guarantee a 4★ character. 6.2% Chance. \nEvery 4★ and 5★ has a 50% chance to be from this banner. If not, then the next one will.\n\n<color\=#FFDF00>The current RATE UP character is only available in this banner.</color> The pull count will carry between banners.
+
+次可獲得<color\=#EADE10>5★盲選偶像合約             ×1</color>，使用後隨機獲得以下怪盜=<size\=26>                       Get <color\=#EADE10>5★Random Kaidol Contract</color></size>
 
 每10次補給必出四星或以上武器。具體內容查看【說明】=<b><color\=#FFDF00>Weapon Banner</color></b>\nChoose your RATE UP weapon and two others. Every 70 pulls will guarantee a 5★ weapon. 0.8% Chance.\n\n\n\n\n\n<color\=#FFDF00>The limited character's 5★ weapon is only available in this banner.</color> The pull count will carry between banners.
 
@@ -966,7 +970,9 @@ r:"在「心軌擇行」中完成1次挑戰 \((\d+)\/1\)"=Complete 1 challenge i
 獎勵名稱=Name
 契約類型=Banner Type
 簽約時間=Time of Pull
-r:"剩餘時間：(\d+)時(\d+)分"=<color\=#ff0000>Ends in $1h $2m</color>
+r:"^剩餘時間：(\d+)天(\d+)時(\d+)分$"="Ends in $1d $2h $3m"
+r:"^剩餘時間：(\d+)天(\d+)時$"="Ends in $1d $2h"
+r:"^剩餘時間：(\d+)時(\d+)分$"="Ends in $1h $2m"
 
 r:"當前保底進度(\d+)\/(\d+)"=Current Pull Count: $1 / $2 \n<color\=#FFDF00>50% chance to win the RATE UP 5★</color>
 r:"當前保底進度(\d+)\/(\d+)，下次出5星時必出"=Current Pull Count: $1 / $2 \nNext 5★ is guaranteed RATE UP
@@ -1494,6 +1500,7 @@ sr:"^未知宿命藍·(.*)$"="2★ • $1"
 
 商品已售罄。=Item is sold out.
 明日領取=Claim Tomorrow
+r:"^可領取$"="Claim"
 
 {{A}}可沒在裡面放可怕的東西哦～？=I didn't put anything scary in there～
 確定買這個嗎？=Are you sure you want to buy this?
