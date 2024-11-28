@@ -208,6 +208,8 @@ r:"^芳<color\=#ff0000ff>澤</color>霞$"="Ka<color\=#ff0000ff>su</color>mi Yosh
 卡門=Carmen
 五右衛門=Goemon
 瓊安=Johanna
+死靈之書=Necronomicon
+米萊迪=Milady
 亞諾希克=Janosik
 羅布羅伊=Rob Roy
 阿爾維達=Awilda
@@ -229,6 +231,8 @@ r:"^芳<color\=#ff0000ff>澤</color>霞$"="Ka<color\=#ff0000ff>su</color>mi Yosh
 安珀羅斯=Ampelos
 烏拉尼亞=Urania
 卡利俄佩=Calliope
+哈耳皮厄=Harpyia
+阿摩笛亞=Amalthea
 
 // Playable Voice Actor & Actress //
 
@@ -259,6 +263,10 @@ CV.勝生真沙子=CV.Masako Katsuki
 CV.原由實=CV.Yumi Hara
 CV.種崎敦美=CV.Atsumi Tanezaki
 CV.牧野由依=CV.Yui Makino
+CV.岡本信彥=CV.Nobuhiko Okamoto
+CV.悠木碧=CV.Aoi Yūki
+CV.戶松遙=CV.Haruka Tomatsu
+CV.前內孝文=CV.Takafumi Maeuchi
 
 ------------------------------------------
 -------- III. Worldbuilding Terms --------
@@ -444,6 +452,7 @@ r:"^(\d+)天後重置$"="Reset after $1 day(s)"
 
 r:"^(\d+)天後過期$"="Expires in $1 day(s)"
 r:"^(\d+)天後下架$"="Expires in $1 day(s)"
+r:"^(\d+)天(\d+)時後下架$"="Expires in $1 day(s) $2 hour(s)"
 
 r:"^(\d+)天(\d+)時後刷新$"="Refreshes in $1d $2h"
 r:"^(\d+)時(\d+)分後刷新$"="Refreshes in $1h $2m"
@@ -548,6 +557,7 @@ Class/ Stats Screen
 解明=Elucidate
 不直接參與戰鬥，透過支援技能為隊伍提供支援效果。=<size\=26>Does not participate in combat, support the team through support skills.</size>
 怪盜=Thief
+怪盜職業=Thief Roles
 
 生命值=HP
 攻擊力=ATK
@@ -559,7 +569,7 @@ Class/ Stats Screen
 暴擊效果=CRIT DMG
 暴擊傷害=CRIT DMG
 精力回復=SP Recovery
-穿透=DEF Ignore
+穿透=PEN
 倒地值=Knockdown Count
 效果命中=Effect Hit Rate
 效果抵抗=Effect RES
@@ -592,6 +602,7 @@ Class/ Stats Screen
 攻擊成長率=ATK Growth
 防禦成長率=DEF Growth
 上陣面具屬性會全部附加至主角=Wonder's stats are his \nequipped Persona stats combined
+上陣人格面具的屬性會同時附加給主角，提高<color\=#870000>主角屬性</color>。=Wonder's stats are his \n<color\=#870000>equipped Persona stats combined</color>.
 
 // Wonder Skill Tree //
 
@@ -864,8 +875,8 @@ r:"擁有(\d+)張等級為(\d+)級的宙位啟示卡"=Own $1 Lv. $2 Arcana Revel
 /////////////////////////////////////
 
 本期剩餘時間：=BP Time left:
-探索經驗：=BP EXP:
-本週上限：=7d cap:
+探索經驗：=BP EXP: <size\=1>.</size>
+本週上限：=7d cap: <size\=1>.</size>
 本期剩餘時間=BP Time:
 計畫等級提升=BP LEVEL UP
 每次完成今日計畫可獲得=Complete daily tasks to receive useful rewards:
@@ -905,6 +916,7 @@ r:"進行1次人格面具育成 \((\d)\/(\d)\)"=Inherit a Persona skill ($1/$2)\
 r:"^完成1次「往日回溯」挑戰 \((\d)\/(\d)\)$"="Complete a Palace Boss Challenge ($1/$2)\n<color\=#8F8D8D>(Stamina Cost: 30)</color>"
 r:"^通關1次「閼凶夢之扉」 \((\d)\/(\d)\)$"="Complete 1 Guild Battle ($1/$2)"
 r:"^完成1次「心之海試煉」 \((\d)\/(\d)\)$"="Complete 1 Sea of Souls Trial ($1/$2)"
+r:"^完成1次「委託」派遣 \((\d)\/(\d)\)$"="Complete 1 Dispatch in Metaverse Commissions ($1/$2)"
 
 // WEEKLY //
 r:"累計消耗(\d+)魂石 \((\d+)\/(\d+)\)"=Spend a total of $1 Soul Gems ($2/100000)
@@ -914,6 +926,7 @@ r:"累計消耗(\d+)點體力 \((\d+)\/(\d+)\)"=Spend a total of 1,250 Stamina (
 r:"^累計完成12次「厄抑之境」 \((\d+)\/(\d+)\)$"=Complete 12 Farming Domain ($1/12)
 r:"完成1次「往日回溯」 \((\d)\/(\d)\)"=Complete a Past Palace Boss challenge ($1/$2)
 r:"^達到「閼凶夢之扉」第4檔積分要求 \((\d)\/(\d)\)$"="Reach the 4th score bracket in Guild Battle ($1/$2)"
+r:"在「心軌擇行」中通過10個月臺 \((\d+)\/10\)"=Clear 10 Platforms in Heart Rails ($1/10)
 
 // SEASON //
 r:"在「命運交錯之時」中通關「收下慾望」 \((\d)\/(\d)\)"=Complete the Final Mission in the \nPhantom Thieves event ($1/$2)
@@ -921,6 +934,7 @@ r:"在「怪盜交易所」中消耗3000個怪盜徽記 \((\d+)\/(\d+)\)"=Spend 
 r:"累計進行50次「角色簽約」&「武器補給」 \((\d+)\/(\d+)\)"=Perform 50 pulls in total ($1/$2)
 r:"在「心之海試煉」中通過「西部施工區」 \((\d)\/(\d)\)"=Pass the Western Construction Zone\nin the Sea of Souls Trial ($1/$2)
 r:"完成12次「在盧布朗度過」日程 \((\d+)\/(\d+)\)"=Spend time in Leblanc 12 times ($1/$2)
+r:"在「心軌擇行」中完成1次挑戰 \((\d+)\/1\)"=Complete 1 challenge in Heart Rails ($1/1)
 
 
 ////////////////////////////////
@@ -1303,8 +1317,6 @@ sr:"^在下次通過『(.*)』、『(.*)』、『(.*)』關卡時，額外獲得
 sr:"^在下次通過『(.*)』、『(.*)』關卡時，額外獲得大量獎勵。$"="The next time you complete a $1 or $2, gain lots of bonus rewards."
 sr:"^在下次通過『(.*)』、『(.*)』關卡時，額外獲得大量獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you complete a $1 or $2, gain lots of bonus rewards.\n<color\=#FFC000>（$3 time(s) left）</color>"
 
-r:"^塔$"="Tower"
-
 星星=Star
 
 月亮=Moon
@@ -1360,6 +1372,8 @@ r:"^厄抑之境·啟示套裝$"="Revelation Card Farm"
 怪盜潛能材料=Char Ascend (30)
 武器突破材料=Wpn Ascend (30)
 
+r:"^怪盜天賦材料$"="<size\=30>Mental Image (30)</size>"
+
 r:"^保底進度：<color\=#0665ca>(\d+)/(\d+)</color>$"="Pity: <color\=#0665ca>$1/$2</color>"
 r:"^領取 <color\=#0665ca>(\d+)</color> 次必得$"="Guarantee after <color\=#0665ca>$1</color> time(s)"
 r:"持有印記：(\d+)"=Mark Owned: $1
@@ -1387,6 +1401,9 @@ r:"^{{A}}探索度獎勵$"="Palace Exploration Reward"
 每日領取補給\n濃縮咖啡<color\=#FFEC00>x1</color>=Claim daily\nEspresso <color\=#FFEC00>x1</color>
 r:"^活動期間，成功挑戰「養成材料」中的技能升級材料、怪盜潛能材料、武器突破材料副本，可以獲得雙份獎勵。$"="During the event, you can get double rewards after completing Incense Farm, Character Ascension Farm, Weapon Ascension Farm."
 r:"^今日雙份剩餘次數：$"="Today  2x  Rewards:"
+r:"^每日次數：$"="Daily Attempt:"
+r:"^限時關每日次數：$"="Daily Attempt:"
+r:"^限時關今日剩餘次數：$"="Daily Attempt:"
 
 ----------
 Resources & Shop Items (Marthym's Shop)
@@ -1414,6 +1431,7 @@ r:"^委託、消費大酬賓等獎勵或者購買<link\="mqm"><u>每日祈願納
 要購買這件商品嗎？=Do you want to purchase this item?
 自選禮包=Customize
 點擊領取今日供給=Click to Claim!
+r:"^限購$"="Limit"
 r:"^立即獲得$"="Immediately get"
 r:"^連續30天，每天5點贈送$"="Daily at 5 am (UTC+8) for 30 days"
 
@@ -1456,6 +1474,14 @@ r:"^零件$"="Parts"
 被迷霧籠罩的命運之卡，獲取後會隨機變化為一張紫色品質的日月星辰位啟示卡。=<size\=22>Card of fate shrouded in mist, transforms into a random 3★ Sun/ Moon/ Star/ Planet Revelation Card after purchase.</size>
 sr:"^未知宿命藍·(.*)$"="2★ • $1"
 
+星辰之鈴=Bell of Stars
+玲瓏辰星=Exquisite Star
+星屑之瓶·低階=<size\=18>Stardust Bottle • Low Level</size>
+星屑之瓶·高階=<size\=17>Stardust Bottle • High Level</size>
+明星水晶球·低階=<size\=20>Crystal Ball • Low Level</size>
+明星水晶球·高階=<size\=20>Crystal Ball • High Level</size>
+
+
 {{A}}商店購買獲得=<size\=25>Purchase from Marthym's Shop</size>
 完成雛鳥計畫任務=Completion Battle Pass Missions
 雛鳥計畫·典藏版=From the Premium Battle Pass
@@ -1467,10 +1493,12 @@ sr:"^未知宿命藍·(.*)$"="2★ • $1"
 透過氣運駐場兌換=Exchange from Destiny Land
 
 商品已售罄。=Item is sold out.
+明日領取=Claim Tomorrow
 
 {{A}}可沒在裡面放可怕的東西哦～？=I didn't put anything scary in there～
 確定買這個嗎？=Are you sure you want to buy this?
 看清楚啦～不要買錯了阿！=Look closely～\nDon’t buy the wrong one!
+r:"^加贈$"="Get            <size\=1>.</size>"
 
 ///////////////////////////////////////////
 /// k. Velvet Challenges & Sea of Souls (SoS)///
@@ -1774,6 +1802,10 @@ sr:"^(.*)印記$"="$1 Mark"
 義經=Yoshitsune
 莉莉絲=Lilith
 切爾諾伯格=Chernobog
+濕婆=Shiva
+狄俄尼索斯=Dionysus
+庫夫林=Cu Chulainn
+聖達芬=Sandalphon
 
 ----------
 Metaverse Combat Terms
