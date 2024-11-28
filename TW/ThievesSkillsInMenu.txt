@@ -939,3 +939,58 @@ r:"^HIGHLIGHT效果提升：傷害加成持續時間提升至6個怪盜行動，
 
 ♪我的天命先生♪=♪ My Mr. Right ♪
 r:"^進入戰鬥立刻解鎖『終曲：音域全開』。『終曲：音域全開』的冷卻時間永久減少1回合，冷卻時間上限減少至2回合。每次使用『終曲：音域全開』後，使所有怪盜傷害提升(\d+%)，最多可疊加2層。$"="[Finale: Range Unleash] is ready at the start of battle. Permanently decreases [Finale: Range Unleash] cooldown by 1 turn, up to 2 turns. Increases all allies' damage by $1 after using [Finale: Range Unleash], up to 2 stacks."
+
+----------
+Lemon - Motoha Arai
+----------
+r:"^自身受到治療效果時，若治療量超過自身最大生命值的(\d+%)，則『海浪追逐者』的冷卻時間減少(\d+)回合，最多減少至(\d+)回合 。$"="When healed, decreases the cooldown of [Wave Chaser] by $2 turn if the healing amount exceeds $1 Max HP, up to a minimum of $3 turn."
+夏日清涼魔法=Summer Cooling Magic
+悠閒假期=Leisure Holiday
+海浪追逐者=Wave Chaser
+蔭影=Shaded
+熱浪=Heat Wave
+
+r:"^夏日清涼魔法 Lv.(\d+)$"="Summer Cooling Magic Lv.$1"
+r:"^夏日清涼魔法 <color\=#0F69CB>Lv.(\d+)</color>$"="Summer Cooling Magic <color\=#0F69CB>Lv.$1</color>"
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害。若自身處於<link\="s\|192"><u>『盛夏』</u></link>狀態，則消耗自身(\d+%)最大生命值的血量，額外對所有敵人造成1次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害。\n<b><size\=28><color\=#850101>浪花翻滾著躍上海面，散發出耀眼的光芒，為所有的敵人降降溫吧。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Bless damage to all enemies. If you are in <link\="s|192"><u>[Midsummer]</u></link>, consumes $2 Max HP to deal an additional hit of <color\=#FFFC40>$3</color> ATK Bless damage to all enemies.\n<b><size\=28><color\=#850101>The wave rolls up to the surface of the sea, emitting a dazzling light that cools down all your enemies.</color></size></b>"
+
+r:"^悠閒假期 Lv.(\d+)$"="Leisure Holiday Lv.$1"
+r:"^悠閒假期 <color\=#0F69CB>Lv.(\d+)</color>$"="Leisure Holiday <color\=#0F69CB>Lv.$1</color>"
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，恢復自身最大生命值(\d+%)的血量。若自身處於<link\="s\|192"><u>『盛夏』</u></link>狀態，則對目標額外造成一次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害。\n<b><size\=28><color\=#850101>海洋童話中是這樣講的，在蔚藍的海面上圓滾滾的奇物衝出水面，濺起銀白色的水花，當心，它要爆炸囉。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Bless damage to 1 enemy and restores $2 Max HP. If you are in <link\="s|192"><u>[Midsummer]</u></link>, deals an additional hit of <color\=#FFFC40>$3</color> ATK Bless damage to the target.\n<b><size\=28><color\=#850101>As the sea fairy tale goes, in the azure sea the round strange thing rushes out of the water, splashing silver-white water, beware, it's going to explode.</color></size></b>"
+
+r:"^海浪追逐者 Lv.(\d+)$"="Wave Chaser Lv.$1"
+r:"^海浪追逐者 <color\=#0F69CB>Lv.(\d+)</color>$"="Wave Chaser <color\=#0F69CB>Lv.$1</color>"
+r:"^自身立刻獲得<link\="s\|192"><u>『盛夏』</u></link>狀態，持續到下回合結束。消耗自身(\d+%)最大生命值的血量，對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力祝福屬性傷害。<link\="s\|192"><u>『盛夏』</u></link>狀態下，自身暴擊率提升<color\=#FFFC40>(\d+\.\d+%)</color>，傷害提高<color\=#FFFC40>(\d+\.\d+%)</color>。\n<b><size\=28><color\=#850101>衝浪板輕盈地劃過水面，俯身迎向激浪，熾陽之下水珠飛濺閃爍，以無窮的衝擊力直擊所有敵人。</color></size></b>$"="Immediately enters <link\="s|192"><u>[Midsummer]</u></link> until the end of next turn. Consumes $1 Max HP and deals <color\=#FFFC40>$2</color> ATK Bless damage to all enemies. When you are in <link\="s|192"><u>[Midsummer]</u></link>, increases own CRIT Rate by <color\=#FFFC40>$3</color> and damage by <color\=#FFFC40>$4</color>。\n<b><size\=28><color\=#850101>Surfboard gently crosses the water and leans down to meet the waves, the water droplets splashing and glittering under the blazing sun, striking all enemies with an infinite impact.</color></size></b>"
+
+r:"^『HIGHLIGHT』：對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，恢復自身(\d+%)最大生命值的血量。若自身血量在(\d+%)以上，則HIGHLIGHT額外提升(\d+%)技能傷害。\n『ONE MORE』：對1名敵人造成祝福屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[HIGHLIGHT]: Deals <color\=#FFFC40>$1</color> ATK Bless damage to all enemies and restores $2 Max HP. Increase HIGHLIGHT damage by $4 if your HP is above $3. \n[ONE MORE]: Deals Bless damage to 1 enemy. \nMelee Attack: Uses a melee weapon to deal light Physical damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
+
+r:"^蔭影 Lv.(\d+)$"="Shaded Lv.$1"
+r:"^自身受到溢出治療時，傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Increase damage by <color\=#FFFC40>$1</color> when overhealed for $2 turns."
+r:"^自身受到溢出治療時，傷害提升<color\=#0169ca>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Increase damage by <color\=#0169ca>$1</color> when overhealed for $2 turns."
+
+r:"^熱浪 Lv.(\d+)$"="Heat Wave Lv.$1"
+r:"^戰鬥中自身最大生命值超過(\d+)時，每額外擁有(\d+)點最大生命值，獲得(\d+)點攻擊力加成，上限<color\=#FFFC40>(\d+)</color>。$"="When Max HP is over $1 in battle, for every $2 Max HP over the cap, increase ATK by $3, up to <color\=#FFFC40>$4</color>."
+r:"^戰鬥中自身最大生命值超過(\d+)時，每額外擁有(\d+)點最大生命值，獲得(\d+)點攻擊力加成，上限<color\=#0169ca>(\d+)</color>。$"="When Max HP is over $1 in battle, for every $2 Max HP over the cap, increase ATK by $3, up to <color\=#0169ca>$4</color>."
+
+<color\=#66ccff>『盛夏』</color>=<color\=#66ccff>[Midsummer]</color>
+r:"^盛夏$"="Midsummer"
+r:"^自身暴擊率提升、傷害提升，技能效果提升。$"="Increase own CRIT Rate, damage, and skill effects."
+
+陽光與蔚藍海面=Sunshine and Blue Sea
+r:"^自身受到治療效果時，若本次治療效果的治療量超過自身最大生命值的(\d+%)，則『海浪追逐者』的冷卻時間減少(\d+)回合，最多減少至(\d+)回合 。自身透過技能消耗生命值時不會使自身陷入死亡狀態。$"="When healed, decreases the cooldown of [Wave Chaser] by $2 turn if the healing amount exceeds $1 Max HP, up to a minimum of $3 turn. You will not faint when consuming HP from skills."
+
+浪花輕吻腳尖=Waves Kissing Toes
+r:"^<link\="s\|192"><u>『盛夏』</u></link>狀態下額外增加(\d+%)暴擊率，(\d+%)暴擊效果。『海浪追逐者』的冷卻時間永久減少(\d+)回合。$"="<link\="s|192"><u>[Midsummer]</u></link> additionally increases your CRIT Rate by $1 and CRIT DMG by $2. Permanently decreases the cooldown of [Wave Chaser] by $3 turn."
+
+灑落的金色光輝=Scattered Golden Radiance
+
+遠方的帆船搖曳=Faraway Sailboat Sway
+r:"^自身受到治療效果時，獲得(\d+%)暴擊效果加成，持續(\d+)回合，上限(\d+)層。$"="When healed, increases CRIT DMG by $1 for $2 turns, up to $3 stacks."
+
+海風中的鹹香=Salty Fragrance of Sea Breeze
+
+豔陽於高空輕笑=Sunshine Smile
+r:"^HIGHLIGHT效果提升，使自身下一次『海浪追逐者』傷害提高(\d+%)。$"="HIGHLIGHT Effect Boost: Increases the damage of your next [Wave Chaser] by $1."
+
+牽手在夏日漫步=Hand-Holding Summer Stroll
+r:"^<link\="s\|192"><u>『盛夏』</u></link>效果強化為『真夏豔陽』。『真夏豔陽』狀態下，『夏日清涼魔法』的追加傷害會觸發兩次；『悠閒假期』額外恢復自身最大生命值的(\d+%)血量；『海浪追逐者』技能倍率提升(\d+%)。$"="<link\="s|192"><u>[Midsummer]</u></link> is upgraded to [True Summer]. When you are in [True Summer], [Summer Cooling Magic] now triggers the additional damage twice; [Leisure Holiday] now restores an additional $1 Max HP; Increases the skill multiplier of [Wave Chaser] by $2."
