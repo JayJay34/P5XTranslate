@@ -178,6 +178,8 @@ r:"^椎<color\=#ff0000ff>名</color>{{A}}$"="{{A}} Sh<color\=#ff0000ff>ii</color
 
 r:"^坂<color\=#ff0000ff>井</color>{{A}}$"="{{A}} Sa<color\=#ff0000ff>ka</color>i"
 
+r:"^琴<color\=#ff0000ff>音</color>·{{A}}$"="Ko<color\=#ff0000ff>to</color>ne Montagne"
+
 // P5X Side Quest //
 r:"^佐<color\=#ff0000ff>藤</color> 裕太$"="Yu<color\=#ff0000ff>ta</color> Sato"
 
@@ -459,11 +461,16 @@ r:"^(\d+)時(\d+)分後刷新$"="Refreshes in $1h $2m"
 r:"^(\d+)天後刷新$"="Refreshes in $1 day(s)"
 r:"^(\d+)分後刷新$"="Refreshes in $1 minute(s)"
 
+r:"^剩餘(\d+)天(\d+)時(\d+)分$"="$1d $2h $3m left"
+r:"^(\d+)天(\d+)時(\d+)分$"=" $1 day(s) $2 hour(s) $3 minute(s)"
 r:"^(\d+)天(\d+)時$"=" $1 day(s) $2 hour(s)"
 r:"^(\d+)時(\d+)分$"=" $1 hour(s) $2 minute(s)"
 r:"^(\d+)時(\d+)分後下架$"="Expires in $1h $2min"
 r:"^剩餘(\d+)時(\d+)分(\d+)秒$"=" $1h $2min $3sec"
+r:"^(\d+)小時(\d+)分鐘$"=" $1h $2m"
 r:"^(\d+)時(\d+)分(\d+)秒$"=" $1h $2min $3sec"
+
+r:"^挑戰倒計時：(\d+)天(\d+)時(\d+)分$"="Time Left: $1d $2h $3m"
 
 擁有:=Owned: 
 免費=FREE
@@ -472,7 +479,7 @@ r:"^領取$"="<size\=28>Claim</size>"
 已領取=Claimed
 前往=Go
 未達成=Not Yet
-挑戰倒計時：=Ends in  
+r:"^挑戰倒計時：$"="Ends in  "
 主角等級=Acc Lv.
 主角經驗=Wonder EXP
 貨幣=Currency
@@ -603,6 +610,15 @@ Class/ Stats Screen
 防禦成長率=DEF Growth
 上陣面具屬性會全部附加至主角=Wonder's stats are his \nequipped Persona stats combined
 上陣人格面具的屬性會同時附加給主角，提高<color\=#870000>主角屬性</color>。=Wonder's stats are his \n<color\=#870000>equipped Persona stats combined</color>.
+
+----------
+MENTAL IMAGE
+---------
+啟動前置心象後解鎖=Unlock after activating\n the preceding skill
+r:"^提升生命值(\d+)\n"="Increase HP by $1\n"
+r:"^提升防禦力(\d+)\n"="Increase DEF by $1\n"
+r:"^提升攻擊力(\d+)\n"="Increase ATK by $1\n"
+
 
 // Wonder Skill Tree //
 
@@ -927,6 +943,7 @@ r:"^累計完成12次「厄抑之境」 \((\d+)\/(\d+)\)$"=Complete 12 Farming D
 r:"完成1次「往日回溯」 \((\d)\/(\d)\)"=Complete a Past Palace Boss challenge ($1/$2)
 r:"^達到「閼凶夢之扉」第4檔積分要求 \((\d)\/(\d)\)$"="Reach the 4th score bracket in Guild Battle ($1/$2)"
 r:"在「心軌擇行」中通過10個月臺 \((\d+)\/10\)"=Clear 10 Platforms in Heart Rails ($1/10)
+r:"在「星盤試練」通過1個「監測點」 \((\d+)\/1\)"=Clear 1 Monitoring Point in Astrolabe Trials ($1/1)
 
 // SEASON //
 r:"在「命運交錯之時」中通關「收下慾望」 \((\d)\/(\d)\)"=Complete the Final Mission in the \nPhantom Thieves event ($1/$2)
@@ -988,6 +1005,10 @@ Confidants (SL) and City Activities
 行動力=Energy
 行動值=Energy Points
 『行動值』\n探索都市所需的基本能量，每天會自動恢復。\n每日05:00恢復5點。=[Energy Points] \nEnergy needed for daily activities. \nAutomatically restore 5 at 05:00 every day.
+高額獎勵：<color\=#FFFF00>1倍</color>=<size\=24>Bonus Activities: <color\=#FFFF00>1x</color></size>
+高額獎勵：<color\=#FFFF00>3倍</color>=<size\=24>Bonus Activities: <color\=#FFFF00>3x</color></size>
+「高額獎勵」日程將消耗1點行動力，並獲得1倍獎勵。=The [Bonus Activities] will consume 1 Energy and give 1x rewards.
+「高額獎勵」日程將消耗3點行動力，並獲得3倍獎勵。=The [Bonus Activities] will consume 3 Energy and give 3x rewards.
 持有=Own
 
 消耗=Spend
@@ -1012,16 +1033,27 @@ sr:"^<color\=#FFC000>(.*)</color>、<color\=#FFC000>(.*)</color>的協同者等�
 
 r:"^作為禮物贈與協同者，可提升(\d+)點親密度，首次贈送額外增加(\d+)點親密度，『喜愛之物』額外增加(\d+)點親密度。$"="<size\=25>\nGrants $1 Confidant Points. \nFirst time bonus grants $2 Confidant Pts. \n[Favourite Items] grants $3 Confidant Pts.</size>"
 
-
+r:"^手裡有{{A}}可能喜歡的東西，\n要送給她嗎？$"="I've got something {{A}} might like.\nShould I give it to her?"
 r:"^說起來，\n手上正好有{{A}}會喜歡的東西……$"="Speaking of, I've got just the thing {{A}} likes..."
 r:"^說起來，\n手上好像有{{A}}會喜歡的東西……$"="Speaking of, I think I got just the thing {{A}} likes..."
 r:"^說起來，手上似乎……\n有{{A}}會喜歡的東西……$"="Speaking of, I think I got just the thing {{A}} likes..."
 r:"^說起來，那個東西說不定{{A}}會喜歡……$"="Speaking of, maybe {{A}} would like that gift..."
 要送出去嗎？=Want to give them a gift?
 要送給她嗎？=Want to give her a gift?
-r:"^親密度\+(\d+)\n首次贈送額外\+(\d+)\n『喜愛之物』額外\+(\d+)。$"="Confidant Points +$1\nFirst Time Bonus +$2\n[Favourite Items] +$3"
+
+r:"^基礎好感度\+(\d+)<color\=#008CE5><color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n偏好禮物額外\+(\d+)<color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color>\n偏好禮物首次贈送額外\+(\d+)$"="Confidant Points +$1<color\=#008CE5><color\=#008CE5>（<size\=40><sprite\=1></size>+$2）</color></color>\nFavourite Items +$3<color\=#008CE5>（<size\=40><sprite\=1></size>+$4）</color>\nFavourite Items \nFirst Time Bonus +$5"
+r:"^基礎好感度\+(\d+)\n偏好禮物額外\+(\d+)\n偏好禮物首次贈送額外\+(\d+)$"="Confidant Points +$1\nFavourite Items +$2\nFavourite Items \nFirst Time Bonus +$3"
+
+r:"^基礎好感度\+(\d+)<color\=#008CE5><color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n<color\=#787878>偏好禮物額外\+(\d+)<color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n<color\=#787878>偏好禮物首次贈送額外\+(\d+)</color>$"="Confidant Points +$1<color\=#008CE5><color\=#008CE5>（<size\=40><sprite\=1></size>+$2）</color></color>\n<color\=#787878>Favourite Items +$3<color\=#008CE5>（<size\=40><sprite\=1></size>+$4）</color></color>\n<color\=#787878>Favourite Items \nFirst Time Bonus +$5</color>"
+
+r:"^基礎好感度\+(\d+)\n<color\=#787878>偏好禮物額外\+(\d+)</color>\n<color\=#787878>偏好禮物首次贈送額外\+(\d+)</color>$"="Confidant Points +$1\n<color\=#787878>Favourite Items +$2\n<color\=#787878>Favourite Items \nFirst Time Bonus +$3</color>"
+
+r:"^本次贈送會增加<color\=#FFDE00>(\d+)<color\=#008CE5>（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>好感度$"="Gain <color\=#FFDE00>$1<color\=#008CE5>（<size\=40><sprite\=1></size>+$2）</color></color>Confidant Pts"
+r:"^本次贈送會增加<color\=#FFDE00>(\d+)</color>好感度$"="Gain <color\=#FFDE00>$1</color> Confidant Pts"
+
 確定這次約會不送禮物嗎？=Are you sure you do not want to give them a gift?
 目前還是算了吧……=Forget it...
+
 
 r:"^和{{A}}的關係就要加深了……$"="The bond with {{A}} \nis about to deepen!"
 r:"^和{{A}}的關係差不多要加深了……$"="The bond with {{A}} \nis about to deepen!"
@@ -1116,6 +1148,7 @@ r:"^幫助{{A}}$"="<size\=24>Help out\n{{A}}</size>"
 和阿七聊聊=Talk to the mascot
 要參與阿七的遊戲嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to play the mascot's game? (<color\=#ff0000>Spend 1 Energy Point</color>)
 
+要陪{{A}}一起去嗎？=Want to hang out with {{A}}?
 r:"^要帶{{A}}回家嗎……$"="Want to take {{A}} home?"
 r:"^那就帶{{A}}回家吧……$"="Then let's bring {{A}} home..."
 
@@ -1153,6 +1186,7 @@ r:"^決定陪{{A}}了……$"="I've decided to accompany {{A}}..."
 
 走吧=Let's go
 一起去=Go together
+我和你一起去=I'll go with you
 還是算了=I'd rather not
 要去別的地方……=<size\=24>I have somewhere else to go...</size> 
 安靜傾聽=Listen quietly
@@ -1162,6 +1196,7 @@ r:"^決定陪{{A}}了……$"="I've decided to accompany {{A}}..."
 今天很忙……=I'm busy today...
 在酒吧度過=Spend time in the bar
 另選日子吧……=Choose another day...
+現在不太方便……=<size\=28>Now is not a good time...</size> 
 下次再說=Next time
 你好呀=Hello
 摸摸它=Pet it
@@ -1407,9 +1442,9 @@ r:"^{{A}}探索度獎勵$"="Palace Exploration Reward"
 每日領取補給\n濃縮咖啡<color\=#FFEC00>x1</color>=Claim daily\nEspresso <color\=#FFEC00>x1</color>
 r:"^活動期間，成功挑戰「養成材料」中的技能升級材料、怪盜潛能材料、武器突破材料副本，可以獲得雙份獎勵。$"="During the event, you can get double rewards after completing Incense Farm, Character Ascension Farm, Weapon Ascension Farm."
 r:"^今日雙份剩餘次數：$"="Today  2x  Rewards:"
-r:"^每日次數：$"="Daily Attempt:"
-r:"^限時關每日次數：$"="Daily Attempt:"
-r:"^限時關今日剩餘次數：$"="Daily Attempt:"
+r:"^每日次數：$"="Attempt(s):"
+r:"^限時關每日次數：$"="Daily Attempt(s):"
+r:"^限時關今日剩餘次數：$"="Daily Attempt(s):"
 
 ----------
 Resources & Shop Items (Marthym's Shop)
@@ -1487,6 +1522,7 @@ sr:"^未知宿命藍·(.*)$"="2★ • $1"
 明星水晶球·低階=<size\=20>Crystal Ball • Low Level</size>
 明星水晶球·高階=<size\=20>Crystal Ball • High Level</size>
 
+秘聞點券=Mysteries Voucher
 
 {{A}}商店購買獲得=<size\=25>Purchase from Marthym's Shop</size>
 完成雛鳥計畫任務=Completion Battle Pass Missions
@@ -1496,6 +1532,8 @@ sr:"^未知宿命藍·(.*)$"="2★ • $1"
 透過樂園百貨兌換=<size\=25>Exchange from Carpe Diem Shop</size>
 透過心海秘所兌換=Exchange from Velvet Shop
 參與心之海試煉獲得=Take on the Sea of Souls Trials
+參與天鵝絨試煉獲得=Take on Velvet Trials
+參與星盤試煉獲得=Take on Astrolabe Trials
 透過氣運駐場兌換=Exchange from Destiny Land
 
 商品已售罄。=Item is sold out.
@@ -1518,10 +1556,15 @@ r:"^加贈$"="Get            <size\=1>.</size>"
 保級條件：=Relegation:
 r:"^排名<color\=#FFF000>前(\d+)</color>$"=" Rank <color\=#FFF000>Top $1</color>"
 r:"^<color\=#FFFFFF>\(當前<color\=#FFF000>第(\d+)名</color>\)</color>$"="<color\=#FFFFFF>(Currently <color\=#FFF000>Rank $1</color>)</color>"
+r:"^<color\=#ef0000>下期降級</color>$"="<color\=#ef0000>Demotion</color>"
 r:"^降級條件：排名(\d+)名以後$"="Demotion: After Top $1"
+r:"^<color\=#8B8A8A>\(當前60%以後\)</color>$"="<color\=#8B8A8A>(Currently above 60%)</color>"
 r:"^總積分達到<color\=#FFF000> (\d+) </color>$"="Reach <color\=#FFF000> $1 </color> Total Score"
+r:"^分數：暫無記錄$"="Score: No Record"
 暫無記錄=No Record
 r:"^分數：$"="Score:"
+r:"^上半場$"="<size\=27>Side A</size>"
+r:"^下半場$"=" <size\=27>Side B</size>"
 r:"^僅展示當前段位前(\d+)名怪盜資訊$"="Only the info of the top $1 Phantom Thieves will be shown"
 8等星=8th Star
 7等星=7th Star
@@ -1534,13 +1577,14 @@ r:"^僅展示當前段位前(\d+)名怪盜資訊$"="Only the info of the top $1 
 r:"(\d)等星(\d)階"=$1-Star Tier $2
 首次晉級至新段位後可獲得=Upon promotion to a new Star rank for the first time, you can earn the following rewards.
 排名獎勵=<size\=36>Ranking</size>
-本期試煉結束後郵件發放，參與一次試煉可獲得=Rewards will be given on the end of this trial.
+本期試煉結束後郵件發放，參與一次試煉可獲得=Rewards will be given on the end of this trial
 僅展示當前段位前999名怪盜團資訊=Shows up to 999 players in the current trial.
 總分數：=Score:
 本期排名：=Top: 
 排名：=Top
 以後=^
 段位獎勵=<size\=28>Rank Awards</size>
+任務獎勵隨每期心之海進行重置=Rewards will reset on the end of this trial
 r:"^累計獲得星數（<color\=#EF0000>(\d+)</color>/(\d+)）$"="Get (<color\=#EF0000>$1</color>/$2）Stars"
 r:"^累計獲得（<color\=#EF0000>(\d+)</color>/(\d+)）分$"="Get (<color\=#EF0000>$1</color>/$2) Points"
 
@@ -1564,16 +1608,19 @@ r:"(\d+)次行動內完成"=Win in $1 turn(s)
 關卡尚未通關，是否保存當前進度並暫時離開？=Do you want to save your progress and leave?
 選擇「清空進度」會重置當前關卡進度並重新挑戰。=Select [No] to reset the level and retry.
 
+試煉一=Trial 1
+試煉二=Trial 2
+試煉三=Trial 3
 r:"^擊敗低階陰影（(\d+)/(\d+)）$"="Defeat low level \nShadows ($1/$2)"
 r:"^擊敗菁英陰影（(\d+)/(\d+)）$"="Defeat elite Shadows ($1/$2)"
 r:"^乘坐電梯$"="Take the Elevator"
 
-造成WEAK/總攻擊時獲得分數=Enemy Weakness Attack Score
+造成WEAK/總攻擊時獲得分數=Weak DMG/ All-Out Attack
 火焰/念動屬性隊員攻擊時獲得分數=Fire / Psy Attack Score
 冰凍/核熱屬性隊員攻擊時獲得分數=Ice / Nuclear Attack Score
 電擊/祝福屬性隊員攻擊時獲得分數=Elec / Bless Attack Score
 疾風/詛咒屬性隊員攻擊時獲得分數=Wind / Curse Attack Score
-陣亡人數不超過0人=Have no downed characters
+陣亡人數不超過0人=No Faint
 r:"X(\d+)倍"=x$1
 獎勵=<size\=24>Rewards</size>
 章節獎勵=<size\=36>Rewards</size>
@@ -1813,6 +1860,7 @@ sr:"^(.*)印記$"="$1 Mark"
 狄俄尼索斯=Dionysus
 庫夫林=Cu Chulainn
 聖達芬=Sandalphon
+八束水臣津野命=Oumitsunu
 
 ----------
 Metaverse Combat Terms
