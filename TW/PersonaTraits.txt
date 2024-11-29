@@ -1,230 +1,257 @@
-----------
-MENU UI
-----------
-啟示星位：=Revelation:
-r:"^日$"="<size\=25>Sun</size>"
-r:"^月$"="<size\=25>Moon</size>"
-r:"^星$"="<size\=25>Star</size>"
-r:"^辰$"="<size\=25>Planet</size>"
-sr:"^(.*)·日$"="$1·Sun"
-sr:"^(.*)·月$"="$1·Moon"
-sr:"^(.*)·星$"="$1·Star"
-sr:"^(.*)·辰$"="$1·Planet"
-套裝效果=Set Effect
-
-推薦套裝=<size\=30>Recommendations</size>
-是否要將所有啟示卡卸下。=Unequip your cards?
-
-r:"^絕世$"="4★"
-r:"^罕見$"="3★"
-r:"^稀有$"="2★"
-r:"^尋常$"="1★"
-
-r:"^套裝$"="Set"
-套裝篩選=Filter
-
-暫無套裝篩選=No Set Filter
-暫無主屬性篩選=No Main Stats Filter
-暫無副屬性篩選=No Sub Stats Filter
-
-r:"^屬性篩選$"="Filter"
-主屬性最多選擇以下任意兩項屬性進行篩選，選擇後同時生效=Filter up to 2 Main Stats
-副屬性最多選擇以下任意四項屬性進行篩選，選擇後同時生效=Filter up to 4 Sub Stats
-
-r:"^新增(\d+)條副屬性$"="<size\=10> </size>Add $1 new Sub Stats"
-r:"^隨機強化(\d+)條副屬性$"="<size\=10> </size>Upgrade $1 Sub Stats"
-所選素材<color\=#FFC000>已強化過</color>、<color\=#FFC000>品質過高</color>\n是否確定使用所選素材進行升級？=<size\=27>Selected <color\=#FFC000>upgraded</color>, <color\=#FFC000>high quality</color> materials.\nAre you sure you want to use the selected materials for upgrade?</size>
+本能=Instinct
+本能詳情=Instinct Details
+r:"^人格面具等級上限提升至<color\=#FFF000>LV.(\d+)</color>$"="<size\=28>Increase Persona level cap to <color\=#FFF000>Lv.$1</color></size>"
 
 ----------
-All Universe Cards
+RANK 1
 ----------
-sr:"^【(.*)】&【(.*)】$"="<size\=20>  [$1] & [$2]</size>"
-r:"^【專注】&【愛】$"="<size\=20>  [Focus] & [Love]</size>"
-r:"^【信念】&【愛】$"="<size\=20>  [Faith] & [Love]</size>"
-r:"^【接納】&【愛】$"="<size\=20>  [Acceptance] & [Love]</size>"
+Janosik
+r:"^餘孽收割(.*)$"="Reaper $1"
+r:"^攻擊力提升(\d+\.\d+%)。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。$"="Increase ATK by $1. When allies attack enemies with [Aim], increase ATK by $2."
+r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，使1名敵人獲得『瞄準』。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。$"="Increase ATK by $1. At the start of battle, inflict 1 enemy with [Aim]. When allies attack enemies with [Aim], increase ATK by $2."
+r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，使1名敵人獲得『瞄準』。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。自身攻擊有『瞄準』的敵人時，造成1次1(\d+%)攻擊力的射擊屬性傷害。$"="Increase ATK by $1. At the start of battle, inflict 1 enemy with [Aim]. When allies attack enemies with [Aim], increase ATK by $2. When you attack enemies with [Aim], deal an additional $3 ATK Gun damage to them."
+r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，使1名敵人獲得『瞄準』。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。帶有『瞄準』的敵人防禦力額外降低(\d+%)。自身攻擊有『瞄準』的敵人時，造成1次(\d+%)攻擊力的射擊屬性傷害。$"="Increase ATK by $1. At the start of battle, inflict 1 enemy with [Aim]. When allies attack enemies with [Aim], increase ATK by $2. Additionally decrease DEF by $3 for enemies with [Aim]. When you attack enemies with [Aim], deal an additional $4 ATK Gun damage to them."
 
-r:"^【覺知】$"="[Awareness]"
-r:"^覺知$"="Awareness"
-r:"^對處於元素異常狀態下的敵人造成傷害提升<color\=#2899ff>(\d+%)</color>，可以疊加2層。$"="Increase DMG Dealt by <color\=#2899ff>$1</color> when attacking enemies inflicted with Elemental Ailements, up to 2 stacks."
-r:"^提升所有怪盜火焰傷害<color\=#2899ff>(\d+%)</color>；造成燃燒時額外提升所有怪盜火焰傷害<color\=#2899ff>(\d+%)</color>，持續2回合。$"="Increase all allies' Fire DMG by <color\=#2899ff>$1</color>; Increase all allies' Fire DMG by <color\=#2899ff>$2</color> for 2 turns when you inflict Burn."
-r:"^對處於負面狀態下敵人造成每段傷害時提升自身攻擊力<color\=#2899ff>(\d+%)</color>，持續1回合，可疊加3層。$"="Increase ATK by <color\=#2899ff>$1</color> after every hit of damage to enemy with debuffs for 1 turn, up to 3 stacks."
+Succubus
+r:"^醉人的呢喃(.*)$"="Intoxicating Murmur $1"
+r:"^攻擊力提升(\d+\.\d+%)。以同伴為目標釋放技能後，提升其(\d+\.\d+%)暴擊率，效果持續1回合。$"="Increase ATK by $1. When using a skill on an ally, increase their CRIT Rate by $2 for 1 turn."
 
-r:"^【啟程】$"="[Departure]"
-r:"^啟程$"="Departure"
-r:"^使用技能攻擊敵人時使主目標防禦降低<color\=#2899ff>(\d+%)</color>，持續2回合。$"="Decrease main target's DEF by <color\=#2899ff>$1</color> for 2 turns after attacking them with a skill."
-r:"^攻擊敵人時，使所有怪盜傷害提升<color\=#2899ff>(\d+%)</color>，持續1回合。$"="Increase all allies' DMG Dealt by <color\=#2899ff>$1</color> for 1 turn when attacking enemies."
-r:"^擊敗敵人後使自身攻擊力提升<color\=#2899ff>(\d+%)</color>，持續3回合。$"="Increase ATK by <color\=#2899ff>$1</color> for 3 turns after defeating an enemy."
-
-r:"^【成長】$"="[Growth]"
-r:"^成長$"="Growth"
-r:"^追加效果觸發時，自身獲得冰凍傷害加成提升<color\=#2899ff>(\d+%)</color>，持續2回合，可疊加3層，每層獨立計算。$"="Increase Ice DMG Bonus by <color\=#2899ff>$1</color> for 2 turns when triggering Follow Up, up to 3 stacks."
-r:"^追加效果的暴擊效果提升<color\=#2899ff>(\d+%)</color>。$"="Increase Follow Up CRIT DMG by <color\=#2899ff>$1</color>."
-r:"^攻擊力提升效果疊加上限提升至<color\=#2899ff>(\d+)</color>層。$"="Increase the cap of the ATK buff up to <color\=#2899ff>$1</color> stacks."
-
-r:"^【專注】$"="[Focus]"
-r:"^專注$"="Focus"
-r:"^物理、電擊屬性傷害提升<color\=#2899ff>(\d+%)</color>，只有一個敵人時該效果提升至<color\=#2899ff>(\d+%)</color>。$"="Increase Physical and Electric DMG by <color\=#2899ff>$1</color>. Increase the effect to <color\=#2899ff>$2</color> when there's only 1 enemy."
-r:"^造成暴擊時自身治療效果提升<color\=#2899ff>(\d+%)</color>，持續2回合。$"="Increase Healing Effect by <color\=#2899ff>$1</color> for 2 turns after landing a CRIT."
-
-r:"^【信念】$"="[Faith]"
-r:"^信念$"="Faith"
-r:"^每次添加護盾，受到護盾效果的怪盜防禦力提升<color\=#2899ff>(\d+%)</color>，持續2回合，可疊加3層。$"="After granting Shield, increase the target's DEF by <color\=#2899ff>$1</color> for 2 turns up to 3 stacks."
-r:"^每有<color\=#2899ff>(\d+)</color>點生命值提升自身治療效果<color\=#2899ff>(\d+%)</color>，最多獲得治療效果提升<color\=#2899ff>(\d+%)</color>。$"="Increase Healing Effect by <color\=#2899ff>$2</color> for every <color\=#2899ff>$1</color> HP you have, up to <color\=#2899ff>$3</color>."
-
-r:"^【信任】$"="[Trust]"
-r:"^信任$"="Trust"
-r:"^電擊屬性傷害提升效果達到3層時，使得所有怪盜電擊屬性傷害提升<color\=#2899ff>(\d+%)</color>，無法重複觸發。$"="Increase all allies' Electric DMG by <color\=#2899ff>$1</color> when the Electric DMG buff effect reached 3 stacks, can't be triggered again."
-r:"^戰鬥開始時，提升其他怪盜<color\=#2899ff>(\d+%)</color>的攻擊力，無法重複觸發。$"="At the start of battle, increase other allies' ATK by <color\=#2899ff>$1</color>, can't be triggered again."
-r:"^對友方釋放技能時，使所有怪盜的傷害提升<color\=#2899ff>(\d+%)</color>，持續2回合。$"="Increase all alles' DMG Dealt by <color\=#2899ff>$1</color> for 2 turns when using a skill on an ally."
-
-r:"^【和諧】$"="[Harmony]"
-r:"^和諧$"="Harmony"
-r:"^觸發啟示卡套裝效果的額外傷害時，使目標受到傷害提升<color\=#2899ff>(\d+%)</color>，持續2回合。$"="Increase the target's DMG Taken by <color\=#2899ff>$1</color> for 2 turns when triggering the effect of the Revelation card's buff."
-r:"^使得相同屬性的怪盜獲得傷害加成<color\=#2899ff>(\d+%)</color>，無法重複觸發。$"="Increase DMG Bonus by <color\=#2899ff>$1</color> for all allies with the same element, can't be triggered again."
-r:"^每次造成一種元素異常，提升所有怪盜核熱傷害<color\=#2899ff>(\d+%)</color>，持續2回合，每層獨立計算。$"="Increase all allies' Nuke DMG by <color\=#2899ff>$1</color> for 2 turns when inflicting Elemental Ailements, each stack is counted independently."
-
-r:"^【接納】$"="[Acceptance]"
-r:"^接納$"="Acceptance"
-r:"^每次受到攻擊，提升自身防禦力<color\=#2899ff>(\d+%)</color>，持續2回合。$"="Increase DEF by <color\=#2899ff>$1</color> for 2 turns when attacked."
-r:"^每有一個敵人增加自身攻擊力<color\=#2899ff>(\d+%)</color>，最多<color\=#2899ff>(\d+%)</color>。$"="Increase ATK by <color\=#2899ff>$1</color> per enemy, up to <color\=#2899ff>$2</color>."
-r:"^使用治療技能時，自身攻擊力提升<color\=#2899ff>(\d+%)</color>。$"="Increase ATK by <color\=#2899ff>$1</color> when using Healing skills."
-
-r:"^【真誠】$"="[Sincerity]"
-r:"^真誠$"="Sincerity"
-r:"^戰鬥中，根據角色的治療加成的(\d+%)獲得傷害加成，透過這種方式最多提升<color\=#2899ff>(\d+%)</color>傷害加成。$"="Increase DMG Bonus up to <color\=#2899ff>$2</color> based on $1 of your Healing Bonus."
-r:"^解明怪盜裝備時生效：戰鬥開始時每有1個相同適應性屬性的同伴，使所有同伴生命值、攻擊力、防禦力額外提升<color\=#2899ff>(\d+%)</color>。$"="When equipped by Navigator Thieves: Increase all allies' HP, ATK and DEF by <color\=#2899ff>$1</color> with each ally with the same element."
-
-r:"^【智慧】$"="[Wisdom]"
-r:"^智慧$"="Wisdom"
-r:"^『怨恨』不少於5層，則物理傷害、效果命中提升<color\=#2899ff>(\d+%)</color>。$"="Increase Physical DMG and Effect Hit Rate by <color\=#2899ff>$1</color> when [Resentment] is not less than 5 stacks."
-r:"^戰鬥中，根據角色的效果命中的(\d+%)獲得傷害加成，透過這種方式最多提升<color\=#2899ff>(\d+%)</color>傷害加成。$"="Increase DMG Bonus up to <color\=#2899ff>$2</color> based on $1 of your Effect Hit Rate."
-r:"^使用HIGHLIGHT時，攻擊力提升<color\=#2899ff>(\d+%)</color>，造成傷害提升<color\=#2899ff>(\d+%)</color>。$"="When using HIGHLIGHT, increase ATK by <color\=#2899ff>$1</color> and DMG Dealt by <color\=#2899ff>$2</color>."
-
-r:"^【決心】$"="[Determination]"
-r:"^決心$"="Determination"
-r:"^戰鬥中，自身生命值達到(\d+)/(\d+)/(\d+)獲得傷害加成<color\=#2899ff>(\d+%)/(\d+%)/(\d+%)</color>$"="Increase DMG Bonus by <color\=#2899ff>$4/$5/$6</color> when you reached $1/$2/$3 HP."
-r:"^解明怪盜裝備時生效：使用技能為敵人添加減益狀態，使主目標敵人防禦降低<color\=#2899ff>(\d+%)</color>，持續2回合。$"="When equipped by Navigator Thieves: Decrease the main target's DEF by <color\=#2899ff>$1</color> for 2 turns when inflicting debuffs."
-
-r:"^【創造】$"="[Creation]"
-r:"^創造$"="Creation"
-戰鬥中，自身精力回復達到100%/150%/200%，獲得暴擊效果提升<color\=#2899ff>15%/30%/45%</color>。=In battle, when you reached 100%/150%/200% SP Recovery, increase CRIT DMG by <color\=#2899ff>15%/30%/45%</color>.
-戰鬥開始時，使速度最低的怪盜造成傷害提升<color\=#2899ff>12%</color>，無法重複觸發。=At the start of a battle, increase the DMG Dealt for ther lowest SPD ally by <color\=#2899ff>12%</color>, can't be triggered again.
-
-r:"^【自由】$"="[Freedom]"
-r:"^自由$"="Freedom"
-r:"^使用人格面具技能時，自身獲得(\d+)層『榮耀』，最多(\d+)層，下一次追加效果消耗所有『榮耀』，每消耗(\d+)層『榮耀』使該次追加效果穿透提升<color\=#2899ff>(\d+%)</color>。"="When using a persona skill, gain $1 stack of [Glory], up to $2 stacks, consume all stacks of [Glory] when doing a Follow Up, each consumed stack of [Glory] increase that Follow Up's PEN by <color\=#2899ff>$4</color>."
-所有怪盜對處於負面狀態下的敵人造成傷害提升<color\=#2899ff>8%</color>，無法重複觸發。=All allies increase DMG Dealt to enemies inflicted with debuffs by <color\=#2899ff>8%</color>, can't be triggered again.
+Genbu
+r:"^極北地的寒冰(.*)$"="Arctic Chill $1"
+r:"^防禦力提升(\d+\.\d+%)。受到來自凍結狀態下的敵人的傷害降低(\d+%)。對處於凍結狀態的敵人攻擊力提升(\d+%)。$"="Increase DEF by $1. Decrease DMG Taken by $2 from enemies inflicted with Freeze. Increase ATK by $3 to enemies inflicted with Freeze."
 
 ----------
-All Arcana Cards
+RANK 2
 ----------
-r:"^4套裝效果$"="4-piece effect"
-r:"^2套裝效果$"="2-piece effect"
-愛=Love
+Eligor
+r:"^騎士的銳利目光(.*)$"="Knight's Sharp Gaze $1"
+r:"^暴擊效果提升(\d+%)。以1名敵人為目標造成物理屬性傷害時，攻擊力提升(\d+%)，暴擊率提升(\d+%)。$"="Increase CRIT DMG by $1. When dealing Physical damage to 1 enemy, increase ATK by $2 and increase CRIT Rate by $3."
 
-r:"^【愛】$"="<size\=20>  </size>[Love]"
-r:"^愛$"="Love"
-r:"^2套裝效果：治療效果提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase Healing Effect by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：對生命值不高於(\d+%)的怪盜治療時，治療效果提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: Increase Healing Effect by <color\=#2899ff>$2</color> when healing allies with not higher than $1 HP.</size>"
+Leanan Sidhe
+r:"^戀人的二重奏(.*)$"="Lover's Duet $1"
+r:"^攻擊力提升(\d+\.\d+%)。釋放人格面具技能攻擊處於防禦力降低狀態下的敵人時，額外造成1次(\d+%)攻擊力的念動屬性傷害。$"="Increase ATK by $1. When attacking enemies inflicted with DEF down with a skill, deal an additional $2 ATK Psy damage."
 
-r:"^【壓抑】$"="<size\=20>  </size>[Repression]"
-r:"^壓抑$"="Repression"
-r:"^2套裝效果：物理傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase Physical DMG by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：技能造成每次傷害使自身獲得『怨恨』：增加自身攻擊力<color\=#2899ff>(\d+%)</color>，持續(\d+)回合，最多(\d+)層。$"="<size\=23>4-piece effect: Gain [Resentment] after every hit of skill damage: Increase ATK by <color\=#2899ff>$1</color> for $2 turn up to $3 stacks.</size>"
-
-r:"^【英勇】$"="<size\=20>  </size>[Bravery]"
-r:"^英勇$"="Bravery"
-r:"^4套裝效果：暴擊效果提升<color\=#2899ff>(\d+%)</color>，持續2回合；造成暴擊後再次獲得相同效果。$"="<size\=23>4-piece effect: Increase CRIT DMG by <color\=#2899ff>$1</color> for 2 turns; Gain this effect again when you land a CRIT.</size>"
-
-r:"^【職責】$"="<size\=20>  </size>[Duty]"
-r:"^職責$"="Duty"
-r:"^2套裝效果：生命值提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase HP by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：解明怪盜裝備時生效：戰鬥中使所有同伴生命值、攻擊力、防禦力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: When equipped by Navigator Thieves: Increase all allies' HP, ATK and DEF by <color\=#2899ff>$1</color>.</size>"
-
-r:"^【主權】$"="<size\=20>  </size>[Sovereignty]"
-r:"^主權$"="Sovereignty"
-r:"^4套裝效果：使用技能攻擊敵人時對主目標造成自身生命值<color\=#2899ff>(\d+%)</color>的額外傷害。$"="<size\=23>4-piece effect: Deal <color\=#2899ff>$1</color> HP additional damage to the main target when attacking with a skill.</size>"
-
-r:"^【爭執】$"="<size\=20>  </size>[Dispute]"
-r:"^爭執$"="Dispute"
-r:"^2套裝效果：火焰傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase Fire DMG by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：攻擊力提升<color\=#2899ff>(\d+%)</color>，如果敵人火屬性適應性為弱，則攻擊力額外提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: Increase ATK by <color\=#2899ff>$1</color>. Additionally increase ATK by <color\=#2899ff>$2</color> if the enemy is weak to Fire."
-
-r:"^【轉變】$"="<size\=20>  </size>[Change]"
-r:"^轉變$"="Change"
-r:"^2套裝效果：電擊傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase Electric DMG by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：任意怪盜使用電屬性技能後提升自身電擊屬性傷害<color\=#2899ff>(\d+%)</color>，最多3層。$"="<size\=23>4-piece effect: Increase Elec DMG by <color\=#2899ff>$1</color> after any allies used Electric skill, up to 3 stacks.</size>"
-
-r:"^【美德】$"="<size\=20>  </size>[Virtue]"
-r:"^美德$"="Virtue"
-r:"^2套裝效果：祝福傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase Bless DMG by <color\=#2899ff>10%</color>.</size>"
-r:"^4套裝效果：當前生命值百分比不低於(\d+%)時，祝福屬性的暴擊率提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: Increase Bless skill CRIT by <color\=#2899ff>$2</color> when your HP% is not less than $1.</size>"
-
-r:"^【和平】$"="<size\=20>  </size>[Peace]"
-r:"^和平$"="Peace"
-r:"^2套裝效果：防禦力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase DEF by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：護盾效果提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: Increase Shield Effect by <color\=#2899ff>$1</color>.</size>"
-
-r:"^【奢華】$"="<size\=20>  </size>[Luxury]"
-r:"^奢華$"="Luxury"
-r:"^2套裝效果：冰凍傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase Ice DMG by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：追加效果造成傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: Increase Follow Up DMG by <color\=#2899ff>$1</color>.</size>"
-
-r:"^【富足】$"="<size\=20>  </size>[Affluence]"
-r:"^富足$"="Affluence"
-r:"^2套裝效果：受到傷害減免<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Decrease DMG Taken by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：進入戰鬥立刻回復<color\=#2899ff>(\d+%) </color>HIGHLIGHT能量，無法重複觸發$"="<size\=23>4-piece effect: At the start of battle, immediately gain <color\=#2899ff>$1</color> HIGHLIGHT Energy, can't be triggered again.</size>"
-
-r:"^【力量】$"="<size\=20>  </size>[Strength]"
-r:"^力量$"="Strength"
-r:"^2套裝效果：攻擊力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase ATK by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：進入戰鬥後，每經過6個回合提升自身攻擊力<color\=#2899ff>(\d+%)</color>，可疊加3層。$"="<size\=23>4-piece effect: At the start of battle, increase ATK by <color\=#2899ff>$1</color> after every 6 turns, up to 3 stacks.</size>"
-
-r:"^【告捷】$"="<size\=20>  </size>[Victory]"
-r:"^告捷$"="Victory"
-r:"^2套裝效果：疾風傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase Wind DMG by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：每段攻擊有(\d+%)的固定機率額外造成自身攻擊力<color\=#2899ff>(\d+%)</color>的傷害。$"="<size\=23>4-piece effect: There's a $1 fixed chance to increase ATK by <color\=#2899ff>$2</color> after each hits of attack.</size>"
-
-r:"^【真諦】$"="<size\=20>  </size>[Truth]"
-r:"^真諦$"="Truth"
-r:"^2套裝效果：核熱傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase Nuke DMG by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：使用技能攻擊敵人時，若主目標處於元素異常狀態則對其造成<color\=#2899ff>(\d+%)</color>攻擊力的傷害。$"="<size\=23>4-piece effect: Deal <color\=#2899ff>$1</color> ATK damage to the main target if the enemy is inflicted with Elemental Ailements.</size>"
-
-r:"^【歡愉】$"="<size\=20>  </size>[Joy]"
-r:"^歡愉$"="Joy"
-r:"^2套裝效果：念動傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase Psy DMG by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：造成念動傷害時，提升攻擊(\d+%)，如果敵方人數不少於(\d+)，則攻擊力額外提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: Increase ATK by $1 when dealing Psy damage. Additionally increase ATK by <color\=#2899ff>$3</color> if there's not less than $2 enemies.</size>"
-
-r:"^【干擾】$"="<size\=20>  </size>[Interference]"
-r:"^干擾$"="Interference"
-r:"^2套裝效果：詛咒傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase Curse DMG by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：對處於負面狀態下的敵人咒屬性傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: Increase Curse DMG by <color\=#2899ff>$1</color> when attacking enemies with debuffs.</size>"
-
-r:"^【和解】$"="<size\=20>  </size>[Reconciliation]"
-r:"^和解$"="Reconciliation"
-r:"^2套裝效果：速度提升<color\=#2899ff>(\d+)</color>。$"="<size\=23>2-set effect: Increase SPD by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：戰鬥中，自身最大生命值、攻擊力、防禦力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: In battle, increase your Max HP, ATK, and DEF by <color\=#2899ff>$1</color>."
-
-r:"^【憂思】$"="<size\=20>  </size>[Worry]"
-r:"^憂思$"="Worry"
-r:"^2套裝效果：精力回復提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-set effect: Increase SP Recovery by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：進入戰鬥立刻回復<color\=#2899ff>(\d+%) </color>HIGHLIGHT能量，回復HIGHLIGHT能量效果無法重複觸發。$"="<size\=23>4-piece effect: At the start of battle, immediately gain <color\=#2899ff>$1</color> HIGHLIGHT Energy, can't be triggered again.</size>"
-
-r:"^【挫敗】$"="<size\=20>  </size>[Defeat]"
-r:"^挫敗$"="Defeat"
-r:"^2套裝效果：效果命中提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-set effect: Increase Effect Hit Rate by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：對處於負面狀態下的敵人造成火焰屬性傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: Increase Fire DMG to enemies with debuffs by <color\=#2899ff>$1</color>."
-
-r:"^【凱旋】$"="<size\=20>  </size>[Triumph]"
-r:"^凱旋$"="Triumph"
-r:"^2套裝效果：暴擊率提升<color\=#2899ff>(\d+\.\d+%)</color>。$"="<size\=23>2-set effect: Increase CRIT Rate by <color\=#2899ff>$1</color>.</size>"
+Archangel
+r:"^崇高的光耀(.*)$"="Sublime Brilliance $1"
+r:"^效果命中提升(\d+%)。釋放人格面具技能後，有(\d+%)固定機率使自身獲得1個祝福效果。若該技能造成了祝福屬性傷害，則額外獲得1個祝福效果。$"="Increase Effect Hit Rate by $1. After using a skill, there is a $2 fixed chance to gain 1 Blessed. If that skill dealt Bless damage, gain 1 additional Blessed."
 
 ----------
-Inspect Details + Combat Pop-Ups
----------
-r:"^生命值、攻擊力、防禦力提升(\d+%)$"="Increase HP, ATK, DEF by $1"
-生命值、攻擊力、防禦力根據相同適應性屬性怪盜數量提升=Increase HP, ATK, DEF \nwith each ally with the same element
-r:"^當前生命值百分比不低於(\d+%)時，祝福屬性的暴擊率提升(\d+%)$"="Increase Bless CRIT Rate by $2 \nwhen your HP% is not below $1"
+RANK 3
+----------
+Setanta
+r:"^嗜血的戰士(.*)$"="Bloodthirsty Warrior $1"
+r:"^暴擊效果提升(\d+%)。攻擊處於減益狀態的敵人時攻擊力提升(.*)。對處於減益狀態的敵人造成傷害後，使所有同伴的攻擊力提升(.*)，效果持續1回合。$"="Increase CRIT DMG by $1. Increase ATK by $2 when attacking enemies inflicted with debuffs. After dealing damage to enemies inflicted with debuffs, increase all allies' ATK by $3 for 1 turn."
 
-觸發【真諦】套裝效果的額外傷害=Triggered the additional damage from [Truth]
-觸發【告捷】套裝效果的額外傷害=Triggered the additional damage from [Victory]
+Shiki-Ouji
+r:"^昂揚的折紙使魔(.*)$"="Lively Shikigami $1"
+r:"^防禦力提升(\d+\.\d+%)。受到傷害後，防禦力提升(\d+%)，持續時間永久，效果上限4層。$"="Increase DEF by $1. After taking damage, increase DEF by $2 permanently, up to 4 stacks."
+
+Lamia
+r:"^嬌豔的貪慾(.*)$"="Gorgeous Greed $1"
+r:"^效果命中提升(\d+%)。造成燃燒效果時，效果命中提升(\d+%)。造成燃燒效果後，使所有同伴攻擊力提升(\d+%)，效果持續2回合。$"="Increase Effect Hit Rate by $1. Increase Effect Hit Rate by $2 when inflicting Burn. After inflicting Burn, increase all allies' ATK by $3 for 2 turns."
+
+Ame-no-Uzume
+r:"^顫慄的振奮神樂(.*)$"="Trembling Kagura $1"
+r:"^效果命中提升(\d+%)。造成觸電效果後，提升所有同伴(.*)暴擊率，效果持續2回合。$"="Increase Effect Hit Rate by $1. After inflicting Shock, increase all allies' CRIT Rate by $2 for 1 turn."
+
+Neko Shogun
+r:"^請你吃魚乾喵(.*)$"="Have a Dried Fish $1"
+r:"^效果命中提升(\d+%)。戰鬥開始時，使所有同伴的效果命中提升(\d+%)，並使得效果命中最高的同伴額外提升(\d+%)效果命中，效果持續2回合。$"="Increase Effect Hit Rate by $1. At the start of battle, increase all allies' Effect Hit Rate by $2, increase the ally with the highest Effect Hit Rate by $3 Effect Hit Rate for 2 turns."
+
+Principality
+r:"^統治之能(.*)$"="Power to Rule $1"
+r:"^防禦力提升(\d+\.\d+%)。釋放人格面具技能造成治療效果後，使所有同伴的防禦力提升(.*)，效果持續2回合。$"="Increase DEF by $1. After healing with a skill, increase all allies' DEF by $2 for 2 turns."
+
+----------
+RANK 4
+----------
+Jatayu
+r:"^破空的金翅(.*)$"="<size\=28>Soaring Golden Wings $1</size>"
+r:"^效果命中提升(\d+%)。釋放疾風屬性人格面具技能後，使技能目標的防禦力降低(\d+%)，效果持續2回合。$"="Increase Effect Hit Rate by $1. After using Wind skills, decrease the target's DEF by $2 for 2 turns."
+
+Mithras
+r:"^炎日的庇佑(.*)$"="<size\=28>Burning Sun's Blessing $1</size>"
+r:"^生命值提升(\d+\.\d+%)。以同伴為目標釋放技能後，使其防禦力提升(\d+\.\d+%)，若其生命值高於(\d+%)，則效果額外提升(\d+%)，效果持續2回合。$"="Increase HP by $1. When using a skill on an ally, increase their DEF by $2 for 2 turns. If they are above $3 HP, increase the effect by $4."
+
+Hell Biker
+r:"^點燃！引爆(.*)$"="Ignite! Explode! $1"
+r:"^攻擊力提升(\d+\.\d+%)。使場上處於燃燒狀態的敵人受到的火焰屬性傷害提升(\d+%)。$"="Increase ATK by $1. Enemies inflicted with Burn increase Fire DMG Taken by $2."
+r:"^攻擊力提升(\d+\.\d+%)。使場上處於燃燒狀態的敵人受到的火焰屬性傷害提升(\d+%)。自身釋放技能時，場上每有1個處於燃燒狀態的敵人，則自身攻擊力提升(\d+%)，上限3層。$"="Increase ATK by $1. Enemies inflicted with Burn increase Fire DMG Taken by $2. When using a skill, increase ATK by $3 for every enemy inflicted with Burn." 
+
+Unicorn
+r:"^仙靈的馴守(.*)$"="Fairy Taming $1"
+r:"^造成的治療效果提升(\d+%)。使得身上沒有減益效果的同伴受到傷害時防禦力提升(\d+%)。$"="Increase Healing Effect by $1. Increase ally's DEF by $2 if they have no debuff."
+r:"^造成的治療效果提升(\d+%)。使得身上沒有減益效果的同伴受到傷害時防禦力提升(\d+%),造成傷害時攻擊力提升(\d+\.\d+%)。$"="Increase Healing Effect by $1. Increase ally's DEF by $2 and increase ATK by $3 when dealing damage if they have no debuff,"
+
+White Rider
+r:"^終末之擾動(.*)$"="Doom Disturbance $1"
+r:"^效果命中提升(\d+%)。對敵人釋放人格面具技能後，目標敵人身上每有1個詛咒效果，則使其受到的詛咒屬性傷害提升(.*)，上限4層，效果持續1回合。$"="Increase Effect Hit Rate by $1. After using a skill on enemies, increase their Curse DMG Taken by $2 for 1 turn for every stack of Cursed on the enemy, up to 4 stacks."
+
+Anubis
+r:"^靈魂的判官(.*)$"="Judge of Souls $1"
+r:"^攻擊力提升(\d+\.\d+%)。造成祝福傷害時，使自身獲得1-2個祝福效果。造成詛咒傷害時，使技能主目標獲得1-2個詛咒效果。攻擊帶有詛咒效果的敵人時，攻擊力提升(\d+%)。$"="Increase ATK by $1. When dealing Bless damage gain 1-2 stack(s) of Blessed. When dealing Curse damage the main target gain 1-2 stack(s) of Cursed. Increase ATK by $2 when attacking enemies with Cursed."
+r:"^攻擊力提升(\d+\.\d+%)。造成祝福傷害時，使自身獲得2個祝福效果。造成詛咒傷害時，使技能主目標獲得2個詛咒效果。攻擊帶有詛咒效果的敵人時，攻擊力提升(\d+\.\d+%)。$"="Increase ATK by $1. When dealing Bless damage gain 2 stacks of Blessed. When dealing Curse damage the main target gain 2 stacks of Cursed. Increase ATK by $2 when attacking enemies with Cursed."
+r:"^攻擊力提升(\d+\.\d+%)。造成祝福傷害時，使自身獲得2個祝福效果，並有50%固定機率使技能主目標獲得1個詛咒效果。造成詛咒傷害時，使技能主目標獲得2個詛咒效果，並有50%固定機率使自身獲得1個祝福效果。攻擊帶有詛咒效果的敵人時，攻擊力提升(\d+%)。$"="Increase ATK by $1. When dealing Bless damage gain 2 stacks of Blessed and there is a 50% fixed chance to inflict 1 stack of Cursed to the main target. When dealing Curse damage the main target gain 2 stacks of Cursed and there is a 50% fixed chance for you to gain 1 stack of Blessed. Increase ATK by $2 when attacking enemies with Cursed."
+
+----------
+RANK 5
+----------
+Yurlungur
+r:"^眠居聖泉的長蛇(.*)$"="Holy Pond's Serpent $1"
+r:"^暴擊效果提升(\d+\.\d+%)。使場上敵人受到的暴擊效果提升(\d+%)。若其處於觸電狀態，則額外提升(\d+%)。$"="Increase CRIT DMG by $1. Increase all enemies' CRIT DMG Taken by $2, if they are inflicted with Shock, increase the effect by $3."
+
+Koumokuten
+r:"^天王的注視(.*)$"="Heavenly Gaze $1"
+r:"^效果命中提升(\d+\.\d+%)。戰鬥開始時，使攻擊力最高的怪盜攻擊力提升(\d+%)，暴擊率提升(\d+%)，效果持續3回合。$"="Increase Effect Hit Rate by $1. At the start of battle, the ally with the highest ATK increase ATK by $2 and CRIT Rate by $3 for 3 turns." 
+
+Kushinada-Hime
+r:"^親暱的愛護(.*)$"="Intimate Care $1"
+r:"^效果命中提升(\d+\.\d+%)。每釋放1個增益技能，則使所有怪盜攻擊力永久提升(\d+\.\d+%),上限3層。$"="Increase Effect Hit Rate by $1. After using a buff, permanently increase all allies' ATK by $2, up to 3 stacks."
+
+Byakko
+r:"^戰意的奔湧(.*)$"="<size\=28>Surge of Fighting Spirit $1</size>"
+r:"^暴擊率提升(\d+\.\d+%)。回合結束時，獲得『戰意』，提升(.*)攻擊力，最多疊加6層，擊敗敵人時，獲得2層『戰意』。$"="Increase CRIT Rate by $1. At the end of turn, gain [Fighting Spirit], increase ATK by $2, up to 6 stacks. Gain 2 stacks of [Fighting Spirit] when defeating enemy."
+r:"^暴擊率提升(\d+\.\d+%)。回合結束時，獲得『戰意』，提升(\d+\.\d+%)攻擊力，(\d+\.\d+%)暴擊率，最多疊加6層，擊敗敵人時，獲得2層『戰意』。$"="Increase CRIT Rate by $1. At the end of turn, gain [Fighting Spirit], increase ATK by $2 and CRIT Rate by $3, up to 6 stacks. Gain 2 stacks of [Fighting Spirit] when defeating enemy."
+
+Narcissus
+r:"^花香的迷失(.*)$"="Lost Fragrance $1"
+r:"^效果命中提升(\d+\.\d+%)。造成風襲效果後，使主目標敵人受到的傷害提升(\d+%)，效果持續2回合。並提升自身效果命中(\d+%)。效果持續2回合。$"="Increase Effect Hit Rate by $1. After inflicting Winded, increase the main target's DMG Taken by $2 for 2 turns and increase own Effect Hit Rate by $3 for 2 turns."
+r:"^效果命中提升(\d+\.\d+%)。造成風襲效果後，使主目標敵人受到的傷害提升(\d+\.\d+%)，效果持續2回合。並提升自身效果命中(\d+%)。效果持續2回合。$"="Increase Effect Hit Rate by $1. After inflicting Winded, increase the main target's DMG Taken by $2 for 2 turns and increase own Effect Hit Rate by $3 for 2 turns."
+
+Okuninushi
+r:"^支配者的威儀(.*)$"="Dominator's Majesty $1"
+r:"^暴擊率提升(\d+\.\d+%)。釋放人格面具技能對敵人造成傷害後，使敵人受到的念動屬性傷害提升(\d+\.\d+%)，效果持續3回合，可疊加3層。$"="Increase CRIT Rate by $1. After dealing damage with a skill, increase enemies' Psy DMG Taken by $2 for 3 turns, up to 3 stacks."
+r:"^暴擊率提升(\d+\.\d+%)。釋放人格面具技能對敵人造成傷害後，使敵人受到的念動屬性傷害提升(\d+\.\d+%)，效果持續3回合，可疊加3層。攻擊身上帶有該效果的敵人時，念動屬性傷害提升(\d+%)。$"="Increase CRIT Rate by $1. After dealing damage with a skill, increase enemies' Psy DMG Taken by $2 for 3 turns, up to 3 stacks. Increase Psy damage by $3 when attacking enemies with this debuff."
+
+Daisoujou
+r:"^救贖的奇蹟(.*)$"="Miracle of Salvation $1"
+r:"^攻擊力提升(\d+\.\d+%)。對於生命值低於(\d+%)的敵人造成的祝福屬性傷害提升(\d+%)。$"="Increase ATK by $1. Increase Bless DMG Dealt by $3 when dealing damage to enemies below $2 HP."
+r:"^攻擊力提升(\d+\.\d+%)。對於生命值低於50%的敵人造成的祝福屬性傷害提升(\d+%)。對於生命值低於50%的敵人造成傷害後，使自身回復(\d+%)攻擊力的生命值。$"="Increase ATK by $1. Increase Bless DMG Dealt by $3 when dealing damage to enemies below $2 HP. Restore $3 ATK as HP after dealing damage to enemies below 50% HP."
+
+Sarasvati
+r:"^慧音的回聲(.*)$"="Echoes of Wisdom $1"
+r:"^造成的治療效果提升(\d+%)。造成治療效果後，使場上當前生命值百分比最低的同伴獲得相當於自身(\d+%)攻擊力的額外回復。$"="Increase Healing Effect by $1. After healing, restore $2 ATK as HP to the lowest HP% ally"
+r:"^造成的治療效果提升(\d+%)。造成治療效果後，使場上當前生命值百分比最低的同伴獲得相當於自身(\d+%)攻擊力的額外回復。若其生命值低於50%，則該效果提升(\d+%)。$"="Increase Healing Effect by $1. After healing, restore $2 ATK as HP to the lowest HP% ally. Increase this effect by $3 if their HP is below 50%."
+
+----------
+RANK 6
+----------
+Surt
+r:"^烈焰的君主(.*)$"="Inferno Monarch $1"
+r:"^效果命中提升(\d+\.\d+%)。造成燃燒效果時，效果命中提升(\d+%)。對生命值高於50%的敵人該效果額外提升(\d+%)。$"="Increase Effect Hit Rate by $1. Increase Effect Hit Rate by $2 when inflicting Burn. Increase the effect by $3 when the enemy is above 50% HP."
+
+Skadi
+r:"^影之契約(.*)$"="Shadow Contract $1"
+r:"^效果命中提升(\d+\.\d+%)。造成異常效果後，使自身攻擊力提升(.*)，暴擊率提升(.*)。效果持續2回合。若該異常狀態是精神異常，則效果提升(.*)。$"="Increase Effect Hit Rate by $1. After inflicting Status Effects, increase ATK by $2 and CRIT Rate by $3 for 2 turns. If that effect is a Mental Ailment, increase this effect by $3."
+
+Seth
+r:"^墮落的神力(.*)$"="Fallen Divine Power $1"
+r:"^暴擊效果提升(\d+\.\d+%)。造成擊倒後，使自身攻擊力提升(.*)，效果持續2回合，並使得所有同伴造成的傷害提升(.*),效果持續1回合。$"="Increase CRIT DMG by $1. After knocking down an enemy, increase ATK by $2 for 2 turns and increase all allies' DMG Dealt by $3 for 1 turn."
+
+Baphomet
+r:"^惡魔的熔鑄(.*)$"="Demonic Melter $1"
+r:"^攻擊力提升(\d+\.\d+%)。釋放人格面具技能對處於燃燒狀態的敵人造成傷害後，使所有敵人受到的火焰屬性傷害提升(.*)，效果持續1回合。$"="Increase ATK by $1. After dealing damage to enemies inflicted with Burn, increase all enemies' Fire DMG Taken by $2 for 1 turn."
+
+Norn
+r:"^命運的風襲(.*)$"="Wind of Fate $1"
+r:"^防禦力提升(\d+\.\d+%)。造成風襲效果後，使受到風襲效果的敵人的防禦力降低(.*)，效果持續2回合。$"="Increase DEF by $1. After inflicting Winded, decrease DEF of the inflicted enemies by $2 for 2 turns."
+r:"^防禦力提升(\d+\.\d+%)。造成風襲效果後，使受到風襲效果的敵人的防禦力降低(.*)，並使自身的防禦力提升(.*)。效果持續2回合。$"="Increase DEF by $1. After inflicting Winded, decrease DEF of the inflicted enemies by $2 and increase your DEF by $3 for 2 turns."
+
+Titania
+r:"^月妖的擾亂(.*)$"="<size\=25>Fairy Queen's Disturbance $1</size>"
+r:"^造成的治療效果提升(\d+%)。釋放人格面具技能造成治療效果後，有(.*)基礎機率使1名隨機敵人陷入一種隨機元素異常狀態。$"="Increase Healing Effect by $1. After healing with a skill, there is a $2 base chance to inflict 1 random enemy with a random Elemental Ailment."
+r:"^造成的治療效果提升(\d+%)。釋放人格面具技能造成治療效果後，有(.*)基礎機率使1名隨機敵人陷入一種隨機元素異常狀態，效果持續2回合。$"="Increase Healing Effect by $1. After healing with a skill, there is a $2 base chance to inflict 1 random enemy with a random Elemental Ailment for 2 turns."
+r:"^造成的治療效果提升(\d+%)。釋放人格面具技能造成治療效果後，有(.*)基礎機率使1名隨機敵人陷入一種隨機元素異常狀態，並使其防禦力降低(.*)。效果持續2回合。$"="Increase Healing Effect by $1. After healing with a skill, there is a $2 base chance to inflict 1 random enemy with a random Elemental Ailment and decrease their DEF by $3 for 2 turns."
+
+Melchizedek
+r:"^仁王的審判(.*)$"="<size\=20>King of Righteousness Judgement $1</size>"
+r:"^攻擊力提升(\d+\.\d+%)。自身釋放技能時，根據所有同伴的祝福層數提升造成的祝福傷害(\d+%)，上限(\d+)層，(\d+)回合。$"="Increase ATK by $1. When using a skill, increase Bless DMG by $2 for $4 turns based on the number of Blessed stacks on all allies, up to $3 stack."
+r:"^攻擊力提升(\d+\.\d+%)。自身釋放技能時，根據所有同伴的祝福層數提升造成的祝福傷害(\d+%)，上限(\d+)層，(\d+)回合。釋放技能時，為祝福層數不少於(\d+)層的怪盜，提供攻擊力加成(\d+%)，(\d+)回合。$"="Increase ATK by $1. When a using a skill, increase Bless DMG by $2 for $4 turns based on the number of Blessed stacks on all allies, up to $3 stack. When using a skill, increase ATK for allies with not less than $5 stacks of Blessed by $6 for 2 turns."
+
+----------
+RANK 7
+----------
+Chernobog
+r:"^蔓延的死寂(.*)$"="Deadly Silence $1"
+
+Oberon
+r:"^停滯歲月的雷擊(.*)$"="<size\=26>Time Stopping Lightning $1</size>"
+r:"^暴擊率提升(\d+\.\d+%)。場上只有1名敵人時，造成的電擊屬性傷害提升(.*)，暴擊率提升(.*)。若敵人處於倒地狀態，則效果提升(.*)。$"="Increase CRIT Rate by $1. When there is only 1 enemy, increase Elec DMG Dealt by $2 and CRIT Rate by $3. Increase this effect by $3 if the enemy is Downed."
+
+Dionysus
+r:"^酒醉的狂歡(.*)$"="Druken Revelry $1"
+r:"^暴擊率提升(\d+\.\d+%)。以同伴為目標釋放人格面具技能後，使技能主目標的暴擊效果提升(.*)，效果持續2回合。$"="Increase CRIT Rate by $1. When using a skill on allies, increase the main target's CRIT DMG by $2 for 2 turns."
+
+Nebiros
+r:"^被詛咒的血統(.*)$"="Cursed Bloodline $1"
+r:"^<nobr>效果抵抗提升(\d+\.\d+%)。釋放詛咒屬性技能時，消耗的精力值降低(.*)。$"="<nobr>Increase Effect RES by $1. When using Curse skills, reduce cost by $2."
+
+Yamata
+r:"^祭品的悲鳴(.*)$"="Screams of Sacrifice $1"
+r:"^暴擊率提升(\d+\.\d+%)。對處於凍結狀態的敵人造成的傷害提升(.*)。釋放冰凍屬性的人格面具技能時，若技能主目標的生命值低於(.*)。則額外使其受到1次(.*)攻擊力的冰凍屬性傷害。$"="Increase CRIT Rate by $1. Increase DMG Dealt to enemies inflicted with Freeze by $2. When using Ice skills, deal an additional $4 ATK Ice damage to the main target if they are below $3 HP."
+r:"^暴擊率提升(\d+\.\d+%)。對處於<link\="s\|103"><u>凍結</u></link>狀態的敵人造成的傷害提升(.*)。釋放冰凍屬性的人格面具技能時，若技能主目標的生命值低於(.*)。則額外使其受到1次(.*)攻擊力的冰凍屬性傷害。$"="Increase CRIT Rate by $1. Increase DMG Dealt to enemies inflicted with <link\="s|103"><u>Freeze</u></link> by $2. When using Ice skills, deal an additional $4 ATK Ice damage to the main target if they are below $3 HP."
+
+Lakshmi
+r:"^清蓮的舞步(.*)$"="Pure Lotus Dance $1"
+r:"^造成的治療效果提升(\d+\.\d+%)。『蓮華』造成治療後，使受到治療的同伴生命上限提升(.*)，效果持續2回合。$"="Increase Healing Effect by $1. After healing with [Sacred Lotus], increase Max HP of the healed target by $2 for 2 turns."
+r:"^造成的治療效果提升(\d+\.\d+%)。『蓮華』造成治療後，使受到治療的同伴生命上限提升(.*)，效果持續2回合。『蓮華』的治療效果提升(.*)。$"="Increase Healing Effect by $1. After healing with [Sacred Lotus], increase Max HP of the healed target by $2 for 2 turns. Increase Healing Effect of [Sacred Lotus] by $3."
+
+King Frost
+r:"^冰封的裁決(.*)$"="Frozen Adjudication $1"
+r:"^防禦力提升(\d+\.\d+%)。為隊友添加護盾時，主要目標獲得防禦力提升(.*)或冰凍傷害提升(.*)其中一個效果，持續2回合。$"="Increase DEF by $1. After giving Shield to allies, increase the main target's DEF by $2 for 2 turns or Ice DMG Bonus by $3 for 2 turns."
+r:"^防禦力提升(\d+\.\d+%)。為隊友添加護盾時，主要目標獲得防禦力提升(.*)和冰凍傷害提升(.*)兩個效果，持續2回合。$"="Increase DEF by $1. After giving Shield to allies, increase the main target's DEF by $2 and Ice DMG Bonus by $3 for 2 turns."
+
+Thor
+r:"^雷神的威嚴(.*)$"="<size\=28>Thunder God's Majesty $1</size>"
+r:"^<nobr>暴擊效果提升(\d+\.\d+%)。其他同伴每釋放1次電擊屬性的人格面具技能，則使自身獲得1層『雷神威勢』，造成的電擊傷害提升(.*)，並使技能『天召雷』額外造成1段傷害，效果持續1回合，上限2層。$"="<size\=28><nobr>Increase CRIT DMG by $1. Gain 1 stack of [Thunder God's Might] after other allies used Electirc skills, increase DMG Dealt by $2 for 1 turn and make Heavenly Thunder hit for an additional time, up to 2 stacks.</size>"
+
+Bishamonten
+r:"^暴怒的慧傘(.*)$"="Furious Umbrella $1"
+r:"^暴擊率提升(\d+\.\d+%)。對敵人釋放技能時，主目標敵人身上每有1層元素異常，則使其受到的核熱傷害提升(.*)，上限3層，效果持續1回合。$"="Increase CRIT Rate by $1. After using a skill on enemies, increase the main target's Nuke DMG Taken by $2 for 1 turn for every Elemental Ailement they have, up to 3 stacks."
+r:"^暴擊率提升(\d+\.\d+%)。對敵人釋放技能時，主目標敵人身上每有1層元素異常，則使其受到的核熱傷害提升(.*)，上限3層，效果持續1回合。並使所有其他敵人獲得該效果的(.*)。$"="Increase CRIT Rate by $1. After using a skill on enemies, increase the main target's Nuke DMG Taken by $2 for 1 turn for every Elemental Ailement they have, up to 3 stacks. All other enemies gain $3 of this effect."
+
+Dominion
+r:"^天使的號令(.*)$"="Angel's Order $1"
+r:"^攻擊力提升(\d+\.\d+%)。以同伴為目標釋放技能後，使自身獲得2層『號令』，同伴釋放人格面具技能造成傷害時，消耗1層『號令』使其造成的傷害提升(.*)，效果持續1回合。$"="Increase ATK by $1. Gain 2 [Order] when using a skill on an ally, when an ally deals damage with a skill, consume 1 stack of [Order] to increase their DMG Dealt by $2 for 1 turn."
+r:"^攻擊力提升(\d+\.\d+%)。以同伴為目標釋放技能後，使自身獲得2層『號令』，同伴釋放人格面具技能造成傷害時，消耗1層『號令』使其造成的傷害提升(.*)，攻擊力提升(.*)，效果持續1回合。$"="Increase ATK by $1. Gain 2 [Order] when using a skill on an ally, when an ally deals damage with a skill, consume 1 stack of [Order] to increase their DMG Dealt by $2 and ATK by $3 for 1 turn."
+
+Belial
+r:"^墮落之焰(.*)$"="Fallen Flame $1"
+r:"^效果命中提升(\d+\.\d+%)。敵人獲得持續傷害類效果時，使其獲得『地獄火』狀態，每回合造成(.*)攻擊力的傷害，效果持續2回合，可疊加3層。$"="Increase Effect Hit Rate by $1. When an enemy is inflicted with damage over time effect, inflict [Hellfire], deal $2 ATK damage per turn for 2 turns, up to 3 stack."
+r:"^效果命中提升(\d+\.\d+%)。敵人獲得持續傷害類效果時，使其獲得『地獄火』狀態，每回合造成(.*)攻擊力的傷害。效果持續2回合，可疊加3層。$"="Increase Effect Hit Rate by $1. When an enemy is inflicted with damage over time effect, inflict [Hellfire], deal $2 ATK damage per turn for 2 turns, up to 3 stack."
+r:"^效果命中提升(\d+\.\d+%)。敵人獲得持續傷害類效果時，使其獲得『地獄火』狀態，每回合造成(.*)攻擊力的傷害，目標生命值低於50%時傷害提升(.*)。效果持續2回合，可疊加3層。$"="Increase Effect Hit Rate by $1. When an enemy is inflicted with damage over time effect, inflict [Hellfire], deal $2 ATK damage per turn for 2 turns, increase the damage by $3 when the target is below 50% HP, up to 3 stack."
+
+Lilith
+r:"^暝夜的誘惑(.*)$"="Midnight Seduction $1"
+r:"^冥夜的誘惑(.*)$"="Midnight Seduction $1"
+
+--------
+RANK 8
+--------
+Yoshitsune
+r:"^連勝的宿命(.*)$"="Destined Streak $1"
+r:"^暴擊效果提升(\d+\.\d+%)。戰鬥開始，獲得「奇襲」(\d+)層。固有技能造成每段傷害有(\d+%)機率獲得「奇襲」，每段提升自身攻擊力(\d+%)，持續(\d+)回合，最多(\d+)層。達到(\d+)層，提升固有技能暴擊率(\d+%)。$"="Increase CRIT DMG by $1. At the start of battle, gain $2 stacks of [Ambush]. When using the signature skill there is a $3 chance to gain [Ambush], each stack increase own ATK by $4 for $5 turns, up to $6 stacks. Increase the CRIT Rate of the signature skill by $8 when reaching $7 stacks."
+
+Vishnu
+r:"^恩惠於眾生(.*)$"="Blessing to All $1"
+r:"^暴擊率提升(\d+\.\d+%)。增加風襲的效果命中(\d+%)，對風襲狀態敵人造成傷害提升(\d+%)。\n添加或刷新風襲狀態時額外降低敵人防禦力(\d+%)，(\d+)回合。$"="Increase CRIT Rate by $1. Increase Winded Effect Hit Rate by $2 and increase DMG Dealt to enemies with Winded by $3. \nDecrease the enemies' DEF by $4 when refreshing or inflicting Wind for $5 turns."
+
+Kohryu
+r:"^祥瑞之主(.*)$"="<size\=28>Lord of Auspiciousness $1</size>"
+r:"^攻擊力提升(\d+\.\d+%)。處於後臺也能生效：所有同伴每造成1種不同屬性的傷害，使黃龍獲得1層『四象』，上限4層。黃龍處於前臺時，每層『四象』提升自身(.*)攻擊力。『四象』為4層時使黃龍的技能進化。造成傷害後清除『四象』。$"="<size\=28>Increase ATK by $1. Will still be active when not equipped: Gain 1 stack of [Four Symbols] when allies deal different elemental damage, up to 4 stacks. When Kohryu is equipped, increase ATK by $2 for every stack of [Four Symbols]. Evolve your skill when [Four Symbols] is at 4 stacks and dispel [Four Symbols] after dealing damage.</size>"
+r:"^攻擊力提升(\d+\.\d+%)。處於後臺也能生效：所有同伴每造成1種不同屬性的傷害，使黃龍獲得1層『四象』，上限4層。黃龍處於前臺時，每層『四象』提升自身(.*)攻擊力，(.*)念動傷害。『四象』為4層時使黃龍的技能進化。造成傷害後清除『四象』。$"="<size\=28>Increase ATK by $1. Will still be active when not equipped: Gain 1 stack of [Four Symbols] when allies deal different elemental damage, up to 4 stacks. When Kohryu is equipped, increase ATK by $2 and Psy DMG by $3 for every stack of [Four Symbols]. Evolve your skill when [Four Symbols] is at 4 stacks and dispel [Four Symbols] after dealing damage.</size>"
+
+Shiva
+r:"^因果的流轉(.*)$"="Karma Reversal $1"
+r:"^攻擊力提升(\d+\.\d+%)。每回合開始時獲得『慧識』，最多疊加3層。使用固有技能消耗『慧識』，根據消耗數量獲得以下效果：\n1層：增加本次念動攻擊時的傷害(\d+%)。\n2層：增加敵人防禦力降低(\d+%)，1回合。\n3層：增加目標受到念動傷害時的暴擊率(\d+%)，1回合。$"="Increase ATK by $1. Gain 1 stack of [Wisdom] at the start of turn, up to 3 stacks. Consume all stacks of [Wisdom] when using the signature skill and trigger the follow effect based on the amount consumed:\n1 stack: Increase this damage by $2. \n2 stacks: Decrease all enemies' DEF by $3 for 1 turn. \n3 stacks: Increase all enemies' Psy DMG CRIT Rate Taken by $4 for 1 turn."
+
+Alice
+r:"^重生的詛咒(.*)$"="Curse of Rebirth $1"
+r:"^效果命中提升(\d+\.\d+%)。使所有敵人受到的詛咒屬性傷害提升(.*)。所有同伴每釋放1個詛咒屬性的人格面具技能，則使愛麗絲的效果命中、攻擊力提升(.*)，效果持續2回合，上限3層。$"="Increase Effect HIt Rate by $1. Increase all enemies' Curse DMG Taken by $2. After any ally uses Curse skills, increase own Effect Hit Rate and ATK by $3 for 2 turns, up to 3 stacks."
+
+Sandalphon
+r:"^龐然的守護(.*)$"="Higher Protection $1"
+r:"^防禦力提升(\d+\.\d+%)。聖達芬在場時使處於護盾下的同伴防禦力提升(\d+%)。$"="Increase DEF by $1. When Sandalphon is present, increase all shielded allies' DEF by $2."
+r:"^防禦力提升(\d+\.\d+%)。聖達芬在場時使處於護盾下的同伴防禦力提升(\d+%)，釋放固有技能時，消耗的生命值降低至(\d+%)。$"="Increase DEF by $1. When Sandalphon is present, increase all shielded allies' DEF by $2. Reduce the HP cost to $3 when using the signature skill."
+
+(\d+)  (\d+%)  (\d+\.\d+%)
