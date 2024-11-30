@@ -395,22 +395,22 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的物理�
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deals $1 ATK Curse damage to <color\=#FFFF00>all</color> enemies and increase their DMG Taken by $2 for $3 turns."
 
 // Skill buffs
-r:"物理屬性傷害提升(\d+\.\d+%)。"=Strengthen Physical attacks by $1.
-r:"火焰屬性傷害提升(\d+\.\d+%)。"=Strengthen Fire attacks by $1.
-r:"冰凍屬性傷害提升(\d+\.\d+%)。"=Strengthen Ice attacks by $1.
-r:"電擊屬性傷害提升(\d+\.\d+%)。"=Strengthen Electric attacks by $1.
-r:"疾風屬性傷害提升(\d+\.\d+%)。"=Strengthen Wind attacks by $1.
-r:"念動屬性傷害提升(\d+\.\d+%)。"=Strengthen Psy attacks by $1.
-r:"詛咒屬性傷害提升(\d+\.\d+%)。"=Strengthen Curse attacks by $1.
-r:"祝福屬性傷害提升(\d+\.\d+%)。"=Strengthen Bless attacks by $1.
-r:"核熱屬性傷害提升(\d+\.\d+%)。"=Strengthen Nuclear attacks by $1.
-r:"槍械傷害提升(\d+\.\d+%)。"=Strengthen Gun attacks by $1.
-r:"萬能屬性傷害提升(\d+\.\d+%)。"=Strengthen Almighty attacks by $1.
-r:"造成治療效果提升(\d+\.\d+%)。"=Effects of healing magic are increased by $1.
-r:"受到的治療效果提升(\d+\.\d+%)。"=Increase effects of healing magic received by $1.
-r:"槍械攻擊暴擊率提升(\d+\.\d+%)。"=Increase CRIT Rate of Gun attacks by $1.
-r:"即死技能成功率上升(\d+\.\d+%)。"=Increase chance of Instant Death with skills by $1.
-r:"護盾效果提升(\d+\.\d+%)。"=Increase Shield Effect by $1.
+r:"^物理屬性傷害提升(\d+\.\d+%)。$"="Strengthen Physical attacks by $1."
+r:"^火焰屬性傷害提升(\d+\.\d+%)。$"="Strengthen Fire attacks by $1."
+r:"^冰凍屬性傷害提升(\d+\.\d+%)。$"="Strengthen Ice attacks by $1."
+r:"^電擊屬性傷害提升(\d+\.\d+%)。$"="Strengthen Electric attacks by $1."
+r:"^疾風屬性傷害提升(\d+\.\d+%)。$"="Strengthen Wind attacks by $1."
+r:"^念動屬性傷害提升(\d+\.\d+%)。$"="Strengthen Psy attacks by $1."
+r:"^詛咒屬性傷害提升(\d+\.\d+%)。$"="Strengthen Curse attacks by $1."
+r:"^祝福屬性傷害提升(\d+\.\d+%)。$"="Strengthen Bless attacks by $1."
+r:"^核熱屬性傷害提升(\d+\.\d+%)。$"="Strengthen Nuclear attacks by $1."
+r:"^槍械傷害提升(\d+\.\d+%)。$"="Strengthen Gun attacks by $1."
+r:"^萬能屬性傷害提升(\d+\.\d+%)。$"="Strengthen Almighty attacks by $1."
+r:"^造成治療效果提升(\d+\.\d+%)。$"="Effects of healing magic are increased by $1."
+r:"^受到的治療效果提升(\d+\.\d+%)。$"="Increase effects of healing magic received by $1."
+r:"^槍械攻擊暴擊率提升(\d+\.\d+%)。$"="Increase CRIT Rate of Gun attacks by $1."
+r:"^即死技能成功率上升(\d+\.\d+%)。$"="Increase chance of Instant Death with skills by $1."
+r:"^護盾效果提升(\d+\.\d+%)。$"="Increase Shield Effect by $1."
 
 //Stat buffs
 r:"戰鬥開始時攻擊力提升(\d+\.\d+%)，持續2回合。"=Increase ATK by $1 at the start of battle for 2 turns.
@@ -491,6 +491,7 @@ r:"^傷<color\=#000000>害</color>增加$"="<size\=17> </size>D<color\=#000000>M
 r:"^傷<color\=#000000>害</color>提高$"="<size\=17> </size>D<color\=#000000>M</color>G Bonus Up"
 r:"^傷<color\=#000000>害</color>提升$"="<size\=17> </size>D<color\=#000000>M</color>G Bonus Up"
 r:"^傷<color\=#000000>害</color>減免$"="<size\=17> </size>D<color\=#000000>M</color>G RES Up"
+r:"^受<color\=#000000>到</color>傷害降低$"="<size\=20> </size>D<color\=#000000>M</color>G Taken Down"
 r:"^暴<color\=#000000>擊</color>率提升$"="<size\=20> </size>C<color\=#000000>R</color>IT Up"
 r:"^暴<color\=#000000>擊</color>效果提升$"="<size\=20> </size>C<color\=#000000>R</color>IT DMG Up"
 r:"^效<color\=#000000>果</color>抵抗提升$"="Ef<color\=#000000>fe</color>ct RES Up"
@@ -521,6 +522,7 @@ r:"^受<color\=#000000>詛</color>咒傷害提升$"="<size\=7> </size>C<color\=#
 ----------
 Inspect Details - BUFF
 ----------
+r:"^護盾值：(\d+)$"="Shield: $1"
 r:"^生命值提升(\d+)$"="Increase HP by $1"
 r:"^生命值提升(\d+%)$"="Increase HP by $1"
 r:"^生命值提升(\d+\.\d+%)$"="Increase HP by $1"
@@ -529,6 +531,7 @@ r:"^攻擊力提升(\d+)$"="Increase ATK by $1"
 r:"^攻擊力提升(\d+%)$"="Increase ATK by $1"
 r:"^攻擊力提升(\d+\.\d+%)$"="Increase ATK by $1"
 r:"^每層提升(.*)的攻擊力$"="Increase ATK by $1 per stack"
+r:"^防禦提升(\d+%)$"="Increase DEF by $1"
 r:"^防禦力提升(\d+)$"="Increase DEF by $1"
 r:"^防禦力提升(\d+%)$"="Increase DEF by $1"
 r:"^防禦力提升(\d+\.\d+%)$"="Increase DEF by $1"
