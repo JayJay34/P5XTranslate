@@ -63,7 +63,7 @@ r:"^電<color\=#000000>擊</color>傷害提升$"="<size\=21> </size>E<color\=#00
 r:"^受<color\=#000000>到</color>電傷提升$"="<size\=21> </size>E<color\=#000000>le</color>c DMG Taken Up"
 
 ----------
-SOY - Shun Kano
+SOY - Shun Kanou
 ----------
 r:"^對<color\=#FFFF00>(\d+)名</color>敵人造成(\d+\.\d+%)最大生命值的冰凍屬性傷害，有(\d+%)基礎機率使敵人凍結。$"="Deals $2 Max HP Ice damage to <color\=#FFFF00>$1</color> enemy, with a $3 base chance to inflict freeze."
 sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的冰凍屬性傷害，並有<color\=#FFFC40>(\d+%)</color>的基礎機率使敵人陷入<link\="s\|103"><u>(.*)</u></link>狀態。$"="Deals <color\=#FFFC40>$1</color> Max HP Ice damage to 1 enemy, with a <color\=#FFFC40>$2</color> base chance to inflict <link\="s|103"><u>$3</u></link>."
@@ -71,18 +71,20 @@ sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的冰
 r:"^對<color\=#FFFF00>(\d+)名</color>敵人造成(\d+\.\d+%)最大生命值的物理屬性傷害，並降低目標敵人(\d+\.\d+%)防禦力，效果持續2回合，處於『荒野救星』下該效果提升至(\d+\.\d+%)。$"="Deals $2 Max HP Physical damage to <color\=#FFFF00>$1</color> enemy and decreases their DEF by $3 for 2 turns, increases the effect to $4 when in [Wilderness Savior]."
 r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的物理屬性傷害，並使目標敵人的防禦力降低<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。處於<link\="s\|151"><u>『荒野救星』</u></link>狀態下時，防禦力降低值提升至<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Deals <color\=#FFFC40>$1</color> Max HP Physical damage to 1 enemy, decreases the target's DEF by <color\=#FFFC40>$2</color> for 2 turns. When in the <link\="s|151"><u>[Wilderness Savoir]</u></link> state, increases the DEF down debuff to <color\=#FFFC40>$3</color>."
 
-r:"^使<color\=#FFFF00>所有</color>同伴的最大生命值提升，數值相當於{{A}}最大生命值的(\d+%)（最多計入(\d+)點最大生命值），同時自身受到攻擊的機率大幅提升，效果持續2回合。回復所有同伴生命值，數值相當於{{A}}最大生命值的(\d+\.\d+%)。$"="Increases <color\=#FFFF00>all</color> ally's Max HP based on $1 of your Max HP (up to $2 Max HP), increases the chance of being attacked for 2 turns. Restores all allies' HP equal to $3 of Shun Kano Max HP."
+r:"^使<color\=#FFFF00>所有</color>同伴的最大生命值提升，數值相當於{{A}}最大生命值的(\d+%)（最多計入(\d+)點最大生命值），同時自身受到攻擊的機率大幅提升，效果持續2回合。回復所有同伴生命值，數值相當於{{A}}最大生命值的(\d+\.\d+%)。$"="Increases <color\=#FFFF00>all</color> ally's Max HP based on $1 of your Max HP (up to $2 Max HP), increases the chance of being attacked for 2 turns. Restores all allies' HP equal to $3 of Shun Kanou Max HP."
 r:"^使所有同伴的最大生命值提升，數值相當於{{A}}最大生命值的<color\=#FFFC40>(\d+%)</color>（最多計入<color\=#FFFC40>(\d+)</color>點最大生命值），同時自身受到攻擊的機率大幅提升，效果持續2回合。回復所有同伴生命值，數值相當於{{A}}最大生命值的<color\=#FFFC40>(\d+\.\d+%)</color>。\n冷卻時間：1回合。$"="Increases all allies' Max HP equal to <color\=#FFFC40>$1</color> of your Max HP (Up to <color\=#FFFC40>$2</color> Max HP), increases the chance of being attacked for 2 turns. Restores all allies' HP equal to <color\=#FFFC40>$3</color> of your Max HP. \nCooldown: 1 turn."
+
+r:"^使<color\=#FFFF00>所有</color>同伴的最大生命值提升，數值相當於{{A}}最大生命值的(\d+\.\d+%)\（最多計入(\d+)點最大生命值\），效果持續2回合。回復所有同伴生命值，數值相當於{{A}}最大生命值的(\d+\.\d+%)。對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)最大生命值的冰凍屬性傷害。$"="Increase <color\=#FFFF00>all</color> allies' Max HP equal to $1 Max HP (Up to $2 Max HP) for 2 turns. Restores all allies' HP equal to $3 Max HP. Deals $4 Max HP Ice damage to <color\=#FFFF00>1</color> enemy."
 
 受攻擊後獲得，回合結束消耗『荒野救星』恢復已損生命值=Gain after attacked. At the end of your turn, consume [Wilderness Savior] and restore HP
 受攻擊機率大幅提升=Heavily increase the chance of getting attacked
 r:"^生命值上限提高(\d+)$"="Increase Max HP by $1"
 
 In-Battle Quotes
-<color\=#FF0000>{{A}}</color>進入了{{B}}狀態，回合結束恢復已損生命值……=<color\=#FF0000>Shun Kano</color> entered Wilderness Savior state, restore missing HP at the end of turn!
+<color\=#FF0000>{{A}}</color>進入了荒野救星狀態，回合結束恢復已損生命值……=<color\=#FF0000>Shun Kanou</color> entered Wilderness Savior, restore missing HP at the end of turn!
 <color\=#FF0000>全體怪盜</color>生命值上限提高……=Increase Max HP for <color\=#FF0000>all allies</color>!
-<color\=#FF0000>{{A}}</color>受攻擊機率大幅提高……=<size\=25><color\=#FF0000>Shun Kano</color> chance of attacked is heavily increased!</size>
-r:"^<color\=#FF0000>(.*)</color>攻擊了{{A}}，防禦力降低了……$"="<color\=#FF0000>Enemy</color> attacked Shun Kano, DEF Down!"
+<color\=#FF0000>{{A}}</color>受攻擊機率大幅提高……=<size\=25><color\=#FF0000>Shun Kanou</color> chance of attacked is heavily increased!</size>
+r:"^<color\=#FF0000>(.*)</color>攻擊了{{A}}，防禦力降低了……$"="<color\=#FF0000>Enemy</color> attacked Shun Kanou, DEF Down!"
 
 Combat Pop-ups
 r:"^荒<color\=#000000>野</color>救星$"="W<color\=#000000>ild</color>erness Savior"
@@ -182,7 +184,7 @@ r:"^自身獲得<link\="s\|111"><u>祝福</u></link>效果時，會獲得<link\=
 
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)防禦力的祝福屬性傷害，並提升所有同伴至多(\d+)防禦力，效果持續2回合。$"="Deals $1 DEF Bless damage to <color\=#FFFF00>1</color> enemy, increases DEF for all allies by $2 for 2 turns."
 
-r:"^受到雪實的保護$"="Protected by Yuki"
+r:"^受到{{A}}的保護$"="Protected by Yuki"
 r:"^提升<color\=#FF0000>絕對審判</color>的技能效果$"="Boost the skill effect of <color\=#FF0000>Absolute Judgement</color>"
 
 In-Battle Quotes
@@ -484,3 +486,57 @@ r:"^剩餘附著『火花』次數：(\d+)$"="Times you can inflict [Spark]: $1"
 
 Combat Pop-ups
 r:"^火<color\=#000000>花</color>$"=" S<color\=#000000>p</color>ark"
+
+----------
+MFS - Kotone Montagne
+----------
+
+r:"^對<color\=#FFFF00>1名敵人</color>造成(\d+)次(\d+\.\d+%)攻擊力的疾風屬性傷害，並有(\d+%)的基礎機率使其陷入風襲狀態；若{{A}}處在『仲春結界』內，則額外使其陷入持續(\d+)回合的風傷狀態。{{A}}攻擊風傷狀態下的敵人時，暴擊效果提升(\d+\.\d+%)。$"="Deals $2 ATK Wind damage to <color\=#FFFC40>1</color> enemy $1 times, with a $3 base chance to inflict Winded; If you are in [Mid-Spring Domain], additionally inflict Wind Injury for $4 turns. Increase your CRIT DMG by $5 when attacking enemies with Wind Injury."
+r:"^對1名敵人造成(\d+)次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的疾風屬性傷害，並有(\d+%)的基礎機率使其陷入<link\="s\|105"><u>風襲</u></link>狀態；若{{A}}處在『仲春結界』內，則額外使其陷入持續(\d+)回合的<link\="s\|209"><u>風傷</u></link>狀態。{{A}}攻擊<link\="s\|209"><u>風傷</u></link>狀態下的敵人時，暴擊效果提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Deals <color\=#FFFC40>$2</color> ATK Wind damage to 1 enemy $1 times, with a $3 base chance to inflict <link\="s|105"><u>Winded</u></link>; If you are in [Mid-Spring Domain], additionally inflict <link\="s|209"><u>Wind Injury</u></link> for $4 turns. Increase your CRIT DMG by <color\=#FFFC40>$5</color> when attacking enemies with <link\="s|209"><u>Wind Injury</u></link>."
+
+r:"^對<color\=#FFFF00>所有敵人</color>造成(\d+)次(\d+\.\d+%)攻擊力的疾風屬性傷害；若{{A}}處在『仲春結界』內，則額外獲得1顆『朝露結晶』。$"="Deals $2 ATK Wind damage to <color\=#FFFF00>all</color> enemies $1 times; If you are in [Mid-Spring Domain], additionally gain 1 [Morning Dew Crystal]."
+r:"^對所有敵人造成(\d+)次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的疾風屬性傷害；若{{A}}處在『仲春結界』內，則額外獲得1顆<link\="s\|212"><u>『朝露結晶』</u></link>。$"="Deals <color\=#FFFC40>$2</color> ATK Wind damage to all enemies $1 times; If you are in [Mid-Spring Domain], additionally gain 1 <link\="s|212"><u>[Morning Dew Crystal]</u></link>."
+
+r:"^展開持續1回合的『仲春結界』，並對<color\=#FFFF00>1名敵人</color>造成(\d+)次(\d+\.\d+%)攻擊力的疾風屬性傷害。『仲春結界』持續時間內，所有怪盜使用人格面具技能、HL技能、追加效果造成疾風屬性傷害時，會對<color\=#FFFF00>主目標</color>額外造成{{A}}(\d+%)攻擊力的疾風屬性傷害並為{{A}}提供1顆『朝露結晶』。『仲春結界』結束時，消耗掉所有『朝露結晶』對當前回合的<color\=#FFFF00>主目標</color>造成\（2\+『朝露結晶』數量\)\*(\d+\.\d+%)攻擊力的疾風屬性傷害，此次傷害視為追加效果。$"="Opens [Mid-Spring Domain] for 1 turn, then deals $2 ATK Wind damage to <color\=#FFFC40>1</color> enemy $1 times. When [Mid-Spring Domain] is active, all allies when dealing Wind damage with persona skill, HIGHLIGHT, or Follow Up, you will deal $3 ATK Wind damage to the <color\=#FFFF00>main target</color> and gain 1 [Morning Dew Crystal]. When [Mid-Spring Domain] ends, consume all [Morning Dew Crystal] and deal (2+[Morning Dew Crystal])*$4 ATK Wind damage to the main target, this damage is treated as a Follow Up."
+r:"^展開持續1回合的『仲春結界』，並對1名敵人造成(\d+)次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的疾風屬性傷害。『仲春結界』持續時間內，所有怪盜使用人格面具技能、HIGHLIGHT、<link\="s\|100"><u>追加效果</u></link>造成疾風屬性傷害時，會對主目標額外造成{{A}}(\d+%)攻擊力的疾風屬性傷害並為{{A}}提供1顆<link\="s\|212"><u>『朝露結晶』</u></link>。『仲春結界』結束時，消耗掉所有<link\="s\|212"><u>『朝露結晶』</u></link>對當前回合的主目標造成\（2\+<link\="s\|212"><u>『朝露結晶』</u></link>數量\)\*<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的疾風屬性傷害，此次傷害視為<link\="s\|100"><u>追加效果</u></link>。$"="Opens [Mid-Spring Domain] for 1 turn, then deals <color\=#FFFC40>$2</color> ATK Wind damage to 1 enemy $1 times. When [Mid-Spring Domain] is active, all allies when dealing Wind damage with persona skill, HIGHLIGHT, or <link\="s|100"><u>Follow Up</u></link>, you will deal $3 ATK Wind damage to the main target and gain 1 <link\="s|212"><u>[Morning Dew Crystal]</u></link>. When [Mid-Spring Domain] ends, consume all <link\="s|212"><u>[Morning Dew Crystal]</u></link> and deal (2+<link\="s|212"><u>[Morning Dew Crystal]</u></link>)*<color\=#FFFC40>$4</color> ATK Wind damage to the main target, this damage is treated as a <link\="s|100"><u>Follow Up</u></link>."
+
+r:"^『HIGHLIGHT』：對1名敵人造成(\d+)次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的疾風屬性傷害；若{{A}}處在『仲春結界』內，則額外獲得1顆可突破數量上限的<link\="s\|212"><u>『朝露結晶』</u></link>；否則，額外對目標造成1次疾風屬性傷害。\n『ONE MORE』：對1名敵人造成疾風屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[HIGHLIGHT]: Deals <color\=#FFFC40>$2</color> ATK to 1 enemy $1 times; If you are in [Mid-Spring Domain], additionally gain 1 <link\="s|212"><u>[Morning Dew Crystal]</u></link> that can exceed the cap; Otherwise deal 1 additional hit of Wind damage to the target. \n[ONE MORE]: Deals Wind damage to 1 enemy.\nMelee Attack: Uses a melee weapon to deal light Physical damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
+r:"^對<color\=#FFFF00>1名敵人</color>造成(\d+)次(\d+\.\d+%)攻擊力的疾風屬性傷害；若{{A}}處在『仲春結界』內，則額外獲得1顆可突破數量上限的『朝露結晶』；否則，額外對目標造成1次疾風屬性傷害。$"="Deals $2 ATK Wind damage to <color\=#FFFF00>1</color> enemy; If you are in [Mid-Spring Domain], additionally gain 1 [Morning Dew Crystal] that can exceed the cap; Otherwise deal 1 additional hit of Wind damage to the target."
+
+r:"^對<color\=#FFFF00>1名敵人</color>造成(\d+\.\d+%)攻擊力的冰凍屬性傷害，並有(\d+\.\d+%)的基礎機率使其陷入凍結狀態，若其已處於凍結狀態，則使其陷入2回合的凍徹狀態。凍徹狀態下的敵人受到的冰凍屬性傷害提升(\d+\.\d+%)。$"="Deals $1 ATK Ice damage to <color\=#FFFC40>1</color> enemy, with a $2 base chance to inflict Freeze. If they are already inflicted with Freeze, inflict Freezing for $3 turns. Enemies with Freezing increase Ice DMG Taken by <color\=#FFFC40>$4</color>."
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，並有<color\=#FFFC40>(\d+\.\d+%)</color>的基礎機率使其陷入<link\="s\|103"><u>凍結</u></link>狀態，若其已處於<link\="s\|103"><u>凍結</u></link>狀態，則使其陷入(\d+)回合的<link\="s\|210"><u>凍徹</u></link>狀態。<link\="s\|210"><u>凍徹</u></link>狀態下的敵人受到的冰凍屬性傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Deals <color\=#FFFC40>$1</color> ATK Ice damage to 1 enemy, with a <color\=#FFFC40>$2</color> base chance to inflict <link\="s|103"><u>Freeze</u></link>. If they are already inflicted with <link\="s|103"><u>Freeze</u></link>, inflict <link\="s|210"><u>Freezing</u></link> for $3 turns. Enemies with <link\="s|210"><u>Freezing</u></link> increase Ice DMG Taken by <color\=#FFFC40>$4</color>."
+
+r:"^對<color\=#FFFF00>所有敵人</color>造成(\d+\.\d+%)攻擊力的冰凍屬性傷害並有(\d+\.\d+%)的基礎機率使其陷入凍結狀態；若{{A}}處在『冬夜結界』內，此次攻擊造成的傷害提升(\d+%)。$"="Deals $1 ATK Ice damage to <color\=#FFFC40>all</color> enemies, with a $2 base chance to inflict Freeze; If you are in [Winter Night Domain], increase the damage of this attack by $3."
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害並有<color\=#FFFC40>(\d+\.\d+%)</color>的基礎機率使其陷入<link\="s\|103"><u>凍結</u></link>狀態；若{{A}}處在『冬夜結界』內，此次攻擊造成的傷害提升(\d+%)。$"="Deals <color\=#FFFC40>$1</color> ATK Ice damage to all enemies, with a <color\=#FFFC40>$2</color> base chance to inflict <link\="s|103"><u>Freeze</u></link>; If you are in [Winter Night Domain], increase the damage of this attack by $3."
+
+r:"^展開持續1回合的『冬夜結界』，並對<color\=#FFFF00>1名敵人</color>造成(\d+\.\d+%)攻擊力的冰凍屬性傷害。『冬夜結界』持續時間內，怪盜受到攻擊後使<color\=#FFFF00>所有怪盜</color>獲得可抵禦(\d+)點傷害的『雪凝之盾』，該效果最多觸發(\d+)次；所有怪盜使用人格面具技能、HIGHLIGHT、追加效果造成冰凍屬性傷害時，{{A}}獲得1顆『寒霜結晶』。『冬夜結界』結束時，消耗掉所有『寒霜結晶』對當前回合的<color\=#FFFF00>主目標</color>造成\（2\+『寒霜結晶』數量\)\*(\d+\.\d+%)攻擊力的冰凍屬性傷害，此次傷害視為追加效果。$"="Opens [Winter Night Domain] for 1 turn, then deals $1 ATK Ice damage to <color\=#FFFC40>1</color> enemy. When [Winter Night Domain] is active, <color\=#FFFF00>all allies</color> gain [Condensed Shield] when attacked which gives $2 Shield, up to $3 times; All allies when dealing Ice damage with persona skill, HIGHLIGHT, or Follow Up, you will gain 1 [Frost Crystal]. When [Winter Night Domain] ends, consume all [Frost Crystal] and deal (2+[Frost Crystal])*$4 ATK Ice damage to the <color\=#FFFF00>main</color> target, this damage is treated as a Follow Up."
+r:"^展開持續1回合的『冬夜結界』，並對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害。『冬夜結界』持續時間內，怪盜受到攻擊後使所有怪盜獲得可抵禦<color\=#FFFC40>(\d+)</color>點傷害的『雪凝之盾』，該效果最多觸發(\d+)次；所有怪盜使用人格面具技能、HIGHLIGHT、<link\="s\|100"><u>追加效果</u></link>造成冰凍屬性傷害時，{{A}}獲得1顆<link\="s\|213"><u>『寒霜結晶』</u></link>。『冬夜結界』結束時，消耗掉所有<link\="s\|213"><u>『寒霜結晶』</u></link>對當前回合的主目標造成\（2\+<link\="s\|213"><u>『寒霜結晶』</u></link>數量\)\*<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，此次傷害視為<link\="s\|100"><u>追加效果</u></link>。$"="Opens [Winter Night Domain] for 1 turn, then deals <color\=#FFFC40>$1</color> ATK Ice damage to 1 enemy. When [Winter Night Domain] is active, all allies gain [Condensed Shield] when attacked which gives <color\=#FFFC40>$2</color> Shield, up to $3 times; All allies when dealing Ice damage with persona skill, HIGHLIGHT, or <link\="s|100"><u>Follow Up</u></link>, you will gain 1 <link\="s|213"><u>[Frost Crystal]</u></link>. When [Winter Night Domain] ends, consume all <link\="s|213"><u>[Frost Crystal]</u></link> and deal (2+<link\="s|213"><u>[Frost Crystal]</u></link>)*<color\=#FFFC40>$4</color> ATK Ice damage to the main target, this damage is treated as a <link\="s|100"><u>Follow Up</u></link>."
+
+r:"^對<color\=#FFFF00>1名敵人</color>造成(\d+\.\d+%)攻擊力的冰凍屬性傷害並有(\d+\.\d+%)的基礎機率使其陷入持續1回合的冰封狀態；若{{A}}處在『冬夜結界』內，冰封的基礎機率提升(\d+\.\d+%)；否則，本次攻擊造成的傷害提升(\d+%)。$"="Deals $1 ATK Ice damage to <color\=#FFFF00>1</color> enemy, with a $2 base chance to inflict them with Ice Seal for 1 turn; If you are in [Winter Night Domain], increase the base chance of Ice Seal by $3; Otherwise increase the damage dealt by this attack is increased by $4."
+
+r:"^『HIGHLIGHT』：對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害並有<color\=#FFFC40>(\d+\.\d+%)</color>的基礎機率使其陷入持續1回合的<link\="s\|214"><u>冰封</u></link>狀態；若{{A}}處在『冬夜結界』內，<link\="s\|214"><u>冰封</u></link>的基礎機率提升<color\=#FFFC40>(\d+\.\d+%)</color>；否則，本次攻擊造成的傷害提升(\d+%)。\n『ONE MORE』：對1名敵人造成冰凍屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[HIGHLIGHT]: Deals <color\=#FFFC40>$1</color> ATK Ice damage to 1 enemy, with a <color\=#FFFC40>$2</color> base chance to inflict <link\="s|214"><u>Ice Seal</u></link> for 1 turn; If you are in [Winter Night Domain], increase the base chance of <link\="s|214"><u>Ice Seal</u></link> by <color\=#FFFC40>$3</color>; Otherwise increase the damage dealt by this attack is increased by $4. \n[ONE MORE]: Deals Ice damage to 1 enemy.\nMelee Attack: Uses a melee weapon to deal light Physical damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
+
+仲春結界=Mid-Spring Domain
+結界結束時，會對當前回合的主目標造成疾風屬性傷害=Deal Wind DMG to the main target \nwhen the Domain ends
+冬夜結界=Winter Night Domain
+結界結束時，會對當前回合的主目標造成冰凍屬性傷害=Deal Ice DMG to the main target \nwhen the Domain ends
+
+可以提升仲春結界解除時追加效果的傷害=Increase the Follow Up DMG \nwhen Mid-Spring Domain ends
+可以提升冬夜結界解除時追加效果的傷害=Increase the Follow Up DMG \nwhen Winter Night Domain ends
+
+r:"^{{A}}攻擊此單位時，獲得暴擊效果的提升$"="<size\=25>Increase CRIT DMG when Mont attacks this target</size>"
+r:"^受到冰凍屬性傷害提升(\d+\.\d+%)$"="Increase Ice DMG Taken by $1"
+
+雪凝之盾=Condensed Shield
+
+荼蘼謝幕=Spring Finale
+雪落冰融=Melting of Snow
+
+Combat Pop-ups
+r:"^朝<color\=#000000>露</color>結晶$"="<size\=1> </size>M<color\=#000000>or</color>ning Dew Crystal"
+r:"^寒<color\=#000000>霜</color>結晶$"="<size\=16> </size>F<color\=#000000>ro</color>st Crystal"
+r:"^思<color\=#000000>念</color>$"="<size\=22> </size>C<color\=#000000>h</color>erish"
+r:"^風<color\=#000000>傷</color>$"="<size\=1> </size>W<color\=#000000>in</color>d Injury"
+r:"^凍<color\=#000000>徹</color>$"="<size\=15> </size>F<color\=#000000>re</color>ezing"
+r:"^雪<color\=#000000>凝</color>之盾$"="<size\=25> </size>C<color\=#000000>o</color>ndensed Shield"
+r:"^冰<color\=#000000>封</color>$"="<size\=5> </size>Ic<color\=#000000>e</color> Seal"
