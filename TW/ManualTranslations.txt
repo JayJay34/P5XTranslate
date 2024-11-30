@@ -137,6 +137,8 @@ r:"^取消$"="Cancel"
 換魚餌=Change Bait
 
 好友數：=Friends:
+等 級=Level
+樂 園=Paradise
 沒輸入簽名=No Signature
 尚未輸入簽名=No Signature
 刷新好友列表過快。=Please wait before refreshing.
@@ -549,6 +551,10 @@ sr:"^(.*)成長至(\d+)級（(\d+)/(\d+)）$"="<size\=30>Level $1 to Lv. $2 ($3/
 ----------
 Class/ Stats Screen
 ----------
+怪盜等級=Thieves Lv.
+職業說明=Roles
+屬性說明=<size\=40>Elements</size>
+快速篩選=Quick Filter
 反抗=Rebel
 擅長單體攻擊，能有效針對單個敵人。=<size\=26>Good at single target attacks, can deal with a single enemy effectively.</size>
 支配=Dominate
@@ -578,7 +584,7 @@ Class/ Stats Screen
 精力回復=SP Recovery
 穿透=PEN
 倒地值=Knockdown Count
-效果命中=Effect Hit Rate
+效果命中=EHR
 效果抵抗=Effect RES
 傷害加成=DMG Bonus
 傷害減免=DMG RES
@@ -586,7 +592,7 @@ Class/ Stats Screen
 弱點抗性=Weak RES
 耐性穿透=Resist Ignore
 耐性抗性=Resist Bonus
-治療效果=Healing Effect
+r:"^治療效果$"="<size\=22>Healing Effect</size>"
 受治療效果=Healing Received
 護盾效果=Shield Effect
 受護盾效果=Shield Received
@@ -674,6 +680,7 @@ r:"^潛能詳情$"="<size\=27>Potential Details</size>"
 改造=<size\=19>Reform</size>
 突破=<size\=19>Enhance</size>
 
+已達到等級上限。=Reached level cap.
 已達到最大經驗，無法繼續添加材料。=Reached max level. Cannot add more upgrade materials.
 r:"^怪盜等級上限提升至<color\=#FFF000>LV.(\d+)</color>$"="Increase max level to <color\=#FFF000>Lv.$1</color>"
 
@@ -726,7 +733,7 @@ BOSS總積分：=Current Score:
 任意樂園成員首次參與挑戰後活躍值+1=+1 Activity Point from each member when challenging the weekly for the first time.
 r:"樂園累計活躍每達到指定值後可領取對應獎勵，當前：<color\=#eade10>(\d+)</color>"=Total accumulated Activity Points: <color\=#eade10>$1</color>
 r:"個人歷史總積分達到指定值後可領取對應獎勵，當前：<color\=#eade10>(\d+)</color>"=Receive rewards after earning a certain amount of points. Your Personal Best: <color\=#eade10>$1</color>
-已獲得本週全部獎勵=You're all set! Come back next week...\n or aim for higher scores!
+已獲得本週全部獎勵=Got all rewards this week!
 積分計算規則：\n當前積分\=挑戰積分*難度係數\n同一BOSS多個難度只記錄歷史最高分數=Score Formula:\nChallenge Score * Multiplier\n\nOnly the highest score is saved between runs.
 
 <color\=#8F8D8D>1分鐘前線上</color>=<color\=#8F8D8D>1 Minute</color>
@@ -953,6 +960,7 @@ r:"累計進行50次「角色簽約」&「武器補給」 \((\d+)\/(\d+)\)"=Perf
 r:"在「心之海試煉」中通過「西部施工區」 \((\d)\/(\d)\)"=Pass the Western Construction Zone\nin the Sea of Souls Trial ($1/$2)
 r:"完成12次「在盧布朗度過」日程 \((\d+)\/(\d+)\)"=Spend time in Leblanc 12 times ($1/$2)
 r:"在「心軌擇行」中完成1次挑戰 \((\d+)\/1\)"=Complete 1 challenge in Heart Rails ($1/1)
+r:"完成一個星盤試練的「宮主星」或「命主星」 \((\d+)\/1\)"=Clear 1 [House] or [Chart Ruler] in Astrolabe Trials ($1/1)
 
 
 ////////////////////////////////
@@ -987,6 +995,9 @@ r:"^簽約$"="Pulls"
 獎勵類型=Type
 獎勵名稱=Name
 契約類型=Banner Type
+角色活動契約·隨機=50% Banner
+角色活動契約·精準=100% Banner
+武器活動補給=Weapon Banner
 簽約時間=Time of Pull
 r:"^剩餘時間：(\d+)天(\d+)時(\d+)分$"="Ends in $1d $2h $3m"
 r:"^剩餘時間：(\d+)天(\d+)時$"="Ends in $1d $2h"
@@ -1454,6 +1465,7 @@ Resources & Shop Items (Marthym's Shop)
 枚異界原晶=Ambers
 現金=Yen
 魂石=Soul Gems
+異世界探索獲得的神秘石頭，可用於角色與人格面具養成。=Mysterious gems obtained from the Metaverse, can be used for character or persona growth.
 r:"^(\d+)魂石$"="$1 Soul Gems"
 怪盜經驗=Thief EXP
 首次=First Time
@@ -1489,6 +1501,7 @@ r:"^零件$"="Parts"
 
 迷情香=Charming Incense
 金絲香=Golden Incense
+怒顏香=Wrathful Incense
 香塔L=L Incense
 香塔M=M Incense
 香塔S=S Incense
@@ -1510,6 +1523,8 @@ r:"^零件$"="Parts"
 未知宿命橙·宙=Random 4★ Universe
 未知宿命紫·宙=Random 3★ Universe
 被迷霧籠罩的命運之卡，獲取後會隨機變化為一張同品質的宙位啟示卡。=<size\=22>Card of fate shrouded in mist, transforms into a random Universe Revelation Card of the same quality after purchase.</size>
+宇宙的箴言=4★ Revelation
+來自宇宙的命運指引，打開後可自選一張橙色指定套裝的基礎啟示卡。=A guidance of fate from the Universe, can be used to gain 1 Orange Revelation Card from any set
 未知宿命橙·基礎=<size\=18>Random 4★ Revelation</size>
 被迷霧籠罩的命運之卡，獲取後會隨機變化為一張橙色品質的日月星辰位啟示卡。=<size\=22>Card of fate shrouded in mist, transforms into a random 4★ Sun/ Moon/ Star/ Planet Revelation Card after purchase.</size>
 未知宿命紫·基礎=<size\=18>Random 3★ Revelation</size>
@@ -1517,6 +1532,7 @@ r:"^零件$"="Parts"
 sr:"^未知宿命藍·(.*)$"="2★ • $1"
 
 星辰之鈴=Bell of Stars
+可用於「怪盜心象·屬性強化」養成的材料。=Can be used in [Mental Image].
 玲瓏辰星=Exquisite Star
 星屑之瓶·低階=<size\=18>Stardust Bottle • Low Level</size>
 星屑之瓶·高階=<size\=17>Stardust Bottle • High Level</size>
@@ -1691,6 +1707,8 @@ r:"^特性提升$"="<size\=25>Upgrade to</size>"
 r:"^攻擊$"="<size\=22>Attack</size>"
 r:"^防禦$"="<size\=19>Defense</size>"
 r:"^生存$"="<size\=18>Support</size>"
+r:"^命中$"="EHR"
+r:"^抵抗$"="<size\=25>Resist</size>"
 r:"^妨害$"="<size\=27>Boost</size>"
 r:"^特殊$"="<size\=21>Special</size>"
 r:"^/定位$"="<size\=24>/Type</size>"
