@@ -1,0 +1,146 @@
+----------
+Guild - Paradise - Raid Boss
+----------
+個人積分=Score
+總積分=Total Score
+積分：=Score:
+本期歷史積分=Personal Best	
+歷史積分用於領取積分獎勵、參與挑戰排名\n重置挑戰不會清除歷史積分=<size\=30>Total score are used for rewards and paradise ranking. \nResetting the fight won't delete your total score.</size>
+積分統計進度=Boss Beaten
+r:"^積分統計進度會記錄本期分數<color\=#ef0000>最高</color>的<color\=#ef0000>(\d+)個</color>首領的積分總和$"="<size\=31>Sum of your <color\=#ef0000>$1 highest</color> scores will count towards total score.</size>"
+
+當前積分=Current Pts.
+樂園排行=Paradise Rank
+樂園活躍度=Activity Point
+r:"今日活躍：(\d+\/\d+)"=Today's Score: $1
+r:"近7天貢獻 (\d+)"=7d Contribution: $1
+
+閼凶夢之扉夢境更換說明：\n每週閼凶夢之扉會開啟一種夢境效果，本周所有的挑戰會根據夢境的不同發生規則變化。=<size\=27>Door of Nightmare rotation info:\nEach week there is an unique mechanic, changing all bosses based on the mechanic.</size>
+首領受到一定傷害會進入虛弱狀態，處於虛弱狀態時全力輸出對其造成大量傷害，可獲取大量的戰鬥積分。=<size\=26>After defeating the boss, you gain 2x score.</size>
+隨著回合數的增加，首領給予的生存壓力會越來越高，但每回合的積分獲取效率也會相應提升。=<size\=26>Increase score gain but also increase enemies' damage after each turn.</size>
+
+首領受到一定傷害後進入虛弱狀態，虛弱狀態積分獲取效率大幅提高=  After defeating the boss, \n  you gain 2x score
+
+
+所屬樂園=Paradise\nName:
+樂園職位=Position:
+代理人等級=Level
+樂園人數=Members
+樂園影響力=Influence
+本樂園排名獎勵=Rank Rewards
+
+成員=Member
+代理人=Leader
+副手=Associate
+<color\=#81ea2c>線上</color>=<color\=#81ea2c>Online</color>
+
+挑戰難度·簡單=Easy
+挑戰難度·普通=Normal
+挑戰難度·困難=Hard
+挑戰難度·挑戰=Challenge
+挑戰難度·噩夢=Nightmare
+
+基礎傷害積分=Base DMG
+虛弱期傷害積分=Weakness DMG
+首領擊殺積分=Defeated Boss
+難度係數=Difficulty Multiplier
+r:"難度係數：<color\=#0e68c9>(\d+)</color>"=<size\=25>Multiplier: <color\=#0e68c9>$1x</color></size>
+r:"難度係數：<color\=#0e68c9>(\d+\.\d+)</color>"=<size\=25>Multiplier: <color\=#0e68c9>$1x</color></size>
+BOSS總積分：=Current Score:
+
+長按怪盜可便捷進行培養=<size\=25>Hold press on the party\nmember to customize</size>
+可用協助次數：=Assist Units\nAvailable
+樂園=<size\=32>Paradise</size>
+鎖定陣容=<size\=20>Team Lineup</size>
+
+獎勵詳情=Rewards
+任意樂園成員首次參與挑戰後活躍值+1=+1 Activity Point from each member when challenging the weekly for the first time.
+r:"樂園累計活躍每達到指定值後可領取對應獎勵，當前：<color\=#eade10>(\d+)</color>"=Total Activity Points: <color\=#eade10>$1</color>
+r:"個人歷史總積分達到指定值後可領取對應獎勵，當前：<color\=#eade10>(\d+)</color>"=Get rewards after earning the following score. Your Personal Best: <color\=#eade10>$1</color>
+已獲得本週全部獎勵=Got all rewards this week!
+積分計算規則：\n當前積分\=挑戰積分*難度係數\n同一BOSS多個難度只記錄歷史最高分數=Score Formula:\nChallenge Score * Multiplier\n\nOnly the highest score is saved between runs.
+
+<color\=#8F8D8D>1分鐘前線上</color>=<color\=#8F8D8D>1 Minute</color>
+<color\=#8F8D8D>1小時前線上</color>=<color\=#8F8D8D>1 Hour</color>
+<color\=#8F8D8D>1天前線上</color>=<color\=#8F8D8D>1 Day</color>
+sr:"<color\=#8F8D8D>(.*)分鐘前線上</color>"=<color\=#8F8D8D>$1 Minutes</color>
+sr:"<color\=#8F8D8D>(.*)小時前線上</color>"=<color\=#8F8D8D>$1 Hours</color>
+sr:"<color\=#8F8D8D>(.*)天前線上</color>"=<color\=#8F8D8D>$1 Days</color>
+sr:"(.*?)人線上"=$1 Online
+sr:"<color\=#FF0000>(.*)</color>加入了樂園。"=<color\=#FF0000>$1</color> joined the Paradise.
+sr:"<color\=#FF0000>(.*)</color>退出了樂園。"=<color\=#FF0000>$1</color> left the Paradise.
+sr:"<color\=#FF0000>(.*)</color>將<color\=#FF0000>(.*?)</color>移出了樂園。"=<color\=#FF0000>$1</color> kicked <color\=#FF0000>$2</color> from the Paradise.
+
+成員=Member
+代理人=Leader
+副手=Associate
+<color\=#81ea2c>線上</color>=<color\=#81ea2c>Online</color>
+
+// Paradise Tags //
+
+休閒娛樂=Leisurely
+佛系玩家=Peaceful
+自由暢玩=Casual
+
+鎖定提示=Lock
+以下<color\=#ef0000>怪盜、面具與啟示</color>會被鎖定到本挑戰中不可更換，是否確認出戰？=<size\=24>You cannot change the chosen <color\=#ef0000>Thieves, Personas and Revelation Cards</color> until you reset the fight</size>
+以下怪盜裝備的<color\=#ef0000>啟示</color>被其他BOSS鎖定，選擇確認以調整啟示。=The following Thieves <color\=#ef0000>Revelation Card</color> is locked by other bosses. Please switch.
+重置挑戰會解除陣容鎖定並清空當前總積分，是否繼續=<size\=28>Resetting the fight will unlock your team lineup and clear the current score, are you sure? \n(This will not clear your Personal Best)</size>
+尚未挑戰=Not challenged yet
+
+累積分數：=Total Score: <size\=1>_</size>
+r:"^虛弱剩餘回合：$"="   Turn(s) Left:   <size\=1>_</size>"
+r:"^虛弱期獲得積分×$"="Score Multiplier x"
+r:"^倍$"="<size\=10> </size>!"
+
+所有敵人對<color\=#fbff37>電擊</color>屬性的適應性變為弱=All enemies become weak to <color\=#fbff37>Electric</color> DMG
+處於<color\=#ff381d>燃燒</color>狀態的敵人受到的傷害提高20%=Enemies inflicted with <color\=#ff381d>Burn</color> +20% DMG Taken
+所有怪盜<color\=#FFFC40>HIGHLIGHT</color>傷害提升50%=Increase <color\=#FFFC40>HIGHLIGHT</color> damage by 50%
+r:"^首領的適應性發生變化，所有怪盜造成<color\=#FFFC40>弱點傷害</color>提升(\d+%)$"="<size\=27>Change the affinities of the boss, increase <color\=#FFFC40>Weakness DMG</color> by $1</size>"
+r:"^<color\=#FFFC40>WONDER</color>造成<color\=#FFFC40>最終傷害</color>提高(\d+%)，其他隊員造成最終傷害降低(\d+%)"="Increase <color\=#FFFC40>final damage</color> of <color\=#FFFC40>Wonder</color> by $1, \ndecrease final damage of other allies by $2"
+
+----------
+Bosses
+----------
+
+主天使、能天使、權天使、大天使處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。=<size\=28>Dominion, Power, Principality and Archangel have <color\=#ff3b37>[Lifelink]</color>\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.</size>
+
+忠義的八房=Yatsufusa
+1、八房會釋放「八字聖玉」：使自身對全屬性的適應性變為耐，造成傷害提升、受到傷害降低，並召喚四屬性之魂。擊敗不同屬性的魂，會使八房進入不同的元素異常狀態，持續2回合。\n2、八房處於「八字聖玉」狀態，且同時擁有4種元素異常狀態時，會退出「八字聖玉」狀態並使自身防禦力降低。\n3、八房進入虛弱階段時，會清除四屬性之魂並退出「八字聖玉」狀態。=1. Yatsufusa will use [Eight Virtue's Protection]: Change all affinities Resist, increase DMG Dealt and decrease DMG Taken, and summon 4 Mitamas. When a Mitama dies, inflicts Yatsufusa with an Elemental Ailment for 2 turns.\n2. When Yatsufusa has 4 Elemental Ailments, loses [Eight Virtue's Protection] and reduces own DEF.\n3. When Yatsufusa enters Weakness, defeats all Mitamas loses [Eight Virtue's Protection].
+
+巨大的八束水臣津野命=Oumitsunu
+r:"^八束水臣津野命每受到一次人格面具技能/HIGHLIGHT/追加效果造成的傷害，自身後續受到對應屬性傷害提升(\d+%)，可疊加(\d+)層，持續(\d+)回合。$"="After Oumitsunu took damage 1 time from Persona Skill/ HIGHLIGHT/ Follow Up, increase that element's DMG Taken by $1 for $3 turns, up to $2 stacks."
+
+
+----------
+Modifiers
+----------
+穩定領域=Stable Domain
+所有怪盜無法暴擊，人格面具技能/追加效果造成的<color\=#FFFC40>最終傷害</color>提高，提高值\=暴擊率*(暴擊效果-100%)。（最多計入100%暴擊率）=<size\=26>All allies can't CRIT, increase <color\=#FFFC40>Final DMG</color> of Persona Skills/ Follow Up by\nCRIT Rate * (CRIT DMG - 100%)\n(Up to 100% CRIT)</size>
+
+sr:"^(.*)特化$"="$1 Buff"
+所有怪盜<color\=#FFFC40>射擊</color>傷害提高20%=Increase <color\=#FFFC40>Gun</color> damage by 20%
+所有怪盜<color\=#ff0036>詛咒</color>傷害提高20%=Increase <color\=#ff0036>Curse</color> damage by 20%
+
+追加特化=Follow Up Buff
+r:"^所有怪盜<color\=#FFFC40>追加效果</color>的暴擊效果提升(\d+%)、攻擊力提升(\d+%)$"="Increase <color\=#FFFC40>Follow Up</color> CRIT DMG by $1 and ATK by $2"
+
+聖潔領域=Holy Domain
+r:"^敵人每有一個<color\=#FFFC40>負面狀態</color>，受到的傷害提升(\d+%)，最多使其受到的傷害提升(\d+%)$"="For every <color\=#FFFC40>debuff</color> the enemy have, increase their DMG Taken by $1, up to $2"
+
+天使降臨=Angel Descend
+主天使會源源不斷地召喚天使援軍，擊敗天使可以回復精力值。\n對處於虛弱階段時主天使召喚的天使造成傷害可獲得積分=<size\=26>Dominion will keep summoning Angel, defeating Angel will restore SP.\nDealing damage to Angel summoned by Dominion when they are in Weak will count for score</size>
+
+元素領域=Elemental Domain
+r:"^敵人每有一種<color\=#FFFC40>元素異常</color>狀態，受到的傷害提升(\d+%)，最多使其受到的傷害提升(\d+%)$"="For every <color\=#FFFC40>Elemental Ailment</color> the enemy have, increase their DMG Taken by $1, up to $2"
+
+多重連攜=Multi-Link
+r:"^敵人每受到(\d+)次來自怪盜的傷害，使該名怪盜造成傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="Increase your DMG Dealt by $2 after dealing damage $1 time for $3 turns, up to $4 stacks"
+
+支配弱化=Dominate Nerf
+sr:"^<color\=#FFFC40>(.*)</color>怪盜造成傷害降低(\d+%)$"="Decrease the DMG Dealt of \n<color\=#FFFC40>$1</color> Thieves by $2"
+
+----------
+Combat Menu
+----------
+虛弱=Weakness
