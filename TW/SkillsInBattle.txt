@@ -387,6 +387,8 @@ r:"使<color\=#FFFF00>1名</color>敵方攻擊、防禦、效果命中、效果�
 
 --- Wonder HIGHLIGHT ---
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的物理屬性傷害。$"="Deals $1 ATK Phys damage to <color\=#FFFF00>1</color> enemy."
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的疾風屬性傷害。$"="Deals $1 ATK Wind damage to <color\=#FFFF00>1</color> enemy."
+
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的物理屬性傷害。$"="Deals $1 ATK Phys damage to <color\=#FFFF00>all</color> enemies."
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的萬能屬性傷害。$"="Deals $1 ATK Almighty damage to <color\=#FFFF00>all</color> enemies."
 
@@ -394,6 +396,7 @@ r:"^使<color\=#FFFF00>所有</color>同伴獲得(\d+\.\d+%)攻擊力\+(\d+)的�
 r:"^使<color\=#FFFF00>所有</color>同伴造成的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Gives <color\=#FFFF00>all</color> allies $1 DMG Dealt for $2 turns."
 
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的物理屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deals $1 ATK Phys damage to <color\=#FFFF00>all</color> enemies and increase their DMG Taken by $2 for $3 turns."
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的疾風屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deals $1 ATK Wind damage to <color\=#FFFF00>all</color> enemies and increase their DMG Taken by $2 for $3 turns."
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deals $1 ATK Curse damage to <color\=#FFFF00>all</color> enemies and increase their DMG Taken by $2 for $3 turns."
 
 // Skill buffs
@@ -541,6 +544,7 @@ sr:"^暴擊率提升(.*)$"="Increase CRIT Rate by $1"
 sr:"^暴擊傷害提升(.*)$"="Increase CRIT DMG by $1"
 sr:"^暴擊效果提升(.*)$"="Increase CRIT DMG by $1"
 sr:"^效果命中提升(.*)$"="Increase EHR by $1"
+r:"^效果抵抗提升(\d+\.\d+%)$"="Increase Effect RES by $1"
 sr:"^效果抵抗降低(.*)$"="Decrease Effect RES by $1"
 r:"^傷害提升(\d+%)$"="Increase DMG Bonus by $1"
 r:"^傷害提升(\d+\.\d+%)$"="Increase DMG Bonus by $1"
@@ -548,7 +552,9 @@ r:"^造成傷害提升(\d+%)$"="Increase DMG Dealt by $1"
 r:"^造成的傷害提升(\d+%)$"="Increase DMG Dealt by $1"
 r:"^造成的傷害提升(\d+\.\d+%)$"="Increase DMG Dealt by $1"
 r:"^所有同伴造成的傷害提升(\d+%)。$"="Increase DMG Dealt by $1"
+r:"^造成傷害提高(\d+%)，可疊加(\d+)層$"="Increase DMG Dealt by $1, up to $2 stacks"
 r:"^技能傷害提升(\d+%)$"="Increase skill damage by $1"
+r:"^追加效果暴擊效果提升(\d+%)、攻擊力提升(\d+%)$"="Increase Follow Up CRIT DMG by $1 and Follow Up ATK by $2"
 sr:"^傷害減免(.*)$"="Increase DMG RES by $1"
 r:"^所有同伴受到的傷害降低(\d+%)。$"="Decrease DMG Taken by $1"
 r:"^受物理傷害加深(\d+\.\d+%)$"="Increase Physical DMG Taken by $1"
@@ -566,6 +572,7 @@ r:"^電擊傷害提升(\d+%)$"="Increase Electric DMG by $1"
 r:"^電擊傷害提升(\d+\.\d+%)$"="Increase Electric DMG by $1"
 r:"^疾風傷害提升(\d+%)$"="Increase Wind DMG by $1"
 r:"^疾風傷害提升(\d+\.\d+%)$"="Increase Wind DMG by $1"
+r:"^疾風傷害提高(\d+%)$"="Increase Wind DMG by $1"
 r:"^念動傷害提升(\d+%)$"="Increase Psy DMG by $1"
 r:"^念動傷害提升(\d+\.\d+%)$"="Increase Psy DMG by $1"
 r:"^核熱傷害提升(\d+%)$"="Increase Nuke DMG by $1"
@@ -589,10 +596,14 @@ r:"^攻擊力降低(\d+%)$"="Decrease ATK by $1"
 r:"^防禦降低(\d+%)$"="Decrease DEF by $1"
 r:"^防禦力降低(\d+%)$"="Decrease DEF by $1"
 r:"^防禦力降低(\d+\.\d+%)$"="Decrease DEF by $1"
+r:"^受到暴擊效果提升(\d+\.\d+%)$"="Increase CRIT DMG Taken by $1"
+r:"^受傷害提升(\d+\.\d+%)$"="Increase DMG Taken by $1"
 r:"^受到傷害提升(\d+%)$"="Increase DMG Taken by $1"
 r:"^受到傷害提升(\d+\.\d+%)$"="Increase DMG Taken by $1"
 r:"^受到的傷害提升(\d+\.\d+%)$"="Increase DMG Taken by $1"
 r:"^造成傷害降低(\d+%)$"="Decrease DMG Dealt by $1"
+r:"^受疾風傷害提高(\d+%)"="Increase Wind DMG Taken by $1"
+r:"^受疾風傷害加深(\d+%)"="Increase Wind DMG Taken by $1"
 r:"^受到核熱傷害提升(\d+%)"="Increase Nuke DMG Taken by $1"
 r:"^受到的治療效果降低(\d+%)"="Decrease Healing Received by $1"
 
@@ -619,6 +630,7 @@ r:"^治療效果提升$"="<size\=26>Increase Healing Effect</size>"
 r:"^受治療降低$"="Decrease Healing Received"
 
 r:"^受弱點傷害提升(\d+%)$"="Increase Weakness DMG by $1"
+受疾風傷害提高=Increase Wind DMG Taken
 r:"^耐性穿透提升(\d+%)$"="Increase Effect RES Ignore by $1"
 
 免疫即死=<size\=28>Instant Kill Immunity</size>
