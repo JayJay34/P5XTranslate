@@ -1,0 +1,67 @@
+----------
+TIMERS + UI
+----------
+星盤試煉=Astrolabe Trials
+
+r:"^本期星盤持續剩餘時間：<color\=#FFC000>(\d+)天(\d+)時</color>$"="Time Left: <color\=#FFC000>$1d $2h</color>"
+r:"^本期星盤持續剩餘時間：<color\=#FFC000>(\d+)時(\d+)分</color>$"="Time Left: <color\=#FFC000>$1h $2m</color>"
+
+r:"<color\=#FFC000>(\d+)天(\d+)時</color>後：\n可用精神力將增加<color\=#FFC000>(\d+)點</color>\(上限為(\d+)\)\n所有怪盜挑戰次數將增加<color\=#FFC000>(\d+)次</color>\(上限為(\d+)\)"=After <color\=#FFC000>$1d $2h</color>:\nIncrease Mental Energy by <color\=#FFC000>$3</color>\n(Up to $4)\nIncrease Thieves Usage by <color\=#FFC000>$5</color>\n(Up to $6)
+r:"<color\=#FFC000>(\d+)時(\d+)分</color>後：\n可用精神力將增加<color\=#FFC000>(\d+)點</color>\(上限為(\d+)\)\n所有怪盜挑戰次數將增加<color\=#FFC000>(\d+)次</color>\(上限為(\d+)\)"=After <color\=#FFC000>$1d $2h</color>:\nIncrease Mental Energy by <color\=#FFC000>$3</color>\n(Up to $4)\nIncrease Thieves Usage by <color\=#FFC000>$5</color>\n(Up to $6)
+
+r:"^試煉中挑戰「監測點」需要消耗精神力及怪盜挑戰次數。\n在每期挑戰開啟後：\n間隔(\d+)天增加，共增加(\d+)次。\n最終精力值上限：<color\=#FFC000>(\d+)</color>\n所有怪盜挑戰次數上限：<color\=#FFC000>(\d+)</color>$"="<size\=25>Each [Monitoring Points] consumes Mental Energy and Thieves Usage. \nIncrease every $1d, up to $2 times.\nMental Energy cap: <color\=#FFC000>$3</color>\nThieves Usage cap: <color\=#FFC000>$4</color></size>"
+
+r:"^磁場資訊：$"="Modifier:"
+r:"^陰影資訊：$"="Shadow(s):"
+r:"^挑戰陣容：$"="Lineup:"
+r:"^已挑戰(\d+)次$"="Attempt(s): $1"
+r:"^挑戰獎勵：$"="Rewards:"
+
+r:"^將<color\=#ffc000>返還</color>消耗的<color\=#ffc000>精神力</color>及<color\=#ffc000>參與次數</color>；\n並<color\=#ff3b37>放棄</color>本次<color\=#ff3b37>挑戰結果</color>。\n是否確認？$"="<color\=#ffc000>Return all</color> consumed <color\=#ffc000>Mental Energy</color> and <color\=#ffc000>Thieves Usage</color>;\n<color\=#ff3b37>Abandon</color> this <color\=#ff3b37>challenge</color>.\nAre you sure?"
+
+r:"^將<color\=#ffc000>全部返還</color>消耗的<color\=#ffc000>精神力</color>及<color\=#ffc000>參與次數</color>；\n並<color\=#ff3b37>放棄</color>監測點<color\=#ff3b37>挑戰進度</color>。是否確認？$"="<color\=#ffc000>Return all</color> consumed <color\=#ffc000>Mental Energy</color> and <color\=#ffc000>Thieves Usage</color>;\n<color\=#ff3b37>Reset this</color> Monitoring Points <color\=#ff3b37>Progress</color>. Confirm?"
+
+r:"^將<color\=#ffc000>全部返還</color>消耗的<color\=#ffc000>精神力</color>及<color\=#ffc000>參與次數</color>；\n監測點<color\=#ff3b37>重新佔據</color>後，才能挑戰新監測點。\n是否確認？$"="<color\=#ffc000>Return all</color> consumed <color\=#ffc000>Mental Energy</color> and <color\=#ffc000>Thieves Usage</color>;\nYou can only challenge new Monitoring Points after <color\=#ff3b37>clearing this</color>.\nAre you sure?"
+
+r:"^剩餘回合:$"="   Turn(s) Left:   <size\=1>_</size>"
+
+精神力不足，無法挑戰。=Not enough Mental Energy.
+監測點重置成功。=Reset Monitoring Point.
+r:"^請<color\=#ff3b37>重新佔據</color>已通過的監測點後，再來挑戰吧。$"="Please <color\=#ff3b37>clear all prerequisite</color> Monitoring Points first."
+
+----------
+CHALLENGES
+----------
+通過監測點：=<size\=24>Monitoring Point(s) Cleared:</size>
+消耗精神力：=<size\=25>Mental Energy Consumed:</size>
+r:"^通過至少(\d+)個「監測點」\((\d)\/(\d)\)$"="Cleared at least $1 [Monitoring Points] ($2/$3)"
+r:"^通過至少(\d+)個「監測點·宮主星」\((\d)\/(\d)\)$"="Cleared at least $1 [Monitoring Point - House] ($2/$3)"
+r:"^通過「監測點·命主星」\((\d)\/(\d)\)$"="Cleared [Monitoring Point - Chart Ruler] ($1/$2)"
+sr:"^通過全部「監測點」\((.*)\/(.*)\)$"="Cleared all [Monitoring Points] ($1/$2)"
+
+----------
+MODIFIERS
+----------
+
+r:"^<color\=#FFFC40>反抗</color>怪盜最終傷害提高(\d+%)，其他怪盜最終傷害降低(\d+%)$"="Increase the Final DMG of <color\=#FFFC40>Rebel</color> Thieves by $1, decrease the Final DMG of other Thieves by $2"
+r:"^<color\=#FFFC40>支配</color>怪盜最終傷害提高(\d+%)，其他怪盜最終傷害降低(\d+%)$"="Increase the Final DMG of <color\=#FFFC40>Dominate</color> Thieves by $1, decrease the Final DMG of other Thieves by $2"
+
+r:"^<color\=#ff381d>火焰</color>/<color\=#00aeff>冰凍</color>/<color\=#fbff37>電擊</color>/<color\=#81ea2c>疾風</color>屬性隊員最終傷害提高(\d+%)，其他怪盜最終傷害降低(\d+%)$"="Increase the Final DMG of <color\=#ff381d>Fire</color>/<color\=#00aeff>Ice</color>/<color\=#fbff37>Electric</color>/<color\=#81ea2c>Wind</color> Thieves by $1, decrease the Final DMG of other Thieves by $2"
+r:"^所有隊員造成<color\=#FFFC40>追加效果</color>時，最終傷害提高(\d+%)$"="Increase all Thieves' Final DMG by $1 when dealing damage with <color\=#FFFC40>Follow Up</color>"
+r:"^所有隊員造成<color\=#FFFC40>持續傷害</color>時，最終傷害提高(\d+%)$"="Increase all Thieves' Final DMG by $1 when dealing damage with <color\=#FFFC40>damage over time</color>"
+r:"^所有怪盜<color\=#FFFC40>受到追加治療</color>後，最終傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="Increase all Thieves' Final DMG by $1 after <color\=#FFFC40>healed</color> for $2 turns, up to $3 stacks."
+r:"^所有怪盜每次受到<color\=#FFFC40>護盾</color>後，最終傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="Increase all Thieves' Final DMG by $1 after <color\=#FFFC40>shielded</color> for $2 turns, up to $3 stacks."
+
+r:"^所有敵人每有一種<color\=#FFFC40>元素異常</color>狀態，受到最終傷害提升(\d+%)；同時擁有(\d+)種<color\=#FFFC40>元素異常</color>狀態時，額外使受到最終傷害提升(\d+%)$"="Increase all enemies' Final DMG Taken by $1 for every <color\=#FFFC40>Elemental Ailments</color> they have; Additionally increase their Final DMG Taken by $3 when they have $2 <color\=#FFFC40>Elemental Ailments</color>"
+r:"^敵人能受到大部分<color\=#FFFC40>精神異常</color>狀態；所有隊員造成<color\=#FFFC40>精神異常</color>狀態時，效果命中大幅提升；處於<color\=#FFFC40>精神異常</color>狀態的敵人受到最終傷害提升(\d+%)$"="Enemies are susceptible to most <color\=#FFFC40>Mental Ailments</color>; Heavily increase all Thieves' EHR when inflicting <color\=#FFFC40>Mental Ailments</color>; Increase the Final DMG Taken of enemies with <color\=#FFFC40>Mental Ailments</color> by $1"
+r:"^戰鬥開始及敵人回合開始時，敵人隨機獲得1種屬性弱點（只會存在最新獲得的弱點），敵人受到ONEMORE/總攻擊傷害提高(\d+%)"="At the start of battle and start of enemies' turn, all enemies randomly gain 1 Weakness (Only the newest Weakness will stay), enemies take $1 damage from ONE MORE/ All-Out Attack"
+
+r:"^效果1：所有敵人最終生命值降低(\d+%)，每回合末回復(\d+%)最大生命值\n效果2：所有敵人當前生命值越低，受到最終傷害越高，低於(\d+%)生命值時最多使受到最終傷害提升(\d+%)$"="Modifier 1: Decrease the Final HP of all enemies by $1, restore $2 Max HP at the end of each turn\nModifier 2: Increase the Final DMG of all enemies the lower their HP are, up to $4 when they are below $3 HP"
+r:"^HIGHLIGHT能量回復速度降低(\d+%)，所有怪盜HIGHLIGHT的最終傷害提高(\d+%)"="Decrease HIGHLIGHT Energy recovery rate by $1, increase all HIGHLIGHT Final DMG by $2"
+
+r:"^所有怪盜處於<color\=#FFFC40>額外回合</color>時，最終傷害提高(\d+%)"="Increase Final DMG by $1 when in <color\=#FFFC40>Extra Turn</color>"
+
+----------
+Combat Menu
+----------
+星盤庇護=Astrolabe Protection

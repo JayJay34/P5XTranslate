@@ -137,6 +137,8 @@ r:"^取消$"="Cancel"
 換魚餌=Change Bait
 
 好友數：=Friends:
+等 級=Level
+樂 園=Paradise
 沒輸入簽名=No Signature
 尚未輸入簽名=No Signature
 刷新好友列表過快。=Please wait before refreshing.
@@ -178,6 +180,8 @@ r:"^椎<color\=#ff0000ff>名</color>{{A}}$"="{{A}} Sh<color\=#ff0000ff>ii</color
 
 r:"^坂<color\=#ff0000ff>井</color>{{A}}$"="{{A}} Sa<color\=#ff0000ff>ka</color>i"
 
+r:"^琴<color\=#ff0000ff>音</color>·{{A}}$"="Ko<color\=#ff0000ff>to</color>ne Montagne"
+
 // P5X Side Quest //
 r:"^佐<color\=#ff0000ff>藤</color> 裕太$"="Yu<color\=#ff0000ff>ta</color> Sato"
 
@@ -208,6 +212,8 @@ r:"^芳<color\=#ff0000ff>澤</color>霞$"="Ka<color\=#ff0000ff>su</color>mi Yosh
 卡門=Carmen
 五右衛門=Goemon
 瓊安=Johanna
+死靈之書=Necronomicon
+米萊迪=Milady
 亞諾希克=Janosik
 羅布羅伊=Rob Roy
 阿爾維達=Awilda
@@ -229,6 +235,8 @@ r:"^芳<color\=#ff0000ff>澤</color>霞$"="Ka<color\=#ff0000ff>su</color>mi Yosh
 安珀羅斯=Ampelos
 烏拉尼亞=Urania
 卡利俄佩=Calliope
+哈耳皮厄=Harpyia
+阿摩笛亞=Amalthea
 
 // Playable Voice Actor & Actress //
 
@@ -259,6 +267,10 @@ CV.勝生真沙子=CV.Masako Katsuki
 CV.原由實=CV.Yumi Hara
 CV.種崎敦美=CV.Atsumi Tanezaki
 CV.牧野由依=CV.Yui Makino
+CV.岡本信彥=CV.Nobuhiko Okamoto
+CV.悠木碧=CV.Aoi Yūki
+CV.戶松遙=CV.Haruka Tomatsu
+CV.前內孝文=CV.Takafumi Maeuchi
 
 ------------------------------------------
 -------- III. Worldbuilding Terms --------
@@ -444,17 +456,23 @@ r:"^(\d+)天後重置$"="Reset after $1 day(s)"
 
 r:"^(\d+)天後過期$"="Expires in $1 day(s)"
 r:"^(\d+)天後下架$"="Expires in $1 day(s)"
+r:"^(\d+)天(\d+)時後下架$"="Expires in $1 day(s) $2 hour(s)"
 
 r:"^(\d+)天(\d+)時後刷新$"="Refreshes in $1d $2h"
 r:"^(\d+)時(\d+)分後刷新$"="Refreshes in $1h $2m"
 r:"^(\d+)天後刷新$"="Refreshes in $1 day(s)"
 r:"^(\d+)分後刷新$"="Refreshes in $1 minute(s)"
 
+r:"^剩餘(\d+)天(\d+)時(\d+)分$"="$1d $2h $3m left"
+r:"^(\d+)天(\d+)時(\d+)分$"=" $1 day(s) $2 hour(s) $3 minute(s)"
 r:"^(\d+)天(\d+)時$"=" $1 day(s) $2 hour(s)"
 r:"^(\d+)時(\d+)分$"=" $1 hour(s) $2 minute(s)"
 r:"^(\d+)時(\d+)分後下架$"="Expires in $1h $2min"
 r:"^剩餘(\d+)時(\d+)分(\d+)秒$"=" $1h $2min $3sec"
+r:"^(\d+)小時(\d+)分鐘$"=" $1h $2m"
 r:"^(\d+)時(\d+)分(\d+)秒$"=" $1h $2min $3sec"
+
+r:"^挑戰倒計時：(\d+)天(\d+)時(\d+)分$"="Time Left: $1d $2h $3m"
 
 擁有:=Owned: 
 免費=FREE
@@ -463,7 +481,7 @@ r:"^領取$"="<size\=28>Claim</size>"
 已領取=Claimed
 前往=Go
 未達成=Not Yet
-挑戰倒計時：=Ends in  
+r:"^挑戰倒計時：$"="Ends in  "
 主角等級=Acc Lv.
 主角經驗=Wonder EXP
 貨幣=Currency
@@ -533,6 +551,16 @@ sr:"^(.*)成長至(\d+)級（(\d+)/(\d+)）$"="<size\=30>Level $1 to Lv. $2 ($3/
 ----------
 Class/ Stats Screen
 ----------
+怪盜等級=Thieves Lv.
+職業說明=Roles
+屬性說明=<size\=40>Elements</size>
+快速篩選=Quick Filter
+怪盜篩選=Filter
+等級由低至高=Low to High Lv.
+等級由高至低=High to Low Lv.
+稀有度由低至高=Low to High ★
+稀有度由高至低=High to Low ★
+
 反抗=Rebel
 擅長單體攻擊，能有效針對單個敵人。=<size\=26>Good at single target attacks, can deal with a single enemy effectively.</size>
 支配=Dominate
@@ -548,6 +576,7 @@ Class/ Stats Screen
 解明=Elucidate
 不直接參與戰鬥，透過支援技能為隊伍提供支援效果。=<size\=26>Does not participate in combat, support the team through support skills.</size>
 怪盜=Thief
+怪盜職業=Thief Roles
 
 生命值=HP
 攻擊力=ATK
@@ -559,9 +588,9 @@ Class/ Stats Screen
 暴擊效果=CRIT DMG
 暴擊傷害=CRIT DMG
 精力回復=SP Recovery
-穿透=DEF Ignore
+穿透=PEN
 倒地值=Knockdown Count
-效果命中=Effect Hit Rate
+效果命中=EHR
 效果抵抗=Effect RES
 傷害加成=DMG Bonus
 傷害減免=DMG RES
@@ -569,7 +598,7 @@ Class/ Stats Screen
 弱點抗性=Weak RES
 耐性穿透=Resist Ignore
 耐性抗性=Resist Bonus
-治療效果=Healing Effect
+r:"^治療效果$"="<size\=22>Healing Effect</size>"
 受治療效果=Healing Received
 護盾效果=Shield Effect
 受護盾效果=Shield Received
@@ -591,7 +620,17 @@ Class/ Stats Screen
 生命成長率=HP Growth
 攻擊成長率=ATK Growth
 防禦成長率=DEF Growth
-上陣面具屬性會全部附加至主角=Wonder's stats are his \nequipped Persona stats combined
+上陣面具屬性會全部附加至主角=<size\=20>Wonder's stats are his \nequipped Persona stats combined</size>
+上陣人格面具的屬性會同時附加給主角，提高<color\=#870000>主角屬性</color>。=Wonder's stats are his \n<color\=#870000>equipped Persona stats combined</color>.
+
+----------
+MENTAL IMAGE
+---------
+啟動前置心象後解鎖=Unlock after activating\n the preceding skill
+r:"^提升生命值(\d+)\n"="Increase HP by $1\n"
+r:"^提升防禦力(\d+)\n"="Increase DEF by $1\n"
+r:"^提升攻擊力(\d+)\n"="Increase ATK by $1\n"
+
 
 // Wonder Skill Tree //
 
@@ -647,113 +686,9 @@ r:"^潛能詳情$"="<size\=27>Potential Details</size>"
 改造=<size\=19>Reform</size>
 突破=<size\=19>Enhance</size>
 
+已達到等級上限。=Reached level cap.
 已達到最大經驗，無法繼續添加材料。=Reached max level. Cannot add more upgrade materials.
 r:"^怪盜等級上限提升至<color\=#FFF000>LV.(\d+)</color>$"="Increase max level to <color\=#FFF000>Lv.$1</color>"
-
-----------
-Guild - Paradise - Raid Boss
-----------
-個人積分=Score
-總積分=Total Score
-積分：=Score: 
-本期歷史積分=Personal Best	
-歷史積分用於領取積分獎勵、參與挑戰排名\n重置挑戰不會清除歷史積分=<size\=28>Total Pts. are used for challenge rewards and paradise ranking. \nReseting the fight won't delete your Total Pts.</size>
-積分統計進度=Boss Beaten
-積分統計進度會記錄本期分數<color\=#ef0000>最高</color>的<color\=#ef0000>2個</color>首領的積分總和=<size\=29>Only the sum of your <color\=#ef0000>2 highest</color> scores will count toward your Total Pts.</size>
-當前積分=Current Pts.
-樂園排行=Paradise Rank
-樂園活躍度=Activity Pts.
-r:"今日活躍：(\d+\/\d+)"=Today's Score: $1
-r:"近7天貢獻 (\d+)"=7d Contribution: $1
-
-所屬樂園=Paradise\nName:
-樂園職位=Position:
-代理人等級=Level
-樂園人數=Members
-樂園影響力=Influence
-本樂園排名獎勵=Rank Rewards
-
-成員=Member
-代理人=Leader
-副手=Associate
-<color\=#81ea2c>線上</color>=<color\=#81ea2c>Online</color>
-
-挑戰難度·簡單=Easy
-挑戰難度·普通=Normal
-挑戰難度·困難=Hard
-挑戰難度·挑戰=Challenge
-挑戰難度·噩夢=Nightmare
-基礎傷害積分=Base DMG
-虛弱期傷害積分=Weakness DMG
-首領擊殺積分=Defeated Leader
-難度係數=Difficulty Multiplier
-r:"難度係數：<color\=#0e68c9>(\d+)</color>"=<size\=25>Multiplier: <color\=#0e68c9>$1x</color></size>
-r:"難度係數：<color\=#0e68c9>(\d+\.\d+)</color>"=<size\=25>Multiplier: <color\=#0e68c9>$1x</color></size>
-BOSS總積分：=Current Score:
-長按怪盜可便捷進行培養=<size\=25>Hold press on the party\nmember to customize</size>
-可用協助次數：=Assist Units\nAvailable
-樂園=<size\=32>Paradise</size>
-鎖定陣容=<size\=20>Team Lineup</size>
-
-獎勵詳情=Rewards
-任意樂園成員首次參與挑戰後活躍值+1=+1 Activity Point from each member when challenging the weekly for the first time.
-r:"樂園累計活躍每達到指定值後可領取對應獎勵，當前：<color\=#eade10>(\d+)</color>"=Total accumulated Activity Points: <color\=#eade10>$1</color>
-r:"個人歷史總積分達到指定值後可領取對應獎勵，當前：<color\=#eade10>(\d+)</color>"=Receive rewards after earning a certain amount of points. Your Personal Best: <color\=#eade10>$1</color>
-已獲得本週全部獎勵=You're all set! Come back next week...\n or aim for higher scores!
-積分計算規則：\n當前積分\=挑戰積分*難度係數\n同一BOSS多個難度只記錄歷史最高分數=Score Formula:\nChallenge Score * Multiplier\n\nOnly the highest score is saved between runs.
-
-<color\=#8F8D8D>1分鐘前線上</color>=<color\=#8F8D8D>1 Minute</color>
-<color\=#8F8D8D>1小時前線上</color>=<color\=#8F8D8D>1 Hour</color>
-<color\=#8F8D8D>1天前線上</color>=<color\=#8F8D8D>1 Day</color>
-sr:"<color\=#8F8D8D>(.*)分鐘前線上</color>"=<color\=#8F8D8D>$1 Minutes</color>
-sr:"<color\=#8F8D8D>(.*)小時前線上</color>"=<color\=#8F8D8D>$1 Hours</color>
-sr:"<color\=#8F8D8D>(.*)天前線上</color>"=<color\=#8F8D8D>$1 Days</color>
-sr:"(.*?)人線上"=$1 Online
-sr:"<color\=#FF0000>(.*)</color>加入了樂園。"=<color\=#FF0000>$1</color> joined the Paradise.
-sr:"<color\=#FF0000>(.*)</color>退出了樂園。"=<color\=#FF0000>$1</color> left the Paradise.
-sr:"<color\=#FF0000>(.*)</color>將<color\=#FF0000>(.*?)</color>移出了樂園。"=<color\=#FF0000>$1</color> kicked <color\=#FF0000>$2</color> from the Paradise.
-
-基礎傷害積分=Base DMG
-虛弱期傷害積分=Weakness DMG
-首領擊殺積分=Defeated Leader
-難度係數=Difficulty Multiplier
-r:"難度係數：<color\=#0e68c9>(\d+)</color>"=<size\=25>Multiplier: <color\=#0e68c9>$1x</color></size>
-r:"難度係數：<color\=#0e68c9>(\d+\.\d+)</color>"=<size\=25>Multiplier: <color\=#0e68c9>$1x</color></size>
-BOSS總積分：=Current Score:
-
-成員=Member
-代理人=Leader
-副手=Associate
-<color\=#81ea2c>線上</color>=<color\=#81ea2c>Online</color>
-
-// Paradise Tags //
-
-休閒娛樂=Leisurely
-佛系玩家=Peaceful
-自由暢玩=Casual
-
-鎖定提示=Lock
-以下<color\=#ef0000>怪盜、面具與啟示</color>會被鎖定到本挑戰中不可更換，是否確認出戰？=<size\=24>You cannot change the chosen <color\=#ef0000>Thieves, Personas and Revelation Cards</color> until you reset the fight</size>
-以下怪盜裝備的<color\=#ef0000>啟示</color>被其他BOSS鎖定，選擇確認以調整啟示。=The following Thieves <color\=#ef0000>Revelation Card</color> is locked by other bosses. Please switch.
-重置挑戰會解除陣容鎖定並清空當前總積分，是否繼續=<size\=28>Resetting the fight will unlock your team lineup and clear the current score, are you sure? \n(This will not clear your Personal Best)</size>
-尚未挑戰=Not challenged yet
-
-累積分數：=Total Score: <size\=1>_</size>
-虛弱剩餘回合：=Turn Remaining:   <size\=1>_</size>
-r:"^虛弱期獲得積分×$"="Score During Weak x"
-r:"^倍$"="<size\=10> </size>!"
-
-所有敵人對<color\=#fbff37>電擊</color>屬性的適應性變為弱=All enemies become weak to <color\=#fbff37>Electric</color> DMG
-處於<color\=#ff381d>燃燒</color>狀態的敵人受到的傷害提高20%=Enemies inflicted with <color\=#ff381d>Burn</color> +20% DMG Taken
-<color\=#FFFC40>支配</color>怪盜造成傷害提高20%=Increase DMG Dealt of <color\=#FFFC40>AoE</color> allies by +20%
-所有怪盜無法暴擊，人格面具技能/追加效果造成的<color\=#FFFC40>最終傷害</color>提高，提高值\=暴擊率*(暴擊效果-100%)。（最多計入100%暴擊率）=<size\=22>All allies can't CRIT, increase the <color\=#FFFC40>final damage</color> of Persona Skills/ Follow Up. Increase \= \nCRIT * (CRIT DMG - 100%) (Up to 100% CRIT)</size>
-所有怪盜<color\=#ff0036>詛咒</color>傷害提高20%=Increase <color\=#ff0036>Curse</color> damage by 20%
-所有怪盜<color\=#FFFC40>射擊</color>傷害提高20%=Increase <color\=#FFFC40>Gun</color> damage by 20%
-敵人每有一個<color\=#FFFC40>負面狀態</color>，受到的傷害提升6%，最多使其受到的傷害提升30%=For every <color\=#FFFC40>debuff</color> the enemy have, increase DMG Taken by 6%, up to 30%
-所有怪盜<color\=#FFFC40>HIGHLIGHT</color>傷害提升50%=Increase <color\=#FFFC40>HIGHLIGHT</color> damage by 50%
-敵人每有一種<color\=#FFFC40>元素異常</color>狀態，受到的傷害提升10%，最多使其受到的傷害提升40%=For every <color\=#FFFC40>Elemental Ailment</color> the enemy have, Increase DMG Taken by 10%, up to 40%
-r:"^首領的適應性發生變化，所有怪盜造成<color\=#FFFC40>弱點傷害</color>提升(\d+%)$"="<size\=27>Change the affinities of the boss, increase <color\=#FFFC40>Weakness DMG</color> by $1</size>"
-r:"^<color\=#FFFC40>WONDER</color>造成<color\=#FFFC40>最終傷害</color>提高(\d+%)，其他隊員造成最終傷害降低(\d+%)"="Increase <color\=#FFFC40>final damage</color> of <color\=#FFFC40>Wonder</color> by $1, \ndecrease final damage of other allies by $2"
 
 //////////////////////////////
 /// e. Handbook Challenges ///
@@ -864,8 +799,8 @@ r:"擁有(\d+)張等級為(\d+)級的宙位啟示卡"=Own $1 Lv. $2 Arcana Revel
 /////////////////////////////////////
 
 本期剩餘時間：=BP Time left:
-探索經驗：=BP EXP:
-本週上限：=7d cap:
+探索經驗：=BP EXP: <size\=1>.</size>
+本週上限：=7d cap: <size\=1>.</size>
 本期剩餘時間=BP Time:
 計畫等級提升=BP LEVEL UP
 每次完成今日計畫可獲得=Complete daily tasks to receive useful rewards:
@@ -875,6 +810,7 @@ r:"擁有(\d+)張等級為(\d+)級的宙位啟示卡"=Own $1 Lv. $2 Arcana Revel
 禮包=Gift Bag
 成長經驗=BP EXP
 本週累計「今日計畫」領獎次數\n「下週一」領取對應「補給禮包」=<size\=22>Number of dailys completed this week\nLog in next Monday to get the Gift Box</size>
+本週累計「今日計畫」領獎次數\n「<color\=#ff3b37>後日登入</color>」領取對應「補給禮包」=<size\=22>Number of dailys completed this week\n<color\=#ff3b37>Log in the day after tomorrow</color> \nto get the Gift Box</size>
 本週累計「今日計畫」領獎次數\n「<color\=#ff3b37>明日登入</color>」領取對應「補給禮包」=<size\=22>Number of dailys completed this week\n<color\=#ff3b37>Log in Tomorrow</color> to get the Gift Box</size>
 距離下次領取剩餘：=Time until next Gift Box:
 r:"^(\d+)時(\d+)$"=" $1 hours $2 minutes"
@@ -905,6 +841,7 @@ r:"進行1次人格面具育成 \((\d)\/(\d)\)"=Inherit a Persona skill ($1/$2)\
 r:"^完成1次「往日回溯」挑戰 \((\d)\/(\d)\)$"="Complete a Palace Boss Challenge ($1/$2)\n<color\=#8F8D8D>(Stamina Cost: 30)</color>"
 r:"^通關1次「閼凶夢之扉」 \((\d)\/(\d)\)$"="Complete 1 Guild Battle ($1/$2)"
 r:"^完成1次「心之海試煉」 \((\d)\/(\d)\)$"="Complete 1 Sea of Souls Trial ($1/$2)"
+r:"^完成1次「委託」派遣 \((\d)\/(\d)\)$"="Complete 1 Dispatch in Metaverse Commissions ($1/$2)"
 
 // WEEKLY //
 r:"累計消耗(\d+)魂石 \((\d+)\/(\d+)\)"=Spend a total of $1 Soul Gems ($2/100000)
@@ -914,6 +851,8 @@ r:"累計消耗(\d+)點體力 \((\d+)\/(\d+)\)"=Spend a total of 1,250 Stamina (
 r:"^累計完成12次「厄抑之境」 \((\d+)\/(\d+)\)$"=Complete 12 Farming Domain ($1/12)
 r:"完成1次「往日回溯」 \((\d)\/(\d)\)"=Complete a Past Palace Boss challenge ($1/$2)
 r:"^達到「閼凶夢之扉」第4檔積分要求 \((\d)\/(\d)\)$"="Reach the 4th score bracket in Guild Battle ($1/$2)"
+r:"在「心軌擇行」中通過10個月臺 \((\d+)\/10\)"=Clear 10 Platforms in Heart Rails ($1/10)
+r:"在「星盤試練」通過1個「監測點」 \((\d+)\/1\)"=Clear 1 Monitoring Point in Astrolabe Trials ($1/1)
 
 // SEASON //
 r:"在「命運交錯之時」中通關「收下慾望」 \((\d)\/(\d)\)"=Complete the Final Mission in the \nPhantom Thieves event ($1/$2)
@@ -921,6 +860,8 @@ r:"在「怪盜交易所」中消耗3000個怪盜徽記 \((\d+)\/(\d+)\)"=Spend 
 r:"累計進行50次「角色簽約」&「武器補給」 \((\d+)\/(\d+)\)"=Perform 50 pulls in total ($1/$2)
 r:"在「心之海試煉」中通過「西部施工區」 \((\d)\/(\d)\)"=Pass the Western Construction Zone\nin the Sea of Souls Trial ($1/$2)
 r:"完成12次「在盧布朗度過」日程 \((\d+)\/(\d+)\)"=Spend time in Leblanc 12 times ($1/$2)
+r:"在「心軌擇行」中完成1次挑戰 \((\d+)\/1\)"=Complete 1 challenge in Heart Rails ($1/1)
+r:"完成一個星盤試練的「宮主星」或「命主星」 \((\d+)\/1\)"=Clear 1 [House] or [Chart Ruler] in Astrolabe Trials ($1/1)
 
 
 ////////////////////////////////
@@ -931,11 +872,15 @@ r:"完成12次「在盧布朗度過」日程 \((\d+)\/(\d+)\)"=Spend time in Leb
 天然打磨的稀有晶狀珀芯，可用於『角色契約』、『武器補給』及『購買主角體力』。=A naturally polished rare crystalline core, can be used in [Character Contract], [Weapon Supply], and [Purchase Wonder Stamina].
 異界原晶=Premium Ambers
 
+r:"^簽約$"="Pulls"
+
 每10次簽約必出四星或以上怪盜角色。50次簽約後可自選新手五星怪盜角色。具體內容查看【說明】=<b><color\=#FFDF00>Beginner Banner</color></b>\nEvery 10 pulls will guarantee a 4★ character. 6.2% Chance. Choose a 5★ Thief with 50 accumulated pulls. 
 新手推薦契約中簽約次數達到=When pull count reaches
 後可自選一名以下5★怪盜=you can choose one 5 ★ Thief
 
-每10次簽約必出四星或以上怪盜角色。活動限定五星角色僅在UP期間，透過對應簽約獲得。具體內容查看【說明】=<b><color\=#FFDF00>Limited Character Banner</color></b>\nEvery 80 pulls will guarantee a 5★ character. 0.8% Chance.\nEvery 10 pulls will guarantee a 4★ character. 6.2% Chance. \nEvery 4★ and 5★ has a 50% chance to be from this banner. If not, then the next one will.\n\n<color\=#FFDF00>The current RATE UP character is only available in this banner.</color> The pull count will carry between banners.
+每10次簽約必出四星或以上怪盜角色。活動限定五星角色僅在UP期間，透過對應簽約獲得。具體內容查看【說明】。=<b><color\=#FFDF00>Limited Character Banner</color></b>\nGet 1 5★ every <color\=#FFDF00>110</color> or <color\=#FF0000>80</color> pulls;\n<color\=#FFDF00>0.2%</color> or <color\=#FF0000>0.8%</color>; <color\=#FFDF00>No 50/50</color><size\=20> </size>or<size\=20> </size><color\=#FF0000>50/50</color>\nGuarantee 1 4★ every 10 pulls.\n\n\n\n\n\n\n<color\=#FFDF00><size\=25>The current RATE UP character is only available in this banner.</size>\n</color><size\=25>Pull count will carry between banners of the same pity system.</size>
+
+次可獲得<color\=#EADE10>5★盲選偶像合約             ×1</color>，使用後隨機獲得以下怪盜=<size\=26>                       Get <color\=#EADE10>5★Random Kaidol Contract</color></size>
 
 每10次補給必出四星或以上武器。具體內容查看【說明】=<b><color\=#FFDF00>Weapon Banner</color></b>\nChoose your RATE UP weapon and two others. Every 70 pulls will guarantee a 5★ weapon. 0.8% Chance.\n\n\n\n\n\n<color\=#FFDF00>The limited character's 5★ weapon is only available in this banner.</color> The pull count will carry between banners.
 
@@ -951,8 +896,13 @@ r:"完成12次「在盧布朗度過」日程 \((\d+)\/(\d+)\)"=Spend time in Leb
 獎勵類型=Type
 獎勵名稱=Name
 契約類型=Banner Type
+角色活動契約·隨機=50% Banner
+角色活動契約·精準=100% Banner
+武器活動補給=Weapon Banner
 簽約時間=Time of Pull
-r:"剩餘時間：(\d+)時(\d+)分"=<color\=#ff0000>Ends in $1h $2m</color>
+r:"^剩餘時間：(\d+)天(\d+)時(\d+)分$"="Ends in $1d $2h $3m"
+r:"^剩餘時間：(\d+)天(\d+)時$"="Ends in $1d $2h"
+r:"^剩餘時間：(\d+)時(\d+)分$"="Ends in $1h $2m"
 
 r:"當前保底進度(\d+)\/(\d+)"=Current Pull Count: $1 / $2 \n<color\=#FFDF00>50% chance to win the RATE UP 5★</color>
 r:"當前保底進度(\d+)\/(\d+)，下次出5星時必出"=Current Pull Count: $1 / $2 \nNext 5★ is guaranteed RATE UP
@@ -968,6 +918,10 @@ Confidants (SL) and City Activities
 行動力=Energy
 行動值=Energy Points
 『行動值』\n探索都市所需的基本能量，每天會自動恢復。\n每日05:00恢復5點。=[Energy Points] \nEnergy needed for daily activities. \nAutomatically restore 5 at 05:00 every day.
+高額獎勵：<color\=#FFFF00>1倍</color>=<size\=24>Bonus Activities: <color\=#FFFF00>1x</color></size>
+高額獎勵：<color\=#FFFF00>3倍</color>=<size\=24>Bonus Activities: <color\=#FFFF00>3x</color></size>
+「高額獎勵」日程將消耗1點行動力，並獲得1倍獎勵。=The [Bonus Activities] will consume 1 Energy and give 1x rewards.
+「高額獎勵」日程將消耗3點行動力，並獲得3倍獎勵。=The [Bonus Activities] will consume 3 Energy and give 3x rewards.
 持有=Own
 
 消耗=Spend
@@ -992,16 +946,27 @@ sr:"^<color\=#FFC000>(.*)</color>、<color\=#FFC000>(.*)</color>的協同者等�
 
 r:"^作為禮物贈與協同者，可提升(\d+)點親密度，首次贈送額外增加(\d+)點親密度，『喜愛之物』額外增加(\d+)點親密度。$"="<size\=25>\nGrants $1 Confidant Points. \nFirst time bonus grants $2 Confidant Pts. \n[Favourite Items] grants $3 Confidant Pts.</size>"
 
-
+r:"^手裡有{{A}}可能喜歡的東西，\n要送給她嗎？$"="I've got something {{A}} might like.\nShould I give it to her?"
 r:"^說起來，\n手上正好有{{A}}會喜歡的東西……$"="Speaking of, I've got just the thing {{A}} likes..."
 r:"^說起來，\n手上好像有{{A}}會喜歡的東西……$"="Speaking of, I think I got just the thing {{A}} likes..."
 r:"^說起來，手上似乎……\n有{{A}}會喜歡的東西……$"="Speaking of, I think I got just the thing {{A}} likes..."
 r:"^說起來，那個東西說不定{{A}}會喜歡……$"="Speaking of, maybe {{A}} would like that gift..."
 要送出去嗎？=Want to give them a gift?
 要送給她嗎？=Want to give her a gift?
-r:"^親密度\+(\d+)\n首次贈送額外\+(\d+)\n『喜愛之物』額外\+(\d+)。$"="Confidant Points +$1\nFirst Time Bonus +$2\n[Favourite Items] +$3"
+
+r:"^基礎好感度\+(\d+)<color\=#008CE5><color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n偏好禮物額外\+(\d+)<color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color>\n偏好禮物首次贈送額外\+(\d+)$"="Confidant Points +$1<color\=#008CE5><color\=#008CE5>（<size\=40><sprite\=1></size>+$2）</color></color>\nFavourite Items +$3<color\=#008CE5>（<size\=40><sprite\=1></size>+$4）</color>\nFavourite Items \nFirst Time Bonus +$5"
+r:"^基礎好感度\+(\d+)\n偏好禮物額外\+(\d+)\n偏好禮物首次贈送額外\+(\d+)$"="Confidant Points +$1\nFavourite Items +$2\nFavourite Items \nFirst Time Bonus +$3"
+
+r:"^基礎好感度\+(\d+)<color\=#008CE5><color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n<color\=#787878>偏好禮物額外\+(\d+)<color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n<color\=#787878>偏好禮物首次贈送額外\+(\d+)</color>$"="Confidant Points +$1<color\=#008CE5><color\=#008CE5>（<size\=40><sprite\=1></size>+$2）</color></color>\n<color\=#787878>Favourite Items +$3<color\=#008CE5>（<size\=40><sprite\=1></size>+$4）</color></color>\n<color\=#787878>Favourite Items \nFirst Time Bonus +$5</color>"
+
+r:"^基礎好感度\+(\d+)\n<color\=#787878>偏好禮物額外\+(\d+)</color>\n<color\=#787878>偏好禮物首次贈送額外\+(\d+)</color>$"="Confidant Points +$1\n<color\=#787878>Favourite Items +$2\n<color\=#787878>Favourite Items \nFirst Time Bonus +$3</color>"
+
+r:"^本次贈送會增加<color\=#FFDE00>(\d+)<color\=#008CE5>（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>好感度$"="Gain <color\=#FFDE00>$1<color\=#008CE5>（<size\=40><sprite\=1></size>+$2）</color></color>Confidant Pts"
+r:"^本次贈送會增加<color\=#FFDE00>(\d+)</color>好感度$"="Gain <color\=#FFDE00>$1</color> Confidant Pts"
+
 確定這次約會不送禮物嗎？=Are you sure you do not want to give them a gift?
 目前還是算了吧……=Forget it...
+
 
 r:"^和{{A}}的關係就要加深了……$"="The bond with {{A}} \nis about to deepen!"
 r:"^和{{A}}的關係差不多要加深了……$"="The bond with {{A}} \nis about to deepen!"
@@ -1096,6 +1061,7 @@ r:"^幫助{{A}}$"="<size\=24>Help out\n{{A}}</size>"
 和阿七聊聊=Talk to the mascot
 要參與阿七的遊戲嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to play the mascot's game? (<color\=#ff0000>Spend 1 Energy Point</color>)
 
+要陪{{A}}一起去嗎？=Want to hang out with {{A}}?
 r:"^要帶{{A}}回家嗎……$"="Want to take {{A}} home?"
 r:"^那就帶{{A}}回家吧……$"="Then let's bring {{A}} home..."
 
@@ -1133,6 +1099,7 @@ r:"^決定陪{{A}}了……$"="I've decided to accompany {{A}}..."
 
 走吧=Let's go
 一起去=Go together
+我和你一起去=I'll go with you
 還是算了=I'd rather not
 要去別的地方……=<size\=24>I have somewhere else to go...</size> 
 安靜傾聽=Listen quietly
@@ -1142,6 +1109,7 @@ r:"^決定陪{{A}}了……$"="I've decided to accompany {{A}}..."
 今天很忙……=I'm busy today...
 在酒吧度過=Spend time in the bar
 另選日子吧……=Choose another day...
+現在不太方便……=<size\=28>Now is not a good time...</size> 
 下次再說=Next time
 你好呀=Hello
 摸摸它=Pet it
@@ -1303,8 +1271,6 @@ sr:"^在下次通過『(.*)』、『(.*)』、『(.*)』關卡時，額外獲得
 sr:"^在下次通過『(.*)』、『(.*)』關卡時，額外獲得大量獎勵。$"="The next time you complete a $1 or $2, gain lots of bonus rewards."
 sr:"^在下次通過『(.*)』、『(.*)』關卡時，額外獲得大量獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you complete a $1 or $2, gain lots of bonus rewards.\n<color\=#FFC000>（$3 time(s) left）</color>"
 
-r:"^塔$"="Tower"
-
 星星=Star
 
 月亮=Moon
@@ -1360,6 +1326,8 @@ r:"^厄抑之境·啟示套裝$"="Revelation Card Farm"
 怪盜潛能材料=Char Ascend (30)
 武器突破材料=Wpn Ascend (30)
 
+r:"^怪盜天賦材料$"="<size\=30>Mental Image (30)</size>"
+
 r:"^保底進度：<color\=#0665ca>(\d+)/(\d+)</color>$"="Pity: <color\=#0665ca>$1/$2</color>"
 r:"^領取 <color\=#0665ca>(\d+)</color> 次必得$"="Guarantee after <color\=#0665ca>$1</color> time(s)"
 r:"持有印記：(\d+)"=Mark Owned: $1
@@ -1387,6 +1355,9 @@ r:"^{{A}}探索度獎勵$"="Palace Exploration Reward"
 每日領取補給\n濃縮咖啡<color\=#FFEC00>x1</color>=Claim daily\nEspresso <color\=#FFEC00>x1</color>
 r:"^活動期間，成功挑戰「養成材料」中的技能升級材料、怪盜潛能材料、武器突破材料副本，可以獲得雙份獎勵。$"="During the event, you can get double rewards after completing Incense Farm, Character Ascension Farm, Weapon Ascension Farm."
 r:"^今日雙份剩餘次數：$"="Today  2x  Rewards:"
+r:"^每日次數：$"="Attempt(s):"
+r:"^限時關每日次數：$"="Daily Attempt(s):"
+r:"^限時關今日剩餘次數：$"="Daily Attempt(s):"
 
 ----------
 Resources & Shop Items (Marthym's Shop)
@@ -1395,6 +1366,7 @@ Resources & Shop Items (Marthym's Shop)
 枚異界原晶=Ambers
 現金=Yen
 魂石=Soul Gems
+異世界探索獲得的神秘石頭，可用於角色與人格面具養成。=Mysterious gems obtained from the Metaverse, can be used for character or persona growth.
 r:"^(\d+)魂石$"="$1 Soul Gems"
 怪盜經驗=Thief EXP
 首次=First Time
@@ -1414,6 +1386,7 @@ r:"^委託、消費大酬賓等獎勵或者購買<link\="mqm"><u>每日祈願納
 要購買這件商品嗎？=Do you want to purchase this item?
 自選禮包=Customize
 點擊領取今日供給=Click to Claim!
+r:"^限購$"="Limit"
 r:"^立即獲得$"="Immediately get"
 r:"^連續30天，每天5點贈送$"="Daily at 5 am (UTC+8) for 30 days"
 
@@ -1429,6 +1402,7 @@ r:"^零件$"="Parts"
 
 迷情香=Charming Incense
 金絲香=Golden Incense
+怒顏香=Wrathful Incense
 香塔L=L Incense
 香塔M=M Incense
 香塔S=S Incense
@@ -1450,11 +1424,23 @@ r:"^零件$"="Parts"
 未知宿命橙·宙=Random 4★ Universe
 未知宿命紫·宙=Random 3★ Universe
 被迷霧籠罩的命運之卡，獲取後會隨機變化為一張同品質的宙位啟示卡。=<size\=22>Card of fate shrouded in mist, transforms into a random Universe Revelation Card of the same quality after purchase.</size>
+宇宙的箴言=4★ Revelation
+來自宇宙的命運指引，打開後可自選一張橙色指定套裝的基礎啟示卡。=A guidance of fate from the Universe, can be used to gain 1 Orange Revelation Card from any set
 未知宿命橙·基礎=<size\=18>Random 4★ Revelation</size>
 被迷霧籠罩的命運之卡，獲取後會隨機變化為一張橙色品質的日月星辰位啟示卡。=<size\=22>Card of fate shrouded in mist, transforms into a random 4★ Sun/ Moon/ Star/ Planet Revelation Card after purchase.</size>
 未知宿命紫·基礎=<size\=18>Random 3★ Revelation</size>
 被迷霧籠罩的命運之卡，獲取後會隨機變化為一張紫色品質的日月星辰位啟示卡。=<size\=22>Card of fate shrouded in mist, transforms into a random 3★ Sun/ Moon/ Star/ Planet Revelation Card after purchase.</size>
 sr:"^未知宿命藍·(.*)$"="2★ • $1"
+
+星辰之鈴=Bell of Stars
+可用於「怪盜心象·屬性強化」養成的材料。=Can be used in [Mental Image].
+玲瓏辰星=Exquisite Star
+星屑之瓶·低階=<size\=18>Stardust Bottle • Low Level</size>
+星屑之瓶·高階=<size\=17>Stardust Bottle • High Level</size>
+明星水晶球·低階=<size\=20>Crystal Ball • Low Level</size>
+明星水晶球·高階=<size\=20>Crystal Ball • High Level</size>
+
+秘聞點券=Mysteries Voucher
 
 {{A}}商店購買獲得=<size\=25>Purchase from Marthym's Shop</size>
 完成雛鳥計畫任務=Completion Battle Pass Missions
@@ -1464,13 +1450,18 @@ sr:"^未知宿命藍·(.*)$"="2★ • $1"
 透過樂園百貨兌換=<size\=25>Exchange from Carpe Diem Shop</size>
 透過心海秘所兌換=Exchange from Velvet Shop
 參與心之海試煉獲得=Take on the Sea of Souls Trials
+參與天鵝絨試煉獲得=Take on Velvet Trials
+參與星盤試煉獲得=Take on Astrolabe Trials
 透過氣運駐場兌換=Exchange from Destiny Land
 
 商品已售罄。=Item is sold out.
+明日領取=Claim Tomorrow
+r:"^可領取$"="Claim"
 
 {{A}}可沒在裡面放可怕的東西哦～？=I didn't put anything scary in there～
 確定買這個嗎？=Are you sure you want to buy this?
 看清楚啦～不要買錯了阿！=Look closely～\nDon’t buy the wrong one!
+r:"^加贈$"="Get            <size\=1>.</size>"
 
 ///////////////////////////////////////////
 /// k. Velvet Challenges & Sea of Souls (SoS)///
@@ -1483,10 +1474,15 @@ sr:"^未知宿命藍·(.*)$"="2★ • $1"
 保級條件：=Relegation:
 r:"^排名<color\=#FFF000>前(\d+)</color>$"=" Rank <color\=#FFF000>Top $1</color>"
 r:"^<color\=#FFFFFF>\(當前<color\=#FFF000>第(\d+)名</color>\)</color>$"="<color\=#FFFFFF>(Currently <color\=#FFF000>Rank $1</color>)</color>"
+r:"^<color\=#ef0000>下期降級</color>$"="<color\=#ef0000>Demotion</color>"
 r:"^降級條件：排名(\d+)名以後$"="Demotion: After Top $1"
+r:"^<color\=#8B8A8A>\(當前60%以後\)</color>$"="<color\=#8B8A8A>(Currently above 60%)</color>"
 r:"^總積分達到<color\=#FFF000> (\d+) </color>$"="Reach <color\=#FFF000> $1 </color> Total Score"
+r:"^分數：暫無記錄$"="Score: No Record"
 暫無記錄=No Record
 r:"^分數：$"="Score:"
+r:"^上半場$"="<size\=27>Side A</size>"
+r:"^下半場$"=" <size\=27>Side B</size>"
 r:"^僅展示當前段位前(\d+)名怪盜資訊$"="Only the info of the top $1 Phantom Thieves will be shown"
 8等星=8th Star
 7等星=7th Star
@@ -1499,13 +1495,14 @@ r:"^僅展示當前段位前(\d+)名怪盜資訊$"="Only the info of the top $1 
 r:"(\d)等星(\d)階"=$1-Star Tier $2
 首次晉級至新段位後可獲得=Upon promotion to a new Star rank for the first time, you can earn the following rewards.
 排名獎勵=<size\=36>Ranking</size>
-本期試煉結束後郵件發放，參與一次試煉可獲得=Rewards will be given on the end of this trial.
+本期試煉結束後郵件發放，參與一次試煉可獲得=Rewards will be given on the end of this trial
 僅展示當前段位前999名怪盜團資訊=Shows up to 999 players in the current trial.
 總分數：=Score:
 本期排名：=Top: 
 排名：=Top
 以後=^
 段位獎勵=<size\=28>Rank Awards</size>
+任務獎勵隨每期心之海進行重置=Rewards will reset on the end of this trial
 r:"^累計獲得星數（<color\=#EF0000>(\d+)</color>/(\d+)）$"="Get (<color\=#EF0000>$1</color>/$2）Stars"
 r:"^累計獲得（<color\=#EF0000>(\d+)</color>/(\d+)）分$"="Get (<color\=#EF0000>$1</color>/$2) Points"
 
@@ -1529,16 +1526,19 @@ r:"(\d+)次行動內完成"=Win in $1 turn(s)
 關卡尚未通關，是否保存當前進度並暫時離開？=Do you want to save your progress and leave?
 選擇「清空進度」會重置當前關卡進度並重新挑戰。=Select [No] to reset the level and retry.
 
+試煉一=Trial 1
+試煉二=Trial 2
+試煉三=Trial 3
 r:"^擊敗低階陰影（(\d+)/(\d+)）$"="Defeat low level \nShadows ($1/$2)"
 r:"^擊敗菁英陰影（(\d+)/(\d+)）$"="Defeat elite Shadows ($1/$2)"
 r:"^乘坐電梯$"="Take the Elevator"
 
-造成WEAK/總攻擊時獲得分數=Enemy Weakness Attack Score
+造成WEAK/總攻擊時獲得分數=Weak DMG/ All-Out Attack
 火焰/念動屬性隊員攻擊時獲得分數=Fire / Psy Attack Score
 冰凍/核熱屬性隊員攻擊時獲得分數=Ice / Nuclear Attack Score
 電擊/祝福屬性隊員攻擊時獲得分數=Elec / Bless Attack Score
 疾風/詛咒屬性隊員攻擊時獲得分數=Wind / Curse Attack Score
-陣亡人數不超過0人=Have no downed characters
+陣亡人數不超過0人=No Faint
 r:"X(\d+)倍"=x$1
 獎勵=<size\=24>Rewards</size>
 章節獎勵=<size\=36>Rewards</size>
@@ -1608,6 +1608,8 @@ r:"^特性提升$"="<size\=25>Upgrade to</size>"
 r:"^攻擊$"="<size\=22>Attack</size>"
 r:"^防禦$"="<size\=19>Defense</size>"
 r:"^生存$"="<size\=18>Support</size>"
+r:"^命中$"="EHR"
+r:"^抵抗$"="<size\=25>Resist</size>"
 r:"^妨害$"="<size\=27>Boost</size>"
 r:"^特殊$"="<size\=21>Special</size>"
 r:"^/定位$"="<size\=24>/Type</size>"
@@ -1774,6 +1776,11 @@ sr:"^(.*)印記$"="$1 Mark"
 義經=Yoshitsune
 莉莉絲=Lilith
 切爾諾伯格=Chernobog
+濕婆=Shiva
+狄俄尼索斯=Dionysus
+庫夫林=Cu Chulainn
+聖達芬=Sandalphon
+八束水臣津野命=Oumitsunu
 
 ----------
 Metaverse Combat Terms
