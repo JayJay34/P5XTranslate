@@ -555,6 +555,12 @@ Class/ Stats Screen
 職業說明=Roles
 屬性說明=<size\=40>Elements</size>
 快速篩選=Quick Filter
+怪盜篩選=Filter
+等級由低至高=Low to High Lv.
+等級由高至低=High to Low Lv.
+稀有度由低至高=Low to High ★
+稀有度由高至低=High to Low ★
+
 反抗=Rebel
 擅長單體攻擊，能有效針對單個敵人。=<size\=26>Good at single target attacks, can deal with a single enemy effectively.</size>
 支配=Dominate
@@ -614,7 +620,7 @@ r:"^治療效果$"="<size\=22>Healing Effect</size>"
 生命成長率=HP Growth
 攻擊成長率=ATK Growth
 防禦成長率=DEF Growth
-上陣面具屬性會全部附加至主角=Wonder's stats are his \nequipped Persona stats combined
+上陣面具屬性會全部附加至主角=<size\=20>Wonder's stats are his \nequipped Persona stats combined</size>
 上陣人格面具的屬性會同時附加給主角，提高<color\=#870000>主角屬性</color>。=Wonder's stats are his \n<color\=#870000>equipped Persona stats combined</color>.
 
 ----------
@@ -683,111 +689,6 @@ r:"^潛能詳情$"="<size\=27>Potential Details</size>"
 已達到等級上限。=Reached level cap.
 已達到最大經驗，無法繼續添加材料。=Reached max level. Cannot add more upgrade materials.
 r:"^怪盜等級上限提升至<color\=#FFF000>LV.(\d+)</color>$"="Increase max level to <color\=#FFF000>Lv.$1</color>"
-
-----------
-Guild - Paradise - Raid Boss
-----------
-個人積分=Score
-總積分=Total Score
-積分：=Score: 
-本期歷史積分=Personal Best	
-歷史積分用於領取積分獎勵、參與挑戰排名\n重置挑戰不會清除歷史積分=<size\=28>Total Pts. are used for challenge rewards and paradise ranking. \nReseting the fight won't delete your Total Pts.</size>
-積分統計進度=Boss Beaten
-積分統計進度會記錄本期分數<color\=#ef0000>最高</color>的<color\=#ef0000>2個</color>首領的積分總和=<size\=29>Only the sum of your <color\=#ef0000>2 highest</color> scores will count toward your Total Pts.</size>
-當前積分=Current Pts.
-樂園排行=Paradise Rank
-樂園活躍度=Activity Pts.
-r:"今日活躍：(\d+\/\d+)"=Today's Score: $1
-r:"近7天貢獻 (\d+)"=7d Contribution: $1
-
-所屬樂園=Paradise\nName:
-樂園職位=Position:
-代理人等級=Level
-樂園人數=Members
-樂園影響力=Influence
-本樂園排名獎勵=Rank Rewards
-
-成員=Member
-代理人=Leader
-副手=Associate
-<color\=#81ea2c>線上</color>=<color\=#81ea2c>Online</color>
-
-挑戰難度·簡單=Easy
-挑戰難度·普通=Normal
-挑戰難度·困難=Hard
-挑戰難度·挑戰=Challenge
-挑戰難度·噩夢=Nightmare
-基礎傷害積分=Base DMG
-虛弱期傷害積分=Weakness DMG
-首領擊殺積分=Defeated Leader
-難度係數=Difficulty Multiplier
-r:"難度係數：<color\=#0e68c9>(\d+)</color>"=<size\=25>Multiplier: <color\=#0e68c9>$1x</color></size>
-r:"難度係數：<color\=#0e68c9>(\d+\.\d+)</color>"=<size\=25>Multiplier: <color\=#0e68c9>$1x</color></size>
-BOSS總積分：=Current Score:
-長按怪盜可便捷進行培養=<size\=25>Hold press on the party\nmember to customize</size>
-可用協助次數：=Assist Units\nAvailable
-樂園=<size\=32>Paradise</size>
-鎖定陣容=<size\=20>Team Lineup</size>
-
-獎勵詳情=Rewards
-任意樂園成員首次參與挑戰後活躍值+1=+1 Activity Point from each member when challenging the weekly for the first time.
-r:"樂園累計活躍每達到指定值後可領取對應獎勵，當前：<color\=#eade10>(\d+)</color>"=Total accumulated Activity Points: <color\=#eade10>$1</color>
-r:"個人歷史總積分達到指定值後可領取對應獎勵，當前：<color\=#eade10>(\d+)</color>"=Receive rewards after earning a certain amount of points. Your Personal Best: <color\=#eade10>$1</color>
-已獲得本週全部獎勵=Got all rewards this week!
-積分計算規則：\n當前積分\=挑戰積分*難度係數\n同一BOSS多個難度只記錄歷史最高分數=Score Formula:\nChallenge Score * Multiplier\n\nOnly the highest score is saved between runs.
-
-<color\=#8F8D8D>1分鐘前線上</color>=<color\=#8F8D8D>1 Minute</color>
-<color\=#8F8D8D>1小時前線上</color>=<color\=#8F8D8D>1 Hour</color>
-<color\=#8F8D8D>1天前線上</color>=<color\=#8F8D8D>1 Day</color>
-sr:"<color\=#8F8D8D>(.*)分鐘前線上</color>"=<color\=#8F8D8D>$1 Minutes</color>
-sr:"<color\=#8F8D8D>(.*)小時前線上</color>"=<color\=#8F8D8D>$1 Hours</color>
-sr:"<color\=#8F8D8D>(.*)天前線上</color>"=<color\=#8F8D8D>$1 Days</color>
-sr:"(.*?)人線上"=$1 Online
-sr:"<color\=#FF0000>(.*)</color>加入了樂園。"=<color\=#FF0000>$1</color> joined the Paradise.
-sr:"<color\=#FF0000>(.*)</color>退出了樂園。"=<color\=#FF0000>$1</color> left the Paradise.
-sr:"<color\=#FF0000>(.*)</color>將<color\=#FF0000>(.*?)</color>移出了樂園。"=<color\=#FF0000>$1</color> kicked <color\=#FF0000>$2</color> from the Paradise.
-
-基礎傷害積分=Base DMG
-虛弱期傷害積分=Weakness DMG
-首領擊殺積分=Defeated Leader
-難度係數=Difficulty Multiplier
-r:"難度係數：<color\=#0e68c9>(\d+)</color>"=<size\=25>Multiplier: <color\=#0e68c9>$1x</color></size>
-r:"難度係數：<color\=#0e68c9>(\d+\.\d+)</color>"=<size\=25>Multiplier: <color\=#0e68c9>$1x</color></size>
-BOSS總積分：=Current Score:
-
-成員=Member
-代理人=Leader
-副手=Associate
-<color\=#81ea2c>線上</color>=<color\=#81ea2c>Online</color>
-
-// Paradise Tags //
-
-休閒娛樂=Leisurely
-佛系玩家=Peaceful
-自由暢玩=Casual
-
-鎖定提示=Lock
-以下<color\=#ef0000>怪盜、面具與啟示</color>會被鎖定到本挑戰中不可更換，是否確認出戰？=<size\=24>You cannot change the chosen <color\=#ef0000>Thieves, Personas and Revelation Cards</color> until you reset the fight</size>
-以下怪盜裝備的<color\=#ef0000>啟示</color>被其他BOSS鎖定，選擇確認以調整啟示。=The following Thieves <color\=#ef0000>Revelation Card</color> is locked by other bosses. Please switch.
-重置挑戰會解除陣容鎖定並清空當前總積分，是否繼續=<size\=28>Resetting the fight will unlock your team lineup and clear the current score, are you sure? \n(This will not clear your Personal Best)</size>
-尚未挑戰=Not challenged yet
-
-累積分數：=Total Score: <size\=1>_</size>
-虛弱剩餘回合：=Turn Remaining:   <size\=1>_</size>
-r:"^虛弱期獲得積分×$"="Score During Weak x"
-r:"^倍$"="<size\=10> </size>!"
-
-所有敵人對<color\=#fbff37>電擊</color>屬性的適應性變為弱=All enemies become weak to <color\=#fbff37>Electric</color> DMG
-處於<color\=#ff381d>燃燒</color>狀態的敵人受到的傷害提高20%=Enemies inflicted with <color\=#ff381d>Burn</color> +20% DMG Taken
-<color\=#FFFC40>支配</color>怪盜造成傷害提高20%=Increase DMG Dealt of <color\=#FFFC40>AoE</color> allies by +20%
-所有怪盜無法暴擊，人格面具技能/追加效果造成的<color\=#FFFC40>最終傷害</color>提高，提高值\=暴擊率*(暴擊效果-100%)。（最多計入100%暴擊率）=<size\=22>All allies can't CRIT, increase the <color\=#FFFC40>final damage</color> of Persona Skills/ Follow Up. Increase \= \nCRIT * (CRIT DMG - 100%) (Up to 100% CRIT)</size>
-所有怪盜<color\=#ff0036>詛咒</color>傷害提高20%=Increase <color\=#ff0036>Curse</color> damage by 20%
-所有怪盜<color\=#FFFC40>射擊</color>傷害提高20%=Increase <color\=#FFFC40>Gun</color> damage by 20%
-敵人每有一個<color\=#FFFC40>負面狀態</color>，受到的傷害提升6%，最多使其受到的傷害提升30%=For every <color\=#FFFC40>debuff</color> the enemy have, increase DMG Taken by 6%, up to 30%
-所有怪盜<color\=#FFFC40>HIGHLIGHT</color>傷害提升50%=Increase <color\=#FFFC40>HIGHLIGHT</color> damage by 50%
-敵人每有一種<color\=#FFFC40>元素異常</color>狀態，受到的傷害提升10%，最多使其受到的傷害提升40%=For every <color\=#FFFC40>Elemental Ailment</color> the enemy have, Increase DMG Taken by 10%, up to 40%
-r:"^首領的適應性發生變化，所有怪盜造成<color\=#FFFC40>弱點傷害</color>提升(\d+%)$"="<size\=27>Change the affinities of the boss, increase <color\=#FFFC40>Weakness DMG</color> by $1</size>"
-r:"^<color\=#FFFC40>WONDER</color>造成<color\=#FFFC40>最終傷害</color>提高(\d+%)，其他隊員造成最終傷害降低(\d+%)"="Increase <color\=#FFFC40>final damage</color> of <color\=#FFFC40>Wonder</color> by $1, \ndecrease final damage of other allies by $2"
 
 //////////////////////////////
 /// e. Handbook Challenges ///
