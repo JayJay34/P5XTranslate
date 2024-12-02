@@ -85,9 +85,10 @@ sr:"<color\=#FF0000>(.*)</color>將<color\=#FF0000>(.*?)</color>移出了樂園�
 鎖定提示=Lock
 以下<color\=#ef0000>怪盜、面具與啟示</color>會被鎖定到本挑戰中不可更換，是否確認出戰？=<size\=24>You cannot change the chosen <color\=#ef0000>Thieves, Personas and Revelation Cards</color> until you reset the fight</size>
 以下怪盜裝備的<color\=#ef0000>啟示</color>被其他BOSS鎖定，選擇確認以調整啟示。=The following Thieves <color\=#ef0000>Revelation Card</color> is locked by other bosses. Please switch.
-重置挑戰會解除陣容鎖定並清空當前總積分，是否繼續=<size\=28>Resetting the fight will unlock your team lineup and clear the current score, are you sure? \n(This will not clear your Personal Best)</size>
+重置挑戰會解除陣容鎖定並清空當前總積分，是否繼續=<size\=28>Resetting the fight will unlock your team lineup and clear the current score, are you sure? \n(This will not erase your Personal Best)</size>
 尚未挑戰=Not challenged yet
 
+特殊機制生效中=Mechanics Active
 累積分數：=Total Score: <size\=1>_</size>
 r:"^虛弱剩餘回合：$"="   Turn(s) Left:   <size\=1>_</size>"
 r:"^虛弱期獲得積分×$"="Score Multiplier x"
@@ -144,3 +145,5 @@ sr:"^<color\=#FFFC40>(.*)</color>怪盜造成傷害降低(\d+%)$"="Decrease the 
 Combat Menu
 ----------
 虛弱=Weakness
+r:"^無法暴擊，最終傷害提升(.*)"="Cannot CRIT, increase Final DMG by $1"
+

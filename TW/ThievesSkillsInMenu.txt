@@ -823,7 +823,7 @@ r:"^{{A}}調製出<link\="s|180"><u>『雞尾酒』</u></link>時，有(\d+%)固
 r:"^{{A}}調製出<link\="s|180"><u>『雞尾酒』</u></link>時，使所有同伴造成傷害提升(\d+%)，效果持續1回合。$"="Increase all allies' DMG Dealt by $1 for 1 turn when mixing <link\="s|180"><u>[Cocktail]</u></link>."
 
 血腥瑪麗=Bloody Mary
-r:"^『撩人的醉意』的技能等級提升3級，至多提升至15級。$"="[Sultry Drunkenness] level +2, \nup to a maximum of level 15."
+r:"^『撩人的醉意』的技能等級提升3級，至多提升至15級。$"="[Sultry Drunkenness] level +3, \nup to a maximum of level 15."
 
 螺絲起子=Screwdriver
 r:"^任意同伴釋放HIGHLIGHT時，該同伴攻擊力提升(\d+%)，效果持續1回合，且{{A}}獲得1杯<link\="s\|182"><u>『精調·DELUXE』</u></link>。$"="After any ally uses HIGHLIGHT, increase that ally's ATK by $1 for 1 turn and gain 1 <link\="s|182"><u>[Premium Deluxe]</u></link>."
@@ -1056,6 +1056,59 @@ r:"^HIGHLIGHT效果提升：額外造成(\d+)次傷害，每次傷害附著(\d+)
 r:"^<link\="s\|194"><u>『絢爛煙火』</u></link>效果強化為『火樹銀花』。『火樹銀花』能觸發所有技能中『絢爛煙火』相關的效果。\n『火樹銀花』造成傷害時暴擊率提升(\d+%)。敵人每受到(\d+)次『火樹銀花』的效果時，受到傷害提升(\d+%)，永久生效，可疊加(\d+)層，疊加至上限時，受到暴擊效果額外提升(\d+%)。$"="<link\="s|194"><u>[Gorgeous Fireworks]</u></link> is upgraded to [Brilliant Fireworks], [Brilliant Fireworks] can triggers all effects of [Gorgeous Fireworks]. \nIncrease CRIT Rate by $1 when dealing damage with [Brilliant Fireworks]. Permanently increase enemies' DMG Taken by $3 after they took damage $2 time from [Brilliant Fireworks], up to $4 stacks. Increase enemies' CRIT DMG Taken by $5 when reaching maxed stacks."
 
 ----------
+Oracle - Futaba Sakura
+----------
+友方怪盜使用人格面具技能後獲得『解析進度』，造成弱點傷害後額外獲得『解析進度』。『駭入完成』狀態下我方傷害提升。=Allies gain [Analysis Progress] after using Persona skills, gain additional [Analysis Progress] after dealing Weak damage. Increase all allies' damage under [Hack Complete].
+無聲侵襲=Silent Hacking
+數據破解=Data Crack
+以不死鳥的名義=<size\=25>In the Name of Featherman</size>
+玩心=Playfulness
+善後=Clean Up
+
+r:"^無聲侵襲 Lv.(\d+)$"="Silent Hacking Lv.$1"
+r:"^無聲侵襲 <color\=#0F69CB>Lv.(\d+)</color>$"="Silent Hacking <color\=#0F69CB>Lv.$1</color>"
+r:"^使所有敵人防禦力降低(\d+%)\+\({{A}}每有(\d+)點攻擊力額外使防禦力降低(\d+\.\d+%)，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\)，持續2回合。效果持續期間，敵人受到弱點傷害時，使上述減防效果翻倍。若自身解析進度為100%，給予我方全體『駭入完成』，持續(\d+)回合。\n<b><size\=28><color\=#850101>螢幕中心出現異樣的扭曲，虛擬空間的界限被撕裂，形態詭異的巨物裸露著利齒兇狠地撲向敵人，使其降低防禦。</color></size></b>$"="Decrease all enemies' DEF by $1 + (An additional $3 for every $2 ATK, up to <color\=#FFFC40>$4</color> ATK) for 2 turns. During this duration, double this debuff when enemies take Weak damage. Give all allies [Hack Complete] if you are at 100% Analysis Progress for $5 turns.\n<b><size\=28><color\=#850101>A strange distortion appears in the center of the screen, the boundaries of virtual space are torn apart, and a gigantic creature with strange shapes and exposed teeth viciously pounces on the enemy, lowering its defenses.</color></size></b>"
+
+r:"^數據破解 Lv.(\d+)$"="Data Crack Lv.$1"
+r:"^數據破解 <color\=#0F69CB>Lv.(\d+)</color>$"="Data Crack <color\=#0F69CB>Lv.$1</color>"
+r:"^使1名敵人受到傷害增加(\d+%)\+\({{A}}每有(\d+)點攻擊力額外使目標受到傷害增加(\d+\.\d+%)，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力），持續2回合。效果持續期間，友方怪盜使用人格面具技能/追加效果/HIGHLIGHT對目標造成傷害後，{{A}}獲得(\d+%)解析進度。若自身解析進度為100%，給予我方全體『駭入完成』，持續(\d+)回合。\n<b><size\=28><color\=#850101>指尖在螢幕上輕跳，資料資訊崩塌成無數的光點消散於虛無之中，一次完美的駭入已然結束。</color></size></b>$"="Increase the DMG Taken of 1 enemy by $1 + (An additional $3 for every $2 ATK, up to <color\=#FFFC40>$4</color>) for 2 turns. During this duration, gain $5 Analysis Progress after allies deal damage with Persona skill/ Follow Up/ HIGHLIGHT. Give all allies [Hack Complete] if you are at 100% Analysis Progress for $6 turns.\n<b><size\=28><color\=#850101>With a flick of the fingertip on the screen, the data information collapsed into countless points of light and dissipated into nothingness, and a perfect hack was over.</color></size></b>"
+
+r:"^以不死鳥的名義 Lv.(\d+)$"="In the Name of Featherman Lv.$1"
+r:"^以不死鳥的名義 <color\=#0F69CB>Lv.(\d+)</color>$"="In the Name of Featherman <color\=#0F69CB>Lv.$1</color>"
+r:"^解鎖條件：我方角色擁有『駭入完成』\n使1名友方怪盜的攻擊力提升<color\=#FFFC40>(\d+)</color>\+\({{A}}每有(\d+)點攻擊力，額外提升其(\d+\.\d+)攻擊力，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\)，持續2回合。為全體敵人添加上該名怪盜適應性的『擾亂病毒』，持續1回合。『擾亂病毒』：改變目標的對應的適應性屬性：若為無效、反彈、吸收，則變為耐性；若為耐性則變為普通；若為普通則變為弱點。若為弱點，則提升其(\d+%)受到弱點傷害。\n<b><size\=28><color\=#850101>為解救陷入危機的人們而集結於此，讓翔羽的力量穿越時空的禁錮，甦醒，然後戰鬥吧！不死鳥戰士們！</color></size></b>$"="Requirement: Any ally have [Hack Complete]\nIncrease 1 ally's ATK by <color\=#FFFC40>$1</color> + (An additional $3 for every $2 ATK, up to <color\=#FFFC40>$4</color> ATK) for 2 turns. Inflicts [Disruption Virus] based on the target's element to all enemies for 1 turn. [Disruption Virus]: Change the target's resisance: Turn to Resist if they have Null, Repel, Absorb; Turn to Neutral if they have Resist; Turn to Weak if they have Neutral. Increase Weak DMG Taken by $5 if they have Weak.\n<b><size\=28><color\=#850101>In order to save the people in crisis and gathered here, let the power of Shouyu through the confinement of time and space, wake up, and then fight!</color></size></b>"
+
+r:"^玩心 Lv.(\d+)$"="Playfulness Lv.$1"
+r:"^戰鬥開始時獲得<color\=#FFFC40>(\d+)</color><color\=#FFFC40>%</color>解析進度。$"="At the start of battle, gain <color\=#FFFC40>$1</color><color\=#FFFC40>%</color> Analysis Progress."
+r:"^戰鬥開始時獲得<color\=#0169ca>(\d+)</color><color\=#0169ca>%</color>解析進度。$"="At the start of battle, gain <color\=#0169ca>$1<color\=#0169ca>%</color> Analysis Progress."
+
+r:"^善後 Lv.(\d+)$"="Clean Up Lv.$1"
+r:"^『駭入完成』狀態下，所有怪盜獲得{{A}}攻擊力的<color\=#FFFC40>(\d+\.\d+%)</color>的護盾，持續(\d+)回合。$"="Give all allies <color\=#FFFC40>$1</color> ATK Shield for 3 turns when they are in [Hack Complete]."
+r:"^『駭入完成』狀態下，所有怪盜獲得{{A}}攻擊力的<color\=#0169ca>(\d+\.\d+%)</color>的護盾，持續(\d+)回合。$"="Give all allies <color\=#0169ca>$1</color> ATK Shield for 3 turns when they are in [Hack Complete]."
+
+解析進度=Analysis Progress
+駭入完成=Hack Complete
+
+資訊收集=Information Gathering
+r:"^友方怪盜使用人格面具技能後，{{A}}獲得(\d+%)『解析進度』。同伴使用人格面具技能/追加效果/HIGHLIGHT造成弱點傷害時，{{A}}額外獲得(\d+%)『解析進度』。『駭入完成』狀態下我方傷害提升(\d+%)/(\d+%)/(\d+%)（1/50/70級時升級）。$"="You gain $1 [Analysis Progress] after allies use Persona skill. Additionally gain $2 [Analysis Progress] when allies deal Weak damage with Persona skill/ Follow Up/ HIGHLIGHT. Increase all allies' damage by $3/$4/$5 under [Hack Complete] (Change when reaching level 1, 50, 70)."
+
+掃描解析=Scan Analysis
+r:"^{{A}}的『解析進度』為100%，或處於『駭入完成』狀態時，我方怪盜暴擊率提升(\d+%)。$"="Increase all allies' CRIT Rate by $1 when you are at 100% [Analysis Progress] or when allies are in [Hack Complete]."
+
+破門而入=Break In
+
+遠程協助=Remote Assistance
+r:"^友方同伴攻擊敵人時，若目標身上有來自{{A}}的負面效果，攻擊力提升(\d+%)。友方一名同伴受到致命傷害時，使其血量不會低於1點，並使所有怪盜獲得等同於{{A}}攻擊力(\d+%)的護盾。此效果每場戰鬥僅能觸發1次。$"="When allies attack enemies and the target have a debuff from you, increase their ATK by $1. When 1 ally take a fatal blow, prevent it and give all allies $2 ATK Shield, once per battle."
+
+頭腦戰爭=Mind Warfare
+r:"^『無聲侵襲』的技能等級提升3級，至多提升至15級。$"="[Silent Hacking] level +3, \nup to a maximum of level 15."
+
+隱蔽攻擊=Covert Attack
+r:"^任意怪盜使用HIGHLIGHT後，{{A}}獲得1層『漏洞分析』，上限(\d+)層。{{A}}使用『無聲侵襲』或『數據破解』時，消耗所有『漏洞分析』，每層提升(\d+%)技能效果。$"="Gain 1 stack of [Vulnerability Analysis] after any ally uses HIGHLIGHT, up to $1 stacks. When using [Silent Hacking] or [Data Crack], consume all [Vulnerability Analysis] and increase skill effect by $2 per stack."
+
+病毒入侵=Virus Invasion
+r:"^使用『以不死鳥的名義』時會對我方全體怪盜釋放，同時為所有敵人添加我方所有怪盜對應的『擾亂病毒』（同一適應性的『擾亂病毒』僅能同時存在1種）。『駭入完成』的持續時間延長至3回合，並額外提升我方(\d+%)弱點傷害、傷害提升(\d+%)。$"="[In the Name of Featherman] now targets all allies, inflict all enemies with the corresponding [Disruption Virus] (There can only be 1 [Disruption Virus] for the same element). Extend [Hacking Complete] to 3 turns, and additionally increase all allies' Weak DMG by $1 and damage by $2."
+
+----------
 MFS - Kotone Montagne
 ----------
 r:"^{{A}}擁有兩種形態：『仲春形態』和『冬夜形態』，戰鬥過程中可相對自由的切換形態並獲得相應的技能組。$"="You have two Forms: [Mid-Spring Form] and [Winter Night Form]. You can freely change Form in battle to get their respective skills."
@@ -1121,7 +1174,7 @@ r:"^{{A}}擁有兩種形態：『仲春形態』和『冬夜形態』。戰鬥�
 在水中低吟的哀歌=Elegy of Water
 r:"^『仲春形態』：每次進入『仲春結界』時，獲得1顆<link\="s\|212"><u>『朝露結晶』</u></link>；『仲春結界』結束時，每有1顆<link\="s\|212"><u>『朝露結晶』</u></link>，造成的<link\="s\|100"><u>追加效果</u></link>額外獲得(\d+%)的傷害提升\（最多提升(\d+%)\）。\n『冬夜形態』：每次進入『冬夜結界』時，獲得1顆<link\="s\|213"><u>『寒霜結晶』</u></link>；『冬夜結界』結束時，每有1顆<link\="s\|213"><u>『寒霜結晶』</u></link>，造成的<link\="s\|100"><u>追加效果</u></link>額外獲得(\d+%)的傷害提升\（最多提升(\d+%)\）。$"="[Mid-Spring Form]: Gain 1 <link\="s|212"><u>[Morning Dew Crystal]</u></link> every time you open [Mid-Spring Domain]; Increase <link\="s|100"><u>Follow Up</u></link> damage by $1 for every <link\="s|212"><u>[Morning Dew Crystal]</u></link> when [Mid-Spring Domain] ends (Up to $2).\n[Winter Night Form]: Gain 1 <link\="s|213"><u>[Frost Crystal]</u></link> every time you open [Winter Night Domain]; Increase <link\="s|100"><u>Follow Up</u></link> damage by $3 for every <link\="s|213"><u>[Frost Crystal]</u></link> when [Winter Night Domain] ends (Up to $4)."
 
-時光的詩與風的歎息=Poem of Time and Sigh of Wind
+時光的詩與風的歎息=<size\=23>Poem of Time and Sigh of Wind</size>
 r:"^『仲春形態』：『仲春結界』持續時間內，所有敵人防禦降低(\d+%)，所有怪盜釋放人格面具技能的精力值消耗降低(\d+%)。\n『冬夜形態』：『冬夜結界』持續時間內，所有怪盜冰凍傷害提升(\d+%)，並且釋放人格面具技能的精力值消耗降低(\d+%)。$"="[Mid-Spring Form]: When [Mid-Spring Domain] is active, decrease the DEF of all enemies by $1 and reduce the SP cost of all allies by $2.\n[Winter Night Form]: When [Winter Night Domain] is active, increase the Ice DMG of all allies by $3 and reduce your SP cost by $4."
 
 波光與羽翅共舞=Dancing with Ripple Light and Feathers
