@@ -489,6 +489,36 @@ Combat Pop-ups
 r:"^火<color\=#000000>花</color>$"=" S<color\=#000000>p</color>ark"
 
 ----------
+Oracle - Futaba Sakura
+----------
+
+r:"^使<color\=#FFFF00>所有</color>敵人防禦力降低(\d+%)\+\({{A}}每有(\d+)點攻擊力額外使防禦力降低(\d+\.\d+%)，最多計入(\d+)點攻擊力\)，持續2回合。效果持續期間，敵人受到弱點傷害時，使上述減防效果翻倍。若自身解析進度為100%，給予我方全體『駭入完成』，持續(\d+)回合。$"="Decrease <color\=#FFFF00>all</color> enemies' DEF by $1 + (An additional $3 for every $2 ATK, up to $4 ATK) for 2 turns. During this duration, double this debuff when enemies take Weak damage. Give all allies [Hack Complete] if you are at 100% Analysis Progress for $5 turns."
+r:"^使所有敵人防禦力降低(\d+%)\+\({{A}}每有(\d+)點攻擊力額外使防禦力降低(\d+\.\d+%)，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\)，持續2回合。效果持續期間，敵人受到弱點傷害時，使上述減防效果翻倍。若自身解析進度為100%，給予我方全體『駭入完成』，持續(\d+)回合。$"="Decrease all enemies' DEF by $1 + (An additional $3 for every $2 ATK, up to <color\=#FFFC40>$4</color> ATK) for 2 turns. During this duration, double this debuff when enemies take Weak damage. Give all allies [Hack Complete] if you are at 100% Analysis Progress for $5 turns."
+
+r:"^使<color\=#FFFF00>1名</color>敵人受到傷害增加(\d+%)\+\({{A}}每有(\d+)點攻擊力額外使目標受到傷害增加(\d+\.\d+%)，最多計入(\d+)點攻擊力\)，持續2回合。效果持續期間，友方怪盜使用人格面具技能/追加效果/HIGHLIGHT對目標造成傷害後，{{A}}獲得(\d+%)解析進度。若自身解析進度為100%，給予我方全體『駭入完成』，持續(\d+)回合。$"="Increase the DMG Taken of <color\=#FFFC40>1</color> enemy by $1 + (An additional $3 for every $2 ATK, up to $4) for 2 turns. During this duration, gain $5 Analysis Progress after allies deal damage with Persona skill/ Follow Up/ HIGHLIGHT. Give all allies [Hack Complete] if you are at 100% Analysis Progress for $6 turns."
+r:"^使1名敵人受到傷害增加(\d+%)\+\({{A}}每有(\d+)點攻擊力額外使目標受到傷害增加(\d+\.\d+%)，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\），持續2回合。效果持續期間，友方怪盜使用人格面具技能/追加效果/HIGHLIGHT對目標造成傷害後，{{A}}獲得(\d+%)解析進度。若自身解析進度為100%，給予我方全體『駭入完成』，持續(\d+)回合。$"="Increase the DMG Taken of 1 enemy by $1 + (An additional $3 for every $2 ATK, up to <color\=#FFFC40>$4</color>) for 2 turns. During this duration, gain $5 Analysis Progress after allies deal damage with Persona skill/ Follow Up/ HIGHLIGHT. Give all allies [Hack Complete] if you are at 100% Analysis Progress for $6 turns."
+
+r:"^使<color\=#FFFF00>1名</color>友方怪盜的攻擊力提升(\d+)\+\({{A}}每有(\d+)點攻擊力額外提升其(\d+\.\d+)攻擊力，最多計入(\d+)點攻擊力\)，持續2回合。為全體敵人添加上該名怪盜適應性的『擾亂病毒』，持續1回合。$"="Increase <color\=#FFFF00>1</color> ally's ATK by $1 + (An additional $3 for every $2 ATK, up to $4 ATK) for 2 turns. Inflicts [Disruption Virus] based on the target's element to all enemies for 1 turn."
+r:"^解鎖條件：我方角色擁有『駭入完成』\n使1名友方怪盜的攻擊力提升<color\=#FFFC40>(\d+)</color>\+\({{A}}每有(\d+)點攻擊力，額外提升其(\d+\.\d+)攻擊力，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\)，持續2回合。為全體敵人添加上該名怪盜適應性的『擾亂病毒』，持續1回合。『擾亂病毒』：改變目標的對應的適應性屬性：若為無效、反彈、吸收，則變為耐性；若為耐性則變為普通；若為普通則變為弱點。若為弱點，則提升其(\d+%)受到弱點傷害。$"="Requirement: Any ally have [Hack Complete]\nIncrease 1 ally's ATK by <color\=#FFFC40>$1</color> + (An additional $3 for every $2 ATK, up to <color\=#FFFC40>$4</color> ATK) for 2 turns. Inflicts [Disruption Virus] based on the target's element to all enemies for 1 turn. [Disruption Virus]: Change the target's resisance: Turn to Resist if they have Null, Repel, Absorb; Turn to Neutral if they have Resist; Turn to Weak if they have Neutral. Increase Weak DMG Taken by $5 if they have Weak."
+
+r:"^使<color\=#FFFF00>所有</color>友方怪盜的攻擊力提升(\d+)\+\({{A}}每有(\d+)點攻擊力額外提升其(\d+\.\d+)攻擊力，最多計入(\d+)點攻擊力\)，持續2回合。為全體敵人添加上我方所有怪盜適應性的『擾亂病毒』，持續1回合。$"="Increase <color\=#FFFF00>all</color> allies' ATK by $1 + (An additional $3 for every $2 ATK, up to $4 ATK) for 2 turns. Inflicts [Disruption Virus] based on the target's element to all enemies for 1 turn."
+r:"^解鎖條件：我方角色擁有『駭入完成』\n使所有名友方怪盜的攻擊力提升<color\=#FFFC40>(\d+)</color>\+\({{A}}每有(\d+)點攻擊力，額外提升其(\d+\.\d+)攻擊力，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\)，持續2回合。為全體敵人添加上我方所有怪盜適應性的『擾亂病毒』，持續1回合。『擾亂病毒』：改變目標的對應的適應性屬性：若為無效、反彈、吸收，則變為耐性；若為耐性則變為普通；若為普通則變為弱點。若為弱點，則提升其(\d+%)受到弱點傷害。$"="Requirement: Any ally have [Hack Complete]\nIncrease all allies' ATK by <color\=#FFFC40>$1</color> + (An additional $3 for every $2 ATK, up to <color\=#FFFC40>$4</color> ATK) for 2 turns. Inflicts [Disruption Virus] based on the target's element to all enemies for 1 turn. [Disruption Virus]: Change the target's resisance: Turn to Resist if they have Null, Repel, Absorb; Turn to Neutral if they have Resist; Turn to Weak if they have Neutral. Increase Weak DMG Taken by $5 if they have Weak."
+
+r:"^當前解析進度為(\d+%)$"="Analysis Progress at $1"
+
+r:"^受到傷害提升(\d+\.\d+%)，受到傷害後雙葉獲得(\d+%)解析進度。$"="Increase DMG Taken by $1, Oracle gains $2 Analysis Progress after taking damage"
+擾亂病毒=Disruption Virus
+適應性發生了改變=Changed Resistance
+漏洞分析=Vulnerability Analysis
+使用『無聲侵襲』或『數據破解』時，技能效果提升。=Increase skill effect when using \n[Silent Hacking] or [Data Crack]
+受到弱點傷害時防禦力降低=Decrease DEF when taking Weak DMG
+r:"^弱點傷害提升(\d+%)$"="Increase Weak DMG by $1"
+駭入時機=Hacking Time
+
+Combat Pop-ups
+r:"^善<color\=#000000>後</color>$"="<size\=14> </size>C<color\=#000000>le</color>an Up"
+
+----------
 MFS - Kotone Montagne
 ----------
 
