@@ -137,9 +137,13 @@ r:"^取消$"="Cancel"
 換魚餌=Change Bait
 
 好友數：=Friends:
+怪盜展板=Thieves Showcase
+徽章展板=Badge Showcase
+sr:"^已為(.*)點讚。$"="Liked $1."
 等 級=Level
 樂 園=Paradise
 沒輸入簽名=No Signature
+私聊=Private Chat
 尚未輸入簽名=No Signature
 刷新好友列表過快。=Please wait before refreshing.
 暫時還沒有好友申請。=No Friend Request.
@@ -152,6 +156,7 @@ r:"^待設置$"="None"
 是否退出遊戲？=Quit the game?
 點擊空白區域繼續=Click any blank space to continue
 點擊任意空白處繼續=Click any blank space to continue
+點擊任意空白處關閉=Click any blank space to close
 
 ----------
 Character Names
@@ -300,6 +305,8 @@ CV.前內孝文=CV.Takafumi Maeuchi
 極其罕見的神奇木料，可用於提升技能等級至Lv.9·Lv.10。=<size\=28>An extremely rare magical timber, can be used to level up skills to Lv.9-Lv.10.</size>
 空白命運=Blank Fate
 承載了輪迴力量的命運之卡，可用於任意啟示卡的回溯。=Card of fate with the power of reincarnation, can be used to revert Revelation Cards.
+啟示回溯=Reset
+確認要消耗<color\=#f1b500>「空白命運×1」</color>進行一次啟示回溯嗎？\n回溯後將有以下變化：\n1.啟示等級變為0級\n2.主屬性、副屬性的狀態變為初始狀態\n3.返還所有養成到當前等級消耗的經驗材料（以通用啟示材料的形式返還）=<size\=32>Use <color\=#f1b500>[Blank Fate×1]</color> to reset your card?\nAfter resetting:\n1. Set the card back to level 0\n2. Set the main stat and sub stats back to original\n3. Refund all EXP materials\n(In the form of materials)</size>
 時序之墨=Temporal Ink
 蘊含星辰之力的墨水，可用於定制月、星、辰位置的啟示卡。=Ink that contains the power of the stars, can be used to create a customized Revelation Card.
 認知請願書 4星=4★ Cognitive Petition
@@ -560,6 +567,8 @@ Class/ Stats Screen
 等級由高至低=High to Low Lv.
 稀有度由低至高=Low to High ★
 稀有度由高至低=High to Low ★
+初始陣容=Starting Lineup
+陣容=Lineup
 
 反抗=Rebel
 擅長單體攻擊，能有效針對單個敵人。=<size\=26>Good at single target attacks, can deal with a single enemy effectively.</size>
@@ -616,6 +625,7 @@ r:"^治療效果$"="<size\=22>Healing Effect</size>"
 祝福傷害=Bless DMG
 詛咒傷害=Curse DMG
 萬能傷害=Almighty DMG
+總傷害加成=DMG Bonus
 
 生命成長率=HP Growth
 攻擊成長率=ATK Growth
@@ -626,11 +636,28 @@ r:"^治療效果$"="<size\=22>Healing Effect</size>"
 ----------
 MENTAL IMAGE
 ---------
-啟動前置心象後解鎖=Unlock after activating\n the preceding skill
-r:"^提升生命值(\d+)\n"="Increase HP by $1\n"
-r:"^提升防禦力(\d+)\n"="Increase DEF by $1\n"
-r:"^提升攻擊力(\d+)\n"="Increase ATK by $1\n"
+每啟動或提升一次心象等級，心象點數+1。=+1 Mental Image point each time you activate or level up a Mental Image upgrade
 
+啟動前置心象後解鎖=Unlock after activating\n the preceding skill
+r:"^提升生命值(\d+)\n$"="Increase HP by $1\n"
+r:"^提升防禦力(\d+)\n$"="Increase DEF by $1\n"
+r:"^提升攻擊力(\d+)\n$"="Increase ATK by $1\n"
+r:"^提升生命值(\d+)\n提升防禦力(\d+)\n$"="Increase HP by $1\nIncrease DEF by $2\n"
+r:"^提升生命值(\d+)\n提升防禦力(\d+)\n提升攻擊力(\d+)\n$"="Increase HP by $1\nIncrease DEF by $2\nIncrease ATK by $3\n"
+
+r:"^提升生命值(\d+%)\n$"="Increase HP by $1\n"
+r:"^提升攻擊力(\d+%)\n$"="Increase ATK by $1\n"
+r:"^提升防禦力(\d+%)\n$"="Increase DEF by $1\n"
+r:"^提升精力回復(\d+%)\n$"="Increase SP Recovery by $1\n"
+r:"^提升穿透(\d+\.\d%)\n$"="Increase PEN by $1\n"
+r:"^提升效果命中(\d+\.\d%)\n$"="Increase EHR by $1\n"
+r:"^提升效果抵抗(\d+\.\d%)\n$"="Increase Effect RES by $1\n"
+r:"^提升暴擊率(\d+\.\d%)\n$"="Increase CRIT Rate by $1\n"
+r:"^提升暴擊效果(\d+\.\d%)\n$"="Increase CRIT DMG by $1\n"
+r:"^提升傷害加成(\d+\.\d%)\n$"="Increase DMG Bonus by $1\n"
+r:"^提升傷害減免(\d+\.\d%)\n$"="Increase DMG RES by $1\n"
+r:"^提升治療效果(\d+\.\d%)\n$"="Increase Healing Effect by $1\n"
+r:"^提升護盾效果(\d+\.\d%)\n$"="Increase Shield Effect by $1\n"
 
 // Wonder Skill Tree //
 
@@ -1440,6 +1467,12 @@ sr:"^未知宿命藍·(.*)$"="2★ • $1"
 明星水晶球·低階=<size\=20>Crystal Ball • Low Level</size>
 明星水晶球·高階=<size\=20>Crystal Ball • High Level</size>
 
+可用於「怪盜心象·進階強化」養成的低階材料。=Low level material used in \n[Mental Image - Stat Upgrade].
+可用於「怪盜心象·進階強化」養成的高階材料。=High level material used in \n[Mental Image - Stat Upgrade].
+可用於「怪盜心象·技能領悟」養成的低階材料。=Low level material used in \n[Mental Image - Skills Upgrade].
+可用於「怪盜心象·技能領悟」養成的高階材料。=High level material used in \n[Mental Image - Skills Upgrade].
+
+星塵=Stardust
 秘聞點券=Mysteries Voucher
 
 {{A}}商店購買獲得=<size\=25>Purchase from Marthym's Shop</size>
@@ -1525,6 +1558,7 @@ r:"(\d+)次行動內完成"=Win in $1 turn(s)
 選擇「清空進度」會清除保存的記錄並重新挑戰。=Select [No] to reset progress and retry.
 關卡尚未通關，是否保存當前進度並暫時離開？=Do you want to save your progress and leave?
 選擇「清空進度」會重置當前關卡進度並重新挑戰。=Select [No] to reset the level and retry.
+是否重置關卡進度並清除當前挑戰陣容？（已獲得的歷史積分不會清空）=Reset progess and lineup? (This will not erase your high score)
 
 試煉一=Trial 1
 試煉二=Trial 2
@@ -1543,6 +1577,9 @@ r:"X(\d+)倍"=x$1
 獎勵=<size\=24>Rewards</size>
 章節獎勵=<size\=36>Rewards</size>
 累計獲得異界晶珀：=<size\=32>Total Ambers Earned:</size>
+
+昨日辰星獎勵：=Daily Rewards:
+每日根據天鵝絨試煉總星級發放獎勵。=Get daily rewards based on total ★.
 
 /////////////////
 /// z. Others ///
@@ -1575,6 +1612,9 @@ P5X營運團隊=P5X Team
 前往雜司谷=Go to Zōshigaya
 前往客廳=Go to the living room
 
+推薦陣容等級：=Recommended level:
+推薦屬性：=Elements:
+
 ------------------------------------
 ----- IV. Velvet Room Personas -----
 ------------------------------------
@@ -1604,6 +1644,7 @@ r:"^特性提升$"="<size\=25>Upgrade to</size>"
 3星=3★
 2星=2★
 技能篩選=Filter
+篩選條件=Filter
 輸入技能名稱搜索…=Search Skill Name
 r:"^攻擊$"="<size\=22>Attack</size>"
 r:"^防禦$"="<size\=19>Defense</size>"
@@ -1789,4 +1830,18 @@ Metaverse Combat Terms
 // Special Mechanics
 
 // Sea of Souls
+r:"^<color\=#FFFFFF>首領剩餘進攻次數：</color><color\=#FFF000>(\d+)</color>$"="<color\=#FFFFFF>Boss attack(s) left: </color><color\=#FFF000>$1</color>"
+主動逃離戰鬥不會獲得分數記錄。\n是否確認退出？=<size\=28>Cannot record score if you escape.\nAre you sure?</size>
+
 使用人格面具技能或觸發追加效果時，獲得1層『強化印記』，最多可疊加3層；全體怪盜行動一輪後，獲得『強化印記』層數*15%的傷害加成並移除1層『強化印記』。=<size\=24>When a Persona skill is used, or a Follow Up is triggered, you gain 1 layer of the stackable Enhanced Buff. After all party members have acted, gain 15% DMG Bonus per stack and remove 1 layer of Enhanced Buff.</size>
+
+超限崩解=Super Disintegration
+sr:"^人格面具技能或追加效果每次造成傷害時，使自己獲得(\d+)層『(.*)』。『(.*)』：每層提供(\d+%)的最終傷害加成,持續(\d+)回合,最多可疊加(\d+)層。$"="<size\=27>When dealing a hit of damage with Persona skills or Follow Up, you gain $1 stack of [$2].\n[$3]: Increase Final DMG by $4 for $5 turns, up to $6 stacks.</size>"
+深化活性=Deepen Agility
+
+四大天王每隔一個回合會對隨機一名怪盜釋放「死亡凝視」，四大天王會優先攻擊處於「死亡凝視」的怪盜。=The Four Heavenly Kings will use [Death Gaze] on a random enemy, the Four Heavenly Kings will prioritize attacking the enemy with [Death Gaze].
+
+r:"^1、默基瑟德每隔1個回合，獲得(\d+)層「神之庇佑」，每層可以為其提供(\d+%)的減傷。\n2、默基瑟德受到來自技能或追加效果的每段傷害，都會損失一層「神之庇佑」。\n3、默基瑟德失去所有「神之庇佑」時會使所有怪盜獲得「神之祝福」，提升所有怪盜造成的傷害。$"="<size\=23>1. Melchizedek will gains $1 stacks of [God's Protection] every other turns, each stack will provide $2 DMG RES.\n2. Melchizedek will loses 1 stack of [God's Protection] after taking a hit of damage from skills or Follow Up.\n3. Give all Thieves [God's Blessing] which increase all Thieves' DMG Dealt when Melchizedek loses all stacks of [God's Protection].</size>"
+r:"^每層使自身受到的傷害降低(\d+%)，每次受到傷害會損失(\d+)層$"="Increase DMG RES by $1, \nlose $2 stack after taking a hit of damage"
+神之庇佑=God's Protection
+神之祝福=God's Blessing
