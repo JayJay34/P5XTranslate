@@ -196,6 +196,38 @@ r:"^誓<color\=#000000>約</color>$"="<size\=27> </size>V<color\=#000000>o</colo
 r:"^充<color\=#000000>能</color>$"="<size\=21> </size>V<color\=#000000>it</color>alise"
 
 ----------
+Leon - Reo Kamiyama
+----------
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，所有同伴每有1層『啟動』則傷害提升(\d+%)。$"="Deals $1 ATK Nuclear damage to <color\=#FFFF00>1</color> enemy. Increases skill damage by $2 for every 1 stack of [Activate] on all allies."
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害。釋放該技能時，所有同伴身上每有(\d+)層<link\="s\|128"><u>『啟動』</u></link>，則該技能的傷害提升(\d+%)。$"="Deals <color\=#FFFC40>$1</color> ATK Nuclear damage to 1 enemy. When using this skill, for every $2 stack of <link\="s|128"><u>[Activate]</u></link> on all allies, increases skill damage by $3."
+
+r:"^將<color\=#FFFF00>1名</color>同伴的(\d+%)當前生命值按照(\d+%)的比例置換為護盾，額外獲得(\d+\.\d+%)攻擊力\+(\d+)的護盾。並使其獲得1層『啟動』。$"="Converts <color\=#FFFF00>1</color> ally's $1 current HP into Shield with a $2 ratio, and additionally gives $3 + $4 ATK as Shield for 2 turns. Gives the target 1 stack of [Activate]."
+r:"^將1名同伴當前生命值的(\d+%)按照(\d+%)的比例置換為護盾，並額外附加相當於{{A}}<color\=#FFFC40>(\d+\.\d+%)</color>\+<color\=#FFFC40>(\d+)</color>攻擊力的護盾，護盾持續2回合。並使其獲得1層<link\="s\|128"><u>『啟動』</u></link>。$"="Converts 1 ally's $1 current HP into Shield with a $2 ratio, and additionally gives <color\=#FFFC40>$3</color> + <color\=#FFFC40>$4</color> ATK as Shield for 2 turns. Gives the target 1 stack of <link\="s|128"><u>[Activate]</u></link>."
+
+r:"^使<color\=#FFFF00>1名</color>同伴攻擊力提升(\d+\.\d+%)，效果持續2回合。效果持續期間，目標身上每有1層『啟動』，則使其攻擊力基於{{A}}攻擊力的(\d+%)獲得額外提升，上限(\d+\.\d+)點。$"="Increase <color\=#FFFF00>1</color> ally's ATK by $1 for 2 turns. When this effect is active, for each 1 stack of [Activate] on the target, increase their ATK based on $2 own ATK, up to $3."
+r:"^使1名同伴的攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。效果持續時間，目標身上每有1層<link\="s\|128"><u>『啟動』</u></link>，則基於{{A}}攻擊力的(\d+%)獲得攻擊力提升，透過這種方式獲得的攻擊力上限為<color\=#FFFC40>(\d+\.\d+)</color>。$"="Increase 1 ally's ATK by <color\=#FFFC40>$1</color> for 2 turns. When this effect is active, for each 1 stack of <link\="s|128"><u>[Activate]</u></link> on the target, increase their ATK based on $2 own ATK, up to <color\=#FFFC40>$3</color>."
+
+r:"^使<color\=#FFFF00>1名</color>同伴獲得滿層『啟動』，生命值不足(\d+%)時，使其生命值恢復至(\d+%)。並基於自身攻擊力的(\d+%)，使其攻擊力提升，上限(\d+\.\d+)點，效果持續2回合。$"="Gives <color\=#FFFF00>1</color> ally maxed stacks of [Activate] for 2 turns. If their HP is below $1 then restores their HP to $2 HP. Increases their ATK based on $3 own ATK, up to $4 for 2 turns."
+
+生命提煉：護盾=Life Refinement: Shield
+使同伴攻擊力提升=Increase allies' ATK
+r:"^根據啟動的層數，獲得攻擊力提升(\d+)$"="Based on Activate stacks,\nincrease ATK by $1"
+
+----------
+Vino - Chizuko Nagao
+----------
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，根據自身效果命中降低敵人防禦力，最多降低(\d+\.\d+%)。並有(\d+%)基礎機率使敵人陷入某種他身上沒有的隨機元素異常狀態。$"="Deals $1 ATK Nuclear damage to <color\=#FFFF00>1</color> enemy, decreases the target's DEF based on own EHR, up to $2 DEF Down. There is a $3 base chance to inflict the enemy with a new random Elemental Ailment." 
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害，降低目標的防禦力，數值相當於自身效果命中的(\d+\.\d+%)，最多降低<color\=#FFFC40>(\d+\.\d+%)</color>防禦。並有(\d+%)基礎機率使敵人陷入某種他身上沒有的隨機元素異常狀態。$"="Deals <color\=#FFFC40>$1</color> ATK Nuclear damage to 1 enemy, decreases the target's DEF based on $2 own EHR, up to <color\=#FFFC40>$3</color> DEF Down. There is a $4 base chance to inflict the enemy with a new random Elemental Ailment." 
+
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害。有(\d+%)基礎機率使敵人陷入某種他身上沒有的隨機元素異常狀態。$"="Deals $1 ATK Nuclear damage to <color\=#FFFF00>all</color> enemies, with a $2 base chance to inflict enemies with a new random Elemental Ailment."
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害。有(\d+%)基礎機率使敵人陷入某種他身上沒有的隨機元素異常狀態。$"="Deals <color\=#FFFC40>$1</color> ATK Nuclear damage to all enemies, with a $2 base chance to inflict enemies with a new random Elemental Ailment."
+
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害。目標身上每有一種元素異常，根據自身效果命中給予敵人1層受到傷害提升效果，最多提升(\d+\.\d+%)，持續(\d+)回合，上限(\d+)層。$"="Deals $1 ATK Nuclear damage to <color\=#FFFF00>1</color> enemy. For every 1 Elemental Ailment on the target, inflicts 1 stack of DMG Taken debuff based on own EHR, up to $2 DMG Taken for $3 turns, up to $4 stacks."
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害。目標身上每有一種元素異常，給予目標1層受到傷害提升效果，數值相當於自身效果命中的(\d+\.\d+%)，最多提升<color\=#FFFC40>(\d+\.\d+%)</color>受到傷害，持續(\d+)回合，上限(\d+)層。$"="Deals <color\=#FFFC40>$1</color> ATK Nuclear damage to 1 enemy. For every 1 Elemental Ailment on the target, inflicts 1 stack of DMG Taken debuff based on $2 own EHR, up to <color\=#FFFC40>$3</color> DMG Taken for $4 turns, up to $5 stacks."
+
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，使敵人有(\d+%)的基礎機率陷入2種他身上沒有的隨機元素異常狀態。$"="Deals $1 ATK Nuclear damage to <color\=#FFFF00>1</color> enemy, with a $2 base chance to inflict 2 new Elemental Ailments."
+
+----------
 Skull - Ryuji Sakamoto
 ----------
 r:"^對<color\=#FFFF00>1名</color>敵人造成3次(\d+\.\d+%)攻擊力的物理屬性傷害，自身生命值高於(\d+%)時，該技能額外消耗(\d+%)最大生命值，傷害提升(\d+%)，暴擊率提升(\d+%)。$"="Deals 3 hits of $1 ATK Physical damage to <color\=#FFFF00>1</color> enemy. When your hp are above $2 HP, consumes $3 Max HP to increase damage by $4, increase CRIT Rate by $5."
@@ -345,7 +377,6 @@ r:"^立即為<color\=#FFFF00>所有友方怪盜</color>回復等同於{{A}}(\d+\
 r:"^最大生命值提升$"="Increase Max HP"
 r:"^每回合回復(\d+)點生命值$"="Regenerate $1 HP per turn"
 r:"^最大生命值提升(\d+)$"="Increase Max HP by $1"
-r:"^穿透提升(\d+%)$"="Increase DEF Ignore by $1"
 
 In-Battle Quotes
 <color\=#FF0000>{{A}}</color>獲得了甘露……=<color\=#FF0000>Minami Miyashita</color> gained Nectar!
@@ -362,7 +393,7 @@ r:"^使<color\=#FFFF00>所有</color>同伴攻擊力提升，數值相當於{{A}
 r:"^準備時間：6次行動\n使所有同伴攻擊力提升，數值相當於{{A}}攻擊力的(\d+%)（最多計入<color\=#FFFC40>(\d+)</color>點攻擊力），效果持續3回合。釋放技能時，若{{A}}擁有<link\="s\|180"><u>『雞尾酒』</u></link>，則會消耗1杯<link\="s\|180"><u>『雞尾酒』</u></link>使技能效果得到強化（優先消耗高品質的<link\="s\|180"><u>『雞尾酒』</u></link>）。消耗『<link\="s\|182"><u>精調·DELUXE</u></link>/<link\="s\|183"><u>精調</u></link>/<link\="s\|184"><u>粗調</u></link>』分別使技能效果提高(\d+%)/(\d+%)/(\d+%)。$"="Preparation Time: 6 Actions\nIncreases all allies' ATK based on $1 ATK (Up to <color\=#FFFC40>$2</color> ATK) for 3 turns. When using this skill, consumes 1 <link\="s|180"><u>[Cocktail]</u></link> if you have any <link\="s|180"><u>[Cocktail]</u></link> (Prioritizing higher quality <link\="s|180"><u>[Cocktail]</u></link>). Consuming [<link\="s|182"><u>Premium Deluxe</u></link>/ <link\="s|183"><u>Premium Mix</u></link>/ <link\="s|184"><u>Rough Mix</u></link>] increases the effect by $3/$4/$5 respectively."
 
 r:"^使<color\=#FFFF00>1名</color>同伴造成傷害提升（每(\d+)點{{A}}的攻擊力提供(\d+%)傷害加成，最多計入(\d+)點攻擊力），最大生命值提升(\d+\.\d+%)，效果持續2回合，並使其造成傷害時恢復相當於該傷害量(\d+%)的生命值，效果持續1回合。釋放該技能時，{{A}}會消耗1杯『粗調/精調』並獲得1杯『精調·DELUXE』。$"="Increases <color\=#FFFF00>1</color> ally's DMG Dealt (Every $1 ATK gives $2 DMG Dealt, up to $3 ATK) and increases Max HP by $4 for 2 turns. The target restore $5 damage as HP when dealing damage for 1 turn. Consume 1 [Rough Mix/ Premium Mix] to gain 1 [Premium Deluxe]."
-r:"^準備時間：4次行動\n使1名同伴造成傷害提升（每(\d+)點{{A}}的攻擊力提供(\d+%)傷害加成，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力），最大生命值提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合，並使其造成傷害時恢復相當於該傷害量(\d+%)的生命值，效果持續1回合。釋放該技能時，{{A}}會消耗1杯『<link\="s|184"><u>『粗調』</u></link>/<link\="s|183"><u>『精調』</u></link>』並獲得1杯<link\="s|182"><u>『(.*)』</u></link>。$"="Preparation Time: 4 Actions\nIncreases 1 ally's DMG Dealt (Every $1 ATK gives $2 DMG Dealt, up to <color\=#FFFC40>$3</color> ATK) and increases Max HP by <color\=#FFFC40>$4</color> for 2 turns. The target restore $5 damage as HP when dealing damage for 1 turn. Consume 1 [<link\="s|184"><u>Rough Mix</u></link>/ <link\="s|183"><u>Premium Mix</u></link>] to gain 1 <link\="s|182"><u>[Premium Deluxe]</u></link>."
+r:"^準備時間：4次行動\n使1名同伴造成傷害提升（每(\d+)點{{A}}的攻擊力提供(\d+%)傷害加成，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力），最大生命值提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合，並使其造成傷害時恢復相當於該傷害量(\d+%)的生命值，效果持續1回合。釋放該技能時，{{A}}會消耗1杯『<link\="s\|184"><u>粗調</u></link>/<link\="s\|183"><u>精調</u></link>』並獲得1杯<link\="s\|182"><u>『精調·DELUXE』</u></link>。$"="Preparation Time: 4 Actions\nIncreases 1 ally's DMG Dealt (Every $1 ATK gives $2 DMG Dealt, up to <color\=#FFFC40>$3</color> ATK) and increases Max HP by <color\=#FFFC40>$4</color> for 2 turns. The target restore $5 damage as HP when dealing damage for 1 turn. Consume 1 [<link\="s|184"><u>Rough Mix</u></link>/ <link\="s|183"><u>Premium Mix</u></link>] to gain 1 <link\="s|182"><u>[Premium Deluxe]</u></link>."
 
 r:"^消耗所有『雞尾酒』，對指定同伴的<color\=#FFFF00>適應性屬性</color>進行特調。每消耗1杯『精調·DELUXE/精調/粗調』會觸發(\d+%)/(\d+%)/(\d+%)強度的下述效果：使<color\=#FFFF00>所有</color>同伴的特調屬性傷害提升（每(\d+)點{{A}}的攻擊力提供(\d+%)的傷害加成，最多計入(\d+)點攻擊力），指定同伴的特調屬性傷害提升效果提高至1.2倍，效果持續2回合。$"="Consumes all [Cocktail] and mixes based on the main target's <color\=#FFFF00>element</color>. Each consumed [Premium Deluxe/Premium Mix/Rough Mix] triggers the following effect at $1/$2/$3 respectively: Increases all allies' Elemental damage (Every $4 ATK gives $5 DMG Bonus, up to $6 ATK) for 2 turns, the main target gain 1.2x more DMG Bonus."
 r:"^準備時間：8次行動（沒有<link\="s\|180"><u>『雞尾酒』</u></link>時不能使用）\n消耗所有<link\="s\|180"><u>『雞尾酒』</u></link>，對指定同伴的<color\=#FFFC40>適應性屬性</color>進行特調。每消耗1杯『<link\="s\|182"><u>精調·DELUXE</u></link>/<link\="s\|183"><u>精調</u></link>/<link\="s\|184"><u>粗調</u></link>』會觸發(\d+%)/(\d+%)/(\d+%)強度的下述效果：使所有同伴的特調屬性傷害提升（每(\d+)點{{A}}的攻擊力提供(\d+%)傷害加成，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力），指定同伴的特調屬性傷害提升效果提高至1.2倍，效果持續2回合。$"="Preparation Time: 8 Actions (Cannot be used when you don't have <link\="s|180"><u>[Cocktail]</u></link>)\nConsumes all <link\="s|180"><u>[Cocktail]</u></link> and mixes based on the main target's <color\=#FFFC40>element</color>. Each consumed [<link\="s|182"><u>Premium Deluxe</u></link>/ <link\="s|183"><u>Premium Mix</u></link>/ <link\="s|184"><u>Rough Mix</u></link>] triggers the following effect at $1/$2/$3 respectively: Increases all allies' Elemental damage (Every $4 ATK gives $5 DMG Bonus, up to <color\=#FFFC40>$6</color>) for 2 turns, the main target gain 1.2x more DMG Bonus."
@@ -430,11 +461,70 @@ Combat Pop-ups
 r:"^煞<color\=#000000>氣</color>$"="<size\=14> </size>F<color\=#000000>ur</color>y"
 
 ----------
+BUI - YUI
+----------
+
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，對沒有觸電的敵人有(\d+\.\d+%)基礎機率使敵人陷入觸電，若敵人已處於觸電則傷害提升。$"="Deals $1 ATK Electric damage to <color\=#FFFF00>1</color> enemy. If the enemy is not inflicted with Shock, there is a $2 base chance to inflict Shock. If the enemy is inflicted with Shock, increases damage."
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害。若敵人未處於觸電狀態，則有<color\=#FFFC40>(\d+\.\d+%)</color>的基礎機率使其陷入觸電狀態，效果持續2回合。若敵人已處於觸電狀態，則傷害提升(\d+%)。$"="Deals <color\=#FFFC40>$1</color> ATK Electric damage to 1 enemy. If the enemy is not inflicted with Shock, there is a <color\=#FFFC40>$2</color> base chance to inflict Shock for 2 turns. If the enemy is inflicted with Shock, increases damage by $3."
+
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，對技能主目標造成的傷害提升(\d+%)。$"="Deals $1 ATK Electric damage to <color\=#FFFF00>all</color> enemies, increases damage to the main target by $2."
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，對技能主目標造成的傷害提升(\d+%)。$"="Deals <color\=#FFFC40>$1</color> ATK Electric damage to all enemies, increases damage to the main target by $2."
+
+r:"^使{{A}}的攻擊力提升(\d+\.\d+%)，並選擇1名同伴作為『玩伴』，『玩伴』釋放技能造成傷害後{{A}}追擊，並使{{A}}下2次追擊造成(\d+\.\d+%)攻擊力的傷害，持續2回合。$"="Increases own ATK by $1 and selects 1 ally to be your [Playmate]. Triggers a Follow Up after [Playmate] deal damage with a Persona skill, makes your next 2 Follow Up deal $2 ATK Electric damage for 2 turns."
+r:"^使自身的攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>。並選擇1名同伴作為{{A}}的『玩伴』，『玩伴』對敵人釋放人格面具技能造成傷害後，{{A}}立刻追擊，並使得{{A}}下2次追擊造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，效果持續2回合。同時使『★大工程！啟動★』觸發的固定機率提升(\d+%)，持續2回合。$"="Increases own ATK by <color\=#FFFC40>$1</color> and selects 1 ally to be your [Playmate]. Triggers a Follow Up after [Playmate] deal damage with a Persona skill, makes your next 2 Follow Up deal <color\=#FFFC40>$2</color> ATK Electric damage for 2 turns. Increases the chance to trigger [★Big Project! Start★] by a fixed $3 chance for 2 turns."
+
+
+r:"^使自身的攻擊力提升(\d+\.\d+%)，追擊造成的傷害提升相當於{{A}}攻擊力的(\d+\.\d+%)，持續2回合。並使得任何同伴釋放技能造成傷害都會觸發{{A}}的追擊，持續1回合。$"="Increases own ATK by $1, increases Follow Up DMG based on $2 ATK for 2 turns. You will trigger Follow Up after any allies deal damage with skills for 1 turn."
+
+追擊強化=Follow Up Boost
+強化追擊=Boost Follow Up
+
+玩伴=Playmate
+玩伴釋放技能造成傷害後{{A}}追擊=YUI will triggers a Follow Up\nafter you deal damage with a skill
+釋放技能後{{A}}追擊=YUI will Follow UP after using skills
+
+r:"^受到的下1次電擊傷害提升(\d+%)$"="Increase the next Elec DMG Taken by $1"
+
+r:"^攻擊力提升(\d+\.\d+%)，追擊造成額外傷害$"="Increase ATK by $1,\nFollow Up deals additional damage"
+
+In-Battle Quotes
+所有同伴釋放技能都會使<color\=#FF0000>{{A}}</color>追擊……=<color\=#FF0000>BUI</color> will Follow Up after allies' skills!
+
+Combat Pop-ups
+r:"^玩<color\=#000000>伴</color>$"="Pl<color\=#000000>ay</color>mate"
+r:"^追<color\=#000000>擊</color>$"="<size\=15> </size>F<color\=#000000>ol</color>low Up"
+
+----------
 Fox - Yusuke Kitagawa
 ----------
 
 嘲諷=Taunt
 r:"^該單位被<color\=#FF0000>{{A}}</color>嘲諷了$"="Taunted by <color\=#FF0000>Yusuke Kitagawa</color>"
+
+----------
+Queen - Makoto Niijima
+----------
+
+r:"^對<color\=#FFFF00>隨機敵人</color>造成5次(\d+\.\d+%)攻擊力的核熱屬性傷害，多次傷害命中同一目標時只會造成<color\=#FFFC40>(\d+%)</color>的傷害。若主目標處於元素異常狀態，則對其額外造成一次(\d+\.\d+%)攻擊力的核熱屬性傷害，造成TECHNICAL。有(\d+%)的基礎機率使主目標陷入<link\="s|179"><u>『輻射』</u></link>狀態。$"="Deal $1 ATK Nuclear damage to <color\=#FFFF00>random enemies</color> 5 times, you will only deal <color\=#FFFC40>$2</color> to the same target. Triggers TECHNICAL if the main target have Elemental Ailment, deals an additional hit of $3 ATK Nuclear damage. There is a $4 base chance to inflict the main target with <link\="s|179"><u>[Radiation]</u></link>."
+r:"^對隨機敵人造成5次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害，優先攻擊未受到該技能攻擊的敵人。多次傷害命中同一目標時只會造成<color\=#FFFC40>(\d+%)</color>的傷害。若主目標處於元素異常狀態，則造成<link\="s\|211"><u>TECHNICAL</u></link>，對其額外造成一次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害。有(\d+%)的基礎機率使主目標陷入<link\="s\|179"><u>『輻射』</u></link>狀態。$"="Deal <color\=#FFFC40>$1</color> ATK Nuclear damage to random enemies 5 times, prioritizing enemies that have not been attacked yet. You will only deal <color\=#FFFC40>$2</color> to the same target. Triggers <link\="s|211"><u>TECHNICAL</u></link> if the main target have Elemental Ailment, deals an additional hit of <color\=#FFFC40>$3</color> ATK Nuke damage. There is a $4 base chance to inflict the main target with <link\="s|179"><u>[Radiation]</u></link>."
+
+r:"^使<color\=#FFFF00>1名</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)生命值。自身攻擊力提升(\d+\.\d+%)，持續到下回合結束。\n自身獲得2層<link\="s\|177"><u>『堅韌』</u></link>效果，並且根據敵人擁有的元素異常種類額外獲得對應數量的<link\="s\|177"><u>『堅韌』</u></link>效果。$"="Restores $1 ATK + $2 HP to <color\=#FFFF00>1</color> ally and increases own ATK by $3 until the end of next turn. Gain 2 stacks of <link\="s|177"><u>[Tenacity]</u></link>, additionally gain more stacks of <link\="s|177"><u>[Tenacity]</u></link> based on the number of Elemental Ailments on all enemies."
+r:"^使1名同伴恢復等同於{{A}}<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力\+<color\=#FFFC40>(\d+)</color>的生命值，自身攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續到下回合結束。自身獲得2層<link\="s\|177"><u>『堅韌』</u></link>效果，並且根據敵人擁有的元素異常種類額外獲得對應數量的<link\="s\|177"><u>『堅韌』</u></link>效果。$"="Restores <color\=#FFFC40>$1</color> ATK + <color\=#FFFC40>$2</color> HP to 1 ally and increases own ATK by <color\=#FFFC40>$3</color> until the end of next turn. Gain 2 stacks of <link\="s|177"><u>[Tenacity]</u></link>, additionally gain more stacks of <link\="s|177"><u>[Tenacity]</u></link> based on the number of Elemental Ailments on all enemies."
+
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，若目標處於元素異常狀態，額外造成一段(\d+\.\d+%)攻擊力的核熱屬性傷害，造成TECHNICAL。 自身獲得2層<link\="s\|177"><u>『堅韌』</u></link>效果。$"="Deals $1 ATK Nuclear damage to <color\=#FFFF00>1</color> enemy. Triggers TECHNICAL if the target have Elemental Ailment, deals an additional hit of $2 ATK Nuclear damage. Gain $3 stacks of <link\="s|177"><u>[Tenacity]</u></link>.
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，目標身上每有1種元素異常的效果，額外造成一段(\d+\.\d+%)攻擊力的核熱屬性傷害，最多造成3段額外傷害，造成TECHNICAL。$"="Deals $1 ATK Nuclear damage to <color\=#FFFF00>1</color> enemy. Triggers TECHNICAL for every 1 Elemental Ailment on the target, deals 1 additional hit of $2 ATK Nuclear damage, up to 3 times."
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害，若目標處於元素異常狀態，造成<link\="s\|211"><u>TECHNICAL</u></link>，額外造成一段<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害。 自身獲得(\d+)層<link\="s\|177"><u>『堅韌』</u></link>效果。\n<link\="s\|178"><u>『鐵血意志』</u></link>狀態下，該技能升級為『超載聚變』。\n『超載聚變』：對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害，目標身上每有1種元素異常的效果，造成<link\="s\|211"><u>TECHNICAL</u></link>，額外造成一段<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害，最多造成(\d+)段額外傷害。$"="Deals <color\=#FFFC40>$1</color> ATK Nuclear damage to 1 enemy. Triggers <link\="s|211"><u>TECHNICAL</u></link> if the target have Elemental Ailment, deals an additional hit of <color\=#FFFC40>$2</color> ATK Nuclear damage. Gain $3 stacks of <link\="s|177"><u>[Tenacity]</u></link>.\nUnder <link\="s|178"><u>[Iron Will]</u></link>, upgrade this skill to [Fusion Overload].\n[Fusion Overload]: Deals <color\=#FFFC40>$4</color> ATK Nuclear damage to 1 enemy. Triggers <link\="s|211"><u>TECHNICAL</u></link> for every 1 Elemental Ailment on the enemy, deals 1 additional hit of <color\=#FFFC40>$5</color> Nuclear damage, up to $6 hits of damage."
+
+
+r:"^獲取(\d+)層『熱質』並立刻適用以下效果，對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害。消耗當前『熱質』，每消耗1層為敵人施加1個隨機元素異常，直到敵人擁有2個元素異常；消耗所有剩餘的『熱質』，每消耗1層使得本次技能傷害提升(\d+%)$"="Gains $1 stacks of [Thermal Mass] and immediately use them to trigger the following effect, then deals $2 ATK Nuclear damage to <color\=#FFFF00>1</color> enemy. Consumes all [Thermal Mass], each stack inflicts 1 enemy with 1 random Elemental Ailment, until they have 2 Elemental Ailments; Consumes all remaining [Thermal Mass], each stack consumed increases skill damage by $3"
+進入鐵血意志後，提升下一次技能傷害=After entering Iron Will,\nincrease the damage of your next skill
+r:"^攻擊力提升(\d+%)、防禦力提升(\d+%)，『核熱爆傷』升級為『超載聚變』$"="<size\=27>Increase ATK by $1 and DEF by $2,\nupgrade [Nuclear Burst] into [Fusion Overload]</size>"
+受身 • 禦傷=Uke - Block
+再生=Regenerate
+r:"^提升(\d+%)下一次人格面具技能核熱傷害$"="Increase the Nuke DMG \nof your next Persona skill by $1"
+
+Combat Pop-ups
+r:"^堅<color\=#000000>韌</color>$"=" T<color\=#000000>e</color>nacity"
 
 ----------
 Chord - Ayaka Sakai
@@ -475,7 +565,7 @@ r:"^對隨機敵人造成(\d+)次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的
 r:"^使<color\=#FFFF00>1名</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值，攻擊力提升(\d+\.\d+%)，效果命中提升(\d+\.\d+%)，其對每名敵人造成的每段技能傷害會附著(\d+)層『火花』，效果持續(\d+)回合，期間最多觸發(\d+)次附著『火花』效果。$"="Restores $1 ATK + $2 HP to <color\=#FFFF00>1</color> ally, increases their ATK by $3 and EHR by $4, they can now inflict $5 stack of [Spark] after each hit of damage for $6 turns, up to inflicting $7 [Spark]."
 r:"^使1名同伴恢復<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力\+<color\=#FFFC40>(\d+)</color>的生命值，攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果命中提升<color\=#FFFC40>(\d+\.\d+%)</color>，其對每名敵人造成的每段技能傷害會附著(\d+)層<link\="s\|193"><u>『火花』</u></link>，效果持續(\d+)回合，期間最多觸發(\d+)次附著<link\="s\|193"><u>『火花』</u></link>效果。$"="Restores <color\=#FFFC40>$1</color> ATK + <color\=#FFFC40>$2</color> HP to 1 ally, increases their ATK by <color\=#FFFC40>$3</color> and EHR by <color\=#FFFC40>$4</color>, they can now inflict $5 stack of <link\="s|193"><u>[Spark]</u></link> after each hit of damage for $6 turns, up to inflicting $7 <link\="s|193"><u>[Spark]</u></link>."
 
-r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deals $1 ATK Psy damage to <color\=#FFFF00>all</color> enemies, and increases their DMG Taken by $2 for $3 turns.
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deals $1 ATK Psy damage to <color\=#FFFF00>all</color> enemies, and increases their DMG Taken by $2 for $3 turns."
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，並使其受到傷害提升(\d+\.\d+%)，且每名敵人受到的每段技能傷害會附著(\d+)層『火花』，效果持續(\d+)回合，{{A}}回合開始時持續回合數減(\d+)，期間最多觸發(\d+)次附著『火花』效果。（該傷害無法觸發本技能的附著『火花』效果）$"="Deals $1 ATK Psy damage to <color\=#FFFF00>all</color> enemies and increases their DMG Taken by $2, inflicts $3 stack of [Spark] to each enemy after each hit of damage for $4 turns, counts down at the start of your turn. When this effect is active you can inflict up to $6 stacks of [Spark] (That damage cannot trigger the effect of this skill)."
 r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，並使其受到傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，且每名敵人受到的每段技能傷害會附著(\d+)層<link\="s\|193"><u>『火花』</u></link>，效果持續(\d+)回合，{{A}}回合開始時持續回合數減(\d+)，期間最多觸發(\d+)次附著<link\="s\|193"><u>『火花』</u></link>效果（該傷害無法觸發本技能的附著<link\="s\|193"><u>『火花』</u></link>效果）。$"="Deals <color\=#FFFC40>$1</color> ATK Psy damage to all enemies and increases their DMG Taken by <color\=#FFFC40>$2</color>, inflicts $3 stack of <link\="s|193"><u>[Spark]</u></link> to each enemy after each hit of damage for $4 turns, counts down at the start of your turn. When this effect is active you can inflict up to $6 stacks of <link\="s|193"><u>[Spark]</u></link> (That damage cannot trigger the effect of this skill)."
 
