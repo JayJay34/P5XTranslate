@@ -1,0 +1,48 @@
+----------
+UI
+----------
+後產滿=Til Full
+嗯？要離開我的{{A}}，返回都市嗎？=Hm? Want to leave My Palace\nand head back to the city?
+
+
+----------
+Settle In
+----------
+入駐怪盜可提高契合度，獲得{{A}}=Settled in Thieves can gain Closeness and {{A}}
+r:"^契合等級：(\d+)$"="<size\=21>Closeness Rank: $1</size>"
+r:"^每入駐(\d+)秒累積1點契合度。$"="Gain 1 Closeness every $1 seconds."
+契合度未滿級=Not capped
+契合等級=Closeness
+稀有度=Rarity
+
+當前入駐怪盜數量：=Settled Thieves:
+r:"^<color\=#000000>契合(\d+)級： 獲得{{A}}\*(\d+)</color>$"="<color\=#000000>Closeness Rank $1: Get P Coin*$2</color>"
+r:"^<color\=#737373>契合(\d+)級： 獲得{{A}}\*(\d+)</color>$"="<color\=#737373>Closeness Rank $1: Get P Coin*$2</color>"
+r:"^<color\=#000000>契合(\d+)級： 解鎖新的對話事件</color>$"="<color\=#000000>Closeness Rank $1: Unlock New Special Conversations</color>"
+r:"^<color\=#737373>契合(\d+)級： 解鎖新的對話事件</color>$"="<color\=#737373>Closeness Rank $1: Unlock New Special Conversations</color>"
+
+----------
+PEVEL RANK UP
+----------
+r:"^· 暫無新的等級效果$"="- No new effect from level up"
+· 解鎖新的道具擺放區域=- Unlock new decoration area
+r:"^· {{A}}產出數量增漲至(\d+)秒一次$"="- Increase {{A}} speed to 1 every $1 seconds"
+r:"^· {{A}}產出上限提升至(\d+)$"="- Increase the passive {{A}} cap to $1"
+r:"^· 羈絆值產出數量增漲至(\d+)秒一次$"="- Increase Closeness speed to 1 every $1 seconds"
+r:"^· 羈絆值累計上限提升至(\d+)$"="- Increase the cap of Closeness to $1"
+r:"^· {{A}}產出數量增漲至(\d+)秒一次\n· 羈絆值產出數量增漲至(\d+)秒一次$"="- Increase the passive {{A}} speed to 1 every $1 seconds\n- Increase the Closeness speed to 1 every $2 seconds"
+r:"^· 解鎖新的道具擺放區域\n· {{A}}產出上限提升至(\d+)\n· {{A}}產出數量增漲至(\d+)秒一次\n· 入駐夥伴數量提升至1名\n· 羈絆值累計上限提升至(\d+)\n· 羈絆值產出數量增漲至(\d+)秒一次$"="- Unlock new decoration area\n- Increase the passive {{A}} cap to $1\n- Increase the passive {{A}} speed to 1 every $2 seconds\n- Increase the number of Settle Thieves to 1\n- Increase the cap of Closeness to $3\n- Increase the Closeness speed to 1 every $4 seconds"
+r:"^· {{A}}產出上限提升至(\d+)\n· 入駐夥伴數量提升至2名\n· 羈絆值累計上限提升至(\d+)$"="- Increase the passive {{A}} cap to $1\n- Increase the number of Settle Thieves to 2\n- Increase the cap of Closeness to $2"
+r:"^· 解鎖新的道具擺放區域\n· {{A}}產出數量增漲至(\d+)秒一次\n· 羈絆值產出數量增漲至(\d+)秒一次$"="- Unlock new decoration area\n- Increase {{A}} speed to 1 every $1 seconds\n- Increase Closeness speed to 1 every $2 seconds"
+r:"^· {{A}}產出上限提升至(\d+)\n· 入駐夥伴數量提升至(\d+)名\n· 羈絆值累計上限提升至(\d+)$"="- Increase the passive {{A}} cap to $1\n- Increase the number of Settle Thieves to $2\n- Increase the cap of Closeness to $3"
+r:"^· {{A}}產出上限提升至(\d+)\n· {{A}}產出數量增漲至(\d+)秒一次\n· 羈絆值累計上限提升至(\d+)\n· 羈絆值產出數量增漲至(\d+)秒一次$"="- Increase the passive {{A}} cap to $1\n- Increase {{A}} speed to 1 every $2 seconds\n- Increase the cap of Closeness to $3\n- Increase Closeness speed to 1 every $4 seconds"
+r:"^· {{A}}產出上限提升至(\d+)\n· 羈絆值累計上限提升至(\d+)$"="- Increase the passive {{A}} cap to $1\n- Increase the cap of Closeness to $2"
+r:"^· {{A}}產出數量增漲至(\d+)秒一次\n· 羈絆值累計上限提升至(\d+)\n· 羈絆值產出數量增漲至(\d+)秒一次$"="- Increase {{A}} speed to 1 every $1 seconds\n- Increase the cap of Closeness to $2\n- Increase Closeness speed to 1 every $3 seconds"
+
+----------
+COLLECTION
+----------
+r:"^道具收集數量：(\d+)/(\d+)$"="Collected Items: $1/$2"
+r:"^條件獲取$"="<size\=16>Unlock Condition</size>"
+
+
