@@ -77,6 +77,7 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 忘殺突襲=Memory Blow
 二連牙=Double Fangs
 窮鼠之牙=Cornered Fang
+歇斯底里巴掌=Hysterical Slap
 俯衝突擊=Assault Dive
 死亡界線=Deathbound
 加倍斬擊=Rising Slash
@@ -93,9 +94,11 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 死亡遊戲=Deadly Fury
 頭槌=Headbutt
 永眠突襲=Dormin Rush
+鬼神樂=Oni-Kagura
 斬擊=Slash
 勇氣之聲=Brave Blade
 劍舞=Sword Dance
+死亡界限=Deathbound
 巨人之戰=Gigantomachia
 榮耀衝擊=Glory Impact
 靈魂禁錮=Soul Imprisonment
@@ -185,7 +188,7 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 瑪哈芙雷拉=Mafreila
 瑪哈芙雷達因=Mafreidyne
 宇宙火焰=Cosmic Flare
-尊王的降伏=King's Surrender
+尊王的降伏=<size\=24>King's Surrender</size>
 
 --- Bless ---
 
@@ -540,12 +543,10 @@ r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的疾風屬�
 --- Psy ---
 
 //ST
-r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人傷害提升(\d+%)。"=Deals <color\=#FFFF00>$1</color> ATK Psi damage to <color\=#FFFF00>1</color> enemy. Increase damage dealt by $2 if enemy is inflicted with any <link\=s|106><u>Mental Ailment</u></link>.
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(\d+%)。"="Deals <color\=#FFFF00>$1</color> ATK Psy damage to <color\=#FFFF00>1</color> enemy. Triggers <link\="s|211"><u>TECHNICAL</u></link> to enemy inflicted with any <link\=s|106><u>Mental Ailment</u></link>, increases skill damage by $2."
 
 //AoE
-r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人傷害提升(\d+%)。"=Deals <color\=#FFFF00>$1</color> ATK Psi damage to <color\=#FFFF00>all</color> enemies. Increase damage dealt by $2 to each enemy inflicted with any <link\=s|106><u>Mental Ailment</u></link>.
-r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊點念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成傷害提升(\d+%)。"=Deals <color\=#FFFF00>$1</color> ATK Psi damage to <color\=#FFFF00>all</color> enemies. Increase damage dealt by $2 to each enemy inflicted with any <link\=s|106><u>Mental Ailment</u></link>.
-r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成傷害提升(\d+%)。"=Deals <color\=#FFFF00>$1</color> ATK Psi damage to <color\=#FFFF00>all</color> enemies. Increase damage dealt by $2 to each enemy inflicted with any <link\=s|106><u>Mental Ailment</u></link>.
+r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(\d+%)。"="Deals <color\=#FFFF00>$1</color> ATK Psy damage to <color\=#FFFF00>all</color> enemies. Triggers <link\="s|211"><u>TECHNICAL</u></link> to enemies inflicted with any <link\=s|106><u>Mental Ailment</u></link>, increases skill damage by $2."
 
 Okuninushi
 r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於精神異常的敵人增傷20%，若目標敵人的弱點是念動屬性，則額外提升15%造成的傷害。$"="Deals <color\=#fffc40>$1</color> ATK Psy damage to all enemies. Increases DMG Dealt by 20% if the enemy is inflicted with Mental Ailments. Increases DMG Dealt by 15% if the enemy is weak to Psy."
