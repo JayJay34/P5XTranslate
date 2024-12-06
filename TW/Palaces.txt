@@ -24,9 +24,14 @@ UI
 嗯？要從{{A}}撤退，返回都市嗎？=Hm? Want to retreat from the {{A}} \nand head back to the city?
 這個寶箱很稀有！\n吾等需要準備<color\=#ff0000>開鎖工具</color>才行。=This treasure chest is very rare!\nWe need a <color\=#ff0000>Lockpick</color> to open.
 似乎沒有搜尋到新的財寶……=It seems like no new treasure has been found...
+冷卻期間無法使用。=Cannot be used during cooldown.
 
 異聞印記=Anecdote Mark
 異聞=Anecdote
+
+看來目前是安全的，可以喘息片刻了。是不是需要恢復一下，或者強化一下自己的能力。=Looks like it's currently safe. \nWant to take a break and recover or strengthen your abilities?
+
+r:"^安<color\=#ff0000ff>全</color>屋$"="Sa<color\=#ff0000ff>fe</color> Room"
 
 ----------
 PALACE 1
@@ -65,10 +70,22 @@ PALACE 3
 水處理廠=<size\=27>Water Treatment Plant</size>
 水壩入口=Dam Entrance
 紀念廣場=<size\=24>Memorial Square</size>
+壩頂=Dam Top
+對岸=<size\=25>Opposite Shore</size>
 水處理廠底層=<size\=17>Treatment Plant Bottom</size>
 水處理廠中層=<size\=17>Treatment Plant Middle</size>
+水處理廠上層=<size\=19>Treatment Plant Top</size>
 水處理廠頂層=<<size\=17>Treatment Plant Top</size>
 水處理廠隧道=<size\=17>Treatment Plant Tunnel</size>
+發電廠=Power Plant
+發電廠一層=<size\=26>Power Plant 1F</size>
+發電廠二層=<size\=26>Power Plant 2F</size>
+發電廠三層=<size\=26>Power Plant 3F</size>
+控制中心=Control Center
+控制中心下層=<size\=18>Control Center Bottom</size>
+控制中心上層=<size\=20>Control Center Top</size>
+中庭廣場=Atrium Plaza
+核心監控室=<size\=20>Core Control Room</size>
 
 {{A}}{{B}}碎片=<size\=21>Wrath Gluttony Shard</size>
 
@@ -120,3 +137,32 @@ r:"^傷害減免(\d+%)；buff結束時，變成邪惡霜精$"="Increase DMG RES 
 
 禁療=No Healing
 無法被治療=Cannot be healed
+
+詭譎的青龍=Seiryu
+r:"^1、青龍會交替賦予我方全體角色疾風、冰凍屬性弱點，持續2回合。\n2、我方角色倒地時，青龍獲得1層「雲蒸龍變」：增加(\d+%)傷害。「雲蒸龍變」達到6層時，青龍會對我方角色造成高額傷害。\n3、回合開始時，若場上沒有山靈或木靈，召喚1隻山靈或木靈。$"="1. Seiryu will inflict all enemies with Wind and Ice weakness for 2 turns.\n2. When Thieves are down, Seiryu gain 1 stack of [Dragon Soar]: Increase damage by $1. When [Dragon Soar] is at 6 stacks, Seiryu will deal severe damage to all enemies.\n3. At the start of turn, if there is no Sudama or Kodama, summon 1 Sudama or Kodama."
+被擊殺時，給予我方全體疾風屬性防壁，持續1回合。=Give all Thieves 1 turn of Wind resistance when defeated.
+被擊殺時，給予我方全體冰凍屬性防壁，持續1回合。=Give all Thieves 1 turn of Ice resistance when defeated.
+
+r:"^1、青龍會交替賦予我方全體角色念動、核熱屬性弱點，持續2回合。\n2、我方角色倒地時，青龍獲得1層「雲蒸龍變」：增加(\d+%)傷害。「雲蒸龍變」達到6層時，青龍會對我方角色造成高額傷害。\n3、每隔2回合，青龍會召喚1隻鳳凰和1隻菈南希。鳳凰會使用核熱屬性技能，菈南希會使用念動屬性技能。$"="1. Seiryu will inflict all enemies with Psy and Nuke weakness for 2 turns.\n2. When Thieves are down, Seiryu gain 1 stack of [Dragon Soar]: Increase damage by $1. When [Dragon Soar] is at 6 stacks, Seiryu will deal severe damage to all enemies.\n3. Summon 1 Suzaku and Leanan Sidhe every other turn. Suzaku will use Nuke skills and Leanan Sidhe will use Psy skills."
+
+r:"^1、青龍每回合會記錄自身受到傷害的屬性，下回合給予我方角色對應屬性的弱點。\n2、我方角色倒地時，青龍獲得1層「雲蒸龍變」：增加(\d+%)傷害。「雲蒸龍變」達到6層時，青龍會對我方角色造成高額傷害。$"="1. Seiryu record the element of the damage they take, next turn inflict all enemies with that element's weakness.\n2. When Thieves are down, Seiryu gain 1 stack of [Dragon Soar]: Increase damage by $1. When [Dragon Soar] is at 6 stacks, Seiryu will deal severe damage to all enemies."
+交替使用電擊、祝福屬性傷害。=Alternate between Elec and Bless attacks.
+交替使用火焰、念動屬性傷害。=Alternate between Fire and Psy attacks.
+交替使用疾風、詛咒屬性傷害。=Alternate between Wind and Curse attacks.
+交替使用冰凍、核熱屬性傷害。=Alternate between Ice and Nuke attacks.
+
+詭譎的那伽之王=Raja Naga
+r:"^1、那伽之王會交替使用「王之祝福」和「王之制裁」。\n2、王之祝福：大幅強化1名友軍單位，使其攻擊時能夠提升全體怪物的效果抵抗。\n3、王之制裁：鎖定我方攻擊力最高的角色，下回合對其釋放超高傷害。全體怪物受到15次異常效果後解除鎖定。$"="1. Raga Naga alternate using [King's Blessing] and [King's Judgement].\n2. King's Blessing: Highly buff 1 ally, make them increase all allies' Effect RES.\n3. King's Judgement: Lock on to the highest ATK enemy, deal colossal damage to them next turn, remove lock on if all allies are inflicted with 15 debuffs."
+王之祝福=King's Blessing
+王之制裁=[King's Judgement
+r:"^1、那伽之王會交替使用「王之祝福」和「王之制裁」。\n2、王之祝福：大幅強化1名友軍單位，使其攻擊時能夠使一名怪盜陷入洗腦狀態。\n3、王之制裁：鎖定我方攻擊力最高的角色，下回合對其釋放超高傷害。全體怪物受到4種不同屬性的傷害後解除鎖定。$"="1. Raga Naga alternate using [King's Blessing] and [King's Judgement].\n2. King's Blessing: Highly buff 1 ally, make them inflict Brainwash when attacking enemies.\n3. King's Judgement: Lock on to the highest ATK enemy, deal colossal damage to them next turn, remove lock on if all allies take damage from 4 different elements."
+
+詭譎的白虎=Byakko
+r:"^1、白虎會交替使用「白虎之爪」和「白虎之牙」。\n2、「白虎之爪」：對1名角色造成傷害，給予目標撕裂：受到持續傷害效果。添加元素異常或精神異常後解除。\n3、「白虎之牙」：對全體角色造成傷害，給予我方角色咬痕：受到傷害提升。發動追加效果或HL後解除。\n4、回合開始時，若有目標撕裂和咬痕同時存在，白虎會對目標發動捕食，對目標造成大量傷害，並使目標進入絕望狀態。\n5、每隔兩回合，召喚1隻白虎的分身。白虎的分身會使用和白虎相同的技能，擁有更低的血量和極低的效果抵抗。$"="1. Byakko will alternate using [Byakko's Claw] and [Byakko's Fang].\n2. [Byakko's Claw]: Deal damage to 1 enemy and inflict Laceration: Take damage over time, dispel when inflicting Elemental Ailment or Mental Ailment.\n3. [Byakko's Fang]: Deal damage to all enemies and inflict Bite: Increase DMG Taken, dispel when triggering Follow Up or using HIGHLIGHT.\n4. At the start of turn, if any target have both Laceration and Bite, deal heavy damage to them and inflict Despair. \n5. Summon 1 clone every 2 turns. The clone have the same skills but have low HP and even lower Effect RES."
+白虎之牙=Byakko's Claw
+白虎之爪=Byakko's Fang
+r:"^1、白虎會交替使用「白虎之爪」和「白虎之牙」。\n2、「白虎之爪」：對1名角色造成傷害，給予目標撕裂：受到持續傷害效果。受到3次治療效果後解除。\n3、「白虎之牙」：對全體角色造成傷害，給予我方角色咬痕：受到傷害提升。造成3次傷害後解除。\n4、回合開始時，若有目標撕裂和咬痕同時存在，白虎會對目標發動捕食，對目標造成大量傷害，並使目標進入絕望狀態。\n5、每隔2回合召喚1隻菈南希。$"="1. Byakko will alternate using [Byakko's Claw] and [Byakko's Fang].\n2. [Byakko's Claw]: Deal damage to 1 enemy and inflict Laceration: Take damage over time, dispel when healed 3 times.\n3. [Byakko's Fang]: Deal damage to all enemies and inflict Bite: Increase DMG Taken, dispel after dealing damage 3 times.\n4. At the start of turn, if any target have both Laceration and Bite, deal heavy damage to them and inflict Despair. \n5. Summon 1 Leanan Sidhe every 2 turns."
+被召喚2回合後，給予我方全體角色禁療，持續2回合。=After being summoned for 2 turns, disable healing on all enemies for 2 turns.
+r:"^1、白虎會交替使用「白虎之爪」和「白虎之牙」。\n2、「白虎之爪」：對1名角色造成傷害，給予目標撕裂：受到持續傷害效果。\n3、「白虎之牙」：對全體角色造成傷害，給予我方角色咬痕：受到傷害提升。\n4、回合開始時，若有目標撕裂和咬痕同時存在，白虎會對目標發動捕食，對目標造成大量傷害，並使目標進入絕望狀態。\n5、每隔兩回合，選擇1隻山靈成為「餌料」，下回合捕食山靈，恢復自身全部生命值並強化自身。$"="1. Byakko will alternate using [Byakko's Claw] and [Byakko's Fang].\n2. [Byakko's Claw]: Deal damage to 1 enemy and inflict Laceration: Take damage over time.\n3. [Byakko's Fang]: Deal damage to all enemies and inflict Bite: Increase DMG Taken.\n4. At the start of turn, if any target have both Laceration and Bite, deal heavy damage to them and inflict Despair. \n5. Summon 1 Sudama every 2 turns. Next turn Byakko will defeat that Sudama, restore own HP and buff yourself."
+死亡時淨化我方角色的撕裂和咬痕。=Dispel Laceration and Bite when defeated
+r:"^1、白虎會交替使用「白虎之爪」和「白虎之牙」。\n2、「白虎之爪」：對1名角色造成傷害，給予目標撕裂：受到持續傷害效果。\n3、「白虎之牙」：對全體角色造成傷害，給予我方角色咬痕：受到傷害提升。\n4、回合開始時，若有目標撕裂和咬痕同時存在，白虎會對目標發動捕食，對目標造成大量傷害，並使目標進入絕望狀態。\n5、每隔兩回合，選擇1隻山靈成為「餌料」，下回合捕食山靈，恢復自身全部生命值並強化自身。\n6、山靈死亡時，淨化所有怪盜的撕裂和咬痕效果。$"="1. Byakko will alternate using [Byakko's Claw] and [Byakko's Fang].\n2. [Byakko's Claw]: Deal damage to 1 enemy and inflict Laceration: Take damage over time.\n3. [Byakko's Fang]: Deal damage to all enemies and inflict Bite: Increase DMG Taken.\n4. At the start of turn, if any target have both Laceration and Bite, deal heavy damage to them and inflict Despair. \n5. Summon 1 Sudama every 2 turns. Next turn Byakko will defeat that Sudama, restore own HP and buff yourself.\n6. Dispel Laceration and Bite when Sudama is defeated."
