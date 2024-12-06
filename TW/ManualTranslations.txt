@@ -306,6 +306,7 @@ CV.前內孝文=CV.Takafumi Maeuchi
 用於提升體力的咖啡糖果，使用後立即恢復30體力。=Restores 30 Stamina Points immediately.
 /體力=    /Stamina
 體力=Stamina
+r:"^『體力』\n探索異世界所需的基本能量，隨時間勻速恢復。\n下次恢復：<color\=#FFC000>(.*)</color>\n全部恢復：<color\=#FFC000>(.*)</color>$"="[Stamina]\nThe basic energy needed to explore the Metaverse, restores with time.\nNext one: <color\=#FFC000>$1</color>\nFully restored: <color\=#FFC000>$2</color>"
 行動力補給=Energy Supply
 能量飲料=Energy Drink
 用於提升能量的補給飲料，使用後立即恢復5行動力。=Restores 5 Energy Points immediately.
@@ -489,6 +490,7 @@ r:"^(\d+)時(\d+)分後下架$"="Expires in $1h $2min"
 r:"^剩餘(\d+)時(\d+)分(\d+)秒$"=" $1h $2min $3sec"
 r:"^(\d+)小時(\d+)分鐘$"=" $1h $2m"
 r:"^(\d+)時(\d+)分(\d+)秒$"=" $1h $2min $3sec"
+r:"^(\d+)分鐘$"=" $1 minutes"
 
 r:"^挑戰倒計時：(\d+)天(\d+)時(\d+)分$"="Time Left: $1d $2h $3m"
 
@@ -539,6 +541,8 @@ r:"^持有：(\d+)$"="Have: $1"
 修改名稱=Change Name
 遮罩此人=Block
 r:"^每日最多可獲取<color\=#FF0000>10</color>點<link\="s\|1002"><u>助戰積分</u></link>。$"="Maximum <color\=#FF0000>10</color> <link\="s|1002"><u>Assist Points</u></link> per day."
+助戰積分=Assist Points
+未獲得更多助戰積分。=No Assist Points.
 
 
 尚未加入樂園。=No Affiliation
@@ -661,14 +665,23 @@ r:"^提升攻擊力(\d+%)\n$"="Increase ATK by $1\n"
 r:"^提升防禦力(\d+%)\n$"="Increase DEF by $1\n"
 r:"^提升精力回復(\d+%)\n$"="Increase SP Recovery by $1\n"
 r:"^提升穿透(\d+\.\d%)\n$"="Increase PEN by $1\n"
+r:"^提升穿透(\d+%)\n$"="Increase PEN by $1\n"
 r:"^提升效果命中(\d+\.\d%)\n$"="Increase EHR by $1\n"
+r:"^提升效果命中(\d+%)\n$"="Increase EHR by $1\n"
 r:"^提升效果抵抗(\d+\.\d%)\n$"="Increase Effect RES by $1\n"
+r:"^提升效果抵抗(\d+%)\n$"="Increase Effect RES by $1\n"
 r:"^提升暴擊率(\d+\.\d%)\n$"="Increase CRIT Rate by $1\n"
+r:"^提升暴擊率(\d+%)\n$"="Increase CRIT Rate by $1\n"
 r:"^提升暴擊效果(\d+\.\d%)\n$"="Increase CRIT DMG by $1\n"
+r:"^提升暴擊效果(\d+%)\n$"="Increase CRIT DMG by $1\n"
 r:"^提升傷害加成(\d+\.\d%)\n$"="Increase DMG Bonus by $1\n"
+r:"^提升傷害加成(\d+%)\n$"="Increase DMG Bonus by $1\n"
 r:"^提升傷害減免(\d+\.\d%)\n$"="Increase DMG RES by $1\n"
+r:"^提升傷害減免(\d+%)\n$"="Increase DMG RES by $1\n"
 r:"^提升治療效果(\d+\.\d%)\n$"="Increase Healing Effect by $1\n"
+r:"^提升治療效果(\d+%)\n$"="Increase Healing Effect by $1\n"
 r:"^提升護盾效果(\d+\.\d%)\n$"="Increase Shield Effect by $1\n"
+r:"^提升護盾效果(\d+%)\n$"="Increase Shield Effect by $1\n"
 
 // Wonder Skill Tree //
 

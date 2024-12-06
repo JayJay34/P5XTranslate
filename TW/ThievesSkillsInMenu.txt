@@ -200,7 +200,7 @@ HIGHLIGHT：生命值回復倍率=HIGHLIGHT: HP% Heal
 ----------
 Wind - Riko Tanemura
 ----------
-sr:"^同伴每行動3次，使倒地值最高的敵人暴露<link\="s\|188"><u>『破綻』</u></link>。$"="After 3 allies' action, expose a <link\="s|188"><u>$1</u></link> from the enemy with the highest Knockdown Count."
+r:"^同伴每行動3次，使倒地值最高的敵人暴露<link\="s\|188"><u>『破綻』</u></link>。$"="After 3 allies' action, expose a <link\="s|188"><u>[Vulnerability]</u></link> from the enemy with the highest Knockdown Count."
 r:"^霞影之術$"="Art of Skyglow"
 r:"^梅幻之術$"="<size\=26>Art of Plum Blossom</size>"
 r:"^暗香細語$"="Aroma Whisper"
@@ -540,12 +540,10 @@ r:"^HIGHLIGHT效果提升：受到核熱傷害提升(\d+\.\d+%)，持續(\d+)回
 
 r:"^同伴攻擊帶有<link\="s\|179"><u>『輻射』</u></link>的敵人時，根據敵人身上的元素異常數量，最多啟動下列(\d+)個效果：\n大於等於(\d+)個時，攻擊力提升(\d+%)；\n大於等於(\d+)個時，核熱傷害提升(\d+%)；\n大於等於(\d+)個時，穿透提升(\d+%)。$"="When allies attack enemies with <link\="s|179"><u>[Radiation]</u></link>, trigger the following $1 effects based on how many Elemental Ailments they have:\n$2 or higher: Increase ATK by $3;\n$4 or higher: Increase Nuke DMG by $5;\n$6 or higher: Increase PEN by $7."
 
-
-
 ----------
 Skull - Ryuji Sakamoto
 ----------
-生命值越低，攻擊力越高。自身回合開始時，若自身生命值不高於75%，則獲得『觸底反彈』，提升下一個技能造成的傷害。=<size\=25>The lower your HP, the higher your ATK. At the start of your turn, if your hp are not higher than 75%, gain [Rebound], boosting the DMG Dealt of your next skill.</size>
+生命值越低，攻擊力越高。自身回合開始時，若自身生命值不高於75%，則獲得『觸底反彈』，提升下一個技能造成的傷害。=<size\=25>The lower your HP, the higher your ATK. At the start of your turn, if your HP are not higher than 75%, gain [Rebound], boosting the DMG Dealt of your next skill.</size>
 爆裂撞擊=Burst Impact
 電擊懲戒=<size\=26>Electric Punishment</size>
 蓄力一擊=Charged Blow
@@ -663,7 +661,7 @@ r:"^慰藉$"="Comfort"
 
 r:"^繁花熱烈 Lv.(\d+)$"="Hot Blossom Lv.$1"
 r:"^繁花熱烈 <color\=#0F69CB>Lv.(\d+)</color>$"="Hot Blossom <color\=#0F69CB>Lv.$1</color>"
-r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，並且提升自身攻擊力(\d+%)，效果持續2回合。<link\="s|113"><u>『潛心』</u></link>狀態下，使敵人攻擊力基於{{B}}的攻擊力降低(\d+%)並使自身額外提升對應攻擊力，效果持續2回合。\n<b><size\=28><color\=#850101>燃燒著的火焰迅速吞噬敵人，巨大的玫瑰自地下盛放而出，綻放傲人之姿勢，對敵人造成難以抵擋的傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Fire damage to all enemies and increases ATK by $2 for 2 turns. When you are in <link\="s|113"><u>[Concentration]</u></link>, decreases the ATK of all enemies based on $3 your own ATK and gains the corresponding ATK for 2 turns.\n<b><size\=28><color\=#850101>The burning flames quickly devoured the enemy, and the huge roses were released from the ground, blooming proudly, causing difficult damage to the enemy.</color></size></b>"
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，並且提升自身攻擊力(\d+%)，效果持續2回合。<link\="s\|113"><u>『潛心』</u></link>狀態下，使敵人攻擊力基於{{A}}的攻擊力降低(\d+%)並使自身額外提升對應攻擊力，效果持續2回合。\n<b><size\=28><color\=#850101>燃燒著的火焰迅速吞噬敵人，巨大的玫瑰自地下盛放而出，綻放傲人之姿勢，對敵人造成難以抵擋的傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Fire damage to all enemies and increases ATK by $2 for 2 turns. When you are in <link\="s|113"><u>[Concentration]</u></link>, decreases the ATK of all enemies based on $3 your own ATK and gains the corresponding ATK for 2 turns.\n<b><size\=28><color\=#850101>The burning flames quickly devoured the enemy, and the huge roses were released from the ground, blooming proudly, causing difficult damage to the enemy.</color></size></b>"
 
 r:"^魅火術 Lv.(\d+)$"="Charming Fire Lv.$1"
 r:"^魅火術 <color\=#0F69CB>Lv.(\d+)</color>$"="Charming Fire <color\=#0F69CB>Lv.$1</color>"
@@ -1060,6 +1058,75 @@ r:"^HighLight效果提升：追擊暴擊效果提升(\d+%)，效果持續(\d+)�
 r:"^場上只有1個敵人時，{{A}}的追擊基礎技能倍率提升至(\d+%)攻擊力；{{A}}的追擊對其他所有敵人造成(\d+%)的濺射傷害。$"="When there is only 1 enemy, increase the skill multiplier of your Follow Up to $1 ATK; Your Follow Up now deal $2 splash damage to all other enemies."
 
 ----------
+Fox - Yusuke Kitagawa
+----------
+受到傷害時，有一定固定機率對傷害來源進行一次反擊。=When you take damage, there is a fixed chance to trigger a Counter.
+寒氣破擊=Chill Break
+擬霜流連斬=Frost Slash
+銀華殘心=<size\=26>Ginka-Zanshin</size>
+r:"^創造$"="Creation"
+雕琢=Craving
+
+r:"^寒氣破擊 Lv.(\d+)$"="Chill Break Lv.$1"
+r:"^寒氣破擊 <color\=#0F69CB>Lv.(\d+)</color>$"="Chill Break <color\=#0F69CB>Lv.$1</color>"
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>防禦力的冰凍屬性傷害，有<color\=#FFFC40>(\d+%)</color>基礎機率使主目標敵人陷入<link\="s\|103"><u>凍結</u></link>狀態，效果持續2回合。\n<b><size\=28><color\=#850101>霜雪彙聚而成棱角鋒利的冰體，對敵人造成冰凍傷害，隨著寒意的層層滲透，有可能使敵人附著元素異常。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> DEF Ice damage to all enemies, with a <color\=#FFFC40>$2</color> base chance to inflict the main target with <link\="s|103"><u>[Freeze]</u></link> for 2 turns.\n<b><size\=28><color\=#850101>Frost and snow converge into a sharp-edged body of ice, inflicting freezing damage to enemies, and as the cold seeps through, it may cause them to attach elemental anomalies.</color></size></b>"
+
+r:"^擬霜流連斬 Lv.(\d+)$"="Frost Slash Lv.$1"
+r:"^擬霜流連斬 <color\=#0F69CB>Lv.(\d+)</color>$"="Frost Slash <color\=#0F69CB>Lv.$1</color>"
+r:"^對隨機敵人造成5次<color\=#FFFC40>(\d+\.\d+%)</color>防禦力的冰凍屬性傷害，優先攻擊未受到該技能攻擊的敵人。若自身處於護盾狀態，則額外造成(\d+%)技能傷害。多次傷害命中同一目標傷害衰減(\d+%)，最低造成(\d+%)的傷害。\n<b><size\=28><color\=#850101>凜冽的寒氣包裹住敵人的身體，以極寒的刺骨之痛凍結生命的衍息，對所有敵人造成無法逆轉的傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> DEF Ice damage to random enemies 5 times, prioritizing enemies that have not been attacked yet. When you have Shield, additionally increases skill damage by $2. Decreases skill damage by $3 when attacking the same enemy, up to a maximum of $4.\n<b><size\=28><color\=#850101>The cold air wraps around the enemy's body and freezes the breath of life with the pain of extreme cold, causing irreversible damage to all enemies.</color></size></b>"
+
+r:"^銀華殘心 Lv.(\d+)$"="Ginka-Zanshin Lv.$1"
+r:"^銀華殘心 <color\=#0F69CB>Lv.(\d+)</color>$"="Ginka-Zanshin <color\=#0F69CB>Lv.$1</color>"
+r:"^接下來1次<link\="s\|123"><u>『遊龍展布』</u></link>攻擊強化為<link\="s\|172"><u>『墨見龍吟』</u></link>。攻擊觸發機率提升至(\d+%)、技能倍率提升相當於祐介<color\=#FFFC40>(\d+\.\d+%)</color>的防禦力並且以群體為目標攻擊。若1回合內未觸發<link\="s\|172"><u>『墨見龍吟』</u></link>強化反擊，則自動觸發。\n此外自身獲得<color\=#FFFC40>(\d+\.\d+%)</color>防禦力\+<color\=#FFFC40>(\d+)</color>的護盾，效果持續2回合。將自身弱點暫時變為默認耐性、免疫任何精神異常並使所有敵人獲得<link\="s\|143"><u>嘲諷</u></link>狀態，效果持續2回合。\n冷卻時間：1回合。\n<b><size\=28><color\=#850101>璀璨的星光之中，冒著寒意的薄霧凝結成一層晶瑩剔透的護盾，護盾吸引了敵人的目光，也阻絕了一部分來自敵人的傷害。</color></size></b>$"="Upgrades your next <link\="s|123"><u>[Dragons Dance]</u></link> to <link\="s|172"><u>[Dragon Roar]</u></link>. Increases the chance to trigger Counter to $1, increases skill multiplier by <color\=#FFFC40>$2</color> DEF and it is now an AoE attack. Automatically triggers <link\="s|172"><u>[Dragon Roar]</u></link> if you didn't triggered it for 1 turn.\nGains <color\=#FFFC40>$3</color> DEF + <color\=#FFFC40>$4</color> as Shield for 2 turns. Turns your weakness into neutral, gains immunity to Mental Ailments and <link\="s|143"><u>Taunt</u></link> all enemies for 2 turns.\nCooldown: 1 turn.\n<b><size\=28><color\=#850101>Amidst the bright starlight, a chilling mist condenses into a crystalline shield that attracts the eyes of the enemy and blocks some of the damage coming from them.</color></size></b>"
+
+r:"^『HIGHLIGHT』：對全體敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>防禦力的冰凍屬性傷害，並使遊龍展布觸發機率提升(\d+%)，持續(\d+)回合。\n『ONE MORE』：對1名敵人造成冰凍屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[HIGHLIGHT]: Deals <color\=#FFFC40>$1</color> DEF Ice damage to all enemies, increases the chance to trigger Dragon Dance by $2 for $3 turns.\nFreeze: Inflicts 178% of Defense damage to all enemies, and increases the trigger rate of the dragon by 35% for 3 turns.\n[ONE MORE]: Deals Electric damage to 1 enemy. \nMelee Attack: Uses a melee weapon to deal light Physical damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
+
+r:"^創造 Lv.(\d+)$"="Creation Lv.$1"
+r:"^獲得護盾時傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合，可疊(\d+)層。$"="When gaining Shield increase DMG Bonus by <color\=#FFFC40>$1</color> for $2 turns, up to $3 stacks."
+r:"^獲得護盾時傷害提升<color\=#0169ca>(\d+\.\d+%)</color>，持續(\d+)回合，可疊(\d+)層。$"="When gaining Shield increase DMG Bonus by <color\=#0169ca>$1</color> for $2 turns, up to $3 stacks."
+
+r:"^雕琢 Lv.(\d+)$"="Craving Lv.$1"
+r:"^使用技能提供護盾時，增加自身的穿透<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="When using skills that give Shield, increase PEN by <color\=#FFFC40>$1</color> for $2 turn."
+r:"^使用技能提供護盾時，增加自身的穿透<color\=#0169ca>(\d+\.\d+%)</color>，持續(\d+)回合。$"="When using skills that give Shield, increase PEN by <color\=#0169ca>$1</color> for $2 turn."
+
+<color\=#66ccff>『遊龍展布』</color>=<color\=#66ccff>[Dragon Dance]</color>
+遊龍展布=Dragon Dance
+受到傷害時，{{A}}有機率反擊敵人，造成冰凍屬性傷害。=When taking damage, there is a chance to trigger a Counter, dealing Ice damage.
+
+<color\=#66ccff>『墨見龍吟』</color>=<color\=#66ccff>[Dragon Roar]</color>
+墨見龍吟=Dragon Roar
+r:"^{{A}}反擊機率提升至(\d+%)，反擊攻擊變為群體攻擊且威力提升。$"="Increases Counter chance to $1, increases its damage and turns it into AoE."
+
+使自身成為敵人的攻擊目標=Make yourself the target of enemies' attacks
+
+遊龍展布=Dragon Dance
+r:"^受到技能傷害時，有(\d+%)固定機率進行反擊，對敵人造成(\d+%)防禦力的冰凍屬性傷害的<link\="s\|100"><u>追加效果</u></link>。透過技能可以將該效果強化為<link\="s\|172"><u>『墨見龍吟』</u></link>。$"="When taking skill damage, there is a $1 fixed chance to trigger a Counter, dealing $2 DEF Ice damage to the enemy as a <link\="s|100"><u>[Follow Up]</u></link>. You can upgrade this effect to <link\="s|172"><u>[Dragon Roar]</u></link> with skills."
+
+流線勾刻=Streamline Engraving
+r:"^每使用(\d+)次『銀華殘心』額外獲得一次<link\="s\|172"><u>『墨見龍吟』</u></link>的機會，這次額外的反擊造成(\d+%)傷害。$"="After using [Ginka-Zanshin] $1 times, additionally gain 1 <link\="s|172"><u>[Dragon Roar]</u></link>, this Counter will deals $2 damage."
+
+色盤調諧=Palette Harmony
+
+彩墨潑灑=Ink Splash
+r:"^自身生命值不低於(\d+%)時，追加效果造成傷害提升(\d+%)。$"="When own HP is not below $1, increase Follow Up DMG by $2."
+
+光影交界=Intersection of Light and Shadow
+
+識一見著=Superior Insights
+r:"^<nobr>HIGHLIGHT效果提升：使用技能後，反擊攻擊時傷害提升(\d+%)，(\d+)回合。$"="<nobr>HIGHLIGHT Effect Boost: Increase Counter DMG by $1 for $2 turns."
+
+筆落如生=Vibrant Brushstrokes
+r:"^<nobr><link\="s\|123"><u>『遊龍展布』</u></link>、<link\="s\|172"><u>『墨見龍吟』</u></link>效果進化為<link\="s\|173"><u>『癡絕·遊龍展布』</u></link>、<link\="s\|174"><u>『癡絕·墨見龍吟』</u></link>——\n對敵人造成的反擊攻擊提升為連續的2次傷害，每次傷害為原本的(\d+%)，且反擊時獲得(\d+%)穿透。$"="<nobr>Evolve <link\="s|123"><u>[Dragon Dance]</u></link>, <link\="s|172"><u>[Dragon Roar]</u></link> to <link\="s|173"><u>[Crazed Dragon Dance]</u></link>, <link\="s|174"><u>[Crazed Dragon Roar]</u></link>.\nYour Counter now deal 2 hits of damage, each hit dealing $1 of the original damage and gain $2 PEN when triggering Counter."
+
+<color\=#66ccff>『癡絕·遊龍展布』</color>=<color\=#66ccff>[Crazed Dragon Dance]</color>
+癡絕·遊龍展布=<size\=25>Crazed Dragon Dance</size>
+受到傷害時，{{A}}有機率反擊敵人，造成兩段冰凍屬性傷害並且附帶穿透效果。=When taking damage, there is a chance to trigger a Counter, dealing 2 hits of Ice damage with PEN.
+
+<color\=#66ccff>『癡絕·墨見龍吟』</color>=<color\=#66ccff>[Crazed Dragon Roar]</color>
+癡絕·墨見龍吟=<size\=25>Crazed Dragon Roar</size>
+r:"^{{A}}反擊機率提升至(\d+%)，反擊攻擊變為群體攻擊、威力提升、造成兩段冰凍屬性傷害並且附帶穿透效果。$"="Increases Counter chance to $1, increases its damage and turns it into AoE, dealing 2 hits of Ice damage with PEN."
+
+----------
 Queen - Makoto Niijima
 ----------
 r:"^釋放技能攻擊敵人後，可以獲得<link\="s\|177"><u>『堅韌』</u></link>。回合開始，若自身擁有(\d+)層堅韌效果，進入<link\="s\|178"><u>『鐵血意志』</u></link>狀態。$"="<size\=26>After using skills to attack enemies, gain <link\="s|177"><u>[Tenacity]</u></link>. At the start of turn, if you have $1 stacks of Tenacity, you can enter <link\="s|178"><u>[Iron Will]</u></link>.</size>"
@@ -1101,7 +1168,7 @@ r:"^攻擊力提升(\d+%)，防禦力提升(\d+%)。$"="Increase ATK by $1 and D
 r:"^攻擊力提升(\d+%)，防禦力提升(\d+%)，『核熱爆傷』進化為『超載聚變』。$"="Increase ATK by $1 and DEF by $2, evolve [Nuclear Burst] to [Fusion Overload]."
 
 合氣·修身=Aikido - Training
-r:"^釋放人格面具技能攻擊敵人後，獲得1層<link\="s\|177"><u>『堅韌』</u></link>效果，敵人每擁有一種元素異常，額外獲得1層<link\="s\|177"><u>『堅韌』</u></link>效果。回合開始，若自身擁有(\d+)層堅韌效果，可以變身進入<link\="s\|178"><u>『鐵血意志』</u></link>狀態，獲得(\d+%)攻擊力、(\d+%)防禦力提升，並且『核熱爆傷』進化為『超載聚變』，持續(\d+)回合。<link\="s\|178"><u>『鐵血意志』</u></link>狀態結束時清除全部<link\="s\|177"><u>『堅韌』</u></link>效果。$"="After using Persona skills to attack enemies, gain 1 stack of <link\="s|177"><u>[Tenacity]</u></link>, for every 1 Elemental Ailment on the target, gain 1 additional stack of <link\="s|177"><u>[Tenacity]</u></link>. At the start of turn, if you have $1 stacks of [Tenacity], you can enter <link\="s|178"><u>[Iron Will]</u></link>, increase ATK by $2 and DEF by $3, evlove [Nuclear Burst] to [Fusion Overload] for $4 turns. Dispel all effects from <link\="s\|177"><u>[Tenacity]</u></link> when <link\="s|178"><u>[Iron Will]</u></link> ends."
+r:"^釋放人格面具技能攻擊敵人後，獲得1層<link\="s\|177"><u>『堅韌』</u></link>效果，敵人每擁有一種元素異常，額外獲得1層<link\="s\|177"><u>『堅韌』</u></link>效果。回合開始，若自身擁有(\d+)層堅韌效果，可以變身進入<link\="s\|178"><u>『鐵血意志』</u></link>狀態，獲得(\d+%)攻擊力、(\d+%)防禦力提升，並且『核熱爆傷』進化為『超載聚變』，持續(\d+)回合。<link\="s\|178"><u>『鐵血意志』</u></link>狀態結束時清除全部<link\="s\|177"><u>『堅韌』</u></link>效果。$"="After using Persona skills to attack enemies, gain 1 stack of <link\="s|177"><u>[Tenacity]</u></link>, for every 1 Elemental Ailment on the target, gain 1 additional stack of <link\="s|177"><u>[Tenacity]</u></link>. At the start of turn, if you have $1 stacks of [Tenacity], you can enter <link\="s|178"><u>[Iron Will]</u></link>, increase ATK by $2 and DEF by $3, evolve [Nuclear Burst] to [Fusion Overload] for $4 turns. Dispel all effects from <link\="s\|177"><u>[Tenacity]</u></link> when <link\="s|178"><u>[Iron Will]</u></link> ends."
 
 受身·禦傷=Uke - Block
 r:"^戰鬥開始時獲得(\d+)層<link\="s\|177"><u>『堅韌』</u></link>效果，自己第一回合開始時可以變身進入<link\="s\|178"><u>『鐵血意志』</u></link>狀態。<link\="s\|178"><u>『鐵血意志』</u></link>狀態期間攻擊力額外提升(\d+%)。$"="At the start of battle, gain $1 stacks of <link\="s|177"><u>[Tenacity]</u></link>, you can enter <link\="s|178"><u>[Iron Will]</u></link> on turn 1. <link\="s|178"><u>[Iron Will]</u></link> additionally increases ATK by $2."
@@ -1122,10 +1189,10 @@ r:"^進入<link\="s\|178"><u>『鐵血意志』</u></link>狀態時，獲得1個
 ----------
 Chord - Ayaka Sakai
 ----------
-r:"^『終曲：音域全開』初始有1回合冷卻時間，使用該技能後提升自身攻擊力，此後該技能增加1回合冷卻時間，最多不會超過3回合。$"="<size\=27>[Finale: Range Unleash] starts with a 1 turn cooldown, increases ATK after using that skill and increases its cooldown by 1 turn, up to 3 turns.</size>"
-激情鳴奏=<size\=27>Passionate Singing</size>
-即興獨奏=Improvised Solo
-終曲：音域全開=<size\=23>Finale: Range Unleash</size>
+r:"^『終曲：音域全開』初始有1回合冷卻時間，使用該技能後提升自身攻擊力，此後該技能增加1回合冷卻時間，最多不會超過3回合。$"="<size\=25>[Finale: Range Unleash] starts with a 1 turn cooldown, increases ATK after using that skill and increases its cooldown by 1 turn, up to 3 turns.</size>"
+激情鳴奏=<size\=21>Passionate Singing</size>
+即興獨奏=<size\=25>Improvised Solo</size>
+終曲：音域全開=<size\=17>Finale: Range Unleash</size>
 重音=Stress
 掃弦=Sweep Picking
 
@@ -1177,15 +1244,15 @@ r:"^進入戰鬥立刻解鎖『終曲：音域全開』。『終曲：音域全�
 ----------
 Lemon - Motoha Arai
 ----------
-r:"^自身受到治療效果時，若治療量超過自身最大生命值的(\d+%)，則『海浪追逐者』的冷卻時間減少(\d+)回合，最多減少至(\d+)回合 。$"="When healed, decreases the cooldown of [Wave Chaser] by $2 turn if the healing amount exceeds $1 Max HP, up to a minimum of $3 turn."
+r:"^自身受到治療效果時，若治療量超過自身最大生命值的(\d+%)，則『海浪追逐者』的冷卻時間減少(\d+)回合，最多減少至(\d+)回合 。$"="<size\=25>When healed, decreases the cooldown of [Wave Chaser] by $2 turn if the healing amount exceeds $1 Max HP, up to a minimum of $3 turn.</size>"
 夏日清涼魔法=Summer Cooling Magic
 悠閒假期=Leisure Holiday
 海浪追逐者=Wave Chaser
 蔭影=Shaded
 熱浪=Heat Wave
 
-r:"^夏日清涼魔法 Lv.(\d+)$"="Summer Cooling Magic Lv.$1"
-r:"^夏日清涼魔法 <color\=#0F69CB>Lv.(\d+)</color>$"="Summer Cooling Magic <color\=#0F69CB>Lv.$1</color>"
+r:"^夏日清涼魔法 Lv.(\d+)$"="<size\=23>Summer Cooling Magic Lv.$1</size>"
+r:"^夏日清涼魔法 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=23>Summer Cooling Magic <color\=#0F69CB>Lv.$1</color></size>"
 r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害。若自身處於<link\="s\|192"><u>『盛夏』</u></link>狀態，則消耗自身(\d+%)最大生命值的血量，額外對所有敵人造成1次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害。\n<b><size\=28><color\=#850101>浪花翻滾著躍上海面，散發出耀眼的光芒，為所有的敵人降降溫吧。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Bless damage to all enemies. If you are in <link\="s|192"><u>[Midsummer]</u></link>, consumes $2 Max HP to deal an additional hit of <color\=#FFFC40>$3</color> ATK Bless damage to all enemies.\n<b><size\=28><color\=#850101>The wave rolls up to the surface of the sea, emitting a dazzling light that cools down all your enemies.</color></size></b>"
 
 r:"^悠閒假期 Lv.(\d+)$"="Leisure Holiday Lv.$1"
@@ -1233,7 +1300,7 @@ r:"^<link\="s\|192"><u>『盛夏』</u></link>效果強化為『真夏豔陽』�
 ----------
 Strawberry - Tomoko Noge
 ----------
-r:"^技能使敵人附著『火花』，達到(\d+)層後會對所有敵人造成傷害，使其造成傷害降低，並治療所有同伴。$"="Skills will inflict enemies with [Spark], after reaching $1 stacks you will deal damage to all enemies, decrasing their DMG Dealt, and restore HP to all allies."
+r:"^技能使敵人附著『火花』，達到(\d+)層後會對所有敵人造成傷害，使其造成傷害降低，並治療所有同伴。$"="<size\=26>Skills will inflict enemies with [Spark], after reaching $1 stacks deal damage to all enemies, decrasing their DMG Dealt, and restore HP to all allies.</size>"
 來點夏日冰飲嗎=Come Order a Drink
 請好好享用=Please Enjoy
 午夜的心動回憶=Midnight Memory
@@ -1291,7 +1358,7 @@ r:"^<link\="s\|194"><u>『絢爛煙火』</u></link>效果強化為『火樹銀�
 ----------
 Oracle - Futaba Sakura
 ----------
-友方怪盜使用人格面具技能後獲得『解析進度』，造成弱點傷害後額外獲得『解析進度』。『駭入完成』狀態下我方傷害提升。=Allies gain [Analysis Progress] after using Persona skills, gain additional [Analysis Progress] after dealing Weak damage. Increase all allies' damage under [Hack Complete].
+友方怪盜使用人格面具技能後獲得『解析進度』，造成弱點傷害後額外獲得『解析進度』。『駭入完成』狀態下我方傷害提升。=<size\=25>Allies gain [Analysis Progress] after using Persona skills, gain additional [Analysis Progress] after dealing Weak damage. Increases all allies' damage under [Hack Complete].</size>
 無聲侵襲=Silent Hacking
 數據破解=Data Crack
 以不死鳥的名義=<size\=25>In the Name of Featherman</size>
@@ -1340,6 +1407,69 @@ r:"^任意怪盜使用HIGHLIGHT後，{{A}}獲得1層『漏洞分析』，上限(
 
 病毒入侵=Virus Invasion
 r:"^使用『以不死鳥的名義』時會對我方全體怪盜釋放，同時為所有敵人添加我方所有怪盜對應的『擾亂病毒』（同一適應性的『擾亂病毒』僅能同時存在1種）。『駭入完成』的持續時間延長至3回合，並額外提升我方(\d+%)弱點傷害、傷害提升(\d+%)。$"="[In the Name of Featherman] now targets all allies, inflict all enemies with the corresponding [Disruption Virus] (There can only be 1 [Disruption Virus] for the same element). Extend [Hacking Complete] to 3 turns, and additionally increase all allies' Weak DMG by $1 and damage by $2."
+
+----------
+Noir - Haru Okumura
+----------
+{{A}}的槍械射擊造成群體念動傷害，使用特定技能後會獲得相應『改裝』並重新裝填子彈，『改裝』可以強化槍械射擊的效果；完成槍械射擊後清空所有『改裝』。=<size\=22>Your Gun Attack deals AoE Psy damage, after using skills gain certain [Customization] and reload, [Customization] can upgrade your GUN; Remove all [Customization] after using Gun Attack.</size>
+聚合瞄準=Fusion Aiming
+火力壓制=<size\=24>Suppressing Fire</size>
+全金屬爆發=<size\=19>Full Metal Explosion</size>
+彈射=Launch
+策動=Instigate
+
+r:"^聚合瞄準 Lv.(\d+)$"="Fusion Aiming Lv.$1"
+r:"^聚合瞄準 <color\=#0F69CB>Lv.(\d+)</color>$"="Fusion Aiming <color\=#0F69CB>Lv.$1</color>"
+r:"^對所有敵人造成2段<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，有<color\=#FFFC40>(\d+\.\d+%)</color>的基礎機率為主目標添加<link\="s\|114"><u>『準星』</u></link>同時有<color\=#FFFC40>(\d+\.\d+%)</color>的基礎機率為其他目標添加<link\="s\|114"><u>『準星』</u></link>，持續(\d+)回合；自身獲得『熱能改裝』：槍械射擊帶有<link\="s\|114"><u>『準星』</u></link>的敵人時，技能傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，槍械射擊完成後移除<link\="s\|114"><u>『準星』</u></link>。\n<b><size\=28><color\=#850101>絢麗的色彩迷亂了敵人的思緒，如夢一般持續旋轉的漩渦，將群體拖入早已設定好的陷阱中，造成念動傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Psy damage to all enemies 2 times, there is a <color\=#FFFC40>$2</color> base chance to inflict the main target with <link\="s|114"><u>[Sight]</u></link> and a <color\=#FFFC40>$3</color> base chance to inflict all other enemies with <link\="s|114"><u>[Sight]</u></link> for $4 turns; Gains [Thermal Customization]: When using Gun Attack on enemies with <link\="s|114"><u>[Sight]</u></link>, increases skill damage by <color\=#FFFC40>$5</color>, removes all <link\="s|114"><u>[Sight]</u></link> after Gun Attack.\n<b><size\=28><color\=#850101>The colorful swirls of color confuse the enemy's mind, and the swirls continue to spin like a dream, dragging the group into the set traps and dealing psychic damage.</color></size></b>"
+
+r:"^火力壓制 Lv.(\d+)$"="Suppressing Fire Lv.$1"
+r:"^火力壓制 <color\=#0F69CB>Lv.(\d+)</color>$"="Suppressing Fire <color\=#0F69CB>Lv.$1</color>"
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，攻擊帶有<link\="s\|114"><u>『準星』</u></link>的敵人時穿透提升<color\=#FFFC40>(\d+\.\d+%)</color>；自身獲得『卸甲改裝』：槍械射擊時額外對主目標造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，可觸發『熱能改裝』的技能傷害提升效果。\n<b><size\=28><color\=#850101>優雅的姿態一如往昔，看到黑洞洞的槍口了嗎，那將是敵人的死亡倒計時，瞄準並造成射擊傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Gun damage to 1 enemy, increases PEN by <color\=#FFFC40>$2</color> when attacking enemy with <link\="s|114"><u>[Sight]</u></link>; Gains [Piercing Customization]: Deals an additional <color\=#FFFC40>$3</color> ATK Psy damage to the main target when using Gun Attack, this can triggers the skill damage boosting effect of [Thermal Customization].\n<b><size\=28><color\=#850101>Elegant as ever, see the black hole in the muzzle, that's the enemy's countdown to death, aim and deal damage.</color></size></b>"
+
+r:"^全金屬爆發 Lv.(\d+)$"="<size\=26>Full Metal Explosion Lv.$1</size>"
+r:"^全金屬爆發 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=26>Full Metal Explosion <color\=#0F69CB>Lv.$1</color></size>"
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，攻擊帶有<link\="s\|114"><u>『準星』</u></link>的敵人時暴擊率提升<color\=#FFFC40>(\d+\.\d+%)</color>；自身獲得『擴散改裝』：槍械射擊時額外對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，可觸發『熱能改裝』的技能傷害提升效果。\n<b><size\=28><color\=#850101>喚醒沉睡在敵人心中的夢魘，凝視著他們內心的恐懼，對敵人群體造成念動傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Psy damage to all enemies, increases CRIT Rate by <color\=#FFFC40>$2</color> when attacking enemies with <link\="s|114"><u>[Sight]</u></link>; Gains [Spreading Customization]: Deals an additional <color\=#FFFC40>$3</color> ATK Psy damage to all enemies, this can triggers the skill damage boosting effect of [Thermal Customization].\n<b><size\=28><color\=#850101>Awaken the nightmares in your enemies' hearts and stare into their fears, dealing psychic damage to their bodies.</color></size></b>"
+
+r:"^『HIGHLIGHT』：對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害。若『改裝』未滿且未獲得『超荷改裝』,則獲得『超荷改裝』：槍械射擊時暴擊率提升<color\=#FFFC40>(\d+\.\d+%)</color>；否則，本次攻擊技能傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。\n『ONE MORE』：對1名敵人造成念動屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊全體敵人，造成念動屬性傷害；每種『改裝』都會為槍械射擊帶來獨特的功能強化。$"="[HIGHLIGHT]: Deals <color\=#FFFC40>$1</color> ATK Psy damage to all enemies. Gains [Overload Customization] If [Customization] is not full or you don't have [Overload Customization]: Increases Gun Attack CRIT Rate by <color\=#FFFC40>$2</color>; Otherwise, increases this damage by <color\=#FFFC40>$3</color>. \n[ONE MORE]: Deals Psy damage to 1 enemy. \nMelee Attack: Uses a melee weapon to deal light Physical damage to 1 enemy.\nGun Attack: Deals Psy damage to all enemies; each [Customization] bring unique effects to Gun Attack."
+
+r:"^彈射 Lv.(\d+)$"="Launch Lv.$1"
+r:"^戰鬥中，每有(\d+\.\d+%)的效果命中，獲得(\d+%)的攻擊力加成，最多可獲得<color\=#FFFC40>(\d+\.\d+%)</color>的攻擊力加成；\n每有(\d+%)的效果命中，額外獲得1層(\d+%)暴擊效果提升，最多可獲得<color\=#FFFC40>(\d+)</color>層。$"="In battle, for every $1 EHR, increase ATK Bonus by $2, up to <color\=#FFFC40>$3</color> ATK Bonus;\nFor every $4 EHR, additionally gain 1 stack of $5 CRIT DMG, up to <color\=#FFFC40>$6</color> stacks."
+r:"^戰鬥中，每有(\d+\.\d+%)的效果命中，獲得(\d+%)的攻擊力加成，最多可獲得<color\=#0169ca>(\d+\.\d+%)</color>的攻擊力加成；\n每有(\d+%)的效果命中，額外獲得1層(\d+%)暴擊效果提升，最多可獲得<color\=#0169ca>(\d+)</color>層。$"="In battle, for every $1 EHR, increase ATK Bonus by $2, up to <color\=#0169ca>$3</color> ATK Bonus;\nFor every $4 EHR, additionally gain 1 stack of $5 CRIT DMG, up to <color\=#0169ca>$6</color> stacks."
+
+r:"^策動 Lv.(\d+)$"="Instigate Lv.$1"
+r:"^每使用1種改裝，永久獲得1層『槍管加熱』；『槍管加熱』層數達到指定層數自身可獲得屬性提升：\n1層：效果命中提升<color\=#FFFC40>(\d+\.\d+%)</color>、效果抵抗提升<color\=#FFFC40>(\d+\.\d+%)</color>；\n2層：攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>、防禦力提升<color\=#FFFC40>(\d+\.\d+%)</color>；\n3層：暴擊效果提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Everytime you gain 1 Customization, permanently gain 1 stack of [Barrel Heat]; Increase own stats when [Barrel Heat] reach certain stacks:\n1 stack: Increase EHR by <color\=#FFFC40>$1</color>, Effect RES by <color\=#FFFC40>$2</color>;\n2 stacks: Increase ATK by <color\=#FFFC40>$3</color>, DEF by <color\=#FFFC40>$4</color>;\n3 stacks: Increase CRIT DMG by <color\=#FFFC40>$5</color>."
+r:"^每使用1種改裝，永久獲得1層『槍管加熱』；『槍管加熱』層數達到指定層數自身可獲得屬性提升：\n1層：效果命中提升<color\=#0169ca>(\d+\.\d+%)</color>、效果抵抗提升<color\=#0169ca>(\d+\.\d+%)</color>；\n2層：攻擊力提升<color\=#0169ca>(\d+\.\d+%)</color>、防禦力提升<color\=#0169ca>(\d+\.\d+%)</color>；\n3層：暴擊效果提升<color\=#0169ca>(\d+\.\d+%)</color>。$"="Everytime you gain 1 Customization, permanently gain 1 stack of [Barrel Heat]; Increase own stats when [Barrel Heat] reach certain stacks:\n1 stack: Increase EHR by <color\=#0169ca>$1</color>, Effect RES by <color\=#0169ca>$2</color>;\n2 stacks: Increase ATK by <color\=#0169ca>$3</color>, DEF by <color\=#0169ca>$4</color>;\n3 stacks: Increase CRIT DMG by <color\=#0169ca>$5</color>."
+
+<color\=#66ccff>『準星』</color>=<color\=#66ccff>[Sight]</color>
+準星=Sight
+身上帶有『準星』的敵人受到{{A}}的攻擊時，會產生額外效果；{{A}}的槍械射擊後被移除。=Triggers additional effects when attacking enemies with [Sight]; Removes after using Gun Attack.
+
+熱能改裝=Thermal Customization
+卸甲改裝=Piercing Customization
+擴散改裝=Spreading Customization
+超荷改裝=Overload Customization
+
+槍管加熱=Barrel Heat
+
+狂熱下午茶=Frenzy Teatime
+r:"^{{A}}的槍械射擊對所有敵人造成(\d+%)攻擊力的念動傷害，使用特定技能後會獲得相應『改裝』並重新裝填子彈，每種『改裝』會為槍械射擊帶來獨特的功能強化；{{A}}進行槍械射擊時，根據『改裝』數量增加技能傷害\（『改裝』數量為1/2/3時，技能傷害提升(\d+%)/(\d+%)/(\d+%)\），並在『改裝』數量不少於2個時，額外獲得(\d+%)的攻擊力提升；完成槍械射擊後清空所有『改裝』。$"="Your Gun Attack deal $1 ATK Psy damage to all enemies, after using specific skills gain the corresponding [Customization] and reload ammo, each [Customization] bring unique effects to Gun Attack; When using Gun Attack, increase skill damage based on [Customization] amount (When you have 1/2/3 [Customization], increase skill damage by $2/$3/$4), when [Customization] is not less than 2, additionally increase ATK by $5; Remove all [Customization] after using Gun Attack."
+
+破碎綺羅裙=Broken Rococo Dress
+r:"^首回合開始時，為生命值最高的敵人添加<link\="s\|114"><u>『準星』</u></link>，同時有(\d+%)的基礎機率為其他敵人添加<link\="s\|114"><u>『準星』</u></link>，隨後自身獲得1個『熱能改裝』；戰鬥中每有一個帶有<link\="s\|114"><u>『準星』</u></link>的敵人，攻擊力提升(\d+%)\（最多提升(\d+%)\），槍械射擊暴擊率提升(\d+%)\（最多提升(\d+%)\）。$"="At the start of battle, inflict the highest HP enemy with <link\="s|114"><u>[Sight]</u></link>, there is a $1 base chance to inflict all other enemies with <link\="s|114"><u>[Sight]</u></link>, then gain 1 [Thermal Customization]; For every 1 enemy with <link\="s|114"><u>[Sight]</u></link>, increase ATK by $2 (Up to $3), Gun Attack CRIT Rate by $4 (Up to $5)."
+
+槍械玫瑰花=Guns and Roses
+
+喋血華爾滋=Bloody Waltz
+r:"^帶有<link\="s\|114"><u>『準星』</u></link>的敵人數量不少於1個時，受到傷害降低(\d+%)；帶有<link\="s\|114"><u>『準星』</u></link>的敵人數量不少於(\d+)個時，念動傷害提升(\d+%)。$"="When there is not less than 1 enemy with <link\="s|114"><u>[Sight]</u></link>, decrease DMG Taken by $1; When there are not less than $2 enemies with <link\="s|114"><u>[Sight]</u></link>, increase Psy damage by $3."
+
+驚魂野藤蔓=Wild Vine
+
+爆炸小蛋糕=Explosive Cupcakes
+r:"^『超荷改裝』獲得額外效果：槍械射擊時的暴擊效果提升(\d+%)。$"="[Overload Customization] Bonus Effect: Increase Gun Attack CRIT DMG by $1."
+
+噩夢狂想曲=Nightmare Rhapsody
+r:"^『改裝』數量不少於2個時，{{A}}發射的榴彈進化為『臨別贈禮』；\n人格面具技能提供的『改裝』獲得額外效果：\n『熱能改裝』：槍械技能額外使敵人的效果抵抗降低(\d+%)，持續2回合；\n『卸甲改裝』：槍械技能攻擊帶有<link\="s\|114"><u>『準星』</u></link>的敵人時，穿透提升(\d+%)；\n『擴散改裝』：槍械技能攻擊帶有<link\="s\|114"><u>『準星』</u></link>的敵人時，暴擊率提升(\d+%)、暴擊效果提升(\d+%)。$"="When you have not less than 2 [Customization], evolve your Gun Attack to [Farewell Gift]:\n[Customization] from Persona skills give additional effects:\n[Thermal Customization]: Gun Attack additionally decrease enemies' Effect RES by $1 for 2 turns;\n[Piercing Customization]: Gun Attack gain $2 PEN when attacking enemies with <link\="s|114"><u>[Sight]</u></link>;\n[Spreading Customization]: Gun Attack gain $3 CRIT Rate and $4 CRIT DMG when attacking enemies with <link\="s|114"><u>[Sight]</u></link>."
+臨別贈禮=Farewell Gift
 
 ----------
 MFS - Kotone Montagne

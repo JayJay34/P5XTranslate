@@ -12,6 +12,14 @@ sr:"^(.*)·月$"="$1·Moon"
 sr:"^(.*)·星$"="$1·Star"
 sr:"^(.*)·辰$"="$1·Planet"
 套裝效果=Set Effect
+日月星辰=Basic
+當前消耗數量:=Consumed:
+當前可獲數量:=Converted:
+sr:"^每消耗<color\=#FFDE00>(\d+)</color>張<color\=#FFDE00>宙</color>位置橙色啟示，可熔煉1張套裝為<color\=#FFDE00>「(.*)」</color>隨機啟示$"="Every <color\=#FFDE00>$1</color> consumed <color\=#FFDE00>Universe</color> cards can turn into 1 <color\=#FFDE00>[$2]</color> card"
+sr:"^每消耗<color\=#FFDE00>(\d+)</color>張<color\=#FFDE00>日月星辰</color>位置橙色啟示，可熔煉1張套裝為<color\=#FFDE00>「(.*)」</color>隨機啟示$"="Every <color\=#FFDE00>$1</color> consumed <color\=#FFDE00>Sun, Moon, Star, Planet</color> cards can turn into 1 <color\=#FFDE00>[$2]</color> card"
+請選擇主屬性=Main Stat
+r:"^持有數量:(\d+)$"="You have: $1"
+屬性選擇=Select
 
 推薦套裝=<size\=30>Recommendations</size>
 是否要將所有啟示卡卸下。=Unequip your cards?
@@ -30,8 +38,8 @@ r:"^套裝$"="Set"
 套裝篩選=Filter
 
 點擊修改啟示篩選=Filter Cards
-最多可選擇2條主屬性=Up to 2 main stats
-最多可選擇4條副屬性=Up to 4 sub stats
+最多可選擇2條主屬性=Up to 2 Main Stats
+最多可選擇4條副屬性=Up to 4 Sub Stats
 
 暫無套裝篩選=No Set Filter
 暫無主屬性篩選=No Main Stats Filter
@@ -237,6 +245,9 @@ Inspect Details + Combat Pop-Ups
 r:"^生命值、攻擊力、防禦力提升(\d+%)$"="Increase HP, ATK, DEF by $1"
 生命值、攻擊力、防禦力根據相同適應性屬性怪盜數量提升=Increase HP, ATK, DEF \nwith each ally with the same element
 r:"^當前生命值百分比不低於(\d+%)時，祝福屬性的暴擊率提升(\d+%)$"="Increase Bless CRIT Rate by $2 \nwhen your HP% is not below $1"
+r:"^造成念動傷害時，提升攻擊(\d+%)，如果敵方人數不少於3，則攻擊力額外提升(\d+%)$"="<size\=26>Increase ATK by $1 when dealing Psy damage,\nincrease ATK by $2 if there are 3+ enemies</size>"
+
+
 
 觸發【主權】套裝效果的額外傷害=Triggered the additional damage from [Sovereignty]
 觸發【真諦】套裝效果的額外傷害=Triggered the additional damage from [Truth]

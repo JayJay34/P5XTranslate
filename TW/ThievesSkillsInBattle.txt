@@ -279,7 +279,7 @@ r:"^直<color\=#000000>覺</color>$"="In<color\=#000000>st</color>inct"
 Panther - Ann Takamaki
 ----------
 sr:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的火焰屬性傷害並提升自身(\d+%)攻擊力，效果持續2回合。『(.*)』狀態下偷取敵人(\d+%)攻擊力。$"="Deals $1 ATK Fire damage to <color\=#FFFF00>all</color> enemies and increases ATK by $2 for 2 turns. When you're in [$3] steals $4 ATK from the enemies."
-r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，並且提升自身攻擊力(\d+%)，效果持續2回合。<link\="s|113"><u>『潛心』</u></link>狀態下，使敵人攻擊力基於{{B}}的攻擊力降低(\d+%)並使自身額外提升對應攻擊力，效果持續2回合。$"="Deals <color\=#FFFC40>$1</color> ATK Fire damage to all enemies and increases ATK by $2 for 2 turns. When you are in <link\="s|113"><u>[Concentration]</u></link>, decreases the ATK of all enemies based on $3 your own ATK and gains the corresponding ATK for 2 turns."
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，並且提升自身攻擊力(\d+%)，效果持續2回合。<link\="s\|113"><u>『潛心』</u></link>狀態下，使敵人攻擊力基於{{A}}的攻擊力降低(\d+%)並使自身額外提升對應攻擊力，效果持續2回合。$"="Deals <color\=#FFFC40>$1</color> ATK Fire damage to all enemies and increases ATK by $2 for 2 turns. When you are in <link\="s|113"><u>[Concentration]</u></link>, decreases the ATK of all enemies based on $3 your own ATK and gains the corresponding ATK for 2 turns."
 
 sr:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的火焰屬性傷害，『(.*)』狀態下對生命值低於(\d+%)的敵人造成的傷害提升(\d+%)，有(\d+%)基礎機率使敵人燃燒。$"="Deals $1 ATK Fire damage to <color\=#FFFF00>1</color> enemy. When you're in [$2] increases DMG Dealt by $4 against target with less than $3 HP, with $5 base chance to inflicts Burn."
 r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，有(\d+%)基礎機率使敵人陷入<link\="s\|102"><u>燃燒</u></link>狀態。<link\="s\|113"><u>『潛心』</u></link>狀態下，若敵人的生命值低於(\d+%)，則額外造成<color\=#FFFC40>(\d+%)</color>傷害。$"="Deals <color\=#FFFC40>$1</color> ATK Fire damage to 1 enemy, with a $2 base chance to inflicts <link\="s|102"><u>Burn</u></link>. When you are in <link\="s|113"><u>[Concentration]</u></link>, if the enemy is below $3 HP, deals <color\=#FFFC40>$4</color> more damage."
@@ -383,7 +383,6 @@ In-Battle Quotes
 
 Combat Pop-ups
 r:"^持<color\=#000000>續</color>回復$"="<size\=4> </size>R<color\=#000000>eg</color>eneration"
-r:"^穿<color\=#000000>透</color>提升$"="<size\=22> </size>P<color\=#000000>E</color>N Up"
 r:"治<color\=#000000>癒</color>誓言$"="<size\=3> </size>H<color\=#000000>ea</color>ling Oath"
 
 ----------
@@ -488,7 +487,7 @@ r:"^受到的下1次電擊傷害提升(\d+%)$"="Increase the next Elec DMG Taken
 r:"^攻擊力提升(\d+\.\d+%)，追擊造成額外傷害$"="Increase ATK by $1,\nFollow Up deals additional damage"
 
 In-Battle Quotes
-所有同伴釋放技能都會使<color\=#FF0000>{{A}}</color>追擊……=<color\=#FF0000>BUI</color> will Follow Up after allies' skills!
+所有同伴釋放技能都會使<color\=#FF0000>{{A}}</color>追擊……=<color\=#FF0000>YUI</color> will Follow Up after allies' skills!
 
 Combat Pop-ups
 r:"^玩<color\=#000000>伴</color>$"="Pl<color\=#000000>ay</color>mate"
@@ -498,8 +497,34 @@ r:"^追<color\=#000000>擊</color>$"="<size\=15> </size>F<color\=#000000>ol</col
 Fox - Yusuke Kitagawa
 ----------
 
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)防禦力的冰凍屬性傷害，有(\d+%)基礎機率使主目標敵人凍結。$"="Deals $1 DEF Ice damage to <color\=#FFFF00>all</color> enemies, with a $2 base chance to inflict the main target with Freeze."
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>防禦力的冰凍屬性傷害，有<color\=#FFFC40>(\d+%)</color>基礎機率使主目標敵人陷入<link\="s\|103"><u>凍結</u></link>狀態，效果持續2回合。$"="Deals <color\=#FFFC40>$1</color> DEF Ice damage to all enemies, with a <color\=#FFFC40>$2</color> base chance to inflict the main target with <link\="s|103"><u>[Freeze]</u></link> for 2 turns."
+
+r:"^對<color\=#FFFF00>隨機</color>敵人造成5次(\d+\.\d+%)防禦力的冰凍屬性傷害，自身處於護盾狀態時候技能傷害提升(\d+%)。重複攻擊相同的敵人時，每次衰減(\d+%)，最低造成(\d+%)的傷害。$"="Deals $1 DEF Ice damage to <color\=#FFFF00>random</color> enemies 5 times, increases skill damage by $2 when you are Shielded. Decreases damage to the same enemy by $3, up to $4."
+r:"^對隨機敵人造成5次<color\=#FFFC40>(\d+\.\d+%)</color>防禦力的冰凍屬性傷害，優先攻擊未受到該技能攻擊的敵人。若自身處於護盾狀態，則額外造成(\d+%)技能傷害。多次傷害命中同一目標傷害衰減(\d+%)，最低造成(\d+%)的傷害。$"="Deals <color\=#FFFC40>$1</color> DEF Ice damage to random enemies 5 times, prioritizing enemies that have not been attacked yet. When you have Shield, additionally increases skill damage by $2. Decreases skill damage by $3 when attacking the same enemy, up to a maximum of $4."
+
+r:"^強化接下來的(\d+)次反擊，使觸發機率提升至(\d+%)，技能倍率提升(\d+\.\d+%)防禦力，並以<color\=#FFFF00>群體</color>為目標攻擊。使<color\=#FFFF00>自身</color>獲得\（(\d+\.\d+%)防禦力\+(\d+)\）的護盾，效果持續(\d+)回合。消除自身弱點、免疫任何精神並使自身成為敵人攻擊的目標，效果持續(\d+)回合。$"="Upgrades the next Counter, increases the chance to $2, increases the skill multiplier by $3 DEF, and becomes <color\=#FFFF00>AoE</color>. <color\=#FFFF00>You</color> gain ($4 DEF + $5 Shield) for $6 turns. Removes weakness, gains immunity to Mental Ailments and taunts all enemies for $7 turns."
+r:"^接下來1次<link\="s\|123"><u>『遊龍展布』</u></link>攻擊強化為<link\="s\|172"><u>『墨見龍吟』</u></link>。攻擊觸發機率提升至(\d+%)、技能倍率提升相當於祐介<color\=#FFFC40>(\d+\.\d+%)</color>的防禦力並且以群體為目標攻擊。若1回合內未觸發<link\="s\|172"><u>『墨見龍吟』</u></link>強化反擊，則自動觸發。\n此外自身獲得<color\=#FFFC40>(\d+\.\d+%)</color>防禦力\+<color\=#FFFC40>(\d+)</color>的護盾，效果持續2回合。將自身弱點暫時變為默認耐性、免疫任何精神異常並使所有敵人獲得<link\="s\|143"><u>嘲諷</u></link>狀態，效果持續2回合。\n冷卻時間：1回合。$"="Upgrades your next <link\="s|123"><u>[Dragons Dance]</u></link> to <link\="s|172"><u>[Dragon Roar]</u></link>. Increases the chance to trigger Counter to $1, increases skill multiplier by <color\=#FFFC40>$2</color> DEF and it is now an AoE attack. Automatically triggers <link\="s|172"><u>[Dragon Roar]</u></link> if you didn't triggered it for 1 turn.\nGains <color\=#FFFC40>$3</color> DEF + <color\=#FFFC40>$4</color> as Shield for 2 turns. Turns your weakness into neutral, gains immunity to Mental Ailments and <link\="s|143"><u>Taunt</u></link> all enemies for 2 turns.\nCooldown: 1 turn."
+
+r:"^對<color\=#FFFF00>全體</color>敵人造成(\d+\.\d+%)防禦力的冰凍屬性傷害，並使反擊機率提升(\d+%)，(\d+)回合。$"="Deals $1 DEF Ice damage to <color\=#FFFF00>all</color> enemies, increases Counter chance by $2 for $3 turns."
+
+
+r:"^反擊傷害提升(\d+%)$"="Increase Counter DMG by $1"
+r:"^反擊效果觸發機率提升至(\d+%)、傷害大幅提升$"="Increase Counter chance to $1,\nheavily increase damage"
+護靈=Guardian Spirit
+r:"^反擊效果觸發機率提升(\d+%)$"="Increase Counter chance by $1"
+r:"^反擊效果造成傷害提升(\d+%)$"="Increase Counter DMG by $1"
+
 嘲諷=Taunt
 r:"^該單位被<color\=#FF0000>{{A}}</color>嘲諷了$"="Taunted by <color\=#FF0000>Yusuke Kitagawa</color>"
+
+Combat Pop-ups
+r:"^銀<color\=#000000>華</color>殘心$"="<size\=10> </size>G<color\=#000000>in</color>ka-Zanshin"
+r:"^反<color\=#000000>擊</color>強化$"="<size\=25> </size>C<color\=#000000>o</color>unter Boost"
+
+r:"^反<color\=#000000>擊</color>傷害提升$"="<size\=25> </size>C<color\=#000000>o</color>unter DMG Up"
+r:"^護<color\=#000000>靈</color>$"="<size\=2> </size>G<color\=#000000>ua</color>rdian Spirit"
+r:"^凍<color\=#000000>結</color>傷害提升$"="<size\=5> </size>Ic<color\=#000000>e</color> DMG Up"
 
 ----------
 Queen - Makoto Niijima
@@ -607,6 +632,51 @@ r:"^弱點傷害提升(\d+%)$"="Increase Weak DMG by $1"
 
 Combat Pop-ups
 r:"^善<color\=#000000>後</color>$"="<size\=14> </size>C<color\=#000000>le</color>an Up"
+
+----------
+Noir - Haru Okumura
+----------
+r:"^對<color\=#FFFF00>所有</color>敵人造成2段(\d+\.\d+%)攻擊力的念動屬性傷害，有(\d+\.\d+%)的基礎機率為主目標添加『準星』同時有(\d+\.\d+%)的基礎機率為其他目標添加『準星』，持續(\d+)回合；自身獲得『熱能改裝』：槍械射擊帶有『準星』的敵人時，技能傷害提升(\d+\.\d+%)，槍械射擊完成後移除『準星』。$"="Deals $1 ATK Psy damage to <color\=#FFFF00>all</color> enemies 2 times, there is a $2 base chance to inflict the main target with [Sight] and a $3 base chance to inflict all other enemies with [Sight] for $4 turns; Gains [Thermal Customization]: When using Gun Attack on enemies with [Sight], increases skill damage by $5, removes all [Sight] after Gun Attack."
+r:"^對所有敵人造成2段<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，有<color\=#FFFC40>(\d+\.\d+%)</color>的基礎機率為主目標添加<link\="s\|114"><u>『準星』</u></link>同時有<color\=#FFFC40>(\d+\.\d+%)</color>的基礎機率為其他目標添加<link\="s\|114"><u>『準星』</u></link>，持續(\d+)回合；自身獲得『熱能改裝』：槍械射擊帶有<link\="s\|114"><u>『準星』</u></link>的敵人時，技能傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，槍械射擊完成後移除<link\="s\|114"><u>『準星』</u></link>。$"="Deals <color\=#FFFC40>$1</color> ATK Psy damage to all enemies 2 times, there is a <color\=#FFFC40>$2</color> base chance to inflict the main target with <link\="s|114"><u>[Sight]</u></link> and a <color\=#FFFC40>$3</color> base chance to inflict all other enemies with <link\="s|114"><u>[Sight]</u></link> for $4 turns; Gains [Thermal Customization]: When using Gun Attack on enemies with <link\="s|114"><u>[Sight]</u></link>, increases skill damage by <color\=#FFFC40>$5</color>, removes all <link\="s|114"><u>[Sight]</u></link> after Gun Attack."
+
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的射擊屬性傷害，攻擊帶有『準星』的敵人時穿透提升(\d+\.\d+%)；自身獲得『卸甲改裝』：槍械射擊時額外對主目標造成(\d+\.\d+%)攻擊力的念動屬性傷害，可觸發『熱能改裝』的技能傷害提升效果。$"="Deals $1 ATK Gun damage to <color\=#FFFF00>1</color> enemy, increases PEN by $2 when attacking enemy with [Sight]; Gain [Piercing Customization]: Deals an additional $3 ATK Psy damage to the main target when using Gun Attack, this can triggers the skill damage boosting effect of [Thermal Customization]."
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，攻擊帶有<link\="s\|114"><u>『準星』</u></link>的敵人時穿透提升<color\=#FFFC40>(\d+\.\d+%)</color>；自身獲得『卸甲改裝』：槍械射擊時額外對主目標造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，可觸發『熱能改裝』的技能傷害提升效果。$"="Deals <color\=#FFFC40>$1</color> ATK Gun damage to 1 enemy, increases PEN by <color\=#FFFC40>$2</color> when attacking enemy with <link\="s|114"><u>[Sight]</u></link>; Gains [Piercing Customization]: Deals an additional <color\=#FFFC40>$3</color> ATK Psy damage to the main target when using Gun Attack, this can triggers the skill damage boosting effect of [Thermal Customization]."
+
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，攻擊帶有『準星』的敵人時暴擊率提升(\d+\.\d+%)；自身獲得『擴散改裝』：槍械射擊時額外對所有敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，可觸發『熱能改裝』的技能傷害提升效果。$"="Deals $1 ATK Psy damage to <color\=#FFFF00>all</color> enemies, increases CRIT Rate by $2 when attacking enemies with [Sight]; Gains [Spreading Customization]: Deals an additional $3 ATK Psy damage to all enemies, this can triggers the skill damage boosting effect of [Thermal Customization]."
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，攻擊帶有<link\="s\|114"><u>『準星』</u></link>的敵人時暴擊率提升<color\=#FFFC40>(\d+\.\d+%)</color>；自身獲得『擴散改裝』：槍械射擊時額外對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，可觸發『熱能改裝』的技能傷害提升效果。$"="Deals <color\=#FFFC40>$1</color> ATK Psy damage to all enemies, increases CRIT Rate by <color\=#FFFC40>$2</color> when attacking enemies <link\="s|114"><u>[Sight]</u></link>; Gains [Spreading Customization]: Deals an additional <color\=#FFFC40>$3</color> ATK Psy damage to all enemies, this can triggers the skill damage boosting effect of [Thermal Customization]."
+
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害。若『改裝』未滿且未獲得『超荷改裝』,則獲得『超荷改裝』：槍械射擊時暴擊率提升(\d+\.\d+%)；否則，本次攻擊技能傷害提升(\d+\.\d+%)。$"="Deals $1 ATK Psy damage to <color\=#FFFF00>all</color> enemies. Gains [Overload Customization] If [Customization] is not full or you don't have [Overload Customization]: Increases Gun Attack CRIT Rate by $2; Otherwise, increases this damage by $3."
+
+使用槍械射擊全體敵人，造成念動屬性傷害；每種『改裝』都會為槍械射擊帶來獨特的功能強化。=Use Gun Attack to deal Psy damage to all enemies; Each [Customization] bring unique effects to Gun Attack
+
+r:"^槍械射擊帶有『準星』的敵人時技能傷害提升(\d+\.\d+%)。$"="Increase Gun Attack damage by $1 \nwhen attacking enemies with [Sight]"
+槍械射擊額外對主目標造成念動傷害，可觸發『熱能改裝』的效果。=<size\=26>Gun Attack deal additonal Psy damage to the main target, can trigger [Thermal Customization]</color>
+r:"^槍械射擊時暴擊率提升(\d+\.\d+%)$"="Increase Gun Attack CRIT Rate by $1"
+
+r:"^進行槍械射擊時，技能傷害提升(\d+%)"="Increase Gun Attack DMG by $1"
+r:"^進行槍械射擊時，攻擊力提升(\d+%)"="Increase ATK by $1 when using Gun Attack"
+r:"^每有一個帶有『準星』的敵人，進行槍械射擊時暴擊率提升(\d+%)"="Increase Gun Attack CRIT Rate by $1 \nfor every enemy with [Sight]"
+
+r:"^每有一個帶有『準星』的敵人，攻擊力提升(\d+%)"="<size\=25>Increase ATK by $1 for every enemy with [Sight]</size>"
+r:"^受到的傷害降低(\d+%)"="Decrease DMG Taken by $1"
+
+受到{{A}}的攻擊時，產生額外效果；{{A}}的槍械射擊後被移除=<size\=24>Trigger additional effects when attacked by {{A}}; Remove after {{A}}'s Gun Attack</size>
+
+In-Battle Quotes
+r:"^<color\=#FF0000>{{A}}</color>各項屬性提升了……$"="<color\=#FF0000>Haru Okumura</color> Stats Up!"
+
+Combat Pop-ups
+r:"^彈<color\=#000000>射</color>$"="La<color\=#000000>u</color>nch"
+r:"^破<color\=#000000>碎</color>綺羅裙$"="<size\=12> </size>B<color\=#000000>ro</color>ken Rococo Dress"
+r:"^喋<color\=#000000>血</color>華爾滋$"="<size\=16> </size>B<color\=#000000>lo</color>ody Waltz"
+r:"^槍<color\=#000000>管</color>加熱$"="<size\=10> </size>B<color\=#000000>ar</color>rel Heating"
+
+r:"^準<color\=#000000>星</color>$"="<size\=17> </size>S<color\=#000000>ig</color>ht"
+
+r:"^熱<color\=#000000>能</color>改裝$"="<size\=9> </size>T<color\=#000000>he</color>rmal Customization"
+r:"^卸<color\=#000000>甲</color>改裝$"="<size\=16> </size>P<color\=#000000>ie</color>rcing Customization"
+r:"^擴<color\=#000000>散</color>改裝$"="<size\=11> </size>S<color\=#000000>pr</color>eading Customization"
+r:"^超<color\=#000000>荷</color>改裝$"="<size\=1> </size>O<color\=#000000>ve</color>rrload Customization"
 
 ----------
 MFS - Kotone Montagne
