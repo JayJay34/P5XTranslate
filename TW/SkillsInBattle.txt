@@ -8,9 +8,6 @@ HIGHLIGHT：技能傷害倍率=HIGHLIGHT: ATK% DMG
 槍械射擊：技能傷害=Gun: ATK% DMG
 r:"面具(.*)級時可解鎖"=Unlocks when this persona is LV.$1
 
-讟=
-儁=
-
 戰鬥技巧=Combat Skills
 基礎數值=Base Stats
 狀態資訊=Status Information
@@ -19,6 +16,10 @@ r:"面具(.*)級時可解鎖"=Unlocks when this persona is LV.$1
 資訊=Info
 武器效果=Weapon Effect
 啟示效果=Revelation Effect
+
+槍械射擊=Gun Attack
+r:"^1層$"="<size\=18> stack</size>"
+r:"^(\d+)層$"="<size\=18>$1 stacks</size>"
 
 // Elemental & Psychological Ailments //
 
@@ -528,6 +529,7 @@ r:"^攻<color\=#000000>擊</color>力提升$"="<size\=22> </size>A<color\=#00000
 r:"^防<color\=#000000>禦</color>提升$"="<size\=22> </size>D<color\=#000000>E</color>F Up"
 r:"^防<color\=#000000>禦</color>力提升$"="<size\=22> </size>D<color\=#000000>E</color>F Up"
 r:"^最<color\=#000000>大</color>生命值提升$"="<size\=0.1> </size>M<color\=#000000>ax</color> HP Up"
+r:"^穿<color\=#000000>透</color>提升$"="<size\=22> </size>P<color\=#000000>E</color>N Up"
 r:"^效<color\=#000000>果</color>命中提升$"=" E<color\=#000000>H</color>R Up"
 r:"^傷<color\=#000000>害</color>增加$"="<size\=17> </size>D<color\=#000000>M</color>G Bonus Up"
 r:"^傷<color\=#000000>害</color>提高$"="<size\=17> </size>D<color\=#000000>M</color>G Bonus Up"
@@ -568,6 +570,7 @@ r:"^受<color\=#000000>詛</color>咒傷害提升$"="<size\=7> </size>C<color\=#
 ----------
 Inspect Details - BUFF
 ----------
+各項屬性提升=Many stats up
 r:"^護盾值：(\d+)$"="Shield: $1"
 r:"^生命值提升(\d+)$"="Increase HP by $1"
 r:"^生命值提升(\d+%)$"="Increase HP by $1"
@@ -602,6 +605,7 @@ r:"^造成傷害提高(\d+%)，可疊加(\d+)層$"="Increase DMG Dealt by $1, up
 r:"^技能傷害提升(\d+%)$"="Increase skill damage by $1"
 r:"^追加效果暴擊效果提升(\d+%)、攻擊力提升(\d+%)$"="Increase Follow Up CRIT DMG by $1 and Follow Up ATK by $2"
 sr:"^傷害減免(.*)$"="Increase DMG RES by $1"
+r:"^受到的傷害降低(\d+%)"="Decrease DMG Taken by $1"
 r:"^所有同伴受到的傷害降低(\d+%)。$"="Decrease DMG Taken by $1"
 r:"^受物理傷害加深(\d+\.\d+%)$"="Increase Physical DMG Taken by $1"
 r:"^物理傷害提升(\d+%)$"="Increase Physical DMG by $1"
@@ -614,6 +618,7 @@ r:"^冰凍傷害提升(\d+%)$"="Increase Ice DMG by $1"
 r:"^冰凍傷害提升(\d+\.\d+%)$"="Increase Ice DMG by $1"
 r:"^凍結傷害提升(\d+%)$"="Increase Ice DMG by $1"
 r:"^凍結傷害提升(\d+\.\d+%)$"="Increase Ice DMG by $1"
+r:"^每層提升(\d+%)的凍結傷害$"="Increase Ice DMG by $1 per stack"
 r:"^電擊傷害提升(\d+%)$"="Increase Electric DMG by $1"
 r:"^電擊傷害提升(\d+\.\d+%)$"="Increase Electric DMG by $1"
 r:"^疾風傷害提升(\d+%)$"="Increase Wind DMG by $1"
@@ -631,6 +636,11 @@ r:"^詛咒傷害提升(\d+\.\d+%)$"="Increase Curse DMG by $1"
 r:"^萬能傷害提升(\d+\.\d+%)$"="Increase Almighty DMG by $1"
 r:"^治療效果提升(\d+%)$"="Increase Healing Effect by $1"
 r:"^護盾效果提升(\d+%)$"="Increase Shield Effect by $1"
+
+
+r:"^瑪哈塔爾卡(.*)"="Matarukaja $1"
+r:"^瑪哈拉庫卡(.*)"="Marakukaja $1"
+
 
 免疫即死效果=Immunity to Instant Death effects
 免疫精神異常效果=Immunity to Mental Ailment effects
@@ -659,6 +669,7 @@ r:"^受到的治療效果降低(\d+%)"="Decrease Healing Received by $1"
 ----------
 Inspect Details - TITLES
 ----------
+屬性降低=Decrease Stats
 r:"^攻擊提升$"="Increase ATK"
 r:"^攻擊力提升$"="Increase ATK"
 r:"^防禦力提升$"="Increase DEF"
@@ -675,7 +686,8 @@ r:"^受傷害提升$"="Increase DMG Taken"
 r:"^受到傷害提升$"="Increase DMG Taken"
 r:"^受到百分比傷害降低$"="Decreses damage taken percentage"
 r:"^受百分比傷害降低$"="Decreases DMG Taken%"
-r:"^核熱傷害提升$"="Nuke DMG Up"
+凍結傷害提升=Increase Ice DMG
+r:"^核熱傷害提升$"="Increase Nuke DMG"
 r:"^治療效果提升$"="<size\=26>Increase Healing Effect</size>"
 r:"^護盾效果提升$"="Increase Shield Effect"
 r:"^受治療降低$"="Decrease Healing Received"
