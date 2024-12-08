@@ -60,12 +60,10 @@ r:"個人歷史總積分達到指定值後可領取對應獎勵，當前：<colo
 已獲得本週全部獎勵=Got all rewards this week!
 積分計算規則：\n當前積分\=挑戰積分*難度係數\n同一BOSS多個難度只記錄歷史最高分數=Score Formula:\nChallenge Score * Multiplier\n\nOnly the highest score is saved between runs.
 
-<color\=#8F8D8D>1分鐘前線上</color>=<color\=#8F8D8D>1 Minute</color>
-<color\=#8F8D8D>1小時前線上</color>=<color\=#8F8D8D>1 Hour</color>
-<color\=#8F8D8D>1天前線上</color>=<color\=#8F8D8D>1 Day</color>
-sr:"<color\=#8F8D8D>(.*)分鐘前線上</color>"=<color\=#8F8D8D>$1 Minutes</color>
-sr:"<color\=#8F8D8D>(.*)小時前線上</color>"=<color\=#8F8D8D>$1 Hours</color>
-sr:"<color\=#8F8D8D>(.*)天前線上</color>"=<color\=#8F8D8D>$1 Days</color>
+線上=Online
+r:"^<color\=#8F8D8D>(\d+)分鐘前線上</color>$"="<color\=#8F8D8D>Last Seen $1m</color>"
+r:"^<color\=#8F8D8D>(\d+)小時前線上</color>$"="<color\=#8F8D8D>Last Seen $1h</color>"
+r:"^<color\=#8F8D8D>(\d+)天前線上</color>$"="<color\=#8F8D8D>Last Seen $1d</color>"
 sr:"(.*?)人線上"=$1 Online
 sr:"<color\=#FF0000>(.*)</color>加入了樂園。"=<color\=#FF0000>$1</color> joined the Paradise.
 sr:"<color\=#FF0000>(.*)</color>退出了樂園。"=<color\=#FF0000>$1</color> left the Paradise.
