@@ -1,8 +1,89 @@
 ----------
-UI
+UI + ITEM MENU
 ----------
 後產滿=Til Full
 嗯？要離開我的{{A}}，返回都市嗎？=Hm? Want to leave My Palace\nand head back to the city?
+
+r:"^·{{A}}等級達到Pevel.(\d+)$"="<size\=26>-Reach Pevel.$1</size>"
+r:"^·{{A}}的怪盜評級達到(\d+)分$"="<size\=26>-{{A}} reached $1 score</size>"
+·達成條件後即可前往購買=<size\=26>-For sale after meeting conditions</size>
+r:"^·將亞諾希克強化至(\d+)級$"="<size\=26>-Upgrade Janosik to Lv. $1</size>"
+·購買時裝-怪盜·海之心=<size\=26>-Purchase Summer Wonder outfit</size>
+
+弱點攻擊特寫 WONDER=Wonder Cut-In
+弱點攻擊特寫 {{A}}={{A}} Cut-In
+總攻擊 WONDER=Wonder All-Out Attack
+總攻擊 WONDER時裝=Wonder All-Out Attack
+總攻擊 {{A}}={{A}} All-Out Attack
+總攻擊最後一擊 WONDER=Wonder All-Out Attack Finisher
+總攻擊最後一擊 {{A}}={{A}} All-Out Attack Finisher
+
+雕像道具效果=My Palace Item Effect
+r:"^<color\=#FFFF00>戰鬥中，WONDER生命值提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase the HP of Wonder by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，WONDER攻擊力提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase the ATK of Wonder by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，WONDER防禦力提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase the DEF of Wonder by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，{{A}}生命值提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase the HP of {{A}} by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，{{A}}攻擊力提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase the ATK of {{A}} by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，{{A}}防禦力提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase the DEF of {{A}} by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，主角團成員攻擊力提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase the ATK of Main Story Thieves by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，「女神異聞錄5」聯動成員傷害提升(\d+\.\d+%)</color>$"="<color\=#FFFF00>In battle, increase the DMG of the Phantom Thieves of Heart by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，「女神異聞錄5」聯動成員生命提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase the HP of the Phantom Thieves of Heart by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，「女神異聞錄5」聯動成員防禦提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase the DEF of the Phantom Thieves of Heart by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，{{A}}傷害提升(\d+%)</color>$"="<color\=#FFFF00>In battle, Increase the DMG of {{A}} by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，{{A}}、{{B}}傷害提升(\d+%)</color>$"="<color\=#FFFF00>In battle, increase the DMG of {{A}} and {{B}} by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，{{B}}、{{A}}攻擊力提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase the ATK of {{B}} and {{A}} by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，{{A}}、{{B}}防禦力提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase the DEF of {{A}} and {{B}} by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，己方成員的生命值提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase all allies' HP by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，己方成員的攻擊力提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase all allies' ATK by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，己方成員的防禦力提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase all allies' DEF by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，己方成員的速度提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase all allies' SPD by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，己方成員的暴擊率提升(\d+\.\d+%)</color>$"="<color\=#FFFF00>In battle, increase all allies' CRIT Rate by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，己方成員的暴擊傷害提升(\d+%)</color>$"="<color\=#FFFF00>In battle, increase all allies' CRIT DMG by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，己方成員的精力回復提升(\d+%)</color>$"="<color\=#FFFF00>In battle, increase all allies' SP Recovery by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，己方成員的效果命中提升(\d+\.\d+%)</color>$"="<color\=#FFFF00>In battle, increase all allies' EHR by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，己方成員的傷害提升(\d+\.\d+%)</color>$"="<color\=#FFFF00>In battle, increase all allies' DMG by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，所有解明怪盜的攻擊力提升(\d+)</color>$"="<color\=#FFFF00>In battle, increas all Navigators' ATK by $1</color>"
+r:"^<color\=#FFFF00>WONDER在戰鬥中造成傷害提升(\d+%)</color>$"="<color\=#FFFF00>In battle, increas Wonder's DMG Dealt by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，人格面具造成的傷害提升(\d+%)</color>$"="<color\=#FFFF00>In battle, increase Persona skill DMG by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，所有人格面具造成的傷害提升(\d+%)</color>$"="<color\=#FFFF00>In battle, increase all Persona skill DMG by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，己方成員的HIGHLIGHT傷害提升(\d+\.\d+%)</color>$"="<color\=#FFFF00>In battle, increase all allies' HIGHLIGHT DMG by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，己方成員的治療效果提升(\d+\.\d+%)</color>$"="<color\=#FFFF00>In battle, increase all allies' Healing Effect by $1</color>"
+sr:"^<color\=#FFFF00>戰鬥中，己方成員的(.*)屬性傷害提升(\d+%)</color>$"="<color\=#FFFF00>In battle, increase all allies' $1 DMG by $2</color>"
+
+r:"^<color\=#FFFF00>每日首次登入時，額外獲得(\d+)點體力</color>$"="<color\=#FFFF00>Additionally gain $1 Stamina on daily login</color>"
+r:"^<color\=#FFFF00>打工獲得的基礎現金收益增加(\d+%)</color>$"="<color\=#FFFF00>Increase salary from part-time jobs by $1</color>"
+r:"^<color\=#FFFF00>每次挑戰「往日回溯」時，有(\d+%)機率額外獲得(\d+)個高級技能材料</color>$"="<color\=#FFFF00>When challenging [Past Palace Boss], there is a $1 chance to additionally gain $2 high end skill material</color>"
+r:"^<color\=#FFFF00>每次挑戰「人格求索」時，額外獲得(\d+)個人格面具精末</color>$"="<color\=#FFFF00>When challenging [Persona EXP Farm], additionally gain $1 Persona Scrap</color>"
+r:"^<color\=#FFFF00>每次挑戰「財賂求索」時，額外獲得(\d+)魂石</color>$"="<color\=#FFFF00>When challenging [Soul Gems Farm], additionally gain $1 Soul Gems</color>"
+r:"^<color\=#FFFF00>每次挑戰「榮級求索」時，額外獲得(\d+)個傳記殘頁</color>$"="<color\=#FFFF00>When challenging [Character EXP Farm], additionally gain $1 Biography Page</color>"
+r:"^<color\=#FFFF00>每次挑戰「輜械求索」時，額外獲得(\d+)個萬用零件·小</color>$"="<color\=#FFFF00>When challenging [Weapon EXP Farm], additionally gain $1 Weapon Parts - S</color>"
+r:"^<color\=#FFFF00>天鵝絨試練的玲瓏辰星產量每天額外增加(\d+)</color>$"="<color\=#FFFF00>Additionally gain $1 Exquisite Star from Velvet Trials per day</color>"
+
+
+r:"^WONDER生命值提升(\d+)$"="Increas Wonder's HP by $1"
+r:"^所有角色生命值提升(\d+)$"="Increas all allies' HP by $1"
+r:"^所有角色的生命值提升(\d+)$"="Increas all allies' HP by $1"
+r:"^所有角色攻擊力提升(\d+)$"="Increas all allies' ATK by $1"
+r:"^所有角色的攻擊力提升(\d+)$"="Increas all allies' ATK by $1"
+r:"^所有支援怪盜攻擊力提升(\d+)$"="Increas all Navigators' ATK by $1"
+r:"^所有角色防禦力提升(\d+)$"="Increas all allies' DEF by $1"
+r:"^所有角色的防禦力提升(\d+)$"="Increas all allies' DEF by $1"
+r:"^所有角色速度提升(\d+)$"="Increas all allies' SPD by $1"
+r:"^所有角色暴擊率提升(\d+\.\d+%)$"="Increas all allies' CRIT Rate by $1"
+r:"^所有角色暴擊傷害提升(\d+%)$"="Increas all allies' CRIT DMG by $1"
+r:"^所有角色精力回復提升(\d+%)$"="Increas all allies' SP Recovery by $1"
+r:"^所有角色的效果命中提升(\d+\.\d+%)$"="Increas all allies' EHR by $1"
+r:"^所有角色的傷害提升(\d+\.\d+%)$"="Increas all allies' DMG by $1"
+r:"^在「厄抑之境」中傷害提升(\d+%)$"="Increas all allies' DMG by $1 in Farming Domain"
+r:"^人格面具造成的傷害提升(\d+%)$"="Increas all allies' Persona skill DMG by $1"
+r:"^所有人格面具造成的傷害提升(\d+%)$"="Increas all allies' Persona skill DMG by $1"
+r:"^所有角色Highlight傷害提升(\d+\.\d+%)$"="Increas all allies' HIGHLIGHT DMG by $1"
+r:"^所有角色的治療效果提升(\d+\.\d+%)$"="Increas all allies' Healing Effect by $1"
+r:"^所有角色的火焰屬性傷害提升(\d+%)$"="Increas all allies' Fire DMG by $1"
+r:"^所有角色的電屬性提升(\d+%)$"="Increas all allies' Elec DMG by $1"
+
+
+
 
 ----------
 Settle In
