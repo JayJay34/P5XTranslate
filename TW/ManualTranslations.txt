@@ -6,6 +6,7 @@ r:"^(.)$"=$1
 // Description: Settings Translation, important system messages, or whatever can be shown before logging in
 
 r:"更新本地文件\((\d+)\/(\d+)\)"=<b>Applying Update ($1/$2)</b>
+r:"^(.*)版本$"="Version $1"
 開始登入=Logging in...
 解析度=<size\=30>Resolution</size>
 渲染品質=<size\=22>Rendering Quality</size>
@@ -168,13 +169,13 @@ r:"^梅<color\=#ff0000ff>洛</color>普$"="Me<color\=#ff0000ff>r</color>ope"
 
 r:"^路<color\=#ff0000ff>菲</color>爾$"="Ru<color\=#ff0000ff>fe</color>ru"
 
-r:"^新<color\=#ff0000ff>井</color>{{A}}$"="{{A}} <color\=#ff0000ff>Ar</color>ai"
+r:"^新<color\=#ff0000ff>井</color>{{A}}$"="Mo<color\=#ff0000ff>to</color>ha Arai"
 
 r:"^加<color\=#ff0000ff>納</color> 駿$"="Sh<color\=#ff0000ff>un</color> Kano"
 
 r:"^多<color\=#ff0000ff>禰</color>村{{A}}$"="{{A}} Ta<color\=#ff0000ff>ne</color>mura"
 
-r:"^野<color\=#ff0000ff>毛</color> {{A}}$"="{{A}} <color\=#ff0000ff>No</color>ge"
+r:"^野<color\=#ff0000ff>毛</color> {{A}}$"="To<color\=#ff0000ff>mo</color>ko Noge"
 
 // P5X CONFIDANT //
 r:"^李<color\=#ff0000ff>瑤</color>鈴$"="Yao<color\=#ff0000ff>ling</color> Li"
@@ -186,6 +187,8 @@ r:"^黑<color\=#ff0000ff>谷</color> 清$"="Ki<color\=#ff0000ff>yo</color>shi Ku
 r:"^椎<color\=#ff0000ff>名</color>{{A}}$"="{{A}} Sh<color\=#ff0000ff>ii</color>na"
 
 r:"^坂<color\=#ff0000ff>井</color>{{A}}$"="{{A}} Sa<color\=#ff0000ff>ka</color>i"
+
+r:"^佐<color\=#ff0000ff>原</color>{{A}}$"="Mi<color\=#ff0000ff>yu</color> Sahara"
 
 r:"^北<color\=#ff0000ff>里</color> {{A}}$"="{{A}} Ki<color\=#ff0000ff>ta</color>zato"
 
@@ -295,7 +298,7 @@ CV.前內孝文=CV.Takafumi Maeuchi
 在異世界=Metaverse
 協同者=Confidant
 人格面具=Persona
-印象空間=Cognitive World
+印象空間=Mementos
 
 // Important Consumables //
 體力補給=<size\=20>Stamina Supply</size>
@@ -379,11 +382,10 @@ r:"^前<color\=#ff0000ff>往</color>客廳$"="Go <color\=#ff0000ff>to</color> Li
 雜司谷  表參道=<size\=32>Zōshigaya Omotesan Street</size>
 {{A}}機·新宿=Gachapon - Shinjuku
 {{A}}機·吉祥寺=Gachapon - Kichijoji
-{{A}}機·吉祥寺=Twister-Kichijoji
 地鐵站=Subway
 
-r:"^渡<color\=#ff0000ff>來</color>軒$"="As<color\=#ff0000ff>sh</color>ouken"
-r:"^渡來軒$"="Asshouken"
+r:"^壓<color\=#ff0000ff>勝</color>軒$"="As<color\=#ff0000ff>sh</color>ouken"
+r:"^渡<color\=#ff0000ff>來</color>軒$"="To<color\=#ff0000ff>rai</color>ken"
 
 社<color\=#ff0000ff>團</color>佈告欄=Cl<color\=#ff0000ff>ub</color> Bulletin Board
 教<color\=#ff0000ff>學</color>樓=Cl<color\=#ff0000ff>as</color>sroom Building
@@ -613,7 +615,7 @@ Class/ Stats Screen
 暴擊傷害=CRIT DMG
 精力回復=SP Recovery
 穿透=PEN
-倒地值=Knockdown Count
+倒地值=Down Gauge
 效果命中=EHR
 效果抵抗=Effect RES
 傷害加成=DMG Bonus
@@ -845,6 +847,7 @@ r:"擁有(\d+)張等級為(\d+)級的宙位啟示卡"=Own $1 Lv. $2 Arcana Revel
 伴手禮=Gift Bag
 禮包=Gift Bag
 成長經驗=BP EXP
+購買立即獲得<size\=44><sprite\=27 tint\=1></size>650=Buy and get 650 <size\=44><sprite\=27 tint\=1></size>
 本週累計「今日計畫」領獎次數\n「下週一」領取對應「補給禮包」=<size\=22>Number of dailys completed this week\nLog in next Monday to get the Gift Box</size>
 本週累計「今日計畫」領獎次數\n「<color\=#ff3b37>後日登入</color>」領取對應「補給禮包」=<size\=22>Number of dailys completed this week\n<color\=#ff3b37>Log in the day after tomorrow</color> \nto get the Gift Box</size>
 本週累計「今日計畫」領獎次數\n「<color\=#ff3b37>明日登入</color>」領取對應「補給禮包」=<size\=22>Number of dailys completed this week\n<color\=#ff3b37>Log in Tomorrow</color> to get the Gift Box</size>
@@ -876,8 +879,9 @@ r:"完成1次「靈之參悟」挑戰 \((\d)\/(\d)\)"=Complete a Incense farm ($
 r:"進行1次人格面具育成 \((\d)\/(\d)\)"=Inherit a Persona skill ($1/$2)\n<color\=#8F8D8D>(This uses a Persona Mark)</color>
 r:"^完成1次「往日回溯」挑戰 \((\d)\/(\d)\)$"="Complete a Palace Boss Challenge ($1/$2)\n<color\=#8F8D8D>(Stamina Cost: 30)</color>"
 r:"^通關1次「閼凶夢之扉」 \((\d)\/(\d)\)$"="Complete 1 Guild Battle ($1/$2)"
+r:"^完成1次「天鵝絨試煉」 \((\d)\/(\d)\)$"="Complete 1 Velvet Trial ($1/$2)"
 r:"^完成1次「心之海試煉」 \((\d)\/(\d)\)$"="Complete 1 Sea of Souls Trial ($1/$2)"
-r:"^完成1次「委託」派遣 \((\d)\/(\d)\)$"="Complete 1 Dispatch in Metaverse Commissions ($1/$2)"
+r:"^完成1次「委託」派遣 \((\d)\/(\d)\)$"="Complete 1 Dispatch in Commissions ($1/$2)"
 
 // WEEKLY //
 r:"累計消耗(\d+)魂石 \((\d+)\/(\d+)\)"=Spend a total of $1 Soul Gems ($2/100000)
@@ -894,7 +898,7 @@ r:"在「星盤試練」通過1個「監測點」 \((\d+)\/1\)"=Clear 1 Monitori
 r:"在「命運交錯之時」中通關「收下慾望」 \((\d)\/(\d)\)"=Complete the Final Mission in the \nPhantom Thieves event ($1/$2)
 r:"在「怪盜交易所」中消耗3000個怪盜徽記 \((\d+)\/(\d+)\)"=Spend 3,000 Phantom Thieves Emblems\nin the Event Exchange ($1/$2)
 r:"累計進行50次「角色簽約」&「武器補給」 \((\d+)\/(\d+)\)"=Perform 50 pulls in total ($1/$2)
-r:"在「心之海試煉」中通過「西部施工區」 \((\d)\/(\d)\)"=Pass the Western Construction Zone\nin the Sea of Souls Trial ($1/$2)
+r:"在「心之海試煉」中通過「西部施工區」 \((\d)\/(\d)\)"=Clear [West Construction Zone] in Sea of Souls Trials ($1/$2)
 r:"完成12次「在盧布朗度過」日程 \((\d+)\/(\d+)\)"=Spend time in Leblanc 12 times ($1/$2)
 r:"在「心軌擇行」中完成1次挑戰 \((\d+)\/1\)"=Complete 1 challenge in Heart Rails ($1/1)
 r:"完成一個星盤試練的「宮主星」或「命主星」 \((\d+)\/1\)"=Clear 1 [House] or [Chart Ruler] in Astrolabe Trials ($1/1)
@@ -921,7 +925,7 @@ r:"^簽約$"="Pulls"
 次可獲得<color\=#EADE10>5★盲選偶像合約             ×1</color>，使用後隨機獲得以下怪盜=<size\=26>                       Get <color\=#EADE10>5★Random Kaidol Contract</color></size>
 長按圖示可查看詳細資訊=Long press to view details
 
-每10次補給必出四星或以上武器。具體內容查看【說明】=<b><color\=#FFDF00>Weapon Banner</color></b>\nChoose your RATE UP weapon and two others. Every 70 pulls will guarantee a 5★ weapon. 0.8% Chance.\n\n\n\n\n\n<color\=#FFDF00>The limited character's 5★ weapon is only available in this banner.</color> The pull count will carry between banners.
+每10次補給必出四星或以上武器。具體內容查看【說明】=<b><color\=#FFDF00>Weapon Banner</color></b>\nChoose your RATE UP weapon and two others. Every 70 pulls will guarantee a 5★ weapon. 0.8% Chance.\n\n\n\n\n\n<color\=#FFDF00><size\=25>The limited character's 5★ weapon is only available in this banner.</color>\nPull count will carry between banners.</size>
 
 每10次簽約必出四星或以上怪盜角色。具體內容查看【說明】=<b><color\=#FFDF00>Standard Banner</color></b>\nEvery 80 pulls will guarantee a 5★ character. 0.8% chance. Every 10 pulls will guarantee a 4★ character. 6.2% chance. Choose a 5★ character with 300 accumulated pulls. 
 
@@ -1032,6 +1036,7 @@ r:"^本次贈送會增加<color\=#FFDE00>(\d+)</color>好感度$"="Gain <color\=
 r:"^和{{A}}的關係快要加深了……$"="The bond with {{A}} \nis about to deepen!"
 r:"^和{{A}}的關係就要加深了……$"="The bond with {{A}} \nis about to deepen!"
 r:"^和{{A}}的關係差不多要加深了……$"="The bond with {{A}} \nis about to deepen!"
+似乎能更加了解{{A}}了……=Looks like I can know \n{{A}} better...
 r:"^感覺和{{A}}的關係加深了……$"="I feel like my relationship with {{A}} has deepened..."
 r:"^感覺和{{A}}的關係更加深入了……$"="I feel like my relationship with {{A}} has deepened..."
 
@@ -1096,6 +1101,7 @@ r:"^要在這裡品嘗新口味的咖啡嗎\(<color\=#ff0000>每次(\d+)現金</
 
 去牛丼店打工=<size\=24>Work part-time\nat a Beef Bowl Shop</size>
 今天牛丼店的人手也嚴重不足……=<size\=24>The Beef Bowl Shop is understaffed today...</size>
+澀谷的牛丼店今天可以排班，要去幫忙嗎？=<size\=25>I can work at the Beef Bowl Shop today,\nwant to help?</size>
 在牛丼店打工=<size\=24>Work part-time\nat this Beef Bowl Shop</size>
 要在這家牛丼店打工嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to work part-time \nat this Beef Bowl Shop?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
 要在這家牛丼店打工嗎？=Do you want to work part-time \nat this Beef Bowl Shop?
@@ -1108,7 +1114,9 @@ r:"^要在這裡品嘗新口味的咖啡嗎\(<color\=#ff0000>每次(\d+)現金</
 吉祥寺的炸物專賣店今天非常忙碌……=<size\=26>The Fried Food Shop is busy today...</size>
 要在這家炸肉餅店打工嗎？=Do you want to work part-time \nat this Fried Food Shop?
 
-在渡來軒打工=<size\=24>Work part-time\nat Asshouken</size>
+在{{A}}打工=<size\=24>Work part-time\nat {{A}}</size>
+今天也試著去{{A}}幫忙吧……=<size\=26>Let's try to help out at {{A}} today...</size>
+要在{{A}}打工嗎？=Do you want to work part-time \nat {{A}}?
 
 由於掌握了打工『觀察的心得』，因此獲得了額外收益。=<size\=28>Because I have mastered Observation Insights, I have gained more Social Stats.</size> 
 由於掌握了打工『觀察的心得』,掌握了打工『服務的心得』，因此獲得了額外收益。=<size\=25>Because I have mastered Observation Insights and Service Insights, \nI have gained more Social Stats.</size> 
@@ -1210,10 +1218,11 @@ r:"^決定陪{{A}}了……$"="I've decided to accompany {{A}}..."
 似乎掌握了服務的心得=I have masted Service Insights
 似乎掌握了在甜品店打工的心得=I have masted working at the Crepe Shop
 似乎掌握了在牛丼店打工的心得=<size\=28>I have mastered working at the Beef Bowl Shop</size> 
+似乎掌握了在{{A}}打工的心得=<size\=28>I have mastered working at {{A}}</size> 
 
 r:"^基於這個選擇，和{{A}}的關係將產生重大變化。$"="Based on this choice, your relationship with {{A}} will undergo a major change."
-<color\=#F7F95C>一旦確認後，將無法重新選擇關係。</color>=<color\=#F7F95C>Once confirmed, you cannot change the relationship.</color>
-r:"^確定要和<color\=#F7F95C>{{A}}</color>成為「(.*)」關係？\n※該選擇會對劇情走向、都市日程等功能產生影響。$"="Are you sure you want to become $1 with <color\=#F7F95C>{{A}}</color>? \nThis choice will have an impact on the plot and daily activities."
+<color\=#F7F95C>一旦確認，將在一段時間內無法改變關係。</color>=<color\=#F7F95C>Once confirmed, you cannot change the relationship for some time.</color>
+sr:"^確定要和<color\=#F7F95C>{{A}}</color>成為「(.*)」關係？\n※該選擇會對劇情走向、都市日程等功能產生影響。$"="Are you sure you want to become $1 with <color\=#F7F95C>{{A}}</color>? \nThis choice will have an impact on the plot and daily activities."
 
 為了同伴，應該的=<size\=28>For the sake of my ally</size>
 因為{{A}}對我來說很重要=<size\=28>Because {{A}} is \nvery important to me</size>
@@ -1222,7 +1231,7 @@ r:"^確定要和<color\=#F7F95C>{{A}}</color>成為「(.*)」關係？\n※該�
 因為{{A}}是我重要的人=<size\=28>Because {{A}} is \nan important person to me</size>
 
 直到{{A}}的心痊癒為止=<size\=28>Until {{A}}'s heart is healed</size>
-我會一直陪在{{A}}旁邊=<size\=28>I'll always be by {{A}}'s side</size>
+我會一直陪在{{A}}旁邊=<size\=26>I'll always be by {{A}}'s side</size>
 
 {{A}}是我重要的人=<size\=28>{{A}} is \nan important to me</size>
 我被{{A}}的本領迷住了=<size\=28>I've been mesmerized by \n{{A}}'s skills</size>
@@ -1461,6 +1470,7 @@ r:"^契約的憑證，可在特定的『怪盜契約』中使用。$"="The prove
 r:"^獲取後可用於{{A}}商店「祈願」中進行祈願抽獎。$"="Can be used in {{A}}'s Shop to enter the Pray Lucky Draw."
 r:"^委託、消費大酬賓等獎勵或者購買<link\="mqm"><u>每日祈願納福禮袋</u></link>可獲得神樂鈴$"="Get Kagura Suzu from Commissions, Spending Spree or <link\="mqm"><u>Daily Pray Gift Bag</u></link>"
 宿命之殘響=Fated Echoes
+r:"^宿命之殘響\*(\d+)$"="Fated Echoes*$1"
 認知殘影=Cognitive Afterimage
 『認知殘影』\n用於在契約之間的認知優選中兌換物品。=[Cognitive Afterimage]\nUsed in Congition Shop.
 認知碎片=Cognitive Shard
@@ -1693,6 +1703,7 @@ sr:"^本次合體結果將轉化為1個<color\=#FF0000>(.*)印記</color>$"="Con
 想要做點什麼呢？=What do you want to do?
 r:"^Lv.(\d+) 解鎖新技能$"="Lv.$1 Next Skill"
 r:"^解鎖技能$"="Unlock"
+啟動靈感可提升面具技能等級=Level up Wonder's skill tree to upgrade Persona skills
 r:"^特性提升$"="<size\=25>Upgrade to</size>"
 已達到人格面具當前強化等級上限。=Reached current rank max level.
 <color\=#FF0000>本次強化溢出經驗將轉化為通用素材</color>\n是否確定使用所選素材進行強化？=<color\=#FF0000>This upgrade will convert overflowed EXP into upgrade materials.</color>\nAre you sure you want to upgrade?
