@@ -6,6 +6,7 @@ Character-specific Skill Details
 詳情=Details
 技能=Skills
 套裝=Set
+協助怪盜不顯示套裝內容=Cannot Show Assist Thief's Set
 r:"^(\d+)回合$"="$1 turn"
 r:"^該技能(\d+)回合後準備就緒。$"="Skill is ready after $1 turn(s)"
 
@@ -83,7 +84,7 @@ r:"^生命值上限提高(\d+)$"="Increase Max HP by $1"
 In-Battle Quotes
 <color\=#FF0000>{{A}}</color>進入了荒野救星狀態，回合結束恢復已損生命值……=<color\=#FF0000>Shun Kanou</color> entered Wilderness Savior, restore missing HP at the end of turn!
 <color\=#FF0000>全體怪盜</color>生命值上限提高……=Increase Max HP for <color\=#FF0000>all allies</color>!
-<color\=#FF0000>{{A}}</color>受攻擊機率大幅提高……=<size\=25><color\=#FF0000>Shun Kanou</color> chance of attacked is heavily increased!</size>
+<color\=#FF0000>{{A}}</color>受攻擊機率大幅提高……=<color\=#FF0000>{{A}}</color> Chance of Attacked Up!
 r:"^<color\=#FF0000>(.*)</color>攻擊了{{A}}，防禦力降低了……$"="<color\=#FF0000>Enemy</color> attacked Shun Kanou, DEF Down!"
 
 Combat Pop-ups
@@ -163,8 +164,8 @@ r:"^造成傷害提高(\d+\.\d+%)，對處於元素異常狀態的敵人效果�
 In-Battle Quotes
 r:"^我方全體怪盜的攻擊力、效果命中提升了$"="ATK Up, EHR Up!"
 r:"^我方全體怪盜傷害提高，對處於元素異常狀態下敵人傷害額外提高$"="DMG Dealt Up. \nBonus DMG Dealt vs Elemental Ailments!"
-r:"^{{A}}使用了{{B}}，全體怪盜屬性提升$"="<size\=22>{{A}} used {{B}}. All allies' Stats Up!</size>"
-r:"^{{A}}追加使用了{{B}}，全體怪盜屬性提升"="<size\=22>{{A}} followed up with {{B}} \nAll allies' Stats Up!</size>"
+{{A}}使用了『勁歌熱舞』，全體怪盜屬性提升=<size\=22>{{A}} used [Hot Dance]. All allies' Stats Up!</size>"
+r:"^{{A}}追加使用了『勁歌熱舞』，全體怪盜屬性提升"="<size\=22>{{A}} Followed Up with [Hot Dance]\nAll allies' Stats Up!</size>"
 
 Combat Pop-ups
 r:"^熱<color\=#000000>辣</color>變奏曲$"="<size\=8> </size>H<color\=#000000>ot</color> Variation"
@@ -349,6 +350,8 @@ r:"^受到的治療效果提升(\d+\.\d+%)$"="Increase Healing Received by $1"
 r:"^受到的護盾效果提升(\d+\.\d+%)$"="Increase Shield Received by $1"
 奇思妙想=<size\=30>Whimsical Thoughts</size>
 使同伴下一個技能造成的傷害提升。=Increase DMG Dealt of allies' next skill
+計數=Count
+釋放HIGHLIGHT消耗『計數』使同伴傷害提升。=Consume all count when using HIGHLIGHT \nto increase all allies' damage
 
 Combat Pop-ups
 r:"^童<color\=#000000>趣</color>$"="<size\=14> </size>C<color\=#000000>hi</color>ldlike Fun"
@@ -439,12 +442,43 @@ r:"^詛<color\=#000000>咒</color>傷害提升$"="<size\=8> </size>C<color\=#000
 r:"^萬<color\=#000000>能</color>傷害提升$"="<size\=1> </size>Al<color\=#000000>m</color>ighty DMG Up"
 
 ----------
+Cherish - Masaki Ashiya
+----------
+r:"^對<color\=#FFFF00>指定敵方單體</color>造成(\d+\.\d+%)防禦力的冰凍屬性傷害並對<color\=#FFFF00>其他敵方單位</color>造成(\d+\.\d+%)防禦力的冰凍屬性傷害，有(\d+\.\d+%)的基礎機率使<color\=#FFFF00>主目標</color>陷入凍結狀態；同時為{{A}}回復(\d+)點『英勇』。若{{A}}處於『公正宣言』狀態，額外使<color\=#FFFF00>主目標</color>受到的傷害提升\（{{A}}每有(\d+)點防禦主目標受到的傷害提升(\d+%)，最多提升(\d+\.\d+%)\），效果持續(\d+)回合；但是『英勇』回復降為(\d+)點。$"="Deals $1 DEF Ice dmage to the <color\=#FFFF00>main target</color> and $2 DEF Ice damage to <color\=#FFFF00>all other targets</color>, with a $3 base chance to inflict Freeze to the main target; Restores $4 [Valour]. If you are in [Justice Oath], additionally increeases the <color\=#FFFF00>main target's</color> DMG Taken by ($6 for every $5 DEF you have), up to $7 for $8 turns; However, decreases [Valour] recovery to $9."
+r:"^對指定敵方單體造成<color\=#FFFC40>(\d+\.\d+%)</color>防禦力的冰凍屬性傷害並對其他敵方單位造成<color\=#FFFC40>(\d+\.\d+%)</color>防禦力的冰凍屬性傷害，有<color\=#FFFC40>(\d+\.\d+%)</color>的基礎機率使主目標陷入<link\="s\|103"><u>凍結</u></link>狀態；同時為{{A}}回復(\d+)點『英勇』。若{{A}}處於<link\="s\|202"><u>『公正宣言』</u></link>狀態，額外使主目標受到的傷害提升\（{{A}}每有(\d+)點防禦主目標受到的傷害提升(\d+%)，最多提升<color\=#FFFC40>(\d+\.\d+%)</color>\），效果持續(\d+)回合；但是『英勇』回復降為(\d+)點。$"="Deals <color\=#FFFC40>$1</color> DEF Ice dmage to the main target and <color\=#FFFC40>$2</color> DEF Ice damage to all other targets, with a <color\=#FFFC40>$3</color> base chance to inflict <link\="s|103"><u>Freeze</u></link> to the main target; Restores $4 [Valour]. If you are in <link\="s|202"><u>[Justice Oath]</u></link>, additionally increeases the main target's DMG Taken by ($6 for every $5 DEF you have), up to <color\=#FFFC40>$7</color> for $8 turns; However, decreases [Valour] recovery to $9."
+
+r:"^使<color\=#FFFF00>1名同伴</color>獲得1層可抵禦(\d+\.\d+%)防禦力\+(\d+)傷害的『正直聖印』，並使其獲得等同於{{A}}(\d+%)防禦力\（最多(\d+)點\）的防禦力提升效果，持續2回合；獲得此效果時，若該同伴血量高於(\d+%)，則使其被攻擊的機率提升(\d+%)；{{A}}下個回合開始時，會再次使該同伴獲得1層『正直聖印』。若{{A}}處於『公正宣言』狀態，則其在兩回合內釋放的『正直聖印』護盾量額外提升(\d+%)。$"="Gives <color\=#FFFF00>1 ally</color> 1 stack of $1 DEF + $2 Shield as [Upright Mark], then increases their DEF equal to $3 own DEF (Up to $4) for 2 turns; When gaining this effect, increases that ally's chance of attacked by $6 if their HP is above $5; At the start of your next turn, gives that ally 1 stack of [Upright Mark]. If you are in [Justice Oath], increases the Shield from [Upright Mark] by $6."
+r:"^使1名同伴獲得1層可抵禦<color\=#FFFC40>(\d+\.\d+%)</color>防禦力\+<color\=#FFFC40>(\d+)</color>傷害的<link\="s\|201"><u>『正直聖印』</u></link>，並使其獲得等同於{{A}}(\d+%)防禦力（最多<color\=#FFFC40>(\d+)</color>點）的防禦力提升效果，持續2回合；獲得此效果時，若該同伴血量高於(\d+%)，則使其被攻擊的機率提升(\d+%)；{{A}}下個回合開始時，會再次使該同伴獲得1層<link\="s\|201"><u>『正直聖印』</u></link>。若{{A}}處於<link\="s\|202"><u>『公正宣言』</u></link>狀態，則其在兩回合內釋放的<link\="s\|201"><u>『正直聖印』</u></link>護盾量額外提升(\d+%)。$"="Gives 1 ally 1 stack of <color\=#FFFC40>$1</color> DEF + <color\=#FFFC40>$2</color> Shield as <link\="s|201"><u>[Upright Mark]</u></link>, then increases their DEF equal to $3 own DEF (Up to <color\=#FFFC40>$4</color>) for 2 turns; When gaining this effect, increases that ally's chance of attacked by $6 if their HP is above $5; At the start of your next turn, gives that ally 1 stack of <link\="s|201"><u>[Upright Mark]</u></link>. If you are in <link\="s|202"><u>[Justice Oath]</u></link>, increases the Shield from <link\="s|201"><u>[Upright Mark]</u></link> by $6."
+
+r:"^立即為<color\=#FFFF00>所有同伴</color>添加1層可抵禦(\d+%)防禦力\+(\d+)/(\d+)/(\d+)（達到1、50、70級時變化）傷害的『正直聖印』和1層可抵禦(\d+\.\d+%)防禦力\+(\d+)傷害的『聖潔庇佑』，同時使所有同伴獲得1點倒地值及造成的傷害提升效果\（{{A}}每有(\d+)點防禦力，造成傷害提升(\d+%)，最多提升(\d+\.\d+%)\），持續(\d+)回合。$"="Immediately gives <color\=#FFFF00>all allies</color> 1 stack of $1 DEF + $2/$3/$4 (Change when reaching level 1, 50, 70) Shield as [Upright Mark] and 1 stack of $5 DEF + $6 Shield as [Holy Protection], gives all allies 1 Down Gauge and increases their damage by ($8 for every $7 DEF you have, up to $9) for $10 turns."
+r:"^立即為所有同伴添加1層可抵禦(\d+%)防禦力\+(\d+)/(\d+)/(\d+)（達到1、50、70級時變化）傷害的<link\="s\|201"><u>『正直聖印』</u></link>和1層可抵禦<color\=#FFFC40>(\d+\.\d+%)</color>防禦力\+<color\=#FFFC40>(\d+)</color>傷害的<link\="s\|203"><u>『聖潔庇佑』</u></link>，同時使所有同伴獲得1點倒地值及造成傷害提升效果\（{{A}}每有(\d+)點防禦力，造成傷害提升(\d+%)，最多提升<color\=#FFFC40>(\d+\.\d+%)</color>\），持續(\d+)回合。$"="Immediately gives all allies 1 stack of $1 DEF + $2/$3/$4 (Change when reaching level 1, 50, 70) Shield as <link\="s|201"><u>[Upright Mark]</u></link> and 1 stack of <color\=#FFFC40>$5</color> DEF + <color\=#FFFC40>$6</color> Shield as <link\="s|203"><u>[Holy Protection]</u></link>, gives all allies 1 Down Gauge and increases their damage by ($8 for every $7 DEF you have, up to <color\=#FFFC40>$9</color>) for $10 turns."
+
+r:"^立即為<color\=#FFFF00>所有同伴</color>添加1層可抵禦(\d+\.\d+%)防禦力\+(\d+)傷害的『聖潔庇佑』，同時使<color\=#FFFF00>所有同伴</color>受到傷害降低(\d+\.\d+%)，持續2回合。$"="Immediately gives <color\=#FFFF00>all allies</color> 1 stack of $1 DEF + $2 Shield as [Holy Protection], decreases <color\=#FFFF00>all allies'</color> DMG Taken by $3 for 2 turns."
+
+
+自己回合開始時，若達到一定層數，觸發『公正宣言』=At the start of your turn, if you reached certain stacks, trigger [Justice Oath]
+使下次釋放的『憐憫祝福』或『榮譽守護』獲得額外效果=Your next [Blessing of Compassion] or [Honour Protection] gains additional effects
+
+Combat Pop-ups
+正<color\=#000000>直</color>聖印=<size\=8> </size>U<color\=#000000>pr</color>ight Mark
+聖<color\=#000000>潔</color>庇佑=<size\=14> </size>H<color\=#000000>ol</color>y Protection
+
+英<color\=#000000>勇</color>=<size\=14> </size>V<color\=#000000>al</color>our
+公<color\=#000000>正</color>宣言=<size\=16> </size>J<color\=#000000>us</color>tice Oath
+憐<color\=#000000>憫</color>祝福=<size\=15> </size>B<color\=#000000>le</color>ssing of Compassion
+靈<color\=#000000>魂</color>禱告=<size\=14> </size>P<color\=#000000>ra</color>yer of Spirituality
+
+所<color\=#000000>經</color>之戰，莫畏強敵=<size\=2> </size>I <color\=#000000>W</color>ill Be Brave Against the Strong
+婦<color\=#000000>弱</color>童長，戰所為之=<size\=2> </size>I <color\=#000000>W</color>ill Fight For Those Who Cannot Fight
+公<color\=#000000>正</color>審判=<size\=16> </size>J<color\=#000000>us</color>tice Judgement
+
+----------
 Joker
 ----------
-r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，有(\d+%)的基礎機率使敵人獲得1層詛咒效果，並獲得1個{{A}}。$"="Deals $1 ATK Curse damage to <color\=#FFFF00>all</color> enemies, with a $2 base chance to inflict 1 stack of Cursed. Gain 1 [Fury]."
+r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，有(\d+%)的基礎機率使敵人獲得1層詛咒效果，並獲得1個『煞氣』。$"="Deals $1 ATK Curse damage to <color\=#FFFF00>all</color> enemies, with a $2 base chance to inflict 1 stack of Cursed. Gain 1 [Fury]."
 r:"對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，並有(.*)基礎機率使其獲得1層<link\="s\|112"><u>詛咒</u></link>效果。並獲得1個<link\="s\|124"><u>『煞氣』</u></link>。$"="Deals <color\=#FFFC40>$1</color> ATK Curse damage to all enemies, with a $2 base chance to inflicts 1 stack of <link\="s|112"><u>Cursed</u></link>. Gain 1 <link\="s|124"><u>[Fury]</u></link>."
 
-r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，場上只有<color\=#FFFF00>1名</color>敵人時獲得2個{{A}}。$"="Deals $1 ATK Curse damage to <color\=#FFFF00>1</color> enemy. If there is only <color\=#FFFF00>1</color> enemy, gains 2 [Fury]."
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，場上只有<color\=#FFFF00>1名</color>敵人時獲得2個『煞氣』。$"="Deals $1 ATK Curse damage to <color\=#FFFF00>1</color> enemy. If there is only <color\=#FFFF00>1</color> enemy, gains 2 [Fury]."
 r:"對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害。釋放該技能時，若場上只有1名敵人，則為JOKER恢復2個<link\="s\|124"><u>『煞氣』</u></link>。$"="Deals <color\=#FFFC40>$1</color> ATK Curse damage to 1 enemy. If there is only 1 enemy, gains 2 <link\="s|124"><u>[Fury]</u></link>."
 
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，處於額外回合時，造成的傷害提升(.*)；若目標身上有任意減益效果，則該技能造成的傷害額外提升(.*)。$"="Deals $1 ATK Curse damage to <color\=#FFFF00>all</color> enemies. Increases DMG Dealt by $2 during Extra Turn. Increases DMG Dealt by $3 if the target have any debuffs."
@@ -462,7 +496,6 @@ r:"^煞<color\=#000000>氣</color>$"="<size\=14> </size>F<color\=#000000>ur</col
 ----------
 BUI - YUI
 ----------
-
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，對沒有觸電的敵人有(\d+\.\d+%)基礎機率使敵人陷入觸電，若敵人已處於觸電則傷害提升。$"="Deals $1 ATK Electric damage to <color\=#FFFF00>1</color> enemy. If the enemy is not inflicted with Shock, there is a $2 base chance to inflict Shock. If the enemy is inflicted with Shock, increases damage."
 r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害。若敵人未處於觸電狀態，則有<color\=#FFFC40>(\d+\.\d+%)</color>的基礎機率使其陷入觸電狀態，效果持續2回合。若敵人已處於觸電狀態，則傷害提升(\d+%)。$"="Deals <color\=#FFFC40>$1</color> ATK Electric damage to 1 enemy. If the enemy is not inflicted with Shock, there is a <color\=#FFFC40>$2</color> base chance to inflict Shock for 2 turns. If the enemy is inflicted with Shock, increases damage by $3."
 
@@ -496,7 +529,6 @@ r:"^追<color\=#000000>擊</color>$"="<size\=15> </size>F<color\=#000000>ol</col
 ----------
 Fox - Yusuke Kitagawa
 ----------
-
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)防禦力的冰凍屬性傷害，有(\d+%)基礎機率使主目標敵人凍結。$"="Deals $1 DEF Ice damage to <color\=#FFFF00>all</color> enemies, with a $2 base chance to inflict the main target with Freeze."
 r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>防禦力的冰凍屬性傷害，有<color\=#FFFC40>(\d+%)</color>基礎機率使主目標敵人陷入<link\="s\|103"><u>凍結</u></link>狀態，效果持續2回合。$"="Deals <color\=#FFFC40>$1</color> DEF Ice damage to all enemies, with a <color\=#FFFC40>$2</color> base chance to inflict the main target with <link\="s|103"><u>[Freeze]</u></link> for 2 turns."
 
@@ -529,7 +561,6 @@ r:"^凍<color\=#000000>結</color>傷害提升$"="<size\=5> </size>Ic<color\=#00
 ----------
 Queen - Makoto Niijima
 ----------
-
 r:"^對<color\=#FFFF00>隨機敵人</color>造成5次(\d+\.\d+%)攻擊力的核熱屬性傷害，多次傷害命中同一目標時只會造成<color\=#FFFC40>(\d+%)</color>的傷害。若主目標處於元素異常狀態，則對其額外造成一次(\d+\.\d+%)攻擊力的核熱屬性傷害，造成TECHNICAL。有(\d+%)的基礎機率使主目標陷入<link\="s|179"><u>『輻射』</u></link>狀態。$"="Deals $1 ATK Nuclear damage to <color\=#FFFF00>random enemies</color> 5 times, you will only deal <color\=#FFFC40>$2</color> to the same target. Triggers TECHNICAL if the main target have Elemental Ailment, deals an additional hit of $3 ATK Nuclear damage. There is a $4 base chance to inflict the main target with <link\="s|179"><u>[Radiation]</u></link>."
 r:"^對隨機敵人造成5次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害，優先攻擊未受到該技能攻擊的敵人。多次傷害命中同一目標時只會造成<color\=#FFFC40>(\d+%)</color>的傷害。若主目標處於元素異常狀態，則造成<link\="s\|211"><u>TECHNICAL</u></link>，對其額外造成一次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害。有(\d+%)的基礎機率使主目標陷入<link\="s\|179"><u>『輻射』</u></link>狀態。$"="Deals <color\=#FFFC40>$1</color> ATK Nuclear damage to random enemies 5 times, prioritizing enemies that have not been attacked yet. You will only deal <color\=#FFFC40>$2</color> to the same target. Triggers <link\="s|211"><u>TECHNICAL</u></link> if the main target have Elemental Ailment, deals an additional hit of <color\=#FFFC40>$3</color> ATK Nuke damage. There is a $4 base chance to inflict the main target with <link\="s|179"><u>[Radiation]</u></link>."
 
@@ -604,9 +635,37 @@ Combat Pop-ups
 r:"^火<color\=#000000>花</color>$"=" S<color\=#000000>p</color>ark"
 
 ----------
+Messa - Kira Kitazato
+----------
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+)次(\d+\.\d+%)攻擊力的物理屬性傷害，並為其添加1層『流血』。$"="Deals $2 ATK Physical damage to <color\=#FFFF00>1</color> enemy $1 times, inflicts 1 stack of [Bleed]."
+r:"^<link\="s\|198"><u>『尋獵者』</u></link>狀態：對1名敵人造成(\d+)次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，並為其添加1層<link\="s\|196"><u>『流血』</u></link>。$"="<link\="s|198"><u>[Hunter]</u></link>: Deals <color\=#FFFC40>$2</color> ATK Physical damage to 1 enemy $1 times, inflicts 1 stack of <link\="s|196"><u>[Bleed]</u></link>."
+
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+)次(\d+\.\d+%)攻擊力的物理屬性傷害，立即結算一次『流血』傷害並刷新其『流血』狀態的持續時間。$"="Deals $2 ATK Physical damage to <color\=#FFFF00>1</color> enemy $1 times, immediately triggers [Bleed] damage and refreshes the duration of [Bleed]."
+r:"^<link\="s\|198"><u>『尋獵者』</u></link>狀態：對1名敵人造成(\d+)次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，立即結算一次<link\="s\|196"><u>『流血』</u></link>傷害並刷新其<link\="s\|196"><u>『流血』</u></link>狀態的持續時間。$"="<link\="s|198"><u>[Hunter]</u></link>: Deals <color\=#FFFC40>$2</color> ATK Physical damage to 1 enemy $1 times, immediately triggers <link\="s|196"><u>[Bleed]</u></link> damage and refreshes the duration of <link\="s|196"><u>[Bleed]</u></link>."
+
+r:"^任意敵人的『流血』層數≥7時該技能解鎖。對<color\=#FFFF00>自己</color>使用，轉變至『行刑官』狀態，改變技能模式，並獲得效果：使用技能時，目標每有(\d+)層『流血』，{{A}}額外對其造成1次『撕裂』：(\d+\.\d+%)攻擊力的物理屬性傷害。$"="Unlocks when any enemy have ≥ 7 stacks of [Bleed]. Use on <color\=#FFFF00>yourself</color>, transforms into [Executioner], changes skill and gains this effect: When using skills, for every $1 stacks of [Bleed], deals 1 additional hit of [Laceration]: $2 ATK Physical damage."
+r:"^任意敵人的<link\="s\|196"><u>『流血』</u></link>層數≥7時該技能解鎖。\n轉變至<link\="s\|199"><u>『行刑官』</u></link>狀態，改變技能模式，並獲得效果：使用技能時，目標每有(\d+)層<link\="s\|196"><u>『流血』</u></link>，{{A}}額外對其造成1次『撕裂』：<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害。\n使用該技能後本回合仍可使用其他技能，回合結束時自動轉變至<link\="s\|198"><u>『尋獵者』</u></link>狀態。$"="Unlocks when any enemy have ≥ 7 stacks of <link\="s|196"><u>[Bleed]</u></link>.\nTransforms into <link\="s|199"><u>[Executioner]</u></link>, changes skill and gains this effect: When using skills, for every $1 stacks of <link\="s|196"><u>[Bleed]</u></link>, deals 1 additional hit of [Laceration]: <color\=#FFFC40>$2</color> ATK Physical damage. \nYou can still use other skills after using this skill, automatically transforms back into <link\="s|198"><u>[Hunter]</u></link> at the end of the turn."
+
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的物理屬性傷害，技能結束後清除其(\d+)層『流血』。（可觸發『撕裂』效果）$"="Deals $1 ATK Physical damage to <color\=#FFFF00>1</color> enemy, removes $2 stacks of [Bleed] after this skill. (Can trigger the effect of [Laceration])"
+r:"^<link\="s\|199"><u>『行刑官』</u></link>狀態：對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，技能結束後清除其(\d+)層<link\="s\|196"><u>『流血』</u></link>。（可觸發<link\="s\|197"><u>『撕裂』</u></link>效果）$"="<link\="s|199"><u>[Executioner]</u></link>: Deals <color\=#FFFC40>$1</color> ATK Physical damage to 1 enemy, removes $2 stacks of <link\="s|196"><u>[Bleed]</u></link> after this skill. (Can trigger the effect of <link\="s|197"><u>[Laceration]</u></link>)"
+
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的物理屬性傷害，目標每有1層『流血』，使該技能傷害提升(\d+%)，技能結束後清除其所有『流血』狀態。（可觸發『撕裂』效果）$"="Deals $1 ATK Physical damage to <color\=#FFFF00>1</color> enemy, for every 1 stack of [Bleed] on the target, increases the skill damage and [Laceration] damage by $2, remove all stacks of [Bleed] after this skill. (Can trigger the effect of [Laceration])"
+r:"^<link\="s\|199"><u>『行刑官』</u></link>狀態：對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，目標每有1層<link\="s\|196"><u>『流血』</u></link>，使該技能傷害及其觸發的<link\="s\|197"><u>『撕裂』</u></link>傷害提升(\d+%)，技能結束後清除其所有<link\="s\|196"><u>『流血』</u></link>狀態。（可觸發<link\="s\|197"><u>『撕裂』</u></link>效果）$"="<link\="s|199"><u>[Executioner]</u></link>: Deals <color\=#FFFC40>$1</color> ATK Physical damage to 1 enemy, for every 1 stack of <link\="s|196"><u>[Bleed]</u></link> on the target, increases the skill damage and <link\="s|197"><u>[Laceration]</u></link> damage by $2, remove all stacks of <link\="s|196"><u>[Bleed]</u></link> after this skill. (Can trigger the effect of <link\="s|197"><u>[Laceration]</u></link>)"
+
+r:"^轉變至『尋獵者』狀態，立刻為<color\=#FFFF00>1名</color>敵人添加(\d+)層『流血』；隨即轉變至『行刑官』狀態，對其造成(\d+\.\d+%)攻擊力的物理屬性傷害。（可觸發『撕裂』效果）$"="Transforms into [Hunter], immediately inflicts $1 stacks of [Bleed] to <color\=#FFFF00>1</color> enemy; Afterwards immediately transforms into [Executioner], deals $2 ATK Physical damage. (Can trigger the effect of [Laceration])"
+
+每回合受到一定傷害=Take a certain amount of damage each turn
+技能模式改變=Skill change
+
+In-Battle Quotes
+<color\=#FF0000>{{A}}</color>轉變至『行刑官』狀態，技能模式改變=<color\=#FF0000>Kira Kitazato</color> transformed into [Executioner]!
+
+Combat Pop-ups
+流<color\=#000000>血</color>=<size\=16> </size>B<color\=#000000>le</color>ed
+
+----------
 Oracle - Futaba Sakura
 ----------
-
 r:"^使<color\=#FFFF00>所有</color>敵人防禦力降低(\d+%)\+\({{A}}每有(\d+)點攻擊力額外使防禦力降低(\d+\.\d+%)，最多計入(\d+)點攻擊力\)，持續2回合。效果持續期間，敵人受到弱點傷害時，使上述減防效果翻倍。若自身解析進度為100%，給予我方全體『駭入完成』，持續(\d+)回合。$"="Decrease <color\=#FFFF00>all</color> enemies' DEF by $1 + (An additional $3 for every $2 ATK, up to $4 ATK) for 2 turns. During this duration, double this debuff when enemies take Weak damage. Give all allies [Hack Complete] if you are at 100% Analysis Progress for $5 turns."
 r:"^使所有敵人防禦力降低(\d+%)\+\({{A}}每有(\d+)點攻擊力額外使防禦力降低(\d+\.\d+%)，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\)，持續2回合。效果持續期間，敵人受到弱點傷害時，使上述減防效果翻倍。若自身解析進度為100%，給予我方全體『駭入完成』，持續(\d+)回合。$"="Decrease all enemies' DEF by $1 + (An additional $3 for every $2 ATK, up to <color\=#FFFC40>$4</color> ATK) for 2 turns. During this duration, double this debuff when enemies take Weak damage. Give all allies [Hack Complete] if you are at 100% Analysis Progress for $5 turns."
 
