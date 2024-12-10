@@ -1,9 +1,13 @@
+品質=Quality
 改造等級：=<size\=26>Reform Rank:</size>
+改造等級=<size\=26>Reform Rank</size>
+突破等級=<size\=26>Reform Rank</size>
 當前效果=Effects
 改造詳情=Details
 改造介紹=Reform Details
 改造消耗=Reform Cost
-改造效果=Reform Effects
+改造效果=<size\=21>Reform Effects</size>
+該武器已強化到滿級！=Weapon maxed!
 該武器已提升到滿級！=Weapon Lv. maxed!
 該武器已改造到滿級！=<size\=18>Weapon Reform maxed!</size>
 僅可消耗同名武器=Only use weapon wtih the same name
@@ -99,7 +103,7 @@ r:"電擊傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。釋放人格面具技
 罪與罰=Crime and Punishment
 【電磁爆發】=<size\=24>[Electromagnetic Burst]</size>
 電磁爆發=Electromagnetic Burst
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。場上存在處於<link\="s\|104"><u>觸電</u></link>狀態的敵人時，使素羽的攻擊力提升<color\=#2899FF>(\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase ATK by <color\=#2899FF>$2</color> if there is an enemy inflicted with <link\="s|104"><u>Shock</u></link>."
+r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。場上存在處於<link\="s\|104"><u>觸電</u></link>狀態的敵人時，使{{A}}的攻擊力提升<color\=#2899FF>(\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase ATK by <color\=#2899FF>$2</color> if there is an enemy inflicted with <link\="s|104"><u>Shock</u></link>."
 始祖冰河=Ancestral Glacier
 【冰原禮讚】=<size\=24>[Praise of Ice Field]</size>
 冰原禮讚=<size\=24>Praise of Ice Field</size>
@@ -107,13 +111,15 @@ r:"^最大生命值提升<color\=#2899FF>(\d+\.\d+%)</color>。觸發<link\="s\|
 噬魔=Demon Devourer
 【堅固利刃】=<size\=24>[Solid Sharp Blade]</size>
 堅固利刃=Solid Sharp Blade
-r:"^最大生命值提升<color\=#2899FF>(\d+\.\d+%)</color>。處於<link\="s\|151"><u>『荒野救星』</u></link>狀態下，額外使自身最大生命值提升<color\=#2899FF>(\d+\.\d+%)</color>、防禦力提升<color\=#2899FF>(\d+\.\d+%)</color>、效果抵抗提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase Max HP by <color\=#2899FF>$1</color>. When in the <link\="s|151"><u>Wilderness Savior</u></link> state, increase Max HP by <color\=#2899FF>$2</color>, DEF by <color\=#2899FF>$3</color> and Effect RES by <color\=#2899FF>$4</color>."
+r:"^最大生命值提升<color\=#2899FF>(\d+\.\d+%)</color>。處於<link\="s\|151"><u>『荒野救星』</u></link>狀態下，額外使自身最大生命值提升<color\=#2899FF>(\d+\.\d+%)</color>、防禦力提升<color\=#2899FF>(\d+\.\d+%)</color>、效果抵抗提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase Max HP by <color\=#2899FF>$1</color>. When in <link\="s|151"><u>[Wilderness Savior]</u></link>, increase Max HP by <color\=#2899FF>$2</color>, DEF by <color\=#2899FF>$3</color> and Effect RES by <color\=#2899FF>$4</color>."
 忍具·天與刃翼=Shinobi Tool: Winged Sky Blade
 【影舞】=<size\=24>[Shadow Dance]</size>
 影舞=Shadow Dance
 r:"^速度提升<color\=#2899FF>(\d+\.\d+)</color>。每擊破2個『破綻』，額外獲得<color\=#2899FF>(\d+)</color>份『情報』；同時全體夥伴獲得<color\=#2899FF>(\d+\.\d+%)</color>的傷害提升，持續1回合。『情報』上限層數提升至<color\=#2899FF>(\d+)</color>層。$"="Increase SPD by <color\=#2899FF>$1</color>. For every 2 [Vulnerability] broken, gain <color\=#2899FF>$2</color> extra stacks of [Intel] and increase all allies's DMG Dealt by <color\=#2899FF>$3</color> for 1 turn. Increase the cap of Intel to <color\=#2899FF>$4</color>."
-【含苞】=[Budding]
+花見緋梅=Plum Viewing
+【含苞】=<size\=24>[Budding]</size>
 含苞=Budding
+r:"^速度提升<color\=#2899FF>(\d+\.\d+)</color>。每次『破綻』被擊破時，使所有同伴獲得以下效果之一：攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，防禦力提升<color\=#2899FF>(\d+\.\d+%)</color>，生命值提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合；同時有<color\=#2899FF>(\d+\.\d+%)</color>的固定機率使{{A}}額外獲得(\d+)份『情報』。$"="Increase Speed by <color\=#2899FF>$1</color>. When breaking [Vulnerability], give all allies one of the following effect for $5 turns: Increase ATK by <color\=#2899FF>$2</color>, increase DEF by <color\=#2899FF>$3</color>, increase HP by <color\=#2899FF>$4</color>; There is a <color\=#2899FF>$6</color> fixed chance for you to gain $7 additional [Intel]."
 霽月銀勾=Bright Moon Hook
 【水中月】=<size\=24>[Moon in Water]</size>
 水中月=Moon in Water
@@ -333,10 +339,15 @@ r:"^暴擊效果提升<color\=#2899FF>(\d+\.\d+%)</color>。自身的<link\="s\|
 【冰之饋贈】=<size\=24>[Ice Gift]</size>
 冰之饋贈=Ice Gift
 sr:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。琴音每次獲得<link\="s\|119"><u>『(.*)』</u></link>時增加冰凍傷害<color\=#2899FF>(\d+\.\d+%)</color>，持續1回合，最多疊加10層。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase Ice DMG by <color\=#2899FF>$3</color> every time you gain <link\="s|119"><u>[$2]</u></link> for 1 turn up to 10 stacks."
+
 幻夢泡影=Dream Bubble
 【深海共鳴】=<size\=24>[Deep Sea Resonance]</size>
 深海共鳴=Deep Sea Resonance
 r:"^防禦力提高<color\=#2899FF>(\d+\.\d+%)</color>。{{A}}釋放技能時，使技能主目標額外獲得1層<link\="s\|144"><u>『海之守護』</u></link>；並根據技能目標的<link\="s\|144"><u>『海之守護』</u></link>層數，每層使攻擊力提高<color\=#2899FF>(\d+\.\d+%)</color>，防禦力提高<color\=#2899FF>(\d+\.\d+%)</color>，效果持續2回合。$"="Increase DEF by <color\=#2899FF>$1</color>. When using a skill, the main target gain 1 additional stack of <link\="s|144"><u>[Nereids' Guard]</u></link>; For each stack of <link\="s|144"><u>[Nereids' Guard]</u></link> the target have, increase their ATK by <color\=#2899FF>$2</color> and DEF by <color\=#2899FF>$3</color> for 2 turns."
+海域聲呐=Sea Sonar
+【回聲屏障】=<size\=24>[Echo Barrier]</size>
+回聲屏障=Echo Barrier
+r:"^護盾效果提升<color\=#2899FF>(\d+\.\d+%)</color>。處於護盾保護下的怪盜，防禦力提高<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase Shield Effect by <color\=#2899FF>$1</color>. Increase the DEF for allies with Shield by <color\=#2899FF>$2</color>."
 
 超頻脈衝=Overclocking Pulse
 【湮滅震盪】=<size\=24>[Annihilating Concussion]</size>
