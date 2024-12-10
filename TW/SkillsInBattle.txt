@@ -11,15 +11,22 @@ r:"面具(.*)級時可解鎖"=Unlocks when this persona is LV.$1
 戰鬥技巧=Combat Skills
 基礎數值=Base Stats
 狀態資訊=Status Information
-當前無狀態資訊=\nNo Status Info
+當前無狀態資訊=No Status Info
 技能效果=Skill Effect
 資訊=Info
 武器效果=Weapon Effect
 啟示效果=Revelation Effect
 
+使用近戰武器，對1名敵人造成物理屬性的少量傷害。=<size\=28>Uses a melee weapon to deal light Physical damage to 1 enemy.</size>
+
 槍械射擊=Gun Attack
 r:"^1層$"="<size\=18> stack</size>"
 r:"^(\d+)層$"="<size\=18>$1 stacks</size>"
+
+倍率：=Multiplier:
+子彈數：=Ammo:
+命中率：=Accuracy:
+基礎暴擊率：=Base CRIT Rate:
 
 // Elemental & Psychological Ailments //
 
@@ -55,7 +62,7 @@ r:"^行動後損失生命值$"="Lose HP after action"
 
 <color\=#66ccff>詛咒</color>=<color\=#FF0037>Cursed</color>
 <color\=#66ccff>祝福</color>=<color\=#FFFF9E>Blessed</color>
-sr:"^<color\=#FF0000>(.*)</color>從倒地狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Downed!"
+r:"^<color\=#FF0000>(.*)</color>從倒地狀態恢復了。$"="<color\=#FF0000>Enemy</color> recovered from Downed!"
 
 // Elemental & Mental Ailments Descriptions //
 
@@ -212,7 +219,7 @@ r:"對隨機敵人造成3段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的電�
 sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$3</color> chance of inflicting $4 for 2 turns.
 
 Vishnu
-r:"^造成<color\=#FFFF00>單體</color>疾風屬性傷害，機率附著<color\=#FFFF00>風襲</color>效果。若目標處於風襲狀態則刷新持續時間並增加本次技能傷害並附加疾風傷害加深效果。$"="Deals Wind DMG to <color\=#FFFF00>1</color> enemy, with a chance to inflict <color\=#FFFF00>Winded</color>. If the target is in Winded, refreshes its duration, increases this damage and increases their Wind DMG Taken."
+造成<color\=#FFFF00>單體</color>疾風屬性傷害，機率附著<color\=#FFFF00>風襲</color>效果。若目標處於風襲狀態則刷新持續時間並增加本次技能傷害並附加疾風傷害加深效果。=Deals Wind DMG to <color\=#FFFF00>1</color> enemy, with a chance to inflict <color\=#FFFF00>Winded</color>. If the target is in Winded, refreshes its duration, increases this damage and increases their Wind DMG Taken.
 
 --- Psy ---
 
@@ -399,7 +406,7 @@ r:"使<color\=#FFFF00>1名</color>敵方攻擊、防禦、效果命中、效果�
 
 --- Wonder HIGHLIGHT ---
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的物理屬性傷害。$"="Deals $1 ATK Phys damage to <color\=#FFFF00>1</color> enemy."
-r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的槍械屬性傷害。$"="Deals $1 ATK Gun damage to <color\=#FFFF00>1</color> enemy."
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的射擊屬性傷害。$"="Deals $1 ATK Gun damage to <color\=#FFFF00>1</color> enemy."
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的火焰屬性傷害。$"="Deals $1 ATK Fire damage to <color\=#FFFF00>1</color> enemy."
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害。$"="Deals $1 ATK Ice damage to <color\=#FFFF00>1</color> enemy."
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害。$"="Deals $1 ATK Elec damage to <color\=#FFFF00>1</color> enemy."
@@ -410,7 +417,7 @@ r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬�
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害。$"="Deals $1 ATK Curse damage to <color\=#FFFF00>1</color> enemy."
 
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的物理屬性傷害。$"="Deals $1 ATK Phys damage to <color\=#FFFF00>all</color> enemies."
-r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的槍械屬性傷害。$"="Deals $1 ATK Gun damage to <color\=#FFFF00>all</color> enemy."
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的射擊屬性傷害。$"="Deals $1 ATK Gun damage to <color\=#FFFF00>all</color> enemy."
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的火焰屬性傷害。$"="Deals $1 ATK Fire damage to <color\=#FFFF00>all</color> enemy."
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害。$"="Deals $1 ATK Ice damage to <color\=#FFFF00>all</color> enemy."
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害。$"="Deals $1 ATK Elec damage to <color\=#FFFF00>all</color> enemy."
@@ -504,6 +511,9 @@ sr:"^<color\=#FF0000>(.*)</color>暴擊率提升了……$"="<color\=#FF0000>$1<
 <color\=#FF0000>所有敵人</color>受到的傷害提升了……=<color\=#FF0000>All enemies</color> DMG Taken Up!
 sr:"^<color\=#FF0000>(.*)</color>防禦降低了……$"="<color\=#FF0000>Enemy</color> DEF Down!"
 sr:"^<color\=#FF0000>(.*)</color>進入了洗腦狀態……$"="<color\=#FF0000>$1</color> inflicted with Brainwash!"
+r:"^<color\=#FF0000>(.*)</color>被亞諾希克瞄準了，防禦降低……$"="<color\=#FF0000>Enemy</color> aimed by Janosik, DEF Down!"
+r:"^<color\=#FF0000>(.*)</color>攻擊提升了……$"="<color\=#FF0000>Enemy</color> ATK Up!"
+r:"^<color\=#FF0000>(.*)</color>效果命中、效果抵抗提升了……$"="<color\=#FF0000>Enemy</color> EHR, Effect RES Up!"
 
 ----------
 Combat Pop-ups for ailments
@@ -526,6 +536,7 @@ Combat Pop-ups for buffs
 r:"^屬<color\=#000000>性</color>提升$"="<size\=15> </size>S<color\=#000000>ta</color>ts Up"
 r:"^攻<color\=#000000>擊</color>提升$"="<size\=22> </size>A<color\=#000000>T</color>K Up"
 r:"^攻<color\=#000000>擊</color>力提升$"="<size\=22> </size>A<color\=#000000>T</color>K Up"
+r:"^攻<color\=#000000>擊</color>、防禦提升$"="<size\=22> </size>A<color\=#000000>T</color>K Up, DEF Up"
 r:"^防<color\=#000000>禦</color>提升$"="<size\=22> </size>D<color\=#000000>E</color>F Up"
 r:"^防<color\=#000000>禦</color>力提升$"="<size\=22> </size>D<color\=#000000>E</color>F Up"
 r:"^最<color\=#000000>大</color>生命值提升$"="<size\=0.1> </size>M<color\=#000000>ax</color> HP Up"
@@ -534,20 +545,57 @@ r:"^效<color\=#000000>果</color>命中提升$"=" E<color\=#000000>H</color>R U
 r:"^傷<color\=#000000>害</color>增加$"="<size\=17> </size>D<color\=#000000>M</color>G Bonus Up"
 r:"^傷<color\=#000000>害</color>提高$"="<size\=17> </size>D<color\=#000000>M</color>G Bonus Up"
 r:"^傷<color\=#000000>害</color>提升$"="<size\=17> </size>D<color\=#000000>M</color>G Bonus Up"
+r:"^造<color\=#000000>成</color>傷害提升$"="<size\=17> </size>D<color\=#000000>M</color>G Dealt Up"
+r:"^最<color\=#000000>終</color>傷害提升$"="<size\=15> </size>F<color\=#000000>in</color>al DMG Up"
+r:"^追<color\=#000000>加</color>特化$"="<size\=15> </size>F<color\=#000000>ol</color>low Up Buff"
 r:"^傷<color\=#000000>害</color>減免$"="<size\=17> </size>D<color\=#000000>M</color>G RES Up"
 r:"^免<color\=#000000>傷</color>率提升$"="<size\=17> </size>D<color\=#000000>M</color>G RES Up"
 r:"^受<color\=#000000>到</color>傷害降低$"="<size\=20> </size>D<color\=#000000>M</color>G Taken Down"
 r:"^暴<color\=#000000>擊</color>率提升$"="<size\=20> </size>C<color\=#000000>R</color>IT Up"
 r:"^暴<color\=#000000>擊</color>效果提升$"="<size\=20> </size>C<color\=#000000>R</color>IT DMG Up"
 r:"^效<color\=#000000>果</color>抵抗提升$"="Ef<color\=#000000>fe</color>ct RES Up"
+r:"^受<color\=#000000>弱</color>點傷害降低$"="<size\=11> </size>W<color\=#000000>e</color>ak DMG Taken Down"
 r:"^治<color\=#000000>療</color>效果提升$"="<size\=3> </size>H<color\=#000000>ea</color>ling Up"
 r:"^護<color\=#000000>盾</color>效果提升$"="<size\=16> </size>S<color\=#000000>hi</color>eld Effect Up"
 
-
-r:"^造<color\=#000000>成</color>傷害提升$"="In<color\=#000000>cr</color>ease DMG Dealt"
-
 r:"^生<color\=#000000>命</color>上限提升$"="<size\=0.1> </size>M<color\=#000000>ax</color> HP Up"
 r:"^護<color\=#000000>盾</color>$"="<size\=16> </size>S<color\=#000000>hi</color>eld"
+
+r:"^物<color\=#000000>理</color>傷害提升$"="<size\=27> </size>P<color\=#000000>h</color>ysical DMG Up"
+r:"^射<color\=#000000>擊</color>傷害提升$"="<size\=22> </size>G<color\=#000000>u</color>n DMG Up"
+r:"^火<color\=#000000>焰</color>傷害提升$"="<size\=22> </size>F<color\=#000000>ir</color>e DMG Up"
+r:"^冰<color\=#000000>凍</color>傷害提升$"="<size\=5> </size>Ic<color\=#000000>e</color> DMG Up"
+r:"^電<color\=#000000>擊</color>傷害提升$"="<size\=21> </size>E<color\=#000000>le</color>c DMG Up"
+r:"^疾<color\=#000000>風</color>傷害提升$"="<size\=1> </size>W<color\=#000000>in</color>d DMG Up"
+r:"^念<color\=#000000>動</color>傷害提升$"="<size\=10> </size>P<color\=#000000>sy</color> DMG Up"
+r:"^核<color\=#000000>熱</color>傷害提升$"="<size\=2> </size>N<color\=#000000>uk</color>e DMG Up"
+r:"^祝<color\=#000000>福</color>傷害提升$"="<size\=15> </size>B<color\=#000000>le</color>ss DMG Up"
+r:"^詛<color\=#000000>咒</color>傷害提升$"="<size\=8> </size>C<color\=#000000>ur</color>se DMG Up"
+r:"^萬<color\=#000000>能</color>傷害提升$"="<size\=1> </size>Al<color\=#000000>m</color>ighty DMG Up"
+
+r:"^物<color\=#000000>理</color>傷害提高$"="<size\=27> </size>P<color\=#000000>h</color>ysical DMG Up"
+r:"^射<color\=#000000>擊</color>傷害提高$"="<size\=22> </size>G<color\=#000000>u</color>n DMG Up"
+r:"^火<color\=#000000>焰</color>傷害提高$"="<size\=22> </size>F<color\=#000000>ir</color>e DMG Up"
+r:"^冰<color\=#000000>凍</color>傷害提高$"="<size\=5> </size>Ic<color\=#000000>e</color> DMG Up"
+r:"^電<color\=#000000>擊</color>傷害提高$"="<size\=21> </size>E<color\=#000000>le</color>c DMG Up"
+r:"^疾<color\=#000000>風</color>傷害提高$"="<size\=1> </size>W<color\=#000000>in</color>d DMG Up"
+r:"^念<color\=#000000>動</color>傷害提高$"="<size\=10> </size>P<color\=#000000>sy</color> DMG Up"
+r:"^核<color\=#000000>熱</color>傷害提高$"="<size\=2> </size>N<color\=#000000>uk</color>e DMG Up"
+r:"^祝<color\=#000000>福</color>傷害提高$"="<size\=15> </size>B<color\=#000000>le</color>ss DMG Up"
+r:"^詛<color\=#000000>咒</color>傷害提高$"="<size\=8> </size>C<color\=#000000>ur</color>se DMG Up"
+r:"^萬<color\=#000000>能</color>傷害提高$"="<size\=1> </size>Al<color\=#000000>m</color>ighty DMG Up"
+
+r:"^物<color\=#000000>理</color>特化$"="<size\=27> </size>P<color\=#000000>h</color>ysical DMG Up"
+r:"^射<color\=#000000>擊</color>特化$"="<size\=22> </size>G<color\=#000000>u</color>n DMG Up"
+r:"^火<color\=#000000>焰</color>特化$"="<size\=22> </size>F<color\=#000000>ir</color>e DMG Up"
+r:"^冰<color\=#000000>凍</color>特化$"="<size\=5> </size>Ic<color\=#000000>e</color> DMG Up"
+r:"^電<color\=#000000>擊</color>特化$"="<size\=21> </size>E<color\=#000000>le</color>c DMG Up"
+r:"^疾<color\=#000000>風</color>特化$"="<size\=1> </size>W<color\=#000000>in</color>d DMG Up"
+r:"^念<color\=#000000>動</color>特化$"="<size\=10> </size>P<color\=#000000>sy</color> DMG Up"
+r:"^核<color\=#000000>熱</color>特化$"="<size\=2> </size>N<color\=#000000>uk</color>e DMG Up"
+r:"^祝<color\=#000000>福</color>特化$"="<size\=15> </size>B<color\=#000000>le</color>ss DMG Up"
+r:"^詛<color\=#000000>咒</color>特化$"="<size\=8> </size>C<color\=#000000>ur</color>se DMG Up"
+r:"^萬<color\=#000000>能</color>特化$"="<size\=1> </size>Al<color\=#000000>m</color>ighty DMG Up"
 
 ----------
 Combat Pop-ups for debuffs
@@ -562,10 +610,15 @@ r:"^受<color\=#000000>傷</color>害提升$"="<size\=20> </size>D<color\=#00000
 r:"^受<color\=#000000>到</color>傷害提升$"="<size\=20> </size>D<color\=#000000>M</color>G Taken Up"
 r:"^傷<color\=#000000>害</color>降低$"="<size\=20> </size>D<color\=#000000>M</color>G Down"
 r:"^受<color\=#000000>物</color>理傷害加深$"="<size\=25> </size>P<color\=#000000>h</color>ys DMG Taken Up"
+r:"^受<color\=#000000>到</color>火焰傷害提升$"="<size\=22> </size>F<color\=#000000>ir</color>e DMG Taken Up"
 r:"^受<color\=#000000>到</color>電擊傷害提升$"="<size\=21> </size>E<color\=#000000>le</color>c DMG Taken Up"
+r:"^受<color\=#000000>疾</color>風傷害提高$"="<size\=1> </size>W<color\=#000000>in</color>d DMG Taken Up"
+r:"^受<color\=#000000>疾</color>風傷害加深$"="<size\=1> </size>W<color\=#000000>in</color>d DMG Taken Up"
+r:"^受<color\=#000000>核</color>熱傷害提升$"="<size\=3> </size>N<color\=#000000>uk</color>e DMG Taken Up"
 r:"^受<color\=#000000>到</color>核熱傷害提升$"="<size\=3> </size>N<color\=#000000>uk</color>e DMG Taken Up"
 r:"^受<color\=#000000>詛</color>咒傷害提升$"="<size\=7> </size>C<color\=#000000>ur</color>se DMG Taken Up"
 
+r:"^瞄<color\=#000000>準</color>$"="Ai<color\=#000000>m</color>"
 
 ----------
 Inspect Details - BUFF
@@ -581,6 +634,7 @@ r:"^攻擊力提升(\d+%)$"="Increase ATK by $1"
 r:"^攻擊力提升(\d+\.\d+%)$"="Increase ATK by $1"
 r:"^每層提升(.*)的攻擊力$"="Increase ATK by $1 per stack"
 r:"^攻擊力提升(\d+%)、防禦力提升(\d+%)$"="Increase ATK by $1 and DEF by $2"
+r:"^攻擊力、防禦力提高$"="Increase ATK and DEF"
 r:"^防禦提升(\d+%)$"="Increase DEF by $1"
 r:"^防禦力提升(\d+)$"="Increase DEF by $1"
 r:"^防禦力提升(\d+%)$"="Increase DEF by $1"
@@ -608,6 +662,8 @@ r:"^技能傷害提升(\d+%)$"="Increase skill damage by $1"
 r:"^追加效果暴擊效果提升(\d+%)、攻擊力提升(\d+%)$"="Increase Follow Up CRIT DMG by $1 and Follow Up ATK by $2"
 sr:"^傷害減免(.*)$"="Increase DMG RES by $1"
 r:"^受到的傷害降低(\d+%)"="Decrease DMG Taken by $1"
+r:"^受到百分比傷害大幅降低"="Heavily decrease DMG Taken%"
+r:"^受到最終傷害降低(\d+%)"="Decrease Final DMG Taken by $1"
 r:"^所有同伴受到的傷害降低(\d+%)。$"="Decrease DMG Taken by $1"
 r:"^受物理傷害加深(\d+\.\d+%)$"="Increase Physical DMG Taken by $1"
 r:"^物理傷害提升(\d+%)$"="Increase Physical DMG by $1"
@@ -640,9 +696,10 @@ r:"^治療效果提升(\d+%)$"="Increase Healing Effect by $1"
 r:"^護盾效果提升(\d+%)$"="Increase Shield Effect by $1"
 
 
-r:"^瑪哈塔爾卡(.*)"="Matarukaja $1"
-r:"^瑪哈拉庫卡(.*)"="Marakukaja $1"
-
+sr:"^瑪哈塔爾卡加(.*)$"="Matarukaja $1"
+sr:"^瑪哈拉庫卡加(.*)$"="Marakukaja $1"
+sr:"^瑪哈塔爾卡(.*)$"="Matarukaja $1"
+sr:"^瑪哈拉庫卡(.*)$"="Marakukaja $1"
 
 免疫即死效果=Immunity to Instant Death effects
 免疫精神異常效果=Immunity to Mental Ailment effects
@@ -655,6 +712,7 @@ Inspect Details - DEBUFF
 r:"^攻擊力降低(\d+%)$"="Decrease ATK by $1"
 r:"^防禦降低(\d+%)$"="Decrease DEF by $1"
 r:"^防禦力降低(\d+%)$"="Decrease DEF by $1"
+r:"^防禦降低(\d+\.\d+%)$"="Decrease DEF by $1"
 r:"^防禦力降低(\d+\.\d+%)$"="Decrease DEF by $1"
 r:"^受到暴擊效果提升(\d+\.\d+%)$"="Increase CRIT DMG Taken by $1"
 r:"^受傷害提升(\d+\.\d+%)$"="Increase DMG Taken by $1"
@@ -662,6 +720,7 @@ r:"^受到傷害提升(\d+%)$"="Increase DMG Taken by $1"
 r:"^受到傷害提升(\d+\.\d+%)$"="Increase DMG Taken by $1"
 r:"^受到的傷害提升(\d+\.\d+%)$"="Increase DMG Taken by $1"
 r:"^造成傷害降低(\d+%)$"="Decrease DMG Dealt by $1"
+r:"^受到火焰傷害提升(\d+\.\d+%)$"="Increase Fire DMG Taken by $1"
 r:"^受疾風傷害提高(\d+%)"="Increase Wind DMG Taken by $1"
 r:"^受疾風傷害加深(\d+%)"="Increase Wind DMG Taken by $1"
 r:"^受到核熱傷害提升(\d+%)"="Increase Nuke DMG Taken by $1"
@@ -674,6 +733,7 @@ Inspect Details - TITLES
 屬性降低=Decrease Stats
 r:"^攻擊提升$"="Increase ATK"
 r:"^攻擊力提升$"="Increase ATK"
+r:"^防禦提升$"="Increase DEF"
 r:"^防禦力提升$"="Increase DEF"
 r:"^防禦力降低$"="Decrease DEF"
 r:"^傷害增加$"="Increase Damage"
@@ -688,7 +748,8 @@ r:"^受傷害提升$"="Increase DMG Taken"
 r:"^受到傷害提升$"="Increase DMG Taken"
 r:"^受到百分比傷害降低$"="Decreses damage taken percentage"
 r:"^受百分比傷害降低$"="Decreases DMG Taken%"
-凍結傷害提升=Increase Ice DMG
+r:"^火焰傷害提升$"="Increase Fire DMG"
+r:"^凍結傷害提升$"="Increase Ice DMG"
 r:"^核熱傷害提升$"="Increase Nuke DMG"
 r:"^治療效果提升$"="<size\=26>Increase Healing Effect</size>"
 r:"^護盾效果提升$"="Increase Shield Effect"

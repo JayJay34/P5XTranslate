@@ -1,6 +1,7 @@
 ----------
 UI + ITEM MENU
 ----------
+我的{{A}}=My Palace
 後產滿=Til Full
 嗯？要離開我的{{A}}，返回都市嗎？=Hm? Want to leave My Palace\nand head back to the city?
 
@@ -8,7 +9,22 @@ r:"^·{{A}}等級達到Pevel.(\d+)$"="<size\=26>-Reach Pevel.$1</size>"
 r:"^·{{A}}的怪盜評級達到(\d+)分$"="<size\=26>-{{A}} reached $1 score</size>"
 ·達成條件後即可前往購買=<size\=26>-For sale after meeting conditions</size>
 r:"^·將亞諾希克強化至(\d+)級$"="<size\=26>-Upgrade Janosik to Lv. $1</size>"
+r:"^·將亞諾希克進階至RANK(\d+)\((\d+)/(\d+)\)$"="<size\=26>-Evolve Janosik to Rank $1 ($2/$3)</size>"
 ·購買時裝-怪盜·海之心=<size\=26>-Purchase Summer Wonder outfit</size>
+r:"^·進行御船千早的占卜累計達(\d+)次\((\d+)/(\d+)\)$"="<size\=26>-Get $1 readings from Chihaya Mifune ($2/$3)</size>"
+r:"^·集齊(\d+)套{{A}}系列\((\d+)/(\d+)\)$"="<size\=26>-Collect $1 sets of {{A}} ($2/$3)</size>"
+r:"^·通關「天鵝絨試煉」巧匠之作第(\d+)關\((\d+)/(\d+)\)$"="<size\=26>-Clear [Velvet Trial] Artisan's Work Trial $1 ($2/$3)</size>"
+r:"^·通關「天鵝絨試煉」灼熱迷域第(\d+)關\((\d+)/(\d+)\)$"="<size\=26>-Clear [Velvet Trial] Scorching Maze Trial $1 ($2/$3)</size>"
+r:"^·通關「天鵝絨試煉」暑寒極地第(\d+)關\((\d+)/(\d+)\)$"="<size\=26>-Clear [Velvet Trial] Cold Polar Zone Trial $1 ($2/$3)</size>"
+r:"^·通關「天鵝絨試煉」雷霆祈境第(\d+)關\((\d+)/(\d+)\)$"="<size\=26>-Clear [Velvet Trial] Thunder Realm Trial $1 ($2/$3)</size>"
+r:"^·通關「天鵝絨試煉」詛咒漩渦第(\d+)關\((\d+)/(\d+)\)$"="<size\=26>-Clear [Velvet Trial] Cursed Swirl Trial $1 ($2/$3)</size>"
+r:"^·「閼凶夢之扉」中挑戰首領積分達到(\d+)分\((\d+)/(\d+)\)$"="<size\=26>-Reach $1 score in [Door of Nightmare] ($2/$3)</size>"
+r:"^·「閼凶夢之扉」中，累計(\d+)次挑戰首領積分達到(\d+)分\((\d+)/(\d+)\)$"="<size\=26>-Reach $2 score for $1 bosses in [Door of Nightmare] ($3/$4)</size>"
+r:"^·「心之海試煉」中段位達到(\d+)等星（次賽季生效）\((\d+)/(\d+)\)$"="<size\=26>-Reach rank $1 in [Sea of Souls Trials] (Effective next season) ($2/$3)</size>"
+r:"^·「心之海試煉」中，累計(\d+)期段位達到(\d+)等星（次賽季生效）\((\d+)/(\d+)\)$"="<size\=26>-Reach rank $2 for $1 seasons in [Sea of Souls Trials] (Effective for the following season) ($3/$4)</size>"
+r:"^·在「星盤試練」中通關(\d+)個宮主星或命主星\((\d+)/(\d+)\)$"="<size\=26>-Clear $1 House or Chart Ruler in [Astrolabe Trials] ($2/$3)</size>"
+r:"^·與任意(\d+)名協同者結為親密關係\((\d+)/(\d+)\)$"="<size\=26>-Reach an Intimate Relationship wtih $1 Confidants ($2/$3)</size>"
+r:"^·任意(\d+)個人格指數達到(\d+)級\((\d+)/(\d+)\)$"="<size\=26>-Reach Rank $2 for $1 Social Stats ($3/$4)</size>"
 
 弱點攻擊特寫 WONDER=Wonder Cut-In
 弱點攻擊特寫 {{A}}={{A}} Cut-In
@@ -18,7 +34,6 @@ r:"^·將亞諾希克強化至(\d+)級$"="<size\=26>-Upgrade Janosik to Lv. $1</
 總攻擊最後一擊 WONDER=Wonder All-Out Attack Finisher
 總攻擊最後一擊 {{A}}={{A}} All-Out Attack Finisher
 
-雕像道具效果=My Palace Item Effect
 r:"^<color\=#FFFF00>戰鬥中，WONDER生命值提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase the HP of Wonder by $1</color>"
 r:"^<color\=#FFFF00>戰鬥中，WONDER攻擊力提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase the ATK of Wonder by $1</color>"
 r:"^<color\=#FFFF00>戰鬥中，WONDER防禦力提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase the DEF of Wonder by $1</color>"
@@ -47,7 +62,12 @@ r:"^<color\=#FFFF00>WONDER在戰鬥中造成傷害提升(\d+%)</color>$"="<color
 r:"^<color\=#FFFF00>戰鬥中，人格面具造成的傷害提升(\d+%)</color>$"="<color\=#FFFF00>In battle, increase Persona skill DMG by $1</color>"
 r:"^<color\=#FFFF00>戰鬥中，所有人格面具造成的傷害提升(\d+%)</color>$"="<color\=#FFFF00>In battle, increase all Persona skill DMG by $1</color>"
 r:"^<color\=#FFFF00>戰鬥中，己方成員的HIGHLIGHT傷害提升(\d+\.\d+%)</color>$"="<color\=#FFFF00>In battle, increase all allies' HIGHLIGHT DMG by $1</color>"
+r:"^<color\=#FFFF00>己方成員在「閼凶夢之扉」戰鬥中造成的傷害提升(\d+%)</color>$"="<color\=#FFFF00>Increase all allies' DMG by $1 in [Door of Nightmare]"
+r:"^<color\=#FFFF00>己方成員在「閼凶夢之扉」戰鬥中造成的傷害提升(\d+\.\d+%)</color>$"="<color\=#FFFF00>Increase all allies' DMG by $1 in [Door of Nightmare]"
+r:"^<color\=#FFFF00>己方成員在「心之海試煉」戰鬥中造成的傷害提升(\d+%)</color>$"="<color\=#FFFF00>Increase all allies' DMG by $1 in [Sea of Souls Trials]"
+r:"^<color\=#FFFF00>己方成員在「心之海試煉」戰鬥中造成的傷害提升(\d+\.\d+%)</color>$"="<color\=#FFFF00>Increase all allies' DMG by $1 in [Sea of Souls Trials]</color>"
 r:"^<color\=#FFFF00>戰鬥中，己方成員的治療效果提升(\d+\.\d+%)</color>$"="<color\=#FFFF00>In battle, increase all allies' Healing Effect by $1</color>"
+sr:"^<color\=#FFFF00>戰鬥中，己方成員的(.*)、(.*)屬性傷害提升(\d+\.\d+%)</color>$"="<color\=#FFFF00>In battle, increase all allies' $1 and $2 DMG by $3</color>"
 sr:"^<color\=#FFFF00>戰鬥中，己方成員的(.*)屬性傷害提升(\d+%)</color>$"="<color\=#FFFF00>In battle, increase all allies' $1 DMG by $2</color>"
 
 r:"^<color\=#FFFF00>每日首次登入時，額外獲得(\d+)點體力</color>$"="<color\=#FFFF00>Additionally gain $1 Stamina on daily login</color>"
@@ -60,6 +80,11 @@ r:"^<color\=#FFFF00>每次挑戰「輜械求索」時，額外獲得(\d+)個萬�
 r:"^<color\=#FFFF00>天鵝絨試練的玲瓏辰星產量每天額外增加(\d+)</color>$"="<color\=#FFFF00>Additionally gain $1 Exquisite Star from Velvet Trials per day</color>"
 
 
+----------
+BATTLE PAUSE MENU
+----------
+雕像道具效果=My Palace Statue Effect
+插畫效果=My Palace Painting Effect
 r:"^WONDER生命值提升(\d+)$"="Increas Wonder's HP by $1"
 r:"^所有角色生命值提升(\d+)$"="Increas all allies' HP by $1"
 r:"^所有角色的生命值提升(\d+)$"="Increas all allies' HP by $1"
@@ -79,16 +104,18 @@ r:"^人格面具造成的傷害提升(\d+%)$"="Increas all allies' Persona skill
 r:"^所有人格面具造成的傷害提升(\d+%)$"="Increas all allies' Persona skill DMG by $1"
 r:"^所有角色Highlight傷害提升(\d+\.\d+%)$"="Increas all allies' HIGHLIGHT DMG by $1"
 r:"^所有角色的治療效果提升(\d+\.\d+%)$"="Increas all allies' Healing Effect by $1"
+r:"^物理、射擊屬性傷害提升(\d+\.\d+%)$"="Increas all allies' Physical and Gun DMG by $1"
 r:"^所有角色的火焰屬性傷害提升(\d+%)$"="Increas all allies' Fire DMG by $1"
 r:"^所有角色的電屬性提升(\d+%)$"="Increas all allies' Elec DMG by $1"
-
-
-
+r:"^所有角色的風屬性提升(\d+%)$"="Increas all allies' Wind DMG by $1"
+r:"^「女神異聞錄5」聯動角色生命提升(\d+)$"="Increase the HP of the Phantom Thieves of Heart by $1</color>"
+r:"^「女神異聞錄5」聯動角色傷害提升(\d+\.\d+%)$"="Increase the DMG of the Phantom Thieves of Heart by $1</color>"
 
 ----------
 Settle In
 ----------
 入駐怪盜可提高契合度，獲得{{A}}=Settled in Thieves can gain Closeness and {{A}}
+點擊入駐夥伴=Select Thief
 r:"^契合等級：(\d+)$"="<size\=21>Closeness Level: $1</size>"
 r:"^每入駐(\d+)秒累積1點契合度。$"="Gain 1 Closeness every $1 seconds."
 契合度未滿級=Not capped
@@ -105,7 +132,7 @@ r:"^獲得{{A}}$"="Gain {{A}}"
 ----------
 PEVEL RANK UP
 ----------
-r:"^· 暫無新的等級效果$"="- No new effect from level up"
+· 暫無新的等級效果=- No new effect from level up
 · 解鎖新的道具擺放區域=- Unlock new decoration area
 r:"^· {{A}}產出數量增漲至(\d+)秒一次$"="- Increase {{A}} speed to 1 every $1 seconds"
 r:"^· {{A}}產出上限提升至(\d+)$"="- Increase the passive {{A}} cap to $1"

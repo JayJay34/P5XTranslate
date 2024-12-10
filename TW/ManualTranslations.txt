@@ -150,6 +150,8 @@ sr:"^已為(.*)點讚。$"="Liked $1."
 暫時還沒有好友申請。=No Friend Request.
 暫無隱藏的玩家。=No Hidden Player.
 
+未完成=Missing
+
 提示=Tips
 設置提示=Settings
 是否將所有按鍵恢復至預設設置？（所有按鍵修改將會被重置）=Do you want to restore back to default settings? (This will reset all key bindings)
@@ -160,6 +162,7 @@ r:"^待設置$"="None"
 點擊任意空白處關閉=Click any blank space to close
 敬請期待=Stay tuned!
 決戰篇=Finale
+故事=Story
 
 ----------
 Character Names
@@ -171,7 +174,8 @@ r:"^路<color\=#ff0000ff>菲</color>爾$"="Ru<color\=#ff0000ff>fe</color>ru"
 
 r:"^新<color\=#ff0000ff>井</color>{{A}}$"="Mo<color\=#ff0000ff>to</color>ha Arai"
 
-r:"^加<color\=#ff0000ff>納</color> 駿$"="Sh<color\=#ff0000ff>un</color> Kano"
+r:"^加<color\=#ff0000ff>納</color> 駿$"="Sh<color\=#ff0000ff>un</color> Kanou"
+r:"^加<color\=#ff0000ff>納</color>駿$"="Sh<color\=#ff0000ff>un</color> Kanou"
 
 r:"^多<color\=#ff0000ff>禰</color>村{{A}}$"="{{A}} Ta<color\=#ff0000ff>ne</color>mura"
 
@@ -186,9 +190,9 @@ r:"^黑<color\=#ff0000ff>谷</color> 清$"="Ki<color\=#ff0000ff>yo</color>shi Ku
 
 r:"^椎<color\=#ff0000ff>名</color>{{A}}$"="{{A}} Sh<color\=#ff0000ff>ii</color>na"
 
-r:"^坂<color\=#ff0000ff>井</color>{{A}}$"="{{A}} Sa<color\=#ff0000ff>ka</color>i"
+r:"^坂<color\=#ff0000ff>井</color>{{A}}$"="Ayaka <color\=#ff0000ff>Sa</color>kai"
 
-r:"^佐<color\=#ff0000ff>原</color>{{A}}$"="Mi<color\=#ff0000ff>yu</color> Sahara"
+r:"^佐<color\=#ff0000ff>原</color> {{A}}$"="Mi<color\=#ff0000ff>yu</color> Sahara"
 
 r:"^北<color\=#ff0000ff>里</color> {{A}}$"="{{A}} Ki<color\=#ff0000ff>ta</color>zato"
 
@@ -204,6 +208,8 @@ r:"^佐<color\=#ff0000ff>藤</color> 裕太$"="Yu<color\=#ff0000ff>ta</color> Sa
 r:"^西<color\=#ff0000ff>森</color> 陽菜$"="Ha<color\=#ff0000ff>ru</color>na Nishimori"
 
 r:"^清<color\=#ff0000ff>水</color> 陸人$"="Ri<color\=#ff0000ff>ku</color>to Shimizu"
+
+r:"^小<color\=#ff0000ff>松</color> 奈美惠$"="Na<color\=#ff0000ff>mie</color> Komatsu"
 
 r:"^<color\=#ff0000ff>茶</color>太$"="Cha<color\=#ff0000ff>t</color>ai"
 
@@ -314,6 +320,7 @@ r:"^『體力』\n探索異世界所需的基本能量，隨時間勻速恢復�
 能量飲料=Energy Drink
 用於提升能量的補給飲料，使用後立即恢復5行動力。=Restores 5 Energy Points immediately.
 能夠迅速補充人體水分和電解質的運動能量飲料，對迅速恢復身體機能有強力效果。=A sports energy drink that quickly replenishes the body with water and electrolytes for a powerful recovery effect.
+您的行動值不足。=Not enough Energy Points.
 慾望之木=Wood of Desire
 極其罕見的神奇木料，可用於提升技能等級至Lv.9·Lv.10。=<size\=28>An extremely rare magical timber, can be used to level up skills to Lv.9-Lv.10.</size>
 空白命運=Blank Fate
@@ -346,6 +353,7 @@ sr:"^(.*?)遺留在異世界的殘識碎片，消耗(\d+)個可以合成角色�
 City UI
 ----------
 
+臥室=Bedroom
 衣櫃=Wardrobe
 <color\=#ff0000ff>衣</color>櫃=Wa<color\=#ff0000ff>rd</color>robe
 工作臺=Workbench
@@ -360,9 +368,11 @@ City UI
 自宅  客廳=Home Living Room
 r:"^前<color\=#ff0000ff>往</color>臥室$"="Go <color\=#ff0000ff>to</color> Bedroom"
 r:"^前<color\=#ff0000ff>往</color>客廳$"="Go <color\=#ff0000ff>to</color> Living Room"
-打<color\=#ff0000ff>掃</color>衛生=Cl<color\=#ff0000ff>ea</color>ning
+r:"^打<color\=#ff0000ff>掃</color>衛生$"="Cl<color\=#ff0000ff>ea</color>ning"
+r:"^打<color\=#ff0000ff>掃</color>環境$"="Cl<color\=#ff0000ff>ea</color>ning"
+回<color\=#ff0000ff>到</color>家中=H<color\=#ff0000ff>o</color>me
 
-澀谷  中央大街=Shibuya Central Street
+{{A}}  中央大街=Shibuya Central Street
 四軒茶屋  小巷=Yongen-Jaya Alleyway
 社團佈告欄=Club Bulletin Board
 輕音部=Music Club
@@ -375,9 +385,9 @@ r:"^前<color\=#ff0000ff>往</color>客廳$"="Go <color\=#ff0000ff>to</color> Li
 超市=Supermarket
 <color\=#ff0000ff>超</color>市=Su<color\=#ff0000ff>pe</color>rmarket
 雜司谷  西參道=Zōshigaya Alleyway
-澀谷  地下商場=<size\=35>Shibuya Underground Mall</size>
+{{A}}  地下商場=<size\=35>Shibuya Underground Mall</size>
 新宿  娛樂街=<size\=30>Shinjuku Entertainment District</size>
-{{A}}機·澀谷=Gachapon - Shibuya
+{{B}}機·{{A}}=Gachapon - {{A}}
 {{A}}機·雜司谷=Gachapon - Zōshigaya
 雜司谷  表參道=<size\=32>Zōshigaya Omotesan Street</size>
 {{A}}機·新宿=Gachapon - Shinjuku
@@ -393,6 +403,8 @@ r:"^渡<color\=#ff0000ff>來</color>軒$"="To<color\=#ff0000ff>rai</color>ken"
 二樓走廊=2F Corridor
 三樓走廊=3F Corridor
 天臺=Rooftop
+
+r:"^去<color\=#ff0000ff>對</color>面$"="C<color\=#ff0000ff>ro</color>ss"
 
 生存遊戲專賣店=Untouchable
 r:"^生<color\=#ff0000ff>存</color>遊戲專賣店$"="Un<color\=#ff0000ff>to</color>uchable"
@@ -412,18 +424,21 @@ r:"^武<color\=#ff0000ff>見</color> 妙$"="T<color\=#ff0000ff>ae</color> Takemi
 我想買東西=<size\=28>I want to buy something</size>
 r:"^前<color\=#ff0000ff>往</color>四軒茶屋$"="Go <color\=#ff0000ff>to</color> Yongen-Jaya"
 
-可<color\=#ff0000ff>麗</color>餅店=Cr<color\=#ff0000ff>ep</color>e Shop
+r:"^可<color\=#ff0000ff>麗</color>餅店$"="Cr<color\=#ff0000ff>ep</color>e Shop"
 r:"^藥<color\=#ff0000ff>妝</color>店$"="Dr<color\=#ff0000ff>ug</color> Store"
-便<color\=#ff0000ff>利</color>商店=Co<color\=#ff0000ff>nv</color>enience Store
-<color\=#ff0000ff>花</color>店=Fl<color\=#ff0000ff>ow</color>er Shop
+r:"^便<color\=#ff0000ff>利</color>商店$"="Co<color\=#ff0000ff>nv</color>enience Store"
+r:"^牛<color\=#ff0000ff>丼</color>店$"="Be<color\=#ff0000ff>ef</color> Bowl Shop"
+r:"^<color\=#ff0000ff>花</color>店$"="Fl<color\=#ff0000ff>ow</color>er Shop"
 
-<color\=#ff0000ff>書</color>店=Bo<color\=#ff0000ff>ok</color>store
-健<color\=#ff0000ff>身</color>房=G<color\=#ff0000ff>y</color>m
+r:"^<color\=#ff0000ff>書</color>店$"=Bo<color\=#ff0000ff>ok</color>store"
+健<color\=#ff0000ff>身</color>房$"=G<color\=#ff0000ff>y</color>m
 在健身房鍛煉=Work out in the gym
 r:"^美<color\=#ff0000ff>妝</color>店$"="Cos<color\=#ff0000ff>me</color>tic Shop"
 
-<color\=#ff0000ff>澡</color>堂=Ba<color\=#ff0000ff>th</color>house
+r:"^<color\=#ff0000ff>澡</color>堂$"="Ba<color\=#ff0000ff>th</color>house"
 在澡堂泡澡=<size\=28>Bathe in the bathhouse</size>
+
+r:"^珠<color\=#ff0000ff>寶</color>店$"="Je<color\=#ff0000ff>we</color>lry Store"
 
 吉祥寺=Kichijoji
 r:"^心<color\=#ff0000ff>明</color>寺$"="T<color\=#ff0000ff>em</color>ple"
@@ -455,7 +470,8 @@ r:"^(\d+)天後重置$"="Reset after $1 day(s)"
 下北澤車站=<size\=17>Shimokitazawa Station</size>
 
 站前廣場=Station Square
-澀谷商業街=Central Street
+{{A}}商業街=Central Street
+十字路口=<size\=20>Scramble Crossing</size>
 中央大街=Central Street
 地下商場=<size\=22>Underground Mall</size>
 聯絡橋=Accessway
@@ -532,15 +548,14 @@ r:"^持有：(\d+)$"="Have: $1"
 ///////////////////////
 /// b. Profile Menu ///
 ///////////////////////
--- SoS is Sea of Souls (Velvet Challenge Battle 02)
-
 違規檢舉=Report
-更換名片=Change Background
-更換相框=Change Avatar Frame
-更換頭像=<size\=30>Change Avatar</size>
+修改名稱=Name
+修改名字=Change
+修改簽名=Signature
 複製ID=Copy ID
-修改簽名=Change Bio
-修改名稱=Change Name
+更換名片=<size\=34>Background</size>
+更換相框=Avatar Frame
+更換頭像=Avatar
 遮罩此人=Block
 r:"^每日最多可獲取<color\=#FF0000>10</color>點<link\="s\|1002"><u>助戰積分</u></link>。$"="Maximum <color\=#FF0000>10</color> <link\="s|1002"><u>Assist Points</u></link> per day."
 助戰積分=Assist Points
@@ -958,16 +973,154 @@ r:"(\d+)\/(\d+)頁"=Page $1 / $2
 ----------
 Gachapon
 ----------
+r:"^扭<color\=#ff0000ff>蛋</color>機$"="Ga<color\=#ff0000ff>ch</color>apon Machine"
 點擊{{A}}機抽取對應系列的{{A}}=Specific machine gives specific set
 閱讀《智慧之泉·{{A}}之謎》書本後扭到隱藏和限定款{{A}}機率增加!\n獎盃中可以獲取該書本。=<size\=25>After reading the book\n[Fountain of Wisdom•{{A}}], \nincrease the rate of rare {{A}}!</size>
 圖鑑詳情=Details
 r:"^抽(\d+)次$"="$1 Pull"
 點擊任意位置打開{{A}}=Click anywhere to open
+滑動螢幕可旋轉查看{{A}}模型。=Drag to view {{A}} model.
 歷史扭到：=Collected:
+次=Time(s)
 sr:"^(.*) {{A}}機獲取啟動圖鑑。$"="Collected on $1."
 {{A}}記錄=Records
 {{A}}類型=Set
 扭到時間=Time of Pull
+獎勵預覽=Preview
+收集進度達到100%後可領獎=Claim when reaching 100%
+最多保留100條記錄=Record up to 100 pulls
+r:"^(.*) {{A}}機獲取啟動圖鑑。$"="Collected on $1 from {{A}} Machine."
+r:"^(.*) 與好友(.*)交換啟動圖鑑。$"="<size\=23>Collected on $1 by exchanging with your friend $2.</size>"
+高級{{A}}盲盒=Rare {{A}} Blind Box
+豪華{{A}}回收獎勵，提交重複{{A}}即可獲得。\n開啟後可隨機獲得各類都市商品，用於贈送協同者禮物。={{A}} recycling reward, available after trading repeat {{A}}. \nCan get all kinds of Confidant gifts randomly.
+普通{{A}}盲盒=Common {{A}} Blind Box
+{{A}}回收獎勵，提交重複{{A}}即可獲得。\n開啟後可隨機獲得各類蔬菜種子或烹飪食材。={{A}} recycling reward, available after trading repeat {{A}}. \nCan get all kinds of vegetable seeds or cooking ingredients randomly.
+回收篩選=Filter
+普通=<size\=17>Common</size>
+您自己=You
+今日剩餘交換次數：= Daily Exchange:
+剩餘心願發佈次數：=Exchange Wishlist: <size\=1>.</size>
+未擁有=Not Owned
+r:"^可交換：(\d+)$"="Can Exchange: $1"
+r:"^(\d+)分鐘後可取消$"="Can cancel after $1m"
+是否取消當前心願（取消後提供物品會返還，且不會扣取發佈次數）？=<size\=28>Do you want to cancel the current wish\n(Return your item and wish amount)?</size>
+當前更改未保存，是否保存？=The current changes are not saved. \nDo you want to save?
+已擺放。=Displayed.
+已收納。=Stored.
+舞臺展示盒=Stage Display
+階梯展示盒=Ladder Display
+展示盒背景=Background
+默認=Default
+溫泉湯=Hot Spring
+奇趣馬戲團=Fun Circus
+機庫維修站=Repair Station
+鬼氣來襲=Coming of Demons
+派對之星=Party Star
+戰隊基地會社=Worker Base
+冰原生活=Arctic Life
+美味卷卷=Delicious Rolls
+冬季森林=Winter Forest
+四驅戰車=Four-Wheel Drive
+
+{{A}}中心大街{{B}}機=Shibuya {{B}} Machine
+新宿娛樂街{{A}}機=Shinjuku {{A}} Machine
+吉祥寺{{A}}機=Kichijoji {{A}} Machine
+雜司谷表參道{{A}}機=Zōshigaya {{A}} Machine
+{{A}}地下商場{{B}}機=<size\=16>Shibuya Underground {{B}} Machine</size>
+
+{{A}}的一天=<size\=21>A Day for {{A}}</size>
+r:"^{{A}}的一天\((\d+)/(\d+)\)$"="<size\=17>A Day for {{A}} ($1/$2)</size>"
+導遊{{A}}=Guide {{A}}
+達人{{A}}=Expert {{A}}
+摔摔{{A}}=Falling {{A}}
+茶道{{A}}=Tea Ceremony {{A}}
+漢堡{{A}}=Hamburger {{A}}
+氣球{{A}}=Balloon {{A}}
+
+{{A}}的變裝派對=<size\=21>{{A}}'s Party</size>
+r:"^{{A}}的變裝派對\((\d+)/(\d+)\)$"="<size\=17>{{A}}'s Party ($1/$2)</size>"
+蟹蟹豚豚=Crab Capybara-kun
+水母豚豚=Jellyfish Capybara-kun
+鳳梨豚豚=Pineapple Capybara-kun
+藍白豚豚=Blue and White Capybara-kun
+炸蝦豚豚=Fried Shrimp Capybara-kun
+八爪豚豚=Octopus Capybara-kun
+雪糕豚豚=Ice Cream Capybara-kun
+國王豚豚=King Capybara-kun
+
+壽司卷卷的冰原生活=<size\=21>Roll Roll's Arctic Life</size>
+r:"^壽司卷卷的冰原生活\((\d+)/(\d+)\)$"="<size\=17>Roll Roll's Arctic Life ($1/$2)</size>"
+魚子卷卷=Roe Roll Roll
+鮪魚卷卷=Tuna Roll Roll
+甜蝦卷卷=Sweet Shrimp Roll Roll
+海膽卷卷=Sea Urchin Roll Roll
+北寄貝卷卷=Surf Clam Roll Roll
+酪梨卷卷=Avocado Roll Roll
+蟹柳卷卷=Crab Stick Roll Roll
+鮭魚小屋=Salmon Igloo
+
+過冬的貓頭鷹=<size\=21>Overwintering Owl</size>
+r:"^過冬的貓頭鷹\((\d+)/(\d+)\)$"="<size\=20>Overwintering Owl ($1/$2)</size>"
+倉鴞=Barn Owl
+烏林鴞=Great Grey Owl
+縱腹紋小鴞=Little Owl
+角鴞=Scops Owl
+長耳鴞=Long-Eared Owl
+雪鴞=Snowy Owl
+
+馬戲團遊行日=<size\=21>Circus Parade Day</size>
+r:"^馬戲團遊行日\((\d+)/(\d+)\)$"="<size\=19>Circus Parade Day ($1/$2)</size>"
+儀仗鼓手=Drummer
+高空大炮=Cannon
+雜技小丑=Acrobatic Clown
+馴獸師=Tamer
+喜劇演員=Comedian
+火圈飛人=Ring of Fire
+奇趣帳篷=Fun Tent
+
+打工人戰隊=<size\=21>Worker Warriors</size>
+r:"^打工人戰隊\((\d+)/(\d+)\)$"="<size\=21>Worker Warriors ($1/$2)</size>"
+紅戰士社員=Red Warrior Worker
+藍戰士社員=Blue Warrior Worker
+綠戰士社員=Green Warrior Worker
+黃戰士社員=Yellow Warrior Worker
+桃戰士社員=Peach Warrior Worker
+灰戰士課長=Gray Warrior Chief
+
+百鬼都市行=<size\=21>Hyakki Yagyō</size>
+r:"^百鬼都市行\((\d+)/(\d+)\)$"="<size\=23>Hyakki Yagyō ($1/$2)</size>"
+化狸=Bake-Danuki
+傘妖=Kasa-Obake
+獨眼小僧=Hitotsume-Kozō
+海坊主=Umibōzu
+稻荷狐=Inari
+狐狸新娘=Kitsune No Yomeiri
+座敷童子=Zashiki-Warashi
+
+新世代四驅戰車=<size\=21>New Generation 4WD</size>
+r:"^新世代四驅戰車\((\d+)/(\d+)\)$"="<size\=18>New Generation 4WD ($1/$2)</size>"
+深紅獵豹=Crimson Cheetah
+音速衝鋒=Sonic Speed
+裝甲勇士=Hard Shell Hero
+原始巨獸=Ancient Animal
+擎天司令=Optimus Officer
+
+{{A}}一家=<size\=20>{{A}}'s Family</size>
+r:"^{{A}}一家\((\d+)/(\d+)\)$"="<size\=17>{{A}}'s Family ($1/$2)</size>"
+{{A}}和橘子={{A}} and Tangerine
+{{A}}和榴槤={{A}} and Durian
+{{A}}和鴨鴨={{A}} and Duck
+豚君和貓貓=Capybara-kun and Cat
+{{A}}和柚子={{A}} and Yuzu
+
+新世代SD萌獸機甲=<size\=18>New Generation SD Mecha</size>
+r:"^新世代SD萌獸機甲\((\d+)/(\d+)\)$"="<size\=15>New Generation SD Mecha ($1/$2)</size>"
+幻影型 G-KILLER Ⅲ=Phantom G-KILLER Ⅲ
+機動型 M-JUMPER Ⅳ=Mobile M-JUMPER IV
+飛躍型 B-WING Ⅻ=Flying B-WING Ⅻ
+輕量型 C-ROVER Ⅹ=Lightweight C-ROVER Ⅹ
+防禦型 D-WARRIOR Ⅴ=Defense D-WARRIOR V
+實驗型 K-TYRANNOSAURUS Ⅰ=Experimental K-TYRANNOSAURUS Ⅰ
 
 ----------
 Confidants (SL) and City Activities
@@ -980,12 +1133,21 @@ Confidants (SL) and City Activities
 「高額獎勵」日程將消耗1點行動力，並獲得1倍獎勵。=The [Bonus Activities] will consume 1 Energy and give 1x rewards.
 「高額獎勵」日程將消耗3點行動力，並獲得3倍獎勵。=The [Bonus Activities] will consume 3 Energy and give 3x rewards.
 持有=Own
-
 消耗=Spend
 確定=Confirm
-稍後再說=I'm in a hurry
-沒問題=No problem
 拒絕=Decline
+
+r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n可以去「{{A}}·百萬甜品店」打工了。$"="<size\=24>Can now work at the Shibuya Crepe Shop after being confidants with [<color\=#FFC000>Tomoko Noge</color>].</size>"
+r:"^好感度提升至<color\=#FFC000>rank5</color>後，打工時，可以使人格指數獲得額外的成長。$"="<size\=24>Gain more Social Stats when working after reaching <color\=#FFC000>rank 5</color>.</size>"
+r:"^好感度提升至<color\=#FFC000>rank9</color>後，\n可以去「{{A}}·藥妝店」打工了。$"="<size\=24>Can now work at the Shibuya Drug Store after reaching <color\=#FFC000>rank 9</color>.</size>"
+r:"^好感度提升至<color\=#FFC000>rank13</color>後，打工時，可以使人格指數獲得更多的額外成長。$"="<size\=24>Gain even more Social Stats when working after reaching <color\=#FFC000>rank 13</color>.</size>"
+r:"^好感度提升至<color\=#FFC000>rank17</color>後，可以去「新宿·日乃國屋書店」打工了。$"="<size\=24>Can now work at the Shinjuku Bookstore after reaching <color\=#FFC000>rank 17</color>.</size>"
+
+r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n獲得書籍『高效放鬆法』。\n·閱讀後增加泡澡的獎勵$"="<size\=24>Get the book [Efficient Relaxation] which can increase the rewards from Bathe after being confidants with [<color\=#FFC000>Kiyoshi Kurotani</color>].</size>"
+r:"^好感度提升至<color\=#FFC000>rank3</color>後，\n獲得書籍『關於急救的一切』。\n·獲得「{{A}}·藥妝店」打工增益$"="<size\=24>Get the book [All About First Aid] which can increase the rewards from [Shibuya Drug Store] after reaching <color\=#FFC000>rank 3</color>.</size>"
+r:"^好感度提升至<color\=#FFC000>rank11</color>後，\n獲得書籍『肌肉，GO！』。\n·閱讀後增加健身的獎勵$"="<size\=24>Get the book [Muscle, GO!] which can increase the rewards from Gym after reaching <color\=#FFC000>rank 11</color>.</size>"
+r:"^好感度提升至<color\=#FFC000>rank15</color>後，\n獲得書籍『圖書管理員秘技！』。\n·「新宿·日乃國屋書店」打工增益$"="<size\=24>Get the book [Librarian's Secret Skill!] which can increase the rewards from [Shinjuku Bookstore] after reaching <color\=#FFC000>rank 15</color>.</size>"
+r:"^好感度提升至<color\=#FFC000>rank20</color>後，\n獲得書籍『電影與電影評論家』。\n·閱讀後增加看電影的獎勵$"="<size\=24>Get the book [Film and Film Critics] which can increase the rewards from Movies after reaching <color\=#FFC000>rank 20</color>.</size>"
 
 解鎖新能力=Unlock Skill
 人格指數=Social Stats
@@ -1002,6 +1164,15 @@ sr:"^<color\=#FFC000>(.*)</color>、<color\=#FFC000>(.*)</color>的協同者等�
 用於提升與協同者的親密度。=<size\=25>Used for granting Confidant Points.</size>
 
 r:"^作為禮物贈與協同者，可提升(\d+)點親密度，首次贈送額外增加(\d+)點親密度，『喜愛之物』額外增加(\d+)點親密度。$"="<size\=25>\nGrants $1 Confidant Points. \nFirst time bonus grants $2 Confidant Pts. \n[Favourite Items] grants $3 Confidant Pts.</size>"
+用於提升與協同者的好感度。=<size\=25>Used for granting Confidant Points.</size>
+r:"^「{{A}}」可能會喜歡這件禮物。\n基礎好感度\+(\d+)，偏好禮物額外\+(\d+)，偏好禮物首次贈送額外\+(\d+)。$"="[{{A}}] might like this gift. \nConfidant Points +$1 \nFavourite Items +$2 \nFavourite Items First Time Bonus +$3"
+r:"^「{{A}}、{{B}}」可能會喜歡這件禮物。\n基礎好感度\+(\d+)，偏好禮物額外\+(\d+)，偏好禮物首次贈送額外\+(\d+)。$"="[{{A}}, {{B}}] might like this gift. \nConfidant Points +$1 \nFavourite Items +$2 \nFavourite Items First Time Bonus +$3"
+r:"^「{{B}}、{{A}}」可能會喜歡這件禮物。\n基礎好感度\+(\d+)，偏好禮物額外\+(\d+)，偏好禮物首次贈送額外\+(\d+)。$"="[{{B}}, {{A}}] might like this gift. \nConfidant Points +$1 \nFavourite Items +$2 \nFavourite Items First Time Bonus +$3"
+r:"^「{{A}}」可能會喜歡這件禮物。\n基礎好感度\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物額外\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物首次贈送額外\+(\d+)。$"="[{{A}}] might like this gift. \nConfidant Points +$1 (<size\=40><sprite\=1></size>+$2)\nFavourite Items +$3 (<size\=40><sprite\=1></size>+$4)\nFavourite Items First Time Bonus +$5"
+r:"^「{{A}}、{{B}}」可能會喜歡這件禮物。\n基礎好感度\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物額外\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物首次贈送額外\+(\d+)。$"="[{{A}}, {{B}}] might like this gift. \nConfidant Points +$1 (<size\=40><sprite\=1></size>+$2)\nFavourite Items +$3 (<size\=40><sprite\=1></size>+$4)\nFavourite Items First Time Bonus +$5"
+r:"^「{{B}}、{{A}}」可能會喜歡這件禮物。\n基礎好感度\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物額外\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物首次贈送額外\+(\d+)。$"="[{{B}}, {{A}}] might like this gift. \nConfidant Points +$1 (<size\=40><sprite\=1></size>+$2)\nFavourite Items +$3 (<size\=40><sprite\=1></size>+$4)\nFavourite Items First Time Bonus +$5"
+r:"^這件禮物受所有協同者喜歡。\n基礎好感度\+(\d+)，偏好禮物額外\+(\d+)，偏好禮物首次贈送額外\+(\d+)。$"="All Confidants like this gift. \nConfidant Points +$1 \nFavourite Items +$2 \nFavourite Items First Time Bonus +$3"
+r:"^這件禮物受所有協同者喜歡。\n基礎好感度\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物額外\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物首次贈送額外\+(\d+)。$"="All Confidants like this gift. \nConfidant Points +$1 (<size\=40><sprite\=1></size>+$2)\nFavourite Items +$3 (<size\=40><sprite\=1></size>+$4)\nFavourite Items First Time Bonus +$5"
 
 r:"^這個的話……\n說不定{{A}}會喜歡……$"="Maybe {{A}} will like that..."
 r:"^手裡剛好有{{A}}可能喜歡的東西，\n要送出去嗎？$"="I've got something {{A}} might like.\nShould I give it to them?"
@@ -1014,20 +1185,20 @@ r:"^說起來，那個東西說不定{{A}}會喜歡……$"="Speaking of, maybe 
 要送給她嗎？=Want to give her a gift?
 
 
-r:"^基礎好感度\+(\d+)<color\=#008CE5><color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n偏好禮物額外\+(\d+)<color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color>\n偏好禮物首次贈送額外\+(\d+)$"="Confidant Points +$1<color\=#008CE5><color\=#008CE5>（<size\=40><sprite\=1></size>+$2）</color></color>\nFavourite Items +$3<color\=#008CE5>（<size\=40><sprite\=1></size>+$4）</color>\nFavourite Items \nFirst Time Bonus +$5"
+r:"^基礎好感度\+(\d+)<color\=#008CE5><color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n偏好禮物額外\+(\d+)<color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color>\n偏好禮物首次贈送額外\+(\d+)$"="Confidant Points +$1<color\=#008CE5><color\=#008CE5>(<size\=40><sprite\=1></size>+$2)</color></color>\nFavourite Items +$3<color\=#008CE5>(<size\=40><sprite\=1></size>+$4)</color>\nFavourite Items \nFirst Time Bonus +$5"
 r:"^基礎好感度\+(\d+)\n偏好禮物額外\+(\d+)\n偏好禮物首次贈送額外\+(\d+)$"="Confidant Points +$1\nFavourite Items +$2\nFavourite Items \nFirst Time Bonus +$3"
 
-r:"^基礎好感度\+(\d+)<color\=#008CE5><color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n偏好禮物額外\+(\d+)<color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color>\n偏好禮物首次贈送額外\+(\d+)$"="Confidant Points +$1<color\=#008CE5><color\=#008CE5>（<size\=40><sprite\=1></size>+$2）</color></color>\nFavourite Items +$3<color\=#008CE5>（<size\=40><sprite\=1></size>+$4）</color>\nFavourite Items \nFirst Time Bonus +$5"
+r:"^基礎好感度\+(\d+)<color\=#008CE5><color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n偏好禮物額外\+(\d+)<color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color>\n偏好禮物首次贈送額外\+(\d+)$"="Confidant Points +$1<color\=#008CE5><color\=#008CE5>(<size\=40><sprite\=1></size>+$2)</color></color>\nFavourite Items +$3<color\=#008CE5>(<size\=40><sprite\=1></size>+$4)</color>\nFavourite Items \nFirst Time Bonus +$5"
 
-r:"^基礎好感度\+(\d+)<color\=#008CE5><color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n偏好禮物額外\+(\d+)<color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color>\n<color\=#787878>偏好禮物首次贈送額外\+(\d+)</color>$"="Confidant Points +$1<color\=#008CE5><color\=#008CE5>（<size\=40><sprite\=1></size>+$2）</color></color>\nFavourite Items +$3<color\=#008CE5>（<size\=40><sprite\=1></size>+$4）</color>\n<color\=#787878>Favourite Items \nFirst Time Bonus +$5</color>"
+r:"^基礎好感度\+(\d+)<color\=#008CE5><color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n偏好禮物額外\+(\d+)<color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color>\n<color\=#787878>偏好禮物首次贈送額外\+(\d+)</color>$"="Confidant Points +$1<color\=#008CE5><color\=#008CE5>(<size\=40><sprite\=1></size>+$2)</color></color>\nFavourite Items +$3<color\=#008CE5>(<size\=40><sprite\=1></size>+$4)</color>\n<color\=#787878>Favourite Items \nFirst Time Bonus +$5</color>"
 
-r:"^基礎好感度\+(\d+)<color\=#008CE5><color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n<color\=#787878>偏好禮物額外\+(\d+)<color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n<color\=#787878>偏好禮物首次贈送額外\+(\d+)</color>$"="Confidant Points +$1<color\=#008CE5><color\=#008CE5>（<size\=40><sprite\=1></size>+$2）</color></color>\n<color\=#787878>Favourite Items +$3<color\=#008CE5>（<size\=40><sprite\=1></size>+$4）</color></color>\n<color\=#787878>Favourite Items \nFirst Time Bonus +$5</color>"
+r:"^基礎好感度\+(\d+)<color\=#008CE5><color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n<color\=#787878>偏好禮物額外\+(\d+)<color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n<color\=#787878>偏好禮物首次贈送額外\+(\d+)</color>$"="Confidant Points +$1<color\=#008CE5><color\=#008CE5>(<size\=40><sprite\=1></size>+$2)</color></color>\n<color\=#787878>Favourite Items +$3<color\=#008CE5>(<size\=40><sprite\=1></size>+$4)</color></color>\n<color\=#787878>Favourite Items \nFirst Time Bonus +$5</color>"
 
 r:"^基礎好感度\+(\d+)\n<color\=#787878>偏好禮物額外\+(\d+)</color>\n<color\=#787878>偏好禮物首次贈送額外\+(\d+)</color>$"="Confidant Points +$1\n<color\=#787878>Favourite Items +$2\n<color\=#787878>Favourite Items \nFirst Time Bonus +$3</color>"
 
 r:"^基礎好感度\+(\d+)\n偏好禮物額外\+(\d+)\n<color\=#787878>偏好禮物首次贈送額外\+(\d+)</color>$"="Confidant Points +$1\nFavourite Items +$2\n<color\=#787878>Favourite Items \nFirst Time Bonus +$3</color>"
 
-r:"^本次贈送會增加<color\=#FFDE00>(\d+)<color\=#008CE5>（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>好感度$"="Gain <color\=#FFDE00>$1<color\=#008CE5>（<size\=40><sprite\=1></size>+$2）</color></color>Confidant Pts"
+r:"^本次贈送會增加<color\=#FFDE00>(\d+)<color\=#008CE5>（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>好感度$"="Gain <color\=#FFDE00>$1<color\=#008CE5>(<size\=40><sprite\=1></size>+$2)</color></color>Confidant Pts"
 r:"^本次贈送會增加<color\=#FFDE00>(\d+)</color>好感度$"="Gain <color\=#FFDE00>$1</color> Confidant Pts"
 
 確定這次約會不送禮物嗎？=Are you sure you do not want to give them a gift?
@@ -1041,9 +1212,10 @@ r:"^感覺和{{A}}的關係加深了……$"="I feel like my relationship with {
 r:"^感覺和{{A}}的關係更加深入了……$"="I feel like my relationship with {{A}} has deepened..."
 
 和{{A}}一起度過放學後的時光吧=Let's spend some time with {{A}} after school
-r:"^你怎麼想，要陪{{A}}嗎？$"="What do you think? \nWant to accompany {{A}}?"
-r:"^你怎麼想，要陪{{A}}共度時光嗎？$"="What do you think? \nWant to spend time with {{A}}?"
-r:"^你怎麼想，要花時間陪一下{{A}}嗎？$"="What do you think? \nWant to spend some time with {{A}}?"
+今天要陪{{A}}嗎……=Want to accompany {{A}} today...?
+你怎麼想，要陪{{A}}嗎？=What do you think? \nWant to accompany {{A}}?
+你怎麼想，要陪{{A}}共度時光嗎？=What do you think? \nWant to spend time with {{A}}?
+你怎麼想，要花時間陪一下{{A}}嗎？=What do you think? \nWant to spend some time with {{A}}?
 
 sr:"^<color\=#FFFF00>(.*)</color>不足$"="<size\=24>Not enough <color\=#FFFF00>$1</color></size>"
 sr:"人格指數「(.*)」達到(\d+)級解鎖$"="Unlock when $1 reached rank $2"
@@ -1051,32 +1223,46 @@ sr:"人格指數「(.*)」達到(\d+)級解鎖$"="Unlock when $1 reached rank $2
 去澡堂泡澡=<size\=24>Bathe in\nan Onsen</size>
 去健身房鍛煉=<size\=24>Work out \nat the gym</size>
 去四軒茶屋看電影=<size\=24>Watch a movie\nin Yongen-Jaya</size>
-去澀谷看電影=<size\=24>Watch a movie\nin Shibuya</size>
+去看電影=Watch a movie
+去{{A}}看電影=<size\=24>Watch a movie\nin Shibuya</size>
 去新宿看電影=<size\=24>Watch a movie\nin Shinjuku</size>
 在家裡讀書=<size\=24>Read a book\nat home</size>
 在圖書館讀書=<size\=24>Read a book\nin the Library</size>
 在圖書室學習=<size\=24>Study in \nthe Library</size>
 在家庭餐廳學習=<size\=24>Study at \na family restaurant</size>
-打掃家裡的衛生=<size\=24>Clean up\nmy house</siz
+打掃家裡的衛生=<size\=24>Clean up\nmy home</size>
+打掃一下房間吧……=Let's clean my home...
 打掃衛生=Cleaning
-要給家裡來一次掃除嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to clean your house? \n(<color\=#ff0000>Spend 1 Energy Point</color>)
+打掃環境=Cleaning
+要給家裡來一次掃除嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to clean your home?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
+要給家裡來一次掃除嗎？=Do you want to clean your home?
 在家裡學習=<size\=24>Study at home</size>
-打掃家裡的衛生=<size\=24>Clean up\nmy house</size>
 在盧布朗度過=<size\=24>Spend time\nin Leblanc</size>
 去盧布朗放鬆一會兒吧……=Let's relax in Leblanc...
 足球部練習=<size\=24>Train at the\nSoccer Club</size>
+去足球部參加訓練活動吧……=Let's train at the Soccer Club...
+足球部社團活動=Soccer Club activities
+進行足球訓練=Start training
+要參加足球部的社團活動嗎(<color\=#ff0000>消耗1點行動力</color>)？=Want to participate in club activities?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
 輕音部練習=<size\=24>Practice at the\nMusic Club</size>
+去輕音部練習一下吧……=Let's practice at the Music Club...
+輕音部社團活動=Music Club activities
+開始練習演奏=Start practicing
+要參加輕音部的社團活動嗎(<color\=#ff0000>消耗1點行動力</color>)？=Want to participate in club activities?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
 在家裡玩遊戲=<size\=24>Play video games\nat home</size></size>
 去遊戲中心玩遊戲=<size\=24>Play video games\nin the Arcade</size>
 拉麵力士對決=<size\=24>Do the \nRamen Challenge</size>
-嘗試新口味咖啡=<size\=24>Try new \ncoffee flavors</size>
+挑戰=Challenge
+嘗試新口味咖啡=<size\=28>Try new coffee flavors</size>
 吉祥寺的露天咖啡廳似乎又推出了新口味的咖啡……=There's a new flavor of coffee in the Outdoor Cafe
-要去吉祥寺的露天咖啡廳挑戰一下新口味的咖啡嗎？=Want to challenge yourself to a new flavor of coffee in the Outdoor Cafe?
+要去吉祥寺的露天咖啡廳挑戰一下新口味的咖啡嗎？=<size\=27>Want to challenge yourself to a new flavor of coffee in the Outdoor Cafe?</size>
 人氣很高的咖啡廳……=This is a popular Cafe...
 r:"^要在這裡品嘗新口味的咖啡嗎\(<color\=#ff0000>每次(\d+)現金</color>\)？$"="Want to try a new flavor of coffee here?\n(<color\=#ff0000>Spend $1 Yen</color>)"
 去卡拉OK唱歌=<size\=24>Sing Karaoke \nin Kichijoji</size>
-在寺院中冥想=<size\=24>Meditate \nin a temple</size>
-要在這裡冥想度過嗎？=Do you want to meditate in this temple?
+在寺院中冥想=<size\=28>Meditate in the Temple</size>
+去寺院中冥想，讓心靜一靜吧……=Let's meditate in the Temple \nand calm my mind...
+給人感覺很寧靜的寺廟……=A calming Temple...
+要在這裡冥想度過嗎？=Do you want to meditate in this Temple?
 讓心靜一靜=Calm my mind
 在爵士俱樂部度過=<size\=24>Spent time \nin a Jazz Club</size>
 爵<color\=#ff0000ff>士</color>俱樂部=Ja<color\=#ff0000ff>zz</color> Club
@@ -1084,38 +1270,62 @@ r:"^要在這裡品嘗新口味的咖啡嗎\(<color\=#ff0000>每次(\d+)現金</
 打工=Work
 (First one is in the city menu, second one is on the confirm page)
 去便利商店打工=<size\=24>Work part-time\nat a Convenience Store</size> 
+今天也去{{A}}的便利商店打工吧……=Let's go work at the Shibuya Convenience Store today...
+{{A}}的便利商店今天可以安排打工，加油吧。=I can work at the Convenience Store today, let's keep it up.
+{{A}}的便利商店今天也能安排打工，要去幫忙嗎？=I can work at the Convenience Store today, want to help out?
+{{A}}的便利商店今天可以安排打工，活用接待的經驗吧。=<size\=26>I can work at the Convenience Store today, let's make use of my experience</size> 
 在便利商店打工=<size\=24>Work part-time\nat this Convenience Store</size> 
 要在這家便利商店打工嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to work part-time \nat this Convenience Store?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
+要在這家便利商店打工嗎？=Do you want to work part-time \nat this Convenience Store?
 
 去可麗餅店打工=<size\=24>Work part-time\nat a Crepe Shop</size>
-今天澀谷商業街的人流量很大，可麗餅店似乎有些忙不過來……=<size\=26>Shibuya Central Street is crowded today, \nthe Crepe Shop is busy...</size>
+今天也要去{{A}}的可麗餅店幫忙嗎？=Are you going to help out at \nthe Shibuya Crepe Shop today?
+{{A}}的可麗餅店發出了人手不足的通知……=<size\=26>The Crepe Shop is understaffed today...</size>
+{{A}}的可麗餅店今天似乎人手不足，去看看吧。=The Crepe Shop is understaffed today, let's go take a look.
+今天{{A}}商業街的人流量很大，可麗餅店似乎有些忙不過來……=<size\=26>Shibuya Central Street is crowded today, \nthe Crepe Shop is busy...</size>
 在可麗餅店打工=<size\=24>Work part-time\nat this Crepe Shop</size>
 要在這家可麗餅店打工嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to work part-time \nat this Crepe Shop?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
 要在這家可麗餅店打工嗎？=Do you want to work part-time \nat this Crepe Shop?
 
 花店=Flower Shop
-澀谷的花店似乎需要人去幫忙……=<size\=26>Looks like the Flower Shop needs help...</size>
 在花店打工=<size\=24>Work part-time\nat a Flower Shop</size>
+要繼續去{{A}}的花店幫忙選花嗎……=Want to help making bouquets in the Flower Shop?
+今天要去{{A}}的花店幫忙嗎？=Are you going to help out at \nthe Shibuya Flower Shop today?
+今天也去{{A}}地下商場的花店幫忙吧……=Let's try to help out \nat the Flower Shop today...
+{{A}}的花店似乎需要人去幫忙……=<size\=26>Looks like the Flower Shop needs help...</size>
+{{A}}的花店今天應該需要人手吧……=The Shibuya Flower Shop should needs help today right...
+今天{{A}}花店的客流量似乎很大，有時間去幫忙看看吧……=The Flower Shop is busy today, let's go help if you are free...
 要在這家花店打工嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to work part-time \nat this Flower Shop?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
 要在這家花店打工嗎？=Do you want to work part-time \nat this Flower Shop?
 
 去牛丼店打工=<size\=24>Work part-time\nat a Beef Bowl Shop</size>
+今天{{A}}的牛丼店有打工的排班，繼續努力吧。=I can work at the Beef Bowl Shop today, let's keep it up.
 今天牛丼店的人手也嚴重不足……=<size\=24>The Beef Bowl Shop is understaffed today...</size>
-澀谷的牛丼店今天可以排班，要去幫忙嗎？=<size\=25>I can work at the Beef Bowl Shop today,\nwant to help?</size>
+{{A}}的牛丼店今天可以排班，要去幫忙嗎？=<size\=25>I can work at the Beef Bowl Shop today,\nwant to help out?</size>
+遇到了客人排隊的情況，牛丼店的人手似乎嚴重不足……=The Beef Bowl Shop is seriously understaffed today...
 在牛丼店打工=<size\=24>Work part-time\nat this Beef Bowl Shop</size>
 要在這家牛丼店打工嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to work part-time \nat this Beef Bowl Shop?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
 要在這家牛丼店打工嗎？=Do you want to work part-time \nat this Beef Bowl Shop?
 
 去藥妝店打工=<size\=24>Work part-time\nat a Drug Store</size>
+{{A}}的藥妝店今天似乎可以排班……=<size\=28>I can work at the Drug Store today...</size>
+今天也要去{{A}}的藥妝店幫忙嗎？=<size\=28>I can work at the Drug Store today,\nwant to help out?</size>
+{{A}}的藥妝店今天非常忙碌……=The Drug Store is busy today...
+{{A}}的藥妝店今天也面臨人手不足的情況……=<size\=27>The Drug Store is understaffed today...</size>
 在藥妝店打工=<size\=24>Work part-time\nat this Drug Store</size>
 要在這家藥妝店打工嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to work part-time \nat this Drug Store?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
+要在這家藥妝店打工嗎？=Do you want to work part-time \nat this Drug Store?
 
 去炸物專賣店打工=<size\=24>Work part-time\nat a Fried Food Shop</size>
+吉祥寺的炸物專賣店今天似乎可以排班……=I can work at the Kichijoji \nFried Food Shop today...
 吉祥寺的炸物專賣店今天非常忙碌……=<size\=26>The Fried Food Shop is busy today...</size>
 要在這家炸肉餅店打工嗎？=Do you want to work part-time \nat this Fried Food Shop?
 
 在{{A}}打工=<size\=24>Work part-time\nat {{A}}</size>
+今天也去{{A}}幫忙看看吧。=Let's help out at {{A}} today
 今天也試著去{{A}}幫忙吧……=<size\=26>Let's try to help out at {{A}} today...</size>
+{{A}}今天的客人似乎特別多……=There's a lot of customers at {{A}} today...
+今天{{A}}似乎特別忙……={{A}} seems to be busy today...
 要在{{A}}打工嗎？=Do you want to work part-time \nat {{A}}?
 
 由於掌握了打工『觀察的心得』，因此獲得了額外收益。=<size\=28>Because I have mastered Observation Insights, I have gained more Social Stats.</size> 
@@ -1132,9 +1342,19 @@ r:"^要在這裡品嘗新口味的咖啡嗎\(<color\=#ff0000>每次(\d+)現金</
 r:"^幫助{{A}}$"="<size\=24>Help out\n{{A}}</size>"
 
 陪{{A}}拍照=<size\=24>Take photos\n with {{A}}</size>
+如果對拍攝照片感興趣，就去新宿找攝影師{{A}}吧。=<size\=28>If you're interested in taking photos, then let's go to Shinjuku and find the photographer {{A}}</size>
 要拍照嗎？=Want to take photos?
 聊聊攝影=Talk about photography
 要陪{{A}}拍攝照片嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to take photos with {{A}}? (<color\=#ff0000>Spend 1 Energy Point</color>)
+唉……=Sigh...
+怎麼了？=What's wrong?
+一直嘆氣可不好=<size\=24>It's not good to keep sighing</size>
+消沉？=Depressed?
+確實氣氛微妙=It does feel weird
+我也是這麼想的=I think so too
+想要不一樣的色彩？=Want a different color?
+需要我當模特兒嗎？=<size\=30>Need me to me the model?</size>
+到底還拍不拍了=<size\=30>Are we shooting or not</size>
 
 {{A}}的寶物甄選=<size\=24>{{A}}'s \nTreasure Selection</size>
 {{A}}在城市的角落又藏了什麼樣的寶物呢，快去看看吧。=<size\=28>Let's go and find out what treasures did {{A}} hide in the city again.</size>
@@ -1144,16 +1364,25 @@ r:"^幫助{{A}}$"="<size\=24>Help out\n{{A}}</size>"
 和{{A}}聊聊=Talk to Shichi-kun
 要參與{{A}}的遊戲嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to play the Shichi-kun's game? (<color\=#ff0000>Spend 1 Energy Point</color>)
 
+遇見{{A}}=<size\=24>Run into {{A}}</size>
+遇見了{{A}}，和她聊一下吧。=Run into {{A}}, \nlet's talk to her
+要陪{{A}}聊天嗎(<color\=#ff0000>消耗1點行動力</color>)？=Want to talk to {{A}}?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
+那麼夏天呢？=What about summer?
+那麼秋天呢？=What about autumn?
+那麼冬天呢？=What about winter?
+
 要陪{{A}}一起去嗎？=Want to hang out with {{A}}?
-r:"^要帶{{A}}回家嗎……$"="Want to take {{A}} home?"
+要和{{A}}一起出去玩嗎？=Want to hang out with {{A}}?
+r:"^要帶{{A}}回家嗎……$"="Want to bring {{A}} home?"
 r:"^那就帶{{A}}回家吧……$"="Then let's bring {{A}} home..."
+決定帶{{A}}回自己家……=Decided to bring {{A}} home...
 
 和{{A}}出去玩吧=<size\=24>Hang out with\n{{A}}</size>
 r:"^和{{A}}一起度過$"="<size\=24>Hang out with\n{{A}}</size>"
 r:"^和清一起度過$"="<size\=24>Hang out with\nKiyoshi</size>"
 兩個人的觀影時間=<size\=24>Movie time \nfor two</size>
 在家裡和{{A}}一起看她推薦的電影吧=<size\=26>Let's watch the movie recommended by {{A}} together at home</size>
-在家裡一起看吧=<size\=28>Let's watch it \ntogether at home</size> 
+在家裡一起看吧=<size\=23>Let's watch it together at home</size> 
 會覺得害怕的是{{A}}吧=<size\=22>It's {{A}} who feels scared, right?</size> 
 我就在你身邊，放心吧=<size\=24>I'm right beside you. Don't worry</size> 
 怕的話可以抓住我的手=<size\=26>Grab my hand if you're scared</size> 
@@ -1167,13 +1396,6 @@ r:"^{{A}}似乎有話要說，要陪她嗎？$"="{{A}} seems to have something t
 {{A}}對於現代都市中的很多事物都感到好奇，希望能和你一起體驗={{A}} is curious about many things in a modern city and would like to experience them with you.
 深入了解的方式=<size\=24>Ways to \nunderstand deeper</size>
 為了更好的了解你，{{A}}提出了一個不尋常的建議……=<size\=25>In order to get to understand you better, \n{{A}} has made an unusual suggestion...</size> 
-你今天要陪{{A}}度過嗎？=<size\=28>Do you want to spend time with {{A}} today?</size> 
-今天要和{{A}}一起度過嗎……=<size\=28>Want to spend time with {{A}} today?</size> 
-要和{{A}}一起度過嗎？=<size\=28>Want to spend time with {{A}}?</size> 
-r:"^決定要陪{{A}}了……$"="I've decided to accompany {{A}}..."
-r:"^決定陪{{A}}了……$"="I've decided to accompany {{A}}..."
-決定和{{A}}一起出去了……=<size\=28>Decided to go out with {{A}}...</size> 
-決定和{{A}}一起行動了……=<size\=28>Decided to hang out with {{A}}...</size> 
 
 和{{A}}一起玩吧=<size\=24>Play together\nwith {{A}}</size>
 {{A}}應該會在線上吧，登入遊戲一起玩吧={{A}}should be online, log in \nto the game and play together
@@ -1183,26 +1405,85 @@ r:"^決定陪{{A}}了……$"="I've decided to accompany {{A}}..."
 遠處的街道=Distant streets
 雪原=Snowfields
 
+遊戲時間到=<size\=24>Game Time</size>
+{{A}}想和你一起去遊戲廳……={{A}} wants to go to \nthe arcade with you...
+要和{{A}}去哪裡玩呢？=Where should we hang out?
+要不來我家吧？=<size\=26>Want to come to my place?</size>
+想去{{A}}家做客=<size\=26>Want to come to your home</size>
+都是我自己打掃=<size\=30>I clean up after myself</size>
+我的寵物幫我打掃=<size\=30>My pet cleans for me</size>
+你又在開玩笑了吧？=Are you joking again?
+免費住=For free
+
+不再孤單的家=<size\=24>No Longer a \nLonely Home</size>
+{{A}}想看看你生活的地方……={{A}} wants to see \nwhere you live...
+今天要帶{{A}}回家玩嗎？=Want to bring {{A}} \nhome today?
+
+你今天要陪{{A}}度過嗎？=<size\=28>Do you want to spend time with {{A}} today?</size> 
+今天要和{{A}}一起度過嗎……=<size\=30>Want to spend time with {{A}} today...</size> 
+要和{{A}}一起度過嗎？=<size\=30>Want to spend time with {{A}}?</size> 
+決定陪{{A}}了……=I've decided to accompany {{A}}...
+決定要陪{{A}}了……=I've decided to accompany {{A}}...
+決定去陪{{A}}了…=I've decided to accompany {{A}}...
+決定和{{A}}一起出去了……=<size\=28>Decided to go out with {{A}}...</size> 
+決定和{{A}}一起行動了……=<size\=28>Decided to hang out with {{A}}...</size> 
+
+是的=Yes
+好啊=Okay
+可以啊=Okay
+有時間=I have time
 走吧=Let's go
 一起去=Go together
 一起度過=Spend time together
 我和你一起去=I'll go with you
+那就陪你一起去=I'll go with you
 還是算了=I'd rather not
 要去別的地方……=<size\=24>I have somewhere else to go...</size>
 安靜傾聽=Listen quietly
 打招呼=Say hi
 讓我想想=Let me think
 再見=Goodbye
+稍後再說=I'm in a hurry
 今天很忙……=I'm busy today...
 今天沒空=I'm not available today
+今天不是很方便=Not convenient today
 在酒吧度過=Spend time in the bar
 另選日子吧……=Choose another day...
 時間不太方便……=Not a good time...
+有別的事要做=<size\=30>Have other things to do</size>
 現在不太方便……=<size\=28>Now is not a good time...</size>
+有其他安排=<size\=30>Got other arrangements</size>
 有其他安排了……=<size\=29>Got other arrangements...</size>
+現在有點困難……=Now is a bit tough...
 下次再說=Next time
 你好呀=Hello
 摸摸它=Pet it
+請多指教=Nice to meet you
+請多關照=Nice to meet you
+沒問題=No problem
+沒有問題=No problem
+交給我吧=Leave it to me
+沒有問題=No problem
+辛苦了！=Good work!
+
+{{A}}有著非常熱鬧的<color\=#ff0000>商業街</color>和<color\=#ff0000>電影院</color>啊，\n要前往那裡去看看嗎？=<size\=30>There are crowded <color\=#ff0000>Central Street</color> and <color\=#ff0000>Movie Theater</color> in Shibuya. Want to go there?</size>
+要<color\=#ff0000>回家</color>嗎？\n還是說去附近的<color\=#ff0000>餐廳</color>……=Are we going <color\=#ff0000>Home</color>? \nOr going to nearby <color\=#ff0000>Restaurants</color>...
+下北澤啊……那是在<color\=#ff0000>學校</color>附近吧，要去嗎？=<size\=30>Shimokitazawa... that's near the <color\=#ff0000>School</color>. \nWant to go there?</size>
+四軒茶屋似乎有個<color\=#ff0000>擊球場</color>，要去那裡看看嗎？=There is a <color\=#ff0000>batting cage</color> in Yongen-Jaya. Want to go there?
+新宿那裡似乎有條充滿慾望的<color\=#ff0000>娛樂街</color>啊，\n確定要前去那裡嗎？=<size\=30>There seems to be an <color\=#ff0000>Entertainment Street</color> full of desires in Shinjuku. Want to go there?</size>
+吉祥寺好像有非常著名的<color\=#ff0000>步行街</color>，\n要去隨便逛逛嗎？=<size\=29>There is a famous <color\=#ff0000>Pedestrian Street</color> in Kichijoji. Want to go for a walk?</size>
+
+充滿自然氣息的<color\=#ff0000>公園</color>，\n是散步聊天的好地方啊，要去看看嗎？=This is a <color\=#ff0000>Park</color> full of nature, it's a great place to walk and chat. Want to go there?
+著名的時尚街道<color\=#ff0000>竹之子小路</color>就在原宿，\n要去看看最新的潮流風向嗎？=<size\=29>The famous fashionable <color\=#ff0000>Takenoko Street</color> is in Harajuku. Want to check out the latest trends?</size>
+神保町的<color\=#ff0000>舊書店</color>很出名，確定要去逛逛嗎？=<size\=30>The <color\=#ff0000>Antique Bookstore</color> in Jimbocho is very famous. \nWant to go there?</size>
+神田那裡似乎有聚集了眾多慾望的<color\=#ff0000>教堂</color>啊，\n要去那裡看看嗎？=<size\=30>There seems to be an <color\=#ff0000>Church</color> where desires are gathered in Kanda. Want to go there?</size>
+月島好像有家美味的<color\=#ff0000>文字燒店</color>，\n是滿足口腹之慾的好地方啊，想要去那裡嗎？=<size\=29>There is a <color\=#ff0000>Monjayaki Restaurant</color> in Tsukishima, it's a good place to satisfy your appetite. \nWant to go there?</size>
+淺草的<color\=#ff0000>街道</color>似乎可以看見日本人以外的人類，\n此外那還有聞名遐邇的<color\=#ff0000>晴空塔</color>，要去那裡嗎？=<size\=29>It seems like you can see people other than Japanese in <color\=#ff0000>Nakamise Street</color>. The famous <color\=#ff0000>Skytree</color> is also nearby. Want to go there?</size>
+
+水道橋似乎有座<color\=#ff0000>遊樂園</color>，\n是適合學生約會的地方啊，要去那裡看看嗎？=<size\=30>There is a <color\=#ff0000>Theme Park</color> in Suidobashi, it's a good place for students to go on a date. \nWant to go there?</size>
+池袋有座大廈頂樓有間<color\=#ff0000>天文館</color>，在那裡，\n人類也可以觸摸星空，如何，要去看看嗎？=<size\=27>There is a building in Ikebukuro with a <color\=#ff0000>Planetarium</color>, and people can touch the starry sky there. \nWell, want to go there?</size>
+三浦海岸除了<color\=#ff0000>浴場</color>，似乎也還很適合觀光啊，\n要去體驗一下海邊沐浴嗎？=<size\=29>In addition to <color\=#ff0000>the Beach</color>, Miura Coast is also good for sightseeing. Want to go to the Beach?</size>
+台場有座可以乘坐<color\=#ff0000>摩天輪</color>的<color\=#ff0000>遊樂園</color>，\n天空……算是罕見體驗吧，怎麼樣，要去嗎？=<size\=27>There is an <color\=#ff0000>Amusement Park</color> with a <color\=#ff0000>Ferris wheel</color> in Odaiba. It's a rare experience, want to go there?</size>
 
 讀書進度=<size\=24> Reading\n Progress</size> 
 閱讀消耗：= 
@@ -1212,11 +1493,14 @@ r:"^決定陪{{A}}了……$"="I've decided to accompany {{A}}..."
 去太平堂書店逛一逛，或許能買到有用的書籍=<size\=25>A visit to the Shibuya Bookstore might yield useful books</size>
 聽說有新電影在上映=I hear there's a new movie coming out
 聽說在新宿街頭，有一位神秘的占卜師=<size\=25>I heard there's a mysterious fortune-teller in Shinjuku</size> 
-聽說澀谷有一個瀟灑的吉他少女在演唱=<size\=25>I heard there's a chic girl in Shibuya who plays the guitar</size>
-聽說在澀谷，有一個小女孩在進行募捐=<size\=25>I heard there's a little girl collecting donations in Shibuya</size> 
+聽說{{A}}有一個瀟灑的吉他少女在演唱=<size\=25>I heard there's a chic girl in Shibuya who plays the guitar</size>
+聽說在{{A}}，有一個小女孩在進行募捐=<size\=25>I heard there's a little girl collecting donations in Shibuya</size> 
 似乎掌握了觀察的心得=I have masted Observation Insights
 似乎掌握了服務的心得=I have masted Service Insights
+似乎掌握了在便利商店打工的心得=<size\=28>I have masted working at the Convenience Store</size> 
 似乎掌握了在甜品店打工的心得=I have masted working at the Crepe Shop
+似乎掌握了在花店打工的心得=I have masted working at the Flower Shop
+似乎掌握了在藥妝店打工的心得=I have mastered working at the Drug Store
 似乎掌握了在牛丼店打工的心得=<size\=28>I have mastered working at the Beef Bowl Shop</size> 
 似乎掌握了在{{A}}打工的心得=<size\=28>I have mastered working at {{A}}</size> 
 
@@ -1245,6 +1529,7 @@ SNS還有沒回復的消息，要直接睡覺嗎？=You didn't reply to your SNS
 ----------
 Music Club
 ----------
+社團經驗=Club EXP
 升級解鎖內容=Unlock
 
 r:"^時長 (.*):(.*)$"="Length $1:$2"
@@ -1281,6 +1566,7 @@ Chihaya's Fortune (Tarot)
 ----------
 
 御船千早的占卜=<size\=24>Fortune-telling \nfrom Chihaya Mifune</size>
+聽聞新宿有一位神秘的占卜師，要找她去占卜一下今天的運勢嗎？=<size\=28>I heard that there is a mysterious fortune-teller in Shinjuku.\nWant to get a fortune reading?</size>
 r:"^御<color\=#ff0000ff>船</color> 千早$"="Chi<color\=#ff0000ff>ha</color>ya Mifune"
 歡迎光臨～\n今天要進行占卜嗎？=Welcome～\nWould you like to get a reading today?
 「本日運勢占卜」一次1000元。=Fortune reading will cost 1000 yen.
@@ -1288,6 +1574,7 @@ r:"^御<color\=#ff0000ff>船</color> 千早$"="Chi<color\=#ff0000ff>ha</color>ya
 當前的占卜增益是…=<size\=26>What is the current reading?</size>
 sr:"^運勢占卜：(.*)『(.*)』$"="Reading: The $1 $2"
 當前沒有「本日運勢占卜」的增益效果。=There is no reading active
+當前已存在占卜增益，再次占卜會<color\=#FFC000>失去</color>上次占卜結果，是否繼續？=<size\=29>A reading is currently active.\nYou will <color\=#FFC000>lose</color> the current reading if you get a new reading, are you sure?</size>
 明白了。\n那麼，請坐下來吧。=Ok. Please take a seat.
 『本日運勢占卜』\n提升運勢，獲得各種各樣的增益效果。=Fortune reading will improve your luck, giving you a variety of benefits.
 好的，現在就來占卜你的運勢吧。=Ok, let's read your fortune now.
@@ -1349,8 +1636,8 @@ r:"^在接下來2次透過都市日程進行『健身房』鍛鍊時，額外獲
 倒吊人=Hanged Man
 
 死神=Death
-sr:"^在下次通過『(.*)』、『(.*)』、『(.*)』關卡時，額外獲得大量獎勵。$"="The next time you complete a $1, $2 or $3, gain lots of bonus rewards."
-sr:"^在下次通過『(.*)』、『(.*)』、『(.*)』關卡時，額外獲得大量獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you complete a $1, $2 or $3, gain lots of bonus rewards.\n<color\=#FFC000>（$4 time(s) left）</color>"
+在下次通過『榮級求索』、『輜械求索』、『人格求索』關卡時，額外獲得大量獎勵。=The next time you complete a [Character EXP Farm], [Weapon EXP Farm] or [Persona EXP Farm], gain lots of bonus rewards.
+r:"^在下次通過『榮級求索』、『輜械求索』、『人格求索』關卡時，額外獲得大量獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you complete a [Character EXP Farm], [Weapon EXP Farm] or [Persona EXP Farm], gain lots of bonus rewards.\n<color\=#FFC000>（$1 time(s) left）</color>"
 
 節制=Temperance
 
@@ -1381,22 +1668,22 @@ r:"^在接下來2次透過都市日程獲得『任意人格指數』時，額外
 /////////////////////////
 
 r:"^厄抑之境$"="Metaverse Farm"
-『暗影獵域』=Persona Farm
+『暗影獵域』=[Persona Farm]
 暗影獵域=Persona Farm
 厄抑之境·人格面具=Persona Farm
-『旖旎香調』=Character Ascension Farm
+『旖旎香調』=[Character Ascension Farm]
 旖旎香調=Character Ascension Farm
+『裝配冶藝』=[Weapon Ascension Farm]
 裝配冶藝=Weapon Ascension Farm
-『裝配冶藝』=Weapon Ascension Farm
-『靈之參悟』=Incense Farm
+『靈之參悟』=[Incense Farm]
 靈之參悟=Incense Farm
-『榮級求索』=Character EXP Farm
+『榮級求索』=[Character EXP Farm]
 榮級求索=Character EXP Farm
-『輜械求索』=Weapon EXP Farm
+『輜械求索』=[Weapon EXP Farm]
 輜械求索=Weapon EXP Farm
-『人格求索』=Persona EXP Farm
+『人格求索』=[Persona EXP Farm]
 人格求索=Persona EXP Farm
-『財賂求索』=Soul Gems Farm
+『財賂求索』=[Soul Gems Farm]
 財賂求索=Soul Gems Farm
 啟示套裝=Revelation Card Farm
 r:"^厄抑之境·啟示套裝$"="Revelation Card Farm"
@@ -1420,7 +1707,9 @@ r:"^領取 <color\=#0665ca>(\d+)</color> 次必得$"="Guarantee after <color\=#0
 r:"持有印記：(\d+)"=Mark Owned: $1
 r:"^區域$"="Area"
 嗯？要從印象空間撤退，返回都市嗎？=Hm? Want to retreat from Mementos\nand head back to the city?
+r:"^領獎需要消耗(\d+)點體力，\n當前體力不足，是否確認潛入？$"="You need to consume $1 Stamina \nin order to claim the rewards.\nYou don't have enough Stamina, \ndo you still want to infiltrate?"
 逃離後不會獲得本次戰鬥獎勵！\n確定要逃離戰鬥嗎？=You will not receive rewards from this battle after escaping! \nAre you sure you want to escape?
+逃離戰鬥後將重置關卡。\n確定要逃離戰鬥嗎？=Escaping will reset the level.\nAre you sure you want to escape?
 
 sr:"^挑戰(.*)獲得$"="<size\=25>Complete $1</size>"
 r:"透過契約之間·認知特賣兌換$"="Exchange from Cognition Shop"
@@ -1546,7 +1835,7 @@ sr:"^未知宿命藍·(.*)$"="2★ • $1"
 秘聞點券=Mysteries Voucher
 秘聞商會的專屬貨幣，可以在怪盜秘聞限時開放章節中的「秘聞商會」兌換獎勵，每期限時開放活動結束後，點券將會失效。=Exclusive currency used in Mysteries Shop. All vouchers will expire when the event ends.
 
-
+在{{A}}商店進行原晶兌換=<size\=25>Exchange from Marthym's Shop</size>
 {{A}}商店購買獲得=<size\=25>Purchase from Marthym's Shop</size>
 完成雛鳥計畫任務=Completion Battle Pass Missions
 雛鳥計畫·典藏版=From the Premium Battle Pass
@@ -1569,8 +1858,50 @@ r:"^可領取$"="Claim"
 r:"^加贈$"="Get            <size\=1>.</size>"
 
 ///////////////////////////////////////////
-/// k. Velvet Challenges & Sea of Souls (SoS)///
+/// k. Velvet Trials & Sea of Souls (VT) (SoS)///
 ///////////////////////////////////////////
+
+r:"^解明怪盜對在場怪盜的<color\=#FFFC40>屬性提升</color>效果，提升至(\d+%)$"="Increase the <color\=#FFFC40>Stats Boost</color> effect from Elucidate Thieves to $1"
+巧匠之作=<size\=19>Artisan's Work</size>
+
+熔岩幻境=Lava Mirage
+r:"^全體怪盜<color\=#ff381d>火焰</color>/<color\=#ff63ff>念動</color>屬性傷害提高(\d+%)$"="<size\=24>Increase Thieves' <color\=#ff381d>Fire</color>/<color\=#ff63ff>Psy</color> DMG by $1</size>"
+灼熱迷域=<size\=18>Scorching Maze</size>
+r:"^火焰、念動屬性傷害提升(\d+%)$"="Increase Fire and Psy DMG by $1"
+
+量子冰場=Quantum Icefield
+r:"^全體怪盜<color\=#00aeff>冰凍</color>/<color\=#00fcff>核熱</color>屬性傷害提高(\d+%)$"="<size\=24>Increase Thieves' <color\=#00aeff>Ice</color>/<color\=#00fcff>Nuke</color> DMG by $1</size>"
+暑寒極地=<size\=18>Cold Polar Zone</size>
+r:"^冰凍、核熱屬性傷害提升(\d+%)$"="Increase Ice and Nuke DMG by $1"
+
+雷光聖所=Thunderous Sanctuary
+r:"^全體怪盜<color\=#fbff37>電擊</color>/<color\=#fffea0>祝福</color>屬性傷害提高(\d+%)$"="<size\=21>Increase Thieves' <color\=#fbff37>Electric</color>/<color\=#fffea0>Bless</color> DMG by $1</size>"
+雷霆祈境=<size\=19>Thunder Realm</size>
+r:"^電擊、祝福屬性傷害提升(\d+%)$"="Increase Electric and Bless DMG by $1"
+
+厄命風眼=Cursed Eye
+r:"^全體怪盜<color\=#81ea2c>疾風</color>/<color\=#ff0036>詛咒</color>屬性傷害提高(\d+%)$"="<size\=22>Increase Thieves' <color\=#81ea2c>Wind</color>/<color\=#ff0036>Curse</color> DMG by $1</size>"
+詛咒漩渦=<size\=22>Cursed Swirl</size>
+r:"^疾風、詛咒屬性傷害提升(\d+%)$"="Increase Wind and Curse DMG by $1"
+
+造成WEAK/總攻擊時獲得分數=Weak DMG/ All-Out Attack
+火焰/念動屬性隊員攻擊時獲得分數=Fire / Psy Thieves Score
+冰凍/核熱屬性隊員攻擊時獲得分數=Ice / Nuclear Thieves Score
+電擊/祝福屬性隊員攻擊時獲得分數=Elec / Bless Thieves Score
+疾風/詛咒屬性隊員攻擊時獲得分數=Wind / Curse Thieves Score
+陣亡人數不超過0人=No Faint
+r:"^陣亡人數不超過0人<color\=#FF0000>\+(\d+)</color>$"="No Faint <color\=#FF0000>+$1</color>"
+r:"^火焰/念動屬性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Fire / Psy Thieves Score <color\=#FF0000>X$1</color>"
+r:"^冰凍/核熱屬性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Ice / Nuclear Thieves Score <color\=#FF0000>X$1</color>"
+r:"^電擊/祝福屬性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Electric / Bless Thieves Score <color\=#FF0000>X$1</color>"
+r:"^疾風/詛咒屬性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Wind / Curse Thieves Score <color\=#FF0000>X$1</color>"
+r:"^X(\d+)倍$"="<size\=30>X$1 Score</size>"
+獎勵=<size\=24>Rewards</size>
+章節獎勵=<size\=36>Rewards</size>
+累計獲得異界晶珀：=<size\=32>Total Ambers Earned:</size>
+
+昨日辰星獎勵：=Daily Rewards:
+每日根據天鵝絨試煉總星級發放獎勵。=Get daily rewards based on total ★.
 
 心之海試煉=SoS Trials
 段位狀態：=Status:
@@ -1639,20 +1970,6 @@ r:"^擊敗低階陰影（(\d+)/(\d+)）$"="Defeat low level \nShadows ($1/$2)"
 r:"^擊敗菁英陰影（(\d+)/(\d+)）$"="Defeat elite Shadows ($1/$2)"
 r:"^乘坐電梯$"="Take the Elevator"
 
-造成WEAK/總攻擊時獲得分數=Weak DMG/ All-Out Attack
-火焰/念動屬性隊員攻擊時獲得分數=Fire / Psy Attack Score
-冰凍/核熱屬性隊員攻擊時獲得分數=Ice / Nuclear Attack Score
-電擊/祝福屬性隊員攻擊時獲得分數=Elec / Bless Attack Score
-疾風/詛咒屬性隊員攻擊時獲得分數=Wind / Curse Attack Score
-陣亡人數不超過0人=No Faint
-r:"X(\d+)倍"=x$1
-獎勵=<size\=24>Rewards</size>
-章節獎勵=<size\=36>Rewards</size>
-累計獲得異界晶珀：=<size\=32>Total Ambers Earned:</size>
-
-昨日辰星獎勵：=Daily Rewards:
-每日根據天鵝絨試煉總星級發放獎勵。=Get daily rewards based on total ★.
-
 /////////////////
 /// z. Others ///
 /////////////////
@@ -1686,6 +2003,8 @@ P5X營運團隊=P5X Team
 
 推薦陣容等級：=Recommended level:
 推薦屬性：=Elements:
+怪盜角色技能的強度較低=Character Skill Lv. is low
+怪盜角色<color\=#EF0000>技能</color>、啟示卡的強度較低=Character <color\=#EF0000>Skills</color>, Revelation Cards are weak
 
 ------------------------------------
 ----- IV. Velvet Room Personas -----
@@ -1696,6 +2015,7 @@ P5X營運團隊=P5X Team
 面具階級=Rank
 便捷合體=<size\=38>Quick Fuse</size>
 sr:"^省略中途合體步驟獲得<color\=#FFF000>(.*)</color>所需的全部印記如下：$"="Skip fusion steps and obtain <color\=#FFF000>$1</color>:"
+r:"^是否快速從兌換商店，自動兌換全部【缺少印記材料】？\n將消耗<size\=60><sprite\=34></size>x(\d+)。$"="<size\=28>Want to automatically exchange all missing [Persona Mark] from the shop? \nThis will cost <size\=60><sprite\=34></size>x1500.</size>"
 可合體=Fusible
 r:"^未登錄$"="<size\=19>  Not Registered</size>"
 sr:"^本次合體結果將轉化為1個<color\=#FF0000>(.*)印記</color>$"="Convert fusion result into 1 <color\=#FF0000>$1 Mark</color>"
@@ -1728,6 +2048,7 @@ r:"^妨害$"="<size\=27>Boost</size>"
 r:"^特殊$"="<size\=21>Special</size>"
 r:"^/定位$"="<size\=24>/Type</size>"
 r:"^/屬性$"="      <size\=24>/Element</size>"
+添加印記可能獲得對應技能=Using a Mark can inherit skill
 隨機獲得1個以下技能=<size\=25>Randomly gain 1 of the following skills</size>
 新手友好=<size\=16>Newbie Friendly</size>
 sr:"^(.*)單攻$"="<size\=16>$1 ST DPS</size>"
@@ -1736,6 +2057,9 @@ sr:"^(.*)治療$"="<size\=20>$1 Heal</size>"
 sr:"^(.*)坦克$"="<size\=19>$1 Tank</size>"
 sr:"^(.*)增益$"="<size\=20>$1 Buff"
 sr:"^(.*)減益$"="<size\=17>$1 Debuff</size>"
+r:"^同類技能只能攜帶1個，已自動將「(.*)」替換為「(.*)」$"="You can only have 1 skill of the same type, automatically replaced skill"
+需遺忘技能，才能學新技能。=Need to forget skills before learning a new skills.
+r:"是否遺忘技能「(.*)」？\n<color\=#FF0000>此操作不可撤銷！</color>"=Want to forget this skill?\n<color\=#FF0000>This cannot be undone!</color>
 
 不羈紋章·虹=<size\=16>Wild Card Emblem - Rainbow</size>
 不羈紋章·耀=<size\=18>Wild Card Emblem - Shiny</size>

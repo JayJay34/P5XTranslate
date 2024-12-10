@@ -34,9 +34,9 @@ r:"^攻擊力提升(\d+\.\d+%)$"="Increase ATK by $1"
 r:"^火焰傷害提升(\d+%)$"="Increase Fire damage by $1"
 
 Combat pop ups
-r:"^星<color\=#000000>之</color>火I$"="St<color\=#000000>ar</color>fire I"
-r:"^星<color\=#000000>之</color>火II$"="St<color\=#000000>ar</color>fire II"
-r:"^星<color\=#000000>之</color>火III$"="St<color\=#000000>ar</color>fire III"
+r:"^星<color\=#000000>之</color>火I$"="<size\=16> </size>S<color\=#000000>ta</color>rfire I"
+r:"^星<color\=#000000>之</color>火II$"="<size\=16> </size>St<color\=#000000>ta</color>rfire II"
+r:"^星<color\=#000000>之</color>火III$"="<size\=16> </size>St<color\=#000000>ta</color>rfire III"
 
 ----------
 CLOSER - Motoha Arai
@@ -78,7 +78,7 @@ r:"^使所有同伴的最大生命值提升，數值相當於{{A}}最大生命�
 r:"^使<color\=#FFFF00>所有</color>同伴的最大生命值提升，數值相當於{{A}}最大生命值的(\d+\.\d+%)\（最多計入(\d+)點最大生命值\），效果持續2回合。回復所有同伴生命值，數值相當於{{A}}最大生命值的(\d+\.\d+%)。對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)最大生命值的冰凍屬性傷害。$"="Increase <color\=#FFFF00>all</color> allies' Max HP equal to $1 Max HP (Up to $2 Max HP) for 2 turns. Restores all allies' HP equal to $3 Max HP. Deals $4 Max HP Ice damage to <color\=#FFFF00>1</color> enemy."
 
 受攻擊後獲得，回合結束消耗『荒野救星』恢復已損生命值=Gain after attacked. At the end of your turn, consume [Wilderness Savior] and restore HP
-受攻擊機率大幅提升=Heavily increase the chance of getting attacked
+受攻擊機率大幅提升=Heavily increase the chance of attacked
 r:"^生命值上限提高(\d+)$"="Increase Max HP by $1"
 
 In-Battle Quotes
@@ -164,12 +164,38 @@ r:"^造成傷害提高(\d+\.\d+%)，對處於元素異常狀態的敵人效果�
 In-Battle Quotes
 r:"^我方全體怪盜的攻擊力、效果命中提升了$"="ATK Up, EHR Up!"
 r:"^我方全體怪盜傷害提高，對處於元素異常狀態下敵人傷害額外提高$"="DMG Dealt Up. \nBonus DMG Dealt vs Elemental Ailments!"
-{{A}}使用了『勁歌熱舞』，全體怪盜屬性提升=<size\=22>{{A}} used [Hot Dance]. All allies' Stats Up!</size>"
+{{A}}使用了『勁歌熱舞』，全體怪盜屬性提升=<size\=22>{{A}} used [Hot Dance]. All allies' Stats Up!</size>
 r:"^{{A}}追加使用了『勁歌熱舞』，全體怪盜屬性提升"="<size\=22>{{A}} Followed Up with [Hot Dance]\nAll allies' Stats Up!</size>"
 
 Combat Pop-ups
 r:"^熱<color\=#000000>辣</color>變奏曲$"="<size\=8> </size>H<color\=#000000>ot</color> Variation"
 r:"^勁<color\=#000000>歌</color>熱舞$"="<size\=8> </size>H<color\=#000000>ot</color> Dance"
+
+----------
+Puppet - Miyu Sahara
+----------
+r:"^使<color\=#FFFF00>所有</color>同伴獲得(\d+\.\d+%)防禦力\+(\d+)的護盾，效果持續(\d+)回合，並回復(\d+)點精力值。護盾被擊破時使支援怪盜準備時間減少(\d+)次行動。$"="Gives <color\=#FFFF00>all</color> allies $1 DEF + $2 Shield for $3 turns, and restores $4 SP. When the Shield breaks, decreases your cooldown by $5 action."
+r:"^準備時間：8次行動\n使所有同伴獲得<color\=#FFFC40>(\d+\.\d+%)</color>防禦力\+<color\=#FFFC40>(\d+)</color>的護盾，效果持續(\d+)回合，並回復(\d+)點精力值。護盾被擊破時，使解明怪盜的準備時間減少(\d+)次行動。$"="Preparation time: 8 Actions\nGives all allies <color\=#FFFC40>$1</color> DEF + <color\=#FFFC40>$2</color> Shield for $3 turns, and restores $4 SP. When the Shield breaks, decreases your cooldown by $5 action."
+
+r:"^使<color\=#FFFF00>1名</color>同伴獲得(\d+\.\d+%)防禦力\+(\d+)的護盾，並使其受到的弱點傷害降低(\d+%)，效果持續(\d+)回合。使其立刻獲得(\d+)點倒地值以及(\d+)層『海之守護』。$"="Gives <color\=#FFFF00>1</color> ally $1 DEF + $2 Shield, and decreases their Weak DMG Taken by $3 for $4 turns. Gives the target $5 Down Gauge and $6 stacks of [Nereids' Guard]."
+r:"^準備時間：8次行動\n使1名同伴獲得<color\=#FFFC40>(\d+\.\d+%)</color>防禦力\+<color\=#FFFC40>(\d+)</color>的護盾，並使其受到弱點傷害降低<color\=#FFFC40>(\d+%)</color>，效果持續(\d+)回合。技能目標立刻獲得(\d+)點倒地值與(\d+)層<link\="s\|144"><u>『海之守護』</u></link>。$"="Preparation time: 8 Actions\nGives 1 ally <color\=#FFFC40>$1</color> DEF + <color\=#FFFC40>$2</color> Shield, and decreases their Weak DMG Taken by <color\=#FFFC40>$3</color> for $4 turns. Gives the target $5 Down Gauge and $6 stacks of <link\="s|144"><u>[Nereids' Guard]</u></link>."
+
+r:"^使<color\=#FFFF00>所有</color>同伴獲得(\d+\.\d+%)防禦力\+(\d+)的護盾，目標身上的每層『海之守護』使得護盾量提升，目標『海之守護』不少於(\d+)層時，使其造成的傷害額外提高，效果持續(\d+)回合。護盾持續時間結束或被擊破後，使目標失去(\d+)層『海之守護』。$"="Gives <color\=#FFFF00>all</color> allies $1 DEF + $2, increase Shield based on the amount of [Nereids' Guard]. If [Nereids' Guard] is not less than $3 stacks, increase that allies' DMG Dealt for $4 turns. They lose the DMG Dealt buff and $5 stacks of [Nereids's Guard] when the Shield expires or breaks."
+r:"^準備時間：12次行動\n使所有同伴獲得相當於<color\=#FFFC40>(\d+\.\d+%)</color>防禦力\+<color\=#FFFC40>(\d+)</color>\+目標<link\="s\|144"><u>『海之守護』</u></link>層數\*\（<color\=#FFFC40>(\d+\.\d+%)</color>防禦力\+<color\=#FFFC40>(\d+)</color>\）的護盾，持續(\d+)回合；『海之守護』層數≥(\d+)時，每層『海之守護』會使同伴造成傷害提高<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合；護盾持續時間結束或被擊破後。同伴身上的增傷效果消失，並失去(\d+)層『海之守護』。$"="Preparation Time: 12 Actions\nGives all allies <color\=#FFFC40>$1</color> DEF + <color\=#FFFC40>$2</color> + <link\="s|144"><u>[Nereids' Guard]</u></link> stack * (<color\=#FFFC40>$3</color> DEF + <color\=#FFFC40>$4</color>) Shield for $5 turns; If [Nereids' Guard] is ≥ $6 stacks, each stack of [Nereids's Guard] increase that allies' DMG Dealt by <color\=#FFFC40>$7</color> for $8 turns; They lose the DMG Dealt buff and $9 stacks of [Nereids's Guard] when the Shield expires or breaks."
+
+r:"^受護盾效果提高(\d+%)，達到不同層數會觸發額外效果$"="Increase Shield Received by $1, \ngive different buffs at different stacks"
+r:"^海之守護達到(\d+)層，防禦力提升(\d+%)$"="$1 stacks of [Nereids' Guard];\nIncrease DEF by $2"
+r:"^海之守護達到(\d+)層，攻擊力提升(\d+%)$"="$1 stacks of [Nereids' Guard];\nIncrease ATK by $2"
+r:"^海之守護達到(\d+)層，造成傷害提升(\d+%)$"="$1 stacks of [Nereids' Guard];\nIncrease DMG Dealt by $2"
+r:"^海之守護達到(\d+)層，黎明的泡沫使造成傷害提升(.*)$"="<size\=25>$1 stacks of [Nereids' Guard];\nSea Foam of Dawn increase DMG Dealt by $2</size>"
+r:"^受到弱點傷害降低(\d+%)$"="Decrease Weak DMG Taken by $1"
+
+In-Battle Quotes
+r:"^<color\=#FF0000>{{A}}</color>受到{{B}}的保護，受弱點傷害降低……$"="<size\=26><color\=#FF0000>Ally</color> protected by Miyu Sahara, Weak DMG Taken Down!</size>"
+r:"^<color\=#FF0000>{{B}}</color>受到{{A}}的保護，受弱點傷害降低……$"="<size\=26><color\=#FF0000>Ally</color> protected by Miyu Sahara, Weak DMG Taken Down!</size>"
+
+Combat Pop-ups
+r:"^海<color\=#000000>之</color>守護$"="<size\=9> </size>N<color\=#000000>er</color>eids' Guard"
 
 ----------
 Yuki - Yukimi Fujikawa 
@@ -213,6 +239,32 @@ r:"^使<color\=#FFFF00>1名</color>同伴獲得滿層『啟動』，生命值不
 生命提煉：護盾=Life Refinement: Shield
 使同伴攻擊力提升=Increase allies' ATK
 r:"^根據啟動的層數，獲得攻擊力提升(\d+)$"="Based on Activate stacks,\nincrease ATK by $1"
+
+----------
+Key - Kiyoshi Kurotani
+----------
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)最大生命值的火焰屬性傷害，有(\d+%)基礎機率使敵人燃燒；若目標處於燃燒狀態，則獲得1層『獻祭者』，且該技能改為對所有敵人釋放。$"="Deals $1 Max HP Fire damage to <color\=#FFFC40>1</color> enemy, with a $2 base chance to inflict Burn; If the target is inflicted with Burn, gains 1 additional stack of [Martyr], and changes this skill to target all."
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的火焰屬性傷害，並有<color\=#FFFC40>(\d+%)</color>的基礎機率使敵人陷入<link\="s\|102"><u>燃燒</u></link>狀態；若目標敵人處於<link\="s\|102"><u>燃燒</u></link>狀態，{{A}}會額外獲得1層<link\="s\|135"><u>『獻祭者』</u></link>狀態並改變技能效果：對全體敵人造成一半的傷害，並有<color\=#FFFC40>(\d+%)</color>的基礎機率使敵人陷入<link\="s\|102"><u>燃燒</u></link>狀態。$"="Deals <color\=#FFFC40>$1</color> Max HP Fire damage to 1 enemy, with a <color\=#FFFC40>$2</color> base chance to inflict <link\="s|102"><u>Burn</u></link>; If the target is inflicted with <link\="s|102"><u>Burn</u></link>, gains 1 additional stack of <link\="s|135"><u>[Martyr]</u></link> and changes skill effects: Deals half damage to all enemies, with a <color\=#FFFC40>$3</color> base chance to inflict <link\="s|102"><u>Burn</u></link> to all enemies."
+
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)最大生命值的火焰屬性傷害，若有敵人處於燃燒狀態，則獲得(\d+)層『獻祭者』並使處於燃燒的敵人獲得『聖火』，造成TECHNICAL。$"="Deals $1 Max HP Fire damage to <color\=#FFFF00>all</color> enemies, if there is any enemy inflicted with Burn, triggers TECHNICAL, gains $2 stacks of [Martyr] and inflicts any enemy with Burn with [Sacred Flame]."
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的火焰屬性傷害；若有敵人處於<link\="s\|102"><u>燃燒</u></link>狀態，{{A}}會獲得(\d+)層<link\="s\|135"><u>『獻祭者』</u></link>並使處於<link\="s\|102"><u>燃燒</u></link>狀態的敵人陷入『聖火』狀態，造成<link\="s\|211"><u>TECHNICAL</u></link>。\n『聖火』：回合開始時受到相當於{{A}}<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的火焰屬性傷害，持續(\d+)回合。$"="Deals <color\=#FFFC40>$1</color> Max HP Fire damage to all enemies; If there is any enemy inflicted with <link\="s|102"><u>Burn</u></link>, triggers <link\="s|211"><u>TECHNICAL</u></link>, gains $2 stacks of <link\="s|135"><u>[Martyr]</u></link> and inflicts any enemy with <link\="s|102"><u>Burn</u></link> with [Sacred Flame]. \n[Sacred Flame]: At the beginning of the turn, take <color\=#FFFC40>$3</color> Max HP Fire damage for $4 turns."
+
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)最大生命值的火焰屬性傷害，若目標處於『聖火』狀態，則傷害提升(\d+%)，造成TECHNICAL。$"="Deals $1 Max HP Fire damage to <color\=#FFFF00>1</color> enemy, if the enemy is inflicted with [Sacred Flame], triggers TECHNICAL, increases skill damage by $2."
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的火焰屬性傷害，若敵人處於<link\="s\|136"><u>『聖火』</u></link>狀態，造成<link\="s\|211"><u>TECHNICAL</u></link>，該技能傷害提升<color\=#FFFC40>(\d+%)</color>。$"="Deals <color\=#FFFC40>$1</color> Max HP Fire damage to 1 enemy, if the enemy is inflicted with <link\="s|136"><u>[Sacred Flame]</u></link>, triggers <link\="s|211"><u>TECHNICAL</u></link>, increases skill damage by <color\=#FFFC40>$2</color>."
+
+r:"^使<color\=#FFFF00>所有</color>敵人受到的火焰屬性傷害提升(\d+\.\d+%)，並對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)最大生命值的火焰屬性傷害，有(\d+%)基礎機率使敵人燃燒，持續(\d+)回合。$"="Increases <color\=#FFFF00>all</color> enemies' Fire DMG Taken by $1, then deals $2 Max HP Fire damage to <color\=#FFFF00>all</color> enemies, with a $3 base chance to inflict Burn for $4 turns."
+
+r:"^所有同伴火焰傷害提高(\d+%)；使用技能時，每層使自身失去(\d+%)當前生命值$"="<size\=26>Increase all allies' Fire DMG by $1; When using skills, each stack consume $2 current HP</size>"
+回合開始時受到基於{{A}}最大生命值的大量火屬性傷害=Take heavy Fire damage based on \nKey's Max HP at the start of turn.
+r:"^受到火焰傷害、元素異常傷害提升(\d+%)$"="Increase Fire DMG Taken and \nElemental Ailment DMG Taken by $1"
+
+In-Battle Quotes
+r:"^<color\=#FF0000>(.*)</color>進入了聖火狀態……$"="Inflicted <color\=#FF0000>Enemy</color> with Sacred Flame!"
+
+Combat Pop-ups
+r:"^獻<color\=#000000>祭</color>者$"="<size\=18> </size>M<color\=#000000>a</color>rtyr"
+r:"^聖<color\=#000000>火</color>$"="<size\=8> </size>S<color\=#000000>ac</color>red Flame"
+r:"^救<color\=#000000>贖</color>$"="<size\=15> </size>S<color\=#000000>al</color>vation"
 
 ----------
 Vino - Chizuko Nagao
@@ -359,6 +411,7 @@ r:"^寵<color\=#000000>愛</color>$"="<size\=27> </size>P<color\=#000000>a</colo
 r:"^受<color\=#000000>治</color>療提升$"="<size\=3> </size>H<color\=#000000>ea</color>ling Received Up"
 r:"^受<color\=#000000>護</color>盾提升$"="<size\=16> </size>S<color\=#000000>hi</color>eld Received Up"
 r:"^奇<color\=#000000>思</color>妙想$"="<size\=1> </size>W<color\=#000000>hi</color>msical Thoughts"
+r:"^計<color\=#000000>數</color>$"="<size\=25> </size>C<color\=#000000>o</color>unt"
 
 ----------
 Marian - Minami Miyashita
@@ -431,15 +484,6 @@ r:"^造成傷害時恢復(\d+%)生命值$"="Restore $1 HP equal to damage"
 
 Combat Pop-ups
 r:"^吸<color\=#000000>血</color>$"="<size\=1> </size>Li<color\=#000000>fe</color>steal"
-r:"^物<color\=#000000>理</color>傷害提升$"="<size\=27> </size>P<color\=#000000>h</color>ysical DMG Up"
-r:"^射<color\=#000000>擊</color>傷害提升$"="<size\=22> </size>G<color\=#000000>u</color>n DMG Up"
-r:"^火<color\=#000000>焰</color>傷害提升$"="<size\=22> </size>F<color\=#000000>ir</color>e DMG Up"
-r:"^疾<color\=#000000>風</color>傷害提升$"="<size\=1> </size>W<color\=#000000>in</color>d DMG Up"
-r:"^念<color\=#000000>動</color>傷害提升$"="<size\=10> </size>P<color\=#000000>sy</color> DMG Up"
-r:"^核<color\=#000000>熱</color>傷害提升$"="<size\=2> </size>N<color\=#000000>uk</color>e DMG Up"
-r:"^祝<color\=#000000>福</color>傷害提升$"="<size\=15> </size>B<color\=#000000>le</color>ss DMG Up"
-r:"^詛<color\=#000000>咒</color>傷害提升$"="<size\=8> </size>C<color\=#000000>ur</color>se DMG Up"
-r:"^萬<color\=#000000>能</color>傷害提升$"="<size\=1> </size>Al<color\=#000000>m</color>ighty DMG Up"
 
 ----------
 Cherish - Masaki Ashiya
@@ -463,7 +507,7 @@ Combat Pop-ups
 正<color\=#000000>直</color>聖印=<size\=8> </size>U<color\=#000000>pr</color>ight Mark
 聖<color\=#000000>潔</color>庇佑=<size\=14> </size>H<color\=#000000>ol</color>y Protection
 
-英<color\=#000000>勇</color>=<size\=14> </size>V<color\=#000000>al</color>our
+英<color\=#000000>勇</color>=<size\=15> </size>V<color\=#000000>al</color>our
 公<color\=#000000>正</color>宣言=<size\=16> </size>J<color\=#000000>us</color>tice Oath
 憐<color\=#000000>憫</color>祝福=<size\=15> </size>B<color\=#000000>le</color>ssing of Compassion
 靈<color\=#000000>魂</color>禱告=<size\=14> </size>P<color\=#000000>ra</color>yer of Spirituality
