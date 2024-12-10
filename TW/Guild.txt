@@ -61,9 +61,9 @@ r:"個人歷史總積分達到指定值後可領取對應獎勵，當前：<colo
 積分計算規則：\n當前積分\=挑戰積分*難度係數\n同一BOSS多個難度只記錄歷史最高分數=Score Formula:\nChallenge Score * Multiplier\n\nOnly the highest score is saved between runs.
 
 線上=Online
-r:"^<color\=#8F8D8D>(\d+)分鐘前線上</color>$"="<color\=#8F8D8D>Last Seen $1m</color>"
-r:"^<color\=#8F8D8D>(\d+)小時前線上</color>$"="<color\=#8F8D8D>Last Seen $1h</color>"
-r:"^<color\=#8F8D8D>(\d+)天前線上</color>$"="<color\=#8F8D8D>Last Seen $1d</color>"
+r:"^<color\=#8F8D8D>(\d+)分鐘前線上</color>$"="<size\=24><color\=#8F8D8D>Last Seen $1m</color></size>"
+r:"^<color\=#8F8D8D>(\d+)小時前線上</color>$"="<size\=24><color\=#8F8D8D>Last Seen $1h</color></size>"
+r:"^<color\=#8F8D8D>(\d+)天前線上</color>$"="<size\=24><color\=#8F8D8D>Last Seen $1d</color></size>"
 sr:"(.*?)人線上"=$1 Online
 sr:"<color\=#FF0000>(.*)</color>加入了樂園。"=<color\=#FF0000>$1</color> joined the Paradise.
 sr:"<color\=#FF0000>(.*)</color>退出了樂園。"=<color\=#FF0000>$1</color> left the Paradise.
@@ -82,19 +82,20 @@ sr:"<color\=#FF0000>(.*)</color>將<color\=#FF0000>(.*?)</color>移出了樂園�
 
 鎖定提示=Lock
 以下<color\=#ef0000>怪盜、面具與啟示</color>會被鎖定到本挑戰中不可更換，是否確認出戰？=<size\=24>You cannot change the chosen <color\=#ef0000>Thieves, Personas and Revelation Cards</color> until you reset the fight</size>
-以下怪盜裝備的<color\=#ef0000>啟示</color>被其他BOSS鎖定，選擇確認以調整啟示。=The following Thieves <color\=#ef0000>Revelation Card</color> is locked by other bosses. Please switch.
+以下怪盜裝備的<color\=#ef0000>啟示</color>被其他BOSS鎖定，選擇確認以調整啟示。=<size\=26>The following Thieves' <color\=#ef0000>Revelation Cards</color> are locked by other bosses. Please switch.</size>
 重置挑戰會解除陣容鎖定並清空當前總積分，是否繼續=<size\=28>Resetting the fight will unlock your team lineup and clear the current score, are you sure? \n(This will not erase your Personal Best)</size>
 尚未挑戰=Not challenged yet
+啟示禁用=<size\=20>\nCards\nLocked</size>
 
 特殊機制生效中=Mechanics Active
 累積分數：=Total Score: <size\=1>_</size>
 r:"^虛弱剩餘回合：$"="   Turn(s) Left:   <size\=1>_</size>"
 r:"^虛弱期獲得積分×$"="Score Multiplier x"
 r:"^倍$"="<size\=10> </size>!"
+逃離戰鬥不會記錄挑戰積分。\n確定要離開戰鬥嗎？=Cannot record score if you escape.\nAre you sure?
 
 所有敵人對<color\=#fbff37>電擊</color>屬性的適應性變為弱=All enemies become weak to <color\=#fbff37>Electric</color> DMG
 處於<color\=#ff381d>燃燒</color>狀態的敵人受到的傷害提高20%=Enemies inflicted with <color\=#ff381d>Burn</color> +20% DMG Taken
-所有怪盜<color\=#FFFC40>HIGHLIGHT</color>傷害提升50%=Increase <color\=#FFFC40>HIGHLIGHT</color> damage by 50%
 r:"^首領的適應性發生變化，所有怪盜造成<color\=#FFFC40>弱點傷害</color>提升(\d+%)$"="<size\=27>Change the affinities of the boss, increase <color\=#FFFC40>Weakness DMG</color> by $1</size>"
 r:"^<color\=#FFFC40>WONDER</color>造成<color\=#FFFC40>最終傷害</color>提高(\d+%)，其他隊員造成最終傷害降低(\d+%)"="Increase <color\=#FFFC40>final damage</color> of <color\=#FFFC40>Wonder</color> by $1, \ndecrease final damage of other allies by $2"
 
@@ -118,11 +119,11 @@ Modifiers
 所有怪盜無法暴擊，人格面具技能/追加效果造成的<color\=#FFFC40>最終傷害</color>提高，提高值\=暴擊率*(暴擊效果-100%)。（最多計入100%暴擊率）=<size\=26>All allies can't CRIT, increase <color\=#FFFC40>Final DMG</color> of Persona Skills/ Follow Up by\nCRIT Rate * (CRIT DMG - 100%)\n(Up to 100% CRIT)</size>
 
 sr:"^(.*)特化$"="$1 Buff"
-所有怪盜<color\=#FFFC40>射擊</color>傷害提高20%=Increase <color\=#FFFC40>Gun</color> damage by 20%
-所有怪盜<color\=#ff0036>詛咒</color>傷害提高20%=Increase <color\=#ff0036>Curse</color> damage by 20%
+所有怪盜<color\=#FFFC40>射擊</color>傷害提高20%=<size\=24>Increase allies' <color\=#FFFC40>Gun</color> damage by 20%</size>
+所有怪盜<color\=#ff0036>詛咒</color>傷害提高20%=<size\=24>Increase allies' <color\=#ff0036>Curse</color> damage by 20%</size>
 
 追加特化=Follow Up Buff
-r:"^所有怪盜<color\=#FFFC40>追加效果</color>的暴擊效果提升(\d+%)、攻擊力提升(\d+%)$"="Increase <color\=#FFFC40>Follow Up</color> CRIT DMG by $1 and ATK by $2"
+r:"^所有怪盜<color\=#FFFC40>追加效果</color>的暴擊效果提升(\d+%)、攻擊力提升(\d+%)$"="Increase allies' <color\=#FFFC40>Follow Up</color> CRIT DMG by $1 and ATK by $2"
 
 聖潔領域=Holy Domain
 r:"^敵人每有一個<color\=#FFFC40>負面狀態</color>，受到的傷害提升(\d+%)，最多使其受到的傷害提升(\d+%)$"="For every <color\=#FFFC40>debuff</color> the enemy have, increase their DMG Taken by $1, up to $2"
@@ -142,6 +143,9 @@ sr:"^<color\=#FFFC40>(.*)</color>怪盜造成傷害降低(\d+%)$"="Decrease the 
 ----------
 Combat Menu
 ----------
-虛弱=Weakness
+虛弱=Weak
+r:"^虛<color\=#000000>弱</color>$"="<size\=11> </size>W<color\=#000000>e</color>ak"
 r:"^無法暴擊，最終傷害提升(.*)"="Cannot CRIT, increase Final DMG by $1"
 
+敵方全體進入了<color\=#FF0000>虛弱</color>狀態……=All enemies entered <color\=#FF0000>Weak</color>!
+r:"^<color\=#FF0000>(.*)</color>無法行動……$"="<color\=#FF0000>Enemies</color> cannot act!"
