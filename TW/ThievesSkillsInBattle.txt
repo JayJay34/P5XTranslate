@@ -9,6 +9,7 @@ Character-specific Skill Details
 協助怪盜不顯示套裝內容=Cannot Show Assist Thief's Set
 r:"^(\d+)回合$"="$1 turn"
 r:"^該技能(\d+)回合後準備就緒。$"="Skill is ready after $1 turn(s)"
+支援怪盜目前無法使用。=Navigator currently not ready.
 
 ----------
 CATTLE - Ruferu
@@ -127,8 +128,8 @@ Mont - Kotone Montagne
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害，(\d+\.\d+%)基礎機率使敵人凍結。$"="Deals $1 ATK Ice damage to <color\=#FFFF00>all</color> enemies, with a $2 base chance to inflict Freeze."
 r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，有<color\=#FFFC40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s\|103"><u>凍結</u></link>狀態。$"="Deals <color\=#FFFC40>$1</color> ATK Ice damage to all enemies, with a <color\=#FFFC40>$2</color> base chance to inflict <link\="s|103"><u>Freeze</u></link>."
 
-sr:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害，獲得4顆『(.*)』。$"="Deals $1 ATK Ice damage to <color\=#FFFF00>1</color> enemy and gains 4 [$2]."
-sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，並獲得<link\="s\|119"><u>『(.*)』</u></link>4顆。$"="Deals <color\=#FFFC40>$1</color> ATK Ice damage to 1 enemy and gains 4 <link\="s|119"><u>[$2]</u></link>."
+sr:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害，獲得4顆『(.*)』。$"="Deals $1 ATK Ice damage to <color\=#FFFF00>1</color> enemy, and gains 4 [$2]."
+sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，並獲得<link\="s\|119"><u>『(.*)』</u></link>4顆。$"="Deals <color\=#FFFC40>$1</color> ATK Ice damage to 1 enemy, and gains 4 <link\="s|119"><u>[$2]</u></link>."
 
 sr:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害，10層『(.*)』時基於敵人的已損生命值最多提升(\d+\.\d+%)傷害。$"="Deals $1 ATK Ice damage to <color\=#FFFF00>1</color> enemy, increase damage up to $3 base on the enemy's missing HP if you have 10 stacks of [$2]."
 r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，如果此時<link\="s\|119"><u>『冰晶』</u></link>數量為10或自身擁有『寒霜印記』則該技能獲得額外傷害提升。敵人生命值越低，則傷害提升越高，最多提升<color\=#FFFC40>(\d+\.\d+%)</color>。\n被動：『刀尖上的舞者』獲得額外傷害提升。敵人生命值越低，則傷害提升越高，最多提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Deals <color\=#FFFC40>$1</color> ATK Ice damage to 1 enemy, increases damage if you have 10 <link\="s|119"><u>[Ice Crystal]</u></link>. The lower the enemy's hp are, the higher the damage will be, up to a maximum of <color\=#FFFC40>$2</color>.\nPassive: [Dancer on Knife's Edge] increases damage. The lower the enemy's hp are, the higher the damage will be, up to a maximum of <color\=#FFFC40>$3</color>。"
@@ -143,6 +144,58 @@ Combat Pop-ups
 r:"^冰<color\=#000000>晶</color>$"="<size\=5> </size>Ic<color\=#000000>e</color> Crystal"
 r:"^寒<color\=#000000>霜</color>印記$"="<size\=15> </size>F<color\=#000000>ro</color>stbite Mark"
 r:"^冰<color\=#000000>凍</color>傷害提升$"="<size\=5> </size>Ic<color\=#000000>e</color> DMG Up"
+
+----------
+Fleuret - Seiji Shiratori
+----------
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+)次(\d+\.\d+%)攻擊力的疾風屬性傷害，每次攻擊有(\d+\.\d+%)基礎機率使敵人風襲。$"="Deals $2 ATK Wind damage to <color\=#FFFF00>1</color> enemy $1 times, each hit has a $3 base chance to inflict Winded."
+r:"^對1名敵人造成(\d+)次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的疾風屬性傷害，有<color\=#FFFC40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s\|105"><u>風襲</u></link>狀態，效果持續兩回合。$"="Deals <color\=#FFFC40>$2</color> ATK Wind damage to 1 enemy $1 times, with a <color\=#FFFC40>$3</color> base chance to inflict <link\="s|105"><u>Winded</u></link> for 2 turns."
+
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+)次(\d+\.\d+%)攻擊力的疾風屬性傷害，攻擊時每命中一名敵人有(\d+\.\d+%)的基礎機率獲得『激勵』。$"="Deals $2 ATK Wind damage to <color\=#FFFF00>all</color> enemies $1 times, there is a $3 base chance to gain [Resolve] when hitting each enemy."
+r:"^對所有敵人造成(\d+)次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的疾風屬性傷害。根據攻擊時敵人數量有\（敵人數量\*<color\=#FFFC40>(\d+\.\d+%)</color>\）基礎機率獲得<link\="s\|118"><u>『激勵』</u></link>狀態。$"="Deals <color\=#FFFC40>$2</color> ATK Wind damage to all enemies $1 times. When attacking enemies there is a (Number of enemies * <color\=#FFFC40>$3</color>) base chance to gain <link\="s|118"><u>[Resolve]</u></link>."
+
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+)次(\d+\.\d+%)攻擊力的風屬性傷害，『激勵』不少於(\d+)層時，額外造成(\d+)次傷害，並提升(\d+%)暴擊率。$"="Deals $2 ATK Wind damage to <color\=#FFFF00>1</color> enemy $1 times. When you have not less than $3 stacks of [Resolve], deals $4 additional hit of damage and increases CRIT Rate by $5."
+r:"^對1名敵人造成(\d+)次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的疾風屬性傷害，<link\="s\|118"><u>『激勵』</u></link>狀態不少於(\d+)層時該技能造成額外(\d+)次傷害，且暴擊率提升(\d+%)。$"="Deals <color\=#FFFC40>$2</color> ATK Wind damage to 1 enemy $1 times. When you have not less than $3 stacks of <link\="s|118"><u>[Resolve]</u></link> deals $4 additonal hit of damage and increases CRIT Rate by $5."
+
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+)段(\d+\.\d+%)攻擊力的疾風屬性傷害，若自身『激勵』不少於(\d+)層，則額外造成(\d+)段傷害。$"="Deals $2 ATK Wind damage to <color\=#FFFF00>1</color> enemy. If you have not less than $3 stacks of [Resolve], deal $4 additional hit of damage."
+
+攻擊力、速度提升=Increase ATK and SPD
+
+In-Battle Quotes
+r:"^<color\=#FF0000>{{A}}</color>獲得了激勵狀態……$"="<color\=#FF0000>Seiji Shiratori</color> gained Resolve!"
+
+Combat Pop-ups
+r:"^激<color\=#000000>勵</color>$"="<size\=4> </size>R<color\=#000000>es</color>olve"
+
+----------
+Sepia - Toshiya Sumi
+----------
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+)段(\d+\.\d+%)攻擊力的詛咒傷害，並獲得『憎恨詩句』。$"="Deals $2 ATK Curse damage to <color\=#FFFF00>1</color> enemy $1 times, and gains [Hatred Verse]."
+r:"^對1名敵人造成(\d+)次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒傷害並且本次攻擊獲得(\d+)個<link\="s\|160"><u>『憎恨詩句』</u></link>，\n接下來獲得<link\="s\|153"><u>『詩句』</u></link>時(\d+%)的固定機率轉變為<link\="s\|160"><u>『憎恨詩句』</u></link>，最多觸發(\d+)次\n每層<link\="s\|160"><u>『憎恨詩句』</u></link>使得<link\="s\|154"><u>『命運的十四行詩』</u></link>以(\d+%)的基礎機率附著詛咒效果。$"="Deals <color\=#FFFC40>$2</color> ATK Curse damage to 1 enemy $1 times, and gains $3 <link\="s|160"><u>[Hatred Verse]</u></link>.\nWhen you gain <link\="s|153"><u>[Verse]</u></link> there is a $4 fixed chance to convert it into <link\="s|160"><u>[Hatred Verse]</u></link>, up to $5 times. \nEach stack of <link\="s|160"><u>[Hatred Verse]</u></link> makes <link\="s|154"><u>[Sonnet of Fate]</u></link> has a $6 base chance to inflict Cursed."
+
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+)段(\d+\.\d+%)攻擊力的詛咒傷害，並獲得『療癒詩句』。$"="Deals $2 ATK Curse damage to <color\=#FFFF00>all</color> enemies $1 times, and gains [Recovery Verse]."
+r:"^對所有敵人造成(\d+)次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒傷害並且本次攻擊獲得(\d+)個<link\="s\|161"><u>『療癒詩句』</u></link>，\n接下來獲得<link\="s\|153"><u>『詩句』</u></link>時(\d+%)的固定機率轉變為<link\="s\|161"><u>『療癒詩句』</u></link>，最多觸發(\d+)次\n每層<link\="s\|161"><u>『療癒詩句』</u></link>使得<link\="s\|154"><u>『命運的十四行詩』</u></link>恢復生命值最低的同伴(\d+\.\d+%)攻擊力的生命值。$"="Deals <color\=#FFFC40>$2</color> ATK Curse damage to all enemies $1 times, and gains $3 <link\="s|161"><u>[Recovery Verse]</u></link>.\nWhen you gain <link\="s|153"><u>[Verse]</u></link> there is a $4 fixed chance to convert it into <link\="s|161"><u>[Recovery Verse]</u></link>, up to $5 times. \nEach stack of <link\="s|161"><u>[Recovery Verse]</u></link> makes <link\="s|154"><u>[Sonnet of Fate]</u></link> restores $6 ATK as HP to the lowest HP ally."
+
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+)段(\d+\.\d+%)攻擊力的詛咒傷害，並獲得『熱情詩句』。$"="Deals $2 ATK Curse damage to <color\=#FFFF00>1</color> enemy $1 times, and gains [Passion Verse]."
+r:"^對1名敵人造成(\d+)次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒傷害並且本次攻擊獲得(\d+)個<link\="s\|162"><u>『熱情詩句』</u></link>，\n接下來獲得<link\="s\|153"><u>『詩句』</u></link>時(\d+%)的固定機率轉變為<link\="s\|162"><u>『熱情詩句』</u></link>，最多觸發(\d+)次\n每層<link\="s\|162"><u>『熱情詩句』</u></link>使得<link\="s\|154"><u>『命運的十四行詩』</u></link>附加(\d+%)攻擊力的萬能傷害。$"="Deals <color\=#FFFC40>$2</color> ATK Curse damage to 1 enemy $1 times, and gains $3 <link\="s|162"><u>[Passion Verse]</u></link>.\nWhen you gain <link\="s|153"><u>[Verse]</u></link> there is a $4 fixed chance to convert it into <link\="s|162"><u>[Passion Verse]</u></link>, up to $5 times. \nEach stack of <link\="s|162"><u>[Passion Verse]</u></link> makes <link\="s|154"><u>[Sonnet of Fate]</u></link> additionally deals $6 ATK Almighty damage."
+
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+)次(\d+\.\d+%)攻擊力的詛咒傷害，強化後續(\d+)次『命運的十四行詩』的效果。$"="Deals $2 ATK Curse damage to 1 enemy $1 times, boosts your next $3 [Sonnet of Fate]."
+
+須見獲得靈感，以完成『命運的十四行詩』=Used to complete [Sonnets of Fate]
+特殊『詩句』，使『命運的十四行詩』附加詛咒效果=Special [Verse], make [Sonnet of Fate] \ninflicts Cursed
+特殊『詩句』，使『命運的十四行詩』附加治療效果=Special [Verse], make [Sonnet of Fate] \nrestores HP
+特殊『詩句』，使『命運的十四行詩』附加萬能傷害=Special [Verse], make [Sonnet of Fate] \ndeals Almighty damage
+特殊『詩句』，同時獲得所有『詩句』的效果=Special [Verse], has the effects of all [Verse]
+使接下來的『命運的十四行詩』技能傷害提升=Increase the skill damage of \nthe next [Sonnet of Fate]
+使用主動技能後『命運的十四行詩』的傷害提升=Increase the damage of [Sonnet of Fate] \nafter using an active skill
+
+Combat Pop-ups
+r:"^詩<color\=#000000>句</color>$"="<size\=13> </size>V<color\=#000000>er</color>se"
+r:"^憎<color\=#000000>恨</color>詩句$"="<size\=8> </size>H<color\=#000000>at</color>red Verse"
+r:"^療<color\=#000000>癒</color>詩句$"="<size\=6> </size>R<color\=#000000>ec</color>overy Verse"
+r:"^熱<color\=#000000>情</color>詩句$"="<size\=27> </size>P<color\=#000000>a</color>ssion Verse"
+r:"^卓<color\=#000000>越</color>詩句$"="<size\=20> </size>B<color\=#000000>ri</color>lliant Verse"
+r:"^靈<color\=#000000>感</color>迸發$"="In<color\=#000000>sp</color>iration Burst"
 
 ----------
 Okyann - Kayo Tomiyama
@@ -223,6 +276,25 @@ r:"^誓<color\=#000000>約</color>$"="<size\=27> </size>V<color\=#000000>o</colo
 r:"^充<color\=#000000>能</color>$"="<size\=21> </size>V<color\=#000000>it</color>alise"
 
 ----------
+Moko - Tomoko Noge
+----------
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，並獲得(\d+)個『青葉』。$"="Deals $1 ATK Psy damage to <color\=#FFFF00>all</color> enemies, gains $2 [Green Leaf]."
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，並獲得(\d+)個<link\="s\|131"><u>『青葉』</u></link>。$"="Deals <color\=#FFFC40>$1</color> ATK Psy damage to all enemies, Attack Power to all enemies, and gains $2 stacks of <link\="s|131"><u>[Green Leaf]</u></link>."
+
+r:"^<color\=#FFFF00>需要消耗(\d+)個『青葉』。</color>使<color\=#FFFF00>1名</color>同伴獲得(\d+%)\+基於{{A}}(\d+%)攻擊力\（最多(\d+)攻擊力\）的攻擊力加成及(\d+%)的效果命中，持續(\d+)回合。$"="<color\=#FFFF00>Need to consumes $1 [Green Leaf].</color> Increases <color\=#FFFF00>1</color> ally's ATK by $2 + $3 own ATK (UP to $4 ATK) and EHR by $5 for $6 turns."
+r:"^<nobr>使1名同伴獲得『葉鳴小調』：使其攻擊力提升(\d+%)，並且額外提升相當於{{A}}攻擊力(\d+%)的攻擊力\（上限為<color\=#FFFC40>(\d+)</color>點攻擊力\）,同時使其效果命中提升(\d+%)，持續(\d+)回合。該技能消耗(\d+)個<link\="s\|131"><u>『青葉』</u></link>。$"="<nobr>Gives 1 ally [Leaf's Minor]: Increases their ATK by $1, additionally increases their ATK based on $2 own ATK (Up to <color\=#FFFC40>$3</color> ATK) and increases their EHR by $4 for $5 turns. Consumes $6 <link\="s|131"><u>[Green Leaf]</u></link>."
+
+r:"^<color\=#FFFF00>需要消耗(\d+)個『青葉』。</color>有(\d+\.\d+%)基礎機率使<color\=#FFFF00>1名</color>敵人陷入睡眠狀態，持續(\d+)回合。若命中，則使其受到的下1次傷害提升(\d+\.\d+%)，若未命中，則提升(\d+\.\d+%)。$"="<color\=#FFFF00>Need to consumes $1 [Green Leaf].</color> There is a $2 base chance to inflict <color\=#FFFF00>1</color> enemy with Sleep for $3 turn. If inflicted, increases their next 1 hit of DMG Taken by $4. If not inflicted, increases their next 1 hit of DMG Taken by $5."
+r:"^<nobr>有<color\=#FFFC40>(\d+\.\d+%)</color>基礎機率使1名敵人陷入<link\="s\|109"><u>睡眠</u></link>狀態，效果持續(\d+)回合。若命中，則使敵人受到的下1次傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。若未命中，則提升<color\=#FFFC40>(\d+\.\d+%)</color>。該技能消耗(\d+)個<link\="s\|131"><u>『青葉』</u></link>。$"="<nobr>There is a <color\=#FFFC40>$1</color> base chance to inflict 1 enemy with <link\="s|109"><u>Sleep</u></link> for $2 turn. If inflicted, increases their next hit of DMG Taken by <color\=#FFFC40>$3</color>. If not inflicted, increases their next hit of DMG Taken by <color\=#FFFC40>$4</color>. Consumes $5 <link\="s|131"><u>[Green Leaf]</u></link>."
+
+r:"^<nobr>使<color\=#FFFF00>1名</color>敵人有(\d+%)的基礎機率陷入睡眠狀態，效果持續1回合。並使其下1次受到的傷害提升(\d+\.\d+%)，效果持續1回合。$"="<nobr>There is a $1 base chance to inflict <color\=#FFFF00>1</color> enemy with Sleep for 1 turn. Increases their next 1 hit of DMG Taken by $2 for 1 turn."
+
+釋放技能消耗青葉=Conume Green Leaf when using skills
+
+Combat Pop-ups
+r:"^青<color\=#000000>葉</color>$"="<size\=7> </size>G<color\=#000000>re</color>en Leaf"
+
+----------
 Leon - Reo Kamiyama
 ----------
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，所有同伴每有1層『啟動』則傷害提升(\d+%)。$"="Deals $1 ATK Nuclear damage to <color\=#FFFF00>1</color> enemy. Increases skill damage by $2 for every 1 stack of [Activate] on all allies."
@@ -241,13 +313,44 @@ r:"^使<color\=#FFFF00>1名</color>同伴獲得滿層『啟動』，生命值不
 r:"^根據啟動的層數，獲得攻擊力提升(\d+)$"="Based on Activate stacks,\nincrease ATK by $1"
 
 ----------
+Howler - Runa Dogenzaka
+----------
+r:"^對<color\=#FFFF00>所有敵人</color>造成(\d+\.\d+%)攻擊力的火焰屬性傷害，使目標防禦降低\（數值相當於自身效果命中的(\d+\.\d+%)，上限(\d+\.\d+%)\），受到火屬性技能時防禦額外降低(\d+\.\d+%)，持續(\d+)回合，並有(\d+%)基礎機率為目標附加燃燒狀態。自身獲得『熱烈歡迎』。（防禦降低效果和『對破壞者的威嚇』無法疊加。）$"="Deals $1 ATK Fire damage to <color\=#FFFF00>all enemies</color>, decreases the target's DEF based on $2 own EHR, up to $3 for $5 turns, additionally decreases DEF by $4 when taking Fire damage. There is a $6 base chance to inflict Burn. You gain [Warm Welcome]. (Cannot stack the DEF Down effect with [Intimidate Baddie].)"
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，使目標防禦降低\（數值相當於自身效果命中的(\d+\.\d+%)，上限<color\=#FFFC40>(\d+\.\d+%)</color>\），受到火屬性技能時防禦額外降低<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合，並有(\d+%)基礎機率為目標附加燃燒狀態。自身獲得『熱烈歡迎』。（防禦降低效果和『對破壞者的威嚇』無法疊加。）$"="Deals <color\=#FFFC40>$1</color> ATK Fire damage to all enemies, decreases the target's DEF based on $2 own EHR, up to <color\=#FFFC40>$3</color> for $5 turns, additionally decreases DEF by <color\=#FFFC40>$4</color> when taking Fire damage. There is a $6 base chance to inflict Burn. You gain [Warm Welcome]. (Cannot stack the DEF Down effect with [Intimidate Baddie].)"
+
+r:"^對<color\=#FFFF00>1名敵人</color>造成(\d+\.\d+%)攻擊力的火焰屬性傷害，使目標防禦降低(\d+\.\d+%)\+\（數值相當於自身效果命中的(\d+\.\d+%)，上限(\d+\.\d+%)\），持續(\d+)回合。自身獲得『窮追猛打』。（防禦降低效果和『熾熱握手禮』無法疊加。）$"="Deals $1 ATK Fire damage to <color\=#FFFF00>1 enemy</color>, decreases the target's DEF by $2 + ($3 of own EHR, up to <color\=#FFFC40>$4</color>) for 2 turns. You gain [Furious Pursue]. (Cannot stack the DEF Down effect with [Fiery Handshake].)"
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，使目標防禦降低<color\=#FFFC40>(\d+\.\d+%)</color>\+\（數值相當於自身效果命中的(\d+\.\d+%)，上限<color\=#FFFC40>(\d+\.\d+%)</color>\），持續2回合。自身獲得『窮追猛打』。（防禦降低效果和『熾熱握手禮』無法疊加。）$"="Deals <color\=#FFFC40>$1</color> ATK Fire damage to 1 enemy, decreases the target's DEF by <color\=#FFFC40>$2</color> + ($3 of own EHR, up to <color\=#FFFC40>$4</color>) for 2 turns. You gain [Furious Pursue]. (Cannot stack the DEF Down effect with [Fiery Handshake].)"
+
+r:"^開啟條件：自身擁有『熱烈歡迎』或『窮追猛打』\n根據自身擁有的『熱烈歡迎』或『窮追猛打』時，該技能會分別產生不同的效果，同時只能觸發一種效果。\n『熱烈歡迎』： 對<color\=#FFFF00>所有敵人</color>造成(\d+\.\d+%)攻擊力的火焰屬性傷害，使目標受到傷害提升\（數值相當於自身效果命中的(\d+%)，上限(\d+\.\d+%)\），受到火屬性傷害提升(\d+\.\d+%)，持續(\d+)回合。\n『窮追猛打』： 對<color\=#FFFF00>1名敵人</color>造成(\d+\.\d+%)攻擊力的火焰屬性傷害，使目標受到傷害提升\（數值相當於自身效果命中的(\d+\.\d+%)，上限(\d+\.\d+%)\），受到追加效果傷害增加(\d+\.\d+%)，持續(\d+)回合。$"="Requirement: You have [Warm Welcome] or [Furious Pursue]\nWhen you have [Warm Welcome] or [Furious Pursue], triggers their corresponding effect, you can only trigger 1 effect.\n[Warm Welcome]: Deals $1 ATK Fire damage to <color\=#FFFF00>all enemies</color>, decreases the target's DEF based on $2 own EHR, up to $3, increases their Fire DMG Taken by $4 for $5 turns.\n[Furious Pursue]: Deals $6 ATK Fire damage to <color\=#FFFF00>1 enemy</color>, decreases the target's DEF based on $7 own EHR, up to $8, increases their Follow Up DMG Taken by $9 for $10 turns."
+r:"^對<color\=#FFFF00>所有敵人</color>造成(\d+\.\d+%)攻擊力的火焰屬性傷害，使目標受到傷害提升\（數值相當於自身效果命中的(\d+%)，上限(\d+\.\d+%)\），受到火屬性傷害提升(\d+\.\d+%)，持續(\d+)回合。$"="Deals $1 ATK Fire damage to <color\=#FFFF00>all enemies</color>, decreases the target's DEF based on $2 own EHR, up to $3, increases their Fire DMG Taken by $4 for $5 turns."
+r:"^對<color\=#FFFF00>1名敵人</color>造成(\d+\.\d+%)攻擊力的火焰屬性傷害，使目標受到傷害提升\（\（數值相當於自身效果命中的(\d+\.\d+%)，上限(\d+\.\d+%)\），受到追加效果傷害增加(\d+\.\d+%)，持續(\d+)回合。$"="Deals $1 ATK Fire damage to <color\=#FFFF00>1 enemy</color>, decreases the target's DEF based on $2 own EHR, up to $3, increases their Follow Up DMG Taken by $4 for $5 turns."
+r:"^開啟條件：自身擁有『熱烈歡迎』或『窮追猛打』\n根據自身擁有的『熱烈歡迎』或『窮追猛打』時，該技能會分別產生不同的效果，同時只能觸發一種效果。\n『熱烈歡迎』： 對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，使目標受到傷害提升\（數值相當於自身效果命中的(\d+%)，上限<color\=#FFFC40>(\d+\.\d+%)</color>\），受到火屬性傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。\n『窮追猛打』： 對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，使目標受到傷害提升\（數值相當於自身效果命中的(\d+\.\d+%)，上限<color\=#FFFC40>(\d+\.\d+%)</color>\），受到追加效果傷害增加<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Requirement: You have [Warm Welcome] or [Furious Pursue]\nWhen you have [Warm Welcome] or [Furious Pursue], triggers their corresponding effect, you can only trigger 1 effect.\n[Warm Welcome]: Deals <color\=#FFFC40>$1</color> ATK Fire damage to all enemies, decreases the target's DEF based on $2 own EHR, up to $3, increases their Fire DMG Taken by <color\=#FFFC40>$4</color> for $5 turns.\n[Furious Pursue]: Deals <color\=#FFFC40>$6</color> ATK Fire damage to 1 enemy, decreases the target's DEF based on $7 own EHR, up to $8, increases their Follow Up DMG Taken by <color\=#FFFC40>$9</color> for $10 turns."
+
+r:"^對<color\=#FFFF00>所有敵人</color>造成(\d+\.\d+%)攻擊力的火焰屬性傷害，使敵方陣營獲得(\d+)層『大壞蛋』：敵方陣營任意目標受到追擊技能或火屬性技能時消耗(\d+)層，使傷害提升\（數值相當於自身效果命中的(\d+\.\d+%)，上限(\d+\.\d+%)\），持續(\d+)回合。$"="Deals $1 ATK Fire damage to <color\=#FFFF00>all enemies</color>, inflicts all enemies with $2 stacks of [Big Bad]: Consumes $3 stack when any enemy take Follow Up damage or Fire damage to increase that damage based on $4 own EHR, up to $5 for $6 turns."
+
+可以發動『GOGO{{A}}！』=Can use [GO GO WOOF WOOF RU!]
+防禦力降低，受到火焰傷害時額外降低。=Decrease DEF, additionally decrease DEF \nwhen taking Fire damage.
+
+r:"^受到追擊技能或火屬性技能時減少一層，使傷害提升(\d+\.\d+%)$"="Decrease 1 stack when taking \nFollow Up damage or Fire damage;\nIncrease that damage by $1"
+
+Combat Pop-ups
+r:"^熾<color\=#000000>熱</color>握手禮$"="<size\=18> </size>F<color\=#000000>ie</color>ry Handshake"
+r:"^對<color\=#000000>破</color>壞者的威嚇$"="<size\=5> </size>In<color\=#000000>ti</color>midate Baddie"
+r:"^熱<color\=#000000>烈</color>歡迎$"="W<color\=#000000>ar</color>m Welcome"
+r:"^窮<color\=#000000>追</color>猛打$"="<size\=14> </size>F<color\=#000000>ur</color>ious Pursue"
+r:"^Ｇ<color\=#000000>Ｏ</color>ＧＯ{{A}}！$"="<size\=13> </size>G<color\=#000000>O</color> GO WOOF WOOF RU!"
+
+r:"^每<color\=#000000>個</color>擁抱與溫暖$"="<size\=10> </size>E<color\=#000000>ve</color>ry Warm Embrace"
+r:"^熱<color\=#000000>情</color>$"="<size\=9> </size>P<color\=#000000>as</color>sion"
+
+----------
 Key - Kiyoshi Kurotani
 ----------
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)最大生命值的火焰屬性傷害，有(\d+%)基礎機率使敵人燃燒；若目標處於燃燒狀態，則獲得1層『獻祭者』，且該技能改為對所有敵人釋放。$"="Deals $1 Max HP Fire damage to <color\=#FFFC40>1</color> enemy, with a $2 base chance to inflict Burn; If the target is inflicted with Burn, gains 1 additional stack of [Martyr], and changes this skill to target all."
 r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的火焰屬性傷害，並有<color\=#FFFC40>(\d+%)</color>的基礎機率使敵人陷入<link\="s\|102"><u>燃燒</u></link>狀態；若目標敵人處於<link\="s\|102"><u>燃燒</u></link>狀態，{{A}}會額外獲得1層<link\="s\|135"><u>『獻祭者』</u></link>狀態並改變技能效果：對全體敵人造成一半的傷害，並有<color\=#FFFC40>(\d+%)</color>的基礎機率使敵人陷入<link\="s\|102"><u>燃燒</u></link>狀態。$"="Deals <color\=#FFFC40>$1</color> Max HP Fire damage to 1 enemy, with a <color\=#FFFC40>$2</color> base chance to inflict <link\="s|102"><u>Burn</u></link>; If the target is inflicted with <link\="s|102"><u>Burn</u></link>, gains 1 additional stack of <link\="s|135"><u>[Martyr]</u></link> and changes skill effects: Deals half damage to all enemies, with a <color\=#FFFC40>$3</color> base chance to inflict <link\="s|102"><u>Burn</u></link> to all enemies."
 
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)最大生命值的火焰屬性傷害，若有敵人處於燃燒狀態，則獲得(\d+)層『獻祭者』並使處於燃燒的敵人獲得『聖火』，造成TECHNICAL。$"="Deals $1 Max HP Fire damage to <color\=#FFFF00>all</color> enemies, if there is any enemy inflicted with Burn, triggers TECHNICAL, gains $2 stacks of [Martyr] and inflicts any enemy with Burn with [Sacred Flame]."
-r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的火焰屬性傷害；若有敵人處於<link\="s\|102"><u>燃燒</u></link>狀態，{{A}}會獲得(\d+)層<link\="s\|135"><u>『獻祭者』</u></link>並使處於<link\="s\|102"><u>燃燒</u></link>狀態的敵人陷入『聖火』狀態，造成<link\="s\|211"><u>TECHNICAL</u></link>。\n『聖火』：回合開始時受到相當於{{A}}<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的火焰屬性傷害，持續(\d+)回合。$"="Deals <color\=#FFFC40>$1</color> Max HP Fire damage to all enemies; If there is any enemy inflicted with <link\="s|102"><u>Burn</u></link>, triggers <link\="s|211"><u>TECHNICAL</u></link>, gains $2 stacks of <link\="s|135"><u>[Martyr]</u></link> and inflicts any enemy with <link\="s|102"><u>Burn</u></link> with [Sacred Flame]. \n[Sacred Flame]: At the beginning of the turn, take <color\=#FFFC40>$3</color> Max HP Fire damage for $4 turns."
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的火焰屬性傷害；若有敵人處於<link\="s\|102"><u>燃燒</u></link>狀態，{{A}}會獲得(\d+)層<link\="s\|135"><u>『獻祭者』</u></link>並使處於<link\="s\|102"><u>燃燒</u></link>狀態的敵人陷入『聖火』狀態，造成<link\="s\|211"><u>TECHNICAL</u></link>。\n『聖火』：回合開始時受到相當於{{A}}<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的火焰屬性傷害，持續(\d+)回合。$"="Deals <color\=#FFFC40>$1</color> Max HP Fire damage to all enemies; If there is any enemy inflicted with <link\="s|102"><u>Burn</u></link>, triggers <link\="s|211"><u>TECHNICAL</u></link>, gains $2 stacks of <link\="s|135"><u>[Martyr]</u></link> and inflicts any enemy with <link\="s|102"><u>Burn</u></link> with [Sacred Flame]. \n[Sacred Flame]: At the start of the turn, take <color\=#FFFC40>$3</color> Max HP Fire damage for $4 turns."
 
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)最大生命值的火焰屬性傷害，若目標處於『聖火』狀態，則傷害提升(\d+%)，造成TECHNICAL。$"="Deals $1 Max HP Fire damage to <color\=#FFFF00>1</color> enemy, if the enemy is inflicted with [Sacred Flame], triggers TECHNICAL, increases skill damage by $2."
 r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的火焰屬性傷害，若敵人處於<link\="s\|136"><u>『聖火』</u></link>狀態，造成<link\="s\|211"><u>TECHNICAL</u></link>，該技能傷害提升<color\=#FFFC40>(\d+%)</color>。$"="Deals <color\=#FFFC40>$1</color> Max HP Fire damage to 1 enemy, if the enemy is inflicted with <link\="s|136"><u>[Sacred Flame]</u></link>, triggers <link\="s|211"><u>TECHNICAL</u></link>, increases skill damage by <color\=#FFFC40>$2</color>."
@@ -279,6 +382,9 @@ r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬�
 r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害。目標身上每有一種元素異常，給予目標1層受到傷害提升效果，數值相當於自身效果命中的(\d+\.\d+%)，最多提升<color\=#FFFC40>(\d+\.\d+%)</color>受到傷害，持續(\d+)回合，上限(\d+)層。$"="Deals <color\=#FFFC40>$1</color> ATK Nuclear damage to 1 enemy. For every 1 Elemental Ailment on the target, inflicts 1 stack of DMG Taken debuff based on $2 own EHR, up to <color\=#FFFC40>$3</color> DMG Taken for $4 turns, up to $5 stacks."
 
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，使敵人有(\d+%)的基礎機率陷入2種他身上沒有的隨機元素異常狀態。$"="Deals $1 ATK Nuclear damage to <color\=#FFFF00>1</color> enemy, with a $2 base chance to inflict 2 new Elemental Ailments."
+
+Combat Pop-ups
+r:"^大<color\=#000000>戰</color>略家$"="<size\=7> </size>G<color\=#000000>re</color>at Strategist"
 
 ----------
 Skull - Ryuji Sakamoto
@@ -346,8 +452,9 @@ r:"^計數：(\d+)$"="Count: $1"
 屬性提升，技能強化=Stats up, boost skills
 
 In-Battle Quotes
-<color\=#FF0000>高卷杏</color>進入了潛心狀態……=<color\=#FF0000>Ann Takamaki</color> entered Concentration!
-<color\=#FF0000>高卷杏</color>火焰傷害大幅提升……=<color\=#FF0000>Ann Takamaki</color> Heavy Fire DMG Up!
+<color\=#FF0000>{{A}}</color>進入了潛心狀態……=<color\=#FF0000>{{A}}</color> entered Concentration!
+<color\=#FF0000>{{A}}</color>攻擊力大幅提升……=<color\=#FF0000>{{A}}</color> Heavy ATK Up!
+<color\=#FF0000>{{A}}</color>火焰傷害大幅提升……=<color\=#FF0000>{{A}}</color> Heavy Fire DMG Up!
 
 Combat Pop-ups
 r:"^潛<color\=#000000>心</color>$"="<size\=25> </size>C<color\=#000000>o</color>ncentration"
@@ -488,8 +595,8 @@ r:"^吸<color\=#000000>血</color>$"="<size\=1> </size>Li<color\=#000000>fe</col
 ----------
 Cherish - Masaki Ashiya
 ----------
-r:"^對<color\=#FFFF00>指定敵方單體</color>造成(\d+\.\d+%)防禦力的冰凍屬性傷害並對<color\=#FFFF00>其他敵方單位</color>造成(\d+\.\d+%)防禦力的冰凍屬性傷害，有(\d+\.\d+%)的基礎機率使<color\=#FFFF00>主目標</color>陷入凍結狀態；同時為{{A}}回復(\d+)點『英勇』。若{{A}}處於『公正宣言』狀態，額外使<color\=#FFFF00>主目標</color>受到的傷害提升\（{{A}}每有(\d+)點防禦主目標受到的傷害提升(\d+%)，最多提升(\d+\.\d+%)\），效果持續(\d+)回合；但是『英勇』回復降為(\d+)點。$"="Deals $1 DEF Ice dmage to the <color\=#FFFF00>main target</color> and $2 DEF Ice damage to <color\=#FFFF00>all other targets</color>, with a $3 base chance to inflict Freeze to the main target; Restores $4 [Valour]. If you are in [Justice Oath], additionally increeases the <color\=#FFFF00>main target's</color> DMG Taken by ($6 for every $5 DEF you have), up to $7 for $8 turns; However, decreases [Valour] recovery to $9."
-r:"^對指定敵方單體造成<color\=#FFFC40>(\d+\.\d+%)</color>防禦力的冰凍屬性傷害並對其他敵方單位造成<color\=#FFFC40>(\d+\.\d+%)</color>防禦力的冰凍屬性傷害，有<color\=#FFFC40>(\d+\.\d+%)</color>的基礎機率使主目標陷入<link\="s\|103"><u>凍結</u></link>狀態；同時為{{A}}回復(\d+)點『英勇』。若{{A}}處於<link\="s\|202"><u>『公正宣言』</u></link>狀態，額外使主目標受到的傷害提升\（{{A}}每有(\d+)點防禦主目標受到的傷害提升(\d+%)，最多提升<color\=#FFFC40>(\d+\.\d+%)</color>\），效果持續(\d+)回合；但是『英勇』回復降為(\d+)點。$"="Deals <color\=#FFFC40>$1</color> DEF Ice dmage to the main target and <color\=#FFFC40>$2</color> DEF Ice damage to all other targets, with a <color\=#FFFC40>$3</color> base chance to inflict <link\="s|103"><u>Freeze</u></link> to the main target; Restores $4 [Valour]. If you are in <link\="s|202"><u>[Justice Oath]</u></link>, additionally increeases the main target's DMG Taken by ($6 for every $5 DEF you have), up to <color\=#FFFC40>$7</color> for $8 turns; However, decreases [Valour] recovery to $9."
+r:"^對<color\=#FFFF00>指定敵方單體</color>造成(\d+\.\d+%)防禦力的冰凍屬性傷害並對<color\=#FFFF00>其他敵方單位</color>造成(\d+\.\d+%)防禦力的冰凍屬性傷害，有(\d+\.\d+%)的基礎機率使<color\=#FFFF00>主目標</color>陷入凍結狀態；同時為{{A}}回復(\d+)點『英勇』。若{{A}}處於『公正宣言』狀態，額外使<color\=#FFFF00>主目標</color>受到的傷害提升\（{{A}}每有(\d+)點防禦主目標受到的傷害提升(\d+%)，最多提升(\d+\.\d+%)\），效果持續(\d+)回合；但是『英勇』回復降為(\d+)點。$"="Deals $1 DEF Ice dmage to the <color\=#FFFF00>main target</color> and $2 DEF Ice damage to <color\=#FFFF00>all other targets</color>, with a $3 base chance to inflict Freeze to the main target; Restores $4 [Valour]. If you are in [Justice Oath], additionally increases the <color\=#FFFF00>main target's</color> DMG Taken by ($6 for every $5 DEF you have), up to $7 for $8 turns; However, decreases [Valour] recovery to $9."
+r:"^對指定敵方單體造成<color\=#FFFC40>(\d+\.\d+%)</color>防禦力的冰凍屬性傷害並對其他敵方單位造成<color\=#FFFC40>(\d+\.\d+%)</color>防禦力的冰凍屬性傷害，有<color\=#FFFC40>(\d+\.\d+%)</color>的基礎機率使主目標陷入<link\="s\|103"><u>凍結</u></link>狀態；同時為{{A}}回復(\d+)點『英勇』。若{{A}}處於<link\="s\|202"><u>『公正宣言』</u></link>狀態，額外使主目標受到的傷害提升\（{{A}}每有(\d+)點防禦主目標受到的傷害提升(\d+%)，最多提升<color\=#FFFC40>(\d+\.\d+%)</color>\），效果持續(\d+)回合；但是『英勇』回復降為(\d+)點。$"="Deals <color\=#FFFC40>$1</color> DEF Ice dmage to the main target and <color\=#FFFC40>$2</color> DEF Ice damage to all other targets, with a <color\=#FFFC40>$3</color> base chance to inflict <link\="s|103"><u>Freeze</u></link> to the main target; Restores $4 [Valour]. If you are in <link\="s|202"><u>[Justice Oath]</u></link>, additionally increases the main target's DMG Taken by ($6 for every $5 DEF you have), up to <color\=#FFFC40>$7</color> for $8 turns; However, decreases [Valour] recovery to $9."
 
 r:"^使<color\=#FFFF00>1名同伴</color>獲得1層可抵禦(\d+\.\d+%)防禦力\+(\d+)傷害的『正直聖印』，並使其獲得等同於{{A}}(\d+%)防禦力\（最多(\d+)點\）的防禦力提升效果，持續2回合；獲得此效果時，若該同伴血量高於(\d+%)，則使其被攻擊的機率提升(\d+%)；{{A}}下個回合開始時，會再次使該同伴獲得1層『正直聖印』。若{{A}}處於『公正宣言』狀態，則其在兩回合內釋放的『正直聖印』護盾量額外提升(\d+%)。$"="Gives <color\=#FFFF00>1 ally</color> 1 stack of $1 DEF + $2 Shield as [Upright Mark], then increases their DEF equal to $3 own DEF (Up to $4) for 2 turns; When gaining this effect, increases that ally's chance of attacked by $6 if their HP is above $5; At the start of your next turn, gives that ally 1 stack of [Upright Mark]. If you are in [Justice Oath], increases the Shield from [Upright Mark] by $6."
 r:"^使1名同伴獲得1層可抵禦<color\=#FFFC40>(\d+\.\d+%)</color>防禦力\+<color\=#FFFC40>(\d+)</color>傷害的<link\="s\|201"><u>『正直聖印』</u></link>，並使其獲得等同於{{A}}(\d+%)防禦力（最多<color\=#FFFC40>(\d+)</color>點）的防禦力提升效果，持續2回合；獲得此效果時，若該同伴血量高於(\d+%)，則使其被攻擊的機率提升(\d+%)；{{A}}下個回合開始時，會再次使該同伴獲得1層<link\="s\|201"><u>『正直聖印』</u></link>。若{{A}}處於<link\="s\|202"><u>『公正宣言』</u></link>狀態，則其在兩回合內釋放的<link\="s\|201"><u>『正直聖印』</u></link>護盾量額外提升(\d+%)。$"="Gives 1 ally 1 stack of <color\=#FFFC40>$1</color> DEF + <color\=#FFFC40>$2</color> Shield as <link\="s|201"><u>[Upright Mark]</u></link>, then increases their DEF equal to $3 own DEF (Up to <color\=#FFFC40>$4</color>) for 2 turns; When gaining this effect, increases that ally's chance of attacked by $6 if their HP is above $5; At the start of your next turn, gives that ally 1 stack of <link\="s|201"><u>[Upright Mark]</u></link>. If you are in <link\="s|202"><u>[Justice Oath]</u></link>, increases the Shield from <link\="s|201"><u>[Upright Mark]</u></link> by $6."
@@ -504,22 +611,22 @@ r:"^立即為<color\=#FFFF00>所有同伴</color>添加1層可抵禦(\d+\.\d+%)�
 使下次釋放的『憐憫祝福』或『榮譽守護』獲得額外效果=Your next [Blessing of Compassion] or [Honour Protection] gains additional effects
 
 Combat Pop-ups
-正<color\=#000000>直</color>聖印=<size\=8> </size>U<color\=#000000>pr</color>ight Mark
-聖<color\=#000000>潔</color>庇佑=<size\=14> </size>H<color\=#000000>ol</color>y Protection
+r:"^正<color\=#000000>直</color>聖印$"="<size\=8> </size>U<color\=#000000>pr</color>ight Mark"
+r:"^聖<color\=#000000>潔</color>庇佑$"="<size\=14> </size>H<color\=#000000>ol</color>y Protection"
 
-英<color\=#000000>勇</color>=<size\=15> </size>V<color\=#000000>al</color>our
-公<color\=#000000>正</color>宣言=<size\=16> </size>J<color\=#000000>us</color>tice Oath
-憐<color\=#000000>憫</color>祝福=<size\=15> </size>B<color\=#000000>le</color>ssing of Compassion
-靈<color\=#000000>魂</color>禱告=<size\=14> </size>P<color\=#000000>ra</color>yer of Spirituality
+r:"^英<color\=#000000>勇</color>$"="<size\=15> </size>V<color\=#000000>al</color>our"
+r:"^公<color\=#000000>正</color>宣言$"="<size\=16> </size>J<color\=#000000>us</color>tice Oath"
+r:"^憐<color\=#000000>憫</color>祝福$"="<size\=15> </size>B<color\=#000000>le</color>ssing of Compassion"
+r:"^靈<color\=#000000>魂</color>禱告$"="<size\=14> </size>P<color\=#000000>ra</color>yer of Spirituality"
 
-所<color\=#000000>經</color>之戰，莫畏強敵=<size\=2> </size>I <color\=#000000>W</color>ill Be Brave Against the Strong
-婦<color\=#000000>弱</color>童長，戰所為之=<size\=2> </size>I <color\=#000000>W</color>ill Fight For Those Who Cannot Fight
-公<color\=#000000>正</color>審判=<size\=16> </size>J<color\=#000000>us</color>tice Judgement
+r:"^所<color\=#000000>經</color>之戰，莫畏強敵$"="<size\=2> </size>I <color\=#000000>W</color>ill Be Brave Against the Strong"
+r:"^婦<color\=#000000>弱</color>童長，戰所為之$"="<size\=2> </size>I <color\=#000000>W</color>ill Fight For Those Who Cannot Fight"
+r:"^公<color\=#000000>正</color>審判$"="<size\=16> </size>J<color\=#000000>us</color>tice Judgement"
 
 ----------
 Joker
 ----------
-r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，有(\d+%)的基礎機率使敵人獲得1層詛咒效果，並獲得1個『煞氣』。$"="Deals $1 ATK Curse damage to <color\=#FFFF00>all</color> enemies, with a $2 base chance to inflict 1 stack of Cursed. Gain 1 [Fury]."
+r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，有(\d+%)的基礎機率使敵人獲得1層詛咒效果，並獲得1個『煞氣』。$"="Deals $1 ATK Curse damage to <color\=#FFFF00>all</color> enemies, with a $2 base chance to inflict 1 stack of Cursed. Gains 1 [Fury]."
 r:"對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，並有(.*)基礎機率使其獲得1層<link\="s\|112"><u>詛咒</u></link>效果。並獲得1個<link\="s\|124"><u>『煞氣』</u></link>。$"="Deals <color\=#FFFC40>$1</color> ATK Curse damage to all enemies, with a $2 base chance to inflicts 1 stack of <link\="s|112"><u>Cursed</u></link>. Gain 1 <link\="s|124"><u>[Fury]</u></link>."
 
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，場上只有<color\=#FFFF00>1名</color>敵人時獲得2個『煞氣』。$"="Deals $1 ATK Curse damage to <color\=#FFFF00>1</color> enemy. If there is only <color\=#FFFF00>1</color> enemy, gains 2 [Fury]."
