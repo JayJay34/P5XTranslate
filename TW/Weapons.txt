@@ -7,12 +7,15 @@
 改造介紹=Reform Details
 改造消耗=Reform Cost
 改造效果=<size\=21>Reform Effects</size>
+已達到武器當前等級強化上限。=Reached level cap.
 該武器已強化到滿級！=Weapon maxed!
 該武器已提升到滿級！=Weapon Lv. maxed!
 該武器已改造到滿級！=<size\=18>Weapon Reform maxed!</size>
 僅可消耗同名武器=Only use weapon wtih the same name
 可消耗同星級武器或永恆的銘記之證=Only use weapon with the same rarity
 可消耗同星級武器或特別的存在之證=Only use weapon with the same rarity
+替換成功，已自動繼承強化等級及突破等級。=Changed weapon, automatically inherited Weapon Lv. and Reform Rank.
+尚未獲取=Not obtained
 
 
 ----------
@@ -81,7 +84,6 @@ r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>,\n使用人格面具技�
 極晝=Midnight Sun
 致命匕首=<size\=30>Deadly Dagger</size>
 烏茲鋼刀=<size\=24>Wootz Steel Knife</size>
-
 
 ----------
 MAIN CAST WEAPONS
@@ -199,6 +201,7 @@ C型號可擕式=Portable C Type Model
 【修復代碼】=<size\=24>[Repair Code]</size>
 修復代碼=Repair Code
 r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。添加『擾亂病毒』後，使敵人受到傷害額外提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. After inflicting [Disruption Virus], increase enemies' DMG Taken by <color\=#2899FF>$2</color> for $3 turns."
+
 神聖戰歌=Holy Hymn
 【精準磨礪】=<size\=24>[Precision Grinding]</size>
 精準磨礪=Precision Grinding
@@ -206,7 +209,8 @@ r:"^效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>。攻擊帶有<link\="
 基加美修戰斧=Gilgamesh Axe
 【趁敵不備】=<size\=24>[Surprise Attack]</size>
 趁敵不備=Surprise Attack
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。每有1名敵人處於異常狀態，攻擊力、效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>，最多提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. For each enemy with a debuff, increase ATK and EHR by <color\=#2899FF>$2</color>, up to<color\=#2899FF>$3</color>."
+r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。每有1名敵人處於異常狀態，攻擊力、效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>，最多提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. For each enemy with a debuff, increase ATK and EHR by <color\=#2899FF>$2</color>, up to <color\=#2899FF>$3</color>."
+
 天鵝夢鄉=Dreamland of Swan
 【四季輪替】=<size\=24>[Seasons Rotation]</size>
 四季輪替=Seasons Rotation
@@ -287,6 +291,15 @@ r:"^防禦力提升<color\=#2899FF>(\d+\.\d+%)</color>。『正直聖印』的�
 劍與試煉=Sword and Trials
 r:"^護盾效果提升<color\=#2899FF>(\d+\.\d+%)</color>；對生命值低於(\d+%)的友方單位，{{A}}的護盾效果額外提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase Shield Effect by <color\=#2899FF>$1</color>; Additionally increase Shield Effect to allies below $2 HP by <color\=#2899FF>$3</color>."
 
+家宅惡犬=Bad Doggy
+【尖牙利爪】=<size\=24>[Sharp Fangs and Claws]</size>
+尖牙利爪=Sharp Fangs and Claws
+r:"^效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>。友方怪盜使用火屬性技能或追擊技能時，自身效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合，上限(\d+)層。使用『GOGO{{A}}！』觸發『熱烈歡迎』時，額外使技能目標的防禦力降低<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合；觸發『窮追猛打』時，額外使技能目標的防禦力降低<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合。（防禦力降低效果不可疊加）$"="Increase EHR by <color\=#2899FF>$1</color>. When other allies use Fire skills or Follow Up skills, increase own EHR by <color\=#2899FF>$2</color> for $3 turn, up to $4 stack. When using [GO GO WOOF WOOF RU!] to trigger [Warm Welcome], additionally decrease the DEF of the skill target by <color\=#2899FF>$5</color> for $6 turns; When using [GO GO WOOF WOOF RU!] to trigger [Furious Pursue], additionally decrease the DEF of the skill target by <color\=#2899FF>$6</color> for $7 turns. (Cannot stack the DEF Down effects)"
+咆哮獵手=Roaring Hunter
+【精準捕獵】=<size\=24>[Precision Hunting]</size>
+精準捕獵=Precision Hunting
+r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。擁有『熱烈歡迎』或『窮追猛打』狀態時，自身效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase own EHR by <color\=#2899FF>$2</color> when you have [Warm Welcome] or [Furious Pursue]."
+
 ----------
 4 STAR UNIT WEAPONS
 ----------
@@ -307,14 +320,21 @@ r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。{{A}}使用<link\="s\|1
 【和弦彩鈴】=<size\=24>[Chord Ringtone]</size>
 和弦彩鈴=Chord Ringtone
 sr:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。使用支援技能後，{{A}}有<color\=#2899FF>(\d+\.\d+%)</color>的固定機率額外獲得1個<link\="s\|141"><u>『(.*)』</u></link>。$"="Increase ATK by <color\=#2899FF>$1</color>. After using support skills, there is a <color\=#2899FF>$2</color> fixed chance to gain 1 additional <link\="s|141"><u>[$3]</u></link>."
+
 織夢者=Dreamweaver
 【幻夢交響】=<size\=24>[Symphony of Dream]</size>
 幻夢交響=Symphony of Dream
 r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。造成<link\="s\|109"><u>睡眠</u></link>效果的效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>。以同伴為目標釋放技能時，使其攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，效果持續2回合。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase EHR by <color\=#2899FF>36.0%</color> when inflicting <link\="s|109"><u>Sleep</u></link>. When using a skill on an ally, increase their ATK by <color\=#2899FF>$2</color> for 2 turns."
+影舞雙冠=Dual Shadow Dance
+【夢魘纏繞】=<size\=24>[Entangled Nightmare]</size>
+夢魘纏繞=Entangled Nightmare
+r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。消耗<link\="s\|131"><u>『青葉』</u></link>時，使自身攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase own ATK by <color\=#2899FF>$2</color> when consuming <link\="s|131"><u>[Green Leaf]</u></link> for $3 turns."
+
 光之洗禮=Baptism of Light
 【聖靈碎片】=<size\=24>[Shard of Holy Spirit]</size>
 聖靈碎片=Shard of Holy Spirit
 r:"^生命值提升<color\=#2899FF>(\d+\.\d+%)</color>。對敵人施加<link\="s\|102"><u>燃燒</u></link>狀態時，額外使敵人受到的傷害提升<color\=#2899FF>(\d+\.\d+%)</color>；每層<link\="s\|135"><u>『獻祭者』</u></link>額外使{{A}}造成傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase Max HP by <color\=#2899FF>$1</color>. When inflicting <link\="s|102"><u>Burn</u></link> to an enemy, increase their DMG Taken by <color\=#2899FF>$2</color>; Each stack of <link\="s|135"><u>[Martyr]</u></link> increase your damage by <color\=#2899FF>$3</color>."
+
 歸淨樂土=Elysium
 【救贖鎖鏈】=<size\=24>[Chains of Salvation]</size>
 救贖鎖鏈=Chains of Salvation
@@ -323,14 +343,24 @@ r:"^防禦力提升<color\=#2899FF>(\d+\.\d+%)</color>。\n使用『絕對審判
 【罪業剋星】=<size\=24>[Profane Nemesis]</size>
 罪業剋星=Profane Nemesis
 r:"^防禦力提升<color\=#2899FF>(\d+\.\d+%)</color>。為生命值低於(\d+%)的同伴提供護盾時，護盾加成提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase DEF by <color\=#2899FF>$1</color>. Increase Shield Bonus by <color\=#2899FF>$3</color> when granting an ally with less than $2 HP Shield."
+
 啟明之星=Guiding Star
 【風暴來臨】=<size\=24>[Coming Storm]</size>
 風暴來臨=Coming Storm
-r:"^暴擊率提升<color\=#2899FF>(\d+\.\d+%)</color>。戰鬥開始時，使自身獲得1層<link\="s\|118"><u>『激勵』</u></link>，暴擊效果提升(\d+%)。每次獲得<link\="s\|118"><u>『激勵』</u></link>時，造成的傷害額外提升（當前<link\="s\|118"><u>『激勵』</u></link>效果層數\*<color\=#2899FF>(\d+\.\d+%)</color>），效果持續1回合。$"="Increase CRIT Rate by <color\=#2899FF>$1</color>. At the start of battle, gain 1 stack of <link\="s|118"><u>[Motivation]</u></link> and increase CRIT DMG by $2. Each time you gain <link\="s|118"><u>[Motivation]</u></link>, increase DMG Dealt by (<link\="s|118"><u>[Motivation]</u></link>*<color\=#2899FF>$3</color>) for 1 turn."
+r:"^暴擊率提升<color\=#2899FF>(\d+\.\d+%)</color>。戰鬥開始時，使自身獲得1層<link\="s\|118"><u>『激勵』</u></link>，暴擊效果提升(\d+%)。每次獲得<link\="s\|118"><u>『激勵』</u></link>時，造成的傷害額外提升（當前<link\="s\|118"><u>『激勵』</u></link>效果層數\*<color\=#2899FF>(\d+\.\d+%)</color>），效果持續1回合。$"="Increase CRIT Rate by <color\=#2899FF>$1</color>. At the start of battle, gain 1 stack of <link\="s|118"><u>[Resolve]</u></link> and increase CRIT DMG by $2. Each time you gain <link\="s|118"><u>[Resolve]</u></link>, increase DMG Dealt by (<link\="s|118"><u>[Resolve]</u></link>*<color\=#2899FF>$3</color>) for 1 turn."
+
 亡語聖裁=Deathrattle Judge
 【輪迴符文】=<size\=24>[Reincarnation Rune]</size>
 輪迴符文=Reincarnation Rune
 r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。<link\="s\|154"><u>『命運的十四行詩』</u></link>造成的傷害提升<color\=#2899FF>(\d+\.\d+%)</color>；獲得<link\="s\|153"><u>『詩句』</u></link>時有<color\=#2899FF>(\d+\.\d+%)</color>固定機率直接獲得<link\="s|163"><u>『卓越詩句』</u></link>，<link\="s|163"><u>『卓越詩句』</u></link>觸發所有<link\="s|153"><u>『詩句』</u></link>的效果。$"="Increase ATK by <color\=#2899FF>$1</color>. Increase DMG Dealt by <link\="s|154"><u>[Sonnet of Fate]</u></link> by <color\=#2899FF>$2</color>; There is a <color\=#2899FF>$3</color> fixed chance to gain <link\="s|163"><u>[Brilliant Verse]</u></link> when gaining <link\="s|153"><u>[Verse]</u></link>, <link\="s|163"><u>[Brilliant Verse]</u></link> trigger all effects from <link\="s|153"><u>[Verse]</u></link>."
+<color\=#66ccff>『卓越詩句』</color>=<color\=#66ccff>[Brilliant Verse]</color>
+卓越詩句=Brilliant Verse
+特殊『詩句』，同時獲得所有『詩句』的效果。=Special [Verse], has the effects of all [Verse].
+猩紅儀杖=Scarlet Scepter
+【鮮血之觸】=<size\=24>[Touch of Blood]</size>
+鮮血之觸=Touch of Blood
+r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。獲得特殊<link\="s\|153"><u>『詩句』</u></link>時，根據當前的特殊<link\="s\|153"><u>『詩句』</u></link>的數量提升造成的傷害<color\=#2899FF>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. When gaining special <link\="s|153"><u>[Verse]</u></link>, increase DMG Dealt by <color\=#2899FF>$2</color> based on the current special <link\="s|153"><u>[Verse]</u></link> amount for $3 turn."
+
 凜冬女王=Winter Queen
 【永恆冬夜】=<size\=24>[Eternal Winter Night]</size>
 永恆冬夜=Eternal Winter Night
@@ -357,4 +387,3 @@ r:"^效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>。敵人被添加元�
 【量子輻射】=<size\=24>[Quantum Radiation]</size>
 量子輻射=Quantum Radiation
 r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。使場上處於元素異常狀態的敵人防禦力降低<color\=#2899FF>(\d+\.\d+%)</color>。若其身上有<link\="s\|179"><u>『輻射』</u></link>，則防禦力額外降低<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. Decrease the DEF for enemies with Elemental Ailment by <color\=#2899FF>$2</color>. If they have <link\="s|179"><u>[Radiation]</u></link>, additionally decrease their DEF by <color\=#2899FF>$3</color>."
-
