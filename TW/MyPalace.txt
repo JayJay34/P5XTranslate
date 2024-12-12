@@ -2,14 +2,16 @@
 UI + ITEM MENU
 ----------
 我的{{A}}=My Palace
+購買成功。=Purchase success.
+可以將道具擺放在我的{{A}}中了！=Can place item in My {{A}} now!
 後產滿=Til Full
 嗯？要離開我的{{A}}，返回都市嗎？=Hm? Want to leave My Palace\nand head back to the city?
 
 r:"^·{{A}}等級達到Pevel.(\d+)$"="<size\=26>-Reach Pevel.$1</size>"
 r:"^·{{A}}的怪盜評級達到(\d+)分$"="<size\=26>-{{A}} reached $1 score</size>"
 ·達成條件後即可前往購買=<size\=26>-For sale after meeting conditions</size>
-r:"^·將亞諾希克強化至(\d+)級$"="<size\=26>-Upgrade Janosik to Lv. $1</size>"
-r:"^·將亞諾希克進階至RANK(\d+)\((\d+)/(\d+)\)$"="<size\=26>-Evolve Janosik to Rank $1 ($2/$3)</size>"
+r:"^·將{{A}}強化至(\d+)級$"="<size\=26>-Upgrade Janosik to Lv. $1</size>"
+r:"^·將{{A}}進階至RANK(\d+)\((\d+)/(\d+)\)$"="<size\=26>-Evolve Janosik to Rank $1 ($2/$3)</size>"
 ·購買時裝-怪盜·海之心=<size\=26>-Purchase Summer Wonder outfit</size>
 r:"^·進行御船千早的占卜累計達(\d+)次\((\d+)/(\d+)\)$"="<size\=26>-Get $1 readings from Chihaya Mifune ($2/$3)</size>"
 r:"^·集齊(\d+)套{{A}}系列\((\d+)/(\d+)\)$"="<size\=26>-Collect $1 sets of {{A}} ($2/$3)</size>"
@@ -57,8 +59,8 @@ r:"^<color\=#FFFF00>戰鬥中，己方成員的暴擊傷害提升(\d+%)</color>$
 r:"^<color\=#FFFF00>戰鬥中，己方成員的精力回復提升(\d+%)</color>$"="<color\=#FFFF00>In battle, increase all allies' SP Recovery by $1</color>"
 r:"^<color\=#FFFF00>戰鬥中，己方成員的效果命中提升(\d+\.\d+%)</color>$"="<color\=#FFFF00>In battle, increase all allies' EHR by $1</color>"
 r:"^<color\=#FFFF00>戰鬥中，己方成員的傷害提升(\d+\.\d+%)</color>$"="<color\=#FFFF00>In battle, increase all allies' DMG by $1</color>"
-r:"^<color\=#FFFF00>戰鬥中，所有解明怪盜的攻擊力提升(\d+)</color>$"="<color\=#FFFF00>In battle, increas all Navigators' ATK by $1</color>"
-r:"^<color\=#FFFF00>WONDER在戰鬥中造成傷害提升(\d+%)</color>$"="<color\=#FFFF00>In battle, increas Wonder's DMG Dealt by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，所有解明怪盜的攻擊力提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase all Navigators' ATK by $1</color>"
+r:"^<color\=#FFFF00>WONDER在戰鬥中造成傷害提升(\d+%)</color>$"="<color\=#FFFF00>In battle, increase Wonder's DMG Dealt by $1</color>"
 r:"^<color\=#FFFF00>戰鬥中，人格面具造成的傷害提升(\d+%)</color>$"="<color\=#FFFF00>In battle, increase Persona skill DMG by $1</color>"
 r:"^<color\=#FFFF00>戰鬥中，所有人格面具造成的傷害提升(\d+%)</color>$"="<color\=#FFFF00>In battle, increase all Persona skill DMG by $1</color>"
 r:"^<color\=#FFFF00>戰鬥中，己方成員的HIGHLIGHT傷害提升(\d+\.\d+%)</color>$"="<color\=#FFFF00>In battle, increase all allies' HIGHLIGHT DMG by $1</color>"
@@ -85,31 +87,8 @@ BATTLE PAUSE MENU
 ----------
 雕像道具效果=My Palace Statue Effect
 插畫效果=My Palace Painting Effect
-r:"^WONDER生命值提升(\d+)$"="Increas Wonder's HP by $1"
-r:"^所有角色生命值提升(\d+)$"="Increas all allies' HP by $1"
-r:"^所有角色的生命值提升(\d+)$"="Increas all allies' HP by $1"
-r:"^所有角色攻擊力提升(\d+)$"="Increas all allies' ATK by $1"
-r:"^所有角色的攻擊力提升(\d+)$"="Increas all allies' ATK by $1"
-r:"^所有支援怪盜攻擊力提升(\d+)$"="Increas all Navigators' ATK by $1"
-r:"^所有角色防禦力提升(\d+)$"="Increas all allies' DEF by $1"
-r:"^所有角色的防禦力提升(\d+)$"="Increas all allies' DEF by $1"
-r:"^所有角色速度提升(\d+)$"="Increas all allies' SPD by $1"
-r:"^所有角色暴擊率提升(\d+\.\d+%)$"="Increas all allies' CRIT Rate by $1"
-r:"^所有角色暴擊傷害提升(\d+%)$"="Increas all allies' CRIT DMG by $1"
-r:"^所有角色精力回復提升(\d+%)$"="Increas all allies' SP Recovery by $1"
-r:"^所有角色的效果命中提升(\d+\.\d+%)$"="Increas all allies' EHR by $1"
-r:"^所有角色的傷害提升(\d+\.\d+%)$"="Increas all allies' DMG by $1"
-r:"^在「厄抑之境」中傷害提升(\d+%)$"="Increas all allies' DMG by $1 in Farming Domain"
-r:"^人格面具造成的傷害提升(\d+%)$"="Increas all allies' Persona skill DMG by $1"
-r:"^所有人格面具造成的傷害提升(\d+%)$"="Increas all allies' Persona skill DMG by $1"
-r:"^所有角色Highlight傷害提升(\d+\.\d+%)$"="Increas all allies' HIGHLIGHT DMG by $1"
-r:"^所有角色的治療效果提升(\d+\.\d+%)$"="Increas all allies' Healing Effect by $1"
-r:"^物理、射擊屬性傷害提升(\d+\.\d+%)$"="Increas all allies' Physical and Gun DMG by $1"
-r:"^所有角色的火焰屬性傷害提升(\d+%)$"="Increas all allies' Fire DMG by $1"
-r:"^所有角色的電屬性提升(\d+%)$"="Increas all allies' Elec DMG by $1"
-r:"^所有角色的風屬性提升(\d+%)$"="Increas all allies' Wind DMG by $1"
-r:"^「女神異聞錄5」聯動角色生命提升(\d+)$"="Increase the HP of the Phantom Thieves of Heart by $1</color>"
-r:"^「女神異聞錄5」聯動角色傷害提升(\d+\.\d+%)$"="Increase the DMG of the Phantom Thieves of Heart by $1</color>"
+雕像道具效果生效中=My Palace Statue Effect Active
+插畫效果生效中=My Palace Painting Effect Active
 
 ----------
 Settle In
@@ -119,6 +98,7 @@ Settle In
 r:"^契合等級：(\d+)$"="<size\=21>Closeness Level: $1</size>"
 r:"^每入駐(\d+)秒累積1點契合度。$"="Gain 1 Closeness every $1 seconds."
 契合度未滿級=Not capped
+契合度已滿=Closeness Maxed
 契合等級=Closeness
 稀有度=Rarity
 
