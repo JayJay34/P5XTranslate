@@ -6,8 +6,15 @@ r:"^(.)$"=$1
 // Description: Settings Translation, important system messages, or whatever can be shown before logging in
 
 r:"更新本地文件\((\d+)\/(\d+)\)"=<b>Applying Update ($1/$2)</b>
+r:"^用戶端版本號：(.*)  遊戲版本：(.*)  資源號：(.*)$"="Client Version: $1 Game Version: $2 Resource ID: $3"
 r:"^(.*)版本$"="Version $1"
 開始登入=Logging in...
+伺服器維護中，請查看遊戲公告。=Server is under maintenance.
+密  碼：=Password:
+用戶名：=Username:
+伺服器=Server
+資源驗證中=Verifying Data
+資源載入中...=Loading Data...
 解析度=<size\=30>Resolution</size>
 渲染品質=<size\=22>Rendering Quality</size>
 陰影品質=<size\=25>Shadow Quality</size>
@@ -163,6 +170,7 @@ r:"^待設置$"="None"
 敬請期待=Stay tuned!
 決戰篇=Finale
 故事=Story
+當前沒有劇情日誌=Currently no dialogue
 
 ----------
 Character Names
@@ -200,6 +208,8 @@ r:"^蘆<color\=#ff0000ff>谷</color> {{A}}$"="{{A}} A<color\=#ff0000ff>shi</colo
 
 r:"^琴<color\=#ff0000ff>音</color>·{{A}}$"="Ko<color\=#ff0000ff>to</color>ne Montagne"
 
+r:"^道<color\=#ff0000ff>玄</color>坂 {{A}}$"="Ru<color\=#ff0000ff>na</color> Dogenzaka"
+
 // P5X Side Quest //
 r:"^<color\=#ff0000ff>阿</color>七$"="Shi<color\=#ff0000ff>chi</color>-kun"
 
@@ -236,7 +246,6 @@ r:"^芳<color\=#ff0000ff>澤</color>霞$"="Ka<color\=#ff0000ff>su</color>mi Yosh
 瓊安=Johanna
 死靈之書=Necronomicon
 米萊迪=Milady
-亞諾希克=Janosik
 羅布羅伊=Rob Roy
 阿爾維達=Awilda
 曼德蘭=Mandrin
@@ -259,6 +268,7 @@ r:"^芳<color\=#ff0000ff>澤</color>霞$"="Ka<color\=#ff0000ff>su</color>mi Yosh
 卡利俄佩=Calliope
 哈耳皮厄=Harpyia
 阿摩笛亞=Amalthea
+奧拉=Aura
 
 // Playable Voice Actor & Actress //
 
@@ -293,6 +303,7 @@ CV.岡本信彥=CV.Nobuhiko Okamoto
 CV.悠木碧=CV.Aoi Yūki
 CV.戶松遙=CV.Haruka Tomatsu
 CV.前內孝文=CV.Takafumi Maeuchi
+CV.高橋美佳子=CV.Mikako Takahashi
 
 ------------------------------------------
 -------- III. Worldbuilding Terms --------
@@ -302,6 +313,8 @@ CV.前內孝文=CV.Takafumi Maeuchi
 // Generally Important Terms //
 盧布朗=Leblanc
 在異世界=Metaverse
+異世界=Metaverse
+都市=City
 協同者=Confidant
 人格面具=Persona
 印象空間=Mementos
@@ -373,7 +386,7 @@ r:"^打<color\=#ff0000ff>掃</color>環境$"="Cl<color\=#ff0000ff>ea</color>ning
 回<color\=#ff0000ff>到</color>家中=H<color\=#ff0000ff>o</color>me
 
 {{A}}  中央大街=Shibuya Central Street
-四軒茶屋  小巷=Yongen-Jaya Alleyway
+{{A}}  小巷={{A}} Alleyway
 社團佈告欄=Club Bulletin Board
 輕音部=Music Club
 足球部=Soccer Club
@@ -384,14 +397,11 @@ r:"^打<color\=#ff0000ff>掃</color>環境$"="Cl<color\=#ff0000ff>ea</color>ning
 二手雜貨店=Second-hand Shop
 超市=Supermarket
 <color\=#ff0000ff>超</color>市=Su<color\=#ff0000ff>pe</color>rmarket
-雜司谷  西參道=Zōshigaya Alleyway
+{{A}}  西參道={{A}} Alleyway
 {{A}}  地下商場=<size\=35>Shibuya Underground Mall</size>
-新宿  娛樂街=<size\=30>Shinjuku Entertainment District</size>
+r:"^{{A}}  娛樂街$"="<size\=30>{{A}} Entertainment District</size>"
 {{B}}機·{{A}}=Gachapon - {{A}}
-{{A}}機·雜司谷=Gachapon - Zōshigaya
-雜司谷  表參道=<size\=32>Zōshigaya Omotesan Street</size>
-{{A}}機·新宿=Gachapon - Shinjuku
-{{A}}機·吉祥寺=Gachapon - Kichijoji
+{{A}}  表參道=<size\=32>{{A}} Omotesan Street</size>
 地鐵站=Subway
 
 r:"^壓<color\=#ff0000ff>勝</color>軒$"="As<color\=#ff0000ff>sh</color>ouken"
@@ -422,7 +432,7 @@ r:"^二<color\=#ff0000ff>手</color>雜貨店$"="Se<color\=#ff0000ff>co</color>n
 r:"^武<color\=#ff0000ff>見</color>診所$"="ake<color\=#ff0000ff>mi</color> Medical Clinic"
 r:"^武<color\=#ff0000ff>見</color> 妙$"="T<color\=#ff0000ff>ae</color> Takemi"
 我想買東西=<size\=28>I want to buy something</size>
-r:"^前<color\=#ff0000ff>往</color>四軒茶屋$"="Go <color\=#ff0000ff>to</color> Yongen-Jaya"
+r:"^前<color\=#ff0000ff>往</color>{{A}}$"="Go <color\=#ff0000ff>to</color> {{A}}"
 
 r:"^可<color\=#ff0000ff>麗</color>餅店$"="Cr<color\=#ff0000ff>ep</color>e Shop"
 r:"^藥<color\=#ff0000ff>妝</color>店$"="Dr<color\=#ff0000ff>ug</color> Store"
@@ -430,17 +440,17 @@ r:"^便<color\=#ff0000ff>利</color>商店$"="Co<color\=#ff0000ff>nv</color>enie
 r:"^牛<color\=#ff0000ff>丼</color>店$"="Be<color\=#ff0000ff>ef</color> Bowl Shop"
 r:"^<color\=#ff0000ff>花</color>店$"="Fl<color\=#ff0000ff>ow</color>er Shop"
 
-r:"^<color\=#ff0000ff>書</color>店$"=Bo<color\=#ff0000ff>ok</color>store"
-健<color\=#ff0000ff>身</color>房$"=G<color\=#ff0000ff>y</color>m
+r:"^<color\=#ff0000ff>書</color>店$"="Bo<color\=#ff0000ff>ok</color>store"
+r:"^健<color\=#ff0000ff>身</color>房$"="G<color\=#ff0000ff>y</color>m"
 在健身房鍛煉=Work out in the gym
 r:"^美<color\=#ff0000ff>妝</color>店$"="Cos<color\=#ff0000ff>me</color>tic Shop"
 
 r:"^<color\=#ff0000ff>澡</color>堂$"="Ba<color\=#ff0000ff>th</color>house"
 在澡堂泡澡=<size\=28>Bathe in the bathhouse</size>
 
+r:"^高<color\=#ff0000ff>級</color>超市$"="Pre<color\=#ff0000ff>mi</color>um Supermarket"
 r:"^珠<color\=#ff0000ff>寶</color>店$"="Je<color\=#ff0000ff>we</color>lry Store"
 
-吉祥寺=Kichijoji
 r:"^心<color\=#ff0000ff>明</color>寺$"="T<color\=#ff0000ff>em</color>ple"
 r:"^露<color\=#ff0000ff>天</color>咖啡廳$"="Out<color\=#ff0000ff>do</color>or Cafe"
 炸物專賣店=Fried Food Shop
@@ -456,7 +466,6 @@ r:"^(\d+)天後重置$"="Reset after $1 day(s)"
 ----------
  Area Names
 ---------
-雜司谷=Zōshigaya
 表參道=<size\=18>Omotesan Street</size>
 西參道=<size\=18>Nishi-san Street</size>
 
@@ -478,7 +487,6 @@ r:"^(\d+)天後重置$"="Reset after $1 day(s)"
 
 小巷=Alleyway
 
-新宿  =Shinjuku
 娛樂街=<size\=16>Entertainment Street</size>
 
 -----------------------------------
@@ -599,6 +607,7 @@ Class/ Stats Screen
 等級由高至低=High to Low Lv.
 稀有度由低至高=Low to High ★
 稀有度由高至低=High to Low ★
+推薦陣容=<size\=30>Recommendation</size>
 初始陣容=Starting Lineup
 陣容=Lineup
 
@@ -666,11 +675,12 @@ r:"^治療效果$"="<size\=22>Healing Effect</size>"
 上陣人格面具的屬性會同時附加給主角，提高<color\=#870000>主角屬性</color>。=Wonder's stats are his \n<color\=#870000>equipped Persona stats combined</color>.
 
 ----------
-MENTAL IMAGE
+MENTAL IMAGE (MI)
 ---------
 每啟動或提升一次心象等級，心象點數+1。=+1 Mental Image point each time you activate or level up a Mental Image upgrade
 
 啟動前置心象後解鎖=Unlock after activating\n the preceding skill
+消耗不足，無法啟動。=Insufficient materials to activate.
 r:"^提升生命值(\d+)\n$"="Increase HP by $1\n"
 r:"^提升防禦力(\d+)\n$"="Increase DEF by $1\n"
 r:"^提升攻擊力(\d+)\n$"="Increase ATK by $1\n"
@@ -783,7 +793,7 @@ r:"合成(\d+)個彩色品質的階級(\d)人格面具"=Fuse $1 Rainbow-quality 
 r:"將(\d+)名怪盜的任意(\d+)個非潛能技能各升級(\d+)次"=Level up $2 of your companions' $1 skills $3 times. 
 r:"通關天鵝絨試煉巧匠之作第(\d+)關"=Pass Velvet Room Anubis Challenge Stage $1
 r:"{{A}}探索度達到(\d+)%"=Reach $1% Exploration Progress of {{A}}
-r:"將亞諾希克進化至階級(\d+)"=Evolve Janosik $1 time(s)
+r:"將{{A}}進化至階級(\d+)"=Evolve Janosik $1 time(s)
 r:"與任意一位協同者好感度達到(\d+)級"=Reach Lv. $1 with any of your confidants
 r:"任意人格指數達到(\d+)級"=Reach Lv.$1 of any social skills
 r:"擁有(\d+)個(\d+)級的RANK(\d+)及以上的人格面具"=Have $1 Rank $3 Lv. $2 Persona (or higher)
@@ -988,7 +998,8 @@ sr:"^(.*) {{A}}機獲取啟動圖鑑。$"="Collected on $1."
 扭到時間=Time of Pull
 獎勵預覽=Preview
 收集進度達到100%後可領獎=Claim when reaching 100%
-最多保留100條記錄=Record up to 100 pulls
+r:"^最多保留(\d+)條記錄$"="Record up to $1 pulls"
+r:"^最多保留(\d+)條{{A}}記錄$"="Record up to $1"
 r:"^(.*) {{A}}機獲取啟動圖鑑。$"="Collected on $1 from {{A}} Machine."
 r:"^(.*) 與好友(.*)交換啟動圖鑑。$"="<size\=23>Collected on $1 by exchanging with your friend $2.</size>"
 高級{{A}}盲盒=Rare {{A}} Blind Box
@@ -1001,10 +1012,17 @@ r:"^(.*) 與好友(.*)交換啟動圖鑑。$"="<size\=23>Collected on $1 by exch
 今日剩餘交換次數：= Daily Exchange:
 剩餘心願發佈次數：=Exchange Wishlist: <size\=1>.</size>
 未擁有=Not Owned
-r:"^可交換：(\d+)$"="Can Exchange: $1"
+r:"^可交換：(\d+)$"="<size\=20>Exchange: $1</size>"
 r:"^(\d+)分鐘後可取消$"="Can cancel after $1m"
+r:"^已發佈\（(\d+)小時後可取消\）$"="Posted (Cancelable after $1 hours)"
+暫無人在{{A}}集市發佈心願=No one posted {{A}} wish
 是否取消當前心願（取消後提供物品會返還，且不會扣取發佈次數）？=<size\=28>Do you want to cancel the current wish\n(Return your item and wish amount)?</size>
 當前更改未保存，是否保存？=The current changes are not saved. \nDo you want to save?
+這是您自己發佈的，無法與自己交換哦。=Cannot exchange with yourself.
+您缺少符合條件的{{A}}，無法用於交換哦。=You do not have a {{A}} that meets the criteria for exchange.
+我的交換物=Your Item
+r:"^交換人：(.*)$"="Exchange with: $1"
+sr:"^請確認是否用「(.*)」交換「(.*)」？$"="Confirm if you are exchanging [$1] for [$2]?"
 已擺放。=Displayed.
 已收納。=Stored.
 舞臺展示盒=Stage Display
@@ -1023,9 +1041,9 @@ r:"^(\d+)分鐘後可取消$"="Can cancel after $1m"
 四驅戰車=Four-Wheel Drive
 
 {{A}}中心大街{{B}}機=Shibuya {{B}} Machine
-新宿娛樂街{{A}}機=Shinjuku {{A}} Machine
-吉祥寺{{A}}機=Kichijoji {{A}} Machine
-雜司谷表參道{{A}}機=Zōshigaya {{A}} Machine
+{{A}}娛樂街{{B}}機=Shinjuku {{B}} Machine
+{{A}}{{B}}機={{A}} {{B}} Machine
+{{A}}表參道{{B}}機=Zōshigaya {{B}} Machine
 {{A}}地下商場{{B}}機=<size\=16>Shibuya Underground {{B}} Machine</size>
 
 {{A}}的一天=<size\=21>A Day for {{A}}</size>
@@ -1127,13 +1145,14 @@ Confidants (SL) and City Activities
 ----------
 行動力=Energy
 行動值=Energy Points
-『行動值』\n探索都市所需的基本能量，每天會自動恢復。\n每日05:00恢復5點。=[Energy Points] \nEnergy needed for daily activities. \nAutomatically restore 5 at 05:00 every day.
+『行動值』\n探索都市所需的基本能量，每天會自動恢復。\n每日05:00恢復5點。=[Energy Points] \nEnergy needed for city activities. \nAutomatically restore 5 at 05:00 every day.
 高額獎勵：<color\=#FFFF00>1倍</color>=<size\=24>Bonus Activities: <color\=#FFFF00>1x</color></size>
 高額獎勵：<color\=#FFFF00>3倍</color>=<size\=24>Bonus Activities: <color\=#FFFF00>3x</color></size>
 「高額獎勵」日程將消耗1點行動力，並獲得1倍獎勵。=The [Bonus Activities] will consume 1 Energy and give 1x rewards.
 「高額獎勵」日程將消耗3點行動力，並獲得3倍獎勵。=The [Bonus Activities] will consume 3 Energy and give 3x rewards.
 持有=Own
 消耗=Spend
+r:"消耗：$"="<size\=24>Spend:</size>"
 確定=Confirm
 拒絕=Decline
 
@@ -1141,13 +1160,17 @@ r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n可以去「
 r:"^好感度提升至<color\=#FFC000>rank5</color>後，打工時，可以使人格指數獲得額外的成長。$"="<size\=24>Gain more Social Stats when working after reaching <color\=#FFC000>rank 5</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank9</color>後，\n可以去「{{A}}·藥妝店」打工了。$"="<size\=24>Can now work at the Shibuya Drug Store after reaching <color\=#FFC000>rank 9</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank13</color>後，打工時，可以使人格指數獲得更多的額外成長。$"="<size\=24>Gain even more Social Stats when working after reaching <color\=#FFC000>rank 13</color>.</size>"
-r:"^好感度提升至<color\=#FFC000>rank17</color>後，可以去「新宿·日乃國屋書店」打工了。$"="<size\=24>Can now work at the Shinjuku Bookstore after reaching <color\=#FFC000>rank 17</color>.</size>"
+r:"^好感度提升至<color\=#FFC000>rank17</color>後，可以去「{{A}}·日乃國屋書店」打工了。$"="<size\=24>Can now work at the Shinjuku Bookstore after reaching <color\=#FFC000>rank 17</color>.</size>"
 
 r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n獲得書籍『高效放鬆法』。\n·閱讀後增加泡澡的獎勵$"="<size\=24>Get the book [Efficient Relaxation] which can increase the rewards from Bathe after being confidants with [<color\=#FFC000>Kiyoshi Kurotani</color>].</size>"
 r:"^好感度提升至<color\=#FFC000>rank3</color>後，\n獲得書籍『關於急救的一切』。\n·獲得「{{A}}·藥妝店」打工增益$"="<size\=24>Get the book [All About First Aid] which can increase the rewards from [Shibuya Drug Store] after reaching <color\=#FFC000>rank 3</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank11</color>後，\n獲得書籍『肌肉，GO！』。\n·閱讀後增加健身的獎勵$"="<size\=24>Get the book [Muscle, GO!] which can increase the rewards from Gym after reaching <color\=#FFC000>rank 11</color>.</size>"
-r:"^好感度提升至<color\=#FFC000>rank15</color>後，\n獲得書籍『圖書管理員秘技！』。\n·「新宿·日乃國屋書店」打工增益$"="<size\=24>Get the book [Librarian's Secret Skill!] which can increase the rewards from [Shinjuku Bookstore] after reaching <color\=#FFC000>rank 15</color>.</size>"
+r:"^好感度提升至<color\=#FFC000>rank15</color>後，\n獲得書籍『圖書管理員秘技！』。\n·「{{A}}·日乃國屋書店」打工增益$"="<size\=24>Get the book [Librarian's Secret Skill!] which can increase the rewards from [Shinjuku Bookstore] after reaching <color\=#FFC000>rank 15</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank20</color>後，\n獲得書籍『電影與電影評論家』。\n·閱讀後增加看電影的獎勵$"="<size\=24>Get the book [Film and Film Critics] which can increase the rewards from Movies after reaching <color\=#FFC000>rank 20</color>.</size>"
+
+r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n{{B}}地區，大部分街頭店鋪商品有小幅降價。$"="<size\=24>Most shop in {{B}} have a small discount after being confidants with [<color\=#FFC000>Runa Dogenzaka</color>]</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n{{A}}地區，大部分街頭店鋪商品有小幅降價。$"="<size\=24>Most shop in {{A}} have a small discount after after reaching <color\=#FFC000>rank $1</color>.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n{{A}}和{{B}}地區，大部分街頭店鋪商品有小幅降價。$"="<size\=24>Most shop in {{A}} and {{B}} have a small discount after after reaching <color\=#FFC000>rank $1</color>.</size>"
 
 解鎖新能力=Unlock Skill
 人格指數=Social Stats
@@ -1222,10 +1245,8 @@ sr:"人格指數「(.*)」達到(\d+)級解鎖$"="Unlock when $1 reached rank $2
 
 去澡堂泡澡=<size\=24>Bathe in\nan Onsen</size>
 去健身房鍛煉=<size\=24>Work out \nat the gym</size>
-去四軒茶屋看電影=<size\=24>Watch a movie\nin Yongen-Jaya</size>
 去看電影=Watch a movie
 去{{A}}看電影=<size\=24>Watch a movie\nin Shibuya</size>
-去新宿看電影=<size\=24>Watch a movie\nin Shinjuku</size>
 在家裡讀書=<size\=24>Read a book\nat home</size>
 在圖書館讀書=<size\=24>Read a book\nin the Library</size>
 在圖書室學習=<size\=24>Study in \nthe Library</size>
@@ -1254,8 +1275,8 @@ sr:"人格指數「(.*)」達到(\d+)級解鎖$"="Unlock when $1 reached rank $2
 拉麵力士對決=<size\=24>Do the \nRamen Challenge</size>
 挑戰=Challenge
 嘗試新口味咖啡=<size\=28>Try new coffee flavors</size>
-吉祥寺的露天咖啡廳似乎又推出了新口味的咖啡……=There's a new flavor of coffee in the Outdoor Cafe
-要去吉祥寺的露天咖啡廳挑戰一下新口味的咖啡嗎？=<size\=27>Want to challenge yourself to a new flavor of coffee in the Outdoor Cafe?</size>
+{{A}}的露天咖啡廳似乎又推出了新口味的咖啡……=There's a new flavor of coffee in the Outdoor Cafe
+要去{{A}}的露天咖啡廳挑戰一下新口味的咖啡嗎？=<size\=27>Want to challenge yourself to a new flavor of coffee in the Outdoor Cafe?</size>
 人氣很高的咖啡廳……=This is a popular Cafe...
 r:"^要在這裡品嘗新口味的咖啡嗎\(<color\=#ff0000>每次(\d+)現金</color>\)？$"="Want to try a new flavor of coffee here?\n(<color\=#ff0000>Spend $1 Yen</color>)"
 去卡拉OK唱歌=<size\=24>Sing Karaoke \nin Kichijoji</size>
@@ -1317,8 +1338,8 @@ r:"^要在這裡品嘗新口味的咖啡嗎\(<color\=#ff0000>每次(\d+)現金</
 要在這家藥妝店打工嗎？=Do you want to work part-time \nat this Drug Store?
 
 去炸物專賣店打工=<size\=24>Work part-time\nat a Fried Food Shop</size>
-吉祥寺的炸物專賣店今天似乎可以排班……=I can work at the Kichijoji \nFried Food Shop today...
-吉祥寺的炸物專賣店今天非常忙碌……=<size\=26>The Fried Food Shop is busy today...</size>
+{{A}}的炸物專賣店今天似乎可以排班……=I can work at the Kichijoji \nFried Food Shop today...
+{{A}}的炸物專賣店今天非常忙碌……=<size\=26>The Fried Food Shop is busy today...</size>
 要在這家炸肉餅店打工嗎？=Do you want to work part-time \nat this Fried Food Shop?
 
 在{{A}}打工=<size\=24>Work part-time\nat {{A}}</size>
@@ -1342,12 +1363,10 @@ r:"^要在這裡品嘗新口味的咖啡嗎\(<color\=#ff0000>每次(\d+)現金</
 r:"^幫助{{A}}$"="<size\=24>Help out\n{{A}}</size>"
 
 陪{{A}}拍照=<size\=24>Take photos\n with {{A}}</size>
-如果對拍攝照片感興趣，就去新宿找攝影師{{A}}吧。=<size\=28>If you're interested in taking photos, then let's go to Shinjuku and find the photographer {{A}}</size>
+如果對拍攝照片感興趣，就去{{B}}找攝影師{{A}}吧。=<size\=28>If you're interested in taking photos, then let's go to Shinjuku and find the photographer {{A}}</size>
 要拍照嗎？=Want to take photos?
 聊聊攝影=Talk about photography
 要陪{{A}}拍攝照片嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to take photos with {{A}}? (<color\=#ff0000>Spend 1 Energy Point</color>)
-唉……=Sigh...
-怎麼了？=What's wrong?
 一直嘆氣可不好=<size\=24>It's not good to keep sighing</size>
 消沉？=Depressed?
 確實氣氛微妙=It does feel weird
@@ -1374,6 +1393,7 @@ r:"^幫助{{A}}$"="<size\=24>Help out\n{{A}}</size>"
 要陪{{A}}一起去嗎？=Want to hang out with {{A}}?
 要和{{A}}一起出去玩嗎？=Want to hang out with {{A}}?
 r:"^要帶{{A}}回家嗎……$"="Want to bring {{A}} home?"
+r:"^帶{{A}}回家吧……$"="Let's bring {{A}} home..."
 r:"^那就帶{{A}}回家吧……$"="Then let's bring {{A}} home..."
 決定帶{{A}}回自己家……=Decided to bring {{A}} home...
 
@@ -1405,6 +1425,15 @@ r:"^{{A}}似乎有話要說，要陪她嗎？$"="{{A}} seems to have something t
 遠處的街道=Distant streets
 雪原=Snowfields
 
+醉意入懷=<size\=24>Drunken Embrace</size>
+{{A}}想去你家調杯酒……={{A}} wants to make a drink \nat your home...
+隨時可以=Anytime
+我還沒準備好……=I'm not ready...
+怎麼了嗎？=What's wrong?
+要開始調了嗎？=<size\=24>Are you going to start mixing?</size>
+誤會了也沒什麼吧？=<size\=27>Does it matter if I mistook you?</size> <size\=1>.</size>
+真的只是「來看看」？=<size\=32>Really want to "look" only?</size> <size\=1>.</size>
+
 遊戲時間到=<size\=24>Game Time</size>
 {{A}}想和你一起去遊戲廳……={{A}} wants to go to \nthe arcade with you...
 要和{{A}}去哪裡玩呢？=Where should we hang out?
@@ -1428,50 +1457,14 @@ r:"^{{A}}似乎有話要說，要陪她嗎？$"="{{A}} seems to have something t
 決定和{{A}}一起出去了……=<size\=28>Decided to go out with {{A}}...</size> 
 決定和{{A}}一起行動了……=<size\=28>Decided to hang out with {{A}}...</size> 
 
-是的=Yes
-好啊=Okay
-可以啊=Okay
-有時間=I have time
-走吧=Let's go
-一起去=Go together
-一起度過=Spend time together
-我和你一起去=I'll go with you
-那就陪你一起去=I'll go with you
-還是算了=I'd rather not
-要去別的地方……=<size\=24>I have somewhere else to go...</size>
-安靜傾聽=Listen quietly
-打招呼=Say hi
-讓我想想=Let me think
-再見=Goodbye
-稍後再說=I'm in a hurry
-今天很忙……=I'm busy today...
-今天沒空=I'm not available today
-今天不是很方便=Not convenient today
-在酒吧度過=Spend time in the bar
-另選日子吧……=Choose another day...
-時間不太方便……=Not a good time...
-有別的事要做=<size\=30>Have other things to do</size>
-現在不太方便……=<size\=28>Now is not a good time...</size>
-有其他安排=<size\=30>Got other arrangements</size>
-有其他安排了……=<size\=29>Got other arrangements...</size>
-現在有點困難……=Now is a bit tough...
-下次再說=Next time
-你好呀=Hello
-摸摸它=Pet it
-請多指教=Nice to meet you
-請多關照=Nice to meet you
-沒問題=No problem
-沒有問題=No problem
-交給我吧=Leave it to me
-沒有問題=No problem
-辛苦了！=Good work!
+r:"^似乎是和{{A}}<color\=#FFC000>第一次</color>去這個地方，應該更能增進感情。$"="<size\=25>This is the <color\=#FFC000>first time</color> I have gone to that place with {{A}}.\nWe should be able to grow closer.</size>"
 
 {{A}}有著非常熱鬧的<color\=#ff0000>商業街</color>和<color\=#ff0000>電影院</color>啊，\n要前往那裡去看看嗎？=<size\=30>There are crowded <color\=#ff0000>Central Street</color> and <color\=#ff0000>Movie Theater</color> in Shibuya. Want to go there?</size>
 要<color\=#ff0000>回家</color>嗎？\n還是說去附近的<color\=#ff0000>餐廳</color>……=Are we going <color\=#ff0000>Home</color>? \nOr going to nearby <color\=#ff0000>Restaurants</color>...
 下北澤啊……那是在<color\=#ff0000>學校</color>附近吧，要去嗎？=<size\=30>Shimokitazawa... that's near the <color\=#ff0000>School</color>. \nWant to go there?</size>
-四軒茶屋似乎有個<color\=#ff0000>擊球場</color>，要去那裡看看嗎？=There is a <color\=#ff0000>batting cage</color> in Yongen-Jaya. Want to go there?
-新宿那裡似乎有條充滿慾望的<color\=#ff0000>娛樂街</color>啊，\n確定要前去那裡嗎？=<size\=30>There seems to be an <color\=#ff0000>Entertainment Street</color> full of desires in Shinjuku. Want to go there?</size>
-吉祥寺好像有非常著名的<color\=#ff0000>步行街</color>，\n要去隨便逛逛嗎？=<size\=29>There is a famous <color\=#ff0000>Pedestrian Street</color> in Kichijoji. Want to go for a walk?</size>
+{{A}}似乎有個<color\=#ff0000>擊球場</color>，要去那裡看看嗎？=There is a <color\=#ff0000>batting cage</color> in Yongen-Jaya. Want to go there?
+{{A}}那裡似乎有條充滿慾望的<color\=#ff0000>娛樂街</color>啊，\n確定要前去那裡嗎？=<size\=30>There seems to be an <color\=#ff0000>Entertainment Street</color> full of desires in Shinjuku. Want to go there?</size>
+{{A}}好像有非常著名的<color\=#ff0000>步行街</color>，\n要去隨便逛逛嗎？=<size\=29>There is a famous <color\=#ff0000>Pedestrian Street</color> in Kichijoji. Want to go for a walk?</size>
 
 充滿自然氣息的<color\=#ff0000>公園</color>，\n是散步聊天的好地方啊，要去看看嗎？=This is a <color\=#ff0000>Park</color> full of nature, it's a great place to walk and chat. Want to go there?
 著名的時尚街道<color\=#ff0000>竹之子小路</color>就在原宿，\n要去看看最新的潮流風向嗎？=<size\=29>The famous fashionable <color\=#ff0000>Takenoko Street</color> is in Harajuku. Want to check out the latest trends?</size>
@@ -1492,7 +1485,7 @@ r:"^{{A}}似乎有話要說，要陪她嗎？$"="{{A}} seems to have something t
 磨練<color\=#FFC000>靈巧</color>的話，好像更能受到{{A}}的關注=<size\=25>Increasing <color\=#FFC000>Proficiency</color> might attract {{A}}'s attention</size>
 去太平堂書店逛一逛，或許能買到有用的書籍=<size\=25>A visit to the Shibuya Bookstore might yield useful books</size>
 聽說有新電影在上映=I hear there's a new movie coming out
-聽說在新宿街頭，有一位神秘的占卜師=<size\=25>I heard there's a mysterious fortune-teller in Shinjuku</size> 
+聽說在{{A}}街頭，有一位神秘的占卜師=<size\=25>I heard there's a mysterious fortune-teller in Shinjuku</size> 
 聽說{{A}}有一個瀟灑的吉他少女在演唱=<size\=25>I heard there's a chic girl in Shibuya who plays the guitar</size>
 聽說在{{A}}，有一個小女孩在進行募捐=<size\=25>I heard there's a little girl collecting donations in Shibuya</size> 
 似乎掌握了觀察的心得=I have masted Observation Insights
@@ -1506,7 +1499,7 @@ r:"^{{A}}似乎有話要說，要陪她嗎？$"="{{A}} seems to have something t
 
 r:"^基於這個選擇，和{{A}}的關係將產生重大變化。$"="Based on this choice, your relationship with {{A}} will undergo a major change."
 <color\=#F7F95C>一旦確認，將在一段時間內無法改變關係。</color>=<color\=#F7F95C>Once confirmed, you cannot change the relationship for some time.</color>
-sr:"^確定要和<color\=#F7F95C>{{A}}</color>成為「(.*)」關係？\n※該選擇會對劇情走向、都市日程等功能產生影響。$"="Are you sure you want to become $1 with <color\=#F7F95C>{{A}}</color>? \nThis choice will have an impact on the plot and daily activities."
+sr:"^確定要和<color\=#F7F95C>{{A}}</color>成為「(.*)」關係？\n※該選擇會對劇情走向、都市日程等功能產生影響。$"="Are you sure you want to become $1 with <color\=#F7F95C>{{A}}</color>? \nThis choice will have an impact on the plot and city activities."
 
 為了同伴，應該的=<size\=28>For the sake of my ally</size>
 因為{{A}}對我來說很重要=<size\=28>Because {{A}} is \nvery important to me</size>
@@ -1566,7 +1559,7 @@ Chihaya's Fortune (Tarot)
 ----------
 
 御船千早的占卜=<size\=24>Fortune-telling \nfrom Chihaya Mifune</size>
-聽聞新宿有一位神秘的占卜師，要找她去占卜一下今天的運勢嗎？=<size\=28>I heard that there is a mysterious fortune-teller in Shinjuku.\nWant to get a fortune reading?</size>
+聽聞{{A}}有一位神秘的占卜師，要找她去占卜一下今天的運勢嗎？=<size\=28>I heard that there is a mysterious fortune-teller in Shinjuku.\nWant to get a fortune reading?</size>
 r:"^御<color\=#ff0000ff>船</color> 千早$"="Chi<color\=#ff0000ff>ha</color>ya Mifune"
 歡迎光臨～\n今天要進行占卜嗎？=Welcome～\nWould you like to get a reading today?
 「本日運勢占卜」一次1000元。=Fortune reading will cost 1000 yen.
@@ -1608,30 +1601,30 @@ r:"^在接下來3次學校『上課答題』時，額外獲得更多『人格指
 r:"^在接下來3次透過都市日程進行『打工』獲得現金時，額外獲得更多現金。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 3 times you work, gain more yen.\n<color\=#FFC000>（$1 time(s) left）</color>"
 
 教皇=Hierophant
-sr:"^在接下來4次透過都市日程獲得『(.*)』人格指數時，額外獲得更多『人格指數』。$"="The next 4 times you gain $1 from daily activities, gain more Social Stats."
-sr:"^在接下來4次透過都市日程獲得『(.*)』人格指數時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 4 times you gain $1 from daily activities, gain more Social Stats.\n<color\=#FFC000>（$2 time(s) left）</color>"
+sr:"^在接下來4次透過都市日程獲得『(.*)』人格指數時，額外獲得更多『人格指數』。$"="The next 4 times you gain $1 from city activities, gain more Social Stats."
+sr:"^在接下來4次透過都市日程獲得『(.*)』人格指數時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 4 times you gain $1 from city activities, gain more Social Stats.\n<color\=#FFC000>（$2 time(s) left）</color>"
 
 戀人=Lovers
-在接下來3次透過都市日程『邀約任意協同者』獲得好感時，額外更多好感度。=The next 3 times you gain Confidant Points from daily activities, gain more Confidant Points.
-r:"^在接下來3次透過都市日程『邀約任意協同者』獲得好感時，額外更多好感度。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 3 times you gain Confidant Points from daily activities, gain more Confidant Points.\n<color\=#FFC000>（$1 time(s) left）</color>"
+在接下來3次透過都市日程『邀約任意協同者』獲得好感時，額外更多好感度。=The next 3 times you gain Confidant Points from city activities, gain more Confidant Points.
+r:"^在接下來3次透過都市日程『邀約任意協同者』獲得好感時，額外更多好感度。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 3 times you gain Confidant Points from city activities, gain more Confidant Points.\n<color\=#FFC000>（$1 time(s) left）</color>"
 
 戰車=Chariot
 
 正義=Justice
-在下次透過都市日程, 幫助其他角色時，額外獲得獎勵。=The next time you help other characters from daily activities, gain more rewards.
-r:"^在下次透過都市日程, 幫助其他角色時，額外獲得獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you help other characters from daily activities, gain more rewards.\n<color\=#FFC000>（$1 time(s) left）</color>"
+在下次透過都市日程, 幫助其他角色時，額外獲得獎勵。=The next time you help other characters from city activities, gain more rewards.
+r:"^在下次透過都市日程, 幫助其他角色時，額外獲得獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you help other characters from city activities, gain more rewards.\n<color\=#FFC000>（$1 time(s) left）</color>"
 
 隱者=Hermit
 在接下來3次透過都市日程在『家裡』學習、打遊戲、打掃衛生時，額外獲得更多『人格指數』。=The next 3 times you study, game or clean at home, gain more Social Stats.
 r:"^在接下來3次透過都市日程在『家裡』學習、打遊戲、打掃衛生時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 3 times you study, game or clean at home, gain more Social Stats.\n<color\=#FFC000>（$1 time(s) left）</color>"
 
 命運之輪=Fortune
-在下次透過都市日程獲得『任意人格指數』時，額外獲得更多『人格指數』。=The next time you gain Social Stats from daily activities, gain more Social Stats.
-r:"^在下次透過都市日程獲得『任意人格指數』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you gain Social Stats from daily activities, gain more Social Stats.\n<color\=#FFC000>（$1 time(s) left）</color>"
+在下次透過都市日程獲得『任意人格指數』時，額外獲得更多『人格指數』。=The next time you gain Social Stats from city activities, gain more Social Stats.
+r:"^在下次透過都市日程獲得『任意人格指數』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you gain Social Stats from city activities, gain more Social Stats.\n<color\=#FFC000>（$1 time(s) left）</color>"
 
 力量=Strength
-在接下來2次透過都市日程進行『健身房』鍛鍊時，額外獲得更多『人格指數』。=The next 2 times you workout in the gym from daily activities, gain more Social Stats.
-r:"^在接下來2次透過都市日程進行『健身房』鍛鍊時，額外獲得更多『人格指數』。$"="The next 2 times you workout in the gym from daily activities, gain more Social Stats.\n<color\=#FFC000>（$1 time(s) left）</color>"
+在接下來2次透過都市日程進行『健身房』鍛鍊時，額外獲得更多『人格指數』。=The next 2 times you workout in the gym from city activities, gain more Social Stats.
+r:"^在接下來2次透過都市日程進行『健身房』鍛鍊時，額外獲得更多『人格指數』。$"="The next 2 times you workout in the gym from city activities, gain more Social Stats.\n<color\=#FFC000>（$1 time(s) left）</color>"
 
 倒吊人=Hanged Man
 
@@ -1648,20 +1641,20 @@ sr:"^在下次通過『(.*)』、『(.*)』關卡時，額外獲得大量獎勵�
 星星=Star
 
 月亮=Moon
-在接下來2次『夜晚』進行都市行程獲得『任意人格指數』時，額外獲得更多『人格指數』。=The next 2 times you gain Social Stats from daily activities at nighttime, gain more Social Stats.
-r:"^在接下來2次『夜晚』進行都市行程獲得『任意人格指數』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you gain Social Stats from daily activities at nighttime, gain more Social Stats.\n<color\=#FFC000>（$1 time(s) left）</color>"
+在接下來2次『夜晚』進行都市行程獲得『任意人格指數』時，額外獲得更多『人格指數』。=The next 2 times you gain Social Stats from city activities at nighttime, gain more Social Stats.
+r:"^在接下來2次『夜晚』進行都市行程獲得『任意人格指數』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you gain Social Stats from city activities at nighttime, gain more Social Stats.\n<color\=#FFC000>（$1 time(s) left）</color>"
 
 太陽=Sun
-在接下來2次『放學後』或『下午』進行都市行程獲得『任意人格指數』時，額外獲得更多『人格指數』。=The next 2 times you gain Social Stats from daily activities at daytime, gain more Social Stats.
-r:"^在接下來2次『放學後』或『下午』進行都市行程獲得『任意人格指數』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you gain Social Stats from daily activities at daytime, gain more Social Stats.\n<color\=#FFC000>（$1 time(s) left）</color>"
+在接下來2次『放學後』或『下午』進行都市行程獲得『任意人格指數』時，額外獲得更多『人格指數』。=The next 2 times you gain Social Stats from city activities at daytime, gain more Social Stats.
+r:"^在接下來2次『放學後』或『下午』進行都市行程獲得『任意人格指數』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you gain Social Stats from city activities at daytime, gain more Social Stats.\n<color\=#FFC000>（$1 time(s) left）</color>"
 
 審判=Judgement
-在接下來2次透過都市日程『邀約任意怪盜團成員』獲得好感度時，額外更多好感度。=The next 2 times you gain Confidant Points with a Phantom Thief from daily activities, gain more Confidant Points.
-r:"^在接下來2次透過都市日程『邀約任意怪盜團成員』獲得好感度時，額外更多好感度。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you gain Confidant Points with a Phantom Thief from daily activities, gain more Confidant Points.\n<color\=#FFC000>（$1 time(s) left）</color>"
+在接下來2次透過都市日程『邀約任意怪盜團成員』獲得好感度時，額外更多好感度。=The next 2 times you gain Confidant Points with a Phantom Thief from city activities, gain more Confidant Points.
+r:"^在接下來2次透過都市日程『邀約任意怪盜團成員』獲得好感度時，額外更多好感度。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you gain Confidant Points with a Phantom Thief from city activities, gain more Confidant Points.\n<color\=#FFC000>（$1 time(s) left）</color>"
 
 世界=World
-在接下來2次透過都市日程獲得『任意人格指數』時，額外獲得更多『人格指數』。=The next 2 times you gain Social Stats from daily activities, gain more Social Stats.
-r:"^在接下來2次透過都市日程獲得『任意人格指數』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you gain Social Stats from daily activities, gain more Social Stats.\n<color\=#FFC000>（$1 time(s) left）</color>"
+在接下來2次透過都市日程獲得『任意人格指數』時，額外獲得更多『人格指數』。=The next 2 times you gain Social Stats from city activities, gain more Social Stats.
+r:"^在接下來2次透過都市日程獲得『任意人格指數』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you gain Social Stats from city activities, gain more Social Stats.\n<color\=#FFC000>（$1 time(s) left）</color>"
 
 /////////////////////////
 /// i. Metaverse Farm ///
@@ -1669,26 +1662,36 @@ r:"^在接下來2次透過都市日程獲得『任意人格指數』時，額外
 
 r:"^厄抑之境$"="Metaverse Farm"
 『暗影獵域』=[Persona Farm]
+「暗影獵域」=[Persona Farm]
 暗影獵域=Persona Farm
 厄抑之境·人格面具=Persona Farm
 『旖旎香調』=[Character Ascension Farm]
+「旖旎香調」=[Character Ascension Farm]
 旖旎香調=Character Ascension Farm
 『裝配冶藝』=[Weapon Ascension Farm]
+「裝配冶藝」=[Weapon Ascension Farm]
 裝配冶藝=Weapon Ascension Farm
 『靈之參悟』=[Incense Farm]
+「靈之參悟」=[Incense Farm]
 靈之參悟=Incense Farm
 『榮級求索』=[Character EXP Farm]
+「榮級求索」=[Character EXP Farm]
 榮級求索=Character EXP Farm
 『輜械求索』=[Weapon EXP Farm]
+「輜械求索」=[Weapon EXP Farm]
 輜械求索=Weapon EXP Farm
 『人格求索』=[Persona EXP Farm]
+「人格求索」=[Persona EXP Farm]
 人格求索=Persona EXP Farm
 『財賂求索』=[Soul Gems Farm]
+「財賂求索」=[Soul Gems Farm]
 財賂求索=Soul Gems Farm
 啟示套裝=Revelation Card Farm
 r:"^厄抑之境·啟示套裝$"="Revelation Card Farm"
+『穹星求索』=[Bell of Stars Farm]
+「穹星求索」=[Bell of Stars Farm]
+穹星求索=Bell of Stars Farm
 
-消耗：= 
 武器突破材料=Weapon Ascension
 掉落高級技能材料=Palace Boss (30)
 怪盜升級材料=Char Lv (20)
@@ -1708,10 +1711,17 @@ r:"持有印記：(\d+)"=Mark Owned: $1
 r:"^區域$"="Area"
 嗯？要從印象空間撤退，返回都市嗎？=Hm? Want to retreat from Mementos\nand head back to the city?
 r:"^領獎需要消耗(\d+)點體力，\n當前體力不足，是否確認潛入？$"="You need to consume $1 Stamina \nin order to claim the rewards.\nYou don't have enough Stamina, \ndo you still want to infiltrate?"
+本週「往日回溯」剩餘領獎次數已耗盡，\n<color\=#ff3b37>無法獲得挑戰獎勵</color>，是否繼續挑戰？=Reached weekly limit.\n<color\=#ff3b37>You will not gain rewards</color>, \ndo you still want to challenge?
 逃離後不會獲得本次戰鬥獎勵！\n確定要逃離戰鬥嗎？=You will not receive rewards from this battle after escaping! \nAre you sure you want to escape?
 逃離戰鬥後將重置關卡。\n確定要逃離戰鬥嗎？=Escaping will reset the level.\nAre you sure you want to escape?
 
-sr:"^挑戰(.*)獲得$"="<size\=25>Complete $1</size>"
+sr:"^挑戰(.*)獲得$"="<size\=22>Complete $1</size>"
+工作臺合成=Workbench Crafting
+r:"^材料轉化\（可轉化：(\d+)個\）$"="<size\=25>Material Conversion (Convertible: $1)</size>"
+快速轉化=<size\=36>Conversion</size>
+將消耗同類型材料轉化，溢出材料自動返還=<size\=28>Consume the same type of materials. \nAutomatically return overflowed materials.</size>
+合成數量：=Convert:
+
 r:"透過契約之間·認知特賣兌換$"="Exchange from Cognition Shop"
 r:"^透過契約之間·認知精選兌換$"="<size\=23>Exchange from Premium Cognition Shop</size>"
 獲取途徑=Obtain Method:
@@ -1728,6 +1738,7 @@ r:"^挑戰閼凶夢之扉$"="Challenge Guild Boss"
 r:"^助戰回饋$"="Exchange from Assist Reward"
 r:"^{{A}}探索度獎勵$"="Palace Exploration Reward"
 
+當前陣容額外獎勵加成：=Bonus rewards for the current lineup:
 每日領取補給\n濃縮咖啡<color\=#FFEC00>x1</color>=Claim daily\nEspresso <color\=#FFEC00>x1</color>
 r:"^活動期間，成功挑戰「養成材料」中的技能升級材料、怪盜潛能材料、武器突破材料副本，可以獲得雙份獎勵。$"="During the event, you can get double rewards after completing Incense Farm, Character Ascension Farm, Weapon Ascension Farm."
 r:"^今日雙份剩餘次數：$"="Today  2x  Rewards:"
@@ -1856,11 +1867,11 @@ r:"^可領取$"="Claim"
 確定買這個嗎？=Are you sure you want to buy this?
 看清楚啦～不要買錯了阿！=Look closely～\nDon’t buy the wrong one!
 r:"^加贈$"="Get            <size\=1>.</size>"
+r:"^累計簽到(\d+)日，即可獲得<size\=66><sprite\=19></size>X10$"="Log in for $1 days to get <size\=66><sprite\=19></size>X10"
 
-///////////////////////////////////////////
-/// k. Velvet Trials & Sea of Souls (VT) (SoS)///
-///////////////////////////////////////////
-
+----------
+Velvet Trials (VT)
+----------
 r:"^解明怪盜對在場怪盜的<color\=#FFFC40>屬性提升</color>效果，提升至(\d+%)$"="Increase the <color\=#FFFC40>Stats Boost</color> effect from Elucidate Thieves to $1"
 巧匠之作=<size\=19>Artisan's Work</size>
 
@@ -1903,73 +1914,6 @@ r:"^X(\d+)倍$"="<size\=30>X$1 Score</size>"
 昨日辰星獎勵：=Daily Rewards:
 每日根據天鵝絨試煉總星級發放獎勵。=Get daily rewards based on total ★.
 
-心之海試煉=SoS Trials
-段位狀態：=Status:
-<color\=#FFFFFF>下期保級</color>=Relegation
-<color\=#FFF000>下期晉級</color>=<color\=#FFF000>Promotion!</color>
-保級條件：=Relegation:
-r:"^排名<color\=#FFF000>前(\d+)</color>$"=" Rank <color\=#FFF000>Top $1</color>"
-r:"^<color\=#FFFFFF>\(當前<color\=#FFF000>第(\d+)名</color>\)</color>$"="<color\=#FFFFFF>(Currently <color\=#FFF000>Rank $1</color>)</color>"
-r:"^<color\=#ef0000>下期降級</color>$"="<color\=#ef0000>Demotion</color>"
-r:"^降級條件：排名(\d+)名以後$"="Demotion: After Top $1"
-r:"^<color\=#8B8A8A>\(當前60%以後\)</color>$"="<color\=#8B8A8A>(Currently above 60%)</color>"
-r:"^總積分達到<color\=#FFF000> (\d+) </color>$"="Reach <color\=#FFF000> $1 </color> Total Score"
-r:"^分數：暫無記錄$"="Score: No Record"
-暫無記錄=No Record
-r:"^分數：$"="Score:"
-r:"^上半場$"="<size\=27>Side A</size>"
-r:"^下半場$"=" <size\=27>Side B</size>"
-r:"^僅展示當前段位前(\d+)名怪盜資訊$"="Only the info of the top $1 Phantom Thieves will be shown"
-8等星=8th Star
-7等星=7th Star
-6等星=6th Star
-5等星=5th Star
-4等星=4th Star
-3等星=3rd Star
-2等星=2nd Star
-1等星=1st Star
-r:"(\d)等星(\d)階"=$1-Star Tier $2
-首次晉級至新段位後可獲得=Upon promotion to a new Star rank for the first time, you can earn the following rewards.
-排名獎勵=<size\=36>Ranking</size>
-本期試煉結束後郵件發放，參與一次試煉可獲得=Rewards will be given on the end of this trial
-僅展示當前段位前999名怪盜團資訊=Shows up to 999 players in the current trial.
-總分數：=Score:
-本期排名：=Top: 
-排名：=Top
-以後=^
-段位獎勵=<size\=28>Rank Awards</size>
-任務獎勵隨每期心之海進行重置=Rewards will reset on the end of this trial
-r:"^累計獲得星數（<color\=#EF0000>(\d+)</color>/(\d+)）$"="Get (<color\=#EF0000>$1</color>/$2）Stars"
-r:"^累計獲得（<color\=#EF0000>(\d+)</color>/(\d+)）分$"="Get (<color\=#EF0000>$1</color>/$2) Points"
-
-晉級條件：=<size\=24>Requirement:</size>
-r:"累計獲得<color\=#FFF000> (\d+) </color>顆星"=<color\=#FFF000> $1 </color>Stars
-剩餘時間：=Time Left:
-r:"(\d+)回合內取得勝利"=Win in $1 turn(s)
-通關前置關卡後解鎖。=Unlock after clearing the previous stage.
-
-挑戰獎勵=<size\=36>Rewards</size>
-累計星級=<size\=24>Total Stars</size>
-r:"累計獲得星數（(\d+)\/(\d+)）"=Get ($1/$2) Stars
-r:"累計獲得（(\d+)\/(\d+)）分"=Get ($1/$2) Points
-
-積分係數：=Multiplier:
-成功抵禦次數：=<size\=27>Round(s) Survived:</size>
-r:"(\d+)次行動內完成"=Win in $1 turn(s)
-操作提示=Controls
-當前有保存的進度，是否繼續挑戰？=Do you want to continue the challenge where you left off?
-選擇「清空進度」會清除保存的記錄並重新挑戰。=Select [No] to reset progress and retry.
-關卡尚未通關，是否保存當前進度並暫時離開？=Do you want to save your progress and leave?
-選擇「清空進度」會重置當前關卡進度並重新挑戰。=Select [No] to reset the level and retry.
-是否重置關卡進度並清除當前挑戰陣容？（已獲得的歷史積分不會清空）=Reset progess and lineup? (This will not erase your high score)
-
-試煉一=Trial 1
-試煉二=Trial 2
-試煉三=Trial 3
-r:"^擊敗低階陰影（(\d+)/(\d+)）$"="Defeat low level \nShadows ($1/$2)"
-r:"^擊敗菁英陰影（(\d+)/(\d+)）$"="Defeat elite Shadows ($1/$2)"
-r:"^乘坐電梯$"="Take the Elevator"
-
 /////////////////
 /// z. Others ///
 /////////////////
@@ -1984,6 +1928,17 @@ P5X營運團隊=P5X Team
 全部=All
 主要=Main
 支線=Side
+故事尚未結束，請期待後續發展。=The story is not over yet, stay tuned!
+目標=Goal
+
+晴天=Sunny
+雨天=Rainy
+上午=Morning
+放學後=After School
+傍晚=Evening
+夜晚=Night
+sr:"^當前正處於任務中，是否立即切換時間到<color\=#FFC000>(.*)</color>來進行都市日程呢？$"="Does not meet the time requirement.\nWant to change the time to \n<color\=#FFC000>$1</color> to do city activities?"
+sr:"^當前時間不符合要求，\n是否等待到<color\=#FFC000>(.*)</color>的<color\=#FFC000>(.*)</color>進行任務？$"="Does not meet the time requirement.\nWant to change the time to \n<color\=#FFC000>$1</color> <color\=#FFC000>$2</color> to start the mission?"
 
 // Friends Screen
 輸入玩家的ID進行搜索=Search by Player ID
@@ -1998,13 +1953,14 @@ P5X營運團隊=P5X Team
 用紙包好=Wrap it in paper
 
 查看SNS訊息=View SNS Message
-前往雜司谷=Go to Zōshigaya
 前往客廳=Go to the living room
 
 推薦陣容等級：=Recommended level:
 推薦屬性：=Elements:
-怪盜角色技能的強度較低=Character Skill Lv. is low
+怪盜角色技能的強度較低=Character Skills Lv. are low
+怪盜角色<color\=#EF0000>技能</color>的強度較低=Character <color\=#EF0000>Skills</color> Lv. are low
 怪盜角色<color\=#EF0000>技能</color>、啟示卡的強度較低=Character <color\=#EF0000>Skills</color>, Revelation Cards are weak
+怪盜角色<color\=#EF0000>技能</color>、武器、啟示卡的強度較低=Character <color\=#EF0000>Skills</color>, Weapons, Revelation Cards are weak
 
 ------------------------------------
 ----- IV. Velvet Room Personas -----
@@ -2066,188 +2022,33 @@ r:"是否遺忘技能「(.*)」？\n<color\=#FF0000>此操作不可撤銷！</co
 在厄抑之境中挑戰Ⅵ階、Ⅶ階人格面具副本後獲得……應該可以用於在厄抑巡禮中兌換獎勵。=Gained from challenging Rank VI, Rank VII Persona Farm, can be used to exchange from Challenge Reward.
 不羈紋章·空=<size\=18>Wild Card Emblem - Dull</size>
 在厄抑之境中挑戰所有人格面具副本後均可獲得……應該可以用於在厄抑巡禮中兌換獎勵。=Gained from challenging any Persona Farm, can be used to exchange from Challenge Reward.
-『不羈紋章·虹』\n在心之海試煉等玩法中獲得……應該可以用於在厄抑巡禮中兌換獎勵。=[Wild Card Emblem - Rainbow]\nGained from Sea of Souls Trials, can be used to exchange from Challenge Reward.
-『不羈紋章·耀』\n在厄抑之境中挑戰Ⅵ階、Ⅶ階人格面具副本後獲得……應該可以用於在厄抑巡禮中兌換獎勵。=[Wild Card Emblem - Shiny]\nGained from challenging Rank VI, Rank VII Persona Farm, can be used to exchange from Challenge Reward.
-『不羈紋章·空』\n在厄抑之境中挑戰所有人格面具副本後均可獲得……應該可以用於在厄抑巡禮中兌換獎勵。=[Wild Card Emblem - Dull]\nGained from challenging any Persona Farm, can be used to exchange from Challenge Reward.
+『不羈紋章·虹』\n在心之海試煉等玩法中獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=27>[Wild Card Emblem - Rainbow]\nGained from Sea of Souls Trials, can be used to exchange from Challenge Reward.</size>
+『不羈紋章·耀』\n在厄抑之境中挑戰Ⅵ階、Ⅶ階人格面具副本後獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=27>[Wild Card Emblem - Shiny]\nGained from challenging Rank VI, Rank VII Persona Farm, can be used to exchange from Challenge Reward.</size>
+『不羈紋章·空』\n在厄抑之境中挑戰所有人格面具副本後均可獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=27>[Wild Card Emblem - Dull]\nGained from challenging any Persona Farm, can be used to exchange from Challenge Reward.</size>
 
-r:"^與「<color\=#FFC000>{{A}}</color>」好感度提升至<color\=#FFC000>rank5</color>後，\n解鎖大天使的合成。$"="Unlock Fusion for Archangel\nafter reaching <color\=#FFC000>rank 5</color> with Merope."
-r:"^好感度提升至<color\=#FFC000>rank7</color>後，\n解鎖瑟坦特的合成。$"="Unlock Fusion for Setanta\nafter reaching <color\=#FFC000>rank 7</color> with Merope."
-r:"^好感度提升至<color\=#FFC000>rank9</color>後，\n解鎖阿努比斯的合成。$"="Unlock Fusion for Anubis\nafter reaching <color\=#FFC000>rank 9</color> with Merope."
-r:"^好感度提升至<color\=#FFC000>rank11</color>後，\n解鎖大國主的合成。$"="Unlock Fusion for Okuninushi\nafter reaching <color\=#FFC000>rank 11</color> with Merope."
-r:"^好感度提升至<color\=#FFC000>rank13</color>後，\n解鎖納西瑟斯的合成。$"="Unlock Fusion for Narcissus\nafter reaching <color\=#FFC000>rank 13</color> with Merope."
+r:"^與「<color\=#FFC000>{{A}}</color>」好感度提升至<color\=#FFC000>rank5</color>後，\n解鎖{{A}}的合成。$"="Unlock Fusion for Archangel\nafter reaching <color\=#FFC000>rank 5</color> with Merope."
+r:"^好感度提升至<color\=#FFC000>rank7</color>後，\n解鎖{{A}}的合成。$"="Unlock Fusion for Setanta\nafter reaching <color\=#FFC000>rank 7</color> with Merope."
+r:"^好感度提升至<color\=#FFC000>rank9</color>後，\n解鎖{{A}}的合成。$"="Unlock Fusion for Anubis\nafter reaching <color\=#FFC000>rank 9</color> with Merope."
+r:"^好感度提升至<color\=#FFC000>rank11</color>後，\n解鎖{{A}}的合成。$"="Unlock Fusion for Okuninushi\nafter reaching <color\=#FFC000>rank 11</color> with Merope."
+r:"^好感度提升至<color\=#FFC000>rank13</color>後，\n解鎖{{A}}的合成。$"="Unlock Fusion for Narcissus\nafter reaching <color\=#FFC000>rank 13</color> with Merope."
 r:"^好感度提升至<color\=#FFC000>rank15</color>後，\n合成Rank4及以下的2星、3星面具時，機率額外獲得一個印記。$"="There is a chance to get 1 additional Mark when fusing Rank 4 or below 2 star and 3 star Persona after reaching <color\=#FFC000>rank 15</color> with Merope."
-r:"^好感度提升至<color\=#FFC000>rank20</color>後，\n解鎖黃龍的合成。$"="Unlock Fusion for Kohryu\nafter reaching <color\=#FFC000>rank 20</color> with Merope."
+r:"^好感度提升至<color\=#FFC000>rank20</color>後，\n解鎖{{A}}的合成。$"="Unlock Fusion for Kohryu\nafter reaching <color\=#FFC000>rank 20</color> with Merope."
 
 sr:"^(.*)印記$"="$1 Mark"
-埃力格=Eligor
-單卡拉比=Decarabia
-密特拉=Mithra
-菊理媛=Kikuri-Hime
-大僧正=Daisoujou
-大國主=Okuninushi
-白虎=Byakko
-納西瑟斯=Narcissus
-獨角獸=Unicorn
-阿努比斯=Anubis
-那伽=Naga
-佛勞洛斯=Flauros
-羅刹=Rakshasa
-水鬼=Sui-Ki
-睡魔=Sandman
-持國天=Jikokuten
-歐特魯斯=Orthrus
-貓將軍=Neko Shogun
-天鈿女命=Ame-no-Uzume
-式王子=Shiki-Ouji
-權天使=Principality
-瑟坦特=Setanta
-拉彌亞=Lamia
-大天使=Archangel
-迦樓羅=Garuda
-妖精女王=Queen Mab
-菈南希=Leanan Sidhe
-妙音天女=Sarasvati
-地獄天使=Hell Biker
-阿特羅波斯=Atropos
-白騎士=White Rider
-r:"^鬼$"="Oni"
-陰魔羅鬼=Onmoraki
-斯爾特=Surt
+鬼=Oni
 鵺=Nue
-鬥牛士=Matador
-歐賽=Ose
-奧伯隆=Oberon
-鳳凰=Suzaku
-母夜叉=Yaksini
-奈比洛斯=Nebiros
-廣目天=Koumokuten
-荷魯斯=Horus
-蒂妲妮亞=Titania
-羽蛇神=Quetzalcoatl
-戴歐尼修斯=Dionysus
-可羅索=Clotho
-黑騎士=Black Rider
-能天使=Power
-安祖=Anzu
-克魯貝洛斯=Cerberus
-金鬼=Kin-Ki
-傑克燈籠=Jack-O'-Lantern
-阿珈席翁=Agathion
-黃龍=Kohryu
-拉克西斯=Lachesis
-黑軟泥怪=Black Ooze
-莉莉姆=Lilim
-愛麗絲=Alice
-荒霸吐=Arahabaki
-吉祥天=Lakshmi
-青龍=Seiryu
-風鬼=Fuu-Ki
-增長天=Zouchouten
-惡靈=Mokoi
-天蛾人=Mothman
-荒魂=Ara Mitama
-迦溫=Kaiwan
-圖特=Thoth
-米特拉斯=Mithras
-訶梨帝母=Hariti
-佳塔由=Jatayu
-諾倫=Norn
-那伽之王=Raja Naga
-賽特=Seth
-貝爾芬格=Belphegor
-巴隆=Barong
-八咫烏=Yatagarasu
-荼吉尼=Dakini
-象頭神=Ganesha
-虹蛇=Yurlungur
-巴古斯=Bugs
-百臂巨人=Hecatoncheires
-奇稻田姬=Kushinada-Hime
-托爾=Thor
-鳩槃荼=Kumbhanda
-八岐大蛇=Yamata-no-Orochi
-帕祖祖=Pazuzu
-貝利亞=Belial
-主天使=Dominion
-女武神=Valkyrie
-皮克希=Pixie
-基力梅卡拉=Girimehkala
-曼陀羅=Mandrake
-帕爾瓦蒂=Parvati
-摩洛=Moloch
-巴風特=Baphomet
-花魄=Hua Po
-蒼白騎士=White Rider
-絲卡蒂=Skadi
-蘭達=Rangda
-斯卡哈=Scathach
-克魯波克魯=Koropokkuru
-紅騎士=Red Rider
-凱爾皮=Kelpie
-幸魂=Kushi Mitama
-安德拉斯=Andras
-雙角獸=Bicorn
-男夢魔=Incubus
-亞諾希克=Janosik
-朱雀=Suzaku
-犬神=Inugami
-真神=Makami
-高等皮克希=High Pixie
-木葉天狗=Koppa Tengu
-歐若博司=Orobas
-貓妖=Nekomata
-飛天=Apsaras
-木靈=Kodama
-獅爺=Shiisaa
-和魂=Nigi Mitama
-奇魂=Kusi Mitama
-軟泥怪=Slime
-希路奇=Silky
-女夢魔=Succubus
-背負怪=Obariyon
-比利士=Berith
-玄武=Genbu
-一本踏鞴=Ippon-Datara
-山靈=Sudama
-傑克霜精=Jack Frost
-天使= Angel
-伊西絲=Isis
-默基瑟德=Melchizedek
-霜精之王=King Frost
-毘沙門天=Bishamonten
-大元帥明王=Atavaka
-毗濕奴=Vishnu
-八房=Yatsufusa
-邪惡霜精=Black Frost
-義經=Yoshitsune
-莉莉絲=Lilith
-切爾諾伯格=Chernobog
-濕婆=Shiva
-狄俄尼索斯=Dionysus
-庫夫林=Cu Chulainn
-聖達芬=Sandalphon
-八束水臣津野命=Oumitsunu
-摩陀=Mada
+天使=Angel
 
-----------
-Metaverse Combat Terms
-----------
-
-// Special Mechanics
-
-// Sea of Souls
-r:"^<color\=#FFFFFF>首領剩餘進攻次數：</color><color\=#FFF000>(\d+)</color>$"="<color\=#FFFFFF>Boss attack(s) left: </color><color\=#FFF000>$1</color>"
-主動逃離戰鬥不會獲得分數記錄。\n是否確認退出？=<size\=28>Cannot record score if you escape.\nAre you sure?</size>
-
-使用人格面具技能或觸發追加效果時，獲得1層『強化印記』，最多可疊加3層；全體怪盜行動一輪後，獲得『強化印記』層數*15%的傷害加成並移除1層『強化印記』。=<size\=24>When a Persona skill is used, or a Follow Up is triggered, you gain 1 layer of the stackable Enhanced Buff. After all party members have acted, gain 15% DMG Bonus per stack and remove 1 layer of Enhanced Buff.</size>
-
-超限崩解=Super Disintegration
-sr:"^人格面具技能或追加效果每次造成傷害時，使自己獲得(\d+)層『(.*)』。『(.*)』：每層提供(\d+%)的最終傷害加成,持續(\d+)回合,最多可疊加(\d+)層。$"="<size\=27>When dealing a hit of damage with Persona skills or Follow Up, you gain $1 stack of [$2].\n[$3]: Increase Final DMG by $4 for $5 turns, up to $6 stacks.</size>"
-深化活性=Deepen Agility
-
-四大天王每隔一個回合會對隨機一名怪盜釋放「死亡凝視」，四大天王會優先攻擊處於「死亡凝視」的怪盜。=The Four Heavenly Kings will use [Death Gaze] on a random enemy, the Four Heavenly Kings will prioritize attacking the enemy with [Death Gaze].
-
-r:"^1、默基瑟德每隔1個回合，獲得(\d+)層「神之庇佑」，每層可以為其提供(\d+%)的減傷。\n2、默基瑟德受到來自技能或追加效果的每段傷害，都會損失一層「神之庇佑」。\n3、默基瑟德失去所有「神之庇佑」時會使所有怪盜獲得「神之祝福」，提升所有怪盜造成的傷害。$"="<size\=23>1. Melchizedek will gains $1 stacks of [God's Protection] every other turns, each stack will provide $2 DMG RES.\n2. Melchizedek will loses 1 stack of [God's Protection] after taking a hit of damage from skills or Follow Up.\n3. Give all Thieves [God's Blessing] which increase all Thieves' DMG Dealt when Melchizedek loses all stacks of [God's Protection].</size>"
-r:"^每層使自身受到的傷害降低(\d+%)，每次受到傷害會損失(\d+)層$"="Increase DMG RES by $1, \nlose $2 stack after taking a hit of damage"
-神之庇佑=God's Protection
-神之祝福=God's Blessing
+r:"^詭譎的{{A}}$"="Strange {{A}}"
+r:"^強大的{{A}}$"="Strong {{A}}"
+r:"^兇惡的{{A}}$"="Vicious {{A}}"
+r:"^創生的{{A}}$"="Creative {{A}}"
+r:"^忠義的{{A}}$"="Loyal {{A}}"
+r:"^巨大的{{A}}$"="Gigantic {{A}}"
+r:"^虚弱的{{A}}$"="Weak {{A}}"
+r:"^聖潔的{{A}}$"="Holy {{A}}"
+r:"^驍勇的{{A}}$"="Brave {{A}}"
+r:"^英勇的{{A}}$"="Brave {{A}}"
+r:"^莊嚴的{{A}}$"="Solemn {{A}}"
+r:"^{{A}}「化身」$"=""Incarnation" of {{A}}"
+r:"^「{{A}}」之影$"="Shadow of "{{A}}""
