@@ -20,6 +20,7 @@ r:"面具(.*)級時可解鎖"=Unlocks when this persona is LV.$1
 使用近戰武器，對1名敵人造成物理屬性的少量傷害。=<size\=28>Uses a melee weapon to deal light Physical damage to 1 enemy.</size>
 
 槍械射擊=Gun Attack
+槍械攻擊=Gun Attack
 r:"^1層$"="<size\=18> stack</size>"
 r:"^(\d+)層$"="<size\=18>$1 stacks</size>"
 
@@ -27,6 +28,8 @@ r:"^(\d+)層$"="<size\=18>$1 stacks</size>"
 子彈數：=Ammo:
 命中率：=Accuracy:
 基礎暴擊率：=Base CRIT Rate:
+使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。=Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo.
+使用槍械射擊1名敵人，造成6次射擊屬性傷害，子彈可能會發生偏移。對同一目標造成傷害會衰減。=Uses a gun to shoot 1 enemy. dealing 6 hits of Gun damage, the bullets can miss and deals less damage to the same target.
 
 // Elemental & Psychological Ailments //
 
@@ -44,25 +47,33 @@ r:"^(\d+)層$"="<size\=18>$1 stacks</size>"
 燃燒=Burn
 r:"^行動後損失生命值$"="Lose HP after action"
 凍結=Freeze
-觸電
+觸電=Shock
 受到暴擊率提升10%=Increase odds of receiving CRIT by 10%
 風襲=Winded
 輻射=Radiation
 受到的傷害提升15%，被視為一種元素異常。=Increase DMG Taken by 15%
 
 <color\=#66ccff>暈眩</color>=<color\=#FBF6C1>Dizzy</color>
+暈眩=Dizzy
 <color\=#66ccff>遺忘</color>=<color\=#80EEED>Forget</color>
 遺忘=Forget
 <color\=#66ccff>睡眠</color>=<color\=#E59FFF>Sleep</color>
+睡眠=Sleep
 <color\=#66ccff>混亂</color>=<color\=#C0F081>Confuse</color>
+混亂=Confuse
 <color\=#66ccff>恐懼</color>=<color\=#FCC6FA>Fear</color>
+恐懼=Fear
 <color\=#66ccff>絕望</color>=<color\=#B69ABB>Despair</color>
+絕望=Despair
 <color\=#66ccff>狂怒</color>=<color\=#F77F76>Rage</color>
+狂怒=Rage
 <color\=#66ccff>洗腦</color>=<color\=#AF4FA6>Brainwash</color>
+洗腦=Brainwash
 
 <color\=#66ccff>詛咒</color>=<color\=#FF0037>Cursed</color>
 <color\=#66ccff>祝福</color>=<color\=#FFFF9E>Blessed</color>
-r:"^<color\=#FF0000>(.*)</color>從倒地狀態恢復了。$"="<color\=#FF0000>Enemy</color> recovered from Downed!"
+r:"^<color\=#FF0000>(.*)</color>從倒地狀態恢復了。$"="Recovered from <color\=#FF0000>Down</color>!"
+r:"^<color\=#FF0000>(.*){{A}}</color>從倒地狀態恢復了。$"="Recovered from <color\=#FF0000>Down</color>!"
 
 // Elemental & Mental Ailments Descriptions //
 
@@ -351,10 +362,14 @@ r:"使1名同伴的防禦力提升<color\=#fffc40>(\d+\.\d+%)</color>，自身�
 r:"使<color\=#FFFF00>所有</color>同伴的防禦力提升(\d+\.\d+%)，自身每500點防禦力額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續3回合。"=Increase all allies DEF by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 500 DEF Wonder has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
 
 // Sukukaja
+r:"使<color\=#FFFF00>1名</color>同伴的效果命中、效果抵抗提升(\d+\.\d+%)，自身每(\d+%)效果命中額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續(\d+)回合。$"="Increases <color\=#FFFF00>1</color> ally's EHR and Effect RES by $1 for $5 turns, additionally increase $3 for every $2 EHR you have, up to $4."
 r:"使1名同伴的效果命中、效果抵抗提升<color\=#fffc40>(\d+\.\d+%)</color>，自身每25%效果命中額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限<color\=#fffc40>(\d+\.\d+%)</color>。效果持續3回合。"=Increase 1 ally's Effect Hit Rate and Effect RES by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 25% Effect Hit Rate Wonder has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
 
 // Masukukaja
 r:"使所有同伴的效果命中、效果抵抗提升<color\=#fffc40>(\d+\.\d+%)</color>，自身每25%效果命中額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限<color\=#fffc40>(\d+\.\d+%)</color>。效果持續3回合。"=Increase all allies Effect Hit Rate and Effect RES by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 25% Effect Hit Rate Wonder has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
+
+Heat Riser
+r:"^攻擊力、防禦力、效果命中、效果抵抗提升(\d+\.\d+%)$"="Increase ATK, DEF, EHR, \nand Effect RES by $1"
 
 //Rebellion
 r:"^使<color\=#FFFF00>1名</color>同伴的暴擊率提升(\d+\.\d+%)，自身每(\d+%)暴擊率額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續3回合。$"="Increases <color\=#FFFF00>1</color> ally's CRIT Rate by $1 + $3 for every $2 CRIT you have, up to $4 for 3 turns."
@@ -504,16 +519,35 @@ SPECIAL
 召喚隨從=Summon
 
 r:"^該技能尚未達到使用條件$"="You have not reached the condition to use this skill"
+條件不足=Insufficient conditions
 
 Battle Quotes
 r:"^<color\=#FF0000>所有同伴</color>攻擊力提升……$"="<color\=#FF0000>All allies</color> ATK Up!"
+r:"^<color\=#FF0000>(.*)</color>攻擊提升了……$"="ATK Up!"
+sr:"^<color\=#FF0000>(.*)</color>防禦降低了……$"="DEF Down!"
+r:"^<color\=#FF0000>(.*)</color>效果命中、效果抵抗提升了……$"="EHR/ Effect RES Up!"
 sr:"^<color\=#FF0000>(.*)</color>暴擊率提升了……$"="<color\=#FF0000>$1</color> CRIT Rate Up!"
 <color\=#FF0000>所有敵人</color>受到的傷害提升了……=<color\=#FF0000>All enemies</color> DMG Taken Up!
-sr:"^<color\=#FF0000>(.*)</color>防禦降低了……$"="<color\=#FF0000>Enemy</color> DEF Down!"
-sr:"^<color\=#FF0000>(.*)</color>進入了洗腦狀態……$"="<color\=#FF0000>$1</color> inflicted with Brainwash!"
-r:"^<color\=#FF0000>(.*)</color>被亞諾希克瞄準了，防禦降低……$"="<color\=#FF0000>Enemy</color> aimed by Janosik, DEF Down!"
-r:"^<color\=#FF0000>(.*)</color>攻擊提升了……$"="<color\=#FF0000>Enemy</color> ATK Up!"
-r:"^<color\=#FF0000>(.*)</color>效果命中、效果抵抗提升了……$"="<color\=#FF0000>Enemy</color> EHR, Effect RES Up!"
+
+r:"^<color\=#FF0000>(.*)</color>進入了暈眩狀態……$"="Inflicted with Dizzy..."
+r:"^<color\=#FF0000>(.*)</color>進入了遺忘狀態……$"="Inflicted with Forget..."
+r:"^<color\=#FF0000>(.*)</color>進入了睡眠狀態……$"="Inflicted with Sleep..."
+r:"^<color\=#FF0000>(.*)</color>進入了狂怒狀態……$"="Inflicted with Rage..."
+r:"^<color\=#FF0000>(.*)</color>進入了絕望狀態……$"="Inflicted with Despair..."
+r:"^<color\=#FF0000>(.*)</color>進入了恐懼狀態……$"="Inflicted with Fear..."
+r:"^<color\=#FF0000>(.*)</color>進入了混亂狀態……$"="Inflicted with Confuse..."
+r:"^<color\=#FF0000>(.*)</color>進入了洗腦狀態……$"="Inflicted with Brainwash..."
+
+r:"^<color\=#FF0000>(.*){{A}}</color>進入了暈眩狀態……$"="Inflicted with Dizzy..."
+r:"^<color\=#FF0000>(.*){{A}}</color>進入了遺忘狀態……$"="Inflicted with Forget..."
+r:"^<color\=#FF0000>(.*){{A}}</color>進入了睡眠狀態……$"="Inflicted with Sleep..."
+r:"^<color\=#FF0000>(.*){{A}}</color>進入了狂怒狀態……$"="Inflicted with Rage..."
+r:"^<color\=#FF0000>(.*){{A}}</color>進入了絕望狀態……$"="Inflicted with Despair..."
+r:"^<color\=#FF0000>(.*){{A}}</color>進入了恐懼狀態……$"="Inflicted with Fear..."
+r:"^<color\=#FF0000>(.*){{A}}</color>進入了混亂狀態……$"="Inflicted with Confuse..."
+r:"^<color\=#FF0000>(.*){{A}}</color>進入了洗腦狀態……$"="Inflicted with Brainwash..."
+
+r:"^<color\=#FF0000>(.*){{B}}</color>被{{A}}瞄準了，防禦降低……$"="<color\=#FF0000>Enemy</color> aimed by Janosik, DEF Down!"
 
 ----------
 Combat Pop-ups for ailments
@@ -528,6 +562,7 @@ r:"^詛<color\=#000000>咒</color>$"="<size\=8> </size>C<color\=#000000>ur</colo
 
 r:"^倒<color\=#000000>地</color>$"="<size\=22> </size>D<color\=#000000>o</color>wn"
 r:"^狂<color\=#000000>怒</color>$"="<size\=20> </size>R<color\=#000000>a</color>ge"
+r:"^睡<color\=#000000>眠</color>$"="<size\=17> </size>S<color\=#000000>le</color>ep"
 r:"^遺<color\=#000000>忘</color>$"="<size\=14> </size>F<color\=#000000>or</color>get"
 
 ----------
@@ -550,8 +585,8 @@ r:"^最<color\=#000000>終</color>傷害提升$"="<size\=15> </size>F<color\=#00
 r:"^追<color\=#000000>加</color>特化$"="<size\=15> </size>F<color\=#000000>ol</color>low Up Buff"
 r:"^傷<color\=#000000>害</color>減免$"="<size\=17> </size>D<color\=#000000>M</color>G RES Up"
 r:"^免<color\=#000000>傷</color>率提升$"="<size\=17> </size>D<color\=#000000>M</color>G RES Up"
-r:"^受<color\=#000000>到</color>傷害降低$"="<size\=20> </size>D<color\=#000000>M</color>G Taken Down"
-r:"^暴<color\=#000000>擊</color>率提升$"="<size\=20> </size>C<color\=#000000>R</color>IT Up"
+r:"^受<color\=#000000>到</color>傷害降低$"="<size\=17> </size>D<color\=#000000>M</color>G Taken Down"
+r:"^暴<color\=#000000>擊</color>率提升$"="<size\=20> </size>C<color\=#000000>R</color>IT Rate Up"
 r:"^暴<color\=#000000>擊</color>效果提升$"="<size\=20> </size>C<color\=#000000>R</color>IT DMG Up"
 r:"^效<color\=#000000>果</color>抵抗提升$"="Ef<color\=#000000>fe</color>ct RES Up"
 r:"^受<color\=#000000>弱</color>點傷害降低$"="<size\=11> </size>W<color\=#000000>e</color>ak DMG Taken Down"
@@ -606,9 +641,9 @@ r:"^防<color\=#000000>禦</color>降低$"="<size\=22> </size>D<color\=#000000>E
 r:"^防<color\=#000000>禦</color>力降低$"="<size\=22> </size>D<color\=#000000>E</color>F Down"
 r:"^受<color\=#000000>到</color>暴擊效果提升$"="<size\=20> </size>C<color\=#000000>R</color>IT DMG Taken Up"
 r:"^效<color\=#000000>果</color>抵抗降低$"="Ef<color\=#000000>fe</color>ct RES Down"
-r:"^受<color\=#000000>傷</color>害提升$"="<size\=20> </size>D<color\=#000000>M</color>G Taken Up"
-r:"^受<color\=#000000>到</color>傷害提升$"="<size\=20> </size>D<color\=#000000>M</color>G Taken Up"
-r:"^傷<color\=#000000>害</color>降低$"="<size\=20> </size>D<color\=#000000>M</color>G Down"
+r:"^受<color\=#000000>傷</color>害提升$"="<size\=17> </size>D<color\=#000000>M</color>G Taken Up"
+r:"^受<color\=#000000>到</color>傷害提升$"="<size\=17> </size>D<color\=#000000>M</color>G Taken Up"
+r:"^傷<color\=#000000>害</color>降低$"="<size\=17> </size>D<color\=#000000>M</color>G Down"
 r:"^受<color\=#000000>物</color>理傷害加深$"="<size\=25> </size>P<color\=#000000>h</color>ys DMG Taken Up"
 r:"^受<color\=#000000>到</color>火焰傷害提升$"="<size\=22> </size>F<color\=#000000>ir</color>e DMG Taken Up"
 r:"^受<color\=#000000>到</color>電擊傷害提升$"="<size\=21> </size>E<color\=#000000>le</color>c DMG Taken Up"
@@ -632,6 +667,7 @@ sr:"^最大生命值提升(.*)$"="Increase Max HP by $1"
 r:"^攻擊力提升(\d+)$"="Increase ATK by $1"
 r:"^攻擊力提升(\d+%)$"="Increase ATK by $1"
 r:"^攻擊力提升(\d+\.\d+%)$"="Increase ATK by $1"
+r:"^攻擊力提升(\d+%)\+(\d+)$"="Increase ATK by $1 + $2"
 r:"^每層提升(.*)的攻擊力$"="Increase ATK by $1 per stack"
 r:"^攻擊力提升(\d+%)、防禦力提升(\d+%)$"="Increase ATK by $1 and DEF by $2"
 r:"^攻擊力、防禦力提高$"="Increase ATK and DEF"
@@ -646,7 +682,8 @@ r:"^持續時間內，所有友方暴擊率提升(\d+%)"="During this effect,\ni
 sr:"^暴擊傷害提升(.*)$"="Increase CRIT DMG by $1"
 sr:"^暴擊效果提升(.*)$"="Increase CRIT DMG by $1"
 r:"^穿透提升(\d+%)$"="Increase PEN by $1"
-sr:"^效果命中提升(.*)$"="Increase EHR by $1"
+r:"^效果命中提升(\d+%)$"="Increase EHR by $1"
+r:"^效果命中提升(\d+\.\d+%)$"="Increase EHR by $1"
 r:"^效果抵抗提升(\d+%)$"="Increase Effect RES by $1"
 r:"^效果抵抗提升(\d+\.\d+%)$"="Increase Effect RES by $1"
 sr:"^效果抵抗降低(.*)$"="Decrease Effect RES by $1"
@@ -654,6 +691,7 @@ r:"^最終傷害提高(\d+%)$"="Increase Final DMG by $1"
 r:"^傷害提升(\d+%)$"="Increase DMG Bonus by $1"
 r:"^傷害提升(\d+\.\d+%)$"="Increase DMG Bonus by $1"
 r:"^造成傷害提升(\d+%)$"="Increase DMG Dealt by $1"
+r:"^造成傷害提高(\d+%)$"="Increase DMG Dealt by $1"
 r:"^造成的傷害提升(\d+%)$"="Increase DMG Dealt by $1"
 r:"^造成的傷害提升(\d+\.\d+%)$"="Increase DMG Dealt by $1"
 r:"^所有同伴造成的傷害提升(\d+%)。$"="Increase DMG Dealt by $1"
@@ -663,6 +701,7 @@ r:"^追加效果暴擊效果提升(\d+%)、攻擊力提升(\d+%)$"="Increase Fol
 sr:"^傷害減免(.*)$"="Increase DMG RES by $1"
 r:"^受到的傷害降低(\d+%)"="Decrease DMG Taken by $1"
 r:"^受到百分比傷害大幅降低"="Heavily decrease DMG Taken%"
+r:"^受到百分比傷害極大幅降低"="Severely decrease DMG Taken%"
 r:"^受到最終傷害降低(\d+%)"="Decrease Final DMG Taken by $1"
 r:"^所有同伴受到的傷害降低(\d+%)。$"="Decrease DMG Taken by $1"
 r:"^受物理傷害加深(\d+\.\d+%)$"="Increase Physical DMG Taken by $1"
@@ -694,17 +733,13 @@ r:"^詛咒傷害提升(\d+\.\d+%)$"="Increase Curse DMG by $1"
 r:"^萬能傷害提升(\d+\.\d+%)$"="Increase Almighty DMG by $1"
 r:"^治療效果提升(\d+%)$"="Increase Healing Effect by $1"
 r:"^護盾效果提升(\d+%)$"="Increase Shield Effect by $1"
-
-
-sr:"^瑪哈塔爾卡加(.*)$"="Matarukaja $1"
-sr:"^瑪哈拉庫卡加(.*)$"="Marakukaja $1"
-sr:"^瑪哈塔爾卡(.*)$"="Matarukaja $1"
-sr:"^瑪哈拉庫卡(.*)$"="Marakukaja $1"
+r:"^剩餘護盾值：(\d+)$"="Shield: $1"
 
 免疫即死效果=Immunity to Instant Death effects
 免疫精神異常效果=Immunity to Mental Ailment effects
 免疫倒地值傷害=Immunity to Down
 免疫精神異常效果及控制效果=<size\=26>Immunity to Mental Ailments and Control effects</size>
+無法被怪盜方當作技能目標=Cannot be targeted by Thieves
 
 ----------
 Inspect Details - DEBUFF
@@ -714,6 +749,7 @@ r:"^防禦降低(\d+%)$"="Decrease DEF by $1"
 r:"^防禦力降低(\d+%)$"="Decrease DEF by $1"
 r:"^防禦降低(\d+\.\d+%)$"="Decrease DEF by $1"
 r:"^防禦力降低(\d+\.\d+%)$"="Decrease DEF by $1"
+r:"^受到暴擊效果提升(\d+%)$"="Increase CRIT DMG Taken by $1"
 r:"^受到暴擊效果提升(\d+\.\d+%)$"="Increase CRIT DMG Taken by $1"
 r:"^受傷害提升(\d+\.\d+%)$"="Increase DMG Taken by $1"
 r:"^受到傷害提升(\d+%)$"="Increase DMG Taken by $1"
@@ -721,6 +757,7 @@ r:"^受到傷害提升(\d+\.\d+%)$"="Increase DMG Taken by $1"
 r:"^受到的傷害提升(\d+\.\d+%)$"="Increase DMG Taken by $1"
 r:"^造成傷害降低(\d+%)$"="Decrease DMG Dealt by $1"
 r:"^受到火焰傷害提升(\d+\.\d+%)$"="Increase Fire DMG Taken by $1"
+r:"^受到火屬性傷害提升(\d+\.\d+%)$"="Increase Fire DMG Taken by $1"
 r:"^受疾風傷害提高(\d+%)"="Increase Wind DMG Taken by $1"
 r:"^受疾風傷害加深(\d+%)"="Increase Wind DMG Taken by $1"
 r:"^受到核熱傷害提升(\d+%)"="Increase Nuke DMG Taken by $1"
@@ -759,11 +796,16 @@ r:"^受弱點傷害提升(\d+%)$"="Increase Weakness DMG by $1"
 受疾風傷害提高=Increase Wind DMG Taken
 r:"^耐性穿透提升(\d+%)$"="Increase Effect RES Ignore by $1"
 
+sr:"^瑪哈塔爾卡加(.*)$"="Matarukaja $1"
+sr:"^瑪哈拉庫卡加(.*)$"="Marakukaja $1"
+sr:"^瑪哈塔爾卡(.*)$"="Matarukaja $1"
+sr:"^瑪哈拉庫卡(.*)$"="Marakukaja $1"
 瞄準=Aim
 
 免疫即死=<size\=28>Instant Death Immunity</size>
 免疫精神異常=<size\=23>Mental Ailment Immunity</size>
 免疫倒地=Down Immunity
 免疫精神異常及控制=<size\=20>Mental Ailment and Control Immunity</size>
+無法選中=Cannot Target
 倒地=Down
 被擊倒了！=Knocked Down!
