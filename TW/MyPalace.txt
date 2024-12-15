@@ -30,11 +30,11 @@ r:"^·任意(\d+)個人格指數達到(\d+)級\((\d+)/(\d+)\)$"="<size\=26>-Reac
 
 弱點攻擊特寫 WONDER=Wonder Cut-In
 弱點攻擊特寫 {{A}}={{A}} Cut-In
-總攻擊 WONDER=Wonder All-Out Attack
-總攻擊 WONDER時裝=Wonder All-Out Attack
-總攻擊 {{A}}={{A}} All-Out Attack
-總攻擊最後一擊 WONDER=Wonder All-Out Attack Finisher
-總攻擊最後一擊 {{A}}={{A}} All-Out Attack Finisher
+{{A}} WONDER=Wonder All-Out Attack
+{{A}} WONDER時裝=Wonder All-Out Attack
+r:"^{{B}} {{A}}$"="{{A}} All-Out Attack"
+{{A}}最後一擊 WONDER=Wonder All-Out Attack Finisher
+{{B}}最後一擊 {{A}}={{A}} All-Out Attack Finisher
 
 r:"^<color\=#FFFF00>戰鬥中，WONDER生命值提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase the HP of Wonder by $1</color>"
 r:"^<color\=#FFFF00>戰鬥中，WONDER攻擊力提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase the ATK of Wonder by $1</color>"
@@ -116,19 +116,22 @@ PEVEL RANK UP
 · 解鎖新的道具擺放區域=- Unlock new decoration area
 r:"^· {{A}}產出數量增漲至(\d+)秒一次$"="- Increase {{A}} speed to 1 every $1 seconds"
 r:"^· {{A}}產出上限提升至(\d+)$"="- Increase the passive {{A}} cap to $1"
-r:"^· 羈絆值產出數量增漲至(\d+)秒一次$"="- Increase Closeness speed to 1 every $1 seconds"
-r:"^· 羈絆值累計上限提升至(\d+)$"="- Increase the cap of Closeness to $1"
-r:"^· {{A}}產出數量增漲至(\d+)秒一次\n· 羈絆值產出數量增漲至(\d+)秒一次$"="- Increase the passive {{A}} speed to 1 every $1 seconds\n- Increase the Closeness speed to 1 every $2 seconds"
-r:"^· 解鎖新的道具擺放區域\n· {{A}}產出上限提升至(\d+)\n· {{A}}產出數量增漲至(\d+)秒一次\n· 入駐夥伴數量提升至1名\n· 羈絆值累計上限提升至(\d+)\n· 羈絆值產出數量增漲至(\d+)秒一次$"="- Unlock new decoration area\n- Increase the passive {{A}} cap to $1\n- Increase the passive {{A}} speed to 1 every $2 seconds\n- Increase the number of Settle Thieves to 1\n- Increase the cap of Closeness to $3\n- Increase the Closeness speed to 1 every $4 seconds"
-r:"^· {{A}}產出上限提升至(\d+)\n· 入駐夥伴數量提升至2名\n· 羈絆值累計上限提升至(\d+)$"="- Increase the passive {{A}} cap to $1\n- Increase the number of Settle Thieves to 2\n- Increase the cap of Closeness to $2"
-r:"^· 解鎖新的道具擺放區域\n· {{A}}產出數量增漲至(\d+)秒一次\n· 羈絆值產出數量增漲至(\d+)秒一次$"="- Unlock new decoration area\n- Increase {{A}} speed to 1 every $1 seconds\n- Increase Closeness speed to 1 every $2 seconds"
-r:"^· {{A}}產出上限提升至(\d+)\n· 入駐夥伴數量提升至(\d+)名\n· 羈絆值累計上限提升至(\d+)$"="- Increase the passive {{A}} cap to $1\n- Increase the number of Settle Thieves to $2\n- Increase the cap of Closeness to $3"
-r:"^· {{A}}產出上限提升至(\d+)\n· {{A}}產出數量增漲至(\d+)秒一次\n· 羈絆值累計上限提升至(\d+)\n· 羈絆值產出數量增漲至(\d+)秒一次$"="- Increase the passive {{A}} cap to $1\n- Increase {{A}} speed to 1 every $2 seconds\n- Increase the cap of Closeness to $3\n- Increase Closeness speed to 1 every $4 seconds"
-r:"^· {{A}}產出上限提升至(\d+)\n· 羈絆值累計上限提升至(\d+)$"="- Increase the passive {{A}} cap to $1\n- Increase the cap of Closeness to $2"
-r:"^· {{A}}產出數量增漲至(\d+)秒一次\n· 羈絆值累計上限提升至(\d+)\n· 羈絆值產出數量增漲至(\d+)秒一次$"="- Increase {{A}} speed to 1 every $1 seconds\n- Increase the cap of Closeness to $2\n- Increase Closeness speed to 1 every $3 seconds"
+r:"^· 契合度產出數量增漲至(\d+)秒一次$"="- Increase Closeness speed to 1 every $1 seconds"
+r:"^· 契合度累計上限提升至(\d+)$"="- Increase the cap of Closeness to $1"
+r:"^· {{A}}產出數量增漲至(\d+)秒一次\n· 契合度產出數量增漲至(\d+)秒一次$"="- Increase the passive {{A}} speed to 1 every $1 seconds\n- Increase the Closeness speed to 1 every $2 seconds"
+r:"^· 解鎖新的道具擺放區域\n· {{A}}產出上限提升至(\d+)\n· {{A}}產出數量增漲至(\d+)秒一次\n· 入駐夥伴數量提升至1名\n· 契合度累計上限提升至(\d+)\n· 契合度產出數量增漲至(\d+)秒一次$"="- Unlock new decoration area\n- Increase the passive {{A}} cap to $1\n- Increase the passive {{A}} speed to 1 every $2 seconds\n- Increase the number of Settle Thieves to 1\n- Increase the cap of Closeness to $3\n- Increase the Closeness speed to 1 every $4 seconds"
+r:"^· {{A}}產出上限提升至(\d+)\n· 入駐夥伴數量提升至2名\n· 契合度累計上限提升至(\d+)$"="- Increase the passive {{A}} cap to $1\n- Increase the number of Settle Thieves to 2\n- Increase the cap of Closeness to $2"
+r:"^· 解鎖新的道具擺放區域\n· {{A}}產出數量增漲至(\d+)秒一次\n· 契合度產出數量增漲至(\d+)秒一次$"="- Unlock new decoration area\n- Increase {{A}} speed to 1 every $1 seconds\n- Increase Closeness speed to 1 every $2 seconds"
+r:"^· {{A}}產出上限提升至(\d+)\n· 入駐夥伴數量提升至(\d+)名\n· 契合度累計上限提升至(\d+)$"="- Increase the passive {{A}} cap to $1\n- Increase the number of Settle Thieves to $2\n- Increase the cap of Closeness to $3"
+r:"^· {{A}}產出上限提升至(\d+)\n· {{A}}產出數量增漲至(\d+)秒一次\n· 契合度累計上限提升至(\d+)\n· 契合度產出數量增漲至(\d+)秒一次$"="- Increase the passive {{A}} cap to $1\n- Increase {{A}} speed to 1 every $2 seconds\n- Increase the cap of Closeness to $3\n- Increase Closeness speed to 1 every $4 seconds"
+r:"^· {{A}}產出上限提升至(\d+)\n· 契合度累計上限提升至(\d+)$"="- Increase the passive {{A}} cap to $1\n- Increase the cap of Closeness to $2"
+r:"^· {{A}}產出數量增漲至(\d+)秒一次\n· 契合度累計上限提升至(\d+)\n· 契合度產出數量增漲至(\d+)秒一次$"="- Increase {{A}} speed to 1 every $1 seconds\n- Increase the cap of Closeness to $2\n- Increase Closeness speed to 1 every $3 seconds"
 
 ----------
 COLLECTION
 ----------
 r:"^道具收集數量：(\d+)/(\d+)$"="Collected Items: $1/$2"
+r:"^插畫收集數量：(\d+)/(\d+)$"="Collected Artwork: $1/$2"
+r:"^音樂收集數量：(\d+)/(\d+)$"="Collected Music: $1/$2"
+
 r:"^條件獲取$"="<size\=16>Unlock Condition</size>"
