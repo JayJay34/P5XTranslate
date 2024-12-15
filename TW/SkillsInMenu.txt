@@ -180,7 +180,7 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 念動破壞=Psy Destruction
 精神波動=Mental Wave
 心魔擊=Devious Strike
-毀滅之舞=Dance of Destruction
+毀滅之舞=<size\=19>Dance of Destruction</size>
 
 --- Nuke ---
 
@@ -271,6 +271,12 @@ r:"^禱告之力$"="Power of Prayer"
 瑪哈塔爾卡加=Matarukaja
 瑪哈拉庫卡加=Marakukaja
 瑪哈斯庫卡加=Masukukaja
+r:"^塔爾卡加Lv.(\d+)$"="Tarukaja Lv.$1"
+r:"^拉庫卡加Lv.(\d+)$"="Rakukaja Lv.$1"
+r:"^斯庫卡加Lv.(\d+)$"="Sukukaja Lv.$1"
+r:"^瑪哈塔爾卡加Lv.(\d+)$"="Matarukaja Lv.$1"
+r:"^瑪哈拉庫卡加Lv.(\d+)$"="Marakukaja Lv.$1"
+r:"^瑪哈斯庫卡加Lv.(\d+)$"="Masukukaja Lv.$1"
 迪卡加=Dekaja
 迪坤達=Dekunda
 反叛=Rebellion
@@ -301,6 +307,8 @@ r:"^瑪哈拉昆達$"="Marakunda"
 --- Break Skills ---
 消除疾風耐性=Wind Break
 消除電擊耐性=Elec Break
+
+消除電擊防禦=Elec Break
 
 --- Status Ailments ---
 暈眩=Dazzler
@@ -407,7 +415,7 @@ sr:"^治療促進(.*)$"="Regenerate $1"
 sr:"^亢奮(.*)$"="Heat Up $1"
 sr:"^反擊(.*)$"="Counter $1"
 sr:"^雨歌(.*)$"="Climate Decorum $1"
-sr:"^勝利的氣息(.*)$"="Breath of Victory $1"
+sr:"^勝利的氣息(.*)$"="Life Aid $1"
 
 --------------------------------------------------
 WONDER's Persona Skill Details
@@ -726,19 +734,23 @@ r:"^使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#
 --- Debuffs ---
 
 //Rakunda
-r:"使1名敵人的防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續3回合。"=Decrease DEF of 1 enemy by <color\=#fffc40>$1</color> for 3 turns.
+r:"使1名敵人的防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續3回合。"=Decreases 1 enemy's DEF by <color\=#fffc40>$1</color> for 3 turns.
 
 // Marakunda
-r:"使所有敵人的防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續3回合。"=Decrease DEF of all enemies by <color\=#fffc40>$1</color> for 3 turns.
+r:"使所有敵人的防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續3回合。"=Decreases all enemies' DEF by <color\=#fffc40>$1</color> for 3 turns.
 
 //Tarunda
-r:"使1名敵人的攻擊力降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續3回合。"=Decrease ATK of 1 enemy by <color\=#fffc40>$1</color> for 3 turns.
+r:"使1名敵人的攻擊力降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續3回合。"=Decrease 1 enemy's ATK by <color\=#fffc40>$1</color> for 3 turns.
 
 // Matarunda
-r:"使所有敵人的攻擊力降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續3回合。"=Decrease ATK of all enemies by <color\=#fffc40>$1</color> for 3 turns.
+r:"使所有敵人的攻擊力降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續3回合。"=Decrease all enemies' ATK by <color\=#fffc40>$1</color> for 3 turns.
 
 // Debilitate
 r:"使1名敵方攻擊、防禦、效果命中、效果抵抗降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續3回合。"=Decrease ATK, DEF, Effect Hit Rate, and Effect RES of 1 enemy by <color\=#fffc40>$1</color> for 3 turns.
+
+Elec Break
+使1名敵人的電擊耐性消除，效果持續2回合。=Negates Electric resistance of 1 enemy for 2 turns.
+電擊耐性·防壁消除。=Negates Electric resistance and wall of 1 enemy.
 
 --- Dispel ---
 驅散所有同伴的1個屬性降低效果。=Negate 1 stat reducing effect for all allies.
@@ -772,10 +784,14 @@ r:"^即死技能成功率上升(\d+\.\d+%)。$"="Increase chance of Instant Deat
 r:"^護盾效果提升(\d+\.\d+%)。$"="Increase Shield Effect by $1."
 
 //Stat buffs
-r:"戰鬥開始時攻擊力提升(\d+\.\d+%)，持續2回合。"=Increase ATK by $1 at the start of battle for 2 turns.
-r:"戰鬥開始時全員攻擊力提升(\d+\.\d+%)，持續2回合。"=Increase ATK for all allies by $1 at the start of battle for 2 turns.
-r:"戰鬥開始時全員防禦力提升(\d+\.\d+%)，持續2回合。"=Increase DEF for all allies by $1 at the start of battle for 2 turns.
-r:"戰鬥開始時防禦力提升(\d+\.\d+%)，持續2回合。"=Increase DEF by $1 at the start of battle for 2 turns.
+r:"戰鬥開始時攻擊力提升(\d+%)，持續2回合或持續至切換面具。"=Increase ATK by $1 at the start of battle for 2 turns or until switching persona.
+r:"戰鬥開始時攻擊力提升(\d+\.\d+%)，持續2回合或持續至切換面具。"=Increase ATK by $1 at the start of battle for 2 turns or until switching persona.
+r:"戰鬥開始時全員攻擊力提升(\d+%)，持續2回合或持續至切換面具。"=Increase all allies' ATK by $1 at the start of battle for 2 turns or until switching persona.
+r:"戰鬥開始時全員攻擊力提升(\d+\.\d+%)，持續2回合或持續至切換面具。"=Increase all allies' ATK by $1 at the start of battle for 2 turns or until switching persona.
+r:"戰鬥開始時防禦力提升(\d+%)，持續2回合或持續至切換面具。"=Increase DEF by $1 at the start of battle for 2 turns or until switching persona.
+r:"戰鬥開始時防禦力提升(\d+\.\d+%)，持續2回合或持續至切換面具。"=Increase DEF by $1 at the start of battle for 2 turns or until switching persona.
+r:"戰鬥開始時全員防禦力提升(\d+%)，持續2回合或持續至切換面具。"=Increase all allies' DEF by $1 at the start of battle for 2 turns or until switching persona.
+r:"戰鬥開始時全員防禦力提升(\d+\.\d+%)，持續2回合或持續至切換面具。"=Increase all allies' DEF by $1 at the start of battle for 2 turns or until switching persona.
 r:"^攻擊力提升(\d+\.\d+%)。+$"=Increase ATK by $1.
 r:"^生命值提升(\d*\.?\d+%)。+$"=Increase Max HP by $1.
 r:"^速度提升(\d+)點。$"=Increase SPD by $1.
@@ -799,8 +815,9 @@ r:"受到的暴擊率降低(\d*\.?\d+%)。"=Reduce chance of receiving CRIT hits
 r:"下雨時，造成異常效果時，效果命中提升(\d*\.?\d+%)。"=Increase inflicting rate of all status effects during rainy days by $1.
 
 //Other
-r:"技能消耗的HP降低(\d+\.\d+%)。"=Reduce HP consumption of skills by $1.
-r:"技能消耗的SP降低(\d+\.\d+%)。"=Reduce SP consumption of skills by $1.
+r:"技能消耗的HP降低(\d+\.\d+%)。"=Reduce HP cost of skills by $1.
+r:"技能消耗的SP降低(\d+%)。"=Reduce SP cost of skills by $1.
+r:"技能消耗的SP降低(\d+\.\d+%)。"=Reduce SP cost of skills by $1.
 r:"每回合開始時，回復(\d+\.\d+%)最大生命值。"=Restore $1 of Max HP at the start of each turn.
 r:"先制攻擊時回復(\d+\.\d+%)最大生命值和(.*)點精力值。"=Restore $1 of Max HP and $2 SP at the start of each preemptive turn.
 r:"戰鬥勝利後回復(\d+\.\d+%)最大生命值和精力值。"=Restore $1 of Max HP and SP after winning a battle.
