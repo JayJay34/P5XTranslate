@@ -42,9 +42,12 @@ r:"近7天貢獻 (\d+)"=7d Contribution: $1
 挑戰難度·挑戰=Challenge
 挑戰難度·噩夢=Nightmare
 
-基礎傷害積分=Base DMG
+基礎傷害積分=Base Score
 虛弱期傷害積分=Weakness DMG
 首領擊殺積分=Defeated Boss
+敵方抵禦積分=Base Score
+己方生存回合=Round(s) Survived
+生存回合額外分=Survival Bonus
 難度係數=Difficulty Multiplier
 r:"難度係數：<color\=#0e68c9>(\d+)</color>"=<size\=25>Multiplier: <color\=#0e68c9>$1x</color></size>
 r:"難度係數：<color\=#0e68c9>(\d+\.\d+)</color>"=<size\=25>Multiplier: <color\=#0e68c9>$1x</color></size>
@@ -93,7 +96,9 @@ sr:"<color\=#FF0000>(.*)</color>將<color\=#FF0000>(.*?)</color>移出了樂園�
 特殊機制生效中=Mechanics Active
 累積分數：=Total Score: <size\=1>_</size>
 r:"^虛弱剩餘回合：$"="   Turn(s) Left:   <size\=1>_</size>"
+r:"^剩餘進攻回合：$"="   Turn(s) Left:   <size\=1>_</size>"
 r:"^虛弱期獲得積分×$"="Score Multiplier x"
+存活回合積分加成×=Survival Score Multiplier x
 r:"^倍$"="<size\=10> </size>!"
 逃離戰鬥不會記錄挑戰積分。\n確定要離開戰鬥嗎？=Cannot record score if you escape.\nAre you sure?
 
@@ -105,9 +110,9 @@ r:"^<color\=#FFFC40>WONDER</color>造成<color\=#FFFC40>最終傷害</color>提�
 Bosses
 ----------
 
-{{A}}、{{B}}、{{C}}、{{D}}處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。=<size\=28>Dominion, Power, Principality and Archangel have <color\=#ff3b37>[Lifelink]</color>\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.</size>
+{{A}}、{{B}}、{{C}}、{{D}}處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。=<size\=28>Dominion, Power, Principality and Archangel have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.</size>
 
-{{A}}的「化身」與本體處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。={{A}} and his incarnations have <color\=#ff3b37>[Lifelink]</color>\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.
+{{A}}的「化身」與本體處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。={{A}} and his incarnations have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.
 {{A}}的化身之一。=One of the incarnations of {{A}}.
 
 1、{{A}}會釋放「八字聖玉」：使自身對全屬性的適應性變為耐，造成傷害提升、受到傷害降低，並召喚四屬性之魂。擊敗不同屬性的魂，會使{{A}}進入不同的元素異常狀態，持續2回合。\n2、{{A}}處於「八字聖玉」狀態，且同時擁有4種元素異常狀態時，會退出「八字聖玉」狀態並使自身防禦力降低。\n3、{{A}}進入虛弱階段時，會清除四屬性之魂並退出「八字聖玉」狀態。=1. Yatsufusa will use [Eight Virtue's Protection]: Change all affinities Resist, increase DMG Dealt and decrease DMG Taken, and summon 4 Mitamas. When a Mitama dies, inflicts Yatsufusa with an Elemental Ailment for 2 turns.\n2. When Yatsufusa has 4 Elemental Ailments, loses [Eight Virtue's Protection] and reduces own DEF.\n3. When Yatsufusa enters Weakness, defeats all Mitamas loses [Eight Virtue's Protection].
@@ -178,3 +183,90 @@ r:"^無法暴擊，最終傷害提升(.*)"="Cannot CRIT, increase Final DMG by $
 
 敵方全體進入了<color\=#FF0000>虛弱</color>狀態……=All enemies entered <color\=#FF0000>Weak</color>!
 r:"^<color\=#FF0000>(.*)</color>無法行動……$"="<color\=#FF0000>Enemies</color> cannot act!"
+
+
+
+----------
+TYCOON UI
+----------
+r:"^賽季倒計時：$"="Season Reset: <size\=1>.</size>"
+r:"^(\d+)天(\d+)小時$"="$1 day(s) $2 hour(s)"
+此模式暫未開放，敬請期待。=Mode not available, stay tuned.
+富豪積分=Tycoon Points
+『富豪積分』\n完成大富豪對局後獲得，可用於兌換大富豪專屬商店中的獎勵。=[Tycoon Points]\nEarned after each game, can used in Carpe Diem Shop.
+
+單局模式=1 Round
+三局模式=3 Rounds
+段位對決=Rank Mode
+經典對決=Classic Mode
+當前排名=Current Points
+
+請選擇您要出的牌。=Select the card you want to play.
+r:"^選擇和大貧民的{{A}}交換<color\=#FF0000>任意(\d+)張牌</color>$"="<color\=#FF0000>Trade $1 card(s)</color> with {{A}}"
+r:"^(\d+)秒後自動進入下一局$"="Start next round after $1 second(s)"
+牌的強弱會逆向排序(3最大)=Flip Strength (3 is strongest)
+本次挑戰獲得=Rewards
+r:"^富豪積分\+(\d+)$"="Tycoon Points +$1"
+富豪積分+0(已達上限)=Tycoon Points +0 (Reached weekly cap)
+
+排行資訊=Rank
+賽季結束時將透過郵件發放所屬段位獎勵。=Rewards will be given at season reset.
+r:"^賽季排行榜顯示「段位對決」模式排名前(\d+)名的玩家。$"="Leaderboard shows the top $1 players in rank mode."
+首次達到段位後可領取段位獎勵（該獎勵不隨賽季刷新，只能領取一次）=Rank first time rewards (Does not refresh with the season and can only be claimed once)
+大貧民=<size\=20>Great Begger</size>
+薄資大貧民=<size\=20>Begger</size>
+下層貧民=<size\=20>Lower Class Poor</size>
+中層貧民=<size\=20>Middle Class Poor</size>
+上層貧民=<size\=20>Upper Class Poor</size>
+資深貧民=<size\=20>Senior Poor</size>
+新興中產=<size\=20>New Commoner</size>
+精英中產=<size\=20>Elite Commoner</size>
+上流中產=<size\=20>High Commoner</size>
+權貴中產=<size\=20>Powerful Commoner</size>
+富豪=<size\=20>Tycoon</size>
+百萬富豪=<size\=20>Millionaire</size>
+千萬富豪=<size\=20>Multimillionaire</size>
+億萬富豪=<size\=20>Billionaire</size>
+傳奇大富豪=<size\=20>Legendary Tycoon</size>
+
+可定製卡面=Customizable Card
+紅心=<size\=20>Hearts</size>
+方塊=<size\=20>Diamonds</size>
+黑桃=<size\=20>Spades</size>
+梅花=<size\=20>Clubs</size>
+當前未擁有定製版卡牌，可以在樂園百貨「大富豪專櫃」解鎖=You don't have this card skin
+當前未擁有此角色，可以在樂園百貨「大富豪專櫃」解鎖=You don't have this character skin
+
+{{A}}專屬邀請函={{A}} Character Skin
+給{{A}}的專屬邀請函，用於解鎖大富豪對局中的特殊可用角色。=<size\=26>An exclusive invitation to {{A}}, unlock this character in Tycoon.</size>
+
+總達成次數=Times
+
+r:"^完成(\d+)次任意模式對決$"="<size\=22>Finish $1 game(s) in any mode</size>"
+r:"^完成(\d+)次任意模式對決\((\d+)/(\d+)\)$"="<size\=22>Finish $1 game(s) in any mode ($2/$3)</size>"
+r:"^經典對決中，成為(\d+)次大富豪$"="<size\=22>Become Tycoon $1 times in classic mode</size>"
+r:"^段位對決中，成為(\d+)次大富豪\((\d+)/(\d+)\)$"="<size\=22>Become Tycoon $1 times in rank mode ($2/$3)</size>"
+r:"^打出(\d+)次對子$"="<size\=22>Play $1 pair</size>"
+r:"^打出(\d+)次對子\((\d+)/(\d+)\)$"="<size\=22>Play $1 pair ($2/$3)</size>"
+r:"^打出(\d+)次三條$"="<size\=22>Play $1 triple</size>"
+r:"^打出(\d+)次三條\((\d+)/(\d+)\)$"="<size\=22>Play $1 triple ($2/$3)</size>"
+r:"^同一局中打出(\d+)次三條，達(\d+)局$"="<size\=22>Play $1 triple 3 times in 1 round, $2 times</size>"
+r:"^打出(\d+)次「8終結」$"="<size\=22>Play $1 [8 Stop]</size>"
+r:"^打出(\d+)次「8終結」\((\d+)/(\d+)\)$"="<size\=22>Play $1 [8 Stop] ($2/$3)</size>"
+r:"^打出(\d+)次「X終結」$"="<size\=22>Play $1 [X Stop]</size>"
+r:"^打出(\d+)次「X終結」\((\d+)/(\d+)\)$"="<size\=22>Play $1 [X Stop] ($2/$3)</size>"
+r:"^打出(\d+)次JOKER$"="<size\=22>Play $1 Joker</size>"
+r:"^打出(\d+)次JOKER\((\d+)/(\d+)\)$"="<size\=22>Play $1 Joker ($2/$3)</size>"
+r:"^打出(\d+)次「最大點數3」$"="<size\=22>Play $1 [3-Spade Reversal]</size>"
+r:"^打出(\d+)次「最大點數3」\((\d+)/(\d+)\)$"="<size\=22>Play $1 [3-Spade Reversal] ($2/$3)</size>"
+r:"^打出(\d+)次革命或反向革命$"="<size\=22>Play $1 Revolution or Counter Revelation</size>"
+r:"^打出(\d+)次革命或反向革命\((\d+)/(\d+)\)$"="<size\=22>Play $1 Revolution or Counter Revelation ($2/$3)</size>"
+r:"^同一局中打出(\d+)次革命或反向革命，達(\d+)局\((\d+)/(\d+)\)$"="<size\=22>Play $1 Revolution or Counter Revelation in 1 round, $2 times ($3/$4)</size>"
+r:"^讓牌局對手一落千丈，並成為大富豪達(\d+)次$"="<size\=22>Make 1 player Bankrupt and become Tycoon $1 time(s)</size>"
+r:"^當前賽季達到「富豪」段位\((\d+)/(\d+)\)$"="<size\=22>Reach [Tycoon] in rank mode ($1/$2)</size>"
+r:"^當前賽季達到「新興中產」段位$"="<size\=22>Reach [New Commoner] in rank mode</size>"
+r:"^當前賽季達到「下層貧民」段位$"="<size\=22>Reach [Lower Class Poor] in rank mode</size>"
+r:"^扮演{{A}}成為(\d+)局大富豪$"="<size\=22>Play as {{A}} and become Tycoon in $1 game(s)</size>"
+r:"^扮演{{A}}成為(\d+)局大富豪\((\d+)/(\d+)\)$"="<size\=22>Play as {{A}} and become Tycoon in $1 game(s) ($2/$3)</size>"
+r:"^與{{A}}對戰並成為大富豪達(\d+)局$"="<size\=22>Play with {{A}} and become Tycoon in $1 game(s)</size>"
+r:"^與{{A}}對戰並成為大富豪達(\d+)局\((\d+)/(\d+)\)$"="<size\=22>Play with {{A}} and become Tycoon in $1 game(s) ($2/$3)</size>"
