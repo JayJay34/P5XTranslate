@@ -380,7 +380,7 @@ r:"(\d+)次行動內完成"=Win in $1 turn(s)
 試煉三=Trial 3
 關卡目標=Goal
 r:"^擊敗低階陰影（(\d+)/(\d+)）$"="Defeat low level \nShadows ($1/$2)"
-r:"^擊敗菁英陰影（(\d+)/(\d+)）$"="Defeat elite Shadows ($1/$2)"
+r:"^擊敗菁英陰影（(\d+)/(\d+)）$"="<size\=22>Defeat elite Shadows ($1/$2)</size>"
 r:"^乘坐電梯$"="Take the Elevator"
 
 上期回顧=Recap
@@ -390,18 +390,28 @@ r:"^乘坐電梯$"="Take the Elevator"
 試煉分數=Score
 抵達區域=<size\=28>Last Area</size>
 
+以下<color\=#ef0000>怪盜</color>與<color\=#ef0000>面具</color>會被鎖定到本挑戰中不可更換，是否確認出戰？=<size\=24>You cannot change the chosen <color\=#ef0000>Thieves and Personas</color> until you reset the fight</size>
 r:"^<color\=#FFFFFF>首領剩餘進攻次數：</color><color\=#FFF000>(\d+)</color>$"="<color\=#FFFFFF>Boss attack(s) left: </color><color\=#FFF000>$1</color>"
 主動逃離戰鬥不會獲得分數記錄。\n是否確認退出？=<size\=28>Cannot record score if you escape.\nAre you sure?</size>
 
+四大天王每隔一個回合會對隨機一名怪盜釋放「死亡凝視」，四大天王會優先攻擊處於「死亡凝視」的怪盜。=The Four Heavenly Kings will use [Death Gaze] on a random enemy, the Four Heavenly Kings will prioritize attacking the enemy with [Death Gaze].
+
+{{A}}與所有{{B}}處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。=<size\=28>{{A}} and all {{B}} have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.</size>
+
+r:"^1、{{A}}每隔1個回合，獲得(\d+)層「神之庇佑」，每層可以為其提供(\d+%)的減傷。\n2、{{A}}受到來自技能或追加效果的每段傷害，都會損失一層「神之庇佑」。\n3、{{A}}失去所有「神之庇佑」時會使所有怪盜獲得「神之祝福」，提升所有怪盜造成的傷害。$"="<size\=23>1. {{A}} will gains $1 stacks of [God's Protection] every other turns, each stack will provide $2 DMG RES.\n2. {{A}} will loses 1 stack of [God's Protection] after taking a hit of damage from skills or Follow Up.\n3. Give all Thieves [God's Blessing] which increase all Thieves' DMG Dealt when {{A}} loses all stacks of [God's Protection].</size>"
+r:"^每層使自身受到的傷害降低(\d+%)，每次受到傷害會損失(\d+)層$"="Increase DMG RES by $1, \nlose $2 stack after taking a hit of damage"
+神之庇佑=God's Protection
+神之祝福=God's Blessing
+
+----------
+SEASONAL EFFECTS
+----------
 使用人格面具技能或觸發追加效果時，獲得1層『強化印記』，最多可疊加3層；全體怪盜行動一輪後，獲得『強化印記』層數*15%的傷害加成並移除1層『強化印記』。=<size\=24>When a Persona skill is used, or a Follow Up is triggered, you gain 1 layer of the stackable Enhanced Buff. After all party members have acted, gain 15% DMG Bonus per stack and remove 1 layer of Enhanced Buff.</size>
 
 超限崩解=Super Disintegration
 sr:"^人格面具技能或追加效果每次造成傷害時，使自己獲得(\d+)層『(.*)』。『(.*)』：每層提供(\d+%)的最終傷害加成,持續(\d+)回合,最多可疊加(\d+)層。$"="<size\=27>When dealing a hit of damage with Persona skills or Follow Up, you gain $1 stack of [$2].\n[$3]: Increase Final DMG by $4 for $5 turns, up to $6 stacks.</size>"
 深化活性=Deepen Agility
 
-四大天王每隔一個回合會對隨機一名怪盜釋放「死亡凝視」，四大天王會優先攻擊處於「死亡凝視」的怪盜。=The Four Heavenly Kings will use [Death Gaze] on a random enemy, the Four Heavenly Kings will prioritize attacking the enemy with [Death Gaze].
-
-r:"^1、{{A}}每隔1個回合，獲得(\d+)層「神之庇佑」，每層可以為其提供(\d+%)的減傷。\n2、{{A}}受到來自技能或追加效果的每段傷害，都會損失一層「神之庇佑」。\n3、{{A}}失去所有「神之庇佑」時會使所有怪盜獲得「神之祝福」，提升所有怪盜造成的傷害。$"="<size\=23>1. {{A}} will gains $1 stacks of [God's Protection] every other turns, each stack will provide $2 DMG RES.\n2. {{A}} will loses 1 stack of [God's Protection] after taking a hit of damage from skills or Follow Up.\n3. Give all Thieves [God's Blessing] which increase all Thieves' DMG Dealt when {{A}} loses all stacks of [God's Protection].</size>"
-r:"^每層使自身受到的傷害降低(\d+%)，每次受到傷害會損失(\d+)層$"="Increase DMG RES by $1, \nlose $2 stack after taking a hit of damage"
-神之庇佑=God's Protection
-神之祝福=God's Blessing
+熔岩噴湧=Lava Burst
+sr:"^每個回合開始時，獲得一層『(.*)』。『(.*)』：使下一次槍械攻擊或追加效果的最終傷害提升(\d+%)，最終傷害提升效果最多可疊加(\d+)層。$"="<size\=28>At the start of each turn, gain 1 stack of [$1]. [$1]: Increases the next Gun Attack or Follow Up Final DMG by $3, up to $4 stacks.</size>"
+熱能溢脹=Heat Overflow
