@@ -230,8 +230,8 @@ r:"^進入戰鬥時，若{{A}}速度大於100點，每超過1點使所有怪盜�
 r:"^進入戰鬥時，若{{A}}速度大於100點，每超過1點使所有怪盜獲得(\d+)點生命值、(\d+)點攻擊力、(\d+)點防禦力的提升，最多可提升<color\=#0169ca>(\d+)</color>點生命值、<color\=#0169ca>(\d+)</color>點攻擊力、<color\=#0169ca>(\d+)</color>點防禦力。$"="At the start of battle, for every 1 SPD that's over 100, increase all allies' HP by $1, ATK by $2 and DEF by $3, up to <color\=#0169ca>$4</color> HP, <color\=#0169ca>$5</color> ATK and <color\=#0169ca>$6</color> DEF."
 
 r:"^雀歌 Lv.(\d+)$"="Bird Song Lv.$1"
-r:"^使所有敵人受到的ONEMORE及總攻擊傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Increase all enemies' DMG Taken from One More and All-Out Attack by <color\=#FFFC40>$1</color>."
-r:"^使所有敵人受到的ONEMORE及總攻擊傷害提升<color\=#0169ca>(\d+\.\d+%)</color>。$"="Increase all enemies' DMG Taken from One More and All-Out Attack by <color\=#0169ca>$1</color>."
+r:"^使所有敵人受到的ONEMORE及{{A}}傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Increase all enemies' DMG Taken from One More and All-Out Attack by <color\=#FFFC40>$1</color>."
+r:"^使所有敵人受到的ONEMORE及{{A}}傷害提升<color\=#0169ca>(\d+\.\d+%)</color>。$"="Increase all enemies' DMG Taken from One More and All-Out Attack by <color\=#0169ca>$1</color>."
 
 r:"^破綻$"="Vulnerability"
 <color\=#66ccff>『破綻』</color>=<color\=#66ccff>[Vulnerability]</color>
@@ -687,7 +687,7 @@ r:"^將1名同伴當前生命值的(\d+%)按照(\d+%)的比例置換為護盾，
 
 r:"^英勇轉化 Lv.(\d+)$"="Heroic Conversion Lv.$1"
 r:"^英勇轉化 <color\=#0F69CB>Lv.(\d+)</color>$"="Heroic Conversion <color\=#0F69CB>Lv.$1</color>"
-r:"^使1名同伴的攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。效果持續時間，目標身上每有1層<link\="s\|128"><u>『啟動』</u></link>，則基於{{A}}攻擊力的(\d+%)獲得攻擊力提升，透過這種方式獲得的攻擊力上限為<color\=#FFFC40>(\d+\.\d+)</color>。\n<b><size\=28><color\=#850101>正義的力量不會遲到，以英雄所持的印記為同伴增添助力，這場戰役永不會輸！</color></size></b>$"="Increase 1 ally's ATK by <color\=#FFFC40>$1</color> for 2 turns. When this effect is active, for each 1 stack of <link\="s|128"><u>[Activate]</u></link> on the target, increase their ATK based on $2 own ATK, up to <color\=#FFFC40>$3</color>.\n<b><size\=28><color\=#850101>The power of justice will not be delayed, and by using the seal held by the hero to add strength to your companions, you will never lose this battle!</color></size></b>"
+r:"^使1名同伴的攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。效果持續時間，目標身上每有1層<link\="s\|128"><u>『啟動』</u></link>，則基於{{A}}攻擊力的(\d+%)獲得攻擊力提升，透過這種方式獲得的攻擊力上限為<color\=#FFFC40>(\d+\.\d+)</color>。\n<b><size\=28><color\=#850101>正義的力量不會遲到，以英雄所持的印記為同伴增添助力，這場戰役永不會輸！</color></size></b>$"="Increases 1 ally's ATK by <color\=#FFFC40>$1</color> for 2 turns. When this effect is active, for each 1 stack of <link\="s|128"><u>[Activate]</u></link> on the target, increases their ATK based on $2 own ATK, up to <color\=#FFFC40>$3</color>.\n<b><size\=28><color\=#850101>The power of justice will not be delayed, and by using the seal held by the hero to add strength to your companions, you will never lose this battle!</color></size></b>"
 
 r:"^『HIGHLIGHT』：使1名同伴獲得滿層<link\="s\|128"><u>『啟動』</u></link>，效果持續2回合，若目標生命值低於(\d+%)，則使其生命值恢復至(\d+%)，回復的生命值上限為{{A}}攻擊力的(\d+%)。並基於{{A}}攻擊力的(\d+%)提升其攻擊力，上限<color\=#FFFC40>(\d+\.\d+)</color>點，效果持續2回合。\n『ONE MORE』：對1名敵人造成核熱屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[HIGHLIGHT』: Gives 1 ally maxed stacks of <link\="s|128"><u>[Activate]</u></link> for 2 turns. If their HP is below $1 then restores their HP to $2 HP, up to $3 ATK. Increases their ATK by $4, up to <color\=#FFFC40>$5</color> for 2 turns. \n[ONE MORE]: Deals Nuclear damage to 1 enemy. \nMelee Attack: Uses a melee weapon to deal light Physical damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
 
@@ -1175,9 +1175,9 @@ r:"^當同伴死亡時立即使其復活並回復等同於{{A}}(\d+%)最大生�
 Phoebe - Yumi Shiina
 ----------
 r:"^同伴造成傷害時，會使{{A}}獲得對應屬性的『風味』並調製出『雞尾酒』。{{A}}釋放技能時會消耗『雞尾酒』使效果得到強化。$"="<size\=26>When an ally deals damage, you gain [Flavor] equal to that element to make [Cocktail]. Consume [Cocktail] when using skills to boost their effects.</size>"
-撩人的醉意=<size\=26>Sultry Drunkenness</size>
-繽紛的輔料=<size\=25>Colorful Supplement</size>
-風味絕倫的美酒=<size\=27>Unparalleled Drink</size>
+撩人的醉意=<size\=24>Sultry Drunkenness</size>
+繽紛的輔料=<size\=23>Colorful Supplement</size>
+風味絕倫的美酒=<size\=25>Unparalleled Drink</size>
 攪拌=Stir
 搖晃=Shake
 

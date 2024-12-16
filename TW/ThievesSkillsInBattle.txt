@@ -112,12 +112,13 @@ r:"^受到的傷害提升(\d+%)$"="Increase DMG Taken by $1"
 
 速步=Quick Pace
 氣合=Kiai
-r:"^受到ONEMORE及總攻擊傷害提升(\d+%)$"="Increase DMG Taken from One More and All-Out Attack by $1"
+r:"^受到ONEMORE及{{A}}傷害提升(\d+%)$"="Increase DMG Taken from One More and {{A}} by $1"
 傲放=Pride
 
 In-Battle Quotes
 r:"^<color\=#FF0000>{{A}}</color>獲得了『情報』……$"="<color\=#FF0000>{{A}}</color> gained [Intel]!"
-sr:"^<color\=#FF0000>(.*)</color>的『破綻』被擊破……$"="<size\=25><color\=#FF0000>$1</color>'s [Vulnerability] has been broken!</size>"
+r:"^<color\=#FF0000>(.*){{A}}</color>的『破綻』被擊破……$"="<size\=25><color\=#FF0000>Enemy's</color> [Vulnerability] has been broken!</size>"
+r:"^<color\=#FF0000>{{A}}</color>的『破綻』被擊破……$"="<size\=25><color\=#FF0000>Enemy's</color> [Vulnerability] has been broken!</size>"
 
 Combat Pop-ups
 r:"^破<color\=#000000>綻</color>$"="<size\=15> </size>V<color\=#000000>ul</color>nerability"
@@ -303,8 +304,8 @@ r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的核熱屬�
 r:"^將<color\=#FFFF00>1名</color>同伴的(\d+%)當前生命值按照(\d+%)的比例置換為護盾，額外獲得(\d+\.\d+%)攻擊力\+(\d+)的護盾。並使其獲得1層『啟動』。$"="Converts <color\=#FFFF00>1</color> ally's $1 current HP into Shield with a $2 ratio, and additionally gives $3 + $4 ATK as Shield for 2 turns. Gives the target 1 stack of [Activate]."
 r:"^將1名同伴當前生命值的(\d+%)按照(\d+%)的比例置換為護盾，並額外附加相當於{{A}}<color\=#FFFC40>(\d+\.\d+%)</color>\+<color\=#FFFC40>(\d+)</color>攻擊力的護盾，護盾持續2回合。並使其獲得1層<link\="s\|128"><u>『啟動』</u></link>。$"="Converts 1 ally's $1 current HP into Shield with a $2 ratio, and additionally gives <color\=#FFFC40>$3</color> + <color\=#FFFC40>$4</color> ATK as Shield for 2 turns. Gives the target 1 stack of <link\="s|128"><u>[Activate]</u></link>."
 
-r:"^使<color\=#FFFF00>1名</color>同伴攻擊力提升(\d+\.\d+%)，效果持續2回合。效果持續期間，目標身上每有1層『啟動』，則使其攻擊力基於{{A}}攻擊力的(\d+%)獲得額外提升，上限(\d+\.\d+)點。$"="Increase <color\=#FFFF00>1</color> ally's ATK by $1 for 2 turns. When this effect is active, for each 1 stack of [Activate] on the target, increase their ATK based on $2 own ATK, up to $3."
-r:"^使1名同伴的攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。效果持續時間，目標身上每有1層<link\="s\|128"><u>『啟動』</u></link>，則基於{{A}}攻擊力的(\d+%)獲得攻擊力提升，透過這種方式獲得的攻擊力上限為<color\=#FFFC40>(\d+\.\d+)</color>。$"="Increase 1 ally's ATK by <color\=#FFFC40>$1</color> for 2 turns. When this effect is active, for each 1 stack of <link\="s|128"><u>[Activate]</u></link> on the target, increase their ATK based on $2 own ATK, up to <color\=#FFFC40>$3</color>."
+r:"^使<color\=#FFFF00>1名</color>同伴攻擊力提升(\d+\.\d+%)，效果持續2回合。效果持續期間，目標身上每有1層『啟動』，則使其攻擊力基於{{A}}攻擊力的(\d+%)獲得額外提升，上限(\d+\.\d+)點。$"="Increases <color\=#FFFF00>1</color> ally's ATK by $1 for 2 turns. When this effect is active, for each 1 stack of [Activate] on the target, increases their ATK based on $2 own ATK, up to $3."
+r:"^使1名同伴的攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。效果持續時間，目標身上每有1層<link\="s\|128"><u>『啟動』</u></link>，則基於{{A}}攻擊力的(\d+%)獲得攻擊力提升，透過這種方式獲得的攻擊力上限為<color\=#FFFC40>(\d+\.\d+)</color>。$"="Increases 1 ally's ATK by <color\=#FFFC40>$1</color> for 2 turns. When this effect is active, for each 1 stack of <link\="s|128"><u>[Activate]</u></link> on the target, increases their ATK based on $2 own ATK, up to <color\=#FFFC40>$3</color>."
 
 r:"^使<color\=#FFFF00>1名</color>同伴獲得滿層『啟動』，生命值不足(\d+%)時，使其生命值恢復至(\d+%)。並基於自身攻擊力的(\d+%)，使其攻擊力提升，上限(\d+\.\d+)點，效果持續2回合。$"="Gives <color\=#FFFF00>1</color> ally maxed stacks of [Activate] for 2 turns. If their HP is below $1 then restores their HP to $2 HP. Increases their ATK based on $3 own ATK, up to $4 for 2 turns."
 
@@ -834,6 +835,7 @@ r:"^當前解析進度為(\d+%)$"="Analysis Progress at $1"
 r:"^受到傷害提升(\d+\.\d+%)，受到傷害後雙葉獲得(\d+%)解析進度。$"="Increase DMG Taken by $1, Oracle gains $2 Analysis Progress after taking damage"
 擾亂病毒=Disruption Virus
 適應性發生了改變=Changed Resistance
+r:"^受到弱點傷害提升(\d+%)$"="Increase Weak DMG Taken by $1"
 漏洞分析=Vulnerability Analysis
 使用『無聲侵襲』或『數據破解』時，技能效果提升。=Increase skill effect when using \n[Silent Hacking] or [Data Crack]
 受到弱點傷害時防禦力降低=Decrease DEF when taking Weak DMG

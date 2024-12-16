@@ -11,6 +11,7 @@ sr:"^(.*)·日$"="$1·Sun"
 sr:"^(.*)·月$"="$1·Moon"
 sr:"^(.*)·星$"="$1·Star"
 sr:"^(.*)·辰$"="$1·Planet"
+暫未啟動套裝效果=No effect
 套裝效果=Set Effect
 日月星辰=Basic
 當前消耗數量:=Consumed:
@@ -54,6 +55,16 @@ r:"^隨機強化(\d+)條副屬性$"="<size\=10> </size>Upgrade $1 Sub Stats"
 所選素材<color\=#FFC000>已強化過</color>、<color\=#FFC000>品質過高</color>\n是否確定使用所選素材進行升級？=<size\=27>Selected <color\=#FFC000>upgraded</color>, <color\=#FFC000>high quality</color> materials.\nAre you sure you want to use the selected materials for upgrade?</size>
 
 sr:"^未知宿命橙·(.*)"="Random 4★ $1"
+
+當前方案=Current Preset
+r:"^預設方案(\d+)$"="Preset $1"
+r:"^新增方案\（(\d+)/(\d+)\）$"="Presets ($1/$2)"
+r:"^是否使用預設方案(.*)替換當前使用的啟示？$"="Switch to this preset?"
+正在使用該方案。=Already in use.
+預設名稱已存在，請修改後再保存。=Name already exists.
+裝備成功。=Equip success.
+預設內有部分啟示正在被其他角色使用，是否確認繼續使用？=Some cards are being used by other characters, continue?
+確認後將自動卸下其他角色正在使用的啟示=Automatically unequip all used cards on other characters
 
 ----------
 All Universe Cards
@@ -178,7 +189,7 @@ r:"^4套裝效果：任意怪盜使用電屬性技能後提升自身電擊屬性
 r:"^【美德】$"="<size\=20>  </size>[Virtue]"
 r:"^美德$"="Virtue"
 r:"^2套裝效果：祝福傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase Bless DMG by <color\=#2899ff>10%</color>.</size>"
-r:"^4套裝效果：當前生命值百分比不低於(\d+%)時，祝福屬性的暴擊率提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: Increase Bless skill CRIT by <color\=#2899ff>$2</color> when your HP% is not less than $1.</size>"
+r:"^4套裝效果：當前生命值百分比不低於(\d+%)時，祝福屬性的暴擊率提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: Increase Bless skill CRIT Rate by <color\=#2899ff>$2</color> when your HP% is not less than $1.</size>"
 
 r:"^【和平】$"="<size\=20>  </size>[Peace]"
 r:"^和平$"="Peace"
