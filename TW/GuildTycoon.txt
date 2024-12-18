@@ -201,13 +201,30 @@ r:"^(\d+)天(\d+)小時$"="$1 day(s) $2 hour(s)"
 經典對決=Classic Mode
 當前排名=Current Points
 
+當前正在匹配中，無法查看此功能介面。=Cannot view this when you are queuing.
+準備=Ready
+r:"^等待所有人準備，<color\=#FF0000>(\d+)秒後</color>進入牌局……$"="Automatically start after <color\=#FF0000>$1 second(s)</color>"
+
 請選擇您要出的牌。=Select the card you want to play.
-r:"^選擇和大貧民的{{A}}交換<color\=#FF0000>任意(\d+)張牌</color>$"="<color\=#FF0000>Trade $1 card(s)</color> with {{A}}"
-r:"^(\d+)秒後自動進入下一局$"="Start next round after $1 second(s)"
+您沒有牌大過上家=You don't have play.
+r:"^選擇和大富豪的wonder交換<color\=#FF0000>最大的(\d+)張牌</color>$"="<size\=24>Give <color\=#FF0000>$1 strongest cards</color> to Wonder</size>"
+r:"^選擇和大富豪的{{A}}交換<color\=#FF0000>最大的(\d+)張牌</color>$"="<size\=24>Give <color\=#FF0000>$1 strongest cards</color> to {{A}}</size>"
+r:"^選擇和富豪的wonder交換<color\=#FF0000>最大的(\d+)張牌</color>$"="<size\=24>Give <color\=#FF0000>$1 strongest card</color> to Wonder</size>"
+r:"^選擇和富豪的{{A}}交換<color\=#FF0000>最大的(\d+)張牌</color>$"="<size\=24>Give <color\=#FF0000>$1 strongest card</color> to {{A}}</size>"
+r:"^選擇和貧民的wonder交換<color\=#FF0000>任意(\d+)張牌</color>$"="<size\=24>Trade <color\=#FF0000>$1 card</color> with Wonder</size>"
+r:"^選擇和貧民的{{A}}交換<color\=#FF0000>任意(\d+)張牌</color>$"="<size\=24>Trade <color\=#FF0000>$1 card</color> with Wonder</size>"
+r:"^選擇和大貧民的wonder交換<color\=#FF0000>任意(\d+)張牌</color>$"="<size\=24>Trade <color\=#FF0000>$1 cards</color> with Wonder</size>"
+r:"^選擇和大貧民的{{A}}交換<color\=#FF0000>任意(\d+)張牌</color>$"="<size\=24>Trade <color\=#FF0000>$1 cards</color> with {{A}}</size>"
+r:"^(\d+)秒後自動進入下一局$"="Start after $1 second(s)"
 牌的強弱會逆向排序(3最大)=Flip Strength (3 is strongest)
+退出後將離開當前牌局，並無法獲得任何獎勵。是否繼續?=Cannot get rewards if you leave. Continue?
 本次挑戰獲得=Rewards
 r:"^富豪積分\+(\d+)$"="Tycoon Points +$1"
 富豪積分+0(已達上限)=Tycoon Points +0 (Reached weekly cap)
+本次對局獲得第1名，星數+2=Got 1st place in this game, +2 Stars.
+本次對局獲得第2名，星數+1=Got 2nd place in this game, +1 Star.
+本次對局獲得第3名，星數-1=Got 3rd place in this game, -1 Star.
+本次對局獲得第4名，星數-2=Got 4th place in this game, -2 Stars.
 
 排行資訊=Rank
 賽季結束時將透過郵件發放所屬段位獎勵。=Rewards will be given at season reset.
@@ -241,7 +258,6 @@ r:"^賽季排行榜顯示「段位對決」模式排名前(\d+)名的玩家。$"
 給{{A}}的專屬邀請函，用於解鎖大富豪對局中的特殊可用角色。=<size\=26>An exclusive invitation to {{A}}, unlock this character in Tycoon.</size>
 
 總達成次數=Times
-
 r:"^完成(\d+)次任意模式對決$"="<size\=22>Finish $1 game(s) in any mode</size>"
 r:"^完成(\d+)次任意模式對決\((\d+)/(\d+)\)$"="<size\=22>Finish $1 game(s) in any mode ($2/$3)</size>"
 r:"^經典對決中，成為(\d+)次大富豪$"="<size\=22>Become Tycoon $1 times in classic mode</size>"
