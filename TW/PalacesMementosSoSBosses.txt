@@ -93,10 +93,52 @@ PALACE 3
 {{A}}{{B}}碎片=<size\=21>Wrath Gluttony Shard</size>
 
 ----------
+PALACE 1 BOSS
+----------
+與{{A}}決戰=Defeat {{A}}
+注意強力攻擊=Watch out for Powerful Attack
+截斷{{A}}的能量來源=Cut off {{A}}'s Energy Source
+
+絕對癡心的少女=Infatuated Fan
+毫無保留的少女=Unreversed Fan
+
+未嘗一敗=Never Known Defeat
+準備釋放強力一擊並且提升=Preparing to use a strong attack
+王牌投手=Ace Pitcher
+準備釋放強力一擊並且傷害提升=Preparing to use a strong attack
+加油=Cheer
+正在為{{A}}加油=Cheering for {{A}}
+r:"^無法行動，受到傷害提升(\d+%)$"="Cannot act, increase DMG Taken by $1"
+
+高速球擊=High Speed Ball
+球棒攻擊=Bat Swing
+疾風球擊=Wind Strike
+對1名敵人造成疾風屬性傷害，有機率使其進入風襲狀態。=Deals Wind damage to 1 enemy, with a chance to inflict Winded.
+颶風散射=Cyclone Scattershot
+對全體敵人造成疾風屬性傷害，有機率使目標進入風襲狀態。=Deals Wind damage to all enemies, with a chance to inflict Winded.
+r:"^對所有敵人造成(\d+)~(\d+)次物理屬性傷害。$"="Deals Physical damage to all enemies $1-$2 times."
+弧旋崇拜球=Screwball of Warship
+爆裂崇拜球=Blitzball of Warship
+
+下回合將釋放強力一擊=Use a powerful skill next turn
+
+<color\=#FF0000>{{A}}</color>變得更加急躁……=<color\=#FF0000>{{A}}</color> became more impatient...
+r:"^{{B}}準備攻擊<color\=#FF0000>{{A}}</color>！$"="{{B}} is preparing to attack <color\=#FF0000>{{A}}</color>!"
+r:"^{{A}}準備攻擊<color\=#FF0000>{{B}}</color>！$"="{{A}} is preparing to attack <color\=#FF0000>{{B}}</color>!"
+<color\=#FF0000>{{A}}</color>正在蓄力……=<color\=#FF0000>{{A}}</color> is charging...
+r:"^<color\=#FF0000>絕對癡心的少女</color>正在為{{A}}加油……$"="<color\=#FF0000>Infatuated Fan</color> is cheering for {{A}}..."
+r:"^<color\=#FF0000>毫無保留的少女</color>正在為{{A}}加油……$"="<color\=#FF0000>Unreversed Fan</color>is cheering for {{A}}..."
+r:"^<color\=#FF0000>{{A}}</color>虛弱了……$"="<color\=#FF0000>{{A}}</color> entered Weak!"
+
+r:"^行<color\=#000000>動</color>提前$"="<size\=11> </size>A<color\=#000000>ct</color>ion Up"
+r:"^木<color\=#000000>內</color>{{A}}，未嘗一敗$"="<size\=21> </size>Ne<color\=#000000>v</color>er Known Defeat"
+r:"^木<color\=#000000>內</color>{{A}}，王牌投手$"="<size\=11> </size>A<color\=#000000>ce</color> Pitcher"
+
+
+----------
 PALACE 3 BOSS + ELITES
 ----------
 r:"^拯救{{A}}$"="Rescue {{A}}"
-r:"^注意強力攻擊$"="Watch out for Powerful Attack"
 r:"^擊破{{A}}的護盾$"="Break {{A}}'s Shield"
 r:"^注意控制{{B}}的{{A}}值$"="Note the {{A}} Gauge that Controls {{B}}"
 擊破左下翼=Break the Lower Left Wing
@@ -269,10 +311,10 @@ r:"自身血量百分比越低，造成傷害越高，當前傷害提高：(\d+%
 受到火、冰、電、風屬性傷害時會使{{A}}的月相正向變換=Thoth taking Fire, Ice, Electricity, Wind damage will reverse the lunar phase
 月相更替Ⅱ=<size\=26>Lunar Phase Change II</size>
 受到念、核、祝、咒屬性傷害時會使{{A}}的月相逆向變換=Thoth taking Psy, Nuke, Bless, Curse damage will reverse the lunar phase
-r:"造成傷害降低(\d+%)，受到傷害提高(\d+%)"=Decrease DMG Dealt by $1, increase DMG Taken by $2
-r:"造成傷害降低(\d+%)、受到傷害降低(\d+%)"=Decrease DMG Dealt by $1, decrease DMG Taken by $2
-r:"造成傷害提高(\d+%)，受到傷害提高(\d+%)"=Increase DMG Dealt by $1, increase DMG Taken by $2
-r:"造成傷害降高(\d+%)、受到傷害降低(\d+%)"=Increase DMG Dealt by $1, decrease DMG Taken by $2
+r:"造成傷害降低(\d+%)，受到傷害提高(\d+%)"=Decrease DMG Dealt by $1; \nIncrease DMG Taken by $2
+r:"造成傷害降低(\d+%)、受到傷害降低(\d+%)"=Decrease DMG Dealt by $1; \nDecrease DMG Taken by $2
+r:"造成傷害提高(\d+%)，受到傷害提高(\d+%)"=Increase DMG Dealt by $1; \nIncrease DMG Taken by $2
+r:"造成傷害降高(\d+%)、受到傷害降低(\d+%)"=Increase DMG Dealt by $1; \nDecrease DMG Taken by $2
 
 r:"1、每回合會在白晝/黑夜中變換。\n處於白晝狀態時，所有單位精力值消耗大幅提升，造成傷害提高。\n處於黑夜狀態時，所有單位進入<color\=#ff3b37>「深度睡眠」</color>狀態：無法行動，每回合回復(\d+%)最大生命值與(\d+%)最大精力值。\n2、切換為黑夜狀態時，{{A}}會召喚1個{{B}}。每有1個{{B}}，下次黑夜的持續時間增加1回合。"=1. Each turn will change between Day/ Night. \nIn Day, heavily increase SP cost and increase DMG Dealt for all allies. \nIn Night, all allies enter <color\=#ff3b37>Deep Sleep</color>: Unable to act, restore $1 Max HP and $2 SP. \n2. When switching to Night, Thoth will summon a Sandman. Each Sandman increase the duration of the next Night by one turn.
 處於白晝之下=Under Day
@@ -311,6 +353,35 @@ hiho~打我的話我可是會反擊的。=Hee-ho～ I will counter if you hit me
 {{A}}會使用<color\=#ff3b37>「瘟疫之白」</color>。\n「瘟疫之白」：使所有怪盜扣除一定生命值，並使隨機3名怪盜進入「瘟疫」狀態，每回合失去一定生命值，持續3回合，可疊加5層。=White Rider will use <color\=#ff3b37>[Plague of White]</color>. \n[Plague of White]: Decrease all enemies' HP by a certain amount and inflict 3 enemies with [Plague]. \n[Plague]: Lose a certain amount of HP every turn for 3 turns, up to 5 stacks.
 瘟疫之白=Plague of White
 對所有敵人造成一定傷害，使隨機3名敵人獲得「瘟疫」，每回合初流失10%最大生命值，持續3回合，可疊加5層=Deals a certain amount of damage to all enemies and inflicts 3 random enemies with [Plague], making them lose 10% Max HP every turn for 3 turns, up to 5 stacks.
+
+----------
+CROSS FATE
+----------
+擊破慾望之冠冕=Break the Crown of Desire
+擊敗狂暴的{{A}}=Defeat Frenzied {{A}}
+
+慾望之冠冕=Crown of Desire
+
+冠冕之威=Might of the Crown
+r:"^造成的傷害提高(\d+%)，護盾被擊破後失去該加成$"="Increase DMG Dealt by $1, lose this effect when the Shield is broken"
+r:"^慾望之冠冕添加的護盾，剩餘護盾值：(\d+)$"="Shield given by Crown of Desire, \nremaining Shield: $1"
+
+金小刀=Golden Knife
+金小叉=Golden Fork
+舌頭甩擊=Lick
+對1名敵人造成物理屬性傷害=Deals Physical damage to 1 enemy
+對全體敵人造成物理屬性傷害=Deals Physical damage to all enemies
+冠冕之力=Power of the Crown
+慾望之冠冕為{{A}}添加護盾，護盾存在時{{A}}造成傷害大幅提高=Crown of Desire gives a Shield to {{A}}, heavily increases {{A}}'s DMG Dealt \nwhen the Shield is present
+積蓄力量，準備使用「冠軍扣殺」=<size\=26>Charges and prepares to use [Gold Medal Spike]</size>
+冠軍扣殺=Gold Medal Spike
+對全體敵人造成大量物理屬性傷害=Deals heavy Physical damage to all enemies
+冠冕的療癒=Crown Healing
+{{A}}生命值較低時，慾望之冠冕會為其進行療癒=Restores HP to {{A}} when their HP is low
+
+r:"^{{A}}獲得了冠冕的強化，請<color\=#FF0000>儘快擊破護盾</color>$"="{{A}} is buffed by the Crown. \n<color\=#FF0000>Break the Shield as soon as possible</color>!"
+r:"^<color\=#ff0000>打破那個護盾</color>應該就能弱化他。$"="<color\=#ff0000>Breaking the Shield</color> will weaken him."
+r:"^{{A}}進入<color\=#FF0000>狂暴</color>狀態，請小心應對$"="{{A}} enters <color\=#FF0000>Frenzy</color>!"
 
 ----------
 Sea of Souls Trials (SoS)
@@ -373,7 +444,7 @@ r:"(\d+)次行動內完成"=Win in $1 turn(s)
 選擇「清空進度」會清除保存的記錄並重新挑戰。=Select [No] to reset progress and retry.
 關卡尚未通關，是否保存當前進度並暫時離開？=Do you want to save your progress and leave?
 選擇「清空進度」會重置當前關卡進度並重新挑戰。=Select [No] to reset the level and retry.
-是否重置關卡進度並清除當前挑戰陣容？（已獲得的歷史積分不會清空）=Reset progess and lineup? (This will not erase your high score)
+是否重置關卡進度並清除當前挑戰陣容？（已獲得的歷史積分不會清空）=Reset progess and team? (This will not erase your high score)
 
 試煉一=Trial 1
 試煉二=Trial 2
