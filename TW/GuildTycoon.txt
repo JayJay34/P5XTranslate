@@ -15,7 +15,7 @@ r:"^積分統計進度會記錄本期分數<color\=#ef0000>最高</color>的<col
 r:"今日活躍：(\d+\/\d+)"=Today's Score: $1
 r:"近7天貢獻 (\d+)"=7d Contribution: $1
 
-閼凶夢之扉夢境更換說明：\n每週閼凶夢之扉會開啟一種夢境效果，本周所有的挑戰會根據夢境的不同發生規則變化。=<size\=27>Door of Nightmare rotation info:\nEach week there is an unique mechanic, changing all bosses based on the mechanic.</size>
+閼凶夢之扉夢境更換說明：\n每週閼凶夢之扉會開啟一種夢境效果，本周所有的挑戰會根據夢境的不同發生規則變化。=<size\=27>Door of Nightmares rotation info:\nEach week there is an unique mechanic, changing all bosses based on the mechanic.</size>
 首領受到一定傷害會進入虛弱狀態，處於虛弱狀態時全力輸出對其造成大量傷害，可獲取大量的戰鬥積分。=<size\=26>After defeating the boss, you gain 2x score.</size>
 隨著回合數的增加，首領給予的生存壓力會越來越高，但每回合的積分獲取效率也會相應提升。=<size\=26>Increase score gain but also increase enemies' damage after each turn.</size>
 
@@ -56,7 +56,7 @@ BOSS總積分：=Current Score:
 長按怪盜可便捷進行培養=<size\=25>Hold press on the party\nmember to customize</size>
 可用協助次數：=Assist Units\nAvailable
 樂園=<size\=32>Paradise</size>
-鎖定陣容=<size\=20>Team Lineup</size>
+鎖定陣容=Lock Team
 
 獎勵詳情=Rewards
 任意樂園成員首次參與挑戰後活躍值+1=+1 Activity Point from each member when challenging the weekly for the first time.
@@ -89,7 +89,7 @@ sr:"<color\=#FF0000>(.*)</color>將<color\=#FF0000>(.*?)</color>移出了樂園�
 鎖定提示=Lock
 以下<color\=#ef0000>怪盜、面具與啟示</color>會被鎖定到本挑戰中不可更換，是否確認出戰？=<size\=24>You cannot change the chosen <color\=#ef0000>Thieves, Personas and Revelation Cards</color> until you reset the fight</size>
 以下怪盜裝備的<color\=#ef0000>啟示</color>被其他BOSS鎖定，選擇確認以調整啟示。=<size\=26>The following Thieves' <color\=#ef0000>Revelation Cards</color> are locked by other bosses. Please switch.</size>
-重置挑戰會解除陣容鎖定並清空當前總積分，是否繼續=<size\=28>Resetting the fight will unlock your team lineup and clear the current score, are you sure? \n(This will not erase your Personal Best)</size>
+重置挑戰會解除陣容鎖定並清空當前總積分，是否繼續=<size\=28>Resetting the fight will unlock your team and clear the current score, are you sure? \n(This will not erase your Personal Best)</size>
 尚未挑戰=Not challenged yet
 啟示禁用=<size\=20>\nCards\nLocked</size>
 
@@ -127,7 +127,7 @@ r:"^{{A}}每受到一次人格面具技能/HIGHLIGHT/追加效果造成的傷害
 Modifiers
 ----------
 穩定領域=Stable Domain
-所有怪盜無法暴擊，人格面具技能/追加效果造成的<color\=#FFFC40>最終傷害</color>提高，提高值\=暴擊率*(暴擊效果-100%)。（最多計入100%暴擊率）=<size\=26>All allies can't CRIT, increase <color\=#FFFC40>Final DMG</color> of Persona Skills/ Follow Up by\nCRIT Rate * (CRIT DMG - 100%)\n(Up to 100% CRIT)</size>
+所有怪盜無法暴擊，人格面具技能/追加效果造成的<color\=#FFFC40>最終傷害</color>提高，提高值\=暴擊率*(暴擊效果-100%)。（最多計入100%暴擊率）=<size\=26>All allies can't CRIT, increase <color\=#FFFC40>Final DMG</color> of Persona Skills/ Follow Up by\nCRIT Rate * (CRIT DMG - 100%)\n(Up to 100% CRIT Rate)</size>
 
 狂暴領域=Frenzy Domain
 r:"^敵人每回合末使自身獲得(\d+)層<color\=#FFFC40>『狂暴』</color>。\n『狂暴』：最終傷害提升(\d+%)，可疊加。$"="Enemies gain $1 stack of <color\=#FFFC40>[Frenzy]</color> at the end of each turn.\nFrenzy: Increase Final DMG by $2, can stack."
@@ -201,13 +201,30 @@ r:"^(\d+)天(\d+)小時$"="$1 day(s) $2 hour(s)"
 經典對決=Classic Mode
 當前排名=Current Points
 
+當前正在匹配中，無法查看此功能介面。=Cannot view this when you are queuing.
+準備=Ready
+r:"^等待所有人準備，<color\=#FF0000>(\d+)秒後</color>進入牌局……$"="Automatically start after <color\=#FF0000>$1 second(s)</color>"
+
 請選擇您要出的牌。=Select the card you want to play.
-r:"^選擇和大貧民的{{A}}交換<color\=#FF0000>任意(\d+)張牌</color>$"="<color\=#FF0000>Trade $1 card(s)</color> with {{A}}"
-r:"^(\d+)秒後自動進入下一局$"="Start next round after $1 second(s)"
+您沒有牌大過上家=You don't have play.
+r:"^選擇和大富豪的wonder交換<color\=#FF0000>最大的(\d+)張牌</color>$"="<size\=24>Give <color\=#FF0000>$1 strongest cards</color> to Wonder</size>"
+r:"^選擇和大富豪的{{A}}交換<color\=#FF0000>最大的(\d+)張牌</color>$"="<size\=24>Give <color\=#FF0000>$1 strongest cards</color> to {{A}}</size>"
+r:"^選擇和富豪的wonder交換<color\=#FF0000>最大的(\d+)張牌</color>$"="<size\=24>Give <color\=#FF0000>$1 strongest card</color> to Wonder</size>"
+r:"^選擇和富豪的{{A}}交換<color\=#FF0000>最大的(\d+)張牌</color>$"="<size\=24>Give <color\=#FF0000>$1 strongest card</color> to {{A}}</size>"
+r:"^選擇和貧民的wonder交換<color\=#FF0000>任意(\d+)張牌</color>$"="<size\=24>Trade <color\=#FF0000>$1 card</color> with Wonder</size>"
+r:"^選擇和貧民的{{A}}交換<color\=#FF0000>任意(\d+)張牌</color>$"="<size\=24>Trade <color\=#FF0000>$1 card</color> with Wonder</size>"
+r:"^選擇和大貧民的wonder交換<color\=#FF0000>任意(\d+)張牌</color>$"="<size\=24>Trade <color\=#FF0000>$1 cards</color> with Wonder</size>"
+r:"^選擇和大貧民的{{A}}交換<color\=#FF0000>任意(\d+)張牌</color>$"="<size\=24>Trade <color\=#FF0000>$1 cards</color> with {{A}}</size>"
+r:"^(\d+)秒後自動進入下一局$"="Start after $1 second(s)"
 牌的強弱會逆向排序(3最大)=Flip Strength (3 is strongest)
+退出後將離開當前牌局，並無法獲得任何獎勵。是否繼續?=Cannot get rewards if you leave. Continue?
 本次挑戰獲得=Rewards
 r:"^富豪積分\+(\d+)$"="Tycoon Points +$1"
 富豪積分+0(已達上限)=Tycoon Points +0 (Reached weekly cap)
+本次對局獲得第1名，星數+2=Got 1st place in this game, +2 Stars.
+本次對局獲得第2名，星數+1=Got 2nd place in this game, +1 Star.
+本次對局獲得第3名，星數-1=Got 3rd place in this game, -1 Star.
+本次對局獲得第4名，星數-2=Got 4th place in this game, -2 Stars.
 
 排行資訊=Rank
 賽季結束時將透過郵件發放所屬段位獎勵。=Rewards will be given at season reset.
@@ -241,7 +258,6 @@ r:"^賽季排行榜顯示「段位對決」模式排名前(\d+)名的玩家。$"
 給{{A}}的專屬邀請函，用於解鎖大富豪對局中的特殊可用角色。=<size\=26>An exclusive invitation to {{A}}, unlock this character in Tycoon.</size>
 
 總達成次數=Times
-
 r:"^完成(\d+)次任意模式對決$"="<size\=22>Finish $1 game(s) in any mode</size>"
 r:"^完成(\d+)次任意模式對決\((\d+)/(\d+)\)$"="<size\=22>Finish $1 game(s) in any mode ($2/$3)</size>"
 r:"^經典對決中，成為(\d+)次大富豪$"="<size\=22>Become Tycoon $1 times in classic mode</size>"
