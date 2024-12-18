@@ -72,8 +72,8 @@ r:"^行動後損失生命值$"="Lose HP after action"
 <color\=#66ccff>洗腦</color>=<color\=#AF4FA6>Brainwash</color>
 洗腦=Brainwash
 
-<color\=#66ccff>詛咒</color>=<color\=#FF0037>Cursed</color>
-<color\=#66ccff>祝福</color>=<color\=#FFFF9E>Blessed</color>
+r:"^<color\=#66ccff>詛咒</color>$"="<color\=#FF0037>Cursed</color>"
+r:"^<color\=#66ccff>祝福</color>$"="<color\=#FFFF9E>Blessed</color>"
 r:"^<color\=#FF0000>(.*)</color>從倒地狀態恢復了。$"="Recovered from <color\=#FF0000>Down</color>!"
 r:"^<color\=#FF0000>(.*){{A}}</color>從倒地狀態恢復了。$"="Recovered from <color\=#FF0000>Down</color>!"
 
@@ -584,6 +584,7 @@ r:"^攻<color\=#000000>擊</color>力提升$"="<size\=22> </size>A<color\=#00000
 r:"^攻<color\=#000000>擊</color>、防禦提升$"="<size\=22> </size>A<color\=#000000>T</color>K Up, DEF Up"
 r:"^防<color\=#000000>禦</color>提升$"="<size\=22> </size>D<color\=#000000>E</color>F Up"
 r:"^防<color\=#000000>禦</color>力提升$"="<size\=22> </size>D<color\=#000000>E</color>F Up"
+r:"^速<color\=#000000>度</color>提升$"="<size\=22> </size>S<color\=#000000>P</color>D Up"
 r:"^最<color\=#000000>大</color>生命值提升$"="<size\=0.1> </size>M<color\=#000000>ax</color> HP Up"
 r:"^穿<color\=#000000>透</color>提升$"="<size\=22> </size>P<color\=#000000>E</color>N Up"
 r:"^效<color\=#000000>果</color>命中提升$"=" E<color\=#000000>H</color>R Up"
@@ -657,6 +658,7 @@ r:"^受<color\=#000000>到</color>暴擊效果提升$"="<size\=20> </size>C<colo
 r:"^效<color\=#000000>果</color>抵抗降低$"="Ef<color\=#000000>fe</color>ct RES Down"
 r:"^受<color\=#000000>傷</color>害提升$"="<size\=17> </size>D<color\=#000000>M</color>G Taken Up"
 r:"^受<color\=#000000>到</color>傷害提升$"="<size\=17> </size>D<color\=#000000>M</color>G Taken Up"
+r:"^受<color\=#000000>最</color>終傷害提高$"="<size\=15> </size>F<color\=#000000>in</color>al DMG Taken Up"
 r:"^傷<color\=#000000>害</color>降低$"="<size\=17> </size>D<color\=#000000>M</color>G Down"
 r:"^受<color\=#000000>物</color>理傷害加深$"="<size\=25> </size>P<color\=#000000>h</color>ys DMG Taken Up"
 r:"^受<color\=#000000>到</color>火焰傷害提升$"="<size\=22> </size>F<color\=#000000>ir</color>e DMG Taken Up"
@@ -670,6 +672,8 @@ r:"^受<color\=#000000>到</color>核熱傷害提升$"="<size\=3> </size>N<color
 r:"^受<color\=#000000>詛</color>咒傷害提升$"="<size\=7> </size>C<color\=#000000>ur</color>se DMG Taken Up"
 
 r:"^瞄<color\=#000000>準</color>$"="Ai<color\=#000000>m</color>"
+r:"^猛<color\=#000000>毒</color>素$"="<size\=26> </size>T<color\=#000000>o</color>xin"
+
 
 ----------
 Inspect Details - BUFF
@@ -692,14 +696,17 @@ r:"^防禦力提升(\d+)$"="Increase DEF by $1"
 r:"^防禦力提升(\d+%)$"="Increase DEF by $1"
 r:"^防禦力提升(\d+\.\d+%)$"="Increase DEF by $1"
 r:"^精力值消耗降低(\d+%)$"="Decrease SP cost by $1"
+r:"^速度提升(\d+)$"="Increase SPD by $1"
 r:"^暴擊率提升(\d+%)$"="Increase CRIT Rate by $1"
 r:"^暴擊率提升(\d+\.\d+%)$"="Increase CRIT Rate by $1"
 r:"^持續時間內，所有友方暴擊率提升(\d+%)"="During this effect,\nincrease all allies' CRIT Rate by $1"
 sr:"^暴擊傷害提升(.*)$"="Increase CRIT DMG by $1"
 sr:"^暴擊效果提升(.*)$"="Increase CRIT DMG by $1"
 r:"^穿透提升(\d+%)$"="Increase PEN by $1"
+r:"^穿透提升(\d+%)，可疊加(\d+)層$"="Increase PEN by $1, up to $2 stacks"
 r:"^效果命中提升(\d+%)$"="Increase EHR by $1"
 r:"^效果命中提升(\d+\.\d+%)$"="Increase EHR by $1"
+r:"^基於效果命中提升最終傷害，當前提升(\d+%)$"="Increase Final DMG based on EHR; \nCurrently increase Final DMG by $1"
 r:"^效果抵抗提升(\d+%)$"="Increase Effect RES by $1"
 r:"^效果抵抗提升(\d+\.\d+%)$"="Increase Effect RES by $1"
 sr:"^效果抵抗降低(.*)$"="Decrease Effect RES by $1"
@@ -711,6 +718,7 @@ r:"^造成傷害提升(\d+%)$"="Increase DMG Dealt by $1"
 r:"^造成傷害提高(\d+%)$"="Increase DMG Dealt by $1"
 r:"^造成的傷害提升(\d+%)$"="Increase DMG Dealt by $1"
 r:"^造成的傷害提升(\d+\.\d+%)$"="Increase DMG Dealt by $1"
+r:"^造成傷害提升(\d+%)，可疊加(\d+)層$"="Increase DMG Dealt by $1, up to $2 stacks"
 r:"^所有同伴造成的傷害提升(\d+%)。$"="Increase DMG Dealt by $1"
 r:"^造成傷害提高(\d+%)，可疊加(\d+)層$"="Increase DMG Dealt by $1, up to $2 stacks"
 r:"^技能傷害提升(\d+%)$"="Increase skill damage by $1"
@@ -727,7 +735,9 @@ r:"^物理傷害提升(\d+%)$"="Increase Physical DMG by $1"
 r:"^物理傷害提升(\d+\.\d+%)$"="Increase Physical DMG by $1"
 r:"^射擊傷害提升(\d+%)$"="Increase Gun DMG by $1"
 r:"^射擊傷害提升(\d+\.\d+%)$"="Increase Gun DMG by $1"
+r:"^火焰傷害提高(\d+%)$"="Increase Fire DMG by $1"
 r:"^火炎傷害提升(\d+%)$"="Increase Fire DMG by $1"
+r:"^火焰傷害提升(\d+\.\d+%)$"="Increase Fire DMG by $1"
 r:"^火炎傷害提升(\d+\.\d+%)$"="Increase Fire DMG by $1"
 r:"^冰凍傷害提升(\d+%)$"="Increase Ice DMG by $1"
 r:"^冰凍傷害提升(\d+\.\d+%)$"="Increase Ice DMG by $1"
@@ -740,6 +750,7 @@ r:"^疾風傷害提升(\d+%)$"="Increase Wind DMG by $1"
 r:"^疾風傷害提升(\d+\.\d+%)$"="Increase Wind DMG by $1"
 r:"^疾風傷害提高(\d+%)$"="Increase Wind DMG by $1"
 r:"^念動傷害提升(\d+%)$"="Increase Psy DMG by $1"
+r:"^念動傷害提高(\d+%)$"="Increase Psy DMG by $1"
 r:"^念動傷害提升(\d+\.\d+%)$"="Increase Psy DMG by $1"
 r:"^核熱傷害提升(\d+%)$"="Increase Nuke DMG by $1"
 r:"^核熱傷害提升(\d+\.\d+%)$"="Increase Nuke DMG by $1"
@@ -776,6 +787,7 @@ r:"^受到傷害提升(\d+%)$"="Increase DMG Taken by $1"
 r:"^受到傷害提升(\d+\.\d+%)$"="Increase DMG Taken by $1"
 r:"^受到的傷害提升(\d+\.\d+%)$"="Increase DMG Taken by $1"
 r:"^造成傷害降低(\d+%)$"="Decrease DMG Dealt by $1"
+r:"^受火焰傷害提升(\d+%)$"="Increase Fire DMG Taken by $1"
 r:"^受到火焰傷害提升(\d+\.\d+%)$"="Increase Fire DMG Taken by $1"
 r:"^受到火屬性傷害提升(\d+\.\d+%)$"="Increase Fire DMG Taken by $1"
 r:"^受疾風傷害提高(\d+%)"="Increase Wind DMG Taken by $1"
@@ -783,6 +795,7 @@ r:"^受疾風傷害加深(\d+%)"="Increase Wind DMG Taken by $1"
 r:"^受到核熱傷害提升(\d+%)"="Increase Nuke DMG Taken by $1"
 r:"^受到的治療效果降低(\d+%)"="Decrease Healing Received by $1"
 
+r:"^回合末失去一定生命值，最終受到傷害提升(\d+%)，可疊加(\d+)層$"="<size\=24>Lose a certain amount of HP at the end of the turn; \nIncrease Final DMG Taken by $1, up to $2 stacks</size>"
 
 ----------
 Inspect Details - TITLES
@@ -793,11 +806,13 @@ r:"^攻擊力提升$"="Increase ATK"
 r:"^防禦提升$"="Increase DEF"
 r:"^防禦力提升$"="Increase DEF"
 r:"^防禦力降低$"="Decrease DEF"
+r:"^速度提升$"="Increase SPD"
 r:"^傷害增加$"="Increase Damage"
 r:"^傷害提升$"="Increase Damage"
 r:"^暴擊率提升$"="Increase CRIT"
 r:"^暴擊傷害提升$"="Increase CRIT DMG"
 r:"^暴擊效果提升$"="Increase CRIT DMG"
+r:"^穿透提升$"="Increase PEN"
 r:"^效果命中提升$"="<size\=25>Increase Effect Hit Rate</size>"
 r:"^效果抵抗提升$"="Increase Effect RES"
 r:"^造成傷害提升$"="Increase DMG Dealt"
@@ -817,8 +832,14 @@ r:"^受弱點傷害提升(\d+%)$"="Increase Weakness DMG by $1"
 r:"^耐性穿透提升(\d+%)$"="Increase Effect RES Ignore by $1"
 
 瞄準=Aim
-r:"^瑪哈塔爾卡(.*)$"="Matarukaja $1"
-r:"^瑪哈拉庫卡(.*)$"="Marakukaja $1"
+瑪哈塔爾卡Ⅳ=Auto-Mataru IV
+瑪哈塔爾卡Ⅲ=Auto-Mataru III
+瑪哈塔爾卡Ⅱ=Auto-Mataru III
+瑪哈塔爾卡Ⅰ=Auto-Mataru I
+瑪哈拉庫卡Ⅳ=Auto-Maraku IV
+瑪哈拉庫卡Ⅲ=Auto-Maraku III
+瑪哈拉庫卡Ⅱ=Auto-Maraku II
+瑪哈拉庫卡Ⅰ=Auto-Maraku I
 
 免疫即死=<size\=28>Instant Death Immunity</size>
 免疫精神異常=<size\=23>Mental Ailment Immunity</size>
