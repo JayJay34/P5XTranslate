@@ -50,10 +50,10 @@ r:"^剩餘次數：(\d+)/(\d+)$"="Use Limit: $1/$2"
 r:"^行動後損失生命值$"="Lose HP after action"
 凍結=Freeze
 觸電=Shock
-受到暴擊率提升10%=Increase odds of receiving CRIT by 10%
+r:"^受到暴擊率提升(\d+%)$"="Increase CRIT Rate Taken by $1"
 風襲=Winded
 輻射=Radiation
-受到的傷害提升15%，被視為一種元素異常。=Increase DMG Taken by 15%
+受到的傷害提升15%，被視為一種元素異常。=Increase DMG Taken by 15%; \nSeen as an Elemental Ailment
 
 <color\=#66ccff>暈眩</color>=<color\=#FBF6C1>Dizzy</color>
 暈眩=Dizzy
@@ -91,13 +91,14 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 持續損失生命值=Lose 1% Max HP each turn for 2 turns
 
 精神異常，無法行動。=Unable to take actions.
-精神異常，無法行動並且每回合回復5%生命值和5%精力值，受到傷害後清除。=Unable to take actions.\nRestore 5% of Max HP and 5% of Max SP each turn.\nThis ailment clears upon taking damage.
+精神異常，無法行動並且每回合回復5%生命值和5%精力值，受到傷害後清除。=Unable to act.\nRestore 5% of Max HP and 5% of Max SP each turn.\nThis ailment clears upon taking damage.
 精神異常，無法使用技能。=Unable to use skills.
-精神異常，無法行動，會丟棄一定數量的魂石。=Unable to take actions.\nDiscards Soul Gems each turn.
+精神異常，無法行動，會丟棄一定數量的魂石。=Unable to act.\nDiscards Soul Gems each turn.
 精神異常，有一定機率無法行動，若干回合後逃跑。=High chance of being unable to act.\nEscape from battle after a few turns.
-精神異常，無法行動，每回合扣除一定精力值，若干回合後死亡。=Unable to take actions.\nLose 5% Max SP each turn.\nInflicted will die after a few turns.
+精神異常，無法行動，每回合扣除一定精力值，若干回合後死亡。=Unable to act.\nLose 5% Max SP each turn.\nInflicted will die after a few turns.
 精神異常，攻擊力提升，防禦力降低，只能使用近戰攻擊，攻擊隨機目標。=Increase ATK, and decrease DEF.\nCan only use melee attacks.\nAttack random targets.
 精神異常，無法行動，並會攻擊同伴。=Will attack allies each turn.
+無法行動，被敵方所操控=Unable to act, controlled by enemies
 每回合恢復1%最大生命值，效果持續2回合。=Restore 1% Max HP each turn for 2 turns.
 每回合受到相當於1%最大生命值的傷害，效果持續2回合。=Lose 1% Max HP each turn for 2 turns.
 
@@ -187,6 +188,9 @@ sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬�
 
 //Memory Blow
 sr:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的(.*)屬性傷害，有(\d+\.\d+%)基礎機率使其陷入(.*)狀態，持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$3</color> chance of inflicting $4 for 2 turns.
+
+Painful Judgement
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+)段(\d+\.\d+%)攻擊力的物理屬性傷害，使敵人附加「噩夢」效果並以(\d+\.\d+%)基礎機率使敵人恐懼。$"="Deals $2 ATK Physical damage to <color\=#FFFF00>1</color> enemy $1 times, inflicts the enemy with [Nightmare] and there is a $3 base chance to inflict Fear."
 
 Hassou Tobi
 r:"^對<color\=#FFFF00>所有</color>敵人造成8次(\d+\.\d+%)攻擊力的物理屬性傷害，技能傷害隨敵人數量提升。$"="Deals $1 ATK Physical damage to <color\=#FFFF00>all</color> enemies 8 times, increases skill damage based on the number of enemies."
@@ -571,9 +575,10 @@ r:"^祝<color\=#000000>福</color>$"="<size\=15> </size>B<color\=#000000>le</col
 r:"^詛<color\=#000000>咒</color>$"="<size\=8> </size>C<color\=#000000>ur</color>sed"
 
 r:"^倒<color\=#000000>地</color>$"="<size\=22> </size>D<color\=#000000>o</color>wn"
-r:"^狂<color\=#000000>怒</color>$"="<size\=20> </size>R<color\=#000000>a</color>ge"
-r:"^睡<color\=#000000>眠</color>$"="<size\=17> </size>S<color\=#000000>le</color>ep"
+r:"^暈<color\=#000000>眩</color>$"="<size\=16> </size>D<color\=#000000>iz</color>zy"
 r:"^遺<color\=#000000>忘</color>$"="<size\=14> </size>F<color\=#000000>or</color>get"
+r:"^睡<color\=#000000>眠</color>$"="<size\=17> </size>S<color\=#000000>le</color>ep"
+r:"^狂<color\=#000000>怒</color>$"="<size\=20> </size>R<color\=#000000>a</color>ge"
 
 ----------
 Combat Pop-ups for buffs
@@ -650,6 +655,7 @@ r:"^生<color\=#000000>命</color>連結$"="<size\=0.1> </size>Li<color\=#000000
 Combat Pop-ups for debuffs
 ----------
 r:"^屬<color\=#000000>性</color>降低$"="<size\=15> </size>S<color\=#000000>ta</color>ts Down"
+r:"^屬<color\=#000000>性</color>下降$"="<size\=15> </size>S<color\=#000000>ta</color>ts Down"
 r:"^攻<color\=#000000>擊</color>降低$"="<size\=22> </size>A<color\=#000000>T</color>K Down"
 r:"^防<color\=#000000>禦</color>降低$"="<size\=22> </size>D<color\=#000000>E</color>F Down"
 r:"^防<color\=#000000>禦</color>力降低$"="<size\=22> </size>D<color\=#000000>E</color>F Down"
@@ -660,6 +666,7 @@ r:"^受<color\=#000000>傷</color>害提升$"="<size\=17> </size>D<color\=#00000
 r:"^受<color\=#000000>到</color>傷害提升$"="<size\=17> </size>D<color\=#000000>M</color>G Taken Up"
 r:"^受<color\=#000000>最</color>終傷害提高$"="<size\=15> </size>F<color\=#000000>in</color>al DMG Taken Up"
 r:"^傷<color\=#000000>害</color>降低$"="<size\=17> </size>D<color\=#000000>M</color>G Down"
+r:"^受<color\=#000000>物</color>理傷害提升$"="<size\=25> </size>P<color\=#000000>h</color>ys DMG Taken Up"
 r:"^受<color\=#000000>物</color>理傷害加深$"="<size\=25> </size>P<color\=#000000>h</color>ys DMG Taken Up"
 r:"^受<color\=#000000>到</color>火焰傷害提升$"="<size\=22> </size>F<color\=#000000>ir</color>e DMG Taken Up"
 r:"^受<color\=#000000>電</color>擊傷害提高$"="<size\=21> </size>E<color\=#000000>le</color>c DMG Taken Up"
@@ -730,9 +737,9 @@ r:"^受到百分比傷害極大幅降低"="Severely decrease DMG Taken%"
 r:"^受到最終傷害降低(\d+%)"="Decrease Final DMG Taken by $1"
 r:"^最終受到傷害降低(\d+%)"="Decrease Final DMG Taken by $1"
 r:"^所有同伴受到的傷害降低(\d+%)。$"="Decrease DMG Taken by $1"
-r:"^受物理傷害加深(\d+\.\d+%)$"="Increase Physical DMG Taken by $1"
-r:"^物理傷害提升(\d+%)$"="Increase Physical DMG by $1"
-r:"^物理傷害提升(\d+\.\d+%)$"="Increase Physical DMG by $1"
+r:"^受物理傷害加深(\d+\.\d+%)$"="Increase Phys DMG Taken by $1"
+r:"^物理傷害提升(\d+%)$"="Increase Phys DMG by $1"
+r:"^物理傷害提升(\d+\.\d+%)$"="Increase Phys DMG by $1"
 r:"^射擊傷害提升(\d+%)$"="Increase Gun DMG by $1"
 r:"^射擊傷害提升(\d+\.\d+%)$"="Increase Gun DMG by $1"
 r:"^火焰傷害提高(\d+%)$"="Increase Fire DMG by $1"
@@ -744,8 +751,8 @@ r:"^冰凍傷害提升(\d+\.\d+%)$"="Increase Ice DMG by $1"
 r:"^凍結傷害提升(\d+%)$"="Increase Ice DMG by $1"
 r:"^凍結傷害提升(\d+\.\d+%)$"="Increase Ice DMG by $1"
 r:"^每層提升(\d+%)的凍結傷害$"="Increase Ice DMG by $1 per stack"
-r:"^電擊傷害提升(\d+%)$"="Increase Electric DMG by $1"
-r:"^電擊傷害提升(\d+\.\d+%)$"="Increase Electric DMG by $1"
+r:"^電擊傷害提升(\d+%)$"="Increase Elec DMG by $1"
+r:"^電擊傷害提升(\d+\.\d+%)$"="Increase Elec DMG by $1"
 r:"^疾風傷害提升(\d+%)$"="Increase Wind DMG by $1"
 r:"^疾風傷害提升(\d+\.\d+%)$"="Increase Wind DMG by $1"
 r:"^疾風傷害提高(\d+%)$"="Increase Wind DMG by $1"
@@ -782,11 +789,14 @@ r:"^防禦力降低(\d+\.\d+%)$"="Decrease DEF by $1"
 r:"^受到念動傷害暴擊率提升(\d+%)$"="Increase Psy DMG CRIT Rate Taken by $1"
 r:"^受到暴擊效果提升(\d+%)$"="Increase CRIT DMG Taken by $1"
 r:"^受到暴擊效果提升(\d+\.\d+%)$"="Increase CRIT DMG Taken by $1"
+受到的傷害提升=Increase DMG Taken
 r:"^受傷害提升(\d+\.\d+%)$"="Increase DMG Taken by $1"
 r:"^受到傷害提升(\d+%)$"="Increase DMG Taken by $1"
 r:"^受到傷害提升(\d+\.\d+%)$"="Increase DMG Taken by $1"
 r:"^受到的傷害提升(\d+\.\d+%)$"="Increase DMG Taken by $1"
 r:"^造成傷害降低(\d+%)$"="Decrease DMG Dealt by $1"
+造成的傷害大幅降低=Heavily decrease DMG Dealt
+r:"^受物理傷害提升(\d+%)$"="Increase Phys DMG Taken by $1"
 r:"^受火焰傷害提升(\d+%)$"="Increase Fire DMG Taken by $1"
 r:"^受到火焰傷害提升(\d+\.\d+%)$"="Increase Fire DMG Taken by $1"
 r:"^受到火屬性傷害提升(\d+\.\d+%)$"="Increase Fire DMG Taken by $1"
@@ -801,6 +811,7 @@ r:"^回合末失去一定生命值，最終受到傷害提升(\d+%)，可疊加(
 Inspect Details - TITLES
 ----------
 屬性降低=Decrease Stats
+屬性下降=Decrease Stats
 r:"^攻擊提升$"="Increase ATK"
 r:"^攻擊力提升$"="Increase ATK"
 r:"^防禦提升$"="Increase DEF"
