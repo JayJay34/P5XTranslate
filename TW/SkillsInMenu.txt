@@ -54,7 +54,8 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 精神異常，無法行動並且每回合回復5%生命值和5%精力值，受到傷害後清除。=Unable to take actions.\nRestore 5% of Max HP and 5% of Max SP each turn.\nThis ailment clears upon taking damage.
 精神異常，無法使用技能。=Unable to use skills.
 精神異常，無法行動，會丟棄一定數量的魂石。=Unable to take actions.\nDiscards Soul Gems each turn.
-精神異常，有一定機率無法行動，若干回合後逃跑。=High chance of being unable to act.\nEscape from battle after a few turns.
+精神異常，有一定機率無法行動，若干回合後逃跑。=Chance of being unable to act.\nEscape from battle after a few turns.
+有機率無法行動，若干回合後逃跑=Chance of being unable to act.\nEscape from battle after a few turns.
 精神異常，無法行動，每回合扣除一定精力值，若干回合後死亡。=Unable to take actions.\nLose 5% Max SP each turn.\nInflicted will die after a few turns.
 精神異常，攻擊力提升，防禦力降低，只能使用近戰攻擊，攻擊隨機目標。=Increase ATK, and decrease DEF.\nCan only use melee attacks.\nAttack random targets.
 精神異常，無法行動，並會攻擊同伴。=Will attack allies each turn.
@@ -105,7 +106,7 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 靈魂禁錮=Soul Imprisonment
 八艘跳躍=Hassou Tobi
 八艘飛躍=Hassou Tobi
-痛苦宣判=Painful Judgement
+痛苦宣判=<size\=22>Painful Judgement</size>
 
 --- Gun ---
 
@@ -208,6 +209,7 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 神之審判=Divine Judgement
 黑白無界=Desire of Life Shell
 迴轉說法=Samsara
+絕對服從=Absolute Obedience
 
 --- Curse --- 
 
@@ -509,6 +511,9 @@ r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬�
 //Mind Slice because it has a comma at the end instead of a period???
 sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，效果持續2回合，"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$3</color> chance of inflicting $4 for 2 turns.
 
+Painful Judgement
+r:"^對1名敵人造成(\d+)段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，使敵人附加「噩夢」效果並且附帶<color\=#fffc40>(\d+\.\d+%)</color>基礎機率<link\="s\|157"><u>恐懼</u></link>效果。$"="Deals <color\=#fffc40>$2</color> ATK Physical damage to 1 enemy $1 times, inflicts the enemy with [Nightmare] and there is a <color\=#fffc40>$3</color> base chance to inflict <link\="s|157"><u>Fear</u></link>."
+
 Hassou Tobi
 r:"^對全體敵人造成8段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，每有1個敵人，該技能傷害提升(\d+%)，最多提升(\d+%)。$"="Deals <color\=#fffc40>$1</color> ATK Physical damage to all enemies 8 times. For every 1 enemy, increases skill damage by $2, up to $3."
 
@@ -601,6 +606,10 @@ r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬
 
 Samsara
 r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，若主目標敵人生命值低於50%則有一定機率附帶即死效果。$"="Deals <color\=#fffc40>$1</color> ATK Bless damage to all enemies. If the main target is below 50% HP there is a certain chance of Instant Death."
+
+Absolute Obedience
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害。使目標受到的HIGHLIGHT傷害提升(\d+\.\d+%)，持續(\d+)回合。$"="Deals <color\=#fffc40>$1</color> ATK Bless damage to 1 enemy. Increases their HIGHLIGHT DMG Taken by $2 for $3 turn."
+
 
 --- Curse ---
 
