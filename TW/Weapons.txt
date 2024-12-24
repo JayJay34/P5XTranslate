@@ -1,7 +1,8 @@
 品質=Quality
 改造等級：=<size\=26>Reform Rank:</size>
 改造等級=<size\=26>Reform Rank</size>
-突破等級=<size\=26>Reform Rank</size>
+突破等級=<size\=26>Enhance Rank</size>
+突破=<size\=19>Enhance</size>
 當前效果=Effects
 改造詳情=Details
 改造介紹=Reform Details
@@ -11,6 +12,7 @@
 該武器已強化到滿級！=Weapon maxed!
 該武器已提升到滿級！=Weapon Lv. maxed!
 該武器已改造到滿級！=<size\=18>Weapon Reform maxed!</size>
+暫無可提供強化的材料=No materials
 僅可消耗同名武器=Only use weapon wtih the same name
 可消耗同星級武器或永恆的銘記之證=Only use weapon with the same rarity
 可消耗同星級武器或特別的存在之證=Only use weapon with the same rarity
@@ -80,6 +82,11 @@ r:"^根據層數激發『星盤萬象』的效果$"="Activate the effects of [Un
 r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>,\n使用人格面具技能造成傷害時獲得(\d+)層『狩獵律動』，每造成(\d+)次傷害額外獲得(\d+)層『狩獵律動』。『狩獵律動』：提升自身<color\=#2899FF>(\d+\.\d+%)</color>的傷害，持續(\d+)回合，最多疊加(\d+)層。『狩獵律動』達到(\d+)/(\d+)層時，額外獲得<color\=#2899FF>(\d+\.\d+%)</color>/<color\=#2899FF>(\d+\.\d+%)</color>的暴擊率提升及<color\=#2899FF>(\d+\.\d+%)</color>/<color\=#2899FF>(\d+\.\d+%)</color>的暴擊效果提升。$"="Increase ATK by <color\=#2899FF>$1</color>. \nGain $2 stack of [Hunting Trance] when dealing damage with a Persona skill, additionally gain $4 stack of [Hunting Trance] after dealing damage $3 times. \n[Hunting Trance]: Increase own damage by <color\=#2899FF>$5</color> for $6 turn, up to $7 stacks. When you have $8/$9 stacks of [Hunting Trance], additionally gain <color\=#2899FF>$10</color>/<color\=#2899FF>$11</color> CRIT Rate and <color\=#2899FF>$12</color>/<color\=#2899FF>$13</color> CRIT DMG."
 凶獸之牙晶石=Beast's Fang Crystal
 僅可消耗凶獸之牙晶石=Only use Beast's Fang Crystal
+
+灼熱煉獄=Fiery Inferno
+
+灼熱煉獄晶石=Fiery Inferno Crystal
+僅可消耗灼熱煉獄晶石=Only use Fiery Inferno Crystal
 
 極晝=Midnight Sun
 致命匕首=<size\=30>Deadly Dagger</size>
@@ -221,7 +228,15 @@ r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。每次獲得<link\="s\|
 生生不息=Cycle of Life
 r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。每次獲得<link\="s\|212"><u>『朝露結晶』</u></link>或<link\="s\|213"><u>『寒霜結晶』</u></link>時，攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，可疊加(\d+)層，本場戰鬥永久生效。$"="Increase ATK by <color\=#2899FF>$1</color>. Permanently increase ATK by <color\=#2899FF>$2</color> each time you gain <link\="s|212"><u>[Morning Dew Crystal]</u></link> or <link\="s|213"><u>[Frost Crystal]</u></link>, up to $3 stacks."
 
-
+金色晨曦=Golden Sunrise
+【朝陽】=<size\=24>[Morning Sun]</size>
+朝陽=Morning Sun
+r:"^暴擊效果提升<color=#2899FF>(\d+\.\d+%)</color>。自身獲得舞姿時，攻擊力提升<color=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合，上限(\d+)層。友方怪盜釋放HIGHLIGHT後，取得(\d+)層『甦醒』，使自身傷害提升<color=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合，上限(\d+)層。『甦醒』達到(\d+)層時，額外使自身HIGHLIGHT傷害提升<color=#2899FF>(\d+\.\d+%)</color>。$"="Increase CRIT DMG by <color=#2899FF>$1</color>. When you gain Posture, increase ATK by <color=#2899FF>$2</color> for $3 turns, up to $4 stack. When other allies use HIGHLIGHT, gain $5 stack of [Wake], increase own damage by <color=#2899FF>$6</color> for $7 turns, up to $8 stacks. When you have $9 stacks of [Awaken], additionally increase HIGHLIGHT damage by <color=#2899FF>$10</color>."
+甦醒=Wake
+西奈神劍=Sword of Sinai
+【賜福】=<size\=24>[Blessing]</size>
+賜福=Blessing
+r:"^攻擊力提升<color=#2899FF>(\d+\.\d+%)</color>。自身舞姿大於等於(\d+)層時，傷害提升<color=#2899FF>(\d+\.\d+%)</color>。$"="Increase ATK by <color=#2899FF>$1</color>. Increase damage by <color=#2899FF>$3</color> when you have $2 or more stacks of Posture."
 
 ----------
 STANDARD 5 STAR UNIT WEAPONS
@@ -294,7 +309,7 @@ r:"^護盾效果提升<color\=#2899FF>(\d+\.\d+%)</color>；對生命值低於(\
 家宅惡犬=Bad Doggy
 【尖牙利爪】=<size\=24>[Sharp Fangs and Claws]</size>
 尖牙利爪=Sharp Fangs and Claws
-r:"^效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>。友方怪盜使用火屬性技能或追擊技能時，自身效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合，上限(\d+)層。使用『GOGO{{A}}！』觸發『熱烈歡迎』時，額外使技能目標的防禦力降低<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合；觸發『窮追猛打』時，額外使技能目標的防禦力降低<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合。（防禦力降低效果不可疊加）$"="Increase EHR by <color\=#2899FF>$1</color>. When other allies use Fire skills or Follow Up skills, increase own EHR by <color\=#2899FF>$2</color> for $3 turn, up to $4 stack. When using [GO GO WOOF WOOF RU!] to trigger [Warm Welcome], additionally decrease the DEF of the skill target by <color\=#2899FF>$5</color> for $6 turns; When using [GO GO WOOF WOOF RU!] to trigger [Furious Pursue], additionally decrease the DEF of the skill target by <color\=#2899FF>$6</color> for $7 turns. (Cannot stack the DEF Down effects)"
+r:"^效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>。友方怪盜使用火屬性技能或追擊技能時，自身效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合，上限(\d+)層。使用『GOGO{{A}}！』觸發『熱烈歡迎』時，額外使技能目標的防禦力降低<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合；觸發『窮追猛打』時，額外使技能目標的防禦力降低<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合。（防禦力降低效果不可疊加）$"="Increase EHR by <color\=#2899FF>$1</color>. When other allies use Fire skills or Follow Up skills, increase own EHR by <color\=#2899FF>$2</color> for $3 turn, up to $4 stack. When using [GO GO WOOF WOOF RU!] to trigger [Warm Welcome], additionally decrease the DEF of the skill target by <color\=#2899FF>$5</color> for $6 turns; When using [GO GO WOOF WOOF RU!] to trigger [Furious Pursue], additionally decrease the DEF of the skill target by <color\=#2899FF>$7</color> for $6 turns. (Cannot stack the DEF Down effects)"
 咆哮獵手=Roaring Hunter
 【精準捕獵】=<size\=24>[Precision Hunting]</size>
 精準捕獵=Precision Hunting
