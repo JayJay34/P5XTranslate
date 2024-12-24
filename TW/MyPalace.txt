@@ -1,11 +1,30 @@
 ----------
 UI + ITEM MENU
 ----------
-我的{{A}}=My Palace
+擺設/購買雕像=Palace Maker
+音樂播放機=Music Player
+畫廊=Gallery
+二層區域=Upstairs
+
+關於這個場所=What is this place
+關於{{A}}等級=What is Pevel
+想擺設雕像=Placing models
+想聆聽音樂=Listening to music
+想欣賞圖像=Looking at pictures
+想改變自己的外表=<size\=32>Changing my appearance</size>
+沒有什麼想問的=Nothing right now
+
+啟<color\=#ff0000>動</color>PALACE MAKER=St<color\=#ff0000>art</color> Palace Maker
+啟<color\=#ff0000>動</color>音樂播放機=St<color\=#ff0000>art</color> Music Player
+購買·聆聽音樂/變更BGM=Buy/ Listen  to  music  &  change  BGM
+可前往音樂播放機將音樂設置為{{A}}的背景音樂=Can go to Music Player and \nset the BGM of My Palace
+r:"^觀<color\=#ff0000ff>賞</color>影像$"="Wa<color\=#ff0000ff>t</color>ch Movie"
+r:"^觀<color\=#ff0000ff>賞</color>畫廊$"="Vi<color\=#ff0000ff>ew</color> Gallery"
+r:"^查<color\=#ff0000ff>看</color>招牌$"="Vi<color\=#ff0000ff>ew</color> Sign"
 購買成功。=Purchase success.
-可以將道具擺放在我的{{A}}中了！=Can place item in My {{A}} now!
+可以將道具擺放在{{A}}中了！=Can place item in {{A}} now!
 後產滿=Til Full
-嗯？要離開我的{{A}}，返回都市嗎？=Hm? Want to leave My Palace\nand head back to the city?
+嗯？要離開{{A}}，返回都市嗎？=Hm? Want to leave My Palace\nand head back to the city?
 
 r:"^·{{A}}等級達到Pevel.(\d+)$"="<size\=26>-Reach Pevel.$1</size>"
 r:"^·{{A}}的怪盜評級達到(\d+)分$"="<size\=26>-{{A}} reached $1 score</size>"
@@ -13,15 +32,15 @@ r:"^·{{A}}的怪盜評級達到(\d+)分$"="<size\=26>-{{A}} reached $1 score</s
 r:"^·將{{A}}強化至(\d+)級$"="<size\=26>-Upgrade Janosik to Lv. $1</size>"
 r:"^·將{{A}}進階至RANK(\d+)\((\d+)/(\d+)\)$"="<size\=26>-Evolve Janosik to Rank $1 ($2/$3)</size>"
 ·購買時裝-怪盜·海之心=<size\=26>-Purchase Summer Wonder outfit</size>
-r:"^·進行御船千早的占卜累計達(\d+)次\((\d+)/(\d+)\)$"="<size\=26>-Get $1 readings from Chihaya Mifune ($2/$3)</size>"
+r:"^·進行{{A}}的占卜累計達(\d+)次\((\d+)/(\d+)\)$"="<size\=26>-Get $1 readings from Chihaya Mifune ($2/$3)</size>"
 r:"^·集齊(\d+)套{{A}}系列\((\d+)/(\d+)\)$"="<size\=26>-Collect $1 sets of {{A}} ($2/$3)</size>"
 r:"^·通關「天鵝絨試煉」巧匠之作第(\d+)關\((\d+)/(\d+)\)$"="<size\=26>-Clear [Velvet Trial] Artisan's Work Trial $1 ($2/$3)</size>"
 r:"^·通關「天鵝絨試煉」灼熱迷域第(\d+)關\((\d+)/(\d+)\)$"="<size\=26>-Clear [Velvet Trial] Scorching Maze Trial $1 ($2/$3)</size>"
 r:"^·通關「天鵝絨試煉」暑寒極地第(\d+)關\((\d+)/(\d+)\)$"="<size\=26>-Clear [Velvet Trial] Cold Polar Zone Trial $1 ($2/$3)</size>"
 r:"^·通關「天鵝絨試煉」雷霆祈境第(\d+)關\((\d+)/(\d+)\)$"="<size\=26>-Clear [Velvet Trial] Thunder Realm Trial $1 ($2/$3)</size>"
 r:"^·通關「天鵝絨試煉」詛咒漩渦第(\d+)關\((\d+)/(\d+)\)$"="<size\=26>-Clear [Velvet Trial] Cursed Swirl Trial $1 ($2/$3)</size>"
-r:"^·「閼凶夢之扉」中挑戰首領積分達到(\d+)分\((\d+)/(\d+)\)$"="<size\=26>-Reach $1 score in [Door of Nightmare] ($2/$3)</size>"
-r:"^·「閼凶夢之扉」中，累計(\d+)次挑戰首領積分達到(\d+)分\((\d+)/(\d+)\)$"="<size\=26>-Reach $2 score for $1 bosses in [Door of Nightmare] ($3/$4)</size>"
+r:"^·「閼凶夢之扉」中挑戰首領積分達到(\d+)分\((\d+)/(\d+)\)$"="<size\=26>-Reach $1 score in [Door of Nightmares] ($2/$3)</size>"
+r:"^·「閼凶夢之扉」中，累計(\d+)次挑戰首領積分達到(\d+)分\((\d+)/(\d+)\)$"="<size\=26>-Reach $2 score for $1 bosses in [Door of Nightmares] ($3/$4)</size>"
 r:"^·「心之海試煉」中段位達到(\d+)等星（次賽季生效）\((\d+)/(\d+)\)$"="<size\=26>-Reach rank $1 in [Sea of Souls Trials] (Effective next season) ($2/$3)</size>"
 r:"^·「心之海試煉」中，累計(\d+)期段位達到(\d+)等星（次賽季生效）\((\d+)/(\d+)\)$"="<size\=26>-Reach rank $2 for $1 seasons in [Sea of Souls Trials] (Effective for the following season) ($3/$4)</size>"
 r:"^·在「星盤試練」中通關(\d+)個宮主星或命主星\((\d+)/(\d+)\)$"="<size\=26>-Clear $1 House or Chart Ruler in [Astrolabe Trials] ($2/$3)</size>"
@@ -29,11 +48,13 @@ r:"^·與任意(\d+)名協同者結為親密關係\((\d+)/(\d+)\)$"="<size\=26>-
 r:"^·任意(\d+)個人格指數達到(\d+)級\((\d+)/(\d+)\)$"="<size\=26>-Reach Rank $2 for $1 Social Stats ($3/$4)</size>"
 
 弱點攻擊特寫 WONDER=Wonder Cut-In
+弱點攻擊特寫 WONDER時裝=Wonder Cut-In
 弱點攻擊特寫 {{A}}={{A}} Cut-In
 {{A}} WONDER=Wonder All-Out Attack
 {{A}} WONDER時裝=Wonder All-Out Attack
 r:"^{{B}} {{A}}$"="{{A}} All-Out Attack"
 {{A}}最後一擊 WONDER=Wonder All-Out Attack Finisher
+{{A}}最後一擊 WONDER時裝=Wonder All-Out Attack Finisher
 {{B}}最後一擊 {{A}}={{A}} All-Out Attack Finisher
 
 r:"^<color\=#FFFF00>戰鬥中，WONDER生命值提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase the HP of Wonder by $1</color>"
@@ -64,8 +85,8 @@ r:"^<color\=#FFFF00>WONDER在戰鬥中造成傷害提升(\d+%)</color>$"="<color
 r:"^<color\=#FFFF00>戰鬥中，人格面具造成的傷害提升(\d+%)</color>$"="<color\=#FFFF00>In battle, increase Persona skill DMG by $1</color>"
 r:"^<color\=#FFFF00>戰鬥中，所有人格面具造成的傷害提升(\d+%)</color>$"="<color\=#FFFF00>In battle, increase all Persona skill DMG by $1</color>"
 r:"^<color\=#FFFF00>戰鬥中，己方成員的HIGHLIGHT傷害提升(\d+\.\d+%)</color>$"="<color\=#FFFF00>In battle, increase all allies' HIGHLIGHT DMG by $1</color>"
-r:"^<color\=#FFFF00>己方成員在「閼凶夢之扉」戰鬥中造成的傷害提升(\d+%)</color>$"="<color\=#FFFF00>Increase all allies' DMG by $1 in [Door of Nightmare]"
-r:"^<color\=#FFFF00>己方成員在「閼凶夢之扉」戰鬥中造成的傷害提升(\d+\.\d+%)</color>$"="<color\=#FFFF00>Increase all allies' DMG by $1 in [Door of Nightmare]"
+r:"^<color\=#FFFF00>己方成員在「閼凶夢之扉」戰鬥中造成的傷害提升(\d+%)</color>$"="<color\=#FFFF00>Increase all allies' DMG by $1 in [Door of Nightmares]"
+r:"^<color\=#FFFF00>己方成員在「閼凶夢之扉」戰鬥中造成的傷害提升(\d+\.\d+%)</color>$"="<color\=#FFFF00>Increase all allies' DMG by $1 in [Door of Nightmares]"
 r:"^<color\=#FFFF00>己方成員在「心之海試煉」戰鬥中造成的傷害提升(\d+%)</color>$"="<color\=#FFFF00>Increase all allies' DMG by $1 in [Sea of Souls Trials]"
 r:"^<color\=#FFFF00>己方成員在「心之海試煉」戰鬥中造成的傷害提升(\d+\.\d+%)</color>$"="<color\=#FFFF00>Increase all allies' DMG by $1 in [Sea of Souls Trials]</color>"
 r:"^<color\=#FFFF00>戰鬥中，己方成員的治療效果提升(\d+\.\d+%)</color>$"="<color\=#FFFF00>In battle, increase all allies' Healing Effect by $1</color>"
@@ -126,6 +147,7 @@ r:"^· {{A}}產出上限提升至(\d+)\n· 入駐夥伴數量提升至(\d+)名\n
 r:"^· {{A}}產出上限提升至(\d+)\n· {{A}}產出數量增漲至(\d+)秒一次\n· 契合度累計上限提升至(\d+)\n· 契合度產出數量增漲至(\d+)秒一次$"="- Increase the passive {{A}} cap to $1\n- Increase {{A}} speed to 1 every $2 seconds\n- Increase the cap of Closeness to $3\n- Increase Closeness speed to 1 every $4 seconds"
 r:"^· {{A}}產出上限提升至(\d+)\n· 契合度累計上限提升至(\d+)$"="- Increase the passive {{A}} cap to $1\n- Increase the cap of Closeness to $2"
 r:"^· {{A}}產出數量增漲至(\d+)秒一次\n· 契合度累計上限提升至(\d+)\n· 契合度產出數量增漲至(\d+)秒一次$"="- Increase {{A}} speed to 1 every $1 seconds\n- Increase the cap of Closeness to $2\n- Increase Closeness speed to 1 every $3 seconds"
+r:"^Pevel升至(\d+)後解鎖$"="<size\=24>Unlocked after Pevel $1</size>"
 
 ----------
 COLLECTION
@@ -133,5 +155,6 @@ COLLECTION
 r:"^道具收集數量：(\d+)/(\d+)$"="Collected Items: $1/$2"
 r:"^插畫收集數量：(\d+)/(\d+)$"="Collected Artwork: $1/$2"
 r:"^音樂收集數量：(\d+)/(\d+)$"="Collected Music: $1/$2"
+r:"^地磚收集數量：(\d+)/(\d+)$"="Collected Tiles: $1/$2"
 
 r:"^條件獲取$"="<size\=16>Unlock Condition</size>"
