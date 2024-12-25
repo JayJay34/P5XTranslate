@@ -493,8 +493,8 @@ r:"^忘<color\=#000000>川</color>水$"="W<color\=#000000>at</color>er of Oblivi
 ----------
 Riddle - Haruna Nishimori
 ----------
-r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，使所有同伴進入『寵愛』狀態：釋放技能造成傷害後使西森獲得1層『童趣』，持續1回合。$"="Deals $1 ATK Psy damage to <color\=#FFFF00>1</color> enemy, gives all allies [Pamperedness]: You gain 1 stack of [Childlike Fun] when an ally deals damage with skills for 1 turn."
-sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，使所有同伴進入<link\="s\|165"><u>『(.*)』</u></link>狀態：釋放人格面具技能造成傷害時，使西森獲得1層<link\="s\|164"><u>『(.*)』</u></link>，效果持續1回合。$"="Deals <color\=#FFFC40>$1</color> ATK Psy damage to 1 enemy, gives all allies <link\="s|165"><u>[$2]</u></link>: You gain 1 stack of <link\="s|164"><u>[$3]</u></link> when an ally deals damage with skills for 1 turn."
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，使所有同伴進入『寵愛』狀態：釋放技能造成傷害後使{{A}}獲得1層『童趣』，持續1回合。$"="Deals $1 ATK Psy damage to <color\=#FFFF00>1</color> enemy, gives all allies [Pamperedness]: You gain 1 stack of [Childlike Fun] when an ally deals damage with skills for 1 turn."
+sr:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，使所有同伴進入<link\="s\|165"><u>『(.*)』</u></link>狀態：釋放人格面具技能造成傷害時，使{{A}}獲得1層<link\="s\|164"><u>『(.*)』</u></link>，效果持續1回合。$"="Deals <color\=#FFFC40>$1</color> ATK Psy damage to 1 enemy, gives all allies <link\="s|165"><u>[$2]</u></link>: You gain 1 stack of <link\="s|164"><u>[$3]</u></link> when an ally deals damage with skills for 1 turn."
 
 r:"^使<color\=#FFFF00>所有</color>同伴的受治療效果、受護盾效果提升(\d+\.\d+%)，防禦力提升(\d+\.\d+%)，持續2回合。若『童趣』為0層，則在釋放技能後獲得2層『童趣』。$"="Increases <color\=#FFFF00>all</color> allies' Healing Received and Shield Received by 15.1% and increases <color\=#FFFF00>all</color> allies' DEF by $2 for 2 turns. by 29.4% for 2 turns. When using this skill at 0 stacks of [Childlike Fun], gains 2 stacks of [Childlike Fun]."
 sr:"^使所有同伴受到的治療效果以及受到的護盾效果提升<color\=#FFFC40>(\d+\.\d+%)</color>，防禦力提升<color\=#FFFC40>(\d+\.\d+%)</color>。效果持續2回合。釋放該技能時若<link\="s\|164"><u>『(.*)』</u></link>層數為0，則在技能結束後獲得2層<link\="s\|164"><u>『(.*)』</u></link>。$"="Increases all allies' Healing Received and Shield Received by <color\=#FFFC40>$1</color> and increases all allies' DEF by <color\=#FFFC40>$2</color> for 2 turns. When using this skill at 0 stacks of <link\="s|164"><u>[$3]</u></link>, gains 2 stacks of <link\="s|164"><u>[$4]</u></link>."
@@ -502,9 +502,9 @@ sr:"^使所有同伴受到的治療效果以及受到的護盾效果提升<color
 r:"^持有『童趣』時技能開啟，使<color\=#FFFF00>所有</color>同伴的攻擊力提升(\d+%)，若『童趣』不少於2層，則使所有同伴造成的傷害提升\（每(\d+)點攻擊力提升(\d+%)，上限(\d+\.\d+%)\)，持續2回合。$"="Available when you have [Childlike Fun]. Increases <color\=#FFFF00>all</color> allies' ATK by $1 for 2 turns. When you have not less than 2 stacks of [Childlike Fun], increases all allies' DMG Dealt (For every $2 ATK increase $3, up to $4) for 2 turns."
 sr:"^持有<link\="s\|164"><u>『(.*)』</u></link>時該技能開啟，使所有同伴的攻擊力提升(\d+%)，效果持續2回合。釋放該技能時若<link\="s\|164"><u>『(.*)』</u></link>不少於2層，則使所有同伴造成的傷害提升（自身每有(\d+)點攻擊力提升(\d+%)，上限<color\=#FFFC40>(\d+\.\d+%)</color>），效果持續2回合。$"="Available when you have <link\="s|164"><u>[$1]</u></link>. Increases all allies' ATK by $2 for 2 turns. When you have not less than 2 stacks of <link\="s|164"><u>[$3]</u></link> when using this skill, increases all allies' DMG Dealt (For every $4 ATK increase $5, up to <color\=#FFFC40>$6</color>) for 2 turns."
 
-r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，使所有同伴造成的傷害提升(\d+\.\d+%)\*當前『童趣』層數，持續1回合。$"="Deals $1 ATK Psy damage to <color\=#FFFF00>1</color> enemy and increases all allies' DMG Dealt by $2*[Childlike Fun] stacks for 1 turn."
+r:"^{{A}}獲得『童趣』時，會獲得1個『計數』，上限5層，持續2回合。對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，使所有同伴造成的傷害提升(\d+\.\d+%)\*當前『計數』層數，持續1回合。$"="Gain 1 [Count] when gaining [Childlike Fun] for 2 turns, up to 5 stacks. Deals $1 ATK Psy damage to <color\=#FFFF00>1</color> enemy and increases all allies' DMG Dealt by $2*current [Count] stack for 1 turn."
 
-釋放技能造成傷害後使西森獲得『童趣』=Nishimori gains [Childlike Fun] \nafter dealing damage with a skill
+釋放技能造成傷害後使{{A}}獲得『童趣』=Nishimori gains [Childlike Fun] \nafter dealing damage with a skill
 釋放技能消耗『童趣』使同伴攻擊力提升。=Consume all [Childlike Fun] after using a skill to increase all allies' ATK
 r:"^受到的治療效果提升(\d+\.\d+%)$"="Increase Healing Received by $1"
 r:"^受到的護盾效果提升(\d+\.\d+%)$"="Increase Shield Received by $1"
