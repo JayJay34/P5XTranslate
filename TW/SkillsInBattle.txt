@@ -277,7 +277,11 @@ r:"對<color\=#FFFF00>1名</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</color
 //AoE Bless Instakill
 r:"對<color\=#FFFF00>所有</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，對50%生命值以下的敵人附加低機率祝福屬性即死效果，生命值越低機率越高。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>all</color> enemies with a chance of Instant Death to enemies under 50% HP. The lower the HP, the higher the chance.
 
+Desire of Life Shell
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，恢復生命值最低的同伴(\d+\.\d+%)攻擊力的生命值。$"="Deals $1 ATK Bless damage to <color\=#FFFF00>all</color> enemies and restores $2 ATK HP to the lowest HP ally."
+
+Light of Salvation
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，使自身獲得(\d+)層祝福效果。自身每層祝福效果使得技能傷害提升(\d+%)，最多提升(\d+%)。$"="Deals $1 ATK Bless damage to <color\=#FFFF00>all</color> enemies and gain $2 stacks of Blessed. For every stack of Blessed you have, increases skill damage by $3, up to $4."
 
 --- Curse ---
 r:"^詛咒屬性$"="Curse"
@@ -308,6 +312,7 @@ r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得1層『地獄火』，並使其身上的所有『地獄火』立刻結算一次，該次結算傷害提升200%。"=
 
 //"Die For Me!"
+r:"^使<color\=#FFFF00>所有</color>敵人受到的詛咒屬性傷害提升(\d+\.\d+%)\+每(\d+%)效果命中額外提升(\d+\.\d+%)，上限(\d+%)。對生命值低於(\d+%)的敵人高機率附加即死效果。$"="Increases <color\=#FFFF00>all</color> enemies' Curse DMG Taken by $1 + $3 for every $2 EHR you have, up to $4. There is a high chance of Instant Death to enemies under $5 HP."
 
 --- Almighty ---
 
