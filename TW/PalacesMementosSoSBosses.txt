@@ -98,6 +98,7 @@ PALACE 1 BOSS
 與{{A}}決戰=Defeat {{A}}
 注意強力攻擊=Watch out for Powerful Attack
 截斷{{A}}的能量來源=Cut off {{A}}'s Energy Source
+擊敗孤注一擲的{{A}}=Defeat Desperate {{A}}!
 
 絕對癡心的少女=Infatuated Fan
 毫無保留的少女=Unreversed Fan
@@ -106,7 +107,7 @@ PALACE 1 BOSS
 準備釋放強力一擊並且提升=Preparing to use a strong attack
 王牌投手=Ace Pitcher
 準備釋放強力一擊並且傷害提升=Preparing to use a strong attack
-加油=Cheer
+加油=You can do it
 正在為{{A}}加油=Cheering for {{A}}
 r:"^無法行動，受到傷害提升(\d+%)$"="Cannot act, increase DMG Taken by $1"
 
@@ -119,21 +120,77 @@ r:"^無法行動，受到傷害提升(\d+%)$"="Cannot act, increase DMG Taken by
 r:"^對所有敵人造成(\d+)~(\d+)次物理屬性傷害。$"="Deals Physical damage to all enemies $1-$2 times."
 弧旋崇拜球=Screwball of Warship
 爆裂崇拜球=Blitzball of Warship
+對1名敵人造成物理屬性傷害。=Deals Physical damage to 1 enemy.
+{{A}}，未嘗一敗={{A}}, never known defeat
+{{A}}，王牌投手={{A}}, ace pitcher
 
 下回合將釋放強力一擊=Use a powerful skill next turn
 
+<color\=#FF0000>{{A}}</color>變得急躁……=<color\=#FF0000>Takeyuki Kiuchi</color> became impatient...
 <color\=#FF0000>{{A}}</color>變得更加急躁……=<color\=#FF0000>{{A}}</color> became more impatient...
-r:"^{{B}}準備攻擊<color\=#FF0000>{{A}}</color>！$"="{{B}} is preparing to attack <color\=#FF0000>{{A}}</color>!"
-r:"^{{A}}準備攻擊<color\=#FF0000>{{B}}</color>！$"="{{A}} is preparing to attack <color\=#FF0000>{{B}}</color>!"
+r:"^{{B}}準備攻擊<color\=#FF0000>{{A}}</color>！$"="<size\=26>{{B}} is preparing to attack <color\=#FF0000>{{A}}</color>!</size>"
+r:"^{{A}}準備攻擊<color\=#FF0000>{{B}}</color>！$"="<size\=26>{{A}} is preparing to attack <color\=#FF0000>{{B}}</color>!</size>"
 <color\=#FF0000>{{A}}</color>正在蓄力……=<color\=#FF0000>{{A}}</color> is charging...
 r:"^<color\=#FF0000>絕對癡心的少女</color>正在為{{A}}加油……$"="<color\=#FF0000>Infatuated Fan</color> is cheering for {{A}}..."
-r:"^<color\=#FF0000>毫無保留的少女</color>正在為{{A}}加油……$"="<color\=#FF0000>Unreversed Fan</color>is cheering for {{A}}..."
+r:"^<color\=#FF0000>毫無保留的少女</color>正在為{{A}}加油……$"="<color\=#FF0000>Unreversed Fan</color> is cheering for {{A}}..."
 r:"^<color\=#FF0000>{{A}}</color>虛弱了……$"="<color\=#FF0000>{{A}}</color> entered Weak!"
 
 r:"^行<color\=#000000>動</color>提前$"="<size\=11> </size>A<color\=#000000>ct</color>ion Up"
-r:"^木<color\=#000000>內</color>{{A}}，未嘗一敗$"="<size\=21> </size>Ne<color\=#000000>v</color>er Known Defeat"
-r:"^木<color\=#000000>內</color>{{A}}，王牌投手$"="<size\=11> </size>A<color\=#000000>ce</color> Pitcher"
+r:"^木<color\=#000000>內</color>{{A}}，未嘗一敗$"="<size\=21> </size>N<color\=#000000>e</color>ver Known Defeat"
+r:"^木<color\=#000000>內</color>{{A}}，王牌投手$"="<size\=25> </size>A<color\=#000000>c</color>e Pitcher"
 
+----------
+PALACE 2 BOSS
+----------
+辨別{{A}}的分身=Identify {{A}}'s Copy
+找到{{A}}的破綻=Find {{A}}'s Vulnerability
+辨別{{A}}的魔劍並擊破之=Identify and Break {{A}}'s Sword
+
+投影機=Projector
+虛妄力量之劍=Fake Sword
+
+主角之假動作=Protagonist's Feint
+主角之斬殺=Protagonist's Execution
+超正直懲戒=Upright Punishment
+對所有敵人造成詛咒屬性傷害=Deals Curse damage to all enemies
+替身時刻=Double Moment
+真身與替身交換位置=Exchange places with the doubles
+主角之逆刃=Protagonist's Counter
+替身對攻擊自己的敵人造成物理屬性傷害=Doubles deal Physical damage to enemies attacking you
+下回合造成傷害大幅提高=Heavily increase DMG Dealt next turn
+一刀流·蒙太奇=One Sword Style - Montage
+四刀流·一人成軍=<size\=24>Four Sword Style - One Man Army</size>
+對1名敵人造成詛咒屬性傷害=Deals Curse damage to 1 enemy
+未能擊殺魔劍真身時對所有敵人造成大量萬能傷害。=Deals heavy Almighty damage to all enemies when enemies failed to break the real sword
+對所有敵人造成詛咒屬性傷害，對50%生命值以下的敵人附加低機率詛咒屬性即死效果，生命值越低機率越高。=Deals Curse damage to all enemies with a chance of Instant Death to enemies under 50% HP. The lower the HP, the higher the chance.
+奧義·明星亂舞=Ultimate - Star Flurry
+對所有敵人造成詛咒屬性傷害，使迷惑的敵人陷入洗腦狀態，持續2回合=Deals Curse damage to all enemies, and inflicts Brainwash to enemies with Bewilder for 2 turns.
+一刀流·不動如山=<size\=24>One Sword Style - Firm Stance</size>
+對所有敵人造成物理屬性傷害=Deals Physical damage to all enemies
+特寫迴旋斬=Close-Up Roundhouse Slash
+對所有敵人造成少量萬能傷害，對鎖定的敵人額外造成大量萬能傷害=Deals light Almighty damage to all enemies, additionally deals heavy Almighty damage to the locked on enemy
+無刀流·狂怒=No Sword Style - Rage
+成功擊殺魔劍真身時對所有敵人造成少量萬能傷害。=Deals light Almighty damage to all enemies when enemies broke the real sword
+
+迷惑=Bewilder
+被{{A}}的動作迷惑了，即將被洗腦！！=Bewildered by {{A}}, \nabout to be inflicted with Brainwash!!
+惱羞成怒=Anger
+造成的傷害提升=Increase DMG Dealt
+被{{A}}盯上了=Locked on by {{A}}
+眩暈=Dizzy
+
+r:"^<color\=#FF0000>(.*)</color>進入了迷惑狀態……$"="Inflicted with Bewilder..."
+<color\=#FF0000>{{A}}</color>被{{B}}注視著=<color\=#FF0000>{{A}}</color> locked on by {{B}}
+<color\=#FF0000>{{B}}</color>被{{A}}注視著=<color\=#FF0000>{{B}}</color> locked on by {{A}}
+<color\=#FF0000>{{A}}</color>進入了眩暈狀態……=<color\=#FF0000>{{A}}</color> entered Dizzy...
+<color\=#FF0000>{{A}}</color>陷入了虛弱，受到的傷害提升……=<size\=24><color\=#FF0000>{{A}}</color> entered Weak, increase DMG Taken...</size>
+<color\=#FF0000>{{A}}</color>從眩暈異常狀態恢復了。=<color\=#FF0000>{{A}}</color> recovered Dizzy!
+擊殺了<color\=#FF0000>魔劍替身</color>=Broke the <color\=#FF0000>sword double</color>...
+成功擊殺了<color\=#FF0000>魔劍真身</color>=Broke the <color\=#FF0000>real sword</color>!
+
+r:"^迷<color\=#000000>惑</color>$"="<size\=27> </size>B<color\=#000000>e</color>wilder"
+r:"^惱<color\=#000000>羞</color>成怒$"="<size\=24> </size>A<color\=#000000>n</color>ger"
+r:"^眩<color\=#000000>暈</color>$"="<size\=16> </size>D<color\=#000000>iz</color>zy"
 
 ----------
 PALACE 3 BOSS + ELITES
@@ -146,20 +203,10 @@ r:"^注意控制{{B}}的{{A}}值$"="Note the {{A}} Gauge that Controls {{B}}"
 擊破左上翼=Break the Upper Left Wing
 擊破右上翼=Break the Upper Right Wing
 
-基什基爾莉拉的左下翼=Kiskil-lilla's Lower Left Wing
-基什基爾莉拉的右下翼=Kiskil-lilla's Lower Right Wing
-基什基爾莉拉的左上翼=Kiskil-lilla's Upper Left Wing
-基什基爾莉拉的右上翼=Kiskil-lilla's Upper Right Wing
-
-r:"^「{{A}}」{{B}}之主$"="{{B}} Ruler of "{{A}}""
-r:"^{{A}}值越高，造成傷害越高，釋放的技能越強，當前造成傷害提高(.*)$"="Deal more damage and use stronger skills the higher the Wrath Gauge is; \nCurrently increase DMG Dealt by $1."
-r:"^{{B}}的{{A}}值降至低點$"="<size\=28>{{B}}'s {{A}} Gauge lowered!</size>"
-r:"^{{B}}的{{A}}值達到中點$"="<size\=24>{{B}}'s {{A}} Gauge reaches middle!</size>"
-r:"^{{B}}的{{A}}值升至<color\=#FF0000>高點</color>，請<color\=#FF0000>小心應對</color>$"="<size\=28>{{B}}'s {{A}} Gauge reached <color\=#FF0000>high</color>, please <color\=#FF0000>be careful</color>!</size>"
-r:"^<color\=#FF0000>{{A}}</color>被{{B}}鎖定……$"="<size\=24><color\=#FF0000>{{A}}</color> locked on by {{B}}!</size>"
-r:"^<color\=#FF0000>{{B}}</color>被{{A}}鎖定……$"="<size\=24><color\=#FF0000>{{B}}</color> locked on by {{A}}!</size>"
-r:"^{{A}}進入了庇護狀態，請<color\=#FF0000>儘快擊破護盾</color>$"="{{A}} entered Protection. \n<color\=#FF0000>Break the Shield as soon as possible</color>!"
-r:"^護盾被擊破，{{B}}的{{A}}值大幅降低了……$"="<size\=24>Shield is broken! Heavily decrease {{A}} Gauge!</size>"
+{{A}}的左下翼={{A}}'s Lower Left Wing
+{{A}}的右下翼={{A}}'s Lower Right Wing
+{{A}}的左上翼={{A}}'s Upper Left Wing
+{{A}}的右上翼={{A}}'s Upper Right Wing
 
 r:"^對所有敵人造成物理屬性傷害，有極低機率使敵人陷入<link\="s\|110"><u>狂怒</u></link>狀態，效果持續(\d+)回合，$"="Deals Physical damage to all enemies, with a very low chance to inflict <link\="s|110"><u>Rage</u></link> for $1 turns."
 怒意=Wrathful
@@ -178,6 +225,16 @@ r:"^使自身攻擊、防禦、效果命中、效果抵抗提升，效果持續(
 
 庇護=Protection
 r:"^造成傷害提高(\d+%)，護盾被擊破後失去該加成$"="Increase DMG Dealt by $1, \nlose this effect when the Shield breaks"
+
+r:"^「{{A}}」{{B}}之主$"="{{B}} Ruler of "{{A}}""
+r:"^{{A}}值越高，造成傷害越高，釋放的技能越強，當前造成傷害提高(.*)$"="Deal more damage and use stronger skills the higher the Wrath Gauge is; \nCurrently increase DMG Dealt by $1."
+r:"^{{B}}的{{A}}值降至低點$"="<size\=28>{{B}}'s {{A}} Gauge lowered!</size>"
+r:"^{{B}}的{{A}}值達到中點$"="<size\=24>{{B}}'s {{A}} Gauge reaches middle!</size>"
+r:"^{{B}}的{{A}}值升至<color\=#FF0000>高點</color>，請<color\=#FF0000>小心應對</color>$"="<size\=28>{{B}}'s {{A}} Gauge reached <color\=#FF0000>high</color>, please <color\=#FF0000>be careful</color>!</size>"
+r:"^<color\=#FF0000>{{A}}</color>被{{B}}鎖定……$"="<size\=24><color\=#FF0000>{{A}}</color> locked on by {{B}}!</size>"
+r:"^<color\=#FF0000>{{B}}</color>被{{A}}鎖定……$"="<size\=24><color\=#FF0000>{{B}}</color> locked on by {{A}}!</size>"
+r:"^{{A}}進入了庇護狀態，請<color\=#FF0000>儘快擊破護盾</color>$"="{{A}} entered Protection. \n<color\=#FF0000>Break the Shield as soon as possible</color>!"
+r:"^護盾被擊破，{{B}}的{{A}}值大幅降低了……$"="<size\=24>Shield is broken! Heavily decrease {{A}} Gauge!</size>"
 
 化身為「基什基爾·莉拉」的惡魔，灼熱的情感，赤紅的身軀，以及附著可怖眼球的邪惡之翼。在她歇斯底里的狂怒中卻摻雜著不和諧的恐懼與掙扎——這股力量並非來自於她本身，而是源自外部壓倒性的惡意。=A demon in the form of "Kiskil-lilla", with a fiery aura, scarlet body, and evil wings with terrifying eyes. Underneath her hysterical wrath is a mix of discordant fear and struggle- For this power did not come from her own, but from an outside source with overwhelming malice.
 
