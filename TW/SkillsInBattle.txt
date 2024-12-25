@@ -206,8 +206,9 @@ r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬�
 //Triple Down
 r:"對<color\=#FFFF00>所有</color>敵人造成3次(\d+\.\d+%)攻擊力的射擊屬性傷害，暴擊率提升(\d*\.?\d+%)，命中率降低(\d*\.?\d+%)."=Deals <color\=#FFFF00>$1</color> ATK Gun damage to <color\=#FFFF00>all</color> enemies with a $2 increase in CRIT Rate and $3 decrease in Hit Rate 3x.
 
-Janosik
+Janosik Tiger Shot
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的射擊屬性傷害，(\d+%)固定機率使敵人獲得『瞄準』。$"="Deals $1 ATK Gun damage to <color\=#FFFF00>1</color> enemy with a $2 fixed chance to inflict [Aim]."
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+)段(\d+\.\d+%)攻擊力的射擊屬性傷害，若場上存在被瞄準的敵人則該技能攻擊力提升(\d+\.\d+%)，暴擊效果提升(\d+\.\d+%)。$"="Deals $2 ATK Gun damage to <color\=#FFFF00>all</color> enemies $1 times. If there is an enemy with [Aim], increase skill ATK by $3 and CRIT DMG by $4."
 
 //Seth's Funny Move
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，若造成了暴擊，則額外造成1點倒地值傷害。"=
@@ -276,6 +277,8 @@ r:"對<color\=#FFFF00>1名</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</color
 //AoE Bless Instakill
 r:"對<color\=#FFFF00>所有</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，對50%生命值以下的敵人附加低機率祝福屬性即死效果，生命值越低機率越高。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>all</color> enemies with a chance of Instant Death to enemies under 50% HP. The lower the HP, the higher the chance.
 
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，恢復生命值最低的同伴(\d+\.\d+%)攻擊力的生命值。$"="Deals $1 ATK Bless damage to <color\=#FFFF00>all</color> enemies and restores $2 ATK HP to the lowest HP ally."
+
 --- Curse ---
 r:"^詛咒屬性$"="Curse"
 
@@ -305,7 +308,6 @@ r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得1層『地獄火』，並使其身上的所有『地獄火』立刻結算一次，該次結算傷害提升200%。"=
 
 //"Die For Me!"
-r:"使所有敵人受到的詛咒屬性傷害提升<color\=#fffc40>(\d+\.\d+%)</color>\+每有30%效果命中額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)，效果持續2回合。敵人生命值低於50%時，高機率附加即死效果。"=Increase Curse damage received by <color\=#FFFF00>all</color> enemies by <color\=#FFFF00>$1</color> + <color\=#FFFF00>$2</color> for every 30% Effect Hit Rate Wonder has to a maximum of <color\=#FFFF00>$3</color> for 2 turns.\nChance of Instant Death to enemies under 50% HP. The lower the HP, the higher the chance.
 
 --- Almighty ---
 
