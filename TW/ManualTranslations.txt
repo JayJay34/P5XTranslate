@@ -95,7 +95,7 @@ r:"^取消$"="Cancel"
 打開怪盜=Manage Thieves
 打開陣容=Team
 打開雛鳥計畫=Open Battle Pass
-打開魅影通行證=Open Phantom Pass
+打開{{A}}=Open Phantom Pass
 打開契約=Open Contract
 打開目標=Open Goals
 打開活動=Open Events
@@ -280,7 +280,7 @@ r:"^謎<color\=#ff0000ff>之</color>達也$"="My<color\=#ff0000ff>st</color>erio
 哈耳皮厄=Harpyia
 阿摩笛亞=Amalthea
 奧拉=Aura
-灰姑娘=Cendrillon
+辛德瑞拉=Cendrillon
 羅賓漢=Robin Hood
 洛基=Loki
 
@@ -321,6 +321,7 @@ r:"^已購買(\d+)/(\d+)次（每日05:00重置）$"="Purchased $1/$2 times \n(R
 宇宙的終響=Universe Echo
 來自宇宙的命運指引，打開後可自選一張橙色宙位啟示卡。=A guidance of fate from the Universe, can be used to gain 1 Orange Universe Card
 殘識碎片禮包=<size\=17>Awareness Fragment Gift Bag</size>
+盲選偶像合約 ★5=5★ Random Kaidol Contract
 r:"^怪盜殘識碎片$"="Phantom Thief Awareness Fragment"
 r:"^遺留在{{A}}的怪盜殘識碎片，消耗(\d+)個可以合成角色的殘識。$"="Phantom Thief Awareness Fragment that are left in the {{A}}, consume $1 to fuse 1 Awareness."
 r:"^{{A}}遺留在{{B}}的殘識碎片，消耗(\d+)個可以合成角色的殘識。$"="{{A}} Awareness Fragment left in the {{B}}, consume $1 to fuse 1 Awareness."
@@ -332,7 +333,7 @@ sr:"^(.*)的殘識碎片$"="<size\=16>Awareness Fragment \nof $1</size>"
 sr:"^(.*?)遺留在{{A}}的殘識碎片，消耗(\d+)個可以合成角色的殘識。$"="Awareness Fragment left by $1 in the {{A}}, consume $2 to fuse 1 Awareness."
 幸運之硬幣=Lucky Coin
 「雛鳥計畫·等級獎勵」中獲得的幸運硬幣，用於在「生存遊戲專賣店」兌換「五星武器」。=Gained from the Battle Pass, can be used to exchange [5★ Weapon] in [Untouchable]
-「魅影通行證·等級獎勵」中獲得的幸運硬幣，用於在「生存遊戲專賣店」兌換「五星武器」。=Gained from the Phantom Pass, can be used to exchange [5★ Weapon] in [Untouchable]
+「{{A}}·等級獎勵」中獲得的幸運硬幣，用於在「生存遊戲專賣店」兌換「五星武器」。=Gained from the Phantom Pass, can be used to exchange [5★ Weapon] in [Untouchable]
 定製武器套件=5★ Weapon Box
 定製武器模組=4★ Weapon Box
 特供武器模組=4★ Weapon Box
@@ -779,6 +780,7 @@ r:"^提升護盾效果(\d+\.\d%)\n$"="Increase Shield Effect by $1\n"
 r:"^提升護盾效果(\d+%)\n$"="Increase Shield Effect by $1\n"
 
 // Wonder Skill Tree //
+靈感點=Inspiration
 
 r:"^提升(\d+)生命值。$"="Increase HP by $1"
 r:"^提升(\d+)攻擊力。$"="Increase ATK by $1"
@@ -929,23 +931,30 @@ r:"擁有(\d+)張等級為(\d+)級的宙位啟示卡"=Own $1 Lv. $2 Arcana Revel
 Battle Pass Challenges
 ----------
 
+新一期「{{A}}」已開放。=New [{{A}}] is now available.
+啟動後<color\=#e5cf09>提升通行證等級</color>可獲得：=After <color\=#e5cf09>upgrading your pass</color>:
+啟動後<color\=#e5cf09>立即獲得</color>以下獎勵：=<color\=#e5cf09>Immediately get</color>:
+r:"^通行證等級立即提升<color\=#e5cf09>(\d+)級</color>！$"="Immediate get <color\=#e5cf09>10 Phantom Pass Lv</color>!"
+r:"^購買典藏版後本期累計可獲得<size\=110><sprite\=37 tint\=1></size><size\=34><color\=#FFE500>x5</color></size>$"="Get <size\=110><sprite\=37 tint\=1></size><size\=34><color\=#FFE500>x5</color></size> after upgrading"
+r:"^<size\=60><sprite\=37 tint\=1></size><size\=28><color\=#FFE500>x10</color></size><size\=28><color\=#FFFFFF>可兌換五星武器</color><color\=#FFE500> \（當前擁有:(\d+)\）</color></size>$"="<size\=60><sprite\=37 tint\=1></size><size\=28><color\=#FFE500>x10</color></size> <size\=28><color\=#FFFFFF>to get 1 standard 5★ weapon</color>"
+
 本期剩餘時間：=Time left:
-探索經驗：=BP EXP: <size\=1>.</size>
+探索經驗：=Phantom Pass EXP: <size\=1>.</size>
 本週上限：=7d cap: <size\=1>.</size>
 購買等級=Buy Lv.
 r:"^購買後，提升至(\d+)級，可獲得以下獎勵$"="Buy to Lv. $1 and get"
 購買等級:=Buy Level:
-計畫等級提升=Phantom Pass LEVEL UP
-每次完成今日計畫可獲得=Complete daily tasks to receive useful rewards:
+通行證等級提升=Phantom Pass LEVEL UP
+每次完成今日目標可獲得=Complete daily tasks to receive useful rewards:
 今日剩餘領取次數=Dailies left to complete:
-每次完成今日計畫可領獎，剩餘   次=Daily task rewards: You have   task(s) left.
+每次完成今日目標可領獎，剩餘   次=Daily task rewards: You have   task(s) left.
 伴手禮=Gift Bag
 禮包=Gift Bag
-成長經驗=BP EXP
+成長經驗=<size\=26>Phantom Pass EXP</size>
 購買立即獲得<size\=44><sprite\=27 tint\=1></size>650=Buy and get 650 <size\=44><sprite\=27 tint\=1></size>
-本週累計「今日計畫」領獎次數\n「下週一」領取對應「補給禮包」=<size\=22>Number of dailys completed this week\nLog in next Monday to get the Gift Box</size>
-本週累計「今日計畫」領獎次數\n「<color\=#ff3b37>後日登入</color>」領取對應「補給禮包」=<size\=22>Number of dailys completed this week\n<color\=#ff3b37>Log in the day after tomorrow</color> \nto get the Gift Box</size>
-本週累計「今日計畫」領獎次數\n「<color\=#ff3b37>明日登入</color>」領取對應「補給禮包」=<size\=22>Number of dailys completed this week\n<color\=#ff3b37>Log in Tomorrow</color> to get the Gift Box</size>
+本週累計「今日目標」領獎次數\n「下週一」領取對應「補給禮包」=<size\=22>Number of dailys completed this week\nLog in next Monday to get the Gift Box</size>
+本週累計「今日目標」領獎次數\n「<color\=#ff3b37>後日登入</color>」領取對應「補給禮包」=<size\=22>Number of dailys completed this week\n<color\=#ff3b37>Log in the day after tomorrow</color> \nto get the Gift Box</size>
+本週累計「今日目標」領獎次數\n「<color\=#ff3b37>明日登入</color>」領取對應「補給禮包」=<size\=22>Number of dailys completed this week\n<color\=#ff3b37>Log in Tomorrow</color> to get the Gift Box</size>
 距離下次領取剩餘：=Time until next Gift Box:
 r:"^(\d+)時(\d+)$"=" $1 hours $2 minutes"
 「下週一」登錄即可領取=Log in next Monday to claim!
@@ -998,6 +1007,7 @@ r:"在「心之海試煉」中通過「西部施工區」 \((\d)\/(\d)\)"=Clear 
 r:"完成12次「在盧布朗度過」日程 \((\d+)\/(\d+)\)"=Spend time in Leblanc 12 times ($1/$2)
 r:"在「心軌擇行」中完成1次挑戰 \((\d+)\/1\)"=Complete 1 challenge in Heart Rails ($1/1)
 r:"完成一個星盤試練的「宮主星」或「命主星」 \((\d+)\/1\)"=Clear 1 [House] or [Chart Ruler] in Astrolabe Trials ($1/1)
+r:"在「星盤試練」中通過「紫色或紅色」監測點 \((\d+)\/1\)"=Clear 1 [Purple or Red] Monitoring Point in Astrolabe Trials ($1/1)
 
 
 ////////////////////////////////
@@ -1027,7 +1037,8 @@ r:"^簽約$"="Pulls"
 
 自選武器=Customize
 自選UP武器=Customize
-自選<color\=#FFD145>非UP武器</color>，未獲得UP五星武器時只會獲取自選的兩把武器=<size\=18>Choose 2 <color\=#FFD145>Non-RATE UP Weapons</color>. If you missed the RATE UP 5★ weapon, you will only get the chosen weapons.</size>
+自選<color\=#FFD145>UP武器</color>，占五星武器基礎成功機率的<color\=#FFD145>50%</color>=Choose <color\=#FFD145>RATE UP Weapon</color>. With a base chance of <color\=#FFD145>50%</color> to get the chosen weapon
+自選<color\=#FFD145>非UP武器</color>，未獲得UP五星武器時只會獲取自選的兩把武器=<size\=18>Choose 2 <color\=#FFD145>Non-RATE UP Weapons</color>. If you missed the RATE UP 5★ weapon, you will only get the chosen weapons</size>
 請選擇2把五星武器後再補給。=Please choose 2 5★ weapons.
 
 查詢結果僅保留最近90天補給資訊=<color\=#FFDF00>The pull history only records up to <u>90 days.</u></color>
@@ -1865,6 +1876,7 @@ r:"^怪盜天賦材料$"="<size\=30>Mental Image (30)</size>"
 
 r:"^保底進度：<color\=#0665ca>(\d+)/(\d+)</color>$"="Pity: <color\=#0665ca>$1/$2</color>"
 r:"^領取 <color\=#0665ca>(\d+)</color> 次必得$"="Guarantee after <color\=#0665ca>$1</color> time(s)"
+本次領取必得=Guarantee
 r:"持有印記：(\d+)"=Mark Owned: $1
 r:"^區域$"="Area"
 嗯？要從{{A}}撤退，返回都市嗎？=Hm? Want to retreat from Mementos\nand head back to the city?
@@ -2006,9 +2018,9 @@ sr:"^未知宿命藍·(.*)$"="2★ • $1"
 在{{A}}商店進行原晶兌換=<size\=25>Exchange from Marthym's Shop</size>
 {{A}}商店購買獲得=<size\=25>Purchase from Marthym's Shop</size>
 完成雛鳥計畫任務=Completion Battle Pass Missions
-完成魅影通行證任務=Completion Phantom Pass Missions
+完成{{A}}任務=Completion Phantom Pass Missions
 雛鳥計畫·典藏版=From the Premium Battle Pass
-魅影通行證·典藏版=From the Premium Phantom Pass
+{{A}}·典藏版=From the Premium Phantom Pass
 輕音部徽章兌換=Exchange at the Music Club
 足球部徽章兌換=Exchange at the Soccer Club
 遊戲中心娃娃機位置兌換=Exchange at the Arcade
@@ -2229,6 +2241,9 @@ sr:"^(.*)印記$"="$1 Mark"
 r:"^詭譎的{{A}}$"="Strange {{A}}"
 r:"^平凡的{{A}}$"="Ordinary {{A}}"
 r:"^非凡的{{A}}$"="Extraordinary {{A}}"
+r:"^被操控的{{A}}$"="Manipulated {{A}}"
+r:"^躁動的{{A}}$"="Agitated {{A}}"
+r:"^乖戾的{{A}}$"="Sullen {{A}}"
 r:"^生氣的{{A}}$"="Angry {{A}}"
 r:"^強大的{{A}}$"="Strong {{A}}"
 r:"^兇惡的{{A}}$"="Vicious {{A}}"

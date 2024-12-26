@@ -894,7 +894,6 @@ r:"^超<color\=#000000>荷</color>改裝$"="<size\=1> </size>O<color\=#000000>ve
 ----------
 MFS - Kotone Montagne
 ----------
-
 r:"^對<color\=#FFFF00>1名敵人</color>造成(\d+)次(\d+\.\d+%)攻擊力的疾風屬性傷害，並有(\d+%)的基礎機率使其陷入風襲狀態；若{{A}}處在『仲春結界』內，則額外使其陷入持續(\d+)回合的風傷狀態。{{A}}攻擊風傷狀態下的敵人時，暴擊效果提升(\d+\.\d+%)。$"="Deals $2 ATK Wind damage to <color\=#FFFC40>1</color> enemy $1 times, with a $3 base chance to inflict Winded; If you are in [Mid-Spring Domain], additionally inflict Wind Injury for $4 turns. Increase your CRIT DMG by $5 when attacking enemies with Wind Injury."
 r:"^對1名敵人造成(\d+)次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的疾風屬性傷害，並有(\d+%)的基礎機率使其陷入<link\="s\|105"><u>風襲</u></link>狀態；若{{A}}處在『仲春結界』內，則額外使其陷入持續(\d+)回合的<link\="s\|209"><u>風傷</u></link>狀態。{{A}}攻擊<link\="s\|209"><u>風傷</u></link>狀態下的敵人時，暴擊效果提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Deals <color\=#FFFC40>$2</color> ATK Wind damage to 1 enemy $1 times, with a $3 base chance to inflict <link\="s|105"><u>Winded</u></link>; If you are in [Mid-Spring Domain], additionally inflict <link\="s|209"><u>Wind Injury</u></link> for $4 turns. Increase your CRIT DMG by <color\=#FFFC40>$5</color> when attacking enemies with <link\="s|209"><u>Wind Injury</u></link>."
 
@@ -944,3 +943,31 @@ r:"^風<color\=#000000>傷</color>$"="<size\=1> </size>W<color\=#000000>in</colo
 r:"^凍<color\=#000000>徹</color>$"="<size\=15> </size>F<color\=#000000>re</color>ezing"
 r:"^雪<color\=#000000>凝</color>之盾$"="<size\=25> </size>C<color\=#000000>o</color>ndensed Shield"
 r:"^冰<color\=#000000>封</color>$"="<size\=5> </size>Ic<color\=#000000>e</color> Seal"
+
+----------
+Violet - Kasumi Yoshizawa
+----------
+r:"^主動使用該技能時，對<color\=#FFFF00>1名敵人</color>造成(\d+\.\d+%)攻擊力的祝福屬性傷害，自身獲得<link\="s\|215"><u>舞姿</u></link>『勇氣步伐』，上限(\d+)層。舞伴觸發該技能時，技能效果為對<color\=#FFFF00>1名敵人</color>造成(\d+\.\d+%)攻擊力的祝福屬性傷害，自身獲得<link\="s|215"><u>舞姿</u></link>『勇氣步伐』，上限(\d+)層。$"="When you manually use this skill, deals $1 ATK Bless damage to <color\=#FFFF00>1 enemy</color>, and gains <link\="s|215"><u>Posture</u></link> [Brave Step], up to a $2 stack. When Dance Partner triggers this skill, deals $3 ATK Bless damage to <color\=#FFFF00>1 enemy</color>, and gains <link\="s|215"><u>Posture</u></link> [Brave Step], up to a $4 stack."
+r:"^主動使用該技能時，對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，自身獲得<link\="s\|215"><u>舞姿</u></link>『勇氣步伐』，上限(\d+)層。舞伴觸發該技能時，技能效果為對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，自身獲得<link\="s\|215"><u>舞姿</u></link>『勇氣步伐』，上限(\d+)層。$"="When you manually use this skill, deals <color\=#FFFC40>$1</color> ATK Bless damage to 1 enemy, and gains <link\="s|215"><u>Posture</u></link> [Brave Step], up to a $2 stack. When Dance Partner triggers this skill, deals <color\=#FFFC40>$3</color> ATK Bless damage to 1 enemy, and gains <link\="s|215"><u>Posture</u></link> [Brave Step], up to a $4 stack."
+
+r:"^選擇<color\=#FFFF00>1名同伴</color>使其成為『舞伴』，持續(\d+)回合。自身和『舞伴』攻擊力提升(\d+\.\d+%)，持續(\d+)回合。自身獲得<link\="s\|215"><u>舞姿</u></link>『靈巧步伐』，上限(\d+)層。『舞伴』使用人格面具技能後，自身立刻對隨機敵方目標釋放1次『黑夜微光』（若『舞伴』的技能目標為敵方，則改為對技能主目標釋放1次『黑夜微光』）。同時只能存在一個『舞伴』。$"="Selects <color\=#FFFF00>1 ally</color> to become the [Dance Partner] for $1 turn. Increases own and [Dance Partner] ATK by $2 for $3 turns. Gains <link\="s|215"><u>Posture</u></link> [Agile Step], up to $4 stack. After [Dance Partner] use a Persona skill, immediately use [Glimmer of Night] on 1 random enemy (If [Dance Partner] used a skill that target an enemy, change the main target of [Glimmer of Night] to that enemy). There can only be 1 [Dance Partner]."
+r:"^選擇1名同伴使其成為『舞伴』，持續(\d+)回合。自身和『舞伴』攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。自身獲得<link\="s\|215"><u>舞姿</u></link>『靈巧步伐』，上限(\d+)層。『舞伴』使用人格面具技能後，自身立刻對隨機敵方目標釋放1次『黑夜微光』（若『舞伴』的技能目標為敵方，則改為對技能主目標釋放1次『黑夜微光』）。同時只能存在一個『舞伴』。$"="Selects 1 ally to become the [Dance Partner] for $1 turn. Increases own and [Dance Partner] ATK by <color\=#FFFC40>$2</color> for $3 turns. Gains <link\="s|215"><u>Posture</u></link> [Agile Step], up to $4 stack. After [Dance Partner] use a Persona skill, immediately use [Glimmer of Night] on 1 random enemy (If [Dance Partner] used a skill that target an enemy, change the main target of [Glimmer of Night] to that enemy). There can only be 1 [Dance Partner]."
+
+r:"^對<color\=#FFFF00>1名敵人</color>造成(\d+\.\d+%)攻擊力的祝福屬性傷害。使用該技能時若自身處於『<link\="s\|217"><u>化裝舞會</u></link>』狀態，則技能傷害提升(\d+%)、自身暴擊效果提升(\d+\.\d+%)。$"="Deals $1 ATK Bless damage to <color\=#FFFF00>1 enemy</color>. If you are in [<link\="s|217"><u>Masquerade</u></link>], additionally increases skill damage by $2 and CRIT DMG by $3."
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害。使用該技能時若自身處於『<link\="s\|217"><u>化裝舞會</u></link>』狀態，則技能傷害提升(\d+%)、自身暴擊效果提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Deals <color\=#FFFC40>$1</color> ATK Bless damage to 1 enemy. If you are in [<link\="s|217"><u>Masquerade</u></link>], additionally increases skill damage by $2 and CRIT DMG by <color\=#FFFC40>$3</color>."
+
+r:"^對<color\=#FFFF00>1名敵人</color>造成(\d+\.\d+%)攻擊力的祝福屬性傷害。自身擁有<link\="s\|215"><u>舞姿</u></link>時，獲得對應的增益效果。『勇氣步伐』：每層提升HIGHLIGHT技能傷害(\d+%)。『靈巧步伐』：HIGHLIGHT提升(\d+%)暴擊率、(\d+%)暴擊效果。$"="Deals $1 ATK Bless damage to <color\=#FFFF00>1 enemy</color>. Based on own <link\="s|215"><u>Posture</u></link>, gains the corresponding effects. [Brave Step]: Each stack increases HIGHLIGHT skill damage by $2. [Agile Step]: Increases HIGHLIGHT CRIT Rate by $3 and CRIT DMG by $4."
+
+r:"^可以發動1次HIGHLIGHT。自身每有(\d+)層舞姿，攻擊力提升(\d+%)、暴擊率提升(\d+%)。$"="<size\=22>Can use HIGHLIGHT once. For every $1 stack of Posture, increase ATK by $2 and CRIT Rate by $3.</size>"
+r:"^一種舞姿，上限(\d+)層。舞姿大於等於(\d+)層時，可以變身進入『化裝舞會』。$"="<size\=27>A Posture, up to $1 stack(s). Can transform into [Masquerade] when you have ≥$2 Posture.</size>"
+舞伴釋放人格面具技能後，{{A}}會釋放1次『黑夜微光』={{A}} will use [Glimmer of Night] after Dance Partner used a Persona skill
+必定閃避下一次傷害效果，對部分技能無效=Evade the next damage effect, \ncannot be used against certain skills
+
+Combat Pop-ups
+r:"^十<color\=#000000>二</color>點的鐘聲$"="<size\=13> </size>B<color\=#000000>el</color>l Toll at Midnight"
+r:"^化<color\=#000000>裝</color>舞會$"="<size\=17> </size>M<color\=#000000>a</color>squerade"
+r:"^勇<color\=#000000>氣</color>步伐$"="<size\=12> </size>B<color\=#000000>ra</color>ve Step"
+r:"^靈<color\=#000000>巧</color>步伐$"="<size\=13> </size>A<color\=#000000>gi</color>le Step"
+r:"^攜<color\=#000000>手</color>共舞$"="<size\=24> </size>D<color\=#000000>a</color>ncing in Hand"
+r:"^破<color\=#000000>碎</color>的裙擺與她的影子$"="<size\=12> </size>T<color\=#000000>at</color>tered Dress"
+r:"^黎<color\=#000000>明</color>的面紗$"="<size\=14> </size>V<color\=#000000>ei</color>l of Dawn"

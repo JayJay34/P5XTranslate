@@ -215,6 +215,7 @@ r:"^對所有敵人造成物理屬性傷害，有極低機率使敵人陷入<lin
 對所有敵人造成大量電擊屬性傷害=Deals heavy Electric damage to all enemies
 激情之翼刃=Winged Blade of Passion
 對1名敵人造成特大物理屬性傷害=Deals severe Physical damage to 1 enemy
+被{{A}}鎖定，將受到「激情之翼刃」的攻擊=<size\=27>Locked on by {{A}}, \nwill be attacked by [Winged Blade of Passion]</size>
 野性之咆哮=Wild Roar
 {{A}}之天雷=Thunder of {{A}}
 
@@ -522,6 +523,9 @@ r:"^乘坐電梯$"="Take the Elevator"
 r:"^<color\=#FFFFFF>首領剩餘進攻次數：</color><color\=#FFF000>(\d+)</color>$"="<color\=#FFFFFF>Boss attack(s) left: </color><color\=#FFF000>$1</color>"
 主動逃離戰鬥不會獲得分數記錄。\n是否確認退出？=<size\=28>Cannot record score if you escape.\nAre you sure?</size>
 
+{{A}}每隔一個回合會為所有怪盜回復精力值，但是也會對攻擊最高的怪盜釋放「惡魔的詛咒」，大幅降低其造成的傷害。={{A}} will restore SP to all Thieves every other turn but will inflict the highest ATK Thief with [Demon's Curse], heavily decreasing their DMG Dealt.
+惡魔的詛咒
+
 四大天王每隔一個回合會對隨機一名怪盜釋放「死亡凝視」，四大天王會優先攻擊處於「死亡凝視」的怪盜。=The Four Heavenly Kings will use [Death Gaze] on a random enemy, the Four Heavenly Kings will prioritize attacking the enemy with [Death Gaze].
 
 {{A}}與所有{{B}}處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。=<size\=28>{{A}} and all {{B}} have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.</size>
@@ -543,3 +547,6 @@ sr:"^人格面具技能或追加效果每次造成傷害時，使自己獲得(\d
 熔岩噴湧=Lava Burst
 sr:"^每個回合開始時，獲得一層『(.*)』。『(.*)』：使下一次槍械攻擊或追加效果的最終傷害提升(\d+%)，最終傷害提升效果最多可疊加(\d+)層。$"="<size\=28>At the start of each turn, gain 1 stack of [$1]. [$1]: Increases the next Gun Attack or Follow Up Final DMG by $3, up to $4 stacks.</size>"
 熱能溢脹=Heat Overflow
+
+晶體虹吸=Crystal Siphon
+r:"^HIGHLIGHT技能的最終傷害提升(\d+%)，追加效果的最終傷害提升(\d+%)。$"="Increase HIGHLIGHT Final DMG by $1 and Follow Up Final DMG by $2."
