@@ -28,6 +28,7 @@ r:"^(\d+)層$"="<size\=18>$1 stacks</size>"
 子彈數：=Ammo:
 命中率：=Accuracy:
 基礎暴擊率：=Base CRIT Rate:
+使用槍械射擊1名敵人，造成少量射擊屬性傷害，根據子彈數量可以射擊多次。=Uses a gun to shoot 1 enemy. dealing light Gun damage, can shoot multiple times based on ammo.
 使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。=Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo.
 使用槍械射擊1名敵人，造成6次射擊屬性傷害，子彈可能會發生偏移。對同一目標造成傷害會衰減。=Uses a gun to shoot 1 enemy. dealing 6 hits of Gun damage, the bullets can miss and deals less damage to the same target.
 
@@ -138,7 +139,7 @@ sr:"對<color\=#FFFF00>1名</color>敵人造成(\d+)次(\d+\.\d+%)攻擊力的(.
 sr:"對<color\=#FFFF00>1名</color>敵人造成(\d+\~\d+)次(\d+\.\d+%)攻擊力的(.*)屬性傷害。"=Deals <color\=#FFFF00>$2</color> ATK $3 damage to <color\=#FFFF00>1</color> enemy $1x.
 
 //ST + Ailment
-sr:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的(.*)屬性傷害，(\d+\.\d+%)基礎機率機率使敵人(.*)。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>1</color> enemy and has a <color\=#FFFF00>$3</color> chance of inflicting $4 for 2 turns.
+sr:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的(.*)屬性傷害，(\d+\.\d+%)基礎機率機率使敵人(.*)。"=Deals $1 ATK $2 damage to <color\=#FFFF00>1</color> enemy with a $3 base chance to inflict $4 for 2 turns.
 
 //AoE
 sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies.
@@ -282,6 +283,9 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福�
 
 Light of Salvation
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，使自身獲得(\d+)層祝福效果。自身每層祝福效果使得技能傷害提升(\d+%)，最多提升(\d+%)。$"="Deals $1 ATK Bless damage to <color\=#FFFF00>all</color> enemies and gain $2 stacks of Blessed. For every stack of Blessed you have, increases skill damage by $3, up to $4."
+
+Absolute Obedience
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害。使目標受到的HIGHLIGHT傷害提升(\d+\.\d+%)，持續(\d+)回合。$"="Deals $1 ATK Bless damage to <color\=#FFFF00>1</color> enemy. Increases their HIGHLIGHT DMG Taken by $2 for $3 turn."
 
 --- Curse ---
 r:"^詛咒屬性$"="Curse"
@@ -688,132 +692,6 @@ r:"^受<color\=#000000>詛</color>咒傷害提升$"="<size\=7> </size>C<color\=#
 r:"^瞄<color\=#000000>準</color>$"="Ai<color\=#000000>m</color>"
 r:"^猛<color\=#000000>毒</color>素$"="<size\=26> </size>T<color\=#000000>o</color>xin"
 
-
-----------
-Inspect Details - BUFF
-----------
-各項屬性提升=Many stats up
-r:"^護盾值：(\d+)$"="Shield: $1"
-r:"^生命值提升(\d+)$"="Increase HP by $1"
-r:"^生命值提升(\d+%)$"="Increase HP by $1"
-r:"^生命值提升(\d+\.\d+%)$"="Increase HP by $1"
-sr:"^最大生命值提升(.*)$"="Increase Max HP by $1"
-r:"^攻擊力提升(\d+)$"="Increase ATK by $1"
-r:"^攻擊力提升(\d+%)$"="Increase ATK by $1"
-r:"^攻擊力提升(\d+\.\d+%)$"="Increase ATK by $1"
-r:"^攻擊力提升(\d+%)\+(\d+)$"="Increase ATK by $1 + $2"
-r:"^每層提升(.*)的攻擊力$"="Increase ATK by $1 per stack"
-r:"^攻擊力提升(\d+%)、防禦力提升(\d+%)$"="Increase ATK by $1 and DEF by $2"
-r:"^攻擊力、防禦力提高$"="Increase ATK and DEF"
-r:"^防禦提升(\d+%)$"="Increase DEF by $1"
-r:"^防禦力提升(\d+)$"="Increase DEF by $1"
-r:"^防禦力提升(\d+%)$"="Increase DEF by $1"
-r:"^防禦力提升(\d+\.\d+%)$"="Increase DEF by $1"
-r:"^精力值消耗降低(\d+%)$"="Decrease SP cost by $1"
-r:"^速度提升(\d+)$"="Increase SPD by $1"
-r:"^暴擊率提升(\d+%)$"="Increase CRIT Rate by $1"
-r:"^暴擊率提升(\d+\.\d+%)$"="Increase CRIT Rate by $1"
-r:"^持續時間內，所有友方暴擊率提升(\d+%)"="During this effect,\nincrease all allies' CRIT Rate by $1"
-sr:"^暴擊傷害提升(.*)$"="Increase CRIT DMG by $1"
-sr:"^暴擊效果提升(.*)$"="Increase CRIT DMG by $1"
-r:"^穿透提升(\d+%)$"="Increase PEN by $1"
-r:"^穿透提升(\d+%)，可疊加(\d+)層$"="Increase PEN by $1, up to $2 stacks"
-r:"^效果命中提升(\d+%)$"="Increase EHR by $1"
-r:"^效果命中提升(\d+\.\d+%)$"="Increase EHR by $1"
-r:"^基於效果命中提升最終傷害，當前提升(\d+%)$"="Increase Final DMG based on EHR; \nCurrently increase Final DMG by $1"
-r:"^效果抵抗提升(\d+%)$"="Increase Effect RES by $1"
-r:"^效果抵抗提升(\d+\.\d+%)$"="Increase Effect RES by $1"
-sr:"^效果抵抗降低(.*)$"="Decrease Effect RES by $1"
-r:"^最終傷害提高(\d+%)$"="Increase Final DMG by $1"
-r:"^最終傷害提升(\d+%)$"="Increase Final DMG by $1"
-r:"^傷害提升(\d+%)$"="Increase DMG Bonus by $1"
-r:"^傷害提升(\d+\.\d+%)$"="Increase DMG Bonus by $1"
-r:"^造成傷害提升(\d+%)$"="Increase DMG Dealt by $1"
-r:"^造成傷害提高(\d+%)$"="Increase DMG Dealt by $1"
-r:"^造成的傷害提升(\d+%)$"="Increase DMG Dealt by $1"
-r:"^造成的傷害提升(\d+\.\d+%)$"="Increase DMG Dealt by $1"
-r:"^造成傷害提升(\d+%)，可疊加(\d+)層$"="Increase DMG Dealt by $1, up to $2 stacks"
-r:"^所有同伴造成的傷害提升(\d+%)。$"="Increase DMG Dealt by $1"
-r:"^造成傷害提高(\d+%)，可疊加(\d+)層$"="Increase DMG Dealt by $1, up to $2 stacks"
-r:"^技能傷害提升(\d+%)$"="Increase skill damage by $1"
-r:"^追加效果暴擊效果提升(\d+%)、攻擊力提升(\d+%)$"="Increase Follow Up CRIT DMG by $1 and Follow Up ATK by $2"
-sr:"^傷害減免(.*)$"="Increase DMG RES by $1"
-r:"^受到的傷害降低(\d+%)"="Decrease DMG Taken by $1"
-r:"^受到百分比傷害大幅降低"="Heavily decrease DMG Taken%"
-r:"^受到百分比傷害極大幅降低"="Severely decrease DMG Taken%"
-r:"^受到最終傷害降低(\d+%)"="Decrease Final DMG Taken by $1"
-r:"^最終受到傷害降低(\d+%)"="Decrease Final DMG Taken by $1"
-r:"^所有同伴受到的傷害降低(\d+%)。$"="Decrease DMG Taken by $1"
-r:"^受物理傷害加深(\d+\.\d+%)$"="Increase Phys DMG Taken by $1"
-r:"^物理傷害提升(\d+%)$"="Increase Phys DMG by $1"
-r:"^物理傷害提升(\d+\.\d+%)$"="Increase Phys DMG by $1"
-r:"^射擊傷害提升(\d+%)$"="Increase Gun DMG by $1"
-r:"^射擊傷害提升(\d+\.\d+%)$"="Increase Gun DMG by $1"
-r:"^火焰傷害提高(\d+%)$"="Increase Fire DMG by $1"
-r:"^火炎傷害提升(\d+%)$"="Increase Fire DMG by $1"
-r:"^火焰傷害提升(\d+\.\d+%)$"="Increase Fire DMG by $1"
-r:"^火炎傷害提升(\d+\.\d+%)$"="Increase Fire DMG by $1"
-r:"^冰凍傷害提升(\d+%)$"="Increase Ice DMG by $1"
-r:"^冰凍傷害提升(\d+\.\d+%)$"="Increase Ice DMG by $1"
-r:"^凍結傷害提升(\d+%)$"="Increase Ice DMG by $1"
-r:"^凍結傷害提升(\d+\.\d+%)$"="Increase Ice DMG by $1"
-r:"^每層提升(\d+%)的凍結傷害$"="Increase Ice DMG by $1 per stack"
-r:"^電擊傷害提升(\d+%)$"="Increase Elec DMG by $1"
-r:"^電擊傷害提升(\d+\.\d+%)$"="Increase Elec DMG by $1"
-r:"^疾風傷害提升(\d+%)$"="Increase Wind DMG by $1"
-r:"^疾風傷害提升(\d+\.\d+%)$"="Increase Wind DMG by $1"
-r:"^疾風傷害提高(\d+%)$"="Increase Wind DMG by $1"
-r:"^念動傷害提升(\d+%)$"="Increase Psy DMG by $1"
-r:"^念動傷害提高(\d+%)$"="Increase Psy DMG by $1"
-r:"^念動傷害提升(\d+\.\d+%)$"="Increase Psy DMG by $1"
-r:"^核熱傷害提升(\d+%)$"="Increase Nuke DMG by $1"
-r:"^核熱傷害提升(\d+\.\d+%)$"="Increase Nuke DMG by $1"
-r:"^每層提升(\d+%)的核熱傷害$"="Increase Nuke DMG by $1 per stack"
-r:"^祝福傷害提升(\d+%)$"="Increase Bless DMG by $1"
-r:"^祝福傷害提升(\d+\.\d+%)$"="Increase Bless DMG by $1"
-r:"^詛咒傷害提升(\d+%)$"="Increase Curse DMG by $1"
-r:"^詛咒傷害提升(\d+\.\d+%)$"="Increase Curse DMG by $1"
-r:"^萬能傷害提升(\d+\.\d+%)$"="Increase Almighty DMG by $1"
-r:"^治療效果提升(\d+%)$"="Increase Healing Effect by $1"
-r:"^護盾效果提升(\d+%)$"="Increase Shield Effect by $1"
-r:"^剩餘護盾值：(\d+)$"="Shield: $1"
-
-受到的傷害將由所有擁有生命連結的單位共同分攤=<size\=26>Damage will be shared by all units with Lifelink</size>
-免疫即死效果=Immunity to Instant Death effects
-免疫精神異常效果=Immunity to Mental Ailment effects
-免疫倒地值傷害=Immunity to Down
-免疫精神異常效果及控制效果=<size\=26>Immunity to Mental Ailments and Control effects</size>
-無法被怪盜方當作技能目標=Cannot be targeted by Thieves
-
-----------
-Inspect Details - DEBUFF
-----------
-r:"^攻擊力降低(\d+%)$"="Decrease ATK by $1"
-r:"^防禦降低(\d+%)$"="Decrease DEF by $1"
-r:"^防禦力降低(\d+%)$"="Decrease DEF by $1"
-r:"^防禦降低(\d+\.\d+%)$"="Decrease DEF by $1"
-r:"^防禦力降低(\d+\.\d+%)$"="Decrease DEF by $1"
-r:"^受到念動傷害暴擊率提升(\d+%)$"="Increase Psy DMG CRIT Rate Taken by $1"
-r:"^受到暴擊效果提升(\d+%)$"="Increase CRIT DMG Taken by $1"
-r:"^受到暴擊效果提升(\d+\.\d+%)$"="Increase CRIT DMG Taken by $1"
-受到的傷害提升=Increase DMG Taken
-r:"^受傷害提升(\d+\.\d+%)$"="Increase DMG Taken by $1"
-r:"^受到傷害提升(\d+%)$"="Increase DMG Taken by $1"
-r:"^受到傷害提升(\d+\.\d+%)$"="Increase DMG Taken by $1"
-r:"^受到的傷害提升(\d+\.\d+%)$"="Increase DMG Taken by $1"
-r:"^造成傷害降低(\d+%)$"="Decrease DMG Dealt by $1"
-造成的傷害大幅降低=Heavily decrease DMG Dealt
-r:"^受物理傷害提升(\d+%)$"="Increase Phys DMG Taken by $1"
-r:"^受火焰傷害提升(\d+%)$"="Increase Fire DMG Taken by $1"
-r:"^受到火焰傷害提升(\d+\.\d+%)$"="Increase Fire DMG Taken by $1"
-r:"^受到火屬性傷害提升(\d+\.\d+%)$"="Increase Fire DMG Taken by $1"
-r:"^受疾風傷害提高(\d+%)"="Increase Wind DMG Taken by $1"
-r:"^受疾風傷害加深(\d+%)"="Increase Wind DMG Taken by $1"
-r:"^受到核熱傷害提升(\d+%)"="Increase Nuke DMG Taken by $1"
-r:"^受到的治療效果降低(\d+%)"="Decrease Healing Received by $1"
-
-r:"^回合末失去一定生命值，最終受到傷害提升(\d+%)，可疊加(\d+)層$"="<size\=24>Lose a certain amount of HP at the end of the turn; \nIncrease Final DMG Taken by $1, up to $2 stacks</size>"
-
 ----------
 Inspect Details - TITLES
 ----------
@@ -866,3 +744,109 @@ r:"^耐性穿透提升(\d+%)$"="Increase Effect RES Ignore by $1"
 無法選中=Cannot Target
 倒地=Down
 被擊倒了！=Knocked Down!
+
+----------
+Inspect Details - BUFF
+----------
+各項屬性提升=Many stats up
+r:"^護盾值：(\d+)$"="Shield: $1"
+r:"^生命值提升(\d+(.\d+)?(%)?)$"="Increase HP by $1"
+r:"^最大生命值提升(\d+(.\d+)?(%)?)$"="Increase Max HP by $1"
+r:"^攻擊提升(\d+(.\d+)?(%)?)$"="Increase ATK by $1"
+r:"^攻擊力提升(\d+(.\d+)?(%)?)$"="Increase ATK by $1"
+r:"^攻擊力提升(\d+%)\+(\d+)$"="Increase ATK by $1 + $2"
+r:"^每層提升(\d+(.\d+)?(%)?)的攻擊力$"="Increase ATK by $1 per stack"
+r:"^攻擊力提升(\d+%)、防禦力提升(\d+%)$"="Increase ATK by $1 and DEF by $2"
+r:"^攻擊力、防禦力提高$"="Increase ATK and DEF"
+r:"^防禦提升(\d+(.\d+)?(%)?)$"="Increase DEF by $1"
+r:"^防禦力提升(\d+(.\d+)?(%)?)$"="Increase DEF by $1"
+r:"^精力值消耗降低(\d+(.\d+)?(%)?)$"="Decrease SP cost by $1"
+r:"^速度提升(\d+(.\d+)?(%)?)$"="Increase SPD by $1"
+r:"^暴擊率提升(\d+(.\d+)?(%)?)$"="Increase CRIT Rate by $1"
+r:"^持續時間內，所有友方暴擊率提升(\d+(.\d+)?(%)?)"="During this effect,\nincrease all allies' CRIT Rate by $1"
+r:"^暴擊傷害提升(\d+(.\d+)?(%)?)$"="Increase CRIT DMG by $1"
+r:"^暴擊效果提升(\d+(.\d+)?(%)?)$"="Increase CRIT DMG by $1"
+r:"^穿透提升(\d+(.\d+)?(%)?)$"="Increase PEN by $1"
+r:"^穿透提升(\d+%)，可疊加(\d+)層$"="Increase PEN by $1, up to $2 stacks"
+r:"^效果命中提升(\d+(.\d+)?(%)?)$"="Increase EHR by $1"
+r:"^基於效果命中提升最終傷害，當前提升(\d+(.\d+)?(%)?)$"="Increase Final DMG based on EHR; \nCurrently increase Final DMG by $1"
+r:"^效果抵抗提升(\d+(.\d+)?(%)?)$"="Increase Effect RES by $1"
+r:"^最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1"
+r:"^最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1"
+r:"^最終傷害提升(\d+%)，可疊加(\d+)層$"="Increase Final DMG by $1, up to $2 stacks"
+r:"^傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Bonus by $1"
+r:"^造成傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Dealt by $1"
+r:"^造成傷害提高(\d+(.\d+)?(%)?)$"="Increase DMG Dealt by $1"
+r:"^造成的傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Dealt by $1"
+r:"^造成傷害提升(\d+%)，可疊加(\d+)層$"="Increase DMG Dealt by $1, up to $2 stacks"
+r:"^所有同伴造成的傷害提升(\d+(.\d+)?(%)?)。$"="Increase DMG Dealt by $1"
+r:"^造成傷害提高(\d+%)，可疊加(\d+)層$"="Increase DMG Dealt by $1, up to $2 stacks"
+r:"^技能傷害提升(\d+(.\d+)?(%)?)$"="Increase skill damage by $1"
+r:"^追加效果暴擊效果提升(\d+%)、攻擊力提升(\d+%)$"="Increase Follow Up CRIT DMG by $1 and Follow Up ATK by $2"
+r:"^追加效果的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up Final DMG by $1"
+r:"^HIGHLIGHT技能的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase HIGHLIGHT Final DMG by $1"
+r:"^傷害減免(\d+(.\d+)?(%)?)$"="Increase DMG RES by $1"
+r:"^受到的傷害降低(\d+(.\d+)?(%)?)"="Decrease DMG Taken by $1"
+r:"^受到百分比傷害大幅降低"="Heavily decrease DMG Taken%"
+r:"^受到百分比傷害極大幅降低"="Severely decrease DMG Taken%"
+r:"^受到最終傷害降低(\d+(.\d+)?(%)?)"="Decrease Final DMG Taken by $1"
+r:"^最終受到傷害降低(\d+(.\d+)?(%)?)"="Decrease Final DMG Taken by $1"
+r:"^所有同伴受到的傷害降低(\d+(.\d+)?(%)?)。$"="Decrease DMG Taken by $1"
+r:"^受物理傷害加深(\d+(.\d+)?(%)?)$"="Increase Phys DMG Taken by $1"
+r:"^物理傷害提升(\d+(.\d+)?(%)?)$"="Increase Phys DMG by $1"
+r:"^射擊傷害提升(\d+(.\d+)?(%)?)$"="Increase Gun DMG by $1"
+r:"^火焰傷害提高(\d+(.\d+)?(%)?)$"="Increase Fire DMG by $1"
+r:"^火炎傷害提升(\d+(.\d+)?(%)?)$"="Increase Fire DMG by $1"
+r:"^冰凍傷害提升(\d+(.\d+)?(%)?)$"="Increase Ice DMG by $1"
+r:"^凍結傷害提升(\d+(.\d+)?(%)?)$"="Increase Ice DMG by $1"
+r:"^每層提升(\d+(.\d+)?(%)?)的凍結傷害$"="Increase Ice DMG by $1 per stack"
+r:"^電擊傷害提升(\d+(.\d+)?(%)?)$"="Increase Elec DMG by $1"
+r:"^疾風傷害提升(\d+(.\d+)?(%)?)$"="Increase Wind DMG by $1"
+r:"^疾風傷害提高(\d+(.\d+)?(%)?)$"="Increase Wind DMG by $1"
+r:"^念動傷害提升(\d+(.\d+)?(%)?)$"="Increase Psy DMG by $1"
+r:"^念動傷害提高(\d+(.\d+)?(%)?)$"="Increase Psy DMG by $1"
+r:"^核熱傷害提升(\d+(.\d+)?(%)?)$"="Increase Nuke DMG by $1"
+r:"^每層提升(\d+(.\d+)?(%)?)的核熱傷害$"="Increase Nuke DMG by $1 per stack"
+r:"^祝福傷害提升(\d+(.\d+)?(%)?)"="Increase Bless DMG by $1"
+r:"^詛咒傷害提升(\d+(.\d+)?(%)?)$"="Increase Curse DMG by $1"
+r:"^萬能傷害提升(\d+(.\d+)?(%)?)$"="Increase Almighty DMG by $1"
+r:"^治療效果提升(\d+(.\d+)?(%)?)$"="Increase Healing Effect by $1"
+r:"^護盾效果提升(\d+(.\d+)?(%)?)$"="Increase Shield Effect by $1"
+r:"^剩餘護盾值：(\d+)$"="Shield: $1"
+
+受到的傷害將由所有擁有生命連結的單位共同分攤=<size\=26>Damage will be shared by all units with Lifelink</size>
+免疫即死效果=Immunity to Instant Death effects
+免疫精神異常效果=Immunity to Mental Ailment effects
+免疫倒地值傷害=Immunity to Down
+免疫精神異常效果及控制效果=<size\=26>Immunity to Mental Ailments and Control effects</size>
+無法被怪盜方當作技能目標=Cannot be targeted by Thieves
+
+----------
+Inspect Details - DEBUFF
+----------
+r:"^攻擊力降低(\d+(.\d+)?(%)?)$"="Decrease ATK by $1"
+r:"^防禦降低(\d+(.\d+)?(%)?)$"="Decrease DEF by $1"
+r:"^防禦力降低(\d+(.\d+)?(%)?)$"="Decrease DEF by $1"
+r:"^受到祝福屬性傷害時防禦力降低(\d+(.\d+)?(%)?)$"="Decrease Bless DMG DEF by $1"
+r:"^受到念動傷害暴擊率提升(\d+(.\d+)?(%)?)$"="Increase Psy DMG CRIT Rate Taken by $1"
+r:"^受到暴擊效果提升(\d+(.\d+)?(%)?)$"="Increase CRIT DMG Taken by $1"
+r:"^效果抵抗降低(\d+(.\d+)?(%)?)$"="Decrease Effect RES by $1"
+受到的傷害提升=Increase DMG Taken
+r:"^受傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Taken by $1"
+r:"^受到傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Taken by $1"
+r:"^受到的傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Taken by $1"
+r:"^受到追擊傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up DMG Taken by $1"
+r:"^受最終傷害提升(\d+%)，可疊加(\d+)層$"="Increase Final DMG Taken by $1, \nup to $2 stacks"
+r:"^造成傷害降低(\d+(.\d+)?(%)?)$"="Decrease DMG Dealt by $1"
+造成的傷害大幅降低=Heavily decrease DMG Dealt
+受到的下一次HIGHLIGHT傷害提升=Increase next HIGHLIGHT DMG Taken
+r:"^受物理傷害提升(\d+(.\d+)?(%)?)$"="Increase Phys DMG Taken by $1"
+r:"^受火焰傷害提升(\d+(.\d+)?(%)?)$"="Increase Fire DMG Taken by $1"
+r:"^受到火焰傷害提升(\d+(.\d+)?(%)?)$"="Increase Fire DMG Taken by $1"
+r:"^受疾風傷害提高(\d+(.\d+)?(%)?)$"="Increase Wind DMG Taken by $1"
+r:"^受疾風傷害加深(\d+(.\d+)?(%)?)$"="Increase Wind DMG Taken by $1"
+r:"^受到核熱傷害提升(\d+(.\d+)?(%)?)$"="Increase Nuke DMG Taken by $1"
+r:"^受到祝福屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase Bless DMG Taken by $1"
+r:"^受到的治療效果降低(\d+(.\d+)?(%)?)$"="Decrease Healing Received by $1"
+
+r:"^回合末失去一定生命值，最終受到傷害提升(\d+%)，可疊加(\d+)層$"="<size\=24>Lose a certain amount of HP at the end of the turn; \nIncrease Final DMG Taken by $1, up to $2 stacks</size>"
