@@ -46,6 +46,8 @@ r:"^·「心之海試煉」中，累計(\d+)期段位達到(\d+)等星（次賽�
 r:"^·在「星盤試練」中通關(\d+)個宮主星或命主星\((\d+)/(\d+)\)$"="<size\=26>-Clear $1 House or Chart Ruler in [Astrolabe Trials] ($2/$3)</size>"
 r:"^·與任意(\d+)名協同者結為親密關係\((\d+)/(\d+)\)$"="<size\=26>-Reach an Intimate Relationship wtih $1 Confidants ($2/$3)</size>"
 r:"^·任意(\d+)個人格指數達到(\d+)級\((\d+)/(\d+)\)$"="<size\=26>-Reach Rank $2 for $1 Social Stats ($3/$4)</size>"
+·命運交錯之時·研究所篇（上）所有關卡探索度達到100%=-<size\=26>Reach 100% exploration for \nCross Fate·Laboratory (Part 1)</size>
+·命運交錯之時·研究所篇（下）所有關卡探索度達到100%=-<size\=26>Reach 100% exploration for \nCross Fate·Laboratory (Part 2)</size>
 
 弱點攻擊特寫 WONDER=Wonder Cut-In
 弱點攻擊特寫 WONDER時裝=Wonder Cut-In
@@ -67,6 +69,7 @@ r:"^<color\=#FFFF00>戰鬥中，主角團成員攻擊力提升(\d+)</color>$"="<
 r:"^<color\=#FFFF00>戰鬥中，「女神異聞錄5」聯動成員傷害提升(\d+\.\d+%)</color>$"="<color\=#FFFF00>In battle, increase the DMG of the Phantom Thieves of Heart by $1</color>"
 r:"^<color\=#FFFF00>戰鬥中，「女神異聞錄5」聯動成員生命提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase the HP of the Phantom Thieves of Heart by $1</color>"
 r:"^<color\=#FFFF00>戰鬥中，「女神異聞錄5」聯動成員防禦提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase the DEF of the Phantom Thieves of Heart by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，{{B}}與{{A}}攻擊力提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase the ATK of {{B}} and {{A}} by $1</color>"
 r:"^<color\=#FFFF00>戰鬥中，{{A}}傷害提升(\d+%)</color>$"="<color\=#FFFF00>In battle, Increase the DMG of {{A}} by $1</color>"
 r:"^<color\=#FFFF00>戰鬥中，{{A}}、{{B}}傷害提升(\d+%)</color>$"="<color\=#FFFF00>In battle, increase the DMG of {{A}} and {{B}} by $1</color>"
 r:"^<color\=#FFFF00>戰鬥中，{{B}}、{{A}}攻擊力提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase the ATK of {{B}} and {{A}} by $1</color>"
@@ -82,8 +85,8 @@ r:"^<color\=#FFFF00>戰鬥中，己方成員的效果命中提升(\d+\.\d+%)</co
 r:"^<color\=#FFFF00>戰鬥中，己方成員的傷害提升(\d+\.\d+%)</color>$"="<color\=#FFFF00>In battle, increase all allies' DMG by $1</color>"
 r:"^<color\=#FFFF00>戰鬥中，所有解明怪盜的攻擊力提升(\d+)</color>$"="<color\=#FFFF00>In battle, increase all Navigators' ATK by $1</color>"
 r:"^<color\=#FFFF00>WONDER在戰鬥中造成傷害提升(\d+%)</color>$"="<color\=#FFFF00>In battle, increase Wonder's DMG Dealt by $1</color>"
-r:"^<color\=#FFFF00>戰鬥中，人格面具造成的傷害提升(\d+%)</color>$"="<color\=#FFFF00>In battle, increase Persona skill DMG by $1</color>"
-r:"^<color\=#FFFF00>戰鬥中，所有人格面具造成的傷害提升(\d+%)</color>$"="<color\=#FFFF00>In battle, increase all Persona skill DMG by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，{{A}}造成的傷害提升(\d+%)</color>$"="<color\=#FFFF00>In battle, increase Persona skill DMG by $1</color>"
+r:"^<color\=#FFFF00>戰鬥中，所有{{A}}造成的傷害提升(\d+%)</color>$"="<color\=#FFFF00>In battle, increase all Persona skill DMG by $1</color>"
 r:"^<color\=#FFFF00>戰鬥中，己方成員的HIGHLIGHT傷害提升(\d+\.\d+%)</color>$"="<color\=#FFFF00>In battle, increase all allies' HIGHLIGHT DMG by $1</color>"
 r:"^<color\=#FFFF00>己方成員在「閼凶夢之扉」戰鬥中造成的傷害提升(\d+%)</color>$"="<color\=#FFFF00>Increase all allies' DMG by $1 in [Door of Nightmares]"
 r:"^<color\=#FFFF00>己方成員在「閼凶夢之扉」戰鬥中造成的傷害提升(\d+\.\d+%)</color>$"="<color\=#FFFF00>Increase all allies' DMG by $1 in [Door of Nightmares]"
@@ -96,7 +99,7 @@ sr:"^<color\=#FFFF00>戰鬥中，己方成員的(.*)屬性傷害提升(\d+%)</co
 r:"^<color\=#FFFF00>每日首次登入時，額外獲得(\d+)點體力</color>$"="<color\=#FFFF00>Additionally gain $1 Stamina on daily login</color>"
 r:"^<color\=#FFFF00>打工獲得的基礎現金收益增加(\d+%)</color>$"="<color\=#FFFF00>Increase salary from part-time jobs by $1</color>"
 r:"^<color\=#FFFF00>每次挑戰「往日回溯」時，有(\d+%)機率額外獲得(\d+)個高級技能材料</color>$"="<color\=#FFFF00>When challenging [Past Palace Boss], there is a $1 chance to additionally gain $2 high end skill material</color>"
-r:"^<color\=#FFFF00>每次挑戰「人格求索」時，額外獲得(\d+)個人格面具精末</color>$"="<color\=#FFFF00>When challenging [Persona EXP Farm], additionally gain $1 Persona Scrap</color>"
+r:"^<color\=#FFFF00>每次挑戰「人格求索」時，額外獲得(\d+)個{{A}}精末</color>$"="<color\=#FFFF00>When challenging [Persona EXP Farm], additionally gain $1 Persona Scrap</color>"
 r:"^<color\=#FFFF00>每次挑戰「財賂求索」時，額外獲得(\d+)魂石</color>$"="<color\=#FFFF00>When challenging [Soul Gems Farm], additionally gain $1 Soul Gems</color>"
 r:"^<color\=#FFFF00>每次挑戰「榮級求索」時，額外獲得(\d+)個傳記殘頁</color>$"="<color\=#FFFF00>When challenging [Character EXP Farm], additionally gain $1 Biography Page</color>"
 r:"^<color\=#FFFF00>每次挑戰「輜械求索」時，額外獲得(\d+)個萬用零件·小</color>$"="<color\=#FFFF00>When challenging [Weapon EXP Farm], additionally gain $1 Weapon Parts - S</color>"

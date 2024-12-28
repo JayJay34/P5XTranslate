@@ -1,6 +1,6 @@
 本能=Instinct
 本能詳情=Instinct Details
-r:"^人格面具等級上限提升至<color\=#FFF000>LV.(\d+)</color>$"="<size\=28>Increase Persona level cap to <color\=#FFF000>Lv.$1</color></size>"
+r:"^{{A}}等級上限提升至<color\=#FFF000>LV.(\d+)</color>$"="<size\=28>Increase Persona level cap to <color\=#FFF000>Lv.$1</color></size>"
 
 ----------
 RANK 1
@@ -33,11 +33,11 @@ r:"^防禦力提升(\d+\.\d+%)。以同伴為目標釋放技能時，提升其(\
 
 Leanan Sidhe
 r:"^戀人的二重奏(.*)$"="Lover's Duet $1"
-r:"^攻擊力提升(\d+\.\d+%)。釋放人格面具技能攻擊處於防禦力降低狀態下的敵人時，額外造成1次(\d+%)攻擊力的念動屬性傷害。$"="Increase ATK by $1. When attacking enemies inflicted with DEF down with a Persona skill, deal an additional $2 ATK Psy damage."
+r:"^攻擊力提升(\d+\.\d+%)。釋放{{A}}技能攻擊處於防禦力降低狀態下的敵人時，額外造成1次(\d+%)攻擊力的念動屬性傷害。$"="Increase ATK by $1. When attacking enemies inflicted with DEF down with a Persona skill, deal an additional $2 ATK Psy damage."
 
 Archangel
 r:"^崇高的光耀(.*)$"="Sublime Brilliance $1"
-r:"^效果命中提升(\d+%)。釋放人格面具技能後，有(\d+%)固定機率使自身獲得1個祝福效果。若該技能造成了祝福屬性傷害，則額外獲得1個祝福效果。$"="Increase EHR by $1. After using a Persona skill, there is a $2 fixed chance to gain 1 Blessed. If that skill dealt Bless damage, gain 1 additional Blessed."
+r:"^效果命中提升(\d+%)。釋放{{A}}技能後，有(\d+%)固定機率使自身獲得1個祝福效果。若該技能造成了祝福屬性傷害，則額外獲得1個祝福效果。$"="Increase EHR by $1. After using a Persona skill, there is a $2 fixed chance to gain 1 Blessed. If that skill dealt Bless damage, gain 1 additional Blessed."
 
 ----------
 RANK 3
@@ -68,14 +68,14 @@ r:"^效果命中提升(\d+%)。戰鬥開始時，使所有同伴的效果命中�
 
 Principality
 r:"^統治之能(.*)$"="Power to Rule $1"
-r:"^防禦力提升(\d+\.\d+%)。釋放人格面具技能造成治療效果後，使所有同伴的防禦力提升(.*)，效果持續2回合。$"="Increase DEF by $1. After healing with a Persona skill, increase all allies' DEF by $2 for 2 turns."
+r:"^防禦力提升(\d+\.\d+%)。釋放{{A}}技能造成治療效果後，使所有同伴的防禦力提升(.*)，效果持續2回合。$"="Increase DEF by $1. After healing with a Persona skill, increase all allies' DEF by $2 for 2 turns."
 
 ----------
 RANK 4
 ----------
 Jatayu
 r:"^破空的金翅(.*)$"="<size\=28>Soaring Golden Wings $1</size>"
-r:"^效果命中提升(\d+%)。釋放疾風屬性人格面具技能後，使技能目標的防禦力降低(\d+%)，效果持續2回合。$"="Increase EHR by $1. After using Wind skills, decrease the target's DEF by $2 for 2 turns."
+r:"^效果命中提升(\d+%)。釋放疾風屬性{{A}}技能後，使技能目標的防禦力降低(\d+%)，效果持續2回合。$"="Increase EHR by $1. After using Wind skills, decrease the target's DEF by $2 for 2 turns."
 
 Mithras
 r:"^炎日的庇佑(.*)$"="<size\=28>Burning Sun's Blessing $1</size>"
@@ -93,7 +93,7 @@ r:"^造成的治療效果提升(\d+%)。使得身上沒有減益效果的同伴�
 
 White Rider
 r:"^終末之擾動(.*)$"="Doom Disturbance $1"
-r:"^效果命中提升(\d+%)。對敵人釋放人格面具技能後，目標敵人身上每有1個詛咒效果，則使其受到的詛咒屬性傷害提升(.*)，上限4層，效果持續1回合。$"="Increase EHR by $1. After using a Persona skill on enemies, increase their Curse DMG Taken by $2 for 1 turn for every stack of Cursed on the enemy, up to 4 stacks."
+r:"^效果命中提升(\d+%)。對敵人釋放{{A}}技能後，目標敵人身上每有1個詛咒效果，則使其受到的詛咒屬性傷害提升(.*)，上限4層，效果持續1回合。$"="Increase EHR by $1. After using a Persona skill on enemies, increase their Curse DMG Taken by $2 for 1 turn for every stack of Cursed on the enemy, up to 4 stacks."
 
 Anubis
 r:"^靈魂的判官(.*)$"="Judge of Souls $1"
@@ -132,8 +132,8 @@ r:"^效果命中提升(\d+\.\d+%)。造成風襲效果後，使主目標敵人�
 
 Okuninushi
 r:"^支配者的威儀(.*)$"="Dominator's Majesty $1"
-r:"^暴擊率提升(\d+\.\d+%)。釋放人格面具技能對敵人造成傷害後，使敵人受到的念動屬性傷害提升(\d+\.\d+%)，效果持續3回合，可疊加3層。$"="Increase CRIT Rate by $1. After dealing damage with a Persona skill, increase enemies' Psy DMG Taken by $2 for 3 turns, up to 3 stacks."
-r:"^暴擊率提升(\d+\.\d+%)。釋放人格面具技能對敵人造成傷害後，使敵人受到的念動屬性傷害提升(\d+\.\d+%)，效果持續3回合，可疊加3層。攻擊身上帶有該效果的敵人時，念動屬性傷害提升(\d+%)。$"="Increase CRIT Rate by $1. After dealing damage with a Persona skill, increase enemies' Psy DMG Taken by $2 for 3 turns, up to 3 stacks. Increase Psy damage by $3 when attacking enemies with this debuff."
+r:"^暴擊率提升(\d+\.\d+%)。釋放{{A}}技能對敵人造成傷害後，使敵人受到的念動屬性傷害提升(\d+\.\d+%)，效果持續3回合，可疊加3層。$"="Increase CRIT Rate by $1. After dealing damage with a Persona skill, increase enemies' Psy DMG Taken by $2 for 3 turns, up to 3 stacks."
+r:"^暴擊率提升(\d+\.\d+%)。釋放{{A}}技能對敵人造成傷害後，使敵人受到的念動屬性傷害提升(\d+\.\d+%)，效果持續3回合，可疊加3層。攻擊身上帶有該效果的敵人時，念動屬性傷害提升(\d+%)。$"="Increase CRIT Rate by $1. After dealing damage with a Persona skill, increase enemies' Psy DMG Taken by $2 for 3 turns, up to 3 stacks. Increase Psy damage by $3 when attacking enemies with this debuff."
 
 Daisoujou
 r:"^救贖的奇蹟(.*)$"="Miracle of Salvation $1"
@@ -147,7 +147,7 @@ r:"^造成的治療效果提升(\d+%)。造成治療效果後，使場上當前�
 
 Pazuzu
 r:"^永劫之咒(.*)$"="Eternal Curse $1"
-r:"^攻擊力提升(\d+\.\d+%)。釋放人格面具技能攻擊敵人後，有(\d+%)的固定機率使主目標敵人獲得(\d+)層詛咒效果。並立刻結算(\d+)次詛咒的傷害。$"="Increase ATK by $1. After attacking enemies with a Persona skill, there is a $2 fixed chance to inflict $3 stack of Cursed to the main taget. Immediately triggers all of the main target's Cursed stacks."
+r:"^攻擊力提升(\d+\.\d+%)。釋放{{A}}技能攻擊敵人後，有(\d+%)的固定機率使主目標敵人獲得(\d+)層詛咒效果。並立刻結算(\d+)次詛咒的傷害。$"="Increase ATK by $1. After attacking enemies with a Persona skill, there is a $2 fixed chance to inflict $3 stack of Cursed to the main taget. Immediately triggers all of the main target's Cursed stacks."
 
 ----------
 RANK 6
@@ -166,7 +166,7 @@ r:"^暴擊效果提升(\d+\.\d+%)。造成擊倒後，使自身攻擊力提升(.
 
 Baphomet
 r:"^惡魔的熔鑄(.*)$"="Demonic Melter $1"
-r:"^攻擊力提升(\d+\.\d+%)。釋放人格面具技能對處於燃燒狀態的敵人造成傷害後，使所有敵人受到的火焰屬性傷害提升(.*)，效果持續1回合。$"="Increase ATK by $1. After dealing damage to enemies inflicted with Burn, increase all enemies' Fire DMG Taken by $2 for 1 turn."
+r:"^攻擊力提升(\d+\.\d+%)。釋放{{A}}技能對處於燃燒狀態的敵人造成傷害後，使所有敵人受到的火焰屬性傷害提升(.*)，效果持續1回合。$"="Increase ATK by $1. After dealing damage to enemies inflicted with Burn, increase all enemies' Fire DMG Taken by $2 for 1 turn."
 
 Norn
 r:"^命運的風襲(.*)$"="Wind of Fate $1"
@@ -175,9 +175,9 @@ r:"^防禦力提升(\d+\.\d+%)。造成風襲效果後，使受到風襲效果�
 
 Titania
 r:"^月妖的擾亂(.*)$"="<size\=25>Fairy Queen's Disturbance $1</size>"
-r:"^造成的治療效果提升(\d+%)。釋放人格面具技能造成治療效果後，有(.*)基礎機率使1名隨機敵人陷入一種隨機元素異常狀態。$"="Increase Healing Effect by $1. After healing with a Persona skill, there is a $2 base chance to inflict 1 random enemy with a random Elemental Ailment."
-r:"^造成的治療效果提升(\d+%)。釋放人格面具技能造成治療效果後，有(.*)基礎機率使1名隨機敵人陷入一種隨機元素異常狀態，效果持續2回合。$"="Increase Healing Effect by $1. After healing with a Persona skill, there is a $2 base chance to inflict 1 random enemy with a random Elemental Ailment for 2 turns."
-r:"^造成的治療效果提升(\d+%)。釋放人格面具技能造成治療效果後，有(.*)基礎機率使1名隨機敵人陷入一種隨機元素異常狀態，並使其防禦力降低(.*)。效果持續2回合。$"="Increase Healing Effect by $1. After healing with a Persona skill, there is a $2 base chance to inflict 1 random enemy with a random Elemental Ailment and decrease their DEF by $3 for 2 turns."
+r:"^造成的治療效果提升(\d+%)。釋放{{A}}技能造成治療效果後，有(.*)基礎機率使1名隨機敵人陷入一種隨機元素異常狀態。$"="Increase Healing Effect by $1. After healing with a Persona skill, there is a $2 base chance to inflict 1 random enemy with a random Elemental Ailment."
+r:"^造成的治療效果提升(\d+%)。釋放{{A}}技能造成治療效果後，有(.*)基礎機率使1名隨機敵人陷入一種隨機元素異常狀態，效果持續2回合。$"="Increase Healing Effect by $1. After healing with a Persona skill, there is a $2 base chance to inflict 1 random enemy with a random Elemental Ailment for 2 turns."
+r:"^造成的治療效果提升(\d+%)。釋放{{A}}技能造成治療效果後，有(.*)基礎機率使1名隨機敵人陷入一種隨機元素異常狀態，並使其防禦力降低(.*)。效果持續2回合。$"="Increase Healing Effect by $1. After healing with a Persona skill, there is a $2 base chance to inflict 1 random enemy with a random Elemental Ailment and decrease their DEF by $3 for 2 turns."
 
 Melchizedek
 r:"^仁王的審判(.*)$"="<size\=20>King of Righteousness Judgement $1</size>"
@@ -198,7 +198,7 @@ r:"^暴擊率提升(\d+\.\d+%)。場上只有1名敵人時，造成的電擊屬�
 
 Dionysus
 r:"^酒醉的狂歡(.*)$"="Druken Revelry $1"
-r:"^暴擊率提升(\d+\.\d+%)。以同伴為目標釋放人格面具技能後，使技能主目標的暴擊效果提升(.*)，效果持續2回合。$"="Increase CRIT Rate by $1. When using a skill on allies, increase the main target's CRIT DMG by $2 for 2 turns."
+r:"^暴擊率提升(\d+\.\d+%)。以同伴為目標釋放{{A}}技能後，使技能主目標的暴擊效果提升(.*)，效果持續2回合。$"="Increase CRIT Rate by $1. When using a skill on allies, increase the main target's CRIT DMG by $2 for 2 turns."
 
 Nebiros
 r:"^被詛咒的血統(.*)$"="Cursed Bloodline $1"
@@ -206,8 +206,8 @@ r:"^<nobr>效果抵抗提升(\d+\.\d+%)。釋放詛咒屬性技能時，消耗�
 
 Yamata
 r:"^祭品的悲鳴(.*)$"="Screams of Sacrifice $1"
-r:"^暴擊率提升(\d+\.\d+%)。對處於凍結狀態的敵人造成的傷害提升(.*)。釋放冰凍屬性的人格面具技能時，若技能主目標的生命值低於(.*)。則額外使其受到1次(.*)攻擊力的冰凍屬性傷害。$"="Increase CRIT Rate by $1. Increase DMG Dealt to enemies inflicted with Freeze by $2. When using Ice skills, deal an additional $4 ATK Ice damage to the main target if they are below $3 HP."
-r:"^暴擊率提升(\d+\.\d+%)。對處於<link\="s\|103"><u>凍結</u></link>狀態的敵人造成的傷害提升(.*)。釋放冰凍屬性的人格面具技能時，若技能主目標的生命值低於(.*)。則額外使其受到1次(.*)攻擊力的冰凍屬性傷害。$"="Increase CRIT Rate by $1. Increase DMG Dealt to enemies inflicted with <link\="s|103"><u>Freeze</u></link> by $2. When using Ice skills, deal an additional $4 ATK Ice damage to the main target if they are below $3 HP."
+r:"^暴擊率提升(\d+\.\d+%)。對處於凍結狀態的敵人造成的傷害提升(.*)。釋放冰凍屬性的{{A}}技能時，若技能主目標的生命值低於(.*)。則額外使其受到1次(.*)攻擊力的冰凍屬性傷害。$"="Increase CRIT Rate by $1. Increase DMG Dealt to enemies inflicted with Freeze by $2. When using Ice skills, deal an additional $4 ATK Ice damage to the main target if they are below $3 HP."
+r:"^暴擊率提升(\d+\.\d+%)。對處於<link\="s\|103"><u>凍結</u></link>狀態的敵人造成的傷害提升(.*)。釋放冰凍屬性的{{A}}技能時，若技能主目標的生命值低於(.*)。則額外使其受到1次(.*)攻擊力的冰凍屬性傷害。$"="Increase CRIT Rate by $1. Increase DMG Dealt to enemies inflicted with <link\="s|103"><u>Freeze</u></link> by $2. When using Ice skills, deal an additional $4 ATK Ice damage to the main target if they are below $3 HP."
 
 Lakshmi
 r:"^清蓮的舞步(.*)$"="Pure Lotus Dance $1"
@@ -221,7 +221,7 @@ r:"^防禦力提升(\d+\.\d+%)。為隊友添加護盾時，主要目標獲得�
 
 Thor
 r:"^雷神的威嚴(.*)$"="<size\=28>Thunder God's Majesty $1</size>"
-r:"^<nobr>暴擊效果提升(\d+\.\d+%)。其他同伴每釋放1次電擊屬性的人格面具技能，則使自身獲得1層『雷神威勢』，造成的電擊傷害提升(.*)，並使技能『天召雷』額外造成1段傷害，效果持續1回合，上限2層。$"="<size\=28><nobr>Increase CRIT DMG by $1. Gain 1 stack of [Thunder God's Might] after other allies used Electirc skills, increase DMG Dealt by $2 for 1 turn and make Heavenly Thunder hit for an additional time, up to 2 stacks.</size>"
+r:"^<nobr>暴擊效果提升(\d+\.\d+%)。其他同伴每釋放1次電擊屬性的{{A}}技能，則使自身獲得1層『雷神威勢』，造成的電擊傷害提升(.*)，並使技能『天召雷』額外造成1段傷害，效果持續1回合，上限2層。$"="<size\=28><nobr>Increase CRIT DMG by $1. Gain 1 stack of [Thunder God's Might] after other allies used Electirc skills, increase DMG Dealt by $2 for 1 turn and make Heavenly Thunder hit for an additional time, up to 2 stacks.</size>"
 
 Bishamonten
 r:"^暴怒的慧傘(.*)$"="Furious Umbrella $1"
@@ -230,8 +230,8 @@ r:"^暴擊率提升(\d+\.\d+%)。對敵人釋放技能時，主目標敵人身�
 
 Dominion
 r:"^天使的號令(.*)$"="Angel's Order $1"
-r:"^攻擊力提升(\d+\.\d+%)。以同伴為目標釋放技能後，使自身獲得2層『號令』，同伴釋放人格面具技能造成傷害時，消耗1層『號令』使其造成的傷害提升(.*)，效果持續1回合。$"="Increase ATK by $1. Gain 2 [Order] when using a skill on an ally, when an ally deals damage with a skill, consume 1 stack of [Order] to increase their DMG Dealt by $2 for 1 turn."
-r:"^攻擊力提升(\d+\.\d+%)。以同伴為目標釋放技能後，使自身獲得2層『號令』，同伴釋放人格面具技能造成傷害時，消耗1層『號令』使其造成的傷害提升(.*)，攻擊力提升(.*)，效果持續1回合。$"="Increase ATK by $1. Gain 2 [Order] when using a skill on an ally, when an ally deals damage with a skill, consume 1 stack of [Order] to increase their DMG Dealt by $2 and ATK by $3 for 1 turn."
+r:"^攻擊力提升(\d+\.\d+%)。以同伴為目標釋放技能後，使自身獲得2層『號令』，同伴釋放{{A}}技能造成傷害時，消耗1層『號令』使其造成的傷害提升(.*)，效果持續1回合。$"="Increase ATK by $1. Gain 2 [Order] when using a skill on an ally, when an ally deals damage with a skill, consume 1 stack of [Order] to increase their DMG Dealt by $2 for 1 turn."
+r:"^攻擊力提升(\d+\.\d+%)。以同伴為目標釋放技能後，使自身獲得2層『號令』，同伴釋放{{A}}技能造成傷害時，消耗1層『號令』使其造成的傷害提升(.*)，攻擊力提升(.*)，效果持續1回合。$"="Increase ATK by $1. Gain 2 [Order] when using a skill on an ally, when an ally deals damage with a skill, consume 1 stack of [Order] to increase their DMG Dealt by $2 and ATK by $3 for 1 turn."
 r:"^號<color\=#000000>令</color>$"="<size\=4> </size>O<color\=#000000>rd</color>er"
 號令=Order
 使同伴釋放技能的傷害提升=Increase the damage of allies' skills
@@ -282,7 +282,7 @@ r:"^絕<color\=#000000>對</color>服從$"="<size\=24> </size>A<color\=#000000>b
 
 Alice
 r:"^重生的詛咒(.*)$"="Curse of Rebirth $1"
-r:"^效果命中提升(\d+\.\d+%)。使所有敵人受到的詛咒屬性傷害提升(.*)。所有同伴每釋放1個詛咒屬性的人格面具技能，則使{{A}}的效果命中、攻擊力提升(.*)，效果持續2回合，上限3層。$"="Increase EHR by $1. Increase all enemies' Curse DMG Taken by $2. After any ally uses Curse skills, increase own EHR and ATK by $3 for 2 turns, up to 3 stacks."
+r:"^效果命中提升(\d+\.\d+%)。使所有敵人受到的詛咒屬性傷害提升(.*)。所有同伴每釋放1個詛咒屬性的{{A}}技能，則使{{B}}的效果命中、攻擊力提升(.*)，效果持續2回合，上限3層。$"="Increase EHR by $1. Increase all enemies' Curse DMG Taken by $2. After any ally uses Curse skills, increase own EHR and ATK by $3 for 2 turns, up to 3 stacks."
 
 Sandalphon
 r:"^龐然的守護(.*)$"="Higher Protection $1"
