@@ -73,7 +73,7 @@ Onemore自動選擇目標=<size\=27>Automatically select \nONE MORE target</size
 自動戰鬥釋放HighLight=<size\=27>Enable HIGHLIGHT \nin Auto mode</size>
 簡化戰鬥結算=<size\=23>Simplify Combat Calulation</size>
 簡化戰鬥表現=<size\=23>Simplify Combat Animation</size>
-簡化解明怪盜表現=<size\=21>Simplify Navigator Animation\n(Quick/ Once per Login/ Full)</size>
+簡化解明怪盜表現=<size\=20>Simplify Navigator Animation\n(Quick/ Once per Login/ Full)</size>
 簡化HighLight表現=<size\=21>Simplify HIGHLIGHT Animation\n(Quick/ Once per Login/ Full)</size>
 
 音量提升=Volume Up
@@ -91,7 +91,7 @@ r:"^取消$"="Cancel"
 打開當前地圖=Open Current Map
 打開功能表=Open Menu
 打開大地圖=Open Subway Map
-打開人格面具=Velvet Room
+打開{{A}}=Velvet Room
 打開怪盜=Manage Thieves
 打開陣容=Team
 打開雛鳥計畫=Open Battle Pass
@@ -224,10 +224,10 @@ r:"^道<color\=#ff0000ff>玄</color>坂{{A}}$"="Ru<color\=#ff0000ff>na</color> D
 // P5X Side Quest //
 r:"^<color\=#ff0000ff>阿</color>七$"="Shi<color\=#ff0000ff>chi</color>-kun"
 r:"^安<color\=#ff0000ff>德</color>森$"="An<color\=#ff0000ff>der</color>son"
-r:"^佐<color\=#ff0000ff>藤</color> 裕太$"="Yu<color\=#ff0000ff>ta</color> Sato"
+r:"^佐<color\=#ff0000ff>藤</color> {{A}}$"="Yu<color\=#ff0000ff>ta</color> Sato"
 r:"^西<color\=#ff0000ff>森</color> {{A}}$"="Ha<color\=#ff0000ff>ru</color>na Nishimori"
-r:"^清<color\=#ff0000ff>水</color> 陸人$"="Ri<color\=#ff0000ff>ku</color>to Shimizu"
-r:"^小<color\=#ff0000ff>松</color> 奈美惠$"="Na<color\=#ff0000ff>mie</color> Komatsu"
+r:"^清<color\=#ff0000ff>水</color> {{A}}$"="Ri<color\=#ff0000ff>ku</color>to Shimizu"
+r:"^小<color\=#ff0000ff>松</color> {{A}}$"="Na<color\=#ff0000ff>mie</color> Komatsu"
 r:"^<color\=#ff0000ff>茶</color>太$"="Cha<color\=#ff0000ff>t</color>ai"
 r:"^燒<color\=#ff0000ff>鳥</color> {{A}}$"="Su<color\=#ff0000ff>mi</color>zou Yakitori"
 r:"^土<color\=#ff0000ff>佐</color>林 {{A}}$"="Fu<color\=#ff0000ff>mi</color>yo Tosabayashi"
@@ -249,7 +249,7 @@ r:"^芳<color\=#ff0000ff>澤</color>霞$"="Ka<color\=#ff0000ff>su</color>mi Yosh
 Random names
 ----------
 r:"^<color\=#ff0000ff>店</color>員$"="S<color\=#ff0000ff>t</color>aff"
-r:"^謎<color\=#ff0000ff>之</color>達也$"="My<color\=#ff0000ff>st</color>erious Tatsuya"
+r:"^謎<color\=#ff0000ff>之</color>{{A}}$"="My<color\=#ff0000ff>st</color>erious {{A}}"
 
 // Character-specific Persona // 
 
@@ -287,10 +287,15 @@ r:"^謎<color\=#ff0000ff>之</color>達也$"="My<color\=#ff0000ff>st</color>erio
 ------------------------------------------
 Worldbuilding Terms
 ------------------------------------------
+天鵝絨會客室=Velvet Parlor
+盧布朗咖啡廳=Café Leblanc
 盧布朗=Leblanc
+牛丼店=Beef Bowl Shop
+女僕餐廳=Maid Café
+新男酒吧=Crossroads
+釣魚場=Fishing Pond
 都市=City
 協同者=Confidant
-人格面具=Persona
 
 // Important Consumables //
 體力補給=<size\=20>Stamina Supply</size>
@@ -559,9 +564,9 @@ r:"^(\d+)天後刷新$"="Refreshes in $1 day(s)"
 r:"^(\d+)分後刷新$"="Refreshes in $1 minute(s)"
 
 r:"^剩餘(\d+)天(\d+)時(\d+)分$"="$1d $2h $3m left"
-r:"^(\d+)天(\d+)時(\d+)分$"=" $1 day(s) $2 hour(s) $3 minute(s)"
-r:"^(\d+)天(\d+)時$"=" $1 day(s) $2 hour(s)"
-r:"^(\d+)時(\d+)分$"=" $1 hour(s) $2 minute(s)"
+r:"^(\d+)天(\d+)時(\d+)分$"=" $1d $2h $3m"
+r:"^(\d+)天(\d+)時$"=" $1d $2h"
+r:"^(\d+)時(\d+)分$"=" $1h $2m"
 r:"^(\d+)時(\d+)分後下架$"="Expires in $1h $2min"
 r:"^剩餘(\d+)時(\d+)分(\d+)秒$"=" $1h $2min $3sec"
 r:"^(\d+)小時(\d+)分鐘$"=" $1h $2m"
@@ -573,9 +578,11 @@ r:"^挑戰倒計時：(\d+)天(\d+)時(\d+)分$"="Time Left: $1d $2h $3m"
 r:"^本週剩餘次數：(\d+)/(\d+)$"="Weekly Usage: $1/ $2"
 
 擁有:=Owned: 
+擁有=Owned
 免費=FREE
 r:"^領獎$"="Claim"
 r:"^領取$"="<size\=28>Claim</size>"
+明日\n可領=Claim\nTmr
 已領取=Claimed
 前往=Go
 未達成=Not Yet
@@ -651,6 +658,7 @@ sr:"^(.*)成長至(\d+)級（(\d+)/(\d+)）$"="<size\=30>Level $1 to Lv. $2 ($3/
 ----------
 Class/ Stats Screen
 ----------
+怪盜偶像=Idol Thief
 怪盜等級=Thieves Lv.
 職業說明=Roles
 屬性說明=<size\=40>Elements</size>
@@ -666,7 +674,7 @@ Class/ Stats Screen
 已設為關注怪盜。=Added Thief to favourites.
 
 慾望奏鳴=Sonata
-相同屬性怪盜和當前人格面具出戰時，可啟動慾望奏鳴效果。=<size\=23>Activate Desire Sonata when Thieves with the same element are in battle.</size>
+相同屬性怪盜和當前{{A}}出戰時，可啟動慾望奏鳴效果。=<size\=23>Activate Desire Sonata when Thieves with the same element are in battle.</size>
 面具協奏效果一覽=Mask Concerto Effect
 面具協奏：增強上陣怪盜中的四種屬性傷害。=<size\=21>Mask Concerto: Increase elemental damage based on active Thieves.</size>
 sr:"^面具協奏：(.*)/(.*)/(.*)/(.*)屬性提升(.*)傷害。$"="<size\=21>Mask Cencerto: Increase $1/$2/$3/$4 damage by $5.</size>"
@@ -735,7 +743,7 @@ r:"^治療效果$"="<size\=22>Healing Effect</size>"
 攻擊成長率=ATK Growth
 防禦成長率=DEF Growth
 上陣面具屬性會全部附加至主角=<size\=20>Wonder's stats are his \nequipped Persona stats combined</size>
-上陣人格面具的屬性會同時附加給主角，提高<color\=#870000>主角屬性</color>。=Wonder's stats are his \n<color\=#870000>equipped Persona stats combined</color>.
+上陣{{A}}的屬性會同時附加給主角，提高<color\=#870000>主角屬性</color>。=Wonder's stats are his \n<color\=#870000>equipped Persona stats combined</color>.
 
 已達到等級上限。=Reached level cap.
 <color\=#FF0000>本次升級溢出經驗將轉化為傳記材料。</color>\n是否確定使用所選材料進行強化？=<color\=#FF0000>This upgrade will convert overflowed EXP into upgrade materials.</color>\nAre you sure you want to upgrade?
@@ -801,8 +809,8 @@ r:"^提升(\d+\.\d%)護盾效果。$"="<size\=26>Increase Shield Effect by $1</s
 r:"^提升(\d+%)效果抵抗。$"="Increase Effect RES by $1"
 
 r:"^ONEMORE、HIGHLIGHT、近戰攻擊、槍械效果提升。$"="<size\=26>Increase One More, HIGHLIGHT, Melee and Gun DMG</size>"
-r:"人格面具所有習得主動技能等級額外提升(\d+)級。"=All acquired Persona skills\nIncrease by $1 levels
-r:"人格面具特色主動技能等級額外提升(\d+)級。"=All innate Persona skills\nIncrease by $1 levels
+r:"{{A}}所有習得主動技能等級額外提升(\d+)級。"=All acquired Persona skills\nIncrease by $1 levels
+r:"{{A}}特色主動技能等級額外提升(\d+)級。"=All innate Persona skills\nIncrease by $1 levels
 需要主角超我等級達到1級。=Unlocks when Wonder \nreaches Superego level 1.
 
 前置技能尚未解鎖。=Unlock the preceding skill first.
@@ -821,7 +829,7 @@ r:"^需要<size\=46><color\=#ffffff><sprite\=30 tint\=1></size>1</color>升級�
 
 // INSPIRATION TUTORIAL //
 『靈感』說明=Inspiration
-<color\=#FFD145>靈感提升</color>\n人格面具錄入面具全書後，可以領取靈感點。\n使用靈感點，可以解鎖並提升靈感技能等級。\n\n<color\=#FFD145>靈感重置</color>\n靈感技能可以消耗魂石進行重置。\n重置後返還所有已消耗的靈感點。=<color\=#FFD145>Inspiration</color>\nWith every new Persona recorded in the book, you will earn Inspiration Points, which can be used to unlock and upgrade Wonder's skill tree. More skills and levels are unlocked as you level up further.\n\n<color\=#FFD145>Inspiration Reset</color>\nYou can reset your skill tree by spending Soul Gems, which will return all the Inspiration Points you have used.
+<color\=#FFD145>靈感提升</color>\n{{A}}錄入面具全書後，可以領取靈感點。\n使用靈感點，可以解鎖並提升靈感技能等級。\n\n<color\=#FFD145>靈感重置</color>\n靈感技能可以消耗魂石進行重置。\n重置後返還所有已消耗的靈感點。=<color\=#FFD145>Inspiration</color>\nWith every new Persona recorded in the book, you will earn Inspiration Points, which can be used to unlock and upgrade Wonder's skill tree. More skills and levels are unlocked as you level up further.\n\n<color\=#FFD145>Inspiration Reset</color>\nYou can reset your skill tree by spending Soul Gems, which will return all the Inspiration Points you have used.
 
 //////////////////////////////
 /// e. Handbook Challenges ///
@@ -858,15 +866,15 @@ r:"消耗(\d+)靈感點"=Use $1 Inspiration Points
 r:"通關天鵝絨試煉任意(\d+)章的第(\d+)關"=In Velvet Challenges, complete Stage $2 in $1 chapters
 r:"進行(\d+)次足球部活動"=Join a Soccer Club activity $1 times.
 r:"完成(\d+)次「厄抑之境」 \((\d)\/(/d)\)"=Complete $1 Metaverse Farms. ($1/$2)
-r:"擁有(\d+)個(\d+)級的階級(\d+)及以上的人格面具"=Own $1 Rank $3 Persona at level $2
-r:"合成(\d+)個彩色品質的階級(\d)人格面具"=Fuse $1 Rainbow-quality Rank $2 Persona
+r:"擁有(\d+)個(\d+)級的階級(\d+)及以上的{{A}}"=Own $1 Rank $3 Persona at level $2
+r:"合成(\d+)個彩色品質的階級(\d){{A}}"=Fuse $1 Rainbow-quality Rank $2 Persona
 r:"將(\d+)名怪盜的任意(\d+)個非潛能技能各升級(\d+)次"=Level up $2 of your companions' $1 skills $3 times. 
 r:"通關天鵝絨試煉巧匠之作第(\d+)關"=Pass Velvet Room Anubis Challenge Stage $1
 r:"{{A}}探索度達到(\d+)%"=Reach $1% Exploration Progress of {{A}}
 r:"將{{A}}進化至階級(\d+)"=Evolve Janosik $1 time(s)
 r:"與任意一位協同者好感度達到(\d+)級"=Reach Lv. $1 with any of your confidants
 r:"任意人格指數達到(\d+)級"=Reach Lv.$1 of any social skills
-r:"擁有(\d+)個(\d+)級的RANK(\d+)及以上的人格面具"=Have $1 Rank $3 Lv. $2 Persona (or higher)
+r:"擁有(\d+)個(\d+)級的RANK(\d+)及以上的{{A}}"=Have $1 Rank $3 Lv. $2 Persona (or higher)
 r:"擁有(\d+)張等級為(\d+)級的宙位啟示卡"=Own $1 Lv. $2 Arcana Revelation Cards
 
 // Part I Step 1
@@ -875,7 +883,7 @@ r:"擁有(\d+)張等級為(\d+)級的宙位啟示卡"=Own $1 Lv. $2 Arcana Revel
 見證{{A}}的覺醒=Witness {{A}}'s Persona Awakening
 完成主線任務「見證隱藏的世界」=Complete the main mission: "Witness the Metaverse"
 擁有3個潛能I的怪盜=Unlock the first Potential of 3 Phantom Thieves
-擁有1個20級的人格面具=Own a level 20 Persona
+擁有1個20級的{{A}}=Own a level 20 Persona
 
 // Part I Step 2
 通關榮級求索Ⅰ（或更高難度）=Finish the 1st (or higher) Character EXP Farm once
@@ -887,9 +895,9 @@ r:"擁有(\d+)張等級為(\d+)級的宙位啟示卡"=Own $1 Lv. $2 Arcana Revel
 
 // Part I Step 3
 擊敗{{A}}=Defeat {{A}}
-合體2次人格面具=Fuse 2 Persona
+合體2次{{A}}=Fuse 2 Persona
 通關旖旎香調Ⅱ（或更高難度）=Finish the 2nd (or higher) Character Ascension Farm once
-通關任意厄抑之境-人格面具=Finish any Persona Farm once
+通關任意厄抑之境-{{A}}=Finish any {{A}} Farm once
 完成支線任務「愛與MUSCLE」=Complete Anderson's side mission "Love and MUSCLE"
 加入或者創建任意樂園=Create or join any guild
 
@@ -906,7 +914,7 @@ r:"擁有(\d+)張等級為(\d+)級的宙位啟示卡"=Own $1 Lv. $2 Arcana Revel
 
 // Part I Step 6
 完成支線任務「靈驗的占卜師」=Meet Chihaya for the first time
-育成3次人格面具=Inherit a Persona skill 3 times
+育成3次{{A}}=Inherit a Persona skill 3 times
 完成引導任務「旋律時光·其一」=Enroll in the Music Club
 
 // Part I Step 7
@@ -944,7 +952,7 @@ r:"^<size\=60><sprite\=37 tint\=1></size><size\=28><color\=#FFE500>x10</color></
 購買等級=Buy Lv.
 r:"^購買後，提升至(\d+)級，可獲得以下獎勵$"="Buy to Lv. $1 and get"
 購買等級:=Buy Level:
-通行證等級提升=Phantom Pass LEVEL UP
+通行證等級提升=Pass LEVEL UP
 每次完成今日目標可獲得=Complete daily tasks to receive useful rewards:
 今日剩餘領取次數=Dailies left to complete:
 每次完成今日目標可領獎，剩餘   次=Daily task rewards: You have   task(s) left.
@@ -966,8 +974,8 @@ r:"^本週累計今日計畫領獎次數\((\d)\/(\d)\)，可額外領取$"="Numb
 // DAILY //
 r:"^登入遊戲$"="Log in to the game"
 r:"^登入遊戲 \((\d+)\/1\)$"="Log in to the game ($1/1)"
-r:"進行1次人格面具合成"=Fuse 1 Persona
-r:"完成1次「人格面具」挑戰 \((\d)\/(\d)\)"=Complete 1 Persona Farm ($1/$2)\n<color\=#8F8D8D>(Stamina Cost depending on Rank)</color>
+r:"進行1次{{A}}合成"=Fuse 1 Persona
+r:"完成1次「{{A}}」挑戰 \((\d)\/(\d)\)"=Complete 1 {{A}} Farm ($1/$2)\n<color\=#8F8D8D>(Stamina Cost depending on Rank)</color>
 r:"進行1次打工 \((\d)\/(\d)\)"=Complete a Part-time job ($1/$2)\n<color\=#8F8D8D>(1 Activity After School)</color>
 r:"消耗1000日元 \((\d+)\/1000\)"=Spend ¥$1 (¥$1/1000)
 r:"^消耗5000魂石 \((\d+)\/5000\)$"=Spend 5000 Soul Gens ($1/5000)
@@ -980,7 +988,7 @@ r:"完成1次「啟示套裝」挑戰 \((\d)\/(\d)\)"=Complete 1 [Revelation Far
 r:"完成1次「旖旎香調」挑戰 \((\d)\/(\d)\)"=Complete 1 [Perfume Farm] ($1/$2)\n<color\=#8F8D8D>(Stamina Cost: 30)</color>
 r:"完成1次「裝配冶藝」挑戰 \((\d)\/(\d)\)"=Complete 1 [Ore Farm] ($1/$2)\n<color\=#8F8D8D>(Stamina Cost: 30)</color>
 r:"完成1次「靈之參悟」挑戰 \((\d)\/(\d)\)"=Complete 1 [Incense farm] ($1/$2)\n<color\=#8F8D8D>(Stamina Cost: 30)</color>
-r:"進行1次人格面具育成 \((\d)\/(\d)\)"=Perfrom 1 Persona skill inheritance ($1/$2)\n<color\=#8F8D8D>(This uses a Persona Mark)</color>
+r:"進行1次{{A}}育成 \((\d)\/(\d)\)"=Perfrom 1 Persona skill inheritance ($1/$2)\n<color\=#8F8D8D>(This uses a Persona Mark)</color>
 r:"^完成1次「往日回溯」挑戰 \((\d)\/(\d)\)$"="Complete 1 [Past Echo] ($1/$2)\n<color\=#8F8D8D>(Stamina Cost: 30)</color>"
 r:"^通關1次「閼凶夢之扉」 \((\d)\/(\d)\)$"="Complete 1 [Door of Nightmares] ($1/$2)"
 r:"^完成1次「天鵝絨試煉」 \((\d)\/(\d)\)$"="Complete 1 [Velvet Trial] ($1/$2)"
@@ -1005,10 +1013,10 @@ r:"在「怪盜交易所」中消耗3000個怪盜徽記 \((\d+)\/(\d+)\)"=Spend 
 r:"累計進行50次「角色簽約」&「武器補給」 \((\d+)\/(\d+)\)"=Perform 50 pulls in total ($1/$2)
 r:"在「心之海試煉」中通過「西部施工區」 \((\d)\/(\d)\)"=Clear [West Construction Zone] in Sea of Souls Trials ($1/$2)
 r:"完成12次「在盧布朗度過」日程 \((\d+)\/(\d+)\)"=Spend time in Leblanc 12 times ($1/$2)
-r:"在「心軌擇行」中完成1次挑戰 \((\d+)\/1\)"=Complete 1 challenge in Heart Rails ($1/1)
+r:"在「心軌擇行」中完成1次挑戰 \((\d+)\/1\)"=Complete 1 challenge in [Heart Rail] ($1/1)
 r:"完成一個星盤試練的「宮主星」或「命主星」 \((\d+)\/1\)"=Clear 1 [House] or [Chart Ruler] in Astrolabe Trials ($1/1)
 r:"在「星盤試練」中通過「紫色或紅色」監測點 \((\d+)\/1\)"=Clear 1 [Purple or Red] Monitoring Point in Astrolabe Trials ($1/1)
-
+r:"^本期通行證期間，累計登入(\d+)天 \((\d+)/(\d+)\)$"="Log in for $1 day(s) ($2/$3)"
 
 ////////////////////////////////
 /// g. Banners / Pull Screen ///
@@ -1511,6 +1519,7 @@ r:"^要在這裡度過時間嗎\(<color\=#ff0000>每次(\d+)現金</color>\)？$
 去書店打工=<size\=24>Work part-time\nat the Bookstore</size>
 {{A}}的書店今天似乎可以安排打工，要去試試嗎？=I can work at the Bookstore today, want to try it?
 {{A}}的書店今天似乎需要人手……=The Bookstore is understaffed...
+{{A}}的書店今天似乎需要人手，要去幫忙整理嗎？=<size\=28>The Bookstore is understaffed today, want to go help?</size>
 在書店打工=<size\=24>Work part-time\nat the Bookstore</size>
 要在這家書店打工嗎？=Do you want to work part-time \nat this Bookstore?
 
@@ -1545,6 +1554,8 @@ r:"^要在這裡度過時間嗎\(<color\=#ff0000>每次(\d+)現金</color>\)？$
 今天學習嗎？=Studying today?
 
 r:"^幫助{{A}}$"="<size\=24>Help out\n{{A}}</size>"
+冒冒失失的{{A}}又把東西丟了，去幫助他吧！=The clumsy {{A}} lost something again, let's go help him!
+要幫助正在尋求幫助的{{A}}嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to help {{A}} who is looking for help? (<color\=#ff0000>Spend 1 Energy Point</color>)
 
 陪{{A}}拍照=<size\=24>Take photos\n with {{A}}</size>
 如果對拍攝照片感興趣，就去{{B}}找攝影師{{A}}吧。=<size\=28>If you're interested in taking photos, then let's go to Shinjuku and find the photographer {{A}}</size>
@@ -1602,6 +1613,10 @@ r:"^{{A}}似乎有話要說，要陪她嗎？$"="{{A}} seems to have something t
 醉意入懷=<size\=24>Drunken embrace</size>
 {{A}}想去你家調杯酒……={{A}} wants to make a drink \nat your home...
 
+不會膩的甜味=<size\=24>Sugary sweetness</size>
+{{A}}想要和你一起慢慢品嘗點心……=<size\=26>{{A}} wants to savor dim sum with you...</size>
+要帶{{A}}去哪裡呢……=Where to take {{A}}...
+
 遊戲時間到=<size\=24>Game time</size>
 {{A}}想和你一起去遊戲廳……={{A}} wants to go to \nthe arcade with you...
 要和{{A}}去哪裡玩呢？=Where should we hang out?
@@ -1623,6 +1638,7 @@ r:"^帶{{A}}回家吧……$"="Let's bring {{A}} home..."
 決定去陪{{A}}了…=I've decided to accompany {{A}}...
 決定和{{A}}一起出去了……=<size\=28>Decided to go out with {{A}}...</size> 
 決定和{{A}}一起行動了……=<size\=28>Decided to hang out with {{A}}...</size> 
+r:"^決定帶{{A}}回家了……$"="Decided to bring {{A}} home..."
 r:"^那就帶{{A}}回家吧……$"="Then let's bring {{A}} home..."
 r:"^決定帶{{A}}回自己家……$"="Decided to bring {{A}} home..."
 
@@ -1651,7 +1667,7 @@ r:"^要<color\=#ff0000>回家</color>嗎？\n還是說去附近的<color\=#ff000
 讀書進度=<size\=24> Reading\n Progress</size> 
 閱讀消耗：= 
 
-合體<color\=#FFC000>指定人格面具</color>，好像能受到{{A}}的關注=<size\=25>Fusing <color\=#FFC000>Certain Personas</color> might attract {{A}}'s attention</size>
+合體<color\=#FFC000>指定{{B}}</color>，好像能受到{{A}}的關注=<size\=25>Fusing <color\=#FFC000>Certain Personas</color> might attract {{A}}'s attention</size>
 磨練<color\=#FFC000>靈巧</color>的話，好像更能受到{{A}}的關注=<size\=25>Increasing <color\=#FFC000>Proficiency</color> might attract {{A}}'s attention</size>
 去太平堂書店逛一逛，或許能買到有用的書籍=<size\=25>A visit to the Shibuya Bookstore might yield useful books</size>
 聽說有新電影在上映=I heard there's a new movie coming out
@@ -1741,8 +1757,8 @@ sr:"是(.*)的『(.*)』。$"="It's the $1 $2."
 逆位=reversed
 
 愚者=Fool
-r:"^在下次通過『厄抑之境』獲得人格面具時，額外獲得大量獎勵。$"="The next time you complete a Metaverse Farm to gain Persona, gain lots of bonus rewards."
-sr:"^在下次通過『厄抑之境』獲得人格面具時，額外獲得大量獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you complete a Metaverse Farm to gain Persona, gain lots of bonus rewards.\n<color\=#FFC000>（$1 time(s) left）</color>"
+r:"^在下次通過『厄抑之境』獲得{{A}}時，額外獲得大量獎勵。$"="The next time you complete a Metaverse Farm to gain Persona, gain lots of bonus rewards."
+sr:"^在下次通過『厄抑之境』獲得{{A}}時，額外獲得大量獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you complete a Metaverse Farm to gain Persona, gain lots of bonus rewards.\n<color\=#FFC000>（$1 time(s) left）</color>"
 
 魔術師=Magician
 在接下來4次透過工作台合成道具時，額外產出少量道具。=The next 4 times you craft at the workbench, gain some bonus items.
@@ -1833,7 +1849,7 @@ r:"^厄抑之境$"="Metaverse Farm"
 『暗影獵域』=[Persona Farm]
 「暗影獵域」=[Persona Farm]
 暗影獵域=Persona Farm
-厄抑之境·人格面具=Persona Farm
+厄抑之境·{{A}}=Persona Farm
 『旖旎香調』=[Character Ascension Farm]
 「旖旎香調」=[Character Ascension Farm]
 旖旎香調=Character Ascension Farm
@@ -1923,7 +1939,7 @@ Resources & Shop Items (Marthym's Shop)
 枚異界原晶=Ambers
 現金=Yen
 魂石=Soul Gems
-{{A}}探索獲得的神秘石頭，可用於角色與人格面具養成。=Mysterious gems obtained from the Metaverse, can be used for character or persona growth.
+{{A}}探索獲得的神秘石頭，可用於角色與{{B}}養成。=Mysterious gems obtained from the Metaverse, can be used for character or persona growth.
 r:"^(\d+)魂石$"="$1 Soul Gems"
 怪盜經驗=Thief EXP
 首次=First Time
@@ -1938,6 +1954,7 @@ r:"^委託、消費大酬賓等獎勵或者購買<link\="mqm"><u>每日祈願納
 {{A}}的殘識={{A}}'s Awareness
 宿命之殘響=Fated Echoes
 r:"^宿命之殘響\*(\d+)$"="Fated Echoes*$1"
+參與挑戰類活動獲得的特殊貨幣，可在「氣運駐場」商店中兌換獎勵。=Currency from challenge events. \nCan be used in [Destinyland].
 認知殘影=Cognitive Afterimage
 『認知殘影』\n用於在契約之間的認知優選中兌換物品。=[Cognitive Afterimage]\nUsed in Congition Shop.
 認知碎片=Cognitive Shard
@@ -1952,6 +1969,7 @@ sr:"^(.*)不足，無法購買。$"="Insufficient $1, cannot purchase."
 r:"^限購$"="Limit"
 r:"^立即獲得$"="Immediately get"
 r:"^連續30天，每天5點贈送$"="Daily at 5 am (UTC+8) for 30 days"
+r:"^累計消費(\d+)台幣\((\d+)/(\d+)\)$"="Spent NT$ $1 ($1/$2)"
 
 r:"^傳記$"="Biography"
 傳記全書=<size\=25>Full Biography</size>
@@ -1976,9 +1994,9 @@ r:"^零件$"="Parts"
 頂尖礦石=Exquisite Ore
 優質礦石=Quality Ore
 粗製礦石=Crude Ore
-人格面具精魄=<size\=24>Persona Essence</size>
-人格面具精碎=<size\=27>Persona Chunk</size>
-人格面具精末=<size\=28>Persona Scrap</size>
+{{A}}精魄=<size\=24>{{A}} Essence</size>
+{{A}}精碎=<size\=27>{{A}} Chunk</size>
+{{A}}精末=<size\=28>{{A}} Scrap</size>
 日升=Sun Bead
 月盈=Moon Bead
 星伴=Star Bead
@@ -2039,7 +2057,9 @@ r:"^可領取$"="Claim"
 確定買這個嗎？=Are you sure you want to buy this?
 看清楚啦～不要買錯了阿！=Look closely～\nDon’t buy the wrong one!
 r:"^加贈$"="Get            <size\=1>.</size>"
-r:"^累計簽到(\d+)日，即可獲得<size\=66><sprite\=19></size>X10$"="Log in for $1 days to get <size\=66><sprite\=19></size>X10"
+獲得=Get
+r:"^累計簽到(\d+)日，即可獲得<size\=66><sprite\=19></size>X(\d+)$"="Log in for $1 days to get <size\=66><sprite\=19></size>X$2"
+r:"^累計簽到(\d+)日，即可獲得<size\=66><sprite\=21></size>X(\d+)$"="Log in for $1 days to get <size\=66><sprite\=21></size>X$2"
 
 ----------
 Velvet Trials (VT)
@@ -2104,6 +2124,8 @@ P5X營運團隊=P5X Team
 支線=Side
 故事尚未結束，請期待後續發展。=The story is not over yet, stay tuned!
 目標=Goal
+r:"^目標(\d+)$"="Goal $1"
+通關前置關卡後開啟=Unlock after clearing prerequisite level
 冒險故事=Adventure Story
 都市生活=City Life
 
@@ -2150,8 +2172,37 @@ r:"^與「<color\=#ffc000>{{A}}</color>」結識，\n可以期待今後與她發
 空空如也=Empty
 
 ----------
+EVENTS TAB
+----------
+r:"^通關(.*)難度(\d+)\((\d+)/(\d+)\)$"="Clear Difficulty $2 ($3/$4)"
+r:"^累計在(.*)開啟(\d+)個寶箱\((\d+)/(\d+)\)$"="Open $2 Treasure Chests ($3/$4)"
+
+挑戰模式=<size\=24>Challenge Mode</size>
+首次通關後解鎖當前難度<color\=#173CCAff>體力模式</color>=Unlock <color\=#173CCAff>Stamina Mode</color> after clearing
+r:"^最小行動次數：   (\d+)$"="Number of Actions: $1"
+扭曲等級=<size\=30>Distortion</size>
+己方行動次數：=Number of Actions:
+新解鎖等級：=Unlocked:
+首領挑戰=Challenge
+戰鬥獎勵=Rewards
+探索里程=<size\=20>Explore Mileage</size>
+達到=<size\=20>Reach</size>
+可挑戰=<size\=20>to Challenge</size>
+花朵=Flower
+要求投擲點數=<size\=30>Need Dice Points</size>
+每次獲得花朵=Get Flower
+敵人強度=Strength
+淺層=Top
+中段=Middle
+底部=Bottom
+最深處=Deepest
+層數=Floors
+
+----------
 Velvet Room Personas (VR)
 ----------
+r:"^天<color\=#ff0000ff>鵝</color>絨房間$"="Ve<color\=#ff0000ff>lv</color>et Room"
+前往天鵝絨房間=Go to Velvet Room
 隧道擴張=Expand Tunnel
 檔案管理=<size\=24>Compendium</size>
 貴賓服務=VIP Service
@@ -2173,13 +2224,13 @@ r:"^解鎖技能$"="Unlock"
 主動技能已達到上限，無法選擇。=Cannot select more active skills
 當前技能已保存。=Saved skills.
 r:"^特性提升$"="<size\=25>Upgrade to</size>"
-已達到人格面具當前強化等級上限。=Reached current rank max level.
+已達到{{A}}當前強化等級上限。=Reached current rank max level.
 <color\=#FF0000>本次強化溢出經驗將轉化為通用素材</color>\n是否確定使用所選素材進行強化？=<color\=#FF0000>This upgrade will convert overflowed EXP into upgrade materials.</color>\nAre you sure you want to upgrade?
 強化成功。=Upgrade success.
 已達最大等級。=Reached max level.
 該面具已強化到滿級！=Persona at max level!
 點擊技能圖示篩選指定技能，長按可查看技能詳情=Click on skill icon to select specific skills, long press to view skill details
-已添加為喜愛人格面具。=Added Persona to favourites.
+已添加為喜愛{{A}}。=Added {{A}} to favourites.
 面具篩選=Filter
 5星=5★
 4星=4★
@@ -2216,12 +2267,12 @@ r:"已遺忘技能「(.*)」。$"="Forgotten skill."
 
 不羈紋章·虹=<size\=16>Wild Card Emblem - Rainbow</size>
 不羈紋章·耀=<size\=18>Wild Card Emblem - Shiny</size>
-在厄抑之境中挑戰Ⅵ階、Ⅶ階人格面具副本後獲得……應該可以用於在厄抑巡禮中兌換獎勵。=Gained from challenging Rank VI, Rank VII Persona Farm, can be used to exchange from Challenge Reward.
+在厄抑之境中挑戰Ⅵ階、Ⅶ階{{A}}副本後獲得……應該可以用於在厄抑巡禮中兌換獎勵。=Gained from challenging Rank VI, Rank VII Persona Farm, can be used to exchange from Challenge Reward.
 不羈紋章·空=<size\=18>Wild Card Emblem - Dull</size>
-在厄抑之境中挑戰所有人格面具副本後均可獲得……應該可以用於在厄抑巡禮中兌換獎勵。=Gained from challenging any Persona Farm, can be used to exchange from Challenge Reward.
+在厄抑之境中挑戰所有{{A}}副本後均可獲得……應該可以用於在厄抑巡禮中兌換獎勵。=Gained from challenging any Persona Farm, can be used to exchange from Challenge Reward.
 『不羈紋章·虹』\n在心之海試煉等玩法中獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=27>[Wild Card Emblem - Rainbow]\nGained from Sea of Souls Trials, can be used to exchange from Challenge Reward.</size>
-『不羈紋章·耀』\n在厄抑之境中挑戰Ⅵ階、Ⅶ階人格面具副本後獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=27>[Wild Card Emblem - Shiny]\nGained from challenging Rank VI, Rank VII Persona Farm, can be used to exchange from Challenge Reward.</size>
-『不羈紋章·空』\n在厄抑之境中挑戰所有人格面具副本後均可獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=27>[Wild Card Emblem - Dull]\nGained from challenging any Persona Farm, can be used to exchange from Challenge Reward.</size>
+『不羈紋章·耀』\n在厄抑之境中挑戰Ⅵ階、Ⅶ階{{A}}副本後獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=27>[Wild Card Emblem - Shiny]\nGained from challenging Rank VI, Rank VII Persona Farm, can be used to exchange from Challenge Reward.</size>
+『不羈紋章·空』\n在厄抑之境中挑戰所有{{A}}副本後均可獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=27>[Wild Card Emblem - Dull]\nGained from challenging any Persona Farm, can be used to exchange from Challenge Reward.</size>
 
 r:"^與「<color\=#FFC000>{{A}}</color>」好感度提升至<color\=#FFC000>rank5</color>後，\n解鎖{{B}}的合成。$"="Unlock Fusion for {{B}}\nafter reaching <color\=#FFC000>rank 5</color> with {{A}}."
 r:"^好感度提升至<color\=#FFC000>rank7</color>後，\n解鎖{{A}}的合成。$"="Unlock Fusion for Setanta\nafter reaching <color\=#FFC000>rank 7</color> with Merope."
