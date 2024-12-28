@@ -28,6 +28,7 @@ r:"^(\d+)層$"="<size\=18>$1 stacks</size>"
 子彈數：=Ammo:
 命中率：=Accuracy:
 基礎暴擊率：=Base CRIT Rate:
+使用槍械射擊1名敵人，造成小幅射擊傷害，根據子彈數量可以射擊多次。=Uses a gun to shoot 1 enemy. dealing light Gun damage, can shoot multiple times based on ammo.
 使用槍械射擊1名敵人，造成少量射擊屬性傷害，根據子彈數量可以射擊多次。=Uses a gun to shoot 1 enemy. dealing light Gun damage, can shoot multiple times based on ammo.
 使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。=Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo.
 使用槍械射擊1名敵人，造成6次射擊屬性傷害，子彈可能會發生偏移。對同一目標造成傷害會衰減。=Uses a gun to shoot 1 enemy. dealing 6 hits of Gun damage, the bullets can miss and deals less damage to the same target.
@@ -344,8 +345,8 @@ r:"^使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的�
 // Lotus
 r:"使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，並使自身獲得2層『蓮華』，『蓮華』存在期間，任意單位行動後，若有同伴生命值低於50%，則消耗一層『蓮華』，使其恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，『蓮華』持續1回合。"=<size\=30>Restore HP equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to 1 ally and gain 2 stacks of [Sacred Lotus] for 1 turn. If an ally is below 50% Max HP after their turn while [Sacred Lotus] is present, consume one stack and recover that ally's HP equal to <color\=#fffc40>$3</color> ATK + <color\=#fffc40>$4</color></size>.
 
-//Titania idk
-r:"使所有同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，對生命值低於50%的同伴造成的治療效果提升25%。並使所有同伴回復(\d+)點精力值。"=Restore HP equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to all allies.\nIncrease healing effect by 25% on allies under 50% HP.\nRestore $3 SP to all allies.
+Titania
+r:"^使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值，對生命值低於(\d+%)的同伴造成的治療效果提升(\d+%)。並恢復所有同伴(\d+)點精力值。$"="Restores $1 ATK + $2 HP to <color\=#FFFF00>all</color> allies, increases Healing Effect by $4 to allies under $3 HP. Restore $5 SP to all allies."
 
 // Patra
 r:"^驅散1名同伴的<link\="s\|107"><u>暈眩</u></link>、<link\="s\|109"><u>睡眠</u></link>、<link\="s\|108"><u>遺忘</u></link>效果。$"=Cures <link\=s|107><u>Dizzy</u></link>/<link\=s|109><u>Sleep</u></link>/<link\=s|108><u>Forget</u></link> for 1 ally.
@@ -549,6 +550,7 @@ Battle Quotes
 r:"^<color\=#FF0000>所有同伴</color>攻擊力提升……$"="<color\=#FF0000>All allies</color> ATK Up!"
 r:"^<color\=#FF0000>所有同伴</color>造成的傷害提升了……$"="<color\=#FF0000>All allies</color> DMG Dealt Up!"
 r:"^<color\=#FF0000>(.*)</color>攻擊提升了……$"="ATK Up!"
+r:"^<color\=#FF0000>(.*)</color>防禦提升了……$"="DEF Up!"
 sr:"^<color\=#FF0000>(.*)</color>防禦降低了……$"="DEF Down!"
 r:"^<color\=#FF0000>(.*)</color>效果命中、效果抵抗提升了……$"="          EHR/ Effect RES Up!"
 sr:"^<color\=#FF0000>(.*)</color>暴擊率提升了……$"="<color\=#FF0000>$1</color> CRIT Rate Up!"
@@ -590,6 +592,7 @@ r:"^暈<color\=#000000>眩</color>$"="<size\=16> </size>D<color\=#000000>iz</col
 r:"^遺<color\=#000000>忘</color>$"="<size\=14> </size>F<color\=#000000>or</color>get"
 r:"^睡<color\=#000000>眠</color>$"="<size\=17> </size>S<color\=#000000>le</color>ep"
 r:"^狂<color\=#000000>怒</color>$"="<size\=20> </size>R<color\=#000000>a</color>ge"
+r:"^洗<color\=#000000>腦</color>$"="<size\=12> </size>B<color\=#000000>ra</color>inwash"
 
 ----------
 Combat Pop-ups for buffs
@@ -838,6 +841,7 @@ r:"^受到的傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Taken by $1"
 r:"^受到追擊傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up DMG Taken by $1"
 r:"^受最終傷害提升(\d+%)，可疊加(\d+)層$"="Increase Final DMG Taken by $1, \nup to $2 stacks"
 r:"^造成傷害降低(\d+(.\d+)?(%)?)$"="Decrease DMG Dealt by $1"
+r:"^造成的傷害降低(\d+(.\d+)?(%)?)$"="Decrease DMG Dealt by $1"
 造成的傷害大幅降低=Heavily decrease DMG Dealt
 受到的下一次HIGHLIGHT傷害提升=Increase next HIGHLIGHT DMG Taken
 r:"^受物理傷害提升(\d+(.\d+)?(%)?)$"="Increase Phys DMG Taken by $1"
