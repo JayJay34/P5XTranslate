@@ -18,9 +18,12 @@ UI
 
 進入挑戰=Challenge
 r:"^在(.*)輪內取得勝利$"="Win within $1 turns"
+r:"^(\d+)回$"="$1 turns"
+r:"^觀察模式冷卻中，(\d+)秒後可用！$"="Third Eye in cooldown"
 機制=Mechanic
 遊蕩陰影=<size\=25>Roaming Shadow</size>
 狂化惡黨=<size\=25>Berserker Shadow</size>
+寶箱守衛=<size\=28>Treasure Guard</size>
 動態難度已開啟\n敵人等級會隨著主角等級的提升而改變=Dynamic Difficulty is on. \nEnemy level will change as Wonder's level increases
 狂<color\=#ff0000ff>化</color>惡黨=Ber<color\=#ff0000ff>se</color>rk Shadow
 
@@ -35,6 +38,7 @@ r:"^在(.*)輪內取得勝利$"="Win within $1 turns"
 看來目前是安全的，可以喘息片刻了。是不是需要恢復一下，或者強化一下自己的能力。=Looks like it's currently safe. \nWant to take a break and recover or strengthen your abilities?
 
 r:"^安<color\=#ff0000ff>全</color>屋$"="Sa<color\=#ff0000ff>fe</color> Room"
+r:"^開啟了通往\n『<color\=#ff3b37>(.*)</color>』的快速移動。$"="You can now quick travel \nto this <color\=#FFDF00>Safe Room</color>."
 
 ----------
 PALACE 1
@@ -90,7 +94,245 @@ PALACE 3
 中庭廣場=Atrium Plaza
 核心監控室=<size\=20>Core Control Room</size>
 
-{{A}}{{B}}碎片=<size\=21>Wrath Gluttony Shard</size>
+{{A}}{{B}}碎片=<size\=21>{{A}} {{B}} Shard</size>
+
+----------
+PALACE 4 PUZZLES
+----------
+r:"^已連結「(\d+)/(\d+)」條思路$"="Connect [$1/$2] idea(s)"
+r:"^選擇一個「<color\=#ff0000>結點</color>」$"="Select a [<color\=#ff0000>Node</color>]"
+r:"^再次選擇節點，\n連接一條「<color\=#ff0000>思路</color>」$"="Select another node.\nConnect 1 [<color\=#ff0000>Idea</color>]"
+r:"^點擊這裡可以獲得「<color\=#ff0000>提示資訊</color>」$"="Click here for [<color\=#ff0000>Tips</color>]"
+r:"^「<color\=#ff0000>提示資訊</color>」會顯示在右上角$"="[<color\=#ff0000>Tips</color>] will display here"
+
+感覺好像不太對？=Something does not feel right?
+這樣連接是對的嗎？=Is this the right connection?
+是……這樣的嗎？=Is it... like this?
+無法與已經連接的電路相連。=Cannot connect to an already connected circuit.
+當前電路無法到達該結點。=The current circuit cannot reach this node.
+r:"^找到了「<color\=#ff0000>正確的</color>」連接方式，\n但混雜了「<color\=#ff0000>錯誤的</color>」連接。$"="Found the "<color\=#ff0000>correct</color>" connections. \nBut added "<color\=#ff0000>wrong</color>" connections."
+
+r:"^讓這個陰影認為{{A}}是「<color\=#ff0000>錯誤</color>」的吧。$"="Let this Shadow think {{A}} is "<color\=#ff0000>wrong</color>"."
+{{A}}的命令={{A}}'s orders
+正確的=Correct
+錯誤的=Wrong
+
+r:"^嘗試改變操作員對於「<color\=#ff0000>分享</color>」的看法吧。$"="Try changing the operator's view on "<color\=#ff0000>sharing</color>"."
+分享=Sharing
+痛苦的=Painful
+快樂的=Happy
+不必要的=Unnecessary
+遊戲=Game
+人生=Life
+
+r:"^改變它對「<color\=#ff0000>敵人</color>」的看法吧，\n讓它認為我們是「<color\=#ff0000>強大的</color>」。$"="Change their view on "<color\=#ff0000>enemies</color>",\nlet them think of us as "<color\=#ff0000>strong</color>."
+敵人=Enemy
+無畏的=Fearless
+弱小的=Weak
+強大的=Strong
+
+r:"^如果寶物不再有「<color\=#ff0000>價值</color>」，會怎樣呢？$"=What happens if the treasure no longer has "<color\=#ff0000>value</color>"?"
+財富=Wealth
+珍貴的=Precious
+價值=Value
+寶物=Treasure
+普通的=Ordinary
+
+r:"^維修工的工作職責是「<color\=#ff0000>維修</color>」吧。$"="The duty of a maintenance worker is to "<color\=#ff0000>repair</color>"."
+服從的=Obedient
+固定的=Fixed
+準備食材=Prepare ingredients
+工作安排=Work order
+維修機器=Repaire machines
+整理環境=Clean up
+不可變的=Immutable
+
+r:"^WONDER，\n你能讓它理解「<color\=#ff0000>節制</color>」的重要性嗎？$"="Can you make them understand the importance of "<color\=#ff0000>temperance</color>"?"
+罪惡=Sin
+賭博=Gambling
+瘋狂的=Crazy
+無節制的=Intemperance
+令人愉悅的=Pleasant
+危險的=Dangerous
+
+r:"^應該灌輸一些「<color\=#ff0000>積極</color>」的觀念。$"="What if they are more "<color\=#ff0000>positive</color>"?"
+理所當然的=Naturally
+空虛的=Empty
+暫時的=Temporary
+逃避=Escape
+過去=Past
+積極的=Positive
+生活=Life
+有希望的=Hopeful
+未來=Future
+沒有希望的=Hopeless
+
+r:"^WONDER，讓它重新想起，\n自己「<color\=#ff0000>家人</color>」的重要性吧。$"="Let them remember the importance of "<color\=#ff0000>family</color>""
+家庭=Household
+陌生的=Unfamiliar
+重要的=Important
+親近的=Close
+工作=Work
+父母=Parents
+不重要的=Unimportant
+疏遠的=Distant
+
+r:"^不吃飯，怎麼有精力工作呢？$"="How can they have the energy to work if they don't eat?"
+喝水=Drink water
+可以忍受的=Bearable
+餐廳=Restaurant
+饑餓=Hunger
+不能忍受的=Unbearable
+頭暈眼花的=Dizzy
+必要的=Necessary
+休息=Rest
+操作員離開了房間……=The operator left the room...
+
+r:"^這位維修工對於賭博有點太「<color\=#ff0000>沉迷</color>」了。$"="This maintenance worker is addicted to "<color\=#ff0000>gambling</color>"."
+金錢=Money
+豐厚的=Rich
+時間=Time
+責任=Responsibility
+
+r:"^WODNER，\n讓它對工作「<color\=#ff0000>重視</color>」起來。$"="Let's make them "<color\=#ff0000>value work</color>"."
+簡單的=Simple
+小心的=Careful
+水壩參數=Dam parameters
+私密的=Private
+無用的=Useless
+公開的=Public
+操作員完成了工作，離開了……=The operator finished their work and left...
+
+這個……滋滋……作，我是否應該放棄呢？=This...work, should I give up?
+如果判定一份工作已經不適合自己了……=If you decide that a job is no longer suitable for you...
+果斷地放棄也許更好呢？=Maybe it's better to give up decisively?
+糟糕的=Bad
+無法忍受的=Unbearable
+維持=Maintain
+現狀=Status quo
+改變=Change
+
+r:"^這名操作員對於工作很沒有把握，\n讓它「<color\=#ff0000>自信</color>」一點吧。$"="This operator are not sure about job. Let them be more "<color\=#ff0000>confident</color>"."
+不勝任的=Incompetent
+困難的=Difficult
+勝任的=Competent
+複雜的=Complex
+控制系統=Control system
+
+想辦法讓它把道具交給吾等吧。=Let's find a way to make them hand over the item to us.
+自私的=Selfish
+可信的=Trustworthy
+不可信的=Untrustworthy
+寶箱=Treasure chest
+陌生人=Stranger
+
+r:"^嘗試改變它對於「<color\=#ff0000>戰鬥</color>」的看法吧。$"="Try changing their view on "<color\=#ff0000>battle</color>"."
+懶散的=Lazy
+逃跑=Escape
+戰鬥=Combat
+失敗=Fail
+光榮的=Glorious
+可怕的=Scary
+
+r:"^嘗試改變它對於「<color\=#ff0000>受傷</color>」的看法吧。$"="Try changing their view on "<color\=#ff0000>injury</color>"."
+自豪的=Proud
+受傷=Injury
+無所謂的=Doesn't matter
+可恥的=Shameful
+維修工離開了房間……=The maintenance worker left the room...
+
+r:"^嘗試說服操作員房間外面是「<color\=#ff0000>安全</color>」的吧？$"="Try convincing them the outside rooms are "<color\=#ff0000>safe</color>"."
+停止的=Stopped
+精神實驗=Mental experimentation
+未在監視=Not monitoring
+不確定的=Uncertain
+房間外面=Outside the room
+安全的=Safe
+
+r:"^改變它對「<color\=#ff0000>丟晶片</color>」的看法吧。$"="Try changing their view on "<color\=#ff0000>losing the chip</color>"."
+懲罰=Punishment
+交出晶片=Hand over the chip
+沒有後果=No consequences
+管理人員=Manager
+不存在=Non-existent
+管理=Manage
+監控=Monitor
+
+r:"^讓這名維修工恢復對「<color\=#ff0000>生活</color>」的熱情吧。$"="Restore this maintenance worker's passion in "<color\=#ff0000>life</color>"."
+理想=Ideal
+改變現狀=Changing the status quo
+可能的=Possible
+狂熱的=Fervent
+在意的=Care
+
+r:"^嘗試改變它工作的「<color\=#ff0000>態度</color>」吧。$"="Try changing their "<color\=#ff0000>attitude</color>" towards work."
+無聊的=Boring
+責任感=Responsibility
+偷懶=Slack off
+有意義的=Meaningful
+無意義的=Meaningless
+
+r:"^想辦法讓它對「<color\=#ff0000>工作</color>」重拾信心。$"="Restore their confidence in "<color\=#ff0000>work</color>"."
+不可能的=Impossible
+升職=Promotion
+不顧職責的=Irresponsible
+消極怠工=Sabotage
+假期=Vacation
+焦慮的=Anxious
+操作員手舞足蹈地離開了房間……=The operator danced out of the room...
+
+工作不應該耍小聰明……=Shouldn't be petty at work...
+煩人的=Annoying
+投機取巧=Opportunistic
+有效的=Effective
+短視的=Short-sighted
+規則=Rules
+遵守的=Abide by
+
+r:"^嘗試改變它對於「<color\=#ff0000>員工</color>」的看法吧。$"="Try changing their view on "<color\=#ff0000>staff</color>"."
+合理的=Reasonable
+被支配的=Dominated
+自由時間=Free time
+工具=Tools
+員工=Staff
+耗材=Consumables
+尊重的=Respectful
+
+r:"^讓它認為戴面具的是「<color\=#ff0000>好人</color>」吧。$"="Let them think those who wear masks are the "<color\=#ff0000>good guys</color>"."
+好人=Good people
+面具怪人=Masked stranger
+信息=Message
+壞人=Bad people
+無視=Ignore
+
+r:"^糾正這名廚師的「<color\=#ff0000>菜譜</color>」吧。$"="Let's correct this chef’s "<color\=#ff0000>recipes</color>"."
+牛奶=Milk
+垃圾食品=Junk food
+自來水=Running water
+不可食用的=Inedible
+健康的=Healthy
+香蕉=Banana
+雞蛋殼=Eggshell
+醬油=Soy sauce
+咖啡=Coffee
+辣椒=Chili
+富有營養的=Nutritious
+
+r:"^讓這個紈絝子弟認識到「<color\=#ff0000>浪費金錢</color>」吧。$"="Let them realize they are "<color\=#ff0000>wasting money</color>"."
+公司=Company
+浪費=Waste
+捐贈=Donation
+節約=Save
+揮霍=Squander
+需要幫助=Need Help
+貧困人群=Poor people
+
+r:"^我們需要改變它對當前「<color\=#ff0000>環境</color>」的看法。$"="We need to change the way it thinks about the current "<color\=#ff0000>environment</color>"."
+水壩=Dam
+逃離=Escape
+令人不適的=Uncomfortable
+監視=Surveillance
+無所不在的=Omnipresent
 
 ----------
 PALACE 1 BOSS
@@ -281,7 +523,11 @@ r:"^傷害減免(\d+%)；buff結束時，變成{{A}}$"="Increase DMG RES by $1; 
 禁療=No Healing
 無法被治療=Cannot be healed
 
-r:"^1、{{A}}會交替賦予我方全體角色疾風、冰凍屬性弱點，持續2回合。\n2、我方角色倒地時，{{A}}獲得1層「雲蒸龍變」：增加(\d+%)傷害。「雲蒸龍變」達到6層時，{{A}}會對我方角色造成高額傷害。\n3、回合開始時，若場上沒有{{B}}或木靈，召喚1隻{{B}}或木靈。$"="1. Seiryu will inflict all enemies with Wind and Ice weakness for 2 turns.\n2. When Thieves are down, Seiryu gain 1 stack of [Dragon Soar]: Increase damage by $1. When [Dragon Soar] is at 6 stacks, Seiryu will deal severe damage to all enemies.\n3. At the start of turn, if there is no Sudama or Kodama, summon 1 Sudama or Kodama."
+----------
+PALACE 4 ELITES
+----------
+r:"^1、{{A}}會交替賦予我方全體角色疾風、冰凍屬性弱點，持續2回合。\n2、我方角色倒地時，{{A}}獲得1層「雲蒸龍變」：增加(\d+%)傷害。「雲蒸龍變」達到(\d+)層時，{{A}}會對我方角色造成高額傷害。\n3、回合開始時，若場上沒有{{C}}或{{B}}，召喚1隻{{C}}或{{B}}。$"="1. Seiryu will inflict all enemies with Wind and Ice weakness for 2 turns.\n2. When Thieves are down, Seiryu gain 1 stack of [Dragon Soar]: Increase damage by $1. When [Dragon Soar] is at $2 stacks, Seiryu will deal severe damage to all enemies.\n3. At the start of turn, if there is no Sudama or Kodama, summon 1 Sudama or Kodama."
+
 被擊殺時，給予我方全體疾風屬性防壁，持續1回合。=Give all Thieves 1 turn of Wind resistance when defeated.
 被擊殺時，給予我方全體冰凍屬性防壁，持續1回合。=Give all Thieves 1 turn of Ice resistance when defeated.
 
@@ -308,16 +554,22 @@ r:"^1、{{A}}會交替使用「{{A}}之爪」和「{{A}}之牙」。\n2、「{{A
 r:"^1、{{A}}會交替使用「{{A}}之爪」和「{{A}}之牙」。\n2、「{{A}}之爪」：對1名角色造成傷害，給予目標撕裂：受到持續傷害效果。\n3、「{{A}}之牙」：對全體角色造成傷害，給予我方角色咬痕：受到傷害提升。\n4、回合開始時，若有目標撕裂和咬痕同時存在，{{A}}會對目標發動捕食，對目標造成大量傷害，並使目標進入絕望狀態。\n5、每隔兩回合，選擇1隻{{B}}成為「餌料」，下回合捕食{{B}}，恢復自身全部生命值並強化自身。\n6、{{B}}死亡時，淨化所有怪盜的撕裂和咬痕效果。$"="1. Byakko will alternate using [Byakko's Claw] and [Byakko's Fang].\n2. [Byakko's Claw]: Deal damage to 1 enemy and inflict Laceration: Take damage over time.\n3. [Byakko's Fang]: Deal damage to all enemies and inflict Bite: Increase DMG Taken.\n4. At the start of turn, if any target have both Laceration and Bite, deal heavy damage to them and inflict Despair. \n5. Summon 1 Sudama every 2 turns. Next turn Byakko will defeat that Sudama, restore own HP and buff yourself.\n6. Dispel Laceration and Bite when Sudama is defeated."
 
 ----------
-CF PALACE
+CROSS FATE PALACE (CF) (COLLAB)
 ----------
 以破滅開始的旅程=<size\=26>Journey that starts with destruction</size>
 總探索進度：=Exploration Progress:
 成功抵達目標地點=Reach the destination
 開啟寶箱=Open Treasure Chest
+擊敗強敵=Defeat Elite
 命運徽記·夢想=Fate Emblem·Dream
 研究所=Laboratory
 {{A}}出入口={{A}} Entryway
 入口大廳=Entrance Hall
+測驗區域=Test Track
+連接通道=Corridor
+講堂=Auditorium
+感覺已經沒有可以調查的地方了……=Feels like there is no place \nleft to investigate...
+門是關著的，但似乎沒有上鎖……=This door is closed, but it doesn't seem to be locked...
 
 ----------
 MEMENTOS 2
