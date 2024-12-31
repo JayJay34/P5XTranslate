@@ -91,11 +91,10 @@ r:"^取消$"="Cancel"
 打開當前地圖=Open Current Map
 打開功能表=Open Menu
 打開大地圖=Open Subway Map
-打開{{A}}=Velvet Room
+打開{{A}}=Open {{A}}
 打開怪盜=Manage Thieves
 打開陣容=Team
-打開雛鳥計畫=Open Battle Pass
-打開{{A}}=Open Phantom Pass
+打開雛鳥計畫=Open Fledgling Plan
 打開契約=Open Contract
 打開目標=Open Goals
 打開活動=Open Events
@@ -110,7 +109,6 @@ r:"^取消$"="Cancel"
 打開聊天面板=Open Side Chat
 打開SNS=Open SNS
 返回都市主介面=Open City Menu
-打開{{A}}=Enter {{A}}
 追蹤任務=Track Mission
 喚起遊標=Move Cursor
 打開商店=Open Shop
@@ -127,7 +125,7 @@ r:"^取消$"="Cancel"
 切換面具=Persona Change
 近戰攻擊=Melee Attack
 設置=Set
-返回=Cancel
+返回=Return
 加速=Speed Up
 自動戰鬥=Auto Mode
 切換選中（左）=Select (Left)
@@ -204,6 +202,7 @@ r:"^路<color\=#ff0000ff>菲</color>爾$"="Ru<color\=#ff0000ff>fe</color>ru"
 r:"^新<color\=#ff0000ff>井</color>{{A}}$"="Mo<color\=#ff0000ff>to</color>ha Arai"
 r:"^加<color\=#ff0000ff>納</color> 駿$"="Sh<color\=#ff0000ff>un</color> Kanou"
 r:"^加<color\=#ff0000ff>納</color>駿$"="Sh<color\=#ff0000ff>un</color> Kanou"
+r:"^多<color\=#ff0000ff>禰</color>村 {{A}}$"="{{A}} Ta<color\=#ff0000ff>ne</color>mura"
 r:"^多<color\=#ff0000ff>禰</color>村{{A}}$"="{{A}} Ta<color\=#ff0000ff>ne</color>mura"
 r:"^野<color\=#ff0000ff>毛</color> {{A}}$"="To<color\=#ff0000ff>mo</color>ko Noge"
 
@@ -248,6 +247,10 @@ r:"^芳<color\=#ff0000ff>澤</color>霞$"="Ka<color\=#ff0000ff>su</color>mi Yosh
 ----------
 Random names
 ----------
+sr:"^認<color\=#ff0000ff>知</color> (.*)$"="Cog<color\=#ff0000ff>ni</color>tive $1"
+sr:"^認<color\=#ff0000ff>知</color>(.*)$"="Cog<color\=#ff0000ff>ni</color>tive $1"
+r:"^操作員$"="Operator"
+r:"^維修工$"="Maintenance Worker"
 r:"^<color\=#ff0000ff>店</color>員$"="S<color\=#ff0000ff>t</color>aff"
 r:"^謎<color\=#ff0000ff>之</color>{{A}}$"="My<color\=#ff0000ff>st</color>erious {{A}}"
 
@@ -327,18 +330,20 @@ r:"^已購買(\d+)/(\d+)次（每日05:00重置）$"="Purchased $1/$2 times \n(R
 來自宇宙的命運指引，打開後可自選一張橙色宙位啟示卡。=A guidance of fate from the Universe, can be used to gain 1 Orange Universe Card
 殘識碎片禮包=<size\=17>Awareness Fragment Gift Bag</size>
 盲選偶像合約 ★5=5★ Random Kaidol Contract
-r:"^怪盜殘識碎片$"="Phantom Thief Awareness Fragment"
-r:"^遺留在{{A}}的怪盜殘識碎片，消耗(\d+)個可以合成角色的殘識。$"="Phantom Thief Awareness Fragment that are left in the {{A}}, consume $1 to fuse 1 Awareness."
+r:"^怪盜殘識碎片$"="<size\=22>Thief Awareness Fragment</size>"
+r:"^遺留在{{A}}的怪盜殘識碎片，消耗(\d+)個可以合成角色的殘識。$"="Thief Awareness Fragment that are left in the {{A}}, consume $1 to fuse 1 Awareness."
 r:"^{{A}}遺留在{{B}}的殘識碎片，消耗(\d+)個可以合成角色的殘識。$"="{{A}} Awareness Fragment left in the {{B}}, consume $1 to fuse 1 Awareness."
+r:"^消耗：<color\=#FFDE00>「怪盜殘識碎片」×(\d+)</color>\n兌換：<color\=#FFDE00>「{{A}}的殘識碎片」×(\d+)</color>\n是否確認？$"="<size\=25>Consume: <color\=#FFDE00>[Thief Awareness Fragment] ×$1</color>\nGet: <color\=#FFDE00>[{{A}}'s Awareness Fragment] ×$2</color>\nNeed 60 to fuse 1 Awareness, \nare you sure?</size>"
+r:"^消耗：<color\=#FFDE00>「{{A}}的殘識碎片」×(\d+)</color>\n合成：<color\=#FFDE00>「{{A}}的殘識」×(\d+)</color>\n是否確認？$"="Consume: <color\=#FFDE00>[{{A}}'s Awareness Fragment] ×$1</color>\nGet: <color\=#FFDE00>[{{A}}'s Awareness] ×$2</color>\nAre you sure?"
+
 禮包獲取後，可選擇獎勵包括=You can choose the following rewards
-sr:"^(.*)的殘識碎片$"="<size\=16>Awareness Fragment \nof $1</size>"
+r:"^{{A}}的殘識碎片$"="<size\=16>Awareness Fragment \nof {{A}}</size>"
 殘識=Awareness
 角色活動契約簽約機率獲得=Character Contract
 殘識碎片=<size\=16>Awareness Fragment</size>
 sr:"^(.*?)遺留在{{A}}的殘識碎片，消耗(\d+)個可以合成角色的殘識。$"="Awareness Fragment left by $1 in the {{A}}, consume $2 to fuse 1 Awareness."
 幸運之硬幣=Lucky Coin
-「雛鳥計畫·等級獎勵」中獲得的幸運硬幣，用於在「生存遊戲專賣店」兌換「五星武器」。=Gained from the Battle Pass, can be used to exchange [5★ Weapon] in [Untouchable]
-「{{A}}·等級獎勵」中獲得的幸運硬幣，用於在「生存遊戲專賣店」兌換「五星武器」。=Gained from the Phantom Pass, can be used to exchange [5★ Weapon] in [Untouchable]
+「{{A}}·等級獎勵」中獲得的幸運硬幣，用於在「生存遊戲專賣店」兌換「五星武器」。=<size\=25>Gained from the Phantom Pass, \ncan be used to exchange [5★ Weapon] in [Untouchable]</size>
 定製武器套件=5★ Weapon Box
 定製武器模組=4★ Weapon Box
 特供武器模組=4★ Weapon Box
@@ -366,6 +371,7 @@ City UI
 自宅=Home
 自宅  臥室=Home Bedroom
 自宅  客廳=Home Living Room
+sr:"^前<color\=#ff0000ff>往</color>(.*)$"="Go <color\=#ff0000ff>to</color> $1"
 r:"^前<color\=#ff0000ff>往</color>臥室$"="Go <color\=#ff0000ff>to</color> Bedroom"
 r:"^前<color\=#ff0000ff>往</color>客廳$"="Go <color\=#ff0000ff>to</color> Living Room"
 r:"^打<color\=#ff0000ff>掃</color>衛生$"="Cl<color\=#ff0000ff>ea</color>ning"
@@ -397,11 +403,18 @@ r:"^{{A}}  娛樂街$"="<size\=30>{{A}} Entertainment District</size>"
 r:"^壓<color\=#ff0000ff>勝</color>軒$"="As<color\=#ff0000ff>sh</color>ouken"
 r:"^渡<color\=#ff0000ff>來</color>軒$"="To<color\=#ff0000ff>rai</color>ken"
 
-社<color\=#ff0000ff>團</color>佈告欄=Cl<color\=#ff0000ff>ub</color> Bulletin Board
-教<color\=#ff0000ff>學</color>樓=Cl<color\=#ff0000ff>as</color>sroom Building
+r:"^社<color\=#ff0000ff>團</color>佈告欄$"="Cl<color\=#ff0000ff>ub</color> Bulletin Board"
+進入學校=Enter school
+r:"^教<color\=#ff0000ff>學</color>樓$"="Cl<color\=#ff0000ff>as</color>sroom Building"
+2-C教室=<size\=24>Classroom 2-C</size>
+r:"^前<color\=#ff0000ff>往</color>走廊$"="Go <color\=#ff0000ff>to</color> Corridor"
+r:"^進<color\=#ff0000ff>入</color>教室$"="En<color\=#ff0000ff>t</color>er Classroom"
 一樓走廊=1F Corridor
+一樓=First Floor
 二樓走廊=2F Corridor
+二樓=Second Floor
 三樓走廊=3F Corridor
+三樓=Third Floor
 天臺=Rooftop
 圖書室=Library
 
@@ -517,6 +530,7 @@ r:"^主<color\=#ff0000ff>題</color>咖啡店$"="Co<color\=#ff0000ff>nc</color>e
 傳出了很輕快的音樂聲……=Can hear upbeat music...
 r:"^遊<color\=#ff0000ff>戲</color>中心$"="Ar<color\=#ff0000ff>ca</color>de"
 遊戲中心=Arcade
+老字號工具店=Old Machine Parts Store
 r:"^工<color\=#ff0000ff>具</color>店$"="Old Ma<color\=#ff0000ff>ch</color>ine Parts Store"
 {{A}}電子={{A}} Electronics
 r:"^懷<color\=#ff0000ff>舊</color>遊戲店$"="Re<color\=#ff0000ff>tr</color>o Game Shop"
@@ -554,23 +568,24 @@ Area Names
 ----------
 Menu / UI Translations (Timer)
 ----------
-r:"^(\d+)天後過期$"="Expires in $1 day(s)"
-r:"^(\d+)天後下架$"="Expires in $1 day(s)"
-r:"^(\d+)天(\d+)時後下架$"="Expires in $1 day(s) $2 hour(s)"
+r:"^(\d+)天後過期$"="Expires in $1d"
+r:"^(\d+)天後下架$"="Expires in $1d"
+r:"^(\d+)天(\d+)時後下架$"="Expires in $1d $2h"
 
 r:"^(\d+)天(\d+)時後刷新$"="Refreshes in $1d $2h"
 r:"^(\d+)時(\d+)分後刷新$"="Refreshes in $1h $2m"
-r:"^(\d+)天後刷新$"="Refreshes in $1 day(s)"
-r:"^(\d+)分後刷新$"="Refreshes in $1 minute(s)"
+r:"^(\d+)天後刷新$"="Refreshes in $1d"
+r:"^(\d+)分後刷新$"="Refreshes in $1m"
 
 r:"^剩餘(\d+)天(\d+)時(\d+)分$"="$1d $2h $3m left"
 r:"^(\d+)天(\d+)時(\d+)分$"=" $1d $2h $3m"
+r:"^(\d+)天(\d+)小時$"=" $1d $2h"
 r:"^(\d+)天(\d+)時$"=" $1d $2h"
 r:"^(\d+)時(\d+)分$"=" $1h $2m"
-r:"^(\d+)時(\d+)分後下架$"="Expires in $1h $2min"
-r:"^剩餘(\d+)時(\d+)分(\d+)秒$"=" $1h $2min $3sec"
+r:"^(\d+)時(\d+)分後下架$"="Expires in $1h $2m"
+r:"^剩餘(\d+)時(\d+)分(\d+)秒$"=" $1h $2m $3s"
 r:"^(\d+)小時(\d+)分鐘$"=" $1h $2m"
-r:"^(\d+)時(\d+)分(\d+)秒$"=" $1h $2min $3sec"
+r:"^(\d+)時(\d+)分(\d+)秒$"=" $1h $2m $3s"
 r:"^(\d+)分鐘$"=" $1 minutes"
 
 r:"^挑戰倒計時：$"="Time Left:"
@@ -589,10 +604,12 @@ r:"^領取$"="<size\=28>Claim</size>"
 主角等級=Wonder Lv.
 主角經驗=Wonder EXP
 貨幣=Currency
+怪盜等級=Thief Lv
+怪盜品質=Thief Rarity
+意識等級=Awareness Lv
+面具品質=Rarity
 面具等級=Mask Lv
 特色屬性=Element
-意識等級=Instinct Lv
-面具品質=Rarity
 合成=Fuse
 永久=∞
 月限=<size\=15>Monthly</size>
@@ -659,7 +676,6 @@ sr:"^(.*)成長至(\d+)級（(\d+)/(\d+)）$"="<size\=30>Level $1 to Lv. $2 ($3/
 Class/ Stats Screen
 ----------
 怪盜偶像=Idol Thief
-怪盜等級=Thieves Lv.
 職業說明=Roles
 屬性說明=<size\=40>Elements</size>
 快速篩選=Filter
@@ -696,9 +712,11 @@ sr:"^多重奏·(.*):(.*)元素怪盜技能傷害提升(.*)$"="<size\=21>$1 Poly
 能對敵人施加減益效果，在戰鬥中取得優勢。=Can inflict debuffs to gain an advantage in combat.
 解明=Elucidate
 不直接參與戰鬥，透過支援技能為隊伍提供支援效果。=<size\=26>Does not participate in combat, support the team through support skills.</size>
+不直接參與戰鬥，透過支援技能為隊伍提供支援效果，同時自身屬性會轉化為額外的屬性，為出戰的隊員提供加成。=<size\=26>Does not participate in combat, support the team through support skills.\nBoost active allies' stats based on own stats</size>
 怪盜=Thief
 怪盜職業=Thief Roles
 
+最大生命值=Max HP
 生命值=HP
 攻擊力=ATK
 防禦力=DEF
@@ -715,9 +733,9 @@ sr:"^多重奏·(.*):(.*)元素怪盜技能傷害提升(.*)$"="<size\=21>$1 Poly
 效果抵抗=Effect RES
 傷害加成=DMG Bonus
 傷害減免=DMG RES
-弱點傷害=Weak Damage
+弱點傷害=Weak DMG
 弱點抗性=Weak RES
-耐性穿透=Resist Ignore
+耐性穿透=Resist PEN
 耐性抗性=Resist Bonus
 r:"^治療效果$"="<size\=22>Healing Effect</size>"
 受治療效果=Healing Received
@@ -755,6 +773,11 @@ r:"^怪盜等級上限提升至<color\=#FFF000>LV.(\d+)</color>$"="Increase max 
 MENTAL IMAGE (MI)
 ---------
 每啟動或提升一次心象等級，心象點數+1。=+1 Mental Image point each time you activate or level up a Mental Image upgrade
+sr:"^心象提升屬性匯總\n(.*) <color\=#FEDA00>\+(.*)</color>\n$"="Mental Image Summary\n$1 <color\=#FEDA00>+$2</color>\n"
+sr:"^心象提升屬性匯總\n(.*) <color\=#FEDA00>\+(.*)</color>\n(.*) <color\=#FEDA00>\+(.*)</color>\n$"="Mental Image Summary\n$1 <color\=#FEDA00>+$2</color>\n$3 <color\=#FEDA00>+$4</color>\n"
+sr:"^心象提升屬性匯總\n(.*) <color\=#FEDA00>\+(.*)</color>\n(.*) <color\=#FEDA00>\+(.*)</color>\n(.*) <color\=#FEDA00>\+(.*)</color>\n$"="Mental Image Summary\n$1 <color\=#FEDA00>+$2</color>\n$3 <color\=#FEDA00>+$4</color>\n$5 <color\=#FEDA00>+$6</color>\n"
+sr:"^心象提升屬性匯總\n(.*) <color\=#FEDA00>\+(.*)</color>\n(.*) <color\=#FEDA00>\+(.*)</color>\n(.*) <color\=#FEDA00>\+(.*)</color>\n(.*) <color\=#FEDA00>\+(.*)</color>\n$"="Mental Image Summary\n$1 <color\=#FEDA00>+$2</color>\n$3 <color\=#FEDA00>+$4</color>\n$5 <color\=#FEDA00>+$6</color>\n$7 <color\=#FEDA00>+$8</color>\n"
+sr:"^心象提升屬性匯總\n(.*) <color\=#FEDA00>\+(.*)</color>\n(.*) <color\=#FEDA00>\+(.*)</color>\n(.*) <color\=#FEDA00>\+(.*)</color>\n(.*) <color\=#FEDA00>\+(.*)</color>\n(.*) <color\=#FEDA00>\+(.*)</color>\n$"="Mental Image Summary\n$1 <color\=#FEDA00>+$2</color>\n$3 <color\=#FEDA00>+$4</color>\n$5 <color\=#FEDA00>+$6</color>\n$7 <color\=#FEDA00>+$8</color>\n$9 <color\=#FEDA00>+$10</color>\n"
 
 啟動前置心象後解鎖=Unlock after activating\n the preceding skill
 消耗不足，無法啟動。=Insufficient materials to activate.
@@ -948,7 +971,7 @@ r:"^<size\=60><sprite\=37 tint\=1></size><size\=28><color\=#FFE500>x10</color></
 
 本期剩餘時間：=Time left:
 探索經驗：=Phantom Pass EXP: <size\=1>.</size>
-本週上限：=7d cap: <size\=1>.</size>
+本週上限：=Weekly cap: <size\=1>.</size>
 購買等級=Buy Lv.
 r:"^購買後，提升至(\d+)級，可獲得以下獎勵$"="Buy to Lv. $1 and get"
 購買等級:=Buy Level:
@@ -1021,10 +1044,10 @@ r:"^本期通行證期間，累計登入(\d+)天 \((\d+)/(\d+)\)$"="Log in for $
 ////////////////////////////////
 /// g. Banners / Pull Screen ///
 ////////////////////////////////
-
-異界晶珀=Ambers
+『{{A}}』\n天然打磨的稀有晶狀珀芯，可用於『角色契約』、『武器補給』及『購買主角體力』。=[{{A}}]\nA naturally polished rare crystalline core, can be used in [Character Contract], [Weapon Supply], and [Purchase Wonder Stamina].
 天然打磨的稀有晶狀珀芯，可用於『角色契約』、『武器補給』及『購買主角體力』。=A naturally polished rare crystalline core, can be used in [Character Contract], [Weapon Supply], and [Purchase Wonder Stamina].
-異界原晶=Premium Ambers
+
+r:"^是否消耗[{{A}}]×(.*)，\n購買(.*)張[{{B}}]？$"="Consume [{{A}}] x $1 \nto buy [{{B}}] x $2?"
 
 r:"^簽約$"="Pulls"
 
@@ -1494,6 +1517,7 @@ r:"^要在這裡度過時間嗎\(<color\=#ff0000>每次(\d+)現金</color>\)？$
 要在這家花店打工嗎？=Do you want to work part-time \nat this Flower Shop?
 
 去牛丼店打工=<size\=24>Work part-time\nat the Beef Bowl Shop</size>
+{{A}}的牛丼店今天也安排了打工……=<size\=25>I can work at the Beef Bowl Shop today...</size>
 {{A}}的牛丼店今天可以進行打工的排班，加油吧。=I can work at the Beef Bowl Shop today, let's keep it up.
 今天{{A}}的牛丼店有打工的排班，繼續努力吧。=I can work at the Beef Bowl Shop today, let's keep it up.
 今天牛丼店的人手也嚴重不足……=<size\=24>The Beef Bowl Shop is understaffed today...</size>
@@ -1531,6 +1555,8 @@ r:"^要在這裡度過時間嗎\(<color\=#ff0000>每次(\d+)現金</color>\)？$
 在{{A}}打工=<size\=24>Work part-time\nat {{A}}</size>
 今天也去{{A}}幫忙看看吧。=Let's help out at {{A}} today
 今天也試著去{{A}}幫忙吧……=<size\=26>Let's try to help out at {{A}} today...</size>
+{{A}}今天應該也會非常忙，要去幫忙看看嗎？={{A}} should be busy today, want to go help?
+{{A}}今天似乎也需要人手……={{A}} is understaffed...
 今天也去{{A}}看看能不能幫上什麼忙吧……=Let's go to {{A}} and see if they need help...
 {{A}}今天的客人似乎特別多……=There's a lot of customers at {{A}} today...
 今天{{A}}似乎特別忙……={{A}} seems to be busy today...
@@ -1690,6 +1716,8 @@ r:"^確定要和<color\=#F7F95C>{{A}}</color>成為「{{B}}」關係？\n※該�
 
 今天的事情處理的差不多了，是否上床睡覺呢？=Let's call it a day. \nAre you going to bed?
 SNS還有沒回復的消息，要直接睡覺嗎？=You didn't reply to your SNS yet, \ngo to sleep immediately?
+r:"^<color\=#ff0000ff>睡</color>覺$"="Sl<color\=#ff0000ff>ee</color>p"
+
 
 ----------
 Music Club
@@ -1777,8 +1805,8 @@ sr:"^在接下來4次透過都市日程獲得『(.*)』人格指數時，額外�
 sr:"^在接下來4次透過都市日程獲得『(.*)』人格指數時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 4 times you gain $1 from city activities, gain more Social Stats.\n<color\=#FFC000>（$2 time(s) left）</color>"
 
 戀人=Lovers
-在接下來3次透過都市日程『邀約任意協同者』獲得好感時，額外更多好感度。=The next 3 times you gain Confidant Points from city activities, gain more Confidant Points.
-r:"^在接下來3次透過都市日程『邀約任意協同者』獲得好感時，額外更多好感度。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 3 times you gain Confidant Points from city activities, gain more Confidant Points.\n<color\=#FFC000>（$1 time(s) left）</color>"
+在接下來3次通過都市日程『邀約任意協同者』獲得好感時，額外獲得更多好感度。=The next 3 times you gain Confidant Points from city activities, additionally gain more Confidant Points.
+r:"^在接下來3次透過都市日程『邀約任意協同者』獲得好感時，額外獲得更多好感度。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 3 times you gain Confidant Points from city activities, additionally gain more Confidant Points.\n<color\=#FFC000>（$1 time(s) left）</color>"
 
 戰車=Chariot
 
@@ -1911,7 +1939,7 @@ r:"^材料轉化\（可轉化：(\d+)個\）$"="<size\=25>Material Conversion (C
 r:"透過契約之間·認知特賣兌換$"="Exchange from Cognition Shop"
 r:"^透過契約之間·認知精選兌換$"="<size\=23>Exchange from Premium Cognition Shop</size>"
 獲取途徑=Obtain Method:
-天鵝絨房間合體=Velvet Room Fusion
+{{A}}合體={{A}} Fusion
 sr:"^透擊敗(.*)機率獲得$"="Chance to get after defeating $1"
 sr:"^擊敗(.*)機率獲得$"="<size\=20>Chance to get after defeating $1"
 r:"^透過厄抑巡禮·超階印記兌換$"="<size\=21>Exchange from Challenge Reward - Super</size>"
@@ -1936,7 +1964,7 @@ r:"^限時關今日剩餘次數：$"="Daily Attempt(s):"
 Resources & Shop Items (Marthym's Shop)
 ----------
 
-枚異界原晶=Ambers
+枚{{A}}=      <size\=17>{{A}}</size>
 現金=Yen
 魂石=Soul Gems
 {{A}}探索獲得的神秘石頭，可用於角色與{{B}}養成。=Mysterious gems obtained from the Metaverse, can be used for character or persona growth.
@@ -1947,9 +1975,9 @@ r:"^(\d+)魂石$"="$1 Soul Gems"
 r:"^契約的憑證，可在特定的『怪盜契約』中使用。$"="The prove of contract, can be used in certain [Contract]."
 補給道具=Supply Item
 祈願道具=Pray Item
-『神樂鈴』\n獲取後可用於{{A}}商店「祈願」中進行祈願抽獎。=[Kagura Suzu]\nCan be used in {{A}}'s Shop do [Pray] Lucky Draw.
+『{{B}}』\n獲取後可用於{{A}}商店「祈願」中進行祈願抽獎。=[Kagura Suzu]\nCan be used in {{A}}'s Shop do [Pray] Lucky Draw.
 r:"^獲取後可用於{{A}}商店「祈願」中進行祈願抽獎。$"="Can be used in {{A}}'s Shop to enter the Pray Lucky Draw."
-r:"^委託、消費大酬賓等獎勵或者購買<link\="mqm"><u>每日祈願納福禮袋</u></link>可獲得神樂鈴$"="Get Kagura Suzu from Commissions, Spending Spree or <link\="mqm"><u>Daily Pray Gift Bag</u></link>"
+r:"^委託、消費大酬賓等獎勵或者購買<link\="mqm"><u>每日祈願納福禮袋</u></link>可獲得{{A}}$"="Get Kagura Suzu from Commissions, Spending Spree or <link\="mqm"><u>Daily Pray Gift Bag</u></link>"
 意識禮願箱=Awareness Gift Box
 {{A}}的殘識={{A}}'s Awareness
 宿命之殘響=Fated Echoes
@@ -2035,9 +2063,7 @@ sr:"^未知宿命藍·(.*)$"="2★ • $1"
 
 在{{A}}商店進行原晶兌換=<size\=25>Exchange from Marthym's Shop</size>
 {{A}}商店購買獲得=<size\=25>Purchase from Marthym's Shop</size>
-完成雛鳥計畫任務=Completion Battle Pass Missions
 完成{{A}}任務=Completion Phantom Pass Missions
-雛鳥計畫·典藏版=From the Premium Battle Pass
 {{A}}·典藏版=From the Premium Phantom Pass
 輕音部徽章兌換=Exchange at the Music Club
 足球部徽章兌換=Exchange at the Soccer Club
@@ -2137,9 +2163,19 @@ r:"^目標(\d+)$"="Goal $1"
 夜晚=Night
 sr:"^當前正處於任務中，是否立即切換時間到<color\=#FFC000>(.*)</color>來進行都市日程呢？$"="Does not meet the time requirement.\nWant to change the time to \n<color\=#FFC000>$1</color> to do city activities?"
 sr:"^當前時間不符合要求，\n是否等待到<color\=#FFC000>(.*)</color>的<color\=#FFC000>(.*)</color>進行任務？$"="<size\=27>Does not meet the time requirement.\nWant to change the time to \n<color\=#FFC000>$1</color> <color\=#FFC000>$2</color> to start the mission?</size>"
+sr:"^當前時間資訊不符合要求，\n是否等待到<color\=#FFC000>(.*)</color>立即進行任務？$"="<size\=27>Does not meet the time requirement.\nWant to change the time to \n<color\=#FFC000>$1</color> to start the mission?</size>"
 
 sr:"^當前任務目標處於<color\=#FF0000>(.*)</color>，\n是否立即前往？$"="The current mission objective is in <color\=#FF0000>$1</color>. Go there now?"
 
+上床休息=Go to bed
+回家休息=Go home and rest
+回到{{A}}=Return to {{A}}
+前往走廊=Go to the corridor
+前往天臺=Go to the roof
+r:"^前往{{A}}(\d+)區$"=$"Go to {{A}} Area $1"
+r:"^調查{{A}}$"="Investigate {{A}}"
+與{{A}}對話=Talk to {{A}}
+將時間推進到夜晚=Pass the time to night
 漫遊{{A}}=Strolling {{A}}
 抓取的樂趣=The Fun of Catching
 如果想繼續體驗「<color\=#ffc000>娃娃機</color>」的小遊戲，可以在完成任務「抓取的樂趣」後再進一步遊玩。=<size\=26>If you want to continue to experience the "<color\=#ffc000>Crane Game</color>", you can play more after completing the mission "The Fun of Catching".</size>
@@ -2202,7 +2238,7 @@ r:"^最小行動次數：   (\d+)$"="Number of Actions: $1"
 Velvet Room Personas (VR)
 ----------
 r:"^天<color\=#ff0000ff>鵝</color>絨房間$"="Ve<color\=#ff0000ff>lv</color>et Room"
-前往天鵝絨房間=Go to Velvet Room
+前往{{A}}=Go to {{A}}
 隧道擴張=Expand Tunnel
 檔案管理=<size\=24>Compendium</size>
 貴賓服務=VIP Service
@@ -2303,8 +2339,10 @@ r:"^忠義的{{A}}$"="Loyal {{A}}"
 r:"^巨大的{{A}}$"="Gigantic {{A}}"
 r:"^虚弱的{{A}}$"="Weak {{A}}"
 r:"^聖潔的{{A}}$"="Holy {{A}}"
+r:"^熾熱的{{A}}$"="Fiery {{A}}"
 r:"^驍勇的{{A}}$"="Brave {{A}}"
 r:"^英勇的{{A}}$"="Brave {{A}}"
 r:"^莊嚴的{{A}}$"="Solemn {{A}}"
 r:"^{{A}}「化身」$"=""Incarnation" of {{A}}"
 r:"^「{{A}}」之影$"="Shadow of "{{A}}""
+r:"^詛咒的{{A}}$"="Cursed {{A}}"
