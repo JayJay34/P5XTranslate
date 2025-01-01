@@ -95,6 +95,7 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 精神異常，無法行動。=Unable to take actions.
 精神異常，無法行動並且每回合回復5%生命值和5%精力值，受到傷害後清除。=Unable to act.\nRestore 5% of Max HP and 5% of Max SP each turn.\nThis ailment clears upon taking damage.
 精神異常，無法使用技能。=Unable to use skills.
+無法使用主動技能=Unable to use skills
 精神異常，無法行動，會丟棄一定數量的魂石。=Unable to act.\nDiscards Soul Gems each turn.
 精神異常，有一定機率無法行動，若干回合後逃跑。=High chance of being unable to act.\nEscape from battle after a few turns.
 精神異常，無法行動，每回合扣除一定精力值，若干回合後死亡。=Unable to act.\nLose 5% Max SP each turn.\nInflicted will die after a few turns.
@@ -664,6 +665,7 @@ r:"^詛<color\=#000000>咒</color>特化$"="<size\=8> </size>C<color\=#000000>ur
 r:"^萬<color\=#000000>能</color>特化$"="<size\=1> </size>Al<color\=#000000>m</color>ighty DMG Up"
 
 r:"^生<color\=#000000>命</color>連結$"="<size\=0.1> </size>Li<color\=#000000>fe</color>link"
+r:"^反<color\=#000000>抗</color>$"="<size\=25> </size>C<color\=#000000>o</color>unter"
 
 ----------
 Combat Pop-ups for debuffs
@@ -693,6 +695,8 @@ r:"^受<color\=#000000>到</color>核熱傷害提升$"="<size\=3> </size>N<color
 r:"^受<color\=#000000>詛</color>咒傷害提升$"="<size\=7> </size>C<color\=#000000>ur</color>se DMG Taken Up"
 
 r:"^瞄<color\=#000000>準</color>$"="Ai<color\=#000000>m</color>"
+r:"^諸<color\=#000000>神</color>黃昏$"="<size\=22> </size>R<color\=#000000>a</color>gnarok"
+r:"^毒<color\=#000000>素</color>$"="<size\=26> </size>T<color\=#000000>o</color>xin"
 r:"^猛<color\=#000000>毒</color>素$"="<size\=26> </size>T<color\=#000000>o</color>xin"
 
 ----------
@@ -717,6 +721,7 @@ r:"^效果抵抗提升$"="Increase Effect RES"
 r:"^造成傷害提升$"="Increase DMG Dealt"
 r:"^受傷害提升$"="Increase DMG Taken"	
 r:"^受到傷害提升$"="Increase DMG Taken"
+r:"^受HL傷害提升$"="Increase HIGHLIGHT DMG Taken"
 r:"^受到百分比傷害降低$"="Decrese DMG Taken percentage"
 r:"^受百分比傷害降低$"="Decreases DMG Taken%"
 r:"^火焰傷害提升$"="Increase Fire DMG"
@@ -752,6 +757,7 @@ r:"^耐性穿透提升(\d+%)$"="Increase Effect RES Ignore by $1"
 Inspect Details - BUFF
 ----------
 各項屬性提升=Many stats up
+sr:"^所有怪盜(.*)提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' $1 by $2"
 r:"^護盾值：(\d+)$"="Shield: $1"
 r:"^生命值提升(\d+(.\d+)?(%)?)$"="Increase HP by $1"
 r:"^最大生命值提升(\d+(.\d+)?(%)?)$"="Increase Max HP by $1"
@@ -787,6 +793,8 @@ r:"^造成傷害提高(\d+%)，可疊加(\d+)層$"="Increase DMG Dealt by $1, up
 r:"^技能傷害提升(\d+(.\d+)?(%)?)$"="Increase skill damage by $1"
 r:"^追加效果暴擊效果提升(\d+%)、攻擊力提升(\d+%)$"="Increase Follow Up CRIT DMG by $1 and Follow Up ATK by $2"
 r:"^追加效果的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up Final DMG by $1"
+r:"^追加效果造成最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up Final DMG by $1"
+r:"^使用HL時，造成傷害提高(\d+(.\d+)?(%)?)$"="Increase HIGHLIGHT DMG Dealt by $1"
 r:"^HIGHLIGHT技能的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase HIGHLIGHT Final DMG by $1"
 r:"^傷害減免(\d+(.\d+)?(%)?)$"="Increase DMG RES by $1"
 r:"^受到的傷害降低(\d+(.\d+)?(%)?)"="Decrease DMG Taken by $1"
@@ -801,6 +809,7 @@ r:"^射擊傷害提升(\d+(.\d+)?(%)?)$"="Increase Gun DMG by $1"
 r:"^火焰傷害提高(\d+(.\d+)?(%)?)$"="Increase Fire DMG by $1"
 r:"^火炎傷害提升(\d+(.\d+)?(%)?)$"="Increase Fire DMG by $1"
 r:"^冰凍傷害提升(\d+(.\d+)?(%)?)$"="Increase Ice DMG by $1"
+r:"^冰凍傷害提高(\d+(.\d+)?(%)?)$"="Increase Ice DMG by $1"
 r:"^凍結傷害提升(\d+(.\d+)?(%)?)$"="Increase Ice DMG by $1"
 r:"^每層提升(\d+(.\d+)?(%)?)的凍結傷害$"="Increase Ice DMG by $1 per stack"
 r:"^電擊傷害提升(\d+(.\d+)?(%)?)$"="Increase Elec DMG by $1"
@@ -811,6 +820,7 @@ r:"^念動傷害提高(\d+(.\d+)?(%)?)$"="Increase Psy DMG by $1"
 r:"^核熱傷害提升(\d+(.\d+)?(%)?)$"="Increase Nuke DMG by $1"
 r:"^每層提升(\d+(.\d+)?(%)?)的核熱傷害$"="Increase Nuke DMG by $1 per stack"
 r:"^祝福傷害提升(\d+(.\d+)?(%)?)"="Increase Bless DMG by $1"
+r:"^祝福傷害提高(\d+(.\d+)?(%)?)"="Increase Bless DMG by $1"
 r:"^詛咒傷害提升(\d+(.\d+)?(%)?)$"="Increase Curse DMG by $1"
 r:"^萬能傷害提升(\d+(.\d+)?(%)?)$"="Increase Almighty DMG by $1"
 r:"^治療效果提升(\d+(.\d+)?(%)?)$"="Increase Healing Effect by $1"
@@ -836,8 +846,10 @@ r:"^受到暴擊效果提升(\d+(.\d+)?(%)?)$"="Increase CRIT DMG Taken by $1"
 r:"^效果抵抗降低(\d+(.\d+)?(%)?)$"="Decrease Effect RES by $1"
 受到的傷害提升=Increase DMG Taken
 r:"^受傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Taken by $1"
+r:"^受到傷害提高(\d+(.\d+)?(%)?)$"="Increase DMG Taken by $1"
 r:"^受到傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Taken by $1"
 r:"^受到的傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Taken by $1"
+r:"^詛咒反噬達到(\d+)層，受HIGHLIGHT傷害提升(\d+%)$"="Reached $1 stacks of Curse Reversal; \nIncrease HIGHLIGHT DMG Taken by $2"
 r:"^受到追擊傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up DMG Taken by $1"
 r:"^受最終傷害提升(\d+%)，可疊加(\d+)層$"="Increase Final DMG Taken by $1, \nup to $2 stacks"
 r:"^造成傷害降低(\d+(.\d+)?(%)?)$"="Decrease DMG Dealt by $1"
@@ -854,3 +866,5 @@ r:"^受到祝福屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase Bless DMG Taken b
 r:"^受到的治療效果降低(\d+(.\d+)?(%)?)$"="Decrease Healing Received by $1"
 
 r:"^回合末失去一定生命值，最終受到傷害提升(\d+%)，可疊加(\d+)層$"="<size\=24>Lose a certain amount of HP at the end of the turn; \nIncrease Final DMG Taken by $1, up to $2 stacks</size>"
+r:"^造成傷害提高(\d+%)、每回合流失一定生命值，可疊加(\d+)層，不可被驅散$"="<size\=24>Lose a certain amount of HP at the end of the turn; \nIncrease DMG Dealt by $1, up to $2 stacks; \nCannot be dispelled</size>"
+r:"^回合末失去一定生命值，攻擊力提升(\d+%)，可疊加(\d+)層$"="<size\=24>Lose a certain amount of HP at the end of the turn; \nIncrease ATK by $1, up to $2 stacks</size>"
