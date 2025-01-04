@@ -25,6 +25,7 @@ r:"^已挑戰(\d+)次$"="Attempt(s): $1"
 r:"^挑戰獎勵：$"="Rewards:"
 陣容參考=Reference
 r:"^採用比例：(\d+(.\d+)?(%)?)$"="Use Rate: $1"
+r:"^需至少設置(\d+)名出戰怪盜，才能進行挑戰。$"="Need to have at least $1 Thieves in order to challenge."
 
 r:"^將<color\=#ffc000>返還</color>消耗的<color\=#ffc000>精神力</color>及<color\=#ffc000>參與次數</color>；\n並<color\=#ff3b37>放棄</color>本次<color\=#ff3b37>挑戰結果</color>。\n是否確認？$"="<color\=#ffc000>Return all</color> consumed <color\=#ffc000>Mental Energy</color> and <color\=#ffc000>Thieves Usage</color>;\n<color\=#ff3b37>Abandon</color> this <color\=#ff3b37>challenge</color>.\nAre you sure?"
 
@@ -59,6 +60,8 @@ sr:"^通過全部「監測點」\((.*)\/(.*)\)$"="Cleared all [Monitoring Points
 ----------
 MODIFIERS
 ----------
+r:"^(.*)磁場$"="Stellar Magnetic Field"
+
 r:"^<color\=#FFFC40>反抗</color>怪盜最終傷害提高(\d+(.\d+)?(%)?)$"="Increase the Final DMG of <color\=#FFFC40>Rebel</color> Thieves by $1"
 r:"^<color\=#FFFC40>反抗</color>怪盜最終傷害提高(\d+%)，其他怪盜最終傷害降低(\d+%)$"="Increase the Final DMG of <color\=#FFFC40>Rebel</color> Thieves by $1, decrease the Final DMG of other Thieves by $2"
 r:"^<color\=#FFFC40>支配</color>怪盜最終傷害提高(\d+(.\d+)?(%)?)$"="Increase the Final DMG of <color\=#FFFC40>Dominate</color> Thieves by $1"
@@ -80,7 +83,8 @@ r:"^所有敵人每有一種<color\=#FFFC40>元素異常</color>狀態，受到�
 r:"^敵人能受到大部分<color\=#FFFC40>精神異常</color>狀態；所有隊員造成<color\=#FFFC40>精神異常</color>狀態時，效果命中大幅提升；處於<color\=#FFFC40>精神異常</color>狀態的敵人受到最終傷害提升(\d+%)$"="Enemies are susceptible to most <color\=#FFFC40>Mental Ailments</color>; Heavily increase all Thieves' EHR when inflicting <color\=#FFFC40>Mental Ailments</color>; Increase the Final DMG Taken of enemies with <color\=#FFFC40>Mental Ailments</color> by $1"
 r:"^效果1：敵人受到<color\=#FFFC40>ONEMORE/{{A}}</color>傷害提高(\d+%)\n效果2：戰鬥開始及敵人回合開始時，敵人隨機獲得1種屬性弱點（只會存在最新獲得的弱點）$"="Effect 1: Increase all enemies' <color\=#FFFC40>ONEMORE/All-Out Attack</color> DMG Taken by $1\nEffect 2: At the start of battle and start of enemies' turn, all enemies randomly gain 1 Weakness (Only the newest Weakness will stay)."
 r:"^所有敵人每受到(\d+)次來自怪盜的傷害，使該名怪盜最終傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="<size\=25>After enemies take $1 hit of damage from a Thief, increase that Thief's Final DMG by $2 for $3 turns, up to $4 stacks</size>"
-r:"^所有隊員在某回合結束至下一回合結束期間，未造成傷害時，使自身最終傷害提升(\d+(.\d+)?(%)?)，持續(\d+)回合$"="<size\=28>Increase all Thieves' Final DMG by $1 for $2 turn if they all did not deal damage for 1 turn</size>"
+r:"^所有隊員在某回合結束至下一回合結束期間，未造成傷害時，使自身最終傷害提升(\d+%)，持續(\d+)回合$"="<size\=28>Increase all Thieves' Final DMG by $1 for $2 turn if they did not deal damage for 1 turn</size>"
+r:"^<color\=#FF0000>{{A}}</color>一回合內未造成傷害，下回合最終傷害提升……$"="<color\=#FF0000>{{A}}</color> dealt no damage, \nnext turn Final DMG Up!"
 
 r:"^效果1：所有敵人最終生命值降低(\d+%)，每回合末回復(\d+%)最大生命值\n效果2：所有敵人當前生命值越低，受到最終傷害越高，低於(\d+%)生命值時最多使受到最終傷害提升(\d+%)$"="Modifier 1: Decrease the Final HP of all enemies by $1, restore $2 Max HP at the end of each turn\nModifier 2: Increase the Final DMG of all enemies the lower their HP are, up to $4 when they are below $3 HP"
 r:"^HIGHLIGHT能量回復速度降低(\d+%)，所有怪盜HIGHLIGHT的最終傷害提高(\d+%)"="<size\=28>Decrease HIGHLIGHT Energy recovery rate by $1, increase all HIGHLIGHT Final DMG by $2</size>"
