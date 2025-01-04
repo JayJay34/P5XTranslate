@@ -95,6 +95,7 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 頭槌=Headbutt
 永眠突襲=Dormin Rush
 鬼神樂=Oni-Kagura
+負面意識堆疊=Negative Pile
 斬擊=Slash
 十文字斬=Cross Slash
 勇氣之聲=Brave Blade
@@ -104,6 +105,7 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 巨人之戰=Gigantomachia
 榮耀衝擊=Glory Impact
 靈魂禁錮=Soul Imprisonment
+荊棘之槍=Gae Bulg
 八艘跳躍=Hassou Tobi
 八艘飛躍=Hassou Tobi
 痛苦宣判=<size\=22>Painful Judgement</size>
@@ -154,7 +156,7 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 電流踴動=Electric Surge
 真理之雷=Thunder Reign
 崇高聖戰=Wild Thunder
-天召雷=Heavenly Thunder
+天召雷=<size\=22>Heavenly Thunder</size>
 
 --- Wind ---
 
@@ -181,7 +183,7 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 念動破壞=Psy Destruction
 精神波動=Mental Wave
 心魔擊=Devious Strike
-毀滅之舞=<size\=19>Dance of Destruction</size>
+{{A}}之舞=<size\=19>Dance of Destruction</size>
 
 --- Nuke ---
 
@@ -207,8 +209,8 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 哈瑪翁=Hamaon
 瑪翰瑪=Mahama
 瑪翰瑪翁=Mahamaon
-神之審判=Divine Judgement
-黑白無界=<size\=20>Desire of Life Shell</size>
+神之審判=<size\=23>Divine Judgement</size>
+黑白無界=<size\=20>Desire for Life Shell</size>
 迴轉說法=Samsara
 救贖的光輝=<size\=23>Light of Salvation</size>
 絕對服從=<size\=20>Absolute Obedience</size>
@@ -458,7 +460,9 @@ sr:"對1名敵人造成(\d+)次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.
 sr:"對1名敵人造成(\d+\~\d+)次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。"=Deals <color\=#FFFF00>$2</color> ATK $3 damage to <color\=#FFFF00>1</color> enemy $1 times.
 
 //ST + Ailment
-sr:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，效果持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to 1 enemy, with a <color\=#FFFF00>$3</color> base chance to inflict $4 for 2 turns.
+sr:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，效果持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to 1 enemy, with a <color\=#FFFF00>$3</color> base chance to inflicts $4 for 2 turns.
+
+sr:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，效果持續3回合。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to 1 enemy, with a <color\=#FFFF00>$3</color> base chance to inflicts $4 for 3 turns.
 
 //AoE
 sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies.
@@ -515,6 +519,9 @@ sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬�
 
 Painful Judgement
 r:"^對1名敵人造成(\d+)段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，使敵人附加「噩夢」效果並且附帶<color\=#fffc40>(\d+\.\d+%)</color>基礎機率<link\="s\|157"><u>恐懼</u></link>效果。$"="Deals <color\=#fffc40>$2</color> ATK Physical damage to 1 enemy $1 times, inflicts the enemy with [Nightmare] and there is a <color\=#fffc40>$3</color> base chance to inflict <link\="s|157"><u>Fear</u></link>."
+
+Gae Bulg
+r:"^造成1段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理傷害，受攻擊敵人每有1層減益則該技能暴擊率提高(\d+%)，最多獲得(\d+%)暴擊率加成。$"="Deals <color\=#fffc40>$1</color> ATK Physical damage to 1 enemy, increases CRIT Rate by $2 for every stack of debuffs the enemy have, up to $3 CRIT Rate Bonus."
 
 Hassou Tobi
 r:"^對全體敵人造成8段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，每有1個敵人，該技能傷害提升(\d+%)，最多提升(\d+%)。$"="Deals <color\=#fffc40>$1</color> ATK Physical damage to all enemies 8 times. For every 1 enemy, increases skill damage by $2, up to $3."
@@ -608,7 +615,7 @@ r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬�
 //AoE Bless Instakill
 r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，對50%生命值以下的敵人附加低機率祝福屬性即死效果，生命值越低機率越高。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>all</color> enemies with a chance of Instant Death to enemies under 50% HP. The lower the HP, the higher the chance.
 
-Desire of Life Shell
+Desire for Life Shell
 r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使1名生命值最低的同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值。\n<b><size\=28><color\=#024068>斧槍揮出的軌跡在空中瞬間交錯，對所有沒有防備的敵方造成傷害，交點處迸射出的弧光療癒了同伴。</color></size></b>$"="Deals <color\=#fffc40>$1</color> ATK Bless damage to all enemies and restores <color\=#fffc40>$2</color> ATK + <color\=#fffc40>$3</color> HP to the lowest HP ally.\n<b><size\=28><color\=#024068>The trajectories of the axe and spear swing intersect instantly in the air, dealing damage to all unsuspecting enemies, and the arcs of light bursting from the intersections heal your companions.</color></size></b>"
 
 Samsara
@@ -736,8 +743,14 @@ r:"^使1名同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#ff
 // Hunter's Code
 r:"使1名同伴造成的傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，目標同伴每有20%效果命中，則獲得<color\=#fffc40>(\d+\.\d+%)</color>的額外增傷，上限<color\=#fffc40>(\d+\.\d+%)</color>，效果持續2回合。"=Increase 1 ally's damage dealt by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 20% Effect Hit Rate the ally has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
 
+Charge
+r:"使自身下1次造成的物理屬性傷害提升<color\=#fffc40>(\d+\.\d+%)</color> ，效果持續1回合。"=Increases your next Physical attack damage by <color\=#fffc40>$1</color> for 1 turn.
+
 //Concentrate
-r:"使自身下1次造成的魔法屬性傷害提升<color\=#fffc40>(\d+\.\d+%)</color> ，效果持續1回合。"=Increase Wonder's next Magic attack damage by <color\=#fffc40>$1</color> for 1 turn.
+r:"使自身下1次造成的魔法屬性傷害提升<color\=#fffc40>(\d+\.\d+%)</color> ，效果持續1回合。"=Increases your next Magic attack damage by <color\=#fffc40>$1</color> for 1 turn.
+
+Heat Riser
+r:"^使1名友方攻擊、防禦、效果命中、效果抵抗提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續3回合。$"="Increases 1 ally's ATK, DEF, EHR, and Effect RES by <color\=#fffc40>$1</color> for 3 turns."
 
 //(dominion)
 r:"使所有同伴的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每500攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)，效果持續2回合。並使技能主目標造成的傷害額外提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每500攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)。效果持續1回合。"=Increase all allies' ATK by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 500 ATK you have to a maximum of <color\=#fffc40>$3</color> for 3 turns. Increase ATK of the main target by an additional <color\=#fffc40>$4</color> + <color\=#fffc40>$5</color> for every 500 ATK you have to a maximum of <color\=#fffc40>$6</color> for 1 turn.
@@ -850,6 +863,7 @@ r:"物理攻擊(\d+%)機率反射，造成(\d+%)攻擊力物理屬性傷害。"=
 群攻=AoE
 群體=AoE
 單傷=ST
+單攻=ST
 主動=Active
 主動技能=Active
 被動=Passive
@@ -876,8 +890,8 @@ r:"物理攻擊(\d+%)機率反射，造成(\d+%)攻擊力物理屬性傷害。"=
 冰凍屬性傷害=Ice DMG
 疾風=Wind
 疾風屬性傷害=Wind DMG
-電擊=Electric
-電擊屬性傷害=Electric DMG
+電擊=Elec
+電擊屬性傷害=Elec DMG
 念動=Psy
 念動屬性傷害=Psy DMG
 核熱=Nuke
@@ -899,6 +913,7 @@ r:"物理攻擊(\d+%)機率反射，造成(\d+%)攻擊力物理屬性傷害。"=
 <link\="s|108"><u>遺忘</u></link>=<link\="s|108"><u>Forget</u></link>
 <link\="s|109"><u>睡眠</u></link>=<link\="s|109"><u>Sleep</u></link>
 <link\="s|110"><u>狂怒</u></link>=<link\="s|110"><u>Rage</u></link>
+<link\="s|155"><u>絕望</u></link>=<link\="s|155"><u>Despair</u></link>
 <link\="s|111"><u>祝福</u></link>=<link\="s|111"><u>Blessed</u></link>
 <link\="s|112"><u>詛咒</u></link>=<link\="s|112"><u>Cursed</u></link>
 <link\="s|156"><u>混亂</u></link>=<link\="s|156"><u>Confuse</u></link>
