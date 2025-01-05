@@ -362,7 +362,13 @@ r:"^無法行動，受到傷害提升(\d+%)$"="Cannot act, increase DMG Taken by
 r:"^對所有敵人造成(\d+)~(\d+)次物理屬性傷害。$"="Deals Physical damage to all enemies $1-$2 times."
 弧旋崇拜球=Screwball of Warship
 爆裂崇拜球=Blitzball of Warship
-對1名敵人造成物理屬性傷害。=Deals Physical damage to 1 enemy.
+sr:"^對1名敵人造成(.*)屬性傷害$"="Deals $1 damage to 1 enemy"
+sr:"^對1名敵人造成特大(.*)屬性傷害=Deals Severe $1 damage to 1 enemy"
+sr:"^對1名敵人造成(.*)屬性傷害。$"="Deals $1 damage to 1 enemy."
+sr:"^對所有敵人造成(.*)屬性傷害$"="Deals $1 damage to all enemies"
+sr:"^對所有敵人造成(.*)屬性傷害。$"="Deals $1 damage to all enemies."
+sr:"^對所有敵人造成大量(.*)屬性傷害$"="Deals Heavy $1 damage to all enemies"
+
 {{A}}，未嘗一敗={{A}}, never known defeat
 {{A}}，王牌投手={{A}}, ace pitcher
 
@@ -394,7 +400,6 @@ PALACE 2 BOSS
 主角之假動作=Protagonist's Feint
 主角之斬殺=Protagonist's Execution
 超正直懲戒=Upright Punishment
-對所有敵人造成詛咒屬性傷害=Deals Curse damage to all enemies
 替身時刻=Double Moment
 真身與替身交換位置=Exchange places with the doubles
 主角之逆刃=Protagonist's Counter
@@ -402,13 +407,11 @@ PALACE 2 BOSS
 下回合造成傷害大幅提高=Heavily increase DMG Dealt next turn
 一刀流·蒙太奇=One Sword Style - Montage
 四刀流·一人成軍=<size\=24>Four Sword Style - One Man Army</size>
-對1名敵人造成詛咒屬性傷害=Deals Curse damage to 1 enemy
 未能擊殺魔劍真身時對所有敵人造成大量萬能傷害。=Deals heavy Almighty damage to all enemies when enemies failed to break the real sword
 對所有敵人造成詛咒屬性傷害，對50%生命值以下的敵人附加低機率詛咒屬性即死效果，生命值越低機率越高。=Deals Curse damage to all enemies with a chance of Instant Death to enemies under 50% HP. The lower the HP, the higher the chance.
 奧義·明星亂舞=Ultimate - Star Flurry
 對所有敵人造成詛咒屬性傷害，使迷惑的敵人陷入洗腦狀態，持續2回合=Deals Curse damage to all enemies, and inflicts Brainwash to enemies with Bewilder for 2 turns.
 一刀流·不動如山=<size\=24>One Sword Style - Firm Stance</size>
-對所有敵人造成物理屬性傷害=Deals Physical damage to all enemies
 特寫迴旋斬=Close-Up Roundhouse Slash
 對所有敵人造成少量萬能傷害，對鎖定的敵人額外造成大量萬能傷害=Deals light Almighty damage to all enemies, additionally deals heavy Almighty damage to the locked on enemy
 無刀流·狂怒=No Sword Style - Rage
@@ -435,7 +438,7 @@ r:"^惱<color\=#000000>羞</color>成怒$"="<size\=24> </size>A<color\=#000000>n
 r:"^眩<color\=#000000>暈</color>$"="<size\=16> </size>D<color\=#000000>iz</color>zy"
 
 ----------
-PALACE 3 BOSS + ELITES
+PALACE 3 BOSS
 ----------
 r:"^拯救{{A}}$"="Rescue {{A}}"
 r:"^擊破{{A}}的護盾$"="Break {{A}}'s Shield"
@@ -454,16 +457,13 @@ r:"^對所有敵人造成物理屬性傷害，有極低機率使敵人陷入<lin
 怒意=Wrathful
 使自身造成傷害提高，並獲得一定{{A}}值=Increases own DMG Dealt; \nGain a certain amount of {{A}} Gauge
 狂亂指導=Hysterical Guidance
-對所有敵人造成大量電擊屬性傷害=Deals heavy Electric damage to all enemies
 激情之翼刃=Winged Blade of Passion
-對1名敵人造成特大物理屬性傷害=Deals severe Physical damage to 1 enemy
 被{{A}}鎖定，將受到「激情之翼刃」的攻擊=<size\=27>Locked on by {{A}}, \nwill be attacked by [Winged Blade of Passion]</size>
 野性之咆哮=Wild Roar
 {{A}}之天雷=Thunder of {{A}}
 
 r:"^使1名同伴的攻擊力提升，效果持續(\d+)回合。$"="Increases 1 ally's ATK for $1 turns."
 r:"^對所有敵人造成物理屬性傷害，有極低機率使敵人陷入<link\="s\|107"><u>暈眩</u></link>狀態，效果持續(\d+)回合。$"="Deals Physical damage to all enemies, with a very low chance to inflict <link\="s|107"><u>Dizzy</u></link> for $1 turns."
-對所有敵人造成物理屬性傷害。=Deals Physical damage to all enemies
 r:"^使自身攻擊、防禦、效果命中、效果抵抗提升，效果持續(\d+)回合。$"="Increases own ATK, DEF, EHR, \nand Effect RES for $1 turns."
 
 庇護=Protection
@@ -481,6 +481,9 @@ r:"^護盾被擊破，{{B}}的{{A}}值大幅降低了……$"="<size\=24>Shield 
 
 化身為「基什基爾·莉拉」的惡魔，灼熱的情感，赤紅的身軀，以及附著可怖眼球的邪惡之翼。在她歇斯底里的狂怒中卻摻雜著不和諧的恐懼與掙扎——這股力量並非來自於她本身，而是源自外部壓倒性的惡意。=A demon in the form of "Kiskil-lilla", with a fiery aura, scarlet body, and evil wings with terrifying eyes. Underneath her hysterical wrath is a mix of discordant fear and struggle- For this power did not come from her own, but from an outside source with overwhelming malice.
 
+----------
+PALACE 3 ELITES
+----------
 1、獲得屬性減益效果後，詭譎的{{A}}獲得一層「審判_惡」。\n2、獲得屬性增益效果後，詭譎的{{A}}獲得一層「審判_善」。\n3、「審判_善」和「審判_惡」會相互抵消。\n4、「審判_善」或「審判_惡」達到5層時，詭譎的{{A}}會使用技能「審判降臨」，對我方造成大量傷害。=1. After inflicted with debuffs, Anubis will gain 1 stack of [Judgement_Evil]. \n2. After receiving buffs, Anubis will gain one stack of [Judgement_Good]. \n3. [Judgement_Good] and [Judgement_Evil] cancel each other out. \n4. When [Judgement_Good] or [Judgement_Evil] reaches 5 stacks. Anubis will use [Judgement Descent], dealing heavy damage to all enemies.
 1、我方怪盜使用減益技能或攻擊技能後，詭譎的{{A}}獲得一層<color\=#ff3b37>「審判_惡」</color>。\n2、我方怪盜使用增益技能或治療技能後，詭譎的{{A}}獲得一層<color\=#ff3b37>「審判_善」</color>。\n3、<color\=#ff3b37>「審判_善」</color>和<color\=#ff3b37>「審判_惡」</color>會相互抵消。\n4、<color\=#ff3b37>「審判_善」</color>或<color\=#ff3b37>「審判_惡」</color>達到5層時，詭譎的{{A}}會使用技能<color\=#ff3b37>「審判降臨」</color>，對我方造成大量傷害。=1. After allies used debuff or attack skills, Anubis will gain 1 stack of <color\=#ff3b37>[Judgement_Evil]</color>\n2. After allies used buff skills or healing skills, Anubis will gain 1 stack of <color\=#ff3b37>[Judgment_Good]</color>. \n3. <color\=#ff3b37>[Judgment_Good]</color> and <color\=#ff3b37>[Judgement_Evil]</color> will cancel each other out.\n4. When <color\=#ff3b37>[Judgment_Good]</color> or <color\=#ff3b37>[Judgement_Evil]</color> reaches 5 stacks, Anubis will use <color\=#ff3b37>[Judgement Descent]</color>, dealing heavy damage to all enemies.
 審判降臨=Judgement Descent
@@ -522,6 +525,52 @@ r:"^傷害減免(\d+%)；buff結束時，變成{{A}}$"="Increase DMG RES by $1; 
 
 禁療=No Healing
 無法被治療=Cannot be healed
+
+----------
+PALACE 4 BOSS
+----------
+被鎖定的怪盜及時採取應對措施=Locked on Thief take countermeasures
+盡快擊破能量罐=Break the Energy Tank as soon as possible
+尋找破敵的方法=Find ways to defeat the enemy
+
+能量罐=Energy Tank
+
+((A))性諮詢=Destructive Consult
+自我修復=Self Repair
+擊殺敵人後恢復大量能量值及少量生命值=Restores Energy and HP after defeating enemies
+定位=Locate
+鎖定一名敵人=Locks on 1 enemy
+爆裂指引=Explosion Guide
+r:"^消耗(\d+)點能量對鎖定的敵人造成大量物理傷害，若擊倒敵人，回復(\d+)點能量值及(\d+%)的最大生命值$"="Consumes $1 Energy to deal Heavy Physical damage to the locked on enemy. If this downs an enemy, restores $2 Energy and $3 Max HP"
+諮詢·終止=Consult·Terminate
+r:"^能量值達到(\d+)點時釋放，消耗(\d+)點能量值對所有敵人造成特大量核熱屬性傷害$"="Use when reaching $1 Energy, consumes $2 Energy to deal Severe Nuke damage to all enemies"
+
+{{A}}·轟擊={{A}}·Bombardment
+{{A}}·掃蕩光線={{A}}·Sweeping Ray
+{{A}}·捕獵陷阱={{A}}·Hunting Trap
+r:"^使1名敵人陷入精神異常，並吸取其(\d+)點精力值將其存入能量罐$"="Inflicts 1 enemy with Mental Ailment, drains $1 SP to stores them in the Energy Tank"
+{{A}}·滅絕光線={{A}}·Extinction Ray
+
+黑洞衝擊=Black Hole Impact
+消耗自身生命值對1名敵人造成核熱屬性傷害=Consumes own HP to deal Nuke damage to 1 enemy
+無差別獵殺=Indiscriminate Hunting
+消耗自身生命值對所有敵人造成核熱屬性傷害=Consumes own HP to deal Nuke damage to all enemies
+{{A}}·盛宴={{A}}·Feast
+r:"^對所有敵人造成萬能傷害，無視其防禦力，吸取其(\d+)點精力值並使自身恢復一定生命值。$"="Deals Almighty damage to all enemies, ignores DEF, drains $1 SP and restores own HP."
+{{A}}·致命打擊={{A}}·Fatal Blow
+消耗自身生命值對所有敵人造成大量核熱屬性傷害=Sacrifices own HP to deal Heavy Nuke damage to all enemies
+
+吞噬=Devour
+消化=Digest
+犧牲自己一定生命值來充能=Sacrifices own HP to charge
+萬物吞噬=Devour All
+消耗所有能量對所有敵人造成巨量核熱屬性傷害=Consumes all Energy to deal Colossal Nuke damage to all enemies
+
+能量值=Energy
+飛天狀態=Flying Form
+
+r:"^<color\=#FF0000>{{A}}</color>陷入了{{B}}的陷阱……$"="<size\=24><color\=#FF0000>{{A}}</color> fallen into {{B}}'s trap!</size>"
+r:"^<color\=#FF0000>{{B}}</color>陷入了{{A}}的陷阱……$"="<size\=24><color\=#FF0000>{{B}}</color> fallen into {{A}}'s trap!</size>"
 
 ----------
 PALACE 4 ELITES
@@ -570,6 +619,31 @@ CROSS FATE PALACE (CF) (COLLAB)
 講堂=Auditorium
 感覺已經沒有可以調查的地方了……=Feels like there is no place \nleft to investigate...
 門是關著的，但似乎沒有上鎖……=This door is closed, but it doesn't seem to be locked...
+
+----------
+MEMNTOS 1
+----------
+r:"^1、{{A}}擁有<color\=#ffd700>「金之領域」</color>，造成傷害時使隨機陰影獲得1層<color\=#ffd700>「金剛不壞」</color>狀態。\n<color\=#ffd700>「金剛不壞」</color>：免疫下次受到的傷害。\n2、{{A}}擁有<color\=#ffd700>「金剛不壞」</color>時，造成傷害提高。$"="1. {{A}} have <color\=#ffd700>[Golden Domain]</color>, when dealing damage give 1 random Shadow 1 stack of <color\=#ffd700>[Unbreakable]</color>.\n<color\=#ffd700>[Unbreakable]</color>: Immunity to the next damage received.\n2. When {{A}} have <color\=#ffd700>[Unbreakable]</color>, increase DMG Dealt."
+金之領域=Golden Domain
+金剛不壞=Unbreakable
+造成傷害時使我方隨機一名單位獲得一層金剛不壞狀態=When dealing damage, give 1 random ally 1 stack of Unbreakable
+r:"^金<color\=#000000>剛</color>不壞$"="<size\=24> </size>U<color\=#000000>n</color>breakable"
+
+r:"^1、{{A}}擁有<color\=#81ea2c>「風之領域」</color>，造成傷害時有(\d+%)基礎機率使目標進入2回合<color\=#81ea2c>「超風襲」</color>狀態。\n<color\=#81ea2c>「超風襲」</color>：{{A}}施加的特殊風襲狀態，防禦力降低(\d+%)。\n2、{{A}}對處於<color\=#81ea2c>「超風襲」</color>狀態的怪盜造成傷害提高。$"="1. {{A}} have <color\=#81ea2c>[Wind Domain]</color>, when dealing damage there is a $1 base chance to inflict the targets with <color\=#81ea2c>[Super Winded]</color>.\n<color\=#81ea2c>[Super Winded]</color>: A debuff from {{A}}, decrease DEF by $2.\n2. {{A}} increase DMG Dealt to Thieves with <color\=#81ea2c>[Super Winded]</color>."
+風之領域=Wind Domain
+超風襲=Super Winded
+r:"^造成傷害時有(\d+%)基礎機率使目標進入(\d+)回合超風襲狀態$"="When dealing damage, there is a $1 base chance to inflict Super Winded for $2 turns"
+r:"^風<color\=#000000>之</color>領域$"="<size\=1> </size>W<color\=#000000>in</color>d Domain"
+
+r:"^1、{{A}}擁有<color\=#00aeff>「冰之領域」</color>，造成傷害時有(\d+%)基礎機率使目標進入2回合<color\=#00aeff>「超凍結」</color>狀態。\n<color\=#00aeff>「超凍結」</color>：{{A}}施加的特殊凍結狀態，攻擊力降低(\d+%)。\n2、{{A}}對處於<color\=#00aeff>「超凍結」</color>狀態的怪盜造成傷害提高。$"="1. {{A}} have <color\=#00aeff>[Ice Domain]</color>, when dealing damage there is a $1 base chance to inflict the targets with <color\=#00aeff>[Super Freeze]</color>.\n<color\=#00aeff>[Super Freeze]</color>: A debuff from {{A}}, decrease ATK by $2.\n2. {{A}} increase DMG Dealt to Thieves with <color\=#00aeff>[Super Freeze]</color>."
+冰之領域=Ice Domain
+超凍結=Super Freeze
+r:"^造成傷害時有(\d+%)基礎機率使目標進入(\d+)回合超凍結狀態$"="When dealing damage, there is a $1 base chance to inflict Super Freeze for $2 turns"
+r:"^水<color\=#000000>之</color>領域$"="<size\=5> </size>Ic<color\=#000000>e</color> Domain"
+
+r:"^1、{{D}}初始擁有(\d+)層<color\=#ff3b37>「傷害減免」</color>，對處於元素異常狀態的怪盜造成傷害提高。\n2、{{C}}/{{B}}/{{A}}被擊敗時，會驅散1層{{D}}的<color\=#ff3b37>「傷害減免」</color>，{{D}}會繼承該鬼的「領域」。$"="1. {{D}} start with $1 stacks of <color\=#ff3b37>[Damage Resist]</color>, increase damage to Thieves with Elemental Ailments. \n2. When {{C}}/{{B}}/{{A}} is defeated, dispel 1 stack of <color\=#ff3b37>[Damage Resist]</color>, {{D}} will inherit that Oni's [Domain]."
+
+r:"^1、{{D}}擁有<color\=#81ea2c>「風之領域」</color>，造成傷害時有(\d+%)基礎機率使目標進入2回合<color\=#81ea2c>「超風襲」</color>狀態。\n<color\=#81ea2c>「超風襲」</color>：{{D}}施加的特殊風襲狀態，防禦力降低(\d+%)。\n2、{{C}}擁有<color\=#00aeff>「冰之領域」</color>，造成傷害時有(\d+%)基礎機率使目標進入2回合<color\=#00aeff>「超凍結」</color>狀態。\n<color\=#00aeff>「超凍結」</color>：{{C}}施加的特殊凍結狀態，攻擊力降低(\d+%)。\n3、{{B}}擁有<color\=#ffd700>「金之領域」</color>，造成傷害時使隨機陰影獲得1層<color\=#ffd700>「金剛不壞」</color>狀態。\n<color\=#ffd700>「金剛不壞」</color>：免疫下次受到的傷害。\n4、{{E}}初始擁有(\d+)層<color\=#ff3b37>「傷害減免」</color>，對處於元素異常狀態的怪盜造成傷害提高。\n5、{{D}}、{{C}}、{{B}}被擊敗時，會驅散1層{{E}}的<color\=#ff3b37>「傷害減免」</color>，{{E}}會繼承該鬼的「領域」與對應特性。其餘三鬼都被擊敗後，{{E}}會進入{{A}}狀態，最終傷害提升。\n6、陰影的能力隨著戰鬥回合增強，\n從第三回合開始，陰影每回合開始獲得<color\=#ff381d>「狂暴」</color>(\d+)層。\n從第五回合開始，陰影每回合開始獲得<color\=#ff381d>「狂暴」</color>(\d+)層。\n「狂暴」：獲得傷害加成(\d+%)，最多疊加(\d+)層。$"="1. {{D}} have <color\=#81ea2c>[Wind Domain]</color>, when dealing damage there is a $1 base chance to inflict the targets with <color\=#81ea2c>[Super Winded]</color>.\n<color\=#81ea2c>[Super Winded]</color>: A debuff from {{D}}, decrease DEF by $2.\n2. {{C}} have <color\=#00aeff>[Ice Domain]</color>, when dealing damage there is a $3 base chance to inflict the targets with <color\=#00aeff>[Super Freeze]</color>.\n<color\=#00aeff>[Super Freeze]</color>: A debuff from {{C}}, decrease ATK by $4.\n3. {{B}} have <color\=#ffd700>[Golden Domain]</color>, when dealing damage give 1 random Shadow 1 stack of <color\=#ffd700>[Unbreakable]</color>.\n<color\=#ffd700>[Unbreakable]</color>: Immunity to the next damage received.\n4. {{E}} start with $5 stacks of <color\=#ff3b37>[Damage Resist]</color>, increase damage to Thieves with Elemental Ailments. \n5. When {{D}}/{{C}}/{{B}} is defeated, dispel 1 stack of <color\=#ff3b37>[Damage Resist]</color>, {{E}} will inherit that Oni's [Domain]. Afer all 3 Oni are defeated, {{E}} will enter {{A}}, increase Final DMG. \n6. At the start of turn 3, all Shadows gain $6 stack of <color\=#ff381d>[Frenzy]</color> at the start of their turn.\nAt the start of turn 5, all Shadows gain $7 stacks of <color\=#ff381d>[Frenzy]</color> at the start of their turn.\n[Frenzy]: Increase DMG Bonus by $8, up to $9 stacks."
 
 ----------
 MEMENTOS 2
@@ -691,7 +765,6 @@ r:"^慾望之冠冕添加的護盾，剩餘護盾值：(\d+)$"="Shield given by 
 金小刀=Golden Knife
 金小叉=Golden Fork
 舌頭甩擊=Lick
-對1名敵人造成物理屬性傷害=Deals Physical damage to 1 enemy
 對全體敵人造成物理屬性傷害=Deals Physical damage to all enemies
 冠冕之力=Power of the Crown
 慾望之冠冕為{{A}}添加護盾，護盾存在時{{A}}造成傷害大幅提高=Crown of Desire gives a Shield to {{A}}, heavily increases {{A}}'s DMG Dealt \nwhen the Shield is present

@@ -9,6 +9,7 @@ r:"更新本地文件\((\d+)\/(\d+)\)"=<b>Applying Update ($1/$2)</b>
 r:"^用戶端版本號：(.*)  遊戲版本：(.*)  資源號：(.*)$"="Client Version: $1 Game Version: $2 Resource ID: $3"
 r:"^(.*)版本$"="Version $1"
 開始登入=Logging in...
+登入中……=Logging in...
 伺服器維護中，請查看遊戲公告。=Server is under maintenance.
 密  碼：=Password:
 用戶名：=Username:
@@ -168,6 +169,9 @@ sr:"^已為(.*)點讚。$"="Liked $1."
 暫時還沒有好友申請。=No Friend Request.
 暫無隱藏的玩家。=No Hidden Player.
 
+r:"^輸入上限(\d+)個字$"="Up to $1 characters"
+r:"^(\d+)天前$"="$1d ago"
+
 未完成=Missing
 
 提示=Tips
@@ -188,6 +192,8 @@ r:"^待設置$"="None"
 點擊加入Discord官方頻道=Join official Discord
 點擊跟隨官方X帳號=Follow official X
 點擊關注企業微信號=Follow WeChat
+兌換碼=Code
+請輸入兌換碼=Please enter the code
 
 ----------
 Character Names
@@ -643,6 +649,9 @@ r:"^限購：(\d+)次$"="Limit: $1"
 更換頭像=Avatar
 遮罩此人=Block
 r:"^每日最多可獲取<color\=#FF0000>10</color>點<link\="s\|1002"><u>助戰積分</u></link>。$"="Maximum <color\=#FF0000>10</color> <link\="s|1002"><u>Assist Points</u></link> per day."
+<color\=#66ccff>『助戰積分』</color>=<color\=#66ccff>[Assist Points]</color>
+協助其他玩家完成挑戰；\n或使用其他玩家協助怪盜，\n均可以獲得「助戰積分」。\n在「兌換·助戰回饋」中可以消耗積分兌換獎勵。=<size\=24>Gain [Assist Points] when: \nAssisting other players; \nUsing other player's Assist Thief. \nCan be used in [Assist Reward].
+『助戰積分』\n協助好友成功完成挑戰；挑戰時使用協助怪盜；均可以獲得助戰積分。=<size\=27>[Assist Points]\nGain [Assist Points] when: \nAssisting other players; \nUsing other player's Assist Thief. \nCan be used in [Assist Reward].</size>
 助戰積分=Assist Points
 未獲得更多助戰積分。=No Assist Points.
 
@@ -668,7 +677,7 @@ r:"主角達到(\d+)級可繼續突破"=Unlocks when Wonder is level $1
 r:"主角(\d+)級解鎖"=Level $1 Unlock
 r:"怪盜(\d+)級時可繼續提升"=Skill can level up at Lv $1
 不羈能力發覺後解鎖=<size\=16>Gain levels to unlock</size>
-長按怪盜可便捷進行培養=<size\=25>Hold press on the party\nmember to customize</size>
+長按怪盜可便捷進行培養=Long press to customize
 升級獎勵=Rewards
 sr:"^(.*)成長至(\d+)級（(\d+)/(\d+)）$"="<size\=30>Level $1 to Lv. $2 ($3/$4)</size>"
 
@@ -756,6 +765,7 @@ r:"^治療效果$"="<size\=22>Healing Effect</size>"
 詛咒傷害=Curse DMG
 萬能傷害=Almighty DMG
 總傷害加成=DMG Bonus
+造成傷害=DMG Dealt
 
 生命成長率=HP Growth
 攻擊成長率=ATK Growth
@@ -769,10 +779,14 @@ r:"^治療效果$"="<size\=22>Healing Effect</size>"
 r:"^怪盜等級上限提升至<color\=#FFF000>LV.(\d+)</color>$"="Increase max level to <color\=#FFF000>Lv.$1</color>"
 該怪盜已進化至滿級！=Awareness maxed!
 
+正在使用=Using
+{{A}}煥新=<size\=18>New {{A}}</size>
+HIGHLIGHT煥新=<size\=18>New HIGHLIGHT</size>
+
 ----------
 MENTAL IMAGE (MI)
 ---------
-每啟動或提升一次心象等級，心象點數+1。=+1 Mental Image point each time you activate or level up a Mental Image upgrade
+每啟動或提升一次心象等級，心象點數+1。=+1 Mental Image Points \neach time you activate or \nlevel up a Mental Image upgrade
 sr:"^心象提升屬性匯總\n(.*) <color\=#FEDA00>\+(.*)</color>\n$"="Mental Image Summary\n$1 <color\=#FEDA00>+$2</color>\n"
 sr:"^心象提升屬性匯總\n(.*) <color\=#FEDA00>\+(.*)</color>\n(.*) <color\=#FEDA00>\+(.*)</color>\n$"="Mental Image Summary\n$1 <color\=#FEDA00>+$2</color>\n$3 <color\=#FEDA00>+$4</color>\n"
 sr:"^心象提升屬性匯總\n(.*) <color\=#FEDA00>\+(.*)</color>\n(.*) <color\=#FEDA00>\+(.*)</color>\n(.*) <color\=#FEDA00>\+(.*)</color>\n$"="Mental Image Summary\n$1 <color\=#FEDA00>+$2</color>\n$3 <color\=#FEDA00>+$4</color>\n$5 <color\=#FEDA00>+$6</color>\n"
@@ -998,21 +1012,21 @@ r:"^本週累計今日計畫領獎次數\((\d)\/(\d)\)，可額外領取$"="Numb
 r:"^登入遊戲$"="Log in to the game"
 r:"^登入遊戲 \((\d+)\/1\)$"="Log in to the game ($1/1)"
 r:"進行1次{{A}}合成"=Fuse 1 Persona
-r:"完成1次「{{A}}」挑戰 \((\d)\/(\d)\)"=Complete 1 {{A}} Farm ($1/$2)\n<color\=#8F8D8D>(Stamina Cost depending on Rank)</color>
-r:"進行1次打工 \((\d)\/(\d)\)"=Complete a Part-time job ($1/$2)\n<color\=#8F8D8D>(1 Activity After School)</color>
+r:"完成1次「{{A}}」挑戰 \((\d)\/(\d)\)"=Complete 1 {{A}} Farm ($1/$2)
+r:"進行1次打工 \((\d)\/(\d)\)"=Complete a Part-time job ($1/$2)
 r:"消耗1000日元 \((\d+)\/1000\)"=Spend ¥$1 (¥$1/1000)
 r:"^消耗5000魂石 \((\d+)\/5000\)$"=Spend 5000 Soul Gens ($1/5000)
 
 r:"消耗3點行動力 \((\d)\/(\d)\)"=Spend 3 Energy Points ($1/$2)
 r:"消耗120點體力 \((\d+)\/120\)"=Spend 120 Stamina ($1/120)
-r:"進行1次邀約"=Spend time with a Confidant 1 time\n<color\=#8F8D8D>(Remember to buy a gift!)</color>
+r:"進行1次邀約"=Spend time with a Confidant 1 time
 r:"^完成2次「厄抑之境」 \((\d+)\/2\)"=Complete 2 Metaverse Farm ($1/2)
-r:"完成1次「啟示套裝」挑戰 \((\d)\/(\d)\)"=Complete 1 [Revelation Farm] ($1/$2)\n<color\=#8F8D8D>(Stamina Cost: 40)</color>
-r:"完成1次「旖旎香調」挑戰 \((\d)\/(\d)\)"=Complete 1 [Perfume Farm] ($1/$2)\n<color\=#8F8D8D>(Stamina Cost: 30)</color>
-r:"完成1次「裝配冶藝」挑戰 \((\d)\/(\d)\)"=Complete 1 [Ore Farm] ($1/$2)\n<color\=#8F8D8D>(Stamina Cost: 30)</color>
-r:"完成1次「靈之參悟」挑戰 \((\d)\/(\d)\)"=Complete 1 [Incense farm] ($1/$2)\n<color\=#8F8D8D>(Stamina Cost: 30)</color>
-r:"進行1次{{A}}育成 \((\d)\/(\d)\)"=Perfrom 1 Persona skill inheritance ($1/$2)\n<color\=#8F8D8D>(This uses a Persona Mark)</color>
-r:"^完成1次「往日回溯」挑戰 \((\d)\/(\d)\)$"="Complete 1 [Past Echo] ($1/$2)\n<color\=#8F8D8D>(Stamina Cost: 30)</color>"
+r:"完成1次「啟示套裝」挑戰 \((\d)\/(\d)\)"=Complete 1 [Revelation Farm] ($1/$2)
+r:"完成1次「旖旎香調」挑戰 \((\d)\/(\d)\)"=Complete 1 [Perfume Farm] ($1/$2)
+r:"完成1次「裝配冶藝」挑戰 \((\d)\/(\d)\)"=Complete 1 [Ore Farm] ($1/$2)
+r:"完成1次「靈之參悟」挑戰 \((\d)\/(\d)\)"=Complete 1 [Incense farm] ($1/$2)
+r:"進行1次{{A}}育成 \((\d)\/(\d)\)"=Perfrom 1 Persona skill inheritance ($1/$2)
+r:"^完成1次「往日回溯」挑戰 \((\d)\/(\d)\)$"="Complete 1 [Past Echo] ($1/$2)
 r:"^通關1次「閼凶夢之扉」 \((\d)\/(\d)\)$"="Complete 1 [Door of Nightmares] ($1/$2)"
 r:"^完成1次「天鵝絨試煉」 \((\d)\/(\d)\)$"="Complete 1 [Velvet Trial] ($1/$2)"
 r:"^完成1次「心之海試煉」 \((\d)\/(\d)\)$"="Complete 1 [Sea of Souls Trial] ($1/$2)"
@@ -1021,7 +1035,7 @@ r:"^完成1次「委託」派遣 \((\d)\/(\d)\)$"="<size\=29>Complete 1 Dispatch
 
 // WEEKLY //
 r:"累計消耗(\d+)魂石 \((\d+)\/(\d+)\)"=Spend a total of $1 Soul Gems ($2/100000)
-r:"累計消耗(\d+)日元 \((\d+)\/(\d+)\)"=Spend a total of ¥$2 (¥$1/¥$2)
+r:"累計消耗(\d+)日元 \((\d+)\/(\d+)\)"=Spend a total of ¥$1 (¥$2/¥$3)
 r:"累計消耗(\d+)點行動力 \((\d+)\/(\d+)\)"=Spend a total of 25 Energy Points ($2/25)
 r:"累計消耗(\d+)點體力 \((\d+)\/(\d+)\)"=Spend a total of 1,250 Stamina ($2/1250)
 r:"^累計完成12次「厄抑之境」 \((\d+)\/(\d+)\)$"=Complete 12 Farming Domain ($1/12)
@@ -1323,7 +1337,8 @@ Confidants (SL) and City Activities
 ----------
 行動力=Energy
 行動值=Energy Points
-『行動值』\n探索都市所需的基本能量，每天會自動恢復。\n每日05:00恢復5點。=[Energy Points] \nEnergy needed for city activities. \nAutomatically restore 5 at 05:00 every day.
+『現金』\n都市流通貨幣……應該可以用於都市行程中的各類支出。=<size\=28>[Yen]\nCity currency. \nCan be used for various expenditures in City Activities.</size>
+『行動值』\n探索都市所需的基本能量，每天會自動恢復。\n每日05:00恢復5點。=<size\=28>[Energy Points] \nEnergy needed for city activities. \nAutomatically restore 5 Points \nat 5 AM (UTC+8) every day.</size>
 高額獎勵：<color\=#FFFF00>1倍</color>=<size\=24>Bonus Activities: <color\=#FFFF00>1x</color></size>
 高額獎勵：<color\=#FFFF00>3倍</color>=<size\=24>Bonus Activities: <color\=#FFFF00>3x</color></size>
 「高額獎勵」日程將消耗1點行動力，並獲得1倍獎勵。=The [Bonus Activities] will consume 1 Energy and give 1x rewards.
@@ -2081,7 +2096,7 @@ r:"^可領取$"="Claim"
 
 {{A}}可沒在裡面放可怕的東西哦～？=I didn't put anything scary in there～
 確定買這個嗎？=Are you sure you want to buy this?
-看清楚啦～不要買錯了阿！=Look closely～\nDon’t buy the wrong one!
+看清楚啦～不要買錯了阿！=Look closely～\nDon't buy the wrong one!
 r:"^加贈$"="Get            <size\=1>.</size>"
 獲得=Get
 r:"^累計簽到(\d+)日，即可獲得<size\=66><sprite\=19></size>X(\d+)$"="Log in for $1 days to get <size\=66><sprite\=19></size>X$2"
@@ -2143,6 +2158,8 @@ P5X營運團隊=P5X Team
 獎勵發放管理員=System
 刪除已讀=<size\=24>Delete Read</size>
 收取全部=<size\=28> Claim All</size>
+當前暫無郵件=No email
+沒有收到郵件=No email
 
 // Mission Screen
 全部=All
@@ -2254,6 +2271,7 @@ sr:"^本次合體結果將轉化為1個<color\=#FF0000>(.*)印記</color>$"="Con
 所需貨幣不足。=Insufficient currency.
 想要做點什麼呢？=What do you want to do?
 r:"^Lv.(\d+) 解鎖新技能$"="Lv.$1 Next Skill"
+r:"^強化至(\d+)級解鎖新技能$"="Unlock new skill at level $1"
 r:"^解鎖技能$"="Unlock"
 啟動靈感可提升面具技能等級=Level up Wonder's skill tree to upgrade Persona skills
 技能已達到上限，無法選擇=Cannot select more skills
@@ -2288,17 +2306,78 @@ r:"^/屬性$"="      <size\=24>/Element</size>"
 隨機獲得1個以下技能=<size\=25>Randomly gain 1 of the following skills</size>
 該技能已掌握，已轉化為道具。=Already learned skill, converted into items.
 新手友好=<size\=16>Newbie Friendly</size>
-sr:"^(.*)單攻$"="<size\=16>$1 ST DPS</size>"
-sr:"^(.*)群攻$"="<size\=15>$1 AoE DPS</size>"
-sr:"^(.*)治療$"="<size\=20>$1 Heal</size>"
-sr:"^(.*)坦克$"="<size\=19>$1 Tank</size>"
-sr:"^(.*)增益$"="<size\=20>$1 Buff"
-sr:"^(.*)減益$"="<size\=17>$1 Debuff</size>"
+物理單攻=<size\=16>Physical ST DPS</size>
+物理群攻=<size\=15>Physical AoE DPS</size>
+物理治療=<size\=18>Physical Healer</size>
+物理坦克=<size\=19>Physical Tank</size>
+物理增益=<size\=18>Physical Buffer</size>
+物理減益=<size\=15>Physical Debuffer</size>
+射擊單攻=<size\=16>Gun ST DPS</size>
+射擊群攻=<size\=15>Gun AoE DPS</size>
+射擊治療=<size\=18>Gun Healer</size>
+射擊坦克=<size\=19>Gun Tank</size>
+射擊增益=<size\=18>Gun Buffer</size>
+射擊減益=<size\=15>Gun Debuffer</size>
+火焰單攻=<size\=16>Fire ST DPS</size>
+火焰群攻=<size\=15>Fire AoE DPS</size>
+火焰治療=<size\=18>Fire Healer</size>
+火焰坦克=<size\=19>Fire Tank</size>
+火焰增益=<size\=18>Fire Buffer</size>
+火焰減益=<size\=15>Fire Debuffer</size>
+冰凍單攻=<size\=16>Ice ST DPS</size>
+冰凍群攻=<size\=15>Ice AoE DPS</size>
+冰凍治療=<size\=18>Ice Healer</size>
+冰凍坦克=<size\=19>Ice Tank</size>
+冰凍增益=<size\=18>Ice Buffer</size>
+冰凍減益=<size\=15>Ice Debuffer</size>
+疾風單攻=<size\=16>Wind ST DPS</size>
+疾風群攻=<size\=15>Wind AoE DPS</size>
+疾風治療=<size\=18>Wind Healer</size>
+疾風坦克=<size\=19>Wind Tank</size>
+疾風增益=<size\=18>Wind Buffer</size>
+疾風減益=<size\=15>Wind Debuffer</size>
+電擊單攻=<size\=16>Elec ST DPS</size>
+電擊群攻=<size\=15>Elec AoE DPS</size>
+電擊治療=<size\=18>Elec Healer</size>
+電擊坦克=<size\=19>Elec Tank</size>
+電擊增益=<size\=18>Elec Buffer</size>
+電擊減益=<size\=15>Elec Debuffer</size>
+念動單攻=<size\=16>Psy ST DPS</size>
+念動群攻=<size\=15>Psy AoE DPS</size>
+念動治療=<size\=18>Psy Healer</size>
+念動坦克=<size\=19>Psy Tank</size>
+念動增益=<size\=18>Psy Buffer</size>
+念動減益=<size\=15>Psy Debuffer</size>
+核熱單攻=<size\=16>Nuke ST DPS</size>
+核熱群攻=<size\=15>Nuke AoE DPS</size>
+核熱治療=<size\=18>Nuke Healer</size>
+核熱坦克=<size\=19>Nuke Tank</size>
+核熱增益=<size\=18>Nuke Buffer</size>
+核熱減益=<size\=15>Nuke Debuffer</size>
+祝福單攻=<size\=16>Bless ST DPS</size>
+祝福群攻=<size\=15>Bless AoE DPS</size>
+祝福治療=<size\=18>Bless Healer</size>
+祝福坦克=<size\=19>Bless Tank</size>
+祝福增益=<size\=18>Bless Buffer</size>
+祝福減益=<size\=15>Bless Debuffer</size>
+詛咒單攻=<size\=16>Curse ST DPS</size>
+詛咒群攻=<size\=15>Curse AoE DPS</size>
+詛咒治療=<size\=18>Curse Healer</size>
+詛咒坦克=<size\=19>Curse Tank</size>
+詛咒增益=<size\=18>Curse Buffer</size>
+詛咒減益=<size\=15>Curse Debuffer</size>
+萬能單攻=<size\=16>Almighty ST DPS</size>
+萬能群攻=<size\=15>Almighty AoE DPS</size>
+萬能治療=<size\=18>Almighty Healer</size>
+萬能坦克=<size\=19>Almighty Tank</size>
+萬能增益=<size\=18>Almighty Buffer</size>
+萬能減益=<size\=15>Almighty Debuffer</size>
 未裝備技能=Equip skill
 r:"^同類技能只能攜帶1個，已自動將「(.*)」替換為「(.*)」$"="You can only have 1 skill of the same type, automatically replaced skill"
 需遺忘技能，才能學新技能。=Need to forget skills before learning a new skills.
 r:"是否遺忘技能「(.*)」？\n<color\=#FF0000>此操作不可撤銷！</color>"=Want to forget this skill?\n<color\=#FF0000>This cannot be undone!</color>
 r:"已遺忘技能「(.*)」。$"="Forgotten skill."
+r:"^最多只可以選擇(\d+)個面具上陣哦～$"="You can only equip $1 Personas."
 您有尚未保存的陣容方案，是否要進行保存？=Do you want to save your setup?
 
 不羈紋章·虹=<size\=16>Wild Card Emblem - Rainbow</size>
@@ -2322,6 +2401,7 @@ sr:"^(.*)印記$"="$1 Mark"
 鬼=Oni
 鵺=Nue
 天使=Angel
+飛天=Apsaras
 
 暫無介紹=No introduction
 
@@ -2337,6 +2417,7 @@ r:"^兇惡的{{A}}$"="Vicious {{A}}"
 r:"^創生的{{A}}$"="Creative {{A}}"
 r:"^忠義的{{A}}$"="Loyal {{A}}"
 r:"^巨大的{{A}}$"="Gigantic {{A}}"
+r:"^虛弱的{{A}}$"="Weak {{A}}"
 r:"^虚弱的{{A}}$"="Weak {{A}}"
 r:"^聖潔的{{A}}$"="Holy {{A}}"
 r:"^熾熱的{{A}}$"="Fiery {{A}}"

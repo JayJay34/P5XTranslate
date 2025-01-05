@@ -35,9 +35,10 @@ r:"^攻擊力提升(\d+\.\d+%)$"="Increase ATK by $1"
 r:"^火焰傷害提升(\d+%)$"="Increase Fire damage by $1"
 
 Combat pop ups
+r:"^星<color\=#000000>之</color>火$"="<size\=16> </size>S<color\=#000000>ta</color>rfire"
 r:"^星<color\=#000000>之</color>火I$"="<size\=16> </size>S<color\=#000000>ta</color>rfire I"
-r:"^星<color\=#000000>之</color>火II$"="<size\=16> </size>St<color\=#000000>ta</color>rfire II"
-r:"^星<color\=#000000>之</color>火III$"="<size\=16> </size>St<color\=#000000>ta</color>rfire III"
+r:"^星<color\=#000000>之</color>火II$"="<size\=16> </size>S<color\=#000000>ta</color>rfire II"
+r:"^星<color\=#000000>之</color>火III$"="<size\=16> </size>S<color\=#000000>ta</color>rfire III"
 
 ----------
 CLOSER - Motoha Arai
@@ -53,16 +54,7 @@ r:"^對所有敵人造成\<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊�
 
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，有100%的固定機率使技能主目標陷入觸電狀態，並使其受到的電擊屬性傷害提升(\d+%)，持續2回合。$"="Deals $1 ATK Electric damage to <color\=#FFFF00>all</color> enemies, there is a 100% fixed chance to inflict the main target with Shock, and increases their Electric DMG Taken by $2 for 2 turns."
 
-觸電=Shock
 存在處於觸電狀態的敵人=There is an enemy with Shock
-電擊傷害提升=<size\=28>Increase Elec Damage</size>
-r:"^造成的電擊屬性傷害提升(\d+%)$"="Increase Elec DMG Dealt by $1"
-r:"^受電擊傷害提升$"="<size\=24>Increase Elec DMG Taken</size>"
-r:"^受到電擊傷害提升(\d+%)$"="Increase Elec DMG Taken by $1"
-
-Combat pop ups
-r:"^電<color\=#000000>擊</color>傷害提升$"="<size\=21> </size>E<color\=#000000>le</color>c DMG Up"
-r:"^受<color\=#000000>到</color>電傷提升$"="<size\=21> </size>E<color\=#000000>le</color>c DMG Taken Up"
 
 ----------
 SOY - Shun Kanou
@@ -323,10 +315,10 @@ r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰�
 r:"^對<color\=#FFFF00>1名敵人</color>造成(\d+\.\d+%)攻擊力的火焰屬性傷害，使目標防禦降低(\d+\.\d+%)\+\（數值相當於自身效果命中的(\d+\.\d+%)，上限(\d+\.\d+%)\），持續(\d+)回合。自身獲得『窮追猛打』。（防禦降低效果和『熾熱握手禮』無法疊加。）$"="Deals $1 ATK Fire damage to <color\=#FFFF00>1 enemy</color>, decreases the target's DEF by $2 + ($3 of own EHR, up to <color\=#FFFC40>$4</color>) for 2 turns. You gain [Furious Pursue]. (Cannot stack the DEF Down effect with [Fiery Handshake].)"
 r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，使目標防禦降低<color\=#FFFC40>(\d+\.\d+%)</color>\+\（數值相當於自身效果命中的(\d+\.\d+%)，上限<color\=#FFFC40>(\d+\.\d+%)</color>\），持續2回合。自身獲得『窮追猛打』。（防禦降低效果和『熾熱握手禮』無法疊加。）$"="Deals <color\=#FFFC40>$1</color> ATK Fire damage to 1 enemy, decreases the target's DEF by <color\=#FFFC40>$2</color> + ($3 of own EHR, up to <color\=#FFFC40>$4</color>) for 2 turns. You gain [Furious Pursue]. (Cannot stack the DEF Down effect with [Fiery Handshake].)"
 
-r:"^開啟條件：自身擁有『熱烈歡迎』或『窮追猛打』\n根據自身擁有的『熱烈歡迎』或『窮追猛打』時，該技能會分別產生不同的效果，同時只能觸發一種效果。\n『熱烈歡迎』： 對<color\=#FFFF00>所有敵人</color>造成(\d+\.\d+%)攻擊力的火焰屬性傷害，使目標受到傷害提升\（數值相當於自身效果命中的(\d+%)，上限(\d+\.\d+%)\），受到火屬性傷害提升(\d+\.\d+%)，持續(\d+)回合。\n『窮追猛打』： 對<color\=#FFFF00>1名敵人</color>造成(\d+\.\d+%)攻擊力的火焰屬性傷害，使目標受到傷害提升\（數值相當於自身效果命中的(\d+\.\d+%)，上限(\d+\.\d+%)\），受到追加效果傷害增加(\d+\.\d+%)，持續(\d+)回合。$"="Requirement: You have [Warm Welcome] or [Furious Pursue]\nWhen you have [Warm Welcome] or [Furious Pursue], triggers their corresponding effect, you can only trigger 1 effect.\n[Warm Welcome]: Deals $1 ATK Fire damage to <color\=#FFFF00>all enemies</color>, decreases the target's DEF based on $2 own EHR, up to $3, increases their Fire DMG Taken by $4 for $5 turns.\n[Furious Pursue]: Deals $6 ATK Fire damage to <color\=#FFFF00>1 enemy</color>, decreases the target's DEF based on $7 own EHR, up to $8, increases their Follow Up DMG Taken by $9 for $10 turns."
-r:"^對<color\=#FFFF00>所有敵人</color>造成(\d+\.\d+%)攻擊力的火焰屬性傷害，使目標受到傷害提升\（數值相當於自身效果命中的(\d+%)，上限(\d+\.\d+%)\），受到火屬性傷害提升(\d+\.\d+%)，持續(\d+)回合。$"="Deals $1 ATK Fire damage to <color\=#FFFF00>all enemies</color>, decreases the target's DEF based on $2 own EHR, up to $3, increases their Fire DMG Taken by $4 for $5 turns."
-r:"^對<color\=#FFFF00>1名敵人</color>造成(\d+\.\d+%)攻擊力的火焰屬性傷害，使目標受到傷害提升\（\（數值相當於自身效果命中的(\d+\.\d+%)，上限(\d+\.\d+%)\），受到追加效果傷害增加(\d+\.\d+%)，持續(\d+)回合。$"="Deals $1 ATK Fire damage to <color\=#FFFF00>1 enemy</color>, decreases the target's DEF based on $2 own EHR, up to $3, increases their Follow Up DMG Taken by $4 for $5 turns."
-r:"^開啟條件：自身擁有『熱烈歡迎』或『窮追猛打』\n根據自身擁有的『熱烈歡迎』或『窮追猛打』時，該技能會分別產生不同的效果，同時只能觸發一種效果。\n『熱烈歡迎』： 對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，使目標受到傷害提升\（數值相當於自身效果命中的(\d+%)，上限<color\=#FFFC40>(\d+\.\d+%)</color>\），受到火屬性傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。\n『窮追猛打』： 對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，使目標受到傷害提升\（數值相當於自身效果命中的(\d+\.\d+%)，上限<color\=#FFFC40>(\d+\.\d+%)</color>\），受到追加效果傷害增加<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Requirement: You have [Warm Welcome] or [Furious Pursue]\nWhen you have [Warm Welcome] or [Furious Pursue], triggers their corresponding effect, you can only trigger 1 effect.\n[Warm Welcome]: Deals <color\=#FFFC40>$1</color> ATK Fire damage to all enemies, decreases the target's DEF based on $2 own EHR, up to $3, increases their Fire DMG Taken by <color\=#FFFC40>$4</color> for $5 turns.\n[Furious Pursue]: Deals <color\=#FFFC40>$6</color> ATK Fire damage to 1 enemy, decreases the target's DEF based on $7 own EHR, up to $8, increases their Follow Up DMG Taken by <color\=#FFFC40>$9</color> for $10 turns."
+r:"^開啟條件：自身擁有『熱烈歡迎』或『窮追猛打』\n根據自身擁有的『熱烈歡迎』或『窮追猛打』時，該技能會分別產生不同的效果，同時只能觸發一種效果。\n『熱烈歡迎』： 對<color\=#FFFF00>所有敵人</color>造成(\d+\.\d+%)攻擊力的火焰屬性傷害，使目標受到傷害提升\（數值相當於自身效果命中的(\d+%)，上限(\d+\.\d+%)\），受到火屬性傷害提升(\d+\.\d+%)，持續(\d+)回合。\n『窮追猛打』： 對<color\=#FFFF00>1名敵人</color>造成(\d+\.\d+%)攻擊力的火焰屬性傷害，使目標受到傷害提升\（數值相當於自身效果命中的(\d+\.\d+%)，上限(\d+\.\d+%)\），受到追加效果傷害增加(\d+\.\d+%)，持續(\d+)回合。$"="Requirement: You have [Warm Welcome] or [Furious Pursue]\nWhen you have [Warm Welcome] or [Furious Pursue], triggers their corresponding effect, you can only trigger 1 effect.\n[Warm Welcome]: Deals $1 ATK Fire damage to <color\=#FFFF00>all enemies</color>, increases the target's DMG Taken based on $2 own EHR, up to $3, increases their Fire DMG Taken by $4 for $5 turns.\n[Furious Pursue]: Deals $6 ATK Fire damage to <color\=#FFFF00>1 enemy</color>, increases the target's DMG Taken based on $7 own EHR, up to $8, increases their Follow Up DMG Taken by $9 for $10 turns."
+r:"^對<color\=#FFFF00>所有敵人</color>造成(\d+\.\d+%)攻擊力的火焰屬性傷害，使目標受到傷害提升\（數值相當於自身效果命中的(\d+%)，上限(\d+\.\d+%)\），受到火屬性傷害提升(\d+\.\d+%)，持續(\d+)回合。$"="Deals $1 ATK Fire damage to <color\=#FFFF00>all enemies</color>, increases the target's DMG Taken based on $2 own EHR, up to $3, increases their Fire DMG Taken by $4 for $5 turns."
+r:"^對<color\=#FFFF00>1名敵人</color>造成(\d+\.\d+%)攻擊力的火焰屬性傷害，使目標受到傷害提升\（\（數值相當於自身效果命中的(\d+\.\d+%)，上限(\d+\.\d+%)\），受到追加效果傷害增加(\d+\.\d+%)，持續(\d+)回合。$"="Deals $1 ATK Fire damage to <color\=#FFFF00>1 enemy</color>, increases the target's DMG Taken based on $2 own EHR, up to $3, increases their Follow Up DMG Taken by $4 for $5 turns."
+r:"^開啟條件：自身擁有『熱烈歡迎』或『窮追猛打』\n根據自身擁有的『熱烈歡迎』或『窮追猛打』時，該技能會分別產生不同的效果，同時只能觸發一種效果。\n『熱烈歡迎』： 對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，使目標受到傷害提升\（數值相當於自身效果命中的(\d+%)，上限<color\=#FFFC40>(\d+\.\d+%)</color>\），受到火屬性傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。\n『窮追猛打』： 對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，使目標受到傷害提升\（數值相當於自身效果命中的(\d+\.\d+%)，上限<color\=#FFFC40>(\d+\.\d+%)</color>\），受到追加效果傷害增加<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Requirement: You have [Warm Welcome] or [Furious Pursue]\nWhen you have [Warm Welcome] or [Furious Pursue], triggers their corresponding effect, you can only trigger 1 effect.\n[Warm Welcome]: Deals <color\=#FFFC40>$1</color> ATK Fire damage to all enemies, increases the target's DMG Taken based on $2 own EHR, up to $3, increases their Fire DMG Taken by <color\=#FFFC40>$4</color> for $5 turns.\n[Furious Pursue]: Deals <color\=#FFFC40>$6</color> ATK Fire damage to 1 enemy, increases the target's DMG Taken based on $7 own EHR, up to $8, increases their Follow Up DMG Taken by <color\=#FFFC40>$9</color> for $10 turns."
 
 r:"^對<color\=#FFFF00>所有敵人</color>造成(\d+\.\d+%)攻擊力的火焰屬性傷害，使敵方陣營獲得(\d+)層『大壞蛋』：敵方陣營任意目標受到追擊技能或火屬性技能時消耗(\d+)層，使傷害提升\（數值相當於自身效果命中的(\d+\.\d+%)，上限(\d+\.\d+%)\），持續(\d+)回合。$"="Deals $1 ATK Fire damage to <color\=#FFFF00>all enemies</color>, inflicts all enemies with $2 stacks of [Big Bad]: Consumes $3 stack when any enemy take Follow Up damage or Fire damage to increase that damage based on $4 own EHR, up to $5 for $6 turns."
 
@@ -398,7 +390,7 @@ sr:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊�
 sr:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，有<color\=#FFFC40>(\d+\.\d+%)</color>的基礎機率使敵人陷入<link\="s\|104"><u>觸電</u></link>狀態，若自身有<link\="s\|130"><u>『(.*)』</u></link>效果，則機率提升至<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Deals <color\=#FFFC40>$1</color> ATK Electric damage to all enemies, with a <color\=#FFFC40>$2</color> base chance to inflicts <link\="s|104"><u>Shock</u></link>. If you have <link\="s|130"><u>[$3]</u></link>, increases the chance to <color\=#FFFC40>$4</color>."
 
 sr:"^選擇<color\=#FFFF00>1名</color>敵人進行蓄力，下回合出手，造成(\d+\.\d+%)攻擊力的物理屬性傷害。若造成傷害時自身有『(.*)』效果，則該技能必定暴擊。$"="Selects <color\=#FFFF00>1</color> enemy and charges, attacks next turn, dealing $1 ATK Physical damage. If you have [$2] when dealing damage, this skill will always CRIT."
-sr:"^選擇1名敵人進行蓄力，下一回合時自動出手，對目標造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害。若自身有<link\="s\|130"><u>『(.*)』</u></link>效果，則該技能必定暴擊。若蓄力期間目標死亡，則隨機選擇另外1名敵人。若龍司處於無法行動的狀態，則延後至可以行動時出手。$"="Selects 1 enemy and charges, automatically attacks on your next turn. Deals <color\=#FFFC40>$1</color> ATK Physical damage to the target. If you have <link\="s|130"><u>[$2]</u></link>, this skill will always CRIT. If the target is defeated during charge, randomly select 1 enemy as the target. If you cannot act, delay the attack until you can."
+r:"^選擇1名敵人進行蓄力，下一回合時自動出手，對目標造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害。若自身有<link\="s\|130"><u>『觸底反彈』</u></link>效果，則該技能必定暴擊。若蓄力期間目標死亡，則隨機選擇另外1名敵人。若{{A}}處於無法行動的狀態，則延後至可以行動時出手。$"="Selects 1 enemy and charges, automatically attacks on your next turn. Deals <color\=#FFFC40>$1</color> ATK Physical damage to the target. If you have <link\="s|130"><u>[Rebound]</u></link>, this skill will always CRIT. If the target is defeated during charge, randomly select 1 enemy as the target. If you cannot act, delay the attack until you can."
 
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的物理屬性傷害，並且使自己下一個技能造成的傷害提升(\d+\.\d+%)。$"="Deals $1 ATK Physical damage to <color\=#FFFF00>1</color> enemy, increases the DMG Dealt of your next skill by $2."
 
@@ -406,15 +398,18 @@ r:"^下一個技能造成的傷害提升(\d+%)$"="Increase DMG Dealt of your nex
 蓄力中=Charging
 蠻力=Brute Force
 r:"^下一個技能造成的傷害提升(\d+\.\d+%)$"="<size\=25>Increase DMG Dealt of your next skill by $1</size>"
+畏懼=Dread
+受到來自{{A}}的下一個技能傷害提升=Increase the next Skill DMG from {{A}}
 
 In-Battle Quotes
-<color\=#FF0000>坂本龍司</color>進入了蓄力狀態……=<color\=#FF0000>Ryuji Sakamoto</color> entered charge!
-<color\=#FF0000>坂本龍司</color>下一技能傷害大幅提升……=<color\=#FF0000>Ryuji Sakamoto</color> next skill DMG Up!
+<color\=#FF0000>{{A}}</color>進入了蓄力狀態……=<color\=#FF0000>{{A}}</color> entered charge!
+<color\=#FF0000>{{A}}</color>下一技能傷害大幅提升……=<color\=#FF0000>{{A}}</color> next Skill DMG Up!
 
 Combat Pop-ups
 r:"^觸<color\=#000000>底</color>反彈$"="<size\=4> </size>R<color\=#000000>eb</color>ound"
 r:"^蓄<color\=#000000>力</color>$"="<size\=23> </size>C<color\=#000000>h</color>arge"
 r:"^蠻<color\=#000000>力</color>$"="<size\=12> </size>B<color\=#000000>ru</color>te Force"
+r:"^畏<color\=#000000>懼</color>$"="<size\=11> </size>D<color\=#000000>re</color>ad"
 
 ----------
 Mona - Morgana
@@ -766,6 +761,7 @@ r:"^自身立刻獲得<link\="s\|192"><u>『盛夏』</u></link>狀態，持續�
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，恢復自身(\d+%)最大生命值的血量。若自身血量在(\d+%)以上，則HIGHLIGHT額外造成(\d+%)傷害。$"="Deals $1 ATK Bless damage to <color\=#FFFC40>all</color> enemies and restores $2 Max HP. Increase HIGHLIGHT damage by $4 if your hp are above $3."
 
 日光=Sunlight
+r:"^『海浪追逐者』傷害提升(\d+%)$"="Increase [Wave Chaser] damage by $1"
 
 ----------
 Strawberry - Tomoko Noge

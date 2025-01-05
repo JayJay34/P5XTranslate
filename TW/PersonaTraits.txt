@@ -10,7 +10,7 @@ r:"^餘孽收割(.*)$"="Reaper $1"
 r:"^攻擊力提升(\d+\.\d+%)。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。$"="Increase ATK by $1. When allies attack enemies with [Aim], increase ATK by $2."
 r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，使1名敵人獲得『瞄準』。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。$"="Increase ATK by $1. At the start of battle, inflict 1 enemy with [Aim]. When allies attack enemies with [Aim], increase ATK by $2."
 r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，使1名敵人獲得『瞄準』。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。自身攻擊有『瞄準』的敵人時，造成1次1(\d+%)攻擊力的射擊屬性傷害。$"="Increase ATK by $1. At the start of battle, inflict 1 enemy with [Aim]. When allies attack enemies with [Aim], increase ATK by $2. When you attack enemies with [Aim], deal an additional $3 ATK Gun damage to them."
-r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，使1名敵人獲得『瞄準』。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。帶有『瞄準』的敵人防禦力額外降低(\d+%)。自身攻擊有『瞄準』的敵人時，造成1次(\d+%)攻擊力的射擊屬性傷害。$"="Increase ATK by $1. At the start of battle, inflict 1 enemy with [Aim]. When allies attack enemies with [Aim], increase ATK by $2. Additionally decrease DEF by $3 for enemies with [Aim]. When you attack enemies with [Aim], deal an additional $4 ATK Gun damage to them."
+r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，使1名敵人獲得『瞄準』。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。帶有『瞄準』的敵人防禦力額外降低(\d+%)。自身攻擊有『瞄準』的敵人時，造成1次(\d+%)攻擊力的射擊屬性傷害。$"="<size\=22>Increase ATK by $1. At the start of battle, inflict 1 enemy with [Aim]. When allies attack enemies with [Aim], increase ATK by $2. Additionally decrease DEF by $3 for enemies with [Aim]. When you attack enemies with [Aim], deal an additional $4 ATK Gun damage to them.</size>"
 
 Succubus
 r:"^醉人的呢喃(.*)$"="Intoxicating Murmur $1"
@@ -131,7 +131,7 @@ r:"^效果命中提升(\d+\.\d+%)。造成風襲效果後，使主目標敵人�
 r:"^效果命中提升(\d+\.\d+%)。造成風襲效果後，使主目標敵人受到的傷害提升(\d+\.\d+%)，效果持續2回合。並提升自身效果命中(\d+%)。效果持續2回合。$"="Increase EHR by $1. After inflicting Winded, increase the main target's DMG Taken by $2 for 2 turns and increase own EHR by $3 for 2 turns."
 
 Okuninushi
-r:"^支配者的威儀(.*)$"="Dominator's Majesty $1"
+r:"^{{A}}的威儀(.*)$"="{{A}}'s Majesty $1"
 r:"^暴擊率提升(\d+\.\d+%)。釋放{{A}}技能對敵人造成傷害後，使敵人受到的念動屬性傷害提升(\d+\.\d+%)，效果持續3回合，可疊加3層。$"="Increase CRIT Rate by $1. After dealing damage with a Persona skill, increase enemies' Psy DMG Taken by $2 for 3 turns, up to 3 stacks."
 r:"^暴擊率提升(\d+\.\d+%)。釋放{{A}}技能對敵人造成傷害後，使敵人受到的念動屬性傷害提升(\d+\.\d+%)，效果持續3回合，可疊加3層。攻擊身上帶有該效果的敵人時，念動屬性傷害提升(\d+%)。$"="Increase CRIT Rate by $1. After dealing damage with a Persona skill, increase enemies' Psy DMG Taken by $2 for 3 turns, up to 3 stacks. Increase Psy damage by $3 when attacking enemies with this debuff."
 
@@ -187,6 +187,14 @@ r:"^攻擊力提升(\d+\.\d+%)。自身釋放技能時，根據所有同伴的�
 ----------
 RANK 7
 ----------
+Cu Chu
+r:"^咆哮的猛犬(.*)$"="Roaring Hound $1"
+r:"^暴擊率提升(\d+\.\d+%)。暴擊時為敵人附加「致命倒鉤」，下次使用固有技能攻擊引爆標記，使技能額外提升(\d+%)攻擊力的傷害。引爆標記時有極低機率觸發即死效果。$"="<size\=25>Increase CRIT Rate by $1. Inflict [Mortal Barb] when dealing Critical, detonate this the next time you use the signature skill, additionally increase skill damage by $1 ATK. When detonating, there is a very low chance to inflict Instant Death.</size>"
+r:"^暴擊率提升(\d+\.\d+%)。暴擊時為敵人附加「致命倒鉤」，下次使用固有技能攻擊引爆標記，使技能額外提升(\d+%)攻擊力的傷害。引爆標記時有低機率觸發即死效果。$"="<size\=25>Increase CRIT Rate by $1. Inflict [Mortal Barb] when dealing Critical, detonate this the next time you use the signature skill, additionally increase skill damage by $1 ATK. When detonating, there is a low chance to inflict Instant Death.</size>"
+致命倒鉤=Mortal Barb
+r:"^致<color\=#000000>命</color>倒鉤$"="<size\=1> </size>M<color\=#000000>or</color>tal Barb"
+使荊棘之槍造成額外效果=Gae Bulg triggers additional effects
+
 Chernobog
 r:"^蔓延的死寂(.*)$"="Deadly Silence $1"
 r:"^效果命中提升(\d+\.\d+%)。「噩夢」使效果抵抗降低(\d+%)、防禦力降低(\d+%)，持續(\d+)回合。「噩夢」狀態下，敵人受到物理傷害加深(\d+%)。敵人每受到(\d+)次物理傷害，額外獲得(\d+)層，可疊加(\d+)層，每層獨立計算，持續(\d+)回合。$"="Increase EHR by $1. [Nightmare] decrease Effect RES by $2 and DEF by $3 for $4 turns. Under [Nightmare], increase enemies' Phys DMG Taken by $5 for $8 turns. Additionally increase Phys DMG Taken stacks by $7 after the enemy take $6 hits of Physical damage. Each stack count down independently."
@@ -221,7 +229,11 @@ r:"^防禦力提升(\d+\.\d+%)。為隊友添加護盾時，主要目標獲得�
 
 Thor
 r:"^雷神的威嚴(.*)$"="<size\=28>Thunder God's Majesty $1</size>"
-r:"^<nobr>暴擊效果提升(\d+\.\d+%)。其他同伴每釋放1次電擊屬性的{{A}}技能，則使自身獲得1層『雷神威勢』，造成的電擊傷害提升(.*)，並使技能『天召雷』額外造成1段傷害，效果持續1回合，上限2層。$"="<size\=28><nobr>Increase CRIT DMG by $1. Gain 1 stack of [Thunder God's Might] after other allies used Electirc skills, increase DMG Dealt by $2 for 1 turn and make Heavenly Thunder hit for an additional time, up to 2 stacks.</size>"
+r:"^<nobr>暴擊效果提升(\d+\.\d+%)。其他同伴每釋放1次電擊屬性的{{A}}技能，則使自身獲得1層『雷神威勢』，造成的電擊傷害提升(.*)，並使技能『天召雷』額外造成1段傷害，效果持續1回合，上限2層。$"="<size\=28><nobr>Increase CRIT DMG by $1. Gain 1 stack of [Thunder God's Might] after other allies used Elec skills, increase DMG Dealt by $2,  and make Heavenly Thunder deal 1 additional hit of damage for 1 turn, up to 2 stacks.</size>"
+r:"^<nobr>暴擊效果提升(\d+\.\d+%)。其他同伴每釋放1次電擊屬性的{{A}}技能，則使自身獲得1層『雷神威勢』，造成的電擊傷害提升(.*)，暴擊效果提升(.*)。並使技能『天召雷』額外造成1段傷害，效果持續1回合，上限2層。$"="<size\=28><nobr>Increase CRIT DMG by $1. Gain 1 stack of [Thunder God's Might] after other allies used Elec skills, increase DMG Dealt by $2 and CRIT DMG by $3, and make Heavenly Thunder deal 1 additional hit of damage for 1 turn, up to 2 stacks.</size>"
+r:"^雷<color\=#000000>神</color>威勢$"="<size\=9> </size>T<color\=#000000>hu</color>nder God's Might"
+雷神威勢=Thunder God's Might
+電擊傷害提升，技能『天召雷』的段數增加=Increase Elec DMG, increase the amount of times [Heavenly Thunder] can hit
 
 Bishamonten
 r:"^暴怒的慧傘(.*)$"="Furious Umbrella $1"
@@ -257,7 +269,7 @@ r:"^攻擊力提升(\d+%)，達到(\d+)層提升固有技能暴擊率$"="Increas
 
 Vishnu
 r:"^恩惠於眾生(.*)$"="Blessing to All $1"
-r:"^暴擊率提升(\d+\.\d+%)。增加風襲的效果命中(\d+%)，對風襲狀態敵人造成傷害提升(\d+%)。\n添加或刷新風襲狀態時額外降低敵人防禦力(\d+%)，(\d+)回合。$"="Increase CRIT Rate by $1. Increase Winded EHR by $2 and increase DMG Dealt to enemies with Winded by $3. \nDecrease the enemies' DEF by $4 when refreshing or inflicting Wind for $5 turns."
+r:"^暴擊率提升(\d+\.\d+%)。增加風襲的效果命中(\d+%)，對風襲狀態敵人造成傷害提升(\d+%)。\n添加或刷新風襲狀態時額外降低敵人防禦力(\d+%)，(\d+)回合。$"="<size\=23>Increase CRIT Rate by $1. Increase Winded EHR by $2 and increase DMG Dealt to enemies with Winded by $3. \nDecrease the enemies' DEF by $4 when refreshing or inflicting Winded for $5 turns.</size>"
 
 Kohryu
 r:"^祥瑞之主(.*)$"="<size\=28>Lord of Auspiciousness $1</size>"
@@ -272,8 +284,8 @@ r:"^攻擊力提升(\d+\.\d+%)。每回合開始時獲得『慧識』，最多�
 
 Sraosha
 r:"^罪惡的傾聽者(.*)$"="Listener of Sin $1"
-r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，獲得(\d+)層「神之耳」，持續(\d+)回合，上限(\d+)層。友方釋放HIGHLIGHT時，獲得(\d+)層「神之耳」。祝福屬性同伴釋放HIGHLIGHT時額外獲得(\d+)層「神之耳」。使用固有技能時，消耗所有「神之耳」，每層使敵人受到祝福屬性傷害提升(\d+%)，持續(\d+)回合。若「神之耳」達到(\d+)層，額外使敵人受到祝福屬性時的防禦降低(\d+%)。$"="Increase ATK by $1. At the start of battle, gain $2 stacks of [God's Ear] for $3 turns, up to $4 stacks. When allies use HIGHLIGHT, gain $5 stack of [God's Ear], additionally gain $6 stack of [God's Ears] when Bless allies use HIGHLIGHT. When using the signature skill, consume all [God's Ear], each stack increases Bless DMG Taken by $7 for $8 turns. If [God's Ear] reaches $9 stacks, additionally decrease enemies' DEF when taking Bless damage by $10."
-r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，獲得(\d+)層「神之耳」，持續(\d+)回合，上限(\d+)層。友方釋放HIGHLIGHT時，獲得(\d+)層「神之耳」。祝福屬性怪盜釋放HIGHLIGHT時額外獲得(\d+)層「神之耳」。使用固有技能時，消耗所有「神之耳」，每層使敵人受到祝福屬性傷害提升(\d+%)，持續(\d+)回合。若「神之耳」達到(\d+)層，額外使敵人受到祝福屬性時的防禦降低(\d+%)。$"="Increase ATK by $1. At the start of battle, gain $2 stacks of [God's Ear] for $3 turns, up to $4 stacks. When allies use HIGHLIGHT, gain $5 stack of [God's Ear], additionally gain $6 stack of [God's Ears] when Bless allies use HIGHLIGHT. When using the signature skill, consume all [God's Ear], each stack increases Bless DMG Taken by $7 for $8 turns. If [God's Ear] reaches $9 stacks, additionally decrease enemies' DEF when taking Bless damage by $10."
+r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，獲得(\d+)層「神之耳」，持續(\d+)回合，上限(\d+)層。友方釋放HIGHLIGHT時，獲得(\d+)層「神之耳」。祝福屬性同伴釋放HIGHLIGHT時額外獲得(\d+)層「神之耳」。使用固有技能時，消耗所有「神之耳」，每層使敵人受到祝福屬性傷害提升(\d+%)，持續(\d+)回合。若「神之耳」達到(\d+)層，額外使敵人受到祝福屬性時的防禦降低(\d+%)。$"="<size\=21>Increase ATK by $1. At the start of battle, gain $2 stacks of [God's Ear] for $3 turns, up to $4 stacks. When allies use HIGHLIGHT, gain $5 stack of [God's Ear], additionally gain $6 stack of [God's Ears] when Bless allies use HIGHLIGHT. When using the signature skill, consume all [God's Ear], each stack increases Bless DMG Taken by $7 for $8 turns. If [God's Ear] reaches $9 stacks, additionally decrease enemies' DEF when taking Bless damage by $10.</size>"
+r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，獲得(\d+)層「神之耳」，持續(\d+)回合，上限(\d+)層。友方釋放HIGHLIGHT時，獲得(\d+)層「神之耳」。祝福屬性怪盜釋放HIGHLIGHT時額外獲得(\d+)層「神之耳」。使用固有技能時，消耗所有「神之耳」，每層使敵人受到祝福屬性傷害提升(\d+%)，持續(\d+)回合。若「神之耳」達到(\d+)層，額外使敵人受到祝福屬性時的防禦降低(\d+%)。$"="<size\=21>Increase ATK by $1. At the start of battle, gain $2 stacks of [God's Ear] for $3 turns, up to $4 stacks. When allies use HIGHLIGHT, gain $5 stack of [God's Ear], additionally gain $6 stack of [God's Ears] when Bless allies use HIGHLIGHT. When using the signature skill, consume all [God's Ear], each stack increases Bless DMG Taken by $7 for $8 turns. If [God's Ear] reaches $9 stacks, additionally decrease enemies' DEF when taking Bless damage by $10.</size>"
 r:"^罪<color\=#000000>惡</color>的傾聽者$"="<size\=0.1> </size>Li<color\=#000000>st</color>ener of Sin"
 r:"^神<color\=#000000>之</color>耳$"="<size\=22> </size>G<color\=#000000>o</color>d's Ear"
 神之耳=God's Ear
