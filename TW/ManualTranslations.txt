@@ -187,6 +187,8 @@ r:"^待設置$"="None"
 決戰篇=Finale
 故事=Story
 當前沒有劇情日誌=Currently no dialogue
+當前劇情為<color\=#ff0000>重要劇情</color>，是否確定跳過？=This is an <color\=#ff0000>important scene</color>. \nAre you sure you want to skip it?
+當前劇情為重要劇情，不可跳過=Cannot skip important scene.
 
 點擊追蹤FB官方粉絲團=Follow official FB
 點擊加入Discord官方頻道=Join official Discord
@@ -194,6 +196,19 @@ r:"^待設置$"="None"
 點擊關注企業微信號=Follow WeChat
 兌換碼=Code
 請輸入兌換碼=Please enter the code
+
+請根據指引提示操作=Please follow the tutorial
+操作 </color><size\=56>虋韽囻丷</size> 移動角色=WADS to move
+「<color\=#ff3b37>跳躍</color>」至前方平臺=[<color\=#ff3b37>Jump</color>] to the next platform
+使用「<color\=#ff3b37>{{A}}</color>」戰鬥=Use [<color\=#ff3b37>{{A}}</color>]
+選擇這個「<color\=#ff3b37>技能</color>」=Select this [<color\=#ff3b37>Skill</color>]
+點擊「<color\=#ff3b37>目標</color>」釋放=Click on [<color\=#ff3b37>target</color>]
+點擊釋放「<color\=#ff3b37>終結技</color>」=Click to use [<color\=#ff3b37>HIGHLIGHT</color>]
+
+按下滑鼠左鍵拖動視角=Click the left mouse botton to move the camera
+視角跟隨滑鼠移動=Camera follow cursor
+按下<color\=#ff3b37>ALT鍵</color>可喚出滑鼠=Press [<color\=#ff3b37>ALT</color>] to show cursor
+後續也可在【選單-設置-遊戲】中進行設置=Can edit in [Menu - Settings - Gameplay] later
 
 ----------
 Character Names
@@ -413,7 +428,9 @@ r:"^社<color\=#ff0000ff>團</color>佈告欄$"="Cl<color\=#ff0000ff>ub</color> 
 進入學校=Enter school
 r:"^教<color\=#ff0000ff>學</color>樓$"="Cl<color\=#ff0000ff>as</color>sroom Building"
 2-C教室=<size\=24>Classroom 2-C</size>
+r:"^<color\=#ff0000ff>黑</color>板$"="Bl<color\=#ff0000ff>ac</color>kboard"
 r:"^前<color\=#ff0000ff>往</color>走廊$"="Go <color\=#ff0000ff>to</color> Corridor"
+r:"^更<color\=#ff0000ff>換</color>校外鞋$"="Ch<color\=#ff0000ff>an</color>ge Shoes"
 r:"^進<color\=#ff0000ff>入</color>教室$"="En<color\=#ff0000ff>t</color>er Classroom"
 一樓走廊=1F Corridor
 一樓=First Floor
@@ -986,6 +1003,7 @@ r:"^<size\=60><sprite\=37 tint\=1></size><size\=28><color\=#FFE500>x10</color></
 本期剩餘時間：=Time left:
 探索經驗：=Phantom Pass EXP: <size\=1>.</size>
 本週上限：=Weekly cap: <size\=1>.</size>
+已達經驗獲取上限。=Reached EXP cap.
 購買等級=Buy Lv.
 r:"^購買後，提升至(\d+)級，可獲得以下獎勵$"="Buy to Lv. $1 and get"
 購買等級:=Buy Level:
@@ -1026,7 +1044,7 @@ r:"完成1次「旖旎香調」挑戰 \((\d)\/(\d)\)"=Complete 1 [Perfume Farm] 
 r:"完成1次「裝配冶藝」挑戰 \((\d)\/(\d)\)"=Complete 1 [Ore Farm] ($1/$2)
 r:"完成1次「靈之參悟」挑戰 \((\d)\/(\d)\)"=Complete 1 [Incense farm] ($1/$2)
 r:"進行1次{{A}}育成 \((\d)\/(\d)\)"=Perfrom 1 Persona skill inheritance ($1/$2)
-r:"^完成1次「往日回溯」挑戰 \((\d)\/(\d)\)$"="Complete 1 [Past Echo] ($1/$2)
+r:"^完成1次「往日回溯」挑戰 \((\d)\/(\d)\)$"="Complete 1 [Past Echo] ($1/$2)"
 r:"^通關1次「閼凶夢之扉」 \((\d)\/(\d)\)$"="Complete 1 [Door of Nightmares] ($1/$2)"
 r:"^完成1次「天鵝絨試煉」 \((\d)\/(\d)\)$"="Complete 1 [Velvet Trial] ($1/$2)"
 r:"^完成1次「心之海試煉」 \((\d)\/(\d)\)$"="Complete 1 [Sea of Souls Trial] ($1/$2)"
@@ -1427,11 +1445,6 @@ r:"^和{{A}}的關係就要加深了……$"="The bond with {{A}} \nis about to 
 r:"^和清的關係就要加深了……$"="The bond with Kiyoshi \nis about to deepen!"
 r:"^和{{A}}的關係差不多要加深了……$"="The bond with {{A}} \nis about to deepen!"
 似乎能更加了解{{A}}了……=Looks like I can know \n{{A}} better...
-r:"^感覺和{{A}}的關係加深了……$"="I feel like my relationship with {{A}} has deepened..."
-r:"^感覺和{{A}}的關係\n加深了……$"="I feel like my relationship with {{A}} has deepened..."
-r:"^感覺和{{A}}的關係更加深入了……$"="I feel like my relationship with {{A}} has deepened..."
-r:"^與{{A}}度過了二人時間……$"="<size\=27>I spend a long time with {{A}}...</size>"
-r:"^感受到了跟{{A}}的堅固羈絆……$"="I feel like I have a strong bond with {{A}}!"
 
 和{{A}}一起度過放學後的時光吧=Let's spend some time with {{A}} after school
 今天要陪{{A}}嗎……=Want to accompany {{A}} today...?
@@ -1559,6 +1572,7 @@ r:"^要在這裡度過時間嗎\(<color\=#ff0000>每次(\d+)現金</color>\)？$
 {{A}}的書店今天似乎可以安排打工，要去試試嗎？=I can work at the Bookstore today, want to try it?
 {{A}}的書店今天似乎需要人手……=The Bookstore is understaffed...
 {{A}}的書店今天似乎需要人手，要去幫忙整理嗎？=<size\=28>The Bookstore is understaffed today, want to go help?</size>
+今天也是{{A}}書店舉辦活動的日子，要去幫忙嗎？=The {{A}} Bookstore is holding an event today, want to help out?
 在書店打工=<size\=24>Work part-time\nat the Bookstore</size>
 要在這家書店打工嗎？=Do you want to work part-time \nat this Bookstore?
 
@@ -1874,6 +1888,7 @@ r:"^在接下來2次透過都市日程獲得『任意人格指數』時，額外
 ----------
 Mementos + Metaverse Farm
 ----------
+r:"^{{A}}區域(\d+)  $"="<size\=20>{{A}} Area $1</size>"
 r:"^{{A}}區域(\d+)$"="<size\=20>{{A}} Area $1</size>"
 r:"^區域(\d+)$"="Area $1"
 區域：=Area:
@@ -2184,16 +2199,22 @@ sr:"^當前時間資訊不符合要求，\n是否等待到<color\=#FFC000>(.*)</
 
 sr:"^當前任務目標處於<color\=#FF0000>(.*)</color>，\n是否立即前往？$"="The current mission objective is in <color\=#FF0000>$1</color>. Go there now?"
 
+離開賭場=Escape from the casino
 上床休息=Go to bed
 回家休息=Go home and rest
 回到{{A}}=Return to {{A}}
+前往學校走廊=Go to the corridor
 前往走廊=Go to the corridor
+前往一樓=Go to first floor
 前往天臺=Go to the roof
+更換校外鞋=Change shoes
+與{{A}}一同前進=Move with {{A}}
 r:"^前往{{A}}(\d+)區$"=$"Go to {{A}} Area $1"
 r:"^調查{{A}}$"="Investigate {{A}}"
 與{{A}}對話=Talk to {{A}}
+尋找目標人物=Find the target
 將時間推進到夜晚=Pass the time to night
-漫遊{{A}}=Strolling {{A}}
+漫遊{{A}}=Roaming {{A}}
 抓取的樂趣=The Fun of Catching
 如果想繼續體驗「<color\=#ffc000>娃娃機</color>」的小遊戲，可以在完成任務「抓取的樂趣」後再進一步遊玩。=<size\=26>If you want to continue to experience the "<color\=#ffc000>Crane Game</color>", you can play more after completing the mission "The Fun of Catching".</size>
 r:"^與「<color\=#ffc000>{{A}}</color>」結識，\n可以期待今後與他發生更多的故事。$"="You've met "<color\=#ffc000>{{A}}</color>".\n Look forward to more stories \nwith him in the future."
@@ -2304,6 +2325,8 @@ r:"^/定位$"="<size\=24>/Type</size>"
 r:"^/屬性$"="      <size\=24>/Element</size>"
 添加印記可能獲得對應技能=Using a Mark can inherit skill
 隨機獲得1個以下技能=<size\=25>Randomly gain 1 of the following skills</size>
+技能繼承說明=Skill Inheritance Info
+r:"^{{A}}無法習得<color\=#FF0000>(.*)</color>類型技能。$"="<size\=25>Cannot inherit <color\=#FF0000>greyed out</color> skills.</size>"
 該技能已掌握，已轉化為道具。=Already learned skill, converted into items.
 新手友好=<size\=16>Newbie Friendly</size>
 物理單攻=<size\=16>Physical ST DPS</size>
@@ -2427,3 +2450,45 @@ r:"^莊嚴的{{A}}$"="Solemn {{A}}"
 r:"^{{A}}「化身」$"=""Incarnation" of {{A}}"
 r:"^「{{A}}」之影$"="Shadow of "{{A}}""
 r:"^詛咒的{{A}}$"="Cursed {{A}}"
+
+----------
+ACHIEVEMENTS
+----------
+希望追尋之旅=<size\=26>Journey for Hope</size>
+無雙的武鬥派=<size\=21>Unrivaled Combatant</size>
+羈絆的通訊錄=<size\=25>Contacts of Bond</size>
+面具的邀請函=<size\=25>Persona Invitation</size>
+都市漫遊=City Roamer
+全能挑戰者=<size\=22>Almighty Challenger</size>
+成為超人氣之星=<size\=20>Becoming a Superstar</size>
+怪盜的秘密基地=Thief's Hideout
+
+解鎖{{A}}的協同關係<size\=30>(0/1)</size>=Unlock {{A}}'s Confidant <size\=30>(0/1)</size>
+解鎖{{A}}的協同關係=Unlock {{A}}'s Confidant
+解鎖{{A}}的RANK=Unlock {{A}}'s RANK
+解鎖{{A}}的RANK等級=Unlock {{A}}'s RANK
+r:"^{{A}}的RANK達(\d+)級$"="{{A}} reached RANK $1"
+
+r:"^與協同者進行「邀約」(\d+)次<size\=30>\((\d+)/(\d+)\)</size>$"="[Invite] Confidants $1 time(s) <size\=30>($2/$3)</size>"
+r:"^與協同者進行「邀約」(\d+)次$"="[Invite] Confidants $1 time(s)"
+r:"^與{{A}}進行「邀約」累計達(\d+)次<size\=30>\((\d+)/(\d+)\)</size>$"="[Invite] {{A}} $1 time(s) <size\=30>($2/$3)</size>"
+r:"與{{A}}進行「邀約」累計達(\d+)次"=[Invite] {{A}} $1 time(s)
+r:"^與協同者進行「邀約」累計達(\d+)次<size\=30>\((\d+)/(\d+)\)</size>$"="[Invite] Confidants $1 time(s) <size\=30>($2/$3)</size>"
+r:"^與協同者進行「邀約」累計達(\d+)次$"="[Invite] Confidants $1 time(s)"
+
+r:"^贈送禮物給協同者(\d+)次<size\=30>\((\d+)/(\d+)\)</size>$"="Give Gifts to Confidants $1 time(s) <size\=30>($2/$3)</size>"
+r:"^贈送禮物給協同者(\d+)次$"="Give Gifts to Confidants $1 time(s)"
+r:"^贈送禮物給協同者累計達(\d+)次<size\=30>\((\d+)/(\d+)\)</size>$"="Give Gifts to Confidants $1 time(s) <size\=30>($2/$3)</size>"
+r:"^贈送禮物給協同者累計達(\d+)次$"="Give Gifts to Confidants $1 time(s)"
+r:"^贈送喜歡的禮物給{{A}}(\d+)次<size\=30>\((\d+)/(\d+)\)</size>$"="Give a Favorite Gift to {{A}} $1 time(s) <size\=30>($2/$3)</size>"
+r:"^贈送喜歡的禮物給{{A}}(\d+)次$"="Give a Favorite Gift to {{A}} $1 time(s)"
+r:"^贈送所有喜歡的禮物給{{A}}<size\=30>\((\d+)/(\d+)\)</size>$"="Give all Favorite Gifts to {{A}} <size\=30>($1/$2)</size>"
+r:"^贈送所有喜歡的禮物給{{A}}$"="Give all Favorite Gifts to {{A}}"
+
+解鎖{{A}}所有的協同者故事<size\=30>(0/1)</size>=Unlock all Confidant Stories for {{A}} <size\=30>(0/1)</size>
+解鎖{{A}}所有的協同者故事=Unlock all Confidant Stories for {{A}}
+解鎖{{A}}所有協同者語音=Unlock all Confidant Voicelines for {{A}}
+解鎖{{A}}所有的協同者語音=Unlock all Confidant Voicelines for {{A}}
+與任意協同者進行1次關係回溯<size\=30>(0/1)</size>=Backtrack 1 relationship <size\=30>(0/1)</size>
+與任意協同者進行1次關係回溯=Backtrack 1 relationship
+
