@@ -362,12 +362,6 @@ r:"^無法行動，受到傷害提升(\d+%)$"="Cannot act, increase DMG Taken by
 r:"^對所有敵人造成(\d+)~(\d+)次物理屬性傷害。$"="Deals Physical damage to all enemies $1-$2 times."
 弧旋崇拜球=Screwball of Warship
 爆裂崇拜球=Blitzball of Warship
-sr:"^對1名敵人造成(.*)屬性傷害$"="Deals $1 damage to 1 enemy"
-sr:"^對1名敵人造成特大(.*)屬性傷害=Deals Severe $1 damage to 1 enemy"
-sr:"^對1名敵人造成(.*)屬性傷害。$"="Deals $1 damage to 1 enemy."
-sr:"^對所有敵人造成(.*)屬性傷害$"="Deals $1 damage to all enemies"
-sr:"^對所有敵人造成(.*)屬性傷害。$"="Deals $1 damage to all enemies."
-sr:"^對所有敵人造成大量(.*)屬性傷害$"="Deals Heavy $1 damage to all enemies"
 
 {{A}}，未嘗一敗={{A}}, never known defeat
 {{A}}，王牌投手={{A}}, ace pitcher
@@ -436,6 +430,183 @@ r:"^<color\=#FF0000>(.*)</color>進入了迷惑狀態……$"="Inflicted with Be
 r:"^迷<color\=#000000>惑</color>$"="<size\=27> </size>B<color\=#000000>e</color>wilder"
 r:"^惱<color\=#000000>羞</color>成怒$"="<size\=24> </size>A<color\=#000000>n</color>ger"
 r:"^眩<color\=#000000>暈</color>$"="<size\=16> </size>D<color\=#000000>iz</color>zy"
+
+----------
+PALACE 2 ELITES
+----------
+{{A}}本身不會主動攻擊，需要怪盜們在三回合內完成一支<color\=#ff3b37>「神樂之舞」</color>，方可勝利。具體包括如下舞步：\n「癒舞」：使用一次治療技能\n「矛舞」：使用一次攻擊技能\n「劍舞」：使用一次普通攻擊\n「弓舞」：使用一次槍械攻擊\n「物舞」：使用一次道具=<size\=26>{{A}} won't attack, victory when Thieves completed <color\=#ff3b37>[Kagura Dance]</color> within three rounds. The steps include: \n[Healing Dance]: Use 1 Healing Skill\n[Spear Dance]: Use 1 Attack Skill\n[Sword Dance]: Use 1 Melee Attack\n[Bow Dance]: Use 1 Gun Attack\n[Item Dance]: Use 1 Item</size>
+癒舞=Healing Dance
+矛舞=Spear Dance
+弓舞=Bow Dance
+物舞=Item Dance
+
+r:"^癒<color\=#000000>舞</color>$"="<size\=3> </size>H<color\=#000000>ea</color>ling Dance"
+r:"^矛<color\=#000000>舞</color>$"=" S<color\=#000000>p</color>ear Dance"
+r:"^劍<color\=#000000>舞</color>$"="<size\=20> </size>S<color\=#000000>w</color>ord Dance"
+r:"^弓<color\=#000000>舞</color>$"="<size\=25> </size>B<color\=#000000>o</color>w Dance"
+r:"^物<color\=#000000>舞</color>$"="<size\=18> </size>It<color\=#000000>e</color>m Dance"
+
+使用一次{{A}}的<color\=#FF0000>治療技能</color>=Use 1 {{A}} <color\=#FF0000>Healing Skill</color>
+使用一次{{A}}的<color\=#FF0000>攻擊技能</color>=Use 1 {{A}} <color\=#FF0000>Attack Skill</color>
+使用一次<color\=#FF0000>普通攻擊</color>=Use 1 <color\=#FF0000>Melee Attack</color>
+使用一次<color\=#FF0000>槍械攻擊</color>=Use 1 <color\=#FF0000>Gun Attack</color>
+使用一次<color\=#FF0000>道具</color>=Use 1 <color\=#FF0000>Item</color>
+需要任意怪盜使用一次{{A}}的<color\=#FF0000>治療技能</color>=Requires any Thief to use {{A}} <color\=#FF0000>Healing Skill</color> once
+需要任意怪盜使用一次{{A}}的<color\=#FF0000>攻擊技能</color>=Requires any Thief to use {{A}} <color\=#FF0000>Attack Skill</color> once
+需要任意怪盜使用一次<color\=#FF0000>普通攻擊</color>=Requires any Thief to use <color\=#FF0000>Melee Attack</color> once
+需要任意怪盜使用一次<color\=#FF0000>槍械攻擊</color>=Requires any Thief to use <color\=#FF0000>Gun Attack</color> once
+需要任意怪盜使用一次<color\=#FF0000>道具</color>=Requires any Thief to use <color\=#FF0000>Item</color> once
+
+請跟隨我的指引，在<color\=#FF0000>三回合</color>內完成神樂之舞吧！=Please follow my instructions and complete the Kagura Dance within <color\=#FF0000>three rounds</color>!
+時間還有兩回合，請加油完成舞步！=There are still two rounds left, please try your best to complete the steps!
+只剩一回合了，請抓緊時間完成舞步！=There is only one round left, please hurry up and complete the steps!
+你們沒有在三回合內完成神樂之舞，請回吧。=You did not complete the Kagura Dance within three rounds, please leave.
+很好，你們完成了神樂之舞，我將給予你們獎勵！=Very good, you have completed the Kagura Dance, I will give you a reward!
+
+請使用一次<color\=#FF0000>治療技能</color>，完成癒舞……=<size\=26>Please use one <color\=#FF0000>Healing Skill</color> to complete Healing Dance...</size>
+請使用一次<color\=#FF0000>攻擊技能</color>，完成矛舞……=<size\=26>Please use one <color\=#FF0000>Attack Skill</color> to complete Spear Dance...</size>
+請使用一次<color\=#FF0000>普通攻擊</color>，完成劍舞……=<size\=26>Please use one <color\=#FF0000>Melee Attack</color> to complete Sword Dance...</size>
+請使用一次<color\=#FF0000>槍械攻擊</color>，完成弓舞……=<size\=26>Please use one <color\=#FF0000>Gun Attack</color> to complete Bow Dance...</size>
+請使用一次<color\=#FF0000>道具</color>，完成物舞……=<size\=26>Please use one <color\=#FF0000>Item</color> to complete Item Dance...</size>
+漂亮地完成了<color\=#FF0000>癒舞</color>！=Completed <color\=#FF0000>Healing Dance</color>!
+漂亮地完成了<color\=#FF0000>矛舞</color>！=Completed <color\=#FF0000>Spear Dance</color>!
+漂亮地完成了<color\=#FF0000>劍舞</color>！=Completed <color\=#FF0000>Sword Dance</color>!
+漂亮地完成了<color\=#FF0000>弓舞</color>！=Completed <color\=#FF0000>Bow Dance</color>!
+漂亮地完成了<color\=#FF0000>物舞</color>！=Completed <color\=#FF0000>Item Dance</color>!
+
+1、{{A}}本身不會主動攻擊，需要怪盜們每回合按照{{A}}的要求，完成<color\=#ff3b37>「神樂之舞」</color>共四式。具體包括如下舞步：\n「癒舞」：使用一次治療技能\n「矛舞」：使用一次攻擊技能\n「劍舞」：使用一次普通攻擊\n「弓舞」：使用一次槍械攻擊\n「物舞」：使用一次道具\n2、{{A}}會在中途召喚出<color\=#ff3b37>七五三鈴</color>，需要按{{A}}的要求敲打七五三鈴指定次數（7/5/3次）。\n3、四回合內，每回合都完成{{A}}的舞步並敲打指定次數的七五三鈴，方可取得勝利。=<size\=24>1. {{A}} won't attack, they need Thieves to follow their instructions to complete <color\=#ff3b37>[Kagura Dance]</color> 4 times. The steps include: \n[Healing Dance]: Use 1 Healing Skill\n[Spear Dance]: Use 1 Attack Skill\n[Sword Dance]: Use 1 Melee Attack\n[Bow Dance]: Use 1 Gun Attack\n[Item Dance]: Use 1 Item\n2. {{A}} will summon <color\=#ff3b37>Seven Five Three Bell</color>, Thieves need to hit them specific times based on the instructions (7/5/3 times).\n3. Victory when completing the Kagura Dance and hitting the Seven Five Three Bell specific times.</size>
+請跟隨我的指引，完成神樂之舞吧！=Please follow my instructions and complete the Kagura Dance!
+首先請在一回合內完成三種舞步。=First, please complete three steps in one round.
+r:"^做得好，接下來請在一回合內<color\=#FF0000>敲打(\d+)次</color>七五三鈴，不可多也不可少。$"="Well done. Next, please hit the Seven Five Three Bell <color\=#FF0000>exactly $1 times</color> in one round."
+r:"^真棒，接下來請在一回合內<color\=#FF0000>敲打(\d+)次</color>七五三鈴，並完成一種舞步。$"="Great. Next, please hit the Seven Five Three Bell <color\=#FF0000>exactly $1 times</color> and complete one step in one round."
+r:"^快要完成了，請在一回合內<color\=#FF0000>敲打(\d+)次</color>七五三鈴，並完成兩種舞步。$"="Almost there, please hit the Seven Five Three Bell <color\=#FF0000>exactly $1 times</color> and complete two steps in one round."
+你們沒有按照要求完成神樂之舞，請回吧。=You did not complete the Kagura Dance as required, please leave.
+
+七五三鈴=Seven Five Three Bell
+神樂之舞一式=Kagura Dance Step One
+神樂之舞二式=Kagura Dance Step Two
+神樂之舞三式=Kagura Dance Step Three
+神樂之舞四式=Kagura Dance Step Four
+
+敲打次數=Hit Times
+受到攻擊次數=Number of times attacked
+r:"^需要被敲打<color\=#FF0000>(\d+)</color>次$"="Need to be hit <color\=#FF0000>$1</color> times"
+r:"^敲<color\=#000000>打</color>次數$"="<size\=18> </size>H<color\=#000000>it</color> Times"
+
+1、{{A}}本身不會主動攻擊，每回合會給所有怪盜規定<color\=#ff3b37>「神樂之舞」</color>的其中一個舞步，並給隨機一名怪盜額外佈置一個舞步，只有該怪盜能完成這種舞步，具體包括如下舞步：\n「癒舞」：使用一次治療技能\n「矛舞」：使用一次攻擊技能\n「劍舞」：使用一次普通攻擊\n「弓舞」：使用一次槍械攻擊\n「物舞」：使用一次道具\n2、戰場中有<color\=#ff3b37>七五三鈴</color>，怪盜們每回合需要按{{A}}的要求敲打七五三鈴指定次數（3/5/7次）。\n3、三回合內，每回合都完成{{A}}的舞步並敲打指定次數的七五三鈴，方可取得勝利。=<size\=24>1. {{A}} won't attack, they will give all Thieves 1 step from <color\=#ff3b37>[Kagura Dance]</color>, and 1 additional step for 1 random Thief, only that Thief can complete that step, the steps include: \n[Healing Dance]: Use 1 Healing Skill\n[Spear Dance]: Use 1 Attack Skill\n[Sword Dance]: Use 1 Melee Attack\n[Bow Dance]: Use 1 Gun Attack\n[Item Dance]: Use 1 Item\n2. Thieves need to hit the <color\=#ff3b37>Seven Five Three Bell</color> specific times based on the instructions (7/5/3 times) each turn.\n3. Victory when completing the Kagura Dance and hitting the Seven Five Three Bell specific times within 3 rounds.</size>
+1、{{A}}本身不會主動攻擊，每回合會給所有怪盜規定<color\=#ff3b37>「神樂之舞」</color>的其中一個舞步，並給隨機一名怪盜額外規定一個舞步，只有該怪盜能完成這種舞步，具體包括如下舞步：\n「癒舞」：使用一次治療技能\n「矛舞」：使用一次攻擊技能\n「劍舞」：使用一次普通攻擊\n「弓舞」：使用一次槍械攻擊\n「物舞」：使用一次道具\n2、戰場中有<color\=#ff3b37>七五三鈴</color>，怪盜們每回合需要按{{A}}的要求敲打七五三鈴指定次數（3/5/7次）。\n3、三回合內，每回合都完成{{A}}的舞步並敲打指定次數的七五三鈴，方可取得勝利。=<size\=24>1. {{A}} won't attack, they will give all Thieves 1 step from <color\=#ff3b37>[Kagura Dance]</color>, and 1 additional step for 1 random Thief, only that Thief can complete that step, the steps include: \n[Healing Dance]: Use 1 Healing Skill\n[Spear Dance]: Use 1 Attack Skill\n[Sword Dance]: Use 1 Melee Attack\n[Bow Dance]: Use 1 Gun Attack\n[Item Dance]: Use 1 Item\n2. Thieves need to hit the <color\=#ff3b37>Seven Five Three Bell</color> specific times based on the instructions (7/5/3 times) each turn.\n3. Victory when completing the Kagura Dance and hitting the Seven Five Three Bell specific times within 3 rounds.</size>
+
+「神樂之舞」必需的道具，需要被敲打指定的次數=Item required for [Kagura Dance], needs to be hit specific times
+
+請跟隨我的指引，一起完成神樂之舞吧！=Please follow my instructions and complete the Kagura Dance together!
+r:"^首先，請在一回合內完成舞步，並<color\=#FF0000>敲打(\d+)次</color>七五三鈴，不可多也不可少。$"="First, please complete the steps and hit the Seven Five Three Bell <color\=#FF0000>exactly $1 times</color>."
+我會給你們當中的一位<color\=#FF0000>額外規定一種舞步</color>，只有他能夠完成。=I'll give one of you <color\=#FF0000>an additional step</color> that only they can complete.
+r:"^做得好，接下來請在一回合內<color\=#FF0000>敲打(\d+)次</color>七五三鈴，並完成我規定的舞步。$"="Well done. Next, please hit the Seven Five Three Bell <color\=#FF0000>exactly $1 times</color> and complete the steps."
+r:"^真棒，接下來請在一回合內<color\=#FF0000>敲打(\d+)次</color>七五三鈴，並完成我規定的舞步。$"="Great. Next, please hit the Seven Five Three Bell <color\=#FF0000>exactly $1 times</color> and complete the steps."
+
+r:"^<color\=#FF0000>{{A}}</color>請額外完成癒舞，使用一次<color\=#FF0000>治療技能</color>$"="<size\=24><color\=#FF0000>{{A}}</color> please complete an additional <color\=#FF0000>Healing Dance</color></size>"
+r:"^<color\=#FF0000>{{A}}</color>請額外完成矛舞，使用一次<color\=#FF0000>攻擊技能</color>$"="<size\=24><color\=#FF0000>{{A}}</color> please complete an additional <color\=#FF0000>Spear Dance</color></size>"
+r:"^<color\=#FF0000>{{A}}</color>請額外完成劍舞，使用一次<color\=#FF0000>普通攻擊</color>$"="<size\=24><color\=#FF0000>{{A}}</color> please complete an additional <color\=#FF0000>Sword Dance</color></size>"
+r:"^<color\=#FF0000>{{A}}</color>請額外完成弓舞，使用一次<color\=#FF0000>槍械攻擊</color>$"="<size\=24><color\=#FF0000>{{A}}</color> please complete an additional <color\=#FF0000>Bow Dance</color></size>"
+r:"^<color\=#FF0000>{{A}}</color>請額外完成物舞，使用一次<color\=#FF0000>道具</color>$"="<size\=24><color\=#FF0000>{{A}}</color> please complete an additional <color\=#FF0000>Item Dance</color></size>"
+sr:"^<color\=#FF0000>(.*)</color>請額外完成癒舞，使用一次<color\=#FF0000>治療技能</color>$"="<size\=24><color\=#FF0000>$1</color> please complete an additional <color\=#FF0000>Healing Dance</color></size>"
+sr:"^<color\=#FF0000>(.*)</color>請額外完成矛舞，使用一次<color\=#FF0000>攻擊技能</color>$"="<size\=24><color\=#FF0000>$1</color> please complete an additional <color\=#FF0000>Spear Dance</color></size>"
+sr:"^<color\=#FF0000>(.*)</color>請額外完成劍舞，使用一次<color\=#FF0000>普通攻擊</color>$"="<size\=24><color\=#FF0000>$1</color> please complete an additional <color\=#FF0000>Sword Dance</color></size>"
+sr:"^<color\=#FF0000>(.*)</color>請額外完成弓舞，使用一次<color\=#FF0000>槍械攻擊</color>$"="<size\=24><color\=#FF0000>$1</color> please complete an additional <color\=#FF0000>Bow Dance</color></size>"
+sr:"^<color\=#FF0000>(.*)</color>請額外完成物舞，使用一次<color\=#FF0000>道具</color>$"="<size\=24><color\=#FF0000>$1</color> please complete an additional <color\=#FF0000>Item Dance</color></size>"
+
+r:"^1、{{A}}初始擁有(\d+)點倒地值，每(\d+)回合會釋放「持劍護國土」，使自己獲得(\d+)點倒地值，全體友軍獲得(\d+)點倒地值。在{{A}}的倒地值達到(\d+)後，會變身為<color\=#ff3b37>{{B}}</color>，能力大幅強化。\n2、{{A}}會源源不斷地召喚各種陰影，陰影被擊倒後會直接死亡，並使{{A}}的倒地值減少(\d+)點。\n3、{{A}}倒地值歸零或被擊敗時，戰鬥勝利。$"="<size\=25>1. {{A}} start with $1 Down Gauge, use [Country Protection] every $2 turns to give self $3 Down Gauge and all other allies $4 Down Gauge. When {{A}} have $5 Down Gauge, transform into <color\=#ff3b37>{{B}}</color>, heavily increase own abilities.\n2. {{A}} will keep summoning Shadows. When any Shadow is downed, immediately defeat them and decrease {{A}}'s Down Gauge by $6.\n3. Victory when {{A}} have 0 Down Gauge or when all enemies are defeated.</size>"
+將{{A}}的倒地值削減至零或擊敗敵人=Decrease {{A}}'s Down Gauge to 0 or defeat all enemies
+持劍護國土=Country Protection
+
+r:"^1、{{A}}初始擁有(\d+)點倒地值，每回合額外獲得(\d+)點倒地值。在{{A}}的倒地值達到(\d+)後，會變身為<color\=#ff3b37>{{B}}</color>，能力大幅強化。\n2、{{A}}每(\d+)回合會召喚四魂，四魂一回合後逃跑。每擊敗一個魂，會立刻使{{A}}減少(\d+)點倒地值，並使{{A}}火焰、冰凍、電擊、疾風屬性的其中一個適應性變為弱，持續(\d+)回合。\n3、{{A}}倒地值歸零或被擊敗時，戰鬥勝利。$"="<size\=25>1. {{A}} start with $1 Down Gauge and gain $2 Down Gauge every turn. When {{A}} have $3 Down Gauge, transform into <color\=#ff3b37>{{B}}</color>, heavily increase own abilities.\n2. {{A}} will summoning 4 Mitamas every $4 turns. The 4 Mitamas will escape after 1 turn. Immediately decrease {{A}}'s Down Gauge by $5 when defeating 1 Mitama, then inflict {{A}} with a Fire, Ice, Elec, or Wind weakness for $6 turns.\n3. Victory when {{A}} have 0 Down Gauge or when all enemies are defeated.</size>"
+
+r:"^{{A}}每回合會隨機對怪盜施加一種調停之力，禁止其某些行為。\n「調停·生存」：禁止使用救援、防衛類技能\n「調停·攻擊」：禁止使用反抗、支配類技能\n「調停·輔助」：禁止使用優越、屈從類技能\n破壞了調停的怪盜，會獲得一層「死生之標記」，達到(\d+)層時會被即死；若所有怪盜均遵守了調停，那麼會獲得{{A}}給予的獎勵：傷害提高。$"="<size\=28>{{A}} randomly ban 1 action each turn.\n[Mediation·Survival]: Ban Rescue and Defend type skills\n[Mediation·Attack]: Ban Rebel and Dominate type skills\n[Mediation·Support]: Ban Superior and Submit type skills\nInflict 1 stack of [Mark of Life and Death] when a Thief broke Mediation, inflict Instant Death to that Thief when reaching $1 stacks; Increase all Thieves' DMG when they all followed Mediation.</size>"
+調停·生存=Mediation·Survival
+調停·攻擊=Mediation·Attack
+調停·輔助=Mediation·Support
+死生之標記=Mark of Life and Death
+調停之禮=Rite of Mediation
+禁止使用救援、防衛類技能=Ban Rescue and Defend type skills
+禁止使用反抗、支配類技能=Ban Rebel and Dominate type skills
+禁止使用優越、屈從類技能=Ban Superior and Submit type skills
+破壞調停獲得的懲罰，到達兩層會被賦予即死=Inflict Instant Death when reaching 2 stacks
+r:"^<color\=#FF0000>{{A}}</color>被施加了調停·生存，禁止使用救援、防衛類技能……$"="<size\=28>Banned Rescue and Defend type skills...</size>"
+r:"^<color\=#FF0000>{{A}}</color>被施加了調停·攻擊，禁止使用反抗、支配類技能……$"="<size\=28>Banned Rebel and Dominate type skills...</size>"
+r:"^<color\=#FF0000>{{A}}</color>被施加了調停·輔助，禁止使用優越、屈從類技能……$"="<size\=28>Banned Superior and Submit type skills ...</size>"
+r:"^<color\=#FF0000>(.*)</color>被施加了調停·生存，禁止使用救援、防衛類技能……$"="<size\=28>Banned Rescue and Defend type skills...</size>"
+r:"^<color\=#FF0000>(.*)</color>被施加了調停·攻擊，禁止使用反抗、支配類技能……$"="<size\=28>Banned Rebel and Dominate type skills...</size>"
+r:"^<color\=#FF0000>(.*)</color>被施加了調停·輔助，禁止使用優越、屈從類技能……$"="<size\=28>Banned Superior and Submit type skills...</size>"
+r:"^<color\=#FF0000>{{A}}</color>獲得了調停之禮，造成傷害提高了……$"="<color\=#FF0000>{{A}}</color> DMG Dealt Up!"
+r:"^<color\=#FF0000>(.*)</color>獲得了調停之禮，造成傷害提高了……$"="<color\=#FF0000>$1</color> DMG Dealt Up!"
+r:"^<color\=#FF0000>{{A}}</color>破壞了調停，獲得了一個死生之標記……$"="<size\=24><color\=#FF0000>{{A}}</color> gained 1 Mark of Life and Death...</size>"
+r:"^<color\=#FF0000>(.*)</color>破壞了調停，獲得了一個死生之標記……$"="<size\=24><color\=#FF0000>$1</color> gained 1 Mark of Life and Death...</size>"
+很好，汝等遵守了吾之調停，吾將予以汝等賞賜！=Very well, thou hast obeyed my mediation. \nI will reward thee!
+
+r:"^戰鬥開始時，{{A}}會釋放「死生之界」，使所有怪盜的血量大幅減少，並施加「調停·生存」，持續(\d+)回合。\n再之後，為所有怪盜添加「調停·攻擊」、「調停·輔助」。隨後{{A}}每兩回合隨機對怪盜施加一種調停之力，禁止其某些行為。\n「調停·生存」：禁止使用救援、防衛類技能\n「調停·攻擊」：禁止使用反抗、支配類技能\n「調停·輔助」：禁止使用優越、屈從類技能\n破壞了調停的怪盜，會獲得一層「死生之標記」，達到(\d+)層時會被即死；若所有怪盜均遵守了調停，那麼會獲得{{A}}給予的獎勵：傷害提高。$"="<size\=24>At the start of battle. {{A}} will use [Life and Death Domain], heavily decrease all Thieves' HP and use [Mediation·Survival] for $1 turns.\nAfterward, use [Mediation·Attack] and [Mediation·Support]. Then {{A}} will randomly use 1 Mediation, banning certain actions.\n[Mediation·Survival]: Ban Rescue and Defend type skills\n[Mediation·Attack]: Ban Rebel and Dominate type skills\n[Mediation·Support]: Ban Superior and Submit type skills\nInflict 1 stack of [Mark of Life and Death] when a Thief broke Mediation, inflict Instant Death to that Thief when reaching $1 stacks; Increase all Thieves' DMG when they all followed Mediation.</size>"
+死生之界=Life and Death Domain
+膽敢多次破壞吾之調停，吾將予以汝等懲罰！=I will punish thou for repeatedly disrupting my mediation!
+
+r:"^每(\d+)回合，{{A}}會釋放「連結·死」，使隨機一名怪盜陷入死亡狀態，並對剩餘怪盜施加隨機一種調停之力，禁止其某些行為。\n「調停·生存」：禁止使用救援、防衛類技能\n「調停·攻擊」：禁止使用反抗、支配類技能\n「調停·輔助」：禁止使用優越、屈從類技能\n若所有怪盜均遵守了調停，那麼會獲得{{A}}給予的獎勵：將陷入死亡狀態的怪盜複生。$"="<size\=24>{{A}} will use [Link·Death] every $1 turns, randomly defeat 1 Thief, then randomly use 1 Mediation, banning certain actions.\n[Mediation·Survival]: Ban Rescue and Defend type skills\n[Mediation·Attack]: Ban Rebel and Dominate type skills\n[Mediation·Support]: Ban Superior and Submit type skills\nRevive the defeated Thief when all Thieves followed Mediation.</size>"
+連結·死=Link·Death
+連結·生=Link·Life
+很好，汝等遵守了吾之調停，吾將予以汝等複生！=Very well, thou hast obeyed my mediation. \nI will give thee life!
+
+1、{{A}}擁有使「萬物增長」的能力，每回合會使一名友軍獲得「增長」。\n2、{{D}}獲得「增長」後，會變為{{C}}；{{C}}獲得「增長」後，會變為{{B}}，並召喚一個{{E}}。擊敗{{E}}，會使{{B}}重新變為{{D}}。=<size\=24>1. {{A}} can use [All Growth], each turn give 1 ally [Growth].\nAfter {{D}} gain [Growth], transform into {{C}}; \nAfter {{C}} gain [Growth], transform into {{B}} \nand summon 1 {{E}}. \nAfter defeating {{E}}, transform {{B}} back into {{D}}.</size>
+萬物增長=All Growth
+增長=Growth
+<color\=#FF0000>{{A}}</color>進化了……=<color\=#FF0000>{{A}}</color> evolved...
+
+r:"^1、{{A}}擁有使「萬物增長」的能力，每回合會使隨機兩名友軍獲得「增長」，每層「增長」使攻擊力提高(\d+%)。\n2、{{A}}每三回合，會汲取友軍的「增長」，當汲取層數≥(\d+)時，會使用一次強力的攻擊。\n3、擊倒擁有「增長」的陰影時，會清除其「增長」。$"="<size\=27>1. {{A}} can use [All Growth], each turn give 2 random allies [Growth], each stack increases ATK by $1.\n2. {{A}} will drain [Growth] from allies. \nWhen they drained ≥$2 stacks, use a powerful attack.\n3. When you down the Shadow with [Growth], \ndispel all of their [Growth].</size>"
+汲取=Drain
+攻擊增長=Attack Growth
+r:"^隨機給兩名隊友增加一層「攻擊增長」，每層「攻擊增長」會使攻擊力提高(\d+%)。$"="Randomly gives 2 allies 1 stack of [Attack Growth], each stack increases ATK by $1."
+汲取所有隊友的「攻擊增長」，達到一定層數時，會釋放「巨人之戰」。=<size\=26>Drains all allies' [Attack Growth], uses [Gigantomachia] when reaching a certain stack.</size>
+r:"^攻擊力提高(\d+%)，被擊倒時會被清除$"="Increase ATK by $1, dispelled when downed"
+
+r:"^1、{{A}}擁有使「萬物增長」的能力，初始擁有(\d+)層「增長」，每回合會給自己添加(\d+)—(\d+)層「增長」，最多疊加至(\d+)層。\n2、{{A}}每次受到傷害會減少一層「增長」，「增長」低於(\d+)層時，會立刻為自己添加(\d+)層「增長」。\n3、四回合後或「增長」達到(\d+)層時，會變身為<color\=#ff3b37>{{B}}</color>，能力大幅強化。$"="<size\=24>1. {{A}} can use [All Growth], start with $1 stacks of [Growth], each turn gain $2-$3 stacks of [Growth], up to $4 stacks.\n2. Decrease 1 stack of [Growth] when {{A}} took 1 hit of damage, immediately gain $6 stacks of [Growth] when you have less than $5 stacks of [Growth].\n3. After 4 turns or when [Growth] reached $7 stacks, transform into <color\=#ff3b37>{{B}}</color>, heavily increase own abilities.</size>"
+增長！=Growth!
+層數越高，變身後的{{A}}的能力越強=<size\=26>Increase {{A}} abilities the higher the stacks</size>
+r:"^使自己獲得隨機(\d+)-(\d+)層「增長」$"="Randomly gains $1-$2 stacks of [Growth]"
+sr:"^<color\=#FF0000>(.*)</color>將在(\d+)回合後變為<color\=#FF0000>{{A}}</color>……$"="<size\=24>Transform into <color\=#FF0000>{{A}}</color> after <color\=#FF0000>$2 turns</color>...</size>"
+
+r:"^1、{{A}}擁有使「萬物增長」的能力，每回合會使隨機一名友軍和一個怪盜獲得「增長」，每層「增長」使造成傷害提高(\d+%)、受到傷害提高(\d+%)。\n2、擊敗擁有「增長」的敵方單位時，會獲得其「增長」。$"="<size\=24>1. {{A}} can use [All Growth], each turn give 1 random ally and Thief 1 stack of [Growth], each stack increases DMG Dealt by $1 and DMG Taken by $2.\n2. When defeating an enemy with [Growth], gain all of their [Growth].</size>"
+r:"^<color\=#FF0000>{{A}}</color>獲得了增長，造成傷害與受到傷害提升了……$"="<size\=24><color\=#FF0000>{{A}}</color> increase DMG Dealt and DMG Taken...</size>"
+r:"^<color\=#FF0000>(.*)</color>獲得了增長，造成傷害與受到傷害提升了……$"="<size\=24><color\=#FF0000>$1</color> increase DMG Dealt and DMG Taken...</size>"
+
+r:"^1、{{A}}會召喚多種土偶，土偶存在時會使{{A}}在戰鬥中獲得不同的增益效果。\n2、{{A}}的回合開始時，每有一個土偶，會使「進度」\+1；「進度」達到(\d+)時，{{A}}會釋放「深淵的凝視」，使所有怪盜進入<color\=#ff3b37>絕望</color>狀態。\n3、場上常駐存在一個「百變土偶」，不能被攻擊，每回合會變為四種土偶的隨機一種並觸發對應效果。\n4、{{A}}首次血量低於50%時，會額外召喚一個「百變土偶」。\n「弱點土偶」：存在時保護{{A}}的弱點屬性，被擊敗後使{{A}}多屬性變為弱；\n「精力土偶」：每回合使怪盜方扣除精力值，被擊敗後恢復怪盜方精力值；\n「生命土偶」：每回合使{{A}}恢復生命值，被擊敗後恢復怪盜方生命值；\n「進度土偶」：每回合使{{A}}增加進度值，被擊敗後扣除{{A}}進度值。$"="<size\=25>1. {{A}} will summon many Figurines, when Figurines are present {{A}} gain different buffs.\n2. At the start of each turn, for each Figurines, gain 1 [Progress]; When [Progress] reached $1, {{A}} will use [Abyssal Gaze], inflicting all Thieves with <color\=#ff3b37>Despair</color>.\n3. There will always be a [Wild Figurine], they can't be attacked, each turn trigger a random effect from one of the four Figurines.\n4. When {{A}} drop below 50% HP, summon 1 additional [Wild Figurine]. \n[Weakness Figurine]: Protect {{A}}'s weakness, \nwhen defeated inflict {{A}} with many weaknesses;\n[SP Figurine]: Each turn drain SP from all Thieves, \nrestore SP to all Thieves when defeated;\n[HP Figurine]: Each turn restore HP to {{A}}, \nrestore HP to all Thieves when defeated;\n[Progress Figurine]: Each turn give {{A}} Progress, \ndecrease {{A}}'s Progress when defeated.</size>"
+進度=Progress
+百變土偶=Wild Figurine
+弱點土偶=Weakness Figurine
+精力土偶=SP Figurine
+生命土偶=HP Figurine
+進度土偶=Progress Figurine
+
+百變土偶變成了<color\=#FF0000>弱點土偶</color>……=<size\=26>Wild Figurine transformed into <color\=#FF0000>Weakness Figurine</color>...</size>
+百變土偶變成了<color\=#FF0000>精力土偶</color>……=<size\=26>Wild Figurine transformed into <color\=#FF0000>SP Figurine</color>...</size>
+百變土偶變成了<color\=#FF0000>生命土偶</color>……=<size\=26>Wild Figurine transformed into <color\=#FF0000>HP Figurine</color>...</size>
+百變土偶變成了<color\=#FF0000>進度土偶</color>……=<size\=26>Wild Figurine transformed into <color\=#FF0000>Progress Figurine</color>...</size>
+r:"^達到(\d+)層時，會釋放「深淵的凝視」$"="<size\=26>Use [Abyssal Gaze] when reaching $1 stacks</size>"
+念動、核熱屬性的適應性變為反=Change resistance to Repel Psy and Nuke
+存在時保護{{A}}的弱點屬性=Protect {{A}}'s weakness
+每回合使怪盜方扣除精力值=Drain SP from all Thieves
+每回合使{{A}}恢復生命值=Restore HP to {{A}} each turn
+每回合使{{A}}增加進度值=Give Progress to {{A}} each turn
+
+土偶保護=Figurine Protection
+弱點保護=Weakness Protection
+精力消耗=Drain SP
+生命恢復=HP Recovery
+進度增加=Increase Progress
+
+r:"^1、{{A}}會召喚多種土偶，土偶存在時會使{{A}}在戰鬥中獲得不同的增益效果。\n2、{{A}}的回合開始時，每有一個土偶，會使「進度」\+1；「進度」達到(\d+)時，{{A}}會釋放「深淵的凝視」，使所有怪盜進入<color\=#ff3b37>絕望</color>狀態。\n3、{{A}}在戰鬥開始和首次血量低於50%時，會召喚4種土偶各一隻。\n「弱點土偶」：存在時保護{{A}}的弱點屬性，被擊敗後使{{A}}多屬性變為弱；\n「精力土偶」：每回合使怪盜方扣除精力值，被擊敗後恢復怪盜方精力值；\n「生命土偶」：每回合使{{A}}恢復生命值，被擊敗後恢復怪盜方生命值；\n「進度土偶」：每回合使{{A}}增加進度值，被擊敗後扣除{{A}}進度值。$"="<size\=25>1. {{A}} will summon many Figurines, when Figurines are present {{A}} gain different buffs.\n2. At the start of each turn, for each Figurines, gain 1 [Progress]; When [Progress] reached $1, {{A}} will use [Abyssal Gaze], inflicting all Thieves with <color\=#ff3b37>Despair</color>.\n3. When {{A}} drop below 50% HP, summon each Figurine. \n[Weakness Figurine]: Protect {{A}}'s weakness, \nwhen defeated inflict {{A}} with many weaknesses;\n[SP Figurine]: Each turn drain SP from all Thieves, \nrestore SP to all Thieves when defeated;\n[HP Figurine]: Each turn restore HP to {{A}}, \nrestore HP to all Thieves when defeated;\n[Progress Figurine]: Each turn give {{A}} Progress, \ndecrease {{A}}'s Progress when defeated.</size>"
+存在時保護{{A}}的弱點屬性，被擊敗後使{{A}}多屬性變為弱=Protect {{A}}'s weakness, when defeated inflict {{A}} with many weaknesses
+存在時保護{{A}}的弱點屬性，被擊敗後削弱{{A}}=Protect {{A}}'s weakness, when defeated inflict {{A}} with many weaknesses
+每回合使怪盜方扣除精力值，被擊敗後恢復怪盜方精力值=Each turn drain SP from all Thieves, \nrestore SP to all Thieves when defeated
+每回合使{{A}}恢復生命值，被擊敗後恢復怪盜方生命值=Each turn restore HP to {{A}}, \nrestore HP to all Thieves when defeated
+每回合使{{A}}增加進度值，被擊敗後扣除{{A}}進度值=Each turn give {{A}} Progress, \ndecrease {{A}}'s Progress when defeated
+
+r:"^1、{{A}}會召喚多種土偶，土偶存在時會使{{A}}在戰鬥中獲得不同的增益效果。\n2、{{A}}的回合開始時，每有一個土偶，會使「進度」\+1；「進度」達到(\d+)時，{{A}}會釋放「深淵的凝視」，使所有怪盜進入<color\=#ff3b37>絕望</color>狀態。\n3、{{A}}每回合隨機召喚一種土偶，2回合後土偶會碎裂；{{A}}首次血量低於50%時，會額外召喚一隻土偶。\n「弱點土偶」：存在時保護{{A}}的弱點屬性，被擊敗後使{{A}}多屬性變為弱；\n「精力土偶」：每回合使怪盜方扣除精力值，被擊敗後恢復怪盜方精力值；\n「生命土偶」：每回合使{{A}}恢復生命值，被擊敗後恢復怪盜方生命值；\n「進度土偶」：每回合使{{A}}增加進度值，被擊敗後扣除{{A}}進度值。$"="<size\=25>1. {{A}} will summon many Figurines, when Figurines are present {{A}} gain different buffs.\n2. At the start of each turn, for each Figurines, gain 1 [Progress]; When [Progress] reached $1, {{A}} will use [Abyssal Gaze], inflicting all Thieves with <color\=#ff3b37>Despair</color>.\n3. {{A}} will randomly summon 1 Figurine each turn, destory it after 2 turns; When {{A}} drop below 50% HP, additionally summon 1 Figurine. \n[Weakness Figurine]: Protect {{A}}'s weakness, \nwhen defeated inflict {{A}} with many weaknesses;\n[SP Figurine]: Each turn drain SP from all Thieves, \nrestore SP to all Thieves when defeated;\n[HP Figurine]: Each turn restore HP to {{A}}, \nrestore HP to all Thieves when defeated;\n[Progress Figurine]: Each turn give {{A}} Progress, \ndecrease {{A}}'s Progress when defeated.</size>"
 
 ----------
 PALACE 3 BOSS
@@ -541,9 +712,9 @@ PALACE 4 BOSS
 定位=Locate
 鎖定一名敵人=Locks on 1 enemy
 爆裂指引=Explosion Guide
-r:"^消耗(\d+)點能量對鎖定的敵人造成大量物理傷害，若擊倒敵人，回復(\d+)點能量值及(\d+%)的最大生命值$"="Consumes $1 Energy to deal Heavy Physical damage to the locked on enemy. If this downs an enemy, restores $2 Energy and $3 Max HP"
+r:"^消耗(\d+)點能量對鎖定的敵人造成大量物理傷害，若擊倒敵人，回復(\d+)點能量值及(\d+%)的最大生命值$"="Consumes $1 Energy to deal heavy Physical damage to the locked on enemy. If this downs an enemy, restores $2 Energy and $3 Max HP"
 諮詢·終止=Consult·Terminate
-r:"^能量值達到(\d+)點時釋放，消耗(\d+)點能量值對所有敵人造成特大量核熱屬性傷害$"="Use when reaching $1 Energy, consumes $2 Energy to deal Severe Nuke damage to all enemies"
+r:"^能量值達到(\d+)點時釋放，消耗(\d+)點能量值對所有敵人造成特大量核熱屬性傷害$"="Use when reaching $1 Energy, consumes $2 Energy to deal severe Nuke damage to all enemies"
 
 {{A}}·轟擊={{A}}·Bombardment
 {{A}}·掃蕩光線={{A}}·Sweeping Ray
@@ -558,13 +729,13 @@ r:"^使1名敵人陷入精神異常，並吸取其(\d+)點精力值將其存入�
 {{A}}·盛宴={{A}}·Feast
 r:"^對所有敵人造成萬能傷害，無視其防禦力，吸取其(\d+)點精力值並使自身恢復一定生命值。$"="Deals Almighty damage to all enemies, ignores DEF, drains $1 SP and restores own HP."
 {{A}}·致命打擊={{A}}·Fatal Blow
-消耗自身生命值對所有敵人造成大量核熱屬性傷害=Sacrifices own HP to deal Heavy Nuke damage to all enemies
+消耗自身生命值對所有敵人造成大量核熱屬性傷害=Sacrifices own HP to deal heavy Nuke damage to all enemies
 
 吞噬=Devour
 消化=Digest
 犧牲自己一定生命值來充能=Sacrifices own HP to charge
 萬物吞噬=Devour All
-消耗所有能量對所有敵人造成巨量核熱屬性傷害=Consumes all Energy to deal Colossal Nuke damage to all enemies
+消耗所有能量對所有敵人造成巨量核熱屬性傷害=Consumes all Energy to deal colossal Nuke damage to all enemies
 
 能量值=Energy
 飛天狀態=Flying Form
@@ -625,6 +796,8 @@ CROSS FATE PALACE (CF) (COLLAB)
 ----------
 MEMNTOS 1
 ----------
+未知地帶=Unknown Area
+
 r:"^1、{{A}}擁有<color\=#ffd700>「金之領域」</color>，造成傷害時使隨機陰影獲得1層<color\=#ffd700>「金剛不壞」</color>狀態。\n<color\=#ffd700>「金剛不壞」</color>：免疫下次受到的傷害。\n2、{{A}}擁有<color\=#ffd700>「金剛不壞」</color>時，造成傷害提高。$"="1. {{A}} have <color\=#ffd700>[Golden Domain]</color>, when dealing damage give 1 random Shadow 1 stack of <color\=#ffd700>[Unbreakable]</color>.\n<color\=#ffd700>[Unbreakable]</color>: Immunity to the next damage received.\n2. When {{A}} have <color\=#ffd700>[Unbreakable]</color>, increase DMG Dealt."
 金之領域=Golden Domain
 金剛不壞=Unbreakable
@@ -723,7 +896,7 @@ r:"SP消耗大幅提高，造成傷害提高(\d+%)"=Heavily increase SP cost, \n
 {{A}}擁有<color\=#ff3b37>「眾生均增長」</color>。\n「眾生均增長」：所有友軍每回合從攻擊增長、防禦增長、傷害增長中隨機獲得一種。=Zouchouten has <color\=#ff3b37>"Sentient Growth"</color>. \n"Sentient Growth": All allies gain one of the following buff randomly each turn: ATK growth, DEF growth, Damage growth.
 {{A}}擁有<color\=#ff3b37>「天眼觀世間」</color>。\n「天眼觀世間」：標記一個怪盜，使其受到傷害提高，下回合將受到所有陰影的集火。\n{{C}}使用「天眼觀世間」後，會召喚1隻「紫金花狐貂」。=Koumokuten has <color\=#ff3b37>"Heavenly Eyes"</color>. \n"Heavenly Eyes": Mark an enemy, increase their DMG Taken, all allies will attack them next turn. \nAfter Koumokuten used "Heavenly Eyes", summon 1 "Chinese Redbud Fox".
 {{A}}擁有<color\=#ff3b37>「混元珍珠傘」</color>。\n「混元珍珠傘」：對血量百分比最低的友軍撐開混元珍珠傘，使所有屬性適應性全部變成“吸”，持續2回合。=Bishamonten has <color\=#ff3b37>"Pearl Umbrella"</color>. \n"Pearl Umbrella": Open the Pearl Umbrella for the ally with the lowest HP%, make them Absorb all element for 2 turns.
-1、{{A}}擁有<color\=#ff3b37>「持劍護國土」</color>。\n「持劍護國土」：每次造成傷害會使隨機一名友軍獲得護盾。\n2、{{B}}擁有<color\=#ff3b37>「眾生均增長」</color>。\n「眾生均增長」：所有友軍每回合從攻擊增長、防禦增長、傷害增長中隨機獲得一種。\n3、{{C}}擁有<color\=#ff3b37>「天眼觀世間」</color>。\n「天眼觀世間」：標記一個怪盜，使其受到傷害提高，下回合將受到所有陰影的集火。\n{{C}}使用「天眼觀世間」後，會召喚1只「紫金花狐貂」。\n4、{{D}}擁有<color\=#ff3b37>「混元珍珠傘」</color>。\n「混元珍珠傘」：對血量百分比最低的友軍撐開混元珍珠傘，使所有屬性適應性全部變成“吸”，持續2回合。\n5、當四大天王只剩最後一位時，他會在危急關頭臨陣突破，變身為<color\=#ff3b37>「阿修羅王」</color>，並恢復30%最大生命值。\n6、<color\=#ff3b37>「阿修羅王」同時擁有全部四大天王的能力</color>，請小心應對。=Jikokuten has <color\=#ff3b37>"Country Protection"</color>. \n"Country Protection": Give a random ally Shield after dealing damage. \n2. Zouchouten has <color\=#ff3b37>"Sentient Growth"</color>. \n"Sentient Growth": All allies gain one of the following buff randomly each turn: ATK growth, DEF growth, Damage growth. \n3. Koumokuten has <color\=#ff3b37>"Heavenly Eyes"</color>. \n"Heavenly Eyes": Mark an enemy, increase their DMG Taken, all allies will attack them next turn. \nAfter Koumokuten used "Heavenly Eyes", summon 1 "Chinese Redbud Fox". \n4. Bishamonten has <color\=#ff3b37>"Pearl Umbrella"</color>. \n"Pearl Umbrella": Open the Pearl Umbrella for the ally with the lowest HP%, make them Absorb all element for 2 turns. \n5. When there's only 1 enemy left, they will transform into <color\=#ff3b37>Asura</color> and heal 30% Max HP. \n6. <color\=#ff3b37>Asura has the abilities of all 4 Kings</color>.
+1、{{A}}擁有<color\=#ff3b37>「持劍護國土」</color>。\n「持劍護國土」：每次造成傷害會使隨機一名友軍獲得護盾。\n2、{{B}}擁有<color\=#ff3b37>「眾生均增長」</color>。\n「眾生均增長」：所有友軍每回合從攻擊增長、防禦增長、傷害增長中隨機獲得一種。\n3、{{C}}擁有<color\=#ff3b37>「天眼觀世間」</color>。\n「天眼觀世間」：標記一個怪盜，使其受到傷害提高，下回合將受到所有陰影的集火。\n{{C}}使用「天眼觀世間」後，會召喚1只「紫金花狐貂」。\n4、{{D}}擁有<color\=#ff3b37>「混元珍珠傘」</color>。\n「混元珍珠傘」：對血量百分比最低的友軍撐開混元珍珠傘，使所有屬性適應性全部變成“吸”，持續2回合。\n5、當四大天王只剩最後一位時，他會在危急關頭臨陣突破，變身為<color\=#ff3b37>「{{E}}」</color>，並恢復30%最大生命值。\n6、<color\=#ff3b37>「{{E}}」同時擁有全部四大天王的能力</color>，請小心應對。=Jikokuten has <color\=#ff3b37>"Country Protection"</color>. \n"Country Protection": Give a random ally Shield after dealing damage. \n2. Zouchouten has <color\=#ff3b37>"Sentient Growth"</color>. \n"Sentient Growth": All allies gain one of the following buff randomly each turn: ATK growth, DEF growth, Damage growth. \n3. Koumokuten has <color\=#ff3b37>"Heavenly Eyes"</color>. \n"Heavenly Eyes": Mark an enemy, increase their DMG Taken, all allies will attack them next turn. \nAfter Koumokuten used "Heavenly Eyes", summon 1 "Chinese Redbud Fox". \n4. Bishamonten has <color\=#ff3b37>"Pearl Umbrella"</color>. \n"Pearl Umbrella": Open the Pearl Umbrella for the ally with the lowest HP%, make them Absorb all element for 2 turns. \n5. When there's only 1 enemy left, they will transform into <color\=#ff3b37>Asura</color> and heal 30% Max HP. \n6. <color\=#ff3b37>Asura has the abilities of all 4 Kings</color>.
 {{A}}添加的護盾，可抵消一定的傷害=Shield added by {{A}}, \ncan negate some damage
 眾生均增長=Sentient Growth
 r:"來自{{A}}的增益，攻擊力提升(\d+%)"=Growth from {{A}}, \nincrease ATK by $1
@@ -890,6 +1063,11 @@ sr:"^每個回合開始時，獲得一層『(.*)』。『(.*)』：使下一次�
 
 晶體虹吸=Crystal Siphon
 r:"^HIGHLIGHT技能的最終傷害提升(\d+%)，追加效果的最終傷害提升(\d+%)。$"="Increase HIGHLIGHT Final DMG by $1 and Follow Up Final DMG by $2."
+
+靈魂感召=Soul Rally
+原始本能=Primal Instinct
+sr:"^所有怪盜每累積消耗(\d+)點精力值，獲得(\d+)層『(.*)』；\n怪盜每次釋放HIGHLIGHT技能技能，獲得(\d+)層『(.*)』。$"="For every $1 SP consumed by all Thieves, gain $2 stack of [$3];\n Each time Thieves use HIGHLIGHT, gain $4 stacks of [$5]."
+r:"^每層提供(\d+%)的最終傷害加成，持續(\d+)回合，最多可疊加(\d+)層。$"="Each stack increases Final DMG by $1 for $2 turns, up to $3 stacks."
 
 ----------
 EVENTS
