@@ -969,3 +969,28 @@ r:"^靈<color\=#000000>巧</color>步伐$"="<size\=13> </size>A<color\=#000000>g
 r:"^攜<color\=#000000>手</color>共舞$"="<size\=24> </size>D<color\=#000000>a</color>ncing in Hand"
 r:"^破<color\=#000000>碎</color>的裙擺與她的影子$"="<size\=12> </size>T<color\=#000000>at</color>tered Dress"
 r:"^黎<color\=#000000>明</color>的面紗$"="<size\=14> </size>V<color\=#000000>ei</color>l of Dawn"
+
+----------
+WV - Riko Tanemura
+----------
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的疾風屬性傷害，有(\d+%)基礎機率使目標陷入風襲狀態，效果持續(\d+)回合，並使目標進入『凋落』狀態：受到任意屬性傷害時，該次傷害攻擊力提升，提升值相當於{{A}}暴擊效果超過(\d+%)部分的(\d+\.\d+%)\（最多計入(\d+\.\d+%)暴擊效果\），效果持續(\d+)回合。{{A}}恢復(\d+)點精力值。$"="Deals $1 ATK Wind damage to <color\=#FFFF00>1</color> enemy, wtih a $2 base chance to inflict Winded for $3 turns. Inflicts the target with [Wither]: When taking Wind damage, increase that damage's ATK based on $5 CRIT DMG that's over $4, up to $6 CRIT DMG for $7 turns. Restores $8 SP to self."
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的疾風屬性傷害，有(\d+%)基礎機率使目標進入<link\="s\|105"><u>風襲</u></link>狀態，效果持續(\d+)回合，並使目標進入<link\="s\|219"><u>『凋落』</u></link>狀態：受到任意屬性傷害時，該次傷害攻擊力提升，提升值相當於{{A}}暴擊效果超過(\d+%)部分的(\d+\.\d+%)\（最多計入<color\=#FFFC40>(\d+\.\d+%)</color>暴擊效果\），效果持續(\d+)回合。{{A}}恢復(\d+)點精力值。$"="Deals <color\=#FFFC40>$1</color> ATK Wind damage to 1 enemy, wtih a $2 base chance to inflict <link\="s|105"><u>Winded</u></link> for $3 turns. Inflicts the target with <link\="s|218"><u>[Wither]</u></link>: When taking Wind damage, increase that damage's ATK based on $5 CRIT DMG that's over $4, up to <color\=#FFFC40>$6</color> CRIT DMG for $7 turns. Restores $8 SP to self."
+
+r:"^使<color\=#FFFF00>所有</color>同伴攻擊力提升，提升值相當於{{A}}暴擊效果超過(\d+%)部分的(\d+\.\d+%)\（最多計入(\d+\.\d+%)暴擊效果\），效果持續(\d+)回合，並回復(\d+)點精力值。期間任意同伴造成{{B}}技能/追加效果/HIGHLIGHT傷害時，使{{A}}恢復(\d+)點精力值，最多可觸發一次。$"="Increases <color\=#FFFF00>all</color> allies' ATK based on $2 own CRIT DMG that's over $1, up to $3 CRIT DMG for $4 turns, and restores $5 SP. During this effect when any ally deals damage with Persona skill/ Follow Up/ HIGHLIGHT, restores $6 SP to self once."
+r:"^使所有同伴攻擊力提升，提升值相當於{{A}}暴擊效果超過(\d+%)部分的(\d+\.\d+%)\（最多計入<color\=#FFFC40>(\d+\.\d+%)</color>暴擊效果\），效果持續(\d+)回合，並回復(\d+)點精力值。期間任意同伴造成{{B}}技能/追加效果/HIGHLIGHT傷害時，使{{A}}恢復(\d+)點精力值，最多可觸發一次。$"="Increases all allies' ATK based on $2 own CRIT DMG that's over $1, up to <color\=#FFFC40>$3</color> CRIT DMG for $4 turns, and restores $5 SP. During this effect when any ally deals damage with Persona skill/ Follow Up/ HIGHLIGHT, restores $6 SP to self once."
+
+r:"^消耗所有精力值，使除自身以外的<color\=#FFFF00>1名</color>同伴暴擊率提升(\d+\.\d+%)，每消耗(\d+)點精力值會額外觸發(\d+%)強度的下述效果，持續(\d+)回合\（該技能最多計入{{A}}(\d+\.\d+%)的暴擊效果\）：\n消耗精力值≥(\d+)點：攻擊力提升，{{A}}暴擊效果超過(\d+%)的部分，每(\d+%)使攻擊力提升(\d+\.\d+)點；\n消耗精力值≥(\d+)點：暴擊效果提升，提升值相當於{{A}}暴擊效果超過(\d+%)部分的(\d+%)；\n消耗精力值≥(\d+)點：暴擊效果額外提升，提升值相當於{{A}}暴擊效果超過(\d+%)部分的(\d+%)。$"="Consumes all SP, increases <color\=#FFFF00>1 other</color> ally's CRIT Rate by $1. For every $2 SP consumed, additionally triggers the following effects at $3 for $4 turns, up to <color\=#FFFC40>$5</color> CRIT DMG: \nConsumes $6 SP: Increases ATK by $9 for every $8 CRIT DMG that's over $7;\nConsumes $10 SP: Increases CRIT DMG for every $12 CRIT DMG that's over $11;\nConsumes $13 SP: Additionally increases CRIT DMG for every $15 CRIT DMG that's over $14."
+r:"^消耗所有精力值，使除自身以外的1名同伴暴擊率提升<color\=#FFFC40>(\d+\.\d+%)</color>，每消耗(\d+)點精力值會額外觸發(\d+%)強度的下述效果，持續(\d+)回合\（該技能最多計入{{A}}<color\=#FFFC40>(\d+\.\d+%)</color>的暴擊效果\）：\n消耗精力值≥(\d+)點：攻擊力提升，{{A}}暴擊效果超過(\d+%)的部分，每(\d+%)使攻擊力提升(\d+\.\d+)點；\n消耗精力值≥(\d+)點：暴擊效果提升，提升值相當於{{A}}暴擊效果超過(\d+%)部分的(\d+%)；\n消耗精力值≥(\d+)點：暴擊效果額外提升，提升值相當於{{A}}暴擊效果超過(\d+%)部分的(\d+%)。$"="Consumes all SP, increases 1 other ally's CRIT Rate by <color\=#FFFC40>$1</color>. For every $2 SP consumed, additionally triggers the following effects at $3 for $4 turns, up to <color\=#FFFC40>$5</color> CRIT DMG: \nConsumes $6 SP: Increases ATK by $9 for every $8 CRIT DMG that's over $7;\nConsumes $10 SP: Increases CRIT DMG for every $12 CRIT DMG that's over $11;\nConsumes $13 SP: Additionally increases CRIT DMG for every $15 CRIT DMG that's over $14."
+
+r:"^使除自身以外的<color\=#FFFF00>1名</color>同伴攻擊力提升\（{{A}}暴擊效果超過(\d+%)的部分，每(\d+%)使攻擊力提升(\d+\.\d+)點，最多計入(\d+\.\d+%)暴擊效果\），暴擊效果提升(\d+\.\d+%)，效果持續(\d+)回合。除自身以外的所有同伴恢復(\d+)點精力值。$"="Increases <color\=#FFFF00>1 other</color> ally's ATK by $3 ATK for every $2 CRIT DMG that's over $1, up to <color\=#FFFC40>$4</color> CRIT DMG. Increases their CRIT DMG by $5 for $6 turns. Restores $7 SP to all other allies."
+
+r:"^每造成(\d+)次傷害獲得(\d+)層『花開』$"="<size\=22>Gain $2 stack of [Blossom] after dealing $1 hit of damage</size>"
+r:"^攻擊力提升(\d+)，達到(\d+)/(\d+)層時觸發額外效果$"="<size\=24>Increase ATK by $1; \nTrigger additional effects when reaching $2/$3 stacks</size>"
+r:"^受到疾風屬性傷害時使該次傷害暴擊效果提升(\d+(.\d+)?(%)?)$"="Increase CRIT DMG Taken by $1\nwhen taking Wind damage damage"
+r:"^受到疾風屬性傷害時使該次傷害攻擊力提升(\d+(.\d+)?(%)?)$"="Increase ATK Taken by $1\nwhen taking Wind damage"
+r:"^受到任意屬性傷害時使該次傷害暴擊效果提升(\d+(.\d+)?(%)?)$"="Increase CRIT DMG Taken by $1\nwhen taking any Elemental damage"
+r:"^受到任意屬性傷害時使該次傷害攻擊力提升(\d+(.\d+)?(%)?)$"="Increase ATK Taken by $1\nwhen taking any Elemental damage"
+
+Combat Pop-ups
+r:"^含<color\=#000000>苞</color>$"="<size\=24> </size>B<color\=#000000>u</color>dding"
+r:"^花<color\=#000000>開</color>$"="<size\=16> </size>B<color\=#000000>lo</color>ssom"

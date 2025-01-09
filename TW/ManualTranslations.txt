@@ -28,7 +28,10 @@ r:"^(.*)版本$"="Version $1"
 貼圖細節=<size\=26>Texture Quality</size>
 細節層次=<size\=27>Level of Detail</size>
 全螢幕=Fullscreen
+視窗=Windowed
+無邊框視窗=<size\=20>Borderless Windowed</size>
 全螢幕模式=Full Screen Mode
+顯示器=Display
 空間反射=<size\=27>Screen Space Reflections</size>
 十字耀斑=Flare
 輝光設置=Lighting
@@ -44,12 +47,13 @@ r:"^(.*)版本$"="Version $1"
 動態解析度=<size\=27>Dynamic Resolution</size>
 隊員跟隨=<size\=28>Allies Follow</size>
 
+音量設置=Volume
 主音量=Master Volume
 音樂音量=BGM Volume
 音效音量=SE Volume
 配音音量=Voice Volume
 環境音量=Ambiance Volume
-配音語言=Voice \nLanguage
+配音語言=Voice
 選擇配音=Voice
 日文配音=Japanese
 中文配音=Mandarin
@@ -757,7 +761,10 @@ sr:"^多重奏·(.*):(.*)元素怪盜技能傷害提升(.*)$"="<size\=21>$1 Poly
 倒地值=Down Gauge
 效果命中=EHR
 效果抵抗=Effect RES
+受到暴擊=CRIT Rate Taken
+暴擊抗性=CRIT DMG RES
 傷害加成=DMG Bonus
+受到傷害=DMG Taken
 傷害減免=DMG RES
 弱點傷害=Weak DMG
 弱點抗性=Weak RES
@@ -1060,7 +1067,7 @@ r:"^累計完成12次「厄抑之境」 \((\d+)\/(\d+)\)$"=Complete 12 Farming D
 r:"完成1次「往日回溯」 \((\d)\/(\d)\)"=Complete 1 [Past Echo] ($1/$2)
 r:"^達到「閼凶夢之扉」第4檔積分要求 \((\d)\/(\d)\)$"="Reach the 4th score bracket in [Door of Nightmares] ($1/$2)"
 r:"在「心軌擇行」中通過10個月臺 \((\d+)\/10\)"=Clear 10 Platforms in [Heart Rail] ($1/10)
-r:"在「星盤試練」通過1個「監測點」 \((\d+)\/1\)"=Clear 1 [Monitoring Point] in [Astrolabe Trials] ($1/1)
+r:"在「星盤試煉」通過1個「監測點」 \((\d+)\/(\d+)\)$"="Clear 1 [Monitoring Point] in [Astrolabe Trials] ($1/$2)"
 
 // SEASON //
 r:"在「命運交錯之時」中通關「收下慾望」 \((\d)\/(\d)\)"=Complete the Final Mission in the \nPhantom Thieves event ($1/$2)
@@ -1891,8 +1898,12 @@ Mementos + Metaverse Farm
 r:"^{{A}}區域(\d+)  $"="<size\=20>{{A}} Area $1</size>"
 r:"^{{A}}區域(\d+)$"="<size\=20>{{A}} Area $1</size>"
 r:"^區域(\d+)$"="Area $1"
+{{A}}最深處=<size\=20>{{A}} Depths</size>
 區域：=Area:
 
+r:"^前往區域(\d+)$"="Go to Area $1"
+等級回饋=Reward
+r:"^票務等級(\d+)獲取$"="At Ticket Level $1"
 票務等級=<size\=30>Ticket Lv.</size>
 當前持有：=Own:
 r:"^票務等級達到 (\d+) 級 可獲得$"="Claim at Ticket Level $1"
@@ -1934,6 +1945,7 @@ r:"^厄抑之境·啟示套裝$"="Revelation Card Farm"
 『穹星求索』=[Bell of Stars Farm]
 「穹星求索」=[Bell of Stars Farm]
 穹星求索=Bell of Stars Farm
+往日回溯=Past Echo
 
 武器突破材料=Weapon Ascension
 掉落高級技能材料=Palace Boss (30)
@@ -2042,6 +2054,7 @@ r:"^零件$"="Parts"
 迷情香=Charming Incense
 金絲香=Golden Incense
 怒顏香=Wrathful Incense
+啖夢香=<size\=24>Dream Devouring Incense</size>
 香塔L=L Incense
 香塔M=M Incense
 香塔S=S Incense
@@ -2190,6 +2203,7 @@ r:"^目標(\d+)$"="Goal $1"
 晴天=Sunny
 雨天=Rainy
 上午=Morning
+午休=Lunch Break
 放學後=After School
 傍晚=Evening
 夜晚=Night
@@ -2209,6 +2223,7 @@ sr:"^當前任務目標處於<color\=#FF0000>(.*)</color>，\n是否立即前往
 前往天臺=Go to the roof
 更換校外鞋=Change shoes
 與{{A}}一同前進=Move with {{A}}
+在{{A}}與夥伴們集合=Meet with your teammates at {{A}}
 r:"^前往{{A}}(\d+)區$"=$"Go to {{A}} Area $1"
 r:"^調查{{A}}$"="Investigate {{A}}"
 與{{A}}對話=Talk to {{A}}
@@ -2314,6 +2329,7 @@ r:"^特性提升$"="<size\=25>Upgrade to</size>"
 技能篩選=Filter
 篩選條件=Filter
 輸入技能名稱搜索…=Search Skill Name
+可篩選主動或被動技能=Filter active or passive skills
 r:"^攻擊$"="<size\=22>Attack</size>"
 r:"^防禦$"="<size\=19>Defense</size>"
 r:"^生存$"="<size\=18>Support</size>"

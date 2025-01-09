@@ -44,7 +44,7 @@ r:"^歷史貢獻 (\d+)$"="Total Contribution $1"
 挑戰難度·噩夢=Nightmare
 
 基礎傷害積分=Base Score
-虛弱期傷害積分=Weakness DMG
+虛弱期傷害積分=Weak DMG
 首領擊殺積分=Defeated Boss
 敵方抵禦積分=Base Score
 己方生存回合=Round(s) Survived
@@ -106,7 +106,6 @@ r:"^在(\d+)回合內對敵人造成更高的傷害$"="Deal damage to enemies wi
 
 所有敵人對<color\=#fbff37>電擊</color>屬性的適應性變為弱=All enemies become weak to <color\=#fbff37>Electric</color> DMG
 r:"^首領的適應性發生變化，所有怪盜造成<color\=#FFFC40>弱點傷害</color>提升(\d+%)$"="<size\=27>Change the affinities of the boss, increase <color\=#FFFC40>Weakness DMG</color> by $1</size>"
-r:"^<color\=#FFFC40>WONDER</color>造成<color\=#FFFC40>最終傷害</color>提高(\d+%)，其他隊員造成最終傷害降低(\d+%)"="Increase <color\=#FFFC40>final damage</color> of <color\=#FFFC40>Wonder</color> by $1, \ndecrease final damage of other allies by $2"
 
 ----------
 Bosses
@@ -133,7 +132,7 @@ r:"^1、{{E}}會率領眾鳥一同進攻。\n2、{{A}}與{{B}}每受到1次來�
 r:"^{{A}}與{{B}}每受到1次來自怪盜的傷害，使該名怪盜造成傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層。$"="After {{A}} and {{B}} take a hit of damage from a Thief, increase that Thief's DMG Dealt by $1 for $2 turns, up to $3 stacks."
 r:"^{{A}}與{{B}}每受到1次來自怪盜的傷害，使該名怪盜穿透提升(\d+%)，持續(\d+)回合，可疊加(\d+)層。$"="After {{A}} and {{B}} take a hit of damage from a Thief, increase that Thief's PEN by $1 for $2 turns, up to $3 stacks."
 
-r:"^{{A}}每受到一次{{B}}技能/HIGHLIGHT/追加效果造成的傷害，自身後續受到對應屬性傷害提升(\d+%)，可疊加(\d+)層，持續(\d+)回合。$"="After Oumitsunu take damage 1 time from Persona Skill/ HIGHLIGHT/ Follow Up, increase that element's DMG Taken by $1 for $3 turns, up to $2 stacks."
+r:"^{{B}}每受到一次{{A}}技能/HIGHLIGHT/追加效果造成的傷害，自身後續受到對應屬性傷害提升(\d+%)，可疊加(\d+)層，持續(\d+)回合。$"="After {{B}} take 1 hit of damage from {{A}} Skill/ HIGHLIGHT/ Follow Up, increase that element's DMG Taken by $1 for $3 turns, up to $2 stacks."
 
 r:"^{{A}}會對所有怪盜添加「{{A}}的詛咒」：受到傷害提升(\d+%)，怪盜釋放優越/救援/防衛類技能時可驅散「{{A}}的詛咒」，並使{{A}}獲得(\d+)層「詛咒反噬」：防禦力降低(\d+%)，可疊加(\d+)層，達到(\d+)層時額外使{{A}}受HIGHLIGHT傷害提升(\d+%)。$"="<size\=24>{{A}} will inflict all enemies with [{{A}}'s Curse]: Increase DMG Taken by $1, dispel [{{A}}'s Curse] when a Thief use Superior/Rescue/Defend type skills then inflict {{A}} with $2 stack of [Curse Reversal]: Decrease DEF by $3 up, to $4 stacks. Additionally increase HIGHLIGHT DMG Taken by $6 when reaching $5 stacks.</size>"
 {{A}}的詛咒={{A}}'s Curse
@@ -191,6 +190,9 @@ r:"^所有怪盜<color\=#FFFC40>受到護盾</color>後，<color\=#FFFC40>追加
 
 多重連攜=Multi-Link
 r:"^敵人每受到(\d+)次來自怪盜的傷害，使該名怪盜造成傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="Increase your DMG Dealt by $2 after dealing damage $1 time for $3 turns, up to $4 stacks"
+
+主角光環=Main Character Aura
+r:"^<color\=#FFFC40>WONDER</color>造成<color\=#FFFC40>最終傷害</color>提高(\d+%)，其他隊員造成最終傷害降低(\d+%)"="<size\=22>Increase <color\=#FFFC40>Wonder's Final DMG</color> by $1; \nDecrease other Thieves' Final DMG by $2</size>"
 
 命中領域=EHR Domain
 r:"^所有怪盜基於效果命中超過(\d+%)的部分使最終傷害提升，最多(\d+%)效果命中使最終傷害提升(\d+%)$"="<size\=27>All Thieves increase Final DMG for every EHR over $1, up to $2 EHR to increase Final DMG by $3</size>"
