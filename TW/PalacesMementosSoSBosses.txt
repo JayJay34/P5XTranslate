@@ -26,6 +26,8 @@ r:"^觀察模式冷卻中，(\d+)秒後可用！$"="Third Eye in cooldown"
 寶箱守衛=<size\=28>Treasure Guard</size>
 動態難度已開啟\n敵人等級會隨著主角等級的提升而改變=Dynamic Difficulty is on. \nEnemy level will change as Wonder's level increases
 狂<color\=#ff0000ff>化</color>惡黨=Ber<color\=#ff0000ff>se</color>rk Shadow
+詭<color\=#ff0000ff>譎</color>之徒=En<color\=#ff0000ff>ig</color>ma Shadow
+墮<color\=#ff0000ff>落</color>的狂徒=F<color\=#ff0000ff>al</color>len Shadow
 
 嗯？要從{{A}}撤退，返回都市嗎？=Hm? Want to retreat from the {{A}} \nand head back to the city?
 這個寶箱很稀有！\n吾等需要準備<color\=#ff0000>開鎖工具</color>才行。=This treasure chest is very rare!\nWe need a <color\=#ff0000>Lockpick</color> to open.
@@ -705,13 +707,14 @@ PALACE 4 BOSS
 尋找破敵的方法=Find ways to defeat the enemy
 
 能量罐=Energy Tank
+吊車=Cable Car
 
-((A))性諮詢=Destructive Consult
+{{A}}性諮詢=Destructive Consult
 自我修復=Self Repair
 擊殺敵人後恢復大量能量值及少量生命值=Restores Energy and HP after defeating enemies
 定位=Locate
 鎖定一名敵人=Locks on 1 enemy
-爆裂指引=Explosion Guide
+爆裂指導=Explosion Guidance
 r:"^消耗(\d+)點能量對鎖定的敵人造成大量物理傷害，若擊倒敵人，回復(\d+)點能量值及(\d+%)的最大生命值$"="Consumes $1 Energy to deal heavy Physical damage to the locked on enemy. If this downs an enemy, restores $2 Energy and $3 Max HP"
 諮詢·終止=Consult·Terminate
 r:"^能量值達到(\d+)點時釋放，消耗(\d+)點能量值對所有敵人造成特大量核熱屬性傷害$"="Use when reaching $1 Energy, consumes $2 Energy to deal severe Nuke damage to all enemies"
@@ -920,10 +923,47 @@ hiho~打我的話我可是會反擊的。=Hee-ho～ I will counter if you hit me
 {{A}}每回合末使所有怪盜進入「地獄燃燒」狀態。\n「地獄燃燒」：回合結束失去大量生命值，可疊加3層，受到<color\=#00aeff>冰凍</color>屬性傷害後驅散。=Hell Biker will inflict all enemies with [Hellfire]. \n[Hellfire]: Lose heavy amount of HP each turn, up to 3 stacks. Dispel after taking <color\=#00aeff>Ice</color> damage.
 {{A}}不會主動攻擊，被擊敗後立即對所有怪盜造成少量<color\=#00aeff>冰凍</color>屬性傷害。=Jack Frost won't attack. \nDeal small <color\=#00aeff>Ice</color> damage to all enemies when defeated.
 
-
 {{A}}會使用<color\=#ff3b37>「瘟疫之白」</color>。\n「瘟疫之白」：使所有怪盜扣除一定生命值，並使隨機3名怪盜進入「瘟疫」狀態，每回合失去一定生命值，持續3回合，可疊加5層。=White Rider will use <color\=#ff3b37>[Plague of White]</color>. \n[Plague of White]: Decrease all enemies' HP by a certain amount and inflict 3 enemies with [Plague]. \n[Plague]: Lose a certain amount of HP every turn for 3 turns, up to 5 stacks.
 瘟疫之白=Plague of White
 對所有敵人造成一定傷害，使隨機3名敵人獲得「瘟疫」，每回合初流失10%最大生命值，持續3回合，可疊加5層=Deals a certain amount of damage to all enemies and inflicts 3 random enemies with [Plague], making them lose 10% Max HP every turn for 3 turns, up to 5 stacks.
+
+r:"^1、{{A}}受到太陽神的祝福，每個回合結束時，獲得(\d+)層「太陽之力」。\n「太陽之力」：自身最終受到傷害降低(\d+%)。\n2、{{A}}回合開始時，若擁有「太陽之力」，則對所有怪盜造成大量萬能傷害，「太陽之力」層數越高，造成的傷害越高。\n3、{{A}}的左眼每個回合會移除{{A}}(\d+)層「太陽之力」，但會損失(\d+%)的最大生命值作為代價。\n4、{{A}}的右眼每個回合會給{{A}}添加(\d+)層「太陽之力」，但在自身死亡時會使{{A}}失去所有「太陽之力」。\n5、{{A}}的右眼每個回合開始時，會驅散掉自己身上所有的持續傷害類效果，每驅散1個持續傷害類效果，自身受到(\d+%)最大生命值的傷害（此傷害會被最終受到傷害影響）。\n6、{{A}}的右眼擁有「{{A}}的庇護」——在自己回合外最終受到傷害減免(\d+%)，自己回合內受到最終傷害提升(\d+%)。\n7、若場上只有{{A}}的左眼存活，則它會化身{{B}}來統治戰場。$"="1. {{A}} will gain $1 stack of [Power of the Sun] at the end of each turn.\n[Power of the Sun]: Decrease Final DMG Taken by $2.\n2. At the start of {{A}}' turn, deal heavy Almighty damage to all Thieves if you have [Power of the Sun]. Deal more damage the higher the stack.\n3. {{A}}' Left Eye will remove $3 stack of [Power of the Sun] from {{A}}, but will lose $4 Max HP.\n4. {{A}}' Right Eye will give $5 stack of [Power of the Sun] to {{A}}, remove all stacks of [Power of the Sun] from {{A}} on defeat.\n5. {{A}}'s Right Eye will dispel all damage over time effects at the start of each turn. Lose $6 Max HP for each type of damage over time effect dispelled.\n6. {{A}}'s Right Eye have [{{A}}' Protection]: Decrease Final DMG Taken not during your turn by $7, increase Final DMG during your turn by $8. \n7. If there is only {{A}}' Left Eye, they will transform into {{B}}."
+太陽之力=Power of the Sun
+
+{{B}}被擊殺後，會變成詭譎的{{A}}繼續戰鬥。=After {{B}} is defeated, transforms into {{A}}. Then transforms all Jack Frost into {{A}}.
+{{C}}在{{B}}倒下後，變成{{A}}。={{C}} will transform into {{A}} after {{B}} is defeated.
+r:"^1、{{B}}死亡後，會變成詭譎的{{A}}，並且將此時仍在場上的{{C}}轉化為{{A}}。\n2、{{C}}和{{A}}的攻擊會附加<color\=#FFFC40>『寒冷』</color>。\n3、{{A}}被擊殺後，會立刻釋放大冰河時期：對<color\=#FFFC40>『寒冷』</color>大於等於(\d+)層的怪盜附加一回合的“虛弱”，對<color\=#FFFC40>『寒冷』</color>層數越高的怪盜傷害越高。$"="1. When {{B}} is defeated, transfroms into {{A}}. Then transforms all {{C}} into {{A}}.\n2. {{C}} and {{A}}'s attacks can inflict <color\=#FFFC40>[Cold]</color>.\n3. When {{A}} is defeated, {{A}} will immediately use Ice Age: Inflict 1 turn of [Weak] to enemies with greater than $1 stacks of <color\=#FFFC40>[Cold]</color>, increase damage to Thieves the more stacks of the Cold <color\=#FFFC40>[Cold]</color> they have."
+
+如果其統領的{{B}}消失，{{A}}會使用<color\=#FFFC40>『大冰河時期』</color>對敵人造成大量傷害和虛弱=If all {{B}} are defeated, {{A}} will use <color\=#FFFC40>[Ice Age]</color> to deal heavy Ice damage to all enemies, then resummon all {{B}}.
+{{B}}會對攻擊{{A}}的敵人群起而攻之。={{B}} will attack enemies that attacked {{A}}.
+r:"^1、{{A}}被攻擊時，會觸發{{B}}的反擊：在場{{B}}依次釋放布芙。\n2、{{B}}和{{A}}的攻擊會附加<color\=#FFFC40>『寒冷』</color>。\n3、當{{B}}全部被擊殺時，{{A}}會立刻釋放大冰河時期：對<color\=#FFFC40>『寒冷』</color>大於等於(\d+)層的怪盜附加一回合的“虛弱”，對<color\=#FFFC40>『寒冷』</color>層數越高的怪盜傷害越高。\n4、{{B}}全部被擊敗後，{{A}}會在一回合後重新召喚{{B}}。$"="1. When {{A}} is attacked, {{B}} will trigger a counter to that enemy.\n2. {{B}} and {{A}}'s attacks can inflict <color\=#FFFC40>[Cold]</color>.\n3. When all {{B}} are defeated, {{A}} will immediately use Ice Age: Inflict 1 turn of [Weak] to enemies with greater than $1 stacks of <color\=#FFFC40>[Cold]</color>, increase damage to Thieves the more stacks of the Cold <color\=#FFFC40>[Cold]</color> they have.\n4. When all {{B}} are defeated, {{A}} will resummon all {{B}} afrer 1 turn."
+
+r:"^1、如果怪盜在一次行動中沒有造成傷害，則附加(\d+)層<color\=#FFFC40>『寒冷』</color>，若造成傷害，則減少(\d+)層<color\=#FFFC40>『寒冷』</color>。 \n2、{{A}}會根據場上{{B}}數量，週期性召喚{{B}}，{{B}}的攻擊會附帶<color\=#FFFC40>『寒冷』</color>。\n3、{{A}}的技能會對<color\=#FFFC40>『寒冷』</color>大於等於(\d+)層的怪盜附加一回合的“虛弱”，對<color\=#FFFC40>『寒冷』</color>層數越高的怪盜傷害越高。$"="1. If Thief deal no damage in a turn, they gain $1 stacks of <color\=#FFFC40>[Cold]</color>; If Thief deal damage in a turn, they lose $2 stack of <color\=#FFFC40>[Cold]</color>.\n2. {{A}} can summon {{B}} based on the number of {{B}}, {{B}}'s attacks can inflict <color\=#FFFC40>[Cold]</color>.\n3. {{A}}'s skills will inflict 1 turn of [Weak] to enemies with greater than $3 stacks of <color\=#FFFC40>[Cold]</color>, increase damage to Thieves the more stacks of the Cold <color\=#FFFC40>[Cold]</color> they have."
+
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害並附加寒冷，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s\|103"><u>凍結</u></link>狀態，效果持續(\d+)回合。$"="Deals <color\=#fffc40>$1</color> ATK Ice damage to 1 enemy and inflict Cold, with a <color\=#fffc40>$2</color> base chance to inflict <link\="s|103"><u>Freeze</u></link> for $3 turns."
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害並附加寒冷，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s\|103"><u>凍結</u></link>狀態，效果持續(\d+)回合。$"="Deals <color\=#fffc40>$1</color> ATK Ice damage to all enemies and inflict Cold, with a <color\=#fffc40>$2</color> base chance to inflict <link\="s|103"><u>Freeze</u></link> for $3 turns."
+r:"^對所有敵人造成冰凍屬性傷害，對有寒冷印記的目標傷害提高\（每層寒冷提高(\d+%)\），有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s\|103"><u>凍結</u></link>狀態，效果持續(\d+)回合。$"="Deals Ice damage to all enemies, deals $1 more damage for each stack of Cold on the target, with a <color\=#fffc40>$2</color> base chance to inflict <link\="s|103"><u>Freeze</u></link> for $3 turns."
+r:"^對所有敵人造成冰凍屬性傷害並附加寒冷，對有寒冷印記的目標傷害提高\（每層寒冷提高(\d+%)\），有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s\|103"><u>凍結</u></link>狀態，效果持續(\d+)回合。$"="Deals Ice damage to all enemies and inflicts Cold, deals $1 more damage for each stack of Cold on the target, with a <color\=#fffc40>$2</color> base chance to inflict <link\="s|103"><u>Freeze</u></link> for $3 turns."
+
+r:"^<color\=#FF0000>{{A}}</color>感到寒冷$"="<color\=#FF0000>{{A}}</color> is feeling cold"
+r:"^<color\=#FF0000>(.*)</color>感到寒冷$"="<color\=#FF0000>$1</color> is feeling cold"
+寒冷=Cold
+積累到一定層數會觸發特殊效果=Trigger special effect at a certain stack
+
+{{A}}會持續使所有同伴獲得<color\=#ff3b37>「{{A}}之護」</color>。\n「{{A}}之護」：受最終傷害降低，減少{{A}}的倒地值可以削減層數，可疊加。={{A}} will give all allies <color\=#ff3b37>[{{A}}'s Protection]</color>.\n[{{A}}'s Protection]: Decrease Final DMG Taken, decrease stack when decrease {{A}}'s Down Gauge.
+{{A}}會釋放<color\=#ff3b37>「南明離火」</color>及<color\=#ff3b37>「{{A}}羽庇」</color>。\n「南明離火」：使所有敵人獲得「離火」狀態，持續損失生命值。\n「{{A}}羽庇」：使1名同伴獲得無法選中狀態。={{A}} can use <color\=#ff3b37>[Southern Flame]</color> and <color\=#ff3b37>[{{A}}'s Feather]</color>.\n[Southern Flame]: Inflict all enemies with [Flame], they lose HP each turn.\n[{{A}}'s Feature]: Make 1 ally untargetable.
+{{A}}會釋放<color\=#ff3b37>「{{A}}之爪」</color>及<color\=#ff3b37>「{{A}}之牙」</color>。\n「{{A}}之爪」：對1名怪盜造成傷害，給予目標「撕裂」，受到持續傷害效果。\n「{{A}}之牙」：對全體怪盜造成傷害，給予目標「咬痕」，受到傷害提升。\n有怪盜同時處於「撕裂」和「咬痕」時，{{A}}會對其造成大量傷害並使其進入絕望狀態。=Byakko can use <color\=#ff3b37>[{{A}}'s Claw]</color> and <color\=#ff3b37>[{{A}}'s Fang]</color>.\n[{{A}}'s Claw]: Deal damage to 1 enemy and inflict [Laceration], they take damage over time.\n[{{A}}'s Fang]: Deal damage to all enemies and inflict [Bite], increase DMG Taken.\nIf any target have both [Laceration] and [Bite], deal heavy damage to them and inflict Despair.
+{{A}}能為敵人添加某些屬性弱點，{{A}}在場時，當怪盜方被削減倒地值時，{{A}}陣營全體獲得1層<color\=#ff3b37>「雲蒸龍變」</color>：造成傷害提升，可疊加。={{A}} can inflict enemies with a random weakness. When {{A}} is present, all Shadows gain 1 stacks of  <color\=#ff3b37>[Dragon Soar]</color> when decreasing Thieves' Down Gauge: Increase DMG Dealt, stackable.
+
+{{A}}之護={{A}}'s Protection
+南明離火=Southern Flame
+離火=Flame
+{{A}}羽庇={{A}}'s Feather
+撕裂=Laceration
+咬痕=Bite
+雲蒸龍變=Dragon Soar
+
+{{B}}在戰鬥中，會源源不斷地召喚「{{C}}」之影、「{{D}}」之影、「{{E}}」之影、「{{F}}」之影。擊敗對應的神獸之影，可以獲得不同的能力。\n擊敗「{{C}}」之影：弱點傷害提升。\n擊敗「{{D}}」之影：{{A}}力提升。\n擊敗「{{E}}」之影：最終傷害提升。\n擊敗「{{F}}」之影：受到最終傷害降低。\n{{B}}生命值較低時，會蓄力並釋放「極·念動力」，造成超特大念動傷害。={{B}} can keep summoning [Shadow of {{C}}], [Shadow of {{D}}], [Shadow of {{E}}], [Shadow of {{F}}]. Gain different abilities when you defeat the Shadows.\nDefeat [Shadow of {{C}}]: Increase Weak DMG.\nDefeat [Shadow of {{D}}]: Increase ATK.\nDefeat [Shadow of {{E}}]: Increase Final DMG.\nDefeat [Shadow of {{F}}]: Decrease Final DMG Taken.\nWhen {{B}} reach low HP, they will charge and use [Ultimate·Psycho Force], dealing colossal Psy damage.
 
 ----------
 CROSS FATE
@@ -1066,7 +1106,7 @@ r:"^HIGHLIGHT技能的最終傷害提升(\d+%)，追加效果的最終傷害提�
 
 靈魂感召=Soul Rally
 原始本能=Primal Instinct
-sr:"^所有怪盜每累積消耗(\d+)點精力值，獲得(\d+)層『(.*)』；\n怪盜每次釋放HIGHLIGHT技能技能，獲得(\d+)層『(.*)』。$"="For every $1 SP consumed by all Thieves, gain $2 stack of [$3];\n Each time Thieves use HIGHLIGHT, gain $4 stacks of [$5]."
+sr:"^所有怪盜每累積消耗(\d+)點精力值，獲得(\d+)層『(.*)』；怪盜每次釋放HIGHLIGHT技能，獲得(\d+)層『(.*)』；『(.*)』：最終傷害提升(\d+%)，持續(\d+)回合，最多可疊加(\d+)層。$"="<size\=27>For every $1 SP consumed by all Thieves, gain $2 stack of [$3]; Each time Thieves use HIGHLIGHT, gain $4 stacks of [$5]. [$6]: Increase Final DMG by $7 for $8 turns, up to $9 stacks.</size>"
 r:"^每層提供(\d+%)的最終傷害加成，持續(\d+)回合，最多可疊加(\d+)層。$"="Each stack increases Final DMG by $1 for $2 turns, up to $3 stacks."
 
 ----------
