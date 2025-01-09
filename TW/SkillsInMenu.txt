@@ -6,7 +6,7 @@ r:"^提升(\d+\.\d%)+$"=$1
 HIGHLIGHT：技能傷害倍率=HIGHLIGHT: ATK% DMG
 近戰攻擊：技能傷害=Melee: ATK% DMG
 槍械射擊：技能傷害=Gun: ATK% DMG
-r:"面具(.*)級時可解鎖"=Unlocks when this persona is Lv. $1
+r:"面具(.*)級時可解鎖"=Unlocks when this Persona is Lv. $1
 
 戰鬥技巧=Combat Skills
 sr:"^(.*) Lv.(\d+)$"="$1 Lv.$2"
@@ -103,9 +103,11 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 神之手=God's Hand
 死亡界限=Deathbound
 巨人之戰=Gigantomachia
+空間殺法=Vorpal Blade
 榮耀衝擊=Glory Impact
 靈魂禁錮=Soul Imprisonment
 荊棘之槍=Gae Bulg
+以斬龍之姿=Dragon Slayer
 八艘跳躍=Hassou Tobi
 八艘飛躍=Hassou Tobi
 痛苦宣判=<size\=22>Painful Judgement</size>
@@ -144,6 +146,7 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 瑪哈布芙達因=Mabufudyne
 鑽石星辰=Diamond Dust
 狂風雪=Blizzard
+大冰河時期=Ice Age
 
 --- Electric ---
 
@@ -525,6 +528,9 @@ r:"^對1名敵人造成(\d+)段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的�
 Gae Bulg
 r:"^造成1段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理傷害，受攻擊敵人每有1層減益則該技能暴擊率提高(\d+%)，最多獲得(\d+%)暴擊率加成。$"="Deals <color\=#fffc40>$1</color> ATK Physical damage to 1 enemy, increases CRIT Rate by $2 for every stack of debuffs the enemy have, up to $3 CRIT Rate Bonus."
 
+Dragon Slayer
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害。若自身沒有「龍血」狀態，給予自身「龍血」。若自身處於「龍血」狀態，則強化「龍血」狀態並刷新持續時間。$"="Deals <color\=#fffc40>$1</color> ATK Physical damage to all enemies. If you don't have [Dragon Blood], gain [Dragon Blood]. If you have [Dragon Blood], boost [Dragon Blood] and refresh its duration."
+
 Hassou Tobi
 r:"^對全體敵人造成8段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，每有1個敵人，該技能傷害提升(\d+%)，最多提升(\d+%)。$"="Deals <color\=#fffc40>$1</color> ATK Physical damage to all enemies 8 times. For every 1 enemy, increases skill damage by $2, up to $3."
 
@@ -746,7 +752,7 @@ r:"^使1名同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#ff
 r:"使1名同伴造成的傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，目標同伴每有20%效果命中，則獲得<color\=#fffc40>(\d+\.\d+%)</color>的額外增傷，上限<color\=#fffc40>(\d+\.\d+%)</color>，效果持續2回合。"=Increase 1 ally's damage dealt by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 20% Effect Hit Rate the ally has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
 
 Charge
-r:"使自身下1次造成的物理屬性傷害提升<color\=#fffc40>(\d+\.\d+%)</color> ，效果持續1回合。"=Increases your next Physical attack damage by <color\=#fffc40>$1</color> for 1 turn.
+r:"使自身下1次造成的物理屬性傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續1回合。"=Increases your next Physical attack damage by <color\=#fffc40>$1</color> for 1 turn.
 
 //Concentrate
 r:"使自身下1次造成的魔法屬性傷害提升<color\=#fffc40>(\d+\.\d+%)</color> ，效果持續1回合。"=Increases your next Magic attack damage by <color\=#fffc40>$1</color> for 1 turn.
