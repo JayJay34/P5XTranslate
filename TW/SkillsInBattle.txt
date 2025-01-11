@@ -402,6 +402,9 @@ Vishnu
 //AoE
 r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，對精神異常的敵人傷害提升(\d+%)。"=Deals <color\=#FFFF00>$1</color> ATK Psy damage to <color\=#FFFF00>all</color> enemies. Increase damage dealt by $2 to each enemy inflicted with any Mental Ailment.
 
+Kohryu
+r:"^已進化，對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害。有(\d+\.\d+%)基礎機率使主目標敵人陷入暈眩狀態，持續(\d+)回合。$"="Evolved. Deals $1 ATK Psy damage to <color\=#FFFF00>all</color> enemies. There is a $2 base chance to inflict the main target with Dizzy for $3 turns."
+
 Shiva
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，根據消耗特殊資源觸發額外效果。$"="Deals $1 ATK Psy damage to <color\=#FFFF00>all</color> enemies, triggers additional effects based on the amount of Wisdom consumed."deal 100.0% of their Attack Power as Nimble Attribute damage, with additional effects triggered based on the consumption of Special Resources.
 
@@ -847,6 +850,7 @@ r:"^效<color\=#000000>果</color>抵抗降低$"="Ef<color\=#000000>fe</color>ct
 r:"^受<color\=#000000>傷</color>害提升$"="<size\=17> </size>D<color\=#000000>M</color>G Taken Up"
 r:"^受<color\=#000000>到</color>傷害提升$"="<size\=17> </size>D<color\=#000000>M</color>G Taken Up"
 r:"^受<color\=#000000>最</color>終傷害提高$"="<size\=15> </size>F<color\=#000000>in</color>al DMG Taken Up"
+r:"^受<color\=#000000>到</color>最終傷害提高$"="<size\=15> </size>F<color\=#000000>in</color>al DMG Taken Up"
 r:"^傷<color\=#000000>害</color>降低$"="<size\=17> </size>D<color\=#000000>M</color>G Down"
 r:"^受<color\=#000000>物</color>理傷害提升$"="<size\=25> </size>P<color\=#000000>h</color>ys DMG Taken Up"
 r:"^受<color\=#000000>物</color>理傷害加深$"="<size\=25> </size>P<color\=#000000>h</color>ys DMG Taken Up"
@@ -879,7 +883,8 @@ r:"^防禦力降低$"="Decrease DEF"
 r:"^速度提升$"="Increase SPD"
 r:"^傷害增加$"="Increase Damage"
 r:"^傷害提升$"="Increase Damage"
-r:"^暴擊率提升$"="Increase CRIT"
+r:"^暴擊提升$"="Increase CRIT Rate"
+r:"^暴擊率提升$"="Increase CRIT Rate"
 r:"^暴擊傷害提升$"="Increase CRIT DMG"
 r:"^暴擊效果提升$"="Increase CRIT DMG"
 r:"^穿透提升$"="Increase PEN"
@@ -891,6 +896,7 @@ r:"^受到傷害提升$"="Increase DMG Taken"
 r:"^受HL傷害提升$"="Increase HIGHLIGHT DMG Taken"
 r:"^受到百分比傷害降低$"="Decrese DMG Taken percentage"
 r:"^受百分比傷害降低$"="Decreases DMG Taken%"
+r:"^受到最終傷害提高$"="Increase Final DMG Taken"
 r:"^火焰傷害提升$"="Increase Fire DMG"
 r:"^凍結傷害提升$"="Increase Ice DMG"
 r:"^電擊傷害提升$"="Increase Elec DMG"
@@ -900,9 +906,16 @@ r:"^護盾效果提升$"="Increase Shield Effect"
 r:"^受治療降低$"="Decrease Healing Received"
 
 r:"^受弱點傷害提升(\d+%)$"="Increase Weakness DMG by $1"
-受電擊傷害提升Increase Elec DMG Taken
+受物理傷害提升=Increase Physical DMG Taken
+受射擊傷害提高=Increase Gun DMG Taken
+受火焰傷害提升=Increase Fire DMG Taken
+受冰凍傷害提高=Increase Ice DMG Taken
+受電擊傷害提升=Increase Elec DMG Taken
 受疾風傷害提高=Increase Wind DMG Taken
+受到念動傷害提升=Increase Psy DMG Taken
 受到核熱傷害提升=Increase Nuke DMG Taken
+受到祝福傷害提升=Increase Bless DMG Taken
+受到詛咒傷害提升=Increase Curse DMG Taken
 受詛咒傷害提升=Increase Curse DMG Taken
 r:"^耐性穿透提升(\d+%)$"="Increase Effect RES Ignore by $1"
 
@@ -1040,10 +1053,12 @@ r:"^受到傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Taken by $1"
 r:"^受到的傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Taken by $1"
 r:"^詛咒反噬達到(\d+)層，受HIGHLIGHT傷害提升(\d+%)$"="Reached $1 stacks of Curse Reversal; \nIncrease HIGHLIGHT DMG Taken by $2"
 r:"^受到追擊傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up DMG Taken by $1"
+r:"^受到最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG Taken by $1"
 r:"^受最終傷害提升(\d+%)，可疊加(\d+)層$"="Increase Final DMG Taken by $1, \nup to $2 stacks"
 r:"^造成傷害降低(\d+(.\d+)?(%)?)$"="Decrease DMG Dealt by $1"
 r:"^造成的傷害降低(\d+(.\d+)?(%)?)$"="Decrease DMG Dealt by $1"
 造成的傷害大幅降低=Heavily decrease DMG Dealt
+r:"^最終傷害降低(\d+(.\d+)?(%)?)$"="Decrease Final DMG by $1"
 受到的下一次HIGHLIGHT傷害提升=Increase next HIGHLIGHT DMG Taken
 r:"^受物理傷害提升(\d+(.\d+)?(%)?)$"="Increase Phys DMG Taken by $1"
 r:"^受物理傷害提高(\d+(.\d+)?(%)?)$"="Increase Phys DMG Taken by $1"
