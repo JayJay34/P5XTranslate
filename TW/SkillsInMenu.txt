@@ -147,6 +147,7 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 鑽石星辰=Diamond Dust
 狂風雪=Blizzard
 大冰河時期=Ice Age
+雪崩=Avalanche
 
 --- Electric ---
 
@@ -565,6 +566,9 @@ r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的火焰屬�
 
 --- Ice ---
 
+Avalanche
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，有(\d+%)的固定機率無視弱點和倒地值，使目標陷入倒地狀態。若該技能使敵人陷入倒地狀態，則額外造成1次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害。$"="Deals <color\=#fffc40>$1</color> ATK Ice damage to 1 enemy, with a $2 fixed chance to ignore weakness and Down Gauge to Down the enemy. If this skill Downed the enemy, deal an additional <color\=#fffc40>$3</color> ATK Ice damage."
+
 --- Electric ---
 
 //Electric Surge
@@ -588,6 +592,7 @@ r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬�
 
 //AoE
 r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(\d+%)。"="Deals <color\=#FFFF00>$1</color> ATK Psy damage to <color\=#FFFF00>all</color> enemies. Triggers <link\="s|211"><u>TECHNICAL</u></link> to enemies inflicted with any <link\=s|106><u>Mental Ailment</u></link>, increases skill damage by $2."
+r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊點念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(\d+%)。"="Deals <color\=#FFFF00>$1</color> ATK Psy damage to <color\=#FFFF00>all</color> enemies. Triggers <link\="s|211"><u>TECHNICAL</u></link> to enemies inflicted with any <link\=s|106><u>Mental Ailment</u></link>, increases skill damage by $2."
 
 Okuninushi
 r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於精神異常的敵人增傷20%，若目標敵人的弱點是念動屬性，則額外提升15%造成的傷害。$"="Deals <color\=#fffc40>$1</color> ATK Psy damage to all enemies. Increases DMG Dealt by 20% if the enemy is inflicted with Mental Ailments. Increases DMG Dealt by 15% if the enemy is weak to Psy."
