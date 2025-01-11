@@ -1,4 +1,4 @@
-本能=Instinct
+本能=<size\=22>Instinct</size>
 本能詳情=Instinct Details
 r:"^{{A}}等級上限提升至<color\=#FFF000>LV.(\d+)</color>$"="<size\=28>Increase Persona level cap to <color\=#FFF000>Lv.$1</color></size>"
 
@@ -211,17 +211,11 @@ r:"^蔓延的死寂(.*)$"="Deadly Silence $1"
 r:"^效果命中提升(\d+\.\d+%)。「噩夢」使效果抵抗降低(\d+%)、防禦力降低(\d+%)，持續(\d+)回合。「噩夢」狀態下，敵人受到物理傷害加深(\d+%)。敵人每受到(\d+)次物理傷害，額外獲得(\d+)層，可疊加(\d+)層，每層獨立計算，持續(\d+)回合。$"="Increase EHR by $1. [Nightmare] decrease Effect RES by $2 and DEF by $3 for $4 turns. Under [Nightmare], increase enemies' Phys DMG Taken by $5 for $8 turns. Additionally increase Phys DMG Taken stacks by $7 after the enemy take $6 hits of Physical damage. Each stack count down independently."
 噩夢=Nightmare
 
-Oberon
-r:"^停滯歲月的雷擊(.*)$"="<size\=26>Time Stopping Lightning $1</size>"
-r:"^暴擊率提升(\d+\.\d+%)。場上只有1名敵人時，造成的電擊屬性傷害提升(.*)，暴擊率提升(.*)。若敵人處於倒地狀態，則效果提升(.*)。$"="Increase CRIT Rate by $1. When there is only 1 enemy, increase Elec DMG Dealt by $2 and CRIT Rate by $3. Increase this effect by $3 if the enemy is Downed."
-
-Dionysus
-r:"^酒醉的狂歡(.*)$"="Druken Revelry $1"
-r:"^暴擊率提升(\d+\.\d+%)。以同伴為目標釋放{{A}}技能後，使技能主目標的暴擊效果提升(.*)，效果持續2回合。$"="<size\=28>Increase CRIT Rate by $1. When using a Persona skill on allies, increase the main target's CRIT DMG by $2 for 2 turns.</size>"
-
-Nebiros
-r:"^被詛咒的血統(.*)$"="Cursed Bloodline $1"
-r:"^<nobr>效果抵抗提升(\d+\.\d+%)。釋放詛咒屬性技能時，消耗的精力值降低(.*)。$"="<nobr>Increase Effect RES by $1. When using Curse skills, reduce cost by $2."
+Black Frost
+r:"^得逞了吼(.*)$"="Win-ho! $1"
+r:"^自身使用技能使敵人陷入倒地狀態後，獲得(\d+)層「暴風雪」：攻擊力提升(\d+%)、冰凍傷害提升(\d+%)，上限(\d+)層，持續時間(\d+)回合。$"="<size\=27>When using skills to down enemies, gain $1 stack of [Blizzard]: Increase ATK by $2 and Ice DMG by $3 for $5 turns, up to $4 stacks.</size>"
+r:"^攻擊力提升(\d+\.\d+%)。自身使用技能使敵人陷入倒地狀態後，獲得(\d+)層「暴風雪」：攻擊力提升(\d+%)、冰凍傷害提升(\d+%)，上限(\d+)層，持續時間(\d+)回合。$"="Increase ATK by $1. When using skills to down enemies, gain $2 stack of [Blizzard]: Increase ATK by $3 and Ice DMG by $4 for $6 turns, up to $5 stacks."
+暴風雪=Blizzard
 
 Yamata
 r:"^祭品的悲鳴(.*)$"="Screams of Sacrifice $1"
@@ -238,6 +232,10 @@ r:"^冰封的裁決(.*)$"="Frozen Adjudication $1"
 r:"^防禦力提升(\d+\.\d+%)。為隊友添加護盾時，主要目標獲得防禦力提升(.*)或冰凍傷害提升(.*)其中一個效果，持續2回合。$"="Increase DEF by $1. After giving Shield to allies, increase the main target's DEF by $2 for 2 turns or Ice DMG Bonus by $3 for 2 turns."
 r:"^防禦力提升(\d+\.\d+%)。為隊友添加護盾時，主要目標獲得防禦力提升(.*)和冰凍傷害提升(.*)兩個效果，持續2回合。$"="Increase DEF by $1. After giving Shield to allies, increase the main target's DEF by $2 and Ice DMG Bonus by $3 for 2 turns."
 
+Oberon
+r:"^停滯歲月的雷擊(.*)$"="<size\=26>Time Stopping Lightning $1</size>"
+r:"^暴擊率提升(\d+\.\d+%)。場上只有1名敵人時，造成的電擊屬性傷害提升(.*)，暴擊率提升(.*)。若敵人處於倒地狀態，則效果提升(.*)。$"="Increase CRIT Rate by $1. When there is only 1 enemy, increase Elec DMG Dealt by $2 and CRIT Rate by $3. Increase this effect by $3 if the enemy is Downed."
+
 Thor
 r:"^雷神的威嚴(.*)$"="<size\=28>Thunder God's Majesty $1</size>"
 r:"^<nobr>暴擊效果提升(\d+\.\d+%)。其他同伴每釋放1次電擊屬性的{{A}}技能，則使自身獲得1層『雷神威勢』，造成的電擊傷害提升(.*)，並使技能『天召雷』額外造成1段傷害，效果持續1回合，上限2層。$"="<size\=28><nobr>Increase CRIT DMG by $1. Gain 1 stack of [Thunder God's Might] after other allies used Elec skills, increase DMG Dealt by $2,  and make Heavenly Thunder deal 1 additional hit of damage for 1 turn, up to 2 stacks.</size>"
@@ -246,10 +244,18 @@ r:"^雷<color\=#000000>神</color>威勢$"="<size\=9> </size>T<color\=#000000>hu
 雷神威勢=Thunder God's Might
 電擊傷害提升，技能『天召雷』的段數增加=Increase Elec DMG, increase the amount of times [Heavenly Thunder] can hit
 
+Dionysus
+r:"^酒醉的狂歡(.*)$"="Druken Revelry $1"
+r:"^暴擊率提升(\d+\.\d+%)。以同伴為目標釋放{{A}}技能後，使技能主目標的暴擊效果提升(.*)，效果持續2回合。$"="<size\=28>Increase CRIT Rate by $1. When using a Persona skill on allies, increase the main target's CRIT DMG by $2 for 2 turns.</size>"
+
 Bishamonten
 r:"^暴怒的慧傘(.*)$"="Furious Umbrella $1"
 r:"^暴擊率提升(\d+\.\d+%)。對敵人釋放技能時，主目標敵人身上每有1層元素異常，則使其受到的核熱傷害提升(.*)，上限3層，效果持續1回合。$"="Increase CRIT Rate by $1. After using a skill on enemies, increase the main target's Nuke DMG Taken by $2 for 1 turn for every Elemental Ailement they have, up to 3 stacks."
 r:"^暴擊率提升(\d+\.\d+%)。對敵人釋放技能時，主目標敵人身上每有1層元素異常，則使其受到的核熱傷害提升(.*)，上限3層，效果持續1回合。並使所有其他敵人獲得該效果的(.*)。$"="Increase CRIT Rate by $1. After using a skill on enemies, increase the main target's Nuke DMG Taken by $2 for 1 turn for every Elemental Ailement they have, up to 3 stacks. All other enemies gain $3 of this effect."
+
+Nebiros
+r:"^被詛咒的血統(.*)$"="Cursed Bloodline $1"
+r:"^<nobr>效果抵抗提升(\d+\.\d+%)。釋放詛咒屬性技能時，消耗的精力值降低(.*)。$"="<nobr>Increase Effect RES by $1. When using Curse skills, reduce cost by $2."
 
 Dominion
 r:"^天使的號令(.*)$"="Angel's Order $1"
@@ -286,6 +292,8 @@ Kohryu
 r:"^祥瑞之主(.*)$"="<size\=28>Lord of Auspiciousness $1</size>"
 r:"^攻擊力提升(\d+\.\d+%)。處於後臺也能生效：所有同伴每造成1種不同屬性的傷害，使黃龍獲得1層『四象』，上限4層。{{A}}處於前臺時，每層『四象』提升自身(.*)攻擊力。『四象』為4層時使{{A}}的技能進化。造成傷害後清除『四象』。$"="<size\=28>Increase ATK by $1. Will still be active when not equipped: Gain 1 stack of [Four Symbols] when allies deal different elemental damage, up to 4 stacks. When Kohryu is equipped, increase ATK by $2 for every stack of [Four Symbols]. Evolve your skill when [Four Symbols] is at 4 stacks and dispel [Four Symbols] after dealing damage.</size>"
 r:"^攻擊力提升(\d+\.\d+%)。處於後臺也能生效：所有同伴每造成1種不同屬性的傷害，使{{A}}獲得1層『四象』，上限4層。{{A}}處於前臺時，每層『四象』提升自身(.*)攻擊力，(.*)念動傷害。『四象』為4層時使{{A}}的技能進化。造成傷害後清除『四象』。$"="<size\=28>Increase ATK by $1. Will still be active when not equipped: Gain 1 stack of [Four Symbols] when allies deal different elemental damage, up to 4 stacks. When Kohryu is equipped, increase ATK by $2 and Psy DMG by $3 for every stack of [Four Symbols]. Evolve your skill when [Four Symbols] is at 4 stacks and dispel [Four Symbols] after dealing damage.</size>"
+四象=Four Symbols
+四象的數量=Number of Four Symbols
 
 Shiva
 r:"^因果的流轉(.*)$"="Karma Reversal $1"
