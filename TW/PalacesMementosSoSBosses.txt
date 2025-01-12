@@ -36,10 +36,13 @@ r:"^觀察模式冷卻中，(\d+)秒後可用！$"="Third Eye in cooldown"
 
 異聞印記=Anecdote Mark
 異聞=Anecdote
+{{A}}{{B}}碎片=<size\=21>{{A}} {{B}} Shard</size>
+完成觀看後可領取：=Claim after viewing:
 
 看來目前是安全的，可以喘息片刻了。是不是需要恢復一下，或者強化一下自己的能力。=Looks like it's currently safe. \nWant to take a break and recover or strengthen your abilities?
 
 r:"^安<color\=#ff0000ff>全</color>屋$"="Sa<color\=#ff0000ff>fe</color> Room"
+r:"^安<color\=#ff0000ff>全</color>屋？$"="Sa<color\=#ff0000ff>fe</color> Room?"
 r:"^開啟了通往\n『<color\=#ff3b37>(.*)</color>』的快速移動。$"="You can now quick travel \nto this <color\=#FFDF00>Safe Room</color>."
 
 ----------
@@ -90,13 +93,45 @@ PALACE 3
 發電廠一層=<size\=26>Power Plant 1F</size>
 發電廠二層=<size\=26>Power Plant 2F</size>
 發電廠三層=<size\=26>Power Plant 3F</size>
+
+唔~沒有反應，找個<color\=#FF0000>機器人</color>過來幫忙吧=No response. Let's find a <color\=#FF0000>robot</color> to help
+唔~提示錯誤，<color\=#FF0000>機器人</color>沒有進入認證區域範圍=No response. The <color\=#FF0000>robot</color> is not in the area
+前方已超過該機器人的工作範圍=Robot cannot go here
+前方已超過該機器人的工作範圍，即將重置位置=Robot cannot go here, reset its location
+需要攜帶機器人靠近=Need to bring a robot closer
+能量不符合要求，無法交互。=Energy does not match, cannot interact.
+該機器人攜帶能量無法靠近=Robot with Energy cannot pass
+能量獲取=Gain Energy
+能量暫存=Store Energy
+能量交換=Exchange Energy
+退出=Leave
+
+----------
+PALACE 4
+----------
 控制中心=Control Center
 控制中心下層=<size\=18>Control Center Bottom</size>
 控制中心上層=<size\=20>Control Center Top</size>
 中庭廣場=Atrium Plaza
 核心監控室=<size\=20>Core Control Room</size>
-
-{{A}}{{B}}碎片=<size\=21>{{A}} {{B}} Shard</size>
+取水塔=Water Tower
+取水塔·精神能量=<size\=21>Water Tower·Mental Energy</size>
+精神塔底層=<size\=18>Mental Tower Bottom</size>
+精神塔中層=<size\=18>Mental Tower Middle</size>
+精神塔頂層=<size\=20>Mental Tower Top</size>
+精神塔封閉區=<size\=16>Restricted Mental Tower</size>
+取水塔·熱能量=<size\=21>Water Tower·Thermal Energy</size>
+熱能塔底層=<size\=17>Thermal Tower Bottom</size>
+熱能塔中層=<size\=17>Thermal Tower Middle</size>
+熱能塔頂層=<size\=19>Thermal Tower Top</size>
+熱能塔封閉區=<size\=15>Restricted Thermal Tower</size>
+取水塔·電能量=<size\=21>Water Tower·Electricity</size>
+電能塔底層=<size\=16>Electricity Tower Bottom</size>
+電能塔中層=<size\=16>Electricity Tower Middle</size>
+電能塔頂層=<size\=18>Electricity Tower Top</size>
+電能塔封閉區上=<size\=15>Restricted Elec Tower Top</size>
+電能塔封閉區下=<size\=13>Restricted Elec Tower Bottom</size>
+廢棄取水塔=<size\=16>Abandoned Water Tower</size>
 
 ----------
 PALACE 4 PUZZLES
@@ -335,6 +370,90 @@ r:"^我們需要改變它對當前「<color\=#ff0000>環境</color>」的看法�
 令人不適的=Uncomfortable
 監視=Surveillance
 無所不在的=Omnipresent
+
+r:"^告訴他取水塔正確的「<color\=#ff0000>空間結構</color>」吧。$"="Tell them the correct <color\=#ff0000>spatial structure</color> of the Water Tower."
+多層的=Multi-layered
+螺旋的=Spiral
+單層的=Single Layer
+關閉的=Closed
+
+r:"^告訴維修工，{{A}}現在的「<color\=#ff0000>位置</color>」吧。$"="Tell them where is "<color\=#ff0000>{{A}}</color>"."
+大霧=Fog
+水壩壩頂=Dam Top
+
+r:"^發電廠已經發生「<color\=#ff0000>變化</color>」了。$"="The Power Plant has undergone "<color\=#ff0000>changes</color>"."
+調崗=Transfer
+在職=Working
+新任主任=New Director
+進行=In Progress
+暴雨=Torrential Rain
+平定=Calm
+停止=Halt
+水壩水位=Water Level
+下降=Reduce
+
+r:"^{{A}}和侵佔公款是不對的！$"="{{A}} and embezzlement of public funds are wrong!"
+不允許的=Not allowed
+允許的=Allowed
+挪用公款=Embezzlement
+道德=Moral
+監管=Regulation
+
+r:"^讓我們告訴他「<color\=#ff0000>外面的狀況</color>」吧。$"="Let's tell them about the "<color\=#ff0000>situation outside</color>"."
+外面=Outside
+不存在的=Non-existent
+逃脫路線=Escape Route
+確定的=Confirm
+
+r:"^讓操作員認為工作沒有「<color\=#ff0000>必要</color>」。$"="Let them realize work is not "<color\=#ff0000>necessary</color>"."
+即將崩塌=About to Collapse
+消失的=Disappeared
+
+r:"^我們嘗試<color\=#ff0000>打亂</color>他的計畫如何？$"="How about we "<color\=#ff0000>disrupt</color>" their plans?"
+存儲資料=Store Data
+獲取晶片=Acquire Chip
+遊戲資料=Game Information
+資料分析=Data Analysis
+監控室=Monitoring Room
+調控參數=Control Parameters
+搜刮寶箱=Loot Treaure Chest
+控制室=Control Room
+辦公室=Office
+喝咖啡=Drink Coffee
+監控水位=Monitor Water Level
+
+r:"^嘗試改變操作員對於<color\=#ff0000>{{A}}</color>的想法吧。$"="Try changing the operator's view on "<color\=#ff0000>{{A}}</color>"."
+{{A}}團長={{A}} Leader
+可靠的=Dependable
+沒有道德的=Unethical
+正義的=Just
+邪惡的=Evil
+
+r:"^讓操作員認為其他房間出現「<color\=#ff0000>問題</color>」吧。$"="Let the operator know there are "<color\=#ff0000>problems</color>" in other rooms."
+不穩定=Unstable
+穩定=Stable
+異常=Abnormal
+一切良好=All Good
+不重要=Unimportant
+看守=Guard
+發電室=Generator Room
+資料出錯=Data Error
+
+r:"^想想平時都聽過哪些「<color\=#ff0000>發電廠</color>」吧。$"="Think about the common "<color\=#ff0000>Power Plant</color>"."
+注視=Gaze
+旋轉=Rotation
+
+r:"^到周圍房間找找元件的「<color\=#ff0000>對應關係</color>」吧。$"="Look around the room to find the components' <color\=#ff0000>correlation</color>."
+r:"^(\d+)號$"="Number $1"
+電動機=Electric Motor
+水輪機蝸殼=Turbine Volute
+尾水管=Draft Tube
+發電轉軸=Shaft Generator
+水輪機=Water Turbine
+r:"^這個設備……寫的是(\d+)號，尾水管$"="This device... It's saying number $1, draft tube."
+r:"^這個設備……寫的是(\d+)號，水輪機$"="This device... It's saying number $1, water turbine."
+r:"^這個設備……寫的是(\d+)號，水輪機蝸殼$"="This device... It's saying number $1, turbine volute."
+r:"^這個設備……寫的是(\d+)號，電動機$"="This device... It's saying number $1, electric motor."
 
 ----------
 PALACE 1 BOSS
@@ -742,6 +861,8 @@ r:"^對所有敵人造成萬能傷害，無視其防禦力，吸取其(\d+)點�
 
 能量值=Energy
 飛天狀態=Flying Form
+捕獵陷阱=Hunting Trap
+無法行動，狀態無法被驅散=Cannot act, cannot be dispelled
 
 r:"^<color\=#FF0000>{{A}}</color>被{{B}}鎖定了$"="<size\=24><color\=#FF0000>{{A}}</color> locked on by {{B}}</size>"
 r:"^<color\=#FF0000>{{B}}</color>被{{A}}鎖定了$"="<size\=24><color\=#FF0000>{{B}}</color> locked on by {{A}}</size>"
@@ -777,6 +898,34 @@ r:"^1、{{A}}會交替使用「{{A}}之爪」和「{{A}}之牙」。\n2、「{{A
 r:"^1、{{A}}會交替使用「{{A}}之爪」和「{{A}}之牙」。\n2、「{{A}}之爪」：對1名角色造成傷害，給予目標撕裂：受到持續傷害效果。\n3、「{{A}}之牙」：對全體角色造成傷害，給予我方角色咬痕：受到傷害提升。\n4、回合開始時，若有目標撕裂和咬痕同時存在，{{A}}會對目標發動捕食，對目標造成大量傷害，並使目標進入絕望狀態。\n5、每隔兩回合，選擇1隻{{B}}成為「餌料」，下回合捕食{{B}}，恢復自身全部生命值並強化自身。$"="1. Byakko will alternate using [Byakko's Claw] and [Byakko's Fang].\n2. [Byakko's Claw]: Deal damage to 1 enemy and inflict Laceration: Take damage over time.\n3. [Byakko's Fang]: Deal damage to all enemies and inflict Bite: Increase DMG Taken.\n4. At the start of turn, if any target have both Laceration and Bite, deal heavy damage to them and inflict Despair. \n5. Summon 1 Sudama every 2 turns. Next turn Byakko will defeat that Sudama, restore own HP and buff yourself."
 死亡時淨化我方角色的撕裂和咬痕。=Dispel Laceration and Bite when defeated
 r:"^1、{{A}}會交替使用「{{A}}之爪」和「{{A}}之牙」。\n2、「{{A}}之爪」：對1名角色造成傷害，給予目標撕裂：受到持續傷害效果。\n3、「{{A}}之牙」：對全體角色造成傷害，給予我方角色咬痕：受到傷害提升。\n4、回合開始時，若有目標撕裂和咬痕同時存在，{{A}}會對目標發動捕食，對目標造成大量傷害，並使目標進入絕望狀態。\n5、每隔兩回合，選擇1隻{{B}}成為「餌料」，下回合捕食{{B}}，恢復自身全部生命值並強化自身。\n6、{{B}}死亡時，淨化所有怪盜的撕裂和咬痕效果。$"="1. Byakko will alternate using [Byakko's Claw] and [Byakko's Fang].\n2. [Byakko's Claw]: Deal damage to 1 enemy and inflict Laceration: Take damage over time.\n3. [Byakko's Fang]: Deal damage to all enemies and inflict Bite: Increase DMG Taken.\n4. At the start of turn, if any target have both Laceration and Bite, deal heavy damage to them and inflict Despair. \n5. Summon 1 Sudama every 2 turns. Next turn Byakko will defeat that Sudama, restore own HP and buff yourself.\n6. Dispel Laceration and Bite when Sudama is defeated."
+
+r:"^{{A}}擁有極高的血量。首次受到一種適應性屬性傷害時，會召喚(\d+)隻『{{A}}的頭』，上限(\d+)次。第(\d+)次召喚時，會改為召喚(\d+)隻『{{A}}的尾』。$"="{{A}} have extreme HP. Summon $1 [{{A}}'s Head] when taking Elemental damage for the first time, up to $2 times. Summon $4 [{{A}}'s Tail] on the $3 summon."
+r:"^1、{{A}}擁有極高的血量。首次受到一種適應性屬性傷害時，會召喚(\d+)隻『{{A}}的頭』，上限(\d+)次。第(\d+)次召喚時，會改為召喚(\d+)隻『{{A}}的尾』。\n2、{{A}}的頭死亡時，使{{A}}受到的最終傷害提升(\d+%)。\n3、{{A}}的尾死亡時，給予所有怪盜『天叢雲』狀態：提升(\d+%)最終傷害。$"="1. {{A}} have extreme HP. Summon $1 [{{A}}'s Head] when taking Elemental damage for the first time, up to $2 times. Summon $4 [{{A}}'s Tail] on the $3 summon.\n2. When {{A}}'s Head is defeated, increase {{A}}'s Final DMG Taken by $5.\n3. When {{A}}'s Tail is defeated, gives all Thieves [Ame-no-Murakumo]: Increase Final DMG by $6."
+r:"^死亡時，使{{A}}受到的最終傷害提升(\d+%)。$"="When defeated, increase {{A}}'s Final DMG Taken by $1."
+r:"^死亡時，給予所有怪盜『天叢雲』狀態：提升(\d+%)最終傷害。$"="When defeated, give all Thieves [Ame-no-Murakumo]: Increase Final DMG Taken by $1."
+{{A}}的頭={{A}}'s Head
+{{A}}的尾={{A}}'s Tail
+天叢雲=Ame-no-Murakumo
+
+r:"^{{A}}擁有極高的血量。受到追加效果傷害或HIGHLIGHT傷害後，會召喚(\d+)隻『{{A}}的頭』，上限(\d+)次。第(\d+)次召喚時，會改為召喚(\d+)隻『{{A}}的尾』。$"="{{A}} have extreme HP. Summon $1 [{{A}}'s Head] when taking Follow Up damage or HIGHLIGHT damage, up to $2 times. Summon $4 [{{A}}'s Tail] on the $3 summon."
+r:"^1、{{A}}擁有極高的血量。被添加元素異常或精神異常時，會召喚(\d+)隻『{{A}}的頭』，上限(\d+)次。第(\d+)次召喚時，會改為召喚(\d+)隻『{{A}}的尾』。\n2、{{A}}的頭死亡時，使{{A}}受到的最終傷害提升(\d+%)。\n3、{{A}}的尾死亡時，給予所有怪盜『天叢雲』狀態：提升(\d+%)最終傷害。$"="{{A}} have extreme HP. Summon $1 [{{A}}'s Head] when taking Follow Up damage or HIGHLIGHT damage, up to $2 times. Summon $4 [{{A}}'s Tail] on the $3 summon.\n2. When {{A}}'s Head is defeated, increase {{A}}'s Final DMG Taken by $5.\n3. When {{A}}'s Tail is defeated, gives all Thieves [Ame-no-Murakumo]: Increase Final DMG by $6."
+
+r:"^{{A}}擁有極高的血量。被添加元素異常或精神異常時，會召喚(\d+)隻『{{A}}的頭』，上限(\d+)次。第(\d+)次召喚時，會改為召喚(\d+)隻『{{A}}的尾』。$"="{{A}} have extreme HP. Summon $1 [{{A}}'s Head] when inflicted with Elemental Ailments or Mental Ailments, up to $2 times. Summon $4 [{{A}}'s Tail] on the $3 summon."
+r:"^1、{{A}}擁有極高的血量。被添加元素異常或精神異常時，會召喚(\d+)隻『{{A}}的頭』，上限(\d+)次。第(\d+)次召喚時，會改為召喚(\d+)隻『{{A}}的尾』。\n2、{{A}}的頭死亡時，使{{A}}受到的最終傷害提升(\d+%)。\n3、{{A}}的尾死亡時，給予所有怪盜『天叢雲』狀態：提升(\d+%)最終傷害。$"=1. {{A}} have extreme HP. Summon $1 [{{A}}'s Head] when inflicted with Elemental Ailments or Mental Ailments, up to $2 times. Summon $4 [{{A}}'s Tail] on the $3 summon.\n2. When {{A}}'s Head is defeated, increase {{A}}'s Final DMG Taken by $5.\n3. When {{A}}'s Tail is defeated, gives all Thieves [Ame-no-Murakumo]: Increase Final DMG by $6."
+
+r:"^1、{{A}}在戰鬥中會給自身的雷神之錘充能。當充能滿(\d+%)，{{A}}會消耗(\d+%)充能，對我方單體角色釋放『真理之雷』，造成單體超高傷害。充能滿(\d+)次之後，會對我方角色使用『崇高聖戰』。\n2、自身使用技能後，獲得(\d+%)充能。\n3、每回合開始時，召喚(\d+)隻{{B}}。$"="1. {{A}} can charge Mjolnir in battle. When reaching $1, {{A}} will consume $2 Energy and use [Thunder Reign] on 1 enemy, dealing colossal elec damage. After fully charged $3 times, {{A}} will use [Wild Thunder].\n2. Gain $4 Energy when {{A}} uses skills.\n3. At the start of each turn, summon $5 {{B}}."
+r:"^1、{{A}}使用技能後給予雷神之錘(\d+%)充能。\n2、{{A}}死亡時減少雷神之錘(\d+%)充能。$"="1. Charge Mjolnir by $1 after using skills. \n2. When {{A}} is defeated, decrease Mjolnir's Energy by $2."
+雷神之錘=Mjolnir
+r:"^雷神之錘已充能(\d+(.\d+)?(%)?)$"="Mjolnir is at $1"
+
+r:"^1、{{A}}在戰鬥中會給自身的雷神之錘充能。當充能滿(\d+%)，{{A}}會消耗(\d+%)充能，對我方單體角色釋放『真理之雷』，造成單體超高傷害。充能滿(\d+)次之後，會對我方角色使用『崇高聖戰』。\n2、友方怪物使用技能後，雷神之錘獲得(\d+%)充能。\n3、友方受到精神異常效果後，雷神之錘減少(\d+%)充能。$"="1. {{A}} can charge Mjolnir in battle. When reaching $1, {{A}} will consume $2 Energy and use [Thunder Reign] on 1 enemy, dealing colossal elec damage. After fully charged $3 times, {{A}} will use [Wild Thunder].\n2. Gain $4 Energy when {{A}} uses skills.\n3. Decrease Mjolnir's Energy by $5 after enemies are inflicted with Mental Ailments."
+每隔一回合，給予{{A}}護盾效果。=Give {{A}} Shield every other turn.
+每隔一回合，給予{{A}}1次額外回合。=Give {{A}} 1 Extra Turn every other turn.
+
+r:"^1、本場戰鬥中{{B}}無法選中。{{B}}回合開始時，會交替給予我方攻擊力最高的兩名角色『雷神的祝福』：提升(\d+%)最終傷害，造成傷害後給予雷神之錘(\d+%)充能。\n2、雷神之錘達到(\d+%)充能後，會消耗(\d+%)充能，給予{{A}}受到最終傷害提高(\d+%)效果，上限(\d+)層。$"="1. {{B}} is untargetable. At the start of {{B}}'s turn, give the 2 highest ATK Thief [{{B}}'s Blessing]: Increase Final DMG by $1, charge Mjolnir by $2 after dealing damage.\n2. When Mjolnir reaches $3 change, consume $4 Energy to increase {{A}}'s Final DMG Taken by $5, up to $6 stacks."
+r:"^擁有極高的血量，(\d+)回合後會釋放『諸神黃昏』，並使自身造成的最終傷害提高(\d+%)。$"="Have extreme HP, will use [Ragnarok] after $1 turns, then increase own Final DMG Dealt by $2."
+{{A}}的祝福={{A}}'s Blessing
+雷神的祝福=Thunder God's Blessing
 
 ----------
 CROSS FATE PALACE (CF) (COLLAB)

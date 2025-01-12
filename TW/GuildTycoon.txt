@@ -90,7 +90,7 @@ sr:"<color\=#FF0000>(.*)</color>將<color\=#FF0000>(.*?)</color>移出了樂園�
 鎖定提示=Lock
 以下<color\=#ef0000>怪盜、面具與啟示</color>會被鎖定到本挑戰中不可更換，是否確認出戰？=<size\=24>You cannot change the chosen <color\=#ef0000>Thieves, Personas and Revelation Cards</color> until you reset the fight</size>
 以下怪盜裝備的<color\=#ef0000>啟示</color>被其他BOSS鎖定，選擇確認以調整啟示。=<size\=26>The following Thieves' <color\=#ef0000>Revelation Cards</color> are locked by other bosses. Please switch.</size>
-重置挑戰會解除陣容鎖定並清空當前總積分，是否繼續=<size\=28>Resetting the fight will unlock your team and clear the current score, are you sure? \n(This will not erase your Personal Best)</size>
+重置挑戰會解除陣容鎖定並清空當前總積分，是否繼續=<size\=28>Resetting the fight will unlock your team and clear the current score. \nAre you sure? \n(This will not erase your Personal Best)</size>
 尚未挑戰=Not challenged yet
 啟示禁用=<size\=20>\nCards\nLocked</size>
 
@@ -193,6 +193,7 @@ r:"^敵人每受到(\d+)次來自怪盜的傷害，使該名怪盜造成傷害�
 
 主角光環=Main Character Aura
 r:"^<color\=#FFFC40>WONDER</color>造成<color\=#FFFC40>最終傷害</color>提高(\d+%)，其他隊員造成最終傷害降低(\d+%)"="<size\=22>Increase <color\=#FFFC40>Wonder's Final DMG</color> by $1; \nDecrease other Thieves' Final DMG by $2</size>"
+r:"^主<color\=#000000>角</color>光環$"="<size\=4> </size>M<color\=#000000>ai</color>n Character Aura"
 
 命中領域=EHR Domain
 r:"^所有怪盜基於效果命中超過(\d+%)的部分使最終傷害提升，最多(\d+%)效果命中使最終傷害提升(\d+%)$"="<size\=27>All Thieves increase Final DMG for every EHR over $1, up to $2 EHR to increase Final DMG by $3</size>"
