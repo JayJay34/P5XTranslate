@@ -65,10 +65,12 @@ MODIFIERS
 ----------
 r:"^(.*)磁場$"="Stellar Magnetic Field"
 
+r:"^<color\=#FFFC40>WONDER</color>最終傷害提高100%(\d+(.\d+)?(%)?)$"="Increase the Final DMG of <color\=#FFFC40>Wonder</color> by $1"
 r:"^<color\=#FFFC40>反抗</color>怪盜最終傷害提高(\d+(.\d+)?(%)?)$"="Increase the Final DMG of <color\=#FFFC40>Rebel</color> Thieves by $1"
 r:"^<color\=#FFFC40>反抗</color>怪盜最終傷害提高(\d+%)，其他怪盜最終傷害降低(\d+%)$"="Increase the Final DMG of <color\=#FFFC40>Rebel</color> Thieves by $1, decrease the Final DMG of other Thieves by $2"
 r:"^<color\=#FFFC40>支配</color>怪盜最終傷害提高(\d+(.\d+)?(%)?)$"="Increase the Final DMG of <color\=#FFFC40>Dominate</color> Thieves by $1"
 r:"^<color\=#FFFC40>支配</color>怪盜最終傷害提高(\d+%)，其他怪盜最終傷害降低(\d+%)$"="Increase the Final DMG of <color\=#FFFC40>Dominate</color> Thieves by $1, decrease the Final DMG of other Thieves by $2"
+r:"^隊伍中編入(\d+)名及以上<color\=#FFFC40>反抗/支配</color>怪盜時，全體怪盜最終傷害提高(\d+%)$"="Increase all Thieves' Final DMG by $2 when you have $1 or more <color\=#FFFC40>Rebel/ Dominate</color> Thieves"
 r:"^反抗/支配怪盜暴擊率提升(\d+%)，暴擊效果降低(\d+%)，造成<color\=#FFFC40>暴擊</color>時最終傷害提升(\d+%)$"="<size\=25>Increase the CRIT Rate of Rebel/ Dominate Thieves by $1 and decrease their CRIT DMG by $2; Increase <color\=#FFFC40>Critical</color> Final DMG by $3</size>"
 r:"^<color\=#ff381d>『{{A}}』</color>成員最終傷害提升(\d+(.\d+)?(%)?)$"="<size\=27>Increase the Final DMG of \n<color\=#ff381d>[The Phantom Thieves of Hearts]</color> by $1</size>"
 
@@ -76,15 +78,17 @@ r:"^<color\=#ff381d>火焰</color>/<color\=#00aeff>冰凍</color>/<color\=#fbff3
 r:"^<color\=#ff63ff>念動</color>/<color\=#00fcff>核熱</color>/<color\=#fffea0>祝福</color>/<color\=#ff0036>詛咒</color>屬性隊員最終傷害提高(\d+(.\d+)?(%)?)$"="Increase the Final DMG of <color\=#ff63ff>Psy</color>/<color\=#00fcff>Nuclear</color>/<color\=#fffea0>Bless</color>/<color\=#ff0036>Curse</color> \nThieves by $1"
 r:"^隊伍中編入(\d+)/(\d+)/(\d+)名<color\=#FFFC40>相同屬性</color>的怪盜時，全體怪盜最終傷害提高(\d+%)/(\d+%)/(\d+%)$"="<size\=25>Increase all Thieves' Final DMG by $4/$5/$6 when you have $1/$2/$3 Thieves with the <color\=#FFFC40>same element</color></size>"
 r:"^<color\=#ff381d>火焰</color>/<color\=#00aeff>冰凍</color>/<color\=#fbff37>電擊</color>/<color\=#81ea2c>疾風</color>屬性隊員最終傷害提高(\d+%)，其他怪盜最終傷害降低(\d+%)$"="Increase the Final DMG of <color\=#ff381d>Fire</color>/<color\=#00aeff>Ice</color>/<color\=#fbff37>Electric</color>/<color\=#81ea2c>Wind</color> Thieves by $1, decrease the Final DMG of other Thieves by $2"
+
 r:"^所有隊員造成<color\=#FFFC40>追加效果</color>時，最終傷害提高(\d+(.\d+)?(%)?)$"="<size\=28>Increase all Thieves' Final DMG by $1 when dealing damage with <color\=#FFFC40>Follow Up</color></size>"
 r:"^所有隊員造成<color\=#FFFC40>持續傷害</color>時，最終傷害提高(\d+(.\d+)?(%)?)$"="<size\=28>Increase all Thieves' Final DMG by $1 when dealing damage with <color\=#FFFC40>damage over time</color></size>"
+r:"^所有怪盜造成<color\=#FFFC40>TECHNICAL</color>時，最終傷害提高(\d+(.\d+)?(%)?)$"="<size\=28>Increase all Thieves' Final DMG by $1 when dealing damage with <color\=#FFFC40>TECHNICAL</color></size>"
 r:"^所有怪盜<color\=#FFFC40>受到追加治療</color>後，最終傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="<size\=28>Increase all Thieves' Final DMG by $1 after receiving <color\=#FFFC40>Follow Up Healing</color> for $2 turns, up to $3 stacks</size>"
 r:"^所有怪盜每次受到<color\=#FFFC40>護盾</color>後，最終傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="<size\=28>Increase all Thieves' Final DMG by $1 after receiving <color\=#FFFC40>Shield</color> for $2 turns, up to $3 stacks</size>"
 r:"^所有怪盜處於<color\=#FFFC40>額外回合</color>時，最終傷害提高(\d+(.\d+)?(%)?)"="Increase Final DMG by $1 when in <color\=#FFFC40>Extra Turn</color>"
-
 r:"^所有敵人每有一種<color\=#FFFC40>元素異常</color>狀態，受到最終傷害提升(\d+%)；同時擁有(\d+)種<color\=#FFFC40>元素異常</color>狀態時，額外使受到最終傷害提升(\d+%)$"="Increase all enemies' Final DMG Taken by $1 for every <color\=#FFFC40>Elemental Ailments</color> they have; Additionally increase their Final DMG Taken by $3 when they have $2 <color\=#FFFC40>Elemental Ailments</color>"
 r:"^敵人能受到大部分<color\=#FFFC40>精神異常</color>狀態；所有隊員造成<color\=#FFFC40>精神異常</color>狀態時，效果命中大幅提升；處於<color\=#FFFC40>精神異常</color>狀態的敵人受到最終傷害提升(\d+%)$"="Enemies are susceptible to most <color\=#FFFC40>Mental Ailments</color>; Heavily increase all Thieves' EHR when inflicting <color\=#FFFC40>Mental Ailments</color>; Increase the Final DMG Taken of enemies with <color\=#FFFC40>Mental Ailments</color> by $1"
 r:"^效果1：敵人受到<color\=#FFFC40>ONEMORE/{{A}}</color>傷害提高(\d+%)\n效果2：戰鬥開始及敵人回合開始時，敵人隨機獲得1種屬性弱點（只會存在最新獲得的弱點）$"="Effect 1: Increase all enemies' <color\=#FFFC40>ONEMORE/All-Out Attack</color> DMG Taken by $1\nEffect 2: At the start of battle and start of enemies' turn, all enemies randomly gain 1 Weakness (Only the newest Weakness will stay)."
+
 r:"^所有敵人每受到(\d+)次來自怪盜的傷害，使該名怪盜最終傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="<size\=25>After enemies take $1 hit of damage from a Thief, increase that Thief's Final DMG by $2 for $3 turns, up to $4 stacks</size>"
 r:"^所有隊員在某回合結束至下一回合結束期間，未造成傷害時，使自身最終傷害提升(\d+%)，持續(\d+)回合$"="<size\=28>Increase all Thieves' Final DMG by $1 for $2 turn if they did not deal damage for 1 turn</size>"
 r:"^<color\=#FF0000>{{A}}</color>一回合內未造成傷害，下回合最終傷害提升……$"="<color\=#FF0000>{{A}}</color> dealt no damage, \nnext turn Final DMG Up!"

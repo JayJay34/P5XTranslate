@@ -53,6 +53,7 @@ General Wonder Prompt
 稍後回覆=Reply later
 稍後再回覆=Reply later
 稍後再說=I'm in a hurry
+不用了……=No need...
 對不起啊……=Sorry...
 現在很忙=I'm busy
 現在有點忙……=I'm busy...
@@ -68,6 +69,7 @@ General Wonder Prompt
 我考慮一下=I'll think about it
 我考慮一下……=I'll consider it...
 我有事……=I got something...
+現在有事=Got something
 有別的事要做=<size\=30>Have other things to do</size>
 現在不太方便……=<size\=28>Now is not a good time...</size>
 有其他安排=<size\=30>Got other arrangements</size>
@@ -173,6 +175,18 @@ CITY ACTIVITIES
 收拾一下回去吧……=Let's go back after cleaning up...
 收拾一下就回去吧……=Let's go back after cleaning up...
 
+r:"^這個的話……\n說不定{{A}}會喜歡……$"="Maybe {{A}} will like that..."
+r:"^手裡剛好有{{A}}可能喜歡的東西，\n要送出去嗎？$"="<size\=26>I've got something {{A}} might like.\nShould I give it to them?</size>"
+r:"^手裡有{{A}}可能喜歡的東西，\n要送給她嗎？$"="<size\=26>I've got something {{A}} might like.\nShould I give it to her?</size>"
+r:"^手裡可能有{{A}}會喜歡的東西，\n要送出去嗎？$"="<size\=26>I've got something {{A}} might like.\nShould I give it to them?</size>"
+r:"^說起來，\n手上正好有{{A}}會喜歡的東西……$"="Speaking of, I've got just the thing {{A}} likes..."
+r:"^說起來，\n手上有很適合清的東西……$"="Speaking of, I've got just the thing Kiyoshi likes..."
+r:"^說起來，\n手上好像有{{A}}會喜歡的東西……$"="Speaking of, I think I got just the thing {{A}} likes..."
+r:"^說起來，手上似乎……\n有{{A}}會喜歡的東西……$"="Speaking of, I think I got just the thing {{A}} likes..."
+r:"^說起來，那個東西說不定{{A}}會喜歡……$"="Speaking of, maybe {{A}} would like that gift..."
+要送出去嗎？=Want to give them a gift?
+要送給她嗎？=Want to give her a gift?
+
 r:"^感覺和{{A}}的關係加深了……$"="I feel like my relationship with {{A}} has deepened..."
 r:"^感覺和{{A}}的關係\n加深了……$"="I feel like my relationship with {{A}} has deepened..."
 r:"^感覺跟{{A}}的關係又加深了……$"="I feel like my relationship with {{A}} has deepened..."
@@ -217,6 +231,8 @@ General Short Phrases
 {{A}}！？={{A}}！？
 {{A}}～？={{A}}～?
 {{A}}……？={{A}}...?
+……{{A}}……！=...{{A}}...!
+{{A}}……{{B}}……！={{A}}... {{B}}...!
 嗯！=Uh-huh!
 嗯……=Um...
 唔……=Hmm...
@@ -284,40 +300,44 @@ Prologue
 
 這次也遇到了呢=It seems we have met again.
 那麼 歡迎你=Well then, welcome.
-你此時此刻看到的這幅光景=This scene that you are looking at.
-還請稱呼它為「{{A}}」=Please call it "{{A}}".
-啊，自我介紹有些遲了，請叫我<color\=#ff0000>{{A}}</color>吧。=Ah, sorry for the late introduction. You may call me <color\=#ff0000>{{A}}</color>.
+你此時此刻看到的這幅光景=This scene that you are looking at...
+還請稱呼它為「{{A}}」=Please call it the "{{A}}".
+啊，自我介紹有些遲了，請叫我<color\=#ff0000>{{A}}</color>吧。=Ah, sorry for the late introduction. \nYou may call me <color\=#ff0000>{{A}}</color>.
 然後，這個的名字是……<color\=#ff0000>{{A}}</color>。\n是服侍我的隨從。=And this is... <color\=#ff0000>{{A}}</color>.\nMy attendant.
 我是{{A}}，{{B}}。=I'm {{A}}, {{B}}.
 這裡是位於夢與現實、\n精神與物質之間的狹縫之處。=This place exists between dream and reality, mind and matter.
 你是以某種形式做出了「選擇」吧……？=You have made a "choice" in some way...?
 所以才會作為「客人」來訪。=That is why you are here as a "guest".
 選擇？=Choice?
-沒錯，我想說的是，\n這是你自己做出的「選擇」……=That is right, What I want to say is, this is your own "choice"...
+沒錯，我想說的是，\n這是你自己做出的「選擇」……=That is right, What I want to say is, \nthis is your own "choice"...
 客人？=Guest?
 是的，我們歡迎你以「客人」的身份來訪……=Exactly, we welcome you as a "guest"...
 居然還沒有察覺嗎……=Was it unconscious...?
-原來如此，\n看到這個房間的景象，也不是不能理解。=I see, looking at the state of this room, that is not incomprehensible.
+原來如此，\n看到這個房間的景象，也不是不能理解。=I see, looking at the state of this room, \nthat is not incomprehensible.
 打個比方，\n就是「在心海中開掘的海底隧道」。=To make an analogy, it is like "an underwater tunnel opened in the Sea of Souls."
 但你憑藉自己的意志，\n向我展示了名為「想知道」的慾望。=Thank you. You have demonstrated a desire to "know" of your own volition.
-儘管你是生活在這種世界中的人類……\n現在只要這樣就好。=Even though you are a human living in this kind of world... I suppose that is fine for now.
-那麼，這次就到這裡吧……\n啊，抱歉，最後再給你一個忠告……=Well then, that would be all... Ah, sorry, just one last thing...
+儘管你是生活在這種世界中的人類……\n現在只要這樣就好。=<size\=30>Even though you are a human living in this kind of world... I suppose that is fine for now.</size>
+那麼，這次就到這裡吧……\n啊，抱歉，最後再給你一個忠告……=Well then, that would be all... \nAh, sorry, just one last thing...
 「無慾」有時會導致你放棄自己……="Desirelessness" can sometimes mean giving up on oneself...
-這樣的世界還有您這樣的人……\n希望您能理解領會{{A}}的忠告。=There are people like you in this world... Please keep in mind that this is an advice from the {{A}}.
-抱歉，留你這麼久，那麼……期待再會。=Sorry for keeping you so long... I looking forward to seeing you again.
+這樣的世界還有您這樣的人……\n希望您能理解領會{{A}}的忠告。=<size\=30>There are people like you in this world... Please understand that this is an advice from the {{A}}.</size>
+抱歉，留你這麼久，那麼……期待再會。=Sorry for keeping you so long... \nI looking forward to seeing you again.
 
 未來……規劃……=Future... planning...
 還沒怎麼想好……=Haven't thought about it yet...
+{{A}}，又擺出那個樣子了呢……\n她生氣了。={{A}}, it's that look again... \nShe's angry.
 路被堵住了……=The road is blocked...
 聊得太投入了，她們都沒注意到我……=Too involved in chatting, they didn't even notice me...
 要不要去拜託她們讓一下……=Should I ask them to move...
 打擾一下……=Excuse me...
 那個……=That...
 不知為何「想過一下」的想法，\n逐漸消失了……這究竟是……？=For some reason, the idea of ​​"moving pass" disappeared... What is this...?
-……有必要提醒一下，\n你是可以選擇主動去溝通的。=...Don't forget, you can also choose to speak up.
+不要在走廊裡奔跑。=Don't run in the corridors.
 得救了=I'm saved
 謝謝=Thank you
+……有必要提醒一下，\n你是可以選擇主動去溝通的。=...Don't forget, you can also choose to speak up.
+因為人有按照自己的意志行動的能力。=People have the power to act based on their own will.
 自己的……意志……=Own... will...
+……真的是那傢伙嗎？\n似乎也「<color\=#ff0000>被盜取</color>」了，看來無一例外啊。=...Is it really this guy? He seems to have been "<color\=#ff0000>stolen</color>" without exception.
 那是……剛才的……=That was... just now...
 有一種「違和感」……=Feeling a "sense of dissonance"...
 非常可怕的……怪異的……=It's scary... and strange...
@@ -325,6 +345,8 @@ Prologue
 就連「違和感」……也都消失了。=Even the "sense of offense"... has disappeared.
 我能為那個女孩做些什麼……\n什麼也做不了吧……=What can I do for that girl... Nothing can be done...
 頭好痛……趕快回家吧……=My head hurts... \nLet's hurry home...
+明明已經「被盜取」，\n但竟然能對自己的意志抱有疑問……=Even though he's been "stolen", \nhe can still question his own will...
+{{A}}……找到了。={{A}}... Found it.
 
 果然 就是你吧=I'm glad it was you after all.
 按照約定  吾來見你了=I have come to see you as I promised.
@@ -349,6 +371,7 @@ Prologue
 總覺得發生過……=<size\=23>Feels like this happened before...</size> <size\=1>.</size>
 這些傢伙是？=Who are these guys?
 不會吧……=No way...
+總之，你快逃吧！=Anyway, you run away!
 
 糟了=Crap!
 如果現在的你 並不是真正的你呢=What if the person you are now isn't the real you?
@@ -372,12 +395,18 @@ Prologue
 不用怕 即使遭遇他人非議也罷 只要你能看見 那就伸手去把握它=Don't be afraid. No matter what anyone says, if you can see it, grab it.
 哈哈哈哈 沒想到終於能迎來「今日」=Hahaha, I can't believe it's finally "the day"!
 
-吾名為<color\=#ff0000>{{A}}</color> 靠魅力統率狂暴慾望之人=My name is <color\=#ff0000>{{A}}</color> The one who commands Desires with charm.
+吾名為<color\=#ff0000>{{A}}</color> 靠魅力統率狂暴慾望之人=My name is <color\=#ff0000>{{A}}</color>. The one who commands Desires with charm.
 從現在起 命運之紐帶已將吾等二人緊緊連結=From now on, we are bound together by the bonds of destiny.
 來吧 簽訂契約吧=Now, sign the contract!
 吾即是汝=I am thou.
 汝即是……吾！=Thou art... I!
 汝即是吾！=Thou art I!
+你的樣子……\n充滿著對「生命」的強烈渴望……！=Your appearance... \nThe overflowing of Desire for Life...!
+雖說是多此一問，\n但你是已經決定「戰鬥」了吧？=There's no need to ask, \nyou've chosen to "fight", right?
+{{A}}……與之前相比，\n完全變成另一個人了，不錯。={{A}}... You're like a completely different person now, not bad.
+這是迎擊的姿態。\n為了殺掉吾等，它們要來真的了。=That's an attacking stance. \nThey really intend to kill us.
+如果你不想死，\n那就用你手中的武器……=If you don't want to die,\nthen use the weapon in your hand...
+斬碎敵人！=And slice them into pieces!
 ……你想怎麼處理那個傢伙？\n將你的慾望化為力量……在此釋放！=...How do you want to deal with that enemy? Turn your Desires into power...!
 
 是指{{A}}？=You mean {{A}}?
@@ -392,8 +421,8 @@ Prologue
 趁熱打鐵，繼續行動！=Strike while the iron is hot!
 
 這附近？=Nearby?
-不能袖手旁觀=<size\=28>Can't stand by and watch</size> <size\=1>.</size>
-要奪回慾望=Have to retake Desires <size\=1>.</size>
+不能袖手旁觀=<size\=28>Can't stand by and watch</size>
+要奪回慾望=Have to retake Desires
 那麼 吾也不必客氣了=Well then, me too.
 現身吧 {{A}}=Come, {{A}}!
 給你個忠告 吾等是失去一切才得以站在此處之人=Let me warn you, we have lost everything to stand here.
@@ -419,7 +448,7 @@ r:"^不過，\n最後一擊就讓給(.*)你吧。$"="But, I will give $1 the spo
 不過，借此機會得知了你的實力，\n也不枉此行。=But, it was a great achievement to learn about your abilities.
 這樣的話，\n馬上就可以給你委派<color\=#ff0000>工作</color>了。=If that's the case, \nI can entrust the <color\=#ff0000>work</color> to you right away.
 工作？=Work?
-你打算讓我做什麼？=<size\=23>What are you going to have me do?</size> <size\=1>.</size>
+你打算讓我做什麼？=<size\=21>What are you going to have me do?</size>
 出口就在那裡，\n待出去後吾再詳細同你解釋。=The exit is right there. I will tell you the details after we escape.
 
 陰影！？=Shadow!?
@@ -612,10 +641,12 @@ Chapter 3 Akashi Palace
 {{B}}的事情，\n{{A}}應該在做某些準備了。={{A}} should be making some preparations for {{B}}.
 趁這段時間先鍛煉一下自己吧。=Let's use this time to train.
 
+唔……對沒有操作過「智慧型手機」的吾而言，\n真是聽得一頭霧水啊……=Hmm... This makes no sense to me since I don't have a "smartphone"...
 晚點給你解釋=I'll explain later
-{{A}}也買個智慧型手機=<size\=27>{{A}} should get a smartphone</size> <size\=1>.</size>
+{{A}}也買個智慧型手機=<size\=27>{{A}} should get a smartphone</size>
 {{A}}悄悄告訴我們了一個……\n驚人的作戰計畫……={{A}} quietly told us...\nA surprising plan...
 怎麼樣，會不會覺得有些過頭了……？=I wonder, is that too much...?
+想到{{A}}受的苦，\n我就想至少也要讓{{B}}再吃點苦頭……=When I think about {{A}}, I feel like I want to make {{B}} suffer a bit...
 務必這麼去做=You must do this
 感覺很有趣=Feels interesting
 你還挺壞的嘛……！=You're kinda bad...!
@@ -626,7 +657,7 @@ r:"^於是決定把「{{A}}」，\n作為<color\=#ff0000>第2個{{B}}</color>了
 你想得真周到啊=Very thoughtful of you
 謝謝你，{{A}}=Thank you, {{A}}
 動手吧=Let's do it
-把被奪走的慾望偷回來=<size\=28>Steal back the taken Desires</size> <size\=1>.</size>
+把被奪走的慾望偷回來=<size\=30>Steal back the taken Desires</size>
 超級頂級終極究極……\nFIGHT、OH～～！=Ultra super great hyper ultimate...\nFIGHT, OH～～!
 
 要給{{A}}發{{B}}嗎？=Are you sending the {{B}} to {{A}}?
@@ -638,19 +669,30 @@ r:"^於是決定把「{{A}}」，\n作為<color\=#ff0000>第2個{{B}}</color>了
 早啊～！=Good morning～！
 早。=Morning.
 交給{{A}}來吧=Leave it to {{A}}
-甩在他面前吧=Throw it right at him <size\=1>.</size>
+甩在他面前吧=Throw it right at him
 ……哪個鍵？=...Which button?
 收下吧，{{B}}……{{A}}！=Take this! The {{B}}... {{A}}!
 ……讓我們開始反擊吧！=...The counterattack begins!
 反……擊……？\n……啊。=Counter... attack...?\n...Ah.
 
 r:"^罪大惡極的……{{B}}……「{{A}}」……？$"=""{{A}}"... The sinful... {{B}}...?"
-你這個……戴著正義的假面，\n卻陷害他人，唯利是圖的{{A}}……=You are... an {{A}}, wearing a false mask of justice, framing others in the name of profit...
+你這個……戴著正義的假面，\n卻陷害他人，唯利是圖的{{A}}……=<size\=28>You are... an {{A}}, wearing a false mask of justice, framing others in the name of profit...</size>
 你這個巧舌如簧的小丑，不但剝奪人們的……\n愛與真情，甚至還嘲弄他人的求生意志……=You are a deceitful clown, not only have you taken people's love and affection... You even mocked their will to survive...
 這份扭曲的慾望，就由吾等{{A}}收下……？=We, the {{A}}, will take your distorted desires...?
 
+這麼看來，\n也沒有找網軍幫忙刷資料的必要了。=If that's the case, there's no need to ask the computer club to inflate the number of negative comments.
+{{A}}，{{C}}你連網軍都準備了{{B}}={{A}}, {{C}} you've even made such preparations? {{B}}
+以防萬一而已，在計畫這次{{A}}行動之前，\n我「稍微」和電腦部的同學溝通了一下。=Just to be on the safe side, I "casually" consulted with the students in computer club before coming up with this plan.
+「不知道誰在網上編造了我和{{A}}的事，\n怎麼辦……要怎麼做才能刪除呢」。="I don't know who spread rumors about me and the {{A}} on the internet. It's painful... I wonder how to delete them".
+{{A}}，這演技，\n真的給人一種好可憐的感覺！={{A}}, it looked like a tough act!
+要是{{A}}這副難過的樣子找我說話……\n什麼忙我都願意幫啊……=If {{A}} comes to me with such a sad look... \nI'll do any favor I can...
+對方告訴我，\n「可以試試註冊多個帳號曝光」……=I was advised to "create multiple fake accounts and report them"...
+還提到了不會暴露小號的方法，\n比如一鍵發送幾百個文章的工具等等……=Also on how to create fake accounts that won't be discovered, and tools to send hundreds of posts at once...
+再就是怎麼用錢買到「點踩」數……\n總之讓我學到了很多不太正當的辦法呢。=Even how to buy "clicks" with money... \nAnd other not so good ways.
 總之很厲害……=<size\=29>All in all, that's amazing...</size> <size\=1>.</size>
 還有那樣的方法嗎=Any similar methods?
+啊，可是……感覺要是走錯一步，\n都有可能變成犯罪吧……=Ah, but... Feels like if you take one wrong step, it could become a crime....
+唔，不過這次可沒用到這類危險的方法哦？\n因為話題的人氣已經高到不需要去冒險了。=<size\=30>Oh, I didn't use any of those shady methods this time. It was so popular that I didn't have to use it.</size>
 先去發電廠吧=<size\=27>Go to the Power Plant first</size> <size\=1>.</size>
 不救他也無所謂吧……=<size\=24>Doesn't matter if we don't save him...</size> <size\=1>.</size>
 適可而止吧=Enough is enough
@@ -665,14 +707,88 @@ r:"^罪大惡極的……{{B}}……「{{A}}」……？$"=""{{A}}"... The sinfu
 應該就在這裡=Should be right there
 就是這個氣勢=That's the spirit
 準備好了嗎？=Ready?
-那個人就是幕後推手？=<size\=28>Is that guy the mastermind?</size> <size\=1>.</size>
-那個人是誰？=Who's that guy?
-少得意忘形了=Don't get carried away <size\=1>.</size>
-不存在被吃的一方=No side is being eaten <size\=1>.</size>
-他就是這麼騙人的嗎=<size\=24>Is that how he deceives people?</size> <size\=1>.</size>
+
+居然敢公開掛我……！\n可恨……太可恨 ！我不原諒……絕不原諒！=Damnit! They exposed me like that...! \nUnforgivable... Unforgivable!
+在這……是{{A}}！=There... That's {{A}}!
+{{A}}看來順利顯現出來了。=It looks like the {{A}} has materialized successfully.
+那就是……{{A}}……！=That's... {{A}}...!
+……啊，來了啊。\n我一直在等你們哦，{{A}}的諸位。=...Ah, you are here.\nI've been waiting for you, {{A}}.
+受「那個人」的委託要把你們找出來，\n沒想到居然以這種形式碰面了……！=I was looking for you at "that person's" request, \nI never expected to meet like this...!
+……那個人？=...That person?
+果然……\n你是為了調查{{B}}才來{{A}}的吧？=Just as I thought... You came to {{A}} to investigate the {{B}}, right?
+聽下來，意思是……！=Wait, that means...!
+那個人就是幕後推手？=<size\=28>Is that person the mastermind?</size>
+那個人是誰？=Who's that person?
+哈！我怎麼可能告訴你們？\n他很可怕哦……是個既狡猾又無情的人。=Ha! There's no way I'd talk! \nHe's a scary and extraordinary person.
+不過，我也是因為這點才一直跟隨他。=Well, that's exactly why I followed him.
+啊，那{{A}}果然……\n是為了引誘{{B}}現身的圈套吧……！？=Ah, then {{A}} really... \nWas a trap to lure out the {{B}}...!?
+喔……居然已經推測到這個地步了。\n好吧，作為獎勵，我就告訴你們。=Oh... You actually guessed that far. \nFine, as a reward, I'll tell you.
+沒錯，{{A}}和{{B}}，\n都是為了調查你們而設下的「餌食」。=<size\=29>That's right, both the {{A}} and the {{B}} were "bait" to identify you.</size>
+你這混蛋……\n不許把{{A}}叫做什麼「餌食」！=You... \nYou are not allowed to call {{A}} "bait"!
+SOY，不要被他煽動。\n他是為了動搖我們才那麼說的。=Soy, don't fall for his words. \nWe should stay calm.
+{{A}}，你們真的……很煩人啊……\n為什麼不乖乖上鉤，來糾纏我做什麼……！={{A}}, you are very annoying... Why don't you just take the bait instead of bothering me...!
+我才不會被吃掉，我才是吃人的一方！=I'm not the one being eaten, \nI will stay on the eating side!
+少得意忘形了=Don't get carried away
+不存在被吃的一方=No side is being eaten
+……不，你錯了，\n這個世界上是存在弱者的。=...No, that's not true. \nThere are clearly weak people in this world.
+只不過，區分強者還是弱者的標準……\n不是權力，不是金錢，也不是暴力。=But what separates the strong from the weak... \nIs not power, money, or violence.
+而是是否擁有「吞噬」他人的意志，\n這一點很重要哦。=It's whether or not you have the will to "devour" others. That's what's important.
+{{A}}你在胡說什麼啊！={{A}} What are you talking about!
+大眾都是一樣的哦。\n無時無刻不在想著怎麼吃人。=It's the same for the masses.\nAlways wanting to eat someone else.
+撲到我為他們準備的名為「惡」的餌食上，\n譴責他人，並陶醉於正義的快感中。=<size\=29>They take the bait of "evil" I have prepared, condemn others, and revel in the pleasure of justice.</size>
+惡人有惡報的情節，大家都很喜歡吧？\n仿佛自己就站在了正義的一方！=<size\=29>Everyone loves it when evil is punished, right? \nThe illusion of being on the side of justice!</size>
+你們也是一樣……主觀上把我判定為惡人，\n將自身行為謳歌為正義，陷入自我陶醉………=<size\=29>You are the same... Singing about how wrong I am and how right you are, enjoying the incident...</size>
+你什麼意思……？=What do you mean...?
+{{A}}……所以，你們才在當什麼{{B}}吧？={{A}}... That's why you became {{B}}, right?
+不對、不是那樣的！=No, it's not like that!
+我們只是對你這種奪走人的慾望，\n侵犯他人利益的混帳玩意看不下去而已！=We just can't stand the sight of people who steal people's desires and devour them!
+哎呀，小孩兒還是太嫩了呀，\n看來沒意識到這是「錯誤的正義」嘛。=Ah, you really seem to be a bit slow. You don't even realize that this is a "false justice".
+別誤會，\n我可不屬於被吃掉的那一方哦？=I don't want you to misunderstand, \nbut I'm not on the side of being eaten.
+我很清楚，這個世界不是吃人就是被吃，\n跟「正確」和「強大」都沒有關係。=<size\=29>I know very well that the world is eat or be eaten, it has nothing to do with "righteousness" or "strength".</size>
+這傢伙……\n從剛才開始就在說什麼呢……？=What has this guy been saying all this time...?
+小心，他在通過偷換概念進行心理誘導，\n這是詐騙犯常用的手法。=<size\=29>Be careful, changing the topic is a common tactic used by scammers to manipulate your psychology.</size>
+混淆概念、偷換論點，\n想讓我們產生錯覺，認為錯的是自己。=<size\=29>They're trying to change the subject, to shift the argument, to make you feel like you're in the wrong.</size>
+他就是這麼騙人的嗎=<size\=23>Is that how he deceives people?</size>
 好狡猾的傢伙=Cunning guy
-放馬過來吧=Bring it
-我來當你的對手=I'll be your opponent <size\=1>.</size>
+嗯，看來最好不要太當真啊。\n原本還想引出幕後推手的情報……=<size\=28>Yes, we should take this with a pinch of salt... I'd like to get some information about who's behind this, but...</size>
+……說了這麼多，你們明白了嗎？=...Is that how you understand it?
+犧牲掉的人，被選為食物……\n大眾享用過他的下場後，就會感到滿足。=<size\=28>The sacrificed people were chosen as food... After the public has enjoyed their fate, they will feel satisfied.</size>
+然後他們就會讚美我，給我金錢和地位。\n而我就能盡情享用這一切。=Then they will praise me, give me money and status. And I can enjoy it all.
+我可是食物鏈頂端的存在哦？\n這也意味著，在資本主義中，這就是正義！=I'm at the top of the food chain! \nThis is capitalist justice!
+居然說這是正義……\n這種犧牲別人的做法不可能是正確的！=How can you say that's justice...\nSacrificing others isn't right!
+{{A}}，就因為你們這麼想，\n所以你們才會被吃掉哦，{{B}}。={{A}}, just because you think so, that's why you will get eaten, {{B}}.
+混蛋……！=You...!
+CLOSER，這裡交給我。=Closer, leave it to me.
+你說了那麼多大道理，\n但那只不過是自私利己的理論吧？=It may seem like a great principle, but what you say is just a selfish, self-centered theory.
+你操縱大眾心理，獲得認同，\n只是沉醉於自己的主張而已。=<size\=29>You are just intoxicated by your claims, manipulating the psychology of the masses to gain their approval.</size>
+……其實你早已意識到自己是「錯誤的」，\n但你一直不敢正視這一點。=...You know what you're doing is "wrong", but you keep turning your eyes away from yourself.
+你犧牲了那麼多人的人生，\n無論你怎麼捏造和誘導……=You have sacrificed the lives of many, no matter how much you fabricate and induce...
+唯獨這個「事實」，是絕對不會改變的。=The "fact" remains unchanged.
+……這、微小的犧牲，卻滿足多數人的需求，\n這不是最棒的娛樂嗎。=...It's a small sacrifice that will satisfy the many, isn't this the best entertainment?
+微小的犧牲？\n你把人的生命和情感當什麼了。=It's a small sacrifice, you say? \nWhat do you think of people's lives and hearts?
+你只是把自己受過的痛苦，\n又施加給他人而已。=You are just taking out your pain on others.
+你明知被人吃掉的痛苦，卻成為吃人的一方，\n只會把錯歸咎於別人，真是幼稚……=<size\=29>Even though you know the pain of being eaten, you turned to the other side and take out your anger on others, how childish...</size>
+你……！=You...!
+還說這跟人的強大無關？\n還要有吃掉別人的覺悟？全是胡說八道。=A person's strength doesn't matter? \nThey have the will to devour others? Nonsense.
+當你面對「比自己強的人」時，\n你根本就不敢咬上去吧。=You simply can't hold your own against "someone stronger" than you.
+不、不對……！=Wrong, wrong...!
+哪裡不對，你全身被機械盔甲覆蓋的模樣，\n就是你自身軟弱的表現吧？=What's wrong. Covering yourself in mechanical armor, that's a sign of your own weakness.
+你這種人，只會利用餌食引誘別人，\n自己好躲在暗中{{A}}地捕食……=People like you can only feed yourself by hiding and devouring others...
+我不會再讓你吞噬人心了，\n也不會再讓你奪走別人的慾望！！=I will not let you devour others' hearts! \nI will not let you take away others' Desires!!
+帥、太帥了……=So damn cool...
+完了……感覺要被WIND迷住了……=Oh no... I think I'm falling in love with Wind...
+強詞奪理……你們這幫小鬼懂什麼！！=You twist my words... What do you kids know!!
+哼！我就讓你們見識一下吞噬者的力量吧！\n就算那個女{{A}}沒派上用場……=Fine! I'll show you the power of the devourer! Even if that female teacher didn't work...
+可是現在的我……有了新的動力源！=Now... I have a new source of power!
+……嗯？電力供給怎麼了？\n搞什麼，發電廠什麼情況！？=...Huh? What happened to the power supply? \nWhat's going on at the Power Plant!?
+喂，{{A}}他已經走了哦。=Yeah, the {{A}} is gone.
+{{A}}的話，\n他早就回到自己的身體裡了哦～！={{A}} has already gone back to his body long ago～!
+啊……！那個沒用的叛徒！！=Argh...! That useless traitor!!
+果然沒有注意到嗎。\n看來收到吾等的預告後，內心相當動搖啊。=Apparently, he was quite upset by our Calling Card, he hadn't noticed.
+……既然你想要吞噬我們的慾望，\n那就不要依賴他人，自己來怎麼樣？=...If you want to devour our Desires, why not try it yourself instead of relying on others?
+我來當你的對手=I'll be your opponent
+哼！算了……這座水壩裡，\n應該還殘留著那個女人的「{{A}}」能量。=Hmph! Forget it... There should still be some leftover "{{A}}" energy from that woman.
+我要使用全部動力……毀了你們！！！=I'll use all my energy... to destroy you all!!!
 
 沒有那回事=That's not the case <size\=1>.</size>
 你別擅自下結論=<size\=29>Don't jump to conclusions</size> <size\=1>.</size>
@@ -1001,6 +1117,17 @@ Rank 17
 看不慣就來啊=<size\=26>Come if you're not used to it</size> <size\=1>.</size>
 之後，\n和{{A}}、武分別了……=After that, I left {{A}} and Take...
 
+Rank 20
+那太好了=That's great
+接下來才是關鍵=<size\=28>The next step is the key</size>
+不會再被關起來了=Won't be locked again
+學到了什麼？=What did you learn?
+一句話總結下=<size\=28>Sum up in one sentence</size>
+也要感謝武啊=Have to thank Take too
+從{{A}}那裡拿到了『稀有的書』……=<size\=28>Got a "rare book" from {{A}}...</size>
+和{{A}}一起，\n盡情地喝著牛奶飲料，聊著天……=Enjoyed drinking milk and chatting with {{A}}...
+
+Hangout
 和{{A}}一起調查了商業大樓。\n花了很多錢……=Investigated a commercial building with {{A}}. Spent a lot of money...
 和{{A}}一起調查了百貨商店…\n挑商品花了眼……=Investigated a department store with {{A}}... Got dizzy choosing products...
 隨時可以來=Come anytime
@@ -1042,6 +1169,13 @@ SMS
 有人搗亂？=Someone causing trouble?
 沒想到你聲望挺高=Didn't know you had a reputation
 不愧是{{A}}=As expected from {{A}}
+擅長=Good at it
+不擅長=Not good at it
+看來你很擅長=I see you're good at it
+陪我去國外旅遊吧=Travel abroad with me
+班主任就是數學{{A}}=My class teacher is a math teacher
+當然可以=Of course
+那可是艱苦修行哦=It will be hard
 
 ----------
 Yumi SL
@@ -1316,6 +1450,8 @@ Hangouts
 你想看哪部電影？=<size\=22>Which movie do you want to see?</size> <size\=1>.</size>
 怎麼突然想看電影了……？=<size\=21>You suddenly want to watch a movie...?</size> <size\=1>.</size>
 和{{A}}去了{{B}}電影院。\n一起看了經典戀愛電影……=<size\=28>Went to the {{B}} Movie Theater with {{A}} and watched a classic romance movie together...</size>
+和{{A}}去了{{B}}電影院。\n一起看了有名的戀愛電影……=<size\=28>Went to the {{B}} Movie Theater with {{A}} and watched a famous romance movie together...</size>
+和{{A}}去了{{B}}電影院。\n一起看了十分小眾的電影……=<size\=28>Went to the {{B}} Movie Theater with {{A}} and watched a very niche movie together...</size>
 就由我來當嚮導吧=I'll be your guide
 你1個人也沒問題……=<size\=30>You'll be fine on your own...</size> <size\=1>.</size>
 和{{A}}一起去了{{B}}。\n帶{{A}}逛了整個校園……=Went to {{B}} with {{A}}. Took {{A}} around the entire campus...
@@ -1477,23 +1613,24 @@ Rank 13
 但是{{A}}的情緒非常低落，\n根本沒有購物的心情……=But {{A}} is feeling very down, I'm not in a shopping mood at all...
 
 Rank 14
-{{A}}的名聲也變差了？=<size\=22>Has {{A}}'s reputation worsened?</size> <size\=1>.</size>
+{{A}}的名聲也變差了？=<size\=23>Has {{A}}'s reputation worsened?</size>
 它來騷擾你了嗎？=Did they harass you?
 {{A}}似乎有點想不開……={{A}} seems to be taking things too hard...
-希望你說給我聽聽=I hope you can tell me <size\=1>.</size>
+希望你說給我聽聽=I hope you can tell me
 找個安靜的地方吧=Let's find a quiet place <size\=1>.</size>
 為了{{A}}能說明具體情況，\n去了附近的家庭餐廳……=For {{A}} to explain in detail, \nwe went to a nearby diner...
-他為什麼要扮演冒牌貨……？=<size\=24>Why is he playing the counterfeit...?</size> <size\=1>.</size>
-初代究竟遭遇了什麼……？=What happened to them...? <size\=1>.</size>
+他為什麼要扮演冒牌貨……？=<size\=26>Why is he playing the counterfeit...?</size>
+初代究竟遭遇了什麼……？=What happened to them...?
 你知道初代的名字嗎？=Do you know his name?
 告訴我他的全名=Tell me his full name
 我去「說服」他=I'll "convince" him
 就是隨便問問=Just asking
 之後就交給我吧=Leave it to me
-我沒有勉強自己=I'm not pushing myself <size\=1>.</size>
+我沒有勉強自己=I'm not pushing myself
 這就是我自己想做的=This is what I want to do <size\=1>.</size>
 因為我愛{{A}}=Because I love {{A}} <size\=1>.</size>
 因為我想讓{{A}}笑=<size\=27>I want to make {{A}} smile</size> <size\=1>.</size>
+我告訴她，我打算和初代{{B}}，\n即{{A}}，單獨聊聊看……=<size\=26>Told her that I planned to have a private chat with {{A}}, the first-generation {{B}}...</size>
 雖然{{A}}恢復了精神，\n但是根本問題沒有解決……=Although {{A}} has regained their spirit, the problem has not been solved...
 就算是為了{{A}}，去{{C}}\n尋找{{B}}吧。=For {{A}}, let's go to {{C}} and find {{B}}.
 
@@ -1510,13 +1647,18 @@ Hangouts
 一起調查了{{A}}的中央大街，\n在折扣店買了些沒用的東西……=<size\=26>Investigated the {{A}} Central Street together and bought some useless things in the Discount Store...</size>
 是{{A}}，所以是澀味=<size\=31>It's {{A}}, so astringency</size> <size\=1>.</size>
 味噌拉麵肯定沒錯=Miso ramen for sure
+一起調查了{{B}}的拉麵店，\n{{A}}很在意身上的味道……=<size\=26>Investigated the {{B}}'s Ramen Restaurant together. {{A}} was very concerned about her smell...</size>
+一起調查了{{A}}的拉麵店，\n擔擔麵湯汁濺到了衣服上……=<size\=26>Investigated the {{A}}'s Ramen Restaurant together. Splashed some soup on my clothes...</size>
 你擅長飛盤嗎？=<size\=31>Are you good at frisbee?</size> <size\=1>.</size>
 爸爸好可憐……=Poor dad...
 來到了台場海濱公園，\n調查了台場的吉祥物……=We came to Odaiba Seaside Park and investigated the local mascot...
 來到了台場海濱公園，\n撞見了接吻的情侶，好尷尬……=We came to Odaiba Seaside Park and bumped into kissing couples, it was embarrassing...
-
 菜單上的都來一份=<size\=31>Order one of everything</size> <size\=1>.</size>
 先選人氣推薦吧=<size\=26>Choose the popular one first</size> <size\=1>.</size>
+這裡的蛋糕好像很有名=<size\=28>The cake seem to be famous</size>
+巧克力噴泉之類的？=Chocolate fountain?
+這實在是……=That's...
+{{A}}真深奧啊={{A}} is so profound
 
 SMS
 我知道的=I know
@@ -1690,6 +1832,7 @@ r:"^去找{{A}}吧……$"="Let's go find {{A}}..."
 ----------
 Riko SL
 ----------
+Rank 0
 道謝？=Thank?
 {{A}}想選什麼？=What does {{A}} want?
 先選肉還是甜點呢……=Meat or dessert first...
@@ -1709,3 +1852,46 @@ Riko SL
 期待看到不同的{{A}}=<size\=26>Hope to see a different {{A}}</size>
 想到和{{A}}一起體驗生活，\n心裡充滿了期待……=<size\=25>Thinking of experiencing life with {{A}}, my heart is filled with anticipation...</size>
 不管所謂的用餐順序，\n一起開心地享用了肉和甜點……=Regardless of the meal order, we happily enjoyed the meat and dessert together...
+
+Rank 2
+吃路邊攤嗎？=Eat at roadside stalls?
+不太體面吧？=Not very decent, right?
+應該會很開心=Should be very happy
+大吃一頓吧！=Let's eat a lot!
+我們一人一半吧=Let's share it in half
+肯定能吃完=You can finish it
+為自己瞎起鬨的行為道了歉，\n然後幫她吃了一半……=<size\=28>I apologized for messing with her then helped her eat half of it...</size>
+找到真正的自己了嗎？=Did you find your real self?
+結果全都是你請客……=It was all your treat...
+看到{{A}}很多可愛的瞬間=<size\=28>Saw many cute {{A}} moments</size>
+是熟人？=An acquaintance?
+在想剛才老闆的話？=<size\=21>Thinking about what they just said?</size>
+肚子吃撐了嗎？=Are you full?
+無論吃喝我都奉陪=I'll accompany you
+和{{A}}看了些土特產，\n一起回到{{B}}後就分別了……=After watching some local specialties with {{A}}, we returned to {{B}}...
+
+Rank 4
+有什麼奇怪的嗎？=<size\=28>Is there anything strange?</size>
+感覺難以置信？=Feeling unbelievable?
+感覺還是不融洽？=Still not getting along?
+還是存在隔閡？=There's still a gap?
+你媽媽呢？=What about your mom?
+你母親的工作也很忙嗎？=<size\=28>Is your mom also busy at work?</size>
+沒有那回事！=That's not the case!
+應該有無條件的愛=<size\=28>There is unconditional love</size>
+讓他認識真正的{{A}}=<size\=26>Let him know the real {{A}}</size>
+{{A}}身邊有我們={{A}} have us
+我覺得不會的=I don't think so
+先找到想做的事吧=<size\=24>Let's find what you want to do first</size>
+無論怎樣我都支持你=<size\=24>I'll support you no matter what</size>
+我當然願意奉陪=Of course I will go
+感覺又能看見{{A}}新的一面=<size\=22>Feel like I can see a new side of {{A}}</size>
+聽{{B}}和{{A}}聊著過去的事情，\n一起走到了車站……=Listened to {{B}} and {{A}} chatting about the past and walked to the station together...
+不算討厭……？=Not quite hate...?
+怎麼突然問這個？=Why are you asking all of a sudden?
+
+SMS
+比如當天發生的事情=Like what happened today
+搞笑的事情之類的=Something funny
+不愧是紀律委員=As expected from a Disciplinary Committee
+有這個必要嗎？=Is this necessary?
