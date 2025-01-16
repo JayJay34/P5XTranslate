@@ -572,7 +572,7 @@ r:"使所有同伴的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身�
 r:"^使<color\=#FFFF00>所有</color>同伴攻擊力提升(\d+\.\d+%)\+每(\d+)攻擊力額外提升(\d+\.\d+%)，持續(\d+)回合。使主目標同伴造成的傷害提升(\d+\.\d+%)\+每(\d+)攻擊力額外提升(\d+\.\d+%)，持續(\d+)回合。$"="Increases <color\=#FFFF00>all</color> allies' ATK by $1 + $3 for every $2 ATK for $4 turns. Increases the main target's DMG Dealt by $5 + $7 for every $6 ATK for $8 turn."
 
 //norn
-r:"使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的護盾，效果持續2回合。護盾受到傷害時，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使傷害來源陷入<link\="s\|105"><u>風襲</u></link>狀態。"=Generate a shield equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to all allies for 2 turns. Allies under the shield have a <color\=#fffc40>$3</color> chance to inflict <link\=s|105><u>Winded</u></link> on enemies who attack them.
+r:"^使<color\=#FFFF00>所有</color>同伴獲得(\d+\.\d+%)攻擊力\+(\d+)的護盾，持續(\d+)回合，護盾受到傷害時有(\d+\.\d+%)基礎機率使傷害來源陷入風襲狀態。$"="Gives <color\=#FFFF00>all</color> allies $1 ATK + $2 as Shield for $3 turns. There is a $4 base chance to inflict Winded to the enemy when the Shield took damage."
 
 防風之壁=Wind Wall
 撐起2回合疾風耐性的防壁。=Adds Wind resistance to one ally for 2 turns.
@@ -854,6 +854,7 @@ r:"^受<color\=#000000>到</color>最終傷害提高$"="<size\=15> </size>F<colo
 r:"^傷<color\=#000000>害</color>降低$"="<size\=17> </size>D<color\=#000000>M</color>G Down"
 r:"^受<color\=#000000>物</color>理傷害提升$"="<size\=25> </size>P<color\=#000000>h</color>ys DMG Taken Up"
 r:"^受<color\=#000000>物</color>理傷害加深$"="<size\=25> </size>P<color\=#000000>h</color>ys DMG Taken Up"
+r:"^受<color\=#000000>火</color>焰傷害提高$"="<size\=22> </size>F<color\=#000000>ir</color>e DMG Taken Up"
 r:"^受<color\=#000000>到</color>火焰傷害提升$"="<size\=22> </size>F<color\=#000000>ir</color>e DMG Taken Up"
 r:"^受<color\=#000000>電</color>擊傷害提高$"="<size\=21> </size>E<color\=#000000>le</color>c DMG Taken Up"
 r:"^受<color\=#000000>到</color>電傷提升$"="<size\=21> </size>E<color\=#000000>le</color>c DMG Taken Up"
@@ -864,6 +865,7 @@ r:"^受<color\=#000000>核</color>熱傷害提高$"="<size\=3> </size>N<color\=#
 r:"^受<color\=#000000>核</color>熱傷害提升$"="<size\=3> </size>N<color\=#000000>uk</color>e DMG Taken Up"
 r:"^受<color\=#000000>到</color>核熱傷害提升$"="<size\=3> </size>N<color\=#000000>uk</color>e DMG Taken Up"
 r:"^受<color\=#000000>詛</color>咒傷害提升$"="<size\=7> </size>C<color\=#000000>ur</color>se DMG Taken Up"
+r:"^弱<color\=#000000>點</color>暴露$"="<size\=11> </size>W<color\=#000000>e</color>akness Exposed"
 
 r:"^瞄<color\=#000000>準</color>$"="Ai<color\=#000000>m</color>"
 r:"^諸<color\=#000000>神</color>黃昏$"="<size\=22> </size>R<color\=#000000>a</color>gnarok"
@@ -909,14 +911,23 @@ r:"^受弱點傷害提升(\d+%)$"="Increase Weakness DMG by $1"
 受物理傷害提升=Increase Physical DMG Taken
 受射擊傷害提高=Increase Gun DMG Taken
 受火焰傷害提升=Increase Fire DMG Taken
+受火焰傷害提高=Increase Fire DMG Taken
+受冰凍傷害提升=Increase Ice DMG Taken
 受冰凍傷害提高=Increase Ice DMG Taken
 受電擊傷害提升=Increase Elec DMG Taken
+受電擊傷害提高=Increase Elec DMG Taken
+受疾風傷害提升=Increase Wind DMG Taken
 受疾風傷害提高=Increase Wind DMG Taken
 受到念動傷害提升=Increase Psy DMG Taken
+受到念動傷害提高=Increase Psy DMG Taken
 受到核熱傷害提升=Increase Nuke DMG Taken
+受到核熱傷害提高=Increase Nuke DMG Taken
 受到祝福傷害提升=Increase Bless DMG Taken
+受到祝福傷害提高=Increase Bless DMG Taken
 受到詛咒傷害提升=Increase Curse DMG Taken
+受到詛咒傷害提高=Increase Curse DMG Taken
 受詛咒傷害提升=Increase Curse DMG Taken
+受詛咒傷害提高=Increase Curse DMG Taken
 r:"^耐性穿透提升(\d+%)$"="Increase Effect RES Ignore by $1"
 
 瞄準=Aim
@@ -928,7 +939,9 @@ r:"^耐性穿透提升(\d+%)$"="Increase Effect RES Ignore by $1"
 瑪哈拉庫卡Ⅲ=Auto-Maraku III
 瑪哈拉庫卡Ⅱ=Auto-Maraku II
 瑪哈拉庫卡Ⅰ=Auto-Maraku I
+生命回復=Regenerate
 
+免疫傷害=Damage Immunity
 免疫即死=<size\=28>Instant Death Immunity</size>
 免疫精神異常=<size\=23>Mental Ailment Immunity</size>
 免疫倒地=Down Immunity
@@ -951,6 +964,7 @@ r:"^攻擊力提升(\d+%)\+(\d+)$"="Increase ATK by $1 + $2"
 r:"^每層提升(\d+(.\d+)?(%)?)的攻擊力$"="Increase ATK by $1 per stack"
 r:"^攻擊力提升(\d+%)、防禦力提升(\d+%)$"="Increase ATK by $1 and DEF by $2"
 r:"^攻擊力、防禦力提高$"="Increase ATK and DEF"
+r:"^攻擊力、防禦力提高(\d+(.\d+)?(%)?)$"="Increase ATK and DEF by $1"
 r:"^防禦提升(\d+(.\d+)?(%)?)$"="Increase DEF by $1"
 r:"^防禦力提升(\d+(.\d+)?(%)?)$"="Increase DEF by $1"
 r:"^精力值消耗降低(\d+(.\d+)?(%)?)$"="Decrease SP cost by $1"
@@ -969,6 +983,7 @@ r:"^效果抵抗提升(\d+(.\d+)?(%)?)$"="Increase Effect RES by $1"
 r:"^最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1"
 r:"^最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1"
 r:"^最終傷害提升(\d+%)，可疊加(\d+)層$"="Increase Final DMG by $1, up to $2 stacks"
+r:"^每層提供(\d+%)的最終傷害加成，最多可疊加(\d+)層$"="Increase Final DMG by $1, up to $2 stacks"
 r:"^傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Bonus by $1"
 r:"^造成傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Dealt by $1"
 r:"^造成傷害提高(\d+(.\d+)?(%)?)$"="Increase DMG Dealt by $1"
@@ -1029,8 +1044,10 @@ r:"^萬能傷害提高(\d+(.\d+)?(%)?)$"="Increase Almighty DMG by $1"
 r:"^治療效果提升(\d+(.\d+)?(%)?)$"="Increase Healing Effect by $1"
 r:"^護盾效果提升(\d+(.\d+)?(%)?)$"="Increase Shield Effect by $1"
 r:"^剩餘護盾值：(\d+)$"="Shield: $1"
+回合結束後回復一定生命值。=Restore HP at the end of each turn
 
-免疫下次受到的傷害=Immunity to next damage received
+免疫一切傷害=Immunity to all damage
+免疫下次受到的傷害=Immunity to next damage
 受到的傷害將由所有擁有生命連結的單位共同分攤=<size\=26>Damage will be shared by all units with Lifelink</size>
 免疫即死效果=Immunity to Instant Death effects
 免疫精神異常效果=Immunity to Mental Ailment effects
@@ -1041,6 +1058,7 @@ r:"^剩餘護盾值：(\d+)$"="Shield: $1"
 ----------
 Inspect Details - DEBUFF
 ----------
+r:"^最大生命值降低(\d+(.\d+)?(%)?)$"="Decrease Max HP by $1"
 r:"^攻擊力降低(\d+(.\d+)?(%)?)$"="Decrease ATK by $1"
 r:"^防禦降低(\d+(.\d+)?(%)?)$"="Decrease DEF by $1"
 r:"^防禦力降低(\d+(.\d+)?(%)?)$"="Decrease DEF by $1"
@@ -1069,6 +1087,7 @@ r:"^受射擊傷害提高(\d+(.\d+)?(%)?)$"="Increase Gun DMG Taken by $1"
 r:"^受到射擊傷害提升(\d+(.\d+)?(%)?)$"="Increase Gun DMG Taken by $1"
 r:"^受到射擊傷害提高(\d+(.\d+)?(%)?)$"="Increase Gun DMG Taken by $1"
 r:"^受火焰傷害提升(\d+(.\d+)?(%)?)$"="Increase Fire DMG Taken by $1"
+r:"^受火焰傷害提高(\d+(.\d+)?(%)?)$"="Increase Fire DMG Taken by $1"
 r:"^受到火屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase Fire DMG Taken by $1"
 r:"^受到火焰傷害提升(\d+(.\d+)?(%)?)$"="Increase Fire DMG Taken by $1"
 r:"^受到火焰傷害提高(\d+(.\d+)?(%)?)$"="Increase Fire DMG Taken by $1"
