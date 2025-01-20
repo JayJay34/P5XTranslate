@@ -28,11 +28,16 @@ r:"^觀察模式冷卻中，(\d+)秒後可用！$"="Third Eye in cooldown"
 狂<color\=#ff0000ff>化</color>惡黨=Ber<color\=#ff0000ff>se</color>rk Shadow
 詭<color\=#ff0000ff>譎</color>之徒=En<color\=#ff0000ff>ig</color>ma Shadow
 墮<color\=#ff0000ff>落</color>的狂徒=F<color\=#ff0000ff>al</color>len Shadow
+是否要降低難度進行挑戰(再次挑戰生效)=Do you want to lower the difficulty? \n(Take effect on next challenge)
+本次戰鬥無法進行養成與更換面具。=Cannot upgrade characters and change Personas.
+當前沒有可以調整的技能=Cannot change skill
 
 嗯？要從{{A}}撤退，返回都市嗎？=Hm? Want to retreat from the {{A}} \nand head back to the city?
 這個寶箱很稀有！\n吾等需要準備<color\=#ff0000>開鎖工具</color>才行。=This treasure chest is very rare!\nWe need a <color\=#ff0000>Lockpick</color> to open.
 似乎沒有搜尋到新的財寶……=It seems like no new treasure has been found...
 冷卻期間無法使用。=Cannot be used during cooldown.
+無法在當前場景使用。=Cannot be used here.
+好像沒法從這側打開門，\n先去探索其他地方吧。=The door does not open from this side,\nlet's explore other places first.
 
 異聞印記=Anecdote Mark
 異聞=Anecdote
@@ -99,6 +104,7 @@ PALACE 3
 前方已超過該機器人的工作範圍=Robot cannot go here
 前方已超過該機器人的工作範圍，即將重置位置=Robot cannot go here, reset its location
 需要攜帶機器人靠近=Need to bring a robot closer
+距離機器人太近，無法停止跟隨=Robot is too close, cannot stop following
 能量不符合要求，無法交互。=Energy does not match, cannot interact.
 該機器人攜帶能量無法靠近=Robot with Energy cannot pass
 能量獲取=Gain Energy
@@ -557,6 +563,10 @@ r:"^眩<color\=#000000>暈</color>$"="<size\=16> </size>D<color\=#000000>iz</col
 ----------
 PALACE 2 ELITES
 ----------
+r:"^1、{{A}}初始對所有屬性的適應性為“普”。\n2、每受到一種屬性的傷害，<color\=#ff3b37>{{A}}對該屬性的適應性會永久變為“無”</color>，同時{{A}}會受到改變適應性的<color\=#ff3b37>「副作用」</color>，使自身受到傷害永久提升(\d+%)。\n3、{{B}}被擊敗時，會將{{A}}對所有屬性的適應性恢復為初始狀態，並清除{{A}}身上的「副作用」。$"="1. {{A}} start will all [Neutral] resistance.\n2. When taking Elemental damage, <color\=#ff3b37>{{A}} will permanently [Null] that element</color>, and {{A}} will gain <color\=#ff3b37>[Side Effect]</color>, permanently increase own DMG Taken by $1.\n3. When you defeat {{B}}, turn all of {{A}}'s resistance to [Neutral] and dispel all [Side Effect]."
+r:"^1、{{A}}初始對所有屬性的適應性為「普」。\n2、每受到一種屬性的傷害，<color\=#ff3b37>{{A}}對該屬性的適應性會永久變為「無」</color>，同時{{A}}會受到改變適應性的<color\=#ff3b37>「副作用」</color>，使自身受到傷害永久提升(\d+%)。\n3、{{B}}被擊敗時，會將{{A}}對所有屬性的適應性恢復為初始狀態，並清除{{A}}身上的「副作用」。$"="1. {{A}} start will all [Neutral] resistance.\n2. When taking Elemental damage, <color\=#ff3b37>{{A}} will permanently [Null] that element</color>, and {{A}} will gain <color\=#ff3b37>[Side Effect]</color>, permanently increase own DMG Taken by $1.\n3. When you defeat {{B}}, turn all of {{A}}'s resistance to [Neutral] and dispel all [Side Effect]."
+副作用=Side Effect
+
 {{A}}本身不會主動攻擊，需要怪盜們在三回合內完成一支<color\=#ff3b37>「神樂之舞」</color>，方可勝利。具體包括如下舞步：\n「癒舞」：使用一次治療技能\n「矛舞」：使用一次攻擊技能\n「劍舞」：使用一次普通攻擊\n「弓舞」：使用一次槍械攻擊\n「物舞」：使用一次道具=<size\=26>{{A}} won't attack, victory when Thieves completed <color\=#ff3b37>[Kagura Dance]</color> within three rounds. The steps include: \n[Healing Dance]: Use 1 Healing Skill\n[Spear Dance]: Use 1 Attack Skill\n[Sword Dance]: Use 1 Melee Attack\n[Bow Dance]: Use 1 Gun Attack\n[Item Dance]: Use 1 Item</size>
 癒舞=Healing Dance
 矛舞=Spear Dance
@@ -824,7 +834,6 @@ r:"^傷害減免(\d+%)；buff結束時，變成{{A}}$"="Increase DMG RES by $1; 
 PALACE 4 BOSS
 ----------
 被鎖定的怪盜及時採取應對措施=Locked on Thief take countermeasures
-盡快擊破能量罐=Break the Energy Tank as soon as possible
 儘快擊破能量罐=Break the Energy Tank as soon as possible
 尋找破敵的方法=Find ways to defeat the enemy
 
@@ -873,6 +882,8 @@ r:"^<color\=#FF0000>(.*)</color>被{{A}}鎖定了$"="<size\=24><color\=#FF0000>$
 r:"^<color\=#FF0000>{{A}}</color>陷入了{{B}}的陷阱……$"="<size\=24><color\=#FF0000>{{A}}</color> fallen into {{B}}'s trap!</size>"
 r:"^<color\=#FF0000>{{B}}</color>陷入了{{A}}的陷阱……$"="<size\=24><color\=#FF0000>{{B}}</color> fallen into {{A}}'s trap!</size>"
 r:"^<color\=#FF0000>(.*)</color>陷入了{{A}}的陷阱……$"="<size\=24><color\=#FF0000>$1</color> fallen into {{A}}'s trap!</size>"
+
+r:"^捕<color\=#000000>獵</color>陷阱$"="<size\=19> </size>H<color\=#000000>u</color>nting Trap"
 
 ----------
 PALACE 4 ELITES
@@ -924,11 +935,14 @@ r:"^1、{{A}}使用技能後給予雷神之錘(\d+%)充能。\n2、{{A}}死亡�
 r:"^雷神之錘已充能(\d+(.\d+)?(%)?)$"="Mjolnir is at $1"
 
 r:"^1、{{A}}在戰鬥中會給自身的雷神之錘充能。當充能滿(\d+%)，{{A}}會消耗(\d+%)充能，對我方單體角色釋放『真理之雷』，造成單體超高傷害。充能滿(\d+)次之後，會對我方角色使用『崇高聖戰』。\n2、友方怪物使用技能後，雷神之錘獲得(\d+%)充能。\n3、友方受到精神異常效果後，雷神之錘減少(\d+%)充能。$"="1. {{A}} can charge Mjolnir in battle. When reaching $1, {{A}} will consume $2 Energy and use [Thunder Reign] on 1 enemy, dealing colossal elec damage. After fully charged $3 times, {{A}} will use [Wild Thunder].\n2. Gain $4 Energy when {{A}} uses skills.\n3. Decrease Mjolnir's Energy by $5 after enemies are inflicted with Mental Ailments."
+r:"^1、{{B}}在戰鬥中會給自身的雷神之錘充能。當充能滿(\d+%)，{{B}}會消耗(\d+%)充能，對我方單體角色釋放『真理之雷』，造成單體超高傷害。充能滿(\d+)次之後，會對我方角色使用『崇高聖戰』。\n2、友方怪物使用技能後，雷神之錘獲得(\d+%)充能。\n3、友方受到精神異常效果後，雷神之錘減少(\d+%)充能。\n4、{{A}}每隔一回合，給予{{B}}護盾效果。\n5、{{C}}每隔一回合，給予{{B}}1次額外回合。$"="1. {{B}} can charge Mjolnir in battle. When reaching $1, {{B}} will consume $2 Energy and use [Thunder Reign] on 1 enemy, dealing colossal elec damage. After fully charged $3 times, {{B}} will use [Wild Thunder].\n2. Gain $4 Energy when {{B}} uses skills.\n3. Decrease Mjolnir's Energy by $5 after enemies are inflicted with Mental Ailments.\n4. {{A}} will give {{B}} Shield every other turn.\n5. {{C}} will give {{A}} 1 Extra Turn every other turn."
+
 每隔一回合，給予{{A}}護盾效果。=Give {{A}} Shield every other turn.
 每隔一回合，給予{{A}}1次額外回合。=Give {{A}} 1 Extra Turn every other turn.
 
 r:"^1、本場戰鬥中{{B}}無法選中。{{B}}回合開始時，會交替給予我方攻擊力最高的兩名角色『雷神的祝福』：提升(\d+%)最終傷害，造成傷害後給予雷神之錘(\d+%)充能。\n2、雷神之錘達到(\d+%)充能後，會消耗(\d+%)充能，給予{{A}}受到最終傷害提高(\d+%)效果，上限(\d+)層。$"="1. {{B}} is untargetable. At the start of {{B}}'s turn, give the 2 highest ATK Thief [{{B}}'s Blessing]: Increase Final DMG by $1, charge Mjolnir by $2 after dealing damage.\n2. When Mjolnir reaches $3 change, consume $4 Energy to increase {{A}}'s Final DMG Taken by $5, up to $6 stacks."
 r:"^擁有極高的血量，(\d+)回合後會釋放『諸神黃昏』，並使自身造成的最終傷害提高(\d+%)。$"="Have extreme HP, will use [Ragnarok] after $1 turns, then increase own Final DMG Dealt by $2."
+r:"^1、本場戰鬥中{{B}}無法選中。{{B}}回合開始時，會交替給予我方攻擊力最高的兩名角色『雷神的祝福』：提升(\d+%)最終傷害，造成傷害後給予雷神之錘(\d+%)充能。\n2、雷神之錘達到(\d+%)充能後，會消耗(\d+%)充能，給予{{A}}受到最終傷害提高(\d+%)效果，上限(\d+)層。\n3、{{A}}擁有極高的血量，(\d+)回合後會釋放『諸神黃昏』，並使自身造成的最終傷害提高(\d+%)。$"="1. {{B}} is untargetable. At the start of {{B}}'s turn, give the 2 highest ATK Thief [{{B}}'s Blessing]: Increase Final DMG by $1, charge Mjolnir by $2 after dealing damage.\n2. When Mjolnir reaches $3 change, consume $4 Energy to increase {{A}}'s Final DMG Taken by $5, up to $6 stacks.\n3. {{A}} have extreme HP, will use [Ragnarok] after $7 turns, then increase own Final DMG Dealt by $8."
 {{A}}的祝福={{A}}'s Blessing
 雷神的祝福=Thunder God's Blessing
 
