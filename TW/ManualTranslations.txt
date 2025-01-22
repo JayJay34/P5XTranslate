@@ -69,6 +69,8 @@ r:"^(.*)版本$"="Version $1"
 手把縮放靈敏度=Controller Zoom Sensitivity
 經典模式視角靈敏度=Classic Mode View Sensitivity
 經典模式縮放靈敏度=Classic Mode Zoom Sensitivity
+RPG模式視角靈敏度=RPG Mode View Sensitivity
+RPG模式縮放靈敏度=RPG Mode Zoom Sensitivity
 滑鼠視角靈敏=<size\=30>Mouse \nView Sensitivity</size>
 滑鼠縮放靈敏=<size\=30>Mouse \nZoom Sensitivity</size>
 鏡頭操作模式=Camera Control
@@ -93,7 +95,7 @@ Onemore自動選擇目標=<size\=27>Automatically select \nONE MORE target</size
 自動戰鬥釋放「HIGHLIGHT」=Enable HIGHLIGHT in Auto mode
 自動戰鬥釋放「解明怪盜」技能=Enable Navigator skills in Auto mode
 「ONE MORE」自動選擇目標=Automatically select ONE MORE target
-簡化戰鬥結算=Simplify Combat Calulation
+簡化戰鬥結算=Simplify Victory Screen
 簡化戰鬥表現=Simplify Combat Animation
 簡化「解明怪盜」表現=Simplify Navigator Animation
 簡化「HIGHLIGHT」表現=Simplify HIGHLIGHT Animation
@@ -918,9 +920,9 @@ r:"^提升(\d+%)護盾效果。$"="<size\=26>Increase Shield Effect by $1</size>
 r:"^提升(\d+\.\d%)護盾效果。$"="<size\=26>Increase Shield Effect by $1</size>"
 r:"^提升(\d+%)效果抵抗。$"="Increase Effect RES by $1"
 
-r:"^ONEMORE、HIGHLIGHT、近戰攻擊、槍械效果提升。$"="<size\=26>Increase One More, HIGHLIGHT, Melee and Gun DMG</size>"
-r:"{{A}}所有習得主動技能等級額外提升(\d+)級。"=All acquired Persona skills\nIncrease by $1 levels
-r:"{{A}}特色主動技能等級額外提升(\d+)級。"=All innate Persona skills\nIncrease by $1 levels
+r:"^ONEMORE、HIGHLIGHT、近戰攻擊、槍械效果提升。$"="<size\=26>Increase ONE MORE, HIGHLIGHT, Melee and Gun DMG</size>"
+r:"{{A}}所有習得主動技能等級額外提升(\d+)級。"=<size\=26>All learned active Persona skills\nIncrease by $1 levels</size>
+r:"{{A}}特色主動技能等級額外提升(\d+)級。"=<size\=26>All innate signature Persona skills\nIncrease by $1 levels</size>
 需要主角超我等級達到1級。=Unlocks when Wonder \nreaches Superego level 1.
 
 前置技能尚未解鎖。=Unlock the preceding skill first.
@@ -1442,6 +1444,12 @@ r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n{{B}}地區�
 r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n{{A}}地區，大部分街頭店鋪商品有小幅降價。$"="<size\=24>Most shop in {{A}} have a small discount after after reaching <color\=#FFC000>rank $1</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n{{A}}和{{B}}地區，大部分街頭店鋪商品有小幅降價。$"="<size\=24>Most shop in {{A}} and {{B}} have a small discount after after reaching <color\=#FFC000>rank $1</color>.</size>"
 
+r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n解鎖約會地點「{{B}}·自助餐廳」。$"="<size\=24>Unlock the Hangout Spot [{{B}} Buffet] after being confidants with [<color\=#FFC000>{{A}}</color>]</size>"
+r:"^好感度提升至<color\=#FFC000>rank3</color>後，\n解鎖約會地點「元町·中華街」。$"="<size\=24>Unlock the Hangout Spot [Motomachi Chinatown] after reaching <color\=#FFC000>rank 3</color>.</size>"
+r:"^好感度提升至<color\=#FFC000>rank7</color>後，\n解鎖約會地點「品川·水族館」，並且在協同者邀約中可以獲得額外好感度。$"="<size\=24>Unlock the Hangout Spot [Shinagawa Aquarium] and gain more Confidant Points from Invitations after reaching <color\=#FFC000>rank 7</color>.</size>"
+r:"^好感度提升至<color\=#FFC000>rank13</color>後，\n解鎖約會地點「銀座·壽司店」。$"="<size\=24>Unlock the Hangout Spot [Ginza Sushi Restaurant] after reaching <color\=#FFC000>rank 13</color>.</size>"
+r:"^好感度提升至<color\=#FFC000>rank17</color>後，\n解鎖約會地點「{{A}}·家電量販店」，並且在協同者邀約中可以獲得更多額外好感度。$"="<size\=24>Unlock the Hangout Spot [{{A}} Electronics Store] and gain even more Confidant Points from Invitations after reaching <color\=#FFC000>rank 7</color>.</size>"
+
 解鎖新能力=Unlock Skill
 人格指數=Social Stats
 都市五維=Social Stats
@@ -1590,6 +1598,7 @@ r:"^要在這裡度過時間嗎\(<color\=#ff0000>每次(\d+)現金</color>\)？$
 {{A}}的花店似乎需要人去幫忙……=<size\=26>Looks like the Flower Shop needs help...</size>
 {{A}}的花店今天應該需要人手吧……=The Shibuya Flower Shop should needs help today right...
 今天{{A}}花店的客流量似乎很大，有時間去幫忙看看吧……=The Flower Shop is busy today, let's go help if you are free...
+今天{{A}}花店的客流量好像很大，非常需要人去幫忙。=The Flower Shop is busy today and needs help.
 要在這家花店打工嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to work part-time \nat this Flower Shop?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
 要在這家花店打工嗎？=Do you want to work part-time \nat this Flower Shop?
 
@@ -1730,6 +1739,10 @@ r:"^{{A}}似乎有話要說，要陪她嗎？$"="{{A}} seems to have something t
 {{A}}想看看你生活的地方……={{A}} wants to see \nwhere you live...
 今天要帶{{A}}回家玩嗎？=Want to bring {{A}} \nhome today?
 
+愛的調味料=<size\=24>Seasoning of Love</size>
+{{A}}想學習做飯……={{A}} wants to learn to cook...
+帶{{A}}去哪裡呢？=Where to take {{A}}?
+
 你今天要陪{{A}}度過嗎？=<size\=28>Do you want to spend time with {{A}} today?</size> 
 今天要和{{A}}一起度過嗎……=<size\=30>Want to spend time with {{A}} today...</size> 
 要和{{A}}一起度過嗎？=<size\=30>Want to spend time with {{A}}?</size> 
@@ -1746,15 +1759,17 @@ r:"^帶{{A}}回家吧……$"="Let's bring {{A}} home..."
 r:"^決定帶{{A}}回家了……$"="Decided to bring {{A}} home..."
 r:"^那就帶{{A}}回家吧……$"="Then let's bring {{A}} home..."
 r:"^決定帶{{A}}回自己家……$"="Decided to bring {{A}} home..."
+r:"^決定帶{{A}}去自己家了……$"="Decided to bring {{A}} home..."
 
 r:"^似乎是和{{A}}<color\=#FFC000>第一次</color>去這個地方，應該更能增進感情。$"="<size\=25>This is the <color\=#FFC000>first time</color> I have gone to that place with {{A}}.\nWe should be able to grow closer.</size>"
 
-{{A}}有著非常熱鬧的<color\=#ff0000>商業街</color>和<color\=#ff0000>電影院</color>啊，\n要前往那裡去看看嗎？=<size\=30>There are crowded <color\=#ff0000>Central Street</color> and \n<color\=#ff0000>Movie Theater</color> in Shibuya. Want to go there?</size>
+{{A}}有著非常熱鬧的<color\=#ff0000>商業街</color>和<color\=#ff0000>電影院</color>啊，\n要前往那裡去看看嗎？=<size\=30>There are crowded <color\=#ff0000>Central Street</color> and \n<color\=#ff0000>Movie Theater</color> in {{A}}. Want to go there?</size>
 r:"^要<color\=#ff0000>回家</color>嗎？\n還是說去附近的<color\=#ff0000>餐廳</color>……$"="Are we going <color\=#ff0000>Home</color>? \nOr going to nearby <color\=#ff0000>Restaurants</color>..."
 下北澤啊……那是在<color\=#ff0000>學校</color>附近吧，要去嗎？=<size\=30>Shimokitazawa... that's near the <color\=#ff0000>School</color>. \nWant to go there?</size>
-{{A}}似乎有個<color\=#ff0000>擊球場</color>，要去那裡看看嗎？=There is a <color\=#ff0000>batting cage</color> in Yongen-Jaya. Want to go there?
-{{A}}那裡似乎有條充滿慾望的<color\=#ff0000>娛樂街</color>啊，\n確定要前去那裡嗎？=<size\=30>There seems to be an <color\=#ff0000>Entertainment Street</color> full of desires in Shinjuku. Want to go there?</size>
-{{A}}好像有非常著名的<color\=#ff0000>步行街</color>，\n要去隨便逛逛嗎？=<size\=29>There is a famous <color\=#ff0000>Pedestrian Street</color> in Kichijoji. Want to go for a walk?</size>
+{{A}}似乎有個<color\=#ff0000>擊球場</color>，要去那裡看看嗎？=There is a <color\=#ff0000>batting cage</color> in {{A}}. Want to go there?
+{{A}}那裡似乎有條充滿慾望的<color\=#ff0000>娛樂街</color>啊，\n確定要前去那裡嗎？=<size\=30>There seems to be an <color\=#ff0000>Entertainment Street</color> full of desires in {{A}}. Want to go there?</size>
+{{A}}好像有非常著名的<color\=#ff0000>步行街</color>，\n要去隨便逛逛嗎？=<size\=29>There is a famous <color\=#ff0000>Pedestrian Street</color> in {{A}}. Want to go for a walk?</size>
+{{A}}嗎……坐落著不少名叫<color\=#ff0000>遊戲廳</color>的場所，\n要去那裡體驗一下嗎？=<size\=29>There are many famous <color\=#ff0000>Arcades</color> in {{A}}. Want to go there?</size>
 
 充滿自然氣息的<color\=#ff0000>公園</color>，\n是散步聊天的好地方啊，要去看看嗎？=This is a <color\=#ff0000>Park</color> full of nature, it's a great place to walk and chat. Want to go there?
 著名的時尚街道<color\=#ff0000>竹之子小路</color>就在原宿，\n要去看看最新的潮流風向嗎？=<size\=29>The famous fashionable <color\=#ff0000>Takenoko Street</color> is in Harajuku. Want to check out the latest trends?</size>
@@ -1771,6 +1786,7 @@ r:"^要<color\=#ff0000>回家</color>嗎？\n還是說去附近的<color\=#ff000
 台場有座可以乘坐<color\=#ff0000>摩天輪</color>的<color\=#ff0000>遊樂園</color>，\n天空……算是罕見體驗吧，怎麼樣，要去嗎？=<size\=27>There is an <color\=#ff0000>Amusement Park</color> with a <color\=#ff0000>Ferris wheel</color> in Odaiba. It's a rare experience, want to go there?</size>
 
 元町中華街是品嘗<color\=#ff0000>中華料理</color>的好地方啊，\n舉世聞名的料理，想去品嘗一下嗎？=<size\=30>Motomachi Chinatown is a great place to enjoy <color\=#ff0000>Chinese Cuisine</color>. Want to try this world-famous cuisine?</size>
+品川好像有非常著名的<color\=#ff0000>水族館</color>，\n要去看看嗎？=There is a famous <color\=#ff0000>Aquarium</color> in Shinagawa. Want to go there?
 
 讀書進度=<size\=24> Reading\n Progress</size> 
 閱讀消耗：= 
@@ -1898,7 +1914,7 @@ r:"^在下次透過都市日程, 幫助其他角色時，額外獲得獎勵。<c
 
 隱者=Hermit
 在接下來3次透過都市日程在『家裡』學習、打遊戲、打掃衛生時，額外獲得更多『人格指數』。=The next 3 times you study, game or clean at home, gain more Social Stats.
-r:"^在接下來3次透過都市日程在『家裡』學習、打遊戲、打掃衛生時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 3 times you study, game or clean at home, gain more Social Stats.\n<color\=#FFC000>（$1 time(s) left）</color>"
+r:"^在接下來(\d+)次透過都市日程在『家裡』學習、打遊戲、打掃環境時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次\）</color>$"="The next $1 times you study, game or clean at home, gain more Social Stats.\n<color\=#FFC000>($2 time(s) left)</color>"
 
 命運之輪=Fortune
 在下次透過都市日程獲得『任意人格指數』時，額外獲得更多『人格指數』。=The next time you gain Social Stats from city activities, gain more Social Stats.

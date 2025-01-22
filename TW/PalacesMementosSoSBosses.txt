@@ -1167,6 +1167,13 @@ r:"^<color\=#ff0000>打破那個護盾</color>應該就能弱化他。$"="<color
 r:"^{{A}}進入<color\=#FF0000>狂暴</color>狀態，請小心應對$"="{{A}} enters <color\=#FF0000>Frenzy</color>!"
 
 ----------
+EVENTS
+----------
+r:"^1、{{C}}在戰鬥一階段中會交替召喚{{A}}或{{B}}，隨從死亡(\d+)回合後會被重新召喚出來。\n2、{{C}}在戰鬥二階段中會同時召喚{{A}}或{{B}}兩個隨從，兩個隨從同時在場時{{C}}獲得(\d+%)的最終傷害減免，每個隨從死亡(\d+)回合後都會被重新召喚出來。\n3、當場上有隨從時，{{C}}會對1名隨從釋放「夢幻食糧」：(\d+)個回合後獻祭該隨從，恢復自身一定百分比的生命值。\n4、{{A}}擁有技能「頭腦震撼」：對血量最低的1名敵人造成物理屬性傷害，有一定基礎機率使敵人陷入<color\=#FFFC40>洗腦</color>狀態，效果持續(\d+)回合。\n5、{{B}}擁有技能「逃避慾的誘惑」：使所有怪盜獲取HIGHLIGHT能量的速度降低(\d+%)，持續(\d+)回合。但是在{{B}}被擊殺後，我方可立即獲得(\d+%)的HIGHLIGHT能量。$"="<size\=24>1. Dancer of Death will alternate between summoning {{A}} and {{B}}, resummon them $1 rounds after their defeat.\n2. Dancer of Death will summon {{A}} or {{B}} at once in phase 2 and increase own Final DMG RES by $2 when both are present, resummon them $3 rounds after their defeat.\n3. When there is a minion, {{C}} will use [Dream Food] on them: Sacrifice them after $4 turns to restore own HP. \n4. {{A}} can use [Brain Shake]: Deals Phys damage to the lowest HP enemy with a base chance to inflict <color\=#FFFC40>Brainwash</color> for $5 turns. \n5. {{B}} can use [Escape Temptation]: Decrease HIGHLIGHT Energy recovery rate by $6 for $7 turns. Restore $8 HIGHLIGHT Energy on defeat.</size>"
+夢幻食糧=Dream Food
+逃避慾的誘惑=Escape Temptation
+
+----------
 Sea of Souls Trials (SoS)
 ----------
 心之海試煉=SoS Trials
@@ -1285,9 +1292,5 @@ r:"^每層提供(\d+%)的最終傷害加成，持續(\d+)回合，最多可疊�
 蓄力伏擊=Charged Ambush
 sr:"^所有怪盜每累積消耗(\d+)點精力值或造成弱點傷害時,使全體怪盜獲得一層『(.*)』。『(.*)』：每層提供(\d+%)的最終傷害加成，持續(\d+)回合，最多可疊加(\d+)層。$"="<size\=24>When all Thieves consumed $1 SP or dealt weakness damage, gain $2 stack of [$3]. [$4]: Each stack increase Final DMG Bonus by $5 for $6 turns, up to $7 stacks.</size>"
 
-----------
-EVENTS
-----------
-r:"^1、{{C}}在戰鬥一階段中會交替召喚{{A}}或{{B}}，隨從死亡(\d+)回合後會被重新召喚出來。\n2、{{C}}在戰鬥二階段中會同時召喚{{A}}或{{B}}兩個隨從，兩個隨從同時在場時{{C}}獲得(\d+%)的最終傷害減免，每個隨從死亡(\d+)回合後都會被重新召喚出來。\n3、當場上有隨從時，{{C}}會對1名隨從釋放「夢幻食糧」：(\d+)個回合後獻祭該隨從，恢復自身一定百分比的生命值。\n4、{{A}}擁有技能「頭腦震撼」：對血量最低的1名敵人造成物理屬性傷害，有一定基礎機率使敵人陷入<color\=#FFFC40>洗腦</color>狀態，效果持續(\d+)回合。\n5、{{B}}擁有技能「逃避慾的誘惑」：使所有怪盜獲取HIGHLIGHT能量的速度降低(\d+%)，持續(\d+)回合。但是在{{B}}被擊殺後，我方可立即獲得(\d+%)的HIGHLIGHT能量。$"="<size\=24>1. Dancer of Death will alternate between summoning {{A}} and {{B}}, resummon them $1 rounds after their defeat.\n2. Dancer of Death will summon {{A}} or {{B}} at once in phase 2 and increase own Final DMG RES by $2 when both are present, resummon them $3 rounds after their defeat.\n3. When there is a minion, {{C}} will use [Dream Food] on them: Sacrifice them after $4 turns to restore own HP. \n4. {{A}} can use [Brain Shake]: Deals Phys damage to the lowest HP enemy with a base chance to inflict <color\=#FFFC40>Brainwash</color> for $5 turns. \n5. {{B}} can use [Escape Temptation]: Decrease HIGHLIGHT Energy recovery rate by $6 for $7 turns. Restore $8 HIGHLIGHT Energy on defeat.</size>"
-夢幻食糧=Dream Food
-逃避慾的誘惑=Escape Temptation
+奇異光線=Strange Ray
+心率超載=Heart Rate Overload
