@@ -660,12 +660,10 @@ Afterlife Judgement
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，釋放技能時，每層自己身上的祝福效果或目標身上的詛咒效果都會使該技能造成的傷害提升(\d+%)，上限4層。$"="Deals <color\=#fffc40>$1</color> ATK Curse damage to 1 enemy. When using this skill, each stack of Blessed on you or each stack of Cursed on the target increases DMG Dealt by $2, up to 4 stacks."
 
 // Maeiga because it's worded very slightly differently for some reason???
-r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，有機率為敵方附加(\d+)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and inflicts $2 stack(s) of <link\=s|112><u>Cursed</u></link>.
-
-r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，有機率使敵人獲得(\d+)個<link\="s\|112"><u>詛咒</u></link>效果。"=
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，有機率使敵人獲得(\d+)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to all enemies and inflicts $2 stack of <link\=s|112><u>Cursed</u></link>.
 
 Fortune Devourer
-r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，並使所有敵人防禦力降低<color\=#fffc40>(\d+%)</color>、受到的持續傷害提升<color\=#fffc40>(\d+%)</color>，持續(\d+)回合。$"="Deals <color\=#fffc40>$1</color> ATK Curse damage to all enemies, decreases all enemies' DEF by <color\=#fffc40>$2</color> and increases all enemies Damage Over Time Taken by <color\=#fffc40>$3</color> for $4 turns."
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，並使所有敵人防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>、受到的持續傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Deals <color\=#fffc40>$1</color> ATK Curse damage to all enemies, decreases all enemies' DEF by <color\=#fffc40>$2</color> and increases all enemies Damage Over Time Taken by <color\=#fffc40>$3</color> for $4 turns."
 
 // Single Target Basic Insta-kills
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，對50%生命值以下的敵人附加低機率詛咒屬性即死效果，生命值越低機率越高。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>1</color> enemy with a chance of Instant Death to enemies under 50% HP. The lower the HP, the higher the chance.
@@ -895,6 +893,7 @@ r:"物理攻擊(\d+%)機率反射，造成(\d+%)攻擊力物理屬性傷害。"=
 治療=Heal
 護盾=Shield
 驅散=Dispel
+強化=Upgrade
 強化反擊=Enhanced Counter
 
 物理=Physical
