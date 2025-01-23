@@ -103,6 +103,12 @@ Onemore自動選擇目標=<size\=27>Automatically select \nONE MORE target</size
 首次完整=Full Once
 簡化=Simplify
 
+都市設置=City
+自動跳過都市「等待睡覺」狀態=Skip [Falling Asleep] Animation
+自動跳過「都市氛圍事件」演出=Skip [City Atmosphere] Animation
+簡化部分「都市劇情」演出=Simplify Certain [City Activities] Animation
+簡化都市日程「前往」表現=Simplify [Start Activities] Animation
+
 音量提升=Volume Up
 音量降低=Volume Down
 向前移動=Move Forward
@@ -346,6 +352,7 @@ r:"^謎<color\=#ff0000ff>之</color>{{A}}$"="My<color\=#ff0000ff>st</color>eriou
 普羅西姆納=Prosymna
 厄律忒亞=Erytheia
 孟婆=Meng Po
+孟婆·禧逢春=Meng Po·Spring
 緒刻=Syke
 克麗奧朵拉=Cleodora
 涅梅爾特斯=Nemertes
@@ -1161,6 +1168,7 @@ r:"^簽約$"="Pulls"
 
 自選武器=Customize
 自選UP武器=Customize
+自選保底武器=Customize
 自選<color\=#FFD145>UP武器</color>，占五星武器基礎成功機率的<color\=#FFD145>50%</color>=Choose <color\=#FFD145>RATE UP Weapon</color>. With a base chance of <color\=#FFD145>50%</color> to get the chosen weapon
 自選<color\=#FFD145>非UP武器</color>，未獲得UP五星武器時只會獲取自選的兩把武器=<size\=18>Choose 2 <color\=#FFD145>Non-RATE UP Weapons</color>. If you missed the RATE UP 5★ weapon, you will only get the chosen weapons</size>
 請選擇2把五星武器後再補給。=Please choose 2 5★ weapons.
@@ -1187,6 +1195,10 @@ r:"當前必出5星進度(\d+)/(\d+)"=Current Pull Count: $1 / $2 \n<color\=#FFD
 r:"(\d+)\/(\d+)頁"=Page $1 / $2
 角色活動契約=Limited
 角色普通契約=Standard
+
+sr:"^再抽取(\d+)次必得限定時裝<color\=#FFF900>(.*)</color>$"="Guarantee limited outfit <color\=#FFF900>$2</color> after $1 pulls"
+sr:"^已獲得限定時裝(.*)$"="Obtained limited outfit $1"
+怪盜·天地勝意=Worldly Wish
 
 ----------
 Gachapon + Crane (Capsule)
@@ -1216,7 +1228,7 @@ r:"^(.*) 與好友(.*)交換啟動圖鑑。$"="<size\=23>Collected on $1 by exch
 普通{{A}}盲盒=Common {{A}} Blind Box
 {{A}}回收獎勵，提交重複{{A}}即可獲得。\n開啟後可隨機獲得各類蔬菜種子或烹飪食材。={{A}} recycling reward, available after trading repeat {{A}}. \nCan get all kinds of vegetable seeds or cooking ingredients randomly.
 回收篩選=Filter
-普通=1★
+普通=Common
 您自己=You
 今日剩餘交換次數：= Daily Exchange:
 剩餘心願發佈次數：=Exchange Wishlist: <size\=1>.</size>
@@ -2084,6 +2096,8 @@ r:"^契約的憑證，可在特定的『怪盜契約』中使用。$"="The prove
 r:"^獲取後可用於{{A}}商店「祈願」中進行祈願抽獎。$"="Can be used in {{A}}'s Shop to enter the Pray Lucky Draw."
 r:"^委託、消費大酬賓等獎勵或者購買<link\="mqm"><u>每日祈願納福禮袋</u></link>可獲得{{A}}$"="Get Kagura Suzu from Commissions, Spending Spree or <link\="mqm"><u>Daily Pray Gift Bag</u></link>"
 意識禮願箱=Awareness Gift Box
+認知抽選單 ★5=<size\=28>5★ Cognitive Draw</size>
+使用後可隨機獲得一個未達到意識VI的以下怪盜：{{A}}、{{B}}。=Can be used to randomly get one of the following Thief that has not reached Awareness VI: {{A}}, {{B}}.
 {{A}}的殘識={{A}}'s Awareness
 宿命之殘響=Fated Echoes
 r:"^宿命之殘響\*(\d+)$"="Fated Echoes*$1"
@@ -2368,6 +2382,11 @@ r:"^參加(\d+)次任意都市日程\((\d+)/(\d+)\)$"="Participate in any $1 Cit
 研究所篇（上）=Laboratory (Chapter 1)
 研究所篇（下）=Laboratory (Chapter 2)
 
+每天5:00刷新任務=Refresh at 5 am daily
+r:"^消耗(\d+)點體力\((\d)\/(\d)\)$"="Spend $1 Stamina ($2/$3)"
+r:"^消耗(\d+)點行動力\((\d)\/(\d)\)$"="Spend $1 Energy Points ($2/$3)"
+r:"^完成(\d+)次委託派遣$"="Complete $1 Commissions"
+
 挑戰模式=<size\=24>Challenge Mode</size>
 首次通關後解鎖當前難度<color\=#173CCAff>體力模式</color>=Unlock <color\=#173CCAff>Stamina Mode</color> after clearing
 r:"^最小行動次數：   (\d+)$"="Number of Actions: $1"
@@ -2388,6 +2407,50 @@ r:"^最小行動次數：   (\d+)$"="Number of Actions: $1"
 底部=Bottom
 最深處=Deepest
 層數=Floors
+
+完成挑戰可解鎖=Can unlock
+新的異變效果=New modifier
+<color\=#8B8A8A>【未通關】</color>=<color\=#8B8A8A>[Not cleared]</color>
+<color\=#EADE11>【已通關】</color>=<color\=#EADE11>[Cleared]</color>
+完成挑戰目標=Complete challenge
+可獲得限定徽章=Get limited badge
+r:"^最高異變等級：$"="Highest level:"
+完成高難度挑戰可刷新徽章最高異變等級=Completing higher difficulty can refresh your badge level
+
+長按異變圖示可查看詳情=<size\=26>Long press to view details</size>
+異變等級=Level
+使用推薦陣容=<size\=24>Use recommended team</size>
+r:"^<pos\=45>所有敵人的最終生命值提升(\d+(.\d+)?(%)?)$"="<pos\=45>Increase all enemies' Final HP by $1"
+r:"^<pos\=45>所有敵人的最終攻擊力提升(\d+(.\d+)?(%)?)$"="<pos\=45>Increase all enemies' Final ATK by $1"
+r:"^<pos\=45>所有怪盜最終生命值降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Final HP by $1"
+r:"^<pos\=45>所有怪盜最終攻擊力下降(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Final ATK by $1"
+r:"^<pos\=45>所有怪盜最終防禦力下降(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Final DEF by $1"
+r:"^<pos\=45>所有怪盜治療效果降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Healing Effect by $1"
+r:"^<pos\=45>所有怪盜護盾效果降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Shield Effect by $1"
+r:"^<pos\=45>解明怪盜的技能準備時間延長(\d+(.\d+)?(%)?)次行動$"="<pos\=45>Increase all Elucidate Thieves' cooldown by $1 actions"
+r:"^<pos\=45>禁止上陣優越職業怪盜與面具$"="<pos\=45>Ban Superior Thieves and Personas"
+r:"^<pos\=45>禁止上陣屈從職業怪盜與面具$"="<pos\=45>Ban Submit Thieves and Personas"
+r:"^<pos\=45>怪盜造成的火冰電風屬性的傷害降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Fire/Ice/Elec/Wind DMG by $1"
+r:"^<pos\=45>怪盜造成的念核祝咒屬性的傷害降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Psy/Nuke/Bless/Curse DMG by $1"
+r:"^<pos\=45>HL能量回復速度降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease HIGHLIGHT Energy recovery rate by $1"
+r:"^<pos\=45>(\d+(.\d+)?(%)?)回合內結束戰鬥且戰鬥中無怪盜陣亡$"="<pos\=45>Win within $1 turns and no faint"
+
+r:"^所有敵人的最終生命值提升(\d+(.\d+)?(%)?)$"="Increase all enemies' Final HP by $1"
+r:"^所有敵人的最終攻擊力提升(\d+(.\d+)?(%)?)$"="Increase all enemies' Final ATK by $1"
+r:"^所有怪盜最終生命值降低(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Final HP by $1"
+r:"^所有怪盜最終攻擊力下降(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Final ATK by $1"
+r:"^所有怪盜最終防禦力下降(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Final DEF by $1"
+r:"^所有怪盜治療效果降低(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Healing Effect by $1"
+r:"^所有怪盜護盾效果降低(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Shield Effect by $1"
+r:"^解明怪盜的技能準備時間延長(\d+(.\d+)?(%)?)次行動$"="Increase all Elucidate Thieves' cooldown by $1 actions"
+r:"^禁止上陣優越職業怪盜與面具$"="Ban Superior Thieves and Personas"
+r:"^禁止上陣屈從職業怪盜與面具$"="Ban Submit Thieves and Personas"
+r:"^怪盜造成的火冰電風屬性的傷害降低(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Fire/Ice/Elec/Wind DMG by $1"
+r:"^怪盜造成的念核祝咒屬性的傷害降低(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Psy/Nuke/Bless/Curse DMG by $1"
+r:"^HL能量回復速度降低(\d+(.\d+)?(%)?)$"="Decrease HIGHLIGHT Energy recovery rate by $1"
+r:"^(\d+(.\d+)?(%)?)回合內結束戰鬥且戰鬥中無怪盜陣亡$"="Win within $1 turns and no faint"
+
+尚未選擇異變效果=No modifier
 
 ----------
 Velvet Room Personas (VR)
@@ -2447,6 +2510,7 @@ r:"^/屬性$"="      <size\=24>/Element</size>"
 技能繼承說明=Skill Inheritance Info
 r:"^{{A}}無法習得<color\=#FF0000>(.*)</color>類型技能。$"="<size\=25>Cannot inherit <color\=#FF0000>greyed out</color> skills.</size>"
 該技能已掌握，已轉化為道具。=Already learned skill, converted into items.
+本次育成將使用高品質技能卡，是否確認使用？=<size\=28>This will use the high quality skill card, \nare you sure?</size>
 新手友好=<size\=16>Newbie Friendly</size>
 物理單攻=<size\=16>Physical ST DPS</size>
 物理群攻=<size\=15>Physical AoE DPS</size>
@@ -2554,6 +2618,7 @@ r:"^被操控的{{A}}$"="Manipulated {{A}}"
 r:"^躁動的{{A}}$"="Agitated {{A}}"
 r:"^乖戾的{{A}}$"="Sullen {{A}}"
 r:"^生氣的{{A}}$"="Angry {{A}}"
+r:"^平靜的{{A}}$"="Calm {{A}}"
 r:"^強大的{{A}}$"="Strong {{A}}"
 r:"^兇惡的{{A}}$"="Vicious {{A}}"
 r:"^創生的{{A}}$"="Creative {{A}}"
