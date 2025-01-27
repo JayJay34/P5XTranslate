@@ -35,8 +35,8 @@ r:"^追加$"="Follow Up"
 <color\=#66ccff>狂怒</color>=<color\=#F77F76>Rage</color>
 <color\=#66ccff>洗腦</color>=<color\=#AF4FA6>Brainwash</color>
 
-<color\=#66ccff>詛咒</color>=<color\=#FF0037>Cursed</color>
-<color\=#66ccff>祝福</color>=<color\=#FFFF9E>Blessed</color>
+<color\=#66ccff>詛咒</color>=<color\=#FF0037>Curse</color>
+<color\=#66ccff>祝福</color>=<color\=#FFFF9E>Bless</color>
 
 部分技能對處於特定狀態下的目標造成額外的效果被視作觸發了TECHNICAL效果。=Certain skills can trigger TECHNICAL to targets with certain status.
 
@@ -96,7 +96,7 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 永眠突襲=Dormin Rush
 鬼神樂=Oni-Kagura
 負面意識堆疊=Negative Pile
-斬擊=Slash
+斬擊=Cleave
 十文字斬=Cross Slash
 勇氣之聲=Brave Blade
 劍舞=Sword Dance
@@ -111,6 +111,7 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 八艘跳躍=Hassou Tobi
 八艘飛躍=Hassou Tobi
 痛苦宣判=<size\=22>Painful Judgement</size>
+帕拉瓦尼之擊=Paravani Strike
 
 --- Gun ---
 
@@ -597,7 +598,7 @@ r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬
 r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊點念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(\d+%)。"="Deals <color\=#FFFF00>$1</color> ATK Psy damage to <color\=#FFFF00>all</color> enemies. Triggers <link\="s|211"><u>TECHNICAL</u></link> to enemies inflicted with any <link\=s|106><u>Mental Ailment</u></link>, increases skill damage by $2."
 
 Okuninushi
-r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於精神異常的敵人增傷20%，若目標敵人的弱點是念動屬性，則額外提升15%造成的傷害。$"="Deals <color\=#fffc40>$1</color> ATK Psy damage to all enemies. Increases DMG Dealt by 20% if the enemy is inflicted with Mental Ailments. Increases DMG Dealt by 15% if the enemy is weak to Psy."
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於精神異常的敵人增傷20%，若目標敵人的弱點是念動屬性，則額外提升15%造成的傷害。$"="Deals <color\=#fffc40>$1</color> ATK Psy damage to all enemies. Increases DMG Dealt by 20% if the enemy is inflicted with Mental Ailments. Additionally Increases DMG Dealt by 15% if the enemy is weak to Psy."
 
 Shiva
 r:"^對全體敵人造成1段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，消耗所有的『慧識』觸發本能『因果的流轉』的若干效果。$"="Deals <color\=#fffc40>$1</color> ATK Psy damage to all enemies, consumes all stacks of [Wisdom] and trigger the effects of [Karma Reversal]."
@@ -616,13 +617,13 @@ r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的核熱屬�
 --- Bless ---
 
 //ST Bless with varying stacks
-r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+\~\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>1</color> enemy and gains $2 stack(s) of <link\=s|111><u>Blessed</u></link>.
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+\~\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>1</color> enemy and gains $2 stack(s) of <link\=s|111><u>Bless</u></link>.
 
 //ST Bless with constant stacks
-r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>1</color> enemy and gains $2 stack(s) of <link\=s|111><u>Blessed</u></link>.
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>1</color> enemy and gains $2 stack(s) of <link\=s|111><u>Bless</u></link>.
 
 //AoE Bless with varying stacks
-r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+\~\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>all</color> enemies and gains $2 stack(s) of <link\=s|111><u>Blessed</u></link>.
+r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+\~\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>all</color> enemies and gains $2 stack(s) of <link\=s|111><u>Bless</u></link>.
 
 //ST Bless Instakill
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，對50%生命值以下的敵人附加低機率祝福屬性即死效果，生命值越低機率越高。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>1</color> enemy with a chance of Instant Death to enemies under 50% HP. The lower the HP, the higher the chance.
@@ -637,7 +638,7 @@ Samsara
 r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，若主目標敵人生命值低於50%則有一定機率附帶即死效果。$"="Deals <color\=#fffc40>$1</color> ATK Bless damage to all enemies. If the main target is below 50% HP there is a certain chance of Instant Death."
 
 Light of Salvation
-r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自身獲得(\d+)層祝福效果。自身每層祝福效果使得技能傷害提升(\d+%)，最多提升(\d+%)。$"="Deals <color\=#fffc40>$1</color> ATK Bless damage to all enemies and gain $2 stacks of Blessed. For every stack of Blessed you have, increases skill damage by $3, up to $4."
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自身獲得(\d+)層祝福效果。自身每層祝福效果使得技能傷害提升(\d+%)，最多提升(\d+%)。$"="Deals <color\=#fffc40>$1</color> ATK Bless damage to all enemies and gain $2 stacks of Bless. For every stack of Bless you have, increases skill damage by $3, up to $4."
 
 Absolute Obedience
 r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害。使目標受到的HIGHLIGHT傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Deals <color\=#fffc40>$1</color> ATK Bless damage to 1 enemy. Increases their HIGHLIGHT DMG Taken by <color\=#fffc40>$2</color> for $3 turn."
@@ -646,21 +647,21 @@ r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬�
 --- Curse ---
 
 // Single Target Basic Curses (2 types exist to consider either flat rate of curse stacks, or chance between 2 values)
-r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得(\d+\~\d+)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>1</color> enemy and inflicts $2 stack(s) of <link\=s|112><u>Cursed</u></link>.
-r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得(.*)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>1</color> enemy and inflicts $2 stack(s) of <link\=s|112><u>Cursed</u></link>.
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得(\d+\~\d+)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>1</color> enemy and inflicts $2 stack(s) of <link\=s|112><u>Curse</u></link>.
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得(.*)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>1</color> enemy and inflicts $2 stack(s) of <link\=s|112><u>Curse</u></link>.
 
 // AoE Basic Curses
-r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，有機率使敵人獲得(\d+\~\d+)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and inflicts $2 stack(s) of <link\=s|112><u>Cursed</u></link>.
-r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得(.*)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and inflicts $2 stack(s) of <link\=s|112><u>Cursed</u></link>.
+r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，有機率使敵人獲得(\d+\~\d+)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and inflicts $2 stack(s) of <link\=s|112><u>Curse</u></link>.
+r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得(.*)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and inflicts $2 stack(s) of <link\=s|112><u>Curse</u></link>.
 
 //Brand of Malice (p5x decided to use - instead of ~ for this one so using some stupid methods to make things consistent...
-r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，並使其獲得(\d+)(.*)(\d+)個詛咒效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and inflicts $2~$4 stack(s) of <link\=s|112><u>Cursed</u></link>.
+r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，並使其獲得(\d+)(.*)(\d+)個詛咒效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and inflicts $2~$4 stack(s) of <link\=s|112><u>Curse</u></link>.
 
 Afterlife Judgement
-r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，釋放技能時，每層自己身上的祝福效果或目標身上的詛咒效果都會使該技能造成的傷害提升(\d+%)，上限4層。$"="Deals <color\=#fffc40>$1</color> ATK Curse damage to 1 enemy. When using this skill, each stack of Blessed on you or each stack of Cursed on the target increases DMG Dealt by $2, up to 4 stacks."
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，釋放技能時，每層自己身上的祝福效果或目標身上的詛咒效果都會使該技能造成的傷害提升(\d+%)，上限4層。$"="Deals <color\=#fffc40>$1</color> ATK Curse damage to 1 enemy. When using this skill, each stack of Bless on you or each stack of Curse on the target increases DMG Dealt by $2, up to 4 stacks."
 
 // Maeiga because it's worded very slightly differently for some reason???
-r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，有機率使敵人獲得(\d+)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to all enemies and inflicts $2 stack of <link\=s|112><u>Cursed</u></link>.
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，有機率使敵人獲得(\d+)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to all enemies and inflicts $2 stack of <link\=s|112><u>Curse</u></link>.
 
 Fortune Devourer
 r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，並使所有敵人防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>、受到的持續傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Deals <color\=#fffc40>$1</color> ATK Curse damage to all enemies, decreases all enemies' DEF by <color\=#fffc40>$2</color> and increases all enemies Damage Over Time Taken by <color\=#fffc40>$3</color> for $4 turns."
@@ -807,7 +808,7 @@ Elec Break
 
 --- Aliments ---
 Dizzy Needle
-r:"^使1名敵人有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率陷入<link\="s\|107"><u>暈眩</u></link>狀態，效果持續1回合。自己身上每有1層祝福效果，就提升<color\=#fffc40>(\d+\.\d+%)</color>命中的基礎機率，上限(\d+)層。$"="There is a <color\=#fffc40>$1</color> base chance to inflicts <link\="s|107"><u>Dizzy</u></link> to 1 enemy for 1 turn. For every stack of Blessed you have, increases the chance by <color\=#fffc40>$2</color>, up to $3 stacks."
+r:"^使1名敵人有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率陷入<link\="s\|107"><u>暈眩</u></link>狀態，效果持續1回合。自己身上每有1層祝福效果，就提升<color\=#fffc40>(\d+\.\d+%)</color>命中的基礎機率，上限(\d+)層。$"="There is a <color\=#fffc40>$1</color> base chance to inflicts <link\="s|107"><u>Dizzy</u></link> to 1 enemy for 1 turn. For every stack of Bless you have, increases the chance by <color\=#fffc40>$2</color>, up to $3 stacks."
 
 Anger Blessing
 r:"^有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使1名敵人陷入<link\="s\|110"><u>狂怒</u></link>狀態，並使自身防禦力提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續2回合。$"="There is a <color\=#fffc40>$1</color> base chance to inflicts <link\="s|110"><u>Rage</u></link> to 1 enemy. Increase DEF by <color\=#fffc40>$2</color> for 2 turns."
@@ -931,8 +932,8 @@ r:"物理攻擊(\d+%)機率反射，造成(\d+%)攻擊力物理屬性傷害。"=
 <link\="s|109"><u>睡眠</u></link>=<link\="s|109"><u>Sleep</u></link>
 <link\="s|110"><u>狂怒</u></link>=<link\="s|110"><u>Rage</u></link>
 <link\="s|155"><u>絕望</u></link>=<link\="s|155"><u>Despair</u></link>
-<link\="s|111"><u>祝福</u></link>=<link\="s|111"><u>Blessed</u></link>
-<link\="s|112"><u>詛咒</u></link>=<link\="s|112"><u>Cursed</u></link>
+<link\="s|111"><u>祝福</u></link>=<link\="s|111"><u>Bless</u></link>
+<link\="s|112"><u>詛咒</u></link>=<link\="s|112"><u>Curse</u></link>
 <link\="s|156"><u>混亂</u></link>=<link\="s|156"><u>Confuse</u></link>
 <link\="s|157"><u>恐懼</u></link>=<link\="s|157"><u>Fear</u></link>
 <link\="s|158"><u>洗腦</u></link>=<link\="s|158"><u>Brainwash</u></link>
