@@ -17,7 +17,7 @@ UI
 怪盜培養=<size\=25>Manage Thieves</size>
 
 進入挑戰=Challenge
-r:"^在(.*)輪內取得勝利$"="Win within $1 turns"
+r:"^在(\d+)輪內取得勝利$"="Win within $1 turns"
 r:"^(\d+)回$"="$1 turns"
 r:"^觀察模式冷卻中，(\d+)秒後可用！$"="Third Eye in cooldown"
 機制=Mechanic
@@ -1064,10 +1064,11 @@ r:"1、每回合會在白晝/黑夜中變換。\n處於白晝狀態時，所有�
 旭日東昇=Rising Sun
 r:"SP消耗大幅提高，造成傷害提高(\d+%)"=Heavily increase SP cost, \nincrease DMG Dealt by $1
 
-{{A}}擁有<color\=#ff3b37>「持劍護國土」</color>。\n「持劍護國土」：每次造成傷害會使隨機一名友軍獲得護盾。=Jikokuten has <color\=#ff3b37>"Country Protection"</color>. \n"Country Protection": Give a random ally Shield after dealing damage.
-{{A}}擁有<color\=#ff3b37>「眾生均增長」</color>。\n「眾生均增長」：所有友軍每回合從攻擊增長、防禦增長、傷害增長中隨機獲得一種。=Zouchouten has <color\=#ff3b37>"Sentient Growth"</color>. \n"Sentient Growth": All allies gain one of the following buff randomly each turn: ATK growth, DEF growth, Damage growth.
-{{A}}擁有<color\=#ff3b37>「天眼觀世間」</color>。\n「天眼觀世間」：標記一個怪盜，使其受到傷害提高，下回合將受到所有陰影的集火。\n{{C}}使用「天眼觀世間」後，會召喚1隻「紫金花狐貂」。=Koumokuten has <color\=#ff3b37>"Heavenly Eyes"</color>. \n"Heavenly Eyes": Mark an enemy, increase their DMG Taken, all allies will attack them next turn. \nAfter Koumokuten used "Heavenly Eyes", summon 1 "Chinese Redbud Fox".
-{{A}}擁有<color\=#ff3b37>「混元珍珠傘」</color>。\n「混元珍珠傘」：對血量百分比最低的友軍撐開混元珍珠傘，使所有屬性適應性全部變成“吸”，持續2回合。=Bishamonten has <color\=#ff3b37>"Pearl Umbrella"</color>. \n"Pearl Umbrella": Open the Pearl Umbrella for the ally with the lowest HP%, make them Absorb all element for 2 turns.
+{{A}}擁有<color\=#ff3b37>「持劍護國土」</color>。\n「持劍護國土」：每次造成傷害會使隨機一名友軍獲得護盾。={{A}} has <color\=#ff3b37>[Country Protection]</color>. \n[Country Protection]: Give a random ally Shield after dealing damage.
+{{A}}擁有<color\=#ff3b37>「眾生均增長」</color>。\n「眾生均增長」：所有友軍每回合從攻擊增長、防禦增長、傷害增長中隨機獲得一種。={{A}} has <color\=#ff3b37>[Sentient Growth]</color>. \n[Sentient Growth]: All allies gain one of the following buff randomly each turn: ATK growth, DEF growth, DMG growth.
+{{A}}擁有<color\=#ff3b37>「天眼觀世間」</color>。\n「天眼觀世間」：標記一個怪盜，使其受到傷害提高，下回合將受到所有陰影的集火。\n{{A}}使用「天眼觀世間」後，會召喚1隻「紫金花狐貂」。={{A}} has <color\=#ff3b37>[Heavenly Eyes]</color>. \n[Heavenly Eyes]: Mark an enemy, increase their DMG Taken, all allies will attack them next turn. \nAfter {{A}} used [Heavenly Eyes], summon 1 [Chinese Redbud Fox].
+r:"^{{A}}擁有<color\=#ff3b37>「混元珍珠傘」</color>。\n「混元珍珠傘」：對血量百分比最低的友軍撐開混元珍珠傘，使所有屬性適應性全部變成“耐”，持續(\d+)回合。$"="{{A}} has <color\=#ff3b37>[Pearl Umbrella]</color>. \n[Pearl Umbrella]: Open the Pearl Umbrella for the ally with the lowest HP%, make them [Resist] all elements for $1 turns."
+r:"^{{A}}擁有<color\=#ff3b37>「混元珍珠傘」</color>。\n「混元珍珠傘」：對血量百分比最低的友軍撐開混元珍珠傘，使所有屬性適應性全部變成“吸”，持續(\d+)回合。$"="{{A}} has <color\=#ff3b37>[Pearl Umbrella]</color>. \n[Pearl Umbrella]: Open the Pearl Umbrella for the ally with the lowest HP%, make them [Absorb] all elements for $1 turns."
 1、{{A}}擁有<color\=#ff3b37>「持劍護國土」</color>。\n「持劍護國土」：每次造成傷害會使隨機一名友軍獲得護盾。\n2、{{B}}擁有<color\=#ff3b37>「眾生均增長」</color>。\n「眾生均增長」：所有友軍每回合從攻擊增長、防禦增長、傷害增長中隨機獲得一種。\n3、{{C}}擁有<color\=#ff3b37>「天眼觀世間」</color>。\n「天眼觀世間」：標記一個怪盜，使其受到傷害提高，下回合將受到所有陰影的集火。\n{{C}}使用「天眼觀世間」後，會召喚1只「紫金花狐貂」。\n4、{{D}}擁有<color\=#ff3b37>「混元珍珠傘」</color>。\n「混元珍珠傘」：對血量百分比最低的友軍撐開混元珍珠傘，使所有屬性適應性全部變成“吸”，持續2回合。\n5、當四大天王只剩最後一位時，他會在危急關頭臨陣突破，變身為<color\=#ff3b37>「{{E}}」</color>，並恢復30%最大生命值。\n6、<color\=#ff3b37>「{{E}}」同時擁有全部四大天王的能力</color>，請小心應對。=Jikokuten has <color\=#ff3b37>"Country Protection"</color>. \n"Country Protection": Give a random ally Shield after dealing damage. \n2. Zouchouten has <color\=#ff3b37>"Sentient Growth"</color>. \n"Sentient Growth": All allies gain one of the following buff randomly each turn: ATK growth, DEF growth, Damage growth. \n3. Koumokuten has <color\=#ff3b37>"Heavenly Eyes"</color>. \n"Heavenly Eyes": Mark an enemy, increase their DMG Taken, all allies will attack them next turn. \nAfter Koumokuten used "Heavenly Eyes", summon 1 "Chinese Redbud Fox". \n4. Bishamonten has <color\=#ff3b37>"Pearl Umbrella"</color>. \n"Pearl Umbrella": Open the Pearl Umbrella for the ally with the lowest HP%, make them Absorb all element for 2 turns. \n5. When there's only 1 enemy left, they will transform into <color\=#ff3b37>Asura</color> and heal 30% Max HP. \n6. <color\=#ff3b37>Asura has the abilities of all 4 Kings</color>.
 {{A}}添加的護盾，可抵消一定的傷害=Shield added by {{A}}, \ncan negate some damage
 眾生均增長=Sentient Growth
@@ -1198,6 +1199,12 @@ r:"^<pos\=45>「{{A}}羽庇」的可使(\d+)名同伴進入無法選中狀態，
 r:"^<pos\=45>「{{A}}之護」的受到最終傷害降低效果提升至(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="<pos\=45>Increase [{{A}}'s Protection] Final DMG Taken Down to $1, increase {{A}}'s Final ATK by $2"
 r:"^<pos\=45>{{A}}每回合末給所有友方添加的「{{A}}之護」層數提升至(\d+)層，{{A}}最終生命值提升(\d+%)$"="<pos\=45>Increase [{{A}}'s Protection] to $1 stacks each turn, increase {{A}}'s Final HP by $2"
 
+冬夜天災=Winter Calamity
+寒潮=Cold Wave
+
+驚雷無豐=Scarce Thunder
+電威=Electric Might
+
 ----------
 Sea of Souls Trials (SoS)
 ----------
@@ -1293,8 +1300,11 @@ r:"^1、{{A}}每隔1個回合，獲得(\d+)層「神之庇佑」，每層可以�
 r:"^每層使自身受到的傷害降低(\d+%)，每次受到傷害會損失(\d+)層$"="Increase DMG RES by $1, \nlose $2 stack after taking a hit of damage"
 神之庇佑=God's Protection
 神之祝福=God's Blessing
+r:"^神<color\=#000000>之</color>庇佑$"="G<color\=#000000>o</color>d's Protection"
 
 r:"^1、進入戰鬥時，{{A}}會召喚(\d+)個隨從與之並肩作戰，{{A}}與所有隨從處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n2、{{A}}每隔一個回合會給所有友方添加(\d+)層「暝夜之庇護」，最多可疊加(\d+)層，每層可使自身受到的最終傷害減免(\d+%)。\n3、受到庇護的單位獲得元素異常時，會被驅散(\d+)層「暝夜之庇護」。$"="<size\=24>1. At the start of battle, {{A}} will summon $1 minions, {{A}} and all minions have <color\=#ff3b37>[Lifelink]</color>.\n[Lifelink]: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%. \n2. {{A}} will give $2 stack of [Midnight Protection] to all allies, up to $3 stacks, each stack decreases own Final DMG Taken by $4.\n3. When the protected allies are inflicted with Elemental Ailments, dispel $5 stack of [Midnight Protection].</size>"
+暝夜之庇護=Midnight Protection
+r:"^暝<color\=#000000>夜</color>之庇護$"="M<color\=#000000>i</color>idnight Protection"
 
 ----------
 SEASONAL EFFECTS
