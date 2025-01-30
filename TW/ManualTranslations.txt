@@ -462,6 +462,10 @@ r:"^打<color\=#ff0000ff>掃</color>環境$"="Cl<color\=#ff0000ff>ea</color>ning
 r:"^回<color\=#ff0000ff>到</color>家中$"="H<color\=#ff0000ff>o</color>me"
 r:"^<color\=#ff0000ff>離</color>開$"="L<color\=#ff0000ff>ea</color>ve"
 
+上裝=Tops
+下裝=Bottoms
+手飾=Accessories
+
 {{A}}  中央大街={{A}} Central Street
 {{A}}  小巷={{A}} Alleyway
 社團佈告欄=Club Bulletin Board
@@ -672,10 +676,12 @@ r:"^剩餘(\d+)時(\d+)分(\d+)秒$"=" $1h $2m $3s"
 r:"^(\d+)小時(\d+)分鐘$"=" $1h $2m"
 r:"^(\d+)時(\d+)分(\d+)秒$"=" $1h $2m $3s"
 r:"^(\d+)分鐘$"=" $1 minutes"
+r:"^(\d+)時(\d+)分後解鎖$"="Unlocks after $1h $2m"
 
 r:"^挑戰倒計時：$"="Time Left:"
 r:"^挑戰倒計時：(\d+)天(\d+)時(\d+)分$"="Time Left: $1d $2h $3m"
 r:"^本週剩餘次數：(\d+)/(\d+)$"="Weekly Usage: $1/ $2"
+限時挑戰倒計時：=Challenge Time Left:
 
 擁有:=Owned: 
 擁有=Owned
@@ -1172,6 +1178,7 @@ r:"^簽約$"="Pulls"
 自選<color\=#FFD145>UP武器</color>，占五星武器基礎成功機率的<color\=#FFD145>50%</color>=Choose <color\=#FFD145>RATE UP Weapon</color>. With a base chance of <color\=#FFD145>50%</color> to get the chosen weapon
 自選<color\=#FFD145>非UP武器</color>，未獲得UP五星武器時只會獲取自選的兩把武器=<size\=18>Choose 2 <color\=#FFD145>Non-RATE UP Weapons</color>. If you missed the RATE UP 5★ weapon, you will only get the chosen weapons</size>
 請選擇2把五星武器後再補給。=Please choose 2 5★ weapons.
+自選UP武器更換成功。=Changed the RATE UP weapons.
 
 查詢結果僅保留最近90天補給資訊=<color\=#FFDF00>The pull history only records up to <u>90 days.</u></color>
 查詢結果僅保留最近90天簽約資訊=<color\=#FFDF00>The pull history only records up to <u>90 days.</u></color>
@@ -1506,6 +1513,8 @@ r:"^基礎好感度\+(\d+)\n偏好禮物額外\+(\d+)\n<color\=#787878>偏好禮
 
 r:"^本次贈送會增加<color\=#FFDE00>(\d+)<color\=#008CE5>（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>好感度$"="Gain <color\=#FFDE00>$1<color\=#008CE5>(<size\=40><sprite\=1></size>+$2)</color></color>Confidant Pts"
 r:"^本次贈送會增加<color\=#FFDE00>(\d+)</color>好感度$"="Gain <color\=#FFDE00>$1</color> Confidant Pts"
+
+sr:"^當前(.*)RANK(\d+)，需要達到RANK(\d+)後繼續升級。本次送出禮物後無法升級，但會保留禮物帶來的好感度，要繼續送出禮物嗎？$"="Currently at $1 Rank $2, need to reach Rank $3 in order to rank up. You will still keep the Confidant Points after giving them a gift, are you sure?"
 
 確定這次約會不送禮物嗎？=Are you sure you do not want to give them a gift?
 目前還是算了吧……=Forget it...
@@ -2119,7 +2128,7 @@ sr:"^(.*)不足，無法購買。$"="Insufficient $1, cannot purchase."
 r:"^限購$"="Limit"
 r:"^立即獲得$"="Immediately get"
 r:"^連續30天，每天5點贈送$"="Daily at 5 am (UTC+8) for 30 days"
-r:"^累計消費(\d+)台幣\((\d+)/(\d+)\)$"="Spent NT$ $1 ($1/$2)"
+r:"^累計消費(\d+)台幣\((\d+)/(\d+)\)$"="Spent NT$ $1 ($2/$3)"
 
 r:"^傳記$"="Biography"
 傳記全書=<size\=25>Full Biography</size>
@@ -2237,7 +2246,7 @@ r:"^全體怪盜<color\=#81ea2c>疾風</color>/<color\=#ff0036>詛咒</color>屬
 詛咒漩渦=<size\=22>Cursed Swirl</size>
 r:"^疾風、詛咒屬性傷害提升(\d+%)$"="Increase Wind and Curse DMG by $1"
 
-造成WEAK/{{A}}時獲得分數=Weak DMG/ All-Out Attack
+造成WEAK/{{A}}時獲得分數=Weak DMG/ {{A}}
 火焰/念動屬性隊員攻擊時獲得分數=Fire / Psy Thieves Score
 冰凍/核熱屬性隊員攻擊時獲得分數=Ice / Nuclear Thieves Score
 電擊/祝福屬性隊員攻擊時獲得分數=Elec / Bless Thieves Score
@@ -2386,8 +2395,9 @@ r:"^參加(\d+)次任意都市日程\((\d+)/(\d+)\)$"="Participate in any $1 Cit
 研究所篇（下）=Laboratory (Chapter 2)
 
 每天5:00刷新任務=Refresh at 5 am daily
+每日5:00刷新任務=Refresh at 5 am daily
 r:"^消耗(\d+)點體力\((\d+)\/(\d+)\)$"="Spend $1 Stamina ($2/$3)"
-r:"^消耗(\d+)點行動力\((\d)\/(\d)\)$"="Spend $1 Energy Points ($2/$3)"
+r:"^消耗(\d+)點行動力\((\d+)\/(\d+)\)$"="Spend $1 Energy Points ($2/$3)"
 r:"^完成(\d+)次委託派遣$"="Complete $1 Commissions"
 
 挑戰模式=<size\=24>Challenge Mode</size>
@@ -2453,6 +2463,15 @@ r:"^怪盜造成的念核祝咒屬性的傷害降低(\d+(.\d+)?(%)?)$"="Decrease
 r:"^HL能量回復速度降低(\d+(.\d+)?(%)?)$"="Decrease HIGHLIGHT Energy recovery rate by $1"
 r:"^(\d+(.\d+)?(%)?)回合內結束戰鬥且戰鬥中無怪盜陣亡$"="Win within $1 turns and no faint"
 尚未選擇異變效果=No modifier
+是否清除已選擇的全部異變效果？=Clear all modifiers?
+尚未保存異變效果，是否保存？=Save current modifiers?
+r:"^完成「(.*)」噩夢及以上難度的挑戰$"="Clear [$1] on Nightmare or above"
+r:"^完成「(.*)」困難及以上難度的挑戰$"="Clear [$1] on Hard or above"
+r:"^完成「(.*)」普通及以上難度的挑戰$"="Clear [$1] on Normal or above"
+r:"^完成異變等級(\d+)以上的噩夢及以上難度的挑戰$"="Clear Nightmare or above at level $1 or above"
+r:"^完成異變等級(\d+)以上的噩夢難度的挑戰$"="Clear Nightmare at level $1 or above"
+r:"^完成異變等級(\d+)以上的困難及以上難度的挑戰$"="Clear Hard or above at level $1 or above"
+r:"^完成異變等級(\d+)以上的普通及以上難度的挑戰$"="Clear Normal or above at level $1 or above"
 
 r:"^第(\d+)關$"="Level $1"
 r:"^擊倒(\d+)個靶子$"="Down $1 Targets"
@@ -2500,6 +2519,8 @@ r:"^戰鬥中至少打出(\d+)次普通攻擊$"="Use at least $1 Melee Attack"
 r:"^戰鬥中至少打出(\d+)次ONEMORE$"="Use at least $1 ONE MORE"
 
 獨自觀看煙火=Watch Alone
+與{{A}}一起放煙火=Watch fireworks with {{A}}
+r:"^燃放(\d+)個煙火\((\d+)\/(\d+)\)$"="Set off $1 fireworks ($2/$3)"
 
 ----------
 Velvet Room Personas (VR)
@@ -2559,7 +2580,9 @@ r:"^/屬性$"="      <size\=24>/Element</size>"
 固定獲得以下技能=Guarantee this skill
 技能繼承說明=Skill Inheritance Info
 r:"^{{A}}無法習得<color\=#FF0000>(.*)</color>類型技能。$"="<size\=25>Cannot inherit <color\=#FF0000>greyed out</color> skills.</size>"
+r:"^{{A}}無法透過印記習得<color\=#FF0000>(.*)<</color>類型技能。$"="<size\=25>Cannot inherit <color\=#FF0000>greyed out</color> skills.</size>"
 該技能已掌握，已轉化為道具。=Already learned skill, converted into items.
+技能卡=Skill Card
 本次育成將使用高品質技能卡，是否確認使用？=<size\=28>This will use the high quality skill card, \nare you sure?</size>
 新手友好=<size\=16>Newbie Friendly</size>
 物理單攻=<size\=16>Physical ST DPS</size>
@@ -2668,6 +2691,7 @@ r:"^被操控的{{A}}$"="Manipulated {{A}}"
 r:"^躁動的{{A}}$"="Agitated {{A}}"
 r:"^乖戾的{{A}}$"="Sullen {{A}}"
 r:"^生氣的{{A}}$"="Angry {{A}}"
+r:"^狂歡的{{A}}$"="Revelrous {{A}}"
 r:"^平靜的{{A}}$"="Calm {{A}}"
 r:"^強大的{{A}}$"="Strong {{A}}"
 r:"^兇惡的{{A}}$"="Vicious {{A}}"
