@@ -7,103 +7,191 @@ RANK 1
 ----------
 Janosik
 r:"^餘孽收割(.*)$"="Reaper $1"
-r:"^攻擊力提升(\d+\.\d+%)。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。$"="Increase ATK by $1. When allies attack enemies with [Aim], increase ATK by $2."
-r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，使1名敵人獲得『瞄準』。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。$"="Increase ATK by $1. At the start of battle, inflict 1 enemy with [Aim]. When allies attack enemies with [Aim], increase ATK by $2."
-r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，使1名敵人獲得『瞄準』。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。自身攻擊有『瞄準』的敵人時，造成1次1(\d+%)攻擊力的射擊屬性傷害。$"="Increase ATK by $1. At the start of battle, inflict 1 enemy with [Aim]. When allies attack enemies with [Aim], increase ATK by $2. When you attack enemies with [Aim], deal an additional $3 ATK Gun damage to them."
-r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，使1名敵人獲得『瞄準』。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。帶有『瞄準』的敵人防禦力額外降低(\d+%)。自身攻擊有『瞄準』的敵人時，造成1次(\d+%)攻擊力的射擊屬性傷害。$"="<size\=22>Increase ATK by $1. At the start of battle, inflict 1 enemy with [Aim]. When allies attack enemies with [Aim], increase ATK by $2. Additionally decrease DEF by $3 for enemies with [Aim]. When you attack enemies with [Aim], deal an additional $4 ATK Gun damage to them.</size>"
+r:"^攻擊力提升(\d+\.\d+%)。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。$"="Increases ATK by $1. When allies attack enemies with [Aim], increases ATK by $2."
+r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，使1名敵人獲得『瞄準』。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。$"="Increases ATK by $1. At the start of battle, inflicts 1 enemy with [Aim]. When allies attack enemies with [Aim], increases ATK by $2."
+r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，使1名敵人獲得『瞄準』。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。自身攻擊有『瞄準』的敵人時，造成1次1(\d+%)攻擊力的射擊屬性傷害。$"="Increases ATK by $1. At the start of battle, inflicts 1 enemy with [Aim]. When allies attack enemies with [Aim], increases ATK by $2. When you attack enemies with [Aim], deal an additional $3 ATK Gun damage to them."
+r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，使1名敵人獲得『瞄準』。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。帶有『瞄準』的敵人防禦力額外降低(\d+%)。自身攻擊有『瞄準』的敵人時，造成1次(\d+%)攻擊力的射擊屬性傷害。$"="<size\=22>Increases ATK by $1. At the start of battle, inflicts 1 enemy with [Aim]. When allies attack enemies with [Aim], increases ATK by $2. Additionally decreases DEF by $3 for enemies with [Aim]. When you attack enemies with [Aim], deal an additional $4 ATK Gun damage to them.</size>"
+
+Berith
+r:"^公爵的威嚇(.*)$"="Duke's Intimidation $1"
+r:"^防禦力提升(\d+\.\d+%)。自身受到的弱點傷害降低(.*)。$"="<size\=28>Increases DEF by $1. Decreases own Weak DMG Taken by $2.</size>"
+
+Obariyon
+r:"^靈財的射手(.*)$"="Shooter of Wealth $1"
+r:"^暴擊率提升(\d+\.\d+%)。造成射擊屬性傷害時，暴擊率提升(.*)。$"="<size\=28>Increases CRIT Rate by $1. Increases CRIT Rate by $2 when dealing Gun damage.</size>"
+
+Silky
+r:"^憐愛的霜護(.*)$"="Tender Protection $1"
+r:"^生命值提升(\d+\.\d+%)。驅散精神異常時，恢復目標(.*)攻擊力的生命值。$"="<size\=27>Increases HP by $1. After dispelling Mental Ailment, restores $2 ATK as HP to the target.</size>"
+
+Incubus
+r:"^墮落的低語(.*)$"="Fallen Whisper $1"
+r:"^生命值提升(\d+\.\d+%)。造成詛咒屬性傷害後，降低目標(.*)攻擊力，效果持續(.*)回合。$"="<size\=27>Increases HP by $1. After dealing Curse damage, decreases the target's ATK by $2 for $3 turns.</size>"
 
 Succubus
 r:"^醉人的呢喃(.*)$"="Intoxicating Murmur $1"
-r:"^攻擊力提升(\d+\.\d+%)。以同伴為目標釋放技能後，提升其(\d+\.\d+%)暴擊率，效果持續1回合。$"="Increase ATK by $1. When using a skill on an ally, increase their CRIT Rate by $2 for 1 turn."
+r:"^攻擊力提升(\d+\.\d+%)。以同伴為目標釋放技能後，提升其(\d+\.\d+%)暴擊率，效果持續1回合。$"="Increases ATK by $1. When using a skill on an ally, increases their CRIT Rate by $2 for 1 turn."
 
 Genbu
 r:"^極北地的寒冰(.*)$"="Arctic Chill $1"
-r:"^防禦力提升(\d+\.\d+%)。受到來自凍結狀態下的敵人的傷害降低(\d+%)。對處於凍結狀態的敵人攻擊力提升(\d+%)。$"="Increase DEF by $1. Decrease DMG Taken by $2 from enemies inflicted with Freeze. Increase ATK by $3 to enemies inflicted with Freeze."
+r:"^防禦力提升(\d+\.\d+%)。受到來自凍結狀態下的敵人的傷害降低(.*)。對處於凍結狀態的敵人攻擊力提升(.*)。$"="<size\=25>Increases DEF by $1. Decreases DMG Taken by $2 from enemies inflicted with Freeze. Increases ATK by $3 to enemies inflicted with Freeze.</size>"
 
 ----------
 RANK 2
 ----------
 Eligor
 r:"^騎士的銳利目光(.*)$"="Knight's Sharp Gaze $1"
-r:"^暴擊效果提升(\d+%)。以1名敵人為目標造成物理屬性傷害時，攻擊力提升(\d+%)，暴擊率提升(\d+%)。$"="Increase CRIT DMG by $1. When dealing Physical damage to 1 enemy, increase ATK by $2 and increase CRIT Rate by $3."
+r:"^暴擊效果提升(\d+%)。以1名敵人為目標造成物理屬性傷害時，攻擊力提升(\d+%)，暴擊率提升(\d+%)。$"="<size\=28>Increases CRIT DMG by $1. When dealing Physical damage to 1 enemy, increases ATK by $2 and increases CRIT Rate by $3.</size>"
+
+Oni
+r:"^連鎖詭計(.*)$"="Chain Trick $1"
+r:"^暴擊率提升(\d+\.\d+%)。換手攻擊後，造成的傷害提升(.*)，效果持續(.*)回合。$"="Increases CRIT Rate by $1. Increases DMG Dealt by $2 for $3 turn after Baton Pass."
+
+Yaksini
+r:"^啖鬼的不甘(.*)$"="Ghost's Resentment $1"
+r:"^攻擊力提升(\d+%)。受到傷害後，攻擊力提升(.*)，效果持續(.*)回合。$"="Increases ATK by $1. After taking damage, increases ATK by $2 for $3 turns."
+
+Jack Frost
+r:"^來堆雪人吧(.*)$"="<size\=28>Let's Build a Snowman $1</size>"
+r:"^暴擊率提升(\d+\.\d+%)。造成擊倒後，造成的冰凍屬性傷害提升(.*)，效果持續(.*)回合。$"="<size\=27>Increases CRIT Rate by $1. After downing an enemy, increases Ice DMG Dealt by $2 for $3 turns.</size>"
 
 Apsaras
 r:"^柔聲的甜詠(.*)$"="Gentle Chant $1"
-r:"^防禦力提升(\d+\.\d+%)。以同伴為目標釋放技能時，提升其(\d+\.\d+%)防禦力，效果持續2回合。$"="Increase DEF by $1. When using a skill on allies, increase their DEF by $2 for 2 turns."
+r:"^防禦力提升(\d+\.\d+%)。以同伴為目標釋放技能時，提升其(\d+\.\d+%)防禦力，效果持續2回合。$"="Increases DEF by $1. When using a skill on allies, increases their DEF by $2 for 2 turns."
+
+Matador
+r:"^躁動的狂熱祭品(.*)$"="Restless Sacrifice $1"
+r:"^攻擊力提升(\d+%)。攻擊帶有精神異常的敵人時傷害提升(.*)。$"="<size\=25>Increases ATK by $1. Increases damage by $2 when attacking enemies inflicted with Mental Ailement.</size>"
 
 Leanan Sidhe
 r:"^戀人的二重奏(.*)$"="Lover's Duet $1"
-r:"^攻擊力提升(\d+\.\d+%)。釋放{{A}}技能攻擊處於防禦力降低狀態下的敵人時，額外造成1次(\d+%)攻擊力的念動屬性傷害。$"="Increase ATK by $1. When attacking enemies inflicted with DEF down with a Persona skill, deal an additional $2 ATK Psy damage."
+r:"^攻擊力提升(\d+\.\d+%)。釋放{{A}}技能攻擊處於防禦力降低狀態下的敵人時，額外造成1次(\d+%)攻擊力的念動屬性傷害。$"="<size\=25>Increases ATK by $1. When dealing Persona skill damage to enemies inflicted with DEF Down, additionally deals 1 hit of $2 ATK Psy damage.</size>"
+
+Angel
+r:"^實習的神使(.*)$"="Trainee Angel $1"
+r:"^生命值提升(\d+%)。驅散元素異常時，額外使目標回復(.*)攻擊力的生命值。$"="<size\=26>Increases HP by $1. Additionally restores $2 ATK as HP to the target when dispelling Elemental Ailement.</size>"
 
 Archangel
 r:"^崇高的光耀(.*)$"="Sublime Brilliance $1"
-r:"^效果命中提升(\d+%)。釋放{{A}}技能後，有(\d+%)固定機率使自身獲得1個祝福效果。若該技能造成了祝福屬性傷害，則額外獲得1個祝福效果。$"="Increase EHR by $1. After using a Persona skill, there is a $2 fixed chance to gain 1 Bless. If that skill dealt Bless damage, gain 1 additional Bless."
+r:"^效果命中提升(\d+%)。釋放{{A}}技能後，有(\d+%)固定機率使自身獲得1個祝福效果。若該技能造成了祝福屬性傷害，則額外獲得1個祝福效果。$"="<size\=24>Increases EHR by $1. After using a Persona skill, there is a $2 fixed chance to gain 1 Bless. If that skill dealt Bless damage, gains 1 additional Bless.</size>"
+
+Nue
+r:"^詛咒的啼鳴(.*)$"="Cursed Cries $1"
+r:"^暴擊率提升(\d+\.\d+%)。釋放技能造成詛咒屬性傷害時，有(.*)的固定機率使敵人獲得(.*)個詛咒效果。$"="<size\=26>Increases CRIT Rate by $1. When dealing damage with a Curse skill, there is a $2 fixed chance to inflict the enemy with $3 stack of Curse.</size>"
 
 ----------
 RANK 3
 ----------
 Setanta
 r:"^嗜血的戰士(.*)$"="Bloodthirsty Warrior $1"
-r:"^暴擊效果提升(\d+%)。攻擊處於減益狀態的敵人時攻擊力提升(.*)。對處於減益狀態的敵人造成傷害後，使所有同伴的攻擊力提升(.*)，效果持續1回合。$"="Increase CRIT DMG by $1. Increase ATK by $2 when attacking enemies inflicted with debuffs. After dealing damage to enemies inflicted with debuffs, increase all allies' ATK by $3 for 1 turn."
+r:"^暴擊效果提升(\d+%)。攻擊處於減益狀態的敵人時攻擊力提升(.*)。對處於減益狀態的敵人造成傷害後，使所有同伴的攻擊力提升(.*)，效果持續1回合。$"="<size\=24>Increases CRIT DMG by $1. Increases ATK by $2 when attacking enemies inflicted with debuffs. After dealing damage to enemies inflicted with debuffs, increases all allies' ATK by $3 for 1 turn.</size>"
+
+Kin-Ki
+r:"^刀槍不入的堅固(.*)$"="<size\=28>Weapons Invulnerability $1</size>"
+r:"^防禦力提升(\d+\.\d+%)。擊倒敵人時，使自身回復(.*)攻擊力的生命值。$"="Increases DEF by $1. Restores $2 ATK as HP to self when downing an enemy."
 
 Jikokuten
 r:"^慧土之東(.*)$"="Wisdom of the East $1"
-r:"^防禦力提升(\d+\.\d+%)。以同伴為目標釋放技能時，提升主目標(.*)攻擊力，目標生命值低於(.*)時，該效果提升(.*)，效果持續2回合。$"="Increase DEF by $1. When using a skill on allies, increase the main target's ATK by $2 for 2 turns, increase this effect to $4 when the target's HP is below $3."
+r:"^防禦力提升(\d+\.\d+%)。以同伴為目標釋放技能時，提升主目標(.*)攻擊力，目標生命值低於(.*)時，該效果提升(.*)，效果持續2回合。$"="<size\=24>Increases DEF by $1. When using a skill on allies, increases the main target's ATK by $2 for 2 turns, increases this effect to $4 when the target is below $3 HP.</size>"
 
 Shiki-Ouji
 r:"^昂揚的折紙使魔(.*)$"="Lively Shikigami $1"
-r:"^防禦力提升(\d+\.\d+%)。受到傷害後，防禦力提升(\d+%)，持續時間永久，效果上限4層。$"="Increase DEF by $1. After taking damage, increase DEF by $2 permanently, up to 4 stacks."
+r:"^防禦力提升(\d+\.\d+%)。受到傷害後，防禦力提升(.*)，持續時間永久，效果上限(.*)層。$"="<size\=28>Increases DEF by $1. After taking damage, increases DEF by $2 permanently, up to $3 stacks.</size>"
+
+Orthrus
+r:"^引火之軀(.*)$"="Ignite Body $1"
+r:"^暴擊效果提升(\d+\.\d+%)。造成燃燒效果後，提升自身(.*)攻擊力，效果持續(.*)回合。$"="Increases CRIT DMG by $1. After inflicting Burn, increases own ATK by $2 for $3 turns."
 
 Lamia
 r:"^嬌豔的貪慾(.*)$"="Gorgeous Greed $1"
-r:"^效果命中提升(\d+%)。造成燃燒效果時，效果命中提升(\d+%)。造成燃燒效果後，使所有同伴攻擊力提升(\d+%)，效果持續2回合。$"="Increase EHR by $1. Increase EHR by $2 when inflicting Burn. After inflicting Burn, increase all allies' ATK by $3 for 2 turns."
+r:"^效果命中提升(\d+%)。造成燃燒效果時，效果命中提升(\d+%)。造成燃燒效果後，使所有同伴攻擊力提升(\d+%)，效果持續2回合。$"="<size\=28>Increases EHR by $1. Increases EHR by $2 when inflicting Burn. After inflicting Burn, increases all allies' ATK by $3 for 2 turns.</size>"
 
 Ame-no-Uzume
 r:"^顫慄的振奮神樂(.*)$"="Trembling Kagura $1"
-r:"^效果命中提升(\d+%)。造成觸電效果後，提升所有同伴(.*)暴擊率，效果持續(.*)回合。$"="<size\=27>Increase EHR by $1. After inflicting Shock, increase all allies' CRIT Rate by $2 for $3 turns.</size>"
+r:"^效果命中提升(\d+%)。造成觸電效果後，提升所有同伴(.*)暴擊率，效果持續(.*)回合。$"="<size\=27>Increases EHR by $1. After inflicting Shock, increases all allies' CRIT Rate by $2 for $3 turns.</size>"
+
+Anzu
+r:"^俯衝的獵殺(.*)$"="Swooping Hunt $1"
+r:"^攻擊力提升(\d+\.\d+%)。釋放{{A}}技能時，對技能主目標造成風襲效果時，效果命中提升(.*)。$"="Increases ATK by $1. When using Persona skill to inflict Winded, increases EHR to the main target by $2."
+
+Sandman
+r:"^今夜的安眠(.*)$"="Sleep Well Tonight $1"
+r:"^效果命中提升(\d+\.\d+%)。造成睡眠效果時，效果命中提升(.*)。$"="<size\=28>Increase EHR by $1. Increase EHR by $2 when inflicting Sleep.</size>"
 
 Neko Shogun
 r:"^請你吃魚乾喵(.*)$"="Have a Dried Fish $1"
-r:"^效果命中提升(\d+%)。戰鬥開始時，使所有同伴的效果命中提升(\d+%)，並使得效果命中最高的同伴額外提升(\d+%)效果命中，效果持續2回合。$"="Increase EHR by $1. At the start of battle, increase all allies' EHR by $2, increase the ally with the highest EHR by $3 EHR for 2 turns."
+r:"^效果命中提升(\d+%)。戰鬥開始時，使所有同伴的效果命中提升(\d+%)，並使得效果命中最高的同伴額外提升(\d+%)效果命中，效果持續2回合。$"="<size\=24>Increases EHR by $1. At the start of battle, increases all allies' EHR by $2, increases the EHR for the ally with the highest EHR by $3 for 2 turns.</size>"
+
+Pheonix
+r:"^聖炎的尊者(.*)$"="<size\=28>Venerable Holy Flame $1</size>"
+r:"^攻擊力提升(\d+\.\d+%)。擊敗敵人後，核熱傷害提升(.*)，效果持續(.*)回合。$"="Increases ATK by $1. After defeating enemy, increases Nuke DMG by $2 for $3 turns."
 
 Principality
 r:"^統治之能(.*)$"="Power to Rule $1"
-r:"^防禦力提升(\d+\.\d+%)。釋放{{A}}技能造成治療效果後，使所有同伴的防禦力提升(.*)，效果持續2回合。$"="Increase DEF by $1. After healing with a Persona skill, increase all allies' DEF by $2 for 2 turns."
+r:"^防禦力提升(\d+\.\d+%)。釋放{{A}}技能造成治療效果後，使所有同伴的防禦力提升(.*)，效果持續2回合。$"="Increases DEF by $1. After healing with a Persona skill, increases all allies' DEF by $2 for 2 turns."
 
 Isis
 r:"^豐饒的安卡(.*)$"="Abundant Anka $1"
-r:"^生命值提升(\d+\.\d+%)。造成治療效果後，使目標接下來每回合回復(.*)攻擊力的生命值，效果持續(\d+)回合。$"="Increase HP by $1. After healing, the target will restore $2 ATK as HP at the end of their turn for $3 turns."
+r:"^生命值提升(\d+\.\d+%)。造成治療效果後，使目標接下來每回合回復(.*)攻擊力的生命值，效果持續(\d+)回合。$"="Increases HP by $1. After healing, the target restores $2 ATK as HP at the end of their turn for $3 turns."
 
 ----------
 RANK 4
 ----------
+Arahabaki
+r:"^鐵鑄之身(.*)$"="Iron Body $1"
+r:"^防禦力提升(\d+\.\d+%)。使所有同伴受到的弱點傷害降低(.*)。$"="Increases DEF by $1. Decreases all allies' Weak DMG Taken by $2."
+
+Limim
+r:"^冷若冰霜的吻(.*)$"="Frosty Kiss $1"
+r:"^攻擊力提升(\d+\.\d+%)。造成凍結效果後，提升自己(.*)攻擊力，效果持續(.*)回合。$"="Increases ATK by $1. After inflicting Freeze, increases own ATK by $2 for $3 turns."
+
+Lachesis
+r:"^生命的裁量(.*)$"="Tailoring of Life $1"
+r:"^生命值提升(\d+\.\d+%)。造成治療效果後，使目標同伴生命值上限提升(.*)，效果持續(.*)回合。$"="Increases HP by $1. After healing, increases the target's Max HP by $2 for $3 turns."
+
+Belphegor
+r:"^寒流上的怠惰(.*)$"="Cold Wave of Sloth $1"
+r:"^效果抵抗提升(\d+%)。以敵人為目標釋放{{A}}技能後，使技能主目標受到的冰凍屬性傷害提升(\d+\.\d+%)，效果持續(\d+)回合，若其生命值低於(\d+%)，則效果額外提升(\d+%)。"="<size\=23>Increases Effect RES by $1. After using Persona skill on enemies, increases the main target's Ice DMG Taken by $2 for $3 turns. If they are under $4 HP, additionally increases effect by $5.</size>"
+
 Jatayu
 r:"^破空的金翅(.*)$"="<size\=28>Soaring Golden Wings $1</size>"
-r:"^效果命中提升(\d+%)。釋放疾風屬性{{A}}技能後，使技能目標的防禦力降低(\d+%)，效果持續2回合。$"="Increase EHR by $1. After using Wind skills, decrease the target's DEF by $2 for 2 turns."
+r:"^效果命中提升(\d+%)。釋放疾風屬性{{A}}技能後，使技能目標的防禦力降低(\d+%)，效果持續2回合。$"="Increases EHR by $1. After using Wind skills, decreases the target's DEF by $2 for 2 turns."
+
+Mothman
+r:"^外星的吸血鬼(.*)$"="Alien Vampire $1"
+r:"^效果命中提升(\d+%)。造成精神異常後，使自身恢復(\d+%)攻擊力的生命值。$"="Increases EHR by $1. Restores $1 ATK as HP to self after inflicting Mental Ailment."
+
+Hariti
+r:"^暴惡的母性(.*)$"="Violent Motherhood $1"
+r:"^攻擊力提升(\d+\.\d+%)。使處於觸電狀態下的敵人受到的電擊傷害提升(.*)。$"="<size\=28>Increases ATK by $1. Increases the Elec DMG Taken for enemies inflicted with Shock by $2.</size>"
+
+Atropos
+r:"^命運的絞殺(.*)$"="Garrote of Fate $1"
+r:"^效果命中提升(\d+%)。以自身為目標釋放技能後，使自身攻擊力提升(\d+%)，效果持續1回合。$"="<size\=25>Increases EHR by $1. After targeting yourself with a skill, increases own ATK by $2 for 1 turn.</size>"
 
 Mithras
 r:"^炎日的庇佑(.*)$"="<size\=28>Burning Sun's Blessing $1</size>"
-r:"^生命值提升(\d+\.\d+%)。以同伴為目標釋放技能後，使其防禦力提升(\d+\.\d+%)，若其生命值高於(\d+%)，則效果額外提升(\d+%)，效果持續2回合。$"="Increase HP by $1. When using a skill on an ally, increase their DEF by $2 for 2 turns. If they are above $3 HP, increase the effect by $4."
+r:"^生命值提升(\d+\.\d+%)。以同伴為目標釋放技能後，使其防禦力提升(\d+\.\d+%)，若其生命值高於(\d+%)，則效果額外提升(\d+%)，效果持續2回合。$"="<size\=25>Increases HP by $1. When using a skill on allies, increases their DEF by $2 for 2 turns. If they are above $3 HP, increases the effect by $4.</size>"
 
 Hell Biker
 r:"^點燃！引爆(.*)$"="Ignite! Explode! $1"
-r:"^攻擊力提升(\d+\.\d+%)。使場上處於燃燒狀態的敵人受到的火焰屬性傷害提升(\d+%)。$"="Increase ATK by $1. Enemies inflicted with Burn increase Fire DMG Taken by $2."
-r:"^攻擊力提升(\d+\.\d+%)。使場上處於燃燒狀態的敵人受到的火焰屬性傷害提升(\d+%)。自身釋放技能時，場上每有1個處於燃燒狀態的敵人，則自身攻擊力提升(\d+%)，上限3層。$"="Increase ATK by $1. Enemies inflicted with Burn increase Fire DMG Taken by $2. When using a skill, increase ATK by $3 for every enemy inflicted with Burn." 
+r:"^攻擊力提升(\d+\.\d+%)。使場上處於燃燒狀態的敵人受到的火焰屬性傷害提升(\d+%)。$"="<size\=28>Increases ATK by $1. Increases the Fire DMG Taken for enemies inflicted with Burn by $2.</size>"
+r:"^攻擊力提升(\d+\.\d+%)。使場上處於燃燒狀態的敵人受到的火焰屬性傷害提升(\d+%)。自身釋放技能時，場上每有1個處於燃燒狀態的敵人，則自身攻擊力提升(\d+%)，上限3層。$"="<size\=25>Increase ATK by $1. Increases the Fire DMG Taken for enemies inflicted with Burn by $2. When using a skill, increases ATK by $3 for each enemy inflicted with Burn.</size>"
 
 Unicorn
 r:"^仙靈的馴守(.*)$"="Fairy Taming $1"
-r:"^造成的治療效果提升(\d+%)。使得身上沒有減益效果的同伴受到傷害時防禦力提升(\d+%)。$"="Increase Healing Effect by $1. Increase ally's DEF by $2 if they have no debuff."
-r:"^造成的治療效果提升(\d+%)。使得身上沒有減益效果的同伴受到傷害時防禦力提升(\d+%),造成傷害時攻擊力提升(\d+\.\d+%)。$"="Increase Healing Effect by $1. Increase ally's DEF by $2 and increase ATK by $3 when dealing damage if they have no debuff,"
+r:"^造成的治療效果提升(\d+%)。使得身上沒有減益效果的同伴受到傷害時防禦力提升(\d+%)。$"="Increases Healing Effect by $1. Increases ally's DEF by $2 if they have no debuff."
+r:"^造成的治療效果提升(\d+%)。使得身上沒有減益效果的同伴受到傷害時防禦力提升(\d+%),造成傷害時攻擊力提升(\d+\.\d+%)。$"="Increases Healing Effect by $1. Increases ally's DEF by $2 and increases ally's ATK by $3 when dealing damage if they have no debuff,"
 
 White Rider
 r:"^終末之擾動(.*)$"="Doom Disturbance $1"
-r:"^效果命中提升(\d+%)。對敵人釋放{{A}}技能後，目標敵人身上每有1個詛咒效果，則使其受到的詛咒屬性傷害提升(.*)，上限4層，效果持續1回合。$"="Increase EHR by $1. After using a Persona skill on enemies, increase their Curse DMG Taken by $2 for 1 turn for every stack of Curse on the enemy, up to 4 stacks."
+r:"^效果命中提升(\d+%)。對敵人釋放{{A}}技能後，目標敵人身上每有1個詛咒效果，則使其受到的詛咒屬性傷害提升(.*)，上限(.*)層，效果持續1回合。$"="<size\=25>Increases EHR by $1. After using a Persona skill on enemies, increase their Curse DMG Taken by $2 for 1 turn for every stack of Curse they have, up to $3 stacks.</size>"
 
 Anubis
 r:"^靈魂的判官(.*)$"="Judge of Souls $1"
-r:"^攻擊力提升(\d+\.\d+%)。造成祝福傷害時，使自身獲得1-2個祝福效果。造成詛咒傷害時，使技能主目標獲得1-2個詛咒效果。攻擊帶有詛咒效果的敵人時，攻擊力提升(\d+%)。$"="Increase ATK by $1. When dealing Bless damage gain 1-2 stack(s) of Bless. When dealing Curse damage the main target gain 1-2 stack(s) of Curse. Increase ATK by $2 when attacking enemies with Curse."
-r:"^攻擊力提升(\d+\.\d+%)。造成祝福傷害時，使自身獲得2個祝福效果。造成詛咒傷害時，使技能主目標獲得2個詛咒效果。攻擊帶有詛咒效果的敵人時，攻擊力提升(\d+\.\d+%)。$"="Increase ATK by $1. When dealing Bless damage gain 2 stacks of Bless. When dealing Curse damage the main target gain 2 stacks of Curse. Increase ATK by $2 when attacking enemies with Curse."
-r:"^攻擊力提升(\d+\.\d+%)。造成祝福傷害時，使自身獲得2個祝福效果，並有50%固定機率使技能主目標獲得1個詛咒效果。造成詛咒傷害時，使技能主目標獲得2個詛咒效果，並有50%固定機率使自身獲得1個祝福效果。攻擊帶有詛咒效果的敵人時，攻擊力提升(\d+%)。$"="Increase ATK by $1. When dealing Bless damage gain 2 stacks of Bless and there is a 50% fixed chance to inflict 1 stack of Curse to the main target. When dealing Curse damage the main target gain 2 stacks of Curse and there is a 50% fixed chance for you to gain 1 stack of Bless. Increase ATK by $2 when attacking enemies with Curse."
+r:"^攻擊力提升(\d+\.\d+%)。造成祝福傷害時，使自身獲得1-2個祝福效果。造成詛咒傷害時，使技能主目標獲得1-2個詛咒效果。攻擊帶有詛咒效果的敵人時，攻擊力提升(\d+%)。$"="Increases ATK by $1. When dealing Bless damage gains 1-2 stack(s) of Bless. When dealing Curse damage the main target gains 1-2 stack(s) of Curse. Increases ATK by $2 when attacking enemies with Curse."
+r:"^攻擊力提升(\d+\.\d+%)。造成祝福傷害時，使自身獲得2個祝福效果。造成詛咒傷害時，使技能主目標獲得2個詛咒效果。攻擊帶有詛咒效果的敵人時，攻擊力提升(\d+\.\d+%)。$"="Increases ATK by $1. When dealing Bless damage gains 2 stacks of Bless. When dealing Curse damage the main target gains 2 stacks of Curse. Increases ATK by $2 when attacking enemies with Curse."
+r:"^攻擊力提升(\d+\.\d+%)。造成祝福傷害時，使自身獲得2個祝福效果，並有50%固定機率使技能主目標獲得1個詛咒效果。造成詛咒傷害時，使技能主目標獲得2個詛咒效果，並有50%固定機率使自身獲得1個祝福效果。攻擊帶有詛咒效果的敵人時，攻擊力提升(\d+%)。$"="<size\=24>Increases ATK by $1. When dealing Bless damage gains 2 stacks of Bless and there is a 50% fixed chance to inflict 1 stack of Curse to the main target. When dealing Curse damage the main target gains 2 stacks of Curse and there is a 50% fixed chance for you to gain 1 stack of Bless. Increases ATK by $2 when attacking enemies with Curse.</size>"
 
 ----------
 RANK 5
@@ -325,7 +413,7 @@ r:"^歲暮出沒的惡獸(.*)$"="Yearly Beast $1"
 r:"^攻擊力提升(\d+\.\d+%)。對敵人使用{{A}}技能後，使技能目標獲得「歲之滅祀」，持續(\d+)回合。擁有「歲之滅祀」的角色首次受到火焰傷害時會獲得「驚恐」：受到傷害提升(\d+%)，持續(\d+)回合，並有(\d+%)的基礎機率附著燃燒，持續(\d+)回合。$"="<size\=24>Increase ATK by $1. After using {{A}} skill on enemies, inflict the targets with [Yearly Sacrifice] for $2 turns. Enemies with [Yearly Sacrifice] will gain [Frightened] when taking Fire damage for the first time: Increase DMG Taken by $3 for $4 turns, with a $5 base chance to inflict Burn for $6 turns.</size>"
 歲之滅祀=Yearly Sacrifice
 驚恐=Frightened
-r:"^受到火焰屬性傷害時，獲得(\d+)層『驚恐』$"="When taking Fire damage, \ngain $1 stack of [Frightened]"
+r:"^受到火焰屬性傷害時，獲得(\d+)層『驚恐』$"="Gain [Frightened] when taking Fire damage"
 r:"^降<color\=#000000>禍</color>吞禧$"="F<color\=#000000>o</color>rtune Devourer"
 r:"^歲<color\=#000000>之</color>滅祀$"="Y<color\=#000000>e</color>arly Sacrifice"
 r:"^驚<color\=#000000>恐</color>$"="F<color\=#000000>r</color>ightened"

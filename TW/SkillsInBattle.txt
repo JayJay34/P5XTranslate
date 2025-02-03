@@ -639,6 +639,9 @@ r:"使<color\=#FFFF00>1名</color>敵方攻擊、防禦、效果命中、效果�
 Elec Break
 消除<color\=#FFFF00>1名</color>敵人的電擊耐性，效果持續2回合。=Negates Electric resistance of <color\=#FFFF00>1</color> enemy for 2 turns.
 
+Temperament Disruption
+r:"^使<color\=#FFFF00>所有</color>敵人的防禦力降低(\d+\.\d+%)，受到傷害提升(\d+\.\d+%)，持續(\d+)回合。$"="Decreases <color\=#FFFF00>all</color> enemies' DEF by $1 and increases their DMG Taken by $2 for $3 turns."
+
 --- Dispel ---
 驅散<color\=#FFFF00>所有</color>同伴的1個屬性降低效果。=Negates 1 stat reducing effect for all allies.
 驅散<color\=#FFFF00>所有</color>敵人的1個屬性提升效果。=Negates 1 stat increasing effect for all enemies.
@@ -681,24 +684,6 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動�
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deals $1 ATK Nuke damage to <color\=#FFFF00>all</color> enemies and increase their DMG Taken by $2 for $3 turns."
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deals $1 ATK Bless damage to <color\=#FFFF00>all</color> enemies and increase their DMG Taken by $2 for $3 turns."
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deals $1 ATK Curse damage to <color\=#FFFF00>all</color> enemies and increase their DMG Taken by $2 for $3 turns."
-
-// Skill buffs
-r:"^物理屬性傷害提升(\d+\.\d+%)。$"="Strengthen Physical attacks by $1."
-r:"^火焰屬性傷害提升(\d+\.\d+%)。$"="Strengthen Fire attacks by $1."
-r:"^冰凍屬性傷害提升(\d+\.\d+%)。$"="Strengthen Ice attacks by $1."
-r:"^電擊屬性傷害提升(\d+\.\d+%)。$"="Strengthen Electric attacks by $1."
-r:"^疾風屬性傷害提升(\d+\.\d+%)。$"="Strengthen Wind attacks by $1."
-r:"^念動屬性傷害提升(\d+\.\d+%)。$"="Strengthen Psy attacks by $1."
-r:"^詛咒屬性傷害提升(\d+\.\d+%)。$"="Strengthen Curse attacks by $1."
-r:"^祝福屬性傷害提升(\d+\.\d+%)。$"="Strengthen Bless attacks by $1."
-r:"^核熱屬性傷害提升(\d+\.\d+%)。$"="Strengthen Nuclear attacks by $1."
-r:"^槍械傷害提升(\d+\.\d+%)。$"="Strengthen Gun attacks by $1."
-r:"^萬能屬性傷害提升(\d+\.\d+%)。$"="Strengthen Almighty attacks by $1."
-r:"^造成治療效果提升(\d+\.\d+%)。$"="Effects of healing magic are increased by $1."
-r:"^受到的治療效果提升(\d+\.\d+%)。$"="Increase effects of healing magic received by $1."
-r:"^槍械攻擊暴擊率提升(\d+\.\d+%)。$"="Increase CRIT Rate of Gun attacks by $1."
-r:"^即死技能成功率上升(\d+\.\d+%)。$"="Increase chance of Instant Death with skills by $1."
-r:"^護盾效果提升(\d+\.\d+%)。$"="Increase Shield Effect by $1."
 
 //Stat buffs
 r:"戰鬥開始時攻擊力提升(\d+\.\d+%)，持續2回合。"=Increase ATK by $1 at the start of battle for 2 turns.
@@ -758,6 +743,8 @@ sr:"^<color\=#FF0000>(.*)</color>防禦降低了……$"="DEF Down!"
 r:"^<color\=#FF0000>(.*)</color>效果命中、效果抵抗提升了……$"="          EHR/ Effect RES Up!"
 sr:"^<color\=#FF0000>(.*)</color>暴擊率提升了……$"="<color\=#FF0000>$1</color> CRIT Rate Up!"
 <color\=#FF0000>所有敵人</color>受到的傷害提升了……=<color\=#FF0000>All enemies</color> DMG Taken Up!
+
+sr:"^<color\=#FF0000>(.*)</color>獲得了護盾……$"="<color\=#FF0000>$1</color> gained Shield..."
 
 sr:"^成功驅散掉了(\d+)層<color\=#FF0000>『(.*)』</color>！$"="Dispelled $1 stack of <color\=#FF0000>[$2]</color>!"
 sr:"^<color\=#FF0000>(.*)</color>退出了蓄力狀態……$"="<color\=#FF0000>$1</color> exited Charge..."
@@ -839,6 +826,7 @@ r:"^受<color\=#000000>治</color>療提升$"="H<color\=#000000>e</color>aling R
 r:"^受<color\=#000000>護</color>盾提升$"="S<color\=#000000>h</color>ield Received Up"
 
 r:"^生<color\=#000000>命</color>上限提升$"="M<color\=#000000>a</color>x HP Up"
+r:"^生<color\=#000000>命</color>治療$"="R<color\=#000000>e</color>generate"
 r:"^護<color\=#000000>盾</color>$"="S<color\=#000000>h</color>ield"
 r:"^魔<color\=#000000>法</color>蓄力$"="C<color\=#000000>o</color>ncentrate"
 
@@ -1020,6 +1008,7 @@ r:"^攻擊力、防禦力提高(\d+(.\d+)?(%)?)$"="Increase ATK and DEF by $1"
 r:"^造成TECHNICAL時，攻擊力提升(\d+%)，暴擊效果提升(\d+%)$"="<size\=26>Increase ATK by $1 and CRIT DMG by $2 when dealing TECHNICAL</size>"
 r:"^防禦提升(\d+(.\d+)?(%)?)$"="Increase DEF by $1"
 r:"^防禦力提升(\d+(.\d+)?(%)?)$"="Increase DEF by $1"
+r:"^處於護盾保護下，防禦力額外提升(\d+(.\d+)?(%)?)$"="Increase DEF by $1 when Shielded"
 r:"^精力值消耗降低(\d+(.\d+)?(%)?)$"="Decrease SP cost by $1"
 r:"^速度提升(\d+(.\d+)?(%)?)$"="Increase SPD by $1"
 r:"^暴擊率提升(\d+(.\d+)?(%)?)$"="Increase CRIT Rate by $1"

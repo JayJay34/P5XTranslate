@@ -318,7 +318,7 @@ r:"^瑪哈拉昆達$"="Marakunda"
 迪卡加=Dekaja
 迪坤達=Dekunda
 女巫詛咒=Debilitate
-音律侵擾=Temperament Disruption
+音律侵擾=<size\=22>Temperament Disruption</size>
 
 --- Break Skills ---
 消除疾風耐性=Wind Break
@@ -486,7 +486,7 @@ sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬�
 sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，效果持續3回合。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$3</color> chance of inflicting $4 for 3 turns.
 
 //AoE + Reduce DEF
-sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，並使其防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續2回合。"=Deals <color\=#FFFC40>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and reduce their DEF by <color\=#FFFC40>$3</color> for 2 turns.
+sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，並使其防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續2回合。"=Deals <color\=#FFFC40>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and decreases their DEF by <color\=#FFFC40>$3</color> for 2 turns.
 
 //AoE + Ailment on main target
 sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，並有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使主目標敵人陷入(.*)狀態，效果持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$3</color> chance of inflicting $4 to the main target for 2 turns.
@@ -653,6 +653,7 @@ r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬�
 // AoE Basic Curses
 r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，有機率使敵人獲得(\d+\~\d+)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and inflicts $2 stack(s) of <link\=s|112><u>Curse</u></link>.
 r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得(.*)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and inflicts $2 stack(s) of <link\=s|112><u>Curse</u></link>.
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，有機率為敵方附加(.*)個<link\="s\|112"><u>詛咒</u></link>效果。$"="Deals <color\=#fffc40>$1</color> ATK Curse damage to all enemies, with a chance to inflict $2 stack(s) of <link\="s|112"><u>Curse</u></link>."
 
 //Brand of Malice (p5x decided to use - instead of ~ for this one so using some stupid methods to make things consistent...
 r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，並使其獲得(\d+)(.*)(\d+)個詛咒效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and inflicts $2~$4 stack(s) of <link\=s|112><u>Curse</u></link>.
@@ -722,11 +723,11 @@ r:"使所有同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#f
 //
 r:"使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(.*)</color>的生命值，並驅散1個<link\="s\|101"><u>元素異常</u></link>效果。"=Restore HP equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to 1 ally and cure 1 <link\=s|101><u>Elemental Ailment</u></link>.
 
-//
-r:"使1名同伴恢復<color\=#fffc40>13.2%</color>攻擊力+<color\=#fffc40>257</color>的生命值，並有100%基礎機率驅散其身上的一個隨機減益效果。驅散成功後，額外恢復其<color\=#fffc40>8.8%</color>攻擊力+<color\=#fffc40>171</color>的生命值。"=
-
 Power of Prayer
 r:"^使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，並使其防禦力提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續2回合。$"="Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to 1 ally and increases their DEF by <color\=#fffc40>$3</color> for 2 turns."
+
+Deep Cleanse
+r:"^使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，並有(\d+%)基礎機率驅散其身上的一個隨機減益效果。驅散成功後，額外恢復其<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值。$"="Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to 1 ally and there is a $3 base chance to dispel 1 random debuff. After dispelling, additionally restores <color\=#fffc40>$4</color> ATK + <color\=#fffc40>$5</color> HP."
 
 --- Buffs ---
 
@@ -819,17 +820,17 @@ r:"^有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使1名敵人陷入<link\=
 --- Passives ---
 
 // Skill buffs
-r:"^物理屬性傷害提升(\d+(.\d+)?(%)?)。$"="Strengthen Physical attacks by $1."
-r:"^火焰屬性傷害提升(\d+(.\d+)?(%)?)。$"="Strengthen Fire attacks by $1."
-r:"^冰凍屬性傷害提升(\d+(.\d+)?(%)?)。$"="Strengthen Ice attacks by $1."
-r:"^電擊屬性傷害提升(\d+(.\d+)?(%)?)。$"="Strengthen Electric attacks by $1."
-r:"^疾風屬性傷害提升(\d+(.\d+)?(%)?)。$"="Strengthen Wind attacks by $1."
-r:"^念動屬性傷害提升(\d+(.\d+)?(%)?)。$"="Strengthen Psy attacks by $1."
-r:"^詛咒屬性傷害提升(\d+(.\d+)?(%)?)。$"="Strengthen Curse attacks by $1."
-r:"^祝福屬性傷害提升(\d+(.\d+)?(%)?)。$"="Strengthen Bless attacks by $1."
-r:"^核熱屬性傷害提升(\d+(.\d+)?(%)?)。$"="Strengthen Nuclear attacks by $1."
-r:"^槍械傷害提升(\d+(.\d+)?(%)?)。$"="Strengthen Gun attacks by $1."
-r:"^萬能屬性傷害提升(\d+(.\d+)?(%)?)。$"="Strengthen Almighty attacks by $1."
+r:"^物理屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increase Physical DMG by $1."
+r:"^火焰屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increase Fire DMG by $1."
+r:"^冰凍屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increase Ice DMG by $1."
+r:"^電擊屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increase Electric DMG by $1."
+r:"^疾風屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increase Wind DMG by $1."
+r:"^念動屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increase Psy DMG by $1."
+r:"^詛咒屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increase Curse DMG by $1."
+r:"^祝福屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increase Bless DMG by $1."
+r:"^核熱屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increase Nuclear DMG by $1."
+r:"^槍械傷害提升(\d+(.\d+)?(%)?)。$"="Increase Gun DMG by $1."
+r:"^萬能屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increase Almighty DMG by $1."
 r:"^造成治療效果提升(\d+(.\d+)?(%)?)。$"="Effects of healing magic are increased by $1."
 r:"^受到的治療效果提升(\d+(.\d+)?(%)?)。$"="Increase effects of healing magic received by $1."
 r:"^槍械攻擊暴擊率提升(\d+(.\d+)?(%)?)。$"="Increase CRIT Rate of Gun attacks by $1."

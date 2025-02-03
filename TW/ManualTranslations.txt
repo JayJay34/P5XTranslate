@@ -221,6 +221,7 @@ r:"^待設置$"="None"
 當前沒有劇情日誌=Currently no dialogue
 當前劇情為<color\=#ff0000>重要劇情</color>，是否確定跳過？=This is an <color\=#ff0000>important scene</color>. \nAre you sure you want to skip it?
 當前劇情為重要劇情，不可跳過=Cannot skip important scene.
+此處可調整極速模式加速對話劇情=Change speed here
 
 點擊追蹤FB官方粉絲團=Follow official FB
 點擊加入Discord官方頻道=Join official Discord
@@ -697,6 +698,7 @@ r:"^領取$"="<size\=28>Claim</size>"
 貨幣=Currency
 怪盜等級=Thief Lv
 怪盜品質=Thief Rarity
+怪盜評級=Score
 意識等級=Awareness Lv
 面具品質=Rarity
 面具等級=Mask Lv
@@ -1097,33 +1099,32 @@ r:"^(\d+)時(\d+)$"=" $1 hours $2 minutes"
 「下週一」登錄即可領取=Log in next Monday to claim!
 r:"^本週累計今日計畫領獎次數\（(\d+)/(\d+)\），可額外領取$"="Bonus rewards after completing ($1/$2) dailys"
 r:"^本週累計今日計畫領獎次數\（(\d+)/(\d+)\），再額外領取$"="Bonus rewards after completing ($1/$2) dailys"
-
-r:"^本週累計今日計畫領獎次數\((\d)\/(\d)\)，可額外領取$"="Number of dailys completed this week ($1/$2), you can receive additional rewards"
+r:"^本週累計今日計畫領獎次數\((\d+)\/(\d+)\)，可額外領取$"="Number of dailys completed this week ($1/$2), you can receive additional rewards"
 
 // DAILY //
 r:"^登入遊戲$"="Log in to the game"
-r:"^登入遊戲 \((\d+)\/1\)$"="Log in to the game ($1/1)"
+r:"^登入遊戲 \((\d+)\/(\d+)\)$"="Log in to the game ($1/$2)"
 r:"進行1次{{A}}合成"=Fuse 1 Persona
-r:"完成1次「{{A}}」挑戰 \((\d)\/(\d)\)"=Complete 1 {{A}} Farm ($1/$2)
-r:"進行1次打工 \((\d)\/(\d)\)"=Complete a Part-time job ($1/$2)
-r:"消耗1000日元 \((\d+)\/1000\)"=Spend ¥$1 (¥$1/1000)
-r:"^消耗5000魂石 \((\d+)\/5000\)$"=Spend 5000 Soul Gens ($1/5000)
+r:"完成1次「{{A}}」挑戰 \((\d+)\/(\d+)\)"=Complete 1 {{A}} Farm ($1/$2)
+r:"進行1次打工 \((\d+)\/(\d+)\)"=Complete 1 Part-time job ($1/$2)
+r:"^消耗(\d+)日元 \((\d+)\/(\d+)\)$"="Spend ¥$1 (¥$2/$3)"
+r:"^消耗(\d+)魂石 \((\d+)\/(\d+)\)$"="Spend $1 Soul Gems ($1/$2)"
 
-r:"消耗3點行動力 \((\d)\/(\d)\)"=Spend 3 Energy Points ($1/$2)
-r:"消耗120點體力 \((\d+)\/120\)"=Spend 120 Stamina ($1/120)
+r:"^消耗(\d+)點行動力 \((\d+)\/(\d+)\)$"="Spend $1 Energy Points ($2/$3)"
+r:"^消耗(\d+)點體力 \((\d+)\/(\d+)\)$"="Spend $1 Stamina ($2/$3)"
 r:"進行1次邀約"=Spend time with a Confidant 1 time
 r:"^完成2次「厄抑之境」 \((\d+)\/2\)"=Complete 2 Metaverse Farm ($1/2)
-r:"完成1次「啟示套裝」挑戰 \((\d)\/(\d)\)"=Complete 1 [Revelation Farm] ($1/$2)
-r:"完成1次「旖旎香調」挑戰 \((\d)\/(\d)\)"=Complete 1 [Perfume Farm] ($1/$2)
-r:"完成1次「裝配冶藝」挑戰 \((\d)\/(\d)\)"=Complete 1 [Ore Farm] ($1/$2)
-r:"完成1次「靈之參悟」挑戰 \((\d)\/(\d)\)"=Complete 1 [Incense farm] ($1/$2)
-r:"進行1次{{A}}育成 \((\d)\/(\d)\)"=Perfrom 1 Persona skill inheritance ($1/$2)
-r:"^完成1次「往日回溯」挑戰 \((\d)\/(\d)\)$"="Complete 1 [Past Echo] ($1/$2)"
-r:"^通關1次「閼凶夢之扉」 \((\d)\/(\d)\)$"="Complete 1 [Door of Nightmares] ($1/$2)"
-r:"^完成1次「天鵝絨試煉」 \((\d)\/(\d)\)$"="Complete 1 [Velvet Trial] ($1/$2)"
-r:"^完成1次「心之海試煉」 \((\d)\/(\d)\)$"="Complete 1 [Sea of Souls Trial] ($1/$2)"
-r:"^在「心軌擇行」中通過1個月臺 \((\d)\/(\d)\)$"="Clear 1 Platform in [Heart Rail] ($1/$2)"
-r:"^完成1次「委託」派遣 \((\d)\/(\d)\)$"="<size\=29>Complete 1 Dispatch in [Commissions] ($1/$2)</size>"
+r:"完成1次「啟示套裝」挑戰 \((\d+)\/(\d+)\)"=Complete 1 [Revelation Farm] ($1/$2)
+r:"完成1次「旖旎香調」挑戰 \((\d+)\/(\d+)\)"=Complete 1 [Perfume Farm] ($1/$2)
+r:"完成1次「裝配冶藝」挑戰 \((\d+)\/(\d+)\)"=Complete 1 [Ore Farm] ($1/$2)
+r:"完成1次「靈之參悟」挑戰 \((\d+)\/(\d+)\)"=Complete 1 [Incense Farm] ($1/$2)
+r:"進行1次{{A}}育成 \((\d+)\/(\d+)\)"=Perfrom 1 Persona skill inheritance ($1/$2)
+r:"^完成1次「往日回溯」挑戰 \((\d+)\/(\d+)\)$"="Complete 1 [Past Echo] ($1/$2)"
+r:"^通關1次「閼凶夢之扉」 \((\d+)\/(\d+)\)$"="Complete 1 [Door of Nightmares] ($1/$2)"
+r:"^完成1次「天鵝絨試煉」 \((\d+)\/(\d+)\)$"="Complete 1 [Velvet Trial] ($1/$2)"
+r:"^完成1次「心之海試煉」 \((\d+)\/(\d+)\)$"="Complete 1 [Sea of Souls Trial] ($1/$2)"
+r:"^在「心軌擇行」中通過1個月臺 \((\d+)\/(\d+)\)$"="Clear 1 Platform in [Heart Rail] ($1/$2)"
+r:"^完成1次「委託」派遣 \((\d+)\/(\d+)\)$"="<size\=29>Complete 1 Dispatch in [Commissions] ($1/$2)</size>"
 
 // WEEKLY //
 r:"累計消耗(\d+)魂石 \((\d+)\/(\d+)\)"=Spend $1 Soul Gems ($2/$3)
@@ -1131,16 +1132,16 @@ r:"累計消耗(\d+)日元 \((\d+)\/(\d+)\)"=Spend ¥$1 (¥$2/¥$3)
 r:"累計消耗(\d+)點行動力 \((\d+)\/(\d+)\)"=Spend $1 Energy Points ($2/$3)
 r:"累計消耗(\d+)點體力 \((\d+)\/(\d+)\)"=Spend $1 Stamina ($2/$3)
 r:"^累計完成12次「厄抑之境」 \((\d+)\/(\d+)\)$"=Complete 12 Farming Domain ($1/12)
-r:"完成1次「往日回溯」 \((\d)\/(\d)\)"=Complete 1 [Past Echo] ($1/$2)
-r:"^達到「閼凶夢之扉」第4檔積分要求 \((\d)\/(\d)\)$"="Reach the 4th score bracket in [Door of Nightmares] ($1/$2)"
+r:"完成1次「往日回溯」 \((\d+)\/(\d+)\)"=Complete 1 [Past Echo] ($1/$2)
+r:"^達到「閼凶夢之扉」第4檔積分要求 \((\d+)\/(\d+)\)$"="Reach the 4th score bracket in [Door of Nightmares] ($1/$2)"
 r:"在「心軌擇行」中通過10個月臺 \((\d+)\/10\)"=Clear 10 Platforms in [Heart Rail] ($1/10)
 r:"在「星盤試煉」通過1個「監測點」 \((\d+)\/(\d+)\)$"="Clear 1 [Monitoring Point] in [Astrolabe Trials] ($1/$2)"
 
 // SEASON //
-r:"在「命運交錯之時」中通關「收下慾望」 \((\d)\/(\d)\)"=Complete the Final Mission in the \nPhantom Thieves event ($1/$2)
+r:"在「命運交錯之時」中通關「收下慾望」 \((\d+)\/(\d+)\)"=Complete the Final Mission in the \nPhantom Thieves event ($1/$2)
 r:"在「怪盜交易所」中消耗3000個怪盜徽記 \((\d+)\/(\d+)\)"=Spend 3,000 Phantom Thieves Emblems\nin the Event Exchange ($1/$2)
 r:"累計進行50次「角色簽約」&「武器補給」 \((\d+)\/(\d+)\)"=Perform 50 pulls in total ($1/$2)
-r:"在「心之海試煉」中通過「西部施工區」 \((\d)\/(\d)\)"=Clear [West Construction Zone] in Sea of Souls Trials ($1/$2)
+r:"在「心之海試煉」中通過「西部施工區」 \((\d+)\/(\d+)\)"=Clear [West Construction Zone] in Sea of Souls Trials ($1/$2)
 r:"完成12次「在盧布朗度過」日程 \((\d+)\/(\d+)\)"=Spend time in Leblanc 12 times ($1/$2)
 r:"在「心軌擇行」中完成1次挑戰 \((\d+)\/1\)"=Complete 1 challenge in [Heart Rail] ($1/1)
 r:"完成一個星盤試練的「宮主星」或「命主星」 \((\d+)\/1\)"=Clear 1 [House] or [Chart Ruler] in Astrolabe Trials ($1/1)
@@ -1182,7 +1183,8 @@ r:"^簽約$"="Pulls"
 自選<color\=#FFD145>UP武器</color>，占五星武器基礎成功機率的<color\=#FFD145>50%</color>=Choose <color\=#FFD145>RATE UP Weapon</color>. With a base chance of <color\=#FFD145>50%</color> to get the chosen weapon
 自選<color\=#FFD145>非UP武器</color>，未獲得UP五星武器時只會獲取自選的兩把武器=<size\=18>Choose 2 <color\=#FFD145>Non-RATE UP Weapons</color>. If you missed the RATE UP 5★ weapon, you will only get the chosen weapons</size>
 請選擇2把五星武器後再補給。=Please choose 2 5★ weapons.
-自選UP武器更換成功。=Changed the RATE UP weapons.
+UP武器更換成功。=Changed the RATE UP weapon.
+自選UP武器更換成功。=Changed the custom RATE UP weapons.
 
 查詢結果僅保留最近90天補給資訊=<color\=#FFDF00>The pull history only records up to <u>90 days.</u></color>
 查詢結果僅保留最近90天簽約資訊=<color\=#FFDF00>The pull history only records up to <u>90 days.</u></color>
@@ -1737,8 +1739,6 @@ r:"^{{A}}似乎有話要說，要陪她嗎？$"="{{A}} seems to have something t
 
 {{A}}的好奇心=<size\=24>{{A}}'s curiosity</size>
 {{A}}對於現代都市中的很多事物都感到好奇，希望能和你一起體驗={{A}} is curious about many things in a modern city and would like to experience them with you.
-深入了解的方式=<size\=24>Ways to \nunderstand deeper</size>
-為了更好的了解你，{{A}}提出了一個不尋常的建議……=<size\=25>In order to get to understand you better, \n{{A}} has made an unusual suggestion...</size> 
 
 和{{A}}一起玩吧=<size\=24>Play together\nwith {{A}}</size>
 {{A}}應該會在線上吧，登入遊戲一起玩吧={{A}}should be online, log in \nto the game and play together
@@ -1747,6 +1747,15 @@ r:"^{{A}}似乎有話要說，要陪她嗎？$"="{{A}} seems to have something t
 田地=Farmland
 遠處的街道=Distant streets
 雪原=Snowfields
+
+兩個人的觀影時間=<size\=24>Movie time \nfor two</size>
+在家裡和{{A}}一起看她推薦的電影吧=<size\=26>Let's watch the movie recommended by {{A}} together at home</size>
+
+深入了解的方式=<size\=24>Ways to \nunderstand deeper</size>
+為了更好的了解你，{{A}}提出了一個不尋常的建議……=<size\=25>In order to get to understand you better, \n{{A}} has made an unusual suggestion...</size> 
+
+花茶之約=<size\=24>Tea Date</size>
+{{A}}想要約你一起喝她準備的花茶……=<size\=26>{{A}} wants to have tea with you...</size>
 
 調查迫近的「威脅」=<size\=24>Investigate the \nlooming "Threat"</size>
 清似乎認為有「邪惡力量」侵蝕了你家……=Kiyoshi seems to think "evil forces" have corrupted your home...
@@ -1815,6 +1824,7 @@ r:"^要<color\=#ff0000>回家</color>嗎？\n還是說去附近的<color\=#ff000
 
 元町中華街是品嘗<color\=#ff0000>中華料理</color>的好地方啊，\n舉世聞名的料理，想去品嘗一下嗎？=<size\=30>Motomachi Chinatown is a great place to enjoy <color\=#ff0000>Chinese Cuisine</color>. Want to try this world-famous cuisine?</size>
 品川好像有非常著名的<color\=#ff0000>水族館</color>，\n要去看看嗎？=There is a famous <color\=#ff0000>Aquarium</color> in Shinagawa. Want to go there?
+銀座好像有<color\=#ff0000>高級壽司店</color>，\n可以品嘗到珍貴的料理呢，要去評鑒一下嗎？=There is a <color\=#ff0000>Sushi Restaurant</color> in Ginza. \nWant to try some rare dishes?
 
 讀書進度=<size\=24> Reading\n Progress</size> 
 閱讀消耗：= 
@@ -1826,6 +1836,7 @@ r:"^要<color\=#ff0000>回家</color>嗎？\n還是說去附近的<color\=#ff000
 聽說在{{A}}街頭，有一位神秘的占卜師=<size\=25>I heard there's a mysterious fortune-teller in Shinjuku</size>
 聽說{{A}}有一個瀟灑的吉他少女在演唱=<size\=25>I heard there's a chic girl in {{A}} who plays the guitar</size>
 聽說在{{A}}，有一個小女孩在進行募捐=<size\=25>I heard there's a little girl collecting donations in {{A}}</size>
+似乎由於『運勢占卜』的效果，運氣變得更好了=There is an active [Fortune Reading]
 似乎掌握了觀察的心得=I have masted Observation Insights
 似乎掌握了服務的心得=I have masted Service Insights
 似乎掌握了在便利商店打工的心得=<size\=28>I have masted working at the Convenience Store</size>
@@ -1912,33 +1923,33 @@ sr:"是(.*)的『(.*)』。$"="It's the $1 $2."
 
 愚者=Fool
 r:"^在下次通過『厄抑之境』獲得{{A}}時，額外獲得大量獎勵。$"="The next time you complete a Metaverse Farm to gain Persona, gain lots of bonus rewards."
-sr:"^在下次通過『厄抑之境』獲得{{A}}時，額外獲得大量獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you complete a Metaverse Farm to gain Persona, gain lots of bonus rewards.\n<color\=#FFC000>（$1 time(s) left）</color>"
+sr:"^在下次通過『厄抑之境』獲得{{A}}時，額外獲得大量獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you complete a Metaverse Farm to gain Persona, gain lots of bonus rewards.\n<color\=#FFC000>($1 time(s) left)</color>"
 
 魔術師=Magician
 在接下來4次透過工作台合成道具時，額外產出少量道具。=The next 4 times you craft at the workbench, gain some bonus items.
-r:"^在接下來4次透過工作台合成道具時，額外產出少量道具。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 4 times you craft at the workbench, gain some bonus items.\n<color\=#FFC000>（$1 time(s) left）</color>"
+r:"^在接下來4次透過工作台合成道具時，額外產出少量道具。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 4 times you craft at the workbench, gain some bonus items.\n<color\=#FFC000>($1 time(s) left)</color>"
 
 女祭祀=Priestess
 在接下來3次學校『上課答題』時，額外獲得更多『人格指數』。=Gain more Social Stats from the next 3 classroom answers.
-r:"^在接下來3次學校『上課答題』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="Gain more Social Stats from the next 3 classroom answers.\n<color\=#FFC000>（$1 time(s) left）</color>"
+r:"^在接下來3次學校『上課答題』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="Gain more Social Stats from the next 3 classroom answers.\n<color\=#FFC000>($1 time(s) left)</color>"
 
 皇帝=Emperor
 在接下來3次透過都市日程進行『打工』獲得現金時，額外獲得更多現金。=The next 3 times you work, gain more yen.
-r:"^在接下來3次透過都市日程進行『打工』獲得現金時，額外獲得更多現金。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 3 times you work, gain more yen.\n<color\=#FFC000>（$1 time(s) left）</color>"
+r:"^在接下來3次透過都市日程進行『打工』獲得現金時，額外獲得更多現金。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 3 times you work, gain more yen.\n<color\=#FFC000>($1 time(s) left)</color>"
 
 教皇=Hierophant
 sr:"^在接下來4次透過都市日程獲得『(.*)』人格指數時，額外獲得更多『人格指數』。$"="The next 4 times you gain $1 from city activities, gain more Social Stats."
-sr:"^在接下來4次透過都市日程獲得『(.*)』人格指數時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 4 times you gain $1 from city activities, gain more Social Stats.\n<color\=#FFC000>（$2 time(s) left）</color>"
+sr:"^在接下來4次透過都市日程獲得『(.*)』人格指數時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 4 times you gain $1 from city activities, gain more Social Stats.\n<color\=#FFC000>($2 time(s) left)</color>"
 
 戀人=Lovers
 在接下來3次通過都市日程『邀約任意協同者』獲得好感時，額外獲得更多好感度。=The next 3 times you gain Confidant Points from city activities, additionally gain more Confidant Points.
-r:"^在接下來3次透過都市日程『邀約任意協同者』獲得好感時，額外獲得更多好感度。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 3 times you gain Confidant Points from city activities, additionally gain more Confidant Points.\n<color\=#FFC000>（$1 time(s) left）</color>"
+r:"^在接下來3次透過都市日程『邀約任意協同者』獲得好感時，額外獲得更多好感度。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 3 times you gain Confidant Points from city activities, additionally gain more Confidant Points.\n<color\=#FFC000>($1 time(s) left)</color>"
 
 戰車=Chariot
 
 正義=Justice
 在下次透過都市日程, 幫助其他角色時，額外獲得獎勵。=The next time you help other characters from city activities, gain more rewards.
-r:"^在下次透過都市日程, 幫助其他角色時，額外獲得獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you help other characters from city activities, gain more rewards.\n<color\=#FFC000>（$1 time(s) left）</color>"
+r:"^在下次透過都市日程, 幫助其他角色時，額外獲得獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you help other characters from city activities, gain more rewards.\n<color\=#FFC000>($1 time(s) left)</color>"
 
 隱者=Hermit
 在接下來3次透過都市日程在『家裡』學習、打遊戲、打掃衛生時，額外獲得更多『人格指數』。=The next 3 times you study, game or clean at home, gain more Social Stats.
@@ -1946,41 +1957,41 @@ r:"^在接下來(\d+)次透過都市日程在『家裡』學習、打遊戲、�
 
 命運之輪=Fortune
 在下次透過都市日程獲得『任意人格指數』時，額外獲得更多『人格指數』。=The next time you gain Social Stats from city activities, gain more Social Stats.
-r:"^在下次透過都市日程獲得『任意人格指數』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you gain Social Stats from city activities, gain more Social Stats.\n<color\=#FFC000>（$1 time(s) left）</color>"
+r:"^在下次透過都市日程獲得『任意人格指數』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次\）</color>$"="The next time you gain Social Stats from city activities, gain more Social Stats.\n<color\=#FFC000>($1 time(s) left)</color>"
 
 力量=Strength
-在接下來2次透過都市日程進行『健身房』鍛鍊時，額外獲得更多『人格指數』。=The next 2 times you workout in the gym from city activities, gain more Social Stats.
-r:"^在接下來2次透過都市日程進行『健身房』鍛鍊時，額外獲得更多『人格指數』。$"="The next 2 times you workout in the gym from city activities, gain more Social Stats.\n<color\=#FFC000>（$1 time(s) left）</color>"
+在接下來2次透過都市日程進行『健身房』鍛煉時，額外獲得更多『人格指數』。=The next 2 times you workout in the gym from City Activities, gain more Social Stats.
+r:"^在接下來2次透過都市日程進行『健身房』鍛煉時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you workout in the gym from City Activities, gain more Social Stats.\n<color\=#FFC000>($1 time(s) left)</color>"
 
 倒吊人=Hanged Man
 
 死神=Death
 在下次通過『榮級求索』、『輜械求索』、『人格求索』關卡時，額外獲得大量獎勵。=The next time you complete a [Character EXP Farm], [Weapon EXP Farm] or [Persona EXP Farm], gain lots of bonus rewards.
-r:"^在下次通過『榮級求索』、『輜械求索』、『人格求索』關卡時，額外獲得大量獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you complete a [Character EXP Farm], [Weapon EXP Farm] or [Persona EXP Farm], gain lots of bonus rewards.\n<color\=#FFC000>（$1 time(s) left）</color>"
+r:"^在下次通過『榮級求索』、『輜械求索』、『人格求索』關卡時，額外獲得大量獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you complete a [Character EXP Farm], [Weapon EXP Farm] or [Persona EXP Farm], gain lots of bonus rewards.\n<color\=#FFC000>($1 time(s) left)</color>"
 
 節制=Temperance
 
 惡魔=Devil
 sr:"^在下次通過『(.*)』、『(.*)』關卡時，額外獲得大量獎勵。$"="The next time you complete a $1 or $2, gain lots of bonus rewards."
-sr:"^在下次通過『(.*)』、『(.*)』關卡時，額外獲得大量獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you complete a $1 or $2, gain lots of bonus rewards.\n<color\=#FFC000>（$3 time(s) left）</color>"
+sr:"^在下次通過『(.*)』、『(.*)』關卡時，額外獲得大量獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you complete a $1 or $2, gain lots of bonus rewards.\n<color\=#FFC000>（$3 time(s) left)</color>"
 
 星星=Star
 
 月亮=Moon
 在接下來2次『夜晚』進行都市行程獲得『任意人格指數』時，額外獲得更多『人格指數』。=The next 2 times you gain Social Stats from city activities at nighttime, gain more Social Stats.
-r:"^在接下來2次『夜晚』進行都市行程獲得『任意人格指數』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you gain Social Stats from city activities at nighttime, gain more Social Stats.\n<color\=#FFC000>（$1 time(s) left）</color>"
+r:"^在接下來2次『夜晚』進行都市行程獲得『任意人格指數』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you gain Social Stats from city activities at nighttime, gain more Social Stats.\n<color\=#FFC000>($1 time(s) left)</color>"
 
 太陽=Sun
 在接下來2次『放學後』或『下午』進行都市行程獲得『任意人格指數』時，額外獲得更多『人格指數』。=The next 2 times you gain Social Stats from city activities at daytime, gain more Social Stats.
-r:"^在接下來2次『放學後』或『下午』進行都市行程獲得『任意人格指數』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you gain Social Stats from city activities at daytime, gain more Social Stats.\n<color\=#FFC000>（$1 time(s) left）</color>"
+r:"^在接下來2次『放學後』或『下午』進行都市行程獲得『任意人格指數』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you gain Social Stats from city activities at daytime, gain more Social Stats.\n<color\=#FFC000>($1 time(s) left)</color>"
 
 審判=Judgement
 在接下來2次透過都市日程『邀約任意怪盜團成員』獲得好感度時，額外更多好感度。=The next 2 times you gain Confidant Points with a Phantom Thief from city activities, gain more Confidant Points.
-r:"^在接下來2次透過都市日程『邀約任意怪盜團成員』獲得好感度時，額外更多好感度。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you gain Confidant Points with a Phantom Thief from city activities, gain more Confidant Points.\n<color\=#FFC000>（$1 time(s) left）</color>"
+r:"^在接下來2次透過都市日程『邀約任意怪盜團成員』獲得好感度時，額外更多好感度。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you gain Confidant Points with a Phantom Thief from city activities, gain more Confidant Points.\n<color\=#FFC000>($1 time(s) left)</color>"
 
 世界=World
 在接下來2次透過都市日程獲得『任意人格指數』時，額外獲得更多『人格指數』。=The next 2 times you gain Social Stats from city activities, gain more Social Stats.
-r:"^在接下來2次透過都市日程獲得『任意人格指數』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you gain Social Stats from city activities, gain more Social Stats.\n<color\=#FFC000>（$1 time(s) left）</color>"
+r:"^在接下來2次透過都市日程獲得『任意人格指數』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you gain Social Stats from city activities, gain more Social Stats.\n<color\=#FFC000>($1 time(s) left)</color>"
 
 ----------
 Mementos + Metaverse Farm
@@ -2117,7 +2128,8 @@ r:"^委託、消費大酬賓等獎勵或者購買<link\="mqm"><u>每日祈願納
 {{A}}的殘識={{A}}'s Awareness
 宿命之殘響=Fated Echoes
 r:"^宿命之殘響\*(\d+)$"="Fated Echoes*$1"
-參與挑戰類活動獲得的特殊貨幣，可在「氣運駐場」商店中兌換獎勵。=Currency from challenge events. \nCan be used in [Destinyland].
+『宿命之殘響』\n參與挑戰類活動獲得的特殊貨幣，可在「氣運駐場」商店中兌換獎勵。=<size\=26>[Fated Echoes]\nGained from challenge-type events. \nCan be used in [Destinyland].</size>
+參與挑戰類活動獲得的特殊貨幣，可在「氣運駐場」商店中兌換獎勵。=Gained from challenge-type events. Can be used in [Destinyland].
 認知殘影=Cognitive Afterimage
 『認知殘影』\n用於在契約之間的認知優選中兌換物品。=[Cognitive Afterimage]\nUsed in Congition Shop.
 認知碎片=Cognitive Shard
@@ -2132,7 +2144,7 @@ sr:"^(.*)不足，無法購買。$"="Insufficient $1, cannot purchase."
 r:"^限購$"="Limit"
 r:"^立即獲得$"="Immediately get"
 r:"^連續30天，每天5點贈送$"="Daily at 5 am (UTC+8) for 30 days"
-r:"^累計消費(\d+)台幣\((\d+)/(\d+)\)$"="Spent NT$ $1 ($2/$3)"
+r:"^累計消費(\d+)台幣\((\d+)/(\d+)\)$"="Spend NT$ $1 ($2/$3)"
 
 r:"^傳記$"="Biography"
 傳記全書=<size\=25>Full Biography</size>
@@ -2306,6 +2318,7 @@ sr:"^當前時間不符合要求，\n是否等待到<color\=#FFC000>(.*)</color>
 sr:"^當前時間資訊不符合要求，\n是否等待到<color\=#FFC000>(.*)</color>立即進行任務？$"="<size\=27>Does not meet the time requirement.\nWant to change the time to \n<color\=#FFC000>$1</color> to start the mission?</size>"
 
 sr:"^當前任務目標處於<color\=#FF0000>(.*)</color>，\n是否立即前往？$"="The current mission objective is in <color\=#FF0000>$1</color>. Go there now?"
+當前正處於任務中，在<color=#ffc000>都市</color>確認下「待處理日程」，再進行此事件吧！=You are currently doing a mission, check later!
 
 離開賭場=Escape from the casino
 上床休息=Go to bed
@@ -2358,6 +2371,7 @@ r:"^與「<color\=#ffc000>{{A}}</color>」結識，\n可以期待今後與她發
 主角{{A}}的強度較低=Wonder {{A}} Lv. is low
 主角<color\=#EF0000>{{A}}</color>的強度較低=Wonder <color\=#EF0000>{{A}}</color> Lv. is low
 怪盜角色技能的強度較低=Character Skills Lv. are low
+怪盜角色武器、技能的強度較低=Character Weapons, Skills are weak
 怪盜角色<color\=#EF0000>技能</color>的強度較低=Character <color\=#EF0000>Skills</color> Lv. are low
 怪盜角色<color\=#EF0000>技能</color>、啟示卡的強度較低=Character <color\=#EF0000>Skills</color>, Revelation Cards are weak
 怪盜角色<color\=#EF0000>技能</color>、武器、啟示卡的強度較低=Character <color\=#EF0000>Skills</color>, Weapons, Revelation Cards are weak
@@ -2581,6 +2595,7 @@ r:"^特殊$"="<size\=18>Special</size>"
 r:"^/定位$"="<size\=24>/Type</size>"
 r:"^/屬性$"="      <size\=24>/Element</size>"
 添加印記可能獲得對應技能=Using a Mark can inherit skill
+添加育成材料可獲得新技能=Using a Mark can inherit skill
 隨機獲得1個以下技能=Randomly inherit 1 skill
 固定獲得以下技能=Guarantee this skill
 技能繼承說明=Skill Inheritance Info
@@ -2589,6 +2604,7 @@ r:"^{{A}}無法透過印記習得<color\=#FF0000>(.*)<</color>類型技能。$"=
 該技能已掌握，已轉化為道具。=Already learned skill, converted into items.
 技能卡=Skill Card
 本次育成將使用高品質技能卡，是否確認使用？=<size\=28>This will use the high quality skill card, \nare you sure?</size>
+sr:"^攻擊造成(.*)屬性傷害。$"="Attacks deal $1 damage."
 新手友好=<size\=16>Newbie Friendly</size>
 物理單攻=<size\=16>Physical ST DPS</size>
 物理群攻=<size\=15>Physical AoE DPS</size>
@@ -2666,12 +2682,12 @@ r:"^最多只可以選擇(\d+)個面具上陣哦～$"="You can only equip $1 Per
 
 不羈紋章·虹=<size\=17>Wild Card Emblem·Rainbow</size>
 不羈紋章·耀=<size\=20>Wild Card Emblem·Shiny</size>
-在厄抑之境中挑戰Ⅵ階、Ⅶ階{{A}}副本後獲得……應該可以用於在厄抑巡禮中兌換獎勵。=Gained from challenging Rank VI, Rank VII Persona Farm, can be used to exchange from Challenge Reward.
 不羈紋章·空=<size\=20>Wild Card Emblem·Dull</size>
-在厄抑之境中挑戰所有{{A}}副本後均可獲得……應該可以用於在厄抑巡禮中兌換獎勵。=Gained from challenging any Persona Farm, can be used to exchange from Challenge Reward.
-『不羈紋章·虹』\n在心之海試煉等玩法中獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=27>[Wild Card Emblem - Rainbow]\nGained from Sea of Souls Trials, can be used to exchange from Challenge Reward.</size>
-『不羈紋章·耀』\n在厄抑之境中挑戰Ⅵ階、Ⅶ階{{A}}副本後獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=27>[Wild Card Emblem - Shiny]\nGained from challenging Rank VI, Rank VII Persona Farm, can be used to exchange from Challenge Reward.</size>
-『不羈紋章·空』\n在厄抑之境中挑戰所有{{A}}副本後均可獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=27>[Wild Card Emblem - Dull]\nGained from challenging any Persona Farm, can be used to exchange from Challenge Reward.</size>
+在厄抑之境中挑戰Ⅵ階、Ⅶ階{{A}}副本後獲得……應該可以用於在厄抑巡禮中兌換獎勵。=Gained from Rank VI, Rank VII Persona Farm. Can be used in Challenge Reward.
+在厄抑之境中挑戰所有{{A}}副本後均可獲得……應該可以用於在厄抑巡禮中兌換獎勵。=Gained from all Persona Farm. Can be used in Challenge Reward.
+『不羈紋章·虹』\n在心之海試煉等玩法中獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=26>[Wild Card Emblem·Rainbow]\nGained from Sea of Souls Trials. \nCan be used in Challenge Reward.</size>
+『不羈紋章·耀』\n在厄抑之境中挑戰Ⅵ階、Ⅶ階{{A}}副本後獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=26>[Wild Card Emblem·Shiny]\nGained from Rank VI, Rank VII Persona Farm. Can be used in Challenge Reward.</size>
+『不羈紋章·空』\n在厄抑之境中挑戰所有{{A}}副本後均可獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=26>[Wild Card Emblem·Dull]\nGained from all Persona Farm. \nCan be used in Challenge Reward.</size>
 
 r:"^與「<color\=#FFC000>{{A}}</color>」好感度提升至<color\=#FFC000>rank5</color>後，\n解鎖{{B}}的合成。$"="Unlock Fusion for {{B}}\nafter reaching <color\=#FFC000>rank 5</color> with {{A}}."
 r:"^好感度提升至<color\=#FFC000>rank7</color>後，\n解鎖{{A}}的合成。$"="Unlock Fusion for Setanta\nafter reaching <color\=#FFC000>rank 7</color> with Merope."
