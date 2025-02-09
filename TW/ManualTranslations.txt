@@ -667,6 +667,9 @@ r:"^(\d+)時(\d+)分後刷新$"="Refreshes in $1h $2m"
 r:"^(\d+)天後刷新$"="Refreshes in $1d"
 r:"^(\d+)分後刷新$"="Refreshes in $1m"
 
+r:"^(\d+)天(\d+)時解鎖$"="Unlocks in $1d $2h"
+r:"^(\d+)時(\d+)分解鎖$"="Unlocks in $1h $2m"
+
 r:"^剩餘(\d+)天(\d+)時(\d+)分$"="$1d $2h $3m left"
 r:"^(\d+)天(\d+)時(\d+)分$"=" $1d $2h $3m"
 r:"^(\d+)天(\d+)小時$"=" $1d $2h"
@@ -741,7 +744,7 @@ r:"^每日最多可獲取<color\=#FF0000>10</color>點<link\="s\|1002"><u>助戰
 『助戰積分』\n協助好友成功完成挑戰；挑戰時使用協助怪盜；均可以獲得助戰積分。=<size\=27>[Assist Points]\nGain [Assist Points] when: \nAssisting other players; \nUsing other player's Assist Thief. \nCan be used in [Assist Reward].</size>
 助戰積分=Assist Points
 未獲得更多助戰積分。=No Assist Points.
-
+複製成功。=Copy success.
 
 尚未加入樂園。=No Affiliation
 1等星1階= 1st Tier 
@@ -1386,6 +1389,19 @@ r:"^愛的女僕咖啡廳\((\d+)/(\d+)\)$"="<size\=20>Maid Café of Love ($1/$2)
 貓侍者 茶茶=Cat Waitress Chacha
 雙生之花 黑&白=Twin Flowers Black & White
 
+中華獅子舞=<size\=20>Chinese Lion Dance</size>
+r:"^中華獅子舞\((\d+)/(\d+)\)$"="<size\=19>Chinese Lion Dance ($1/$2)</size>"
+新春限定款上架中=New Year Limited Edition
+r:"^新春限定倒計時：(\d+)天(\d+)時$"=" Countdown: $1d $2h"
+大吉大利獅=Lucky Lion
+福壽雙全獅=Longevity Lion
+暴富發財獅=Fortune Lion
+金玉滿堂獅=Golden Lion
+五福臨門獅=Blessing Lion
+送祥瑞獅 鬧鬧=Loud Loud Lion
+聚寶金獅 滾滾=Roll Roll Lion
+招財醒獅 天祿=Divine Lion
+
 娃娃機=Crane Game
 遊戲中心兌獎券=Arcade Ticket
 『遊戲中心兌獎券』\n用於在{{A}}遊戲中心購買商品，可透過回收多餘的娃娃來獲得。=<size\=28>[Arcade Ticket]\nUsed in the {{A}} Arcade, can be obtained by recycling surplus dolls.</size>
@@ -1741,21 +1757,24 @@ r:"^{{A}}似乎有話要說，要陪她嗎？$"="{{A}} seems to have something t
 {{A}}對於現代都市中的很多事物都感到好奇，希望能和你一起體驗={{A}} is curious about many things in a modern city and would like to experience them with you.
 
 和{{A}}一起玩吧=<size\=24>Play together\nwith {{A}}</size>
-{{A}}應該會在線上吧，登入遊戲一起玩吧={{A}}should be online, log in \nto the game and play together
+{{A}}應該會在線上吧，登入遊戲一起玩吧={{A}} should be online, let's log in \nto the game and play together
 近處的街道=Nearby streets
 管理者的田地=Admin's farmland
 田地=Farmland
 遠處的街道=Distant streets
 雪原=Snowfields
 
-兩個人的觀影時間=<size\=24>Movie time \nfor two</size>
-在家裡和{{A}}一起看她推薦的電影吧=<size\=26>Let's watch the movie recommended by {{A}} together at home</size>
-
 深入了解的方式=<size\=24>Ways to \nunderstand deeper</size>
 為了更好的了解你，{{A}}提出了一個不尋常的建議……=<size\=25>In order to get to understand you better, \n{{A}} has made an unusual suggestion...</size> 
 
-花茶之約=<size\=24>Tea Date</size>
+兩個人的觀影時間=<size\=24>Movie time \nfor two</size>
+在家裡和{{A}}一起看她推薦的電影吧=<size\=26>Let's watch the movie recommended by {{A}} together at home</size>
+
+花茶之約=<size\=24>Tea date</size>
 {{A}}想要約你一起喝她準備的花茶……=<size\=26>{{A}} wants to have tea with you...</size>
+
+特殊的家政服務=<size\=24>Special domestic service</size>
+{{A}}似乎不太放心獨自生活的你……={{A}} is worried about you living alone...
 
 調查迫近的「威脅」=<size\=24>Investigate the \nlooming "Threat"</size>
 清似乎認為有「邪惡力量」侵蝕了你家……=Kiyoshi seems to think "evil forces" have corrupted your home...
@@ -1776,7 +1795,7 @@ r:"^{{A}}似乎有話要說，要陪她嗎？$"="{{A}} seems to have something t
 {{A}}想看看你生活的地方……={{A}} wants to see \nwhere you live...
 今天要帶{{A}}回家玩嗎？=Want to bring {{A}} \nhome today?
 
-愛的調味料=<size\=24>Seasoning of Love</size>
+愛的調味料=<size\=24>Seasoning of love</size>
 {{A}}想學習做飯……={{A}} wants to learn to cook...
 帶{{A}}去哪裡呢？=Where to take {{A}}?
 
@@ -2118,6 +2137,8 @@ r:"^(\d+)魂石$"="$1 Soul Gems"
 簽約道具=Contract Item
 r:"^契約的憑證，可在特定的『怪盜契約』中使用。$"="The prove of contract, can be used in certain [Contract]."
 補給道具=Supply Item
+『{{A}}』\n心之海試練、往日回溯和助戰回饋兌換可獲得，用於在生存遊戲專賣店製造四星武器。=<size\=26>[{{A}}]\nGained from Sea of Souls Trials, Past Echo, and Assist Reward, \ncan be used to make 4★ weapons in Untouchable</size>.
+心之海試練、往日回溯和助戰回饋兌換可獲得，用於在生存遊戲專賣店製造四星武器。=Gained from Sea of Souls Trials, Past Echo, and Assist Reward, can be used to make 4★ weapons in Untouchable.
 祈願道具=Pray Item
 『{{B}}』\n獲取後可用於{{A}}商店「祈願」中進行祈願抽獎。=[Kagura Suzu]\nCan be used in {{A}}'s Shop do [Pray] Lucky Draw.
 r:"^獲取後可用於{{A}}商店「祈願」中進行祈願抽獎。$"="Can be used in {{A}}'s Shop to enter the Pray Lucky Draw."
@@ -2314,11 +2335,12 @@ r:"^目標(\d+)$"="Goal $1"
 傍晚=Evening
 夜晚=Night
 sr:"^當前正處於任務中，是否立即切換時間到<color\=#FFC000>(.*)</color>來進行都市日程呢？$"="Does not meet the time requirement.\nWant to change the time to \n<color\=#FFC000>$1</color> to do City Activities?"
-sr:"^當前時間不符合要求，\n是否等待到<color\=#FFC000>(.*)</color>的<color\=#FFC000>(.*)</color>進行任務？$"="<size\=27>Does not meet the time requirement.\nWant to change the time to \n<color\=#FFC000>$1</color> <color\=#FFC000>$2</color> to start the mission?</size>"
+sr:"^當前時間不符合要求，\n是否等待到<color\=#FFC000>(.*)</color>的<color\=#FFC000>(.*)</color>進行任務？$"="<size\=27>Does not meet the time requirement.\nWant to wait until \n<color\=#FFC000>$1</color> <color\=#FFC000>$2</color> to start the mission?</size>"
+當前時間不符合要求，\n是否等待到<color\=#FFC000>晴天</color>進行任務？="<size\=27>Does not meet the time requirement.\nWant to wait until \n<color\=#FFC000>Sunny</color> to start the mission?
 sr:"^當前時間資訊不符合要求，\n是否等待到<color\=#FFC000>(.*)</color>立即進行任務？$"="<size\=27>Does not meet the time requirement.\nWant to change the time to \n<color\=#FFC000>$1</color> to start the mission?</size>"
 
 sr:"^當前任務目標處於<color\=#FF0000>(.*)</color>，\n是否立即前往？$"="The current mission objective is in <color\=#FF0000>$1</color>. Go there now?"
-當前正處於任務中，在<color=#ffc000>都市</color>確認下「待處理日程」，再進行此事件吧！=You are currently doing a mission, check later!
+當前正處於任務中，在<color\=#ffc000>都市</color>確認下「待處理日程」，再進行此事件吧！=You are currently doing a mission, check later!
 
 離開賭場=Escape from the casino
 上床休息=Go to bed
@@ -2349,6 +2371,7 @@ r:"^調查{{A}}$"="Investigate {{A}}"
 如果想繼續體驗「<color\=#ffc000>娃娃機</color>」的小遊戲，可以在完成任務「抓取的樂趣」後再進一步遊玩。=<size\=26>If you want to continue to experience the "<color\=#ffc000>Crane Game</color>", you can play more after completing the mission "The Fun of Catching".</size>
 r:"^與「<color\=#ffc000>{{A}}</color>」結識，\n可以期待今後與他發生更多的故事。$"="You've met "<color\=#ffc000>{{A}}</color>".\n Look forward to more stories \nwith him in the future."
 r:"^與「<color\=#ffc000>{{A}}</color>」結識，\n可以期待今後與她發生更多的故事。$"="You've met "<color\=#ffc000>{{A}}</color>".\n Look forward to more stories \nwith her in the future."
+sr:"^是否現在追蹤任務「(.*)」？$"="Track the mission \n"$1"?"
 
 // Friends Screen
 輸入玩家的ID進行搜索=Search by Player ID
@@ -2375,6 +2398,7 @@ r:"^與「<color\=#ffc000>{{A}}</color>」結識，\n可以期待今後與她發
 怪盜角色<color\=#EF0000>技能</color>的強度較低=Character <color\=#EF0000>Skills</color> Lv. are low
 怪盜角色<color\=#EF0000>技能</color>、啟示卡的強度較低=Character <color\=#EF0000>Skills</color>, Revelation Cards are weak
 怪盜角色<color\=#EF0000>技能</color>、武器、啟示卡的強度較低=Character <color\=#EF0000>Skills</color>, Weapons, Revelation Cards are weak
+怪盜角色<color\=#EF0000>啟示卡</color>、技能的強度較低=Character <color\=#EF0000>Revelation Cards</color>, Skills are weak
 怪盜角色<color\=#EF0000>啟示卡</color>、<color\=#EF0000>技能</color>、武器的強度較低=Character <color\=#EF0000>Revelation Cards</color>, <color\=#EF0000>Skills</color>, Weapons are weak
 
 空空如也=Empty
@@ -2708,11 +2732,13 @@ sr:"^(.*)印記$"="$1 Mark"
 r:"^詭譎的{{A}}$"="Strange {{A}}"
 r:"^平凡的{{A}}$"="Ordinary {{A}}"
 r:"^非凡的{{A}}$"="Extraordinary {{A}}"
+r:"^冷漠的{{A}}$"="Indifferent {{A}}"
 r:"^被操控的{{A}}$"="Manipulated {{A}}"
 r:"^躁動的{{A}}$"="Agitated {{A}}"
 r:"^乖戾的{{A}}$"="Sullen {{A}}"
 r:"^生氣的{{A}}$"="Angry {{A}}"
 r:"^狂歡的{{A}}$"="Revelrous {{A}}"
+r:"^狂躁的{{A}}$"="Manic {{A}}"
 r:"^平靜的{{A}}$"="Calm {{A}}"
 r:"^強大的{{A}}$"="Strong {{A}}"
 r:"^兇惡的{{A}}$"="Vicious {{A}}"
@@ -2733,7 +2759,7 @@ r:"^煩惱的{{A}}$"="Frustrated {{A}}"
 r:"^詛咒的{{A}}$"="Cursed {{A}}"
 
 ----------
-ACHIEVEMENTS
+ACHIEVEMENTS + BADGES
 ----------
 希望追尋之旅=<size\=26>Journey for Hope</size>
 無雙的武鬥派=<size\=21>Unrivaled Combatant</size>
@@ -2773,3 +2799,7 @@ r:"^贈送所有喜歡的禮物給{{A}}$"="Give all Favorite Gifts to {{A}}"
 與任意協同者進行1次關係回溯<size\=30>(0/1)</size>=Backtrack 1 relationship <size\=30>(0/1)</size>
 與任意協同者進行1次關係回溯=Backtrack 1 relationship
 
+選擇徽章數量已達上限。=Reached badge limit.
+設置徽章=Select Badges
+收集=Collection
+紀念冊=Events Album

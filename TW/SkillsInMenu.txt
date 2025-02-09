@@ -291,8 +291,6 @@ r:"^斯庫卡加 Lv.(\d+)$"="Sukukaja Lv.$1"
 r:"^瑪哈塔爾卡加 Lv.(\d+)$"="Matarukaja Lv.$1"
 r:"^瑪哈拉庫卡加 Lv.(\d+)$"="Marakukaja Lv.$1"
 r:"^瑪哈斯庫卡加 Lv.(\d+)$"="Masukukaja Lv.$1"
-迪卡加=Dekaja
-迪坤達=Dekunda
 反叛=Rebellion
 r:"^反叛 Lv.(\d+)$"="Rebellion Lv.$1"
 革命=Revolution
@@ -570,7 +568,7 @@ r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的火焰屬�
 --- Ice ---
 
 Avalanche
-r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，有(\d+%)的固定機率無視弱點和倒地值，使目標陷入倒地狀態。若該技能使敵人陷入倒地狀態，則額外造成1次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害。$"="Deals <color\=#fffc40>$1</color> ATK Ice damage to 1 enemy, with a $2 fixed chance to ignore weakness and Down Gauge to Down the enemy. If this skill Downed the enemy, deal an additional <color\=#fffc40>$3</color> ATK Ice damage."
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，有(\d+%)的固定機率無視弱點和倒地值，使目標陷入倒地狀態。若該技能使敵人陷入倒地狀態，則額外造成1次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害。$"="Deals <color\=#fffc40>$1</color> ATK Ice damage to 1 enemy, with a $2 fixed chance to ignore weakness and Down Gauge to down the enemy. If this skill downed the enemy, deal an additional <color\=#fffc40>$3</color> ATK Ice damage."
 
 --- Electric ---
 
@@ -626,16 +624,16 @@ r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬�
 r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+\~\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>all</color> enemies and gains $2 stack(s) of <link\=s|111><u>Bless</u></link>.
 
 //ST Bless Instakill
-r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，對50%生命值以下的敵人附加低機率祝福屬性即死效果，生命值越低機率越高。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>1</color> enemy with a chance of Instant Death to enemies under 50% HP. The lower the HP, the higher the chance.
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，對50%生命值以下的敵人附加低機率祝福屬性即死效果，生命值越低機率越高。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>1</color> enemy with a chance of insta-kill to enemies under 50% HP. The lower the HP, the higher the chance.
 
 //AoE Bless Instakill
-r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，對50%生命值以下的敵人附加低機率祝福屬性即死效果，生命值越低機率越高。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>all</color> enemies with a chance of Instant Death to enemies under 50% HP. The lower the HP, the higher the chance.
+r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，對50%生命值以下的敵人附加低機率祝福屬性即死效果，生命值越低機率越高。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>all</color> enemies with a chance of insta-kill to enemies under 50% HP. The lower the HP, the higher the chance.
 
 Desire for Life Shell
 r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使1名生命值最低的同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值。\n<b><size\=28><color\=#024068>斧槍揮出的軌跡在空中瞬間交錯，對所有沒有防備的敵方造成傷害，交點處迸射出的弧光療癒了同伴。</color></size></b>$"="Deals <color\=#fffc40>$1</color> ATK Bless damage to all enemies and restores <color\=#fffc40>$2</color> ATK + <color\=#fffc40>$3</color> HP to the lowest HP ally.\n<b><size\=28><color\=#024068>The trajectories of the axe and spear swing intersect instantly in the air, dealing damage to all unsuspecting enemies, and the arcs of light bursting from the intersections heal your companions.</color></size></b>"
 
 Samsara
-r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，若主目標敵人生命值低於50%則有一定機率附帶即死效果。$"="Deals <color\=#fffc40>$1</color> ATK Bless damage to all enemies. If the main target is below 50% HP there is a certain chance of Instant Death."
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，若主目標敵人生命值低於50%則有一定機率附帶即死效果。$"="Deals <color\=#fffc40>$1</color> ATK Bless damage to all enemies. If the main target is below 50% HP there is a certain chance of insta-kill."
 
 Light of Salvation
 r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自身獲得(\d+)層祝福效果。自身每層祝福效果使得技能傷害提升(\d+%)，最多提升(\d+%)。$"="Deals <color\=#fffc40>$1</color> ATK Bless damage to all enemies and gain $2 stacks of Bless. For every stack of Bless you have, increases skill damage by $3, up to $4."
@@ -668,16 +666,16 @@ Fortune Devourer
 r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，並使所有敵人防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>、受到的持續傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Deals <color\=#fffc40>$1</color> ATK Curse damage to all enemies, decreases all enemies' DEF by <color\=#fffc40>$2</color> and increases all enemies Damage Over Time Taken by <color\=#fffc40>$3</color> for $4 turns."
 
 // Single Target Basic Insta-kills
-r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，對50%生命值以下的敵人附加低機率詛咒屬性即死效果，生命值越低機率越高。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>1</color> enemy with a chance of Instant Death to enemies under 50% HP. The lower the HP, the higher the chance.
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，對50%生命值以下的敵人附加低機率詛咒屬性即死效果，生命值越低機率越高。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>1</color> enemy with a chance of insta-kill to enemies under 50% HP. The lower the HP, the higher the chance.
 
 // AoE Curse Instakill
-r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，對50%生命值以下的敵人附加低機率詛咒屬性即死效果，生命值越低機率越高。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies with a chance of Instant Death to enemies under 50% HP. The lower the HP, the higher the chance.
+r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，對50%生命值以下的敵人附加低機率詛咒屬性即死效果，生命值越低機率越高。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies with a chance of insta-kill to enemies under 50% HP. The lower the HP, the higher the chance.
 
 Belial
 r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得1層『地獄火』，並使其身上的所有『地獄火』立刻結算一次，該次結算傷害提升200%。$"="Deals <color\=#fffc40>$1</color> ATK Curse damage to 1 enemy. They gain 1 stack of [Hellfire] and immediately detonate all of their [Hellfire] once at 200% damage."
 
 //"Die For Me!"
-r:"^使所有敵人受到的詛咒屬性傷害提升<color\=#fffc40>(\d+\.\d+%)</color>\+每有(\d+%)效果命中額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)，效果持續(\d+)回合。敵人生命值低於(\d+%)時，高機率附加即死效果。$"="Increases all enemies' Curse DMG Taken by <color\=#FFFF00>$1</color> + <color\=#FFFF00>$3</color> for every $2 EHR you have, up to <color\=#FFFF00>$4</color> for $5 turns. There is a high chance of Instant Death to enemies under $6 HP. The lower the HP, the higher the chance."
+r:"^使所有敵人受到的詛咒屬性傷害提升<color\=#fffc40>(\d+\.\d+%)</color>\+每有(\d+%)效果命中額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)，效果持續(\d+)回合。敵人生命值低於(\d+%)時，高機率附加即死效果。$"="Increases all enemies' Curse DMG Taken by <color\=#FFFF00>$1</color> + <color\=#FFFF00>$3</color> for every $2 EHR you have, up to <color\=#FFFF00>$4</color> for $5 turns. There is a high chance of insta-kill to enemies under $6 HP. The lower the HP, the higher the chance."
 
 --- Almighty ---
 
@@ -693,6 +691,8 @@ r:"吸收1名敵人<color\=#fffc40>(.*)</color>點精力值。"=Drains <color\=#
 //Life Drain
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的萬能屬性傷害，無視其防禦力，並使自身恢復<color\=#fffc40>37.3%</color>攻擊力的生命值。"=Deals <color\=#fffc40>$1</color> ATK Almighty damage to <color\=#fffc40>1</color> enemy, ignoring DEF\nRestore HP equal to <color\=#fffc40>$1</color> ATK.
 
+Carnage Allure
+r:"^對全體敵人造成一段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的萬能傷害，隨後造成一段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒傷害。\n技能可以進化為「寒冰」「暴風」「邪咒」形態：造成一段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的萬能傷害，隨後造成一段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的（冰凍、疾風或詛咒）魔法傷害。$"="Deals <color\=#fffc40>$1</color> ATK Almighty damage to all enemies, then deals <color\=#fffc40>$2</color> ATK Curse damage. \nSkill can evolves into [Ice] [Wind] [Curse] form: Deals <color\=#fffc40>$3</color> ATK Almighty damage, then deals <color\=#fffc40>$4</color> ATK (Ice, Wind, Curse) damage."
 
 --- Recovery ---
 
@@ -834,7 +834,7 @@ r:"^萬能屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increase Almighty DMG by $1."
 r:"^造成治療效果提升(\d+(.\d+)?(%)?)。$"="Effects of healing magic are increased by $1."
 r:"^受到的治療效果提升(\d+(.\d+)?(%)?)。$"="Increase effects of healing magic received by $1."
 r:"^槍械攻擊暴擊率提升(\d+(.\d+)?(%)?)。$"="Increase CRIT Rate of Gun attacks by $1."
-r:"^即死技能成功率上升(\d+(.\d+)?(%)?)。$"="Increase chance of Instant Death with skills by $1."
+r:"^即死技能成功率上升(\d+(.\d+)?(%)?)。$"="Increase chance of Insta-Kill skills by $1."
 r:"^護盾效果提升(\d+(.\d+)?(%)?)。$"="Increase Shield Effect by $1."
 
 //Stat buffs

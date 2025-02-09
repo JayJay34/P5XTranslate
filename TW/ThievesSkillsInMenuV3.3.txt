@@ -224,8 +224,8 @@ r:"^進入戰鬥時，若{{A}}速度大於100點，每超過1點使所有怪盜�
 r:"^進入戰鬥時，若{{A}}速度大於100點，每超過1點使所有怪盜獲得(\d+)點生命值、(\d+)點攻擊力、(\d+)點防禦力的提升，最多可提升<color\=#0169ca>(\d+)</color>點生命值、<color\=#0169ca>(\d+)</color>點攻擊力、<color\=#0169ca>(\d+)</color>點防禦力。$"="At the start of battle, for every 1 SPD that's over 100, increase all allies' HP by $1, ATK by $2 and DEF by $3, up to <color\=#0169ca>$4</color> HP, <color\=#0169ca>$5</color> ATK and <color\=#0169ca>$6</color> DEF."
 
 r:"^雀歌 Lv.(\d+)$"="Bird Song Lv.$1"
-r:"^使所有敵人受到的ONEMORE及{{A}}傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Increase all enemies' DMG Taken from One More and All-Out Attack by <color\=#FFFC40>$1</color>."
-r:"^使所有敵人受到的ONEMORE及{{A}}傷害提升<color\=#0169ca>(\d+\.\d+%)</color>。$"="Increase all enemies' DMG Taken from One More and All-Out Attack by <color\=#0169ca>$1</color>."
+r:"^使所有敵人受到的ONEMORE及{{A}}傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Increase all enemies' DMG Taken from ONE MORE and {{A}} by <color\=#FFFC40>$1</color>."
+r:"^使所有敵人受到的ONEMORE及{{A}}傷害提升<color\=#0169ca>(\d+\.\d+%)</color>。$"="Increase all enemies' DMG Taken from ONE MORE and {{A}} by <color\=#0169ca>$1</color>."
 
 r:"^破綻$"="Vulnerability"
 <color\=#66ccff>『破綻』</color>=<color\=#66ccff>[Vulnerability]</color>
@@ -296,7 +296,7 @@ r:"^<color\=#66ccff>『刀尖上的舞者』</color>$"="<color\=#66ccff>[Dancer 
 r:"^{{A}}身上的『冰晶』達到了一定數量後，觸發一次冰凍屬性攻擊，這次攻擊視為追加效果。$"="When you have a certain amount of [Ice Crystal], do an Ice attack once, this attack is seen as a Follow Up."
 r:"^同伴行動時，自身獲得『冰晶』1顆，最多可獲得(\d+)顆『冰晶』。當『冰晶』數量為(\d+)時，自身使用技能後消耗(\d+)顆『冰晶』，對目標敵人造成1次(\d+%)攻擊力的冰凍屬性<link\="s\|100"><u>追加效果</u></link>，本次攻擊必定造成暴擊。使用『冰之綻放』、『凜冬撕裂』後觸發<link\="s\|100"><u>追加效果</u></link>時，自身額外獲得1層『寒霜印記』，『寒霜印記』可用來提升『寒冰之刃』造成的傷害。$"="Gain 1 [Ice Crystal] after an ally acts, up to $1. When you have $2 [Ice Crystal], consume $3 [Ice Crystal] after using a skill, dealing $4 ATK Ice damage as a <link\="s|100"><u>Follow Up</u></link>, this attack will always CRIT.\nWhen triggering <link\="s|100"><u>Follow Up</u></link> after using [Ice Bloom], [Winter Tear], gain 1 [Frostbite Mark] which can increase [Frozen Blade] damage."
 
-sr:"^同伴行動時，自身獲得『(.*)』1顆，當『(.*)』數量為10時，自身使用技能後消耗10顆『(.*)』，對目標敵人造成1次(\d+%)攻擊力的冰凍屬性<link\="s\|100"><u>追加效果</u></link>，本次攻擊必定造成暴擊$"="Gain 1 [$1] after an ally acts, when you have 10 [$2], cosume 10 [$3] after using a skill, dealing $4 ATK Ice damage as <link\="s|100"><u>Follow Up</u></link>, this attack will always CRIT."
+r:"^同伴行動時，自身獲得『冰晶』1顆，最多可獲得(\d+)顆『冰晶』。當『冰晶』數量為(\d+)時，自身使用技能後消耗(\d+)顆『冰晶』，對目標敵人造成1次(\d+%)攻擊力的冰凍屬性<link\="s\|100"><u>追加效果</u></link>，本次攻擊<link\="s\|220"><u>必定暴擊</u></link>。使用『冰之綻放』、『凜冬撕裂』後觸發<link\="s\|100"><u>追加效果</u></link>時，自身額外獲得1層『寒霜印記』，『寒霜印記』可用來提升『寒冰之刃』造成的傷害。$"="Gain 1 [Ice Crystal] after an ally acts, up to $1 [Ice Crystal]. When you have $2 [Ice Crystal], cosume $3 [Ice Crystal] after using a skill, dealing $4 ATK Ice damage as <link\="s|100"><u>Follow Up</u></link>, this attack will <link\="s|220"><u>Always CRIT</u></link>. After using [Ice Bloom] or [Winter Tear] to trigger <link\="s|100"><u>Follow Up</u></link>, additionally gain 1 [Frostbite Mark], [Frostbite Mark] can increase [Frozen Blade] DMG Dealt."
 
 行雲流水=Flow Like Water
 r:"^回合結束時，獲得(\d+%)攻擊力的護盾，效果持續1回合。$"="At the end of your turn, gain $1 ATK Shield for 1 turn."
@@ -886,7 +886,7 @@ r:"^釋放『蓄力一擊』技能對敵人造成傷害時，使目標獲得1個
 ----------
 Mona - Morgana
 ----------
-sr:"^每次使用不同技能時獲得『(.*)』，同伴生命值較低時自動進行一次群體治療並消耗『(.*)』。$"="<size\=27>Gain [$1] every time you use a different skill, automatically consume [$2] to do an AoE Heal when any ally is at low HP.</size>"
+r:"^每次使用不同技能時獲得『直覺』，同伴生命值較低時自動進行一次群體治療並消耗『直覺』。$"="<size\=27>Gain [Instinct] every time you use a different skill, automatically consume [Instinct] to do an AoE Heal when any ally is at low HP.</size>"
 疾風強襲=Wind Assult
 療癒之術=Art of Healing
 奇蹟拳=Miracle Punch
@@ -1058,7 +1058,7 @@ Riddle - Haruna Nishimori
 r:"^釋放{{A}}技能時，消耗所有『童趣』，每消耗1層『童趣』使所有同伴攻擊力提升，效果持續2回合。$"="<size\=28>Consume all [Childlike Fun] when using skills. Increase all allies' ATK for 2 turns with each stack of [Childlike Fun] consumed.</size>"
 笨笨的助手=Silly Assistant
 聰明的探險家=Smart Explorer
-旺盛童心=<size\=24>Exuberant Innocence</size>
+旺盛童心=<size\=19>Exuberant Innocence</size>
 追疑=Pursue
 探究=Inquiry
 

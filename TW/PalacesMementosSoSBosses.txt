@@ -531,7 +531,7 @@ PALACE 2 BOSS
 一刀流·蒙太奇=One Sword Style - Montage
 四刀流·一人成軍=<size\=24>Four Sword Style - One Man Army</size>
 未能擊殺魔劍真身時對所有敵人造成大量萬能傷害。=Deals heavy Almighty damage to all enemies when enemies failed to break the real sword
-對所有敵人造成詛咒屬性傷害，對50%生命值以下的敵人附加低機率詛咒屬性即死效果，生命值越低機率越高。=Deals Curse damage to all enemies with a chance of Instant Death to enemies under 50% HP. The lower the HP, the higher the chance.
+對所有敵人造成詛咒屬性傷害，對50%生命值以下的敵人附加低機率詛咒屬性即死效果，生命值越低機率越高。=Deals Curse damage to all enemies with a chance of insta-kill to enemies under 50% HP. The lower the HP, the higher the chance.
 奧義·明星亂舞=Ultimate - Star Flurry
 對所有敵人造成詛咒屬性傷害，使迷惑的敵人陷入洗腦狀態，持續2回合=Deals Curse damage to all enemies, and inflicts Brainwash to enemies with Bewilder for 2 turns.
 一刀流·不動如山=<size\=24>One Sword Style - Firm Stance</size>
@@ -659,7 +659,7 @@ r:"^1、{{A}}初始擁有(\d+)點倒地值，每(\d+)回合會釋放「持劍護
 
 r:"^1、{{A}}初始擁有(\d+)點倒地值，每回合額外獲得(\d+)點倒地值。在{{A}}的倒地值達到(\d+)後，會變身為<color\=#ff3b37>{{B}}</color>，能力大幅強化。\n2、{{A}}每(\d+)回合會召喚四魂，四魂一回合後逃跑。每擊敗一個魂，會立刻使{{A}}減少(\d+)點倒地值，並使{{A}}火焰、冰凍、電擊、疾風屬性的其中一個適應性變為弱，持續(\d+)回合。\n3、{{A}}倒地值歸零或被擊敗時，戰鬥勝利。$"="<size\=25>1. {{A}} start with $1 Down Gauge and gain $2 Down Gauge every turn. When {{A}} have $3 Down Gauge, transform into <color\=#ff3b37>{{B}}</color>, heavily increase own abilities.\n2. {{A}} will summoning 4 Mitamas every $4 turns. The 4 Mitamas will escape after 1 turn. Immediately decrease {{A}}'s Down Gauge by $5 when defeating 1 Mitama, then inflict {{A}} with a Fire, Ice, Elec, or Wind weakness for $6 turns.\n3. Victory when {{A}} have 0 Down Gauge or when all enemies are defeated.</size>"
 
-r:"^{{A}}每回合會隨機對怪盜施加一種調停之力，禁止其某些行為。\n「調停·生存」：禁止使用救援、防衛類技能\n「調停·攻擊」：禁止使用反抗、支配類技能\n「調停·輔助」：禁止使用優越、屈從類技能\n破壞了調停的怪盜，會獲得一層「死生之標記」，達到(\d+)層時會被即死；若所有怪盜均遵守了調停，那麼會獲得{{A}}給予的獎勵：傷害提高。$"="<size\=28>{{A}} randomly ban 1 action each turn.\n[Mediation·Survival]: Ban Rescue and Defend type skills\n[Mediation·Attack]: Ban Rebel and Dominate type skills\n[Mediation·Support]: Ban Superior and Submit type skills\nInflict 1 stack of [Mark of Life and Death] when a Thief broke Mediation, inflict Instant Death to that Thief when reaching $1 stacks; Increase all Thieves' DMG when they all followed Mediation.</size>"
+r:"^{{A}}每回合會隨機對怪盜施加一種調停之力，禁止其某些行為。\n「調停·生存」：禁止使用救援、防衛類技能\n「調停·攻擊」：禁止使用反抗、支配類技能\n「調停·輔助」：禁止使用優越、屈從類技能\n破壞了調停的怪盜，會獲得一層「死生之標記」，達到(\d+)層時會被即死；若所有怪盜均遵守了調停，那麼會獲得{{A}}給予的獎勵：傷害提高。$"="<size\=28>{{A}} randomly ban 1 action each turn.\n[Mediation·Survival]: Ban Rescue and Defend type skills\n[Mediation·Attack]: Ban Rebel and Dominate type skills\n[Mediation·Support]: Ban Superior and Submit type skills\nInflict 1 stack of [Mark of Life and Death] when a Thief broke Mediation, inflict insta-kill to that Thief when reaching $1 stacks; Increase all Thieves' DMG when they all followed Mediation.</size>"
 調停·生存=Mediation·Survival
 調停·攻擊=Mediation·Attack
 調停·輔助=Mediation·Support
@@ -668,7 +668,7 @@ r:"^{{A}}每回合會隨機對怪盜施加一種調停之力，禁止其某些�
 禁止使用救援、防衛類技能=Ban Rescue and Defend type skills
 禁止使用反抗、支配類技能=Ban Rebel and Dominate type skills
 禁止使用優越、屈從類技能=Ban Superior and Submit type skills
-破壞調停獲得的懲罰，到達兩層會被賦予即死=Inflict Instant Death when reaching 2 stacks
+破壞調停獲得的懲罰，到達兩層會被賦予即死=Inflict insta-kill when reaching 2 stacks
 r:"^<color\=#FF0000>{{A}}</color>被施加了調停·生存，禁止使用救援、防衛類技能……$"="<size\=28>Banned Rescue and Defend type skills...</size>"
 r:"^<color\=#FF0000>{{A}}</color>被施加了調停·攻擊，禁止使用反抗、支配類技能……$"="<size\=28>Banned Rebel and Dominate type skills...</size>"
 r:"^<color\=#FF0000>{{A}}</color>被施加了調停·輔助，禁止使用優越、屈從類技能……$"="<size\=28>Banned Superior and Submit type skills ...</size>"
@@ -681,7 +681,7 @@ r:"^<color\=#FF0000>{{A}}</color>破壞了調停，獲得了一個死生之標�
 r:"^<color\=#FF0000>(.*)</color>破壞了調停，獲得了一個死生之標記……$"="<size\=24><color\=#FF0000>$1</color> gained 1 Mark of Life and Death...</size>"
 很好，汝等遵守了吾之調停，吾將予以汝等賞賜！=Very well, thou hast obeyed my mediation. \nI will reward thee!
 
-r:"^戰鬥開始時，{{A}}會釋放「死生之界」，使所有怪盜的血量大幅減少，並施加「調停·生存」，持續(\d+)回合。\n再之後，為所有怪盜添加「調停·攻擊」、「調停·輔助」。隨後{{A}}每兩回合隨機對怪盜施加一種調停之力，禁止其某些行為。\n「調停·生存」：禁止使用救援、防衛類技能\n「調停·攻擊」：禁止使用反抗、支配類技能\n「調停·輔助」：禁止使用優越、屈從類技能\n破壞了調停的怪盜，會獲得一層「死生之標記」，達到(\d+)層時會被即死；若所有怪盜均遵守了調停，那麼會獲得{{A}}給予的獎勵：傷害提高。$"="<size\=24>At the start of battle. {{A}} will use [Life and Death Domain], heavily decrease all Thieves' HP and use [Mediation·Survival] for $1 turns.\nAfterward, use [Mediation·Attack] and [Mediation·Support]. Then {{A}} will randomly use 1 Mediation, banning certain actions.\n[Mediation·Survival]: Ban Rescue and Defend type skills\n[Mediation·Attack]: Ban Rebel and Dominate type skills\n[Mediation·Support]: Ban Superior and Submit type skills\nInflict 1 stack of [Mark of Life and Death] when a Thief broke Mediation, inflict Instant Death to that Thief when reaching $1 stacks; Increase all Thieves' DMG when they all followed Mediation.</size>"
+r:"^戰鬥開始時，{{A}}會釋放「死生之界」，使所有怪盜的血量大幅減少，並施加「調停·生存」，持續(\d+)回合。\n再之後，為所有怪盜添加「調停·攻擊」、「調停·輔助」。隨後{{A}}每兩回合隨機對怪盜施加一種調停之力，禁止其某些行為。\n「調停·生存」：禁止使用救援、防衛類技能\n「調停·攻擊」：禁止使用反抗、支配類技能\n「調停·輔助」：禁止使用優越、屈從類技能\n破壞了調停的怪盜，會獲得一層「死生之標記」，達到(\d+)層時會被即死；若所有怪盜均遵守了調停，那麼會獲得{{A}}給予的獎勵：傷害提高。$"="<size\=24>At the start of battle. {{A}} will use [Life and Death Domain], heavily decrease all Thieves' HP and use [Mediation·Survival] for $1 turns.\nAfterward, use [Mediation·Attack] and [Mediation·Support]. Then {{A}} will randomly use 1 Mediation, banning certain actions.\n[Mediation·Survival]: Ban Rescue and Defend type skills\n[Mediation·Attack]: Ban Rebel and Dominate type skills\n[Mediation·Support]: Ban Superior and Submit type skills\nInflict 1 stack of [Mark of Life and Death] when a Thief broke Mediation, inflict insta-kill to that Thief when reaching $1 stacks; Increase all Thieves' DMG when they all followed Mediation.</size>"
 死生之界=Life and Death Domain
 膽敢多次破壞吾之調停，吾將予以汝等懲罰！=I will punish thou for repeatedly disrupting my mediation!
 
@@ -752,6 +752,7 @@ PALACE 3 BOSS
 r:"^拯救{{A}}$"="Rescue {{A}}"
 r:"^擊破{{A}}的護盾$"="Break {{A}}'s Shield"
 r:"^注意控制{{B}}的{{A}}值$"="Note the {{A}} Gauge that Controls {{B}}"
+r:"^注意控制{{A}}的{{B}}值$"="Note the {{B}} Gauge that Controls {{A}}"
 擊破左下翼=Break the Lower Left Wing
 擊破右下翼=Break the Lower Right Wing
 擊破左上翼=Break the Upper Left Wing
@@ -782,10 +783,14 @@ r:"^「{{A}}」{{B}}之主$"="{{B}} Ruler of "{{A}}""
 r:"^{{A}}值越高，造成傷害越高，釋放的技能越強，當前造成傷害提高(.*)$"="Deal more damage and use stronger skills the higher the Wrath Gauge is; \nCurrently increase DMG Dealt by $1."
 r:"^{{B}}的{{A}}值降至低點$"="<size\=28>{{B}}'s {{A}} Gauge lowered!</size>"
 r:"^{{B}}的{{A}}值達到中點$"="<size\=24>{{B}}'s {{A}} Gauge reaches middle!</size>"
+r:"^{{A}}的{{B}}值降至低點$"="<size\=28>{{A}}'s {{B}} Gauge lowered!</size>"
+r:"^{{A}}的{{B}}值達到中點$"="<size\=24>{{A}}'s {{B}} Gauge reaches middle!</size>"
+r:"^{{A}}的{{B}}值升至<color\=#FF0000>高點</color>，請<color\=#FF0000>小心應對</color>$"="<size\=28>{{A}}'s {{B}} Gauge reached <color\=#FF0000>high</color>, please <color\=#FF0000>be careful</color>!</size>"
 r:"^{{B}}的{{A}}值升至<color\=#FF0000>高點</color>，請<color\=#FF0000>小心應對</color>$"="<size\=28>{{B}}'s {{A}} Gauge reached <color\=#FF0000>high</color>, please <color\=#FF0000>be careful</color>!</size>"
 r:"^<color\=#FF0000>{{A}}</color>被{{B}}鎖定……$"="<size\=24><color\=#FF0000>{{A}}</color> locked on by {{B}}!</size>"
 r:"^<color\=#FF0000>{{B}}</color>被{{A}}鎖定……$"="<size\=24><color\=#FF0000>{{B}}</color> locked on by {{A}}!</size>"
 r:"^{{A}}進入了庇護狀態，請<color\=#FF0000>儘快擊破護盾</color>$"="{{A}} entered Protection. \n<color\=#FF0000>Break the Shield as soon as possible</color>!"
+r:"^護盾被擊破，{{A}}的{{B}}值大幅降低了……$"="<size\=24>Shield is broken! Heavily decrease {{B}} Gauge!</size>"
 r:"^護盾被擊破，{{B}}的{{A}}值大幅降低了……$"="<size\=24>Shield is broken! Heavily decrease {{A}} Gauge!</size>"
 
 化身為「基什基爾·莉拉」的惡魔，灼熱的情感，赤紅的身軀，以及附著可怖眼球的邪惡之翼。在她歇斯底里的狂怒中卻摻雜著不和諧的恐懼與掙扎——這股力量並非來自於她本身，而是源自外部壓倒性的惡意。=A demon in the form of "Kiskil-lilla", with a fiery aura, scarlet body, and evil wings with terrifying eyes. Underneath her hysterical wrath is a mix of discordant fear and struggle- For this power did not come from her own, but from an outside source with overwhelming malice.
@@ -1218,8 +1223,33 @@ r:"^<pos\=45>{{A}}的「混元珍珠傘」使友方的屬性適應性變成“�
 r:"^<pos\=45>{{A}}的「混元珍珠傘」使友方的屬性適應性變成“吸”，{{A}}的最終攻擊力提升(\d+%)$"="<pos\=45>[Pearl Umbrella] now changes ally's resistance to [Absorb], increase {{A}}'s Final ATK by $1"
 r:"^<pos\=45>{{A}}的「混元珍珠傘」的保護目標改為血量最低的(\d+)個單位，{{A}}的最終生命值提升(\d+%)$"="<pos\=45>[Peral Umbrella] now protects the $1 lowest HP units, increase {{A}}'s Final HP by $2"
 
+r:"^<pos\=45>「真龍之力」造成最終傷害提高效果提升至(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="<pos\=45>Increase [True Dragon Power] Final DMG by $1, increase {{A}}'s Final ATK by $2"
+r:"^<pos\=45>「升龍的祈禱」每(\d+)層可轉換為(\d+)層「真龍之力」，{{A}}最終生命值提升(\d+%)$"="<pos\=45>Convert every $1 stacks of [Dragon Prayer] into $2 stack of [True Dragon Power], increase {{A}}'s Final HP by $3"
+r:"^<pos\=45>「昇龍的祈禱」每(\d+)層可轉換為(\d+)層「真龍之力」，{{A}}最終生命值提升(\d+%)$"="<pos\=45>Convert every $1 stacks of [Dragon Prayer] into $2 stack of [True Dragon Power], increase {{A}}'s Final HP by $3"
+r:"^<pos\=45>「隕落」造成的傷害提升(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="<pos\=45>Increase [Fall] DMG Dealt by $1, increase {{A}}'s Final ATK by $2"
+r:"^<pos\=45>「涅槃」回復的生命值提升至最大生命值的(\d+%)，{{A}}最終生命值提升(\d+%)$"="<pos\=45>Increase [Nirvana] restore amount to $1 Max HP, increase {{A}}'s Final HP by $2"
+r:"^<pos\=45>「{{A}}之淚」的治療效果提升(\d+%)，{{A}}最最終攻擊力提升(\d+%)$"="<pos\=45>Increase [{{A}} Tears] Healing Effect by $1, increase {{A}}'s Final ATK by $2"
+r:"^<pos\=45>「{{A}}之淚」的治療效果提升(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="<pos\=45>Increase [{{A}} Tears] Healing Effect by $1, increase {{A}}'s Final ATK by $2"
+r:"^<pos\=45>「鸞鳳的祭歌」每(\d+)層可轉換為(\d+)層「涅槃之力」，{{A}}最終生命值提升(\d+%)$"="<pos\=45>Convert every $1 stacks of [Phoenix Song] into $2 stack of [Power of Nirvana], increase {{A}}'s Final HP by $3"
+r:"^<pos\=45>「雷霆萬鈞」的暴擊率提高效果提升至(\d+%)，{{A}}的最終攻擊力提升(\d+%)$"="<pos\=45>Increase [Unstoppable Thunder] CRIT Rate buff to $1, increase {{A}}'s Final ATK by $2"
+r:"^<pos\=45>「雷之守護」受到暴擊效果降低的效果提升至(\d+%)，{{A}}的最終生命值提升(\d+%)$"="<pos\=45>Increase [Thunder Protection] CRIT DMG Taken Down buff to $1, increase {{A}}'s Final HP by $2"
+
 驚雷無豐=Scarce Thunder
 電威=Electric Might
+雷霆萬鈞=Unstoppable Thunder
+雷之守護=Thunder Protection
+r:"^雷<color\=#000000>霆</color>萬鈞$"="U<color\=#000000>u</color>stoppable Thunder"
+r:"^雷<color\=#000000>之</color>守護$"="T<color\=#000000>h</color>under Protection"
+涅槃之力=Power of Nirvana
+r:"^涅<color\=#000000>槃</color>之力$"="P<color\=#000000>o</color>wer of Nirvana"
+r:"^瀕死時，可消耗(\d+)層回復一定生命值$"="When near death, can consume $1 stack and restore a certain amount of HP"
+真龍之力=True Dragon Power
+升龍的祈禱=Dragon Prayer
+隕落=Fall
+{{A}}之淚={{A}} Tears
+鸞鳳的祭歌=Phoenix Song
+r:"^鸞<color\=#000000>鳳</color>的祭歌$"="P<color\=#000000>h</color>oenix Song"
+sr:"^疊加至一定層數可轉換為(\d+)層「(.*)」$"="Can convert into $1 stack of [$2] when reaching a certain stack"
 
 ----------
 Sea of Souls Trials (SoS)

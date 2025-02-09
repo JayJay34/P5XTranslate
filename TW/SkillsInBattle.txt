@@ -319,6 +319,8 @@ sr:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的(.*)屬�
 
 r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，賦予敵人(.*)個詛咒效果$"="Deals $1 ATK Curse damage to <color\=#FFFF00>1</color> enemy and inflicts $2 Curse"
 
+r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，機率賦予敵人(.*)個詛咒效果$"="Deals $1 ATK Curse damage to <color\=#FFFF00>1</color> enemy, there is a chance to inflict $2 Curse"
+
 //AoE
 sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies.
 
@@ -469,11 +471,13 @@ r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬�
 //AoE Bless with varying stacks
 r:"對<color\=#FFFF00>所有</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+\~\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>all</color> enemies and gains $2 stack(s) of Bless.
 
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，機率賦予自身(\d+\~\d+)個祝福效果$"="Deals $1 ATK Bless damage to <color\=#FFFF00>all</color> enemies, with a chance to gain $2 stack(s) of Bless."
+
 //ST Bless Instakill
-r:"對<color\=#FFFF00>1名</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，對50%生命值以下的敵人附加低機率祝福屬性即死效果，生命值越低機率越高。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>1</color> enemy with a chance of Instant Death to enemies under 50% HP. The lower the HP, the higher the chance.
+r:"對<color\=#FFFF00>1名</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，對50%生命值以下的敵人附加低機率祝福屬性即死效果，生命值越低機率越高。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>1</color> enemy with a chance of insta-kill to enemies under 50% HP. The lower the HP, the higher the chance.
 
 //AoE Bless Instakill
-r:"對<color\=#FFFF00>所有</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，對50%生命值以下的敵人附加低機率祝福屬性即死效果，生命值越低機率越高。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>all</color> enemies with a chance of Instant Death to enemies under 50% HP. The lower the HP, the higher the chance.
+r:"對<color\=#FFFF00>所有</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，對50%生命值以下的敵人附加低機率祝福屬性即死效果，生命值越低機率越高。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>all</color> enemies with a chance of insta-kill to enemies under 50% HP. The lower the HP, the higher the chance.
 
 Desire of Life Shell
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，恢復生命值最低的同伴(\d+\.\d+%)攻擊力的生命值。$"="Deals $1 ATK Bless damage to <color\=#FFFF00>all</color> enemies and restores $2 ATK HP to the lowest HP ally."
@@ -507,16 +511,16 @@ Fortune Devourer
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，並使所有敵人防禦力降低(\d+\.\d+%)、受到的持續傷害提升(\d+\.\d+%)，持續(\d+)回合$"="Deals $1 ATK Curse damage to <color\=#FFFF00>all</color> enemies, decreases all enemies' DEF by $2 and increases all enemies Damage Over Time Taken by $3 for $4 turns."
 
 // Single Target Basic Insta-kills
-r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，對低生命敵人機率造成即死效果"=<size\=24>Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>1</color> enemy with a chance of Instant Death to enemies under 50% HP. The lower the HP, the higher the chance.</size>
+r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，對低生命敵人機率造成即死效果"=<size\=24>Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>1</color> enemy with a chance of insta-kill to enemies under 50% HP. The lower the HP, the higher the chance.</size>
 
 // AoE Curse Instakill
-r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，對低生命敵人機率造成即死效果"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies with a chance of Instant Death to enemies under 50% HP. The lower the HP, the higher the chance.
+r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，對低生命敵人機率造成即死效果"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies with a chance of insta-kill to enemies under 50% HP. The lower the HP, the higher the chance.
 
 //???
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得1層『地獄火』，並使其身上的所有『地獄火』立刻結算一次，該次結算傷害提升200%。"=
 
 //"Die For Me!"
-r:"^使<color\=#FFFF00>所有</color>敵人受到的詛咒屬性傷害提升(\d+\.\d+%)\+每(\d+%)效果命中額外提升(\d+\.\d+%)，上限(\d+%)。對生命值低於(\d+%)的敵人高機率附加即死效果。$"="Increases <color\=#FFFF00>all</color> enemies' Curse DMG Taken by $1 + $3 for every $2 EHR you have, up to $4. There is a high chance of Instant Death to enemies under $5 HP."
+r:"^使<color\=#FFFF00>所有</color>敵人受到的詛咒屬性傷害提升(\d+\.\d+%)\+每(\d+%)效果命中額外提升(\d+\.\d+%)，上限(\d+%)。對生命值低於(\d+%)的敵人高機率附加即死效果。$"="Increases <color\=#FFFF00>all</color> enemies' Curse DMG Taken by $1 + $3 for every $2 EHR you have, up to $4. There is a high chance of insta-kill to enemies under $5 HP."
 
 --- Almighty ---
 
@@ -617,6 +621,9 @@ r:"^使<color\=#FFFF00>所有</color>同伴獲得(\d+\.\d+%)攻擊力\+(\d+)的�
 
 防風之壁=Wind Wall
 撐起2回合疾風耐性的防壁。=Adds Wind resistance to one ally for 2 turns.
+
+Snow Aegis
+r:"^使<color\=#FFFF00>所有</color>同伴獲得(\d+\.\d+%)攻擊力\+(\d+)的護盾，護盾存在時防禦力提升(\d+%)，持續(\d+)回合。$"="Gives <color\=#FFFF00>all</color> allies $1 ATK + $2 Shield for 2 turns. When the Shield is active increases DEF by $3."
 
 --- Debuffs ---
 
@@ -981,7 +988,7 @@ r:"^耐性穿透提升(\d+%)$"="Increase Effect RES Ignore by $1"
 生命回復=Regenerate
 
 免疫傷害=Damage Immunity
-免疫即死=<size\=28>Instant Death Immunity</size>
+免疫即死=<size\=28>Insta-Kill Immunity</size>
 免疫精神異常=<size\=23>Mental Ailment Immunity</size>
 免疫倒地=Down Immunity
 免疫精神異常及控制=<size\=20>Mental Ailment and Control Immunity</size>
@@ -1016,6 +1023,7 @@ r:"^持續時間內，所有友方暴擊率提升(\d+(.\d+)?(%)?)"="During this 
 r:"^暴擊傷害提升(\d+(.\d+)?(%)?)$"="Increase CRIT DMG by $1"
 r:"^暴擊效果提升(\d+(.\d+)?(%)?)$"="Increase CRIT DMG by $1"
 r:"^暴擊效果額外提升(\d+(.\d+)?(%)?)$"="Additionally increase CRIT DMG by $1"
+r:"^受到的暴擊效果降低(\d+(.\d+)?(%)?)$"="Decrease CRIT DMG Taken by $1"
 r:"^精力回復提升(\d+(.\d+)?(%)?)$"="Increase SP Recovery by $1"
 r:"^穿透提升(\d+(.\d+)?(%)?)$"="Increase PEN by $1"
 r:"^穿透提升(\d+%)，可疊加(\d+)層$"="Increase PEN by $1, up to $2 stacks"
@@ -1026,6 +1034,8 @@ r:"^最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1"
 r:"^最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1"
 r:"^最終傷害提升(\d+%)，可疊加(\d+)層$"="Increase Final DMG by $1, up to $2 stacks"
 r:"^每層提供(\d+%)的最終傷害加成，最多可疊加(\d+)層$"="Increase Final DMG by $1, up to $2 stacks"
+r:"^處於額外回合時，最終傷害提高(\d+(.\d+)?(%)?)$"="<size\=26>Increase Final DMG by $1 during Extra Turn</size>"
+r:"^造成持續傷害時，最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1 when dealing Damage Over Time"
 r:"^傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Bonus by $1"
 r:"^造成傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Dealt by $1"
 r:"^造成傷害提高(\d+(.\d+)?(%)?)$"="Increase DMG Dealt by $1"
@@ -1094,7 +1104,7 @@ r:"^剩餘護盾值：(\d+)$"="Shield: $1"
 免疫一切傷害=Immunity to all damage
 免疫下次受到的傷害=Immunity to next damage
 受到的傷害將由所有擁有生命連結的單位共同分攤=<size\=26>Damage will be shared by all units with Lifelink</size>
-免疫即死效果=Immunity to Instant Death effects
+免疫即死效果=Immunity to Insta-Kill effects
 免疫精神異常效果=Immunity to Mental Ailment effects
 免疫倒地值傷害=Immunity to Down
 免疫精神異常效果及控制效果=<size\=26>Immunity to Mental Ailments and Control effects</size>
