@@ -118,8 +118,9 @@ r:"^首領的適應性發生變化，所有怪盜造成<color\=#FFFC40>弱點傷
 ----------
 Bosses
 ----------
-
-{{A}}、{{B}}、{{C}}、{{D}}處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。=<size\=28>Dominion, Power, Principality and Archangel have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.</size>
+{{A}}、{{B}}、{{C}}、{{D}}處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n{{A}}會源源不斷地召喚天使援軍，擊敗天使可以回復精力值。對處於虛弱階段時{{A}}召喚的天使造成傷害可獲得積分。=<size\=24>{{A}}, {{B}}, {{C}}, {{D}} have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.\n{{A}} will keep summoning Angel, defeating Angel will restore SP. Dealing damage to Angel during Weak will count for score.</size>
+1、{{A}}、{{B}}、{{C}}、{{D}}處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n2、{{A}}會源源不斷地召喚天使援軍，擊敗天使可以回復精力值。對處於虛弱階段時{{A}}召喚的天使造成傷害可獲得積分。=<size\=24>1. {{A}}, {{B}}, {{C}}, {{D}} have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.\n2. {{A}} will keep summoning Angel, defeating Angel will restore SP. Dealing damage to Angel during Weak will count for score.</size>
+{{A}}、{{B}}、{{C}}、{{D}}處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。=<size\=24>{{A}}, {{B}}, {{C}}, {{D}} have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.</size>
 
 {{A}}的「化身」與本體處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。={{A}} and his incarnations have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.
 {{A}}的化身之一。=One of the incarnations of {{A}}.
@@ -129,7 +130,7 @@ r:"^1、{{B}}每回合為所有單位添加<color\=#ff3b37>「諸神黃昏」</c
 諸神黃昏=Ragnarok
 擊敗{{B}}，會扣除{{A}}一定生命值={{A}} will lose a certain amount of HP after defeating {{B}}
 
-1、{{A}}會釋放「八字聖玉」：使自身對全屬性的適應性變為耐，造成傷害提升、受到傷害降低，並召喚四屬性之魂。擊敗不同屬性的魂，會使{{A}}進入不同的元素異常狀態，持續2回合。\n2、{{A}}處於「八字聖玉」狀態，且同時擁有4種元素異常狀態時，會退出「八字聖玉」狀態並使自身防禦力降低。\n3、{{A}}進入虛弱階段時，會清除四屬性之魂並退出「八字聖玉」狀態。=1. Yatsufusa will use [Eight Virtue's Protection]: Change all affinities Resist, increase DMG Dealt and decrease DMG Taken, and summon 4 Mitamas. When a Mitama dies, inflicts Yatsufusa with an Elemental Ailment for 2 turns.\n2. When Yatsufusa has 4 Elemental Ailments, loses [Eight Virtue's Protection] and reduces own DEF.\n3. When Yatsufusa enters Weakness, defeats all Mitamas loses [Eight Virtue's Protection].
+r:"^1、{{A}}會釋放「八字聖玉」：使自身對全屬性的適應性變為耐，造成傷害提升、受到傷害降低，並召喚四屬性之魂。擊敗不同屬性的魂，會使{{A}}進入不同的元素異常狀態，持續(\d+)回合。\n2、{{A}}處於「八字聖玉」狀態，且同時擁有(\d+)種元素異常狀態時，會退出「八字聖玉」狀態並使自身防禦力降低。\n3、{{A}}進入虛弱階段時，會清除四屬性之魂並退出「八字聖玉」狀態。$"="<size\=24>1. {{A}} will use [Eight Virtue's Protection]: Change all affinities to Resist, increase DMG Dealt and decrease DMG Taken, and summon 4 Mitamas. When a Mitama dies, inflict {{A}} with an Elemental Ailment for $1 turns.\n2. When {{A}} have $2 Elemental Ailments, lose [Eight Virtue's Protection] and decrease own DEF.\n3. When {{A}} enter Weak, defeat all Mitamas and lose [Eight Virtue's Protection].</size>"
 
 r:"^1、{{B}}每受到(\d+)次技能傷害或負面狀態，會獲得(\d+)層<color\=#ff3b37>「衰退」</color>。\n「衰退」：防禦力降低，持續(\d+)回合，可疊加(\d+)層。\n2、{{B}}會使用蓄力，下回合釋放「{{A}}」，造成巨額單體傷害；若蓄力期間「衰退」≥(\d+)層，則蓄力會被打斷，改為釋放「斬擊」。{{B}}的單體攻擊會優先攻擊輸出職業的怪盜。$"="<size\=24>1. {{B}} will gain $2 stack of <color\=#ff3b37>[Wane]</color> when they take $1 hit of skill damage or inflicted with debuffs.\n[Wane]: Decrease DEF for $3, up to $4 stacks.\n2. {{B}} can use Charge then use [{{A}}] next turn, dealing colossal Physical damage; If during Charge they have ≥$5 stacks of [Wane], they will exit Charge and use [Cleave] instead. {{B}}'s single target attacks will prioritize Rebel/ Dominate Thieves.</size>"
 衰退=Wane
@@ -169,6 +170,7 @@ r:"^<color\=#FFFC40>支配</color>怪盜造成傷害提高(\d+(.\d+)?(%)?)$"="<s
 r:"^所有怪盜<color\=#ff381d>火焰</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#ff381d>Fire</color> DMG by $1</size>"
 r:"^所有怪盜<color\=#00aeff>冰凍</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#00aeff>Ice</color> DMG by $1</size>"
 r:"^所有怪盜<color\=#ff63ff>念動</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#ff63ff>Psy</color> DMG by $1</size>"
+r:"^所有怪盜<color\=#00fcff>核熱</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#00fcff>Nuke</color> DMG by $1</size>"
 r:"^所有怪盜<color\=#fffea0>祝福</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#fffea0>Bless</color> DMG by $1</size>"
 r:"^所有怪盜<color\=#ff0036>詛咒</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#ff0036>Curse</color> DMG by $1</size>"
 r:"^所有怪盜<color\=#FFFC40>HIGHLIGHT</color>傷害提升(\d+(.\d+)?(%)?)$"="Increase <color\=#FFFC40>HIGHLIGHT</color> DMG by $1"
@@ -182,6 +184,10 @@ r:"^所有怪盜<color\=#FFFC40>受到治療</color>後，最終傷害提升(\d+
 
 庇佑領域=Blessing Domain
 r:"^隊伍中編入防衛、救援職業隊員時，所有敵人造成最終傷害降低(\d+%)，否則所有敵人造成最終傷害提升(\d+%)$"="Decrease all enemies' Final DMG Dealt by $1 for every Defend and Rescue Thief.\nOtherwise, increase all enemies' Final DMG Dealt by $2"
+
+再動特化=Extra Turn Buff
+再動領域=Extra Turn Domain
+r:"^所有怪盜處於<color\=#FFFC40>額外回合</color>時，暴擊率提升(\d+%)，暴擊效果提升(\d+%)$"="Increase Thieves' CRIT Rate by $1 and CRIT DMG by $2 during <color\=#FFFC40>Extra Turn</color>"
 
 追加特化=Follow Up Buff
 r:"^所有怪盜<color\=#FFFC40>追加效果</color>的暴擊效果提升(\d+%)、攻擊力提升(\d+%)$"="Increase Thieves' <color\=#FFFC40>Follow Up</color> CRIT DMG by $1 and ATK by $2"
