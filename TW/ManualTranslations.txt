@@ -281,7 +281,7 @@ cv:{{A}}=cv:{{A}}
 // P5X MAIN//
 r:"^梅<color\=#ff0000ff>洛</color>普$"="Me<color\=#ff0000ff>r</color>ope"
 r:"^瑪<color\=#ff0000ff>奇</color>姆$"="Ma<color\=#ff0000ff>r</color>thym"
-r:"^路<color\=#ff0000ff>菲</color>爾$"="Ru<color\=#ff0000ff>fe</color>ru"
+r:"^路<color\=#ff0000ff>菲</color>爾$"="Lu<color\=#ff0000ff>f</color>el"
 r:"^新<color\=#ff0000ff>井</color>{{A}}$"="Mo<color\=#ff0000ff>to</color>ha Arai"
 r:"^加<color\=#ff0000ff>納</color> 駿$"="Sh<color\=#ff0000ff>un</color> Kanou"
 r:"^加<color\=#ff0000ff>納</color>駿$"="Sh<color\=#ff0000ff>un</color> Kanou"
@@ -409,7 +409,7 @@ r:"^已購買(\d+)/(\d+)次（每日05:00重置）$"="Purchased $1/$2 times \n(R
 時序之墨=Temporal Ink
 蘊含星辰之力的墨水，可用於定制月、星、辰位置的啟示卡。=Ink that contains the power of the stars, can be used to create a customized Revelation Card.
 認知請願書 4星=4★ Cognitive Petition
-請在以下列表中點擊選擇一位4星怪盜。=Select one of the 4-star characters in the list below.
+請在以下列表中點擊選擇一位4星怪盜。=Select one 4★ Thief from the list below.
 宇宙的終響=Universe Echo
 來自宇宙的命運指引，打開後可自選一張橙色宙位啟示卡。=A guidance of fate from the Universe, can be used to gain 1 Orange Universe Card
 殘識碎片禮包=<size\=17>Awareness Fragment Gift Bag</size>
@@ -840,6 +840,7 @@ sr:"^多重奏·(.*):(.*)元素怪盜技能傷害提升(.*)$"="<size\=21>$1 Poly
 耐性穿透=Resist PEN
 耐性抗性=Resist Bonus
 r:"^治療效果$"="<size\=22>Healing Effect</size>"
+受治療加成=Healing Received
 受治療效果=Healing Received
 護盾效果=Shield Effect
 受護盾效果=Shield Received
@@ -984,89 +985,134 @@ r:"^需要<size\=46><color\=#ffffff><sprite\=30 tint\=1></size>1</color>升級�
 完成目標Ⅱ第六階段所有任務=Complete all tasks in Step 6
 完成目標Ⅱ第七階段所有任務=Complete all tasks in Step 7
 
+r:"^完成目標Ⅰ第一階段任意(\d+)個任務$"="Complete any $1 tasks in Step 1"
+r:"^完成目標Ⅰ第二階段任意(\d+)個任務$"="Complete any $1 tasks in Step 2"
+r:"^完成目標Ⅰ第三階段任意(\d+)個任務$"="Complete any $1 tasks in Step 3"
+r:"^完成目標Ⅰ第四階段任意(\d+)個任務$"="Complete any $1 tasks in Step 4"
+r:"^完成目標Ⅰ第五階段任意(\d+)個任務$"="Complete any $1 tasks in Step 5"
+r:"^完成目標Ⅰ第六階段任意(\d+)個任務$"="Complete any $1 tasks in Step 6"
+r:"^完成目標Ⅰ第七階段任意(\d+)個任務$"="Complete any $1 tasks in Step 7"
+
+r:"^完成目標Ⅱ第一階段任意(\d+)個任務$"="Complete any $1 tasks in Step 1"
+r:"^完成目標Ⅱ第二階段任意(\d+)個任務$"="Complete any $1 tasks in Step 2"
+r:"^完成目標Ⅱ第三階段任意(\d+)個任務$"="Complete any $1 tasks in Step 3"
+r:"^完成目標Ⅱ第四階段任意(\d+)個任務$"="Complete any $1 tasks in Step 4"
+r:"^完成目標Ⅱ第五階段任意(\d+)個任務$"="Complete any $1 tasks in Step 5"
+r:"^完成目標Ⅱ第六階段任意(\d+)個任務$"="Complete any $1 tasks in Step 6"
+r:"^完成目標Ⅱ第七階段任意(\d+)個任務$"="Complete any $1 tasks in Step 7"
+
+r:"^完成目標Ⅲ第一階段任意(\d+)個任務$"="Complete any $1 tasks in Step 1"
+r:"^完成目標Ⅲ第二階段任意(\d+)個任務$"="Complete any $1 tasks in Step 2"
+r:"^完成目標Ⅲ第三階段任意(\d+)個任務$"="Complete any $1 tasks in Step 3"
+r:"^完成目標Ⅲ第四階段任意(\d+)個任務$"="Complete any $1 tasks in Step 4"
+r:"^完成目標Ⅲ第五階段任意(\d+)個任務$"="Complete any $1 tasks in Step 5"
+r:"^完成目標Ⅲ第六階段任意(\d+)個任務$"="Complete any $1 tasks in Step 6"
+r:"^完成目標Ⅲ第七階段任意(\d+)個任務$"="Complete any $1 tasks in Step 7"
+
+r:"^完成目標Ⅳ第一階段任意(\d+)個任務$"="Complete any $1 tasks in Step 1"
+r:"^完成目標Ⅳ第二階段任意(\d+)個任務$"="Complete any $1 tasks in Step 2"
+r:"^完成目標Ⅳ第三階段任意(\d+)個任務$"="Complete any $1 tasks in Step 3"
+r:"^完成目標Ⅳ第四階段任意(\d+)個任務$"="Complete any $1 tasks in Step 4"
+r:"^完成目標Ⅳ第五階段任意(\d+)個任務$"="Complete any $1 tasks in Step 5"
+r:"^完成目標Ⅳ第六階段任意(\d+)個任務$"="Complete any $1 tasks in Step 6"
+r:"^完成目標Ⅳ第七階段任意(\d+)個任務$"="Complete any $1 tasks in Step 7"
+
 完成目標=Complete All 
 所有任務=Tasks
 自選新手五★怪盜=Pick a 5★ Character!
 自選新手五★武器=Pick a 5★ Weapon!
-完成   階段目標獲得=Completion Rewards
+自選指定五★殘識=Pick a 5★ Awareness!
+自選指定五★武器=Pick a 5★ Weapon!
+請在以下列表中點擊選擇一位5星怪盜=Select one 5★ Thief from the list below
+請在以下列表中點擊選擇一把5星武器=Select one 5★ Weapon from the list below
+自選1個1.3.2版本前普通角色契約內的5星怪盜殘識=Select 1 standard 5★ Awareness before version 1.3.2
+自選1把1.3.2版本前武器補給內非限定角色的5星武器=Select 1 standard 5★ Weapon before version 1.3.2
+
+完成   階段目標獲得= Step   Tasks Reward
 
 // REGEX ONLY
-r:"主角升至(\d+)級"=Wonder reaches level $1
-r:"擁有(\d+)個(\d+)級的怪盜"=Have $1 level $2 Phantom Thieves
-r:"擁有(\d+)個(\d+)級的武器"=Have $1 level $2 weapons
-r:"擁有(\d+)張等級為(\d+)級的啟示卡"=Have $1 level $2 Revelation cards
-r:"消耗(\d+)靈感點"=Use $1 Inspiration Points
-r:"通關天鵝絨試煉任意(\d+)章的第(\d+)關"=In Velvet Challenges, complete Stage $2 in $1 chapters
-r:"進行(\d+)次足球部活動"=Join a Soccer Club activity $1 times.
-r:"完成(\d+)次「厄抑之境」 \((\d)\/(/d)\)"=Complete $1 Metaverse Farms. ($1/$2)
-r:"擁有(\d+)個(\d+)級的階級(\d+)及以上的{{A}}"=Own $1 Rank $3 Persona at level $2
-r:"合成(\d+)個彩色品質的階級(\d){{A}}"=Fuse $1 Rainbow-quality Rank $2 Persona
-r:"將(\d+)名怪盜的任意(\d+)個非潛能技能各升級(\d+)次"=Level up $2 of your companions' $1 skills $3 times. 
-r:"通關天鵝絨試煉巧匠之作第(\d+)關"=Pass Velvet Room Anubis Challenge Stage $1
-r:"{{A}}探索度達到(\d+)%"=Reach $1% Exploration Progress of {{A}}
-r:"將{{A}}進化至階級(\d+)"=Evolve Janosik $1 time(s)
-r:"與任意一位協同者好感度達到(\d+)級"=Reach Lv. $1 with any of your confidants
-r:"任意人格指數達到(\d+)級"=Reach Lv.$1 of any social skills
-r:"擁有(\d+)個(\d+)級的RANK(\d+)及以上的{{A}}"=Have $1 Rank $3 Lv. $2 Persona (or higher)
-r:"擁有(\d+)張等級為(\d+)級的宙位啟示卡"=Own $1 Lv. $2 Arcana Revelation Cards
+r:"主角升至(\d+)級"=Reach Wonder Lv. $1
+r:"^擁有(\d+)個(\d+)級的{{A}}$"="Have $1 Lv. $2 {{A}}"
+r:"^擁有(\d+)個(\d+)級及以上的{{A}}$"="Have $1 Lv. $2 or above {{A}}"
+r:"^擁有(\d+)個(\d+)級的怪盜$"="Have $1 Lv. $2 Thieves"
+r:"^擁有(\d+)個(\d+)級及以上的怪盜$"="Have $1 Lv. $2 or above Thieves"
+r:"擁有(\d+)個(\d+)級的武器"=Have $1 Lv. $2 weapons
+r:"消耗(\d+)靈感點"=Spend $1 Inspiration
+
+r:"^擁有(\d+)個(\d+)級的階級(\d+)及以上的{{A}}$"="Have $1 Rank $3 {{A}} at Lv. $2"
+r:"^合成(\d+)個彩色品質的階級(\d+){{A}}"="Fuse $1 Rainbow-quality Rank $2 {{A}}"
+r:"^擁有(\d+)個彩色品質的RANK(\d+){{A}}$"="Have $2 Rainbow-quality Rank $2 {{A}}"
+r:"^將(\d+)名怪盜的任意(\d+)個非潛能技能各升級(\d+)次$"="Level up $2 skills for $1 Thieves $3 times"
+r:"^將{{A}}進化至階級(\d+)$"="Evolve {{A}} to Rank $1"
+r:"^將{{A}}進化至RANK(\d+)$"="Evolve {{A}} to Rank $1"
+r:"擁有(\d+)個(\d+)級的RANK(\d+)及以上的{{A}}"=Have $1 Rank $3 or above Lv. $2 Persona
+r:"擁有(\d+)張等級為(\d+)級的啟示卡"=Have $1 Lv. $2 Revelation cards
+r:"擁有(\d+)張等級為(\d+)級的宙位啟示卡"=Have $1 Lv. $2 Universe Revelation Cards
+
+r:"^消耗(\d+)點行動力$"="Spend $1 Energy Points"
+r:"進行(\d+)次足球部活動"=Join a Soccer Club activity $1 times
+r:"與任意一位協同者好感度達到(\d+)級"=Reach Rank $1 with any Confidant
+r:"^任意人格指數達到(\d+)級$"="Reach Rank $1 for any Social Stats"
+
+r:"完成(\d+)次「厄抑之境」 \((\d)\/(/d)\)"=Complete $1 Metaverse Farms ($2/$3)
+r:"^通關(\d+)次厄抑之境$"="Finish $1 Metaverse Farms"
+r:"^通關旖旎香調(.*)（或更高難度）$"="Finish Perfume Farm on Difficulty $1 (or above)"
+r:"^通關裝配冶藝(.*)（或更高難度）$"="Finish Ore Farm on Difficulty $1 (or above)"
+r:"^通關靈之參悟(.*)（或更高難度）$"="Finish Incense Farm on Difficulty $1 (or above)"
+r:"^通關榮級求索(.*)（或更高難度）$"="Finish Character EXP Farm on Difficulty $1 (or above)"
+r:"^通關輜械求索(.*)（或更高難度）$"="Finish Weapon EXP Farm on Difficulty $1 (or above)"
+r:"^通關{{A}}之影(.*)（或更高難度）$"="Defeat {{A}} on Difficulty $1 (or above)"
+
+r:"^{{A}}探索度達到(\d+)%$"="Reach $1% Exploration for {{A}}"
+r:"^將{{A}}精算機升至(\d+)級$"="Upgrade the {{A}} Ticket Machine to Lv. $1"
+r:"^通關天鵝絨試煉巧匠之作第(\d+)關$"="Pass Velvet Trials Artisan's Work Level $1"
+r:"^通關天鵝絨試煉任意(\d+)章的第(\d+)關$"="Pass Level $2 for $1 Velvet Trials"
+r:"^通關天鵝絨試煉任意(\d+)個章節的第(\d+)關$"="Pass Level $2 for $1 Velvet Trials"
+r:"^完成難度(\d+)及以上的心軌擇行$"="Complete Heart Rail on Difficulty $1"
+r:"^完成(\d+)次難度(\d+)及以上的往日回溯$"="Complete $1 Past Echo on Difficulty $2 or above"
 
 // Part I Step 1
 完成引導任務「開啟未知之路」=Complete the main mission: "Open the Unknown Road"
 進行10次簽約=Perform 10 pulls on a banner
-見證{{A}}的覺醒=Witness {{A}}'s Persona Awakening
-完成主線任務「見證隱藏的世界」=Complete the main mission: "Witness the Metaverse"
-擁有3個潛能I的怪盜=Unlock the first Potential of 3 Phantom Thieves
-擁有1個20級的{{A}}=Own a level 20 Persona
+見證{{A}}的覺醒=Witness {{A}}'s Awakening
+完成主線任務「{{A}}」=Complete the main mission: "{{A}}"
+r:"^擁有(\d+)個潛能(.*)的怪盜$"="Have $1 Thieves at Potential $2"
 
 // Part I Step 2
-通關榮級求索Ⅰ（或更高難度）=Finish the 1st (or higher) Character EXP Farm once
-通關輜械求索Ⅰ（或更高難度）=Finish the 1st (or higher) Weapon EXP Farm once
 與{{A}}成為協同者關係=Form a confidant with {{A}}
-消耗5點行動力=Spend 5 Energy Points
 主動添加1名好友=Add a friend
-更換1次頭像=Change your avatar in the Profile menu
+更換1次頭像=Change your Avatar once
 
 // Part I Step 3
 擊敗{{A}}=Defeat {{A}}
-合體2次{{A}}=Fuse 2 Persona
-通關旖旎香調Ⅱ（或更高難度）=Finish the 2nd (or higher) Character Ascension Farm once
+合體2次{{A}}=Fuse 2 {{A}}
 通關任意厄抑之境-{{A}}=Finish any {{A}} Farm once
 完成支線任務「愛與MUSCLE」=Complete Anderson's side mission "Love and MUSCLE"
 加入或者創建任意樂園=Create or join any guild
 
 // Part I Step 4
-通關{{A}}Ⅱ（或更高難度）=Finish the 2nd (or higher) Weapon EXP Farm once
-通關邱比特之影Ⅰ（或更高難度）=Defeat Shadow Kiuchi on difficulty 1 (or higher)
-本期心之海試練通關北部掘進區=Complete the North Side in the Sea of Souls Trial
-將思想剝奪之路精算機升至6級=Level up the 1st Mementos Ticket Level to 6
+本期心之海試練通關北部掘進區=Complete the North Side in the Sea of Souls Trials
 完成引導任務「趣味{{A}}機」=Complete the side mission "Fun Twister"
-
-// Part I Step 5
-通關靈之參悟Ⅱ（或更高難度）=Complete the Incense Farm II or higher
-前往和諧剝奪之路=Reach the 2nd layer of Mementos
 
 // Part I Step 6
 完成支線任務「靈驗的占卜師」=Meet Chihaya for the first time
-育成3次{{A}}=Inherit a Persona skill 3 times
+r:"^育成(\d+)次{{A}}$"="Inherit a {{A}} skill $1 times"
 完成引導任務「旋律時光·其一」=Enroll in the Music Club
 
-// Part I Step 7
-{{A}}探索度達到10%=Reach 10% Exploration Progress in {{A}}
-
 // Part II Step 1
-通關任意厄抑之境-啟示套裝=Finish any Revelation Card Farm once
+通關任意厄抑之境-啟示套裝=Complete any Revelation Card Farm
 
 // Part II Step 2
-本期心之海試練通關西部施工區=Complete the West Side in the Sea of Souls Trial
+本期心之海試練通關西部施工區=Complete the West Side in the Sea of Souls Trials
 
 // Part II Step 3
-成功挑戰1次閼凶夢之扉=Complete the Door of Doom challenge on Normal or higher
+成功挑戰1次閼凶夢之扉=Complete 1 Door of Nightmares on Normal or higher
 
 // Part II Step 6
-本期心之海試練通關核心控制區=Complete the Central Area in the Sea of Souls Trial
+本期心之海試練通關核心控制區=Complete the Central Area in the Sea of Souls Trials
 
 // Part II Step 7
-成功挑戰1次普通難度的閼凶夢之扉=Complete the Door of Doom challenge on Normal or higher
+成功挑戰1次普通難度的閼凶夢之扉=Complete 1 Door of Nightmares on Normal or higher
 
 ----------
 Battle Pass Challenges
@@ -1106,6 +1152,7 @@ r:"^本週累計今日計畫領獎次數\((\d+)\/(\d+)\)，可額外領取$"="Nu
 
 // DAILY //
 r:"^登入遊戲$"="Log in to the game"
+r:"^登入遊戲\((\d+)\/(\d+)\)$"="Log in to the game ($1/$2)"
 r:"^登入遊戲 \((\d+)\/(\d+)\)$"="Log in to the game ($1/$2)"
 r:"進行1次{{A}}合成"=Fuse 1 Persona
 r:"完成1次「{{A}}」挑戰 \((\d+)\/(\d+)\)"=Complete 1 {{A}} Farm ($1/$2)
@@ -1125,15 +1172,15 @@ r:"進行1次{{A}}育成 \((\d+)\/(\d+)\)"=Perfrom 1 Persona skill inheritance (
 r:"^完成1次「往日回溯」挑戰 \((\d+)\/(\d+)\)$"="Complete 1 [Past Echo] ($1/$2)"
 r:"^通關1次「閼凶夢之扉」 \((\d+)\/(\d+)\)$"="Complete 1 [Door of Nightmares] ($1/$2)"
 r:"^完成1次「天鵝絨試煉」 \((\d+)\/(\d+)\)$"="Complete 1 [Velvet Trial] ($1/$2)"
-r:"^完成1次「心之海試煉」 \((\d+)\/(\d+)\)$"="Complete 1 [Sea of Souls Trial] ($1/$2)"
+r:"^完成1次「心之海試煉」 \((\d+)\/(\d+)\)$"="Complete 1 [Sea of Souls Trials] ($1/$2)"
 r:"^在「心軌擇行」中通過1個月臺 \((\d+)\/(\d+)\)$"="Clear 1 Platform in [Heart Rail] ($1/$2)"
 r:"^完成1次「委託」派遣 \((\d+)\/(\d+)\)$"="<size\=29>Complete 1 Dispatch in [Commissions] ($1/$2)</size>"
 
 // WEEKLY //
 r:"累計消耗(\d+)魂石 \((\d+)\/(\d+)\)"=Spend $1 Soul Gems ($2/$3)
 r:"累計消耗(\d+)日元 \((\d+)\/(\d+)\)"=Spend ¥$1 (¥$2/¥$3)
-r:"累計消耗(\d+)點行動力 \((\d+)\/(\d+)\)"=Spend $1 Energy Points ($2/$3)
 r:"累計消耗(\d+)點體力 \((\d+)\/(\d+)\)"=Spend $1 Stamina ($2/$3)
+r:"累計消耗(\d+)點行動力 \((\d+)\/(\d+)\)"=Spend $1 Energy Points ($2/$3)
 r:"^累計完成12次「厄抑之境」 \((\d+)\/(\d+)\)$"=Complete 12 Farming Domain ($1/12)
 r:"完成1次「往日回溯」 \((\d+)\/(\d+)\)"=Complete 1 [Past Echo] ($1/$2)
 r:"^達到「閼凶夢之扉」第4檔積分要求 \((\d+)\/(\d+)\)$"="Reach the 4th score bracket in [Door of Nightmares] ($1/$2)"
@@ -1149,6 +1196,7 @@ r:"完成12次「在盧布朗度過」日程 \((\d+)\/(\d+)\)"=Spend time in Leb
 r:"在「心軌擇行」中完成1次挑戰 \((\d+)\/1\)"=Complete 1 challenge in [Heart Rail] ($1/1)
 r:"完成一個星盤試練的「宮主星」或「命主星」 \((\d+)\/1\)"=Clear 1 [House] or [Chart Ruler] in Astrolabe Trials ($1/1)
 r:"在「星盤試煉」中通過「紫色或紅色」監測點 \((\d+)\/(\d+)\)"=Clear 1 [Purple or Red] Monitoring Point in Astrolabe Trials ($1/$2)
+sr:"^通關「(.*)」難度(\d+) \((\d+)\/(\d+)\)$"="Clear [$1] on Difficulty $2 ($3/$4)"
 
 r:"^本期通行證期間，累計登入(\d+)天 \((\d+)/(\d+)\)$"="Log in for $1 day(s) ($2/$3)"
 
@@ -1417,6 +1465,8 @@ r:"^中型娃娃機-{{A}}$"="Medium Crane Machine"
 r:"^本期有機率獲得超稀有娃娃「<color\=#ffd145>{{A}}·迷你</color>」$"="<size\=24>Chance to get super rare doll\n[<color\=#ffd145>Mini {{A}}</color>]</size>"
 r:"^本期有機率獲得超稀有娃娃「<color\=#ffd145>{{A}}</color>」$"="<size\=24>Chance to get super rare doll\n[<color\=#ffd145>{{A}}</color>]</size>"
 滑動螢幕可旋轉查看娃娃模型。=Drag to view doll model.
+滑動螢幕可旋轉查看娃娃模型=Drag to view doll model
+
 抓取記錄=Records
 娃娃名稱=Doll Name
 花費次數=Attempts
@@ -1596,7 +1646,7 @@ sr:"人格指數「(.*)」達到(\d+)級解鎖$"="Unlock when $1 reached rank $2
 人氣很高的咖啡廳……=This is a popular Café...
 r:"^要在這裡品嘗新口味的咖啡嗎\(<color\=#ff0000>每次(\d+)現金</color>\)？$"="Want to try a new flavor of coffee here?\n(<color\=#ff0000>Spend $1 Yen</color>)"
 去卡拉OK唱歌=<size\=24>Sing Karaoke \nin Kichijoji</size>
-在寺院中冥想=<size\=28>Meditate in the Temple</size>
+在寺院中冥想=<size\=28>Meditate \nin the Temple</size>
 去寺院中冥想，讓心靜一靜吧……=Let's meditate in the Temple \nand calm my mind...
 給人感覺很寧靜的寺廟……=A calming Temple...
 要在這裡冥想度過嗎？=Do you want to meditate in this Temple?
@@ -1703,13 +1753,13 @@ r:"^要在這裡度過時間嗎\(<color\=#ff0000>每次(\d+)現金</color>\)？$
 由於掌握了打工『觀察的心得』，因此獲得了額外收益。=<size\=28>Because I have mastered Observation Insights, I have gained more Social Stats.</size> 
 由於掌握了打工『觀察的心得』,掌握了打工『服務的心得』，因此獲得了額外收益。=<size\=25>Because I have mastered Observation Insights and Service Insights, \nI have gained more Social Stats.</size> 
 
-{{A)}}的星空探險=<size\=24>Haruna's Starry\nSky Adventure</size>
+{{A}}的星空探險=<size\=24>{{A}}'s Starry\nSky Adventure</size>
 {{A}}想要去池袋的星空博物館探險，去陪一陪她吧……=<size\=28>{{A}} wants to go on an adventure to the Planetarium in Ikebukuro, \nlet's accompany her...</size>
 今天探險嗎？=<size\=24>Going on an adventure today?</size>
-{{A}}的遊樂場探險=<size\=24>Haruna's Amusement\nPark Adventure</size>
+{{A}}的遊樂場探險=<size\=24>{{A}}'s Amusement\nPark Adventure</size>
 要陪{{A}}探險嗎(<color\=#ff0000>消耗1點行動力</color>)？=<size\=30>Do you want to accompany {{A}} on her adventure? (<color\=#ff0000>Spend 1 Energy Point</color>)</size> 
-{{A}}的數學輔導=<size\=24>Math tutoring with \nHaruna</size>
-{{A}}想要看看高中的數學知識，去陪一陪她吧……=<size\=25>Haruna wants to learn more about high school mathametics, let's study with her...</size>
+{{A}}的數學輔導=<size\=24>Math tutoring with \n{{A}}</size>
+{{A}}想要看看高中的數學知識，去陪一陪她吧……=<size\=25>{{A}} wants to learn more about high school mathametics, let's study with her...</size>
 今天學習嗎？=Studying today?
 
 r:"^幫助{{A}}$"="<size\=24>Help out\n{{A}}</size>"
@@ -1880,6 +1930,7 @@ Music Club
 ----------
 社團經驗=Club EXP
 升級解鎖內容=Unlock
+社團已升到滿級！=Club Lv. maxed!
 
 r:"^時長 (.*):(.*)$"="Length $1:$2"
 得分：=Score:
@@ -1909,6 +1960,15 @@ r:"^{{A}}協同者(.*)級解鎖。$"="{{A}} Rank $1"
 r:"^上一難度達到(.*)評價解鎖$"="Unlocks when you achieved $1 Rank on the pervious difficulty"
 
 r:"^Miss修正為Perfect判定$"="Miss -> Perfect!"
+
+----------
+Soccer Club
+----------
+r:"^至少踢進(\d+)個球。$"="Score $1 Goals."
+r:"^(\d+)個球全部進。$"="Score All $1 Goals."
+r:"^至少(\d+)次擊中守門員弱點。$"="Hit $1 Goalkeeper's Weakness."
+進球數：=Goals:
+足球積分：=<size\=50>Soccer Points:</size>
 
 ----------
 Chihaya's Fortune (Tarot)
@@ -2039,12 +2099,12 @@ r:"^厄抑之境$"="Metaverse Farm"
 「暗影獵域」=[Persona Farm]
 暗影獵域=Persona Farm
 厄抑之境·{{A}}=Persona Farm
-『旖旎香調』=[Character Ascension Farm]
-「旖旎香調」=[Character Ascension Farm]
-旖旎香調=Character Ascension Farm
-『裝配冶藝』=[Weapon Ascension Farm]
-「裝配冶藝」=[Weapon Ascension Farm]
-裝配冶藝=Weapon Ascension Farm
+『旖旎香調』=[Perfume Farm]
+「旖旎香調」=[Perfume Farm]
+旖旎香調=Perfume Farm
+『裝配冶藝』=[Ore Farm]
+「裝配冶藝」=[Ore Farm]
+裝配冶藝=Ore Farm
 『靈之參悟』=[Incense Farm]
 「靈之參悟」=[Incense Farm]
 靈之參悟=Incense Farm
@@ -2130,7 +2190,8 @@ Resources & Shop Items (Marthym's Shop)
 枚{{A}}=      <size\=17>{{A}}</size>
 現金=Yen
 魂石=Soul Gems
-{{A}}探索獲得的神秘石頭，可用於角色與{{B}}養成。=Mysterious gems obtained from the Metaverse, can be used for character or persona growth.
+『魂石』\n{{A}}探索獲得的神秘石頭，可用於角色與{{B}}養成。=[Soul Gems]\nMysterious gems obtained from the {{A}}, \ncan be used for character and {{B}} growth.
+{{A}}探索獲得的神秘石頭，可用於角色與{{B}}養成。=Mysterious gems obtained from the {{A}}, \ncan be used for character and {{B}} growth.
 r:"^(\d+)魂石$"="$1 Soul Gems"
 怪盜經驗=Thief EXP
 首次=First Time
@@ -2442,15 +2503,30 @@ r:"^參加(\d+)次任意都市日程\((\d+)/(\d+)\)$"="Participate in any $1 Cit
 r:"^消耗(\d+)點體力\((\d+)\/(\d+)\)$"="Spend $1 Stamina ($2/$3)"
 r:"^消耗(\d+)點行動力\((\d+)\/(\d+)\)$"="Spend $1 Energy Points ($2/$3)"
 r:"^完成(\d+)次委託派遣$"="Complete $1 Commissions"
+r:"^完成(\d+)次委託派遣\((\d+)\/(\d+)\)$"="Complete $1 Commissions ($2/$3)"
+r:"^完成(\d+)次往日回溯\((\d+)\/(\d+)\)$"="Complete $1 Past Echo ($2/$3)"
+r:"^在「星盤試煉」中通過「紫色或紅色」監測點\((\d+)\/(\d+)\)$"="Clear 1 [Purple or Red] Monitoring Point in Astrolabe Trials ($1/$2)"
+r:"^累計消耗(\d+)點體力\((\d+)\/(\d+)\)$"="Spend $1 Stamina ($2/$3)"
+r:"^累計消耗(\d+)點行動力\((\d+)\/(\d+)\)$"="Spend $1 Energy Points ($2/$3)"
+r:"^完成1次閼凶夢之扉\((\d+)\/(\d+)\)$"="Complete 1 Door of Nightmares ($1/$2)"
 
+r:"^最高通關等級：(\d+)級$"="Highest Clear Lv: $1"
+r:"^通關(.*)難度(\d+)$"="Clear Difficulty $2"
 挑戰模式=<size\=24>Challenge Mode</size>
 首次通關後解鎖當前難度<color\=#173CCAff>體力模式</color>=Unlock <color\=#173CCAff>Stamina Mode</color> after clearing
 r:"^最小行動次數：   (\d+)$"="Number of Actions: $1"
+最小行動次數：本難度尚未挑戰=Number of Actions: Not challenged yet
 扭曲等級=<size\=30>Distortion</size>
 己方行動次數：=Number of Actions:
+r:"^己方行動次數：(\d+)$"="Number of Actions: $1"
 新解鎖等級：=Unlocked:
 首領挑戰=Challenge
 戰鬥獎勵=Rewards
+r:"^所有敵人最大生命值提升(\d+(.\d+)?(%)?)$"="Increase all enemies' Max HP by $1"
+r:"^所有敵人攻擊力提升(\d+(.\d+)?(%)?)$"="Increase all enemies' ATK by $1"
+r:"^所有敵人防禦力提升(\d+(.\d+)?(%)?)$"="Increase all enemies' DEF by $1"
+r:"^所有敵人受到傷害降低(\d+(.\d+)?(%)?)$"="Decrease all enemies' DMG Taken by $1"
+
 探索里程=<size\=20>Explore Mileage</size>
 達到=<size\=20>Reach</size>
 可挑戰=<size\=20>to Challenge</size>
@@ -2521,6 +2597,7 @@ r:"^擊倒(\d+)個靶子$"="Down $1 Targets"
 r:"^連擊數達到(\d+)$"="Reach $1 Combo"
 r:"^分數達到(\d+)以上$"="Reach $1 Score"
 r:"^(\d+)秒內獲得(\d+)分$"="Get $2 Score in $1 Sec"
+r:"^逃跑靶子不超過(\d+)個$"="<$1 Escape Targets"
 
 當前波次=Current Wave
 歷史最高=High Score
@@ -2534,6 +2611,9 @@ r:"^分數達到<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tin
 r:"^<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>秒內獲得<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>分\(<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>\)$"="<sprite\=$3 tint\=1><sprite\=$4 tint\=1><sprite\=$5 tint\=1> Score in <sprite\=$1 tint\=1><sprite\=$2 tint\=1>s (<sprite\=$5 tint\=1><sprite\=$6 tint\=1><sprite\=$7 tint\=1><sprite\=$8 tint\=1><sprite\=$9 tint\=1>)"
 r:"^<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>秒內獲得<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>分\(<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>\)$"="<sprite\=$3 tint\=1><sprite\=$4 tint\=1><sprite\=$5 tint\=1> Score in <sprite\=$1 tint\=1><sprite\=$2 tint\=1>s (<sprite\=$6 tint\=1><sprite\=$7 tint\=1><sprite\=$8 tint\=1><sprite\=$9 tint\=1><sprite\=$10 tint\=1><sprite\=$11 tint\=1>)"
 r:"^<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>秒內獲得<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>分\(<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>\)$"="<sprite\=$3 tint\=1><sprite\=$4 tint\=1><sprite\=$5 tint\=1> Score in <sprite\=$1 tint\=1><sprite\=$2 tint\=1>s (<sprite\=$6 tint\=1><sprite\=$7 tint\=1><sprite\=$8 tint\=1><sprite\=$9 tint\=1><sprite\=$10 tint\=1><sprite\=$11 tint\=1><sprite\=$12 tint\=1>)"
+r:"^逃跑靶子不超過<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>個\(<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>\)$"="<<sprite\=$1 tint\=1><sprite\=$2 tint\=1><sprite\=$3 tint\=1> Escape Targets (<sprite\=$4 tint\=1><sprite\=$5 tint\=1><sprite\=$6 tint\=1><sprite\=$7 tint\=1><sprite\=$8 tint\=1>)"
+r:"^逃跑靶子不超過<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>個\(<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>\)$"="<<sprite\=$1 tint\=1><sprite\=$2 tint\=1><sprite\=$3 tint\=1> Escape Targets (<sprite\=$4 tint\=1><sprite\=$5 tint\=1><sprite\=$6 tint\=1><sprite\=$7 tint\=1><sprite\=$8 tint\=1><sprite\=$9 tint\=1>)"
+
 r:"^最高連擊：(\d+)$"="Combo: $1"
 r:"^擊倒個數：(\d+)$"="Targets: $1"
 
@@ -2564,6 +2644,24 @@ r:"^戰鬥中至少打出(\d+)次ONEMORE$"="Use at least $1 ONE MORE"
 獨自觀看煙火=Watch Alone
 與{{A}}一起放煙火=Watch fireworks with {{A}}
 r:"^燃放(\d+)個煙火\((\d+)\/(\d+)\)$"="Set off $1 fireworks ($2/$3)"
+
+時諭之墨=Ink of Time
+尚未定製=Not customized
+暫無副屬性資訊，請先定製套裝=No Sub Stats info
+請確定前置選擇=Please confirm all prerequisite choices first
+前序啟示定製完成後解鎖=Unlock after customizing a card
+sr:"^是否消耗<color\=#FFDE00>時諭之墨×(\d+)</color>選擇套裝<color\=#FFDE00>(.*)</color>？$"="<size\=24>Spend <color\=#FFDE00>[Ink of Time]x$1</color> to select <color\=#FFDE00>$2</color>?</size>"
+r:"^是否消耗<color\=#FFDE00>時諭之墨×(\d+)</color>選擇位置<color\=#FFDE00>日</color>？$"="<size\=24>Spend <color\=#FFDE00>[Ink of Time]x$1</color> to select <color\=#FFDE00>Sun</color>?</size>"
+r:"^是否消耗<color\=#FFDE00>時諭之墨×(\d+)</color>選擇位置<color\=#FFDE00>月</color>？$"="<size\=24>Spend <color\=#FFDE00>[Ink of Time]x$1</color> to select <color\=#FFDE00>Moon</color>?</size>"
+r:"^是否消耗<color\=#FFDE00>時諭之墨×(\d+)</color>選擇位置<color\=#FFDE00>星</color>？$"="<size\=24>Spend <color\=#FFDE00>[Ink of Time]x$1</color> to select <color\=#FFDE00>Star</color>?</size>"
+r:"^是否消耗<color\=#FFDE00>時諭之墨×(\d+)</color>選擇位置<color\=#FFDE00>辰</color>？$"="<size\=24>Spend <color\=#FFDE00>[Ink of Time]x$1</color> to select <color\=#FFDE00>Planet</color>?</size>"
+sr:"^是否消耗<color\=#FFDE00>時諭之墨×(\d+)</color>選擇主屬性<color\=#FFDE00>(.*)</color>？$"="<size\=24>Spend <color\=#FFDE00>[Ink of Time]x$1</color> to select <color\=#FFDE00>$2</color>?</size>"
+r:"^是否消耗<color\=#FFDE00>「時諭之墨」×(\d+)</color>刷新一次未鎖定的副屬性？$"="<size\=24>Spend <color\=#FFDE00>[Ink of Time]x$1</color> to refresh not locked Sub Stats?</size>"
+可鎖定=Lock
+已鎖定=Locked
+刷新=Refresh
+啟示塑造=Custom Revelation
+啟示已完成塑造=Made Custom Revelation
 
 ----------
 Velvet Room Personas (VR)

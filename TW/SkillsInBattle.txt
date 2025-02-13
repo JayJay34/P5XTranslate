@@ -321,28 +321,16 @@ r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬�
 
 r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，機率賦予敵人(.*)個詛咒效果$"="Deals $1 ATK Curse damage to <color\=#FFFF00>1</color> enemy, there is a chance to inflict $2 Curse"
 
-//AoE
-sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies.
-
-//AoE Multi-Hit Random
-sr:"對所有敵人造成(\d+\~\d+)次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。"=Deals <color\=#FFFF00>$2</color> ATK $3 damage to <color\=#FFFF00>all</color> enemies $1x.
-
 //AoE + Ailment (2 turns)
-sr:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的(.*)屬性傷害，(\d+\.\d+%)基礎機率機率使敵人(.*)。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$3</color> chance of inflicting $4 for 2 turns.
+sr:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的(.*)屬性傷害，(\d+\.\d+%)基礎機率機率使敵人(.*)。"=Deals $1 ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a $3 chance to inflict $4 for 2 turns.
 
-r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，高機率賦予敵人(.*)個詛咒效果$"="Deals $1 ATK Curse damage to <color\=#FFFF00>all</color> enemies, with a high chance to inflicts $2 Curse"
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，高機率賦予敵人(.*)個詛咒效果$"="Deals $1 ATK Curse damage to <color\=#FFFF00>all</color> enemies, with a high chance to inflict $2 Curse"
 
 //AoE + Ailment (3 turns)
-sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，效果持續3回合。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$3</color> chance of inflicting $4 for 3 turns.
+sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，效果持續3回合。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$3</color> chance to inflict $4 for 3 turns.
 
 //AoE + Reduce DEF
-sr:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的(.*)屬性傷害，並降低敵人(\d+\.\d+%)防禦力，效果持續2回合。"=Deals <color\=#FFFC40>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and reduce their DEF by <color\=#FFFC40>$3</color> for 2 turns.
-
-//AoE + Ailment on main target
-sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，並有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使主目標敵人陷入(.*)狀態，效果持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$3</color> chance of inflicting $4 to the main target for 2 turns.
-
-//AoE + Guaranteed Ailment on main target
-sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有100%的固定機率使技能主目標陷入(.*)狀態。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a 100% fixed chance of inflicting $3 to the main target for 2 turns.
+sr:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的(.*)屬性傷害，並降低敵人(\d+\.\d+%)防禦力，效果持續2回合。"=Deals $1 ATK $2 damage to <color\=#FFFF00>all</color> enemies and reduce their DEF by <color\=#FFFC40>$3</color> for 2 turns.
 
 //Ailment Boost
 sr:"造成(.*)效果時，效果命中提升(\d+\.\d+%)。"=Increase chance of inflicting $1 by $2.
@@ -351,7 +339,7 @@ sr:"造成(.*)效果時，效果命中提升(\d+\.\d+%)。"=Increase chance of i
 sr:"受到(.*)效果時，效果抵抗提升(\d+\.\d+%)。"=Increase resistance to $1 by $2.
 
 //ST Ailment
-sr:"有(\d+\.\d+%)基礎機率使<color\=#FFFF00>1名</color>敵人在2回合間陷入(.*)"=<color\=#FFFF00>$1</color> chance of inflicting $2 to <color\=#FFFF00>1</color> enemy for 2 turns.
+sr:"有(\d+\.\d+%)基礎機率使<color\=#FFFF00>1名</color>敵人在2回合間陷入(.*)"=<color\=#FFFF00>$1</color> chance to inflict inflicting $2 to <color\=#FFFF00>1</color> enemy for 2 turns.
 
 //AoE Ailment敵人在2回合間陷入(.*)
 sr:"有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使所有敵人陷入(.*)，效果持續2回合。"=<color\=#FFFF00>$1</color> chance of inflicting $2 to <color\=#FFFF00>all</color> enemies for 2 turns.
@@ -367,10 +355,10 @@ r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的物理屬�
 r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，暴擊率提升(\d+%)，命中率降低(\d+%)。$"="Deals <color\=#fffc40>$1</color> ATK Physical damage to 1 enemy with a $1 increase in CRIT, and $2 decrease in Hit Rate."
 
 //Mind Slice because it has a comma at the end instead of a period???
-sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，效果持續2回合，"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$3</color> chance of inflicting $4 for 2 turns.
+sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，效果持續2回合，"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies, there is a <color\=#FFFF00>$3</color> base chance to inflict $4 for 2 turns.
 
 //Memory Blow
-sr:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的(.*)屬性傷害，有(\d+\.\d+%)基礎機率使其陷入(.*)狀態，持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$3</color> chance of inflicting $4 for 2 turns.
+sr:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的(.*)屬性傷害，有(\d+\.\d+%)基礎機率使其陷入(.*)狀態，持續(\d+)回合。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies, there is a <color\=#FFFF00>$3</color> chance to inflict $4 for $5 turns.
 
 Painful Judgement
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+)段(\d+\.\d+%)攻擊力的物理屬性傷害，使敵人附加「噩夢」效果並以(\d+\.\d+%)基礎機率使敵人恐懼。$"="Deals $2 ATK Physical damage to <color\=#FFFF00>1</color> enemy $1 times, inflicts the enemy with [Nightmare] and there is a $3 base chance to inflict Fear."
@@ -426,7 +414,7 @@ r:"^對<color\=#FFFF00>隨機</color>敵人造成(\d+\-\d+)段(\d+\.\d+%)攻擊�
 --- Wind ---
 
 //Goddamnit Magarula why are you worded differently???
-sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$3</color> chance of inflicting $4 for 2 turns.
+sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies, with a <color\=#FFFF00>$3</color> base chance to inflict $4 for 2 turns.
 
 Vishnu
 造成<color\=#FFFF00>單體</color>疾風屬性傷害，機率附著<color\=#FFFF00>風襲</color>效果。若目標處於風襲狀態則刷新持續時間並增加本次技能傷害並附加疾風傷害加深效果。=Deals Wind DMG to <color\=#FFFF00>1</color> enemy, with a chance to inflict <color\=#FFFF00>Winded</color>. If the target is in Winded, refreshes its duration, increases this damage and increases their Wind DMG Taken.
@@ -495,6 +483,9 @@ r:"^詛咒屬性$"="Curse"
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得(\d+\~\d+)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>1</color> enemy and inflicts $2 stack(s) of <link\=s|112><u>Curse</u></link>.
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得(.*)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>1</color> enemy and inflicts $2 stack(s) of Curse.
 
+Afterlife Judgement
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，根據自身身上的祝福層數以及目標身上的詛咒層數增傷，每層(\d+%),上限(\d+)層。$"="Deals $1 ATK Curse damage to <color\=#FFFF00>1</color> enemy. When using this skill, each stack of Bless on you or each stack of Curse on the target increases DMG Dealt by $2, up to $3 stacks."
+
 // AoE Basic Curses
 r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，有機率使敵人獲得(\d+\~\d+)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and inflicts $2 stack(s) of <link\=s|112><u>Curse</u></link>.
 r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得(.*)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and inflicts $2 stack(s) of <link\=s|112><u>Curse</u></link>.
@@ -536,6 +527,8 @@ r:"吸收1名敵人<color\=#fffc40>(.*)</color>點精力值。"=Drains <color\=#
 //Life Drain
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的萬能屬性傷害，無視其防禦力，並使自身恢復<color\=#fffc40>37.3%</color>攻擊力的生命值。"=Deals <color\=#fffc40>$1</color> ATK Almighty damage to <color\=#fffc40>1</color> enemy, ignoring DEF\nRestore HP equal to <color\=#fffc40>$1</color> ATK.
 
+Carnage Allure
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的萬能屬性傷害，(\d+\.\d+%)攻擊力的詛咒屬性傷害。進化後，對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的萬能屬性傷害，(\d+\.\d+%)攻擊力的對應屬性傷害。$"="Deals $1 ATK Almighty damage and $2 ATK Curse damage to <color\=#FFFF00>all</color> enemies. After evolving, deals $3 ATK Almighty damage and $4 ATK Elemental damage to <color\=#FFFF00>all</color> enemies."
 
 --- Recovery ---
 
@@ -752,6 +745,7 @@ sr:"^<color\=#FF0000>(.*)</color>暴擊率提升了……$"="<color\=#FF0000>$1<
 <color\=#FF0000>所有敵人</color>受到的傷害提升了……=<color\=#FF0000>All enemies</color> DMG Taken Up!
 
 sr:"^<color\=#FF0000>(.*)</color>獲得了護盾……$"="<color\=#FF0000>$1</color> gained Shield..."
+r:"^解除了(\d+)個狀態降低效果！$"="Dispelled $1 stats debuff!"
 
 sr:"^成功驅散掉了(\d+)層<color\=#FF0000>『(.*)』</color>！$"="Dispelled $1 stack of <color\=#FF0000>[$2]</color>!"
 sr:"^<color\=#FF0000>(.*)</color>退出了蓄力狀態……$"="<color\=#FF0000>$1</color> exited Charge..."
@@ -913,9 +907,12 @@ r:"^受<color\=#000000>詛</color>咒傷害提升$"="C<color\=#000000>u</color>r
 r:"^弱<color\=#000000>點</color>暴露$"="W<color\=#000000>e</color>akness Exposed"
 
 r:"^瞄<color\=#000000>準</color>$"="A<color\=#000000>i</color>m"
+
+r:"^聖<color\=#000000>潔</color>領域$"="H<color\=#000000>o</color>ly Domain"
 r:"^諸<color\=#000000>神</color>黃昏$"="R<color\=#000000>a</color>gnarok"
 r:"^毒<color\=#000000>素</color>$"="T<color\=#000000>o</color>xin"
 r:"^猛<color\=#000000>毒</color>素$"="T<color\=#000000>o</color>xin"
+r:"^受<color\=#000000>H</color> L傷害提升$"="H<color\=#000000>I</color>GHLIGHT DMG Taken Up"
 
 ----------
 Inspect Details - TITLES
@@ -1020,6 +1017,7 @@ r:"^精力值消耗降低(\d+(.\d+)?(%)?)$"="Decrease SP cost by $1"
 r:"^速度提升(\d+(.\d+)?(%)?)$"="Increase SPD by $1"
 r:"^暴擊率提升(\d+(.\d+)?(%)?)$"="Increase CRIT Rate by $1"
 r:"^持續時間內，所有友方暴擊率提升(\d+(.\d+)?(%)?)"="During this effect,\nincrease all allies' CRIT Rate by $1"
+r:"^處於額外回合時，暴擊率提升(\d+%)，暴擊效果提升(\d+%)$"="<size\=24>Increase CRIT Rate by $1 and CRIT DMG by $2 during Extra Turn</size>"
 r:"^暴擊傷害提升(\d+(.\d+)?(%)?)$"="Increase CRIT DMG by $1"
 r:"^暴擊效果提升(\d+(.\d+)?(%)?)$"="Increase CRIT DMG by $1"
 r:"^暴擊效果額外提升(\d+(.\d+)?(%)?)$"="Additionally increase CRIT DMG by $1"

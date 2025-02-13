@@ -765,7 +765,7 @@ r:"^注意控制{{A}}的{{B}}值$"="Note the {{B}} Gauge that Controls {{A}}"
 
 r:"^對所有敵人造成物理屬性傷害，有極低機率使敵人陷入<link\="s\|110"><u>狂怒</u></link>狀態，效果持續(\d+)回合，$"="Deals Physical damage to all enemies, with a very low chance to inflict <link\="s|110"><u>Rage</u></link> for $1 turns."
 怒意=Wrathful
-使自身造成傷害提高，並獲得一定{{A}}值=Increases own DMG Dealt; \nGain a certain amount of {{A}} Gauge
+使自身造成傷害提高，並獲得一定{{A}}值=Increases own DMG Dealt; \nGains a certain amount of {{A}} Gauge
 狂亂指導=Hysterical Guidance
 激情之翼刃=Winged Blade of Passion
 被{{A}}鎖定，將受到「激情之翼刃」的攻擊=<size\=27>Locked on by {{A}}, \nwill be attacked by [Winged Blade of Passion]</size>
@@ -1343,7 +1343,7 @@ r:"^<color\=#FFFFFF>首領剩餘進攻次數：</color><color\=#FFF000>(\d+)</co
 
 四大天王每隔一個回合會對隨機一名怪盜釋放「死亡凝視」，四大天王會優先攻擊處於「死亡凝視」的怪盜。=The Four Heavenly Kings will use [Death Gaze] on a random enemy, the Four Heavenly Kings will prioritize attacking the enemy with [Death Gaze].
 
-{{A}}與所有{{B}}處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。=<size\=28>{{A}} and all {{B}} have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.</size>
+{{A}}與所有{{B}}處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。=<size\=24>{{A}} and all {{B}} have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.</size>
 
 r:"^1、{{A}}每隔1個回合，獲得(\d+)層「神之庇佑」，每層可以為其提供(\d+%)的減傷。\n2、{{A}}受到來自技能或追加效果的每段傷害，都會損失一層「神之庇佑」。\n3、{{A}}失去所有「神之庇佑」時會使所有怪盜獲得「神之祝福」，提升所有怪盜造成的傷害。$"="<size\=23>1. {{A}} will gains $1 stacks of [God's Protection] every other turns, each stack will provide $2 DMG RES.\n2. {{A}} will loses 1 stack of [God's Protection] after taking a hit of damage from skills or Follow Up.\n3. Give all Thieves [God's Blessing] which increase all Thieves' DMG Dealt when {{A}} loses all stacks of [God's Protection].</size>"
 r:"^每層使自身受到的傷害降低(\d+%)，每次受到傷害會損失(\d+)層$"="Increase DMG RES by $1, \nlose $2 stack after taking a hit of damage"
@@ -1376,8 +1376,9 @@ r:"^HIGHLIGHT技能的最終傷害提升(\d+%)，追加效果的最終傷害提�
 sr:"^所有怪盜每累積消耗(\d+)點精力值，獲得(\d+)層『(.*)』；怪盜每次釋放HIGHLIGHT技能，獲得(\d+)層『(.*)』；『(.*)』：最終傷害提升(\d+%)，持續(\d+)回合，最多可疊加(\d+)層。$"="<size\=24>For every $1 SP consumed by all Thieves, gain $2 stack of [$3]; Each time Thieves use HIGHLIGHT, gain $4 stacks of [$5]. [$6]: Increase Final DMG by $7 for $8 turns, up to $9 stacks.</size>"
 r:"^每層提供(\d+%)的最終傷害加成，持續(\d+)回合，最多可疊加(\d+)層。$"="Each stack increases Final DMG by $1 for $2 turns, up to $3 stacks."
 
+次象擬態=Mirage Mimicry
 蓄力伏擊=Charged Ambush
-sr:"^所有怪盜每累積消耗(\d+)點精力值或造成弱點傷害時,使全體怪盜獲得一層『(.*)』。『(.*)』：每層提供(\d+%)的最終傷害加成，持續(\d+)回合，最多可疊加(\d+)層。$"="<size\=24>When all Thieves consumed $1 SP or dealt weakness damage, gain $2 stack of [$3]. [$4]: Each stack increase Final DMG Bonus by $5 for $6 turns, up to $7 stacks.</size>"
+sr:"^所有怪盜每累積消耗(.*)點精力值或造成弱點傷害時，使全體怪盜獲得一層『(.*)』。『(.*)』：每層提供(\d+%)的最終傷害加成，持續(\d+)回合，最多可疊加(\d+)層。$"="<size\=24>When all Thieves consumed $1 SP or dealt weakness damage, gain 1 stack of [$2]. [$3]: Each stack increase Final DMG Bonus by $4 for $5 turns, up to $6 stacks.</size>"
 
 奇異光線=Strange Ray
 sr:"^每個回合開始時，獲得(\d+)層『(.*)』，最多可存儲(\d+)層。使用普通攻擊或觸發追加效果時會消耗(\d+)層。『(.*)』：使本次攻擊造成的最終傷害提升(\d+%)。$"="<size\=23>At the start of each turn, gain $1 stack of [$2], up to $3 stacks. Consume $4 stack when using Melee Attack or triggering Follow Up. [$5]: Increase this attack's Final DMG Dealt by $6.</size>"
