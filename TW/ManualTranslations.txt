@@ -314,6 +314,7 @@ r:"^<color\=#ff0000ff>茶</color>太$"="Cha<color\=#ff0000ff>t</color>ai"
 r:"^燒<color\=#ff0000ff>鳥</color> {{A}}$"="Su<color\=#ff0000ff>mi</color>zou Yakitori"
 r:"^土<color\=#ff0000ff>佐</color>林 {{A}}$"="Fu<color\=#ff0000ff>mi</color>yo Tosabayashi"
 r:"^小<color\=#ff0000ff>出</color> {{A}}$"="Hi<color\=#ff0000ff>yo</color>ri Koide"
+r:"^江<color\=#ff0000ff>崎</color> {{A}}$"="Sh<color\=#ff0000ff>in</color>ta Ezaki"
 
 // Original Phantom Thieves //
 r:"^雨<color\=#ff0000ff>宮</color>蓮$"="R<color\=#ff0000ff>en</color> Amamiya"
@@ -851,7 +852,7 @@ r:"^治療效果$"="<size\=22>Healing Effect</size>"
 射擊傷害=Gun DMG
 火焰傷害=Fire DMG
 凍結傷害=Ice DMG
-電擊傷害=Electric DMG
+電擊傷害=Elec DMG
 疾風傷害=Wind DMG
 念動傷害=Psy DMG
 核熱傷害=Nuke DMG
@@ -1079,7 +1080,7 @@ r:"^完成(\d+)次難度(\d+)及以上的往日回溯$"="Complete $1 Past Echo o
 r:"^擁有(\d+)個潛能(.*)的怪盜$"="Have $1 Thieves at Potential $2"
 
 // Part I Step 2
-與{{A}}成為協同者關係=Form a confidant with {{A}}
+與{{A}}成為協同者關係=Form a Confidant with {{A}}
 主動添加1名好友=Add a friend
 更換1次頭像=Change your Avatar once
 
@@ -1217,9 +1218,9 @@ r:"^簽約$"="Pulls"
 新手推薦契約中簽約次數達到=When pull count reaches
 後可自選一名以下5★怪盜=you can choose one 5★ Thief
 
-每10次簽約必出四星或以上怪盜角色。活動限定五星角色僅在UP期間，透過對應簽約獲得。具體內容查看【說明】。=<b><color\=#FFDF00>Limited Character Banner</color></b>\nGet 1 5★ every <color\=#FFDF00>110</color> or <color\=#FF0000>80</color> pulls;\n<color\=#FFDF00>0.2%</color> or <color\=#FF0000>0.8%</color>; <color\=#FFDF00>No 50/50</color><size\=20> </size>or<size\=20> </size><color\=#FF0000>50/50</color>\nGuarantee 1 4★ every 10 pulls.\n\n\n\n\n\n\n<color\=#FFDF00><size\=25>The current RATE UP character is only available in this banner.</size>\n</color><size\=25>Pull count will carry between banners of the same pity system.</size>
+每10次簽約必出四星或以上怪盜角色。具體內容查看【說明】\n該卡池每次簽約會額外獲得<color\=#EADE10>認知殘影×10</color>。=<b><color\=#FFDF00>Rerun Banner</color></b>\nGet 1 5★ every <color\=#FFDF00>110</color> or <color\=#FF0000>80</color> pulls;\n<color\=#FFDF00>0.2%</color> or <color\=#FF0000>0.8%</color>; <color\=#FFDF00>No 50/50</color><size\=20> </size>or<size\=20> </size><color\=#FF0000>50/50</color>\nGuarantee 1 4★ every 10 pulls.\n\n\n\n\n\n<size\=23>Get <color\=#EADE10>10 [Cognitive Afterimage]</color> each pull.</size>\n<size\=19>Save pull count between same system banners.</size>
 
-每10次簽約必出四星或以上怪盜角色。具體內容查看【說明】\n該卡池每次簽約會額外獲得<color\=#EADE10>認知殘影×10</color>。=<b><color\=#FFDF00>Rerun Banner</color></b>\nGet 1 5★ every <color\=#FFDF00>110</color> or <color\=#FF0000>80</color> pulls;\n<color\=#FFDF00>0.2%</color> or <color\=#FF0000>0.8%</color>; <color\=#FFDF00>No 50/50</color><size\=20> </size>or<size\=20> </size><color\=#FF0000>50/50</color>\nGuarantee 1 4★ every 10 pulls.\n<size\=24>Get 10 [Cognitive Afterimage] per pull.</size>
+每10次簽約必出四星或以上怪盜角色。具體內容查看【說明】。該卡池每次簽約會額外獲得<color\=#EADE10>認知殘影×10</color>。=<b><color\=#FFDF00>Rerun Banner</color></b>\nGet 1 5★ every <color\=#FFDF00>110</color> or <color\=#FF0000>80</color> pulls;\n<color\=#FFDF00>0.2%</color> or <color\=#FF0000>0.8%</color>; <color\=#FFDF00>No 50/50</color><size\=20> </size>or<size\=20> </size><color\=#FF0000>50/50</color>\nGuarantee 1 4★ every 10 pulls.\n\n\n\n\n\n<size\=23>Get <color\=#EADE10>10 [Cognitive Afterimage]</color> each pull.</size>\n<size\=19>Save pull count between same system banners.</size>
 
 次可獲得<color\=#EADE10>5★盲選偶像合約             ×1</color>，使用後隨機獲得以下怪盜=<size\=26>                       Get <color\=#EADE10>5★Random Kaidol Contract</color></size>
 長按圖示可查看詳細資訊=Long press to view details
@@ -1248,6 +1249,8 @@ UP武器更換成功。=Changed the RATE UP weapon.
 角色活動契約·精準=100% Banner
 武器活動補給=Weapon Banner
 簽約時間=Time of Pull
+補給類型=Banner Type
+補給時間=Time of Pull
 r:"^剩餘時間：(\d+)天(\d+)時(\d+)分$"="Ends in $1d $2h $3m"
 r:"^剩餘時間：(\d+)天(\d+)時$"="Ends in $1d $2h"
 r:"^剩餘時間：(\d+)時(\d+)分$"="Ends in $1h $2m"
@@ -1519,23 +1522,23 @@ Confidants (SL) and City Activities
 消耗=Spend
 r:"^消耗：$"=" "
 
-r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n可以去「{{B}}·百萬甜品店」打工了。$"="<size\=24>Can now work at the {{B}} Crepe Shop after being confidants with [<color\=#FFC000>Tomoko Noge</color>].</size>"
+r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n可以去「{{B}}·百萬甜品店」打工了。$"="<size\=24>Can now work at the {{B}} Crepe Shop after being Confidants with [<color\=#FFC000>Tomoko Noge</color>].</size>"
 r:"^好感度提升至<color\=#FFC000>rank5</color>後，打工時，可以使人格指數獲得額外的成長。$"="<size\=24>Gain more Social Stats when working after reaching <color\=#FFC000>rank 5</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank9</color>後，\n可以去「{{A}}·藥妝店」打工了。$"="<size\=24>Can now work at the {{A}} Drug Store after reaching <color\=#FFC000>rank 9</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank13</color>後，打工時，可以使人格指數獲得更多的額外成長。$"="<size\=24>Gain even more Social Stats when working after reaching <color\=#FFC000>rank 13</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank17</color>後，可以去「{{A}}·日乃國屋書店」打工了。$"="<size\=24>Can now work at the Shinjuku Bookstore after reaching <color\=#FFC000>rank 17</color>.</size>"
 
-r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n獲得書籍『高效放鬆法』。\n·閱讀後增加泡澡的獎勵$"="<size\=24>Get the book [Efficient Relaxation] which can increase the rewards from Bathe after being confidants with [<color\=#FFC000>Kiyoshi Kurotani</color>].</size>"
+r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n獲得書籍『高效放鬆法』。\n·閱讀後增加泡澡的獎勵$"="<size\=24>Get the book [Efficient Relaxation] which can increase the rewards from Bathe after being Confidants with [<color\=#FFC000>Kiyoshi Kurotani</color>].</size>"
 r:"^好感度提升至<color\=#FFC000>rank3</color>後，\n獲得書籍『關於急救的一切』。\n·獲得「{{A}}·藥妝店」打工增益$"="<size\=24>Get the book [All About First Aid] which can increase the rewards from [{{A}} Drug Store] after reaching <color\=#FFC000>rank 3</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank11</color>後，\n獲得書籍『肌肉，GO！』。\n·閱讀後增加健身的獎勵$"="<size\=24>Get the book [Muscle, GO!] which can increase the rewards from Gym after reaching <color\=#FFC000>rank 11</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank15</color>後，\n獲得書籍『圖書管理員秘技！』。\n·「{{A}}·日乃國屋書店」打工增益$"="<size\=24>Get the book [Librarian's Secret Skill!] which can increase the rewards from [Shinjuku Bookstore] after reaching <color\=#FFC000>rank 15</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank20</color>後，\n獲得書籍『電影與電影評論家』。\n·閱讀後增加看電影的獎勵$"="<size\=24>Get the book [Film and Film Critics] which can increase the rewards from Movies after reaching <color\=#FFC000>rank 20</color>.</size>"
 
-r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n{{B}}地區，大部分街頭店鋪商品有小幅降價。$"="<size\=24>Most shop in {{B}} have a small discount after being confidants with [<color\=#FFC000>Runa Dogenzaka</color>]</size>"
+r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n{{B}}地區，大部分街頭店鋪商品有小幅降價。$"="<size\=24>Most shop in {{B}} have a small discount after being Confidants with [<color\=#FFC000>Runa Dogenzaka</color>]</size>"
 r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n{{A}}地區，大部分街頭店鋪商品有小幅降價。$"="<size\=24>Most shop in {{A}} have a small discount after after reaching <color\=#FFC000>rank $1</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n{{A}}和{{B}}地區，大部分街頭店鋪商品有小幅降價。$"="<size\=24>Most shop in {{A}} and {{B}} have a small discount after after reaching <color\=#FFC000>rank $1</color>.</size>"
 
-r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n解鎖約會地點「{{B}}·自助餐廳」。$"="<size\=24>Unlock the Hangout Spot [{{B}} Buffet] after being confidants with [<color\=#FFC000>{{A}}</color>]</size>"
+r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n解鎖約會地點「{{B}}·自助餐廳」。$"="<size\=24>Unlock the Hangout Spot [{{B}} Buffet] after being Confidants with [<color\=#FFC000>{{A}}</color>]</size>"
 r:"^與「<color\=#FFC000>{{A}}</color>」好感度提升至<color\=#FFC000>rank3</color>後，\n解鎖約會地點「元町·中華街」。$"="<size\=24>Unlock the Hangout Spot [Motomachi Chinatown] after reaching <color\=#FFC000>rank 3</color> with [<color\=#FFC000>{{A}}</color>].</size>"
 r:"^好感度提升至<color\=#FFC000>rank3</color>後，\n解鎖約會地點「元町·中華街」。$"="<size\=24>Unlock the Hangout Spot [Motomachi Chinatown] after reaching <color\=#FFC000>rank 3</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank7</color>後，\n解鎖約會地點「品川·水族館」，並且在協同者邀約中可以獲得額外好感度。$"="<size\=24>Unlock the Hangout Spot [Shinagawa Aquarium] and gain more Confidant Points from Invitations after reaching <color\=#FFC000>rank 7</color>.</size>"
@@ -1662,8 +1665,9 @@ r:"^要在這裡度過時間嗎\(<color\=#ff0000>每次(\d+)現金</color>\)？$
 粉色心情霜淇淋=Pink Ice Cream
 愛心蛋包飯=Sincere Omelette
 
-都市日程<color\=#ffc000>在女僕餐廳社會實踐</color>已解鎖，\n每日有一定機率出現。=Unlocked <color\=#ffc000>Maid Café</color> City Activity.\nIt now has a chance to show up.
-都市日程<color\=#ffc000>在{{A}}打工</color>已解鎖，\n每日有一定機率出現。=Unlocked <color\=#ffc000>Work at the Concept Café</color> City Activity.\nIt now has a chance to show up.
+r:"^都市日程<color\=#ffc000>與{{A}}聊天</color>已解鎖，\n每日有一定機率出現。$"="<size\=26>Unlocked <color\=#ffc000>Chat with {{A}}</color> City Activity.\nIt now has a chance to show up.</size>"
+r:"^都市日程<color\=#ffc000>在女僕餐廳社會實踐</color>已解鎖，\n每日有一定機率出現。$"="Unlocked <color\=#ffc000>Maid Café</color> City Activity.\nIt now has a chance to show up."
+r:"^都市日程<color\=#ffc000>在{{A}}打工</color>已解鎖，\n每日有一定機率出現。$"="Unlocked <color\=#ffc000>Work at the Concept Café</color> City Activity.\nIt now has a chance to show up."
 
 打工=Work
 (First one is in the city menu, second one is on the confirm page)
@@ -1849,6 +1853,10 @@ r:"^{{A}}似乎有話要說，要陪她嗎？$"="{{A}} seems to have something t
 {{A}}想學習做飯……={{A}} wants to learn to cook...
 帶{{A}}去哪裡呢？=Where to take {{A}}?
 
+正當關係=<size\=24>Proper relationship</size>
+{{A}}想表現出姐姐的樣子……=<size\=28>{{A}} wants to act like an onee-san...</size>
+要答應{{A}}嗎？=Want to agree to {{A}}?
+
 你今天要陪{{A}}度過嗎？=<size\=28>Do you want to spend time with {{A}} today?</size> 
 今天要和{{A}}一起度過嗎……=<size\=30>Want to spend time with {{A}} today...</size> 
 要和{{A}}一起度過嗎？=<size\=30>Want to spend time with {{A}}?</size> 
@@ -1931,6 +1939,7 @@ Music Club
 社團經驗=Club EXP
 升級解鎖內容=Unlock
 社團已升到滿級！=Club Lv. maxed!
+輕音部積分兌換=Exchange Music Points
 
 r:"^時長 (.*):(.*)$"="Length $1:$2"
 得分：=Score:
@@ -1964,6 +1973,8 @@ r:"^Miss修正為Perfect判定$"="Miss -> Perfect!"
 ----------
 Soccer Club
 ----------
+足球部積分兌換=Exchange Soccer Points
+
 r:"^至少踢進(\d+)個球。$"="Score $1 Goals."
 r:"^(\d+)個球全部進。$"="Score All $1 Goals."
 r:"^至少(\d+)次擊中守門員弱點。$"="Hit $1 Goalkeeper's Weakness."
@@ -2270,7 +2281,7 @@ r:"^是否確認選擇「(.*)」？\n需在對應怪盜開放後，才能裝備�
 被迷霧籠罩的命運之卡，獲取後會隨機變化為一張橙色品質的日月星辰位啟示卡。=<size\=22>Card of fate shrouded in mist, transforms into a random 4★ Sun/ Moon/ Star/ Planet Revelation Card after purchase.</size>
 未知宿命紫·基礎=<size\=17>Random 3★ Revelation</size>
 被迷霧籠罩的命運之卡，獲取後會隨機變化為一張紫色品質的日月星辰位啟示卡。=<size\=22>Card of fate shrouded in mist, transforms into a random 3★ Sun/ Moon/ Star/ Planet Revelation Card after purchase.</size>
-sr:"^未知宿命藍·(.*)$"="2★ • $1"
+sr:"^未知宿命藍·(.*)$"="2★ $1"
 
 星辰之鈴=Bell of Stars
 可用於「怪盜心象·屬性強化」養成的材料。=Can be used in [Mental Image].
@@ -2335,9 +2346,9 @@ r:"^全體怪盜<color\=#00aeff>冰凍</color>/<color\=#00fcff>核熱</color>屬
 r:"^冰凍、核熱屬性傷害提升(\d+%)$"="Increase Ice and Nuke DMG by $1"
 
 雷光聖所=Thunderous Sanctuary
-r:"^全體怪盜<color\=#fbff37>電擊</color>/<color\=#fffea0>祝福</color>屬性傷害提高(\d+%)$"="<size\=21>Increase Thieves' <color\=#fbff37>Electric</color>/<color\=#fffea0>Bless</color> DMG by $1</size>"
+r:"^全體怪盜<color\=#fbff37>電擊</color>/<color\=#fffea0>祝福</color>屬性傷害提高(\d+%)$"="<size\=21>Increase Thieves' <color\=#fbff37>Elec</color>/<color\=#fffea0>Bless</color> DMG by $1</size>"
 雷霆祈境=<size\=19>Thunder Realm</size>
-r:"^電擊、祝福屬性傷害提升(\d+%)$"="Increase Electric and Bless DMG by $1"
+r:"^電擊、祝福屬性傷害提升(\d+%)$"="Increase Elec and Bless DMG by $1"
 
 厄命風眼=Cursed Eye
 r:"^全體怪盜<color\=#81ea2c>疾風</color>/<color\=#ff0036>詛咒</color>屬性傷害提高(\d+%)$"="<size\=22>Increase Thieves' <color\=#81ea2c>Wind</color>/<color\=#ff0036>Curse</color> DMG by $1</size>"
@@ -2353,7 +2364,7 @@ r:"^疾風、詛咒屬性傷害提升(\d+%)$"="Increase Wind and Curse DMG by $1
 r:"^陣亡人數不超過0人<color\=#FF0000>\+(\d+)</color>$"="No Faint <color\=#FF0000>+$1</color>"
 r:"^火焰/念動屬性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Fire / Psy Thieves Score <color\=#FF0000>X$1</color>"
 r:"^冰凍/核熱屬性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Ice / Nuclear Thieves Score <color\=#FF0000>X$1</color>"
-r:"^電擊/祝福屬性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Electric / Bless Thieves Score <color\=#FF0000>X$1</color>"
+r:"^電擊/祝福屬性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Elec / Bless Thieves Score <color\=#FF0000>X$1</color>"
 r:"^疾風/詛咒屬性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Wind / Curse Thieves Score <color\=#FF0000>X$1</color>"
 sr:"^(.*)/(.*)屬性攻擊時獲得分數$"="$1/ $2 Attack Score"
 r:"^X(\d+)倍$"="<size\=30>X$1 Score</size>"
@@ -2399,6 +2410,7 @@ sr:"^當前正處於任務中，是否立即切換時間到<color\=#FFC000>(.*)<
 sr:"^當前時間不符合要求，\n是否等待到<color\=#FFC000>(.*)</color>的<color\=#FFC000>(.*)</color>進行任務？$"="<size\=27>Does not meet the time requirement.\nWant to wait until \n<color\=#FFC000>$1</color> <color\=#FFC000>$2</color> to start the mission?</size>"
 當前時間不符合要求，\n是否等待到<color\=#FFC000>晴天</color>進行任務？="<size\=27>Does not meet the time requirement.\nWant to wait until \n<color\=#FFC000>Sunny</color> to start the mission?
 sr:"^當前時間資訊不符合要求，\n是否等待到<color\=#FFC000>(.*)</color>立即進行任務？$"="<size\=27>Does not meet the time requirement.\nWant to change the time to \n<color\=#FFC000>$1</color> to start the mission?</size>"
+是否立即推進到指定時間進行任務？=Pass the time to start the mission?
 
 sr:"^當前任務目標處於<color\=#FF0000>(.*)</color>，\n是否立即前往？$"="The current mission objective is in <color\=#FF0000>$1</color>. Go there now?"
 當前正處於任務中，在<color\=#ffc000>都市</color>確認下「待處理日程」，再進行此事件吧！=You are currently doing a mission, check later!
@@ -2418,16 +2430,22 @@ sr:"^當前任務目標處於<color\=#FF0000>(.*)</color>，\n是否立即前往
 與{{A}}一同前進=Move with {{A}}
 在{{A}}與夥伴們集合=Meet with your teammates at {{A}}
 去{{A}}站前廣場匯合=Meet at {{A}} Station Square
+去約定的地方找{{A}}=Go find {{A}} at the agreed place
 r:"^前往{{A}}(\d+)區$"=$"Go to {{A}} Area $1"
 r:"^調查{{A}}$"="Investigate {{A}}"
 搜尋{{A}}的所在=Look for {{A}}
+去看看{{A}}的情況=See how {{A}} is doing
 打倒{{A}}=Defeat {{A}}
 與{{A}}對話=Talk to {{A}}
+接聽{{A}}的電話=Answer {{A}}'s call
 尋找目標人物=Find the target
+等待一段時間=Wait for a while
 將時間推進到夜晚=Pass the time to night
+故事告一段落=End of story
 
 漫遊{{A}}=Roaming {{A}}
 抓取的樂趣=The Fun of Catching
+天才的熔爐=Genius' Furnace
 風平浪靜的日子=Calm Days
 如果想繼續體驗「<color\=#ffc000>娃娃機</color>」的小遊戲，可以在完成任務「抓取的樂趣」後再進一步遊玩。=<size\=26>If you want to continue to experience the "<color\=#ffc000>Crane Game</color>", you can play more after completing the mission "The Fun of Catching".</size>
 r:"^與「<color\=#ffc000>{{A}}</color>」結識，\n可以期待今後與他發生更多的故事。$"="You've met "<color\=#ffc000>{{A}}</color>".\n Look forward to more stories \nwith him in the future."
@@ -2509,6 +2527,20 @@ r:"^在「星盤試煉」中通過「紫色或紅色」監測點\((\d+)\/(\d+)\)
 r:"^累計消耗(\d+)點體力\((\d+)\/(\d+)\)$"="Spend $1 Stamina ($2/$3)"
 r:"^累計消耗(\d+)點行動力\((\d+)\/(\d+)\)$"="Spend $1 Energy Points ($2/$3)"
 r:"^完成1次閼凶夢之扉\((\d+)\/(\d+)\)$"="Complete 1 Door of Nightmares ($1/$2)"
+
+sr:"^完成「(.*)」任意(\d+)個任務\((\d+)\/(\d+)\)$"="Complete any $2 missions in "$1" ($3/$4)"
+r:"^擊敗{{A}}\((\d+)\/(\d+)\)$"="Defeat {{A}} ($1/$2)"
+r:"^解救{{A}}\((\d+)\/(\d+)\)$"="Rescue {{A}} ($1/$2)"
+r:"^{{A}}票務等級達到(\d+)級\((\d+)\/(\d+)\)$"="Reach {{A}} Ticket Lv. $1 ($2/$3)"
+r:"^在{{A}}區域(\d+)找到(\d+)個安全屋\((\d+)\/(\d+)\)$"="Find $2 Safe Rooms in {{A}} Area $1 ($3/$4)"
+r:"^在{{A}}區域(\d+)打開(\d+)個寶箱\((\d+)\/(\d+)\)$"="Open $2 Treasure Chests in {{A}} Area $1 ($3/$4)"
+r:"^在{{A}}·{{B}}區域打開(\d+)個寶箱\((\d+)\/(\d+)\)$"="Open $1 Treasure Chests in {{A}}·{{B}} ($2/$3)"
+r:"^在{{A}}區域(\d+)擊敗任意詭譎之徒\((\d+)\/(\d+)\)$"="Defeat any Enigma Shadow in {{A}} Area $1 ($2/$3)"
+r:"^在{{A}}區域(\d+)擊敗墮落狂徒\((\d+)\/(\d+)\)$"="Defeat the Fallen Shadow in {{A}} Area $1 ($2/$3)"
+r:"^在{{A}}區域(\d+)擊敗(\d+)個寶魔\((\d+)\/(\d+)\)$"="Defeat $2 Treasure Demon in {{A}} Area $1 ($3/$4)"
+sr:"^完成都市任務「(.*)」\((\d+)\/(\d+)\)$"="Complete the city mission [$1] ($2/$3)"
+r:"^與「{{A}}」締結協力者關係\((\d+)\/(\d+)\)$"="Form a Confidant with {{A}} ($1/$2)"
+r:"^與「{{A}}」的協力者等級達到(\d+)級\((\d+)\/(\d+)\)$"="Reach Confidant Rank $1 with {{A}} ($2/$3)"
 
 r:"^最高通關等級：(\d+)級$"="Highest Clear Lv: $1"
 r:"^通關(.*)難度(\d+)$"="Clear Difficulty $2"
