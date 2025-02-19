@@ -505,6 +505,7 @@ r:"^{{A}}準備攻擊<color\=#FF0000>{{B}}</color>！$"="<size\=26>{{A}} is prep
 r:"^<color\=#FF0000>絕對癡心的少女</color>正在為{{A}}加油……$"="<color\=#FF0000>Infatuated Fan</color> is cheering for {{A}}..."
 r:"^<color\=#FF0000>毫無保留的少女</color>正在為{{A}}加油……$"="<color\=#FF0000>Unreversed Fan</color> is cheering for {{A}}..."
 r:"^<color\=#FF0000>{{A}}</color>虛弱了……$"="<color\=#FF0000>{{A}}</color> entered Weak!"
+r:"^<color\=#FF0000>{{A}}</color>「驚恐」了……$"="<color\=#FF0000>{{A}}</color> entered Panic!"
 
 r:"^行<color\=#000000>動</color>提前$"="A<color\=#000000>c</color>tion Up"
 r:"^木<color\=#000000>內</color>{{A}}，未嘗一敗$"="N<color\=#000000>e</color>ver Known Defeat"
@@ -793,6 +794,8 @@ r:"^{{A}}進入了庇護狀態，請<color\=#FF0000>儘快擊破護盾</color>$"
 r:"^護盾被擊破，{{A}}的{{B}}值大幅降低了……$"="<size\=24>Shield is broken! Heavily decrease {{B}} Gauge!</size>"
 r:"^護盾被擊破，{{B}}的{{A}}值大幅降低了……$"="<size\=24>Shield is broken! Heavily decrease {{A}} Gauge!</size>"
 
+r:"^鎖<color\=#000000>定</color>$"="L<color\=#000000>o</color>cked On"
+
 化身為「基什基爾·莉拉」的惡魔，灼熱的情感，赤紅的身軀，以及附著可怖眼球的邪惡之翼。在她歇斯底里的狂怒中卻摻雜著不和諧的恐懼與掙扎——這股力量並非來自於她本身，而是源自外部壓倒性的惡意。=A demon in the form of "Kiskil-lilla", with a fiery aura, scarlet body, and evil wings with terrifying eyes. Underneath her hysterical wrath is a mix of discordant fear and struggle- For this power did not come from her own, but from an outside source with overwhelming malice.
 
 ----------
@@ -1045,23 +1048,23 @@ r:"自身血量百分比越低，造成傷害越高，當前傷害提高：(\d+%
 處於白晝之中，受到了削弱，造成傷害降低，受到傷害提高=Weakened under day. \nDecrease DMG Dealt, increase DMG Taken
 處於白晝之中，受到了強化，造成傷害提高，受到傷害降低=Strengthened under day. \nIncrease DMG Dealt, decrease DMG Taken
 
-1、{{A}}每回合會在自然屬性（火焰、冰凍、電擊、疾風）/精神屬性（念動、核熱、祝福、詛咒）汲取狀態中切換，受到對應屬性的傷害時會累積一層「月能」。\n2、月能≥2時，{{A}}會消耗2層月能，進入<color\=#ff3b37>「滿月」</color>狀態：提升自己的能力並召喚2個{{B}}。\n3、{{A}}每3回合會使用「滿月之護佑」，進入蓄力狀態並生成一個護盾，下回合初若護盾被打破，則退出蓄力狀態，否則會立刻進入<color\=#ff3b37>「滿月」</color>狀態。=1. Thoth will switch between nature element (Fire, Ice, Electricity, Wind)/mental element (Psychokinesis, Nuke, Bless, Curse) charging state every turn, and will gain 1 stack of "Moon Energy" when taking damage from the corresponding element. \n2. When Moon Energy≥2, Thoth will use 2 Moon energy and enter <color\=#ff3b37>"Full Moon"</color>: Increase own attribute and summon 2 Sandman. \n3. Thoth will use "Full Moon's Protection" every 3 turns, enter a charge state and gain Shield, if the Shield is broken before the start of next turn, leave the charge state, otherwise immediately enter <color\=#ff3b37>"Full Moon"</color>.
+1、{{A}}每回合會在自然屬性（火焰、冰凍、電擊、疾風）/精神屬性（念動、核熱、祝福、詛咒）汲取狀態中切換，受到對應屬性的傷害時會累積一層「月能」。\n2、月能≥2時，{{A}}會消耗2層月能，進入<color\=#ff3b37>「滿月」</color>狀態：提升自己的能力並召喚2個{{B}}。\n3、{{A}}每3回合會使用「滿月之護佑」，進入蓄力狀態並生成一個護盾，下回合初若護盾被打破，則退出蓄力狀態，否則會立刻進入<color\=#ff3b37>「滿月」</color>狀態。=1. Thoth will switch between nature element (Fire, Ice, Elec, Wind)/mental element (Psychokinesis, Nuke, Bless, Curse) charging state every turn, and will gain 1 stack of "Moon Energy" when taking damage from the corresponding element. \n2. When Moon Energy≥2, Thoth will use 2 Moon energy and enter <color\=#ff3b37>"Full Moon"</color>: Increase own attribute and summon 2 Sandman. \n3. Thoth will use "Full Moon's Protection" every 3 turns, enter a charge state and gain Shield, if the Shield is broken before the start of next turn, leave the charge state, otherwise immediately enter <color\=#ff3b37>"Full Moon"</color>.
 滿月之護佑=<size\=25>Full Moon's Protection</size>
 自然屬性汲取=<size\=22>Nature Element Charge</size>
-受到火、冰、電、風屬性傷害時會汲取月能=Gain Moon Energy when taking Fire, Ice, Electricity, Wind damage
+受到火、冰、電、風屬性傷害時會汲取月能=Gain Moon Energy when taking Fire, Ice, Elec, Wind damage
 精神屬性汲取=<size\=22>Mental Element Charge</size>
 受到念、核、祝、咒屬性傷害時會汲取月能=Gain Moon Energy when taking Psy, Nuke, Bless, Curse damage
 滿月之力形成的護盾，護盾存在時，下回合會進入滿月狀態=Shield formed by the power of the Full Moon. When the Shield exist, enter Full Moon next turn
 
 1、月亮會按照週期變化：新月——上弦月——滿月——下弦月，初始處於新月狀態。\n2、處於不同月相時，{{A}}會獲得不同的效果：\n「新月」：造成傷害降低50%、受到傷害提高50%\n「上弦月」：造成傷害提高50%、受到傷害提高50%\n「滿月」：造成傷害提高50%、受到傷害降低50%\n「下弦月」：造成傷害降低50%、受到傷害降低50%=1. The moon will change according to this cycle: New Moon - First Quarter Moon - Full Moon - Second Quarter Moon, start at New Moon. \n2, Under different lunar phases, Thoth will gain different effects: \n"New moon": Decrease DMG Dealt by 50%, \nincrease DMG Taken by 50%\n"First Quarter Moon": Increase DMG Dealt by 50%, increase DMG Taken by 50%\n"Full Moon": Increase DMG Dealt by 50%, \ndecrease DMG Taken by 50%\n"Second Quarter Moon": Decrease DMG Dealt by 50%, decrease DMG Taken by 50%
 時鐘=Norn
-「時鐘」受到不同屬性的技能攻擊時，會使月相發生變化。受到自然屬性（火焰、冰凍、電擊、疾風）攻擊時，使月相正向變換；受到精神屬性（念動、核熱、祝福、詛咒）攻擊時，使月相逆向變換。=Norn will change the lunar phase when attacked by different elements: When attacked by nature element (Fire, Ice, Electricity, Wind), it will move the lunar phase forwards; When attacked by mental element (Psychokinesis, Nuke, Bless, Curse), it will move the lunar phase backwards.
+「時鐘」受到不同屬性的技能攻擊時，會使月相發生變化。受到自然屬性（火焰、冰凍、電擊、疾風）攻擊時，使月相正向變換；受到精神屬性（念動、核熱、祝福、詛咒）攻擊時，使月相逆向變換。=Norn will change the lunar phase when attacked by different elements: When attacked by nature element (Fire, Ice, Elec, Wind), it will move the lunar phase forwards; When attacked by mental element (Psychokinesis, Nuke, Bless, Curse), it will move the lunar phase backwards.
 新月=New Moon
 上弦月=<size\=26>First Quarter Moon</size>
 滿月=Full Moon
 下弦月=<size\=26>Second Quarter Moon</size>
 月相更替Ⅰ=<size\=26>Lunar Phase Change I</size>
-受到火、冰、電、風屬性傷害時會使{{A}}的月相正向變換=Thoth taking Fire, Ice, Electricity, Wind damage will reverse the lunar phase
+受到火、冰、電、風屬性傷害時會使{{A}}的月相正向變換=Thoth taking Fire, Ice, Elec, Wind damage will reverse the lunar phase
 月相更替Ⅱ=<size\=26>Lunar Phase Change II</size>
 受到念、核、祝、咒屬性傷害時會使{{A}}的月相逆向變換=Thoth taking Psy, Nuke, Bless, Curse damage will reverse the lunar phase
 r:"造成傷害降低(\d+%)，受到傷害提高(\d+%)"=Decrease DMG Dealt by $1; \nIncrease DMG Taken by $2
@@ -1288,6 +1291,7 @@ r:"(\d)等星(\d)階"=$1-Star Tier $2
 本期排名：=Top: 
 排名：=Top
 以後=^
+r:"^(\d+%)以後$"="After $1"
 段位獎勵=<size\=28>Rank Rewards</size>
 任務獎勵隨每期心之海進行重置=Rewards will reset on the end of this trial
 r:"^累計獲得星數（<color\=#EF0000>(\d+)</color>/(\d+)）$"="Get (<color\=#EF0000>$1</color>/$2）Stars"
@@ -1339,6 +1343,7 @@ r:"^<color\=#FFFFFF>首領剩餘進攻次數：</color><color\=#FFF000>(\d+)</co
 
 {{A}}每隔一個回合會為所有怪盜回復精力值，但是也會對攻擊最高的怪盜釋放「惡魔的詛咒」，大幅降低其造成的傷害。={{A}} will restore SP to all Thieves every other turn but will inflict the highest ATK Thief with [Demon's Curse], heavily decreasing their DMG Dealt.
 惡魔的詛咒=Demon's Curse
+r:"^惡<color\=#000000>魔</color>的詛咒$"="D<color\=#000000>e</color>mon's Curse"
 <color\=#FF0000>{{A}}</color>受到了惡魔的詛咒，造成的傷害降低……=<size\=20><color\=#FF0000>{{A}}</color>  inflicted with Demon's Curse, DMG Dealt Down...</size>
 
 四大天王每隔一個回合會對隨機一名怪盜釋放「死亡凝視」，四大天王會優先攻擊處於「死亡凝視」的怪盜。=The Four Heavenly Kings will use [Death Gaze] on a random enemy, the Four Heavenly Kings will prioritize attacking the enemy with [Death Gaze].
@@ -1361,7 +1366,7 @@ SEASONAL EFFECTS
 使用{{A}}技能或觸發追加效果時，獲得1層『強化印記』，最多可疊加3層；全體怪盜行動一輪後，獲得『強化印記』層數*15%的傷害加成並移除1層『強化印記』。=<size\=24>When a Persona skill is used, or a Follow Up is triggered, you gain 1 layer of the stackable Enhanced Buff. After all party members have acted, gain 15% DMG Bonus per stack and remove 1 layer of Enhanced Buff.</size>
 
 超限崩解=Super Disintegration
-sr:"^{{A}}技能或追加效果每次造成傷害時，使自己獲得(\d+)層『(.*)』。『(.*)』：每層提供(\d+%)的最終傷害加成,持續(\d+)回合,最多可疊加(\d+)層。$"="<size\=27>When dealing a hit of damage with Persona skills or Follow Up, you gain $1 stack of [$2].\n[$3]: Increase Final DMG by $4 for $5 turns, up to $6 stacks.</size>"
+sr:"^{{A}}技能或追加效果每次造成傷害時，使自己獲得(\d+)層『(.*)』。『(.*)』：每層提供(\d+%)的最終傷害加成,持續(\d+)回合,最多可疊加(\d+)層。$"="<size\=27>When dealing a hit of damage with Persona skills or Follow Up, you gain $1 stack of [$2].\n[$3]: Increase Final DMG Bonus by $4 for $5 turns, up to $6 stacks.</size>"
 深化活性=Deepen Agility
 
 熔岩噴湧=Lava Burst
@@ -1374,13 +1379,19 @@ r:"^HIGHLIGHT技能的最終傷害提升(\d+%)，追加效果的最終傷害提�
 靈魂感召=Soul Rally
 原始本能=Primal Instinct
 sr:"^所有怪盜每累積消耗(\d+)點精力值，獲得(\d+)層『(.*)』；怪盜每次釋放HIGHLIGHT技能，獲得(\d+)層『(.*)』；『(.*)』：最終傷害提升(\d+%)，持續(\d+)回合，最多可疊加(\d+)層。$"="<size\=24>For every $1 SP consumed by all Thieves, gain $2 stack of [$3]; Each time Thieves use HIGHLIGHT, gain $4 stacks of [$5]. [$6]: Increase Final DMG by $7 for $8 turns, up to $9 stacks.</size>"
-r:"^每層提供(\d+%)的最終傷害加成，持續(\d+)回合，最多可疊加(\d+)層。$"="Each stack increases Final DMG by $1 for $2 turns, up to $3 stacks."
+r:"^每層提供(\d+%)的最終傷害加成，持續(\d+)回合，最多可疊加(\d+)層。$"="Each stack increases Final DMG Bonus by $1 for $2 turns, up to $3 stacks."
 
 次象擬態=Mirage Mimicry
 蓄力伏擊=Charged Ambush
 sr:"^所有怪盜每累積消耗(.*)點精力值或造成弱點傷害時，使全體怪盜獲得一層『(.*)』。『(.*)』：每層提供(\d+%)的最終傷害加成，持續(\d+)回合，最多可疊加(\d+)層。$"="<size\=24>When all Thieves consumed $1 SP or dealt weakness damage, gain 1 stack of [$2]. [$3]: Each stack increase Final DMG Bonus by $4 for $5 turns, up to $6 stacks.</size>"
+r:"^蓄<color\=#000000>力</color>伏擊$"="C<color\=#000000>h</color>arged Ambush"
 
 奇異光線=Strange Ray
 sr:"^每個回合開始時，獲得(\d+)層『(.*)』，最多可存儲(\d+)層。使用普通攻擊或觸發追加效果時會消耗(\d+)層。『(.*)』：使本次攻擊造成的最終傷害提升(\d+%)。$"="<size\=23>At the start of each turn, gain $1 stack of [$2], up to $3 stacks. Consume $4 stack when using Melee Attack or triggering Follow Up. [$5]: Increase this attack's Final DMG Dealt by $6.</size>"
 心率超載=Heart Rate Overload
 r:"^心<color\=#000000>率</color>超載$"="H<color\=#000000>e</color>art Rate Overload"
+
+地火灼息=Fiery Breath
+sr:"^每次造成TECHNICAL時，自身獲得(\d+)層『(.*)』。『(.*)』：每層提供(\d+%)的最終傷害加成，持續(\d+)回合，最多可疊加(\d+)層。$"="When dealing TECHNICAL, gain $1 stack of [$2]. [$3]: Each stack increases Final DMG Bonus by $4 for $5 turns, up to $6 stacks."
+熱能增幅=Heat Amplification
+r:"^熱<color\=#000000>能</color>增幅$"="H<color\=#000000>e</color>at Amplification"
