@@ -49,6 +49,7 @@ General Wonder Prompt
 還是算了吧=Just forget it
 要去別的地方……=<size\=24>I have somewhere else to go...</size>
 等會再說=Talk later
+待會兒再說=Talk later
 晚點再說可以嗎=Take later
 聽聽看吧=Let's listen
 安靜傾聽=Listen quietly
@@ -86,6 +87,7 @@ General Wonder Prompt
 有其他安排=<size\=30>Got other arrangements</size>
 有其他安排了……=<size\=29>Got other arrangements...</size>
 現在有點困難……=Now is a bit tough...
+下次吧=Next time
 下次再說=Next time
 下次再來=Come back next time
 等等再說=Wait a minute
@@ -126,6 +128,7 @@ General Wonder Prompt
 準備好了！=Ready!
 放手一搏吧=Give it all we got
 稍等一下=Wait a mininute
+現在不行=Not now
 現在還不行=Not yet
 還有其他事情=There's something else
 再準備一下=Prepare some more
@@ -215,10 +218,12 @@ CITY ACTIVITIES
 等不及享用了=<size\=30>Can't wait to enjoy this</size> <size\=1>.</size>
 說明了下單搞錯的情況，店家重做並贈送了咖啡……=<size\=28>Explained she had made a mistake with my order, the shop remade it and gave me free coffee...</size>
 
+做著整理的工作……=Did tidying work...
 製作人好像陷入了思考，總之先去做準備吧……=<size\=26>The producer seems to be lost in thought... Anyway, let's prepare first...</size>
 被直勾勾地盯著了……=Being stared at...
 在廚房幫忙……=Helped in the kitchen...
 幫忙做著整理的工作……=Helped with tidying...
+努力地洗著碗……=Washed the dishes diligently...
 早點回去吧……=Let's head back early...
 換好衣服就回去吧……=Let's go back after changing...
 收拾一下回去吧……=Let's go back after cleaning up...
@@ -254,14 +259,16 @@ r:"^我和{{A}}的關係……似乎正在相互影響。$"="<size\=28>My relati
 已經，不能反悔了……=There's no turning back now...
 已經不能再回頭了……=There's no turning back now...
 
-從{{A}}那裡感受到了特別的信賴……！=I can feel the special trust from {{A}}...!
-從{{A}}那裡感覺到了特別的信賴……！=I can feel the special trust from {{A}}...!
-從{{A}}那裡，感受到了特別的信賴……！=I can feel the special trust from {{A}}...!
+感覺到了和{{A}}強烈的羈絆……=I feel a strong bond with {{A}}...!
+感覺到了{{A}}特殊的信賴……=I feel the special trust from {{A}}...!
+從{{A}}那裡感受到了特別的信賴……！=I feel the special trust from {{A}}...!
+從{{A}}那裡感覺到了特別的信賴……！=I feel the special trust from {{A}}...!
+從{{A}}那裡，感受到了特別的信賴……！=I feel the special trust from {{A}}...!
 從{{A}}那裡，\n得到了特別的信賴……！=I've gained the special trust from {{A}}...!
 
 r:"^感覺到了和{{A}}堅固的羈絆……$"="I can feel the strong bond with {{A}}!"
 r:"^感受到了跟{{A}}的堅固羈絆……$"="I can feel the strong bond with {{A}}!"
-r:"^與{{A}}度過了二人時間……$"="<size\=27>I spend a long time with {{A}}...</size>"
+r:"^與{{A}}度過了二人時間……$"="<size\=27>I spent a long time with {{A}}...</size>"
 
 是母親發來的訊息。=It's a message from mom.
 結束了聊天。=End of message.
@@ -274,20 +281,24 @@ General Short Phrases
 你好！=Hello!
 你好=Hello
 謝謝！=Thank you!
+謝謝你=Thank you
 謝謝你。=Thank you.
 謝謝你……！=Thank you...!
-謝謝你=Thank you
+r:"^謝謝你，(.*)！$"="Thank you, $1!"
+太感謝了=Thank you so much
 非常感謝！=Thank you very much!
 啊。=Ah.
 啊……=Ah...
 啊……？=Eh...?
 呀！？=Ah!?
+我……=I...
 「{{A}}」{{B}}="{{A}}" {{B}}
 {{A}}。={{A}}.
 {{A}}……={{A}}...
 {{A}}？={{A}}?
 {{A}}！！={{A}}!!
 {{A}}！？={{A}}！？
+{{A}}——={{A}}-
 {{A}}～？={{A}}～?
 {{A}}～！={{A}}～!
 {{A}}……？={{A}}...?
@@ -319,6 +330,7 @@ General Short Phrases
 沒事的=It's fine
 沒事吧？=Are you okay?
 吃=Eat
+我吃=I'll eat
 ……好。=...Right.
 好的……=Okay...
 但是……=But...
@@ -1388,12 +1400,16 @@ Rank 6
 怕的話可以抓住我的手=<size\=26>Grab my hand if you're scared</size> 
 才不會害怕=I won't be afraid
 
-你謝過很多遍了=<size\=24>You've thanked me many times</size> <size\=1>.</size>
-我才要努力=That's what I'm trying <size\=1>.</size>
+你謝過很多遍了=<size\=24>You've thanked me many times</size>
+我才要努力=That's what I'm trying
 
 Hangouts
+{{A}}～！真的可以送我嗎？={{A}}～! Can I really have this?
 試試看吧=Let's try it
 要比賽嗎？=Want to compete?
+和{{A}}一起訓練後，\n肚子餓了，來吃文字燒……=After training with {{A}}, we came to eat Monjayaki because we felt hungry
+只是配菜沒關係=It's just a side dish
+要不要選起司？=<size\=30>Want to choose cheese?</size>
 
 SNS
 愛情片？=Romance movies?
@@ -1422,7 +1438,7 @@ Rank 14
 就是這份氣勢=That's the spirit
 因為和你約好了=Because I promised you
 因為{{A}}是我重要的人=<size\=24>{{A}} is an important person to me</size>
-r:"^和{{A}}一起慢慢地度過了二人時間……$"="<size\=27>I spend a long time with {{A}}...</size>"
+r:"^和{{A}}一起慢慢地度過了二人時間……$"="<size\=27>I spent a long time with {{A}}...</size>"
 
 Hangouts
 和{{A}}一起連著去了好幾家\n上學路上的服裝店……=<size\=28>IWent to several clothing stores on the way to school with {{A}}...</size>
@@ -1629,7 +1645,7 @@ WONDER，就是現在！=Wonder, the time is now!
 我要大喝特喝=I want to drink a lot
 為了慶祝春節，\n菜肴擠滿了整張桌子……！=To celebrate the Spring Festival, the dishes filled the table...!
 真是辛苦大家助陣舞獅表演了！\n祝大家新年快樂！=Thank you all for your hard work in supporting the lion dance performance! Happy New Year!
-幹～杯～！=Cheers～！
+幹～杯～！=Cheers～!
 給你點瓜子=<size\=30>Have some melon seeds</size>
 吃糖嗎？=Candy?
 你吃得了湯圓嗎……？=<size\=28>Can you eat sweet dumplings...?</size>
@@ -1718,10 +1734,48 @@ Rank 12
 有人關心他會很開心=He will be happy
 至少不會感覺不舒服=<size\=30>Won't feel uncomfortable</size>
 
+Rank 14
+{{A}}一副很緊張的樣子……={{A}} looks nervous...
+究竟發生了什麼？=What exactly happened?
+總之先冷靜下來=Calm down first
+是{{A}}的事情嗎？=Is it about {{A}}?
+好像變成了比預想的更嚴重的事情……=It seems to have become more serious than expected...
+我去看下情況=I'll check the situation
+原地等我就好=Just wait for me here
+總之交給我吧=Leave it to me
+回家吧=Come home
+現在開始也不遲=It's not too late to start
+看來兩人都已經沒事了……=Looks like they're both okay...
+
+Rank 20
+原來這麼辛苦嗎？=Is it that hard?
+真是一場苦戰=It was a tough
+就交給身為年輕人的我吧=Leave it to youth like me
+但是你努力過了=But you tried
+今天是反省會？=Is today reflection day?
+結果並不是很糟=The results weren't bad
+很寶貴的教訓啊=It's a valuable lesson.
+正是如此=Exactly
+這個很難做到=It's hard to do
+很寶貴的教訓啊=It's a valuable lesson
+開始覺得這種打扮也不賴了……=I'm starting to think this look isn't bad...
+
 Hangouts
 和{{A}}一起看了動畫電影。\n感覺好溫暖……=Watched an animated movie with {{A}}. Felt very warm...
 和{{A}}一起看了恐怖電影。\n感覺晚上做夢會夢到……=Watched a horror movie with {{A}}. Feel like I'll dream about it at night...
 和{{A}}一起看了諜戰電影。\n明明是間諜，也過於引人注目了……=Watched a spy movie with {{A}}. The spy was very conspicuous...
+和{{A}}去了有名的咖哩店。\n很好吃，但超級辣……=Went to a famous curry shop with {{A}}. It very good but super spicy...
+帶{{A}}去了學校前面。\n她看了看身穿校服的耀眼女生……=Took {{A}} to the front of the school. She looked at the dazzling girls in school uniform...
+和{{A}}在車站前轉來轉去。\n有人在街頭LIVE，一起聽入迷了……=<size\=25>Wandered around the station with {{A}}. We were mesmerized by someone performing live on the street...</size>
+和{{A}}一起慢慢地逛了原宿，\n吃了可麗餅……=Strolled around Harajuku with {{A}} and ate crepes...
+和{{A}}一起慢慢地逛了原宿，\n品嘗了鬆餅……=Strolled around Harajuku with {{A}} and ate pancakes...
+和{{A}}一起慢慢地逛了原宿，\n買了心形的眼鏡……=Strolled around Harajuku with {{A}} and bought heart shaped glasses...
+和{{A}}一起聊到了天象儀開場，\n原來{{A}}的推是天鵝座……=<size\=26>Chatted with {{A}} until the planetarium opened. Turned out {{A}}'s push was Cygnus...</size>
+和{{A}}一起聊到了天象儀開場。\n她對我沒見過哈雷彗星表示震驚……=<size\=26>Chatted with {{A}} until the planetarium opened. She was shocked that I hadn't seen Halley's Comet...</size>
+和{{A}}一起聊到了天象儀開場。\n不小心打起了瞌睡，被她注意到了……=<size\=26>Chatted with {{A}} until the planetarium opened. She noticed I accidentally dozed off...</size>
+和{{A}}一起走了橋上的步道，\n花的時間比預想的要長……=<size\=26>Walked on the bridge with {{A}}. It took longer than expected...</size>
+和{{A}}一起去購物，\n幫她挑選了送給丈夫的禮物……=Went shopping with {{A}} and helped her choose a gift for her husband...
+和{{A}}一起在公園散步了，\n被迫聽她放閃……=<size\=28>Took a walk in the park with {{A}} and was forced to listen to her public display of affection...</size>
 
 我不討厭打掃=I don't hate cleaning
 是不是管太多了=Worrying too much
@@ -1793,7 +1847,7 @@ Hangouts
 
 SNS
 那是什麼？=What's that?
-好像聽說過=Think I've heard that before
+好像聽說過=<size\=27>Think I've heard that before</size>
 看錯了吧？=Did you see it wrong?
 是合成圖像吧？=It's a composite image right?
 堅強一點，趕走它=Be strong, get rid of it
@@ -1961,7 +2015,7 @@ Rank 6
 想想怎麼緩解緊張……=<size\=25>Think about calming your nerves...</size> <size\=1>.</size>
 好呀～！=Okay～!
 {{A}}～～！={{A}}～～!
-沒問題哦～～！=No problem～～！
+沒問題哦～～！=No problem～～!
 嗚……{{A}}～！=Woo... {{A}}～!
 {{A}}看起來從沒這麼開心過，\n剛才那首歌讓她有了自信。=<size\=28>{{A}} never looked so happy, that song just gave her confidence.</size>
 肯定能行=Definitely
@@ -2126,6 +2180,7 @@ Rank 14
 免費住=For free
 
 Hangouts
+和{{A}}一起去了藥店，\n聽他解說了新產品……=Went to the Drug Store with {{A}} and heard him explain the new products...
 就是很平凡=It's very ordinary
 也有一些意外=<size\=29>There are some surprises</size>
 也是有可能的=It's possible
@@ -2546,6 +2601,15 @@ Rank 18
 不愧是七代=<size\=26>Nice work, seven-generation</size>
 和{{A}}一起去了{{B}}，\n四處閒逛，玩得很開心……=Went to {{B}} with {{A}} and had a great time wandering around...
 
+Rank 20
+又在撿垃圾？=Picking up trash again?
+回歸初心了嗎=<size\=27>Back to where you started?</size>
+那我也一起=Then I'll join you
+希望你也讓我幫忙=Hope you'll let me help
+都是{{A}}的功勞=<size\=30>All thanks to {{A}}</size>
+都是我的功勞=All thanks to me
+和{{A}}一起在{{B}}撿垃圾，\n度過了很長的時間……=Spent a long time with {{A}} picking up trash in {{B}}...
+
 Hangouts
 真是令人意外的一面=That's surprising
 你好了解啊=You know a lot
@@ -2571,6 +2635,34 @@ Hangouts
 這實在是……=That's...
 {{A}}真深奧啊={{A}} is so profound
 一起在中華街邊走邊吃，\n{{A}}似乎很喜歡小籠包……=Went for a walk and ate in Chinatown. {{A}} seems to like soup dumplings...
+
+r:"^(.*)！\n我一直在等你哦！那個……$"="$1! I've been waiting for you! Well..."
+你是一個人獨居，對吧？\n我想，你應該要自己做飯，很辛苦吧。=You live alone, right? \nCooking for yourself must be hard.
+所以！我想——\n今天我去你家，給你做飯。=So! I want-\nTo go to your home and cook for you.
+嗯！我也得偶爾表現出姐姐的樣子啊～=Yes! Yes! I need to show my onee-san side sometimes too～
+食材就在路上的超市買吧？\n那麼，出發，ＧｏＧｏ！=Let's buy some ingredients at a supermarket on the way? Okay then, go go!
+啊，果然太突然了……？\n也是啊，突然提出來，對不起……=Ah, it was too sudden after all...?\nRight, sorry for asking out of the blue...
+你吃了好多～\n這頓飯沒有白做！=You ate a lot～\nIt was worth making it!
+r:"^話說(.*)，我居然會做飯，\n好意外！你有沒有這樣想過？$"="I mean, $1.\nHave you ever thought about how I could cook?"
+老實說，想過=<size\=25>Honestly, I've thought about it</size>
+我早就覺得你會做飯=<size\=23>I've always known you can cook</size>
+對吧？這就是所謂的反差萌，\n是不是讓人有些心動？=Right? Right? This is called "gap-moe".\nDid I make your heart flutter?
+{{A}}，是、是嗎？\n是看到我身上居家的氣質嗎？{{B}}。={{A}}, is, is it? I guess that domestic side of me came through? {{B}}.
+……遇見你之後，\n就一直是你在照顧我。=...I've been indebted to you ever since we met.
+所以我就想，\n該怎麼樣才能夠答謝你……=So I've been thinking, \nhow I can show my gratitude...
+但是，突然提出要來你家，\n實在是有點可疑吧。=But, I thought it might be a bit suspicious to suddenly say that I want to go your home.
+不過你看，現在我們是那個了，對吧？\n就是那種做些什麼也可以的關係……=Look, we're not like that, right? We're in a relationship where we can do anything...
+啊，不是那個的意思！\n我是說很正當的那些事情。=Ah, I didn't mean it like that!\nI mean something that's very proper.
+r:"^真是的，\n(.*)也說點什麼啦～！$"="Come on, $1.\nSay somthing～!"
+那要去房間嗎？=<size\=28>Want to go to my room?</size>
+我想再和你一起待會兒=<size\=30>I want to stay with you longer</size>
+在這個時候說這種話！？\n不就更奇怪了嗎？=Saying that at a time like this!?\nIsn't it even more strange?
+……不、不過，\n難得過來了，我要去看看！=...B-but, now that I've come this far, I want to take a look!
+好直接！太直接啦！\n這種話我可說不出口！但……得救了！！=Direct! So direct! \nI can't say things that! But... I'm saved!
+{{B}}，那麼……\n{{A}}……！={{B}}, then...\n{{A}}...!
+和{{A}}一起度過了\n二人世界的時光……=<size\=27>I spent a long time with {{A}}...</size>
+好啦，我要來做飯啦～\n就期待我大顯身手吧！=Alright, I'll put all my effort into making it～\nPlease look forward to it!
+{{A}}親手做了飯。\n兩人一起度過了悠閒的時光……={{A}} cooked the meal herself. \nWe spent a long time together...
 
 SNS
 我知道的=I know
@@ -2605,6 +2697,12 @@ SNS
 未知的新設定……=Unknown new setting...
 等很久了！=Been waiting!
 我可沒在等哦=I'm not waiting
+下次去見見{{A}}吧=Let's meet {{A}} next time
+代我向七代問好=Give my regards to the seventh-generation
+我知道=I know
+你可以跟我打聲招呼嘛……=You could've said hello...
+沒有那種事=That's not the case
+我也很重視{{A}}=I value {{A}} too
 
 Akihabara Quest
 今天可以嗎？=Is today okay?
@@ -2915,10 +3013,18 @@ Hangouts
 冷靜一點……=Calm down...
 原來你喜歡電影院啊？=So you like movie theaters?
 和{{A}}一起去了{{B}}的電影院。\n一起看了以前的經典名作……=<size\=28>Went to the {{B}} Movie Theater with {{A}} and watched an old classic together...</size>
-想去看看=Want to look
-想先休息一下……=<size\=27>Want to take a break first...</size>
+和{{A}}一起去了{{B}}的電影院。\n2人都為感人的故事流淚了……=<size\=28>Went to the {{B}} Movie Theater with {{A}} and both of us cried over the touching story...</size>
+和{{A}}一起去了{{B}}的電影院。\n一起看了著名導演的巨作……=<size\=26>Went to the {{B}} Movie Theater with {{A}} and watched a famous director's masterpiece together...</size>
 想自己調查=<size\=28>Want to investigate myself</size>
 想知道時尚的店=<size\=23>Want to know the fashion store</size>
+和{{A}}一起去了{{B}}。\n在繁華街附近並肩散步……=Went to {{B}} with {{A}}. Walked side by side on the busy street...
+和{{A}}一起去了{{B}}。\n在繁華街享用了街頭小吃……=Went to {{B}} with {{A}}. Enjoyed street food on the busy street...
+和{{A}}一起去了{{B}}。\n在中華包子店吃了限量款……=Went to {{B}} with {{A}}. \nAte the limited edition at the Chinese Bun Shop...
+想去看看=Want to look
+想先休息一下……=<size\=27>Want to take a break first...</size>
+和{{A}}去了上野的美術館。\n慢慢參觀了常設展的作品……=Went to the Ueno Art Museum with {{A}} and slowly toured the permanent exhibition...
+和{{A}}去了上野的美術館。\n參觀了別出心裁的企劃展……=Went to the Ueno Art Museum with {{A}} and visited an unique exhibition...
+和{{A}}去了上野的美術館。\n在商店裡買了時尚的週邊……=Went to the Ueno Art Museum with {{A}} and bought some fashionable goods in the shop...
 
 SNS
 比如當天發生的事情=Like what happened today
@@ -2944,8 +3050,152 @@ SNS
 好像……記得=Seem to... remember
 徹底上癮了啊=Totally addicted
 適度享受=Enjoy in moderation
+怎麼突然這麼說？=Why do you suddenly say that?
+你從來沒做過飯嗎？=Have you never cooked?
+你會做什麼呀？=What will you do?
+我也想嘗嘗=I want to try it too
+我沒興趣=I'm not interested
+你的名字很可愛=Your name is cute
+你的名字很美=Your name is beautiful
 
 ----------
 My Palace
 ----------
 也很受男性歡迎=Also popular with male
+
+----------
+Shinta Ezaki Side Quest
+----------
+抽煙嗎？=Do you smoke?
+完全看不出來=Can't see it at all
+什麼研究室？=What lab?
+聽說過「小廚神」嗎？=Have you heard of "Junior Chef"?
+「小廚神」是什麼？=What is "Junior Chef"?
+沒聽說過=Never heard of it
+改天再見吧！=See you another day!
+看來，{{A}}是個發明家……？=Looks like {{A}} is an inventor...?
+{{B}}？你說誰？「{{A}}」？={{B}}? Who are you talking about? "{{A}}"?
+「{{B}}」，{{A}}啊！\n你沒看到嗎，剛才就在那裡。="{{B}}", {{A}}! \nDidn't you see it? They were there just now.
+這也太誇張了=This is too exaggerated
+沒想到是個才子=<size\=22>Didn't expect them to be a genius</size>
+遇到麻煩了？=Having trouble?
+暫時不搭話=Don't talk
+我幫你等吧=I'll wait for you
+我認識他=I know him
+外賣員自顧自地走掉了……=The delivery man left...
+{{A}}？怎麼是你？={{A}}? Why is it you?
+你終於出來了=You finally came out
+你好，「愛迪生」先生=Hello, "Edison"-san
+你知道「心流」嗎？\n我就是進入了類似那樣的狀態。=Do you know what "flow" is? \nI'm in a state like that.
+「心流」是什麼？=What is "flow"?
+你那是低血糖了=<size\=28>You have low blood sugar</size>
+快被餓暈了吧=You're starving
+趕緊給{{A}}餵了幾口外賣。=Quickly fed {{A}} a few bites of takeout.
+「又一個」？="Another one"?
+上一個是「小廚神」？=Last one was "Junior Chef"?
+跟{{A}}互換了電話號碼。=Exchanged phone numbers with {{A}}.
+期待你的發明=<size\=21>Looking forward to your inventions</size>
+記得好好吃飯=Remember to eat well
+說不定對怪盜活動也有幫助哦？=Maybe it can also help the Phantom Thieves?
+興奮起來了=I'm excited
+有不好的預感=I have a bad feeling
+{{A}}打電話過來了。\n應該是關於新發明的事……={{A}} called. It should be about the new inventions...
+大發明家{{A}}=<size\=28>Great Inventor {{A}}</size>
+「愛迪生」先生="Edison"-san
+多謝誇獎=<size\=28>Thanks for the compliment</size>
+我從小就很聰明=<size\=23>I've been smart since I was little</size>
+我不太懂=I don't get it
+……你發明了蓋飯？=<size\=30>...You invented this dish?</size>
+像科幻片一樣=It's like a sci-fi movie
+你是怎麼做到的？=How did you do it?
+這合法嗎……=Is this legal...
+不會是黑暗料理吧=It's not dark cuisine?
+不是「愛迪生」嗎？=Not "Edison"?
+怎麼變「瓦特」了？="Watt" now?
+出於對{{A}}的信任，\n狠狠吃了一大口……=Out of trust in {{A}}, \nI took a big bite...
+是致死量的鹽=A lethal dose of salt
+已經鹹到發苦了=It's so salty it's bitter
+為了表達歉意，\n{{A}}點了解渴的飲料……=To apologize, {{A}} ordered a thirst-quenching drink...
+一碗蓋飯竟有如此強大的威力。\n也算是感受到了{{A}}的熱情……=A bowl of rice has such power. \nI can feel {{A}}'s enthusiasm...
+你是哪位？=Who are you?
+你一直在偷聽？=<size\=27>You've been eavesdropping?</size>
+那傢伙是誰？\n好像對{{A}}很了解的樣子。=Who is that guy? He seems to know a lot about {{A}}.
+總之，等待{{A}}的下次聯絡吧。=Anyway, let's wait for {{A}}'s next contact.
+你是大發明家=<size\=30>You're the great inventor</size>
+超鹹蓋飯創始人=<size\=26>Founder of Super Salty Rice</size>
+有十足的信心=Have full confidence
+有，但只有一點點=Yes, but only a little
+帶著一絲懷疑，\n淺淺地嘗了一口……=With a hint of doubt, \nI took a bite...
+糊味直衝天靈蓋=<size\=22>The smell of paste is overwhelming</size>
+感覺在喝洗鍋水=<size\=23>Feel like I'm drinking pot water</size>
+喝了{{A}}點來的飲料，\n感覺好多了。=Felt much better after drinking the drinks ordered by {{A}}.
+你太拼了=You work too hard
+為什麼要做到這個地步=Why go this far?
+好像是什麼壞消息吧？\n要不要安慰一下他呢？=Sounds like some bad news. \nWant to comfort him?
+發生什麼事了=What happened?
+一切都會好的=Everything will be fine
+{{A}}真的沒事嗎？\n有點擔心……=Is {{A}} really okay?\nI'm a little worried...
+你還好嗎？=How are you?
+「{{A}}·賈伯斯」="{{A}}·Jobs"
+狂吃一大口=Take a big bite
+先抿一小口=Take a small bite
+懷著悍不畏死的心情端起碗，\n勇敢地吃了一大口……=With a fearless attitude, I picked up the bowl and bravely took a big bite...
+謹慎地端起碗，\n盡可能地用筷子夾取少量食物……=Picked up the bowl carefully and picked up as little food as possible with the chopsticks...
+結果還是不小心夾多了，\n又不好意思抖回去，只能吃掉了。=Picked up too much by accident, but was too embarrassed to put it back, so I just ate it.
+意外地很安全，味道中規中矩……\n要怎麼評價一下呢？=Surprisingly safe, the taste is just average... How do I rate it?
+不知從哪冒出來的大爺，\n端起碗連吃了三大口……=I don't know where he came from, but he took three big bites out of the bowl...
+真過分的評價=Mean review
+你沒事吧=Are you okay
+那人很可疑=That guy's suspicious
+味道很標準=The flavor is standard
+已經有很大進步了=It's a big improvement
+現在放棄還太早=It's too early to give up
+我還想繼續當小白鼠呢=<size\=23>I want to continue being the guinea pig</size>
+{{A}}的幹勁好像正在消失……\n要讓他一個人靜一靜嗎？={{A}}'s drive seems to be disappearing... Should I leave him alone?
+真正的天賦？=True talent?
+你到底是誰？=Who are you?
+那個可疑的傢伙完全不聽人說話，\n又自顧自地走掉了。=That suspicious guy didn't listen at all and left.
+還是繼續關注{{A}}的動向吧。=Let's continue to pay attention to {{A}}.
+看起來{{A}}在搬家？\n發生什麼了？=Looks like {{A}} is moving?\nWhat happened?
+路過這裡而已=Just passing by
+專門來看看你=I've come to see you
+接下來什麼打算=What's next?
+會換更便宜的房子嗎=<size\=26>Change to a cheaper house?</size>
+只是試錯而已=It was just a mistake
+總歸還有機會=<size\=30>There's always a chance</size>
+我很好奇=I'm curious
+開始懷舊了？=Getting nostalgic?
+才不是運氣=It's not luck
+那也是實力的一部分=<size\=30>That's part of strength</size>
+噢——！=Oh-!
+大發明家——{{A}}，\n隆重退場！！=The Great Inventor-{{A}}.\nGrand Exit!!
+{{A}}的背影，還真落寞呢。\n希望他好好保重啊……={{A}} looks really lonely. \nI hope he takes good care of himself...
+果然是{{A}}！=It's {{A}}!
+該我問才對=I should be asking you
+是特別的緣分=It's fate
+我保證=I promise
+我一般不會笑=I usually don't laugh
+那你老爸怎麼說？=<size\=30>What did your dad say?</size>
+那你的行李呢？=<size\=29>What about your luggage?</size>
+你住公園裡？=You live in the park?
+原來你還沒認輸？=<size\=29>You haven't given up yet?</size>
+看來還有鬥志嘛=<size\=25>There's some fight left in you</size>
+是你？=It's you?
+真是哪兒都有你=You're everywhere
+「真正的天賦」……？="True talent"...?
+冠軍……！=Champion...!
+先聯絡看看吧？=Let's get in touch first?
+感覺有點可疑=Feeling a bit suspicious
+感覺{{A}}有些心動……={{A}} is a little moved...
+和{{A}}又討論了一會兒後，\n和他分別了。=Left {{A}} after discussing with him for a while.
+你看起來精神挺好=<size\=24>You seem to be in good spirits</size>
+最近忙什麼呢？=<size\=22>What are you busy with recently?</size>
+神秘男人推薦的那個=<size\=28>From that mysterious man</size>
+「無用發明大賽」=<size\=27>"Useless Inventions Contest"</size>
+這都什麼玩意兒=What is this?
+哪個都不行吧=Neither one will do
+我儘量吧=I'll try my best
+有點害怕=I'm a little scared
+突然想起家裡煲著湯=<size\=26>I was making soup at home</size>
+{{A}}又分享了幾款小發明的思路，\n聽得我汗流浹背……=<size\=26>{{A}} shared a few more small invention ideas, I was sweating profusely when I heard them...</size>
+期待在以後聽到更多，\n大發明家·{{A}}的故事……=I look forward to hearing more stories about the Great Inventor {{A}} in the future...
