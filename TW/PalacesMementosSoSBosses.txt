@@ -983,25 +983,35 @@ MEMNTOS 1
 ----------
 未知地帶=Unknown Area
 
-r:"^1、{{A}}擁有<color\=#ffd700>「金之領域」</color>，造成傷害時使隨機陰影獲得1層<color\=#ffd700>「金剛不壞」</color>狀態。\n<color\=#ffd700>「金剛不壞」</color>：免疫下次受到的傷害。\n2、{{A}}擁有<color\=#ffd700>「金剛不壞」</color>時，造成傷害提高。$"="1. {{A}} have <color\=#ffd700>[Golden Domain]</color>, when dealing damage give 1 random Shadow 1 stack of <color\=#ffd700>[Unbreakable]</color>.\n<color\=#ffd700>[Unbreakable]</color>: Immunity to the next damage received.\n2. When {{A}} have <color\=#ffd700>[Unbreakable]</color>, increase DMG Dealt."
+r:"^(\d+%)機率閃避受到的普通攻擊和槍械攻擊$"="$1 to evade Melee Attack and Gun Attack"
+r:"^(\d+%)機率閃避受到的槍械攻擊和技能攻擊$"="$1 to evade Gun Attack and Skill"
+r:"^(\d+%)機率閃避受到的技能攻擊和普通攻擊$"="$1 to evade Skill and Melee Attack"
+r:"^<color\=#FF0000>(.*)</color>進入分身並步、反身泄步狀態，閃避受到的普通攻擊和槍械攻擊……$"="<color\=#FF0000>$1</color> now evade Melee Attack and Gun Attack!"
+r:"^<color\=#FF0000>(.*)</color>進入反身泄步、披風追步狀態，閃避受到的槍械攻擊和技能攻擊……$"="<color\=#FF0000>$1</color> now evade Gun Attack and Skill!"
+r:"^<color\=#FF0000>(.*)</color>進入披風追步、分身並步狀態，閃避受到的技能攻擊和普通攻擊……$"="<color\=#FF0000>$1</color> now evade Skill and Melee Attack!"
+r:"^閃<color\=#000000>避</color>普攻、槍械$"="E<color\=#000000>v</color>ade Melee Attack, Gun Attack"
+r:"^閃<color\=#000000>避</color>槍械、技能$"="E<color\=#000000>v</color>ade Gun Attack, Skill"
+r:"^閃<color\=#000000>避</color>技能、普攻$"="E<color\=#000000>v</color>ade Skill, Melee Attack"
+
+r:"^1、{{A}}擁有<color\=#ffd700>「金之領域」</color>，造成傷害時使隨機陰影獲得1層<color\=#ffd700>「金剛不壞」</color>狀態。\n<color\=#ffd700>「金剛不壞」</color>：免疫下次受到的傷害。\n2、{{A}}擁有<color\=#ffd700>「金剛不壞」</color>時，造成傷害提高。$"="<size\=26>1. {{A}} have <color\=#ffd700>[Golden Domain]</color>, when dealing damage give 1 random Shadow 1 stack of <color\=#ffd700>[Unbreakable]</color>.\n<color\=#ffd700>[Unbreakable]</color>: Immunity to the next damage received.\n2. When {{A}} have <color\=#ffd700>[Unbreakable]</color>, increase DMG Dealt.</size>"
 金之領域=Golden Domain
 金剛不壞=Unbreakable
 造成傷害時使我方隨機一名單位獲得一層金剛不壞狀態=When dealing damage, give 1 random ally 1 stack of Unbreakable
 r:"^金<color\=#000000>剛</color>不壞$"="U<color\=#000000>n</color>breakable"
 
-r:"^1、{{A}}擁有<color\=#81ea2c>「風之領域」</color>，造成傷害時有(\d+%)基礎機率使目標進入2回合<color\=#81ea2c>「超風襲」</color>狀態。\n<color\=#81ea2c>「超風襲」</color>：{{A}}施加的特殊風襲狀態，防禦力降低(\d+%)。\n2、{{A}}對處於<color\=#81ea2c>「超風襲」</color>狀態的怪盜造成傷害提高。$"="1. {{A}} have <color\=#81ea2c>[Wind Domain]</color>, when dealing damage there is a $1 base chance to inflict the targets with <color\=#81ea2c>[Super Winded]</color>.\n<color\=#81ea2c>[Super Winded]</color>: A debuff from {{A}}, decrease DEF by $2.\n2. {{A}} increase DMG Dealt to Thieves with <color\=#81ea2c>[Super Winded]</color>."
+r:"^1、{{A}}擁有<color\=#81ea2c>「風之領域」</color>，造成傷害時有(\d+%)基礎機率使目標進入2回合<color\=#81ea2c>「超風襲」</color>狀態。\n<color\=#81ea2c>「超風襲」</color>：{{A}}施加的特殊風襲狀態，防禦力降低(\d+%)。\n2、{{A}}對處於<color\=#81ea2c>「超風襲」</color>狀態的怪盜造成傷害提高。$"="<size\=26>1. {{A}} have <color\=#81ea2c>[Wind Domain]</color>, when dealing damage there is a $1 base chance to inflict the targets with <color\=#81ea2c>[Super Winded]</color>.\n<color\=#81ea2c>[Super Winded]</color>: A debuff from {{A}}, decrease DEF by $2.\n2. {{A}} increase DMG Dealt to Thieves with <color\=#81ea2c>[Super Winded]</color>.</size>"
 風之領域=Wind Domain
 超風襲=Super Winded
 r:"^造成傷害時有(\d+%)基礎機率使目標進入(\d+)回合超風襲狀態$"="When dealing damage, there is a $1 base chance to inflict Super Winded for $2 turns"
 r:"^風<color\=#000000>之</color>領域$"="W<color\=#000000>i</color>nd Domain"
 
-r:"^1、{{A}}擁有<color\=#00aeff>「冰之領域」</color>，造成傷害時有(\d+%)基礎機率使目標進入2回合<color\=#00aeff>「超凍結」</color>狀態。\n<color\=#00aeff>「超凍結」</color>：{{A}}施加的特殊凍結狀態，攻擊力降低(\d+%)。\n2、{{A}}對處於<color\=#00aeff>「超凍結」</color>狀態的怪盜造成傷害提高。$"="1. {{A}} have <color\=#00aeff>[Ice Domain]</color>, when dealing damage there is a $1 base chance to inflict the targets with <color\=#00aeff>[Super Freeze]</color>.\n<color\=#00aeff>[Super Freeze]</color>: A debuff from {{A}}, decrease ATK by $2.\n2. {{A}} increase DMG Dealt to Thieves with <color\=#00aeff>[Super Freeze]</color>."
+r:"^1、{{A}}擁有<color\=#00aeff>「冰之領域」</color>，造成傷害時有(\d+%)基礎機率使目標進入2回合<color\=#00aeff>「超凍結」</color>狀態。\n<color\=#00aeff>「超凍結」</color>：{{A}}施加的特殊凍結狀態，攻擊力降低(\d+%)。\n2、{{A}}對處於<color\=#00aeff>「超凍結」</color>狀態的怪盜造成傷害提高。$"="<size\=26>1. {{A}} have <color\=#00aeff>[Ice Domain]</color>, when dealing damage there is a $1 base chance to inflict the targets with <color\=#00aeff>[Super Freeze]</color>.\n<color\=#00aeff>[Super Freeze]</color>: A debuff from {{A}}, decrease ATK by $2.\n2. {{A}} increase DMG Dealt to Thieves with <color\=#00aeff>[Super Freeze]</color>.</size>"
 冰之領域=Ice Domain
 超凍結=Super Freeze
 r:"^造成傷害時有(\d+%)基礎機率使目標進入(\d+)回合超凍結狀態$"="When dealing damage, there is a $1 base chance to inflict Super Freeze for $2 turns"
 r:"^水<color\=#000000>之</color>領域$"="I<color\=#000000>c</color>e Domain"
 
-r:"^1、{{D}}初始擁有(\d+)層<color\=#ff3b37>「傷害減免」</color>，對處於元素異常狀態的怪盜造成傷害提高。\n2、{{C}}/{{B}}/{{A}}被擊敗時，會驅散1層{{D}}的<color\=#ff3b37>「傷害減免」</color>，{{D}}會繼承該鬼的「領域」。$"="1. {{D}} start with $1 stacks of <color\=#ff3b37>[Damage Resist]</color>, increase damage to Thieves with Elemental Ailments. \n2. When {{C}}/{{B}}/{{A}} is defeated, dispel 1 stack of <color\=#ff3b37>[Damage Resist]</color>, {{D}} will inherit that Oni's [Domain]."
+r:"^1、{{D}}初始擁有(\d+)層<color\=#ff3b37>「傷害減免」</color>，對處於元素異常狀態的怪盜造成傷害提高。\n2、{{C}}/{{B}}/{{A}}被擊敗時，會驅散1層{{D}}的<color\=#ff3b37>「傷害減免」</color>，{{D}}會繼承該鬼的「領域」。$"="<size\=26>1. {{D}} start with $1 stacks of <color\=#ff3b37>[Damage Resist]</color>, increase damage to Thieves with Elemental Ailments. \n2. When {{C}}/{{B}}/{{A}} is defeated, dispel 1 stack of <color\=#ff3b37>[Damage Resist]</color>, {{D}} will inherit that Oni's [Domain].</size>"
 
 r:"^1、{{D}}擁有<color\=#81ea2c>「風之領域」</color>，造成傷害時有(\d+%)基礎機率使目標進入2回合<color\=#81ea2c>「超風襲」</color>狀態。\n<color\=#81ea2c>「超風襲」</color>：{{D}}施加的特殊風襲狀態，防禦力降低(\d+%)。\n2、{{C}}擁有<color\=#00aeff>「冰之領域」</color>，造成傷害時有(\d+%)基礎機率使目標進入2回合<color\=#00aeff>「超凍結」</color>狀態。\n<color\=#00aeff>「超凍結」</color>：{{C}}施加的特殊凍結狀態，攻擊力降低(\d+%)。\n3、{{B}}擁有<color\=#ffd700>「金之領域」</color>，造成傷害時使隨機陰影獲得1層<color\=#ffd700>「金剛不壞」</color>狀態。\n<color\=#ffd700>「金剛不壞」</color>：免疫下次受到的傷害。\n4、{{E}}初始擁有(\d+)層<color\=#ff3b37>「傷害減免」</color>，對處於元素異常狀態的怪盜造成傷害提高。\n5、{{D}}、{{C}}、{{B}}被擊敗時，會驅散1層{{E}}的<color\=#ff3b37>「傷害減免」</color>，{{E}}會繼承該鬼的「領域」與對應特性。其餘三鬼都被擊敗後，{{E}}會進入{{A}}狀態，最終傷害提升。\n6、陰影的能力隨著戰鬥回合增強，\n從第三回合開始，陰影每回合開始獲得<color\=#ff381d>「狂暴」</color>(\d+)層。\n從第五回合開始，陰影每回合開始獲得<color\=#ff381d>「狂暴」</color>(\d+)層。\n「狂暴」：獲得傷害加成(\d+%)，最多疊加(\d+)層。$"="1. {{D}} have <color\=#81ea2c>[Wind Domain]</color>, when dealing damage there is a $1 base chance to inflict the targets with <color\=#81ea2c>[Super Winded]</color>.\n<color\=#81ea2c>[Super Winded]</color>: A debuff from {{D}}, decrease DEF by $2.\n2. {{C}} have <color\=#00aeff>[Ice Domain]</color>, when dealing damage there is a $3 base chance to inflict the targets with <color\=#00aeff>[Super Freeze]</color>.\n<color\=#00aeff>[Super Freeze]</color>: A debuff from {{C}}, decrease ATK by $4.\n3. {{B}} have <color\=#ffd700>[Golden Domain]</color>, when dealing damage give 1 random Shadow 1 stack of <color\=#ffd700>[Unbreakable]</color>.\n<color\=#ffd700>[Unbreakable]</color>: Immunity to the next damage received.\n4. {{E}} start with $5 stacks of <color\=#ff3b37>[Damage Resist]</color>, increase damage to Thieves with Elemental Ailments. \n5. When {{D}}/{{C}}/{{B}} is defeated, dispel 1 stack of <color\=#ff3b37>[Damage Resist]</color>, {{E}} will inherit that Oni's [Domain]. Afer all 3 Oni are defeated, {{E}} will enter {{A}}, increase Final DMG. \n6. At the start of turn 3, all Shadows gain $6 stack of <color\=#ff381d>[Frenzy]</color> at the start of their turn.\nAt the start of turn 5, all Shadows gain $7 stacks of <color\=#ff381d>[Frenzy]</color> at the start of their turn.\n[Frenzy]: Increase DMG Bonus by $8, up to $9 stacks."
 
@@ -1348,6 +1358,13 @@ r:"^惡<color\=#000000>魔</color>的詛咒$"="D<color\=#000000>e</color>mon's C
 
 四大天王每隔一個回合會對隨機一名怪盜釋放「死亡凝視」，四大天王會優先攻擊處於「死亡凝視」的怪盜。=The Four Heavenly Kings will use [Death Gaze] on a random enemy, the Four Heavenly Kings will prioritize attacking the enemy with [Death Gaze].
 
+r:"^1、{{A}}進入戰鬥時獲得(\d+)層「{{A}}鱗甲」，每個回合會恢復(\d+)層「{{A}}鱗甲」，每層可以為其提供(\d+%)的最終傷害減免；\n2、{{A}}受到弱點傷害時，都會損失一層「{{A}}鱗甲」；\n3、{{A}}失去所有「{{A}}鱗甲」時會使所有怪盜獲得「{{A}}之力」，提升所有怪盜造成的最終傷害。$"="<size\=24>1. {{A}} will gain $1 stacks of [Scale Armor] at the start of battle and restore $2 stack of [Scale Armor] each turn, each stack increases Final DMG RES by $3;\n2. When {{A}} took weak damage, lose 1 stack of [Scale Armor];\n3. Give all Thieves [{{A}}'s Power] when {{A}} lose all [Scale Armor], increase all Thieves' Final DMG.</size>"
+r:"^1、{{A}}進入戰鬥時獲得(\d+)層「{{A}}鱗甲」，每個回合會恢復(\d+)層「{{A}}鱗甲」，每層可以為其提供(\d+%)的最終傷害減免。\n2、{{A}}受到弱點傷害時，都會損失一層「{{A}}鱗甲」。\n3、{{A}}失去所有「{{A}}鱗甲」時會使所有怪盜獲得「{{A}}之力」，提升所有怪盜造成的最終傷害。$"="<size\=24>1. {{A}} will gain $1 stacks of [Scale Armor] at the start of battle and restore $2 stack of [Scale Armor] each turn, each stack increases Final DMG RES by $3;\n2. When {{A}} took weak damage, lose 1 stack of [Scale Armor].\n3. Give all Thieves [{{A}}'s Power] when {{A}} lose all [Scale Armor], increase all Thieves' Final DMG.</size>"
+{{A}}鱗甲=Scale Armor
+r:"^每層使自身受到的傷害降低(\d+%)，受到弱點傷害會損失(\d+)層$"="Decrease DMG Taken by $1; \nLose $2 stack after taking weak damage"
+r:"^青<color\=#000000>龍</color>鱗甲$"="S<color\=#000000>c</color>ale Armor"
+sr:"^<color\=#FF0000>(.*)</color>獲得了(\d+)層『(.*)』……$"="<color\=#FF0000>$1</color> gained $2 stack(s) of [$3]..."
+
 {{A}}與所有{{B}}處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。=<size\=24>{{A}} and all {{B}} have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.</size>
 
 r:"^1、{{A}}每隔1個回合，獲得(\d+)層「神之庇佑」，每層可以為其提供(\d+%)的減傷。\n2、{{A}}受到來自技能或追加效果的每段傷害，都會損失一層「神之庇佑」。\n3、{{A}}失去所有「神之庇佑」時會使所有怪盜獲得「神之祝福」，提升所有怪盜造成的傷害。$"="<size\=23>1. {{A}} will gains $1 stacks of [God's Protection] every other turns, each stack will provide $2 DMG RES.\n2. {{A}} will loses 1 stack of [God's Protection] after taking a hit of damage from skills or Follow Up.\n3. Give all Thieves [God's Blessing] which increase all Thieves' DMG Dealt when {{A}} loses all stacks of [God's Protection].</size>"
@@ -1357,6 +1374,7 @@ r:"^每層使自身受到的傷害降低(\d+%)，每次受到傷害會損失(\d+
 r:"^神<color\=#000000>之</color>庇佑$"="G<color\=#000000>o</color>d's Protection"
 
 r:"^1、進入戰鬥時，{{A}}會召喚(\d+)個隨從與之並肩作戰，{{A}}與所有隨從處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n2、{{A}}每隔一個回合會給所有友方添加(\d+)層「暝夜之庇護」，最多可疊加(\d+)層，每層可使自身受到的最終傷害減免(\d+%)。\n3、受到庇護的單位獲得元素異常時，會被驅散(\d+)層「暝夜之庇護」。$"="<size\=24>1. At the start of battle, {{A}} will summon $1 minions, {{A}} and all minions have <color\=#ff3b37>[Lifelink]</color>.\n[Lifelink]: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%. \n2. {{A}} will give $2 stack of [Midnight Protection] to all allies, up to $3 stacks, each stack decreases own Final DMG Taken by $4.\n3. When the protected allies are inflicted with Elemental Ailments, dispel $5 stack of [Midnight Protection].</size>"
+被操控的鵺=Manipulated Nue
 暝夜之庇護=Midnight Protection
 r:"^暝<color\=#000000>夜</color>之庇護$"="M<color\=#000000>i</color>idnight Protection"
 

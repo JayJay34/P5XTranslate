@@ -681,6 +681,7 @@ r:"^剩餘(\d+)時(\d+)分(\d+)秒$"=" $1h $2m $3s"
 r:"^(\d+)小時(\d+)分鐘$"=" $1h $2m"
 r:"^(\d+)時(\d+)分(\d+)秒$"=" $1h $2m $3s"
 r:"^(\d+)分鐘$"=" $1 minutes"
+r:"^(\d+)天(\d+)時後解鎖$"="Unlocks after $1d $2h"
 r:"^(\d+)時(\d+)分後解鎖$"="Unlocks after $1h $2m"
 
 r:"^挑戰倒計時：$"="Time Left:"
@@ -787,6 +788,9 @@ Class/ Stats Screen
 推薦陣容=<size\=30>Recommendation</size>
 初始陣容=Starting Team
 陣容=Team
+已設置為默認方案。=Set as default team.
+確認要刪除該方案嗎？=Delete this team?
+不可以刪除默認編隊喔=Can't delete the default team
 已設為關注怪盜。=Added Thief to favourites.
 
 慾望奏鳴=Sonata
@@ -1228,6 +1232,8 @@ r:"^簽約$"="Pulls"
 每10次補給必出四星或以上武器。具體內容查看【說明】=<b><color\=#FFDF00>Weapon Banner</color></b>\nChoose your RATE UP weapon and two others. Every 70 pulls will guarantee a 5★ weapon. 0.8% Chance.\n\n\n\n\n\n<color\=#FFDF00><size\=25>The limited character's 5★ weapon is only available in this banner.</size></color>\n<size\=24>Pull count will carry between banners.</size>
 
 每10次簽約必出四星或以上怪盜角色。具體內容查看【說明】=Get 1 5★ every <color\=#FFDF00>110</color> or <color\=#ff3b37>80</color> pulls;\n<color\=#FFDF00>0.2%</color> or <color\=#ff3b37>0.8%</color>; <color\=#FFDF00>No 50/50</color><size\=20> </size>or<size\=20> </size><color\=#ff3b37>50/50</color>\nGuarantee 1 4★ every 10 pulls.\n</color><size\=19>Save pull count between same system banners.</size>
+
+sr:"^推薦自選契約共有<color\=#EF0000>(\d+)個</color>怪盜鎖定名額，確認簽約後，<color\=#EF0000>(.*)</color>將<color\=#EF0000>佔用1個鎖定名額</color>，是否確認開始簽約？\n注：該卡池生效期間，UP角色僅能從(\d+)個鎖定怪盜中選取，請謹慎選擇。$"="<size\=26>You have <color\=#EF0000>$1</color> custom slots for this banner. After pulling, <color\=#EF0000>$2</color> will <color\=#EF0000>take up 1 slot</color>, are you sure?\nNote: You can only choose the RATE UP character between the $3 locked Thieves.</size>"
 
 自選武器=Customize
 自選UP武器=Customize
@@ -2328,6 +2334,7 @@ r:"^加贈$"="Get            <size\=1>.</size>"
 累計簽到7日，即可獲得=7 days daily rewards
 r:"^累計簽到(\d+)日，即可獲得<size\=66><sprite\=19></size>X(\d+)$"="Log in for $1 days to get <size\=66><sprite\=19></size>X$2"
 r:"^累計簽到(\d+)日，即可獲得<size\=66><sprite\=21></size>X(\d+)$"="Log in for $1 days to get <size\=66><sprite\=21></size>X$2"
+r:"^第(\d+)天$"="Day $1"
 
 ----------
 Velvet Trials (VT)
@@ -2402,6 +2409,7 @@ r:"^目標(\d+)$"="Goal $1"
 晴天=Sunny
 雨天=Rainy
 上午=Morning
+早晨=Morning
 午休=Lunch Break
 放學後=After School
 傍晚=Evening
@@ -2515,17 +2523,21 @@ r:"^參加(\d+)次任意都市日程\((\d+)/(\d+)\)$"="Participate in any $1 Cit
 賭場篇=Caisno
 研究所篇（上）=Laboratory (Chapter 1)
 研究所篇（下）=Laboratory (Chapter 2)
+r:"^在盧布朗中與{{A}}消磨時光\((\d+)\/(\d+)\)$"="Spend time with {{A}} in Café Leblanc ($1/$2)"
 
 每天5:00刷新任務=Refresh at 5 am daily
 每日5:00刷新任務=Refresh at 5 am daily
+每日任務於每天5:00重置=Daily missions refresh at 5 am daily
 r:"^消耗(\d+)點體力\((\d+)\/(\d+)\)$"="Spend $1 Stamina ($2/$3)"
 r:"^消耗(\d+)點行動力\((\d+)\/(\d+)\)$"="Spend $1 Energy Points ($2/$3)"
 r:"^完成(\d+)次委託派遣$"="Complete $1 Commissions"
 r:"^完成(\d+)次委託派遣\((\d+)\/(\d+)\)$"="Complete $1 Commissions ($2/$3)"
 r:"^完成(\d+)次往日回溯\((\d+)\/(\d+)\)$"="Complete $1 Past Echo ($2/$3)"
+在「星盤試煉」中通過「紫色或紅色」監測點=Clear 1 [Purple or Red] Monitoring Point in Astrolabe Trials
 r:"^在「星盤試煉」中通過「紫色或紅色」監測點\((\d+)\/(\d+)\)$"="Clear 1 [Purple or Red] Monitoring Point in Astrolabe Trials ($1/$2)"
 r:"^累計消耗(\d+)點體力\((\d+)\/(\d+)\)$"="Spend $1 Stamina ($2/$3)"
 r:"^累計消耗(\d+)點行動力\((\d+)\/(\d+)\)$"="Spend $1 Energy Points ($2/$3)"
+完成1次閼凶夢之扉=Complete 1 Door of Nightmares
 r:"^完成1次閼凶夢之扉\((\d+)\/(\d+)\)$"="Complete 1 Door of Nightmares ($1/$2)"
 
 sr:"^完成「(.*)」任意(\d+)個任務\((\d+)\/(\d+)\)$"="Complete any $2 missions in "$1" ($3/$4)"
@@ -2694,6 +2706,73 @@ r:"^是否消耗<color\=#FFDE00>「時諭之墨」×(\d+)</color>刷新一次未
 刷新=Refresh
 啟示塑造=Custom Revelation
 啟示已完成塑造=Made Custom Revelation
+
+期待度過幸福的情人節，\n共同記錄有趣的「<color\=#ff3b37>節日故事</color>」。=Look forward to a happy Valentine's Day.\nShare interesting [<color\=#ff3b37>Holiday Story</color>] together.
+前置劇情觀看後解鎖=Unlock after watching the previous story
+r:"^任意(\d+)個女角色心動指數達到(\d+)$"="Any $1 female character reached Heartrate Score $2"
+r:"^觀看任意(\d+)個女角色的第(\d+)節約會劇情$"="Watch Date Story $2 for any $1 female character"
+r:"^前置劇情已觀看；任意(\d+)個女角色心動指數達到(\d+)$"="Watch the previous story; Any $1 female characters reached Heartrate Score $2"
+r:"^前置劇情已觀看；觀看任意(\d+)個女角色的第(\d+)節約會劇情"="Watch the previous story; Watch Date Story $2 for any $1 female characters"
+前置劇情已觀看；完成第一次告白=Watch the previous story; Complete the first Confession
+完成「命運交錯之時城堡篇1-1」且完成「再度相逢」任務=Complete [Castle of Fate 1-1] and [Meet Again]
+
+開啟「奪回作戰」\n戰勝對手，收集「<color\=#ff3b37>巧克力結晶</color>」。=Unlocked [Recapture Fight]\nDefeat opponents and collect [<color\=#ff3b37>Chocolate Crystals</color>].
+奪回作戰=Recapture Fight
+本關能量：=Level Energy:
+總能量：=Total Energy:
+通關前置關卡解鎖挑戰=Clear prerequisite to unlock
+通關前置關卡後解鎖挑戰。=Clear prerequisite to unlock.
+沒有角色死亡=No faint
+r:"^(\d+)回合內通關$"="Win within $1 turns"
+r:"^獲得至少(\d+)點巧克力能量$"="Gain at least $1 Chocolate Energy"
+r:"^<sprite\=0 tint>累積<link\="chocolate\|1"><u>巧克力能量</u></link>獲得強力“增益效果”，可以幫助你在boss挑戰中使用<link\="chocolate\|2"><u>「愛」的一擊</u></link>且更輕易的取勝，本關能量累積上限為(\d+)。\n<sprite\=0 tint>擊敗本關所有怪物，可以獲得(\d+)點“巧克力能量”。$"="<sprite\=0 tint>Accumulate <link\="chocolate\|1"><u>Chocolate Energy</u></link> to gain powerful [Buffs] that will help you use <link\="chocolate|2"><u>Strike of Love</u></link> in the boss challenge, you can gain up to $1 this level.\n<sprite\=0 tint>Defeat all enemies to gain $2 [Chocolate Energy]."
+r:"^<sprite\=0 tint>累積<link\="chocolate\|1"><u>巧克力能量</u></link>獲得強力“增益效果”，可以幫助你在boss挑戰中使用<link\="chocolate\|2"><u>「愛」的一擊</u></link>且更輕易的取勝，本關能量累積上限為(\d+)\n<sprite\=0 tint> 本關每隻怪物對固定的元素屬性有適應性“吸”，怪物滿血後會消失並給予我方(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>。$"="<sprite\=0 tint>Accumulate <link\="chocolate|1"><u>Chocolate Energy</u></link> to gain powerful [Buffs] that will help you use <link\="chocolate|2"><u>Strike of Love</u></link> in the boss challenge, you can gain up to $1 this level.\n<sprite\=0 tint>Enemies can [Drain] specific elements in this level, gain $2 <link\="chocolate|1"><u>Chocolate Energy</u></link> when an enemy reached full health."
+r:"^<sprite\=0 tint>累積<link\="chocolate\|1"><u>巧克力能量</u></link>獲得強力“增益效果”，可以幫助你在boss挑戰中使用<link\="chocolate\|2"><u>「愛」的一擊</u></link>且更輕易的取勝，本關能量累積上限為(\d+)。\n<sprite\=0 tint> 本關每隻怪物對固定的元素屬性有適應性“吸”，怪物滿血後會消失並給予我方(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>。$"="<sprite\=0 tint>Accumulate <link\="chocolate|1"><u>Chocolate Energy</u></link> to gain powerful [Buffs] that will help you use <link\="chocolate|2"><u>Strike of Love</u></link> in the boss challenge, you can gain up to $1 this level.\n<sprite\=0 tint>Enemies can [Drain] specific elements in this level, gain $2 <link\="chocolate|1"><u>Chocolate Energy</u></link> when an enemy reached full health."
+r:"^<sprite\=0 tint> 累積<link\="chocolate\|1"><u>巧克力能量</u></link>獲得強力“增益效果”，可以幫助你在boss挑戰中使用<link\="chocolate\|2"><u>「愛」的一擊</u></link>且更輕易的取勝，本關能量累積上限為(\d+)。\n<sprite\=0 tint> 擊敗本關所有怪物，可以獲得(\d+)點“巧克力能量”。$"="<sprite\=0 tint>Accumulate <link\="chocolate\|1"><u>Chocolate Energy</u></link> to gain powerful [Buffs] that will help you use <link\="chocolate|2"><u>Strike of Love</u></link> in the boss challenge, you can gain up to $1 this level.\n<sprite\=0 tint>Defeat all enemies to gain $2 [Chocolate Energy]."
+r:"^<sprite\=0 tint> 累積<link\="chocolate\|1"><u>巧克力能量</u></link>獲得強力“增益效果”，可以幫助你在boss挑戰中使用<link\="chocolate\|2"><u>「愛」的一擊</u></link>且更輕易的取勝，本關能量累積上限為(\d+)。\n<sprite\=0 tint> 本關限制(\d+)個行動回合，怪物死亡後會立刻刷新相同的怪物。{{C}}死亡後我方獲得(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>；{{B}}死亡後我方獲得(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>；{{A}}死亡後我方獲得(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>。$"="<sprite\=0 tint>Accumulate <link\="chocolate|1"><u>Chocolate Energy</u></link> to gain powerful [Buffs] that will help you use <link\="chocolate|2"><u>Strike of Love</u></link> in the boss challenge, you can gain up to $1 this level.\n<sprite\=0 tint>You have up to $2 action this level, summon the same enemy when you defeat the enemy. Defeat {{C}} to gain $3 <link\="chocolate|1"><u>[Chocolate Energy]</u></link>; Defeat {{B}} to gain $4 <link\="chocolate|1"><u>[Chocolate Energy]</u></link>; Defeat {{A}} to gain $5 <link\="chocolate|1"><u>[Chocolate Energy]</u></link>."
+r:"^<sprite\=0 tint> 累積<link\="chocolate\|1"><u>巧克力能量</u></link>獲得強力“增益效果”，可以幫助你在boss挑戰中使用<link\="chocolate\|2"><u>「愛」的一擊</u></link>且更輕易的取勝，本關能量累積上限為(\d+)。\n<sprite\=0 tint> 本關BOSS會召喚"愛情信物"。擊殺"愛情信物"可以獲得(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>。"愛情信物"行動時會挾持怪盜並吸取我方<link\="chocolate\|1"><u>巧克力能量</u></link>。\n<sprite\=0 tint> 擊敗本關所有怪物，可以獲得(\d+)點“巧克力能量”。$"="<sprite\=0 tint>Accumulate <link\="chocolate|1"><u>Chocolate Energy</u></link> to gain powerful [Buffs] that will help you use <link\="chocolate|2"><u>Strike of Love</u></link> in the boss challenge, you can gain up to $1 this level.\n<sprite\=0 tint>Boss will summon [Love Token]. Defeat [Love Token] to gain $2 <link\="chocolate|1"><u> [Chocolate Energy]</u></link>. [Love Token] will take Thieves hostage and drain <link\="chocolate|1"><u> Chocolate Energy</u></link>.\n<sprite\=0 tint>Defeat all enemies to gain $3 [Chocolate Energy]"
+r:"^<sprite\=0 tint> 本關中可以消耗(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>，釋放特殊技能<link\="chocolate\|2"><u>「愛」的一擊</u></link>。\n<sprite\=0 tint> 戰鬥開始時會獲得前(\d+)關中累積的<link\="chocolate\|1"><u>巧克力能量</u></link>。\n<sprite\=0 tint> 敵方怪物使用技能後，會偷取我方(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>。當BOSS<link\="chocolate\|1"><u>巧克力能量</u></link>達到(\d+)點時，會消耗能量對我方釋放特殊技能。\n<sprite\=0 tint> 敵方怪物死亡時，我方獲得(\d+)點巧克力能量。$"="<sprite\=0 tint>You can consume $1 <link\="chocolate|1"><u>Chocolate Energy</u></link> to use the special skill <link\="chocolate|2"><u>Strike of Love</u></link>.\n<sprite\=0 tint> At the start of battle, gain all accumulated <link\="chocolate|1"><u>Chocolate Energy</u></link> from the previous $2 levels.\n<sprite\=0 tint>After enemies use skills, steal $3 <link\="chocolate|1"><u>Chocolate Energy</u></link>. When the boss reaches $4 <link\="chocolate|1"><u>Chocolate Energy</u></link>, cosume Energy to use a special skill.\n<sprite\=0 tint>Gain $5 Chocolate Energy when you defeat an enemy."
+愛情信物=Love Token
+r:"^防禦強化\（該階段需求能量(\d+)\）：防禦力提升(\d+%)\n攻擊強化\（該階段需求能量(\d+)\）：攻擊力提升(\d+%)\n生命強化\（該階段需求能量(\d+)\）：生命值提升(\d+%)\n傷害強化\（該階段需求能量(\d+)\）：最終傷害提升(\d+%)$"="Defense Boost (Require $1 Energy): \nIncrease DEF by $2\nAttack Boost (Require $3 Energy): \nIncrease ATK by $4\nHealth Boost (Require $5 Energy): \nIncrease HP by $6\nDamage Boost (Require $7 Energy): \nIncrease Final DMG by $8"
+r:"^<color\=#FFFF00>防禦強化\（該階段需求能量(\d+)\）：防禦力提升(\d+%)</color>\n攻擊強化\（該階段需求能量(\d+)\）：攻擊力提升(\d+%)\n生命強化\（該階段需求能量(\d+)\）：生命值提升(\d+%)\n傷害強化\（該階段需求能量(\d+)\）：最終傷害提升(\d+%)$"="<color\=#FFFF00>Defense Boost (Require $1 Energy): \nIncrease DEF by $2</color>\nAttack Boost (Require $3 Energy): \nIncrease ATK by $4\nHealth Boost (Require $5 Energy): \nIncrease HP by $6\nDamage Boost (Require $7 Energy): \nIncrease Final DMG by $8"
+r:"^<color\=#FFFF00>防禦強化\（該階段需求能量(\d+)\）：防禦力提升(\d+%)</color>\n<color\=#FFFF00>攻擊強化\（該階段需求能量(\d+)\）：攻擊力提升(\d+%)</color>\n生命強化\（該階段需求能量(\d+)\）：生命值提升(\d+%)\n傷害強化\（該階段需求能量(\d+)\）：最終傷害提升(\d+%)$"="<color\=#FFFF00>Defense Boost (Require $1 Energy): \nIncrease DEF by $2</color>\n<color\=#FFFF00>Attack Boost (Require $3 Energy): \nIncrease ATK by $4</color>\nHealth Boost (Require $5 Energy): \nIncrease HP by $6\nDamage Boost (Require $7 Energy): \nIncrease Final DMG by $8"
+r:"^<color\=#FFFF00>防禦強化\（該階段需求能量(\d+)\）：防禦力提升(\d+%)</color>\n<color\=#FFFF00>攻擊強化\（該階段需求能量(\d+)\）：攻擊力提升(\d+%)</color>\n<color\=#FFFF00>生命強化\（該階段需求能量(\d+)\）：生命值提升(\d+%)</color>\n傷害強化\（該階段需求能量(\d+)\）：最終傷害提升(\d+%)$"="<color\=#FFFF00>Defense Boost (Require $1 Energy): \nIncrease DEF by $2</color>\n<color\=#FFFF00>Attack Boost (Require $3 Energy): \nIncrease ATK by $4</color>\n<color\=#FFFF00>Health Boost (Require $5 Energy): \nIncrease HP by $6</color>\nDamage Boost (Require $7 Energy): \nIncrease Final DMG by $8"
+r:"^<color\=#FFFF00>防禦強化\（該階段需求能量(\d+)\）：防禦力提升(\d+%)</color>\n<color\=#FFFF00>攻擊強化\（該階段需求能量(\d+)\）：攻擊力提升(\d+%)</color>\n<color\=#FFFF00>生命強化\（該階段需求能量(\d+)\）：生命值提升(\d+%)</color>\n<color\=#FFFF00>傷害強化\（該階段需求能量(\d+)\）：最終傷害提升(\d+%)</color>$"="<color\=#FFFF00>Defense Boost (Require $1 Energy): \nIncrease DEF by $2</color>\n<color\=#FFFF00>Attack Boost (Require $3 Energy): \nIncrease ATK by $4</color>\n<color\=#FFFF00>Health Boost (Require $5 Energy): \nIncrease HP by $6</color>\n<color\=#FFFF00>Damage Boost (Require $7 Energy): \nIncrease Final DMG by $8</color>"
+
+「愛」的一擊:對所有敵人造成萬能屬性傷害，使目標所有適應性變為弱點，持續1回合。=Strike of Love: Deals Almighty damage to all enemies, turns all enemies' resistance to weak for 1 turn.
+「愛」的一擊=Strike of Love
+<color\=#000000>首次通關後解鎖當前難度的</color><color\=#FF2B7B>體力模式</color>=<color\=#000000>Unlock</color> <color\=#FF2B7B>Stamina Mode</color> <color\=#000000>for this difficulty after clearing</color>
+<color\=#000000>該難度無</color><color\=#FF2B7B>體力模式</color>=<color\=#000000>This difficulty has no</color> <color\=#FF2B7B>Stamina Mode</color>
+r:"^(\d+)回合內通關\((\d+)\/(\d+)\)$"="Win within $1 turns ($2/$3)"
+r:"^獲得至少(\d+)點巧克力能量\((\d+)\/(\d+)\)$"="Gain at least $1 Chocolate Energy ($2/$3)"
+通關前置難度後解鎖挑戰。=Clear prerequisite to unlock.
+r:"^當前已通關難度(\d+)$"="Cleared difficulty $1"
+r:"^消耗(\d+)點巧克力能量，\n釋放特殊技能<color\=#ff3b37>「愛」的一擊</color>，\n對敵人造成高額傷害。$"="Consume $1 Chocolate Energy\nto use the special skill <color\=#ff3b37>Strike of Love</color>,\ndealing severe damage to all enemies."
+r:"^「<color\=#000000>愛</color>」的一擊$"="S<color\=#000000>t</color>rike of Love"
+該技能準備中。=Skill is in preparation.
+
+選擇心儀的角色，發起告白攻勢，\n進行一場「<color\=#ff3b37>浪漫約會</color>」。=Choose your favorite character, \nand have a [<color\=#ff3b37>Romantic Date</color>].
+請邀請心儀的角色進行約會吧！=Please invite your favorite character to a date!
+選擇「<color\=#ff3b37>約會角色</color>」=Select [<color\=#ff3b37>Date Character</color>]
+r:"^距離告白日還有(\d+)天(\d+)時$"="$1d $2h until Confession Day"
+r:"^距離告白日還有(\d+)時(\d+)分$"="$1h $2m until Confession Day"
+r:"^{{A}}心動指數達到(\d+)後可觀看$"="Can watch after {{A}} reaches Heartbeat Score $1"
+「<color\=#ff3b37>贈送</color>」巧克力結晶=[<color\=#ff3b37>Gift</color>] Chocolate Crystals
+完成獎勵：=Rewards:
+數量：=Quantity:
+達到特定「<color\=#ff3b37>心動指數</color>」即可觸發「<color\=#ff3b37>浪漫約會</color>」=Trigger [<color\=#ff3b37>Romantic Date</color>] when reaching specific [<color\=#ff3b37>Heartbeat Score</color>]
+完成第一次告白後可查看。=Can view after completing the first Confession.
+r:"^當前數量選擇為(\d+)。$"="Selected $1."
+該角色好感度已滿，無法贈送。=Favorability maxed, cannot gift.
+開關狀態決定該角色在告白日是否發送SNS和進入特殊劇情。\n開啟開關，滿足條件（心動指數滿且觀看完前兩段邀約劇情）的角色會在告白日發送SNS，關閉開關，滿足條件的角色不會在告白日發送SNS，請在告白日之前及時調整開關狀態。\n第一次告白結束後，可自由使用開關重複觀看劇情，滿足條件且關閉開關的角色將不會出現在特殊劇情中。=<size\=23>The on-off status determines whether the character will send SNS and enter the special scene on Confession Day.\nWhen it is on, the character who meets the conditions (Maxed Heartbeat Score and watched 2 Date Story) will send SNS on Confession Day. When it is off, they will not send SNS on Confession Day, please choose the status before Confession Day. \nAfter first Confession, you can freely toggle on-off and rewatch story, the character who meets the conditions and is off will not appear in the special scene.</size>
+以下三個目標根據第一次告白情況可達成其中一個=Complete 1 of the 3 goals based on the first Confession
+告白日有兩個及以上女角色告白且選擇女角色=Have 2 or more females confess on Confession Day
+告白日只有一個女角色告白且選擇女角色=Only have 1 female confess on Confession Day
+告白日選擇與{{A}}度過=Spend Confession Day with {{A}}
+r:"^任意(\d+)位夥伴達到(\d+)好感度\((\d+)\/(\d+)\)$"="Any $1 partners reached $2 Favorability ($3/$4)"
+sr:"^(.*)第(\d+)關完成所有目標$"="Complete all goals for $1 level $2"
+
+拖動右側碎片，完成拼圖=Drag the pieces to complete the puzzle
 
 ----------
 Velvet Room Personas (VR)
@@ -2929,6 +3008,7 @@ r:"^贈送所有喜歡的禮物給{{A}}$"="Give all Favorite Gifts to {{A}}"
 與任意協同者進行1次關係回溯<size\=30>(0/1)</size>=Backtrack 1 relationship <size\=30>(0/1)</size>
 與任意協同者進行1次關係回溯=Backtrack 1 relationship
 
+徽章詳情=Badge Details
 選擇徽章數量已達上限。=Reached badge limit.
 設置徽章=Select Badges
 收集=Collection

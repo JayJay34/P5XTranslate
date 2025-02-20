@@ -46,6 +46,7 @@ r:"^請<color\=#ff3b37>重新佔據</color>已通過的監測點後，再來挑�
 r:"^完成<color\=#ff0000>任意前置</color>監測點後解鎖$"="Clear <color\=#ff0000>any prerequisite</color> \nMonitoring Point first"
 r:"^通過「<color\=#ff0000>監測點·(.*)</color>」後解鎖$"="Unlock after clearing\n[<color\=#ff0000>Monitoring Point·$1</color>]"
 r:"^通過「<color\=#ff0000>監測點·(.*)、監測點·(.*)</color>」後解鎖"="<size\=26>Unlock after clearing\n[<color\=#ff0000>Monitoring Point·$1,Monitoring Point·$2</color>]</size>"
+r:"^通過「<color\=#ff0000>監測點·(.*)</color>」\n通過<color\=#ff0000>(.*)個監測點</color>後解鎖$"="Unlock after clearing\n[<color\=#ff0000>Monitoring Point·$1</color>]\n[<color\=#ff0000>$2 Monitoring Points</color>]"
 r:"^通過<color\=#ff0000>(\d+(.\d+)?(%)?)個監測點</color>後解鎖$"="Unlock after clearing \n[<color\=#ff0000>$1 Monitoring Points</color>]"
 
 ----------
@@ -80,12 +81,15 @@ r:"^心之磁場(.*)$"="Hearts Magnetic Field $1"
 r:"^<color\=#ff381d>『{{A}}』</color>成員最終傷害提升(\d+(.\d+)?(%)?)$"="<size\=27>Increase the Final DMG of \n<color\=#ff381d>[The Phantom Thieves of Hearts]</color> by $1</size>"
 
 r:"^屬性磁場(.*)$"="Elemental Magnetic Field $1"
+r:"^<color\=#FF9C00>物理</color>/<color\=#FF9C00>射擊</color>/<color\=#E3E3E3>萬能</color>屬性隊員最終傷害提高(\d+(.\d+)?(%)?)$"="Increase the Final DMG of <color\=#FF9C00>Physical</color>/<color\=#FF9C00>Gun</color>/<color\=#E3E3E3>Almighty</color> \nThieves by $1"
 r:"^<color\=#ff381d>火焰</color>/<color\=#00aeff>冰凍</color>/<color\=#fbff37>電擊</color>/<color\=#81ea2c>疾風</color>屬性隊員最終傷害提高(\d+(.\d+)?(%)?)$"="Increase the Final DMG of <color\=#ff381d>Fire</color>/<color\=#00aeff>Ice</color>/<color\=#fbff37>Elec</color>/<color\=#81ea2c>Wind</color> \nThieves by $1"
 r:"^<color\=#ff381d>火焰</color>/<color\=#00aeff>冰凍</color>/<color\=#fbff37>電擊</color>/<color\=#81ea2c>疾風</color>屬性隊員最終傷害提高(\d+%)，其他怪盜最終傷害降低(\d+%)$"="Increase the Final DMG of <color\=#ff381d>Fire</color>/<color\=#00aeff>Ice</color>/<color\=#fbff37>Elec</color>/<color\=#81ea2c>Wind</color> Thieves by $1, decrease the Final DMG of other Thieves by $2"
 r:"^<color\=#ff63ff>念動</color>/<color\=#00fcff>核熱</color>/<color\=#fffea0>祝福</color>/<color\=#ff0036>詛咒</color>屬性隊員最終傷害提高(\d+(.\d+)?(%)?)$"="Increase the Final DMG of <color\=#ff63ff>Psy</color>/<color\=#00fcff>Nuclear</color>/<color\=#fffea0>Bless</color>/<color\=#ff0036>Curse</color> \nThieves by $1"
 r:"^同色磁場(.*)$"="Mono Magnetic Field $1"
 r:"^隊伍中編入(\d+)/(\d+)/(\d+)名<color\=#FFFC40>相同屬性</color>的怪盜時，全體怪盜最終傷害提高(\d+%)/(\d+%)/(\d+%)$"="<size\=25>Increase all Thieves' Final DMG by $4/$5/$6 when you have $1/$2/$3 Thieves with the <color\=#FFFC40>same element</color></size>"
 
+r:"^刀槍磁場(.*)$"="Sword Gun Magnetic Field $1"
+r:"^所有怪盜使用<color\=#FFFC40>普通攻擊/槍械攻擊</color>時，最終傷害提高(\d+(.\d+)?(%)?)$"="<size\=28>Increase all Thieves' Final DMG by $1 when dealing damage with <color\=#FFFC40>Melee Attack/Gun Attack</color></size>"
 r:"^追加磁場(.*)$"="Follow Up Magnetic Field $1"
 r:"^所有隊員造成<color\=#FFFC40>追加效果</color>時，最終傷害提高(\d+(.\d+)?(%)?)$"="<size\=28>Increase all Thieves' Final DMG by $1 when dealing damage with <color\=#FFFC40>Follow Up</color></size>"
 r:"^持續磁場(.*)$"="Damage Over Time Magnetic Field $1"
@@ -100,7 +104,10 @@ r:"^再動磁場(.*)$"="Extra Turn Magnetic Field $1"
 r:"^所有怪盜處於<color\=#FFFC40>額外回合</color>時，最終傷害提高(\d+(.\d+)?(%)?)"="Increase Final DMG by $1 when in <color\=#FFFC40>Extra Turn</color>"
 r:"^元素磁場(.*)$"="Elemental Magnetic Field $1"
 r:"^所有敵人每有一種<color\=#FFFC40>元素異常</color>狀態，受到最終傷害提升(\d+%)；同時擁有(\d+)種<color\=#FFFC40>元素異常</color>狀態時，額外使受到最終傷害提升(\d+%)$"="<size\=23>Increase all enemies' Final DMG Taken by $1 for every <color\=#FFFC40>Elemental Ailments</color> they have; Additionally increase their Final DMG Taken by $3 when they have $2 <color\=#FFFC40>Elemental Ailments</color></size>"
+r:"^控制磁場(.*)$"="Control Magnetic Field $1"
 r:"^敵人能受到大部分<color\=#FFFC40>精神異常</color>狀態；所有隊員造成<color\=#FFFC40>精神異常</color>狀態時，效果命中大幅提升；處於<color\=#FFFC40>精神異常</color>狀態的敵人受到最終傷害提升(\d+%)$"="Enemies are susceptible to most <color\=#FFFC40>Mental Ailments</color>; Heavily increase all Thieves' EHR when inflicting <color\=#FFFC40>Mental Ailments</color>; Increase the Final DMG Taken of enemies with <color\=#FFFC40>Mental Ailments</color> by $1"
+r:"^效果1：敵人能受到大部分<color\=#FFFC40>精神異常/控制</color>狀態，所有隊員造成<color\=#FFFC40>精神異常/控制</color>狀態時，效果命中大幅提升\n效果2：處於<color\=#FFFC40>精神異常/控制</color>狀態的敵人受到最終傷害提升(\d+(.\d+)?(%)?)$"="<size\=24>Effect 1: Enemies are susceptible to most <color\=#FFFC40>Mental Ailments/Control Effects</color>; Heavily increase EHR when inflicting <color\=#FFFC40>Mental Ailments/Control Effects</color>\nEffect 2: Increase the Final DMG Taken of enemies with <color\=#FFFC40>Mental Ailments/Control Effects</color> by $1</size>"
+
 r:"^倒地磁場(.*)$"="Down Magnetic Field $1"
 r:"^效果1：敵人受到<color\=#FFFC40>ONEMORE/{{A}}</color>傷害提高(\d+%)\n效果2：戰鬥開始及敵人回合開始時，敵人隨機獲得1種屬性弱點（只會存在最新獲得的弱點）$"="<size\=22>Effect 1: Increase all enemies' <color\=#FFFC40>ONEMORE/{{A}}</color> DMG Taken by $1\nEffect 2: At the start of battle and start of enemies' turn, all enemies randomly gain 1 weakness \n(Only the newest weakness will stay).</size>"
 r:"^敵人受到<color\=#FFFC40>ONEMORE/{{A}}</color>傷害提高(\d+%)$"="Increase all enemies' <color\=#FFFC40>ONEMORE/{{A}}</color> DMG Taken by $1"
@@ -125,6 +132,7 @@ Combat Menu
 ----------
 星盤庇護=Astrolabe Protection
 r:"^造成TECHNICAL時，最終傷害提升(\d+%)$"="Increase Final DMG by $1 when dealing TECHNICAL"
+r:"^HL能量回復速度降低(\d+%)，使用HL時，最終傷害提高(\d+%)$"="<size\=24>Decrease HIGHLIGHT Energy recovery rate by $1;\nIncrease Final DMG by $2 when using HIGHLIGHT</size>"
 r:"^同時擁有(\d+)種元素異常，受到最終傷害提高(\d+%)$"="Inflicted with $1 Elemental Ailments; \nIncrease Final DMG Taken by $2"
 r:"^每有(\d+)種元素異常，受到最終傷害提高(\d+%)，當前(\d+%)$"="For every $1 Elemental Ailment, \nincrease Final DMG Taken by $2; \nCurrently increase Final DMG Taken by $3"
 r:"^受到ONEMORE/{{A}}傷害提升(\d+%)$"="Increase ONE MORE/{{A}} DMG Taken by $1"
@@ -135,6 +143,7 @@ Pop-ups + Quote
 r:"^倒<color\=#000000>地</color>磁場$"="D<color\=#000000>o</color>wn Magnetic Field"
 r:"^再<color\=#000000>動</color>磁場$"="E<color\=#000000>x</color>tra Turn Magnetic Field"
 r:"^持<color\=#000000>續</color>磁場$"="D<color\=#000000>a</color>mage Over Time Magnetic Field"
+r:"^H<color\=#000000> L</color>磁場$"="H<color\=#000000>L</color> Magnetic Field"
 
 r:"^<color\=#FF0000>{{A}}</color>一回合內未造成傷害，下回合最終傷害提升……$"="<color\=#FF0000>{{A}}</color> dealt no damage, \nnext turn Final DMG Up!"
 sr:"^<color\=#FF0000>(.*)</color>獲得了(.*)弱點……$"="<color\=#FF0000>$1</color> gained $2 weakness!"
