@@ -303,10 +303,10 @@ r:"^<nobr>怪盜使用HIGHLIGHT造成傷害時，無視敵人<color\=#50b50d>(\d
 r:"^<nobr>怪盜使用HIGHLIGHT造成傷害時，無視敵人(\d+%)的總防禦力。</nobr>$"="<nobr>When allies deal damage with HIGHLIGHT, ignore $1 of the enemy's DEF.</nobr>"
 
 輝光·其五=<size\=22>Glow·Five</size>
-r:"^<nobr>任意怪盜使用HIGHLIGHT後，使全隊造成傷害提升\(<color\=#50b50d>(\d+%)</color>/(\d+%)\)，持續3回合，可疊加5層。</nobr>$"="<nobr>After any ally uses HIGHLIGHT, increase all allies' DMG Dealt by (<color\=#50b50d>$1</color>/$2) for 3 turns, up to 5 stacks.</nobr>
-r:"^<nobr>任意怪盜使用HIGHLIGHT後，使全隊造成傷害提升\((\d+%)/<color\=#c900e4>(\d+%)</color>\)，持續3回合，可疊加5層。</nobr>$"="<nobr>After any ally uses HIGHLIGHT, increase all allies' DMG Dealt by ($1/<color\=#c900e4>$2</color>) for 3 turns, up to 5 stacks.</nobr>
-r:"^<nobr>任意怪盜使用HIGHLIGHT後，使全隊造成傷害提升<color\=#50b50d>(\d+%)</color>→<color\=#c900e4>(\d+%)</color>，持續3回合，可疊加5層。</nobr>$"="<nobr>After any ally uses HIGHLIGHT, increase all allies' DMG Dealt by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> for 3 turns, up to 5 stacks.</nobr>
-r:"^<nobr>任意怪盜使用HIGHLIGHT後，使全隊造成傷害提升(\d+%)，持續3回合，可疊加5層。</nobr>$"="<nobr>After any ally uses HIGHLIGHT, increase all allies' DMG Dealt by $1 for 3 turns, up to 5 stacks.</nobr>
+r:"^<nobr>任意怪盜使用HIGHLIGHT後，使全隊造成傷害提升\(<color\=#50b50d>(\d+%)</color>/(\d+%)\)，持續3回合，可疊加5層。</nobr>$"="<nobr>After any ally uses HIGHLIGHT, increase all allies' DMG Dealt by (<color\=#50b50d>$1</color>/$2) for 3 turns, up to 5 stacks.</nobr>"
+r:"^<nobr>任意怪盜使用HIGHLIGHT後，使全隊造成傷害提升\((\d+%)/<color\=#c900e4>(\d+%)</color>\)，持續3回合，可疊加5層。</nobr>$"="<nobr>After any ally uses HIGHLIGHT, increase all allies' DMG Dealt by ($1/<color\=#c900e4>$2</color>) for 3 turns, up to 5 stacks.</nobr>"
+r:"^<nobr>任意怪盜使用HIGHLIGHT後，使全隊造成傷害提升<color\=#50b50d>(\d+%)</color>→<color\=#c900e4>(\d+%)</color>，持續3回合，可疊加5層。</nobr>$"="<nobr>After any ally uses HIGHLIGHT, increase all allies' DMG Dealt by <color\=#50b50d>$1</color>→<color\=#c900e4>$2</color> for 3 turns, up to 5 stacks.</nobr>"
+r:"^<nobr>任意怪盜使用HIGHLIGHT後，使全隊造成傷害提升(\d+%)，持續3回合，可疊加5層。</nobr>$"="<nobr>After any ally uses HIGHLIGHT, increase all allies' DMG Dealt by $1 for 3 turns, up to 5 stacks.</nobr>"
 
 輝光·其六=<size\=22>Glow·Six</size>
 r:"^<nobr><link\="s\|206"><u>『閃耀舞臺』</u></link>觸發時，有(\d+%)機率添加超級增益狀態，同時獲得所有增益效果。</nobr>$"="When triggering <nobr><link\="s|206"><u>[Shining Stage]</u></link>, there is a $1 chance to gain super buff, with all buff effects.</nobr>"
@@ -1411,7 +1411,6 @@ EVENT (SPEND)
 回收兩個遺失物，獲得兩個隨機遺失物=Choose 2 Lost Items to recycle \nand choose 2 Lost Items.
 只要一個就好=Just one is fine.
 回收一個遺失物，獲得一個隨機遺失物=Choose 1 Lost Item to recycle \nand choose 1 Lost Item.
-不感興趣=Not interested.
 不進行回收=Leave.
 r:"^請選擇遺失物放棄((\d+)/(\d+))$"="Please select lost items to discard ($1/$2)"
 請選擇遺失物放棄(1/1)=Please select lost items to discard (1/1)
