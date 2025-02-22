@@ -51,14 +51,16 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 元素異常，攻擊力降低12%，效果持續2回合。=Reduce ATK by 12% for 2 turns.
 
 精神異常，無法行動。=Unable to take actions.
-精神異常，無法行動並且每回合回復5%生命值和5%精力值，受到傷害後清除。=Unable to take actions.\nRestore 5% of Max HP and 5% of Max SP each turn.\nThis ailment clears upon taking damage.
+精神異常，無法行動並且每回合回復5%生命值和5%精力值，受到傷害後清除。=Unable to act.\nRestore 5% of Max HP and 5% of Max SP each turn.\nThis ailment clears upon taking damage.
 精神異常，無法使用技能。=Unable to use skills.
-精神異常，無法行動，會丟棄一定數量的魂石。=Unable to take actions.\nDiscards Soul Gems each turn.
+無法使用主動技能=Unable to use skills
+精神異常，無法行動，會丟棄一定數量的魂石。=Unable to take actions.\nDiscard Soul Gems each turn.
 精神異常，有一定機率無法行動，若干回合後逃跑。=Chance of being unable to act.\nEscape from battle after a few turns.
 有機率無法行動，若干回合後逃跑=Chance of being unable to act.\nEscape from battle after a few turns.
 精神異常，無法行動，每回合扣除一定精力值，若干回合後死亡。=Unable to take actions.\nLose 5% Max SP each turn.\nInflicted will die after a few turns.
-精神異常，攻擊力提升，防禦力降低，只能使用近戰攻擊，攻擊隨機目標。=Increase ATK, and decrease DEF.\nCan only use melee attacks.\nAttack random targets.
+精神異常，攻擊力提升，防禦力降低，只能使用近戰攻擊，攻擊隨機目標。=Increase ATK and decrease DEF.\nCan only use Melee Attack.\nAttack random targets.
 精神異常，無法行動，並會攻擊同伴。=Will attack allies each turn.
+無法行動，被敵方所操控=Unable to act, controlled by enemies
 每回合恢復1%最大生命值，效果持續2回合。=Restore 1% Max HP each turn for 2 turns.
 每回合受到相當於1%最大生命值的傷害，效果持續2回合。=Lose 1% Max HP each turn for 2 turns.
 
@@ -363,6 +365,7 @@ r:"^念動強化(.*)$"=Psy Boost $1
 r:"^核熱強化(.*)$"=Nuke Boost $1
 r:"^祝福強化(.*)$"=Bless Boost $1
 r:"^詛咒強化(.*)$"=Curse Boost $1
+r:"^歲暮降厄(.*)$"=Yearly Misfortune $1
 r:"^萬能強化(.*)$"=Almighty Boost $1
 r:"^哈瑪成功率UP(.*)$"=Hama Boost $1
 r:"^姆多成功率UP(.*)$"=Mudo Boost $1
@@ -512,10 +515,10 @@ sr:"造成(.*)效果時，效果命中提升(\d+\.\d+%)。"=Increase chance of i
 sr:"受到(.*)效果時，效果抵抗提升(\d+\.\d+%)。"=Increase resistance to $1 by $2.
 
 //ST Ailment
-sr:"有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使1名敵人陷入(.*)，效果持續2回合。"=<color\=#FFFF00>$1</color> chance of inflicting $2 to <color\=#FFFF00>1</color> enemy for 2 turns.
+sr:"有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使1名敵人陷入(.*)，效果持續(\d+)回合。$"="There is a <color\=#FFFF00>$1</color> base chance to inflict $2 to 1 enemy for $3 turns."
 
 //AoE Ailment
-sr:"有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使所有敵人陷入(.*)，效果持續2回合。"=<color\=#FFFF00>$1</color> chance of inflicting $2 to <color\=#FFFF00>all</color> enemies for 2 turns.
+sr:"有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使所有敵人陷入(.*)，效果持續(\d+)回合。$"="There is a <color\=#FFFF00>$1</color> base chance to inflict $2 to all enemies for $3 turns."
 
 //Damage Resist
 sr:"受到的(.*)屬性傷害降低(\d+\.\d+%)。"=Reduce damage from $1 attacks by $2.
@@ -523,31 +526,31 @@ sr:"受到的(.*)屬性傷害降低(\d+\.\d+%)。"=Reduce damage from $1 attacks
 --- Physical ---
 
 //Lucky Punch
-r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，暴擊率提升20%，命中率降低20%"=Deals <color\=#FFFF00>$1</color> ATK Physical damage to <color\=#FFFF00>1</color> enemy with a 20% increase in Crit Rate, and 20% decrease in Hit Rate.
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，暴擊率提升20%，命中率降低20%"=Deals <color\=#FFFF00>$1</color> ATK Phys damage to <color\=#FFFF00>1</color> enemy with a 20% increase in Crit Rate, and 20% decrease in Hit Rate.
 
 Glory Impact
-r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，場上只有1名敵人時，該技能造成的傷害提升(\d+%)。$"="Deals <color\=#fffc40>$1</color> ATK Physical damage to 1 enemy. If there is only 1 enemy left, increases DMG Dealt by $2."
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，場上只有1名敵人時，該技能造成的傷害提升(\d+%)。$"="Deals <color\=#fffc40>$1</color> ATK Phys damage to 1 enemy. If there is only 1 enemy left, increases DMG Dealt by $2."
 
 Soul Imprisonment
-r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，所有的敵人每有一個減益效果，則該傷害提升(\d+%),上限(\d+)層。若有敵人處於睡眠狀態，則直接視為(\d+)層。$"="Deals <color\=#fffc40>$1</color> ATK Physical damage to all enemies. Increases damage by $2 for every debuff on the enemies, up to $3 stacks. If any enemy is inflicted with Sleep, immediately counts as 3 stacks."
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，所有的敵人每有一個減益效果，則該傷害提升(\d+%),上限(\d+)層。若有敵人處於睡眠狀態，則直接視為(\d+)層。$"="Deals <color\=#fffc40>$1</color> ATK Phys damage to all enemies. Increases damage by $2 for every debuff on the enemies, up to $3 stacks. If any enemy is inflicted with Sleep, immediately counts as 3 stacks."
 
 Claw Assault
-r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害。若敵人生命值低於(\d+%)，則該傷害額外提升(\d+%)。$"="Deals <color\=#fffc40>$1</color> ATK Physical damage to 1 enemy. If the target is below $2 HP, additionally increases damage by $3."
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害。若敵人生命值低於(\d+%)，則該傷害額外提升(\d+%)。$"="Deals <color\=#fffc40>$1</color> ATK Phys damage to 1 enemy. If the target is below $2 HP, additionally increases damage by $3."
 
 //Mind Slice because it has a comma at the end instead of a period???
 sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，效果持續2回合，"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies and has a <color\=#FFFF00>$3</color> chance of inflicting $4 for 2 turns.
 
 Painful Judgement
-r:"^對1名敵人造成(\d+)段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，使敵人附加「噩夢」效果並且附帶<color\=#fffc40>(\d+\.\d+%)</color>基礎機率<link\="s\|157"><u>恐懼</u></link>效果。$"="Deals <color\=#fffc40>$2</color> ATK Physical damage to 1 enemy $1 times, inflicts the enemy with [Nightmare] and there is a <color\=#fffc40>$3</color> base chance to inflict <link\="s|157"><u>Fear</u></link>."
+r:"^對1名敵人造成(\d+)段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，使敵人附加「噩夢」效果並且附帶<color\=#fffc40>(\d+\.\d+%)</color>基礎機率<link\="s\|157"><u>恐懼</u></link>效果。$"="Deals <color\=#fffc40>$2</color> ATK Phys damage to 1 enemy $1 times, inflicts the enemy with [Nightmare] and there is a <color\=#fffc40>$3</color> base chance to inflict <link\="s|157"><u>Fear</u></link>."
 
 Gae Bulg
-r:"^造成1段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理傷害，受攻擊敵人每有1層減益則該技能暴擊率提高(\d+%)，最多獲得(\d+%)暴擊率加成。$"="Deals <color\=#fffc40>$1</color> ATK Physical damage to 1 enemy, increases CRIT Rate by $2 for every stack of debuffs the enemy have, up to $3 CRIT Rate Bonus."
+r:"^造成1段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理傷害，受攻擊敵人每有1層減益則該技能暴擊率提高(\d+%)，最多獲得(\d+%)暴擊率加成。$"="Deals <color\=#fffc40>$1</color> ATK Phys damage to 1 enemy, increases CRIT Rate by $2 for every stack of debuffs the enemy have, up to $3 CRIT Rate Bonus."
 
 Dragon Slayer
-r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害。若自身沒有「龍血」狀態，給予自身「龍血」。若自身處於「龍血」狀態，則強化「龍血」狀態並刷新持續時間。$"="Deals <color\=#fffc40>$1</color> ATK Physical damage to all enemies. If you don't have [Dragon Blood], gain [Dragon Blood]. If you have [Dragon Blood], boost [Dragon Blood] and refresh its duration."
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害。若自身沒有「龍血」狀態，給予自身「龍血」。若自身處於「龍血」狀態，則強化「龍血」狀態並刷新持續時間。$"="Deals <color\=#fffc40>$1</color> ATK Phys damage to all enemies. If you don't have [Dragon Blood], gain [Dragon Blood]. If you have [Dragon Blood], boost [Dragon Blood] and refresh its duration."
 
 Hassou Tobi
-r:"^對全體敵人造成8段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，每有1個敵人，該技能傷害提升(\d+%)，最多提升(\d+%)。$"="Deals <color\=#fffc40>$1</color> ATK Physical damage to all enemies 8 times. For every 1 enemy, increases skill damage by $2, up to $3."
+r:"^對全體敵人造成8段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，每有1個敵人，該技能傷害提升(\d+%)，最多提升(\d+%)。$"="Deals <color\=#fffc40>$1</color> ATK Phys damage to all enemies 8 times. For every 1 enemy, increases skill damage by $2, up to $3."
 
 2~3次物理=2~3 times Physical
 
@@ -787,13 +790,13 @@ r:"^使1名友方攻擊、防禦、效果命中、效果抵抗提升<color\=#fff
 r:"使所有同伴的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每500攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)，效果持續2回合。並使技能主目標造成的傷害額外提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每500攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)。效果持續1回合。"=Increase all allies' ATK by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 500 ATK you have to a maximum of <color\=#fffc40>$3</color> for 3 turns. Increase ATK of the main target by an additional <color\=#fffc40>$4</color> + <color\=#fffc40>$5</color> for every 500 ATK you have to a maximum of <color\=#fffc40>$6</color> for 1 turn.
 
 //norn
-r:"使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的護盾，效果持續2回合。護盾受到傷害時，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使傷害來源陷入<link\="s\|105"><u>風襲</u></link>狀態。"=Generate a shield equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to all allies for 2 turns. Allies under the shield have a <color\=#fffc40>$3</color> chance to inflict <link\=s|105><u>Winded</u></link> on enemies who attack them.
+r:"使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的護盾，效果持續2回合。護盾受到傷害時，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使傷害來源陷入<link\="s\|105"><u>風襲</u></link>狀態。"=Give all allies <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> Shield for 2 turns. There is a <color\=#fffc40>$3</color> base chance to inflict <link\=s|105><u>Winded</u></link> to the enemy when the Shield took damage.
 
 King Frost
 r:"^使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的護盾，護盾存在時防禦力提升(\d+%)，持續2回合。$"="Gives all allies <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> Shield for 2 turns. When the Shield is active increases DEF by $3."
 
 Sandalphon
-r:"^使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的護盾，主目標同伴處於該護盾下時造成的傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續2回合。$"="Gives all allies <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> Shield. Increase the main target's DMG Dealt when shielded by <color\=#fffc40>$3</color> for 2 turns."
+r:"^使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的護盾，主目標同伴處於該護盾下時造成的傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續2回合。$"="Gives all allies <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> Shield. Increases the main target's DMG Dealt by <color\=#fffc40>$3</color> when they have this Shield for 2 turns."
 
 --- Debuffs ---
 
@@ -833,7 +836,7 @@ r:"^有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使1名敵人陷入<link\=
 --- Passives ---
 
 // Skill buffs
-r:"^物理屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increase Physical DMG by $1."
+r:"^物理屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increase Phys DMG by $1."
 r:"^火焰屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increase Fire DMG by $1."
 r:"^冰凍屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increase Ice DMG by $1."
 r:"^電擊屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increase Elec DMG by $1."
@@ -865,7 +868,7 @@ r:"^速度提升(\d+(.\d+)?(%)?)點。$"=Increase SPD by $1.
 r:"^防禦力提升(\d+(.\d+)?(%)?)。+$"=Increase DEF by $1.
 r:"^暴擊率提升(\d+(.\d+)?(%)?)。$"=Increase CRIT Rate by $1.
 r:"精力回復效率提升(\d+(.\d+)?(%)?)。"=Increase SP Recovery by $1.
-r:"速度降低(.*)點，生命值提升(.*)。"=Reduce SPD by $1 and increase Max HP by $2.
+r:"速度降低(.*)點，生命值提升(.*)。"=Decrease SPD by $1 and increase Max HP by $2.
 r:"速度提升(.*)點，防禦力降低(.*)。"=Increase SPD by $1 and decrease DEF by $2.
 r:"^暴擊效果提升(\d+(.\d+)?(%)?)。+$"=Increase CRIT damage by $1.
 r:"^效果命中提升(\d+(.\d+)?(%)?)。+$"=Increase Effect Hit Rate by $1.
@@ -882,11 +885,10 @@ r:"受到的暴擊率降低(\d*\.?\d+%)。"=Reduce chance of receiving CRIT hits
 r:"下雨時，造成異常效果時，效果命中提升(\d*\.?\d+%)。"=Increase inflicting rate of all status effects during rainy days by $1.
 
 //Other
-r:"技能消耗的HP降低(\d+\.\d+%)。"=Reduce HP cost of skills by $1.
-r:"技能消耗的SP降低(\d+%)。"=Reduce SP cost of skills by $1.
-r:"技能消耗的SP降低(\d+\.\d+%)。"=Reduce SP cost of skills by $1.
+r:"技能消耗的HP降低(\d+\.\d+%)。"=Decrease HP cost of skills by $1.
+r:"技能消耗的SP降低(\d+\.\d+%)。"=Decrease SP cost of skills by $1.
 r:"每回合開始時，回復(\d+\.\d+%)最大生命值。"=Restore $1 of Max HP at the start of each turn.
-r:"先制攻擊時回復(\d+\.\d+%)最大生命值和(.*)點精力值。"=Restore $1 of Max HP and $2 SP at the start of each preemptive turn.
+r:"先制攻擊時回復(.*)最大生命值和(.*)點精力值。"=Restore $1 Max HP and $2 SP at the start of each preemptive turn.
 r:"戰鬥勝利後回復(\d+\.\d+%)最大生命值和精力值。"=Restore $1 of Max HP and SP after winning a battle.
 r:"下雨時受到的傷害降低(\d+\.\d+%)。"=Reduce damage from attacks during rainy days by $1.
 r:"物理攻擊(\d+%)機率反射，造成(\d+%)攻擊力物理屬性傷害。"=Physical attacks have a $1 chance to reflect, dealing $2 of the attacks damage back as Physical damage.
@@ -914,8 +916,8 @@ r:"物理攻擊(\d+%)機率反射，造成(\d+%)攻擊力物理屬性傷害。"=
 強化=Upgrade
 強化反擊=Enhanced Counter
 
-物理=Physical
-物理屬性傷害=Physical DMG
+物理=Phys
+物理屬性傷害=Phys DMG
 射擊=Gun
 射擊屬性傷害=Gun DMG
 火焰=Fire
