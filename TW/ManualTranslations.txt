@@ -926,6 +926,13 @@ r:"^提升治療效果(\d+%)\n$"="Increase Healing Effect by $1\n"
 r:"^提升護盾效果(\d+\.\d%)\n$"="Increase Shield Effect by $1\n"
 r:"^提升護盾效果(\d+%)\n$"="Increase Shield Effect by $1\n"
 
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n技能倍率 (.*)→<color\=#FEDA00>(.*)</color>\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n技能倍率 (.*)→<color\=#FEDA00>(.*)</color>\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\nSkill Multiplier $4→<color\=#FEDA00>$5</color>\n\n<link\=thiefInnateSkill|$6|$7><u>[$8]</u></link>\nSkill Multiplier $9→<color\=#FEDA00>$10</color>\n\n"
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n技能倍率 (.*)→<color\=#FEDA00>(.*)</color>\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n技能傷害 (.*)→<color\=#FEDA00>(.*)</color>\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\nSkill Multiplier $4→<color\=#FEDA00>$5</color>\n\n<link\=thiefInnateSkill|$6|$7><u>[$8]</u></link>\nSkill Damage $9→<color\=#FEDA00>$10</color>\n\n"
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n技能倍率 (.*)→<color\=#FEDA00>(.*)</color>\n技能倍率 (.*)→<color\=#FEDA00>(.*)</color>\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n技能倍率 (.*)→<color\=#FEDA00>(.*)</color>\n技能倍率 (.*)→<color\=#FEDA00>(.*)</color>\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\nSkill Multiplier $4→<color\=#FEDA00>$5</color>\nSkill Multiplier $6→<color\=#FEDA00>$7</color>\n\n<link\=thiefInnateSkill|$8|$9><u>[$10]</u></link>\nSkill Multiplier $11→<color\=#FEDA00>$12</color>\nSkill Multiplier $13→<color\=#FEDA00>$14</color>\n\n"
+
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n計入攻擊力上限 (.*)→<color\=#FEDA00>(.*)</color>\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n計入攻擊力上限 (.*)→<color\=#FEDA00>(.*)</color>\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\nATK Cap $4→<color\=#FEDA00>$5</color>\n\n<link\=thiefInnateSkill|$6|$7><u>[$8]</u></link>\nATK Cap $9→<color\=#FEDA00>$10</color>\n\n"
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n計入攻擊力上限 (.*)→<color\=#FEDA00>(.*)</color>\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\nATK Cap $4→<color\=#FEDA00>$5</color>\n\n"
+
 // Wonder Skill Tree //
 靈感點=Inspiration
 
@@ -959,7 +966,7 @@ r:"需要(\d+)<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>才可
 r:"需要(\d+)<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>才可以啟動天賦。"=Need $1<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>to activate.
 獲取更多靈感點=Get Inspiration
 
-重置靈感需要<color\=#FFC000>10000個魂石</color>，是否確定重置？（重置後所有靈感點返還，『屬性進階』靈感技能不會被重置）=Spend <color\=#FFC000>100,000 Soul Gems</color> to reset Inspiration? (Refund all spent Inspiration Points, will not reset the [Superego] skill tree)
+r:"^重置靈感需要<color\=#FFC000>(\d+)個魂石</color>，是否確定重置？（重置後所有靈感點返還，『屬性進階』靈感技能不會被重置）$"="Spend <color\=#FFC000>$1 Soul Gems</color> to reset Inspiration? (Refund all spent Inspiration Points, will not reset the [Superego] skill tree)"
 
 獲得靈感輝光=<size\=25>Inspiration Glow</size>
 r:"^提升(\d+)生命值。\n提升(\d+)攻擊力。\n提升(\d+)防禦力。$"="Increase HP by $1 \nIncrease ATK by $2 \nIncrease DEF by $3"
@@ -1034,6 +1041,7 @@ r:"^完成目標Ⅳ第七階段任意(\d+)個任務$"="Complete any $1 tasks in 
 自選1把1.3.2版本前武器補給內非限定角色的5星武器=Select 1 standard 5★ Weapon before version 1.3.2
 
 完成   階段目標獲得= Step   Tasks Reward
+獎勵全部領取後，開啟「Ⅲ期目標」=Unlock [Phase III Goals] after getting all rewards
 
 // REGEX ONLY
 r:"主角升至(\d+)級"=Reach Wonder Lv. $1
@@ -1051,7 +1059,7 @@ r:"^將(\d+)名怪盜的任意(\d+)個非潛能技能各升級(\d+)次$"="Level 
 r:"^將{{A}}進化至階級(\d+)$"="Evolve {{A}} to Rank $1"
 r:"^將{{A}}進化至RANK(\d+)$"="Evolve {{A}} to Rank $1"
 r:"擁有(\d+)個(\d+)級的RANK(\d+)及以上的{{A}}"=Have $1 Rank $3 or above Lv. $2 Persona
-r:"擁有(\d+)張等級為(\d+)級的啟示卡"=Have $1 Lv. $2 Revelation cards
+r:"擁有(\d+)張等級為(\d+)級的啟示卡"=Have $1 Lv. $2 Revelation Cards
 r:"擁有(\d+)張等級為(\d+)級的宙位啟示卡"=Have $1 Lv. $2 Universe Revelation Cards
 
 r:"^消耗(\d+)點行動力$"="Spend $1 Energy Points"
@@ -1061,11 +1069,11 @@ r:"^任意人格指數達到(\d+)級$"="Reach Rank $1 for any Social Stats"
 
 r:"完成(\d+)次「厄抑之境」 \((\d)\/(/d)\)"=Complete $1 Metaverse Farms ($2/$3)
 r:"^通關(\d+)次厄抑之境$"="Finish $1 Metaverse Farms"
-r:"^通關旖旎香調(.*)（或更高難度）$"="Finish Perfume Farm on Difficulty $1 (or above)"
-r:"^通關裝配冶藝(.*)（或更高難度）$"="Finish Ore Farm on Difficulty $1 (or above)"
-r:"^通關靈之參悟(.*)（或更高難度）$"="Finish Incense Farm on Difficulty $1 (or above)"
-r:"^通關榮級求索(.*)（或更高難度）$"="Finish Character EXP Farm on Difficulty $1 (or above)"
-r:"^通關輜械求索(.*)（或更高難度）$"="Finish Weapon EXP Farm on Difficulty $1 (or above)"
+r:"^通關旖旎香調(.*)（或更高難度）$"="Finish a Perfume Farm on Difficulty $1 (or above)"
+r:"^通關裝配冶藝(.*)（或更高難度）$"="Finish an Ore Farm on Difficulty $1 (or above)"
+r:"^通關靈之參悟(.*)（或更高難度）$"="Finish an Incense Farm on Difficulty $1 (or above)"
+r:"^通關榮級求索(.*)（或更高難度）$"="Finish a Character EXP Farm on Difficulty $1 (or above)"
+r:"^通關輜械求索(.*)（或更高難度）$"="Finish a Weapon EXP Farm on Difficulty $1 (or above)"
 r:"^通關{{A}}之影(.*)（或更高難度）$"="Defeat {{A}} on Difficulty $1 (or above)"
 
 r:"^{{A}}探索度達到(\d+)%$"="Reach $1% Exploration for {{A}}"
@@ -1234,6 +1242,8 @@ r:"^簽約$"="Pulls"
 每10次簽約必出四星或以上怪盜角色。具體內容查看【說明】=Get 1 5★ every <color\=#FFDF00>110</color> or <color\=#ff3b37>80</color> pulls;\n<color\=#FFDF00>0.2%</color> or <color\=#ff3b37>0.8%</color>; <color\=#FFDF00>No 50/50</color><size\=20> </size>or<size\=20> </size><color\=#ff3b37>50/50</color>\nGuarantee 1 4★ every 10 pulls.\n</color><size\=19>Save pull count between same system banners.</size>
 
 sr:"^推薦自選契約共有<color\=#EF0000>(\d+)個</color>怪盜鎖定名額，確認簽約後，<color\=#EF0000>(.*)</color>將<color\=#EF0000>佔用1個鎖定名額</color>，是否確認開始簽約？\n注：該卡池生效期間，UP角色僅能從(\d+)個鎖定怪盜中選取，請謹慎選擇。$"="<size\=26>You have <color\=#EF0000>$1</color> custom slots for this banner. After pulling, <color\=#EF0000>$2</color> will <color\=#EF0000>take up 1 slot</color>, are you sure?\nNote: You can only choose the RATE UP character between the $3 locked Thieves.</size>"
+該怪盜已被鎖定，無法選擇。=Cannot select locked Thief.
+該怪盜已在當前選擇中。=Thief is already in selection.
 
 自選武器=Customize
 自選UP武器=Customize
@@ -1766,7 +1776,8 @@ r:"^都市日程<color\=#ffc000>在{{A}}打工</color>已解鎖，\n每日有一
 {{A}}的星空探險=<size\=24>{{A}}'s Starry\nSky Adventure</size>
 {{A}}想要去池袋的星空博物館探險，去陪一陪她吧……=<size\=28>{{A}} wants to go on an adventure to the Planetarium in Ikebukuro, \nlet's accompany her...</size>
 今天探險嗎？=<size\=24>Going on an adventure today?</size>
-{{A}}的遊樂場探險=<size\=24>{{A}}'s Amusement\nPark Adventure</size>
+{{A}}的遊樂場探險=<size\=24>{{A}}'s Theme\nPark Adventure</size>
+{{A}}想要去水道橋的遊樂場探險，去陪一陪她吧……=<size\=28>{{A}} wants to go the Theme Park in Suidobashi, let's accompany her...</size>
 要陪{{A}}探險嗎(<color\=#ff0000>消耗1點行動力</color>)？=<size\=30>Do you want to accompany {{A}} on her adventure? (<color\=#ff0000>Spend 1 Energy Point</color>)</size> 
 {{A}}的數學輔導=<size\=24>Math tutoring with \n{{A}}</size>
 {{A}}想要看看高中的數學知識，去陪一陪她吧……=<size\=25>{{A}} wants to learn more about high school mathametics, let's study with her...</size>
@@ -2440,7 +2451,8 @@ sr:"^當前任務目標處於<color\=#FF0000>(.*)</color>，\n是否立即前往
 去{{A}}站前廣場匯合=Meet at {{A}} Station Square
 去約定的地方找{{A}}=Go find {{A}} at the agreed place
 r:"^前往{{A}}(\d+)區$"=$"Go to {{A}} Area $1"
-r:"^調查{{A}}$"="Investigate {{A}}"
+調查{{A}}=Investigate {{A}}
+去找{{A}}吧=Go find {{A}}
 搜尋{{A}}的所在=Look for {{A}}
 去看看{{A}}的情況=See how {{A}} is doing
 打倒{{A}}=Defeat {{A}}
@@ -2451,6 +2463,7 @@ r:"^調查{{A}}$"="Investigate {{A}}"
 將時間推進到夜晚=Pass the time to night
 故事告一段落=End of story
 
+你我的影像=Images of Me and You
 漫遊{{A}}=Roaming {{A}}
 抓取的樂趣=The Fun of Catching
 天才的熔爐=Genius' Furnace
