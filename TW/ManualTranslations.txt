@@ -180,6 +180,7 @@ r:"^取消$"="Cancel"
 怪盜展板=Thieves Showcase
 徽章展板=Badge Showcase
 徽章=Badge
+保存成功。=Save success.
 sr:"^已為(.*)點讚。$"="Liked $1."
 等 級=Level
 樂 園=Paradise
@@ -203,6 +204,9 @@ sr:"^已為(.*)點讚。$"="Liked $1."
 
 r:"^輸入上限(\d+)個字$"="Up to $1 characters"
 r:"^(\d+)天前$"="$1d ago"
+
+請輸入頻道號（0-999）=Enter the channel number (0-999)
+r:"^新消息 (\d+)條。$"="$1 new messages."
 
 未完成=Missing
 
@@ -283,8 +287,8 @@ r:"^梅<color\=#ff0000ff>洛</color>普$"="Me<color\=#ff0000ff>r</color>ope"
 r:"^瑪<color\=#ff0000ff>奇</color>姆$"="Ma<color\=#ff0000ff>r</color>thym"
 r:"^路<color\=#ff0000ff>菲</color>爾$"="Lu<color\=#ff0000ff>f</color>el"
 r:"^新<color\=#ff0000ff>井</color>{{A}}$"="Mo<color\=#ff0000ff>to</color>ha Arai"
-r:"^加<color\=#ff0000ff>納</color> 駿$"="Sh<color\=#ff0000ff>un</color> Kanou"
-r:"^加<color\=#ff0000ff>納</color>駿$"="Sh<color\=#ff0000ff>un</color> Kanou"
+r:"^加<color\=#ff0000ff>納</color> {{A}}$"="Sh<color\=#ff0000ff>un</color> Kanou"
+r:"^加<color\=#ff0000ff>納</color>{{A}}$"="Sh<color\=#ff0000ff>un</color> Kanou"
 r:"^多<color\=#ff0000ff>禰</color>村 {{A}}$"="{{A}} Ta<color\=#ff0000ff>ne</color>mura"
 r:"^多<color\=#ff0000ff>禰</color>村{{A}}$"="{{A}} Ta<color\=#ff0000ff>ne</color>mura"
 r:"^野<color\=#ff0000ff>毛</color> {{A}}$"="To<color\=#ff0000ff>mo</color>ko Noge"
@@ -318,14 +322,14 @@ r:"^江<color\=#ff0000ff>崎</color> {{A}}$"="Sh<color\=#ff0000ff>in</color>ta E
 
 // Original Phantom Thieves //
 r:"^雨<color\=#ff0000ff>宮</color>蓮$"="R<color\=#ff0000ff>en</color> Amamiya"
-r:"^坂<color\=#ff0000ff>本</color>龍司$"="R<color\=#ff0000ff>yu</color>ji Sakamoto"
+r:"^坂<color\=#ff0000ff>本</color>{{A}}$"="R<color\=#ff0000ff>yu</color>ji Sakamoto"
 r:"^摩<color\=#ff0000ff>爾</color>{{A}}$"="Mor<color\=#ff0000ff>g</color>ana"
 r:"^高<color\=#ff0000ff>卷</color>杏$"="A<color\=#ff0000ff>nn</color> Takamaki"
-r:"^喜<color\=#ff0000ff>多</color>川祐介$"="Yu<color\=#ff0000ff>su</color>ke Kitagawa"
+r:"^喜<color\=#ff0000ff>多</color>川{{A}}$"="Yu<color\=#ff0000ff>su</color>ke Kitagawa"
 r:"^新<color\=#ff0000ff>島</color>真$"="Ma<color\=#ff0000ff>ko</color>to Niijima"
-r:"^佐<color\=#ff0000ff>倉</color>雙葉$"="Fu<color\=#ff0000ff>ta</color>ba Sakura"
+r:"^佐<color\=#ff0000ff>倉</color>{{A}}$"="Fu<color\=#ff0000ff>ta</color>ba Sakura"
 r:"^奧<color\=#ff0000ff>村</color>春$"="Ha<color\=#ff0000ff>ru</color> Okumura"
-r:"^明<color\=#ff0000ff>智</color>吾郎$"="Go<color\=#ff0000ff>ro</color> Akechi"
+r:"^明<color\=#ff0000ff>智</color>{{A}}$"="Go<color\=#ff0000ff>ro</color> Akechi"
 r:"^芳<color\=#ff0000ff>澤</color>霞$"="Ka<color\=#ff0000ff>su</color>mi Yoshizawa"
 
 ----------
@@ -1575,7 +1579,7 @@ r:"^好感度提升至<color\=#FFC000>rank17</color>後，\n解鎖約會地點�
 靈巧=Proficiency
 級解鎖=Rank Unlock
 sr:"^<color\=#FFC000>(.*)</color>的協同者等級可提升至Rank(\d+)$"="Can rank up <color\=#FFC000>$1</color> to rank $2"
-sr:"^<color\=#FFC000>(.*)</color>、<color\=#FFC000>(.*)</color>的協同者等級可提升至Rank(\d+)$"="Can rank up <color\=#FFC000>$1</color>, <color\=#FFC000>$2</color> to rank $3"
+sr:"^人格指數「(.*)」已解鎖全部能力。$"="Unlocked all skills for Social Stats [$1]."
 
 用於提升與協同者的親密度。=<size\=25>Used for granting Confidant Points.</size>
 
@@ -1787,7 +1791,11 @@ r:"^都市日程<color\=#ffc000>在{{A}}打工</color>已解鎖，\n每日有一
 {{A}}想要看看高中的數學知識，去陪一陪她吧……=<size\=25>{{A}} wants to learn more about high school mathametics, let's study with her...</size>
 今天學習嗎？=Studying today?
 
+{{A}}的鍛煉科普=<size\=24>{{A}}'s Training Science</size>
+如果想要了解健身相關的知識，就去找{{B}}的健身教練{{A}}吧。=<size\=25>Let's find the fitness trainer {{A}} in {{B}} for fitness-related knowledge.</size>
+
 r:"^幫助{{A}}$"="<size\=24>Help out\n{{A}}</size>"
+{{A}}好像遇到了什麼麻煩，去幫幫他吧。={{A}} seems to be in some kind of trouble, let's go help him.
 冒冒失失的{{A}}又把東西丟了，去幫助他吧！=The clumsy {{A}} lost something again, let's go help him!
 要幫助正在尋求幫助的{{A}}嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to help {{A}} who is looking for help? (<color\=#ff0000>Spend 1 Energy Point</color>)
 
@@ -2777,6 +2785,7 @@ r:"^距離告白日還有(\d+)時(\d+)分$"="$1h $2m until Confession Day"
 r:"^{{A}}心動指數達到(\d+)後可觀看$"="Can watch after {{A}} reaches Heartbeat Score $1"
 「<color\=#ff3b37>贈送</color>」巧克力結晶=[<color\=#ff3b37>Gift</color>] Chocolate Crystals
 完成獎勵：=Rewards:
+任務獎勵=Rewards
 數量：=Quantity:
 達到特定「<color\=#ff3b37>心動指數</color>」即可觸發「<color\=#ff3b37>浪漫約會</color>」=Trigger [<color\=#ff3b37>Romantic Date</color>] when reaching specific [<color\=#ff3b37>Heartbeat Score</color>]
 完成第一次告白後可查看。=Can view after completing the first Confession.
@@ -2789,6 +2798,24 @@ r:"^當前數量選擇為(\d+)。$"="Selected $1."
 告白日選擇與{{A}}度過=Spend Confession Day with {{A}}
 r:"^任意(\d+)位夥伴達到(\d+)好感度\((\d+)\/(\d+)\)$"="Any $1 partners reached $2 Favorability ($3/$4)"
 sr:"^(.*)第(\d+)關完成所有目標$"="Complete all goals for $1 level $2"
+<color\=#AB064A>是否確認接受來自<color\=#FF91B9>{{A}}</color>的告白？首次選擇的角色將成為心動物件，獲得對方贈送的{{B}}巧克力，該巧克力可以擺放在自宅展示區，請謹慎選擇。<color\=#FF91B9>（選擇後將無法獲得其他角色的擺放物品）</color>=<size\=24><color\=#AB064A>Accept the Confession from <color\=#FF91B9>{{A}}</color>? \nYou can display their {{B}} chocolate in the display area of your home. Choose carefully. <color\=#FF91B9>(You cannot get other character's display item after you choose one)</color></size>
+<color\=#154EAE>是否選擇與<color\=#75C6F4>{{A}}</color>度過告白日？選擇{{A}}將獲得對方贈送的友情巧克力，該巧克力可以擺放在自宅展示區，請謹慎選擇。<color\=#75C6F4>（選擇後將無法獲得其他角色的擺放物品）</color>=<size\=26><color\=#154EAE>Spend Confession Day with <color\=#75C6F4>{{A}}</color>? You can display their Giri chocolate in the display area of your home. Choose carefully. <color\=#75C6F4>(You cannot get other character's display item after you choose one)</color></size>
+r:"^當前有<color\=#FF0000>(\d+)</color>位夥伴向你發出邀約，是否確認與<color\=#FF0000>{{A}}</color>度過告白日？（選擇將影響擺放物品的獲得及接下來的特殊劇情表現）$"="<size\=25>Currently there are <color\=#FF0000>$1</color> partners inviting you, do you want to spend Confession Day with <color\=#FF0000>{{A}}</color>? (This will affect the display item and the subsequent special scene)</size>"
+請先開啟告白。=Please turn on Confession first.
+心動約定=<size\=24>Promise of Love</size>
+堅果厚乳生巧=Nuts and Milk Chocolate
+可可口味和果子=Chocolate Wagashi
+卡通巧克力餅乾=Cartoon Chocolate Cookies
+爆漿熊貓巧克力=Panda Lava Chocolate
+柑橘松露巧克力=Orange Truffle Chocolate
+水果巧克力蛋糕=Fruit Chocolate Cake
+海鹽薄荷蛋糕=Sea Salt Mint Cake
+冰花白巧餅乾=Ice Flower White Chocolate Cookies
+特製{{A}}餅乾=Special {{A}} Cookies
+雙層巧克力餅乾=Double Chocolate Cookies
+翻糖可可小蛋糕=Fondant Chocolate Cupcakes
+激推的巧克力=Push Chocolate
+巧克力點心餐盒=Chocolate Snack Box
 
 拖動右側碎片，完成拼圖=Drag the pieces to complete the puzzle
 
