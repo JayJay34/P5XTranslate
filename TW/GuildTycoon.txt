@@ -22,13 +22,6 @@ r:"^前(\d+%)$"="Top $1"
 r:"今日活躍：(\d+\/\d+)"=Today's Score: $1
 r:"近7天貢獻 (\d+)"=7d Contribution: $1
 
-閼凶夢之扉夢境更換說明：\n每週閼凶夢之扉會開啟一種夢境效果，本周所有的挑戰會根據夢境的不同發生規則變化。=<size\=27>Door of Nightmares rotation:\nEach week there is an unique mechanic, changing all bosses based on the mechanic.</size>
-首領受到一定傷害會進入虛弱狀態，處於虛弱狀態時全力輸出對其造成大量傷害，可獲取大量的戰鬥積分。=<size\=26>After defeating the boss, you gain 2x score.</size>
-隨著回合數的增加，首領給予的生存壓力會越來越高，但每回合的積分獲取效率也會相應提升。=<size\=26>Increase score gain but also increase enemies' damage after each turn.</size>
-
-首領受到一定傷害後進入虛弱狀態，虛弱狀態積分獲取效率大幅提高=  After defeating the boss, \n  you gain 2x score
-生存壓力和積分獲取效率隨著戰鬥回合數的增加而持續提升=  Each turn increase score gain but \n  also increase survival pressure 
-
 所屬樂園=Paradise\nName:
 樂園職位=Position:
 代理人等級=Level
@@ -160,6 +153,15 @@ r:"^受<color\=#000000>H</color> L傷害提升$"="H<color\=#000000>I</color>GHLI
 ----------
 Modifiers
 ----------
+首領受到一定傷害後進入虛弱狀態，虛弱狀態積分獲取效率大幅提高=  Increase score gain after\n  defeating the boss
+生存壓力和積分獲取效率隨著戰鬥回合數的增加而持續提升=  Each turn increase score gain but \n  also increase survival pressure 
+積分倍率會隨著上陣的反抗/支配怪盜數量的增加而增加=  Increase score gain for every \n  Rebel/Dominate Thief in team
+
+閼凶夢之扉夢境更換說明：\n每週閼凶夢之扉會開啟一種夢境效果，本周所有的挑戰會根據夢境的不同發生規則變化。=<size\=26>Door of Nightmares rotation:\nEach season there is a unique mechanic, changing all bosses based on the mechanic.</size>
+首領受到一定傷害會進入虛弱狀態，處於虛弱狀態時全力輸出對其造成大量傷害，可獲取大量的戰鬥積分。=<size\=26>Increase score gain after defeating the boss.</size>
+隨著回合數的增加，首領給予的生存壓力會越來越高，但每回合的積分獲取效率也會相應提升。=<size\=26>Increase score gain but also increase enemies' damage after each turn.</size>
+隨著編入反抗/支配職業怪盜數量的增加,積分獲取效率也會相應增加。=<size\=26>Increase score gain for every Rebel/Dominate Thief in team.</size>
+
 穩定領域=Stable Domain
 所有怪盜無法暴擊，{{A}}技能/追加效果造成的<color\=#FFFC40>最終傷害</color>提高，提高值\=暴擊率*(暴擊效果-100%)。（最多計入100%暴擊率）=<size\=26>All allies can't CRIT, increase <color\=#FFFC40>Final DMG</color> of Persona Skills/ Follow Up by\nCRIT Rate * (CRIT DMG - 100%)\n(Up to 100% CRIT Rate)</size>
 
@@ -172,10 +174,13 @@ r:"^首領造成傷害後，會使目標獲得(\d+)層<color\=#FFFC40>『猛毒�
 猛毒素=Toxin
 r:"^猛<color\=#000000>毒</color>素$"="T<color\=#000000>o</color>xin"
 
+連結領域=Linking Domain
+r:"^隊伍中編入(\d+)名及以上<color\=#FFFC40>反抗/支配</color>怪盜時，所有怪盜最終傷害提高(\d+%)。$"="Increase Thieves' Final DMG by $2 when there are $1 or more <color\=#FFFC40>Rebel/Dominate</color> Thieves."
+
 sr:"^(.*)特化$"="$1 Buff"
 r:"^<color\=#FFFC40>反抗</color>怪盜造成傷害提高(\d+(.\d+)?(%)?)$"="<size\=22>Increase <color\=#FFFC40>Rebel</color> Thieves' DMG Dealt by $1</size>"
 r:"^<color\=#FFFC40>支配</color>怪盜造成傷害提高(\d+(.\d+)?(%)?)$"="<size\=20>Increase <color\=#FFFC40>Dominate</color> Thieves' DMG Dealt by $1</size>"
-所有怪盜<color\=#FFFC40>射擊</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#FFFC40>Gun</color> DMG by $1</size>"
+r:"^所有怪盜<color\=#FFFC40>射擊</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#FFFC40>Gun</color> DMG by $1</size>"
 r:"^所有怪盜<color\=#ff381d>火焰</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#ff381d>Fire</color> DMG by $1</size>"
 r:"^所有怪盜<color\=#00aeff>冰凍</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#00aeff>Ice</color> DMG by $1</size>"
 r:"^所有怪盜<color\=#ff63ff>念動</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#ff63ff>Psy</color> DMG by $1</size>"
@@ -202,6 +207,7 @@ r:"^所有怪盜處於<color\=#FFFC40>額外回合</color>時，暴擊率提升(
 
 追加特化=Follow Up Buff
 r:"^所有怪盜<color\=#FFFC40>追加效果</color>的暴擊效果提升(\d+%)、攻擊力提升(\d+%)$"="Increase Thieves' <color\=#FFFC40>Follow Up</color> CRIT DMG by $1 and ATK by $2"
+r:"^追<color\=#000000>加</color>特化"="F<color\=#000000>o</color>llow Up Buff"
 
 聖潔領域=Holy Domain
 r:"^敵人每有一個<color\=#FFFC40>負面狀態</color>，受到的傷害提升(\d+%)，最多使其受到的傷害提升(\d+%)$"="For every <color\=#FFFC40>debuff</color> the enemy have, increase their DMG Taken by $1, up to $2"
