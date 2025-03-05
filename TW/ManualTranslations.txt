@@ -343,7 +343,6 @@ r:"^<color\=#ff0000ff>店</color>員$"="S<color\=#ff0000ff>t</color>aff"
 r:"^謎<color\=#ff0000ff>之</color>{{A}}$"="My<color\=#ff0000ff>st</color>erious {{A}}"
 
 // Character-specific Persona // 
-
 亞森=Arsene
 基德船長=Captain Kidd
 蘇洛=Zorro
@@ -373,6 +372,7 @@ r:"^謎<color\=#ff0000ff>之</color>{{A}}$"="My<color\=#ff0000ff>st</color>eriou
 阿摩笛亞=Amalthea
 奧拉=Aura
 辛德瑞拉=Cendrillon
+敏特=Minthe
 羅賓漢=Robin Hood
 洛基=Loki
 
@@ -520,6 +520,7 @@ r:"^岩<color\=#ff0000ff>井</color>{{A}}$"="Mu<color\=#ff0000ff>ne</color>hisa 
 獲取補給=Get supplies
 什麼嘛……不要隨便打擾別人生意。=What... Don't mess with other people's business.
 進入酒吧=Enter the bar
+該功能尚未開放=This feature is not available yet
 
 r:"^去<color\=#ff0000ff>對</color>面$"="C<color\=#ff0000ff>ro</color>ss"
 r:"^<color\=#ff0000ff>書</color>店$"="Bo<color\=#ff0000ff>ok</color>store"
@@ -688,6 +689,7 @@ r:"^(\d+)時(\d+)分(\d+)秒$"=" $1h $2m $3s"
 r:"^(\d+)分鐘$"=" $1 minutes"
 r:"^(\d+)天(\d+)時後解鎖$"="Unlocks after $1d $2h"
 r:"^(\d+)時(\d+)分後解鎖$"="Unlocks after $1h $2m"
+r:"^(\d+)分後解鎖$"="Unlocks after $1m"
 
 r:"^挑戰倒計時：$"="Time Left:"
 r:"^挑戰倒計時：(\d+)天(\d+)時(\d+)分$"="Time Left: $1d $2h $3m"
@@ -1807,7 +1809,7 @@ r:"^幫助{{A}}$"="<size\=24>Help out\n{{A}}</size>"
 {{A}}在城市的角落又藏了什麼樣的寶物呢，快去看看吧。=<size\=28>Let's go and find out what treasures did {{A}} hide in the city again</size>
 要尋找{{A}}的寶物嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to look for Chatai's treasure? (<color\=#ff0000>Spend 1 Energy Point</color>)
 
-{{A}}的遊戲=<size\=24>{{A}}' game</size>
+{{A}}的遊戲=<size\=24>{{A}}'s game</size>
 {{A}}似乎又策劃了什麼新遊戲，去找他湊湊熱鬧吧。={{A}} seems to be planning some new game, let's go find him and join in the fun
 和{{A}}聊聊=Talk to {{A}}
 要參與{{A}}的遊戲嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to play {{A}}'s game? (<color\=#ff0000>Spend 1 Energy Point</color>)
@@ -2180,6 +2182,20 @@ r:"^厄抑之境·啟示套裝$"="Revelation Card Farm"
 武器突破材料=Wpn Ascend (30)
 
 r:"^怪盜天賦材料$"="<size\=30>Mental Image (30)</size>"
+
+r:"^陰影被擊敗後，使全體怪盜造成傷害提升(.*)，可疊加(.*)層$"="After defeating a Shadow, increase all Thieves' DMG Dealt by $1, up to $2 stacks"
+r:"^全體怪盜受治療/護盾效果提升(.*)，受治療/護盾後造成傷害提升(.*)；戰鬥開始時全體怪盜損失(.*)生命值$"="Increase all Thieves' Healing Received/Shield Effect by $1, increase DMG Dealt after Healed/Shieled by $2; All Thieves lose $3 HP at the start of battle"
+r:"^所有陰影受到{{A}}傷害提升(\d+(.\d+)?(%)?)$"="Increase all Shadows' {{A}} DMG Taken by $1"
+r:"^全體怪盜<color\=#00fcff>核熱</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#00fcff>Nuke</color> DMG by $1"
+r:"^全體怪盜<color\=#81ea2c>疾風</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#81ea2c>Wind</color> DMG by $1"
+r:"^全體怪盜<color\=#00aeff>冰凍</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#00aeff>Ice</color> DMG by $1"
+r:"^全體怪盜<color\=#ff381d>火焰</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff381d>Fire</color> DMG by $1"
+r:"^全體怪盜<color\=#fbff37>電擊</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#fbff37>Elec</color> DMG by $1"
+r:"^全體怪盜<color\=#ff0036>詛咒</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff0036>Curse</color> DMG by $1"
+r:"^全體怪盜<color\=#ff63ff>念動</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff63ff>Psy</color> DMG by $1"
+r:"^全體怪盜<color\=#fffea0>祝福</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#fffea0>Bless</color> DMG by $1"
+r:"^全體怪盜<color\=#ff0036>HL</color>造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff0036>HIGHLIGHT</color> DMG Dealt by $1"
+r:"^全體怪盜<color\=#ff0036>追加效果</color>造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff0036>Follow Up</color> DMG Dealt by $1"
 
 r:"^保底進度：<color\=#0665ca>(\d+)/(\d+)</color>$"="Pity: <color\=#0665ca>$1/$2</color>"
 r:"^領取 <color\=#0665ca>(\d+)</color> 次必得$"="Guarantee after <color\=#0665ca>$1</color> time(s)"
@@ -2972,7 +2988,7 @@ r:"^好感度提升至<color\=#FFC000>rank7</color>後，\n解鎖{{A}}的合成�
 r:"^好感度提升至<color\=#FFC000>rank9</color>後，\n解鎖{{A}}的合成。$"="Unlock Fusion for Anubis\nafter reaching <color\=#FFC000>rank 9</color>."
 r:"^好感度提升至<color\=#FFC000>rank11</color>後，\n解鎖{{A}}的合成。$"="Unlock Fusion for Okuninushi\nafter reaching <color\=#FFC000>rank 11</color>."
 r:"^好感度提升至<color\=#FFC000>rank13</color>後，\n解鎖{{A}}的合成。$"="Unlock Fusion for Narcissus\nafter reaching <color\=#FFC000>rank 13</color>."
-r:"^好感度提升至<color\=#FFC000>rank15</color>後，\n合成Rank4及以下的2星、3星面具時，機率額外獲得一個印記。$"="There is a chance to get 1 additional Mark when fusing Rank 4 or below 2 star and 3 star Persona after reaching <color\=#FFC000>rank 15</color>."
+r:"^好感度提升至<color\=#FFC000>rank15</color>後，\n合成Rank4及以下的2星、3星面具時，機率額外獲得一個印記。$"="<size\=21>There is a chance to get 1 additional Mark when fusing Rank 4 and below 2★ and 3★ Persona after reaching <color\=#FFC000>rank 15</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank20</color>後，\n解鎖{{A}}的合成。$"="Unlock Fusion for Kohryu\nafter reaching <color\=#FFC000>rank 20</color>."
 
 sr:"^(.*)印記$"="$1 Mark"
