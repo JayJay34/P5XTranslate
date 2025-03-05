@@ -248,7 +248,7 @@ Yuki - Yukimi Fujikawa
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)防禦力的祝福屬性傷害，使自身和處於『誓約』效果下的同伴獲得1層祝福效果。$"="Deals $1 DEF Bless damage to <color\=#FFFF00>all</color> enemies, gives you and the ally with [Vow] 1 stack of Bless."
 sr:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>防禦力的祝福屬性傷害，使自身獲得<link\="s\|111"><u>祝福</u></link>效果1層，並使處於<link\="s\|121"><u>『(.*)』</u></link>的同伴獲得<link\="s\|111"><u>祝福</u></link>效果1層。$"="Deals <color\=#FFFC40>$1</color> DEF Bless damage to all enemies, gains 1 stack of <link\="s|111"><u>Bless</u></link> and gives the ally with <link\="s|121"><u>[$2]</u></link> 1 stack of <link\="s|111"><u>Bless</u></link>."
 
-r:"^使<color\=#FFFF00>1名</color>同伴獲得(\d+\.\d+%)防禦力\+(\d+)的護盾，並提升其至多1158防禦力，效果持續2回合；同時使其獲得持續2回合的(\d+%)傷害減免，該效果在其受傷後清除。並與該同伴產生『誓約』並使其獲得1層祝福效果。$"="Gives <color\=#FFFF00>1</color> ally $1 DEF + $2 Shield and increases DEF by $3 for 2 turns. Gives the target $4 DMG RES for 2 turns, dispelled after taking damage. Makes a [Vow] with the target and gives them 1 stack of Bless."
+r:"^使<color\=#FFFF00>1名</color>同伴獲得(\d+\.\d+%)防禦力\+(\d+)的護盾，並提升其至多(\d+)防禦力，效果持續(\d+)回合；同時使其獲得持續(\d+)回合的(\d+%)傷害減免，該效果在其受傷後清除。並與該同伴產生『誓約』並使其獲得(\d+)層祝福效果。$"="Gives <color\=#FFFF00>1</color> ally $1 DEF + $2 Shield and increases DEF by $3 for $4 turns. Gives the target $6 DMG RES for $5 turns, dispelled after taking damage. Makes a [Vow] with the target and gives them $7 stack of Bless."
 r:"^使1名同伴獲得<color\=#FFFC40>(\d+\.\d+%)</color>防禦力\+<color\=#FFFC40>(\d+)</color>的護盾並且獲得防禦力提升（相當於{{A}}防禦力的(\d+%)，最多提升<color\=#FFFC40>(\d+)</color>點防禦力），效果持續2回合；同時使其獲得受到傷害降低(\d+%)的效果，該效果在受到1次傷害或2回合後清除。並且使該同伴獲得<link\="s\|111"><u>祝福</u></link>效果2層，同時與同伴產生<link\="s\|121"><u>『誓約』</u></link>，效果持續2回合。$"="Gives 1 ally <color\=#FFFC40>$1</color> DEF + <color\=#FFFC40>$2</color> Shield and increases their DEF (Equal to $3 of your DEF, up to <color\=#FFFC40>$4</color> DEF) for 2 turns. Gives them $5 DMG RES, this effect is dispelled after 1 hit of damage or 2 turns. Gives that ally 2 stacks of <link\="s|111"><u>Bless</u></link>, and makes a <link\="s|121"><u>[Vow]</u></link> for 2 turns."
 
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)防禦力的祝福屬性傷害，『充能』不少於2層時，該技能消耗全部『充能』，消耗每層『充能』使所有同伴提升(\d+\.\d+%)\*層數的傷害，1回合並使所有同伴獲得(\d+\.\d+%)防禦力的護盾，2回合。"="Deals $1 DEF Bless damage to <color\=#FFFF00>1</color> enemy. When your [Vitalise] stack is not less than 2, consumes all [Vitalise] and increases all allies' damage by $2*stacks spent for 1 turn. \nAll allies gain $3 DEF Shield for 2 turns."
@@ -260,8 +260,8 @@ r:"^受到{{A}}的保護$"="Protected by Yuki"
 r:"^提升<color\=#FF0000>絕對審判</color>的技能效果$"="Boost the skill effect of <color\=#FF0000>Absolute Judgement</color>"
 
 In-Battle Quotes
-sr:"^<color\=#FF0000>(.*)</color>受到雪實的保護……$"="<color\=#FF0000>$1</color> is protected by Yukimi!"
-<color\=#FF0000>所有同伴</color>防禦力提升……=<color\=#FF0000>All allies</color> DEF Up!
+sr:"^<color\=#FF0000>(.*)</color>受到{{A}}的保護……$"="<color\=#FF0000>$1</color> is protected by {{A}}!"
+sr:"^<color\=#FF0000>(.*)</color>受到{{B}}的保護……$"="<color\=#FF0000>$1</color> is protected by {{B}}!"
 
 Combat Pop-ups
 r:"^誓<color\=#000000>約</color>$"="V<color\=#000000>o</color>w"
@@ -946,7 +946,6 @@ r:"^思<color\=#000000>念</color>$"="</size>C<color\=#000000>h</color>erish"
 r:"^風<color\=#000000>傷</color>$"="</size>W<color\=#000000>i</color>nd Injury"
 r:"^凍<color\=#000000>徹</color>$"="</size>F<color\=#000000>r</color>eezing"
 r:"^雪<color\=#000000>凝</color>之盾$"="</size>C<color\=#000000>o</color>ndensed Shield"
-r:"^冰<color\=#000000>封</color>$"="I<color\=#000000>c</color>e Seal"
 
 ----------
 Violet - Kasumi Yoshizawa
@@ -1035,3 +1034,20 @@ r:"^歲<color\=#000000>火</color>$"="Y<color\=#000000>e</color>ar Fire"
 ----------
 Matoi - Mio Natsukawa
 ----------
+r:"^獲得(\d+)層『熄炎之力』；對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，並有(\d+%)的基礎機率使其陷入<link\="s\|103"><u>凍結</u></link>狀態，同時使其防禦降低<color\=#FFFC40>(\d+\.\d+%)</color>\（每有(\d+\.\d+%)的效果命中，防禦力額外降低(\d+%)，最多額外降低<color\=#FFFC40>(\d+\.\d+%)</color>\），持續(\d+)回合；若有目標處於<link\="s\|102"><u>燃燒</u></link>狀態下，則會驅散其<link\="s\|102"><u>燃燒</u></link>狀態並使所有敵人陷入『焚炎將息』狀態（『焚炎將息』無法觸發此效果）。\n『焚炎將息』：持續(\d+)回合，視為<link\="s\|102"><u>燃燒</u></link>狀態；所有怪盜攻擊處於此狀態的單位時，<link\="s\|233"><u>技巧精通</u></link>提升<color\=#FFFC40>(\d+)</color>點。$"="Gains $1 stack of [Extinguishing Power]; Deals <color\=#FFFC40>$2</color> ATK Ice damage to all enemies, with a $3 base chance to inflict <link\="s|103"><u>Freeze</u></link> and decreases their DEF by <color\=#FFFC40>$4</color> (For every $5 EHR, additionally decreases DEF by $6, up to <color\=#FFFC40>$7</color>) for $8 turns; If the target is inflicted with <link\="s|102"><u>Burn</u></link>, dispels their <link\="s|102"><u>Burn</u></link>  then inflicts all enemies with [Fading Flame] ([Fading Flame] cannot triggers this effect).\n[Fading Flame]: Seen as <link\="s|102"><u>Burn</u></link> for $9 turns; Increases all Thieves's <link\="s|233"><u>TECHNICAL Mastery</u></link> by <color\=#FFFC40>$10</color> when attacking enemies with this effect."
+
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害；同時對目標造成<link\="s\|229"><u>冰凍屬性TECHNICAL</u></link>，並在觸發<link\="s\|231"><u>『冰封』</u></link>時使<link\="s\|214"><u>冰封</u></link>的基礎機率提升至<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Deals <color\=#FFFC40>$1</color> ATK Ice damage to 1 enemy; Deals <link\="s|229"><u>Ice TECHNICAL</u></link>, then increases the base chance when triggering <link\="s|231"><u>[Ice Seal]</u></link> to <color\=#FFFC40>$2</color>."
+
+r:"^『熄炎之力』層數達到(\d+)層時可釋放；\n消耗(\d+)層『熄炎之力』對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害並使其防禦降低<color\=#FFFC40>(\d+\.\d+%)</color>\（每有(\d+\.\d+%)的效果命中，防禦力額外降低(\d+%)，最多額外降低<color\=#FFFC40>(\d+\.\d+%)</color>\），持續(\d+)回合；同時造成<link\="s\|229"><u>冰凍屬性TECHNICAL</u></link>，並在觸發<link\="s\|227"><u>『冰灼』</u></link>時必中且使冰灼的效果升級為『寒煌』。『寒煌』：受到所有傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>\（每有(\d+\.\d+%)的效果命中，受到所有傷害額外提升(\d+%)，最多額外提升<color\=#FFFC40>(\d+\.\d+%)</color>\）。\n『熄炎之力』層數達到(\d+)層時，該技能升級為『斷流瀑裂·水龍捲』\n斷流瀑裂·水龍捲：消耗(\d+)層『熄炎之力』對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害並使其防禦降低<color\=#FFFC40>(\d+\.\d+%)</color>\（每有(\d+\.\d+%)的效果命中，防禦力額外降低(\d+%)，最多額外降低<color\=#FFFC40>(\d+\.\d+%)</color>\），持續(\d+)回合；同時造成<link\="s\|229"><u>冰凍屬性TECHNICAL</u></link>，並在觸發<link\="s\|227"><u>『冰灼』</u></link>時必中且使冰灼的效果升級為『寒煌』。『寒煌』：受到所有傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>\（每有(\d+\.\d+%)的效果命中，受到所有傷害額外提升(\d+%)，最多額外提升<color\=#FFFC40>(\d+\.\d+%)</color>\）。$"="Unlocks when [Extinguishing Power] reaches $1 stacks;\nConsumes $2 stacks of [Extinguishing Power] to deal <color\=#FFFC40>$3</color> ATK Ice damage to all enemies and decreases their DEF by <color\=#FFFC40>$4</color> (For every $5 EHR, additionally decreases DEF by $6, up to $7) for $8 turns; Deals <link\="s|229"><u>Ice TECHNICAL</u></link>, guarantees the effect when triggering <link\="s\|227"><u>[Ice Burn]</u></link> and upgrades the effect to [Cold Shine]. [Cold Shine]: Increases all DMG Taken by <color\=#FFFC40>$9</color> (For every $10 EHR, additionally increases all DMG Taken by $11, up to <color\=#FFFC40>$12</color>.\nUnlocks when [Extinguishing Power] reaches $13 stacks, upgrades this skill to [Bursting Waterfall·Tornado]\nBursting Waterfalll·Tornado: Consumes $14 stacks of [Extinguishing Power] to deal <color\=#FFFC40>$15</color> ATK Ice damage to all enemies and decreases their DEF by <color\=#FFFC40>$16</color> (For every $17 EHR, additionally decreases DEF by $18, up to $19) for $20 turns; Deals <link\="s|229"><u>Ice TECHNICAL</u></link>, guarantees the effect when triggering <link\="s\|227"><u>[Ice Burn]</u></link> and upgrades the effect to [Cold Shine]. [Cold Shine]: Increases all DMG Taken by <color\=#FFFC40>$21</color> (For every $22 EHR, additionally increases all DMG Taken by $23, up to <color\=#FFFC40>$24</color>."
+
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害，使其受到的傷害提升\（上限(\d+\.\d+%)\），持續(\d+)回合；同時對目標造成冰凍屬性TECHNICAL，並在觸發『冰封』時使冰封的基礎概率提升至(\d+%)，使陷入冰封狀態的敵人受到的傷害額外提升\（上限(\d+\.\d+%)\）；再次對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害。$"="Deals $1 ATK Ice damage to <color\=#FFFF00>all</color> enemies and increases their DMG Taken (Up to $2) for $3 turns: Deals Ice TECHNICAL, then increases the base chance when triggering [Ice Seal] to $4, enemies with Ice Seal additionally increases DMG Taken (Up to $5); Then deals $6 ATK Ice damage to all enemies."
+
+Combat Pop-ups
+r:"^熄<color\=#000000>炎</color>之力$"="E<color\=#000000>x</color>tinguishing Power"
+r:"^溺<color\=#000000>水</color>$"="D<color\=#000000>r</color>owning"
+r:"^焚<color\=#000000>炎</color>將息$"="F<color\=#000000>a</color>ding Flame"
+r:"^寒<color\=#000000>煌</color>$"="C<color\=#000000>o</color>ld Shine"
+r:"^庇<color\=#000000>護</color>$"="S<color\=#000000>h</color>elter"
+r:"^奉<color\=#000000>書</color>火消$"="F<color\=#000000>i</color>refighting Unit"
+r:"^克<color\=#000000>炎</color>守境$"="B<color\=#000000>o</color>rder Guardian"
+r:"^消<color\=#000000>弭</color>江戶之花$"="F<color\=#000000>l</color>ower of Edo"
