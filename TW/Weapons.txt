@@ -18,9 +18,18 @@
 可消耗同星級武器或特別的存在之證=Only use weapon with the same rarity
 替換成功，已自動繼承強化等級及突破等級。=Changed weapon, automatically inherited Weapon Lv. and Reform Rank.
 尚未獲取=Not obtained
+已將武器鎖定。=Locked this weapon.
 該裝備已鎖定，是否解鎖該裝備。=Unlock this equipment?
-該裝備正在穿戴中，無法作為材料。=Cannot use equiped equipment as material.
+該裝備正在穿戴中，無法作為材料。=Cannot use equipped equipment as material.
+鎖定中的武器無法分解，請先將武器解鎖。=Cannot dismantle locked weapon, please unlock the weapon first.
+穿戴中的武器無法分解，請先將武器卸下。=Cannot dismantle equipped weapon, please unequiped the weapon first.
 r:"^是否消耗(.*)進行改造？$"="Consume this to reform?"
+
+武器分解=Dismantle Weapon
+只有橙色品質武器可以分解哦。=Can only dismantle orange quality weapons.
+分解資訊=Info
+分解後武器本體將直接轉化成道具=Convert the weapon into items
+獲得道具=Get
 
 ----------
 WONDER WEAPONS
@@ -396,7 +405,7 @@ r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。{{A}}使用<link\="s\|1
 熒色魅惑D4u=Fluorescent Charm D4u
 【和弦彩鈴】=<size\=24>[Chord Ringtone]</size>
 和弦彩鈴=Chord Ringtone
-sr:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。使用支援技能後，{{A}}有<color\=#2899FF>(\d+\.\d+%)</color>的固定機率額外獲得1個<link\="s\|141"><u>『(.*)』</u></link>。$"="Increase ATK by <color\=#2899FF>$1</color>. After using support skills, there is a <color\=#2899FF>$2</color> fixed chance to gain 1 additional <link\="s|141"><u>[$3]</u></link>."
+r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。使用支援技能後，{{A}}有<color\=#2899FF>(\d+\.\d+%)</color>的固定機率額外獲得1個<link\="s\|141"><u>『節拍』</u></link>。$"="Increase ATK by <color\=#2899FF>$1</color>. After using support skills, there is a <color\=#2899FF>$2</color> fixed chance to gain 1 additional <link\="s|141"><u>[Beat]</u></link>."
 
 織夢者=Dreamweaver
 【幻夢交響】=<size\=24>[Symphony of Dream]</size>
@@ -429,6 +438,10 @@ r:"^防禦力提升<color\=#2899FF>(\d+\.\d+%)</color>。為生命值低於(\d+%
 【風暴來臨】=<size\=24>[Coming Storm]</size>
 風暴來臨=Coming Storm
 r:"^暴擊率提升<color\=#2899FF>(\d+\.\d+%)</color>。戰鬥開始時，使自身獲得1層<link\="s\|118"><u>『激勵』</u></link>，暴擊效果提升(\d+%)。每次獲得<link\="s\|118"><u>『激勵』</u></link>時，造成的傷害額外提升（當前<link\="s\|118"><u>『激勵』</u></link>效果層數\*<color\=#2899FF>(\d+\.\d+%)</color>），效果持續1回合。$"="Increase CRIT Rate by <color\=#2899FF>$1</color>. At the start of battle, gain 1 stack of <link\="s|118"><u>[Resolve]</u></link> and increase CRIT DMG by $2. Each time you gain <link\="s|118"><u>[Resolve]</u></link>, increase DMG Dealt by (<link\="s|118"><u>[Resolve]</u></link>*<color\=#2899FF>$3</color>) for 1 turn."
+授勳之證=Proof of Honor
+【騎士精神】=<size\=24>[Chivalry]</size>
+騎士精神=Chivalry
+r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。對同一敵人連續造成傷害時，每段攻擊有(\d+%)固定機率使自身對其傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，最高<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. When dealing consecutive hits of damage to the same enemy, each attack has a $2 fixed chance to increase your DMG Dealt by <color\=#2899FF>$3</color>, up to <color\=#2899FF>$4</color>."
 
 亡語聖裁=Deathrattle Judge
 【輪迴符文】=<size\=24>[Reincarnation Rune]</size>
