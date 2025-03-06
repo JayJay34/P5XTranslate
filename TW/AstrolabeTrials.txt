@@ -12,6 +12,7 @@ r:"<color\=#FFC000>(\d+)時(\d+)分</color>後：\n可用精神力將增加<colo
 
 r:"^<color\=#FFC000>(\d+)天(\d+)時</color>後：$"="After <color\=#FFC000>$1d $2h</color>:"
 r:"^<color\=#FFC000>(\d+)時(\d+)分</color>後：$"="After <color\=#FFC000>$1h $2m</color>:"
+r:"^<color\=#FFC000>(\d+)分</color>後：$"="After <color\=#FFC000>$1m</color>:"
 r:"^可用精神力將增加<color\=#FFC000>(\d+)點</color>     \(上限(\d+)\)$"="Increase Mental Energy by <color\=#FFC000>$1</color>"
 r:"^所有怪盜挑戰次數將增加<color\=#FFC000>(\d+)次</color>\(上限(\d+)\)$"="Increase Thieves Usage by <color\=#FFC000>$1</color>"
 
@@ -122,10 +123,9 @@ r:"^HL磁場(.*)$"="HIGHLIGHT Magnetic Field $1"
 r:"^HIGHLIGHT能量回復速度降低(\d+%)，所有怪盜HIGHLIGHT的最終傷害提高(\d+%)"="<size\=28>Decrease HIGHLIGHT Energy recovery rate by $1, increase all HIGHLIGHT Final DMG by $2</size>"
 r:"^HIGHLIGHT能量回復速度降低(\d+%)，所有怪盜<color\=#FFFC40>HIGHLIGHT</color>的最終傷害提高(\d+%)"="<size\=28>Increase all Thieves' <color\=#FFFC40>HIGHLIGHT</color> Final DMG by $2, decrease HIGHLIGHT Energy recovery rate by $1</size>"
 
-r:"^威壓磁場(.*)$"="Coercion Magnetic Field $1"
-r:"^首領每回合末使所有怪盜獲得1層<color\=#FFFC40>『威壓』</color>；『威壓』被驅散後，使所有敵人獲得1層『威壓』。\n『威壓』：受最終傷害提升(\d+%)，可疊加(\d+)層，持續(\d+)回合。$"="<size\=20>Boss will inflict all enemies with 1 stack of <color\=#FFFC40>[Coercion]</color> at the end of each turn; When [Coercion] is dispelled, all enemies gain 1 stack of [Coercion]\n[Coercion]: Increase Final DMG Taken by $1 for $3 turns, up to $2 stacks</size>"
-威壓=Coercion
-每回合末使所有怪盜獲得1層「威壓」=Inflict 1 [Coercion] at the end of each turn
+r:"^威壓磁場(.*)$"="Pressure Magnetic Field $1"
+r:"^首領每回合末使所有怪盜獲得1層<color\=#FFFC40>『威壓』</color>；『威壓』被驅散後，使所有敵人獲得1層『威壓』。\n『威壓』：受最終傷害提升(\d+%)，可疊加(\d+)層，持續(\d+)回合。$"="<size\=20>Boss will inflict all enemies with 1 stack of <color\=#FFFC40>[Pressure]</color> at the end of each turn; When [Pressure] is dispelled, all enemies gain 1 stack of [Pressure]\n[Pressure]: Increase Final DMG Taken by $1 for $3 turns, up to $2 stacks</size>"
+每回合末使所有怪盜獲得1層「威壓」=Inflict 1 [Pressure] at the end of each turn
 
 ----------
 Combat Menu
