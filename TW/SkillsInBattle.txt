@@ -88,6 +88,9 @@ r:"^<color\=#FF0000>(.*){{A}}</color>從倒地狀態恢復了。$"="Recovered fr
 
 <color\=#66ccff>冰凍屬性TECHNICAL</color>=<color\=#66ccff>Ice TECHNICAL</color>
 冰凍屬性TECHNICAL=Fire TECHNICAL
+凜霆=Frigid Bolt
+冰封=Ice Seal
+
 <color\=#66ccff>疾風屬性TECHNICAL</color>=<color\=#66ccff>Wind TECHNICAL</color>
 疾風屬性TECHNICAL=Wind TECHNICAL
 <color\=#66ccff>電擊屬性TECHNICAL</color>=<color\=#66ccff>Elec TECHNICAL</color>
@@ -118,9 +121,15 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 攻擊力大幅提高，防禦力大幅下降，強制執行普攻指令=Heavily increase ATK and decrease DEF, forced to use basic attack
 
 r:"^部分火焰屬性技能對處於某些特定狀態的敵人，會造成額外的效果。\n火焰屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『爆燃』，使技能傷害提升(\d+%)；\n火焰屬性技能對處於凍結狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合；\n火焰屬性技能對處於風襲狀態的敵人造成TECHNICAL時，觸發『颶焰』，額外造成(\d+)次基於目標最大生命值(\d+%)的火焰屬性傷害。$"="Certain Fire skills can trigger additional effects to enemies in specific status.\nWhen Fire skills deal TECHNICAL to enemies inflicted with Burn, trigger [Backdraft], increase skill damage by $1;\nWhen Fire skills deal TECHNICAL to enemies inflicted with Freeze, trigger [Ice Burn], there is a $2 base chance to increase the target's Fire/ Ice DMG Taken by $3 for $4 turns;\nWhen Fire skills deal TECHNICAL to enemies inflicted with Winded, trigger [Hurricane Flame]: Deal $5 additional hit of Fire damage based on $6 of the target's Max HP."
-r:"火焰屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『爆燃』，使技能傷害提升(\d+%)。$"="When Fire skills deal TECHNICAL to enemies inflicted with Burn, trigger [Backdraft], increase skill damage by $1"
+r:"^火焰屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『爆燃』，使技能傷害提升(\d+%)。$"="When Fire skills deal TECHNICAL to enemies inflicted with Burn, trigger [Backdraft], increase skill damage by $1"
 r:"^火焰屬性技能對處於凍結狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合。$"="When Fire skills deal TECHNICAL to enemies inflicted with Freeze, trigger [Ice Burn], there is a $1 base chance to increase the target's Fire/ Ice DMG Taken by $2 for $3 turns."
+r:"^火焰屬性技能對處於凍結狀態的敵人造成TECHNICAL或冰凍屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合。$"="When Fire skills deal TECHNICAL to enemies inflicted with Freeze or Ice skills deal TECHNICAL to enemies inflicted with Burn, trigger [Ice Burn], there is a $1 base chance to increase the target's Fire/ Ice DMG Taken by $2 for $3 turns."
 r:"^火焰屬性技能對處於風襲狀態的敵人造成TECHNICAL時，觸發『颶焰』，額外造成(\d+)次基於目標最大生命值(\d+%)的火焰屬性傷害。$"="When Fire skills deal TECHNICAL to enemies inflicted with Winded, trigger [Hurricane Flame]: Deal $1 additional hit of Fire damage based on $2 of the target's Max HP."
+
+r:"^部分冰凍屬性技能對處於某些特定狀態的敵人，會造成額外的效果。\n冰凍屬性技能對處於觸電狀態的敵人造成TECHNICAL時，觸發『凜霆』，使技能傷害提升(\d+%)；\n冰凍屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合；\n冰凍屬性技能對處於凍結狀態的敵人造成TECHNICAL時，觸發『冰封』，有(\d+%)基礎機率使目標陷入冰封狀態，持續(\d+)回合。$"="Certain Ice skills can trigger additional effects to enemies in specific status.\nWhen Ice skills deal TECHNICAL to enemies inflicted with Shock, trigger [Frigid Bolt], increase skill damage by $1;\nWhen Ice skills deal TECHNICAL to enemies inflicted with Burn, trigger [Ice Burn], there is a $2 base chance to increase the target's Fire/ Ice DMG Taken by $3 for $4 turns;\nWhen Ice skills deal TECHNICAL to enemies inflicted with Freeze, trigger [Ice Seal]: There is a $5 base chance to inflict the target with Ice Seal for $6 turn."
+r:"^冰凍屬性技能對處於觸電狀態的敵人造成TECHNICAL時，觸發『凜霆』，使技能傷害提升(\d+%)$"="When Ice skills deal TECHNICAL to enemies inflicted with Shock, trigger [Frigid Bolt], increase skill damage by $1"
+r:"^冰凍屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合$"="When Ice skills deal TECHNICAL to enemies inflicted with Burn, trigger [Ice Burn], there is a $1 base chance to increase the target's Fire/ Ice DMG Taken by $2 for $3 turns"
+r:"^冰凍屬性技能對處於凍結狀態的敵人造成TECHNICAL時，觸發『冰封』，有(\d+%)基礎機率使目標陷入冰封狀態，持續(\d+)回合。$"="When Ice skills deal TECHNICAL to enemies inflicted with Freeze, trigger [Ice Seal]: There is a $1 base chance to inflict the target with Ice Seal for $2 turn."
 
 --------------------------------------------------
 WONDER's Persona Skill Details
@@ -446,6 +455,8 @@ r:"對<color\=#FFFF00>1名</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</color
 //AoE Bless Instakill
 r:"對<color\=#FFFF00>所有</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，對50%生命值以下的敵人附加低機率祝福屬性即死效果，生命值越低機率越高。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>all</color> enemies with a chance of insta-kill to enemies under 50% HP. The lower the HP, the higher the chance.
 
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，若主目標敵人生命值低於(\d+%)則有機率附加即死效果。$"="Deals $1 ATK Bless damage to <color\=#FFFF00>all</color> enemies with a chance of insta-kill if the main target is below $2 HP."
+
 Desire of Life Shell
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，恢復生命值最低的同伴(\d+\.\d+%)攻擊力的生命值。$"="Deals $1 ATK Bless damage to <color\=#FFFF00>all</color> enemies and restores $2 ATK HP to the lowest HP ally."
 
@@ -504,7 +515,7 @@ r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的萬能屬�
 r:"吸收1名敵人<color\=#fffc40>(.*)</color>點精力值。"=Drains <color\=#fffc40>$1</color> SP from 1 enemy.
 
 //Life Drain
-r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的萬能屬性傷害，無視其防禦力，並使自身恢復<color\=#fffc40>37.3%</color>攻擊力的生命值。"=Deals <color\=#fffc40>$1</color> ATK Almighty damage to <color\=#fffc40>1</color> enemy, ignoring DEF\nRestore HP equal to <color\=#fffc40>$1</color> ATK.
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的萬能屬性傷害，並吸取少量生命值。$"="Deals $1 ATK Almighty damage to <color\=#FFFF00>1</color> enemy and drains a small amount of HP."
 
 Carnage Allure
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的萬能屬性傷害，(\d+\.\d+%)攻擊力的詛咒屬性傷害。進化後，對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的萬能屬性傷害，(\d+\.\d+%)攻擊力的對應屬性傷害。$"="Deals $1 ATK Almighty damage and $2 ATK Curse damage to <color\=#FFFF00>all</color> enemies. After evolving, deals $3 ATK Almighty damage and $4 ATK Elemental damage to <color\=#FFFF00>all</color> enemies."
@@ -550,30 +561,25 @@ r:"^使<color\=#FFFF00>1名</color>同伴的攻擊力提升(\d+\.\d+%)，自身�
 r:"^使<color\=#FFFF00>所有</color>同伴的攻擊力提升(\d+\.\d+%)，自身每(\d+)點攻擊力額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續(\d+)回合。$"="Increases <color\=#FFFF00>all</color> allies' ATK by $1 + $3 for every $2 ATK you have, up to $4 for $5 turns."
 
 //Rakukaja
-r:"^使<color\=#FFFF00>1名</color>同伴的防禦力提升(\d+\.\d+%)，自身每(\d+)點防禦力額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續3回合。$"="Increase <color\=#FFFF00>1</color> ally's DEF by $1 + $3 for every $2 DEF you have, up to $4 for 3 turns."
-
-r:"使1名同伴的防禦力提升<color\=#fffc40>(\d+\.\d+%)</color>，自身每500防禦力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限<color\=#fffc40>(\d+\.\d+%)</color>。效果持續3回合。"=Increase 1 ally's DEF by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 500 DEF Wonder has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
+r:"^使<color\=#FFFF00>1名</color>同伴的防禦力提升(\d+\.\d+%)，自身每(\d+)點防禦力額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續(\d+)回合。$"="Increase <color\=#FFFF00>1</color> ally's DEF by $1 + $3 for every $2 DEF you have, up to $4 for $5 turns."
 
 // Marakukaja
-r:"使<color\=#FFFF00>所有</color>同伴的防禦力提升(\d+\.\d+%)，自身每500點防禦力額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續3回合。"=Increase all allies DEF by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 500 DEF Wonder has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
+r:"^使<color\=#FFFF00>所有</color>同伴的防禦力提升(\d+\.\d+%)，自身每(\d+)點防禦力額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續(\d+)回合。$"="Increase <color\=#FFFF00>all</color> allies' DEF by $1 + $3 for every $2 DEF you have, up to $4 for $5 turns."
 
 // Sukukaja
-r:"使<color\=#FFFF00>1名</color>同伴的效果命中、效果抵抗提升(\d+\.\d+%)，自身每(\d+%)效果命中額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續(\d+)回合。$"="Increases <color\=#FFFF00>1</color> ally's EHR and Effect RES by $1 for $5 turns, additionally increase $3 for every $2 EHR you have, up to $4."
-r:"使1名同伴的效果命中、效果抵抗提升<color\=#fffc40>(\d+\.\d+%)</color>，自身每25%效果命中額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限<color\=#fffc40>(\d+\.\d+%)</color>。效果持續3回合。"=Increase 1 ally's Effect Hit Rate and Effect RES by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 25% Effect Hit Rate Wonder has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
+r:"^使<color\=#FFFF00>1名</color>同伴的效果命中、效果抵抗提升(\d+\.\d+%)，自身每(\d+%)效果命中額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續(\d+)回合。$"="Increases <color\=#FFFF00>1</color> ally's EHR and Effect RES by $1 + $3 for every $2 EHR you have, up to $4 for $5 turns."
 
 // Masukukaja
-r:"使所有同伴的效果命中、效果抵抗提升<color\=#fffc40>(\d+\.\d+%)</color>，自身每25%效果命中額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限<color\=#fffc40>(\d+\.\d+%)</color>。效果持續3回合。"=Increase all allies Effect Hit Rate and Effect RES by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 25% Effect Hit Rate Wonder has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
+r:"^使<color\=#FFFF00>所有</color>同伴的效果命中、效果抵抗提升(\d+\.\d+%)，自身每(\d+%)效果命中額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續(\d+)回合。$"="Increases <color\=#FFFF00>all</color> allies' EHR and Effect RES by $1 + $3 for every $2 EHR you have, up to $4 for $5 turns."
 
 Heat Riser
 r:"^攻擊力、防禦力、效果命中、效果抵抗提升(\d+\.\d+%)$"="Increase ATK, DEF, EHR, \nand Effect RES by $1"
 
 //Rebellion
-r:"^使<color\=#FFFF00>1名</color>同伴的暴擊率提升(\d+\.\d+%)，自身每(\d+%)暴擊率額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續3回合。$"="Increases <color\=#FFFF00>1</color> ally's CRIT Rate by $1 + $3 for every $2 CRIT you have, up to $4 for 3 turns."
+r:"^使<color\=#FFFF00>1名</color>同伴的暴擊率提升(\d+\.\d+%)，自身每(\d+%)暴擊率額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續3回合。$"="Increases <color\=#FFFF00>1</color> ally's CRIT Rate by $1 + $3 for every $2 CRIT Rate you have, up to $4 for 3 turns."
 
 //Revolution
-r:"^使<color\=#FFFF00>所有</color>同伴的暴擊率提升(\d+\.\d+%)，自身每(\d+%)暴擊率額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續3回合。$"="Increases <color\=#FFFF00>all</color> allies' CRIT Rate by $1 + $3 for every $2 CRIT you have, up to $4 for 3 turns."
-
-r:"使所有同伴的暴擊率提升<color\=#fffc40>(\d+\.\d+%)</color>，自身每10%暴擊率額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+\.\d+%)。效果持續3回合。"=Increase all allies CRIT Rate by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 10% CRIT Rate Wonder has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
+r:"^使<color\=#FFFF00>所有</color>同伴的暴擊率提升(\d+\.\d+%)，自身每(\d+%)暴擊率額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續3回合。$"="Increases <color\=#FFFF00>all</color> allies' CRIT Rate by $1 + $3 for every $2 CRIT Rate you have, up to $4 for 3 turns."
 
 // Hunter's Code
 r:"使<color\=#FFFF00>1名</color>同伴造成的傷害提升(\d+\.\d+%)，並根據目標同伴的效果命中額外提升效果。每20%提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續2回合。"=Increase 1 ally's damage dealt by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 20% Effect Hit Rate the ally has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
@@ -584,8 +590,10 @@ r:"^使<color\=#FFFF00>自身</color>下1次造成的物理屬性傷害提升(\d
 //Concentrate
 r:"使自身下1次造成的魔法屬性傷害提升<color\=#fffc40>(\d+\.\d+%)</color> ，效果持續1回合。"=Increases your next Magic attack damage by <color\=#fffc40>$1</color> for 1 turn.
 
+Fire of Purification
+r:"^使<color\=#FFFF00>所有</color>友方角色的攻擊力提升(\d+\.\d+%)\+自身每(\d+)攻擊力額外提升(\d+\.\d+%)，上限(\d+%)，持續(\d+)回合。並使技能主目標獲得「淨世之火」，持續(\d+)回合。「淨世之火」：對敵方角色釋放{{A}}技能造成傷害後，有(\d+%)的基礎機率使隨機(\d+)名敵人陷入燃燒狀態。$"="Increases <color\=#FFFF00>all</color> allies' ATK by $1 + $3 for every $2 ATK you have, up to $4 for $5 turns. Gives the main target [Fire of Purification] for $6 turns. [Fire of Purification]: After dealing {{A}} skill damage to enemies, there is a $7 base chance to inflict $8 random enemy with Burn."
+
 //(dominion)
-r:"使所有同伴的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每500攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)，效果持續2回合。並使技能主目標造成的傷害額外提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每500攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)。效果持續1回合。"=Increase all allies ATK by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 500 ATK Wonder has to a maximum of <color\=#fffc40>$3</color> for 3 turns. Increase ATK of the main target by an additional <color\=#fffc40>$4</color> + <color\=#fffc40>$5</color> for every 500 ATK Wonder has to a maximum of <color\=#fffc40>$6</color> for 1 turn.
 r:"^使<color\=#FFFF00>所有</color>同伴攻擊力提升(\d+\.\d+%)\+每(\d+)攻擊力額外提升(\d+\.\d+%)，持續(\d+)回合。使主目標同伴造成的傷害提升(\d+\.\d+%)\+每(\d+)攻擊力額外提升(\d+\.\d+%)，持續(\d+)回合。$"="Increases <color\=#FFFF00>all</color> allies' ATK by $1 + $3 for every $2 ATK for $4 turns. Increases the main target's DMG Dealt by $5 + $7 for every $6 ATK for $8 turn."
 
 //norn
@@ -610,13 +618,13 @@ r:"使<color\=#FFFF00>1名</color>敵人的防禦力降低(\d+\.\d+%)，持續3�
 r:"使<color\=#FFFF00>所有</color>敵人的防禦力降低(\d+\.\d+%)，持續3回合。"=Decreases <color\=#FFFF00>all</color> enemies' DEF by $1 for 3 turns.
 
 //Tarunda
-r:"使<color\=#FFFF00>1名</color>敵人的攻擊力降低(\d+\.\d+%)，持續3回合。"=Decrease <color\=#FFFF00>1</color> enemy's ATK by $1 for 3 turns.
+r:"使<color\=#FFFF00>1名</color>敵人的攻擊力降低(\d+\.\d+%)，持續3回合。"=Decreases <color\=#FFFF00>1</color> enemy's ATK by $1 for 3 turns.
 
 // Matarunda
-r:"使<color\=#FFFF00>所有</color>敵人的攻擊力降低(\d+\.\d+%)，持續3回合。"=Decrease <color\=#FFFF00>all</color> enemies ATK by $1 for 3 turns.
+r:"使<color\=#FFFF00>所有</color>敵人的攻擊力降低(\d+\.\d+%)，持續3回合。"=Decreases <color\=#FFFF00>all</color> enemies ATK by $1 for 3 turns.
 
 // Debilitate
-r:"使<color\=#FFFF00>1名</color>敵方攻擊、防禦、效果命中、效果抵抗降低(\d+\.\d+%)，效果持續3回合。"=Decrease <color\=#FFFF00>1</color> enemy's ATK, DEF, EHR, and Effect RES by $1 for 3 turns.
+r:"使<color\=#FFFF00>1名</color>敵方攻擊、防禦、效果命中、效果抵抗降低(\d+\.\d+%)，效果持續3回合。"=Decreases <color\=#FFFF00>1</color> enemy's ATK, DEF, EHR, and Effect RES by $1 for 3 turns.
 
 Elec Break
 消除<color\=#FFFF00>1名</color>敵人的電擊耐性，效果持續2回合。=Negates Electric resistance of <color\=#FFFF00>1</color> enemy for 2 turns.
@@ -741,6 +749,8 @@ r:"^<color\=#FF0000>(.*){{A}}</color>進入了絕望狀態……$"="Inflicted wi
 r:"^<color\=#FF0000>(.*){{A}}</color>進入了恐懼狀態……$"="Inflicted with Fear..."
 r:"^<color\=#FF0000>(.*){{A}}</color>進入了混亂狀態……$"="Inflicted with Confuse..."
 r:"^<color\=#FF0000>(.*){{A}}</color>進入了洗腦狀態……$"="Inflicted with Brainwash..."
+
+r:"^<color\=#FF0000>(.*)</color>進入了冰封狀態……$"="Inflicted with Ice Seal..."
 
 r:"^<color\=#FF0000>(.*){{B}}</color>被{{A}}瞄準了，防禦降低……$"="<color\=#FF0000>Enemy</color> aimed by {{A}}, DEF Down!"
 r:"^<color\=#FF0000>(.*){{A}}</color>被{{B}}瞄準了，防禦降低……$"="<color\=#FF0000>Enemy</color> aimed by {{B}}, DEF Down!"
@@ -1086,6 +1096,7 @@ r:"^詛咒傷害提升(\d+(.\d+)?(%)?)$"="Increase Curse DMG by $1"
 r:"^詛咒傷害提高(\d+(.\d+)?(%)?)$"="Increase Curse DMG by $1"
 r:"^萬能傷害提升(\d+(.\d+)?(%)?)$"="Increase Almighty DMG by $1"
 r:"^萬能傷害提高(\d+(.\d+)?(%)?)$"="Increase Almighty DMG by $1"
+r:"^萬能屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase Almighty DMG by $1"
 r:"^治療效果提升(\d+(.\d+)?(%)?)$"="Increase Healing Effect by $1"
 r:"^護盾效果提升(\d+(.\d+)?(%)?)$"="Increase Shield Effect by $1"
 r:"^剩餘護盾值：(\d+)$"="Shield: $1"
@@ -1142,6 +1153,7 @@ r:"^受火焰傷害提高(\d+(.\d+)?(%)?)$"="Increase Fire DMG Taken by $1"
 r:"^受到火屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase Fire DMG Taken by $1"
 r:"^受到火焰傷害提升(\d+(.\d+)?(%)?)$"="Increase Fire DMG Taken by $1"
 r:"^受到火焰傷害提高(\d+(.\d+)?(%)?)$"="Increase Fire DMG Taken by $1"
+r:"^受到火焰/冰凍傷害提升(\d+(.\d+)?(%)?)$"="Increase Fire/Ice DMG Taken by $1"
 r:"^受冰凍傷害提升(\d+(.\d+)?(%)?)$"="Increase Ice DMG Taken by $1"
 r:"^受冰凍傷害提高(\d+(.\d+)?(%)?)$"="Increase Ice DMG Taken by $1"
 r:"^受到冰凍傷害提升(\d+(.\d+)?(%)?)$"="Increase Ice DMG Taken by $1"

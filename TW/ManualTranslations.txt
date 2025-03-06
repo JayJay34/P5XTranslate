@@ -200,7 +200,10 @@ sr:"^已為(.*)點讚。$"="Liked $1."
 舉報=Report
 刷新好友列表過快。=Please wait before refreshing.
 暫時還沒有好友申請。=No Friend Request.
+隱藏數：=Hidden:
 暫無隱藏的玩家。=No Hidden Player.
+刪除好友會同時將自己從對方好友列表中刪除，確定刪除嗎？=This will also delete you from their friends list, are you sure?
+刪除成功。=Delete success.
 
 r:"^輸入上限(\d+)個字$"="Up to $1 characters"
 r:"^(\d+)天前$"="$1d ago"
@@ -634,8 +637,8 @@ r:"^懷<color\=#ff0000ff>舊</color>遊戲店$"="Re<color\=#ff0000ff>tr</color>o
 
 商店=Shop
 購物=Shop
-r:"^(\d+)天後重置$"="Reset after $1 day(s)"
-r:"^(\d+)小時後重置$"="Reset after $1 hour(s)"
+r:"^(\d+)天後重置$"="Resets after $1 day(s)"
+r:"^(\d+)小時後重置$"="Resets after $1 hour(s)"
 
 ----------
 Area Names
@@ -774,7 +777,6 @@ r:"主角達到(\d+)級可繼續突破"=Unlocks when Wonder is level $1
 替換武器將自動繼承武器等級=Weapon level will\ncarry over between equips
 生存遊戲專賣店可獲取更多武器=Obtain more weapons at Iwai's Weapon Store
 r:"主角(\d+)級解鎖"=Level $1 Unlock
-r:"怪盜(\d+)級時可繼續提升"=Skill can level up at Lv $1
 不羈能力發覺後解鎖=<size\=16>Gain levels to unlock</size>
 長按怪盜可便捷進行培養=Long press to customize
 升級獎勵=Rewards
@@ -794,6 +796,7 @@ Class/ Stats Screen
 稀有度由高至低=High to Low ★
 推薦陣容=<size\=30>Recommendation</size>
 初始陣容=Starting Team
+陣容記錄=Team Record
 陣容=Team
 已設置為默認方案。=Set as default team.
 確認要刪除該方案嗎？=Delete this team?
@@ -801,6 +804,7 @@ Class/ Stats Screen
 已設為關注怪盜。=Added Thief to favourites.
 
 慾望奏鳴=Sonata
+協奏=Concerto
 相同屬性怪盜和當前{{A}}出戰時，可啟動慾望奏鳴效果。=<size\=23>Activate Desire Sonata when Thieves with the same element are in battle.</size>
 面具協奏效果一覽=Mask Concerto Effect
 面具協奏：增強上陣怪盜中的四種屬性傷害。=<size\=21>Mask Concerto: Increase elemental damage based on active Thieves.</size>
@@ -1587,12 +1591,8 @@ sr:"^人格指數「(.*)」已解鎖全部能力。$"="Unlocked all skills for S
 
 r:"^作為禮物贈與協同者，可提升(\d+)點親密度，首次贈送額外增加(\d+)點親密度，『喜愛之物』額外增加(\d+)點親密度。$"="<size\=25>\nGrants $1 Confidant Points. \nFirst time bonus grants $2 Confidant Pts. \n[Favourite Items] grants $3 Confidant Pts.</size>"
 用於提升與協同者的好感度。=<size\=25>Used for granting Confidant Points.</size>
-r:"^「{{A}}」可能會喜歡這件禮物。\n基礎好感度\+(\d+)，偏好禮物額外\+(\d+)，偏好禮物首次贈送額外\+(\d+)。$"="[{{A}}] might like this gift. \nConfidant Points +$1 \nFavourite Items +$2 \nFavourite Items First Time Bonus +$3"
-r:"^「{{A}}、{{B}}」可能會喜歡這件禮物。\n基礎好感度\+(\d+)，偏好禮物額外\+(\d+)，偏好禮物首次贈送額外\+(\d+)。$"="[{{A}}, {{B}}] might like this gift. \nConfidant Points +$1 \nFavourite Items +$2 \nFavourite Items First Time Bonus +$3"
-r:"^「{{B}}、{{A}}」可能會喜歡這件禮物。\n基礎好感度\+(\d+)，偏好禮物額外\+(\d+)，偏好禮物首次贈送額外\+(\d+)。$"="[{{B}}, {{A}}] might like this gift. \nConfidant Points +$1 \nFavourite Items +$2 \nFavourite Items First Time Bonus +$3"
-r:"^「{{A}}」可能會喜歡這件禮物。\n基礎好感度\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物額外\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物首次贈送額外\+(\d+)。$"="[{{A}}] might like this gift. \nConfidant Points +$1 (<size\=40><sprite\=1></size>+$2)\nFavourite Items +$3 (<size\=40><sprite\=1></size>+$4)\nFavourite Items First Time Bonus +$5"
-r:"^「{{A}}、{{B}}」可能會喜歡這件禮物。\n基礎好感度\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物額外\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物首次贈送額外\+(\d+)。$"="[{{A}}, {{B}}] might like this gift. \nConfidant Points +$1 (<size\=40><sprite\=1></size>+$2)\nFavourite Items +$3 (<size\=40><sprite\=1></size>+$4)\nFavourite Items First Time Bonus +$5"
-r:"^「{{B}}、{{A}}」可能會喜歡這件禮物。\n基礎好感度\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物額外\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物首次贈送額外\+(\d+)。$"="[{{B}}, {{A}}] might like this gift. \nConfidant Points +$1 (<size\=40><sprite\=1></size>+$2)\nFavourite Items +$3 (<size\=40><sprite\=1></size>+$4)\nFavourite Items First Time Bonus +$5"
+sr:"^「(.*)」可能會喜歡這件禮物。\n基礎好感度\+(\d+)，偏好禮物額外\+(\d+)，偏好禮物首次贈送額外\+(\d+)。$"="[$1] might like this gift. \nConfidant Points +$2 \nFavourite Items +$3 \nFavourite Items First Time Bonus +$4"
+sr:"^「(.*)」可能會喜歡這件禮物。\n基礎好感度\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物額外\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物首次贈送額外\+(\d+)。$"="[$1] might like this gift. \nConfidant Points +$2 (<size\=40><sprite\=1></size>+$3)\nFavourite Items +$4 (<size\=40><sprite\=1></size>+$5)\nFavourite Items First Time Bonus +$6"
 r:"^基礎好感度\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)），偏好禮物額外\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)），偏好禮物首次贈送額外\+(\d+)。$"="Confidant Points +$1 (<size\=40><sprite\=1></size>+$2)\nFavourite Items +$3 (<size\=40><sprite\=1></size>+$4)\nFavourite Items First Time Bonus +$5"
 r:"^基礎好感度\+(\d+)，偏好禮物額外\+(\d+)，偏好禮物首次贈送額外\+(\d+)。$"="Confidant Points +$1\nFavourite Items +$2\nFavourite Items First Time Bonus +$3"
 
@@ -2149,6 +2149,9 @@ r:"^厄抑之境$"="Metaverse Farm"
 裝配冶藝=Ore Farm
 『靈之參悟』=[Incense Farm]
 「靈之參悟」=[Incense Farm]
+耀之寶庫=Persona Emblem Farm
+『耀之寶庫』=[Persona Emblem Farm]
+「耀之寶庫」=[Persona Emblem Farm]
 靈之參悟=Incense Farm
 『榮級求索』=[Character EXP Farm]
 「榮級求索」=[Character EXP Farm]
@@ -2170,18 +2173,20 @@ r:"^厄抑之境·啟示套裝$"="Revelation Card Farm"
 往日回溯=Past Echo
 主線：{{A}}\n完成後開啟挑戰=<size\=20>Unlock after completing\nStory: {{A}}</size>
 
-武器突破材料=Weapon Ascension
-掉落高級技能材料=Palace Boss (30)
-怪盜升級材料=Char Lv (20)
-大量魂石=Soul Gem (20)
-面具升級材料=Persona Lv (20)
-武器升級材料=Weapon Lv (20)
+掉落高級技能材料=Palace Boss
+怪盜潛能材料=Char Ascend
+武器突破材料=Wpn Ascend
+技能升級材料=Skill Lv
 
-技能升級材料=Skill Lv (30)
-怪盜潛能材料=Char Ascend (30)
-武器突破材料=Wpn Ascend (30)
+面具兌換中級代幣=Persona Coins
+面具兌換低級代幣=Persona Coins
 
-r:"^怪盜天賦材料$"="<size\=30>Mental Image (30)</size>"
+怪盜升級材料=Char Lv
+武器升級材料=Weapon Lv
+面具升級材料=Persona Lv
+
+怪盜天賦材料=Mental Image
+大量魂石=Soul Gems
 
 r:"^陰影被擊敗後，使全體怪盜造成傷害提升(.*)，可疊加(.*)層$"="After defeating a Shadow, increase all Thieves' DMG Dealt by $1, up to $2 stacks"
 r:"^全體怪盜受治療/護盾效果提升(.*)，受治療/護盾後造成傷害提升(.*)；戰鬥開始時全體怪盜損失(.*)生命值$"="Increase all Thieves' Healing Received/Shield Effect by $1, increase DMG Dealt after Healed/Shieled by $2; All Thieves lose $3 HP at the start of battle"
@@ -2196,6 +2201,7 @@ r:"^全體怪盜<color\=#ff63ff>念動</color>傷害提高(\d+(.\d+)?(%)?)$"="In
 r:"^全體怪盜<color\=#fffea0>祝福</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#fffea0>Bless</color> DMG by $1"
 r:"^全體怪盜<color\=#ff0036>HL</color>造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff0036>HIGHLIGHT</color> DMG Dealt by $1"
 r:"^全體怪盜<color\=#ff0036>追加效果</color>造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff0036>Follow Up</color> DMG Dealt by $1"
+r:"^全體怪盜<color\=#E3E3E3>萬能</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#E3E3E3>Almighty</color> DMG by $1"
 
 r:"^保底進度：<color\=#0665ca>(\d+)/(\d+)</color>$"="Pity: <color\=#0665ca>$1/$2</color>"
 r:"^領取 <color\=#0665ca>(\d+)</color> 次必得$"="Guarantee after <color\=#0665ca>$1</color> time(s)"
@@ -2505,6 +2511,7 @@ sr:"^是否現在追蹤任務「(.*)」？$"="Track the mission \n"$1"?"
 // Friends Screen
 輸入玩家的ID進行搜索=Search by Player ID
 搜索=►
+已經發消息給對方了，應該很快就會回覆了吧。=Sent friend request.
 
 // Crepe Shop Quiz
 烙餅、放入奶油、再放草莓，\n然後把餅卷起來，再用紙包好。=Remember these steps:\nPrepare the pie, then add some cream, then strawberries, then roll up the pie. Don't forget to wrap it in paper!
@@ -2848,10 +2855,14 @@ r:"^天<color\=#ff0000ff>鵝</color>絨房間$"="Ve<color\=#ff0000ff>lv</color>e
 sr:"^省略中途合體步驟獲得<color\=#FFF000>(.*)</color>所需的全部印記如下：$"="Skip fusion steps and obtain <color\=#FFF000>$1</color>:"
 r:"^是否快速從兌換商店，自動兌換全部【缺少印記材料】？\n將消耗<size\=60><sprite\=33></size>x(\d+)。$"="<size\=28>Want to automatically exchange all missing [Persona Mark] from the shop? \nThis will cost <size\=60><sprite\=33></size>x$1.</size>"
 r:"^是否快速從兌換商店，自動兌換全部【缺少印記材料】？\n將消耗<size\=60><sprite\=34></size>x(\d+)。$"="<size\=28>Want to automatically exchange all missing [Persona Mark] from the shop? \nThis will cost <size\=60><sprite\=34></size>x$1.</size>"
+r:"^是否快速從兌換商店，自動兌換全部【缺少印記材料】？\n將消耗不羈紋章·空x(\d+)。$"="<size\=28>Want to automatically exchange all missing [Persona Mark] from the exchange shop? \nThis will cost $1 Wild Card Emblem·Dull.</size>"
+r:"^是否快速從兌換商店，自動兌換全部【缺少印記材料】？\n將消耗不羈紋章·耀x(\d+)。$"="<size\=28>Want to automatically exchange all missing [Persona Mark] from the exchange shop? \nThis will cost $1 Wild Card Emblem·Shiny.</size>"
+r:"^是否快速從兌換商店，自動兌換全部【缺少印記材料】？\n將消耗不羈紋章·空x(\d+)不羈紋章·耀x(\d+)。$"="<size\=28>Want to automatically exchange all missing [Persona Mark] from the exchange shop? \nThis will cost $1 Wild Card Emblem·Dull and \n$2 Wild Card Emblem·Shiny.</size>"
 可合體=Fusible
 r:"^未登錄$"="<size\=19>  Not Registered</size>"
 sr:"^本次合體結果將轉化為1個<color\=#FF0000>(.*)印記</color>$"="Convert fusion result into 1 <color\=#FF0000>$1 Mark</color>"
 所需合成材料不足。=Insufficient fusion material.
+印記道具不足。=Insufficient mask item.
 所需貨幣不足。=Insufficient currency.
 想要做點什麼呢？=What do you want to do?
 r:"^Lv.(\d+) 解鎖新技能$"="Lv.$1 Next Skill"
