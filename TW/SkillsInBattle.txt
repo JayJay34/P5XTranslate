@@ -302,9 +302,6 @@ r:"^對所有敵人造成萬能屬性傷害。$"="Deals Almighty damage to all e
 r:"^對所有敵人造成大量萬能屬性傷害。$"="Deals heavy Almighty damage to all enemies."
 r:"^對所有敵人造成特大萬能屬性傷害。$"="Deals severe Almighty damage to all enemies."
 
-//ST
-sr:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>1</color> enemy.
-
 //ST Multi-Hit Constant
 sr:"對<color\=#FFFF00>1名</color>敵人造成(\d+)次(\d+\.\d+%)攻擊力的(.*)屬性傷害。"=Deals <color\=#FFFF00>$2</color> ATK $3 damage to <color\=#FFFF00>1</color> enemy $1x.
 
@@ -377,6 +374,9 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+)段(\d+\.\d+%)攻擊力的
 
 //Seth's Funny Move
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，若造成了暴擊，則額外造成1點倒地值傷害。"=
+
+Riot Gun
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊點射擊屬性傷害，暴擊率提升(\d+%)，命中率降低(\d+%)$"="Deals <color\=#fffc40>$1</color> ATK Gun damage to all enemies, increases CRIT Rate by $2 and decreases Hit Rate by $3"
 
 --- Fire ---
 
@@ -712,6 +712,7 @@ r:"^該技能尚未達到使用條件$"="You have not reached the condition to u
 
 Battle Quotes
 當前HP不足。=Insufficient HP.
+r:"^<color\=#FF0000>全體怪盜</color>生命值上限提高……$"="<color\=#FF0000>All allies</color> Max HP Up!"
 r:"^<color\=#FF0000>所有同伴</color>攻擊力提升……$"="<color\=#FF0000>All allies</color> ATK Up!"
 r:"^<color\=#FF0000>所有同伴</color>防禦力提升……$"="<color\=#FF0000>All allies</color> DEF Up!"
 r:"^<color\=#FF0000>所有同伴</color>造成的傷害提升了……$"="<color\=#FF0000>All allies</color> DMG Dealt Up!"
@@ -805,6 +806,7 @@ r:"^追<color\=#000000>加</color>特化$"="F<color\=#000000>o</color>llow Up Bu
 r:"^傷<color\=#000000>害</color>減免$"="D<color\=#000000>M</color>G RES Up"
 r:"^免<color\=#000000>傷</color>率提升$"="D<color\=#000000>M</color>G RES Up"
 r:"^受<color\=#000000>到</color>傷害降低$"="D<color\=#000000>M</color>G Taken Down"
+r:"^受<color\=#000000>到</color>最終傷害降低$"="F<color\=#000000>i</color>nal DMG Taken Down"
 r:"^暴<color\=#000000>擊</color>提升$"="C<color\=#000000>R</color>IT Rate Up"
 r:"^暴<color\=#000000>擊</color>率提升$"="C<color\=#000000>R</color>IT Rate Up"
 r:"^暴<color\=#000000>擊</color>傷害提升$"="C<color\=#000000>R</color>IT DMG Up"
@@ -897,6 +899,7 @@ r:"^受<color\=#000000>念</color>動傷害提升$"="P<color\=#000000>s</color>y
 r:"^受<color\=#000000>核</color>熱傷害提高$"="N<color\=#000000>u</color>ke DMG Taken Up"
 r:"^受<color\=#000000>核</color>熱傷害提升$"="N<color\=#000000>u</color>ke DMG Taken Up"
 r:"^受<color\=#000000>到</color>核熱傷害提升$"="N<color\=#000000>u</color>ke DMG Taken Up"
+r:"^受<color\=#000000>祝</color>福傷害提高$"="B<color\=#000000>l</color>ess DMG Taken Up"
 r:"^受<color\=#000000>詛</color>咒傷害提升$"="C<color\=#000000>u</color>rse DMG Taken Up"
 r:"^弱<color\=#000000>點</color>暴露$"="W<color\=#000000>e</color>akness Exposed"
 
@@ -946,7 +949,11 @@ r:"^受到最終傷害提高$"="Increase Final DMG Taken"
 r:"^火焰傷害提升$"="Increase Fire DMG"
 r:"^凍結傷害提升$"="Increase Ice DMG"
 r:"^電擊傷害提升$"="Increase Elec DMG"
+r:"^疾風傷害提升$"="Increase Wind DMG"
+r:"^念動傷害提升$"="Increase Psy DMG"
 r:"^核熱傷害提升$"="Increase Nuke DMG"
+r:"^祝福傷害提升$"="Increase Bless DMG"
+r:"^詛咒傷害提升$"="Increase Curse DMG"
 r:"^治療效果提升$"="<size\=26>Increase Healing Effect</size>"
 r:"^護盾效果提升$"="Increase Shield Effect"
 r:"^受治療降低$"="Decrease Healing Received"
@@ -965,15 +972,16 @@ r:"^受弱點傷害提升(\d+%)$"="Increase Weakness DMG by $1"
 受念動傷害提升=Increase Psy DMG Taken
 受到念動傷害提升=Increase Psy DMG Taken
 受到念動傷害提高=Increase Psy DMG Taken
+受核熱傷害提高=Increase Nuke DMG Taken
 受到核熱傷害提升=Increase Nuke DMG Taken
 受到核熱傷害提高=Increase Nuke DMG Taken
+受祝福傷害提高=Increase Bless DMG Taken
 受到祝福傷害提升=Increase Bless DMG Taken
 受到祝福傷害提高=Increase Bless DMG Taken
 受到詛咒傷害提升=Increase Curse DMG Taken
 受到詛咒傷害提高=Increase Curse DMG Taken
 受詛咒傷害提升=Increase Curse DMG Taken
 受詛咒傷害提高=Increase Curse DMG Taken
-r:"^耐性穿透提升(\d+%)$"="Increase Effect RES Ignore by $1"
 
 瞄準=Aim
 瑪哈塔爾卡Ⅳ=Auto-Mataru IV
@@ -1018,7 +1026,7 @@ r:"^處於護盾保護下，防禦力額外提升(\d+(.\d+)?(%)?)$"="Increase DE
 r:"^精力值消耗降低(\d+(.\d+)?(%)?)$"="Decrease SP cost by $1"
 r:"^速度提升(\d+(.\d+)?(%)?)$"="Increase SPD by $1"
 r:"^暴擊率提升(\d+(.\d+)?(%)?)$"="Increase CRIT Rate by $1"
-r:"^持續時間內，所有友方暴擊率提升(\d+(.\d+)?(%)?)"="During this effect,\nincrease all allies' CRIT Rate by $1"
+r:"^持續時間內，所有友方暴擊率提升(\d+(.\d+)?(%)?)$"="During this effect,\nincrease all allies' CRIT Rate by $1"
 r:"^處於額外回合時，暴擊率提升(\d+%)，暴擊效果提升(\d+%)$"="<size\=24>Increase CRIT Rate by $1 and CRIT DMG by $2 during Extra Turn</size>"
 r:"^暴擊傷害提升(\d+(.\d+)?(%)?)$"="Increase CRIT DMG by $1"
 r:"^暴擊效果提升(\d+(.\d+)?(%)?)$"="Increase CRIT DMG by $1"
@@ -1028,6 +1036,7 @@ r:"^精力回復提升(\d+(.\d+)?(%)?)$"="Increase SP Recovery by $1"
 r:"^穿透提升(\d+(.\d+)?(%)?)$"="Increase PEN by $1"
 r:"^穿透提升(\d+%)，可疊加(\d+)層$"="Increase PEN by $1, up to $2 stacks"
 r:"^效果命中提升(\d+(.\d+)?(%)?)$"="Increase EHR by $1"
+r:"^耐性穿透提升(\d+%)$"="Increase RES PEN by $1"
 r:"^基於效果命中提升最終傷害，當前提升(\d+(.\d+)?(%)?)$"="Increase Final DMG based on EHR; \nCurrently increase Final DMG by $1"
 r:"^效果抵抗提升(\d+(.\d+)?(%)?)$"="Increase Effect RES by $1"
 r:"^最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1"
@@ -1055,13 +1064,13 @@ r:"^追加效果造成最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up F
 r:"^使用HL時，造成傷害提高(\d+(.\d+)?(%)?)$"="Increase HIGHLIGHT DMG Dealt by $1"
 r:"^HIGHLIGHT技能的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase HIGHLIGHT Final DMG by $1"
 r:"^傷害減免(\d+(.\d+)?(%)?)$"="Increase DMG RES by $1"
-r:"^受到的傷害降低(\d+(.\d+)?(%)?)"="Decrease DMG Taken by $1"
+r:"^受到的傷害降低(\d+(.\d+)?(%)?)$"="Decrease DMG Taken by $1"
 r:"^受到百分比傷害大幅降低"="Heavily decrease DMG Taken%"
 r:"^受到百分比傷害特大幅降低"="Severely decrease DMG Taken%"
 r:"^受到百分比傷害極大幅降低"="Severely decrease DMG Taken%"
-r:"^受到最終傷害降低(\d+(.\d+)?(%)?)"="Decrease Final DMG Taken by $1"
-r:"^受到的最終傷害降低(\d+(.\d+)?(%)?)"="Decrease Final DMG Taken by $1"
-r:"^最終受到傷害降低(\d+(.\d+)?(%)?)"="Decrease Final DMG Taken by $1"
+r:"^受到最終傷害降低(\d+(.\d+)?(%)?)$"="Decrease Final DMG Taken by $1"
+r:"^受到的最終傷害降低(\d+(.\d+)?(%)?)$"="Decrease Final DMG Taken by $1"
+r:"^最終受到傷害降低(\d+(.\d+)?(%)?)$"="Decrease Final DMG Taken by $1"
 r:"^所有同伴受到的傷害降低(\d+(.\d+)?(%)?)。$"="Decrease DMG Taken by $1"
 r:"^受物理傷害加深(\d+(.\d+)?(%)?)$"="Increase Phys DMG Taken by $1"
 r:"^物理傷害提升(\d+(.\d+)?(%)?)$"="Increase Phys DMG by $1"
@@ -1090,8 +1099,8 @@ r:"^念動傷害提高(\d+(.\d+)?(%)?)$"="Increase Psy DMG by $1"
 r:"^核熱傷害提升(\d+(.\d+)?(%)?)$"="Increase Nuke DMG by $1"
 r:"^核熱傷害提高(\d+(.\d+)?(%)?)$"="Increase Nuke DMG by $1"
 r:"^每層提升(\d+(.\d+)?(%)?)的核熱傷害$"="Increase Nuke DMG by $1 per stack"
-r:"^祝福傷害提升(\d+(.\d+)?(%)?)"="Increase Bless DMG by $1"
-r:"^祝福傷害提高(\d+(.\d+)?(%)?)"="Increase Bless DMG by $1"
+r:"^祝福傷害提升(\d+(.\d+)?(%)?)$"="Increase Bless DMG by $1"
+r:"^祝福傷害提高(\d+(.\d+)?(%)?)$"="Increase Bless DMG by $1"
 r:"^詛咒傷害提升(\d+(.\d+)?(%)?)$"="Increase Curse DMG by $1"
 r:"^詛咒傷害提高(\d+(.\d+)?(%)?)$"="Increase Curse DMG by $1"
 r:"^萬能傷害提升(\d+(.\d+)?(%)?)$"="Increase Almighty DMG by $1"
