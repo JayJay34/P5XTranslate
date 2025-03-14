@@ -30,14 +30,20 @@ r:"^採用比例：(\d+(.\d+)?(%)?)$"="Use Rate: $1"
 r:"^需至少設置(\d+)名出戰怪盜，才能進行挑戰。$"="Need to have at least $1 Thieves in order to challenge."
 沒有更多使用次數，無法設置參戰。=No more Thieves Usage.
 
-r:"^將<color\=#ffc000>返還</color>消耗的<color\=#ffc000>精神力</color>及<color\=#ffc000>參與次數</color>；\n並<color\=#ff3b37>放棄</color>本次<color\=#ff3b37>挑戰結果</color>。\n是否確認？$"="<color\=#ffc000>Return</color> consumed <color\=#ffc000>Mental Energy</color> and <color\=#ffc000>Thieves Usage</color>;\n<color\=#ff3b37>Abandon</color> this <color\=#ff3b37>challenge results</color>.\nAre you sure?"
+
+In game escape
+r:"^將<color\=#ffc000>返還</color>消耗的<color\=#ffc000>精神力</color>及<color\=#ffc000>參與次數</color>；\n並<color\=#ff3b37>放棄</color>本次<color\=#ff3b37>挑戰結果</color>。\n是否確認？$"="<size\=31><color\=#ffc000>Return</color> consumed <color\=#ffc000>Mental Energy</color> and <color\=#ffc000>Thieves Usage</color>;\n<color\=#ff3b37>Abandon</color> this <color\=#ff3b37>challenge results</color>.\nAre you sure?</size>"
+
+In game reset
+將放棄挑戰進度，並重新開啟挑戰。\n<color\=#ffc000>不會額外消耗</color>精神力及參與次數。\n是否確認【再次嘗試】？=<size\=31>Retry this battle?\n<color\=#ffc000>This will not consume</color> Mental Energy and Thieves Usage.</size>
 
 r:"^將<color\=#ffc000>全部返還</color>消耗的<color\=#ffc000>精神力</color>及<color\=#ffc000>參與次數</color>；\n並<color\=#ff3b37>放棄</color>監測點<color\=#ff3b37>挑戰進度</color>。是否確認？$"="<color\=#ffc000>Return all</color> consumed <color\=#ffc000>Mental Energy</color> and <color\=#ffc000>Thieves Usage</color>;\n<color\=#ff3b37>Reset this</color> Monitoring Points <color\=#ff3b37>Progress</color>. Confirm?"
 
-r:"^將<color\=#ffc000>全部返還</color>消耗的<color\=#ffc000>精神力</color>及<color\=#ffc000>參與次數</color>；\n監測點<color\=#ff3b37>重新佔據</color>後，才能挑戰新監測點。\n是否確認？$"="<color\=#ffc000>Return all</color> consumed <color\=#ffc000>Mental Energy</color> and <color\=#ffc000>Thieves Usage</color>;\nYou can only challenge new Monitoring Points after <color\=#ff3b37>clearing this</color>.\nAre you sure?"
-r:"^將<color\=#ff3b37>放棄</color>本期<color\=#ff3b37>所有監測點</color>挑戰進度，\n<color\=#ffc000>全部返還</color>消耗的<color\=#ffc000>精神力</color>及<color\=#ffc000>參與次數</color>，\n監測點<color\=#ff3b37>全部重新佔據</color>後，才能繼續挑戰，\n是否確認？$"="<size\=26><color\=#ff3b37>Reset all Monitoring Points</color>;\n<color\=#ffc000>Return all</color> consumed <color\=#ffc000>Mental Energy</color> and <color\=#ffc000>Thieves Usage</color>;\nYou can only challenge new Monitoring Points after <color\=#ff3b37>rerecapturing all</color> again.\nAre you sure?</size>"
+Reset 1 node
+r:"^將<color\=#ffc000>全部返還</color>消耗的<color\=#ffc000>精神力</color>及<color\=#ffc000>參與次數</color>；\n監測點<color\=#ff3b37>重新佔據</color>後，才能挑戰新監測點。\n是否確認？$"="<size\=31><color\=#ffc000>Return all</color> consumed <color\=#ffc000>Mental Energy</color> and <color\=#ffc000>Thieves Usage</color>;\nYou can only challenge new Monitoring Points after <color\=#ff3b37>clearing this again</color>. Are you sure?</size>"
 
-將放棄挑戰進度，並重新開啟挑戰。\n<color\=#ffc000>不會額外消耗</color>精神力及參與次數。\n是否確認【再次嘗試】？=Retry this battle?\n<color\=#ffc000>This will not consume</color> Mental Energy and Thieves Usage.
+Reset all nodes
+r:"^將<color\=#ff3b37>放棄</color>本期<color\=#ff3b37>所有監測點</color>挑戰進度，\n<color\=#ffc000>全部返還</color>消耗的<color\=#ffc000>精神力</color>及<color\=#ffc000>參與次數</color>，\n監測點<color\=#ff3b37>全部重新佔據</color>後，才能繼續挑戰，\n是否確認？$"="<size\=25><color\=#ff3b37>Reset all Monitoring Points</color>;\n<color\=#ffc000>Return all</color> consumed <color\=#ffc000>Mental Energy</color> and <color\=#ffc000>Thieves Usage</color>;\nYou can only challenge new Monitoring Points after <color\=#ff3b37>clearing all again</color>.\nAre you sure?</size>"
 
 r:"^剩餘回合:$"="   Turn(s) Left:   <size\=1>_</size>"
 
@@ -108,7 +114,8 @@ r:"^所有敵人每有一種<color\=#FFFC40>元素異常</color>狀態，受到�
 r:"^控制磁場(.*)$"="Control Magnetic Field $1"
 r:"^敵人能受到大部分<color\=#FFFC40>精神異常</color>狀態；所有隊員造成<color\=#FFFC40>精神異常</color>狀態時，效果命中大幅提升；處於<color\=#FFFC40>精神異常</color>狀態的敵人受到最終傷害提升(\d+%)$"="Enemies are susceptible to most <color\=#FFFC40>Mental Ailments</color>; Heavily increase all Thieves' EHR when inflicting <color\=#FFFC40>Mental Ailments</color>; Increase the Final DMG Taken of enemies with <color\=#FFFC40>Mental Ailments</color> by $1"
 r:"^效果1：敵人能受到大部分<color\=#FFFC40>精神異常/控制</color>狀態，所有隊員造成<color\=#FFFC40>精神異常/控制</color>狀態時，效果命中大幅提升\n效果2：處於<color\=#FFFC40>精神異常/控制</color>狀態的敵人受到最終傷害提升(\d+(.\d+)?(%)?)$"="<size\=24>Effect 1: Enemies are susceptible to most <color\=#FFFC40>Mental Ailments/Control Effects</color>; Heavily increase EHR when inflicting <color\=#FFFC40>Mental Ailments/Control Effects</color>\nEffect 2: Increase the Final DMG Taken of enemies with <color\=#FFFC40>Mental Ailments/Control Effects</color> by $1</size>"
-
+敵人能受到大部分<color\=#FFFC40>精神異常/控制</color>狀態，所有隊員造成<color\=#FFFC40>精神異常/控制</color>狀態時，效果命中大幅提升=Enemies are susceptible to most <color\=#FFFC40>Mental Ailments/Control Effects</color>; Heavily increase EHR when inflicting <color\=#FFFC40>Mental Ailments/Control Effects</color>
+r:"^處於<color\=#FFFC40>精神異常/控制</color>狀態的敵人受到最終傷害提升(\d+%)$"="Increase the Final DMG Taken of enemies with <color\=#FFFC40>Mental Ailments/Control Effects</color> by $1</size>"
 r:"^倒地磁場(.*)$"="Down Magnetic Field $1"
 r:"^效果1：敵人受到<color\=#FFFC40>ONEMORE/{{A}}</color>傷害提高(\d+%)\n效果2：戰鬥開始及敵人回合開始時，敵人隨機獲得1種屬性弱點（只會存在最新獲得的弱點）$"="<size\=22>Effect 1: Increase all enemies' <color\=#FFFC40>ONEMORE/{{A}}</color> DMG Taken by $1\nEffect 2: At the start of battle and start of enemies' turn, all enemies randomly gain 1 weakness \n(Only the newest weakness will stay).</size>"
 r:"^敵人受到<color\=#FFFC40>ONEMORE/{{A}}</color>傷害提高(\d+%)$"="Increase all enemies' <color\=#FFFC40>ONEMORE/{{A}}</color> DMG Taken by $1"
@@ -136,13 +143,17 @@ r:"^HL能量回復速度降低(\d+%)，使用HL時，最終傷害提高(\d+%)$"=
 r:"^同時擁有(\d+)種元素異常，受到最終傷害提高(\d+%)$"="Inflicted with $1 Elemental Ailments; \nIncrease Final DMG Taken by $2"
 r:"^每有(\d+)種元素異常，受到最終傷害提高(\d+%)，當前(\d+%)$"="For every $1 Elemental Ailment, \nincrease Final DMG Taken by $2; \nCurrently increase Final DMG Taken by $3"
 r:"^受到ONEMORE/{{A}}傷害提升(\d+%)$"="Increase ONE MORE/{{A}} DMG Taken by $1"
+r:"^造成精神異常及控制狀態時，效果命中大幅提升$"="Heavily increase EHR when inflicting \nMental Ailment and Control Effect"
+r:"^處於精神異常或控制狀態，受到最終傷害提高(\d+%)$"="<size\=26>Increase Final DMG Taken by $1 \nwhen inflicted with Mental Ailment/Control Effect</size>"
 
 ----------
 Pop-ups + Quote
 ----------
+r:"^追<color\=#000000>加</color>磁場$"="F<color\=#000000>o</color>llow Up Magnetic Field"
 r:"^倒<color\=#000000>地</color>磁場$"="D<color\=#000000>o</color>wn Magnetic Field"
 r:"^再<color\=#000000>動</color>磁場$"="E<color\=#000000>x</color>tra Turn Magnetic Field"
 r:"^持<color\=#000000>續</color>磁場$"="D<color\=#000000>a</color>mage Over Time Magnetic Field"
+r:"^控<color\=#000000>制</color>磁場$"="C<color\=#000000>o</color>ntrol Magnetic Field"
 r:"^H<color\=#000000> L</color>磁場$"="H<color\=#000000>L</color> Magnetic Field"
 
 r:"^<color\=#FF0000>{{A}}</color>一回合內未造成傷害，下回合最終傷害提升……$"="<color\=#FF0000>{{A}}</color> dealt no damage, \nnext turn Final DMG Up!"

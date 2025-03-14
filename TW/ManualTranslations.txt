@@ -83,6 +83,7 @@ RPG模式縮放靈敏度=RPG Mode Zoom Sensitivity
 主介面聊天資訊縮略=Side Chat
 戰鬥聊天資訊縮略=Side Chat in Combat
 聊天訊息推送=Chat Push Notification
+失焦時劇情暫停自動播放=Disable Auto-Advance When Out of Focus
 
 戰鬥設置=Combat
 Onemore自動選擇目標=<size\=27>Automatically select \nONE MORE target</size>
@@ -309,6 +310,7 @@ r:"^蘆<color\=#ff0000ff>谷</color> {{A}}$"="{{A}} A<color\=#ff0000ff>shi</colo
 r:"^琴<color\=#ff0000ff>音</color>·{{A}}$"="Ko<color\=#ff0000ff>to</color>ne Montagne"
 r:"^道<color\=#ff0000ff>玄</color>坂 {{A}}$"="Ru<color\=#ff0000ff>na</color> Dogenzaka"
 r:"^道<color\=#ff0000ff>玄</color>坂{{A}}$"="Ru<color\=#ff0000ff>na</color> Dogenzaka"
+r:"^夏<color\=#ff0000ff>川</color> {{A}}$"="{{A}} Nat<color\=#ff0000ff>su</color>kawa"
 
 // P5X Side Quest //
 r:"^<color\=#ff0000ff>阿</color>七$"="Shi<color\=#ff0000ff>chi</color>-kun"
@@ -416,7 +418,7 @@ r:"^已購買(\d+)/(\d+)次（每日05:00重置）$"="Purchased $1/$2 times \n(R
 確認要消耗<color\=#f1b500>「空白命運×1」</color>進行一次啟示回溯嗎？\n回溯後將有以下變化：\n1.啟示等級變為0級\n2.主屬性、副屬性的狀態變為初始狀態\n3.返還所有養成到當前等級消耗的經驗材料（以通用啟示材料的形式返還）=<size\=32>Use <color\=#f1b500>[Blank Fate×1]</color> to reset your card?\nAfter resetting:\n1. Set the card back to level 0\n2. Set the main stat and sub stats back to original\n3. Refund all EXP materials\n(In the form of materials)</size>
 時序之墨=Temporal Ink
 蘊含星辰之力的墨水，可用於定制月、星、辰位置的啟示卡。=Ink that contains the power of the stars, can be used to create a customized Revelation Card.
-認知請願書 4星=4★ Cognitive Petition
+認知請願書 4星=<size\=19>4★ Cognitive Petition</size>
 請在以下列表中點擊選擇一位4星怪盜。=Select one 4★ Thief from the list below.
 宇宙的終響=Universe Echo
 來自宇宙的命運指引，打開後可自選一張橙色宙位啟示卡。=A guidance of fate from the Universe, can be used to gain 1 Orange Universe Card
@@ -439,7 +441,9 @@ sr:"^(.*?)遺留在{{A}}的殘識碎片，消耗(\d+)個可以合成角色的殘
 定製武器套件=5★ Weapon Box
 定製武器模組=4★ Weapon Box
 特供武器模組=4★ Weapon Box
+r:"^使用後可自選1把以下怪盜的四星武器：(.*)。$"="Can be used to choose 1 4★ Weapon for the following Thieves: $1."
 定製武器配裝=3★ Weapon Box
+請在以下列表中點擊選擇一把4星武器=Please choose one 4★ Weapon
 請在以下物品中自選一種=Please choose one in the following items
 
 ----------
@@ -668,6 +672,7 @@ Area Names
 ----------
 Menu / UI Translations (Timer)
 ----------
+r:"^(\d+)天(\d+)時後過期$"="Expires in $1d $2h"
 r:"^(\d+)天後過期$"="Expires in $1d"
 r:"^(\d+)天後下架$"="Expires in $1d"
 r:"^(\d+)天(\d+)時後下架$"="Expires in $1d $2h"
@@ -802,6 +807,7 @@ Class/ Stats Screen
 確認要刪除該方案嗎？=Delete this team?
 不可以刪除默認編隊喔=Can't delete the default team
 已設為關注怪盜。=Added Thief to favourites.
+關注已取消。=Removed from favourites.
 
 慾望奏鳴=Sonata
 協奏=Concerto
@@ -863,7 +869,7 @@ r:"^治療效果$"="<size\=22>Healing Effect</size>"
 治療加成=Healing Bonus
 護盾加成=Shield Bonus
 
-物理傷害=Physical DMG
+物理傷害=Phys DMG
 射擊傷害=Gun DMG
 火焰傷害=Fire DMG
 凍結傷害=Ice DMG
@@ -1617,25 +1623,14 @@ r:"^本次贈送會增加<color\=#FFDE00>(\d+)</color>好感度$"="Gain <color\=
 
 sr:"^當前(.*)RANK(\d+)，需要達到RANK(\d+)後繼續升級。本次送出禮物後無法升級，但會保留禮物帶來的好感度，要繼續送出禮物嗎？$"="Currently at $1 Rank $2, need to reach Rank $3 in order to rank up. You will still keep the Confidant Points after giving them a gift, are you sure?"
 
-確定這次約會不送禮物嗎？=Are you sure you do not want to give them a gift?
-目前還是算了吧……=Forget it...
-
 r:"^和{{A}}的關係快要加深了……$"="The bond with {{A}} \nis about to deepen!"
 r:"^和{{A}}的關係就要加深了……$"="The bond with {{A}} \nis about to deepen!"
 r:"^和清的關係就要加深了……$"="The bond with Kiyoshi \nis about to deepen!"
 r:"^和{{A}}的關係差不多要加深了……$"="The bond with {{A}} \nis about to deepen!"
 似乎能更加了解{{A}}了……=Looks like I can know \n{{A}} better...
 
-和{{A}}一起度過放學後的時光吧=Let's spend some time with {{A}} after school
-今天要陪{{A}}嗎……=Want to accompany {{A}} today...?
-今天要陪{{A}}一起嗎……=Want to accompany {{A}} today...?
-你怎麼想，要陪{{A}}嗎？=What do you think? \nWant to accompany {{A}}?
-你怎麼想，要陪{{A}}一起嗎？=What do you think? \nWant to accompany {{A}}?
-你怎麼想，要陪{{A}}共度時光嗎？=What do you think? \nWant to spend time with {{A}}?
-你怎麼想，要花時間陪一下{{A}}嗎？=What do you think? \nWant to spend some time with {{A}}?
-你怎麼想，要花時間陪伴一下{{A}}嗎？=What do you think? \nWant to spend some time with {{A}}?
-
 sr:"^<color\=#FFFF00>(.*)</color>不足$"="<size\=24>Not enough <color\=#FFFF00>$1</color></size>"
+sr:"^<sprite\=(\d+)><color\=#ffb400>(.*)</color>不足$"="Not enough <sprite\=$1><color\=#ffb400>$2</color>"
 sr:"人格指數「(.*)」達到(\d+)級解鎖$"="Unlock when $1 reached rank $2"
 
 去看電影=Watch a movie
@@ -1828,6 +1823,7 @@ r:"^幫助{{A}}$"="<size\=24>Help out\n{{A}}</size>"
 
 和{{A}}出去玩吧=<size\=24>Hang out with\n{{A}}</size>
 r:"^和{{A}}一起度過$"="<size\=24>Hang out with\n{{A}}</size>"
+和{{A}}一起度過放學後的時光吧=Let's spend some time with {{A}} after school
 r:"^和清一起度過$"="<size\=24>Hang out with\nKiyoshi</size>"
 
 兩個人的觀影時間=<size\=24>Movie time \nfor two</size>
@@ -1870,41 +1866,21 @@ r:"^{{A}}似乎有話要說，要陪她嗎？$"="{{A}} seems to have something t
 
 不會膩的甜味=<size\=24>Sugary sweetness</size>
 {{A}}想要和你一起慢慢品嘗點心……=<size\=26>{{A}} wants to savor dim sum with you...</size>
-要帶{{A}}去哪裡呢……=Where to take {{A}}...
 
 遊戲時間到=<size\=24>Game time</size>
 {{A}}想和你一起去遊戲廳……={{A}} wants to go to \nthe arcade with you...
-要和{{A}}去哪裡玩呢？=Where should we hang out?
 
 不再孤單的家=<size\=24>No longer a \nlonely home</size>
 {{A}}想看看你生活的地方……={{A}} wants to see \nwhere you live...
-今天要帶{{A}}回家玩嗎？=Want to bring {{A}} \nhome today?
 
 愛的調味料=<size\=24>Seasoning of love</size>
 {{A}}想學習做飯……={{A}} wants to learn to cook...
-帶{{A}}去哪裡呢？=Where to take {{A}}?
 
 正當關係=<size\=24>Proper relationship</size>
 {{A}}想表現出姐姐的樣子……=<size\=28>{{A}} wants to act like an onee-san...</size>
-要答應{{A}}嗎？=Want to agree to {{A}}?
 
-你今天要陪{{A}}度過嗎？=<size\=28>Do you want to spend time with {{A}} today?</size> 
-今天要和{{A}}一起度過嗎……=<size\=30>Want to spend time with {{A}} today...</size> 
-要和{{A}}一起度過嗎？=<size\=30>Want to spend time with {{A}}?</size> 
-要陪{{A}}一起去嗎？=Want to hang out with {{A}}?
-要和{{A}}一起出去玩嗎？=Want to hang out with {{A}}?
-r:"^要帶{{A}}回家嗎……$"="Want to bring {{A}} home?"
-r:"^帶{{A}}回家吧……$"="Let's bring {{A}} home..."
-
-決定陪{{A}}了……=I've decided to accompany {{A}}...
-決定要陪{{A}}了……=I've decided to accompany {{A}}...
-決定去陪{{A}}了…=I've decided to accompany {{A}}...
-決定和{{A}}一起出去了……=<size\=28>Decided to go out with {{A}}...</size> 
-決定和{{A}}一起行動了……=<size\=28>Decided to hang out with {{A}}...</size> 
-r:"^決定帶{{A}}回家了……$"="Decided to bring {{A}} home..."
-r:"^那就帶{{A}}回家吧……$"="Then let's bring {{A}} home..."
-r:"^決定帶{{A}}回自己家……$"="Decided to bring {{A}} home..."
-r:"^決定帶{{A}}去自己家了……$"="Decided to bring {{A}} home..."
+回家，突擊檢查=<size\=24>Surprise home inspection</size>
+{{A}}想知道你有沒有照顧好自己……={{A}} wants to know if you're taking care of yourself...
 
 r:"^似乎是和{{A}}<color\=#FFC000>第一次</color>去這個地方，應該更能增進感情。$"="<size\=25>This is the <color\=#FFC000>first time</color> I have gone to that place with {{A}}.\nWe should be able to grow closer.</size>"
 
@@ -1938,7 +1914,7 @@ r:"^要<color\=#ff0000>回家</color>嗎？\n還是說去附近的<color\=#ff000
 閱讀消耗：= 
 
 合體<color\=#FFC000>指定{{B}}</color>，好像能受到{{A}}的關注=<size\=25>Fusing <color\=#FFC000>Certain Personas</color> might attract {{A}}'s attention</size>
-磨練<color\=#FFC000>靈巧</color>的話，好像更能受到{{A}}的關注=<size\=25>Increasing <color\=#FFC000>Proficiency</color> might attract {{A}}'s attention</size>
+磨練<sprite\=4><color\=#ffb400>靈巧</color>的話，好像更能受到{{A}}的關注=<size\=24>Increasing <sprite\=4><color\=#ffb400>Proficiency</color> might attract {{A}}'s attention</size>
 去太平堂書店逛一逛，或許能買到有用的書籍=<size\=25>A visit to the Shibuya Bookstore might yield useful books</size>
 聽說有新電影在上映=I heard there's a new movie coming out
 聽說在{{A}}街頭，有一位神秘的占卜師=<size\=25>I heard there's a mysterious fortune-teller in Shinjuku</size>
@@ -2210,6 +2186,7 @@ r:"持有印記：(\d+)"=Mark Owned: $1
 r:"^區域$"="Area"
 嗯？要從{{A}}撤退，返回都市嗎？=Hm? Want to retreat from Mementos\nand head back to the city?
 r:"^領獎需要消耗(\d+)點體力，\n當前體力不足，是否確認潛入？$"="You need to consume $1 Stamina \nin order to claim the rewards.\nYou don't have enough Stamina, \ndo you still want to infiltrate?"
+r:"^挑戰需要消耗(\d+)點體力，\n當前<color\=#ff3b37>體力不足</color>，是否補充體力？$"="Need $1 Stamina to challenge.\n<color\=#ff3b37>You don't have enough Stamina</color>, \nwant to replenish Stamina?"
 本週「往日回溯」剩餘領獎次數已耗盡，\n<color\=#ff3b37>無法獲得挑戰獎勵</color>，是否繼續挑戰？=Reached weekly limit.\n<color\=#ff3b37>You will not gain rewards</color>, \ndo you still want to challenge?
 逃離後不會獲得本次戰鬥獎勵！\n確定要逃離戰鬥嗎？=You will not receive rewards from this battle after escaping! \nAre you sure you want to escape?
 逃離戰鬥後將重置關卡。\n確定要逃離戰鬥嗎？=Escaping will reset the level.\nAre you sure you want to escape?
@@ -2380,6 +2357,18 @@ r:"^加贈$"="Get            <size\=1>.</size>"
 r:"^累計簽到(\d+)日，即可獲得<size\=66><sprite\=19></size>X(\d+)$"="Log in for $1 days to get <size\=66><sprite\=19></size>X$2"
 r:"^累計簽到(\d+)日，即可獲得<size\=66><sprite\=21></size>X(\d+)$"="Log in for $1 days to get <size\=66><sprite\=21></size>X$2"
 r:"^第(\d+)天$"="Day $1"
+
+當前選中：=Selected:
+僅限武器或啟示分解=Can only dismantle weapons or revelation cards
+當前道具<color\=#ff3b37>已鎖定</color>，是否立刻解鎖？=This item is <color\=#ff3b37>locked</color>.\nUnlock it immediately?
+快速選擇=Quick Select
+三星=3★
+二星=2★
+不會快速選擇穿戴中和已經改造的武器=Will not quick select equipped and reformed weapons
+穿戴中的啟示無法分解，請先將啟示卸下。=Cannot dismantle equipped revelation card.
+當勾選道具超過單次分解上限時，將優先分解更低品質的道具=Dismantle the lower quality items first when over the dismantle limit
+不會快速選擇穿戴中啟示=Will not quick select equipped revelation
+已選：= 
 
 ----------
 Velvet Trials (VT)
