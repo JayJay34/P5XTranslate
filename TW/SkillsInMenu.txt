@@ -47,8 +47,10 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 
 元素異常，每回合損失5%生命值，效果持續2回合。=Lose 5% of Max HP each turn for 2 turns.
 元素異常，受到暴擊率提升10%，效果持續2回合。=Increase chance of receiving a CRIT Hit by 10% for 2 turns.
-元素異常，防禦力降低12%，效果持續2回合。=Reduce DEF by 12% for 2 turns.
-元素異常，攻擊力降低12%，效果持續2回合。=Reduce ATK by 12% for 2 turns.
+元素異常，防禦力降低12%，效果持續2回合。=Decrease DEF by 12% for 2 turns.
+元素異常，攻擊力降低12%，效果持續2回合。=Decrease ATK by 12% for 2 turns.
+每回合恢復1%最大生命值，效果持續2回合。=Restore 1% Max HP each turn for 2 turns.
+每回合受到相當於1%最大生命值的傷害，效果持續2回合。=Lose 1% Max HP each turn for 2 turns.
 
 精神異常，無法行動。=Unable to take actions.
 精神異常，無法行動並且每回合回復5%生命值和5%精力值，受到傷害後清除。=Unable to act.\nRestore 5% of Max HP and 5% of Max SP each turn.\nThis ailment clears upon taking damage.
@@ -61,8 +63,6 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 精神異常，攻擊力提升，防禦力降低，只能使用近戰攻擊，攻擊隨機目標。=Increase ATK and decrease DEF.\nCan only use Melee Attack.\nAttack random targets.
 精神異常，無法行動，並會攻擊同伴。=Will attack allies each turn.
 無法行動，被敵方所操控=Unable to act, controlled by enemies
-每回合恢復1%最大生命值，效果持續2回合。=Restore 1% Max HP each turn for 2 turns.
-每回合受到相當於1%最大生命值的傷害，效果持續2回合。=Lose 1% Max HP each turn for 2 turns.
 
 // Skill Names //
 No size on inherit skill names or else they won't work in the inherit menu
@@ -475,13 +475,14 @@ sr:"『HIGHLIGHT』：使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>�
 --- Normal Generalized Skills ---
 
 //ST
-sr:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>1</color> enemy.
+sr:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。$"="Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>1</color> enemy."
 
 //ST Multi-Hit Constant
-sr:"對1名敵人造成(\d+)次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>1</color> enemy $3 times.
+sr:"^對1名敵人造成(\d+)次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。$"="Deals <color\=#FFFF00>$2</color> ATK $3 damage to <color\=#FFFF00>1</color> enemy $1 times."
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(\d+)次物理屬性傷害。$"="Deals <color\=#fffc40>$1</color> ATK Phys damage to 1 enemy $2 times."
 
 //ST Multi-Hit Random
-sr:"對1名敵人造成(\d+\~\d+)次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。"=Deals <color\=#FFFF00>$2</color> ATK $3 damage to <color\=#FFFF00>1</color> enemy $1 times.
+sr:"^對1名敵人造成(\d+\~\d+)次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。$"="Deals <color\=#FFFF00>$2</color> ATK $3 damage to <color\=#FFFF00>1</color> enemy $1 times."
 
 //ST + Ailment
 sr:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，效果持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to 1 enemy, with a <color\=#FFFF00>$3</color> base chance to inflict $4 for 2 turns.
