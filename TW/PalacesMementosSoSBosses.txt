@@ -1384,7 +1384,7 @@ SEASONAL EFFECTS
 使用{{A}}技能或觸發追加效果時，獲得1層『強化印記』，最多可疊加3層；全體怪盜行動一輪後，獲得『強化印記』層數*15%的傷害加成並移除1層『強化印記』。=<size\=24>When a Persona skill is used, or a Follow Up is triggered, you gain 1 layer of the stackable Enhanced Buff. After all party members have acted, gain 15% DMG Bonus per stack and remove 1 layer of Enhanced Buff.</size>
 
 超限崩解=Super Disintegration
-sr:"^{{A}}技能或追加效果每次造成傷害時，使自己獲得(\d+)層『(.*)』。『(.*)』：每層提供(\d+%)的最終傷害加成,持續(\d+)回合,最多可疊加(\d+)層。$"="<size\=27>When dealing a hit of damage with Persona skills or Follow Up, you gain $1 stack of [$2].\n[$3]: Increase Final DMG Bonus by $4 for $5 turns, up to $6 stacks.</size>"
+sr:"^{{A}}技能或追加效果每次造成傷害時，使自己獲得(\d+)層『(.*)』。『(.*)』：每層提供(\d+%)的最終傷害加成,持續(\d+)回合,最多可疊加(\d+)層。$"="<size\=27>When dealing a hit of damage with Persona skills or Follow Up, you gain $1 stack of [$2].\n[$3]: Increases Final DMG Bonus by $4 for $5 turns, up to $6 stacks.</size>"
 深化活性=Deepen Agility
 
 熔岩噴湧=Lava Burst
@@ -1392,7 +1392,7 @@ sr:"^每個回合開始時，獲得一層『(.*)』。『(.*)』：使下一次�
 熱能溢脹=Heat Overflow
 
 晶體虹吸=Crystal Siphon
-r:"^HIGHLIGHT技能的最終傷害提升(\d+%)，追加效果的最終傷害提升(\d+%)。$"="Increase HIGHLIGHT Final DMG by $1 and Follow Up Final DMG by $2."
+r:"^HIGHLIGHT技能的最終傷害提升(\d+%)，追加效果的最終傷害提升(\d+%)。$"="Increases HIGHLIGHT Final DMG by $1 and Follow Up Final DMG by $2."
 
 靈魂感召=Soul Rally
 原始本能=Primal Instinct
@@ -1401,11 +1401,11 @@ r:"^每層提供(\d+%)的最終傷害加成，持續(\d+)回合，最多可疊�
 
 次象擬態=Mirage Mimicry
 蓄力伏擊=Charged Ambush
-sr:"^所有怪盜每累積消耗(.*)點精力值或造成弱點傷害時，使全體怪盜獲得一層『(.*)』。『(.*)』：每層提供(\d+%)的最終傷害加成，持續(\d+)回合，最多可疊加(\d+)層。$"="<size\=24>When all Thieves consumed $1 SP or dealt weakness damage, gain 1 stack of [$2]. [$3]: Each stack increase Final DMG Bonus by $4 for $5 turns, up to $6 stacks.</size>"
+sr:"^所有怪盜每累積消耗(.*)點精力值或造成弱點傷害時，使全體怪盜獲得一層『(.*)』。『(.*)』：每層提供(\d+%)的最終傷害加成，持續(\d+)回合，最多可疊加(\d+)層。$"="<size\=24>When all Thieves consumed $1 SP or dealt weakness damage, gain 1 stack of [$2]. [$3]: Each stack increases Final DMG Bonus by $4 for $5 turns, up to $6 stacks.</size>"
 r:"^蓄<color\=#000000>力</color>伏擊$"="C<color\=#000000>h</color>arged Ambush"
 
 奇異光線=Strange Ray
-sr:"^每個回合開始時，獲得(\d+)層『(.*)』，最多可存儲(\d+)層。使用普通攻擊或觸發追加效果時會消耗(\d+)層。『(.*)』：使本次攻擊造成的最終傷害提升(\d+%)。$"="<size\=23>At the start of each turn, gain $1 stack of [$2], up to $3 stacks. Consume $4 stack when using Melee Attack or triggering Follow Up. [$5]: Increase this attack's Final DMG Dealt by $6.</size>"
+sr:"^每個回合開始時，獲得(\d+)層『(.*)』，最多可存儲(\d+)層。使用普通攻擊或觸發追加效果時會消耗(\d+)層。『(.*)』：使本次攻擊造成的最終傷害提升(\d+%)。$"="<size\=23>At the start of each turn, gain $1 stack of [$2], up to $3 stacks. Consume $4 stack when using Melee Attack or triggering Follow Up. [$5]: Increases this attack's Final DMG Dealt by $6.</size>"
 心率超載=Heart Rate Overload
 r:"^心<color\=#000000>率</color>超載$"="H<color\=#000000>e</color>art Rate Overload"
 
@@ -1418,3 +1418,8 @@ r:"^熱<color\=#000000>能</color>增幅$"="H<color\=#000000>e</color>at Amplifi
 sr:"^每次造成TECHNICAL時，自身獲得(\d+)層『(.*)』，為其他同伴添加(.*)層『(.*)』；『(.*)』：每層提供(\d+%)的最終傷害加成，持續(\d+)回合，最多可疊加(\d+)層。$"="<size\=25>When dealing TECHNICAL, gain $1 stack of [$2] and give all other allies $3 stack of [$4]. [$5]: Each stack increases Final DMG Bonus by $6 for $7 turns, up to $8 stacks.</size>"
 狂熱思維=Fanatic Thinking
 r:"^狂<color\=#000000>熱</color>思維$"="F<color\=#000000>a</color>natic Thinking"
+
+寄生感染=Parasitic Infection
+sr:"^自身使用{{A}}技能造成不同屬性的傷害時，為所有友方添加(.*)層『(.*)』；每次造成TECHNICAL時，為所有友方添加(.*)層『(.*)』。『(.*)』:每層提供(\d+%)的最終傷害加成，持續(\d+)回合，最多可疊加(\d+)層。$"="<size\=24>When dealing {{A}} skill damage with a different element, give all allies $1 stacks of [$2]; When dealing TECHNICAL, give all allies $3 stack of [$4]. [$5]: Each stack increases Final DMG Bonus by $6 for $7 turns, up to $8 stacks.</size>"
+猩紅熱疫=Scarlet Fever
+r:"^猩<color\=#000000>紅</color>熱疫$"="S<color\=#000000>c</color>arlet Fever"
