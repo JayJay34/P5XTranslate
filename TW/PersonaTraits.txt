@@ -5,6 +5,18 @@ r:"^{{A}}等級上限提升至<color\=#FFF000>LV.(\d+)</color>$"="<size\=28>Incr
 ----------
 RANK 1
 ----------
+Mandrake
+r:"^破土而出的尖叫(.*)$"="<size\=28>Groundbreaking Scream $1</size>"
+r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時攻擊力提升(.*)，效果持續(\d+)回合。$"="Increases ATK by $1. At the start of battle, increases ATK by $2 for $3 turns."
+
+Mokoi
+r:"^崩潰的觸碰(.*)$"="Collapsing Touch $1"
+r:"^效果命中提升(\d+\.\d+%)。造成暈眩效果時，效果命中提升(.*)。$"="Increases EHR by $1. Increases EHR by $2 when inflicting Dizzy."
+
+Berith
+r:"^公爵的威嚇(.*)$"="Duke's Intimidation $1"
+r:"^防禦力提升(\d+\.\d+%)。自身受到的弱點傷害降低(.*)。$"="<size\=28>Increases DEF by $1. Decreases own Weak DMG Taken by $2.</size>"
+
 Janosik
 r:"^餘孽收割(.*)$"="Reaper $1"
 r:"^攻擊力提升(\d+\.\d+%)。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。$"="Increases ATK by $1. When allies attack enemies with [Aim], increases ATK by $2."
@@ -12,17 +24,49 @@ r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，使1名敵人獲得『瞄準�
 r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，使1名敵人獲得『瞄準』。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。自身攻擊有『瞄準』的敵人時，造成1次1(\d+%)攻擊力的射擊屬性傷害。$"="Increases ATK by $1. At the start of battle, inflicts 1 enemy with [Aim]. When allies attack enemies with [Aim], increases ATK by $2. When you attack enemies with [Aim], deal an additional $3 ATK Gun damage to them."
 r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，使1名敵人獲得『瞄準』。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。帶有『瞄準』的敵人防禦力額外降低(\d+%)。自身攻擊有『瞄準』的敵人時，造成1次(\d+%)攻擊力的射擊屬性傷害。$"="<size\=22>Increases ATK by $1. At the start of battle, inflicts 1 enemy with [Aim]. When allies attack enemies with [Aim], increases ATK by $2. Additionally decreases DEF by $3 for enemies with [Aim]. When you attack enemies with [Aim], deal an additional $4 ATK Gun damage to them.</size>"
 
-Berith
-r:"^公爵的威嚇(.*)$"="Duke's Intimidation $1"
-r:"^防禦力提升(\d+\.\d+%)。自身受到的弱點傷害降低(.*)。$"="<size\=28>Increases DEF by $1. Decreases own Weak DMG Taken by $2.</size>"
-
 Obariyon
 r:"^靈財的射手(.*)$"="Shooter of Wealth $1"
 r:"^暴擊率提升(\d+\.\d+%)。造成射擊屬性傷害時，暴擊率提升(.*)。$"="<size\=28>Increases CRIT Rate by $1. Increases CRIT Rate by $2 when dealing Gun damage.</size>"
 
+Jack-O'-Lantern
+r:"^愚弄者的狂歡(.*)$"="Fool's Revelry $1"
+r:"^攻擊力提升(\d+\.\d+%)。造成擊倒後，造成的火焰屬性傷害提升(.*)，效果持續(\d+)回合。$"="<size\=29>Increases ATK by $1. After downing an enemy, increases Fire DMG Dealt by $2 for $3 turns.</size>"
+
+Hua Po
+r:"^焚枝的鞭笞(.*)$"="Burning Lash $1"
+r:"^攻擊力提升(\d+\.\d+%)。攻擊處於燃燒狀態的敵人時，攻擊力提升(.*)。$"="<size\=29>Increases ATK by $1. Increases ATK by $2 when attacking enemies inflicted with Burn.</size>"
+
+Koropokkuru
+r:"^抗凍的矮人(.*)$"="<size\=28>Freeze Resistant Dwarf $1</size>"
+r:"^攻擊力提升(\d+\.\d+%)。受到處於凍結狀態下敵人的傷害降低(.*)。$"="<size\=28>Increases ATK by $1. Decreases DMG Taken by $2 from enemies inflicted with Freeze.</size>"
+
+Andras
+r:"^釋放恨意(.*)$"="Unleash Hatred $1"
+r:"^攻擊力提升(\d+\.\d+%)。以敵人為目標釋放{{A}}技能後，使目標受到的冰凍屬性傷害提升(.*)，效果持續(\d+)回合。$"="<size\=26>Increases ATK by $1. After using a {{A}} skill on enemies, increases the target's Ice DMG Taken by $2 for $3 turns.</size>"
+
+Saki Mitama
+r:"^愛的本質(.*)$"="Nature of Love $1"
+r:"^生命值提升(\d+\.\d+%)。造成治療效果後，回復自身(\d+)點精力值。$"="Increases HP by $1. After healing, restores $2 SP to self."
+
 Silky
 r:"^憐愛的霜護(.*)$"="Tender Protection $1"
 r:"^生命值提升(\d+\.\d+%)。驅散精神異常時，恢復目標(.*)攻擊力的生命值。$"="<size\=27>Increases HP by $1. After dispelling Mental Ailment, restores $2 ATK as HP to the target.</size>"
+
+Pixie
+r:"^迷途的勸導(.*)$"="Lost Persuasion $1"
+r:"^攻擊力提升(\d+\.\d+%)。造成擊倒後，提升所有同伴(.*)攻擊力，效果持續(\d+)回合。$"="<size\=29>Increases ATK by $1. After downing an enemy, increases all allies' ATK by $2 for $3 turns.</size>"
+
+Agathion
+r:"^瓶居之恩(.*)$"="Bottled Grace $1"
+r:"^防禦力提升(\d+\.\d+%)。以自身為目標時，治療量提升(.*)。$"="Increases DEF by $1. Increases healing by $2 when targeting self."
+
+Bicorn
+r:"^風行的舞踏(.*)$"="Butoh of Wind $1"
+r:"^攻擊力提升(\d+\.\d+%)。造成擊倒後，造成的疾風屬性傷害提升(.*)，效果持續(\d+)回合。$"="<size\=28>Increases ATK by $1. After downing an enemy, increases Wind DMG Dealt by $2 for $3 turns.</size>"
+
+Kelpie
+r:"^迷霧的領地(.*)$"="Misty Territory $1"
+r:"^暴擊效果提升(\d+\.\d+%)。場上只有1名敵人時，造成的疾風屬性傷害提升(.*)。$"="<size\=27>Increases CRIT DMG by $1. When there is only 1 enemy, increases Wind DMG Dealt by $2.</size>"
 
 Incubus
 r:"^墮落的低語(.*)$"="Fallen Whisper $1"
@@ -31,6 +75,10 @@ r:"^生命值提升(\d+\.\d+%)。造成詛咒屬性傷害後，降低目標(.*)�
 Succubus
 r:"^醉人的呢喃(.*)$"="Intoxicating Murmur $1"
 r:"^攻擊力提升(\d+\.\d+%)。以同伴為目標釋放技能後，提升其(\d+\.\d+%)暴擊率，效果持續1回合。$"="Increases ATK by $1. When using a skill on an ally, increases their CRIT Rate by $2 for 1 turn."
+
+Slime
+r:"^流動的臭氣(.*)$"="Flowing Stench $1"
+r:"^效果抵抗提升(\d+\.\d+%)。受到減益效果時，效果抵抗提升(.*)。$"="Increases Effect RES by $1. When inflicted with debuffs, increases Effect RES by $2."
 
 Genbu
 r:"^極北地的寒冰(.*)$"="Arctic Chill $1"
@@ -43,9 +91,17 @@ Eligor
 r:"^騎士的銳利目光(.*)$"="Knight's Sharp Gaze $1"
 r:"^暴擊效果提升(\d+%)。以1名敵人為目標造成物理屬性傷害時，攻擊力提升(\d+%)，暴擊率提升(\d+%)。$"="<size\=28>Increases CRIT DMG by $1. When dealing Physical damage to 1 enemy, increases ATK by $2 and increases CRIT Rate by $3.</size>"
 
+Ippon-Datara
+r:"^隻眼隻足的隱士(.*)$"="<size\=22>One-Eyed One-Legged Hermit $1</size>"
+r:"^暴擊效果提升(\d+%)。對處於暈眩狀態的敵人暴擊率提升(.*)。$"="Increases CRIT DMG by $1. Increases CRIT Rate by $2 when attacking enemies inflicted with Dizzy."
+
 Oni
 r:"^連鎖詭計(.*)$"="Chain Trick $1"
 r:"^暴擊率提升(\d+\.\d+%)。換手攻擊後，造成的傷害提升(.*)，效果持續(.*)回合。$"="Increases CRIT Rate by $1. Increases DMG Dealt by $2 for $3 turn after Baton Pass."
+
+Inugami
+r:"^失控的亂舞者(.*)$"="Berserk Dancer $1"
+r:"^效果命中提升(\d+%)。造成精神異常後，降低目標(.*)防禦力，效果持續(\d+)回合。$"="Increases EHR by $1. After inflicting Mental Ailment, decreases the target's DEF by $2 for $3 turns."
 
 Yaksini
 r:"^啖鬼的不甘(.*)$"="Ghost's Resentment $1"
@@ -61,7 +117,7 @@ r:"^防禦力提升(\d+\.\d+%)。以同伴為目標釋放技能時，提升其(\
 
 Matador
 r:"^躁動的狂熱祭品(.*)$"="Restless Sacrifice $1"
-r:"^攻擊力提升(\d+%)。攻擊帶有精神異常的敵人時傷害提升(.*)。$"="<size\=25>Increases ATK by $1. Increases damage by $2 when attacking enemies inflicted with Mental Ailement.</size>"
+r:"^攻擊力提升(\d+%)。攻擊帶有精神異常的敵人時傷害提升(.*)。$"="<size\=25>Increases ATK by $1. Increases damage by $2 when attacking enemies inflicted with Mental Ailment.</size>"
 
 Leanan Sidhe
 r:"^戀人的二重奏(.*)$"="Lover's Duet $1"
@@ -69,7 +125,7 @@ r:"^攻擊力提升(\d+\.\d+%)。釋放{{A}}技能攻擊處於防禦力降低狀
 
 Angel
 r:"^實習的神使(.*)$"="Trainee Angel $1"
-r:"^生命值提升(\d+%)。驅散元素異常時，額外使目標回復(.*)攻擊力的生命值。$"="<size\=26>Increases HP by $1. Additionally restores $2 ATK as HP to the target when dispelling Elemental Ailement.</size>"
+r:"^生命值提升(\d+%)。驅散元素異常時，額外使目標回復(.*)攻擊力的生命值。$"="<size\=26>Increases HP by $1. Additionally restores $2 ATK as HP to the target when dispelling Elemental Ailment.</size>"
 
 Archangel
 r:"^崇高的光耀(.*)$"="Sublime Brilliance $1"
@@ -116,7 +172,7 @@ r:"^攻擊力提升(\d+\.\d+%)。釋放{{A}}技能時，對技能主目標造成
 
 Sandman
 r:"^今夜的安眠(.*)$"="Sleep Well Tonight $1"
-r:"^效果命中提升(\d+\.\d+%)。造成睡眠效果時，效果命中提升(.*)。$"="<size\=28>Increase EHR by $1. Increase EHR by $2 when inflicting Sleep.</size>"
+r:"^效果命中提升(\d+\.\d+%)。造成睡眠效果時，效果命中提升(.*)。$"="<size\=28>Increases EHR by $1. Increases EHR by $2 when inflicting Sleep.</size>"
 
 Neko Shogun
 r:"^請你吃魚乾喵(.*)$"="Have a Dried Fish $1"
@@ -151,7 +207,7 @@ r:"^生命值提升(\d+\.\d+%)。造成治療效果後，使目標同伴生命�
 
 Belphegor
 r:"^寒流上的怠惰(.*)$"="Cold Wave of Sloth $1"
-r:"^效果抵抗提升(\d+%)。以敵人為目標釋放{{A}}技能後，使技能主目標受到的冰凍屬性傷害提升(\d+\.\d+%)，效果持續(\d+)回合，若其生命值低於(\d+%)，則效果額外提升(\d+%)。"="<size\=23>Increases Effect RES by $1. After using Persona skill on enemies, increases the main target's Ice DMG Taken by $2 for $3 turns. If they are under $4 HP, additionally increases effect by $5.</size>"
+r:"^效果抵抗提升(\d+%)。以敵人為目標釋放{{A}}技能後，使技能主目標受到的冰凍屬性傷害提升(\d+\.\d+%)，效果持續(\d+)回合，若其生命值低於(\d+%)，則效果額外提升(\d+%)。"="<size\=23>Increases Effect RES by $1. After using a Persona skill on enemies, increases the main target's Ice DMG Taken by $2 for $3 turns. If they are under $4 HP, additionally increases effect by $5.</size>"
 
 Jatayu
 r:"^破空的金翅(.*)$"="<size\=28>Soaring Golden Wings $1</size>"
@@ -176,7 +232,7 @@ r:"^生命值提升(\d+\.\d+%)。以同伴為目標釋放技能後，使其防�
 Hell Biker
 r:"^點燃！引爆(.*)$"="Ignite! Explode! $1"
 r:"^攻擊力提升(\d+\.\d+%)。使場上處於燃燒狀態的敵人受到的火焰屬性傷害提升(\d+%)。$"="<size\=28>Increases ATK by $1. Increases the Fire DMG Taken for enemies inflicted with Burn by $2.</size>"
-r:"^攻擊力提升(\d+\.\d+%)。使場上處於燃燒狀態的敵人受到的火焰屬性傷害提升(\d+%)。自身釋放技能時，場上每有1個處於燃燒狀態的敵人，則自身攻擊力提升(\d+%)，上限3層。$"="<size\=25>Increase ATK by $1. Increases the Fire DMG Taken for enemies inflicted with Burn by $2. When using a skill, increases ATK by $3 for each enemy inflicted with Burn.</size>"
+r:"^攻擊力提升(\d+\.\d+%)。使場上處於燃燒狀態的敵人受到的火焰屬性傷害提升(\d+%)。自身釋放技能時，場上每有1個處於燃燒狀態的敵人，則自身攻擊力提升(\d+%)，上限3層。$"="<size\=25>Increases ATK by $1. Increases the Fire DMG Taken for enemies inflicted with Burn by $2. When using a skill, increases ATK by $3 for each enemy inflicted with Burn.</size>"
 
 Unicorn
 r:"^仙靈的馴守(.*)$"="Fairy Taming $1"
@@ -185,7 +241,7 @@ r:"^造成的治療效果提升(\d+%)。使得身上沒有減益效果的同伴�
 
 White Rider
 r:"^終末之擾動(.*)$"="Doom Disturbance $1"
-r:"^效果命中提升(\d+%)。對敵人釋放{{A}}技能後，目標敵人身上每有1個詛咒效果，則使其受到的詛咒屬性傷害提升(.*)，上限(.*)層，效果持續1回合。$"="<size\=25>Increases EHR by $1. After using a Persona skill on enemies, increase their Curse DMG Taken by $2 for 1 turn for every stack of Curse they have, up to $3 stacks.</size>"
+r:"^效果命中提升(\d+%)。對敵人釋放{{A}}技能後，目標敵人身上每有1個詛咒效果，則使其受到的詛咒屬性傷害提升(.*)，上限(.*)層，效果持續1回合。$"="<size\=25>Increases EHR by $1. After using a Persona skill on enemies, increases their Curse DMG Taken by $2 for 1 turn for every stack of Curse they have, up to $3 stacks.</size>"
 
 Anubis
 r:"^靈魂的判官(.*)$"="Judge of Souls $1"
@@ -412,12 +468,8 @@ r:"^暴擊率提升(\d+\.\d+%)。以同伴為目標釋放{{A}}技能後，使技
 
 Bishamonten
 r:"^暴怒的慧傘(.*)$"="Furious Umbrella $1"
-r:"^暴擊率提升(\d+\.\d+%)。對敵人釋放技能時，主目標敵人身上每有1層元素異常，則使其受到的核熱傷害提升(.*)，上限(.*)層，效果持續(.*)回合。$"="<size\=24>Increases CRIT Rate by $1. After using a skill on enemies, increases the main target's Nuke DMG Taken by $2 for $4 turn for every Elemental Ailement they have, up to $3 stacks.</size>"
-r:"^暴擊率提升(\d+\.\d+%)。對敵人釋放技能時，主目標敵人身上每有1層元素異常，則使其受到的核熱傷害提升(.*)，上限(.*)層，效果持續(.*)回合。並使所有其他敵人獲得該效果的(.*)。$"="<size\=22>Increases CRIT Rate by $1. After using a skill on enemies, increases the main target's Nuke DMG Taken by $2 for $4 turn for every Elemental Ailement they have, up to $3 stacks. All other enemies gain $5 of this effect."
-
-Nebiros
-r:"^被詛咒的血統(.*)$"="Cursed Bloodline $1"
-r:"^<nobr>效果抵抗提升(\d+\.\d+%)。釋放詛咒屬性技能時，消耗的精力值降低(.*)。$"="<nobr>Increases Effect RES by $1. Decreases SP cost of Curse skills by $2."
+r:"^暴擊率提升(\d+\.\d+%)。對敵人釋放技能時，主目標敵人身上每有1層元素異常，則使其受到的核熱傷害提升(.*)，上限(.*)層，效果持續(.*)回合。$"="<size\=24>Increases CRIT Rate by $1. After using a skill on enemies, increases the main target's Nuke DMG Taken by $2 for $4 turn for every Elemental Ailment they have, up to $3 stacks.</size>"
+r:"^暴擊率提升(\d+\.\d+%)。對敵人釋放技能時，主目標敵人身上每有1層元素異常，則使其受到的核熱傷害提升(.*)，上限(.*)層，效果持續(.*)回合。並使所有其他敵人獲得該效果的(.*)。$"="<size\=22>Increases CRIT Rate by $1. After using a skill on enemies, increases the main target's Nuke DMG Taken by $2 for $4 turn for every Elemental Ailment they have, up to $3 stacks. All other enemies gain $5 of this effect."
 
 Dominion
 r:"^天使的號令(.*)$"="Angel's Order $1"
@@ -427,11 +479,15 @@ r:"^號<color\=#000000>令</color>$"="O<color\=#000000>r</color>der"
 號令=Order
 使同伴釋放技能的傷害提升=Increase the damage of allies' skills
 
+Nebiros
+r:"^被詛咒的血統(.*)$"="Cursed Bloodline $1"
+r:"^<nobr>效果抵抗提升(\d+\.\d+%)。釋放詛咒屬性技能時，消耗的精力值降低(.*)。$"="<nobr>Increases Effect RES by $1. Decreases SP cost of Curse skills by $2."
+
 Belial
 r:"^墮落之焰(.*)$"="Fallen Flame $1"
 r:"^效果命中提升(\d+\.\d+%)。敵人獲得持續傷害類效果時，使其獲得『地獄火』狀態，每回合造成(.*)攻擊力的傷害，效果持續(.*)回合，可疊加(.*)層。$"="<size\=23>Increases EHR by $1. Inflicts [Hellfire] when an enemy is inflicted with Damage Over Time, deals $2 ATK damage per turn for $3 turns, up to $4 stack.</size>"
 r:"^效果命中提升(\d+\.\d+%)。敵人獲得持續傷害類效果時，使其獲得『地獄火』狀態，每回合造成(.*)攻擊力的傷害。效果持續(.*)回合，可疊加(.*)層。$"="<size\=23>Increases EHR by $1. Inflicts [Hellfire] when an enemy is inflicted with Damage Over Time, deals $2 ATK damage per turn for $3 turns, up to $4 stack.</size>"
-r:"^效果命中提升(\d+\.\d+%)。敵人獲得持續傷害類效果時，使其獲得『地獄火』狀態，每回合造成(.*)攻擊力的傷害，目標生命值低於(.*)時傷害提升(.*)。效果持續(.*)回合，可疊加(.*)層。$"="<size\=21>Increase EHR by $1. Inflicts [Hellfire] when an enemy is inflicted with Damage Over Time, deals $2 ATK damage per turn for 2 turns, increases the damage by $4 when the target is below $3 HP, up to $5 stack.</size>"
+r:"^效果命中提升(\d+\.\d+%)。敵人獲得持續傷害類效果時，使其獲得『地獄火』狀態，每回合造成(.*)攻擊力的傷害，目標生命值低於(.*)時傷害提升(.*)。效果持續(.*)回合，可疊加(.*)層。$"="<size\=21>Increases EHR by $1. Inflicts [Hellfire] when an enemy is inflicted with Damage Over Time, deals $2 ATK damage per turn for 2 turns, increases the damage by $4 when the target is below $3 HP, up to $5 stack.</size>"
 地獄火=Hellfire
 
 Lilith
@@ -460,7 +516,7 @@ r:"^攻擊力提升(\d+\.\d+%)。處於後臺也能生效：所有同伴每造�
 
 Shiva
 r:"^因果的流轉(.*)$"="Karma Reversal $1"
-r:"^攻擊力提升(\d+\.\d+%)。每回合開始時獲得『慧識』，最多疊加3層。使用固有技能消耗『慧識』，根據消耗數量獲得以下效果：\n1層：增加本次念動攻擊時的傷害(.*)。\n2層：增加敵人防禦力降低(.*)，(.*)回合。\n3層：增加目標受到念動傷害時的暴擊率(.*)，(.*)回合。$"="<size\=21>Increases ATK by $1. Gains 1 stack of [Wisdom] at the start of turn, up to 3 stacks. Consumes all [Wisdom] when using the signature skill and triggers the following effects based on the amount consumed:\n1 stack: Increase this damage by $2. \n2 stacks: Decrease all enemies' DEF by $3 for $4 turn. \n3 stacks: Increase all enemies' Psy DMG CRIT Rate Taken by $5 for $6 turn.</size>"
+r:"^攻擊力提升(\d+\.\d+%)。每回合開始時獲得『慧識』，最多疊加3層。使用固有技能消耗『慧識』，根據消耗數量獲得以下效果：\n1層：增加本次念動攻擊時的傷害(.*)。\n2層：增加敵人防禦力降低(.*)，(.*)回合。\n3層：增加目標受到念動傷害時的暴擊率(.*)，(.*)回合。$"="<size\=21>Increases ATK by $1. Gains 1 stack of [Wisdom] at the start of turn, up to 3 stacks. Consumes all [Wisdom] when using the signature skill and triggers the following effects based on the amount consumed:\n1 stack: Increases this damage by $2. \n2 stacks: Decreases all enemies' DEF by $3 for $4 turn. \n3 stacks: Increases all enemies' Psy DMG CRIT Rate Taken by $5 for $6 turn.</size>"
 慧識=Wisdom
 強化固有技能『{{A}}之舞』=Upgrade [Dance of Destruction]
 
