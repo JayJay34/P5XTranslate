@@ -144,7 +144,7 @@ sr:"『ONE MORE』：對1名敵人造成(.*)屬性傷害。\n『HIGHLIGHT』：�
 sr:"『ONE MORE』：對1名敵人造成(.*)屬性傷害。\n『HIGHLIGHT』：對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。"=ONE MORE: Deals $1 damage to <color\=#FFFF00>1</color> enemy. HIGHLIGHT: Deals <color\=#FFFC40>$2</color> ATK $3 damage to <color\=#FFFF00>all</color> enemies.
 
 //ST ONE MORE, AoE with increased damage taken HIGHLIGHT
-sr:"『ONE MORE』：對1名敵人造成(.*)屬性傷害。\n『HIGHLIGHT』：對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，並使其受到的傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。"=ONE MORE: Deals $1 damage to <color\=#FFFF00>1</color> enemy. HIGHLIGHT: Deals <color\=#FFFC40>$2</color> ATK $3 damage to <color\=#FFFF00>all</color> enemies and increase their damage taken by <color\=#FFFC40>$4</color> for 2 turns.
+sr:"『ONE MORE』：對1名敵人造成(.*)屬性傷害。\n『HIGHLIGHT』：對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，並使其受到的傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。"=ONE MORE: Deals $1 damage to <color\=#FFFF00>1</color> enemy. HIGHLIGHT: Deals <color\=#FFFC40>$2</color> ATK $3 damage to <color\=#FFFF00>all</color> enemies and increase their DMG Taken by <color\=#FFFC40>$4</color> for 2 turns.
 
 //ST ONE MORE, Increase damage dealt by allies HIGHLIGHT
 sr:"『ONE MORE』：對1名敵人造成(.*)屬性傷害。\n『HIGHLIGHT』：使所有同伴造成的傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續2回合。"=ONE MORE: Deals $1 damage to <color\=#FFFF00>1</color> enemy. HIGHLIGHT: Increase all allies' DMG Dealt by <color\=#FFFF00>$2</color> for 2 turns.
@@ -523,10 +523,10 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的萬能�
 --- Recovery ---
 
 // ST Heal
-r:"^使<color\=#FFFF00>1名</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值。+$"=Restore HP equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to 1 ally.
+r:"^使<color\=#FFFF00>1名</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值。$"="Restores $1 ATK + $2 HP to <color\=#fffc40>1</color> ally."
 
 // AoE Heal
-r:"^使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值。+$"=Restore HP equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to all allies.
+r:"^使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值。$"="Restores $1 ATK + $2 HP to <color\=#fffc40>all</color> allies."
 
 // Lotus
 r:"使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，並使自身獲得2層『蓮華』，『蓮華』存在期間，任意單位行動後，若有同伴生命值低於50%，則消耗一層『蓮華』，使其恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，『蓮華』持續1回合。"=<size\=30>Restore HP equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to 1 ally and gain 2 stacks of [Sacred Lotus] for 1 turn. If an ally is below 50% Max HP after their turn while [Sacred Lotus] is present, consume one stack and recover that ally's HP equal to <color\=#fffc40>$3</color> ATK + <color\=#fffc40>$4</color></size>.
@@ -674,33 +674,6 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動�
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deals $1 ATK Nuke damage to <color\=#FFFF00>all</color> enemies and increase their DMG Taken by $2 for $3 turns."
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deals $1 ATK Bless damage to <color\=#FFFF00>all</color> enemies and increase their DMG Taken by $2 for $3 turns."
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deals $1 ATK Curse damage to <color\=#FFFF00>all</color> enemies and increase their DMG Taken by $2 for $3 turns."
-
-//Stat buffs
-r:"戰鬥開始時攻擊力提升(\d+\.\d+%)，持續2回合。"=Increase ATK by $1 at the start of battle for 2 turns.
-r:"戰鬥開始時全員攻擊力提升(\d+\.\d+%)，持續2回合。"=Increase ATK for all allies by $1 at the start of battle for 2 turns.
-r:"戰鬥開始時全員防禦力提升(\d+\.\d+%)，持續2回合。"=Increase DEF for all allies by $1 at the start of battle for 2 turns.
-r:"戰鬥開始時防禦力提升(\d+\.\d+%)，持續2回合。"=Increase DEF by $1 at the start of battle for 2 turns.
-r:"^攻擊提升(\d+\.\d+%)$"="Increase ATK by $1"
-r:"^攻擊力提升(\d+\.\d+%)。\+$"=Increase ATK by $1.
-r:"^生命值提升(\d*\.?\d+%)。\+$"=Increase Max HP by $1.
-r:"^速度提升(\d*\.?\d+%)點。\+$"=Increase SPD by $1.
-r:"^防禦力提升(\d*\.?\d+%)。\+$"=Increase DEF by $1.
-r:"^暴擊率提升(\d*\.?\d+%)。$"=Increase CRIT Rate by $1.
-r:"精力回復效率提升(\d+\.\d+%)。"=Increase SP Recovery by $1.
-r:"^暴擊效果提升(\d*\.?\d+%)。\+$"=Increase CRIT damage by $1.
-r:"^效果命中提升(\d*\.?\d+%)。\+$"=Increase Hit Rate by $1.
-r:"^造成的傷害提升(\d*\.?\d+%)。$"=Increase DMG Dealt by $1.
-r:"^效果抵抗提升(\d*\.?\d+%)。\+$"=Increase Effect RES by $1.
-r:"被包圍時暴擊率提升(\d*\.?\d+%)。"=Increase CRIT Rate by $1 when surrounded.
-r:"先制攻擊時暴擊率提升(\d*\.?\d+%)。"=Increase CRIT Rate by $1 during an ambush.
-
-//Resists
-r:"^受到傷害降低(\d+%)$"="Reduce damage by $1"
-r:"^受到的傷害降低(\d+\.\d+%)。$"=Reduce damage from attacks by $1.
-r:"受到的暴擊率降低(\d*\.?\d+%)。"=Reduce chance of receiving CRIT hits by $1.
-
-//Status Inflict Buffs
-r:"下雨時，造成異常效果時，效果命中提升(\d*\.?\d+%)。"=Increase inflicting rate of all status effects during rainy days by $1.
 
 ----------
 SPECIAL
@@ -1064,6 +1037,7 @@ r:"^追加效果造成最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up F
 r:"^使用HL時，造成傷害提高(\d+(.\d+)?(%)?)$"="Increase HIGHLIGHT DMG Dealt by $1"
 r:"^HIGHLIGHT技能的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase HIGHLIGHT Final DMG by $1"
 r:"^傷害減免(\d+(.\d+)?(%)?)$"="Increase DMG RES by $1"
+r:"^受到傷害降低(\d+(.\d+)?(%)?)$"="Decrease DMG Taken by $1"
 r:"^受到的傷害降低(\d+(.\d+)?(%)?)$"="Decrease DMG Taken by $1"
 r:"^受到百分比傷害大幅降低"="Heavily decrease DMG Taken%"
 r:"^受到百分比傷害特大幅降低"="Severely decrease DMG Taken%"
