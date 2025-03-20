@@ -209,6 +209,7 @@ sr:"^已為(.*)點讚。$"="Liked $1."
 刪除成功。=Delete success.
 
 r:"^輸入上限(\d+)個字$"="Up to $1 characters"
+我的怪盜評級\n（點擊查看）=<size\=28>Thief Rating\n(Click to view)</size> 
 r:"^(\d+)天前$"="$1d ago"
 
 請輸入頻道號（0-999）=Enter the channel number (0-999)
@@ -809,6 +810,7 @@ Class/ Stats Screen
 陣容記錄=Team Record
 陣容=Team
 已設置為默認方案。=Set as default team.
+預設陣容保存成功=Saved as default team
 確認要刪除該方案嗎？=Delete this team?
 不可以刪除默認編隊喔=Can't delete the default team
 已設為關注怪盜。=Added Thief to favourites.
@@ -1247,6 +1249,8 @@ r:"^是否消耗[{{A}}]×(.*)，\n購買(.*)張[{{B}}]？$"="Consume [{{A}}] x $
 
 r:"^簽約$"="Pulls"
 請簽訂命運的契約\n<size\=26>全螢幕可滑動簽字=<size\=28>Please Sign The Contract of Destiny</size>
+請簽訂命運的契約\n<size\=36><color\=#567298>滑動螢幕任意位置=Please Sign The Contract of Destiny\n<size\=36><color\=#567298>Sign anywhere on the screen
+
 
 每10次簽約必出四星或以上怪盜角色。50次簽約後可自選新手五星怪盜角色。具體內容查看【說明】=<b><color\=#FFDF00>Beginner Banner</color></b>\nGuarantee 1 4★ every 10 pulls. \nChoose 1 5★ Thief at 50 pulls.
 新手推薦契約中簽約次數達到=When pull count reaches
@@ -2198,7 +2202,7 @@ r:"^區域$"="Area"
 r:"^領獎需要消耗(\d+)點體力，\n當前體力不足，是否確認潛入？$"="You need to consume $1 Stamina \nin order to claim the rewards.\nYou don't have enough Stamina, \ndo you still want to infiltrate?"
 r:"^挑戰需要消耗(\d+)點體力，\n當前<color\=#ff3b37>體力不足</color>，是否補充體力？$"="Need $1 Stamina to challenge.\n<color\=#ff3b37>You don't have enough Stamina</color>, \nwant to replenish Stamina?"
 本週「往日回溯」剩餘領獎次數已耗盡，\n<color\=#ff3b37>無法獲得挑戰獎勵</color>，是否繼續挑戰？=Reached weekly limit.\n<color\=#ff3b37>You will not gain rewards</color>, \ndo you still want to challenge?
-逃離後不會獲得本次戰鬥獎勵！\n確定要逃離戰鬥嗎？=You will not receive rewards from this battle after escaping! \nAre you sure you want to escape?
+逃離後不會獲得本次戰鬥獎勵！\n確定要逃離戰鬥嗎？=<size\=29>You will not receive rewards from this battle after escaping!\nAre you sure you want to escape?</size>
 逃離戰鬥後將重置關卡。\n確定要逃離戰鬥嗎？=Escaping will reset the level.\nAre you sure you want to escape?
 
 sr:"^挑戰(.*)獲得$"="<size\=22>Complete $1</size>"
@@ -2296,9 +2300,11 @@ r:"^零件$"="Parts"
 萬用零件·大=<size\=22>Weapon Parts - L</size>
 萬用零件·中=<size\=21>Weapon Parts - M</size>
 萬用零件·小=<size\=22>Weapon Parts - S</size>
+萬用零件·殘=<size\=20>Weapon Parts - Scrap</size>
 r:"^精良的金屬零件，可用於提升武器經驗，使用後立即提升(\d+)點。$"="Excellent metal parts, can be used to gain $1 Weapon EXP."
 r:"^優質的金屬零件，可用於提升武器經驗，使用後立即提升(\d+)點。$"="Quality metal parts, can be used to gain $1 Weapon EXP."
 r:"^普通的金屬零件，可用於提升武器經驗，使用後立即提升(\d+)點。$"="Common metal parts, can be used to gain $1 Weapon EXP."
+r:"^破碎的金屬零件，可用於提升武器經驗，使用後立即提升(\d+)點。$"="Broken metal parts, can be used to gain $1 Weapon EXP."
 
 迷情香=Charming Incense
 金絲香=Golden Incense
@@ -2659,6 +2665,8 @@ r:"^己方行動次數：(\d+)$"="Number of Actions: $1"
 新解鎖等級：=Unlocked:
 首領挑戰=Challenge
 戰鬥獎勵=Rewards
+屬性強化=Stats Boost
+所有怪盜造成的傷害大幅提升，受到的傷害大幅降低=<size\=25>Heavily increase all Thieves' DMG Dealt;\nHeavily decrease all Thieves' DMG Taken</size>
 r:"^所有敵人最大生命值提升(\d+(.\d+)?(%)?)$"="Increase all enemies' Max HP by $1"
 r:"^所有敵人攻擊力提升(\d+(.\d+)?(%)?)$"="Increase all enemies' ATK by $1"
 r:"^所有敵人防禦力提升(\d+(.\d+)?(%)?)$"="Increase all enemies' DEF by $1"
@@ -2667,6 +2675,7 @@ r:"^所有敵人受到傷害降低(\d+(.\d+)?(%)?)$"="Decrease all enemies' DMG 
 探索里程=<size\=20>Explore Mileage</size>
 達到=<size\=20>Reach</size>
 可挑戰=<size\=20>to Challenge</size>
+擁有祝福=Blessings
 花朵=Flower
 要求投擲點數=<size\=30>Need Dice Points</size>
 每次獲得花朵=Get Flower
@@ -2676,6 +2685,7 @@ r:"^所有敵人受到傷害降低(\d+(.\d+)?(%)?)$"="Decrease all enemies' DMG 
 底部=Bottom
 最深處=Deepest
 層數=Floors
+自動投擲已取消。=Automatic throws have been canceled.
 
 完成挑戰可解鎖=Can unlock
 新的異變效果=New modifier
@@ -2919,7 +2929,12 @@ r:"^解鎖技能$"="Unlock"
 r:"^特性提升$"="<size\=25>Upgrade to</size>"
 已達到{{A}}當前強化等級上限。=Reached current rank max level.
 <color\=#FF0000>本次強化溢出經驗將轉化為通用素材</color>\n是否確定使用所選素材進行強化？=<color\=#FF0000>This upgrade will convert overflowed EXP into upgrade materials.</color>\nAre you sure you want to upgrade?
+篩選材料=Filter Materials
+高級=High
+中級=Mid
+初級=Low
 強化成功。=Upgrade success.
+未選擇任何材料。=No materials have been selected.
 已達最大等級。=Reached max level.
 該面具已強化到滿級！=Persona at max level!
 點擊技能圖示篩選指定技能，長按可查看技能詳情=Click on skill icon to select specific skills, long press to view skill details
@@ -2955,12 +2970,12 @@ r:"^{{A}}無法透過印記習得<color\=#FF0000>(.*)<</color>類型技能。$"=
 本次育成將使用高品質技能卡，是否確認使用？=<size\=28>This will use the high quality skill card, \nare you sure?</size>
 sr:"^攻擊造成(.*)屬性傷害。$"="Attacks deal $1 damage."
 新手友好=<size\=16>Newbie Friendly</size>
-物理單攻=<size\=16>Physical ST DPS</size>
-物理群攻=<size\=15>Physical AoE DPS</size>
-物理治療=<size\=18>Physical Healer</size>
-物理坦克=<size\=19>Physical Tank</size>
-物理增益=<size\=18>Physical Buffer</size>
-物理減益=<size\=15>Physical Debuffer</size>
+物理單攻=<size\=16>Phys ST DPS</size>
+物理群攻=<size\=15>Phys AoE DPS</size>
+物理治療=<size\=18>Phys Healer</size>
+物理坦克=<size\=19>Phys Tank</size>
+物理增益=<size\=18>Phys Buffer</size>
+物理減益=<size\=15>Phys Debuffer</size>
 射擊單攻=<size\=16>Gun ST DPS</size>
 射擊群攻=<size\=15>Gun AoE DPS</size>
 射擊治療=<size\=18>Gun Healer</size>
