@@ -1,11 +1,6 @@
 Skill Level up Description //
 
-ONE MORE：技能傷害=ONE MORE: ATK% DMG
 r:"^提升(\d+\.\d%)+$"=$1
-
-HIGHLIGHT：技能傷害倍率=HIGHLIGHT: ATK% DMG
-近戰攻擊：技能傷害=Melee: ATK% DMG
-槍械射擊：技能傷害=Gun: ATK% DMG
 r:"面具(.*)級時可解鎖"=Unlocks when this Persona is Lv. $1
 
 戰鬥技巧=Combat Skills
@@ -45,12 +40,14 @@ r:"^追加$"="Follow Up"
 r:"燃燒、冰凍、觸電、風襲，以上4種狀態屬於元素異常。"=<color\=#FF8C35>Burn</color>, <color\=#DFFFFF>Freeze</color>, <color\=#FCE54E>Shock</color>, <color\=#52E54E>Winded</color>.
 r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以上8種狀態屬於精神異常。"=<color\=#FBF6C1>Dizzy</color>, <color\=#80EEED>Forget</color>, <color\=#E59FFF>Sleep</color>, <color\=#F77F76>Rage</color>, <color\=#B69ABB>Despair</color>, <color\=#FCC6FA>Fear</color>, <color\=#C0F081>Confuse</color>, <color\=#AF4FA6>Brainwash</color>
 
-元素異常，每回合損失5%生命值，效果持續2回合。=Lose 5% of Max HP each turn for 2 turns.
-元素異常，受到暴擊率提升10%，效果持續2回合。=Increase chance of receiving a CRIT Hit by 10% for 2 turns.
-元素異常，防禦力降低12%，效果持續2回合。=Decrease DEF by 12% for 2 turns.
-元素異常，攻擊力降低12%，效果持續2回合。=Decrease ATK by 12% for 2 turns.
-每回合恢復1%最大生命值，效果持續2回合。=Restore 1% Max HP each turn for 2 turns.
-每回合受到相當於1%最大生命值的傷害，效果持續2回合。=Lose 1% Max HP each turn for 2 turns.
+r:"^元素異常，每回合損失(\d+%)生命值，效果持續(\d+)回合。$"="Elemental Ailment, lose $1 of Max HP each turn for $2 turns."
+r:"^元素異常，受到暴擊率提升(\d+%)，效果持續(\d+)回合。$"="Elemental Ailment, increase CRIT Rate Taken by $1 for $2 turns."
+r:"^元素異常，總防禦力降低(\d+%)，效果持續(\d+)回合。$"="Elemental Ailment, decrease Total DEF by $1 for $2 turns."
+r:"^元素異常，防禦力降低(\d+%)，效果持續(\d+)回合。$"="Elemental Ailment, decrease DEF by $1 for $2 turns."
+r:"^元素異常，{{A}}降低(\d+%)，效果持續(\d+)回合。$"="Elemental Ailment, decrease {{A}} by $1 for $2 turns."
+r:"^元素異常，攻擊力降低(\d+%)，效果持續(\d+)回合。$"="Elemental Ailment, decrease ATK by $1 for $2 turns."
+r:"^每回合恢復(\d+%)最大生命值，效果持續(\d+)回合。$"="Restore $1 Max HP each turn for $2 turns."
+r:"^每回合受到相當於(\d+%)最大生命值的傷害，效果持續(\d+)回合。$"="Lose $1 Max HP each turn for $2 turns."
 
 精神異常，無法行動。=Unable to take actions.
 精神異常，無法行動並且每回合回復5%生命值和5%精力值，受到傷害後清除。=Unable to act.\nRestore 5% of Max HP and 5% of Max SP each turn.\nThis ailment clears upon taking damage.
@@ -320,7 +317,7 @@ r:"^瑪哈拉昆達$"="Marakunda"
 迪卡加=Dekaja
 迪坤達=Dekunda
 女巫詛咒=Debilitate
-音律侵擾=<size\=22>Temperament Disruption</size>
+音律侵擾=Temperament Disruption
 
 --- Break Skills ---
 消除火焰耐性=Fire Break
@@ -490,7 +487,7 @@ sr:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性
 sr:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，效果持續3回合。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to 1 enemy, with a <color\=#FFFF00>$3</color> base chance to inflict $4 for 3 turns.
 
 //AoE
-sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies.
+sr:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。$"="<size\=27>Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies.</size>"
 
 //AoE Multi-Hit Random
 sr:"對所有敵人造成(\d+\~\d+)次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。"=Deals <color\=#FFFF00>$2</color> ATK $3 damage to <color\=#FFFF00>all</color> enemies $1 times.
@@ -551,7 +548,7 @@ r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理�
 Hassou Tobi
 r:"^對全體敵人造成8段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，每有1個敵人，該技能傷害提升(\d+%)，最多提升(\d+%)。$"="Deals <color\=#fffc40>$1</color> ATK Phys damage to all enemies 8 times. For every 1 enemy, increases skill damage by $2, up to $3."
 
-2~3次物理=2~3 times Physical
+r:"^(\d+)~(\d+)次物理$"="$1~$2 times Phys"
 
 --- Gun ---
 
@@ -569,6 +566,7 @@ r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬�
 
 Tiger Shot (Janosik)
 r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，有(\d+%)的固定機率使敵人獲得『瞄準』:使敵人的防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。\n<b><size\=28><color\=#024068>撞針高速撞擊子彈並引爆火藥，硝煙中射出的致命一擊造成屬性傷害。若敵方處於瞄準狀態，則傷害提升。</color></size></b>$"="Deals <color\=#fffc40>$1</color> ATK Gun damage to 1 enemy, with a $2 fixed chance to inflict the enemy with [Aim]: Decrease DEF by <color\=#fffc40>$3</color> for $4 turns.\n<b><size\=28><color\=#024068>Firing Pin hits a bullet at high speed and detonates the gunpowder, resulting in a fatal blow that deals damage, which is increased if the enemy is aiming.</color></size></b>"
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，有(\d+%)的固定機率使敵人獲得『瞄準』:使敵人的防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Deals <color\=#fffc40>$1</color> ATK Gun damage to 1 enemy, with a $2 fixed chance to inflict the enemy with [Aim]: Decrease DEF by <color\=#fffc40>$3</color> for $4 turns."
 
 r:"^對所有敵人造成(\d+)段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，若場上存在具有『瞄準』的敵人，則該技能的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，暴擊效果提升<color\=#fffc40>(\d+\.\d+%)</color>。\n<b><size\=28><color\=#024068>斧槍捕捉到敵影的瞬間，時間仿佛停了半刻，魚貫而出的子彈無情地貫穿敵人，對敵方群體造成多段傷害。</color></size></b>$"="Deals <color\=#fffc40>$2</color> ATK Gun damage to all enemies $1 times. If there is an enemy with [Aim], increase skill ATK by <color\=#fffc40>$3</color> and CRIT DMG by <color\=#fffc40>$4</color>.\n<b><size\=28><color\=#024068>The moment the Axe Gun catches the shadow of an enemy, time seems to stop for a moment, and the bullets that come out of the Axe Gun mercilessly penetrate the enemy, dealing multiple damage to the enemy group.</color></size></b>"
 
@@ -619,10 +617,10 @@ r:"^對全體敵人造成1段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念�
 --- Nuke ---
 
 //Basic Nuke ST
-r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害，對處於<link\="s\|101"><u>元素異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(.*)。$"="Deals <color\=#FFFF00>$1</color> ATK Nuclear damage to <color\=#FFFF00>1</color> enemy. Triggers <link\="s|211"><u>TECHNICAL</u></link> to enemy inflicted with any <link\="s|101"><u>Elemental Ailment</u></link>, increases skill damage by $2."
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害，對處於<link\="s\|101"><u>元素異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(.*)。$"="Deals <color\=#FFFF00>$1</color> ATK Nuke damage to <color\=#FFFF00>1</color> enemy. Triggers <link\="s|211"><u>TECHNICAL</u></link> to enemy inflicted with any <link\="s|101"><u>Elemental Ailment</u></link>, increases skill damage by $2."
 
 //Basic Nuke AoE
-r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害，對處於<link\="s\|101"><u>元素異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(.*)。$"="Deals <color\=#FFFF00>$1</color> ATK Nuclear damage to <color\=#FFFF00>all</color> enemies. Triggers <link\="s|211"><u>TECHNICAL</u></link> to enemies inflicted with any <link\="s|101"><u>Elemental Ailment</u></link>, increases skill damage by $2."
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害，對處於<link\="s\|101"><u>元素異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(.*)。$"="Deals <color\=#FFFF00>$1</color> ATK Nuke damage to <color\=#FFFF00>all</color> enemies. Triggers <link\="s|211"><u>TECHNICAL</u></link> to enemies inflicted with any <link\="s|101"><u>Elemental Ailment</u></link>, increases skill damage by $2."
 
 Bishamonten
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害，攻擊處於元素異常狀態的敵人該技能傷害提升(\d+%)。$"="Deals <color\=#fffc40>$1</color> ATK Nuke damage to 1 enemy. Increases DMG Dealt by $2 if the enemy is infliced with Elemental Ailments."
@@ -712,16 +710,16 @@ r:"^對全體敵人造成一段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的�
 --- Recovery ---
 
 // ST Heal
-r:"使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值。"=Restore HP equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to 1 ally.
+r:"使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值。"=Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to 1 ally.
 
 // AoE Heal
-r:"^使所有同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值。+$"=Restore HP equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to all allies.
+r:"^使所有同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值。+$"=Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to all allies.
 
 // Lotus
-r:"使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，並使自身獲得2層『蓮華』，『蓮華』存在期間，任意單位行動後，若有同伴生命值低於50%，則消耗一層『蓮華』，使其恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，『蓮華』持續1回合。"=<size\=30>Restore HP equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to 1 ally and gain 2 stacks of [Sacred Lotus] for 1 turn. If an ally is below 50% Max HP after their turn while [Sacred Lotus] is present, consume one stack and recover that ally's HP equal to <color\=#fffc40>$3</color> ATK + <color\=#fffc40>$4</color></size>.
+r:"使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，並使自身獲得2層『蓮華』，『蓮華』存在期間，任意單位行動後，若有同伴生命值低於50%，則消耗一層『蓮華』，使其恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，『蓮華』持續1回合。"=<size\=30>Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to 1 ally and gains 2 stacks of [Sacred Lotus] for 1 turn. If an ally is below 50% Max HP after their turn while [Sacred Lotus] is present, consumes one stack and restores <color\=#fffc40>$3</color> ATK + <color\=#fffc40>$4</color> HP to them</size>.
 
 //Titania idk
-r:"使所有同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，對生命值低於50%的同伴造成的治療效果提升25%。並使所有同伴回復(\d+)點精力值。"=Restore HP equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to all allies.\nIncrease healing effect by 25% on allies under 50% HP.\nRestore $3 SP to all allies.
+r:"使所有同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，對生命值低於50%的同伴造成的治療效果提升25%。並使所有同伴回復(\d+)點精力值。"=Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to all allies.\nIncreases Healing Effect by 25% to allies under 50% HP.\nRestores $3 SP to all allies.
 
 // Patra
 r:"^驅散1名同伴的<link\="s\|107"><u>暈眩</u></link>、<link\="s\|109"><u>睡眠</u></link>、<link\="s\|108"><u>遺忘</u></link>效果。$"=Cures <link\=s|107><u>Dizzy</u></link>/<link\=s|109><u>Sleep</u></link>/<link\=s|108><u>Forget</u></link> for 1 ally.
@@ -733,10 +731,10 @@ r:"^驅散1名同伴的<link\="s\|156"><u>混亂</u></link>、<link\="s\|157"><u
 r:"^驅散1名同伴的<link\="s\|102"><u>燃燒</u></link>、<link\="s\|103"><u>凍結</u></link>、<link\="s\|104"><u>觸電</u></link>、<link\="s\|105"><u>風襲</u></link>效果。$"=Cures <link\=s|102><u>Burn</u></link>/<link\=s|103><u>Freeze</u></link>/<link\=s|104><u>Shock</u></link>/<link\=s|105><u>Winded</u></link> for 1 ally.
 
 //
-r:"使所有同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(.*)</color>的生命值，並驅散1個<link\="s\|101"><u>元素異常</u></link>效果。"=Restore HP equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to all allies and cure 1 <link\=s|101><u>Elemental Ailment</u></link>.
+r:"使所有同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(.*)</color>的生命值，並驅散1個<link\="s\|101"><u>元素異常</u></link>效果。"=Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to all allies and cures 1 <link\=s|101><u>Elemental Ailment</u></link>.
 
 //
-r:"使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(.*)</color>的生命值，並驅散1個<link\="s\|101"><u>元素異常</u></link>效果。"=Restore HP equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to 1 ally and cure 1 <link\=s|101><u>Elemental Ailment</u></link>.
+r:"使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(.*)</color>的生命值，並驅散1個<link\="s\|101"><u>元素異常</u></link>效果。"=Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to 1 ally and cures 1 <link\=s|101><u>Elemental Ailment</u></link>.
 
 Power of Prayer
 r:"^使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，並使其防禦力提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續2回合。$"="Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to 1 ally and increases their DEF by <color\=#fffc40>$3</color> for 2 turns."
@@ -750,7 +748,7 @@ r:"^使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#ff
 r:"使1名同伴的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，自身每500攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限<color\=#fffc40>(\d+\.\d+%)</color>。效果持續3回合。"=Increases 1 ally's ATK by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 500 ATK you have, up to <color\=#fffc40>$3</color> for 3 turns.
 
 // Matarukaja
-r:"使所有同伴的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，自身每500攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限<color\=#fffc40>(\d+\.\d+%)</color>。效果持續3回合。"=Increases all allies' ATK by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 500 ATK you have, up to <color\=#fffc40>$3</color> for 3 turns.
+r:"^使所有同伴的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，自身每500攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限<color\=#fffc40>(\d+\.\d+%)</color>。效果持續(\d+)回合。$"="<size\=26>Increases all allies' ATK by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 500 ATK you have, up to <color\=#fffc40>$3</color> for $4 turns.</size>"
 
 //Rakukaja
 r:"使1名同伴的防禦力提升<color\=#fffc40>(\d+\.\d+%)</color>，自身每500防禦力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限<color\=#fffc40>(\d+\.\d+%)</color>。效果持續3回合。"=Increases 1 ally's DEF by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 500 DEF you have, up to <color\=#fffc40>$3</color> for 3 turns.
@@ -839,15 +837,15 @@ r:"^有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使1名敵人陷入<link\=
 
 // Skill buffs
 r:"^物理屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increases Phys DMG by $1."
+r:"^槍械傷害提升(\d+(.\d+)?(%)?)。$"="Increases Gun DMG by $1."
 r:"^火焰屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increases Fire DMG by $1."
 r:"^冰凍屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increases Ice DMG by $1."
 r:"^電擊屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increases Elec DMG by $1."
 r:"^疾風屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increases Wind DMG by $1."
 r:"^念動屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increases Psy DMG by $1."
+r:"^核熱屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increases Nuke DMG by $1."
 r:"^詛咒屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increases Curse DMG by $1."
 r:"^祝福屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increases Bless DMG by $1."
-r:"^核熱屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increases Nuclear DMG by $1."
-r:"^槍械傷害提升(\d+(.\d+)?(%)?)。$"="Increases Gun DMG by $1."
 r:"^萬能屬性傷害提升(\d+(.\d+)?(%)?)。$"="Increases Almighty DMG by $1."
 r:"^造成治療效果提升(\d+(.\d+)?(%)?)。$"="Increases Healing Effect by $1."
 r:"^受到的治療效果提升(\d+(.\d+)?(%)?)。$"="Increases Healing Received by $1."
@@ -856,10 +854,12 @@ r:"^即死技能成功率上升(\d+(.\d+)?(%)?)。$"="Increases the chance of In
 r:"^護盾效果提升(\d+(.\d+)?(%)?)。$"="Increases Shield Effect by $1."
 
 //Stat buffs
+r:"^戰鬥開始時攻擊力提升(.*)，持續(\d+)回合。$"="Increases ATK by $1 at the start of battle for $2 turns"
 r:"戰鬥開始時攻擊力提升(\d+%)，持續2回合或持續至切換面具。"=Increases ATK by $1 at the start of battle for 2 turns or until switching persona.
 r:"戰鬥開始時攻擊力提升(\d+(.\d+)?(%)?)，持續2回合或持續至切換面具。"=Increases ATK by $1 at the start of battle for 2 turns or until switching persona.
 r:"戰鬥開始時全員攻擊力提升(\d+%)，持續2回合或持續至切換面具。"=Increases all allies' ATK by $1 at the start of battle for 2 turns or until switching persona.
 r:"戰鬥開始時全員攻擊力提升(\d+(.\d+)?(%)?)，持續2回合或持續至切換面具。"=Increases all allies' ATK by $1 at the start of battle for 2 turns or until switching persona.
+r:"^戰鬥開始時防禦力提升(.*)，持續(\d+)回合。$"="Increases DEF by $1 at the start of battle for $2 turns"
 r:"戰鬥開始時防禦力提升(\d+%)，持續2回合或持續至切換面具。"=Increases DEF by $1 at the start of battle for 2 turns or until switching persona.
 r:"戰鬥開始時防禦力提升(\d+(.\d+)?(%)?)，持續2回合或持續至切換面具。"=Increases DEF by $1 at the start of battle for 2 turns or until switching persona.
 r:"戰鬥開始時全員防禦力提升(\d+%)，持續2回合或持續至切換面具。"=Increases all allies' DEF by $1 at the start of battle for 2 turns or until switching persona.
