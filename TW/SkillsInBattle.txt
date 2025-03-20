@@ -1,13 +1,5 @@
 Skill Level up Description //
 
-ONE MORE：技能傷害=ONE MORE: ATK% DMG
-r:"^提升(\d+\.\d%)+$"=$1
-
-HIGHLIGHT：技能傷害倍率=HIGHLIGHT: ATK% DMG
-近戰攻擊：技能傷害=Melee: ATK% DMG
-槍械射擊：技能傷害=Gun: ATK% DMG
-r:"面具(.*)級時可解鎖"=Unlocks when this persona is LV.$1
-
 戰鬥技巧=Combat Skills
 基礎數值=Base Stats
 狀態資訊=Status Information
@@ -32,6 +24,7 @@ r:"^(\d+)層$"="<size\=18>$1 stacks</size>"
 使用槍械射擊1名敵人，造成小幅射擊傷害，根據子彈數量可以射擊多次。=Uses a gun to shoot 1 enemy. dealing light Gun damage, can shoot multiple times based on ammo.
 使用槍械射擊1名敵人，造成少量射擊屬性傷害，根據子彈數量可以射擊多次。=Uses a gun to shoot 1 enemy. dealing light Gun damage, can shoot multiple times based on ammo.
 使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。=Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo.
+使用槍械射擊1名敵人，每次向1名敵人射擊3發，造成射擊屬性傷害，根據子彈數量可以射擊多次。=Uses a gun to shoot 1 enemy. dealing 3 hits of Gun damage to 1 enemy, can shoot multiple times based on ammo.
 使用槍械射擊1名敵人，造成6次射擊屬性傷害，子彈可能會發生偏移。對同一目標造成傷害會衰減。=Uses a gun to shoot 1 enemy. dealing 6 hits of Gun damage, the bullets can miss and deals less damage to the same target.
 
 r:"^剩餘次數：(\d+)/(\d+)$"="Use Limit: $1/$2"
@@ -110,11 +103,7 @@ Elemental Ailments Mental Ailments TECHNICAL Descriptions
 r:"燃燒、冰凍、觸電、風襲，以上4種狀態屬於元素異常。"=<color\=#FF8C35>Burn</color>, <color\=#DFFFFF>Freeze</color>, <color\=#FCE54E>Shock</color>, <color\=#52E54E>Winded</color>.
 r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以上8種狀態屬於精神異常。"=<color\=#FBF6C1>Dizzy</color>, <color\=#80EEED>Forget</color>, <color\=#E59FFF>Sleep</color>, <color\=#F77F76>Rage</color>, <color\=#B69ABB>Despair</color>, <color\=#FCC6FA>Fear</color>, <color\=#C0F081>Confuse</color>, <color\=#AF4FA6>Brainwash</color>
 
-元素異常，每回合損失5%生命值，效果持續2回合。=Lose 5% of Max HP each turn for 2 turns.
-元素異常，受到暴擊率提升10%，效果持續2回合。=Increase chance of receiving a CRIT Hit by 10% for 2 turns.
-元素異常，防禦力降低12%，效果持續2回合。=Reduce DEF by 12% for 2 turns.
-元素異常，攻擊力降低12%，效果持續2回合。=Reduce ATK by 12% for 2 turns.
-使敵人受到傷害提升15%，被視為1種元素異常。=Increase DMG Taken by 15% for 2 turns.
+使敵人受到傷害提升15%，被視為1種元素異常。=Increase DMG Taken by 15% for 2 turns, seen as 1 Elemental Ailment.
 持續恢復生命值=Restore 1% Max HP each turn for 2 turns
 持續損失生命值=Lose 1% Max HP each turn for 2 turns
 
@@ -427,11 +416,11 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動�
 --- Nuke ---
 
 //Basic Nuke ST
-r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，對元素異常的敵人傷害提升(.*)。"=Deals <color\=#FFFF00>$1</color> ATK Nuclear damage to <color\=#FFFF00>1</color> enemy. Increase DMG Dealt by $2 if enemy is inflicted with any Elemental Ailment.
-r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，攻擊處於元素異常狀態的敵人該技能傷害提升(.*)。$"="Deals $1 ATK Nuclear damage to <color\=#FFFF00>1</color> enemy. Increases skill damage by $2 if enemy is inflicted with any Elemental Ailment."
+r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，對元素異常的敵人傷害提升(.*)。"=Deals <color\=#FFFF00>$1</color> ATK Nuke damage to <color\=#FFFF00>1</color> enemy. Increase DMG Dealt by $2 if enemy is inflicted with any Elemental Ailment.
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，攻擊處於元素異常狀態的敵人該技能傷害提升(.*)。$"="Deals $1 ATK Nuke damage to <color\=#FFFF00>1</color> enemy. Increases skill damage by $2 if enemy is inflicted with any Elemental Ailment."
 
 //Basic Nuke AoE
-r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，對元素異常的敵人傷害提升(.*)。"=Deals <color\=#FFFF00>$1</color> ATK Nuclear damage to <color\=#FFFF00>all</color> enemies. Increase DMG Dealt by $2 to each enemy inflicted with any Elemental Ailment.
+r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，對元素異常的敵人傷害提升(.*)。"=Deals <color\=#FFFF00>$1</color> ATK Nuke damage to <color\=#FFFF00>all</color> enemies. Increase DMG Dealt by $2 to each enemy inflicted with any Elemental Ailment.
 
 --- Bless ---
 r:"^祝福屬性$"="Bless"
@@ -479,6 +468,7 @@ r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬�
 // AoE Basic Curses
 r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，有機率使敵人獲得(\d+\~\d+)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and inflicts $2 stack(s) of <link\=s|112><u>Curse</u></link>.
 r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得(.*)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and inflicts $2 stack(s) of <link\=s|112><u>Curse</u></link>.
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，賦予敵人(.*)個詛咒效果$"="Deals $1 ATK Curse damage to <color\=#FFFF00>all</color> enemies and inflicts $2 stack(s) of Curse."
 
 //Brand of Malice (p5x decided to use - instead of ~ for this one so using some stupid methods to make things consistent...
 r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，並使其獲得(\d+)(.*)(\d+)個詛咒效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> enemies and inflicts $2~$4 stack(s) of <link\=s|112><u>Curse</u></link>.
@@ -529,7 +519,7 @@ r:"^使<color\=#FFFF00>1名</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生
 r:"^使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值。$"="Restores $1 ATK + $2 HP to <color\=#fffc40>all</color> allies."
 
 // Lotus
-r:"使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，並使自身獲得2層『蓮華』，『蓮華』存在期間，任意單位行動後，若有同伴生命值低於50%，則消耗一層『蓮華』，使其恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，『蓮華』持續1回合。"=<size\=30>Restore HP equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to 1 ally and gain 2 stacks of [Sacred Lotus] for 1 turn. If an ally is below 50% Max HP after their turn while [Sacred Lotus] is present, consume one stack and recover that ally's HP equal to <color\=#fffc40>$3</color> ATK + <color\=#fffc40>$4</color></size>.
+r:"使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，並使自身獲得2層『蓮華』，『蓮華』存在期間，任意單位行動後，若有同伴生命值低於50%，則消耗一層『蓮華』，使其恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，『蓮華』持續1回合。"=<size\=30>Restore <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to 1 ally and gain 2 stacks of [Sacred Lotus] for 1 turn. If an ally is below 50% Max HP after their turn while [Sacred Lotus] is present, consume one stack and retores <color\=#fffc40>$3</color> ATK + <color\=#fffc40>$4</color> HP to them</size>.
 
 Titania
 r:"^使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值，對生命值低於(\d+%)的同伴造成的治療效果提升(\d+%)。並恢復所有同伴(\d+)點精力值。$"="Restores $1 ATK + $2 HP to <color\=#FFFF00>all</color> allies, increases Healing Effect by $4 to allies under $3 HP. Restore $5 SP to all allies."
@@ -544,10 +534,10 @@ r:"^驅散1名同伴的<link\="s\|156"><u>混亂</u></link>、<link\="s\|157"><u
 r:"^驅散1名同伴的<link\="s\|102"><u>燃燒</u></link>、<link\="s\|103"><u>凍結</u></link>、<link\="s\|104"><u>觸電</u></link>、<link\="s\|105"><u>風襲</u></link>效果。$"=Cures <link\=s|102><u>Burn</u></link>/<link\=s|103><u>Freeze</u></link>/<link\=s|104><u>Shock</u></link>/<link\=s|105><u>Winded</u></link> for 1 ally.
 
 //
-r:"使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(.*)的生命值，並驅散1個元素異常效果。"=Restore HP equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to all allies and cure 1 <link\=s|101><u>Elemental Ailment</u></link>.
+r:"使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(.*)的生命值，並驅散1個元素異常效果。"=Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to all allies and cures 1 <link\=s|101><u>Elemental Ailment</u></link>.
 
 //
-r:"使<color\=#FFFF00>1名</color>同伴恢復(\d+\.\d+%)攻擊力\+(.*)的生命值。並驅散1個元素異常效果。"=Restore HP equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to 1 ally and cure 1 <link\=s|101><u>Elemental Ailment</u></link>.
+r:"使<color\=#FFFF00>1名</color>同伴恢復(\d+\.\d+%)攻擊力\+(.*)的生命值。並驅散1個元素異常效果。"=Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to 1 ally and cures 1 <link\=s|101><u>Elemental Ailment</u></link>.
 
 //
 r:"使<color\=#FFFF00>1名</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值。並驅散其身上1個隨機減益效果，驅散成功後，使其額外恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值。"=<size\=23>Restore HP equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to 1 ally and cure 1 <link\=s|101><u>Elemental Ailment</u></link>. If an <link\=s|101><u>Elemental Ailment</u></link> was cured, restore additional HP equal to <color\=#fffc40>$3</color> ATK + <color\=#fffc40>$4</color>.</size>
@@ -692,6 +682,7 @@ r:"^<color\=#FF0000>所有同伴</color>造成的傷害提升了……$"="<color
 r:"^<color\=#FF0000>(.*)</color>攻擊提升了……$"="ATK Up!"
 r:"^<color\=#FF0000>(.*)</color>的攻擊力提高了……$"="ATK Up!"
 r:"^<color\=#FF0000>(.*)</color>防禦提升了……$"="DEF Up!"
+sr:"^<color\=#FF0000>(.*)</color>防禦永久提升了……$"="<color\=#FF0000>$1</color> permanent DEF Up!"
 r:"^<color\=#FF0000>(.*)</color>防禦降低了……$"="DEF Down!"
 r:"^<color\=#FF0000>(.*)</color>效果命中、效果抵抗提升了……$"="EHR/ Effect RES Up!"
 sr:"^<color\=#FF0000>(.*)</color>多種屬性略微提升了……$"="<color\=#FF0000>$1</color> Many Stats Up!"
@@ -700,10 +691,18 @@ sr:"^<color\=#FF0000>(.*)</color>暴擊率提升了……$"="<color\=#FF0000>$1<
 <color\=#FF0000>所有敵人</color>受到的傷害提升了……=<color\=#FF0000>All enemies</color> DMG Taken Up!
 
 sr:"^<color\=#FF0000>(.*)</color>獲得了護盾……$"="<color\=#FF0000>$1</color> gained Shield!"
+sr:"^<color\=#FF0000>(.*)</color>的全屬性適應性變為無……$"="<color\=#FF0000>$1</color> now Null all!"
 r:"^解除了(\d+)個狀態降低效果！$"="Dispelled $1 stats debuff!"
 
 sr:"^<color\=#FF0000>(.*)</color>獲得了『(.*)』$"="<color\=#FF0000>$1</color> gained [$2]"
+sr:"^<color\=#FF0000>(.*)</color>獲得了「(.*)」……$"="<color\=#FF0000>$1</color> gained [$2]..."
+sr:"^<color\=#FF0000>(.*)</color>獲得了(\d+)層『(.*)』……$"="<color\=#FF0000>$1</color> gained $2 stack(s) of [$3]..."
+sr:"^<color\=#FF0000>(.*)</color>獲得了『(.*)』,受到的最終傷害降低……$"="<color\=#FF0000>$1</color> gained [$2]..."
+sr:"^<color\=#FF0000>(.*)</color>失去了「(.*)」……$"="<color\=#FF0000>$1</color> lost [$2]..."
 sr:"^成功驅散掉了(\d+)層<color\=#FF0000>『(.*)』</color>！$"="Dispelled $1 stack of <color\=#FF0000>[$2]</color>!"
+sr:"^召喚消耗(\d+)層<color\=#FF0000>『(.*)』</color>$"="Summon consumed $1 stack of <color\=#FF0000>[$2]</color>"
+
+sr:"^<color\=#FF0000>(.*)</color>陷入了「(.*)」，受到的傷害提升……$"="<color\=#FF0000>$1</color> entered [$2]..."
 sr:"^<color\=#FF0000>(.*)</color>退出了蓄力狀態……$"="<color\=#FF0000>$1</color> exited Charge..."
 
 r:"^<color\=#FF0000>(.*)</color>進入了暈眩狀態……$"="Inflicted with Dizzy..."
@@ -738,8 +737,8 @@ r:"^凍<color\=#000000>結</color>$"="F<color\=#000000>r</color>eeze"
 r:"^觸<color\=#000000>電</color>$"="S<color\=#000000>h</color>ock"
 r:"^風<color\=#000000>襲</color>$"="W<color\=#000000>i</color>nded"
 r:"^輻<color\=#000000>射</color>$"="R<color\=#000000>a</color>diation"
-r:"^祝<color\=#000000>福</color>$"="B<color\=#000000>l</color>essed"
-r:"^詛<color\=#000000>咒</color>$"="C<color\=#000000>u</color>rsed"
+r:"^祝<color\=#000000>福</color>$"="B<color\=#000000>l</color>ess"
+r:"^詛<color\=#000000>咒</color>$"="C<color\=#000000>u</color>rse"
 
 r:"^倒<color\=#000000>地</color>$"="D<color\=#000000>o</color>wn"
 r:"^暈<color\=#000000>眩</color>$"="D<color\=#000000>i</color>zzy"
@@ -763,6 +762,7 @@ r:"^攻<color\=#000000>擊</color>、防禦提升$"="A<color\=#000000>T</color>K
 r:"^防<color\=#000000>禦</color>提升$"="D<color\=#000000>E</color>F Up"
 r:"^防<color\=#000000>禦</color>強化$"="D<color\=#000000>e</color>fense Boost"
 r:"^防<color\=#000000>禦</color>力提升$"="D<color\=#000000>E</color>F Up"
+r:"^防<color\=#000000>禦</color>永久提升$"="P<color\=#000000>e</color>rmanent DEF Up"
 r:"^速<color\=#000000>度</color>提升$"="S<color\=#000000>P</color>D Up"
 r:"^生<color\=#000000>命</color>強化$"="H<color\=#000000>e</color>alth Boost"
 r:"^最<color\=#000000>大</color>生命值提升$"="M<color\=#000000>a</color>x HP Up"
@@ -897,6 +897,7 @@ r:"^攻擊提升$"="Increase ATK"
 r:"^攻擊力提升$"="Increase ATK"
 r:"^防禦提升$"="Increase DEF"
 r:"^防禦力提升$"="Increase DEF"
+r:"^防禦永久提升$"="Permanently increase DEF"
 r:"^防禦降低$"="Decrease DEF"
 r:"^防禦力降低$"="Decrease DEF"
 r:"^速度提升$"="Increase SPD"
@@ -995,6 +996,7 @@ r:"^攻擊力、防禦力提高(\d+(.\d+)?(%)?)$"="Increase ATK and DEF by $1"
 r:"^造成TECHNICAL時，攻擊力提升(\d+%)，暴擊效果提升(\d+%)$"="<size\=26>Increase ATK by $1 and CRIT DMG by $2 when dealing TECHNICAL</size>"
 r:"^防禦提升(\d+(.\d+)?(%)?)$"="Increase DEF by $1"
 r:"^防禦力提升(\d+(.\d+)?(%)?)$"="Increase DEF by $1"
+r:"^防禦永久提升(\d+(.\d+)?(%)?)$"="Permanently increase DEF by $1"
 r:"^處於護盾保護下，防禦力額外提升(\d+(.\d+)?(%)?)$"="Increase DEF by $1 when Shielded"
 r:"^精力值消耗降低(\d+(.\d+)?(%)?)$"="Decrease SP cost by $1"
 r:"^速度提升(\d+(.\d+)?(%)?)$"="Increase SPD by $1"
@@ -1116,6 +1118,7 @@ r:"^詛咒反噬達到(\d+)層，受HIGHLIGHT傷害提升(\d+%)$"="Reached $1 st
 r:"^受到追擊傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up DMG Taken by $1"
 r:"^受到持續傷害增加(\d+(.\d+)?(%)?)$"="Increase Damage Over Time Taken by $1"
 r:"^受到最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG Taken by $1"
+r:"^受到的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG Taken by $1"
 r:"^受最終傷害提升(\d+%)，可疊加(\d+)層$"="Increase Final DMG Taken by $1, \nup to $2 stacks"
 r:"^造成傷害降低(\d+(.\d+)?(%)?)$"="Decrease DMG Dealt by $1"
 r:"^造成的傷害降低(\d+(.\d+)?(%)?)$"="Decrease DMG Dealt by $1"
