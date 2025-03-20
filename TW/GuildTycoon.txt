@@ -115,6 +115,7 @@ Bosses
 ----------
 {{A}}、{{B}}、{{C}}、{{D}}處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n{{A}}會源源不斷地召喚天使援軍，擊敗天使可以回復精力值。對處於虛弱階段時{{A}}召喚的天使造成傷害可獲得積分。=<size\=24>{{A}}, {{B}}, {{C}}, {{D}} have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.\n{{A}} will keep summoning Angel, defeating Angel will restore SP. Dealing damage to Angel during Weak will count for score.</size>
 1、{{A}}、{{B}}、{{C}}、{{D}}處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n2、{{A}}會源源不斷地召喚天使援軍，擊敗天使可以回復精力值。對處於虛弱階段時{{A}}召喚的天使造成傷害可獲得積分。=<size\=24>1. {{A}}, {{B}}, {{C}}, {{D}} have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.\n2. {{A}} will keep summoning Angel, defeating Angel will restore SP. Dealing damage to Angel during Weak will count for score.</size>
+{{A}}會源源不斷地召喚天使援軍，擊敗天使可以回復精力值。對天使造成傷害可獲得積分。=Dominion will keep summoning Angel, defeating Angel will restore SP. Dealing damage to Angel will count for score.
 {{A}}、{{B}}、{{C}}、{{D}}處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。=<size\=24>{{A}}, {{B}}, {{C}}, {{D}} have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.</size>
 
 {{A}}的「化身」與本體處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。={{A}} and his incarnations have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.
@@ -192,6 +193,10 @@ r:"^所有怪盜<color\=#ff63ff>念動</color>傷害提高(\d+(.\d+)?(%)?)$"="<s
 r:"^所有怪盜<color\=#00fcff>核熱</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#00fcff>Nuke</color> DMG by $1</size>"
 r:"^所有怪盜<color\=#fffea0>祝福</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#fffea0>Bless</color> DMG by $1</size>"
 r:"^所有怪盜<color\=#ff0036>詛咒</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#ff0036>Curse</color> DMG by $1</size>"
+
+萬能領域=Almighty Domain
+r:"^所有怪盜造成<color\=#FFFC40>萬能傷害</color>時，傷害提升(\d+%)，暴擊效果提升(\d+%)$"="Increase all Thieves' damage by $1 and CRIT DMG by $2 when dealing <color\=#FFFC40>Almighty damage</color>"
+r:"^造成萬能傷害時，傷害提升(\d+%)，暴擊效果提升(\d+%)$"="<size\=25>Increase damage by $1 and CRIT DMG by $2 when dealing Almighty damage</size>"
 
 HL特化=HL Buff
 r:"^所有怪盜<color\=#FFFC40>HIGHLIGHT</color>傷害提升(\d+(.\d+)?(%)?)$"="Increase <color\=#FFFC40>HIGHLIGHT</color> DMG by $1"
