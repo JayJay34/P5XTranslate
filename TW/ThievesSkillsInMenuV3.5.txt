@@ -28,7 +28,15 @@ UPGRADE MENU
 ----------
 命中機率=Hit Rate Chance
 治療量=Healing Amount
+增傷倍率=DMG Bonus
+減防倍率=DEF Down
 計入攻擊力上限=ATK Cap
+
+ONE MORE：技能傷害=ONE MORE: Skill DMG
+HIGHLIGHT：技能傷害倍率=HIGHLIGHT: Skill DMG
+近戰攻擊：技能傷害=Melee: Skill DMG
+槍械射擊：技能傷害=Gun: Skill DMG
+sr:"^HIGHLIGHT：(.*)技能傷害$"="HIGHLIGHT: $1 Skill DMG"
 
 ----------
 CATTLE - Lufel
@@ -288,12 +296,12 @@ r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬�
 r:"^『HIGHLIGHT』：對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害。敵人的生命值越低，所受到的傷害越高，當敵人的生命值低於20%時，最高可獲得30%的傷害加成。\n『ONE MORE』：對1名敵人造成冰凍屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[HIGHLIGHT]: Deals <color\=#FFFC40>$1</color> ATK Ice damage to 1 enemy. The lower the enemy's HP are, the higher the damage will be, when they are at below 20% HP, gain 30% DMG Bonus. \n[ONE MORE]: Deals Ice damage to 1 enemy. \nMelee Attack: Uses a melee weapon to deal light Phys damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
 
 r:"^忘我 Lv.(\d+)$"="Lose Oneself Lv.$1"
-sr:"^『刀尖上的舞者』發動時，有<color\=#FFFC40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s\|103"><u>凍結</u></link>狀態。$"="When using [Dancer on Knife's Edge], there is a <color\=#FFFC40>$1</color> base chance to inflict <link\="s|103"><u>Freeze</u></link>."
-sr:"^『刀尖上的舞者』發動時，有<color\=#0169ca>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s\|103"><u>凍結</u></link>狀態。$"="When using [Dancer on Knife's Edge], there is a <color\=#0169ca>$1</color> base chance to inflict <link\="s|103"><u>Freeze</u></link>."
+r:"^『刀尖上的舞者』發動時，有<color\=#FFFC40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s\|103"><u>凍結</u></link>狀態。$"="When using [Dancer on Knife's Edge], there is a <color\=#FFFC40>$1</color> base chance to inflict <link\="s|103"><u>Freeze</u></link>."
+r:"^『刀尖上的舞者』發動時，有<color\=#0169ca>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s\|103"><u>凍結</u></link>狀態。$"="When using [Dancer on Knife's Edge], there is a <color\=#0169ca>$1</color> base chance to inflict <link\="s|103"><u>Freeze</u></link>."
 
 r:"^無境 Lv.(\d+)$"="Boundless Lv.$1"
-sr:"^擊敗敵人時，獲得<link\="s\|119"><u>『(.*)』</u></link><color\=#FFFC40>(\d+)</color>顆。$"="When you defeat an enemy, gain <color\=#FFFC40>$2</color> <link\="s|119"><u>[$1]</u></link>."
-sr:"^擊敗敵人時，獲得<link\="s\|119"><u>『(.*)』</u></link><color\=#0169ca>(\d+)</color>顆。$"="When you defeat an enemy, gain <color\=#0169ca>$2</color> <link\="s|119"><u>[$1]</u></link>."
+r:"^擊敗敵人時，獲得<link\="s\|119"><u>『冰晶』</u></link><color\=#FFFC40>(\d+)</color>顆。$"="When you defeat an enemy, gain <color\=#FFFC40>$1</color> <link\="s|119"><u>[Ice Crystal]</u></link>."
+r:"^擊敗敵人時，獲得<link\="s\|119"><u>『冰晶』</u></link><color\=#0169ca>(\d+)</color>顆。$"="When you defeat an enemy, gain <color\=#0169ca>$1</color> <link\="s|119"><u>[Ice Crystal]</u></link>."
 
 r:"^冰晶$"="Ice Crystal"
 r:"^<color\=#66ccff>『冰晶』</color>$"="<color\=#66ccff>[Ice Crystal]</color>"
@@ -449,7 +457,7 @@ Okyann - Kayo Tomiyama
 ----------
 r:"^使用支援技能後會獲得『節拍』，數量達到4會立刻釋放『勁歌熱舞』，使所有同伴獲得增益。$"="Gain [Beat] after using support skills. Use [Hot Dance] when you have 4 stacks of [Beat], giving a buff to all allies."
 派對狂歡=Party Frenzy
-華麗搖擺=<size\=29>Gorgeous Swing</size>
+華麗搖擺=<size\=26>Gorgeous Swing</size>
 熱辣變奏曲=Hot Variation
 活力=Vigorous
 熱忱=Enthusiasm
@@ -2288,8 +2296,8 @@ r:"^{{A}}回合開始時，若有敵人處於燃燒狀態下，立刻以其作�
 Crow - Goro Akechi
 ----------
 正義之約=Vow of Justice
-不公的狩獵場=Unjust Hunting Ground
-黃金箭雨·湮滅=Golden Arrow Rain·Annihilate
+不公的狩獵場=<size\=17>Unjust Hunting Ground</size>
+黃金箭雨·湮滅=<size\=23>Golden Arrow Rain·Annihilate</size>
 法度=Law
 渴望=Desire
 
@@ -2297,15 +2305,15 @@ r:"^正義之約 Lv.(\d+)$"="Vow of Justice Lv.$1"
 r:"^正義之約 <color\=#0F69CB>Lv.(\d+)</color>$"="Vow of Justice <color\=#0F69CB>Lv.$1</color>"
 r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，為所有同伴恢復<color\=#FFFC40>(\d+)</color>點生命值，並使所有同伴獲得1層祝福。自身獲得『真相』，並獲得『清晰』狀態，持續(\d+)回合。『清晰』狀態下，所有同伴造成傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。\n<b><size\=28><color\=#850101>光芒驟然綻放，爆炸的餘波席捲而出，帶著無盡的光輝與力量，對敵人造成難以磨滅的傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Bless damage to all enemies, restores <color\=#FFFC40>$2</color> HP to all allies and gives all allies 1 stack of Bless. Gains [Truth], then gains [Clarity] for $3 turns. Under [Clarity], increases all allies' DMG Dealt by <color\=#FFFC40>$4</color>.\n<b><size\=28><color\=#850101>The light suddenly bloomed, and the aftermath of the explosion swept out, carrying endless light and power, causing indelible damage to the enemy.</color></size></b>"
 
-r:"^不公的狩獵場 Lv.(\d+)$"="Unjust Hunting Ground Lv.$1"
-r:"^不公的狩獵場 <color\=#0F69CB>Lv.(\d+)</color>$"="Unjust Hunting Ground <color\=#0F69CB>Lv.$1</color>"
+r:"^不公的狩獵場 Lv.(\d+)$"="<size\=24>Unjust Hunting Ground Lv.$1</size>"
+r:"^不公的狩獵場 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=24>Unjust Hunting Ground <color\=#0F69CB>Lv.$1</color></size>"
 r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，自身獲得『真相』，並獲得『混沌』狀態，持續(\d+)回合。『混沌』狀態下，所有敵人防禦降低<color\=#FFFC40>(\d+\.\d+%)</color>、自身『混沌之箭』觸發次數增加(\d+)次、造成傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。\n<b><size\=28><color\=#850101>地下隱匿的猩紅尖刺，如同暗夜中的詛咒破土而出，無情地將敵人束縛在這血色牢籠中。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Curse damage to all enemies, gains [Truth], then gains [Chaos] for $2 turns. Under [Chaos], decreases all enemies' DEF by <color\=#FFFC40>$3</color>, adds $4 shot to [Arrow of Chaos] and increases [Arrow of Chaos] DMG Dealt by <color\=#FFFC40>$5</color>.\n<b><size\=28><color\=#850101>The scarlet spikes hidden underground were like a curse breaking out of the ground in the dark night, mercilessly binding the enemy in this blood-colored cage.</color></size></b>"
 
 r:"^黃金箭雨·湮滅 Lv.(\d+)$"="Golden Arrow Rain·Annihilate Lv.$1"
 r:"^黃金箭雨·湮滅 <color\=#0F69CB>Lv.(\d+)</color>$"="Golden Arrow Rain·Annihilate <color\=#0F69CB>Lv.$1</color>"
-r:"^開啟條件：自身擁有『真相』\n消耗所有『清晰之箭』，對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>『清晰之箭』記錄傷害的固定值萬能屬性傷害。之後，對隨機敵人發射(\d+)次『混沌之箭』，每次造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的萬能屬性傷害，優先攻擊未受到此效果攻擊的敵人。多次傷害命中同一目標時只會造成(\d+%)的傷害。\n<b><size\=28><color\=#850101>正義化為尖銳的利箭，對所有敵人造成致命傷害，任何的抵抗與反擊在正義面前都會化為烏有。</color></size></b>$"="Requirement: When you have [Truth]\nConsumes all [Arrow of Clarity], deals <color\=#FFFC40>$1</color> [Arrow of Clarity] recorded damage as fixed Almighty damage to all enemies. Then shoots $2 [Arrow of Chaos], dealing <color\=#FFFC40>$3</color> ATK Almighty damage to random enemies, prioritizing enemies that have not been attacked yet. Only deals $4 damage to the same target.\n<b><size\=28><color\=#850101>Justice is transformed into sharp arrows that inflict fatal damage on all enemies, and any resistance and counterattacks will come to nothing in the face of justice.</color></size></b>"
+r:"^開啟條件：自身擁有『真相』\n消耗所有『清晰之矢』，對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>『清晰之矢』記錄傷害的固定值萬能屬性傷害。之後，對隨機敵人發射(\d+)次『混沌之箭』，每次造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的萬能屬性傷害，優先攻擊未受到該效果攻擊的敵人。多次傷害命中同一目標時只會造成(\d+%)的傷害。\n<b><size\=28><color\=#850101>正義化為尖銳的利箭，對所有敵人造成致命傷害，任何的抵抗與反擊在正義面前都會化為烏有。</color></size></b>$"="Requirement: When you have [Truth]\nConsumes all [Arrow of Clarity], deals <color\=#FFFC40>$1</color> [Arrow of Clarity] recorded damage as fixed Almighty damage to all enemies. Then shoots $2 [Arrow of Chaos], dealing <color\=#FFFC40>$3</color> ATK Almighty damage to random enemies, prioritizing enemies that have not been attacked yet. Only deals $4 damage to the same target.\n<b><size\=28><color\=#850101>Justice is transformed into sharp arrows that inflict fatal damage on all enemies, and any resistance and counterattacks will come to nothing in the face of justice.</color></size></b>"
 
-r:"^『HIGHLIGHT』：對所有敵人造成1次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害和1次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力詛咒屬性傷害，自身『混沌之箭』觸發次數增加(\d+)次，持續(\d+)回合。\n『ONE MORE』：對1名敵人造成萬能屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[HIGHLIGHT]: Deals <color\=#FFFC40>$1</color> ATK Bless damage and <color\=#FFFC40>$2</color> ATK Curse damage to all enemies, adds $3 shots to [Arrow of Chaos] for $4 turns\n[ONE MORE]: Deals Almighty damage to 1 enemy.\nMelee Attack: Uses a melee weapon to deal light Phys damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
+r:"^『HIGHLIGHT』：對所有敵人造成1次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害和1次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力詛咒屬性傷害，自身『混沌之箭』觸發次數增加(\d+)次，持續(\d+)回合。\n『ONE MORE』：對1名敵人造成萬能屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[HIGHLIGHT]: Deals <color\=#FFFC40>$1</color> ATK Bless damage and <color\=#FFFC40>$2</color> ATK Curse damage to all enemies, adds $3 shots to [Arrow of Chaos] for $4 turns.\n[ONE MORE]: Deals Almighty damage to 1 enemy.\nMelee Attack: Uses a melee weapon to deal light Phys damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
 
 r:"^法度 Lv.(\d+)$"="Law Lv.$1"
 r:"^{{A}}編入隊伍時，可以觸發任意屬性的慾望奏鳴。戰鬥開始時，每觸發1種慾望奏鳴使自身造成傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="You can trigger any Desire Sonata. At the start of battle, increase DMG Dealt by <color\=#FFFC40>$1</color> for every triggered Desire Sonata."
@@ -2319,11 +2327,11 @@ r:"^造成萬能傷害時，目標每有(\d+%)的百分比防禦降低效果，�
 真相=Truth
 清晰=Clarity
 混沌=Chaos
-清晰之箭=Arrow of Clarity
+清晰之矢=Arrow of Clarity
 混沌之箭=Arrow of Chaos
 
 行走於迷霧之中=Walking in Fog
-r:"^戰鬥開始時，使攻擊力最高的同伴成為『偵探夥伴』（優先支配或反抗怪盜），回合開始時可以重新選擇『偵探夥伴』（同時只能存在1名『偵探夥伴』，重新選擇後有1回合的冷卻時間）。自身獲得『偵探夥伴』(\d+%)的攻擊力，上限(\d+)/(\d+)/(\d+)（1/50/70時升級）。『偵探夥伴』釋放群體{{A}}技能/HL/追加效果造成傷害時，記錄其對敵方單位造成的平均傷害\（若為單體技能，則記錄其對主目標傷害的(\d+%)\）。 {{B}}回合開始時，根據記錄的總傷害獲得1層『清晰之箭』並清空所記錄的傷害，『清晰之箭』持續2回合。$"="At the start of battle, gives the highest ATK ally [Detective Partner] (Prioritizing Dominate or Rebel Thief), you can reselect [Detective Partner] at the start of turn (There can only be 1 [Detective Partner], there is a 1 turn cooldown on reselection). Gains $1 of the [Detective Partner]'s ATK, up to $2/$3/$4 (Upgrades on level 1/50/70). When [Detective Partner] deal damage with an AoE {{A}} skill/ HIGHLIGHT/ Follow Up, records the average damage that dealt to the enemies (Records $5 damage that dealt to the main target if it's a ST skill). At the start of your turn, gains 1 stack of [Arrow of Clarity] based on the total recorded damage and clears all recorded damage, [Arrow of Clarity] lasts for 2 turns."
+r:"^戰鬥開始時，使攻擊力最高的同伴成為『偵探夥伴』（優先支配或反抗怪盜），回合開始時可以重新選擇『偵探夥伴』（同時只能存在1名『偵探夥伴』，重新選擇後有1回合的冷卻時間）。自身獲得『偵探夥伴』(\d+%)的攻擊力，上限(\d+)/(\d+)/(\d+)（1/50/70級時升級）。『偵探夥伴』釋放群體{{B}}技能/HL/追加效果造成傷害時，記錄其對敵方單位造成的平均傷害\（若為單體技能，則記錄其對主目標傷害的(\d+%)\）。{{A}}回合開始時，根據記錄的總傷害獲得1層『清晰之矢』並清空所記錄的傷害，『清晰之矢』持續(\d+)回合。$"="At the start of battle, gives the highest ATK ally [Detective Partner] (Prioritizing Dominate or Rebel Thief), you can reselect [Detective Partner] at the start of turn (There can only be 1 [Detective Partner], there is a 1 turn cooldown on reselection). Gains $1 of the [Detective Partner]'s ATK, up to $2/$3/$4 (Upgrades on level 1/50/70). When [Detective Partner] deal damage with an AoE {{B}} skill/ HIGHLIGHT/ Follow Up, records the average damage that dealt to the enemies (Records $5 damage that dealt to the main target if it's a ST skill). At the start of your turn, gains 1 stack of [Arrow of Clarity] based on the total recorded damage and clears all recorded damage, [Arrow of Clarity] lasts for $6 turns."
 
 嫌疑偵查=Suspect Investigation
 r:"^戰鬥開始時獲得『清晰』狀態，『清晰』狀態和『混沌』狀態的持續時間延長至(\d+)回合。『清晰』狀態和『混沌』狀態共存時，自身暴擊率提升(\d+%)，並使自身和『偵探夥伴』的傷害提升(\d+%)。$"="At the start of battle, gains [Clarity], extends the duration of [Clarity] and [Chaos] to $1 turns. When you have both [Clarity] and [Chaos], increase own CRIT Rate by $2 and increase own and [Detective Partner]'s DMG Bonus by $3."
@@ -2339,4 +2347,4 @@ r:"^HIGHLIGHT效果提升：額外使自身『混沌之箭』的傷害提高(\d+
 異路同行=Temporary Alliance
 
 塵埃落定=The Dust Settles
-r:"^釋放『黃金箭雨·湮滅』時『清晰之箭』的記錄傷害提升(\d+%)。{{A}}會視所有同伴為『偵探夥伴』。戰鬥中，{{A}}會額外獲得暴擊率、暴擊效果提升，提升值基於所有『偵探夥伴』中暴擊率、暴擊效果\（超過(\d+%)的部分）最高值的(\d+%)\(上限(\d+%)、(\d+%)\）。$"="When using [Golden Arrow Rain·Annihilate], increases [Arrow of Clarity] recorded damage by $1. You now see all allies as [Detective Partner]. In battle, additionally gains CRIT Rate and CRIT DMG based $3 of highest CRIT Rate and CRIT DMG (That's over $2) among all [Detective Partner] (Up to $4 and $5)."
+r:"^釋放『黃金箭雨·湮滅』時『清晰之矢』的記錄傷害提升(\d+%)。{{A}}會視所有同伴為『偵探夥伴』。戰鬥中，{{A}}會額外獲得暴擊率、暴擊效果提升，提升值基於所有『偵探夥伴』中暴擊率、暴擊效果\（超過(\d+%)的部分）最高值的(\d+%)\(上限(\d+%)、(\d+%)\）。$"="When using [Golden Arrow Rain·Annihilate], increases [Arrow of Clarity] recorded damage by $1. You now see all allies as [Detective Partner]. In battle, additionally gains CRIT Rate and CRIT DMG based $3 of highest CRIT Rate and CRIT DMG (That's over $2) among all [Detective Partner] (Up to $4 and $5)."
