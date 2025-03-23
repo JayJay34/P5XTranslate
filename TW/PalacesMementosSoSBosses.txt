@@ -28,6 +28,7 @@ r:"^觀察模式冷卻中，(\d+)秒後可用！$"="Third Eye in cooldown"
 狂<color\=#ff0000ff>化</color>惡黨=Ber<color\=#ff0000ff>se</color>rk Shadow
 詭<color\=#ff0000ff>譎</color>之徒=En<color\=#ff0000ff>ig</color>ma Shadow
 墮<color\=#ff0000ff>落</color>的狂徒=F<color\=#ff0000ff>al</color>len Shadow
+強<color\=#ff0000ff>大</color>的陰影=S<color\=#ff0000ff>t</color>rong Shadow
 是否要降低難度進行挑戰(再次挑戰生效)=Do you want to lower the difficulty? \n(Take effect on next challenge)
 本次戰鬥無法進行養成與更換面具。=Cannot upgrade characters and change Personas.
 當前沒有可以調整的技能=Cannot change skill
@@ -698,10 +699,15 @@ r:"^每(\d+)回合，{{A}}會釋放「連結·死」，使隨機一名怪盜陷�
 
 r:"^1、{{A}}擁有使「萬物增長」的能力，每回合會使隨機兩名友軍獲得「增長」，每層「增長」使攻擊力提高(\d+%)。\n2、{{A}}每三回合，會汲取友軍的「增長」，當汲取層數≥(\d+)時，會使用一次強力的攻擊。\n3、擊倒擁有「增長」的陰影時，會清除其「增長」。$"="<size\=27>1. {{A}} can use [All Growth], each turn give 2 random allies [Growth], each stack increases ATK by $1.\n2. {{A}} will drain [Growth] from allies. \nWhen they drained ≥$2 stacks, use a powerful attack.\n3. When you down the Shadow with [Growth], \ndispel all of their [Growth].</size>"
 汲取=Drain
-攻擊增長=Attack Growth
-r:"^隨機給兩名隊友增加一層「攻擊增長」，每層「攻擊增長」會使攻擊力提高(\d+%)。$"="Randomly gives 2 allies 1 stack of [Attack Growth], each stack increases ATK by $1."
-汲取所有隊友的「攻擊增長」，達到一定層數時，會釋放「巨人之戰」。=<size\=26>Drains all allies' [Attack Growth], uses [Gigantomachia] when reaching a certain stack.</size>
+攻擊增長=ATK Growth
+防禦增長=DEF Growth
+傷害增長=DMG Growth
+r:"^隨機給兩名隊友增加一層「攻擊增長」，每層「攻擊增長」會使攻擊力提高(\d+%)。$"="Randomly gives 2 allies 1 stack of [ATK Growth], each stack increases ATK by $1."
+汲取所有隊友的「攻擊增長」，達到一定層數時，會釋放「巨人之戰」。=<size\=26>Drains all allies' [ATK Growth], uses [Gigantomachia] when reaching a certain stack.</size>
 r:"^攻擊力提高(\d+%)，被擊倒時會被清除$"="Increase ATK by $1, dispelled when downed"
+r:"^攻<color\=#000000>擊</color>增長$"="A<color\=#000000>T</color>K Growth"
+r:"^防<color\=#000000>禦</color>增長$"="D<color\=#000000>E</color>F Growth"
+r:"^傷<color\=#000000>害</color>增長$"="D<color\=#000000>M</color>G Growth"
 
 r:"^1、{{A}}擁有使「萬物增長」的能力，初始擁有(\d+)層「增長」，每回合會給自己添加(\d+)—(\d+)層「增長」，最多疊加至(\d+)層。\n2、{{A}}每次受到傷害會減少一層「增長」，「增長」低於(\d+)層時，會立刻為自己添加(\d+)層「增長」。\n3、四回合後或「增長」達到(\d+)層時，會變身為<color\=#ff3b37>{{B}}</color>，能力大幅強化。$"="<size\=24>1. {{A}} can use [All Growth], start with $1 stacks of [Growth], each turn gain $2-$3 stacks of [Growth], up to $4 stacks.\n2. Decrease 1 stack of [Growth] when {{A}} took 1 hit of damage, immediately gain $6 stacks of [Growth] when you have less than $5 stacks of [Growth].\n3. After 4 turns or when [Growth] reached $7 stacks, transform into <color\=#ff3b37>{{B}}</color>, heavily increase own abilities.</size>"
 增長！=Growth!
@@ -968,6 +974,8 @@ CROSS FATE PALACE (CF) (COLLAB)
 成功抵達目標地點=Reach the destination
 開啟寶箱=Open Treasure Chest
 擊敗強敵=Defeat Elite
+收集心型=Collect
+心型印記=Heart Mark
 命運徽記·夢想=Fate Emblem·Dream
 研究所=Laboratory
 {{A}}出入口={{A}} Entryway
@@ -977,6 +985,11 @@ CROSS FATE PALACE (CF) (COLLAB)
 講堂=Auditorium
 感覺已經沒有可以調查的地方了……=Feels like there is no place \nleft to investigate...
 門是關著的，但似乎沒有上鎖……=This door is closed, but it doesn't seem to be locked...
+
+要結束這片區域的調查，\n先繼續前進嗎……=Finish investigating this area and keep moving forward...
+好，這樣差不多所有地方都\n調查完了。=Okay, almost all places have been investigated.
+WONDER，要繼續前進嗎？=Wonder, want to keep going?
+倉庫=Warehouse
 
 ----------
 MEMNTOS 1
@@ -1092,7 +1105,9 @@ r:"SP消耗大幅提高，造成傷害提高(\d+%)"=Heavily increase SP cost, \n
 {{A}}擁有<color\=#ff3b37>「天眼觀世間」</color>。\n「天眼觀世間」：標記一個怪盜，使其受到傷害提高，下回合將受到所有陰影的集火。\n{{A}}使用「天眼觀世間」後，會召喚1隻「紫金花狐貂」。={{A}} has <color\=#ff3b37>[Heavenly Eyes]</color>. \n[Heavenly Eyes]: Mark an enemy, increase their DMG Taken, all allies will attack them next turn. \nAfter {{A}} used [Heavenly Eyes], summon 1 [Chinese Redbud Fox].
 r:"^{{A}}擁有<color\=#ff3b37>「混元珍珠傘」</color>。\n「混元珍珠傘」：對血量百分比最低的友軍撐開混元珍珠傘，使所有屬性適應性全部變成“耐”，持續(\d+)回合。$"="{{A}} has <color\=#ff3b37>[Pearl Umbrella]</color>. \n[Pearl Umbrella]: Open the Pearl Umbrella for the ally with the lowest HP%, make them [Resist] all elements for $1 turns."
 r:"^{{A}}擁有<color\=#ff3b37>「混元珍珠傘」</color>。\n「混元珍珠傘」：對血量百分比最低的友軍撐開混元珍珠傘，使所有屬性適應性全部變成“吸”，持續(\d+)回合。$"="{{A}} has <color\=#ff3b37>[Pearl Umbrella]</color>. \n[Pearl Umbrella]: Open the Pearl Umbrella for the ally with the lowest HP%, make them [Absorb] all elements for $1 turns."
-1、{{A}}擁有<color\=#ff3b37>「持劍護國土」</color>。\n「持劍護國土」：每次造成傷害會使隨機一名友軍獲得護盾。\n2、{{B}}擁有<color\=#ff3b37>「眾生均增長」</color>。\n「眾生均增長」：所有友軍每回合從攻擊增長、防禦增長、傷害增長中隨機獲得一種。\n3、{{C}}擁有<color\=#ff3b37>「天眼觀世間」</color>。\n「天眼觀世間」：標記一個怪盜，使其受到傷害提高，下回合將受到所有陰影的集火。\n{{C}}使用「天眼觀世間」後，會召喚1只「紫金花狐貂」。\n4、{{D}}擁有<color\=#ff3b37>「混元珍珠傘」</color>。\n「混元珍珠傘」：對血量百分比最低的友軍撐開混元珍珠傘，使所有屬性適應性全部變成“吸”，持續2回合。\n5、當四大天王只剩最後一位時，他會在危急關頭臨陣突破，變身為<color\=#ff3b37>「{{E}}」</color>，並恢復30%最大生命值。\n6、<color\=#ff3b37>「{{E}}」同時擁有全部四大天王的能力</color>，請小心應對。=Jikokuten has <color\=#ff3b37>"Country Protection"</color>. \n"Country Protection": Give a random ally Shield after dealing damage. \n2. Zouchouten has <color\=#ff3b37>"Sentient Growth"</color>. \n"Sentient Growth": All allies gain one of the following buff randomly each turn: ATK growth, DEF growth, Damage growth. \n3. Koumokuten has <color\=#ff3b37>"Heavenly Eyes"</color>. \n"Heavenly Eyes": Mark an enemy, increase their DMG Taken, all allies will attack them next turn. \nAfter Koumokuten used "Heavenly Eyes", summon 1 "Chinese Redbud Fox". \n4. Bishamonten has <color\=#ff3b37>"Pearl Umbrella"</color>. \n"Pearl Umbrella": Open the Pearl Umbrella for the ally with the lowest HP%, make them Absorb all element for 2 turns. \n5. When there's only 1 enemy left, they will transform into <color\=#ff3b37>Asura</color> and heal 30% Max HP. \n6. <color\=#ff3b37>Asura has the abilities of all 4 Kings</color>.
+1、{{A}}擁有<color\=#ff3b37>「持劍護國土」</color>。\n「持劍護國土」：每次造成傷害會使隨機一名友軍獲得護盾。\n2、{{B}}擁有<color\=#ff3b37>「眾生均增長」</color>。\n「眾生均增長」：所有友軍每回合從攻擊增長、防禦增長、傷害增長中隨機獲得一種。\n3、{{C}}擁有<color\=#ff3b37>「天眼觀世間」</color>。\n「天眼觀世間」：標記一個怪盜，使其受到傷害提高，下回合將受到所有陰影的集火。\n{{C}}使用「天眼觀世間」後，會召喚1只「紫金花狐貂」。\n4、{{D}}擁有<color\=#ff3b37>「混元珍珠傘」</color>。\n「混元珍珠傘」：對血量百分比最低的友軍撐開混元珍珠傘，使所有屬性適應性全部變成“吸”，持續2回合。\n5、當四大天王只剩最後一位時，他會在危急關頭臨陣突破，變身為<color\=#ff3b37>「{{E}}」</color>，並恢復30%最大生命值。\n6、<color\=#ff3b37>「{{E}}」同時擁有全部四大天王的能力</color>，請小心應對。=Jikokuten has <color\=#ff3b37>[Country Protection]</color>. \n[Country Protection]: Give a random ally Shield after dealing damage. \n2. Zouchouten has <color\=#ff3b37>[Sentient Growth]</color>. \n[Sentient Growth]: All allies gain one of the following buff randomly each turn: ATK Growth, DEF Growth, DMG Growth. \n3. Koumokuten has <color\=#ff3b37>[Heavenly Eyes]</color>. \n[Heavenly Eyes]: Mark an enemy, increase their DMG Taken, all allies will attack them next turn. \nAfter Koumokuten used [Heavenly Eyes], summon 1 [Chinese Redbud Fox]. \n4. Bishamonten has <color\=#ff3b37>[Pearl Umbrella]</color>. \n[Pearl Umbrella]: Open the Pearl Umbrella for the ally with the lowest HP%, make them Absorb all element for 2 turns. \n5. When there's only 1 enemy left, they will transform into <color\=#ff3b37>Asura</color> and heal 30% Max HP. \n6. <color\=#ff3b37>Asura has the abilities of all 4 Kings</color>.
+r:"^<color\=#ff3b37>「{{A}}」同時擁有全部四大天王的能力</color>，請小心應對。$"="<color\=#ff3b37>{{A}} has the abilities of all 4 Kings</color>."
+你們的意志由我繼承，我來護持眾生。=Let me inherit your will, I will protect all.
 {{A}}添加的護盾，可抵消一定的傷害=Shield added by {{A}}, \ncan negate some damage
 眾生均增長=Sentient Growth
 r:"來自{{A}}的增益，攻擊力提升(\d+%)"=Growth from {{A}}, \nincrease ATK by $1
@@ -1102,7 +1117,12 @@ r:"來自{{A}}的增益，造成傷害提升(\d+%)"=Growth from {{A}}, \nincreas
 天眼注視=Heavenly Gaze
 被天眼所注視，將受到所有陰影的集火=Under watch Heavenly Eyes, \nwill get focus fire by all enemies
 混元珍珠傘=Pearl Umbrella
-處於「混元珍珠傘」的庇護之下，對所有屬性的適應性變為吸=Under the protection of the "Pearl Umbrella", absorb all element
+處於「混元珍珠傘」的庇護之下，對所有屬性的適應性變為吸=Under the protection of [Pearl Umbrella], \nabsorb all element
+sr:"^<color\=#FF0000>(.*)</color>受到了混元珍珠傘的庇護，全部適應性變為吸……$"="<color\=#FF0000>$1</color> now Drain all!"
+sr:"^<color\=#FF0000>(.*)</color>失去了混元珍珠傘的庇護……$"="<color\=#FF0000>$1</color> lost Pearl Umbrella..."
+四天王之力=<size\=26>Power of the Four Heavenly Kings</size>
+r:"^天<color\=#000000>眼</color>注視$"="H<color\=#000000>e</color>avenly Gaze"
+r:"^混<color\=#000000>元</color>珍珠傘$"="P<color\=#000000>e</color>arl Umbrella"
 
 ----------
 MEMENTOS 3
