@@ -11,6 +11,7 @@ r:"^(.*)版本$"="Version $1"
 開始登入=Logging in...
 登入中……=Logging in...
 伺服器維護中，請查看遊戲公告。=Server is under maintenance.
+暫無消息=No news
 密  碼：=Password:
 用戶名：=Username:
 伺服器=Server
@@ -329,7 +330,7 @@ r:"^土<color\=#ff0000ff>佐</color>林 {{A}}$"="Fu<color\=#ff0000ff>mi</color>y
 r:"^小<color\=#ff0000ff>出</color> {{A}}$"="Hi<color\=#ff0000ff>yo</color>ri Koide"
 r:"^江<color\=#ff0000ff>崎</color> {{A}}$"="Sh<color\=#ff0000ff>in</color>ta Ezaki"
 
-// Original Phantom Thieves //
+// Original Phantom Thieves + P5 //
 r:"^雨<color\=#ff0000ff>宮</color>蓮$"="R<color\=#ff0000ff>en</color> Amamiya"
 r:"^坂<color\=#ff0000ff>本</color>{{A}}$"="R<color\=#ff0000ff>yu</color>ji Sakamoto"
 r:"^摩<color\=#ff0000ff>爾</color>{{A}}$"="Mor<color\=#ff0000ff>g</color>ana"
@@ -678,6 +679,7 @@ Area Names
 ----------
 Menu / UI Translations (Timer)
 ----------
+r:"^本物品將在(\d+)年(\d+)月(\d+)日 (\d+):(\d+)到期$"="Expires on $1/$2/$3 $4:$5"
 r:"^(\d+)天(\d+)時後過期$"="Expires in $1d $2h"
 r:"^(\d+)天後過期$"="Expires in $1d"
 r:"^(\d+)天後下架$"="Expires in $1d"
@@ -696,6 +698,7 @@ r:"^(\d+)天(\d+)時(\d+)分$"=" $1d $2h $3m"
 r:"^(\d+)天(\d+)小時$"=" $1d $2h"
 r:"^(\d+)天(\d+)時$"=" $1d $2h"
 r:"^(\d+)時(\d+)分$"=" $1h $2m"
+r:"^(\d+)天(\d+)小時後下架$"="Expires in $1d $2h"
 r:"^(\d+)時(\d+)分後下架$"="Expires in $1h $2m"
 r:"^剩餘(\d+)時(\d+)分(\d+)秒$"=" $1h $2m $3s"
 r:"^(\d+)小時(\d+)分鐘$"=" $1h $2m"
@@ -866,8 +869,8 @@ sr:"^多重奏·(.*):(.*)元素怪盜技能傷害提升(.*)$"="<size\=21>$1 Poly
 傷害減免=DMG RES
 弱點傷害=Weak DMG
 弱點抗性=Weak RES
-耐性穿透=Resist PEN
-耐性抗性=Resist Bonus
+耐性穿透=RES PEN
+耐性抗性=RES Bonus
 r:"^治療效果$"="<size\=22>Healing Effect</size>"
 受治療加成=Healing Received
 受治療效果=Healing Received
@@ -1172,7 +1175,7 @@ r:"^購買後，提升至(\d+)級，可獲得以下獎勵$"="Buy to Lv. $1 and g
 通行證等級提升=Pass LEVEL UP
 每次完成今日目標可獲得=Complete daily tasks to receive useful rewards:
 今日剩餘領取次數=Dailies left to complete:
-每次完成今日目標可領獎，剩餘   次=Daily task rewards: You have   task(s) left.
+每次完成今日目標可領獎，剩餘   次=Daily task rewards: You have   left
 伴手禮=Gift Bag
 禮包=Gift Bag
 成長經驗=<size\=26>Phantom Pass EXP</size>
@@ -1186,6 +1189,11 @@ r:"^(\d+)時(\d+)$"=" $1 hours $2 minutes"
 r:"^本週累計今日計畫領獎次數\（(\d+)/(\d+)\），可額外領取$"="Bonus rewards after completing ($1/$2) dailys"
 r:"^本週累計今日計畫領獎次數\（(\d+)/(\d+)\），再額外領取$"="Bonus rewards after completing ($1/$2) dailys"
 r:"^本週累計今日計畫領獎次數\((\d+)\/(\d+)\)，可額外領取$"="Number of dailys completed this week ($1/$2), you can receive additional rewards"
+
+神秘武器套件=Mysterious Weapon Kit
+武器=Weapon
+r:"^(\d+)年(\d+)月(\d+)日 (\d+):(\d+)後可使用。$"="Available after $1/$2/$3 $4:$5."
+r:"^神秘怪盜「(.*)」的專屬近戰武器。$"="<size\=20>Exclusive melee weapon for mysterious Thief "$1".</size>"
 
 // DAILY //
 r:"^登入遊戲$"="Log in to the game"
@@ -1337,7 +1345,9 @@ r:"^(.*) 與好友(.*)交換啟動圖鑑。$"="<size\=23>Collected on $1 by exch
 普通{{A}}盲盒=Common {{A}} Blind Box
 {{A}}回收獎勵，提交重複{{A}}即可獲得。\n開啟後可隨機獲得各類蔬菜種子或烹飪食材。={{A}} recycling reward, available after trading repeat {{A}}. \nCan get all kinds of vegetable seeds or cooking ingredients randomly.
 回收篩選=Filter
-普通=Common
+簡單=Easy
+普通=Normal
+艱難=Very Hard
 您自己=You
 今日剩餘交換次數：= Daily Exchange:
 剩餘心願發佈次數：=Exchange Wishlist: <size\=1>.</size>
@@ -1510,7 +1520,7 @@ r:"^夾娃娃機啊，要玩玩看嗎\（<color\=#ff0000>每次(\d+)現金</colo
 r:"^小型娃娃機-{{A}}$"="Small Crane Machine"
 r:"^中型娃娃機-{{A}}$"="Medium Crane Machine"
 
-r:"^本期有機率獲得超稀有娃娃「<color\=#ffd145>{{A}}·迷你</color>」$"="<size\=24>Chance to get super rare doll\n[<color\=#ffd145>Mini {{A}}</color>]</size>"
+r:"^本期有機率獲得超稀有娃娃「<color\=#ffd145>{{A}}·迷你</color>」$"="<size\=24>Chance to get super rare doll\n[<color\=#ffd145>{{A}}·Mini</color>]</size>"
 r:"^本期有機率獲得超稀有娃娃「<color\=#ffd145>{{A}}</color>」$"="<size\=24>Chance to get super rare doll\n[<color\=#ffd145>{{A}}</color>]</size>"
 滑動螢幕可旋轉查看娃娃模型。=Drag to view doll model.
 滑動螢幕可旋轉查看娃娃模型=Drag to view doll model
@@ -1551,6 +1561,8 @@ r:"^擺<color\=#ff0000ff>放</color>區·二樓$"="Di<color\=#ff0000ff>sp</color
 該款式物品暫時沒有可擺放在這個位置的規格。=This size of item cannot be placed here.
 是否切換到一層進行擺放？=Switch to first floor?
 是否切換到二層進行擺放？=Switch to second floor?
+
+{{A}}·迷你={{A}}·Mini
 
 ----------
 Confidants (SL) and City Activities
@@ -1734,6 +1746,7 @@ r:"^都市日程<color\=#ffc000>在{{A}}打工</color>已解鎖，\n每日有一
 
 去牛丼店打工=<size\=24>Work part-time\nat the Beef Bowl Shop</size>
 {{A}}的牛丼店今天也安排了打工……=<size\=25>I can work at the Beef Bowl Shop today...</size>
+今天也去{{A}}的牛丼店打工吧。=<size\=25>Let's go work at the Beef Bowl Shop today.</size>
 {{A}}的牛丼店今天可以進行打工的排班，加油吧。=I can work at the Beef Bowl Shop today, let's keep it up.
 今天{{A}}的牛丼店有打工的排班，繼續努力吧。=I can work at the Beef Bowl Shop today, let's keep it up.
 今天牛丼店的人手也嚴重不足……=<size\=24>The Beef Bowl Shop is understaffed today...</size>
@@ -2332,9 +2345,9 @@ r:"^鳶尾香調的香水，可用於提升潛能等級至潛能(\d+)·潛能(\d
 頂尖礦石=Exquisite Ore
 優質礦石=Quality Ore
 粗製礦石=Crude Ore
-r:"^製成裝備整體結構的頂尖礦石，可用於在武器等級為60·70時突破。$"="Exquisite ore used to build the overall equipment structure, can be used level up Weapons Enhance to Enhance 6-Enhance 7."
-r:"^製成裝備整體結構的優質礦石，可用於在武器等級為30·40·50時突破。$"="Quality ore used to build the overall equipment structure, can be used level up Weapons Enhance to Enhance 3-Enhance 5."
-r:"^製成裝備整體結構的粗製礦石，可用於在武器等級為10·20時突破。$"="Crude ore used to build the overall equipment structure, can be used level up Weapons Enhance to Enhance 1-Enhance 2."
+r:"^製成裝備整體結構的頂尖礦石，可用於在武器等級為60·70時突破。$"="Exquisite ore used to build the overall structure of equipments, can be used level up Weapons Enhance to Enhance 6-Enhance 7."
+r:"^製成裝備整體結構的優質礦石，可用於在武器等級為30·40·50時突破。$"="Quality ore used to build the overall structure of equipments, can be used level up Weapons Enhance to Enhance 3-Enhance 5."
+r:"^製成裝備整體結構的粗製礦石，可用於在武器等級為10·20時突破。$"="Crude ore used to build the overall structure of equipments, can be used level up Weapons Enhance to Enhance 1-Enhance 2."
 
 {{A}}精魄=<size\=24>{{A}} Essence</size>
 {{A}}精碎=<size\=27>{{A}} Chunk</size>
@@ -2535,6 +2548,7 @@ sr:"^當前任務目標處於<color\=#FF0000>(.*)</color>，\n是否立即前往
 去約定的地方找{{A}}=Go find {{A}} at the agreed place
 r:"^前往{{A}}(\d+)區$"=$"Go to {{A}} Area $1"
 調查{{A}}=Investigate {{A}}
+調查未知的{{A}}=Investigate the unknown {{A}}
 去找{{A}}吧=Go find {{A}}
 搜尋{{A}}的所在=Look for {{A}}
 去看看{{A}}的情況=See how {{A}} is doing
@@ -2593,6 +2607,7 @@ sr:"^完成「<color\=#ff3b37>(.*)</color>」後解鎖「(.*)」，是否立即�
 EVENTS TAB
 ----------
 活動=Events
+活動道具=Event Item
 立刻參與限時活動，獲取大量{{A}}、契約憑證以及個性化裝飾！=Participate in limited time events and get lots of {{A}}, Contract items, and more!
 天鵝絨試煉通關=<size\=26>Clear Velvet Trials</size>
 r:"^巧匠之作第(\d+)關$"="<size\=26>Artisan's Work $1</size>"
@@ -2611,6 +2626,7 @@ r:"^累計登入十二天\((\d+)/(\d+)\)$"="<size\=28>Login for 12 days ($1/$2)<
 
 r:"^通關(.*)難度(\d+)\((\d+)/(\d+)\)$"="Clear Difficulty $2 ($3/$4)"
 r:"^累計在(.*)開啟(\d+)個寶箱\((\d+)/(\d+)\)$"="Open $2 Treasure Chests ($3/$4)"
+sr:"^累計在(.*)收集(\d+)個(.*)\((\d+)/(\d+)\)$"="Collect $2 $3 in $1 ($4/$5)"
 r:"^(.*)所有關卡探索進度均到達100%\((\d+)/(\d+)\)$"="Reach 100% Exploration on all levels ($2/$3)"
 r:"^(.*)所有關卡進度均到達100%\((\d+)/(\d+)\)$"="Reach 100% Exploration on all levels ($2/$3)"
 r:"^參加(\d+)次任意都市日程\((\d+)/(\d+)\)$"="Participate in any $1 City Activities ($2/$3)"
@@ -2676,8 +2692,13 @@ r:"^所有敵人受到傷害降低(\d+(.\d+)?(%)?)$"="Decrease all enemies' DMG 
 達到=<size\=20>Reach</size>
 可挑戰=<size\=20>to Challenge</size>
 擁有祝福=Blessings
-花朵=Flower
+花朵=Flowers
+未知之數=Unknown Number
+預言之數=Prophecy Number
+預言之數☆=Prophecy Number ☆
+投擲點數=Dice Points
 要求投擲點數=<size\=30>Need Dice Points</size>
+可返回查看路線後繼續投擲=Can roll after checking the route
 每次獲得花朵=Get Flower
 敵人強度=Strength
 淺層=Top
@@ -2685,7 +2706,63 @@ r:"^所有敵人受到傷害降低(\d+(.\d+)?(%)?)$"="Decrease all enemies' DMG 
 底部=Bottom
 最深處=Deepest
 層數=Floors
+後退=Backwards
+戰勝前置路線首領後解鎖。=Unlock after defeating the boss of the previous route.
+r:"^重置路線會<color\=#ff3b37>清空當前線路里程進度</color>且<color\=#ff3b37>不會返還</color>消耗的道具。\n是否重置？$"="Reset route will <color\=#ff3b37>clear the current route progress</color> and <color\=#ff3b37>will not refund</color> consumed itmes.\nAre you sure?"
 自動投擲已取消。=Automatic throws have been canceled.
+『花朵』\n參與{{A}}的骰子大冒險活動獲得，可與{{A}}交換稀有道具獎勵。=<size\=23>[Flowers]\nObtained from {{A}}'s Dice Adventure,\ncan be exchanged with {{A}} for items.</size>
+r:"^『未知之數』\n透過挑戰「(.*)」關卡獲得，每次會投擲出隨機的行進點數。活動期間內，每天登入後自動獲得(\d+)個。$"="<size\=30>[Unknown Number]\nGained from Cross Fate, \ncan be used to roll random dice numbers, gain $2 daily.</size>"
+r:"^『預言之數』\n完成「行動總結」中的目標後獲得，可投擲出指定的行進點數。活動期間內，每天登入後自動獲得(\d+)個。$"="<size\=30>[Prophecy Number]\nGained from Action Summary, \ncan be used to roll a specific dice number, gain $1 daily.</size>"
+不限購=No limit
+抵達此地點可獲得<color\=#FFD145>少量花朵獎勵</color>。=Reach this location to gain <color\=#FFD145>Little Flowers</color>.
+抵達此地點可獲得<color\=#FFD145>大量花朵獎勵</color>。=Reach this location to gain <color\=#FFD145>Many Flowers</color>.
+抵達此地點可獲得<color\=#FFD145>普通星星祝福</color>。=Reach this location to gain <color\=#FFD145>Common Star Blessing</color>.
+抵達此地點可獲得<color\=#FFD145>稀有星星祝福</color>。=Reach this location to gain <color\=#FFD145>Rare Star Blessing</color>.
+抵達此地點可獲得<color\=#FFD145>珍貴星星祝福</color>。=Reach this location to gain <color\=#FFD145>Precious Star Blessing</color>.
+抵達此地點會觸發<color\=#FFD145>隨機獎勵事件</color>。=Reach this location will trigger <color\=#FFD145>Random Reward Event</color>.
+抵達此地點會遭遇<color\=#FFD145>投擲點數事件</color>。=Reach this location will encounter <color\=#FFD145>Dice Points Event</color>.
+抵達此地點會瞬殺弱小陰影並獲得<color\=#FFD145>花朵獎勵</color>。=Reach this location will insta-kill weak Shadow and gain <color\=#FFD145>Flowers</color>.
+抵達此地點需要進行<color\=#FFD145>戰鬥挑戰</color>，勝利後獲得花朵獎勵與隨機祝福。=Reach this location will enter <color\=#FFD145>Combat Challenge</color>, after victory gain Flowers and random Blessings.
+抵達此地點會進行<color\=#FFD145>首領挑戰</color>，勝利後獲得花朵獎勵並解鎖下一路線。=Reach this location will enter <color\=#FFD145>Boss Challenge</color>, after victory gain Flowers and unlock the next route.
+主角提升=Wonder Buff
+反抗提升=Rebel Buff
+支配提升=Dominate Buff
+物射提升=Phys Gun Buff
+火冰提升=Fire Ice Buff
+電風提升=Elec Wind Buff
+念核提升=Psy Nuke Buff
+祝咒提升=Bless Curse Buff
+萬能提升=Almighty Buff
+普攻提升=Melee Attack Buff
+技能提升=Skill Buff
+HL提升=HIGHLIGHT Buff
+追加提升=Follow Up Buff
+持續提升=Damage Over Time Buff
+
+r:"^所有怪盜最大生命值提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' HP by $1"
+r:"^所有怪盜攻擊力提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' ATK by $1"
+r:"^所有怪盜防禦力提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' DEF by $1"
+r:"^所有怪盜暴擊率提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' CRIT Rate by $1"
+r:"^所有怪盜暴擊效果提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' CRIT DMG by $1"
+r:"^所有怪盜穿透提升(\d+(.\d+)?(%)?)"="Increase all Thieves' PEN by $1"
+r:"^所有怪盜弱點傷害提升(\d+(.\d+)?(%)?)"="Increase all Thieves' Weak DMG by $1"
+r:"^所有怪盜耐性穿透提升(\d+(.\d+)?(%)?)"="Increase all Thieves' RES PEN by $1"
+r:"^所有怪盜效果命中提升(\d+(.\d+)?(%)?)"="Increase all Thieves' EHR by $1"
+r:"^所有怪盜造成傷害提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' DMG Dealt by $1"
+r:"^<color\=#FFFC40>WONDER</color>造成傷害提升(\d+(.\d+)?(%)?)$"="Increase <color\=#FFFC40>Wonder's</color> DMG Dealt by $1"
+r:"^<color\=#FFFC40>反抗</color>怪盜造成傷害提升(\d+(.\d+)?(%)?)$"="Increase all <color\=#FFFC40>Rebel</color> Thieves' DMG Dealt by $1"
+r:"^<color\=#FFFC40>支配</color>怪盜造成傷害提升(\d+(.\d+)?(%)?)$"="Increase all <color\=#FFFC40>Dominate</color> Thieves' DMG Dealt by $1"
+r:"^所有怪盜<color\=#FFFC40>物理</color>、<color\=#FFFC40>射擊</color>屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#FFFC40>Phys</color>, <color\=#FFFC40>Gun</color> DMG by $1"
+r:"^所有怪盜<color\=#ff381d>火焰</color>、<color\=#00aeff>冰凍</color>屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff381d>Fire</color>, <color\=#00aeff>Ice</color> DMG by $1"
+r:"^所有怪盜<color\=#fbff37>電擊</color>、<color\=#81ea2c>疾風</color>屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#fbff37>Elec</color>, <color\=#81ea2c>Wind</color> DMG by $1"
+r:"^所有怪盜<color\=#ff63ff>念動</color>、<color\=#00fcff>核熱</color>屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff63ff>Psy</color>, <color\=#00fcff>Nuke</color> DMG by $1"
+r:"^所有怪盜<color\=#fffea0>祝福</color>、<color\=#ff0036>詛咒</color>屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#fffea0>Bless</color>, <color\=#ff0036>Curse</color> DMG by $1"
+r:"^所有怪盜<color\=#FFFC40>萬能</color>傷害提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#FFFC40>Almighty</color> DMG by $1"
+r:"^所有怪盜<color\=#FFFC40>普通攻擊、槍械攻擊</color>造成傷害提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#FFFC40>Melee Attack, Gun Attack</color> DMG Dealt by $1"
+r:"^所有怪盜<color\=#FFFC40>{{A}}技能</color>造成傷害提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#FFFC40>{{A}} skill</color> DMG by $1"
+r:"^所有怪盜<color\=#FFFC40>HIGHLIGHT</color>造成傷害提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#FFFC40>HIGHLIGHT</color> DMG by $1"
+r:"^所有怪盜<color\=#FFFC40>追加效果</color>造成傷害提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#FFFC40>Follow Up</color> DMG Dealt by $1"
+r:"^所有怪盜造成<color\=#FFFC40>持續傷害</color>時傷害提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#FFFC40>Damage Over Time</color> DMG Dealt by $1"
 
 完成挑戰可解鎖=Can unlock
 新的異變效果=New modifier
@@ -2905,6 +2982,9 @@ r:"^天<color\=#ff0000ff>鵝</color>絨房間$"="Ve<color\=#ff0000ff>lv</color>e
 檔案管理=<size\=24>Compendium</size>
 貴賓服務=VIP Service
 面具階級=Rank
+rank等級：=Rank:
+面具屬性要求=Mask Element Requirement
+面具職業要求=Mask Role Requirement
 便捷合體=<size\=38>Quick Fuse</size>
 sr:"^省略中途合體步驟獲得<color\=#FFF000>(.*)</color>所需的全部印記如下：$"="Skip fusion steps and obtain <color\=#FFF000>$1</color>:"
 r:"^是否快速從兌換商店，自動兌換全部【缺少印記材料】？\n將消耗<size\=60><sprite\=33></size>x(\d+)。$"="<size\=28>Want to automatically exchange all missing [Persona Mark] from the shop? \nThis will cost <size\=60><sprite\=33></size>x$1.</size>"
@@ -3052,6 +3132,12 @@ r:"^最多只可以選擇(\d+)個面具上陣哦～$"="You can only equip $1 Per
 『不羈紋章·虹』\n在心之海試煉等玩法中獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=26>[Wild Card Emblem·Rainbow]\nGained from Sea of Souls Trials. \nCan be used in Challenge Reward.</size>
 『不羈紋章·耀』\n在厄抑之境中挑戰Ⅵ階、Ⅶ階{{A}}副本後獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=26>[Wild Card Emblem·Shiny]\nGained from Rank VI, Rank VII Persona Farm. Can be used in Challenge Reward.</size>
 『不羈紋章·空』\n在厄抑之境中挑戰所有{{A}}副本後均可獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=26>[Wild Card Emblem·Dull]\nGained from all Persona Farm. \nCan be used in Challenge Reward.</size>
+銘刻著{{B}}傳說的印記……應該可以用於強化、進化、合體{{A}}。=A mark engraved with the legend of {{B}}, can be used to upgrade, evolve, and fuse {{A}}.
+名為『{{B}}』的{{A}},操縱者可召喚其參與戰鬥。=A {{A}} called [{{B}}], \ncan be summoned in battle.
+名為『{{B}}』的{{A}}，操縱者可召喚其參與戰鬥。=A {{A}} called [{{B}}], \ncan be summoned in battle.
+r:"^在{{A}}育成中習得被動技能『(.*)』的技能卡。$"="Can be used to learn this passive skill."
+r:"^在{{A}}育成中習得輔助系技能『(.*)』的技能卡。$"="Can be used to learn this support skill."
+r:"^在{{A}}育成中習得異常系技能『(.*)』的技能卡。$"="Can be used to learn this debuff skill."
 
 r:"^與「<color\=#FFC000>{{A}}</color>」好感度提升至<color\=#FFC000>rank5</color>後，\n解鎖{{B}}的合成。$"="Unlock Fusion for {{B}}\nafter reaching <color\=#FFC000>rank 5</color> with [<color\=#FFC000>{{A}}</color>]."
 r:"^好感度提升至<color\=#FFC000>rank7</color>後，\n解鎖{{A}}的合成。$"="Unlock Fusion for Setanta\nafter reaching <color\=#FFC000>rank 7</color>."
