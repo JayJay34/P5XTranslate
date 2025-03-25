@@ -37,7 +37,8 @@ r:"^將<color\=#ffc000>返還</color>消耗的<color\=#ffc000>精神力</color>�
 In game reset
 將放棄挑戰進度，並重新開啟挑戰。\n<color\=#ffc000>不會額外消耗</color>精神力及參與次數。\n是否確認【再次嘗試】？=<size\=31>Retry this battle?\n<color\=#ffc000>This will not consume</color> Mental Energy and Thieves Usage.</size>
 
-r:"^將<color\=#ffc000>全部返還</color>消耗的<color\=#ffc000>精神力</color>及<color\=#ffc000>參與次數</color>；\n並<color\=#ff3b37>放棄</color>監測點<color\=#ff3b37>挑戰進度</color>。是否確認？$"="<color\=#ffc000>Return all</color> consumed <color\=#ffc000>Mental Energy</color> and <color\=#ffc000>Thieves Usage</color>;\n<color\=#ff3b37>Reset this</color> Monitoring Points <color\=#ff3b37>Progress</color>. Confirm?"
+Reset in progress node
+r:"^將<color\=#ffc000>全部返還</color>消耗的<color\=#ffc000>精神力</color>及<color\=#ffc000>參與次數</color>；\n並<color\=#ff3b37>放棄</color>監測點<color\=#ff3b37>挑戰進度</color>。是否確認？$"="<size\=30><color\=#ffc000>Return all</color> consumed <color\=#ffc000>Mental Energy</color> and <color\=#ffc000>Thieves Usage</color>;\n<color\=#ff3b37>Reset this</color> Monitoring Points <color\=#ff3b37>Progress</color>. Are you sure?</size>"
 
 Reset 1 node
 r:"^將<color\=#ffc000>全部返還</color>消耗的<color\=#ffc000>精神力</color>及<color\=#ffc000>參與次數</color>；\n監測點<color\=#ff3b37>重新佔據</color>後，才能挑戰新監測點。\n是否確認？$"="<size\=31><color\=#ffc000>Return all</color> consumed <color\=#ffc000>Mental Energy</color> and <color\=#ffc000>Thieves Usage</color>;\nYou can only challenge new Monitoring Points after <color\=#ff3b37>clearing this again</color>. Are you sure?</size>"
@@ -133,12 +134,14 @@ r:"^HIGHLIGHT能量回復速度降低(\d+%)，所有怪盜<color\=#FFFC40>HIGHLI
 r:"^威壓磁場(.*)$"="Pressure Magnetic Field $1"
 r:"^首領每回合末使所有怪盜獲得1層<color\=#FFFC40>『威壓』</color>；『威壓』被驅散後，使所有敵人獲得1層『威壓』。\n『威壓』：受最終傷害提升(\d+%)，可疊加(\d+)層，持續(\d+)回合。$"="<size\=20>Boss will inflict all enemies with 1 stack of <color\=#FFFC40>[Pressure]</color> at the end of each turn; When [Pressure] is dispelled, all enemies gain 1 stack of [Pressure]\n[Pressure]: Increase Final DMG Taken by $1 for $3 turns, up to $2 stacks</size>"
 每回合末使所有怪盜獲得1層「威壓」=Inflict 1 [Pressure] at the end of each turn
+r:"^威<color\=#000000>壓</color>$"="P<color\=#000000>r</color>essure"
 
 ----------
 Combat Menu
 ----------
 星盤庇護=Astrolabe Protection
 r:"^造成TECHNICAL時，最終傷害提升(\d+%)$"="Increase Final DMG by $1 when dealing TECHNICAL"
+r:"^造成追加效果時，最終傷害提高(\d+%)$"="Increase Final DMG by $1 when dealing Follow Up"
 r:"^HL能量回復速度降低(\d+%)，使用HL時，最終傷害提高(\d+%)$"="<size\=24>Decrease HIGHLIGHT Energy recovery rate by $1;\nIncrease Final DMG by $2 when using HIGHLIGHT</size>"
 r:"^同時擁有(\d+)種元素異常，受到最終傷害提高(\d+%)$"="Inflicted with $1 Elemental Ailments; \nIncrease Final DMG Taken by $2"
 r:"^每有(\d+)種元素異常，受到最終傷害提高(\d+%)，當前(\d+%)$"="For every $1 Elemental Ailment, \nincrease Final DMG Taken by $2; \nCurrently increase Final DMG Taken by $3"
@@ -155,6 +158,7 @@ r:"^再<color\=#000000>動</color>磁場$"="E<color\=#000000>x</color>tra Turn M
 r:"^持<color\=#000000>續</color>磁場$"="D<color\=#000000>a</color>mage Over Time Magnetic Field"
 r:"^控<color\=#000000>制</color>磁場$"="C<color\=#000000>o</color>ntrol Magnetic Field"
 r:"^H<color\=#000000> L</color>磁場$"="H<color\=#000000>L</color> Magnetic Field"
+r:"^威<color\=#000000>壓</color>磁場$"="P<color\=#000000>r</color>essure Magnetic Field"
 
 r:"^<color\=#FF0000>{{A}}</color>一回合內未造成傷害，下回合最終傷害提升……$"="<color\=#FF0000>{{A}}</color> dealt no damage, \nnext turn Final DMG Up!"
 sr:"^<color\=#FF0000>(.*)</color>獲得了(.*)弱點……$"="<color\=#FF0000>$1</color> gained $2 weakness!"
