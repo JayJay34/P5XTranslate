@@ -292,10 +292,11 @@ r:"^對所有敵人造成大量萬能屬性傷害。$"="Deals heavy Almighty dam
 r:"^對所有敵人造成特大萬能屬性傷害。$"="Deals severe Almighty damage to all enemies."
 
 //ST Multi-Hit Constant
-sr:"對<color\=#FFFF00>1名</color>敵人造成(\d+)次(\d+\.\d+%)攻擊力的(.*)屬性傷害。"=Deals <color\=#FFFF00>$2</color> ATK $3 damage to <color\=#FFFF00>1</color> enemy $1x.
+sr:"對<color\=#FFFF00>1名</color>敵人造成(\d+)次(\d+\.\d+%)攻擊力的(.*)屬性傷害。"=Deals <color\=#FFFF00>$2</color> ATK $3 damage to <color\=#FFFF00>1</color> enemy $1 times.
 
 //ST Multi-Hit Random
-sr:"對<color\=#FFFF00>1名</color>敵人造成(\d+\~\d+)次(\d+\.\d+%)攻擊力的(.*)屬性傷害。"=Deals <color\=#FFFF00>$2</color> ATK $3 damage to <color\=#FFFF00>1</color> enemy $1x.
+sr:"對<color\=#FFFF00>1名</color>敵人造成(\d+\~\d+)次(\d+\.\d+%)攻擊力的(.*)屬性傷害。"=Deals <color\=#FFFF00>$2</color> ATK $3 damage to <color\=#FFFF00>1</color> enemy $1 times.
+r:"^對1名敵人造成(\d+\~\d+)次物理屬性傷害。$"="Deals Phys damage to 1 enemy $1 times."
 
 //ST + Ailment
 sr:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的(.*)屬性傷害，(\d+\.\d+%)基礎機率機率使敵人(.*)。$"="Deals $1 ATK $2 damage to <color\=#FFFF00>1</color> enemy with a $3 base chance to inflict $4 for 2 turns."
@@ -731,6 +732,8 @@ r:"^<color\=#FF0000>(.*){{A}}</color>進入了洗腦狀態……$"="Inflicted wi
 
 r:"^<color\=#FF0000>(.*)</color>進入了冰封狀態……$"="Inflicted with Ice Seal..."
 
+r:"^<color\=#FF0000>(.*)</color>從遺忘異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Forget!"
+
 r:"^<color\=#FF0000>(.*){{B}}</color>被{{A}}瞄準了，防禦降低……$"="<color\=#FF0000>Enemy</color> aimed by {{A}}, DEF Down!"
 r:"^<color\=#FF0000>(.*){{A}}</color>被{{B}}瞄準了，防禦降低……$"="<color\=#FF0000>Enemy</color> aimed by {{B}}, DEF Down!"
 r:"^<color\=#FF0000>(.*)</color>被{{A}}瞄準了，防禦降低……$"="<color\=#FF0000>Enemy</color> aimed by {{A}}, DEF Down!"
@@ -852,6 +855,7 @@ Combat Pop-ups for debuffs
 ----------
 r:"^屬<color\=#000000>性</color>降低$"="S<color\=#000000>t</color>ats Down"
 r:"^屬<color\=#000000>性</color>下降$"="S<color\=#000000>t</color>ats Down"
+r:"^女<color\=#000000>巫</color>詛咒$"="D<color\=#000000>e</color>bilitate"
 r:"^攻<color\=#000000>擊</color>降低$"="A<color\=#000000>T</color>K Down"
 r:"^受<color\=#000000>攻</color>擊提升$"="A<color\=#000000>T</color>K Taken Up"
 r:"^防<color\=#000000>禦</color>降低$"="D<color\=#000000>E</color>F Down"
