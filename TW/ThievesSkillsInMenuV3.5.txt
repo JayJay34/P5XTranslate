@@ -24,20 +24,151 @@ r:"^潛能詳情$"="<size\=27>Potential Details</size>"
 改造=<size\=19>Reform</size>
 
 ----------
-UPGRADE MENU
+UPGRADE MENU + MENTAL IMAGE (MI)
 ----------
-命中機率=Hit Rate Chance
-治療量=Healing Amount
-增傷倍率=DMG Bonus
-減防倍率=DEF Down
+HIGHLIGHT=HIGHLIGHT
+技能傷害=Skill Damage
+技能傷害倍率=Skill Damage Multiplier
+
+攻擊力倍率=ATK Multiplier
+攻擊力提升倍率=ATK Up Multiplier
 計入攻擊力上限=ATK Cap
+攻擊力提升上限=ATK Up Cap
+額外提升上限=Buff Cap
+效果強度=Effect Boost
+
+防禦力提升上限=DEF Up Cap
+減防倍率=DEF Down Multiplier
+減防上限=DEF Down Cap
+額外降防上限=DEF Down Cap
+防禦力降低上限=DEF Down Cap
+
+暴擊效果提升倍率=CRIT DMG Up Multiplier
+計入暴擊效果上限=CRIT DMG Cap
+
+命中機率=Hit Rate Chance
+效果命中加成提升=EHR Up
+
+治療量=Healing
+治療基礎值=Base Healing
+治療固定值=Fixed Healing
+生命值回復倍率=Healing Multiplier
+持續治療基礎值=Regeneration
+護盾基礎值=Base Shield
+護盾固定值=Fixed Shield
+精力回復值=SP Recovery
+
+增傷倍率=DMG Bonus Multiplier
+基礎增傷倍率=DMG Bonus Multiplier
+額外增傷上限=DMG Bonus Cap
+易傷倍率=DMG Taken Multiplier
+易傷提升上限=DMG Taken Cap
 易傷上限=DMG Taken Cap
+傷害提升上限=DMG Taken Cap
+受到傷害提升上限=DMG Taken Cap
+受到傷害降低=DMG Taken Down
+
+技能上限=Skill Cap
+技能傷害提升=Skill Damage
+額外傷害倍率=Additional Damage Multiplier
+火屬性易傷=Fire DMG Taken
+祝福技能傷害=Bless Skill Damage
+詛咒技能傷害=Curse Skill Damage
+追擊倍率提升=Follow Up Multiplier
+追加效果倍率=Follow Up Multiplier
+追加效果易傷=Follow UP DMG Taken
+
+技能傷害提升攻擊力=Increase ATK during Skill by
+『直覺』額外回復生命值=[Instinct] additionally restore HP by
+每層『童趣』使所有同伴攻擊力額外提升=Each stack of [Childlike Fun] additionally increase ATK by
+充能護盾倍率=Vitalise Shield Multiplier
+充能傷害提升效果=Vitalise DMG Bonus
+聖火傷害倍率=Sacred Flame Damage Multiplier
+『勁歌熱舞』使得攻擊力、防禦力額外提升=[Hot Dance] additionally increase ATK, DEF by
+造成的技能傷害提升攻擊力=Increase ATK during Skill by
+反擊時的技能傷害提升防禦力=Increase DEF during Counter by
+超載聚變技能倍率=Fusion Overload Skill Multiplier
+超載聚變額外傷害倍率=Fusion Overload Additional Damage Multiplier
+r:"^『火花』傷害倍率提升(.*)$"="Increase [Spark] Damage Multiplier $1"
+r:"^額外回復生命值(.*)$"="Additionally increase Healing $1"
+『尋獵者』狀態倍率=[Hunter] Multiplier
+『行刑官』狀態倍率=[Executioner] Multiplier
+「撕裂」倍率=[Laceration] Multiplier
+「鐵火流星」倍率=[Fiery Shooting Star] Multiplier
+「鐵火流星」倍率提升=[Fiery Shooting Star] Multiplier
+『鐵火流星』傷害提升=[Fiery Shooting Star] Damage
+「歲火」倍率=[Year Fire] Multiplier
 
 ONE MORE：技能傷害=ONE MORE: Skill DMG
 HIGHLIGHT：技能傷害倍率=HIGHLIGHT: Skill DMG
 近戰攻擊：技能傷害=Melee: Skill DMG
 槍械射擊：技能傷害=Gun: Skill DMG
 sr:"^HIGHLIGHT：(.*)技能傷害$"="HIGHLIGHT: $1 Skill DMG"
+
+每啟動或提升一次心象等級，心象點數+1。=+1 Mental Image Points \neach time you activate or \nlevel up a Mental Image upgrade
+sr:"^心象提升屬性匯總\n(.*) <color\=#FEDA00>\+(.*)</color>\n$"="Mental Image Summary\n$1 <color\=#FEDA00>+$2</color>\n"
+sr:"^心象提升屬性匯總\n(.*) <color\=#FEDA00>\+(.*)</color>\n(.*) <color\=#FEDA00>\+(.*)</color>\n$"="Mental Image Summary\n$1 <color\=#FEDA00>+$2</color>\n$3 <color\=#FEDA00>+$4</color>\n"
+sr:"^心象提升屬性匯總\n(.*) <color\=#FEDA00>\+(.*)</color>\n(.*) <color\=#FEDA00>\+(.*)</color>\n(.*) <color\=#FEDA00>\+(.*)</color>\n$"="Mental Image Summary\n$1 <color\=#FEDA00>+$2</color>\n$3 <color\=#FEDA00>+$4</color>\n$5 <color\=#FEDA00>+$6</color>\n"
+sr:"^心象提升屬性匯總\n(.*) <color\=#FEDA00>\+(.*)</color>\n(.*) <color\=#FEDA00>\+(.*)</color>\n(.*) <color\=#FEDA00>\+(.*)</color>\n(.*) <color\=#FEDA00>\+(.*)</color>\n$"="Mental Image Summary\n$1 <color\=#FEDA00>+$2</color>\n$3 <color\=#FEDA00>+$4</color>\n$5 <color\=#FEDA00>+$6</color>\n$7 <color\=#FEDA00>+$8</color>\n"
+sr:"^心象提升屬性匯總\n(.*) <color\=#FEDA00>\+(.*)</color>\n(.*) <color\=#FEDA00>\+(.*)</color>\n(.*) <color\=#FEDA00>\+(.*)</color>\n(.*) <color\=#FEDA00>\+(.*)</color>\n(.*) <color\=#FEDA00>\+(.*)</color>\n$"="Mental Image Summary\n$1 <color\=#FEDA00>+$2</color>\n$3 <color\=#FEDA00>+$4</color>\n$5 <color\=#FEDA00>+$6</color>\n$7 <color\=#FEDA00>+$8</color>\n$9 <color\=#FEDA00>+$10</color>\n"
+
+啟動前置心象後解鎖=Unlock after activating\n the preceding skill
+消耗不足，無法啟動。=Insufficient materials to activate.
+r:"^提升生命值(\d+)\n$"="Increase HP by $1\n"
+r:"^提升防禦力(\d+)\n$"="Increase DEF by $1\n"
+r:"^提升攻擊力(\d+)\n$"="Increase ATK by $1\n"
+r:"^提升生命值(\d+)\n提升防禦力(\d+)\n$"="Increase HP by $1\nIncrease DEF by $2\n"
+r:"^提升生命值(\d+)\n提升防禦力(\d+)\n提升攻擊力(\d+)\n$"="Increase HP by $1\nIncrease DEF by $2\nIncrease ATK by $3\n"
+
+r:"^提升生命值(\d+%)\n$"="Increase HP by $1\n"
+r:"^提升攻擊力(\d+%)\n$"="Increase ATK by $1\n"
+r:"^提升防禦力(\d+%)\n$"="Increase DEF by $1\n"
+r:"^提升精力回復(\d+%)\n$"="Increase SP Recovery by $1\n"
+r:"^提升穿透(\d+\.\d%)\n$"="Increase PEN by $1\n"
+r:"^提升穿透(\d+%)\n$"="Increase PEN by $1\n"
+r:"^提升效果命中(\d+\.\d%)\n$"="Increase EHR by $1\n"
+r:"^提升效果命中(\d+%)\n$"="Increase EHR by $1\n"
+r:"^提升效果抵抗(\d+\.\d%)\n$"="Increase Effect RES by $1\n"
+r:"^提升效果抵抗(\d+%)\n$"="Increase Effect RES by $1\n"
+r:"^提升暴擊率(\d+\.\d%)\n$"="Increase CRIT Rate by $1\n"
+r:"^提升暴擊率(\d+%)\n$"="Increase CRIT Rate by $1\n"
+r:"^提升暴擊效果(\d+\.\d%)\n$"="Increase CRIT DMG by $1\n"
+r:"^提升暴擊效果(\d+%)\n$"="Increase CRIT DMG by $1\n"
+r:"^提升傷害加成(\d+\.\d%)\n$"="Increase DMG Bonus by $1\n"
+r:"^提升傷害加成(\d+%)\n$"="Increase DMG Bonus by $1\n"
+r:"^提升傷害減免(\d+\.\d%)\n$"="Increase DMG RES by $1\n"
+r:"^提升傷害減免(\d+%)\n$"="Increase DMG RES by $1\n"
+r:"^提升治療效果(\d+\.\d%)\n$"="Increase Healing Effect by $1\n"
+r:"^提升治療效果(\d+%)\n$"="Increase Healing Effect by $1\n"
+r:"^提升護盾效果(\d+\.\d%)\n$"="Increase Shield Effect by $1\n"
+r:"^提升護盾效果(\d+%)\n$"="Increase Shield Effect by $1\n"
+
+MI Skill Upgrades
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5→<color\=#FEDA00>$6</color>\n$7 $8→<color\=#FEDA00>$9</color>\n\n"
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5→<color\=#FEDA00>$6</color>\n\n<link\=thiefInnateSkill|$7|$8><u>[$9]</u></link>\n$10 $11→<color\=#FEDA00>$11</color>\n\n"
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*)<color\=#FEDA00>(.*)</color>$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5→<color\=#FEDA00>$6</color>\n$7 $8→<color\=#FEDA00>$9</color>\n\n<link\=thiefInnateSkill|$10|$11><u>[$12]</u></link>\n$13 <color\=#FEDA00>$14</color>"
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5→<color\=#FEDA00>$6</color>\n\n<link\=thiefInnateSkill|$7|$8><u>[$9]</u></link>\n$10 $11→<color\=#FEDA00>$12</color>\n$13 $14→<color\=#FEDA00>$15</color>\n\n"
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5→<color\=#FEDA00>$6</color>\n$7 $8→<color\=#FEDA00>$9</color>\n\n<link\=thiefInnateSkill|$10|$11><u>[$12]</u></link>\n$13 $14→<color\=#FEDA00>$15</color>\n\n"
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5→<color\=#FEDA00>$6</color>\n\n<link\=thiefInnateSkill|$7|$8><u>[$9]</u></link>\n$10 $11→<color\=#FEDA00>$12</color>\n$13 $14→<color\=#FEDA00>$15</color>\n$16 $17→<color\=#FEDA00>$18</color>\n\n"
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5→<color\=#FEDA00>$6</color>\n$7 $8→<color\=#FEDA00>$9</color>\n\n<link\=thiefInnateSkill|$10|$11><u>[$12]</u></link>\n$13 $14→<color\=#FEDA00>$15</color>\n$16 $17→<color\=#FEDA00>$18</color>\n\n"
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5→<color\=#FEDA00>$6</color>\n$7 $8→<color\=#FEDA00>$9</color>\n$10 $11→<color\=#FEDA00>$12</color>\n\n<link\=thiefInnateSkill|$13|$14><u>[$15]</u></link>\n$16 $17→<color\=#FEDA00>$18</color>\n\n"
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5→<color\=#FEDA00>$6</color>\n$7 $8→<color\=#FEDA00>$9</color>\n\n<link\=thiefInnateSkill|$10|$11><u>[$12]</u></link>\n$13 $14→<color\=#FEDA00>$15</color>\n$16 $17→<color\=#FEDA00>$18</color>\n$19 $20→<color\=#FEDA00>$21</color>\n\n"
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5→<color\=#FEDA00>$6</color>\n$7 $8→<color\=#FEDA00>$9</color>\n$10 $11→<color\=#FEDA00>$12</color>\n\n<link\=thiefInnateSkill|$13|$14><u>[$15]</u></link>\n$16 $17→<color\=#FEDA00>$18</color>\n$19 $20→<color\=#FEDA00>$21</color>\n\n"
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5→<color\=#FEDA00>$6</color>\n$7 $8→<color\=#FEDA00>$9</color>\n\n<link\=thiefInnateSkill|$10|$11><u>[$12]</u></link>\n$13 $14→<color\=#FEDA00>$15</color>\n$16 $17→<color\=#FEDA00>$18</color>\n$19 $20→<color\=#FEDA00>$21</color>\n$22 $23→<color\=#FEDA00>$24</color>\n\n"
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5→<color\=#FEDA00>$6</color>\n$7 $8→<color\=#FEDA00>$9</color>\n$10 $11→<color\=#FEDA00>$12</color>\n$13 $14→<color\=#FEDA00>$15</color>\n\n<link\=thiefInnateSkill|$16|$17><u>[$18]</u></link>\n$19 $20→<color\=#FEDA00>$21</color>\n$22 $23→<color\=#FEDA00>$24</color>\n\n"
+
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*)<color\=#FEDA00>(.*)</color>$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5→<color\=#FEDA00>$6</color>\n\n<link\=thiefInnateSkill|$7|$8><u>[$9]</u></link>\n$10 $11→<color\=#FEDA00>$12</color>\n\n<link\=thiefInnateSkill|$13|$14><u>[$15]</u></link>\n$16 <color\=#FEDA00>$17</color>"
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*)→<color\=#FEDA00>(.*)</color>，(.*)→<color\=#FEDA00>(.*)</color>$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5→<color\=#FEDA00>$6</color>\n\n<link\=thiefInnateSkill|$7|$8><u>[$9]</u></link>\n$10 $11→<color\=#FEDA00>$12</color>\n\n<link\=thiefInnateSkill|$13|$14><u>[$15]</u></link>\n$16→<color\=#FEDA00>$17</color>, $18→<color\=#FEDA00>$19</color>"
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*)<color\=#FEDA00>(.*)</color>$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5→<color\=#FEDA00>$6</color>\n$7 $8→<color\=#FEDA00>$9</color>\n\n<link\=thiefInnateSkill|$10|$11><u>[$12]</u></link>\n$13 $14→<color\=#FEDA00>$15</color>\n\n<link\=thiefInnateSkill|$16|$17><u>[$18]</u></link>\n$19 <color\=#FEDA00>$20</color>"
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n(.*) (.*)→<color\=#FEDA00>(.*)</color>\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*)<color\=#FEDA00>(.*)</color>$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5→<color\=#FEDA00>$6</color>\n\n<link\=thiefInnateSkill|$7|$8><u>[$9]</u></link>\n$10 $11→<color\=#FEDA00>$12</color>\n$13 $14→<color\=#FEDA00>$15</color>\n\n<link\=thiefInnateSkill|$16|$17><u>[$18]</u></link>\n$19 <color\=#FEDA00>$20</color>"
+
+MI Skill Maxed
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5\n\n"
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)\n(.*) (.*)\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5\n$6 $7\n\n"
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)\n(.*) (.*)\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)\n(.*) (.*)\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5\n$6 $7\n\n<link\=thiefInnateSkill|$8|$9><u>[$10]</u></link>\n$11 $12\n$13 $14\n\n"
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5\n\n<link\=thiefInnateSkill|$6|$7><u>[$8]</u></link>\n$9 $10\n\n"
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)\n(.*) (.*)\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5\n\n<link\=thiefInnateSkill|$6|$7><u>[$8]</u></link>\n$9 $10\n$11 $12\n\n"
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)\n(.*) (.*)\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5\n$6 $7\n\n<link\=thiefInnateSkill|$8|$9><u>[$10]</u></link>\n$11 $12\n\n"
 
 ----------
 CATTLE - Lufel
