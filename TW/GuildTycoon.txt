@@ -322,10 +322,11 @@ r:"^(\d+)秒後自動進入下一局$"="Start after $1 second(s)"
 r:"^富豪積分\+(\d+)$"="Tycoon Points +$1"
 r:"^財富之章\+(\d+)$"="Badge of Wealth +$1"
 財富之章+0(已達上限)=Badge of Wealth +0 (Reached cap)
-本次對局獲得第1名，星數+2=Got 1st place in this game, +2 Stars.
-本次對局獲得第2名，星數+1=Got 2nd place in this game, +1 Star.
-本次對局獲得第3名，星數-1=Got 3rd place in this game, -1 Star.
-本次對局獲得第4名，星數-2=Got 4th place in this game, -2 Stars.
+r:"^本次對局獲得第1名，星數\+(\d+)$"="Got 1st place in this game, +$1 Stars."
+r:"^本次對局獲得第2名，星數\+(\d+)$"="Got 2nd place in this game, +$1 Star."
+r:"^本次對局獲得第3名，星數\+(\d+)$"="Got 3rd place in this game, +$1 Star."
+r:"^本次對局獲得第3名，星數-(\d+)$"="Got 3rd place in this game, -$1 Star."
+r:"^本次對局獲得第4名，星數-(\d+)$"="Got 4th place in this game, -$1 Stars."
 
 表情=Emotes
 隱藏=Hide
@@ -351,6 +352,9 @@ r:"^賽季排行榜顯示「段位對決」模式排名前(\d+)名的玩家。$"
 千萬富豪=<size\=20>Multimillionaire</size>
 億萬富豪=<size\=20>Billionaire</size>
 傳奇大富豪=<size\=20>Legendary Tycoon</size>
+我的排名：=My Rank:
+r:"^段位排行榜顯示「段位對決」模式排名前(\d+)名的玩家。$"="Leaderboard shows the top $1 players in [Rank Mode]."
+r:"^富豪幣排行顯示本賽季「歡樂對決」模式排名前(\d+)名的玩家。$"="Leaderboard shows the top $1 players in [Joyful Mode]."
 
 可定製卡面=Customizable Card
 紅心=<size\=20>Hearts</size>
