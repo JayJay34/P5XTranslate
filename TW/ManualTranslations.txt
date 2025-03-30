@@ -409,6 +409,7 @@ Worldbuilding Terms
 用於提升體力的咖啡糖果，使用後立即恢復30體力。=Restores 30 Stamina Points immediately.
 /體力=    /Stamina
 體力=Stamina
+體力值已滿=Stamina maxed
 r:"^『體力』\n探索{{A}}所需的基本能量，隨時間勻速恢復。\n下次恢復：<color\=#FFC000>(.*)</color>\n全部恢復：<color\=#FFC000>(.*)</color>$"="[Stamina]\nThe basic energy needed to explore the {{A}}, restores with time.\nNext one: <color\=#FFC000>$1</color>\nFully restored: <color\=#FFC000>$2</color>"
 r:"^已購買(\d+)/(\d+)次（每日05:00重置）$"="Purchased $1/$2 times \n(Reset at 5 am UTC+8 daily)"
 行動力補給=Energy Supply
@@ -2478,7 +2479,7 @@ r:"^全體怪盜<color\=#81ea2c>疾風</color>/<color\=#ff0036>詛咒</color>屬
 詛咒漩渦=<size\=22>Cursed Swirl</size>
 r:"^疾風、詛咒屬性傷害提升(\d+%)$"="Increase Wind and Curse DMG by $1"
 
-造成WEAK/{{A}}時獲得分數=Weak DMG/ {{A}}
+造成WEAK/{{A}}時獲得分數=Weak DMG/{{A}}
 火焰/念動屬性隊員攻擊時獲得分數=Fire/Psy Teammates Score
 冰凍/核熱屬性隊員攻擊時獲得分數=Ice/Nuclear Teammates Score
 電擊/祝福屬性隊員攻擊時獲得分數=Elec/Bless Teammates Score
@@ -2489,8 +2490,9 @@ r:"^火焰/念動屬性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</col
 r:"^冰凍/核熱屬性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Ice/Nuclear Teammates Score <color\=#FF0000>X$1</color>"
 r:"^電擊/祝福屬性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Elec/Bless Teammates Score <color\=#FF0000>X$1</color>"
 r:"^疾風/詛咒屬性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Wind/Curse Teammates Score <color\=#FF0000>X$1</color>"
-sr:"^(.*)/(.*)屬性攻擊時獲得分數$"="$1/ $2 Attack Score"
-r:"^X(\d+)倍$"="<size\=30>X$1 Score</size>"
+sr:"^(.*)/(.*)屬性攻擊時獲得分數$"="$1/$2 Attacks Score"
+r:"^X(\d+)倍$"="<size\=30>X$1</size>"
+sr:"^(.*)/(.*)屬性攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="$1/$2 Attacks Score <color\=#FF0000>X$3</color>"
 獎勵=<size\=24>Rewards</size>
 章節獎勵=<size\=36>Rewards</size>
 累計獲得異界晶珀：=<size\=32>Total Ambers Earned:</size>
@@ -3063,24 +3065,24 @@ r:"^{{A}}無法透過印記習得<color\=#FF0000>(.*)<</color>類型技能。$"=
 本次育成將使用高品質技能卡，是否確認使用？=<size\=28>This will use the high quality skill card, \nare you sure?</size>
 sr:"^攻擊造成(.*)屬性傷害。$"="Attacks deal $1 damage."
 新手友好=<size\=16>Newbie Friendly</size>
-物理單攻=<size\=16>Phys ST DPS</size>
-物理群攻=<size\=15>Phys AoE DPS</size>
-物理治療=<size\=18>Phys Healer</size>
-物理坦克=<size\=19>Phys Tank</size>
-物理增益=<size\=18>Phys Buffer</size>
-物理減益=<size\=15>Phys Debuffer</size>
+物理單攻=<size\=18>Phys ST DPS</size>
+物理群攻=<size\=17>Phys AoE DPS</size>
+物理治療=<size\=20>Phys Healer</size>
+物理坦克=<size\=21>Phys Tank</size>
+物理增益=<size\=20>Phys Buffer</size>
+物理減益=<size\=17>Phys Debuffer</size>
 射擊單攻=<size\=16>Gun ST DPS</size>
 射擊群攻=<size\=15>Gun AoE DPS</size>
 射擊治療=<size\=18>Gun Healer</size>
 射擊坦克=<size\=19>Gun Tank</size>
 射擊增益=<size\=18>Gun Buffer</size>
 射擊減益=<size\=15>Gun Debuffer</size>
-火焰單攻=<size\=16>Fire ST DPS</size>
-火焰群攻=<size\=15>Fire AoE DPS</size>
+火焰單攻=<size\=18>Fire ST DPS</size>
+火焰群攻=<size\=17>Fire AoE DPS</size>
 火焰治療=<size\=18>Fire Healer</size>
-火焰坦克=<size\=19>Fire Tank</size>
-火焰增益=<size\=18>Fire Buffer</size>
-火焰減益=<size\=15>Fire Debuffer</size>
+火焰坦克=<size\=21>Fire Tank</size>
+火焰增益=<size\=20>Fire Buffer</size>
+火焰減益=<size\=17>Fire Debuffer</size>
 冰凍單攻=<size\=16>Ice ST DPS</size>
 冰凍群攻=<size\=15>Ice AoE DPS</size>
 冰凍治療=<size\=18>Ice Healer</size>
