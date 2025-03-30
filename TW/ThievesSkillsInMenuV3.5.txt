@@ -1505,6 +1505,62 @@ r:"^HIGHLIGHT效果提升：給予敵人的『大壞蛋』提升至(\d+)層。$"
 r:"^戰鬥開始時，獲得『熱烈歡迎』和『窮追猛打』；『熾熱握手禮』、『對破壞者的威嚇』、『GOGO{{A}}！』的異常效果持續時間延長(\d+)回合。當自身同時擁有『熱烈歡迎』和『窮追猛打』時，『GOGO{{A}}！』會使全體敵人受到火焰屬性傷害提升(\d+%)，使主目標追加效果傷害提升(\d+%)，並同時觸發『熱烈歡迎』和『窮追猛打』的效果（『熱烈歡迎』和『窮追猛打』的傷害提高效果不可疊加，同時觸發時取效果最高值生效。）$"="At the start of battle, gain [Warm Welcome] and [Furious Pursue]; Extend the debuff from [Fiery Handshake], [Intimidate Baddie], and [GO GO WOOF WOOF RU!] by $1 turn. When you have both [Warm Welcome] and [Furious Pursue], [GO GO WOOF WOOF RU!] will increase all enemies' Fire DMG Taken by $2, increase the main target's Follow Up DMG Taken by $3, trigger both the effects of [Warm Welcome] and [Furious Pursue]. (Cannot stack the DMG Taken effect from [Warm Welcome] and [Furious Pursue], take the highest value when triggering both effects.)"
 
 ----------
+Turbo - Mayumi Hashimoto
+----------
+渦流絞殺=Vortex Strangle
+超負荷加速=Overload Acceleration
+引擎轟鳴不止=Roaring Engine
+領跑=Leading
+增壓=Supercharge
+
+r:"^渦流絞殺 Lv.(\d+)$"="Vortex Strangle Lv.$1"
+r:"^渦流絞殺 <color\=#0F69CB>Lv.(\d+)</color>$"="Vortex Strangle <color\=#0F69CB>Lv.$1</color>"
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，並使所有同伴傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>\（每有(\d+)點速度，使傷害額外提升(\d+\.\d+%)，最多使傷害額外提升<color\=#FFFC40>(\d+\.\d+%)</color>\），持續(\d+)回合；\n額外回合釋放：技能傷害提升(\d+%)，對主目標<link="s\|220"><u>必定暴擊</u></link>。\n<b><size\=28><color\=#850101>賽車旗幟破風而來，大地震顫，塵土飛揚，宣示著勝負已分，將一切阻擋者碾碎。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Phys damage to all enemies, and increases all allies' DMG Bonus by <color\=#FFFC40>$2</color> (For every $3 SPD, additionally increases DMG Bonus by $4, up to <color\=#FFFC40>$5</color>) for $6 turns;\nUsed during Extra Turn: Increases skill damage by $7, will <link="s|220"><u>Always CRIT</u></link> to the main target.\n<b><size\=28><color\=#850101>The racing flag tears through the wind, the great earth quakes, dust and dirt swirl violently, declaring victory is determined, grinding all who block its way to nothing.</color></size></b>"
+
+r:"^超負荷加速 Lv.(\d+)$"="Overload Acceleration Lv.$1"
+r:"^超負荷加速 <color\=#0F69CB>Lv.(\d+)</color>$"="Overload Acceleration <color\=#0F69CB>Lv.$1</color>"
+r:"^使所有同伴攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>\（每有(\d+)點速度，使攻擊力額外提升(\d+\.\d+%)，最多使攻擊力額外提升<color\=#FFFC40>(\d+\.\d+%)</color>\），防禦力提升<color\=#FFFC40>(\d+\.\d+%)</color>\（每有(\d+)點速度，使防禦力額外提升(\d+%)，最多使防禦力額外提升<color\=#FFFC40>(\d+\.\d+%)</color>\），效果持續(\d+)回合；\n額外回合釋放：使所有同伴獲得(\d+)層可抵禦<color\=#FFFC40>(\d+\.\d+%)</color>點傷害的護盾，持續(\d+)回合。\n<b><size\=28><color\=#850101>極致的渴望湧入每一寸肌肉與神經，突破極限進入全速衝刺狀態，目標近在眼前。</color></size></b>$"="Increases all allies ATK by <color\=#FFFC40>$1</color> (For every $2 SPD, additionally increases ATK by $3, up to <color\=#FFFC40>$4</color>), and increases DEF by <color\=#FFFC40>$5</color> (For every $6 SPD, additionally increases DEF by $7, up to <color\=#FFFC40>$8</color>) for $9 turns;\nUsed during Extra Turn: Gives all allies $10 stack of <color\=#FFFC40>$11</color> Shield for $12 turns.\n<b><size\=28><color\=#850101>Adrenaline floods every synapse, redlining into maximum velocity, the finish line swallows your vision.</color></size></b>"
+
+r:"^引擎轟鳴不止 Lv.(\d+)$"="Roaring Engine Lv.$1"
+r:"^引擎轟鳴不止 <color\=#0F69CB>Lv.(\d+)</color>$"="Roaring Engine <color\=#0F69CB>Lv.$1</color>"
+r:"^使所有同伴穿透提升<color\=#FFFC40>(\d+\.\d+%)</color>\（每有(\d+)點速度，使穿透額外提升(\d+\.\d+%)，最多使穿透額外提升<color\=#FFFC40>(\d+\.\d+%)</color>\），攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>\（每有(\d+)點速度，使攻擊力額外提升(\d+\.\d+%)，最多使攻擊力額外提升<color\=#FFFC40>(\d+\.\d+%)</color>\），效果持續(\d+)回合；\n額外回合釋放：使主目標穿透提升<color\=#FFFC40>(\d+\.\d+%)</color>\（每有(\d+)點速度，使穿透額外提升(\d+\.\d+%)，最多使穿透額外提升<color\=#FFFC40>(\d+\.\d+%)</color>\），效果持續(\d+)回合。\n<b><size\=28><color\=#850101>勝利的終點線觸手可及，引擎怒吼，速度飆升，摧毀一切的鬥志勢不可擋。</color></size></b>$"="Increases all allies' PEN by <color\=#FFFC40>$1</color> (For every $2 SPD, additionally increases PEN by $3, up to <color\=#FFFC40>$4</color>), and increases ATK by <color\=#FFFC40>$5</color> (For every $6 SPD, additionally increases ATK by $7, up to <color\=#FFFC40>$8</color>) for $9 turns;\nUsed during Extra Turn: Increases the main target's PEN by <color\=#FFFC40>$10</color> (For every $11 SPD, additionally increases PEN by $12, up to <color\=#FFFC40>$13</color>) for $14 turn.\n<b><size\=28><color\=#850101>The finish line of victory is within grasp, engines roar, speed soars, an unstoppable fighting spirit to annihilate all in its path.</color></size></b>"
+
+r:"^使所有同伴攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>\（每有(\d+)點速度，使攻擊力額外提升(\d+\.\d+%)，最多使攻擊力額外提升<color\=#FFFC40>(\d+\.\d+%)</color>\），傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>\（每有(\d+)點速度，使傷害額外提升(\d+\.\d+%)，最多使傷害額外提升<color\=#FFFC40>(\d+\.\d+%)</color>\），效果持續(\d+)回合；並使主目標下一次主動對敵方造成傷害時，額外降低敵方主目標(\d+)點倒地值。\n『ONE MORE』：對1名敵人造成物理屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械攻擊：使用槍械射擊1名敵人，造成少量射擊屬性傷害，根據子彈數量可以射擊多次。$"="$"="Increases all allies' ATK by <color\=#FFFC40>$1</color> (For every $2 SPD, additional increases ATK by $3, up to <color\=#FFFC40>$4</color>), and increases DMG Bonus by $5 (For every $6 SPD, additional increases DMG Bonus by $7, up to <color\=#FFFC40>$8</color>) for $9 turns; When the main target manually deals damage to enemies, additionally decreases the enemies' main target's Down Gauge by $10.\n[ONE MORE]: Deals Phys damage to 1 enemy. \nMelee Attack: Uses a melee weapon to deal light Phys damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
+
+r:"^領跑 Lv.(\d+)$"="Leading Lv.$1"
+{{A}}在場時，使所有同伴在額外回合造成的傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="When you are present, increase all allies' DMG Dealt during Extra Turn by <color\=#FFFC40>$1</color>."
+{{A}}在場時，使所有同伴在額外回合造成的傷害提升<color\=#0169ca>(\d+\.\d+%)</color>。$"="When you are present, increase all allies' DMG Dealt during Extra Turn by <color\=#0169ca>$1</color>."
+
+r:"^增壓 Lv.(\d+)$"="Supercharge Lv.$1"
+{{A}}在場時，使所有同伴對倒地目標造成的傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>；{{B}}對目標造成擊倒時額外對其造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害。$"="When you are present, increases all allies' DMG Dealt to Downed enemies by <color\=#FFFC40>$1</color>; You will deal an additional <color\=#FFFC40>$2</color> ATK Phys damage to the main target when you Down an enemy."
+{{A}}在場時，使所有同伴對倒地目標造成的傷害提升<color\=#0169ca>(\d+\.\d+%)</color>；{{B}}對目標造成擊倒時額外對其造成<color\=#0169ca>(\d+\.\d+%)</color>攻擊力的物理屬性傷害。$"="When you are present, increases all allies' DMG Dealt to Downed enemies by <color\=#0169ca>$1</color>; You will deal an additional <color\=#0169ca>$2</color> ATK Phys damage to the main target when you Down an enemy."
+
+時速=Speed
+量子相位變速箱=Quantum Transmission
+急速光輪=Rapid Wheel
+
+極速攀升=Speed Surge
+r:"^進入戰鬥時，{{A}}獲得(\d+)km/h的初始『時速』；每個怪盜回合結束時，{{A}}的『時速』提升(\d+)km/h\（{{A}}速度超過(\d+)的部分，每(\d+)點使其『時速』額外提升(\d+)km/h，最多額外提升(\d+)km/h\）；{{A}}回合開始時，可通過『量子相位變速箱』將(\d+)km/h『時速』轉化為再動能量，使自身在當前回合結束後獲得一個額外回合，冷卻時間(\d+)回合；戰鬥中歷史累積提升的『時速』達到(\d+)km/h、(\d+)km/h、(\d+)km/h時，開啟1級、2級、3級『急速光輪』，使所有同伴獲得(\d+%)、(\d+%)、(\d+%)的穿透提升。$"="At the start of battle, gains $1 km/h starting [Speed]; After each ally's turn. increases [Speed] by $2 (For every $4 SPD that's over $3, additionally increases [Speed] by $5 km/h, up to $6 km/h); At the start of your turn, you can use [Quantum Transmission] to convert $7 [Speed] into Extra Turn Energy and gains 1 Extra Turn at the end of your turn, with a $8 turn cooldown; When you reach $9, $10, $11 total accumulated [Speed] in battle, activate Level 1, Level 2, Level 3 [Rapid Wheel], increases all allies' PEN by $12, $13, $14."
+再動能量=Extra Turn Energy
+
+將油門踩到底=Pedal to the Metal
+r:"^每個怪盜回合結束時，{{A}}的『時速』額外提升(\d+)km/h；{{A}}在額外回合釋放不同{{B}}技能時獲得以下額外效果：\n『渦流絞殺』：釋放技能時，自身暴擊效果提升(\d+%)；\n『超負荷加速』：護盾量提升(\d+%)，所有同伴防禦力額外提升(\d+%)；\n『引擎轟鳴不止』：使主目標穿透額外提升(\d+%)。$"="At the end of each ally's turn, additionally gains $1 km/h [Speed]; You gain the following additional effects when using different Persona skills during Extra Turn: \n[Vortex Strangle]: When using this skill, increases own CRIT DMG by $2;\n[Overload Acceleration]: Increases Shield by $3, additionally increases all allies' DEF by $4;\n[Roaring Engine]: Additionally increases the main target's PEN by $5."
+
+慢下來就會被撞飛=Slow Down and Get Wrecked
+r:"^開啟『急速光輪』時，額外獲得以下效果：\n1級『急速光輪』：所有同伴暴擊效果提升(\d+%) ；\n2級『急速光輪』：所有同伴傷害提升(\d+%) ；\n3級『急速光輪』：所有同伴攻擊力提升(\d+%) 。$"="When activating [Rapid Wheel], additionally gains the following effects:\nLevel 1 [Rapid Wheel]: Increases all allies' CRIT DMG by $1;\nLevel 2 [Rapid Wheel]: Increases all allies' DMG Dealt by $2;\nLevel 3 [Rapid Wheel]: Increases all allies' ATK by $3."
+
+沿途風景拋在腦後=Leave the Scenery Behind
+
+對危機視若無睹=Defy Danger
+r:"^HIGHLIGHT效果提升：HIGHLIGHT額外為所有同伴提供(\d+%)的傷害提升；HIGHLIGHT提供的所有增益效果的持續時間延長1回合。$"="HIGHLIGHT Effect Boost: HIGHLIGHT additionally increases all allies' DMG Bonus by $1; Extends all buffs from this HIGHLIGHT by 1 turn."
+
+跑出迷失的公路=Escape the Lost Highway
+
+渴望的是，飛馳電掣=Quick as Lightning
+r:"^進入戰鬥時，{{A}}獲得的初始『時速』提升至(\d+)km/h；{{A}}處在額外回合時，可通過『量子相位變速箱』將(\d+)km/h『時速』轉化為強化能量，來強化自身下一次{{B}}技能的效果，最多轉化(\d+)層強化能量；\n高級強化效果（至少需要1層強化能量）：\n『渦流絞殺』：釋放技能時，自身暴擊率提升(\d+%)；若將任意目標擊倒，為所有同伴提升(\d+%)的攻擊力，持續(\d+)回合；\n『超負荷加速』：護盾量提升(\d+%)，護盾持續時間延長(\d+)回合；\n『引擎轟鳴不止』：使所有同伴獲得額外回合釋放時的穿透提升效果。\n終極強化效果（需要2層強化能量）：\n『渦流絞殺』：使所有同伴對被擊倒的敵人造成的傷害提升(\d+%)，持續(\d+)回合；\n『超負荷加速』：使所有同伴受到傷害降低(\d+%)，持續(\d+)回合；\n『引擎轟鳴不止』：使所有同伴傷害提升(\d+%)，持續(\d+)回合。$"="At the start of battle, increases starting [Speed] to $1 km/h; During Extra Turn, you can use [Quantum Transmission] to convert $2 km/h [Speed] into Boost Energy, upgrading your next {{B}} skill effect, up to $3 Boost Energy;\nHigh Skill Upgrade Effects (Need at least 1 Boost Energy):\n[Vortex Strangle]: When using this skill, increases own CRIT Rate by $4; If this downs an enemy, increases all allies' ATK by $5 for $6 turns;\n[Overload Acceleration]: Increases Shield by $7, extends the Shield by $8 turn;\n[Roaring Engine]: The used during Extra Turn PEN now works on all allies.\nUltimate Skill Upgrade Effects (Need 2 Boost Energy):\n[Vortex Strangle]: Increases all allies' DMG Dealt to Downed enemies by $9 for $10 turn;\n[Overload Acceleration]: Decreases all allies' DMG Taken by $11 for $12 turn;\n[Roaring Engine]: Increases all allies' DMG Bonus by $13 for $14 turn."
+強化能量=Boost Energy
+
+----------
 Joker - Ren Amamiya
 ----------
 r:"^回合結束時，根據場上生命值低於60%的敵人數量獲得『煞氣』，每獲得三個『煞氣』就獲得一個額外出手回合。$"="<size\=28>At the end of your turn, gain [Fury] based on the number of enemies below 60% HP. Gain 1 Extra Turn after gaining 3 [Fury].</size>"
@@ -1762,7 +1818,7 @@ r:"^終曲：音域全開 Lv.(\d+)$"="<size\=24>Finale: Range Unleash Lv.$1</siz
 r:"^終曲：音域全開 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=24>Finale: Range Unleash <color\=#0F69CB>Lv.$1</color></size>"
 r:"^選擇1名同伴，立刻釋放其HIGHLIGHT技能，同時提升<color\=#FFFC40>(\d+\.\d+%)</color>本次HIGHLIGHT的傷害。透過該技能使用的HIGHLIGHT不會計入角色的HIGHLIGHT冷卻時間。\n<b><size\=28><color\=#850101>狂野不羈的少女主唱將要奉上今晚的壓軸歌曲，現場的氣氛已然到達最高潮！</color></size></b>$"="Selects 1 ally to immediately uses their HIGHLIGHT, increases that HIGHLIGHT damage by <color\=#FFFC40>$1</color>. HIGHLIGHT used by this skill will not count towards their HIGHLIGHT cooldown.\n<b><size\=28><color\=#850101>The wild and unruly girl vocalist is going to perform the finale song of the night, and the atmosphere has already reached its climax!</color></size></b>"
 
-r:"^『HIGHLIGHT』：所有同伴獲得<color\=#FFFC40>(\d+\.\d+%)</color>傷害加成，持續4個怪盜行動。期間我方怪盜行動後回復(\d+%)HIGHLIGHT能量，最多回復(\d+%)。\n『ONE MORE』：對1名敵人造成電擊屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械攻擊：使用槍械射擊1名敵人，造成少量射擊屬性傷害，根據子彈數量可以射擊多次。$"="[HIGHLIGHT]: Increases all allies' DMG Bonus by <color\=#FFFC40>$1</color> for 4 actions. Restores $2 HIGHLIGHT Energy after each allies' action, up to $3. \n[ONE MORE]: Deals Elec damage to 1 enemy. \nMelee Attack: Uses a melee weapon to deal light Phys damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
+r:"^『HIGHLIGHT』：所有同伴獲得<color\=#FFFC40>(\d+\.\d+%)</color>傷害加成，持續4個怪盜行動。期間我方怪盜行動後回復(\d+%)HIGHLIGHT能量，最多回復(\d+%)。\n『ONE MORE』：對1名敵人造成電擊屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械攻擊：使用槍械射擊1名敵人，造成少量射擊屬性傷害，根據子彈數量可以射擊多次。$"="[HIGHLIGHT]: Increases all allies' DMG Bonus by <color\=#FFFC40>$1</color> for 4 actions. Restores $2 HIGHLIGHT Energy after each ally's action, up to $3. \n[ONE MORE]: Deals Elec damage to 1 enemy. \nMelee Attack: Uses a melee weapon to deal light Phys damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
 
 r:"^重音 Lv.(\d+)$"="Stress Lv.$1"
 r:"^友方怪盜使用HIGHLIGHT時，立刻提升其<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力，持續1回合；如果此人是忠實聽眾則效果提升為1.5倍。$"="When an ally uses HIGHLIGHT, immediately increase their ATK by <color\=#FFFC40>$1</color> for 1 turn; Increase this effect by 1.5x if they are the Loyal Listener."

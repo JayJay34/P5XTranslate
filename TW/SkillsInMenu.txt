@@ -322,6 +322,7 @@ r:"^瑪哈拉昆達$"="Marakunda"
 --- Break Skills ---
 消除火焰耐性=Fire Break
 消除火焰防禦=Fire Break
+消除火炎耐性=Fire Break
 消除冰凍耐性=Ice Break
 消除冰凍防禦=Ice Break
 消除電擊耐性=Elec Break
@@ -815,9 +816,9 @@ r:"使所有敵人的攻擊力降低<color\=#fffc40>(\d+\.\d+%)</color>，效果
 // Debilitate
 r:"使1名敵方攻擊、防禦、效果命中、效果抵抗降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續3回合。"=Decreases ATK, DEF, Effect Hit Rate, and Effect RES of 1 enemy by <color\=#fffc40>$1</color> for 3 turns.
 
-Elec Break
-使1名敵人的電擊耐性消除，效果持續2回合。=Negates Electric resistance of 1 enemy for 2 turns.
-電擊耐性·防壁消除。=Negates Electric resistance and wall for 1 enemy.
+Break Skills
+sr:"^使1名敵人的(.*)耐性消除，效果持續(\d+)回合。$"="Negates $1 resistance of 1 enemy for $2 turns."
+r:"^(.*)耐性·防壁消除。$"="Negates $1 resistance and wall."
 
 Temperament Disruption
 r:"^使所有敵人的防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>，受到傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Decreases all enemies' DEF by <color\=#fffc40>$1</color> and increases their DMG Taken by <color\=#fffc40>$2</color> for $3 turns."
