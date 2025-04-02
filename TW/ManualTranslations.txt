@@ -489,6 +489,7 @@ r:"^<color\=#ff0000ff>離</color>開$"="L<color\=#ff0000ff>ea</color>ve"
 
 {{A}}  中央大街={{A}} Central Street
 {{A}}  小巷={{A}} Alleyway
+{{A}}  遊戲中心={{A}} Arcade
 社團佈告欄=<size\=20>Club Bulletin Board</size>
 輕音部=Music Club
 足球部=Soccer Club
@@ -496,7 +497,7 @@ r:"^<color\=#ff0000ff>離</color>開$"="L<color\=#ff0000ff>ea</color>ve"
 釣魚=Fishing
 市谷=Ichigaya
 棒球練習場=Batting Cage
-娃娃機·{{A}}=Crane Machine
+娃娃機·{{A}}=Crane Game
 二手雜貨店=<size\=23>Secondhand Shop</size>
 超市=Supermarket
 超市（{{A}}）=Supermarket ({{A}})
@@ -948,6 +949,7 @@ r:"需要(\d+)<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>才可
 獲取更多靈感點=Get Inspiration
 
 r:"^重置靈感需要<color\=#FFC000>(\d+)個魂石</color>，是否確定重置？（重置後所有靈感點返還，『屬性進階』靈感技能不會被重置）$"="Spend <color\=#FFC000>$1 Soul Gems</color> to reset Inspiration? (Refund all spent Inspiration Points, will not reset the [Superego] skill tree)"
+r:"^重置靈感需要(\d+)個魂石，是否確定重置？（重置後所有靈感點返還，『屬性進階』靈感技能不會被重置）$"="Spend $1 Soul Gems to reset Inspiration? (Refund all spent Inspiration Points, will not reset the [Superego] skill tree)"
 
 獲得靈感輝光=<size\=25>Inspiration Glow</size>
 r:"^提升(\d+)生命值。\n提升(\d+)攻擊力。\n提升(\d+)防禦力。$"="Increase HP by $1 \nIncrease ATK by $2 \nIncrease DEF by $3"
@@ -1224,7 +1226,7 @@ r:"^簽約$"="Pulls"
 次可獲得<color\=#EADE10>5★盲選偶像合約             ×1</color>，使用後隨機獲得以下怪盜=<size\=26>                       Get <color\=#EADE10>5★Random Kaidol Contract</color></size>
 長按圖示可查看詳細資訊=Long press to view details
 
-每10次補給必出四星或以上武器。具體內容查看【說明】=<b><color\=#FFDF00>Weapon Banner</color></b>\nChoose your RATE UP weapon and two others. Every 70 pulls will guarantee a 5★ weapon. 0.8% Chance.\n\n\n\n\n\n<color\=#FFDF00><size\=25>The limited character's 5★ Weapon is only available in this banner.</size></color>\n<size\=22>Supply count will carry between banners.</size>
+每10次補給必出四星或以上武器。具體內容查看【說明】=Choose your RATE UP weapon and two others. Every 70 pulls will guarantee a 5★ weapon. 0.8% Chance.\n\n\n\n\n\n\n<color\=#FFDF00><size\=25>The limited character's 5★ Weapon is only available in this banner.</size></color>\n<size\=22>Supply count will carry between banners.</size>
 
 每10次簽約必出四星或以上怪盜角色。具體內容查看【說明】=Get 1 5★ every <color\=#FFDF00>110</color> or <color\=#ff3b37>80</color> pulls;\n<color\=#FFDF00>0.2%</color> or <color\=#ff3b37>0.8%</color>; <color\=#FFDF00>No 50/50</color><size\=20> </size>or<size\=20> </size><color\=#ff3b37>50/50</color>\nGuarantee 1 4★ every 10 pulls.\n</color><size\=17>Save Signature count between same system banners.</size>
 
@@ -1516,6 +1518,7 @@ r:"^新春限定倒計時：(\d+)天(\d+)時$"=" Countdown: $1d $2h"
 金字塔星光秀=<size\=19>Pyramid Starlight Show</size>
 r:"^金字塔星光秀\((\d+)/(\d+)\)$"="<size\=18>Pyramid Starlight Show ($1/$2)</size>"
 
+sr:"^(.*)遊戲廳中的娃娃機，\n本期可限時抓取超稀有娃娃\n「<color\=#ffd145>(.*)</color>」、「<color\=#ffd145>(.*)</color>」。$"="<size\=23>Crane machine in the $1 arcade,\ncan obtain the limited super rare doll\n[<color\=#ffd145>$2</color>], [<color\=#ffd145>$3</color>].</size>"
 娃娃機=Crane Game
 遊戲中心兌獎券=Arcade Ticket
 『遊戲中心兌獎券』\n用於在{{A}}遊戲中心購買商品，可透過回收多餘的娃娃來獲得。=<size\=28>[Arcade Ticket]\nUsed in the {{A}} Arcade, can be obtained by recycling surplus dolls.</size>
@@ -2710,6 +2713,7 @@ r:"^所有敵人受到傷害降低(\d+(.\d+)?(%)?)$"="Decrease all enemies' DMG 
 投擲點數=Dice Points
 要求投擲點數=<size\=30>Need Dice Points</size>
 可返回查看路線後繼續投擲=Can roll after checking the route
+兌換成功。=Redeem success.
 每次獲得花朵=Get Flower
 敵人強度=Strength
 淺層=Top
@@ -2718,9 +2722,12 @@ r:"^所有敵人受到傷害降低(\d+(.\d+)?(%)?)$"="Decrease all enemies' DMG 
 最深處=Deepest
 層數=Floors
 後退=Backwards
+戰鬥遭遇=Encounter
 無戰鬥獎勵=No Combat Rewards
 戰勝前置路線首領後解鎖。=Unlock after defeating the boss of the previous route.
 r:"^重置路線會<color\=#ff3b37>清空當前線路里程進度</color>且<color\=#ff3b37>不會返還</color>消耗的道具。\n是否重置？$"="Reset route will <color\=#ff3b37>clear the current route progress</color> and <color\=#ff3b37>will not refund</color> consumed itmes.\nAre you sure?"
+前進所需的未知之數數量不足。=Insufficient Unknown Number.
+前進所需的預言之數數量不足。=Insufficient Prophecy Number.
 自動投擲已取消。=Automatic throws have been canceled.
 『花朵』\n參與{{A}}的骰子大冒險活動獲得，可與{{A}}交換稀有道具獎勵。=<size\=23>[Flowers]\nObtained from {{A}}'s Dice Adventure,\ncan be exchanged with {{A}} for items.</size>
 r:"^『未知之數』\n透過挑戰「(.*)」關卡獲得，每次會投擲出隨機的行進點數。活動期間內，每天登入後自動獲得(\d+)個。$"="<size\=30>[Unknown Number]\nGained from Cross Fate, \ncan be used to roll random dice numbers, gain $2 daily.</size>"
@@ -3174,6 +3181,8 @@ r:"^詭譎的{{A}}$"="Strange {{A}}"
 r:"^平凡的{{A}}$"="Ordinary {{A}}"
 r:"^非凡的{{A}}$"="Extraordinary {{A}}"
 r:"^冷漠的{{A}}$"="Indifferent {{A}}"
+r:"^理性的{{A}}$"="Rational {{A}}"
+r:"^狂暴的{{A}}$"="Furious {{A}}"
 r:"^被操控的{{A}}$"="Manipulated {{A}}"
 r:"^躁動的{{A}}$"="Agitated {{A}}"
 r:"^乖戾的{{A}}$"="Sullen {{A}}"
