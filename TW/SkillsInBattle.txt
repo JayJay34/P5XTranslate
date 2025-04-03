@@ -394,15 +394,19 @@ r:"^對<color\=#FFFF00>隨機</color>敵人造成(\d+\-\d+)段(\d+\.\d+%)攻擊�
 //Goddamnit Magarula why are you worded differently???
 sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies, with a <color\=#FFFF00>$3</color> base chance to inflict $4 for 2 turns.
 
+Narcissus
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的疾風屬性傷害，有(\d+\.\d+%)基礎機率使敵人陷入風襲，持續(\d+)回合。$"="Deals $1 ATK Wind damage to <color\=#FFFF00>1</color> enemy, with a $2 base chance to inflict Winded for $3 turns."
+
 Vishnu
 造成<color\=#FFFF00>單體</color>疾風屬性傷害，機率附著<color\=#FFFF00>風襲</color>效果。若目標處於風襲狀態則刷新持續時間並增加本次技能傷害並附加疾風傷害加深效果。=Deals Wind DMG to <color\=#FFFF00>1</color> enemy, with a chance to inflict <color\=#FFFF00>Winded</color>. If the target is in Winded, refreshes its duration, increases this damage and increases their Wind DMG Taken.
 
 --- Psy ---
 
 //ST
-
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，對精神異常的敵人傷害提升(\d+%)，造成TECHNICAL。$"="Deals $1 ATK Psy damage to <color\=#FFFF00>1</color> enemy, increases DMG Dealt to enemies inflicted with Mental Ailments by $2, triggers TECHNICAL."
 
 //AoE
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，對精神異常的敵人傷害提升(\d+%)，造成TECHNICAL。$"="Deals $1 ATK Psy damage to <color\=#FFFF00>all</color> enemies, increases DMG Dealt to enemies inflicted with Mental Ailments by $2, triggers TECHNICAL."
 r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，對精神異常的敵人傷害提升(\d+%)。"=Deals <color\=#FFFF00>$1</color> ATK Psy damage to <color\=#FFFF00>all</color> enemies. Increase DMG Dealt by $2 to each enemy inflicted with any Mental Ailment.
 
 Okuninushi
@@ -860,6 +864,7 @@ r:"^攻<color\=#000000>擊</color>降低$"="A<color\=#000000>T</color>K Down"
 r:"^受<color\=#000000>攻</color>擊提升$"="A<color\=#000000>T</color>K Taken Up"
 r:"^防<color\=#000000>禦</color>降低$"="D<color\=#000000>E</color>F Down"
 r:"^防<color\=#000000>禦</color>力降低$"="D<color\=#000000>E</color>F Down"
+r:"^防<color\=#000000>禦</color>弱化$"="D<color\=#000000>e</color>fense Nerf"
 r:"^受<color\=#000000>暴</color>擊提升$"="C<color\=#000000>R</color>IT Rate Taken Up"
 r:"^受<color\=#000000>暴</color>擊效果提升$"="C<color\=#000000>R</color>IT DMG Taken Up"
 r:"^受<color\=#000000>到</color>暴擊效果提升$"="C<color\=#000000>R</color>IT DMG Taken Up"
@@ -868,7 +873,8 @@ r:"^受<color\=#000000>傷</color>害提升$"="D<color\=#000000>M</color>G Taken
 r:"^受<color\=#000000>到</color>傷害提升$"="D<color\=#000000>M</color>G Taken Up"
 r:"^受<color\=#000000>最</color>終傷害提高$"="F<color\=#000000>i</color>nal DMG Taken Up"
 r:"^受<color\=#000000>到</color>最終傷害提高$"="F<color\=#000000>i</color>nal DMG Taken Up"
-r:"^傷<color\=#000000>害</color>降低$"="D<color\=#000000>M</color>G Down"
+r:"^傷<color\=#000000>害</color>降低$"="D<color\=#000000>a</color>mage Down"
+r:"^傷<color\=#000000>害</color>弱化$"="D<color\=#000000>M</color>G Nerf"
 r:"^受<color\=#000000>物</color>理傷害提升$"="P<color\=#000000>h</color>ys DMG Taken Up"
 r:"^受<color\=#000000>物</color>理傷害加深$"="P<color\=#000000>h</color>ys DMG Taken Up"
 r:"^受<color\=#000000>火</color>焰傷害提高$"="F<color\=#000000>i</color>re DMG Taken Up"
@@ -911,9 +917,11 @@ r:"^防禦力提升$"="Increase DEF"
 r:"^防禦永久提升$"="Permanently increase DEF"
 r:"^防禦降低$"="Decrease DEF"
 r:"^防禦力降低$"="Decrease DEF"
+r:"^防禦弱化$"="Defense Nerf"
 r:"^速度提升$"="Increase SPD"
 r:"^傷害增加$"="Increase Damage"
 r:"^傷害提升$"="Increase Damage"
+r:"^傷害弱化$"="Damage Nerf"
 r:"^暴擊提升$"="Increase CRIT Rate"
 r:"^暴擊率提升$"="Increase CRIT Rate"
 r:"^暴擊傷害提升$"="Increase CRIT DMG"
@@ -929,8 +937,8 @@ r:"^受傷害提升$"="Increase DMG Taken"
 r:"^受到傷害提高$"="Increase DMG Taken"
 r:"^受到傷害提升$"="Increase DMG Taken"
 r:"^受HL傷害提升$"="Increase HIGHLIGHT DMG Taken"
-r:"^受到百分比傷害降低$"="Decrese DMG Taken percentage"
-r:"^受百分比傷害降低$"="Decreases DMG Taken%"
+r:"^受百分比傷害降低$"="Decrease Percentage DMG Taken"
+r:"^受到百分比傷害降低$"="Decrease Percentage DMG Taken"
 r:"^受到最終傷害提高$"="Increase Final DMG Taken"
 r:"^火焰傷害提升$"="Increase Fire DMG"
 r:"^凍結傷害提升$"="Increase Ice DMG"
@@ -993,6 +1001,9 @@ r:"^受弱點傷害提升(\d+%)$"="Increase Weakness DMG by $1"
 免疫精神異常=<size\=23>Mental Ailment Immunity</size>
 免疫倒地=Down Immunity
 免疫精神異常及控制=<size\=20>Mental Ailment and Control Immunity</size>
+免疫恐懼=Fear Immunity
+免疫絕望=Despair Immunity
+
 無法選中=Cannot Target
 倒地=Down
 被擊倒了！=Knocked Down!
@@ -1003,6 +1014,7 @@ Inspect Details - BUFF
 各項屬性提升=Many stats up
 r:"^{{A}}提升(\d+(.\d+)?(%)?)$"="Increase {{A}} by $1"
 r:"^護盾值：(\d+)$"="Shield: $1"
+{{A}}之力添加的護盾，可吸收一定傷害=Shield from {{A}}'s Power,\ncan take a certain amount of damage
 r:"^生命值提升(\d+(.\d+)?(%)?)$"="Increase HP by $1"
 r:"^最大生命值提升(\d+(.\d+)?(%)?)$"="Increase Max HP by $1"
 r:"^所有敵人的最終生命值提升(\d+(.\d+)?(%)?)$"="Increase all enemies' Final HP by $1"
@@ -1112,12 +1124,16 @@ r:"^護盾效果提升(\d+(.\d+)?(%)?)$"="Increase Shield Effect by $1"
 r:"^剩餘護盾值：(\d+)$"="Shield: $1"
 回合結束後回復一定生命值。=Restore HP at the end of each turn
 
+sr:"^(.*)屬性的適應性變為耐$"="Change $1 resistance to Resist"
+
 免疫一切傷害=Immunity to all damage
 免疫下次受到的傷害=Immunity to next damage
 受到的傷害將由所有擁有生命連結的單位共同分攤=<size\=26>Damage will be shared by all units with Lifelink</size>
 免疫即死效果=Immunity to Insta-Kill effects
 免疫精神異常效果=Immunity to Mental Ailment effects
-免疫倒地值傷害=Immunity to Down
+免疫恐懼效果=Immunity to Fear effects
+免疫絕望效果=Immunity to Despair effects
+免疫倒地值傷害=Immunity to Down Gauge damage
 免疫精神異常效果及控制效果=<size\=26>Immunity to Mental Ailments and Control effects</size>
 無法被怪盜方當作技能目標=Cannot be targeted by Thieves
 
