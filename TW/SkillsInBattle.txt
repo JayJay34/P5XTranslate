@@ -25,7 +25,9 @@ r:"^(\d+)層$"="<size\=18>$1 stacks</size>"
 使用槍械射擊1名敵人，造成少量射擊屬性傷害，根據子彈數量可以射擊多次。=Uses a gun to shoot 1 enemy. dealing light Gun damage, can shoot multiple times based on ammo.
 使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。=Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo.
 使用槍械射擊1名敵人，每次向1名敵人射擊3發，造成射擊屬性傷害，根據子彈數量可以射擊多次。=Uses a gun to shoot 1 enemy. dealing 3 hits of Gun damage to 1 enemy, can shoot multiple times based on ammo.
+使用槍械射擊1名敵人，每次向隨機敵人射擊3發，造成射擊屬性傷害，根據子彈數量可以射擊多次。=Uses a gun to shoot 1 enemy. dealing 3 hits of Gun damage randomly, can shoot multiple times based on ammo.
 使用槍械射擊1名敵人，造成6次射擊屬性傷害，子彈可能會發生偏移。對同一目標造成傷害會衰減。=Uses a gun to shoot 1 enemy. dealing 6 hits of Gun damage, the bullets can miss and deals less damage to the same target.
+子彈不足。=Insufficient ammo.
 
 r:"^剩餘次數：(\d+)/(\d+)$"="Use Limit: $1/$2"
 
@@ -519,6 +521,7 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的萬能�
 
 // ST Heal
 r:"^使<color\=#FFFF00>1名</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值。$"="Restores $1 ATK + $2 HP to <color\=#fffc40>1</color> ally."
+使1名同伴恢復一定生命值。=Restores a certain amount of HP to 1 ally.
 
 // AoE Heal
 r:"^使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值。$"="Restores $1 ATK + $2 HP to <color\=#fffc40>all</color> allies."
@@ -594,7 +597,9 @@ r:"^使<color\=#FFFF00>所有</color>同伴攻擊力提升(\d+\.\d+%)\+每(\d+)�
 //norn
 r:"^使<color\=#FFFF00>所有</color>同伴獲得(\d+\.\d+%)攻擊力\+(\d+)的護盾，持續(\d+)回合，護盾受到傷害時有(\d+\.\d+%)基礎機率使傷害來源陷入風襲狀態。$"="Gives <color\=#FFFF00>all</color> allies $1 ATK + $2 Shield for $3 turns. There is a $4 base chance to inflict Winded to the enemy when the Shield took damage."
 
+防電之壁=Elec Wall
 防風之壁=Wind Wall
+撐起2回合電擊耐性的防壁。=Adds Elec resistance to one ally for 2 turns.
 撐起2回合疾風耐性的防壁。=Adds Wind resistance to one ally for 2 turns.
 
 Snow Aegis
@@ -602,6 +607,11 @@ r:"^使<color\=#FFFF00>所有</color>同伴獲得(\d+\.\d+%)攻擊力\+(\d+)的�
 
 Higher Protection
 r:"^使<color\=#FFFF00>所有</color>同伴獲得(\d+\.\d+%)攻擊力\+(\d+)的護盾，持續(\d+)回合，主目標同伴處於護盾下的同伴，造成的傷害提升(\d+\.\d+%)，持續(\d+)回合。$"="Gives all allies <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> Shield for $3 turns. Increases the main target's DMG Dealt by $4 when they have this Shield for $5 turns."
+
+r:"^為所有同伴添加護盾，持續(\d+)回合。$"="Gives all allies Shield for $1 turns."
+r:"^使血量最低的同伴適應性變為耐，持續(\d+)回合。$"="Changes the lowest HP ally's resistance to Resist all for $1 turns."
+r:"^使血量最低的同伴適應性變為無，持續(\d+)回合。$"="Changes the lowest HP ally's resistance to Null all for $1 turns."
+r:"^使血量最低的同伴適應性變為吸，持續(\d+)回合。$"="Changes the lowest HP ally's resistance to Drain all for $1 turns."
 
 --- Debuffs ---
 
@@ -702,6 +712,7 @@ sr:"^<color\=#FF0000>(.*)</color>暴擊率提升了……$"="<color\=#FF0000>$1<
 r:"^<color\=#FF0000>所有敵人</color>受到的傷害提升了……$"="<color\=#FF0000>All enemies</color> DMG Taken Up!"
 
 sr:"^<color\=#FF0000>(.*)</color>獲得了護盾……$"="<color\=#FF0000>$1</color> gained Shield!"
+sr:"^<color\=#FF0000>(.*)</color>獲得了(.*)耐性……$"="<color\=#FF0000>$1</color> gained Resist $1!"
 sr:"^<color\=#FF0000>(.*)</color>的全屬性適應性變為無……$"="<color\=#FF0000>$1</color> now Null all!"
 r:"^解除了(\d+)個狀態降低效果！$"="Dispelled $1 stats debuff!"
 
@@ -736,7 +747,14 @@ r:"^<color\=#FF0000>(.*){{A}}</color>進入了洗腦狀態……$"="Inflicted wi
 
 r:"^<color\=#FF0000>(.*)</color>進入了冰封狀態……$"="Inflicted with Ice Seal..."
 
+r:"^<color\=#FF0000>(.*)</color>從暈眩異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Dizzy!"
 r:"^<color\=#FF0000>(.*)</color>從遺忘異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Forget!"
+r:"^<color\=#FF0000>(.*)</color>從睡眠異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Sleep!"
+r:"^<color\=#FF0000>(.*)</color>從狂怒異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Rage!"
+r:"^<color\=#FF0000>(.*)</color>從絕望異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Despair!"
+r:"^<color\=#FF0000>(.*)</color>從恐懼異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Fear!"
+r:"^<color\=#FF0000>(.*)</color>從混亂異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Confuse!"
+r:"^<color\=#FF0000>(.*)</color>從洗腦異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Brainwash!"
 
 r:"^<color\=#FF0000>(.*){{B}}</color>被{{A}}瞄準了，防禦降低……$"="<color\=#FF0000>Enemy</color> aimed by {{A}}, DEF Down!"
 r:"^<color\=#FF0000>(.*){{A}}</color>被{{B}}瞄準了，防禦降低……$"="<color\=#FF0000>Enemy</color> aimed by {{B}}, DEF Down!"
@@ -904,6 +922,9 @@ r:"^核<color\=#000000>熱</color>弱點$"="N<color\=#000000>u</color>ke Weaknes
 r:"^祝<color\=#000000>福</color>弱點$"="B<color\=#000000>l</color>ess Weakness"
 r:"^詛<color\=#000000>咒</color>弱點$"="C<color\=#000000>u</color>rse Weakness"
 
+r:"^火<color\=#000000>炎</color>耐性$"="R<color\=#000000>e</color>sist Fire"
+r:"^電<color\=#000000>擊</color>耐性$"="R<color\=#000000>e</color>sist Elec"
+
 ----------
 Inspect Details - TITLES
 ----------
@@ -937,7 +958,7 @@ r:"^受傷害提升$"="Increase DMG Taken"
 r:"^受到傷害提高$"="Increase DMG Taken"
 r:"^受到傷害提升$"="Increase DMG Taken"
 r:"^受HL傷害提升$"="Increase HIGHLIGHT DMG Taken"
-r:"^受百分比傷害降低$"="Decrease Percentage DMG Taken"
+r:"^受百分比傷害降低$"="<size\=23>Decrease Percentage DMG Taken</size>"
 r:"^受到百分比傷害降低$"="Decrease Percentage DMG Taken"
 r:"^受到最終傷害提高$"="Increase Final DMG Taken"
 r:"^火焰傷害提升$"="Increase Fire DMG"
@@ -1048,6 +1069,7 @@ r:"^基於效果命中提升最終傷害，當前提升(\d+(.\d+)?(%)?)$"="Incre
 r:"^效果抵抗提升(\d+(.\d+)?(%)?)$"="Increase Effect RES by $1"
 r:"^最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1"
 r:"^最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1"
+r:"^提升(\d+(.\d+)?(%)?)的最終傷害$"="Increase Final DMG by $1"
 r:"^最終傷害提升(\d+%)，可疊加(\d+)層$"="Increase Final DMG by $1, up to $2 stacks"
 r:"^每層提供(\d+%)的最終傷害加成，最多可疊加(\d+)層$"="Increase Final DMG by $1, up to $2 stacks"
 r:"^處於額外回合時，最終傷害提高(\d+(.\d+)?(%)?)$"="<size\=26>Increase Final DMG by $1 during Extra Turn</size>"
