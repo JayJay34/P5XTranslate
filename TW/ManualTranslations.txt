@@ -316,6 +316,7 @@ r:"^琴<color\=#ff0000ff>音</color>·{{A}}$"="Ko<color\=#ff0000ff>to</color>ne 
 r:"^道<color\=#ff0000ff>玄</color>坂 {{A}}$"="Ru<color\=#ff0000ff>na</color> Dogenzaka"
 r:"^道<color\=#ff0000ff>玄</color>坂{{A}}$"="Ru<color\=#ff0000ff>na</color> Dogenzaka"
 r:"^夏<color\=#ff0000ff>川</color> {{A}}$"="{{A}} Nat<color\=#ff0000ff>su</color>kawa"
+r:"^橋<color\=#ff0000ff>本</color> {{A}}$"="{{A}} Ha<color\=#ff0000ff>shi</color>moto"
 r:"^宮<color\=#ff0000ff>下</color> {{A}}$"="{{A}} Mi<color\=#ff0000ff>ya</color>shita"
 
 // P5X Side Quest //
@@ -582,6 +583,7 @@ r:"^和<color\=#ff0000ff>風</color>雜貨店$"="Ja<color\=#ff0000ff>pa</color>n
 和風雜貨店=Japan Sundries Shop
 r:"^伴<color\=#ff0000ff>手</color>禮店$"="So<color\=#ff0000ff>uv</color>enir Shop"
 r:"^音<color\=#ff0000ff>像</color>製品店$"="Mu<color\=#ff0000ff>si</color>c Store"
+高級超市=Premium Supermarket
 r:"^高<color\=#ff0000ff>級</color>超市$"="Pre<color\=#ff0000ff>mi</color>um Supermarket"
 r:"^傘<color\=#ff0000ff>具</color>店$"="Um<color\=#ff0000ff>re</color>lla Store"
 r:"^自<color\=#ff0000ff>助</color>照片機$"="ID <color\=#ff0000ff>Ph</color>oto Booth"
@@ -638,6 +640,7 @@ r:"^家<color\=#ff0000ff>電</color>量販店$"="El<color\=#ff0000ff>ec</color>t
 r:"^女<color\=#ff0000ff>僕</color>餐廳$"="Ma<color\=#ff0000ff>id</color> Café"
 能隱約聽到客人們的歡笑聲……=Can faintly hear the laughter \nof the customers...
 r:"^自<color\=#ff0000ff>動</color>販賣機$"="Ve<color\=#ff0000ff>nd</color>ing Machine"
+宅物週邊店=Character Good Shop
 r:"^宅<color\=#ff0000ff>物</color>店$"="Ch<color\=#ff0000ff>ar</color>acter Good Shop"
 受屋= Tokobushiya
 r:"^主<color\=#ff0000ff>題</color>咖啡店$"="Co<color\=#ff0000ff>nc</color>ept Café"
@@ -688,6 +691,7 @@ r:"^(\d+)天(\d+)時後過期$"="Expires in $1d $2h"
 r:"^(\d+)天後過期$"="Expires in $1d"
 r:"^(\d+)天後下架$"="Expires in $1d"
 r:"^(\d+)天(\d+)時後下架$"="Expires in $1d $2h"
+r:"^(\d+)天(\d+)小時後到期$"="Expires in $1d $2h"
 
 r:"^(\d+)天(\d+)時後刷新$"="Refreshes in $1d $2h"
 r:"^(\d+)時(\d+)分後刷新$"="Refreshes in $1h $2m"
@@ -696,6 +700,10 @@ r:"^(\d+)分後刷新$"="Refreshes in $1m"
 
 r:"^(\d+)天(\d+)時解鎖$"="Unlocks in $1d $2h"
 r:"^(\d+)時(\d+)分解鎖$"="Unlocks in $1h $2m"
+r:"^(\d+)分解鎖$"="Unlocks in $1m"
+r:"^(\d+)天(\d+)時後開放領取$"="Claim in $1d $2h"
+r:"^(\d+)時(\d+)分後開放領取$"="Claim in $1h $2m"
+r:"^(\d+)分後開放領取$"="Claim in $1m"
 
 r:"^剩餘(\d+)天(\d+)時(\d+)分$"="$1d $2h $3m left"
 r:"^(\d+)天(\d+)時(\d+)分$"=" $1d $2h $3m"
@@ -850,6 +858,8 @@ sr:"^多重奏·(.*):(.*)元素怪盜技能傷害提升(.*)$"="<size\=21>$1 Poly
 解明=Elucidate
 不直接參與戰鬥，透過支援技能為隊伍提供支援效果。=<size\=26>Does not participate in combat, support the team through support skills.</size>
 不直接參與戰鬥，透過支援技能為隊伍提供支援效果，同時自身屬性會轉化為額外的屬性，為出戰的隊員提供加成。=<size\=26>Does not participate in combat, support the team through support skills.\nBoost active allies' stats based on own stats</size>
+不直接參與戰鬥，在場外使用支援技能為出戰隊員提供加成。=<size\=26>Does not participate in combat, support the team through support skills.</size>
+
 怪盜=Thief
 怪盜職業=Thief Roles
 
@@ -907,6 +917,7 @@ r:"^治療效果$"="<size\=22>Healing Effect</size>"
 防禦力百分比=DEF%
 上陣面具屬性會全部附加至主角=<size\=20>Wonder's stats are his \nequipped Persona stats combined</size>
 上陣{{A}}的屬性會同時附加給主角，提高<color\=#870000>主角屬性</color>。=Wonder's stats are his \n<color\=#870000>equipped Persona stats combined</color>.
+尚未佩戴面具=No equipped Mask
 
 已達到等級上限。=Reached level cap.
 <color\=#FF0000>本次升級溢出經驗將轉化為傳記材料。</color>\n是否確定使用所選材料進行強化？=<color\=#FF0000>This upgrade will convert overflowed EXP into upgrade materials.</color>\nAre you sure you want to upgrade?
@@ -1072,7 +1083,7 @@ r:"^完成(\d+)次難度(\d+)及以上的往日回溯$"="Complete $1 Past Echo o
 
 // Part I Step 1
 完成引導任務「開啟未知之路」=Complete the main mission: "Open the Unknown Road"
-進行10次簽約=Perform 10 pulls on a banner
+進行10次簽約=Perform 10 Signature
 見證{{A}}的覺醒=Witness {{A}}'s Awakening
 完成主線任務「{{A}}」=Complete the main mission: "{{A}}"
 r:"^擁有(\d+)個潛能(.*)的怪盜$"="Have $1 Thieves at Potential $2"
@@ -2299,9 +2310,8 @@ r:"^委託、消費大酬賓等獎勵或者購買<link\="mqm"><u>每日祈願納
 認知抽選單 ★5=<size\=28>5★ Cognitive Draw</size>
 使用後可隨機獲得一個未達到意識VI的以下怪盜：{{A}}、{{B}}。=Can be used to randomly get one of the following Thief that has not reached Awareness VI: {{A}}, {{B}}.
 {{A}}的殘識={{A}}'s Awareness
-宿命之殘響=Fated Echoes
-r:"^宿命之殘響\*(\d+)$"="Fated Echoes*$1"
-『宿命之殘響』\n參與挑戰類活動獲得的特殊貨幣，可在「氣運駐場」商店中兌換獎勵。=<size\=26>[Fated Echoes]\nGained from challenge-type events. \nCan be used in [Destinyland].</size>
+r:"^{{A}}\*(\d+)$"="{{A}}*$1"
+『{{A}}』\n參與挑戰類活動獲得的特殊貨幣，可在「氣運駐場」商店中兌換獎勵。=<size\=26>[{{A}}]\nGained from challenge-type events. \nCan be used in [Destinyland].</size>
 參與挑戰類活動獲得的特殊貨幣，可在「氣運駐場」商店中兌換獎勵。=Gained from challenge-type events. Can be used in [Destinyland].
 認知殘影=<size\=29>Cognitive Afterimage</size>
 『認知殘影』\n用於在契約之間的認知優選中兌換物品。=<size\=29>[Cognitive Afterimage]\nCan be used in Congition Shop.</size>
@@ -2690,6 +2700,24 @@ r:"^在{{A}}區域(\d+)擊敗(\d+)個寶魔\((\d+)\/(\d+)\)$"="Defeat $2 Treasur
 sr:"^完成都市任務「(.*)」\((\d+)\/(\d+)\)$"="Complete the city mission [$1] ($2/$3)"
 r:"^與「{{A}}」締結協力者關係\((\d+)\/(\d+)\)$"="Form a Confidant with {{A}} ($1/$2)"
 r:"^與「{{A}}」的協力者等級達到(\d+)級\((\d+)\/(\d+)\)$"="Reach Confidant Rank $1 with {{A}} ($2/$3)"
+
+r:"^截止到今日，您累積登入了(.*)天，並達到了(.*)，為您提供$"="As of today, you have logged in for $1 days and reached $2, here are your rewards"
+團長應援=Leader's Support
+根據您的活躍及養成情況，\n我們為您開啟了「<color\=#ff3b37>專屬系列活動</color>」。\n活動期間，<color\=#ffd145>登入即可領取豐厚獎勵</color>！\n感謝您的一路陪伴！！！=<size\=27>Based on your activity and progress,\nwe've unlocked an [<color\=#ff3b37>exclusive series event</color>] for you.\nDuring this event, <color\=#ffd145>you can log in to claim generous rewards</color>!\nThank you for your continued support!!!</size>
+每日登入可<color\=#FFEB40>直升等級</color>、<color\=#FFEB40>獲得大量養成材料</color>及<color\=#FFEB40>5星限定角色</color>=Log in to gain <color\=#FFEB40>levels</color>, <color\=#FFEB40>EXP materials</color> and <color\=#FFEB40>limited 5★ character</color>
+r:"^領取「<color\=#ff3b37>獎勵</color>」$"="Claim [<color\=#ff3b37>Rewards</color>]"
+請等待明日再來領取吧=Wait until tomorrow to claim
+r:"^查看「<color\=#ff3b37>應援獎勵規則</color>」$"="View [<color\=#ff3b37>Support Reward Rules</color>]"
+為了助力您的怪盜之旅，為您提供了：=To aid your Thief journey:
+應援檔位是根據隊長當前的主角等級及過去一年的未登入天數綜合評定的。不同檔位將贈送相應的獎勵，包括主角經驗和養成材料。需注意的是，主角等級提升設有上限，達到上限後，隊長將無法透過本活動繼續獲得主角經驗獎勵。此外，即使在同一檔位內，獎勵也會根據隊長的未登入天數有所差異。（注：未登入天數指自遊戲開服以來，無論隊長是否創建帳號，未登入遊戲的天數累計。）=Your support rank is based on your current Wonder Level and inactive days in the past year. Different rank provides corresponding rewards, including Wonder EXP and growth materials. There is a cap on Wonder Level. Once reached, you will no be able to gain additional Wonder EXP from this event. Additionally, the rewards may vary even within the same rank, depending on your total inactive days. (Note: Inactive days are counted from the game's launch date, including all days you didn't log in, whether or not you had created an account at the time.)
+r:"^第(\d+)天可直接領取$"="Claim on day $1"
+{{A}}3張=3 {{A}}
+特供請願書·曆戰 ★5=<size\=22>5★ Special Petition</size>
+r:"^使用後可自選1名以下怪盜：\n(.*)。$"="Can be used to choose 1 following Thief: $1."
+以下角色在活動契約中獲得=The following characters are from Event Contract
+r:"^親愛的隊長：\n自遊戲開服之日起，您已累計登入達到<color\=#0F69CA>(.*)</color>天。為了感謝您一直以來的支持與陪伴，截止(.*)年4月18日週年慶當天，我們將會根據您的總登入天數為您送上特別的週年禮物，祝您的{{A}}之旅更加精彩。$"="Dear Captain: Since the game's launch, you have logged in for a total of <color\=#0F69CA>$1</color> days. To express our gratitude for your unwavering support, we will send you a special anniversary gift based on your total login days on April 18th, $2. We wish you an even more wonderful {{A}} journey."
+為感謝您長期的陪伴，額外為您贈送=Special thank-you gifts for your continued support
+請於遊戲一週年當日上午5:00之後，在本頁面領取獎勵。=Please claim your rewards on this page after 05:00 (UTC+8) on the game's 1st anniversary.
 
 r:"^最高通關等級：(\d+)級$"="Highest Clear Lv: $1"
 r:"^通關(.*)難度(\d+)$"="Clear Difficulty $2"
@@ -3182,6 +3210,7 @@ r:"^最多只可以選擇(\d+)個面具上陣哦～$"="You can only equip $1 Per
 r:"^在{{A}}育成中習得被動技能『(.*)』的技能卡。$"="Can be used to learn this passive skill."
 r:"^在{{A}}育成中習得輔助系技能『(.*)』的技能卡。$"="Can be used to learn this support skill."
 r:"^在{{A}}育成中習得異常系技能『(.*)』的技能卡。$"="Can be used to learn this debuff skill."
+<color\=#FFF000>面具階級</color>不符合技能卡要求。=<color\=#FFF000>Mask Rank</color> does not meet skill card requirement.
 
 r:"^與「<color\=#FFC000>{{A}}</color>」好感度提升至<color\=#FFC000>rank5</color>後，\n解鎖{{B}}的合成。$"="Unlock Fusion for {{B}}\nafter reaching <color\=#FFC000>rank 5</color> with [<color\=#FFC000>{{A}}</color>]."
 r:"^好感度提升至<color\=#FFC000>rank7</color>後，\n解鎖{{A}}的合成。$"="Unlock Fusion for Setanta\nafter reaching <color\=#FFC000>rank 7</color>."
@@ -3234,7 +3263,7 @@ r:"^煩惱的{{A}}$"="Frustrated {{A}}"
 r:"^詛咒的{{A}}$"="Cursed {{A}}"
 
 ----------
-ACHIEVEMENTS + BADGES
+ACHIEVEMENTS + COSMETICS
 ----------
 希望追尋之旅=<size\=26>Journey for Hope</size>
 無雙的武鬥派=<size\=21>Unrivaled Combatant</size>
@@ -3279,3 +3308,5 @@ r:"^贈送所有喜歡的禮物給{{A}}$"="Give all Favorite Gifts to {{A}}"
 設置徽章=Select Badges
 收集=Collection
 紀念冊=Events Album
+
+r:"^與協同者{{A}}好感度達到rank(\d+)\n且與{{A}}成為{{B}}$"="Reach Rank $1 with {{A}} and become {{B}}."
