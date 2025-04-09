@@ -1,0 +1,62 @@
+花满枝，风过枝头=Wind of Vitality
+伞边摇，安居伞中=Under the Umbrella
+梅自香，时过香浓=Fragrance of Time
+
+r:"^花满枝，风过枝头 Lv.(\d+)$"="Wind of Vitality Lv.$1"
+r:"^花满枝，风过枝头 <color\=#0F69CB>Lv.(\d+)</color>$"="Wind of Vitality <color\=#0F69CB>Lv.$1</color>"
+r:"^对1名敌人造成<color\=#FFFC40>(\d+\.\d+%)</color>{{B}}的疾风属性伤害，有(\d+%)基础概率使目标进入<link\="s\|105"><u>风袭</u></link>状态，效果持续(\d+)回合，并使目标进入<link\="s\|218"><u>『凋落』</u></link>状态：受到疾风属性伤害时，该次伤害{{B}}提升，提升值相当于多祢村理子·未央{{C}}超过(\d+%)部分的(\d+\.\d+%)\（最多计入<color\=#FFFC40>(\d+\.\d+%)</color>{{C}}\），效果持续(\d+)回合。多祢村理子·未央恢复(\d+)点{{A}}。\n<b><size\=28><color\=#850101>映着初升的阳光，细枝上盛开着簇簇梅花，风过不止，带着梅香拂过敌人。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Wind damage to 1 enemy, wtih a $2 base chance to inflict <link\="s|105"><u>Winded</u></link> for $3 turns. Inflicts the target with <link\="s|218"><u>[Wither]</u></link>: When taking Wind damage, increase that damage's ATK based on $5 CRIT DMG that's over $4, up to <color\=#FFFC40>$6</color> CRIT DMG for $7 turns. Restores $8 SP to self.\n<b><size\=28><color\=#850101>Reflecting the rising sunlight, the fine branches are blooming with clusters of plum blossoms, and the wind is more than just a breeze, carrying the fragrance of plums over the enemy.</color></size></b>"
+
+r:"^伞边摇，安居伞中 Lv.(\d+)$"="Under the Umbrella Lv.$1"
+r:"^伞边摇，安居伞中 <color\=#0F69CB>Lv.(\d+)</color>$"="Under the Umbrella <color\=#0F69CB>Lv.$1</color>"
+r:"^使所有同伴{{C}}提升，提升值相当于多祢村理子·未央{{D}}超过(\d+%)部分的(\d+\.\d+%)\（最多计入<color\=#FFFC40>(\d+\.\d+%)</color>{{D}}\），效果持续(\d+)回合，并回复(\d+)点{{B}}。期间任意同伴造成{{A}}技能/追加效果/HIGHLIGHT伤害时，使多祢村理子·未央恢复(\d+)点{{B}}，最多可触发一次。\n<b><size\=28><color\=#850101>和伞轻盈的略过空中，将所有同伴拢于伞下，彼此相依，互佑安然，春风知我意。</color></size></b>$"="Increases all allies' ATK based on $2 own CRIT DMG that's over $1, up to <color\=#FFFC40>$3</color> CRIT DMG for $4 turns, and restores $5 SP. During this effect when any ally deals damage with Persona skill/ Follow Up/ HIGHLIGHT, restores $6 SP to self once.\n<b><size\=28><color\=#850101>And the umbrella lightly skimmed through the air, gathered all the companions under the umbrella, each other, mutual blessing and peace, the spring breeze knows my intention.</color></size></b>"
+
+r:"^梅自香，时过香浓 Lv.(\d+)$"="Fragrance of Time Lv.$1"
+r:"^梅自香，时过香浓 <color\=#0F69CB>Lv.(\d+)</color>$"="Fragrance of Time <color\=#0F69CB>Lv.$1</color>"
+r:"^消耗所有{{A}}，使除自身以外的1名同伴{{C}}提升<color\=#FFFC40>(\d+\.\d+%)</color>，每消耗(\d+)点{{A}}会额外触发(\d+%)强度的下述效果，持续(\d+)回合\（该技能最多计入多祢村理子·未央<color\=#FFFC40>(\d+\.\d+%)</color>的{{D}}\）：\n消耗{{A}}≥(\d+)点：{{B}}提升，多祢村理子·未央{{D}}超过(\d+%)的部分，每(\d+%)使{{B}}提升(\d+)点；\n消耗{{A}}≥(\d+)点：{{D}}提升，提升值相当于多祢村理子·未央{{D}}超过(\d+%)部分的(\d+%)；\n消耗{{A}}≥(\d+)点：{{D}}额外提升，提升值相当于多祢村理子·未央{{D}}超过(\d+%)部分的(\d+%)。\n<b><size\=28><color\=#850101>寒风未尽，暗香浮动，不问东去，不问春归，繁华尽在枝头独秀美。</color></size></b>$"="Consumes all SP, increases 1 other ally's CRIT Rate by <color\=#FFFC40>$1</color>. For every $2 SP consumed, additionally triggers the following effects at $3 for $4 turns, up to <color\=#FFFC40>$5</color> CRIT DMG: \nConsumes $6 SP: Increases ATK by $9 for every $8 CRIT DMG that's over $7;\nConsumes $10 SP: Increases CRIT DMG for every $12 CRIT DMG that's over $11;\nConsumes $13 SP: Additionally increases CRIT DMG for every $15 CRIT DMG that's over $14.\n<b><size\=28><color\=#850101>The cold wind is not yet finished, the dark fragrance floating, do not ask the east, do not ask the return of spring, the prosperity of all the branches in the sole beauty.</color></size></b>"
+
+r:"^『HIGHLIGHT』：使除自身以外的1名同伴{{B}}提升\（多祢村理子·未央{{C}}超过(\d+%)的部分，每(\d+%)使{{B}}提升(\d+\.\d+)点，最多计入<color\=#FFFC40>(\d+\.\d+%)</color>{{C}}\），{{C}}提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持续(\d+)回合。除自身以外的所有同伴恢复(\d+)点{{A}}。\n『ONE MORE』：对1名敌人造成疾风属性伤害。\n近战攻击：使用近战武器，对1名敌人造成物理属性的少量伤害。\n枪械攻击：使用枪械射击1名敌人，造成少量射击属性伤害，根据子弹数量可以射击多次。$"="[HIGHLIGHT]: Increases 1 other ally's ATK by $3 ATK for every $2 CRIT DMG that's over $1, up to <color\=#FFFC40>$4</color> CRIT DMG and increases their CRIT DMG by <color\=#FFFC40>$5</color> for $6 turns. Restores $7 SP to all other allies.\n[ONE MORE]: Deals Wind damage to 1 enemy. \nMelee Attack: Uses a melee weapon to deal light Physical damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
+
+r:"^盛放 Lv.(\d+)$"="Bloom Lv.$1"
+r:"^多祢村理子·未央使用『梅自香，时过香浓』后，使技能主目标获得持续(\d+)回合的『含苞』状态：每造成(\d+)次技能伤害获得(\d+)层『花开』：{{A}}提升<color\=#FFFC40>(\d+)</color>，持续(\d+)回合，最多可叠加(\d+)层。『花开』达(\d+)层时，{{A}}额外提升，提升值相当于多祢村理子·未央{{B}}超过(\d+%)部分的<color\=#FFFC40>(\d+\.\d+%)</color>；『花开』达(\d+)层时，{{B}}额外提升，提升值相当于多祢村理子·未央{{B}}超过(\d+%)部分的<color\=#FFFC40>(\d+\.\d+%)</color>。$"="After you use [Fragrance of Time], give the main target $1 turns of [Budding]: Gain $3 stack of [Blossom] when dealing $2 hit of skill damage: Increase ATK by <color\=#FFFC40>$4</color> for $5 turns, up to $6 stacks. When reaching $7 stacks of [Blossom], additionally increase their ATK based on <color\=#FFFC40>$9</color> own CRIT DMG that's over $8; When reaching $10 stacks of [Blossom], additionally increase their CRIT DMG based on <color\=#FFFC40>$12</color> own CRIT DMG that's over $11."
+r:"^多祢村理子·未央使用『梅自香，时过香浓』后，使技能主目标获得持续(\d+)回合的『含苞』状态：每造成(\d+)次技能伤害获得(\d+)层『花开』：{{A}}提升<color\=#0169ca>(\d+)</color>，持续(\d+)回合，最多可叠加(\d+)层。『花开』达(\d+)层时，{{A}}额外提升，提升值相当于多祢村理子·未央{{B}}超过(\d+%)部分的<color\=#0169ca>(\d+\.\d+%)</color>；『花开』达(\d+)层时，{{B}}额外提升，提升值相当于多祢村理子·未央{{B}}超过(\d+%)部分的<color\=#0169ca>(\d+\.\d+%)</color>。$"="After you use [Fragrance of Time], give the main target $1 turns of [Budding]: Gain $3 stack of [Blossom] when dealing $2 hit of skill damage: Increase ATK by <color\=#0169ca>$4</color> for $5 turns, up to $6 stacks. When reaching $7 stacks of [Blossom], additionally increase their ATK based on <color\=#0169ca>$9</color> own CRIT DMG that's over $8; When reaching $10 stacks of [Blossom], additionally increase their CRIT DMG based on <color\=#0169ca>$12</color> own CRIT DMG that's over $11."
+
+r:"^盎然 Lv.(\d+)$"="Abundant Lv.$1"
+r:"^战斗中，依据自身{{B}}提升{{A}}，最多<color\=#FFFC40>(\d+\.\d+%)</color>{{B}}提升<color\=#FFFC40>(\d+\.\d+%)</color>{{A}}。$"="In battle, increase CRIT DMG based on SP Recovery, up to <color\=#FFFC40>$1</color> SP Recovery for <color\=#FFFC40>$2</color> CRIT DMG."
+r:"^战斗中，依据自身{{B}}提升{{A}}，最多<color\=#0169ca>(\d+\.\d+%)</color>{{B}}提升<color\=#0169ca>(\d+\.\d+%)</color>{{A}}。$"="In battle, increase CRIT DMG based on SP Recovery, up to <color\=#0169ca>$1</color> SP Recovery for <color\=#0169ca>$2</color> CRIT DMG."
+
+<color\=#66ccff>『凋落』</color>=<color\=#66ccff>[Wither]</color>
+凋落=Wither
+受到疾风属性伤害时，该次伤害{{A}}提升。=When taking damage Wind damage, increase that damage's ATK.
+含苞=Budding
+花开=Blossom
+
+梅花散=Scatter Plum Blossom
+r:"^多祢村理子·未央的{{B}}上限提升至(\d+)点，{{C}}提升(\d+%)。多祢村理子·未央使用{{A}}技能恢复自身{{B}}时，会受到{{C}}属性的影响。多祢村理子·未央使用『梅自香，时过香浓』会消耗自身全部{{B}}，并依据所消耗的{{B}}产生不同效果。$"="Increase your Max SP to $1 and increase SP Recovery by $2. SP Recovery will affect Persona skills SP restored amount. Consume all SP when using [Fragrance of Time], it gives different effects depending on the SP consumed."
+
+不待寒=Await Warmth
+r:"^『花满枝，风过枝头』的<link\="s\|218"><u>『凋落』</u></link>状态的生效条件从“受到疾风属性伤害”变为“受到任意属性伤害”，并额外使目标受到{{B}}提升(\d+%)。\n『伞边摇，安居伞中』额外使支配怪盗{{A}}提升(\d+%)。$"="Change the condition for <link\="s|218"><u>[Wither]</u></link> from [Wind of Vitality] from "when taking Wind damage" to "when taking any Elemental damage", additionally increase the main target's CRIT DMG Taken by $1.\n[Under the Umbrella] additionally increase Dominate Thieves' ATK by $2."
+
+夜无眠=Sleepless Nights
+r:"^多祢村理子·未央的{{A}}上限额外提升(\d+)点（消耗{{A}}触发『梅自香，时过香浓』的强度上限额外提升）。多祢村理子·未央使用『梅自香，时过香浓』后，立刻恢复(\d+)点{{A}}。\n潜能『盛放』效果提升：<link\="s|221"><u>『花开』</u></link>达(\d+)层时的{{B}}提升值翻倍。$"="Increase Max SP by $1 (Additionally increase the cap of [Fragrance of Time]). Immediately restore $2 SP when using [Fragrance of Time].\nPotential [Bloom] Effect Boost: When reaching $3 stack of <link\="s|221"><u>[Blossom]</u></link> double the CRIT DMG buff."
+
+月弥漫=Full Moon
+sr:"^『(.*)』、『(.*)』的技能等级提升2级，至多提升至15级。$"="[$1], [$2] skill level +2, up to a maximum of level 15."
+sr:"^『(.*)』、『(.*)』的技能等级提升3级，至多提升至15级。$"="[$1], [$2] skill level +3, up to a maximum of level 15."
+
+拂满山=Through Mountains
+r:"^HIGHLIGHT效果提升：增益效果会对除自身以外的所有同伴生效，并使技能主目标的{{B}}额外提升(\d+%)，除自身以外的所有同伴的{{A}}恢复量提升至(\d+)点。$"="HIGHLIGHT Effect Boost: The buffs now apply to all other allies, additionally increase the man target's CRIT DMG by $1, additionally increases the amount of SP restored to $2."
+
+心悠然=Carefree Heart
+
+待春颜=Await Spring
+『梅自香，时过香浓』会对除自身以外的所有同伴生效，技能主目标使用{{A}}技能后，自身立刻对敌方目标释放1次『花满枝，风过枝头』，该效果在单次『梅自香，时过香浓』持续时间内仅会触发一次。\n多祢村理子·未央在场时，所有怪盗造成伤害时若{{B}}超过(\d+%)，每超过(\d+%)使该伤害的{{C}}额外提升(\d+%)。$"="[Fragrance of Time] now works on all other allies, after the main target used a Persona skill, immediately use [Wind of Vitality] to the enemy once, this can only trigger once per [Fragrance of Time].\nWhen you are present, when allies deal damage with a CRIT Rate over $1, for every $2, additionally increases that damage's CRIT DMG by $3."
+
+浮香·鹤舞凌冬=Winter Crane Dance
+【惊鸿飞雪】=[Graceful Snow]
+惊鸿飞雪=Graceful Snow
+r:"^{{B}}提升<color\=#2899FF>(\d+\.\d+%)</color>。以同伴为目标释放技能时，使除自己以外的所有同伴{{B}}提升<color\=#2899FF>(\d+\.\d+%)</color>，效果持续(\d+)回合。使用技能时，技能每消耗(\d+)点{{A}}使技能主目标造成伤害提升<color\=#2899FF>(\d+\.\d+%)</color>，效果持续(\d+)回合。$"="Increase CRIT DMG by <color\=#2899FF>$1</color>. When using skills on allies, increase all other allies' CRIT DMG by <color\=#2899FF>$2</color> for $3 turns. When using skills, increase the main target's DMG Dealt by <color\=#2899FF>$5</color> for every $4 SP consumed for $6 turns."
+
+晴日惊雀=Sunny Starling
+【无慈悲】=[No Mercy]
+无慈悲=No Mercy
+r:"^{{A}}提升<color\=#2899FF>(\d+\.\d+%)</color>。通过自身{{A}}技能回复{{B}}时，使自身{{C}}提升<color\=#2899FF>(\d+\.\d+%)</color>，持续(\d+)回合，可叠加(\d+)层。$"="Increase ATK by <color\=#2899FF>$1</color>. When using Persona skills to restore SP, increase own CRIT DMG by <color\=#2899FF>$2</color> for $3 turns, up to $4 stacks."

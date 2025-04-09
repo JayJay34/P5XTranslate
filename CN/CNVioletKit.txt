@@ -1,0 +1,48 @@
+r:"^芳泽霞的HIGHLIGHT不消耗HIGHLIGHT能量且可以发生暴击。我方任意怪盗回合，若芳泽霞的<link="s\|215"><u>舞姿</u></link>层数大于等于(\d+)层，可以<link="s\|216"><u>变身</u></link>进入『<link="s\|217"><u>化装舞会</u></link>』状态，并可以使用1次HIGHLIGHT\（<link="s\|216"><u>变身</u></link>拥有(\d+)回合的冷却时间\），持续至进入『<link="s\|217"><u>化装舞会</u></link>』状态后芳泽霞的第二个回合开始。『<link="s\|217"><u>化装舞会</u></link>』状态下，每有一层<link="s\|215"><u>舞姿</u></link>，芳泽霞的攻击力提升(\d+%)、暴击率提升(\d+%)。『<link="s\|217"><u>化装舞会</u></link>』状态结束时清除自身所有<link="s\|215"><u>舞姿</u></link>。（若『<link="s\|217"><u>化装舞会</u></link>』状态结束时自身没有释放HIGHLIGHT，则会对随机目标自动释放HIGHLIGHT。）$"="Your HIGHLIGHT does not consume HIGHLIGHT Energy and can CRIT. On any allies' turn, if you have greater or equal to $1 stacks of <link="s|215"><u>Posture</u></link>, you can <link="s|216"><u>Transform</u></link> into [<link="s|217"><u>Masquerade</u></link>] and use HIGHLIGHT once (<link="s|217"><u>Masquerade</u></link> has a $2 turns cooldown), until the start of your second turn after you entered [<link="s|217"><u>Masquerade</u></link>]. Under [<link="s|217"><u>Masquerade</u></link>], for every 1 stack of <link="s|215"><u>Posture</u></link>, increase own ATK by $3 and CRIT Rate by $4. Remove all <link="s|215"><u>Posture</u></link> when [<link="s|217"><u>Masquerade</u></link>] ends. (If you didn't use her HIGHLIGHT before [<link="s|217"><u>Masquerade</u></link>] ends, automatically use it on a random target.)"
+黑夜微光=Glimmer of Night
+携手共舞=Dancing in Hand
+心绪绽放=Blooming Heart
+信心=Faith
+决意=Determination
+
+r:"^黑夜微光 Lv.(\d+)$"="Glimmer of Night Lv.$1"
+r:"^黑夜微光 <color\=#0F69CB>Lv.(\d+)</color>$"="Glimmer of Night <color\=#0F69CB>Lv.$1</color>"
+r:"^主动使用该技能时，对1名敌人造成<color=#FFFC40>(\d+\.\d+%)</color>攻击力的祝福属性伤害，自身获得<link="s\|215"><u>舞姿</u></link>『勇气步伐』，上限(\d+)层。舞伴触发该技能时，技能效果为对1名敌人造成<color=#FFFC40>(\d+\.\d+%)</color>攻击力的祝福属性伤害，自身获得<link="s\|215"><u>舞姿</u></link>『勇气步伐』，上限(\d+)层。\n<b><size=28><color=#850101>纵使只有一缕微光，它亦能引领我们突破自我，驱散一切黑暗。</color></size></b>$"="When you manually use this skill, deals <color=#FFFC40>$1</color> ATK Bless damage to 1 enemy, and gains <link="s|215"><u>Posture</u></link> [Brave Step], up to a $2 stack. When Dance Partner triggers this skill, deals <color=#FFFC40>$3</color> ATK Bless damage to 1 enemy, and gains <link="s|215"><u>Posture</u></link> [Brave Step], up to a $4 stack.\n<b><size=28><color=#850101>Even if there is only a ray of light, it can lead us to break through and dispel all darkness.</color></size></b>"
+
+r:"^携手共舞 Lv.(\d+)$"="Dancing in Hand Lv.$1"
+r:"^携手共舞 <color\=#0F69CB>Lv.(\d+)</color>$"="Dancing in Hand <color\=#0F69CB>Lv.$1</color>"
+r:"^选择1名同伴使其成为『舞伴』，持续(\d+)回合。自身和『舞伴』攻击力提升<color=#FFFC40>(\d+\.\d+%)</color>，持续(\d+)回合。自身获得<link="s\|215"><u>舞姿</u></link>『灵巧步伐』，上限(\d+)层。『舞伴』使用人格面具技能后，自身立刻对随机敌方目标释放1次『黑夜微光』（若『舞伴』的技能目标为敌方，则改为对技能主目标释放1次『黑夜微光』）。同时只能存在一个『舞伴』。\n<b><size=28><color=#850101>钟声已经响起，音乐开始奏鸣。牵起我的手吧，让我们一同迈向舞池，共同起舞。</color></size></b>$"="Selects 1 ally to be [Dance Partner] for $1 turn. Increases own and [Dance Partner] ATK by <color=#FFFC40>$2</color> for $3 turns. Gains <link="s|215"><u>Posture</u></link> [Agile Step], up to $4 stack. After [Dance Partner] use a Persona skill, immediately use [Glimmer of Night] on 1 random enemy (If [Dance Partner] used a skill that target an enemy, change the main target of [Glimmer of Night] to that enemy). There can only be 1 [Dance Partner].\n<b><size=28><color=#850101>The bells have rung and the music has begun to play. Take my hand, let's step out onto the dance floor and dance together.</color></size></b>"
+
+r:"^心绪绽放 Lv.(\d+)$"="Blooming Heart Lv.$1"
+r:"^心绪绽放 <color\=#0F69CB>Lv.(\d+)</color>$"="Blooming Heart <color\=#0F69CB>Lv.$1</color>"
+r:"^对1名敌人造成<color=#FFFC40>(\d+\.\d+%)color>攻击力的祝福属性伤害。使用该技能时若自身处于『<link="s\|217"><u>化装舞会</u></link>』状态，则技能伤害提升(\d+%)、自身暴击效果提升<color=#FFFC40>(\d+\.\d+%)</color>。\n<b><size=28><color=#850101>梳开一切心绪，解开一切困惑。绽放的心绪将化作突破一切的利刃！</color></size></b>$"="Deals <color=#FFFC40>$1</color> ATK Bless damage to 1 enemy. If you are in [<link="s|217"><u>Masquerade</u></link>], additionally increases skill damage by $2 and CRIT DMG by <color=#FFFC40>$3</color>.\n<b><size=28><color=#850101>Sweep away all thoughts and unravel all confusions. The blossoming mind will be transformed into a sharp blade to break through everything!</color></size></b>"
+
+r:"^『HIGHLIGHT』：发动条件：自身处于『<link="s\|217"><u>化装舞会</u></link>』状态\n对1名敌人造成<color=#FFFC40>(\d+\.\d+%)</color>攻击力的祝福属性伤害。自身拥有<link="s\|215"><u>舞姿</u></link>时，获得对应的增益效果。『勇气步伐』：每层提升HIGHLIGHT技能伤害(\d+%)。『灵巧步伐』：HIGHLIGHT提升(\d+%)暴击率、(\d+%)暴击效果。\n『ONE MORE』：对1名敌人造成祝福属性伤害。\n近战攻击：使用近战武器，对1名敌人造成物理属性的少量伤害。\n枪械攻击：使用枪械射击1名敌人，造成射击属性伤害，根据子弹数量可以射击多次。$"="[HIGHLIGHT] use condition: When you are in [<link="s|217"><u>Masquerade</u></link>]\nDeals <color=#FFFC40>$1</color> ATK Bless damage to 1 enemy. Based on own <link="s|215"><u>Posture</u></link>, gains the corresponding effects. [Brave Step]: Each stack increases HIGHLIGHT skill damage by $2. [Agile Step]: Increases HIGHLIGHT CRIT Rate by $3 and CRIT DMG by $4. \n[ONE MORE]: Deals Fire damage to 1 enemy. \nMelee Attack: Uses a melee weapon to deal light Bless damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
+
+r:"^信心 Lv.(\d+)$"="Faith Lv.$1"
+r:"^自身每拥有一层<link="s\|215"><u>舞姿</u></link>，祝福属性伤害提升<color=#FFFC40>(\d+\.\d+%)</color>，上限<color=#FFFC40>(\d+\.\d+%)</color>。$"="For every 1 stack of <link="s|215"><u>Posture</u></link>, increase Bless DMG by <color=#FFFC40>$1</color>, up to <color=#FFFC40>$2</color>."
+r:"^自身每拥有一层<link="s\|215"><u>舞姿</u></link>，祝福属性伤害提升<color\=#0169ca>(\d+\.\d+%)</color>，上限<color\=#0169ca>(\d+\.\d+%)</color>。$"="For every 1 stack of <link="s|215"><u>Posture</u></link>, increase Bless DMG by <color\=#0169ca>$1</color>, up to <color\=#0169ca>$2</color>."
+
+r:"^决意 Lv.(\d+)$"="Determination Lv.$1"
+r:"^友方同伴发动HIGHLIGHT后，芳泽霞攻击力提升<color=#FFFC40>(\d+\.\d+%)</color>，持续(\d+)回合。$"="After other allies use HIGHLIGHT, increase own ATK by <color=#FFFC40>$1</color> for $2 turns."
+r:"^友方同伴发动HIGHLIGHT后，芳泽霞攻击力提升<color\=#0169ca>(\d+\.\d+%)</color>，持续(\d+)回合。$"="After other allies use HIGHLIGHT, increase own ATK by <color\=#0169ca>$1</color> for $2 turns."
+
+十二点的钟声=Bell Toll at Midnight
+
+破碎的裙摆与她的影子=Tattered Dress
+r:"^『舞伴』的持续时间延长1回合。使用『携手共舞』后，自身和『舞伴』的{{A}}额外提升(\d+%)，持续(\d+)回合。$"="Extend the duration of [Dance Partner] by 1 turn. After using [Dancing in Hand], additionally increase your own and your Dance Partner's CRIT Rate by $1 for $2 turns."
+
+对那场舞会的向往=Ball Yearning
+r:"^自身<link="s\|215"><u>舞姿</u></link>达到(\d+)层时，攻击力提升(\d+%)，达到(\d+)层时，暴击效果提升(\d+%)。$"="Increase ATK by $2 when you reach $1 stacks of <link="s|215"><u>Posture</u></link>; Increase CRIT DMG by $4 when you reach $3 stacks of <link="s|215"><u>Posture</u></link>."
+
+仙女的轻声吟唱=Fairy's Chant
+r:"^『{{A}}』、『黑夜微光』的技能等级提升(\d+)级，至多提升至(\d+)级。$"="[{{A}}], [Glimmer of Night] skill level +$1, up to a maximum of level $2."
+
+王子的目光=Prince's Gaze
+r:"^发动HIGHLIGHT时，获得1层『黎明的面纱』：受到伤害时消耗1层，闪避本次伤害效果，对部分技能无效。自身<link="s\|215"><u>舞姿</u></link>达到(\d+)层时，HIGHLIGHT伤害提升(\d+%)。$"="When using HIGHLIGHT, gain 1 stack of [Veil of Dawn]: Consume 1 stack when taking damage and evade it, cannot be used against certain skills. Increase HIGHLIGHT damage by $2 when you reach $1 stacks of <link="s|215"><u>Posture</u></link>."
+
+被遗忘的水晶鞋=Forgotten Glass Slipper
+r:"^『携手共舞』、『心绪绽放』的技能等级提升(\d+)级，至多提升至(\d+)级。$"="[Dancing in Hand], [Blooming Heart] skill level +(\d+), up to a maximum of level (\d+)."
+
+每个角落，每一扇门=Every Corner, a Door
+r:"^自身主动释放HIGHLIGHT后，到『<link="s\|217"><u>化装舞会</u></link>』状态结束前，可以额外释放1次HIGHLIGHT，伤害为固有HIGHLIGHT的(\d+%)。该效果每次『<link="s\|217"><u>化装舞会</u></link>』状态持续时间内仅能触发1次。$"="When you manually use HIGHLIGHT, you can additionally use 1 HIGHLIGHT until the end of [<link="s|217"><u>Masquerade</u></link>], this will deal $1 of the original HIGHLIGHT damage. You can only trigger this once per [Masquerade]."
