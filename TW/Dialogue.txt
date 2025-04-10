@@ -98,6 +98,7 @@ General Wonder Prompt
 有別的事要做=<size\=30>Have other things to do</size>
 現在不太方便……=<size\=28>Now is not a good time...</size>
 有其他安排=<size\=30>Got other arrangements</size>
+有其他安排……=<size\=29>Got other arrangements...</size>
 有其他安排了……=<size\=29>Got other arrangements...</size>
 現在有點困難……=Now is a bit tough...
 下次吧=Next time
@@ -380,6 +381,7 @@ General Short Phrases
 {{A}}……{{B}}……！={{A}}... {{B}}...!
 {{A}}……{{B}}？={{A}}... {{B}}?
 {{A}}、{{A}}……={{A}}, {{A}}...
+{{A}}、{{A}}……！={{A}}, {{A}}...!
 {{A}}，{{B}}……={{A}}, {{B}}...
 {{A}}{{B}}……？=<size\=28>{{A}} {{B}}...?</size>
 {{B}}{{A}}……？=<size\=28>{{B}} {{A}}...?</size>
@@ -466,6 +468,7 @@ Skill ready
 Full HL
 盡情大鬧一場吧！=Rampage spectacularly!
 華麗地解決它們吧。=Finish them elegantly.
+Highlight，可以發動了！=HIGHLIGHT, ready to activate!
 CRIT
 這才是會心一擊！=Now this is a critical hit!
 Down
@@ -477,9 +480,14 @@ AOA
 既然有機可乘，就不會放跑你哦。=Now that we've got an opening, you're not getting away.
 Ally Downed
 被擊倒了！？情況不妙啊…=Downed!? This is bad...
+不要慌亂…！冷靜地應對！=Don't panic...! Handle it calmly!
 被擊倒了，趕緊調整狀態！=They're down, recover their stance quickly!
 Recovered from Down
 從倒地狀態恢復！是時候反擊了。=Recovered from down! It's time for counterattack!
+Evade
+不錯的預判。=Good call.
+Debuffs
+看起來狀態不妙……不要勉強。=You're not feeling well... \nDon't push yourself.
 Mental Ailments
 精神異常狀態…振作一點。=Something's wrong... Pull yourself together.
 Victory
@@ -498,6 +506,8 @@ Full HL
 我很期待哦～=I'm looking forward to it～
 差不多該使用絕招了吧？=Time for the finisher?
 會有怎麼樣的演出呢。我好期待～！=I wonder what kind of show it'll be.\nCan't wait～!
+CRIT
+酣暢淋漓的一擊～=A flawless strike～
 Multi-kill
 好厲害的動作！=Amazing move!
 真靈活呀～我也不能輸～=I can't lose either～
@@ -507,6 +517,15 @@ Down
 怎麼了～你也會宿醉？=Oh～ You're hungover too?
 Evade
 {{A}}！NICE的回避！={{A}}! Nice evasion!
+Debuffs
+{{A}}這樣怎麼使出全力嘛……={{A}} You can't get serious like this...
+Dead
+你還好嗎！？振作一點！=Are you okay? Wake up!
+Revive
+啊，站起來了！太好了～！=Ah, you're back!\nGreat～!
+同伴回歸，下次可不要勉強！=Ally revived, don't push yourself!
+Defeat
+啊！大事不妙……=Ah! Sorry for not giving enough support...
 
 ----------
 Navigator - Oracle
@@ -516,14 +535,30 @@ Combat start
 Skill ready
 駭客時間到！=Hacking time!
 支援準備完成，交給我吧！=Support ready. Leave it to me!
+OK，破譯完成，我隨時可以出擊！=OK, hack complete. Ready to go!
 Full HL
 充能完成！盡情釋放！=Charge complete! Beat 'em up!
+CRIT
+猛烈扣殺！絕妙一擊！=Smash! Critical hit!
 Down
 敵人倒地！\n不錯嘛，WONDER！=Enemy down!\nNot bad, Wonder!
+很好！敵人倒地！=Great! Enemy down!
 敵人倒地！\n乘勝追擊！=Enemy down!\nThat's the spirit!
 敵人倒地了，就是現在！=Enemy down!\nNow's your chance!
 AOA
 去痛扁一頓吧！=Beat 'em up!
+Ally Downed
+倒地！？再忍一下～！=Down!? Hold on~!
+被擊倒了！還好嗎？=Downed! Are you okay?
+Recovered from Down
+好，現在開始反擊！=Ok, time for the counterattack!
+Debuffs
+有人被削弱了！\n多加注意！=We're being debuffed! \nWatch out!
+Revive
+continue成功？{{A}}，繼續幹吧~！=Continue complete? {{A}}, get 'em～!
+Victory
+辛苦各位了！=Great job, everyone!
+OK！繼續前進吧！=OK! Let's keep going!
 
 ----------
 Prologue
@@ -2448,8 +2483,93 @@ r:"^{{A}}？(.*)？\n你出去了啊？$"="{{A}}? $1?\nYou went out?"
 今天也謝謝你啦！\n期待著我打出全壘打吧！=Thanks for today!\nLook forward to me hitting a home run!
 跟怎麼看都很勉強的{{A}}，一起離開了擊球練習場……=Left the batting cage with {{A}}, who looked like she was struggling...
 
-為了同伴，應該的=For the sake of my ally
-因為{{A}}對我來說很重要=<size\=24>{{A}} is very important to me</size>
+Rank 15
+今天我要去擊球練習場。=I'm going to the batting cage today.
+你能在後面幫我看一下姿勢嗎？=Can you watch my form from behind?
+我今天一定要打出全壘打！=Today's the day I hit a home run!
+OK！\n那我先去那邊！=OK!\nThen I'll go there first!
+為什麼……=Why...
+為什麼……我打不出來……！=Why... can't I hit it...!
+好像{{A}}一直在揮棒……=Seems like {{A}} has been swinging the bat...
+r:"^啊，(.*)……$"="Ah, $1..."
+抱歉，明明是我約你來的，\n結果卻讓你看到我這麼沒出息的樣子……=Sorry... I asked you here, and now you see me in such a pitiful state...
+沒有這回事=Not at all
+……我不努力是不行的！\n因為我能做的也只有努力……=...I have to try! \nIt's the only thing I can do...
+{{A}}她一直都在努力吧？=Because {{A}} is always trying, right?
+我要想超過{{A}}，要付出雙倍……不對。\n要付出100倍努力才行……！=For me to surpass {{A}}, I'll have to try twice... No. I'll have to try 100 times as hard...!
+作為教練我不同意=As a coach I disagree
+休息也很重要=Rest is also important
+走=Come
+跟我來=Follow me
+點些你喜歡的菜品吧=<size\=31>Order whatever you like</size>
+今天是偷懶日=Today is lazy day
+但、但是……！\n我必須去訓練……=B-but...!\nI have to train...
+你自己說過的=You said it yourself
+不是「強忍著對身體不好」嗎？=Isn't it "bad to force yourself"?
+我的確……說過……\n但是，我在這裡偷懶的時候{{A}}她……=That's... true... \nBut while I am slacking off, {{A}} is...
+你真正想做的事是什麼？=<size\=28>What do you really want to do?</size>
+你為什麼開始鍛煉身體？=<size\=28>Why did you start body building?</size>
+我是想……作為{{A}}的一員戰鬥……\n因此才開始想鍛煉身體的……=I want to... fight as a member of the {{A}}... That's why I wanted to body building...
+如果能繼續讓他們悔改的話，\n就可以幫助像我一樣被奪去慾望的人們。=If I can keep changing their hearts, I can save people like me who had their desires stolen.
+我是想做這件事才……=I did it because I wanted to...
+你討厭棒球嗎？=Do you hate baseball?
+想繼續打棒球嗎？=<size\=24>Want to keep playing baseball?</size>
+{{A}}對你很重要嗎？=<size\=24>Is {{A}} important to you?</size>
+Choice 1
+怎麼可能討厭！=How could I hate it!
+在離開球隊的時間裡，我也一直熱愛著棒球。\n……說實話，我也一直很想再回去練習！=Even when I'm not in the team, I never stopped loving baseball. ...Truth is, I wanted to go back to practice!
+Choice 2
+如果可能的話，我想繼續打棒球……\n畢竟已經沒有「不能繼續的理由」了。=If I can, I want to keep playing baseball... \nNow that there's no "reason to stop" anymore.
+無論以什麼形式……我一直都想，\n只要能再參與和棒球相關的事就好。=No matter the form... I've always thought, it'd be nice to be involved in baseball again.
+Choice 3
+當然很重要！=Of course that's important!
+無論是棒球還是{{A}}，都很重要……\n這是我最真實的想法。=Both baseball and the {{A}} are important... That's what I really think.
+但是……照現在這樣下去，\n我是沒辦法發自內心地享受棒球的。=But... as things stand now, \nI can't truly enjoy baseball.
+明明有因被奪去了慾望而遭受痛苦的人……\n我也得到了幫助他們的力量，怎能視而不見！=There are people suffering because their desires were stolen... And now I have the power to help them, how could I just look away!
+那樣的事……我做不到！=That's... impossible!
+我不覺得只要自己能感到輕鬆，\n就可以對其他的事情「放任不管」了。=I can't just ignore and say "whatever" now that things are easier for me.
+所以我想……成為{{A}}的一員，\n守護大家的未來……！=That's why... as a member of the {{A}}, I want to protect everyone's future...!
+將來的我，還想要盡情享受棒球的話……\n就必須先保證大家都能有幸福的未來!=For my future self to fully enjoy baseball... I first need to secure a happy future for everyone!
+能聽你說出這些真好=<size\=29>I'm glad you told me this</size>
+……原來如此，\n我竟然，連這麼簡單的事情都沒搞明白啊。=...I see, I can't believe, \nI didn't realize such a simple thing.
+{{A}}……不愧是教練啊，不是因為有你引導，\n我還是一團亂麻，完全都沒有察覺呢……={{A}}... As expected from coach. I wouldn't have noticed if you hadn't told me...
+一定也可以傳達給{{A}}的=<size\=29>I'm sure it'll reach {{A}} too</size>
+教練我給你保證=I promise you as coach
+啊，我……好像終於明白了。=Ah. I... think I finally understand.
+我想我知道我該去做什麼了，\n之前滿腦子想的都是不能輸給{{A}}這件事。=I think I know what I should do, all I could think about was how I mustn't lose to {{A}}.
+嗯，我已經沒問題了！\n我下定決心了。=Yes, I'm okay now! \nI've made up my mind!
+你好，我想點巧克力聖代、牛排、\n哈密瓜蘇打水、蛋包飯，還有……=Hello, I'd like to order a chocolate parfait, steak, melon soda, omelet rice, and...
+還有……！=Also...!
+嗯～！\n聖代太好吃了！=Mmm～!\nThe parfait is amazing!
+r:"^拜託(.*)你當我的教練，\n果然是我最正確的選擇。$"="I'm glad I asked $1 to coach me."
+要是我一個人的話，\n肯定會一直埋著頭努力的。=If I was alone, \nI would definitely have kept trying.
+當然，努力是很重要的……\n只是我沒有察覺到僅靠努力是不夠的。=Of course, hard work is important... \nBut I didn't realize that alone wasn't enough.
+r:"^……那個，(.*)。$"="...That, $1."
+……說實話，跟{{A}}的比賽，\n看上去我完全沒有勝算對吧。=...To be honest, I don't think I have any chance of winning against {{A}}.
+r:"^明明贏不了……\n(.*)你還……$"="And yet...\n$1 still..."
+為什麼、你能為我做這麼多呢……？=Why, are you doing all this for me...?
+為了同伴，應該的=<size\=24>It's only right for my teammate</size>
+因為{{A}}對我來說很重要=<size\=28>{{A}} is very important to me</size>
+
+Close Friends
+{{A}}……總覺得，聽你這麼叫「同伴」，\n還真有點害羞……={{A}}... Calling me your "teammate" like that... It's kinda embarrassing...
+你看，我跟{{A}}感覺是「隊友」的關係吧？\n不過，同伴嗎……=You see, {{A}} and I feel like "teammates", right?
+r:"^……謝謝你，(.*)！\n我也要為了「同伴」好好加油！$"="...Thank you, $1!\nI'll do my best for my "teammate" too!"
+{{A}}一臉高興……={{A}} looks happy...
+好像鬆了一口氣後肚子又餓了!\n不然我再點個焦糖聖代吧？=Now that I've relaxed, I'm getting hungry again! Might as well go for a caramel parfait?
+嗯～吃飽了！\n感覺自己精力又充沛起來了呢！=Hmm～ I'm full!\nI feel like I'm full of energy!
+跟{{A}}一起走出了家庭餐廳……=Left the diner with {{A}}...
+
+Soulmates
+{{B}}……{{B}}、{{A}}！？\n{{C}}、那是什麼、意思……！？={{B}}... {{B}}, {{A}}!? \n{{C}}, what does that, mean...!?
+字面意思=Literally
+你猜？=You guess?
+不、不是在開玩笑……的、吧……！？=Y-you're not joking... right...?!
+那個、{{A}}……=That, {{A}}...
+……我好開心。=...I'm so happy.
+總、總覺得吃了一圈反而更餓了……！\n不然我再點個聖代吧～！=S-somehow eating more made me hungrier...! \nMight as well go for another parfait～！
+……今天真是謝謝你了。=...Thank you so much for today.
+將{{A}}送回了家……=Took {{A}} home...
 
 在家裡一起看吧=<size\=23>Let's watch it together at home</size> 
 會覺得害怕的是{{A}}吧=<size\=22>It's {{A}} who feels scared, right?</size> 
@@ -2457,6 +2577,7 @@ r:"^{{A}}？(.*)？\n你出去了啊？$"="{{A}}? $1?\nYou went out?"
 怕的話可以抓住我的手=<size\=26>Grab my hand if you're scared</size> 
 才不會害怕=I won't be afraid
 
+Rank 20
 你謝過很多遍了=<size\=24>You've thanked me many times</size>
 我才要努力=That's what I'm trying
 
@@ -2509,6 +2630,10 @@ SNS
 早點吃晚飯=Have dinner early
 別逞強=Don't overdo it
 注意休息=Take rest
+沒休息好嗎？=Didn't rest well?
+身體不舒服？=Feeling unwell?
+讓地鐵開個晚點證明=Get a delayed proof from the subway
+地鐵晚點不算遲到的=Subway delays don't count as being late
 
 為什麼？=Why?
 誰啊？=Who?
@@ -5171,7 +5296,11 @@ r:"^(.*)啊。\n嗯……OK。$"="$1.\nHmm... OK."
 與{{A}}道別了……=Said goodbye to {{A}}...
 
 Rank 3
-我才剛到遊戲廳……=I just got to the arcade...
+你來啦。\n現在有空嗎？=There you are.\nAre you free now?
+哦，這樣啊。\n拜拜。=Oh, I see.\nBye-bye.
+那個。\n我有個想去的地方。=Hey.\nI have a place I want to go.
+你願意跟我一起嗎？=Will you come with me?
+我才剛到遊戲廳……=<size\=30>I just got to the arcade...</size>
 要跟{{A}}一起去咖啡廳了……=Going to the café with {{A}}...
 路人被{{A}}吸引，\n紛紛停下了腳步……=Passersby were drawn to {{A}}, stopping in their tracks...
 你是真的很喜歡賽車呢=You really like racing
@@ -5180,11 +5309,13 @@ Rank 3
 好過分=That's too much
 別往心裡去=Don't take it to heart
 似乎有人對{{A}}產生了興趣……=Seems that someone has shown interest in {{A}}...
-{{A}}讓它熱度高起來就行=<size\=22>{{A}} needs to make it go viral</size>
-如果{{A}}出名了的話……=<size\=30>If {{A}} gets famous...</size>
+{{A}}讓它熱度高起來就行=<size\=26>{{A}} needs to make it go viral</size>
+如果{{A}}出名了的話……=If {{A}} gets famous...
+我？\n……你這說起來倒是簡單。=Me?\n...That's easy for you to say.
 比如去當模特……=<size\=30>Like becoming a model...</size>
 比如做一下宣傳……？=Like doing promotion...?
 呢……=Hmm...
+真是超級棒的主意啊……！=What a great idea...!
 看來你下定決心了啊=You look determined
 真的能當嗎？=Can you really do it?
 決定先去遊戲廳，\n再回家……=Decided to go to the arcade first, then head home...
@@ -5324,6 +5455,8 @@ Hangouts
 
 SNS
 你現在在做什麼？=What are you doing now?
+了解得還行=Know it well
+幾乎一無所知……=Almost nothing...
 
 ----------
 My Palace
