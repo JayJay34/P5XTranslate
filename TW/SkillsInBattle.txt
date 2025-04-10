@@ -27,7 +27,6 @@ r:"^(\d+)層$"="<size\=18>$1 stacks</size>"
 使用槍械射擊1名敵人，每次向1名敵人射擊3發，造成射擊屬性傷害，根據子彈數量可以射擊多次。=Uses a gun to shoot 1 enemy. dealing 3 hits of Gun damage to 1 enemy, can shoot multiple times based on ammo.
 使用槍械射擊1名敵人，每次向隨機敵人射擊3發，造成射擊屬性傷害，根據子彈數量可以射擊多次。=Uses a gun to shoot 1 enemy. dealing 3 hits of Gun damage randomly, can shoot multiple times based on ammo.
 使用槍械射擊1名敵人，造成6次射擊屬性傷害，子彈可能會發生偏移。對同一目標造成傷害會衰減。=Uses a gun to shoot 1 enemy. dealing 6 hits of Gun damage, the bullets can miss and deals less damage to the same target.
-子彈不足。=Insufficient ammo.
 
 r:"^剩餘次數：(\d+)/(\d+)$"="Use Limit: $1/$2"
 
@@ -690,6 +689,10 @@ r:"^該技能尚未達到使用條件$"="You have not reached the condition to u
 
 Battle Quotes
 當前HP不足。=Insufficient HP.
+當前SP不足。=Insufficient SP.
+子彈不足。=Insufficient ammo.
+玩法中無法使用道具。=Cannot use item in this mode.
+
 r:"^<color\=#FF0000>全體怪盜</color>生命值上限提高……$"="<color\=#FF0000>All allies</color> Max HP Up!"
 r:"^<color\=#FF0000>所有同伴</color>攻擊力提升……$"="<color\=#FF0000>All allies</color> ATK Up!"
 r:"^<color\=#FF0000>所有同伴</color>防禦力提升……$"="<color\=#FF0000>All allies</color> DEF Up!"
@@ -727,38 +730,36 @@ sr:"^召喚消耗(\d+)層<color\=#FF0000>『(.*)』</color>$"="Summon consumed $
 sr:"^<color\=#FF0000>(.*)</color>陷入了「(.*)」，受到的傷害提升……$"="<color\=#FF0000>$1</color> entered [$2]..."
 sr:"^<color\=#FF0000>(.*)</color>退出了蓄力狀態……$"="<color\=#FF0000>$1</color> exited Charge..."
 
-r:"^<color\=#FF0000>(.*)</color>進入了暈眩狀態……$"="Inflicted with Dizzy..."
-r:"^<color\=#FF0000>(.*)</color>進入了遺忘狀態……$"="Inflicted with Forget..."
-r:"^<color\=#FF0000>(.*)</color>進入了睡眠狀態……$"="Inflicted with Sleep..."
-r:"^<color\=#FF0000>(.*)</color>進入了狂怒狀態……$"="Inflicted with Rage..."
-r:"^<color\=#FF0000>(.*)</color>進入了絕望狀態……$"="Inflicted with Despair..."
-r:"^<color\=#FF0000>(.*)</color>進入了恐懼狀態……$"="Inflicted with Fear..."
-r:"^<color\=#FF0000>(.*)</color>進入了混亂狀態……$"="Inflicted with Confuse..."
-r:"^<color\=#FF0000>(.*)</color>進入了洗腦狀態……$"="Inflicted with Brainwash..."
+sr:"^<color\=#FF0000>(.*)</color>進入了暈眩狀態……$"="Inflicted with Dizzy..."
+sr:"^<color\=#FF0000>(.*)</color>進入了遺忘狀態……$"="Inflicted with Forget..."
+sr:"^<color\=#FF0000>(.*)</color>進入了睡眠狀態……$"="Inflicted with Sleep..."
+sr:"^<color\=#FF0000>(.*)</color>進入了狂怒狀態……$"="Inflicted with Rage..."
+sr:"^<color\=#FF0000>(.*)</color>進入了絕望狀態……$"="Inflicted with Despair..."
+sr:"^<color\=#FF0000>(.*)</color>進入了恐懼狀態……$"="Inflicted with Fear..."
+sr:"^<color\=#FF0000>(.*)</color>進入了混亂狀態……$"="Inflicted with Confuse..."
+sr:"^<color\=#FF0000>(.*)</color>進入了洗腦狀態……$"="Inflicted with Brainwash..."
 
-r:"^<color\=#FF0000>(.*){{A}}</color>進入了暈眩狀態……$"="Inflicted with Dizzy..."
-r:"^<color\=#FF0000>(.*){{A}}</color>進入了遺忘狀態……$"="Inflicted with Forget..."
-r:"^<color\=#FF0000>(.*){{A}}</color>進入了睡眠狀態……$"="Inflicted with Sleep..."
-r:"^<color\=#FF0000>(.*){{A}}</color>進入了狂怒狀態……$"="Inflicted with Rage..."
-r:"^<color\=#FF0000>(.*){{A}}</color>進入了絕望狀態……$"="Inflicted with Despair..."
-r:"^<color\=#FF0000>(.*){{A}}</color>進入了恐懼狀態……$"="Inflicted with Fear..."
-r:"^<color\=#FF0000>(.*){{A}}</color>進入了混亂狀態……$"="Inflicted with Confuse..."
-r:"^<color\=#FF0000>(.*){{A}}</color>進入了洗腦狀態……$"="Inflicted with Brainwash..."
+sr:"^<color\=#FF0000>(.*)</color>進入了暈眩狀態……$"="Inflicted with Dizzy..."
+sr:"^<color\=#FF0000>(.*)</color>進入了遺忘狀態……$"="Inflicted with Forget..."
+sr:"^<color\=#FF0000>(.*)</color>進入了睡眠狀態……$"="Inflicted with Sleep..."
+sr:"^<color\=#FF0000>(.*)</color>進入了狂怒狀態……$"="Inflicted with Rage..."
+sr:"^<color\=#FF0000>(.*)</color>進入了絕望狀態……$"="Inflicted with Despair..."
+sr:"^<color\=#FF0000>(.*)</color>進入了恐懼狀態……$"="Inflicted with Fear..."
+sr:"^<color\=#FF0000>(.*)</color>進入了混亂狀態……$"="Inflicted with Confuse..."
+sr:"^<color\=#FF0000>(.*)</color>進入了洗腦狀態……$"="Inflicted with Brainwash..."
 
-r:"^<color\=#FF0000>(.*)</color>進入了冰封狀態……$"="Inflicted with Ice Seal..."
+sr:"^<color\=#FF0000>(.*)</color>進入了冰封狀態……$"="Inflicted with Ice Seal..."
 
-r:"^<color\=#FF0000>(.*)</color>從暈眩異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Dizzy!"
-r:"^<color\=#FF0000>(.*)</color>從遺忘異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Forget!"
-r:"^<color\=#FF0000>(.*)</color>從睡眠異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Sleep!"
-r:"^<color\=#FF0000>(.*)</color>從狂怒異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Rage!"
-r:"^<color\=#FF0000>(.*)</color>從絕望異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Despair!"
-r:"^<color\=#FF0000>(.*)</color>從恐懼異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Fear!"
-r:"^<color\=#FF0000>(.*)</color>從混亂異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Confuse!"
-r:"^<color\=#FF0000>(.*)</color>從洗腦異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Brainwash!"
+sr:"^<color\=#FF0000>(.*)</color>從暈眩異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Dizzy!"
+sr:"^<color\=#FF0000>(.*)</color>從遺忘異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Forget!"
+sr:"^<color\=#FF0000>(.*)</color>從睡眠異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Sleep!"
+sr:"^<color\=#FF0000>(.*)</color>從狂怒異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Rage!"
+sr:"^<color\=#FF0000>(.*)</color>從絕望異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Despair!"
+sr:"^<color\=#FF0000>(.*)</color>從恐懼異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Fear!"
+sr:"^<color\=#FF0000>(.*)</color>從混亂異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Confuse!"
+sr:"^<color\=#FF0000>(.*)</color>從洗腦異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Brainwash!"
 
-r:"^<color\=#FF0000>(.*){{B}}</color>被{{A}}瞄準了，防禦降低……$"="<color\=#FF0000>Enemy</color> aimed by {{A}}, DEF Down!"
-r:"^<color\=#FF0000>(.*){{A}}</color>被{{B}}瞄準了，防禦降低……$"="<color\=#FF0000>Enemy</color> aimed by {{B}}, DEF Down!"
-r:"^<color\=#FF0000>(.*)</color>被{{A}}瞄準了，防禦降低……$"="<color\=#FF0000>Enemy</color> aimed by {{A}}, DEF Down!"
+sr:"^<color\=#FF0000>(.*)</color>被(.*)瞄準了，防禦降低……$"="<color\=#FF0000>Enemy</color> aimed by $2, DEF Down!"
 
 ----------
 Combat Pop-ups for ailments technical
@@ -1163,6 +1164,8 @@ sr:"^(.*)屬性的適應性變為耐$"="Change $1 resistance to Resist"
 Inspect Details - DEBUFF
 ----------
 r:"^最大生命值降低(\d+(.\d+)?(%)?)$"="Decrease Max HP by $1"
+r:"^最終生命值降低(\d+(.\d+)?(%)?)$"="Decrease Final HP by $1"
+r:"^精力消耗提高(\d+(.\d+)?(%)?)$"="Increase SP cost by $1"
 r:"^攻擊力降低(\d+(.\d+)?(%)?)$"="Decrease ATK by $1"
 r:"^防禦降低(\d+(.\d+)?(%)?)$"="Decrease DEF by $1"
 r:"^防禦力降低(\d+(.\d+)?(%)?)$"="Decrease DEF by $1"
