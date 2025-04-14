@@ -186,9 +186,8 @@ Cattle - Lufel
 ----------
 r:"^戰鬥技巧 Lv.(\d+)$"="Combat Skills Lv.$1"
 r:"^戰鬥技巧 <color\=#0F69CB>Lv.(\d+)</color>$"="Combat Skills <color\=#0F69CB>Lv.$1</color>"
-sr:"^『(.*)』、『(.*)』的技能等級提升2級，至多提升至15級。$"="[$1], [$2] skill level +2, up to a maximum of level 15."
-sr:"^『(.*)』、『(.*)』的技能等級提升3級，至多提升至15級。$"="[$1], [$2] skill level +3, up to a maximum of level 15."
-sr:"^『(.*)』，『(.*)』的技能等級提升3級，至多提升至15級。$"="[$1], [$2] skill level +3, up to a maximum of level 15."
+sr:"^『(.*)』、『(.*)』的技能等級提升(\d+)級，至多提升至(\d+)級。$"="[$1], [$2] Skill Lv. +$3, up to a maximum of Lv. $4."
+sr:"^『(.*)』，『(.*)』的技能等級提升(\d+)級，至多提升至(\d+)級。$"="[$1], [$2] Skill Lv. +$3, up to a maximum of Lv. $4."
 <color\=#66ccff>{{A}}</color>=<color\=#66ccff>{{A}}</color>
 
 主動治療時為同伴附加『星之火』效果，使同伴獲得屬性提升效果。=Give allies [Starfire] when healing, increasing their stats.
@@ -406,13 +405,13 @@ r:"^進入戰鬥時，使倒地值最高的敵人暴露<link\="s\|188"><u>『破
 r:"^釋放『暗香細語』後，立刻使倒地值最高的敵人暴露<link\="s\|188"><u>『破綻』</u></link>。$"="After using [Fragrance Whisper], immediately expose a <link\="s|188"><u>[Vulnerability]</u></link> from the enemy with the highest Down Gauge."
 
 清寂=Calm Silence
-『暗香細語』的技能等級提升2級，至多提升至15級。=[Fragrance Whisper] skill level +2, \nup to a maximum of level 15.
+r:"^『暗香細語』的技能等級提升(\d+)級，至多提升至(\d+)級。$"="[Fragrance Whisper] Skill Lv. +$1, up to a maximum of Lv. $2."
 
 佳月=Beautiful Moon
 r:"^任意同伴釋放HIGHLIGHT後，立刻使倒地值最高的敵人暴露<link\="s\|188"><u>『破綻』</u></link>。$"="After any ally uses HIGHLIGHT, immediately expose a <link\="s|188"><u>[Vulnerability]</u></link> from the enemy with the highest Down Gauge."
 
 獨秀=Lone Bloom
-r:"^釋放『暗香細語』後，若{{A}}速度大於100點，每超過15點，解明怪盜的準備時間減少1次行動，最多可減少4次行動。$"="After using [Fragrance Whisper], for every 15 SPD that's over 100, reduce the cooldown of the Navigator by 1 action, up to 4 actions."
+r:"^釋放『暗香細語』後，若{{A}}速度大於100點，每超過15點，解明怪盜的準備時間減少1次行動，最多可減少4次行動。$"="After using [Fragrance Whisper], for every 15 SPD that's over 100, decreases your cooldown by 1 action, up to 4 actions."
 
 ----------
 Luce - Shoki Ikenami
@@ -660,7 +659,7 @@ r:"^戰鬥開始時，{{A}}獲得2個<link\="s\|141"><u>『節拍』</u></link>�
 r:"^{{A}}釋放<link\="s\|142"><u>『勁歌熱舞』</u></link>後，有20%的固定機率返還1個<link\="s\|141"><u>『節拍』</u></link>。$"="After using <link\="s|142"><u>[Hot Dance]</u></link>, there is a 20% fixed chance to refund 1 <link\="s|141"><u>[Beat]</u></link>."
 
 碰撞♪躁動溫度=<size\=24>Impact ♪ Restless Temperature</size>
-『熱辣變奏曲』的技能等級提升2級，至多提升至15級。=[Hot Variation] skill level +2, \nup to a maximum of level 15.
+r:"^『熱辣變奏曲』的技能等級提升(\d+)級，至多提升至(\d+)級。$"="[Hot Variation] Skill Lv. +$1, up to a maximum of Lv. $2."
 
 變身♪舞臺女王=<size\=24>Transform ♪ Queen of the Stage</size>
 r:"^任意同伴釋放HIGHLIGHT技能後，{{A}}有67%的固定機率獲得1個<link\="s\|141"><u>『節拍』</u></link>。$"="After any ally uses HIGHLIGHT, there is a 67% fixed chance to gain 1 <link\="s|141"><u>[Beat]</u></link>."
@@ -714,7 +713,7 @@ r:"^戰鬥開始時，所有同伴獲得(\d+)層<link\="s\|144"><u>『海之守�
 r:"^任意同伴生命值首次低於(\d+%)時，{{A}}會立刻為其添加一個相當於自身(\d+%)防禦力\+(\d+)的護盾，效果持續(\d+)回合，每場戰鬥限(\d+)次。$"="When any ally's HP is below $1, immediately give them $2 DEF + $3 Shield for $4 turns, once per battle."
 
 主演的從容=The Protagonist's Calmness
-『黎明的泡沫』的技能等級提升2級，至多提升至15級。=[Sea Foam of Dawn] skill level +2, \nup to a maximum of level 15.
+r:"^『黎明的泡沫』的技能等級提升(\d+)級，至多提升至(\d+)級。$"="[Sea Foam of Dawn] Skill Lv. +$1, up to a maximum of Lv. $2."
 
 追光=Follow Spot
 r:"^任意同伴釋放HIGHLIGHT後，{{A}}為該同伴添加一個相當於{{A}}(\d+%)防禦力\+(\d+)的護盾，效果持續(\d+)回合。$"="After any ally uses HIGHLIGHT, give that ally $1 DEF + $2 Shield for $3 turns."
@@ -1404,7 +1403,7 @@ r:"^{{A}}調製出<link\="s\|180"><u>『雞尾酒』</u></link>時，有(\d+%)�
 r:"^{{A}}調製出<link\="s\|180"><u>『雞尾酒』</u></link>時，使所有同伴造成傷害提升(\d+%)，效果持續1回合。$"="Increase all allies' DMG Dealt by $1 for 1 turn when mixing <link\="s|180"><u>[Cocktail]</u></link>."
 
 血腥瑪麗=Bloody Mary
-r:"^『撩人的醉意』的技能等級提升3級，至多提升至15級。$"="[Sultry Drunkenness] skill level +3, \nup to a maximum of level 15."
+r:"^『撩人的醉意』的技能等級提升(\d+)級，至多提升至(\d+)級。$"="[Sultry Drunkenness] Skill Lv. +$1, up to a maximum of Lv. $2."
 
 螺絲起子=Screwdriver
 r:"^任意同伴釋放HIGHLIGHT時，該同伴攻擊力提升(\d+%)，效果持續1回合，且{{A}}獲得1杯<link\="s\|182"><u>『精調·DELUXE』</u></link>。$"="After any ally uses HIGHLIGHT, increase that ally's ATK by $1 for 1 turn and gain 1 <link\="s|182"><u>[Premium Deluxe]</u></link>."
@@ -2109,7 +2108,7 @@ r:"^{{A}}的『解析進度』為100%，或處於『駭入完成』狀態時，�
 r:"^友方同伴攻擊敵人時，若目標身上有來自{{A}}的負面效果，攻擊力提升(\d+%)。友方一名同伴受到致命傷害時，使其血量不會低於1點，並使所有怪盜獲得等同於{{A}}攻擊力(\d+%)的護盾。此效果每場戰鬥僅能觸發1次。$"="When allies attack enemies and the target have a debuff from you, increase their ATK by $1. When 1 ally take a fatal blow, prevent it and give all allies $2 ATK Shield, once per battle."
 
 頭腦戰爭=Mind Warfare
-r:"^『無聲侵襲』的技能等級提升3級，至多提升至15級。$"="[Silent Hacking] skill level +3, \nup to a maximum of level 15."
+r:"^『無聲侵襲』的技能等級提升(\d+)級，至多提升至(\d+)級。$"="[Silent Hacking] Skill Lv. +$1, up to a maximum of Lv. $2."
 
 隱蔽攻擊=Covert Attack
 r:"^任意怪盜使用HIGHLIGHT後，{{A}}獲得1層『漏洞分析』，上限(\d+)層。{{A}}使用『無聲侵襲』或『數據破解』時，消耗所有『漏洞分析』，每層提升(\d+%)技能效果。$"="Gain 1 stack of [Vulnerability Analysis] after any ally uses HIGHLIGHT, up to $1 stacks. When using [Silent Hacking] or [Data Crack], consume all [Vulnerability Analysis] and increase skill effect by $2 per stack."
@@ -2574,3 +2573,46 @@ Ange - Manaka Nagao
 千籟重歌=Myriad Song
 翩然=Grace
 韌心=Resilience
+
+r:"^群鴿於聖堂和鳴 Lv.(\d+)$"="Choir of Doves Lv.$1"
+r:"^群鴿於聖堂和鳴 <color\=#0F69CB>Lv.(\d+)</color>$"="Choir of Doves <color\=#0F69CB>Lv.$1</color>"
+r:"^準備時間：4次行動\n使所有同伴造成傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>\+\（每(\d+)點{{A}}的攻擊力額外提供(\d+%)傷害加成，最多額外提供<color\=#FFFC40>(\d+\.\d+%)</color>傷害加成\），效果持續(\d+)回合。自身獲得(\d+)層<link="s\|235"><u>『聖歌』</u></link>。\n<b><size\=28><color\=#850101>晨曦初綻，群鴿自天際翩然而至，清越的旋律化作無形的力量，宛如被賦予神諭的利刃。</color></size></b>$"="Preparation Time: 4 Actions\nIncreases <color\=#FFFF00>all</color> allies' DMG Dealt by $1 + (For every $2 ATK, additionally increases DMG Dealt by $3, up to $4) for $5 turn. Gains $6 stack of [Holy Song].\n<b><size\=28><color\=#850101>At the break of dawn, a flock of doves descended gracefully from the sky, their serene melodies transforming into an invisible force, like a divine blade bestowed with sacred prophecy.</color></size></b>
+
+r:"^華光下的治癒詩 Lv.(\d+)$"="Poem of Radiance Lv.$1"
+r:"^華光下的治癒詩 <color\=#0F69CB>Lv.(\d+)</color>$"="Poem of Radiance <color\=#0F69CB>Lv.$1</color>"
+r:"^準備時間：8次行動\n使所有同伴恢復<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力\+<color\=#FFFC40>(\d+)</color>的生命值，並為所有同伴驅散1種負面狀態。擁有<link="s\|235"><u>『聖歌』</u></link>時，會消耗1層<link="s\|235"><u>『聖歌』</u></link>使釋放該技能後所需的準備時間減少1次行動，通過這種方式最多使準備時間減少(\d+)次行動。主動釋放該技能時，治療量提升(\d+%)。\n被動：戰鬥中，{{A}}每獲得(\d+)層<link="s\|235"><u>『聖歌』</u></link>，會自動釋放一次該技能的治療效果。\n<b><size\=28><color\=#850101>輕啟雙唇，歌聲在空氣中輕盈流轉，光羽所及之處，輕撫同伴的傷痕，一掃疲憊與痛楚。</color></size></b>$"="Preparation Time: 4 Actions\nRestores <color\=#FFFC40>$1</color> ATK + <color\=#FFFC40>$2</color> HP to all allies, and dispels 1 debuff from all allies. When Ange has <link="s|235"><u>[Holy Song]</u></link>, consumes 1 stack of <link="s|235"><u>[Holy Song]</u></link> to decrease the skill cooldown by 1 action, up to $3 actions. When you manually use this skill, additionally increases healing by $4. \nPassive: After Ange gained $5 stacks of <link="s|235"><u>[Holy Song]</u></link>, automatically use the healing from this skill once.\n<b><size\=28><color\=#850101>Her lips part gently as ethereal songwaves ripple through the air, where luminous feathers touch, wounds are soothed, weariness and anguish swept away.</color></size></b>"
+
+r:"^貫穿時空的輪轉 Lv.(\d+)$"="Wheel of Time Lv.$1"
+r:"^貫穿時空的輪轉 <color\=#0F69CB>Lv.(\d+)</color>$"="Wheel of Time <color\=#0F69CB>Lv.$1</color>"
+r:"^準備時間：4次行動\n使所有同伴攻擊力提升，數值相當於{{A}}攻擊力的(\d+%)\+<color\=#FFFC40>(\d+)</color>。消耗所有<link="s\|235"><u>『聖歌』</u></link>，每消耗1層<link="s\|235"><u>『聖歌』</u></link>，使所有同伴穿透提升\（每(\d+)點{{A}}的攻擊力提供(\d+\.\d+%)穿透\），攻擊力提升\（每(\d+)點{{A}}的攻擊力提供(\d+\.\d+%)攻擊力\），效果持續(\d+)回合。\（該技能最多計入{{A}}<color\=#FFFC40>(\d+)</color>點攻擊力\）\n<b><size\=28><color\=#850101>時之輪盤緩緩浮現，齒輪流轉間迸發流金般的光暈，那是被時光祝福的鋒銳，足以劃開一切滯礙。</color></size></b>$"="Preparation Time: 4 Actions\nIncreases all allies' ATK based on $1 + <color\=#FFFC40>$2</color> ATK. Consumes all <link="s|235"><u>[Holy Song]</u></link>, for every stack of <link="s|235"><u>[Holy Song]</u></link> consumed, additionally increases all allies' PEN (For every $3 ATK increases PEN by $4) and ATK (For every $5 ATK increases PEN by $6) for $7 turns. (Counts up to <color\=#FFFC40>$8</color> ATK)\n<b><size\=28><color\=#850101>The Wheel of Time slowly materializes, its rotating gears erupting with a flowing golden halo - this time-blessed sharpness can cleave through all stagnation.</color></size></b>"
+
+r:"^為1名同伴驅散1種負面狀態，並使其在自身回合結束後，進入特殊的額外回合<link="s|239"><u>『千籟重歌』</u></link>。\n進入<link="s|239"><u>『千籟重歌』</u></link>時，將該同伴的狀態回溯至其上回合釋放技能前一刻。\n回溯內容包括：{{A}}技能冷卻時間、當前狀態、當前生命值、當前精力值。$"="Dispels 1 debuff from 1 ally, and make them enter a special Extra Turn [Myriad Song] after their turn. When entering [Myriad Song], that character's status will rewind to their last turn before using a skill. Rewind content includes: {{A}} skill cooldown, current status, current HP, current SP."
+
+r:"^翩然 Lv.(\d+)$"="Grace Lv.$1"
+r:"^處於<link="s\|239"><u>『千籟重歌』</u></link>的同伴，攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Increase ATK for allies under [Myriad Song] by <color\=#FFFC40>$1</color>."
+r:"^處於<link="s\|239"><u>『千籟重歌』</u></link>的同伴，攻擊力提升<color\=#0169ca>(\d+\.\d+%)</color>。$"="Increase ATK for allies under [Myriad Song] by <color\=#0169ca>$1</color>."
+
+r:"^韌心 Lv.(\d+)$"="Resilience Lv.$1"
+r:"^根據累積獲得的『聖歌』層數，每層使所有同伴穿透提升<color\=#FFFC40>(\d+\.\d+%)</color>，最多計入(\d+)層。$"="Based on accumulated [Holy Song] stacks, increase all allies' PEN by <color\=#FFFC40>$1</color>, up to $2 stacks."
+r:"^根據累積獲得的『聖歌』層數，每層使所有同伴穿透提升<color\=#0169ca>(\d+\.\d+%)</color>，最多計入(\d+)層。$"="Based on accumulated [Holy Song] stacks, increase all allies' PEN by <color\=#0169ca>$1</color>, up to $2 stacks."
+
+聖歌=Holy Song
+
+重新開始的希冀=Hope to Start Again
+r:"^每個怪盜回合開始時，{{A}}獲得(\d+)層<link="s\|235"><u>『聖歌』</u></link>，可疊加(\d+)層。\n{{A}}可以在任意怪盜行動前釋放<link="s\|239"><u>『千籟重歌』</u></link>，每場戰鬥初始僅可釋放1次<link="s\|239"><u>『千籟重歌』</u></link>。使用<link="s\|239"><u>『千籟重歌』</u></link>後，經過(\d+)個WONDER的非額外回合，『千籟重歌』恢復1次使用次數，該效果每場戰鬥僅可觸發1次。\n<link="s\|239"><u>『千籟重歌』</u></link>：\n為1名同伴驅散1種負面狀態，並使其在自身回合結束後，進入特殊的額外回合<link="s\|239"><u>『千籟重歌』</u></link>。進入<link="s|239"><u>『千籟重歌』</u></link>時，將該同伴的狀態回溯至其上回合釋放技能前一刻。回溯內容包括：{{B}}技能冷卻時間、當前狀態、當前生命值、當前精力值。$"="At the start of each ally's turn, Ange will gain $1 stack of <link="s|235"><u>[Holy Song]</u></link>, up to $2 stacks. Ange can use <link="s|239"><u>[Myriad Song]</u></link> before any ally's action, can initially use <link="s|239"><u>[Myriad Song]</u></link> at the start of battle. After using <link="s|239"><u>[Myriad Song]</u></link>, restores $3 usage to [Myriad Song] after 7 Wonder's non Extra Turn, this effect can only trigger once per battle. <link="s|239"><u>[Myriad Song]</u></link>: Dispels 1 debuff from 1 ally, and make them enter a special Extra Turn <link="s|239"><u>[Myriad Song]</u></link> after their turn. When entering [Myriad Song], that character's status will rewind to their last turn before using a skill. Rewind content includes: {{B}} skill cooldown, current status, current HP, current SP."
+
+初願的序曲=Prelude to a Wish
+戰鬥開始時，{{A}}獲得滿層<link="s\|235"><u>『聖歌』</u></link>，並使解明怪盜的初始準備時間減少(\d+)次行動。\n釋放『貫穿時空的輪轉』時，額外使所有同伴暴擊率提高(\d+%)，效果持續(\d+)回合。$"="At the start of battle, Ange gains maxed stacks of <link="s\|235"><u>[Holy Song]</u></link>, then decreases your cooldown by $1 actions. When using [Wheel of Time], additionally increases all allies' CRIT Rate by $2 for $3 turns."
+
+憧憬的啟程=Journey of Aspiration
+r:"^處於<link="s\|239"><u>『千籟重歌』</u></link>的同伴，獲得(\d+%)<link="s\|236"><u>總傷害增幅</u></link>。\n當同伴死亡時，立即使其復活並恢復等同於{{A}}(\d+%)攻擊力\+(\d+)的生命值，該效果每場戰鬥僅可觸發1次。$"="Allies under <link="s|239"><u>[Myriad Song</u></link> gains $1 <link="s|236"><u>Total DMG Bonus</u></link>. When an ally faint, immediately revives and restores $2 ATK + $3 HP to them, once per battle."
+
+悸動的華舞=Fluttering Dance
+
+靜謐的漣漪=Ripples of Silence
+r:"^任意怪盜釋放HIGHLIGHT時，{{A}}獲得(\d+)層可突破上限的<link="s\|235"><u>『聖歌』</u></link>，可疊加(\d+)層。$"="Gains $1 stacks of <link="s|235"><u>[Holy Song]</u></link> that can exceed the cap after any ally uses HIGHLIGHT, up to $2 stacks. 
+
+守望的餘音=Echoes of Vigil
+
+永恆的天使之聲=Eternal Angelic Voice
+r:"^{{A}}初始可額外釋放一次<link="s\|239"><u>『千籟重歌』</u></link>。$"="Ange can initially use <link="s|239"><u>[Myriad Song]</u></link> one additional time."
