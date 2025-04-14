@@ -330,6 +330,7 @@ r:"^<color\=#ff0000ff>茶</color>太$"="Cha<color\=#ff0000ff>t</color>ai"
 r:"^燒<color\=#ff0000ff>鳥</color> {{A}}$"="Su<color\=#ff0000ff>mi</color>zou Yakitori"
 r:"^土<color\=#ff0000ff>佐</color>林 {{A}}$"="Fu<color\=#ff0000ff>mi</color>yo Tosabayashi"
 r:"^小<color\=#ff0000ff>出</color> {{A}}$"="Hi<color\=#ff0000ff>yo</color>ri Koide"
+r:"^津<color\=#ff0000ff>田</color> {{A}}$"="{{A}} T<color\=#ff0000ff>su</color>da"
 r:"^江<color\=#ff0000ff>崎</color> {{A}}$"="Sh<color\=#ff0000ff>in</color>ta Ezaki"
 
 // Original Phantom Thieves + P5 //
@@ -907,7 +908,7 @@ r:"^治療效果$"="<size\=22>Healing Effect</size>"
 核熱傷害=Nuke DMG
 祝福傷害=Bless DMG
 詛咒傷害=Curse DMG
-萬能傷害=Almighty DMG
+萬能傷害=<size\=23>Almighty DMG</size>
 總傷害加成=DMG Bonus
 造成傷害=DMG Dealt
 
@@ -1135,7 +1136,8 @@ Battle Pass Challenges
 啟動後<color\=#e5cf09>立即獲得</color>以下獎勵：=<color\=#e5cf09>Immediately get</color>:
 r:"^通行證等級立即提升<color\=#e5cf09>(\d+)級</color>！$"="Immediate get <color\=#e5cf09>10 Phantom Pass Lv</color>!"
 r:"^購買典藏版後本期累計可獲得<size\=110><sprite\=37 tint\=1></size><size\=34><color\=#FFE500>x5</color></size>$"="Get <size\=110><sprite\=37 tint\=1></size><size\=34><color\=#FFE500>x5</color></size> after upgrading"
-r:"^<size\=60><sprite\=37 tint\=1></size><size\=28><color\=#FFE500>x10</color></size><size\=28><color\=#FFFFFF>可兌換五星武器</color><color\=#FFE500> \（當前擁有:(\d+)\）</color></size>$"="<size\=60><sprite\=37 tint\=1></size><size\=28><color\=#FFE500>x10</color></size> <size\=28><color\=#FFFFFF>to get 1 standard 5★ weapon</color>"
+r:"^<size\=60><sprite\=37 tint\=1></size><size\=28><color\=#FFE500>x10</color></size><size\=28><color\=#FFFFFF>可兌換五星武器</color><color\=#FFE500> \（當前擁有:(\d+)\）</color></size>$"="<size\=60><sprite\=37 tint\=1></size><size\=28><color\=#FFE500>x10</color></size> <size\=28><color\=#FFFFFF>to redeem 1 5★ weapon</color>"
+可兌換五星武器包括：=Redeem 5★ weapons include:
 
 本期剩餘時間：=Time left:
 探索經驗：=Phantom Pass EXP: <size\=1>.</size>
@@ -1887,6 +1889,10 @@ r:"^幫助{{A}}$"="<size\=24>Help out\n{{A}}</size>"
 要與{{A}}奶奶聊天嗎(<color\=#ff0000>消耗1點行動力</color>)？=Want to chat with Grandma {{A}}?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
 {{A}}在{{B}}，去陪他聊聊天吧……={{A}} is in {{B}}, \nlet's go chat with him...
 
+{{A}}的推理修行=<size\=24>{{A}}'s Deductive Practice</size>
+{{A}}遇到了新的謎團，去和他聊聊吧……={{A}} encountered a new puzzle, let's go talk to him...
+要和{{A}}聊天嗎(<color\=#ff0000>消耗1點行動力</color>)？=Want to chat with {{A}}?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
+
 和{{A}}出去玩吧=<size\=24>Hang out with\n{{A}}</size>
 r:"^和{{A}}一起度過$"="<size\=24>Hang out with\n{{A}}</size>"
 和{{A}}一起度過放學後的時光吧=Let's spend some time with {{A}} after school
@@ -2596,6 +2602,7 @@ r:"^前往{{A}}(\d+)區$"=$"Go to {{A}} Area $1"
 去看看{{A}}的情況=See how {{A}} is doing
 打倒{{A}}=Defeat {{A}}
 與{{A}}對話=Talk to {{A}}
+查看手機=View phone
 接聽{{A}}的電話=Answer {{A}}'s call
 尋找目標人物=Find the target
 等待一段時間=Wait for a while
@@ -2606,6 +2613,8 @@ r:"^前往{{A}}(\d+)區$"=$"Go to {{A}} Area $1"
 你我的影像=Images of Me and You
 漫遊{{A}}=Roaming {{A}}
 抓取的樂趣=The Fun of Catching
+傳達心意的音符·上=Melodies of the Heart·Part 1
+傳達心意的音符·下=Melodies of the Heart·Part 2
 天才的熔爐=Genius' Furnace
 風平浪靜的日子=Calm Days
 如果想繼續體驗「<color\=#ffc000>娃娃機</color>」的小遊戲，可以在完成任務「抓取的樂趣」後再進一步遊玩。=<size\=26>If you want to continue to experience the "<color\=#ffc000>Crane Game</color>", you can play more after completing the mission "The Fun of Catching".</size>
@@ -3330,10 +3339,22 @@ r:"^贈送所有喜歡的禮物給{{A}}$"="Give all Favorite Gifts to {{A}}"
 與任意協同者進行1次關係回溯<size\=30>(0/1)</size>=Backtrack 1 relationship <size\=30>(0/1)</size>
 與任意協同者進行1次關係回溯=Backtrack 1 relationship
 
+查看全部徽章=View all badges
+r:"^徽章收集：(\d+)$"="Badges: $1"
+r:"^徽章冊收集：(\d+)$"="Badge Albums: $1"
+已擁有=Owned
+
 徽章詳情=Badge Details
 選擇徽章數量已達上限。=Reached badge limit.
 設置徽章=Select Badges
 收集=Collection
 紀念冊=Events Album
 
+r:"^(.*)·反抗之魂$"="$1 - Soul of Rebellion"
+r:"^(.*)·慾望之火$"="$1 - Fire of Desire"
+r:"^(.*)·覺醒之焰$"="$1 - Flame of Awakening"
+r:"^(.*)·心跳之夏$"="$1 - Summer of Heartbeats"
+r:"^(.*)·新春之禧$"="$1 - Celebration of Spring"
+
+{{A}}意識等級達到6級={{A}} reached Awareness 6
 r:"^與協同者{{A}}好感度達到rank(\d+)\n且與{{A}}成為{{B}}$"="Reach Rank $1 with {{A}} and become {{B}}."
