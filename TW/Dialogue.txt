@@ -19,6 +19,7 @@ General Wonder Prompt
 走吧=Let's go
 馬上回去=Go now
 現在就出發=Go now
+我要去=I'm going
 我這就去=I'm going now
 我現在就去=I'm going now
 我現在就過去=I'm going now
@@ -527,11 +528,21 @@ Multi-kill
 Down
 不愧是WONDER！=As expected from Wonder!
 怎麼了～你也會宿醉？=Oh～ You're hungover too?
+擊倒敵人！乘勝追擊！=Enemy down! Push the attack!
+AOA
+好·戲·開·場！=The show begins!
+可不要移開視線哦～=Don't look away～
+讓他們瞧瞧我們的舞姿吧？=Let's show them our moves?
+Ally Downed
+同伴被擊倒了！注意掩護！=Ally down! Cover them!
+同伴被擊倒了！沒問題嗎！？=Ally down! Are they okay!?
 Evade
 {{A}}！NICE的回避！={{A}}! Nice evasion!
 Debuffs
 {{A}}這樣怎麼使出全力嘛……={{A}} You can't get serious like this...
 Dead
+不、不會吧！？WONDER！？=N-no!? Wonder!?
+WONDER！？回答我WONDER！=Wonder!? Say something, Wonder!
 你還好嗎！？振作一點！=Are you okay!? Wake up!
 Revive
 啊，站起來了！太好了～！=Ah, you're back!\nGreat～!
@@ -550,6 +561,7 @@ Skill ready
 OK，破譯完成，我隨時可以出擊！=OK, hack complete. Ready to go!
 Full HL
 充能完成！盡情釋放！=Charge complete! Beat 'em up!
+要放必殺了，華麗地攻擊吧！=Time for the super move,\nattack with style!
 CRIT
 猛烈扣殺！絕妙一擊！=Smash! Critical hit!
 Down
@@ -561,10 +573,12 @@ AOA
 {{A}}的時間！={{A}} time!
 去痛扁一頓吧！=Beat 'em up!
 Ally Downed
-倒地！？再忍一下～！=Down!? Hold on~!
+倒地！？再忍一下～！=Down!? Hold on～!
 被擊倒了！還好嗎？=Downed! Are you okay?
 Recovered from Down
 好，現在開始反擊！=Ok, time for the counterattack!
+Evade
+哦哦，回避得漂亮！=Oooh, nice evasion!
 Debuffs
 有人被削弱了！\n多加注意！=We're being debuffed! \nWatch out!
 Revive
@@ -1735,7 +1749,7 @@ Shoki Awakening
 演善人=Act the good...
 扮惡徒=Play the evil.
 然而=However...
-唯有此心  無從「表演」=Only the heart cannot be “performed”!
+唯有此心  無從「表演」=Only the heart cannot be "performed"!
 吾所愛之人被公開處決  一無所有=Those I loved were executed... I have nothing left.
 而現在  正是悉數「奪回」之時=Now, the time has come to "take it all back"!
 舞台已成，大幕將起=The stage is set, the curtain rises.
@@ -4670,7 +4684,7 @@ SNS
 Mio SL
 ----------
 Rank 0
-酷酷的女性=Cool women
+酷酷的女性=Cool Women
 ……有焦臭味。=...A burnt smell.
 焦臭味……？\n該不會是在說我吧。=<size\=27>Burnt smell...?\nThey're not talking about me, right?</size>
 有煙！\n從房子的窗戶裡冒了出來……！=Smoke!\nIt's coming out of the window of the house...!
@@ -6212,7 +6226,7 @@ r:"^(.*)小朋友？$"="$1?"
 ２個人一起演奏吧？=<size\=23>How about performing together?</size>
 你是說……以前奶奶爺爺去的、\n在{{A}}的那家店……？=You mean... that place in {{A}} Grandma and Grandpa used to go to...?
 ……嗯，他們好像還在招募參演人員……\n我想要是有一天能和{{A}}站上那個舞臺……=...I think they're still looking for performers... I want to be on that stage with {{A}} someday...
-但{{A}}一直都討厭出門吧？\n奶奶不想勉強你哦……=But Manaka, you've always hated going outside, right? Grandma doesn't want to push you...
+但{{A}}一直都討厭出門吧？\n奶奶不想勉強你哦……=But Manaka, you've always hated going outside, right? Grandma doesn't want to force you...
 兩人一起就能安心=<size\=27>You'll feel at ease together</size>
 我也會為你們加油=<size\=27>I'll be cheering for you both</size>
 想看你們倆的表演=<size\=24>I want to see you two perform</size>
@@ -6233,6 +6247,221 @@ r:"^會讓奶奶和(.*)為難的，\n可……可是！$"="I think I'm going to 
 嗯！從今天開始戒酒，專注練習！=Yes! I'm going to quit drinking today and focus on practice!
 下次陪我一起練習吧！=Next time, join me in practice!
 和推著{{A}}的{{B}}分別了……=Left {{A}} and {{B}}...
+
+喔，這邊哦！=Hey, over here!
+r:"^好久不見了，(.*)。$"="It's been a while, $1."
+好久不見=Long time no see
+身體狀態沒問題嗎？=How's your health?
+{{A}}的狀態很不錯哦，\n最近在家都會唱歌了呢。={{A}} is feeling good. \nShe's even been singing at home lately.
+啊、那個，奶奶怎麼就……！\n奶奶的狀態也好起來了吧？=Ah, come on Grandma...!\nYou're feeling good too, right?
+跟上次比起來已經完全不同了，\n吹得跟以前一樣好了呢。=It's completely different from before, \nyou're playing as well as you used to.
+嗯嗯按照這個步調，差不多能報名參演了，\n所以這次就來看看情況。=<size\=30>Yes, at this rate, I should be ready to sign up and perform, I just came to check things out today.</size>
+那些人，\n也是來「報名」的嗎……=Are they here to "sign up" too...
+……唔，是這種安排啊，\n每組的出場時間大概是５分鐘吧。=...Hmm, I see. Each group has about 5 minutes to perform.
+時間不算長……\n聽眾應該也不會太關注……=It's not very long... And the customers don't seem to be that into it...
+這種程度，{{A}}應該沒問題吧……？=At this level, {{A}} should be fine, right...?
+……嗯，我還是很緊張，也還是很害怕……\n但是，我覺得自己可以做到。=...Yes, I'm nervous and and I'd be lying if I said I'm not scared... But, I think I'll be okay.
+哦哦，\n可要是覺得受不了，一定要說出來哦。=Alright, but if it's too much, you have to tell me.
+爵士俱樂部的店員=Jazz club staff
+請問……幾位是打算報名上臺表演嗎？=Excuse me... \nAre you signing up for a spot on stage?
+啊、對……你是……這裡的店員嗎？=Ah, yes... Are you... a staff here?
+是的，啊，因為來了新客人想參演，\n我有點激動，就忍不住過來搭話了。=Ah yes, I just got so excited about newcomers joining the performance that I couldn't resist coming over to talk.
+我們雖然一直在招募演奏者，\n但參演的總是那幾位。=<size\=30>We're always recruiting performers, but it's always the same faces who actually perform.</size>
+如果不介意，要不要去舞臺上感受一下？\n直接就正式演出的話很容易緊張的。=If you don't mind, why don't you go on stage for a bit? Jumping straight into a live performance can be nerve-wracking.
+這個提議很好啊……\n但現在突然站上去，這有點……=That's a good suggestion... \nbut it's a bit sudden...
+{{A}}，你覺得呢？={{A}}, what do you think?
+……嗚。=...Sob.
+我們是希望所有參演者都能夠放鬆地演出，\n所以，請試試吧！=I want everyone to feel free to perform, \nso give it a try!
+那……我、就試試吧……店員先生說的沒錯，\n為了正式演出……這樣、會好一些……=Then... I'll give it a try... The staff is right, this will be better... for the actual performance...
+嗯嗯，剛好下場演出還需要時間準備，\n那，二位想要表演的是……=Right, since the next performance still needs time to prepare. So, what would you two like to perform...
+我吹薩克斯風，給我唱歌的孫女伴奏，\n那就一起來看看吧。=I'll play the saxophone to accompany my granddaughter's singing. Have a listen.
+好的好的，那往這邊走。=Understood. Then please go there.
+{{A}}嗚、{{A}}\n呼——哈——={{A}} {{A}}\nHuff... Puff...
+{{B}}薩克斯風的音色，\n與{{A}}的歌聲構成了和聲……=The timbre of {{B}}'s saxophone blends in harmony with {{A}}'s voice...
+雖然還很生疏，\n但是表演效果很不錯……！=Although still a little rusty,\nthe performance is very good...!
+很不錯的演奏=Great performance
+我都聽入迷了=I'm fascinated
+你很會誇人哦。=You're good at giving compliments.
+雖然水準還差得遠呢，但心情還是很好哦，\n看來正式演出之前，得更加努力練習了……！=I feel great, but I still have a long way to go and need to practice before the big day...!
+比之前好多了哦，手指也不抖了。=You were doing much better than before, your fingers weren't shaking either.
+那當然，能和可愛的孫女一起站上舞臺，\n酒精什麼的我可一點都沒碰了哦？=Of course, getting to share the stage with my adorable granddaughter, I haven't touched a drop of alcohol, you know?
+{{A}}表現的才好呢，唱的非常棒，\n之前你不肯開口的那段時間，我真的很擔心。={{A}} did a great job singing, I was really worried when you stopped singing.
+……今天，奶奶看到你開心的樣子，\n奶奶也很開心。=...Today was so much fun, \nGrandma's very happy.
+謝謝你的歌聲，{{A}}。=Thank you for singing, {{A}}.
+不……都是因為有奶奶陪在我身邊，\n謝謝奶奶的演奏！=No... It's all because Grandma was by my side, thank you for playing!
+男性胖顧客=Fat Male Customer
+啊、這個……=Ah, umm...
+……有事嗎？=...What is it?
+剛才……在舞臺上唱歌的人……\n你是……「{{A}}」吧？=The person... who was singing just now... You are... "{{A}}", right?
+啊……！=Ah...!
+果、果然是你啊！\n我就說嘛，你的聲音我不會聽錯的……！=O-of course it's you! There's no way I could mistake your voice...!
+看你都不更新了，我還以為你死了呢……！\n原來你跑來這唱這種難聽的歌了啊！=When you stopped posting, I thought you were dead...! But you were just here singing these terrible songs!
+我、我，在信上寫了吧……！\n你這種人根本沒有才能，趕緊給我閉麥啊！=I, I, wrote in a letter...! People like you have no talent, shut up already!
+連我的「指導」都聽不進去……！\n算什麼「天使的歌聲」啊……！=Couldn't even listen to my "guidance"...! \nWhat kind of "angelic voice" is that...!
+你想幹什麼……！=What are you...!
+噫！？=Eek!?
+又是死又是難聽的……！\n你憑什麼對我孫女這麼說話！=Dead this, talentless that...! How dare you talk to my granddaughter like that!?
+手受傷你就沒法演奏=<size\=22>You can't play with injured hands</size>
+他不值得你動手=He's not worth it
+{{B}}、{{A}}……！\n有暴力老太婆護著，可真好命啊……！=He, {{A}}...! Must be nice having some violent old hag protecting you...!
+你、你這種人……\n只不過就是個沒出息的「歌手」吧！=P-people like you... You're nothing but a worthless so-called "singer"!
+{{D}}！啊、{{A}}……！\n{{C}}、{{B}}……！={{D}}! Ah, {{A}}...! \n{{C}}, {{B}}...!
+{{A}}、{{B}}呼、呼、呼……！={{A}}, {{B}} Hah, hah, hah...!
+你、你是不是覺得，\n哭就能解決問題了啊！=Y-you, do you really think crying will fix anything!
+你別太過分了=That's too far
+閉嘴=Shut up
+出口在那邊哦？=Exit's that way
+r:"^{{B}}{{A}}……呼、呼……\n(.*)……$"="{{B}} {{A}}... Hah, hah...\n$1..."
+我……我、是……\n不會、放棄、唱歌……的……！=I... I...\nWon't, give up, singing...!
+我決定了……要和奶奶……一起、努力……\n嗚、{{A}}……！所以、所以……！=I've decided... to work hard... with Grandma...\nSob, {{A}}...! Therefore, therefore...!
+……沒錯，雖然我不知道你是誰，\n但你根本就不了解這孩子！=...That's right, I don't know who you are, but what do you know about this girl!
+就算痛苦到哭出來，她也還是想唱歌……\n我是絕對不會讓你妨礙她的！=Even if it brings her to tears, she still wants to sing.... I'll never let you get in her way!
+{{A}}……！唬誰呢！\n總有一天你會知道我才是對的！={{A}}...! Who are you kidding! \nOne day you'll know I'm right!
+{{A}}！{{A}}……看來是暈過去了，\n她一定是受了很大的刺激。={{A}}! {{A}}... Looks like she just fainted, she must've been really scared.
+不好意思啊，讓你過來陪我們……\n卻碰見那種奇怪的人。=Sorry about this, I made you come along... \nOnly for some creep to bother us.
+不過……為什麼那種人突然會……=But... why would someone like that suddenly...
+難道這是{{A}}之前提到的，\n「網路酸民」嗎……！=Could this be the "trolls" {{A}} mentioned...!
+……{{A}}，我真是太不中用了。=...{{A}}, I can't do anything right.
+我根本、就不了解……{{A}}啊，\n連孫女因為什麼而痛苦都不知道……=I don't understand {{A}} at all... I don't even know why my own granddaughter is in pain...
+這樣一個失去父母的孩子……\n我原本應該要保護好她的……=This child lost her parents...\nI was supposed to protect her...
+{{A}}沒有錯=<size\=24>{{A}} is not wrong</size>
+你好好地做到了哦=You did it well
+你是最棒的奶奶=<size\=25>You're the best grandma ever</size>
+Choice 1
+……你說的話，讓我很欣慰。=...I'm glad you said that.
+不過有句話叫「無知即罪惡」對吧？\n……現在就是這樣。=But you know what they say, "Ignorance is sin"? …And this is exactly that.
+Choice 2
+r:"^{{A}}……(.*)小朋友你這話，\n說得我很受用啊……不過我還差得遠呢。$"="{{A}}... That's kind of you, $1... But I still have a long way to go."
+如果我真的做到了，\n就不會發生這種讓{{A}}流淚的事了……="If I'd actually managed it, {{A}} would never have had to shed tears like this...
+Choice 3
+r:"^最棒、嗎。\n(.*)小朋友還真是會說話啊。$"="The best? \nYou say such nice things, $1."
+就衝你這句話……\n我也得更加努力才行啊。=I have to try even harder... \nSo I don't betray those words.
+好了，今天我們就先回去了。\n關於參演的事……下次再找你商量。=Anyway we're heading back. About the performance... Let's discuss it next time.
+
+「噴」{{A}}的那個人……=The person who "trolled" {{A}}...
+在他做出更過分的事情之前，\n能去{{A}}將他{{B}}嗎……？=Can I change his heart before he does something even more outrageous...?
+如果{{A}}知道，\n那個男人真名的話……=If {{A}} knew that man's real name...
+那個人叫什麼？=What's their name?
+我想知道他的名字=I want to know his name
+你知道嗎？=Do you know?
+真是災難啊=What a disaster
+那真是讓人頭疼啊=What a headache
+對方的名字叫「<color\=#ff0000>{{A}}</color>」，\n調查看看他是否在{{B}}吧。=Their name is "<color\=#ff0000>{{A}}</color>", let's see if he's in {{B}}.
+對方的名字叫「{{A}}」，\n調查看看他是否在{{B}}吧。=Their name is "{{A}}", let's see if he's in {{B}}.
+
+找到了，那就是{{A}}吧。=Found it. That's {{A}}.
+唱得不怎樣的臭小鬼！\n算什麼「天使的歌聲」啊！=You little brat who can't even sing! \nWhat kind of "angelic voice" is that!
+我可比那種小鬼強了不知道多少倍啊！\n可是現在的人……根本沒能力「聽懂」我啊。=I'm better than that kid so many times! People simply... lack the talent to "understand" me.
+{{B}}……這根本就是在{{A}}吧，\n這人就是那種只敢在網上亂噴的類型吧？={{B}}... That's just jealousy. You're the type of person who thinks you can say whatever you want just because it's the internet.
+吵死了{{A}}\n還是把你們這些礙眼的人消滅掉吧！={{A}} SHUT UP!!\nI'll get rid of you annoying people!
+音樂家想要獲得成功，\n「堅強的內心」可是必要的啊～！=To be a successful musician, \nyou need to have a "strong heart"～!
+反正啊，那種被說幾句就放棄的人，\n怎麼可能在這條路走下去。=Either way, if you're going to quit over a complaint like that, you can't make it.
+我只是教會她這一點而已{{A}}！=I'm just teaching her this!
+你就想說這些嗎=<size\=26>Is that all you wanted to say</size>
+你擁有「堅強的內心」？=<size\=30>Do you have a "strong heart"?</size>
+你說什麼{{A}}！？={{A}}! What did you say!?
+既然敢這麼說，那就讓你聽聽吧！\n就在我的歌聲中見鬼去吧！！=Since you dare say that, then let me show you! Go to hell with my singing!!
+要來了哦！\n做好準備，WONDER！=Here it comes! \nGet ready, Wonder!
+我知道的……我這種人，\n根本比不上那孩子的歌聲……=I knew... \nI couldn't compete with her singing...
+一開始，我只是個純粹的粉絲……\n我和她還喜歡過同一首歌，也都唱過……=At first I was just a fan... \nWe liked and sang the same songs...
+因為我們喜歡的音樂風格很像……\n所以我就想或許有一天能和她合唱……=Because our favorite songs are similar... I thought maybe one day we could sing together...
+可是那個女孩……她的水準我已經摸不到了，\n我不甘心……感覺只有我在自作多情……=That girl is out of my reach... she's too good. It's so frustrating... feels like I'm the only one who's obsessed...
+所以你就胡作非為嗎？=<size\=26>So you just do whatever you want?</size>
+我想讓那個女孩注意到我……\n但這種慾望失控了……=I wanted that girl to notice me... \nBut this desire went berserk...
+我以為比起單純的誇獎……\n說一些刻薄的話更容易引起她的注意……=I thought being harsh would get her attention more than just praising her...
+太差勁了吧！=That's bad!
+可……這是、不對的吧……\n多虧了你們，讓我……明白了。=But... that was wrong... \nThanks to you guys... I understand now.
+因為你而痛苦的不只那個女孩，\n她的家人也很痛苦。=It's not just that girl who suffered because of you, her family suffered too.
+千萬不要忘記這一點。=Don't ever forget that.
+都是因為我……在網路上傷害別人，\n我真是傻啊。=Trolling people online... \nWhat a stupid thing to do.
+{{B}}好像{{C}}了，\n去跟{{A}}他們聊聊吧。={{B}} seems to have a {{C}}, let's go talk to {{A}}.
+
+r:"^又見面了呢，(.*)。$"="We meet again, $1."
+r:"^哎呀真沒想到，\n在這能遇見(.*)小朋友你啊。$"="Oh, I never expected to run into you here, $1!"
+我倆剛看了場電影，散了散心\n正準備回去呢……=We just saw a movie and we're on our way back...
+啊，待會兒你有空嗎？\n想讓你來看看我和{{A}}的表演呢……=Ah, are you free later? I'd like you to come and see me and {{A}} perform...
+{{A}}……你還好嗎？\n奶奶不會勉強你的哦？={{A}}, are you sure you're okay? \nGrandma won't force you.
+……嗯，雖然想到那個人說的話還是很害怕，\n但我知道奶奶在我身邊。=...It's okay. Even though remembering that man's words still scares me, I know Grandma's right here beside me.
+好……交給奶奶，那人要是敢出現，\n你看我怎麼好好教訓他！=Yes... Leave it to Grandma. If that guy dares to show up, I will teach him a lesson!
+r:"^啊，(.*)小朋友也看著呢，\n這次粉絲人數更多了，儘管放心吧！$"="Plus, $1 is here too. And with even more fans this time, there's nothing to worry about!"
+……謝謝你們，\n我……雖然，還是害怕唱歌……=...Thank you.\nAlthough... I'm still scared to sing...
+r:"^但看到奶奶和(.*)聽了我的歌，\n你們都會很開心，我不想忘記這一點。$"="But I don't want to forget how happy $1 and Grandma were with my songs."
+爸爸和媽媽以前就是這樣的，\n所以我才會喜歡上唱歌……=Mom and dad were like that too,\nthat's why I fell in love with singing...
+如果一直輸給那些傷害我的人，\n等於我承認了他們對我的否定……=If I let myself lose to them, it's like me denying the people who accepted me...
+這一點讓我更加害怕，\n所以我要和奶奶一起站上舞臺表演！=That scares me even more. So I'm going to perform on stage with Grandma!
+r:"^……嗯！那，我們走吧，{{A}}！\n(.*)小朋友就在特等座上瞧著吧！$"="...Okay! Alright then, let's go, {{A}}! \nYou just listen from your special seat, $1!"
+當然了！=Of course!
+等著你們最棒的表演=Waiting for your best
+呼——比預想的還要緊張啊……！=Phew- That was more nervous than I thought...!
+太棒了=That's great
+多謝啦，因為看到你在台下，\n所以想著無論如何都豁出去了。=Thank you, I was able to hang in there because you were right there.
+r:"^我也是，我能清楚看見(.*)的臉，\n多虧有你我才唱到了最後……$"="Me too, I could see $1's face clearly, so I was able to finish singing..."
+男人的聲音=Man's Voice
+你是，之前的那個……離我孫女遠點，\n我這個老太婆來當你的對手？=You again... If you want to do something to my granddaughter, I'll deal with you.
+不、不是！啊、我不是來……\n我只是、想要……來道歉……=N-no! I didn't come here to...\nI just want to... apologize...
+我……因為{{A}}你，才說了許多過分的話，\n我已經認識到，這是不對的……=I... lashed out online because I was jealous.\nBut now I see how wrong I was...
+這次是、想來和你道歉的……不過也可能，\n是因為剛才的歌聲，我聽完心裡很感動……=I came here today to apologize... But after hearing that song, I was even more moved...
+一想到沒有認真地去傾聽這麼棒的歌聲，\n我自己覺得很羞愧……！=When I realized I hadn't been truly listening to such a wonderful song, I was overwhelmed with shame...!
+給你留下這種不愉快的回憶，真的對不起。\n「{{A}}」的歌……我以後會為你加油的。=I'm terribly sorry for leaving you with such unpleasant memories. I'll continue to support "{{A}}'s" songs.
+怎麼回事……？好像突然變了個人……\n{{A}}，你沒事吧？=<size\=29>What's going on...? It's like they've suddenly become a different person... {{A}}, are you okay?</size>
+唔、嗯，我沒事……\n不過那個人是怎麼了……？=Well, um, I'm fine...\nBut what happened to them...?
+被演奏打動了內心=<size\=28>Moved by the performance</size>
+是音樂的力量=<size\=28>That's the power of music</size>
+{{A}}……就當作是這麼一回事吧！={{A}}... I guess I'll just leave it at that!
+r:"^啊，要這麼說的話，\n(.*)小朋友你可真有兩下子。$"="Well, if you put it that way, you've got real talent, $1."
+要是沒有遇見你，我和{{A}}都不會成長呢，\n我估計還只能依靠酒精麻痹自己……=<size\=30>Thanks to you, both {{A}} and I have changed. If I hadn't met you, I would have drowned in alcoholism...</size>
+也不會想要去和{{A}}面對面的溝通，\n更不可能像這樣一起演奏了吧。=I wouldn't have been able to face {{A}} and play with her like this.
+r:"^謝謝你，(.*)小朋友。$"="Thank you, $1."
+這也是我想說的……真的，非常感謝。=That's exactly what I wanted to say too... \nReally, thank you so much.
+r:"^因為有(.*)在，我才能再一次……\n萌生唱歌的念頭，奶奶才能振作起來……$"="Because of $1, I found my desire to sing again... And Grandma's gotten healthier too."
+因為你們都說了真心話=<size\=26>Because you spoke from the heart</size>
+能幫上忙，太好了=I'm glad I could help
+Choice 1
+對啊，明明兩個人天天在一起呢……\n現在總算是有進步了。=Yes... We were always together, yet somehow... Only now does it feel like we're finally making progress.
+Choice 2
+{{A}}說真的！\n我們還希望你能來當我們的製作人呢。={{A}}, Honestly! \nI'd love for you to become our producer.
+Choice 3
+總之多虧了你，\n說多少聲謝謝都謝不夠啊。=Thank you so much, \nI can't say it enough times.
+啊，對了……之前有提到過，\n來這兒演出的人變少了吧？=Ah, by the way... They said that fewer people are playing here, right?
+{{A}}願意的話，\n能不能和奶奶一起再站上舞臺呢？=If it's okay with you, {{A}}, would you like to come on stage with Grandma again?
+我想要多一些的演奏機會，\n也想多聽聽{{A}}的歌聲……你覺得呢？=I want to play more and hear more of {{A}}'s songs... What do you think?
+嗯嗯！我也是，\n我也想要多聽聽奶奶的薩克斯風！=Absolutely! I want to hear Grandma's saxophone more and more!
+唱歌……或許還達不到以前的水準，\n但我想要努力試試。=My singing... might not reach the level it once did, but I still want to give it my all.
+就這麼定了啊=It's a promise
+我在最前排期待著=<size\=25>I'll be waiting in the front row</size>
+{{A}}！\n那就先跟店長打個招呼吧！={{A}}!\nI'll need to tell to the manager!
+r:"^啊，下次(.*)小朋友也上臺吧？\n像鈴鼓這種你總會打吧！$"="That's right, why don't you join us next time, $1? You can handle a tambourine, can't you?"
+
+特意把你叫出來，不好意思。=Sorry for dragging you out here.
+沒事=It's fine
+是要保密的事？=Is this a secret?
+我想再跟你說聲謝謝，\n不是以{{A}}奶奶的身份，而是我個人的。=I wanted to thank you again, not as {{A}}'s Grandma, but as a person.
+薩克斯風的音色十分清透……=The saxophone's tone is brilliantly clear...
+跟第一次聽的時候完全不一樣……=It's completely different from when I first heard it...
+……想讓你重聽一次我的演奏。=...I wanted you to hear it properly this time.
+因為你，\n我才變得……想要認真地去吹奏。=Because to you, I feel like... I want to play this even more.
+之前……我心上掛念的，\n只有{{A}}的事情。=Up until now... I was only worried about {{A}}.
+我都到這個年紀了，\n很擔心走了以後，{{A}}要怎麼辦……=I don't have much time left anyway, I'll probably be gone in a few years. I'm worried about what will happen to {{A}}...
+我卻沒有主動地、真正地去關心過她……\n只會喝酒混日子，像個笨蛋一樣吧？=Yet I never truly reached out to care for her... Just drowned myself in drink, like a damn fool.
+幸好有你，在背後推了我一把，\n我現在想要的可越來越多了哦。=Fortunately, you gave me that push. \nNow I want more and more.
+就像{{A}}聽了我的演奏振作起來一樣……\n我也想去鼓舞其他的人。=Just as my performance cheered up {{A}}... \nI want to keep inspiring others.
+你肯定能做到=I'm sure you can do it
+我也深受你的鼓舞=I'm inspired by you, too
+目標是武道館=The goal is Budokan
+Choice 1
+{{A}}，你都這麼說了，\n我就更有信心了哦。={{A}}, if you say so, then I'll believe it.
+Choice 2
+……真的假的，\n那我得更加更加努力才行呢。=...I see, then I have to try harder.
+希望之後我也能夠支持你。=So that I can continue to push you forward.
+Choice 3
+目標定的太遠了吧！？\n……不過感覺也不錯{{A}}！=Isn't that too far!?\n...Well, that's not a bad feeling!
+r:"^啊，差點忘了，\n有個東西我想要給……給(.*)。$"="Oh, that's right, I meant to give this to you, $1."
+這是？=This is?
+是薩克斯風的「簧片」哦。=It's a saxophone's "reed".
+是吹薩克斯風時用的……\n相當於彈吉他的撥片吧？=It's for playing the saxophone... \nKind of like a guitar pick, you know?
+遇到困難或者覺得很辛苦的時候，\n就拿著這個簧片來找我吧。=When things get tough or you're struggling, \njust bring this reed and come to me.
+奶奶我啊，會教你怎麼吹薩克斯風的！=Grandma will teach you how to play the saxophone!
+把那些討厭的事情全都吹跑，\n音樂會讓你忘掉所有煩惱哦！=Blow all those troubles away, \nlet the music carry them off!
 
 ----------
 Shinta Ezaki Side Quest
