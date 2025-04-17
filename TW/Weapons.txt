@@ -39,7 +39,7 @@ WONDER 使用=Used by Wonder
 七日之焰=<size\=25>Flame of Seven Suns</size>
 【熔岩腐蝕】=[Lava Erosion]
 熔岩腐蝕=Lava Erosion
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。每裝配1種不同屬性的{{A}}，對敵人造成的傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，最多疊加(\d+)層。擊倒敵人時，有100%基礎機率使敵人防禦力降低<color\=#2899FF>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Increases ATK by <color\=#2899FF>$1</color>. For each equipped Persona with different elements, increases DMG Dealt by <color\=#2899FF>$2</color>, up to $3 stacks. When downing an enemy, has a 100% base chance to decrease that enemy's DEF by <color\=#2899FF>$4</color> for $5 turn."
+r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。每裝配1種不同屬性的{{A}}，對敵人造成的傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，最多疊加(\d+)層。擊倒敵人時，有100%固定機率使敵人防禦力降低<color\=#2899FF>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Increases ATK by <color\=#2899FF>$1</color>. For each equipped Persona with different elements, increases DMG Dealt by <color\=#2899FF>$2</color>, up to $3 stacks. When downing an enemy, has a 100% fixed chance to decrease that enemy's DEF by <color\=#2899FF>$4</color> for $5 turn."
 七日之焰晶石=<size\=14>Flame of Seven Suns Crystal</size>
 僅可消耗七日之焰晶石=Only use Flame of Seven Suns Crystal
 
@@ -117,7 +117,7 @@ r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>,\n戰鬥開始時，或�
 r:"^寄<color\=#000000>生</color>感染$"="P<color\=#000000>a</color>rasitic Infection"
 r:"^效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>。\n自身造成的元素異常/精神異常附著率提升<color\=#2899FF>(\d+\.\d+%)</color>，成功使敵人陷入任意異常狀態時額外使其陷入『寄生感染』，受到傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合。\n場上存在陷入『寄生感染』狀態的敵人時，自身效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>、攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>）。$"="Increases EHR by <color\=#2899FF>$1</color>.\nIncreases the base chance to inflict Elemental Ailments/ Mental Ailments by <color\=#2899FF>$2</color>, inflicts the target with [Parasitic Infection] when inflicting any debuffs, increases DMG Taken by <color\=#2899FF>$3</color> for $4 turns. \nIncreases own EHR by <color\=#2899FF>$5</color> and ATK by <color\=#2899FF>$6</color> when there is an enemy with [Parasitic Infection]."
 r:"^效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>。\n自身造成的元素異常/精神異常附著率提升<color\=#2899FF>(\d+\.\d+%)</color>，成功使敵人陷入任意異常狀態時額外使其陷入『寄生感染』，受到傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合。\n場上存在陷入『寄生感染』狀態的敵人時，自身效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>、攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increases EHR by <color\=#2899FF>$1</color>.\nIncreases the base chance to inflict Elemental Ailments/ Mental Ailments by <color\=#2899FF>$2</color>, inflicts the target with [Parasitic Infection] when inflicting any debuffs, increases DMG Taken by <color\=#2899FF>$3</color> for $4 turns. \nIncreases own EHR by <color\=#2899FF>$5</color> and ATK by <color\=#2899FF>$6</color> when there is an enemy with [Parasitic Infection]."
-蟲巢衛士晶石=Hive Guardian Crystal
+蟲巢衛士晶石=<size\=19>Hive Guardian Crystal</size>
 僅可消耗蟲巢衛士晶石=Only use Hive Guardian Crystal
 
 極晝=Midnight Sun
@@ -137,6 +137,7 @@ MAIN CAST WEAPONS
 ----------
 {{A}}專屬近戰武器。=Exclusive melee weapon for {{A}}.
 {{A}}使用=Used by {{A}}
+{{A}} 使用=Used by {{A}}
 神降光輝=God's Glory
 【鴞之火羽】=[Owl's Fire Plume]
 鴞之火羽=Owl's Fire Plume
@@ -226,6 +227,7 @@ r:"^防禦力提升<color\=#2899FF>(\d+\.\d+%)</color>。每次觸發反擊，�
 湮滅意志=Annihilating Will
 r:"^核熱傷害提升<color\=#2899FF>(\d+\.\d+%)</color>；攻擊處於元素異常狀態下的敵人，攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>；任意同伴造成元素異常狀態時，自身獲得1層『熱能』。進入『鐵血意志』時，消耗所有『熱能』，每層『熱能』提升下一次技能<color\=#2899FF>(\d+\.\d+%)</color>核熱傷害，上限<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increases Nuke DMG by <color\=#2899FF>$1</color>; Increases ATK by <color\=#2899FF>$2</color> when attacking enemies with Element Ailments; Gains 1 stack of [Heat Energy] when any ally inflicts Element Ailments. Consumes all [Heat Energy] when entering [Iron Will], increases next skill's Nuke DMG by <color\=#2899FF>$3</color> per stack, up to <color\=#2899FF>$4</color>."
 熱能=Heat Energy
+r:"^提升(.*)下一次{{A}}技能核熱傷害$"="<size\=26>Increase next {{A}} skill Nuke DMG by $1</size>"
 馬赫拳套=Mach Punch
 【不熄心火】=[Inextinguishable]
 不熄心火=Inextinguishable
@@ -239,6 +241,7 @@ r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>；戰鬥開始時候，�
 【節奏風暴】=[Rhythm Storm]
 節奏風暴=Rhythm Storm
 r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，使用『終曲：音域全開』後，自身攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Increases ATK by <color\=#2899FF>$1</color>. Increases ATK by <color\=#2899FF>$2</color> after using [Finale: Range Unleash] for $3 turns."
+鼓舞=Encouragement
 
 繽紛海岸=Colorful Coast
 【灼灼炎夏】=[Scorching Summer]
@@ -279,7 +282,7 @@ r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。添加『擾亂病毒�
 神聖戰歌=Holy Hymn
 【精準磨礪】=[Precision Grinding]
 精準磨礪=Precision Grinding
-r:"^效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>。攻擊帶有<link\="s\|114"><u>『準星』</u></link>的敵人時念動屬性傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。每次獲得『改裝』時，攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Increases EHR by <color\=#2899FF>$1</color>. Increases Psy DMG by <color\=#2899FF>$2</color> when attacking enemies with <link\="s|114"><u>[Sight]</u></link>. Each time you gain [Customization], increases ATK by <color\=#2899FF>$3</color> for $4 turn."
+r:"^效果命中提升<color\=#2899FF>(\d+\.\d+%)</color>。自身擁有<link\="s\|114"><u>『準星』</u></link>時念動屬性傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。每次獲得『改裝』時，攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Increases EHR by <color\=#2899FF>$1</color>. Increases Psy DMG by <color\=#2899FF>$2</color> when you have <link\="s|114"><u>[Sight]</u></link>. Each time you gain [Customization], increases ATK by <color\=#2899FF>$3</color> for $4 turn."
 基加美修戰斧=Gilgamesh Axe
 【趁敵不備】=[Surprise Attack]
 趁敵不備=Surprise Attack
@@ -342,9 +345,9 @@ r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。自身獲得『清晰�
 r:"^萬能屬性傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。自身處於『真相』狀態時，攻擊力<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increases Almighty DMG by <color\=#2899FF>$1</color>. Under [Truth], increases ATK by <color\=#2899FF>$2</color>."
 
 天籟輕吟=Heavenly Whisper
-【嫣緋】=[Divinely Radiance]
-嫣緋=Divinely Radiance
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。\n{{A}}每獲得(\d+)層<link\=\"s\|235"><u>『聖歌』</u></link>，使所有同伴獲得(\d+)層『澄音』：造成傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，可疊加(\d+)層，本場戰鬥永久生效。『澄音』疊加至(\d+)層時，暴擊效果提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increases ATK by <color\=#2899FF>$1</color>.\nWhen Ange gains $2 stack of <link\=\"s\|235"><u>[Holy Song]</u></link>, all allies gains $3 stack of [Pure Sound]: Permanently increases DMG Dealt by <color\=#2899FF>$4</color>, up to $5 stacks. When [Pure Sound] reaches $6 stacks, increases CRIT DMG by <color\=#2899FF>$7</color>."
+【嫣緋】=[Divine Radiance]
+嫣緋=Divine Radiance
+r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。\n{{A}}每獲得(\d+)層<link\="s\|235"><u>『聖歌』</u></link>，使所有同伴獲得(\d+)層『澄音』：造成傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，可疊加(\d+)層，本場戰鬥永久生效。『澄音』疊加至(\d+)層時，暴擊效果提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increases ATK by <color\=#2899FF>$1</color>.\nWhen Ange gains $2 stack of <link\="s|235"><u>[Holy Song]</u></link>, all allies gains $3 stack of [Pure Sound]: Permanently increases DMG Dealt by <color\=#2899FF>$4</color>, up to $5 stacks. When [Pure Sound] reaches $6 stacks, increases CRIT DMG by <color\=#2899FF>$7</color>."
 澄音=Pure Sound
 歌者綺夢=Singer's Dream
 【琉璃】=[Luminous Glaze]
