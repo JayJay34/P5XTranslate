@@ -568,6 +568,8 @@ Yamata
 r:"^祭品的悲鳴(.*)$"="<size\=28>Screams of Sacrifice $1</size>"
 r:"^暴擊率提升(\d+\.\d+%)。對處於凍結狀態的敵人造成的傷害提升(.*)。釋放冰凍屬性的{{A}}技能時，若技能主目標的生命值低於(.*)。則額外使其受到1次(.*)攻擊力的冰凍屬性傷害。$"="<size\=22>Increases CRIT Rate by $1. Increases DMG Dealt to enemies inflicted with Freeze by $2. When using Ice skills, deals an additional $4 ATK Ice damage to the main target if they are below $3 HP."
 r:"^暴擊率提升(\d+\.\d+%)。對處於<link\="s\|103"><u>凍結</u></link>狀態的敵人造成的傷害提升(.*)。釋放冰凍屬性的{{A}}技能時，若技能主目標的生命值低於(.*)。則額外使其受到1次(.*)攻擊力的冰凍屬性傷害。$"="<size\=22>Increases CRIT Rate by $1. Increases DMG Dealt to enemies inflicted with <link\="s|103"><u>Freeze</u></link> by $2. When using Ice skills, deals an additional $4 ATK Ice damage to the main target if they are below $3 HP."
+r:"^暴擊率提升(\d+\.\d+%)。戰鬥開始時獲得(\d+)層『祭品的悲鳴』。自身回合結束時獲得(\d+)層『祭品的悲鳴』。自身釋放固有技能時，若擁有(\d+)層『祭品的悲鳴』，則消耗(\d+)層『祭品的悲鳴』改為使所有敵人陷入<link\="s\|103"><u>凍結</u></link>效果，效果持續(\d+)回合，並使敵人受到的TECH傷害提升(.*)，持續(\d+)回合。$"="Increases CRIT Rate by $1. At the start of battle, gains $2 stacks of [Screams of Sacrifice]. Gains $3 stack of [Screams of Sacrifice] at the end of your turn. When using the signature skill, if you have $4 stacks of [Screams of Sacrifice], then consumes $5 stacks of [Screams of Sacrifice] to inflict all enemies with <link\="s|103"><u>Freeze</u></link> for $6 turns, and increases all enemies' TECHNICAL DMG Taken by $7 for $8 turns."
+祭品的悲鳴=Screams of Sacrifice
 
 Seiryu
 r:"^東方神龍的庇蔭(.*)$"="<size\=28>Eastern Dragon's Shade $1</size>"
@@ -592,6 +594,7 @@ Thor
 r:"^雷神的威嚴(.*)$"="<size\=28>Thunder God's Majesty $1</size>"
 r:"^<nobr>暴擊效果提升(\d+\.\d+%)。其他同伴每釋放1次電擊屬性的{{A}}技能，則使自身獲得1層『雷神威勢』，造成的電擊傷害提升(.*)，並使技能『天召雷』額外造成(.*)段傷害，效果持續(.*)回合，上限(.*)層。$"="<size\=21><nobr>Increases CRIT DMG by $1. Gains 1 stack of [Thunder God's Might] after other allies used Elec skills, increases DMG Dealt by $2,  and makes Heavenly Thunder deals $3 additional hit of damage for $4 turn, up to $5 stacks.</size>"
 r:"^<nobr>暴擊效果提升(\d+\.\d+%)。其他同伴每釋放1次電擊屬性的{{A}}技能，則使自身獲得1層『雷神威勢』，造成的電擊傷害提升(.*)，暴擊效果提升(.*)。並使技能『天召雷』額外造成(.*)段傷害，效果持續(.*)回合，上限(.*)層。$"="<size\=20><nobr>Increases CRIT DMG by $1. Gains 1 stack of [Thunder God's Might] after other allies used Elec skills, increases DMG Dealt by $2 and CRIT DMG by $3, and makes Heavenly Thunder deals $4 additional hit of damage for $5 turn, up to $6 stacks.</size>"
+r:"^<nobr>暴擊效果提升(\d+\.\d+%)。友方怪盜釋放電擊屬性的{{A}}技能/追加效果/HIGHLIGHT時，自身獲得(\d+)層『雷神威勢』，持續(\d+)回合，上限(\d+)層。自身釋放{{A}}技能造成電擊屬性傷害時，若自身『雷神威勢』為(\d+)層，使全體敵人受到電擊屬性傷害提升(.*)、受到電擊屬性暴擊效果提升(.*)，持續(\d+)回合。$"="Increases CRIT DMG by $1. When allies use Elec {{A}} skill/ Follow Up/ HIGHLIGHT, gains $2 stack of [Thunder God's Might] for $3 turns, up to $4 stacks. When you deal damage with a {{A}} skill, if you have $5 stacks of [Thunder God's Might], increases all enemies' Elec DMG Taken by $6 and Elec CRIT DMG Taken $7 for $8 turns."
 r:"^雷<color\=#000000>神</color>威勢$"="T<color\=#000000>h</color>under God's Might"
 雷神威勢=Thunder God's Might
 電擊傷害提升，技能『天召雷』的段數增加=Increase Elec DMG, increase the amount of times [Heavenly Thunder] can hit
@@ -649,9 +652,12 @@ Kohryu
 r:"^祥瑞之主(.*)$"="<size\=28>Lord of Auspiciousness $1</size>"
 r:"^攻擊力提升(\d+\.\d+%)。處於後臺也能生效：所有同伴每造成1種不同屬性的傷害，使{{A}}獲得1層『四象』，上限4層。{{A}}處於前臺時，每層『四象』提升自身(.*)攻擊力。『四象』為4層時使{{A}}的技能進化。造成傷害後清除『四象』。$"="<size\=22>Increases ATK by $1. Will still be active when not equipped: Gains 1 stack of [Four Symbols] when allies deal different elemental damage, up to 4 stacks. When Kohryu is equipped, increases ATK by $2 for every stack of [Four Symbols]. Evolves your skill when [Four Symbols] is at 4 stacks and dispels [Four Symbols] after dealing damage.</size>"
 r:"^攻擊力提升(\d+\.\d+%)。處於後臺也能生效：所有同伴每造成1種不同屬性的傷害，使{{A}}獲得1層『四象』，上限4層。{{A}}處於前臺時，每層『四象』提升自身(.*)攻擊力，(.*)念動傷害。『四象』為4層時使{{A}}的技能進化。造成傷害後清除『四象』。$"="<size\=21>Increases ATK by $1. Will still be active when not equipped: Gains 1 stack of [Four Symbols] when allies deal different elemental damage, up to 4 stacks. When Kohryu is equipped, increases ATK by $2 and Psy DMG by $3 for every stack of [Four Symbols]. Evolves your skill when [Four Symbols] is at 4 stacks and dispels [Four Symbols] after dealing damage.</size>"
+r:"^攻擊力提升(\d+\.\d+%)。處於後臺時也能生效：所有同伴每造成1種不同屬性的傷害，使{{A}}獲得(\d+)層『四象』，上限(\d+)層。自身回合開始時，若擁有至少(\d+)層『四象』，則清空所有『四象』獲得『四象之力』：使自身攻擊力攻擊力提升(\d+%)，所有友方同伴攻擊力提升(\d+%)，並進化自身技能，持續(\d+)回合。$"="Increases ATK by $1. Works when not active: Gains $1 stack of [Four Symbols] when allies deal different elemental damage, up to $2 stacks. At the start of your turn, if you have at least $3 stacks of [Four Symbols], then consumes all [Four Symbols] to gain [Four Symbols' Power]: Increases own ATK by $4 and all allies' ATK by $5, then evolves your signature skill for $6 turns."
+r:"^攻擊力提升(\d+\.\d+%)。處於後臺時也能生效：所有同伴每造成1種不同屬性的傷害，使{{A}}獲得(\d+)層『四象』，上限(\d+)層。自身回合開始時，若擁有至少(\d+)層『四象』，則清空所有『四象』獲得『四象之力』：使自身攻擊力攻擊力提升(\d+%)，所有友方同伴攻擊力提升(\d+%)，，並進化自身技能。$"="Increases ATK by $1. Works when not active: Gains $1 stack of [Four Symbols] when allies deal different elemental damage, up to $2 stacks. At the start of your turn, if you have at least $3 stacks of [Four Symbols], then consumes all [Four Symbols] to gain [Four Symbols' Power]: Increases own ATK by $4 and all allies' ATK by $5, then evolves your signature skill."
 r:"^四<color\=#000000>象</color>$"="F<color\=#000000>o</color>ur Symbols"
 四象=Four Symbols
 四象的數量=Number of Four Symbols
+四象之力=Four Symbols' Power
 
 Shiva
 r:"^因果的流轉(.*)$"="Karma Reversal $1"
@@ -685,5 +691,5 @@ r:"^驚<color\=#000000>恐</color>$"="F<color\=#000000>r</color>ightened"
 
 Sandalphon
 r:"^龐然的守護(.*)$"="Higher Protection $1"
-r:"^防禦力提升(\d+\.\d+%)。{{A}}在場時使處於護盾下的同伴防禦力提升(\d+%)。$"="Increases DEF by $1. When Sandalphon is present, increases all shielded allies' DEF by $2."
-r:"^防禦力提升(\d+\.\d+%)。{{A}}在場時使處於護盾下的同伴防禦力提升(\d+%)，釋放固有技能時，消耗的生命值降低至(\d+%)。$"="<size\=24>Increases DEF by $1. When Sandalphon is present, increases all shielded allies' DEF by $2. Decreases the HP cost to $3 when using the signature skill.</size>"
+r:"^防禦力提升(\d+\.\d+%)。{{A}}在場時使處於護盾下的同伴防禦力提升(\d+%)，處於後臺時獲得(\d+%)增益效果。$"="Increases DEF by $1. When {{A}} is present, increases all shielded allies' DEF by $2, gains $3 of this effect when not present."
+r:"^防禦力提升(\d+\.\d+%)。{{A}}在場時使處於護盾下的同伴防禦力提升(\d+%)，處於後臺時獲得(\d+%)增益效果。釋放固有技能時，消耗的生命值降低至(\d+%)。$"="<size\=22>Increases DEF by $1. When {{A}} is present, increases all shielded allies' DEF by $2, gains $3 of this effect when not present. Decreases the HP cost to $4 when using the signature skill.</size>"
