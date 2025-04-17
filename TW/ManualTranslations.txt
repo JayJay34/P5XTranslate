@@ -390,7 +390,7 @@ r:"^謎<color\=#ff0000ff>之</color>{{A}}$"="My<color\=#ff0000ff>st</color>eriou
 羅賓漢=Robin Hood
 洛基=Loki
 皮蒂斯=Pitys
-歐忒耳珀=Euterpe
+尤特碧=Euterpe
 
 ------------------------------------------
 Worldbuilding Terms
@@ -431,6 +431,7 @@ r:"^已購買(\d+)/(\d+)次（每日05:00重置）$"="Purchased $1/$2 times \n(R
 確認要消耗<color\=#f1b500>「空白命運×1」</color>進行一次啟示回溯嗎？\n回溯後將有以下變化：\n1.啟示等級變為0級\n2.主屬性、副屬性的狀態變為初始狀態\n3.返還所有養成到當前等級消耗的經驗材料（以通用啟示材料的形式返還）=<size\=32>Use <color\=#f1b500>[Blank Fate×1]</color> to reset your card?\nAfter resetting:\n1. Set the card back to level 0\n2. Set the main stat and sub stats back to original\n3. Refund all EXP materials\n(In the form of materials)</size>
 時序之墨=Temporal Ink
 蘊含星辰之力的墨水，可用於定製月、星、辰位置的啟示卡。=Ink that contains the power of the stars, can be used to create a customized basic Revelation Card.
+認知請願書 5星=<size\=19>5★ Cognitive Petition</size>
 認知請願書 4星=<size\=19>4★ Cognitive Petition</size>
 請在以下列表中點擊選擇一位4星怪盜。=Select one 4★ Thief from the list below.
 宇宙的終響=Universe Echo
@@ -459,6 +460,8 @@ r:"^使用後可自選1把以下怪盜的四星武器：(.*)。$"="Can be used t
 定製武器配裝=3★ Weapon Box
 請在以下列表中點擊選擇一把4星武器=Please choose one 4★ Weapon
 請在以下物品中自選一種=Please choose one in the following items
+限定武器套件=<size\=28>Limited Weapon Box</size>
+r:"^使用後可自選1把以下角色的5星專屬武器：\n(.*)。$"="Can be used to choose 1 5★ Weapon for the following Thieves: $1."
 
 ----------
 City UI
@@ -782,6 +785,8 @@ r:"^限購：(\d+)次$"="Limit: $1"
 更換名片=<size\=34>Background</size>
 更換相框=Avatar Frame
 更換頭像=Avatar
+更換聊天框=Chat Box
+更換壁紙=Wallpaper
 遮罩此人=Block
 r:"^每日最多可獲取<color\=#FF0000>10</color>點<link\="s\|1002"><u>助戰積分</u></link>。$"="Maximum <color\=#FF0000>10</color> <link\="s|1002"><u>Assist Points</u></link> per day."
 <color\=#66ccff>『助戰積分』</color>=<color\=#66ccff>[Assist Points]</color>
@@ -798,6 +803,16 @@ r:"^每日最多可獲取<color\=#FF0000>10</color>點<link\="s\|1002"><u>助戰
 1等星4階= 4th Tier
 1等星5階= 5th Tier
 都市生活天數=Days Spent
+怪盜總評級=Thieves Total Rating
+
+歷史最高總評分=Highest Total
+怪盜培養總評分：=Total Thieves Rating:
+下級效果=Next Effect
+評分=Rating
+
+QEVEL詳情=QEVEL Details
+總覽=Summary
+升級=Level Up
 
 ////////////////////////////////
 ///// c. Character Screen //////
@@ -880,6 +895,7 @@ sr:"^多重奏·(.*):(.*)元素怪盜技能傷害提升(.*)$"="<size\=21>$1 Poly
 暴擊傷害=CRIT DMG
 精力回復=SP Recovery
 穿透=PEN
+穿透影響對敵人造成傷害時忽視防禦的程度。=PEN affects how much enemy DEF is ignored when dealing damage.
 倒地值=Down Gauge
 效果命中=EHR
 效果抵抗=Effect RES
@@ -1170,8 +1186,11 @@ r:"^本週累計今日計畫領獎次數\((\d+)\/(\d+)\)，可額外領取$"="Nu
 武器=Weapon
 r:"^(\d+)年(\d+)月(\d+)日 (\d+):(\d+)後可使用。$"="Available after $1/$2/$3 $4:$5."
 r:"^神秘怪盜「(.*)」的專屬近戰武器。$"="<size\=20>Exclusive melee weapon for mysterious Thief "$1".</size>"
+sr:"^是否消耗「(.*)」×1兌換「(.*)」×1？$"="Use [$1] x1 to redeem [$2] x1?"
 
 // DAILY //
+本日計畫=Daily Plan
+當期計畫=Seasonal Plan
 r:"^登入遊戲$"="Log in to the game"
 r:"^登入遊戲\((\d+)\/(\d+)\)$"="Log in to the game ($1/$2)"
 r:"^登入遊戲 \((\d+)\/(\d+)\)$"="Log in to the game ($1/$2)"
@@ -1192,10 +1211,12 @@ r:"完成1次「靈之參悟」挑戰 \((\d+)\/(\d+)\)"=Complete 1 [Incense Farm
 r:"進行1次{{A}}育成 \((\d+)\/(\d+)\)"=Perfrom 1 Persona skill inheritance ($1/$2)
 r:"^完成1次「往日回溯」挑戰 \((\d+)\/(\d+)\)$"="Complete 1 [Past Echo] ($1/$2)"
 r:"^通關1次「閼凶夢之扉」 \((\d+)\/(\d+)\)$"="Complete 1 [Door of Nightmares] ($1/$2)"
+r:"^完成1次閼凶夢之扉 \((\d+)\/(\d+)\)$"="Complete 1 [Door of Nightmares] ($1/$2)"
 r:"^完成1次「天鵝絨試煉」 \((\d+)\/(\d+)\)$"="Complete 1 [Velvet Trial] ($1/$2)"
 r:"^完成1次「心之海試煉」 \((\d+)\/(\d+)\)$"="Complete 1 [Sea of Souls Trials] ($1/$2)"
 r:"^在「心軌擇行」中通過1個月臺 \((\d+)\/(\d+)\)$"="Clear 1 Platform in [Heart Rail] ($1/$2)"
-r:"^完成1次「委託」派遣 \((\d+)\/(\d+)\)$"="<size\=29>Complete 1 Dispatch in [Commissions] ($1/$2)</size>"
+r:"^完成1次「委託」派遣 \((\d+)\/(\d+)\)$"="Complete 1 [Commissions] ($1/$2)"
+r:"^累計完成(\d+)次委託派遣 \((\d+)\/(\d+)\)$"="Complete $1 [Commissions] ($2/$3)"
 
 // WEEKLY //
 r:"累計消耗(\d+)魂石 \((\d+)\/(\d+)\)"=Spend $1 Soul Gems ($2/$3)
@@ -1229,7 +1250,7 @@ r:"^本期通行證期間，累計登入(\d+)天 \((\d+)/(\d+)\)$"="Log in for $
 『{{A}}』\n天然打磨的稀有晶狀珀芯，可用於『角色契約』、『武器補給』及『購買主角體力』。=[{{A}}]\nA naturally polished rare crystalline core, can be used in [Character Contract], [Weapon Supply], and [Purchase Wonder Stamina].
 天然打磨的稀有晶狀珀芯，可用於『角色契約』、『武器補給』及『購買主角體力』。=A naturally polished rare crystalline core, can be used in [Character Contract], [Weapon Supply], and [Purchase Wonder Stamina].
 
-r:"^是否消耗[{{A}}]×(.*)，\n購買(.*)張[{{B}}]？$"="Consume [{{A}}] x $1 \nto buy [{{B}}] x $2?"
+r:"^是否消耗[(.*)]×(.*)，\n購買(.*)張(.*)]？$"="Consume [$1] x $2 \nto buy [$3] x $4?"
 
 r:"^簽約$"="Pulls"
 請簽訂命運的契約\n<size\=26>全螢幕可滑動簽字=<size\=28>Please Sign The Contract of Destiny</size>
@@ -1351,6 +1372,7 @@ sr:"^「當未觸發UP或保底規則時，所有武器均分基礎獲取機率�
 無聲硝煙=Silent Tension
 偵探王子再臨=The Detective Prince
 轟鳴的方程式=Max Formula Racing
+新生之翼=The Nirvana Song
 
 ----------
 Gachapon + Crane (Capsule)
@@ -2259,6 +2281,7 @@ r:"^全體怪盜<color\=#fffea0>祝福</color>傷害提高(\d+(.\d+)?(%)?)$"="In
 r:"^全體怪盜<color\=#ff0036>HL</color>造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff0036>HIGHLIGHT</color> DMG Dealt by $1"
 r:"^全體怪盜<color\=#ff0036>追加效果</color>造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff0036>Follow Up</color> DMG Dealt by $1"
 r:"^全體怪盜<color\=#E3E3E3>萬能</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#E3E3E3>Almighty</color> DMG by $1"
+r:"^全體怪盜處於<color\=#E3E3E3>額外回合</color>時造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' DMG Dealt during <color\=#E3E3E3>Extra Turn</color> by $1"
 
 r:"^保底進度：<color\=#0665ca>(\d+)/(\d+)</color>$"="Pity: <color\=#0665ca>$1/$2</color>"
 r:"^領取 <color\=#0665ca>(\d+)</color> 次必得$"="Guarantee after <color\=#0665ca>$1</color> time(s)"
@@ -2355,7 +2378,7 @@ r:"^連續30天，每天5點贈送$"="Daily at 5 am (UTC+8) for 30 days"
 r:"^累計消費(\d+)台幣\((\d+)/(\d+)\)$"="Spend NT$ $1 ($2/$3)"
 
 r:"^傳記$"="Biography"
-傳記全書=<size\=25>Full Biography</size>
+傳記全書=<size\=24>Full Biography</size>
 傳記斷章=<size\=22>Biography Chapter</size>
 傳記殘頁=<size\=25>Biography Page</size>
 r:"^隱約可窺見傳奇的全書，可用於提升怪盜經驗，使用後立即增加(\d+)點。$"="A book that gives a glimpse of legends, can be used to gain $1 Thief EXP."
@@ -2403,7 +2426,7 @@ r:"^製成裝備整體結構的優質礦石，可用於在武器等級為30·40�
 r:"^製成裝備整體結構的粗製礦石，可用於在武器等級為10·20時突破。$"="Crude ore used to build the overall structure of equipments, can be used level up Weapons Enhance to Enhance 1-Enhance 2."
 
 {{A}}精魄=<size\=24>{{A}} Essence</size>
-{{A}}精碎=<size\=27>{{A}} Chunk</size>
+{{A}}精碎=<size\=24>{{A}} Chunk</size>
 {{A}}精末=<size\=28>{{A}} Scrap</size>
 r:"^神秘的精魄體，可用於提升{{A}}經驗，使用後立即增加(\d+)點。$"="Mysterious essence, can be used to gain $1 {{A}} EXP."
 r:"^神秘的精碎體，可用於提升{{A}}經驗，使用後立即增加(\d+)點。$"="Mysterious chuck, can be used to gain $1 {{A}} EXP."
@@ -2485,6 +2508,7 @@ r:"^加贈$"="Get            <size\=1>.</size>"
 累計簽到7日，即可獲得=7 days daily rewards
 r:"^累計簽到(\d+)日，即可獲得<size\=66><sprite\=19></size>X(\d+)$"="Log in for $1 days to get <size\=66><sprite\=19></size>X$2"
 r:"^累計簽到(\d+)日，即可獲得<size\=66><sprite\=21></size>X(\d+)$"="Log in for $1 days to get <size\=66><sprite\=21></size>X$2"
+r:"^累計簽到(\d+)日，獲得<size\=66><sprite\=19></size>X(\d+)<size\=66><sprite\=20></size>X(\d+)$"="Log in rewards <size\=66><sprite\=19></size>X$2<size\=66><sprite\=20></size>X$3"
 r:"^第(\d+)天$"="Day $1"
 
 當前選中：=Selected:
@@ -3081,6 +3105,18 @@ r:"^當前有<color\=#FF0000>(\d+)</color>位夥伴向你發出邀約，是否�
 巧克力點心餐盒=Chocolate Snack Box
 
 拖動右側碎片，完成拼圖=Drag the pieces to complete the puzzle
+
+請選擇一個你希望收到的獎勵！=Please select a reward you wish to receive!
+請選擇你後續希望推出的協同角色=Please select a character you wish to become a Confidant
+r:"^全服能量達到<color\=#FFF100>(.*)</color>時透過郵件發放獎勵$"="Gain this when the server reaches <color\=#FFF100>$1</color> energy"
+全服投票結果會在活動結束後一周透過郵件發佈=Email results one week post-event
+禮物心願=Gift Wish
+羈絆心願=Bond Wish
+許願贈禮·心象=Wish Gift·Mental Image
+許願贈禮·時運=Wish Gift·Fortune
+許願贈禮·啟示=Wish Gift·Revelation
+許願贈禮·不羈=Wish Gift·Wild
+sr:"^許下(.*)之願，可獲得(.*)\*(\d+)、(.*)\*(\d+)。$"="Can gain $2*$3, $4*$5"
 
 ----------
 Character's Story
