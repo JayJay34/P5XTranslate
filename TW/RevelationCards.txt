@@ -134,8 +134,9 @@ r:"^使用治療技能時，自身攻擊力提升<color\=#2899ff>(\d+%)</color>�
 
 r:"^【真誠】$"="[Sincerity]"
 r:"^真誠$"="Sincerity"
+r:"^使用{{A}}後，使所有同伴造成傷害提升(\d+%)，持續(\d+)回合。$"="After using {{A}}, increase all allies' DMG Dealt by $1 for $2 turns."
 r:"^戰鬥中，根據角色的治療加成的(\d+%)獲得傷害加成，透過這種方式最多提升<color\=#2899ff>(\d+%)</color>傷害加成。$"="Increase DMG Bonus up to <color\=#2899ff>$2</color> based on $1 of your Healing Bonus."
-r:"^解明怪盜裝備時生效：戰鬥開始時每有1個相同適應性屬性的同伴，使所有同伴生命值、攻擊力、防禦力額外提升<color\=#2899ff>(\d+%)</color>。$"="When equipped by Navigator Thieves: Increase all allies' HP, ATK and DEF by <color\=#2899ff>$1</color> with each ally with the same element."
+r:"^解明怪盜裝備時生效：戰鬥開始時每有1個相同適應性屬性的同伴，使所有同伴生命值、攻擊力、防禦力額外提升<color\=#2899ff>(\d+%)</color>。$"="When equipped by Elucidate Thieves: Increase all allies' HP, ATK and DEF by <color\=#2899ff>$1</color> with each ally with the same element."
 
 r:"^【智慧】$"="[Wisdom]"
 r:"^智慧$"="Wisdom"
@@ -145,8 +146,9 @@ r:"^使用HIGHLIGHT時，攻擊力提升<color\=#2899ff>(\d+%)</color>，造成�
 
 r:"^【決心】$"="[Determination]"
 r:"^決心$"="Determination"
+r:"^戰鬥開始時，若自身處於己方行動佇列的第3/4位，則攻擊力提升(\d+%)/(\d+%)。$"="At the start of battle, if you are at 3rd/4th turn order, then increase ATK by $1/$2."
 r:"^戰鬥中，自身生命值達到(\d+)/(\d+)/(\d+)獲得傷害加成<color\=#2899ff>(\d+%)/(\d+%)/(\d+%)</color>。$"="Increase DMG Bonus by <color\=#2899ff>$4/$5/$6</color> when you reached $1/$2/$3 HP."
-r:"^解明怪盜裝備時生效：使用技能為敵人添加減益狀態，使主目標敵人防禦降低<color\=#2899ff>(\d+%)</color>，持續2回合。$"="When equipped by Navigator Thieves: Decrease the main target's DEF by <color\=#2899ff>$1</color> for 2 turns when inflicting debuff."
+r:"^解明怪盜裝備時生效：使用技能為敵人添加減益狀態，使主目標敵人防禦降低<color\=#2899ff>(\d+%)</color>，持續2回合。$"="When equipped by Elucidate Thieves: Decrease the main target's DEF by <color\=#2899ff>$1</color> for 2 turns when inflicting debuff."
 
 r:"^【創造】$"="[Creation]"
 r:"^創造$"="Creation"
@@ -161,6 +163,8 @@ r:"^造成萬能屬性傷害時，攻擊力提升<color\=#2899ff>(\d+%)</color>�
 
 r:"^【希望】$"="[Hope]"
 r:"^希望$"="Hope"
+r:"^解明怪盜裝備時生效：使用技能為同伴添加增益狀態，使技能目標穿透提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合。$"="When equipped by Elucidate Thieves: When using a buff skill on allies, increase the target's PEN by <color\=#2899ff>$1</color> for $2 turn."
+r:"^每造成1次技能傷害，自身火焰傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層；疊加至(\d+)層時，額外使自身暴擊率提升(\d+%)。$"="When dealing 1 hit of skill damage, increase own Fire DMG by $1 for $2 turns, up to $3 stacks; When reaching $4 stacks, additionally increase own CRIT Rate by $5."
 
 ----------
 All Arcana Cards
@@ -186,7 +190,7 @@ r:"^4套裝效果：暴擊效果提升<color\=#2899ff>(\d+%)</color>，持續(\d
 r:"^【職責】$"="<size\=20>  </size>[Duty]"
 r:"^職責$"="Duty"
 r:"^2套裝效果：生命值提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase HP by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：解明怪盜裝備時生效：戰鬥中使所有同伴生命值、攻擊力、防禦力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: When equipped by Navigator Thieves: Increase all allies' HP, ATK and DEF by <color\=#2899ff>$1</color>.</size>"
+r:"^4套裝效果：解明怪盜裝備時生效：戰鬥中使所有同伴生命值、攻擊力、防禦力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: When equipped by Elucidate Thieves: Increase all allies' HP, ATK and DEF by <color\=#2899ff>$1</color>.</size>"
 
 r:"^【主權】$"="<size\=20>  </size>[Sovereignty]"
 r:"^主權$"="Sovereignty"
@@ -249,21 +253,21 @@ r:"^4套裝效果：對處於負面狀態下的敵人咒屬性傷害提升<color
 
 r:"^【和解】$"="<size\=20>  </size>[Reconciliation]"
 r:"^和解$"="Reconciliation"
-r:"^2套裝效果：速度提升<color\=#2899ff>(\d+)</color>。$"="<size\=23>2-set effect: Increase SPD by <color\=#2899ff>$1</color>.</size>"
+r:"^2套裝效果：速度提升<color\=#2899ff>(\d+)</color>。$"="<size\=23>2-piece effect: Increase SPD by <color\=#2899ff>$1</color>.</size>"
 r:"^4套裝效果：戰鬥中，自身最大生命值、攻擊力、防禦力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: In battle, increase your Max HP, ATK, and DEF by <color\=#2899ff>$1</color>."
 
 r:"^【憂思】$"="<size\=20>  </size>[Worry]"
 r:"^憂思$"="Worry"
-r:"^2套裝效果：精力回復提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-set effect: Increase SP Recovery by <color\=#2899ff>$1</color>.</size>"
+r:"^2套裝效果：精力回復提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase SP Recovery by <color\=#2899ff>$1</color>.</size>"
 
 r:"^【挫敗】$"="<size\=20>  </size>[Defeat]"
 r:"^挫敗$"="Defeat"
-r:"^2套裝效果：效果命中提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-set effect: Increase Effect Hit Rate by <color\=#2899ff>$1</color>.</size>"
+r:"^2套裝效果：效果命中提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase Effect Hit Rate by <color\=#2899ff>$1</color>.</size>"
 r:"^4套裝效果：對處於負面狀態下的敵人造成火焰屬性傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: Increase Fire DMG to enemies with debuff by <color\=#2899ff>$1</color>."
 
 r:"^【凱旋】$"="<size\=20>  </size>[Triumph]"
 r:"^凱旋$"="Triumph"
-r:"^2套裝效果：暴擊率提升<color\=#2899ff>(\d+\.\d+%)</color>。$"="<size\=23>2-set effect: Increase CRIT Rate by <color\=#2899ff>$1</color>.</size>"
+r:"^2套裝效果：暴擊率提升<color\=#2899ff>(\d+\.\d+%)</color>。$"="<size\=23>2-piece effect: Increase CRIT Rate by <color\=#2899ff>$1</color>.</size>"
 
 r:"^【徒勞】$"="<size\=20>  </size>[Futility]"
 r:"^徒勞$"="Futility"
@@ -275,9 +279,12 @@ r:"^4套裝效果：造成{{A}}技能傷害時，若與自身上次造成{{A}}�
 
 r:"^【謹慎】$"="<size\=20>  </size>[Prudence]"
 r:"^謹慎$"="Prudence"
+r:"^2套裝效果：速度降低<color\=#2899ff>(\d+)</color>，攻擊力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Decrease SPD by <color\=#2899ff>$1</color>, increase ATK by <color\=#2899ff>$2</color>.</size>"
+r:"^4套裝效果：造成傷害提升(\d+%)。$"="<size\=23>4-piece effect: Increase DMG Dealt by <color\=#2899ff>$1</color>.</size>"
 
 r:"^【執著】$"="<size\=20>  </size>[Obession]"
 r:"^執著$"="Obession"
+r:"^4套裝效果：攻擊力提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；使用{{A}}後再次獲得相同效果。$"="<size\=23>4-piece effect: Increase ATK by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again after using {{A}}.</size>"
 
 ----------
 Inspect Details + Combat Pop-Ups
@@ -302,6 +309,7 @@ r:"^上次{{A}}技能傷害屬性：萬能$"="Last {{A}} skill damage element: A
 
 創造&和解=Creation & Reconciliation
 創造&憂思=Creation & Worry
+希望&職責=Hope & Duty
 
 觸發【主權】套裝效果的額外傷害=<size\=28>Triggered the additional damage from [Sovereignty]</size>
 觸發【真諦】套裝效果的額外傷害=Triggered the additional damage from [Truth]

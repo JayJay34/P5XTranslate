@@ -382,13 +382,16 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的火焰�
 
 --- Ice ---
 
+Blizzard
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害，有(\d+\.\d+%)基礎機率使主目標敵人陷入凍結，持續(\d+)回合。$"="Deals $1 ATK Ice damage to <color\=#FFFF00>all</color> enemies, with a $2 base chance to inflict all enemies with Freeze for $3 turns."
+
 --- Electric ---
 
 //Electric Surge
 r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，(\d+\.\d+%)基礎機率使敵人觸電，持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK Electric damage to <color\=#FFFF00>1</color> enemy and has a <color\=#FFFF00>$2</color> chance of inflicting <link\=s|104><u>Shock</u></link> for 2 turns.
 
-Thor
-r:"^對<color\=#FFFF00>隨機</color>敵人造成(\d+\-\d+)段(\d+\.\d+%)攻擊力的電擊屬性傷害，對同一敵人的連續攻擊僅造成(\d+%)傷害，雷神威勢為滿層時，額外提升所有同伴造成的電擊屬性傷害(\d+\.\d+%)，持續1回合。$"="Deals $2 ATK Elec damage to <color\=#FFFF00>random</color> enemies $1 times, skill will only deal $3 damage to the same enemy. When Thunder God's Might is maxed, additionally increases all allies' Elec DMG Dealt by $4 for 1 turn."
+Heavenly Thunder
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，『雷神威勢』為(\d+)層時，有(\d+%)的基礎機率使所有敵人陷入<link\="s\|104"><u>觸電</u></link>狀態，效果持續(\d+)回合。$"="Deals $1 ATK Elec damage to <color\=#FFFF00>all</color> enemies. When [Thunder God's Might] is at $2 stacks, there is a $3 base chance to inflict all enemies with Shock for $4 turns."
 
 --- Wind ---
 
@@ -453,7 +456,8 @@ r:"對<color\=#FFFF00>所有</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</col
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，若主目標敵人生命值低於(\d+%)則有機率附加即死效果。$"="Deals $1 ATK Bless damage to <color\=#FFFF00>all</color> enemies with a chance of insta-kill if the main target is below $2 HP."
 
 Desire of Life Shell
-r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，恢復生命值最低的同伴(\d+\.\d+%)攻擊力的生命值。$"="Deals $1 ATK Bless damage to <color\=#FFFF00>all</color> enemies and restores $2 ATK HP to the lowest HP ally."
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，恢復生命值最低的同伴(\d+\.\d+%)攻擊力的生命值。$"="Deals $1 ATK Bless damage to <color\=#FFFF00>all</color> enemies, and restores $2 ATK HP to the lowest HP ally."
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使1名生命值最低的同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值。$"="Deals <color\=#fffc40>$1</color> ATK Bless damage to all enemies, and restores <color\=#fffc40>$2</color> ATK + <color\=#fffc40>$3</color> HP to the lowest HP ally."
 
 Light of Salvation
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，使自身獲得(\d+)層祝福效果。自身每層祝福效果使得技能傷害提升(\d+%)，最多提升(\d+%)。$"="Deals $1 ATK Bless damage to <color\=#FFFF00>all</color> enemies and gain $2 stacks of Bless. For every stack of Bless you have, increases skill damage by $3, up to $4."
@@ -807,6 +811,7 @@ r:"^傷<color\=#000000>害</color>提高$"="D<color\=#000000>M</color>G Bonus Up
 r:"^傷<color\=#000000>害</color>提升$"="D<color\=#000000>M</color>G Bonus Up"
 r:"^造<color\=#000000>成</color>傷害提升$"="D<color\=#000000>M</color>G Dealt Up"
 r:"^最<color\=#000000>終</color>傷害提升$"="F<color\=#000000>i</color>nal DMG Up"
+r:"^總<color\=#000000>傷</color>害增幅$"="T<color\=#000000>o</color>tal DMG Up"
 r:"^追<color\=#000000>加</color>特化$"="F<color\=#000000>o</color>llow Up Buff"
 r:"^傷<color\=#000000>害</color>減免$"="D<color\=#000000>M</color>G RES Up"
 r:"^免<color\=#000000>傷</color>率提升$"="D<color\=#000000>M</color>G RES Up"
@@ -961,6 +966,8 @@ r:"^受到傷害提升$"="Increase DMG Taken"
 r:"^受HL傷害提升$"="Increase HIGHLIGHT DMG Taken"
 r:"^受百分比傷害降低$"="<size\=23>Decrease Percentage DMG Taken</size>"
 r:"^受到百分比傷害降低$"="Decrease Percentage DMG Taken"
+r:"^受到基於自身最大生命值百分比的傷害降低$"="Decrease Percentage DMG Taken"
+r:"^受到基於自身最大生命值百分比的傷害大幅降低$"="Heavily decrease Percentage DMG Taken"
 r:"^受到最終傷害提高$"="Increase Final DMG Taken"
 r:"^火焰傷害提升$"="Increase Fire DMG"
 r:"^凍結傷害提升$"="Increase Ice DMG"
@@ -1075,6 +1082,7 @@ r:"^最終傷害提升(\d+%)，可疊加(\d+)層$"="Increase Final DMG by $1, up
 r:"^每層提供(\d+%)的最終傷害加成，最多可疊加(\d+)層$"="Increase Final DMG by $1, up to $2 stacks"
 r:"^處於額外回合時，最終傷害提高(\d+(.\d+)?(%)?)$"="<size\=26>Increase Final DMG by $1 during Extra Turn</size>"
 r:"^造成持續傷害時，最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1 when dealing Damage Over Time"
+r:"^總傷害增幅(\d+(.\d+)?(%)?)$"="Increase Total DMG by $1"
 r:"^傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Bonus by $1"
 r:"^造成傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Dealt by $1"
 r:"^造成傷害提高(\d+(.\d+)?(%)?)$"="Increase DMG Dealt by $1"

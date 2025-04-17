@@ -1549,7 +1549,7 @@ r:"^擊敗菁英陰影（(\d+)/(\d+)）$"="<size\=22>Defeat elite Shadows ($1/$2
 r:"^乘坐電梯$"="Take the Elevator"
 「<color\=#ff3b37>快速通關</color>」滿星通關的區域=[<color\=#ff3b37>Quick Clear</color>] Trials with all stars
 
-看來您準備好鍛煉自己的慾望了。=<size\=29>Looks like you're ready to train your Desires.</size>
+看來您準備好鍛煉自己的慾望了。=<size\=29>Looks like you're ready to train your desires.</size>
 這是為了客人您準備的物資。=<size\=29>These are the supplies prepared for the guest.</size>
 
 上期回顧=Recap
@@ -1579,7 +1579,9 @@ r:"^青<color\=#000000>龍</color>鱗甲$"="S<color\=#000000>c</color>ale Armor"
 {{A}}與所有{{B}}處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。=<size\=24>{{A}} and all {{B}} have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.</size>
 
 r:"^1、{{A}}每隔1個回合，獲得(\d+)層「神之庇佑」，每層可以為其提供(\d+%)的減傷。\n2、{{A}}受到來自技能或追加效果的每段傷害，都會損失一層「神之庇佑」。\n3、{{A}}失去所有「神之庇佑」時會使所有怪盜獲得「神之祝福」，提升所有怪盜造成的傷害。$"="<size\=23>1. {{A}} will gains $1 stacks of [God's Protection] every other turns, each stack will provide $2 DMG RES.\n2. {{A}} will loses 1 stack of [God's Protection] after taking a hit of damage from skills or Follow Up.\n3. Give all Thieves [God's Blessing] which increase all Thieves' DMG Dealt when {{A}} loses all stacks of [God's Protection].</size>"
+r:"^1、{{A}}每隔1個回合，獲得(\d+)層「神之庇佑」，每層可以為其提供(\d+%)的最終傷害減免。\n2、{{A}}受到來自技能或追加效果的每段傷害，都會損失一層「神之庇佑」。\n3、{{A}}失去所有「神之庇佑」時會使所有怪盜獲得「神之祝福」，提升所有怪盜造成的最終傷害。$"="<size\=23>1. {{A}} will gains $1 stacks of [God's Protection] every other turns, each stack will provide $2 Final DMG RES.\n2. {{A}} will loses 1 stack of [God's Protection] after taking a hit of damage from skills or Follow Up.\n3. Gives all Thieves [God's Blessing] when {{A}} loses all stacks of [God's Protection], increases all Thieves' Final DMG Dealt.</size>"
 r:"^每層使自身受到的傷害降低(\d+%)，每次受到傷害會損失(\d+)層$"="Increase DMG RES by $1, \nlose $2 stack after taking a hit of damage"
+r:"^每層使自身受到的傷害降低(\d+%)，受到來自技能或追加效果的傷害時會損失(\d+)層$"="<size\=27>Increase DMG RES by $1, lose $2 stack after taking a hit of damage from skill or Follow Up</size>"
 神之庇佑=God's Protection
 神之祝福=God's Blessing
 r:"^神<color\=#000000>之</color>庇佑$"="G<color\=#000000>o</color>d's Protection"
@@ -1651,3 +1653,11 @@ sr:"^標<color\=#000000>記</color>：(.*)$"="M<color\=#000000>a</color>rk: $1"
 sr:"^隊員使用(.*)技能造成(.*)/(.*)屬性傷害時，為其他同伴添加『(.*)』。『(.*)』：提供(\d+%)的最終傷害加成，持續(\d+)回合。$"="When teammates deal $2/$3 damage with a $1 skill, gives all allies [$4]. [$5]: Increases Final DMG Bonus by $6 for $7 turns."
 細胞活化=Cell Activation
 r:"^細<color\=#000000>胞</color>活化$"="C<color\=#000000>e</color>ll Activation"
+
+暗河瀑湧=Dark River
+sr:"^在戰鬥中獲得<link\="dc\|237"><u>『穩定領域』</u></link>效果，同時自身造成弱點傷害時，為所有友方添加<link\="dc\|238"><u>『(.*)』</u></link>。$"="<size\=27>Gains <link\="dc|237"><u>[Stable Domain]</u></link> in battle, when dealing Weak damage, gives all allies <link\="dc|238"><u>[$1]</u></link>.</size>"
+sr:"^獲得『穩定領域』效果；自身造成弱點傷害時，為所有友方添加『(.*)』效果。『(.*)』：造成的最終傷害提升(\d+%)，若自身處於額外回合，造成的最終傷害額外提升(\d+%)，持續(\d+)回合。$"="Gains [Stable Domain]; When dealing Weak damage, gives all allies [$1]. [$2]: Increases Final DMG Dealt by $3, if you are in Extra Turn, additionally increases Final DMG Dealt by $4 for $5 turn."
+<color\=#66ccff>渦流纏繞</color>=<color\=#66ccff>Coiling Maelstrom</color>
+渦流纏繞=Coiling Maelstrom
+r:"^渦<color\=#000000>流</color>纏繞$"="C<color\=#000000>o</color>iling Maelstrom"
+r:"^造成的最終傷害提升(\d+%)，若自身處於額外回合，造成的最終傷害額外提升(\d+%)，持續(\d+)回合。$"="Increases Final DMG Dealt by $1, if you are in Extra Turn, additionally increases Final DMG Dealt by $2 for $3 turn."
