@@ -574,6 +574,9 @@ r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的火焰屬�
 
 --- Ice ---
 
+Blizzard
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，並有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使所有敵人陷入<link\="s\|103"><u>凍結</u></link>狀態，效果持續(\d+)回合。$"="Deals <color\=#fffc40>$1</color> ATK Ice damage to all enemies, with a <color\=#fffc40>$2</color> base chance to inflict all enemies with <link\="s|103"><u>Freeze</u></link> for $3 turns."
+
 Avalanche
 r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，有(\d+%)的固定機率無視弱點和倒地值，使目標陷入倒地狀態。若該技能使敵人陷入倒地狀態，則額外造成1次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害。$"="Deals <color\=#fffc40>$1</color> ATK Ice damage to 1 enemy, with a $2 fixed chance to ignore weakness and Down Gauge to down the enemy. If this skill downed the enemy, deal an additional <color\=#fffc40>$3</color> ATK Ice damage."
 
@@ -582,8 +585,8 @@ r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的冰凍屬�
 //Electric Surge
 r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率附著<link\="s\|104"><u>觸電</u></link>效果，效果持續(\d+)回合。$"="Deals <color\=#FFFF00>$1</color> ATK Elec damage to <color\=#FFFF00>1</color> enemy, with a <color\=#FFFF00>$2</color> base chance to inflict <link\=s|104><u>Shock</u></link> for $3 turns."
 
-Thor
-r:"對隨機敵人造成3段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，對同一目標的後續攻擊僅造成15%傷害。『雷神威勢』為滿層時，額外使所有同伴造成的電擊屬性傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續1回合。"=<size\=27>Deals <color\=#FFFF00>$1</color> ATK Elec damage to <color\=#FFFF00>1</color> random enemy 3 times.\nSubsequent attacks on the same enemy deal only 15% of the original damage.\nWhen [Thunder God's Might] is at maximum, increase Elec damage dealt by all allies by <color\=#FFFF00>$2</color> for 1 turn.</size>
+Heavenly Thunder
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害。『雷神威勢』為(\d+)層時，有(\d+%)的基礎機率使所有敵人陷入<link\="s\|104"><u>觸電</u></link>狀態，效果持續(\d+)回合。$"="Deals <color\=#fffc40>$1</color> ATK Elec damage to all enemies. When [Thunder God's Might] is at $2 stacks, there is a $3 base chance to inflict all enemies with <link\="s|104"><u>Shock</u></link> for $4 turns."
 
 --- Wind ---
 
@@ -783,6 +786,9 @@ r:"^使所有友方角色的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>\+
 //(dominion)
 r:"^使所有同伴的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每(\d+)攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)，效果持續(\d+)回合。並使技能主目標造成的傷害額外提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每(\d+)攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)。效果持續(\d+)回合。$"="Increases all allies' ATK by <color\=#fffc40>$1</color> + <color\=#fffc40>$3</color> for every $2 ATK you have, up to $4 for $5 turns. Increases the main target's DMG Dealt by <color\=#fffc40>$6</color> + <color\=#fffc40>$8</color> for every $7 ATK you have, up to $8 for $9 turn."
 
+Infinite Algorithm
+r:"^使所有友方角色攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，額外使主目標傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Increases all allies' ATK by <color\=#fffc40>$1</color>, additionally increases the main target's DMG Dealt by <color\=#fffc40>$2</color> for $3 turns."
+
 //norn
 r:"使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的護盾，效果持續2回合。護盾受到傷害時，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使傷害來源陷入<link\="s\|105"><u>風襲</u></link>狀態。"=Give all allies <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> Shield for 2 turns. There is a <color\=#fffc40>$3</color> base chance to inflict <link\=s|105><u>Winded</u></link> to the enemy when the Shield took damage.
 
@@ -870,8 +876,8 @@ r:"^暴擊效果提升(\d+(.\d+)?(%)?)。$"="Increases CRIT damage by $1."
 r:"^效果命中提升(\d+(.\d+)?(%)?)。$"="Increases Effect Hit Rate by $1."
 r:"^造成的傷害提升(\d+(.\d+)?(%)?)。$"="Increases DMG Dealt by $1."
 r:"^效果抵抗提升(\d+(.\d+)?(%)?)。$"="Increases Effect RES by $1."
-r:"被包圍時暴擊率提升(\d+(.\d+)?(%)?)。$"="Increases CRIT Rate by $1 when surrounded."
-r:"先制攻擊時暴擊率提升(\d+(.\d+)?(%)?)。$"="Increases CRIT Rate by $1 during an ambush."
+r:"^被包圍時暴擊率提升(\d+(.\d+)?(%)?)。$"="Increases CRIT Rate by $1 when surrounded."
+r:"^先制攻擊時暴擊率提升(\d+(.\d+)?(%)?)。$"="Increases CRIT Rate by $1 during an ambush."
 
 //Resists
 r:"^受到的傷害降低(\d+(.\d+)?(%)?)。$"="Decreases DMG Taken by $1."
@@ -881,13 +887,13 @@ r:"^受到的暴擊率降低(\d+(.\d+)?(%)?)。$"="Decreases the chance of recei
 r:"^下雨時，造成異常效果時，效果命中提升(\d*\.?\d+%)。$"="Increases EHR when inflicting status ailments during Rain by $1."
 
 //Other
-r:"技能消耗的HP降低(\d+\.\d+%)。"=Decreases HP cost of skills by $1.
-r:"技能消耗的SP降低(\d+\.\d+%)。"=Decreases SP cost of skills by $1.
-r:"每回合開始時，回復(\d+\.\d+%)最大生命值。"=Restores $1 Max HP at the start of your turn.
-r:"先制攻擊時回復(.*)最大生命值和(.*)點精力值。"=Restores $1 Max HP and $2 SP at the start of each preemptive turn.
-r:"戰鬥勝利後回復(\d+\.\d+%)最大生命值和精力值。"=Restores $1 of Max HP and SP after winning a battle.
+r:"^技能消耗的HP降低(\d+(.\d+)?(%)?)。$"="Decreases HP cost of skills by $1."
+r:"^技能消耗的SP降低(\d+(.\d+)?(%)?)。$"="Decreases SP cost of skills by $1."
+r:"^每回合開始時，回復(\d+\.\d+%)最大生命值。$"="Restores $1 Max HP at the start of your turn."
+r:"^先制攻擊時回復(.*)最大生命值和(.*)點精力值。$"="Restores $1 Max HP and $2 SP at the start of each preemptive turn."
+r:"^戰鬥勝利後回復(\d+\.\d+%)最大生命值和精力值。$"="Restores $1 of Max HP and SP after winning a battle."
 r:"^下雨時受到的傷害降低(\d+\.\d+%)。$"="Decreases DMG Taken during Rain by $1."
-r:"物理攻擊(\d+%)機率反射，造成(\d+%)攻擊力物理屬性傷害。"=Physical attacks have a $1 chance to reflect, dealing $2 of the attacks damage back as Physical damage.
+r:"^物理攻擊(\d+%)機率反射，造成(\d+%)攻擊力物理屬性傷害。$"="Physical attacks have a $1 chance to reflect, dealing $2 of the attacks damage back as Physical damage."
 
 // Skill Characteristics (These are at the bottom cuz theyre used in skill descriptions too)//
 疊層=Stack
@@ -911,6 +917,7 @@ r:"物理攻擊(\d+%)機率反射，造成(\d+%)攻擊力物理屬性傷害。"=
 驅散=Dispel
 強化=Upgrade
 強化反擊=Enhanced Counter
+回溯=Rewind
 
 物理=Phys
 物理屬性傷害=Phys DMG
