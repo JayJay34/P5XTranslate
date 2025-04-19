@@ -1380,6 +1380,9 @@ Gachapon + Crane (Capsule)
 r:"^扭<color\=#ff0000ff>蛋</color>機$"="Ga<color\=#ff0000ff>ch</color>apon Machine"
 點擊{{A}}機抽取對應系列的{{A}}=Specific machine gives specific set
 閱讀《智慧之泉·{{A}}之謎》書本後扭到隱藏和限定款{{A}}機率增加!\n獎盃中可以獲取該書本。=<size\=25>After reading the book\n[Fountain of Wisdom•{{A}}], \nincrease the rate of rare {{A}}!</size>
+r:"^最多<color\=#FEFE60>再扭(\d+)次</color>必得隱藏款！$"="Guarantee the hidden Gachapon after <color\=#FEFE60>$1 pulls</color>!"
+限定款上架中=Limited edition available <size\=1>.</size>
+r:"^1週年限定倒計時：(\d+)天(\d+)時$"="1st Anniversary Limited Countdown: $1d $2h"
 圖鑑詳情=Details
 抽1次=1 Pull
 抽5次=5 Pulls
@@ -1437,6 +1440,8 @@ sr:"^請確認是否用「(.*)」交換「(.*)」？$"="Confirm if you are excha
 冬季森林=Winter Forest
 四驅戰車=Four-Wheel Drive
 咖啡廳招牌=Café Sign
+法老銘文=Pharaoh's Inscription
+週年派對慶典=Anniversary Party Celebration
 
 {{A}}中心大街{{B}}機=<size\=22>{{A}} {{B}} Machine</size>
 {{A}}娛樂街{{B}}機=<size\=22>Shinjuku {{B}} Machine</size>
@@ -1562,8 +1567,26 @@ r:"^新春限定倒計時：(\d+)天(\d+)時$"=" Countdown: $1d $2h"
 聚寶金獅 滾滾=Roll Roll Lion
 招財醒獅 天祿=Divine Lion
 
-金字塔星光秀=<size\=19>Pyramid Starlight Show</size>
-r:"^金字塔星光秀\((\d+)/(\d+)\)$"="<size\=18>Pyramid Starlight Show ($1/$2)</size>"
+金字塔星光秀=<size\=18>Pyramid Starlight Show</size>
+r:"^金字塔星光秀\((\d+)/(\d+)\)$"="<size\=17>Pyramid Starlight Show ($1/$2)</size>"
+嘻哈阿努比=Hip Hop Anubis
+爵士阿努比=Jazz Anubis
+搖滾阿努比=Rock and Roll Anubis
+舞王阿努比=Dancing King Anubis
+歌舞魅狼=Pole Dancing Anubis
+愛之樂陵=Love's Necropolis
+法老狂想=Pharaoh's Fantasy
+
+怪盜的週年派對=<size\=19>Thieves Anniversary Party</size>
+r:"^怪盜的週年派對\((\d+)/(\d+)\)$"="<size\=16>Thieves Anniversary Party ($1/$2)</size>"
+派對開始=Party Start
+慶祝時刻=Celebration Moment
+啟程紀念=Departure Commemoration
+裝扮派對=Decoration Party
+驚喜禮物=Surprise Gift
+熱情狂飆=Wild Rush
+舞會造型=Ball Style
+週年蛋糕塔=Anniversary Cake
 
 sr:"^(.*)遊戲廳中的娃娃機，\n本期可限時抓取超稀有娃娃\n「<color\=#ffd145>(.*)</color>」、「<color\=#ffd145>(.*)</color>」。$"="<size\=23>Crane machine in the $1 arcade,\ncan obtain the limited super rare doll\n[<color\=#ffd145>$2</color>], [<color\=#ffd145>$3</color>].</size>"
 娃娃機=Crane Game
@@ -2737,6 +2760,7 @@ r:"^消耗(\d+)點體力\((\d+)\/(\d+)\)$"="Spend $1 Stamina ($2/$3)"
 r:"^消耗(\d+)點行動力\((\d+)\/(\d+)\)$"="Spend $1 Energy Points ($2/$3)"
 r:"^完成(\d+)次委託派遣$"="Complete $1 Commissions"
 r:"^完成(\d+)次委託派遣\((\d+)\/(\d+)\)$"="Complete $1 Commissions ($2/$3)"
+r:"^完成(\d+)次委託派遣 \((\d+)\/(\d+)\)$"="Complete $1 Commissions ($2/$3)"
 r:"^完成(\d+)次往日回溯\((\d+)\/(\d+)\)$"="Complete $1 Past Echo ($2/$3)"
 在「星盤試煉」中通過「紫色或紅色」監測點=Clear 1 [Purple or Red] Monitoring Point in Astrolabe Trials
 r:"^在「星盤試煉」中通過「紫色或紅色」監測點\((\d+)\/(\d+)\)$"="Clear 1 [Purple or Red] Monitoring Point in Astrolabe Trials ($1/$2)"
@@ -2774,6 +2798,7 @@ r:"^第(\d+)天可直接領取$"="Claim on day $1"
 r:"^使用後可自選1名以下怪盜：\n(.*)。$"="Can be used to choose 1 following Thief: $1."
 以下角色在活動契約中獲得=The following characters are from Event Contract
 r:"^親愛的隊長：\n自遊戲開服之日起，您已累計登入達到<color\=#0F69CA>(.*)</color>天。為了感謝您一直以來的支持與陪伴，截止(.*)年4月18日週年慶當天，我們將會根據您的總登入天數為您送上特別的週年禮物，祝您的{{A}}之旅更加精彩。$"="Dear Captain: Since the game's launch, you have logged in for a total of <color\=#0F69CA>$1</color> days. To express our gratitude for your unwavering support, we will send you a special anniversary gift based on your total login days on April 18th, $2. We wish you an even more wonderful {{A}} journey."
+r:"^親愛的隊長：\n自遊戲開服之日起至今，您已累計登入達到<color\=#0F69CA>(.*)</color>天。為了感謝您一直以來的支持與陪伴，我們已根據您的總登入天數為您送上特別的週年禮物，祝您的{{A}}之旅更加精彩。$"="Dear Captain: Since the game's launch until now, you have logged in for a total of <color\=#0F69CA>$1</color> days. To express our gratitude for your unwavering support, we are sending you a special anniversary gift based on your total login days. We wish you an even more wonderful {{A}} journey."
 為感謝您長期的陪伴，額外為您贈送=Special thank-you gifts for your continued support
 請於遊戲一週年當日上午5:00之後，在本頁面領取獎勵。=Please claim your rewards on this page after 05:00 (UTC+8) on the game's 1st anniversary.
 

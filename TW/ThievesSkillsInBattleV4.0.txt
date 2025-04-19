@@ -12,6 +12,7 @@ r:"^該技能(\d+)回合後準備就緒。$"="Skill is ready after $1 turn(s)"
 當前未上陣支援怪盜。=No navigator.
 支援怪盜目前無法使用。=Navigator currently not ready.
 當前HIGHLIGHT還在冷卻中…=This HIGHLIGHT is on cooldown...
+r:"^此技能將在(\d+)級解鎖$"="Unlock skill at Lv. $1"
 
 ----------
 CATTLE - Lufel
@@ -117,22 +118,38 @@ r:"^破<color\=#000000>綻</color>$"="V<color\=#000000>u</color>lnerability"
 ----------
 Luce - Shoki Ikenami
 ----------
-r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，使所有同伴獲得(\d+)層祝福效果，並使所有同伴傷害提升(\d+\.\d+%)，持續(\d+)回合。$"="Deals $1 ATK Bless damage to <color\=#FFFF00>1</color> enemy, gives all allies $2 stacks of Bless, and increases all allies' DMG Dealt by $3 for $4 turns."
-r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使所有同伴獲得(\d+)層<link\="s\|111"><u>祝福</u></link>效果，並使所有同伴傷害提升\（每(\d+)點{{A}}的攻擊力提供(\d+\.\d+%)傷害加成，上限<color\=#FFFC40>(\d+\.\d+%)</color>\），持續(\d+)回合。$"="Deals <color\=#FFFC40>$1</color> ATK Bless damage to 1 enemy, gives all allies $2 stacks of <link\="s|111"><u>Bless</u></link>, and increases all allies' DMG Dealt \(For every $3 ATK, increases DMG Dealt by $4, up to <color\=#FFFC40>$5</color>) for $6 turns."
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，使所有同伴獲得(\d+)層祝福效果，並使所有同伴傷害提升\（每(\d+)點{{A}}的攻擊力提供(\d+\.\d+%)傷害加成，上限(\d+\.\d+%)\），持續(\d+)回合。$"="Deals $1 ATK Bless damage to <color\=#FFFF00>1</color> enemy, gives all allies $2 stacks of Bless, and increases all allies' DMG Bonus (For every $3 ATK, increases DMG Bonus by $4, up to $5) for $6 turns."
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使所有同伴獲得(\d+)層<link\="s\|111"><u>祝福</u></link>效果，並使所有同伴傷害提升\（每(\d+)點{{A}}的攻擊力提供(\d+\.\d+%)傷害加成，上限<color\=#FFFC40>(\d+\.\d+%)</color>\），持續(\d+)回合。$"="Deals <color\=#FFFC40>$1</color> ATK Bless damage to 1 enemy, gives all allies $2 stacks of <link\="s|111"><u>Bless</u></link>, and increases all allies' DMG Bonus (For every $3 ATK, increases DMG Bonus by $4, up to <color\=#FFFC40>$5</color>) for $6 turns."
 
-r:"^使除自身以外的<color\=#FFFF00>1名</color>同伴防禦力提升(\d+\.\d+%)。並使目標免疫部分精神異常效果（眩暈、睡眠、混亂、遺忘），持續(\d+)回合。\n冷卻時間：(\d+)回合。$"="Increases <color\=#FFFF00>1</color> other ally's DEF by $1, and gives them immunity to certain Mental Ailments (Dizzy, Sleep, Confuse, Forgot) for $2 turns.\nCooldown: $3 turns."
-r:"^使除自身以外的1名同伴防禦力提升\（數值相當於自身攻擊力的(\d+\.\d+%)，上限<color\=#FFFC40>(\d+\.\d+%)</color>\）並使目標免疫部分精神異常效果（眩暈、睡眠、混亂、遺忘），持續(\d+)回合。\n冷卻時間：(\d+)回合。$"="Increases 1 other ally's DEF (Based on $1 own ATK, up to <color\=#FFFC40>$2</color>) and gives them immunity to certain Mental Ailments (Dizzy, Sleep, Confuse, Forgot) for $3 turns.\nCooldown: $4 turns."
+r:"^使除自身以外的<color\=#FFFF00>1名</color>同伴防禦力提升\（每(\d+)點{{A}}的攻擊力提供(\d+\.\d+%)防禦力加成，上限(\d+\.\d+%)\）。並使目標免疫部分精神異常效果（眩暈、睡眠、混亂、遺忘），持續(\d+)回合。\n冷卻時間：(\d+)回合。$"="Increases <color\=#FFFF00>1</color> other ally's DEF (For every $1 ATK, increases DEF by $2, up to $3), and gives them immunity to certain Mental Ailments (Dizzy, Sleep, Confuse, Forgot) for $4 turns.\nCooldown: $5 turns."
+r:"^使除自身以外的1名同伴防禦力提升\（每(\d+)點{{A}}的攻擊力提供(\d+\.\d+%)防禦力加成，上限<color\=#FFFC40>(\d+\.\d+%)</color>\），並使目標免疫部分精神異常效果（眩暈、睡眠、混亂、遺忘），持續(\d+)回合。\n冷卻時間：(\d+)回合。$"="Increases 1 other ally's DEF (For every $1 ATK, increases DEF by $2, up to <color\=#FFFC40>$3</color>) and gives them immunity to certain Mental Ailments (Dizzy, Sleep, Confuse, Forgot) for $4 turns.\nCooldown: $5 turns."
 
-r:"^使<color\=#FFFF00>所有</color>同伴攻擊力提升(\d+)，持續(\d+)回合。\n根據自身當前的『即興表演』狀態，使技能主目標獲得額外效果。\n『即興·滲透』：使技能主目標持續傷害效果提升(\d+\.\d+%)，效果命中提升(\d+%)，持續(\d+)回合。\n『即興·顛覆』：使技能主目標技巧精通提升(\d+)，造成TECHNICAL時攻擊力提升(\d+%)，持續(\d+)回合。\n『即興·共情』：使技能主目標暴擊效果提升(\d+\.\d+%)，持續(\d+)回合。\n『即興·感應』：使技能主目標穿透(\d+\.\d+%)，持續(\d+)回合。$"="Increases <color\=#FFFF00>all</color> allies' ATK by $1 for $2 turns.\nBased on your current [Improv], gives the main target additional effects.\n[Improv·Osmosis]: Increases the main target's Damage Over Time effect by $3 and EHR by $4 for $5 turns.\n[Improv·Subversion]: Increases the main target's TECHNICAL Mastery by $6 and ATK when dealing TECHNICAL by $7 for $8 turns.\n[Improv·Empathy]: Increases the main target's CRIT DMG by $9 for $10 turns.\n[Improv·Resonance]: Increases the main target's PEN by $11 for $12 turns."
-r:"^使所有同伴攻擊力提升\（數值相當於自身攻擊力的(\d+%)，上限<color\=#FFFC40>(\d+)</color>\），持續(\d+)回合。\n根據自身當前的『即興表演』狀態，使技能主目標獲得額外效果。\n『即興·滲透』：使技能主目標持續傷害效果提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果命中提升(\d+%)，持續(\d+)回合。\n『即興·顛覆』：使技能主目標技巧精通提升<color\=#FFFC40>(\d+%)</color>，造成TECHNICAL時攻擊力提升(\d+%)，持續(\d+)回合。\n『即興·共情』：使技能主目標暴擊效果提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。\n『即興·感應』：使技能主目標穿透<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Increases all allies' ATK \(Based on $1 own ATK, up to <color\=#FFFC40>$2</color>\) for $3 turns.\nBased on your current [Improv], gives the main target additional effects.\n[Improv·Osmosis]: Increases the main target's Damage Over Time effect by <color\=#FFFC40>$4</color> and EHR by $5 for $6 turns.\n[Improv·Subversion]: Increases the main target's TECHNICAL Mastery by <color\=#FFFC40>$7</color> and ATK when dealing TECHNICAL by $8 for $9 turns.\n[Improv·Empathy]: Increases the main target's CRIT DMG by <color\=#FFFC40>$10</color> for $11 turns.\n[Improv·Resonance]: Increases the main target's PEN by <color\=#FFFC40>$12</color> for $13 turns."
+r:"^使<color\=#FFFF00>所有</color>同伴攻擊力提升\（數值相當於自身攻擊力的(\d+%)，上限(\d+)\），持續(\d+)回合。\n根據自身當前的『即興表演』狀態，使技能主目標獲得額外效果。\n『即興·滲透』：使技能主目標持續傷害效果提升(\d+\.\d+%)，效果命中提升(\d+%)，持續(\d+)回合。\n『即興·顛覆』：使技能主目標技巧精通提升(\d+)，造成TECHNICAL時攻擊力提升(\d+%)，持續(\d+)回合。\n『即興·共情』：使技能主目標暴擊效果提升(\d+\.\d+%)，持續(\d+)回合。\n『即興·感應』：使技能主目標穿透提升(\d+\.\d+%)，持續(\d+)回合。$"="Increases <color\=#FFFF00>all</color> allies' ATK (Based on $1 own ATK, up to $2) for $3 turns.\nBased on your current [Improv], gives the main target additional effects.\n[Improv·Osmosis]: Increases the main target's Damage Over Time effect by $4 and EHR by $5 for $6 turns.\n[Improv·Subversion]: Increases the main target's TECHNICAL Mastery by $7 and ATK when dealing TECHNICAL by $8 for $9 turns.\n[Improv·Empathy]: Increases the main target's CRIT DMG by $10 for $11 turns.\n[Improv·Resonance]: Increases the main target's PEN by $12 for $13 turns."
+r:"^使所有同伴攻擊力提升\（數值相當於自身攻擊力的(\d+%)，上限<color\=#FFFC40>(\d+)</color>\），持續(\d+)回合。\n根據自身當前的『即興表演』狀態，使技能主目標獲得額外效果。\n『即興·滲透』：使技能主目標持續傷害效果提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果命中提升(\d+%)，持續(\d+)回合。\n『即興·顛覆』：使技能主目標技巧精通提升<color\=#FFFC40>(\d+)</color>，造成TECHNICAL時攻擊力提升(\d+%)，持續(\d+)回合。\n『即興·共情』：使技能主目標暴擊效果提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。\n『即興·感應』：使技能主目標穿透提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Increases all allies' ATK (Based on $1 own ATK, up to <color\=#FFFC40>$2</color>) for $3 turns.\nBased on your current [Improv], gives the main target additional effects.\n[Improv·Osmosis]: Increases the main target's Damage Over Time effect by <color\=#FFFC40>$4</color> and EHR by $5 for $6 turns.\n[Improv·Subversion]: Increases the main target's TECHNICAL Mastery by <color\=#FFFC40>$7</color> and ATK when dealing TECHNICAL by $8 for $9 turns.\n[Improv·Empathy]: Increases the main target's CRIT DMG by <color\=#FFFC40>$10</color> for $11 turns.\n[Improv·Resonance]: Increases the main target's PEN by <color\=#FFFC40>$12</color> for $13 turns."
 
 r:"^使<color\=#FFFF00>所有</color>同伴攻擊力提升\（數值相當於自身攻擊力的(\d+\.\d+%)，上限(\d+)\），效果抵抗提升(\d+\.\d+%)，持續(\d+)回合，並使所有同伴獲得(\d+)層祝福效果。$"="Increases <color\=#FFFF00>all</color> allies' ATK (Based on $1 own ATK, up to $2) and Effect RES by $3 for $4 turns, then gives all allies $5 stack of Bless."
+r:"^使<color\=#FFFF00>所有</color>同伴攻擊力提升\(數值相當於自身攻擊力的(\d+\.\d+%)，上限(\d+)，效果抵抗提升(\d+\.\d+%)，持續(\d+)回合，並使所有同伴獲得(\d+)層祝福效果。$"="Increases <color\=#FFFF00>all</color> allies' ATK (Based on $1 own ATK, up to $2) and Effect RES by $3 for $4 turns, then gives all allies $5 stack of Bless."
+
+繁星共演·滲透=Ensemble of Stars·Osmosis
+繁星共演·顛覆=Ensemble of Stars·Subversion
+繁星共演·共情=Ensemble of Stars·Empathy
+繁星共演·感應=<size\=23>Ensemble of Stars·Resonance</size>
 
 Combat Pop-ups
+r:"^聚<color\=#000000>光</color>獨白$"="S<color\=#000000>p</color>otlight Soliloquy"
+r:"^間<color\=#000000>離</color>之所$"="B<color\=#000000>r</color>echtian Divide"
+
 r:"^即<color\=#000000>興</color>·滲透$"="I<color\=#000000>m</color>prov·Osmosis"
 r:"^即<color\=#000000>興</color>·顛覆$"="<color\=#000000>m</color>prov·Subversion"
 r:"^即<color\=#000000>興</color>·共情$"="I<color\=#000000>m</color>prov·Empathy"
 r:"^即<color\=#000000>興</color>·感應$"="I<color\=#000000>m</color>prov·Resonance"
+
+r:"^繁<color\=#000000>星</color>共演$"="E<color\=#000000>n</color>semble of Stars"
+r:"^繁<color\=#000000>星</color>共演·滲透$"="E<color\=#000000>n</color>semble of Stars·Osmosis"
+r:"^繁<color\=#000000>星</color>共演·顛覆$"="E<color\=#000000>n</color>semble of Stars·Subversion"
+r:"^繁<color\=#000000>星</color>共演·共情$"="E<color\=#000000>n</color>semble of Stars·Empathy"
+r:"^繁<color\=#000000>星</color>共演·感應$"="E<color\=#000000>n</color>semble of Stars·Resonance"
+r:"^再<color\=#000000>會</color>，再會！記著我$"="A<color\=#000000>d</color>ieu, Adieu! Remember me"
 
 ----------
 Mont - Kotone Montagne
