@@ -418,6 +418,7 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動�
 
 Kohryu
 r:"^已進化，對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害。有(\d+\.\d+%)基礎機率使主目標敵人陷入暈眩狀態，持續(\d+)回合。$"="Evolved. Deals $1 ATK Psy damage to <color\=#FFFF00>all</color> enemies. There is a $2 base chance to inflict the main target with Dizzy for $3 turns."
+r:"^已進化，對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害。有(\d+\.\d+%)基礎機率使所有敵人陷入暈眩狀態，效果持續(\d+)回合。$"="Evolved. Deals $1 ATK Psy damage to <color\=#FFFF00>all</color> enemies. There is a $2 base chance to inflict all enemies with Dizzy for $3 turns."
 
 Shiva
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，根據消耗特殊資源觸發額外效果。$"="Deals $1 ATK Psy damage to <color\=#FFFF00>all</color> enemies, triggers additional effects based on the amount of Wisdom consumed."deal 100.0% of their Attack Power as Nimble Attribute damage, with additional effects triggered based on the consumption of Special Resources.
@@ -609,7 +610,7 @@ Snow Aegis
 r:"^使<color\=#FFFF00>所有</color>同伴獲得(\d+\.\d+%)攻擊力\+(\d+)的護盾，護盾存在時防禦力提升(\d+%)，持續(\d+)回合。$"="Gives <color\=#FFFF00>all</color> allies $1 ATK + $2 Shield for 2 turns. When the Shield is active increases DEF by $3."
 
 Higher Protection
-r:"^使<color\=#FFFF00>所有</color>同伴獲得(\d+\.\d+%)攻擊力\+(\d+)的護盾，持續(\d+)回合，主目標同伴處於護盾下的同伴，造成的傷害提升(\d+\.\d+%)，持續(\d+)回合。$"="Gives all allies <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> Shield for $3 turns. Increases the main target's DMG Dealt by $4 when they have this Shield for $5 turns."
+r:"^使<color\=#FFFF00>所有</color>同伴獲得(\d+\.\d+%)攻擊力\+(\d+)的護盾，持續(\d+)回合，主目標同伴處於護盾下的同伴，造成的傷害提升(\d+\.\d+%)，持續(\d+)回合。$"="Gives all allies <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> Shield for $3 turns. Increases the main target's DMG Dealt by $4 when they have Shield for $5 turns."
 
 r:"^為所有同伴添加護盾，持續(\d+)回合。$"="Gives all allies Shield for $1 turns."
 r:"^使血量最低的同伴適應性變為耐，持續(\d+)回合。$"="Changes the lowest HP ally's resistance to Resist all for $1 turns."
@@ -1081,6 +1082,7 @@ r:"^提升(\d+(.\d+)?(%)?)的最終傷害$"="Increase Final DMG by $1"
 r:"^最終傷害提升(\d+%)，可疊加(\d+)層$"="Increase Final DMG by $1, up to $2 stacks"
 r:"^每層提供(\d+%)的最終傷害加成，最多可疊加(\d+)層$"="Increase Final DMG by $1, up to $2 stacks"
 r:"^處於額外回合時，最終傷害提高(\d+(.\d+)?(%)?)$"="<size\=26>Increase Final DMG by $1 during Extra Turn</size>"
+r:"^造成的最終傷害提升(\d+%)，若自身處於額外回合，造成的最終傷害額外提升(\d+%)$"="Increase Final DMG Dealt by $1, if you are in Extra Turn, additionally increases Final DMG Dealt by $2"
 r:"^造成持續傷害時，最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1 when dealing Damage Over Time"
 r:"^總傷害增幅(\d+(.\d+)?(%)?)$"="Increase Total DMG by $1"
 r:"^傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Bonus by $1"
@@ -1230,6 +1232,9 @@ r:"^受電擊傷害提升(\d+(.\d+)?(%)?)$"="Increase Elec DMG Taken by $1"
 r:"^受電擊傷害提高(\d+(.\d+)?(%)?)$"="Increase Elec DMG Taken by $1"
 r:"^受到電擊傷害提升(\d+(.\d+)?(%)?)$"="Increase Elec DMG Taken by $1"
 r:"^受到電擊傷害提高(\d+(.\d+)?(%)?)$"="Increase Elec DMG Taken by $1"
+r:"^受到電擊屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase Elec DMG Taken by $1"
+r:"^受到電擊屬性暴擊效果提升(\d+(.\d+)?(%)?)$"="Increase Elec CRIT DMG Taken by $1"
+
 r:"^受疾風傷害提升(\d+(.\d+)?(%)?)$"="Increase Wind DMG Taken by $1"
 r:"^受疾風傷害提高(\d+(.\d+)?(%)?)$"="Increase Wind DMG Taken by $1"
 r:"^受疾風傷害加深(\d+(.\d+)?(%)?)$"="Increase Wind DMG Taken by $1"
