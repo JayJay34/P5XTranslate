@@ -5,11 +5,10 @@ UI
 即可獲得：=<size\=15> </size>exploration:
 探索度=Claim at: <size\=1>_</size>
 可獲得= exploration
-{{A}}晶片=Lust Chip
+{{A}}晶片={{A}} Chip
+{{A}}碎片={{A}} Shard
 在{{A}}棒球場中獲得……應該可以在工作臺與『老式遊戲機』·『活性碳』合成棒球館探索道具。=Obtained from the Stadium of Lust, can be used with [Vintage Game Console] and [Activated Carbon] to craft stadium exploration item.
-{{A}}晶片=Vanity Chip
 在{{A}}影視城中獲得……應該可以在工作臺與『老式遊戲機』·『紅磷粉』合成影視城探索道具。=Obtained from the Studio of Vanity, can be used with [Vintage Game Console] and [Red Phosphorus Powder] to craft studio exploration item.
-{{A}}晶片=Wrath Chip
 在{{A}}水壩中獲得……應該可以在工作臺與『老式遊戲機』·『珠光粉』合成水壩探索道具。=Obtained from the Dam of Wrath, can be used with [Vintage Game Console] and [Peral Powder] to craft dam exploration item.
 探索度：=<size\=19>Explored:</size>
 調整陣容=Party Switch
@@ -27,7 +26,7 @@ r:"^觀察模式冷卻中，(\d+)秒後可用！$"="Third Eye in cooldown"
 動態難度已開啟\n敵人等級會隨著主角等級的提升而改變=Dynamic Difficulty is on. \nEnemy level will change as Wonder's level increases
 狂<color\=#ff0000ff>化</color>惡黨=Ber<color\=#ff0000ff>se</color>rk Shadow
 詭<color\=#ff0000ff>譎</color>之徒=En<color\=#ff0000ff>ig</color>ma Shadow
-墮<color\=#ff0000ff>落</color>的狂徒=F<color\=#ff0000ff>al</color>len Shadow
+墮<color\=#ff0000ff>落</color>的狂徒=F<color\=#ff0000ff>a</color>llen Shadow
 強<color\=#ff0000ff>大</color>的陰影=S<color\=#ff0000ff>t</color>rong Shadow
 是否要降低難度進行挑戰(再次挑戰生效)=Do you want to lower the difficulty? \n(Take effect on next challenge)
 本次戰鬥無法進行養成與更換面具。=Cannot upgrade characters and change Personas.
@@ -35,6 +34,9 @@ r:"^觀察模式冷卻中，(\d+)秒後可用！$"="Third Eye in cooldown"
 
 嗯？要從{{A}}撤退，返回都市嗎？=Hm? Want to retreat from the {{A}} \nand head back to the city?
 這個寶箱很稀有！\n吾等需要準備<color\=#ff0000>開鎖工具</color>才行。=This treasure chest is very rare!\nWe need a <color\=#ff0000>Lockpick</color> to open.
+使用=Use
+先不使用=Don't use
+r:"^這裡似乎需要<color\=#FF0000>(\d+)</color>個<color\=#FF0000>開鎖工具</color>呢，\n目前的話有<color\=#FF0000>(\d+)</color>個，要使用嗎？$"="This requires <color\=#FF0000>$1</color> <color\=#FF0000>Lockpick</color>.\nYou currently have <color\=#FF0000>$2</color>, want to use it?"
 似乎沒有搜尋到新的財寶……=It seems like no new treasure has been found...
 冷卻期間無法使用。=Cannot be used during cooldown.
 無法在當前場景使用。=Cannot be used here.
@@ -141,6 +143,9 @@ PALACE 4
 電能塔封閉區上=<size\=15>Restricted Elec Tower Top</size>
 電能塔封閉區下=<size\=13>Restricted Elec Tower Bottom</size>
 廢棄取水塔=<size\=16>Abandoned Water Tower</size>
+
+這裡的環境和「<color\=#ff0000>水處理廠</color>」區域相近，\n也許在那裡能找到操控的方法。=The environment here is similar to the <color\=#ff0000>Water Treatment Plant</color>, maybe we can find a remote there.
+暫時無法操控這個裝置……\n也許可以回「<color\=#ff0000>水處理廠</color>」區域看看……=Can't operate this device... Let's head back and check the <color\=#ff0000>Water Treatment Plant</color>...
 
 ----------
 PALACE 4 PUZZLES
@@ -463,6 +468,16 @@ r:"^這個設備……寫的是(\d+)號，尾水管$"="This device... It's sayin
 r:"^這個設備……寫的是(\d+)號，水輪機$"="This device... It's saying number $1, water turbine."
 r:"^這個設備……寫的是(\d+)號，水輪機蝸殼$"="This device... It's saying number $1, turbine volute."
 r:"^這個設備……寫的是(\d+)號，電動機$"="This device... It's saying number $1, electric motor."
+
+----------
+PALACE 5
+----------
+蟻穴入口=Anthill Entrance
+密林=Forest
+正門前=Main Entrance
+側門=Side Entrance
+蟻穴=Anthill
+陰影聚集地=<size\=17>Shadows' Convergence</size>
 
 ----------
 PALACE 1 BOSS
@@ -970,6 +985,33 @@ r:"^1、本場戰鬥中{{B}}無法選中。{{B}}回合開始時，會交替給�
 雷神的祝福=Thunder God's Blessing
 
 ----------
+PALACE 5 ELITES
+----------
+{{B}}自身回合結束後，轉換成{{A}}。={{B}} will transform into {{A}} at the end of their turn.
+1、{{B}}會使用<color\=#ff3b37>「挑釁」</color>，造成一回合的狂怒。\n2、{{B}}自身回合結束後，進行<color\=#ff3b37>形態轉換</color>，轉換成{{A}}。\n3、{{A}}有最終傷害加成，並且在自身受到攻擊時，將會使用<color\=#ff3b37>「二連牙」</color>反擊，為怪盜附加<color\=#ff3b37>受到最終傷害提高</color>。自身回合行動結束，轉變為{{B}}。\n4、每進行一次周而復始的轉換，都會給自己添加一個<color\=#ff3b37>「輪迴」</color>，並獲得可疊加的受到傷害減免和最終傷害加成。=1. {{B}} wll use <color\=#ff3b37>[Taunt]</color>, inflicting Rage for 1 turn.\n2. At the end of {{B}}' turn, use <color\=#ff3b37>Shape Shift</color> to transform into {{A}}. \n3. {{A}} have Final DMG Bonus, and will Counter with <color\=#ff3b37>[Double Fangs]</color> when attacked, increasing Thieves' <color\=#ff3b37>Final DMG Taken</color>. Transform into {{B}} at the end of their turn.\n4. After each transform, gain 1 stack of <color\=#ff3b37>[Reincarnation]</color> to increase DMG RES and Final DMG Bonus.
+在自身受到攻擊時，將會使用二連牙反擊，為怪盜附加受到最終傷害提高的效果。自身回合行動結束，變回{{A}}，並獲得一層【輪迴】。=Will Counter with [Double Fangs] when attacked, increasing Thieves' Final DMG Taken. Transform into {{A}} at the end of your turn, and gain 1 stack of [Reincarnation].
+形態轉換=Shape Shift
+輪迴=Reincarnation
+有極高基礎機率使1名敵人陷入狂怒狀態 ，效果持續1回合。=There is a very high chance to inflict Rage to 1 enemy for 1 turn.
+對所有角色造成中量物理屬性傷害，並使所有角色進入『裂傷』狀態，防禦力少量降低，並每回合損失一定生命值，效果持續三回合。=Deals medium Phys damage to all enemies, and inflicts all enemies with [Laceration], lightly decreases their DEF and makes them lose HP each turn for 3 turns.
+觸發輪迴……=Triggered Reincarnation...
+r:"^由{{A}}變回{{B}}時，輪迴加(\d+)。$"="Add $1 Reincarnate when {{A}} transform into {{B}}"
+隨輪迴層數增加提高=Increase based on Reincarnation stacks
+
+r:"^1、詭譎的{{A}}擁有極高的生命值。\n2、在其回合結束時，若場上不存在{{A}}的倒影，則恢復(\d+%)的最大生命值。\n2、若場上存在{{A}}的倒影，則損失(\d+%)的最大生命值。$"="<size\=28>1. Strange {{A}} have extreme HP. \n2. At the end of their turn, restore $1 Max HP if there is no Reflection of {{A}}.\n3. Lose $2 Max HP if there is Reflection of {{A}}.</size>"
+r:"^1、詭譎的{{A}}擁有極高的生命值。\n2、在其回合結束時，若場上不存在{{A}}的倒影，則恢復(\d+%)的最大生命值。\n3、若場上存在{{A}}的倒影，則損失(\d+%)的最大生命值。$"="<size\=28>1. Strange {{A}} have extreme HP. \n2. At the end of their turn, restore $1 Max HP if there is no Reflection of {{A}}.\n3. Lose $2 Max HP if there is Reflection of {{A}}.</size>"
+r:"^1、回合開始時，若場上沒有{{A}}的倒影，則召喚一個{{A}}的倒影。\n2、在其回合釋放顧影，使所有怪盜每次行動損失固定(\d+%)生命值。$"="1. At the start of turn, if there is no Reflection of {{A}}, summon 1 Reflection of {{A}}.\n2. Use Narcissism during their turn, make Thieves lose $1 fixed Max HP after each action."
+r:"^1、{{B}}的倒影受到攻擊後會驅散一層<color\=#ff3b37>「倒影」</color>，<color\=#ff3b37>「倒影」</color>被全部驅散時，{{B}}的倒影即死。\n2、詭譎的{{B}}擁有較高的生命值。在其回合結束時，若場上不存在{{B}}的倒影，則恢復(\d+%)的最大生命值；若場上存在{{B}}的倒影，則損失(\d+%)的最大生命值。\n3、{{A}}的回合開始時，若場上沒有{{B}}的倒影，則召喚一個{{B}}的倒影。在其回合釋放技能<color\=#ff3b37>「顧影」</color>，使所有怪盜每次行動損失固定(\d+%)生命值。$"="1. Reflection of {{B}} will lose 1 stack of <color\=#ff3b37>[Reflection]</color> when attacked, die when all <color\=#ff3b37>[Reflection]</color> are dispelled.\n2. Strange {{B}} have extreme HP. At the end of their turn, restore $1 Max HP if there is no Reflection of {{B}}; Lose $2 Max HP if there is Reflection of {{B}}. \n3. At the start of {{A}}'s turn, if there is no Reflection of {{B}}, summon 1 Reflection of {{B}}. Use <color\=#ff3b37>[Narcissism]</color> during their turn, make Thieves lose $3 fixed Max HP after each action."
+{{A}}的倒影=Reflection of {{A}}
+顧影=Narcissism
+r:"^顧<color\=#000000>影</color>$"="N<color\=#000000>a</color>rcissism"
+r:"^使所有敵人進入顧影狀態，每次行動損失生命值，持續(\d+)回合$"="Inflicts all enemies with Narcissism, loses HP after each turn for $1 turns"
+倒影=Reflection
+受到技能時，驅散一層「倒影」，驅散所有「倒影」時，{{A}}的倒影即死=Dispel 1 stack of [Reflection] when attacked. Die when all [Reflection] are dispelled.
+{{A}}的倒影受到攻擊後會驅散一層【倒影】，【倒影】被全部驅散時，{{A}}的倒影即死。=When Reflection of {{A}} is attacked, dispel 1 stack of [Reflection]. Die when all [Reflection] are dispelled.
+消散=Dispersion
+
+----------
 CROSS FATE PALACE (CF) (COLLAB)
 ----------
 以破滅開始的旅程=<size\=26>Journey that starts with destruction</size>
@@ -997,9 +1039,11 @@ WONDER，要繼續前進嗎？=Wonder, want to keep going?
 治療室=Counselling Room
 
 ----------
-MEMNTOS 1
+MEMENTOS 1
 ----------
 未知地帶=Unknown Area
+看樣子，這是附近最厲害的敵人呢=Looks like this is the most powerful enemy nearby.
+不過不擊敗它又無法前往，要進行挑戰嗎？=But we can't continue without defeating it. \nDo you want to challenge it?
 
 r:"^(\d+%)機率閃避受到的普通攻擊和槍械攻擊$"="$1 to evade Melee Attack and Gun Attack"
 r:"^(\d+%)機率閃避受到的槍械攻擊和技能攻擊$"="$1 to evade Gun Attack and Skill"
@@ -1147,11 +1191,14 @@ MEMENTOS 3
 ----------
 1、{{A}}每回合末使隨機1名怪盜進入「地獄燃燒」狀態。\n「地獄燃燒」：回合結束失去大量生命值，可疊加3層，受到<color\=#00aeff>冰凍</color>屬性傷害後驅散。\n2、擊敗{{A}}後，戰鬥勝利。=1. Hell Biker will randomly inflict 1 enemy with [Hellfire]. \n[Hellfire]: Lose heavy amount of HP each turn, up to 3 stacks. Dispel after taking <color\=#00aeff>Ice</color> damage. \n2. Victory after defeating Hell Biker.
 {{A}}不會主動攻擊，無法被擊敗，受到傷害後立即對傷害來源釋放一次<color\=#00aeff>「布芙」</color>，造成少量<color\=#00aeff>冰凍</color>屬性傷害。=Jack Frost won't attack and can't be defeated. \nUse <color\=#00aeff>[Buff]</color> and deal small <color\=#00aeff>Ice</color> damage against the attacker after taking damage.
-1、{{B}}每回合末使隨機1名怪盜進入「地獄燃燒」狀態。\n「地獄燃燒」：回合結束失去大量生命值，可疊加3層，受到<color\=#00aeff>冰凍</color>屬性傷害後驅散。\n2、場上存在{{A}}，不會主動攻擊，無法被擊敗，受到傷害後立即對傷害來源釋放一次<color\=#00aeff>「布芙」</color>，造成少量<color\=#00aeff>冰凍</color>屬性傷害。\n3、擊敗{{B}}後，戰鬥勝利。=1. Hell Biker will randomly inflict 1 ally with [Hellfire]. \n[Hellfire]: Lose heavy amount of HP each turn, up to 3 stacks. Dispel after taking <color\=#00aeff>Ice</color> damage. \n2. Jack Frost won't attack and can't be defeated. \nUse <color\=#00aeff>[Buff]</color> and deal small <color\=#00aeff>Ice</color> damage against the attacker after taking damage. \n3. Victory after defeating Hell Biker.
+1、{{B}}每回合末使隨機1名怪盜進入「地獄燃燒」狀態。\n「地獄燃燒」：回合結束失去大量生命值，可疊加3層，受到<color\=#00aeff>冰凍</color>屬性傷害後驅散。\n2、場上存在{{A}}，不會主動攻擊，無法被擊敗，受到傷害後立即對傷害來源釋放一次<color\=#00aeff>「布芙」</color>，造成少量<color\=#00aeff>冰凍</color>屬性傷害。\n3、擊敗{{B}}後，戰鬥勝利。=1. Hell Biker will randomly inflict 1 ally with [Hellfire]. \n[Hellfire]: Lose heavy HP each turn, up to 3 stacks. Dispel after taking <color\=#00aeff>Ice</color> damage. \n2. Jack Frost won't attack and can't be defeated. \nUse <color\=#00aeff>[Buff]</color> and deal small <color\=#00aeff>Ice</color> damage against the attacker after taking damage. \n3. Victory after defeating Hell Biker.
 hiho~打我的話我可是會反擊的。=Hee-ho～ I will counter if you hit me.
 {{A}}的冰凍屬性攻擊，好像可以<color\=#FF0000>解除「地獄燃燒」</color>，小心應對吧！=Jack Frost's Ice attack seems to be able to dispel <color\=#FF0000>[Hellfire]</color>, be careful!
+地獄燃燒=Hellfire
+r:"^地<color\=#000000>獄</color>燃燒$"="H<color\=#000000>e</color>llfire"
+行動後損失大量生命值=Lose heavy HP afrer action
 
-{{A}}每回合末使所有怪盜進入「地獄燃燒」狀態。\n「地獄燃燒」：回合結束失去大量生命值，可疊加3層，受到<color\=#00aeff>冰凍</color>屬性傷害後驅散。=Hell Biker will inflict all enemies with [Hellfire]. \n[Hellfire]: Lose heavy amount of HP each turn, up to 3 stacks. Dispel after taking <color\=#00aeff>Ice</color> damage.
+{{A}}每回合末使所有怪盜進入「地獄燃燒」狀態。\n「地獄燃燒」：回合結束失去大量生命值，可疊加3層，受到<color\=#00aeff>冰凍</color>屬性傷害後驅散。=Hell Biker will inflict all enemies with [Hellfire]. \n[Hellfire]: Lose heavy HP each turn, up to 3 stacks. Dispel after taking <color\=#00aeff>Ice</color> damage.
 {{A}}不會主動攻擊，被擊敗後立即對所有怪盜造成少量<color\=#00aeff>冰凍</color>屬性傷害。=Jack Frost won't attack. \nDeal small <color\=#00aeff>Ice</color> damage to all enemies when defeated.
 
 {{A}}會使用<color\=#ff3b37>「瘟疫之白」</color>。\n「瘟疫之白」：使所有怪盜扣除一定生命值，並使隨機3名怪盜進入「瘟疫」狀態，每回合失去一定生命值，持續3回合，可疊加5層。=White Rider will use <color\=#ff3b37>[Plague of White]</color>. \n[Plague of White]: Decrease all enemies' HP by a certain amount and inflict 3 enemies with [Plague]. \n[Plague]: Lose a certain amount of HP every turn for 3 turns, up to 5 stacks.
@@ -1208,6 +1255,44 @@ r:"^玄<color\=#000000>武</color>之力$"="G<color\=#000000>e</color>nbu's Powe
 r:"^朱<color\=#000000>雀</color>之力$"="S<color\=#000000>u</color>zaku's Power"
 r:"^白<color\=#000000>虎</color>之力$"="B<color\=#000000>y</color>akko's Power"
 r:"^青<color\=#000000>龍</color>之力$"="S<color\=#000000>e</color>iryu's Power"
+
+----------
+MEMENTOS 4
+----------
+1、{{A}}會隨機給除自己外的友方角色施加具有保護效果的增益buff。\n2、{{A}}在其回合開始時，會根據場上存在的小怪釋放相應屬性的技能。\n3、小怪死亡一回合後，{{A}}會在其回合結束後重新召喚。=1. {{A}} will randomly gives a protection buff to all other allies. \n2. At the start of {{A}}'s turn, they will use skills based on the minion's element.\n3. After defeating the minion, {{A}} will resummon them at the end of their turn after 1 turn.
+1、當場上有小怪存在時，{{A}}會在其回合開始時釋放小怪適應性相應的技能：\n若{{B}}存在，則釋放<color\=#ff3b37>「大冰河時期」</color>；\n若{{C}}存在，則釋放<color\=#ff3b37>「大燃燒」</color>；\n若{{D}}存在，則釋放<color\=#ff3b37>「崇高聖戰」</color>。\n2、場上有小怪死亡時，一回合後{{A}}將會重新召喚小怪。\n3、技能<color\=#ff3b37>「神聖賜福」</color>可以隨機給每個在場的小怪三種<color\=#ff3b37>保護增益</color>之一：回復最大生命值、抵禦一次傷害的護盾、適應性改為耐。=1. When there is a minion, {{A}} will use skills at the start of their turn based on the minion's element:\nIf {{B}} is present, use <color\=#ff3b37>[Ice Age]</color>;\nIf {{C}} is present, use <color\=#ff3b37>[Blazing Hell]</color>; \nIf {{D}} is present, use <color\=#ff3b37>[Wild Thunder]</color>.\n2. When you defeat a minion, {{A}} will resummon them after 1 turn. \n3. Skill <color\=#ff3b37>[Divine Blessing]</color> can randomly gives each minions 1 of the 3 <color\=#ff3b37>protection buffs</color>: Restores Max HP; Gains immunity to next damage; Changes all resistance to Resist.
+神聖賜福=Divine Blessing
+隨機給隊友三種增益之一：每回合回復生命；抵擋一次傷害；所有適應性變為耐。=Randomly gives your teammates 1 of the 3 buffs: Restores Max HP; Gains immunity to next damage; Changes all resistance to Resist.
+Ⅱ型·律法修正=Law Amendment
+Ⅲ型·護壁=Shielded Wall
+r:"^Ⅱ<color\=#000000>型</color>·律法修正$"="L<color\=#000000>a</color>w Amendment"
+r:"^Ⅲ<color\=#000000>型</color>·護壁$"="S<color\=#000000>h</color>ielded Wall"
+
+r:"^1、使用帶有吸取sp效果的技能後，會獲得【狂暴】，造成傷害增加(\d+%)，可以疊加。\n2、{{A}}和{{C}}死亡後，{{D}}會在其回合結束時，消耗【狂暴】並進行召喚。\n3、{{D}}受到致死傷害時，會保留一滴血，獲得三層狂暴，召喚{{C}}，若場上不存在{{B}}和{{A}}，則消耗狂暴進行召喚。期間，場上所有怪物都免疫死亡，之後不再累積狂暴，而是在每個回合驅散一次，狂暴全部驅散後，戰鬥自動獲得勝利。$"="1. Gains [Frenzy] after using skills that can drain SP, increases DMG Dealt by $1, can stack.\n2. After {{A}} and {{C}} are defeated, {{D}} will consumes [Frenzy] to resummon them at the end of their turn.\n3. When {{D}} is near death, stays at 1 HP and gains 3 stacks of [Frenzy], summons {{C}}, if {{B}} and {{A}} are not present, then consumes [Frenzy] to resummon them. All Shadows gain death immunity, cannot gain [Frenzy], and dispel 1 stack each turn. Victory when they have no [Frenzy]."
+r:"^1、詭譎的{{D}}在開局召喚{{B}}，並使用<color\=#ff3b37>「精魄攝取」</color>，吸取怪盜的sp。\n2、使用帶有吸取sp效果的技能後，獲得一層<color\=#ff3b37>「狂暴」</color>：造成傷害增加(\d+%)。每當場上有怪物死亡時，{{D}}在其回合結束後，消耗一層<color\=#ff3b37>「狂暴」</color>，並重新召喚此怪物。\n3、詭譎的{{D}}每兩回合使用<color\=#ff3b37>「末日聖頌」</color>技能，對<color\=#ff3b37>剩餘sp</color>越少的怪盜造成傷害越高。\n4、擊殺{{B}}的怪盜回復(\d+)點sp。\n5、{{D}}受到<color\=#ff3b37>致死傷害</color>時，會保留一滴血，獲得三層<color\=#ff3b37>「狂暴」</color>，召喚{{C}}，若場上不存在{{B}}和{{A}}，則消耗<color\=#ff3b37>「狂暴」</color>召喚。期間場上所有怪物都免疫死亡，並不再累積<color\=#ff3b37>「狂暴」</color>，而是在每個回合消耗一層<color\=#ff3b37>「狂暴」</color>，狂暴被全部消耗後，戰鬥獲得勝利。$"="1. {{D}} will summons {{B}} at the start of battle, then uses <color\=#ff3b37>[Siphon Essence]</color> to drain Thieves' SP.\n2. After draining SP, gains 1 stack of <color\=#ff3b37>[Frenzy]</color>: Increases DMG Dealt by $1. When a Shadow is defeated, {{D}} will consumes 1 stack of <color\=#ff3b37>[Frenzy]</color> to resummon that Shadow. \n3. {{D}} will use <color\=#ff3b37>[Doomsday Hymn]</color> every 2 turns, dealing more damage the <color\=#ff3b37>less SP</color> Thieves have. \n4. Defeating {{B}} will restores $2 SP to that Thief.\n5. When {{D}} is <color\=#ff3b37>near death</color>, stays at 1 HP, gains 3 stacks of <color\=#ff3b37>[Frenzy]</color> and summons {{C}}, if there are no {{B}} and {{A}}, then consumes <color\=#ff3b37>[Frenzy]</color> to summon them. Enemies have death immunity, they cannot gain <color\=#ff3b37>[Frenzy]</color>, and consume 1 stack of <color\=#ff3b37>[Frenzy]</color> each turn, victory when enemies consumed all <color\=#ff3b37>[Frenzy]</color>."
+r:"^狂<color\=#000000>暴</color>$"="F<color\=#000000>r</color>enzy"
+<color\=#FF0000>詭譎的{{A}}</color>狂暴層數減少=<color\=#FF0000>Strange {{A}}</color> decreased Frenzy!
+精魂攝取=Siphon Essence
+{{A}}吸取魔力，使自己傷害提升={{A}} drained SP, increased DMG Dealt
+r:"^吸收所有敵人<color\=#fffc40>(\d+)</color>點精力值。$"="Drains <color\=#fffc40>$1</color> SP from all enemies."
+末日聖頌=Doomsday Hymn
+r:"^對所有敵人造成詛咒屬性傷害，敵人sp越少，造成傷害越高，使敵人獲得(\d+)個<link\="s\|112"><u>詛咒</u></link>效果。$"="Deals Cruse damage to all enemies, the less SP they have, the higher the DMG Dealt, inflicts all enemies with $1 stack of <link\="s|112"><u>Curse</u></link> ."
+青焰=Blue Flame
+r:"^青<color\=#000000>焰</color>=B<color\=#000000>l</color>ue Flame"
+r:"^使所有敵人每次行動損失生命值，持續(\d+)回合$"="All enemies lose HP after their action for $1 turns."
+行動後損失最大生命值……=Lose Max HP after action...
+食夢=Devour Dream
+對敵人造成萬能傷害使其進入睡眠狀態，並治療隊友。=Deals Almighty damage to all enemies and inflicts Sleep, then heals all allies.
+{{A}}死亡時，{{B}}會在回合開始時重新召喚一次{{A}}=When {{A}} dies, {{B}} will resummon {{A}} at the start of their turn once.
+r:"^1、詭譎的{{B}}在開局召喚{{A}}，並使用<color\=#ff3b37>「精魄攝取」</color>，吸取怪盜的sp。\n2、詭譎的{{B}}每兩回合使用<color\=#ff3b37>「末日聖頌」</color>技能，對<color\=#ff3b37>剩餘sp</color>越少的怪盜造成傷害越高。\n3、擊殺{{A}}的怪盜回復(\d+)點sp，死亡時，{{B}}會在回合開始時重新召喚{{A}}。$"="1. {{B}} will summons {{A}} at the start of battle, then uses <color\=#ff3b37>[Siphon Essence]</color> to drain Thieves' SP.\n2. {{B}} will use <color\=#ff3b37>[Doomsday Hymn]</color> every 2 turns, dealing more damage the <color\=#ff3b37>less SP</color> Thieves have. \n4. Defeating {{A}} will restores $1 SP to that Thief, {{B}} will resummon {{A}} at the start of their turn."
+r:"^擊殺{{A}}的怪盜恢復(\d+)點sp。$"="Defeating {{A}} will restores $1 SP to that Thief."
+r:"^1、{{A}}死亡時，{{B}}會重新召喚{{A}}\n2、使用帶有吸取sp效果的技能後，會獲得【狂暴】，造成傷害增加(\d+%)，可以疊加。$"="1. When {{A}} is defeated, {{B}} will resummon {{A}}\n2. Gains [Frenzy] after using skills that can drain SP, increases DMG Dealt by $1, can stack."
+r:"^1、詭譎的{{B}}在開局召喚{{A}}，並使用<color\=#ff3b37>「精魄攝取」</color>，吸取怪盜的sp。\n2、使用帶有吸取sp效果的技能後，獲得一層<color\=#ff3b37>「狂暴」</color>：造成傷害增加(\d+%)。\n2、詭譎的{{B}}每兩回合使用<color\=#ff3b37>「末日聖頌」</color>技能，對<color\=#ff3b37>剩餘sp</color>越少的怪盜造成傷害越高。\n4、擊殺{{A}}的怪盜回復(\d+)點sp，死亡時，{{B}}會在回合開始時重新召喚{{A}}。$"="1. {{B}} will summons {{A}} at the start of battle, then uses <color\=#ff3b37>[Siphon Essence]</color> to drain Thieves' SP.\n2. After draining SP, gains 1 stack of <color\=#ff3b37>[Frenzy]</color>: Increases DMG Dealt by $1.\n3. {{B}} will use <color\=#ff3b37>[Doomsday Hymn]</color> every 2 turns, dealing more damage the <color\=#ff3b37>less SP</color> Thieves have. \n4. Defeating {{A}} will restores $2 SP to that Thief, {{B}} will resummon {{A}} at the start of their turn."
+技能對怪盜造成持續傷害。=Skill can deals Damage Over Time to Thieves.
+
+r:"^1、{{A}}每回合使隨機(\d+)名怪盜進入「地獄燃燒」狀態。\n「地獄燃燒」：回合結束失去大量生命值，可疊加(\d+)層，受到<color\=#00aeff>冰凍</color>屬性傷害後驅散。\n2、擊敗{{A}}後，戰鬥勝利。$"="<size\=26>1. {{A}} will inflicts $1 random Thieves with [Hellfire] each turn. \n[Hellfire]: Lose heavy HP each turn, up to $2 stacks. Dispel after taking <color\=#00aeff>Ice</color> damage.\n2. Victory after defeating {{A}}.</size>"
+r:"^1、{{C}}每回合使隨機(\d+)名怪盜進入「地獄燃燒」狀態。\n「地獄燃燒」：回合結束失去大量生命值，可疊加(\d+)層，受到<color\=#00aeff>冰凍</color>屬性傷害後驅散。\n2、奇數回合召喚{{A}}，{{A}}不會主動攻擊，受到傷害後立即對傷害來源釋放一次<color\=#00aeff>「布芙」</color>，造成少量<color\=#00aeff>冰凍</color>屬性傷害，自己回合開始時即死。\n3、偶數回合召喚{{B}}，{{B}}不會主動攻擊，被擊敗後立即對所有怪盜造成少量<color\=#00aeff>冰凍</color>屬性傷害。\n4、擊敗{{C}}後，戰鬥勝利。$"="1. {{C}} will inflicts $1 random Thieves with [Hellfire] each turn. \n[Hellfire]: Lose heavy HP each turn, up to $2 stacks. Dispel after taking <color\=#00aeff>Ice</color> damage.\n2. Summons {{A}} on odd turns, {{A}} will not attack, uses <color\=#00aeff>[Bufu]</color> to deal light <color\=#00aeff>Ice</color> damage to the source of damage, automatically defeats {{A}} at the start of their turn.\n3. Summons {{B}} on even turns, {{B}} will not attack, deals light <color\=#00aeff>Ice</color> damage to all enemies when defeated.\n4. Victory after defeating {{C}}."
+sr:"^<color\=#FF0000>(.*)</color>受到了冰凍傷害，從「地獄燃燒」狀態恢復了$"="<color\=#FF0000>$1</color> took Ice damage, recovered from [Hellfire]!"
 
 ----------
 CROSS FATE
