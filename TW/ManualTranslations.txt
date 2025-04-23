@@ -723,7 +723,9 @@ r:"^(\d+)時(\d+)分後下架$"="Expires in $1h $2m"
 r:"^剩餘(\d+)時(\d+)分(\d+)秒$"=" $1h $2m $3s"
 r:"^(\d+)小時(\d+)分鐘$"=" $1h $2m"
 r:"^(\d+)時(\d+)分(\d+)秒$"=" $1h $2m $3s"
-r:"^(\d+)分鐘$"=" $1 minutes"
+r:"^(\d+)分鐘$"=" $1m"
+r:"^(\d+)分$"=" $1m"
+
 r:"^(\d+)天(\d+)時後解鎖$"="Unlocks after $1d $2h"
 r:"^(\d+)時(\d+)分後解鎖$"="Unlocks after $1h $2m"
 r:"^(\d+)分後解鎖$"="Unlocks after $1m"
@@ -1185,7 +1187,7 @@ r:"^本週累計今日計畫領獎次數\((\d+)\/(\d+)\)，可額外領取$"="Nu
 神秘武器套件=Mysterious Weapon Kit
 武器=Weapon
 r:"^(\d+)年(\d+)月(\d+)日 (\d+):(\d+)後可使用。$"="Available after $1/$2/$3 $4:$5."
-r:"^神秘怪盜「(.*)」的專屬近戰武器。$"="<size\=20>Exclusive melee weapon for mysterious Thief "$1".</size>"
+r:"^神秘怪盜「(.*)」的專屬近戰武器。$"="Exclusive melee weapon for mysterious Thief "$1"."
 sr:"^是否消耗「(.*)」×1兌換「(.*)」×1？$"="Use [$1] x1 to redeem [$2] x1?"
 
 // DAILY //
@@ -1835,6 +1837,7 @@ r:"^都市日程<color\=#ffc000>在{{A}}打工</color>已解鎖，\n每日有一
 去牛丼店打工=<size\=24>Work part-time\nat the Beef Bowl Shop</size>
 {{A}}的牛丼店今天也安排了打工……=<size\=25>I can work at the Beef Bowl Shop today...</size>
 今天也去{{A}}的牛丼店打工吧。=<size\=25>Let's go work at the Beef Bowl Shop today.</size>
+今天也去{{A}}的牛丼店幫忙吧。=<size\=25>Let's go work at the Beef Bowl Shop today.</size>
 今天也要去{{A}}的牛丼店幫忙接待嗎？=Want to work at the Beef Bowl Shop today?
 {{A}}的牛丼店今天可以進行打工的排班，加油吧。=I can work at the Beef Bowl Shop today, let's keep it up.
 今天{{A}}的牛丼店有打工的排班，繼續努力吧。=I can work at the Beef Bowl Shop today, let's keep it up.
@@ -2232,8 +2235,14 @@ r:"^票務等級達到 (\d+) 級 可獲得$"="Claim at Ticket Level $1"
 「{{A}}」票務等級已達上限=<size\=23>[{{A}}] Ticket Lv. maxed</size>
 可能獲得=Can get
 里程等級：=    Ticket
+r:"^精<color\=#ff0000ff>算</color>機$"="F<color\=#ff0000ff>a</color>re Adjustment Machine"
 
 尚未發現該地區。=Did not discover area.
+
+唔~來到了一片新區域！\n繼續往前探索吧，WONDER！=Hm～ We've reached a new area! \nLet's keep exploring, Wonder!
+唔~打開了一片新區域哦，\n繼續往前探索吧，WONDER。=Hm～ We've opened a new area! \nLet's keep exploring, Wonder!
+r:"^<color\=#FFDe00>{{A}}</color>票務等級達到<color\=#FFDe00>(\d+)級</color>開啟。\n收集足夠乘車券，提交到精算機後再來吧。$"="This unlocks at <color\=#FFDe00>{{A}}</color> ticket level <color\=#FFDe00>$1</color>. Let's return after getting enough tickets for the fare adjustment machine."
+嗯？好像從這個方向過不去呢，\nWONDER，繞到它後面試試看吧。=Hmm? Seems we can't get through from this side. Wonder, let's try going around the back.
 
 r:"^厄抑之境$"="Metaverse Farm"
 『暗影獵域』=[Persona Farm]
@@ -2786,7 +2795,7 @@ r:"^見證{{A}}的覺醒\((\d+)\/(\d+)\)$"="Witness {{A}}'s Awakening ($1/$2)"
 {{A}}探索={{A}} Exploration
 r:"^{{A}}票務等級達到(\d+)級\((\d+)\/(\d+)\)$"="Reach {{A}} Ticket Lv. $1 ($2/$3)"
 r:"^在{{A}}區域(\d+)找到(\d+)個安全屋\((\d+)\/(\d+)\)$"="Find $2 Safe Rooms in {{A}} Area $1 ($3/$4)"
-r:"^在{{A}}找到(\d+)個安全屋\((\d+)\/(\d+)\)$"="Find $1 Safe Rooms in {{A}} ($3/$4)"
+r:"^在{{A}}找到(\d+)個安全屋\((\d+)\/(\d+)\)$"="Find $1 Safe Rooms in {{A}} ($2/$3)"
 r:"^在{{A}}區域(\d+)打開(\d+)個寶箱\((\d+)\/(\d+)\)$"="Open $2 Treasure Chests in {{A}} Area $1 ($3/$4)"
 r:"^在{{A}}·{{B}}區域打開(\d+)個寶箱\((\d+)\/(\d+)\)$"="Open $1 Treasure Chests in {{A}}·{{B}} ($2/$3)"
 r:"^{{A}}的探索度達到(\d+%)\((\d+)\/(\d+)\)$"="Reach $1 Exploration in {{A}}"

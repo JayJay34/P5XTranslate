@@ -598,6 +598,10 @@ r:"^使<color\=#FFFF00>所有</color>友方角色的攻擊力提升(\d+\.\d+%)\+
 //(dominion)
 r:"^使<color\=#FFFF00>所有</color>同伴攻擊力提升(\d+\.\d+%)\+每(\d+)攻擊力額外提升(\d+\.\d+%)，持續(\d+)回合。使主目標同伴造成的傷害提升(\d+\.\d+%)\+每(\d+)攻擊力額外提升(\d+\.\d+%)，持續(\d+)回合。$"="Increases <color\=#FFFF00>all</color> allies' ATK by $1 + $3 for every $2 ATK for $4 turns. Increases the main target's DMG Dealt by $5 + $7 for every $6 ATK for $8 turn."
 
+Infinite Algorithm
+r:"^使<color\=#FFFF00>所有</color>友方角色攻擊力提升(\d+\.\d+%)，額外使主目標傷害提升(\d+\.\d+%)，持續(\d+)回合。$"="Increases <color\=#FFFF00>all</color> allies' ATK by $1, additionally increases the main target's DMG Dealt by $2 for $3 turns."
+r:"^無<color\=#000000>限</color>演算法$"="I<color\=#000000>n</color>finite Algorithm"
+
 //norn
 r:"^使<color\=#FFFF00>所有</color>同伴獲得(\d+\.\d+%)攻擊力\+(\d+)的護盾，持續(\d+)回合，護盾受到傷害時有(\d+\.\d+%)基礎機率使傷害來源陷入風襲狀態。$"="Gives <color\=#FFFF00>all</color> allies $1 ATK + $2 Shield for $3 turns. There is a $4 base chance to inflict Winded to the enemy when the Shield took damage."
 
@@ -720,8 +724,13 @@ sr:"^<color\=#FF0000>(.*)</color>暴擊率提升了……$"="<color\=#FF0000>$1<
 r:"^<color\=#FF0000>所有敵人</color>受到的傷害提升了……$"="<color\=#FF0000>All enemies</color> DMG Taken Up!"
 
 sr:"^<color\=#FF0000>(.*)</color>獲得了護盾……$"="<color\=#FF0000>$1</color> gained Shield!"
+sr:"^<color\=#FF0000>(.*)</color>免疫一次傷害……$"="<color\=#FF0000>$1</color> is immune to next damage..."
+
+sr:"^<color\=#FF0000>(.*)</color>適應性還原。$"="<color\=#FF0000>$1</color> reverted resistance!"
+sr:"^<color\=#FF0000>(.*)</color>適應性被改變……$"="<color\=#FF0000>$1</color> changed resistance..."
 sr:"^<color\=#FF0000>(.*)</color>獲得了(.*)耐性……$"="<color\=#FF0000>$1</color> gained Resist $1!"
 sr:"^<color\=#FF0000>(.*)</color>的全屬性適應性變為無……$"="<color\=#FF0000>$1</color> now Null all!"
+
 r:"^解除了(\d+)個狀態降低效果！$"="Dispelled $1 stats debuff!"
 
 sr:"^<color\=#FF0000>(.*)</color>獲得了『(.*)』$"="<color\=#FF0000>$1</color> gained [$2]"
@@ -812,6 +821,7 @@ r:"^傷<color\=#000000>害</color>提高$"="D<color\=#000000>M</color>G Bonus Up
 r:"^傷<color\=#000000>害</color>提升$"="D<color\=#000000>M</color>G Bonus Up"
 r:"^造<color\=#000000>成</color>傷害提升$"="D<color\=#000000>M</color>G Dealt Up"
 r:"^最<color\=#000000>終</color>傷害提升$"="F<color\=#000000>i</color>nal DMG Up"
+r:"^造<color\=#000000>成</color>最終傷害提高$"="F<color\=#000000>i</color>nal DMG Dealt Up"
 r:"^總<color\=#000000>傷</color>害增幅$"="T<color\=#000000>o</color>tal DMG Up"
 r:"^追<color\=#000000>加</color>特化$"="F<color\=#000000>o</color>llow Up Buff"
 r:"^傷<color\=#000000>害</color>減免$"="D<color\=#000000>M</color>G RES Up"
@@ -874,8 +884,8 @@ r:"^詛<color\=#000000>咒</color>特化$"="C<color\=#000000>u</color>rse DMG Up
 r:"^萬<color\=#000000>能</color>特化$"="A<color\=#000000>l</color>mighty DMG Up"
 
 r:"^生<color\=#000000>命</color>連結$"="L<color\=#000000>i</color>felink"
-r:"^反<color\=#000000>抗</color>$"="C<color\=#000000>o</color>unter"
-r:"^支<color\=#000000>配</color>$"="D<color\=#000000>o</color>minate"
+r:"^反<color\=#000000>抗</color>特化$"="R<color\=#000000>e</color>bel Buff"
+r:"^支<color\=#000000>配</color>特化$"="D<color\=#000000>o</color>minate Buff"
 r:"^H<color\=#000000>L</color>特化$"="H<color\=#000000>L</color> Buff"
 r:"^H<color\=#000000> L</color>特化$"="H<color\=#000000>L</color> Buff"
 
@@ -961,6 +971,7 @@ r:"^效果抵抗提升$"="Increase Effect RES"
 r:"^傷害強化$"="Damage Boost"
 r:"^傷害提高$"="Increase DMG Dealt"
 r:"^造成傷害提升$"="Increase DMG Dealt"
+r:"^造成傷害提高$"="Increase DMG Dealt"
 r:"^受傷害提升$"="Increase DMG Taken"
 r:"^受到傷害提高$"="Increase DMG Taken"
 r:"^受到傷害提升$"="Increase DMG Taken"
@@ -969,7 +980,9 @@ r:"^受百分比傷害降低$"="<size\=23>Decrease Percentage DMG Taken</size>"
 r:"^受到百分比傷害降低$"="Decrease Percentage DMG Taken"
 r:"^受到基於自身最大生命值百分比的傷害降低$"="Decrease Percentage DMG Taken"
 r:"^受到基於自身最大生命值百分比的傷害大幅降低$"="Heavily decrease Percentage DMG Taken"
+r:"^受到基於自身最大生命值百分比的傷害特大幅降低$"="Severely decrease Percentage DMG Taken"
 r:"^受到最終傷害提高$"="Increase Final DMG Taken"
+r:"^最終傷害減免$"="Increase Final DMG RES"
 r:"^火焰傷害提升$"="Increase Fire DMG"
 r:"^凍結傷害提升$"="Increase Ice DMG"
 r:"^火焰、冰凍傷害提升$"="Increase Fire, Ice DMG"
@@ -1031,8 +1044,10 @@ r:"^受弱點傷害提升(\d+%)$"="Increase Weakness DMG by $1"
 免疫精神異常=<size\=23>Mental Ailment Immunity</size>
 免疫倒地=Down Immunity
 免疫精神異常及控制=<size\=20>Mental Ailment and Control Immunity</size>
+免疫混亂=Confuse Immunity
 免疫恐懼=Fear Immunity
 免疫絕望=Despair Immunity
+免疫恐懼、絕望=Fear, Despair Immunity
 
 無法選中=Cannot Target
 倒地=Down
@@ -1108,12 +1123,13 @@ r:"^持續傷害效果提升(\d+(.\d+)?(%)?)$"="Increase Damage Over Time Effect
 r:"^傷害減免(\d+(.\d+)?(%)?)$"="Increase DMG RES by $1"
 r:"^受到傷害降低(\d+(.\d+)?(%)?)$"="Decrease DMG Taken by $1"
 r:"^受到的傷害降低(\d+(.\d+)?(%)?)$"="Decrease DMG Taken by $1"
-r:"^受到百分比傷害大幅降低"="Heavily decrease DMG Taken%"
-r:"^受到百分比傷害特大幅降低"="Severely decrease DMG Taken%"
-r:"^受到百分比傷害極大幅降低"="Severely decrease DMG Taken%"
+r:"^受到百分比傷害大幅降低$"="Heavily decrease DMG Taken%"
+r:"^受到百分比傷害特大幅降低$"="Severely decrease DMG Taken%"
+r:"^受到百分比傷害極大幅降低$"="Severely decrease DMG Taken%"
 r:"^受到最終傷害降低(\d+(.\d+)?(%)?)$"="Decrease Final DMG Taken by $1"
 r:"^受到的最終傷害降低(\d+(.\d+)?(%)?)$"="Decrease Final DMG Taken by $1"
 r:"^最終受到傷害降低(\d+(.\d+)?(%)?)$"="Decrease Final DMG Taken by $1"
+r:"^受到最終傷害大幅降低$"="Heavily decrease Final DMG Taken"
 r:"^免疫下一次傷害的(\d+(.\d+)?(%)?)$"="<size\=24>Decrease damage when taking the next hit by $1</size>"
 r:"^所有同伴受到的傷害降低(\d+(.\d+)?(%)?)。$"="Decrease DMG Taken by $1"
 r:"^受物理傷害加深(\d+(.\d+)?(%)?)$"="Increase Phys DMG Taken by $1"
@@ -1162,12 +1178,15 @@ r:"^剩餘護盾值：(\d+)$"="Shield: $1"
 sr:"^(.*)屬性的適應性變為耐$"="Change $1 resistance to Resist"
 
 免疫一切傷害=Immunity to all damage
+免疫一次傷害=Immunity to next damage
 免疫下次受到的傷害=Immunity to next damage
 受到的傷害將由所有擁有生命連結的單位共同分攤=<size\=26>Damage will be shared by all units with Lifelink</size>
 免疫即死效果=Immunity to Insta-Kill effects
 免疫精神異常效果=Immunity to Mental Ailment effects
+免疫混亂效果=Immunity to Confuse effects
 免疫恐懼效果=Immunity to Fear effects
 免疫絕望效果=Immunity to Despair effects
+免疫恐懼、絕望效果=Immunity to Fear, Despair effects
 免疫眩暈、遺忘、睡眠、混亂效果=Immunity to Dizzy, Forget, Sleep, Confuse
 免疫倒地值傷害=Immunity to Down Gauge damage
 免疫精神異常效果及控制效果=<size\=26>Immunity to Mental Ailments and Control effects</size>
