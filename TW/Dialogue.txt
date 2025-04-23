@@ -376,6 +376,7 @@ r:"^與{{A}}度過了二人時間……$"="<size\=27>I spent a long time with {{
 General Short Phrases
 ----------
 「{{A}}」{{B}}="{{A}}" {{B}}
+「{{A}}」……="{{A}}"...
 {{A}}。={{A}}.
 {{A}}……={{A}}...
 {{A}}？=<size\=29>{{A}}?</size>
@@ -466,17 +467,37 @@ r:"^謝謝你，(.*)！$"="Thank you, $1!"
 說起來……=Speaking of...
 請問……？=Excuse me...?
 原來如此……=I see...
-好、好的……=R-Right...
+好、好的……=Y-yes...
 怎麼了……=What's wrong...
 知道=Know
 不知道=Don't know
 不知道……=Don't know...
 
 ----------
+Navigator - Okyann
+----------
+Elite combat start
+哇靠！好厲害的敵人！這下要死翹翹了！大夥快做好準備～！=Whoa damn! The enemy's no joke! We're so screwed! Everybody, get ready～!
+
+Escape
+撤退～！快撤退——！=Withdraw～! Withdraw-!
+
+----------
+Navigator - Puppet
+----------
+Elite combat start
+小心點！總感覺不好對付……！=Be careful! This seems bad...!
+
+Escape
+收工啦！辛苦了……！=That's a wrap! Good work...!
+
+----------
 Navigator - Wind
 ----------
 Combat start
 大家不要放鬆警惕。=Everyone, stay vigilant.
+Elite combat start
+看起來是強敵。大家要小心。=Strong enemy ahead. \nEveryone, be careful.
 Skill ready
 我隨時都能支援大家。=I'm always ready to support everyone.
 梅花盛放之時…就是現在！=Plum blossoms bloom... now!
@@ -490,6 +511,7 @@ CRIT
 Down
 出色的一擊，WONDER。=A superb strike, Wonder.
 打翻了敵人，幹得漂亮！=You broke their stance, nice work!
+敵人倒地，現在是機會哦！=Enemy down, now's your chance!
 AOA
 時機剛剛好，就是現在！=Timing's perfect, now!
 看好了，這就是我們的力量！=Watch closely, this is our strength!
@@ -507,13 +529,18 @@ Debuffs
 Mental Ailments
 精神異常狀態…振作一點。=Something's wrong... Pull yourself together.
 Victory
+大家沒受傷吧？辛苦了。=Is anyone hurt? Good work.
 很精彩的一戰。下次也要保持這個狀態哦。=That was a great battle. Keep this momentum going next time.
+Escape
+趁現在，全員迅速撤退！=Now, everyone, retreat immediately!
 
 ----------
 Navigator - Phoebe
 ----------
 Combat start
 就讓姐姐我來領舞~上吧！=Leave the lead to me～ Here we go!
+Elite combat start
+好像是難纏的敵人……怎麼樣？能行嗎？=Looks like a troublesome enemy... Think we can handle it?
 Skill ready
 我這邊準備好啦～WONDER！=Wonder! I'm good to go too～
 這裡就交給姐姐我吧！=Leave this to me!
@@ -553,12 +580,16 @@ Revive
 同伴回歸，下次可不要勉強！=Ally revived, don't push yourself!
 Defeat
 啊！大事不妙……=Ah! Sorry for not giving enough support...
+Escape
+啊，看來不行了……撤退！=Ah, no choice... Retreat!
 
 ----------
 Navigator - Oracle
 ----------
 Combat start
 發現敵人！\n可不能大意哦？=Enemy spotted! \nDon't get careless now!
+Elite combat start
+這、這傢伙！\n感覺很難對付！=Th-this guy!\nThis one's gonna be tough!
 Skill ready
 駭客時間到！=Hacking time!
 支援準備完成，交給我吧！=Support ready. Leave it to me!
@@ -590,15 +621,19 @@ continue成功？{{A}}，繼續幹吧~！=Continue complete? {{A}}, get 'em～!
 Victory
 辛苦各位了！=Great job, everyone!
 OK！繼續前進吧！=OK! Let's keep going!
+Escape
+現在應該能順利逃走！=We can escape now!
 
 ----------
 Navigator - Ange
 ----------
 Combat Start
 看來這次可以輕鬆戰鬥呢！=Looks like this fight will be easy!
+Elite combat start
+是強敵……還請多加小心。=It's a strong enemy... Let's stay sharp.
 Skill Ready
 請讓我們也一起戰鬥吧！=We will fight together!
-歌聲啊……傳達出去吧……！=O singing voice... reach them!
+歌聲啊……傳達出去吧……！=Oh singing voice... reach them!
 {{A}}、那個……好了！準備完成了！=Um, um... Okay! I'm ready!
 Full HL
 HL，要上了哦！=HIGHLIGHT, let's go!
@@ -614,13 +649,19 @@ Down
 恭喜你！=Congratulations!
 就這樣一鼓作氣地上吧！=Let's keep going!
 AOA
+那麼，開始吧…！=Now, let's get started...!
 {{A}}，要來最後一擊了嗎？={{A}}, is it time for finishing move?
 請聆聽能夠燃燒鬥志的戰歌！=Please listen to the burning fight song!
+Evade
+{{A}}，平安無事，真是太好了…！={{A}}, thank goodness you're safe...!
 Debuffs
 很痛苦的樣子…這樣下去的話…！=They look hurt... At this rate...!
+好像使不上力氣的樣子……不儘快幫助恢復的話……！=They can't muster strength... Need to recover fast...!
 Victory
 哇…！贏了！我們勝利了！=Wow...! We did it! We won!
 {{A}}……我也，稍微有幫上忙吧？={{A}}... Was I able to help a little?
+Escape
+無奈之時，走為上策！=Sometimes it's better to run away!
 
 ----------
 Prologue
@@ -2317,7 +2358,7 @@ Choice 2
 {{A}}，你的情況我可清楚得很～\n我不是說過會「一直關注著你」嘛？={{A}}, I know everything about you～ \nDidn't I say I would "keep an eye on you"?
 我說，你們幾個！\n是{{A}}的粉絲吧？給我自重一點。=You few! Are you a fan of {{A}}? Control yourselves.
 {{A}}現在是事業關鍵期，\n任何私生活照片都不能隨便流出。={{A}} is in a critical period for his career, so even a single photo leaking would be problematic.
-阿？這大媽誰啊。\n{{A}}{{A}}的，太不拿自己當外人了吧？=Ah? Who is this auntie. {{A}} this, {{A}} that, make yourself at home?
+阿？這大媽誰啊。\n{{A}}{{A}}的，太不拿自己當外人了吧？=Huh? Who is this auntie. {{A}} this, {{A}} that, make yourself at home?
 難道是，{{A}}事務所的人？=Could it be, someone from Ikenami-kun's agency?
 不，這位不是事務所的人員……=No, this person is not from the agency...
 但作為{{A}}的造星推手，\n和事務所也差不多了吧？{{B}}～=As {{A}}'s talent producer, I'm basically like an agency, right? {{B}}～
@@ -2330,7 +2371,7 @@ Choice 2
 我真的不能跟大家拍照，\n各位請回吧，好嗎？=I really can't take pictures with you, so please head back now, alright?
 {{B}}～既然{{A}}都這麼說了……\n我們也不想給你添麻煩……={{B}}～ Since Ikenami-kun said so... We wouldn't want to cause you any trouble...
 舞臺劇要加油哦，{{A}}！\n我會為你加油的～！=Good luck with your stage performance, Ikenami-kun! I'll be rooting for you～!
-{{A}}，你還對普通女學生錄音……\n這樣我會很為難的。={{A}}, this is inappropriate... You can't just point a voice recorder at a regular girl like that.
+{{A}}，你還對普通女學生錄音……\n這樣我會很為難的。={{A}}, this is inappropriate... You can't just point a voice recorder at a normal girl like that.
 那麼，今天找我是有什麼事嗎？=So, what's the matter today? Do you need something from me?
 我只是來給你加油的啦。\n和{{A}}排練舞臺劇，辛苦啦～=I'm just here to cheer you up. \nGood job practicing with {{A}}～
 我的車就在附近，一起吃個飯吧。\n你想吃什麼？壽司？烤肉？還是法式料理？=My car is parked nearby, let's have dinner together. What would you prefer? Sushi, yakiniku, or French cuisine?
@@ -2343,12 +2384,12 @@ Choice 2
 所以您如果要採訪，\n我也沒什麼能回答的……=So, even if you come to interview me, I can't answer any questions...
 哎呀，那可不對哦。\n你現在是正當紅的演員呢。=Ara, that's not right, dear. You are a rising actor!
 出演外校的舞臺劇也是正兒八經的工作喲！\n可不能放過展示魅力的機會。=Performing in other schools is a serious business! Don't miss the opportunity to show your charm.
-沒事的啦……\n一切都交給我吧。=Don't worry... \nLeave it to me.
-為了幫助外校演出努力奮鬥的你……\n我會為你寫出一篇推薦文的，{{A}}。=Just for you, working so hard as a guest performer… I'll write you a glowing recommendation, {{A}}.
+沒事的啦……\n一切都交給我吧。=Don't worry... \nJust leave it all to me.
+為了幫助外校演出努力奮鬥的你……\n我會為你寫出一篇推薦文的，{{A}}。=Just for you, working so hard as a guest performer... I'll write you a glowing recommendation, {{A}}.
 總覺得……\n這個人比剛剛那些粉絲更難纏？=I feel like... Is this person even more clingy than those fans earlier?
 好像是跟工作相關的……\n不過{{A}}看起來不太喜歡她？=It seems to be work-related... But {{A}} doesn't seem to like her very much?
 打個招呼=Say hi
-把他撈出來=Help him out
+把他撈出來=Get him out
 r:"^我也覺得！我們上，(.*)。$"="I think so too! Let's go, $1."
 喂～{{A}}！=Hey～ {{A}}!
 {{A}}，你還沒回去啊！\n太好了！你能來一下嗎？={{A}}, you haven't gone home yet! Great! Can you come over for a moment?
@@ -2379,7 +2420,7 @@ Choice 3
 抱、抱歉！我這就去取消！=S-sorry! I'll cancel it!
 不要每次都問我，這點事情自己琢磨啊。\n除非你想被開掉。=Don't ask me every time, figure it out yourself. Unless you want to be fired.
 不要每次都問我，這點事情自己判斷啊。\n除非你想被開掉。=Don't ask me every time, figure it out yourself. Unless you want to be fired.
-你的臉我都看膩了。\n是時候該換人了呢……=I'm tired of seeing your face.\nMaybe it's time to change people...
+你的臉我都看膩了。\n是時候該換人了呢……=I'm tired of seeing your face.\nMaybe it's time for a change...
 
 那個，哪位{{A}}找我？=So, which {{A}} is looking for me?
 {{B}}？{{A}}～那是騙人的。\n因為剛才{{C}}好像很為難嘛。={{B}}? {{A}}～ That's a lie. Because it seemed like {{C}} was in trouble.
@@ -2715,7 +2756,243 @@ Choice 3
 {{A}}跟{{B}}都回消息了。\n看來他們都同意了呢。={{A}} and {{B}} both replied. They said they agreed.
 那我們就出發吧。=Let's go then.
 
+----------
+Chapter 4 Metaverse Start
+----------
 接下來新區域應該會開放。\n先朝著最深處出發吧，隊長。=A new area should unlock ahead. Let's head to the deepest part, leader.
+已確認新增區域。\n導航資訊更新中。=New areas have been confirmed.\nNavigation information is being updated.
+大家準備好了嗎？\n朝下一個區域出發吧。=Ok, are you ready? \nLet's head to the next area.
+那麼，開始吧。=So, let's get started.
+原來如此……這樣聆聽{{A}}的心之聲，\n然後就能找到{{B}}啊。=I see... So this is how you listen to {{A}}' inner voice and pinpoint the {{B}}.
+啊，是哦，WIND還是第一次見吧！=Ah, right, it's Wind's first time seeing this!
+只要CATTLE知道那傢伙的真名，\n就能找到{{A}}了。=Once Cattle gets their full name, we can track down the {{A}}.
+啊，沒什麼。=Ah, it's nothing.
+我在想，現在很多人都用筆名或網名吧？\n如果找不出{{A}}的全名……=I was thinking, nowadays, there are a lot of pen names or online aliases, right? If we can't find the {{A}}'s full name...
+那我們豈不是一直都找不到{{A}}？=Does that mean we'll never locate their {{A}}?
+啊，那倒……也是呢。\n就像{{A}}用「{{B}}」當筆名一樣？=Ah... now that you mention it. It's like how {{A}} uses "{{B}}" as a pen name?
+……找到了。\n在這個區域，的確有{{A}}。=...Found it. It seems that {{A}} is definitely in this area.
+哦，真的嗎！\n果然{{A}}是{{B}}啊！=Oh, really?! So {{A}} really is a {{B}}!
+也沒有像{{B}}和{{A}}那樣的不協調感。\n應該就是{{C}}沒錯了。=And unlike {{B}} and {{A}}, there's no sense of distortion here. This has to be {{C}}.
+太好了！這次很順利就找到了呢！=That's great! This time we found it easily!
+這也意味著有不少人被那傢伙剝奪了慾望。\n就像{{A}}一樣。=This just proves how many people have had their desires stolen by that bastard. Just like {{A}}.
+奪回{{A}}的慾望吧=<size\=22>Let's take back {{A}}'s desires</size>
+讓{{A}}吧=<size\=23>Let's {{A}}</size>
+是啊，趁{{A}}的慾望消失之前……\n讓{{B}}吧。=Yes, before {{A}}'s desires disappear completely... Let's change Shimotsuna's heart.
+
+----------
+Chapter 4 Palace Start
+----------
+這是哪裡？這次的{{A}}在森林裡嗎？=Where is this? Is the {{A}} in a forest this time?
+有點嚇人呢……\n看起來像那種女巫居住的森林……=It's a bit creepy... This looks like a forest where witches live...
+哈，大魔女{{A}}？\n一點都不好笑。=Huh, The Great Witch {{A}}? \nThat's not funny.
+{{A}}的氣息還有段距離。\n先向森林深處前進吧。=The {{A}}'s presence is very far. Let's head deeper into the forest.
+說是女巫森林可能也沒錯。\n你們看那邊。=Maybe it's not wrong to call this the witch's forest. Look.
+那是什麼！？好巨大的建築！=What is that!? There's a huge building!
+大樓……？=Building...?
+塔……？=Tower...?
+
+Choice 1
+比起大樓……從裝飾上看更像一座塔呢。\n看起來相當高。=Rather than a building... the exterior looks more like a tower. It seems very tall.
+Choice 2
+是啊，看起來相當高。\n一座矗立在森林中的塔……？=Yes, it seems very tall. A tower standing in the middle of the forest...?
+
+她應該認為自己的城堡是一座「塔」吧。\n儘管很難推測這究竟出於何種思想……=She must see her castle a "tower". Though it's hard to image why...
+{{A}}的氣息就在那座塔的方向。\n而且，位置相當高。=The presence of the {{A}} is is coming from that tower. And it's located pretty high up.
+原來如此，那就是在塔上吧。\n有意思。=I see, that must be at the top. \nInteresting.
+{{A}}一定也在裡面。\n前進的時候保持警惕吧。={{A}} is definitely in there too. Let's stay alert as we move forward.
+
+{{A}}……\n靠近了一看，有點壯觀啊……={{A}}...\nIt's amazing to see it up close...
+又誇張又惡俗……\n我的眼都要被閃瞎了。=Gaudy and tacky... it's practically blinding.
+這也不是出版社的樣子吧……\n但挺符合對她本人的印象的。=Doesn't look like a publishing house either... but it fits her image perfectly.
+好了，我們趕緊進去吧……=Alright, let's hurry inside...
+那裡看起來像是入口，\n但聚集了很多陰影啊。=That looks like the entrance, \nbut Shadows are gathering there.
+看起來他們好像吵起來了。\n我們先躲起來看看情況。=Seems like they're arguing. Let's hide and observe for now.
+雄性工蟻陰影=Male Worker Ant Shadow
+拜託了！這篇報導如果今天還過不了，\n我就又得住公司了！=Please! If this article doesn't get approved today, I'll have to sleep at the office again!
+雌性工蟻陰影=Female Worker Ant Shadow
+請讓我見見{{A}}吧～！=Please let me see {{A}}～!
+警衛螞蟻陰影=Guardian Ant Shadow
+{{A}}可是很忙的！\n沒時間管你們這些平民的事情！={{A}} is busy! She has no time for commoners like you!
+態度{{A}}的螞蟻陰影=Prideful Ant Shadow
+如果想見到{{A}}的話，\n那就變成帥哥後再來吧！=If you want an audience with her, come back when you're handsome!
+{{B}}～抱歉我不是帥哥！\n但沒有{{A}}，工作就推不下去啦！={{B}}～ Sorry I'm not handsome! But without {{A}}, I can't continue my work!
+怎樣才能成為，\n被{{A}}記住的員工呢……？=What does it take to become an employee {{A}} actually remembers...
+……他們在幹什麼啊。=...What are they doing.
+不清楚……反正那些像螞蟻的陰影，\n好像把入口都給堵住了。=Not sure... But the entrance is blocked by those ant-like Shadows.
+要不要直接打進去？=Should we just bust in?
+不想打草驚蛇=<size\=30>Don't want to alert them</size>
+打倒他們吧=Let's beat them
+
+Choice 1
+唔，吾等可是怪盜。\n為了安全偷到{{A}}，還是別太顯眼為好。=Hm, we are Phantom Thieves after all. Best not be too conspicuous in order to steal the {{A}} safely.
+沒錯。如果引起騷動的話，\n容易被{{A}}察覺到。=Yes, if we make a scene here, {{A}} might notice.
+而且也還不明白{{A}}內部的構造，\n所以還是儘量秘密潛入吧。=We don't know the {{A}}'s interior structure, let's infiltrate as stealthily as possible.
+
+Choice 2
+等等，在這裡引起騷動的話，\n很可能被{{A}}察覺的。=Wait, if we make a scene here, {{A}} might notice.
+而且吾等可是怪盜。\n為了安全偷到{{A}}，還是別太顯眼為好。=We are Phantom Thieves after all. Best not be too conspicuous in order to steal the {{A}} safely.
+加上我們還不明白{{A}}的內部構造，\n所以還是儘量秘密潛入吧。=And we don't know the {{A}}'s interior structure, let's infiltrate as stealthily as possible.
+
+啊，快看快看！那邊有條路！=Ah, look! There's a road over there!
+也許那邊有入口？=<size\=26>Maybe there's an entrance?</size>
+過去看看吧=Let's take a look
+
+能從裡面感受到挺多動靜。\n是陰影嗎……也可能是認知存在。=I sense multiple presences coming from within. They could be Shadows... or cognitive beings.
+謹慎地前進吧=Let's proceed with caution
+沒錯，光害怕也不是辦法。\n總之先進去看看吧！=Yes, it's not good to be scared. Let's go inside anyway!
+
+沒想到，外面這麼誇張，\n結果裡面這麼陰暗啊……=Compared to the flashy exterior, \nthe inside is rather dim...
+對啊。破破爛爛的，感覺像個洞窟……=Yeah. It's all run-down, feels like a cave...
+而且還有很多陰影。\n不過，它們好像並不在乎我們。=And it's full of Shadows. \nBut they don't seem to mind us.
+他們拿著資料到處晃……\n難道是在工作嗎……？=They're shuffling around with documents... \nAre they working?
+我得快點寫完這篇報導，\n然後獻給{{A}}才行！=I have to finish this article fast... \nthen present it to {{A}}!
+為了{{A}}，我要通宵加班！\n然後要成為她中意的人！=For {{A}}, I will work overtime! Then I will become her favorite!
+嗯……「為了{{A}}而工作的工蟻」，\n是這種認知存在吧？=Hmm... so these cognitive beings are "worker ants toiling for {{A}}"?
+還說什麼「寫完報導」……\n不會是她{{A}}的同事或下屬吧？=And they mentioned "finishing an article"... Could it be they are her colleague or subordinate from {{A}}?
+就是說她把其他員工都當成工蟻？\n這，{{A}}……=So she treats all her employees like worker ants? That's...
+畢竟在現實世界，\n她也把身邊那個男的叫做「狗」呢。=Even in the real world, she called that man a "dog".
+真是把她的性格暴露得淋漓盡致……\n想必她就是這裡的蟻后了吧？=Her true personality has comes to light... \nGuess she's the queen ant here, huh?
+{{A}}的氣息還很遠，\n吾等一邊警戒這些陰影一邊前進吧。=The {{A}}'s presence is still distant. Let's move forward while being cautious of Shadows.
+
+----------
+Palace 5 Exploration
+----------
+有幅可疑的畫呢。\n這是……{{A}}的肖像畫嗎？=There's a suspicious painting here.\nIs this... a portrait of {{A}}?
+唔啊……真的假的啊。\n那傢伙是有多自戀啊……=Huh... seriously? \nJust how full of herself is she...
+上面寫著『向女王獻上敬意』……\n是什麼意思呢？=It says "Pay tribute to the Queen"... \nWhat does it mean?
+敬意……？\n嗯......對著這張畫鞠躬什麼的？=Tribute...? \nHmm... Do we have to bow or something?
+鞠躬了也沒什麼反應呢……\n其他的表達敬意的方式……會是語言嗎？=There's no response even after bowing... Is there any other way to pay tribute... maybe words?
+是要稱讚{{A}}的意思嗎？\n我可說不出口！=We have to praise {{A}}?\nNo way I'm saying that!
+女王大人最棒了！=<size\=30>Her Majesty is the best!</size>
+把我的心獻給女王大人=<size\=26>I dedicate my heart to Her Majesty</size>
+唔{{A}}\n這、這是怎麼回事……！？={{A}}\nW-what's going on...!?
+{{A}}！？　變成螞蟻了！？\n這樣，不會有事吧……？={{A}}! We're ants!?\nI-is this fine...?
+原來如此……看來只要向\n女王的肖像畫表忠誠，就能變成螞蟻的樣子。=I see... It seems that by showing loyalty to the portrait, we can turn into ants.
+這樣說不定就可以通過更多的地方了。\n一邊探索一邊調查吧。=Maybe we can pass through more places like this. Let's keep exploring.
+
+對著{{A}}的肖像畫\n說些什麼吧……=Let's say soemthing to {{A}}'s portrait...
+把心獻給女王大人！=For Her Majesty!
+我才不要當螞蟻呢！=<size\=29>I don't want to be an ant!</size>
+什麼都沒有發生……=Nothing happened...
+身體發生變化了……！=Our bodies changed...!
+WONDER，門開了！=Wonder, the door opened!
+
+快看，這個牆壁上有個洞。\n不過那麼小，好像不太能通過……=Look, there's a hole in this wall. But it's so small, we can't really pass...
+不過，如果變成螞蟻是不是就能通過了？=However, we can pass if we turn into ants?
+值得一試。\n變成螞蟻後再來看看吧。=It's worth a try. Let's try again after turning into ants.
+WONDER，這個樣子怎麼想都進不去吧！=Wonder, there's no way you can enter like this!
+「<color\=#ff3b37>鑽開</color>」前進的道路=[<color\=#ff3b37>Drill</color>] the path forward
+
+嗯？　這個，好像是這裡的地圖吧？=This is the map of this place, right?
+嗯……應該是的。路線似乎有些複雜。\n仔細看看吧。=Yes... The route seems a bit complicated. Let's take a closer look.
+
+你是誰？\n這裡容不得『外人』通過。=Who are you?\nNo "outsiders" are allowed.
+哦，辛苦了。過去吧。=Oh, hard work. Go ahead.
+WONDER，這個太重了……\n想想其他辦法吧。=Wonder, this is too heavy... \nLet's think of something else.
+
+嗯……這扇門打不開呢。\n附近好像也沒有操作裝置……=Hmm... this door can't be opened. Are there's no operating device nearby.
+別急，CLOSER。\n你看那是什麼。=Wait, Closer.\nLook what's there.
+嗯？\n有點像是……放什麼東西的基座？=Huh? Kinda like a basel for... something?
+旁邊還有一顆結晶。\n大小與基座正好一致。=There is a crystal next to it. The size is exactly the same as the base.
+啊，我明白了！\n把結晶放在基座上就行了吧！=Ah, I see! Just put the crystal on the base, right?
+可惡……什麼鬼東西，\n也太重了吧！！=Damn... what the hell, it's too heavy!!
+已經很努力了……卻紋絲不動啊！\n到底該怎麼辦呀這個～！？=I tried so hard... but nothing happened! What should we do?
+……WONDER，是不是可以\n用一下那個變身裝置？=...Wonder, how about using that transformation device?
+你是指那幅畫？=You mean the painting?
+「向女王獻上敬意」？="Pay tribute to the Queen"?
+嗯。利用那幅肖像畫變成螞蟻，\n也許就能搬動這個結晶了。=Yes. By using that portrait to turn into ants, maybe we can move this crystal.
+這麼一說……聽說螞蟻可以舉起\n大於自身體重數百倍的物體呢。=Come to think of it... ants can lift hundreds of times their own weight.
+嗯……值得一試。附近看看\n能不能找到那副肖像畫吧，WONDER。=Yes... it's worth a try. Look around to see if you can find that portrait, Wonder.
+
+門開了！　而且你們注意到了嗎？\n那個吊燈的顏色，和結晶是一致的。=It's open! And did you notice? The chandelier is the same color as the crystal.
+今後要是遇到類似的機關，\n也試著注意一下顏色吧，WONDER。=Try to pay attention to the color if we come across similar mechanisms in the future, Wonder.
+
+啊！大家當心！\n前面很危險！=Ah! Look out!\nIt's dangerous!
+嗯……斷崖對面有個結晶。\n不過，要怎麼過去呢……=Hmm... There is a crystal opposite the cliff. \nBut how to get there...
+看，那些結晶之間……\n像是透過某種能量連接在一起。=Look, those crystals... seem to be connected together by some energy.
+類似的結晶這邊也有……\n這邊的好像沒有射出能量呢。=There are similar crystals here as well... But the ones here don't emit any energy.
+隊長，這裡有個之前見過的機關。\n要不試試看？=Leader, we've seen this mechanism before, want to try it?
+啊！　能量一樣的東西\n也連到這邊來了！=Ah! The energy is now connected here!
+嗯……{{A}}這些是……=Hmm... {{A}} these are...
+嗯，就好像道路一樣呢。=Yes, it's like the road.
+{{A}}？是可以在上面走的意思嗎？={{A}}? Does this mean we can walk on it?
+不過現在的我們是螞蟻，說不定真可以！\n試試吧！=But now we're ants, maybe it is possible! Let's try it!
+
+這樣就好了！小菜一碟！=That's it! Piece of cake!
+嗯……但可能還會有更複雜的機關。\n現在高興還太早了哦。=Hmm... but there may be more complicated mechanisms. It's too early to celebrate.
+不變成螞蟻是過不去的……=Can't cross without becoming an ant...
+WONDER，結晶連接起來了！=Wonder, the crystals are connected!
+
+門後可能會有敵人在迎接吾等。\nWONDER，準備好了嗎？=There may be enemies waiting behind this door.\nWonder, are you ready?
+
+{{A}}？這前面沒路了？={{A}}? Maybe this is a dead end?
+看上去也沒有樓梯呢。\n如果不能從這裡去往上層的話……=There doesn't seem to be any stairs. If we can't go upstairs from here...
+去看看裡面那堵牆？\n雖然有好多陰影圍在那裡……=Check out that wall? Although there are many shadows surrounding it...
+反正現在也別無他法了，\n就試著去跟它們搭搭話吧。=Maybe we should try talking to them, since we're at a dead end anyway.
+失意的螞蟻陰影=Disappointed Ant Shadow
+{{B}}～{{A}}今天還是沒找我！\n明明我一直通宵工作……！={{B}}～ {{A}} still didn't find me! I've been working all night...!
+沮喪的螞蟻陰影=Frustrated Ant Shadow
+就因為我們不是帥哥嗎……！=Is it because I'm not handsome...!
+沒找你？=Didn't find you?
+帥哥？=Handsome?
+你好阿=Hello
+你你、你們誰啊？是新來的嗎？=W-who are you? Are you new?
+完蛋，這群人長的還挺帥的啊！\n如果變成我們的同事……=Oh no, these people look handsome! \nIf they become our colleague...
+就會奪走{{A}}的寵愛！\n必須現在毀掉他們！！=They will take away {{A}}'s favor! They must be destroyed now!!
+把帥哥幼苗扼殺在搖籃裡！=Kill the handome ones in their cradle!
+它們在說啥啊……=What are talking about...
+{{A}}……是不是可以理解為，\n他們只會攻擊WONDER和SOY？={{A}}... Does this mean they will only attack Wonder and Soy?
+那這些陰影就交給你們帥哥二人組啦！=Then I'll leave these Shadows to you handsome duo!
+喂，開什麼玩笑啊，\nWIND、CLOSER！=Hey, are you kidding me? \nWind, Closer!
+……CLOSER啊，\n為什麼吾不在帥哥列表裡……！=Handsome duo? ...Closer, why am I not on the list...!
+那個，\n誰知道CATTLE你是公是母……？=Well, who knows if Cattle's a boy or a girl...?
+算了，他們來了！小心應對！=Never mind, here they come! Be careful!
+
+嗯……沒有暗門。\n真的是個死路啊。=Hmm... There is no secret door. \nIt's really a dead end.
+難道只有從剛才的入口進去，\n才能到達塔頂嗎？=Can we only reach the top of the tower through that entrance?
+那我們先回去看看？\n說不定那些陰影已經離開了呢！=Should we head back and check? Maybe those Shadows have already left!
+嗯，判斷和指揮就交給隊長吧。=Right, we'll leave the decisions to the leader.
+
+不行，完全沒有離開的意思……=No good, they haven't budged at all...
+乾脆還是把陰影都打倒吧，\n然後直接進去！=Let's just defeat the Shadows and charge in!
+……不行。\n我們暫時返回現實世界吧。=...No. We should retreat to the real world for now.
+我們對{{A}}所知太少，\n就算強行進入，恐怕也很難有什麼進展。=We know too little about {{A}}. Even if we force our way in, we'd likely make no progress.
+……的確。\n目前吾等只知道她是個缺德記者而已。=...True. All we know is that she's an unethical journalist.
+而且就算這一點，\n也是從網路報導推測出來的。=And even that's just speculation from online articles.
+但除了從網路上查還能怎麼辦呢？\n我們跟她又完全不認識。=But what else can we do besides searching online? We don't know her at all.
+畢竟也就只見過兩次面……=After all, we've only met twice...
+返回現實世界再考慮吧=Let's plan in the real world
+一起想想調查方法吧=<size\=30>Let's brainstorm together</size>
+唔，能找到{{A}}就已經是不小的收穫了。\n今天就先回去吧，隊長。=Well, finding the {{A}} is already a great achievement. Let's go back today, leader.
+
+回來了……\n那接下來我們該怎麼調查{{A}}呢？=We're back... So how should we investigate {{A}}?
+她是在叫{{A}}的地方工作吧？\n我又不認識什麼出版社的人……=She works at {{A}}, right? But I don't know anyone in publishing...
+吾等和{{B}}的唯一交集……\n也就是{{A}}了。=Our only connection to {{B}}... is {{A}}.
+不好吧，他可是受害者本人哦？\n哪會想跟我們聊{{A}}的事啊。=No good, he's the victim himself. Why would he want to talk to us about {{A}}.
+一碼歸一碼。吾認為，\n打聽一下他之前遭受的不公也無妨。=Call a spade a spade. I think it would be ok to at least ask him about the injustice he suffered.
+到時候順口問一下吧=Bring it up casually
+叫他去家庭餐廳？=Invite him to a diner?
+
+Choice 1
+可以。不過這對{{A}}來說，\n可能是很敏感的話題……=True. But this might be a sensitive topic for Ikenami-kun...
+必須要注意說話方式。=We have to be careful with our approach.
+Choice 2
+唔，刻意叫他出來有點不太自然……\n池波同學也會有所警惕吧。=Hmm, inviting him directly would seem suspicious... It'd put Ikenami-kun on guard.
+在更自然的情況下打聽打聽呢……=Maybe we could ask casually...
+比如在排練休息的時候，\n假裝不經意地問問吧。=Like asking casually during a rehearsal break.
+還要排練啊……說實話，\n我明天還想集中精力攻略{{A}}呢。=More rehearsals...? Honestly, I wanted to focus on the {{A}} tomorrow.
+不，我們還是繼續排練舞臺劇吧。=No, we should continue with the play rehearsals.
+畢竟不知道那個幕後黑手……\n會躲在哪裡悄悄觀察我們呢。=Who knows where that mastermind might be watching us from?
+在這種時候缺席學校活動，\n會顯得十分惹眼吧。=Skipping school events now would make us stand out too much.
+啊，對哦……！\n{{A}}當時也是來我們學校打探{{B}}的！=Oh right...! {{A}} came snooping around our school for the {{B}}!
+確實，要是不小心被當做可疑目標，\n可就兩頭空了啊。=Exactly. If we get flagged as suspects, we'll lose on both fronts.
+當然無論是調查{{A}}，\n還是攻略{{B}}都需要繼續進行……=Of course, we'll keep investigating {{A}} and infiltrating the {{B}}...
+但也得做出學園祭前正常學生的樣子，\n好好準備活動才行呢。=But we should act like normal students preparing for the festival.
+r:"^唔，沒錯。吾也跟(.*)說過，\n你們的本職是學生。$"="Indeed. As I told $1, you are students at heart."
+而且無論是努力學習還是享受活動……\n都是為了讓生存慾望更活躍。=Besides, whether it's studying hard or enjoying activities... it's all about making the desire to live more vibrant.
+讓生存的慾望更活躍嗎……=Making the desire to live more vibrant...
+要我刻苦學習，\n可能反倒會降低慾望呢……=Forcing me to study hard might actually kill my desire instead...
+沒錯！+1！=Right! Plus one!
 
 
 Shoki Awakening
@@ -6278,6 +6555,10 @@ SNS
 不必要的誤會？=Unnecessary misunderstanding?
 我也想問候一下他=I'd like to meet him
 受傷次數也少了嗎？=Are there fewer injuries?
+為什麼買了這個？=Why did you buy this?
+你壓力太大了嗎……？=Are you stressed out...?
+不要……=No...
+請負起責任全部吃掉=Please take responsibility and eat them all
 
 ----------
 Mayumi SL
