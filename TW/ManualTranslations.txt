@@ -785,8 +785,10 @@ r:"^限購：(\d+)次$"="Limit: $1"
 修改簽名=Signature
 複製ID=Copy ID
 更換名片=<size\=34>Background</size>
+名片=Background
 更換相框=Avatar Frame
 更換頭像=Avatar
+頭像·{{A}}=Avatar·{{A}}
 更換聊天框=Chat Box
 更換壁紙=Wallpaper
 遮罩此人=Block
@@ -1692,6 +1694,12 @@ r:"^好感度提升至<color\=#FFC000>rank7</color>後，\n解鎖約會地點「
 r:"^好感度提升至<color\=#FFC000>rank13</color>後，\n解鎖約會地點「銀座·壽司店」。$"="<size\=24>Unlock the Hangout Spot [Ginza Sushi Restaurant] after reaching <color\=#FFC000>rank 13</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank17</color>後，\n解鎖約會地點「{{A}}·家電量販店」，並且在協同者邀約中可以獲得更多額外好感度。$"="<size\=24>Unlock the Hangout Spot [{{A}} Electronics Store] and gain even more Confidant Points from Invitations after reaching <color\=#FFC000>rank 7</color>.</size>"
 
+與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n都市日程中「魅力」、「體貼」的人格指數獲得量提升。=<size\=23>Gain more [Charm] and [Kindness] from City Activities after being Confidants with [<color\=#FFC000>{{A}}</color>].</size>
+好感度提升至<color\=#FFC000>rank5</color>後，\n都市日程中「勇氣」、「靈巧」的人格指數獲得量提升。=<size\=23>Gain more [Guts] and [Proficiency] from City Activities after reaching <color\=#FFC000>rank 5</color>.</size>
+好感度提升至<color\=#FFC000>rank9</color>後，\n人格指數提升到16/18/20級時，可以獲得1個「靈感輝光」。=<size\=23>Gain 1 [Inspirational Glow] when reaching Rank 16/18/20 Social Stats after reaching <color\=#FFC000>rank 9</color>.</size>
+好感度提升至<color\=#FFC000>rank13</color>後，\n都市日程中「知識」的人格指數獲得量提升。=<size\=23>Gain more [Knowledge] from City Activities after reaching <color\=#FFC000>rank 13</color>.</size>
+好感度提升至<color\=#FFC000>rank17</color>後，\n人格指數提升到20級後，每200點超額的經驗將轉化為隨機禮物道具。。=<size\=23>After reaching Rank 10 Social Stats, convert every 200 excess experience into a random gift after reaching <color\=#FFC000>rank 17</color>.</size>
+
 解鎖新能力=Unlock Skill
 人格指數=Social Stats
 都市五維=Social Stats
@@ -1703,6 +1711,8 @@ r:"^好感度提升至<color\=#FFC000>rank17</color>後，\n解鎖約會地點�
 級解鎖=Rank Unlock
 sr:"^<color\=#FFC000>(.*)</color>的協同者等級可提升至Rank(\d+)$"="Can rank up <color\=#FFC000>$1</color> to rank $2"
 sr:"^人格指數「(.*)」已解鎖全部能力。$"="Unlocked all skills for Social Stats [$1]."
+{{A}}Rank9級後，開啟人格指數「升級獎勵」功能。=Unlock [Rank Up Rewards] after reaching Rank 9 with {{A}}.
+{{A}}Rank17級後，開啟人格指數「經驗轉化」功能。=Unlock [Experience Conversion] after reaching Rank 17 with {{A}}.
 
 用於提升與協同者的親密度。=<size\=25>Used for granting Confidant Points.</size>
 
@@ -2040,7 +2050,7 @@ r:"^要<color\=#ff0000>回家</color>嗎？\n還是說去附近的<color\=#ff000
 閱讀消耗：= 
 
 合體<color\=#FFC000>指定{{B}}</color>，好像能受到{{A}}的關注=<size\=25>Fusing <color\=#FFC000>Certain Personas</color> might attract {{A}}'s attention</size>
-磨練<sprite\=4><color\=#ffb400>靈巧</color>的話，好像更能受到{{A}}的關注=<size\=24>Increasing <sprite\=4><color\=#ffb400>Proficiency</color> might attract {{A}}'s attention</size>
+磨練<sprite\=4><color\=#ffb400>靈巧</color>的話，好像更能受到{{A}}的關注=<size\=23>Increasing <sprite\=4><color\=#ffb400>Proficiency</color> might attract {{A}}'s attention</size>
 去太平堂書店逛一逛，或許能買到有用的書籍=<size\=25>A visit to the Shibuya Bookstore might yield useful books</size>
 聽說有新電影在上映=I heard there's a new movie coming out
 聽說在{{A}}街頭，有一位神秘的占卜師=<size\=25>I heard there's a mysterious fortune-teller in Shinjuku</size>
@@ -2056,6 +2066,9 @@ r:"^要<color\=#ff0000>回家</color>嗎？\n還是說去附近的<color\=#ff000
 似乎掌握了在牛丼店打工的心得=<size\=28>I have mastered working at the Beef Bowl Shop</size>
 似乎掌握了在書店打工的心得=I have mastered working at the Bookstore
 似乎掌握了在{{A}}打工的心得=<size\=28>I have mastered working at {{A}}</size> 
+sr:"^由於體會了(.*)『邁出一步的力量』\n在都市生活中可獲得更多<sprite\=(\d+)><color\=#ffb400>(.*)</color>。$"="Experienced $1's [Power to Step Forward], can gain more <sprite\=$2><color\=#ffb400>$3</color> from City Activities."
+sr:"^由於體會了(.*)『並肩前行的勇氣』\n在都市生活中可獲得更多<sprite\=(\d+)><color\=#ffb400>(.*)</color>。$"="Experienced $1's [Courage to Move Together], can gain more <sprite\=$2><color\=#ffb400>$3</color> from City Activities."
+sr:"^由於體會了(.*)『開拓見聞的毅力』\n在都市生活中可獲得更多<sprite\=(\d+)><color\=#ffb400>(.*)</color>。$"="Experienced $1's [Perseverance in Expanding Horizons], can gain more <sprite\=$2><color\=#ffb400>$3</color> from City Activities."
 
 r:"^基於這個選擇，和{{A}}的關係將產生重大變化。$"="Based on this, your relationship with {{A}} will undergo a major change."
 <color\=#F7F95C>一旦確認，將在一段時間內無法改變關係。</color>=<color\=#F7F95C>Once confirmed, you cannot change the relationship for some time.</color>
@@ -2323,6 +2336,7 @@ r:"^區域$"="Area"
 嗯？要從{{A}}撤退，返回都市嗎？=Hm? Want to retreat from Mementos\nand head back to the city?
 r:"^領獎需要消耗(\d+)點體力，\n當前體力不足，是否確認潛入？$"="You need to consume $1 Stamina \nin order to claim the rewards.\nYou don't have enough Stamina, \ndo you still want to infiltrate?"
 r:"^挑戰需要消耗(\d+)點體力，\n當前<color\=#ff3b37>體力不足</color>，是否補充體力？$"="Need $1 Stamina to challenge.\n<color\=#ff3b37>You don't have enough Stamina</color>, \nwant to replenish Stamina?"
+領獎所需體力不足，是否兌換體力？=Insufficient Stamina to claim the rewards, want to replenish Stamina?
 本週「往日回溯」剩餘領獎次數已耗盡，\n<color\=#ff3b37>無法獲得挑戰獎勵</color>，是否繼續挑戰？=Reached weekly limit.\n<color\=#ff3b37>You will not gain rewards</color>, \ndo you still want to challenge?
 逃離後不會獲得本次戰鬥獎勵！\n確定要逃離戰鬥嗎？=<size\=29>You will not receive rewards from this battle after escaping!\nAre you sure you want to escape?</size>
 逃離戰鬥後將重置關卡。\n確定要逃離戰鬥嗎？=Escaping will reset the level.\nAre you sure you want to escape?
@@ -2699,14 +2713,6 @@ sr:"^完成「<color\=#ff3b37>(.*)</color>」後解鎖「(.*)」，是否立即�
 搜索=►
 已經發消息給對方了，應該很快就會回覆了吧。=Sent friend request.
 
-// Crepe Shop Quiz
-烙餅、放入奶油、再放草莓，\n然後把餅卷起來，再用紙包好。=Remember these steps:\nPrepare the pie, then add some cream, then strawberries, then roll up the pie. Don't forget to wrap it in paper!
-放入奶油=Add cream
-放入草莓=Add strawberries
-把餅卷起來=Roll up the pie
-烙餅=Prepare the pie
-用紙包好=Wrap it in paper
-
 查看SNS訊息=View SNS Message
 前往客廳=Go to the living room
 
@@ -2724,6 +2730,7 @@ sr:"^完成「<color\=#ff3b37>(.*)</color>」後解鎖「(.*)」，是否立即�
 怪盜角色<color\=#EF0000>啟示卡</color>、<color\=#EF0000>技能</color>、武器的強度較低=Character <color\=#EF0000>Revelation Cards</color>, <color\=#EF0000>Skills</color>, Weapons are weak
 
 空空如也=Empty
+尚未解鎖=Locked
 
 ----------
 EVENTS TAB
@@ -3451,6 +3458,13 @@ r:"^贈送所有喜歡的禮物給{{A}}$"="Give all Favorite Gifts to {{A}}"
 解鎖{{A}}所有的協同者語音=Unlock all Confidant Voicelines for {{A}}
 與任意協同者進行1次關係回溯<size\=30>(0/1)</size>=Backtrack 1 relationship <size\=30>(0/1)</size>
 與任意協同者進行1次關係回溯=Backtrack 1 relationship
+
+獲得方式=Obtain Method
+默認名片=Default background
+官方營運活動獲得=Reward from official events
+sr:"^參與「(.*)」活動獲得$"="Participate in the event [$1]"
+r:"^{{A}}成長至(\d+)級時解鎖$"="{{A}} reached Lv. $1"
+r:"^與協同者{{A}}好感度達到rank(\d+)$"="Reach Rank $1 with {{A}}"
 
 查看全部徽章=View all badges
 r:"^徽章收集：(\d+)$"="Badges: $1"
