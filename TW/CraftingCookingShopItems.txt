@@ -24,20 +24,357 @@ INFILTRATION TOOLS
 使用效果：由於是手工製作，外形略顯粗糙。在水壩內使用，應該能探測到不錯的寶物。=<size\=24>Effect: Handmade and rough in appearance. \nShould be able to detect treasures when used in a dam.</size>
 
 ----------
-Second-hand Shop
+Combat Items
 ----------
-鋁板=Aluminum Plate
+破壞爆竹=Destruction Firecracker
+r:"^戰鬥道具，可隨機造成一次單體物理或射擊屬性傷害。\n在工作臺使用『水銀』·『白磷』製作而成。$"="Combat item. Randomly deals Phys or Gun damage once."
+元素爆竹=Elemental Firecracker
+r:"^戰鬥道具，可隨機造成一次單體疾風、火焰、冰凍或電擊屬性傷害。\n在工作臺使用『乙醇』·『金屬粉末』製作而成。$"="Combat item. Randomly deals Wind, Fire, Ice, or Elec damage once."
+奇異爆竹=Strange Firecracker
+r:"^戰鬥道具，可隨機造成一次單體念動、核熱、祝福或詛咒屬性傷害。\n在工作臺使用『乙醇』·『鐵片』製作而成。$"="Combat item. Randomly deals Psy, Nuke, Bless, or Curse damage once."
+
+天羅地網咒=Trap Spell
+sr:"^戰鬥道具，可造成一次中量的單體(.*)屬性傷害。\n在工作臺使用(.*)製作而成。$"="Combat item. Deals medium $1 damage once."
+三彈護身咒=Bullet Spell
+御風咒=Wind Spell
+炎火咒=Fire Spell
+祈雪咒=Snow Spell
+落五雷咒=Thunder Spell
+凶夢咒=Nightmare Spell
+召核咒=Nuclear Spell
+金光祈運咒=Light Spell
+鬼卒咒=Demon Spell
+
+碰撞鈴=Impact Bell
+sr:"^戰鬥道具，可造成一次大量的單體(.*)屬性傷害。\n在工作臺使用(.*)製作而成。$"="Combat item. Deals heavy $1 damage once."
+彈丸鈴=Projectile Bell
+風襲鈴=Winded Bell
+燃燒鈴=Burn Bell
+冰凍鈴=Freeze Bell
+觸電鈴=Shock Bell
+幻視鈴=Hallucination Bell
+熱力鈴=Thermal Bell
+祈願鈴=Prayer Bell
+解咒鈴=Removal Bell
+
+----------
+Crafting Gifts
+----------
+簡約的包裝=<size\=28>Simple Packaging</size>
+華麗的包裝=<size\=28>Gorgeous Packaging</size>
+
+小雛菊香料=Daisy Spice
+小雛菊=Daisy
+葵花籽=Sunflower Seed
+向日葵=Sunflower
+茉莉花茶=Jasmine Tea
+茉莉=Jasmine
+
+山茶花花茶=Camellia Tea
+山茶花=Camellia
+桂花花茶=Sweet Olive Tea
+桂花=Sweet Olive
+百合永生花=Eternal Lily
+百合=Lily
+
+維麗特=Glamorous Violet
+紫羅蘭=Violet
+風物詩=Fuubutsushi
+大波斯菊=Cosmos
+
+真愛永恆=Eternal Love
+紅玫瑰=Red Rose
+
+----------
+Online Shopping
+----------
+網購=Online Shopping
+可以在購物網站直接消耗現金採購各地區商店售賣的商品。=You can spend cash online to purchase goods sold in stores in various regions.
+{{B}} —— 咿，這裡是{{A}}！\n{{A}}為您服務！=Hello! This is {{A}}!\nI repeat, I'm Shady Commodities Tanakaaa!
+在本網站，我們也收集了各種珍貴物品，並且支持匿名購買哦！=Here we sell wonderful and rare items that are not circulated among the general public!
+來吧，拋開恐懼和戒備，隨心所欲地盡情購物吧！=Curious about something? You've got access! Want something? You've got access!
+食材=Ingredients
+花卉=Plants
+書籍=Books
+服裝=Outfits
+其他=Other
+特惠=Sales
+價格排序=Price
+品質排序=Quality
+限購：=Limit:
+不限量購買=No limit
+r:"^重置時間：(\d+)天(\d+)時$"="Resets: $1d $2h"
+r:"^重置時間：(\d+)時(\d+)分$"="Resets: $1h $2m"
+r:"^重置時間：(\d+)分$"="Resets: $1m"
+r:"^下架時間：(\d+)天(\d+)時$"="Expires: $1d $2h"
+r:"^下架時間：(\d+)時(\d+)分$"="Expires: $1h $2m"
+r:"^下架時間：(\d+)分$"="Expires: $1m"
+商品收藏成功。=Added to favorites.
+已取消收藏。=Removed from favorites.
+
+{{B}}……歡迎！\n歡迎光臨這迷人的世界……{{A}}！={{B}}... Welcome to the alluring world of {{A}}!
+歡迎光臨！\n歡迎來到{{A}}！=Welcome!\nThis is {{A}}!
+這位大人，\n您已踏入這扇不為人知的暗門。=You've opened the door to possibilities that normal people can only dream of!
+我們準備了豐富的商品來迎接您的光臨！\n可不要錯過哦！！=Now, you can find all the rare items you could possibly want!
+有興趣的話請流覽網站！\n想買的話也請流覽網站！=Make sure you don't miss out on anything!
+
+發貨地：{{A}}=<size\=23>Place of Shipment: {{A}}</size>
+r:"^發貨地：{{A}}-(.*)$"="<size\=23>Place of Shipment: {{A}}</size>"
+購買數量=Quantity
+透過網購獲取=Online shopping
+已經到達限購上限。=Reached purchase limit.
+當前商品已售罄，暫時無法購買。=Current item is sold out, cannot be purchased.
+
+r:"^當前商品尚不支持網購，是否前往<color\=#FFC000>(.*)</color>的<color\=#FFC000>(.*)</color>進行線下選購？\n\（<color\=#ff3b37>{{A}}</color>協同者等級提升至<color\=#ff3b37>(\d+)級</color>後解鎖此地區的線上郵寄特權\）$"="This item does not support online shopping, \ngo to <color\=#FFC000>$1</color> for offline purchase?\n(Unlock privilege after reaching <color\=#ff3b37>rank $3</color> \nwith <color\=#ff3b37>{{A}}</color>)"
+
+----------
+Online Gifts
+----------
+生活物品=<size\=24>Everyday Items</size>
+
+運動護具=Protective Gear
+杯墊=Coaster
+應援螢光棒=Light Stick
+偶像鑰匙扣=Idol Keychain
+八卦新聞週刊=Gossip Magazine
+桌上型迷你仙人掌=Mini Cactus
+主題花盆=Theme Flowerpot
+男士遮陽帽=Men's Sun Hat
+水彩畫明信片=Watercolor Postcard
+相撲大叔主題貼紙套組=Sumo Sticker Set
+邊走邊吃美食指南=Walk and Eat Guide
+劍玉=Kendama
+流行漫畫月刊=Comic Magazine
+靈異版晴天娃娃=Spooky Sunny Doll
+造型用氣球套裝=Balloon Modelling Set
+賽車雜誌=Racing Magazine
+日常燙傷用品組合=Scalding Supplies Set
+
+GOAT吸水毛巾=GOAT Absorbent Towel
+簡易化妝包=Easy Makeup Kit
+『偶像之光』遊戲卡=[Idol Light] Game Card
+不可思議眼鏡=Incredible Glasses
+磁石項鍊=Magnet Necklace
+手工書皮套裝=Handmade Book Cover
+貓貓髮夾=Cat Hairpin
+玻璃花瓶=Glass Vase
+古典文集收藏版=Classical Collection
+和{{A}}紋書衣=Flower Book Jacket
+童話故事全集典藏版=Fairy Tales Collection
+玫瑰浴禮盒=Rose Bath Gift Box
+摩托車模型=Motorcycle Model
+高級香氛組合=Premium Fragrance Set
+精緻的銀盤=Exquisite Silver Plate
+卡通主題抱枕=Cartoon Pillow
+懷舊主題卡通徽章=Nostalgic Cartoon Badge
+雪花主題掛飾=<size\=24>Snowflake Decoration</size>
+古典音樂典藏合集=Classical Music Collection
+經典格鬥比賽合集=Classic Fighting Game Collection
+
+GOAT棒球手套=GOAT Baseball Gloves
+GOAT棒球服=GOAT Baseball Jersey
+吉祥物布偶=Mascot Doll
+超級噪音鬧鐘=Super Loud Alarm Clock
+限量版漢堡玩偶=<size\=17>Limited Edition Hamburger Doll</size>
+深紅色口紅=Red Lipstick
+最新型美顏器=Latest Facial Roller
+負重腕帶=Weighted Wrist Strap
+吉他養護套組=Guitar Maintenance Kit
+高級定製娃娃屋=Premium Doll House
+護眼型眼藥水=Eye Drops
+組裝型家用擺件=Household Decorations
+精品瑜伽墊=Yoga Mat
+
+GOAT棒球棒=GOAT Baseball Bat
+AMN005首張專輯=AMN005 Debut Album
+女僕模型=Maid Model
+靈異錄影帶=Psychic Video
+櫻花扇=Cherry Blossom Fan
+最新型掃地機器人=Latest Robot Vacuum
+宇治抹茶布丁=Uji Matcha Pudding
+松露巧克力=Truffle Chocolate
+名牌香水=Famous Perfume
+高級太陽眼鏡=Premium Sunglasses
+典雅木梳=Elegant Wooden Combs
+最新型數位相機=Latest Digital Camera
+換裝娃娃=Dress Up Dolls
+高性能電動牙刷=High Performance Electric Toothbrush
+異域風情香水=Exotic Perfume
+全音階口琴=Diatonic Harmonica
+最新型無人機=Latest Drone
+迷你音響=Mini Speaker
+兵人套組=Soldier Set
+鬍子眼鏡=Gag Glasses
+
+打工雜誌=Working Magazine
+特製堅果組合=Special Nut Combo
+牛皮筆袋=Cowhide Pencil Case
+黑漆馬克杯=Black Lacquered Mug
+卡通圍裙=Cartoon Apron
+時尚雜誌=Fashion Magazine
+心形手鏡=Heart Shaped Hand Mirror
+
+運動帽=Sports Cap
+棒球服玩偶=Baseball Jersey Doll
+限定卡片集=Limited Edition Cards Set
+
+消防車模型=Fire truck model
+大型水母玩偶=Large Jellyfish Doll
+手工花籃=Handmade Flower Basket
+48面魔術方塊=48-Sided Magic Cube
+奶味棒超值包=Milk Sticks Pack
+可愛便當盒=Cute Lunch Box
+成人智慧環=Adult Smart Ring
+手工花籃=Handmade Flower Basket
+傳統點心組合=Dim Sum Combo
+廚房工具套組=Kitchen Tool Set
+地方名產泡麵組合包=Local Instant Noodles Combo Pack
+萬能維生素片=Multivitamin Tablets
+落語精選合集=Rakugo Collection
+卡通音樂盒=Cartoon Music Box
+心理學著作文集典藏版=Psychology Collection
+射擊遊戲進階攻略集=Advanced Shooter Strategy Collection
+珍稀植物圖鑑=Rare Plants Guide
+卡通睡眠眼罩=Cartoon Sleep Mask
+
+懶人坐墊=Lazy Cushion
+大頭玩偶=Big Head Doll
+音樂盆栽=Music Pot
+運動型耳機=Sports Headphones
+全護型絕緣夾=Insulation Clamps
+
+降噪耳機=Noise Canceling Headphones
+限量版鋼筆=Limited Edition Fountain Pen
+月亮型胸針=Moon Brooch
+消防車模型=Fire Truck Model
+大型水母玩偶=Large Jellyfish Doll
+{{A}}戰隊擺件套組={{A}} Decoration Set
+拼裝模型車=Assembled Model Car
+
+----------
+Zōshigaya Supermarket
+----------
+高麗菜=Cabbage
+馬鈴薯=Potato
+冬瓜=Wax Gourd
+白菜=Chinese Cabbage
+豬肉=Pork
+香菇=Shiitake
+雞肉=Chicken
+洋蔥=Onion
+番茄=Tomato
+牛肉=Beef
+海參=Sea Cucumber
+家用保溫杯=Household Thermal Mug
+
+----------
+Yongen-Jaya Second-hand Shop
+----------
+sr:"^一種常見的製作材料，可使用工作臺製作成潛入道具(.*)。$"="Common crafting material, can be used to make Infiltration Tools $1."
+鋁板=Aluminum Sheet
+塑膠=Plastic
+香精=Balm
 橡膠=Rubber
+黃銅=Brass
 水銀=Mercury
+白磷=White Phosphorus
+乙醇=Ethanol
 金屬粉末=Metal Powder
+鐵片=Iron Sheet
 金剛石=Diamond
+
+r:"^一種常見的製作材料，可使用工作臺製作全部「符咒類」潛入道具。$"="Common crafting material, can be used to make all [Charm] type Infiltration Tools."
+空白符紙=Blank Talisman
 珠光粉=Peral Powder
 活性碳=Activated Carbon
+穩定劑=Stabilizer
 紅磷粉=<size\=28>Red Phosphorus Powder</size>
+紅色顏料=Red Pigment
+黃色顏料=Yellow Pigment
+綠色顏料=Green Pigment
+藍色顏料=Blue color pigment
+粉色顏料=Pink Pigment
+橙色顏料=Orange Pigment
+金色顏料=Gold Pigment
+朱砂=Cinnabar
+赭石=Ocher
+墨水=Ink
+紫銅=Copper
+碳鋼=Carbon Steel
+珍珠=Pearl
+琥珀=Amber
+鋼化玻璃=Tempered Glass
+
 老式遊戲機=<size\=21>Vintage Game Console</size>
 
+----------
+Yongen-Jaya Vending Machine
+----------
+自動販賣機（{{A}}）=Vending Machine ({{A}})
+健康飲品套組=Healthy Drinks Set
+彈珠汽水懷舊套組=Nostalgic Ramune Set
+
+----------
+Shibuya Jewelry Store
+----------
+白銀手環=Silver Bracelet
+心型戒指=Heart Ring
+
+----------
+Kichijoji Stationery Shop
+----------
+縫紉工具進階套組=<size\=19>Advanced Sewing Tool Set</size>
+多人卡牌桌遊套裝=Multiplayer Card Game Set
+
+----------
+Kichijoji Stoneon
+----------
+珍珠耳環=Pearl Earrings
+項圈型項鍊=Choker Necklace
+高端運動手錶=<size\=21>High-End Sports Watch</size>
+
+----------
+Akihabara Electronics Retail Store
+----------
+迷你棉花糖機=<size\=19>Mini Cotton Candy Machine</size>
+
+----------
+Takemi Items
+----------
+卡加消除液=<size\=24>Kajaclear-R</size>
+消毒用液體，在戰鬥中使用，使用後立即消除1名敵人的1個狀態上升效果。=Sterilizing liquid. Removes 1 stats buff for 1 enemy.
+坤達消除液=<size\=24>Kundaclear-R</size>
+消毒用液體，在戰鬥中使用，使用後立即消除1名同伴的1個狀態降低效果。=Sterilizing liquid. Removes 1 stats debuff for 1 ally.
+療傷藥片·小=<size\=24>Recov-R: S
+r:"^醫療用品，在戰鬥中使用，使用後立即恢復1名同伴(\d+%)的生命值。$"="Medical item. Restores $1 HP to 1 ally."
+療傷藥片·中=<size\=24>Recov-R: M</size>
+療傷藥片·大=<size\=24>Recov-R: L</size>
+寧息軟膏=<size\=24>Nohar-M</size>
+醫療用品，在戰鬥中使用，使用後立即消除1名同伴的元素異常效果。=Medical ointment. Cures 1 Elemental Ailment for 1 ally.
+舒心凝膠=<size\=24>Relax Capsule</size>
+藥品，在戰鬥中使用，能消除1名同伴的暴怒·絕望·洗腦·混亂·恐怖·嘲諷狀態。=Topical balm. Cures Rage/ Despair/ Brainwash/ Confusion/ Fear for 1 ally.
+定神膠囊=<size\=24>Alert Capsule</size>
+醫療用品，在戰鬥中使用，使用後消除1名同伴的眩暈·遺忘·睡眠狀態。=Medical capsule. Cures Dizzy/ Forget/ Sleep for 1 ally.
+氣力補給包S=<size\=24>Stamina Kit S</size>
+r:"^補給品，在戰鬥中使用，使用後立即恢復１名同伴(\d+%)的精力值。$"="Medical kit. Restores $1 SP to 1 ally."
+氣力補給包M=<size\=24>Stamina Kit M</size>
+氣力補給包L=<size\=24>Stamina Kit L</size>
+{{A}}全療藥=<size\=24>Takemedic-All</size>
+r:"^醫療用品，在戰鬥中使用，使用後立即恢復全體隊友(\d+%)的生命值。$"="Medical item. Restores $1 HP to all allies."
+{{A}}全療藥V=<size\=21>Takemedic-All V</size>
+
+----------
+Miyu Items
+----------
+桌上型熏香機=<size\=22>Desktop Incense Burner</size>
+音樂雪花球模型=Music Snow Globe
+高級精油組合=<size\=20>Premium Essential Oil Set</size>
+栗子蛋糕=Chestnut Cake
+限量版鑰匙圈=<size\=21>Limited Edition Keychain</size>
+粗點心零食超值包=Snacks Pack
 
 // Cooking Ingredients //
+阿薩姆紅茶=Assam Tea
 醋=Vinegar
 蔥=Green Onion
 蒜=Garlic

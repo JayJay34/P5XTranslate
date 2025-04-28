@@ -1,0 +1,465 @@
+----------
+Guild - Paradise - Raid Boss
+----------
+狂歡券=Carnival Tickets
+參與樂園活動可獲得，用於樂園商店中兌換獎勵。=Gained from Paradise events.\nCan be used in Carpe Diem Shop.
+『狂歡券』\n參與樂園活動可獲得，用於樂園商店中兌換獎勵。=<size\=26>[Carnival Tickets]\nGained from Paradise events.\nCan be used in Carpe Diem Shop.</size>
+
+個人積分=Score
+總積分=Total Score
+積分:=Score:
+本期歷史積分=Personal Best	
+歷史積分用於領取積分獎勵、參與挑戰排名\n重置挑戰不會清除歷史積分=<size\=30>Total score are used for rewards and paradise ranking. \nResetting the fight won't delete your total score.</size>
+積分統計進度=Boss Beaten
+r:"^積分統計進度會記錄本期分數<color\=#ef0000>最高</color>的<color\=#ef0000>(\d+)個</color>首領的積分總和$"="<size\=31>Sum of your <color\=#ef0000>$1 highest</color> scores will count towards total score.</size>"
+
+r:"^第(\d+)名$"="Top $1"
+r:"^前(\d+%)$"="Top $1"
+
+當前積分=Current Pts.
+樂園排行=Paradise Rank
+樂園活躍度=Activity Point
+r:"今日活躍：(\d+\/\d+)"=Today's Score: $1
+r:"近7天貢獻 (\d+)"=7d Contribution: $1
+
+所屬樂園=Paradise\nName:
+樂園職位=Position:
+代理人等級=Level
+樂園ID=Paradise ID
+樂園人數=Members
+樂園影響力=Influence
+本樂園排名獎勵=Rank Rewards
+r:"^歷史貢獻 (\d+)$"="Total Contribution $1"
+
+成員=Member
+代理人=Leader
+副手=Associate
+<color\=#81ea2c>線上</color>=<color\=#81ea2c>Online</color>
+
+挑戰難度·簡單=Easy
+挑戰難度·普通=Normal
+挑戰難度·困難=Hard
+挑戰難度·挑戰=Challenge
+挑戰難度·噩夢=Nightmare
+
+基礎傷害積分=Base Score
+虛弱期傷害積分=Weak DMG
+首領擊殺積分=Defeated Boss
+敵方抵禦積分=Base Score
+己方生存回合=Round(s) Survived
+生存回合額外分=Survival Bonus
+難度係數=Difficulty Multiplier
+r:"難度係數：<color\=#0e68c9>(\d+)</color>"=<size\=25>Multiplier: <color\=#0e68c9>$1x</color></size>
+r:"難度係數：<color\=#0e68c9>(\d+\.\d+)</color>"=<size\=25>Multiplier: <color\=#0e68c9>$1x</color></size>
+BOSS總積分：=Current Score:
+
+可用協助次數：=Assist Units\nAvailable
+樂園=<size\=32>Paradise</size>
+鎖定陣容=Lock Team
+陣容鎖定=Lock Team
+
+獎勵詳情=Rewards
+任意樂園成員首次參與挑戰後活躍值+1=+1 Activity Point from each member when challenging the weekly for the first time.
+r:"樂園累計活躍每達到指定值後可領取對應獎勵，當前：<color\=#eade10>(\d+)</color>"=Total Activity Points: <color\=#eade10>$1</color>
+r:"個人歷史總積分達到指定值後可領取對應獎勵，當前：<color\=#eade10>(\d+)</color>"=Get rewards after earning the following score. Your Personal Best: <color\=#eade10>$1</color>
+r:"^歷史積分達到<color\=#eade10>(\d+)</color>後可領取$"="Can claim rewards after \nearning <color\=#eade10>$1</color> score"
+已獲得本週全部獎勵=Got all rewards this week!
+積分計算規則：\n當前積分\=挑戰積分*難度係數\n同一BOSS多個難度只記錄歷史最高分數=Score Formula:\nChallenge Score * Multiplier\n\nOnly the highest score is saved between runs.
+
+線上=Online
+r:"^<color\=#8F8D8D>(\d+)分鐘前線上</color>$"="<size\=24><color\=#8F8D8D>Last Seen $1m</color></size>"
+r:"^<color\=#8F8D8D>(\d+)小時前線上</color>$"="<size\=24><color\=#8F8D8D>Last Seen $1h</color></size>"
+r:"^<color\=#8F8D8D>(\d+)天前線上</color>$"="<size\=24><color\=#8F8D8D>Last Seen $1d</color></size>"
+sr:"(.*?)人線上"=$1 Online
+sr:"<color\=#FF0000>(.*)</color>加入了樂園。"=<color\=#FF0000>$1</color> joined the Paradise.
+sr:"<color\=#FF0000>(.*)</color>退出了樂園。"=<color\=#FF0000>$1</color> left the Paradise.
+sr:"<color\=#FF0000>(.*)</color>將<color\=#FF0000>(.*?)</color>移出了樂園。"=<color\=#FF0000>$1</color> kicked <color\=#FF0000>$2</color> from the Paradise.
+
+成員=Member
+代理人=Leader
+副手=Associate
+<color\=#81ea2c>線上</color>=<color\=#81ea2c>Online</color>
+
+// Paradise Tags //
+樂園資訊=Information
+樂園人數：=Members:
+休閒娛樂=Leisurely
+佛系玩家=Peaceful
+自由暢玩=Casual
+
+鎖定提示=Lock
+以下<color\=#ef0000>怪盜、面具與啟示</color>會被鎖定到本挑戰中不可更換，是否確認出戰？=<size\=24>You cannot change the chosen <color\=#ef0000>Thieves, Personas and Revelation Cards</color> until you reset the fight</size>
+以下怪盜裝備的<color\=#ef0000>啟示</color>被其他BOSS鎖定，選擇確認以調整啟示。=<size\=26>The following Thieves' <color\=#ef0000>Revelation Cards</color> are locked by other bosses. Please switch.</size>
+重置挑戰會解除陣容鎖定並清空當前總積分，是否繼續=Resetting the fight will unlock your team and clear the current score. Are you sure? \n(This will not erase your Personal Best)
+尚未挑戰=Not challenged yet
+暫未挑戰=Not challenged yet
+啟示禁用=<size\=20>\nCards\nLocked</size>
+當前<color\=#FFC000>怪盜</color>已鎖定，重置挑戰前無法下陣或更換=Current <color\=#FFC000>Thief</color> is locked, can't change until resetting the fight
+支配/反抗職業積分倍率=Dominate/Rebel Score Mult
+
+特殊機制生效中=Mechanics Active
+累積分數：=Total Score: <size\=1>_</size>
+r:"^虛弱剩餘回合：$"="   Turn(s) Left:   <size\=1>_</size>"
+r:"^剩餘進攻回合：$"="   Turn(s) Left:   <size\=1>_</size>"
+虛弱期獲得積分×=Score Multiplier x
+存活回合積分加成×=Score Multiplier x
+支配/反抗職業積分加成×=Score Multiplier x
+r:"^倍$"="<size\=10> </size>!"
+r:"^在(\d+)回合內對敵人造成更高的傷害$"="Deal damage to enemies within $1 turns"
+逃離戰鬥不會記錄挑戰積分。\n確定要離開戰鬥嗎？=Cannot record score if you escape.\nAre you sure?
+
+r:"^首領的適應性發生變化，所有怪盜造成<color\=#FFFC40>弱點傷害</color>提升(\d+%)$"="<size\=27>Change the affinities of the boss, increase <color\=#FFFC40>Weakness DMG</color> by $1</size>"
+
+----------
+Bosses
+----------
+{{A}}、{{B}}、{{C}}、{{D}}處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n{{A}}會源源不斷地召喚天使援軍，擊敗天使可以回復精力值。對處於虛弱階段時{{A}}召喚的天使造成傷害可獲得積分。=<size\=24>{{A}}, {{B}}, {{C}}, {{D}} have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.\n{{A}} will keep summoning Angel, defeating Angel will restore SP. Dealing damage to Angel during Weak will count for score.</size>
+1、{{A}}、{{B}}、{{C}}、{{D}}處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n2、{{A}}會源源不斷地召喚天使援軍，擊敗天使可以回復精力值。對處於虛弱階段時{{A}}召喚的天使造成傷害可獲得積分。=<size\=24>1. {{A}}, {{B}}, {{C}}, {{D}} have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.\n2. {{A}} will keep summoning Angel, defeating Angel will restore SP. Dealing damage to Angel during Weak will count for score.</size>
+{{A}}會源源不斷地召喚天使援軍，擊敗天使可以回復精力值。對天使造成傷害可獲得積分。=Dominion will keep summoning Angel, defeating Angel will restore SP. Dealing damage to Angel will count for score.
+{{A}}、{{B}}、{{C}}、{{D}}處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。=<size\=24>{{A}}, {{B}}, {{C}}, {{D}} have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.</size>
+
+{{A}}的「化身」與本體處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。={{A}} and his incarnations have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.
+{{A}}會召喚四個「化身」，「化身」弱於本體。對「化身」造成的傷害會計入積分。={{A}} will summon "Incarnations", which are weaker than himself. Dealing damage to "Incarnations" will count for score.
+{{A}}的化身之一。=One of the incarnations of {{A}}.
+
+r:"^1、{{B}}每回合為所有單位添加<color\=#ff3b37>「諸神黃昏」</color>。\n「諸神黃昏」：造成傷害提升(\d+%)，每回合流失一定生命值，可疊加(\d+)層。\n2、進入虛弱階段後，{{B}}為全體怪盜添加(\d+)層<color\=#ff3b37>「諸神黃昏」</color>，並召喚(\d+)隻{{A}}，對{{A}}造成的傷害會計入積分。$"="<size\=24>1. {{B}} will inflict all units with <color\=#ff3b37>[Ragnarok]</color> each turn.\n[Ragnarok]: Increase DMG Dealt by $1, lose a certain amount of HP each turn, up to $2 stacks.\n2. When entering Weak, {{B}} will inflict all Thieves with $3 stacks of <color\=#ff3b37>[Ragnarok]</color>, then summon $4 {{A}}, dealing damage to {{A}} will count for score.</size>"
+r:"^1、{{B}}每回合為所有單位添加<color\=#ff3b37>「諸神黃昏」</color>。\n「諸神黃昏」：造成傷害提升(\d+%)，每回合流失一定生命值，可疊加(\d+)層。\n2、擊敗{{C}}，會扣除{{B}}一定生命值。\n3、進入虛弱階段後，{{B}}為全體怪盜添加(\d+)層<color\=#ff3b37>「諸神黃昏」</color>，並召喚(\d+)隻{{A}}，對{{A}}造成的傷害會計入積分。$"="1. {{B}} will inflict all units with <color\=#ff3b37>[Ragnarok]</color> each turn.\n[Ragnarok]: Increase DMG Dealt by $1, lose a certain amount of HP each turn, up to $2 stacks.\n2. When defeating {{C}}, {{B}} will lose a certain amount of HP.\n3. When entering Weak, {{B}} will inflict all Thieves with $3 stacks of <color\=#ff3b37>[Ragnarok]</color>, then summon $4 {{A}}, dealing damage to {{A}} will count for score."
+r:"^{{A}}每回合為所有單位添加(\d+)層<color\=#ff3b37>「諸神黃昏」</color>。\n「諸神黃昏」：造成傷害提升(\d+%)，每回合流失一定生命值，可疊加(\d+)層。$"="<size\=26>{{A}} will inflict all units with $1 stacks of <color\=#ff3b37>[Ragnarok]</color> each turn.\n[Ragnarok]: Increase DMG Dealt by $2, lose a certain amount of HP each turn, up to $3 stacks.</size>"
+r:"^1、{{B}}每回合為所有單位添加(\d+)層<color\=#ff3b37>「諸神黃昏」</color>。\n「諸神黃昏」：造成傷害提升(\d+%)，每回合流失一定生命值，可疊加(\d+)層。\n2、對{{A}}造成的傷害會計入積分。$"="<size\=24>1. {{B}} will inflict all units with $1 stacks of <color\=#ff3b37>[Ragnarok]</color> each turn.\n[Ragnarok]: Increase DMG Dealt by $2, lose a certain amount of HP each turn, up to $3 stacks. \n2. Dealing damage to {{A}} will count for score.</size>"
+諸神黃昏=Ragnarok
+r:"^諸<color\=#000000>神</color>黃昏$"="R<color\=#000000>a</color>gnarok"
+擊敗{{B}}，會扣除{{A}}一定生命值={{A}} will lose a certain amount of HP after defeating {{B}}
+對{{A}}造成的傷害會計入積分。=Dealing damage to {{A}} will count for score.
+
+r:"^1、{{A}}會釋放「八字聖玉」：使自身對全屬性的適應性變為耐，造成傷害提升、受到傷害降低，並召喚四屬性之魂。擊敗不同屬性的魂，會使{{A}}進入不同的元素異常狀態，持續(\d+)回合。\n2、{{A}}處於「八字聖玉」狀態，且同時擁有(\d+)種元素異常狀態時，會退出「八字聖玉」狀態並使自身防禦力降低。\n3、{{A}}進入虛弱階段時，會清除四屬性之魂並退出「八字聖玉」狀態。$"="<size\=24>1. {{A}} will use [Eight Virtue's Protection]: Change all affinities to Resist, increase DMG Dealt and decrease DMG Taken, and summon 4 Mitamas. When a Mitama dies, inflict {{A}} with an Elemental Ailment for $1 turns.\n2. When {{A}} have $2 Elemental Ailments, lose [Eight Virtue's Protection] and decrease own DEF.\n3. When {{A}} enter Weak, defeat all Mitamas and lose [Eight Virtue's Protection].</size>"
+八字聖玉=Eight Virtue's Protection
+r:"^使自身對全屬性的適應性變為耐，造成傷害提升(\d+%)，受到傷害降低(\d+%)。自身元素異常數量大於等於(\d+)時，退出「八字聖玉」狀態且自身防禦力降低(\d+%)$"="<size\=28>Changes all affinities to Resist, increases DMG Dealt by $1 and decreases DMG Taken by $2. When you have ≥$3 Elemental Ailments, exit [Eight Virtue's Protection] and decrease own DEF by $4</size>"
+r:"^八<color\=#000000>字</color>聖玉$"="E<color\=#000000>i</color>ght Virtue's Protection"
+<color\=#FF0000>忠義的{{A}}</color>的能力獲得了大幅提升，使其進入<color\=#FF0000>元素異常</color>狀態可進行削弱……=<color\=#FF0000>Loyal {{A}}</color> heavily increase abilities, can be weakened when inflicted with <color\=#FF0000>Elemental Ailment</color>...
+
+r:"^1、{{B}}每受到(\d+)次技能傷害或負面狀態，會獲得(\d+)層<color\=#ff3b37>「衰退」</color>。\n「衰退」：防禦力降低，持續(\d+)回合，可疊加(\d+)層。\n2、{{B}}會使用蓄力，下回合釋放「{{A}}」，造成巨額單體傷害；若蓄力期間「衰退」≥(\d+)層，則蓄力會被打斷，改為釋放「斬擊」。{{B}}的單體攻擊會優先攻擊輸出職業的怪盜。$"="<size\=24>1. {{B}} will gain $2 stack of <color\=#ff3b37>[Wane]</color> when they take $1 hit of skill damage or inflicted with debuffs.\n[Wane]: Decrease DEF for $3, up to $4 stacks.\n2. {{B}} can use Charge then use [{{A}}] next turn, dealing colossal Physical damage; If during Charge they have ≥$5 stacks of [Wane], they will exit Charge and use [Cleave] instead. {{B}}'s single target attacks will prioritize Rebel/ Dominate Thieves.</size>"
+衰退=Wane
+
+r:"^1、{{A}}與邪蛇始終處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n2、{{A}}與邪蛇使用技能後，會為所有技能目標添加(\d+)層<color\=#ff3b37>「毒素」</color>。\n「毒素」：無法被驅散，每層使怪盜回合結束時失去一定生命值，同時攻擊力提升(\d+%)，可疊加(\d+)層。$"="<size\=24>1. {{A}} and Yurlungur have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.\n2. After enemies use skills, inflict all targets with $1 stack of <color\=#ff3b37>[Toxin]</color>.\n[Toxin]: Cannot be dispelled, each stack make Thief lose a certain amount of HP, increase ATK by $2, up to $3 stacks.</size>"
+r:"^1、{{A}}與邪蛇始終處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n2、{{A}}與邪蛇使用技能後，會為所有技能目標添加(\d+)層<color\=#ff3b37>「毒素」</color>。\n「毒素」：無法被驅散，每層使怪盜回合結束時失去一定生命值，同時攻擊力提升(\d+%)，可疊加(\d+)層。\n3、進入虛弱階段後，對邪蛇造成的傷害會計入積分。$"="<size\=24>1. {{A}} and Yurlungur have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.\n2. After enemies use skills, inflict all targets with $1 stack of <color\=#ff3b37>[Toxin]</color>.\n[Toxin]: Cannot be dispelled, each stack make Thief lose a certain amount of HP, increase ATK by $2, up to $3 stacks.\n3. After entering Weak, dealing damage to Yurlungur will count for score.</size>"
+毒素=Tonix
+r:"^毒<color\=#000000>素</color>$"="T<color\=#000000>o</color>xin"
+
+r:"^1、{{E}}會率領眾鳥一同進攻。\n2、{{A}}與{{B}}每受到1次來自怪盜的傷害，使該名怪盜造成傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層；{{C}}與{{D}}每受到1次來自怪盜的傷害，使該名怪盜穿透提升(\d+%)，持續(\d+)回合，可疊加(\d+)層。$"="<size\=24>1. {{E}} will lead all birds to attack.\n2. After {{A}} and {{B}} take a hit of damage from a Thief, increase that Thief's DMG Dealt by $1 for $2 turns, up to $3 stacks; After {{C}} and {{D}} take a hit of damage from a Thief, increase that Thief's PEN by $4 for $5 turns, up to $6 stacks.</size>"
+r:"^{{A}}與{{B}}每受到1次來自怪盜的傷害，使該名怪盜造成傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層。$"="After {{A}} and {{B}} take a hit of damage from a Thief, increase that Thief's DMG Dealt by $1 for $2 turns, up to $3 stacks."
+r:"^{{A}}與{{B}}每受到1次來自怪盜的傷害，使該名怪盜穿透提升(\d+%)，持續(\d+)回合，可疊加(\d+)層。$"="After {{A}} and {{B}} take a hit of damage from a Thief, increase that Thief's PEN by $1 for $2 turns, up to $3 stacks."
+
+r:"^{{B}}每受到一次{{A}}技能/HIGHLIGHT/追加效果造成的傷害，自身後續受到對應屬性傷害提升(\d+%)，可疊加(\d+)層，持續(\d+)回合。$"="After {{B}} take 1 hit of damage from {{A}} Skill/ HIGHLIGHT/ Follow Up, increase that element's DMG Taken by $1 for $3 turns, up to $2 stacks."
+
+r:"^{{A}}會對所有怪盜添加「{{A}}的詛咒」：受到傷害提升(\d+%)，怪盜釋放優越/救援/防衛類技能時可驅散「{{A}}的詛咒」，並使{{A}}獲得(\d+)層「詛咒反噬」：防禦力降低(\d+%)，可疊加(\d+)層，達到(\d+)層時額外使{{A}}受HIGHLIGHT傷害提升(\d+%)。$"="<size\=24>{{A}} will inflict all enemies with [{{A}}'s Curse]: Increase DMG Taken by $1, dispel [{{A}}'s Curse] when a Thief use Superior/Rescue/Defend type skills then inflict {{A}} with $2 stack of [Curse Reversal]: Decrease DEF by $3 up, to $4 stacks. Additionally increase HIGHLIGHT DMG Taken by $6 when reaching $5 stacks.</size>"
+{{A}}的詛咒={{A}}'s Curse
+詛咒反噬=Curse Reversal
+r:"^受<color\=#000000>H</color> L傷害提升$"="H<color\=#000000>I</color>GHLIGHT DMG Taken Up"
+
+----------
+Modifiers
+----------
+首領受到一定傷害後進入虛弱狀態，虛弱狀態積分獲取效率大幅提高=  Increase score gain after\n  defeating the boss
+生存壓力和積分獲取效率隨著戰鬥回合數的增加而持續提升=  Each turn increase score gain but \n  also increase survival pressure 
+積分倍率會隨著上陣的反抗/支配怪盜數量的增加而增加=  Increase score gain for every \n  Rebel/Dominate Thief in team
+
+閼凶夢之扉夢境更換說明：\n每週閼凶夢之扉會開啟一種夢境效果，本周所有的挑戰會根據夢境的不同發生規則變化。=<size\=26>Door of Nightmares rotation:\nEach season there is a unique mechanic, changing all bosses based on the mechanic.</size>
+首領受到一定傷害會進入虛弱狀態，處於虛弱狀態時全力輸出對其造成大量傷害，可獲取大量的戰鬥積分。=<size\=26>Increase score gain after defeating the boss.</size>
+隨著回合數的增加，首領給予的生存壓力會越來越高，但每回合的積分獲取效率也會相應提升。=<size\=26>Increase score gain but also increase enemies' damage after each turn.</size>
+隨著編入反抗/支配職業怪盜數量的增加，積分獲取效率也會相應增加。=<size\=26>Increase score gain for every Rebel/Dominate Thief in team.</size>
+
+穩定領域=Stable Domain
+所有怪盜無法暴擊，{{A}}技能/追加效果造成的<color\=#FFFC40>最終傷害</color>提高，提高值\=暴擊率*(暴擊效果-100%)。（最多計入100%暴擊率）=<size\=24>All Thieves cannot CRIT, increase the <color\=#FFFC40>Final DMG</color> of {{A}} skill/Follow Up by\nCRIT Rate*(CRIT DMG - 100%)\n(Up to 100% CRIT Rate)</size>
+
+狂暴領域=Frenzy Domain
+r:"^敵人每回合末使自身獲得(\d+)層<color\=#FFFC40>『狂暴』</color>。\n『狂暴』：最終傷害提升(\d+%)，可疊加。$"="Enemies gain $1 stack of <color\=#FFFC40>[Frenzy]</color> at the end of each turn.\nFrenzy: Increase Final DMG by $2, can stack."
+狂暴=Frenzy
+
+猛毒領域=Toxic Domain
+r:"^首領造成傷害後，會使目標獲得(\d+)層<color\=#FFFC40>『猛毒素』</color>。\n『猛毒素』：回合末失去一定生命值，最終受到傷害提升(\d+%)，可疊加(\d+)層，可被驅散。$"="After the boss deal damage, they will inflict $1 stack of <color\=#FFFC40>[Toxin]</color>.\n[Toxin]: Lose a certain amount of HP at the end of the turn, increase Final DMG Taken by $2, up to $3 stacks, can be dispelled."
+猛毒素=Toxin
+r:"^猛<color\=#000000>毒</color>素$"="T<color\=#000000>o</color>xin"
+
+連結領域=Linking Domain
+r:"^隊伍中編入(\d+)名及以上<color\=#FFFC40>反抗/支配</color>怪盜時，所有怪盜最終傷害提高(\d+%)$"="Increase Thieves' Final DMG by $2 when there are $1 or more <color\=#FFFC40>Rebel/Dominate</color> Thieves."
+
+sr:"^(.*)特化$"="$1 Buff"
+r:"^<color\=#FFFC40>反抗</color>怪盜造成傷害提高(\d+(.\d+)?(%)?)$"="<size\=22>Increase <color\=#FFFC40>Rebel</color> Thieves' DMG Dealt by $1</size>"
+r:"^<color\=#FFFC40>支配</color>怪盜造成傷害提高(\d+(.\d+)?(%)?)$"="<size\=20>Increase <color\=#FFFC40>Dominate</color> Thieves' DMG Dealt by $1</size>"
+r:"^所有怪盜<color\=#FFFC40>射擊</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#FFFC40>Gun</color> DMG by $1</size>"
+r:"^所有怪盜<color\=#ff381d>火焰</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#ff381d>Fire</color> DMG by $1</size>"
+r:"^所有怪盜<color\=#00aeff>冰凍</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#00aeff>Ice</color> DMG by $1</size>"
+r:"^所有怪盜<color\=#ff63ff>念動</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#ff63ff>Psy</color> DMG by $1</size>"
+r:"^所有怪盜<color\=#00fcff>核熱</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#00fcff>Nuke</color> DMG by $1</size>"
+r:"^所有怪盜<color\=#fffea0>祝福</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#fffea0>Bless</color> DMG by $1</size>"
+r:"^所有怪盜<color\=#ff0036>詛咒</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#ff0036>Curse</color> DMG by $1</size>"
+
+萬能領域=Almighty Domain
+r:"^所有怪盜造成<color\=#FFFC40>萬能傷害</color>時，傷害提升(\d+%)，暴擊效果提升(\d+%)$"="Increase all Thieves' damage by $1 and CRIT DMG by $2 when dealing <color\=#FFFC40>Almighty damage</color>"
+r:"^造成萬能傷害時，傷害提升(\d+%)，暴擊效果提升(\d+%)$"="<size\=25>Increase damage by $1 and CRIT DMG by $2 when dealing Almighty damage</size>"
+
+HL特化=HL Buff
+r:"^所有怪盜<color\=#FFFC40>HIGHLIGHT</color>傷害提升(\d+(.\d+)?(%)?)$"="Increase <color\=#FFFC40>HIGHLIGHT</color> DMG by $1"
+r:"^處於<color\=#ff381d>燃燒</color>狀態的敵人受到最終傷害提高(\d+(.\d+)?(%)?)$"="Enemy inflicted with <color\=#ff381d>Burn</color> increase Final DMG Taken by $1"
+
+癒之守護=Healing Protection
+r:"^所有怪盜<color\=#FFFC40>受到治療</color>後，最終受到傷害降低(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="After Thieves are <color\=#FFFC40>healed</color>, decrease Final DMG Taken by $1 for $2 turns, up to $3 stacks"
+
+治癒領域=Healing Domain
+r:"^所有怪盜<color\=#FFFC40>受到治療</color>後，最終傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="After Thieves are <color\=#FFFC40>healed</color>, increase Final DMG by $1 for $2 turns, up to $3 stacks"
+
+庇佑領域=Blessing Domain
+r:"^隊伍中編入防衛、救援職業隊員時，所有敵人造成最終傷害降低(\d+%)，否則所有敵人造成最終傷害提升(\d+%)$"="Decrease all enemies' Final DMG Dealt by $1 for every Defend and Rescue Thief.\nOtherwise, increase all enemies' Final DMG Dealt by $2"
+
+再動特化=Extra Turn Buff
+再動領域=Extra Turn Domain
+r:"^所有怪盜處於<color\=#FFFC40>額外回合</color>時，暴擊率提升(\d+%)，暴擊效果提升(\d+%)$"="Increase Thieves' CRIT Rate by $1 and CRIT DMG by $2 during <color\=#FFFC40>Extra Turn</color>"
+
+追加特化=Follow Up Buff
+r:"^所有怪盜<color\=#FFFC40>追加效果</color>的暴擊效果提升(\d+%)、攻擊力提升(\d+%)$"="Increase Thieves' <color\=#FFFC40>Follow Up</color> CRIT DMG by $1 and ATK by $2"
+r:"^追<color\=#000000>加</color>特化"="F<color\=#000000>o</color>llow Up Buff"
+
+聖潔領域=Holy Domain
+r:"^敵人每有一個<color\=#FFFC40>負面狀態</color>，受到的傷害提升(\d+%)，最多使其受到的傷害提升(\d+%)$"="For every <color\=#FFFC40>debuff</color> the enemy have, increase their DMG Taken by $1, up to $2"
+r:"^聖<color\=#000000>潔</color>領域$"="H<color\=#000000>o</color>ly Domain"
+
+天使降臨=Angel Descend
+{{A}}會源源不斷地召喚天使援軍，擊敗天使可以回復精力值。\n對處於虛弱階段時{{A}}召喚的天使造成傷害可獲得積分=<size\=26>Dominion will keep summoning Angel, defeating Angel will restore SP.\nDealing damage to Angel summoned by Dominion when they are in Weak will count for score</size>
+
+元素領域=Elemental Domain
+r:"^敵人每有一種<color\=#FFFC40>元素異常</color>狀態，受到的傷害提升(\d+%)，最多使其受到的傷害提升(\d+%)$"="For every <color\=#FFFC40>Elemental Ailment</color> the enemy have, increase their DMG Taken by $1, up to $2"
+r:"^元<color\=#000000>素</color>領域$"="E<color\=#000000>l</color>emental Domain"
+
+治癒連攜=Heal-Link
+
+護盾連攜=Shield-Link
+r:"^所有怪盜<color\=#FFFC40>受到護盾</color>後，<color\=#FFFC40>追加效果</color>造成最終傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="After Thieves are <color\=#FFFC40>shielded</color>, increase <color\=#FFFC40>Follow Up</color> Final DMG by $1 for $2 turns, up to $3 stacks"
+
+多重連攜=Multi-Link
+r:"^敵人每受到(\d+)次來自怪盜的傷害，使該名怪盜造成傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="Increase your DMG Dealt by $2 after dealing damage $1 time for $3 turns, up to $4 stacks"
+
+主角光環=Main Character Aura
+r:"^<color\=#FFFC40>WONDER</color>造成<color\=#FFFC40>最終傷害</color>提高(\d+%)，其他隊員造成最終傷害降低(\d+%)"="<size\=22>Increase <color\=#FFFC40>Wonder's Final DMG</color> by $1; \nDecrease other Thieves' Final DMG by $2</size>"
+r:"^主<color\=#000000>角</color>光環$"="M<color\=#000000>a</color>in Character Aura"
+
+豐饒領域=Abundance Domain
+r:"^豐<color\=#000000>饒</color>領域$"="A<color\=#000000>b</color>undance Domain"
+
+命中領域=EHR Domain
+r:"^所有怪盜基於效果命中超過(\d+%)的部分使最終傷害提升，最多(\d+%)效果命中使最終傷害提升(\d+%)$"="<size\=27>All Thieves increase Final DMG for every EHR over $1, up to $2 EHR to increase Final DMG by $3</size>"
+
+技巧=TECHNICAL
+技巧領域=TECHNICAL Domain
+r:"^所有怪盜造成<color\=#FFFC40>TECHNICAL</color>時，攻擊力提升(\d+%)，暴擊效果提升(\d+%)$"="Increase your ATK by $1 and CRIT DMG by $2 when dealing <color\=#FFFC40>TECHNICAL</color>"
+
+sr:"^(.*)耐性$"="Resist $1"
+sr:"^所有敵人對<color\=#(.*)>(.*)</color>屬性的適應性變為耐$"="All enemies change their resistance to Resist <color\=#$1>$2</color>"
+
+支配弱化=Dominate Nerf
+sr:"^<color\=#FFFC40>(.*)</color>怪盜造成傷害降低(\d+%)$"="Decrease the DMG Dealt of \n<color\=#FFFC40>$1</color> Thieves by $2"
+
+----------
+Combat Menu
+----------
+虛弱=Weak
+r:"^虛<color\=#000000>弱</color>$"="W<color\=#000000>e</color>ak"
+r:"^無法暴擊，最終傷害提升(.*)"="Cannot CRIT, increase Final DMG by $1"
+
+敵方全體進入了<color\=#FF0000>虛弱</color>狀態……=All enemies entered <color\=#FF0000>Weak</color>!
+r:"^<color\=#FF0000>(.*)</color>無法行動……$"="<color\=#FF0000>Enemies</color> cannot act!"
+
+r:"^造成傷害提高(\d+%)，受到傷害降低(\d+%)，對全屬性適應性變為耐，<color\=#FF0000>受到四種元素異常</color>可解除該狀態$"="<size\=27>Increase DMG Dealt by $1;\nDecrease DMG Taken by $2;\nChange all affinities to Resist;\nDispel when <color\=#FF0000>inflicted with 4 Elemental Ailments</color></size>"
+r:"^擁有的元素異常狀態越多，受到的傷害越高，當前受到傷害提升(\d+(.\d+)?(%)?)$"="The more Elemental Ailments you have, \nthe more damage you taken. \nCurrently increase DMG Taken by $1"
+r:"^擁有的負面狀態越多，受到的傷害越高，當前受到傷害提升(\d+(.\d+)?(%)?)$"="The more debuffs you have, \nthe more damage you taken. \nCurrently increase DMG Taken by $1"
+下一次造成傷害大幅提升，即將使用「{{A}}」=Heavily increase next skill damage;\nAbout to use [{{A}}]
+r:"^積蓄力量，即將使用「{{A}}」，擁有(\d+)層「衰退」退出蓄力狀態。$"="Charge, about to use [{{A}}], exit Charge when you have $1 stacks of debuffs."
+
+火焰之魂=Spirit of Fire
+被怪盜擊敗後，使{{A}}進入燃燒狀態=After defeated by Thieves, \ninflict {{A}} with Burn
+疾風之魂=Spirit of Wind
+被怪盜擊敗後，使{{A}}進入風襲狀態=After defeated by Thieves, \ninflict {{A}} with Winded
+冰凍之魂=Spirit of Ice
+被怪盜擊敗後，使{{A}}進入凍結狀態=After defeated by Thieves, \ninflict {{A}} with Freeze
+電擊之魂=Spirit of Elec
+被怪盜擊敗後，使{{A}}進入觸電狀態=After defeated by Thieves, \ninflict {{A}} with Shock
+<color\=#FF0000>忠義的{{A}}</color>退出了「八字聖玉」狀態……=<color\=#FF0000>Loyal {{A}}</color> exited [Eight Virtue's Protection]!
+<color\=#FF0000>忠義的{{A}}</color>的防禦力降低了……=<color\=#FF0000>Loyal {{A}}</color> DEF Down!
+r:"^受到四種元素異常，防禦力降低(\d+%)$"="Inflicted with 4 Elemental Ailments;\nDecrease DEF by $1"
+
+----------
+TYCOON UI
+----------
+r:"^賽季倒計時：$"="Season Reset:"
+此模式暫未開放，敬請期待。=Mode not available, stay tuned.
+富豪積分=Tycoon Points
+『富豪積分』\n完成大富豪對局後獲得，可用於兌換大富豪專屬商店中的獎勵。=<size\=26>[Tycoon Points]\nEarned after each Tycoon game. \nCan be used in Carpe Diem Shop.</size>
+完成大富豪對局後獲得，可用於兌換大富豪專屬商店中的獎勵。=Earned after each Tycoon game. \nCan be used in Carpe Diem Shop.
+
+單局模式=1 Round
+三局模式=3 Rounds
+段位對決=Rank Mode
+經典對決=Classic Mode
+當前排名=Current Points
+
+當前正在匹配中，無法查看此功能介面。=Cannot view this during matchmaking.
+準備=Ready
+r:"^等待所有人準備，<color\=#FF0000>(\d+)秒後</color>進入牌局……$"="Automatically start after <color\=#FF0000>$1 second(s)</color>"
+
+請選擇您要出的牌。=Select the card you want to play.
+您沒有牌大過上家=You don't have play.
+r:"^選擇和大富豪的wonder交換<color\=#FF0000>最大的(\d+)張牌</color>$"="<size\=24>Give <color\=#FF0000>$1 strongest cards</color> to Wonder</size>"
+r:"^選擇和大富豪的{{A}}交換<color\=#FF0000>最大的(\d+)張牌</color>$"="<size\=24>Give <color\=#FF0000>$1 strongest cards</color> to {{A}}</size>"
+r:"^選擇和富豪的wonder交換<color\=#FF0000>最大的(\d+)張牌</color>$"="<size\=24>Give <color\=#FF0000>$1 strongest card</color> to Wonder</size>"
+r:"^選擇和富豪的{{A}}交換<color\=#FF0000>最大的(\d+)張牌</color>$"="<size\=24>Give <color\=#FF0000>$1 strongest card</color> to {{A}}</size>"
+r:"^選擇和貧民的wonder交換<color\=#FF0000>任意(\d+)張牌</color>$"="<size\=24>Trade <color\=#FF0000>$1 card</color> with Wonder</size>"
+r:"^選擇和貧民的{{A}}交換<color\=#FF0000>任意(\d+)張牌</color>$"="<size\=24>Trade <color\=#FF0000>$1 card</color> with Wonder</size>"
+r:"^選擇和大貧民的wonder交換<color\=#FF0000>任意(\d+)張牌</color>$"="<size\=24>Trade <color\=#FF0000>$1 cards</color> with Wonder</size>"
+r:"^選擇和大貧民的{{A}}交換<color\=#FF0000>任意(\d+)張牌</color>$"="<size\=24>Trade <color\=#FF0000>$1 cards</color> with {{A}}</size>"
+r:"^(\d+)秒後自動進入下一局$"="Start after $1 second(s)"
+牌的強弱會逆向排序(3最大)=Flip Strength (3 is strongest)
+退出後將離開當前牌局，並無法獲得任何獎勵。是否繼續?=Cannot get rewards if you leave. Continue?
+本次挑戰獲得=Rewards
+r:"^富豪積分\+(\d+)$"="Tycoon Points +$1"
+r:"^財富之章\+(\d+)$"="Badge of Wealth +$1"
+財富之章+0(已達上限)=Badge of Wealth +0 (Reached cap)
+r:"^本次對局獲得第1名，星數\+(\d+)$"="Got 1st place in this game, +$1 Stars."
+r:"^本次對局獲得第2名，星數\+(\d+)$"="Got 2nd place in this game, +$1 Star."
+r:"^本次對局獲得第3名，星數\+(\d+)$"="Got 3rd place in this game, +$1 Star."
+r:"^本次對局獲得第3名，星數-(\d+)$"="Got 3rd place in this game, -$1 Star."
+r:"^本次對局獲得第4名，星數-(\d+)$"="Got 4th place in this game, -$1 Stars."
+
+表情=Emotes
+隱藏=Hide
+已<color\=#FFC000>隱藏</color>該玩家的表情發送=<color\=#FFC000>Hide</color> that player's emotes
+已<color\=#FFC000>取消隱藏</color>該玩家的表情發送=<color\=#FFC000>Unhide</color> that player's emotes
+
+排行資訊=Rank
+賽季結束時將透過郵件發放所屬段位獎勵。=Rewards will be given at season reset.
+r:"^賽季排行榜顯示「段位對決」模式排名前(\d+)名的玩家。$"="Leaderboard shows the top $1 players in Rank Mode."
+首次達到段位後可領取段位獎勵（該獎勵不隨賽季刷新，只能領取一次）=Rank first time rewards (Does not refresh with the season and can only be claimed once)
+大貧民=<size\=20>Great Beggar</size>
+薄資大貧民=<size\=20>Beggar</size>
+下層貧民=<size\=20>Lower Class Poor</size>
+中層貧民=<size\=20>Middle Class Poor</size>
+上層貧民=<size\=20>Upper Class Poor</size>
+資深貧民=<size\=20>Senior Poor</size>
+新興中產=<size\=20>New Commoner</size>
+精英中產=<size\=20>Elite Commoner</size>
+上流中產=<size\=20>High Commoner</size>
+權貴中產=<size\=20>Powerful Commoner</size>
+富豪=<size\=20>Tycoon</size>
+百萬富豪=<size\=20>Millionaire</size>
+千萬富豪=<size\=20>Multimillionaire</size>
+億萬富豪=<size\=20>Billionaire</size>
+傳奇大富豪=<size\=20>Legendary Tycoon</size>
+我的排名：=My Rank:
+r:"^段位排行榜顯示「段位對決」模式排名前(\d+)名的玩家。$"="Leaderboard shows the top $1 players in [Rank Mode]."
+r:"^富豪幣排行顯示本賽季「歡樂對決」模式排名前(\d+)名的玩家。$"="Leaderboard shows the top $1 players in [Joyful Mode]."
+
+可定製卡面=Customizable Card
+紅心=<size\=20>Hearts</size>
+方塊=<size\=20>Diamonds</size>
+黑桃=<size\=20>Spades</size>
+梅花=<size\=20>Clubs</size>
+當前未擁有定製版卡牌，可以在樂園百貨「大富豪專櫃」解鎖=You don't have this card skin
+當前未擁有此角色，可以在樂園百貨「大富豪專櫃」解鎖=You don't have this character skin
+
+{{A}}專屬邀請函={{A}} Character Skin
+給{{A}}的專屬邀請函，用於解鎖大富豪對局中的特殊可用角色。=<size\=26>An exclusive invitation to {{A}}, unlock this character in Tycoon.</size>
+
+總達成次數=Times
+r:"^完成(\d+)次任意模式對決$"="<size\=22>Finish $1 game(s) in any mode</size>"
+r:"^完成(\d+)次任意模式對決\((\d+)/(\d+)\)$"="<size\=22>Finish $1 game(s) in any mode ($2/$3)</size>"
+r:"^經典對決中，成為(\d+)次大富豪$"="<size\=22>Become Tycoon $1 times in Classic Mode</size>"
+r:"^經典對決中，成為(\d+)次大富豪\((\d+)/(\d+)\)$"="<size\=22>Become Tycoon $1 times in Classic Mode ($2/$3)</size>"
+r:"^段位對決中，成為(\d+)次大富豪$"="<size\=22>Become Tycoon $1 times in Rank Mode</size>"
+r:"^段位對決中，成為(\d+)次大富豪\((\d+)/(\d+)\)$"="<size\=22>Become Tycoon $1 times in Rank Mode ($2/$3)</size>"
+r:"^打出(\d+)次對子$"="<size\=22>Play $1 pair</size>"
+r:"^打出(\d+)次對子\((\d+)/(\d+)\)$"="<size\=22>Play $1 pair ($2/$3)</size>"
+r:"^打出(\d+)次三條$"="<size\=22>Play $1 triple</size>"
+r:"^打出(\d+)次三條\((\d+)/(\d+)\)$"="<size\=22>Play $1 triple ($2/$3)</size>"
+r:"^同一局中打出(\d+)次三條，達(\d+)局$"="<size\=22>Play $1 triple 3 times in 1 round, $2 times</size>"
+r:"^同一局中打出(\d+)次三條，達(\d+)局\((\d+)/(\d+)\)$"="<size\=22>Play $1 triple 3 times in 1 round, $2 times</size>"
+r:"^打出(\d+)次「8終結」$"="<size\=22>Play $1 [8 Stop]</size>"
+r:"^打出(\d+)次「8終結」\((\d+)/(\d+)\)$"="<size\=22>Play $1 [8 Stop] ($2/$3)</size>"
+r:"^打出(\d+)次「X終結」$"="<size\=22>Play $1 [X Stop]</size>"
+r:"^打出(\d+)次「X終結」\((\d+)/(\d+)\)$"="<size\=22>Play $1 [X Stop] ($2/$3)</size>"
+r:"^打出(\d+)次JOKER$"="<size\=22>Play $1 Joker</size>"
+r:"^打出(\d+)次JOKER\((\d+)/(\d+)\)$"="<size\=22>Play $1 Joker ($2/$3)</size>"
+r:"^打出(\d+)次「最大點數3」$"="<size\=22>Play $1 [3-Spade Reversal]</size>"
+r:"^打出(\d+)次「最大點數3」\((\d+)/(\d+)\)$"="<size\=22>Play $1 [3-Spade Reversal] ($2/$3)</size>"
+r:"^打出(\d+)次革命或反向革命$"="<size\=22>Play $1 Revolution or Counter Revelation</size>"
+r:"^打出(\d+)次革命或反向革命\((\d+)/(\d+)\)$"="<size\=22>Play $1 Revolution or Counter Revelation ($2/$3)</size>"
+r:"^同一局中打出(\d+)次革命或反向革命，達(\d+)局$"="<size\=22>Play $1 Revolution or Counter Revelation in 1 round, $2 times</size>"
+r:"^同一局中打出(\d+)次革命或反向革命，達(\d+)局\((\d+)/(\d+)\)$"="<size\=22>Play $1 Revolution or Counter Revelation in 1 round, $2 times ($3/$4)</size>"
+r:"^讓牌局對手一落千丈，並成為大富豪達(\d+)次$"="<size\=22>Make 1 player Bankrupt and become Tycoon $1 time(s)</size>"
+r:"^讓牌局對手一落千丈，並成為大富豪達(\d+)次\((\d+)/(\d+)\)$"="<size\=22>Make 1 player Bankrupt and become Tycoon $1 time(s) ($2/$3)</size>"
+r:"^當前賽季達到「富豪」段位$"="<size\=22>Reach [Tycoon] in Rank Mode</size>"
+r:"^當前賽季達到「富豪」段位\((\d+)/(\d+)\)$"="<size\=22>Reach [Tycoon] in Rank Mode ($1/$2)</size>"
+r:"^當前賽季達到「新興中產」段位$"="<size\=22>Reach [New Commoner] in Rank Mode</size>"
+r:"^當前賽季達到「新興中產」段位\((\d+)/(\d+)\)$"="<size\=22>Reach [New Commoner] in Rank Mode ($1/$2)</size>"
+r:"^當前賽季達到「下層貧民」段位$"="<size\=22>Reach [Lower Class Poor] in Rank Mode</size>"
+r:"^當前賽季達到「下層貧民」段位\((\d+)/(\d+)\)$"="<size\=22>Reach [Lower Class Poor] in Rank Mode ($1/$2)</size>"
+r:"^扮演{{A}}成為(\d+)局大富豪$"="<size\=22>Play as {{A}} and become Tycoon in $1 game(s)</size>"
+r:"^扮演{{A}}成為(\d+)局大富豪\((\d+)/(\d+)\)$"="<size\=22>Play as {{A}} and become Tycoon in $1 game(s) ($2/$3)</size>"
+r:"^與{{A}}對戰並成為大富豪達(\d+)局$"="<size\=22>Play with {{A}} and become Tycoon in $1 game(s)</size>"
+r:"^與{{A}}對戰並成為大富豪達(\d+)局\((\d+)/(\d+)\)$"="<size\=22>Play with {{A}} and become Tycoon in $1 game(s) ($2/$3)</size>"
+
+----------
+Joyful Mode
+----------
+歡樂對決=Joyful Mode
+r:"^今日剩餘(\d+)/(\d+)次$"="Daily: $1/$2"
+基礎倍數：=Base Mult:
+准入擁有：=Access:
+本局消耗：=Consume: <size\=1>.</size>
+大富豪金幣=Tycoon Coins
+『大富豪金幣』\n遊玩大富豪歡樂對決的必要貨幣。每一場對決都是財富與策略的較量！=[Tycoon Coins]\nNeeded to play Joyful Mode.
+遊玩大富豪歡樂對決的必要貨幣。每一場對決都是財富與策略的較量！=Needed to play Joyful Mode.
+當前大富豪金幣不足當前場次最低，無法開始匹配=Insufficient minimum access Tycoon Coins, cannot start matchmaking.
+當前正在匹配中，無法更換對決場次。=Cannot change during matchmaking.
+資產點數=Asset Points
+『資產點數』\n完成大富豪「歡樂對決」挑戰後獲得，可用於兌換大富豪歡樂商店中的獎勵。=<size\=20>[Asset Points]\nEarned after clearing Joyful Mode challenges.\nCan be used in Carpe Diem Shop.</size>
+完成大富豪「歡樂對決」挑戰後獲得，可用於兌換大富豪歡樂商店中的獎勵。=<size\=22>Earned after clearing Joyful Mode challenges.\nCan be used in Carpe Diem Shop.</size>
+大富豪道具=Tycoon Item
+超級翻倍卡=Super Double Card
+r:"^遊玩大富豪歡樂對決的道具，將對決結果的大富豪金幣收益/損失乘以(\d+)倍。$"="Multiply the Tycoon Coins gain/lose calculation in Joyful Mode by $1."
+當前缺少道具，無法使用。=Missing item, cannot use.
+ops are missing, they cannot be used.
+大富豪撲克盲盒=<size\=24>Poker Blind Box</size>
+使用後，隨機獲得一張當前未擁有的大富豪卡牌皮膚（{{A}}除外）。如果當前卡牌皮膚全收集將轉化為富豪積分。=Randomly gain 1 unknown Tycoon card skin (Expect {{A}}).
+
+r:"^完成(\d+)次歡樂對決$"="<size\=22>Finish $1 game(s) in Joyful Mode</size>"
+r:"^完成(\d+)次歡樂對決\((\d+)/(\d+)\)$"="<size\=22>Finish $1 game(s) in Joyful Mode ($2/$3)</size>"
+r:"^在歡樂對決中進行(\d+)次翻倍$"="<size\=22>Do $1 Double in Joyful Mode</size>"
+r:"^在歡樂對決中進行(\d+)次翻倍\((\d+)/(\d+)\)$"="<size\=22>Do $1 Double in Joyful Mode ($2/$3)</size>"
+r:"^在歡樂對決單場獲得超過(\d+)大富豪金幣達(\d+)場$"="<size\=22>Gain over $1 Tycoon Coins in $2 game(s)"
+r:"^在歡樂對決單場獲得超過(\d+)大富豪金幣達(\d+)場\((\d+)/(\d+)\)$"="<size\=22>Gain over $1 Tycoon Coins in $2 game(s) ($3/$4)"
+r:"^在歡樂對決單場失去超過(\d+)大富豪金幣達(\d+)場$"="<size\=22>Lose over $1 Tycoon Coins in $2 game(s)"
+r:"^在歡樂對決單場失去超過(\d+)大富豪金幣達(\d+)場\((\d+)/(\d+)\)$"="<size\=22>Lose over $1 Tycoon Coins in $2 game(s) ($3/$4)"
+r:"^在歡樂對決中累計獲得(\d+)大富豪金幣$"="<size\=22>Gain $1 Tycoon Coins in Joyful Mode"
+r:"^在歡樂對決中累計獲得(\d+)大富豪金幣\((\d+)/(\d+)\)$"="<size\=22>Gain $1 Tycoon Coins in Joyful Mode ($2/$3)"
+r:"^歡樂對決中，成為(\d+)次大富豪$"="<size\=22>Become Tycoon $1 times in Joyful Mode</size>"
+r:"^歡樂對決中，成為(\d+)次大富豪\((\d+)/(\d+)\)$"="<size\=22>Become Tycoon $1 times in Joyful Mode ($2/$3)</size>"
+r:"^在歡樂對決中進行(\d+)次超級翻倍$"="<size\=22>Do $1 Super Double in Joyful Mode</size>"
+r:"^在歡樂對決中進行(\d+)次超級翻倍\((\d+)/(\d+)\)$"="<size\=22>Do $1 Super Double in Joyful Mode ($2/$3)</size>"
+r:"^在歡樂對決累計獲得(\d+)大富豪金幣$"="<size\=22>Gain over $1 Tycoon Coins in Joyful Mode"
+r:"^在歡樂對決累計獲得(\d+)大富豪金幣\((\d+)/(\d+)\)$"="<size\=22>Gain over $1 Tycoon Coins in Joyful Mode ($2/$3)"
+r:"^在歡樂對決累計失去(\d+)大富豪金幣$"="<size\=22>Lose over $1 Tycoon Coins in Joyful Mode"
+r:"^在歡樂對決累計失去(\d+)大富豪金幣\((\d+)/(\d+)\)$"="<size\=22>Lose over $1 Tycoon Coins in Joyful Mode ($2/$3)"
+
+基礎得分=Base Score
+大富豪加分=Tycoon Bonus
+富豪加分=Rich Bonus
+r:"^牌桌剩餘<color\=#808080>--張x(\d+) \=</color>$"="   Cards left <color\=#808080>--x$1\=</color>"
+r:"^牌桌剩餘(\d+)張x(\d+) \=$"="   Cards left $1x$2\="
+
+基礎=Basic
+翻倍=Double
+超級翻倍=Super Double
+最高收入計算方式：底分*倍數*名次加成=Maximum Gain Calculation: Score*Mult*Placement
+
+r:"^<color\=#FFC000><size\=36>金幣計算明細</size></color>\n\n本局最終底分為(\d+)，倍數為(\d+)，乘算後本局最高收益/損失為(\d+)金幣。\n第4名，大貧民應輸<color\=#87CEEB>(\d+)金幣</color>。\n第3名，貧民應輸<color\=#87CEEB>(\d+)金幣</color>。\n第2名，富豪應贏\((\d+)\+(\d+)\)x(\d+)/(\d+)\=<color\=#ffb400>(\d+)金幣</color>。\n第1名，大富豪應贏\((\d+)\+(\d+)\)x(\d+)/(\d+)\=<color\=#ffb400>(\d+)金幣</color>。\n$"="<color\=#FFC000><size\=36>Coins Calculation Details</size></color>\n\nThe final Score is $1 and the Mult is $2x. \nAfter multiplying, the maximum gain/loss of this game is $3 Coins. \nBeggar loses <color\=#87CEEB>$4 Coins</color>.\nPoor loses <color\=#87CEEB>$5 Coins</color>.\nRich wins ($6+$7)x$8/$9\=<color\=#ffb400>$10 Coins</color>.\nTycoon wins ($11+$12)x$13/$14\=<color\=#ffb400>$15 Coins</color>."
+r:"^<color\=#FFC000><size\=36>金幣計算明細</size></color>\n\n本局最終底分為(\d+)，倍數為(\d+)，乘算後本局最高收益/損失為(\d+)金幣。\n第4名，大貧民應輸<color\=#87CEEB>(\d+)金幣</color>。\n第3名，貧民應輸<color\=#87CEEB>(\d+)金幣</color>。\n第2名，富豪應贏\((\d+)\+(\d+)\)x(\d+)/(\d+)\=<color\=#ffb400>(\d+)金幣</color>。\n第1名，大富豪應贏\((\d+)\+(\d+)\)x(\d+)/(\d+)\=<color\=#ffb400>(\d+)金幣</color>。由於所贏金額超過了該玩家持有金幣，所以最終該玩家只贏<color\=#ffb400>(\d+)金幣</color>。\n由於富豪、大富豪計算金幣數有封頂情況，由此貧民和大貧民所輸金幣數有減少。最終第3名貧民輸<color\=#87CEEB>(\d+)金幣</color>，第4名大貧民輸<color\=#87CEEB>(\d+)金幣</color>。$"="<color\=#FFC000><size\=36>Coins Calculation Details</size></color>\n\nThe final Score is $1 and the Mult is $2x. \nAfter multiplying, the maximum gain/loss of this game is $3 Coins. \nBeggar loses <color\=#87CEEB>$4 Coins</color>.\nPoor loses <color\=#87CEEB>$5 Coins</color>.\nRich wins ($6+$7)x$8/$9\=<color\=#ffb400>$10 Coins</color>.\nTycoon wins ($11+$12)x$13/$14\=<color\=#ffb400>$15 Coins</color>.\nSince the winnings exceeded the Coins held by them, they will only win <color\=#ffb400>$16 Coins</color>.\nSince Tycoon and Rich have capped, decrease Coins lost for Poor and Beggar.\nFinal Poor loses <color\=#87CEEB>$17 Coins</color>.\nFinal Beggar loses <color\=#87CEEB>$18 Coins</color>."
+r:"^<color\=#FFC000><size\=36>金幣計算明細</size></color>\n\n本局最終底分為(\d+)，倍數為(\d+)，乘算後本局最高收益/損失為(\d+)金幣。\n第4名，大貧民應輸<color\=#87CEEB>(\d+)金幣</color>。由於所輸金額超過了該玩家持有金幣，所以最終該玩家只輸<color\=#87CEEB>(\d+)金幣</color>。\n第3名，貧民應輸<color\=#87CEEB>(\d+)金幣</color>。\n第2名，富豪應贏\((\d+)\+(\d+)\)x(\d+)/(\d+)\=<color\=#ffb400>(\d+)金幣</color>。\n第1名，大富豪應贏\((\d+)\+(\d+)\)x(\d+)/(\d+)\=<color\=#ffb400>(\d+)金幣</color>。\n$"="<color\=#FFC000><size\=36>Coins Calculation Details</size></color>\n\nThe final Score is $1 and the Mult is $2x. \nAfter multiplying, the maximum gain/loss of this game is $3 Coins. \nBeggar loses <color\=#87CEEB>$4 Coins</color>. \nSince that exceeded their Coins, \nthey will only lose <color\=#87CEEB>$5 Coins</color>\nPoor loses <color\=#87CEEB>$6 Coins</color>.\nRich wins ($7+$8)x$9/$10\=<color\=#ffb400>$11 Coins</color>.\nTycoon wins ($12+$13)x$14/$15\=<color\=#ffb400>$16 Coins</color>."
+r:"^<color\=#FFC000><size\=36>金幣計算明細</size></color>\n\n本局最終底分為(\d+)，倍數為(\d+)，乘算後本局最高收益/損失為(\d+)金幣。\n第4名，大貧民應輸<color\=#87CEEB>(\d+)金幣</color>。由於所輸金額超過了該玩家持有金幣，所以最終該玩家只輸<color\=#87CEEB>(\d+)金幣</color>。\n第3名，貧民應輸<color\=#87CEEB>(\d+)金幣</color>。\n第2名，富豪應贏\((\d+)\+(\d+)\)x(\d+)/(\d+)\=<color\=#ffb400>(\d+)金幣</color>。\n第1名，大富豪應贏\((\d+)\+(\d+)\)x(\d+)/(\d+)\=<color\=#ffb400>(\d+)金幣</color>。由於所贏金額超過了該玩家持有金幣，所以最終該玩家只贏<color\=#ffb400>(\d+)金幣</color>。\n由於富豪、大富豪計算金幣數有封頂情況，由此貧民和大貧民所輸金幣數有減少。最終第3名貧民輸<color\=#87CEEB>(\d+)金幣</color>，第4名大貧民輸<color\=#87CEEB>(\d+)金幣</color>。$"="<color\=#FFC000><size\=36>Coins Calculation Details</size></color>\n\nThe final Score is $1 and the Mult is $2x. \nAfter multiplying, the maximum gain/loss of this game is $3 Coins. \nBeggar loses <color\=#87CEEB>$4 Coins</color>. \nSince that exceeded their Coins, \nthey will only lose <color\=#87CEEB>$5 Coins</color>\nPoor loses <color\=#87CEEB>$6 Coins</color>.\nRich wins ($7+$8)x$9/$10\=<color\=#ffb400>$11 Coins</color>.\nTycoon wins ($12+$13)x$14/$15\=<color\=#ffb400>$16 Coins</color>. \nSince the winnings exceeded the Coins held by them, they will only win <color\=#ffb400>$17 Coins</color>.\nSince Tycoon and Rich have capped, decrease Coins lost for Poor and Beggar.\nFinal Poor loses <color\=#87CEEB>$18 Coins</color>.\nFinal Beggar loses <color\=#87CEEB>$19 Coins</color>."

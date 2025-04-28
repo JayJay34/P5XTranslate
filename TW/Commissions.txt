@@ -12,6 +12,17 @@
 <color\=#FFD145>玩法介紹</color>\n{{A}}正在印象空間中開展新的貿易活動，\n為了應對突發狀況，她希望拜託你來進行協助。\n根據「<color\=#ff3b37>委託</color>」所需條件<color\=#ff3b37>派遣怪盜</color>，完成後領取謝禮，\n如果滿足<color\=#ff3b37>加分</color>條件，還可以獲得額外的報酬哦。\n\n<color\=#FFD145>委託類型</color>\n「<color\=#ff3b37>限定</color>」委託，在滿足特定條件後出現。\n「<color\=#ff3b37>每週、每日</color>」委託，週期內僅刷新一個。\n「<color\=#ff3b37>常規</color>」委託，完成後自動刷新。\n\n<color\=#FFD145>委託刷新</color>\n可以一次性刷新所有未派遣的「<color\=#ff3b37>非限定</color>」委託。\n<color\=#ff3b37>每日首次刷新免費</color>。\n常規刷新非限定任務均需要消耗「委託刷新券」。\n每日可刷新委託任務數量上限：200。\n\n<color\=#FFD145>委託等級</color>\n完成委託後，會累計委託經驗。隨等級提升：\n增加<color\=#ff3b37>同時可接</color>委託任務數量；\n增加<color\=#ff3b37>同時刷出</color>的「常規」委託數量。=<color\=#FFD145>Metaverse Commissions</color>\n<size\=25><color\=#FFD145>{{A}}</color> is launching a new trade in Mementos and she would like you to help her deal with unepected situations. \nBased on the <color\=#ff3b37>Dispatch Thieves</color> requirement on each <color\=#ff3b37>Commissions</color>, you'll get rewards after completion. \nIf you meet the <color\=#ff3b37>bonus</color> requirements, you'll gain extra rewards.</size>\n\n<color\=#FFD145>Commission Types</color>\n<size\=25>[<color\=#ff3b37>Limited</color>] Commissions, appear after fulfilling certain conditions. \n[<color\=#ff3b37>Weekly, Daily</color>] Commissions, with 1 refreash per week/ day. \n[<color\=#ff3b37>Standard</color>] Commissions, auto refresh on completion.</size>\n\n<color\=#FFD145>The first reroll each day is free</color>\n<size\=25>Rerolling Non-limited Commissions requires [Commission Reroll Ticket]. \nYou can reroll up to 200 times per day.</size> \n\n<color\=#FFD145>Commission Rank</color>\n<size\=25>Increase the number of <color\=#ff3b37>active</color> Commissions; \nIncrease the number of <color\=#ff3b37>refreshes</color> on [Standard] Commissions.</size>
 
 ----------
+Kotone SL
+----------
+r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n派遣完成時間減少5%。$"="<size\=24>Decrease the time needed to complete Dispatch by 5% after being confidants with [<color\=#FFC000>Kotone Montagne</color>].</size>"
+r:"^好感度提升至<color\=#FFC000>rank5</color>後，\n刷出常規委派數量\+1。$"="<size\=25>+1 to the max refreshes on Standard Commissions after reaching <color\=#FFC000>rank 5</color>.</size>"
+r:"^好感度提升至<color\=#FFC000>rank9</color>後，\n派遣完成時間減少10%。$"="<size\=23>Decrease the time needed to complete Dispatch by 10% after reaching <color\=#FFC000>rank 10</color>.</size>"
+r:"^好感度提升至<color\=#FFC000>rank13</color>後，\n刷出藍色以上品質委託機率提升。$"="<size\=21>Increase the chance to get above blue quality Commissions after reaching <color\=#FFC000>rank 13</color>.</size>"
+r:"^好感度提升至<color\=#FFC000>rank17</color>後，\n可以快速完成已經派遣的委託，\n每週限3次。本周剩餘次數：(\d+)/3$"="<size\=20>Can instant complete 3 dispatched Commissions per week after reaching <color\=#FFC000>rank 17</color>.\nTime(s) left: $1/3</size>"
+r:"^{{A}}Rank17解鎖$"="Unlock at {{A}} Rank 17"
+r:"^{{A}}Rank17解鎖。$"="Unlock at {{A}} Rank 17."
+
+----------
 EXP PAGE
 ----------
 獲得獎勵：=Rewards:
@@ -25,11 +36,14 @@ MAP UI
 r:"^(\d+)小時$"="$1 hours"
 『委託刷新券』\n在「怪盜委託」中刷新委託任務時消耗，可以刷新尚未出發的「非限定」類型的委託事件。=<size\=28>[Commission Reroll Ticket]\nCan be used to reroll non-active [Non-limited] Commissions</size>
 每日首次免費=<size\=20>Free Daily Reroll</size>
-是否消耗「<color\=#ff3b37>免費刷新次數</color>」，\n刷新未派遣的「<color\=#ff3b37>非限定</color>」委託？=<size\=25>Spend the [<color\=#ff3b37>Free Daily Reroll</color>] and reroll \nall undispatched [<color\=#ff3b37>Non-limited</color>] Commission?</size>
+是否消耗「<color\=#ff3b37>免費刷新次數</color>」，\n刷新未派遣的「<color\=#ff3b37>非限定</color>」委託？=Spend the [<color\=#ff3b37>Free Daily Reroll</color>] and reroll \nall undispatched [<color\=#ff3b37>Non-limited</color>] Commission?
 r:"^是否刷新未派遣的「<color\=#ff3b37>非限定</color>」委託？\n消耗：\[異界晶珀]\*(\d+)$"="Reroll all undispatched \n[<color\=#ff3b37>Non-limited</color>] Commission?\nCost: $1 Ambers"
 r:"^是否刷新未派遣的「<color\=#ff3b37>非限定</color>」委託？\n消耗：\[委託刷新券]\*(\d+)$"="Reroll all undispatched \n[<color\=#ff3b37>Non-limited</color>] Commission?\nCost: $1 [Commission Reroll Ticket]"
 可派遣任務已達上限。=Reached the limit on active Commissions
-是否中止派遣，並召回怪盜？=<size\=29>Cancel the Dispatch? \n(This will not remove the Commission)</size>
+是否中止派遣，並召回怪盜？=Cancel the Dispatch? \n(This will not remove the Commission)
+是否快速完成當前派遣任務？=Instant complete this dispatch?
+未設置派遣怪盜。=Did not select Dispatch Thieves.
+本週快速完成派遣次數已用完。=Used all weekly instant complete.
 
 ----------
 COMMISSIONS INFO
@@ -53,6 +67,8 @@ sr:"^需要(\d+)級「(.*)」$"="<size\=25> LVL $1 $2</size>"
 r:"^需要(\d+)名<size\=34><sprite\=(\d+) tint\=1></size>怪盜$"=" $1 <size\=34><sprite\=$2 tint\=1></size> Thieves"
 r:"^需要(\d+)名(\d+)級<size\=34><sprite\=(\d+) tint\=1></size>怪盜$"=" $1 LVL $2 <size\=34><sprite\=$3 tint\=1></size> Thieves"
 r:"^需要(\d+)名<size\=34><sprite\=(\d+) tint\=1></size>或<size\=34><sprite\=(\d+) tint\=1></size>怪盜$"=" $1 <size\=34><sprite\=$2 tint\=1></size> or <size\=34><sprite\=$3 tint\=1></size> Thieves"
+當前設置加分條件尚未滿足，\n是否確認立即出發？=Did not meet the bonus condition.\nContinue?
+接取條件不滿足。=Did not meet the requirements.
 
 ----------
 OTHERS
@@ -67,44 +83,67 @@ NAMES
 Setanta (ST) gives Character Lv
 B.Ooze (AoE) gives Weapon Lv
 Matador (Tank or Healer) gives Persona Lv
-Incubus (Buff or Debuff) gives Card Lv
-Obariyon (Navi) gives Soul Gems
+Incubus/ Succubus (Buff or Debuff) gives Card Lv
+Obariyon/ Decarabia (Navi) gives Soul Gems/ Bells
 
-擋路的瑟坦特=Setanta in the way
-續·擋路的瑟坦特=Setanta in the way - Continued
-和瑟坦特的決戰=Duel with Setanta
-邪惡的黑軟泥怪=Evil Black Ooze
-客人，你聽我說哦。\n邪惡的黑軟泥怪擋住了我的去路。\n黑漆漆黏糊糊……很難避開呢～\n真希望能用「攻擊」來把他趕走呀。=Customer, listen to me～\nThe evil Black Ooze is blocking my path.\nThey are black and sticky... so difficult to avoid～\nI hope to use "attack" to drive them away.
-超大的黑軟泥怪=Extra large Black Ooze
-極巨的黑軟泥怪=Giantic Black Ooze
+擋路的{{A}}={{A}} in the Way
+續·擋路的{{A}}={{A}} in the Way Pt. 2
+和{{A}}的決戰=Duel with {{A}}
+邪惡的{{A}}=Evil {{A}}
+超大的{{A}}=XL {{A}}
+極巨的{{A}}=XXL {{A}}
 超小訂單=Super Small Order
-{{A}}收到了大量小貨物的訂單。\n要搬運的貨物非常多，很困擾呢～\n如果拜託擅長『攻擊』全體的人，\n或許能解決吧，客人有什麼線索嗎？=I have received an order for a large amount of small goods. \nThere are a lot of goods to be moved, so troublesome～\nIf I ask someone who is good at "attacking" everything, \nmaybe it can be solved. Does the customer have any clues?
-鬥牛士的威脅=Matador's threat
-鬥牛士的對決=Matador's duel
-鬥牛士們好像在路邊打架呢。\n兩邊對立，一直在互相挑釁對方。\n再這樣停留下去，會影響生意呀。\n需要非常擅長「防禦」的人來協助～=The Matadors seem to be fighting on the side of the road.\nStanding at each opposites, they keep taunting each other.\nIf it goes on like this, it will affect business.\nI need people who are good at "defense" to come and help～
+超大訂單=Super Big Order
+交通事故？=Traffic Accident?
+{{A}}的威脅={{A}}'s Threat
+{{A}}的對決={{A}}'s Duel
 意外事件=Unexpected Event
-{{A}}我，遇到了一點麻煩……\n作為商人，我習慣做好充足準備，\n但有時也會遇到意想不到的事件嘛～\n希望能有人來「救援」我一下……=I'm in a bit ot trouble...\nAs a businesswoman, I'm used to being well prepared, \nbut sometimes I encounter unexpected events～\nI hope someone can "rescue" me...
 小心易碎物品～=Be careful with fragile items～
-詭異的男夢魔=Weird Incubus
-男夢魔的陷阱=Incubus' Trap
-那只男夢魔，在這裡設下了陷阱呢！\n繼續被戲耍下去，就不能做生意啦。\n得想辦法識破或者削弱這些陷阱……\n客人知不知道有誰擅長這個呀？=That Incubus has set up a trap here!\nIf this continues, I can't do business.\nI have to find a way to penetrate or weaken these traps... \nDoes the customer know anyone who are good at this?
-趕走男夢魔=Drive away Incubus
+{{A}}的報復={{A}}'s Revenge
+趕走{{A}}=Drive Away {{A}}
+對立的{{A}}=Opposing {{A}}
+談判專家=Negotiation Expert
+詭異的{{A}}=Weird {{A}}
+{{A}}的陷阱={{A}}'s Trap
+趕走{{A}}=Drive Away {{A}}
 商人的煩惱=Businesswoman's Trouble
-最近總覺得背上重重的，很困擾呢～\n但是也不能讓商店休息呢……\n所以我想向客人尋求幫助呀～\n請介紹能「支援」{{A}}的人吧～=Recently I always feel like I have a heavy burden on my back, it's quite troublesome～\nBut I can't let the shop rest either...\nSo I want to ask the customer for help～\nPlease introduce someone who can "support" to me～
-背負怪的巢穴=Obariyon Nest
-居然是背負怪=Surprise Obariyon
-一家一台背負怪=Obariyon for every family
-客人客人！聽{{A}}說哦～\n只要帶背負怪回家就能獲得錢幣！\n但它們可不會輕易讓人得逞呢……\n如果有擅長「支援」的同伴就好啦～=Customer customer! I've heard～\nYou will get coins just by taking an Obariyon home! \nBut they won't go easily...\nIt would be great if you have allies who are good at "support"～
-前面在發光的是…？=What's shining over there?
-前幾天我發現了亮閃閃的稀有東西。\n但是送貨時弄丟了，所以想找一下。\n如果您同伴中有擅長『支援』的人，\n我希望能和我一起去尋找呢。=I found something shiny and rare the other day. \nBut I lost it during a delivery, so I'd like to look for it. \nIf there are people among your group who are good at "support", I hope they can search for it with me.
+{{A}}大問答·終={{A}} Quiz - Final
+{{A}}大問答·高={{A}} Quiz - High
+{{A}}大問答·中={{A}} Quiz - Medium
+{{A}}的巢穴={{A}} Nest
+居然是{{A}}=Surprise {{A}}
+一家一台{{A}}={{A}} for Every Family
+前面在發光的是…？=What's Shining Over There?
+熱銷商品=Hot Products
+全新商機=New Business Opportunities
+
 r:"^消滅強盜陰影(\d+)$"="Eliminate robber Shadows Pt. $1"
+
+慾望的啟動=Blooming Desire
+這裡因為客人，慾望變得越發活躍啦。\n看來印象空間中也散落著意識碎片呢。\n把它們收集起來，對客人也有幫助呢。\n如果客人有興趣，可以讓同伴調查哦？=The desires have become more lively because of the customer.\nIt seems like there are some awareness fragments in Mementos.\nCollecting them will help the customer, should you invistigate there with your allies?
+
+發現珍寶·命運=Found Fate
+發現珍寶·慾望=Found Desire
+發現珍寶·迷情香=Found Charming Incense
+發現珍寶·金絲香=Found Golden Incense
+發現珍寶·怒顏香=Found Wrathful Incense
+發現珍寶·啖夢香=Found Dream Devouring Incense
+發現珍寶·玲瓏辰星=Found Exquisite Star
+發現·星屑之瓶·低=Found Stardust Bottle
+發現·水晶球·低=Found Crystal Ball
+
+耐久度測試=Durability Test
+物資保障=Secure Material
+促銷計畫=Promotional Plan
+遠行的保鏢=Travel Bodyguard
+拼命尋找商業工具=Searching for Tools
 
 Limited
 (Closer for 1 limited)
 兇猛的投球機=Fierce Pitching Machine
 (Panther for 1 standard)
 優雅對決=Elegant Showdown
-客人，想和您聊一下歐若博司阿～\n不停地談論優雅實在令人頭疼呢……\n是時候想辦法教訓教訓它了。\n有誰能與它進行時尚對決呢？=Customer, I would like to talk to you about Orobas～\nTheir non-stop discussion about elegance is giving me a headache...\nIt's time to teach them a lesson.\nWho can have a fashion showdown with them?
+客人，想和您聊一下{{A}}阿～\n不停地談論優雅實在令人頭疼呢……\n是時候想辦法教訓教訓它了。\n有誰能與它進行時尚對決呢？=Customer, I would like to talk to you about Orobas～\nTheir non-stop discussion about elegance is giving me a headache...\nIt's time to teach them a lesson.\nWho can have a fashion showdown with them?
 (3 lvl 50 for 1 standard)
 r:"^打敗首領(\d+)$"="Beat the boss Pt. $1"
 (1 Healer for 1 gold card)
