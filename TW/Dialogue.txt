@@ -7,6 +7,7 @@ General Wonder Prompt
 當然=Of course
 當然了=Of course
 無法否認=Can't deny
+好=Okay
 好啊=Okay
 好哦=Okay
 可以=Okay
@@ -19,6 +20,7 @@ General Wonder Prompt
 現在方便=Convenient now
 有可能=Possible
 走吧=Let's go
+走吧……=Let's go...
 馬上回去=Go now
 現在就出發=Go now
 我要去=I'm going
@@ -389,16 +391,19 @@ General Short Phrases
 {{A}}！？={{A}}!?
 {{A}}——={{A}}-
 {{A}}～～～={{A}}～～～
+{{A}}～～！？={{A}}～～!?
 {{A}}～？={{A}}～?
 {{A}}～！={{A}}～!
 {{A}}……？={{A}}...?
 {{A}}……！？={{A}}...!?
+……{{A}}=...{{A}}
 ……{{A}}。=...{{A}}.
 ……{{A}}！=...{{A}}!
 ……{{A}}……！=...{{A}}...!
 ……{{B}}、{{A}}！？=...{{B}}, {{A}}!?
 {{A}}？……{{B}}！={{A}}?...{{B}}!
 {{A}}……{{B}}……！={{A}}... {{B}}...!
+{{A}}……{{A}}……={{A}}... {{A}}...
 {{A}}……{{B}}？={{A}}... {{B}}?
 {{A}}、{{A}}……={{A}}, {{A}}...
 {{A}}、{{A}}……！={{A}}, {{A}}...!
@@ -407,7 +412,12 @@ General Short Phrases
 {{A}}{{B}}……？=<size\=28>{{A}} {{B}}...?</size>
 {{B}}{{A}}……？=<size\=28>{{B}} {{A}}...?</size>
 {{B}}……\n{{A}}……！={{B}}...\n{{A}}...!
+{{A}}？{{B}}？={{A}}? {{B}}?
+{{B}}？{{A}}？={{B}}? {{A}}?
 ……！=...!
+……？=...?
+……！？=...!?
+……=...
 你好！=Hello!
 你好=Hello
 你好~=Hello～
@@ -432,9 +442,11 @@ r:"^謝謝你，(.*)！$"="Thank you, $1!"
 呀！？=Ah!?
 我……=I...
 好！=Yes!
+啊！？=Huh!?
 嗯。=Yes.
 嗯！=Yes!
 嗯？=Hmm?
+嗯！？=Hmm!?
 嗯……=Umm...
 ……嗯。=...Hmm.
 ……嗯？=...Hmm?
@@ -479,8 +491,44 @@ r:"^謝謝你，(.*)！$"="Thank you, $1!"
 不知道……=Don't know...
 
 ----------
+Navigator - Cattle
+----------
+Combat start
+不可大意，要上了！=Let's go, stay sharp!
+Ambush combat start
+吾等的優勢，不要放過這個機會哦？=We have the advantage, \ndon't let this opportunity escape!
+Elite combat start
+是強敵，謹慎地上吧！=A strong enemy, engage wisely!
+Full HL
+可不能錯過HIGHLIGHT！=Don't miss the HIGHLIGHT!
+是HIGHLIGHT！速戰速決吧！=HIGHLIGHT time! Let's end this as soon as possible!
+可以使用HIGHLIGHT了。看看你要交給誰來用？=HIGHLIGHT available. \nNow, who will use it?
+CRIT
+暴擊！太棒了！=Critical hit! Remarkable!
+Multi-kill
+這本事值得稱讚！=That skill is worthy of praise!
+Evade
+看得很清楚。=Saw it clearly.
+Down
+漂亮地擊倒了敵人！=Nice knock down!
+這一記擊倒可圈可點！=That knock down was remarkable!
+敵人倒下了，機會來了！=Enemy down, this is our chance!
+Ally Downed
+居然被擊倒了！？……可惡！=Downed!? ...You bastard!
+Missed Gun
+別急……每一擊都做好準備。=Don't rush... \nKeep striking until you land a hit.
+Dead
+WONDER？你怎麼了，快回答！=Wonder? What's wrong, answer me!
+Defeat
+是吾等……輸了……？=We... lost...?
+Escape
+撤退也是一種戰略…暫時先這樣。=Taking a step back is also a good strategy.
+
+----------
 Navigator - Okyann
 ----------
+Ambush combat start
+超～完美開局！=Super～ perfect start!
 Elite combat start
 哇靠！好厲害的敵人！這下要死翹翹了！大夥快做好準備～！=Whoa damn! The enemy's no joke! We're so screwed! Everybody, get ready～!
 
@@ -490,6 +538,8 @@ Escape
 ----------
 Navigator - Puppet
 ----------
+Ambush combat start
+好～機會！大家，幹掉它～！=Chance～!\nEveryone, take it down～!
 Elite combat start
 小心點！總感覺不好對付……！=Be careful! This seems bad...!
 
@@ -501,6 +551,8 @@ Navigator - Wind
 ----------
 Combat start
 大家不要放鬆警惕。=Everyone, stay vigilant.
+Ambush combat start
+真是輕敵的傢伙，讓我們一口氣解決它。=They're underestimating us, \nlet's crush them in one strike.
 Elite combat start
 看起來是強敵。大家要小心。=Strong enemy ahead. \nEveryone, be careful.
 Skill ready
@@ -513,6 +565,8 @@ Full HL
 Highlight，可以發動了！=HIGHLIGHT, ready to activate!
 CRIT
 這才是會心一擊！=Now this is a critical hit!
+Multi-kill
+真不愧是WONDER，敵人全線崩潰了哦。=As expetced from Wonder, \nthe enemy's in total collapse.
 Down
 出色的一擊，WONDER。=A superb strike, Wonder.
 打翻了敵人，幹得漂亮！=You broke their stance, nice work!
@@ -529,10 +583,17 @@ Recovered from Down
 從倒地狀態恢復！是時候反擊了。=Recovered from down! It's time for counterattack!
 Evade
 不錯的預判。=Good call.
+Gun CRIT
+瞄得很準啊！=Accurate aim!
+Missed Gun
+被看穿了…！？=Read your aim...!?
 Debuffs
 看起來狀態不妙……不要勉強。=You're not feeling well... \nDon't push yourself.
 Mental Ailments
 精神異常狀態…振作一點。=Something's wrong... Pull yourself together.
+Faint
+大家，快掩護WONDER！=Everyone, cover Wonder!
+怎麼會…！=How...!
 Victory
 大家沒受傷吧？辛苦了。=Is anyone hurt? Good work.
 很精彩的一戰。下次也要保持這個狀態哦。=That was a great battle. Keep this momentum going next time.
@@ -544,6 +605,8 @@ Navigator - Phoebe
 ----------
 Combat start
 就讓姐姐我來領舞~上吧！=Leave the lead to me～ Here we go!
+Ambush combat start
+完美的時機！好機會！=Perfect timing!\nChance!
 Elite combat start
 好像是難纏的敵人……怎麼樣？能行嗎？=Looks like a troublesome enemy... Think we can handle it?
 Skill ready
@@ -576,6 +639,9 @@ Evade
 Debuffs
 哇！？喂，沒事吧！？=They are making it hard to move!?
 {{A}}這樣怎麼使出全力嘛……={{A}} You can't get serious like this...
+Near Death
+WONDER，你還不能倒下！=Wonder, you can't fall yet!
+不好了……得趕快進行護理！=This is bad... Need to recover quick!
 Dead
 不、不會吧！？WONDER！？=N-no!? Wonder!?
 WONDER！？回答我WONDER！=Wonder!? Say something, Wonder!
@@ -593,6 +659,8 @@ Navigator - Oracle
 ----------
 Combat start
 發現敵人！\n可不能大意哦？=Enemy spotted! \nDon't get careless now!
+Ambush combat start
+機會來了！\n一鼓作氣搞定它們！=Chance!\nCrush them in one go!
 Elite combat start
 這、這傢伙！\n感覺很難對付！=Th-this guy!\nThis one's gonna be tough!
 Skill ready
@@ -634,6 +702,8 @@ Navigator - Ange
 ----------
 Combat Start
 看來這次可以輕鬆戰鬥呢！=Looks like this fight will be easy!
+Ambush combat start
+按照以往的節奏，一起努力吧。=Let's work hard at our usual pace.
 Elite combat start
 是強敵……還請多加小心。=It's a strong enemy... Let's stay sharp.
 Skill Ready
@@ -647,6 +717,7 @@ HL，要上了哦！=HIGHLIGHT, let's go!
 CRIT
 哇，好厲害…！=Wow, that's amazing...!
 Multi-kill
+WONDER，好棒哦…！=Wonder, you're amazing...!
 {{A}}！一口氣都打倒了呢…！={{A}}! You wiped them all out in one go...!
 剛剛那一擊，真的非常帥氣哦…！=That last attack was really cool...!
 僅、僅僅一擊，就能做到這種程度…！？=All that from just one attack...!?
@@ -786,6 +857,7 @@ Shibuya Anime
 想起了一些事情……=Remembered something...
 總覺得發生過……=<size\=23>Feels like this happened before...</size>
 這些傢伙是？=Who are these guys?
+莫非……=Could it be...
 不會吧……=No way...
 總之，你快逃吧！=Anyway, you run away!
 
@@ -806,7 +878,9 @@ Shibuya Anime
 這就對了 我就是想聽到這樣的選擇=That's right... That's the choice I wanted to hear!
 難道=No way.
 
+----------
 Wonder Awakening
+----------
 以你自身的意志與「無慾」訣別吧=Say goodbye to "desirelessness" with your own will.
 既然已做出了選擇 那便一定能抓住它=Now that you have made your choice, you must seize it.
 不用怕 即使遭遇他人非議也罷 只要你能看見 那就伸手去把握它=Don't be afraid. No matter what anyone says, if you can see it, grab it.
@@ -905,7 +979,12 @@ Chapter 1
 你讓我看到了其他的可能。=You showed me another possibility.
 另一種可能性？=Another possibility?
 你在說什麼？=<size\=27>What are you talking about?</size>
-你「想知道」嗎？\n……{{A}}，很好。=Do you "want to know"?\n......{{A}}, very well.
+
+Choice 1
+你「想知道」嗎？\n……{{A}}，很好。=Do you "want to know"?\n...{{A}}, very well.
+Choice 2
+我不是說……要感謝你嗎？\n你可以直接從字面理解我的意思。=Didn't I say... I would like to thank you? You can take it at face value.
+
 你發現的可能性，\n是對無意識深處「生命」的渴望……=The possibility that you discovered, is the thirst for "life" that lies in the depths of unconsciousness...
 正因為它是每個人生來就有的想法，\n因此也是最容易被遺忘的原始慾求。=It is something that everyone naturally has, and therefore it is one of the most easily forgotten primitive desires.
 而你那充沛的活力，\n隱藏著能夠喚起除自身以外其他人的……=That overflowing vitality is not just for yourself, but for others too...
@@ -928,6 +1007,9 @@ Chapter 1
 我是您的<color\=#ff0000>{{B}}</color>，{{A}}。=I will be serving as your <color\=#ff0000>{{B}}</color>，{{A}}.
 今夜便到此為止吧。=That's all for tonight, I say.
 希望，還能再次見到你，{{A}}……=Hope to see you again, {{A}}...
+
+……早安。=...Good morning.
+早安……=Good morning...
 
 若有人反抗，我就立刻幹掉這個女人。\n……我真的做的出來哦？=If anyone resists, I will deal with this woman immediately... I'm serious.
 
@@ -956,7 +1038,11 @@ Kiuchi Bump Tomoko Anime
 我可不是故意的哦 可不是故意的=I didn't do it on purpose. It's not on purpose.
 啊 等=Ah, wait!
 
+{{A}}……\n我將你這種素養命名為「不羈」。={{A}}... Allow me to name that power of yours the "Wild Card".
+
+----------
 Motoha Awakening
+----------
 你一直就是這樣放棄「自己」的吧。=...That's how you keep abandoning your "self".
 {{A}} 正如吾所料={{A}}. Just as I expected.
 我已經 不會再放棄了=I won't throw it away anymore.
@@ -1027,7 +1113,9 @@ Miyazawa Shadow Intro Video
 來人啊 開工了開工了=Friends! Come out! Come out!
 不妙 是陷阱=Crap! It's a trap!
 
+----------
 Shun Awakening
+----------
 你這不是說出來了嗎=Didn't you say this?
 這都是你曾想要放棄的吧 驕傲 慾望 意志 甚至是生命=Didn't you want to give these all away? Pride? desire? Will? Even life?
 現在你理解了 就算當成「都是自己的錯」 騙得了自己 也改變不了任何事情=Now you understand...! Fooling yourself and thinking "it's all your fault"... That won't change anything!
@@ -1078,7 +1166,9 @@ Raining Riko Car Anime
 上車吧=Get in the car.
 當然，他也一起來  我們的目的地都一樣吧=Of course, he's coming too. We're going to the same destination.
 
+----------
 Riko Awakening
+----------
 快躲開=Move aside!
 求你們了  快跑  我已經  控制不住自己了=Please! Run! I can't stop myself anymore!
 可是=But!
@@ -1649,7 +1739,7 @@ WIND 你那邊呢=Wind, what about you?
 正在飛往匯合地點=I'm flying to the rendezvous point.
 
 這是什麼？=What's this?
-{{B}}是{{A}}的……={{B}} {{A}}'s...
+莫非是{{A}}的……=Could it be {{A}}'s...
 r:"^{{A}}的{{B}}呢？$"="<size\=18>What about {{A}}'s {{B}}?</size>"
 不良漫畫變成什麼了？=<size\=26>What about that delinquent comic?</size>
 {{A}}她對我有恩，\n是我尊敬和嚮往的人啊。={{A}} helped me in the past and has been kind to me. She's someone I respect and look up to.
@@ -1820,7 +1910,7 @@ Akashi Stabbed Video
 仔細探查，小心前進吧。=Explore carefully. Proceed with caution.
 
 ----------
-Chapter 4
+Chapter 4 Start
 ----------
 第四章=Chapter 4
 r:"^啊，(.*)！\n早啊！$"="Ah, $1!\nMorning!"
@@ -2032,7 +2122,7 @@ Choice 2
 可不是嗎～\n我們班也有不少他的粉絲。=That's right～\nThere are quite a few fans in our class too.
 說他的彩排影片和幕後花絮都超帥，\n安利我看了好多呢。=They showed me tons of his rehearsal clips and behind-the-scenes footage, all super cool!
 什麼啊，那讓他的那些粉絲們，\n來演這個舞臺劇不就好了嘛。=What the heck, then why don't those fans just go perform in the play themselves?
-不是哦，她們說去看自己的推當然很好，\n但要跟推站在同一個舞臺上就不行=That's a different story. They say it's fine to watch from the sidelines, but actually standing on the same stage just feels off.
+不是哦，她們說去看自己的推當然很好，\n但要跟推站在同一個舞臺上就不行。=That's a different story. They say it's fine to watch from the sidelines, but actually standing on the same stage just feels off.
 啊？要是讓我跟{{A}}在同一個廚房做拉麵，\n那可是再開心不過了！=Huh? If it were me, being able to make ramen in the same kitchen as {{A}} would be the best thing ever!
 拉麵跟演戲是不一樣的吧……\n原來對{{A}}來說，{{B}}是「推」啊……=Ramen and acting are two different things... Also, {{B}} is {{A}}'s "favorite"...
 {{B}}……\n跟{{A}}碰面的日子快到了，真傷腦筋啊。={{B}}... The day we meet with {{A}} is coming up soon, this is such a headache.
@@ -2086,7 +2176,7 @@ r:"^啊，是{{A}}，還有(.*)。\n謝謝你們能來。$"="Ah, it's {{A}}, and
 然後，他們是……=And, they are...
 {{B}}，我是{{A}}。={{B}}, I'm {{A}}.
 我是{{A}}……{{B}}。=I'm {{A}}... {{B}}.
-{{C}}的話……想必大家都認識他了。\n{{A}}，她是漫畫家「{{B}}」。=You probably know {{C}}, right? \n{{A}} is the manga artist "{{B}}".
+{{A}}的話……想必大家都認識他了。\n{{B}}，她是漫畫家「{{C}}」。=You probably know {{A}}, right? \n{{B}} is the manga artist "{{C}}".
 {{A}}是！？「{{C}}」的！？\n{{B}}～～～～！？={{A}}!? "{{C}}"!?\n{{B}}～～～～!?
 ……誰？=...Who?
 
@@ -2204,7 +2294,7 @@ Choice 2
 r:"^{{A}}跟(.*)也是，\n要一起加油哦！$"="{{A}} and $1 too, \nlet's work hard together!"
 
 ----------
-First Rehearsal
+1st Rehearsal
 ----------
 興奮狀態的女子=Exhilarated Girl
 我看到{{A}}啦！\n好帥呀～！=I saw {{A}}!\nHe's so cool～!
@@ -2480,7 +2570,7 @@ Choice 2
 那麼各位，剛才那位女士已經走了，\n我們也差不多回去吧。=Well everyone, that woman is gone now, it's time for us to go home.
 
 ----------
-Rehearsal Day 2
+2nd Rehearsal
 ----------
 對了，\n你們什麼時候開始做大型道具啊？=By the way, when do you guys make the big props?
 ……大型道具？=...Big props?
@@ -2568,7 +2658,7 @@ Bene（好）！差不多都安排好了，\n等實際進行的時候再微調�
 我們走吧，{{A}}。=Let's go, {{A}}.
 {{B}}，我好開心呀，{{A}}！\n來！跟我來！={{B}}, I'm so happy, {{A}}!\nHere! Follow me!
 他們走了……\n{{A}}為什麼突然……=They left... Why would {{A}}...
-話說，那個叫{{A}}的是怎麼回事啊！\n怎麼那麼拽……=Also, what's wrong with that Shimotsuna! \nWhy is she acting all high and mighty...
+話說，那個叫{{A}}的是怎麼回事啊！\n怎麼那麼拽……=Also, what's wrong with that {{A}}! \nWhy is she acting all high and mighty...
 但{{A}}看起來是不是有點怪？\n感覺是看到那個男人之後才答應去的……=But didn't Ikenami-kun seem off? It was like he only agreed after seeing that man...
 那傢伙……被盜取了。=He's... been stolen.
 不，準確說是「他們」都被盜了。=No, to be precise, "they".
@@ -2717,7 +2807,7 @@ Choice 3
 為什麼會如此推論呢。\n反了啦，反了。=Why would you think that. You have it backwards, backwards.
 我的意思是，\n有些小事會被刻意地渲染成大醜聞。=I mean they take trivial matters and turn them into huge scandals.
 {{A}}！怎麼能那樣！={{A}}! How could that be!
-對那些被爆料的人，\n今後的人生該怎麼辦{{A}}=What about the lives of the people they expose?
+對那些被爆料的人，\n今後的人生該怎麼辦啊！？=What about the lives of the people they expose!?
 所以她才被起訴的吧？\n啊，不過她也沒輸過啊……=That's why she gets sued, right? Ah, but she's never lost a case...
 {{A}}？等等？那種無良雜誌社，\n出現這種問題不應該馬上倒閉嗎？={{A}}? Wait? How is a scummy magazine like this not bankrupt after all this backlash?
 ……剛才{{A}}不也說過了嘛？=...Didn't {{A}} just explain?
@@ -2860,7 +2950,7 @@ Choice 2
 {{A}}的氣息還很遠，\n吾等一邊警戒這些陰影一邊前進吧。=The {{A}}'s presence is still distant. Let's move forward while being cautious of Shadows.
 
 ----------
-Palace 5 Exploration
+Palace 5 Exploration Part 1
 ----------
 有幅可疑的畫呢。\n這是……{{A}}的肖像畫嗎？=There's a suspicious painting here.\nIs this... a portrait of {{A}}?
 唔啊……真的假的啊。\n那傢伙是有多自戀啊……=Huh... seriously? \nJust how full of herself is she...
@@ -2886,7 +2976,6 @@ WONDER，門開了！=Wonder, the door opened!
 不過，如果變成螞蟻是不是就能通過了？=However, we can pass if we turn into ants?
 值得一試。\n變成螞蟻後再來看看吧。=It's worth a try. Let's try again after turning into ants.
 WONDER，這個樣子怎麼想都進不去吧！=Wonder, there's no way you can enter like this!
-「<color\=#ff3b37>鑽開</color>」前進的道路=[<color\=#ff3b37>Drill</color>] the path forward
 
 嗯？　這個，好像是這裡的地圖吧？=This is the map of this place, right?
 嗯……應該是的。路線似乎有些複雜。\n仔細看看吧。=Yes... The route seems a bit complicated. Let's take a closer look.
@@ -3000,7 +3089,7 @@ r:"^唔，沒錯。吾也跟(.*)說過，\n你們的本職是學生。$"="Indeed
 沒錯！+1！=Right! Plus one!
 
 ----------
-Rehearsal Day 3
+3rd Rehearsal
 ----------
 好，今天我們過一遍第2幕吧。\n先從{{B}}們的母親——{{A}}開始。=Okay, let's go through act 2 today. Starting with the protagonist's mother, {{A}}.
 好！就給大家看看……\n我昨天熬夜練習的成果……！=Alright! Let me show you all... The results of my late-night practice..!
@@ -3059,7 +3148,7 @@ Choice 2
 ……沒事的，不必擔心我。=...I'm fine, don't worry about me.
 來，我們繼續排練吧。\n接下來從{{A}}和我的戲開始！=Alright, let's resume practice. We'll start from the scene between {{A}} and me.
 {{C}}，剛才{{A}}說的……\n她明天要去{{B}}的事。={{C}}, about what {{A}} just said... her visit to {{B}} tomorrow...
-怎麼了？=What about it?
+怎麼了？=What's wrong?
 也許是潛入的好機會=A chance to infiltrate
 
 Choice 1
@@ -3089,6 +3178,7 @@ Choice 2
 
 那個……可以嗎？\n不會打擾到你工作的……=Um... would that be okay? We wouldn't want to disrupt your work...
 我沒意見哦。=I don't mind.
+{{A}}，可是……！={{A}}, but...!
 {{A}}？真的嗎？={{A}}? Really?
 我們這些非工作人員去那裡，\n不知道會不會很冒昧……=But would it be rude for outsiders like us to just show up...?
 這個我會想辦法的。=I'll do something about that.
@@ -3099,7 +3189,7 @@ Choice 2
 你、你們那麼想參觀啊……=You... you all really want to visit that badly...
 我知道了。\n那我打個電話確認一下。=Alright then. Let me make a quick call to confirm.
 好，今天就到這裡吧。\n那麼，明天見！=Ok, then that's it for today. See you tomorrow!
-啊～抱歉，{{A}}！\n我們明天……臨時有事情！=Ah～ sorry, {{A}}! We... suddenly have something to do tomorrow!
+啊～抱歉，{{A}}！\n我們明天……臨時有事情！=Ah～ Sorry, {{A}}! We... suddenly have something to do tomorrow!
 明天可不可以不排練了？=Can we cancel rehearsal tomorrow?
 怎麼了，又要考試嗎？\n好。那明天就休息一天。=What is it this time, more tests? \nGot it. We'll take tomorrow off.
 {{A}}你要自己好好練，別再卡詞啦。\n拜拜！={{A}}, practice your lines alone, no more stumbling. Later!
@@ -3303,7 +3393,7 @@ r:"^這個是(.*){{A}}包裡的……\n貓頭鷹，對吧？$"="This is the owl.
 也沒打算告訴任何人你們的真正身份。\n我只不過是……對大家很感興趣而已。=Nor will I reveal your true identities to anyone. I'm simply... very interested in all of you.
 感興趣……？=Interested...?
 我不是說過了嗎？\n作為採訪對象，大家能激發我的靈感。=Didn't I say it before? As interview subjects, you all inspire me.
-真的是……因為這個？\n{{A}}，{{B}}你要把我們……=Is that... really all? {{A}}, are you planning to use us...
+真的是……因為這個？\n{{A}}，莫非你要把我們……=Is that... really all? {{A}}, are you planning to use us...
 我沒有其他目的。\n我只想看看你們在做什麼，僅此而已。=No ulterior motives. I simply want to observe your activities, nothing more.
 真正的怪盜……\n應該可以成為{{A}}的參考吧。=Real Phantom Thieves... Could serve as good references for {{A}}.
 我們還沒說過自己是「怪盜」。\n就算假設我們是……=We haven't admitted to being "Phantom Thieves". But let's say we are...
@@ -3394,8 +3484,1150 @@ Choice 3
 r:"^今天也要排練哦！\n去體育館吧，(.*)。$"="We've got rehearsal today too! Let's go to the gym, $1."
 好的，走吧！=Alright, let's go!
 還有事情要做=Got things to do
+喔，真有幹勁啊！\n那就趕緊去體育館吧，Let's go！=Oh, you're really motivated! Then let's hurry to the gym! Let's go!
+啊，難道是要去小賣部買點東西吃嗎……？\n{{A}}，開玩笑的啦！那就等會兒再見囉！=Ah, going to the store to buy some snacks...? {{A}}, just kidding! See you later!
 
+----------
+4rd Rehearsal
+----------
+……嗯，我一切都很好。\n媽媽你呢？=...Mmm, I'm doing just fine. What about you, mom?
+這樣啊，那就好。=I see, that's good to hear.
+我爸？嗯，還是那麼忙。\n……我有好好吃飯，放心吧。=Dad? Yes, still as busy as ever. \n...Don't worry, I've been eating properly.
+學校這邊也都很順利。\n對，在忙戲劇部的事。馬上就要比賽了。=School's going well too. Yes, the drama club has a competition coming up.
+大家人都很好，我們相處得很開心哦。=I'm surrounded by great friends, we get along great.
+……媽媽你為什麼道歉啊。\n沒必要的。=...Mom, why are you apologizing? There's no need for that.
+好，媽媽你也要注意身體。\n那先這樣。嗯，Ciao（再見）。=Alright, you take care of yourself too. That's all for now. Yes, Ciao (Goodbye).
+你們來啦。\n怎麼了？幹嘛杵在那裡。=Yo. What's up? Why just standing there?
+你剛才在打電話？=<size\=30>Were you on the phone?</size>
+「媽媽」？="Mom"?
+{{A}}，被你們聽到了啊。\n對，我跟我媽會定期電話聯繫。={{A}}, you heard that. Yes, I call my mom regularly.
+她在國外生活，\n所以這樣時不時互相聊聊近況。=She lives abroad, so we check in like this from time to time.
+{{A}}……你跟媽媽不住在一起啊？\n是因為工作嗎？={{A}}... you don't live with your mom? Is it because of work?
+嗯。我媽太忙了，要到處跑。\n所以就住在國外了。=Hm. Mom's always traveling for work, so she stays overseas.
+每年大概回日本一兩次吧。=She comes back to Japan maybe once or twice a year.
+好辛苦啊=That sounds tough
+你不會想她嗎？=Don't you miss her?
+畢竟從小就這樣，我已經習慣啦。=I've been used to it since I was little.
+我很尊敬她能以事業為重。\n而且就像剛才那樣，我們也常聯繫。=I really respect her dedication to her career. And like you just heard, we keep in touch.
+所以……嗯，沒什麼好寂寞的。=So... well, there's nothing to be lonely about.
+來，我們進體育館吧。快點排練！=Come, let's head inside the gym. Time for rehearsal!
+剛才他在電話裡……\n他說跟{{A}}戲劇部「關係很好」……=Earlier on the phone... He said he "gets along great" with the {{A}} drama club...
+不知道是不是不想告訴母親，\n自己與戲劇部的人其實有矛盾……=I wonder if he didn't want to tell his mom about the tension between him and the others...
+好了，今天我們來全部過一遍吧。\n從第一幕到最後一幕，一口氣哦！=Alright, today we're running through the whole thing. From the first scene to the last scene, nonstop!
+「呼，看來今天到此為止了。\n期待再會，{{A}}的各位！」="Whew, looks like that's it for today. Until we meet again, members of the {{A}}!"
+「等著瞧……\n我們一定會追上你的……」="Just you wait... We'll catch up to you someday..."
+「然後，奪回幸福的未來！\n我們是……」="And take back our happy future! We are..."
+三人=Three People
+「{{A}}！」="{{A}}!"
+好，很不錯！=Alright, okay!
+好耶，我們這還是頭一回一口氣演完吧！\n而且感覺演得還很不錯啊！是吧！=Woohoo! This is the first time we've performed it all in one go! And I feel like the acting was pretty good! Right!
+就是很棒吧？\n雖然還有點小錯。=It was awesome, wasn't it? Even though there were a few hiccups.
+就算是忘詞的地方，\n大家也都能靠即興表演連下去呢。=Even when someone forgot a line, everyone just improvised through it smoothly.
+這證明大家已經把整部戲都牢牢記住了，\n是把角色演活了的證明哦。=That proves you've all internalized the script, it's a sign you've become your characters.
+我們做到了！=We did it!
+{{A}}覺得呢？=<size\=22>What do you think, {{A}}?</size>
+{{A}}你覺得呢？=<size\=29>What do you think, {{A}}?</size>
+是在問我作為原作者的意見嗎？\n嗯……=Are you asking for the author's opinion? Hmm...
+我覺得大家都能準確解讀角色，演得很好。=I think everyone really understood their characters and acted them out wonderfully.
+嗯，我覺得和剛開始的時候相比，\n大家簡直進步太多了。=Yes, compared to when you first started, the improvement is unbelievable.
+就算作為一名普通觀眾，\n我也看得相當滿足。=Even just as an audience member, I was thoroughly impressed.
+當然也還有些不足，\n比如{{A}}經常說不順臺詞……=Of course, there's still room for improvement, like {{A}} stumbling over his lines...
+嗚，抱歉啊！=Ugh, sorry about that!
+不過……能切實感受到{{A}}的熱情。\n就像真的「媽媽」一樣呢。=But... I could feel {{A}}'s passion. It was like watching a real "mother".
+真假，我演出了真正的「媽媽」……！=For real, I played a real "mother"...!
+等等，我該高興嗎……？=Wait, should I be happy...?
+r:"^(.*){{C}}、{{A}}，\n還有{{B}}，大家都很認真。$"="$1-senpai, {{A}}, and {{B}}, you were all so serious."
+雖然和漫畫中的{{A}}們不完全一樣，\n但是大家演出了各自心目中的形象……=Though it's not exactly like the manga protagonists, you brought your own interpretations to life...
+啊，沒事。\n{{A}}的演技真的很厲害。=Ah, right. {{A}}'s acting was excellent as expected.
+……看起來你像是欲言又止啊。\n用不著顧慮，有話直說吧。=...Looks like you're hesitant to speak. Don't worry, just say what you're thinking.
+沒有，請別在意。\n我對演技可是門外漢。=No, it's nothing. Please ignore me. I'm no expert on acting.
+不，拜託你了。對演員來說，\n批評也是演技的源泉。=No, please. For actors, criticism is also a source of skills.
+你就直說吧。=Just say it straight.
+……那好吧。\n如果我說錯了，還請你不要介意。=...Right. If I'm wrong, please don't mind.
+我剛剛突然發現，我好像……\n對{{A}}的演技「沒印象」。=It just hit me... I have "no impression" of {{A}}'s performance.
+素描也是……明明其他人都畫了好多，\n但{{A}}的卻沒幾幅。=Even in the sketches... I drew so many of the others, but barely any of {{A}}.
+不過畢竟演的是壞人角色，\n也許你是特意這麼表現的……=Though, since you're playing the villain, maybe that was intentional...
+總之……\n感覺是種沒有留下印象的演技。=Anyway... it's like your acting left no impression.
+我太沒禮貌了。對不起。\n也許是因為演得太好了，才沒留下痕跡呢。=That's rude. Sorry. Maybe it was so good that it didn't leave much of an impression.
+不……你說得太對了。\n不愧是{{A}}，觀察力很強。=No... you're absolutely right. As expected from {{A}}, you have a keen eye.
+劇團的夥伴也對我說過同樣的話。\n他們說，在我的表演中看不到「我自己」。=The drama club members said the same thing. They told me they couldn't see "myself" in my acting.
+你自己？=Youself?
+他們說我演得很好，也很有感染力。\n但是……「感覺不一定非要我來演」。=They said I acted well and was very charismatic. But... "it didn't have to be me acting it".
+要是配角倒還行，但作為主角的話，\n無法給人留下深刻印象是不合格的。=It's fine for a side character, but as a lead, failing to leave an impact is a failure.
+真的假的……要我說，\n總之就是演得很好啊……=For real... I mean, I thought you were great...
+我也是……=Me too...
+我也覺得演技很好=<size\=21>I also thought the acting was great</size>
+大概就是有技術，但缺乏激情吧。\n這樣是當不了明星的。=It's like having skill but lacking passion. I can't become a star like this.
+哦，\n就像是味道不錯但沒特點的拉麵嗎……=Oh, it's like ramen that tastes good but has no distinctive features...
+啊，抱歉！=Ah, sorry!
+{{A}}，沒事。我覺得你的比喻很恰當。=Haha, no worries. That's actually a perfect analogy.
+只不過這個問題……\n在學園祭之前恐怕是克服不了了。抱歉。=It's just this... isn't something I can fix before the school festival. My apologies.
+這就是{{A}}作為演員，\n今後要攻克的課題吧。=This is one of {{A}}'s future challenges as an actor.
+沒錯。{{A}}，謝謝你。\n抱歉讓你說了些難以啟齒的話。=Exactly. Thank you, {{A}}. And sorry for making you say something difficult.
+沒關係……=It's okay...
+那，時間不早了。\n今天就到這裡吧。=Well, it's getting late. Let's call it a day.
+好的，各位辛苦了。\n今天我還有工作要做，先告辭了……=Okay, everyone, good work today. I have work today, so I'll go first...
+我說……\n{{A}}是不是有點失落啊？=Hey... Did {{A}} seem kinda down to you?
+應該是在想{{A}}的話吧……=Probably thinking about what {{A}} said...
+這種時候就是那個了，{{A}}！=It's time, {{A}}!
+這種時候就去吃拉麵吧！=Time for ramen!
+……你是說拉麵嗎！=...Did you say ramen!
+是啊！拉麵！=Yes! Ramen!
+嗯？拉麵？=Huh? Ramen?
+沒錯，我知道家超級好吃的拉麵！\n我們一起去吧，{{A}}！=Right, I know an amazing ramen place! Let's go together, {{A}}!
+{{A}}，你們要去吃拉麵嗎！？\n那我也要去！={{A}}, you guys are getting ramen!? \nI wanna go too!
+不行哦，{{A}}。不是說今天回去時，\n要一起去看女生服裝的布料嗎？=No, {{A}}. Didn't we say we'd check out fabrics for girls' outfits on the way back?
+哎呀……！我想起來了……！=Oops...! I remembered...!
+下次再大家一起吧=<size\=28>Let's go together next time</size>
+等什麼時候有機會=<size\=26>When we get another chance</size>
+也是，今天{{A}}也不在。\n那你們3個吃好哦～=Right, {{A}} is not here either. Then you three enjoy the meal～
+我們就先走啦。=We'll take our leave.
+好，那今天就來一場男人們的拉麵大餐！\n我們走起，{{A}}！=Right, let's have a ramen feast for the guys today! Let's go, {{A}}!
+噢、噢……？=O-oh...?
+
+嗯……Buono！！=Mmm... Buono!!
+這拉麵什麼來頭啊……！\n也太好吃了吧！=What's this ramen...! It's so good!
+我就說吧！\n關鍵是這個湯底，鰹魚湯底！=Told you! The key is the broth, bonito broth!
+Buono？=Buono?
+剛才說的是義大利語嗎？=Was that Italian just now?
+啊，我又說順嘴了。\n抱歉，因為拉麵太好吃了，不小心就……=Ah, I said it again. Sorry, the ramen was just so good, it came out naturally...
+對哦，{{A}}偶爾會說外語呢。\n「Bravo」，還有B……「Bene」？=Yeah, {{A}} sometimes throws in foreign words. Like "Bravo" and B... "Bene"?
+Bene是義大利語「OK」的意思，\nBravo是「很棒」的意思。=Bene means "OK" in Italian, Bravo means "great".
+Buono的話，就是「好吃」的意思啦。=And "Buono" means "tasty".
+我媽媽是義大利人，\n所以從小就耳濡目染了。=My mom is Italian, so I picked it up growing up.
+真的嗎！\n那……你爸爸是日本人嗎？=For real! Then... your dad is Japanese?
+沒錯，我是義大利和日本混血。=Yes, I'm half Italian and half Japanese.
+雖然我基本是聽日語長大的，\n不過語氣詞什麼的還是受我媽媽的影響。=Although I basically grew up speaking Japanese, my little interjections and such are still influenced by my mom.
+一放鬆下來就會不小心說出口……=When I relax, they just slip out...
+你隨時都可以放鬆的=You can relax anytime
+希望在我們面前你能做自己=<size\=25>Hope you can be yourself around us</size>
+嗯，但是……=Hmm, but...
+r:"^就是呀，(.*)說得對，\n做自己就行啦！難得現在只有男生呢！$"="Come on, $1's right, just be yourself! It's just us guys here anyway!"
+嗯……啊～=Hmm... Sigh～
+今天{{A}}說的……\n從我的演技裡「看不到我自己」……=Today, what {{A}} said... that she "couldn't see myself" in my acting...
+其實不止是演戲。=It's not just about acting.
+不止是在舞臺上。\n我平時也老這樣，不袒露真正的自己……=Not just on stage. Even in everyday life, I don't show my true self...
+我總是在「撒謊」。=I'm always "lying".
+撒謊是指……=Lying...
+就是字面意思啦。\n不管對誰，我都沒展現過真正的自己。=Literally. I don't show my true colors in front of anyone.
+這感覺就像是……\n我一直在飾演「{{A}}」這個角色。=It's like... I've been playing the role of "{{A}}".
+可……不過……\n這跟撒謊可是兩碼事吧？=But... that's not the same as lying, right?
+但也肯定不是「誠實」。=But it's definitely not "honest", either.
+事到如今……連我自己都忘了，\n究竟要如何展現真正的自我了。=At this point... I don't even remember how to show my true self.
+只有像這樣吃到好吃的，\n或者剛演出完很興奮的時候……=Only when eating something incredible, or right after a show when I'm still buzzing...
+才能找回一點真正的自己……=That's when I feel like my true self is coming back...
+而在平時，\n隱藏自己已經成了一種習慣了。=But the rest of the time, hiding's just second nature.
+為什麼要這麼做？=Why do this?
+是跟家裡有關係嗎？=Is it related to family?
+r:"^(.*)知道，\n我媽媽一直住在義大利。$"="$1 knows, my mother has always lived in Italy."
+r:"^……猜對了。(.*)知道吧，\n我媽媽一直住在義大利。$"="...Bingo. $1 knows, my mother has always lived in Italy."
+不是說我父母人不好，或者關係差哦？\n我很喜歡他們，也很尊敬他們。=Not that my parents are bad people or have a bad relationship. I love and respect them.
+只不過……嗯，因為一些原因，\n我們一家不得不兩地分居。=But... well, for some reasons, we had to live apart.
+一些原因？=Some reasons?
+這個嘛～就是我的私事啦。\n不，不如說是父母的私事。=That's～ More of a personal matter. Or rather, my parents' private matter.
+反正就因為這個……\n在父母面前，我就一直扮演著好孩子。=Anyway, because of that... I've always played the good child in front of them.
+為了不讓他們擔心，不給他們添麻煩，\n我就藏起了感情，成了這麼個人。=In order not to make them worry and cause them trouble, I hid my feelings, and became this.
+不過他們真的是很好的父母哦？\n夫妻關係很好，也都很愛我，我懂。=But they're really great parents. They love each other, they love me, I know that.
+但這大概就是我的本性。\n這麼一想，就更覺得對不起他們……=But maybe this is just who I am. And that just makes me feel even guiltier...
+我……能理解{{A}}。不想讓父母擔心，\n所以不能讓他們看到真正的自己。=I... get it, {{A}}. Not wanting to burden your parents, so you can't show them your true self.
+我是單親家庭，老媽工作非常辛苦。\n為了不讓她擔心……=I grew up with a single mom who worked herself to the bone. In order to not make her worry...
+比如我想她啦，還有學校裡的事啦……\n這些我都故意不去跟她說。=Things like I missed her, or stuff at school... I won't deliberately tell her those.
+怎麼說呢……就因為愛自己的爸媽，\n所以才有話說不出口……吧。=How to say it... There are some things you can't say because you love your parents...
+是吧。對了，你也別總對我用敬語了。\n隨意就好，隨意。=Yes. Right, and drop the honorifics when addressing me. Just talk normally.
+真的？那就，{{B}}！\n……不對，還是得叫{{A}}吧？=Seriously? Then, {{B}}! ...No, I should still call you {{A}}.
+r:"^就叫我{{B}}就行，我也直接叫你{{A}}。\n(.*)也是哦！$"="Just call me {{B}}, and I'll just call you {{A}}. You too, $1!"
+現在的{{A}}就在做自己=<size\=29>The {{A}} now is the true self</size>
+{{A}}的語氣也完全不同了=<size\=26>{{A}}'s tone is completely different</size>
+{{A}}，的確！\n因為這拉麵太好吃了，嘴都軟了。={{A}}, true! The ramen's so good, I'm acting soft.
+事到如今，\n也沒必要在你們面前裝酷擺架子了。=At this point, there's no need to keep acting cool around you guys.
+{{A}}，原來你之前都在裝酷啊。={{A}}, turns out you were just pretending to be cool.
+那當然啦。\n畢竟我的影片那麼紅，還登過雜誌。=Of course. After all, my video went viral and had even been featured in magazines.
+所以我覺得……\n應該「演」得更像模像樣一點吧。=So I figured... I had to "act" the part.
+已經不用演了=<size\=30>No need to act anymore</size>
+做{{A}}自己就好=Just be {{A}}
+……我也覺得！=...I think so too!
+那我就直說了，我還沒吃飽呢！\n不然再加份麵吧！=Then I'll say it straight, I'm still hungry! Let's order another bowl!
+說得好！那乾脆再來一碗！\n除了醬油拉麵，味噌拉麵也很棒哦。=Now we're talking! Let's have a second one! Soy ramen's good, but miso's killer too.
+Bravo！好！\n打擾一下，我想點單！=Bravo! Right! Excuse me, we'd like to order!
+啊～吃飽了吃飽了。\n糟了，接下來得節食了啊。=Ah～ So full. Oh no, I have to go on a diet after this.
+是該鍛煉吧，練肌肉。\n把吃的變成肌肉就行啦。=Just exercise and build muscle. Turn all this food into gains.
+畢竟肌肉永遠可靠=Muscles are forever
+看！我的肌肉！=Look! My muscles!
+{{A}}，\n果然男生一起玩就很開心啊！={{A}}, it's fun hanging out with the guys!
+說實話，有女孩子時我總是小心翼翼的……\n這和隱藏真實的自己又不是一回事。=Honestly, I'm always on guard around girls... though that's different from hiding myself.
+跟女生說話的時候，\n難道你們不緊張嗎？=You guys get nervous talking to girls too, right?
+我懂！\n會很怕說錯話啥的。=Totally! Always worried about saying the wrong thing.
+我還以為{{A}}你不會這樣呢。\n畢竟不是總有女生圍著你轉嘛？=I thought you wouldn't be like this, {{A}}. Aren't there always girls around you?
+就算是粉絲，我也會緊張啊！=Even with fans, I still panic!
+為何聚集在我周圍的都是女孩子……\n這是為何、為何……！=Why is it always girls around me... Why, why...!
+搞了半天你還是在炫耀阿！=You're still showing off!
+不不，我真不是在炫耀！\n我現在超想聊一些很蠢的話題！=No, no, I'm really not! I really want to talk about something dumb right now!
+讓我們來一場只有男孩子才懂的、\n無聊吹牛大會吧！！=Let's have a stupid bragging session that only guys can understand!!
+就這樣三個人一起，\n因為各種無聊至極的話題大笑……=The three of us laughed at all kinds of stupid topics together...
+啊～今天真是「吃飽笑足」了……\n好久沒這麼開心過了呢。=Ah～ We really "live it up" today... Haven't had this much fun in ages.
+{{A}}，我還有家推薦的店呢。\n下次我們去那家吧。={{A}}, I know another great shop. Let's hit it up next time.
+Bene！我期待著呢。=Bene! Looking forward to it.
+那，今天謝謝你們啦！\n明天見，Ciao！=Alright, thanks for today! See you tomorrow, Ciao!
+哦～Ciao！=Yeah～ Ciao!
+
+----------
+5th Rehearsal
+----------
+好，大型道具都差不多了。\n就剩下一些小道具了。=Okay, the large props are mostly done. Now we just have some small props left.
+比如{{A}}們的武器，\n必須要好好製作才行～！=Like the weapons for the protagonists, we need to make sure they're well-crafted～!
+嗯。{{A}}，能給我看一下人設圖嗎？=Hmm. {{A}}, can I see the character design illustrations?
+啊，好的。給你。=Ah, sure. Here you go.
+原來如此……這個的話，\n應該能用泡沫塑膠之類的材料搞定？=I see... For this, maybe we can use foam or something similar?
+哇，{{A}}的武器啊！\n我超想用用看呢！=Wow, the {{A}}'s weapons! I'd love to try using them!
+啊……話說回來，我們還得準備服裝呢！=Ah... Speaking of which, we still need to prepare the costumes!
+還有負責音響、燈光的工作人員呢……\n我問過其他{{A}}了，他們都很忙。=And the staff for sound and lighting... I asked the other {{A}}s, but they're all busy.
+另外，{{B}}和{{A}}，\n雖然能一人分飾好幾個角色……=Also, {{B}} and {{A}} can each play multiple roles, but...
+但有些場景行不通吧。\n尤其是這場戰鬥戲……=Some scenes just won't work. Especially this fight scene...
+對。剛演完一個雜兵，\n馬上又作為BOSS登場的確有點兒傻……=Right. It's a bit silly to appear as a boss right after appearing as a small fry...
+起碼再來1個……\n不，最好能再來3個演員啊……=We need at least one more... No, ideally three more actors...
+{{A}}說她已經答應要給各種攤位幫忙，\n所以來不了……={{A}} said she's already promised to help with various stalls, so she can't make it...
+r:"^(.*)有沒有合適的人選啊？\n……不過，要是有的話你早就叫來了吧。$"="$1, do you know anyone who could help? ...Though if you did, you'd have called them already, right?"
+想不到還有誰……=<size\=27>Can't think of anyone else...</size>
+其實還真有……=Actually...
+{{A}}……看來輪到我登場了。={{A}}... Looks like it's my time to shine.
+{{A}}……是誰！？={{A}}... Who!?
+{{A}}……問得好。\n雖然一言難盡……硬要說的話……={{A}}... Good question. It's hard to explain in a few words... But if I had to say...
+我是……「{{A}}」。=I am... "{{A}}".
+我已經知曉你們的困境了。\n現在你們身陷「深淵迷宮」裡……=I've already grasped your predicament. Right now, you're trapped in the "Abyss Labyrinth"...
+而離開迷宮，就需要「{{A}}」……\n也就是我的指引。=And to escape the labyrinth, you need the guidance of the "{{A}}"... that is, me.
+{{A}}，完全不知道這人在說什麼……={{A}}, I have no idea what this guy's talking about...
+r:"^話說回來，他到底是誰啊？\n(.*)你知道嗎？$"="Speaking of, who even is he? $1, do you know him?"
+是誰來著……？=Who...?
+我不認識=I don't know them
+他是「深淵的引導者」=He is the "Abyssal Guide"
+
+Choice 1
+不是吧不是吧！\n你別這樣啊！？=No no! Don't be like this!?
+Choice 2
+我是{{B}}啊！高一的{{A}}！=I'm {{B}}! A first-year! {{A}}!
+Choice 3
+r:"^呼……不愧是與我同為「{{A}}」的，\n(.*){{B}}。$"="Ha... As expected of my fellow "{{A}}", $1-senpai."
+我是高一的{{A}}……\n和{{B}}同為被命運指引之人。=I'm {{A}}, a first-year... A fellow seeker guided by fate.
+是、是這樣啊……\n喔……喔唷～=Oh, I see... O-okay～
+大家不是正在犯愁嗎？\n我都明白的。=You're all worried, right? I get it.
+你們在等待一個，能站上舞臺中央的、\n命定的隊友……沒錯吧？=You're waiting for a destined comrade to stand at the center of the stage... Right?
+好繞啊這個人……\n是說，你也想演出是嗎？=This guy's such a pain... \nSo, you want to join the play?
+唔！\n就、就是這個意思。=Guh! W-well, yeah, that's the idea.
+真的嗎！那你倒是直說啊！\n什麼深淵啊命運啊，你說這些誰懂啊！=Really? Then just say so! Who understands all that "abyss" and "fate" stuff!
+{{B}}——！太好了！\n{{A}}對吧？太感謝你啦！={{B}}-! That's great! {{A}}, right? \nThank you so much!
+沒、沒什麼……畢竟這也是命運的安排。\n區區小事，不足掛齒。=N-no problem... It's just fate's will. \nA small matter, really.
+不知為何，\n高一的{{A}}願意參加演出……=For some reason, {{A}}, a first-year, is willing to join the play...
+很感謝{{A}}的參與。\n但就算這樣，我們人手還是不夠……=We're grateful for {{A}}'s help, but even with him, we're still short on people...
+好吧。那我再去試試，\n跟我們戲劇部的人聊聊。=Alright. I'll try talking to the drama club again.
+{{A}}？他們不是說過不想幫忙嗎……={{A}}? But they already said they didn't want to help...
+如果他們看過我們現在的演技，\n我想是有可能回心轉意的。=If they see how much we've improved, I think they might change their minds.
+因為和你們一起演出，\n就是很開心嘛！=Because acting with you all is just so much fun!
+死馬當作活馬醫吧=Give it a shot
+嗯，交給我吧！\n我會好好說服他們的。=Yes, leave it to me! \nI'll convince them properly.
+因為上次的事，可能讓你們印象有點差……\n但他們對演戲都很上心，人也很好。=They might've seemed rude to you... but they're actually passionate actors and good people.
+哇……糟了。=Wow... Oh no.
+之前提交的分鏡需要修改。\n抱歉，我先回去了……=I need to revise the submitted storyboard. \nSorry, I must go...
+哇，那可是個大工程……！\n加油啊，{{A}}！=Whoa, that's a big task...! \nGood luck, {{A}}!
+嗯嗯，我先告辭了……！=Mmm, I'll take my leave...!
+既要當漫畫家，又要當學生，\n一定很辛苦吧……=Being both a mangaka and a student must be tough...
+好了，我們繼續排練吧。\n{{A}}，你來看看這裡……=Alright, let's get back to rehearsing. {{A}}, take a look at this...
+Bene！你演得很不錯啊，{{A}}。=Bene! Your acting is great, {{A}}.
+畢、畢竟我可是「{{A}}」嘛……=W-well, I am a "{{A}}" after all...
+好了，今天的練習到此為止。\n我們來想想服裝和小道具的問題吧。=Okay, that's it for today's practice. Let's think about the costumes and small props.
+自己從頭開始剪裁很難吧。\n最好還是用類似的衣服改一下……=Making them from scratch would be hard. \nMaybe we can modify existing clothes...
+打擾一下～\n{{B}}的{{A}}在嗎？=Excuse me～ Is {{A}} from {{B}} here?
+{{B}}？{{A}}？={{B}}? {{A}}?
+我就是{{A}}……=I am {{A}}...
+啊，{{A}}！能請你來一下嗎？\n有個人在校門口吵著要找你……=Ah, {{A}}! Can you please come here for a moment? Someone is clamoring to find you at the gate...
+
+----------
+Met KOKORO
+----------
+我都說過了！\n未經許可，外人不能隨便進入校園！=I've told you before! Unauthorized outsiders are not allowed to enter the school grounds without permission!
+必須先填寫申請表……=You must fill out an application first...
+呵欠～～～=Yawn～～～
+只知道遵守死規則，\n不知道靈活變通……=All you know is blindly following rigid rules, \nwith no flexibility at all...
+用這種思想來教書，\n貴校的學生還真是可憐。=Teaching with this kind of mindset, \nyour students must be pitiful.
+連入校目的和逗留時間也不問，\n用統一申請當藉口，合理性在哪？嗯？=Not even inquiring about our purpose or duration, just hiding behind bureaucratic formalities? How utterly absurd.
+唔……當然是為了保證學生的安全！=Uh... Of course, it's to ensure student safety!
+填寫申請表與學生的安全有什麼關係？=How, precisely, does scribbling on a form ensure student safety?
+難道說你們學校，\n把所有外來者都一杆子打成危險分子？=Or does this institution simply presume every outsider to be a threat?
+不是這個意思……=That's not what I meant...
+那是什麼意思？\n我沒空聽你狡辯，請你正面回答。=Elaborate. I'll not suffer your equivocations, respond plainly.
+哎呀，{{A}}～=Ara, {{A}}～
+果然是您啊……\n這到底是怎麼回事？=So it is you... What exactly is going on here?
+{{A}}……這位是……={{A}}... This is...?
+YO！你就是{{A}}？\n不錯哦！比影片裡還要性感！=YO! You must be {{A}}? Nice! \nEven sexier than in the video!
+難道您是……{{A}}？\n那位有名的製作人？=Wait... Are you... {{A}}? \nThe famous producer?
+YEAH！你認識我啊？\n真開心～這麼說我還挺有名的吼？=YEAH! You know me? So happy～ \nGuess I'm pretty well-known, huh?
+那當然！\n在整個業界沒人不知道您的名字……！=Of course! Your name is legendary in the entire industry...!
+我是{{A}}。{{B}}！=I am {{A}}. {{B}}!
+矮油～！不要這麼拘謹YO！\n老實說哦，我今天來就是專程為了你啦！=Aww～! No need to be so formal, YO! Honestly, I came here just for you today!
+穿、穿得好個性啊……\n是叫{{A}}嗎？=S-stands out so much... This is {{A}}?
+沒錯，這位監製過很多舞臺和電影作品……=Exactly, he's produced countless stage and film works...
+竟然不認識{{A}}，\n這些門外漢就是有眼無珠啊。=To be ignorant of {{A}}, \nhow utterly plebeian.
+他之前是電視臺超～厲害的導演哦。\n現在出來自己幹了……=He was a brilliant～legendary director. \nNow he's independent...
+舞臺、電影、演唱會……\n他可是什麼都很拿手的頂級製作人呢。=Stage, cinema, concerts... \na true virtuoso of production. 
+{{B}}！不要客氣啦，\n直接叫我「{{A}}」就對了！={{B}}! And don't be shy, \njust call me "{{A}}"!
+那為什麼……\n{{B}}會跟{{A}}來這裡？=But why... is {{B}} here with {{A}}?
+{{C}}，準備開心吧，{{A}}！\n你要當{{B}}電視劇的主演了！={{C}}, get ready to celebrate, {{A}}! {{B}} has graciously chosen you as the lead!
+主演！？=Lead!?
+YES！其實我現在吼，\n在策劃一個超酷超炫的網劇哦！=YES! Actually, right now, I'm planning a super cool and flashy web series!
+正好在找主演，{{A}}就講說，\n有個超讚超合適的人選YO！=I was looking for a lead, and {{A}} here said there's an amazing perfect candidate, YO!
+哼哼，我可是幫你好好舉薦了一把哦。\n快感謝我吧，{{A}}！=Hmph, I did go out of my way to endorse you, you know. You'd best be grateful, {{A}}!
+{{A}}，你是被「有毒父母」養大的吧？={{A}}, you were raised by "toxic parents", right?
+阿……？=Huh...?
+這次要拍的電視劇呀，\n就是以超熱門的「有毒父母」為主題的YO！=This drama we're making, is all about the super hot topic of "toxic parents", YO!
+家庭的陰暗面，\n簡直是最刺激的娛樂有沒有！=The dark side of family, the most thrilling entertainment!
+這傢伙……在瞎說些什麼啊……=This guy... What the hell is he saying...
+如果主演又剛好是有毒父母的倖存者吼，\n到時候在網路上一定超嗨的！=And if the lead actor actually survived toxic parents, it'll be crazy viral online!
+就是這麼巧哦，{{A}}剛好把你、\n這個被有毒父母養大的帥～哥介紹給我！=What a coincidence, {{A}} just introduce me to you, a handsome guy raised by toxic parents～!
+我？被有毒父母養大的……？=Me? Raised by toxic parents...?
+總之就是要先試拍一下啦，\n你要把這周全～部都空出來給我哦？=Anyway, we'll do a test shoot first, so clear your entire week for me, okay～?
+拍攝地點已經訂好啦！不會很突然吧？\n明天一早我們直接在外景巴士上見囉！=The filming location's already booked! Not too sudden, right? We'll meet tomorrow morning on the location bus!
+等、等等！\n也就是說，這一整周{{A}}都不在嗎？=W-wait! So {{A}} won't be here all week?
+那可不好辦=That's a problem
+馬上就是學園祭的演出了=<size\=23>The school festival performance is soon</size>
+對啊！\n沒有{{A}}，我們怎麼排練啊！=Exactly! Without {{A}}, how can we rehearse!?
+……舞臺？{{B}}啊，\n{{A}}現在不是沒有接工作的嘛？=...Stage? {{B}}, \nisn't {{A}} free right now?
+他們說的不是工作，是學園祭啦。\n{{A}}沒必要陪他們弄這個。=They're talking about the school festival, not work. {{A}} has far better uses with his time.
+YEAH！學園祭！\n超讚的有沒有！青春！告白！篝火晚會！=YEAH! School festival! So awesome! Youth! Confessions! Campfire!
+反正定下這邊的工作之後，\n你也沒辦法出演{{A}}的學園祭了。=Once this job is confirmed, you won't have time for {{A}}'s school festival.
+我跟你講哦，日程真的超緊超不妙的！\n計畫下個月就得哢嚓——開機囉！=Let me tell you, the schedule is crazy tight! We're scheduled to start filming next month-!
+就是說這半年你都得乖乖來全職工作YO！\n其他有的沒的拜託一律取消了啦，YO！=Meaning you'll be working full-time for the next half a year, YO! Please cancel all other nonsense, YO!
+半年……恐怕不行！\n接下來還有全戲呢！而且戲劇社那邊也……=Half a year... That's impossible! We have the All-Drama! And the drama club...
+{{A}}能更有名的話，對社團也是雙贏吧。\n沒關係啦。=If {{A}} gains proper recognition, it will be a win-win for the club. Don't worry.
+而且，你說的全戲是高中的戲劇大賽吧？\n那種活動無所謂啦。=Besides, the All-Drama is just some high school drama competition, right? Who cares about that.
+當然有所謂！\n大家都為了比賽在拼命排練……=Of course I care! Everyone's been working so hard for it...
+嗯，一群想靠著沾{{A}}的光、\n來贏下比賽的孩子們，真可憐……=Hmph, pitiful children, clinging to {{A}}'s brilliance like insects to light, how pathetic...
+但他們要是敢多說什麼，\n我也會讓他們閉嘴的。放心啦。=But if they dare complain, I'll silence them myself. Don't worry.
+你們也是哦。=You too.
+他的前途不可限量，明白嗎？\n1秒鐘都不能浪費在學園祭這種玩意上呢。=His future is limitless, understand? Can't squander a single second on something as trivial as a school festival.
+「這種玩意」……！="Something as trivial"...!
+你們和{{A}}，\n根本就是兩個世界的人。=You and {{A}}... \nare from completely different worlds.
+你們也算跟他共度了一段青春時光，\n哪怕時間很短，也該知足了吧。=Be grateful you got to spend even a little time with him, that's more than most will ever have.
+你這人怎麼說話的！\n拿我們當傻子嗎，混蛋！？=How can you talk like that! You take us for fools, bastard!?
+等等，{{A}}，住手！=Wait, {{A}}, stop!
+你別攔我，{{A}}！=Don't stop me, {{A}}!
+住手，{{A}}。=Stop, {{A}}.
+……對不起，{{A}}。\n我拒絕這份工作。=...I'm sorry, {{A}}. I refuse this job.
+OH……\n我能問問理由嗎？=OH... Mind telling me why?
+這個排程我無法接受。\n因為我還要參加學園祭和全戲。=This schedule doesn't work for me. I still have the school festival and the All-Drama.
+等等……！你在說什麼呀，{{A}}！\n高中戲劇和網劇，哪邊更重要你不知道嗎！=Wait...! What are you saying, {{A}}!? Which is more important, some high school play or a web series!
+高中戲劇更重要。\n起碼對現在的我來說是這樣。=The high school play is more important. \nAt least, to me right now.
+當然，我很感激這份工作邀請。\n不過……=Of course, I'm grateful for the offer. But...
+對我來說，\n跟大家共同創造的高中舞臺也很重要。=To me, the stage I create with my friends in high school matters too.
+用你的價值觀貶低它，\n是對我和我朋友的侮辱。=Belittling it with your own values is an insult to me and my friends.
+還有，{{A}}、{{B}}，\n我要更正一下。=Also, {{A}}, {{B}}, \nI need to correct something.
+我的父母才不是有毒父母。\n他們對我這個獨生子非常好，是很優秀的。=My parents are not toxic. They were wonderful to me, their only child.
+真的假的～！？=For real～!?
+NONONO！\n這跟你講的完全不一樣嘛，{{A}}！=NONONO! This is totally different from what you told me, {{A}}!
+不……這是……！=No... That's...!
+{{A}}，你醒醒。\n也許你很難承認他們是有毒父母……={{A}}, wake up. Perhaps it's hard for you to admit they were toxic...
+但這件事也可以成為你的武器。\n你要把成長的不幸變成機遇！=But you can use that. \nTurn your pain into opportunity!
+我會幫你改變的……\n好嗎，{{A}}？=I'll help you through it... Alright, {{A}}?
+……我不知道你對我父母了解多少，\n但請不要再用自以為是的猜測來侮辱他們。=...I don't know what you think you know about my parents, but stop insulting them with your assumptions.
+啊～懂啦懂啦。整個就是大誤會吧？\n是{{A}}誤會啦對吧？=Ah～ Got it, got it. Just a big misunderstanding, right? {{A}} got it wrong?
+不、不是這樣的，{{A}}！=N-no, {{A}}, that's not it!
+{{A}}呀～沒有證據就行動，\n可是你的壞習慣YO～？={{A}}～ Acting without evidence is a bad habit of yours, YO～?
+那，這件事就當我沒講過啦！=Well, let's just pretend this never happened!
+等等……{{A}}！=Wait... {{A}}!
+等等，那邊是校舍！\n你去那邊幹什麼啊！=Wait, that's the school building! \nWhere are you going!
+不是在準備學園祭嘛？\n我超～想感受一下青春的芬芳呀！=Isn't it the school festival prep? I super want to soak in that youthful energy～!
+啊，我會填申請表的啦！\n去哪裡填？教師辦公室？=Ah, I'll fill out the form! Where do I go? \nThe faculty office?
+
+難以置信……\n你知道自己剛才做了什麼嗎，{{A}}？=Unbelievable... Do you realize what you just did, {{A}}?
+你把你自己的未來就這麼斷送了啊！=You just threw away your own future!
+我很感謝您為我介紹了一份好工作。=I'm grateful you introduced me to a great opportunity.
+不過，我的未來由我自己決定。\n你無權對我指手畫腳！=But my future is mine to decide. You don't get to dictate my choices!
+……什麼！=...What!
+請尊重他的意志=Please respect his will
+關你們屁事！！=None of your business!!
+{{A}}你……\n你以為，是因為誰你才有現在的人氣？={{A}}, you... Do you even realize who's responsible for your current popularity?
+是誰，把你從小舞臺一步步帶到這裡的？=Who dragged you up from those pathetic little stages?
+的確是托您的福，我才有如今的人氣。\n但我當初並沒有拜託過您……=I owe my current popularity to you. But I never asked for your help in the first place...
+我也同樣可以毀掉你……\n你明白吧？=I can just as easily ruin you... \nYou understand that, right?
+不光是你，我也可以讓你父母……\n懂嗎？=And not just you, your parents too... \nGet it?
+{{B}}……{{A}}，明白就好。\n我倒要看看你的覺悟如何。={{B}}... {{A}}, you do understand. Let's see how long that resolve of yours lasts.
+等你父母被毀掉的時候……\n看你還敢不敢這樣忤逆我。=Once your parents are ruined... \nwe'll see if you still dare to defy me.
+{{A}}……我不想說難聽的話。\n你快趁現在向{{B}}道歉。={{A}}... I don't want to say anything harsh. You should apologize to {{B}} right now.
+再這樣下去你……不，你父母也是，\n還有跟你相關的人都會遭殃的。=If this keeps up, you... no, your parents and everyone connected to you will suffer.
+多此一舉，{{A}}。\n口頭道歉是沒有意義的。=Unnecessary, {{A}}. \nAn empty apology means nothing.
+如果真的理解自己的立場，\n{{A}}會知道該怎麼做的……就像你一樣。=If he truly understands his position, \n{{A}} will know what to do.... Just like you.
+好了，走吧。\n必須抓緊準備{{A}}父母的資料了呢。=Now, let's go. We have to hurry and gather information on {{A}}'s parents.
+沒事吧？{{A}}？=Are you okay, {{A}}?
+……要說沒事才是假的啊，哎。=..Honestly? No.
+{{A}}沒做錯什麼=<size\=24>{{A}} didn't do anything wrong</size>
+都是{{A}}的錯=<size\=29>It's all {{A}}'s fault</size>
+怎麼攻擊我都沒關係，\n但是……我父母……=They can attack me all they want, \nbut... my parents...
+他們都是在社會上有頭有臉的人，\n如果因為我出了什麼事……=They're respected people in society, if something happens to them because of me...
+我真蠢啊……\n我明明知道與她為敵有多可怕。=I'm so stupid... I knew how dangerous it was to oppose her.
+可……我就是沒忍住。=But... I just couldn't hold back.
+我受不了她看不起高中戲劇……\n受不了她取笑我、戲劇部，還有大家……=I hate how she scoffs at high school theater... mocks me, the drama club, everyone...
+我想和你們、這些熱愛表演的人一起……\n一起站在學園祭的舞臺上……！=I wanna stand on that festival stage with you guys... people who burn for acting just like I do...!
+唔……剛剛的是……=Hmm... That was...
+……總之，我先去跟爸爸打個電話。\n得想想辦法才行……=...Anyway, I need to call my dad first. \nI have to figure something out...
+另外……我可能沒辦法在學園祭演出了。\n抱歉啊，明明都一路走過來了。=Also... I might have to drop out of the festival performance. Sorry, even after coming this far.
+{{B}}！為什麼啊，{{A}}！={{B}}! Why, {{A}}!
+那個人說要毀掉誰，就真的會說到做到。\n無論對方是藝人，還是普通人……=When that woman says she'll ruin someone, she means it. Whether it's a celebrity or an ordinary person...
+所以如果我繼續參加，\n你們、還有{{A}}，都會有麻煩的。=So if I keep participating, you, and {{A}}, will be in danger.
+不用顧慮我們！=Don't worry about us!
+不會造成麻煩的！=No trouble at all!
+對啊！\n而且我們可以自己保護自己！=Yeah! And we can protect ourselves!
+我們想要跟{{A}}一起演出！=We want to perform with you, {{A}}!
+你們能這麼說，我很開心。謝啦。\n不過……=I'm glad you feel that way. Thanks. But...
+她不是普通的對手……\n就像{{A}}也不敢跟她作對一樣……=She's not an ordinary enemy... Even {{A}} wouldn't dare oppose her...
+話說回來……\n剛才跟{{A}}一起的那位男性……=Speaking of which... That man who was with {{A}} earlier...
+他也是{{A}}的朋友嗎？\n好像你還知道他的名字……=Is he also a friend of yours, Ikenami-kun? \nYou seemed to know his name...
+嗯，那個人是……以前的熟人。=Yes, that guy is... an old acquaintance.
+總之我先給我爸打個電話。\n你們先回體育館吧。=Anyway, I'll call my dad first. \nYou all head back to the gym.
+{{A}}要是真的放棄了，\n那可怎麼辦啊……=If {{A}} really gives up, then what are we going to do?
+還有他父母的事情。\n{{A}}是在用造謠來威脅他！=And about his parents. \n{{A}} is threatening him with slander!
+唔……吾感覺，\n{{A}}剛剛復甦的慾望好像又被奪走了。=Hmm... I sense that {{A}}'s newly awakened desires are being stolen from him again.
+現在馬上讓{{A}}=<size\=25>Have to {{A}}</size>
+說服{{A}}不要放棄=<size\=25>Convince {{A}} not to give up</size>
+
+Choice 1
+對！這樣一來，\n也不用擔心{{A}}的慾望被繼續奪走了！=Right! That way, {{A}}'s desires won't keep getting stolen!
+而且還可以保護{{A}}的家人！=And this can protect {{A}}'s family too!
+Choice 2
+與其這樣，\n不如現在就去{{B}}，讓{{A}}吧！=Rather than waiting, let's head to the {{B}} now and {{A}}!
+這樣一來，\n我們就可以保護{{A}}和他的家人了！=That way, we can protect {{A}} and his family!
+說得對……\n就算有陰影擋住入口，我們也必須前進了。=You're right... Even if the Shadows are blocking the entrance, we have to push forward.
+走吧，現在就去{{A}}……=Let's go to {{A}} now...
+
+{{C}}？{{C}}？？{{B}}！？\n等等，誰啊！？是誰點了{{A}}！={{C}}? {{C}}?? {{B}}!? Wait, who!? \nWho started the {{A}}!
+喂，吾強調過多少次了！\n禁止從{{A}}站以外的地方潛入啊！=Hey, how many times do I have to say it! No infiltrating from anywhere but {{A}} Station!
+r:"^不是我啊！是(.*)嗎！？$"="Wasn't me! Was it $1?"
+不是不是=No no
+WIND？=Wind?
+那，難道說是WIND？=Then, was it Wind?
+才不是呢！=No way!
+{{B}}？\n那到底是誰點了{{A}}啊？={{B}}? Then who started the {{A}}?
+……等等，大家看那邊！=...Wait, everyone, look over there!
+{{A}}？怎麼沒有訊號……？={{A}}? Why's there no signal...?
+{{A}}……這裡是哪兒……={{A}}... Where is this...
+{{A}}，你們是誰啊！？={{A}}, who are you!?
+{{C}}、這個聲音是……\n{{B}}和{{A}}？={{C}}, that voice... {{B}} and {{A}}?
+r:"^那，難道那邊的是{{A}}……？\n然後你是(.*)？$"="Then, that's {{A}}...? And you're $1?"
+你們這是穿的什麼啊！？\n也不是演出服吧，到底是……=What are you wearing!? These aren't stage costumes, right? What's going on...
+{{A}}，搞不懂，這是怎麼了。\n發生了什麼？還有那邊那個玩偶是誰啊？={{A}}, I don't get it. What's going on? \nAnd who's that mascot?
+誰是玩偶啊！你哪怕說{{A}}都比……\n算了，煩死了！=Who are you calling a mascot! Even {{A}} would be... Whatever, I'm so annoyed!
+不過為何連{{A}}都會來{{B}}……=But why is {{A}} in the {{B}} too...
+那個，該怎麼跟你解釋呢？\n雖然這是機密，但其實我們是…=Um, how to explain this...? \nIt's a secret, but we're actually...
+{{B}}……！？\n{{A}}，快來我們身後！={{B}}...!? {{A}}, get behind us, now!
+這個大傢伙是什麼東西！？\n到底發生了什麼啊？=What is that thing!? What's happening?!
+{{B}}……\n吾等不能邊帶著{{A}}邊戰鬥……！={{B}}... We can't fight and protect {{A}} at the same time...!
+{{A}}！？\n這車又是從哪兒冒出來的啊！={{A}}!? Where'd this car even come from!
+沒時間解釋了，快上車！！=No time, just get in!!
+各位，戰略性撤退！\n從這裡先逃出去吧！=Everyone, tactical retreat! Let's escape for now!
+車竟然……說話了！？=The car just... talked!?
+{{A}}，你現在一定有很多疑問，\n但還請無條件配合我們。={{A}}, I know this makes no sense to you, but just do as we say for now.
+請相信我們=Please trust us
+一定會保護好你的=I will protect you
+r:"^(.*)……\n好，我知道了。$"="$1... Okay, I understand."
+總之我會跟著你們的。\n過後可要好好解釋清楚啊！=I'll follow you. But you owe me an explanation later!
+
+可惡，怎麼甩不掉它……\n再跑快點兒，CATTLE！=Damn it, it's still on us...! Go faster, Cattle!
+不用你說吾也知道！\n但人太多了速度上不來……再這樣下去……=I know! I can't speed up with this many people... At this rate...
+啊，你們看！\n那邊不就是{{A}}入口嗎？=Ah, look! Isn't that the entrance to {{A}}?
+{{A}}的……{{B}}？={{A}}'s... {{B}}?
+WONDER，先進{{A}}裡吧！\n那裡一定有能躲的地方！=Wonder, let's enter the {{A}}! \nThere must be a place to hide!
+先去{{A}}躲避一下！=Hide in the {{A}}!
+吾知道了！\n大家坐好，吾要直接衝進去了！=I got it! Everyone, sit tight, I'm going in!
+
+呼……\n看來{{B}}不會追到{{A}}裡面呢。=Phew... Looks like {{B}} won't follow us into the {{A}}.
+不過它的氣息還在附近。\n現在最好不要離開{{A}}區域。=But its presence is still nearby. It would be best to not leave the {{A}} yet.
+那個……現在算暫時安全了嗎？\n我想請你們說明一下情況……=So... are we safe for now? \nI would like you to explain...
+啊，對啊。\n其實是這樣的……=Ah, right. \nActually...
+{{A}}……{{B}}，還有陰影……\n所以，你們現在才穿著{{C}}啊……={{A}}... {{B}}, and Shadow... So that's why you're all in {{C}}...
+我覺得你肯定不信吧……=I know it's hard to believe...
+不，我相信你們。\n畢竟我能看出來，這可不是特攝什麼的。=No, I believe you. Honestly, it's obvious this isn't some staged production.
+所以，你們穿梭在現實與{{A}}之間，\n跟剛才那種怪物戰鬥……=So, you travel between the real world and the {{A}}, fighting those monsters...
+沒錯，用這個{{A}}。=Yes, using this {{A}}.
+嗯？總覺得見過這個圖示……=Huh? I think I've seen this icon...
+對了！剛才我給爸爸打電話，雖然沒打通，\n但好像看到一個陌生的圖示……=Right! Just now, when I couldn't call my dad earlier, I saw this weird icon I didn't recognize...
+果然啊……！\n這跟你們的圖示是一樣的吧？=Knew it...! It's the same icon as yours?
+{{A}}的手機裡也有導航？={{A}} got the Nav too?
+莫非突然來到{{A}}是因為……=<size\=26>We're suddenly in the {{A}} because...</size>
+{{C}}還真是！\n{{A}}的手機裡也有{{B}}！={{C}} For real! {{A}}'s phone also have the {{B}}!
+那剛才大家突然進入{{A}}……=So maybe the reason we suddenly entered the {{A}} was...
+啊，是不是{{A}}不小心點了圖示啊？=Ah, did {{A}} accidentally tapped on the icon?
+{{A}}、有嗎……？\n我不記得我點過。={{A}}, did I...? I don't remember.
+那麼，{{A}}，接下來要怎麼辦呢？\n如果出去，剛才那傢伙就會追過來吧？=Then, um, what now? If we go back out, that thing will probably chase us?
+沒錯，至少在{{B}}的氣息消失之前，\n我們都不能離開{{A}}……=Right. Until the {{B}}'s presence vanishes, \nwe can't leave the {{A}}...
+好。那麼……\n看來只能進那棟很顯眼的大樓了吧？=Right. Then... I'm guessing we should enter that flashy building, right?
+唔……\n雖然帶著{{A}}探索{{B}}會有風險……=Hmm... Alright bringing {{A}} to {{B}} exploration is risky...
+但比起去外面，\n{{A}}裡才有藏身之處呢。=It's safer than being outside, there are hiding spots in the {{A}}.
+那些人不人鬼不鬼的傢伙是誰啊……\n而且好像提到了「{{A}}」？=What are those weird looking guys... They kept mentioning "{{A}}"?
+啊，抱歉。本來想晚點再跟你解釋的。\n你把這裡當作{{A}}的內心世界吧。=Ah, sorry. I was going to explain this to you later. You can think of this as {{A}}'s inner world.
+{{A}}的……內心世界？={{A}}'s... inner world?
+沒錯，是以{{A}}扭曲的慾望為核心，\n形成的認知{{C}}……也就是「{{B}}」。=That's right, this is a cognitive place formed with {{A}}'s distorted desires at its core... a "{{B}}".
+只要奪走隱藏在這裡的{{B}}，\n我們就能讓{{A}}。=By stealing the {{B}} hidden here, we can {{A}}.
+阿？{{A}}……？=Huh? {{A}}...?
+那個{{A}}，會變成正常人？\n這不可能吧……=That {{A}}, will become a normal person? That's impossible...
+你這麼想也不奇怪啦，但實際上，\n我們已經讓前棒球選手{{A}}……=You might think so, but actually, we already did that to the former baseball player {{A}}...
+還有{{A}}、{{B}}都{{C}}了哦。=We also made {{A}} and {{B}} have a {{C}}.
+啊～我記得，\n美食藝人{{A}}在新聞發佈會上大哭……=Ah～ I remember, the gourmet celebrity {{A}} broke down at that press conference...
+好像從那時起，就出現了「怪盜」這個詞。\n就是因為你們讓他們{{A}}了吧？=That's when the "Phantom Thieves" rumors started. Was that because you guys changed their hearts?
+我們也會讓{{A}}的=<size\=26>We will {{A}}</size>
+難以置信……\n真是完全想像不到。=I can't believe it... \nThere's just no way I can believe that.
+嗯，但信不信由你，這是事實。=Hmm, there's no helping it. But whether you believe it or not, that's the truth.
+不過，接下來該怎麼辦呢？\n那些傢伙肯定不會讓我們進去的吧？=But, what's next? Those guys are blocking our way again.
+而且，上次找到的另一個區域是死路。=However, the other area we explored last time was a dead end.
+要是在那裡被襲擊，就真的無處可逃了。\n吾不贊成去那邊。=There is no escape if we get ambushed. I don't agree with going there.
+是啊，該怎麼辦呢……=Right, then what should we do...
+如果想見{{A}}的話，\n那就變成帥哥後再來吧！=If you want an audience with {{A}}, come back when you're handsome!
+現在有帥哥了吧……=<size\=26>There's someone handsome...</size>
+{{A}}在的話是不是……={{A}} is here...
+啊，你是說如果和{{A}}在一起，\n那些陰影就會讓我們通過？=Ah, you are saying if we go with {{A}}, those Shadows will let us pass?
+他確實很帥……\n但這真的行得通嗎？=He's certainly handsome... \nBut will this really work?
+唔……從{{B}}現實中的狀態來看，\n她很可能將{{A}}認知為「特殊的存在」……=Hmm... Given {{B}}'s behaviors in reality, it's highly likely she might perceive {{A}} as a "special person"...
+不能這麼做。\n不能讓{{A}}去當誘餌。=We can't do this. \nWe can't let {{A}} be the bait.
+我不介意。=I don't mind.
+雖然我不清楚原委，\n但如果能幫上忙，就讓我去吧。=I may not know the details, \nbut if I can help, let me do it.
+我和那些奇怪的人談談就行嗎？=All I have to do is talk to those strange people, right?
+跟我們一起吧=Come with us
+我們會保護你的=We'll protect you
+跟著你們就行，對吧？\n明白，那更沒問題了。=Just follow you guys, right? \nGot it, no problem then.
+不過，真進到塔裡的話可能會更危險哦，\n說不定會遇到更強悍的陰影。=But if we really go inside the tower, it might get even more dangerous. We could run into stronger Shadows.
+就算這樣也要試試=<size\=30>Even so, we have to try</size>
+不想錯失良機=<size\=29>Can't miss the opportunity</size>
+還是放棄吧……=Maybe give up...
+
+Choice 1
+好，隊長都這麼說了，我也贊成！=Alright, if the leader says so, I agree too!
+我來負責保護{{A}}！就交給我吧！=I'll take responsibility for protecting {{A}}! \nLeave it to me!
+Choice 2
+是啊，不管怎樣，\n不進去怎麼讓{{A}}呢？=Yeah, no matter what, how else can we {{A}} if we don't go in?
+Choice 3
+你在怕什麼呀。\n我不都說了沒關係嘛？=What are you afraid of? Didn't I say it's fine?
+我相信無論發生什麼，\n你們都會保護我的。=I trust that no matter what happens, you'll all protect me.
+喂，我來負責保護{{A}}！就交給我吧！=Hey, I'll take responsibility for protecting {{A}}! Leave it to me!
+好吧。吾也聽從隊長的決定。=Alright. I'll follow the leader's decision too.
+那走吧！\n如果不讓我們進去，就打倒他們！=Then let's go! If they don't let us in, \nwe'll just take them down!
+……哦對了，{{A}}。\n在這裡要叫我SOY啊。=...Oh, right, {{A}}. Here, you have to call me Soy.
+我是CLOSER！=I am Closer!
+請叫我WIND。=Please call me Wind.
+吾是CATTLE。\n這傢伙是WONDER。=I'm Cattle.\nThis guy is Wonder.
+我是WONDER，{{A}}=<size\=25>I'm Wonder. {{A}}</size>
+很像怪盜吧？=Like Phantom Thieves?
+原來如此，在{{A}}要用代號相稱啊。=I see, you use code names in the {{A}}.
+Bene。那我和你們一起。\n拜託了，WONDER。=Bene, then I'll join you. Please, Wonder.
+
+----------
+Palace 5 Exploration Part 2
+----------
+這裡只能通往死路。\n還是前往正面的入口吧。=This path only leads to a dead end. Let's head to the main entrance instead.
+只能一試了……=Have no choice but to try...
+哦呀，那邊的小哥……！=Oh my, that guy over there...!
+好棒的帥哥……！\n請進去吧！=What a handsome man...! \nPlease, go right in!
+可以進去嗎？\n不會是想趁機偷襲我們吧。=Are we really allowed in? You're not planning to ambush us, are you?
+哪裡敢！\n這裡的規定就是要對帥哥畢恭畢敬哦！=How could we dare! The rule here is to treat handsome men with the utmost respect!
+那麼，帥哥的各位同伴們也請進吧。=In that case, the handsome one's companions may enter as well.
+好厲害，真的給過了啊。=Amazing, they actually let us through.
+果然是看「臉」放人啊……=So they really judge people based on "looks"...
+這是……{{A}}的認知對吧？\n唔，總覺得好噁心……=This must be... {{A}}'s cognition, right? Ugh, it feels kinda gross...
+不過既然達到目的了那就無所謂啦。\n總之我們進去吧。=But since it worked, I guess it doesn't matter. Anyway, let's go in.
+
+{{A}}！\n要去上層就好好排隊啊！={{A}}! If you want to go to the top, just queue up!
+{{A}}……抱歉。這是什麼情況？={{A}}... sorry.\nWhat is this situation?
+大家都是好不容易才取得了『上去的資格』，\n不要在最後關頭做出格的事呀。=Everyone has finally obtained the "qualifications to go up", don't do anything out of line at the last minute.
+上去的資格？=Qualifications to go up?
+哦？ 你們不知道嗎？ 想到上層去，\n只有先去『覲見室』取得資格才行哦。=Oh? Didn't you know? To reach the upper level, you must first get the qualifications in the "Audience Chamber".
+覲見室……又是什麼？？=Audience Chamber... What's that??
+哎呀，原來是一群菜鳥啊。\n那是一個很重要的房間啦！=Oh, it turns out they are a bunch of rookies. That's a very important room!
+如果想到上面去，\n就先去那邊取得資格再說吧。=If you want to go to the top, you should first get the qualifications.
+看來不會簡單的讓我們通過呢。\n只能去那個『覲見室』一探究竟了。=It looks like they won't let us pass so easily. Let's investigate this "Audience Chamber".
+WONDER，在附近找找\n前往深處的路吧。=Wonder, look around for a way to go deeper.
+
+哇……這是哪兒？好震撼啊。\n而且有好多人呢。=Wow... What is this place? It's amazing. \nAnd there are so many people here.
+那些不是真正的人，是認知存在。\n可以理解為{{A}}印象中的人。=Those aren't real people, they're cognitive beings. You can think of them as how {{A}} perceives them.
+明明之前探索過的區域，\n都是像螞蟻一樣的陰影……=But in the areas we explored before, \nthe Shadows were all like ants...
+為什麼這裡有這麼多人型認知存在啊？=Why are there so many humanoid cognitive beings here?
+走近看看=Take a closer look
+問問他們自己吧=Ask them
+
+Choice 1
+嗯，仔細觀察一下他們的行動吧，\n看看到底是基於什麼樣的認知。=Hmm, let's carefully observe their behavior first. We should figure out what kind of cognition they're based on.
+Choice 2
+唔，想弄懂他們是基於什麼樣的認知，\n確認問本人效率最高……=Well, if we want to understand their cognition, asking them directly would be the most efficient...
+
+但這樣有可能會被{{A}}察覺。\n總之先靠近點看看情況吧。=But that might alert {{A}}. For now, let's just move closer and assess the situation.
+有氣無力的認知存在=Weak Cognitive Being
+我對不起這個世界，活著我很抱歉……\n我……是個沒有任何價值的人……=I've wronged this world, I'm sorry for being alive... I... am a worthless person...
+{{A}}？為什麼要說這種話！？=Huh?! Why would they say such things!?
+喂，CLOSER！=Hey, Closer!
+啊！=Ah!
+抱歉，但這個人……\n看起來也太慘了……=I'm sorry, but this person... \nthey look absolutely miserable...
+你不需要同情我……\n我是個色狼，是個無恥的混蛋。=You don't need to pity me... I'm a pervert, a shameless scumbag.
+色狼！？=A pervert!?
+是的。多虧{{A}}揭露了我的罪，\n我才得以受到社會的制裁……=Yes. Thanks to {{A}} exposing my sins, I was rightfully punished by society...
+我已經無法再回到社會……\n我只能一直在這裡懺悔下去……=I can never return to society now... All I can do is stay here and repent forever...
+色狼啊……\n那確實不可原諒……=A pervert, huh... Yeah, that's unforgivable...
+等一下。\n我好像見過這個人。=Wait. I think I've seen this person before.
+我忘了名字，應該是家出版社的副社長。\n好像跟{{A}}是競爭對手吧……=I don't remember his name, but he was a deputy editor at some publishing company. Probably a competitor to {{A}}...
+莫非，這是……！=Could it be, this is...!
+女性認知存在=Female Cognitive Being
+我明明是偶像，卻和經紀人搞婚外情。\n我背叛了我的粉絲……=I was an idol, but I had an affair with my manager. I betrayed my fans...
+我們被{{A}}揭發了。\n一切都真相大白了。={{A}} exposed us. \nThe whole truth came to light.
+男性認知存在=Male Cognitive Being
+我就是那個對她出手的變態經紀人。=I was the disgusting manager who took advantage of her.
+我已經不能回歸職場和家庭了……=I can never go back to my job or my family now...
+我會在這裡跟她一起不斷反省的……\n十分感謝揭發我們的{{A}}。=I'll stay here and reflect with her forever... I'm so grateful to {{A}} for revealing our sins...
+看來這裡的人都是……=So the people here are all...
+是被{{A}}寫成報導、爆出醜聞的人，\n所形成的認知存在吧。=These are the cognitive beings formed from people whom {{A}} exposed in scandalous articles.
+也就是說，他們都是受害者吧……！=In other words, they're all victims...!
+剛才那位女性和經紀人，我有印象呢。=I remember that woman and her manager.
+好像就是因為出軌報導，\n那個女孩最後退出了演藝圈。=It's true that she retired from the industry after the affair was reported.
+……但在業界，一直有人說那是謠言。=...But in the industry, there were always rumors that it was just fabrication.
+謠言！？=Fabrication!?
+嗯。她跟經紀人只是正常的工作關係，\n而且自己本來就有男朋友。=Yes. She and her manager were just in a normal professional relationship, and she already had a boyfriend.
+但她男朋友……\n似乎是位{{A}}欣賞的歌手……=But her boyfriend... was apparently a singer that {{A}} admired...
+{{B}}？\n所以就出於{{A}}陷害了那個偶像！？={{B}}? So she framed that idol out of jealousy!?
+好幾個認識她的演員朋友都這麼說。\n雖然也不知道真假……=Several of her actor friends said so. \nThough we can't be sure if it's true...
+現在我覺得，\n{{A}}也許真的幹得出來這種事。=At this point, \nI wouldn't put it past {{A}}.
+太過分了吧……=That's terrible...
+換句話說，這裡的人都是被{{A}}陷害、\n被社會所抹殺的人。=In other words, the people were framed by {{A}} and socially erased.
+而且他們嘴裡都是對{{A}}的感恩戴德。\n這意味著……=And yet, they're all spouting gratitude toward {{A}}. That means...
+對{{A}}而言「制裁他們」不但理所應當，\n反而認為是「拯救」了他們。=To {{A}}, "punishing them" isn't just justified, she genuinely believes she's "saving" them.
+這認知真是扭曲到極限了。\n為了私慾毀掉他人，還認為這是正義……=This cognition is distorted to the extreme. Destroying lives for selfish gain and calling it justice...
+不可饒恕……=Unforgivable...
+她到底毀了多少人的人生……=How many lives has she ruined...
+是啊，這場面的確令人作嘔。\n但吾等必須繼續前進了。=Indeed, this is sickening to witness. \nBut we must press on.
+
+唔……！\n那是……在做什麼？=Hmm…! \nWhat is that... doing?
+剛才的那個陰影，\n是怎麼開的門呀？=How did the shadow just now open the door?
+應該和牆上的結晶有關。=It should be related to the crystal on the wall.
+但和迄今為止遇到的結晶不同，\n似乎沒有辦法移動。=But unlike the crystals encountered so far, it seems that there is no way to move.
+嗯……剛才的陰影似乎做了些奇妙的舉動\n把結晶給啟動了……=Hmm... the shadow just now seemed to have done something strange and activated the crystal...
+嗯，『{{A}}』地一下那樣……\n要模仿它的動作嗎？=Yes, they did a "{{A}}"... \nWant to imitate its actions?
+目前的線索太少了。\n先跟上去看看吧。=There are too few clues at the moment. \nLet's follow and see first.
+剛才的陰影應該就在門後！\nWONDER，準備好了嗎？=The shadow just now should be behind the door! Wonder, are you ready?
+那些紅兵蟻是在幹什麼……？\n好像在使用什麼武器……=What are those red soldier ants doing...? \nIt seems like they are using some weapon...
+你們……是入侵者嗎！？\n抓住他們！=Are you... intruders!?\nCatch them!
+剛才是怎麼回事？\n那個東西直接進到手槍裡了！？=What happened just now? \nThat thing went straight into the gun!?
+嗯……似乎是那種結晶的能量\n被灌注到WONDER的武器裡了……=Hmm... it seems that the energy of the crystals has been infused into Wonder's weapon...
+現在是不是\n也可以做到剛才的『那個』了？=Maybe you can do "that" now?
+啊，你是指剛才的陰影\n『{{A}}』的那一下吧！=Ah, you mean that “{{A}}”!
+這種能量……\n該說是螞蟻的費洛蒙一樣的東西嗎。=This energy... is it something like ant pheromones?
+總之，這樣應該就能啟動牆壁上的結晶了。=Anyway, this should be able to activate the crystals on the wall.
+成功了！\nWONDER，旁邊還有一個結晶！=Success! Wonder, there is another crystal next to it!
+啊……聽到剛才的聲音了嗎？\n可能是哪裡的門開了！=Ah...did you hear that sound just now? \nMaybe a door somewhere is open!
+這個辦法果然可行。\n我們回剛才的房間確認一下吧。=This method really works. \nLet's go back to the room and check.
+唔……看來沒有子彈了。=Hmm... looks like there's no ammo left.
+
+不錯！獲得貧民窟的全部地圖了！=Nice!\nWe got the full slum map now!
+唔啊，感覺要走的路還很長？\n我們是要去哪裡來著？=Hmm, it feels like there is still a long way to go? Where are we going?
+現在準備前往的是，\n地圖這裡的『覲見室』。=Now we are going to the "Audience Chamber" here on the map.
+到處都有陰影的氣息。\n全員，一邊警戒周圍一邊前進吧。=There are Shadows everywhere. Everyone, move forward while keeping an eye on your surroundings.
+
+好耶！WONDER，門開了哦！=Yay! Wonder, the door is open!
+WONDER，前方有強敵的氣息！\n準備好了嗎？=Wonder, there is a presence of a strong enemy ahead! Ready?
+那位是……？=That is...?
+大膽入侵者，竟敢擅闖禁地！=Bold intruders, you are trespassing!
+這傢伙看上去很強啊……！\n好，放馬過來吧！=This guy looks strong...! \nAlright, bring it!
+
+嗯，怎麼了？{{A}}。=Hm, what's wrong? {{A}}.
+沒……不會吧。\n可是……=No way... It can't be. But...
+等我一下！=Wait!
+那個，抱歉打擾一下！=Excuse me, sorry to bother you!
+美麗的女性=Beautiful Women
+果然是……媽媽！！=It really is... Mom!!
+{{B}}那是{{A}}的媽媽！？={{B}} That's {{A}}s mom!?
+是媽媽年輕的時候。那時我還小……=Yeah, from when she was younger. \nWhen I was little...
+為什麼媽媽會在這種地方……\n而且為什麼穿成這樣子……=Why is mom in a place like this...?\nAnd why is she dressed like that...?
+母親的認知存在=Cognitive Mother
+請不要管我……讓我一個人待著……=Please... just leave me alone...
+我是個不僅出軌、\n還拋棄了孩子和丈夫的惡毒女人……=I'm a vile woman who cheated and abandoned my child and husband...
+阿……！？=Huh...!?
+{{A}}揭露了我的罪行，\n所以我逃回了自己的國家。={{A}} exposed my sins, \nso I fled back to my home country.
+我的丈夫和兒子才終於……\n得以擺脫我這個該死的女人。=Only then could my husband and son... finally be free of a wretch like me.
+我對{{A}}感激不盡……=I am very grateful to {{A}}...
+你、你在說什麼啊，媽媽！=Wh-what are you saying, mom!
+媽媽你沒出軌！\n而且你也沒有拋棄我、沒離開爸爸啊！=You never cheated! And you didn't abandon me or dad either!
+不，我就是個不僅出軌、\n還拋棄了丈夫和兒子的惡毒女人……=No, I'm a vile woman who cheated and abandoned my child and husband...
+是{{A}}她……\n讓我的家人得到了解脫……=It was {{A}} who... \nfreed them from me...
+難道……\n寫當初那篇報導的人就是……！=Don't tell me... The one who wrote that article back then was...!
+沒事吧，{{A}}？=Are you okay, {{A}}?
+
+Choice 1
+原來……！\n原來是這麼一回事！=I see...! So that's what happened!
+Choice 2
+啊、嗯……我沒事。\n原來是這樣，原來是這麼回事啊……=Ah... yeah, I'm fine. It all makes sense now...
+你明白什麼了，{{A}}？=What did you figure out, {{A}}?
+……當初，媽媽是因為一篇醜聞，\n才無法繼續留在日本的。=...Back then, my mom couldn't stay in Japan anymore because of a scandal.
+我的父母都是演員，\n他們兩個現在也都還在工作。=Both of my parents are actors, \nthey're still active today.
+父親主攻舞臺劇，而母親只演義大利電影。\n所以大家應該不認識……=My dad is mainly on stage and my mom has only appeared in Italian films, so you probably don't know them...
+那也就是說，{{A}}是演員世家？\n哇……星二代！=Wait, so {{A}} comes from a family of actors? Wow... a celebrity child!
+……沒那麼厲害啦。=...It's not that impressive.
+不過，我之所以走演員這條路，\n也是因為父母的影響吧。=But I guess the reason I became an actor was because of them.
+小時候，即使只是給我讀繪本，\n他們也會分角色來飾演。=When I was little, even when they just read me picture books, they'd act out the different roles.
+最後我也演了起來，一家人一起扮家家酒。\n差不多就是這種家庭環境……=Eventually, I started joining in too. it was like our whole family was playing pretend together...
+全家人一起表演嗎……\n好溫馨啊。=A play for the whole family... \nThat sounds so warm.
+真是好棒的父母啊！=Your parents are amazing!
+嗯，雖然記憶有些模糊……\n但那的確是段很幸福、很快樂的時光。=Yeah, though my memories are a bit fuzzy... \nIt really was a happy, joyful time.
+但是有一天……\n一篇報導毀掉了一切。=But one day... \na single article destroyed everything.
+日本的醜聞雜誌上，\n刊登了媽媽出軌的文章。=A Japanese scandal magazine published a story claiming my mom was having an affair.
+那是一篇完全毫無根據的報導，\n我爸媽都立即否認了。=It was completely baseless, both my parents denied it immediately.
+實際上，\n她也只是被拍到和電影製片人吃飯而已。=In reality, she was just photographed having dinner with a film producer.
+那不應該立刻就澄清了嗎……？=Shouldn't that have been cleared up instantly...?
+那個雜誌就像在追著她咬一樣，\n又接連爆出了更多的醜聞。=But that magazine kept hounding her, publishing more and more fabricated scandals.
+說什麼跟年輕演員們偷情、\n拋下兒子在國外過著奢侈的生活……=They claimed she was secretly seeing younger actors, that she abandoned me to live lavishly abroad...
+當然，那也全都是謠言。\n只是在國外與年輕演員正常拍攝罷了。=Of course, none of it was true. She was just working on films overseas with those actors.
+但俗話說：三人成虎。\n經過媒體的多次報導……人們逐漸相信了。=As the saying goes, no smoke without fire. After many media reports... people bought into it.
+另外，我爸爸也是個很受女性歡迎的演員，\n也許這也成了被抨擊的黑點。=Plus, my dad was a popular actor with women, so maybe that made him an easy target too.
+其他媒體也都爭相開始報導……\n最終，媽媽在日本的形象完全崩塌了。=Other media followed suit... until mom's reputation in Japan was destroyed.
+怎麼這樣……=How...
+好過分啊……=That's terrible...
+造謠造到這種地步……=To slander this far...
+很遺憾，也許這就是人性……\n有名的人越不幸，大眾就越興奮狂熱……=Sadly, maybe that's human nature... The more famous someone is, the more the public enjoys seeing them fall...
+人們如果失去正常的判斷能力，\n只會演變成集體正義的徹底失控……=When people stop thinking critically, it just becomes mob justice...
+也許……你們是對的。\n當然，那時我爸爸一直在抗議……=Maybe... you're right. Of course, my dad protested at the time too...
+最後連他自己都被諷刺成……\n「自欺欺人的傢伙」「綠帽男」……=Even he himself was ridiculed as... "delusional," and "a cuckold"...
+好過分……=That's terrible...
+結果，媽媽得了心病，回了老家義大利。=In the end, mom's heart grew unwell, and she had to return to her hometown in Italy.
+所以你們才分開住了啊……=So that's why you lived apart...
+我爸爸也考慮過，\n把他的工作重心轉移到義大利……=My dad considered moving his career to Italy too...
+但如果輕率地搬過去的話，\n他反而可能會被進一步被批評成懦夫、逃兵。=But if he did that recklessly, people would've just criticized him as a coward and a deserter.
+怎麼會這樣……！=No way...!
+雖然記不太清了，\n但我媽媽每天都哭著求我和爸爸……=I don't remember it well, but my mom kept begging me and my dad through tears...
+「我無法忍受我愛的人受到傷害，\n希望你們繼續生活在熟悉的日本……」="I cannot bear harm coming to those I love... Please, live on in Japan, your home."
+「我一個人離開就可以了。」="I'll be the one to leave."
+你媽媽是犧牲了自己，\n努力來保護家人呢……=Your mom sacrificed herself to protect her family...
+爸爸也勸過媽媽，但她心意已決……\n說這樣對年幼的我也更好……=Dad tried to talk her out of it, but she refused... saying it would be better for me.
+所以從我小時候開始，\n媽媽就一直不在家了。=So ever since I was little, \nmy mom was never home.
+{{A}}……還有{{A}}的爸爸媽媽都好可憐。\n明明什麼壞事也沒做……！={{A}}... and your parents have all suffered so much, even though you did nothing wrong...!
+{{A}}，的確。\n我小時候還真是挺孤單的。={{A}}, yes. I was pretty lonely as a kid.
+不過我們經常電話聯繫，\n每年也能見上兩次面。=But we talked on the phone a lot, and I got to see her twice a year.
+對我們家來說，\n應該就這樣也算挺安定的。=For our family, this lifestyle is probably the stable one.
+你不想跟爸媽一起住嗎？=<size\=22>Don't you want to live with your parents?</size>
+你現在也還會感到孤單吧？=Do you still feel lonely now?
+到這個年齡，已經不會啦。\n差不多也該獨自生活了吧？=At this age, not really. It's about time I started living on my own anyway.
+而且……我可不想看到我媽媽掉眼淚啊。=And... I couldn't bear to see my mom cry.
+她到現在也還會說，\n「沒法陪你一起生活，對不起」呢。=Even now, she still says, "I'm sorry I couldn't be there to raise you".
+明明自己才是被傷得最深的受害者……=Even though she was the one who suffered the most...
+不過……這是認知存在對吧？\n媽媽會出現在這裡，也就意味著……=But... this is just a cognitive being, right? If mom's appearing here, that means...
+寫那篇報導、誣陷我媽媽的人，\n就是{{A}}吧？=The one who wrote that article and framed her, was {{A}}?
+肯定是這樣=Definitely
+原來{{A}}一家也是受害者=<size\=30>{{A}}'s family is also a victim</size>
+……我也是現在才知道。=...I only just realized it now.
+那時我還太小了，\n而且爸爸也把當時的報導都扔了。=I was too young back then, and my dad threw out all the articles.
+我從來沒有細想過……\n它們到底是誰寫的。=I never really thought about... \nwho wrote it.
+唔，而且如果是十幾年前，\n{{A}}可能也還是個默默無聞的小記者。=Hmm, and if it was over a decade ago, {{A}} was probably still an unknown reporter.
+從那時起就透過這種手段一路往上爬，\n到現在成了主編……一切都說得通了。=She risen to fame through these methods, and is now the editor-in-chief... It all makes sense now.
+雖然我一直在想，\n陷害媽媽的一定是和{{A}}一樣的壞人……=Deep down, I thought the reporter who framed mom was probably the same kind of person as {{A}}...
+可誰能想到就是她本人！=But who would've thought it was her herself!
+而且，明明就是她害了媽媽，\n還這麼肉麻地挑逗她兒子！？這不正常！=And after what she did to my mom... she had the nerve to flirt with her son!? That's insane!
+可惡、可惡啊！！=Damn it, damn it all!!
+……你們說過，\n可以讓{{A}}對吧？=...You said, it's possible to {{A}}, right?
+一定要{{A}}=<size\=28>Have to {{A}}</size>
+那能不能也帶我一起。=Then let me come with you.
+我想親眼見證，那個女人{{A}}。=I want to see that woman's change of heart with my own eyes.
+雖然想帶你一起去……=<size\=30>Although I want to take you...</size>
+這有點困難……=This is a bit difficult...
+唔，{{A}}裡到處是陰影，十分危險。\n這次也是沒辦法才讓你一起行動的。=Hmm, the {{A}} is filled with dangerous Shadows. We had no choice but to bring you along this time.
+而且，如果在這裡丟了性命的話……\n現實世界中的你也會死亡。=And if you die here... you'll die in the real world too.
+當然，對吾等也一樣……=Of course, the same goes for us..
+但吾等有{{C}}和{{B}}作為保護，\n所以才能對抗{{A}}。=But we have our {{C}} and {{B}} as protection, so we can fight against the {{A}}.
+但我們要一邊保護毫無防備的你，\n一邊戰鬥，風險會非常大。=Fighting while also protecting you who are defenseless would be way too risky.
+也是啊……抱歉……=Yes... Sorry...
+我們一定會讓{{B}}的！\n放心交給我們吧，{{A}}！=We'll definitely {{B}}! Leave it to us, {{A}}!
+嗯，謝謝你們。=Hmm. Thank you.
+那這個認知存在的「媽媽」……\n只能讓她繼續在這裡嗎？=Then this cognitive "mom"... \nDo we just leave her here?
+對，認知存在跟現實中的人沒有任何關係。\n這只不過是{{A}}心中的樣子罷了。=Yes. Cognitive beings have no connection to real people. This is just how {{A}} perceives her.
+吾知道這很難受，但是請你理性看待。=I know it's hard, but please be rational.
+好，我知道了。=Okay. I understand.
+媽媽，總有一天……\n我絕對會讓{{A}}本人跟你道歉的……=Mom, someday... I'll make {{A}} apologize to you herself...
+
+附近都被荊棘給擋住了……！=The area around is blocked by thorns...!
+WONDER，找找還有沒有其他的路吧。=Wonder, let's other paths.
+這個顏色……和之前的費洛蒙不太一樣呢。=This color... is a bit different from the previous pheromones.
+我感受到一股非常不安的氣息……\n不，甚至可以說有點兇暴。=I sensed a very uneasy presence... No, even a bit violent.
+嗯……這個顏色的費洛蒙\n也許對荊棘會有效果……=Hmm... pheromones of this color might be effective against thorns...
+WONDER，不妨試試看吧！=Wonder, why not give it a try!
+好！附近的門全部開啟了！=Yeah! All the nearby doors are open!
+看來這種新的費洛蒙\n也能用來啟動結晶。=Seems like this new pheromone can also be used to activate crystals.
+大家快看那邊。\n有一處結晶平臺。=Everybody, look over there. \nThere is a crystal platform.
+真的{{A}}！　但是不是太窄了？\n而且還有那麼多荊棘……=Really! But isn't that too narrow? And there are so many thorns...
+是啊。不過只要把荊棘破壞，\n應該就能利用了。=Yes. But as long as we destroy the thorns, we should be able to use them.
+嗯。先用橙色的費洛蒙\n破壞荊棘吧。WONDER，交給你了。=Um. Let's use the orange pheromones to destroy the thorns. Wonder, it's up to you.
+唔，不行啊……看來是失敗了。=Hmm, no... It's not working.
+WONDER，門後有強大的陰影\n解除螞蟻形態再來吧！=Wonder, there's a powerful Shadow behind the door, remove ant form first!
+入侵者，入侵者！=Intruders, intruders!
+禁止通行！=No passage!
+感覺還有需要調查的地方……=Feels like there's still more to investigate...
+前方感知到大量陰影，\n看來那扇門後，就是『覲見室』了。=I sensed a lot of Shadows ahead, the "Audience Chamber" must be behind that door.
+嗯……但是那個機關\n需要變成螞蟻才能利用。=Hmm... but we need to transform into ants to use this mechanism.
+WONDER，找找看附近有沒有\n可以用來變身的肖像畫吧。=Wonder, look around to see if there's a transformation portrait.
+WONDER，保持工蟻形態\n回到剛才的地方吧。=Wonder, stay in ant form and go back to where you were.
+啊！下面的結晶\n被費洛蒙能量連接起來了！=Ah! The crystals below are connected!
+好，WONDER，前進吧！=Alright, Wonder, let's go!
+前面就是『覲見室』了……\nWONDER，準備好了嗎？=The "Audience Chamber" is ahead... \nWonder, are you ready?
+
+----------
+Encountered Shadow Shimotsuna
+----------
+這裡是……？\n和其他地方的氛圍完全不一樣啊……=This is...? The feel is completely different from other areas...
+這也太花俏了吧……\n看得我眼睛都要花了。=It's so flashy... My eyes hurt just looking at this.
+這也是{{A}}的認知嗎？\n簡直就像……少女動畫的拍攝現場一樣……=Is this {{A}}'s cognition too? It's like... a set from a magical girl anime...
+興奮的螞蟻陰影=Excited Ant Shadow
+哈……哈……\n您就是{{A}}吧？=Huh... Huh... Are you {{A}}?
+這、這些傢伙要幹什麼？=Wh-what do these guys want?
+我的確就是{{A}}……=I am indeed {{A}}...
+接待的螞蟻陰影=Reception Ant Shadow
+哦哦……這張臉果然沒錯！\n{{A}}可是{{B}}欽點的貴賓。=Oooh... That face is unmistakable! {{A}} is a VIP personally selected by {{B}}.
+您可不能待在這麼骯髒的樓層。\n請您跟我們去上面的貴賓層！！=You cannot stay in such a filthy lower floor. Please accompany us to the exclusive upper floor!
+唔……上層！？=Huh... Upper floor!?
+{{A}}的氣息就是從這座塔的上層傳來的。\n這邀請來得正好……！=I sense the {{A}}'s presence from the top of this tower. What a welcome invitation...!
+之前，入口的陰影一看到{{A}}，\n就立刻讓我們通行了……=Earlier, the Shadows at the entrance let us through as soon as they saw {{A}}...
+現在也是，陰影一認出{{A}}的臉，\n就馬上給予優待。=And now, the moment they recognize his face, they're treating him like royalty.
+也就是說……？=That means...?
+{{B}}對{{A}}真是相當執著啊。={{B}} is obsessed with {{A}}.
+但再一起前進的話，\n{{A}}可能會有危險吧！？=If we keep going, won't {{A}} be in danger!?
+但同時也是機會吧？\n讓{{A}}的機會。=But isn't this our chance to {{A}}.
+這樣的話，我還是想接受邀請。\n雖然因為我的拖累會更危險，抱歉……=In that case, I'd still like to accept. Sorry for making things more dangerous by coming along...
+拜託你了，WONDER。=Please, Wonder.
+我知道了，一起走吧！=Got it, let's go together!
+帶我們去貴賓區吧！=<size\=30>Take us to the VIP area!</size>
+……啊？只有{{A}}能上去。\n你們不可以。=...Huh? Only {{A}} is allowed. You lot cannot come.
+尤其是那兩個女的，和戴兜帽的奇怪生物。\n絕對不會放你們過去的！=Especially those two girls and that hooded creature. No entry!
+謔！？\n誰是奇怪生物啊！！=Huh!? What hooded creature!!
+只帶走{{A}}可不行！=Can't just let you take only {{A}}!
+沒錯！\n別那麼死板，也招待我們上去啊！=Right! Quit being so rigid, just invite us too!
+那就只能來硬的了！\n{{A}}不喜歡的傢伙，是沒有人權的！=Then we'll force you! Those disliked by {{A}} have no rights!
+
+真是的！這些傢伙好煩啊！\n怎麼源源不斷地冒出來啊！=Ugh! These guys are so annoying! \nWhy do they keep popping up?
+煩死了，你們快讓開！=So annoying! Get out of our way!
+看來真的很想帶{{A}}上去呢。\n不過……我是不會把他交給你們的！=They really want to take {{A}}. \nBut... I won't hand him over!
+好～了，我已經錄音了哦～<sprite\=1 tint\=1>=Got it～ I've got it all recorded～<sprite\=1 tint\=1>
+什麼……！？=What...!?
+CLOSER！？WIND！？=Closer!? Wind!?
+等等、啥情況！？=Wait, what's happening!?
+動、動不了……！\n我們這是怎麼了！？=C-can't move...! What happened to us!?
+你們變成雜誌了……=<size\=27>You've become magazines...</size>
+你們上雜誌封面了……=You're on the cover...
+
+Choice 1
+雜誌！？這這這、這是怎麼回事！？=Magazines!? Wh-what's going on!?
+Choice 2
+上封面了！？你在說什麼？\n怎麼回事啊！？=On the cover!? What are you talking about? What's going on!?
+{{A}}！\n要是被我抓住說話的把柄，你們就完囉～！={{A}}! Once I've got you on record, you're finished～!
+{{B}}，{{A}}你真是的……={{B}}, oh {{A}}...
+為了見我竟然跑來這種地方啊……\n討厭～<sprite\=1 tint\=1>真是拿你沒辦法啦。=To think you'd come all this way just to see me... Ara～<sprite\=1 tint\=1> You're hopeless.
+這個閃瞎眼的傢伙是誰啊……！=Who is this walking eyesore...!
+這個聲音，難道是……\n{{A}}？=That voice, could it be... {{A}}?
+討厭了啦，除了我還有誰呀？\n沒錯，我就是{{A}}……=Oh please, who else would it be? That's right, I'm {{A}}...
+是你的「{{A}}」哦。=Your "{{A}}".
+{{A}}！好噁心！！={{A}}! That's disgusting!!
+那個樣子，和扭曲的程度……\n看來就是{{A}}了……！=That appearance... that level of distortion... This must be {{A}}...!
+是你把我們變成這樣的？\n快點讓我們變回去！=You're the one who turned us into this? Turn us back, now!
+哎呀哎呀，\n真是一群又菜又愛叫的小狗呢。=Ara ara, what a bunch of yappy little mutts.
+越是口出狂言，對自己不利的黑料就越多，\n難道你們不明白嗎？=The more you bark, the more dirt I get on you. Don't you know how this works?
+狂言？=Bark?
+黑料？=Dirt?
+「煩死了，你們快讓開！」="So annoying! Get out of our way!"
+「我是不會把他交給你們的！」="I won't hand him over!"
+這就是你們口出狂言的證據哦，\n暴力女和跟蹤狂。=Here's the undeniable proof, violent brute and delusional stalker.
+跟蹤狂……我……？=Stalker... Me...?
+{{A}}才不是！\n你這純屬找碴啊！={{A}} No way! You're just making things up!
+真～可～惜～有錄音為證呢。\n不管你怎麼解釋，也沒有人會信啦。=Too～ Bad～ I've got it all recorded. No matter how you explain it, no one will believe you.
+已經不可能再有反轉了。\n你們就乖乖地等著迎接社會性死亡吧！=There's no coming back from this. Just sit tight and wait for your social execution!
+吾明白了！原來是這麼回事……！=I see now! So that's how it works...!
+現實裡的{{A}}，\n利用捕風捉影的證據來歪曲事實……=The real {{A}} twists the truth using half-baked evidence...
+以此毀掉了那些阻礙她的藝人，\n或者其他有社會地位的人……=To ruin anyone who stands in her way, celebrities, public figures...
+這些都知道了！長話短說！=We know that! Get to the point!
+你們想想，吾等不也親眼見過……\n她拿錄音筆威脅別人的樣子嗎？=Do you remember... We've seen her threaten people with that recorder before!
+啊……這麼說起來的確……！=Ah... Now that you mention it...!
+她那個超級花俏的東西，\n就是錄音筆啊！？=That gaudy thing she's holding, that's her recorder!?
+她已經利用錄音，陷害了很多人了。=She's already framed so many people with her recordings.
+以成功經歷為後盾的絕對自信……=Her unshakable confidence, backed by her success...
+只要錄了音，對方就是手心裡的玩物……\n這種認知影響了整座{{A}}！=Once she's got you on tape, you're hers... That cognition has shaped this entire {{A}}!
+也、也就是說……\n什麼意思嘛……！=S-So... what does that mean...!
+還不懂嗎！就是只要在她面前說錯話，\n就會像那樣被變成雜誌……！=Don't you get it! If you say the wrong thing in front of her, you'll get turned into a magazine...!
+只是說個話就！？\n啥呀！這已經算開掛了吧！=Just from talking!? That's cheating!
+別隨便說話=Don't speak
+別出聲=Stay silent
+來吧，{{A}}！我已經搞定了礙事的女人。\n快來我身邊！=Now, {{A}}! I've taken care of those pesky girls. Come to me!
+我、我拒絕……！=I... I refuse!
+回答錯誤～\n該說「好的，我很樂意，{{A}}」哦。=Wrong answer～ The correct response is "Yes, I'd love to, {{A}}".
+超可愛的{{A}}<sprite\=1 tint\=1>\n我會永～～～遠養、著、你哦！=My adorable {{A}}<sprite\=1 tint\=1> I will keep you... forever～～～!
+……你們算什麼東西！？\n太礙事了！給我讓開！=...What insignificant pests!? Out of my sight! Now!
+
+----------
+Shadow Shimotsuna Boss 1
+----------
+大家小心！\n就像剛才CATTLE說的那樣……=Everyone, be careful! Like Cattle said earlier...
+如果說錯話被她錄下來，\n就會被變成雜誌、無法動彈了！=If she records you misspeaking, you'll get turned into a helpless magazine!
+如果我們全都變成雜誌就完了。\n總之要注意言辭！明白了嗎？=If we all get turned into magazines, it's over. Anyway, be careful with your words! Got it?
+{{A}}～我明明也沒說錯什麼啊……！={{A}}～ I didn't even say anything wrong...!
+抱歉，我沒法幫上忙了！\n大家要加油啊！=Sorry, I can't help anymore! \nHang in there, everyone!
+要說幾、次、啊！\n你太吵了，臭女人！！=How many times do I have to say it! \nYou're too loud, you hag!!
+呀啊！？=Ah!?
+CLOSER！=Closer!
+你幹什麼！=What are you doing!
+從被我抓到尾巴寫成報導的一刻起，\n你們就已經完蛋了！=From the moment I caught you, you're finished!
+不准再違抗我！只能奉承我、討好我，\n在我的憐憫下悲慘地生活！=No more defiance! You'll praise and obey me, live miserably under my mercy!
+你的謠言毀掉了多少人的人生！\n到底是有多麼{{A}}才做得出來……！=How many lives have you ruined with your lies! Just how prideful can you be...!
+{{A}}～？\n{{B}}，不對哦，我這才不是{{A}}。=Prideful～？{{B}}, wrong, this isn't pride.
+這是我被賦予的權力！\n任何事、任何人，我都能隨意玩弄！！=This power was bestowed upon me! \nI can twist anything, crush anyone!!
+呀啊！=Ah!
+住手！你這個臭老太婆……=Stop! You damn...
+SOY！=Soy!
+你剛才想說什麼呢，小夥子～？\n要注意言辭哦？=What were you about to say, boy～? \nBetter choose your words carefully.
+不過啊，你們幾個看起來底子也不錯呢～\n我不會毀掉你們的，而是慢慢養～起～來哦<sprite\=1 tint\=1>=But you know, you do have potential～ \nI won't ruin you, I'll raise you instead～<sprite\=1 tint\=1>
+要是把你們變成薄～薄的雜誌，\n這麼美好的肉體可就浪費了呢？=Turning you into flimsy～ magazines, would be such a waste of these fine bodies, no?
+只不過，在開始飼養之前……\n得讓你們知道誰才是{{A}}！！=But before I tame you... \nYou'll learn who's the {{A}}!
+
+來吧，都過來！讓這些傢伙跪下吧！=Come, all of you! Make these fools kneel!
+{{B}}……等著吧，{{A}}～。你很快就是我的東西了～={{B}}... Just wait, {{A}}～\nYou'll be mine soon enough～
+休想！絕對不會讓你帶走{{A}}的！=Forget it! I won't let you take {{A}}!
+是先消滅手下，還是直接攻擊{{A}}……就交給隊長判斷了！=Should we take out the minions first, or go straight for {{A}}...? Leader, your call!
+{{B}}！這是來自大人的愛意！{{A}}萬歲！！={{B}}! This is true affection from Her Majesty! All hail {{A}}!
+就是這樣，把這些傢伙大卸八塊吧！{{A}}！=That's right! Tear these brats to pieces! {{A}}!
+有意思，我看你們還能反抗到什麼時候！=Amusing, let's see how long you can keep resisting!
+這些小鬼……真是夠煩人的！=These damn kids... \nWhat a nuisance!
+真是囂張……先從那個傢伙開始收拾！=How insolent... Start by crushing that one first!
+唔……她好像鎖定了一個人作為目標。要小心應對！=Hmm... She seems to be singling out a target. Stay sharp!
+{{A}}，廢物！都是一群沒用的廢物……！\n喂，還有沒有人啊！？={{A}}, useless! Absolutely useless...! \nHey, is there anyone else!?
+看來她已經召喚不出手下了。\n趁現在打倒她！=Looks like she ran out of minions to summon. \nNow's our chance, take her down!
+
+可惡……那傢伙好厲害……！=Damn it... They are strong...!
+唔，沒有CLOSER和WIND，\n要對付她還真難……！=Yes, without Closer and Wind, she is tough...!
+而且不知道為何，\n那傢伙還沒對吾等使用那個魔杖。=And for some reason, she hasn't used that wand on us yet.
+明明隨時都能把吾等變成雜誌……\n這對她來說是綽綽有餘的吧。=She could turn us into magazines anytime... She's just toying with us.
+可惡！這下真是糟透了……=Damn! This is bad...
+必須跟她拼到底=<size\=28>Fight her to the bitter end</size>
+放棄的話一切都完了=It's over if we give up
+你真不錯呢……\n那種絕不屈服的鬥志，讓我好喜歡……=You're interesting... \nThat unyielding spirit, I like it...
+要不你跟{{A}}一起穿上成對的衣服，\n然後讓我好好疼愛你們倆吧～<sprite\=1 tint\=1>=How about you and {{A}} wear matching outfits, I'll take good care of you both～<sprite\=1 tint\=1>
+我只是{{A}}的配菜嗎？=I'm just {{A}}'s side dish?
+
+Choice 1
+你問我為什麼……\n{{A}}，當然是因為他對我很重要啊。=Why, you ask...? {{A}}, because he's special, of course.
+Choice 2
+哎呀呀，這就開始吃醋了？\n不過抱歉哦，他可是特別的存在。=Ara ara, getting jealous? Sorry, but he's special.
+{{A}}可是「從鑽石中誕生的原石」……\n是顆一定會閃閃發光的寶石呢。={{A}} is "a rough in the diamond"... \nA jewel predestined to dazzle.
+他可是在很～～早以前就註定屬於我，\n是超級可愛的寶貝鑽石呢！=He was always meant to be mine～～ \nMy precious, precious diamond!
+從鑽石中誕生的原石……？\n這完全說反了吧！=A rough in the diamond...? \nThat's completely backwards!
+你們才不會明白呢。\n唔呼呼呼呼<sprite\=1 tint\=1>=You'd never understand. Muhahaha<sprite\=1 tint\=1>
+就算你們再可愛，要是打擾到{{A}}和我，\n也會被馬上甩掉哦。=No matter how cute you are, if you get between me and {{A}}, I'll dump you.
+差不多了，隨便找些黑料，\n把你們也都寫成報導吧！=Enough. I'll simply unearth some dirt and have you all splashed across the headlines.
+糟糕！她準備使用那個能力了！\n大家注意！=Crap! She's about to use that power! \nEveryone, watch out!
+掙扎也沒用的！\n無論你們說什麼我都可以寫成黑料喲～！=Struggling is useless! I can twist whatever you say into scandal!～!
+住手！！=Stop!!
+請住手吧，{{A}}……=Please stop, {{A}}...
+你的目的是我吧？\n只要我成為你的東西，你就滿足了對吧？=You want me, right? If I become yours, \nwill that satisfy you?
+我明白的……這樣的話……=I understand... In that case...
+我會成為你的寵物狗，或者任何東西！=I'll be your dog, your anything!
+所以……\n請把CLOSER和WIND變回來吧！=So... please turn Closer and Wind back!
+你別亂說話，{{A}}！=Don't say that, {{A}}!
+你知道被關押在這座{{A}}裡……\n意味著什麼嗎！=Do you realize what being trapped in this {{A}} means!
+你的餘生都將被困在{{A}}，\n再也無法回到現實，等於死掉了啊！=You'll be trapped in the {{A}} for the rest of your life, never returning to reality! It's as good as death!
+你們不也一樣嗎？難道想變成雜誌……\n一輩子在這裡受折磨嗎？=And what about you!? You want to be turned into a magazine... tortured for eternity?
+我已經……無所謂了。\n犧牲我1個就能救你們，已經很划算了。=I... don't care anymore. If sacrificing me saves you all, it's worth it.
+別放棄自己！=Don't give up yourself!
+{{A}}……\n我可以把一生都獻給你，但我有個請求。={{A}}... I'll give you my entire life, \nbut I have one request.
+哎呀～當然可以，{{A}}！\n你可以盡情向我撒嬌哦！=Ara～ Of course, {{A}}! \nYou can beg me for anything!
+希望你能保證……不要對我父母出手。=Promise me... you'll never touch my parents.
+你能發誓，\n今後不會再做出傷害我爸媽的事嗎？=Can you swear you'll never hurt them again?
+哈～～～？=Hah～～～?
+哈？哈？？哈？？？\n你還把那個女人當寶啊！？=Hah? Hah?? HAH??? \nYou still care about that woman!?
+那個欺騙、拋棄了你跟你爸的臭女人！\n你還這麼看重她！哈！？=That cheating, child-abandoning whore! \nAnd you defend her!? HAH!?
+那不是……你寫的假新聞嘛！\n我媽媽根本沒有背叛過我們！=That was... your fake news! \nMy mom never betrayed us!
+背叛了啊～！我寫的都是真的！\n那女的就是出軌丈夫、拋棄孩子的賤人！=She did～! Every word I wrote was fact! That wretched woman cheated on her husband and abandoned her child!
+不是的！=No!
+你肯定不知道，\n我媽媽一直都在跟我道歉……=You don't know... \nMy mom kept apologized to me...
+她說：「因為我不夠堅強，\n沒辦法陪在你身邊，對不起……」=She said "I'm sorry... I wasn't strong enough, \nI couldn't be there for you..."
+她總是、總是流著眼淚對我道歉……\n說讓我這麼孤獨都是她的錯……！=She cried... saying it was her fault I was lonely...!
+我爸爸也是！\n即使被嘲笑成分居夫妻、沒人要的丈夫……=And my dad! Even when people mocked him... Called him a cuckold, a loser...
+他也一直愛著媽媽、一直支持她。=He never stopped loving her, never stopped supporting her.
+他們彼此相愛、彼此信任……\n我也愛著他們，也相信他們！=They love each other, trust each other... And I love them and believe in them!
+啊——哈、哈、哈！=A- HAHAHA!
+你還真是天真啊，{{A}}。\n果然還是個孩子呢，竟然被這種演技騙了！=You're so naive, {{A}}. \nStill a child, falling for acting!
+你說什麼！？=What!?
+你聽好了哦，那個女人順利地逃回義大利，\n然後一直過著光鮮亮麗的明星生活。=Listen close. That woman ran back to Italy and lived lavishly as a star.
+而你跟你爸卻被遺棄在了日本，\n這是不爭的事實吧！=While you and your dad rotted in Japan! \nThis is an indisputable trust!
+我都說過了，那是……！=I told you, that's...!
+我再問你，自從你們分開以後，\n那個女人回國了幾次？=Tell me, since she left, \nhow many times has she visited you?
+頂多每年回來1次吧？\n但你們可沒少去義大利吧？=Once a year? But you've been to Italy quite a lot, haven't you?
+你怎麼連這些事情都……=How do you even...
+我當然知道。\n關於你們一家，我什～麼都知道呢！=Of course I know. \nI know everything about your family～!
+你說，如果你媽媽真的愛你……\n怎麼會不多來見見你？=If she loved you... \nwhy wouldn't she see you more?
+那是因為……\n她一回來，媒體就會撲上來……=That's because... the media would swarm her...
+可即使那樣也要見自己的兒子，\n這才是真正的母愛吧！=A real mother would fight to see her son, \nthat's mother's love!
+{{A}}，她倒是爽啦！\n自己在義大利過著輕鬆愉快的單身生活！={{A}}, she enjoyed it! Living free in Italy!
+然後對很～偶爾才見一面的兒子，\n只要擠幾滴眼淚就能騙得團團轉！=Even though she barely sees you, she fooled you with just a few tears!
+不是！媽媽才、才不是那樣……=No! Mom is not like that...
+就、是、那、樣、的！！\n你忘了嗎？那個女人可是演員啊，演員！=She, is, like, that!! Or did you forget? \nShe's an actress, actress!
+哭戲什麼的可是基本功哦。\n在你面前流的眼淚……全部都是演技呢！=Crying on cue is basic. Those tears... all acting!
+你真的好可憐啊，{{A}}。\n你對那個女人來說，只不過是負擔罷了。=Poor {{A}}. To her, you're just baggage.
+不是的！我……！=No! I...!
+哈……真拿你沒辦法。\n那就讓你親耳聽一聽，真實的證言吧……=Sigh... Fine. I'll let you hear the truth...
+……從她本人口中！=...From her own mouth!
+媽媽！=Mom!
+來，你跟他說。\n親口把真相說出來！=Go on, tell him. Tell him the truth!
+我……背叛了丈夫，拋棄了兒子……=I... betrayed my husband, \nabandoned my son...
+為什麼？\n因為你兒子對你來說是個負擔吧！？=Why? Because he was a burden, right!?
+是的，是個負擔。\n養孩子太無聊了，我還想多跟男人玩玩。=Yes, a burden. Children are boring, \nI wanted to play with men.
+在日本有個丈夫，又在義大利享受單身，\n真是太美好了。=It's wonderful to have a husband in Japan and enjoy single life in Italy.
+別聽她瞎說！=Don't listen to her!
+那只是認知存在！=<size\=26>That's just a cognitive being!</size>
+沒錯，那不是你真正的母親！\n不要被迷惑了！=Right, that's not your real mother! \nDon't fall for it!
+為了騙過丈夫，我只能偶爾去去日本，\n在孩子面前假裝掉幾滴眼淚……=To deceive my husband, I only went to Japan occasionally, forcing out a few tears in front of my child...
+其實我真的覺得很麻煩。\n早知道不生孩子了，根本就是個累贅。=I regret having him. He was just in the way.
+呐，{{A}}。\n你肯定也覺得，父母什麼的無所謂吧？=Hey, {{A}}. You don't care about us, don't you?
+畢竟分開生活10多年了你也沒抱怨過，\n已經完全習慣了呢。=After all, you never complained in ten years, \nyou've completely adapted by now.
+我們其實根本就不需要家人，對吧？=We don't need family, right?
+媽……媽……！=M... Mom...!
+你現在明白了吧？我說的都是對的。\n剛才那些就是那個賤人的心裡話哦。=Now you understand? I was right. \nThose were her true feelings.
+才不是！\n是你故意讓她這麼說的吧！=No! You made her say that!
+你其實心裡是知道的吧，{{A}}？\n只不過是在自己騙自己吧？=You knew, didn't you, {{A}}? \nYou were lying to yourself!
+夫妻分居兩地還能相親相愛？還愛著孩子？\n全～部都是大大的謊言！=How can a couple still love each other when living apart? Still care for their child? It's all lies～!
+不是……謊言……！=Not... lies...!
+我懂的哦，{{A}}。\n我知道你一～直都在撒謊呢。=I understand, {{A}}. \nI know you've been lying～
+戴著笑臉一樣的面具，對誰都是笑眯眯的，\n但也對誰～都不說心裡話！=Wearing that smiling mask, \nbut hiding everything～!
+你和那個女的一樣，都是騙子！\n{{A}}，你們家除了騙子還是騙子！=Like mother, like child, both frauds! \n{{A}}, lying runs in your family!
+小時候的{{A}}=Little {{A}}
+媽媽……你又要走了嗎？=Mom... are you leaving again?
+{{A}}的母親={{A}}'s Mother
+對不起啊，{{A}}……=Sorry, {{A}}...
+為什麼我不能跟媽媽一起住啊？=Why can't I live with you, mom?
+對不起……對不起，{{A}}……=Sorry... I'm sorry, {{A}}...
+全都是媽媽不好……\n都怪媽媽太軟弱，受不了那些非議……=It's mom's fault... Mom's weak..
+{{B}}……都怪我，我這種人……\n讓他跟{{A}}吃了這麼多苦……={{B}}... It's all my fault, \nI made him and {{A}} suffer...
+媽媽！媽媽，你別哭！\n對不起，媽媽！=Mom! Mom, don't cry! Sorry, mom!
+我沒事的！\n即使分開我也沒事的！所以你別哭，媽媽！=I'm fine! Even if we're apart, I'm fine! \nSo don't cry, mom!
+{{A}}的父親={{A}}'s Father
+你不能讓媽媽難過哦，{{A}}。\n因為最痛苦的就是她啊。=You can't make mom sad, {{A}}. \nShe's hurting the most.
+嗯……媽媽她哭了……=Hm... Mom cried...
+你一哭媽媽就會更難過了。=If you cry, she'll cry more.
+所以你要在媽媽面前保持微笑哦。\n好不好？{{A}}。=So you have to smile in front of her, okay? {{A}}.
+……爸爸你呢？\n跟媽媽分開，不孤單嗎？=…Dad, are you really okay? \nYou're not lonely without mom?
+我當然孤單啦！\n但是爸爸可是……有名的演員哦！=Of course I am! \nBut your dad... is a famous actor!
+表演笑容那可是小菜一碟！\n你聽好哦，在表演笑的時候啊……=Faking smiles is easy! \nWhen you act a smile...
+（這樣啊……因為爸爸是演員，\n所以在媽媽面前才能不哭啊。）=(...I see. Because dad is an actor... he can pretend not to cry in front of mom.)
+（那我也要用「演技」好好地笑，\n這樣媽媽也一定會對我笑的……）=(Then I'll "act" too... If I smile hard enough, mom will smile back.)
+住在附近的主婦=Neighbor Housewife
+旁邊剛搬來的{{A}}家，就是那家人吧？\n太太是那個義大利有名女演員……=That's the {{A}} family, right? \nThe wife's that Italian actress...
+喜歡八卦的主婦=Gossip-Loving Housewife
+對對！而且真的是婚後分居哦！\n好像是妻子出軌了吧？=Yeah! And they're separated! \nHeard she cheated!
+快點離婚不就好了嘛。\n這樣孩子多可憐啊。=Just divorce already. Poor kid.
+你別說，他家孩子好像也有問題哦？\n好像是在學校打了其他孩子什麼的……=The kid's weird too. \nHe hit another kid at school...
+說是因為別人先罵他媽媽……\n但那不是很正常嗎，肯定會被人說的嘛。=Heard it was because someone scolded his mom... but isn't that normal? People will definitely talk about it.
+有其母必有其子吧？\n哎呀，爸爸估計也不是什麼好人。=Like mother, like son. \nThe dad's probably no better.
+（……如果我闖了禍，\n媽媽和爸爸就會被人說壞話。）=(...If I cause trouble, people will insult mom and dad.)
+（看來我不能生氣。即使被欺負，\n也必須裝作沒事才行……）=(I can't get angry. Even if bullied, \nI have to pretend it's fine...)
+（我要一直笑，給自己戴上面具。\n要繼續「撒謊」才行，不能傷害別人……）=(It's fine to always smile, let's put on a mask. If I keep "lying", no one gets hurt...)
+演出的時候真的很輕鬆。\n因為演戲不算「撒謊」啊。=Acting is easy. Because it's not really "lying".
+「來，讓我看看你真正的想法……\n你誠實的內心吧！」="Come, let me see your true thoughts... \nyour honest heart!"
+如果讓別人知道了我的真心，\n就一定會受到傷害……=But if people knew my true feelings, they'd get hurt...
+比起「誠實」，不如徹底貫徹「謊言」，這樣才不會傷害別人。=Rather than "honesty", it's better to fully embrace "lies", that way no one gets hurt.
+我已經不需要真正的自己了。想要「誠實」地活下去的意志……=I don't need my true self. The will to live with "honesty"...
+把它從心中扔掉吧。=Throw it all away.
+沒錯……你說得對……=Right... You are right...
+我一直……都在撒謊。\n無論對父母，還是對朋友、夥伴……=I've always... been lying. To my parents, my friends, everyone...
+什麼真心、誠實、真實，統統沒有。\n我是個……渾身都是謊言的人……！=There is no sincerity, honesty or truth at all. I am... a person who is full of lies...!
+沒——錯！\n你這不是醒悟了嘛，{{A}}！=Exactly-! So you finally understand, {{A}}.
+你嘴裡的什麼「幸福家庭」就是謊言！\n你跟那個臭女人一樣，都是大騙子！=Your so called "happy family" was fake! \nYou're a liar, just like your mother!
+趕快，現在就把那個賤人忘掉吧！=Forget that whore, now!
+不管你是多大的騙子……\n我都會好好地、精心地呵護你哦……=No matter how much you lie... I'll cherish you...
+閉嘴！=Shut up!
+才不是謊言！=It's not a lie!
+……哈！？=...Huh!?
+沒錯！\n你給我閉嘴，臭老太婆！=Yeah! I said shut up, you old hag!
+你根本就不懂{{A}}！=You don't know {{A}}!
+我們早就從{{A}}那裡聽過這些了！\n他說過，在別人面前說不出心裡話！=He told us everything! How he couldn't speak his mind!
+你懂這有多痛苦嗎！？\n為了不讓爸媽傷心，從小就這麼懂事……=Do you know how painful this is!? He's spent his whole life trying not to hurt his parents...
+這早就不算「謊言」了！\n這才是{{A}}「誠實」活著的證明！！=That's no "lie"! It's proof {{A}} truly lived with "honesty"!!
+你……=You...
+呐，{{A}}，你還記得在{{B}}時……\n你跟我們說過的話吧？=Hey, {{A}}, you remember what you told us back in {{B}}... right?
+那個時候，\n你不就對我們說了最真心的話嘛！=Didn't you tell us the truth back then!
+那些話不是「演技」=Those weren't "acting"
+那些話不是「謊言」=Those weren't "lies"
+
+Choice 1
+沒錯！你吃著{{A}}的拉麵，喊著好吃！\n然後大家聊得很開心……=That's right! You ate {{A}}'s ramen and said it was delicious! We all had such a great time together...
+Choice 2
+沒錯！我們3個一起吃到撐，\n然後聊了好多傻乎乎的話題……=That's right! The three of us stuffed ourselves silly, and talked about all kinds of dumb...
+那些才不是演技對吧！\n那就是真正的你，不是嗎，{{A}}！？=That wasn't acting, was it! That was the real you, wasn't it, {{A}}!?
+真正的……我……=The... real me...
+不要聽{{B}}的話，{{A}}。\n那個母親是認知存在，只是唬人的罷了！=Don't listen to {{B}}, {{A}}! That mother is just a cognitive being, it's just an illusion!
+煩死了……！=So annoying...!
+{{A}}夠了！\n吵死了，你們都給我閉嘴！！={{A}}! Enough, shut your mouths!!
+「你給我閉嘴，臭老太婆！」="I said shut up, you old hag!"
+「只是唬人的罷了！」="It's just an illusion!"
+好了，\n我已經拿到你們暴言的證據了～=Got it, now I've got proof of your violent threats～
+糟了……！=Crap...!
+SOY！=Soy!
+CATTLE！=Cattle!
+{{A}}！\n下一個輪到你了哦！={{A}}! \nYou're next!
+不可原諒……=Unforgivable...
+絕不會把{{A}}給你的=<size\=29>I'll never give you {{A}}</size>
+好了～我錄下你那句話了哦～！！\n來，把你也……=Oh～ I recorded that too～!! \nNow, let's turn you into...
+夠了！=Enough!
+住手吧……\n夠了，已經夠了，WONDER。=Stop... Enough, that's enough, Wonder.
+我爸媽都不愛我……我其實都明白。=My parents never loved me... \nI've known it all along.
+全部都是「謊言」。無論家人還是自己，\n全部，都只是謊言罷了……=It was all a "lie". My family or myself, \nall of it, nothing but lies...
+{{A}}！沒錯沒錯！\n來，你也快說幾句！={{A}}! Yes, yes! \nGo on, say it!
+我……一直以來都在欺騙我兒子。\n我們都一樣吧，{{A}}？=I... lied to my son. \nWe're the same, {{A}}.
+是啊，媽媽……=Yes, mom...
+喂！等等啊，{{A}}！\n都說了那個只是你老媽的認知存在啊！=Hey! Wait, {{A}}! Told you that's just your mom's cognitive being!
+那叫家人間的互相體諒，不是撒謊！\n你不是說過嗎，正是因為愛所以……=That's called caring for family, not lying! Didn't you say it yourself, because you love...
+謝謝你，SOY……\n但是我家跟你家不一樣。=Thank you, Soy... \nBut my family isn't like yours.
+媽媽……實際上我也……\n我也覺得，你哭哭啼啼的真的很煩。=Mom... honestly, I... I hated your crying too, \nit was annoying.
+你別這麼說……=Don't say that...
+啊——{{B}}！\n太棒了！棒極了，{{A}}！=Ah- {{B}}! Perfect! Wonderful, {{A}}!
+別過去！=Don't go!
+抱歉啊，WONDER。=Sorry, Wonder.
+{{A}}，即使我是這樣的人……\n你也不會嫌棄的，對吧？={{A}}, even if I'm like this... \nYou'll still want me, right?
+對、對！讓我好好疼愛你吧！\n我會一～直一～直養著你的哦！=Y-Yes! Let me love you! \nI'll cherish you forever～!
+來，對著這裡發誓吧，我要錄下來！\n我要給這一刻留下證明！=Now, swear it! I'll record this moment!
+你發誓，從今天起就是我的人了！\n你發誓，要成為我最棒的乖狗狗！=Swear you'll be mine! \nSwear you'll be my perfect little dog!
+好，我在此發誓……=Alright, I swear...
+我發誓——\n會從你那裡奪回一切！！=I swear-\nI'll take everything back from you!!
+WONDER！=Wonder!
+原來如此……！=I see...!
+我們……變回來了……！=We're... back to normal...!
+你你你、你幹什麼啊！\n我的魔法錄音筆！！=Wh-wh-what are you doing! \nMy magic recorder!!
+{{A}}，你！={{A}}, you!
+笨～蛋。=Fool～
+你你你……\n你竟然騙我{{A}}！！={{A}}... \nY-y-you lied to me!!
+我本來就是個騙子啊？\n這不你說的嘛。=I am a liar, right? \nYou said so.
+被演員的眼淚騙得團團轉，\n看來你不適合在娛樂圈混哦？=If you fell for an actor's tears, \nmaybe you're not cut out for this industry?
+哈——！？=Hah-!?
+就因為你不好好採訪，光顧著寫些假新聞，\n所以眼神才越來越差啊，你這混蛋！=Too busy writing fake news to spot real lies! No wonder your judgment's so rotten, you hack!
+你、你這個臭小子！=Y-you brat!
+……不過你剛才的話，\n也讓我意識到了一些事。=...But you did help me realize something.
+我啊……\n無論在誰面前，都一直隱藏著「自己」。=I've... always hidden "myself" from everyone.
+即使在舞臺上，我也不敢投入感情，\n所以表演也流於表面。=Even on stage, I held back, \nmy acting was empty.
+是因為會傷害到別人……嗎？\n不。=Because I'd hurt others...? No.
+如果我展現出真實的自我，\n恐怕會再次傷害別人什麼的……=If I show my true self, \nI might hurt someone again...
+我其實是為了遠離這種恐懼，\n才一直在偽裝自己而已。=I have been pretending to be myself just to stay away from this fear.
+媽媽和爸爸的事，也不過都是藉口。\n我其實只是……=Mom and dad were just excuses. I was just...
+害怕「自己」的心靈受傷，\n才一直對身邊的人撒謊啊！=Scared of hurting "myself", \nso I keep lying to the people around me!
+哈……{{B}}！\n你這不是都明白嘛，{{A}}！=Ha... {{B}}! \nFinally, you get it, {{A}}!
+你只不過是為了自己在撒謊罷了！=You lied for your own sake!
+沒事的哦，{{A}}。撒謊也沒關係！\n因為那樣就可以獲得幸福嘛！=It's fine, {{A}}. Keep lying! \nThat's how you'll be happy!
+欺騙身邊的人，剷除礙事的傢伙！\n跟我一起，一起創造撒謊者的極樂世界吧！=Deceive everyone! Crush your enemies! \nJoin me in a paradise of liars!
+別把他跟你混為一談！=<size\=30>Don't lump him in with you!</size>
+{{A}}的謊言是不一樣的！=<size\=30>{{A}}'s lies were different!</size>
+謝謝你，WONDER。\n但……我已經不想偽裝自己了。=Thank you, Wonder. But... I'm done pretending.
+所有的謊言，本質都是一樣的。\n我也是為了自己的幸福才一直撒謊的。=All lies are the same in the end. \nI was lying for myself.
+只不過……到此為止了。=But... no more.
+我心裡知道。即使讓父母看到真實的我……\n他們也絕不會放棄我的。=Deep down, I knew... even if my parents saw my true self, they'd never give up on me.
+還有戲劇部的夥伴們。就算我……\n展示最真實的自己，他們也一定會接受的。=And my drama club friends... Even if I showed my true self, they'd still accept me.
+還有看我演出的人們也是……\n他們想看的，是我真正的演技。=And the audience too... \nWhat they want is my genuine performance.
+最重要的是……我身邊還有對我不離不棄、\n不顧安危也要拯救我的夥伴們！=Above all... I have friends who'll stand by me no matter what, who'd risk their lives for me!
+面對這樣的大家……\n我怎麼還能繼續說謊呢！！=How could I keep lying... to everyone who believes in me!!
+跟{{A}}的自己訣別吧=<size\=27>Leave your false self behind</size>
+不要放棄慾望……！=<size\=30>Don't give up desires...!</size>
+嗯，我不會再自暴自棄了！\n我會「誠實」地面對自己、面對大家！=Yes, no more self-pity! I will face myself and everyone with "honesty"!
+我再也不會放棄我的慾望了！=I won't give up my desires ever again!
+
+----------
 Shoki Awakening
+----------
 這句話  吾已等候多時了  {{A}}=Long have I waited, {{A}}!
 演員會說出「謊言」=Actors speak "lies"...
 但這不僅僅局限於演員=But they are not the only ones.
@@ -3410,6 +4642,157 @@ Shoki Awakening
 魅惑眾生吧=Enthrall the masses!
 見識吾等的光芒  領略熾熱的VITA（生命）=Behold our brilliance! Feel the blazing VITA! (Life)
 吾即是汝……=I am thou...
+
+{{A}}他……！={{A}}...!
+覺醒了{{A}}……！？我沒看錯吧！=Awakened a {{A}}...!? Am I seeing this right!
+Bravo！=Bravo!
+{{A}}！我懂了，「{{B}}·迪·塔科」！\n我知道如何使用你的力量了！={{A}}! I see, "Ghino di Tacco"! \nI know how to wield your power!
+那、那、那是什麼啊……！=Wh-what is that...!
+好討厭！但……\n但是好帥啊……！=It's awful! But... \nbut so cool...!
+Grazie（謝謝）！\n不過，我對你也不會再說謊了。=Grazie (Thank you)! \nBut I won't lie to you anymore.
+我啊……\n最討厭你了，{{A}}！！=I... \nhate you, {{A}}!!
+誰會追隨你啊！！=Who will follow you!!
+什麼！！=What!
+開始反擊吧！=Time to fight back!
+上吧，{{A}}！=Let's go, {{A}}!
+好！要將被那傢伙奪走的慾望……\n全部奪回來！=Yes! I'll take back all the stolen desires... Every last one of them!
+唔！可惡！可惡{{A}}！！\n我要把你們這些人全都……！={{A}}! Damn it! Damn it all!! I'll deal with every single one of you...!
+什麼？{{A}}，真是夠了！\n我的魔杖！我都忘了魔法錄音筆壞了啊！=What? {{A}}, enough! My wand! Stupid broken recorder!
+氣死我了！工蟻們，給我過來！=Worker ants, come!
+你們快去修一下魔法錄音筆！\n剩下的人……=Repair my magic recorder! The rest of you...
+都來跟那些可惡的小屁孩們玩玩吧！=Entertain those insufferable brats!
+
+----------
+Shoki Awakening Battle
+----------
+唔，小心！那傢伙似乎……\n能對攻擊目標留下特殊的「標記」！=Hm, careful! That guy seems to be able to... leave a special "mark" on the target!
+而且這股力量的波動……被『標記』後\n一旦受到攻擊，可能會陷入異常狀態！=This energy... anyone "marked" will be inflicted with Mental Ailments when hit!
+只要保護好被『標記』的同伴就行了吧？\n交給我吧！=So we just need to protect whoever gets "marked", right? Leave it to me!
+
+呼……總算是有驚無險……\n如果沒有{{A}}，不知道會發生什麼呢……=Whew... That was close... If it weren't for {{A}}, who knows what might've happened...
+說什麼呢，\n是你們救了我才對吧？=What are you talking about? \nYou guys saved me, remember?
+謝謝你們，真的。\n比起這個，大家有沒有受傷？都沒事吧？=Thank you, really. More importantly, is everyone okay? Any injuries?
+嗯，放心吧！=Yeah, don't worry!
+……不對！{{A}}你沒事吧？=...Wait! {{A}}, are you alright?
+覺醒了{{A}}後，\n一般都會很疲倦的……=Awakening a {{A}} usually leaves people completely exhausted...
+啊……\n的確有種被抽走了好多體力的感覺。=Ah... Now that you mention it, \nI do feel pretty drained.
+不過，比起2小時的舞臺連演，\n這點疲憊不算什麼！=But compared to a two-hour stage performance, this is nothing!
+哦哦，不愧是{{A}}！\n體力不是一般的強啊……！=Whoa, as expected from {{A}}! \nYour stamina is incredible...!
+明明我跟WIND，\n在{{A}}覺醒後都頭暈眼花的……=When Wind and I awakened our {{A}}s, \nwe were practically seeing stars...
+不如說是大家更辛苦吧？\n一直在邊保護我邊戰鬥。=If anything, you guys had it tougher, right? Protecting me while fighting.
+那麼，CATTLE。\n我們能不能先返回一下現實世界？=So, Cattle. Should we return to the real world for now?
+外面已經沒有{{B}}的氣息了。\n現在應該可以安全離開{{A}}了……=I don't sense the {{B}} outside anymore. We should be able to leave the {{A}} safely...
+可是，不立刻讓{{A}}嗎？\n拖下去會很危險吧？=But shouldn't we {{A}} immediately? Isn't delaying dangerous?
+那傢伙在現實世界裡，\n正準備陷害{{A}}的父母吧？=In the real world, she's about to frame {{A}}'s parents, right?
+……嗯，吾覺得應該沒問題。=...Hmm, I believe it's fine.
+剛才{{A}}和WONDER，\n不是把那個像魔杖似的錄音筆弄壞了嗎？=Didn't {{A}} and Wonder destroy that wand-like recorder earlier?
+她離開這裡就是因為那東西壞了，\n還命令部下去修理。=She left because it was broken, \nordering her underlings to repair it.
+原來如此。\n那個魔法錄音筆對她就是「力量的象徵」。=I see. That magic recorder was her "symbol of power".
+而那個象徵被WONDER他們毀掉了。\n她的陰影意識到了這一點。=And that symbol was destroyed by Wonder. \nHer Shadow recognized this.
+這意味著，\n現實裡的{{A}}應該也會受到一些影響吧？=Meaning the real {{A}} should be affected too, right?
+沒錯。\n那傢伙膨脹的信心可能會有所動搖。=Correct. Their inflated confidence may be shaken.
+意思是和平時正相反？\n認知世界中發生的事，也會影響到現實？=So the opposite of usual? Cognition affecting reality this time?
+那她現在就沒那麼有自信了吧。\n說不定暫時不會寫假新聞了？=Then she's probably less confident now. \nMaybe she'll hold off on fake news?
+不過，這也是吾一廂情願的推測。\n畢竟現實中的錄音筆並不會消失……=Though this is just speculation. \nHer real recorder isn't actually gone...
+不管怎樣時間不多了=Time is running out
+還是儘快行動為好=We should act soon
+……不，沒事的。\n雖然來{{A}}之前我動搖了……=...No, it's fine. While I was shaken before coming to the {{A}}...
+但就算{{A}}寫再多的假新聞,\n我的父母也不會軟弱到受她擺佈。=Even if {{A}} writes more fake news, my parents aren't weak enough to bend to her will.
+我爸應該會照顧好我媽，\n反而搞不好會變得更加卿卿我我了。=My dad would support my mom, they might actually become more affectionate.
+卿卿……我我……！=More... affectionate...?
+他們真的又熱情，又堅強。\n只是我之前單方面不敢相信爸媽而已……=They're passionate and strong. I was just the one who couldn't believe in them...
+所以不用擔心我們。\n還是集中精力想辦法讓{{A}}吧。=So don't worry about us. Let's focus on {{A}}.
+與其勉強追趕那傢伙，不如先養精蓄銳。\n我們回去吧，WONDER。=Rather than rushing after her, we should regroup. Let's return, Wonder.
+我知道了，回去吧=Got it, let's go back
+謝謝你能這麼說=Thanks for saying that
+啊，等等等等！\n回去之前……=Ah, wait wait! Before we go...
+我們先定一下{{A}}的代號吧！=We need to decide {{A}}'s code name!
+代號？\n啊，就是像WONDER或SOY那種？=Code name? Ah, like Wonder or Soy?
+嗯。目前大家都是……\n以自己覺得「不可思議的東西」起的！=Yeah! Currently... everyone's is based on something they find "mysterious"!
+哦～不可思議的東西啊……=Oh～ Something mysterious...
+啊，盡可能用外語哦！\n可別用醬油什麼的！=Ah, preferably in a foreign language! \nNo soy sauce or anything!
+求能不能放過我啊喂！=Give me a break here!
+不可思議的東西，外語……\n嗯……=Something mysterious... in a foreign language... Hmm...
+那就……\n「LUCE」吧？=Then... how about "Luce"?
+LUCE？{{A}}，感覺好帥……！\n是什麼意思呀？=Luce? {{A}}, that sounds cool...! \nWhat does it mean?
+在義大利語裡是「光」的意思。=It means "light" in Italian.
+我在舞臺上的時候，\n總會被「光」的作用和不可思議所震撼。=When I'm on stage, I'm always amazed by how "light" works.
+只需調整燈光的顏色，\n就能改變時間和季節……=Just changing its color can alter time and seasons...
+即便沒有人在那裡，\n也可以使用聚光燈來表現人的動作。=Even with no actors present, a spotlight can convey movement.
+這簡直就像魔法一樣，不是嗎？\n小時候爸爸教我時，我就很感動。=It's practically magic, isn't it? My dad taught me this when I was little.
+這樣啊～！=I see～!
+既能欺騙他人，也能引人入勝。\n這就是「光」。=It can both deceive and captivate. \nThat's "light".
+我的名字{{A}}，也蘊含著來自爸媽的……\n「成為舞臺上閃耀的明星」的祝福。=My name {{A}} carries my parents' blessing too... "shine like a star on stage".
+所以我的代號也想用「光」。\n如何？=So I want my code name to be "light". \nHow is it?
+我覺得很好啊，LUCE！=I think it's great, Luce!
+嗯，我也覺得很棒。=Yeah, I think it's great too.
+{{A}}，LUCE！=<size\=30>{{A}}, Luce!</size>
+那我們回去吧，LUCE！=Then let's head back, Luce!
+
+Choice 1
+沒問題。\n{{A}}啊，WONDER！=Alright. {{A}}, Wonder!
+Choice 2
+沒問題。\n我們走吧，WONDER！=Alright. Let's go, Wonder!
+
+{{A}}……好累啊……\n好想馬上洗個澡、鑽被窩啊……={{A}}... I'm exhausted... I just wanna take a shower and crash...
+今天就先解散吧。\n啊，對了……=Let's call it a day. Oh, right...
+{{B}}，還有{{A}}，\n你們直接叫我「{{C}}」就行了。={{B}}, {{A}}, you can just call me "{{C}}" now.
+r:"^(.*)和{{A}}，\n也都跟我用平語了呢。$"="$1 and {{A}} already speak casually with me too."
+這樣嗎？\n那你也可以直接叫我{{A}}。=Oh really? Then you can call me {{A}}.
+我也是，叫我{{A}}就行～！\n{{C}}哦，{{B}}！=Same here! Just call me {{A}}～! {{C}}, {{B}}!
+{{B}}。感覺好棒啊。\n現在的{{A}}，更像「真正的自己」了。={{B}}. This feels great. You seem more like your "true self" now, {{A}}.
+這都多虧了你們啊。\n以後，我再也不會對自己和別人說謊了。=It's all thanks to you guys. I won't lie to myself or others anymore.
+怪盜活動也務必讓我幫忙！\n{{A}}！=Please let me help with the Phantom Thief activities too! {{A}}!
+唔，{{B}}，{{A}}。=Hm, {{B}}, {{A}}.
+{{A}}！？\n剛才這隻貓頭鷹是不是說話了！？={{A}}!? Did that owl just talk!?
+Oh mio Dio！！\nMamma mia！！=Oh mio Dio!!\nMamma mia!
+的確，你是第一次聽到{{A}}說話呢……\n那個，這就是現實中的CATTLE。=Ah right, this is your first time hearing {{A}} speak... Well, this is the real Cattle.
+{{A}}？大家……？={{A}}? Everyone...?
+{{B}}，{{A}}！？\n你不是說因為分鏡有問題，回去了嗎？={{B}}, {{A}}!? Didn't you say you went home to fix storyboard issues?
+嗯，本來是這樣的，\n但我需要參考照片……=Yes, that was the plan, but I needed reference photos...
+所以就來{{A}}拍了點照，\n這就要回家繼續畫了。=So I came to {{A}} to take some photos, \nI was just heading back to keep drawing.
+路過的女性=Female Passersby
+哎呀，抱歉……=Ah, sorry...
+沒、沒事……=I-it's fine...
+啊，手機……=Ah, my phone...
+別擔心，好像並沒有摔壞。=Don't worry, it didn't break.
+謝謝你，{{A}}。=Thank you, {{A}}.
+大家這是剛排練完嗎？\n好像都很疲勞的樣子。=Were you all rehearsing? \nYou look pretty worn out.
+那個、嗯！沒錯！\n有點用力過猛了……=Uh, yeah! Exactly! We kinda overdid it...
+是啊。我們想著要不要喝點茶，\n所以順便來了{{A}}這邊。=Right. We were thinking of getting tea, \nso we stopped by {{A}}.
+是……這樣啊。=I... see.
+對了，{{A}}也一起去吧？=Right, {{A}}, wanna join us?
+不了，我還得趕緊回去畫完分鏡呢。=No, I have to go back and finish the storyboard.
+那我先告辭了。=I'll take my leave now.
+你要加油哦～！=Do your best～!
+那，我們也解散吧。=Alright, let's disband for today.
+等一下。=Wait.
+{{B}}？怎麼了，{{A}}？={{B}}? What is it, {{A}}?
+剛才……我不是幫{{A}}撿手機嗎？\n我不小心看到了……=Just now... when I picked up {{A}}'s phone, \nI accidentally saw...
+她的手機裡……\n有「{{A}}的圖示」。=Her phone... has the "{{A}} icon".
+什麼！？真的嗎，{{A}}！=What!? Is that true, {{A}}!
+嗯，我確定我沒看錯。=Yes, I'm not mistaken, I definitely saw it.
+那就是說……=That means...
+那{{A}}她……=Then {{A}}...
+也就是說，她也可以進出{{A}}……\n也能像我一樣覺醒{{B}}嗎？=So she can enter the {{A}} too... \nAnd awaken a {{B}} like me?
+不一定……\n有可能她是敵方的人。=Not necessarily... \nShe might be working for the enemy.
+……敵人？怎麼回事？=...Enemy? What do you mean?
+那個，實際上……=Well, actually...
+幕後黑手！\n竟然還有這種傢伙……！=A mastermind! \nThere is actually someone like that...!
+我不知道{{A}}究竟是不是……\n不過，我確實想起了一件事。=I don't know if {{A}}'s involved... \nBut I just remembered something.
+今天，我們進入{{A}}的時候，\n「啟動{{B}}」的人……是誰？=Today, when we entered the {{A}}, who "activated the {{B}}"...?
+那……不是{{A}}嗎？=Wasn't... that {{A}}?
+不，我不記得自己點過那個圖示。\n當時覺得有可能是不小心按到了。=No, I don't remember pressing it. Just that there's a chance I messed up.
+……現在回想起來，我覺得不是我按的。=...But even if I think about it now, I don't think I pressed it.
+那如果是這樣，\n就有可能是當時在場的其他人……=Then that means, \nsomeone else present at the time...
+把吾等強制送到了{{A}}。=...Forcibly sent us into the {{A}}.
+可、可是……\n{{A}}那個時候已經先一步回家了吧……=B-but... {{A}} said she went home early, right...?
+她只是那麼說，然後離開了體育館。\n我們誰都沒看到她到底回沒回家。=She just said that and left the gym. \nNone of us actually saw her leave.
+的確如此……\n莫非真是{{A}}幹的？=That's true... So {{A}} really did it?
+雖然還不能確定……=It's not confirmed yet...
+也許應該調查一下她的情報呢。\n而且，要格外小心。=Maybe we should look into her. \nAnd stay cautious.
+唔……大家今天都累了。\n還是先回去休息後再商量吧。=Hmm... Everyone's tired today. \nLet's rest first and discuss later.
+也是……\n隊長，那就這麼定了？=Right... Leader, is that okay?
 
 ----------
 P5R Collab Part 1
@@ -6331,6 +7714,13 @@ SNS
 跟{{A}}的大家一起吃=Share with the {{A}}
 想跟我聊聊嗎？=Want to talk to me?
 我覺得這不是壞事=I don't think that's a bad thing
+沒什麼不一樣=Nothing different
+兩個都是吧=Both are
+要不直接問問她？=Ask her directly?
+我們是{{A}}的夥伴=We are {{A}} teammates
+羈絆不能用時間衡量=Bonds can't be measured by time
+你也是我珍貴的朋友=You are my precious friend too
+你是特別的存在=You are special
 
 ----------
 Mio SL
@@ -6972,7 +8362,6 @@ Rank 1
 眨眼功夫就超過了第一名……！=And in the blink of an eye, they've overtaken first place...!
 就這樣保持著第一直到衝線……=Holding onto first all the way to the finish line...
 ……你要是想玩的話，就坐這裡吧？=...If you wanna play, sit here, okay?
-好=Okay
 我看你玩就好=I'll just watch you play
 該怎麼辦呢……？=What to do...?
 不錯嘛，就該這樣。=Not bad, just like that.
@@ -7291,6 +8680,9 @@ SNS
 突然這是怎麼了=What's going on all of a sudden
 之前就知道=Knew it before	
 之前不知道=Didn't know before
+已經1500人了！？=Already 1500 people!
+再拍一個慶祝影片吧=Let's make another celebration video
+100萬人也不是夢=1 million is not a dream
 
 ----------
 Manaka SL
