@@ -11,6 +11,7 @@ UI
 在{{A}}影視城中獲得……應該可以在工作臺與『老式遊戲機』·『紅磷粉』合成影視城探索道具。=Obtained from the Studio of Vanity, can be used with [Vintage Game Console] and [Red Phosphorus Powder] to craft studio exploration item.
 在{{A}}水壩中獲得……應該可以在工作臺與『老式遊戲機』·『珠光粉』合成水壩探索道具。=Obtained from the Dam of Wrath, can be used with [Vintage Game Console] and [Peral Powder] to craft dam exploration item.
 探索度：=<size\=19>Explored:</size>
+可用功能=Features
 調整陣容=Party Switch
 面具培養=Velvet Room
 怪盜培養=<size\=25>Manage Thieves</size>
@@ -30,6 +31,7 @@ r:"^觀察模式冷卻中，(\d+)秒後可用！$"="Third Eye in cooldown"
 強<color\=#ff0000ff>大</color>的陰影=S<color\=#ff0000ff>t</color>rong Shadow
 是否要降低難度進行挑戰(再次挑戰生效)=Do you want to lower the difficulty? \n(Take effect on next challenge)
 本次戰鬥無法進行養成與更換面具。=Cannot upgrade characters and change Personas.
+本次戰鬥無法進行養成。=Cannot upgrade characters.
 當前沒有可以調整的技能=Cannot change skill
 
 嗯？要從{{A}}撤退，返回都市嗎？=Hm? Want to retreat from the {{A}} \nand head back to the city?
@@ -52,6 +54,7 @@ r:"^這裡似乎需要<color\=#FF0000>(\d+)</color>個<color\=#FF0000>開鎖工�
 r:"^安<color\=#ff0000ff>全</color>屋$"="Sa<color\=#ff0000ff>fe</color> Room"
 r:"^安<color\=#ff0000ff>全</color>屋？$"="Sa<color\=#ff0000ff>fe</color> Room?"
 r:"^開啟了通往\n『<color\=#ff3b37>(.*)</color>』的快速移動。$"="You can now quick travel \nto this <color\=#FFDF00>Safe Room</color>."
+終於可以休息一下了。=Finally, I can take a break.
 
 ----------
 PALACE 1
@@ -474,10 +477,30 @@ PALACE 5
 ----------
 蟻穴入口=Anthill Entrance
 密林=Forest
-正門前=Main Entrance
+正門前=<size\=27>Main Entrance</size>
 側門=Side Entrance
 蟻穴=Anthill
 陰影聚集地=<size\=17>Shadows' Convergence</size>
+正門大廳=<size\=20>Main Entrance Hall</size>
+貧民窟入口=<size\=27>Slum Entrance</size>
+貧民窟B1=Slum B1
+貧民窟B2=Slum B2
+覲見室=<size\=20>Audience Chamber</size>
+
+尋找覲見室=Find the Audience Chamber
+尋找螞蟻的去向=Find where the ant goes
+尋找開啟大門的方法=Find ways to open the door
+想辦法去除荊棘=Find ways to to remove thorns
+想辦法開啟大門=Find ways to open the door
+注入費洛蒙=Infuse pheromones
+清除荊棘=Clear thorns
+變成螞蟻進入隧道=Transform into ants and enter the tunnel
+
+「<color\=#ff3b37>鑽開</color>」前進的道路=[<color\=#ff3b37>Drill</color>] the path forward
+開啟「<color\=#ff3b37>射擊模式</color>」=Open [<color\=#ff3b37>Shooting Mode</color>]
+當前狀態無法進入射擊模式=Cannot enter Shooting Mode
+透過「鍵盤<>鍵」<color\=#ff3b37>切換子彈</color>=<color\=#ff3b37>Switch ammo</color> with [<>]
+唔~當前種類的子彈好像沒有效果。=Hmm～ The current ammo seems to have no effect.
 
 ----------
 PALACE 1 BOSS
@@ -985,6 +1008,37 @@ r:"^1、本場戰鬥中{{B}}無法選中。{{B}}回合開始時，會交替給�
 雷神的祝福=Thunder God's Blessing
 
 ----------
+PALACE 5 BOSS 1
+----------
+蟻之守護=Ant's Protection
+r:"^蟻<color\=#000000>之</color>守護$"="A<color\=#000000>n</color>t's Protection"
+動員令=Mobile Order
+對所有敵人造成少量念動屬性傷害，並召喚跟班。=Deals light Psy damage to all enemies, then summons minions.
+千面之咒=Thousand Faces Curse
+對1名敵人造成念動屬性傷害，並有一定基礎機率使其陷入睡眠狀態。=Deals light Psy damage to 1 enemy, with a chance to inflict Sleep.
+甜蜜恩澤=Sweet Grace
+r:"^甜<color\=#000000>蜜</color>恩澤$"="S<color\=#000000>w</color>eet Grace"
+女王敕命=Queen's Order
+r:"^女<color\=#000000>王</color>敕命$"="Q<color\=#000000>u</color>een's Order"
+r:"^對所有敵人造成大量念動屬性傷害，並使所有同伴的傷害提升，效果持續(\d+)回合。$"="Deals heavy Psy damage to all enemies and increases all allies' DMG Dealt for $1 turns."
+
+工蟻=Worker Ant
+使生命值最低的同伴恢復一定生命值。=Restores HP to the lowest HP ally.
+兵蟻=Soldier Ant
+對1名敵人造成物理屬性傷害，優先攻擊被標記的敵人。=Deals Phys damage to 1 enemy, prioritizing marked enemies.
+
+{{A}}、工蟻、工蟻={{A}}, Worker Ant, Worker Ant
+工蟻、{{A}}、工蟻=Worker Ant, {{A}}, Worker Ant
+工蟻、工蟻、{{A}}=Worker Ant, Worker Ant, {{A}}
+{{A}}、工蟻={{A}}, Worker Ant
+工蟻、{{A}}=Worker Ant, {{A}}
+{{A}}、兵蟻={{A}}, Soldier Ant
+兵蟻、{{A}}=Soldier Ant, {{A}}
+
+死神凝視=Death Gaze
+r:"^死<color\=#000000>神</color>凝視$"="D<color\=#000000>e</color>ath Gaze"
+
+----------
 PALACE 5 ELITES
 ----------
 {{B}}自身回合結束後，轉換成{{A}}。={{B}} will transform into {{A}} at the end of their turn.
@@ -992,11 +1046,34 @@ PALACE 5 ELITES
 在自身受到攻擊時，將會使用二連牙反擊，為怪盜附加受到最終傷害提高的效果。自身回合行動結束，變回{{A}}，並獲得一層【輪迴】。=Will Counter with [Double Fangs] when attacked, increasing Thieves' Final DMG Taken. Transform into {{A}} at the end of your turn, and gain 1 stack of [Reincarnation].
 形態轉換=Shape Shift
 輪迴=Reincarnation
-有極高基礎機率使1名敵人陷入狂怒狀態 ，效果持續1回合。=There is a very high chance to inflict Rage to 1 enemy for 1 turn.
+r:"^有極高基礎機率使1名敵人陷入狂怒狀態，效果持續(\d+)回合。$"="There is a very high chance to inflict Rage to 1 enemy for $1 turn."
+
 對所有角色造成中量物理屬性傷害，並使所有角色進入『裂傷』狀態，防禦力少量降低，並每回合損失一定生命值，效果持續三回合。=Deals medium Phys damage to all enemies, and inflicts all enemies with [Laceration], lightly decreases their DEF and makes them lose HP each turn for 3 turns.
 觸發輪迴……=Triggered Reincarnation...
 r:"^由{{A}}變回{{B}}時，輪迴加(\d+)。$"="Add $1 Reincarnate when {{A}} transform into {{B}}"
 隨輪迴層數增加提高=Increase based on Reincarnation stacks
+
+r:"^1、{{B}}受到(\d+)次技能，將會發生形態轉換，變為{{A}}。\n\n2、{{B}}每次發生形態轉換都會增加【輪迴】。\n$"="1. {{B}} wll use Shape Shift after targeted by $1 skills, transform into {{A}}. \n2. After each transform, gain [Reincarnate]."
+r:"^1、{{B}}受到(\d+)次技能，將會發生形態轉換，變為{{A}}。\n2、{{B}}每次發生形態轉換都會增加【輪迴】。\n$"="1. {{B}} wll use Shape Shift after targeted by $1 skills, transform into {{A}}. \n2. After each transform, gain [Reincarnate]."
+r:"^1、{{B}}受到(\d+)次技能，將會發生形態轉換，變為{{A}}。\n2、{{B}}每次發生形態轉換都會增加【輪迴】。$"="1. {{B}} wll use Shape Shift after targeted by $1 skills, transform into {{A}}. \n2. After each transform, gain [Reincarnate]."
+r:"^1、{{B}}受到(\d+)次技能，將會發生<color\=#ff3b37>形態轉換</color>，變為{{A}}。\n2、{{A}}有<color\=#ff3b37>最終傷害減免</color>，並且在自身受到攻擊時，將會使用<color\=#ff3b37>「二連牙」</color>反擊，為怪盜附加<color\=#ff3b37>受到最終傷害提高</color>。自身回合行動結束，轉變為{{B}}。\n3、{{B}}每次發生形態轉換都會增加<color\=#ff3b37>「輪迴」</color>，當<color\=#ff3b37>「輪迴」</color>達到(\d+)時，將會在自己回合開始時釋放<color\=#ff3b37>「深淵的凝視」</color>，造成<color\=#ff3b37>群體絕望</color>$"="1. {{B}} wll use <color\=#ff3b37>Shape Shift</color> after targeted by $1 skills, transform into {{A}}. \n2. {{A}} have <color\=#ff3b37>Final DMG RES</color>, and will Counter with <color\=#ff3b37>[Double Fangs]</color> when attacked, increasing Thieves' <color\=#ff3b37>Final DMG Taken</color>. Transform into {{B}} at the end of their turn.\n3. After each transform, gain 1 stack of <color\=#ff3b37>[Reincarnate]</color>, when reaching $1 stacks of <color\=#ff3b37>[Reincarnate]</color>, will use <color\=#ff3b37>[Abyssal Gaze]</color> at the start of their turn, inflicting <color\=#ff3b37>AoE Despair</color>."
+r:"^1、{{A}}有最終傷害減免，並且在自身受到攻擊時，將會使用二連牙反擊，二連牙可以為怪盜附加受到最終傷害提高的效果。\n2、自身回合行動結束，轉變為{{B}}。\n3、當【輪迴】達到(\d+)時，將會在自己回合開始時釋放深淵的凝視，造成群體絕望$"="1. {{A}} have Final DMG RES, and will Counter with [Double Fangs] when attacked, increasing Thieves' Final DMG Taken. \n2.Transform into {{B}} at the end of their turn.\n3. When reaching $1 stacks of [Reincarnate], will use [Abyssal Gaze] at the start of their turn, inflicting AoE Despair."
+r:"^有極高基礎機率使1名敵人陷入狂怒狀態 ，效果持續(\d+)回合。$"="There is a very high chance to inflict Rage to 1 enemy for $1 turn."
+
+1、{{A}}每次發生形態轉換都會增加【輪迴】。\n2、{{A}}在給怪盜造成精神異常的同時會留下一層不可疊加、永久保留的【不安】，【不安】可以被淨化技能清除。若場上存在【不安】的怪盜達到二個，則：{{A}}在其回合開始時，恢復最大生命值。=<size\=26>1. {{A}} will add [Reincarnate] each Shape Shift.\n2. {{A}} will inflict [Anxiety] to Thieves with Mental Ailment permanently, cannot stack and can be dispelled. If there are 2 Thieves with [Anxiety], restore Max HP to {{A}} at the start of their turn.</size>
+r:"^1、{{B}}受到(\d+)次技能，將會發生<color\=#ff3b37>形態轉換</color>，變為{{A}}。\n2、{{A}}有<color\=#ff3b37>最終傷害減免</color>，並且在自身受到攻擊時，將會使用<color\=#ff3b37>「二連牙」</color>反擊，為怪盜附加<color\=#ff3b37>受到最終傷害提高</color>。自身回合行動結束，轉變為{{B}}。\n3、{{B}}每次發生形態轉換都會增加<color\=#ff3b37>「輪迴」</color>，當<color\=#ff3b37>「輪迴」</color>達到(\d+)時，將會在自己回合開始時釋放<color\=#ff3b37>「深淵的凝視」</color>，造成<color\=#ff3b37>群體絕望</color>\n4、{{B}}在給怪盜造成精神異常的同時會留下一層不可疊加、永久保留的<color\=#ff3b37>「不安」</color>，<color\=#ff3b37>「不安」</color>可以被驅散。\n若場上存在<color\=#ff3b37>「不安」</color>的怪盜達到二個，則：{{B}}在其回合開始時，恢復最大生命值。\n若達到四個，則：{{A}}則會在其回合開始時，造成怪盜生命百分比的傷害。$"="1. {{B}} wll use <color\=#ff3b37>Shape Shift</color> after targeted by $1 skills, transform into {{A}}. \n2. {{A}} have <color\=#ff3b37>Final DMG RES</color>, and will Counter with <color\=#ff3b37>[Double Fangs]</color> when attacked, increasing Thieves' <color\=#ff3b37>Final DMG Taken</color>. Transform into {{B}} at the end of their turn.\n3. After each transform, gain 1 stack of <color\=#ff3b37>[Reincarnate]</color>, when reaching $1 stacks of <color\=#ff3b37>[Reincarnate]</color>, will use <color\=#ff3b37>[Abyssal Gaze]</color> at the start of their turn, inflicting <color\=#ff3b37>AoE Despair</color>.\n4. {{B}} will inflict <color\=#ff3b37>[Anxiety]</color> to Thieves with Mental Ailment permanently, cannot stack and can be dispelled. \nIf there are 2 Thieves with <color\=#ff3b37>[Anxiety]</color>, restore Max HP to {{B}} at the start of their turn.\nIf there are 4 Thieves with <color\=#ff3b37>[Anxiety]</color>, deal percentage damage to all Thieves at the start of {{A}}' turn."
+r:"^1、{{A}}有最終傷害減免，並且在自身受到攻擊時，將會使用二連牙反擊，二連牙可以為怪盜附加受到最終傷害提高的效果。\n2、自身回合行動結束，轉變為{{B}}。\n3、若【不安】達到四層，則：{{A}}則會在其回合開始時，造成最大生命百分比的傷害。\n4、當【輪迴】達到(\d+)時，將會在自己回合開始時釋放深淵的凝視，造成群體絕望。$"="1. {{A}} have Final DMG RES, and will Counter with [Double Fangs] when attacked, increasing Thieves' Final DMG Taken. \n2.Transform into {{B}} at the end of their turn.\n3. When reaching 4 stacks of [Anxiety], will deal percentage damage to all Thieves at the start of {{A}}' turn. \n4. When reaching $1 stacks of <color\=#ff3b37>[Reincarnate]</color>, will use <color\=#ff3b37>[Abyssal Gaze]</color> at the start of their turn, inflicting AoE Despair."
+不安=Anxiety
+r:"^不<color\=#000000>安</color>$"="A<color\=#000000>n</color>xiety"
+受擊=Attacked
+r:"^變成{{A}}時，輪迴加(\d+)，達到(\d+)時釋放『深淵的凝視』$"="Add $1 Reincarnate when transformed into {{A}}, use [Abyssal Gaze] when reaching $2 stacks"
+根據擁有不安的怪盜數量，{{A}}觸發技能={{A}} will trigger skills based on the number of Thieves with Anxiety
+r:"^對所有敵人造成一定基於當前生命值的百分比傷害，並使其進入<link\="s\|155"><u>絕望</u></link>狀態，持續(\d+)回合。$"="Deals percentage damage based on current HP to all enemies, then inflicts <link\="s|155"><u>Despair</u></link> for $1 turns."
+靈魂戰慄=Soul Tremor
+對所有敵人造成一定基於當前生命值的百分比傷害。=Deals percentage damage based on current HP to all enemies.
+r:"^有極高基礎機率使2名敵人陷入狂怒狀態，效果持續(\d+)回合。$"="There is a very high chance to inflict Rage to 2 enemies for $1 turn."
+{{A}}將要發生形態變化……={{A}} is about to Shape Shift...
+r:"^<color\=#FF0000>(.*)</color>進入了不安狀態……$"="<color\=#FF0000>$1</color> entered Anxiety..."
 
 r:"^1、詭譎的{{A}}擁有極高的生命值。\n2、在其回合結束時，若場上不存在{{A}}的倒影，則恢復(\d+%)的最大生命值。\n2、若場上存在{{A}}的倒影，則損失(\d+%)的最大生命值。$"="<size\=28>1. Strange {{A}} have extreme HP. \n2. At the end of their turn, restore $1 Max HP if there is no Reflection of {{A}}.\n3. Lose $2 Max HP if there is Reflection of {{A}}.</size>"
 r:"^1、詭譎的{{A}}擁有極高的生命值。\n2、在其回合結束時，若場上不存在{{A}}的倒影，則恢復(\d+%)的最大生命值。\n3、若場上存在{{A}}的倒影，則損失(\d+%)的最大生命值。$"="<size\=28>1. Strange {{A}} have extreme HP. \n2. At the end of their turn, restore $1 Max HP if there is no Reflection of {{A}}.\n3. Lose $2 Max HP if there is Reflection of {{A}}.</size>"
@@ -1010,6 +1087,20 @@ r:"^使所有敵人進入顧影狀態，每次行動損失生命值，持續(\d+
 受到技能時，驅散一層「倒影」，驅散所有「倒影」時，{{A}}的倒影即死=Dispel 1 stack of [Reflection] when attacked. Die when all [Reflection] are dispelled.
 {{A}}的倒影受到攻擊後會驅散一層【倒影】，【倒影】被全部驅散時，{{A}}的倒影即死。=When Reflection of {{A}} is attacked, dispel 1 stack of [Reflection]. Die when all [Reflection] are dispelled.
 消散=Dispersion
+
+r:"^1、回合結束時，若{{A}}的倒影存在，則{{A}}隨機給一位怪盜施加高機率暈眩。\n2、當{{A}}的倒影被擊殺時，詭譎的{{A}}會恢復(\d+%)的最大生命值。$"="<size\=26>1. At the end of turn, if the is a Reflection of {{A}}, all {{A}} will have a high chance to inflict 1 Thief with Dizzy. \n2. When you defeat Reflection of {{A}}, Strange {{A}} will restore $1 Max HP.</size>"
+回合開始時，若場上沒有{{A}}的倒影，則召喚一個{{A}}的倒影。=At the start of turn, if there is no Reflection of {{A}}, summon 1 Reflection of {{A}}.
+r:"^1、{{A}}的倒影受到攻擊後會驅散一層<color\=#ff3b37>「倒影」</color>，<color\=#ff3b37>「倒影」</color>被全部驅散時，{{A}}的倒影即死。\n2、{{A}}的倒影被擊殺時，會恢復詭譎的{{A}}(\d+%)的最大生命值。\n3、詭譎的{{A}}的回合結束時，若{{A}}的倒影存在，則{{A}}額外釋放<color\=#ff3b37>「暈眩」</color>技能，機率對怪盜造成暈眩。$"="1. Reflection of {{A}} will lose 1 stack of <color\=#ff3b37>[Reflection]</color> when attacked, die when all <color\=#ff3b37>[Reflection]</color> are dispelled.\n2. When you defeat Reflection of {{A}}, Strange {{A}} will restore $1 Max HP. \n3. At the end of Strange {{A}}' turn, if Reflection of {{A}} is present, all {{A}} will use <color\=#ff3b37>[Dazzler]</color>."
+r:"^1、{{A}}的倒影受到攻擊後會驅散一層【倒影】，【倒影】被全部驅散時，{{A}}的倒影即死\n2、{{A}}的倒影被擊殺時，會恢復{{A}}(\d+%)的最大生命值。$"="1. Reflection of {{A}} will lose 1 stack of <color\=#ff3b37>[Reflection]</color> when attacked, die when all <color\=#ff3b37>[Reflection]</color> are dispelled.\n2. When you defeat Reflection of {{A}}, Strange {{A}} will restore $1 Max HP."
+
+詭譎的{{A}}根據場上{{A}}的倒影的數量，獲得最終傷害減免和額外釋放技能次數。=Strange {{A}} will gain Final DMG RES and skill usage based on the number of Reflection of {{A}}.
+r:"^1、回合開始時，若場上{{A}}的倒影的數量小於(\d+)個，則召喚一個{{A}}的倒影。\n2、在其回合釋放顧影，使所有怪盜每次行動損失固定(\d+%)生命值。\n3、根據場上{{A}}的倒影的數量，獲得最終傷害減免和額外釋放技能次數。$"="<size\=21>1. At the start of turn, if there are less than $1 Reflection of {{A}}, summon 1 Reflection of {{A}}.\n2. Use Narcissism during their turn, make Thieves lose $1 fixed Max HP after each action. \n3. Gain Final DMG RES and skill usage based on the number of Reflection of {{A}}.</size>"
+r:"^1、{{B}}的倒影受到攻擊後會驅散一層【倒影】，每回合恢復三層【倒影】，【倒影】被全部驅散時，{{B}}的倒影即死。\n每存在一個倒影，就會給隊友提供一層【神隱】，受到傷害降低(\d+%)。\n3、每存在一個倒影，給予詭譎的{{B}}和{{A}}額外的技能釋放次數。$"="1. Reflection of {{B}} will lose 1 stack of [Reflection] when attacked, restore 3 stacks of [Reflection] each turn, die when all [Reflection] are dispelled.\n2. For every Reflection, give all allies [Mirage], decrease DMG Taken by $1. \n3. For every Reflection, Strange {{B}} and {{A}} additionally gain skill usage."
+r:"^1、{{B}}的倒影受到攻擊後會驅散一層<color\=#ff3b37>「倒影」</color>，<color\=#ff3b37>「倒影」</color>被全部驅散時，{{B}}的倒影即死。\n2、每存在一個{{B}}的倒影，就會給隊友提供一層<color\=#ff3b37>「幻鏡」</color>，受到傷害降低(\d+%)。\n3、每存在一個{{B}}的倒影，給予詭譎的{{B}}和{{A}}額外的<color\=#ff3b37>技能釋放次數</color>。\n4、{{A}}的回合開始時，若場上{{B}}的倒影小於(\d+)個，則召喚一個{{B}}的倒影。在其回合釋放技能<color\=#ff3b37>「顧影」</color>，使所有怪盜每次行動損失固定(\d+%)生命值。\n5、詭譎的{{B}}會對{{A}}使用<color\=#ff3b37>「神隱」</color>，將其適應性改為無。$"="1. Reflection of {{B}} will lose 1 stack of <color\=#ff3b37>[Reflection]</color> when attacked, die when all <color\=#ff3b37>[Reflection]</color> are dispelled.\n2. For every Reflection of {{B}}, give all allies <color\=#ff3b37>[Mirage]</color>, decrease DMG Taken by $1. \n3. For every Reflection of {{B}}, Strange {{B}} and {{A}} additionally gain <color\=#ff3b37>skill usage</color>. \n4. At the start of {{B}}'s turn, if there are less than $2 Reflection of {{B}}, summon 1 Reflection of {{B}}. Use <color\=#ff3b37>[Narcissism]</color> during their turn, make Thieves lose $3 fixed Max HP after each action. \n5. Strange {{B}} will use <color\=#ff3b37>[Spirited Away]</color> on {{A}}, change all resistance to Null."
+幻鏡=Mirage
+r:"^幻<color\=#000000>鏡</color>$"="M<color\=#000000>i</color>rage"
+r:"^每個{{A}}的倒影給隊友提供(\d+%)的最終傷害減免，倒影被擊殺時，驅散buff$"="Each Reflection of {{A}} give allies $1 Final DMG RES, dispel this buff when defeating the Reflection"
+神隱=Spirited Away
 
 ----------
 CROSS FATE PALACE (CF) (COLLAB)
