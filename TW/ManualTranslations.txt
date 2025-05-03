@@ -260,6 +260,9 @@ r:"^待設置$"="None"
 「<color\=#ff3b37>近戰攻擊</color>」選中的敵人=Use [<color\=#ff3b37>Melee Attack</color>]
 每個怪盜都有獨特的「<color\=#ff3b37>HIGHLIGHT</color>」技能，\n該技能釋放，需要累積對應<color\=#ff3b37>能量</color>。=Every Thief has a unique [<color\=#ff3b37>HIGHLIGHT</color>] skill.\nUnlocks after gaining enough [<color\=#ff3b37>HIGHLIGHT Energy</color>].
 釋放「<color\=#ff3b37>HIGHLIGHT</color>」終結戰鬥！=Finish the battle with [<color\=#ff3b37>HIGHLIGHT</color>]!
+每個怪盜都有一個獨特的超強技能，\n稱之為「<color\=#ff3b37>HIGHLIGHT</color>」技能。\n「HIGHLIGHT」技能無法觸發暴擊效果。=Each Thief has a unique super skill called [<color\=#ff3b37>HIGHLIGHT</color>].\n[HIGHLIGHT] cannot trigger CRIT DMG.
+怪盜行動時、攻擊造成WEAK時，\n會獲得<color\=#ff3b37>HIGHLIGHT能量</color>。\n能量累積滿後，可在任意怪盜行動時釋放。=Gain <color\=#ff3b37>HIGHLIGHT Energy</color> after Thieves' action and when dealing Weak damage.\nWhen full, you can use it on any Thieves' action.
+怪盜「HIGHLIGHT」使用後，有<color\=#ff3b37>4回合</color>冷卻時間，\n冷卻後「<color\=#ff3b37>重置</color>」該怪盜的HIGHLIGHT「<color\=#ff3b37>使用機會</color>」。=After a Thief used [HIGHLIGHT], there is a <color\=#ff3b37>4 turns</color> cooldown on their [HIGHLIGHT].
 「<color\=#ff3b37>疾跑</color>」加快移動速度=[<color\=#ff3b37>Dash</color>] to move faster
 角色擁有強力的「<color\=#ff3b37>ONE MORE</color>」技能，\n戰鬥中使敵人倒地後可以釋放。=Characters have powerful [<color\=#ff3b37>ONE MORE</color>] skill.\nYou can use it after Downing enemies.
 教學=Tutorial
@@ -1253,6 +1256,7 @@ r:"^本期通行證期間，累計登入(\d+)天 \((\d+)/(\d+)\)$"="Log in for $
 簽訂命運的契約，與註定的夥伴在此相遇！=Sign the contract of destiny and meet your destined teammates!
 『{{A}}』\n天然打磨的稀有晶狀珀芯，可用於『角色契約』、『武器補給』及『購買主角體力』。=[{{A}}]\nA naturally polished rare crystalline core, can be used in [Character Contract], [Weapon Supply], and [Purchase Wonder Stamina].
 天然打磨的稀有晶狀珀芯，可用於『角色契約』、『武器補給』及『購買主角體力』。=A naturally polished rare crystalline core, can be used in [Character Contract], [Weapon Supply], and [Purchase Wonder Stamina].
+{{A}}已加入契約=Added {{A}} to Contract
 
 r:"^是否消耗[(.*)]×(.*)，\n購買(.*)張(.*)]？$"="Consume [$1] x $2 \nto buy [$3] x $4?"
 
@@ -2017,6 +2021,8 @@ r:"^{{A}}似乎有話要說，要陪她嗎？$"="{{A}} seems to have something t
 回家，突擊檢查=<size\=24>Surprise home inspection</size>
 {{A}}想知道你有沒有照顧好自己……={{A}} wants to know if you're taking care of yourself...
 
+防範藉口=<size\=24>Prevention excuses</size>
+
 r:"^似乎是和{{A}}<color\=#FFC000>第一次</color>去這個地方，應該更能增進感情。$"="<size\=25>This is the <color\=#FFC000>first time</color> I have gone to that place with {{A}}.\nWe should be able to grow closer.</size>"
 
 {{A}}有著非常熱鬧的<color\=#ff0000>商業街</color>和<color\=#ff0000>電影院</color>啊，\n要前往那裡去看看嗎？=<size\=30>There are crowded <color\=#ff0000>Central Street</color> and \n<color\=#ff0000>Movie Theater</color> in {{A}}. Want to go there?</size>
@@ -2367,8 +2373,9 @@ r:"^{{A}}探索度獎勵$"="{{A}} Exploration Reward"
 
 當前陣容額外獎勵加成：=Bonus rewards for the current team:
 每日領取補給\n濃縮咖啡<color\=#FFEC00>x1</color>=Claim daily\nEspresso <color\=#FFEC00>x1</color>
-r:"^活動期間，成功挑戰「養成材料」中的技能升級材料、怪盜潛能材料、武器突破材料副本，可以獲得雙份獎勵。$"="During the event, you can get double rewards after completing Incense Farm, Character Ascension Farm, Weapon Ascension Farm."
-r:"^今日雙份剩餘次數：$"="Today  2x  Rewards:"
+活動期間，成功挑戰「養成材料」中的技能升級材料、怪盜潛能材料、武器突破材料副本，可以獲得雙份獎勵。=During the event, gain 2x rewards after completing Incense Farm, Character Ascension Farm, Weapon Ascension Farm.
+活動期間，成功挑戰「啟示套裝」中的副本，可以獲得雙份獎勵。=During the event, gain 2x rewards after completing Revelation Farm.
+r:"^今日雙份剩餘次數：$"="Daily 2x Rewards:"
 r:"^每日次數：$"="Attempt(s):"
 r:"^限時關每日次數：$"="Daily Attempt(s):"
 r:"^限時關今日剩餘次數：$"="Daily Attempt(s):"
@@ -2444,7 +2451,7 @@ r:"^破碎的金屬零件，可用於提升武器經驗，使用後立即提升(
 迷情香=Charming Incense
 金絲香=Golden Incense
 怒顏香=Wrathful Incense
-啖夢香=<size\=23>Dream Devouring Incense</size>
+啖夢香=<size\=20>Dream Devouring Incense</size>
 r:"^散發出魅惑氣味的香丸，可用於提升技能等級至Lv.7-Lv.10。$"="Incense with a seductive scent, can be used to level up Skills to Lv.7-Lv.10."
 r:"^散發出神秘氣味的香丸，可用於提升技能等級至Lv.7-Lv.10。$"="Incense with a mysterious scent, can be used to level up Skills to Lv.7-Lv.10."
 r:"^散發出熾烈氣味的香丸，可用於提升技能等級至Lv.7-Lv.10。$"="Incense with a fiery scent, can be used to level up Skills to Lv.7-Lv.10."
@@ -2780,6 +2787,7 @@ r:"^完成(\d+)次委託派遣 \((\d+)\/(\d+)\)$"="Complete $1 Commissions ($2/$
 r:"^完成(\d+)次往日回溯\((\d+)\/(\d+)\)$"="Complete $1 Past Echo ($2/$3)"
 在「星盤試煉」中通過「紫色或紅色」監測點=Clear 1 [Purple or Red] Monitoring Point in Astrolabe Trials
 r:"^在「星盤試煉」中通過「紫色或紅色」監測點\((\d+)\/(\d+)\)$"="Clear 1 [Purple or Red] Monitoring Point in Astrolabe Trials ($1/$2)"
+r:"^在「星盤試煉」中通過任意(\d+)個監測點\((\d+)\/(\d+)\)$"="Clear $1 Monitoring Point in Astrolabe Trials ($2/$3)"
 r:"^累計消耗(\d+)點體力\((\d+)\/(\d+)\)$"="Spend $1 Stamina ($2/$3)"
 r:"^累計消耗(\d+)點行動力\((\d+)\/(\d+)\)$"="Spend $1 Energy Points ($2/$3)"
 完成1次閼凶夢之扉=Complete 1 Door of Nightmares
@@ -3071,6 +3079,7 @@ r:"^戰鬥中至少打出(\d+)次ONEMORE$"="Use at least $1 ONE MORE"
 與{{A}}一起放煙火=Watch fireworks with {{A}}
 r:"^燃放(\d+)個煙火\((\d+)\/(\d+)\)$"="Set off $1 fireworks ($2/$3)"
 
+r:"^完成「命書一覽」中的限時任務獲得道具「時諭之墨」，使用該道具可在活動期間內定製(\d+)張啟示卡。$"="Complete [Pursuing Fate] missions for [Ink of Time] to make $1 custom Revelation."
 時諭之墨=Ink of Time
 尚未定製=Not customized
 暫無副屬性資訊，請先定製套裝=No Sub Stats info
