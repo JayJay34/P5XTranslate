@@ -444,8 +444,8 @@ r:"^使所有同伴攻擊力提升\（數值相當於自身攻擊力的(\d+%)，
 r:"^『HIGHLIGHT』：使所有同伴攻擊力提升\（數值相當於自身攻擊力的(\d+\.\d+%)，上限<color\=#FFFC40>(\d+)</color>\），效果抵抗提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合，並使所有同伴獲得(\d+)層<link\="s\|111"><u>祝福</u></link>效果。\n『ONE MORE』：對1名敵人造成祝福屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[HIGHLIGHT]: Increases all allies' ATK (Based on $1 own ATK, up to <color\=#FFFC40>$2</color>) and Effect RES by <color\=#FFFC40>$3</color> for $4 turns, then gives all allies $5 stack of <link\="s|111"><u>Bless</u></link>.\n[ONE MORE]: Deals Bless damage to 1 enemy. \nMelee Attack: Uses a melee weapon to deal light Phys damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
 r:"^『HIGHLIGHT』：使所有同伴攻擊力提升\(數值相當於自身攻擊力的(\d+\.\d+%)，上限<color\=#FFFC40>(\d+)</color>\），效果抵抗提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合，並使所有同伴獲得(\d+)層<link\="s\|111"><u>祝福</u></link>效果。\n『ONE MORE』：對1名敵人造成<link\="s\|111"><u>祝福</u></link>屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械攻擊：使用槍械射擊1名敵人，造成少量射擊屬性傷害，根據子彈數量可以射擊多次。$"="[HIGHLIGHT]: Increases all allies' ATK (Based on $1 own ATK, up to <color\=#FFFC40>$2</color>) and Effect RES by <color\=#FFFC40>$3</color> for $4 turns, then gives all allies $5 stack of <link\="s|111"><u>Bless</u></link>.\n[ONE MORE]: Deals Bless damage to 1 enemy. \nMelee Attack: Uses a melee weapon to deal light Phys damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
 
-r:"^擁有<link\="s\|111"><u>祝福</u></link>效果的友方同伴，每層<link\="s\|111"><u>祝福</u></link>使其傷害提升(\d+%)，上限<color\=#FFFC40>(\d+\.\d+%)</color>。$"="For each stack of <link\="s|111"><u>Bless</u></link> on allies, increase their DMG Dealt by $1, up to <color\=#FFFC40>$2</color>."
-r:"^擁有<link\="s\|111"><u>祝福</u></link>效果的友方同伴，每層<link\="s\|111"><u>祝福</u></link>使其傷害提升(\d+%)，上限<color\=#0169ca>(\d+\.\d+%)</color>。$"="For each stack of <link\="s|111"><u>Bless</u></link> on allies, increase their DMG Dealt by $1, up to <color\=#0169ca>$2</color>."
+r:"^擁有<link\="s\|111"><u>祝福</u></link>效果的友方同伴，每層<link\="s\|111"><u>祝福</u></link>使其傷害提升(\d+%)，上限<color\=#FFFC40>(\d+\.\d+%)</color>。$"="For every stack of <link\="s|111"><u>Bless</u></link> on allies, increase their DMG Dealt by $1, up to <color\=#FFFC40>$2</color>."
+r:"^擁有<link\="s\|111"><u>祝福</u></link>效果的友方同伴，每層<link\="s\|111"><u>祝福</u></link>使其傷害提升(\d+%)，上限<color\=#0169ca>(\d+\.\d+%)</color>。$"="For every stack of <link\="s|111"><u>Bless</u></link> on allies, increase their DMG Dealt by $1, up to <color\=#0169ca>$2</color>."
 
 r:"^自身每有(\d+%)的效果命中，攻擊力提升(\d+\.\d+%)，上限<color\=#FFFC40>(\d+\.\d+%)</color>。$"="For every $1 EHR, increase ATK by $2, up to <color\=#FFFC40>$3</color>."
 r:"^自身每有(\d+%)的效果命中，攻擊力提升(\d+\.\d+%)，上限<color\=#0169ca>(\d+\.\d+%)</color>。$"="For every $1 EHR, increase ATK by $2, up to <color\=#0169ca>$3</color>."
@@ -901,7 +901,7 @@ r:"^將1名同伴當前生命值的(\d+%)按照(\d+%)的比例置換為護盾，
 
 r:"^英勇轉化 Lv.(\d+)$"="Heroic Conversion Lv.$1"
 r:"^英勇轉化 <color\=#0F69CB>Lv.(\d+)</color>$"="Heroic Conversion <color\=#0F69CB>Lv.$1</color>"
-r:"^使1名同伴的攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。效果持續時間，目標身上每有1層<link\="s\|128"><u>『啟動』</u></link>，則基於{{A}}攻擊力的(\d+%)獲得攻擊力提升，透過這種方式獲得的攻擊力上限為<color\=#FFFC40>(\d+\.\d+)</color>。\n<b><size\=28><color\=#850101>正義的力量不會遲到，以英雄所持的印記為同伴增添助力，這場戰役永不會輸！</color></size></b>$"="Increases 1 ally's ATK by <color\=#FFFC40>$1</color> for 2 turns. When this effect is active, for each 1 stack of <link\="s|128"><u>[Activate]</u></link> on the target, increases their ATK based on $2 own ATK, up to <color\=#FFFC40>$3</color>.\n<b><size\=28><color\=#850101>The power of justice will not be delayed, and by using the seal held by the hero to add strength to your companions, you will never lose this battle!</color></size></b>"
+r:"^使1名同伴的攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。效果持續時間，目標身上每有1層<link\="s\|128"><u>『啟動』</u></link>，則基於{{A}}攻擊力的(\d+%)獲得攻擊力提升，透過這種方式獲得的攻擊力上限為<color\=#FFFC40>(\d+\.\d+)</color>。\n<b><size\=28><color\=#850101>正義的力量不會遲到，以英雄所持的印記為同伴增添助力，這場戰役永不會輸！</color></size></b>$"="Increases 1 ally's ATK by <color\=#FFFC40>$1</color> for 2 turns. When this effect is active, for every stack of <link\="s|128"><u>[Activate]</u></link> on the target, increases their ATK based on $2 own ATK, up to <color\=#FFFC40>$3</color>.\n<b><size\=28><color\=#850101>The power of justice will not be delayed, and by using the seal held by the hero to add strength to your companions, you will never lose this battle!</color></size></b>"
 
 r:"^『HIGHLIGHT』：使1名同伴獲得滿層<link\="s\|128"><u>『啟動』</u></link>，效果持續2回合，若目標生命值低於(\d+%)，則使其生命值恢復至(\d+%)，回復的生命值上限為{{A}}攻擊力的(\d+%)。並基於{{A}}攻擊力的(\d+%)提升其攻擊力，上限<color\=#FFFC40>(\d+\.\d+)</color>點，效果持續2回合。\n『ONE MORE』：對1名敵人造成核熱屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[HIGHLIGHT]: Gives 1 ally maxed stacks of <link\="s|128"><u>[Activate]</u></link> for 2 turns. If their HP is below $1 then restores their HP to $2 HP, up to $3 ATK. Increases their ATK by $4, up to <color\=#FFFC40>$5</color> for 2 turns. \n[ONE MORE]: Deals Nuke damage to 1 enemy. \nMelee Attack: Uses a melee weapon to deal light Phys damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
 
@@ -1762,7 +1762,7 @@ r:"^銀華殘心 Lv.(\d+)$"="Ginka-Zanshin Lv.$1"
 r:"^銀華殘心 <color\=#0F69CB>Lv.(\d+)</color>$"="Ginka-Zanshin <color\=#0F69CB>Lv.$1</color>"
 r:"^接下來1次<link\="s\|123"><u>『遊龍展布』</u></link>攻擊強化為<link\="s\|172"><u>『墨見龍吟』</u></link>。攻擊觸發機率提升至(\d+%)、技能倍率提升相當於{{A}}<color\=#FFFC40>(\d+\.\d+%)</color>的防禦力並且以群體為目標攻擊。若1回合內未觸發<link\="s\|172"><u>『墨見龍吟』</u></link>強化反擊，則自動觸發。\n此外自身獲得<color\=#FFFC40>(\d+\.\d+%)</color>防禦力\+<color\=#FFFC40>(\d+)</color>的護盾，效果持續2回合。將自身弱點暫時變為默認耐性、免疫任何精神異常並使所有敵人獲得<link\="s\|143"><u>嘲諷</u></link>狀態，效果持續2回合。\n冷卻時間：1回合。\n<b><size\=28><color\=#850101>璀璨的星光之中，冒著寒意的薄霧凝結成一層晶瑩剔透的護盾，護盾吸引了敵人的目光，也阻絕了一部分來自敵人的傷害。</color></size></b>$"="Upgrades your next <link\="s|123"><u>[Dragons Dance]</u></link> to <link\="s|172"><u>[Dragon Roar]</u></link>. Increases the chance to trigger Counter to $1, increases skill multiplier by <color\=#FFFC40>$2</color> DEF and it is now an AoE attack. Automatically triggers <link\="s|172"><u>[Dragon Roar]</u></link> if you didn't triggered it for 1 turn.\nGains <color\=#FFFC40>$3</color> DEF + <color\=#FFFC40>$4</color> as Shield for 2 turns. Turns your weakness into neutral, gains immunity to Mental Ailments and <link\="s|143"><u>Taunt</u></link> all enemies for 2 turns.\nCooldown: 1 turn.\n<b><size\=28><color\=#850101>Amidst the bright starlight, a chilling mist condenses into a crystalline shield that attracts the eyes of the enemy and blocks some of the damage coming from them.</color></size></b>"
 
-r:"^『HIGHLIGHT』：對全體敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>防禦力的冰凍屬性傷害，並使遊龍展布觸發機率提升(\d+%)，持續(\d+)回合。\n『ONE MORE』：對1名敵人造成冰凍屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[HIGHLIGHT]: Deals <color\=#FFFC40>$1</color> DEF Ice damage to all enemies, increases the chance to trigger Dragon Dance by $2 for $3 turns.\nFreeze: Inflicts 178% of Defense damage to all enemies, and increases the trigger rate of the dragon by 35% for 3 turns.\n[ONE MORE]: Deals Ice damage to 1 enemy. \nMelee Attack: Uses a melee weapon to deal light Phys damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
+r:"^『HIGHLIGHT』：對全體敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>防禦力的冰凍屬性傷害，並使遊龍展布觸發機率提升(\d+%)，持續(\d+)回合。\n『ONE MORE』：對1名敵人造成冰凍屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[HIGHLIGHT]: Deals <color\=#FFFC40>$1</color> DEF Ice damage to all enemies, increases the chance to trigger Dragon Dance by $2 for $3 turns.\n[ONE MORE]: Deals Ice damage to 1 enemy. \nMelee Attack: Uses a melee weapon to deal light Phys damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
 
 r:"^創造 Lv.(\d+)$"="Creation Lv.$1"
 r:"^獲得護盾時傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合，可疊(\d+)層。$"="When gaining Shield increase DMG Bonus by <color\=#FFFC40>$1</color> for $2 turns, up to $3 stacks."
@@ -1864,7 +1864,7 @@ r:"^進入<link\="s\|178"><u>『鐵血意志』</u></link>狀態時立刻為1個
 禮行·順守=Etiquette - Follow
 
 化柔·破力=Tai Chi - Force
-r:"^HIGHLIGHT效果提升：獲得熱質升至(\d+)層。消耗熱質，最多為敵人添加4個元素異常並且最多提升(\d+)次技能傷害。$"="HIGHLIGHT Effect Boost: Increase Caloric Mass to $1 stacks. You can now inflict Elemental Ailments and increase skill damage up to $2 times."
+r:"^HIGHLIGHT效果提升：獲得熱質升至(\d+)層。消耗熱質，最多為敵人添加(\d+)個元素異常並且最多提升(\d+)次技能傷害。$"="HIGHLIGHT Effect Boost: Increases Thermal Mass to $1 stacks. When consuming Thermal Mass, inflicts up to $2 Elemental Ailments and increases skill damage up to $2 times."
 
 呼吸·調和=Breathing - Harmony
 r:"^進入<link\="s\|178"><u>『鐵血意志』</u></link>狀態時，獲得1個額外回合（進入額外回合時，角色身上的持續型效果不會扣除持續回合數）。『超載聚變』的SP消耗減少<color\=#FFFC40>(\d+%)</color>。$"="When entering <link\="s|178"><u>[Iron Will]</u></link>, gain 1 additional Extra Turn (When entering Extra Turn, you will not decrease buffs and debuffs duration). Decrease the SP cost of [Fusion Overload] by <color\=#FFFC40>$1</color>."
@@ -2063,7 +2063,7 @@ r:"^<link\="s\|198"><u>『尋獵者』</u></link>狀態：對1名敵人造成(\d
 
 r:"^夜幕已至 Lv.(\d+)$"="Night's Arrival Lv.$1"
 r:"^夜幕已至 <color\=#0F69CB>Lv.(\d+)</color>$"="Night's Arrival <color\=#0F69CB>Lv.$1</color>"
-r:"^任意敵人的<link\="s\|196"><u>『流血』</u></link>層數≥7時該技能解鎖。\n轉變至<link\="s\|199"><u>『行刑官』</u></link>狀態，改變技能模式，並獲得效果：使用技能時，目標每有(\d+)層<link\="s\|196"><u>『流血』</u></link>，{{A}}額外對其造成1次『撕裂』：<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害。\n使用該技能後本回合仍可使用其他技能，回合結束時自動轉變至<link\="s\|198"><u>『尋獵者』</u></link>狀態。\n<b><size\=28><color\=#850101>利刃交錯，雙頭刀巧妙合一，刀身相接之處寒光迸現，刀勢瞬變，盡在掌握。</color></size></b>$"="Unlocks when any enemy have ≥ 7 stacks of <link\="s|196"><u>[Bleed]</u></link>.\nTransforms into <link\="s|199"><u>[Executioner]</u></link>, changes skill and gains this effect: When using skills, for every $1 stacks of <link\="s|196"><u>[Bleed]</u></link>, deals 1 additional hit of [Laceration]: <color\=#FFFC40>$2</color> ATK Phys damage. \nYou can still use other skills after using this skill, automatically transforms back into <link\="s|198"><u>[Hunter]</u></link> at the end of the turn.\n<b><size\=28><color\=#850101>The sharp blades are intertwined, and the twin blades are skillfully united, with cold light bursting out from where the blades meet, and the blade's momentum changes in an instant, which is within your grasp.</color></size></b>"
+r:"^任意敵人的<link\="s\|196"><u>『流血』</u></link>層數≥7時該技能解鎖。\n轉變至<link\="s\|199"><u>『行刑官』</u></link>狀態，改變技能模式，並獲得效果：使用技能時，目標每有(\d+)層<link\="s\|196"><u>『流血』</u></link>，{{A}}額外對其造成1次『撕裂』：<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害。\n使用該技能後本回合仍可使用其他技能，回合結束時自動轉變至<link\="s\|198"><u>『尋獵者』</u></link>狀態。\n<b><size\=28><color\=#850101>利刃交錯，雙頭刀巧妙合一，刀身相接之處寒光迸現，刀勢瞬變，盡在掌握。</color></size></b>$"="Unlocks when any enemy have ≥ 7 stacks of <link\="s|196"><u>[Bleed]</u></link>.\nTransforms into <link\="s|199"><u>[Executioner]</u></link>, changes skill and gains this effect: When using skills, for every $1 stacks of <link\="s|196"><u>[Bleed]</u></link>, deals 1 additional hit of [Laceration]: <color\=#FFFC40>$2</color> ATK Phys damage. \nYou can still use other skills after using this skill, automatically transforms back into <link\="s|198"><u>[Hunter]</u></link> at the end of turn.\n<b><size\=28><color\=#850101>The sharp blades are intertwined, and the twin blades are skillfully united, with cold light bursting out from where the blades meet, and the blade's momentum changes in an instant, which is within your grasp.</color></size></b>"
 
 r:"^『HIGHLIGHT』：轉變至<link\="s\|198"><u>『尋獵者』</u></link>狀態，立刻為1名敵人添加(\d+)層<link\="s\|196"><u>『流血』</u></link>；隨即轉變至<link\="s\|199"><u>『行刑官』</u></link>狀態，對其造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害。（可觸發<link\="s\|197"><u>『撕裂』</u></link>效果）\n『ONE MORE』：對1名敵人造成物理屬性傷害。\n近戰攻擊：處於<link\="s|198"><u>『尋獵者』</u></link>狀態時：使用近戰武器，對1名敵人造成2次物理屬性的較少傷害。處於<link\="s|199"><u>『行刑官』</u></link>狀態時：使用近戰武器，對1名敵人造成1次物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[HIGHLIGHT]: Transforms into <link\="s|198"><u>[Hunter]</u></link>, immediately inflicts $1 stacks of <link\="s|196"><u>[Bleed]</u></link> to 1 enemy; Afterwards immediately transforms into <link\="s|199"><u>[Executioner]</u></link>, deals <color\=#FFFC40>$2</color> ATK Phys damage. (Can trigger the effect of <link\="s|197"><u>[Laceration]</u></link>)\n[ONE MORE]: Deals Phys damage to 1 enemy. \nMelee Attack: Uses a melee weapon to deal light Phys damage to 1 enemy. \nGun Attack: Uses a gun to shoot 1 enemy. dealing Gun damage, can shoot multiple times based on ammo."
 
@@ -2484,7 +2484,7 @@ r:"^<nobr>{{A}}可以為苗刀附著火焰，將近戰攻擊強化為<link\="s\|
 r:"^『鐵火流星迎春宵』的初始冷卻時間減少(\d+)回合，<link\="s\|222"><u>『鐵花舞』</u></link>狀態的持續時間延長(\d+)回合或持續至釋放(\d+)次<link\="s\|223"><u>『鐵火流星』</u></link>，處於<link\="s\|222"><u>『鐵花舞』</u></link>狀態下，{{A}}技能得到升級。\n『福滿乾坤』：使<link\="s\|223"><u>『鐵火流星』</u></link>再次強化，暴擊效果提升(\d+%)；\n『爆竹聲聲』：使<link\="s\|223"><u>『鐵火流星』</u></link>再次強化，使目標額外陷入(\d+)層<link\="s\|224"><u>『歲火』</u></link>狀態。$"="Decreases the initial cooldown of [Shooting Star Greetings] by $1 turn, extends the duration of <link\="s|222"><u>[Iron Flower Dance]</u></link> by $2 turn or after using <link\="s|223"><u>[Fiery Shooting Star]</u></link> $3 times. Under <link\="s|222"><u>[Iron Flower Dance]</u></link>, upgrade your Persona skills.\n[Abundant World]: Upgrades <link\="s|223"><u>[Fiery Shooting Star]</u></link> again, increases CRIT DMG by $4;\n[Crackling Firecrackers]: Upgrades <link\="s|223"><u>[Fiery Shooting Star]</u></link> again, inflicts the target with $5 stack of <link\="s|224"><u>[Year Fire]</u></link>."
 
 舉燈晃晃喜氣連=Joyous Lanterns
-r:"^{{A}}在場時，每名敵人出現或其特殊<link\="s\|102"><u>燃燒</u></link>狀態被清除時，{{A}}立刻使其陷入(\d+)層可突破上限的特殊<link\="s\|102"><u>燃燒</u></link>狀態，持續時間永久。該效果有(\d+)回合冷卻時間，對每名敵人分別計算冷卻時間。\n戰鬥中有(\d+)名處於<link\="s\|102"><u>燃燒</u></link>狀態的敵人時，{{A}}的暴擊率提升(\d+%)，每多(\d+)名處於<link\="s\|102"><u>燃燒</u></link>狀態的敵人，{{A}}的暴擊率額外提升(\d+%)，透過該意識最多使{{A}}的暴擊率提升(\d+%)。$"="When you are present, when enemies' are inflicted with or dispelled special <link\="s|102"><u>Burn</u></link>, immediately inflict them with $1 stack of special <link\="s|102"><u>Burn</u></link> that can go over the cap permanently. This effect has a $2 turn cooldown, each enemies cooldown independently.\nIn battle, when there is $3 enemy inflicted with [Burn], increases own CRIT Rate by $4, for each additional enemy inflicted with Burn, additionally increase own CRIT Rate by $6, up to $7 CRIT Rate."
+r:"^{{A}}在場時，每名敵人出現或其特殊<link\="s\|102"><u>燃燒</u></link>狀態被清除時，{{A}}立刻使其陷入(\d+)層可突破上限的特殊<link\="s\|102"><u>燃燒</u></link>狀態，持續時間永久。該效果有(\d+)回合冷卻時間，對每名敵人分別計算冷卻時間。\n戰鬥中有(\d+)名處於<link\="s\|102"><u>燃燒</u></link>狀態的敵人時，{{A}}的暴擊率提升(\d+%)，每多(\d+)名處於<link\="s\|102"><u>燃燒</u></link>狀態的敵人，{{A}}的暴擊率額外提升(\d+%)，透過該意識最多使{{A}}的暴擊率提升(\d+%)。$"="When you are present, when a new enemy appears or dispelled their special <link\="s|102"><u>Burn</u></link>, immediately inflict them with $1 stack of special <link\="s|102"><u>Burn</u></link> that can go over the cap permanently. This effect has a $2 turn cooldown, each enemies cooldown independently.\nIn battle, when there is $3 enemy inflicted with [Burn], increases own CRIT Rate by $4, for every enemy inflicted with Burn, additionally increase own CRIT Rate by $6, up to $7 CRIT Rate."
 
 四方圍坐話豐日=Gather Around
 
@@ -2634,7 +2634,7 @@ r:"^準備時間：8次行動\n使所有同伴恢復<color\=#FFFC40>(\d+\.\d+%)<
 
 r:"^貫穿時空的輪轉 Lv.(\d+)$"="Wheel of Time Lv.$1"
 r:"^貫穿時空的輪轉 <color\=#0F69CB>Lv.(\d+)</color>$"="Wheel of Time <color\=#0F69CB>Lv.$1</color>"
-r:"^準備時間：4次行動\n使所有同伴攻擊力提升，數值相當於{{A}}攻擊力的(\d+%)\+<color\=#FFFC40>(\d+)</color>。消耗所有<link\="s\|235"><u>『聖歌』</u></link>，每消耗1層<link\="s\|235"><u>『聖歌』</u></link>，使所有同伴穿透提升\（每(\d+)點{{A}}的攻擊力提供(\d+\.\d+%)穿透\），攻擊力提升\（每(\d+)點{{A}}的攻擊力提供(\d+\.\d+%)攻擊力\），效果持續(\d+)回合。\（該技能最多計入{{A}}<color\=#FFFC40>(\d+)</color>點攻擊力\）\n<b><size\=28><color\=#850101>時之輪盤緩緩浮現，齒輪流轉間迸發流金般的光暈，那是被時光祝福的鋒銳，足以劃開一切滯礙。</color></size></b>$"="Preparation Time: 4 Actions\nIncreases all allies' ATK based on $1 + <color\=#FFFC40>$2</color> ATK. Consumes all <link\="s|235"><u>[Holy Song]</u></link>, for each stack of <link\="s|235"><u>[Holy Song]</u></link> consumed, additionally increases all allies' PEN (For every $3 ATK increases PEN by $4) and ATK (For every $5 ATK increases PEN by $6) for $7 turns. (Counts up to <color\=#FFFC40>$8</color> ATK)\n<b><size\=28><color\=#850101>The Wheel of Time slowly materializes, its rotating gears erupting with a flowing golden halo - this time-blessed sharpness can cleave through all stagnation.</color></size></b>"
+r:"^準備時間：4次行動\n使所有同伴攻擊力提升，數值相當於{{A}}攻擊力的(\d+%)\+<color\=#FFFC40>(\d+)</color>。消耗所有<link\="s\|235"><u>『聖歌』</u></link>，每消耗1層<link\="s\|235"><u>『聖歌』</u></link>，使所有同伴穿透提升\（每(\d+)點{{A}}的攻擊力提供(\d+\.\d+%)穿透\），攻擊力提升\（每(\d+)點{{A}}的攻擊力提供(\d+\.\d+%)攻擊力\），效果持續(\d+)回合。\（該技能最多計入{{A}}<color\=#FFFC40>(\d+)</color>點攻擊力\）\n<b><size\=28><color\=#850101>時之輪盤緩緩浮現，齒輪流轉間迸發流金般的光暈，那是被時光祝福的鋒銳，足以劃開一切滯礙。</color></size></b>$"="Preparation Time: 4 Actions\nIncreases all allies' ATK based on $1 + <color\=#FFFC40>$2</color> ATK. Consumes all <link\="s|235"><u>[Holy Song]</u></link>, for every stack of <link\="s|235"><u>[Holy Song]</u></link> consumed, additionally increases all allies' PEN (For every $3 ATK increases PEN by $4) and ATK (For every $5 ATK increases PEN by $6) for $7 turns. (Counts up to <color\=#FFFC40>$8</color> ATK)\n<b><size\=28><color\=#850101>The Wheel of Time slowly materializes, its rotating gears erupting with a flowing golden halo - this time-blessed sharpness can cleave through all stagnation.</color></size></b>"
 
 r:"^為1名同伴驅散1種負面狀態，並使其在自身回合結束後，進入特殊的額外回合<link\="s\|239"><u>『千籟重歌』</u></link>。\n進入<link\="s\|239"><u>『千籟重歌』</u></link>時，將該同伴的狀態回溯至其上回合釋放技能前一刻。\n回溯內容包括：{{A}}技能冷卻時間、當前狀態、當前生命值、當前精力值。$"="Dispels 1 debuff from 1 ally, and make them enter a special Extra Turn [Myriad Song] after their turn. When entering [Myriad Song], that character's status will rewind to their last turn before using a skill. Rewind content includes: {{A}} skill cooldown, current status, current HP, current SP."
 r:"^為一名同伴驅散1種負面狀態，並使其在自身回合結束後，進入特殊的額外回合『千籟重歌』。\n進入『千籟重歌』時，將該同伴的狀態回溯至其上回合釋放技能前一刻。\n回溯內容包括：{{A}}技能冷卻時間、當前狀態、當前生命值、當前精力值。$"="Dispels 1 debuff from 1 ally, and make them enter a special Extra Turn [Myriad Song] after their turn. \nWhen entering [Myriad Song], that character's status will rewind to their last turn before using a skill. \nRewind content includes: {{A}} skill cooldown, current status, current HP, current SP."
@@ -2675,20 +2675,19 @@ r:"^{{A}}初始可額外釋放一次<link\="s\|239"><u>『千籟重歌』</u></l
 ----------
 Makoto Yuki
 ----------
-伟大的指引=Great Guide
+偉大的指引=Great Guide
 旋律之炎=Melodic Blaze
-月下战曲=Moonlit Hymn
-红莲·豪炎吞噬=Scarlet·Devouring Blaze
-阿尔达=Ardhanari
-华彩乐段=Cadenza
-引领=Lead
-信赖=Trust
+月下戰曲=Moonlit Hymn
+紅蓮·豪炎吞噬=Scarlet·Devouring Blaze
+阿爾達=Ardhanari
+華彩樂段=Cadenza
+引領=Lead
+信賴=Trust
 
 因偶然而生=Born from Coincidence
-不会动摇的心=Unwavering Heart
-满月之下=Under the Full Moon
-在荆棘之路上=Thorny Path
+不會動搖的心=Unwavering Heart
+滿月之下=Under the Full Moon
+在荊棘之路上=Thorny Path
 魂之炎=Blazing Soul
-约定的誓言=The Promise
+約定的誓言=The Promise
 
-神之剑=Deus Xiphos
