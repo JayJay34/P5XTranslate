@@ -1,19 +1,20 @@
 [Tartarus Gamemode]
 
 -MENU-
-塔尔塔罗斯·大厅=Tartarus·Hall
-r:"^塔尔塔罗斯 (\d+)层$"="Tartarus Floor $1"
+{{A}}·大厅={{A}}·Hall
+r:"^{{A}} (\d+)层$"="{{A}} Floor $1"
 请选择探索难度：=Exploration Difficulty
 r:"^敌人难度：(\d+)$"=Enemy Difficulty: $1"
 敌人难度：0=Enemy difficulty: 0
 
 简单=Easy
 选择=Select
-预选塔尔塔罗斯的随行角色，将通过「洗牌时间」加入正式阵容=<size\=25>The preselected Tartarus accompanying character will officially join the lineup through [Shuffle Time]</size>
+预选{{A}}的随行角色，将通过「洗牌时间」加入正式阵容=<size\=25>The preselected {{A}} accompanying character will officially join the lineup through [Shuffle Time]</size>
 设置携带收藏品=Set Equipped Relic
 洗牌时间·初始=<size\=30>Shuffle Time·Initial</size>
 洗牌时间·通常=<size\=30>Shuffle Time·Normal</size>
 洗牌时间·稀有=<size\=30>Shuffle Time·Rare</size>
+洗牌时间·珍贵=<size\=30>Shuffle Time·Precious</size>
 探索进度：=<size\=20>Exploration Progress:</size>
 探索等级=Exploration Level
 怪盗等级=<size\=30>Phantom Thief Level</size>
@@ -26,14 +27,13 @@ r:"^敌人难度：(\d+)$"=Enemy Difficulty: $1"
 极佳：所有角色总{{B}}、总{{C}}、总{{A}}、最终伤害提升10%=Excellent: All characters' total {{B}}, {{C}}, {{A}}, and Final DMG are increased by 10%
 良好：无效果=Good: No effect
 不佳=Poor
-不佳：所有角色总{{B}}、总{{C}}、总{{A}}、最终伤害降低20%=Poor: All characters' total {{B}}, {{C}}, {{A}}, and Final DMG are reduced by 20%
+不佳：所有角色总{{B}}、总{{C}}、总{{A}}、最终伤害降低20%=Poor: All characters' total {{B}}, {{C}}, {{A}}, and Final DMG are decreased by 20%
 极差=Terrible
-极差：所有角色总{{B}}、总{{C}}、总{{A}}、最终伤害降低50%，受最终伤害提升50%=<size\=24>Terrible: All characters' total {{B}}, {{C}}, {{A}}, and Final DMG are reduced by 50%, and Final DMG Taken is increased by 50%</size>
+极差：所有角色总{{B}}、总{{C}}、总{{A}}、最终伤害降低50%，受最终伤害提升50%=<size\=24>Terrible: All characters' total {{B}}, {{C}}, {{A}}, and Final DMG are decreased by 50%, and Final DMG Taken is increased by 50%</size>
 虚脱=Exhausted
-虚脱：所有角色总{{B}}、总{{C}}、总{{A}}、最终伤害降低90%，受最终伤害提升90%=<size\=24>Exhausted: All characters' total {{B}}, {{C}}, {{A}}, and Final DMG are reduced by 90%, and Final DMG Taken is increased by 90%</size>
+虚脱：所有角色总{{B}}、总{{C}}、总{{A}}、最终伤害降低90%，受最终伤害提升90%=<size\=24>Exhausted: All characters' total {{B}}, {{C}}, {{A}}, and Final DMG are decreased by 90%, and Final DMG Taken is increased by 90%</size>
 <color\=#67FCFC>时钟的齿轮</color>\n可用于在「大时钟」具象化卡牌。每次探索结束后清空。=<color\=#67FCFC>Clock Gears</color>\nCan be used to materialize cards at the [Grand Clock]. Cleared after each exploration.
 <color\=#67FCFC>拂晓的碎片</color>\n可用于在「时钟」恢复意志力、定向选择角色。可用于开启「蒙纳多之门」。每次探索结束后清空。=<size\=24><color\=#67FCFC>Twilight Fragments</color>\nCan be used at the [Clock] to restore Will or to select a specific character. Can also be used to open a [Monad Door]. Cleared after each exploration.</size>
-塔尔塔罗斯=Tartarus
 消耗2个「拂晓的碎片」，恢复40点「意志力」。=Consume 2 [Twilight Fragments] to recover 40 Will
 消耗3个「拂晓的碎片」，定向选择1个已拥有的角色。=Consume 3 [Twilight Fragments] to specifically select one already-owned character.
 作战<sprite\=8 tint\=1><sprite\=15 tint\=1><sprite\=8 tint\=1> 解明<sprite\=2 tint\=1><sprite\=15 tint\=1><sprite\=2 tint\=1>=<size\=26>COMBAT</size><sprite\=8 tint\=1><sprite\=15 tint\=1><sprite\=8 tint\=1> <size\=26>NAVI</size><sprite\=2 tint\=1><sprite\=15 tint\=1><sprite\=2 tint\=1>
@@ -45,7 +45,7 @@ r:"^敌人难度：(\d+)$"=Enemy Difficulty: $1"
 梦境碎片=Dream Fragments
 {{A}}的梦境碎片={{A}}'s Dream Fragments
 设置梦境碎片=Set Dream Fragments
-选择本次塔尔塔罗斯中，能够收集到的梦境碎片=Select the Dream Fragments obtainable in this Tartarus run
+选择本次{{A}}中，能够收集到的梦境碎片=Select the Dream Fragments obtainable in this {{A}} run
 
 -BUFFS NAMES-
 宝剑·不破之盾=Swords·Unbreakable Shield
@@ -55,6 +55,7 @@ r:"^敌人每有一个负面状态，受到的伤害提升(\d+%)，最多使其�
 宝剑·伤口加深=Swords·Deepening Wound
 宝剑·HL返还=Swords·HL Refund
 宝剑·专注制敌=Swords·Focused Suppression
+任意角色释放单体{{A}}技能后，使技能目标获得1次相当于其受到伤害20%的固定伤害=When any character uses a single-target {{A}} skill, the skill target receives an additional fixed damage equal to 20% of the damage taken
 宝剑·战意高涨=Swords·Battle Frenzy
 宝剑·属性共振=Swords·Element Resonance
 宝剑·算无遗策=Swords·Meticulous Strategy
@@ -65,45 +66,54 @@ r:"^敌人每有一个负面状态，受到的伤害提升(\d+%)，最多使其�
 宝剑·武器大师=Swords·Weapon Master
 所有角色普通攻击造成最终伤害提升12%=Increase all characters' SWORD Final DMG by 12%
 宝剑·力量之磨砺=Sword·Sharpening Strength
-处于第9层及之前，所有角色造成最终伤害降低10%；处于第10层及之后，所有角色造成最终伤害提高10%=On floors 9 and below, all characters deal 10% reduced Final DMG; on floor 10 and above, all characters deal 10% increased Final DMG
+处于第9层及之前，所有角色造成最终伤害降低10%；处于第10层及之后，所有角色造成最终伤害提高10%=On floors 9 and below, all characters deal 10% decreased Final DMG; on floor 10 and above, all characters deal 10% increased Final DMG
 宝剑·冲锋信条=Swords·Charge Creed
 所有角色{{A}}提升15%=Increase all characters' {{A}} by 15%
+宝剑·援助叠加=Swords·Assistance Stacking
+使用解明技能后，所有角色造成伤害提升8%，本场战斗永久生效，可叠加4层=After using a Navigator Skill, increase all characters' DMG Dealt by 8%, permanently effective for the current battle, up to 4 stacks
+宝剑·术式组曲=Swords·Arcane Suite
+所有角色念动/核热/祝福/诅咒伤害提升12%=Increase all characters' Psychokinesis/Nuclear/Bless/Curse DMG by 12%.
+宝剑·HL激励=Swords·HL Motivation
+任意角色使用HIGHLIGHT后，使其他角色的HIGHLIGHT冷却时间减少1回合=When any character uses HIGHLIGHT, decrease the HIGHLIGHT cooldown of other characters by 1 turn.
+宝剑·技巧至上=Swords·TECH Supreme
+所有角色TECH精通提升1000=Increase all characters' TECHNICAL Mastery by 1000
+
 圣杯·指针复位=Cups·Point Reset
 圣杯·老练猎手=Cups·Seasoned Hunter
 圣杯·勇斗者轮轴=Cups·Brave Axle
 战斗胜利时，当前「时钟的齿轮」数量增加1%=Upon winning a battle, increase current [Clock Gears] by 1%
 圣杯·新品特卖=Cups·New Arrival Sale
-「大时钟」刷新卡牌时，所需「时钟的齿轮」数量降低50%=When refreshing cards in the [Great Clock], the required [Clock Gears] is reduced by 50%.
+「大时钟」刷新卡牌时，所需「时钟的齿轮」数量降低50%=When refreshing cards in the [Great Clock], the required [Clock Gears] is decreased by 50%.
 圣杯·银币飞溅=Cups·Silver Splash
 击碎可破坏物获取「古老的银币」数量增加20%=Increase the amount of [Ancient Silver Coins] obtained from destroying breakable objects by 20%.
 圣杯·齿轮满箱=Cups·Gearbox Full
 开启宝箱获取「时钟的齿轮」数量增加15%=Increase the amount of [Clock Gears] obtained from opening treasure chests by 15%.
 钱币·时钟的齿轮I=Coins·Clock Gear I
 钱币·时钟的齿轮II=Coins·Clock Gear II
+r:"^获得(\d+)个时钟的齿轮$"="Obtain $1 Clock Gears"
 钱币·拂晓碎片I=Coins·Twilight Fragments I
+获得1个拂晓的碎片=Obtain 1 Twilght Fragment
 令牌·冲锋信条III=Wands·Charge Creed III.
 令牌·危险挑战者=Wands·Dangerous Challenger
 下1个进入探索楼层时，出现强敌阴影的概率提高=Increase the chance of encountering a powerful Shadow on the next exploration floor.
 
 -SHUFFLE TIME-
 每次进入「大时钟」时，获得1次{{A}}刷新次数=Each time you enter the [Great Clock], you gain 1 free refresh
-任意角色释放单体{{A}}技能后，使技能目标获得1次相当于其受到伤害20%的固定伤害=When any character uses a single-target {{A}} skill, the skill target receives an additional fixed damage equal to 20% of the damage taken
 任意角色使用HIGHLIGHT/{{A}}后，使所有角色造成伤害提升15%，持续2回合，可叠加2层=After any character uses HIGHLIGHT/{{A}}, increase all character's DMG Dealt by 15% for 2 turns, up to 2 stacks
 进入战斗时，每有一个相同属性的角色，所有角色造成伤害提高12%=Upon entering battle, for each character with the same element, increase all characters' DMG Dealt by 12%.
 优越/屈从角色{{A}}提升6、{{B}}提升24%=Increase Superior/Submit characters' {{A}} by 6, increase {{B}} by 24%.
 所有角色{{A}}提升40%=Increase all characters' {{A}} by 40%
 {{A}}能量恢复效率提升25%={{A}} gauge recovery efficiency increased by 25%.
 r:"^解明角色{{B}}、{{A}}、最大{{C}}提升(\d+%)$"="Increase Eludicate Thieves' {{B}}, {{A}}, Max {{C}} by $1"
-r:"^所有角色处于护盾下时，受到伤害降低(\d+%)$"="When all characters are under a shield, reduce DMG Taken by $1"
+r:"^所有角色处于护盾下时，受到伤害降低(\d+%)$"="When all characters are under a shield, decrease DMG Taken by $1"
 r:"^所有角色持续效果伤害提升(\d+%)$"="Increase all characters' DoT Damage by $1"
 r:"^任意角色使用HIGHLIGHT后，立刻恢复(\d+%)HIGHLIGHT能量$"="When any character uses HL, immediately restore $1 of HL energy"
-r:"^获得(\d+)个时钟的齿轮$"="Obtain $1 Clock Gears"
 r:"^战斗胜利后获取经验值增加(\d+%)$"="Increase experience gained from battle by $1"
-获得1个拂晓的碎片=Obtain 1 Twilght Fragment
 
 -Awareness Upgrade-
 r:"^{{A}}的"意识"提升到(\d+)$"="Increase {{A}}'s Awareness to $1"
 r:"^意识提升至(\d+)$"="Awareness raised to $1"
+{{A}}觉醒了超越意识={{A}} awakened a power beyond awareness
 
 -CHARACTERS-
 获得角色：{{A}}千津子=Obtain Character: Chizuko {{A}}
@@ -144,3 +154,34 @@ r:"^意识提升至(\d+)$"="Awareness raised to $1"
 先好好休息吧=Take a rest first
 什么也不会获得=Obtain nothing
 嗯……听你的……=Mm... I'll listen to you...
+
+认知之猫=Cognitive Cat
+
+好像叼着什么东西……=Seems to be holding something in its mouth...
+靠近=Approach
+获得1个「古老的金币」=Obtain 1 [Ancient Gold Coin]
+随机获得100-140个「时钟的齿轮」=Randomly obtain 100–140 Clock Gears
+
+固执的老头=Stubborn Old Man
+真是的，怎么哪里都没有白味增啊！=Geez, why is it so hard to find white miso anywhere!
+现在的年轻人啊，什么都买速溶的……\n所以才说现在的年轻人啊……=Kids these days... always buying instant stuff.\nThat’s why I say, kids these days...
+啊啊不行，老太婆还在等我呢。\n得赶紧买了回去……咦，要买什么来着？=Ah, dang it—my wife's still waiting for me. Gotta hurry and buy... wait, what was I supposed to get again?
+我要干什么来着？\n我这是在哪儿啊？=What was I supposed to do again? Where am I?
+陪他寻找白味增=<size\=25>Accompany him to look for white miso</size>
+消耗15点「意志力」，获得200个「时钟的齿轮」=Consume 15 [Will] to obtain 200 [Clock Gears]
+啊，对……是白味增……\n我家老太婆一直喜欢……=Ah, right... it's white miso...\nMy wife at home has always liked it...
+回家吧=Go home
+消耗150个「时钟的齿轮」，恢复20点「意志力」=Consume 150 [Clock Gears] to restore 20 [Will]
+会有其他人帮忙的=<size\=23>Someone else will help out</size>
+
+-ARCANA CARDS-
+女教皇=Priestess
+所有角色造成{{A}}技能伤害时会额外降低敌方主目标1点倒地值，所有敌人受总攻击伤害提升100%-1000%（依据层数变化）=<size\=28>All characters decrease the primary target's Down Gauge by 1 extra point when dealing Persona Skill Damage. Increase all enemies' All-out-Attack DMG Taken by 100%–1000% (scales with stacks)</size>
+月亮=Moon
+战斗消耗「意志力」减少2点，「意志力」大于50时，额外使所有角色最终伤害提升10%=Decrease battle Will cost by 2. When Will is above 50, all characters additionally gain 10% Final DMG boost.
+力量=Strength
+所有角色{{A}}上限提升200点，{{B}}提升600%，{{A}}消耗增加200%。释放技能后，该技能每消耗15点{{A}}使其他角色最终伤害提升1%，持续1回合=Increase all characters' Max {{A}} by 200, {{B}} by 600%, {{A}} consumption by 200%. After using a skill, for every 15 {{A}} consumed, other characters gain 1% Final DMG for 1 turn.
+
+-Awakened Beyond Awareness-
+[Makoto Yuki]
+已觉醒超越意识：每个回合开始时，额外恢复15点{{A}}能量。自身释放技能造成3次以上伤害时最终伤害提升30%。=Awakened Beyond Awareness: At the beginning of each turn, restore additional 15 {{A}} Gauge. When a skill deals more than 3 instances of damage, increase Final DMG by 30%. 
