@@ -424,7 +424,7 @@ r:"^已購買(\d+)/(\d+)次（每日05:00重置）$"="Purchased $1/$2 times \n(R
 能量飲料=Energy Drink
 用於提升能量的補給飲料，使用後立即恢復5行動力。=Restores 5 Energy Points immediately.
 能夠迅速補充人體水分和電解質的運動能量飲料，對迅速恢復身體機能有強力效果。=A sports energy drink that quickly replenishes the body with water and electrolytes for a powerful recovery effect.
-您的行動值不足。=Not enough Energy Points.
+您的行動值不足。=Insufficient Energy Points.
 沒有足夠的行動力了，是否立即補充？=Not enough Energy Points, replenish immediately?
 慾望之木=Wood of Desire
 極其罕見的神奇木料，可用於提升技能等級至Lv.9·Lv.10。=<size\=28>An extremely rare magical timber, can be used to level up Skills to Lv.9-Lv.10.</size>
@@ -811,15 +811,6 @@ r:"^每日最多可獲取<color\=#FF0000>10</color>點<link\="s\|1002"><u>助戰
 1等星5階= 5th Tier
 都市生活天數=Days Spent
 怪盜總評級=Thieves Total Rating
-
-歷史最高總評分=Highest Total
-怪盜培養總評分：=Total Thieves Rating:
-下級效果=Next Effect
-評分=Rating
-
-QEVEL詳情=QEVEL Details
-總覽=Summary
-升級=Level Up
 
 ////////////////////////////////
 ///// c. Character Screen //////
@@ -1324,6 +1315,8 @@ sr:"^在角色活動契約中<color\=#FE0000>與(.*)簽約</color>$"="<size\=28>
 sr:"^在武器活動補給中<color\=#FE0000>獲得武器(.*)</color>$"="<size\=28>Obtain <color\=#FE0000>$1</color> from Supply</size>"
 
 sr:"^再抽取(\d+)次必得限定時裝<color\=#FFF900>(.*)</color>$"="Guarantee limited outfit <color\=#FFF900>$2</color> after $1 pulls"
+r:"^再抽取<color\=#FFF900>(\d+)</color>次必得限定時裝$"="Guarantee limited outfit after <color\=#FFF900>$1</color> pulls"
+
 sr:"^已獲得限定時裝(.*)$"="Obtained limited outfit $1"
 怪盜·天地勝意=Worldly Wish
 
@@ -1880,6 +1873,7 @@ r:"^都市日程<color\=#ffc000>在{{A}}打工</color>已解鎖，\n每日有一
 {{A}}的書店今天似乎需要人手……=The Bookstore is understaffed...
 {{A}}的書店今天似乎需要人手，要去幫忙整理嗎？=<size\=28>The Bookstore is understaffed today, want to go help?</size>
 今天也是{{A}}書店舉辦活動的日子，要去幫忙嗎？=The {{A}} Bookstore is holding an event today, want to help out?
+{{A}}的書店今天似乎需要接待很多客人，去幫忙看看吧……=There's a lot of customers at the Bookstore today, let's go help...
 在書店打工=<size\=24>Work part-time\nat the Bookstore</size>
 要在這家書店打工嗎？=Do you want to work part-time \nat this Bookstore?
 
@@ -2486,6 +2480,7 @@ r:"^神秘的精碎體，可用於提升{{A}}經驗，使用後立即增加(\d+)
 r:"^神秘的精末體，可用於提升{{A}}經驗，使用後立即增加(\d+)點。$"="Mysterious scarp, can be used to gain $1 {{A}} EXP."
 
 聖潔之心=Sacred Heart
+璀璨瑰寶=Glorious Gem
 加冕石刻=Coronation Stone
 鑽石晶體=Diamond Crystal
 r:"^突破Rank(\d+)階級{{A}}時用到的通用材料。$"="Can be used to evolve Rank $1 {{A}}."
@@ -2638,7 +2633,9 @@ P5X營運團隊=P5X Team
 沒有收到郵件=No email
 
 sr:"^「(.*)」即將結束$"="[$1] Ending Soon"
+sr:"^「(.*)」獎勵補發$"="<size\=24>[$1] Reissue Rewards</size>"
 sr:"^「(.*)」總星級獎勵$"="[$1] Star Rewards"
+r:"^您的{{A}}任務「(.*)」獎勵未領取，已透過郵件發送，請查收附件。$"="Your unclaimed {{A}} mission rewards have been sent via mail. Please check the attachments."
 
 // Mission Screen
 全部=All

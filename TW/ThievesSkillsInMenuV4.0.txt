@@ -875,6 +875,8 @@ r:"^消耗<link\="s\|131"><u>『青葉』</u></link>時，使當前生命值百�
 生生不息=Cycle of Life
 r:"^初始特性的<link\="s\|131"><u>『青葉』</u></link>回復效果改為每回合回復(\d+)個。$"="You now restore $1 <link\="s|131"><u>[Green Leaf]</u></link> per turn."
 
+山野合奏=Wild Ensemble
+
 吟誦安眠之謠=Sleeping Ballad
 r:"^HIGHLIGHT效果提升：使目標敵人受到的下1次傷害額外提升(\d+%)。$"="HIGHLIGHT Effect Boost: Additionally increases their next hit of DMG Taken by $1."
 
@@ -2675,7 +2677,6 @@ r:"^{{A}}初始可額外釋放一次<link\="s\|239"><u>『千籟重歌』</u></l
 ----------
 Makoto Yuki
 ----------
-偉大的指引=Great Guide
 旋律之炎=Melodic Blaze
 月下戰曲=Moonlit Hymn
 紅蓮·豪炎吞噬=Scarlet·Devouring Blaze
@@ -2684,10 +2685,43 @@ Makoto Yuki
 引領=Lead
 信賴=Trust
 
-因偶然而生=Born from Coincidence
-不會動搖的心=Unwavering Heart
-滿月之下=Under the Full Moon
-在荊棘之路上=Thorny Path
-魂之炎=Blazing Soul
-約定的誓言=The Promise
+r:"^旋律之炎 Lv.(\d+)$"="Melodic Blaze Lv.$1"
+r:"^旋律之炎 <color\=#0F69CB>Lv.(\d+)</color>$"="Melodic Blaze <color\=#0F69CB>Lv.$1</color>"
+r:"^對(\d+)名敵人造成(\d+)次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，自身獲得(\d+)層『月相』，持續(\d+)回合，上限(\d+)層。自身使用『紅蓮·豪炎吞噬』消耗『月相』造成傷害時，技能倍率提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。\n<b><size=28><color\=#C0C0C0>微光化作遊蛇，纏繞敵人的足踝、指尖……順著脈絡蔓延，轉瞬間便燃作烈焰，對敵人造成火焰傷害。</color></size></b>$"="Deals <color\=#FFFC40>$3</color> ATK Fire damage to $1 enemy $2 times, gains $4 stacks of [Moon Phase] for $5 turns, up to $6 stacks. When consuming [Moon Phase] to deal damage with [Scarlet·Devouring Blaze], increases skill multiplier by <color\=#FFFC40>$7</color> for $8 turns.\n<b><size=28><color\=#C0C0C0>The faint light transforms into a wandering serpent, coiling around the enemy's ankles and fingertips... slithering along their veins, and in an instant, igniting into blazing flames, dealing fire damage.</color></size></b>"
 
+r:"^月下戰曲 Lv.(\d+)$"="Moonlit Hymn Lv.$1"
+r:"^月下戰曲 <color\=#0F69CB>Lv.(\d+)</color>$"="Moonlit Hymn <color\=#0F69CB>Lv.$1</color>"
+r:"^使所有同伴暴擊效果提升<color\=#FFFC40>(\d+\.\d+%)</color>，自身攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。自身獲得(\d+)層『月相』，持續(\d+)回合，上限(\d+)層。\n<b><size=28><color\=#C0C0C0>那是信念之火，同行之誓，是彼此間無聲卻熾烈的信賴，傳遞給同伴們溫暖的力量。</color></size></b>$"="Increases all allies CRIT DMG by <color\=#FFFC40>$1</color> and own ATK  by <color\=#FFFC40>$2</color> for $3 turns. Gains $4 stacks of [Moon Phase] for $5 turns, up to $6 stacks.\n<b><size=28><color\=#C0C0C0>It is the fire of conviction, the oath of companionship, a silent yet fervent trust between allies, delivering a warm and empowering strength to comrades.</color></size></b>"
+
+r:"^紅蓮·豪炎吞噬 Lv.(\d+)$"="Scarlet·Devouring Blaze Lv.$1"
+r:"^紅蓮·豪炎吞噬 <color\=#0F69CB>Lv.(\d+)</color>$"="Scarlet·Devouring Blaze <color\=#0F69CB>Lv.$1</color>"
+r:"^發動條件：自身擁有至少(\d+)層『月相』\n消耗自身所有『月相』，每消耗1層『月相』，對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害。\n之後，消耗自身所有『特殊月相』，每消耗1層『特殊月相』，對1名敵人造成的<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害。若『月相』達到(\d+)層，則釋放該技能時自身穿透提升<color\=#FFFC40>(\d+\.\d+%)</color>、造成傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。\n<b><size=28><color\=#C0C0C0>赤紅的火焰劃破天幕，如星隕般驟然墜落，敵人的身影在火光中扭曲，塵土與焦熱隨之翻湧……</color></size></b>$"="Use condition: When you have at least $1 stacks of [Moon Phase]. \nConsumes all [Moon Phase], for each stack of [Moon Phase] consumed, deals 1 hit of <color\=#FFFC40>$2</color> ATK Fire damage to 1 enemy. \nAfterwards, consumes all [Special Moon Phase], for each stack of [Special Moon Phase] consumed, deals 1 hit of <color\=#FFFC40>$3</color> ATK Fire damage to 1 enemy. If you have $4 stacks of [Moon Phase], increases own PEN by <color\=#FFFC40>$5</color> and DMG Dealt by <color\=#FFFC40>$6</color> when using this skill.\n<b><size=28><color\=#C0C0C0>Scarlet flames tear through the sky, falling like meteors in a sudden descent. The enemy's figure twists within the blaze, as dust and scorching heat surge in its wake...</color></size></b>"
+
+r:"^阿爾達：釋放條件：(\d+)點{{A}}能量\n對1名敵人造成(\d+)次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害。自身獲得(\d+)層『特殊月相』，持續(\d+)回合，上限(\d+)層。\n華彩樂段：釋放條件：(\d+)點{{A}}能量\n使所有友方同伴攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>、傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。自身獲得(\d+)層『特殊月相』，持續(\d+)回合，上限(\d+)層。\n『ONE MORE』：對1名敵人造成火焰屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n援助技能：使1名同伴攻擊力提升(\d+%)，持續(\d+)回合。$"="Use condition: When you have $1 {{A}} Energy. Deals <color\=#FFFC40>$3</color> ATK Fire damage to 1 enemy $2 times. Gains $4 stack of [Special Moon Phase] for $5 turns, up to $6 stacks.\nUse condition: When you have $7 {{A}} Energy. Increases all allies ATK by <color\=#FFFC40>$8</color> and DMG Dealt by <color\=#FFFC40>$9</color> for $10 turns. Gains $11 stack of [Special Moon Phase] for $12 turns, up to $13 stacks.\n[ONE MORE]: Deals Fire damage to 1 enemy. \nMelee Attack: Uses a melee weapon to deal light Phys damage to 1 enemy.\nAssist Skill: Increases 1 ally's ATK by $14 for $15 turn."
+
+r:"^引領 Lv.(\d+)$"="Lead Lv.$1"
+r:"^釋放{{A}}後，所有同伴攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>，S.E.E.S.同伴攻擊力額外提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="After using {{A}}, increase all allies' ATK by <color\=#FFFC40>$1</color>, additionally increases SEES allies' ATK by <color\=#FFFC40>$2</color> for $3 turns."
+r:"^釋放{{A}}後，所有同伴攻擊力提升<color\=#0169ca>(\d+\.\d+%)</color>，S.E.E.S.同伴攻擊力額外提升<color\=#0169ca>(\d+\.\d+%)</color>，持續(\d+)回合。$"="After using {{A}}, increase all allies' ATK by <color\=#0169ca>$1</color>, additionally increases SEES allies' ATK by <color\=#0169ca>$2</color> for $3 turns."
+
+r:"^信賴 Lv.(\d+)$"="Trust Lv.$1"
+r:"^獲得友方同伴增益/治療/護盾技能的效果時，暴擊效果提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合，上限(\d+)層。$"="When you received buffs/ healing/ shield from allies, increases own CRIT DMG for <color\=#FFFC40>$1</color> turns for $2 turns, up to $3 stacks."
+r:"^獲得友方同伴增益/治療/護盾技能的效果時，暴擊效果提升<color\=#0169ca>(\d+\.\d+%)</color>，持續(\d+)回合，上限(\d+)層。$"="When you received buffs/ healing/ shield from allies, increases own CRIT DMG for <color\=#0169ca>$1</color> turns for $2 turns, up to $3 stacks."
+
+偉大的指引=Great Guide
+r:"^{{A}}擁有『華彩樂段』和『阿爾達』兩個{{B}}技能。戰鬥開始時，若自身{{B}}能量不足(\d+)點，補充至(\d+)點{{B}}能量。\n自身獲得友方同伴增益/治療/護盾技能的效果時，獲得(\d+)層『月相』，{{A}}每回合至下一回合開始前最多通過這種方式獲得(\d+)層『月相』，持續(\d+)回合，上限(\d+)層。\n自身擁有『月相』效果時穿透提升(\d+%)/(\d+%)/(\d+%)（達到(\d+)、(\d+)、(\d+)級時變化）$"="{{A}} has [Cadenza] and [Ardhanari] two {{B}} skills. At the start of battle, if own {{B}} Energy is less than $1, restores to $2 {{B}} Energy. \nWhen you received buffs/ healing/ shield from allies, gains $3 stack of [Moon Phase] for $5 turns, up to $6 stacks, can only gain up to $4 stack of [Moon Phase] from this effect before the start of next turn. Increases PEN by $7/$8/$9 (Change when reaching level $10, $11, $12) when you have [Moon Phase]."
+
+因偶然而生=Born from Coincidence
+r:"^釋放『旋律之炎』時，額外造成(\d+)次傷害。\n釋放『月下戰曲』時，額外使所有同伴穿透提升(\d+%)，持續(\d+)回合。\n釋放『紅蓮·豪炎吞噬』時，若『月相』達到(\d+)層，額外使自身暴擊率提升(\d+%)。$"="When using [Melodic Blaze], additionally deals $1 hit of damage. \nWhen using [Moonlit Hymn], additionally increases all allies' PEN by $2 for $3 turns. \nWhen using [Scarlet·Devouring Blaze], if you have $4 stacks of [Moon Phase], additionally increases own CRIT Rate by $5."
+
+不會動搖的心=Unwavering Heart
+r:"^自身回合開始時，若『月相』達到(\d+)層，則自動釋放1次『月下戰曲』。該效果擁有1回合的冷卻時間。$"="At the start of your turn, if you reached $1 stacks of [Moon Phase], automatically uses [Moonlit Hymn]. This effect has a 1 turn cooldown."
+
+滿月之下=Under the Full Moon
+
+在荊棘之路上=Thorny Path
+r:"^『華彩樂段』額外使所有同伴傷害提升(\d+%)，『阿爾達』額外造成(\d+%)次傷害。$"="[Cadenza] additionally increases all allies' DMG Dealt by $1, [Ardhanari] additionally deals $2 hit of damage."
+
+魂之炎=Blazing Soul
+
+約定的誓言=The Promise
+r:"^{{A}}釋放任意一種{{B}}時，會同時觸發另一種{{B}}的效果。使用『紅蓮·豪炎吞噬』消耗『特殊月相』造成傷害時，技能傷害提升(\d+%)。\n{{A}}首次受到致命傷害時，至自身下個回合結束前生命值不會低於(\d+)點，並進入瀕死狀態，自身下回合結束時死亡。瀕死狀態期間若自身生命值恢復至最大生命值的(\d+%)以上，則解除瀕死狀態。$"="When {{A}} uses any {{B}}, automatically triggers the other {{B}}. When consuming [Special Moon Phase] to deal damage with [Scarlet·Devouring Blaze], increases the skill damage by $1. When {{A}} first receives fatal damage, his HP cannot drop below $2 until the end of his next turn, then enters near death, he will faint when his next turn ends. Removes near death if his HP is restored above $3 Max HP during near death."
