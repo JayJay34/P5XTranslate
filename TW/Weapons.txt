@@ -36,10 +36,11 @@ WONDER WEAPONS
 ----------
 WONDER使用=Used by Wonder
 WONDER 使用=Used by Wonder
+sr:"^用於改造(.*)的特殊晶石。$"="<size\=28>Used to reform $1.</size>"
 七日之焰=<size\=25>Flame of Seven Suns</size>
 【熔岩腐蝕】=[Lava Erosion]
 熔岩腐蝕=Lava Erosion
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。每裝配1種不同屬性的{{A}}，對敵人造成的傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，最多疊加(\d+)層。擊倒敵人時，有100%固定機率使敵人防禦力降低<color\=#2899FF>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Increases ATK by <color\=#2899FF>$1</color>. For each equipped Persona with different elements, increases DMG Dealt by <color\=#2899FF>$2</color>, up to $3 stacks. When downing an enemy, has a 100% fixed chance to decrease that enemy's DEF by <color\=#2899FF>$4</color> for $5 turn."
+r:"^攻擊力提升(.*)。每裝配1種不同屬性的{{A}}，對敵人造成的傷害提升(.*)，最多疊加(\d+)層。擊倒敵人時，有100%固定機率使敵人防禦力降低(.*)，效果持續(\d+)回合。$"="Increases ATK by <color\=#2899FF>$1</color>. For each equipped Persona with different elements, increases DMG Dealt by <color\=#2899FF>$2</color>, up to $3 stacks. When downing an enemy, has a 100% fixed chance to decrease that enemy's DEF by <color\=#2899FF>$4</color> for $5 turn."
 七日之焰晶石=<size\=14>Flame of Seven Suns Crystal</size>
 僅可消耗七日之焰晶石=Only use Flame of Seven Suns Crystal
 
@@ -135,6 +136,7 @@ r:"^每裝配1個{{A}}，攻擊力額外提升<color\=#2899FF>(\d+\.\d+%)</color
 ----------
 MAIN CAST WEAPONS
 ----------
+WONDER專屬近戰武器。=Exclusive melee weapon for Wonder.
 {{A}}專屬近戰武器。=Exclusive melee weapon for {{A}}.
 {{A}}使用=Used by {{A}}
 {{A}} 使用=Used by {{A}}
@@ -338,7 +340,7 @@ r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。每有(\d+)層『熄炎
 天熾神心=Seraph's Heart
 【神佑賜福】=[God's Blessing]
 神佑賜福=God's Blessing
-r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。自身獲得『清晰』或『混沌』狀態時，使友方全體同伴的攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合。偵探同伴釋放{{B}}技能/HIGHLIGHT/追加技能時，{{A}}的暴擊效果提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合，上限(\d+)層。$"="Increases ATK by <color\=#2899FF>$1</color>. When gaining [Clarity] or [Chaos], increases all allies' ATK by <color\=#2899FF>$2</color> for $3 turns. Increases own CRIT DMG by <color\=#2899FF>$3</color> when Detective Partner use a {{B}} skill/HIGHLIGHT/Follow Up for $4 turns, up to $5 stacks."
+r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。自身獲得『清晰』或『混沌』狀態時，使友方全體同伴的攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合。偵探同伴釋放{{B}}技能/HIGHLIGHT/追加技能時，{{A}}的暴擊效果提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合，上限(\d+)層。$"="Increases ATK by <color\=#2899FF>$1</color>. When gaining [Clarity] or [Chaos], increases all allies' ATK by <color\=#2899FF>$2</color> for $3 turns. Increases own CRIT DMG by <color\=#2899FF>$4</color> when Detective Partner use a {{B}} skill/HIGHLIGHT/Follow Up for $5 turns, up to $6 stacks."
 青沼光劍=Quasar Saber
 【相位融合】=[Phase Fusion]
 相位融合=Phase Fusion
@@ -355,6 +357,13 @@ r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。\n{{A}}每獲得(\d+)�
 r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。{{A}}使用技能後，使自身攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>，可疊加(\d+)層，本場戰鬥永久生效。$"="Increases ATK by <color\=#2899FF>$1</color>. After Ange uses a skill, permanently increases own ATK by <color\=#2899FF>$2</color>, up to $3 stacks."
 
 神之劍=Deus Xiphos
+【逆轉之時】=[Hour of Reversal]
+逆轉之時=Hour of Reversal
+r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。\n自身每累計獲得(\d+)層『月相』或『特殊月相』，暴擊率提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合。自身釋放人格面具技能/神通法造成(\d+)次及以上傷害時，傷害提升<color\=#2899FF>(\d+\.\d+%)</color>。$"="Increases ATK by <color\=#2899FF>$1</color>. \nIncreases CRIT Rate by <color\=#2899FF>$3</color> when you gain $2 [Moon Phase] or [Special Moon Phase] for $4 turns. Increases DMG Dealt by <color\=#2899FF>$6</color> when you deal $5 hits of damage with Persona skills/ {{A}}."
+名刀透徹=Translucent Blade
+【靜守之志】=[Silent Resolve]
+靜守之志=Silent Resolve
+r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)</color>。\n自身為友方同伴添加增益效果時，所有同伴傷害提升<color\=#2899FF>(\d+\.\d+%)</color>，自身傷害額外提升<color\=#2899FF>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Increases ATK by <color\=#2899FF>$1</color>. \nWhen you buff allies, increases all allies' DMG Dealt by <color\=#2899FF>$2</color> and additionally increases own DMG Dealt by <color\=#2899FF>$3</color> for $4 turns."
 
 ----------
 STANDARD 5 STAR UNIT WEAPONS
