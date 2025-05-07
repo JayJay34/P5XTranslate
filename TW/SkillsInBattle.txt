@@ -380,6 +380,9 @@ r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的火焰屬�
 Overheat
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的火焰屬性傷害，有(\d+%)固定機率使主目標陷入燃燒。$"="Deals $1 ATK Fire damage to <color\=#FFFF00>all</color> enemies, with a $2 fixed chance to inflict the main target with Burn."
 
+Fury Incarnate
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+)次(\d+\.\d+%)攻擊力的火焰屬性傷害。使敵方受到「創傷」，持續(\d+)回合。「創傷」期間，目標每受到1次火焰屬性傷害，受到暴擊效果提升(\d+%)，持續(\d+)回合，上限(\d+)層。$"="Deals $2 ATK Fire damage to <color\=#FFFF00>1 enemy</color> $1 times. Inflicts the enemy with [Trauma] for $3 turns. During [Trauma], each time the target takes 1 hit of Fire damage, increases their CRIT DMG Taken by $4 for $5 turns, up to $6 stacks."
+
 --- Ice ---
 
 Blizzard
@@ -395,7 +398,7 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊�
 
 --- Wind ---
 
-//Goddamnit Magarula why are you worded differently???
+Magarula
 sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> enemies, with a <color\=#FFFF00>$3</color> base chance to inflict $4 for 2 turns.
 
 Narcissus
