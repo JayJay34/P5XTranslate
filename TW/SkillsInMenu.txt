@@ -132,11 +132,13 @@ No size on inherit skill names or else they won't work in the inherit menu
 瑪哈拉基=Maragi
 瑪哈拉基翁=Maragion
 瑪哈亞基達因=Maragidyne
+煉獄=Inferno
 大燃燒=Blazing Hell
 地獄劫火=Hell's Calamity
 極熱=Overheat
 火祭=Fire Offering
 煉獄黑炎=Abyssal Flame
+熾怒真身=Fury Incarnate
 
 --- Ice ---
 
@@ -159,9 +161,9 @@ No size on inherit skill names or else they won't work in the inherit menu
 瑪哈吉歐=Mazio
 瑪哈吉歐加=Mazionga
 瑪哈吉歐達因=Maziodyne
-電流踴動=Electric Surge
 真理之雷=Thunder Reign
 崇高聖戰=Wild Thunder
+電流踴動=Electric Surge
 天召雷=<size\=22>Heavenly Thunder</size>
 
 --- Wind ---
@@ -172,6 +174,7 @@ No size on inherit skill names or else they won't work in the inherit menu
 瑪哈加爾=Magaru
 瑪哈加爾拉=Magarula
 瑪哈加爾達因=Magarudyne
+萬物流轉=Panta Rhei
 真空波=Vacuum Wave
 俯獵=Wind Hunt
 寂滅風息=<size\=23>Winds of Nirvana</size>
@@ -574,6 +577,9 @@ r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的火焰屬�
 
 //Hell's Calamity
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，若其處於<link\="s|102"><u>燃燒</u></link>狀態，則額外造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害並使其重置其<link\="s|102"><u>燃燒</u></link>效果時間。"=Deals <color\=#FFFF00>$1</color> ATK Fire damage to <color\=#FFFF00>1</color> enemy.\nIf the enemy is inflicted with <link\=s|102><u>Burn</u></link>, deals an additional <color\=#FFFF00>$1</color> ATK Fire damage and reset the duration of <link\=s|102><u>Burn</u></link>.
+
+Fury Incarnate
+r:"^對1名敵人造成(\d+)次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害。使敵方受到「創傷」，持續(\d+)回合。「創傷」期間，目標每受到1次火焰屬性傷害，受到暴擊效果提升(\d+%)，持續(\d+)回合，上限(\d+)層。$"="Deals <color\=#fffc40>$2</color> ATK Fire damage to 1 enemy $1 times. Inflicts the enemy with [Trauma] for $3 turns. During [Trauma], each time the target takes 1 hit of Fire damage, increases their CRIT DMG Taken by $4 for $5 turns, up to $6 stacks."
 
 --- Ice ---
 

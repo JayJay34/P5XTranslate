@@ -1239,6 +1239,7 @@ r:"在「星盤試煉」中通過「紫色或紅色」監測點 \((\d+)\/(\d+)\)
 sr:"^通關「(.*)」難度(\d+) \((\d+)\/(\d+)\)$"="Clear [$1] on Difficulty $2 ($3/$4)"
 
 r:"^本期通行證期間，累計登入(\d+)天 \((\d+)/(\d+)\)$"="Log in for $1 day(s) ($2/$3)"
+r:"^在「塑命循啟」中完成一張啟示卡定製 \((\d+)\/1\)$"="Make 1 custom Revelation Card in [Writing Fate] ($1/1)"
 
 ////////////////////////////////
 /// g. Banners / Pull Screen ///
@@ -1374,6 +1375,7 @@ sr:"^「當未觸發UP或保底規則時，所有武器均分基礎獲取機率�
 偵探王子再臨=The Detective Prince
 轟鳴的方程式=Max Formula Racing
 新生之翼=The Nirvana Song
+月光小夜曲=The Moonlight
 
 ----------
 Gachapon + Crane (Capsule)
@@ -2328,6 +2330,19 @@ r:"^全體怪盜<color\=#ff0036>追加效果</color>造成傷害提高(\d+(.\d+)
 r:"^全體怪盜<color\=#E3E3E3>萬能</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#E3E3E3>Almighty</color> DMG by $1"
 r:"^全體怪盜處於<color\=#E3E3E3>額外回合</color>時造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' DMG Dealt during <color\=#E3E3E3>Extra Turn</color> by $1"
 
+此處盤踞著大量的陰影，挑戰成功可獲得怪盜潛能材料。=There are many Shadows here, gain Thief Potential materials on victory.
+此處盤踞著強大的陰影，挑戰成功可獲得武器突破材料。=There are strong Shadows here, gain Weapon Enhance materials on victory.
+此處盤踞著強大的陰影，挑戰成功可獲得技能升級材料。=There are strong Shadows here, gain Skill Upgrade materials on victory.
+此處盤踞著強大的陰影，挑戰成功可獲得厄抑巡禮兌換代幣「不羈紋章·空」。=There are strong Shadows here, gain Challenge Reward exchange currency [Wild Card Emblem·Dull] on victory.
+此處盤踞著強大的陰影，挑戰成功可獲得厄抑巡禮兌換代幣「不羈紋章·耀」。=There are strong Shadows here, gain Challenge Reward exchange currency [Wild Card Emblem·Shiny] on victory.
+此處潛伏著厄抑之境中凝結的特殊陰影，挑戰成功可獲得傳記殘頁、斷章、全書。=There are special Shadows here, gain Biography on victory.
+此處潛伏著厄抑之境中凝結的特殊陰影，挑戰成功可獲得萬用零件·小、中、大。=There are special Shadows here, gain Weapon Parts on victory.
+此處潛伏著厄抑之境中凝結的特殊陰影，挑戰成功可獲得{{A}}精末、精碎、精魄。=There are special Shadows here, gain {{A}} Essence on victory.
+此處盤踞著強大的陰影，挑戰成功可獲得怪盜心象「屬性強化」的材料。=There are strong Shadows here, gain Mental Image materials on victory.
+此處潛伏著厄抑之境中凝結的特殊陰影，挑戰成功可獲得大量魂石獎勵。=There are special Shadows here, gain Soul Gems on victory.
+此處潛伏著厄抑之境中凝結的特殊陰影，挑戰成功可獲得面具精靈、印記與不羈紋章。=There are special Shadows here, gain Persona and Wild Card Emblem on victory.
+r:"^此處盤踞著強大的陰影，(.*)，挑戰成功可獲得神秘的啟示卡。$"="There are strong Shadows here, gain Revelation Cards on victory."
+
 r:"^保底進度：<color\=#0665ca>(\d+)/(\d+)</color>$"="Pity: <color\=#0665ca>$1/$2</color>"
 r:"^領取 <color\=#0665ca>(\d+)</color> 次必得$"="Guarantee after <color\=#0665ca>$1</color> time(s)"
 本次領取必得=Guarantee
@@ -2632,9 +2647,10 @@ P5X營運團隊=P5X Team
 當前暫無郵件=No email
 沒有收到郵件=No email
 
-sr:"^「(.*)」即將結束$"="[$1] Ending Soon"
+sr:"^「(.*)」即將結束$"="<size\=24>[$1] Ending Soon</size>"
 sr:"^「(.*)」獎勵補發$"="<size\=24>[$1] Reissue Rewards</size>"
 sr:"^「(.*)」總星級獎勵$"="[$1] Star Rewards"
+r:"^V(.*) 版本預告$"="V$1 Version Preview"
 r:"^您的{{A}}任務「(.*)」獎勵未領取，已透過郵件發送，請查收附件。$"="Your unclaimed {{A}} mission rewards have been sent via mail. Please check the attachments."
 
 // Mission Screen
@@ -3076,6 +3092,7 @@ r:"^戰鬥中至少打出(\d+)次ONEMORE$"="Use at least $1 ONE MORE"
 與{{A}}一起放煙火=Watch fireworks with {{A}}
 r:"^燃放(\d+)個煙火\((\d+)\/(\d+)\)$"="Set off $1 fireworks ($2/$3)"
 
+塑命循啟=Writing Fate
 r:"^完成「命書一覽」中的限時任務獲得道具「時諭之墨」，使用該道具可在活動期間內定製(\d+)張啟示卡。$"="Complete [Pursuing Fate] missions for [Ink of Time] to make $1 custom Revelation."
 時諭之墨=Ink of Time
 尚未定製=Not customized

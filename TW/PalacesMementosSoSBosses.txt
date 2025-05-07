@@ -1661,6 +1661,7 @@ Sea of Souls Trials (SoS)
 <color\=#FFF000>下期晉級</color>=<color\=#FFF000>Promotion!</color>
 保級條件：=Relegation:
 r:"^排名<color\=#FFF000>前(\d+)</color>$"=" Rank <color\=#FFF000>Top $1</color>"
+r:"^降級條件：排名(\d+%)以後$"="Demotion: After Top $1"
 r:"^<color\=#FFFFFF>\(當前<color\=#FFF000>第(\d+)名</color>\)</color>$"="<color\=#FFFFFF>(Currently <color\=#FFF000>Rank $1</color>)</color>"
 r:"^<color\=#ef0000>下期降級</color>$"="<color\=#ef0000>Demotion</color>"
 r:"^降級條件：排名(\d+)名以後$"="Demotion: After Top $1"
@@ -1838,3 +1839,6 @@ sr:"^獲得『穩定領域』效果；自身造成弱點傷害時，為所有友
 渦流纏繞=Coiling Maelstrom
 r:"^渦<color\=#000000>流</color>纏繞$"="C<color\=#000000>o</color>iling Maelstrom"
 r:"^造成的最終傷害提升(\d+%)，若自身處於額外回合，造成的最終傷害額外提升(\d+%)，持續(\d+)回合。$"="Increases Final DMG Dealt by $1, if you are in Extra Turn, additionally increases Final DMG Dealt by $2 for $3 turn."
+
+鏡岩迷影=Crag Mirage
+sr:"^在戰鬥中獲得<link\="dc\|237"><u>『穩定領域』</u></link>效果；HIGHLIGHT造成的最終傷害提升(\d+%)；使用{{A}}後可使自身造成的最終傷害提升(\d+%)，持續(\d+)回合。$"="<size\=26>Gains <link\="dc|237"><u>[Stable Domain]</u></link> in battle; Increases HIGHLIGHT Final DMG by $1; Increases own Final DMG by $2 after using {{A}} for $3 turns.</size>"
