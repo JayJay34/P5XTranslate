@@ -1,0 +1,169 @@
+----------
+MENU + UI
+----------
+{{A}}·大廳={{A}}·Hall
+r:"^{{A}} (\d+)層$"="{{A}} Floor $1"
+請選擇探索難度：=Exploration Difficulty
+r:"^敵人難度：(\d+)$"="Enemy Difficulty: $1"
+
+選擇=Select
+預選{{A}}的隨行角色，將通過「洗牌時間」加入正式陣容=<size\=25>The preselected {{A}} accompanying character will officially join the lineup through [Shuffle Time]</size>
+設置攜帶收藏品=Set Equipped Relic
+洗牌時間·初始=<size\=30>Shuffle Time·Initial</size>
+洗牌時間·通常=<size\=30>Shuffle Time·Normal</size>
+洗牌時間·稀有=<size\=30>Shuffle Time·Rare</size>
+洗牌時間·珍貴=<size\=30>Shuffle Time·Precious</size>
+探索進度：=<size\=20>Exploration Progress:</size>
+探索等級=Exploration Lv.
+武器等級=Weapon Lv.
+怪盜技能等級=<size\=24>Thief Skill Lv.</size>
+
+意志力 Will=Will
+r:"^(\d+)以上$"="Above $1"
+極佳=Excellent
+r:"^極佳：所有角色{{A}}、總生命值、總防禦力、最終傷害提升(\d+%)$"="Excellent: Increase all characters' {{A}}, Total HP, Total DEF, and Final DMG by $1"
+良好：無效果=Good: No effect
+不佳=Poor
+r:"^不佳：所有角色{{A}}、總生命值、總防禦力、最終傷害降低(\d+%)$"="Poor: Decrease all characters' {{A}}, Total HP, Total DEF, and Final DMG by $1"
+極差=Terrible
+r:"^極差：所有角色{{A}}、總生命值、總防禦力、最終傷害降低(\d+%)，受最終傷害提升(\d+%)$"="<size\=24>Terrible: Decrease all characters' {{A}}, Total HP, Total DEF, and Final DMG by $1, increase Final DMG Taken by $2</size>"
+虛脫=Exhausted
+r:"^虛脫：所有角色{{A}}、總生命值、總防禦力、最終傷害降低(\d+%)，受最終傷害提升(\d+%)$"="<size\=24>Exhausted: Decrease all characters' {{A}}, Total HP, Total DEF, and Final DMG by $1, increase Final DMG Taken by $2</size>"
+
+<color\=#67FCFC>時鐘的齒輪</color>\n可用於在「大時鐘」具象化卡牌。每次探索結束後清空。=<color\=#67FCFC>Clock Gears</color>\nCan be used to materialize cards at the [Grand Clock]. Cleared after each exploration.
+<color\=#67FCFC>拂曉的碎片</color>\n可用於在「時鐘」恢復意志力、定向選擇角色。可用於開啟「蒙納多之門」。每次探索結束後清空。=<size\=24><color\=#67FCFC>Twilight Fragments</color>\nCan be used at the [Clock] to restore [Will] or to select a specific character. Can also be used to open a [Monad Door]. Cleared after each exploration.</size>
+r:"^消耗(\d+)個「拂曉的碎片」，恢復(\d+)點「意志力」。$"="Consume $1 [Twilight Fragments] to recover $2 [Will]"
+r:"^消耗(\d+)個「拂曉的碎片」，定向選擇(\d+)個已擁有的角色。$"="Consume $1 [Twilight Fragments] to specifically select $2 already owned character"
+作戰<sprite\=8 tint=1><sprite\=15 tint=1><sprite\=8 tint=1> 解明<sprite\=2 tint=1><sprite\=15 tint=1><sprite\=2 tint=1>=<size\=26>COMBAT</size><sprite\=8 tint=1><sprite\=15 tint=1><sprite\=8 tint=1> <size\=26>NAVI</size><sprite\=2 tint=1><sprite\=15 tint=1><sprite\=2 tint=1>
+
+----------
+ITEMS
+----------
+心靈碎片=Heart Fragments
+時鐘的齒輪=Clock Gears
+拂曉的碎片=Twilight Fragments
+夢境碎片=Dream Fragments
+{{A}}的夢境碎片={{A}}'s Dream Fragments
+設置夢境碎片=Set Dream Fragments
+選擇本次{{A}}中，能夠收集到的夢境碎片=Select the Dream Fragments obtainable in this {{A}} run
+古老的金幣=Ancient Gold Coin
+古老的銀幣=Ancient Silver Coin
+
+----------
+BUFFS NAMES
+----------
+寶劍·不破之盾=Swords·Unbreakable Shield
+寶劍·趁虛而入=Swords·Exploit Weakness
+r:"^敵人每有一個負面狀態，受到的傷害提升(\d+%)，最多使其受到的傷害提升(\d+%)"="For every debuff the enemy have, increase their DMG Taken by $1, up to $2"
+寶劍·穩固後援=Swords·Steady Support
+寶劍·傷口加深=Swords·Deepening Wound
+寶劍·HL返還=Swords·HL Refund
+寶劍·專注制敵=Swords·Focused Suppression
+r:"^任意角色釋放單體{{A}}技能後，使技能目標獲得1次相當於其受到傷害(\d+%)的固定傷害$"="After any character use a single target {{A}} skill, the skill target take an additional fixed damage equal to $1 of the damage taken"
+寶劍·戰意高漲=Swords·Battle Frenzy
+寶劍·屬性共振=Swords·Element Resonance
+寶劍·算無遺策=Swords·Meticulous Strategy
+寶劍·能量流轉=Swords·Energy Circulation
+寶劍·{{A}}恢復=Swords·{{A}} Recovery
+寶劍·生命之鞘=Swords·Life Sheath
+r:"^所有角色最大生命值提升(\d+(.\d+)?(%)?)$"="Increase all characters' Max HP by $1"
+寶劍·武器大師=Swords·Weapon Master
+r:"^所有角色普通攻擊造成最終傷害提升(\d+(.\d+)?(%)?)$"="Increase all characters' SWORD Final DMG by $1"
+寶劍·力量之磨礪=Sword·Sharpening Strength
+r:"^處於第(\d+)層及之前，所有角色造成最終傷害降低(\d+%)；處於第(\d+)層及之後，所有角色造成最終傷害提高(\d+%)$"="On Floor $1 and below, decrease all characters' Final DMG Dealt by $2; on Floor $3 and above, increase all characters' Final DMG Dealt by $4"
+寶劍·衝鋒信條=Swords·Charge Creed
+
+寶劍·援助疊加=Swords·Assistance Stacking
+r:"^使用解明技能後，所有角色造成傷害提升(\d+%)，本場戰鬥永久生效，可疊加(\d+)層$"="After using a Navigator skill, permanently increase all characters' DMG Dealt by $1, up to $2 stacks"
+寶劍·術式組曲=Swords·Arcane Suite
+r:"^所有角色念動/核熱/祝福/詛咒傷害提升(\d+%)$"="Increase all characters' Psy/Nuke/Bless/Curse DMG by $1"
+寶劍·HL激勵=Swords·HL Motivation
+r:"^任意角色使用HIGHLIGHT後，使其他角色的HIGHLIGHT冷卻時間減少(\d+)回合$"="After any character use HIGHLIGHT, decrease the HIGHLIGHT cooldown for other characters by $2 turn"
+寶劍·技巧至上=Swords·TECH Supreme
+r:"^所有角色TECH精通提升(\d+)$"="Increase all characters' TECHNICAL Mastery by $1"
+
+聖杯·指針復位=Cups·Point Reset
+聖杯·老練獵手=Cups·Seasoned Hunter
+聖杯·勇鬥者輪軸=Cups·Brave Axle
+r:"^戰鬥勝利時，當前「時鐘的齒輪」數量增加(\d+%)$"="When winning a battle, increase current [Clock Gears] by $1"
+聖杯·新品特賣=Cups·New Sale
+r:"^「大時鐘」刷新卡牌時，所需「時鐘的齒輪」數量降低(\d+%)$"="When refreshing cards in the [Great Clock], decrease the required [Clock Gears] by $1"
+聖杯·銀幣飛濺=Cups·Silver Splash
+r:"^「擊碎可破壞物獲取「古老的銀幣」數量增加(\d+%)$"="Increase the amount of [Ancient Silver Coins] obtained from breakable objects by $1"
+聖杯·齒輪滿箱=Cups·Gearbox Full
+r:"^開啟寶箱獲取「時鐘的齒輪」數量增加(\d+%)$"="Increase the amount of [Clock Gears] obtained from treasure chests by $1"
+r:"^錢幣·時鐘的齒輪(.*)$"="Coins·Clock Gear $1"
+r:"^獲得(\d+)個時鐘的齒輪$"="Obtain $1 Clock Gears"
+r:"^錢幣·拂曉碎片(.*)$"="Coins·Twilight Fragments $1"
+r:"^獲得(\d+)個拂曉的碎片=Obtain $1 Twilight Fragment"
+
+r:"^令牌·衝鋒信條(.*)$"="Wands·Charge Creed $1"
+令牌·危險挑戰者=Wands·Dangerous Challenger
+下1個進入探索樓層時，出現強敵陰影的概率提高=Increase the chance of encountering a powerful Shadow on the next exploration floor
+
+----------
+SHUFFLE TIME
+----------
+每次進入「大時鐘」時，獲得1次{{A}}刷新次數=Each time you enter the [Great Clock], you gain 1 free refresh
+r:"^任意角色使用HIGHLIGHT/{{A}}後，使所有角色造成傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="After any character uses HIGHLIGHT/{{A}}, increase all character's DMG Dealt by $1 for $2 turns, up to $3 stacks"
+r:"^進入戰鬥時，每有一個相同屬性的角色，所有角色造成傷害提高(\d+%)$"="At the start of battle, for every character with the same element, increase all characters' DMG Dealt by $1"
+r:"^{{A}}能量恢復效率提升(\d+%)$"="Increase {{A}} Energy recovery by $1"
+r:"^所有角色處於護盾下時，受到傷害降低(\d+%)$"="Decrease all characters' DMG Taken when Shielded by $1"
+r:"^所有角色持續效果傷害提升(\d+%)$"="Increase all characters' Damage Over Time DMG by $1"
+r:"^任意角色使用HIGHLIGHT後，立刻恢復(\d+%)HIGHLIGHT能量$'="After any character use HIGHLIGHT, immediately restore $2 HIGHLIGHT Energy"
+r:"^戰鬥勝利後獲取經驗值增加(\d+%)$'="Increase EXP after battle by $1"
+
+獲得角色：{{A}}=Obtain Character: {{A}}
+r:"^{{A}}的「意識」提升到(\d+)$"="Increase {{A}}'s Awareness to $1"
+{{A}}覺醒了超越意識={{A}} awakened Beyond Awareness
+
+----------
+ARCANA CARDS
+----------
+r:"^所有角色造成{{A}}技能傷害時會額外降低敵方主目標(\d+)點倒地值，所有敵人受{{B}}傷害提升(\d+%)-(\d+%)（依據層數變化）$"="<size\=28>All characters additionally decrease the main target's Down Gauge by $1 when dealing {{A}} skill damage. Increase all enemies' {{B}} DMG Taken by $2–$3 (based on stacks)</size>"
+r:"^戰鬥消耗「意志力」減少(\d+)點，「意志力」大於(\d+)時，額外使所有角色最終傷害提升(\d+%)$"="Decrease battle [Will] cost by $1. When [Will] is above $2, additionally increase all characters' Final DMG by $3"
+
+----------
+NPC
+----------
+迷糊的女僕=Confused Maid
+嗯……今天要買什麼食材呢……？=Hmm... What ingredients should I buy today...?
+啊，要先決定菜單呀。=Ah, I should decide the menu first
+主菜選什麼好呢？=What main dish should I pick?
+我喜歡蛋包飯=I like omurice
+r:"^(\d+%)概率獲得(\d+)個珍稀品質「寶劍」戰鬥增益$"="$1 to obtain $2 Epic [Swords] buff"
+咖喱比較好=Curry is better
+r:"^獲得(\d+)-(\d+)個稀有品質「寶劍」戰鬥增益$"="Obtain $1-$2 Rare [Swords] buffs"
+做拉麵？=Make ramen?
+r:"^獲得(\d+)-(\d+)個尋常品質「寶劍」戰鬥增益$"="Obtain $1-$2 Common [Swords] buffs"
+
+悲傷的少女=Sad Girl
+小咲說她要轉學了……\n明明說好了要一起畢業的……=Kousaki-chan said she’s transferring schools... We promised we'd graduate together...
+我只有小咲這一個朋友啊……=Kousaki-chan is my only friend...
+如果她不在，\n我就要變成孤身一人了……=If she's not here,\nI'll be all alone...
+{{A}}……我不要一個人啊……={{A}}... I don't want to be alone...
+給她寫信吧=Write her a letter
+r:"^消耗(\d+)點「意志力」，獲得(\d+)名已擁有的怪盜$"="Consume $1 [Will] to obtain $2 already owned Phantom Thief"
+會有新朋友的=<size\=25>You'll make new friends</size>
+r:"^消耗(\d+)點「意志力」，獲得(\d+)名隨機的怪盜$"="Consume $1 [Will] to obtain $2 random Phantom Thief"
+先好好休息吧=Take a rest first
+什麼也不會獲得=Obtain nothing
+嗯……聽你的……=Hmm... I'll listen to you...
+
+認知之貓=Cognitive Cat
+好像叼著什麼東西……=Seems to be holding something in its mouth...
+靠近=Approach
+r:"^獲得(\d+)個「古老的金幣」$"="Obtain $1 [Ancient Gold Coin]"
+r:"^隨機獲得(\d+)-(\d+)個「時鐘的齒輪」$"="Randomly obtain $1-$1 [Clock Gears]"
+
+固執的老頭=Stubborn Old Man
+真是的，怎麼哪裡都沒有白味噌啊！=Really, why is it so hard to find white miso anywhere!
+現在的年輕人啊，什麼都買速溶的……\n所以才說現在的年輕人啊……=Kids these days... always buying instant stuff.\nThat’s why I say, kids these days...
+{{A}}不行，老太婆還在等我呢。\n得趕緊買了回去……咦，要買什麼來著？={{A}} no, my wife's still waiting for me. Have to hurry and buy... wait, what was I supposed to buy again?
+我要幹什麼來著？\n我這是在哪兒啊？=What was I supposed to do again? Where am I?
+陪他尋找白味噌=<size\=25>Accompany him to look for white miso</size>
+r:"^消耗(\d+)點「意志力」，獲得(\d+)個「時鐘的齒輪」$"="Consume $1 [Will] to obtain $2 [Clock Gears]"
+啊，對……是白味噌……\n我家老太婆一直喜歡……=Ah, right... it's white miso...\nMy wife always likes it...
+回家吧=Go home
+r:"^消耗(\d+)個「時鐘的齒輪」，恢復(\d+)點「意志力」$"="Consume $1 [Clock Gears] to restore $2 [Will]"
+會有其他人幫忙的=<size\=23>Someone else will help out</size>
