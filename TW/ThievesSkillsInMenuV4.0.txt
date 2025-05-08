@@ -10,7 +10,9 @@ Character-specific Skill Details
 技能倍率=Skill Multiplier
 未解鎖=Locked
 r:"^怪盜(\d+)級時可解鎖$"="Unlocks at Lv. $1"
-r:"怪盜(\d+)級時可繼續提升"=Can upgrade at Lv. $1
+r:"^角色(\d+)級時可解鎖$"="Unlocks at Lv. $1"
+r:"^怪盜(\d+)級時可繼續提升$"="Can upgrade at Lv. $1"
+r:"^角色(\d+)級時可繼續提升$"="Can upgrade at Lv. $1"
 該技能已達最高等級=<size\=30>Skill is at highest level</size>
 r:"^潛能(\d+)級時解鎖$"="Unlocks at Potential $1"
 該怪盜已培養至滿級！=Thief Lv. maxed!
@@ -110,6 +112,7 @@ r:"^額外回復生命值(.*)$"="Additionally increase Healing $1"
 「鐵火流星」倍率提升=[Fiery Shooting Star] Multiplier
 『鐵火流星』傷害提升=[Fiery Shooting Star] Damage
 「歲火」倍率=[Year Fire] Multiplier
+月相額外倍率=Moon Phase Multiplier
 
 ONE MORE：技能傷害=ONE MORE: Skill DMG
 HIGHLIGHT：技能倍率=HIGHLIGHT: Skill DMG
@@ -415,7 +418,7 @@ r:"^釋放『暗香細語』後，立刻使倒地值最高的敵人暴露<link\=
 r:"^『暗香細語』的技能等級提升(\d+)級，至多提升至(\d+)級。$"="[Fragrance Whisper] Skill Lv. +$1, up to a maximum of Lv. $2."
 
 佳月=Beautiful Moon
-r:"^任意同伴釋放HIGHLIGHT後，立刻使倒地值最高的敵人暴露<link\="s\|188"><u>『破綻』</u></link>。$"="After any ally uses HIGHLIGHT, immediately expose a <link\="s|188"><u>[Vulnerability]</u></link> from the enemy with the highest Down Gauge."
+r:"^任意同伴釋放HIGHLIGHT/{{A}}後，立刻使倒地值最高的敵人暴露<link\="s\|188"><u>『破綻』</u></link>。$"="After any ally uses HIGHLIGHT/{{A}}, immediately expose a <link\="s|188"><u>[Vulnerability]</u></link> from the enemy with the highest Down Gauge."
 
 獨秀=Lone Bloom
 r:"^釋放『暗香細語』後，若{{A}}速度大於100點，每超過15點，解明怪盜的準備時間減少1次行動，最多可減少4次行動。$"="After using [Fragrance Whisper], for every 15 SPD that's over 100, decreases your cooldown by 1 action, up to 4 actions."
@@ -709,7 +712,7 @@ r:"^{{A}}釋放<link\="s\|142"><u>『勁歌熱舞』</u></link>後，有20%的�
 r:"^『熱辣變奏曲』的技能等級提升(\d+)級，至多提升至(\d+)級。$"="[Hot Variation] Skill Lv. +$1, up to a maximum of Lv. $2."
 
 變身♪舞臺女王=<size\=24>Transform ♪ Queen of the Stage</size>
-r:"^任意同伴釋放HIGHLIGHT技能後，{{A}}有67%的固定機率獲得1個<link\="s\|141"><u>『節拍』</u></link>。$"="After any ally uses HIGHLIGHT, there is a 67% fixed chance to gain 1 <link\="s|141"><u>[Beat]</u></link>."
+r:"^任意同伴釋放HIGHLIGHT/{{A}}技能後，{{A}}有67%的固定機率獲得1個<link\="s\|141"><u>『節拍』</u></link>。$"="After any ally uses HIGHLIGHT/{{A}}, there is a 67% fixed chance to gain 1 <link\="s|141"><u>[Beat]</u></link>."
 
 安可♪熱烈迴響=<size\=28>Encore ♪ Enthusiastic Echo</size>
 r:"^{{A}}釋放<link\="s\|142"><u>『勁歌熱舞』</u></link>後，有25%的固定機率觸發『安可』：額外釋放1次<link\="s\|142"><u>『勁歌熱舞』</u></link>。額外釋放的<link\="s\|142"><u>『勁歌熱舞』</u></link>無法再次觸發『安可』。$"="After using <link\="s|142"><u>[Hot Dance]</u></link>, there is a 25% fixed chance to trigger [Encore]: Trigger <link\="s|142"><u>[Hot Dance]</u></link> again. This additional <link\="s|142"><u>[Hot Dance]</u></link> cannot trigger [Encore]."
@@ -763,7 +766,7 @@ r:"^任意同伴生命值首次低於(\d+%)時，{{A}}會立刻為其添加一�
 r:"^『黎明的泡沫』的技能等級提升(\d+)級，至多提升至(\d+)級。$"="[Sea Foam of Dawn] Skill Lv. +$1, up to a maximum of Lv. $2."
 
 追光=Follow Spot
-r:"^任意同伴釋放HIGHLIGHT後，{{A}}為該同伴添加一個相當於{{A}}(\d+%)防禦力\+(\d+)的護盾，效果持續(\d+)回合。$"="After any ally uses HIGHLIGHT, give that ally $1 DEF + $2 Shield for $3 turns."
+r:"^任意同伴釋放HIGHLIGHT/{{A}}後，{{A}}為該同伴添加一個相當於{{A}}(\d+%)防禦力\+(\d+)的護盾，效果持續(\d+)回合。$"="After any ally uses HIGHLIGHT/{{A}}, give that ally $1 DEF + $2 Shield for $3 turns."
 
 永不謝幕=Never Ending Show
 r:"^<link\="s\|144"><u>『海之守護』</u></link>的最大層數提升至(\d+)層，達到(\d+)層時獲得額外效果：造成傷害提高(\d+%)。$"="Increase the cap of <link\="s|144"><u>[Nereids' Guard]</u></link> to $1 stacks, give additional effect when reaching $2 stacks: Increase DMG Dealt by $3."
@@ -1455,7 +1458,7 @@ r:"^{{A}}調製出<link\="s\|180"><u>『雞尾酒』</u></link>時，使所有�
 r:"^『撩人的醉意』的技能等級提升(\d+)級，至多提升至(\d+)級。$"="[Sultry Drunkenness] Skill Lv. +$1, up to a maximum of Lv. $2."
 
 螺絲起子=Screwdriver
-r:"^任意同伴釋放HIGHLIGHT時，該同伴攻擊力提升(\d+%)，效果持續1回合，且{{A}}獲得1杯<link\="s\|182"><u>『精調·DELUXE』</u></link>。$"="After any ally uses HIGHLIGHT, increase that ally's ATK by $1 for 1 turn and gain 1 <link\="s|182"><u>[Premium Deluxe]</u></link>."
+r:"^任意同伴釋放HIGHLIGHT/{{B}}時，該同伴攻擊力提升(\d+%)，效果持續1回合，且{{A}}獲得1杯<link\="s\|182"><u>『精調·DELUXE』</u></link>。$"="After any ally uses HIGHLIGHT/{{B}}, increase that ally's ATK by $1 for 1 turn and gain 1 <link\="s|182"><u>[Premium Deluxe]</u></link>."
 
 經典馬丁尼=Classic Martini
 r:"^<link\="s\|180"><u>『雞尾酒』</u></link>的上限提升至4。戰鬥開始時，{{A}}獲得1杯<link\="s\|182"><u>『精調·DELUXE』</u></link>；{{A}}每調製出3杯<link\="s\|180"><u>『雞尾酒』</u></link>時，額外獲得1杯<link\="s\|182"><u>『精調·DELUXE』</u></link>。$"="Increase the cap of <link\="s|180"><u>[Cocktail]</u></link> to 4. At the start of battle, gain 1 <link\="s|182"><u>[Premium Deluxe]</u></link>; Gain 1 additional <link\="s|182"><u>[Premium Deluxe]</u></link> after mixing 3 cups of <link\="s|180"><u>[Cocktail]</u></link>."
@@ -1887,7 +1890,7 @@ r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊�
 
 r:"^即興獨奏 Lv.(\d+)$"="Improvised Solo Lv.$1"
 r:"^即興獨奏 <color\=#0F69CB>Lv.(\d+)</color>$"="Improvised Solo <color\=#0F69CB>Lv.$1</color>"
-r:"^選擇1名同伴成為<link\="s\|190"><u>『忠實聽眾』</u></link>，<link\="s\|190"><u>『忠實聽眾』</u></link>的攻擊力提升相當於{{A}}攻擊力的(\d+%)，上限<color\=#FFFC40>(\d+)</color>，持續3回合。同時只能擁有1個<link\="s\|190"><u>『忠實聽眾』</u></link>。\n<b><size\=28><color\=#850101>在響徹雲霄的歡呼聲中閃亮登場吧，搖滾女王絕不虧待忠實聽眾，</color></size></b>$"="Selects 1 ally to become the <link\="s|190"><u>[Loyal Listener]</u></link>，increases their ATK by $1 of your own ATK for 3 turns, up to <color\=#FFFC40>$2</color>. There can only be 1 <link\="s|190"><u>[Loyal Listener]</u></link> at a time.\n<b><size\=28><color\=#850101>Let's make your debut in front of the loudest cheers, the Queen of Rock and Roll will not let Loyal Listener down!</color></size></b>"
+r:"^選擇1名同伴成為<link\="s\|190"><u>『忠實聽眾』</u></link>，<link\="s\|190"><u>『忠實聽眾』</u></link>的攻擊力提升相當於{{A}}攻擊力的(\d+%)，上限<color\=#FFFC40>(\d+)</color>，持續3回合。同時只能擁有1個<link\="s\|190"><u>『忠實聽眾』</u></link>。\n<b><size\=28><color\=#850101>在響徹雲霄的歡呼聲中閃亮登場吧，搖滾女王絕不虧待忠實聽眾，</color></size></b>$"="Selects 1 ally to become the <link\="s|190"><u>[Loyal Listener]</u></link>，increases their ATK based on $1 own ATK for 3 turns, up to <color\=#FFFC40>$2</color>. There can only be 1 <link\="s|190"><u>[Loyal Listener]</u></link>.\n<b><size\=28><color\=#850101>Let's make your debut in front of the loudest cheers, the Queen of Rock and Roll will not let Loyal Listener down!</color></size></b>"
 
 r:"^終曲：音域全開 Lv.(\d+)$"="<size\=24>Finale: Range Unleash Lv.$1</size>"
 r:"^終曲：音域全開 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=24>Finale: Range Unleash <color\=#0F69CB>Lv.$1</color></size>"
@@ -2160,7 +2163,7 @@ r:"^友方同伴攻擊敵人時，若目標身上有來自{{A}}的負面效果�
 r:"^『無聲侵襲』的技能等級提升(\d+)級，至多提升至(\d+)級。$"="[Silent Hacking] Skill Lv. +$1, up to a maximum of Lv. $2."
 
 隱蔽攻擊=Covert Attack
-r:"^任意怪盜使用HIGHLIGHT後，{{A}}獲得1層『漏洞分析』，上限(\d+)層。{{A}}使用『無聲侵襲』或『數據破解』時，消耗所有『漏洞分析』，每層提升(\d+%)技能效果。$"="Gain 1 stack of [Vulnerability Analysis] after any ally uses HIGHLIGHT, up to $1 stacks. When using [Silent Hacking] or [Data Crack], consume all [Vulnerability Analysis] and increase skill effect by $2 per stack."
+r:"^任意怪盜使用HIGHLIGHT/{{A}}後，{{A}}獲得1層『漏洞分析』，上限(\d+)層。{{A}}使用『無聲侵襲』或『數據破解』時，消耗所有『漏洞分析』，每層提升(\d+%)技能效果。$"="Gain 1 stack of [Vulnerability Analysis] after any ally uses HIGHLIGHT/{{A}}, up to $1 stacks. When using [Silent Hacking] or [Data Crack], consume all [Vulnerability Analysis] and increase skill effect by $2 per stack."
 
 病毒入侵=Virus Invasion
 r:"^使用『以不死鳥的名義』時會對我方全體怪盜釋放，同時為所有敵人添加我方所有怪盜對應的『擾亂病毒』（同一適應性的『擾亂病毒』僅能同時存在1種）。『駭入完成』的持續時間延長至3回合，並額外提升我方(\d+%)弱點傷害、傷害提升(\d+%)。$"="[In the Name of Featherman] now targets all allies, inflict all enemies with the corresponding [Disruption Virus] (There can only be 1 [Disruption Virus] for the same element). Extend [Hacking Complete] to 3 turns, and additionally increase all allies' Weak DMG by $1 and damage by $2."
@@ -2660,13 +2663,14 @@ r:"^每個怪盜回合開始時，{{A}}獲得(\d+)層<link\="s\|235"><u>『聖�
 初願的序曲=Prelude to a Wish
 r:"^戰鬥開始時，{{A}}獲得滿層<link\="s\|235"><u>『聖歌』</u></link>，並使解明怪盜的初始準備時間減少(\d+)次行動。\n釋放『貫穿時空的輪轉』時，額外使所有同伴暴擊率提高(\d+%)，效果持續(\d+)回合。$"="At the start of battle, Ange gains maxed stacks of <link\="s|235"><u>[Holy Song]</u></link>, then decreases your cooldown by $1 actions. \nWhen using [Wheel of Time], additionally increases all allies' CRIT Rate by $2 for $3 turns."
 
-憧憬的啟程=Journey of Aspiration
+憧憬的啟程=<size\=24>Journey of Aspiration</size>
 r:"^處於<link\="s\|239"><u>『千籟重歌』</u></link>的同伴，獲得(\d+%)<link\="s\|236"><u>總傷害增幅</u></link>。\n當同伴死亡時，立即使其復活並恢復等同於{{A}}(\d+%)攻擊力\+(\d+)的生命值，該效果每場戰鬥僅可觸發1次。$"="Allies under <link\="s|239"><u>[Myriad Song]</u></link> gains $1 <link\="s|236"><u>Total Damage Bonus</u></link>. When an ally faint, immediately revives and restores $2 ATK + $3 HP to them, once per battle."
 
 悸動的華舞=Fluttering Dance
 
 靜謐的漣漪=Ripples of Silence
 r:"^任意怪盜釋放HIGHLIGHT及戰鬥開始時，{{A}}獲得(\d+)層可突破上限的<link\="s\|235"><u>『聖歌』</u></link>，可疊加(\d+)層。$"="Gains $1 stacks of <link\="s|235"><u>[Holy Song]</u></link> that can exceed the cap after any ally uses HIGHLIGHT and at the start of battle, up to $2 stacks. "
+r:"^任意怪盜釋放HIGHLIGHT/{{B}}及戰鬥開始時，{{A}}獲得(\d+)層可突破上限的<link\="s\|235"><u>『聖歌』</u></link>，可疊加(\d+)層。$"="Gains $1 stacks of <link\="s|235"><u>[Holy Song]</u></link> that can exceed the cap after any ally uses HIGHLIGHT/{{B}} and at the start of battle, up to $2 stacks. "
 
 守望的餘音=Echoes of Vigil
 r:"^『群鴿於聖堂和鳴』的技能等級提升(\d+)級，至多提升至(\d+)級。$"="[Choir of Doves] Skill Lv. +$1, up to a maximum of Lv. $2."
@@ -2680,24 +2684,24 @@ Makoto Yuki
 旋律之炎=Melodic Blaze
 月下戰曲=Moonlit Hymn
 紅蓮·豪炎吞噬=Scarlet·Devouring Blaze
-阿爾達=Ardhanari
 華彩樂段=Cadenza
 引領=Lead
 信賴=Trust
+援助技能=Assist Skill
 
 r:"^旋律之炎 Lv.(\d+)$"="Melodic Blaze Lv.$1"
 r:"^旋律之炎 <color\=#0F69CB>Lv.(\d+)</color>$"="Melodic Blaze <color\=#0F69CB>Lv.$1</color>"
-r:"^對(\d+)名敵人造成(\d+)次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，自身獲得(\d+)層『月相』，持續(\d+)回合，上限(\d+)層。自身使用『紅蓮·豪炎吞噬』消耗『月相』造成傷害時，技能倍率提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。\n<b><size=28><color\=#C0C0C0>微光化作遊蛇，纏繞敵人的足踝、指尖……順著脈絡蔓延，轉瞬間便燃作烈焰，對敵人造成火焰傷害。</color></size></b>$"="Deals <color\=#FFFC40>$3</color> ATK Fire damage to $1 enemy $2 times, gains $4 stacks of [Moon Phase] for $5 turns, up to $6 stacks. When consuming [Moon Phase] to deal damage with [Scarlet·Devouring Blaze], increases skill multiplier by <color\=#FFFC40>$7</color> for $8 turns.\n<b><size=28><color\=#C0C0C0>The faint light transforms into a wandering serpent, coiling around the enemy's ankles and fingertips... slithering along their veins, and in an instant, igniting into blazing flames, dealing fire damage.</color></size></b>"
+r:"^對(\d+)名敵人造成(\d+)次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，自身獲得(\d+)層『月相』，持續(\d+)回合，上限(\d+)層。自身使用『紅蓮·豪炎吞噬』消耗『月相』造成傷害時，技能倍率提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。\n<b><size\=28><color\=#C0C0C0>微光化作遊蛇，纏繞敵人的足踝、指尖……順著脈絡蔓延，轉瞬間便燃作烈焰，對敵人造成火焰傷害。</color></size></b>$"="Deals <color\=#FFFC40>$3</color> ATK Fire damage to $1 enemy $2 times, gains $4 stacks of [Moon Phase] for $5 turns, up to $6 stacks. When consuming [Moon Phase] to deal damage with [Scarlet·Devouring Blaze], increases skill multiplier by <color\=#FFFC40>$7</color> for $8 turns.\n<b><size\=28><color\=#C0C0C0>The faint light transforms into a wandering serpent, coiling around the enemy's ankles and fingertips... slithering along their veins, and in an instant, igniting into blazing flames, dealing fire damage.</color></size></b>"
 
 r:"^月下戰曲 Lv.(\d+)$"="Moonlit Hymn Lv.$1"
 r:"^月下戰曲 <color\=#0F69CB>Lv.(\d+)</color>$"="Moonlit Hymn <color\=#0F69CB>Lv.$1</color>"
-r:"^使所有同伴暴擊效果提升<color\=#FFFC40>(\d+\.\d+%)</color>，自身攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。自身獲得(\d+)層『月相』，持續(\d+)回合，上限(\d+)層。\n<b><size=28><color\=#C0C0C0>那是信念之火，同行之誓，是彼此間無聲卻熾烈的信賴，傳遞給同伴們溫暖的力量。</color></size></b>$"="Increases all allies CRIT DMG by <color\=#FFFC40>$1</color> and own ATK  by <color\=#FFFC40>$2</color> for $3 turns. Gains $4 stacks of [Moon Phase] for $5 turns, up to $6 stacks.\n<b><size=28><color\=#C0C0C0>It is the fire of conviction, the oath of companionship, a silent yet fervent trust between allies, delivering a warm and empowering strength to comrades.</color></size></b>"
+r:"^使所有同伴暴擊效果提升<color\=#FFFC40>(\d+\.\d+%)</color>，自身攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。自身獲得(\d+)層『月相』，持續(\d+)回合，上限(\d+)層。\n<b><size\=28><color\=#C0C0C0>那是信念之火，同行之誓，是彼此間無聲卻熾烈的信賴，傳遞給同伴們溫暖的力量。</color></size></b>$"="Increases all allies CRIT DMG by <color\=#FFFC40>$1</color> and own ATK  by <color\=#FFFC40>$2</color> for $3 turns. Gains $4 stacks of [Moon Phase] for $5 turns, up to $6 stacks.\n<b><size\=28><color\=#C0C0C0>It is the fire of conviction, the oath of companionship, a silent yet fervent trust between allies, delivering a warm and empowering strength to comrades.</color></size></b>"
 
 r:"^紅蓮·豪炎吞噬 Lv.(\d+)$"="Scarlet·Devouring Blaze Lv.$1"
 r:"^紅蓮·豪炎吞噬 <color\=#0F69CB>Lv.(\d+)</color>$"="Scarlet·Devouring Blaze <color\=#0F69CB>Lv.$1</color>"
-r:"^發動條件：自身擁有至少(\d+)層『月相』\n消耗自身所有『月相』，每消耗1層『月相』，對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害。\n之後，消耗自身所有『特殊月相』，每消耗1層『特殊月相』，對1名敵人造成的<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害。若『月相』達到(\d+)層，則釋放該技能時自身穿透提升<color\=#FFFC40>(\d+\.\d+%)</color>、造成傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。\n<b><size=28><color\=#C0C0C0>赤紅的火焰劃破天幕，如星隕般驟然墜落，敵人的身影在火光中扭曲，塵土與焦熱隨之翻湧……</color></size></b>$"="Use condition: When you have at least $1 stacks of [Moon Phase]. \nConsumes all [Moon Phase], for each stack of [Moon Phase] consumed, deals 1 hit of <color\=#FFFC40>$2</color> ATK Fire damage to 1 enemy. \nAfterwards, consumes all [Special Moon Phase], for each stack of [Special Moon Phase] consumed, deals 1 hit of <color\=#FFFC40>$3</color> ATK Fire damage to 1 enemy. If you have $4 stacks of [Moon Phase], increases own PEN by <color\=#FFFC40>$5</color> and DMG Dealt by <color\=#FFFC40>$6</color> when using this skill.\n<b><size=28><color\=#C0C0C0>Scarlet flames tear through the sky, falling like meteors in a sudden descent. The enemy's figure twists within the blaze, as dust and scorching heat surge in its wake...</color></size></b>"
+r:"^發動條件：自身擁有至少(\d+)層『月相』\n消耗自身所有『月相』，每消耗1層『月相』，對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害。\n之後，消耗自身所有『特殊月相』，每消耗1層『特殊月相』，對1名敵人造成的<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害。若『月相』達到(\d+)層，則釋放該技能時自身穿透提升<color\=#FFFC40>(\d+\.\d+%)</color>、造成傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。\n<b><size\=28><color\=#C0C0C0>赤紅的火焰劃破天幕，如星隕般驟然墜落，敵人的身影在火光中扭曲，塵土與焦熱隨之翻湧……</color></size></b>$"="Use condition: When you have at least $1 stacks of [Moon Phase]. \nConsumes all [Moon Phase], for each stack of [Moon Phase] consumed, deals 1 hit of <color\=#FFFC40>$2</color> ATK Fire damage to 1 enemy. \nAfterwards, consumes all [Special Moon Phase], for each stack of [Special Moon Phase] consumed, deals 1 hit of <color\=#FFFC40>$3</color> ATK Fire damage to 1 enemy. If you have $4 stacks of [Moon Phase], increases own PEN by <color\=#FFFC40>$5</color> and DMG Dealt by <color\=#FFFC40>$6</color> when using this skill.\n<b><size\=28><color\=#C0C0C0>Scarlet flames tear through the sky, falling like meteors in a sudden descent. The enemy's figure twists within the blaze, as dust and scorching heat surge in its wake...</color></size></b>"
 
-r:"^阿爾達：釋放條件：(\d+)點{{A}}能量\n對1名敵人造成(\d+)次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害。自身獲得(\d+)層『特殊月相』，持續(\d+)回合，上限(\d+)層。\n華彩樂段：釋放條件：(\d+)點{{A}}能量\n使所有友方同伴攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>、傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。自身獲得(\d+)層『特殊月相』，持續(\d+)回合，上限(\d+)層。\n『ONE MORE』：對1名敵人造成火焰屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n援助技能：使1名同伴攻擊力提升(\d+%)，持續(\d+)回合。$"="Use condition: When you have $1 {{A}} Energy. Deals <color\=#FFFC40>$3</color> ATK Fire damage to 1 enemy $2 times. Gains $4 stack of [Special Moon Phase] for $5 turns, up to $6 stacks.\nUse condition: When you have $7 {{A}} Energy. Increases all allies ATK by <color\=#FFFC40>$8</color> and DMG Dealt by <color\=#FFFC40>$9</color> for $10 turns. Gains $11 stack of [Special Moon Phase] for $12 turns, up to $13 stacks.\n[ONE MORE]: Deals Fire damage to 1 enemy. \nMelee Attack: Uses a melee weapon to deal light Phys damage to 1 enemy.\nAssist Skill: Increases 1 ally's ATK by $14 for $15 turn."
+r:"^{{B}}：釋放條件：(\d+)點{{A}}能量\n對1名敵人造成(\d+)次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害。自身獲得(\d+)層『特殊月相』，持續(\d+)回合，上限(\d+)層。\n華彩樂段：釋放條件：(\d+)點{{A}}能量\n使所有友方同伴攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>、傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。自身獲得(\d+)層『特殊月相』，持續(\d+)回合，上限(\d+)層。\n『ONE MORE』：對1名敵人造成火焰屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n援助技能：使1名同伴攻擊力提升(\d+%)，持續(\d+)回合。$"="Ardhanari: Use condition: When you have $1 {{A}} Energy. Deals <color\=#FFFC40>$3</color> ATK Fire damage to 1 enemy $2 times. Gains $4 stack of [Special Moon Phase] for $5 turns, up to $6 stacks.\nCadenza: Use condition: When you have $7 {{A}} Energy. Increases all allies ATK by <color\=#FFFC40>$8</color> and DMG Dealt by <color\=#FFFC40>$9</color> for $10 turns. Gains $11 stack of [Special Moon Phase] for $12 turns, up to $13 stacks.\n[ONE MORE]: Deals Fire damage to 1 enemy. \nMelee Attack: Uses a melee weapon to deal light Phys damage to 1 enemy.\nAssist Skill: Increases 1 ally's ATK by $14 for $15 turn."
 
 r:"^引領 Lv.(\d+)$"="Lead Lv.$1"
 r:"^釋放{{A}}後，所有同伴攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>，S.E.E.S.同伴攻擊力額外提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="After using {{A}}, increase all allies' ATK by <color\=#FFFC40>$1</color>, additionally increases SEES allies' ATK by <color\=#FFFC40>$2</color> for $3 turns."
@@ -2708,7 +2712,7 @@ r:"^獲得友方同伴增益/治療/護盾技能的效果時，暴擊效果提�
 r:"^獲得友方同伴增益/治療/護盾技能的效果時，暴擊效果提升<color\=#0169ca>(\d+\.\d+%)</color>，持續(\d+)回合，上限(\d+)層。$"="When you received buffs/ healing/ shield from allies, increases own CRIT DMG for <color\=#0169ca>$1</color> turns for $2 turns, up to $3 stacks."
 
 偉大的指引=Great Guide
-r:"^{{A}}擁有『華彩樂段』和『阿爾達』兩個{{B}}技能。戰鬥開始時，若自身{{B}}能量不足(\d+)點，補充至(\d+)點{{B}}能量。\n自身獲得友方同伴增益/治療/護盾技能的效果時，獲得(\d+)層『月相』，{{A}}每回合至下一回合開始前最多通過這種方式獲得(\d+)層『月相』，持續(\d+)回合，上限(\d+)層。\n自身擁有『月相』效果時穿透提升(\d+%)/(\d+%)/(\d+%)（達到(\d+)、(\d+)、(\d+)級時變化）$"="{{A}} has [Cadenza] and [Ardhanari] two {{B}} skills. At the start of battle, if own {{B}} Energy is less than $1, restores to $2 {{B}} Energy. \nWhen you received buffs/ healing/ shield from allies, gains $3 stack of [Moon Phase] for $5 turns, up to $6 stacks, can only gain up to $4 stack of [Moon Phase] from this effect before the start of next turn. Increases PEN by $7/$8/$9 (Change when reaching level $10, $11, $12) when you have [Moon Phase]."
+r:"^{{A}}擁有『華彩樂段』和『{{C}}』兩個{{B}}技能。戰鬥開始時，若自身{{B}}能量不足(\d+)點，補充至(\d+)點{{B}}能量。\n自身獲得友方同伴增益/治療/護盾技能的效果時，獲得(\d+)層『月相』，{{A}}每回合至下一回合開始前最多透過這種方式獲得1層『月相』，持續(\d+)回合，上限(\d+)層。\n自身擁有『月相』效果時穿透提升(\d+%)/(\d+%)/(\d+%)（達到1、50、70級時變化）$"="{{A}} has [Cadenza] and [Ardhanari] two {{B}} skills. At the start of battle, if own {{B}} Energy is less than $1, restores to $2 {{B}} Energy. \nWhen you received buffs/ healing/ shield from allies, gains $3 stack of [Moon Phase] for $5 turns, up to $6 stacks, can only gain up to $4 stack of [Moon Phase] from this effect before the start of next turn. Increases PEN by $7/$8/$9 (Change when reaching level 1, 50, 70) when you have [Moon Phase]."
 
 因偶然而生=Born from Coincidence
 r:"^釋放『旋律之炎』時，額外造成(\d+)次傷害。\n釋放『月下戰曲』時，額外使所有同伴穿透提升(\d+%)，持續(\d+)回合。\n釋放『紅蓮·豪炎吞噬』時，若『月相』達到(\d+)層，額外使自身暴擊率提升(\d+%)。$"="When using [Melodic Blaze], additionally deals $1 hit of damage. \nWhen using [Moonlit Hymn], additionally increases all allies' PEN by $2 for $3 turns. \nWhen using [Scarlet·Devouring Blaze], if you have $4 stacks of [Moon Phase], additionally increases own CRIT Rate by $5."
@@ -2719,7 +2723,7 @@ r:"^自身回合開始時，若『月相』達到(\d+)層，則自動釋放1次�
 滿月之下=Under the Full Moon
 
 在荊棘之路上=Thorny Path
-r:"^『華彩樂段』額外使所有同伴傷害提升(\d+%)，『阿爾達』額外造成(\d+%)次傷害。$"="[Cadenza] additionally increases all allies' DMG Dealt by $1, [Ardhanari] additionally deals $2 hit of damage."
+r:"^『華彩樂段』額外使所有同伴傷害提升(\d+%)，『{{A}}』額外造成(\d+)次傷害。$"="[Cadenza] additionally increases all allies' DMG Dealt by $1, [Ardhanari] additionally deals $2 hit of damage."
 
 魂之炎=Blazing Soul
 
