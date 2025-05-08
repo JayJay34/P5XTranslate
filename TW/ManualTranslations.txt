@@ -96,12 +96,14 @@ Onemore自動選擇目標=<size\=27>Automatically select \nONE MORE target</size
 簡化HighLight表現=<size\=21>Simplify HIGHLIGHT Animation\n(Quick/ Once per Login/ Full)</size>
 自動戰鬥「切換{{A}}」=Enable Persona change in Auto mode
 自動戰鬥釋放「HIGHLIGHT」=Enable HIGHLIGHT in Auto mode
+自動戰鬥釋放「HIGHLIGHT/{{A}}」=Enable HIGHLIGHT/{{A}} in Auto mode
 自動戰鬥釋放「解明怪盜」技能=Enable Navigator skills in Auto mode
 「ONE MORE」自動選擇目標=Automatically select ONE MORE target
 簡化戰鬥結算=Simplify Victory Screen
 簡化戰鬥表現=Simplify Combat Animation
 簡化「解明怪盜」表現=Simplify Navigator Animation
 簡化「HIGHLIGHT」表現=Simplify HIGHLIGHT Animation
+簡化「HIGHLIGHT/{{A}}」表現=Simplify HIGHLIGHT/{{A}} Animation
 完整=Full
 首次完整=Full Once
 簡化=Simplify
@@ -394,6 +396,7 @@ r:"^謎<color\=#ff0000ff>之</color>{{A}}$"="My<color\=#ff0000ff>st</color>eriou
 洛基=Loki
 皮蒂斯=Pitys
 尤特碧=Euterpe
+俄耳甫斯=Orpheus
 
 ------------------------------------------
 Worldbuilding Terms
@@ -428,6 +431,7 @@ r:"^已購買(\d+)/(\d+)次（每日05:00重置）$"="Purchased $1/$2 times \n(R
 沒有足夠的行動力了，是否立即補充？=Not enough Energy Points, replenish immediately?
 慾望之木=Wood of Desire
 極其罕見的神奇木料，可用於提升技能等級至Lv.9·Lv.10。=<size\=28>An extremely rare magical timber, can be used to level up Skills to Lv.9-Lv.10.</size>
+極其罕見的神奇木料，可用於提升技能等級至Lv.9、Lv.10。=<size\=28>An extremely rare magical timber, can be used to level up Skills to Lv.9-Lv.10.</size>
 空白命運=Blank Fate
 承載了輪迴力量的命運之卡，可用於任意啟示卡的回溯。=Card of fate with the power of reincarnation, can be used to revert Revelation Cards.
 啟示回溯=Reset
@@ -747,6 +751,12 @@ r:"^領獎$"="Claim"
 r:"^領取$"="<size\=28>Claim</size>"
 明日\n可領=Claim\nTmr
 已領取=Claimed
+可領獎=Claim
+購買=Buy
+已售罄=Sold out
+剩餘數量=Remaining
+售價=Price
+物品詳情=Details
 前往=Go
 未達成=Not Yet
 主角等級=Wonder Lv.
@@ -1269,7 +1279,7 @@ r:"^簽約$"="Pulls"
 
 每10次補給必出四星或以上武器。具體內容查看【說明】=Choose your RATE UP weapon and two others. Every 70 pulls will guarantee a 5★ weapon. 0.8% Chance.\n\n\n\n\n\n\n<color\=#FFDF00><size\=25>The limited character's 5★ Weapon is only available in this banner.</size></color>\n<size\=22>Supply count will carry between banners.</size>
 
-每10次簽約必出四星或以上怪盜角色。具體內容查看【說明】=Get 1 5★ every <color\=#FFDF00>110</color> or <color\=#ff3b37>80</color> pulls;\n<color\=#FFDF00>0.2%</color> or <color\=#ff3b37>0.8%</color>; <color\=#FFDF00>No 50/50</color><size\=20> </size>or<size\=20> </size><color\=#ff3b37>50/50</color>\nGuarantee 1 4★ every 10 pulls.\n</color><size\=17>Save Signature count between same system banners.</size>
+每10次簽約必出四星或以上怪盜角色。具體內容查看【說明】=<size\=27>Get 1 5★ every <color\=#FFDF00>110</color> or <color\=#ff3b37>80</color> pulls;\n<color\=#FFDF00>0.2%</color> or <color\=#ff3b37>0.8%</color>; <color\=#FFDF00>No 50/50</color> or <color\=#ff3b37>50/50</color>.</size>\nGuarantee 1 4★ every 10 pulls.\n</color><size\=17>Save Signature count between same system banners.</size>
 
 sr:"^推薦自選契約共有<color\=#EF0000>(\d+)個</color>怪盜鎖定名額，確認簽約後，<color\=#EF0000>(.*)</color>將<color\=#EF0000>佔用1個鎖定名額</color>，是否確認開始簽約？\n注：該卡池生效期間，UP角色僅能從(\d+)個鎖定怪盜中選取，請謹慎選擇。$"="<size\=26>You have <color\=#EF0000>$1</color> custom slots for this banner. After pulling, <color\=#EF0000>$2</color> will <color\=#EF0000>take up 1 slot</color>, are you sure?\nNote: You can only choose the RATE UP character between the $3 locked Thieves.</size>"
 該怪盜已被鎖定，無法選擇。=Cannot select locked Thief.
@@ -1315,6 +1325,7 @@ r:"(\d+)\/(\d+)頁"=Page $1 / $2
 sr:"^在角色活動契約中<color\=#FE0000>與(.*)簽約</color>$"="<size\=28>Obtain <color\=#FE0000>$1</color> from Contract</size>"
 sr:"^在武器活動補給中<color\=#FE0000>獲得武器(.*)</color>$"="<size\=28>Obtain <color\=#FE0000>$1</color> from Supply</size>"
 
+時裝煥新活動=Fashion Refresh Event
 sr:"^再抽取(\d+)次必得限定時裝<color\=#FFF900>(.*)</color>$"="Guarantee limited outfit <color\=#FFF900>$2</color> after $1 pulls"
 r:"^再抽取<color\=#FFF900>(\d+)</color>次必得限定時裝$"="Guarantee limited outfit after <color\=#FFF900>$1</color> pulls"
 
@@ -2369,6 +2380,7 @@ r:"^透過契約之間·認知精選兌換$"="<size\=23>Redeem from Premium Cogn
 {{A}}合體={{A}} Fusion
 sr:"^透擊敗(.*)機率獲得$"="Chance to get after defeating $1"
 sr:"^擊敗(.*)機率獲得$"="<size\=20>Chance to get after defeating $1"
+r:"^通過厄抑巡禮·極階印記兌換$"="<size\=21>Redeem from Challenge Reward - Super</size>"
 r:"^透過厄抑巡禮·超階印記兌換$"="<size\=21>Redeem from Challenge Reward - Super</size>"
 r:"^透過厄抑巡禮·高階印記兌換$"="<size\=21>Redeem from Challenge Reward - High</size>"
 r:"^透過厄抑巡禮·中階印記兌換$"="<size\=18>Redeem from Challenge Reward - Intermediate</size>"
@@ -2376,7 +2388,7 @@ r:"^透過厄抑巡禮·初階印記兌換$"="<size\=21>Redeem from Challenge Re
 r:"^角色契約簽約時機率獲得$"="Signing Contract"
 r:"^{{A}}精算機等級獎勵$"="{{A}} Ticket Machine"
 r:"^挑戰心軌擇行$"="Challenge Heart Rail"
-r:"^挑戰閼凶夢之扉$"="Challenge Door of Nightmares"
+r:"^挑戰閼凶夢之扉$"="<size\=24>Challenge Door of Nightmares</size>"
 r:"^助戰回饋$"="Redeem from Assist Reward"
 r:"^{{A}}探索度獎勵$"="{{A}} Exploration Reward"
 
@@ -2472,6 +2484,8 @@ r:"^散發出迷離氣味的香丸，可用於提升技能等級至Lv.7-Lv.10。
 r:"^沉香木氣味的L型香塔，可用於提升技能等級至Lv.7-Lv.10。$"="Large agarwood scented incense, can be used to level up Skills to Lv.7-Lv.10."
 r:"^沉香木氣味的M型香塔，可用於提升技能等級至Lv.4·Lv.5·Lv.6。$"="Medium agarwood scented incense, can be used to level up Skills to Lv.4-Lv.6."
 r:"^沉香木氣味的S型香塔，可用於提升技能等級至Lv.2·Lv.3。$"="Small agarwood scented incense, can be used to level up Skills to Lv.2-Lv.3."
+r:"^沉香木氣味的M型香塔，可用於提升技能等級至Lv.4、Lv.5、Lv.6。$"="Medium agarwood scented incense, can be used to level up Skills to Lv.4-Lv.6."
+r:"^沉香木氣味的S型香塔，可用於提升技能等級至Lv.2、Lv.3。$"="Small agarwood scented incense, can be used to level up Skills to Lv.2-Lv.3."
 
 鳶尾花醇香=Top Iris Perfume
 鳶尾花濃香=Fine Iris Perfume
@@ -2479,6 +2493,9 @@ r:"^沉香木氣味的S型香塔，可用於提升技能等級至Lv.2·Lv.3。$"
 r:"^鳶尾香調的頂級香水，可用於提升潛能等級至潛能(\d+)·潛能(\d+)。$"="Top iris perfume, can be used to level up Potential to Potential $1-Potential $2."
 r:"^鳶尾香調的高級香水，可用於提升潛能等級至潛能(\d+)·潛能(\d+)·潛能(\d+)。$"="Fine iris perfume, can be used to level up Potential to Potential $1-Potential $3."
 r:"^鳶尾香調的香水，可用於提升潛能等級至潛能(\d+)·潛能(\d+)。$"="Iris perfume, can be used to level up Potential to Potential $1-Potential $2."
+r:"^鳶尾香調的頂級香水，可用於提升潛能等級至潛能(\d+)、潛能(\d+)。$"="Top iris perfume, can be used to level up Potential to Potential $1-Potential $2."
+r:"^鳶尾香調的高級香水，可用於提升潛能等級至潛能(\d+)、潛能(\d+)、潛能(\d+)。$"="Fine iris perfume, can be used to level up Potential to Potential $1-Potential $3."
+r:"^鳶尾香調的香水，可用於提升潛能等級至潛能(\d+)、潛能(\d+)。$"="Iris perfume, can be used to level up Potential to Potential $1-Potential $2."
 
 頂尖礦石=Exquisite Ore
 優質礦石=Quality Ore
@@ -2486,6 +2503,9 @@ r:"^鳶尾香調的香水，可用於提升潛能等級至潛能(\d+)·潛能(\d
 r:"^製成裝備整體結構的頂尖礦石，可用於在武器等級為60·70時突破。$"="Exquisite ore used to build the overall structure of equipments, can be used level up Weapons Enhance to Enhance 6-Enhance 7."
 r:"^製成裝備整體結構的優質礦石，可用於在武器等級為30·40·50時突破。$"="Quality ore used to build the overall structure of equipments, can be used level up Weapons Enhance to Enhance 3-Enhance 5."
 r:"^製成裝備整體結構的粗製礦石，可用於在武器等級為10·20時突破。$"="Crude ore used to build the overall structure of equipments, can be used level up Weapons Enhance to Enhance 1-Enhance 2."
+r:"^製成裝備整體結構的頂尖礦石，可用於在武器等級為60、70時突破。$"="Exquisite ore used to build the overall structure of equipments, can be used level up Weapons Enhance to Enhance 6-Enhance 7."
+r:"^製成裝備整體結構的優質礦石，可用於在武器等級為30、40、50時突破。$"="Quality ore used to build the overall structure of equipments, can be used level up Weapons Enhance to Enhance 3-Enhance 5."
+r:"^製成裝備整體結構的粗製礦石，可用於在武器等級為10、20時突破。$"="Crude ore used to build the overall structure of equipments, can be used level up Weapons Enhance to Enhance 1-Enhance 2."
 
 {{A}}精魄=<size\=24>{{A}} Essence</size>
 {{A}}精碎=<size\=24>{{A}} Chunk</size>
@@ -2496,8 +2516,10 @@ r:"^神秘的精末體，可用於提升{{A}}經驗，使用後立即增加(\d+)
 
 聖潔之心=Sacred Heart
 璀璨瑰寶=Glorious Gem
-加冕石刻=Coronation Stone
-鑽石晶體=Diamond Crystal
+黃金冠儀=<size\=30>Golden Coronet</size>
+加冕石刻=<size\=28>Coronation Stone</size>
+華麗銀飾=<size\=30>Gorgeous Silver</size>
+鑽石晶體=<size\=30>Diamond Crystal</size>
 r:"^突破Rank(\d+)階級{{A}}時用到的通用材料。$"="Can be used to evolve Rank $1 {{A}}."
 r:"^突破Rank(\d+)-(\d+)階級{{A}}時用到的通用材料。$"="Can be used to evolve Rank $1-$2 {{A}}."
 
@@ -2545,8 +2567,9 @@ sr:"^未知宿命橙·(.*)"="Random 4★ $1"
 秘聞商會的專屬貨幣，可以在怪盜秘聞限時開放章節中的「秘聞商會」兌換獎勵，每期限時開放活動結束後，點券將會失效。=Exclusive currency used in [Mysteries Shop]. All tickets will expire when the event ends.
 『秘聞點券』\n秘聞商會的專屬貨幣，可以在怪盜秘聞限時開放章節中的「秘聞商會」兌換獎勵，每期限時開放活動結束後，點券將會失效。=[Mysteries Ticket]\nExclusive currency used in [Mysteries Shop]. All tickets will expire when the event ends.
 
-在{{A}}商店進行原晶兌換=<size\=25>Redeem from Marthym's Shop</size>
-{{A}}商店購買獲得=<size\=25>Purchase from Marthym's Shop</size>
+在{{A}}商店進行原晶兌換=<size\=25>Redeem from {{A}}'s Shop</size>
+{{A}}商店購買獲得=<size\=25>Purchase from {{A}}'s Shop</size>
+透過{{A}}商店購買=<size\=25>Purchase from {{A}}'s Shop</size>
 完成{{A}}任務=Completion Phantom Pass Missions
 {{A}}·典藏版=From the Premium Phantom Pass
 輕音部徽章兌換=Redeem at the Music Club
@@ -2571,7 +2594,8 @@ r:"^加贈$"="Get            <size\=1>.</size>"
 累計簽到7日，即可獲得=7 days daily rewards
 r:"^累計簽到(\d+)日，即可獲得<size\=66><sprite\=19></size>X(\d+)$"="Log in for $1 days to get <size\=66><sprite\=19></size>X$2"
 r:"^累計簽到(\d+)日，即可獲得<size\=66><sprite\=21></size>X(\d+)$"="Log in for $1 days to get <size\=66><sprite\=21></size>X$2"
-r:"^累計簽到(\d+)日，獲得<size\=66><sprite\=19></size>X(\d+)<size\=66><sprite\=20></size>X(\d+)$"="Log in rewards <size\=66><sprite\=19></size>X$2<size\=66><sprite\=20></size>X$3"
+r:"^累計簽到(\d+)日，獲得<size\=66><sprite\=(\d+)></size>X(\d+)<size\=66><sprite\=(\d+)></size>X(\d+)$"="Log in rewards <size\=66><sprite\=$2></size>X$3<size\=66><sprite\=$4></size>X$5"
+r:"^累計簽到(\d+)日，即可獲得<size\=66><sprite\=(\d+)></size>X(\d+)<size\=66><sprite\=(\d+)></size>X(\d+)$"="Log in rewards <size\=66><sprite\=$2></size>X$3<size\=66><sprite\=$4></size>X$5"
 r:"^第(\d+)天$"="Day $1"
 
 當前選中：=Selected:
@@ -2871,13 +2895,19 @@ r:"^最高通關等級：(\d+)級$"="Highest Clear Lv: $1"
 r:"^通關(.*)難度(\d+)$"="Clear Difficulty $2"
 挑戰模式=<size\=24>Challenge Mode</size>
 首次通關後解鎖當前難度<color\=#173CCAff>體力模式</color>=Unlock <color\=#173CCAff>Stamina Mode</color> after clearing
+首次通關後解鎖當前難度<color\=#4aedfc>體力模式</color>=<size\=20>Unlock <color\=#4aedfc>Stamina Mode</color> for this difficulty after clearing</size>
+尚未通關挑戰模式=Not Cleared
+通關LV.=Clear Lv.
+解鎖挑戰=Unlock Challenge
 r:"^最小行動次數：   (\d+)$"="Number of Actions: $1"
 最小行動次數：本難度尚未挑戰=Number of Actions: Not challenged yet
 扭曲等級=<size\=30>Distortion</size>
-己方行動次數：=Number of Actions:
+己方行動次數：=Actions:
 r:"^己方行動次數：(\d+)$"="Number of Actions: $1"
 新解鎖等級：=Unlocked:
 首領挑戰=Challenge
+下一等級=Next Lv
+下一關=Next
 戰鬥獎勵=Rewards
 屬性強化=Stats Boost
 所有怪盜造成的傷害大幅提升，受到的傷害大幅降低=<size\=25>Heavily increase all Thieves' DMG Dealt;\nHeavily decrease all Thieves' DMG Taken</size>
@@ -3492,6 +3522,7 @@ r:"^與協同者{{A}}好感度達到rank(\d+)$"="Reach Rank $1 with {{A}}"
 查看全部徽章=View all badges
 r:"^徽章收集：(\d+)$"="Badges: $1"
 r:"^徽章冊收集：(\d+)$"="Badge Albums: $1"
+徽章冊=Badge Albums
 已擁有=Owned
 
 徽章詳情=Badge Details
@@ -3505,6 +3536,7 @@ r:"^(.*)·慾望之火$"="$1 - Fire of Desire"
 r:"^(.*)·覺醒之焰$"="$1 - Flame of Awakening"
 r:"^(.*)·心跳之夏$"="$1 - Summer of Heartbeats"
 r:"^(.*)·新春之禧$"="$1 - Celebration of Spring"
+r:"^(.*)·向死之叛$"="$1 - Defiance towards Death"
 
 {{A}}意識等級達到6級={{A}} reached Awareness 6
 r:"^與協同者{{A}}好感度達到rank(\d+)\n且與{{A}}成為{{B}}$"="Reach Rank $1 with {{A}} and become {{B}}."
