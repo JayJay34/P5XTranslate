@@ -731,7 +731,9 @@ sr:"^<color\=#FF0000>(.*)</color>獲得了護盾……$"="<color\=#FF0000>$1</co
 sr:"^<color\=#FF0000>(.*)</color>免疫一次傷害……$"="<color\=#FF0000>$1</color> is immune to next damage..."
 
 sr:"^<color\=#FF0000>(.*)</color>適應性還原。$"="<color\=#FF0000>$1</color> reverted resistance!"
+sr:"^<color\=#FF0000>(.*)</color>的適應性恢復了……$"="<color\=#FF0000>$1</color> reverted resistance!"
 sr:"^<color\=#FF0000>(.*)</color>適應性被改變……$"="<color\=#FF0000>$1</color> changed resistance..."
+sr:"^<color\=#FF0000>(.*)</color>的適應性變化了……$"="<color\=#FF0000>$1</color> changed resistance..."
 sr:"^<color\=#FF0000>(.*)</color>獲得了(.*)耐性……$"="<color\=#FF0000>$1</color> gained Resist $1!"
 sr:"^<color\=#FF0000>(.*)</color>的全屬性適應性變為無……$"="<color\=#FF0000>$1</color> now Null all!"
 
@@ -746,6 +748,8 @@ sr:"^成功驅散掉了(\d+)層<color\=#FF0000>『(.*)』</color>！$"="Dispelle
 sr:"^召喚消耗(\d+)層<color\=#FF0000>『(.*)』</color>$"="Summon consumed $1 stack of <color\=#FF0000>[$2]</color>"
 
 sr:"^<color\=#FF0000>(.*)</color>進入了狂暴狀態……$"="<color\=#FF0000>$1</color> entered Frenzy..."
+sr:"^<color\=#FF0000>(.*)</color>進入「(.*)」……$"="<color\=#FF0000>$1</color> entered [$2]..."
+sr:"^<color\=#FF0000>(.*)</color>進入了「(.*)」狀態……$"="<color\=#FF0000>$1</color> entered [$2]..."
 sr:"^<color\=#FF0000>(.*)</color>陷入了「(.*)」，受到的傷害提升……$"="<color\=#FF0000>$1</color> entered [$2]..."
 sr:"^<color\=#FF0000>(.*)</color>退出了蓄力狀態……$"="<color\=#FF0000>$1</color> exited Charge..."
 
@@ -978,12 +982,14 @@ r:"^效果命中提升$"="Increase EHR"
 r:"^效果抵抗提升$"="Increase Effect RES"
 r:"^傷害強化$"="Damage Boost"
 r:"^傷害提高$"="Increase DMG Dealt"
+HIGHLIGHT傷害提升=Increase HIGHLIGHT DMG
 r:"^造成傷害提升$"="Increase DMG Dealt"
 r:"^造成傷害提高$"="Increase DMG Dealt"
 r:"^受傷害提升$"="Increase DMG Taken"
 r:"^受到傷害提高$"="Increase DMG Taken"
 r:"^受到傷害提升$"="Increase DMG Taken"
 r:"^受到傷害增加$"="Increase DMG Taken"
+受到暴擊效果提升=Increase CRIT DMG Taken
 r:"^受HL傷害提升$"="Increase HIGHLIGHT DMG Taken"
 r:"^受百分比傷害降低$"="<size\=23>Decrease Percentage DMG Taken</size>"
 r:"^受到百分比傷害降低$"="Decrease Percentage DMG Taken"
@@ -1128,6 +1134,7 @@ r:"^下次造成的魔法傷害提升$"="Increase your next Magic attack damage"
 r:"^追加效果暴擊效果提升(\d+%)、攻擊力提升(\d+%)$"="Increase Follow Up CRIT DMG by $1 and Follow Up ATK by $2"
 r:"^追加效果的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up Final DMG by $1"
 r:"^追加效果造成最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up Final DMG by $1"
+r:"^HIGHLIGHT造成的傷害提升(\d+(.\d+)?(%)?)$"="Increase HIGHLIGHT DMG Dealt by $1"
 r:"^使用HL時，造成傷害提高(\d+(.\d+)?(%)?)$"="Increase HIGHLIGHT DMG Dealt by $1"
 r:"^HIGHLIGHT技能的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase HIGHLIGHT Final DMG by $1"
 r:"^持續傷害效果提升(\d+(.\d+)?(%)?)$"="Increase Damage Over Time Effect by $1"
@@ -1187,6 +1194,7 @@ r:"^剩餘護盾值：(\d+)$"="Shield: $1"
 回合結束後回復一定生命值。=Restore HP at the end of each turn
 
 sr:"^(.*)屬性的適應性變為耐$"="Change $1 resistance to Resist"
+適應性發生了變化=Resistance change
 
 免疫一切傷害=Immunity to all damage
 免疫一次傷害=Immunity to next damage
