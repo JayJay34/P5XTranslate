@@ -642,8 +642,11 @@ r:"使<color\=#FFFF00>所有</color>敵人的攻擊力降低(\d+\.\d+%)，持續
 // Debilitate
 r:"使<color\=#FFFF00>1名</color>敵方攻擊、防禦、效果命中、效果抵抗降低(\d+\.\d+%)，效果持續3回合。"=Decreases <color\=#FFFF00>1</color> enemy's ATK, DEF, EHR, and Effect RES by $1 for 3 turns.
 
+Fire Break
+消除<color\=#FFFF00>1名</color>敵人的火焰耐性，效果持續2回合。=Negates Fire resistance of <color\=#FFFF00>1</color> enemy for 2 turns.
+
 Elec Break
-消除<color\=#FFFF00>1名</color>敵人的電擊耐性，效果持續2回合。=Negates Electric resistance of <color\=#FFFF00>1</color> enemy for 2 turns.
+消除<color\=#FFFF00>1名</color>敵人的電擊耐性，效果持續2回合。=Negates Elec resistance of <color\=#FFFF00>1</color> enemy for 2 turns.
 
 Temperament Disruption
 r:"^使<color\=#FFFF00>所有</color>敵人的防禦力降低(\d+\.\d+%)，受到傷害提升(\d+\.\d+%)，持續(\d+)回合。$"="Decreases <color\=#FFFF00>all</color> enemies' DEF by $1 and increases their DMG Taken by $2 for $3 turns."
@@ -711,6 +714,7 @@ r:"^<color\=#FF0000>所有同伴</color>防禦力提升……$"="<color\=#FF0000
 r:"^<color\=#FF0000>所有同伴</color>造成的傷害提升了……$"="<color\=#FF0000>All allies</color> DMG Dealt Up!"
 
 sr:"^<color\=#FF0000>(.*)</color>攻擊提升了……$"="<color\=#FF0000>$1</color> ATK Up!"
+sr:"^<color\=#FF0000>(.*)</color>攻擊降低了……$"="<color\=#FF0000>$1</color> ATK Down!"
 sr:"^<color\=#FF0000>(.*)</color>的攻擊力提升了……$"="<color\=#FF0000>$1</color> ATK Up!"
 sr:"^<color\=#FF0000>(.*)</color>的攻擊力提高了……$"="<color\=#FF0000>$1</color> ATK Up!"
 sr:"^<color\=#FF0000>(.*)</color>防禦提升了……$"="<color\=#FF0000>$1</color> DEF Up!"
@@ -731,11 +735,12 @@ sr:"^<color\=#FF0000>(.*)</color>獲得了護盾……$"="<color\=#FF0000>$1</co
 sr:"^<color\=#FF0000>(.*)</color>免疫一次傷害……$"="<color\=#FF0000>$1</color> is immune to next damage..."
 sr:"^<color\=#FF0000>(.*)</color>獲得了額外回合……$"="<color\=#FF0000>$1</color> gained Extra Turn!"
 
+sr:"^<color\=#FF0000>(.*)</color>的適應性變化了……$"="<color\=#FF0000>$1</color> changed resistance!"
 sr:"^<color\=#FF0000>(.*)</color>適應性還原。$"="<color\=#FF0000>$1</color> reverted resistance!"
 sr:"^<color\=#FF0000>(.*)</color>的適應性恢復了……$"="<color\=#FF0000>$1</color> reverted resistance!"
+sr:"^<color\=#FF0000>(.*)</color>的火焰耐性恢復了……$"="<color\=#FF0000>$1</color> reverted resistance!"
 sr:"^<color\=#FF0000>(.*)</color>適應性被改變……$"="<color\=#FF0000>$1</color> changed resistance..."
-sr:"^<color\=#FF0000>(.*)</color>的適應性變化了……$"="<color\=#FF0000>$1</color> changed resistance..."
-sr:"^<color\=#FF0000>(.*)</color>獲得了(.*)耐性……$"="<color\=#FF0000>$1</color> gained Resist $1!"
+sr:"^<color\=#FF0000>(.*)</color>獲得了(.*)耐性……$"="<color\=#FF0000>$1</color> gained Resist $2!"
 sr:"^<color\=#FF0000>(.*)</color>的全屬性適應性變為無……$"="<color\=#FF0000>$1</color> now Null all!"
 
 r:"^解除了(\d+)個狀態降低效果！$"="Dispelled $1 stats debuff!"
@@ -785,6 +790,7 @@ sr:"^<color\=#FF0000>(.*)</color>從混亂異常狀態恢復了。$"="<color\=#F
 sr:"^<color\=#FF0000>(.*)</color>從洗腦異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Brainwash!"
 
 sr:"^<color\=#FF0000>(.*)</color>被(.*)瞄準了，防禦降低……$"="<color\=#FF0000>Enemy</color> aimed by $2, DEF Down!"
+sr:"^<color\=#FF0000>(.*)</color>將會在(\d+)個回合後逃離……$"="<color\=#FF0000>$1</color> will escape after $2 turn(s)!"
 
 ----------
 Combat Pop-ups for ailments technical
@@ -1026,6 +1032,7 @@ r:"^受弱點傷害提升(\d+%)$"="Increase Weakness DMG by $1"
 受射擊傷害提高=Increase Gun DMG Taken
 受火焰傷害提升=Increase Fire DMG Taken
 受火焰傷害提高=Increase Fire DMG Taken
+受到火焰傷害提升=Increase Fire DMG Taken
 受冰凍傷害提升=Increase Ice DMG Taken
 受冰凍傷害提高=Increase Ice DMG Taken
 受電擊傷害提升=Increase Elec DMG Taken
@@ -1045,6 +1052,8 @@ r:"^受弱點傷害提升(\d+%)$"="Increase Weakness DMG by $1"
 受到詛咒傷害提高=Increase Curse DMG Taken
 受詛咒傷害提升=Increase Curse DMG Taken
 受詛咒傷害提高=Increase Curse DMG Taken
+
+火焰耐性消除=Negate Fire resistance
 
 瞄準=Aim
 瑪哈塔爾卡Ⅳ=Auto-Mataru IV
@@ -1149,6 +1158,7 @@ r:"^受到百分比傷害極大幅降低$"="Severely decrease DMG Taken%"
 r:"^受到最終傷害降低(\d+(.\d+)?(%)?)$"="Decrease Final DMG Taken by $1"
 r:"^受到的最終傷害降低(\d+(.\d+)?(%)?)$"="Decrease Final DMG Taken by $1"
 r:"^最終受到傷害降低(\d+(.\d+)?(%)?)$"="Decrease Final DMG Taken by $1"
+r:"^所有角色受最終傷害降低(\d+(.\d+)?(%)?)$"="Decrease Final DMG Taken by $1"
 r:"^受到最終傷害大幅降低$"="Heavily decrease Final DMG Taken"
 r:"^免疫下一次傷害的(\d+(.\d+)?(%)?)$"="<size\=24>Decrease damage when taking the next hit by $1</size>"
 r:"^所有同伴受到的傷害降低(\d+(.\d+)?(%)?)。$"="Decrease DMG Taken by $1"
