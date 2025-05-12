@@ -390,8 +390,8 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的冰凍�
 
 --- Electric ---
 
-//Electric Surge
-r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，(\d+\.\d+%)基礎機率使敵人觸電，持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK Electric damage to <color\=#FFFF00>1</color> enemy and has a <color\=#FFFF00>$2</color> chance of inflicting <link\=s|104><u>Shock</u></link> for 2 turns.
+Electric Surge
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，(\d+\.\d+%)基礎機率使敵人觸電，持續(\d+)回合。$"="Deals $1 ATK Elec damage to <color\=#FFFF00>1</color> enemy, there is a $2 base chance to inflict Shock for $3 turns."
 
 Heavenly Thunder
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，『雷神威勢』為(\d+)層時，有(\d+%)的基礎機率使所有敵人陷入<link\="s\|104"><u>觸電</u></link>狀態，效果持續(\d+)回合。$"="Deals $1 ATK Elec damage to <color\=#FFFF00>all</color> enemies. When [Thunder God's Might] is at $2 stacks, there is a $3 base chance to inflict all enemies with Shock for $4 turns."
@@ -429,11 +429,11 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動�
 --- Nuke ---
 
 //Basic Nuke ST
-r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，對元素異常的敵人傷害提升(.*)。"=Deals <color\=#FFFF00>$1</color> ATK Nuke damage to <color\=#FFFF00>1</color> enemy. Increase DMG Dealt by $2 if enemy is inflicted with any Elemental Ailment.
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，對元素異常的敵人傷害提升(\d+%)。$"="Deals $1 ATK Nuke damage to <color\=#FFFF00>1</color> enemy, increases DMG Dealt to enemy infliced with Elemental Ailments by $2."
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，攻擊處於元素異常狀態的敵人該技能傷害提升(.*)。$"="Deals $1 ATK Nuke damage to <color\=#FFFF00>1</color> enemy. Increases skill damage by $2 if enemy is inflicted with any Elemental Ailment."
 
 //Basic Nuke AoE
-r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，對元素異常的敵人傷害提升(.*)。"=Deals <color\=#FFFF00>$1</color> ATK Nuke damage to <color\=#FFFF00>all</color> enemies. Increase DMG Dealt by $2 to each enemy inflicted with any Elemental Ailment.
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，對元素異常的敵人傷害提升(\d+%)，造成TECHNICAL。$"="Deals <color\=#FFFF00>$1</color> ATK Nuke damage to <color\=#FFFF00>all</color> enemies, increases DMG Dealt to enemies with Elemental Ailments by $2, triggers TECHNICAL."
 
 --- Bless ---
 r:"^祝福屬性$"="Bless"
@@ -723,6 +723,7 @@ sr:"^<color\=#FF0000>(.*)</color>防禦永久提升了……$"="<color\=#FF0000>
 sr:"^<color\=#FF0000>(.*)</color>防禦降低了……$"="<color\=#FF0000>$1</color> DEF Down!"
 
 sr:"^<color\=#FF0000>(.*)</color>效果命中、效果抵抗提升了……$"="<color\=#FF0000>$1</color> EHR/ Effect RES Up!"
+sr:"^<color\=#FF0000>(.*)</color>造成傷害提升……$"="<color\=#FF0000>$1</color> DMG Dealt Up!"
 sr:"^<color\=#FF0000>(.*)</color>造成傷害提升了……$"="<color\=#FF0000>$1</color> DMG Dealt Up!"
 sr:"^<color\=#FF0000>(.*)</color>造成的傷害提升了……$"="<color\=#FF0000>$1</color> DMG Dealt Up!"
 
@@ -756,9 +757,11 @@ sr:"^召喚消耗(\d+)層<color\=#FF0000>『(.*)』</color>$"="Summon consumed $
 sr:"^<color\=#FF0000>(.*)</color>被鎖定……$"="<color\=#FF0000>$1</color> locked on by enemy..."
 sr:"^<color\=#FF0000>(.*)</color>進入了狂暴狀態……$"="<color\=#FF0000>$1</color> entered Frenzy..."
 sr:"^<color\=#FF0000>(.*)</color>進入「(.*)」……$"="<color\=#FF0000>$1</color> entered [$2]..."
+sr:"^<color\=#FF0000>(.*)</color>進入「(.*)」狀態……$"="<color\=#FF0000>$1</color> entered [$2]..."
 sr:"^<color\=#FF0000>(.*)</color>進入了「(.*)」狀態……$"="<color\=#FF0000>$1</color> entered [$2]..."
 sr:"^<color\=#FF0000>(.*)</color>陷入了「(.*)」，受到的傷害提升……$"="<color\=#FF0000>$1</color> entered [$2]..."
 sr:"^<color\=#FF0000>(.*)</color>退出了蓄力狀態……$"="<color\=#FF0000>$1</color> exited Charge..."
+sr:"^<color\=#FF0000>(.*)</color>解除「(.*)」狀態……$"="<color\=#FF0000>$1</color> removed [$2]..."
 
 sr:"^<color\=#FF0000>(.*)</color>進入了暈眩狀態……$"="Inflicted with Dizzy..."
 sr:"^<color\=#FF0000>(.*)</color>進入了遺忘狀態……$"="Inflicted with Forget..."
@@ -1085,10 +1088,12 @@ Inspect Details - BUFF
 ----------
 各項屬性提升=Many stats up
 r:"^{{A}}提升(\d+(.\d+)?(%)?)$"="Increase {{A}} by $1"
+r:"^所有角色{{A}}提升(\d+(.\d+)?(%)?)$"="Increase all characters' {{A}} by $1"
 r:"^護盾值：(\d+)$"="Shield: $1"
 {{A}}之力添加的護盾，可吸收一定傷害=Shield from {{A}}'s Power,\ncan take a certain amount of damage
 r:"^生命值提升(\d+(.\d+)?(%)?)$"="Increase HP by $1"
 r:"^最大生命值提升(\d+(.\d+)?(%)?)$"="Increase Max HP by $1"
+r:"^所有角色總生命值提升(\d+(.\d+)?(%)?)$"="Increase all characters' Total HP by $1"
 r:"^所有敵人的最終生命值提升(\d+(.\d+)?(%)?)$"="Increase all enemies' Final HP by $1"
 r:"^攻擊提升(\d+(.\d+)?(%)?)$"="Increase ATK by $1"
 r:"^攻擊力提升(\d+(.\d+)?(%)?)$"="Increase ATK by $1"
@@ -1101,6 +1106,7 @@ r:"^造成TECHNICAL時，攻擊力提升(\d+%)，暴擊效果提升(\d+%)$"="<si
 r:"^防禦提升(\d+(.\d+)?(%)?)$"="Increase DEF by $1"
 r:"^防禦力提升(\d+(.\d+)?(%)?)$"="Increase DEF by $1"
 r:"^防禦永久提升(\d+(.\d+)?(%)?)$"="Permanently increase DEF by $1"
+r:"^所有角色總防禦力提升(\d+(.\d+)?(%)?)$"="Increase all characters' Total DEF by $1"
 r:"^處於護盾保護下，防禦力額外提升(\d+(.\d+)?(%)?)$"="Increase DEF by $1 when Shielded"
 r:"^精力值消耗降低(\d+(.\d+)?(%)?)$"="Decrease SP cost by $1"
 r:"^速度提升(\d+(.\d+)?(%)?)$"="Increase SPD by $1"
@@ -1229,6 +1235,7 @@ Inspect Details - DEBUFF
 r:"^最大生命值降低(\d+(.\d+)?(%)?)$"="Decrease Max HP by $1"
 r:"^最終生命值降低(\d+(.\d+)?(%)?)$"="Decrease Final HP by $1"
 r:"^精力消耗提高(\d+(.\d+)?(%)?)$"="Increase SP cost by $1"
+r:"^攻擊降低(\d+(.\d+)?(%)?)$"="Decrease ATK by $1"
 r:"^攻擊力降低(\d+(.\d+)?(%)?)$"="Decrease ATK by $1"
 r:"^防禦降低(\d+(.\d+)?(%)?)$"="Decrease DEF by $1"
 r:"^防禦力降低(\d+(.\d+)?(%)?)$"="Decrease DEF by $1"
