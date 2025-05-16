@@ -42,7 +42,7 @@ r:"^觀察模式冷卻中，(\d+)秒後可用！$"="Third Eye in cooldown"
 這個寶箱很稀有！\n吾等需要準備<color\=#ff0000>開鎖工具</color>才行。=This treasure chest is very rare!\nWe need a <color\=#ff0000>Lockpick</color> to open.
 使用=Use
 先不使用=Don't use
-r:"^這裡似乎需要<color\=#FF0000>(\d+)</color>個<color\=#FF0000>開鎖工具</color>呢，\n目前的話有<color\=#FF0000>(\d+)</color>個，要使用嗎？$"="This requires <color\=#FF0000>$1</color> <color\=#FF0000>Lockpick</color>.\nYou currently have <color\=#FF0000>$2</color>, want to use it?"
+sr:"^這裡似乎需要<color\=#FF0000>(\d+)</color>個<color\=#FF0000>(.*)</color>呢，\n目前的話有<color\=#FF0000>(\d+)</color>個，要使用嗎？$"="This requires <color\=#FF0000>$1</color> <color\=#FF0000>$2</color>.\nYou currently have <color\=#FF0000>$3</color>, want to use it?"
 似乎沒有搜尋到新的財寶……=It seems like no new treasure has been found...
 冷卻期間無法使用。=Cannot be used during cooldown.
 無法在當前場景使用。=Cannot be used here.
@@ -553,6 +553,34 @@ r:"^<color\=#FF0000>{{A}}</color>「驚恐」了……$"="<color\=#FF0000>{{A}}<
 r:"^行<color\=#000000>動</color>提前$"="A<color\=#000000>c</color>tion Up"
 r:"^木<color\=#000000>內</color>{{A}}，未嘗一敗$"="N<color\=#000000>e</color>ver Known Defeat"
 r:"^木<color\=#000000>內</color>{{A}}，王牌投手$"="A<color\=#000000>c</color>e Pitcher"
+
+----------
+PALACE 1 ELITES
+----------
+1、戰鬥開始時，{{A}}會獲得相當於<color\=#ff3b37>倒地值</color>層數的<color\=#ff3b37>「{{A}}之護」</color>，每層提高防禦力和免傷。\n2、{{A}}受到非弱點/非物理暴擊傷害時會獲得一點<color\=#ff3b37>倒地值</color>和一層<color\=#ff3b37>「{{A}}之護」</color>，受到弱點/物理暴擊傷害時會驅散一層<color\=#ff3b37>「{{A}}之護」</color>。\n3、{{A}}行動時，會無條件釋放<color\=#ff3b37>「{{A}}之怒」</color>，對怪盜方全體造成高額冰凍屬性傷害，<color\=#ff3b37>「{{A}}之護」</color>層數越多，傷害越高。=1. At the start of battle, {{A}} gains <color\=#ff3b37>[{{A}}'s Protection]</color> equal to its <color\=#ff3b37>Down Gauge</color>, each stack increases DEF and DMG RES.\n2. Gains 1 <color\=#ff3b37>Down Gauge</color> and 1 stack of <color\=#ff3b37>[{{A}}'s Protection]</color> when taking non weakness/ non Phys CRIT damage, dispels 1 stack of <color\=#ff3b37>[{{A}}'s Protection]</color> when taking weakness/ Phys CRIT damage.\n3. When {{A}} acts, it uses <color\=#ff3b37>[{{A}}'s Wrath]</color>, dealing severe Ice damage to all enemies, damage scales with the number of <color\=#ff3b37>[{{A}}'s Protection]</color> stacks.
+r:"^1、戰鬥開始時，{{A}}會獲得相當於<color\=#ff3b37>倒地值</color>層數的<color\=#ff3b37>「{{A}}之護」</color>，每層提高防禦力和免傷。\n2、{{A}}受到非弱點/非物理暴擊傷害時會獲得一點<color\=#ff3b37>倒地值</color>和一層<color\=#ff3b37>「{{A}}之護」</color>，受到弱點/物理暴擊傷害時會驅散一層<color\=#ff3b37>「{{A}}之護」</color>。{{A}}被擊倒後會無法行動，持續(\d+)回合，期間不會恢復倒地值及釋放技能。\n3、{{A}}行動時，會無條件釋放<color\=#ff3b37>「{{A}}之怒」</color>，對怪盜方全體造成高額冰凍屬性傷害，<color\=#ff3b37>「{{A}}之護」</color>層數越多，傷害越高。$"="1. At the start of battle, {{A}} gains <color\=#ff3b37>[{{A}}'s Protection]</color> equal to its <color\=#ff3b37>Down Gauge</color>, each stack increases DEF and DMG RES.\n2. Gains 1 <color\=#ff3b37>Down Gauge</color> and 1 stack of <color\=#ff3b37>[{{A}}'s Protection]</color> when taking non weakness/ non Phys CRIT damage, dispels 1 stack of <color\=#ff3b37>[{{A}}'s Protection]</color> when taking weakness/ Phys CRIT damage. {{A}} cannot act for $1 turns when downed.\n3. When {{A}} acts, it uses <color\=#ff3b37>[{{A}}'s Wrath]</color>, dealing severe Ice damage to all enemies, damage scales with the number of <color\=#ff3b37>[{{A}}'s Protection]</color> stacks."
+防禦提升，受到傷害降低=Increase DEF, decrease DMG Taken
+
+{{A}}會使我方怪盜陷入<color\=#ff381d>「暈眩」</color>狀態兩回合，下一回合開始時，若場上有敵人處於<color\=#ff381d>「暈眩」</color>狀態，則對其釋放「衝鋒」，造成大量傷害。={{A}} will inflicts Thieves with <color\=#ff381d>[Dizzy]</color> for 2 turns, at the start of next turn, if there is an enemy with <color\=#ff381d>[Dizzy]</color>, uses [Dive] to them, dealing heavy damage.
+1、{{A}}會使我方怪盜陷入<color\=#ff381d>「暈眩」</color>狀態兩回合，下一回合開始時，若場上有敵人處於<color\=#ff381d>「暈眩」</color>狀態，則對其釋放「衝鋒」，造成大量傷害。=1. {{A}} will inflicts Thieves with <color\=#ff381d>[Dizzy]</color> for 2 turns, at the start of next turn, if there is an enemy with <color\=#ff381d>[Dizzy]</color>, uses [Dive] to them, dealing heavy damage.
+衝鋒=Dive
+
+r:"^1、戰鬥開始時，{{A}}會釋放<color\=#ff381d>「王之域」</color>。\n<color\=#ff381d>「王之域」</color>：將自己對全部屬性的適應性變為<color\=#ff381d>無</color>\n2、{{A}}行動時，會召喚一個比列並釋放<color\=#ff381d>「王之佑」</color>。\n<color\=#ff381d>「王之佑」</color>：選擇一個比列，使其立刻回復(\d+%)最大生命值，並獲得(\d+%)免傷和<color\=#ff381d>嘲諷</color>，持續1回合。\n3、比列死亡時，{{A}}會流失一定生命值。\n4、比列數量較多時，{{A}}行動時會釋放<color\=#ff381d>「御駕親征」</color>，對怪盜方全體造成高額物理屬性傷害。$"="At the start of battle, {{A}} will use <color\=#ff381d>[King's Domain]</color>.\n<color\=#ff381d>[King's Domain]</color>: Turns all resistance into <color\=#ff381d>Null</color>.\n2. When {{A}} acts, summons 1 Berith then uses <color\=#ff381d>[King's Domain]</color>.\n<color\=#ff381d>[King's Domain]</color>: Selects the lowest HP% Berith, immediately restores $1 Max HP to them, gives them $2 DMG RES and taunt for 1 turn.\n3. When Berith dies, {{A}} will lose HP.\n4. When there are many Berith, {{A}} will use <color\=#ff381d>[Royal Charge]</color>, dealing severe Phys damage to all enemies."
+比列=Berith
+王之域=King's Domain
+r:"^點名一個血量百分比最低的其他比列，使其立刻回復(\d+%)最大生命值，獲得一回合的(\d+%)免傷和嘲諷$"="Selects the lowest HP% Berith, immediately restores $1 Max HP to them, gives them $2 DMG RES and taunt for 1 turn"
+王之佑=King's Protection
+御駕親征=Royal Charge
+對全體造成高額傷害=Deals severe damage to all enemies
+
+r:"^1、{{A}}血量首次低於(\d+%)時，會釋放「真·宣戰佈告」，並進入「反擊姿態」，持續(\d+)回合；\n「真·宣戰佈告」：高機率使怪盜方全體進入<color\=#ff3b37>「狂怒」</color>狀態\n「狂怒」：無法行動，<color\=#ff3b37>不受控制地使用普通攻擊</color>，攻擊力較大幅提升，防禦力較大幅降低\n「反擊姿態」：受到普通物理攻擊會進行反擊，對傷害來源造成單體物理傷害\n2、{{A}}受到普通攻擊時會獲得一層「夜叉」，提高自身攻擊力，可疊加$"="1. When {{A}} HP first drops below $1, use [True·Wage War], then enters [Counter Stance] for $2 turn;\n[True·Wage War]: High chance to inflict all enemies with <color\=#ff3b37>[Rage]</color>.\n[Counter Stance]: Counters when taking Melee Attack damage, dealing Phys damage to the attacker.\n2. {{A}} gains 1 stack of [Yaksha] when taking Melee Attack damage, increasing own ATK, can stack."
+真·宣戰佈告=True·Wage War
+反擊姿態=Counter Stance
+夜叉=Yaksha
+真·鬼神樂=True·Oni-Kagura
+真·歇斯底里巴掌=True·Hysterical Slap
+狂怒！=Rage!
+使自己進入狂怒狀態=Inflicts self with Rage
 
 ----------
 PALACE 2 BOSS
@@ -1459,6 +1487,9 @@ EVENTS
 <color\=#FF0000>「劈啪火藥」</color>=<color\=#FF0000>[Crackling Gunpowder]</color>
 劈啪火藥=Crackling Gunpowder
 r:"^透過擊殺召喚的隨從可獲得<color\=#FF0000>「劈啪火藥」</color>，<color\=#FF0000>「劈啪火藥」</color>到達(\d+)份時，自動消耗(\d+)份<color\=#FF0000>「劈啪火藥」</color>釋放<color\=#FF0000>「驅歲煙火」</color>，使{{A}}陷入持續(\d+)回合的「驚恐」狀態。「驚恐」持續期間，{{A}}無法行動且受到的最終傷害提升。$"="\nGain <color\=#FF0000>[Crackling Gunpowder]</color> after defeating minions, when reaching $1 <color\=#FF0000>[Crackling Gunpowder]</color>, automatically consume $2 <color\=#FF0000>[Crackling Gunpowder]</color> and use <color\=#FF0000>[Expelling Fireworks]</color>, inflicting {{A}} with $3 turn of [Frightened]. During [Frightened], {{A}} cannot act and increase Final DMG Taken."
+呪之歲=Year of Curse
+凜之歲=Year of Ice
+雷之歲=Year of Elec
 驅歲煙火=Expelling Fireworks
 穢語=Foul Words
 反噬=Backlash
@@ -1655,19 +1686,20 @@ r:"^滅<color\=#000000>世</color>號角$"="A<color\=#000000>p</color>ocalypse H
 r:"^滅<color\=#000000>世</color>之力$"="A<color\=#000000>p</color>ocalypse Power"
 r:"^終<color\=#000000>末</color>號角$"="F<color\=#000000>i</color>nal Horn"
 
-r:"^1、{{A}}迴合結束時，獲得少量「動能」。\n2、怪盜對{{A}}造成的每段傷害，都會使其損失一定「動能」。\n3、{{A}}進入二階段時，進入「變速」狀態，獲取「動能」的效率翻倍，並在「動能」達到(\d+)點時，進入「不可逆」狀態，最終傷害獲得提升，並且「動能」無法再被降低。此階段中，{{A}}在擁有足夠「動能」的情況下，每(\d+)個回合會追加釋放1次「車輪追擊」。\n4、{{A}}進入三階段時，進入「永動機模式」，「動能」鎖定在(\d+)點，無法再被降低，最終傷害獲得大幅提升。但會在釋放消耗「動能」的技能時，使自身陷入「超載」狀態，受到的最終傷害提升，持續(\d+)回合。\n5、{{A}}進入三階段時，會召喚(\d+)個「車輪殘影」，「車輪殘影」被擊殺時，{{A}}會陷入(\d+)回合的虛弱，無法攻擊。$"="1. At the end of {{A}}'s turn, gain little [Kinetic Energy]. \n2. Decrease {{A}}'s [Kinetic Energy] when Thieves deal a hit of damage to them.\n3. When {{A}} enter phase 2, enter [Gear Shift], double [Kinetic Energy] gain, and enter [Unstoppable] when reaching $1 [Kinetic Energy], increasing Final DMG and cannot lose [Kinetic Energy]. When {{A}} have enough [Kinetic Energy], they will additionally use [Wheel Chase] every $2 turns. \n4. When {{A}} enter phase 3, enter [Perpetual Motion Mode], lock [Kinetic Energy] at $3, heavily increase Final DMG. But will enter [Overload] when comsuming [Kinetic Energy] with skills, increase Final DMG Taken for $4 turns. \n5. When {{A}} enter phase 3, summon $5 [Wheel Afterimage]. When defeating [Wheel Afterimage], {{A}} will enter Weak for $6 turn and cannot attack."
-r:"^1、{{A}}迴合結束時，獲得少量<color\=#FF0000>「動能」</color>。\n2、怪盜對{{A}}造成的<color\=#FF0000>每段傷害</color>，都會使其降低一定<color\=#FF0000>「動能」</color>。\n3、{{A}}進入二階段時，進入<color\=#FF0000>「變速」</color>狀態，獲取<color\=#FF0000>「動能」</color>的效率翻倍，並在<color\=#FF0000>「動能」</color>達到(\d+)點時，進入<color\=#FF0000>「不可逆」</color>狀態，最終傷害獲得提升，並且<color\=#FF0000>「動能」</color>無法再被降低。\n4、{{A}}進入三階段時，進入<color\=#FF0000>「永動機模式」</color>，<color\=#FF0000>「動能」</color>鎖定在(\d+)點，無法再被降低，最終傷害獲得大幅提升。$"="1. At the end of {{A}}'s turn, gain little <color\=#FF0000>[Kinetic Energy]</color>. \n2. Decrease {{A}}'s <color\=#FF0000>[Kinetic Energy]</color> when Thieves deal <color\=#FF0000>a hit of damage</color> to them.\n3. When {{A}} enter phase 2, enter <color\=#FF0000>[Gear Shift]</color>, double <color\=#FF0000>[Kinetic Energy]</color> gain, and enter <color\=#FF0000>[Unstoppable]</color> when reaching $1 <color\=#FF0000>[Kinetic Energy]</color>, increasing Final DMG and cannot lose <color\=#FF0000>[Kinetic Energy]</color>. \n4. When {{A}} enter phase 3, enter <color\=#FF0000>[Perpetual Motion Mode]</color>, lock <color\=#FF0000>[Kinetic Energy]</color> at $2, heavily increase Final DMG."
+r:"^1、蠻勇獸車輪迴合結束時，獲得少量「動能」。\n2、怪盜對蠻勇獸車輪造成的每段傷害，都會使其損失一定「動能」。\n3、蠻勇獸車輪進入二階段時，進入「變速」狀態，獲取「動能」的效率翻倍，並在「動能」達到(\d+)點時，進入「不可逆」狀態，最終傷害獲得提升，並且「動能」無法再被降低。此階段中，蠻勇獸車輪在擁有足夠「動能」的情況下，每(\d+)個回合會追加釋放1次「車輪追擊」。\n4、蠻勇獸車輪進入三階段時，進入「永動機模式」，「動能」鎖定在(\d+)點，無法再被降低，最終傷害獲得大幅提升。但會在釋放消耗「動能」的技能時，使自身陷入「超載」狀態，受到的最終傷害提升，持續(\d+)回合。\n5、蠻勇獸車輪進入三階段時，會召喚(\d+)個「車輪殘影」，「車輪殘影」被擊殺時，蠻勇獸車輪會陷入(\d+)回合的虛弱，無法攻擊。$"="1. At the end of Barbaric Beast Wheel's turn, gain little [Kinetic Energy]. \n2. Decrease Barbaric Beast Wheel's [Kinetic Energy] when Thieves deal a hit of damage to them.\n3. When Barbaric Beast Wheel enter phase 2, enter [Gear Shift], double [Kinetic Energy] gain, and enter [Unstoppable] when reaching $1 [Kinetic Energy], increasing Final DMG and cannot lose [Kinetic Energy]. When Barbaric Beast Wheel have enough [Kinetic Energy], they will additionally use [Wheel Chase] every $2 turns. \n4. When Barbaric Beast Wheel enter phase 3, enter [Perpetual Motion Mode], lock [Kinetic Energy] at $3, heavily increase Final DMG. But will enter [Overload] when comsuming [Kinetic Energy] with skills, increase Final DMG Taken for $4 turns. \n5. When Barbaric Beast Wheel enter phase 3, summon $5 [Wheel Afterimage]. When defeating [Wheel Afterimage], Barbaric Beast Wheel will enter Weak for $6 turn and cannot attack."
+r:"^1、蠻勇獸車輪迴合結束時，獲得少量<color\=#FF0000>「動能」</color>。\n2、怪盜對蠻勇獸車輪造成的<color\=#FF0000>每段傷害</color>，都會使其降低一定<color\=#FF0000>「動能」</color>。\n3、蠻勇獸車輪進入二階段時，進入<color\=#FF0000>「變速」</color>狀態，獲取<color\=#FF0000>「動能」</color>的效率翻倍，並在<color\=#FF0000>「動能」</color>達到(\d+)點時，進入<color\=#FF0000>「不可逆」</color>狀態，最終傷害獲得提升，並且<color\=#FF0000>「動能」</color>無法再被降低。\n4、蠻勇獸車輪進入三階段時，進入<color\=#FF0000>「永動機模式」</color>，<color\=#FF0000>「動能」</color>鎖定在(\d+)點，無法再被降低，最終傷害獲得大幅提升。$"="1. At the end of Barbaric Beast Wheel's turn, gain little <color\=#FF0000>[Kinetic Energy]</color>. \n2. Decrease Barbaric Beast Wheel's <color\=#FF0000>[Kinetic Energy]</color> when Thieves deal <color\=#FF0000>a hit of damage</color> to them.\n3. When Barbaric Beast Wheel enter phase 2, enter <color\=#FF0000>[Gear Shift]</color>, double <color\=#FF0000>[Kinetic Energy]</color> gain, and enter <color\=#FF0000>[Unstoppable]</color> when reaching $1 <color\=#FF0000>[Kinetic Energy]</color>, increasing Final DMG and cannot lose <color\=#FF0000>[Kinetic Energy]</color>. \n4. When Barbaric Beast Wheel enter phase 3, enter <color\=#FF0000>[Perpetual Motion Mode]</color>, lock <color\=#FF0000>[Kinetic Energy]</color> at $2, heavily increase Final DMG."
+蠻勇獸車輪=Barbaric Beast Wheel
 動能損耗=Energy Loss
-怪盜對{{A}}造成傷害時，{{A}}損失的「動能」減半。=Decrease [Kinetic Energy] loss when Thieves deal damage to {{A}} by half
+怪盜對蠻勇獸車輪造成傷害時，蠻勇獸車輪損失的「動能」減半。=Decrease [Kinetic Energy] loss when Thieves deal damage to Barbaric Beast Wheel by half
 動能轉化=Kinetic Conversion
-r:"^{{A}}每有(\d+)點「動能」，攻擊力提升(.*)、防禦力提升(.*)。$"="For every $1 [Kinetic Energy], increase ATK by $2 and DEF by $3"
+r:"^蠻勇獸車輪每有(\d+)點「動能」，攻擊力提升(.*)、防禦力提升(.*)。$"="For every $1 [Kinetic Energy], increase ATK by $2 and DEF by $3"
 動能充盈=Energy Surge
-{{A}}處於「不可逆」、「永動機模式」時，獲得的最終傷害提升翻倍。=Double the Final DMG buff from [Unstable] and [Perpetual Motion Mode]
+蠻勇獸車輪處於「不可逆」、「永動機模式」時，獲得的最終傷害提升翻倍。=Double the Final DMG buff from [Unstable] and [Perpetual Motion Mode]
 動能激蕩=Kinetic Turbulence
 r:"^「車輪追擊」的傷害提升(\d+%)，「粗暴猛襲」攻擊時必定暴擊。$"="Increase [Wheel Chase] damage by $1, [Brutal Assault] will Always CRIT"
 殘影守護=Afterimage Protection
 r:"^殘<color\=#000000>影</color>守護$"="A<color\=#000000>f</color>terimage Protection"
-「車輪殘影」在場時，{{A}}的適應性會發生變化。=Change resistance when [Wheel Afterimage] are present
+「車輪殘影」在場時，蠻勇獸車輪的適應性會發生變化。=Change resistance when [Wheel Afterimage] are present
 動能=Kinetic Energy
 <color\=#FF0000>「動能」</color>=<color\=#FF0000>[Kinetic Energy]</color>
 正在蓄力，下一回合釋放「蓄力衝撞」=Will use [Charged Rampage] next turn
@@ -1675,21 +1707,28 @@ r:"^殘<color\=#000000>影</color>守護$"="A<color\=#000000>f</color>terimage P
 r:"^變<color\=#000000>速</color>$"="G<color\=#000000>e</color>ar Shift"
 獲取「動能」的速度翻倍=Double [Kinetic Energy] gain
 不可逆=Unstoppable
+r:"^不<color\=#000000>可</color>逆$"="U<color\=#000000>n</color>stoppable"
+r:"^「動能」無法再降低，造成最終傷害提升(\d+%)$"="Cannot decrease [Kinetic Energy], \nincrease Final DMG Dealt by $1"
 永動機模式=Perpetual Motion Mode
 r:"^永<color\=#000000>動</color>機模式$"="P<color\=#000000>e</color>rpetual Motion Mode"
 r:"^「動能」鎖定在(\d+)點，無法再被降低，造成最終傷害提升(\d+%)$"="Lock [Kinetic Energy] at $1, \nincrease Final DMG Dealt by $2"
 超載=Overload
+r:"^超<color\=#000000>載</color>$"="O<color\=#000000>v</color>erload"
 鋼鐵衝鋒=Iron Charge
 冷酷威壓=Cold Coercion
 蓄力衝撞=Charged Rampage
 蓄力一回合後撞出，對所有敵人造成物理屬性傷害，必定暴擊；每擊倒1名怪盜，回復一定的『動能』。=After charging for 1 turn, deals Phys damage to all enemies, Always CRIT; recovers [Kinetic Energy] for every knocked down Thief.
 車輪追擊=Wheel Chase
 粗暴猛襲=Brutal Assault
+「粗暴猛襲」預警=[Brutal Assault] Warning
+sr:"^(\d+)回合後釋放「(.*)」！！$"="Use [$2] after $1 turn(s)!"
+sr:"^(\d+)回合後釋放<color\=#FF0000>「(.*)」</color>！！$"="Use <color\=#FF0000>[$2]</color> after $1 turn(s)!!"
 車輪殘影=Wheel Afterimage
 殘影衝撞=Afterimage Rampage
 一回合無法行動=Cannot act for 1 turn
 sr:"^<color\=#FF0000>(.*)</color>正在蓄力，下一回合釋放「(.*)」……$"="<color\=#FF0000>$1</color> is charging, will use [$2] next turn..."
 sr:"^<color\=#FF0000>(.*)</color>進入「變速」狀態，獲取「動能」的效率翻倍……$"="<color\=#FF0000>$1</color> entered [Gear Shift], doubled [Kinetic Energy] gain..."
+sr:"^<color\=#FF0000>(.*)</color>從「虛弱」異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from [Weak]!"
 
 ----------
 Sea of Souls Trials (SoS)
@@ -1780,10 +1819,10 @@ r:"^乘坐電梯$"="Take the Elevator"
 r:"^<color\=#FFFFFF>首領剩餘進攻次數：</color><color\=#FFF000>(\d+)</color>$"="<color\=#FFFFFF>Boss attack(s) left: </color><color\=#FFF000>$1</color>"
 主動逃離戰鬥不會獲得分數記錄。\n是否確認退出？=Cannot record score if you escape.\nAre you sure?
 
-{{A}}每隔一個回合會為所有怪盜回復精力值，但是也會對攻擊最高的怪盜釋放「惡魔的詛咒」，大幅降低其造成的傷害。={{A}} will restore SP to all Thieves every other turn but will inflict the highest ATK Thief with [Demon's Curse], heavily decreasing their DMG Dealt.
+{{A}}每隔一個回合會為所有怪盜回復精力值，但是也會對攻擊最高的怪盜釋放「惡魔的詛咒」，大幅降低其造成的傷害。={{A}} restores SP to all Thieves every other turn but inflicts the highest ATK Thief with [Demon's Curse], heavily decreasing their DMG Dealt.
 惡魔的詛咒=Demon's Curse
 r:"^惡<color\=#000000>魔</color>的詛咒$"="D<color\=#000000>e</color>mon's Curse"
-<color\=#FF0000>{{A}}</color>受到了惡魔的詛咒，造成的傷害降低……=<size\=20><color\=#FF0000>{{A}}</color>  inflicted with Demon's Curse, DMG Dealt Down...</size>
+<color\=#FF0000>{{A}}</color>受到了惡魔的詛咒，造成的傷害降低……=<size\=20><color\=#FF0000>{{A}}</color> inflicted with Demon's Curse, DMG Dealt Down...</size>
 
 四大天王每隔一個回合會對隨機一名怪盜釋放「死亡凝視」，四大天王會優先攻擊處於「死亡凝視」的怪盜。=The Four Heavenly Kings will use [Death Gaze] on a random enemy, the Four Heavenly Kings will prioritize attacking the enemy with [Death Gaze].
 
@@ -1808,7 +1847,7 @@ r:"^1、進入戰鬥時，{{A}}會召喚(\d+)個隨從與之並肩作戰，{{A}}
 被操控的鵺=Manipulated Nue
 暝夜之庇護=Midnight Protection
 r:"^暝<color\=#000000>夜</color>之庇護$"="M<color\=#000000>i</color>idnight Protection"
-r:"^1、{{B}}每隔一個回合會給自己添加(\d+)層「暝夜之庇護」，最多可疊加(\d+)層，每層可使自身受到的最終傷害減免(\d+%)。\n2、受到庇護的單位每次受到{{A}}技能傷害時，會被驅散(\d+)層「暝夜之庇護」。$"="<size\=26>1. {{B}} will give $1 stack of [Midnight Protection] to self every other turn, up to $2 stacks, each stack decreases own Final DMG Taken by $3.\n2. When protected allies take {{A}} skill damage, dispel $4 stack of [Midnight Protection].</size>"
+r:"^1、{{B}}每隔一個回合會給自己添加(\d+)層「暝夜之庇護」，最多可疊加(\d+)層，每層可使自身受到的最終傷害減免(\d+%)。\n2、受到庇護的單位每次受到{{A}}技能傷害時，會被驅散(\d+)層「暝夜之庇護」。$"="<size\=25>1. {{B}} gains $1 stack of [Midnight Protection] every other turn, up to $2 stacks, each stack decreases own Final DMG Taken by $3.\n2. When a protected ally takes damage from a {{A}} skill, dispels $4 stack of [Midnight Protection].</size>"
 
 r:"^1、進入戰鬥時，{{A}}和{{B}}各獲得(\d+)層「妖精之力」，每層為其提供(\d+%)的最終傷害減免。\n2、每當隨從被擊殺時，{{A}}或{{B}}會消耗(\d+)層「妖精之力」重新召喚(\d+)個隨從。\n3、當自身「妖精之力」耗盡時，{{A}}和{{B}}會陷入虛弱狀態，受到的傷害大幅提升，持續(\d+)回合。虛弱狀態結束後會重新獲得(\d+)層「妖精之力」。$"="<size\=21>1. At the start of battle, {{A}} and {{B}} will both gain $1 stacks of [Fairy Power], each stack increases Final DMG RES by $2.\n2. When you defeat a minion, {{A}} or {{B}} will consume $3 stack of [Fairy Power] to resummon $4 minion.\n3. {{A}} and {{B}} will enter Weak when they run out of [Fairy Power], heavily increasing DMG Taken for $5 turns. Regain $6 stacks of [Fairy Power] when Weak ends.</size>"
 妖精之力=Fairy Power
@@ -1882,4 +1921,5 @@ r:"^渦<color\=#000000>流</color>纏繞$"="C<color\=#000000>o</color>iling Mael
 r:"^造成的最終傷害提升(\d+%)，若自身處於額外回合，造成的最終傷害額外提升(\d+%)，持續(\d+)回合。$"="Increases Final DMG Dealt by $1, if you are in Extra Turn, additionally increases Final DMG Dealt by $2 for $3 turn."
 
 鏡岩迷影=Crag Mirage
-r:"^在戰鬥中獲得<link\="dc\|237"><u>『穩定領域』</u></link>效果；HIGHLIGHT造成的最終傷害提升(\d+%)；使用{{A}}後可使自身造成的最終傷害提升(\d+%)，持續(\d+)回合。$"="<size\=26>Gains <link\="dc|237"><u>[Stable Domain]</u></link> in battle; Increases HIGHLIGHT Final DMG by $1; Increases own Final DMG by $2 after using {{A}} for $3 turns.</size>"
+r:"^在戰鬥中獲得<link\="dc\|237"><u>『穩定領域』</u></link>效果；HIGHLIGHT造成的最終傷害提升(\d+%)；使用{{A}}後可使自身造成的最終傷害提升(\d+%)，持續(\d+)回合。$"="<size\=26>Gains <link\="dc|237"><u>[Stable Domain]</u></link> in battle; Increases HIGHLIGHT Final DMG by $1; Increases own Final DMG by $2 for $3 turns after using {{A}}.</size>"
+獲得『穩定領域』效果；HIGHLIGHT造成的最終傷害提升40%；使用{{B}}後可使自身造成的最終傷害提升40%，持續3回合。『穩定領域』：所有怪盜無法暴擊，{{A}}技能/追加效果造成的<color\=#FFFC40>最終傷害</color>提高，提高值\=暴擊率*(暴擊效果-100%)。（最多計入100%暴擊率）=Gains [Stable Domain]; Increases HIGHLIGHT Final DMG by 40%; Increases own Final DMG by 40% for 3 turns after using {{B}}. [Stable Domain]: All Thieves cannot CRIT, increases the <color\=#FFFC40>Final DMG</color> of {{A}} skill/ Follow Up by CRIT Rate*(CRIT DMG - 100%)\n(Up to 100% CRIT Rate)
