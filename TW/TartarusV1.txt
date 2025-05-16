@@ -76,10 +76,14 @@ MENU + UI
 「時鐘的齒輪」=[Clock Gears]
 心靈碎片=Heart Fragments
 拂曉的碎片=Dawn Fragments
+黃昏的碎片=Twilight Fragments
 夢境碎片=Dream Fragments
 {{A}}的夢境碎片={{A}}'s Dream Fragments
 古老的銀幣=Ancient Silver Coins
 古老的金幣=Ancient Gold Coins
+
+觀看演出=View
+r:"^是否消耗{{A}}的夢境碎片×(\d+)，解鎖故事？$"="Consume {{A}}'s Dream Fragments ×$1 to unlock the story?"
 
 {{A}}·大廳={{A}} · Hall
 r:"^{{A}} (\d+)層$"="{{A}} Floor $1"
@@ -227,6 +231,7 @@ r:"^獲得怪盜\((\d+)\)$"="Thieves ($1)"
 r:"^選擇小阿爾卡那卡牌\((\d+)\)$"="Minor Arcana ($1)"
 r:"^選擇大阿爾卡那卡牌\((\d+)\)$"="Major Arcana ($1)"
 r:"^周目\((\d+)\)$"="Loop ($1)"
+周目(簡單)=Loop (Easy)
 
 ----------
 SKILL TREE
@@ -589,7 +594,7 @@ r:"^使用解明技能後，所有角色造成傷害提升(\d+%)，本場戰鬥�
 r:"^解明角色的屬性提升效果，額外提升(\d+(.\d+)?(%)?)$"="Additionally increase Stats Boost from Elucidate characters by $1"
 
 寶劍·生命連結=Swords · Lifelink
-所有友方角色獲得生命連結：受到傷害時按當前剩餘生命值比例分攤傷害=All characters gain Lifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%
+所有友方角色獲得生命連結：受到傷害時按當前剩餘生命值比例分攤傷害=All characters gain Lifelink: Damage taken by a unit with [Lifelink] is distributed among all [Lifelink] units in proportion to their current HP%.
 寶劍·護盾轉換=Swords · Shield Conversion
 r:"所有角色每回合開始獲得相當於自身(\d+%)最大生命值的護盾，並扣除(\d+%)當前生命值$"="All characters at the start of their turn gain $1 Max HP Shield, then lose $2 current HP"
 寶劍·不破之盾=Swords · Unbreakable Shield
@@ -1067,8 +1072,8 @@ r:"^回復(\d+)點「意志力」$"="Restore $1 [Will]"
 不、不是這樣的！\n他怎麼可能不愛我！他……=N-no, that's not the case! \nHow could he not love me! He...
 對，一定是哪裡搞錯了。\n一定是這樣的！=Yes, there must be something wrong.\nThis must be the case!
 建議她再試一次=Suggest her to try
-r:"^消耗(\d+)點「意志力」，隨機獲得(\d+)張大阿爾卡那牌$"="Consume $1 [Will], randomly obtain $1 Major Arcana"
+r:"^消耗(\d+)點「意志力」，隨機獲得(\d+)張大阿爾卡那牌$"="Consume $1 [Will], randomly obtain $2 Major Arcana"
 結果變了！　我就知道！\n他一定是愛我的，我現在就去找他！=The result has changed! I knew it! \nHe must love me, I'll go find him now!
 替她試一次=Try for her once
-r:"^消耗(\d+)點「意志力」，隨機獲得(\d+)個珍稀品質增益$"="Consume $1 [Will], randomly obtain $1 Rare buff"
+r:"^消耗(\d+)點「意志力」，隨機獲得(\d+)個珍稀品質增益$"="Consume $1 [Will], randomly obtain $2 Rare buff"
 建議她別再試了=Suggest her to stop
