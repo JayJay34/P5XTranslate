@@ -95,6 +95,11 @@ r:"^一周目(\d+)層$"="NG $1F"
 r:"^二周目(\d+)層$"="NG+ $1F"
 r:"^三周目(\d+)層$"="NG+2 $1F"
 r:"^四周目(\d+)層$"="NG+3 $1F"
+r:"^五周目(\d+)層$"="NG+4 $1F"
+r:"^六周目(\d+)層$"="NG+5 $1F"
+r:"^七周目(\d+)層$"="NG+6 $1F"
+r:"^八周目(\d+)層$"="NG+7 $1F"
+r:"^九周目(\d+)層$"="NG+8 $1F"
 周目:簡單=NG: Easy
 周目:<sprite\=1 tint\=1>=Loop:<sprite\=1 tint\=1>
 進度:<sprite\=2 tint\=1>層=Progress:<sprite\=2 tint\=1>層
@@ -216,6 +221,7 @@ r:"^當前位置：{{A}} (\d+)層。\n暫時離開：保存進度，回到{{A}}�
 擊敗強敵陰影=Defeat the Strong Shadow
 擊敗交錯之影=Defeat the Tangled Shadow
 
+r:"^在隊長(.*)的帶領下，歷時(.*)分(.*)秒，於(.*)到達了探索終點。完成了{{A}}的探索任務。$"="Under your leadership, completed {{A}} exploration in $2m$3s on $4."
 r:"^在隊長(.*)的帶領下，歷時(.*)小時(.*)分(.*)秒，於(.*)到達了探索終點。完成了{{A}}的探索任務。$"="Under your leadership, completed {{A}} exploration in $2h$3m$4s on $5."
 本次試煉獲得積分詳情如下=Score Details
 r:"^攀爬的樓層數\((\d+)\)$"="Floors ($1)"
@@ -358,6 +364,11 @@ r:"^通關(\d+)次{{A}}一周目$"="Clear {{A}} on NG $1 time(s)"
 r:"^通關(\d+)次{{A}}二周目$"="Clear {{A}} on NG+ $1 time(s)"
 r:"^通關(\d+)次{{A}}三周目$"="Clear {{A}} on NG+2 $1 time(s)"
 r:"^通關(\d+)次{{A}}四周目$"="Clear {{A}} on NG+3 $1 time(s)"
+r:"^通關(\d+)次{{A}}五周目$"="Clear {{A}} on NG+4 $1 time(s)"
+r:"^通關(\d+)次{{A}}六周目$"="Clear {{A}} on NG+5 $1 time(s)"
+r:"^通關(\d+)次{{A}}七周目$"="Clear {{A}} on NG+6 $1 time(s)"
+r:"^通關(\d+)次{{A}}八周目$"="Clear {{A}} on NG+7 $1 time(s)"
+r:"^通關(\d+)次{{A}}九周目$"="Clear {{A}} on NG+8 $1 time(s)"
 r:"^解鎖(\d+)個{{A}}探索角色$"="Unlock $1 {{A}} exploration characters"
 r:"^解鎖「力量解放」基礎屬性節點(\d+)個$"="Unlock $1 Basic Stats in [Power Unleashed]"
 r:"^解鎖「力量解放」特色屬性、靈感技能或武器改造節點(\d+)個$"="Unlock $1 Thieves Instinct, Inspiration Skill or Weapon Reform in [Power Unleashed]"
@@ -404,7 +415,7 @@ r:"^{{A}}探索開始時，初始「意志力」<color\=#3DE594>提升(\d+)點</
 木製塔羅牌=Wooden Tarot Cards
 r:"^{{A}}探索開始時，初始「意志力」<color\=#3DE594>降低(\d+)點</color>，初始額外<color\=#3DE594>獲得(\d+)張</color>大阿爾卡那$"="At the start of {{A}} exploration, decrease starting [Will] by <color\=#3DE594>$1</color>, start with <color\=#3DE594>$2</color> additional Major Arcana"
 青銅香爐=Bronze Incense Burner
-r:"^透過「洗牌時間」「洗牌時間·稀有」獲取卡牌時，<color\=#3DE594>增加(\d+)個</color>可選項$"="When choosing cards from [Shuffle Time·Rare], you have <color\=#3DE594>$1</color> additional card to choose from"
+r:"^透過「洗牌時間」「洗牌時間·稀有」獲取卡牌時，<color\=#3DE594>增加(\d+)個</color>可選項$"="When choosing cards from [Shuffle Time] [Shuffle Time·Rare], you have <color\=#3DE594>$1</color> additional card to choose from"
 財運御守=Fortune Omamori
 r:"^寶箱出現更加頻繁，透過寶箱獲取到的「時鐘的齒輪」<color\=#3DE594>提升(\d+%)</color>$"="Treasure chests appear more frequently, increase [Clock Gears] obtained from treasure chests by <color\=#3DE594>$1</color>"
 古董羅盤=Antique Compass
@@ -466,13 +477,13 @@ r:"^下(\d+)次非秒殺戰鬥開始時，所有敵人對所有屬性的適應�
 r:"^下(\d+)次非秒殺戰鬥，隨機(\d+)名角色進入無法選中狀態$"="In the next $1 non insta-kill battle(s), randomly make $2 character untargetable"
 
 權杖·破壞藝術=Wands · Art Destruction
-r:"^下(\d+)次進入探索樓層時，額外出現(\d+)個可破壞物$"="In the next $1 exploration floor(s), additional spawn $2 breakable objects"
+r:"^下(\d+)次進入探索樓層時，額外出現(\d+)個可破壞物$"="In the next $1 floor(s), additional spawn $2 breakable objects"
 權杖·尋寶奇兵=Wands · Treasure Hunter
-r:"^下(\d+)個進入探索樓層時，額外出現(\d+)個寶箱$"="In the next $1 exploration floor(s), additional spawn $2 treasure chests"
+r:"^下(\d+)個進入探索樓層時，額外出現(\d+)個寶箱$"="In the next $1 floor(s), additional spawn $2 treasure chests"
 權杖·機遇挑戰者=Wands · Opportunity Challenger
-r:"^下(\d+)次進入探索樓層時，出現稀有陰影的機率提高$"="In the next $1 exploration floor(s), increase the chance of encountering Rare Shadows"
+r:"^下(\d+)次進入探索樓層時，出現稀有陰影的機率提高$"="In the next $1 floor(s), increase the chance of encountering Rare Shadows"
 權杖·危險挑戰者=Wands · Dangerous Challenger
-r:"^下(\d+)個進入探索樓層時，出現強敵陰影的機率提高$"="In the next $1 exploration floor(s), increase the chance of encountering Strong Shadows"
+r:"^下(\d+)個進入探索樓層時，出現強敵陰影的機率提高$"="In the next $1 floor(s), increase the chance of encountering Strong Shadows"
 
 權杖·時鐘特惠=Wands · Special Offer
 r:"^下(\d+)次進入「大時鐘」具象化卡牌時，所需「時鐘的齒輪」數量降低(\d+%)$"="The next $1 time when buying cards in the [Great Clock], decrease the required [Clock Gears] by $2"
@@ -744,19 +755,28 @@ r:"^立刻獲得(\d+)「時鐘的齒輪」、(\d+)「拂曉的碎片」、(\d+)�
 女教皇=Priestess
 r:"^所有角色造成{{A}}技能傷害時會額外降低敵方主目標(\d+)點倒地值，所有敵人受{{B}}傷害提升(\d+%)-(\d+%)（依據層數變化）$"="<size\=28>All characters additionally decrease the main target's Down Gauge by $1 when dealing {{A}} skill damage. Increase all enemies' {{B}} DMG Taken by $2–$3 (change based on stacks)</size>"
 Chariot
-r:"^所有角色的HIGHLIGHT/{{A}}可以暴擊，但是HIGHLIGHT/{{A}}能量恢復效率降低(\d+%)$"="HIGHLIGHT/{{A}} can CRIT, but decrease HIGHLIGHT/{{A}} Energy recovery rate by $1"
+r:"^所有角色的HIGHLIGHT/{{A}}可以暴擊，但是HIGHLIGHT/{{A}}能量恢復效率降低(\d+%)$"="HIGHLIGHT/ {{A}} can CRIT, but decrease HIGHLIGHT/ {{A}} Energy recovery rate by $1"
+所有角色的HIGHLIGHT/{{A}}可以暴擊=HIGHLIGHT/ {{A}} can CRIT
 Justice
 r:"^透過「洗牌時間」獲取卡牌時，額外增加(\d+)個可選項$"="When choosing cards from [Shuffle Time], you have $1 additional card to choose from"
 Strength
 r:"^所有角色精力值上限提升(\d+)點，精力回復提升(\d+%)，精力值消耗增加(\d+%)。釋放技能後，該技能每消耗(\d+)點精力值使其他角色最終傷害提升(\d+%)，持續(\d+)回合$"="Increase all characters' Max SP by $1, SP Recovery by $2, SP cost by $3. When using skills, increase all other characters' Final DMG by $5 for every $4 consumed SP for $6 turn"
 命運=Fortune
-r:"^所有角色總生命值提升(\d+%)，技能造成溢出治療時，對隨機敵人造成溢出治療量(\d+%)的固定傷害$"="Increase all character' Max HP by $1, when overhealing with skill, deal $2 overhealed amount as fixed damage to random enemy."
+r:"^所有角色總生命值提升(\d+%)，技能造成溢出治療時，對隨機敵人造成溢出治療量(\d+%)的固定傷害$"="Increase all character' Max HP by $1, when overhealing with skill, deal $2 overhealed amount as fixed damage to random enemy"
+r:"^所有角色總生命值提升(\d+%)、治療效果提升(\d+%)，技能造成溢出治療時，對隨機敵人造成溢出治療量(\d+%)的固定傷害$"="Increase all character' Max HP by $1 and Healing Effect by $2, when overhealing with skill, deal $3 overhealed amount as fixed damage to random enemy"
+Hanged Man
+r:"^所有角色持續效果傷害提升(\d+%)，使用{{A}}技能/追加效果/HIGHLIGHT/{{B}}造成傷害後，額外結算一次技能主目標的持續效果。$"="Increase all characters' Damage Over Time DMG by $1, after dealing damage with {{A}} skill/Follow Up/HIGHLIGHT/{{B}}, additionally trigger the main target's Damage Over Time."
+Temperance
+r:"^探索樓層中，強敵陰影/稀有陰影出現概率大幅提升，強敵陰影/稀有陰影戰鬥消耗「意志力」減少(\d+)點，遊蕩陰影戰鬥消耗「意志力」增加(\d+)點。$"="Heavily increase the spawn chance of Strong Shadow/ Rare Shadow, decrease battle [Will] cost for Strong Shadow/Rare Shadow by $1, increase battle [Will] cost for Roaming Shadow by $2"
 Devil
 r:"^探索樓層會出現更多可破壞物，透過可破壞物獲得的「時鐘的齒輪」數量提升(\d+%)$"="More breakable objects will appear, increase [Clock Gears] obtained from breakable objects by $1"
 Tower
 r:"^WONDER{{A}}、總生命值、總防禦力提升(\d+%)，最終傷害提升(\d+%)$"="Increase Wonder's {{A}}, Total HP, Total DEF by $1, Final DMG by $2"
 Moon
 r:"^戰鬥消耗「意志力」減少(\d+)點，「意志力」大於(\d+)時，額外使所有角色最終傷害提升(\d+%)$"="Decrease battle [Will] cost by $1. When [Will] is above $2, additionally increase all characters' Final DMG by $3"
+Judgement
+r:"^所有角色每次使用普通攻擊/槍械攻擊時，使所有同伴獲得(\d+)層/(\d+)層「審判之力」，每層「審判之力」使普通攻擊、槍械攻擊造成傷害提升(\d+%)，可疊加(\d+)層，本場戰鬥永久生效$"="Each time when characters use Melee Attack/ Gun Attack, give the party $1 stacks/ $2 stack of [Judgement Power], each stack of [Judgement Power] permanently increase Melee Attack Gun Attack DMG Dealt by $3, up to $4 stacks"
+審判之力=Judgement Power
 
 ----------
 SHADOW NAMES
@@ -814,19 +834,19 @@ r:"^黃金之手躍躍欲逃，將在(\d+)個回合後逃離$"="Found Gold Hand!
 ----------
 BOSSES
 ----------
-r:"^1、征服之騎士會源源不斷的召集騎士，並給予他們「榮譽值」。每層「榮譽值」可提升自身(\d+%)的防禦力。\n2、征服之騎士與其他所有騎士在自己回合結束時，都會獲得(\d+)層「榮譽值」。\n3、騎士死亡時，會失去所有「榮譽值」。\n4、征服之騎士可以消耗友方的「榮譽值」來強化「榮耀審判」的效果。$"="1. Avenger Knight will keep summoning Knights, then give them [Honour]. Each stack of [Honour] increase own DEF by $1. \n2 Avenger Knight and all other Knights will gain $2 stack of [Honour] at the end of their turn.\n3. Lose all [Honour] when a Knight dies.\n4. Avenger Knight can consume allies' [Honour] to upgrade [Glorious Judgment]."
+r:"^1、征服之騎士會源源不斷的召集騎士，並給予他們「榮譽值」。每層「榮譽值」可提升自身(\d+%)的防禦力。\n2、征服之騎士與其他所有騎士在自己回合結束時，都會獲得(\d+)層「榮譽值」。\n3、騎士死亡時，會失去所有「榮譽值」。\n4、征服之騎士可以消耗友方的「榮譽值」來強化「榮耀審判」的效果。$"="1. Avenger Knight will keep summoning Knights, then give them [Honour]. Each stack of [Honour] increase own DEF by $1. \n2 Avenger Knight and all other Knights will gain $2 stack of [Honour] at the end of their turn.\n3. Lose all [Honour] when a Knight dies.\n4. Avenger Knight can consume allies' [Honour] to upgrade [Glorious Judgement]."
 榮譽值=Honour
 r:"^榮<color\=#000000>譽</color>值$"="H<color\=#000000>o</color>nour"
 騎士集結=Knights Gathering
 召喚=Summon
 r:"^召喚最多(\d+)名騎士，並給予所有騎士(\d+)層『榮譽值』。$"="Summons up to $1 Knights, then gives all Knights $2 stack of [Honour]."
-榮耀審判=Glorious Judgment
+榮耀審判=Glorious Judgement
 r:"^消耗友方所有『榮譽值』對所有敵人造成物理屬性傷害。每消耗(\d+)層『榮譽值』，技能傷害提升(\d+%)；消耗的『榮譽值』達到(\d+)層，此次攻擊必定暴擊。$"="Consumes all allies' [Honour] to deal Phys damage to all enemies. For every $1 stack of [Honour] consumed, increases skill damage by $2; When consuming $3 stacks of [Honour], this will Always CRIT."
 騎士禮讚=Knight's Salute
 r:"^給予所有騎士(\d+)層『榮譽值』。$"="Gives all Knights $1 stacks of [Honour]"
-「榮耀審判」預警=[Glorious Judgment] Warning
-下個回合釋放「榮耀審判」！！=Will use [Glorious Judgment] next turn
-r:"^下個回合釋放<color\=#FF0000>「榮耀審判」</color>！！$"="About to use <color\=#FF0000>[Glorious Judgment]</color>!"
+「榮耀審判」預警=[Glorious Judgement] Warning
+下個回合釋放「榮耀審判」！！=Will use [Glorious Judgement] next turn
+r:"^下個回合釋放<color\=#FF0000>「榮耀審判」</color>！！$"="About to use <color\=#FF0000>[Glorious Judgement]</color>!"
 騎士=Knight
 r:"^每層提升(\d+(.\d+)?(%)?)防禦力$"="Each stack increase DEF by $1"
 
@@ -918,6 +938,19 @@ r:"^隨機獲得(\d+)-(\d+)個「心靈碎片」$"="Randomly obtain $1-$2 [Heart
 r:"^隨機獲得(\d+)-(\d+)個「古老的銀幣」$"="Randomly obtain $1-$2 [Ancient Silver Coins]"
 r:"^獲得(\d+)次<color\=#FFEC00>洗牌時間·稀有</color>$"="Obtain $1 <color\=#FFEC00>Shuffle Time·Rare</size></color>"
 
+迷路的少爺=Lost Young Master
+那邊那個人！對，就是你！=That person over there! \nYes, you!
+先說好，我可不是迷路哦？\n本少爺很機智的。=Let me make it clear first, I am not lost, okay? This young master is very smart.
+只是現在短暫的，需要一些援助而已。=It's just temporary and I need some assistance.
+而且，我爸爸可是很有錢的！\n你想要什麼都能給你哦，怎麼樣？=Besides, my dad is very rich! I can give you anything you want, how about that?
+我想要保鏢=I want bodyguards
+r:"^立即獲得(\d+)次機會進入<color\=#FFEC00>洗牌時間·角色</color>$"="Immediately obtain $1 chances to enter <color\=#FFEC00>Shuffle Time·Character</color>"
+有錢嗎？=Any money?
+r:"^獲得(\d+)個「時鐘的齒輪」和(\d+)個「拂曉的碎片」$"="Obtain $1 [Clock Gears] and $2 [Twilight Fragments]"
+沒問題！　要多少有多少！=No problem!\nAs much as you want!
+什麼都不要=Don't want anything
+不會獲得任何東西=Obtain nothing
+
 {{A}}男學生={{A}} Male Student
 {{A}}總說，\n『要以奪冠的氣勢揮棒』……={{A}} always said, \n"Swing with the heart of a champion"...
 結果我不僅沒能奪冠……\n還沒能從失敗中振作起來……=Not only did I fail to win the championship... I also failed to recover from the defeat...
@@ -937,6 +970,7 @@ r:"^不付出代價，(\d+%)機率獲得(\d+)個稀有品質增益$"="$1 chance 
 r:"^失去(\d+)點「意志力」，(\d+%)機率恢復(\d+)點「意志力」，(\d+%)機率什麼都沒有$"="Lose $1 [Will], $2 chance to restore $3 [Will], $4 to obtain nothing"
 是啊……！只要不斷前進，\n道路就會不斷延伸，一定能到家的！=Yes...! As long as I keep moving forward, the road will keep extending, I'll make it home for sure!
 掉頭往回走=Backtrack
+是啊……這樣更安全。=Yes... this is safer.
 尋求幫助=Ask for help
 r:"^獲得(\d+)點「意志力」$"="Obtain $1 [Will]"
 
@@ -985,6 +1019,7 @@ r:"^消耗(\d+)個「時鐘的齒輪」，恢復(\d+)點「意志力」$"="Consu
 r:"^消耗(\d+)點「意志力」，獲得(\d+)次<color\=#FFEC00>洗牌時間·普通</color>$"="Consume $1 [Will] to obtain $2 <color\=#FFEC00>Shuffle Time·Normal</color>"
 是啊……先冷靜下來……=Right... let's clam down first...
 放著他不管=Leave him alone
+花子她，一定就在海邊等我……=Hanako, she must be waiting for me at the sea...
 
 悲傷的少女=Sad Girl
 小咲說她要轉學了……\n明明說好了要一起畢業的……=Kousaki-chan said she's transferring... We promised we'd graduate together...
@@ -992,9 +1027,9 @@ r:"^消耗(\d+)點「意志力」，獲得(\d+)次<color\=#FFEC00>洗牌時間·
 如果她不在，\n我就要變成孤身一人了……=If she's not here,\nI'll be all alone...
 {{A}}……我不要一個人啊……={{A}}... I don't want to be alone...
 給她寫信吧=Write her a letter
-r:"^消耗(\d+)點「意志力」，獲得(\d+)名已擁有的怪盜$"="Consume $1 [Will] to obtain $2 already owned Phantom Thief"
+r:"^消耗(\d+)點「意志力」，獲得(\d+)名已擁有的怪盜$"="Consume $1 [Will] to obtain $2 already owned Thief"
 會有新朋友的=<size\=25>You'll make new friends</size>
-r:"^消耗(\d+)點「意志力」，獲得(\d+)名隨機的怪盜$"="Consume $1 [Will] to obtain $2 random Phantom Thief"
+r:"^消耗(\d+)點「意志力」，獲得(\d+)名隨機的怪盜$"="Consume $1 [Will] to obtain $2 random Thief"
 新的朋友，我能交到嗎……\n不過，我會試試的。=Can I make new friends... I will try it.
 先好好休息吧=Take a rest first
 什麼也不會獲得=Obtain nothing
@@ -1008,6 +1043,7 @@ r:"^消耗(\d+)點「意志力」，獲得(\d+)名隨機的怪盜$"="Consume $1 
 我再也不要回家了！=I will never go home again!
 我陪你尋寶=I'll accompany you
 r:"^(\d+%)機率獲得當前持有「時鐘的齒輪」的一半，(\d+%)機率失去一半。$"="<size\=26>$1 chance to obtain half of the current [Clock Gears], $2 chance to lose half</size>"
+謝謝大哥哥！\n作為答謝，寶物就送給你啦！=Thank you, onii-chan! As thanks, I'll give you the treasure!
 快回家吧=Let's go home
 知道了……\n我不會再讓爸爸媽媽擔心了。=Got it... I won't make mom and dad worry anymore.
 
@@ -1028,8 +1064,11 @@ r:"^獲得(\d+)個「時鐘的齒輪」$"="Obtain $1 [Clock Gears]"
 到底哪裡才有我的容身之處呢？=Where is my place of belonging?
 想想你的家人=Think of your family
 r:"^失去(\d+)個大阿爾卡那增益，(\d+%)機率獲得(\d+)張隨機「大阿爾卡那牌」，(\d+%)機率什麼都沒有$"="<size\=24>Lose $1 [Major Arcana], $2 chance to obtain $3 random [Major Arcana], $4 chance to obtain nothing</size>"
+是啊……\n我現在好想吃媽媽做的奶油燉菜……=Yes... I'm craving mom's cream stew right now...
+你懂我的什麼！？\n不要再跟我說話了！=What do you know about me!?\nStop talking to me!
 想想你的朋友=Think of your friends
 r:"^失去(\d+)個大阿爾卡那增益，並獲得(\d+)張隨機「大阿爾卡那」$"="Lose $1 [Major Arcana], then obtain $2 random [Major Arcana]"
+啊……我想起來了，\n我和朋友約好了明天要去逛街的……=Ah... I remember now, \nI promised my friend to go shopping tomorrow...
 不要放棄=Don't give up
 r:"^不付出代價，(\d+%)機率獲得(\d+)張隨機「大阿爾卡那」$"="$1 chance to obtain $2 random [Major Arcana]"
 我知道，我知道的！\n但為什麼不能稍微對我溫柔一點呢……=I know, I know! But why can't they be a little gentle to me...
@@ -1077,3 +1116,4 @@ r:"^消耗(\d+)點「意志力」，隨機獲得(\d+)張大阿爾卡那牌$"="Co
 替她試一次=Try for her once
 r:"^消耗(\d+)點「意志力」，隨機獲得(\d+)個珍稀品質增益$"="Consume $1 [Will], randomly obtain $2 Rare buff"
 建議她別再試了=Suggest her to stop
+怎、怎麼會……那我要怎麼辦才好？\n不行，我要去找他！=H-how could this happen... Then what should I do? No, I have to go find him!

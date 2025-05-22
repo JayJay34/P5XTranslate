@@ -829,7 +829,9 @@ r:"^選擇<color\=#FFFF00>1名</color>同伴成為『忠實聽眾』，『忠實
 r:"^選擇1名同伴成為<link\="s\|190"><u>『忠實聽眾』</u></link>，<link\="s\|190"><u>『忠實聽眾』</u></link>的攻擊力提升相當於{{A}}攻擊力的(\d+%)，上限<color\=#FFFC40>(\d+)</color>，持續3回合。同時只能擁有1個<link\="s\|190"><u>『忠實聽眾』</u></link>。$"="Selects 1 ally to become the <link\="s|190"><u>[Loyal Listener]</u></link>，increases their ATK based on $1 own ATK for 3 turns, up to <color\=#FFFC40>$2</color>. There can only be 1 <link\="s|190"><u>[Loyal Listener]</u></link>."
 
 r:"^選擇<color\=#FFFF00>1名</color>同伴，立刻釋放其HIGHLIGHT技能，同時提升(\d+\.\d+%)本次HIGHLIGHT的傷害。$"="Selects <color\=#FFFF00>1</color> ally, immediately uses their HIGHLIGHT and increase that HIGHLIGHT damage by $1"
+r:"^選擇<color\=#FFFF00>1名</color>同伴，立刻釋放其HIGHLIGHT技能，同時提升(\d+\.\d+%)本次HIGHLIGHT的傷害。通過該技能使用的HIGHLIGHT不會計入角色的HIGHLIGHT冷卻時間。若目標為S.E.E.S.成員，則改為使其下一次{{A}}獲得(\d+\.\d+%)最終傷害增幅。$"="Selects <color\=#FFFF00>1</color> ally to immediately uses their HIGHLIGHT, increases that HIGHLIGHT damage by $1. HIGHLIGHT used by this skill will not count towards their HIGHLIGHT cooldown. If the target is a SEES member, then increases their next {{A}} Final DMG by $2."
 r:"^選擇1名同伴，立刻釋放其HIGHLIGHT技能，同時提升<color\=#FFFC40>(\d+\.\d+%)</color>本次HIGHLIGHT的傷害。透過該技能使用的HIGHLIGHT不會計入角色的HIGHLIGHT冷卻時間。$"="Selects 1 ally to immediately uses their HIGHLIGHT, increases that HIGHLIGHT damage by <color\=#FFFC40>$1</color>. HIGHLIGHT used by this skill will not count towards their HIGHLIGHT cooldown."
+r:"^選擇1名同伴，立刻釋放其HIGHLIGHT技能，同時提升<color\=#FFFC40>(\d+\.\d+%)</color>本次HIGHLIGHT的傷害。通過該技能使用的HIGHLIGHT不會計入角色的HIGHLIGHT冷卻時間。若目標為S.E.E.S.成員，則改為使其下一次{{A}}獲得<color\=#FFFC40>(\d+\.\d+%)</color>最終傷害增幅。$"="Selects 1 ally to immediately uses their HIGHLIGHT, increases that HIGHLIGHT damage by <color\=#FFFC40>$1</color>. HIGHLIGHT used by this skill will not count towards their HIGHLIGHT cooldown. If the target is a SEES member, then increases their next {{A}} Final DMG by <color\=#FFFC40>$2</color>."
 
 r:"^使<color\=#FFFF00>所有</color>同伴獲得(\d+\.\d+%)傷害加成，持續(\d+)個怪盜行動。期間我方怪盜行動後回復(\d+%)HIGHLIGHT能量，最多回復(\d+%)。$"="Increases <color\=#FFFF00>all</color> allies' DMG Dealt by $1 for $2 actions. Restores $3 HIGHLIGHT Energy after each allies' action, up to $4."
 
@@ -1244,3 +1246,30 @@ r:"^引<color\=#000000>領</color>$"="L<color\=#000000>e</color>ad"
 r:"^信<color\=#000000>賴</color>$"="T<color\=#000000>r</color>ust"
 r:"^月<color\=#000000>相</color>$"="M<color\=#000000>o</color>on Phase"
 r:"^特<color\=#000000>殊</color>月相$"="S<color\=#000000>p</color>ecial Moon Phase"
+
+----------
+Yukari Takeba
+----------
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的疾風屬性傷害，有(\d+%)基礎概率使目標進入風襲狀態，並使目標進入『風蝕』狀態，持續(\d+)回合，場上同時只能存在(\d+)個『風蝕』狀態。\n被動：友方同伴釋放技能時，若任意技能目標擁有『風蝕』，該技能攻擊力提升(\d+\.\d+%)\+{{A}}每有(\d+)點攻擊力提升(\d+\.\d+%)，上限(\d+\.\d+%)。$"="Deals $1 ATK Wind damage to <color\=#FFFF00>1</color> foe, with a $2 base chance to inflict Winded, then inflicts the target with [Wind Erosion] for $3 turns, there can only be $4 [Wind Erosion]. \nPassive: When allies use skills, if any skill target has [Wind Erosion], increases skill ATK by $5 + $7 for every $6 ATK, up to $8."
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的疾風屬性傷害，有(\d+%)基礎概率使目標進入風襲狀態，並使目標進入『風蝕』狀態，持續(\d+)回合，場上同時只能存在(\d+)個『風蝕』狀態。\n被動：友方同伴釋放技能時，若任意技能目標擁有『風蝕』，該技能攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>\+{{A}}每有(\d+)點攻擊力提升(\d+\.\d+%)，上限<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Deals <color\=#FFFC40>$1</color> ATK Wind damage to 1 foe, with a $2 base chance to inflict Winded, then inflicts the target with [Wind Erosion] for $3 turns, there can only be $4 [Wind Erosion]. \nPassive: When allies use skills, if any skill target has [Wind Erosion], increases skill ATK by <color\=#FFFC40>$5</color> + $7 for every $6 ATK, up to <color\=#FFFC40>$8</color>."
+
+r:"^使<color\=#FFFF00>所有</color>同伴受到傷害降低(\d+\.\d+%)，持續(\d+)回合；並使主目標攻擊力提升(\d+\.\d+%)\+自身每有(\d+)點攻擊力提升(\d+\.\d+%)，上限(\d+\.\d+%)，自身每有(\d+)點攻擊力，傷害提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續(\d+)回合。$"="Decreases <color\=#FFFF00>the party's</color> DMG Taken by $1 for $2 turns; Then increases the main target's ATK by $3 + $5 for every $4 ATK, up to $6, and increases the main target's DMG Bonus by $8 for every $7 ATK, up to $9 for $10 turns."
+r:"^使所有同伴受到傷害降低<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合；並使主目標攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>\+自身每有(\d+)點攻擊力提升(\d+\.\d+%)，上限<color\=#FFFC40>(\d+\.\d+%)</color>，自身每有(\d+)點攻擊力，傷害提升(\d+\.\d+%)，上限<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Decreases the party's DMG Taken by <color\=#FFFC40>$1</color> for $2 turns; Then increases the main target's ATK by <color\=#FFFC40>$3</color> + $5 for every $4 ATK, up to <color\=#FFFC40>$6</color>, and increases the main target's DMG Bonus by $8 for every $7 ATK, up to <color\=#FFFC40>$9</color> for $10 turns."
+
+r:"^為<color\=#FFFF00>所有</color>同伴恢復相當於{{A}}攻擊力(\d+\.\d+%)\+(\d+)的生命值。消耗所有『風語』，每消耗(\d+)層『風語』，使技能主目標回復(\d+\.\d+)點{{B}}能量，並使目標下一次使用{{B}}後攻擊力提升(\d+\.\d+%)，持續(\d+)回合，上限(\d+)層。（回復的{{B}}能量溢出時會暫時緩存溢出的能量值，在目標釋放{{B}}後返還，最多緩存相當於目標{{B}}能量上限的能量值，溢出的能量值最多緩存2回合）。若技能主目標為非S.E.E.S.成員，則改為每消耗(\d+)層『風語』，使其下一次使用HIGHLIGHT時總傷害增幅提升(\d+\.\d+%)。$"="Restores $1 ATK + $2 HP to <color\=#FFFF00>the party</color>. Consumes all [Wind Whisper], for every stack of [Wind Whisper] consumed, restores $4 {{B}} Energy to the main target, then increases the target's ATK after using {{B}} by $5 for $6 turns, up to $7 stacks. (When restoring {{B}} Energy, saves the overflow {{B}} Energy then returns it after the target used {{B}}, up to their {{B}} Energy cap for 2 turns). If the main target is not a SEES member, then for every stack of [Wind Whisper] consumed, increases their next HIGHLIGHT Total DMG by $8."
+r:"^為所有同伴恢復相當於{{A}}攻擊力<color\=#FFFC40>(\d+\.\d+%)</color>\+<color\=#FFFC40>(\d+)</color>的生命值。消耗所有『風語』，每消耗(\d+)層『風語』，使技能主目標回復(\d+\.\d+)點{{B}}能量，並使目標下一次使用{{B}}後攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合，上限(\d+)層。（回復的{{B}}能量溢出時會暫時緩存溢出的能量值，在目標釋放{{B}}後返還，最多緩存相當於目標{{B}}能量上限的能量值，溢出的能量值最多緩存2回合）。若技能主目標為非S.E.E.S.成員，則改為每消耗(\d+)層『風語』，使其下一次使用HIGHLIGHT時總傷害增幅提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Restores <color\=#FFFC40>$1</color> ATK + <color\=#FFFC40>$2</color> HP to the party. Consumes all [Wind Whisper], for every stack of [Wind Whisper] consumed, restores $4 {{B}} Energy to the main target, then increases the target's ATK after using {{B}} by <color\=#FFFC40>$5</color> for $6 turns, up to $7 stacks. (When restoring {{B}} Energy, saves the overflow {{B}} Energy then returns it after the target used {{B}}, up to their {{B}} Energy cap for 2 turns). If the main target is not a SEES member, then for every stack of [Wind Whisper] consumed, increases their next HIGHLIGHT Total DMG by <color\=#FFFC40>$8</color>."
+
+r:"^釋放條件：(\d+)點{{A}}能量\n對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的疾風屬性傷害，自身每有(\d+)點攻擊力使所有同伴造成傷害提升(\d+\.\d+%)，上限(\d+\.\d+%)</color>；驅散目標的(\d+)個增益效果，有(\d+%)基礎概率使目標進入風襲狀態，並使目標獲得『風蝕』，持續(\d+)回合。$"="Use condition: When you have $1 {{A}} Energy\nDeals $2 ATK Wind damage to <color\=#FFFF00>1</color> foe, increases the party's DMG Dealt by $4 for every $3 ATK, up to $5; Dispels $6 buffs on the target, with a $7 base chance to inflict Winded, then inflicts the target with [Wind Erosion] for $8 turns."
+
+為<color\=#FFFF00>1名</color>同伴淨化一個異常狀態。=Dispels 1 Status Ailment from <color\=#FFFF00>1</color> ally.
+
+風蝕=Wind Erosion
+
+風語=Wind Whisper
+
+Combat Pop-ups
+r:"^風<color\=#000000>蝕</color>$"="W<color\=#000000>i</color>nd Erosion"
+r:"^風<color\=#000000>語</color>$"=""W<color\=#000000>i</color>nd Whisper"
+r:"^追<color\=#000000>風</color>之息$"="W<color\=#000000>i</color>ndchaser's Breath"
+r:"^復<color\=#000000>甦</color>之矢$"="A<color\=#000000>r</color>row of Rejuvenation"
+r:"^扣<color\=#000000>動</color>的扳機$"="P<color\=#000000>u</color>ll the Trigger"
