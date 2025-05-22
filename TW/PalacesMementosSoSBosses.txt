@@ -163,6 +163,8 @@ r:"^再次選擇節點，\n連接一條「<color\=#ff0000>思路</color>」$"="S
 r:"^點擊這裡可以獲得「<color\=#ff0000>提示資訊</color>」$"="Click here for [<color\=#ff0000>Tips</color>]"
 r:"^「<color\=#ff0000>提示資訊</color>」會顯示在右上角$"="[<color\=#ff0000>Tips</color>] will display here"
 
+WONDER，幹得漂亮。=Wonder, well done.
+幹得好，WONDER。=Well done, Wonder.
 感覺好像不太對？=Something does not feel right?
 這樣連接是對的嗎？=Is this the right connection?
 是……這樣的嗎？=Is it... like this?
@@ -1168,15 +1170,24 @@ MEMENTOS 1
 看樣子，這是附近最厲害的敵人呢=Looks like this is the most powerful enemy nearby.
 不過不擊敗它又無法前往，要進行挑戰嗎？=But we can't continue without defeating it. \nDo you want to challenge it?
 
-r:"^(\d+%)機率閃避受到的普通攻擊和槍械攻擊$"="$1 to evade Melee Attack and Gun Attack"
-r:"^(\d+%)機率閃避受到的槍械攻擊和技能攻擊$"="$1 to evade Gun Attack and Skill"
-r:"^(\d+%)機率閃避受到的技能攻擊和普通攻擊$"="$1 to evade Skill and Melee Attack"
+r:"^1、{{A}}會使用多種鬥牛的步伐，提高自身的閃避。\n「分身並步」：100%固定機率閃避受到的<color\=#ff3b37>普通攻擊</color>\n「反身泄步」：100%固定機率閃避受到的<color\=#ff3b37>槍械攻擊</color>\n「披風追步」：100%固定機率閃避受到的<color\=#ff3b37>技能攻擊</color>\n2、{{A}}初始獲得<color\=#ff3b37>隨機兩種步伐</color>，每次受到傷害後，{{A}}會重新獲得隨機兩種步伐。\n3、每回合末，{{A}}會獲得(\d+)層「衝擊步」，受到傷害時會驅散一層。\n4、{{A}}行動時，若自身擁有「衝擊步」，會釋放「刺牛步」，對一名怪盜造成高額傷害。$"="{{A}} can use many bullfighting steps to increase evasion.\n[Separation]: 100% fixed chance to evade <color\=#ff3b37>Melee Attack</color>\n[Fallaway Whisk]: 100% fixed chance to evade <color\=#ff3b37>Gun Attack</color>\n[Chasse Cape] 100% fixed chance to evade <color\=#ff3b37>Skill Attack</color>\n2. {{A}} starts with <color\=#ff3b37>2 random steps</color>, after taking damage, {{A}} gains 2 random steps.\n3. At the end of turn, {{A}} gains $1 [Attack Step], dispels 1 stack when taking damage.\n4. When {{A}} acts, if {{A}} has [Attack Step], uses [Appel] to deal severe damage to 1 Thief."
+分身並步=Separation
+反身泄步=Fallaway Whisk
+披風追步=Chasse Cape
+衝擊步=Attack Step
+刺牛步=Appel
+分身並步、反身泄步=Separation, Fallaway Whisk
+100%機率閃避受到的普通攻擊和槍械攻擊=100% chance to evade Melee Attack and Gun Attack
+反身泄步、披風追步=Fallaway Whisk, Chasse Cape
+100%機率閃避受到的槍械攻擊和技能攻擊=100% chance to evade Gun Attack and Skill Attack
+披風追步、分身並步=Chasse Cape, Separation
+100%機率閃避受到的技能攻擊和普通攻擊=100% chance to evade Skill Attack and Melee Attack
 r:"^<color\=#FF0000>(.*)</color>進入分身並步、反身泄步狀態，閃避受到的普通攻擊和槍械攻擊……$"="<color\=#FF0000>$1</color> now evade Melee Attack and Gun Attack!"
-r:"^<color\=#FF0000>(.*)</color>進入反身泄步、披風追步狀態，閃避受到的槍械攻擊和技能攻擊……$"="<color\=#FF0000>$1</color> now evade Gun Attack and Skill!"
-r:"^<color\=#FF0000>(.*)</color>進入披風追步、分身並步狀態，閃避受到的技能攻擊和普通攻擊……$"="<color\=#FF0000>$1</color> now evade Skill and Melee Attack!"
+r:"^<color\=#FF0000>(.*)</color>進入反身泄步、披風追步狀態，閃避受到的槍械攻擊和技能攻擊……$"="<color\=#FF0000>$1</color> now evade Gun Attack and Skill Attack!"
+r:"^<color\=#FF0000>(.*)</color>進入披風追步、分身並步狀態，閃避受到的技能攻擊和普通攻擊……$"="<color\=#FF0000>$1</color> now evade Skill Attack and Melee Attack!"
 r:"^閃<color\=#000000>避</color>普攻、槍械$"="E<color\=#000000>v</color>ade Melee Attack, Gun Attack"
-r:"^閃<color\=#000000>避</color>槍械、技能$"="E<color\=#000000>v</color>ade Gun Attack, Skill"
-r:"^閃<color\=#000000>避</color>技能、普攻$"="E<color\=#000000>v</color>ade Skill, Melee Attack"
+r:"^閃<color\=#000000>避</color>槍械、技能$"="E<color\=#000000>v</color>ade Gun Attack, Skill Attack"
+r:"^閃<color\=#000000>避</color>技能、普攻$"="E<color\=#000000>v</color>ade Skill Attack, Melee Attack"
 
 r:"^1、{{A}}擁有<color\=#ffd700>「金之領域」</color>，造成傷害時使隨機陰影獲得1層<color\=#ffd700>「金剛不壞」</color>狀態。\n<color\=#ffd700>「金剛不壞」</color>：免疫下次受到的傷害。\n2、{{A}}擁有<color\=#ffd700>「金剛不壞」</color>時，造成傷害提高。$"="<size\=26>1. {{A}} have <color\=#ffd700>[Golden Domain]</color>, when dealing damage give 1 random Shadow 1 stack of <color\=#ffd700>[Unbreakable]</color>.\n<color\=#ffd700>[Unbreakable]</color>: Immunity to the next damage received.\n2. When {{A}} have <color\=#ffd700>[Unbreakable]</color>, increase DMG Dealt.</size>"
 金之領域=Golden Domain
@@ -1362,8 +1373,11 @@ r:"^<color\=#FF0000>(.*)</color>感到寒冷$"="<color\=#FF0000>$1</color> is fe
 
 {{A}}之護={{A}}'s Protection
 南明離火=Southern Flame
+使所有敵人進入離火狀態，持續2回合=Inflicts all enemies with Flame for 2 turns
 離火=Flame
+r:"^離<color\=#FF0000>火</color>$"="F<color\=#FF0000>l</color>ame"
 {{A}}羽庇={{A}}'s Feather
+使1名同伴進入無法選中狀態，持續2回合=Makes 1 ally untargetable for 2 turns
 撕裂=Laceration
 咬痕=Bite
 雲蒸龍變=Dragon Soar
@@ -1371,6 +1385,10 @@ r:"^<color\=#FF0000>(.*)</color>感到寒冷$"="<color\=#FF0000>$1</color> is fe
 
 {{B}}在戰鬥中，會源源不斷地召喚「{{C}}」之影、「{{D}}」之影、「{{E}}」之影、「{{F}}」之影。擊敗對應的神獸之影，可以獲得不同的能力。\n擊敗「{{C}}」之影：弱點傷害提升。\n擊敗「{{D}}」之影：{{A}}力提升。\n擊敗「{{E}}」之影：最終傷害提升。\n擊敗「{{F}}」之影：受到最終傷害降低。\n{{B}}生命值較低時，會蓄力並釋放「極·念動力」，造成超特大念動傷害。={{B}} can keep summoning [Shadow of {{C}}], [Shadow of {{D}}], [Shadow of {{E}}], [Shadow of {{F}}]. Gain the corresponding ability when you defeat the corresponding Shadow.\nDefeat [Shadow of {{C}}]: Increase Weak DMG.\nDefeat [Shadow of {{D}}]: Increase ATK.\nDefeat [Shadow of {{E}}]: Increase Final DMG.\nDefeat [Shadow of {{F}}]: Decrease Final DMG Taken.\nWhen {{B}} reach low HP, they will charge and use [Ultimate·Psycho Force], dealing colossal Psy damage.
 r:"^{{A}}在戰鬥中，會召喚「{{B}}」之影、「{{C}}」之影、「{{D}}」之影、「{{E}}」之影。擊敗對應的神獸之影，可以獲得相應的能力。\n擊敗「{{B}}」之影：怪盜每回合獲得相當於(\d+%)最大生命值的護盾。\n擊敗「{{C}}」之影：怪盜攻擊力提升(\d+%)。\n擊敗「{{D}}」之影：怪盜造成傷害提升(\d+%)。\n擊敗「{{E}}」之影：怪盜防禦力提升(\d+%)。$"="<size\=23>{{A}} will summon [Shadow of {{B}}], [Shadow of {{C}}], [Shadow of {{D}}], [Shadow of {{E}}]. Gain the corresponding ability when you defeat the corresponding Shadow.\nDefeat [Shadow of {{B}}]: Thieves gain $1 Max HP Shield each turn.\nDefeat [Shadow of {{C}}]: Increase Thieves' ATK by $2.\nDefeat [Shadow of {{D}}]: Increase Thieves' DMG Dealt by $3.\nDefeat [Shadow of {{E}}]: Increase Thieves' DEF by $4.</size>"
+極·念動力=Ultimate·Psycho Force
+對所有敵人造成超特大念動屬性傷害。=Deals colossal Psy damage to all enemies.
+對1名敵人造成物理傷害，並給予目標『撕裂』=Deals Phys damage to 1 enemy, inflicts the target with [Laceration]
+對所有敵人造成物理傷害，並給予目標『咬痕』。=Deals Phys damage to all enemies, inflicts the target with [Laceration].
 
 r:"^玄<color\=#000000>武</color>之護$"="G<color\=#000000>e</color>nbu's Protection"
 r:"^玄<color\=#000000>武</color>之力$"="G<color\=#000000>e</color>nbu's Power"
