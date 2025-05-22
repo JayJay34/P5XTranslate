@@ -9,6 +9,7 @@ r:"更新本地文件\((\d+)\/(\d+)\)"=<b>Applying Update ($1/$2)</b>
 r:"^用戶端版本號：(.*)  遊戲版本：(.*)  資源號：(.*)$"="Client Version: $1 Game Version: $2 Resource ID: $3"
 r:"^(.*)版本$"="Version $1"
 開始登入=Logging in...
+登入中..=Logging in...
 登入中……=Logging in...
 伺服器維護中，請查看遊戲公告。=Server is under maintenance.
 暫無消息=No news
@@ -79,6 +80,8 @@ RPG模式縮放靈敏度=RPG Mode Zoom Sensitivity
 視角自動修正=<size\=32>Camera Follow</size>
 自動修正鏡頭=Camera Follow
 手把震動=Vibration
+滑鼠右鍵退出=Right Click to Exit
+
 系統設置=System
 隱藏好友申請=Hide Friend Request
 推送消息=Push Notification
@@ -289,6 +292,9 @@ WONDER釋放「<color\=#ff3b37>ONE MORE</color>」!=WONDER use [<color\=#ff3b37>
 「<color\=#ff3b37>怪盜團·集結</color>」\n提升主角至特定等級，即可獲得集結獎勵。=[<color\=#ff3b37>Phantoms Assemble</color>]\nGet rewards after reaching a specific Wonder level.
 「<color\=#ff3b37>返回</color>」活動主介面=Go back to [<color\=#ff3b37>Events</color>]
 查看「<color\=#ff3b37>相匯的·軌跡</color>」=View [<color\=#ff3b37>Daily Bonus</color>]
+
+膽小鬼=Coward
+{{A}}中存在著一些特殊陰影，\n膽小的它們藏在油漆桶裡，\n嘗試用「<color\=#ff0000>撞擊</color>」的方式趕走它們，\n並奪取「<color\=#ff0000>桶內的寶物</color>」吧。=There are some special shadows in {{A}}. They are cowardly and hide in paint buckets, try [<color\=#ff0000>ramming</color>] them to force them out and take the [<color\=#ff0000>treasure inside the can</color>].
 
 ----------
 Character Names
@@ -955,6 +961,7 @@ r:"^治療效果$"="<size\=22>Healing Effect</size>"
 <color\=#FF0000>本次升級溢出經驗將轉化為傳記材料。</color>\n是否確定使用所選材料進行強化？=<color\=#FF0000>This upgrade will convert overflowed EXP into upgrade materials.</color>\nAre you sure you want to upgrade?
 已達到最大經驗，無法繼續添加材料。=Reached max level. Cannot add more upgrade materials.
 r:"^怪盜等級上限提升至<color\=#FFF000>LV.(\d+)</color>$"="Increase max level to <color\=#FFF000>Lv.$1</color>"
+r:"^角色等級上限提升至<color\=#FFF000>LV.(\d+)</color>$"="Increase max level to <color\=#FFF000>Lv.$1</color>"
 該怪盜已進化至滿級！=Awareness maxed!
 
 正在使用=Using
@@ -2103,6 +2110,8 @@ r:"^確定要和<color\=#F7F95C>{{A}}</color>成為「{{B}}」關係？\n※該�
 SNS還有沒回復的消息，要直接睡覺嗎？=You didn't reply to your SNS yet, \ngo to sleep immediately?
 r:"^<color\=#ff0000ff>睡</color>覺$"="Sl<color\=#ff0000ff>ee</color>p"
 
+打工現金雙份次數：=Yen 2x Rewards:
+每日領取補給\n能量飲料<color\=#FFEC00>x1</color>=Claim daily\nEnergy Drink <color\=#FFEC00>x1</color>
 
 ----------
 Music Club
@@ -2409,10 +2418,10 @@ r:"^{{A}}探索度獎勵$"="{{A}} Exploration Reward"
 每日領取補給\n濃縮咖啡<color\=#FFEC00>x1</color>=Claim daily\nEspresso <color\=#FFEC00>x1</color>
 活動期間，成功挑戰「養成材料」中的技能升級材料、怪盜潛能材料、武器突破材料副本，可以獲得雙份獎勵。=During the event, gain 2x rewards after completing Incense Farm, Character Ascension Farm, Weapon Ascension Farm.
 活動期間，成功挑戰「啟示套裝」中的副本，可以獲得雙份獎勵。=During the event, gain 2x rewards after completing Revelation Farm.
-r:"^今日雙份剩餘次數：$"="Daily 2x Rewards:"
-r:"^每日次數：$"="Attempt(s):"
-r:"^限時關每日次數：$"="Daily Attempt(s):"
-r:"^限時關今日剩餘次數：$"="Daily Attempt(s):"
+今日雙份剩餘次數：=Daily 2x Rewards:
+每日次數：=Attempt(s):
+限時關每日次數：=Daily Attempt(s):
+限時關今日剩餘次數：=Daily Attempt(s):
 
 ----------
 Resources & Shop Items (Marthym's Shop)
@@ -2685,11 +2694,19 @@ P5X營運團隊=P5X Team
 當前暫無郵件=No email
 沒有收到郵件=No email
 
+r:"^時間：(\d+)-(\d+)-(\d+)$"="Time: $1-$2-$3"
+r:"^V(.*) 版本預告$"="V$1 Version Preview"
 sr:"^「(.*)」即將結束$"="<size\=24>[$1] Ending Soon</size>"
 sr:"^「(.*)」獎勵補發$"="<size\=24>[$1] Reissue Rewards</size>"
-sr:"^「(.*)」總星級獎勵$"="[$1] Star Rewards"
-r:"^V(.*) 版本預告$"="V$1 Version Preview"
 r:"^您的{{A}}任務「(.*)」獎勵未領取，已透過郵件發送，請查收附件。$"="Your unclaimed {{A}} mission rewards have been sent via mail. Please check the attachments."
+sr:"^「(.*)」總星級獎勵$"="[$1] Star Rewards"
+「閼凶夢之扉」樂園排名獎勵=<size\=20>[Door of Nightmares] Paradise Rank Rewards</size>
+r:"^在本期閼凶夢之扉挑戰中，您所在的樂園排名處於(.*)名，特為全體樂園成員發放排名獎勵，請及時查收。$"="In this season of Door of Nightmares, your Paradise is top $1, rewards are issued to all members, please claim in time."
+「閼凶夢之扉」個人排名獎勵=<size\=20>[Door of Nightmares] Personal Rank Rewards</size>
+r:"^本期閼凶夢之扉挑戰已結束，在挑戰過程中您的最高排名為(.*)，特為您頒發個人排名獎勵，請查收。$"="In this season of Door of Nightmares, your personal rank is top $1, we have issued your rank rewards, please claim."
+「心之海試煉」排名獎勵=<size\=25>[Sea of Souls Trials] Rank Rewards</size>
+r:"^本期心之海試煉已結束，您的排名處於(.*)，特為您頒發排名獎勵，請查收。$"="In this season of Sea of Souls Trials, your rank is top $1, we have issued your rank rewards, please claim."
+{{A}}生日快樂！=<size\=26>Happy Birthday {{A}}!</size>
 
 // Mission Screen
 全部=All
@@ -3426,6 +3443,7 @@ r:"^最多只可以選擇(\d+)個面具上陣哦～$"="You can only equip $1 Per
 在厄抑之境中挑戰Ⅵ階、Ⅶ階{{A}}副本後獲得……應該可以用於在厄抑巡禮中兌換獎勵。=Gained from Rank VI, Rank VII Persona Farm. Can be used in Challenge Reward.
 在厄抑之境中挑戰所有{{A}}副本後均可獲得……應該可以用於在厄抑巡禮中兌換獎勵。=Gained from all Persona Farm. Can be used in Challenge Reward.
 『不羈紋章·虹』\n在心之海試煉等玩法中獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=26>[Wild Card Emblem·Rainbow]\nGained from Sea of Souls Trials. \nCan be used in Challenge Reward.</size>
+在心之海試煉等玩法中獲得……應該可以用於在厄抑巡禮中兌換獎勵。=Gained from Sea of Souls Trials. \nCan be used in Challenge Reward.
 『不羈紋章·耀』\n在厄抑之境中挑戰Ⅵ階、Ⅶ階{{A}}副本後獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=26>[Wild Card Emblem·Shiny]\nGained from Rank VI, Rank VII Persona Farm. Can be used in Challenge Reward.</size>
 『不羈紋章·空』\n在厄抑之境中挑戰所有{{A}}副本後均可獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=26>[Wild Card Emblem·Dull]\nGained from all Persona Farm. \nCan be used in Challenge Reward.</size>
 銘刻著{{B}}傳說的印記……應該可以用於強化、進化、合體{{A}}。=A mark engraved with the legend of {{B}}, can be used to upgrade, evolve, and fuse {{A}}.
@@ -3453,6 +3471,7 @@ sr:"^(.*)印記$"="$1 Mark"
 暫無介紹=No introduction
 
 詭譎的{{A}}=Strange {{A}}
+膽小的{{A}}=Timid {{A}}
 平凡的{{A}}=Ordinary {{A}}
 非凡的{{A}}=Extraordinary {{A}}
 冷漠的{{A}}=Indifferent {{A}}
@@ -3528,12 +3547,15 @@ r:"^贈送所有喜歡的禮物給{{A}}$"="Give all Favorite Gifts to {{A}}"
 與任意協同者進行1次關係回溯<size\=30>(0/1)</size>=Backtrack 1 relationship <size\=30>(0/1)</size>
 與任意協同者進行1次關係回溯=Backtrack 1 relationship
 
+聖殿樂園勳章=Holy Paradise Medal
+
 獲得方式=Obtain Method
 默認名片=Default background
 官方營運活動獲得=Reward from official events
 sr:"^參與「(.*)」活動獲得$"="Participate in the event [$1]"
 r:"^{{A}}成長至(\d+)級時解鎖$"="{{A}} reached Lv. $1"
 r:"^與協同者{{A}}好感度達到rank(\d+)$"="Reach Rank $1 with {{A}}"
+r:"^在閼凶夢之扉挑戰中，樂園排名達到(\d+)~(\d+)名時獲得的頭像框。$"="Paradise reach top $1~$2 in Door of Nightmares."
 
 查看全部徽章=View all badges
 r:"^徽章收集：(\d+)$"="Badges: $1"
@@ -3547,13 +3569,15 @@ r:"^徽章冊收集：(\d+)$"="Badge Albums: $1"
 收集=Collection
 紀念冊=Events Album
 
-r:"^(.*)·反抗之魂$"="$1 - Soul of Rebellion"
-r:"^(.*)·慾望之火$"="$1 - Fire of Desire"
-r:"^(.*)·覺醒之焰$"="$1 - Flame of Awakening"
-r:"^(.*)·心跳之夏$"="$1 - Summer of Heartbeats"
-r:"^(.*)·新春之禧$"="$1 - Celebration of Spring"
-r:"^(.*)·向死之叛$"="$1 - Defiance towards Death"
+名人堂·制霸=Hall of Fame·Dominate
+r:"^(.*)·反抗之魂$"="$1·Soul of Rebellion"
+r:"^(.*)·慾望之火$"="$1·Fire of Desire"
+r:"^(.*)·覺醒之焰$"="$1·Flame of Awakening"
+r:"^(.*)·心跳之夏$"="$1·Summer of Heartbeats"
+r:"^(.*)·新春之禧$"="$1·Celebration of Spring"
+r:"^(.*)·向死之叛$"="$1·Defiance towards Death"
 
+r:"^在閼凶夢之扉挑戰中，樂園排名達到(\d+)~(\d+)名時獲得的勳章。$"="Paradise reach top $1~$2 in Door of Nightmares."
 {{A}}意識等級達到6級={{A}} reached Awareness 6
 r:"^與協同者{{A}}好感度達到rank(\d+)\n且與{{A}}成為{{B}}$"="Reach Rank $1 with {{A}} and become {{B}}."
 
