@@ -238,6 +238,7 @@ r:"^待設置$"="None"
 故事=Story
 當前沒有劇情日誌=Currently no dialogue
 當前劇情為<color\=#ff0000>重要劇情</color>，是否確定跳過？=This is an <color\=#ff0000>important scene</color>. \nAre you sure you want to skip it?
+將跳過大段劇情，前往預設劇情節點。\n是否確認？<color\=#FF0000>（本次登入只會彈出一次）</color>=Skip to plot point summary. Are you sure? \n<color\=#FF0000>(This prompt will only show once per login)</color>
 當前劇情為重要劇情，不可跳過=Cannot skip important scene.
 此處可調整極速模式加速對話劇情=Change speed here
 
@@ -269,7 +270,7 @@ r:"^待設置$"="None"
 怪盜行動時、攻擊造成WEAK時，\n會獲得<color\=#ff3b37>HIGHLIGHT能量</color>。\n能量累積滿後，可在任意怪盜行動時釋放。=Gain <color\=#ff3b37>HIGHLIGHT Energy</color> after Thieves' action and when dealing Weak damage.\nWhen full, you can use it on any Thieves' action.
 怪盜「HIGHLIGHT」使用後，有<color\=#ff3b37>4回合</color>冷卻時間，\n冷卻後「<color\=#ff3b37>重置</color>」該怪盜的HIGHLIGHT「<color\=#ff3b37>使用機會</color>」。=After a Thief used [HIGHLIGHT], there is a <color\=#ff3b37>4 turns</color> cooldown on their [HIGHLIGHT].
 「<color\=#ff3b37>疾跑</color>」加快移動速度=[<color\=#ff3b37>Dash</color>] to move faster
-角色擁有強力的「<color\=#ff3b37>ONE MORE</color>」技能，\n戰鬥中使敵人倒地後可以釋放。=Characters have powerful [<color\=#ff3b37>ONE MORE</color>] skill.\nYou can use it after Downing enemies.
+角色擁有強力的「<color\=#ff3b37>ONE MORE</color>」技能，\n戰鬥中使敵人倒地後可以釋放。=Characters have powerful [<color\=#ff3b37>ONE MORE</color>] skill.\nYou can use it after Downing foes.
 教學=Tutorial
 查看教學，學習已解鎖的教學內容！=View tutorials to learn about unlocked tutorials!
 查看手機「<color\=#ff3b37>功能表</color>」=View [<color\=#ff3b37>Menu</color>]
@@ -284,7 +285,7 @@ r:"^已解鎖教學導覽：<color\=#FFBE7E>(\d+)</color>條。$"="Unlocked tuto
 使用趁手「<color\=#ff3b37>技能</color>」=Use [<color\=#ff3b37>Skill</color>]
 掃除這個爪牙=Eliminate this minion
 WONDER釋放「<color\=#ff3b37>ONE MORE</color>」!=WONDER use [<color\=#ff3b37>ONE MORE</color>]!
-使在場的所有敵人倒地，\n可以發動我方全員釋放「<color\=#ff3b37>{{A}}</color>」。\n對所有敵人造成大量傷害。=When all enemies are Downed, \nyou can use [<color\=#ff3b37>{{A}}</color>].\nDealing heavy damage to all enemies.
+使在場的所有敵人倒地，\n可以發動我方全員釋放「<color\=#ff3b37>{{A}}</color>」。\n對所有敵人造成大量傷害。=When all foes are Downed, \nyou can use [<color\=#ff3b37>{{A}}</color>].\nDealing heavy damage to all foes.
 
 剛剛遇到的神秘陰影，似乎想向我們兜售商品，現在就去看看吧。=The mysterious Shadow we just encountered wants to sell us something, let's check it out.
 查看「<color\=#ff3b37>契約</color>」=View [<color\=#ff3b37>Contract</color>]
@@ -678,6 +679,8 @@ r:"^懷<color\=#ff0000ff>舊</color>遊戲店$"="Re<color\=#ff0000ff>tr</color>o
 r:"^(\d+)天後重置$"="Resets after $1 day(s)"
 r:"^(\d+)小時後重置$"="Resets after $1 hour(s)"
 
+據說有個影響力很大的電視臺在這個車站附近……=It is said that there is a very influential TV station near this station...
+
 ----------
 Area Names
 ---------
@@ -853,6 +856,7 @@ Class/ Stats Screen
 屬性說明=<size\=40>Elements</size>
 快速篩選=Filter
 怪盜篩選=Filter
+角色篩選=Filter
 角色職業=Role
 等級由低至高=Low to High Lv.
 等級由高至低=High to Low Lv.
@@ -881,9 +885,9 @@ sr:"^二重奏·(.*):(.*)元素怪盜技能傷害提升(.*)$"="<size\=21>$1 Duet
 sr:"^多重奏·(.*):(.*)元素怪盜技能傷害提升(.*)$"="<size\=21>$1 Polyphony: Increase $2 Thieves' skill damage by $3</size>"
 
 反抗=Rebel
-擅長單體攻擊，能有效針對單個敵人。=<size\=26>Good at single target attacks, can deal with a single enemy effectively.</size>
+擅長單體攻擊，能有效針對單個敵人。=<size\=26>Good at single target attacks, can deal with a single foe effectively.</size>
 支配=Dominate
-擅長群體攻擊，能有效針對多個敵人。=<size\=28>Good at AoE attacks, can deal with multiple enemies effectively.</size>
+擅長群體攻擊，能有效針對多個敵人。=<size\=28>Good at AoE attacks, can deal with multiple foes effectively.</size>
 救援=Rescue
 能夠治療同伴，為團隊提供回復能力。=Can heal allies to provides recovery for the team.
 防衛=Defend
@@ -912,7 +916,7 @@ sr:"^多重奏·(.*):(.*)元素怪盜技能傷害提升(.*)$"="<size\=21>$1 Poly
 暴擊傷害=CRIT DMG
 精力回復=SP Recovery
 穿透=PEN
-穿透影響對敵人造成傷害時忽視防禦的程度。=PEN affects how much enemy DEF is ignored when dealing damage.
+穿透影響對敵人造成傷害時忽視防禦的程度。=PEN affects how much foe DEF is ignored when dealing damage.
 倒地值=Down Gauge
 效果命中=EHR
 效果抵抗=Effect RES
@@ -1905,6 +1909,7 @@ r:"^都市日程<color\=#ffc000>在{{A}}打工</color>已解鎖，\n每日有一
 {{A}}的書店今天似乎需要人手……=The Bookstore is understaffed...
 {{A}}的書店今天似乎需要人手，要去幫忙整理嗎？=<size\=28>The Bookstore is understaffed today, want to go help?</size>
 今天也是{{A}}書店舉辦活動的日子，要去幫忙嗎？=The {{A}} Bookstore is holding an event today, want to help out?
+{{A}}的書店今天似乎需要人手，要去幫忙接待嗎？=There's a lot of customers at the Bookstore today, want to help out?
 {{A}}的書店今天似乎需要接待很多客人，去幫忙看看吧……=There's a lot of customers at the Bookstore today, let's go help...
 在書店打工=<size\=24>Work part-time\nat the Bookstore</size>
 要在這家書店打工嗎？=Do you want to work part-time \nat this Bookstore?
@@ -2632,6 +2637,7 @@ r:"^第(\d+)天$"="Day $1"
 當勾選道具超過單次分解上限時，將優先分解更低品質的道具=Dismantle the lower quality items first when over the dismantle limit
 不會快速選擇穿戴中啟示=Will not quick select equipped revelation
 已選：= 
+是否確認進行分解？<color\=#ff3b37>（分解後無法恢復）</color>=Confirm to proceed with dismantling? \n<color\=#ff3b37>(Cannot be restored after dismantling)</color>
 
 ----------
 Velvet Trials (VT)
@@ -2943,10 +2949,10 @@ r:"^己方行動次數：(\d+)$"="Number of Actions: $1"
 戰鬥獎勵=Rewards
 屬性強化=Stats Boost
 所有怪盜造成的傷害大幅提升，受到的傷害大幅降低=<size\=25>Heavily increase all Thieves' DMG Dealt;\nHeavily decrease all Thieves' DMG Taken</size>
-r:"^所有敵人最大生命值提升(\d+(.\d+)?(%)?)$"="Increase all enemies' Max HP by $1"
-r:"^所有敵人攻擊力提升(\d+(.\d+)?(%)?)$"="Increase all enemies' ATK by $1"
-r:"^所有敵人防禦力提升(\d+(.\d+)?(%)?)$"="Increase all enemies' DEF by $1"
-r:"^所有敵人受到傷害降低(\d+(.\d+)?(%)?)$"="Decrease all enemies' DMG Taken by $1"
+r:"^所有敵人最大生命值提升(\d+(.\d+)?(%)?)$"="Increase all foes' Max HP by $1"
+r:"^所有敵人攻擊力提升(\d+(.\d+)?(%)?)$"="Increase all foes' ATK by $1"
+r:"^所有敵人防禦力提升(\d+(.\d+)?(%)?)$"="Increase all foes' DEF by $1"
+r:"^所有敵人受到傷害降低(\d+(.\d+)?(%)?)$"="Decrease all foes' DMG Taken by $1"
 
 探索里程=<size\=20>Explore Mileage</size>
 達到=<size\=20>Reach</size>
@@ -3059,8 +3065,8 @@ r:"^更快更強(.*)$"="Faster Stronger $1"
 長按異變圖示可查看詳情=<size\=26>Long press to view details</size>
 異變等級=Level
 使用推薦陣容=<size\=24>Use recommended team</size>
-r:"^<pos\=45>所有敵人的最終生命值提升(\d+(.\d+)?(%)?)$"="<pos\=45>Increase all enemies' Final HP by $1"
-r:"^<pos\=45>所有敵人的最終攻擊力提升(\d+(.\d+)?(%)?)$"="<pos\=45>Increase all enemies' Final ATK by $1"
+r:"^<pos\=45>所有敵人的最終生命值提升(\d+(.\d+)?(%)?)$"="<pos\=45>Increase all foes' Final HP by $1"
+r:"^<pos\=45>所有敵人的最終攻擊力提升(\d+(.\d+)?(%)?)$"="<pos\=45>Increase all foes' Final ATK by $1"
 r:"^<pos\=45>所有怪盜最終生命值降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Final HP by $1"
 r:"^<pos\=45>所有怪盜最終攻擊力下降(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Final ATK by $1"
 r:"^<pos\=45>所有怪盜最終防禦力下降(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Final DEF by $1"
@@ -3074,8 +3080,8 @@ r:"^<pos\=45>怪盜造成的念核祝咒屬性的傷害降低(\d+(.\d+)?(%)?)$"=
 r:"^<pos\=45>HL能量回復速度降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease HIGHLIGHT Energy recovery rate by $1"
 r:"^<pos\=45>(\d+(.\d+)?(%)?)回合內結束戰鬥且戰鬥中無怪盜陣亡$"="<pos\=45>Win within $1 turns and no faint"
 
-r:"^所有敵人的最終生命值提升(\d+(.\d+)?(%)?)$"="Increase all enemies' Final HP by $1"
-r:"^所有敵人的最終攻擊力提升(\d+(.\d+)?(%)?)$"="Increase all enemies' Final ATK by $1"
+r:"^所有敵人的最終生命值提升(\d+(.\d+)?(%)?)$"="Increase all foes' Final HP by $1"
+r:"^所有敵人的最終攻擊力提升(\d+(.\d+)?(%)?)$"="Increase all foes' Final ATK by $1"
 r:"^所有怪盜最終生命值降低(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Final HP by $1"
 r:"^所有怪盜最終攻擊力下降(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Final ATK by $1"
 r:"^所有怪盜最終防禦力下降(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Final DEF by $1"
@@ -3131,7 +3137,7 @@ r:"^完成第(\d+)關任意(\d+)個挑戰目標\((\d+)\/(\d+)\)$"="Complete any 
 r:"^累計完成(\d+)個關卡挑戰目標\((\d+)\/(\d+)\)$"="Complete all goals for $1 levels ($2/$3)"
 
 完成章節劇情=Complete the chapter story
-擊敗所有敵人=Defeat all enemies
+擊敗所有敵人=Defeat all foes
 r:"^通關時，全員血量不低於(\d+%)"="<size\=21>Have no allies below $1 HP when clearing</size>"
 r:"^至少攜帶(\d+)名女性隊員的情況下通關$"="<size\=26>Clear with at least $1 female Thieves</size>"
 r:"^至少攜帶(\d+)名男性隊員的情況下通關$"="<size\=27>Clear with at least $1 male Thieves</size>"
@@ -3192,13 +3198,13 @@ r:"^前置劇情已觀看；觀看任意(\d+)個女角色的第(\d+)節約會劇
 沒有角色死亡=No faint
 r:"^(\d+)回合內通關$"="Win within $1 turns"
 r:"^獲得至少(\d+)點巧克力能量$"="Gain at least $1 Chocolate Energy"
-r:"^<sprite\=0 tint>累積<link\="chocolate\|1"><u>巧克力能量</u></link>獲得強力“增益效果”，可以幫助你在boss挑戰中使用<link\="chocolate\|2"><u>「愛」的一擊</u></link>且更輕易的取勝，本關能量累積上限為(\d+)。\n<sprite\=0 tint>擊敗本關所有怪物，可以獲得(\d+)點“巧克力能量”。$"="<sprite\=0 tint>Accumulate <link\="chocolate\|1"><u>Chocolate Energy</u></link> to gain powerful [Buffs] that will help you use <link\="chocolate|2"><u>Strike of Love</u></link> in the boss challenge, you can gain up to $1 this level.\n<sprite\=0 tint>Defeat all enemies to gain $2 [Chocolate Energy]."
-r:"^<sprite\=0 tint>累積<link\="chocolate\|1"><u>巧克力能量</u></link>獲得強力“增益效果”，可以幫助你在boss挑戰中使用<link\="chocolate\|2"><u>「愛」的一擊</u></link>且更輕易的取勝，本關能量累積上限為(\d+)\n<sprite\=0 tint> 本關每隻怪物對固定的元素屬性有適應性“吸”，怪物滿血後會消失並給予我方(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>。$"="<sprite\=0 tint>Accumulate <link\="chocolate|1"><u>Chocolate Energy</u></link> to gain powerful [Buffs] that will help you use <link\="chocolate|2"><u>Strike of Love</u></link> in the boss challenge, you can gain up to $1 this level.\n<sprite\=0 tint>Enemies can [Drain] specific elements in this level, gain $2 <link\="chocolate|1"><u>Chocolate Energy</u></link> when an enemy reached full health."
-r:"^<sprite\=0 tint>累積<link\="chocolate\|1"><u>巧克力能量</u></link>獲得強力“增益效果”，可以幫助你在boss挑戰中使用<link\="chocolate\|2"><u>「愛」的一擊</u></link>且更輕易的取勝，本關能量累積上限為(\d+)。\n<sprite\=0 tint> 本關每隻怪物對固定的元素屬性有適應性“吸”，怪物滿血後會消失並給予我方(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>。$"="<sprite\=0 tint>Accumulate <link\="chocolate|1"><u>Chocolate Energy</u></link> to gain powerful [Buffs] that will help you use <link\="chocolate|2"><u>Strike of Love</u></link> in the boss challenge, you can gain up to $1 this level.\n<sprite\=0 tint>Enemies can [Drain] specific elements in this level, gain $2 <link\="chocolate|1"><u>Chocolate Energy</u></link> when an enemy reached full health."
-r:"^<sprite\=0 tint> 累積<link\="chocolate\|1"><u>巧克力能量</u></link>獲得強力“增益效果”，可以幫助你在boss挑戰中使用<link\="chocolate\|2"><u>「愛」的一擊</u></link>且更輕易的取勝，本關能量累積上限為(\d+)。\n<sprite\=0 tint> 擊敗本關所有怪物，可以獲得(\d+)點“巧克力能量”。$"="<sprite\=0 tint>Accumulate <link\="chocolate\|1"><u>Chocolate Energy</u></link> to gain powerful [Buffs] that will help you use <link\="chocolate|2"><u>Strike of Love</u></link> in the boss challenge, you can gain up to $1 this level.\n<sprite\=0 tint>Defeat all enemies to gain $2 [Chocolate Energy]."
-r:"^<sprite\=0 tint> 累積<link\="chocolate\|1"><u>巧克力能量</u></link>獲得強力“增益效果”，可以幫助你在boss挑戰中使用<link\="chocolate\|2"><u>「愛」的一擊</u></link>且更輕易的取勝，本關能量累積上限為(\d+)。\n<sprite\=0 tint> 本關限制(\d+)個行動回合，怪物死亡後會立刻刷新相同的怪物。{{C}}死亡後我方獲得(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>；{{B}}死亡後我方獲得(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>；{{A}}死亡後我方獲得(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>。$"="<sprite\=0 tint>Accumulate <link\="chocolate|1"><u>Chocolate Energy</u></link> to gain powerful [Buffs] that will help you use <link\="chocolate|2"><u>Strike of Love</u></link> in the boss challenge, you can gain up to $1 this level.\n<sprite\=0 tint>You have up to $2 action this level, summon the same enemy when you defeat the enemy. Defeat {{C}} to gain $3 <link\="chocolate|1"><u>[Chocolate Energy]</u></link>; Defeat {{B}} to gain $4 <link\="chocolate|1"><u>[Chocolate Energy]</u></link>; Defeat {{A}} to gain $5 <link\="chocolate|1"><u>[Chocolate Energy]</u></link>."
-r:"^<sprite\=0 tint> 累積<link\="chocolate\|1"><u>巧克力能量</u></link>獲得強力“增益效果”，可以幫助你在boss挑戰中使用<link\="chocolate\|2"><u>「愛」的一擊</u></link>且更輕易的取勝，本關能量累積上限為(\d+)。\n<sprite\=0 tint> 本關BOSS會召喚"愛情信物"。擊殺"愛情信物"可以獲得(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>。"愛情信物"行動時會挾持怪盜並吸取我方<link\="chocolate\|1"><u>巧克力能量</u></link>。\n<sprite\=0 tint> 擊敗本關所有怪物，可以獲得(\d+)點“巧克力能量”。$"="<sprite\=0 tint>Accumulate <link\="chocolate|1"><u>Chocolate Energy</u></link> to gain powerful [Buffs] that will help you use <link\="chocolate|2"><u>Strike of Love</u></link> in the boss challenge, you can gain up to $1 this level.\n<sprite\=0 tint>Boss will summon [Love Token]. Defeat [Love Token] to gain $2 <link\="chocolate|1"><u> [Chocolate Energy]</u></link>. [Love Token] will take Thieves hostage and drain <link\="chocolate|1"><u> Chocolate Energy</u></link>.\n<sprite\=0 tint>Defeat all enemies to gain $3 [Chocolate Energy]"
-r:"^<sprite\=0 tint> 本關中可以消耗(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>，釋放特殊技能<link\="chocolate\|2"><u>「愛」的一擊</u></link>。\n<sprite\=0 tint> 戰鬥開始時會獲得前(\d+)關中累積的<link\="chocolate\|1"><u>巧克力能量</u></link>。\n<sprite\=0 tint> 敵方怪物使用技能後，會偷取我方(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>。當BOSS<link\="chocolate\|1"><u>巧克力能量</u></link>達到(\d+)點時，會消耗能量對我方釋放特殊技能。\n<sprite\=0 tint> 敵方怪物死亡時，我方獲得(\d+)點巧克力能量。$"="<sprite\=0 tint>You can consume $1 <link\="chocolate|1"><u>Chocolate Energy</u></link> to use the special skill <link\="chocolate|2"><u>Strike of Love</u></link>.\n<sprite\=0 tint> At the start of battle, gain all accumulated <link\="chocolate|1"><u>Chocolate Energy</u></link> from the previous $2 levels.\n<sprite\=0 tint>After enemies use skills, steal $3 <link\="chocolate|1"><u>Chocolate Energy</u></link>. When the boss reaches $4 <link\="chocolate|1"><u>Chocolate Energy</u></link>, cosume Energy to use a special skill.\n<sprite\=0 tint>Gain $5 Chocolate Energy when you defeat an enemy."
+r:"^<sprite\=0 tint>累積<link\="chocolate\|1"><u>巧克力能量</u></link>獲得強力“增益效果”，可以幫助你在boss挑戰中使用<link\="chocolate\|2"><u>「愛」的一擊</u></link>且更輕易的取勝，本關能量累積上限為(\d+)。\n<sprite\=0 tint>擊敗本關所有怪物，可以獲得(\d+)點“巧克力能量”。$"="<sprite\=0 tint>Accumulate <link\="chocolate\|1"><u>Chocolate Energy</u></link> to gain powerful [Buffs] that will help you use <link\="chocolate|2"><u>Strike of Love</u></link> in the boss challenge, you can gain up to $1 this level.\n<sprite\=0 tint>Defeat all foes to gain $2 [Chocolate Energy]."
+r:"^<sprite\=0 tint>累積<link\="chocolate\|1"><u>巧克力能量</u></link>獲得強力“增益效果”，可以幫助你在boss挑戰中使用<link\="chocolate\|2"><u>「愛」的一擊</u></link>且更輕易的取勝，本關能量累積上限為(\d+)\n<sprite\=0 tint> 本關每隻怪物對固定的元素屬性有適應性“吸”，怪物滿血後會消失並給予我方(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>。$"="<sprite\=0 tint>Accumulate <link\="chocolate|1"><u>Chocolate Energy</u></link> to gain powerful [Buffs] that will help you use <link\="chocolate|2"><u>Strike of Love</u></link> in the boss challenge, you can gain up to $1 this level.\n<sprite\=0 tint>Foes can [Drain] specific elements in this level, gain $2 <link\="chocolate|1"><u>Chocolate Energy</u></link> when a foe reached full health."
+r:"^<sprite\=0 tint>累積<link\="chocolate\|1"><u>巧克力能量</u></link>獲得強力“增益效果”，可以幫助你在boss挑戰中使用<link\="chocolate\|2"><u>「愛」的一擊</u></link>且更輕易的取勝，本關能量累積上限為(\d+)。\n<sprite\=0 tint> 本關每隻怪物對固定的元素屬性有適應性“吸”，怪物滿血後會消失並給予我方(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>。$"="<sprite\=0 tint>Accumulate <link\="chocolate|1"><u>Chocolate Energy</u></link> to gain powerful [Buffs] that will help you use <link\="chocolate|2"><u>Strike of Love</u></link> in the boss challenge, you can gain up to $1 this level.\n<sprite\=0 tint>Foes can [Drain] specific elements in this level, gain $2 <link\="chocolate|1"><u>Chocolate Energy</u></link> when a foe reached full health."
+r:"^<sprite\=0 tint> 累積<link\="chocolate\|1"><u>巧克力能量</u></link>獲得強力“增益效果”，可以幫助你在boss挑戰中使用<link\="chocolate\|2"><u>「愛」的一擊</u></link>且更輕易的取勝，本關能量累積上限為(\d+)。\n<sprite\=0 tint> 擊敗本關所有怪物，可以獲得(\d+)點“巧克力能量”。$"="<sprite\=0 tint>Accumulate <link\="chocolate\|1"><u>Chocolate Energy</u></link> to gain powerful [Buffs] that will help you use <link\="chocolate|2"><u>Strike of Love</u></link> in the boss challenge, you can gain up to $1 this level.\n<sprite\=0 tint>Defeat all foes to gain $2 [Chocolate Energy]."
+r:"^<sprite\=0 tint> 累積<link\="chocolate\|1"><u>巧克力能量</u></link>獲得強力“增益效果”，可以幫助你在boss挑戰中使用<link\="chocolate\|2"><u>「愛」的一擊</u></link>且更輕易的取勝，本關能量累積上限為(\d+)。\n<sprite\=0 tint> 本關限制(\d+)個行動回合，怪物死亡後會立刻刷新相同的怪物。{{C}}死亡後我方獲得(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>；{{B}}死亡後我方獲得(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>；{{A}}死亡後我方獲得(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>。$"="<sprite\=0 tint>Accumulate <link\="chocolate|1"><u>Chocolate Energy</u></link> to gain powerful [Buffs] that will help you use <link\="chocolate|2"><u>Strike of Love</u></link> in the boss challenge, you can gain up to $1 this level.\n<sprite\=0 tint>You have up to $2 action this level, summon the same foe when you defeat the foe. Defeat {{C}} to gain $3 <link\="chocolate|1"><u>[Chocolate Energy]</u></link>; Defeat {{B}} to gain $4 <link\="chocolate|1"><u>[Chocolate Energy]</u></link>; Defeat {{A}} to gain $5 <link\="chocolate|1"><u>[Chocolate Energy]</u></link>."
+r:"^<sprite\=0 tint> 累積<link\="chocolate\|1"><u>巧克力能量</u></link>獲得強力“增益效果”，可以幫助你在boss挑戰中使用<link\="chocolate\|2"><u>「愛」的一擊</u></link>且更輕易的取勝，本關能量累積上限為(\d+)。\n<sprite\=0 tint> 本關BOSS會召喚"愛情信物"。擊殺"愛情信物"可以獲得(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>。"愛情信物"行動時會挾持怪盜並吸取我方<link\="chocolate\|1"><u>巧克力能量</u></link>。\n<sprite\=0 tint> 擊敗本關所有怪物，可以獲得(\d+)點“巧克力能量”。$"="<sprite\=0 tint>Accumulate <link\="chocolate|1"><u>Chocolate Energy</u></link> to gain powerful [Buffs] that will help you use <link\="chocolate|2"><u>Strike of Love</u></link> in the boss challenge, you can gain up to $1 this level.\n<sprite\=0 tint>Boss will summon [Love Token]. Defeat [Love Token] to gain $2 <link\="chocolate|1"><u> [Chocolate Energy]</u></link>. [Love Token] will take Thieves hostage and drain <link\="chocolate|1"><u> Chocolate Energy</u></link>.\n<sprite\=0 tint>Defeat all foes to gain $3 [Chocolate Energy]"
+r:"^<sprite\=0 tint> 本關中可以消耗(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>，釋放特殊技能<link\="chocolate\|2"><u>「愛」的一擊</u></link>。\n<sprite\=0 tint> 戰鬥開始時會獲得前(\d+)關中累積的<link\="chocolate\|1"><u>巧克力能量</u></link>。\n<sprite\=0 tint> 敵方怪物使用技能後，會偷取我方(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>。當BOSS<link\="chocolate\|1"><u>巧克力能量</u></link>達到(\d+)點時，會消耗能量對我方釋放特殊技能。\n<sprite\=0 tint> 敵方怪物死亡時，我方獲得(\d+)點巧克力能量。$"="<sprite\=0 tint>You can consume $1 <link\="chocolate|1"><u>Chocolate Energy</u></link> to use the special skill <link\="chocolate|2"><u>Strike of Love</u></link>.\n<sprite\=0 tint> At the start of battle, gain all accumulated <link\="chocolate|1"><u>Chocolate Energy</u></link> from the previous $2 levels.\n<sprite\=0 tint>After foes use skills, steal $3 <link\="chocolate|1"><u>Chocolate Energy</u></link>. When the boss reaches $4 <link\="chocolate|1"><u>Chocolate Energy</u></link>, cosume Energy to use a special skill.\n<sprite\=0 tint>Gain $5 Chocolate Energy when you defeat a foe."
 愛情信物=Love Token
 r:"^防禦強化\（該階段需求能量(\d+)\）：防禦力提升(\d+%)\n攻擊強化\（該階段需求能量(\d+)\）：攻擊力提升(\d+%)\n生命強化\（該階段需求能量(\d+)\）：生命值提升(\d+%)\n傷害強化\（該階段需求能量(\d+)\）：最終傷害提升(\d+%)$"="Defense Boost (Require $1 Energy): \nIncrease DEF by $2\nAttack Boost (Require $3 Energy): \nIncrease ATK by $4\nHealth Boost (Require $5 Energy): \nIncrease HP by $6\nDamage Boost (Require $7 Energy): \nIncrease Final DMG by $8"
 r:"^<color\=#FFFF00>防禦強化\（該階段需求能量(\d+)\）：防禦力提升(\d+%)</color>\n攻擊強化\（該階段需求能量(\d+)\）：攻擊力提升(\d+%)\n生命強化\（該階段需求能量(\d+)\）：生命值提升(\d+%)\n傷害強化\（該階段需求能量(\d+)\）：最終傷害提升(\d+%)$"="<color\=#FFFF00>Defense Boost (Require $1 Energy): \nIncrease DEF by $2</color>\nAttack Boost (Require $3 Energy): \nIncrease ATK by $4\nHealth Boost (Require $5 Energy): \nIncrease HP by $6\nDamage Boost (Require $7 Energy): \nIncrease Final DMG by $8"
@@ -3206,7 +3212,7 @@ r:"^<color\=#FFFF00>防禦強化\（該階段需求能量(\d+)\）：防禦力�
 r:"^<color\=#FFFF00>防禦強化\（該階段需求能量(\d+)\）：防禦力提升(\d+%)</color>\n<color\=#FFFF00>攻擊強化\（該階段需求能量(\d+)\）：攻擊力提升(\d+%)</color>\n<color\=#FFFF00>生命強化\（該階段需求能量(\d+)\）：生命值提升(\d+%)</color>\n傷害強化\（該階段需求能量(\d+)\）：最終傷害提升(\d+%)$"="<color\=#FFFF00>Defense Boost (Require $1 Energy): \nIncrease DEF by $2</color>\n<color\=#FFFF00>Attack Boost (Require $3 Energy): \nIncrease ATK by $4</color>\n<color\=#FFFF00>Health Boost (Require $5 Energy): \nIncrease HP by $6</color>\nDamage Boost (Require $7 Energy): \nIncrease Final DMG by $8"
 r:"^<color\=#FFFF00>防禦強化\（該階段需求能量(\d+)\）：防禦力提升(\d+%)</color>\n<color\=#FFFF00>攻擊強化\（該階段需求能量(\d+)\）：攻擊力提升(\d+%)</color>\n<color\=#FFFF00>生命強化\（該階段需求能量(\d+)\）：生命值提升(\d+%)</color>\n<color\=#FFFF00>傷害強化\（該階段需求能量(\d+)\）：最終傷害提升(\d+%)</color>$"="<color\=#FFFF00>Defense Boost (Require $1 Energy): \nIncrease DEF by $2</color>\n<color\=#FFFF00>Attack Boost (Require $3 Energy): \nIncrease ATK by $4</color>\n<color\=#FFFF00>Health Boost (Require $5 Energy): \nIncrease HP by $6</color>\n<color\=#FFFF00>Damage Boost (Require $7 Energy): \nIncrease Final DMG by $8</color>"
 
-「愛」的一擊:對所有敵人造成萬能屬性傷害，使目標所有適應性變為弱點，持續1回合。=Strike of Love: Deals Almighty damage to all enemies, turns all enemies' resistance to weak for 1 turn.
+「愛」的一擊:對所有敵人造成萬能屬性傷害，使目標所有適應性變為弱點，持續1回合。=Strike of Love: Deals Almighty damage to all foes, turns all foes' resistance to weak for 1 turn.
 「愛」的一擊=Strike of Love
 <color\=#000000>首次通關後解鎖當前難度的</color><color\=#FF2B7B>體力模式</color>=<color\=#000000>Unlock</color> <color\=#FF2B7B>Stamina Mode</color> <color\=#000000>for this difficulty after clearing</color>
 <color\=#000000>該難度無</color><color\=#FF2B7B>體力模式</color>=<color\=#000000>This difficulty has no</color> <color\=#FF2B7B>Stamina Mode</color>
@@ -3214,7 +3220,7 @@ r:"^(\d+)回合內通關\((\d+)\/(\d+)\)$"="Win within $1 turns ($2/$3)"
 r:"^獲得至少(\d+)點巧克力能量\((\d+)\/(\d+)\)$"="Gain at least $1 Chocolate Energy ($2/$3)"
 通關前置難度後解鎖挑戰。=Clear prerequisite to unlock.
 r:"^當前已通關難度(\d+)$"="Cleared difficulty $1"
-r:"^消耗(\d+)點巧克力能量，\n釋放特殊技能<color\=#ff3b37>「愛」的一擊</color>，\n對敵人造成高額傷害。$"="Consume $1 Chocolate Energy\nto use the special skill <color\=#ff3b37>Strike of Love</color>,\ndealing severe damage to all enemies."
+r:"^消耗(\d+)點巧克力能量，\n釋放特殊技能<color\=#ff3b37>「愛」的一擊</color>，\n對敵人造成高額傷害。$"="Consume $1 Chocolate Energy\nto use the special skill <color\=#ff3b37>Strike of Love</color>,\ndealing severe damage to all foes."
 r:"^「<color\=#000000>愛</color>」的一擊$"="S<color\=#000000>t</color>rike of Love"
 該技能準備中。=Skill is in preparation.
 
@@ -3277,7 +3283,7 @@ Character's Story
 ----------
 限時關卡中，攜帶指定怪盜可額外獲得一定比例的通關獎勵，同時攜帶多名指定怪盜時，額外比例相加。=In the limited time levels, bringing specific Thieves can increase rewards.
 通關獎勵=Rewards
-敵方陣容=Enemy Team
+敵方陣容=Foes
 關卡描述=Description
 
 r:"^{{A}}擁有極高的血量，並週期性獲得狂暴。在怪盜的額外回合結束後，會召喚(\d+)隻『{{A}}的頭』，上限(\d+)次。第(\d+)次召喚時，會改為召喚(\d+)隻『{{A}}的尾』。$"="{{A}} have extreme HP, and will periodically gain Frenzy. Summon $1 [{{A}}'s Head] after Thieves ended Extra Turn, up to $2 times. Summon $4 [{{A}}'s Tail] on the $3 summon."
