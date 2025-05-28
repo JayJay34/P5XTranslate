@@ -2,7 +2,7 @@
 TUTORIAL
 ----------
 「<color\=#ffd145>{{B}}</color>」是在<color\=#ffd145>{{A}}</color>出現的神秘高塔，\n需<color\=#ffd145>組建小隊</color>前往調查。\n每次進入時，都會生成全新地圖，\n讓每一場冒險都充滿未知的挑戰。=[<color\=#ffd145>{{B}}</color>] is a mysterious tower that appears in the <color\=#ffd145>{{A}}</color>,\n<color\=#ffd145>set up a team</color> to investigate.\nA new map is generated on each exploration.
-由於{{A}}充滿種種疑團，\n在此處您<color\=#ffd145>無法發揮正常實力</color>，\n必須在探索中擊敗怪物才能<color\=#ffd145>重新提升等級</color>。=You <color\=#ffd145>cannot exert normal strength</color> here,\nneed to defeat enemies during exploration to <color\=#ffd145>re-level up</color>.
+由於{{A}}充滿種種疑團，\n在此處您<color\=#ffd145>無法發揮正常實力</color>，\n必須在探索中擊敗怪物才能<color\=#ffd145>重新提升等級</color>。=You <color\=#ffd145>cannot exert normal strength</color> here,\nneed to defeat foes during exploration to <color\=#ffd145>re-level up</color>.
 探索小隊的角色陣容也<color\=#ffd145>受到限制</color>，\n在後續遊玩時需要收集「<color\=#ffd145>心靈碎片</color>」來逐步<color\=#ffd145>解鎖角色</color>。=Characters for exploration team are also <color\=#ffd145>eestricted</color>,\nneed to collect [<color\=#ffd145>Heart Fragments</color>] to gradually<color\=#ffd145>unlock characters</color>.
 {{A}}的挑戰會<color\=#ffd145>非常困難</color>，\n請努力以攀爬到更高層為目標去挑戰吧。={{A}} is <color\=#ffd145>very difficult</color>,\nplease strive to climb to higher floors.
 開始「<color\=#ff3b37>{{A}}挑戰</color>」=Start [<color\=#ff3b37>{{A}} Challenge</color>]
@@ -131,22 +131,22 @@ r:"^是否花費(\d+)「心靈碎片」解鎖{{A}}角色？$"="Spend $1 [Heart F
 
 要怎麼選擇呢？=What should I choose?
 請選擇探索難度：=<size\=24>Exploration Difficulty</size>
-r:"^敵人難度：(\d+)$"="Enemy Difficulty: $1"
+r:"^敵人難度：(\d+)$"="Difficulty: $1"
 r:"^收集效率：x(\d+)$"="Collection Efficiency: x$1"
 r:"^收集效率：x(\d+\.\d+)$"="Collection Efficiency: x$1"
 基礎難度=Base Difficulty
-r:"^進入新的樓層時，所有敵人總生命值、{{A}}提升(\d+%)\n$"="When entering a new floor, increase all enemies' Total HP, {{A}} by $1"
-r:"^進入新的樓層時，所有敵人總生命值提升(\d+%)、{{A}}提升(\d+%)\n$"="When entering a new floor, \nincrease all enemies' Total HP by $1, {{A}} by $2"
+r:"^進入新的樓層時，所有敵人總生命值、{{A}}提升(\d+%)\n$"="When entering a new floor, increase all foes' Total HP, {{A}} by $1"
+r:"^進入新的樓層時，所有敵人總生命值提升(\d+%)、{{A}}提升(\d+%)\n$"="When entering a new floor, \nincrease all foes' Total HP by $1, {{A}} by $2"
 額外難度=Additional Difficulty
 所有角色最終傷害大幅提升，受最終傷害大幅降低\n=Heavily increase all characters' Final DMG Dealt, \nheavily decrease all characters' Final DMG Taken
 r:"^初始「意志力」降低(\d+)點\n$"="Decrease starting [Will] by $1"
-r:"^初始「意志力」降低(\d+)點\n所有敵人的傷害隨著戰鬥回合數提升而提升\n$"="Decrease starting [Will] by $1\nAll enemies increase damage based on turn number"
-r:"^初始「意志力」降低(\d+)點\n所有敵人的傷害隨著戰鬥回合數提升而提升\n所有戰鬥消耗「意志力」增加(\d+)點\n$"="Decrease starting [Will] by $1\nAll enemies increase damage based on turn number\nIncrease battle [Will] cost by $2"
+r:"^初始「意志力」降低(\d+)點\n所有敵人的傷害隨著戰鬥回合數提升而提升\n$"="Decrease starting [Will] by $1\nAll foes increase damage based on turn number"
+r:"^初始「意志力」降低(\d+)點\n所有敵人的傷害隨著戰鬥回合數提升而提升\n所有戰鬥消耗「意志力」增加(\d+)點\n$"="Decrease starting [Will] by $1\nAll foes increase damage based on turn number\nIncrease battle [Will] cost by $2"
 無額外難度\n=No additional difficulty
 收集效率=Collection Efficiency
 r:"^古老的銀幣收集效率x(\d+\.\d+)$"="Ancient Silver Coins collection efficiency x$1"
 r:"^古老的銀幣收集效率x(\d+)$"="Ancient Silver Coins collection efficiency x$1"
-r:"^所有敵人每回合開始時獲得(\d+)層「狂暴」：(\d+%)最終傷害加成，可疊加(\d+)層。第(\d+)回合開始時，每回合額外獲得(\d+)層「狂暴」。$"="All enemies gain $1 stack of [Frenzy] at the start of their turn: Increase Final DMG Bonus by $2, up to $3 stacks. At the start of turn $4, additionally gain $5 stack of [Frenzy] each turn."
+r:"^所有敵人每回合開始時獲得(\d+)層「狂暴」：(\d+%)最終傷害加成，可疊加(\d+)層。第(\d+)回合開始時，每回合額外獲得(\d+)層「狂暴」。$"="All foes gain $1 stack of [Frenzy] at the start of their turn: Increase Final DMG Bonus by $2, up to $3 stacks. At the start of turn $4, additionally gain $5 stack of [Frenzy] each turn."
 
 探索等級=Exploration Lv
 武器等級=Weapon Lv
@@ -197,6 +197,8 @@ r:"^消耗(\d+)個「拂曉的碎片」，定向選擇(\d+)個已擁有的角色
 層出現=F to Fight
 大時鐘=Grand Clock
 時鐘=Clock
+
+世俗之庭台伯勒=Thebel
 
 通過=Pass
 r:"^消耗(\d+)點「意志力」清除迷霧，探索迷霧後的區域或許可以找到額外獎勵。$"="Consume $1 [Will] to clear the fog for new areas and rewards"
@@ -472,7 +474,7 @@ r:"^下(\d+)次非秒殺戰鬥，HL能量恢復效率提升(\d+%)$"="In the next
 r:"^權杖·無懈可擊(.*)$"="Wands · Absolutely Flawless $1"
 r:"^下(\d+)次非秒殺戰鬥開始時，所有角色對所有屬性的適應性變為無，持續(\d+)回合$"="In the next $1 non insta-kill battle(s), change all characters' resistance to Null for $2 turns"
 r:"^權杖·破綻百出(.*)$"="Wands · All Flaws $1"
-r:"^下(\d+)次非秒殺戰鬥開始時，所有敵人對所有屬性的適應性變為弱，持續(\d+)回合$"="In the next $1 non insta-kill battle(s), change all enemies' resistance to Weak for $2 turns"
+r:"^下(\d+)次非秒殺戰鬥開始時，所有敵人對所有屬性的適應性變為弱，持續(\d+)回合$"="In the next $1 non insta-kill battle(s), change all foes' resistance to Weak for $2 turns"
 權杖·無聲無息=Wands · Dead Silent
 r:"^下(\d+)次非秒殺戰鬥，隨機(\d+)名角色進入無法選中狀態$"="In the next $1 non insta-kill battle(s), randomly make $2 character untargetable"
 
@@ -645,19 +647,19 @@ r:"^所有角色持續效果傷害提升(\d+(.\d+)?(%)?)$"="Increase all charact
 寶劍·雷霆一擊=Swords · Thunderous Strike
 r:"^處於額外回合時，所有角色造成傷害提升(\d+%)$"="Increase DMG Dealt during Extra Turn by $1"
 寶劍·破綻追加=Swords · Additional Flaws
-r:"^戰鬥開始時及敵人每回合結束時，敵人對隨機(\d+)個屬性的適應性變為弱$"="At the start of battle and end of enemies' turn, enemies randomly gain $1 weakness"
+r:"^戰鬥開始時及敵人每回合結束時，敵人對隨機(\d+)個屬性的適應性變為弱$"="At the start of battle and end of foes' turn, foes randomly gain $1 weakness"
 寶劍·弱點擊破=Swords · Weakness Break
 r:"^所有角色弱點傷害提升(\d+%)$"="Increase all characters' Weak DMG by $1"
 寶劍·連攜暴擊=Swords · Linked Strike
 所有角色的ONEMORE可以暴擊=All characters' ONE MORE can CRIT
 寶劍·乘勝追擊=Swords · Press Advantage
-r:"^所有角色對倒地狀態的敵人造成傷害提升(\d+%)$"="Increase all characters' DMG Dealt to downed enemies by $1"
+r:"^所有角色對倒地狀態的敵人造成傷害提升(\d+%)$"="Increase all characters' DMG Dealt to downed foes by $1"
 寶劍·專注制敵=Swords · Focused Suppression
 r:"^任意角色釋放單體{{A}}技能後，使技能目標獲得1次相當於其受到傷害(\d+%)的固定傷害$"="After any character use a single target {{A}} skill, the skill target take an additional fixed damage equal to $1 of the damage taken"
 寶劍·越戰越勇=Swords · Fierce Growth
 r:"^所有角色每造成(\d+)次傷害，傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="Increase DMG Dealt by $2 after dealing damage $1 time for $3 turns, up to $4 stacks"
 寶劍·趁虛而入=Swords · Exploit Weakness
-r:"^敵人每有一個負面狀態，受到的傷害提升(\d+%)，最多使其受到的傷害提升(\d+%)"="For every debuff the enemy have, increase their DMG Taken by $1, up to $2"
+r:"^敵人每有一個負面狀態，受到的傷害提升(\d+%)，最多使其受到的傷害提升(\d+%)"="For every debuff the foe have, increase their DMG Taken by $1, up to $2"
 
 寶劍·深入病灶=Swords · Deep Lesion
 r:"^所有角色受到治療效果時，穿透提升(\d+%)，持續(\d+)回合$"="Increase all characters' PEN by $1 when healed for $2 turns"
@@ -699,7 +701,7 @@ r:"^所有角色念動/核熱/祝福/詛咒傷害提升(\d+%)$"="Increase all ch
 r:"^進入戰鬥時，每有一個相同屬性的角色，所有角色造成傷害提高(\d+%)$"="At the start of battle, for every character with the same element, increase all characters' DMG Dealt by $1"
 
 寶劍·以暴制暴=Swords · Fight Fire
-r:"^進入強敵陰影、交錯之影戰鬥時，所有敵人受最終傷害提升(\d+%)，造成最終傷害降低(\d+%)$"="When fighting Strong Shadow and Tangled Shadow, increase all enemies' Final DMG Taken by $1, decrease all enemies' Final DMG Dealt by $2"
+r:"^進入強敵陰影、交錯之影戰鬥時，所有敵人受最終傷害提升(\d+%)，造成最終傷害降低(\d+%)$"="When fighting Strong Shadow and Tangled Shadow, increase all foes' Final DMG Taken by $1, decrease all foes' Final DMG Dealt by $2"
 寶劍·獵人直覺=Swords · Hunter Instinct
 進入稀有陰影戰鬥時，使稀有陰影對所有屬性的適應性變為弱=When entering a Rare Shadow battle, change all their resistance to Weak
 
@@ -753,7 +755,7 @@ sr:"^獲得大阿爾卡那「(.*)」：(.*)$"="Obtained Major Arcana [$1]"
 Magician
 r:"^立刻獲得(\d+)「時鐘的齒輪」、(\d+)「拂曉的碎片」、(\d+)「古老的金幣」、(\d+)「古老的銀幣」$"="Immediately obtain $1 [Clock Gears], $2 [Dawn Fragments], $3 [Ancient Gold Coins], $4 [Ancient Silver Coins]"
 女教皇=Priestess
-r:"^所有角色造成{{A}}技能傷害時會額外降低敵方主目標(\d+)點倒地值，所有敵人受{{B}}傷害提升(\d+%)-(\d+%)（依據層數變化）$"="<size\=28>All characters additionally decrease the main target's Down Gauge by $1 when dealing {{A}} skill damage. Increase all enemies' {{B}} DMG Taken by $2–$3 (change based on stacks)</size>"
+r:"^所有角色造成{{A}}技能傷害時會額外降低敵方主目標(\d+)點倒地值，所有敵人受{{B}}傷害提升(\d+%)-(\d+%)（依據層數變化）$"="<size\=28>All characters additionally decrease the main target's Down Gauge by $1 when dealing {{A}} skill damage. Increase all foes' {{B}} DMG Taken by $2–$3 (change based on stacks)</size>"
 Chariot
 r:"^所有角色的HIGHLIGHT/{{A}}可以暴擊，但是HIGHLIGHT/{{A}}能量恢復效率降低(\d+%)$"="HIGHLIGHT/ {{A}} can CRIT, but decrease HIGHLIGHT/ {{A}} Energy recovery rate by $1"
 所有角色的HIGHLIGHT/{{A}}可以暴擊=HIGHLIGHT/ {{A}} can CRIT
@@ -762,8 +764,8 @@ r:"^透過「洗牌時間」獲取卡牌時，額外增加(\d+)個可選項$"="W
 Strength
 r:"^所有角色精力值上限提升(\d+)點，精力回復提升(\d+%)，精力值消耗增加(\d+%)。釋放技能後，該技能每消耗(\d+)點精力值使其他角色最終傷害提升(\d+%)，持續(\d+)回合$"="Increase all characters' Max SP by $1, SP Recovery by $2, SP cost by $3. When using skills, increase all other characters' Final DMG by $5 for every $4 consumed SP for $6 turn"
 命運=Fortune
-r:"^所有角色總生命值提升(\d+%)，技能造成溢出治療時，對隨機敵人造成溢出治療量(\d+%)的固定傷害$"="Increase all character' Max HP by $1, when overhealing with skill, deal $2 overhealed amount as fixed damage to random enemy"
-r:"^所有角色總生命值提升(\d+%)、治療效果提升(\d+%)，技能造成溢出治療時，對隨機敵人造成溢出治療量(\d+%)的固定傷害$"="Increase all character' Max HP by $1 and Healing Effect by $2, when overhealing with skill, deal $3 overhealed amount as fixed damage to random enemy"
+r:"^所有角色總生命值提升(\d+%)，技能造成溢出治療時，對隨機敵人造成溢出治療量(\d+%)的固定傷害$"="Increase all character' Max HP by $1, when overhealing with skill, deal $2 overhealed amount as fixed damage to random foe"
+r:"^所有角色總生命值提升(\d+%)、治療效果提升(\d+%)，技能造成溢出治療時，對隨機敵人造成溢出治療量(\d+%)的固定傷害$"="Increase all character' Max HP by $1 and Healing Effect by $2, when overhealing with skill, deal $3 overhealed amount as fixed damage to random foe"
 Hanged Man
 r:"^所有角色持續效果傷害提升(\d+%)，使用{{A}}技能/追加效果/HIGHLIGHT/{{B}}造成傷害後，額外結算一次技能主目標的持續效果。$"="Increase all characters' Damage Over Time DMG by $1, after dealing damage with {{A}} skill/Follow Up/HIGHLIGHT/{{B}}, additionally trigger the main target's Damage Over Time."
 Temperance
@@ -841,7 +843,7 @@ r:"^榮<color\=#000000>譽</color>值$"="H<color\=#000000>o</color>nour"
 召喚=Summon
 r:"^召喚最多(\d+)名騎士，並給予所有騎士(\d+)層『榮譽值』。$"="Summons up to $1 Knights, then gives all Knights $2 stack of [Honour]."
 榮耀審判=Glorious Judgement
-r:"^消耗友方所有『榮譽值』對所有敵人造成物理屬性傷害。每消耗(\d+)層『榮譽值』，技能傷害提升(\d+%)；消耗的『榮譽值』達到(\d+)層，此次攻擊必定暴擊。$"="Consumes all allies' [Honour] to deal Phys damage to all enemies. For every $1 stack of [Honour] consumed, increases skill damage by $2; When consuming $3 stacks of [Honour], this will Always CRIT."
+r:"^消耗友方所有『榮譽值』對所有敵人造成物理屬性傷害。每消耗(\d+)層『榮譽值』，技能傷害提升(\d+%)；消耗的『榮譽值』達到(\d+)層，此次攻擊必定暴擊。$"="Consumes all allies' [Honour] to deal Phys damage to all foes. For every $1 stack of [Honour] consumed, increases skill damage by $2; When consuming $3 stacks of [Honour], this will Always CRIT."
 騎士禮讚=Knight's Salute
 r:"^給予所有騎士(\d+)層『榮譽值』。$"="Gives all Knights $1 stacks of [Honour]"
 「榮耀審判」預警=[Glorious Judgement] Warning
@@ -850,17 +852,17 @@ r:"^下個回合釋放<color\=#FF0000>「榮耀審判」</color>！！$"="About 
 騎士=Knight
 r:"^每層提升(\d+(.\d+)?(%)?)防禦力$"="Each stack increase DEF by $1"
 
-r:"^1、調和之巨人會「鎖定」一名敵人，使其受到攻擊的機率大幅提升。\n\n2、調和之巨人進入第二階段後，會召喚兩個金剛蟲，每當金剛蟲死亡時，調和之巨人會額外「鎖定」一名怪盜，並在一回合後重新召喚。\n\n3、場上有多個怪盜被同時「鎖定」時，調和之巨人的天軍之劍會同時對所有被「鎖定」的單位造成高暴擊率的傷害。\n$"="1. Harmony Giant will [Locked On] 1 enemy, heavily increase their chance of attacked.\n2. After Harmony Giant enter phase 2, summon 2 Adamant Beetle, when Adamant Beetle die, Harmony Giant will additionally [Locked On] 1 Thief, then resummon them after 1 turn. \n3. When multiple Thieves have [Locked On], [Heaven's Blade] from Harmony Giant will target all enemies with [Locked On] and have a high chance to crit."
-r:"^1、調和之巨人會「鎖定」一名敵人，使其受到攻擊的機率大幅提升。\n2、調和之巨人進入第二階段後，會召喚兩個金剛蟲，每當金剛蟲死亡時，調和之巨人會額外「鎖定」一名怪盜，並在一回合後重新召喚。\n3、場上有多個怪盜被同時「鎖定」時，調和之巨人的天軍之劍和金剛蟲的五月雨斬會同時對所有被「鎖定」的單位造成高暴擊率的傷害。$"="1. Harmony Giant will [Locked On] 1 enemy, heavily increase their chance of attacked.\n2. After Harmony Giant enter phase 2, summon 2 Adamant Beetle, when Adamant Beetle die, Harmony Giant will additionally [Locked On] 1 Thief, then resummon them after 1 turn. \n3. When multiple Thieves have [Locked On], [Heaven's Blade] from Harmony Giant and [Myriad Slashes] from Adamant Beetle will target all enemies with [Locked On] and have a high chance to crit."
+r:"^1、調和之巨人會「鎖定」一名敵人，使其受到攻擊的機率大幅提升。\n\n2、調和之巨人進入第二階段後，會召喚兩個金剛蟲，每當金剛蟲死亡時，調和之巨人會額外「鎖定」一名怪盜，並在一回合後重新召喚。\n\n3、場上有多個怪盜被同時「鎖定」時，調和之巨人的天軍之劍會同時對所有被「鎖定」的單位造成高暴擊率的傷害。\n$"="1. Harmony Giant will [Locked On] 1 foe, heavily increase their chance of attacked.\n2. After Harmony Giant enter phase 2, summon 2 Adamant Beetle, when Adamant Beetle die, Harmony Giant will additionally [Locked On] 1 Thief, then resummon them after 1 turn. \n3. When multiple Thieves have [Locked On], [Heaven's Blade] from Harmony Giant will target all foes with [Locked On] and have a high chance to crit."
+r:"^1、調和之巨人會「鎖定」一名敵人，使其受到攻擊的機率大幅提升。\n2、調和之巨人進入第二階段後，會召喚兩個金剛蟲，每當金剛蟲死亡時，調和之巨人會額外「鎖定」一名怪盜，並在一回合後重新召喚。\n3、場上有多個怪盜被同時「鎖定」時，調和之巨人的天軍之劍和金剛蟲的五月雨斬會同時對所有被「鎖定」的單位造成高暴擊率的傷害。$"="1. Harmony Giant will [Locked On] 1 foe, heavily increase their chance of attacked.\n2. After Harmony Giant enter phase 2, summon 2 Adamant Beetle, when Adamant Beetle die, Harmony Giant will additionally [Locked On] 1 Thief, then resummon them after 1 turn. \n3. When multiple Thieves have [Locked On], [Heaven's Blade] from Harmony Giant and [Myriad Slashes] from Adamant Beetle will target all foes with [Locked On] and have a high chance to crit."
 調和屏障=Harmonious Barrier
 給予全體己方單位一個可以抵擋一次傷害的護盾=Gives all allies immunity to next damage
-鎖定一名敵人，並使其受到攻擊的機率大幅提升。=Locks on 1 enemy, then heavily increases their chance of attacked.
+鎖定一名敵人，並使其受到攻擊的機率大幅提升。=Locks on 1 foe, then heavily increases their chance of attacked.
 天軍之劍=Heaven's Blade
-對１名敵人造成物理屬性特大傷害，優先攻擊鎖定目標=Deals severe Phys damage to 1 enemy, prioritizing locked on enemies.
-被敵人鎖定，成為優先被攻擊的目標=Locked on by enemy, \nbecame the priority target
+對１名敵人造成物理屬性特大傷害，優先攻擊鎖定目標=Deals severe Phys damage to 1 foe, prioritizing locked on foes.
+被敵人鎖定，成為優先被攻擊的目標=Locked on by foe, \nbecame the priority target
 利劍亂舞=Sword Flurry
-對所有敵人造成攻擊力的物理屬性傷害，並降低防禦力=Deals Phys damage to all enemies, then decreases their DEF
-r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(\d+)~(\d+)次物理屬性傷害，並使其進入『裂傷』狀態，每回合損失一定生命值，效果持續三回合。優先攻擊鎖定目標。$"="Deals <color\=#fffc40>$1</color> ATK Phys damage $2~$3 times to 1 enemy, then inflicts [Laceration], loses HP each turn for 3 turns. Prioritizing locked on targets."
+對所有敵人造成攻擊力的物理屬性傷害，並降低防禦力=Deals Phys damage to all foes, then decreases their DEF
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(\d+)~(\d+)次物理屬性傷害，並使其進入『裂傷』狀態，每回合損失一定生命值，效果持續三回合。優先攻擊鎖定目標。$"="Deals <color\=#fffc40>$1</color> ATK Phys damage $2~$3 times to 1 foe, then inflicts [Laceration], loses HP each turn for 3 turns. Prioritizing locked on targets."
 減防=Decrease DEF
 r:"^減<color\=#000000>防</color>$"="D<color\=#000000>E</color>F Down"
 防禦力少量降低=Slighty decrease DEF
@@ -869,29 +871,29 @@ r:"^裂<color\=#000000>傷</color>$"="L<color\=#000000>a</color>ceration"
 
 r:"^1、平衡之巨人有強化小怪並引導其額外釋放技能的能力，在開局召喚兩個金剛蟲。\n\n2、平衡之巨人在進入第二階段時，清除所有在場的金剛蟲並重新召喚四個金剛蟲。\n\n3、回合開始時，當金剛蟲死亡數量首次大於等於二個，召喚全能天秤，全能天秤受到傷害增加(\d+%)並與平衡之巨人存在「靈魂連結」，攻擊全能天秤時會對平衡之巨人附帶更高的傷害。\n\n4、「劍舞協奏」引導金剛蟲釋放的技能會得到強化，引導全能天秤釋放狂暴與調和屏障。\n$"="1. Order Giant have strong minions and can lead them to use additional skills, summon 2 Adamant Beetle at the start of battle. \n2. When Order Giant enter phase 2, remove all Adamant Beetle then summon 4 Adamant Beetle. \n3. At the start of turn, when there are 2 or more dead Adamant Beetle for the first time, summon World Balance. Increase World Balance's DMG Taken by $1 then have [Soulink] with Order Giant, deal more damage to Order Giant when attacking World Balance. \n4. [Sword Concerto] can upgrade the skills of Adamant Beetle and make World Balance use [Frenzy] and [Harmonious Barrier]."
 r:"^1、平衡之巨人有強化小怪並引導其額外釋放技能的能力，在開局召喚兩個金剛蟲。\n2、平衡之巨人在進入第二階段時，清除所有在場的金剛蟲並重新召喚四個金剛蟲。\n3、回合開始時，當金剛蟲被擊殺的數量首次大於等於二個，則召喚全能天秤。全能天秤受到傷害增加(\d+%)並與平衡之巨人存在「靈魂連結」，全能天秤在奇數回合持續召喚金剛蟲。\n4、「劍舞協奏」引導全能天秤釋放的技能會得到強化，引導全能天秤釋放狂暴與調和屏障。$"="1. Order Giant have strong minions and can lead them to use additional skills, summon 2 Adamant Beetle at the start of battle. \n2. When Order Giant enter phase 2, remove all Adamant Beetle then summon 4 Adamant Beetle. \n3. At the start of turn, when there are 2 or more dead Adamant Beetle for the first time, summon World Balance. Increase World Balance's DMG Taken by $1 then have [Soulink] with Order Giant, World Balance will summon Adamant Beetle on odd turns. \n4. [Sword Concerto] can upgrade the skills of Adamant Beetle and make World Balance use [Frenzy] and [Harmonious Barrier]."
-對１名敵人造成物理屬性特大傷害。=Deals severe Phys damage to 1 enemy.
+對１名敵人造成物理屬性特大傷害。=Deals severe Phys damage to 1 foe.
 靈魂連結=Soulink
 劍舞協奏=Sword Concerto
 「劍舞協奏」引導全能天秤釋放的技能會得到強化=[Sword Concerto] can upgrade the skills of World Balance
-r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(\d+)~(\d+)次物理屬性傷害，優先攻擊鎖定目標。$"="Deals <color\=#fffc40>$1</color> ATK Phys damage $2~$3 times to 1 enemy, prioritizing locked on targets."
-r:"^<color\=#FF0000>(.*)</color>回應了劍舞協奏……$"="<color\=#FF0000>$1</color> responded to Sword Concerto..."
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(\d+)~(\d+)次物理屬性傷害，優先攻擊鎖定目標。$"="Deals <color\=#fffc40>$1</color> ATK Phys damage $2~$3 times to 1 foe, prioritizing locked on targets."
+sr:"^<color\=#FF0000>(.*)</color>回應了劍舞協奏……$"="<color\=#FF0000>$1</color> responded to Sword Concerto..."
 r:"^靈魂連結(.*)$"="Soulink $1"
 r:"^處於靈魂連結(\d+)的單位，分攤傷害$"="Under Soulink with $1 units, divide damage"
 r:"^1、全能天秤受到傷害增加(\d+%)並與平衡之巨人存在「靈魂連結」，攻擊全能天秤時會對平衡之巨人附帶更高的傷害。\n\n2、全能天秤在奇數回合持續召喚金剛蟲。\n\n3、「劍舞協奏」引導全能天秤釋放狂暴與調和屏障。$"="1. Increase World Balance's DMG Taken by $1 then have [Soulink] with Order Giant, deal more damage to Order Giant when attacking World Balance. \n2. World Balance will summon Adamant Beetle on odd turns. \n3. [Sword Concerto] can make World Balance use [Frenzy] and [Harmonious Barrier]."
 
-r:"^1、白狼之武者使用部分技能可以獲得「殺意」，並可消耗「殺意」來強化技能「萬雷送葬」。\n「殺意」：每層提升自身(\d+%)的攻擊力、(\d+%)的暴擊率，受到最終傷害提升(\d+%)；最多可疊加(\d+)層。\n2、白狼之武者每個回合開始時，會給隨機(\d+)名敵人添加「導電印記」（場上同時只存在1名有「導電印記」的敵人），使其電擊屬性適應性變為弱。擁有「導電印記」的敵人被擊倒時，白狼之武者獲得(\d+)層「殺意」。\n3、白狼之武者進入戰鬥時，會立即召喚(\d+)隻風雷天秤。\n4、白狼之武者進入二階段時，會立即召喚(\d+)隻炎冰天秤，並使自身進入「無雙境」狀態。處在此狀態下每回合獲得(\d+)層「殺意」\（場上隊友全部死亡時，每回合獲得(\d+)層「殺意」\），但是會在「殺意」到達(\d+)層時，受到的最終傷害額外提升(\d+%)。$"="1. Hakurou Musha can gain [Killing Intent] from skills, can consume [Killing Intent] to upgrade [Thunderous Burial]. \n[Killing Intent]: Each stack increase own ATK by $1, CRIT Rate by $2, Final DMG Taken by $3; up to $4 stacks.\n2. At the start of Hakurou Musha's turn, they will inflict $5 random enemy with [Conductive Mark] (there can only be 1 enemy with [Conductive Mark]), change their Elec resistance to Weak. Hakurou Musha will gain $6 stacks of [Killing Intent] when downing enemies with [Conductive Mark].\n3. At the start of battle, immediately summon $7 Sky Balance.\n4. When Hakurou Musha enter phase 2, immediately summon $8 Heat Balance, then enter [Peerlessness]. Gain $9 stack of [Killing Intent] each turn (when all allies are dead, gain $10 stacks each turn), but additionally increase Final DMG Taken by $12 when they have $11 stacks of [Killing Intent]."
-r:"^1、白狼之武者使用部分技能可以獲得「殺意」，並可消耗「殺意」來強化技能「萬雷送葬」。\n「殺意」：每層提升自身(\d+%)的攻擊力、(\d+%)的暴擊率，受到最終傷害提升(\d+%)；最多可疊加(\d+)層。\n2、白狼之武者每個回合開始時，會給隨機(\d+)名敵人添加「導電印記」（場上同時只存在1名有「導電印記」的敵人），使其電擊屬性適應性變為弱。擁有「導電印記」的敵人被擊倒時，白狼之武者獲得(\d+)層「殺意」。\n3、白狼之武者進入戰鬥時，會立即召喚(\d+)隻風雷天秤。\n4、白狼之武者進入二階段時，會立即召喚(\d+)隻炎冰天秤，並使自身進入「無雙境」狀態。處在此狀態下每回合獲得(\d+)層「殺意」\（場上隊友全部死亡時，每回合獲得(\d+)層「殺意」\），但是會在「殺意」到達(\d+)層時，受到的最終傷害額外提升(\d+%)。\n5、炎冰天秤每回合在「火形態」和「冰形態」之間切換。火形態」下每次行動後給與白狼之武者(\d+)層「殺意」，被擊殺時為白狼之武者添加(\d+)層「殺意」；「冰形態」下被擊殺時驅散白狼之武者身上的所有「殺意」。$"="1. Hakurou Musha can gain [Killing Intent] from skills, can consume [Killing Intent] to upgrade [Thunderous Burial]. \n[Killing Intent]: Each stack increase own ATK by $1, CRIT Rate by $2, Final DMG Taken by $3; up to $4 stacks.\n2. At the start of Hakurou Musha's turn, they will inflict $5 random enemy with [Conductive Mark] (there can only be 1 enemy with [Conductive Mark]), change their Elec resistance to Weak. Hakurou Musha will gain $6 stacks of [Killing Intent] when downing enemies with [Conductive Mark].\n3. At the start of battle, immediately summon $7 Sky Balance.\n4. When Hakurou Musha enter phase 2, immediately summon $8 Heat Balance, then enter [Peerlessness]. Gain $9 stack of [Killing Intent] each turn (when all allies are dead, gain $10 stacks each turn), but additionally increase Final DMG Taken by $12 when they have $11 stacks of [Killing Intent].\n5. Heat Balance will chage between [Fire Form] and [Ice Form]. [Fire Form]: Give Hakurou Musha $13 stack of [Killing Intent] after this action,  give Hakurou Musha $14 stacks of [Killing Intent] when defeated; [Ice Form]: Dispel all [Killing Intent] on Hakurou Musha when defeated."
+r:"^1、白狼之武者使用部分技能可以獲得「殺意」，並可消耗「殺意」來強化技能「萬雷送葬」。\n「殺意」：每層提升自身(\d+%)的攻擊力、(\d+%)的暴擊率，受到最終傷害提升(\d+%)；最多可疊加(\d+)層。\n2、白狼之武者每個回合開始時，會給隨機(\d+)名敵人添加「導電印記」（場上同時只存在1名有「導電印記」的敵人），使其電擊屬性適應性變為弱。擁有「導電印記」的敵人被擊倒時，白狼之武者獲得(\d+)層「殺意」。\n3、白狼之武者進入戰鬥時，會立即召喚(\d+)隻風雷天秤。\n4、白狼之武者進入二階段時，會立即召喚(\d+)隻炎冰天秤，並使自身進入「無雙境」狀態。處在此狀態下每回合獲得(\d+)層「殺意」\（場上隊友全部死亡時，每回合獲得(\d+)層「殺意」\），但是會在「殺意」到達(\d+)層時，受到的最終傷害額外提升(\d+%)。$"="1. Hakurou Musha can gain [Killing Intent] from skills, can consume [Killing Intent] to upgrade [Thunderous Burial]. \n[Killing Intent]: Each stack increase own ATK by $1, CRIT Rate by $2, Final DMG Taken by $3; up to $4 stacks.\n2. At the start of Hakurou Musha's turn, they will inflict $5 random foe with [Conductive Mark] (there can only be 1 foe with [Conductive Mark]), change their Elec resistance to Weak. Hakurou Musha will gain $6 stacks of [Killing Intent] when downing foes with [Conductive Mark].\n3. At the start of battle, immediately summon $7 Sky Balance.\n4. When Hakurou Musha enter phase 2, immediately summon $8 Heat Balance, then enter [Peerlessness]. Gain $9 stack of [Killing Intent] each turn (when all allies are dead, gain $10 stacks each turn), but additionally increase Final DMG Taken by $12 when they have $11 stacks of [Killing Intent]."
+r:"^1、白狼之武者使用部分技能可以獲得「殺意」，並可消耗「殺意」來強化技能「萬雷送葬」。\n「殺意」：每層提升自身(\d+%)的攻擊力、(\d+%)的暴擊率，受到最終傷害提升(\d+%)；最多可疊加(\d+)層。\n2、白狼之武者每個回合開始時，會給隨機(\d+)名敵人添加「導電印記」（場上同時只存在1名有「導電印記」的敵人），使其電擊屬性適應性變為弱。擁有「導電印記」的敵人被擊倒時，白狼之武者獲得(\d+)層「殺意」。\n3、白狼之武者進入戰鬥時，會立即召喚(\d+)隻風雷天秤。\n4、白狼之武者進入二階段時，會立即召喚(\d+)隻炎冰天秤，並使自身進入「無雙境」狀態。處在此狀態下每回合獲得(\d+)層「殺意」\（場上隊友全部死亡時，每回合獲得(\d+)層「殺意」\），但是會在「殺意」到達(\d+)層時，受到的最終傷害額外提升(\d+%)。\n5、炎冰天秤每回合在「火形態」和「冰形態」之間切換。火形態」下每次行動後給與白狼之武者(\d+)層「殺意」，被擊殺時為白狼之武者添加(\d+)層「殺意」；「冰形態」下被擊殺時驅散白狼之武者身上的所有「殺意」。$"="1. Hakurou Musha can gain [Killing Intent] from skills, can consume [Killing Intent] to upgrade [Thunderous Burial]. \n[Killing Intent]: Each stack increase own ATK by $1, CRIT Rate by $2, Final DMG Taken by $3; up to $4 stacks.\n2. At the start of Hakurou Musha's turn, they will inflict $5 random foe with [Conductive Mark] (there can only be 1 foe with [Conductive Mark]), change their Elec resistance to Weak. Hakurou Musha will gain $6 stacks of [Killing Intent] when downing foes with [Conductive Mark].\n3. At the start of battle, immediately summon $7 Sky Balance.\n4. When Hakurou Musha enter phase 2, immediately summon $8 Heat Balance, then enter [Peerlessness]. Gain $9 stack of [Killing Intent] each turn (when all allies are dead, gain $10 stacks each turn), but additionally increase Final DMG Taken by $12 when they have $11 stacks of [Killing Intent].\n5. Heat Balance will chage between [Fire Form] and [Ice Form]. [Fire Form]: Give Hakurou Musha $13 stack of [Killing Intent] after this action,  give Hakurou Musha $14 stacks of [Killing Intent] when defeated; [Ice Form]: Dispel all [Killing Intent] on Hakurou Musha when defeated."
 殺意=Killing Intent
 r:"^殺<color\=#000000>意</color>$"="K<color\=#000000>i</color>lling Intent"
 r:"^每層提升自身(\d+%)攻擊力、(\d+%)暴擊率，同時受到最終傷害提升(\d+%)。$"="Each stack increase own ATK by $1,\nCRIT Rate by $2, Final DMG Taken by $3"
 導電印記=Conductive Mark
 r:"^導<color\=#000000>電</color>印記$"="C<color\=#000000>o</color>nductive Mark"
-r:"^每個回合開始時，給隨機(\d+)名敵人添加『導電印記』（場上同時只存在1名有『導電印記』的敵人），使其電擊屬性適應性變為弱。擁有『導電印記』的敵人被擊倒時，BOSS自身獲得(\d+)層『殺意』。$"="At the start of turn, inflicts $1 random enemy with [Conductive Mark] (there can only be 1 enemy with [Conductive Mark]), changes their Elec resistance to Weak. Gains $2 stacks of [Killing Intent] when downing enemies with [Conductive Mark]."
+r:"^每個回合開始時，給隨機(\d+)名敵人添加『導電印記』（場上同時只存在1名有『導電印記』的敵人），使其電擊屬性適應性變為弱。擁有『導電印記』的敵人被擊倒時，BOSS自身獲得(\d+)層『殺意』。$"="At the start of turn, inflicts $1 random foe with [Conductive Mark] (there can only be 1 foe with [Conductive Mark]), changes their Elec resistance to Weak. Gains $2 stacks of [Killing Intent] when downing foes with [Conductive Mark]."
 r:"^電擊屬性適應性變為弱，被擊倒時(.*)獲得『殺意』。$"="Change Elec resistance to Weak, give Hakurou Musha [Killing Intent] when downed"
 電磁暴域=Electromagnetic Domain
-r:"^對所有敵人造成電擊屬性傷害。若打出弱點傷害，自身獲得(\d+)層『殺意』。$"="Deals Elec damage to all enemies. Gains $1 stack of [Killing Intent] when dealing weak damage."
+r:"^對所有敵人造成電擊屬性傷害。若打出弱點傷害，自身獲得(\d+)層『殺意』。$"="Deals Elec damage to all foes. Gains $1 stack of [Killing Intent] when dealing weak damage."
 萬雷送葬=Thunderous Burial
-r:"^消耗所有『殺意』對1名敵人造成(\d+)段電擊屬性傷害，每消耗(\d+)層『殺意』，額外造成(\d+)段電擊屬性傷害；若本次傷害完成擊殺，自身回復(\d+)層『殺意』。釋放時若『殺意』到達(\d+)層，此次攻擊的技能傷害提升(\d+%)。$"="Consumes all [Killing Intent] to deal Elec damage to 1 enemy $1 times, for every $2 stack of [Killing Intent] consumed, additionally deals $3 hit of Elec damage; if this killed the enemy, restores $4 stacks of [Killing Intent]. Increases skill damage by $6 when used at $5 stacks of [Killing Intent]."
+r:"^消耗所有『殺意』對1名敵人造成(\d+)段電擊屬性傷害，每消耗(\d+)層『殺意』，額外造成(\d+)段電擊屬性傷害；若本次傷害完成擊殺，自身回復(\d+)層『殺意』。釋放時若『殺意』到達(\d+)層，此次攻擊的技能傷害提升(\d+%)。$"="Consumes all [Killing Intent] to deal Elec damage to 1 foe $1 times, for every $2 stack of [Killing Intent] consumed, additionally deals $3 hit of Elec damage; if this killed the foe, restores $4 stacks of [Killing Intent]. Increases skill damage by $6 when used at $5 stacks of [Killing Intent]."
 無雙境=Peerlessness
 r:"^無<color\=#000000>雙</color>境$"="P<color\=#000000>e</color>erlessness"
 r:"^使自身進入『無雙境』狀態。處在此狀態下每回合獲得(\d+)層『殺意』\（場上隊友全部死亡時，每回合獲得(\d+)層『殺意』\），但是會在『殺意』到達(\d+)層時，受到的最終傷害額外提升(\d+%)。$"="Enters [Peerlessness]. Gains $1 stack of [Killing Intent] each turn (when all allies are dead, gain $2 stacks each turn), but additionally increases Final DMG Taken by $4 when reaching $3 stacks of [Killing Intent]."
@@ -907,9 +909,9 @@ r:"^1、宗師之武者使用部分技能可以獲得「殺意」，並可消耗
 影分身=Shadow Clone
 r:"^影<color\=#000000>分</color>身$"="S<color\=#000000>h</color>adow Clone"
 r:"^召喚(\d+)個分身，分身存在時，自身獲得(\d+%)的最終傷害減免。$"="Summons $1 clones, gains $2 Final DMG RES when the clones are present."
-r:"^對所有敵人造成萬能屬性傷害，自身獲得(\d+)層『殺意』。$"="Deals Almighty damage to all enemies, gains $1 stacks of [Killing Intent]."
+r:"^對所有敵人造成萬能屬性傷害，自身獲得(\d+)層『殺意』。$"="Deals Almighty damage to all foes, gains $1 stacks of [Killing Intent]."
 居合·殘月=Waning Moon
-r:"^消耗所有『殺意』對1名敵人造成物理屬性傷害，每消耗(\d+)層『殺意』，技能傷害提升(\d+%)；若本次傷害完成擊倒，自身回復(\d+)層『殺意』。釋放時若『殺意』到達(\d+)層，此次攻擊必定暴擊。$"="Consumes all [Killing Intent] to deal Phys damage to 1 enemy, for every $1 stack of [Killing Intent] consumed, increase skill damage by $2; if this downed the enemy, restores $3 stacks of [Killing Intent]. This skill will Always CRIT when used at $4 stacks of [Killing Intent]."
+r:"^消耗所有『殺意』對1名敵人造成物理屬性傷害，每消耗(\d+)層『殺意』，技能傷害提升(\d+%)；若本次傷害完成擊倒，自身回復(\d+)層『殺意』。釋放時若『殺意』到達(\d+)層，此次攻擊必定暴擊。$"="Consumes all [Killing Intent] to deal Phys damage to 1 foe, for every $1 stack of [Killing Intent] consumed, increase skill damage by $2; if this downed the foe, restores $3 stacks of [Killing Intent]. This skill will Always CRIT when used at $4 stacks of [Killing Intent]."
 修羅境=Shura
 r:"^修<color\=#000000>羅</color>境$"="S<color\=#000000>h</color>ura"
 r:"^使自身進入『修羅境』狀態；處在此狀態下『殺意』的獲取速度翻倍，但會在『殺意』達到(\d+)層時，受到的最終傷害額外提升(\d+%)。$"="Enters [Shura]. Doubles [Killing Intent], additionally increase Final DMG Taken by $2 when reaching $1 stacks of [Killing Intent]."
@@ -973,6 +975,7 @@ r:"^失去(\d+)點「意志力」，(\d+%)機率恢復(\d+)點「意志力」，
 是啊……這樣更安全。=Yes... this is safer.
 尋求幫助=Ask for help
 r:"^獲得(\d+)點「意志力」$"="Obtain $1 [Will]"
+好，就這麼做……=Okay, let's do this...
 
 焦急的男性=Anxious Man
 你知道「時鐘的齒輪」嗎？！\n你身上有嗎？！=Do you know [Clock Gears]?!\nDo you have it?!
@@ -1022,7 +1025,7 @@ r:"^消耗(\d+)點「意志力」，獲得(\d+)次<color\=#FFEC00>洗牌時間·
 花子她，一定就在海邊等我……=Hanako, she must be waiting for me at the sea...
 
 悲傷的少女=Sad Girl
-小咲說她要轉學了……\n明明說好了要一起畢業的……=Kousaki-chan said she's transferring... We promised we'd graduate together...
+小咲說她要轉學了……\n明明說好了要一起畢業的……=Kousaki-chan said she's transferring... \nWe promised we'd graduate together...
 我只有小咲這一個朋友啊……=Kousaki-chan is my only friend...
 如果她不在，\n我就要變成孤身一人了……=If she's not here,\nI'll be all alone...
 {{A}}……我不要一個人啊……={{A}}... I don't want to be alone...
@@ -1074,7 +1077,7 @@ r:"^不付出代價，(\d+%)機率獲得(\d+)張隨機「大阿爾卡那」$"="$
 我知道，我知道的！\n但為什麼不能稍微對我溫柔一點呢……=I know, I know! But why can't they be a little gentle to me...
 
 迷糊的女僕=Confused Maid
-嗯……今天要買什麼食材呢……？=Hmm... What ingredients should I buy today...?
+嗯……今天要買什麼食材呢……？=Hmm... \nWhat ingredients should I buy today...?
 啊，要先決定菜單呀。=Ah, I should decide the menu first
 主菜選什麼好呢？=What main dish should I pick?
 我喜歡蛋包飯=I like omurice
