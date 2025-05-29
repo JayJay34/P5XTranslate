@@ -22,7 +22,7 @@ r:"^前(\d+%)$"="Top $1"
 r:"今日活躍：(\d+\/\d+)"=Today's Score: $1
 r:"近7天貢獻 (\d+)"=7d Contribution: $1
 
-所屬樂園=Paradise\nName:
+所屬樂園=Paradise:
 樂園職位=Position:
 代理人等級=Level
 樂園ID=Paradise ID
@@ -30,6 +30,7 @@ r:"近7天貢獻 (\d+)"=7d Contribution: $1
 樂園影響力=Influence
 本樂園排名獎勵=Rank Rewards
 r:"^歷史貢獻 (\d+)$"="Total Contribution $1"
+未上榜=Unranked
 
 成員=Member
 代理人=Leader
@@ -174,6 +175,7 @@ Modifiers
 
 狂暴領域=Frenzy Domain
 r:"^敵人每回合末使自身獲得(\d+)層<color\=#FFFC40>『狂暴』</color>。\n『狂暴』：最終傷害提升(\d+%)，可疊加。$"="Foes gain $1 stack of <color\=#FFFC40>[Frenzy]</color> at the end of each turn.\nFrenzy: Increase Final DMG by $2, can stack."
+r:"^敵人每回合末使自身獲得(\d+)層<color\=#FFFC40>『狂暴』</color>。\n『狂暴』：獲得一定總傷害增幅，最多可疊加(\d+)層$"="Foes gain $1 stack of <color\=#FFFC40>[Frenzy]</color> at the end of each turn.\nFrenzy: Increase Final DMG, up to $2 stacks."
 狂暴=Frenzy
 
 猛毒領域=Toxic Domain
@@ -211,6 +213,7 @@ r:"^所有怪盜<color\=#FFFC40>受到治療</color>後，最終傷害提升(\d+
 
 庇佑領域=Blessing Domain
 r:"^隊伍中編入防衛、救援職業隊員時，所有敵人造成最終傷害降低(\d+%)，否則所有敵人造成最終傷害提升(\d+%)$"="Decrease all foes' Final DMG Dealt by $1 for every Defend and Rescue Thief.\nOtherwise increase all foes' Final DMG Dealt by $2"
+r:"^隊伍中編入防衛、救援職業隊員時，所有敵人造成最終傷害降低(\d+%)，受到最終傷害提升(\d+%)；否則所有敵人造成最終傷害提升(\d+%)$"="Decrease all foes' Final DMG Dealt by $1 and increase Final DMG Taken by $2 for every Defend and Rescue Thief.\nOtherwise increase all foes' Final DMG Dealt by $3"
 
 再動特化=Extra Turn Buff
 再動領域=Extra Turn Domain
@@ -255,6 +258,7 @@ r:"^所有怪盜造成<color\=#FFFC40>TECHNICAL</color>時，攻擊力提升(\d+
 
 神通領域=Theurgy Domain
 r:"^所有角色<color\=#FFFC40>{{A}}</color>造成傷害提升(\d+%)，使用{{A}}後，額外使自身最終傷害提升(\d+%)，持續(\d+)回合$"="All Thieves increase <color\=#FFFC40>{{A}}</color> DMG Dealt by $1. After using {{A}}, additionally increase own Final DMG by $2 for $3 turns"
+r:"^所有角色<color\=#FFFC40>{{A}}</color>造成傷害提升(\d+%)，使用{{A}}後，額外使自身造成傷害提升(\d+%)，持續(\d+)回合$"="All Thieves increase <color\=#FFFC40>{{A}}</color> DMG Dealt by $1. After using {{A}}, additionally increase own DMG Dealt by $2 for $3 turns"
 r:"^{{A}}造成傷害提升(\d+%)，使用{{A}}後額外使自身最終傷害提升(\d+%)，持續(\d+)回合$"="Increase {{A}} DMG Dealt by $1; \nAfter using {{A}}, additionally increase own Final DMG by $2 for $3 turns"
 
 sr:"^(.*)耐性$"="Resist $1"

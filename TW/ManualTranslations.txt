@@ -404,6 +404,8 @@ r:"^謎<color\=#ff0000ff>之</color>{{A}}$"="My<color\=#ff0000ff>st</color>eriou
 皮蒂斯=Pitys
 尤特碧=Euterpe
 俄耳甫斯=Orpheus
+伊俄=Io
+波呂狄烏刻斯=Polydeuces
 
 ------------------------------------------
 Worldbuilding Terms
@@ -480,6 +482,7 @@ r:"^使用後可自選1把以下角色的5星專屬武器：\n(.*)。$"="Can be 
 ----------
 City UI
 ----------
+世界地圖=World Map
 
 臥室=Bedroom
 客廳=Living Room
@@ -674,6 +677,8 @@ r:"^工<color\=#ff0000ff>具</color>店$"="Old Ma<color\=#ff0000ff>ch</color>ine
 r:"^懷<color\=#ff0000ff>舊</color>遊戲店$"="Re<color\=#ff0000ff>tr</color>o Game Shop"
 超級男爵=Super Baron
 
+前往「<color\=#ff3b37>{{A}}</color>」=Go to [<color\=#ff3b37>{{A}}</color>]
+
 商店=Shop
 購物=Shop
 r:"^(\d+)天後重置$"="Resets after $1 day(s)"
@@ -752,6 +757,9 @@ r:"^本週剩餘次數：(\d+)/(\d+)$"="Weekly Usage: $1/ $2"
 限時挑戰倒計時：=Challenge Time Left:
 r:"^(\d+)天(\d+)時後結束$"="Ends in $1d $2h"
 r:"^(\d+)時(\d+)分後結束$"="Ends in $1h $2m"
+
+r:"^<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>天<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>時後開啟$"="Unlocks in <sprite\=$1 tint\=1><sprite\=$2 tint\=1>d <sprite\=$3 tint\=1><sprite\=$4 tint\=1>h"
+r:"^(\d+)天(\d+)時後開啟$"="Unlocks after $1d $2h"
 
 擁有:=Owned: 
 擁有=Owned
@@ -1262,6 +1270,7 @@ r:"完成12次「在盧布朗度過」日程 \((\d+)\/(\d+)\)"=Spend time in Leb
 r:"在「心軌擇行」中完成1次挑戰 \((\d+)\/1\)"=Complete 1 challenge in [Heart Rail] ($1/1)
 r:"完成一個星盤試練的「宮主星」或「命主星」 \((\d+)\/1\)"=Clear 1 [House] or [Chart Ruler] in Astrolabe Trials ($1/1)
 r:"在「星盤試煉」中通過「紫色或紅色」監測點 \((\d+)\/(\d+)\)"=Clear 1 [Purple or Red] Monitoring Point in Astrolabe Trials ($1/$2)
+r:"^在「{{A}}」中擊殺(\d+)次「交錯之影」 \((\d+)\/(\d+)\)$"="Defeat $1 [Tangled Shadow] in {{A}} ($2/$3)"
 sr:"^通關「(.*)」難度(\d+) \((\d+)\/(\d+)\)$"="Clear [$1] on Difficulty $2 ($3/$4)"
 
 r:"^本期通行證期間，累計登入(\d+)天 \((\d+)/(\d+)\)$"="Log in for $1 day(s) ($2/$3)"
@@ -1293,9 +1302,9 @@ r:"^簽約$"="Pulls"
 次可獲得<color\=#EADE10>5★盲選偶像合約             ×1</color>，使用後隨機獲得以下怪盜=<size\=26>                       Get <color\=#EADE10>5★Random Kaidol Contract</color></size>
 長按圖示可查看詳細資訊=Long press to view details
 
-每10次補給必出四星或以上武器。具體內容查看【說明】=Choose your RATE UP weapon and two others. Every 70 pulls will guarantee a 5★ weapon. 0.8% Chance.\n\n\n\n\n\n\n<color\=#FFDF00><size\=25>The limited character's 5★ Weapon is only available in this banner.</size></color>\n<size\=22>Supply count will carry between banners.</size>
+每10次簽約必出四星或以上怪盜角色。具體內容查看【說明】=<size\=26>Get 1 5★ every <color\=#FFDF00>110</color> or <color\=#ff3b37>80</color> pulls;</size>\n<size\=25><color\=#FFDF00>0.2%</color> or <color\=#ff3b37>0.8%</color>; <color\=#FFDF00>No 50/50</color> or <color\=#ff3b37>50/50</color>.</size>\n<size\=26>Guarantee 1 4★ every 10 pulls.</size>\n</color><size\=16>Save Signature count between same system banners.</size>
 
-每10次簽約必出四星或以上怪盜角色。具體內容查看【說明】=<size\=27>Get 1 5★ every <color\=#FFDF00>110</color> or <color\=#ff3b37>80</color> pulls;\n<color\=#FFDF00>0.2%</color> or <color\=#ff3b37>0.8%</color>; <color\=#FFDF00>No 50/50</color> or <color\=#ff3b37>50/50</color>.</size>\nGuarantee 1 4★ every 10 pulls.\n</color><size\=17>Save Signature count between same system banners.</size>
+每10次補給必出四星或以上武器。具體內容查看【說明】=Choose your RATE UP weapon and two others. Every 70 pulls will guarantee a 5★ weapon. 0.8% Chance.\n\n\n\n\n\n\n<color\=#FFDF00><size\=24>The limited character's 5★ Weapon is only available in this banner.</size></color>\n<size\=21>Supply count will carry between banners.</size>
 
 sr:"^推薦自選契約共有<color\=#EF0000>(\d+)個</color>怪盜鎖定名額，確認簽約後，<color\=#EF0000>(.*)</color>將<color\=#EF0000>佔用1個鎖定名額</color>，是否確認開始簽約？\n注：該卡池生效期間，UP角色僅能從(\d+)個鎖定怪盜中選取，請謹慎選擇。$"="<size\=26>You have <color\=#EF0000>$1</color> custom slots for this banner. After pulling, <color\=#EF0000>$2</color> will <color\=#EF0000>take up 1 slot</color>, are you sure?\nNote: You can only choose the RATE UP character between the $3 locked Thieves.</size>"
 該怪盜已被鎖定，無法選擇。=Cannot select locked Thief.
@@ -1403,6 +1412,7 @@ sr:"^「當未觸發UP或保底規則時，所有武器均分基礎獲取機率�
 轟鳴的方程式=Max Formula Racing
 新生之翼=The Nirvana Song
 月光小夜曲=The Moonlight
+復甦的弓矢=The Breeze Of Love
 
 ----------
 Gachapon + Crane (Capsule)
@@ -2931,6 +2941,7 @@ r:"^親愛的隊長：\n自遊戲開服之日起至今，您已累計登入達�
 
 r:"^最高通關等級：(\d+)級$"="Highest Clear Lv: $1"
 r:"^通關(.*)難度(\d+)$"="Clear Difficulty $2"
+r:"^通關難度LV.(\d+)後解鎖$"="Unlock after clearing difficulty LV.$1"
 挑戰模式=<size\=24>Challenge Mode</size>
 首次通關後解鎖當前難度<color\=#173CCAff>體力模式</color>=Unlock <color\=#173CCAff>Stamina Mode</color> after clearing
 首次通關後解鎖當前難度<color\=#4aedfc>體力模式</color>=<size\=20>Unlock <color\=#4aedfc>Stamina Mode</color> for this difficulty after clearing</size>
@@ -2948,7 +2959,7 @@ r:"^己方行動次數：(\d+)$"="Number of Actions: $1"
 下一關=Next
 戰鬥獎勵=Rewards
 屬性強化=Stats Boost
-所有怪盜造成的傷害大幅提升，受到的傷害大幅降低=<size\=25>Heavily increase all Thieves' DMG Dealt;\nHeavily decrease all Thieves' DMG Taken</size>
+所有怪盜造成的傷害大幅提升，受到的傷害大幅降低=<size\=23>Heavily increase all Thieves' DMG Dealt;\nHeavily decrease all Thieves' DMG Taken</size>
 r:"^所有敵人最大生命值提升(\d+(.\d+)?(%)?)$"="Increase all foes' Max HP by $1"
 r:"^所有敵人攻擊力提升(\d+(.\d+)?(%)?)$"="Increase all foes' ATK by $1"
 r:"^所有敵人防禦力提升(\d+(.\d+)?(%)?)$"="Increase all foes' DEF by $1"

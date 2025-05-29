@@ -77,6 +77,7 @@ No size on inherit skill names or else they won't work in the inherit menu
 橫衝直撞=Rampage
 忘殺突襲=Memory Blow
 二連牙=Double Fangs
+兆鴉=Terror Claw
 窮鼠之牙=Cornered Fang
 歇斯底里巴掌=Hysterical Slap
 俯衝突擊=Assault Dive
@@ -107,6 +108,8 @@ No size on inherit skill names or else they won't work in the inherit menu
 死亡界限=Deathbound
 巨人之戰=Gigantomachia
 空間殺法=Vorpal Blade
+虛無藝術=Akashic Arts
+
 榮耀衝擊=Glory Impact
 靈魂禁錮=Soul Imprisonment
 荊棘之槍=Gae Bulg
@@ -646,6 +649,9 @@ r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬�
 //AoE Bless with varying stacks
 r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+\~\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to all foes and gains $2 stack(s) of <link\=s|111><u>Bless</u></link>.
 
+//AoE Bless with constant stacks
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+)個<link\="s\|111"><u>祝福</u></link>效果。$"="Deals <color\=#FFFF00>$1</color> ATK Bless damage to all foes and gains $2 stack(s) of <link\=s|111><u>Bless</u></link>."
+
 //ST Bless Instakill
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，對50%生命值以下的敵人附加低機率祝福屬性即死效果，生命值越低機率越高。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to 1 foe with a chance of insta-kill to foes under 50% HP. The lower the HP, the higher the chance.
 
@@ -932,6 +938,7 @@ r:"^物理攻擊(\d+%)機率反射，造成(\d+%)攻擊力物理屬性傷害。$
 治療=Heal
 護盾=Shield
 驅散=Dispel
+淨化=Dispel
 強化=Upgrade
 強化反擊=Enhanced Counter
 回溯=Rewind
