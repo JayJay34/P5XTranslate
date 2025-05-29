@@ -9,6 +9,7 @@ Skill Level up Description //
 武器效果=Weapon Effect
 啟示效果=Revelation Effect
 
+近戰攻擊的傷害倍率隨角色等級提升。=Increase Melee Attack damage multiplier based on Lv.
 使用近戰武器，對1名敵人造成物理屬性的少量傷害=<size\=28>Uses a melee weapon to deal light Phys damage to 1 foe</size>
 使用近戰武器，對1名敵人造成物理屬性的少量傷害。=<size\=28>Uses a melee weapon to deal light Phys damage to 1 foe.</size>
 
@@ -24,9 +25,9 @@ r:"^(\d+)層$"="<size\=18>$1 stacks</size>"
 使用槍械射擊1名敵人，造成小幅射擊傷害，根據子彈數量可以射擊多次。=Uses a gun to shoot 1 foe. dealing light Gun damage, can shoot multiple times based on ammo.
 使用槍械射擊1名敵人，造成少量射擊屬性傷害，根據子彈數量可以射擊多次。=Uses a gun to shoot 1 foe. dealing light Gun damage, can shoot multiple times based on ammo.
 使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。=Uses a gun to shoot 1 foe. dealing Gun damage, can shoot multiple times based on ammo.
-使用槍械射擊1名敵人，每次向1名敵人射擊3發，造成射擊屬性傷害，根據子彈數量可以射擊多次。=Uses a gun to shoot 1 foe. dealing 3 hits of Gun damage to 1 foe, can shoot multiple times based on ammo.
-使用槍械射擊1名敵人，每次向隨機敵人射擊3發，造成射擊屬性傷害，根據子彈數量可以射擊多次。=Uses a gun to shoot 1 foe. dealing 3 hits of Gun damage randomly, can shoot multiple times based on ammo.
-使用槍械射擊1名敵人，造成6次射擊屬性傷害，子彈可能會發生偏移。對同一目標造成傷害會衰減。=Uses a gun to shoot 1 foe. dealing 6 hits of Gun damage, the bullets can miss and deals less damage to the same target.
+r:"^使用槍械射擊1名敵人，每次向1名敵人射擊(\d+)發，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="Uses a gun to shoot 1 foe. dealing $1 hits of Gun damage to 1 foe, can shoot multiple times based on ammo."
+r:"^使用槍械射擊1名敵人，每次向隨機敵人射擊(\d+)發，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="Uses a gun to shoot 1 foe. dealing $1 hits of Gun damage randomly, can shoot multiple times based on ammo."
+r:"^使用槍械射擊1名敵人，造成(\d+)次射擊屬性傷害，子彈可能會發生偏移。對同一目標造成傷害會衰減。$"="Uses a gun to shoot 1 foe. dealing $1 hits of Gun damage, the bullets can miss and deals less damage to the same target."
 
 r:"^剩餘次數：(\d+)/(\d+)$"="Use Limit: $1/$2"
 
@@ -1115,6 +1116,7 @@ r:"^每層提供(\d+%)的最終傷害加成，最多可疊加(\d+)層$"="Increas
 r:"^處於額外回合時，最終傷害提高(\d+(.\d+)?(%)?)$"="<size\=26>Increase Final DMG by $1 during Extra Turn</size>"
 r:"^造成的最終傷害提升(\d+%)，若自身處於額外回合，造成的最終傷害額外提升(\d+%)$"="Increase Final DMG Dealt by $1, if you are in Extra Turn, additionally increases Final DMG Dealt by $2"
 r:"^造成持續傷害時，最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1 when dealing Damage Over Time"
+獲得一定總傷害增幅=Increase Total DMG
 r:"^總傷害增幅(\d+(.\d+)?(%)?)$"="Increase Total DMG by $1"
 r:"^傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Bonus by $1"
 r:"^造成傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Dealt by $1"
@@ -1236,6 +1238,7 @@ r:"^受到的傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Taken by $1"
 r:"^詛咒反噬達到(\d+)層，受HIGHLIGHT傷害提升(\d+%)$"="Reached $1 stacks of Curse Reversal; \nIncrease HIGHLIGHT DMG Taken by $2"
 r:"^受到追擊傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up DMG Taken by $1"
 r:"^受到持續傷害增加(\d+(.\d+)?(%)?)$"="Increase Damage Over Time Taken by $1"
+r:"^受到最終傷害提升(\d+%)，最終傷害降低(\d+%)$"="Increase Final DMG Taken by $1; \nDecrease Final DMG by $2"
 r:"^受到最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG Taken by $1"
 r:"^受到最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG Taken by $1"
 r:"^受到的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG Taken by $1"
@@ -1244,6 +1247,7 @@ r:"^造成傷害降低(\d+(.\d+)?(%)?)$"="Decrease DMG Dealt by $1"
 r:"^造成的傷害降低(\d+(.\d+)?(%)?)$"="Decrease DMG Dealt by $1"
 造成的傷害大幅降低=Heavily decrease DMG Dealt
 r:"^最終傷害降低(\d+(.\d+)?(%)?)$"="Decrease Final DMG by $1"
+r:"^造成的最終傷害降低(\d+(.\d+)?(%)?)$"="Decrease Final DMG Dealt by $1"
 受到的下一次HIGHLIGHT傷害提升=Increase next HIGHLIGHT DMG Taken
 
 r:"^受物理傷害提升(\d+(.\d+)?(%)?)$"="Increase Phys DMG Taken by $1"
