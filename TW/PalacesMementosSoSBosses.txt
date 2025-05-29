@@ -1761,6 +1761,45 @@ sr:"^<color\=#FF0000>(.*)</color>處於「虛弱」狀態，無法行動……$"
 sr:"^<color\=#FF0000>(.*)</color>從「虛弱」異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from [Weak]!"
 
 背德的貴婦=Elegant Mother
+r:"^1、背德的貴婦會週期性釋放「情慾誘惑」為所有敵人添加「情慾」，被「情慾」影響的敵人在受到治療效果時會被移除(\d+)層「情慾」。\n2、背德的貴婦回合開始時，若有敵人身上的「情慾」首次達到5/10/15層，背德的貴婦會選擇其中1人對其釋放「慾望漩渦」，使其(\d+)回合內無法行動，狀態視為<color\=#FFFC40>精神異常</color>。\n3、背德的貴婦會週期性的為敵人添加「{{A}}凝視」，並在下一回合對其釋放「衝動歡愉」，對其造成念動屬性傷害，目標身上的「情慾」層數越高，造成的傷害越高。\n4、懦弱之魔影被擊殺時，會對所有敵人造成治療效果。$"="1. Elegant Mother can use [Lustful Temptation] to inflict all foes with [Lust], dispels $1 stack of [Lust] when foes with [Lust] received healing.\n2. At the start of Elegant Mother's turn, if there is a foe with 5/10/15 stacks of [Lust] for the first time, Elegant Mother will use [Desire Whirlpool] on one foe, makes them unable to act for $2 turns, this is seen as a <color\=#FFFC40>Mental Ailment</color>.\n3. Elegant Mother can inflicts foes with [Lust Gaze], then uses [Impulsive Pleasure] on them next turn, dealing Psy damage, the higher the [Lust] stack, the higher the damage.\n4. When defeating Cowardly Maya, restores HP to all foes."
+r:"^1、背德的貴婦會週期性釋放「情慾誘惑」為所有敵人添加「情慾」，被「情慾」影響的敵人在受到治療效果時會被移除(\d+)層「情慾」。\n2、背德的貴婦回合開始時，若有敵人身上的「情慾」首次達到5/10/15層，背德的貴婦會選擇其中1人對其釋放「慾望漩渦」，使其(\d+)回合內無法行動，狀態視為<color\=#FFFC40>精神異常</color>。\n3、背德的貴婦會週期性的為敵人添加「{{A}}凝視」，並在下一回合對其釋放「衝動歡愉」，對其造成念動屬性傷害，目標身上的「情慾」層數越高，造成的傷害越高。$"="1. Elegant Mother can use [Lustful Temptation] to inflict all foes with [Lust], dispels $1 stack of [Lust] when foes with [Lust] received healing.\n2. At the start of Elegant Mother's turn, if there is a foe with 5/10/15 stacks of [Lust] for the first time, Elegant Mother will use [Desire Whirlpool] on one foe, makes them unable to act for $2 turns, this is seen as a <color\=#FFFC40>Mental Ailment</color>.\n3. Elegant Mother can inflicts foes with [Lust Gaze], then uses [Impulsive Pleasure] on them next turn, dealing Psy damage, the higher the [Lust] stack, the higher the damage."
+懦弱之魔影被擊殺時，會對所有敵人造成治療效果。=When defeating Cowardly Maya, restores HP to all foes.
+r:"^1、背德的貴婦進入戰鬥時會為所有敵人添加(\d+)層「情慾」；此外背德的貴婦還會週期性釋放「情慾誘惑」為所有敵人添加「情慾」；被「情慾」影響的敵人在受到治療效果時會被移除(\d+)層「情慾」。\n2、背德的貴婦回合開始時，若有敵人身上的「情慾」首次達到5/10/15層，背德的貴婦會選擇其中1人對其釋放「慾望漩渦」，使其(\d+)回合內無法行動，狀態視為<color\=#FFFC40>精神異常</color>。\n3、背德的貴婦會週期性的為敵人添加「{{A}}凝視」，並在下一回合對其釋放「衝動歡愉」，對其造成念動屬性傷害，目標身上的「情慾」層數越高，造成的傷害越高。\n4、背德的貴婦每隔1個回合會釋放1次「極樂之庭」，提升自身造成的最終傷害的同時降低自身受到的最終傷害。$"="1. At the start of battle, Elegant Mother will inflict all foes with $1 stacks of [Lust], dispels $2 stack of [Lust] when foes with [Lust] received healing.\n2. At the start of Elegant Mother's turn, if there is a foe with 5/10/15 stacks of [Lust] for the first time, Elegant Mother will use [Desire Whirlpool] on one foe, makes them unable to act for $3 turns, this is seen as a <color\=#FFFC40>Mental Ailment</color>.\n3. Elegant Mother can inflicts foes with [Lust Gaze], then uses [Impulsive Pleasure] on them next turn, dealing Psy damage, the higher the [Lust] stack, the higher the damage.\n4. Elegant Mother will use [Court of Paradise] every other turn, increases own Final DMG Dealt and decreases own Final DMG Taken."
+情難自抑=Uncontrollable Passion
+r:"^角色每有(\d+)層「情慾」，造成的最終傷害降低(\d+%)。$"="For every stack of [Lust], decrease Final DMG Dealt by $2"
+無限漩渦=Infinite Whirlpool
+r:"^「慾望漩渦」的持續時間為永久，被添加「慾望漩渦」的目標額外獲得(\d+)回合的防禦降低效果。$"="[Desire Whirlpool] is now permanent, targets with [Desire Whirlpool] additionally decrease DEF for $1 turns"
+極致誘惑=Extreme Temptation
+r:"^釋放的「情慾誘惑」額外為最後一次攻擊自己的敵人添加(\d+)層「情慾」。$"="When using [Lustful Temptation], additionally inflict the last foe that attacked you with $1 stack [Lust]"
+苦痛擴散=Spreading Pain
+r:"^釋放「苦痛快感」時額外為(\d+)名敵人添加「{{A}}凝視」，並使擁有「{{A}}凝視」的敵人受到最終傷害提升(\d+%)$"="When using [Painful Pleasure], additionally inflicts $1 foe with [{{A}} Gaze], then increase the Final DMG Taken for all foes with [{{A}} Gaze] by $2"
+極樂天國=Eternal Paradise
+每層「極樂之庭」提供的最終傷害提升效果大幅提高。=Heavily increase the Final DMG buff from [Court of Paradise]
+極樂庇護=Paradise Protection
+r:"^每擁有1層「極樂之庭」的效果，受到的最終傷害降低(\d+%)。$"="Each stack of [Court of Paradise] decrease Final DMG Taken by $1"
+
+r:"^階段(\d+)$"="Phase $1"
+出戰成員=Members
+終末難度尚未開啟=Apocalypse difficulty not yet available
+
+情慾誘惑=Lustful Temptation
+sr:"^為所有敵人添加(\d+)層『(.*)』。$"="Inflicts all foes with $1 stack(s) of [$2]."
+情慾=Lust
+r:"^情<color\=#000000>慾</color>$"="L<color\=#000000>u</color>st"
+慾望漩渦=Desire Whirlpool
+r:"^慾<color\=#000000>望</color>漩渦$"="D<color\=#000000>e</color>sire Whirlpool"
+r:"^自身回合開始時，敵人的『情慾』首次達到5/10/15層時，會清除其中1名滿足條件的敵人身上的(\d+)層『情慾』使其陷入(\d+)回合的『慾望漩渦』狀態，期間無法行動。$"="At the start of turn, if there is a foe with 5/10/15 stacks of [Lust] for the first time, dispel $1 stacks of [Lust] from one foe and makes them unable to act for $2 turns."
+苦痛快感=Painful Pleasure
+對所有敵人造成念動屬性傷害，並為1名敵人添加『{{A}}凝視』。=Deals Psy damage to all foes, then inflicts 1 foe with [{{A}} Gaze].
+{{A}}凝視={{A}} Gaze
+r:"^愛<color\=#000000>慾</color>凝視$"="L<color\=#000000>u</color>st Gaze"
+衝動歡愉=Impulsive Pleasure
+r:"^對擁有『{{A}}凝視』的敵人造成念動屬性傷害，目標每有1層『情慾』，造成的技能傷害提升(\d+%)。$"="Deals Psy damage to foes with [{{A}} Gaze], for every stack of [Lust] on the target, increases DMG Dealt by $1."
+極樂之庭=Court of Paradise
+r:"^為自己添加(\d+)層持續(\d+)回合的『極樂之庭』狀態，使自身造成的最終傷害提升。$"="Gives self $1 stacks of [Court of Paradise] for $2 turns, increases own Final DMG Dealt."
+被背德的貴婦注視著=Watched by Elegant Mother
+死亡時觸發，為所有敵人回復一定生命值。=Triggered on death, restores HP to all foes.
+sr:"^<color\=#FF0000>(.*)</color>被背德的貴婦注視著$"="<color\=#FF0000>$1</color> watched by Elegant Mother!"
 
 ----------
 Sea of Souls Trials (SoS)
@@ -1955,3 +1994,8 @@ r:"^造成的最終傷害提升(\d+%)，若自身處於額外回合，造成的�
 鏡岩迷影=Crag Mirage
 r:"^在戰鬥中獲得<link\="dc\|237"><u>『穩定領域』</u></link>效果；HIGHLIGHT造成的最終傷害提升(\d+%)；使用{{A}}後可使自身造成的最終傷害提升(\d+%)，持續(\d+)回合。$"="<size\=26>Gains <link\="dc|237"><u>[Stable Domain]</u></link> in battle; Increases HIGHLIGHT Final DMG by $1; Increases own Final DMG by $2 for $3 turns after using {{A}}.</size>"
 獲得『穩定領域』效果；HIGHLIGHT造成的最終傷害提升40%；使用{{B}}後可使自身造成的最終傷害提升40%，持續3回合。『穩定領域』：所有怪盜無法暴擊，{{A}}技能/追加效果造成的<color\=#FFFC40>最終傷害</color>提高，提高值\=暴擊率*(暴擊效果-100%)。（最多計入100%暴擊率）=Gains [Stable Domain]; Increases HIGHLIGHT Final DMG by 40%; Increases own Final DMG by 40% for 3 turns after using {{B}}. [Stable Domain]: All Thieves cannot CRIT, increases the <color\=#FFFC40>Final DMG</color> of {{A}} skill/ Follow Up by CRIT Rate*(CRIT DMG - 100%)\n(Up to 100% CRIT Rate)
+
+地嘯災變=Earthquake Catastrophe
+r:"^每次使用{{A}}後給全體友方添加(\d+)層『重力倒置』，每次擊殺(\d+)名敵方單位時自身獲得(\d+)層『重力倒置』；『重力倒置』：每層提供(\d+\.\d+%)的最終傷害加成，持續(\d+)回合，最多可疊加(\d+)層。$"="<size\=25>After using {{A}}, gives the party $1 stacks of [Gravity Inversion], gains $3 stack of [Gravity Inversion] after killing $2 foe; [Gravity Inversion]: Each stack increases Final DMG Bonus by $4 for $5 turns, up to $6 stacks.</size>"
+r:"^重<color\=#000000>力</color>倒置$"="G<color\=#000000>r</color>avity Inversion"
+r:"^每層提供(\d+\.\d+%)的最終傷害加成，最多可疊加(\d+)層$"="Each stack increases Final DMG Bonus by $1, up to $2 stacks."
