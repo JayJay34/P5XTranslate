@@ -75,6 +75,8 @@ General Wonder Prompt
 再見=Goodbye
 晚安=Good night
 明天見=See you tomorrow
+要仔細看看嗎？=Want to take a closer look?
+調查一下=Investigate
 
 拒絕=Decline
 稍後回覆=Reply later
@@ -285,6 +287,8 @@ CITY ACTIVITIES
 Train
 回想起潛入和使用鉤繩的情景…=Recalled the scenes of infiltrating and using the grappling hook...
 
+唔～～哇……好沒勁……=Ugh～～ So boring...
+
 認真地上課……=Took class seriously...
 認真地聽講了……=Listened in class seriously...
 sr:"^(.*)，醒著呢嗎？\n稍微來個大腦體操，回答一下吧。$"="$1, are you awake? Do a little brain exercise and answer this for me."
@@ -399,6 +403,10 @@ sr:"^(.*)，醒著呢嗎？\n稍微來個大腦體操，回答一下吧。$"="$1
 換好衣服就回去吧……=Let's go back after changing...
 收拾一下回去吧……=Let's go back after cleaning up...
 收拾一下就回去吧……=Let's go back after cleaning up...
+盡職盡責地完成了服務員的工作……=Fulfilled the duties of a waiter diligently...
+收拾客桌時流暢的動作\n被其他員工表揚了……=Got praised for my quick and clean table service...
+被進店的上班族醉漢騷擾，\n但是巧妙地應付過去了……=Got harassed by a drunk customer but defused it...
+差不多該回去了……=It's almost time to go back...
 
 聞起來很香甜的咖啡，充滿了成熟的感覺……=The coffee smells sweet, \nwith a sense of maturity...
 在味覺的激流中伸出手，似乎抓住了什麼……！=<size\=28>In the torrent of tastes, \nI desperately reached out my hand and seemed to grab something...!</size> 
@@ -412,6 +420,18 @@ sr:"^(.*)，醒著呢嗎？\n稍微來個大腦體操，回答一下吧。$"="$1
 給我重做=Go fix this
 等不及享用了=<size\=30>Can't wait to enjoy this</size>
 說明了下單搞錯的情況，店家重做並贈送了咖啡……=<size\=28>Explained she had made a mistake with my order, the shop remade it and gave me free coffee...</size>
+
+歡迎光臨！……請問是有什麼事嗎？=Welcome! ...What can I do for you?
+表達了自己想要打工的意向。=Expressed my intention to work.
+原來是想在這裡打工呀，當然非常歡迎了！=So you want to work here? \nOf course, you're very welcome to!
+我這就去叫店長，請稍等一下。=I'll go get the manager right away, \nplease wait a moment.
+你好，我是這家店的店長。=Hello, I am the manager of this shop.
+很高興你願意過來打工，\n我們店經常人手不足呢……=I'm very happy that you are willing to come and work. Our shop is often short of staff...
+對了，你之前有過打工經驗嗎？=By the way, do you have any work experience before?
+放心吧，這裡的工作和其它的餐飲店差不多。\n點單、送餐、打掃等等。=Don't worry, the work here is similar to other restaurants. Taking orders, serving food, cleaning, and so on.
+……嘛，都是些比較簡單的工作，\n見習一段時間就能很快掌握了。=...Well, they're all pretty simple work, you'll master them in no time.
+遇到客人比較多的時候，當天也會漲薪……\n所以還請儘量多來幫忙哦。=On busier days, you'll even get a pay bump... we'd appreciate it if you could come help out as much as possible.
+那就這麼說定啦，今後{{A}}囉。=That's settled then. {{A}}.
 
 要陪{{A}}嗎？=Want to accompany {{A}}?
 要和{{A}}一起去嗎？=Want to accompany {{A}}?
@@ -531,7 +551,7 @@ Ally Downed
 居然被擊倒了！？……可惡！=Downed!? ...You bastard!
 Missed Gun
 別急……每一擊都做好準備。=Don't rush... \nKeep striking until you land a hit.
-Dead
+Faint
 WONDER？你怎麼了，快回答！=Wonder? What's wrong, answer me!
 Victory
 辛苦了，走吧！=Good work, let's go!
@@ -744,9 +764,10 @@ Elite combat start
 這、這傢伙！\n感覺很難對付！=Th-this guy!\nThis one's gonna be tough!
 Skill ready
 駭客時間到！=Hacking time!
-支援準備完成，交給我吧！=Support ready. Leave it to me!
+支援準備完成，交給我吧！=Support's ready. Leave it to me!
 OK，破譯完成，我隨時可以出擊！=OK, hack complete. Ready to go!
 Full HL
+發動絕招的時機！=Time to use the big move!
 充能完成！盡情釋放！=Charge complete! Beat 'em up!
 要放必殺了，華麗地攻擊吧！=Time for the super move,\nattack with style!
 CRIT
@@ -755,6 +776,7 @@ Multi-kill
 一舉打敗多個敵人！\n漂亮的一擊，WONDER！=Multiple enemies wiped out!\nNot bad, Wonder!
 不～錯，就是這樣！=Nice～ Keep it up!
 幹得漂亮！一舉擊破！=Nice job! Crushed 'em in one move!
+確認一舉擊破！\n幹的漂亮呀～=Crushed 'em in one move!\nNot bad～
 Down
 敵人倒地！\n不錯嘛，WONDER！=Enemy down!\nNot bad, Wonder!
 很好！敵人倒地！=Great! Enemy down!
@@ -766,6 +788,7 @@ AOA
 Ally Downed
 倒地！？再忍一下～！=Down!? Hold on～!
 被擊倒了！還好嗎？=Downed! Are you okay?
+有人倒下了，誰來支援呀！=They're downed, we need
 Recovered from Down
 好，現在開始反擊！=Ok, time for the counterattack!
 Evade
@@ -773,8 +796,13 @@ Evade
 Debuffs
 狀態異常，快點回復！=A status ailment, recover quickly!
 有人被削弱了！\n多加注意！=We're being debuffed! \nWatch out!
+有人陷入危機！\n快來幫忙！=They're in danger!\nHurry up and help them!
 Near Death
 WONDER！你還好嗎！？=Wonder! Are you okay!?
+Faint
+體力很少了！要注意啊！=No! Wake up!
+被擊中了！？快快治療～！=They're hit!? Give them immediate treatment～!
+糟糕，隊友倒下了！快快救援！=Oh no, they're down! Help them!
 Revive
 continue成功？{{A}}，繼續幹吧~！=Continue complete? {{A}}, get 'em～!
 Victory
@@ -815,6 +843,8 @@ AOA
 那麼，開始吧…！=Now, let's get started...!
 {{A}}，要來最後一擊了嗎？={{A}}, is it time for finishing move?
 請聆聽能夠燃燒鬥志的戰歌！=Please listen to the burning fight song!
+Ally Downed
+被擊倒了嗎！？怎、怎麼辦才好…=Downed!? W-what to do...
 Evade
 {{A}}，平安無事，真是太好了…！={{A}}, thank goodness you're safe...!
 Missed Gun
@@ -824,15 +854,19 @@ Debuffs
 好像使不上力氣的樣子……不儘快幫助恢復的話……！=They can't muster strength... \nNeed to recover fast...!
 Near Death
 陷入危機了呢……但也只能堅持戰鬥了！=They are in danger... \nbut we can only fight!
-Dead
+Faint
 WONDER！不要，請不要丟下我……！=Wonder! Don't leave me...!
 沒、沒關係嗎！？=A-are you okay!?
+緊、緊急事態！請救援！=E-emergency! Please help!
 怎麼辦……再這樣下去的話……=What to do... At this rate...
 Revive
 只要WONDER沒有放棄，我也會陪在你身邊！=As long as Wonder doesn't give up, I'll be by your side!
+太好了。你終於回來了……！=Great. Welcome back...!
 Victory
 哇…！贏了！我們勝利了！=Wow...! We did it! We won!
 {{A}}……我也，稍微有幫上忙吧？={{A}}... Was I able to help a little?
+Defeat
+對不起……都是我的錯……=Sorry... It's all my fault...
 Escape
 無奈之時，走為上策！=Sometimes it's better to run away!
 
@@ -5850,6 +5884,40 @@ r:"^這裡是基於(.*)……\n您的「認知」所誕生的世界……$"="Thi
 {{A}}一臉困惑地離開了……={{A}} left in confusion...
 總而言之……\n先在{{A}}逛逛吧！=Anyway... let's take a look around {{A}} first!
 
+Officer Kurosawa
+你的眼神……有些熟悉的感覺。=Your eyes... are familiar.
+可能是我的錯覺，\n你看上去也像是知道些內情的樣子。=Maybe I'm imagining things, but you seem to know what's going on.
+嚇到你了很抱歉，只是我的直覺罷了。\n你的事情，我不會再進一步過問了。=Sorry for startling you, it was just a gut feeling. I won't pry any further into your business.
+表達了可以幫忙的意願……=Expressed my intention to help...
+這樣啊……我的工作是維護城市治安。=I see... It's my job to keep the city safe.
+只要能讓這座城市更好，我會不惜一切助力。=I will do whatever it takes to make this city better.
+有空的時候就過來吧，能做的事有很多。=Come over when you are free, \nthere are many things you can do.
+……當然，只要你做好了心理準備，就來吧。=...Of course, come as long as you are mentally prepared.
+
+Aohige Pharmacy
+歡迎光臨！=Welcome!
+藥店的競爭還是那麼激烈啊，\n和以前沒什麼變化。=Pharmacy rivalry is still just as intense, same as it always was.
+我們店都是多虧了特製青汁才能屹立不倒……\n承蒙惠顧了。=Our shop owes its survival entirely to our special Aojiru...
+啊，我研發的青汁可是頗受好評的。\n所謂的獨門配方。=Ah, my homemade Aojiru is pretty popular... A real secret recipe, that one.
+而且最近還引進了很多新口味青汁。\n根據用途，有不同的推薦。=On top of that, we've added a lot of new Aojiru lately... There's a recommended option for every need.
+不過……可別把青汁拿去用在懲罰遊戲上哦。\n不能浪費食物。=But hey, no using Aojiru for dare games, got it? Food's not for messing around.
+……看著你的臉，\n讓我想起了一位熟悉的顧客。=...Looking at your face reminds me of a regular customer.
+你一定也是那種不會浪費食物的傢伙吧。\n本店特製的青汁，一定要喝一杯再走哦。=I can tell you're not one to waste good food. At least take one sip of our special Aojiru, on the house.
+今後也拜託多來照顧生意啊。=Please keep supporting us in the future.
+
+Fountain
+水底散落著大量硬幣，\n似乎有很多人在這裡許過願……=Countless coins are scattered at the bottom, seems like many people have made wishes here...
+噢，你也是慕名來許願的嗎？\n這裡的噴泉很靈驗哦。=Oh, did you also come here to make a wish? This fountain is known to be very effective.
+不過……聽說硬幣不夠的話，\n噴泉之主可能沒法幫忙實現願望。=However... I've heard that if there aren't enough coins, the Fountain Spirit might not be able to grant your wish.
+也不知道是怎麼流傳下來的，\n總之大家都這麼說。=No one really knows how this rumor started, but that's what everyone says anyway.
+……所以，我就一咬牙，\n把今天打工的所有薪水都扔進去了。=...So I gritted my teeth and threw in all the wages I earned today.
+對了，扔完硬幣之後，最好閉上雙眼，\n在心底多念幾遍自己的願望。=By the way, after tossing the coins, it's best to close your eyes and think about your wish a few times.
+這也是不知道由誰流傳下來的小竅門，\n看你投緣，就透露給你吧……=This is another little trick that no one knows who started... But since we hit it off, I'll share it with you...
+畢竟各種各樣的人都來這裡許願嘛。=After all, all kinds of people come here to wish.
+所以，要想辦法讓噴泉之主記住你才行啊。=So you've got to find a way to make sure the Fountain Spirit remembers you.
+不過，不知道為什麼……\n總覺得你會被噴泉之主特別眷顧。=But for some reason... I have a feeling the Fountain Spirit might favor you in particular.
+可惡，我也想要變成這樣啊。=Ugh, I wish I could be like that too.
+
 ----------
 Motoha SL
 ----------
@@ -9573,7 +9641,7 @@ sr:"^所以我想先讓(.*)看看我走路的樣子。$"="So I wanted $1 to see 
 {{A}}……{{A}}……\n你覺得……怎，怎麼樣呢……？={{A}}... {{A}}...\nwhat... do you think...?
 已經能走起來了=You can walk now
 還是有點容易摔倒呢…=<size\=27>You still lose balance sometimes...</size>
-是吧……\n看來還是要再練習一下……=Yes...\nguess I need more practice...
+是吧……\n看來還是要再練習一下……=Yes... Guess I need more practice...
 {{A}}奶奶一定會很高興看到的=Grandma {{A}} will be thrilled
 別擔心，要有信心=Don't worry, have faith
 ……對，是這樣的。\n就算不能完美地走路……也一定……=...Right. Even if it's not perfect... it'll be enough...
