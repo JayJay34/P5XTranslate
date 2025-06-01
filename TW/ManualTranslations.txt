@@ -679,6 +679,39 @@ r:"^懷<color\=#ff0000ff>舊</color>遊戲店$"="Re<color\=#ff0000ff>tr</color>o
 
 前往「<color\=#ff3b37>{{A}}</color>」=Go to [<color\=#ff3b37>{{A}}</color>]
 
+去別的地方=Go Elsewhere
+放縱俱樂部=Club Escapade
+門關著。好像是營業時間外……=The door is closed. It's not open yet...
+咖啡店夏卡爾=Chagall Café
+似乎可以在這裡打工……=Seems like I can work here...
+要進去問問嗎？=Want to enter and ask?
+現在似乎沒有什麼事要去這家店……以後有機會再來吧。=Doesn't look like there’s anything going on here now... Let's come back another time.
+名叫<color\=#ff0000>{{A}}</color>的巡警正在裡面值班……=An officer called <color\=#ff0000>{{A}}</color> is on duty...
+小巷深處=Back Alley
+什麼都沒有的小巷……但總覺得有種莫名的熟悉感。=Just an empty back alley... but for some reason, it feels strangely familiar.
+卡拉OK {{A}}=Mandragora
+似乎還在準備中……看上去是一個可以放心地鍛煉歌喉的地方……=Looks like a place to practice singing without worries...
+古美術 真宵堂=Mayoido Antiques
+查看收藏品=View Antique
+藍鬍子藥房=Aohige Pharmacy
+叫做<color\=#ff0000>藍鬍子</color>的藥房……=A pharmacy called <color\=#ff0000>Aohige</color>...
+購買青汁=Buy Aojiru
+藍鬍子=Aohige
+藥房=Pharmacy
+
+肯尼士·阿諾德=Kenneth Arnold
+店裡擺放著許多CD。=There are many CDs in the store.
+娃娃機-中型=Crane Game
+電玩大巡遊=Game Parade
+看起來設施很齊全的電玩店……不過現在似乎沒有對外開放的樣子。=The arcade looks fully stocked... though it appears closed for now.
+中心噴泉=Fountain
+很漂亮的噴泉，\n好像是有能實現願望的傳說……=A beautiful fountain, urban legends say wishes made here come true...
+
+{{A}}站前={{A}} Station
+自動販售機=Vending Machine
+販賣機=Vending Machine
+要買些什麼嗎？=What do you want to buy?
+
 商店=Shop
 購物=Shop
 r:"^(\d+)天後重置$"="Resets after $1 day(s)"
@@ -758,11 +791,14 @@ r:"^本週剩餘次數：(\d+)/(\d+)$"="Weekly Usage: $1/ $2"
 r:"^(\d+)天(\d+)時後結束$"="Ends in $1d $2h"
 r:"^(\d+)時(\d+)分後結束$"="Ends in $1h $2m"
 
-r:"^<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>天<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>時後開啟$"="Unlocks in <sprite\=$1 tint\=1><sprite\=$2 tint\=1>d <sprite\=$3 tint\=1><sprite\=$4 tint\=1>h"
 r:"^(\d+)天(\d+)時後開啟$"="Unlocks after $1d $2h"
+r:"^<sprite\=(\d+) tint\=1>天<sprite\=(\d+) tint\=1>時後開啟$"="Unlocks after <sprite\=$1 tint\=1>d <sprite\=$2 tint\=1>h"
+r:"^<sprite\=(\d+) tint\=1>天<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>時後開啟$"="Unlocks after <sprite\=$1 tint\=1>d <sprite\=$2 tint\=1><sprite\=$3 tint\=1>h"
+r:"^<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>天<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>時後開啟$"="Unlocks after <sprite\=$1 tint\=1><sprite\=$2 tint\=1>d <sprite\=$3 tint\=1><sprite\=$4 tint\=1>h"
 
 擁有:=Owned: 
 擁有=Owned
+持有數=Owned
 免費=FREE
 r:"^領獎$"="Claim"
 r:"^領取$"="<size\=28>Claim</size>"
@@ -1849,10 +1885,20 @@ r:"^要在這裡度過時間嗎\(<color\=#ff0000>每次(\d+)現金</color>\)？$
 注入★鬆餅=Love ★ Pancake
 粉色心情霜淇淋=Pink Ice Cream
 愛心蛋包飯=Sincere Omelette
+在中心噴泉許願=<size\=24>Wish at the Fountain</size>
+去{{A}}的噴泉那裡，想一想有什麼願望想要實現吧……=Let's go to the fountain at {{A}} and think about what wish I want to come true...
+在藍鬍子藥房幫忙=<size\=24>Help out Aohige Pharmacy</size>
+去{{A}}的藍鬍子藥房，嘗一嘗店主最新研發的新口味青汁吧。=Let's go to Aohige Pharmacy at {{A}} and try the owner's newest Aojiru flavor.
+在辰巳東派出所幫忙=<size\=24>Help out \nTatsumi East Police Station</size>
+{{A}}的辰巳東派出所今天似乎有很多工作……=Tatsumi East Police Station at {{A}} seems busy today...
 
 r:"^都市日程<color\=#ffc000>與{{A}}聊天</color>已解鎖，\n每日有一定機率出現。$"="<size\=26>Unlocked <color\=#ffc000>Chat with {{A}}</color> City Activity.\nIt now has a chance to show up.</size>"
 r:"^都市日程<color\=#ffc000>在女僕餐廳社會實踐</color>已解鎖，\n每日有一定機率出現。$"="Unlocked <color\=#ffc000>Maid Café</color> City Activity.\nIt now has a chance to show up."
 r:"^都市日程<color\=#ffc000>在{{A}}打工</color>已解鎖，\n每日有一定機率出現。$"="Unlocked <color\=#ffc000>Work at the Concept Café</color> City Activity.\nIt now has a chance to show up."
+r:"^都市日程<color\=#ffc000>在夏卡爾打工</color>已解鎖，\n每日有一定機率出現。$"="<size\=26>Unlocked <color\=#ffc000>Work at Chagall Café</color> City Activity.\nIt now has a chance to show up.</size>"
+r:"^都市日程<color\=#ffc000>在辰巳東派出所幫忙</color>已解鎖，\n每日有一定機率出現。$"="Unlocked <color\=#ffc000>Help out Tatsumi East Police Station</color> City Activity.\nIt now has a chance to show up."
+r:"^都市日程<color\=#ffc000>在藍鬍子藥房幫忙</color>已解鎖，\n每日有一定機率出現。$"="Unlocked <color\=#ffc000>Help out Aohige Pharmacy</color> City Activity.\nIt now has a chance to show up."
+r:"^都市日程<color\=#ffc000>在中心噴泉許願</color>已解鎖，\n每日有一定機率出現。$"="<size\=26>Unlocked <color\=#ffc000>Wish at the Fountain</color> City Activity.\nIt now has a chance to show up.</size>"
 
 打工=Work
 (First one is in the city menu, second one is on the confirm page)
@@ -1943,6 +1989,10 @@ r:"^都市日程<color\=#ffc000>在{{A}}打工</color>已解鎖，\n每日有一
 {{A}}的主題咖啡店似乎需要人手……=<size\=28>The Concept Café is understaffed...</size>
 今天也去主題咖啡店幫忙看看吧。=<size\=25>Let's help out at the Concept Café today</size>
 要在這家主題咖啡店打工嗎？=Do you want to work part-time \nat this Concept Café?
+
+在夏卡爾打工=<size\=24>Work part-time\nat Chagall Café</size>
+{{A}}的夏卡爾咖啡店似乎需要人手，要去幫忙嗎？=Chagall Café is understaffed, \nwant to help out?
+{{A}}的夏卡爾咖啡店今天似乎特別忙碌……=Chagall Café seems very busy today...
 
 由於掌握了打工『觀察的心得』，因此獲得了額外收益。=<size\=28>Because I have mastered Observation Insights, I have gained more Social Stats.</size> 
 由於掌握了打工『觀察的心得』,掌握了打工『服務的心得』，因此獲得了額外收益。=<size\=25>Because I have mastered Observation Insights and Service Insights, \nI have gained more Social Stats.</size> 
@@ -3451,6 +3501,7 @@ r:"^同類技能只能攜帶1個，已自動將「(.*)」替換為「(.*)」$"="
 需遺忘技能，才能學新技能。=Need to forget skills before learning a new skills.
 r:"是否遺忘技能「(.*)」？\n<color\=#FF0000>此操作不可撤銷！</color>"=Want to forget this skill?\n<color\=#FF0000>This cannot be undone!</color>
 r:"已遺忘技能「(.*)」。$"="Forgotten skill."
+保存失敗，必須至少裝備一個面具。=Please equip at least 1 Persona.
 r:"^最多只可以選擇(\d+)個面具上陣哦～$"="You can only equip $1 Personas."
 您有尚未保存的陣容方案，是否要進行保存？=Do you want to save your setup?
 
