@@ -108,7 +108,7 @@ No size on inherit skill names or else they won't work in the inherit menu
 死亡界限=Deathbound
 巨人之戰=Gigantomachia
 空間殺法=Vorpal Blade
-虛無藝術=Akashic Arts
+虛無藝術=Akasha Arts
 
 榮耀衝擊=Glory Impact
 靈魂禁錮=Soul Imprisonment
@@ -568,6 +568,9 @@ r:"^對所有敵人造成(\d+)次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的
 Cleaving Shot
 r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，若造成了暴擊，則額外造成1點倒地值傷害。$"="Deals <color\=#fffc40>$1</color> ATK Gun damage to 1 foe. If this skill crits, decreases an additional Down Gauge."
 
+Riot Gun
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊點射擊屬性傷害，命中率降低(\d+%)$"="Deals <color\=#fffc40>$1</color> ATK Gun damage to all foes, decreases Hit Rate by $2"
+
 Janosik
 r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，有(\d+%)的固定機率使敵人獲得『瞄準』:使敵人的防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。\n<b><size\=28><color\=#024068>撞針高速撞擊子彈並引爆火藥，硝煙中射出的致命一擊造成屬性傷害。若敵方處於瞄準狀態，則傷害提升。</color></size></b>$"="Deals <color\=#fffc40>$1</color> ATK Gun damage to 1 foe, with a $2 fixed chance to inflict the foe with [Aim]: Decrease DEF by <color\=#fffc40>$3</color> for $4 turns.\n<b><size\=28><color\=#024068>Firing Pin hits a bullet at high speed and detonates the gunpowder, resulting in a fatal blow that deals damage, which is increased if the foe is aiming.</color></size></b>"
 r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，有(\d+%)的固定機率使敵人獲得『瞄準』:使敵人的防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Deals <color\=#fffc40>$1</color> ATK Gun damage to 1 foe, with a $2 fixed chance to inflict the foe with [Aim]: Decrease DEF by <color\=#fffc40>$3</color> for $4 turns."
@@ -731,11 +734,11 @@ r:"使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fff
 // AoE Heal
 r:"^使所有同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值。+$"=Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to all allies.
 
-Sarasvati
+Sarasvati Divine Chant
 r:"^使所有同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，並使所有同伴受到的傷害降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to all allies, then decreases all allies' DMG Taken by <color\=#fffc40>$3</color> for $4 turns."
 
 // Lotus
-r:"使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，並使自身獲得2層『蓮華』，『蓮華』存在期間，任意單位行動後，若有同伴生命值低於50%，則消耗一層『蓮華』，使其恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，『蓮華』持續1回合。"=<size\=30>Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to 1 ally and gains 2 stacks of [Sacred Lotus] for 1 turn. If an ally is below 50% Max HP after their turn while [Sacred Lotus] is present, consumes one stack and restores <color\=#fffc40>$3</color> ATK + <color\=#fffc40>$4</color> HP to them</size>.
+r:"使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，並使自身獲得(\d+)層『蓮華』，『蓮華』存在期間，任意單位行動後，若有同伴生命值低於(\d+%)，則消耗一層『蓮華』，使其恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，『蓮華』持續(\d+)回合。"=Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to 1 ally, then gains $3 stacks of [Sacred Lotus] for $7 turn. When [Sacred Lotus] is present, if any ally is below $4 Max HP after their turn, consumes one stack of [Sacred Lotus] and restores <color\=#fffc40>$5</color> ATK + <color\=#fffc40>$6</color> HP to them."
 
 //Titania idk
 r:"使所有同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，對生命值低於50%的同伴造成的治療效果提升25%。並使所有同伴回復(\d+)點精力值。"=Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to all allies.\nIncreases Healing Effect by 25% to allies under 50% HP.\nRestores $3 SP to all allies.
@@ -759,7 +762,7 @@ Power of Prayer
 r:"^使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，並使其防禦力提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續2回合。$"="Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to 1 ally and increases their DEF by <color\=#fffc40>$3</color> for 2 turns."
 
 Deep Cleanse
-r:"^使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，並有(\d+%)基礎機率驅散其身上的一個隨機減益效果。驅散成功後，額外恢復其<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值。$"="Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to 1 ally and there is a $3 base chance to dispel 1 random debuff. After dispelling, additionally restores <color\=#fffc40>$4</color> ATK + <color\=#fffc40>$5</color> HP."
+r:"^使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，並有(\d+%)基礎機率驅散其身上的一個隨機減益效果。驅散成功後，額外恢復其<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值。$"="Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to 1 ally, with a $3 base chance to dispel 1 random debuff. After dispelling, additionally restores <color\=#fffc40>$4</color> ATK + <color\=#fffc40>$5</color> HP."
 
 --- Buffs ---
 
@@ -805,8 +808,8 @@ r:"^使1名友方攻擊、防禦、效果命中、效果抵抗提升<color\=#fff
 Fire of Purification
 r:"^使所有友方角色的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每(\d+)攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)，持續(\d+)回合。並使技能主目標獲得「淨世之火」，持續(\d+)回合。「淨世之火」：對敵方角色釋放{{A}}技能造成傷害後，有(\d+%)的基礎機率使隨機(\d+)名敵人陷入燃燒狀態。$"="Increases all allies' ATK by <color\=#fffc40>$1</color> + <color\=#fffc40>$3</color> for every $2 ATK you have, up to $4 for $5 turns. Gives the main target [Fire of Purification] for $6 turns. [Fire of Purification]: After dealing {{A}} skill damage to foes, there is a $7 base chance to inflict $8 random foe with Burn."
 
-//(dominion)
-r:"^使所有同伴的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每(\d+)攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)，效果持續(\d+)回合。並使技能主目標造成的傷害額外提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每(\d+)攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)。效果持續(\d+)回合。$"="Increases all allies' ATK by <color\=#fffc40>$1</color> + <color\=#fffc40>$3</color> for every $2 ATK you have, up to $4 for $5 turns. Increases the main target's DMG Dealt by <color\=#fffc40>$6</color> + <color\=#fffc40>$8</color> for every $7 ATK you have, up to $8 for $9 turn."
+Dominion Cohesion
+r:"^使所有同伴的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每(\d+)攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)，效果持續(\d+)回合。並使技能主目標造成的傷害額外提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每(\d+)攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)。效果持續(\d+)回合。$"="Increases all allies' ATK by <color\=#fffc40>$1</color> + <color\=#fffc40>$3</color> for every $2 ATK you have, up to $4 for $5 turns. Increases the main target's DMG Dealt by <color\=#fffc40>$6</color> + <color\=#fffc40>$8</color> for every $7 ATK you have, up to $9 for $10 turn."
 
 Infinite Algorithm
 r:"^使所有友方角色攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，額外使主目標傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Increases all allies' ATK by <color\=#fffc40>$1</color>, additionally increases the main target's DMG Dealt by <color\=#fffc40>$2</color> for $3 turns."
