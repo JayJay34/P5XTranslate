@@ -530,8 +530,14 @@ r:"使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(.*)的生
 //
 r:"使<color\=#FFFF00>1名</color>同伴恢復(\d+\.\d+%)攻擊力\+(.*)的生命值。並驅散1個元素異常效果。"=Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to 1 ally and cures 1 <link\=s|101><u>Elemental Ailment</u></link>.
 
-//
-r:"使<color\=#FFFF00>1名</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值。並驅散其身上1個隨機減益效果，驅散成功後，使其額外恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值。"=<size\=23>Restore HP equal to <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> to 1 ally and cure 1 <link\=s|101><u>Elemental Ailment</u></link>. If an <link\=s|101><u>Elemental Ailment</u></link> was cured, restore additional HP equal to <color\=#fffc40>$3</color> ATK + <color\=#fffc40>$4</color>.</size>
+Sarasvati Divine Chant
+r:"^使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值，並使所有同伴受到的傷害降低(\d+\.\d+%)，效果持續(\d+)回合。$"="Restores $1 ATK + $2 HP to <color\=#FFFF00>all</color> allies, then decreases all allies' DMG Taken by $3 for $4 turns."
+
+Unicorn Deep Cleanse
+r:"^使<color\=#FFFF00>1名</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值。並驅散其身上1個隨機減益效果，驅散成功後，使其額外恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值。$"="Restores $1 ATK + $2 HP to <color\=#FFFF00>1</color> ally, then dispels 1 random debuff. After dispelling, additionally restores $3 ATK + $4 HP."
+
+Lakshmi Lotus
+r:"^使<color\=#FFFF00>1名</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值，使自身獲得(\d+)層【蓮華】：任意同伴受到傷害使生命值低於(\d+%)時消耗1層使其恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值，持續(\d+)回合。$"="Restores $1 ATK + $2 HP to <color\=#FFFF00>1</color> ally, then gains $3 stacks of [Sacred Lotus] for $7 turn. [Sacred Lotus]: When any ally is below $4 Max HP after their turn, consumes one stack of [Sacred Lotus] and restores $5 ATK + $6 HP to them."
 
 --- Buffs ---
 
@@ -574,7 +580,7 @@ r:"使自身下1次造成的魔法屬性傷害提升<color\=#fffc40>(\d+\.\d+%)<
 Fire of Purification
 r:"^使<color\=#FFFF00>所有</color>友方角色的攻擊力提升(\d+\.\d+%)\+自身每(\d+)攻擊力額外提升(\d+\.\d+%)，上限(\d+%)，持續(\d+)回合。並使技能主目標獲得「淨世之火」，持續(\d+)回合。「淨世之火」：對敵方角色釋放{{A}}技能造成傷害後，有(\d+%)的基礎機率使隨機(\d+)名敵人陷入燃燒狀態。$"="Increases <color\=#FFFF00>all</color> allies' ATK by $1 + $3 for every $2 ATK you have, up to $4 for $5 turns. Gives the main target [Fire of Purification] for $6 turns. [Fire of Purification]: After dealing {{A}} skill damage to foes, there is a $7 base chance to inflict $8 random foe with Burn."
 
-//(dominion)
+Dominion Cohesion
 r:"^使<color\=#FFFF00>所有</color>同伴攻擊力提升(\d+\.\d+%)\+每(\d+)攻擊力額外提升(\d+\.\d+%)，持續(\d+)回合。使主目標同伴造成的傷害提升(\d+\.\d+%)\+每(\d+)攻擊力額外提升(\d+\.\d+%)，持續(\d+)回合。$"="Increases <color\=#FFFF00>all</color> allies' ATK by $1 + $3 for every $2 ATK for $4 turns. Increases the main target's DMG Dealt by $5 + $7 for every $6 ATK for $8 turn."
 
 Infinite Algorithm
@@ -817,6 +823,8 @@ r:"^防<color\=#000000>禦</color>力提升$"="D<color\=#000000>E</color>F Up"
 r:"^防<color\=#000000>禦</color>永久提升$"="P<color\=#000000>e</color>rmanent DEF Up"
 r:"^速<color\=#000000>度</color>提升$"="S<color\=#000000>P</color>D Up"
 r:"^生<color\=#000000>命</color>強化$"="H<color\=#000000>e</color>alth Boost"
+r:"^生<color\=#000000>命</color>值提升$"="M<color\=#000000>a</color>x HP Up"
+r:"^生<color\=#000000>命</color>上限提升$"="M<color\=#000000>a</color>x HP Up"
 r:"^最<color\=#000000>大</color>生命值提升$"="M<color\=#000000>a</color>x HP Up"
 r:"^精<color\=#000000>力</color>回復提升$"="S<color\=#000000>P</color> Recovery Up"
 r:"^穿<color\=#000000>透</color>提升$"="P<color\=#000000>E</color>N Up"
@@ -846,7 +854,6 @@ r:"^護<color\=#000000>盾</color>效果提升$"="S<color\=#000000>h</color>ield
 r:"^受<color\=#000000>治</color>療提升$"="H<color\=#000000>e</color>aling Received Up"
 r:"^受<color\=#000000>護</color>盾提升$"="S<color\=#000000>h</color>ield Received Up"
 
-r:"^生<color\=#000000>命</color>上限提升$"="M<color\=#000000>a</color>x HP Up"
 r:"^生<color\=#000000>命</color>治療$"="R<color\=#000000>e</color>generate"
 r:"^生<color\=#000000>命</color>回復$"="R<color\=#000000>e</color>generate"
 r:"^護<color\=#000000>盾</color>$"="S<color\=#000000>h</color>ield"
@@ -914,12 +921,14 @@ r:"^受<color\=#000000>傷</color>害提升$"="D<color\=#000000>M</color>G Taken
 r:"^受<color\=#000000>到</color>傷害提升$"="D<color\=#000000>M</color>G Taken Up"
 r:"^受<color\=#000000>最</color>終傷害提高$"="F<color\=#000000>i</color>nal DMG Taken Up"
 r:"^受<color\=#000000>到</color>最終傷害提高$"="F<color\=#000000>i</color>nal DMG Taken Up"
-r:"^傷<color\=#000000>害</color>降低$"="D<color\=#000000>a</color>mage Down"
+r:"^傷<color\=#000000>害</color>降低$"="D<color\=#000000>M</color>G Down"
 r:"^傷<color\=#000000>害</color>弱化$"="D<color\=#000000>M</color>G Nerf"
 r:"^受<color\=#000000>物</color>理傷害提升$"="P<color\=#000000>h</color>ys DMG Taken Up"
+r:"^受<color\=#000000>物</color>理傷害提高$"="P<color\=#000000>h</color>ys DMG Taken Up"
 r:"^受<color\=#000000>物</color>理傷害加深$"="P<color\=#000000>h</color>ys DMG Taken Up"
 r:"^受<color\=#000000>火</color>焰傷害提高$"="F<color\=#000000>i</color>re DMG Taken Up"
 r:"^受<color\=#000000>到</color>火焰傷害提升$"="F<color\=#000000>i</color>re DMG Taken Up"
+r:"^受<color\=#000000>冰</color>凍傷害提高$"="I<color\=#000000>c</color>e DMG Taken Up"
 r:"^受<color\=#000000>電</color>擊傷害提高$"="E<color\=#000000>l</color>ec DMG Taken Up"
 r:"^受<color\=#000000>到</color>電傷提升$"="E<color\=#000000>l</color>ec DMG Taken Up"
 r:"^受<color\=#000000>到</color>電擊傷害提升$"="E<color\=#000000>l</color>ec DMG Taken Up"
@@ -953,68 +962,79 @@ Inspect Details - TITLES
 ----------
 屬性降低=Stats Nerf
 屬性下降=Stats Nerf
-r:"^生命提升$"="Increase HP"
-r:"^攻擊提升$"="Increase ATK"
-r:"^攻擊力提升$"="Increase ATK"
-r:"^防禦提升$"="Increase DEF"
-r:"^防禦力提升$"="Increase DEF"
-r:"^防禦永久提升$"="Permanently increase DEF"
-r:"^防禦降低$"="Decrease DEF"
-r:"^防禦力降低$"="Decrease DEF"
-r:"^防禦弱化$"="Defense Nerf"
-r:"^速度提升$"="Increase SPD"
-r:"^傷害增加$"="Increase Damage"
-r:"^傷害提升$"="Increase Damage"
-r:"^傷害弱化$"="Damage Nerf"
-r:"^暴擊提升$"="Increase CRIT Rate"
-r:"^暴擊率提升$"="Increase CRIT Rate"
-r:"^暴擊傷害提升$"="Increase CRIT DMG"
-r:"^暴擊效果提升$"="Increase CRIT DMG"
-r:"^穿透提升$"="Increase PEN"
-r:"^命中提升$"="Increase EHR"
-r:"^效果命中提升$"="Increase EHR"
-r:"^效果抵抗提升$"="Increase Effect RES"
-r:"^傷害強化$"="Damage Boost"
-r:"^傷害提高$"="Increase DMG Dealt"
+生命提升=Increase HP
+攻擊提升=Increase ATK
+攻擊力提升=Increase ATK
+防禦提升=Increase DEF
+防禦力提升=Increase DEF
+防禦永久提升=Permanently increase DEF
+防禦降低=Decrease DEF
+防禦力降低=Decrease DEF
+防禦弱化=Defense Nerf
+速度提升=Increase SPD
+傷害增加=Increase Damage
+傷害提升=Increase Damage
+傷害弱化=Damage Nerf
+暴擊提升=Increase CRIT Rate
+暴擊率提升=Increase CRIT Rate
+暴擊傷害提升=Increase CRIT DMG
+暴擊效果提升=Increase CRIT DMG
+穿透提升=Increase PEN
+命中提升=Increase EHR
+效果命中提升=Increase EHR
+效果抵抗提升=Increase Effect RES
+傷害強化=Damage Boost
+傷害提高=Increase DMG Dealt
 HIGHLIGHT傷害提升=Increase HIGHLIGHT DMG
-r:"^造成傷害提升$"="Increase DMG Dealt"
-r:"^造成傷害提高$"="Increase DMG Dealt"
-r:"^受傷害提升$"="Increase DMG Taken"
-r:"^受到傷害提高$"="Increase DMG Taken"
-r:"^受到傷害提升$"="Increase DMG Taken"
-r:"^受到傷害增加$"="Increase DMG Taken"
+造成傷害提升=Increase DMG Dealt
+造成傷害提高=Increase DMG Dealt
+受傷害提升=Increase DMG Taken
+受到傷害提高=Increase DMG Taken
+受到傷害提升=Increase DMG Taken
+受到傷害增加=Increase DMG Taken
 受到暴擊效果提升=Increase CRIT DMG Taken
-r:"^受HL傷害提升$"="Increase HIGHLIGHT DMG Taken"
-r:"^受百分比傷害降低$"="<size\=23>Decrease Percentage DMG Taken</size>"
-r:"^受到百分比傷害降低$"="Decrease Percentage DMG Taken"
-r:"^受到基於自身最大生命值百分比的傷害降低$"="Decrease Percentage DMG Taken"
-r:"^受到基於自身最大生命值百分比的傷害大幅降低$"="Heavily decrease Percentage DMG Taken"
-r:"^受到基於自身最大生命值百分比的傷害特大幅降低$"="Severely decrease Percentage DMG Taken"
-r:"^受到基於自身最大生命值百分比的傷害極大幅降低$"="Severely decrease Percentage DMG Taken"
-r:"^受到最終傷害提高$"="Increase Final DMG Taken"
-r:"^最終傷害減免$"="Increase Final DMG RES"
-r:"^火焰傷害提升$"="Increase Fire DMG"
-r:"^凍結傷害提升$"="Increase Ice DMG"
-r:"^火焰、冰凍傷害提升$"="Increase Fire, Ice DMG"
-r:"^電擊傷害提升$"="Increase Elec DMG"
-r:"^疾風傷害提升$"="Increase Wind DMG"
-r:"^電擊、疾風傷害提升$"="Increase Elec, Wind DMG"
-r:"^念動傷害提升$"="Increase Psy DMG"
-r:"^核熱傷害提升$"="Increase Nuke DMG"
-r:"^念動、核熱傷害提升$"="Increase Psy, Nuke DMG"
-r:"^祝福傷害提升$"="Increase Bless DMG"
-r:"^詛咒傷害提升$"="Increase Curse DMG"
-r:"^祝福、詛咒傷害提升$"="Increase Bless, Curse DMG"
-r:"^萬能傷害提升$"="Increase Almighty DMG"
-r:"^弱點傷害提升$"="Increase Weak DMG"
-r:"^耐性穿透提升$"="Increase RES PEN"
+受HL傷害提升=Increase HIGHLIGHT DMG Taken
+受百分比傷害降低=<size\=23>Decrease Percentage DMG Taken</size>
+受到百分比傷害降低=Decrease Percentage DMG Taken
+受到基於自身最大生命值百分比的傷害降低=Decrease Percentage DMG Taken
+受到基於自身最大生命值百分比的傷害大幅降低=Heavily decrease Percentage DMG Taken
+受到基於自身最大生命值百分比的傷害特大幅降低=Severely decrease Percentage DMG Taken
+受到基於自身最大生命值百分比的傷害極大幅降低=Severely decrease Percentage DMG Taken
+受到最終傷害提高=Increase Final DMG Taken
+最終傷害減免=Increase Final DMG RES
+火焰傷害提升=Increase Fire DMG
+火焰傷害提高=Increase Fire DMG
+凍結傷害提升=Increase Ice DMG
+凍結傷害提高=Increase Ice DMG
+火焰、冰凍傷害提升=Increase Fire, Ice DMG
+電擊傷害提升=Increase Elec DMG
+電擊傷害提高=Increase Elec DMG
+疾風傷害提升=Increase Wind DMG
+疾風傷害提高=Increase Wind DMG
+電擊、疾風傷害提升=Increase Elec, Wind DMG
+念動傷害提升=Increase Psy DMG
+念動傷害提高=Increase Psy DMG
+核熱傷害提升=Increase Nuke DMG
+核熱傷害提高=Increase Nuke DMG
+念動、核熱傷害提升=Increase Psy, Nuke DMG
+祝福傷害提升=Increase Bless DMG
+祝福傷害提高=Increase Bless DMG
+詛咒傷害提升=Increase Curse DMG
+詛咒傷害提高=Increase Curse DMG
+祝福、詛咒傷害提升=Increase Bless, Curse DMG
+萬能傷害提升=Increase Almighty DMG
+萬能傷害提高=Increase Almighty DMG
+弱點傷害提升=Increase Weak DMG
+耐性穿透提升=Increase RES PEN
 
-r:"^治療效果提升$"="<size\=26>Increase Healing Effect</size>"
-r:"^護盾效果提升$"="Increase Shield Effect"
-r:"^受治療降低$"="Decrease Healing Received"
+治療效果提升=<size\=26>Increase Healing Effect</size>
+護盾效果提升=Increase Shield Effect
+受治療降低=Decrease Healing Received
 
 r:"^受弱點傷害提升(\d+%)$"="Increase Weakness DMG by $1"
 受物理傷害提升=Increase Phys DMG Taken
+受物理傷害提高=Increase Phys DMG Taken
+受射擊傷害提升=Increase Gun DMG Taken
 受射擊傷害提高=Increase Gun DMG Taken
 受火焰傷害提升=Increase Fire DMG Taken
 受火焰傷害提高=Increase Fire DMG Taken
@@ -1026,18 +1046,21 @@ r:"^受弱點傷害提升(\d+%)$"="Increase Weakness DMG by $1"
 受疾風傷害提升=Increase Wind DMG Taken
 受疾風傷害提高=Increase Wind DMG Taken
 受念動傷害提升=Increase Psy DMG Taken
+受念動傷害提高=Increase Psy DMG Taken
 受到念動傷害提升=Increase Psy DMG Taken
 受到念動傷害提高=Increase Psy DMG Taken
+受核熱傷害提升=Increase Nuke DMG Taken
 受核熱傷害提高=Increase Nuke DMG Taken
 受到核熱傷害提升=Increase Nuke DMG Taken
 受到核熱傷害提高=Increase Nuke DMG Taken
+受祝福傷害提升=Increase Bless DMG Taken
 受祝福傷害提高=Increase Bless DMG Taken
 受到祝福傷害提升=Increase Bless DMG Taken
 受到祝福傷害提高=Increase Bless DMG Taken
-受到詛咒傷害提升=Increase Curse DMG Taken
-受到詛咒傷害提高=Increase Curse DMG Taken
 受詛咒傷害提升=Increase Curse DMG Taken
 受詛咒傷害提高=Increase Curse DMG Taken
+受到詛咒傷害提升=Increase Curse DMG Taken
+受到詛咒傷害提高=Increase Curse DMG Taken
 
 火焰耐性消除=Negate Fire resistance
 
@@ -1098,6 +1121,7 @@ r:"^持續時間內，所有友方暴擊率提升(\d+(.\d+)?(%)?)$"="During this
 r:"^處於額外回合時，暴擊率提升(\d+%)，暴擊效果提升(\d+%)$"="<size\=24>Increase CRIT Rate by $1 and CRIT DMG by $2 during Extra Turn</size>"
 r:"^暴擊傷害提升(\d+(.\d+)?(%)?)$"="Increase CRIT DMG by $1"
 r:"^暴擊效果提升(\d+(.\d+)?(%)?)$"="Increase CRIT DMG by $1"
+r:"^造成電擊屬性傷害時，暴擊效果提升(\d+(.\d+)?(%)?)$"="When dealing Elec damage,\nincrease CRIT DMG by $1"
 r:"^暴擊效果額外提升(\d+(.\d+)?(%)?)$"="Additionally increase CRIT DMG by $1"
 r:"^受到的暴擊效果降低(\d+(.\d+)?(%)?)$"="Decrease CRIT DMG Taken by $1"
 r:"^精力回復提升(\d+(.\d+)?(%)?)$"="Increase SP Recovery by $1"
@@ -1171,6 +1195,7 @@ r:"^每層提升(\d+(.\d+)?(%)?)的凍結傷害$"="Increase Ice DMG by $1 per st
 r:"^火焰、冰凍傷害提升(\d+(.\d+)?(%)?)$"="Increase Fire, Ice DMG by $1"
 r:"^電擊傷害提升(\d+(.\d+)?(%)?)$"="Increase Elec DMG by $1"
 r:"^電擊傷害提高(\d+(.\d+)?(%)?)$"="Increase Elec DMG by $1"
+r:"^電擊屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase Elec DMG by $1"
 r:"^每層提升(\d+(.\d+)?(%)?)的電擊傷害$"="Increase Elec DMG by $1 per stack"
 r:"^造成的電擊屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase Elec DMG Dealt by $1"
 r:"^疾風傷害提升(\d+(.\d+)?(%)?)$"="Increase Wind DMG by $1"
@@ -1226,6 +1251,7 @@ r:"^防禦力降低(\d+(.\d+)?(%)?)$"="Decrease DEF by $1"
 r:"^防禦力降低(\d+%)，可疊加(\d+)層$"="Decrease DEF by $1, up to $2 stacks"
 r:"^所有怪盜最終防禦力下降(\d+(.\d+)?(%)?)$"="Decrease all Thieves' DEF by $1"
 r:"^受到暴擊效果提升(\d+(.\d+)?(%)?)$"="Increase CRIT DMG Taken by $1"
+r:"^觸電狀態下，受到暴擊效果提升(\d+(.\d+)?(%)?)$"="When inflicted with Shock, \nincrease CRIT DMG Taken by $1"
 r:"^效果抵抗降低(\d+(.\d+)?(%)?)$"="Decrease Effect RES by $1"
 受到的傷害提升=Increase DMG Taken
 r:"^受傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Taken by $1"
