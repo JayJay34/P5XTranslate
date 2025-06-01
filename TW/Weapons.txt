@@ -121,8 +121,11 @@ r:"^效果命中提升<color\=#2899FF>(.*)</color>。\n自身造成的元素異�
 蟲巢衛士晶石=<size\=19>Hive Guardian Crystal</size>
 僅可消耗蟲巢衛士晶石=Only use Hive Guardian Crystal
 
-磁暴干擾者=<size\=24>Magnetic Disruptor</size>
-磁暴干擾者晶石=<size\=16>Magnetic Disruptor Crystal</size>
+磁暴干擾者=<size\=22>Magnetic Disruptor</size>
+【磁化電漿】=[Magnetized Plasma]
+磁化電漿=Magnetized Plasma
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n進入戰鬥時，自身獲得<color\=#2899FF>(.*)</color>的暴擊率提升。\n戰鬥中，任意角色使用{{A}}技能造成電擊屬性傷害後，給所有角色添加持續(.*)回合的『磁化電漿』。『磁化電漿』：造成的傷害提升<color\=#2899FF>(.*)</color>，造成電擊屬性傷害時，暴擊效果提升<color\=#2899FF>(.*)</color>。$"="Increases ATK by <color\=#2899FF>$1</color>.\nAt the start of battle, increases own CRIT Rate by <color\=#2899FF>$2</color>.\nAfter any character uses a {{A}} skill to deal Elec damage, gives the party [Magnetized Plasma] for $3 turns. [Magnetized Plasma]: Increases DMG Dealt by <color\=#2899FF>$4</color>; Increases CRIT DMG when dealing Elec damage by <color\=#2899FF>$5</color>."
+磁暴干擾者晶石=<size\=15>Magnetic Disruptor Crystal</size>
 僅可消耗磁暴干擾者晶石=Only use Magnetic Disruptor Crystal
 
 極晝=Midnight Sun
@@ -156,8 +159,9 @@ r:"^攻擊力提升<color\=#2899FF>(.*)</color>。場上存在<link\="s\|115"><u
 電磁類星體=Electromagnetic Quasar
 【雷暴天象】=[Celestial Thunderstorm]
 雷暴天象=Celestial Thunderstorm
-r:"電擊傷害提升<color\=#2899FF>(.*)</color>。釋放{{A}}技能後獲得1層『電磁風暴』：使自身攻擊力提升<color\=#2899FF>(.*)</color>，若存在處於<link\="s\|104"><u>觸電</u></link>狀態的敵人則額外獲得1層，上限3層，效果持續2回合。『電磁風暴』為滿層時使所有怪盜造成的電擊屬性傷害提升<color\=#2899FF>(.*)</color>。$"="Increases Elec DMG by <color\=#2899FF>$1</color>. After using a Persona skill, gains 1 stack of [Electromagnetic Storm]: Increases ATK by <color\=#2899FF>$2</color> for 2 turns, gains 1 additional stack if there is a foe inflicted with <link\="s|104"><u>Shock</u></link>, up to 3 stacks. Increases all allies' Elec DMG Dealt by <color\=#2899FF>$3</color> when [Electromagnetic Storm] is at maxed stacks."
+r:"電擊傷害提升<color\=#2899FF>(.*)</color>。釋放{{A}}技能後獲得1層『電磁風暴』：使自身攻擊力提升<color\=#2899FF>(.*)</color>，若存在處於<link\="s\|104"><u>觸電</u></link>狀態的敵人則額外獲得1層，上限3層，效果持續2回合。『電磁風暴』為滿層時使所有怪盜造成的電擊屬性傷害提升<color\=#2899FF>(.*)</color>。$"="Increases Elec DMG by <color\=#2899FF>$1</color>. After using a Persona skill, gains 1 stack of [Electromagnetic Storm]: Increases ATK by <color\=#2899FF>$2</color> for 2 turns, gains 1 additional stack if there is a foe inflicted with <link\="s|104"><u>Shock</u></link>, up to 3 stacks. Increases all allies' Elec DMG Dealt by <color\=#2899FF>$3</color> when [Electromagnetic Storm] is at max stacks."
 電磁風暴=Electromagnetic Storm
+r:"^電<color\=#000000>磁</color>風暴$"="E<color\=#000000>l</color>ectromagnetic Storm"
 罪與罰=Crime and Punishment
 【電磁爆發】=[Electromagnetic Burst]
 電磁爆發=Electromagnetic Burst
@@ -175,11 +179,11 @@ r:"^最大生命值提升<color\=#2899FF>(.*)</color>。處於<link\="s\|151"><u
 忍具·天與刃翼=Shinobi Tool: Winged Sky Blade
 【影舞】=[Shadow Dance]
 影舞=Shadow Dance
-r:"^速度提升<color\=#2899FF>(\d+\.\d+)</color>。每擊破2個『破綻』，額外獲得<color\=#2899FF>(.*)</color>份『情報』；同時全體夥伴獲得<color\=#2899FF>(.*)</color>的傷害提升，持續1回合。『情報』上限層數提升至<color\=#2899FF>(.*)</color>層。$"="Increases SPD by <color\=#2899FF>$1</color>. For every 2 [Vulnerability] broken, gains <color\=#2899FF>$2</color> extra stacks of [Intel] and increases all allies's DMG Dealt by <color\=#2899FF>$3</color> for 1 turn. Increases the cap of Intel to <color\=#2899FF>$4</color>."
+r:"^速度提升<color\=#2899FF>(.*)</color>。每擊破(.*)個『破綻』，額外獲得<color\=#2899FF>(.*)</color>份『情報』；同時全體夥伴獲得<color\=#2899FF>(.*)</color>的傷害提升，持續(.*)回合。『情報』上限層數提升至<color\=#2899FF>(.*)</color>層。$"="Increases SPD by <color\=#2899FF>$1</color>. For every $2 [Vulnerability] broken, gains <color\=#2899FF>$3</color> extra stacks of [Intel] and increases all allies's DMG Dealt by <color\=#2899FF>$4</color> for $5 turn. Increases the cap of Intel to <color\=#2899FF>$6</color>."
 花見緋梅=Plum Viewing
 【含苞】=[Budding]
 含苞=Budding
-r:"^速度提升<color\=#2899FF>(\d+\.\d+)</color>。每次『破綻』被擊破時，使所有同伴獲得以下效果之一：攻擊力提升<color\=#2899FF>(.*)</color>，防禦力提升<color\=#2899FF>(.*)</color>，生命值提升<color\=#2899FF>(.*)</color>，持續(.*)回合；同時有<color\=#2899FF>(.*)</color>的固定機率使{{A}}額外獲得(.*)份『情報』。$"="Increases SPD by <color\=#2899FF>$1</color>. When breaking [Vulnerability], gives all allies one of the following effect for $5 turns: Increases ATK by <color\=#2899FF>$2</color>, increases DEF by <color\=#2899FF>$3</color>, increases HP by <color\=#2899FF>$4</color>; There is a <color\=#2899FF>$6</color> fixed chance to gain $7 additional [Intel]."
+r:"^速度提升<color\=#2899FF>(.*)</color>。每次『破綻』被擊破時，使所有同伴獲得以下效果之一：攻擊力提升<color\=#2899FF>(.*)</color>，防禦力提升<color\=#2899FF>(.*)</color>，生命值提升<color\=#2899FF>(.*)</color>，持續(.*)回合；同時有<color\=#2899FF>(.*)</color>的固定機率使{{A}}額外獲得(.*)份『情報』。$"="Increases SPD by <color\=#2899FF>$1</color>. When breaking [Vulnerability], gives all allies one of the following effect for $5 turns: Increases ATK by <color\=#2899FF>$2</color>, increases DEF by <color\=#2899FF>$3</color>, increases HP by <color\=#2899FF>$4</color>; There is a <color\=#2899FF>$6</color> fixed chance to gain $7 additional [Intel]."
 霽月銀勾=Bright Moon Hook
 【水中月】=[Moon in Water]
 水中月=Moon in Water
@@ -417,7 +421,7 @@ r:"^攻擊力提升<color\=#2899FF>(.*)</color>。攻擊處於<link\="s\|102"><u
 八荒一念=Singular Thought
 【輪迴之觸】=[Touch of Reincarnation]
 輪迴之觸=Touch of Reincarnation
-r:"^速度提升<color\=#2899FF>(\d+\.\d+)</color>。釋放技能攻擊敵人時，使技能主目標獲得『忘川水』：自身每有(.*)點速度，則使其受到的傷害提升<color\=#2899FF>(.*)</color>，效果持續(.*)回合，並使自身速度提升(.*)，持續(.*)回合。帶有<link\="s\|127"><u>『孟婆湯』</u></link>釋放技能時，該效果擴散至全體敵人。$"="Increases SPD by <color\=#2899FF>$1</color>. When using a skill to attack a foe, the main target gains [Water of Oblivion]: For every $2 SPD you have, increases their DMG Taken by <color\=#2899FF>$3</color> for $4 turn, then increases your SPD by $5 for $6 turns. When you have <link\="s|127"><u>[Meng Po Soup]</u></link>, the effect is spread to all foes."
+r:"^速度提升<color\=#2899FF>(.*)</color>。釋放技能攻擊敵人時，使技能主目標獲得『忘川水』：自身每有(.*)點速度，則使其受到的傷害提升<color\=#2899FF>(.*)</color>，效果持續(.*)回合，並使自身速度提升(.*)，持續(.*)回合。帶有<link\="s\|127"><u>『孟婆湯』</u></link>釋放技能時，該效果擴散至全體敵人。$"="Increases SPD by <color\=#2899FF>$1</color>. When using a skill to attack a foe, the main target gains [Water of Oblivion]: For every $2 SPD you have, increases their DMG Taken by <color\=#2899FF>$3</color> for $4 turn, then increases your SPD by $5 for $6 turns. When you have <link\="s|127"><u>[Meng Po Soup]</u></link>, the effect is spread to all foes."
 四時萬物=All under Four Seasons
 【臨戰之意】=[Will Before Battle]
 臨戰之意=Will Before Battle
