@@ -163,7 +163,7 @@ r:"^取消$"="Cancel"
 作戰基地=Metaverse Menu
 
 槍械=Gun
-面具/道具=Persona/ Item
+面具/道具=Persona/Item
 切換面具=Persona Change
 近戰攻擊=Melee Attack
 設置=Set
@@ -793,9 +793,12 @@ r:"^(\d+)天(\d+)時後結束$"="Ends in $1d $2h"
 r:"^(\d+)時(\d+)分後結束$"="Ends in $1h $2m"
 
 r:"^(\d+)天(\d+)時後開啟$"="Unlocks after $1d $2h"
+r:"^(\d+)時(\d+)分後開啟$"="Unlocks after $1h $2m"
 r:"^<sprite\=(\d+) tint\=1>天<sprite\=(\d+) tint\=1>時後開啟$"="Unlocks after <sprite\=$1 tint\=1>d <sprite\=$2 tint\=1>h"
 r:"^<sprite\=(\d+) tint\=1>天<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>時後開啟$"="Unlocks after <sprite\=$1 tint\=1>d <sprite\=$2 tint\=1><sprite\=$3 tint\=1>h"
 r:"^<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>天<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>時後開啟$"="Unlocks after <sprite\=$1 tint\=1><sprite\=$2 tint\=1>d <sprite\=$3 tint\=1><sprite\=$4 tint\=1>h"
+r:"^<sprite\=(\d+) tint\=1>時<sprite\=(\d+) tint\=1>分後開啟$"="Unlocks after <sprite\=$1 tint\=1>h <sprite\=$2 tint\=1>m"
+r:"^<sprite\=(\d+) tint\=1>時<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>分後開啟$"="Unlocks after <sprite\=$1 tint\=1>h <sprite\=$2 tint\=1><sprite\=$3 tint\=1>m"
 
 擁有:=Owned: 
 擁有=Owned
@@ -1153,8 +1156,8 @@ r:"進行(\d+)次足球部活動"=Join a Soccer Club activity $1 times
 r:"與任意一位協同者好感度達到(\d+)級"=Reach Rank $1 with any Confidant
 r:"^任意人格指數達到(\d+)級$"="Reach Rank $1 for any Social Stats"
 
-r:"完成(\d+)次「厄抑之境」 \((\d)\/(/d)\)"=Complete $1 Metaverse Farms ($2/$3)
-r:"^通關(\d+)次厄抑之境$"="Finish $1 Metaverse Farms"
+r:"完成(\d+)次「厄抑之境」 \((\d)\/(/d)\)"=Clear [Realm of Repression] $1 times ($2/$3)
+r:"^通關(\d+)次厄抑之境$"="Clear [Realm of Repression] $1 times"
 r:"^通關旖旎香調(.*)（或更高難度）$"="Finish a Perfume Farm on Difficulty $1 (or above)"
 r:"^通關裝配冶藝(.*)（或更高難度）$"="Finish an Ore Farm on Difficulty $1 (or above)"
 r:"^通關靈之參悟(.*)（或更高難度）$"="Finish an Incense Farm on Difficulty $1 (or above)"
@@ -1226,8 +1229,8 @@ r:"^<size\=60><sprite\=37 tint\=1></size><size\=28><color\=#FFE500>x10</color></
 可兌換五星武器包括：=Redeem 5★ weapons include:
 
 本期剩餘時間：=Time left:
-探索經驗：=Phantom Pass EXP: <size\=1>.</size>
-本週上限：=Weekly cap: <size\=1>.</size>
+探索經驗：=Exploring EXP: <size\=1>.</size>
+本週上限：=Weekly Cap: <size\=1>.</size>
 已達經驗獲取上限。=Reached EXP cap.
 購買等級=Buy Lv.
 r:"^購買後，提升至(\d+)級，可獲得以下獎勵$"="Buy to Lv. $1 and get"
@@ -1235,21 +1238,21 @@ r:"^購買後，提升至(\d+)級，可獲得以下獎勵$"="Buy to Lv. $1 and g
 通行證等級提升=Pass LEVEL UP
 每次完成今日目標可獲得=Complete daily tasks to receive useful rewards:
 今日剩餘領取次數=Dailies left to complete:
-每次完成今日目標可領獎，剩餘   次=Daily task rewards: You have   left
+每次完成今日目標可領獎，剩餘   次=<size\=21>Complete</size><size\=18> </size><size\=21>Daily</size><size\=18> </size><size\=21>Pass</size><size\=18> </size><size\=21>goals</size><size\=18> </size><size\=21>to</size><size\=18> </size><size\=21>get</size><size\=18> </size><size\=21>rewards:</size>   <size\=21>Left</size>
 伴手禮=Gift Bag
 禮包=Gift Bag
 成長經驗=<size\=26>Phantom Pass EXP</size>
-購買立即獲得<size\=44><sprite\=27 tint\=1></size>650=Buy and get 650 <size\=44><sprite\=27 tint\=1></size>
-本週累計「今日目標」領獎次數\n「下週一」領取對應「補給禮包」=<size\=22>Number of dailys completed this week\nLog in next Monday to get the Gift Box</size>
-本週累計「今日目標」領獎次數\n「<color\=#ff3b37>後日登入</color>」領取對應「補給禮包」=<size\=22>Number of dailys completed this week\n<color\=#ff3b37>Log in the day after tomorrow</color> \nto get the Gift Box</size>
-本週累計「今日目標」領獎次數\n「<color\=#ff3b37>明日登入</color>」領取對應「補給禮包」=<size\=22>Number of dailys completed this week\n<color\=#ff3b37>Log in Tomorrow</color> to get the Gift Box</size>
-距離下次領取剩餘：=Time until next Gift Box:
+r:"^購買立即獲得<size\=44><sprite\=27 tint\=1></size>(\d+)$"="<size\=18>Recieve <size\=44><sprite\=27 tint\=1></size> x$1 upon purchase</size>"
+本週累計「今日目標」領獎次數\n「下週一」領取對應「補給禮包」=<size\=22>Get Daily Pass rewards for the week</size>\n<size\=22>and the Supply Pack for next Monday</size>
+本週累計「今日目標」領獎次數\n「<color\=#ff3b37>後日登入</color>」領取對應「補給禮包」=<size\=22>Get Daily Pass rewards for the week</size>\n<size\=18>and the Supply Pack for <color\=#ff3b37>the day after tomorrow</color></size>
+本週累計「今日目標」領獎次數\n「<color\=#ff3b37>明日登入</color>」領取對應「補給禮包」=<size\=22>Get Daily Pass rewards for the week</size>\n<size\=22>and the Supply Pack for <color\=#ff3b37>tomorrow</color></size>
+距離下次領取剩餘：=Time until next Supply Pack:
 r:"^(\d+)時(\d+)$"=" $1 hours $2 minutes"
 「下週一」登錄即可領取=Log in next Monday to claim!
 「下週一」登入即可領取=Log in next Monday to claim!
-r:"^本週累計今日計畫領獎次數\（(\d+)/(\d+)\），可額外領取$"="Bonus rewards after completing ($1/$2) dailys"
-r:"^本週累計今日計畫領獎次數\（(\d+)/(\d+)\），再額外領取$"="Bonus rewards after completing ($1/$2) dailys"
-r:"^本週累計今日計畫領獎次數\((\d+)\/(\d+)\)，可額外領取$"="Number of dailys completed this week ($1/$2), you can receive additional rewards"
+r:"^本週累計今日計畫領獎次數\（(\d+)/(\d+)\），可額外領取$"="Bonus rewards after completing ($1/$2) goals"
+r:"^本週累計今日計畫領獎次數\（(\d+)/(\d+)\），再額外領取$"="Bonus rewards after completing ($1/$2) goals"
+r:"^本週累計今日計畫領獎次數\((\d+)\/(\d+)\)，可額外領取$"="Number of goals completed this week ($1/$2), you can receive additional rewards"
 
 神秘武器套件=Mysterious Weapon Kit
 武器=Weapon
@@ -1258,31 +1261,31 @@ r:"^神秘怪盜「(.*)」的專屬近戰武器。$"="Exclusive melee weapon for
 sr:"^是否消耗「(.*)」×1兌換「(.*)」×1？$"="Use [$1] x1 to redeem [$2] x1?"
 
 // DAILY //
-本日計畫=Daily Plan
-當期計畫=Seasonal Plan
+本日計畫=Daily Goal
+當期計畫=Season Goal
 r:"^登入遊戲$"="Log in to the game"
 r:"^登入遊戲\((\d+)\/(\d+)\)$"="Log in to the game ($1/$2)"
 r:"^登入遊戲 \((\d+)\/(\d+)\)$"="Log in to the game ($1/$2)"
 r:"進行1次{{A}}合成"=Fuse 1 Persona
-r:"完成1次「{{A}}」挑戰 \((\d+)\/(\d+)\)"=Complete 1 {{A}} Farm ($1/$2)
-r:"進行1次打工 \((\d+)\/(\d+)\)"=Complete 1 Part-time job ($1/$2)
+r:"完成1次「{{A}}」挑戰 \((\d+)\/(\d+)\)"=Clear 1 {{A}} Farm ($1/$2)
+r:"進行1次打工 \((\d+)\/(\d+)\)"=Clear 1 Part-time job ($1/$2)
 r:"^消耗(\d+)日元 \((\d+)\/(\d+)\)$"="Spend ¥$1 (¥$2/$3)"
 r:"^消耗(\d+)魂石 \((\d+)\/(\d+)\)$"="Spend $1 Soul Gems ($1/$2)"
 
-r:"^消耗(\d+)點行動力 \((\d+)\/(\d+)\)$"="Spend $1 Energy Points ($2/$3)"
-r:"^消耗(\d+)點體力 \((\d+)\/(\d+)\)$"="Spend $1 Stamina ($2/$3)"
+r:"^消耗(\d+)點行動力 \((\d+)\/(\d+)\)$"="Use $1 Energy Points ($2/$3)"
+r:"^消耗(\d+)點體力 \((\d+)\/(\d+)\)$"="Use $1 Stamina ($2/$3)"
 r:"進行1次邀約"=Spend time with a Confidant 1 time
-r:"^完成2次「厄抑之境」 \((\d+)\/2\)"=Complete 2 Metaverse Farm ($1/2)
-r:"完成1次「啟示套裝」挑戰 \((\d+)\/(\d+)\)"=Complete 1 [Revelation Farm] ($1/$2)
-r:"完成1次「旖旎香調」挑戰 \((\d+)\/(\d+)\)"=Complete 1 [Perfume Farm] ($1/$2)
-r:"完成1次「裝配冶藝」挑戰 \((\d+)\/(\d+)\)"=Complete 1 [Ore Farm] ($1/$2)
-r:"完成1次「靈之參悟」挑戰 \((\d+)\/(\d+)\)"=Complete 1 [Incense Farm] ($1/$2)
+r:"^完成2次「厄抑之境」 \((\d+)\/2\)"=Clear [Realm of Repression] 2 times ($1/2)
+r:"完成1次「啟示套裝」挑戰 \((\d+)\/(\d+)\)"=Clear 1 [Revelation Farm] ($1/$2)
+r:"完成1次「旖旎香調」挑戰 \((\d+)\/(\d+)\)"=Clear 1 [Perfume Farm] ($1/$2)
+r:"完成1次「裝配冶藝」挑戰 \((\d+)\/(\d+)\)"=Clear 1 [Ore Farm] ($1/$2)
+r:"完成1次「靈之參悟」挑戰 \((\d+)\/(\d+)\)"=Clear 1 [Incense Farm] ($1/$2)
 r:"進行1次{{A}}育成 \((\d+)\/(\d+)\)"=Perfrom 1 Persona skill inheritance ($1/$2)
-r:"^完成1次「往日回溯」挑戰 \((\d+)\/(\d+)\)$"="Complete 1 [Past Echo] ($1/$2)"
-r:"^通關1次「閼凶夢之扉」 \((\d+)\/(\d+)\)$"="Complete 1 [Door of Nightmares] ($1/$2)"
-r:"^完成1次閼凶夢之扉 \((\d+)\/(\d+)\)$"="Complete 1 [Door of Nightmares] ($1/$2)"
-r:"^完成1次「天鵝絨試煉」 \((\d+)\/(\d+)\)$"="Complete 1 [Velvet Trial] ($1/$2)"
-r:"^完成1次「心之海試煉」 \((\d+)\/(\d+)\)$"="Complete 1 [Sea of Souls Trials] ($1/$2)"
+r:"^完成1次「往日回溯」挑戰 \((\d+)\/(\d+)\)$"="Clear 1 [Past Echo] ($1/$2)"
+r:"^通關1次「閼凶夢之扉」 \((\d+)\/(\d+)\)$"="Clear 1 [Door of Nightmares] ($1/$2)"
+r:"^完成1次閼凶夢之扉 \((\d+)\/(\d+)\)$"="Clear 1 [Door of Nightmares] ($1/$2)"
+r:"^完成1次「天鵝絨試煉」 \((\d+)\/(\d+)\)$"="Clear 1 [Velvet Trial] ($1/$2)"
+r:"^完成1次「心之海試煉」 \((\d+)\/(\d+)\)$"="Clear 1 [Sea of Souls Trials] ($1/$2)"
 r:"^在「心軌擇行」中通過1個月臺 \((\d+)\/(\d+)\)$"="Clear 1 Platform in [Heart Rail] ($1/$2)"
 r:"^完成1次「委託」派遣 \((\d+)\/(\d+)\)$"="Complete 1 [Commissions] ($1/$2)"
 r:"^累計完成(\d+)次委託派遣 \((\d+)\/(\d+)\)$"="Complete $1 [Commissions] ($2/$3)"
@@ -1290,10 +1293,10 @@ r:"^累計完成(\d+)次委託派遣 \((\d+)\/(\d+)\)$"="Complete $1 [Commission
 // WEEKLY //
 r:"累計消耗(\d+)魂石 \((\d+)\/(\d+)\)"=Spend $1 Soul Gems ($2/$3)
 r:"累計消耗(\d+)日元 \((\d+)\/(\d+)\)"=Spend ¥$1 (¥$2/¥$3)
-r:"累計消耗(\d+)點體力 \((\d+)\/(\d+)\)"=Spend $1 Stamina ($2/$3)
-r:"累計消耗(\d+)點行動力 \((\d+)\/(\d+)\)"=Spend $1 Energy Points ($2/$3)
-r:"^累計完成12次「厄抑之境」 \((\d+)\/(\d+)\)$"=Complete 12 Farming Domain ($1/12)
-r:"完成1次「往日回溯」 \((\d+)\/(\d+)\)"=Complete 1 [Past Echo] ($1/$2)
+r:"累計消耗(\d+)點體力 \((\d+)\/(\d+)\)"=Use $1 Stamina ($2/$3)
+r:"累計消耗(\d+)點行動力 \((\d+)\/(\d+)\)"=Use $1 Energy Points ($2/$3)
+r:"^累計完成12次「厄抑之境」 \((\d+)\/(\d+)\)$"=Clear 12 [Realm of Repression] ($1/12)
+r:"完成1次「往日回溯」 \((\d+)\/(\d+)\)"=Clear 1 [Past Echo] ($1/$2)
 r:"^達到「閼凶夢之扉」第4檔積分要求 \((\d+)\/(\d+)\)$"="Reach the 4th score bracket in [Door of Nightmares] ($1/$2)"
 r:"在「心軌擇行」中通過10個月臺 \((\d+)\/10\)"=Clear 10 Platforms in [Heart Rail] ($1/10)
 r:"在「星盤試煉」通過1個「監測點」 \((\d+)\/(\d+)\)$"="Clear 1 [Monitoring Point] in [Astrolabe Trials] ($1/$2)"
@@ -1304,7 +1307,7 @@ r:"在「怪盜交易所」中消耗3000個怪盜徽記 \((\d+)\/(\d+)\)"=Spend 
 r:"累計進行50次「角色簽約」&「武器補給」 \((\d+)\/(\d+)\)"=Perform 50 pulls in total ($1/$2)
 r:"在「心之海試煉」中通過「西部施工區」 \((\d+)\/(\d+)\)"=Clear [West Construction Zone] in Sea of Souls Trials ($1/$2)
 r:"完成12次「在盧布朗度過」日程 \((\d+)\/(\d+)\)"=Spend time in Leblanc 12 times ($1/$2)
-r:"在「心軌擇行」中完成1次挑戰 \((\d+)\/1\)"=Complete 1 challenge in [Heart Rail] ($1/1)
+r:"在「心軌擇行」中完成1次挑戰 \((\d+)\/1\)"=Clear 1 challenge in [Heart Rail] ($1/1)
 r:"完成一個星盤試練的「宮主星」或「命主星」 \((\d+)\/1\)"=Clear 1 [House] or [Chart Ruler] in Astrolabe Trials ($1/1)
 r:"在「星盤試煉」中通過「紫色或紅色」監測點 \((\d+)\/(\d+)\)"=Clear 1 [Purple or Red] Monitoring Point in Astrolabe Trials ($1/$2)
 r:"^在「{{A}}」中擊殺(\d+)次「交錯之影」 \((\d+)\/(\d+)\)$"="Defeat $1 [Tangled Shadow] in {{A}} ($2/$3)"
@@ -1445,6 +1448,8 @@ Weapon Obtain Details
 sr:"^「當未觸發UP或保底規則時，所有武器均分基礎獲取機率」\n<sprite\=0 tint\=1><color\=#EADE10>五星武器</color>\n基礎機率：(.*)\（含保底綜合補給成功機率：(.*)\）\n當前自選UP武器：「(.*)」\n\n<sprite\=0 tint\=1><color\=#EADE10>四星武器</color>\n基礎機率：(.*)\（含保底綜合補給成功機率：(.*)\）\n(.*)\n\n<sprite\=0 tint\=1><color\=#EADE10>三星武器</color>\n基礎機率：(.*)\n(.*)$"="[When RATE UP or guaranteed rule is not triggered, all Weapons share the same base obtain probability]\n<sprite\=0 tint\=1><color\=#EADE10>5★ Weapons</color>\nBase probability: $1 (incl. guarantee: $2)\nCurrent Custom RATE UP Weapon: [$3]\n\n<sprite\=0 tint\=1><color\=#EADE10>4★ Weapons</color>\nBase probability: $4 (incl. guarantee: $5)\n$6\n\n<sprite\=0 tint\=1><color\=#EADE10>3★ Weapons</color>\nBase probability: $7\n$8"
 
 無聲硝煙=Silent Tension
+爆竹與歲除=Celebrate The New Year
+江戶之花=Blooming Flower Of Fire
 偵探王子再臨=The Detective Prince
 轟鳴的方程式=Max Formula Racing
 新生之翼=The Nirvana Song
@@ -1993,7 +1998,7 @@ r:"^都市日程<color\=#ffc000>在中心噴泉許願</color>已解鎖，\n每�
 
 在夏卡爾打工=<size\=24>Work part-time\nat Chagall Café</size>
 {{A}}的夏卡爾咖啡店似乎需要人手，要去幫忙嗎？=Chagall Café is understaffed, \nwant to help out?
-{{A}}的夏卡爾咖啡店今天似乎特別忙碌……=Chagall Café seems very busy today...
+{{A}}的夏卡爾咖啡店今天似乎特別忙碌……=<size\=26>Chagall Café seems very busy today...</size>
 
 由於掌握了打工『觀察的心得』，因此獲得了額外收益。=<size\=28>Because I have mastered Observation Insights, I have gained more Social Stats.</size> 
 由於掌握了打工『觀察的心得』,掌握了打工『服務的心得』，因此獲得了額外收益。=<size\=25>Because I have mastered Observation Insights and Service Insights, \nI have gained more Social Stats.</size> 
@@ -2258,8 +2263,8 @@ sr:"是(.*)的『(.*)』。$"="It's the $1 $2."
 逆位=reversed
 
 愚者=Fool
-r:"^在下次通過『厄抑之境』獲得{{A}}時，額外獲得大量獎勵。$"="The next time you complete a Metaverse Farm to gain Persona, gain lots of bonus rewards."
-sr:"^在下次通過『厄抑之境』獲得{{A}}時，額外獲得大量獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you complete a Metaverse Farm to gain Persona, gain lots of bonus rewards.\n<color\=#FFC000>($1 time(s) left)</color>"
+r:"^在下次通過『厄抑之境』獲得{{A}}時，額外獲得大量獎勵。$"="The next time you clear Realm of Repression to gain Persona, gain lots of bonus rewards."
+sr:"^在下次通過『厄抑之境』獲得{{A}}時，額外獲得大量獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you clear Realm of Repression to gain Persona, gain lots of bonus rewards.\n<color\=#FFC000>($1 time(s) left)</color>"
 
 魔術師=Magician
 在接下來4次透過工作台合成道具時，額外產出少量道具。=The next 4 times you craft at the workbench, gain some bonus items.
@@ -2302,14 +2307,14 @@ r:"^在接下來2次透過都市日程進行『健身房』鍛煉時，額外獲
 倒吊人=Hanged Man
 
 死神=Death
-在下次通過『榮級求索』、『輜械求索』、『人格求索』關卡時，額外獲得大量獎勵。=The next time you complete a [Character EXP Farm], [Weapon EXP Farm] or [Persona EXP Farm], gain lots of bonus rewards.
-r:"^在下次通過『榮級求索』、『輜械求索』、『人格求索』關卡時，額外獲得大量獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you complete a [Character EXP Farm], [Weapon EXP Farm] or [Persona EXP Farm], gain lots of bonus rewards.\n<color\=#FFC000>($1 time(s) left)</color>"
+在下次通過『榮級求索』、『輜械求索』、『人格求索』關卡時，額外獲得大量獎勵。=The next time you clear a [Character EXP Farm], [Weapon EXP Farm] or [Persona EXP Farm], gain lots of bonus rewards.
+r:"^在下次通過『榮級求索』、『輜械求索』、『人格求索』關卡時，額外獲得大量獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you clear a [Character EXP Farm], [Weapon EXP Farm] or [Persona EXP Farm], gain lots of bonus rewards.\n<color\=#FFC000>($1 time(s) left)</color>"
 
 節制=Temperance
 
 惡魔=Devil
-sr:"^在下次通過『(.*)』、『(.*)』關卡時，額外獲得大量獎勵。$"="The next time you complete a $1 or $2, gain lots of bonus rewards."
-sr:"^在下次通過『(.*)』、『(.*)』關卡時，額外獲得大量獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you complete a $1 or $2, gain lots of bonus rewards.\n<color\=#FFC000>（$3 time(s) left)</color>"
+sr:"^在下次通過『(.*)』、『(.*)』關卡時，額外獲得大量獎勵。$"="The next time you clear a $1 or $2, gain lots of bonus rewards."
+sr:"^在下次通過『(.*)』、『(.*)』關卡時，額外獲得大量獎勵。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next time you clear a $1 or $2, gain lots of bonus rewards.\n<color\=#FFC000>（$3 time(s) left)</color>"
 
 星星=Star
 
@@ -2357,7 +2362,7 @@ r:"^精<color\=#ff0000ff>算</color>機$"="F<color\=#ff0000ff>a</color>re Adjust
 r:"^<color\=#FFDe00>{{A}}</color>票務等級達到<color\=#FFDe00>(\d+)級</color>開啟。\n收集足夠乘車券，提交到精算機後再來吧。$"="This unlocks at <color\=#FFDe00>{{A}}</color> ticket level <color\=#FFDe00>$1</color>. Let's return after getting enough tickets for the fare adjustment machine."
 嗯？好像從這個方向過不去呢，\nWONDER，繞到它後面試試看吧。=Hmm? Seems we can't get through from this side. Wonder, let's try going around the back.
 
-r:"^厄抑之境$"="Metaverse Farm"
+厄抑之境=Realm of Repression
 『暗影獵域』=[Persona Farm]
 「暗影獵域」=[Persona Farm]
 暗影獵域=Persona Farm
@@ -2447,7 +2452,7 @@ r:"^領取 <color\=#0665ca>(\d+)</color> 次必得$"="Guarantee after <color\=#0
 r:"持有印記：(\d+)"=Mark Owned: $1
 r:"^區域$"="Area"
 嗯？要從{{A}}撤退，返回都市嗎？=Hm? Want to retreat from Mementos\nand head back to the city?
-r:"^領獎需要消耗(\d+)點體力，\n當前體力不足，是否確認潛入？$"="You need to consume $1 Stamina \nin order to claim the rewards.\nYou don't have enough Stamina, \ndo you still want to infiltrate?"
+r:"^領獎需要消耗(\d+)點體力，\n當前體力不足，是否確認潛入？$"="You need to use $1 Stamina \nin order to claim the rewards.\nYou don't have enough Stamina, \ndo you still want to infiltrate?"
 r:"^挑戰需要消耗(\d+)點體力，\n當前<color\=#ff3b37>體力不足</color>，是否補充體力？$"="Need $1 Stamina to challenge.\n<color\=#ff3b37>You don't have enough Stamina</color>, \nwant to replenish Stamina?"
 領獎所需體力不足，是否兌換體力？=Insufficient Stamina to claim the rewards, want to replenish Stamina?
 挑戰所需體力不足，是否兌換體力？=Insufficient Stamina to challenge, want to replenish Stamina?
@@ -2626,9 +2631,9 @@ r:"^一顆承載了星光的寶珠，可用於提升啟示卡經驗，使用後�
 來自宇宙的命運指引，打開後可自選一張橙色指定套裝的基礎啟示卡。=A guidance of fate from the Universe, can be used to gain 1 Orange Revelation Card from any set
 r:"^是否確認選擇「(.*)」？\n需在對應怪盜開放後，才能裝備。$"="Get Revelation Card from this set?"
 未知宿命橙·基礎=<size\=17>Random 4★ Revelation</size>
-被迷霧籠罩的命運之卡，獲取後會隨機變化為一張橙色品質的日月星辰位啟示卡。=<size\=22>Card of fate shrouded in mist, transforms into a random 4★ Sun/ Moon/ Star/ Planet Revelation Card after purchase.</size>
+被迷霧籠罩的命運之卡，獲取後會隨機變化為一張橙色品質的日月星辰位啟示卡。=<size\=22>Card of fate shrouded in mist, transforms into a random 4★ Sun/Moon/Star/Planet Revelation Card after purchase.</size>
 未知宿命紫·基礎=<size\=17>Random 3★ Revelation</size>
-被迷霧籠罩的命運之卡，獲取後會隨機變化為一張紫色品質的日月星辰位啟示卡。=<size\=22>Card of fate shrouded in mist, transforms into a random 3★ Sun/ Moon/ Star/ Planet Revelation Card after purchase.</size>
+被迷霧籠罩的命運之卡，獲取後會隨機變化為一張紫色品質的日月星辰位啟示卡。=<size\=22>Card of fate shrouded in mist, transforms into a random 3★ Sun/Moon/Star/Planet Revelation Card after purchase.</size>
 sr:"^未知宿命藍·(.*)$"="2★ $1"
 sr:"^未知宿命橙·(.*)"="Random 4★ $1"
 未知宿命橙·愛=Random 4★ Love
@@ -2763,6 +2768,9 @@ P5X營運團隊=P5X Team
 
 r:"^時間：(\d+)-(\d+)-(\d+)$"="Time: $1-$2-$3"
 r:"^V(.*) 版本預告$"="V$1 Version Preview"
+r:"^(\d+)例行維護補償$"="<size\=21>$1 Scheduled Maintenance Compensation</size>"
+r:"^親愛的隊長您好：\n請收下(\d+)例行維護補償！祝各位{{A}}之旅順利！$"="Dear Captain:\nHere is the compensation for the $1 maintenance! We wish you a successful change of heart journey!"
+活動提醒！=Event Reminder!
 sr:"^「(.*)」即將結束$"="<size\=24>[$1] Ending Soon</size>"
 sr:"^「(.*)」獎勵補發$"="<size\=24>[$1] Reissue Rewards</size>"
 r:"^您的{{A}}任務「(.*)」獎勵未領取，已透過郵件發送，請查收附件。$"="Your unclaimed {{A}} mission rewards have been sent via mail. Please check the attachments."
@@ -2912,22 +2920,36 @@ r:"^參加(\d+)次任意都市日程\((\d+)/(\d+)\)$"="Participate in any $1 Cit
 研究所篇（下）=Laboratory (Chapter 2)
 r:"^在盧布朗中與{{A}}消磨時光\((\d+)\/(\d+)\)$"="Spend time with {{A}} in Café Leblanc ($1/$2)"
 
+P3R Collab
+新月篇=New Moon
+新月=New Moon
+三日月篇=Waxing Crescent
+三日月=Waxing Crescent
+ENEMY · 敵方陣容=ENEMY
+AWARD · 獎勵預覽=AWARD
+r:"^通關聯動故事(.*)第(\d+)關$"="Clear Collab Story Level $2"
+r:"^累計開啟(\d+)個寶箱$"="Open $1 Treasure Chests"
+開啟所有寶箱=Open All Treasure Chests
+r:"^解鎖「夢境之章」(\d+)個{{A}}的故事$"="Unlock $1 [Chapter of Dreams] for {{A}}"
+sr:"^解鎖「真宵堂」收藏品「(.*)」$"="Unlock the Antique [$1]"
+r:"^成功進行(\d+)次抓娃娃$"="Obtain a doll $1 times"
+
 每天5:00刷新任務=Refresh at 5 am daily
 每日5:00刷新任務=Refresh at 5 am daily
 每日任務於每天5:00重置=Daily missions refresh at 5 am daily
-r:"^消耗(\d+)點體力\((\d+)\/(\d+)\)$"="Spend $1 Stamina ($2/$3)"
-r:"^消耗(\d+)點行動力\((\d+)\/(\d+)\)$"="Spend $1 Energy Points ($2/$3)"
+r:"^消耗(\d+)點體力\((\d+)\/(\d+)\)$"="Use $1 Stamina ($2/$3)"
+r:"^消耗(\d+)點行動力\((\d+)\/(\d+)\)$"="Use $1 Energy Points ($2/$3)"
 r:"^完成(\d+)次委託派遣$"="Complete $1 Commissions"
 r:"^完成(\d+)次委託派遣\((\d+)\/(\d+)\)$"="Complete $1 Commissions ($2/$3)"
 r:"^完成(\d+)次委託派遣 \((\d+)\/(\d+)\)$"="Complete $1 Commissions ($2/$3)"
-r:"^完成(\d+)次往日回溯\((\d+)\/(\d+)\)$"="Complete $1 Past Echo ($2/$3)"
+r:"^完成(\d+)次往日回溯\((\d+)\/(\d+)\)$"="Clear $1 Past Echo ($2/$3)"
 在「星盤試煉」中通過「紫色或紅色」監測點=Clear 1 [Purple or Red] Monitoring Point in Astrolabe Trials
 r:"^在「星盤試煉」中通過「紫色或紅色」監測點\((\d+)\/(\d+)\)$"="Clear 1 [Purple or Red] Monitoring Point in Astrolabe Trials ($1/$2)"
 r:"^在「星盤試煉」中通過任意(\d+)個監測點\((\d+)\/(\d+)\)$"="Clear $1 Monitoring Point in Astrolabe Trials ($2/$3)"
-r:"^累計消耗(\d+)點體力\((\d+)\/(\d+)\)$"="Spend $1 Stamina ($2/$3)"
-r:"^累計消耗(\d+)點行動力\((\d+)\/(\d+)\)$"="Spend $1 Energy Points ($2/$3)"
-完成1次閼凶夢之扉=Complete 1 Door of Nightmares
-r:"^完成1次閼凶夢之扉\((\d+)\/(\d+)\)$"="Complete 1 Door of Nightmares ($1/$2)"
+r:"^累計消耗(\d+)點體力\((\d+)\/(\d+)\)$"="Use $1 Stamina ($2/$3)"
+r:"^累計消耗(\d+)點行動力\((\d+)\/(\d+)\)$"="Use $1 Energy Points ($2/$3)"
+完成1次閼凶夢之扉=Clear 1 Door of Nightmares
+r:"^完成1次閼凶夢之扉\((\d+)\/(\d+)\)$"="Clear 1 Door of Nightmares ($1/$2)"
 
 Story Patch Event Missions
 sr:"^已獲得(.*)：(\d+)$"="$1: $2"
