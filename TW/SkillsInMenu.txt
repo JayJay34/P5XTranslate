@@ -401,7 +401,7 @@ r:"^氣功(.*)$"="Invigorate $1"
 
 r:"^諸神庇護(.*)$"="Divine Grace $1"
 r:"^高壓電流(.*)$"="Fortified Moxy $1"
-r:"^命中強化(.*)$"="Hit Rate Boost $1"
+r:"^命中強化(.*)$"="EHR Boost $1"
 
 //Skill Resists
 r:"^免傷強化(.*)$"="Resist Damage $1"
@@ -527,6 +527,7 @@ sr:"^受到的(.*)屬性傷害降低(\d+\.\d+%)。$"="Decreases $1 DMG Taken by 
 
 //Lucky Punch
 r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，暴擊率提升(\d+%)，命中率降低(\d+%)。$"="Deals <color\=#FFFF00>$1</color> ATK Phys damage to 1 foe with a $2 increase in Crit Rate, and $3 decrease in Hit Rate."
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，暴擊率提升(\d+%)，命中率降低(\d+%)$"="Deals <color\=#FFFF00>$1</color> ATK Phys damage to 1 foe with a $2 increase in Crit Rate, and $3 decrease in Hit Rate."
 
 Glory Impact
 r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，場上只有1名敵人時，該技能造成的傷害提升(\d+%)。$"="Deals <color\=#fffc40>$1</color> ATK Phys damage to 1 foe. If there is only 1 foe left, increases DMG Dealt by $2."
@@ -738,7 +739,7 @@ Sarasvati Divine Chant
 r:"^使所有同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，並使所有同伴受到的傷害降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to all allies, then decreases all allies' DMG Taken by <color\=#fffc40>$3</color> for $4 turns."
 
 // Lotus
-r:"使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，並使自身獲得(\d+)層『蓮華』，『蓮華』存在期間，任意單位行動後，若有同伴生命值低於(\d+%)，則消耗一層『蓮華』，使其恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，『蓮華』持續(\d+)回合。"=Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to 1 ally, then gains $3 stacks of [Sacred Lotus] for $7 turn. When [Sacred Lotus] is present, if any ally is below $4 Max HP after their turn, consumes one stack of [Sacred Lotus] and restores <color\=#fffc40>$5</color> ATK + <color\=#fffc40>$6</color> HP to them."
+r:"^使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，並使自身獲得(\d+)層『蓮華』，『蓮華』存在期間，任意單位行動後，若有同伴生命值低於(\d+%)，則消耗一層『蓮華』，使其恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，『蓮華』持續(\d+)回合。$"="Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to 1 ally, then gains $3 stacks of [Sacred Lotus] for $7 turn. When [Sacred Lotus] is present, if any ally is below $4 Max HP after their turn, consumes one stack of [Sacred Lotus] and restores <color\=#fffc40>$5</color> ATK + <color\=#fffc40>$6</color> HP to them."
 
 //Titania idk
 r:"使所有同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，對生命值低於50%的同伴造成的治療效果提升25%。並使所有同伴回復(\d+)點精力值。"=Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to all allies.\nIncreases Healing Effect by 25% to allies under 50% HP.\nRestores $3 SP to all allies.
@@ -793,8 +794,8 @@ r:"使所有同伴的暴擊率提升<color\=#fffc40>(\d+\.\d+%)</color>，自身
 Shell Oblation
 r:"^使1名同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的護盾，效果持續2回合，持有該護盾的同伴受到傷害時，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使傷害來源進入凍結狀態，效果持續2回合。$"="Give 1 ally <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> Shield for 2 turns. When that ally take damage, there is a <color\=#fffc40>$3</color> base chance to inflict Freeze for 2 turns to the source of damage."
 
-// Hunter's Code
-r:"使1名同伴造成的傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，目標同伴每有20%效果命中，則獲得<color\=#fffc40>(\d+\.\d+%)</color>的額外增傷，上限<color\=#fffc40>(\d+\.\d+%)</color>，效果持續2回合。"=Increases 1 ally's damage dealt by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 20% Effect Hit Rate the ally has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
+Hunter's Code
+r:"^使1名同伴造成的傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，目標同伴每有(\d+%)效果命中，則獲得<color\=#fffc40>(\d+\.\d+%)</color>的額外增傷，上限<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Increases 1 ally's DMG Dealt by <color\=#fffc40>$1</color> + <color\=#fffc40>$3</color> for every $2 EHR the target has, up to <color\=#fffc40>$4</color> for $5 turns."
 
 Charge
 r:"使自身下1次造成的物理屬性傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續1回合。"=Increases your next Physical attack damage by <color\=#fffc40>$1</color> for 1 turn.
