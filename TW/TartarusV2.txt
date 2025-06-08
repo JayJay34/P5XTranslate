@@ -73,6 +73,7 @@ r:"^探索{{A}}，需要確定「<color\=#FFD145>隨行隊伍</color>」，\n包
 MENU + UI
 ----------
 {{A}}道具={{A}} Items
+sr:"^時之輪·(.*)$"="Wheel of Time·$1"
 時鐘的齒輪=Clock Gears
 「時鐘的齒輪」=[Clock Gears]
 心靈碎片=Heart Fragments
@@ -103,6 +104,9 @@ r:"^六周目(\d+)層$"="NG+5 $1F"
 r:"^七周目(\d+)層$"="NG+6 $1F"
 r:"^八周目(\d+)層$"="NG+7 $1F"
 r:"^九周目(\d+)層$"="NG+8 $1F"
+r:"^十周目(\d+)層$"="NG+9 $1F"
+r:"^十一周目(\d+)層$"="NG+10 $1F"
+r:"^十二周目(\d+)層$"="NG+11 $1F"
 周目:簡單=NG: Easy
 周目:<sprite\=1 tint\=1>=Loop:<sprite\=1 tint\=1>
 進度:<sprite\=2 tint\=1>層=Progress:<sprite\=2 tint\=1>層
@@ -119,7 +123,7 @@ r:"^九周目(\d+)層$"="NG+8 $1F"
 選擇=Select
 預選{{A}}的隨行角色，將透過「洗牌時間」加入正式陣容=<size\=25>The preselected {{A}} companion characters will join the team through [Shuffle Time]</size>
 探索時部分角色會有額外「戰鬥增益」，長按角色頭像可查看。=When exploring, some characters will gain [Combat Buffs], long press their avatar to view.
-r:"^<color\=#67FCFC>(.*)前開始遊戲，(.*)獲得屬性加成</color>\n<color\=#FFFFFF>(.*)、總防禦力、總生命值提升(.*)，最終傷害提升(.*)</color>$"="<color\=#67FCFC>When starting a run before $1, $2 will increase <color\=#FFFFFF>Total ATK, Total DEF, Total HP by $4, Final DMG by $5</color>"
+r:"^<color\=#67FCFC>(.*)前開始遊戲，(.*)獲得屬性加成</color>\n<color\=#FFFFFF>(.*)、總防禦力、總生命值提升(.*)，最終傷害提升(.*)</color>$"="<color\=#67FCFC>When starting a run before $1, <color\=#FFFFFF>increase Total ATK, Total DEF, Total HP by $4, Final DMG by $5</color>"
 設置攜帶收藏品=Set Equipped Antique
 作戰<sprite\=0 tint\=1><sprite\=15 tint\=1><sprite\=8 tint\=1> 解明<sprite\=0 tint\=1><sprite\=15 tint\=1><sprite\=2 tint\=1>=Combat<sprite\=0 tint\=1><sprite\=15 tint\=1><sprite\=8 tint\=1> Navigator<sprite\=0 tint\=1><sprite\=15 tint\=1><sprite\=2 tint\=1>
 已選擇作戰角色：<sprite\=8 tint\=1><sprite\=15 tint\=1><sprite\=8 tint\=1>=Selected Combat character:<sprite\=8 tint\=1><sprite\=15 tint\=1><sprite\=8 tint\=1>
@@ -217,7 +221,9 @@ r:"^消耗(\d+)個「拂曉的碎片」，定向選擇(\d+)個已擁有的角色
 大時鐘=Grand Clock
 時鐘=Clock
 
+獲得黃昏的碎片=Obtain Twilight Fragments
 世俗之庭台伯勒=Thebel
+奇顏之庭阿爾卡=Arqa
 
 通過=Pass
 r:"^消耗(\d+)點「意志力」清除迷霧，探索迷霧後的區域或許可以找到額外獎勵。$"="Consume $1 [Will] to clear the fog for new areas and rewards"
@@ -420,6 +426,9 @@ r:"^通關(\d+)次{{A}}六周目$"="Clear {{A}} on NG+5 $1 time(s)"
 r:"^通關(\d+)次{{A}}七周目$"="Clear {{A}} on NG+6 $1 time(s)"
 r:"^通關(\d+)次{{A}}八周目$"="Clear {{A}} on NG+7 $1 time(s)"
 r:"^通關(\d+)次{{A}}九周目$"="Clear {{A}} on NG+8 $1 time(s)"
+r:"^通關(\d+)次{{A}}十周目$"="Clear {{A}} on NG+9 $1 time(s)"
+r:"^通關(\d+)次{{A}}十一周目$"="Clear {{A}} on NG+10 $1 time(s)"
+r:"^通關(\d+)次{{A}}十二周目$"="Clear {{A}} on NG+11 $1 time(s)"
 r:"^解鎖(\d+)個{{A}}探索角色$"="Unlock $1 {{A}} exploration characters"
 r:"^解鎖「力量解放」基礎屬性節點(\d+)個$"="Unlock $1 Basic Stats in [Power Unleashed]"
 r:"^解鎖「力量解放」特色屬性、靈感技能或武器改造節點(\d+)個$"="Unlock $1 Thieves Instinct, Inspiration Skill or Weapon Reform in [Power Unleashed]"
@@ -447,6 +456,9 @@ r:"^通過{{A}}6周目第(\d+)層$"="Clear {{A}} Floor $1 on NG+5"
 r:"^通過{{A}}7周目第(\d+)層$"="Clear {{A}} Floor $1 on NG+6"
 r:"^通過{{A}}8周目第(\d+)層$"="Clear {{A}} Floor $1 on NG+7"
 r:"^通過{{A}}9周目第(\d+)層$"="Clear {{A}} Floor $1 on NG+8"
+r:"^通過{{A}}10周目第(\d+)層$"="Clear {{A}} Floor $1 on NG+9"
+r:"^通過{{A}}11周目第(\d+)層$"="Clear {{A}} Floor $1 on NG+10"
+r:"^通過{{A}}12周目第(\d+)層$"="Clear {{A}} Floor $1 on NG+11"
 r:"^{{A}}達到意識6的情況下，通關(\d+)次任意周目{{B}}$"="Clear {{B}} on any NG $1 time(s) with Awareness 6 {{A}}"
 r:"^{{A}}意識6的情況下，通關(\d+)次任意周目{{B}}$"="Clear {{B}} on any NG $1 time(s) with Awareness 6 {{A}}"
 
@@ -703,7 +715,7 @@ r:"^所有角色處於護盾下時，依據當前護盾量使穿透提升，每(
 
 寶劍·戰意高漲=Swords · Battle Frenzy
 r:"^任意角色使用HIGHLIGHT/{{A}}後，使所有角色造成傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="After any character uses HIGHLIGHT/{{A}}, increase all character's DMG Dealt by $1 for $2 turns, up to $3 stacks"
-寶劍·HL預備=Swords ·  HL Preparation
+寶劍·HL預備=Swords · HL Preparation
 r:"^戰鬥開始時，恢復(\d+%)HIGHLIGHT能量$"="At the start of battle, restore $1 HIGHLIGHT Energy"
 寶劍·HL表演家=Swords · HL Performer
 r:"^所有角色HIGHLIGHT造成最終傷害提升(\d+(.\d+)?(%)?)$"="Increase all characters' HIGHLIGHT Final DMG Dealt by $1"
@@ -868,8 +880,8 @@ r:"^立刻獲得(\d+)「時鐘的齒輪」、(\d+)「拂曉的碎片」、(\d+)�
 女教皇=Priestess
 r:"^所有角色造成{{A}}技能傷害時會額外降低敵方主目標(\d+)點倒地值，所有敵人受{{B}}傷害提升(\d+%)-(\d+%)（依據層數變化）$"="<size\=28>All characters additionally decrease the main target's Down Gauge by $1 when dealing {{A}} skill damage. Increase all foes' {{B}} DMG Taken by $2–$3 (change based on stacks)</size>"
 Chariot
-r:"^所有角色的HIGHLIGHT/{{A}}可以暴擊，但是HIGHLIGHT/{{A}}能量恢復效率降低(\d+%)$"="HIGHLIGHT/ {{A}} can CRIT, but decrease HIGHLIGHT/ {{A}} Energy recovery rate by $1"
-所有角色的HIGHLIGHT/{{A}}可以暴擊=HIGHLIGHT/ {{A}} can CRIT
+r:"^所有角色的HIGHLIGHT/{{A}}可以暴擊，但是HIGHLIGHT/{{A}}能量恢復效率降低(\d+%)$"="HIGHLIGHT/{{A}} can CRIT, but decrease HIGHLIGHT/{{A}} Energy recovery rate by $1"
+所有角色的HIGHLIGHT/{{A}}可以暴擊=HIGHLIGHT/{{A}} can CRIT
 Justice
 r:"^透過「洗牌時間」獲取卡牌時，額外增加(\d+)個可選項$"="When choosing cards from [Shuffle Time], you have $1 additional card to choose from"
 Strength
@@ -878,9 +890,9 @@ r:"^所有角色精力值上限提升(\d+)點，精力回復提升(\d+%)，精�
 r:"^所有角色總生命值提升(\d+%)，技能造成溢出治療時，對隨機敵人造成溢出治療量(\d+%)的固定傷害$"="Increase all character' Max HP by $1, when overhealing with skill, deal $2 overhealed amount as fixed damage to random foe"
 r:"^所有角色總生命值提升(\d+%)、治療效果提升(\d+%)，技能造成溢出治療時，對隨機敵人造成溢出治療量(\d+%)的固定傷害$"="Increase all character' Max HP by $1 and Healing Effect by $2, when overhealing with skill, deal $3 overhealed amount as fixed damage to random foe"
 倒懸者=Hanged Man
-r:"^所有角色持續效果傷害提升(\d+%)，使用{{A}}技能/追加效果/HIGHLIGHT/{{B}}造成傷害後，額外結算一次技能主目標的持續效果$"="Increase all characters' Damage Over Time DMG by $1, after dealing damage with {{A}} skill/ Follow Up/ HIGHLIGHT/ {{B}}, additionally trigger the main target's Damage Over Time"
+r:"^所有角色持續效果傷害提升(\d+%)，使用{{A}}技能/追加效果/HIGHLIGHT/{{B}}造成傷害後，額外結算一次技能主目標的持續效果$"="Increase all characters' Damage Over Time DMG by $1, after dealing damage with {{A}} skill/Follow Up/HIGHLIGHT/{{B}}, additionally trigger the main target's Damage Over Time"
 Temperance
-r:"^探索樓層中，強敵陰影/稀有陰影出現機率大幅提升，強敵陰影/稀有陰影戰鬥消耗「意志力」減少(\d+)點，遊蕩陰影戰鬥消耗「意志力」增加(\d+)點$"="Heavily increase the spawn chance of Strong Shadow/ Rare Shadow, decrease battle [Will] cost for Strong Shadow/Rare Shadow by $1, increase battle [Will] cost for Roaming Shadow by $2"
+r:"^探索樓層中，強敵陰影/稀有陰影出現機率大幅提升，強敵陰影/稀有陰影戰鬥消耗「意志力」減少(\d+)點，遊蕩陰影戰鬥消耗「意志力」增加(\d+)點$"="Heavily increase the spawn chance of Strong Shadow/Rare Shadow, decrease battle [Will] cost for Strong Shadow/Rare Shadow by $1, increase battle [Will] cost for Roaming Shadow by $2"
 Devil
 r:"^探索樓層會出現更多可破壞物，透過可破壞物獲得的「時鐘的齒輪」數量提升(\d+%)$"="More breakable objects will appear, increase [Clock Gears] acquired from breakable objects by $1"
 Tower
@@ -888,7 +900,7 @@ r:"^WONDER{{A}}、總生命值、總防禦力提升(\d+%)，最終傷害提升(\
 Moon
 r:"^戰鬥消耗「意志力」減少(\d+)點，「意志力」大於(\d+)時，額外使所有角色最終傷害提升(\d+%)$"="Decrease battle [Will] cost by $1. When [Will] is above $2, additionally increase all characters' Final DMG by $3"
 Judgement
-r:"^所有角色每次使用普通攻擊/槍械攻擊時，使所有同伴獲得(\d+)層/(\d+)層「審判之力」，每層「審判之力」使普通攻擊、槍械攻擊造成傷害提升(\d+%)，可疊加(\d+)層，本場戰鬥永久生效$"="Each time when characters use Melee Attack/ Gun Attack, give the party $1 stacks/ $2 stack of [Judgement Power], each stack of [Judgement Power] permanently increase Melee Attack Gun Attack DMG Dealt by $3, up to $4 stacks"
+r:"^所有角色每次使用普通攻擊/槍械攻擊時，使所有同伴獲得(\d+)層/(\d+)層「審判之力」，每層「審判之力」使普通攻擊、槍械攻擊造成傷害提升(\d+%)，可疊加(\d+)層，本場戰鬥永久生效$"="Each time when characters use Melee Attack/Gun Attack, give the party $1 stacks/$2 stack of [Judgement Power], each stack of [Judgement Power] permanently increase Melee Attack Gun Attack DMG Dealt by $3, up to $4 stacks"
 審判之力=Judgement Power
 
 ----------
@@ -928,6 +940,7 @@ SHADOW NAMES
 全能天秤=World Balance
 蠢動寶冠=Writhing Tiara
 {{A}}大師={{A}} Master
+圓環之輪=Bestial Wheel
 急速之輪=Mach Wheel
 勇氣之輪=Brave Wheel
 變化之雕像=Change Relic
@@ -1002,7 +1015,7 @@ r:"^處於靈魂連結(\d+)的單位，分攤傷害$"="Under Soulink with $1 uni
 r:"^1、全能天秤受到傷害增加(\d+%)並與平衡之巨人存在「靈魂連結」，攻擊全能天秤時會對平衡之巨人附帶更高的傷害。\n\n2、全能天秤在奇數回合持續召喚金剛蟲。\n\n3、「劍舞協奏」引導全能天秤釋放狂暴與調和屏障。$"="1. Increase World Balance's DMG Taken by $1 then have [Soulink] with Order Giant, deal more damage to Order Giant when attacking World Balance. \n2. World Balance will summon Adamant Beetle on odd turns. \n3. [Sword Concerto] can make World Balance use [Frenzy] and [Harmonious Barrier]."
 
 r:"^1、白狼之武者使用部分技能可以獲得「殺意」，並可消耗「殺意」來強化技能「萬雷送葬」。\n「殺意」：每層提升自身(\d+%)的攻擊力、(\d+%)的暴擊率，受到最終傷害提升(\d+%)；最多可疊加(\d+)層。\n2、白狼之武者每個回合開始時，會給隨機(\d+)名敵人添加「導電印記」（場上同時只存在1名有「導電印記」的敵人），使其電擊屬性適應性變為弱。擁有「導電印記」的敵人被擊倒時，白狼之武者獲得(\d+)層「殺意」。\n3、白狼之武者進入戰鬥時，會立即召喚(\d+)隻風雷天秤。\n4、白狼之武者進入二階段時，會立即召喚(\d+)隻炎冰天秤，並使自身進入「無雙境」狀態。處在此狀態下每回合獲得(\d+)層「殺意」\（場上隊友全部死亡時，每回合獲得(\d+)層「殺意」\），但是會在「殺意」到達(\d+)層時，受到的最終傷害額外提升(\d+%)。$"="1. Hakurou Musha can gain [Killing Intent] from skills, can consume [Killing Intent] to upgrade [Thunderous Burial]. \n[Killing Intent]: Each stack increase own ATK by $1, CRIT Rate by $2, Final DMG Taken by $3; up to $4 stacks.\n2. At the start of Hakurou Musha's turn, they will inflict $5 random foe with [Conductive Mark] (there can only be 1 foe with [Conductive Mark]), change their Elec resistance to Weak. Hakurou Musha will gain $6 stacks of [Killing Intent] when downing foes with [Conductive Mark].\n3. At the start of battle, immediately summon $7 Sky Balance.\n4. When Hakurou Musha enter phase 2, immediately summon $8 Heat Balance, then enter [Peerlessness]. Gain $9 stack of [Killing Intent] each turn (when all allies are dead, gain $10 stacks each turn), but additionally increase Final DMG Taken by $12 when they have $11 stacks of [Killing Intent]."
-r:"^1、白狼之武者使用部分技能可以獲得「殺意」，並可消耗「殺意」來強化技能「萬雷送葬」。\n「殺意」：每層提升自身(\d+%)的攻擊力、(\d+%)的暴擊率，受到最終傷害提升(\d+%)；最多可疊加(\d+)層。\n2、白狼之武者每個回合開始時，會給隨機(\d+)名敵人添加「導電印記」（場上同時只存在1名有「導電印記」的敵人），使其電擊屬性適應性變為弱。擁有「導電印記」的敵人被擊倒時，白狼之武者獲得(\d+)層「殺意」。\n3、白狼之武者進入戰鬥時，會立即召喚(\d+)隻風雷天秤。\n4、白狼之武者進入二階段時，會立即召喚(\d+)隻炎冰天秤，並使自身進入「無雙境」狀態。處在此狀態下每回合獲得(\d+)層「殺意」\（場上隊友全部死亡時，每回合獲得(\d+)層「殺意」\），但是會在「殺意」到達(\d+)層時，受到的最終傷害額外提升(\d+%)。\n5、炎冰天秤每回合在「火形態」和「冰形態」之間切換。火形態」下每次行動後給與白狼之武者(\d+)層「殺意」，被擊殺時為白狼之武者添加(\d+)層「殺意」；「冰形態」下被擊殺時驅散白狼之武者身上的所有「殺意」。$"="1. Hakurou Musha can gain [Killing Intent] from skills, can consume [Killing Intent] to upgrade [Thunderous Burial]. \n[Killing Intent]: Each stack increase own ATK by $1, CRIT Rate by $2, Final DMG Taken by $3; up to $4 stacks.\n2. At the start of Hakurou Musha's turn, they will inflict $5 random foe with [Conductive Mark] (there can only be 1 foe with [Conductive Mark]), change their Elec resistance to Weak. Hakurou Musha will gain $6 stacks of [Killing Intent] when downing foes with [Conductive Mark].\n3. At the start of battle, immediately summon $7 Sky Balance.\n4. When Hakurou Musha enter phase 2, immediately summon $8 Heat Balance, then enter [Peerlessness]. Gain $9 stack of [Killing Intent] each turn (when all allies are dead, gain $10 stacks each turn), but additionally increase Final DMG Taken by $12 when they have $11 stacks of [Killing Intent].\n5. Heat Balance will chage between [Fire Form] and [Ice Form]. [Fire Form]: Give Hakurou Musha $13 stack of [Killing Intent] after this action,  give Hakurou Musha $14 stacks of [Killing Intent] when defeated; [Ice Form]: Dispel all [Killing Intent] on Hakurou Musha when defeated."
+r:"^1、白狼之武者使用部分技能可以獲得「殺意」，並可消耗「殺意」來強化技能「萬雷送葬」。\n「殺意」：每層提升自身(\d+%)的攻擊力、(\d+%)的暴擊率，受到最終傷害提升(\d+%)；最多可疊加(\d+)層。\n2、白狼之武者每個回合開始時，會給隨機(\d+)名敵人添加「導電印記」（場上同時只存在1名有「導電印記」的敵人），使其電擊屬性適應性變為弱。擁有「導電印記」的敵人被擊倒時，白狼之武者獲得(\d+)層「殺意」。\n3、白狼之武者進入戰鬥時，會立即召喚(\d+)隻風雷天秤。\n4、白狼之武者進入二階段時，會立即召喚(\d+)隻炎冰天秤，並使自身進入「無雙境」狀態。處在此狀態下每回合獲得(\d+)層「殺意」\（場上隊友全部死亡時，每回合獲得(\d+)層「殺意」\），但是會在「殺意」到達(\d+)層時，受到的最終傷害額外提升(\d+%)。\n5、炎冰天秤每回合在「火形態」和「冰形態」之間切換。火形態」下每次行動後給與白狼之武者(\d+)層「殺意」，被擊殺時為白狼之武者添加(\d+)層「殺意」；「冰形態」下被擊殺時驅散白狼之武者身上的所有「殺意」。$"="1. Hakurou Musha can gain [Killing Intent] from skills, can consume [Killing Intent] to upgrade [Thunderous Burial]. \n[Killing Intent]: Each stack increase own ATK by $1, CRIT Rate by $2, Final DMG Taken by $3; up to $4 stacks.\n2. At the start of Hakurou Musha's turn, they will inflict $5 random foe with [Conductive Mark] (there can only be 1 foe with [Conductive Mark]), change their Elec resistance to Weak. Hakurou Musha will gain $6 stacks of [Killing Intent] when downing foes with [Conductive Mark].\n3. At the start of battle, immediately summon $7 Sky Balance.\n4. When Hakurou Musha enter phase 2, immediately summon $8 Heat Balance, then enter [Peerlessness]. Gain $9 stack of [Killing Intent] each turn (when all allies are dead, gain $10 stacks each turn), but additionally increase Final DMG Taken by $12 when they have $11 stacks of [Killing Intent].\n5. Heat Balance will chage between [Fire Form] and [Ice Form]. [Fire Form]: Give Hakurou Musha $13 stack of [Killing Intent] after this action, give Hakurou Musha $14 stacks of [Killing Intent] when defeated; [Ice Form]: Dispel all [Killing Intent] on Hakurou Musha when defeated."
 殺意=Killing Intent
 r:"^殺<color\=#000000>意</color>$"="K<color\=#000000>i</color>lling Intent"
 r:"^每層提升自身(\d+%)攻擊力、(\d+%)暴擊率，同時受到最終傷害提升(\d+%)。$"="Each stack increase own ATK by $1,\nCRIT Rate by $2, Final DMG Taken by $3"
@@ -1047,7 +1060,7 @@ r:"^反<color\=#000000>擊</color>架勢$"="C<color\=#000000>o</color>unter Stan
 r:"^進入『反擊架勢』狀態時，受到攻擊時進行反擊，造成物理屬性傷害，並使宗師之武者獲得(\d+)層『殺意』，持續(\d+)回合。$"="Enters [Counter Stance], will Counter when attacked, dealing Phys damage, then gives Kaiden Musha $1 stack of [Killing Intent] for $1 turn."
 r:"^受到攻擊時進行反擊，並使(.*)獲得(\d+)層『殺意』$"="Will Counter when attacked, then give Kaiden Musha $2 stack of [Killing Intent]"
 
-r:"^1、聖靈之城/咒靈之城添加的祝福、詛咒效果持續時間均為無限回合。\n2、戰鬥開始時召喚1隻魔術之手和1隻舞動之手。聖靈之城在場時，魔術之手/舞動之手死亡時會再隨機召喚1隻魔術之手或舞動之手。\n3、聖靈之城每回合結束給所有同伴添加(\d+)層祝福，咒靈之城每回合結束給所有敵人添加(\d+)層詛咒。\n4、聖靈之城，自身回合開始時，自身擁有(\d+)層祝福時，釋放「神之審判」。咒靈之城，自身回合開始時，任意敵人擁有(\d+)層詛咒時，釋放「虛無藝術」。\n5、魔術之手被召喚時，立刻給所有怪物添加(\d+)層祝福；每回合結束，給所有怪物添加(\d+)層祝福；死亡時清除所有怪物(\d+)層祝福，給所有怪盜添加(\d+)層祝福。\n6、舞動之手被召喚時，立刻給所有角色添加(\d+)層詛咒；每回合結束，給所有角色添加(\d+)層詛咒；死亡時清除所有角色(\d+)層詛咒，給所有怪物添加(\d+)層詛咒。\n7、聖靈之城瀕死時會清除場上的怪物並進入二階段，召喚(\d+)隻魔術之手和(\d+)隻舞動之手。$"="1. The Bless and Curse effects from Spiritual Castle/ Haunted Castle are permanent.\n2. At the start of battle, summon 1 Magic Hand and 1 Dancing Hand. When Spiritual Castle is present, summon 1 Magic Hand or Dancing Hand when Magic Hand/ Dancing Hand dies.\n3. At the end of each turn, Spiritual Castle gives all allies $1 stacks of Bless, Haunted Castle inflicts all foes with $2 stacks of Curse.\n4. At the start of Spiritual Castle's turn, use [Divine Judgement] if it has $3 stacks of Bless; At the start of Haunted Castle's turn, use [Akasha Arts] if any foe have $4 stacks of Curse.\n5. When Magic Hand is summoned, immediately gives all Shadows $5 stacks of Bless; At the end of each turn, gives all Shadows $6 stack of Bless; Dispels $7 stacks of Bless from all Shadows and gives all Thieves $8 stack of Bless on death. \n6.When Dancing Hand is summoned, immediately inflicts all Thieves with $9 stacks of Curse; At the end of each turn, inflicts all Thieves with $10 stack of Curse; Dispels $11 stacks of Curse from all Thieves and inflicts all Shadows with $12 stack of Curse on death. \n7. Removes all Shadows when Spiritual Castle is near death, then summons $13 Magic Hand and $14 Dancing Hand."
+r:"^1、聖靈之城/咒靈之城添加的祝福、詛咒效果持續時間均為無限回合。\n2、戰鬥開始時召喚1隻魔術之手和1隻舞動之手。聖靈之城在場時，魔術之手/舞動之手死亡時會再隨機召喚1隻魔術之手或舞動之手。\n3、聖靈之城每回合結束給所有同伴添加(\d+)層祝福，咒靈之城每回合結束給所有敵人添加(\d+)層詛咒。\n4、聖靈之城，自身回合開始時，自身擁有(\d+)層祝福時，釋放「神之審判」。咒靈之城，自身回合開始時，任意敵人擁有(\d+)層詛咒時，釋放「虛無藝術」。\n5、魔術之手被召喚時，立刻給所有怪物添加(\d+)層祝福；每回合結束，給所有怪物添加(\d+)層祝福；死亡時清除所有怪物(\d+)層祝福，給所有怪盜添加(\d+)層祝福。\n6、舞動之手被召喚時，立刻給所有角色添加(\d+)層詛咒；每回合結束，給所有角色添加(\d+)層詛咒；死亡時清除所有角色(\d+)層詛咒，給所有怪物添加(\d+)層詛咒。\n7、聖靈之城瀕死時會清除場上的怪物並進入二階段，召喚(\d+)隻魔術之手和(\d+)隻舞動之手。$"="1. The Bless and Curse effects from Spiritual Castle/Haunted Castle are permanent.\n2. At the start of battle, summon 1 Magic Hand and 1 Dancing Hand. When Spiritual Castle is present, summon 1 Magic Hand or Dancing Hand when Magic Hand/Dancing Hand dies.\n3. At the end of each turn, Spiritual Castle gives all allies $1 stacks of Bless, Haunted Castle inflicts all foes with $2 stacks of Curse.\n4. At the start of Spiritual Castle's turn, use [Divine Judgement] if it has $3 stacks of Bless; At the start of Haunted Castle's turn, use [Akasha Arts] if any foe have $4 stacks of Curse.\n5. When Magic Hand is summoned, immediately gives all Shadows $5 stacks of Bless; At the end of each turn, gives all Shadows $6 stack of Bless; Dispels $7 stacks of Bless from all Shadows and gives all Thieves $8 stack of Bless on death. \n6.When Dancing Hand is summoned, immediately inflicts all Thieves with $9 stacks of Curse; At the end of each turn, inflicts all Thieves with $10 stack of Curse; Dispels $11 stacks of Curse from all Thieves and inflicts all Shadows with $12 stack of Curse on death. \n7. Removes all Shadows when Spiritual Castle is near death, then summons $13 Magic Hand and $14 Dancing Hand."
 
 ----------
 NPC
