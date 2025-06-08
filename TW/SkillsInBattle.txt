@@ -111,15 +111,15 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 
 攻擊力大幅提高，防禦力大幅下降，強制執行普攻指令=Heavily increase ATK and decrease DEF, forced to use basic attack
 
-r:"^部分火焰屬性技能對處於某些特定狀態的敵人，會造成額外的效果。\n火焰屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『爆燃』，使技能傷害提升(\d+%)；\n火焰屬性技能對處於凍結狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合；\n火焰屬性技能對處於風襲狀態的敵人造成TECHNICAL時，觸發『颶焰』，額外造成(\d+)次基於目標最大生命值(\d+%)的火焰屬性傷害。$"="Certain Fire skills can trigger additional effects to foes in specific status.\nWhen Fire skills deal TECHNICAL to foes inflicted with Burn, trigger [Backdraft], increase skill damage by $1;\nWhen Fire skills deal TECHNICAL to foes inflicted with Freeze, trigger [Ice Burn], there is a $2 base chance to increase the target's Fire/ Ice DMG Taken by $3 for $4 turns;\nWhen Fire skills deal TECHNICAL to foes inflicted with Winded, trigger [Hurricane Flame]: Deal $5 additional hit of Fire damage based on $6 of the target's Max HP."
+r:"^部分火焰屬性技能對處於某些特定狀態的敵人，會造成額外的效果。\n火焰屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『爆燃』，使技能傷害提升(\d+%)；\n火焰屬性技能對處於凍結狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合；\n火焰屬性技能對處於風襲狀態的敵人造成TECHNICAL時，觸發『颶焰』，額外造成(\d+)次基於目標最大生命值(\d+%)的火焰屬性傷害。$"="Certain Fire skills can trigger additional effects to foes in specific status.\nWhen Fire skills deal TECHNICAL to foes inflicted with Burn, trigger [Backdraft], increase skill damage by $1;\nWhen Fire skills deal TECHNICAL to foes inflicted with Freeze, trigger [Ice Burn], there is a $2 base chance to increase the target's Fire/Ice DMG Taken by $3 for $4 turns;\nWhen Fire skills deal TECHNICAL to foes inflicted with Winded, trigger [Hurricane Flame]: Deal $5 additional hit of Fire damage based on $6 of the target's Max HP."
 r:"^火焰屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『爆燃』，使技能傷害提升(\d+%)。$"="When Fire skills deal TECHNICAL to foes inflicted with Burn, trigger [Backdraft], increase skill damage by $1"
-r:"^火焰屬性技能對處於凍結狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合。$"="When Fire skills deal TECHNICAL to foes inflicted with Freeze, trigger [Ice Burn], there is a $1 base chance to increase the target's Fire/ Ice DMG Taken by $2 for $3 turns."
-r:"^火焰屬性技能對處於凍結狀態的敵人造成TECHNICAL或冰凍屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合。$"="When Fire skills deal TECHNICAL to foes inflicted with Freeze or Ice skills deal TECHNICAL to foes inflicted with Burn, trigger [Ice Burn], there is a $1 base chance to increase the target's Fire/ Ice DMG Taken by $2 for $3 turns."
+r:"^火焰屬性技能對處於凍結狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合。$"="When Fire skills deal TECHNICAL to foes inflicted with Freeze, trigger [Ice Burn], there is a $1 base chance to increase the target's Fire/Ice DMG Taken by $2 for $3 turns."
+r:"^火焰屬性技能對處於凍結狀態的敵人造成TECHNICAL或冰凍屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合。$"="When Fire skills deal TECHNICAL to foes inflicted with Freeze or Ice skills deal TECHNICAL to foes inflicted with Burn, trigger [Ice Burn], there is a $1 base chance to increase the target's Fire/Ice DMG Taken by $2 for $3 turns."
 r:"^火焰屬性技能對處於風襲狀態的敵人造成TECHNICAL時，觸發『颶焰』，額外造成(\d+)次基於目標最大生命值(\d+%)的火焰屬性傷害。$"="When Fire skills deal TECHNICAL to foes inflicted with Winded, trigger [Hurricane Flame]: Deal $1 additional hit of Fire damage based on $2 of the target's Max HP."
 
-r:"^部分冰凍屬性技能對處於某些特定狀態的敵人，會造成額外的效果。\n冰凍屬性技能對處於觸電狀態的敵人造成TECHNICAL時，觸發『凜霆』，使技能傷害提升(\d+%)；\n冰凍屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合；\n冰凍屬性技能對處於凍結狀態的敵人造成TECHNICAL時，觸發『冰封』，有(\d+%)基礎機率使目標陷入冰封狀態，持續(\d+)回合。$"="Certain Ice skills can trigger additional effects to foes in specific status.\nWhen Ice skills deal TECHNICAL to foes inflicted with Shock, trigger [Frigid Bolt], increase skill damage by $1;\nWhen Ice skills deal TECHNICAL to foes inflicted with Burn, trigger [Ice Burn], there is a $2 base chance to increase the target's Fire/ Ice DMG Taken by $3 for $4 turns;\nWhen Ice skills deal TECHNICAL to foes inflicted with Freeze, trigger [Ice Seal]: There is a $5 base chance to inflict the target with Ice Seal for $6 turn."
+r:"^部分冰凍屬性技能對處於某些特定狀態的敵人，會造成額外的效果。\n冰凍屬性技能對處於觸電狀態的敵人造成TECHNICAL時，觸發『凜霆』，使技能傷害提升(\d+%)；\n冰凍屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合；\n冰凍屬性技能對處於凍結狀態的敵人造成TECHNICAL時，觸發『冰封』，有(\d+%)基礎機率使目標陷入冰封狀態，持續(\d+)回合。$"="Certain Ice skills can trigger additional effects to foes in specific status.\nWhen Ice skills deal TECHNICAL to foes inflicted with Shock, trigger [Frigid Bolt], increase skill damage by $1;\nWhen Ice skills deal TECHNICAL to foes inflicted with Burn, trigger [Ice Burn], there is a $2 base chance to increase the target's Fire/Ice DMG Taken by $3 for $4 turns;\nWhen Ice skills deal TECHNICAL to foes inflicted with Freeze, trigger [Ice Seal]: There is a $5 base chance to inflict the target with Ice Seal for $6 turn."
 r:"^冰凍屬性技能對處於觸電狀態的敵人造成TECHNICAL時，觸發『凜霆』，使技能傷害提升(\d+%)$"="When Ice skills deal TECHNICAL to foes inflicted with Shock, trigger [Frigid Bolt], increase skill damage by $1"
-r:"^冰凍屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合$"="When Ice skills deal TECHNICAL to foes inflicted with Burn, trigger [Ice Burn], there is a $1 base chance to increase the target's Fire/ Ice DMG Taken by $2 for $3 turns"
+r:"^冰凍屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合$"="When Ice skills deal TECHNICAL to foes inflicted with Burn, trigger [Ice Burn], there is a $1 base chance to increase the target's Fire/Ice DMG Taken by $2 for $3 turns"
 r:"^冰凍屬性技能對處於凍結狀態的敵人造成TECHNICAL時，觸發『冰封』，有(\d+%)基礎機率使目標陷入冰封狀態，持續(\d+)回合。$"="When Ice skills deal TECHNICAL to foes inflicted with Freeze, trigger [Ice Seal]: There is a $1 base chance to inflict the target with Ice Seal for $2 turn."
 
 --------------------------------------------------
@@ -569,7 +569,7 @@ r:"^使<color\=#FFFF00>1名</color>同伴的暴擊率提升(\d+\.\d+%)，自身�
 r:"^使<color\=#FFFF00>所有</color>同伴的暴擊率提升(\d+\.\d+%)，自身每(\d+%)暴擊率額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續3回合。$"="Increases <color\=#FFFF00>all</color> allies' CRIT Rate by $1 + $3 for every $2 CRIT Rate you have, up to $4 for 3 turns."
 
 // Hunter's Code
-r:"使<color\=#FFFF00>1名</color>同伴造成的傷害提升(\d+\.\d+%)，並根據目標同伴的效果命中額外提升效果。每20%提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續2回合。"=Increase 1 ally's damage dealt by <color\=#fffc40>$1</color> + <color\=#fffc40>$2</color> for every 20% Effect Hit Rate the ally has to a maximum of <color\=#fffc40>$3</color> for 3 turns.
+r:"^使<color\=#FFFF00>1名</color>同伴造成的傷害提升(\d+\.\d+%)，並根據目標同伴的效果命中額外提升效果。每(\d+%)提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續(\d+)回合。$"="Increase <color\=#FFFF00>1 ally's</color> DMG Dealt by $1 + $3 for every $2 EHR the target has, up to $4 for $5 turns."
 
 Change
 r:"^使<color\=#FFFF00>自身</color>下1次造成的物理屬性傷害提升(\d+\.\d+%)，持續1回合。$"="Increases <color\=#FFFF00>your</color> next Physical attack damage by $1 for 1 turn."
@@ -834,6 +834,7 @@ r:"^傷<color\=#000000>害</color>增加$"="D<color\=#000000>M</color>G Bonus Up
 r:"^傷<color\=#000000>害</color>提高$"="D<color\=#000000>M</color>G Bonus Up"
 r:"^傷<color\=#000000>害</color>提升$"="D<color\=#000000>M</color>G Bonus Up"
 r:"^造<color\=#000000>成</color>傷害提升$"="D<color\=#000000>M</color>G Dealt Up"
+r:"^造<color\=#000000>成</color>的傷害提升$"="D<color\=#000000>M</color>G Dealt Up"
 r:"^最<color\=#000000>終</color>傷害提升$"="F<color\=#000000>i</color>nal DMG Up"
 r:"^造<color\=#000000>成</color>最終傷害提高$"="F<color\=#000000>i</color>nal DMG Dealt Up"
 r:"^總<color\=#000000>傷</color>害增幅$"="T<color\=#000000>o</color>tal DMG Up"
@@ -923,9 +924,10 @@ r:"^受<color\=#000000>最</color>終傷害提高$"="F<color\=#000000>i</color>n
 r:"^受<color\=#000000>到</color>最終傷害提高$"="F<color\=#000000>i</color>nal DMG Taken Up"
 r:"^傷<color\=#000000>害</color>降低$"="D<color\=#000000>M</color>G Down"
 r:"^傷<color\=#000000>害</color>弱化$"="D<color\=#000000>M</color>G Nerf"
-r:"^受<color\=#000000>物</color>理傷害提升$"="P<color\=#000000>h</color>ys DMG Taken Up"
 r:"^受<color\=#000000>物</color>理傷害提高$"="P<color\=#000000>h</color>ys DMG Taken Up"
+r:"^受<color\=#000000>物</color>理傷害提升$"="P<color\=#000000>h</color>ys DMG Taken Up"
 r:"^受<color\=#000000>物</color>理傷害加深$"="P<color\=#000000>h</color>ys DMG Taken Up"
+r:"^受<color\=#000000>火</color>焰傷害提升$"="F<color\=#000000>i</color>re DMG Taken Up"
 r:"^受<color\=#000000>火</color>焰傷害提高$"="F<color\=#000000>i</color>re DMG Taken Up"
 r:"^受<color\=#000000>到</color>火焰傷害提升$"="F<color\=#000000>i</color>re DMG Taken Up"
 r:"^受<color\=#000000>冰</color>凍傷害提高$"="I<color\=#000000>c</color>e DMG Taken Up"
@@ -934,11 +936,14 @@ r:"^受<color\=#000000>到</color>電傷提升$"="E<color\=#000000>l</color>ec D
 r:"^受<color\=#000000>到</color>電擊傷害提升$"="E<color\=#000000>l</color>ec DMG Taken Up"
 r:"^受<color\=#000000>疾</color>風傷害提高$"="W<color\=#000000>i</color>nd DMG Taken Up"
 r:"^受<color\=#000000>疾</color>風傷害加深$"="W<color\=#000000>i</color>nd DMG Taken Up"
+r:"^受<color\=#000000>念</color>動傷害提高$"="P<color\=#000000>s</color>y DMG Taken Up"
 r:"^受<color\=#000000>念</color>動傷害提升$"="P<color\=#000000>s</color>y DMG Taken Up"
 r:"^受<color\=#000000>核</color>熱傷害提高$"="N<color\=#000000>u</color>ke DMG Taken Up"
 r:"^受<color\=#000000>核</color>熱傷害提升$"="N<color\=#000000>u</color>ke DMG Taken Up"
 r:"^受<color\=#000000>到</color>核熱傷害提升$"="N<color\=#000000>u</color>ke DMG Taken Up"
 r:"^受<color\=#000000>祝</color>福傷害提高$"="B<color\=#000000>l</color>ess DMG Taken Up"
+r:"^受<color\=#000000>祝</color>福傷害提升$"="B<color\=#000000>l</color>ess DMG Taken Up"
+r:"^受<color\=#000000>詛</color>咒傷害提高$"="C<color\=#000000>u</color>rse DMG Taken Up"
 r:"^受<color\=#000000>詛</color>咒傷害提升$"="C<color\=#000000>u</color>rse DMG Taken Up"
 r:"^弱<color\=#000000>點</color>暴露$"="W<color\=#000000>e</color>akness Exposed"
 
@@ -1117,6 +1122,7 @@ r:"^處於護盾保護下，防禦力額外提升(\d+(.\d+)?(%)?)$"="Increase DE
 r:"^精力值消耗降低(\d+(.\d+)?(%)?)$"="Decrease SP cost by $1"
 r:"^速度提升(\d+(.\d+)?(%)?)$"="Increase SPD by $1"
 r:"^暴擊率提升(\d+(.\d+)?(%)?)$"="Increase CRIT Rate by $1"
+r:"^所有角色暴擊率提升(\d+%)，暴擊效果提升(\d+%)$"="Increase CRIT Rate by $1 and CRIT DMG by $2"
 r:"^持續時間內，所有友方暴擊率提升(\d+(.\d+)?(%)?)$"="During this effect,\nincrease all allies' CRIT Rate by $1"
 r:"^處於額外回合時，暴擊率提升(\d+%)，暴擊效果提升(\d+%)$"="<size\=24>Increase CRIT Rate by $1 and CRIT DMG by $2 during Extra Turn</size>"
 r:"^暴擊傷害提升(\d+(.\d+)?(%)?)$"="Increase CRIT DMG by $1"
@@ -1219,6 +1225,7 @@ r:"^治療效果提升(\d+(.\d+)?(%)?)$"="Increase Healing Effect by $1"
 r:"^護盾效果提升(\d+(.\d+)?(%)?)$"="Increase Shield Effect by $1"
 r:"^剩餘護盾值：(\d+)$"="Shield: $1"
 回合結束後回復一定生命值。=Restore HP at the end of each turn
+r:"^HL能量恢復效率提升(\d+(.\d+)?(%)?)$"="Increase HIGHLIGHT Energy recovery rate by $1"
 
 sr:"^(.*)屬性的適應性變為耐$"="Change $1 resistance to Resist"
 適應性發生了變化=Resistance change
