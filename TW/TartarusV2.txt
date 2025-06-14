@@ -121,15 +121,17 @@ r:"^十二周目(\d+)層$"="NG+11 $1F"
 將按照當前進度進行挑戰結算，是否確認放棄本次挑戰？=Rewards will be calculated based on your progress, are you sure you want to quit this challenge?
 
 選擇=Select
-預選{{A}}的隨行角色，將透過「洗牌時間」加入正式陣容=<size\=25>The preselected {{A}} companion characters will join the team through [Shuffle Time]</size>
+預選{{A}}的隨行角色，將透過「洗牌時間」加入正式陣容=The preselected {{A}} companion characters will join via [Shuffle Time]
 探索時部分角色會有額外「戰鬥增益」，長按角色頭像可查看。=When exploring, some characters will gain [Combat Buffs], long press their avatar to view.
 r:"^<color\=#67FCFC>(.*)前開始遊戲，(.*)獲得屬性加成</color>\n<color\=#FFFFFF>(.*)、總防禦力、總生命值提升(.*)，最終傷害提升(.*)</color>$"="<color\=#67FCFC>When starting a run before $1, <color\=#FFFFFF>increase Total ATK, Total DEF, Total HP by $4, Final DMG by $5</color>"
 設置攜帶收藏品=Set Equipped Antique
-作戰<sprite\=0 tint\=1><sprite\=15 tint\=1><sprite\=8 tint\=1> 解明<sprite\=0 tint\=1><sprite\=15 tint\=1><sprite\=2 tint\=1>=Combat<sprite\=0 tint\=1><sprite\=15 tint\=1><sprite\=8 tint\=1> Navigator<sprite\=0 tint\=1><sprite\=15 tint\=1><sprite\=2 tint\=1>
+sr:"^設置收藏品(.*)成功$"="Equipped Antique $1"
+作戰<sprite\=0 tint\=1><sprite\=15 tint\=1><sprite\=8 tint\=1> 解明<sprite\=0 tint\=1><sprite\=15 tint\=1><sprite\=2 tint\=1>=Combat<sprite\=0 tint\=1><sprite\=15 tint\=1><sprite\=8 tint\=1> Elucidator<sprite\=0 tint\=1><sprite\=15 tint\=1><sprite\=2 tint\=1>
 已選擇作戰角色：<sprite\=8 tint\=1><sprite\=15 tint\=1><sprite\=8 tint\=1>=Selected Combat character:<sprite\=8 tint\=1><sprite\=15 tint\=1><sprite\=8 tint\=1>
-已選擇解明角色：<sprite\=2 tint\=1><sprite\=15 tint\=1><sprite\=2 tint\=1>=Selected Navigator:<sprite\=2 tint\=1><sprite\=15 tint\=1><sprite\=2 tint\=1>
+已選擇解明角色：<sprite\=2 tint\=1><sprite\=15 tint\=1><sprite\=2 tint\=1>=Selected Elucidator:<sprite\=2 tint\=1><sprite\=15 tint\=1><sprite\=2 tint\=1>
 設置夢境碎片=Set Dream Fragments
 選擇本次{{A}}中，能夠收集到的夢境碎片=Select the Dream Fragments obtainable in this {{A}} run
+已自動補全空位，配置的隨行成員將透過「洗牌時間」正式加入陣容。=Companion slots auto-filled, characters will join via [Shuffle Time].
 r:"^是否花費(\d+)「心靈碎片」解鎖{{A}}角色？$"="Spend $1 [Heart Fragments] to unlock this {{A}} character?"
 已加入探索隊伍=Added to Exploration Team
 上陣角色已滿。=Active characters are full.
@@ -159,6 +161,10 @@ r:"^初始「意志力」降低(\d+)點\n所有敵人的傷害隨著戰鬥回合
 r:"^初始「意志力」降低(\d+)點\n所有敵人的傷害隨著戰鬥回合數提升而提升\n所有戰鬥消耗「意志力」增加(\d+)點\n每次進入「大時鐘」時，最多刷新(\d+)次\n進入強敵之影、交錯之影戰鬥時，所有敵人造成最終傷害提升(\d+%)，受到最終傷害降低(\d+%)\n$"="Decrease starting [Will] by $1\nAll foes increase damage based on turn number\nIncrease battle [Will] cost by $2\nWhen entering the [Great Clock], can only refresh up to $3 times\nWhen fighting Strong Shadow and Tangled Shadow, increase all foes' Final DMG Dealt by $4, decrease all foes' Final DMG Taken by $5"
 r:"^初始「意志力」降低(\d+)點\n所有敵人的傷害隨著戰鬥回合數提升而提升\n所有戰鬥消耗「意志力」增加(\d+)點\n每次進入「大時鐘」時，最多刷新(\d+)次\n進入強敵之影、交錯之影戰鬥時，所有敵人造成最終傷害提升(\d+%)，受到最終傷害降低(\d+%)\n遊蕩陰影戰鬥消耗「意志力」增加(\d+)點\n$"="Decrease starting [Will] by $1\nAll foes increase damage based on turn number\nIncrease battle [Will] cost by $2\nWhen entering the [Great Clock], can only refresh up to $3 times\nWhen fighting Strong Shadow and Tangled Shadow, increase all foes' Final DMG Dealt by $4, decrease all foes' Final DMG Taken by $5\nIncrease battle [Will] cost for Roaming Shadow by $6"
 r:"^初始「意志力」降低(\d+)點\n所有敵人的傷害隨著戰鬥回合數提升而提升\n所有戰鬥消耗「意志力」增加(\d+)點\n每次進入「大時鐘」時，最多刷新(\d+)次\n進入強敵之影、交錯之影戰鬥時，所有敵人造成最終傷害提升(\d+%)，受到最終傷害降低(\d+%)\n遊蕩陰影戰鬥消耗「意志力」增加(\d+)點\n每次使用「時鐘」時，額外消耗(\d+)個「拂曉的碎片」\n$"="Decrease starting [Will] by $1\nAll foes increase damage based on turn number\nIncrease battle [Will] cost by $2\nWhen entering the [Great Clock], can only refresh up to $3 times\nWhen fighting Strong Shadow and Tangled Shadow, increase all foes' Final DMG Dealt by $4, decrease all foes' Final DMG Taken by $5\nIncrease battle [Will] cost for Roaming Shadow by $6\nWhen using the [Clock], additionally consume $7 [Dawn Fragments]"
+r:"^初始「意志力」降低(\d+)點\n所有敵人的傷害隨著戰鬥回合數提升而提升\n所有戰鬥消耗「意志力」增加(\d+)點\n每次進入「大時鐘」時，最多刷新(\d+)次\n進入強敵之影、交錯之影戰鬥時，所有敵人造成最終傷害提升(\d+%)，受到最終傷害降低(\d+%)\n遊蕩陰影戰鬥消耗「意志力」增加(\d+)點\n每次使用「時鐘」時，額外消耗(\d+)個「拂曉的碎片」\n「大時鐘」具象化四星角色卡牌時，所需「時鐘的齒輪」數量提升(\d+%)\n$"="Decrease starting [Will] by $1\nAll foes increase damage based on turn number\nIncrease battle [Will] cost by $2\nWhen entering the [Great Clock], can only refresh up to $3 times\nWhen fighting Strong Shadow and Tangled Shadow, increase all foes' Final DMG Dealt by $4, decrease all foes' Final DMG Taken by $5\nIncrease battle [Will] cost for Roaming Shadow by $6\nWhen using the [Clock], additionally consume $7 [Dawn Fragments]\nWhen buying 4★ characters in the [Great Clock], increase the required [Clock Gears] by $8"
+r:"^初始「意志力」降低(\d+)點\n所有敵人的傷害隨著戰鬥回合數提升而提升\n所有戰鬥消耗「意志力」增加(\d+)點\n每次進入「大時鐘」時，最多刷新(\d+)次\n進入強敵之影、交錯之影戰鬥時，所有敵人造成最終傷害提升(\d+%)，受到最終傷害降低(\d+%)\n遊蕩陰影戰鬥消耗「意志力」增加(\d+)點\n每次使用「時鐘」時，額外消耗(\d+)個「拂曉的碎片」\n「大時鐘」具象化四星角色卡牌時，所需「時鐘的齒輪」數量提升(\d+%)\n進入首領樓層時，當前「時鐘的齒輪」數量減少(\d+%)\n$"="Decrease starting [Will] by $1\nAll foes increase damage based on turn number\nIncrease battle [Will] cost by $2\nWhen entering the [Great Clock], can only refresh up to $3 times\nWhen fighting Strong Shadow and Tangled Shadow, increase all foes' Final DMG Dealt by $4, decrease all foes' Final DMG Taken by $5\nIncrease battle [Will] cost for Roaming Shadow by $6\nWhen using the [Clock], additionally consume $7 [Dawn Fragments]\nWhen buying 4★ characters in the [Great Clock], increase the required [Clock Gears] by $8\nWhen entering a boss floor, decrease current [Clock Gears] by $9"
+r:"^初始「意志力」降低(\d+)點\n所有敵人的傷害隨著戰鬥回合數提升而提升\n所有戰鬥消耗「意志力」增加(\d+)點\n每次進入「大時鐘」時，最多刷新(\d+)次\n進入強敵之影、交錯之影戰鬥時，所有敵人造成最終傷害提升(\d+%)，受到最終傷害降低(\d+%)\n遊蕩陰影戰鬥消耗「意志力」增加(\d+)點\n每次使用「時鐘」時，額外消耗(\d+)個「拂曉的碎片」\n「大時鐘」具象化四星角色卡牌時，所需「時鐘的齒輪」數量提升(\d+%)\n進入首領樓層時，當前「時鐘的齒輪」數量減少(\d+%)\n強敵陰影戰鬥消耗「意志力」增加(\d+)點\n$"="Decrease starting [Will] by $1\nAll foes increase damage based on turn number\nIncrease battle [Will] cost by $2\nWhen entering the [Great Clock], can only refresh up to $3 times\nWhen fighting Strong Shadow and Tangled Shadow, increase all foes' Final DMG Dealt by $4, decrease all foes' Final DMG Taken by $5\nIncrease battle [Will] cost for Roaming Shadow by $6\nWhen using the [Clock], additionally consume $7 [Dawn Fragments]\nWhen buying 4★ characters in the [Great Clock], increase the required [Clock Gears] by $8\nWhen entering a boss floor, decrease current [Clock Gears] by $9\nIncrease battle [Will] cost for Strong Shadow by $10"
+r:"^初始「意志力」降低(\d+)點\n所有敵人的傷害隨著戰鬥回合數提升而提升\n所有戰鬥消耗「意志力」增加(\d+)點\n每次進入「大時鐘」時，最多刷新(\d+)次\n進入強敵之影、交錯之影戰鬥時，所有敵人造成最終傷害提升(\d+%)，受到最終傷害降低(\d+%)\n遊蕩陰影戰鬥消耗「意志力」增加(\d+)點\n每次使用「時鐘」時，額外消耗(\d+)個「拂曉的碎片」\n「大時鐘」具象化四星角色卡牌時，所需「時鐘的齒輪」數量提升(\d+%)\n進入首領樓層時，當前「時鐘的齒輪」數量減少(\d+%)\n強敵陰影戰鬥消耗「意志力」增加(\d+)點\n通過「時鐘」回復的「意志力」量減少(\d+)點\n$"="Decrease starting [Will] by $1\nAll foes increase damage based on turn number\nIncrease battle [Will] cost by $2\nWhen entering the [Great Clock], can only refresh up to $3 times\nWhen fighting Strong Shadow and Tangled Shadow, increase all foes' Final DMG Dealt by $4, decrease all foes' Final DMG Taken by $5\nIncrease battle [Will] cost for Roaming Shadow by $6\nWhen using the [Clock], additionally consume $7 [Dawn Fragments]\nWhen buying 4★ characters in the [Great Clock], increase the required [Clock Gears] by $8\nWhen entering a boss floor, decrease current [Clock Gears] by $9\nIncrease battle [Will] cost for Strong Shadow by $10\nDecrease [Will] restored by the [Clock] by $11"
 
 收集效率=Collection Efficiency
 r:"^古老的銀幣、心靈碎片收集效率x(\d+\.\d+)\n當前周目無法獲得古老的寶石$"="Ancient Silver Coins, Heart Fragments collection efficiency x$1\nCannot obtain Ancient Gemstones in this NG"
@@ -212,7 +218,6 @@ r:"^所有角色{{A}}、總生命值、總防禦力、最終傷害降低(\d+%)�
 
 r:"^消耗(\d+)個「拂曉的碎片」，恢復(\d+)點「意志力」。$"="Consume $1 [Dawn Fragments] to restore $2 [Will]"
 r:"^消耗(\d+)個「拂曉的碎片」，定向選擇(\d+)個已擁有的角色。$"="Consume $1 [Dawn Fragments] to select $2 owned character"
-作戰<sprite\=8 tint=1><sprite\=15 tint=1><sprite\=8 tint=1> 解明<sprite\=2 tint=1><sprite\=15 tint=1><sprite\=2 tint=1>=<size\=26>COMBAT</size><sprite\=8 tint=1><sprite\=15 tint=1><sprite\=8 tint=1> <size\=26>NAVI</size><sprite\=2 tint=1><sprite\=15 tint=1><sprite\=2 tint=1>
 道具數量不足，無法選擇。=Insufficient item, cannot select.
 
 抵達新的樓層=Reached New Floor
@@ -567,8 +572,10 @@ r:"^下(\d+)個進入探索樓層時，出現強敵陰影的機率提高$"="In t
 r:"^下(\d+)次進入探索樓層時，必定出現「時鐘」$"="In the next $1 floor(s), guarantee a [Clock]"
 權杖·大時鐘擺錘=Wands · Clock Pendulum
 r:"^下(\d+)次進入探索樓層時，必定出現「大時鐘」$"="In the next $1 floor(s), guarantee a [Grand Clock]"
-權杖·摩納多鑰匙=Staff Monador key
+權杖·摩納多鑰匙=Wands · Monad Key
 r:"^下(\d+)次進入探索樓層時，必定出現摩納多之門$"="In the next $1 floor(s), guarantee a Monad door"
+權杖·超大型寶魔獵人=Wands · Greedy Hunter
+r:"^下(\d+)次進入探索樓層時，必定進入特殊的樓層，出現巨大稀有陰影$"="In the next $1 floor(s), guarantee a special floor with Greedy Shadow"
 
 權杖·時鐘特惠=Wands · Special Offer
 r:"^下(\d+)次進入「大時鐘」具象化卡牌時，所需「時鐘的齒輪」數量降低(\d+%)$"="The next $1 time when buying cards in the [Great Clock], decrease the required [Clock Gears] by $2"
@@ -576,7 +583,6 @@ r:"^下(\d+)次進入「大時鐘」具象化卡牌時，所需「時鐘的齒�
 r:"^下(\d+)次進入「大時鐘」時，額外增加(\d+)張卡牌的可選項$"="The next $1 time(s) when entering the [Great Clock], you have $2 additional card to choose from"
 權杖·指針復位=Wands · Hand Reset
 r:"^下(\d+)次進入「大時鐘」時，獲得(\d+)次免費刷新次數$"="The next $1 time(s) when entering the [Great Clock], gain $2 free refresh"
-
 
 ----------
 ALL CUPS
@@ -692,17 +698,17 @@ r:"^WONDER造成傷害提升(\d+%)，擁有大阿爾卡那「塔」時，額外�
 r:"^WONDER的每(\d+)個非額外回合後，自身獲得一個額外回合$"="After every $1 Wonder's non Extra Turn, gain 1 Extra Turn"
 
 寶劍·暴力美學=Swords · Violent Aesthetics
-r:"^反抗/支配角色造成傷害提升(\d+%)、暴擊率提升(\d+%)$"="Increase Rebel/Dominate characters' DMG Dealt by $1, CRIT Rate by $2"
+r:"^反抗/支配角色造成傷害提升(\d+%)、暴擊率提升(\d+%)$"="Increase Assassin/Sweeper characters' DMG Dealt by $1, CRIT Rate by $2"
 寶劍·穩中求勝=Swords · Steady Triumph
 r:"^救援/防衛角色防禦力提升(\d+%)、最大生命值提升(\d+%)$"="Increase Rescue/Defend characters' DEF by $1, Max HP by $2"
 寶劍·算無遺策=Swords · Meticulous Strategy
-r:"^優越/屈從角色速度提升(\d+)、效果命中提升(\d+%)$"="Increase Superior/Submit characters' SPD by $1, EHR by $2"
+r:"^優越/屈從角色速度提升(\d+)、效果命中提升(\d+%)$"="Increase Strategist/Saboteur characters' SPD by $1, EHR by $2"
 寶劍·穩固後援=Swords · Steady Support
-r:"^解明角色攻擊力、防禦力、最大生命值提升(\d+%)$"="Increase Elucidate characters' ATK, DEF, Max HP by $1"
+r:"^解明角色攻擊力、防禦力、最大生命值提升(\d+%)$"="Increase Elucidator characters' ATK, DEF, Max HP by $1"
 寶劍·援助疊加=Swords · Assistance Stacking
-r:"^使用解明技能後，所有角色造成傷害提升(\d+%)，本場戰鬥永久生效，可疊加(\d+)層$"="After using a Navigator skill, permanently increase all characters' DMG Dealt by $1, up to $2 stacks"
+r:"^使用解明技能後，所有角色造成傷害提升(\d+%)，本場戰鬥永久生效，可疊加(\d+)層$"="After using an Elucidator skill, permanently increase all characters' DMG Dealt by $1, up to $2 stacks"
 寶劍·額外援助=Swords · Additional Aid
-r:"^解明角色的屬性提升效果，額外提升(\d+(.\d+)?(%)?)$"="Additionally increase Stats Boost from Elucidate characters by $1"
+r:"^解明角色的屬性提升效果，額外提升(\d+(.\d+)?(%)?)$"="Additionally increase Stats Boost from Elucidator characters by $1"
 
 寶劍·生命連結=Swords · Lifelink
 所有友方角色獲得生命連結：受到傷害時按當前剩餘生命值比例分攤傷害=All characters gain Lifelink: Damage taken by a unit with [Lifelink] is distributed among all [Lifelink] units in proportion to their current HP%.
@@ -724,7 +730,7 @@ r:"^HIGHLIGHT能量恢復效率提升(\d+(.\d+)?(%)?)$"="Increase HIGHLIGHT Ener
 寶劍·HL返還=Swords · HL Refund
 r:"^任意角色使用HIGHLIGHT後，立刻恢復(\d+%)HIGHLIGHT能量$"="After any character use HIGHLIGHT, immediately restore $1 HIGHLIGHT Energy"
 寶劍·HL支援=Swords · HL Support
-r:"^使用解明技能後，立刻恢復(\d+%)HIGHLIGHT能量$"="After using a Navigator skill, immediately restore $1 HIGHLIGHT Energy"
+r:"^使用解明技能後，立刻恢復(\d+%)HIGHLIGHT能量$"="After using a Elucidator skill, immediately restore $1 HIGHLIGHT Energy"
 寶劍·HL激勵=Swords · HL Motivation
 r:"^任意角色使用HIGHLIGHT後，使其他角色的HIGHLIGHT冷卻時間減少(\d+)回合$"="After any character use HIGHLIGHT, decrease the HIGHLIGHT cooldown for other characters by $1 turn"
 寶劍·HL爆發=Swords · HL Burst
@@ -838,13 +844,13 @@ r:"^獲得(\d+)個夢境碎片$"="Obtain $1 Dream Fragments"
 SHUFFLE TIME + CHARACTER AWARENESS
 ----------
 每次進入「大時鐘」時，獲得1次{{A}}刷新次數=Each time you enter the [Great Clock], you gain 1 free refresh
-洗牌時間·初始=<size\=30>Shuffle Time·Initial</size>
-洗牌時間·通常=<size\=30>Shuffle Time·Normal</size>
-洗牌時間·稀有=<size\=30>Shuffle Time·Rare</size>
-洗牌時間·珍貴=<size\=30>Shuffle Time·Precious</size>
-洗牌時間·特殊=<size\=30>Shuffle Time·Special</size>
+洗牌時間·初始=<size\=28>Shuffle Time·Initial</size>
+洗牌時間·通常=<size\=28>Shuffle Time·Normal</size>
+洗牌時間·稀有=<size\=28>Shuffle Time·Rare</size>
+洗牌時間·珍貴=<size\=28>Shuffle Time·Precious</size>
+洗牌時間·特殊=<size\=28>Shuffle Time·Special</size>
 
-洗牌時間·角色=<size\=30>Shuffle Time·Character</size>
+洗牌時間·角色=<size\=28>Shuffle Time·Character</size>
 獲得角色：{{A}}=Obtain Character: {{A}}
 獲得角色：{{A}}。=Obtain Character: {{A}}
 
@@ -879,16 +885,26 @@ Magician
 r:"^立刻獲得(\d+)「時鐘的齒輪」、(\d+)「拂曉的碎片」、(\d+)「古老的金幣」、(\d+)「古老的銀幣」$"="Immediately obtain $1 [Clock Gears], $2 [Dawn Fragments], $3 [Ancient Gold Coins], $4 [Ancient Silver Coins]"
 女教皇=Priestess
 r:"^所有角色造成{{A}}技能傷害時會額外降低敵方主目標(\d+)點倒地值，所有敵人受{{B}}傷害提升(\d+%)-(\d+%)（依據層數變化）$"="<size\=28>All characters additionally decrease the main target's Down Gauge by $1 when dealing {{A}} skill damage. Increase all foes' {{B}} DMG Taken by $2–$3 (change based on stacks)</size>"
+女皇=Empress
+r:"^所有女性角色{{A}}、總生命值、總防禦力提升(\d+%)，最終傷害提升(\d+%)，擁有「皇帝」時，效果翻倍$"="Increase all female characters' {{A}}, Total HP, Total DEF by $1 Final DMG by $2, when you have the Major Arcana [Emperor], double this effect"
+Emperor
+r:"^所有男性角色{{A}}、總生命值、總防禦力提升(\d+%)，最終傷害提升(\d+%)，擁有「女皇」時，效果翻倍$"="Increase all male characters' {{A}}, Total HP, Total DEF by $1 Final DMG by $2, when you have the Major Arcana [Empress], double this effect"
+Hierophant
+r:"^所有角色釋放單體{{A}}技能時，對主目標以外的其他目標造成相當於原傷害(\d+%)的固定傷害；釋放單體追加效果/HIGHLIGHT/{{B}}時，對主目標以外的其他目標造成相當於原傷害(\d+%)的固定傷害$"="<size\=28>When using a single target {{A}} skill, deal $1 of the original damage as fixed damage to the non main targets; When using single target Follow Up/HIGHLIGHT/{{B}}, deal $2 of the original damage as fixed damage to the non main targets</size>"
+戀愛=Lovers
+r:"^隊伍中編入1/2/3/4個女性隊員時，WONDER攻擊力提升(\d+%)/(\d+\.\d+%)/(\d+\.\d+%)/(\d+%)；女性隊員使用{{A}}技能/HIGHLIGHT/{{B}}/解明技能後，使WONDER獲得(\d+\.\d+%)總傷害增幅，持續(\d+)回合，可疊加；WONDER使用{{A}}技能後，使女性隊員獲得(\d+\.\d+%)總傷害增幅，持續(\d+)回合$"="<size\=26>When the team has 1/2/3/4 female teammates, increase Wonder's ATK by $1/$2/$3/$4; After female teammate uses a {{A}} skill/HIGHLIGHT/{{B}}/Elucidator skill, increase Wonder's Total DMG by $5 for $6 turn, can stack; After Wonder uses a {{A}} skill, increase all female teammates' Total DMG by $7 for $8 turn</size>"
 Chariot
 r:"^所有角色的HIGHLIGHT/{{A}}可以暴擊，但是HIGHLIGHT/{{A}}能量恢復效率降低(\d+%)$"="HIGHLIGHT/{{A}} can CRIT, but decrease HIGHLIGHT/{{A}} Energy recovery rate by $1"
 所有角色的HIGHLIGHT/{{A}}可以暴擊=HIGHLIGHT/{{A}} can CRIT
-Justice
-r:"^透過「洗牌時間」獲取卡牌時，額外增加(\d+)個可選項$"="When choosing cards from [Shuffle Time], you have $1 additional card to choose from"
 Strength
 r:"^所有角色精力值上限提升(\d+)點，精力回復提升(\d+%)，精力值消耗增加(\d+%)。釋放技能後，該技能每消耗(\d+)點精力值使其他角色最終傷害提升(\d+%)，持續(\d+)回合$"="Increase all characters' Max SP by $1, SP Recovery by $2, SP cost by $3. When using skills, increase all other characters' Final DMG by $5 for every $4 consumed SP for $6 turn"
+Hermit
+r:"^戰鬥中使用道具時，最終傷害提升(\d+%)；使用道具後使自身獲得(\d+)個額外回合$"="When using items in battle, increase Final DMG by $1; Gain $2 Extra Turn after using items"
 命運=Fortune
 r:"^所有角色總生命值提升(\d+%)，技能造成溢出治療時，對隨機敵人造成溢出治療量(\d+%)的固定傷害$"="Increase all character' Max HP by $1, when overhealing with skill, deal $2 overhealed amount as fixed damage to random foe"
 r:"^所有角色總生命值提升(\d+%)、治療效果提升(\d+%)，技能造成溢出治療時，對隨機敵人造成溢出治療量(\d+%)的固定傷害$"="Increase all character' Max HP by $1 and Healing Effect by $2, when overhealing with skill, deal $3 overhealed amount as fixed damage to random foe"
+Justice
+r:"^透過「洗牌時間」獲取卡牌時，額外增加(\d+)個可選項$"="When choosing cards from [Shuffle Time], you have $1 additional card to choose from"
 倒懸者=Hanged Man
 r:"^所有角色持續效果傷害提升(\d+%)，使用{{A}}技能/追加效果/HIGHLIGHT/{{B}}造成傷害後，額外結算一次技能主目標的持續效果$"="Increase all characters' Damage Over Time DMG by $1, after dealing damage with {{A}} skill/Follow Up/HIGHLIGHT/{{B}}, additionally trigger the main target's Damage Over Time"
 Temperance
@@ -897,8 +913,12 @@ Devil
 r:"^探索樓層會出現更多可破壞物，透過可破壞物獲得的「時鐘的齒輪」數量提升(\d+%)$"="More breakable objects will appear, increase [Clock Gears] acquired from breakable objects by $1"
 Tower
 r:"^WONDER{{A}}、總生命值、總防禦力提升(\d+%)，最終傷害提升(\d+%)$"="Increase Wonder's {{A}}, Total HP, Total DEF by $1, Final DMG by $2"
+Star
+r:"^所有角色受治療效果提升(\d+%)，免疫精神異常及控制效果、免疫倒地、首次受到致命傷害時保留(\d+)點生命值，擁有「命運」時，「命運」的固定傷害效果改為對所有敵人生效$"="<size\=28>Increase all characters' Healing Received by $1, gain Mental Ailments immunity, Control Effects immunity, Down immunity, prevent faint and stay at $2 HP once per battle, when you have the Major Arcana [Fortune], the fixed damage from [Fortune] now work on all foes</size>"
 Moon
 r:"^戰鬥消耗「意志力」減少(\d+)點，「意志力」大於(\d+)時，額外使所有角色最終傷害提升(\d+%)$"="Decrease battle [Will] cost by $1. When [Will] is above $2, additionally increase all characters' Final DMG by $3"
+Sun
+r:"^戰鬥開始以及每經過(\d+)個回合，對所有敵人造成最大生命值(\d+%)的固定傷害，對所有角色造成當前生命值(\d+%)的固定傷害$"="At the start of battle and after every $1 turns, deal $2 Max HP fixed damage to all foes, deal $3 current HP fixed damage to all characters"
 Judgement
 r:"^所有角色每次使用普通攻擊/槍械攻擊時，使所有同伴獲得(\d+)層/(\d+)層「審判之力」，每層「審判之力」使普通攻擊、槍械攻擊造成傷害提升(\d+%)，可疊加(\d+)層，本場戰鬥永久生效$"="Each time when characters use Melee Attack/Gun Attack, give the party $1 stacks/$2 stack of [Judgement Power], each stack of [Judgement Power] permanently increase Melee Attack Gun Attack DMG Dealt by $3, up to $4 stacks"
 審判之力=Judgement Power
@@ -951,6 +971,7 @@ SHADOW NAMES
 神奇術士=Magical Magus
 白狼之武者=Hakurou Musha
 宗師之武者=Kaiden Musha
+秘藏之手=Precious Hand
 {{A}}領主={{A}} Lord
 生命舞者=Ardent Dancer
 毒殺術士=Venomous Magus
@@ -1096,6 +1117,7 @@ r:"^獲得(\d+)個「時鐘的齒輪」和(\d+)個「拂曉的碎片」$"="Obtai
 我的人生到底有什麼意義……？=What's the point of my life...?
 勸他振作起來=Cheer him up
 r:"^失去(\d+)個稀有品質增益，(\d+%)機率獲得(\d+)個稀有品質增益，(\d+%)機率什麼都沒有$"="Lose $1 Rare buff, $2 chance to obtain $3 Rare buffs, $4 to obtain nothing"
+你說得對……就算是為了支持我的{{A}}，\n也要振作起來……！=You're right... I have to pull myself together for my supportive {{A}}...!
 勸他換個地方生活=Live somewhere else
 r:"^不付出代價，(\d+%)機率獲得(\d+)個稀有品質增益$"="$1 chance to obtain $2 Rare buff"
 你說得對，是時候重新開始了。=You're right, it's time to start over.

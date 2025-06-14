@@ -162,18 +162,18 @@ r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍�
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害，獲得4顆『冰晶』。$"="Deals $1 ATK Ice damage to <color\=#FFFF00>1</color> foe, and gains 4 [Ice Crystal]."
 r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，並獲得<link\="s\|119"><u>『冰晶』</u></link>4顆。$"="Deals <color\=#FFFC40>$1</color> ATK Ice damage to 1 foe, and gains 4 <link\="s|119"><u>[Ice Crystal]</u></link>."
 
-r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害，(\d+)層『冰晶』或自身擁有『寒霜印記』時基於敵人的已損生命值最多提升(\d+\.\d+%)傷害。$"="Deals $1 ATK Ice damage to <color\=#FFFF00>1</color> foe, increases damage by $3 when you have $2 stacks of [Ice Crystal] or have [Frostbite Mark]."
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害，(\d+)層『冰晶』或自身擁有『寒霜印記』時基於敵人的已損生命值最多提升(\d+\.\d+%)傷害。$"="Deals $1 ATK Ice damage to <color\=#FFFF00>1</color> foe, increases damage by $3 when you have $2 stacks of [Ice Crystal] or have [Parhelion]."
 r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，如果此時<link\="s\|119"><u>『冰晶』</u></link>數量為10或自身擁有『寒霜印記』則該技能獲得額外傷害提升。敵人生命值越低，則傷害提升越高，最多提升<color\=#FFFC40>(\d+\.\d+%)</color>。\n被動：『刀尖上的舞者』獲得額外傷害提升。敵人生命值越低，則傷害提升越高，最多提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Deals <color\=#FFFC40>$1</color> ATK Ice damage to 1 foe, increases damage if you have 10 <link\="s|119"><u>[Ice Crystal]</u></link>. The lower the foe's HP are, the higher the damage will be, up to a maximum of <color\=#FFFC40>$2</color>.\nPassive: [Dancer on Knife's Edge] increases damage. The lower the foe's HP are, the higher the damage will be, up to a maximum of <color\=#FFFC40>$3</color>。"
 
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的冰凍傷害，敵人生命值越低受到傷害越高。敵人生命值低於(\d+%)時獲得最高加成，最高提升(\d+%)。$"="Deals $1 ATK Ice damage to <color\=#FFFF00>1</color> foe. The lower the foe's HP, the higher the DMG Dealt.\nWhen they are below $2 HP gain the maximum boost, up to $3."
 
 冰晶數目=Number of Ice Crystal
-寒霜印記=Frostbite Mark
-可用來提升『寒冰之刃』造成的傷害=Increase damage of [Frozen Blade]
+寒霜印記=Parhelion
+可用來提升『寒冰之刃』造成的傷害=Increase damage of [Durandal of Ice]
 
 Combat Pop-ups
 r:"^冰<color\=#000000>晶</color>$"="I<color\=#000000>c</color>e Crystal"
-r:"^寒<color\=#000000>霜</color>印記$"="F<color\=#000000>r</color>ostbite Mark"
+r:"^寒<color\=#000000>霜</color>印記$"="P<color\=#000000>a</color>rhelion"
 
 ----------
 Fleuret - Seiji Shiratori
@@ -1093,7 +1093,7 @@ r:"^受到疾風屬性傷害時使該次傷害暴擊效果提升(\d+(.\d+)?(%)?)
 r:"^受到疾風屬性傷害時使該次傷害攻擊力提升(\d+(.\d+)?(%)?)$"="Increase ATK Taken by $1\nwhen taking Wind damage"
 r:"^受到任意屬性傷害時使該次傷害暴擊效果提升(\d+(.\d+)?(%)?)$"="Increase CRIT DMG Taken by $1\nwhen taking any Elemental damage"
 r:"^受到任意屬性傷害時使該次傷害攻擊力提升(\d+(.\d+)?(%)?)$"="Increase ATK Taken by $1\nwhen taking any Elemental damage"
-r:"^支配怪盜攻擊力提升(\d+(.\d+)?(%)?)$"="Increase ATK for Dominate Thieves by $1"
+r:"^支配怪盜攻擊力提升(\d+(.\d+)?(%)?)$"="Increase ATK for Sweeper Thieves by $1"
 r:"^基於暴擊率超過(\d+%)的部分使暴擊效果提升，當前提升(.*)$"="<size\=25>Increase CRIT DMG based on CRIT Rate that's over $1; Currently increase CRIT DMG by $2</size>"
 
 Combat Pop-ups
@@ -1276,3 +1276,28 @@ r:"^追<color\=#000000>風</color>之息$"="W<color\=#000000>i</color>ndchaser's
 r:"^龍<color\=#000000>卷</color>箭$"="C<color\=#000000>y</color>clone Arrow"
 r:"^復<color\=#000000>甦</color>之矢$"="A<color\=#000000>r</color>row of Rejuvenation"
 r:"^扣<color\=#000000>動</color>的扳機$"="P<color\=#000000>u</color>ll the Trigger"
+
+----------
+Akihiko Sanada
+----------
+r:"^自身獲得(\d+)層『鬥志』，對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，自身暴擊效果提高(\d+\.\d+%)，持續(\d+)回合。$"="Gains $1 stack of [Fighting Spirit], deals $2 ATK Elec damage to <color\=#FFFF00>all</color> foes, increases own CRIT DMG by $3 for $4 turns."
+r:"^自身獲得(\d+)層『鬥志』，對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，自身暴擊效果提高<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Gains $1 stack of [Fighting Spirit], deals <color\=#FFFC40>$2</color> ATK Elec damage to all foes, increases own CRIT DMG by <color\=#FFFC40>$3</color> for $4 turns."
+
+r:"^自身獲得(\d+)層『鬥志』，對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，自身獲得(\d+)層『執念』。$"="Gains $1 stack of [Fighting Spirit], deals $2 ATK Elec damage to <color\=#FFFF00>all</color> foes, gains $3 stacks of [Obsession]."
+r:"^自身獲得(\d+)層『鬥志』，對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，自身獲得(\d+)層『執念』。$"="Gains $1 stack of [Fighting Spirit], deals <color\=#FFFC40>$2</color> ATK Elec damage to all foes, gains $3 stacks of [Obsession]."
+
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，若自身存在(\d+)層及以上的『鬥志』則消耗所有『鬥志』，每消耗(\d+)層『鬥志』使該技能倍率提升(\d+\.\d+%)。$"="Deals $1 ATK Elec damage to <color\=#FFFF00>all</color> foes, if you have $2 or more stacks of [Fighting Spirit] then consumes all [Fighting Spirit], each stack of [Fighting Spirit] consumed increases skill multiplier by $4."
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，若自身存在(\d+)層及以上的『鬥志』則消耗所有『鬥志』，每消耗(\d+)層『鬥志』使該技能倍率提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Deals <color\=#FFFC40>$1</color> ATK Elec damage to all foes, if you have $2 or more stacks of [Fighting Spirit] then consumes all [Fighting Spirit], each stack of [Fighting Spirit] consumed increases skill multiplier by <color\=#FFFC40>$4</color>."
+
+r:"^釋放條件：(\d+)點{{A}}能量\n對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，該技能必定暴擊，暴擊效果固定為(\d+%)。$"="Use condition: When you have $1 {{A}} Energy\nDeals $2 ATK Elec damage to <color\=#FFFF00>all</color> foes, this skill will [Always CRIT], fixed CRIT DMG at $3."
+
+r:"^使<color\=#FFFF00>1名</color>同伴暴擊效果提升(\d+%)，持續(\d+)回合。$"="Increases <color\=#FFFF00>1</color> ally's CRIT DMG by $1 for $2 turn."
+
+鬥志=Fighting Spirit
+執念=Obsession
+
+Combat Pop-ups
+r:"^鬥<color\=#000000>志</color>$"="F<color\=#000000>i</color>ghting Spirit"
+r:"^執<color\=#000000>念</color>$"="O<color\=#000000>b</color>session"
+r:"^電<color\=#000000>光</color>陣$"="Lvi</color>g</color>htning Domain"
+r:"^貫<color\=#000000>徹</color>$"="U<color\=#000000>p</color>hold"

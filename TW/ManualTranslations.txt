@@ -3,8 +3,6 @@ r:"^(.)$"=$1
 -------------------------------
 ---- I. System / Options ------
 -------------------------------
-// Description: Settings Translation, important system messages, or whatever can be shown before logging in
-
 r:"更新本地文件\((\d+)\/(\d+)\)"=<b>Applying Update ($1/$2)</b>
 r:"^用戶端版本號：(.*)  遊戲版本：(.*)  資源號：(.*)$"="Client Version: $1 Game Version: $2 Resource ID: $3"
 r:"^(.*)版本$"="Version $1"
@@ -92,19 +90,19 @@ RPG模式縮放靈敏度=RPG Mode Zoom Sensitivity
 
 戰鬥設置=Combat
 Onemore自動選擇目標=<size\=27>Automatically select \nONE MORE target</size>
-自動戰鬥釋放解明怪盜技能=<size\=27>Enable Navigator skills \nin Auto mode</size>
+自動戰鬥釋放解明怪盜技能=<size\=27>Enable Elucidator skills \nin Auto mode</size>
 自動戰鬥切換面具=<size\=27>Enable Persona change \nin Auto mode</size>
 自動戰鬥釋放HighLight=<size\=27>Enable HIGHLIGHT \nin Auto mode</size>
-簡化解明怪盜表現=<size\=20>Simplify Navigator Animation\n(Quick/ Once per Login/ Full)</size>
+簡化解明怪盜表現=<size\=20>Simplify Elucidator Animation\n(Quick/ Once per Login/ Full)</size>
 簡化HighLight表現=<size\=21>Simplify HIGHLIGHT Animation\n(Quick/ Once per Login/ Full)</size>
 自動戰鬥「切換{{A}}」=Enable Persona change in Auto mode
 自動戰鬥釋放「HIGHLIGHT」=Enable HIGHLIGHT in Auto mode
 自動戰鬥釋放「HIGHLIGHT/{{A}}」=Enable HIGHLIGHT/{{A}} in Auto mode
-自動戰鬥釋放「解明怪盜」技能=Enable Navigator skills in Auto mode
+自動戰鬥釋放「解明怪盜」技能=Enable Elucidator skills in Auto mode
 「ONE MORE」自動選擇目標=Automatically select ONE MORE target
 簡化戰鬥結算=Simplify Victory Screen
 簡化戰鬥表現=Simplify Combat Animation
-簡化「解明怪盜」表現=Simplify Navigator Animation
+簡化「解明怪盜」表現=Simplify Elucidator Animation
 簡化「HIGHLIGHT」表現=Simplify HIGHLIGHT Animation
 簡化「HIGHLIGHT/{{A}}」表現=Simplify HIGHLIGHT/{{A}} Animation
 完整=Full
@@ -139,7 +137,7 @@ r:"^取消$"="Cancel"
 打開契約=Open Contract
 打開目標=Open Goals
 打開活動=Open Events
-打開協同者=Confidants
+打開協同者=Open Synergies
 打開郵件=Open Mail
 打開任務=Open Missions
 打開都市=City Activities
@@ -199,6 +197,7 @@ sr:"^已為(.*)點讚。$"="Liked $1."
 私聊=Private Message
 尚未輸入簽名=No Signature
 設置協助怪盜=Select Assist Thief
+只能設置兩個協助怪盜哦！=Can only select two Assist Thieves!
 置頂=Pin
 取消置頂=Cancel pin
 刪除=Delete
@@ -303,7 +302,7 @@ Character Names
 CV.{{A}}=CV.{{A}}
 cv:{{A}}=cv:{{A}}
 
-// P5X MAIN//
+P5X MAIN
 r:"^梅<color\=#ff0000ff>洛</color>普$"="Me<color\=#ff0000ff>r</color>ope"
 r:"^瑪<color\=#ff0000ff>奇</color>姆$"="Ma<color\=#ff0000ff>r</color>thym"
 r:"^路<color\=#ff0000ff>菲</color>爾$"="Lu<color\=#ff0000ff>f</color>el"
@@ -314,7 +313,7 @@ r:"^多<color\=#ff0000ff>禰</color>村 {{A}}$"="{{A}} Ta<color\=#ff0000ff>ne</c
 r:"^多<color\=#ff0000ff>禰</color>村{{A}}$"="{{A}} Ta<color\=#ff0000ff>ne</color>mura"
 r:"^野<color\=#ff0000ff>毛</color> {{A}}$"="To<color\=#ff0000ff>mo</color>ko Noge"
 
-// P5X CONFIDANT //
+P5X SYNERGIES
 r:"^梨<color\=#ff0000ff>本</color> {{A}}$"="Na<color\=#ff0000ff>ru</color>mi Nashimoto"
 r:"^李<color\=#ff0000ff>瑤</color>鈴$"="Yao<color\=#ff0000ff>ling</color> Li"
 r:"^富<color\=#ff0000ff>山</color> {{A}}$"="{{A}} To<color\=#ff0000ff>mi</color>yama"
@@ -331,7 +330,7 @@ r:"^夏<color\=#ff0000ff>川</color> {{A}}$"="{{A}} Nat<color\=#ff0000ff>su</col
 r:"^橋<color\=#ff0000ff>本</color> {{A}}$"="{{A}} Ha<color\=#ff0000ff>shi</color>moto"
 r:"^宮<color\=#ff0000ff>下</color> {{A}}$"="{{A}} Mi<color\=#ff0000ff>ya</color>shita"
 
-// P5X Side Quest //
+P5X Side Quest
 r:"^<color\=#ff0000ff>阿</color>七$"="Shi<color\=#ff0000ff>chi</color>-kun"
 r:"^安<color\=#ff0000ff>德</color>森$"="An<color\=#ff0000ff>der</color>son"
 r:"^佐<color\=#ff0000ff>藤</color> {{A}}$"="Yu<color\=#ff0000ff>ta</color> Sato"
@@ -346,7 +345,7 @@ r:"^小<color\=#ff0000ff>出</color> {{A}}$"="Hi<color\=#ff0000ff>yo</color>ri K
 r:"^津<color\=#ff0000ff>田</color> {{A}}$"="{{A}} T<color\=#ff0000ff>su</color>da"
 r:"^江<color\=#ff0000ff>崎</color> {{A}}$"="Sh<color\=#ff0000ff>in</color>ta Ezaki"
 
-// Original Phantom Thieves + P5 //
+Original Phantom Thieves + P5
 r:"^雨<color\=#ff0000ff>宮</color>蓮$"="R<color\=#ff0000ff>en</color> Amamiya"
 r:"^坂<color\=#ff0000ff>本</color>{{A}}$"="R<color\=#ff0000ff>yu</color>ji Sakamoto"
 r:"^摩<color\=#ff0000ff>爾</color>{{A}}$"="Mor<color\=#ff0000ff>g</color>ana"
@@ -368,7 +367,7 @@ r:"^維修工$"="Maintenance Worker"
 r:"^<color\=#ff0000ff>店</color>員$"="S<color\=#ff0000ff>t</color>aff"
 r:"^謎<color\=#ff0000ff>之</color>{{A}}$"="My<color\=#ff0000ff>st</color>erious {{A}}"
 
-// Character-specific Persona // 
+Character-specific Persona
 亞森=Arsene
 基德船長=Captain Kidd
 蘇洛=Zorro
@@ -418,9 +417,9 @@ Worldbuilding Terms
 新男酒吧=Crossroads
 釣魚場=Fishing Pond
 都市=City
-協同者=Confidant
+協同者=Synergy
 
-// Important Consumables //
+Important Consumables
 體力補給=<size\=20>Stamina Supply</size>
 濃縮咖啡=Espresso
 用於提升體力的補給飲料，使用後立即恢復60體力。=Restores 60 Stamina Points immediately.
@@ -787,7 +786,7 @@ r:"^(\d+)分後解鎖$"="Unlocks after $1m"
 
 r:"^挑戰倒計時：$"="Time Left:"
 r:"^挑戰倒計時：(\d+)天(\d+)時(\d+)分$"="Time Left: $1d $2h $3m"
-r:"^本週剩餘次數：(\d+)/(\d+)$"="Weekly Usage: $1/ $2"
+r:"^本週剩餘次數：(\d+)/(\d+)$"="Weekly Usage: $1/$2"
 限時挑戰倒計時：=Challenge Time Left:
 r:"^(\d+)天(\d+)時後結束$"="Ends in $1d $2h"
 r:"^(\d+)時(\d+)分後結束$"="Ends in $1h $2m"
@@ -847,9 +846,9 @@ r:"^限購：(\d+)次$"="Limit: $1"
 操作模式切換為手把。=Controller Mode
 活動倒計時：=Event Countdown:
 
-///////////////////////
-/// b. Profile Menu ///
-///////////////////////
+----------
+Profile Menu
+----------
 違規檢舉=Report
 修改名稱=Name
 修改名字=Change
@@ -880,12 +879,10 @@ r:"^每日最多可獲取<color\=#FF0000>10</color>點<link\="s\|1002"><u>助戰
 都市生活天數=Days Spent
 怪盜總評級=Thieves Total Rating
 
-////////////////////////////////
-///// c. Character Screen //////
-////////////////////////////////
-
-// Unlock Conditions //
-
+----------
+Character Screen
+----------
+Unlock Conditions
 r:"主角達到(\d+)級時解鎖下一階潛能"=Unlocks when Wonder is level $1
 r:"主角達到(\d+)級可繼續突破"=Unlocks when Wonder is level $1
 替換武器將自動繼承武器等級=Weapon level will\ncarry over between equips
@@ -932,22 +929,22 @@ sr:"^(.*)屬性奏鳴效果一覽$"="$1 Sonata Effects"
 sr:"^二重奏·(.*):(.*)元素怪盜技能傷害提升(.*)$"="<size\=21>$1 Duet: Increase $2 Thieves' skill damage by $3</size>"
 sr:"^多重奏·(.*):(.*)元素怪盜技能傷害提升(.*)$"="<size\=21>$1 Polyphony: Increase $2 Thieves' skill damage by $3</size>"
 
-反抗=Rebel
-擅長單體攻擊，能有效針對單個敵人。=<size\=26>Good at single target attacks, can deal with a single foe effectively.</size>
-支配=Dominate
-擅長群體攻擊，能有效針對多個敵人。=<size\=28>Good at AoE attacks, can deal with multiple foes effectively.</size>
-救援=Rescue
-能夠治療同伴，為團隊提供回復能力。=Can heal allies to provides recovery for the team.
-防衛=Defend
-擅長保護同伴，提升團隊生存能力。=Good at protecting allies to improve team's survivability.
-優越=Superior
-能為同伴施加增益效果，提升團隊的整體戰鬥力。=Can apply buffs to improve teams' overall power.
-屈從=Submit
-能對敵人施加減益效果，在戰鬥中取得優勢。=Can inflict debuffs to gain an advantage in combat.
-解明=Elucidate
-不直接參與戰鬥，透過支援技能為隊伍提供支援效果。=<size\=26>Does not participate in combat, support the team through support skills.</size>
-不直接參與戰鬥，透過支援技能為隊伍提供支援效果，同時自身屬性會轉化為額外的屬性，為出戰的隊員提供加成。=<size\=26>Does not participate in combat, support the team through support skills.\nBoost active allies' stats based on own stats</size>
-不直接參與戰鬥，在場外使用支援技能為出戰隊員提供加成。=<size\=26>Does not participate in combat, support the team through support skills.</size>
+反抗=Assassin
+擅長單體攻擊，能有效針對單個敵人。=Takes down single enemies with targeted attacks.
+支配=Sweeper
+擅長群體攻擊，能有效針對多個敵人。=Deals with groups of foes through multi-target attacks.
+救援=Medic
+能夠治療同伴，為團隊提供回復能力。=Specializes in healing skills that restore the party's HP.
+防衛=Guardian
+擅長保護同伴，提升團隊生存能力。=Protects allies and increases the party's defense.
+優越=Strategist
+能為同伴施加增益效果，提升團隊的整體戰鬥力。=Buffs allies' stats to improve their combat abilities.
+屈從=Saboteur
+能對敵人施加減益效果，在戰鬥中取得優勢。=Debuffs foes' stats to give the party the upper hand.
+解明=Elucidator
+不直接參與戰鬥，透過支援技能為隊伍提供支援效果。=Helps allies from off-field with buffs and support skills.
+不直接參與戰鬥，透過支援技能為隊伍提供支援效果，同時自身屬性會轉化為額外的屬性，為出戰的隊員提供加成。=Helps allies from off-field with buffs and support skills.\nBoost active allies' stats based on own stats
+不直接參與戰鬥，在場外使用支援技能為出戰隊員提供加成。=Helps allies from off-field with buffs and support skills.
 
 怪盜=Thief
 怪盜職業=Thief Roles
@@ -1020,8 +1017,11 @@ r:"^角色等級上限提升至<color\=#FFF000>LV.(\d+)</color>$"="Increase max 
 {{A}}煥新=<size\=18>New {{A}}</size>
 HIGHLIGHT煥新=<size\=18>New HIGHLIGHT</size>
 
-// Wonder Skill Tree //
-靈感點=Inspiration
+Wonder Skill Tree
+靈感點=Inspiration Points
+『靈感點』\n主角等級提升和收錄{{A}}全書時獲得，用於提升靈感技能的等級。=<size\=24>[Inspiration Points]\nObtained when Wonder levels up and fills the {{A}} Compendium, used to level up Inspiration skill tree.</size>
+靈感火花=Inspiration Spark
+『靈感火花』\n挑戰天鵝絨試練、提升{{A}}精算機等級和提升{{B}}探索度可以獲得，用於提升靈感技能等級的高級材料。=<size\=28>[Inspiration Spark]\nObtained from Velvet Trials, {{A}} Ticket Machine and {{B}} Exploration, used to level up Inspiration skill tree.</size>
 
 r:"^提升(\d+)生命值。$"="Increase HP by $1"
 r:"^提升(\d+)攻擊力。$"="Increase ATK by $1"
@@ -1051,24 +1051,25 @@ r:"需要主角等級達到(\d+)級。"=Unlocks when Wonder \nreaches level $1.
 技能等級不能高於前置技能。=The skill level cannot be higher\n than the preceding tree.
 r:"需要(\d+)<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>才可以升級天賦。"=Need $1<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>to upgrade.
 r:"需要(\d+)<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>才可以啟動天賦。"=Need $1<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>to activate.
-獲取更多靈感點=Get Inspiration
+獲取更多靈感點=Get Inspiration Pts
 
 r:"^重置靈感需要<color\=#FFC000>(\d+)個魂石</color>，是否確定重置？（重置後所有靈感點返還，『屬性進階』靈感技能不會被重置）$"="Spend <color\=#FFC000>$1 Soul Gems</color> to reset Inspiration? (Refund all spent Inspiration Points, will not reset the [Superego] skill tree)"
 r:"^重置靈感需要(\d+)個魂石，是否確定重置？（重置後所有靈感點返還，『屬性進階』靈感技能不會被重置）$"="Spend $1 Soul Gems to reset Inspiration? (Refund all spent Inspiration Points, will not reset the [Superego] skill tree)"
 
 靈感輝光=Inspiration Glow
+『靈感輝光』\n主角等級達到80級後，解鎖並提升超我等級可以獲得，用於提升靈感技能等級的高級材料。=<size\=24>[Inspiration Glow]\nObtain after Wonder reaches level 80 and unlocks Superego levels, used to level up Inspiration skill tree.</size>
 獲得靈感輝光=<size\=25>Inspiration Glow</size>
 r:"^提升(\d+)生命值。\n提升(\d+)攻擊力。\n提升(\d+)防禦力。$"="Increase HP by $1 \nIncrease ATK by $2 \nIncrease DEF by $3"
 r:"^需要<size\=46><color\=#ffffff><sprite\=2 tint\=1></size>(\d+)</color>和<size\=46><color\=#ffffff><sprite\=17 tint\=1></size>(\d+)</color>升級天賦。$"="<size\=28>Need <size\=46><color\=#ffffff><sprite\=2 tint\=1></size>$1</color> and <size\=46><color\=#ffffff><sprite\=17 tint\=1></size>$2</color> to upgrade.</size>"
 r:"^需要<size\=46><color\=#ffffff><sprite\=30 tint\=1></size>1</color>升級天賦。$"="Need <size\=46><color\=#ffffff><sprite\=30 tint\=1></size>1</color> to upgrade."
 
-// INSPIRATION TUTORIAL //
+INSPIRATION TUTORIAL
 『靈感』說明=Inspiration
 <color\=#FFD145>靈感提升</color>\n{{A}}錄入面具全書後，可以領取靈感點。\n使用靈感點，可以解鎖並提升靈感技能等級。\n\n<color\=#FFD145>靈感重置</color>\n靈感技能可以消耗魂石進行重置。\n重置後返還所有已消耗的靈感點。=<color\=#FFD145>Inspiration</color>\nWith every new Persona recorded in the book, you will earn Inspiration Points, which can be used to unlock and upgrade Wonder's skill tree. More skills and levels are unlocked as you level up further.\n\n<color\=#FFD145>Inspiration Reset</color>\nYou can reset your skill tree by spending Soul Gems, which will return all the Inspiration Points you have used.
 
-//////////////////////////////
-/// e. Handbook Challenges ///
-//////////////////////////////
+----------
+Handbook Challenges
+----------
 
 完成目標Ⅰ第一階段所有任務=Complete all tasks in Step 1
 完成目標Ⅰ第二階段所有任務=Complete all tasks in Step 2
@@ -1132,14 +1133,14 @@ r:"^完成目標Ⅳ第七階段任意(\d+)個任務$"="Complete any $1 tasks in 
 完成   階段目標獲得= Step   Tasks Reward
 獎勵全部領取後，開啟「Ⅲ期目標」=Unlock [Phase III Goals] after getting all rewards
 
-// REGEX ONLY
+REGEX ONLY
 r:"主角升至(\d+)級"=Reach Wonder Lv. $1
 r:"^擁有(\d+)個(\d+)級的{{A}}$"="Have $1 Lv. $2 {{A}}"
 r:"^擁有(\d+)個(\d+)級及以上的{{A}}$"="Have $1 Lv. $2 or above {{A}}"
 r:"^擁有(\d+)個(\d+)級的怪盜$"="Have $1 Lv. $2 Thieves"
 r:"^擁有(\d+)個(\d+)級及以上的怪盜$"="Have $1 Lv. $2 or above Thieves"
-r:"擁有(\d+)個(\d+)級的武器"=Have $1 Lv. $2 weapons
-r:"消耗(\d+)靈感點"=Spend $1 Inspiration
+r:"^擁有(\d+)個(\d+)級的武器$"="Have $1 Lv. $2 weapons"
+r:"^消耗(\d+)靈感點$"="Spend $1 Inspiration Points"
 
 r:"^擁有(\d+)個(\d+)級的階級(\d+)及以上的{{A}}$"="Have $1 Rank $3 {{A}} at Lv. $2"
 r:"^合成(\d+)個彩色品質的階級(\d+){{A}}"="Fuse $1 Rainbow-quality Rank $2 {{A}}"
@@ -1153,7 +1154,7 @@ r:"擁有(\d+)張等級為(\d+)級的宙位啟示卡"=Have $1 Lv. $2 Universe Re
 
 r:"^消耗(\d+)點行動力$"="Spend $1 Energy Points"
 r:"進行(\d+)次足球部活動"=Join a Soccer Club activity $1 times
-r:"與任意一位協同者好感度達到(\d+)級"=Reach Rank $1 with any Confidant
+r:"與任意一位協同者好感度達到(\d+)級"=Reach Rank $1 with any Synergy
 r:"^任意人格指數達到(\d+)級$"="Reach Rank $1 for any Social Stats"
 
 r:"完成(\d+)次「厄抑之境」 \((\d)\/(/d)\)"=Clear [Realm of Repression] $1 times ($2/$3)
@@ -1173,48 +1174,48 @@ r:"^通關天鵝絨試煉任意(\d+)個章節的第(\d+)關$"="Pass Level $2 for
 r:"^完成難度(\d+)及以上的心軌擇行$"="Complete Heart Rail on Difficulty $1"
 r:"^完成(\d+)次難度(\d+)及以上的往日回溯$"="Complete $1 Past Echo on Difficulty $2 or above"
 
-// Part I Step 1
+Part I Step 1
 完成引導任務「開啟未知之路」=Complete the main mission: "Open the Unknown Road"
 進行10次簽約=Perform 10 Signature
 見證{{A}}的覺醒=Witness {{A}}'s Awakening
 完成主線任務「{{A}}」=Complete the main mission: "{{A}}"
 r:"^擁有(\d+)個潛能(.*)的怪盜$"="Have $1 Thieves at Potential $2"
 
-// Part I Step 2
-與{{A}}成為協同者關係=Form a Confidant with {{A}}
+Part I Step 2
+與{{A}}成為協同者關係=Form a Synergy with {{A}}
 主動添加1名好友=Add a friend
 更換1次頭像=Change your Avatar once
 
-// Part I Step 3
+Part I Step 3
 擊敗{{A}}=Defeat {{A}}
 合體2次{{A}}=Fuse 2 {{A}}
 通關任意厄抑之境-{{A}}=Finish any {{A}} Farm once
 完成支線任務「愛與MUSCLE」=Complete Anderson's side mission "Love and MUSCLE"
 加入或者創建任意樂園=Create or join any guild
 
-// Part I Step 4
-本期心之海試練通關北部掘進區=Complete the North Side in the Sea of Souls Trials
+Part I Step 4
+本期心之海試練通關北部掘進區=Complete the North Side in the Trials from the Sea of Souls
 完成引導任務「趣味{{A}}機」=Complete the side mission "Fun Twister"
 
-// Part I Step 6
+Part I Step 6
 完成支線任務「靈驗的占卜師」=Meet Chihaya for the first time
 r:"^育成(\d+)次{{A}}$"="Inherit a {{A}} skill $1 times"
 完成引導任務「旋律時光·其一」=Enroll in the Music Club
 
-// Part II Step 1
+Part II Step 1
 通關任意厄抑之境-啟示套裝=Complete any Revelation Card Farm
 
-// Part II Step 2
-本期心之海試練通關西部施工區=Complete the West Side in the Sea of Souls Trials
+Part II Step 2
+本期心之海試練通關西部施工區=Complete the West Side in the Trials from the Sea of Souls
 
-// Part II Step 3
-成功挑戰1次閼凶夢之扉=Complete 1 Door of Nightmares on Normal or higher
+Part II Step 3
+成功挑戰1次閼凶夢之扉=Complete 1 Nightmare's Gateway on Normal or higher
 
-// Part II Step 6
-本期心之海試練通關核心控制區=Complete the Central Area in the Sea of Souls Trials
+Part II Step 6
+本期心之海試練通關核心控制區=Complete the Central Area in the Trials from the Sea of Souls
 
-// Part II Step 7
-成功挑戰1次普通難度的閼凶夢之扉=Complete 1 Door of Nightmares on Normal or higher
+Part II Step 7
+成功挑戰1次普通難度的閼凶夢之扉=Complete 1 Nightmare's Gateway on Normal or higher
 
 ----------
 Battle Pass Challenges
@@ -1260,7 +1261,7 @@ r:"^(\d+)年(\d+)月(\d+)日 (\d+):(\d+)後可使用。$"="Available after $1/$2
 r:"^神秘怪盜「(.*)」的專屬近戰武器。$"="Exclusive melee weapon for mysterious Thief "$1"."
 sr:"^是否消耗「(.*)」×1兌換「(.*)」×1？$"="Use [$1] x1 to redeem [$2] x1?"
 
-// DAILY //
+DAILY
 本日計畫=Daily Goal
 當期計畫=Season Goal
 r:"^登入遊戲$"="Log in to the game"
@@ -1274,7 +1275,7 @@ r:"^消耗(\d+)魂石 \((\d+)\/(\d+)\)$"="Spend $1 Soul Gems ($1/$2)"
 
 r:"^消耗(\d+)點行動力 \((\d+)\/(\d+)\)$"="Use $1 Energy Points ($2/$3)"
 r:"^消耗(\d+)點體力 \((\d+)\/(\d+)\)$"="Use $1 Stamina ($2/$3)"
-r:"進行1次邀約"=Spend time with a Confidant 1 time
+r:"^進行(\d+)次邀約$"="Spend time with a Synergy $1 time"
 r:"^完成2次「厄抑之境」 \((\d+)\/2\)"=Clear [Realm of Repression] 2 times ($1/2)
 r:"完成1次「啟示套裝」挑戰 \((\d+)\/(\d+)\)"=Clear 1 [Revelation Farm] ($1/$2)
 r:"完成1次「旖旎香調」挑戰 \((\d+)\/(\d+)\)"=Clear 1 [Perfume Farm] ($1/$2)
@@ -1282,30 +1283,30 @@ r:"完成1次「裝配冶藝」挑戰 \((\d+)\/(\d+)\)"=Clear 1 [Ore Farm] ($1/$
 r:"完成1次「靈之參悟」挑戰 \((\d+)\/(\d+)\)"=Clear 1 [Incense Farm] ($1/$2)
 r:"進行1次{{A}}育成 \((\d+)\/(\d+)\)"=Perfrom 1 Persona skill inheritance ($1/$2)
 r:"^完成1次「往日回溯」挑戰 \((\d+)\/(\d+)\)$"="Clear 1 [Past Echo] ($1/$2)"
-r:"^通關1次「閼凶夢之扉」 \((\d+)\/(\d+)\)$"="Clear 1 [Door of Nightmares] ($1/$2)"
-r:"^完成1次閼凶夢之扉 \((\d+)\/(\d+)\)$"="Clear 1 [Door of Nightmares] ($1/$2)"
+r:"^通關1次「閼凶夢之扉」 \((\d+)\/(\d+)\)$"="Clear 1 [Nightmare's Gateway] ($1/$2)"
+r:"^完成1次閼凶夢之扉 \((\d+)\/(\d+)\)$"="Clear 1 [Nightmare's Gateway] ($1/$2)"
 r:"^完成1次「天鵝絨試煉」 \((\d+)\/(\d+)\)$"="Clear 1 [Velvet Trial] ($1/$2)"
-r:"^完成1次「心之海試煉」 \((\d+)\/(\d+)\)$"="Clear 1 [Sea of Souls Trials] ($1/$2)"
+r:"^完成1次「心之海試煉」 \((\d+)\/(\d+)\)$"="Clear 1 [Trials from the Sea of Souls] ($1/$2)"
 r:"^在「心軌擇行」中通過1個月臺 \((\d+)\/(\d+)\)$"="Clear 1 Platform in [Heart Rail] ($1/$2)"
 r:"^完成1次「委託」派遣 \((\d+)\/(\d+)\)$"="Complete 1 [Commissions] ($1/$2)"
 r:"^累計完成(\d+)次委託派遣 \((\d+)\/(\d+)\)$"="Complete $1 [Commissions] ($2/$3)"
 
-// WEEKLY //
+WEEKLY
 r:"累計消耗(\d+)魂石 \((\d+)\/(\d+)\)"=Spend $1 Soul Gems ($2/$3)
 r:"累計消耗(\d+)日元 \((\d+)\/(\d+)\)"=Spend ¥$1 (¥$2/¥$3)
 r:"累計消耗(\d+)點體力 \((\d+)\/(\d+)\)"=Use $1 Stamina ($2/$3)
 r:"累計消耗(\d+)點行動力 \((\d+)\/(\d+)\)"=Use $1 Energy Points ($2/$3)
 r:"^累計完成12次「厄抑之境」 \((\d+)\/(\d+)\)$"=Clear 12 [Realm of Repression] ($1/12)
 r:"完成1次「往日回溯」 \((\d+)\/(\d+)\)"=Clear 1 [Past Echo] ($1/$2)
-r:"^達到「閼凶夢之扉」第4檔積分要求 \((\d+)\/(\d+)\)$"="Reach the 4th score bracket in [Door of Nightmares] ($1/$2)"
+r:"^達到「閼凶夢之扉」第4檔積分要求 \((\d+)\/(\d+)\)$"="Reach the 4th score bracket in [Nightmare's Gateway] ($1/$2)"
 r:"在「心軌擇行」中通過10個月臺 \((\d+)\/10\)"=Clear 10 Platforms in [Heart Rail] ($1/10)
 r:"在「星盤試煉」通過1個「監測點」 \((\d+)\/(\d+)\)$"="Clear 1 [Monitoring Point] in [Astrolabe Trials] ($1/$2)"
 
-// SEASON //
+SEASON
 r:"在「命運交錯之時」中通關「收下慾望」 \((\d+)\/(\d+)\)"=Complete the Final Mission in the \nPhantom Thieves event ($1/$2)
 r:"在「怪盜交易所」中消耗3000個怪盜徽記 \((\d+)\/(\d+)\)"=Spend 3,000 Phantom Thieves Emblems\nin the Event Exchange ($1/$2)
 r:"累計進行50次「角色簽約」&「武器補給」 \((\d+)\/(\d+)\)"=Perform 50 pulls in total ($1/$2)
-r:"在「心之海試煉」中通過「西部施工區」 \((\d+)\/(\d+)\)"=Clear [West Construction Zone] in Sea of Souls Trials ($1/$2)
+r:"在「心之海試煉」中通過「西部施工區」 \((\d+)\/(\d+)\)"=Clear [West Construction Zone] in Trials from the Sea of Souls ($1/$2)
 r:"完成12次「在盧布朗度過」日程 \((\d+)\/(\d+)\)"=Spend time in Leblanc 12 times ($1/$2)
 r:"在「心軌擇行」中完成1次挑戰 \((\d+)\/1\)"=Clear 1 challenge in [Heart Rail] ($1/1)
 r:"完成一個星盤試練的「宮主星」或「命主星」 \((\d+)\/1\)"=Clear 1 [House] or [Chart Ruler] in Astrolabe Trials ($1/1)
@@ -1316,9 +1317,9 @@ sr:"^通關「(.*)」難度(\d+) \((\d+)\/(\d+)\)$"="Clear [$1] on Difficulty $2
 r:"^本期通行證期間，累計登入(\d+)天 \((\d+)/(\d+)\)$"="Log in for $1 day(s) ($2/$3)"
 r:"^在「塑命循啟」中完成一張啟示卡定製 \((\d+)\/1\)$"="Make 1 custom Revelation Card in [Writing Fate] ($1/1)"
 
-////////////////////////////////
-/// g. Banners / Pull Screen ///
-////////////////////////////////
+----------
+Banners / Pull Screen
+----------
 契約=Contract
 簽訂命運的契約，與註定的夥伴在此相遇！=Sign the contract of destiny and meet your destined teammates!
 『{{A}}』\n天然打磨的稀有晶狀珀芯，可用於『角色契約』、『武器補給』及『購買主角體力』。=[{{A}}]\nA naturally polished rare crystalline core, can be used in [Character Contract], [Weapon Supply], and [Purchase Wonder Stamina].
@@ -1446,6 +1447,7 @@ Weapon Special Details
 r:"^透過補給的方式\n<sprite\=0 tint\=1>獲取五星武器時，會獲得<color\=#EADE10>(\d+)</color>個<color\=#EADE10>「認知斷面」</color>作為副產物\n<sprite\=0 tint\=1>獲取四星武器時，會獲得<color\=#EADE10>(\d+)</color>個<color\=#EADE10>「認知斷面」</color>作為副產物\n<sprite\=0 tint\=1>獲取三星武器時，會獲得<color\=#EADE10>(\d+)</color>個<color\=#EADE10>「認知碎片」</color>作為副產物$"="Through Supply\n<sprite\=0 tint\=1>When you obtain 5★ Weapon, obtain <color\=#EADE10>$1</color> <color\=#EADE10>[Cognitive Gemstone]</color>.\n<sprite\=0 tint\=1>When you obtain a 4★ Weapon, obtain <color\=#EADE10>$2</color> <color\=#EADE10>[Cognitive Gemstone]</color>.\n<sprite\=0 tint\=1>When you obtain 3★ Weapon, obtain <color\=#EADE10>$3</color> <color\=#EADE10>[Cognition Shard]</color>."
 Weapon Obtain Details
 sr:"^「當未觸發UP或保底規則時，所有武器均分基礎獲取機率」\n<sprite\=0 tint\=1><color\=#EADE10>五星武器</color>\n基礎機率：(.*)\（含保底綜合補給成功機率：(.*)\）\n當前自選UP武器：「(.*)」\n\n<sprite\=0 tint\=1><color\=#EADE10>四星武器</color>\n基礎機率：(.*)\（含保底綜合補給成功機率：(.*)\）\n(.*)\n\n<sprite\=0 tint\=1><color\=#EADE10>三星武器</color>\n基礎機率：(.*)\n(.*)$"="[When RATE UP or guaranteed rule is not triggered, all Weapons share the same base obtain probability]\n<sprite\=0 tint\=1><color\=#EADE10>5★ Weapons</color>\nBase probability: $1 (incl. guarantee: $2)\nCurrent Custom RATE UP Weapon: [$3]\n\n<sprite\=0 tint\=1><color\=#EADE10>4★ Weapons</color>\nBase probability: $4 (incl. guarantee: $5)\n$6\n\n<sprite\=0 tint\=1><color\=#EADE10>3★ Weapons</color>\nBase probability: $7\n$8"
+sr:"^「當未觸發UP或保底規則時，所有武器均分基礎獲取機率」\n<sprite\=0 tint\=1><color\=#EADE10>五星武器</color>\n基礎機率：(.*)\（含保底綜合補給成功機率：(.*)\）\n當前自選UP武器：「(.*)」\n當前自選非UP武器：「(.*)」、「(.*)」\n\n<sprite\=0 tint\=1><color\=#EADE10>四星武器</color>\n基礎機率：(.*)\（含保底綜合補給成功機率：(.*)\）\n(.*)\n\n<sprite\=0 tint\=1><color\=#EADE10>三星武器</color>\n基礎機率：(.*)\n(.*)$"="[When RATE UP or guaranteed rule is not triggered, all Weapons share the same base obtain probability]\n<sprite\=0 tint\=1><color\=#EADE10>5★ Weapons</color>\nBase probability: $1 (incl. guarantee: $2)\nCurrent Custom RATE UP Weapon: [$3]\nCurrent Custom non RATE UP: [$4], [$5]\n\n<sprite\=0 tint\=1><color\=#EADE10>4★ Weapons</color>\nBase probability: $6 (incl. guarantee: $7)\n$8\n\n<sprite\=0 tint\=1><color\=#EADE10>3★ Weapons</color>\nBase probability: $9\n$10"
 
 無聲硝煙=Silent Tension
 爆竹與歲除=Celebrate The New Year
@@ -1469,7 +1471,7 @@ r:"^1週年限定倒計時：(\d+)天(\d+)時$"="1st Anniversary Limited Countdo
 抽1次=1 Pull
 抽5次=5 Pulls
 點擊任意位置打開{{A}}=Click anywhere to open
-滑動螢幕可旋轉查看{{A}}模型。=Drag to view {{A}} model.
+滑動螢幕可旋轉查看{{A}}模型。=Slide to rotate.
 歷史扭到：=Collected:
 次=Time(s)
 sr:"^(.*) {{A}}機獲取啟動圖鑑。$"="Collected on $1."
@@ -1483,7 +1485,7 @@ r:"^最多保留(\d+)條{{A}}記錄$"="Record up to $1"
 r:"^(.*) {{A}}機獲取啟動圖鑑。$"="Collected on $1 from {{A}} Machine."
 r:"^(.*) 與好友(.*)交換啟動圖鑑。$"="<size\=23>Collected on $1 by exchanging with your friend $2.</size>"
 高級{{A}}盲盒=Rare {{A}} Blind Box
-豪華{{A}}回收獎勵，提交重複{{A}}即可獲得。\n開啟後可隨機獲得各類都市商品，用於贈送協同者禮物。={{A}} recycling reward, available after trading repeat {{A}}. \nCan get all kinds of Confidant gifts randomly.
+豪華{{A}}回收獎勵，提交重複{{A}}即可獲得。\n開啟後可隨機獲得各類都市商品，用於贈送協同者禮物。={{A}} recycling reward, available after trading repeat {{A}}. \nCan get all kinds of Synergy gifts randomly.
 普通{{A}}盲盒=Common {{A}} Blind Box
 {{A}}回收獎勵，提交重複{{A}}即可獲得。\n開啟後可隨機獲得各類蔬菜種子或烹飪食材。={{A}} recycling reward, available after trading repeat {{A}}. \nCan get all kinds of vegetable seeds or cooking ingredients randomly.
 回收篩選=Filter
@@ -1677,7 +1679,7 @@ sr:"^(.*)遊戲廳中的娃娃機，\n本期可限時抓取超稀有娃娃\n「<
 r:"^娃<color\=#ff0000ff>娃</color>機-小型$"="Sm<color\=#ff0000ff>all</color> Crane Machine"
 r:"^娃<color\=#ff0000ff>娃</color>機-中型$"="Me<color\=#ff0000ff>di</color>um Crane Machine"
 r:"^夾娃娃機啊，要玩玩看嗎\（<color\=#ff0000>每次(\d+)現金</color>\）？$"="Want to play the crane machine?\n(<color\=#ff0000>Spend $1 Yen</color>)"
-r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n增加在小型娃娃機中抓到娃娃的機率。$"="<size\=24>Increase the chance to get dolls in small crane machine after being Confidants with [<color\=#FFC000>{{A}}</color>].</size>"
+r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n增加在小型娃娃機中抓到娃娃的機率。$"="<size\=24>Increase the chance to get dolls in small crane machine after froming a relationship with [<color\=#FFC000>{{A}}</color>].</size>"
 r:"^好感度提升至<color\=#FFC000>rank3</color>後，\n增加在中型娃娃機中抓到娃娃的機率。$"="<size\=24>Increase the chance to get dolls in medium crane machine after reaching <color\=#FFC000>rank 3</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank9</color>後，\n娃娃機商店中增加新的商品。$"="<size\=24>Add new items to the crane machine stop after reaching <color\=#FFC000>rank 9</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank13</color>後，\n增加在小型娃娃機中抓到高級稀有度娃娃的機率。$"="<size\=24>Increase the chance to get super rare dolls in small crane machine after reaching <color\=#FFC000>rank 13</color>.</size>"
@@ -1733,7 +1735,7 @@ r:"^擺<color\=#ff0000ff>放</color>區·二樓$"="Di<color\=#ff0000ff>sp</color
 {{A}}·迷你={{A}}·Mini
 
 ----------
-Confidants (SL) and City Activities
+Synergy (SL) and City Activities
 ----------
 行動力=Energy
 行動值=Energy Points
@@ -1749,30 +1751,30 @@ Confidants (SL) and City Activities
 消耗=Spend
 r:"^消耗：$"=" "
 
-r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n可以去「{{B}}·百萬甜品店」打工了。$"="<size\=24>Can now work at the {{B}} Crepe Shop after being Confidants with [<color\=#FFC000>{{A}}</color>].</size>"
+r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n可以去「{{B}}·百萬甜品店」打工了。$"="<size\=24>Can now work at the {{B}} Crepe Shop after froming a relationship with [<color\=#FFC000>{{A}}</color>].</size>"
 r:"^好感度提升至<color\=#FFC000>rank5</color>後，打工時，可以使人格指數獲得額外的成長。$"="<size\=24>Gain more Social Stats when working after reaching <color\=#FFC000>rank 5</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank9</color>後，\n可以去「{{A}}·藥妝店」打工了。$"="<size\=24>Can now work at the {{A}} Drug Store after reaching <color\=#FFC000>rank 9</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank13</color>後，打工時，可以使人格指數獲得更多的額外成長。$"="<size\=24>Gain even more Social Stats when working after reaching <color\=#FFC000>rank 13</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank17</color>後，可以去「{{A}}·日乃國屋書店」打工了。$"="<size\=24>Can now work at the Shinjuku Bookstore after reaching <color\=#FFC000>rank 17</color>.</size>"
 
-r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n獲得書籍『高效放鬆法』。\n·閱讀後增加泡澡的獎勵$"="<size\=24>Get the book [Efficient Relaxation] which can increase the rewards from Bathe after being Confidants with [<color\=#FFC000>{{A}}</color>].</size>"
+r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n獲得書籍『高效放鬆法』。\n·閱讀後增加泡澡的獎勵$"="<size\=24>Get the book [Efficient Relaxation] which can increase the rewards from Bathe after froming a relationship with [<color\=#FFC000>{{A}}</color>].</size>"
 r:"^好感度提升至<color\=#FFC000>rank3</color>後，\n獲得書籍『關於急救的一切』。\n·獲得「{{A}}·藥妝店」打工增益$"="<size\=24>Get the book [All About First Aid] which can increase the rewards from [{{A}} Drug Store] after reaching <color\=#FFC000>rank 3</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank11</color>後，\n獲得書籍『肌肉，GO！』。\n·閱讀後增加健身的獎勵$"="<size\=24>Get the book [Muscle, GO!] which can increase the rewards from Gym after reaching <color\=#FFC000>rank 11</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank15</color>後，\n獲得書籍『圖書管理員秘技！』。\n·「{{A}}·日乃國屋書店」打工增益$"="<size\=24>Get the book [Librarian's Secret Skill!] which can increase the rewards from [Shinjuku Bookstore] after reaching <color\=#FFC000>rank 15</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank20</color>後，\n獲得書籍『電影與電影評論家』。\n·閱讀後增加看電影的獎勵$"="<size\=24>Get the book [Film and Film Critics] which can increase the rewards from Movies after reaching <color\=#FFC000>rank 20</color>.</size>"
 
-r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n{{B}}地區，大部分街頭店鋪商品有小幅降價。$"="<size\=24>Most shop in {{B}} have a small discount after being Confidants with [<color\=#FFC000>{{A}}</color>]</size>"
+r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n{{B}}地區，大部分街頭店鋪商品有小幅降價。$"="<size\=24>Most shop in {{B}} have a small discount after froming a relationship with [<color\=#FFC000>{{A}}</color>]</size>"
 r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n{{A}}地區，大部分街頭店鋪商品有小幅降價。$"="<size\=24>Most shop in {{A}} have a small discount after after reaching <color\=#FFC000>rank $1</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n{{A}}和{{B}}地區，大部分街頭店鋪商品有小幅降價。$"="<size\=24>Most shop in {{A}} and {{B}} have a small discount after after reaching <color\=#FFC000>rank $1</color>.</size>"
 
-r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n解鎖約會地點「{{B}}·自助餐廳」。$"="<size\=24>Unlock the Hangout Spot [{{B}} Buffet] after being Confidants with [<color\=#FFC000>{{A}}</color>]</size>"
+r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n解鎖約會地點「{{B}}·自助餐廳」。$"="<size\=24>Unlock the Hangout Spot [{{B}} Buffet] after froming a relationship with [<color\=#FFC000>{{A}}</color>]</size>"
 r:"^與「<color\=#FFC000>{{A}}</color>」好感度提升至<color\=#FFC000>rank3</color>後，\n解鎖約會地點「元町·中華街」。$"="<size\=24>Unlock the Hangout Spot [Motomachi Chinatown] after reaching <color\=#FFC000>rank 3</color> with [<color\=#FFC000>{{A}}</color>].</size>"
 r:"^好感度提升至<color\=#FFC000>rank3</color>後，\n解鎖約會地點「元町·中華街」。$"="<size\=24>Unlock the Hangout Spot [Motomachi Chinatown] after reaching <color\=#FFC000>rank 3</color>.</size>"
-r:"^好感度提升至<color\=#FFC000>rank7</color>後，\n解鎖約會地點「品川·水族館」，並且在協同者邀約中可以獲得額外好感度。$"="<size\=24>Unlock the Hangout Spot [Shinagawa Aquarium] and gain more Confidant Points from Invitations after reaching <color\=#FFC000>rank 7</color>.</size>"
+r:"^好感度提升至<color\=#FFC000>rank7</color>後，\n解鎖約會地點「品川·水族館」，並且在協同者邀約中可以獲得額外好感度。$"="<size\=24>Unlock the Hangout Spot [Shinagawa Aquarium] and gain more Fondness from Invitations after reaching <color\=#FFC000>rank 7</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank13</color>後，\n解鎖約會地點「銀座·壽司店」。$"="<size\=24>Unlock the Hangout Spot [Ginza Sushi Restaurant] after reaching <color\=#FFC000>rank 13</color>.</size>"
-r:"^好感度提升至<color\=#FFC000>rank17</color>後，\n解鎖約會地點「{{A}}·家電量販店」，並且在協同者邀約中可以獲得更多額外好感度。$"="<size\=24>Unlock the Hangout Spot [{{A}} Electronics Store] and gain even more Confidant Points from Invitations after reaching <color\=#FFC000>rank 7</color>.</size>"
+r:"^好感度提升至<color\=#FFC000>rank17</color>後，\n解鎖約會地點「{{A}}·家電量販店」，並且在協同者邀約中可以獲得更多額外好感度。$"="<size\=24>Unlock the Hangout Spot [{{A}} Electronics Store] and gain even more Fondness from Invitations after reaching <color\=#FFC000>rank 7</color>.</size>"
 
-與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n都市日程中「魅力」、「體貼」的人格指數獲得量提升。=<size\=23>Gain more [Charm] and [Kindness] from City Activities after being Confidants with [<color\=#FFC000>{{A}}</color>].</size>
+與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n都市日程中「魅力」、「體貼」的人格指數獲得量提升。=<size\=23>Gain more [Charm] and [Kindness] from City Activities after froming a relationship with [<color\=#FFC000>{{A}}</color>].</size>
 好感度提升至<color\=#FFC000>rank5</color>後，\n都市日程中「勇氣」、「靈巧」的人格指數獲得量提升。=<size\=23>Gain more [Guts] and [Proficiency] from City Activities after reaching <color\=#FFC000>rank 5</color>.</size>
 好感度提升至<color\=#FFC000>rank9</color>後，\n人格指數提升到16/18/20級時，可以獲得1個「靈感輝光」。=<size\=23>Gain 1 [Inspiration Glow] when reaching Rank 16/18/20 Social Stats after reaching <color\=#FFC000>rank 9</color>.</size>
 好感度提升至<color\=#FFC000>rank13</color>後，\n都市日程中「知識」的人格指數獲得量提升。=<size\=23>Gain more [Knowledge] from City Activities after reaching <color\=#FFC000>rank 13</color>.</size>
@@ -1790,43 +1792,50 @@ r:"^好感度提升至<color\=#FFC000>rank17</color>後，\n解鎖約會地點�
 sr:"^<color\=#FFC000>(.*)</color>的協同者等級可提升至Rank(\d+)$"="Can rank up <color\=#FFC000>$1</color> to rank $2"
 sr:"^人格指數「(.*)」已解鎖全部能力。$"="Unlocked all skills for Social Stats [$1]."
 {{A}}Rank9級後，開啟人格指數「升級獎勵」功能。=Unlock [Rank Up Rewards] after reaching Rank 9 with {{A}}.
-{{A}}Rank17級後，開啟人格指數「經驗轉化」功能。=Unlock [Experience Conversion] after reaching Rank 17 with {{A}}.
+{{A}}Rank17級後，開啟人格指數「經驗轉化」功能。=Unlock [EXP Conversion] after reaching Rank 17 with {{A}}.
 r:"^體會了{{A}}「(.*)」，人格指數提升到16/18/20級時可獲得「靈感輝光」$"="Gain 1 [Inspiration Glow] when reaching Rank 16/18/20 Social Stats"
 r:"^知識達到(\d+)級$"="Reach Knowledge Rank $1"
 r:"^魅力達到(\d+)級$"="Reach Charm Rank $1"
 r:"^勇氣達到(\d+)級$"="Reach Guts Rank $1"
 r:"^體貼達到(\d+)級$"="Reach Kindness Rank $1"
 r:"^靈巧達到(\d+)級$"="Reach Proficiency Rank $1"
+經驗轉化=EXP Conversion
+人格指數超額經驗進度=Social Stats excess EXP
+r:"^人格指數提升到(\d+)級後，每(\d+)點超額經驗將轉化為「滿溢的心禮」$"="After reaching Rank $1 Social Stats, convert every $2 excess EXP into [Overflowing Gift]"
+滿溢的心禮=Overflowing Gift
+r:"^人格指數提升到(\d+)級後，每(\d+)點超額的人格指數經驗，將轉化為隨機禮物道具。$"="After reaching Rank $1 Social Stats, convert every $2 excess EXP into a random gift."
+「最重要的，是和你一起」\n——{{A}}="Most importantly, with you"\n——{{A}}
+當前可轉化的人格指數經驗不足。=Insufficient excess EXP.
 
-用於提升與協同者的親密度。=<size\=25>Used for granting Confidant Points.</size>
+用於提升與協同者的親密度。=<size\=25>Used for granting Fondness.</size>
 
-r:"^作為禮物贈與協同者，可提升(\d+)點親密度，首次贈送額外增加(\d+)點親密度，『喜愛之物』額外增加(\d+)點親密度。$"="<size\=25>\nGrants $1 Confidant Points. \nFirst time bonus grants $2 Confidant Pts. \n[Favourite Items] grants $3 Confidant Pts.</size>"
-用於提升與協同者的好感度。=<size\=25>Used for granting Confidant Points.</size>
-sr:"^「(.*)」可能會喜歡這件禮物。\n基礎好感度\+(\d+)，偏好禮物額外\+(\d+)，偏好禮物首次贈送額外\+(\d+)。$"="[$1] might like this gift. \nConfidant Points +$2 \nFavourite Items +$3 \nFavourite Items First Time Bonus +$4"
-sr:"^「(.*)」可能會喜歡這件禮物。\n基礎好感度\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物額外\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物首次贈送額外\+(\d+)。$"="[$1] might like this gift. \nConfidant Points +$2 (<size\=40><sprite\=1></size>+$3)\nFavourite Items +$4 (<size\=40><sprite\=1></size>+$5)\nFavourite Items First Time Bonus +$6"
-r:"^基礎好感度\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)），偏好禮物額外\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)），偏好禮物首次贈送額外\+(\d+)。$"="Confidant Points +$1 (<size\=40><sprite\=1></size>+$2)\nFavourite Items +$3 (<size\=40><sprite\=1></size>+$4)\nFavourite Items First Time Bonus +$5"
-r:"^基礎好感度\+(\d+)，偏好禮物額外\+(\d+)，偏好禮物首次贈送額外\+(\d+)。$"="Confidant Points +$1\nFavourite Items +$2\nFavourite Items First Time Bonus +$3"
+r:"^作為禮物贈與協同者，可提升(\d+)點親密度，首次贈送額外增加(\d+)點親密度，『喜愛之物』額外增加(\d+)點親密度。$"="<size\=25>\nGrants $1 Fondness. \nFirst time bonus grants $2 Fondness. \n[Favourite Items] grants $3 Fondness.</size>"
+用於提升與協同者的好感度。=<size\=25>Used for granting Fondness.</size>
+sr:"^「(.*)」可能會喜歡這件禮物。\n基礎好感度\+(\d+)，偏好禮物額外\+(\d+)，偏好禮物首次贈送額外\+(\d+)。$"="[$1] might like this gift. \nFondness +$2 \nFavourite Items +$3 \nFavourite Items First Time Bonus +$4"
+sr:"^「(.*)」可能會喜歡這件禮物。\n基礎好感度\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物額外\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物首次贈送額外\+(\d+)。$"="[$1] might like this gift. \nFondness +$2 (<size\=40><sprite\=1></size>+$3)\nFavourite Items +$4 (<size\=40><sprite\=1></size>+$5)\nFavourite Items First Time Bonus +$6"
+r:"^基礎好感度\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)），偏好禮物額外\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)），偏好禮物首次贈送額外\+(\d+)。$"="Fondness +$1 (<size\=40><sprite\=1></size>+$2)\nFavourite Items +$3 (<size\=40><sprite\=1></size>+$4)\nFavourite Items First Time Bonus +$5"
+r:"^基礎好感度\+(\d+)，偏好禮物額外\+(\d+)，偏好禮物首次贈送額外\+(\d+)。$"="Fondness +$1\nFavourite Items +$2\nFavourite Items First Time Bonus +$3"
 
-r:"^這件禮物受所有協同者喜歡。\n基礎好感度\+(\d+)，偏好禮物額外\+(\d+)，偏好禮物首次贈送額外\+(\d+)。$"="All Confidants like this gift. \nConfidant Points +$1 \nFavourite Items +$2 \nFavourite Items First Time Bonus +$3"
-r:"^這件禮物受所有協同者喜歡。\n基礎好感度\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物額外\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物首次贈送額外\+(\d+)。$"="All Confidants like this gift. \nConfidant Points +$1 (<size\=40><sprite\=1></size>+$2)\nFavourite Items +$3 (<size\=40><sprite\=1></size>+$4)\nFavourite Items First Time Bonus +$5"
+r:"^這件禮物受所有協同者喜歡。\n基礎好感度\+(\d+)，偏好禮物額外\+(\d+)，偏好禮物首次贈送額外\+(\d+)。$"="All Synergies like this gift. \nFondness +$1 \nFavourite Items +$2 \nFavourite Items First Time Bonus +$3"
+r:"^這件禮物受所有協同者喜歡。\n基礎好感度\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物額外\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物首次贈送額外\+(\d+)。$"="All Synergies like this gift. \nFondness +$1 (<size\=40><sprite\=1></size>+$2)\nFavourite Items +$3 (<size\=40><sprite\=1></size>+$4)\nFavourite Items First Time Bonus +$5"
 
-r:"^基礎好感度\+(\d+)<color\=#008CE5><color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n偏好禮物額外\+(\d+)<color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color>\n偏好禮物首次贈送額外\+(\d+)$"="Confidant Points +$1<color\=#008CE5><color\=#008CE5>(<size\=40><sprite\=1></size>+$2)</color></color>\nFavourite Items +$3<color\=#008CE5>(<size\=40><sprite\=1></size>+$4)</color>\nFavourite Items \nFirst Time Bonus +$5"
-r:"^基礎好感度\+(\d+)\n偏好禮物額外\+(\d+)\n偏好禮物首次贈送額外\+(\d+)$"="Confidant Points +$1\nFavourite Items +$2\nFavourite Items \nFirst Time Bonus +$3"
+r:"^基礎好感度\+(\d+)<color\=#008CE5><color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n偏好禮物額外\+(\d+)<color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color>\n偏好禮物首次贈送額外\+(\d+)$"="Fondness +$1<color\=#008CE5><color\=#008CE5>(<size\=40><sprite\=1></size>+$2)</color></color>\nFavourite Items +$3<color\=#008CE5>(<size\=40><sprite\=1></size>+$4)</color>\nFavourite Items \nFirst Time Bonus +$5"
+r:"^基礎好感度\+(\d+)\n偏好禮物額外\+(\d+)\n偏好禮物首次贈送額外\+(\d+)$"="Fondness +$1\nFavourite Items +$2\nFavourite Items \nFirst Time Bonus +$3"
 
-r:"^基礎好感度\+(\d+)<color\=#008CE5><color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n偏好禮物額外\+(\d+)<color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color>\n偏好禮物首次贈送額外\+(\d+)$"="Confidant Points +$1<color\=#008CE5><color\=#008CE5>(<size\=40><sprite\=1></size>+$2)</color></color>\nFavourite Items +$3<color\=#008CE5>(<size\=40><sprite\=1></size>+$4)</color>\nFavourite Items \nFirst Time Bonus +$5"
+r:"^基礎好感度\+(\d+)<color\=#008CE5><color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n偏好禮物額外\+(\d+)<color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color>\n偏好禮物首次贈送額外\+(\d+)$"="Fondness +$1<color\=#008CE5><color\=#008CE5>(<size\=40><sprite\=1></size>+$2)</color></color>\nFavourite Items +$3<color\=#008CE5>(<size\=40><sprite\=1></size>+$4)</color>\nFavourite Items \nFirst Time Bonus +$5"
 
-r:"^基礎好感度\+(\d+)<color\=#008CE5><color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n偏好禮物額外\+(\d+)<color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color>\n<color\=#787878>偏好禮物首次贈送額外\+(\d+)</color>$"="Confidant Points +$1<color\=#008CE5><color\=#008CE5>(<size\=40><sprite\=1></size>+$2)</color></color>\nFavourite Items +$3<color\=#008CE5>(<size\=40><sprite\=1></size>+$4)</color>\n<color\=#787878>Favourite Items \nFirst Time Bonus +$5</color>"
+r:"^基礎好感度\+(\d+)<color\=#008CE5><color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n偏好禮物額外\+(\d+)<color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color>\n<color\=#787878>偏好禮物首次贈送額外\+(\d+)</color>$"="Fondness +$1<color\=#008CE5><color\=#008CE5>(<size\=40><sprite\=1></size>+$2)</color></color>\nFavourite Items +$3<color\=#008CE5>(<size\=40><sprite\=1></size>+$4)</color>\n<color\=#787878>Favourite Items \nFirst Time Bonus +$5</color>"
 
-r:"^基礎好感度\+(\d+)<color\=#008CE5><color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n<color\=#787878>偏好禮物額外\+(\d+)<color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n<color\=#787878>偏好禮物首次贈送額外\+(\d+)</color>$"="Confidant Points +$1<color\=#008CE5><color\=#008CE5>(<size\=40><sprite\=1></size>+$2)</color></color>\n<color\=#787878>Favourite Items +$3<color\=#008CE5>(<size\=40><sprite\=1></size>+$4)</color></color>\n<color\=#787878>Favourite Items \nFirst Time Bonus +$5</color>"
+r:"^基礎好感度\+(\d+)<color\=#008CE5><color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n<color\=#787878>偏好禮物額外\+(\d+)<color\=#008CE5>\（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>\n<color\=#787878>偏好禮物首次贈送額外\+(\d+)</color>$"="Fondness +$1<color\=#008CE5><color\=#008CE5>(<size\=40><sprite\=1></size>+$2)</color></color>\n<color\=#787878>Favourite Items +$3<color\=#008CE5>(<size\=40><sprite\=1></size>+$4)</color></color>\n<color\=#787878>Favourite Items \nFirst Time Bonus +$5</color>"
 
-r:"^基礎好感度\+(\d+)\n<color\=#787878>偏好禮物額外\+(\d+)</color>\n<color\=#787878>偏好禮物首次贈送額外\+(\d+)</color>$"="Confidant Points +$1\n<color\=#787878>Favourite Items +$2\n<color\=#787878>Favourite Items \nFirst Time Bonus +$3</color>"
+r:"^基礎好感度\+(\d+)\n<color\=#787878>偏好禮物額外\+(\d+)</color>\n<color\=#787878>偏好禮物首次贈送額外\+(\d+)</color>$"="Fondness +$1\n<color\=#787878>Favourite Items +$2\n<color\=#787878>Favourite Items \nFirst Time Bonus +$3</color>"
 
-r:"^基礎好感度\+(\d+)\n偏好禮物額外\+(\d+)\n<color\=#787878>偏好禮物首次贈送額外\+(\d+)</color>$"="Confidant Points +$1\nFavourite Items +$2\n<color\=#787878>Favourite Items \nFirst Time Bonus +$3</color>"
+r:"^基礎好感度\+(\d+)\n偏好禮物額外\+(\d+)\n<color\=#787878>偏好禮物首次贈送額外\+(\d+)</color>$"="Fondness +$1\nFavourite Items +$2\n<color\=#787878>Favourite Items \nFirst Time Bonus +$3</color>"
 
-r:"^本次贈送會增加<color\=#FFDE00>(\d+)<color\=#008CE5>（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>好感度$"="Gain <color\=#FFDE00>$1<color\=#008CE5>(<size\=40><sprite\=1></size>+$2)</color></color>Confidant Pts"
-r:"^本次贈送會增加<color\=#FFDE00>(\d+)</color>好感度$"="Gain <color\=#FFDE00>$1</color> Confidant Pts"
+r:"^本次贈送會增加<color\=#FFDE00>(\d+)<color\=#008CE5>（<size\=40><sprite\=1></size>\+(\d+)\）</color></color>好感度$"="Gain <color\=#FFDE00>$1<color\=#008CE5>(<size\=40><sprite\=1></size>+$2)</color></color>Fondness"
+r:"^本次贈送會增加<color\=#FFDE00>(\d+)</color>好感度$"="Gain <color\=#FFDE00>$1</color> Fondness"
 
-sr:"^當前(.*)RANK(\d+)，需要達到RANK(\d+)後繼續升級。本次送出禮物後無法升級，但會保留禮物帶來的好感度，要繼續送出禮物嗎？$"="Currently at $1 Rank $2, need to reach Rank $3 in order to rank up. You will still keep the Confidant Points after giving them a gift, are you sure?"
+sr:"^當前(.*)RANK(\d+)，需要達到RANK(\d+)後繼續升級。本次送出禮物後無法升級，但會保留禮物帶來的好感度，要繼續送出禮物嗎？$"="Currently at $1 Rank $2, need to reach Rank $3 in order to rank up. You will still keep the Fondness after giving them a gift, are you sure?"
 
 r:"^和{{A}}的關係快要加深了……$"="The bond with {{A}} \nis about to deepen!"
 r:"^和{{A}}的關係就要加深了……$"="The bond with {{A}} \nis about to deepen!"
@@ -2226,10 +2235,10 @@ Soccer Club
 ----------
 足球部積分兌換=Redeem Soccer Points
 
-r:"^至少踢進(\d+)個球。$"="Score $1 Goals."
-r:"^(\d+)個球全部進。$"="Score All $1 Goals."
-r:"^至少(\d+)次擊中守門員弱點。$"="Hit $1 Goalkeeper's Weakness."
-進球數：=Goals:
+r:"^至少踢進(\d+)個球。$"="Score $1 goals"
+r:"^(\d+)個球全部進。$"="Score all $1 goals"
+r:"^至少(\d+)次擊中守門員弱點。$"="Score $1 goals by shooting at weakness"
+進球數：=Score:
 足球積分：=<size\=50>Soccer Points:</size>
 
 ----------
@@ -2283,8 +2292,8 @@ sr:"^在接下來4次透過都市日程獲得『(.*)』人格指數時，額外�
 sr:"^在接下來4次透過都市日程獲得『(.*)』人格指數時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 4 times you gain $1 from city activities, gain more Social Stats.\n<color\=#FFC000>($2 time(s) left)</color>"
 
 戀人=Lovers
-在接下來3次通過都市日程『邀約任意協同者』獲得好感時，額外獲得更多好感度。=The next 3 times you gain Confidant Points from city activities, additionally gain more Confidant Points.
-r:"^在接下來3次透過都市日程『邀約任意協同者』獲得好感時，額外獲得更多好感度。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 3 times you gain Confidant Points from city activities, additionally gain more Confidant Points.\n<color\=#FFC000>($1 time(s) left)</color>"
+在接下來3次通過都市日程『邀約任意協同者』獲得好感時，額外獲得更多好感度。=The next 3 times you gain Fondness from city activities, additionally gain more Fondness.
+r:"^在接下來3次透過都市日程『邀約任意協同者』獲得好感時，額外獲得更多好感度。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 3 times you gain Fondness from city activities, additionally gain more Fondness.\n<color\=#FFC000>($1 time(s) left)</color>"
 
 戰車=Chariot
 
@@ -2300,7 +2309,6 @@ r:"^在接下來(\d+)次透過都市日程在『家裡』學習、打遊戲、�
 在下次透過都市日程獲得『任意人格指數』時，額外獲得更多『人格指數』。=The next time you gain Social Stats from city activities, gain more Social Stats.
 r:"^在下次透過都市日程獲得『任意人格指數』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次\）</color>$"="The next time you gain Social Stats from city activities, gain more Social Stats.\n<color\=#FFC000>($1 time(s) left)</color>"
 
-力量=Strength
 在接下來2次透過都市日程進行『健身房』鍛煉時，額外獲得更多『人格指數』。=The next 2 times you workout in the gym from City Activities, gain more Social Stats.
 r:"^在接下來2次透過都市日程進行『健身房』鍛煉時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you workout in the gym from City Activities, gain more Social Stats.\n<color\=#FFC000>($1 time(s) left)</color>"
 
@@ -2327,8 +2335,8 @@ r:"^在接下來2次『夜晚』進行都市行程獲得『任意人格指數』
 r:"^在接下來2次『放學後』或『下午』進行都市行程獲得『任意人格指數』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you gain Social Stats from city activities at daytime, gain more Social Stats.\n<color\=#FFC000>($1 time(s) left)</color>"
 
 審判=Judgement
-在接下來2次透過都市日程『邀約任意怪盜團成員』獲得好感度時，額外更多好感度。=The next 2 times you gain Confidant Points with a Phantom Thief from city activities, gain more Confidant Points.
-r:"^在接下來2次透過都市日程『邀約任意怪盜團成員』獲得好感度時，額外更多好感度。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you gain Confidant Points with a Phantom Thief from city activities, gain more Confidant Points.\n<color\=#FFC000>($1 time(s) left)</color>"
+在接下來2次透過都市日程『邀約任意怪盜團成員』獲得好感度時，額外更多好感度。=The next 2 times you gain Fondness with a Phantom Thief from city activities, gain more Fondness.
+r:"^在接下來2次透過都市日程『邀約任意怪盜團成員』獲得好感度時，額外更多好感度。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 2 times you gain Fondness with a Phantom Thief from city activities, gain more Fondness.\n<color\=#FFC000>($1 time(s) left)</color>"
 
 世界=World
 在接下來2次透過都市日程獲得『任意人格指數』時，額外獲得更多『人格指數』。=The next 2 times you gain Social Stats from city activities, gain more Social Stats.
@@ -2481,14 +2489,15 @@ r:"^透過厄抑巡禮·初階印記兌換$"="<size\=21>Redeem from Challenge Re
 r:"^角色契約簽約時機率獲得$"="Signing Contract"
 r:"^{{A}}精算機等級獎勵$"="{{A}} Ticket Machine"
 r:"^挑戰心軌擇行$"="Challenge Heart Rail"
-r:"^挑戰閼凶夢之扉$"="<size\=24>Challenge Door of Nightmares</size>"
+r:"^挑戰閼凶夢之扉$"="<size\=24>Challenge Nightmare's Gateway</size>"
 r:"^助戰回饋$"="Redeem from Assist Reward"
 r:"^{{A}}探索度獎勵$"="{{A}} Exploration Reward"
 
 當前陣容額外獎勵加成：=Bonus rewards for the current team:
 每日領取補給\n濃縮咖啡<color\=#FFEC00>x1</color>=Claim daily\nEspresso <color\=#FFEC00>x1</color>
-活動期間，成功挑戰「養成材料」中的技能升級材料、怪盜潛能材料、武器突破材料副本，可以獲得雙份獎勵。=During the event, gain 2x rewards after completing Incense Farm, Character Ascension Farm, Weapon Ascension Farm.
-活動期間，成功挑戰「啟示套裝」中的副本，可以獲得雙份獎勵。=During the event, gain 2x rewards after completing Revelation Farm.
+活動期間，成功挑戰「養成材料」中的技能升級材料、怪盜潛能材料、武器突破材料副本，可以獲得雙份獎勵。=During the event, gain 2x rewards after clearing [Realm of Repression] for Incense, Perfume, Ore, Bell of Stars.
+活動期間，成功挑戰「養成材料」中的技能升級材料、怪盜潛能材料、武器突破材料、怪盜天賦材料副本，可以獲得雙份獎勵。=During the event, gain 2x rewards after clearing [Realm of Repression] for Incense, Perfume, Ore, Bell of Stars.
+活動期間，成功挑戰「啟示套裝」中的副本，可以獲得雙份獎勵。=During the event, gain 2x rewards after clearing [Realm of Repression] for Revelation.
 今日雙份剩餘次數：=Daily 2x Rewards:
 每日次數：=Attempt(s):
 限時關每日次數：=Daily Attempt(s):
@@ -2512,8 +2521,8 @@ r:"^『{{A}}』\n契約的憑證，可在特定的『怪盜契約』中使用。
 補給道具=Supply Item
 r:"^採購近戰武器的硬幣，可在特定的『武器補給』中使用。$"="Coins for purchasing melee weapons, \ncan be used in specific [Weapon Supply]."
 r:"^『{{A}}』\n採購近戰武器的硬幣，可在特定的『武器補給』中使用。$"="<size\=22>[{{A}}]\nCoins for purchasing melee weapons, \ncan be used in specific [Weapon Supply].</size>"
-『{{A}}』\n心之海試練、往日回溯和助戰回饋兌換可獲得，用於在生存遊戲專賣店製造四星武器。=<size\=26>[{{A}}]\nGained from Sea of Souls Trials, Past Echo, and Assist Reward, \ncan be used to make 4★ Weapons in Untouchable</size>.
-心之海試練、往日回溯和助戰回饋兌換可獲得，用於在生存遊戲專賣店製造四星武器。=Gained from Sea of Souls Trials, Past Echo, and Assist Reward, can be used to make 4★ Weapons in Untouchable.
+『{{A}}』\n心之海試練、往日回溯和助戰回饋兌換可獲得，用於在生存遊戲專賣店製造四星武器。=<size\=26>[{{A}}]\nGained from Trials from the Sea of Souls, Past Echo, and Assist Reward, \ncan be used to make 4★ Weapons in Untouchable</size>.
+心之海試練、往日回溯和助戰回饋兌換可獲得，用於在生存遊戲專賣店製造四星武器。=Gained from Trials from the Sea of Souls, Past Echo, and Assist Reward, can be used to make 4★ Weapons in Untouchable.
 祈願道具=Pray Item
 『{{B}}』\n獲取後可用於{{A}}商店「祈願」中進行祈願抽獎。=[Kagura Suzu]\nCan be used in {{A}}'s Shop do [Pray] Lucky Draw.
 r:"^獲取後可用於{{A}}商店「祈願」中進行祈願抽獎。$"="Can be used in {{A}}'s Shop to enter the Pray Lucky Draw."
@@ -2553,10 +2562,10 @@ r:"^隱約可窺見傳奇的斷章，可用於提升怪盜經驗，使用後立�
 r:"^隱約可窺見傳奇的殘頁，可用於提升怪盜經驗，使用後立即增加(\d+)點。$"="A page that gives a glimpse of legends, can be used to gain $1 Thief EXP."
 
 r:"^零件$"="Parts"
-萬用零件·大=<size\=22>Weapon Parts - L</size>
-萬用零件·中=<size\=21>Weapon Parts - M</size>
-萬用零件·小=<size\=22>Weapon Parts - S</size>
-萬用零件·殘=<size\=20>Weapon Parts - Scrap</size>
+萬用零件·大=Gold Parts
+萬用零件·中=Silver Parts
+萬用零件·小=Copper Parts
+萬用零件·殘=Scrap Parts
 r:"^精良的金屬零件，可用於提升武器經驗，使用後立即提升(\d+)點。$"="Excellent metal parts, can be used to gain $1 Weapon EXP."
 r:"^優質的金屬零件，可用於提升武器經驗，使用後立即提升(\d+)點。$"="Quality metal parts, can be used to gain $1 Weapon EXP."
 r:"^普通的金屬零件，可用於提升武器經驗，使用後立即提升(\d+)點。$"="Common metal parts, can be used to gain $1 Weapon EXP."
@@ -2616,12 +2625,12 @@ r:"^神秘的精末體，可用於提升{{A}}經驗，使用後立即增加(\d+)
 r:"^突破Rank(\d+)階級{{A}}時用到的通用材料。$"="Can be used to evolve Rank $1 {{A}}."
 r:"^突破Rank(\d+)-(\d+)階級{{A}}時用到的通用材料。$"="Can be used to evolve Rank $1-$2 {{A}}."
 
-日升=Sun Bead
-月盈=Moon Bead
-星伴=Star Bead
-r:"^一顆承載了日光的寶珠，可用於提升啟示卡經驗，使用後立即增加(\d+)點。$"="A bead that carries sunlight, can be used to gain $1 Revelation Card EXP."
-r:"^一顆承載了月光的寶珠，可用於提升啟示卡經驗，使用後立即增加(\d+)點。$"="A bead that carries moonlight, can be used to gain $1 Revelation Card EXP."
-r:"^一顆承載了星光的寶珠，可用於提升啟示卡經驗，使用後立即增加(\d+)點。$"="A bead that carries starlight, can be used to gain $1 Revelation Card EXP."
+日升=Sun Crystal
+月盈=Moon Crystal
+星伴=Star Crystal
+r:"^一顆承載了日光的寶珠，可用於提升啟示卡經驗，使用後立即增加(\d+)點。$"="A crystal that carries sunlight, can be used to gain $1 Revelation Card EXP."
+r:"^一顆承載了月光的寶珠，可用於提升啟示卡經驗，使用後立即增加(\d+)點。$"="A crystal that carries moonlight, can be used to gain $1 Revelation Card EXP."
+r:"^一顆承載了星光的寶珠，可用於提升啟示卡經驗，使用後立即增加(\d+)點。$"="A crystal that carries starlight, can be used to gain $1 Revelation Card EXP."
 
 啟示=Revelation
 未知宿命橙·宙=<size\=19>Random 4★ Universe</size>
@@ -2653,8 +2662,8 @@ sr:"^未知宿命橙·(.*)"="Random 4★ $1"
 可用於「怪盜心象·技能領悟」養成的高階材料。=High level material used in \n[Mental Image - Skills Upgrade].
 
 星塵=Stardust
-『星塵』\n在心之海試煉中勝利後獲得，可用於和{{A}}兌換心之海試煉的獎勵。=<size\=28>[Stardust]\nGained from Sea of Souls Trials, can be used in Velvet Shop.</size>
-在心之海試煉中勝利後獲得，可用於和{{A}}兌換心之海試煉的獎勵。=Gained from Sea of Souls Trials, can be used in Velvet Shop.
+『星塵』\n在心之海試煉中勝利後獲得，可用於和{{A}}兌換心之海試煉的獎勵。=<size\=28>[Stardust]\nGained from Trials from the Sea of Souls, can be used in Velvet Shop.</size>
+在心之海試煉中勝利後獲得，可用於和{{A}}兌換心之海試煉的獎勵。=Gained from Trials from the Sea of Souls, can be used in Velvet Shop.
 活動貨幣=Event Currency
 秘聞點券=Mysteries Ticket
 怪盜秘聞商店=Mysteries Shop
@@ -2671,7 +2680,7 @@ sr:"^未知宿命橙·(.*)"="Random 4★ $1"
 遊戲中心娃娃機位置兌換=Redeem at the Arcade
 透過樂園百貨兌換=<size\=25>Redeem from Carpe Diem Shop</size>
 透過心海秘所兌換=Redeem from Velvet Shop
-參與心之海試煉獲得=Take on the Sea of Souls Trials
+參與心之海試煉獲得=Take on the Trials from the Sea of Souls
 參與天鵝絨試煉獲得=Take on Velvet Trials
 參與星盤試煉獲得=Take on Astrolabe Trials
 透過氣運駐場兌換=Redeem from Destiny Land
@@ -2709,7 +2718,7 @@ r:"^第(\d+)天$"="Day $1"
 Velvet Trials (VT)
 ----------
 天鵝絨試煉=Velvet Trials
-r:"^解明怪盜對在場怪盜的<color\=#FFFC40>屬性提升</color>效果，提升至(\d+%)$"="Increase the <color\=#FFFC40>Stats Boost</color> effect from Elucidate Thieves to $1"
+r:"^解明怪盜對在場怪盜的<color\=#FFFC40>屬性提升</color>效果，提升至(\d+%)$"="Increase the <color\=#FFFC40>Stats Boost</color> effect from Elucidator Thieves to $1"
 巧匠之作=<size\=19>Artisan's Work</size>
 
 熔岩幻境=Lava Mirage
@@ -2748,16 +2757,14 @@ r:"^X(\d+)倍$"="<size\=30>X$1</size>"
 sr:"^(.*)/(.*)屬性攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="$1/$2 Attacks Score <color\=#FF0000>X$3</color>"
 獎勵=<size\=24>Rewards</size>
 章節獎勵=<size\=36>Rewards</size>
-累計獲得異界晶珀：=<size\=32>Total Ambers Earned:</size>
+累計獲得{{A}}：=<size\=32>Total {{A}} Earned:</size>
 
 昨日辰星獎勵：=Daily Rewards:
 每日根據天鵝絨試煉總星級發放獎勵。=Get daily rewards based on total ★.
 
-/////////////////
-/// z. Others ///
-/////////////////
--- UI Menus that only need a tiny amount of change.
-// E-Mail
+----------
+Others
+----------
 P5X營運團隊=P5X Team
 所有已讀郵件已刪除。=Deleted all read emails.
 獎勵發放管理員=System
@@ -2775,15 +2782,15 @@ sr:"^「(.*)」即將結束$"="<size\=24>[$1] Ending Soon</size>"
 sr:"^「(.*)」獎勵補發$"="<size\=24>[$1] Reissue Rewards</size>"
 r:"^您的{{A}}任務「(.*)」獎勵未領取，已透過郵件發送，請查收附件。$"="Your unclaimed {{A}} mission rewards have been sent via mail. Please check the attachments."
 sr:"^「(.*)」總星級獎勵$"="[$1] Star Rewards"
-「閼凶夢之扉」樂園排名獎勵=<size\=20>[Door of Nightmares] Paradise Rank Rewards</size>
-r:"^在本期閼凶夢之扉挑戰中，您所在的樂園排名處於(.*)名，特為全體樂園成員發放排名獎勵，請及時查收。$"="In this season of Door of Nightmares, your Paradise is top $1, rewards are issued to all members, please claim in time."
-「閼凶夢之扉」個人排名獎勵=<size\=20>[Door of Nightmares] Personal Rank Rewards</size>
-r:"^本期閼凶夢之扉挑戰已結束，在挑戰過程中您的最高排名為(.*)，特為您頒發個人排名獎勵，請查收。$"="In this season of Door of Nightmares, your personal rank is top $1, we have issued your rank rewards, please claim."
-「心之海試煉」排名獎勵=<size\=25>[Sea of Souls Trials] Rank Rewards</size>
-r:"^本期心之海試煉已結束，您的排名處於(.*)，特為您頒發排名獎勵，請查收。$"="In this season of Sea of Souls Trials, your rank is top $1, we have issued your rank rewards, please claim."
+「閼凶夢之扉」樂園排名獎勵=<size\=20>[Nightmare's Gateway] Paradise Rank Rewards</size>
+r:"^在本期閼凶夢之扉挑戰中，您所在的樂園排名處於(.*)名，特為全體樂園成員發放排名獎勵，請及時查收。$"="In this season of Nightmare's Gateway, your Paradise is top $1, rewards are issued to all members, please claim in time."
+「閼凶夢之扉」個人排名獎勵=<size\=20>[Nightmare's Gateway] Personal Rank Rewards</size>
+r:"^本期閼凶夢之扉挑戰已結束，在挑戰過程中您的最高排名為(.*)，特為您頒發個人排名獎勵，請查收。$"="In this season of Nightmare's Gateway, your personal rank is top $1, we have issued your rank rewards, please claim."
+「心之海試煉」排名獎勵=<size\=25>[Trials from the Sea of Souls] Rank Rewards</size>
+r:"^本期心之海試煉已結束，您的排名處於(.*)，特為您頒發排名獎勵，請查收。$"="In this season of Trials from the Sea of Souls, your rank is top $1, we have issued your rank rewards, please claim."
 {{A}}生日快樂！=<size\=26>Happy Birthday {{A}}!</size>
 
-// Mission Screen
+Mission Screen
 全部=All
 主要=Main
 支線=Side
@@ -2858,7 +2865,7 @@ r:"^與「<color\=#ffc000>{{A}}</color>」結識，\n可以期待今後與她發
 sr:"^是否現在追蹤任務「(.*)」？$"="Track the mission \n"$1"?"
 sr:"^完成「<color\=#ff3b37>(.*)</color>」後解鎖「(.*)」，是否立即追蹤？$"="Complete [<color\=#ff3b37>$1</color>] to unlock [$2], track it now?"
 
-// Friends Screen
+Friends Screen
 輸入玩家的ID進行搜索=Search by Player ID
 搜索=►
 已經發消息給對方了，應該很快就會回覆了吧。=Sent friend request.
@@ -2948,8 +2955,8 @@ r:"^在「星盤試煉」中通過「紫色或紅色」監測點\((\d+)\/(\d+)\)
 r:"^在「星盤試煉」中通過任意(\d+)個監測點\((\d+)\/(\d+)\)$"="Clear $1 Monitoring Point in Astrolabe Trials ($2/$3)"
 r:"^累計消耗(\d+)點體力\((\d+)\/(\d+)\)$"="Use $1 Stamina ($2/$3)"
 r:"^累計消耗(\d+)點行動力\((\d+)\/(\d+)\)$"="Use $1 Energy Points ($2/$3)"
-完成1次閼凶夢之扉=Clear 1 Door of Nightmares
-r:"^完成1次閼凶夢之扉\((\d+)\/(\d+)\)$"="Clear 1 Door of Nightmares ($1/$2)"
+完成1次閼凶夢之扉=Clear 1 Nightmare's Gateway
+r:"^完成1次閼凶夢之扉\((\d+)\/(\d+)\)$"="Clear 1 Nightmare's Gateway ($1/$2)"
 
 Story Patch Event Missions
 sr:"^已獲得(.*)：(\d+)$"="$1: $2"
@@ -2986,10 +2993,10 @@ r:"^在{{A}}擊敗任意(\d+)個寶魔\((\d+)\/(\d+)\)$"="Defeat any $1 Treasure
 都市巡遊=City Tour
 sr:"^完成都市任務「(.*)」\((\d+)\/(\d+)\)$"="Complete the city mission [$1] ($2/$3)"
 r:"^參與(\d+)次任意都市日程\((\d+)\/(\d+)\)$"="Participate in any $1 City Activities ($2/$3)"
-r:"^與「{{A}}」締結協力者關係\((\d+)\/(\d+)\)$"="Form a Confidant with {{A}} ($1/$2)"
-r:"^與「{{A}}」的協力者等級達到(\d+)級\((\d+)\/(\d+)\)$"="Reach Confidant Rank $1 with {{A}} ($2/$3)"
-r:"^完成{{A}}coop開啟任務\((\d+)\/(\d+)\)$"="Form a Confidant with {{A}} ($1/$2)"
-r:"^將{{A}}coop推進至(\d+)級\((\d+)\/(\d+)\)$"="Reach Confidant Rank $1 with {{A}} ($2/$3)"
+r:"^與「{{A}}」締結協力者關係\((\d+)\/(\d+)\)$"="Form a relationship with {{A}} ($1/$2)"
+r:"^與「{{A}}」的協力者等級達到(\d+)級\((\d+)\/(\d+)\)$"="Reach Synergy Rank $1 with {{A}} ($2/$3)"
+r:"^完成{{A}}coop開啟任務\((\d+)\/(\d+)\)$"="Form a relationship with {{A}} ($1/$2)"
+r:"^將{{A}}coop推進至(\d+)級\((\d+)\/(\d+)\)$"="Reach Synergy Rank $1 with {{A}} ($2/$3)"
 sr:"^獲得(.*)“(.*)”(\d+)個\((\d+)\/(\d+)\)$"="Obtain $3 [$2] $1 ($4/$5)"
 sr:"^獲得“(.*)”任意不重複的(\d+)個(.*)\((\d+)\/(\d+)\)$"="Obtain $2 different [$1] $3 ($4/$5)"
 
@@ -3095,8 +3102,8 @@ r:"^『預言之數』\n完成「行動總結」中的目標後獲得，可投�
 抵達此地點需要進行<color\=#FFD145>戰鬥挑戰</color>，勝利後獲得花朵獎勵與隨機祝福。=Reach this location will enter <color\=#FFD145>Combat Challenge</color>, after victory gain Flowers and random Blessings.
 抵達此地點會進行<color\=#FFD145>首領挑戰</color>，勝利後獲得花朵獎勵並解鎖下一路線。=Reach this location will enter <color\=#FFD145>Boss Challenge</color>, after victory gain Flowers and unlock the next route.
 主角提升=Wonder Buff
-反抗提升=Rebel Buff
-支配提升=Dominate Buff
+反抗提升=Assassin Buff
+支配提升=Sweeper Buff
 物射提升=Phys Gun Buff
 火冰提升=Fire Ice Buff
 電風提升=Elec Wind Buff
@@ -3120,8 +3127,8 @@ r:"^所有怪盜耐性穿透提升(\d+(.\d+)?(%)?)"="Increase all Thieves' RES P
 r:"^所有怪盜效果命中提升(\d+(.\d+)?(%)?)"="Increase all Thieves' EHR by $1"
 r:"^所有怪盜造成傷害提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' DMG Dealt by $1"
 r:"^<color\=#FFFC40>WONDER</color>造成傷害提升(\d+(.\d+)?(%)?)$"="Increase <color\=#FFFC40>Wonder's</color> DMG Dealt by $1"
-r:"^<color\=#FFFC40>反抗</color>怪盜造成傷害提升(\d+(.\d+)?(%)?)$"="Increase all <color\=#FFFC40>Rebel</color> Thieves' DMG Dealt by $1"
-r:"^<color\=#FFFC40>支配</color>怪盜造成傷害提升(\d+(.\d+)?(%)?)$"="Increase all <color\=#FFFC40>Dominate</color> Thieves' DMG Dealt by $1"
+r:"^<color\=#FFFC40>反抗</color>怪盜造成傷害提升(\d+(.\d+)?(%)?)$"="Increase all <color\=#FFFC40>Assassin</color> Thieves' DMG Dealt by $1"
+r:"^<color\=#FFFC40>支配</color>怪盜造成傷害提升(\d+(.\d+)?(%)?)$"="Increase all <color\=#FFFC40>Sweeper</color> Thieves' DMG Dealt by $1"
 r:"^所有怪盜<color\=#FFFC40>物理</color>、<color\=#FFFC40>射擊</color>屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#FFFC40>Phys</color>, <color\=#FFFC40>Gun</color> DMG by $1"
 r:"^所有怪盜<color\=#ff381d>火焰</color>、<color\=#00aeff>冰凍</color>屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff381d>Fire</color>, <color\=#00aeff>Ice</color> DMG by $1"
 r:"^所有怪盜<color\=#fbff37>電擊</color>、<color\=#81ea2c>疾風</color>屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#fbff37>Elec</color>, <color\=#81ea2c>Wind</color> DMG by $1"
@@ -3155,8 +3162,8 @@ r:"^生命枯萎(.*)$"="Health Wither $1"
 r:"^治療弱化(.*)$"="Healing Nerf $1"
 r:"^護盾弱化(.*)$"="Shield Nerf $1"
 r:"^行動遲緩(.*)$"="Crippled Pace $1"
-優越禁止=Superior Ban
-屈從禁止=Sumbit Ban
+優越禁止=Strategist Ban
+屈從禁止=Saboteur Ban
 r:"^元素侵擾(.*)$"="Elemental Disruption $1"
 r:"^能量枯竭(.*)$"="Energy Depletion $1"
 r:"^更快更強(.*)$"="Faster Stronger $1"
@@ -3171,9 +3178,9 @@ r:"^<pos\=45>所有怪盜最終攻擊力下降(\d+(.\d+)?(%)?)$"="<pos\=45>Decre
 r:"^<pos\=45>所有怪盜最終防禦力下降(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Final DEF by $1"
 r:"^<pos\=45>所有怪盜治療效果降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Healing Effect by $1"
 r:"^<pos\=45>所有怪盜護盾效果降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Shield Effect by $1"
-r:"^<pos\=45>解明怪盜的技能準備時間延長(\d+(.\d+)?(%)?)次行動$"="<pos\=45>Increase all Elucidate Thieves' cooldown by $1 actions"
-r:"^<pos\=45>禁止上陣優越職業怪盜與面具$"="<pos\=45>Ban Superior Thieves and Personas"
-r:"^<pos\=45>禁止上陣屈從職業怪盜與面具$"="<pos\=45>Ban Submit Thieves and Personas"
+r:"^<pos\=45>解明怪盜的技能準備時間延長(\d+(.\d+)?(%)?)次行動$"="<pos\=45>Increase all Elucidator Thieves' cooldown by $1 actions"
+r:"^<pos\=45>禁止上陣優越職業怪盜與面具$"="<pos\=45>Ban Strategist Thieves and Personas"
+r:"^<pos\=45>禁止上陣屈從職業怪盜與面具$"="<pos\=45>Ban Saboteur Thieves and Personas"
 r:"^<pos\=45>怪盜造成的火冰電風屬性的傷害降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Fire/Ice/Elec/Wind DMG by $1"
 r:"^<pos\=45>怪盜造成的念核祝咒屬性的傷害降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Psy/Nuke/Bless/Curse DMG by $1"
 r:"^<pos\=45>HL能量回復速度降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease HIGHLIGHT Energy recovery rate by $1"
@@ -3186,9 +3193,9 @@ r:"^所有怪盜最終攻擊力下降(\d+(.\d+)?(%)?)$"="Decrease all Thieves' F
 r:"^所有怪盜最終防禦力下降(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Final DEF by $1"
 r:"^所有怪盜治療效果降低(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Healing Effect by $1"
 r:"^所有怪盜護盾效果降低(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Shield Effect by $1"
-r:"^解明怪盜的技能準備時間延長(\d+(.\d+)?(%)?)次行動$"="Increase all Elucidate Thieves' cooldown by $1 actions"
-r:"^禁止上陣優越職業怪盜與面具$"="Ban Superior Thieves and Personas"
-r:"^禁止上陣屈從職業怪盜與面具$"="Ban Submit Thieves and Personas"
+r:"^解明怪盜的技能準備時間延長(\d+(.\d+)?(%)?)次行動$"="Increase all Elucidator Thieves' cooldown by $1 actions"
+r:"^禁止上陣優越職業怪盜與面具$"="Ban Strategist Thieves and Personas"
+r:"^禁止上陣屈從職業怪盜與面具$"="Ban Saboteur Thieves and Personas"
 r:"^怪盜造成的火冰電風屬性的傷害降低(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Fire/Ice/Elec/Wind DMG by $1"
 r:"^怪盜造成的念核祝咒屬性的傷害降低(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Psy/Nuke/Bless/Curse DMG by $1"
 r:"^HL能量回復速度降低(\d+(.\d+)?(%)?)$"="Decrease HIGHLIGHT Energy recovery rate by $1"
@@ -3245,10 +3252,10 @@ r:"^至少攜帶(\d+)名男性隊員的情況下通關$"="<size\=27>Clear with a
 sr:"^只攜帶(.*)屬性或(.*)屬性隊員的情況下通關$"="<size\=26>Clear with only $1 or $2 allies</size>"
 sr:"^戰鬥中至少打出(\d+)次(.*)屬性技能$"="Use at least $1 $2 skills"
 r:"^戰鬥中至少打出(\d+)次{{A}}$"="Use at least $1 {{A}}"
-在不攜帶屈從職業隊員的情況下通關=Clear with no Sumbit Teammates
+在不攜帶屈從職業隊員的情況下通關=Clear with no Saboteur Teammates
 r:"^戰鬥中至少打出(\d+)次HIGHLIGHT$"="Use at least $1 HIGHLIGHT"
 r:"^戰鬥中至少打出(\d+)次TECH傷害$"="Trigger at least $1 TECHNICAL"
-在不攜帶優越職業隊員的情況下通關=Clear with no Superior Teammates
+在不攜帶優越職業隊員的情況下通關=Clear with no Strategist Teammates
 r:"^戰鬥中至少打出(\d+)次WEAK傷害$"="Deal at least $1 Weak damage"
 r:"^在(\d+)回合內通關$"="Win within $1 turns"
 r:"^戰鬥中至少打出(\d+)次普通攻擊$"="Use at least $1 Melee Attack"
@@ -3366,7 +3373,7 @@ r:"^當前有<color\=#FF0000>(\d+)</color>位夥伴向你發出邀約，是否�
 拖動右側碎片，完成拼圖=Drag the pieces to complete the puzzle
 
 請選擇一個你希望收到的獎勵！=Please select a reward you wish to receive!
-請選擇你後續希望推出的協同角色=Please select a character you wish to become a Confidant
+請選擇你後續希望推出的協同角色=Please select a character you wish to become a Synergy
 r:"^全服能量達到<color\=#FFF100>(.*)</color>時透過郵件發放獎勵$"="Gain this when the server reaches <color\=#FFF100>$1</color> energy"
 全服投票結果會在活動結束後一周透過郵件發佈=Email results one week post-event
 禮物心願=Gift Wish
@@ -3548,8 +3555,8 @@ r:"^最多只可以選擇(\d+)個面具上陣哦～$"="You can only equip $1 Per
 不羈紋章·空=<size\=20>Wild Card Emblem·Dull</size>
 在厄抑之境中挑戰Ⅵ階、Ⅶ階{{A}}副本後獲得……應該可以用於在厄抑巡禮中兌換獎勵。=Gained from Rank VI, Rank VII Persona Farm. Can be used in Challenge Reward.
 在厄抑之境中挑戰所有{{A}}副本後均可獲得……應該可以用於在厄抑巡禮中兌換獎勵。=Gained from all Persona Farm. Can be used in Challenge Reward.
-『不羈紋章·虹』\n在心之海試煉等玩法中獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=26>[Wild Card Emblem·Rainbow]\nGained from Sea of Souls Trials. \nCan be used in Challenge Reward.</size>
-在心之海試煉等玩法中獲得……應該可以用於在厄抑巡禮中兌換獎勵。=Gained from Sea of Souls Trials. \nCan be used in Challenge Reward.
+『不羈紋章·虹』\n在心之海試煉等玩法中獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=26>[Wild Card Emblem·Rainbow]\nGained from Trials from the Sea of Souls. \nCan be used in Challenge Reward.</size>
+在心之海試煉等玩法中獲得……應該可以用於在厄抑巡禮中兌換獎勵。=Gained from Trials from the Sea of Souls. \nCan be used in Challenge Reward.
 『不羈紋章·耀』\n在厄抑之境中挑戰Ⅵ階、Ⅶ階{{A}}副本後獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=26>[Wild Card Emblem·Shiny]\nGained from Rank VI, Rank VII Persona Farm. Can be used in Challenge Reward.</size>
 『不羈紋章·空』\n在厄抑之境中挑戰所有{{A}}副本後均可獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=26>[Wild Card Emblem·Dull]\nGained from all Persona Farm. \nCan be used in Challenge Reward.</size>
 銘刻著{{B}}傳說的印記……應該可以用於強化、進化、合體{{A}}。=A mark engraved with the legend of {{B}}, can be used to upgrade, evolve, and fuse {{A}}.
@@ -3613,7 +3620,7 @@ sr:"^(.*)印記$"="$1 Mark"
 豐饒的{{A}}=Abundant {{A}}
 
 ----------
-ACHIEVEMENTS + COSMETICS + KEY ITEMS
+ACHIEVEMENTS + COSMETICS + EMOTES + KEY ITEMS
 ----------
 希望追尋之旅=<size\=26>Journey for Hope</size>
 無雙的武鬥派=<size\=21>Unrivaled Combatant</size>
@@ -3624,32 +3631,32 @@ ACHIEVEMENTS + COSMETICS + KEY ITEMS
 成為超人氣之星=<size\=20>Becoming a Superstar</size>
 怪盜的秘密基地=Thief's Hideout
 
-解鎖{{A}}的協同關係<size\=30>(0/1)</size>=Unlock {{A}}'s Confidant <size\=30>(0/1)</size>
-解鎖{{A}}的協同關係=Unlock {{A}}'s Confidant
+解鎖{{A}}的協同關係<size\=30>(0/1)</size>=Unlock {{A}}'s Synergy <size\=30>(0/1)</size>
+解鎖{{A}}的協同關係=Unlock {{A}}'s Synergy
 解鎖{{A}}的RANK=Unlock {{A}}'s RANK
 解鎖{{A}}的RANK等級=Unlock {{A}}'s RANK
 r:"^{{A}}的RANK達(\d+)級$"="{{A}} reached RANK $1"
 
-r:"^與協同者進行「邀約」(\d+)次<size\=30>\((\d+)/(\d+)\)</size>$"="[Invite] Confidants $1 time(s) <size\=30>($2/$3)</size>"
-r:"^與協同者進行「邀約」(\d+)次$"="[Invite] Confidants $1 time(s)"
+r:"^與協同者進行「邀約」(\d+)次<size\=30>\((\d+)/(\d+)\)</size>$"="[Invite] Synergies $1 time(s) <size\=30>($2/$3)</size>"
+r:"^與協同者進行「邀約」(\d+)次$"="[Invite] Synergies $1 time(s)"
 r:"^與{{A}}進行「邀約」累計達(\d+)次<size\=30>\((\d+)/(\d+)\)</size>$"="[Invite] {{A}} $1 time(s) <size\=30>($2/$3)</size>"
 r:"與{{A}}進行「邀約」累計達(\d+)次"=[Invite] {{A}} $1 time(s)
-r:"^與協同者進行「邀約」累計達(\d+)次<size\=30>\((\d+)/(\d+)\)</size>$"="[Invite] Confidants $1 time(s) <size\=30>($2/$3)</size>"
-r:"^與協同者進行「邀約」累計達(\d+)次$"="[Invite] Confidants $1 time(s)"
+r:"^與協同者進行「邀約」累計達(\d+)次<size\=30>\((\d+)/(\d+)\)</size>$"="[Invite] Synergies $1 time(s) <size\=30>($2/$3)</size>"
+r:"^與協同者進行「邀約」累計達(\d+)次$"="[Invite] Synergies $1 time(s)"
 
-r:"^贈送禮物給協同者(\d+)次<size\=30>\((\d+)/(\d+)\)</size>$"="Give Gifts to Confidants $1 time(s) <size\=30>($2/$3)</size>"
-r:"^贈送禮物給協同者(\d+)次$"="Give Gifts to Confidants $1 time(s)"
-r:"^贈送禮物給協同者累計達(\d+)次<size\=30>\((\d+)/(\d+)\)</size>$"="Give Gifts to Confidants $1 time(s) <size\=30>($2/$3)</size>"
-r:"^贈送禮物給協同者累計達(\d+)次$"="Give Gifts to Confidants $1 time(s)"
+r:"^贈送禮物給協同者(\d+)次<size\=30>\((\d+)/(\d+)\)</size>$"="Give Gifts to Synergies $1 time(s) <size\=30>($2/$3)</size>"
+r:"^贈送禮物給協同者(\d+)次$"="Give Gifts to Synergies $1 time(s)"
+r:"^贈送禮物給協同者累計達(\d+)次<size\=30>\((\d+)/(\d+)\)</size>$"="Give Gifts to Synergies $1 time(s) <size\=30>($2/$3)</size>"
+r:"^贈送禮物給協同者累計達(\d+)次$"="Give Gifts to Synergies $1 time(s)"
 r:"^贈送喜歡的禮物給{{A}}(\d+)次<size\=30>\((\d+)/(\d+)\)</size>$"="Give a Favorite Gift to {{A}} $1 time(s) <size\=30>($2/$3)</size>"
 r:"^贈送喜歡的禮物給{{A}}(\d+)次$"="Give a Favorite Gift to {{A}} $1 time(s)"
 r:"^贈送所有喜歡的禮物給{{A}}<size\=30>\((\d+)/(\d+)\)</size>$"="Give all Favorite Gifts to {{A}} <size\=30>($1/$2)</size>"
 r:"^贈送所有喜歡的禮物給{{A}}$"="Give all Favorite Gifts to {{A}}"
 
-解鎖{{A}}所有的協同者故事<size\=30>(0/1)</size>=Unlock all Confidant Stories for {{A}} <size\=30>(0/1)</size>
-解鎖{{A}}所有的協同者故事=Unlock all Confidant Stories for {{A}}
-解鎖{{A}}所有協同者語音=Unlock all Confidant Voicelines for {{A}}
-解鎖{{A}}所有的協同者語音=Unlock all Confidant Voicelines for {{A}}
+解鎖{{A}}所有的協同者故事<size\=30>(0/1)</size>=Unlock all Synergy Stories for {{A}} <size\=30>(0/1)</size>
+解鎖{{A}}所有的協同者故事=Unlock all Synergy Stories for {{A}}
+解鎖{{A}}所有協同者語音=Unlock all Synergy Voicelines for {{A}}
+解鎖{{A}}所有的協同者語音=Unlock all Synergy Voicelines for {{A}}
 與任意協同者進行1次關係回溯<size\=30>(0/1)</size>=Backtrack 1 relationship <size\=30>(0/1)</size>
 與任意協同者進行1次關係回溯=Backtrack 1 relationship
 
@@ -3661,7 +3668,7 @@ r:"^贈送所有喜歡的禮物給{{A}}$"="Give all Favorite Gifts to {{A}}"
 sr:"^參與「(.*)」活動獲得$"="Participate in the event [$1]"
 r:"^{{A}}成長至(\d+)級時解鎖$"="{{A}} reached Lv. $1"
 r:"^與協同者{{A}}好感度達到rank(\d+)$"="Reach Rank $1 with {{A}}"
-r:"^在閼凶夢之扉挑戰中，樂園排名達到(\d+)~(\d+)名時獲得的頭像框。$"="Paradise reach top $1~$2 in Door of Nightmares."
+r:"^在閼凶夢之扉挑戰中，樂園排名達到(\d+)~(\d+)名時獲得的頭像框。$"="Paradise reach top $1~$2 in Nightmare's Gateway."
 
 查看全部徽章=View all badges
 r:"^徽章收集：(\d+)$"="Badges: $1"
@@ -3683,9 +3690,145 @@ r:"^(.*)·心跳之夏$"="$1·Summer of Heartbeats"
 r:"^(.*)·新春之禧$"="$1·Celebration of Spring"
 r:"^(.*)·向死之叛$"="$1·Defiance towards Death"
 
-r:"^在閼凶夢之扉挑戰中，樂園排名達到(\d+)~(\d+)名時獲得的勳章。$"="Paradise reach top $1~$2 in Door of Nightmares."
+r:"^在閼凶夢之扉挑戰中，樂園排名達到(\d+)~(\d+)名時獲得的勳章。$"="Paradise reach top $1~$2 in Nightmare's Gateway."
 {{A}}意識等級達到6級={{A}} reached Awareness 6
 r:"^與協同者{{A}}好感度達到rank(\d+)\n且與{{A}}成為{{B}}$"="Reach Rank $1 with {{A}} and become {{B}}."
+
+r:"^<color\=#ff0000>{{A}}</color>協同者等級達到(\d+)級解鎖。$"="Unlock at <color\=#ff0000>{{A}}</color> Rank $1."
+r:"^<color\=#ff0000>{{A}}</color>協同者等級達到(\d+)級，並達成「{{B}}」關係解鎖。$"="Reach <color\=#ff0000>{{A}}</color> Rank $1 and become [{{B}}]."
+sr:"^表情·(.*)$"="Emote·$1"
+{{A}}專屬表情包。\n與{{A}}協同者等級提升獎勵。={{A}}'s exclusive emote. \nRewards from ranking up {{A}}.
+{{A}}專屬表情包。\n與{{A}}達成「{{B}}」關係獎勵。={{A}}'s exclusive emote. \nRewards from becoming [{{B}}] with {{A}}.
+暗中觀察=Lurk
+歡迎=Welcome
+無語=Speechless
+生氣=Angry
+嫌棄=Dislike
+疑惑=Confuse
+閃耀登場=Grand entrance
+送禮=Gift
+覺悟吧=Prepare yourself
+開心=Happy
+衝呀=Let's go
+飲茶=Drink tea
+欲言又止=Hesitant to speak
+可以嗎=Is that okay
+登場=Appear
+肚子餓=Hungry
+好吃=Yummy
+警覺=Alert
+拍照=Take a photo
+料理=Cuisine
+收到=Get
+悠閒=Laid back
+應援=Support
+
+出發=Set off
+快上車=Get in the car
+期待=Await
+摸頭=Pet
+真棒=Awesome
+飛吻=Air kiss
+擺Pose=Pose
+看招=Take this
+偷笑=Snicker
+如何=Well
+該吃藥了=Time for medicine
+拿走=Take it
+好運來=Good luck
+
+演出時刻=Showtime
+慶祝一下=Celebrate
+乾杯=Cheers
+共同語言=Common language
+不愧是你=As expected
+教教我嘛=Teach me
+感謝=Thanks
+不賴嘛=Not bad
+目標鎖定=Target lock
+不祥預感=Ominous premonition
+勝負已定=It's over
+不看看嗎=Look
+覺醒時刻=Awaken
+
+吉祥如意=Good fortune
+恭喜發財=Happy Lunar New Year
+飛黃騰達=Rapid success
+心想事成=Wish come true
+財源滾滾=Flowing wealth
+
+感受愛意=Feel love
+請跟我握手吧=Shake hands
+情緒高漲=Fired up
+你最棒=You're the best
+抓住你了=Got you
+健身=Workout
+閃閃發光=Sparkle
+心好累=So tired
+大腦超載=Brain overload
+悄悄話=Whisper
+打工仔=Worker
+疑惑=Confuse
+被你淹沒=Drowned by you
+慌張=Panic
+逗你玩=Tease
+小心心=Little heart
+買買買=Buy buy buy
+讓我教你=Let me teach you
+
+開花=Bloom
+花不完=Rich
+偷看=Peep
+達咩！=Stop!
+中二=Delusion
+乾杯！=Cheer!
+讓我聽聽=Eavesdrop
+唔，醉了=Drunk
+有事？=Something's wrong?
+好評如潮=Rave review
+超辣=Super spicy
+
+膽怯=Timid
+好開心呀=So happy
+歌唱吧！=Sing!
+好幸福！=So happy!
+離家出走囉=Run away
+我拒絕！=I refuse!
+求小費=Tip
+提線木偶=Marionette
+人魚{{A}}=Mermaid {{A}}
+玩眼球=Play with eyeballs
+送花=Send flowers
+聞花=Smell flowers
+鈔能力=Rich
+別著涼啦=Tuck
+
+暈頭轉向=Dizzy
+為什麼捏=Why
+興奮=Excited
+摸臉=Touch face
+滑冰=Skate
+大哭=Cry
+東張西望=Look around
+可愛~=Cute～
+請胡亂的吃吧=Eat anything
+再努力一下吧=Try harder
+異議=Objection
+梅子大使=Plum Ambassador
+嗅嗅=Sniff
+灑灑水啦=Sprinkle
+拉鉤鉤=Pinky promise
+要乖哦~=Be good～
+購物狂=Shopaholic
+衝刺吧！=Floor it!
+打你哦！=Hit you!
+最有型的人=Coolest person
+走著瞧=We'll see
+
+鼓掌=Clap
+顫抖~=Tremble～
+摔倒=Fall
+不哭不哭=Don't cry
 
 薩克斯風的簧片=Saxophone Reed
 劇情道具。\n{{A}}贈送的薩克斯風簧片。=Story item. \nSaxophone reed given by {{A}}.

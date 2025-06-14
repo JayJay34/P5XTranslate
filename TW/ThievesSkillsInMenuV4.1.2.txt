@@ -45,6 +45,7 @@ HIGHLIGHT=HIGHLIGHT
 防禦力提升上限=DEF Up Cap
 額外防禦力上限=DEF Up Cap
 基礎減防=Base DEF Down
+降防倍率=DEF Down Multiplier
 減防倍率=DEF Down Multiplier
 減防上限=DEF Down Cap
 額外降防上限=DEF Down Cap
@@ -276,7 +277,6 @@ Closer - Motoha Arai
 雷霆之怒=<size\=26>Thunder's Fury</size>
 超速電擊=<size\=20>Hypervelocity Shock</size>
 電鳴狂鯊=Electric Shark
-力量=Strength
 守護=Protect
 
 r:"^雷霆之怒 Lv.(\d+)$"="Thunder's Fury Lv.$1"
@@ -293,7 +293,6 @@ r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊�
 
 r:"^『HIGHLIGHT』：對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，有100%的固定機率使技能主目標進入<link\="s\|104"><u>觸電</u></link>狀態，效果持續2回合。並使其受到的電擊屬性傷害提升(\d+%)，效果持續2回合。\n『ONE MORE』：對1名敵人造成電擊屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[HIGHLIGHT]: Deals <color\=#FFFC40>$1</color> ATK Elec damage to all foes, there is a 100% fixed chance to inflict the main target with <link\="s|104"><u>Shock</u></link>, and increase their Elec DMG Taken by $2 for 2 turns. \n[ONE MORE]: Deals Elec damage to 1 foe. \nMelee Attack: Uses a melee weapon to deal light Phys damage to 1 foe. \nGun Attack: Uses a gun to shoot 1 foe. dealing Gun damage, can shoot multiple times based on ammo."
 
-r:"^力量 Lv.(\d+)$"="Strength Lv.$1"
 r:"^造成<link\="s\|104"><u>觸電</u></link>效果時，有<color\=#FFFC40>(\d+\.\d+%)</color>固定機率使該效果延長1回合。$"="When inflicting <link\="s|104"><u>Shock</u></link>, there is a <color\=#FFFC40>$1</color> fixed chance to increase the duration by 1 turn."
 r:"^造成<link\="s\|104"><u>觸電</u></link>效果時，有<color\=#0169ca>(\d+\.\d+%)</color>固定機率使該效果延長1回合。$"="When inflicting <link\="s|104"><u>Shock</u></link>, there is a <color\=#0169ca>$1</color> fixed chance to increase the duration by 1 turn."
 
@@ -403,7 +402,7 @@ r:"^暗香細語 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=28>Fragrance Whisper
 r:"^準備時間：8次行動（<link\="s\|187"><u>『情報』</u></link>數量低於5層時不能使用）\n消耗所有<link\="s\|187"><u>『情報』</u></link>使所有同伴獲得『傲放』並使主目標恢復<color\=#FFFC40>(\d+\.\d+%)</color>的生命值。『傲放』：造成傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，消耗的每份<link\="s\|187"><u>『情報』</u></link>提供額外的傷害提升（若{{A}}速度大於100點，每超過10點，造成傷害提升(\d+\.\d+%)，最多提升<color\=#FFFC40>(\d+\.\d+%)</color>），持續1回合。\n<b><size\=28><color\=#850101>如風輕拂花叢，柔情綻放呢喃細語，梅之香氣若有若無，為生命之繪卷增添幾分生動與雅致。</color></size></b>$"="Preparation Time: 8 Actions (Cannot be used when you have less than 5 stacks of <link\="s|187"><u>[Intel</u></link>)\nConsumes all <link\="s|187"><u>[Intel]</u></link> to give all allies [Pride] and restores <color\=#FFFC40>$1</color> HP to the main target. [Pride]: Increases DMG Dealt by <color\=#FFFC40>$2</color>  for 1 turn. Additionally increases DMG Dealt for every <link\="s|187"><u>[Intel]</u></link> consumed (Increases DMG Dealt by $3 for every 10 SPD that's over 100, up to a cap of <color\=#FFFC40>$4</color>).\n<b><size\=28><color\=#850101>As the wind gently brushes the flowers, the softness of the blossoms blooms and murmurs, and the fragrance of the plum adds a bit of vitality and elegance to the scroll of life.</color></size></b>"
 
 屬性提升 Lv.1=Stats Boost Lv.1
-r:"^根據解明怪盜各屬性的(\d+%)提升在場的所有同伴的相應屬性值。$"="Increase the party's stats by $1 of your stats"
+r:"^根據解明怪盜各屬性的(\d+%)提升在場的所有同伴的相應屬性值。$"="Increase the party's stats by $1 of your stats."
 
 r:"^蝶夢 Lv.(\d+)$"="Butterfly Dream Lv.$1"
 r:"^進入戰鬥時，若{{A}}速度大於100點，每超過1點使所有怪盜獲得(\d+)點生命值、(\d+)點攻擊力、(\d+)點防禦力的提升，最多可提升<color\=#FFFC40>(\d+)</color>點生命值、<color\=#FFFC40>(\d+)</color>點攻擊力、<color\=#FFFC40>(\d+)</color>點防禦力。$"="At the start of battle, for every 1 SPD that's over 100, increase all allies' HP by $1, ATK by $2 and DEF by $3, up to <color\=#FFFC40>$4</color> HP, <color\=#FFFC40>$5</color> ATK and <color\=#FFFC40>$6</color> DEF."
@@ -500,22 +499,22 @@ r:"^使用『繁星共演』觸發『即興表演』的額外效果時，效果�
 Mont - Montagne Kotone
 ----------
 r:"^每名同伴行動時，自身會獲得『冰晶』。每次集滿(\d+)顆『冰晶』後，可額外對當前目標造成1次追加效果。$"="<size\=30>Gain 1 [Ice Crystal] after an ally acts. When you have $1 [Ice Crystal], trigger a Follow Up to the current target.</size>"
-冰之綻放=Ice Bloom
-凜冬撕裂=Winter Tear
-寒冰之刃=Frozen Blade
+冰之綻放=Frost Lily
+凜冬撕裂=Winter Storm
+寒冰之刃=Durandal of Ice
 忘我=Lose Oneself
 無境=Boundless
 
-r:"^冰之綻放 Lv.(\d+)$"="Ice Bloom Lv.$1"
-r:"^冰之綻放 <color\=#0F69CB>Lv.(\d+)</color>$"="Ice Bloom <color\=#0F69CB>Lv.$1</color>"
+r:"^冰之綻放 Lv.(\d+)$"="Frost Lily Lv.$1"
+r:"^冰之綻放 <color\=#0F69CB>Lv.(\d+)</color>$"="Frost Lily <color\=#0F69CB>Lv.$1</color>"
 r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，有<color\=#FFFC40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s|103"><u>凍結</u></link>狀態。\n<b><size\=28><color\=#850101>漫天飛雪孕育的花苞，所落之處綻放為璀璨冰花，對所有敵人造成冰凍傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Ice damage to all foes, with a <color\=#FFFC40>$2</color> base chance to inflict <link\="s|103"><u>Freeze</u></link>.\n<b><size\=28><color\=#850101>A flower bud spawned by the flying snow that blossoms into a sparkling ice flower, inflicting Frozen damage to all foes.</color></size></b>"
 
-r:"^凜冬撕裂 Lv.(\d+)$"="Winter Tear Lv.$1"
-r:"^凜冬撕裂 <color\=#0F69CB>Lv.(\d+)</color>$"="Winter Tear <color\=#0F69CB>Lv.$1</color>"
+r:"^凜冬撕裂 Lv.(\d+)$"="Winter Storm Lv.$1"
+r:"^凜冬撕裂 <color\=#0F69CB>Lv.(\d+)</color>$"="Winter Storm <color\=#0F69CB>Lv.$1</color>"
 r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，並獲得<link\="s\|119"><u>『冰晶』</u></link>4顆。\n<b><size\=28><color\=#850101>凜冬之中氤氳的寒氣逐漸成型，化作冰錐刺入目標的體內，以冰凍傷害重創目標。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Ice damage to 1 foe, and gains 4 <link\="s|119"><u>[Ice Crystal]</u></link>.\n<b><size\=28><color\=#850101>Winter's cold air gradually molds itself into an ice cone and stabs into the target's body, inflicting severe damage with ice crystals.</color></size></b>"
 
-r:"^寒冰之刃 Lv.(\d+)$"="Frozen Blade Lv.$1"
-r:"^寒冰之刃 <color\=#0F69CB>Lv.(\d+)</color>$"="Frozen Blade <color\=#0F69CB>Lv.$1</color>"
+r:"^寒冰之刃 Lv.(\d+)$"="Durandal of Ice Lv.$1"
+r:"^寒冰之刃 <color\=#0F69CB>Lv.(\d+)</color>$"="Durandal of Ice <color\=#0F69CB>Lv.$1</color>"
 r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，如果此時<link\="s\|119"><u>『冰晶』</u></link>數量為10或自身擁有『寒霜印記』則該技能獲得額外傷害提升。敵人生命值越低，則傷害提升越高，最多提升<color\=#FFFC40>(\d+\.\d+%)</color>。\n被動：『刀尖上的舞者』獲得額外傷害提升。敵人生命值越低，則傷害提升越高，最多提升<color\=#FFFC40>(\d+\.\d+%)</color>。\n<b><size\=28><color\=#850101>雪色壁障之中飛出的寒冰長槍，以迅疾之速刺向目標，並造成{{A}}式的冰凍傷害。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Ice damage to 1 foe, increases damage if you have 10 <link\="s|119"><u>[Ice Crystal]</u></link>. The lower the foe's HP are, the higher the damage will be, up to a maximum of <color\=#FFFC40>$2</color>.\nPassive: [Dancer on Knife's Edge] increases damage. The lower the foe's HP are, the higher the damage will be, up to a maximum of <color\=#FFFC40>$3</color>。\n<b><size\=28><color\=#850101>The long ice guns flying out of the snow -colored wall barrier to the target with fast speed and cause destruction of freezing damage.</color></size></b>"
 
 r:"^『HIGHLIGHT』：對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害。敵人的生命值越低，所受到的傷害越高，當敵人的生命值低於20%時，最高可獲得30%的傷害加成。\n『ONE MORE』：對1名敵人造成冰凍屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[HIGHLIGHT]: Deals <color\=#FFFC40>$1</color> ATK Ice damage to 1 foe. The lower the foe's HP are, the higher the damage will be, when they are at below 20% HP, gain 30% DMG Bonus. \n[ONE MORE]: Deals Ice damage to 1 foe. \nMelee Attack: Uses a melee weapon to deal light Phys damage to 1 foe. \nGun Attack: Uses a gun to shoot 1 foe. dealing Gun damage, can shoot multiple times based on ammo."
@@ -535,9 +534,9 @@ r:"^<color\=#66ccff>『冰晶』</color>$"="<color\=#66ccff>[Ice Crystal]</color
 刀尖上的舞者=<size\=21>Dancer on Knife's Edge</size>
 r:"^<color\=#66ccff>『刀尖上的舞者』</color>$"="<color\=#66ccff>[Dancer on Knife's Edge]</color>"
 r:"^{{A}}身上的『冰晶』達到了一定數量後，觸發一次冰凍屬性攻擊，這次攻擊視為追加效果。$"="When you have a certain amount of [Ice Crystal], do an Ice attack once, this attack is seen as a Follow Up."
-r:"^同伴行動時，自身獲得『冰晶』1顆，最多可獲得(\d+)顆『冰晶』。當『冰晶』數量為(\d+)時，自身使用技能後消耗(\d+)顆『冰晶』，對目標敵人造成1次(\d+%)攻擊力的冰凍屬性<link\="s\|100"><u>追加效果</u></link>，本次攻擊必定造成暴擊。使用『冰之綻放』、『凜冬撕裂』後觸發<link\="s\|100"><u>追加效果</u></link>時，自身額外獲得1層『寒霜印記』，『寒霜印記』可用來提升『寒冰之刃』造成的傷害。$"="Gain 1 [Ice Crystal] after an ally acts, up to $1. When you have $2 [Ice Crystal], consume $3 [Ice Crystal] after using a skill, dealing $4 ATK Ice damage as a <link\="s|100"><u>Follow Up</u></link>, this attack will always CRIT.\nWhen triggering <link\="s|100"><u>Follow Up</u></link> after using [Ice Bloom], [Winter Tear], gain 1 [Frostbite Mark] which can increase [Frozen Blade] damage."
+r:"^同伴行動時，自身獲得『冰晶』1顆，最多可獲得(\d+)顆『冰晶』。當『冰晶』數量為(\d+)時，自身使用技能後消耗(\d+)顆『冰晶』，對目標敵人造成1次(\d+%)攻擊力的冰凍屬性<link\="s\|100"><u>追加效果</u></link>，本次攻擊必定造成暴擊。使用『冰之綻放』、『凜冬撕裂』後觸發<link\="s\|100"><u>追加效果</u></link>時，自身額外獲得1層『寒霜印記』，『寒霜印記』可用來提升『寒冰之刃』造成的傷害。$"="Gain 1 [Ice Crystal] after an ally acts, up to $1. When you have $2 [Ice Crystal], consume $3 [Ice Crystal] after using a skill, dealing $4 ATK Ice damage as a <link\="s|100"><u>Follow Up</u></link>, this attack will always CRIT.\nWhen triggering <link\="s|100"><u>Follow Up</u></link> after using [Frost Lily], [Winter Storm], gain 1 [Parhelion] which can increase [Durandal of Ice] damage."
 
-r:"^同伴行動時，自身獲得『冰晶』1顆，最多可獲得(\d+)顆『冰晶』。當『冰晶』數量為(\d+)時，自身使用技能後消耗(\d+)顆『冰晶』，對目標敵人造成1次(\d+%)攻擊力的冰凍屬性<link\="s\|100"><u>追加效果</u></link>，本次攻擊<link\="s\|220"><u>必定暴擊</u></link>。使用『冰之綻放』、『凜冬撕裂』後觸發<link\="s\|100"><u>追加效果</u></link>時，自身額外獲得1層『寒霜印記』，『寒霜印記』可用來提升『寒冰之刃』造成的傷害。$"="Gain 1 [Ice Crystal] after an ally acts, up to $1 [Ice Crystal]. When you have $2 [Ice Crystal], cosume $3 [Ice Crystal] after using a skill, dealing $4 ATK Ice damage as <link\="s|100"><u>Follow Up</u></link>, this attack will <link\="s|220"><u>Always CRIT</u></link>. After using [Ice Bloom] or [Winter Tear] to trigger <link\="s|100"><u>Follow Up</u></link>, additionally gain 1 [Frostbite Mark], [Frostbite Mark] can increase [Frozen Blade] DMG Dealt."
+r:"^同伴行動時，自身獲得『冰晶』1顆，最多可獲得(\d+)顆『冰晶』。當『冰晶』數量為(\d+)時，自身使用技能後消耗(\d+)顆『冰晶』，對目標敵人造成1次(\d+%)攻擊力的冰凍屬性<link\="s\|100"><u>追加效果</u></link>，本次攻擊<link\="s\|220"><u>必定暴擊</u></link>。使用『冰之綻放』、『凜冬撕裂』後觸發<link\="s\|100"><u>追加效果</u></link>時，自身額外獲得1層『寒霜印記』，『寒霜印記』可用來提升『寒冰之刃』造成的傷害。$"="Gain 1 [Ice Crystal] after an ally acts, up to $1 [Ice Crystal]. When you have $2 [Ice Crystal], cosume $3 [Ice Crystal] after using a skill, dealing $4 ATK Ice damage as <link\="s|100"><u>Follow Up</u></link>, this attack will <link\="s|220"><u>Always CRIT</u></link>. After using [Frost Lily] or [Winter Storm] to trigger <link\="s|100"><u>Follow Up</u></link>, additionally gain 1 [Parhelion], [Parhelion] can increase [Durandal of Ice] DMG Dealt."
 
 行雲流水=Flow Like Water
 r:"^回合結束時，獲得(\d+%)攻擊力的護盾，效果持續1回合。$"="At the end of your turn, gain $1 ATK Shield for 1 turn."
@@ -1116,7 +1115,7 @@ r:"^『蓄力一擊』技能的蓄力期間使自身受到的傷害降低(\d+%)�
 螺旋升天爆錘=<size\=35>Spiral Hammer Smash</size>
 
 快刀斬亂麻=Cut the Gordian Knot
-r:"^釋放技能造成暴擊時，無視敵人(\d+%)防禦力。$"="Ignore $1 DEF when landing CRIT with a skill."
+r:"^釋放技能造成暴擊時，無視敵人(\d+%)防禦力。$"="Ignore $1 DEF when landing a CRITICAL with a skill."
 
 幻影連打=Phantom Follow Up
 
@@ -1179,7 +1178,7 @@ r:"^『療癒之術』對主要目標治療量提升(\d+%)。$"="[Art of Healing
 r:"^HIGHLIGHT效果提升：使同伴復活時，額外恢復其(\d+\.\d+%)攻擊力\+(\d+)的生命值。$"="Highlight Effect Boost: Restore $1 ATK + $2 HP when reviving an ally."
 
 好奇寶寶=Curious Baby
-r:"^『吾輩之拳』的命中率不再降低，並且造成暴擊後使敵人受到傷害提升(\d+%)，(\d+)回合。$"="[My Fist] will not decrease Hit Rate. Increase DMG Taken of the foe by $1 after landing a CRIT for $2 turn."
+r:"^『吾輩之拳』的命中率不再降低，並且造成暴擊後使敵人受到傷害提升(\d+%)，(\d+)回合。$"="[My Fist] will not decrease Hit Rate. Increase DMG Taken of the foe by $1 after landing a CRITICAL for $2 turn."
 
 ----------
 Panther - Ann Takamaki
@@ -1933,7 +1932,7 @@ r:"^忠實聽眾$"="Loyal Listener"
 r:"^進入戰鬥，『終曲：音域全開』有1回合冷卻時間。每次使用『終曲：音域全開』，永久使得自身攻擊力提升(\d+%)，最多可疊加2層，此後『終曲：音域全開』永久增加1回合冷卻時間，最多不會超過3回合。$"="At the start of battle, [Finale: Range Unleash] has a 1 turn cooldown. Permanently increases own ATK by $1 after using [Finale: Range Unleash], up to 2 stacks. Afterwards permanently increases the cooldown for [Finale: Range Unleash] by 1 turn, up to 3 turns."
 
 ♪迎接黎明♪=<size\=26>♪ Greet My Dawn Star ♪</size>
-r:"^戰鬥開始選擇一個同伴成為<link\="s\|190"><u>『忠實聽眾』</u></link>，優先選擇反抗、支配職業攻擊力最高的同伴，並且<link\="s\|190"><u>『忠實聽眾』</u></link>獲得額外效果：暴擊率提升(\d+%)。$"="At the start of battle, selects 1 ally to become the <link\="s|190"><u>[Loyal Listener]</u></link>, prioritizing the highest ATK Rebel or Dominate class ally. <link\="s|190"><u>[Loyal Listener]</u></link> gains additional effect: Increases CRIT Rate by $1."
+r:"^戰鬥開始選擇一個同伴成為<link\="s\|190"><u>『忠實聽眾』</u></link>，優先選擇反抗、支配職業攻擊力最高的同伴，並且<link\="s\|190"><u>『忠實聽眾』</u></link>獲得額外效果：暴擊率提升(\d+%)。$"="At the start of battle, selects 1 ally to become the <link\="s|190"><u>[Loyal Listener]</u></link>, prioritizing the highest ATK Assassin or Sweeper ally. <link\="s|190"><u>[Loyal Listener]</u></link> gains additional effect: Increases CRIT Rate by $1."
 
 ♪夜幕微光♪=♪ Lonely Shimmers ♪
 
@@ -2252,7 +2251,7 @@ r:"^『超荷改裝』獲得額外效果：槍械射擊時的暴擊效果提升(
 
 噩夢狂想曲=Nightmare Rhapsody
 r:"^『改裝』數量不少於2個時，{{A}}發射的榴彈進化為『臨別贈禮』；\n{{B}}技能提供的『改裝』獲得額外效果：\n『熱能改裝』：槍械技能額外使敵人的效果抵抗降低(\d+%)，持續2回合；\n『卸甲改裝』：槍械技能攻擊帶有<link\="s\|114"><u>『準星』</u></link>的敵人時，穿透提升(\d+%)；\n『擴散改裝』：槍械技能攻擊帶有<link\="s\|114"><u>『準星』</u></link>的敵人時，暴擊率提升(\d+%)、暴擊效果提升(\d+%)。$"="When you have not less than 2 [Customization], evolve your Gun Attack to [Farewell Gift]:\n[Customization] from Persona skills give additional effects:\n[Thermal Customization]: Gun Attack additionally decrease foes' Effect RES by $1 for 2 turns;\n[Piercing Customization]: Gun Attack gain $2 PEN when attacking foes with <link\="s|114"><u>[Sight]</u></link>;\n[Spreading Customization]: Gun Attack gain $3 CRIT Rate and $4 CRIT DMG when attacking foes with <link\="s|114"><u>[Sight]</u></link>."
-r:"^『改裝』數量不少於(\d+)個時，{{A}}發射的榴彈進化為『臨別贈禮』，額外造成1次可觸發所有『改裝』效果的槍械射擊效果，所有傷害均為原傷害的(\d+%)；\n{{B}}技能提供的『改裝』獲得額外效果：\n『熱能改裝』：槍械技能額外使敵人的效果抵抗降低(\d+%)，持續(\d+)回合；\n『卸甲改裝』：使用槍械技能時，若{{A}}擁有<link\="s\|114"><u>『準星』</u></link>，穿透提升(\d+%)；\n『擴散改裝』：使用槍械技能時，若{{A}}擁有<link\="s\|114"><u>『準星』</u></link>，暴擊率提升(\d+%)、暴擊效果提升(\d+%)。$"="When Noir has not less than $1 [Customization], evolve her Gun Attack to [Farewell Gift], additionally deals 1 hit of Gun Attack damage with all [Customization] effects at $2 original damag;\n[Customization] from {{B}} skills give additional effects:\n[Thermal Customization]: Gun Attack additionally decreases foes' Effect RES by $3 for $4 turns;\n[Piercing Customization]: Gun Attack gains $5 PEN when Noir has <link\="s|114"><u>[Sight]</u></link>;\n[Spreading Customization]: Gun Attack gains $6 CRIT Rate and $7 CRIT DMG when Noir has <link\="s|114"><u>[Sight]</u></link>."
+r:"^『改裝』數量不少於(\d+)個時，{{A}}發射的榴彈進化為『臨別贈禮』，額外造成1次可觸發所有『改裝』效果的槍械射擊效果，所有傷害均為原傷害的(\d+%)；\n{{B}}技能提供的『改裝』獲得額外效果：\n『熱能改裝』：槍械技能額外使敵人的效果抵抗降低(\d+%)，持續(\d+)回合；\n『卸甲改裝』：使用槍械技能時，若{{A}}擁有<link\="s\|114"><u>『準星』</u></link>，穿透提升(\d+%)；\n『擴散改裝』：使用槍械技能時，若{{A}}擁有<link\="s\|114"><u>『準星』</u></link>，暴擊率提升(\d+%)、暴擊效果提升(\d+%)。$"="When Noir has not less than $1 [Customization], evolve her Gun Attack to [Farewell Gift], additionally deals 1 hit of Gun Attack damage with all [Customization] effects at $2 original damage;\n[Customization] from {{B}} skills give additional effects:\n[Thermal Customization]: Gun Attack additionally decreases foes' Effect RES by $3 for $4 turns;\n[Piercing Customization]: Gun Attack gains $5 PEN when Noir has <link\="s|114"><u>[Sight]</u></link>;\n[Spreading Customization]: Gun Attack gains $6 CRIT Rate and $7 CRIT DMG when Noir has <link\="s|114"><u>[Sight]</u></link>."
 臨別贈禮=Farewell Gift
 
 ----------
@@ -2443,7 +2442,7 @@ r:"^潛能『盛放』提供的增益狀態。{{A}}使用『梅自香，時過�
 r:"^{{A}}的精力值上限提升至(\d+)點，精力回復提升(\d+%)。{{A}}使用{{B}}技能恢復自身精力值時，會受到精力回復屬性的影響。{{A}}使用『梅自香，時過香濃』會消耗自身全部精力值，並依據所消耗的精力值產生不同效果。$"="Increase your Max SP to $1 and increase SP Recovery by $2. SP Recovery will affect Persona skills SP restored amount. Consume all SP when using [Fragrance of Time], it gives different effects depending on the SP consumed."
 
 不待寒=Await Warmth
-r:"^『花滿枝，風過枝頭』的<link\="s\|218"><u>『凋落』</u></link>狀態的生效條件從“受到疾風屬性傷害”變為“受到任意屬性傷害”，並額外使目標受到暴擊效果提升(\d+%)。\n『傘邊搖，安居傘中』額外使支配怪盜攻擊力提升(\d+%)。$"="Change the condition for <link\="s|218"><u>[Wither]</u></link> from [Wind of Vitality] from "when taking Wind damage" to "when taking any Elemental damage", additionally increase the main target's CRIT DMG Taken by $1.\n[Under the Umbrella] additionally increase Dominate Thieves' ATK by $2."
+r:"^『花滿枝，風過枝頭』的<link\="s\|218"><u>『凋落』</u></link>狀態的生效條件從“受到疾風屬性傷害”變為“受到任意屬性傷害”，並額外使目標受到暴擊效果提升(\d+%)。\n『傘邊搖，安居傘中』額外使支配怪盜攻擊力提升(\d+%)。$"="Change the condition for <link\="s|218"><u>[Wither]</u></link> from [Wind of Vitality] from "when taking Wind damage" to "when taking any Elemental damage", additionally increase the main target's CRIT DMG Taken by $1.\n[Under the Umbrella] additionally increase Sweeper Thieves' ATK by $2."
 
 夜無眠=Sleepless Nights
 r:"^{{A}}的精力值上限額外提升(\d+)點（消耗精力值觸發『梅自香，時過香濃』的強度上限額外提升）。{{A}}使用『梅自香，時過香濃』後，立刻恢復(\d+)點精力值。\n潛能『盛放』效果提升：<link\="s\|221"><u>『花開』</u></link>達(\d+)層/(\d+)層時的暴擊效果提升值翻倍。$"="Increase Max SP by $1 (Additionally increase the cap of [Fragrance of Time]). Immediately restore $2 SP when using [Fragrance of Time].\nPotential [Bloom] Effect Boost: Double the CRIT DMG buff when reaching $3 stacks/$4 stacks of <link\="s|221"><u>[Blossom]</u></link>."
@@ -2620,7 +2619,7 @@ r:"^造成萬能傷害時，目標每有(\d+%)的百分比防禦降低效果，�
 混沌之箭=Arrow of Chaos
 
 行走於迷霧之中=Walking in Fog
-r:"^戰鬥開始時，使攻擊力最高的同伴成為『偵探夥伴』（優先支配或反抗怪盜），回合開始時可以重新選擇『偵探夥伴』（同時只能存在1名『偵探夥伴』，重新選擇後有1回合的冷卻時間）。自身獲得『偵探夥伴』(\d+%)的攻擊力，上限(\d+)/(\d+)/(\d+)（1/50/70級時升級）。『偵探夥伴』釋放群體{{B}}技能/HIGHLIGHT/{{C}}/追加效果造成傷害時，記錄其對敵方單位造成的平均傷害\（若為單體技能，則記錄其對主目標傷害的(\d+%)\）。{{A}}回合開始時，根據記錄的總傷害獲得1層『清晰之矢』並清空所記錄的傷害，『清晰之矢』持續(\d+)回合。$"="At the start of battle, gives the highest ATK ally [Detective Partner] (Prioritizing Dominate or Rebel Thief), you can reselect [Detective Partner] at the start of turn (There can only be 1 [Detective Partner], there is a 1 turn cooldown on reselection). Gains $1 of the [Detective Partner]'s ATK, up to $2/$3/$4 (Upgrades on level 1/50/70). When [Detective Partner] deal damage with an AoE {{B}} skill/HIGHLIGHT/{{C}}/Follow Up, records the average damage that dealt to the foes (Records $5 damage that dealt to the main target if it's a ST skill). At the start of your turn, gains 1 stack of [Arrow of Clarity] based on the total recorded damage and clears all recorded damage, [Arrow of Clarity] lasts for $6 turns."
+r:"^戰鬥開始時，使攻擊力最高的同伴成為『偵探夥伴』（優先支配或反抗怪盜），回合開始時可以重新選擇『偵探夥伴』（同時只能存在1名『偵探夥伴』，重新選擇後有1回合的冷卻時間）。自身獲得『偵探夥伴』(\d+%)的攻擊力，上限(\d+)/(\d+)/(\d+)（1/50/70級時升級）。『偵探夥伴』釋放群體{{B}}技能/HIGHLIGHT/{{C}}/追加效果造成傷害時，記錄其對敵方單位造成的平均傷害\（若為單體技能，則記錄其對主目標傷害的(\d+%)\）。{{A}}回合開始時，根據記錄的總傷害獲得1層『清晰之矢』並清空所記錄的傷害，『清晰之矢』持續(\d+)回合。$"="At the start of battle, gives the highest ATK ally [Detective Partner] (Prioritizing Sweeper or Assassin Thief), you can reselect [Detective Partner] at the start of turn (There can only be 1 [Detective Partner], there is a 1 turn cooldown on reselection). Gains $1 of the [Detective Partner]'s ATK, up to $2/$3/$4 (Upgrades on level 1/50/70). When [Detective Partner] deal damage with an AoE {{B}} skill/HIGHLIGHT/{{C}}/Follow Up, records the average damage that dealt to the foes (Records $5 damage that dealt to the main target if it's a ST skill). At the start of your turn, gains 1 stack of [Arrow of Clarity] based on the total recorded damage and clears all recorded damage, [Arrow of Clarity] lasts for $6 turns."
 
 嫌疑偵查=Suspect Investigation
 r:"^戰鬥開始時獲得『清晰』狀態，『清晰』狀態和『混沌』狀態的持續時間延長至(\d+)回合。『清晰』狀態和『混沌』狀態共存時，自身暴擊率提升(\d+%)，並使自身和『偵探夥伴』的傷害提升(\d+%)。$"="At the start of battle, gains [Clarity], extends the duration of [Clarity] and [Chaos] to $1 turns. When you have both [Clarity] and [Chaos], increase own CRIT Rate by $2 and increase own and [Detective Partner]'s DMG Bonus by $3."
@@ -2805,9 +2804,22 @@ Akihiko Sanada
 雷拳一閃=Electric Flash
 雷電圓球=Lightning Spike
 無敵鋼拳=Unstoppable Punch
-
 熱血=Hot-Blooded
 貫徹=Uphold
+
+r:"^自身獲得(\d+)層『鬥志』，對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，自身暴擊效果提高<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。\n<b><size\=28><color\=#C0C0C0>電弧從地面穿刺而出，焦土之上電流交織成殘酷的牢籠，將所有敵人困在其中並造成電擊傷害。</color></size></b>$"="Gains $1 stack of [Fighting Spirit], deals <color\=#FFFC40>$2</color> ATK Elec damage to all foes, increases own CRIT DMG by <color\=#FFFC40>$3</color> for $4 turns.\n<b><size\=28><color\=#C0C0C0>Arcs of electricity pierce upward from the scorched earth, weaving a cruel cage of lightning that traps all enemies and delivers shocking damage.</color></size></b>"
+
+r:"^自身獲得(\d+)層『鬥志』，對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，自身獲得(\d+)層『執念』。\n<b><size\=28><color\=#C0C0C0>兩道狂雷交錯逼近，在命中獵物的瞬間轟然對撞，使所有敵人在絞殺中戰慄，造成可怖的電擊傷害。</color></size></b>$"="Gains $1 stack of [Fighting Spirit], deals <color\=#FFFC40>$2</color> ATK Elec damage to all foes, gains $3 stacks of [Obsession].\n<b><size\=28><color\=#C0C0C0>Two raging thunderbolts converge mid-air, colliding with a deafening crash that sends terrifying surges through all foes, leaving them trembling in the storm's grip.</color></size></b>"
+
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，若自身存在(\d+)層及以上的『鬥志』則消耗所有『鬥志』，每消耗(\d+)層『鬥志』使該技能倍率提升<color\=#FFFC40>(\d+\.\d+%)</color>。\n<b><size\=28><color\=#C0C0C0>拳鋒之上雷光翻湧，帶著崩山之勢貫穿敵人之軀，無人能在這{{A}}式的力量下生還。</color></size></b>$"="Deals <color\=#FFFC40>$1</color> ATK Elec damage to all foes, if you have $2 or more stacks of [Fighting Spirit] then consumes all [Fighting Spirit], each stack of [Fighting Spirit] consumed increases skill multiplier by <color\=#FFFC40>$4</color>.\n<b><size\=28><color\=#C0C0C0>Fists surge with crackling thunder, striking with mountain-splitting force, no enemy survives this devastating blow.</color></size></b>"
+
+r:"^雷電圓球：釋放條件：(\d+)點{{A}}能量\n對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，該技能<link\="s\|220"><u>『必定暴擊』</u></link>，暴擊效果固定為(\d+%)。\n『ONE MORE』：對1名敵人造成電擊屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n援助技能：使1名同伴暴擊效果提升(\d+%)，持續(\d+)回合。$"="Lightning Spike: Use condition: $1 {{A}} Energy\nDeals <color\=#FFFC40>$2</color> ATK Elec damage to all foes, this skill will <link\="s|220"><u>[Always CRIT]</u></link>, fixed CRIT DMG at $3.\n[ONE MORE]: Deals Elec damage to 1 foe. \nMelee Attack: Uses a melee weapon to deal light Phys damage to 1 foe.\nAssist Skill: Increases 1 ally's CRIT DMG by $4 for $5 turn."
+
+r:"^自身對處於倒地狀態的敵人造成傷害時，造成傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Increase DMG Dealt by <color\=#FFFC40>$1</color> when dealing damage to Downed foes."
+r:"^自身對處於倒地狀態的敵人造成傷害時，造成傷害提升<color\=#0169ca>(\d+\.\d+%)</color>。$"="Increase DMG Dealt by <color\=#0169ca>$1</color> when dealing damage to Downed foes."
+
+r:"^自身造成暴擊後，攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合，上限(\d+)層。$"="After landing a CRITICAL, increase ATK by <color\=#FFFC40>$1</color> for $2 turns, up to $3 stacks."
+r:"^自身造成暴擊後，攻擊力提升<color\=#0169ca>(\d+\.\d+%)</color>，持續(\d+)回合，上限(\d+)層。$"="After landing a CRITICAL, increase ATK by <color\=#0169ca>$1</color> for $2 turns, up to $3 stacks."
 
 戰鬥的理由=Reason to Fight
 拳擊部主將=Boxing Club Captain
@@ -2816,4 +2828,4 @@ Akihiko Sanada
 鍛鍊的成果=Fruits of Training
 秘藏的心意=Buried Feelings
 力量的追求者=Power Seeker
-絕殺破壞拳=Fatal Punch
+絕殺破壞拳=Fatal Fist
