@@ -737,33 +737,33 @@ r:"^1、{{A}}初始擁有(\d+)點倒地值，每(\d+)回合會釋放「持劍護
 
 r:"^1、{{A}}初始擁有(\d+)點倒地值，每回合額外獲得(\d+)點倒地值。在{{A}}的倒地值達到(\d+)後，會變身為<color\=#ff3b37>{{B}}</color>，能力大幅強化。\n2、{{A}}每(\d+)回合會召喚四魂，四魂一回合後逃跑。每擊敗一個魂，會立刻使{{A}}減少(\d+)點倒地值，並使{{A}}火焰、冰凍、電擊、疾風屬性的其中一個適應性變為弱，持續(\d+)回合。\n3、{{A}}倒地值歸零或被擊敗時，戰鬥勝利。$"="<size\=25>1. {{A}} start with $1 Down Gauge and gain $2 Down Gauge every turn. When {{A}} have $3 Down Gauge, transform into <color\=#ff3b37>{{B}}</color>, heavily increase own abilities.\n2. {{A}} will summoning 4 Mitamas every $4 turns. The 4 Mitamas will escape after 1 turn. Immediately decrease {{A}}'s Down Gauge by $5 when defeating 1 Mitama, then inflict {{A}} with a Fire, Ice, Elec, or Wind weakness for $6 turns.\n3. Victory when {{A}} have 0 Down Gauge or when all foes are defeated.</size>"
 
-r:"^{{A}}每回合會隨機對怪盜施加一種調停之力，禁止其某些行為。\n「調停·生存」：禁止使用救援、防衛類技能\n「調停·攻擊」：禁止使用反抗、支配類技能\n「調停·輔助」：禁止使用優越、屈從類技能\n破壞了調停的怪盜，會獲得一層「死生之標記」，達到(\d+)層時會被即死；若所有怪盜均遵守了調停，那麼會獲得{{A}}給予的獎勵：傷害提高。$"="<size\=28>{{A}} randomly ban 1 action each turn.\n[Mediation·Survival]: Ban Rescue and Defend type skills\n[Mediation·Attack]: Ban Rebel and Dominate type skills\n[Mediation·Support]: Ban Superior and Submit type skills\nInflict 1 stack of [Mark of Life and Death] when a Thief broke Mediation, inflict insta-kill to that Thief when reaching $1 stacks; Increase all Thieves' DMG when they all followed Mediation.</size>"
+r:"^{{A}}每回合會隨機對怪盜施加一種調停之力，禁止其某些行為。\n「調停·生存」：禁止使用救援、防衛類技能\n「調停·攻擊」：禁止使用反抗、支配類技能\n「調停·輔助」：禁止使用優越、屈從類技能\n破壞了調停的怪盜，會獲得一層「死生之標記」，達到(\d+)層時會被即死；若所有怪盜均遵守了調停，那麼會獲得{{A}}給予的獎勵：傷害提高。$"="<size\=28>{{A}} randomly ban 1 action each turn.\n[Mediation·Survival]: Ban Medic and Guardian type skills\n[Mediation·Attack]: Ban Assassin and Sweeper type skills\n[Mediation·Support]: Ban Strategist and Saboteur type skills\nInflict 1 stack of [Mark of Life and Death] when a Thief broke Mediation, inflict insta-kill to that Thief when reaching $1 stacks; Increase all Thieves' DMG when they all followed Mediation.</size>"
 調停·生存=Mediation·Survival
 調停·攻擊=Mediation·Attack
 調停·輔助=Mediation·Support
 死生之標記=Mark of Life and Death
 調停之禮=Rite of Mediation
-禁止使用救援、防衛類技能=Ban Rescue and Defend type skills
-禁止使用反抗、支配類技能=Ban Rebel and Dominate type skills
-禁止使用優越、屈從類技能=Ban Superior and Submit type skills
+禁止使用救援、防衛類技能=Ban Medic and Guardian type skills
+禁止使用反抗、支配類技能=Ban Assassin and Sweeper type skills
+禁止使用優越、屈從類技能=Ban Strategist and Saboteur type skills
 破壞調停獲得的懲罰，到達兩層會被賦予即死=Inflict insta-kill when reaching 2 stacks
-r:"^<color\=#FF0000>{{A}}</color>被施加了調停·生存，禁止使用救援、防衛類技能……$"="<size\=28>Banned Rescue and Defend type skills...</size>"
-r:"^<color\=#FF0000>{{A}}</color>被施加了調停·攻擊，禁止使用反抗、支配類技能……$"="<size\=28>Banned Rebel and Dominate type skills...</size>"
-r:"^<color\=#FF0000>{{A}}</color>被施加了調停·輔助，禁止使用優越、屈從類技能……$"="<size\=28>Banned Superior and Submit type skills ...</size>"
-r:"^<color\=#FF0000>(.*)</color>被施加了調停·生存，禁止使用救援、防衛類技能……$"="<size\=28>Banned Rescue and Defend type skills...</size>"
-r:"^<color\=#FF0000>(.*)</color>被施加了調停·攻擊，禁止使用反抗、支配類技能……$"="<size\=28>Banned Rebel and Dominate type skills...</size>"
-r:"^<color\=#FF0000>(.*)</color>被施加了調停·輔助，禁止使用優越、屈從類技能……$"="<size\=28>Banned Superior and Submit type skills...</size>"
+r:"^<color\=#FF0000>{{A}}</color>被施加了調停·生存，禁止使用救援、防衛類技能……$"="<size\=26>Banned Medic and Guardian type skills...</size>"
+r:"^<color\=#FF0000>{{A}}</color>被施加了調停·攻擊，禁止使用反抗、支配類技能……$"="<size\=26>Banned Assassin and Sweeper type skills...</size>"
+r:"^<color\=#FF0000>{{A}}</color>被施加了調停·輔助，禁止使用優越、屈從類技能……$"="<size\=26>Banned Strategist and Saboteur type skills ...</size>"
+r:"^<color\=#FF0000>(.*)</color>被施加了調停·生存，禁止使用救援、防衛類技能……$"="<size\=26>Banned Medic and Guardian type skills...</size>"
+r:"^<color\=#FF0000>(.*)</color>被施加了調停·攻擊，禁止使用反抗、支配類技能……$"="<size\=26>Banned Assassin and Sweeper type skills...</size>"
+r:"^<color\=#FF0000>(.*)</color>被施加了調停·輔助，禁止使用優越、屈從類技能……$"="<size\=26>Banned Strategist and Saboteur type skills...</size>"
 r:"^<color\=#FF0000>{{A}}</color>獲得了調停之禮，造成傷害提高了……$"="<color\=#FF0000>{{A}}</color> DMG Dealt Up!"
 r:"^<color\=#FF0000>(.*)</color>獲得了調停之禮，造成傷害提高了……$"="<color\=#FF0000>$1</color> DMG Dealt Up!"
 r:"^<color\=#FF0000>{{A}}</color>破壞了調停，獲得了一個死生之標記……$"="<size\=24><color\=#FF0000>{{A}}</color> gained 1 Mark of Life and Death...</size>"
 r:"^<color\=#FF0000>(.*)</color>破壞了調停，獲得了一個死生之標記……$"="<size\=24><color\=#FF0000>$1</color> gained 1 Mark of Life and Death...</size>"
 很好，汝等遵守了吾之調停，吾將予以汝等賞賜！=Very well, thou hast obeyed my mediation. \nI will reward thee!
 
-r:"^戰鬥開始時，{{A}}會釋放「死生之界」，使所有怪盜的血量大幅減少，並施加「調停·生存」，持續(\d+)回合。\n再之後，為所有怪盜添加「調停·攻擊」、「調停·輔助」。隨後{{A}}每兩回合隨機對怪盜施加一種調停之力，禁止其某些行為。\n「調停·生存」：禁止使用救援、防衛類技能\n「調停·攻擊」：禁止使用反抗、支配類技能\n「調停·輔助」：禁止使用優越、屈從類技能\n破壞了調停的怪盜，會獲得一層「死生之標記」，達到(\d+)層時會被即死；若所有怪盜均遵守了調停，那麼會獲得{{A}}給予的獎勵：傷害提高。$"="<size\=24>At the start of battle. {{A}} will use [Life and Death Domain], heavily decrease all Thieves' HP and use [Mediation·Survival] for $1 turns.\nAfterward, use [Mediation·Attack] and [Mediation·Support]. Then {{A}} will randomly use 1 Mediation, banning certain actions.\n[Mediation·Survival]: Ban Rescue and Defend type skills\n[Mediation·Attack]: Ban Rebel and Dominate type skills\n[Mediation·Support]: Ban Superior and Submit type skills\nInflict 1 stack of [Mark of Life and Death] when a Thief broke Mediation, inflict insta-kill to that Thief when reaching $1 stacks; Increase all Thieves' DMG when they all followed Mediation.</size>"
+r:"^戰鬥開始時，{{A}}會釋放「死生之界」，使所有怪盜的血量大幅減少，並施加「調停·生存」，持續(\d+)回合。\n再之後，為所有怪盜添加「調停·攻擊」、「調停·輔助」。隨後{{A}}每兩回合隨機對怪盜施加一種調停之力，禁止其某些行為。\n「調停·生存」：禁止使用救援、防衛類技能\n「調停·攻擊」：禁止使用反抗、支配類技能\n「調停·輔助」：禁止使用優越、屈從類技能\n破壞了調停的怪盜，會獲得一層「死生之標記」，達到(\d+)層時會被即死；若所有怪盜均遵守了調停，那麼會獲得{{A}}給予的獎勵：傷害提高。$"="<size\=24>At the start of battle. {{A}} will use [Life and Death Domain], heavily decrease all Thieves' HP and use [Mediation·Survival] for $1 turns.\nAfterward, use [Mediation·Attack] and [Mediation·Support]. Then {{A}} will randomly use 1 Mediation, banning certain actions.\n[Mediation·Survival]: Ban Medic and Guardian type skills\n[Mediation·Attack]: Ban Assassin and Sweeper type skills\n[Mediation·Support]: Ban Strategist and Saboteur type skills\nInflict 1 stack of [Mark of Life and Death] when a Thief broke Mediation, inflict insta-kill to that Thief when reaching $1 stacks; Increase all Thieves' DMG when they all followed Mediation.</size>"
 死生之界=Life and Death Domain
 膽敢多次破壞吾之調停，吾將予以汝等懲罰！=I will punish thou for repeatedly disrupting my mediation!
 
-r:"^每(\d+)回合，{{A}}會釋放「連結·死」，使隨機一名怪盜陷入死亡狀態，並對剩餘怪盜施加隨機一種調停之力，禁止其某些行為。\n「調停·生存」：禁止使用救援、防衛類技能\n「調停·攻擊」：禁止使用反抗、支配類技能\n「調停·輔助」：禁止使用優越、屈從類技能\n若所有怪盜均遵守了調停，那麼會獲得{{A}}給予的獎勵：將陷入死亡狀態的怪盜複生。$"="<size\=24>{{A}} will use [Link·Death] every $1 turns, randomly defeat 1 Thief, then randomly use 1 Mediation, banning certain actions.\n[Mediation·Survival]: Ban Rescue and Defend type skills\n[Mediation·Attack]: Ban Rebel and Dominate type skills\n[Mediation·Support]: Ban Superior and Submit type skills\nRevive the defeated Thief when all Thieves followed Mediation.</size>"
+r:"^每(\d+)回合，{{A}}會釋放「連結·死」，使隨機一名怪盜陷入死亡狀態，並對剩餘怪盜施加隨機一種調停之力，禁止其某些行為。\n「調停·生存」：禁止使用救援、防衛類技能\n「調停·攻擊」：禁止使用反抗、支配類技能\n「調停·輔助」：禁止使用優越、屈從類技能\n若所有怪盜均遵守了調停，那麼會獲得{{A}}給予的獎勵：將陷入死亡狀態的怪盜複生。$"="<size\=24>{{A}} will use [Link·Death] every $1 turns, randomly defeat 1 Thief, then randomly use 1 Mediation, banning certain actions.\n[Mediation·Survival]: Ban Medic and Guardian type skills\n[Mediation·Attack]: Ban Assassin and Sweeper type skills\n[Mediation·Support]: Ban Strategist and Saboteur type skills\nRevive the defeated Thief when all Thieves followed Mediation.</size>"
 連結·死=Link·Death
 連結·生=Link·Life
 很好，汝等遵守了吾之調停，吾將予以汝等複生！=Very well, thou hast obeyed my mediation. \nI will give thee life!
@@ -1804,7 +1804,7 @@ sr:"^<color\=#FF0000>(.*)</color>被背德的貴婦注視著$"="<color\=#FF0000>
 ----------
 Sea of Souls Trials (SoS)
 ----------
-心之海試煉=SoS Trials
+心之海試煉=SoS
 段位狀態：=Status:
 <color\=#FFFFFF>下期保級</color>=Relegation
 <color\=#FFF000>下期晉級</color>=<color\=#FFF000>Promotion!</color>
@@ -1818,9 +1818,9 @@ r:"^<color\=#8B8A8A>\(當前60%以後\)</color>$"="<color\=#8B8A8A>(Currently ab
 r:"^總積分達到<color\=#FFF000> (\d+) </color>$"="Reach <color\=#FFF000> $1 </color> Total Score"
 r:"^分數：暫無記錄$"="Score: No Record"
 暫無記錄=No Record
-r:"^分數：$"="Score:"
-r:"^上半場$"="<size\=27>Side A</size>"
-r:"^下半場$"=" <size\=27>Side B</size>"
+分數：=Score:
+上半場=<size\=27>Side A</size>
+下半場= <size\=27>Side B</size>
 r:"^僅展示當前段位前(\d+)名怪盜資訊$"="Only the info of the top $1 Phantom Thieves will be shown"
 8等星=8th Star
 7等星=7th Star
