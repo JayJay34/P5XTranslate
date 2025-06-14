@@ -327,7 +327,7 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成8次(\d+\.\d+%)攻擊力的物�
 
 --- Gun ---
 
-// Snap
+Snap
 
 //One-Shot Kill
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的射擊屬性傷害，暴擊率提升(\d+%)。$"="Deals $1 ATK Gun damage to <color\=#FFFF00>1</color> foe with a $2 increase in CRIT Rate."
@@ -448,14 +448,17 @@ r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬�
 --- Curse ---
 r:"^詛咒屬性$"="Curse"
 
-// Single Target Basic Curses (2 types exist to consider either flat rate of curse stacks, or chance between 2 values)
+Single Target Basic Curses (2 types exist to consider either flat rate of curse stacks, or chance between 2 values)
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得(\d+\~\d+)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>1</color> foe and inflicts $2 stack(s) of <link\=s|112><u>Curse</u></link>.
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得(.*)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>1</color> foe and inflicts $2 stack(s) of Curse.
 
-// AoE Basic Curses
+AoE Basic Curses
 r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，有機率使敵人獲得(\d+\~\d+)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals $1 ATK Curse damage to <color\=#FFFF00>all</color> foes and inflicts $2 stack(s) of <link\=s|112><u>Curse</u></link>.
 r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得(.*)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deals $1 ATK Curse damage to <color\=#FFFF00>all</color> foes and inflicts $2 stack(s) of <link\=s|112><u>Curse</u></link>.
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，賦予敵人(.*)個詛咒效果$"="Deals $1 ATK Curse damage to <color\=#FFFF00>all</color> foes and inflicts $2 stack(s) of Curse."
+
+Maeiga
+r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，中機率賦予敵人(\d+)個詛咒效果"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> foes and inflicts $2 stack(s) of <link\=s|112><u>Curse</u></link>.
 
 Afterlife Judgement
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，根據自身身上的祝福層數以及目標身上的詛咒層數增傷，每層(\d+%),上限(\d+)層。$"="Deals $1 ATK Curse damage to <color\=#FFFF00>1</color> foe. When using this skill, each stack of Bless on you or each stack of Curse on the target increases DMG Dealt by $2, up to $3 stacks."
@@ -463,24 +466,19 @@ r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬�
 //Brand of Malice
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，並使其獲得(\d+)(.*)(\d+)個詛咒效果。$"="Deals $1 ATK Curse damage to <color\=#FFFF00>all</color> foes and inflicts $2~$4 stack(s) of Curse."
 
-// Maeiga because it's worded very slightly differently for some reason???
-r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，中機率賦予敵人(\d+)個詛咒效果"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> foes and inflicts $2 stack(s) of <link\=s|112><u>Curse</u></link>.
-
-r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，有機率使敵人獲得(\d+)個<link\="s\|112"><u>詛咒</u></link>效果。"=
-
 Fortune Devourer
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，並使所有敵人防禦力降低(\d+\.\d+%)、受到的持續傷害提升(\d+\.\d+%)，持續(\d+)回合$"="Deals $1 ATK Curse damage to <color\=#FFFF00>all</color> foes, decreases all foes' DEF by $2 and increases all foes Damage Over Time Taken by $3 for $4 turns."
 
-// Single Target Basic Insta-kills
+Single Target Basic Insta-kills
 r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，對低生命敵人機率造成即死效果"=<size\=24>Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>1</color> foe with a chance of insta-kill to foes under 50% HP. The lower the HP, the higher the chance.</size>
 
-// AoE Curse Instakill
+AoE Curse Instakill
 r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，對低生命敵人機率造成即死效果"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> foes with a chance of insta-kill to foes under 50% HP. The lower the HP, the higher the chance.
 
-//???
+Belial
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得1層『地獄火』，並使其身上的所有『地獄火』立刻結算一次，該次結算傷害提升200%。"=
 
-//"Die For Me!"
+Die For Me!
 r:"^使<color\=#FFFF00>所有</color>敵人受到的詛咒屬性傷害提升(\d+\.\d+%)\+每(\d+%)效果命中額外提升(\d+\.\d+%)，上限(\d+%)。對生命值低於(\d+%)的敵人高機率附加即死效果。$"="Increases <color\=#FFFF00>all</color> foes' Curse DMG Taken by $1 + $3 for every $2 EHR you have, up to $4. There is a high chance of insta-kill to foes under $5 HP."
 
 --- Almighty ---
@@ -488,7 +486,7 @@ r:"^使<color\=#FFFF00>所有</color>敵人受到的詛咒屬性傷害提升(\d+
 //ST Almighty
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的萬能屬性傷害，無視其防禦力$"="Deals $1 ATK Almighty damage to <color\=#FFFF00>1</color> foe, ignoring DEF."
 
-// AoE Almighty
+AoE Almighty
 r:"^對<color\=#FFFF00>敵人</color>敵人造成(\d+\.\d+%)攻擊力的萬能屬性傷害，無視其防禦力$"="Deals $1 ATK Almighty damage to <color\=#FFFF00>all</color> foe, ignoring DEF."
 
 //Spirit Drain
@@ -502,20 +500,20 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的萬能�
 
 --- Recovery ---
 
-// ST Heal
+ST Heal
 r:"^使<color\=#FFFF00>1名</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值。$"="Restores $1 ATK + $2 HP to <color\=#fffc40>1</color> ally."
 使1名同伴恢復一定生命值。=Restores a certain amount of HP to 1 ally.
 
-// AoE Heal
+AoE Heal
 r:"^使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值。$"="Restores $1 ATK + $2 HP to <color\=#fffc40>all</color> allies."
 
-// Lotus
+Lotus
 r:"使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，並使自身獲得2層『蓮華』，『蓮華』存在期間，任意單位行動後，若有同伴生命值低於50%，則消耗一層『蓮華』，使其恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，『蓮華』持續1回合。"=<size\=30>Restore <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to 1 ally and gain 2 stacks of [Sacred Lotus] for 1 turn. If an ally is below 50% Max HP after their turn while [Sacred Lotus] is present, consume one stack and retores <color\=#fffc40>$3</color> ATK + <color\=#fffc40>$4</color> HP to them</size>.
 
 Titania
 r:"^使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值，對生命值低於(\d+%)的同伴造成的治療效果提升(\d+%)。並恢復所有同伴(\d+)點精力值。$"="Restores $1 ATK + $2 HP to <color\=#FFFF00>all</color> allies, increases Healing Effect by $4 to allies under $3 HP. Restore $5 SP to all allies."
 
-// Patra
+Patra
 r:"^驅散1名同伴的<link\="s\|107"><u>暈眩</u></link>、<link\="s\|109"><u>睡眠</u></link>、<link\="s\|108"><u>遺忘</u></link>效果。$"=Cures <link\=s|107><u>Dizzy</u></link>/<link\=s|109><u>Sleep</u></link>/<link\=s|108><u>Forget</u></link> for 1 ally.
 
 //Energy Drop
@@ -541,22 +539,22 @@ r:"^使<color\=#FFFF00>1名</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生
 
 --- Buffs ---
 
-// Tarukaja
+Tarukaja
 r:"^使<color\=#FFFF00>1名</color>同伴的攻擊力提升(\d+\.\d+%)，自身每(\d+)點攻擊力額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續(\d+)回合。$"="Increases <color\=#FFFF00>1</color> ally's ATK by $1 + $3 for every $2 ATK you have, up to $4 for $5 turns."
 
-// Matarukaja
+Matarukaja
 r:"^使<color\=#FFFF00>所有</color>同伴的攻擊力提升(\d+\.\d+%)，自身每(\d+)點攻擊力額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續(\d+)回合。$"="Increases <color\=#FFFF00>all</color> allies' ATK by $1 + $3 for every $2 ATK you have, up to $4 for $5 turns."
 
 //Rakukaja
 r:"^使<color\=#FFFF00>1名</color>同伴的防禦力提升(\d+\.\d+%)，自身每(\d+)點防禦力額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續(\d+)回合。$"="Increase <color\=#FFFF00>1</color> ally's DEF by $1 + $3 for every $2 DEF you have, up to $4 for $5 turns."
 
-// Marakukaja
+Marakukaja
 r:"^使<color\=#FFFF00>所有</color>同伴的防禦力提升(\d+\.\d+%)，自身每(\d+)點防禦力額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續(\d+)回合。$"="Increase <color\=#FFFF00>all</color> allies' DEF by $1 + $3 for every $2 DEF you have, up to $4 for $5 turns."
 
-// Sukukaja
+Sukukaja
 r:"^使<color\=#FFFF00>1名</color>同伴的效果命中、效果抵抗提升(\d+\.\d+%)，自身每(\d+%)效果命中額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續(\d+)回合。$"="Increases <color\=#FFFF00>1</color> ally's EHR and Effect RES by $1 + $3 for every $2 EHR you have, up to $4 for $5 turns."
 
-// Masukukaja
+Masukukaja
 r:"^使<color\=#FFFF00>所有</color>同伴的效果命中、效果抵抗提升(\d+\.\d+%)，自身每(\d+%)效果命中額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續(\d+)回合。$"="Increases <color\=#FFFF00>all</color> allies' EHR and Effect RES by $1 + $3 for every $2 EHR you have, up to $4 for $5 turns."
 
 Heat Riser
@@ -568,7 +566,7 @@ r:"^使<color\=#FFFF00>1名</color>同伴的暴擊率提升(\d+\.\d+%)，自身�
 //Revolution
 r:"^使<color\=#FFFF00>所有</color>同伴的暴擊率提升(\d+\.\d+%)，自身每(\d+%)暴擊率額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續3回合。$"="Increases <color\=#FFFF00>all</color> allies' CRIT Rate by $1 + $3 for every $2 CRIT Rate you have, up to $4 for 3 turns."
 
-// Hunter's Code
+Hunter's Code
 r:"^使<color\=#FFFF00>1名</color>同伴造成的傷害提升(\d+\.\d+%)，並根據目標同伴的效果命中額外提升效果。每(\d+%)提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續(\d+)回合。$"="Increase <color\=#FFFF00>1 ally's</color> DMG Dealt by $1 + $3 for every $2 EHR the target has, up to $4 for $5 turns."
 
 Change
@@ -608,20 +606,20 @@ r:"^使血量最低的同伴適應性變為吸，持續(\d+)回合。$"="Changes
 
 --- Debuffs ---
 
-//Rakunda
+Rakunda
 r:"使<color\=#FFFF00>1名</color>敵人的防禦力降低(\d+\.\d+%)，持續3回合。"=Decreases <color\=#FFFF00>1</color> foe's DEF by $1 for 3 turns.
 
-// Marakunda
+Marakunda
 馬哈拉昆達=Marakunda
 r:"使<color\=#FFFF00>所有</color>敵人的防禦力降低(\d+\.\d+%)，持續3回合。"=Decreases <color\=#FFFF00>all</color> foes' DEF by $1 for 3 turns.
 
-//Tarunda
+Tarunda
 r:"使<color\=#FFFF00>1名</color>敵人的攻擊力降低(\d+\.\d+%)，持續3回合。"=Decreases <color\=#FFFF00>1</color> foe's ATK by $1 for 3 turns.
 
-// Matarunda
+Matarunda
 r:"使<color\=#FFFF00>所有</color>敵人的攻擊力降低(\d+\.\d+%)，持續3回合。"=Decreases <color\=#FFFF00>all</color> foes ATK by $1 for 3 turns.
 
-// Debilitate
+Debilitate
 r:"使<color\=#FFFF00>1名</color>敵方攻擊、防禦、效果命中、效果抵抗降低(\d+\.\d+%)，效果持續3回合。"=Decreases <color\=#FFFF00>1</color> foe's ATK, DEF, EHR, and Effect RES by $1 for 3 turns.
 
 Fire Break
@@ -708,7 +706,7 @@ sr:"^<color\=#FF0000>(.*)</color>的防禦力提升了……$"="<color\=#FF0000>
 sr:"^<color\=#FF0000>(.*)</color>防禦永久提升了……$"="<color\=#FF0000>$1</color> permanent DEF Up!"
 sr:"^<color\=#FF0000>(.*)</color>防禦降低了……$"="<color\=#FF0000>$1</color> DEF Down!"
 
-sr:"^<color\=#FF0000>(.*)</color>效果命中、效果抵抗提升了……$"="<color\=#FF0000>$1</color> EHR/ Effect RES Up!"
+sr:"^<color\=#FF0000>(.*)</color>效果命中、效果抵抗提升了……$"="<color\=#FF0000>$1</color> EHR/Effect RES Up!"
 sr:"^<color\=#FF0000>(.*)</color>造成傷害提升……$"="<color\=#FF0000>$1</color> DMG Dealt Up!"
 sr:"^<color\=#FF0000>(.*)</color>造成傷害提升了……$"="<color\=#FF0000>$1</color> DMG Dealt Up!"
 sr:"^<color\=#FF0000>(.*)</color>造成的傷害提升了……$"="<color\=#FF0000>$1</color> DMG Dealt Up!"
@@ -750,25 +748,26 @@ sr:"^<color\=#FF0000>(.*)</color>陷入了「(.*)」，受到的傷害提升…�
 sr:"^<color\=#FF0000>(.*)</color>退出了蓄力狀態……$"="<color\=#FF0000>$1</color> exited Charge..."
 sr:"^<color\=#FF0000>(.*)</color>解除「(.*)」狀態……$"="<color\=#FF0000>$1</color> removed [$2]..."
 
-sr:"^<color\=#FF0000>(.*)</color>進入了暈眩狀態……$"="Inflicted with Dizzy..."
-sr:"^<color\=#FF0000>(.*)</color>進入了遺忘狀態……$"="Inflicted with Forget..."
-sr:"^<color\=#FF0000>(.*)</color>進入了睡眠狀態……$"="Inflicted with Sleep..."
-sr:"^<color\=#FF0000>(.*)</color>進入了狂怒狀態……$"="Inflicted with Rage..."
-sr:"^<color\=#FF0000>(.*)</color>進入了絕望狀態……$"="Inflicted with Despair..."
-sr:"^<color\=#FF0000>(.*)</color>進入了恐懼狀態……$"="Inflicted with Fear..."
-sr:"^<color\=#FF0000>(.*)</color>進入了混亂狀態……$"="Inflicted with Confuse..."
-sr:"^<color\=#FF0000>(.*)</color>進入了洗腦狀態……$"="Inflicted with Brainwash..."
+sr:"^<color\=#FF0000>(.*)</color>進入了暈眩狀態……$"="<color\=#FF0000>$1</color> inflicted with Dizzy..."
+sr:"^<color\=#FF0000>(.*)</color>進入了遺忘狀態……$"="<color\=#FF0000>$1</color> inflicted with Forget..."
+sr:"^<color\=#FF0000>(.*)</color>進入了睡眠狀態……$"="<color\=#FF0000>$1</color> inflicted with Sleep..."
+sr:"^<color\=#FF0000>(.*)</color>進入了狂怒狀態……$"="<color\=#FF0000>$1</color> inflicted with Rage..."
+sr:"^<color\=#FF0000>(.*)</color>進入了絕望狀態……$"="<color\=#FF0000>$1</color> inflicted with Despair..."
+sr:"^<color\=#FF0000>(.*)</color>進入了恐懼狀態……$"="<color\=#FF0000>$1</color> inflicted with Fear..."
+sr:"^<color\=#FF0000>(.*)</color>進入了混亂狀態……$"="<color\=#FF0000>$1</color> inflicted with Confuse..."
+sr:"^<color\=#FF0000>(.*)</color>進入了洗腦狀態……$"="<color\=#FF0000>$1</color> inflicted with Brainwash..."
 
-sr:"^<color\=#FF0000>(.*)</color>陷入暈眩……$"="Inflicted with Dizzy..."
-sr:"^<color\=#FF0000>(.*)</color>陷入遺忘……$"="Inflicted with Forget..."
-sr:"^<color\=#FF0000>(.*)</color>陷入睡眠……$"="Inflicted with Sleep..."
-sr:"^<color\=#FF0000>(.*)</color>陷入狂怒……$"="Inflicted with Rage..."
-sr:"^<color\=#FF0000>(.*)</color>陷入絕望……$"="Inflicted with Despair..."
-sr:"^<color\=#FF0000>(.*)</color>陷入恐懼……$"="Inflicted with Fear..."
-sr:"^<color\=#FF0000>(.*)</color>陷入混亂……$"="Inflicted with Confuse..."
-sr:"^<color\=#FF0000>(.*)</color>陷入洗腦……$"="Inflicted with Brainwash..."
+sr:"^<color\=#FF0000>(.*)</color>陷入暈眩……$"="<color\=#FF0000>$1</color> inflicted with Dizzy..."
+sr:"^<color\=#FF0000>(.*)</color>陷入遺忘……$"="<color\=#FF0000>$1</color> inflicted with Forget..."
+sr:"^<color\=#FF0000>(.*)</color>陷入睡眠……$"="<color\=#FF0000>$1</color> inflicted with Sleep..."
+sr:"^<color\=#FF0000>(.*)</color>陷入狂怒……$"="<color\=#FF0000>$1</color> inflicted with Rage..."
+sr:"^<color\=#FF0000>(.*)</color>陷入絕望……$"="<color\=#FF0000>$1</color> inflicted with Despair..."
+sr:"^<color\=#FF0000>(.*)</color>陷入恐懼……$"="<color\=#FF0000>$1</color> inflicted with Fear..."
+sr:"^<color\=#FF0000>(.*)</color>陷入混亂……$"="<color\=#FF0000>$1</color> inflicted with Confuse..."
+sr:"^<color\=#FF0000>(.*)</color>陷入洗腦……$"="<color\=#FF0000>$1</color> inflicted with Brainwash..."
 
-sr:"^<color\=#FF0000>(.*)</color>進入了冰封狀態……$"="Inflicted with Ice Seal..."
+sr:"^<color\=#FF0000>(.*)</color>進入了冰封狀態……$"="<color\=#FF0000>$1</color> inflicted with Ice Seal..."
+sr:"^<color\=#FF0000>(.*)</color>陷入了「(.*)」狀態……$"="<color\=#FF0000>$1</color> infliced with [$2]..."
 
 sr:"^<color\=#FF0000>(.*)</color>從暈眩異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Dizzy!"
 sr:"^<color\=#FF0000>(.*)</color>從遺忘異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Forget!"
@@ -898,8 +897,8 @@ r:"^詛<color\=#000000>咒</color>特化$"="C<color\=#000000>u</color>rse DMG Up
 r:"^萬<color\=#000000>能</color>特化$"="A<color\=#000000>l</color>mighty DMG Up"
 
 r:"^生<color\=#000000>命</color>連結$"="L<color\=#000000>i</color>felink"
-r:"^反<color\=#000000>抗</color>特化$"="R<color\=#000000>e</color>bel Buff"
-r:"^支<color\=#000000>配</color>特化$"="D<color\=#000000>o</color>minate Buff"
+r:"^反<color\=#000000>抗</color>特化$"="A<color\=#000000>s</color>sassin Buff"
+r:"^支<color\=#000000>配</color>特化$"="S<color\=#000000>w</color>eeper Buff"
 r:"^H<color\=#000000>L</color>特化$"="H<color\=#000000>L</color> Buff"
 r:"^H<color\=#000000> L</color>特化$"="H<color\=#000000>L</color> Buff"
 
@@ -978,7 +977,8 @@ Inspect Details - TITLES
 防禦弱化=Defense Nerf
 速度提升=Increase SPD
 傷害增加=Increase Damage
-傷害提升=Increase Damage
+傷害提升=Increase DMG Bonus
+^From Throne
 傷害弱化=Damage Nerf
 暴擊提升=Increase CRIT Rate
 暴擊率提升=Increase CRIT Rate
@@ -1162,6 +1162,7 @@ r:"^下一技能傷害提升(\d+(.\d+)?(%)?)$"="Increase your next Skill DMG by 
 r:"^下1個技能造成的傷害提升$"="Increase the DMG Dealt of your next skill"
 r:"^下次造成的物理傷害提升$"="Increase your next Physical attack damage"
 r:"^下次造成的魔法傷害提升$"="Increase your next Magic attack damage"
+r:"^普通攻擊、槍械攻擊傷害提升(\d+(.\d+)?(%)?)$"="<size\=26>Increase Melee Attack/Gun Attack DMG by $1</size>"
 r:"^追加效果暴擊效果提升(\d+%)、攻擊力提升(\d+%)$"="Increase Follow Up CRIT DMG by $1 and Follow Up ATK by $2"
 r:"^追加效果的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up Final DMG by $1"
 r:"^追加效果造成最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up Final DMG by $1"
