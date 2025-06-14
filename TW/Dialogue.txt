@@ -179,6 +179,7 @@ General Short Phrases
 {{A}}～～！？={{A}}～～!?
 {{A}}～？={{A}}～?
 {{A}}～！={{A}}～!
+{{A}}……?={{A}}...?
 {{A}}……？={{A}}...?
 {{A}}……！？={{A}}...!?
 ……{{A}}=...{{A}}
@@ -571,6 +572,7 @@ Ambush combat start
 超～完美開局！=Super～ perfect start!
 Elite combat start
 哇靠！好厲害的敵人！這下要死翹翹了！大夥快做好準備～！=Whoa damn! The enemy's no joke! We're so screwed! Everybody, get ready～!
+哇靠！好厲害的敵人{{A}}！這下要死翹翹了！大夥快做好準備～！=Whoa damn! The enemy's no joke! We're so screwed! Everybody, get ready～!
 Skill ready
 演出時間到囉！=Showtime!
 準備就緒，隨時可以登臺！=I'm ready!
@@ -578,6 +580,11 @@ Skill ready
 Full HL
 HIGHLIGHT的好時機～！打飛它們～！=Highlight chance～! Send 'em flying～!
 準備完畢！\n讓你們見識我酷炫的招數！=Preparations perfect! \nTime to show off my cool side!
+CRIT
+打中要害囉！=Right on target!
+AOA
+全～員～出擊！=Everyone～ Now!
+來吧，要嗨起來嘍！=Come on, let's get excited!
 Escape
 撤退～！快撤退——！=Withdraw～! Withdraw-!
 
@@ -745,6 +752,7 @@ Faint
 WONDER！？回答我WONDER！=Wonder!? Say something, Wonder!
 你還好嗎！？振作一點！=Are you okay!? Wake up!
 {{A}}……誰來掩護一下！=Someone cover them!
+有隊友倒下了！？\n等等，這可不太妙！=They're down!?\nWait, this is bad!
 Revive
 啊，站起來了！太好了～！=Ah, you're back!\nGreat～!
 同伴回歸，下次可不要勉強！=Ally revived, don't push yourself!
@@ -793,6 +801,7 @@ Ally Downed
 被擊倒了！還好嗎？=Downed! Are you okay?
 有人倒下了，誰來支援呀！=They're downed, we need backup!
 Recovered from Down
+WONDER，重返戰場！\n是時候反擊了！=Wonder, you're back! \nTime for the counterattack!
 好，現在開始反擊！=Ok, time for the counterattack!
 Evade
 哦哦，回避得漂亮！=Oooh, nice evasion!
@@ -3599,7 +3608,7 @@ Choice 2
 那個，關於剛才的事……=About what we discussed earlier...
 責任編輯同意了。\n不過，只允許1個人同行……=The editor gave permission. But only one person can come along...
 1個人？=One person?
-是的，他說一下子出現5個無關人員的話，\n會給採訪造成不便……=Yes, he said five unexpected visitors would disrupt the interview...
+是的，他說一下子出現4個無關人員的話，\n會給採訪造成不便……=Yes, he said four unexpected visitors would disrupt the interview...
 大家覺得怎麼樣呢？=What do you all think?
 1個人也行=One is fine
 怎麼辦……=What to do...
@@ -3629,7 +3638,7 @@ Choice 2
 我們應付不來啦！\n拜託你了，隊長！=We'd be terrible at this! Please, leader!
 Choice 3
 不愧是你！\n之後再告訴我們情況哦。=As expected from you! Please give us all the details afterward.
-r:"^那就決定了……\n(.*)跟我一起去。$"="Then it's decided...\n$1-senpai will come with me."
+r:"^那就決定了……\n(.*){{A}}跟我一起去。$"="Then it's decided...\n$1-senpai will come with me."
 對了，明天請穿「常服」來。\n理由的話……到時候就知道了。=Oh, and wear "casual clothes" tomorrow. You'll... understand why when the time comes.
 稍後我會發你集合時間什麼的。\n明天還{{A}}。=I'll message you the meeting time and details. Looking forward to working with you tomorrow.
 
@@ -5876,7 +5885,7 @@ P3R Collab
 歡迎蒞臨此地……\n謹此向您致以謝意。=Welcome to this place... I sincerely appreciate your presence.
 這裡就是……？=Is this really...?
 怎麼進來的……？=<size\=27>How did you get in here...?</size>
-r:"^這裡是基於(.*)……\n您的「認知」所誕生的世界……$"="This is the world born from $1... \nyour "cognition"..."
+sr:"^這裡是基於(.*)……\n您的「認知」所誕生的世界……$"="This is the world born from $1... \nyour "cognition"..."
 關於詳細情況，請恕我保密。\n這是「企業機密」。=Regarding the details, I must keep them confidential. This is "trade secret".
 這裡既不是您曾造訪過的「{{A}}」，\n也不是現實中的「{{A}}」。=This is neither the "{{A}}" you have visited nor the "{{A}}" in reality.
 這是基於您的認知所誕生的「{{A}}」。=This is a "{{A}}" born based on your cognition.
@@ -5961,7 +5970,7 @@ Choice 2
 ……你好～？=...Hello～?
 我被無視了？=Am I being ignored?
 看起來不像=Doesn't look like it
-有點奇怪啊=It's a bit weird
+有點奇怪啊=It's a bit strange
 嗯……感覺不是「無視了{{A}}」，\n而是「沒有注意到{{A}}」。=Yes... I feel that it is not "ignoring {{A}}", but "not noticing {{A}}".
 講個不停的客人=Talkative Customer
 他們剛才在說什麼？=<size\=25>What are they talking about?</size>
@@ -5977,7 +5986,7 @@ Choice 2
 嗯……不過，我也沒抱太大希望啦。\n我們再去對面看看吧。=Hmm... Well, I wasn't expecting much anyway. Let's check the other side.
 不行呢……\n從店鋪後門之類的地方也出不去。=Nothing's working... We can't even get out through the back door or anything.
 啊，到底怎麼回事嘛。=Ah, what's happening.
-……不過畢竟是從奇怪的門進來的，\n發生什麼奇怪的事也不奇怪。=...Well, we did come through a weird door, so it's no surprise things got weird.
+……不過畢竟是從奇怪的門進來的，\n發生什麼奇怪的事也不奇怪。=...Well, we did come through a strange door, so it's no surprise things got strange.
 那……倒也是。=That... is true.
 {{B}}和{{A}}一向謎團重重。={{B}} and {{A}} have always been mysterious.
 那接下來怎麼辦？=So what's next?
@@ -6034,7 +6043,7 @@ sr:"^……難道(.*)覺得，\n這裡不是「真實」的？$"="...Could it be
 我們是從{{A}}進來的……\n難道這裡也是{{A}}的某一層？=We came from {{A}}... Could it be that this is also a certain floor in {{A}}?
 啊。但是，剛才那個抓娃娃機是能運行的。=Ah. But, that crane game earlier worked.
 {{B}}只在{{A}}出現。如果這裡是\n{{B}}的一部分，那就應該是{{A}}……={{B}} only appears in the {{A}}. If this is part of {{B}}, then it should be the {{A}}...
-但機器能運作，人也沒有象徵化，\n真是奇怪。=But it is weird that machines can operate and people are not transmogrified.
+但機器能運作，人也沒有象徵化，\n真是奇怪。=But it is strange that machines can operate and people are not transmogrified.
 啊，但如果這裡就是{{A}}內的裝置，\n人也都是失蹤者，就不奇怪了吧？=Ah, but it wouldn't be strange if this is a device inside {{A}} and all these people are missing persons, right?
 至於為什麼是「{{A}}的樣子」，\n就不清楚了……=As for why this "looks like {{A}}", I'm not sure...
 嗯……\n而且根本找不到出口，真頭疼啊。=Um...\nAnd we can't find the exit, what a headache.
@@ -6161,6 +6170,334 @@ sr:"^(.*)要不先找到(.*)，\n和她聊聊看？$"="$1, let's find $2 and try
 這聲音  是{{A}}嗎=That voice... Is that you, {{A}}?
 隊長也在=Leader's here too.
 抱歉  這麼晚才會合=Sorry it took so long to regroup.
+
+Waxing Cresent 5
+{{A}}、{{B}}，還有……嗯？\n那邊那位是誰？={{A}}, {{B}}, and... huh? \nWho's that over there?
+啊，他也是{{A}}使用者……！\n好像不小心闖進了{{B}}。=Ah, he's also a {{A}} user...! Seems like he accidentally wandered into {{B}}.
+他說和我們一樣，也跟同伴走散了，\n所以我們正一起找呢。=He said he got separated from his teammates, just like us, so we're searching together now.
+原來是這樣。=I see.
+初次見面……=Nice to meet you...
+sr:"^是(.*)啊。\n(.*)。$"="So you're $1.\n$2."
+啊，自我介紹晚了，不好意思。=Ah, sorry for the late introduction.
+我叫{{A}}。\n和他們在同一所學校上學。=My name is {{A}}. \nI go to the same school as them.
+{{A}}是三年級，是我們的{{B}}。\n我們覺醒之前，他就已經在和陰影作戰了。={{A}} is a third-year, our {{B}}. He was fighting Shadows even before we awakened our Personas.
+嗯。是一位很可靠的{{A}}……=Yes. He's a really reliable {{A}}...
+對了……{{A}}一直是1個人嗎？=By the way... {{A}}, have you been alone this whole time?
+進入那扇「奇怪的門」之後，\n好像就和你們走散了。=After entering that "strange door," \nI got separated from the others.
+想著能不能和誰會合，\n我就先朝著{{A}}上層前進了……=I thought maybe I could meet up with someone, so I headed to the upper floors of {{A}} first...
+……結果誰也沒能會合。=...But I couldn't find anyone.
+再這樣遇不到任何人的話，\n我也不知道該怎麼辦了。=If this kept up, I wasn't sure what to do.
+sr:"^那和我們還有(.*)的情況，\n都差不多呢。$"="Then your situation is pretty much the same as ours and $1's."
+我們也是回過神來，就發現自己1個人\n在{{A}}裡。這樣看來其他人果然也……=We also suddenly found ourselves alone in Tartarus. So it seems the others are also...
+{{A}}的同伴有幾人？=<size\=25>How many teammates do you have?</size>
+還有多少人走散了？=<size\=27>How many are still missing?</size>
+嗯……我、{{A}}、{{D}}。\n{{B}}、{{E}}、{{C}}和{{F}}……=Hmm... Me, {{A}}, {{D}}. \n{{B}}, {{E}}, {{C}}, {{F}}...
+還有{{B}}和{{A}}。再加上{{C}}，\n一共10個人。=And {{B}} with {{A}}. Plus {{C}}, \nthat makes ten people in total.
+是人的名字……？=A person's name...?
+{{A}}是條狗哦。={{A}}'s a dog.
+對。是會用{{A}}的狗。\n雖然是條狗，但那傢伙相當有膽量。=Yes. A dog that can use a {{A}}. \nEven though he's a dog, he's got real guts.
+{{B}}超聰明的哦。\n至少比{{A}}腦子好使。={{B}} is super smart, you know. \nDefinitely smarter than {{A}}.
+你之前不是說……\n「{{A}}是會用{{B}}的貓頭鷹」嗎？=You once said... "{{A}} is a {{B}}-using owl," right?
+我們不怎麼吃驚，\n就是因為有{{A}}在。=We weren't too surprised, \nbecause we already had {{A}}.
+對對。既然狗都能用{{A}}，\n貓頭鷹能用也沒什麼好奇怪的。=Right, right. If a dog can use a {{A}}, \nan owl doing the same isn't that weird.
+雖然準確來說……\n{{A}}並不是貓頭鷹……=Though, to be precise... {{A}} isn't actually an owl...
+算了，就這樣吧……=Well, never mind...
+總之，一下子多了3個同伴，可以安心了。\n我在這層等了好一會。=Anyway, with three more teammates, I feel a bit more at ease. I've been waiting on this floor for a while.
+啊，難道是因為有「守衛」嗎？=Ah, is it because of the "Guardian"?
+沒錯。雖然有點想獨自挑戰，\n但萬一出了什麼事就麻煩了。=Exactly. I thought about taking it on alone, but t'd be trouble if something went wrong.
+畢竟現在也沒有{{A}}的支援。\n還是儘量避免危險行動比較好。=Especially without {{A}}'s support. \nIt's better to avoid unnecessary risks.
+確實，要是剛好遇到不適合自己的敵人，\n就算是{{A}}，1個人也不好應對。=True. If you ran into an enemy you're weak against, even {{A}} would struggle alone.
+但其實，無論是什麼敵人，\n我都想用這雙拳頭取勝啊。=But honestly, no matter what enemy it is, \nI'd rather just crush it with my fists.
+……總之情況就是這樣。和你們一起上的話，\n應該就能順利打敗敵人了吧。=...Anyway, that's the situation. With all of us together, we should be able to handle it.
+打倒那傢伙以後，\n我們再分享各自的情報吧。=After we take that thing down, \nlet's share what we know.
+好的，我沒意見。=Right, sounds good to me.
+陰影就在裡面。\n大家準備好了嗎？=The Shadow is right ahead. \nIs everyone ready?
+準備好了。=Ready.
+陰影如阻擋前路一般佇立著……=The Shadow stands there, blocking the path...
+……果然，是見過的「守衛」啊。=...Just as I thought, it's a "Guardian" we've seen before.
+嗯。不過，{{A}}的情況很奇怪，\n千萬不能掉以輕心。=Yeah. But {{A}} is acting strange, \ndon't let your guard down.
+好。\n那我們上吧！=Okay. \nLet's go!
+什麼！？衣服變了……！？=What!? Your clothes changed...!?
+sr:"^啊，(.*)使用(.*)的時候，\n外表好像會發生變化。$"="Ah, when $1 uses his $2, \nhis appearance changes."
+原、原來如此。這世上的{{A}}使用者，\n還真是多種多樣啊……=O-oh, I see. {{A}} users in this world really come in all kinds, huh...
+不過，外表什麼的不重要。\n讓我見識一下你的實力吧！=But appearances don't matter. \nShow me what you've got!
+……呼。比我想像中還要輕鬆呢。=...Hah. That was easier than I expected.
+是啊。果然等你們來是對的。=Yes. Waiting for you guys was the right call.
+不過，說實話有點驚訝……我還以為，\n只有{{A}}能操控多個{{B}}。=But, honestly, I'm a little surprised... I thought only {{A}} could wield multiple {{B}}s.
+是不是有什麼訣竅呢……=Is there some trick to it...?
+{{B}}也想試試其他{{A}}嗎？={{B}}, do you want to try using other {{A}}s too?
+倒不是想試……我是覺得要是有那樣的力量，\n戰術選擇就會更豐富。=It's not that I want to... But having that power would give us more tactical options.
+如果能彌補我「波呂狄烏刻斯」的弱點，\n更強的敵人也能輕鬆應對。=If I could cover for "Polydeuces'" weaknesses, even stronger enemies would be easier to handle.
+真是認真啊……=You're so serious...
+sr:"^話說回來，(.*)改變外表的事，\n也有點讓人吃驚啊。$"="By the way, $1's appearance change was pretty surprising too."
+到底是什麼原理？\n是{{A}}能力的一部分……嗎？=How does that even work? \nIs it part of the {{A}}'s ability...?
+具體的我也不太清楚=I'm not entirely sure
+不過，我們對召喚器具體原理之類的……\n也不太清楚呢。=But we don't really understand the specifics of how our Evokers work either...
+但我們第一次見到時也嚇了一跳。\n感覺整個人的氣質一下子就變了。=Still, we were shocked when we first saw it. \nIt's like his whole vibe changes instantly.
+有那麼誇張嗎？=<size\=29>Is it really that dramatic?</size>
+是這樣嗎……=Is that so...
+嗯。和校服的反差還挺大的。=Yes. The contrast with the school uniform is pretty strong.
+嗯。還有那個……面具？\n也給人一種「不可思議」的感覺。=Mm. And that... mask? It gives off a really "mysterious" feeling.
+不過一起戰鬥之後就逐漸習慣了。=But you get used to it after fighting together for a while.
+對了，你們到這裡爬了幾層？=Oh, right, How many floors have you guys climbed so far?
+啊，差點忘了說！\n這個{{A}}感覺很奇怪……！=Ah, I almost forgot to mention! \nThis {{A}} feels really strange...!
+原來如此。我走在這的時候也覺得有點奇怪，\n但沒想到居然到這種程度……=I see. I thought something was off while walking here, but I didn't realize it was this bad...
+{{A}}沒遇到「門」嗎？={{A}}, you haven't encountered any "doors"?
+沒有，我本以為已經爬了不少樓層了，\n但遇到的第一個守衛就是剛才那個。=No. I thought I'd climbed quite a few floors, but the first Guardian I ran into was the one just now.
+返回裝置倒是有看到。\n不過，我看到的那些也已經壞了。=I did see some teleporters, \nbut they were all broken.
+全都壞了嗎……=All broken...
+讓人在意的地方有很多……\n但還是沒有足夠下結論的情報。=There's a lot that's concerning... But we still don't have enough info to draw conclusions.
+sr:"^(.*)被捲進來的原因，\n說不定也和(.*)的異變有關。$"="The reason $1 got dragged in might be related to $2' abnormalities too."
+{{B}}變成這樣的原因……\n{{A}}也沒有頭緒啊……=So even {{A}} has no idea why {{B}} is like this...
+是啊。在你們加入之前，\n也沒有出現過現在這種情況。=Yes. Before you guys showed up, \nnothing like this ever happened.
+我想再梳理一下現狀。\n可以吧？=I want to organize what we know so far.\nIs that okay?
+我們的目標是和同伴會合，\n然後離開{{A}}。=Our goal is to regroup with our teammates and escape {{A}}.
+sr:"^而(.*)的目標，\n是尋找失蹤的同伴，以及一樣也要離開這裡。$"="Meanwhile, $1's goal is to find their missing teammates and also escape."
+但是，出現了「從未見過的門」，\n進入那扇門就能到外面去。=But now, there's a "door we've never seen before", and going through it leads outside.
+而這個「外面」，不知道為什麼，\n既不是{{A}}，人們的狀態也很奇怪。=Yet this "outside" isn't the {{A}}, \nand people are acting strangely.
+……到這裡為止，我說得對嗎？=...Did I get everything right?
+沒錯。啊，再補充一下，\n「門」最先出現的地方，是{{A}}前。=Yes. Oh, one more thing, the "door" first appeared at {{A}}.
+sr:"^據(.*)所說，他被陰影襲擊的時候，\n那扇門就突然出現了。$"="According to $1, it suddenly appeared when he was attacked by a Shadow."
+盡是些奇怪的事啊……=This is all so strange...
+sr:"^而且，在(.*)，\n出現了(.*)原本走散的同伴。$"="And at $1, $2's missing companion showed up."
+而且她的樣子也很「奇怪」。=But she was acting "strange" too.
+感覺不像{{A}}=Didn't feel like {{A}}
+感覺非常違和=Something felt off
+sr:"^……總之先找(.*)的同伴吧。\n狀態很奇怪的話，不能放任不管啊。$"="...For now, let's focus on finding $1's teammate. If she's acting strange, we can't just leave her like that."
+反正也沒有別的路可以走，\n我們就繼續往上吧。=Since we don't have any other leads, \nwe should keep climbing.
+好。我贊同。=Right. Agreed.
+對了。在{{B}}看來，\n{{A}}有哪些地方變「奇怪」了呢？=Right. {{B}}, what parts of {{A}} seem "strange" to you?
+嗯……大概是不管怎麼往上爬，\n都到不了「邊界樓層」這一點吧。=Hmm... Probably the fact that no matter how much I climb, I can't reach the "boarder floor".
+至今為止倒是也有過……\n花費很長時間才到的情況。=There have been times before when it took a while...
+但看這裡的內部環境，\n應該是整個{{A}}相當靠前的區域吧？=But the interior here looks like it's from the early sections of {{A}}, right?
+雖然不記得準確的數字，\n但應該爬不到10層就會遇到「守衛」才對。=I don't remember the exact numbers, but I should've hit a "Guardian" before ten floors.
+但是，我遇到剛才那個陰影的時候，\n已經爬了有兩倍以上的樓層了。=But when I encountered that Shadow earlier, \nI'd already climbed more than twice that.
+要是讓{{A}}幫忙搜索一下，\n說不定還能發現更奇怪的地方……=If Fuuka could scan the area, \nshe might find even stranger things...
+從這裡開始，說不定要爬更多層。\n你們3個可要注意分配好體力。=From here on out, we might have to climb way more. You three should pace yourselves.
+決定和{{A}}一起……\n探索{{B}}了！=Decided to explore {{B}} together with {{A}}...!
+
+Waxing Cresent 6
+{{A}}是Harv所在學校的\n{{B}}嗎？=Is {{A}} the {{B}} of Harv's school?
+{{A}}是學生會長，\n說不定你們能聊得來。={{A}} is the Student Council President.\nMaybe they'll get along.
+我們這邊沒有和她同級的女生，如果\n有可以說話的對象，她應該會很開心吧……=We don't have any girls of the same years as her. If she had someone to talk to, she would probably be very happy...
+啊——有可能呢。雖然也會跟我和{{A}}說話，\n但畢竟是{{B}}和{{C}}的關係。=Ah- that's possible. Although she would talk to me and {{A}}, it's more like a {{B}} {{C}} relationship.
+不知道會聊些什麼呢，還有點小期待。=I don't know what they'll talk about, I'm looking forward to it.
+就算為了這個，也得快點找到她們才行。=Even for this, we have to find them quickly.
+就算為了這個，也得快點找到她們才行=Even for this, we have to find them quickly.
+會使用{{B}}的貓頭鷹啊。\n不知道{{A}}會不會警戒……=An owl {{B}} user. I wonder if {{A}} will be on guard...
+是{{A}}使用者的話……\n也許應該沒問題？=For a {{A}} user... Maybe it'll be fine?
+希望如此。沒問題的吧，{{A}}很聰明的，\n應該不會抓來吃啦。=I hope so. It's okay, {{A}}'s very smart, I don't think he will attack him.
+{{A}}也很溫和=<size\=29>{{A}} is also very gentle</size>
+{{A}}也很聰明=<size\=29>{{A}} is also very smart</size>
+原來如此。\n那就太好了。=I see. That's great.
+真想快點看到\n{{B}}和{{A}}見面的場景呢。=I really want to see the scene where \n{{B}} and {{A}} meet soon.
+
+Waxing Cresent 7
+……感覺好久沒看到這個地方了。\n{{A}}你們怎麼看？=...I feel like I haven't seen this place in a while. What do you think, {{A}}?
+在之前的樓層裡應該沒出現過。\n不過，感覺和平時有些不同……？=It didn't appear on the previous floors. But, it feels a little different from usual...?
+……是時鐘吧？\n好像我們所熟悉的{{A}}裡有過這個。=...It's the clock, right? It's there in the {{A}} we are familiar with.
+啊，真的{{A}}！=Ah, right!
+說不定還有別的地方也不一樣。\n，我們去調查看看吧。=Maybe there are other places that are different. \nLet's investigate.
+說不定還有別的地方也不一樣。\n我們去調查看看吧。=Maybe there are other places that are different. \nLet's investigate.
+差不多「守衛」該要出現了吧。=The "Guardian" is about to appear.
+也許是呢……\n得注意體力分配。=Maybe... Pace yourselves.
+對啊。守衛可是強敵，\n不能隨便應對。=Right. Guardians are strong enemies. You can't get careless.
+如果覺得吃不消了，就跟我說哦。=If you feel you can't handle it anymore, just tell me.
+好，繼續前進吧。=Okay, let's keep going.
+
+Waxing Cresent 8
+都爬這麼多層了，果然像{{A}}說的那樣，\n遇不到「守衛」呢。=It's been so many floors, just like {{A}} said, we didn't encounter a "Guardian" yet.
+如果不用戰鬥就能順利前進，\n那當然最好。=If we can proceed without fighting, \nthat would be best, of course.
+是嗎？我倒是覺得，偶爾來點強敵，\n測試下實力也很不錯啊。=Is that so? Personally, I think having some strong enemies every now and then to test our strength is pretty good too.
+感覺能理解=I think I understand
+真……真的嗎？=R-really?
+Choice 1
+{{A}}？很懂我嘛。={{A}}? You get me
+sr:"^難得(.*)也在，\n正是嘗試新戰略的好機會。$"="Since $1 is here too, it's a great chance to try out some new strategies."
+Choice 2
+sr:"^……我就不多說什麼了，\n但幸好(.*)不是「那樣的人」。$"="...I won't say much, but I'm glad $1 isn't "that kind of person"."
+{{A}}……\n好像很喜歡戰鬥……？={{A}}... seems to really like fighting...?
+戰鬥啊……該怎麼說呢……=Fighting, huh... How should I put it...
+是啊。戰鬥這件事……\n我不介意和強者來一場酣暢淋漓的較量。=Yes. When it comes to fighting... I don't mind a fierce, all-out battle against a strong opponent.
+當然，我本身也非常喜歡鍛煉。\n要想打出漂亮的一擊，核心肌肉相當重要……=Of course, I also really love training. To deliver a clean strike, core strength is super important...
+你們怎麼了，為什麼一直盯著我。=What's wrong? Why are you all staring at me?
+你這無腦肌肉男……=You muscle-brained moron...
+什……等等啊！\n特別是{{A}}，這次你必須好好解釋……！=W-wait, hold on! Especially {{A}}, \nyou'd better explain yourself...!
+
+Waxing Cresent 9
+啊，大家先停下！=Ah, everyone, stop!
+看那邊。好像有「守衛」……！=Look over there. There's a "Guardian"...!
+sr:"^哼，終於出現了。\n(.*)，準備好了嗎？$"="Hmph, finally showed up. $1, you ready?"
+那當然=Of course
+我加油=I'll do my best
+好，就是這股氣勢！=Good, that's the spirit!
+{{A}}，支援就拜託你了。={{A}}, I'm counting on you for support.
+嗯，交給我吧！=Got it, leave it to me!
+那我們走吧。=Let's go.
+辛苦了。=Good work.
+理也辛苦了=Makoto too
+戰勝敵人真是太好了=Great battle
+但還是沒什麼線索呢。\n{{A}}和{{B}}她們也不在……=But we still don't have any leads... \nNeither {{A}} nor {{B}} are here...
+總之繼續往上爬吧。=For now, let's keep climbing.
+
+Waxing Cresent 10
+剛才那個陰影，還挺有兩下子的。\n都想請它當陪練了。=That shadow just now was quite strong. \nI wanted to ask it to train with me.
+然後，要是戰鬥後能來點蛋白粉就完美了。=Then, it would be perfect if I could have some protein after the battle.
+{{A}}……\n{{B}}，和平常一樣啊……={{A}}...\n{{B}}, same as always...
+雖然情況有些特殊，但正因為如此，\n保持平常心也很重要吧？=Although the situation is somewhat special, that's why it's also important to stay calm, right?
+現在有你們在，\n我也能盡情戰鬥了。=Now that you are here, \nI can fight to my heart's content.
+……我們也很高興\n能和{{A}}會合。=...We are also very happy to meet up with {{A}}.
+
+Waxing Cresent 11
+{{A}}……難道這裡是環形的通道？\n是不是繞遠路了……={{A}}... Is this a loop? \nDid we take a detour...
+好像是這樣=Seems like the case
+另一邊才是近路……=<size\=24>The other side is the shortcut...</size>
+要是有{{A}}在，也許能發現最短的路線……=If only {{A}} was here, \nwe would've found the shortest route...
+下次要是再遇到這種樓層得注意一下。=Be careful next time we encounter this kind of floor.
+
+Waxing Cresent 12
+到底爬了幾層了啊……好像已經記不清了……\n好累啊……想吃點什麼……=How many floors have we climbed... I can't seem to remember... I'm so tired... I want to eat something...
+草莓大福……白豆沙的那種……=Strawberry rice cake... white bean paste...
+等逃出{{A}}後，\n真想去葉隱一趟……=I want to go to Hagakure Ramen after we escape {{A}}...
+你們呢？\n有沒有想吃的東西？=And you?\nIs there anything you want to eat?
+{{A}}的拉麵……={{A}}'s ramen
+{{A}}的可麗餅……={{A}}'s crepe
+冰箱裡冷藏的白鯛魚燒……吧……\n總是發現的時候已經被誰吃掉了……=Probably chilled taiyaki... I always find out that someone has already eaten it...
+很少見，感覺理的聲音變低沉了……！=It's rare, but I feel like Makoto's voice sounded low...!
+
+Waxing Cresent 13
+嗯？那個就是你們說的「門」嗎？=Hm? Is that the "door" you mentioned?
+道路正中間，\n有一扇「藍色的門」……！=Right in the middle of the road... there's a "blue door"...!
+就是那扇門=That's the door
+看起來一樣=It looks similar
+看上去有點像經常看到的那個門……\n但門上好像有什麼標記……=It does resemble the door we've seen before... but there seems to be some kind of mark on it...
+總之，這次進門之前，\n先探索一下這層吧？=Anyway, before we enter this door, \nlet's explore this floor first?
+嗯……雖然我覺得，會和上次的情況一樣。=Yes... Though I suspect it'll be the same as last time.
+似乎到盡頭了，要折返嗎？=This looks like a dead end, head back?
+返回吧。=Let's head back.
+還想再探索一會。=Want to explore more.
+什麼都沒有，可以用荒涼來形容了……=There's nothing here, it's practically desolate...
+看來前進的方向只有1個。=Seems like there's only one way forward.
+打開看看吧=Let's open it
+調查一下吧=Let's investigate
+嗯，拜託了。=Yes, please.
+果然……！=Just as I thought...!
+啊，對了。\n之前說過的……要牽手嗎？=Ah, right. About what we discussed earlier... \nShould we hold hands?
+……嗯，萬一出什麼事就糟了。\n{{A}}覺得呢？只是防止進去的時候失散。=...Yes, just in case something happens. \nWhat do you think, {{A}}?
+這樣的話，確實牽一下比較好。=In that case, it's better to hold hands.
+光線十分刺眼，\n眼睛睜不開……！=The light is blinding... I can't keep my eyes open...!
+
+Waxing Cresent 14
+又回到{{A}}了……\n但時間好像變了？=We're back at {{A}}... \nbut the time seems to have changed?
+好像是的。已經……到晚上了吧。=Looks like it. It's already... nighttime, right?
+雖然聽你們描述過，但真到這裡一看，\n還是感覺很驚訝啊……=Even after hearing your descriptions, \nactually being here is still shocking...
+看起來是我們熟悉的{{A}}……\n但確實有種說不上來的違和感。=It looks like the {{A}} we know... but there's definitely an indescribable sense of unease.
+你們之前過來的時候，\n這裡的人狀態很奇怪是吧？=When you came here before, \nthe people were acting strangely, right?
+沒錯。跟他們搭話也沒反應，\n對話內容也聽不清……=Exactly. They wouldn't respond when spoken to, and their voices were unclear...
+總之先調查一下，\n看這次有沒有什麼不同吧。=For now, let's investigate and see if anything's different this time.
+和{{A}}匯合以後，我們有4個人了，\n為了節省時間，這次分頭行動怎麼樣？=Now that we've regrouped with {{A}}, there are four of us. How about spliting up to save time?
+贊成=Agreed
+那樣更好=That'd be better
+那就這麼定了。分組的話……=Then it's settled. For the teams...
+sr:"^我和(.*)一組吧？\n畢竟我不知道(.*)長什麼樣。$"="I'll pair up with $1. Since I don't know how $2 looks like."
+嗯，我贊成。\n那我和{{A}}去那邊看看。=Yes, I agree. Then I'll go with {{A}} and check out that side.
+轉一圈後集合=<size\=26>We'll regroup after scouting</size>
+這邊就交給我們吧！=We'll handle this area
+sr:"^嗯。\n(.*)也小心。$"="Right. $1, be careful too."
+sr:"^好，那我們就在這邊轉轉吧。\n(.*)，(.*)。$"="Alright, let's look around here then. \n$1, $2."
+你好，我們要點餐……=Hello, we'd like to order...
+……看來沒有變化。\n而且其他客人也……=...No change, huh. \nAnd the other customers too...
+果然，還是聽不清對話內容……=Just as before, their voices are still unclear...
+……但你們說過，\n可以聽清{{A}}的聲音。=...But you said {{A}}'s voice was clear.
+那絕對是{{A}}的聲音=<size\=24>That was definitely {{A}}'s voice</size>
+客人們的聲音聽不清……\n{{A}}的聲音卻很清楚……=The customers' voices are muffled... \nbut {{A}}'s is clear...
+不同點是……=The difference is...?
+和{{A}}的差異是……？=What sets {{A}} apart...?
+sr:"^雖然有可能是……\n(.*)認不認識的區別……$"="It might be related to whether $1 knows them or not..."
+但我覺得，\n這和{{A}}是「{{B}}使用者」有關。=But I think it's because {{A}} is a "{{B}} user".
+不知道{{A}}他們有沒有和你講過，\n那些意外闖入{{B}}的「失蹤者」。=Not sure if {{A}} and the others mentioned this, but those who accidentally wander into {{B}}, the "missing persons".
+意外闖入{{A}}的人，\n無一例外，幾乎都會陷入無氣力的狀態。=Almost all of them fall into a listless state.
+如果會用{{B}}就不同了。覺醒前的{{A}}，\n也就是我們的同伴……她就沒有失去意識。=But if they can use a {{B}}, it's different. Like {{A}} before she awakened, our teammate... she never lost consciousness.
+我們和你們的共同點，\n不就都是「{{A}}使用者」嗎？=The commonality between us and you is that we're all "{{A}} users", right?
+……不過，{{A}}的母親很可能不太一樣。\n這點還需要進一步調查。=...Though {{A}}'s mother might be an exception. We'll need to look into that further.
+總之，夏卡爾依然很奇怪，\n{{A}}也不在，我們去調查下一家店吧。=Anyway, Chagall is still weird, and {{A}} isn't here. Let's check the next shop.
+和{{A}}一起，\n調查了{{B}}……=Investigated {{B}} with {{A}}...
+
+Waxing Cresent 15
+這邊沒什麼收穫。\n你們那邊怎麼樣？=No luck on our end. How about you?
+也沒什麼特別的。\n和你們上次見到的一樣。=Nothing special either. \nSame as what you saw last time.
+{{A}}也不在=<size\=30>{{A}} isn't here either</size>
+這樣啊……我們這邊也沒看到。\n真希望能快點找到……=I see... We didn't find anything either. I really hope we can find her soon...
+下次記得試著搭話，看看對方有什麼反應。\n確認一下神志清不清醒……之類的？=Next time, try talking to them and see how they react. Check if they're lucid or not... stuff like that?
+正常情況下應該會察覺到這種異常，\n然後想辦法解決才對……=Normally, they'd notice this abnormality and try to fix it...
+但至少你們看到時，\n{{A}}並沒有類似的舉動對吧？=But at least when you saw her, {{A}} didn't act like that, right?
+這樣的話，就產生新的疑問了。\n為什麼她沒有察覺到呢？=That raises a new question. \nWhy didn't she notice?
+……難道她不是主動「接受了」這種情況，\n而是……=...Could it be that instead of "accepting" this situation willingly...
+受到了陰影的某種攻擊……之類的？=She was attacked by a Shadow in some way...?
+其實，我們之前和那樣的陰影戰鬥過。=Actually, we've fought a Shadow like that before.
+嗯……好像有能讓人產生幻覺的能力……=Hmm... Some have abilities that induce hallucinations…
+啊，那個愛情旅……=Ah, that love hote...
+不許再說啦！！=DON'T SAY IT!!
+……別在意。=...Don't worry about it.
+總、總之！有的陰影可以影響人的精神，\n說不定她就是受到了類似的攻擊。=A-anyway! Some Shadows can affect people's minds. Maybe she was hit by something similar.
+如果是這樣，\n不快點讓她恢復清醒就危險了。=If that's the case, \nwe need to snap her out of it quickly.
+假如她的精神受到了影響，\n那她是被「灌輸」了什麼樣的想法呢？=If her mind's being influenced, \nwhat kind of thoughts is she being fed?
+母親還活著……=Mother is still alive...
+{{A}}的「慾望」……={{A}}'s "desires"...
+嗯，我也覺得這種可能性很高。=Hm, I think that's very likely.
+我之前提過……如果能和死去的人再見一面，\n說不定真的會接受這種情況。=I mentioned it before... If you could see a deceased loved one again, you might accept it, even if something feels off.
+哪怕隱隱約約察覺到……這不是真的。=Even if you vaguely sense... it's not real.
+……是啊。=...Yes.
+那麼，轉了一圈也沒找到什麼線索，\n接下來怎麼辦？=Well, we didn't find any leads after searching. What should we do next?
+聽你們說，之前來這裡的時候，\n{{A}}是突然出現的……=You said last time, \n{{A}} appeared suddenly...
+會發生同樣的事嗎？=<size\=26>Will the same thing happen?</size>
+要是{{A}}能來就好了=<size\=30>I hope {{A}} shows up</size>
+希望能順利攔下{{A}}，\n要是她又消失了就麻煩了。=I hope we can stop {{A}} this time. \nIt'll be trouble if she disappears again.
+雖然確實是這樣，但出不去也很麻煩呢。\n還有沒有其他……=True, but being stuck here is also a problem. \nIs there anything else...
+什……陰影！？\n怎麼會在這裡……！=Wha... A Shadow!? Why here...!?
+這裡看起來不像是{{A}}，\n但它不受這個影響嗎？=This doesn't seem like the {{A}}, \nbut it's unaffected?
+看來是的啊。=Seems that way.
+sr:"^(.*)，\n這裡不是(.*)……你能戰鬥嗎？$"="$1, this isn't $2... Can you fight?"
+交給我！=Leave it to me!
+我不會拖後腿的！=I won't hold you back!
+嗯。\n那我們上吧。=Good. Let's go.
+{{B}}……哈，啊……嗚，嗚{{A}}……！={{B}}... Ha, ah... Ugh, ugh...!
+啊……爸，爸爸……？=Ah... D-dad...?
+爸爸他……還活，活著……\n爸爸他……什麼都……沒有做錯……=Dad's... alive, alive... \nDad didn't... do anything wrong...
+咕，嗚{{A}}……！\n哈——哈——哈……！=Guh, ugh...! Ha—ha—ha...!
+對……爸爸沒有死，沒有……\n「那場事故」也……不是爸爸的錯……=Yes... Dad didn't die, he didn't... \n"That incident" wasn't... dad's fault...
+……不，不對。=...N-no.
+這是多少年前的事了啊……！\n我早就已經接受了！=That was years ago...! I've already accepted it!
+……不愧是她。=...As expected from her.
+{{A}}，沒事嗎？={{A}}, you okay?
+嗯，沒事。\n那傢伙由我來解決！=Yes, I'm fine. I'll take care of this one!
+就用這招定勝負=Let's finish this!
+拜託了  伊俄=Please, Io!
+貫穿吧=Pierce through!
+還行嗎？=You good?
+嗯，沒事。\n讓你們擔心了。=Yes, no problem. \nSorry for worrying you.
+剛才腦海裡突然響起了聲音……\n我差點就真以為「爸爸還活著」了。=Just now, I heard a voice in my head... \nI almost believed "dad's still alive".
+那個「聲音」說了什麼？=What did the "voice" say?
+……不好意思，我記不清了。=...Sorry, I can't remember clearly.
+只是，雖然不太好形容……\n但感覺意識被剝奪了，思緒亂亂的。=But it's hard to describe... It felt like my consciousness was being stripped away, my thoughts jumbled.
+就像是「認為爸爸還活著的我」、\n「理解現實的我」在互相戰鬥一樣……=Like "the me who thinks dad's alive" and "the me who understands reality" were fighting inside me...
+腦海中一團亂麻？=Like your mind was in chaos?
+啊，對對。就是這種感覺。=Ah, yes. Exactly.
+可能因為是在戰鬥中，還有{{A}}你們在身邊，我才能保持清醒，不至於忘記現實……=Maybe because we were fighting, and you guys were with me, I could stay grounded in reality...
+……但要是自己一個人時被攻擊了，\n可能情況就不一樣了。=...But if I were alone when attacked, \nit might've been different.
+{{A}}很可能也受到了類似的攻擊。={{A}} might've been hit by something similar.
+得趕緊找到{{A}}……！=<size\=30>Need to find {{A}}, fast...!</size>
+{{A}}可能也中招了！=<size\=28>{{A}} might've been affected too!</size>
+Choice 1
+接受「現實」可能很痛苦，\n但必須讓她清醒過來。=Accepting "reality" might hurt, \nbut she has to wake up.
+是啊。如果孤身一人，確實有可能。=Yes. If she's alone, it's possible.
+Choice 2
+雖然是貓頭鷹，但也不知道會發生什麼。=Even if he's an owl, \nwho knows what could happen.
+但是，{{A}}已經徹底調查過了。\n要出去的話……=But we've searched {{A}} thoroughly. \nIf we want to leave...
+……看那邊。=...Look there.
+陰影所在的地方，\n出現了「門」……！=Where the Shadow was... a "door" has appeared...!
+……簡直像是邀請我們一樣。=...Almost like it's inviting us.
+是把我們當成喜歡撲火的飛蛾了？\n雖然有點不爽……但好像也只能進去了。=Does it think we're moths drawn to a flame? Annoying... but we might have no choice but to go in.
 
 ----------
 Motoha SL
@@ -9833,7 +10170,7 @@ Choice 3
 但這裡光線很暗，臺階也比想像的多。\n推著輪椅走的話……感覺會很困難。=But the lighting's dim, and there are more stairs than expected. It would be difficult with a wheelchair...
 要是我能走路，就不用擔心這些了……\n看來還是得努力啊。=If only I could walk properly, this wouldn't be an issue...
 啊，但是……！\n其實我覺得自己差不多能走路了。=Ah, but...! \nI actually feel like I'm almost able to walk now.
-r:"^可能是和(.*)一起，\n在外面練習走路起了效果。{{A}}。$"="Practicing outside with $1 must be helping. {{A}}."
+sr:"^可能是和(.*)一起，\n在外面練習走路起了效果。(.*)。$"="Practicing outside with $1 must be helping. $2."
 之前一直嘴上說著，出院後做康復訓練……\n但其實真的很辛苦。=I kept saying I'd do rehab after leaving the hospital... but honestly, it's been really tough.
 說實話，我也習慣了坐輪椅，\n有時也會想就這樣也挺好的……=Sometimes I got used to the wheelchair and thought maybe this was enough...
 但還好把訓練堅持下來了。\n如果能重新走路，我……=But I'm glad I persevered. If I can walk again...
@@ -9907,7 +10244,7 @@ sr:"^所以我想先讓(.*)看看我走路的樣子。$"="So I wanted $1 to see 
 對……是這樣的。\n嗯……奶奶的話，一定會開心的……=Yes... you're right. Grandma... will definitely be happy...
 要想走得更順暢，\n還需要繼續練習呢。=I'll need more practice to walk smoothly.
 不過已經能走到現在這樣，\n說不定也可以和奶奶一起出門了。=But now that I have come this far, maybe I can go out with Grandma...
-r:"^哎呀，我來了！\n喔，(.*)，(.*)……！$"="Oh my, I'm here!\nOh, $1, $2...!"
+sr:"^哎呀，我來了！\n喔，(.*)，(.*)……！$"="Oh my, I'm here!\nOh, $1, $2...!"
 奶奶……！=Grandma...!
 讓你們久等了，不好意思哦。\n車站人太多了……{{A}}！=Sorry to keep you waiting!\nThe station was crowded... {{A}}!
 奶奶！=Grandma!
@@ -10145,6 +10482,7 @@ Choice 2
 ……奶奶曾拿出薩克斯。\n為我演奏了我喜歡的歌曲。=...Grandma once took out her saxophone. \nAnd played my favorite song for me.
 我記得當時演奏的，\n是一首動畫片的片頭曲……=I remember... it was the opening theme of an anime back then...
 是有關於奶奶的回憶的歌曲……\n就是那首……！=A song tied to memories of Grandma... \nthat's the one!
+需要技巧的歌曲固然重要，但是......=<size\=26>Songs that require skill are important, but...</size>
 需要技巧的歌曲固然重要，但是...=<size\=26>Songs that require skill are important, but...</size>
 經典歌曲也不錯=Classics are nice too
 奶奶最開心的，應該是……\n由「我」來唱的，有意義的歌曲……=What would make Grandma happiest... \nis a meaningful song sung by "me".
@@ -10220,6 +10558,106 @@ sr:"^總有一天，我會努力讓(.*)，\n主動向我伸出手的。$"="One d
 好的……！=Yes...!
 ……時間還算充裕，機會難得，\n就再唱一次試試吧。=...We still have some time. Let's take this chance and sing it once more.
 一直練習到包廂時間快結束，之後把{{A}}送回了家……=We practiced until our karaoke box time was almost up, then took {{A}} home...
+
+Rank 17
+sr:"^啊，(.*)。\n你今天方便嗎……？$"="Ah, $1.\nAre you available today...?"
+要是有時間的話……\n我想等會兒就給奶奶唱歌，你覺得呢……！=If you have time... I'd like to sing for Grandma later. What do you think...!
+我明白了。\n那我就先去練習，等下次有機會吧……！=I understand. Then I'll go practice and wait for the next opportunity...!
+非常感謝……！=Thank you so much...!
+對了。\n我想給奶奶一個驚喜……=Oh, right. \nI want to surprise Grandma...
+我先進去做準備，\n你能在這兒替我等一下奶奶嗎？=I'll go inside and prepare. \nCan you wait here for her in my place?
+給她個驚喜吧=Surprise her
+好的！\n那就拜託你啦。=Okay!\nThen I'll leave it to you.
+sr:"^(.*)說(.*)在這兒等我，\n我就過來了……就你一個人嗎？$"="$1 told me $2 was waiting here, \nso I came... Are you alone?"
+{{A}}在裡面呢={{A}}'s inside
+她讓我在這等你=<size\=25>She asked me to wait for you</size>
+這樣啊。\n讓你久等啦，不好意思。=I see.\nSorry to keep you waiting.
+……話說回來，那孩子居然會主動出門，\n還邀請我過來，真是沒想到呢。=...Come to think of it, I never expected that child to take the initiative to go out and even invite me.
+我開心得都快哭了。=I'm so happy I could cry.
+在這兒稍等一下=Wait here a moment
+馬上就開始了=It'll start soon
+奶奶。=Grandma.
+自己站著……還拿著麥克風……=Standing on her own... \nand holding a microphone...
+今天呢，我想向奶奶表達感謝，\n所以借用了一下這個舞臺。=Today, I want to express my gratitude to you, \nso I borrowed this stage.
+謝謝你，奶奶。=Thank you, Grandma.
+哪有……我啊，什麼都沒做……\n也無法體會{{A}}遭受的痛苦……=No... I haven't done anything... I couldn't even understand the pain {{A}} went through...
+不是這樣的哦。\n因為有奶奶的幫助，我才能做到很多事。=That's not true. Because of Grandma's help, \nI've been able to do so many things.
+說多少遍「謝謝」都不夠。\n我想好好報答您。=No amount of "thank yous" would be enough. \nI want to repay you properly.
+所以，首先想通過唱歌來表達心意，\n希望您能聽我唱……=So first, I want to express my feelings through a song. I hope you'll listen...
+呐，那首曲子……您還記得嗎？\n剛和奶奶一起生活時，您為我演奏的……=Say, that song... do you remember it? The one you played for me when we first started living together...
+那是我和奶奶，第一次一起演奏的曲子。=It was the first song we ever played together.
+你說的是……=You mean...
+sr:"^我和(.*)一起練了這首歌。\n就想把這份心意傳遞給您。$"="I practiced this song with $1. \nI wanted to convey these feelings to you."
+……請聽我表演吧。=...Please listen.
+……哈。=...Ha.
+{{A}}……謝、謝謝你啊……！={{A}}... Th-thank you...!
+別……奶奶，哭得太厲害了啦……！=S-Stop it... Grandma, you're crying too much...!
+那當然得哭啊，我怎麼能不哭……！\n曾經那麼小的孩子，現在能唱得這麼好……！=Of course I'm crying! How could I not...! My little girl, who was so small back then, can sing so beautifully now...!
+驚喜作戰大成功=<size\=26>The surprise was a success</size>
+……啊～讓你看到我這麼沒出息的樣子。=...Ahh, you're seeing me in such a pathetic state.
+你、你那是什麼表情！\n人老了啊，淚腺就變得鬆弛了。=Wh-what's with that look! When you get old, your tear ducts loosen up.
+不是這樣的……=That's not it...
+和{{A}}好像啊……=Just like {{A}}...
+沒、沒什麼啦。\n……話說回來，奶奶您覺得怎麼樣？=O-oh, it's nothing. \n...Anyway, Grandma, what did you think?
+這還用說，棒極了！=What kind of question is that? \nIt was wonderful!
+r:"^我疼愛的孫女，還有恩人(.*)，\n一起為我演奏……$"="My beloved granddaughter and my savior, $1, played for me together..."
+聽到這首飽含心意的曲子，\n怎麼能不覺得棒呢？=How could I not think it's wonderful, \nhearing a song filled with so much heart?
+對了，再來一首！\n我想再聽一次呢！=Right, play it again!\nI'd love to hear it one more time!
+還是同一首曲子哦，可以嗎？=The same song again, is that okay?
+就這首曲子就好……=Just this song again...
+滿足這個請求吧=Let's make it happen
+那就再來一次=Then one more time
+好的，那就再來一遍！=Okay, let's do it again!
+又和{{A}}一起，\n演奏了一次充滿回憶的歌曲……=Played that nostalgic song again with {{A}}...
+呼呼，真開心啊……！=Hehe, I'm so happy...!
+我發現，\n{{A}}在這兒唱歌的時候特別開心呢。=I've noticed something. {{A}} looks especially happy when she sings here.
+sr:"^啊，那個，\n今天唱的時候是(.*)伴奏……$"="Ah, um... Today, $1 was the one accompanying me..."
+下次我想和奶奶一起。\n想配合著奶奶的薩克斯唱歌。=Next time, I want to sing with you, Grandma. \nI want to sing along to your saxophone.
+儘管跟奶奶說。\n不管什麼曲子，奶奶都會去練的。=Just tell Grandma what you want. \nI'll practice any song for you.
+期待你們同台=<size\=26>Looking forward to your duet</size>
+我們3個人一起合奏吧=<size\=28>Let's all three perform together</size>
+Choice 1
+好的！\n我也會更加努力的……！=Yes!\nI'll work even harder...!
+Choice 2
+sr:"^希望(.*)到時候也能來聽。$"="I hope $1 can come listen too."
+Choice 3
+可、可以嗎？=R-really?
+嗯嗯……謝謝。\n那就我們3個人就一起演奏吧……！=Mmm... Thank you. \nThen let's all three perform together...!
+那個，我從奶奶那兒受到了很多幫助，\n無論是家務還是其他方面。=Um, Grandma has helped me so much, \nwith housework and everything else.
+那是因為{{A}}坐著輪椅，很不容易啊。=That's because it's hard for {{A}} in a wheelchair.
+話是這麼說，\n但奶奶確實為我花了很多時間。=That may be true, but you've spent so much time on me, Grandma.
+所以，下次輪到我幫奶奶了。\n現在我能做到更多的事了。=So next time, it's my turn to help you. \nI can do so much more now.
+首先，我想和奶奶一起出門走走。=First, I want to go out for walks with you.
+現在就算奶奶被絆到，\n我也能馬上扶住你啦。=Now, even if you trip, \nI can catch you right away.
+……謝謝你呀。\n那就拜託你了！=...Thank you. \nThen I'll count on you!
+嗯，交給我吧……！=Yes, leave it to me...!
+sr:"^我先回去啦。(.*)，\n你再和(.*)散會兒步吧。$"="I'll head back now. $1, you go take a walk with $2."
+嗯……我想去個地方，可以嗎？=Um... There's somewhere I'd like to go. \nIs that okay?
+這裡是和{{A}}，\n第一次見面的地方……=This is where I first met {{A}}...
+sr:"^感覺和(.*)第一次見面，\n已經是很久很久以前的事了。$"="It feels like meeting $1 for the first time was so, so long ago."
+那時候，我對一切都很害怕……\n甚至希望自己能快點消失。=Back then, I was afraid of everything... \nI even wished I could disappear.
+sr:"^但是，現在不一樣了……\n因為有(.*)，我才能走到今天。$"="But now, it's different... Because of $1, I've come this far."
+真的非常感謝。\n那天……能遇到你，真好。=Thank you so much. \nThat day... I'm so glad I met you.
+
+Close Friends
+……我一直都想在這兒，親口說給你聽。\n佔用你時間了，不好意思。=...I've always wanted to tell you that here. \nSorry for taking up your time.
+回到最初的地方了=Back where it all began
+……好的！\n下次我們再一起合奏吧！=...Okay! Let's perform together again next time!
+一邊聊著下次合奏的曲子，\n一邊往回走……=Head back while chatting about the next song we'll play together...
+
+Soulmates
+希望你以後也能聽我唱歌。=I hope you'll keep listening to me sing.
+sr:"^要是，\n(.*)遇到什麼不開心的事……$"="If, $1 ever feels down..."
+我想用我的歌聲，讓你重新露出笑容。\n……說到做到，我會努力的。=I want to use my voice to bring back your smile. \n...I promise, I'll do my best.
+已經從你這兒獲得力量了=<size\=26>You've already given me strength</size>
+Choice 1
+sr:"^(.*)。\n有事就儘管拜託我吧，(.*)。$"="$1. You can count on me anytime, $2."
+Choice 2
+真、真的嗎……？=R-really...?
+……那我就放心了。=...Then I'm relieved.
+啊，那個……=Ah, um...
+能不能，再這樣待一會兒……=Can we stay like this a little longer...?
+和{{A}}一起，\n靜靜地度過了一段時間……=Quietly spend some time together with {{A}}...
 
 Hangouts
 sr:"^那，那個……(.*)，\n待會有空嗎？$"="U-um... $1, \nare you free?"
@@ -10307,6 +10745,8 @@ SNS
 好熱情=So enthusiastic
 感受到愛意了=Can feel the love
 為什麼這麼想？=Why do you think that?
+絕對會聽=Definitely will listen
+很期待=Looking forward to it
 
 ----------
 My Palace
