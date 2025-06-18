@@ -114,20 +114,20 @@ r:"^造成暴擊時自身治療效果提升<color\=#2899ff>(\d+%)</color>，持�
 信念=Faith
 r:"^每次添加護盾，受到護盾效果的怪盜防禦力提升<color\=#2899ff>(\d+%)</color>，持續2回合，可疊加3層。$"="After granting Shield, increase the target's DEF by <color\=#2899ff>$1</color> for 2 turns up to 3 stacks."
 r:"^每有<color\=#2899ff>(\d+)</color>點生命值提升自身治療效果<color\=#2899ff>(\d+%)</color>，最多獲得治療效果提升<color\=#2899ff>(\d+%)</color>。$"="Increase Healing Effect by <color\=#2899ff>$2</color> for every <color\=#2899ff>$1</color> HP you have, up to <color\=#2899ff>$3</color>."
-r:"^所有怪盜對處於<link\="s\|232"><u>TECH異常</u></link>狀態下的敵人造成傷害提升<color\=#2899ff>(\d+%)</color>，無法重複觸發。$"="Increase all Thieves' DMG Dealt to foes with <link\="s|232"><u>TECHNICAL Ailment</u></link> by <color\=#2899ff>$1</color>, can't be triggered again."
+r:"^所有怪盜對處於<link\="s\|232"><u>TECH異常</u></link>狀態下的敵人造成傷害提升<color\=#2899ff>(\d+%)</color>，無法重複觸發。$"="Increase all Thieves' DMG Dealt to foes with <link\="s|232"><u>TECHNICAL Ailment</u></link> by <color\=#2899ff>$1</color>, cannot be triggered again."
 <color\=#66ccff>TECH異常</color>=<color\=#66ccff>TECHNICAL Ailment</color>
 透過TECHNICAL觸發的異常狀態，包括『冰灼』、『冰封』等。=The status ailments from triggering TECHNICAL, include [Ice Burn], [Ice Seal], etc.
 
 【信任】=[Trust]
 信任=Trust
-r:"^電擊屬性傷害提升效果達到3層時，使得所有怪盜電擊屬性傷害提升<color\=#2899ff>(\d+%)</color>，無法重複觸發。$"="Increase all allies' Elec DMG by <color\=#2899ff>$1</color> when the Elec DMG buff effect reached 3 stacks, can't be triggered again."
-r:"^戰鬥開始時，提升其他怪盜<color\=#2899ff>(\d+%)</color>的攻擊力，無法重複觸發。$"="At the start of battle, increase other allies' ATK by <color\=#2899ff>$1</color>, can't be triggered again."
+r:"^電擊屬性傷害提升效果達到3層時，使得所有怪盜電擊屬性傷害提升<color\=#2899ff>(\d+%)</color>，無法重複觸發。$"="Increase all allies' Elec DMG by <color\=#2899ff>$1</color> when the Elec DMG buff effect reached 3 stacks, cannot be triggered again."
+r:"^戰鬥開始時，提升其他怪盜<color\=#2899ff>(\d+%)</color>的攻擊力，無法重複觸發。$"="At the start of battle, increase other allies' ATK by <color\=#2899ff>$1</color>, cannot be triggered again."
 r:"^對友方釋放技能時，使所有怪盜的傷害提升<color\=#2899ff>(\d+%)</color>，持續2回合。$"="Increase all allies' DMG Dealt by <color\=#2899ff>$1</color> for 2 turns when using a skill on an ally."
 
 【和諧】=[Harmony]
 和諧=Harmony
 r:"^觸發啟示卡套裝效果的額外傷害時，使目標受到傷害提升<color\=#2899ff>(\d+%)</color>，持續2回合。$"="Increase the target's DMG Taken by <color\=#2899ff>$1</color> for 2 turns when triggering the effect of the Revelation card's buff."
-r:"^使得相同屬性的怪盜獲得傷害加成<color\=#2899ff>(\d+%)</color>，無法重複觸發。$"="Increase DMG Bonus by <color\=#2899ff>$1</color> for all allies with the same element, can't be triggered again."
+r:"^使得相同屬性的怪盜獲得傷害加成<color\=#2899ff>(\d+%)</color>，無法重複觸發。$"="Increase DMG Bonus by <color\=#2899ff>$1</color> for all allies with the same element, cannot be triggered again."
 r:"^每次造成一種元素異常，提升所有怪盜核熱傷害<color\=#2899ff>(\d+%)</color>，持續2回合，每層獨立計算。$"="Increase all allies' Nuke DMG by <color\=#2899ff>$1</color> for 2 turns when inflicting Elemental Ailment, each stack is counted independently."
 
 【接納】=[Acceptance]
@@ -157,12 +157,12 @@ r:"^解明怪盜裝備時生效：使用技能為敵人添加減益狀態，使�
 【創造】=[Creation]
 創造=Creation
 戰鬥中，自身精力回復達到100%/150%/200%，獲得暴擊效果提升<color\=#2899ff>15%/30%/45%</color>。=In battle, when you reached 100%/150%/200% SP Recovery, increase CRIT DMG by <color\=#2899ff>15%/30%/45%</color>.
-戰鬥開始時，使速度最低的怪盜造成傷害提升<color\=#2899ff>12%</color>，無法重複觸發。=At the start of a battle, increase the DMG Dealt for ther lowest SPD ally by <color\=#2899ff>12%</color>, can't be triggered again.
+r:"^戰鬥開始時，使速度最低的怪盜造成傷害提升<color\=#2899ff>(\d+%)</color>，無法重複觸發。$"="At the start of a battle, increase the DMG Dealt for ther lowest SPD Thief by <color\=#2899ff>$1</color>, cannot be triggered again."
 
 【自由】=[Freedom]
 自由=Freedom
 r:"^使用{{A}}技能時，自身獲得(\d+)層『榮耀』，最多(\d+)層，下一次追加效果消耗所有『榮耀』，每消耗(\d+)層『榮耀』使該次追加效果穿透提升<color\=#2899ff>(\d+%)</color>。"="When using a persona skill, gain $1 stack of [Glory], up to $2 stacks, consume all stacks of [Glory] when doing a Follow Up, each consumed stack of [Glory] increase that Follow Up's PEN by <color\=#2899ff>$4</color>."
-r:"^所有怪盜對處於負面狀態下的敵人造成傷害提升<color\=#2899ff>(\d+%)</color>，無法重複觸發。$"="Increase all allies' DMG Dealt to foes inflicted with debuff by <color\=#2899ff>$1</color>, can't be triggered again."
+r:"^所有怪盜對處於負面狀態下的敵人造成傷害提升<color\=#2899ff>(\d+%)</color>，無法重複觸發。$"="Increase all allies' DMG Dealt to foes inflicted with debuff by <color\=#2899ff>$1</color>, cannot be triggered again."
 r:"^造成萬能屬性傷害時，攻擊力提升<color\=#2899ff>(\d+%)</color>，暴擊率提升<color\=#2899ff>(\d+%)</color>。$"="Increase ATK by <color\=#2899ff>$1</color> and CRIT Rate by <color\=#2899ff>$2</color> when dealing Almighty damage."
 
 【希望】=[Hope]
@@ -172,6 +172,8 @@ r:"^每造成1次技能傷害，自身火焰傷害提升(\d+%)，持續(\d+)回�
 
 【突破】=[Perseverance]
 突破=Perseverance
+r:"^每有一個敵人增加自身電擊傷害<color\=#2899ff>(\d+%)</color>，最多<color\=#2899ff>(\d+%)</color>。$"="Increase Elec DMG by <color\=#2899ff>$1</color> per foe, up to <color\=#2899ff>$2</color>."
+r:"^持續效果傷害提升<color\=#2899ff>(\d+%)</color>。$"="Increase Damage Over Time DMG by <color\=#2899ff>$1</color>."
 
 ----------
 All Arcana Cards
@@ -194,7 +196,7 @@ r:"^4套裝效果：技能造成每次傷害使自身獲得『怨恨』：增加
 
 【英勇】=<size\=20>  </size>[Courage]
 英勇=Courage
-r:"^4套裝效果：暴擊效果提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；造成暴擊後再次獲得相同效果。$"="<size\=23>4-piece effect: Increase CRIT DMG by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again after landing a CRIT.</size>"
+r:"^4套裝效果：暴擊效果提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；造成暴擊後再次獲得相同效果。$"="<size\=23>4-piece effect: Increase CRIT DMG by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again after landing a CRITICAL.</size>"
 
 【職責】=<size\=20>  </size>[Labor]
 職責=Labor
@@ -233,7 +235,7 @@ r:"^4套裝效果：追加效果造成傷害提升<color\=#2899ff>(\d+%)</color>
 【富足】=<size\=20>  </size>[Prosperity]
 富足=Prosperity
 r:"^2套裝效果：受到傷害減免<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Decrease DMG Taken by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：進入戰鬥立刻回復<color\=#2899ff>(\d+%) </color>HIGHLIGHT能量，回復HIGHLIGHT能量效果無法重複觸發。$"="<size\=23>4-piece effect: At the start of battle, immediately gain <color\=#2899ff>$1</color> HIGHLIGHT Energy, can't be triggered again.</size>"
+r:"^4套裝效果：進入戰鬥立刻回復<color\=#2899ff>(\d+%) </color>HIGHLIGHT能量，回復HIGHLIGHT能量效果無法重複觸發。$"="<size\=23>4-piece effect: At the start of battle, immediately gain <color\=#2899ff>$1</color> HIGHLIGHT Energy, cannot be triggered again.</size>"
 
 【力量】=<size\=20>  </size>[Strength]
 力量=Strength
@@ -297,9 +299,11 @@ r:"^4套裝效果：攻擊力提升<color\=#2899ff>(\d+%)</color>，持續(\d+)�
 
 【憂傷】=<size\=20>  </size>[Sorrow]
 憂傷=Sorrow
+r:"^4套裝效果：造成傷害提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；釋放HIGHLIGHT後再次獲得相同效果。$"="<size\=23>4-piece effect: Increase DMG Dealt by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again after using HIGHLIGHT.</size>"
 
 【改變】=<size\=20>  </size>[Transformation]
 改變=Transformation
+r:"^4套裝效果：攻擊力提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；造成暴擊後再次獲得相同效果。$"="<size\=23>4-piece effect: Increase ATK by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again after landing a CRITICAL.</size>"
 
 ----------
 Inspect Details + Combat Pop-Ups
