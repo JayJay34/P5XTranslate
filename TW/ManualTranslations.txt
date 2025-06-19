@@ -82,6 +82,12 @@ RPG模式縮放靈敏度=RPG Mode Zoom Sensitivity
 
 系統設置=System
 隱藏好友申請=Hide Friend Request
+主介面聊天資訊=Main UI Chat
+戰鬥聊天資訊=Combat Chat
+按鈕=Button
+單行=Single Row
+展示=Display
+瀏覽=Browse
 推送消息=Push Notification
 主介面聊天資訊縮略=Side Chat
 戰鬥聊天資訊縮略=Side Chat in Combat
@@ -433,10 +439,10 @@ r:"^『體力』\n探索{{A}}所需的基本能量，隨時間勻速恢復。\n�
 r:"^已購買(\d+)/(\d+)次（每日05:00重置）$"="Purchased $1/$2 times \n(Reset at 5 am UTC+8 daily)"
 行動力補給=Energy Supply
 能量飲料=Energy Drink
-用於提升能量的補給飲料，使用後立即恢復5行動力。=Restores 5 Energy Points immediately.
+用於提升能量的補給飲料，使用後立即恢復5行動力。=Restores 5 Action Points immediately.
 能夠迅速補充人體水分和電解質的運動能量飲料，對迅速恢復身體機能有強力效果。=A sports energy drink that quickly replenishes the body with water and electrolytes for a powerful recovery effect.
-您的行動值不足。=Insufficient Energy Points.
-沒有足夠的行動力了，是否立即補充？=Not enough Energy Points, replenish immediately?
+您的行動值不足。=Insufficient Action Points.
+沒有足夠的行動力了，是否立即補充？=Not enough Action Points, replenish immediately?
 慾望之木=Wood of Desire
 極其罕見的神奇木料，可用於提升技能等級至Lv.9·Lv.10。=<size\=28>An extremely rare magical timber, can be used to level up Skills to Lv.9-Lv.10.</size>
 極其罕見的神奇木料，可用於提升技能等級至Lv.9、Lv.10。=<size\=28>An extremely rare magical timber, can be used to level up Skills to Lv.9-Lv.10.</size>
@@ -1153,7 +1159,7 @@ r:"擁有(\d+)個(\d+)級的RANK(\d+)及以上的{{A}}"=Have $1 Rank $3 or above
 r:"擁有(\d+)張等級為(\d+)級的啟示卡"=Have $1 Lv. $2 Revelation Cards
 r:"擁有(\d+)張等級為(\d+)級的宙位啟示卡"=Have $1 Lv. $2 Universe Revelation Cards
 
-r:"^消耗(\d+)點行動力$"="Spend $1 Energy Points"
+r:"^消耗(\d+)點行動力$"="Spend $1 Action Points"
 r:"進行(\d+)次足球部活動"=Join a Soccer Club activity $1 times
 r:"與任意一位協同者好感度達到(\d+)級"=Reach Rank $1 with any Synergy
 r:"^任意人格指數達到(\d+)級$"="Reach Rank $1 for any Social Stats"
@@ -1231,7 +1237,7 @@ r:"^<size\=60><sprite\=37 tint\=1></size><size\=28><color\=#FFE500>x10</color></
 可兌換五星武器包括：=Redeem 5★ weapons include:
 
 本期剩餘時間：=Time left:
-探索經驗：=Exploring EXP: <size\=1>.</size>
+探索經驗：=Pass EXP: <size\=1>.</size>
 本週上限：=Weekly Cap: <size\=1>.</size>
 已達經驗獲取上限。=Reached EXP cap.
 購買等級=Buy Lv.
@@ -1274,9 +1280,10 @@ r:"進行1次打工 \((\d+)\/(\d+)\)"=Clear 1 Part-time job ($1/$2)
 r:"^消耗(\d+)日元 \((\d+)\/(\d+)\)$"="Spend ¥$1 (¥$2/$3)"
 r:"^消耗(\d+)魂石 \((\d+)\/(\d+)\)$"="Spend $1 Soul Gems ($1/$2)"
 
-r:"^消耗(\d+)點行動力 \((\d+)\/(\d+)\)$"="Use $1 Energy Points ($2/$3)"
+r:"^消耗(\d+)點行動力 \((\d+)\/(\d+)\)$"="Use $1 Action Points ($2/$3)"
 r:"^消耗(\d+)點體力 \((\d+)\/(\d+)\)$"="Use $1 Stamina ($2/$3)"
 r:"^進行(\d+)次邀約$"="Spend time with a Synergy $1 time"
+r:"^進行(\d+)次邀約 \((\d+)\/(\d+)\)$"="Spend time with a Synergy $1 time ($2/$3)"
 r:"^完成2次「厄抑之境」 \((\d+)\/2\)"=Clear [Realm of Repression] 2 times ($1/2)
 r:"完成1次「啟示套裝」挑戰 \((\d+)\/(\d+)\)"=Clear 1 [Revelation Farm] ($1/$2)
 r:"完成1次「旖旎香調」挑戰 \((\d+)\/(\d+)\)"=Clear 1 [Perfume Farm] ($1/$2)
@@ -1296,7 +1303,7 @@ WEEKLY
 r:"累計消耗(\d+)魂石 \((\d+)\/(\d+)\)"=Spend $1 Soul Gems ($2/$3)
 r:"累計消耗(\d+)日元 \((\d+)\/(\d+)\)"=Spend ¥$1 (¥$2/¥$3)
 r:"累計消耗(\d+)點體力 \((\d+)\/(\d+)\)"=Use $1 Stamina ($2/$3)
-r:"累計消耗(\d+)點行動力 \((\d+)\/(\d+)\)"=Use $1 Energy Points ($2/$3)
+r:"累計消耗(\d+)點行動力 \((\d+)\/(\d+)\)"=Use $1 Action Points ($2/$3)
 r:"^累計完成12次「厄抑之境」 \((\d+)\/(\d+)\)$"=Clear 12 [Realm of Repression] ($1/12)
 r:"完成1次「往日回溯」 \((\d+)\/(\d+)\)"=Clear 1 [Past Echo] ($1/$2)
 r:"^達到「閼凶夢之扉」第4檔積分要求 \((\d+)\/(\d+)\)$"="Reach the 4th score bracket in [Nightmare's Gateway] ($1/$2)"
@@ -1322,7 +1329,7 @@ r:"^在「塑命循啟」中完成一張啟示卡定製 \((\d+)\/1\)$"="Make 1 c
 Banners / Pull Screen
 ----------
 契約=Contract
-簽訂命運的契約，與註定的夥伴在此相遇！=Sign the contract of destiny and meet your destined teammates!
+簽訂命運的契約，與註定的夥伴在此相遇！=Sign the contract of fate and meet your destined teammates!
 『{{A}}』\n天然打磨的稀有晶狀珀芯，可用於『角色契約』、『武器補給』及『購買主角體力』。=[{{A}}]\nA naturally polished rare crystalline core, can be used in [Character Contract], [Weapon Supply], and [Purchase Wonder Stamina].
 天然打磨的稀有晶狀珀芯，可用於『角色契約』、『武器補給』及『購買主角體力』。=A naturally polished rare crystalline core, can be used in [Character Contract], [Weapon Supply], and [Purchase Wonder Stamina].
 {{A}}已加入契約=Added {{A}} to Contract
@@ -1330,21 +1337,17 @@ Banners / Pull Screen
 r:"^是否消耗[(.*)]×(.*)，\n購買(.*)張(.*)]？$"="Consume [$1] x $2 \nto buy [$3] x $4?"
 
 r:"^簽約$"="Pulls"
-請簽訂命運的契約\n<size\=26>全螢幕可滑動簽字=<size\=28>Please Sign The Contract of Destiny</size>
-請簽訂命運的契約\n<size\=36><color\=#567298>滑動螢幕任意位置=Please Sign The Contract of Destiny\n<size\=36><color\=#567298>Sign anywhere on the screen
+請簽訂命運的契約\n<size\=26>全螢幕可滑動簽字=Sign The Contract of Fate
+請簽訂命運的契約\n<size\=36><color\=#567298>滑動螢幕任意位置=Sign The Contract of Fate\n<size\=36><color\=#567298>Please write your signature on the screen
 
 每10次簽約必出四星或以上怪盜角色。50次簽約後可自選新手五星怪盜角色。具體內容查看【說明】=<b><color\=#FFDF00>Beginner Banner</color></b>\nGuarantee 1 4★ every 10 pulls. \nChoose 1 5★ Thief at 50 pulls.
 新手推薦契約中簽約次數達到=When Signature count reaches
 後可自選一名以下5★怪盜=you can choose one 5★ Thief
 
-每10次簽約必出四星或以上怪盜角色。具體內容查看【說明】\n該卡池每次簽約會額外獲得<color\=#EADE10>認知殘影×10</color>。=<b><color\=#FFDF00>Rerun Banner</color></b>\nGet 1 5★ every <color\=#FFDF00>110</color> or <color\=#FF0000>80</color> pulls;\n<color\=#FFDF00>0.2%</color> or <color\=#FF0000>0.8%</color>; <color\=#FFDF00>No 50/50</color><size\=20> </size>or<size\=20> </size><color\=#FF0000>50/50</color>\nGuarantee 1 4★ every 10 pulls.\n\n\n\n\n\n<size\=23>Get <color\=#EADE10>10 [Cognitive Afterimage]</color> each pull.</size>\n<size\=17>Save Signature count between same system banners.</size>
-
-每10次簽約必出四星或以上怪盜角色。具體內容查看【說明】。該卡池每次簽約會額外獲得<color\=#EADE10>認知殘影×10</color>。=<b><color\=#FFDF00>Rerun Banner</color></b>\nGet 1 5★ every <color\=#FFDF00>110</color> or <color\=#FF0000>80</color> pulls;\n<color\=#FFDF00>0.2%</color> or <color\=#FF0000>0.8%</color>; <color\=#FFDF00>No 50/50</color><size\=20> </size>or<size\=20> </size><color\=#FF0000>50/50</color>\nGuarantee 1 4★ every 10 pulls.\n\n\n\n\n\n<size\=23>Get <color\=#EADE10>10 [Cognitive Afterimage]</color> each pull.</size>\n<size\=17>Save Signature count between same system banners.</size>
-
 次可獲得<color\=#EADE10>5★盲選偶像合約             ×1</color>，使用後隨機獲得以下怪盜=<size\=26>                       Get <color\=#EADE10>5★Random Kaidol Contract</color></size>
 長按圖示可查看詳細資訊=Long press to view details
 
-每10次簽約必出四星或以上怪盜角色。具體內容查看【說明】=<size\=26>Get 1 5★ every <color\=#FFDF00>110</color> or <color\=#ff3b37>80</color> pulls;</size>\n<size\=25><color\=#FFDF00>0.2%</color> or <color\=#ff3b37>0.8%</color>; <color\=#FFDF00>No 50/50</color> or <color\=#ff3b37>50/50</color>.</size>\n<size\=26>Guarantee 1 4★ every 10 pulls.</size>\n</color><size\=16>Save Signature count between same system banners.</size>
+每10次簽約必出四星或以上怪盜角色。具體內容查看【說明】=<size\=25>Get 1 5★ every <color\=#FFDF00>110</color> or <color\=#ff3b37>80</color> pulls;</size>\n<size\=25><color\=#FFDF00>0.2%</color> or <color\=#ff3b37>0.8%</color>; <color\=#FFDF00>No 50/50</color> or <color\=#ff3b37>50/50</color>.</size>\n<size\=25>Guarantee 1 4★ every 10 pulls.</size>\n</color><size\=15>Save Signature count between same system banners.</size>
 
 每10次補給必出四星或以上武器。具體內容查看【說明】=Choose your RATE UP weapon and two others. Every 70 pulls will guarantee a 5★ weapon. 0.8% Chance.\n\n\n\n\n\n\n<color\=#FFDF00><size\=24>The limited character's 5★ Weapon is only available in this banner.</size></color>\n<size\=21>Supply count will carry between banners.</size>
 
@@ -1410,7 +1413,7 @@ Gacha Rules + Banner Names
 Standard Gacha Rules
 sr:"^<color\=#EADE10>「簽約可獲得五星、四星怪盜及少數低階二星(.*)」</color>\n「以下獲得怪盜或(.*)統稱角色」$"="<color\=#EADE10>[Signature can obtain 5★ Thief, 4★ Thief, and few low Rank 2★ Persona]</color>\n[The following obtained Thief or Persona are collectively called Character]"
 Standard Pool Details
-sr:"^<color\=#EADE10>「偶像選拔祭X」</color>為永久契約，屬於<color\=#EADE10>「角色普通契約」</color>，玩家可以從中使用<color\=#EADE10>「(.*)」</color>進行簽約。契約保底機制獨立，不與其餘類型契約共用。\n<sprite\=0 tint\=1>每<color\=#EADE10>(\d+)</color>次簽約必定能透過保底獲取至少1名四星或以上角色。\n<sprite\=0 tint\=1>每<color\=#EADE10>(\d+)</color>次簽約必定能透過保底獲取五星角色。\n<sprite\=0 tint\=1>劇情中的引導簽約必出「(.*)」，且不計入簽約記錄總數中。$"="<color\=#EADE10>[Kaidol Draft X]</color> is a permanent Contract, and is a <color\=#EADE10>[Standard Contract]</color>, players can use <color\=#EADE10>[Future Fate]</color> to Sign a Contract. The pity is independent and is not shared with other types of Contracts.\n<sprite\=0 tint\=1>Obtain at least 1 4★ Character every <color\=#EADE10>$2</color> Signature.\n<sprite\=0 tint\=1>Obtain 1 5★ Character every <color\=#EADE10>$3</color> Signature.\n<sprite\=0 tint\=1>Will always obtain [$4] from the Signature tutorial, and will not count in the Signature total."
+sr:"^<color\=#EADE10>「偶像選拔祭X」</color>為永久契約，屬於<color\=#EADE10>「角色普通契約」</color>，玩家可以從中使用<color\=#EADE10>「(.*)」</color>進行簽約。契約保底機制獨立，不與其餘類型契約共用。\n<sprite\=0 tint\=1>每<color\=#EADE10>(\d+)</color>次簽約必定能透過保底獲取至少1名四星或以上角色。\n<sprite\=0 tint\=1>每<color\=#EADE10>(\d+)</color>次簽約必定能透過保底獲取五星角色。\n<sprite\=0 tint\=1>劇情中的引導簽約必出「(.*)」，且不計入簽約記錄總數中。$"="<color\=#EADE10>[Kaidol Draft X]</color> is a permanent Contract, and is a <color\=#EADE10>[Standard Contract]</color>, players can use <color\=#EADE10>[$1]</color> to Sign a Contract. The pity is independent and is not shared with other types of Contracts.\n<sprite\=0 tint\=1>Obtain at least 1 4★ Character every <color\=#EADE10>$2</color> Signature.\n<sprite\=0 tint\=1>Obtain 1 5★ Character every <color\=#EADE10>$3</color> Signature.\n<sprite\=0 tint\=1>Will always obtain [$4] from the Signature tutorial, and will not count in the Signature total."
 Standard Pool Odds
 sr:"^在本次<color\=#EADE10>「偶像選拔祭X」</color>契約中，獲取五星、四星機率如下：\n<sprite\=0 tint\=1>五星角色的基礎機率為<color\=#EADE10>(.*)</color>，綜合機率（含保底）為<color\=#EADE10>(.*)</color>；\n<sprite\=0 tint\=1>四星角色的基礎機率為<color\=#EADE10>(.*)</color>，綜合機率為<color\=#EADE10>(.*)</color>；$"="In this Contract <color\=#EADE10>[Kaidol Draft X]</color>, the probability to obtain 5★ and 4★ are as follows:\n<sprite\=0 tint\=1>The base probability of 5★ Character is <color\=#EADE10>$1</color>; consolidated probability (incl. guarantee) is <color\=#EADE10>$2</color>；\n<sprite\=0 tint\=1>The base probability of 4★ Character is <color\=#EADE10>$3</color>; consolidated probability is <color\=#EADE10>$4</color>；"
 Standard Special Details
@@ -1424,12 +1427,12 @@ Premium Standard Rules
 sr:"^<color\=#EADE10>「(.*)」</color>活動契約現已開啟。\n該契約五星角色為<color\=#EADE10>「非限定角色」</color>，活動結束後加入<color\=#EADE10>「角色普通契約」</color>。\n<color\=#EADE10>「簽約可獲得五星、四星怪盜及少數低階二星人格面具」</color>\n「以下獲得怪盜或(.*)統稱角色」$"="Event Contract <color\=#EADE10>[$1]</color> is now available.\nThe Contract 5★ Character is a <color\=#EADE10>[Standard Character]</color>, they will be available in the Standard Contract <color\=#EADE10>[Kaidol Draft X]</color> after the event ends.\n<color\=#EADE10>[Signature can obtain 5★ Thief, 4★ Thief, and few low Rank 2★ Persona]</color>\n[The following obtained Thief or Persona are collectively called Character]"
 
 100% Limited Pool Details
-sr:"^<sprite\=0 tint\=1>活動期間，玩家可以從中使用<color\=#EADE10>「(.*)」</color>進行簽約。UP五星角色<color\=#EADE10>「(.*)」</color>與四星角色<color\=#EADE10>「(.*)」</color>、<color\=#EADE10>「(.*)」</color>、<color\=#EADE10>「(.*)」</color>的簽約獲取機率將大幅提升。\n<sprite\=0 tint\=1>在本次活動契約中，每<color\=#EADE10>(\d+)</color>次簽約必定能透過保底獲取至少1名四星或以上角色。\n<sprite\=0 tint\=1>在本次活動契約中，每<color\=#EADE10>(\d+)</color>次簽約必定能透過保底獲取當期UP五星角色。\n<sprite\=0 tint\=1>本次契約屬於<color\=#EADE10>「(.*)」</color>，簽約次數將會與同類型契約共用，不會因活動結束而清零。同時因累計次數增加的五星角色獲取機率，也會繼承到後續<color\=#EADE10>「(.*)」</color>。\n<sprite\=0 tint\=1>每累計進行<color\=#EADE10>(\d+)</color>次「角色活動契約·精準」簽約，可額外獲得1個當期「盲選偶像合約 ★5」。「盲選偶像合約 ★5」內容會跟隨版本變更，領取時內容以當期版本為准。已達成「盲選偶像合約 ★5」領取條件未領取時，會在當期卡池關閉後自動領取，以郵件的形式發放。該累計次數與同類型活動契約共用，未達(\d+)次的累計次數可繼承到下個同類型活動契約。$"="<sprite\=0 tint\=1>During this event, players can use <color\=#EADE10>[Established Fate]</color> to Sign a Contract. Heavily increase the chance to obtain the RATE UP 5★ Character <color\=#EADE10>[$2]</color> and 4★ Characters <color\=#EADE10>[$3]</color>, <color\=#EADE10>[$4]</color>, <color\=#EADE10>[$5]</color>.\n<sprite\=0 tint\=1>During this event, obtain at least 1 4★ every <color\=#EADE10>$6</color> Signature.\n<sprite\=0 tint\=1>During this event, guarantee obtain the current RATE UP 5★ Character every <color\=#EADE10>$7</color> Signature.\n<sprite\=0 tint\=1>This Contract is <color\=#EADE10>[$8]</color>, share the Signature count between the same Contract system, will not reset after this event ends. Carry the 5★ Character obtain chance with Signature count increase to future <color\=#EADE10>[$9]</color>.\n<sprite\=0 tint\=1>For every <color\=#EADE10>$10</color> Signature in [100% Contract], additionally obtain 1 current [5★ Random Kaidol Contract]. [5★ Random Kaidol Contract] content will change with the version, and the content will be based on the version when you obtained it. If you can obtain [5★ Random Kaidol Contract] but did not claim it, it will be automatically claimed after the event ends and will be sent via email. Share this number with future event Contract of the same type, the number less than $11 can be carried to future event Contract of the same type."
+sr:"^<sprite\=0 tint\=1>活動期間，玩家可以從中使用<color\=#EADE10>「(.*)」</color>進行簽約。UP五星角色<color\=#EADE10>「(.*)」</color>與四星角色<color\=#EADE10>「(.*)」</color>、<color\=#EADE10>「(.*)」</color>、<color\=#EADE10>「(.*)」</color>的簽約獲取機率將大幅提升。\n<sprite\=0 tint\=1>在本次活動契約中，每<color\=#EADE10>(\d+)</color>次簽約必定能透過保底獲取至少1名四星或以上角色。\n<sprite\=0 tint\=1>在本次活動契約中，每<color\=#EADE10>(\d+)</color>次簽約必定能透過保底獲取當期UP五星角色。\n<sprite\=0 tint\=1>本次契約屬於<color\=#EADE10>「(.*)」</color>，簽約次數將會與同類型契約共用，不會因活動結束而清零。同時因累計次數增加的五星角色獲取機率，也會繼承到後續<color\=#EADE10>「(.*)」</color>。\n<sprite\=0 tint\=1>每累計進行<color\=#EADE10>(\d+)</color>次「角色活動契約·精準」簽約，可額外獲得1個當期「盲選偶像合約 ★5」。「盲選偶像合約 ★5」內容會跟隨版本變更，領取時內容以當期版本為准。已達成「盲選偶像合約 ★5」領取條件未領取時，會在當期卡池關閉後自動領取，以郵件的形式發放。該累計次數與同類型活動契約共用，未達(\d+)次的累計次數可繼承到下個同類型活動契約。$"="<sprite\=0 tint\=1>During this event, players can use <color\=#EADE10>[$1]</color> to Sign a Contract. Heavily increase the chance to obtain the RATE UP 5★ Character <color\=#EADE10>[$2]</color> and 4★ Characters <color\=#EADE10>[$3]</color>, <color\=#EADE10>[$4]</color>, <color\=#EADE10>[$5]</color>.\n<sprite\=0 tint\=1>During this event, obtain at least 1 4★ every <color\=#EADE10>$6</color> Signature.\n<sprite\=0 tint\=1>During this event, guarantee obtain the current RATE UP 5★ Character every <color\=#EADE10>$7</color> Signature.\n<sprite\=0 tint\=1>This Contract is <color\=#EADE10>[$8]</color>, share the Signature count between the same Contract system, will not reset after this event ends. Carry the 5★ Character obtain chance with Signature count increase to future <color\=#EADE10>[$9]</color>.\n<sprite\=0 tint\=1>For every <color\=#EADE10>$10</color> Signature in [100% Contract], additionally obtain 1 current [5★ Random Kaidol Contract]. [5★ Random Kaidol Contract] content will change with the version, and the content will be based on the version when you obtained it. If you can obtain [5★ Random Kaidol Contract] but did not claim it, it will be automatically claimed after the event ends and will be sent via email. Share this number with future event Contract of the same type, the number less than $11 can be carried to future event Contract of the same type."
 100% Limited Odds Details
 sr:"^在本次<color\=#EADE10>「(.*)」</color>契約中，獲取五星、四星機率如下：\n<sprite\=0 tint\=1>五星角色的基礎機率為<color\=#EADE10>(.*)</color>，綜合機率（含保底）為<color\=#EADE10>(.*)</color>；\n<sprite\=0 tint\=1>四星角色的基礎機率為<color\=#EADE10>(.*)</color>，綜合機率為<color\=#EADE10>(.*)</color>；\n\n<sprite\=0 tint\=1>當簽約獲取五星角色時，<color\=#EADE10>(.*)</color>的機率為本期UP五星角色<color\=#EADE10>「(.*)」</color>。\n<sprite\=0 tint\=1>當簽約獲取四星角色時，有<color\=#EADE10>(.*)</color>的機率為本期四星UP角色<color\=#EADE10>「(.*)」</color>、<color\=#EADE10>「(.*)」</color>、<color\=#EADE10>「(.*)」</color>其中之一，每個本期四星UP角色的獲取機率均等。如果本次簽約獲取的四星角色非本期四星UP角色，則下次簽約獲取的四星角色必定為本期四星UP角色。$"="In this event Contract <color\=#EADE10>[$1]</color>, the probability to obtain 5★ and 4★ are as follows:\n<sprite\=0 tint\=1>The base probability of 5★ Character is <color\=#EADE10>$2</color>; consolidated probability (incl. guarantee) is <color\=#EADE10>$3</color>；\n<sprite\=0 tint\=1>The base probability of 4★ Character is <color\=#EADE10>$4</color>; consolidated probability is <color\=#EADE10>$5</color>；\n\n<sprite\=0 tint\=1>When obtaining a 5★ Character, there is a <color\=#EADE10>$6</color> chance to obtain the current RATE UP 5★ Character <color\=#EADE10>[$7]</color>.\n<sprite\=0 tint\=1>When obtaining a 4★ Character, there is a <color\=#EADE10>$8</color> chance to obtain one of the following RATE UP 4★ Characters <color\=#EADE10>[$9]</color>, <color\=#EADE10>[$10]</color>, <color\=#EADE10>[$11]</color>, they all have equal chance. If the obtained 4★ Character is not the RATE UP Character, then the next obtained 4★ is guaranteed to be the RATE UP Character."
 
 50% Limited Pool Details
-sr:"^<sprite\=0 tint\=1>活動期間，玩家可以從中使用<color\=#EADE10>「(.*)」</color>進行簽約。UP五星角色<color\=#EADE10>「(.*)」</color>與四星角色<color\=#EADE10>「(.*)」</color>、<color\=#EADE10>「(.*)」</color>、<color\=#EADE10>「(.*)」</color>的簽約獲取機率將大幅提升。\n<sprite\=0 tint\=1>在本次活動契約中，每<color\=#EADE10>(\d+)</color>次簽約必定能通過保底獲取至少1名四星或以上角色。\n<sprite\=0 tint\=1>在本次活動契約中，每<color\=#EADE10>(\d+)</color>次簽約必定能通過保底獲取五星角色。\n<sprite\=0 tint\=1>本次契約屬於<color\=#EADE10>「(.*)」</color>，簽約次數將會與同類型契約共用，不會因活動結束而清零。同時因累計次數增加的五星角色獲取機率，也會繼承到後續<color\=#EADE10>「(.*)」</color>。$"="<sprite\=0 tint\=1>During this event, players can use <color\=#EADE10>[Established Fate]</color> to Sign a Contract. Heavily increase the chance to obtain the RATE UP 5★ Character <color\=#EADE10>[$2]</color> and 4★ Characters <color\=#EADE10>[$3]</color>, <color\=#EADE10>[$4]</color>, <color\=#EADE10>[$5]</color>.\n<sprite\=0 tint\=1>During this event, obtain at least 1 4★ every <color\=#EADE10>$6</color> Signature.\n<sprite\=0 tint\=1>During this event, obtain 1 5★ Character every <color\=#EADE10>$7</color> Signature.\n<sprite\=0 tint\=1>This Contract is <color\=#EADE10>[$8]</color>, share the Signature count between the same Contract system, will not reset after this event ends. Carry the 5★ Character obtain chance with Signature count increase to future <color\=#EADE10>[$9]</color>."
+sr:"^<sprite\=0 tint\=1>活動期間，玩家可以從中使用<color\=#EADE10>「(.*)」</color>進行簽約。UP五星角色<color\=#EADE10>「(.*)」</color>與四星角色<color\=#EADE10>「(.*)」</color>、<color\=#EADE10>「(.*)」</color>、<color\=#EADE10>「(.*)」</color>的簽約獲取機率將大幅提升。\n<sprite\=0 tint\=1>在本次活動契約中，每<color\=#EADE10>(\d+)</color>次簽約必定能通過保底獲取至少1名四星或以上角色。\n<sprite\=0 tint\=1>在本次活動契約中，每<color\=#EADE10>(\d+)</color>次簽約必定能通過保底獲取五星角色。\n<sprite\=0 tint\=1>本次契約屬於<color\=#EADE10>「(.*)」</color>，簽約次數將會與同類型契約共用，不會因活動結束而清零。同時因累計次數增加的五星角色獲取機率，也會繼承到後續<color\=#EADE10>「(.*)」</color>。$"="<sprite\=0 tint\=1>During this event, players can use <color\=#EADE10>[$1]</color> to Sign a Contract. Heavily increase the chance to obtain the RATE UP 5★ Character <color\=#EADE10>[$2]</color> and 4★ Characters <color\=#EADE10>[$3]</color>, <color\=#EADE10>[$4]</color>, <color\=#EADE10>[$5]</color>.\n<sprite\=0 tint\=1>During this event, obtain at least 1 4★ every <color\=#EADE10>$6</color> Signature.\n<sprite\=0 tint\=1>During this event, obtain 1 5★ Character every <color\=#EADE10>$7</color> Signature.\n<sprite\=0 tint\=1>This Contract is <color\=#EADE10>[$8]</color>, share the Signature count between the same Contract system, will not reset after this event ends. Carry the 5★ Character obtain chance with Signature count increase to future <color\=#EADE10>[$9]</color>."
 50% Limited Odds Details
 sr:"^在本次<color\=#EADE10>「(.*)」</color>契約中，獲取五星、四星機率如下：\n<sprite\=0 tint\=1>五星角色的基礎機率為<color\=#EADE10>(.*)</color>，綜合機率（含保底）為<color\=#EADE10>(.*)</color>；\n<sprite\=0 tint\=1>四星角色的基礎機率為<color\=#EADE10>(.*)</color>，綜合機率為<color\=#EADE10>(.*)</color>；\n\n<sprite\=0 tint\=1>當簽約獲取五星角色時，有<color\=#EADE10>(.*)</color>的機率為本期UP五星角色<color\=#EADE10>「(.*)」</color>。如果本次簽約獲取的五星角色非本期五星UP角色，則下次簽約獲取的五星角色必定為本期五星UP角色。\n<sprite\=0 tint\=1>當簽約獲取四星角色時，有<color\=#EADE10>(.*)</color>的機率為本期四星UP角色<color\=#EADE10>「(.*)」</color>、<color\=#EADE10>「(.*)」</color>、<color\=#EADE10>「(.*)」</color>其中之一，每個本期四星UP角色的獲取機率均等。如果本次簽約獲取的四星角色非本期四星UP角色，則下次簽約獲取的四星角色必定為本期四星UP角色。$"="In this event Contract <color\=#EADE10>[$1]</color>, the probability to obtain 5★ and 4★ are as follows:\n<sprite\=0 tint\=1>The base probability of 5★ Character is <color\=#EADE10>$2</color>; consolidated probability (incl. guarantee) is <color\=#EADE10>$3</color>；\n<sprite\=0 tint\=1>The base probability of 4★ Character is <color\=#EADE10>$4</color>; consolidated probability is <color\=#EADE10>$5</color>；\n\n<sprite\=0 tint\=1>When obtaining a 5★ Character, there is a <color\=#EADE10>$6</color> chance to obtain the current RATE UP 5★ Character <color\=#EADE10>[$7]</color>. If the obtained 5★ Character is not the RATE UP Character, then the next obtained 5★ is guaranteed to be the RATE UP Character.\n<sprite\=0 tint\=1>When obtaining a 4★ Character, there is a <color\=#EADE10>$8</color> chance to obtain one of the following RATE UP 4★ Characters <color\=#EADE10>[$9]</color>, <color\=#EADE10>[$10]</color>, <color\=#EADE10>[$11]</color>, they all have equal chance. If the obtained 4★ Character is not the RATE UP Character, then the next obtained 4★ is guaranteed to be the RATE UP Character."
 
@@ -1441,7 +1444,7 @@ sr:"^「當未觸發UP或保底規則時，所有角色均分基礎獲取機率�
 Weapon Gacha Rules
 sr:"^<color\=#EADE10>「(.*)」</color>活動補給現已開啟。\n本期五星武器<color\=#EADE10>「(.*)」</color>為<color\=#EADE10>「限定武器」</color>，活動結束後不會加入<color\=#EADE10>「武器自選」</color>。$"="Event Supply <color\=#EADE10>[$1]</color> is now available.\nThe 5★ Weapon <color\=#EADE10>[$2]</color> is a <color\=#EADE10>[Limited Weapon]</color>, it will not be available in <color\=#EADE10>[Customize Weapon]</color>."
 Weapon Pool Details
-sr:"^<sprite\=0 tint\=1>活動期間，玩家可以從中使用「(.*)」進行補給。自選UP五星武器<color\=#EADE10>「(.*)」</color>與四星武器<color\=#EADE10>「(.*)」「(.*)」「(.*)」「(.*)」</color>的補給獲取機率將大幅提升。\n<sprite\=0 tint\=1>玩家可以隨時替換UP武器。\n<sprite\=0 tint\=1>玩家需要在補給之前自選兩件五星武器才可以進行補給。\n<sprite\=0 tint\=1>在本次活動補給中，每<color\=#EADE10>(\d+)</color>次補給必定能透過保底獲取至少1件四星或以上武器。\n<sprite\=0 tint\=1>在本次活動補給中，每<color\=#EADE10>(\d+)</color>次補給必定能透過保底獲取至少1件五星武器。\n<sprite\=0 tint\=1>本次補給屬於<color\=#EADE10>「武器活動補給」</color>，補給次數將會與同類型補給共用，不會因活動結束而清零。同時因累計次數增加的彩品武器獲取機率，也會繼承到後續<color\=#EADE10>「武器活動補給」</color>。$"="<sprite\=0 tint\=1>During this event, players can use [Established Coin] to Supply Weapon. Heavily increase the chance to obtain the Custom RATE UP 5★ Weapon <color\=#EADE10>[$2]</color> and 4★ Weapons <color\=#EADE10>[$3], [$4], [$5], [$6]</color>.\n<sprite\=0 tint\=1>Players can change the RATE UP Weapon at any time.\n<sprite\=0 tint\=1>Players need to choose 2 5★ Weapons before Supply.\n<sprite\=0 tint\=1>During this event, obtain at least 1 4★ Weapon every <color\=#EADE10>$7</color> Supply.\n<sprite\=0 tint\=1>During this event, obtain 1 5★ Weapon every <color\=#EADE10>$8</color> Supply.\n<sprite\=0 tint\=1>This Supply is <color\=#EADE10>[Weapon Supply]</color>, share the Supply count between the same Supply system, will not reset after this event ends. Carry the 5★ Weapon obtain chance with Supply count increase to future <color\=#EADE10>[Weapon Supply]</color>."
+sr:"^<sprite\=0 tint\=1>活動期間，玩家可以從中使用「(.*)」進行補給。自選UP五星武器<color\=#EADE10>「(.*)」</color>與四星武器<color\=#EADE10>「(.*)」「(.*)」「(.*)」「(.*)」</color>的補給獲取機率將大幅提升。\n<sprite\=0 tint\=1>玩家可以隨時替換UP武器。\n<sprite\=0 tint\=1>玩家需要在補給之前自選兩件五星武器才可以進行補給。\n<sprite\=0 tint\=1>在本次活動補給中，每<color\=#EADE10>(\d+)</color>次補給必定能透過保底獲取至少1件四星或以上武器。\n<sprite\=0 tint\=1>在本次活動補給中，每<color\=#EADE10>(\d+)</color>次補給必定能透過保底獲取至少1件五星武器。\n<sprite\=0 tint\=1>本次補給屬於<color\=#EADE10>「武器活動補給」</color>，補給次數將會與同類型補給共用，不會因活動結束而清零。同時因累計次數增加的彩品武器獲取機率，也會繼承到後續<color\=#EADE10>「武器活動補給」</color>。$"="<sprite\=0 tint\=1>During this event, players can use [$1] to Supply Weapon. Heavily increase the chance to obtain the Custom RATE UP 5★ Weapon <color\=#EADE10>[$2]</color> and 4★ Weapons <color\=#EADE10>[$3], [$4], [$5], [$6]</color>.\n<sprite\=0 tint\=1>Players can change the RATE UP Weapon at any time.\n<sprite\=0 tint\=1>Players need to choose 2 5★ Weapons before Supply.\n<sprite\=0 tint\=1>During this event, obtain at least 1 4★ Weapon every <color\=#EADE10>$7</color> Supply.\n<sprite\=0 tint\=1>During this event, obtain 1 5★ Weapon every <color\=#EADE10>$8</color> Supply.\n<sprite\=0 tint\=1>This Supply is <color\=#EADE10>[Weapon Supply]</color>, share the Supply count between the same Supply system, will not reset after this event ends. Carry the 5★ Weapon obtain chance with Supply count increase to future <color\=#EADE10>[Weapon Supply]</color>."
 Weapon Odds Details
 sr:"在本次「(.*)」</color>活動中，獲取五星、四星機率如下：\n<sprite\=0 tint\=1>五星武器的基礎機率為<color\=#EADE10>(.*)</color>，綜合機率（含保底）為<color\=#EADE10>(.*)</color>；\n<sprite\=0 tint\=1>四星武器的基礎機率為<color\=#EADE10>(.*)</color>，綜合機率為<color\=#EADE10>(.*)</color>；\n\n<sprite\=0 tint\=1>當補給獲取五星武器時，有<color\=#EADE10>(.*)</color>的機率為自選五星UP武器<color\=#EADE10>「(.*)」</color>。如果本次補給獲取的五星武器非五星UP武器，只會獲取另外兩把自選五星武器的其中一件，且下次補給獲取的五星武器必定為五星UP武器。\n<sprite\=0 tint\=1>當補給獲取四星武器時，有<color\=#EADE10>(.*)</color>的機率為本期四星UP武器<color\=#EADE10>「(.*)」「(.*)」「(.*)」「(.*)」</color>其中之一，每個本期四星UP武器的獲取機率均等。如果本次補給獲取的四星武器非本期四星UP武器，則下次補給獲取的四星武器必定為本期四星UP武器。$"="In this event <color\=#EADE10>[$1]</color>, the probability to obtain 5★ and 4★ are as follows:\n<sprite\=0 tint\=1>The base probability of 5★ Weapon is <color\=#EADE10>$2</color>; consolidated probability (incl. guarantee) is <color\=#EADE10>$3</color>；\n<sprite\=0 tint\=1>The base probability of 4★ Weapon is <color\=#EADE10>$4</color>; consolidated probability is <color\=#EADE10>$5</color>；\n\n<sprite\=0 tint\=1>When obtaining a 5★ Weapon, there is a <color\=#EADE10>$6</color> chance to obtain the Custom RATE UP 5★ Weapon <color\=#EADE10>[$7]</color>. If the obtained 5★ Weapon is not the 5★ RATE UP Weapon, you will only obtain one of the 2 Custom 5★ Weapons, then the next obtained 5★ Weapon is guaranteed to be the 5★ RATE UP Weapon.\n<sprite\=0 tint\=1>When obtaining a 4★ Weapon, there is a <color\=#EADE10>$8</color> chance to obtain one of the following RATE UP 4★ Weapons <color\=#EADE10>[$9], [$10], [$11], [$12]</color>, they all have equal chance. If the obtained 4★ Weapon is not a RATE UP Weapon, then the next obtained 4★ Weapon is guaranteed to be the RATE UP Weapon."
 Weapon Special Details
@@ -1680,7 +1683,7 @@ sr:"^(.*)遊戲廳中的娃娃機，\n本期可限時抓取超稀有娃娃\n「<
 『遊戲中心兌獎券』\n用於在{{A}}遊戲中心購買商品，可透過回收多餘的娃娃來獲得。=<size\=28>[Arcade Ticket]\nUsed in the {{A}} Arcade, can be obtained by recycling surplus dolls.</size>
 r:"^娃<color\=#ff0000ff>娃</color>機-小型$"="Sm<color\=#ff0000ff>all</color> Crane Machine"
 r:"^娃<color\=#ff0000ff>娃</color>機-中型$"="Me<color\=#ff0000ff>di</color>um Crane Machine"
-r:"^夾娃娃機啊，要玩玩看嗎\（<color\=#ff0000>每次(\d+)現金</color>\）？$"="Want to play the crane machine?\n(<color\=#ff0000>Spend $1 Yen</color>)"
+r:"^夾娃娃機啊，要玩玩看嗎\（<color\=#ff0000>每次(\d+)現金</color>\）？$"="Want to play the crane machine?\n(<color\=#ff0000>Spend $1 Money</color>)"
 r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n增加在小型娃娃機中抓到娃娃的機率。$"="<size\=24>Increase the chance to get dolls in small crane machine after froming a relationship with [<color\=#FFC000>{{A}}</color>].</size>"
 r:"^好感度提升至<color\=#FFC000>rank3</color>後，\n增加在中型娃娃機中抓到娃娃的機率。$"="<size\=24>Increase the chance to get dolls in medium crane machine after reaching <color\=#FFC000>rank 3</color>.</size>"
 r:"^好感度提升至<color\=#FFC000>rank9</color>後，\n娃娃機商店中增加新的商品。$"="<size\=24>Add new items to the crane machine stop after reaching <color\=#FFC000>rank 9</color>.</size>"
@@ -1740,11 +1743,11 @@ r:"^擺<color\=#ff0000ff>放</color>區·二樓$"="Di<color\=#ff0000ff>sp</color
 Synergy (SL) and City Activities
 ----------
 行動力=Energy
-行動值=Energy Points
-『現金』\n都市流通貨幣……應該可以用於都市行程中的各類支出。=<size\=28>[Yen]\nCity currency. \nCan be used for various expenditures in City Activities.</size>
+行動值=Action Points
+『現金』\n都市流通貨幣……應該可以用於都市行程中的各類支出。=<size\=28>[Money]\nCity currency. \nCan be used for various expenditures in City Activities.</size>
 都市流通貨幣……應該可以用於都市行程中的各類支出。=City currency. \nCan be used for various expenditures in City Activities.
 參與都市日程獲得=Gained from City Activities
-『行動值』\n探索都市所需的基本能量，每天會自動恢復。\n每日05:00恢復5點。=<size\=28>[Energy Points] \nEnergy needed for city activities. \nAutomatically restore 5 Points \nat 5 AM (UTC+8) every day.</size>
+『行動值』\n探索都市所需的基本能量，每天會自動恢復。\n每日05:00恢復5點。=<size\=28>[Action Points] \nEnergy needed for city activities. \nAutomatically restore 5 Points \nat 5 AM (UTC+8) every day.</size>
 高額獎勵：<color\=#FFFF00>1倍</color>=<size\=24>Bonus Activities: <color\=#FFFF00>1x</color></size>
 高額獎勵：<color\=#FFFF00>3倍</color>=<size\=24>Bonus Activities: <color\=#FFFF00>3x</color></size>
 「高額獎勵」日程將消耗1點行動力，並獲得1倍獎勵。=The [Bonus Activities] will consume 1 Energy and give 1x rewards.
@@ -1885,7 +1888,7 @@ sr:"人格指數「(.*)」達到(\d+)級解鎖$"="Unlock when $1 reached rank $2
 {{A}}的露天咖啡廳似乎又推出了新口味的咖啡……=There's a new flavor of coffee in the Outdoor Café
 要去{{A}}的露天咖啡廳挑戰一下新口味的咖啡嗎？=<size\=27>Want to challenge yourself to a new flavor of coffee in the Outdoor Café?</size>
 人氣很高的咖啡廳……=This is a popular Café...
-r:"^要在這裡品嘗新口味的咖啡嗎\(<color\=#ff0000>每次(\d+)現金</color>\)？$"="Want to try a new flavor of coffee here?\n(<color\=#ff0000>Spend $1 Yen</color>)"
+r:"^要在這裡品嘗新口味的咖啡嗎\(<color\=#ff0000>每次(\d+)現金</color>\)？$"="Want to try a new flavor of coffee here?\n(<color\=#ff0000>Spend $1 Money</color>)"
 去卡拉OK唱歌=<size\=24>Sing Karaoke \nin Kichijoji</size>
 在寺院中冥想=<size\=28>Meditate \nin the Temple</size>
 去寺院中冥想，讓心靜一靜吧……=Let's meditate in the Temple \nand calm my mind...
@@ -1896,7 +1899,7 @@ r:"^要在這裡品嘗新口味的咖啡嗎\(<color\=#ff0000>每次(\d+)現金</
 爵<color\=#ff0000ff>士</color>俱樂部=Ja<color\=#ff0000ff>zz</color> Club
 在女僕餐廳社會實踐=<size\=24>Vist the Maid Café</size>
 在{{A}}的女僕餐廳，體驗一下女僕們的服務吧……=Let's experience the maid service at the {{A}} Maid Café...
-r:"^要在這裡度過時間嗎\(<color\=#ff0000>每次(\d+)現金</color>\)？$"="Want to spend your time here? \n(<color\=#ff0000>Spend $1 Yen</color>)"
+r:"^要在這裡度過時間嗎\(<color\=#ff0000>每次(\d+)現金</color>\)？$"="Want to spend your time here? \n(<color\=#ff0000>Spend $1 Money</color>)"
 甜膩蛋糕=Luscious Cake
 情熱紅茶=Oo-hot Tea
 注入★鬆餅=Love ★ Pancake
@@ -2192,7 +2195,7 @@ r:"^確定要和<color\=#F7F95C>{{A}}</color>成為「{{B}}」關係？\n※該�
 SNS還有沒回復的消息，要直接睡覺嗎？=You didn't reply to your SNS yet, \ngo to sleep immediately?
 r:"^<color\=#ff0000ff>睡</color>覺$"="Sl<color\=#ff0000ff>ee</color>p"
 
-打工現金雙份次數：=Yen 2x Rewards:
+打工現金雙份次數：=Money 2x Rewards:
 每日領取補給\n能量飲料<color\=#FFEC00>x1</color>=Claim daily\nEnergy Drink <color\=#FFEC00>x1</color>
 
 ----------
@@ -2251,7 +2254,7 @@ Chihaya's Fortune (Tarot)
 聽聞{{A}}有一位神秘的占卜師，要找她去占卜一下今天的運勢嗎？=<size\=28>I heard that there is a mysterious fortune-teller in Shinjuku.\nWant to get a fortune reading?</size>
 r:"^御<color\=#ff0000ff>船</color> {{A}}$"="Chi<color\=#ff0000ff>ha</color>ya Mifune"
 歡迎光臨～\n今天要進行占卜嗎？=Welcome～\nWould you like to get a reading today?
-「本日運勢占卜」一次1000元。=Fortune reading will cost 1000 yen.
+「本日運勢占卜」一次1000元。=Fortune reading will cost 1000 Money.
 本日運勢占卜=Get a fortune reading
 當前的占卜增益是…=<size\=26>What is the current reading?</size>
 sr:"^運勢占卜：(.*)『(.*)』$"="Reading: The $1 $2"
@@ -2286,8 +2289,8 @@ r:"^在接下來4次透過工作台合成道具時，額外產出少量道具。
 r:"^在接下來3次學校『上課答題』時，額外獲得更多『人格指數』。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="Gain more Social Stats from the next 3 classroom answers.\n<color\=#FFC000>($1 time(s) left)</color>"
 
 皇帝=Emperor
-在接下來3次透過都市日程進行『打工』獲得現金時，額外獲得更多現金。=The next 3 times you work, gain more yen.
-r:"^在接下來3次透過都市日程進行『打工』獲得現金時，額外獲得更多現金。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 3 times you work, gain more yen.\n<color\=#FFC000>($1 time(s) left)</color>"
+在接下來3次透過都市日程進行『打工』獲得現金時，額外獲得更多現金。=The next 3 times you work, gain more Money.
+r:"^在接下來3次透過都市日程進行『打工』獲得現金時，額外獲得更多現金。<color\=#FFC000>\（還可以生效(\d+)次）</color>$"="The next 3 times you work, gain more Money.\n<color\=#FFC000>($1 time(s) left)</color>"
 
 教皇=Hierophant
 sr:"^在接下來4次透過都市日程獲得『(.*)』人格指數時，額外獲得更多『人格指數』。$"="The next 4 times you gain $1 from city activities, gain more Social Stats."
@@ -2405,7 +2408,7 @@ r:"^<color\=#FFDe00>{{A}}</color>票務等級達到<color\=#FFDe00>(\d+)級</col
 「財賂求索」=[Soul Gems Farm]
 財賂求索=Soul Gems Farm
 啟示套裝=Revelation Card Farm
-r:"^厄抑之境·啟示套裝$"="Revelation Card Farm"
+厄抑之境·啟示套裝=Revelation Card Farm
 『穹星求索』=[Bell of Stars Farm]
 「穹星求索」=[Bell of Stars Farm]
 穹星求索=Bell of Stars Farm
@@ -2442,13 +2445,14 @@ r:"^全體怪盜<color\=#ff0036>HL</color>造成傷害提高(\d+(.\d+)?(%)?)$"="
 r:"^全體怪盜<color\=#ff0036>追加效果</color>造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff0036>Follow Up</color> DMG Dealt by $1"
 r:"^全體怪盜<color\=#E3E3E3>萬能</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#E3E3E3>Almighty</color> DMG by $1"
 r:"^全體怪盜處於<color\=#E3E3E3>額外回合</color>時造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' DMG Dealt during <color\=#E3E3E3>Extra Turn</color> by $1"
+r:"^全體怪盜<color\=#E3E3E3>持續效果</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#E3E3E3>Damage Over Time</color> DMG by $1"
 
 此處盤踞著大量的陰影，挑戰成功可獲得怪盜潛能材料。=There are many Shadows here, gain Thief Potential materials on victory.
 此處盤踞著強大的陰影，挑戰成功可獲得武器突破材料。=There are strong Shadows here, gain Weapon Enhance materials on victory.
 此處盤踞著強大的陰影，挑戰成功可獲得技能升級材料。=There are strong Shadows here, gain Skill Upgrade materials on victory.
 此處盤踞著強大的陰影，挑戰成功可獲得厄抑巡禮兌換代幣「不羈紋章·空」。=There are strong Shadows here, gain Challenge Reward exchange currency [Wild Card Emblem·Dull] on victory.
 此處盤踞著強大的陰影，挑戰成功可獲得厄抑巡禮兌換代幣「不羈紋章·耀」。=There are strong Shadows here, gain Challenge Reward exchange currency [Wild Card Emblem·Shiny] on victory.
-此處潛伏著厄抑之境中凝結的特殊陰影，挑戰成功可獲得傳記殘頁、斷章、全書。=There are special Shadows here, gain Biography on victory.
+此處潛伏著厄抑之境中凝結的特殊陰影，挑戰成功可獲得傳記殘頁、斷章、全書。=There are special Shadows here, gain Compendium on victory.
 此處潛伏著厄抑之境中凝結的特殊陰影，挑戰成功可獲得萬用零件·小、中、大。=There are special Shadows here, gain Weapon Parts on victory.
 此處潛伏著厄抑之境中凝結的特殊陰影，挑戰成功可獲得{{A}}精末、精碎、精魄。=There are special Shadows here, gain {{A}} Essence on victory.
 此處盤踞著強大的陰影，挑戰成功可獲得怪盜心象「屬性強化」的材料。=There are strong Shadows here, gain Mental Image materials on victory.
@@ -2510,7 +2514,7 @@ Resources & Shop Items (Marthym's Shop)
 ----------
 
 枚{{A}}=      <size\=17>{{A}}</size>
-現金=Yen
+現金=Money
 魂石=Soul Gems
 『魂石』\n{{A}}探索獲得的神秘石頭，可用於角色與{{B}}養成。=[Soul Gems]\nMysterious gems obtained from the {{A}}, \ncan be used for character and {{B}} growth.
 {{A}}探索獲得的神秘石頭，可用於角色與{{B}}養成。=Mysterious gems obtained from the {{A}}, \ncan be used for character and {{B}} growth.
@@ -2554,14 +2558,15 @@ r:"^限購$"="Limit"
 r:"^立即獲得$"="Immediately get"
 r:"^連續30天，每天5點贈送$"="Daily at 5 am (UTC+8) for 30 days"
 r:"^累計消費(\d+)台幣\((\d+)/(\d+)\)$"="Spend NT$ $1 ($2/$3)"
+r:"^累計消費(\d+)元\((\d+)/(\d+)\)$"="Spend NT$ $1 ($2/$3)"
 
-r:"^傳記$"="Biography"
-傳記全書=<size\=24>Full Biography</size>
-傳記斷章=<size\=22>Biography Chapter</size>
-傳記殘頁=<size\=25>Biography Page</size>
-r:"^隱約可窺見傳奇的全書，可用於提升怪盜經驗，使用後立即增加(\d+)點。$"="A book that gives a glimpse of legends, can be used to gain $1 Thief EXP."
-r:"^隱約可窺見傳奇的斷章，可用於提升怪盜經驗，使用後立即增加(\d+)點。$"="A chapter that gives a glimpse of legends, can be used to gain $1 Thief EXP."
-r:"^隱約可窺見傳奇的殘頁，可用於提升怪盜經驗，使用後立即增加(\d+)點。$"="A page that gives a glimpse of legends, can be used to gain $1 Thief EXP."
+傳記=Compendium
+傳記全書=<size\=20>Thief Compendium Tome</size>
+傳記斷章=<size\=20>Thief Compendium Volume</size>
+傳記殘頁=<size\=20>Thief Compendium Scrap</size>
+r:"^隱約可窺見傳奇的全書，可用於提升怪盜經驗，使用後立即增加(\d+)點。$"="A tome that gives a glimpse of legends, can be used to gain $1 Thief EXP."
+r:"^隱約可窺見傳奇的斷章，可用於提升怪盜經驗，使用後立即增加(\d+)點。$"="A volume that gives a glimpse of legends, can be used to gain $1 Thief EXP."
+r:"^隱約可窺見傳奇的殘頁，可用於提升怪盜經驗，使用後立即增加(\d+)點。$"="A scrap that gives a glimpse of legends, can be used to gain $1 Thief EXP."
 
 r:"^零件$"="Parts"
 萬用零件·大=Gold Parts
@@ -2616,14 +2621,14 @@ r:"^製成裝備整體結構的粗製礦石，可用於在武器等級為10、20
 {{A}}精末=<size\=28>{{A}} Scrap</size>
 r:"^神秘的精魄體，可用於提升{{A}}經驗，使用後立即增加(\d+)點。$"="Mysterious essence, can be used to gain $1 {{A}} EXP."
 r:"^神秘的精碎體，可用於提升{{A}}經驗，使用後立即增加(\d+)點。$"="Mysterious chuck, can be used to gain $1 {{A}} EXP."
-r:"^神秘的精末體，可用於提升{{A}}經驗，使用後立即增加(\d+)點。$"="Mysterious scarp, can be used to gain $1 {{A}} EXP."
+r:"^神秘的精末體，可用於提升{{A}}經驗，使用後立即增加(\d+)點。$"="Mysterious scrap, can be used to gain $1 {{A}} EXP."
 
 聖潔之心=Sacred Heart
 璀璨瑰寶=Glorious Gem
-黃金冠儀=<size\=30>Golden Coronet</size>
+黃金冠儀=<size\=28>Golden Coronet</size>
 加冕石刻=<size\=28>Coronation Stone</size>
-華麗銀飾=<size\=30>Gorgeous Silver</size>
-鑽石晶體=<size\=30>Diamond Crystal</size>
+華麗銀飾=<size\=28>Gorgeous Silver</size>
+鑽石晶體=<size\=28>Diamond Crystal</size>
 r:"^突破Rank(\d+)階級{{A}}時用到的通用材料。$"="Can be used to evolve Rank $1 {{A}}."
 r:"^突破Rank(\d+)-(\d+)階級{{A}}時用到的通用材料。$"="Can be used to evolve Rank $1-$2 {{A}}."
 
@@ -2951,7 +2956,7 @@ r:"^成功進行(\d+)次抓娃娃$"="Obtain a doll $1 times"
 每日5:00刷新任務=Refresh at 5 am daily
 每日任務於每天5:00重置=Daily missions refresh at 5 am daily
 r:"^消耗(\d+)點體力\((\d+)\/(\d+)\)$"="Use $1 Stamina ($2/$3)"
-r:"^消耗(\d+)點行動力\((\d+)\/(\d+)\)$"="Use $1 Energy Points ($2/$3)"
+r:"^消耗(\d+)點行動力\((\d+)\/(\d+)\)$"="Use $1 Action Points ($2/$3)"
 r:"^完成(\d+)次委託派遣$"="Complete $1 Commissions"
 r:"^完成(\d+)次委託派遣\((\d+)\/(\d+)\)$"="Complete $1 Commissions ($2/$3)"
 r:"^完成(\d+)次委託派遣 \((\d+)\/(\d+)\)$"="Complete $1 Commissions ($2/$3)"
@@ -2960,7 +2965,7 @@ r:"^完成(\d+)次往日回溯\((\d+)\/(\d+)\)$"="Clear $1 Past Echo ($2/$3)"
 r:"^在「星盤試煉」中通過「紫色或紅色」監測點\((\d+)\/(\d+)\)$"="Clear 1 [Purple or Red] Monitoring Point in Astrolabe Trials ($1/$2)"
 r:"^在「星盤試煉」中通過任意(\d+)個監測點\((\d+)\/(\d+)\)$"="Clear $1 Monitoring Point in Astrolabe Trials ($2/$3)"
 r:"^累計消耗(\d+)點體力\((\d+)\/(\d+)\)$"="Use $1 Stamina ($2/$3)"
-r:"^累計消耗(\d+)點行動力\((\d+)\/(\d+)\)$"="Use $1 Energy Points ($2/$3)"
+r:"^累計消耗(\d+)點行動力\((\d+)\/(\d+)\)$"="Use $1 Action Points ($2/$3)"
 完成1次閼凶夢之扉=Clear 1 Nightmare's Gateway
 r:"^完成1次閼凶夢之扉\((\d+)\/(\d+)\)$"="Clear 1 Nightmare's Gateway ($1/$2)"
 
@@ -3030,6 +3035,7 @@ r:"^通關(.*)難度(\d+)$"="Clear Difficulty $2"
 r:"^通關難度LV.(\d+)後解鎖$"="Unlock after clearing difficulty LV.$1"
 挑戰模式=<size\=24>Challenge Mode</size>
 首次通關後解鎖當前難度<color\=#173CCAff>體力模式</color>=Unlock <color\=#173CCAff>Stamina Mode</color> after clearing
+首次通關後解鎖當前難度<color\=#4BEFFC>體力模式</color>=Unlock <color\=#4BEFFC>Stamina Mode</color> after clearing
 首次通關後解鎖當前難度<color\=#4aedfc>體力模式</color>=<size\=20>Unlock <color\=#4aedfc>Stamina Mode</color> for this difficulty after clearing</size>
 尚未通關挑戰模式=Not Cleared
 通關LV.=Clear Lv.
@@ -3406,7 +3412,7 @@ Velvet Room Personas (VR)
 ----------
 r:"^天<color\=#ff0000ff>鵝</color>絨房間$"="Ve<color\=#ff0000ff>lv</color>et Room"
 前往{{A}}=Go to {{A}}
-隧道擴張=Expand Tunnel
+隧道擴張=Tunnel Expansion
 檔案管理=<size\=24>Compendium</size>
 貴賓服務=VIP Service
 面具階級=Rank

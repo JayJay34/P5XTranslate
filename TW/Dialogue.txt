@@ -547,8 +547,8 @@ Down
 這一記擊倒可圈可點！=That knock down was remarkable!
 敵人倒下了，機會來了！=Enemy down, this is our chance!
 AOA
-用這一招終結戰鬥！=This is the end!
-接受反抗吾等的報應吧！=Receive the retribution for rebelling us!
+用這一招終結戰鬥！=I'll end it thus!
+接受反抗吾等的報應吧！=Accept the consequence of your resistance!
 Ally Downed
 居然被擊倒了！？……可惡！=Downed!? ...You bastard!
 Missed Gun
@@ -853,6 +853,7 @@ Down
 真不愧是WONDER，真可靠呢！=As expected from Wonder, so reliable!
 恭喜你！=Congratulations!
 就這樣一鼓作氣地上吧！=Let's keep going!
+好耶！這樣一來，局勢就倒向我們了！=Great! With this, the situation is in our favor!
 AOA
 那麼，開始吧…！=Now, let's get started...!
 {{A}}，要來最後一擊了嗎？={{A}}, is it time for finishing move?
@@ -868,16 +869,20 @@ Missed Gun
 啊ー！真的好可惜啊…！=Ah! What a pity...!
 Debuffs
 很痛苦的樣子…這樣下去的話…！=They look hurt... At this rate...!
+一起來做一次深呼吸吧！吸氣～！呼氣～！=Let's take a deep breath together! \nBreathe in～! Breathe out～!
 好像使不上力氣的樣子……不儘快幫助恢復的話……！=They can't muster strength... \nNeed to recover fast...!
 Near Death
+WONDER！不要失去意識！=Wonder! Stay awake!
 陷入危機了呢……但也只能堅持戰鬥了！=They are in danger... \nbut we can only fight!
 Faint
+大家一起，傾力保護WONDER吧！=Everyone, protect Wonder!
 WONDER！不要，請不要丟下我……！=Wonder! Don't leave me...!
 沒、沒關係嗎！？=A-are you okay!?
 緊、緊急事態！請救援！=E-emergency! Please help!
 怎麼辦……再這樣下去的話……=What to do... At this rate...
 Revive
 只要WONDER沒有放棄，我也會陪在你身邊！=As long as Wonder doesn't give up, I'll be by your side!
+太好了…！真的是太好了！=Great...! It's really great!
 太好了。你終於回來了……！=Great. Welcome back...!
 Victory
 哇…！贏了！我們勝利了！=Wow...! We did it! We won!
@@ -985,6 +990,7 @@ sr:"^(.*)同學 ，你怎麼了？\n突然發起呆來？$"="Hey $1-kun, you oka
 未來……規劃……=Future... plans...
 還沒怎麼想好……=Haven't thought about it yet...
 {{A}}，有什麼問題嗎？={{A}}, what's wrong?
+啊，{{A}}……=Ah, {{A}}...
 聽說這次沒有打勾的同學，\n統統要被算作「無志願」。=I heard that anyone who didn't check the box will be marked as "Undecided".
 我拿走了喔。=I'll take this.
 名為{{A}}的女學生=Female Student Named {{A}}
@@ -1085,7 +1091,7 @@ Choice 2
 這也算是正常反應吧。=That's a natural reaction.
 
 逐漸產生「求知慾」，是個好兆頭。\n{{A}}，這才值得吾親自來見你。=You're developing a "desire for knowledge", a good sign indeed. {{A}}, this alone makes my visit worthwhile.
-sr:"^吾知道你的名字，\n是(.*)對吧？$"="I know your name.\nIt's $1, right?"
+r:"^吾知道你的名字，\n是(.*)對吧？$"="I know your name.\nIt's $1, right?"
 叫吾{{A}}就好。\n記得發音要充滿敬意啊。=You may call me {{A}}, ensure you say it with the reverence it deserves.
 令人在意的事情太多了……=Too many to care about...
 嗯……\n你不叫吾的……名字嗎。=Hmm...\nWill you not speak my name?
@@ -1236,7 +1242,7 @@ Lufel Awakening Video
 <color\=#FF0000>{{A}}</color>躁動不安=<color\=#FF0000>Shedim</color> is restless
 剛才那般強力的攻擊又要來了！\n用<color\=#ff0000>防禦</color>來擋住吧！=Here comes the mighty attack from earlier! Focus on <color\=#ff0000>Defense</color> and block it!
 吾將如約將你的失敗染上紅色……=As promised, I will paint your defeat red...
-sr:"^不過，\n最後一擊就讓給(.*)你吧。$"="But, I will give $1 the spotlight."
+r:"^不過，\n最後一擊就讓給(.*)你吧。$"="But, I will give $1 the spotlight."
 按自己的慾望決定如何處理它吧！=Decide according to your desires!
 
 幹得不錯嘛。=Not bad.
@@ -2326,7 +2332,7 @@ Akashi Stabbed Video
 Chapter 4 Start
 ----------
 第四章=Chapter 4
-sr:"^啊，(.*)！\n早啊！$"="Ah, $1!\nMorning!"
+r:"^啊，(.*)！\n早啊！$"="Ah, $1!\nMorning!"
 你看今天早上的新聞了嗎？=Hey, did you see the news this morning?
 沒看=Didn't see it
 自助餐特輯？=Buffet special?
@@ -2343,7 +2349,7 @@ Choice 2
 「正在調查其與{{A}}的關係」……="Currently investigating their relationship with {{A}}"...
 Phone
 早，各位\n大家看到{{A}}的新聞了嗎？=Morning, everyone. Did you see the news about {{A}}?
-sr:"^看到了！\n正在跟(.*)聊這事呢$"="Saw it! I was just talking to $1 about it."
+r:"^看到了！\n正在跟(.*)聊這事呢$"="Saw it! I was just talking to $1 about it."
 正準備給你們發訊息\n我到了教室後才聽說的=I was just about to message you guys, only heard about it after I got to the classroom.
 班裡所有人都在聊這件事=Everyone in class is talking about it.
 我們班也是=Same in our class.
@@ -2486,12 +2492,12 @@ Choice 3
 Choice 1
 謝謝大家。=Thank you, everyone.
 Choice 2
-sr:"^不是啦，別光顧著加油，\n(.*)也來幫忙啊……$"="No, don't just cheer, $1 should help too..."
+r:"^不是啦，別光顧著加油，\n(.*)也來幫忙啊……$"="No, don't just cheer, $1 should help too..."
 {{A}}，謝謝。這畢竟是我答應的事，\n只是加油我也會很開心的。={{A}}, thank you. This is something I took on, so I'm happy just to have that sentiment.
 
 好了，差不多下午的課也要開始了。\n我們回教室吧？=Right, afternoon classes are about to start. \nShall we head back to the classroom?
 
-sr:"^好了，(.*)！\n我們出發吧～！$"="Okay, $1!\nLet's go～!"
+r:"^好了，(.*)！\n我們出發吧～！$"="Okay, $1!\nLet's go～!"
 去哪兒？=Where to?
 那疊紙是……=<size\=30>That stack of paper is...</size>
 
@@ -2571,7 +2577,7 @@ sr:"^(.*)，我們走吧！\n聽說集合地點是<color\=#ff0000>接待室</col
 你忘啦？\n就是跟{{A}}戲劇部的第一次碰頭啦。=Did you forget? \nIt's our first meeting with {{A}}'s drama club.
 我們雖然只是幫忙的，\n但{{A}}說讓我們也一起。走吧？=We're just helping out, but {{A}} asked us to listen to the discussion together. Let's go!
 
-sr:"^啊，是(.*)，還有(.*)。\n謝謝你們能來。$"="Ah, it's $1, and $2.\nThank you for coming."
+r:"^啊，是(.*)，還有(.*)。\n謝謝你們能來。$"="Ah, it's $1, and $2.\nThank you for coming."
 招人的事情……\n最後怎麼樣了？=So how did it go... \nwith the recruitment thing?
 很遺憾，目前依然是0人。\n看來{{A}}和我參演，已經板上釘釘了……=Unfortunately, still zero people.\nLooks like {{A}} and I will be performing...
 真的嗎……也就是說，\n{{B}}這邊只有{{C}}跟{{A}}出場嗎？=For real... So that means, the only people doing the play on {{B}}'s side are {{C}} and {{A}}.
@@ -2762,7 +2768,7 @@ sr:"^(.*)跟(.*)也是，\n要一起加油哦！$"="$1 and $2 too, \nlet's work 
 「媽媽！」="Mother!"
 「那天突如其來的爆炸事故……\n奪走了我們兄妹的一切。」="The sudden explosion on that day... \ntook everything from us siblings."
 「哥哥…姐姐……我也要戰鬥。\n為了奪回我們家幸福的每一天。」="Big brother... big sister... I'll fight too.\nTo take back the happy days we once had."
-sr:"^下面是(.*)的臺詞哦。$"="Next is $1's line."
+r:"^下面是(.*)的臺詞哦。$"="Next is $1's line."
 「沒錯！我們要成為怪盜！！」=<size\=22>"That's right! We must become Phantom Thieves!!"</size>
 「成～為～怪～盜……」=<size\=28>"Become～ Phantom～ Thieves..."</size>
 
@@ -2899,7 +2905,7 @@ Choice 2
 好像是跟工作相關的……\n不過{{A}}看起來不太喜歡她？=It seems to be work-related... But {{A}} doesn't seem to like her very much?
 打個招呼=Say hi
 把他撈出來=Get him out
-sr:"^我也覺得！我們上，(.*)。$"="I think so too! Let's go, $1."
+r:"^我也覺得！我們上，(.*)。$"="I think so too! Let's go, $1."
 喂～{{A}}！=Hey～ {{A}}!
 {{A}}，你還沒回去啊！\n太好了！你能來一下嗎？={{A}}, you haven't gone home yet! Great! Can you come over for a moment?
 sr:"^(.*)……還有(.*)？\n怎麼了？$"="$1... And $2?\nWhat's wrong?"
@@ -3494,7 +3500,7 @@ Choice 2
 確實，要是不小心被當做可疑目標，\n可就兩頭空了啊。=Exactly. If we get flagged as suspects, we'll lose on both fronts.
 當然無論是調查{{A}}，\n還是攻略{{B}}都需要繼續進行……=Of course, we'll keep investigating {{A}} and infiltrating the {{B}}...
 但也得做出學園祭前正常學生的樣子，\n好好準備活動才行呢。=But we should act like normal students preparing for the festival.
-sr:"^唔，沒錯。吾也跟(.*)說過，\n你們的本職是學生。$"="Indeed. As I told $1, you are students at heart."
+r:"^唔，沒錯。吾也跟(.*)說過，\n你們的本職是學生。$"="Indeed. As I told $1, you are students at heart."
 而且無論是努力學習還是享受活動……\n都是為了讓生存慾望更活躍。=Besides, whether it's studying hard or enjoying activities... it's all about making the desire to live more vibrant.
 讓生存的慾望更活躍嗎……=Making the desire to live more vibrant...
 要我刻苦學習，\n可能反倒會降低慾望呢……=Forcing me to study hard might actually kill my desire instead...
@@ -3677,7 +3683,7 @@ Choice 1
 如果你有什麼問題就儘管問哦。=If you have questions, just ask!
 Choice 2
 啊，是要問問題嗎？歡迎歡迎。=Oh, you want to ask something? Go ahead!
-sr:"^好，機會來了，(.*)！\n快問問(.*)的事！$"="Alright, this is your chance, $1! Ask about $2!"
+r:"^好，機會來了，(.*)！\n快問問(.*)的事！$"="Alright, this is your chance, $1! Ask about $2!"
 週刊BAKURO的主編……=<size\=20>Editor-in-chief of Weekly BAKURO...</size>
 
 Choice 1
@@ -3686,7 +3692,7 @@ Choice 2
 嗯？你說的{{A}}是……\n指我們BAKURO編輯部的嗎？=Hm? The {{A}} you're talking about... Is she from our BAKURO editorial?
 
 {{A}}，為什麼偏偏問起她？\n不會是……投訴什麼的吧？={{A}}, why are you asking about her? Don't tell me... you're filing a complaint?
-sr:"^不好，問得太直接了！\n對方似乎有戒心了，(.*)！$"="No, that's too straightforward! They're getting defensive, $1!"
+r:"^不好，問得太直接了！\n對方似乎有戒心了，(.*)！$"="No, that's too straightforward! They're getting defensive, $1!"
 我只是覺得她好漂亮……=I just think she's pretty...
 我對醜聞雜誌感興趣……=<size\=25>I'm interested in scandal magazines...</size>
 
@@ -3779,9 +3785,9 @@ Exposed by Aran
 你不是想知道她的事嗎？\n那位{{A}}……=Didn't you want to know about her? That {{A}}...
 今天之所以跟我一起來，\n也是想詳細調查她的背景吧？=The reason you came with me today, was to investigate her background in detail, right?
 這傢伙，為何連這都……！=This guy, how could they even...!
-sr:"^啊！他在那兒！\n(.*)！$"="Ah! He's over there! $1!"
+r:"^啊！他在那兒！\n(.*)！$"="Ah! He's over there! $1!"
 {{A}}……？\n大家這是怎麼了？={{A}}...? What happened to you all?
-sr:"^啊，我們很擔心(.*)，\n所以就來(.*)邊逛邊等……$"="Ah, we were worried about $1, so we came to $2 to look around while waiting..."
+r:"^啊，我們很擔心(.*)，\n所以就來(.*)邊逛邊等……$"="Ah, we were worried about $1, so we came to $2 to look around while waiting..."
 來{{B}}……？\n{{A}}明明是在神保町吧？=To {{B}}...? But {{A}} is in Jinbocho?
 啊，不是，那個……！\n今天不排練，所以我們想來吃頓好的！=Ah, no, that's...! We don't have practice today, so we wanted to eat something delicious!
 ……這樣啊。\n果然大家也都很想知道{{A}}的事呢。=...I see. So everyone's also curious about {{A}}.
@@ -3848,7 +3854,7 @@ Choice 1
 不過，\n我們如果刻意回避她的話也很危險。=But if we deliberately avoid her, that's risky too.
 如果她真是敵人，\n這樣反而會刺激到她……=If she really is an enemy, that will only irritate her...
 Choice 2
-sr:"^你這也太天真了吧，(.*)。$"="You're way too naive, $1."
+r:"^你這也太天真了吧，(.*)。$"="You're way too naive, $1."
 我懂你。我也覺得她雖然有點怪，\n但其實是個好孩子……=I get it. I also think she's a little odd, but I also think she's a good person...
 那也不能就這麼相信她，然後交代一切。\n但反過來想……=Still, we can't just blindly trust her and reveal everything. But on the other hand...
 如果徹底回避她的話，也很危險。=If if we deliberately avoid her, that's risky too.
@@ -3862,7 +3868,7 @@ sr:"^你這也太天真了吧，(.*)。$"="You're way too naive, $1."
 就說雖然無法告訴她工作的細節，\n但希望能正常做朋友……這樣吧。=Let's tell her we can't discuss work specifics, but we'd still like to stay on good terms...
 唔，確實這樣比較穩妥呢。=Hmm, that would be the more judicious approach.
 如果她還是執意打聽的話，\n吾等再考慮下一步的對策吧。=If she keeps pressing for info, then we'll figure out our next move.
-sr:"^那麼，(.*)。\n接下來你來說說在(.*)打聽到的消息吧。$"="Then, $1. Let's share what you found out at $2."
+r:"^那麼，(.*)。\n接下來你來說說在(.*)打聽到的消息吧。$"="Then, $1. Let's share what you found out at $2."
 她在公司裡名聲也這麼差啊……\n真是從裡到外都壞透了。=She even has such a bad reputation in the company... She's rotten to the core.
 不出所料啊。\n這種人，也難怪能到處瞎寫虛假報導。=Just as I expected. She just wrote a bunch of exaggerated articles.
 是啊，整個公司都知道了的話，\n那肯定不是一次兩次了。=Yeah, if the whole company knew about it, it must've happened more than once or twice.
@@ -3878,22 +3884,22 @@ sr:"^那麼，(.*)。\n接下來你來說說在(.*)打聽到的消息吧。$"="T
 應該沒錯。只不過……\n要怎樣才能「被她相中」呢？=That should be correct. But... how do we "win her favor"?
 sr:"^(.*)，那個(.*)編輯說過，\n你的顏值不錯，可能會被相中哦……$"="$1, that editor at $2 said, you have a pretty face, she might take a liking to you..."
 顏值！？什麼意思？=Pretty face!? What's that supposed to mean?
-sr:"^啊，我記得在中央大街的時候也是，\n她好像挺中意(.*)和(.*)的吧？$"="Ah, back in the Central Street, she seemed to like $1 and $2, right?"
-sr:"^的確！啊，那就讓(.*)和(.*)，\n一起色誘(.*)……？$"="Exactly! Ah, then what if $1 and $2 try to, seduce $3...?"
+r:"^啊，我記得在中央大街的時候也是，\n她好像挺中意(.*)和(.*)的吧？$"="Ah, back in the Central Street, she seemed to like $1 and $2, right?"
+r:"^的確！啊，那就讓(.*)和(.*)，\n一起色誘(.*)……？$"="Exactly! Ah, then what if $1 and $2 try to, seduce $3...?"
 開什麼玩笑=Are you kidding me
 我不想幹……=I don't want to...
 加油啊，{{A}}！=Keep it up, {{A}}!
 Choice 1
 就是啊！\n這也太強人所難了吧！=That's right! This is too much to ask!
 Choice 2
-sr:"^對吧！？\n還好(.*)我倆一條心……$"="Right!? Glad we're on the same page, $1..."
+r:"^對吧！？\n還好(.*)我倆一條心……$"="Right!? Glad we're on the same page, $1..."
 Choice 3
 別光甩給我啊！\n而且這跟加不加油有啥關係啊！=Don't just dump this on me! And what does "keep it up" even mean here!
 嗯，確實太冒險了……\n暫且把它作為我們的底牌吧。=Yes, it is too dangerous... Let's keep it as a last resort.
 別隨便搞這種底牌啊……=Don't just casually add it as a last resort...
 ……嗯，下午的課馬上要開始了。=...Hmm, the afternoon classes are about to start.
 總之先回教室吧。\n大家回去都想想接近{{A}}的辦法。=Let's head back to the classroom for now. Everyone, think of ways to get close to {{A}}.
-sr:"^今天也要排練哦！\n去體育館吧，(.*)。$"="We've got rehearsal today too! Let's go to the gym, $1."
+r:"^今天也要排練哦！\n去體育館吧，(.*)。$"="We've got rehearsal today too! Let's go to the gym, $1."
 好的，走吧！=Alright, let's go!
 還有事情要做=Got things to do
 喔，真有幹勁啊！\n那就趕緊去體育館吧，Let's go！=Oh, you're really motivated! Then let's hurry to the gym! Let's go!
@@ -4014,7 +4020,7 @@ Buono的話，就是「好吃」的意思啦。=And "Buono" means "tasty".
 你隨時都可以放鬆的=You can relax anytime
 希望在我們面前你能做自己=<size\=25>Hope you can be yourself around us</size>
 嗯，但是……=Hmm, but...
-sr:"^就是呀，(.*)說得對，\n做自己就行啦！難得現在只有男生呢！$"="Come on, $1's right, just be yourself! It's just us guys here anyway!"
+r:"^就是呀，(.*)說得對，\n做自己就行啦！難得現在只有男生呢！$"="Come on, $1's right, just be yourself! It's just us guys here anyway!"
 嗯……啊～=Hmm... Sigh～
 今天{{A}}說的……\n從我的演技裡「看不到我自己」……=Today, what {{A}} said... that she "couldn't see myself" in my acting...
 其實不止是演戲。=It's not just about acting.
@@ -4047,7 +4053,7 @@ sr:"^……猜對了。(.*)知道吧，\n我媽媽一直住在義大利。$"="..
 怎麼說呢……就因為愛自己的爸媽，\n所以才有話說不出口……吧。=How to say it... There are some things you can't say because you love your parents...
 是吧。對了，你也別總對我用敬語了。\n隨意就好，隨意。=Yes. Right, and drop the honorifics when addressing me. Just talk normally.
 真的？那就，{{B}}！\n……不對，還是得叫{{A}}吧？=Seriously? Then, {{B}}! ...No, I should still call you {{A}}.
-sr:"^就叫我(.*)就行，我也直接叫你(.*)。\n(.*)也是哦！$"="Just call me $1, and I'll just call you $2. You too, $3!"
+r:"^就叫我(.*)就行，我也直接叫你(.*)。\n(.*)也是哦！$"="Just call me $1, and I'll just call you $2. You too, $3!"
 現在的{{A}}就在做自己=<size\=29>The {{A}} now is the true self</size>
 {{A}}的語氣也完全不同了=<size\=26>{{A}}'s tone is completely different</size>
 {{A}}，的確！\n因為這拉麵太好吃了，嘴都軟了。={{A}}, true! The ramen's so good, I'm acting soft.
@@ -4108,7 +4114,7 @@ sr:"^(.*)有沒有合適的人選啊？\n……不過，要是有的話你早就
 我已經知曉你們的困境了。\n現在你們身陷「深淵迷宮」裡……=I've already grasped your predicament. Right now, you're trapped in the "Abyss Labyrinth"...
 而離開迷宮，就需要「{{A}}」……\n也就是我的指引。=And to escape the labyrinth, you need the guidance of the "{{A}}"... that is, me.
 {{A}}，完全不知道這人在說什麼……={{A}}, I have no idea what this guy's talking about...
-sr:"^話說回來，他到底是誰啊？\n(.*)你知道嗎？$"="Speaking of, who even is he? $1, do you know him?"
+r:"^話說回來，他到底是誰啊？\n(.*)你知道嗎？$"="Speaking of, who even is he? $1, do you know him?"
 是誰來著……？=Who...?
 我不認識=I don't know them
 他是「深淵的引導者」=He is the "Abyssal Guide"
@@ -4310,7 +4316,7 @@ Choice 2
 
 {{C}}？{{C}}？？{{B}}！？\n等等，誰啊！？是誰點了{{A}}！={{C}}? {{C}}?? {{B}}!? Wait, who!? \nWho started the {{A}}!
 喂，吾強調過多少次了！\n禁止從{{A}}站以外的地方潛入啊！=Hey, how many times do I have to say it! No infiltrating from anywhere but {{A}} Station!
-sr:"^不是我啊！是(.*)嗎！？$"="Wasn't me! Was it $1?"
+r:"^不是我啊！是(.*)嗎！？$"="Wasn't me! Was it $1?"
 不是不是=No no
 WIND？=Wind?
 那，難道說是WIND？=Then, was it Wind?
@@ -4321,7 +4327,7 @@ WIND？=Wind?
 {{A}}……這裡是哪兒……={{A}}... Where is this...
 {{A}}，你們是誰啊！？={{A}}, who are you!?
 {{C}}、這個聲音是……\n{{B}}和{{A}}？={{C}}, that voice... {{B}} and {{A}}?
-sr:"^那，難道那邊的是(.*)……？\n然後你是(.*)？$"="Then, that's $1...? And you're $2?"
+r:"^那，難道那邊的是(.*)……？\n然後你是(.*)？$"="Then, that's $1...? And you're $2?"
 你們這是穿的什麼啊！？\n也不是演出服吧，到底是……=What are you wearing!? These aren't stage costumes, right? What's going on...
 {{A}}，搞不懂，這是怎麼了。\n發生了什麼？還有那邊那個玩偶是誰啊？={{A}}, I don't get it. What's going on? \nAnd who's that mascot?
 誰是玩偶啊！你哪怕說{{A}}都比……\n算了，煩死了！=Who are you calling a mascot! Even {{A}} would be... Whatever, I'm so annoyed!
@@ -5871,7 +5877,7 @@ JOKER也會這樣？=Even Joker?
 抱歉，讓你擔心了啊。\n到了{{A}}，吾的心情完全平靜下來了。=I'm sorry to have worried you. By the time we got to {{A}}, I had calmed down completely.
 真不可思議啊……\n之前那會兒心裡明明亂糟糟的。=It's strange... Even though my heart was in such a frenzy.
 對了……剛剛來{{B}}，\n是為了讓{{A}}散散心……=Right... We came to {{B}} to help {{A}} relax...
-sr:"^胸口煩悶的感覺好像已經徹底散去了。\n謝謝你啊，(.*)。$"="It's like something has been weighing down on my chest has been lifted. Thank you, $1."
+r:"^胸口煩悶的感覺好像已經徹底散去了。\n謝謝你啊，(.*)。$"="It's like something has been weighing down on my chest has been lifted. Thank you, $1."
 唔……這麼一想，\n肚子就餓了呢。=Hmm... When I think about it,\nI'm hungry.
 吾今天想吃滷蛋和紅燒肉！=I want to eat soy eggs and char siu today!
 sr:"^(.*)！快帶吾去(.*)！$"="$1! Take me to $2!"
@@ -5885,7 +5891,7 @@ P3R Collab
 歡迎蒞臨此地……\n謹此向您致以謝意。=Welcome to this place... I sincerely appreciate your presence.
 這裡就是……？=Is this really...?
 怎麼進來的……？=<size\=27>How did you get in here...?</size>
-sr:"^這裡是基於(.*)……\n您的「認知」所誕生的世界……$"="This is the world born from $1... \nyour "cognition"..."
+r:"^這裡是基於(.*)……\n您的「認知」所誕生的世界……$"="This is the world born from $1... \nyour "cognition"..."
 關於詳細情況，請恕我保密。\n這是「企業機密」。=Regarding the details, I must keep them confidential. This is "trade secret".
 這裡既不是您曾造訪過的「{{A}}」，\n也不是現實中的「{{A}}」。=This is neither the "{{A}}" you have visited nor the "{{A}}" in reality.
 這是基於您的認知所誕生的「{{A}}」。=This is a "{{A}}" born based on your cognition.
@@ -5946,7 +5952,7 @@ Waxing Cresent 1
 像往常一樣，反而更奇怪。=As usual, which makes it even stranger.
 不如說，到處都是些奇怪的事。=Rather, there are strange things everywhere.
 先是在{{A}}裡和{{B}}走散……=First we got separated from {{B}} in {{A}}...
-sr:"^然後又是遇見(.*)，\n又是遇見很強的陰影……$"="Then we met $1, and encountered some strong Shadows..."
+r:"^然後又是遇見(.*)，\n又是遇見很強的陰影……$"="Then we met $1, and encountered some strong Shadows..."
 到現在，穿過一扇門就到了{{A}}外面。\n真搞不懂，到底是怎麼回事啊……？=Now, we're outside of {{A}} through a door. I really don't get it... What's going on?
 sr:"^(.*)，\n你有注意到什麼嗎？$"="$1,\nDid you notice anything?"
 我之前在這裡……=I was here earlier...
@@ -6019,7 +6025,7 @@ Choice 3
 sr:"^……(.*)不嫌棄的話，送給你吧？\n算是來這裡的……紀念。$"="...If $1 wouldn't mind, I'd like you to have this. Consider it a... souvenir from this place."
 謝謝啦=Thanks
 我收下啦！=I'll take it!
-sr:"^嗯……不知道為什麼，\n我很想讓(.*)收著。$"="Yes... I don't know why, I really want $1 to have this."
+r:"^嗯……不知道為什麼，\n我很想讓(.*)收著。$"="Yes... I don't know why, I really want $1 to have this."
 我會好好珍惜=I'll cherish it
 擺在哪裡好呢=Where should I put it
 要不就放在最顯眼的地方？=How about putting it somewhere obvious?
@@ -6075,7 +6081,7 @@ Waxing Cresent 2
 ……看來是回到{{A}}了。=...Seems like we're back in {{A}}.
 和進到{{A}}之前相比，\n現在的樓層更高了呢。=Compared to before entering {{A}}, we're on a higher floor now.
 {{A}}呢……={{A}}...
-sr:"^只能先調查一下了。\n(.*)，(.*)，可以嗎？$"="We'll have to investigate first. $1, $2, is this okay?"
+r:"^只能先調查一下了。\n(.*)，(.*)，可以嗎？$"="We'll have to investigate first. $1, $2, is this okay?"
 啊……你們快看！\n那邊有個看起來很厲害的陰影。=Ah... look over there! \nThat Shadow looks really powerful.
 是啊……\n但不打倒它的話就無法前進。=Yes... But we can't move forward without defeating it.
 小心行事=Proceed carefully
@@ -6186,7 +6192,7 @@ Waxing Cresent 5
 想著能不能和誰會合，\n我就先朝著{{A}}上層前進了……=I thought maybe I could meet up with someone, so I headed to the upper floors of {{A}} first...
 ……結果誰也沒能會合。=...But I couldn't find anyone.
 再這樣遇不到任何人的話，\n我也不知道該怎麼辦了。=If this kept up, I wasn't sure what to do.
-sr:"^那和我們還有(.*)的情況，\n都差不多呢。$"="Then your situation is pretty much the same as ours and $1's."
+r:"^那和我們還有(.*)的情況，\n都差不多呢。$"="Then your situation is pretty much the same as ours and $1's."
 我們也是回過神來，就發現自己1個人\n在{{A}}裡。這樣看來其他人果然也……=We also suddenly found ourselves alone in Tartarus. So it seems the others are also...
 {{A}}的同伴有幾人？=<size\=25>How many teammates do you have?</size>
 還有多少人走散了？=<size\=27>How many are still missing?</size>
@@ -6217,7 +6223,7 @@ sr:"^那和我們還有(.*)的情況，\n都差不多呢。$"="Then your situati
 嗯。不過，{{A}}的情況很奇怪，\n千萬不能掉以輕心。=Yeah. But {{A}} is acting strange, \ndon't let your guard down.
 好。\n那我們上吧！=Okay. \nLet's go!
 什麼！？衣服變了……！？=What!? Your clothes changed...!?
-sr:"^啊，(.*)使用(.*)的時候，\n外表好像會發生變化。$"="Ah, when $1 uses his $2, \nhis appearance changes."
+r:"^啊，(.*)使用(.*)的時候，\n外表好像會發生變化。$"="Ah, when $1 uses his $2, \nhis appearance changes."
 原、原來如此。這世上的{{A}}使用者，\n還真是多種多樣啊……=O-oh, I see. {{A}} users in this world really come in all kinds, huh...
 不過，外表什麼的不重要。\n讓我見識一下你的實力吧！=But appearances don't matter. \nShow me what you've got!
 ……呼。比我想像中還要輕鬆呢。=...Hah. That was easier than I expected.
@@ -6228,7 +6234,7 @@ sr:"^啊，(.*)使用(.*)的時候，\n外表好像會發生變化。$"="Ah, whe
 倒不是想試……我是覺得要是有那樣的力量，\n戰術選擇就會更豐富。=It's not that I want to... But having that power would give us more tactical options.
 如果能彌補我「波呂狄烏刻斯」的弱點，\n更強的敵人也能輕鬆應對。=If I could cover for "Polydeuces'" weaknesses, even stronger enemies would be easier to handle.
 真是認真啊……=You're so serious...
-sr:"^話說回來，(.*)改變外表的事，\n也有點讓人吃驚啊。$"="By the way, $1's appearance change was pretty surprising too."
+r:"^話說回來，(.*)改變外表的事，\n也有點讓人吃驚啊。$"="By the way, $1's appearance change was pretty surprising too."
 到底是什麼原理？\n是{{A}}能力的一部分……嗎？=How does that even work? \nIs it part of the {{A}}'s ability...?
 具體的我也不太清楚=I'm not entirely sure
 不過，我們對召喚器具體原理之類的……\n也不太清楚呢。=But we don't really understand the specifics of how our Evokers work either...
@@ -6251,14 +6257,14 @@ sr:"^(.*)被捲進來的原因，\n說不定也和(.*)的異變有關。$"="The 
 是啊。在你們加入之前，\n也沒有出現過現在這種情況。=Yes. Before you guys showed up, \nnothing like this ever happened.
 我想再梳理一下現狀。\n可以吧？=I want to organize what we know so far.\nIs that okay?
 我們的目標是和同伴會合，\n然後離開{{A}}。=Our goal is to regroup with our teammates and escape {{A}}.
-sr:"^而(.*)的目標，\n是尋找失蹤的同伴，以及一樣也要離開這裡。$"="Meanwhile, $1's goal is to find their missing teammates and also escape."
+r:"^而(.*)的目標，\n是尋找失蹤的同伴，以及一樣也要離開這裡。$"="Meanwhile, $1's goal is to find their missing teammates and also escape."
 但是，出現了「從未見過的門」，\n進入那扇門就能到外面去。=But now, there's a "door we've never seen before", and going through it leads outside.
 而這個「外面」，不知道為什麼，\n既不是{{A}}，人們的狀態也很奇怪。=Yet this "outside" isn't the {{A}}, \nand people are acting strangely.
 ……到這裡為止，我說得對嗎？=...Did I get everything right?
 沒錯。啊，再補充一下，\n「門」最先出現的地方，是{{A}}前。=Yes. Oh, one more thing, the "door" first appeared at {{A}}.
-sr:"^據(.*)所說，他被陰影襲擊的時候，\n那扇門就突然出現了。$"="According to $1, it suddenly appeared when he was attacked by a Shadow."
+r:"^據(.*)所說，他被陰影襲擊的時候，\n那扇門就突然出現了。$"="According to $1, it suddenly appeared when he was attacked by a Shadow."
 盡是些奇怪的事啊……=This is all so strange...
-sr:"^而且，在(.*)，\n出現了(.*)原本走散的同伴。$"="And at $1, $2's missing companion showed up."
+r:"^而且，在(.*)，\n出現了(.*)原本走散的同伴。$"="And at $1, $2's missing companion showed up."
 而且她的樣子也很「奇怪」。=But she was acting "strange" too.
 感覺不像{{A}}=Didn't feel like {{A}}
 感覺非常違和=Something felt off
@@ -6311,7 +6317,7 @@ Waxing Cresent 8
 真……真的嗎？=R-really?
 Choice 1
 {{A}}？很懂我嘛。={{A}}? You get me
-sr:"^難得(.*)也在，\n正是嘗試新戰略的好機會。$"="Since $1 is here too, it's a great chance to try out some new strategies."
+r:"^難得(.*)也在，\n正是嘗試新戰略的好機會。$"="Since $1 is here too, it's a great chance to try out some new strategies."
 Choice 2
 sr:"^……我就不多說什麼了，\n但幸好(.*)不是「那樣的人」。$"="...I won't say much, but I'm glad $1 isn't "that kind of person"."
 {{A}}……\n好像很喜歡戰鬥……？={{A}}... seems to really like fighting...?
@@ -6325,7 +6331,7 @@ sr:"^……我就不多說什麼了，\n但幸好(.*)不是「那樣的人」。
 Waxing Cresent 9
 啊，大家先停下！=Ah, everyone, stop!
 看那邊。好像有「守衛」……！=Look over there. There's a "Guardian"...!
-sr:"^哼，終於出現了。\n(.*)，準備好了嗎？$"="Hmph, finally showed up. $1, you ready?"
+r:"^哼，終於出現了。\n(.*)，準備好了嗎？$"="Hmph, finally showed up. $1, you ready?"
 那當然=Of course
 我加油=I'll do my best
 好，就是這股氣勢！=Good, that's the spirit!
@@ -6397,12 +6403,12 @@ Waxing Cresent 14
 贊成=Agreed
 那樣更好=That'd be better
 那就這麼定了。分組的話……=Then it's settled. For the teams...
-sr:"^我和(.*)一組吧？\n畢竟我不知道(.*)長什麼樣。$"="I'll pair up with $1. Since I don't know how $2 looks like."
+r:"^我和(.*)一組吧？\n畢竟我不知道(.*)長什麼樣。$"="I'll pair up with $1. Since I don't know how $2 looks like."
 嗯，我贊成。\n那我和{{A}}去那邊看看。=Yes, I agree. Then I'll go with {{A}} and check out that side.
 轉一圈後集合=<size\=26>We'll regroup after scouting</size>
 這邊就交給我們吧！=We'll handle this area
-sr:"^嗯。\n(.*)也小心。$"="Right. $1, be careful too."
-sr:"^好，那我們就在這邊轉轉吧。\n(.*)，(.*)。$"="Alright, let's look around here then. \n$1, $2."
+r:"^嗯。\n(.*)也小心。$"="Right. $1, be careful too."
+r:"^好，那我們就在這邊轉轉吧。\n(.*)，(.*)。$"="Alright, let's look around here then. \n$1, $2."
 你好，我們要點餐……=Hello, we'd like to order...
 ……看來沒有變化。\n而且其他客人也……=...No change, huh. \nAnd the other customers too...
 果然，還是聽不清對話內容……=Just as before, their voices are still unclear...
@@ -6411,7 +6417,7 @@ sr:"^好，那我們就在這邊轉轉吧。\n(.*)，(.*)。$"="Alright, let's l
 客人們的聲音聽不清……\n{{A}}的聲音卻很清楚……=The customers' voices are muffled... \nbut {{A}}'s is clear...
 不同點是……=The difference is...?
 和{{A}}的差異是……？=What sets {{A}} apart...?
-sr:"^雖然有可能是……\n(.*)認不認識的區別……$"="It might be related to whether $1 knows them or not..."
+r:"^雖然有可能是……\n(.*)認不認識的區別……$"="It might be related to whether $1 knows them or not..."
 但我覺得，\n這和{{A}}是「{{B}}使用者」有關。=But I think it's because {{A}} is a "{{B}} user".
 不知道{{A}}他們有沒有和你講過，\n那些意外闖入{{B}}的「失蹤者」。=Not sure if {{A}} and the others mentioned this, but those who accidentally wander into {{B}}, the "missing persons".
 意外闖入{{A}}的人，\n無一例外，幾乎都會陷入無氣力的狀態。=Almost all of them fall into a listless state.
@@ -6558,7 +6564,7 @@ Rank 11
 不需要道歉=No need to apologize
 我不介意=I don't mind
 我支持你=I support you
-sr:"^嗯……！謝謝你，(.*)。$"="Yes..! Thank you, $1."
+r:"^嗯……！謝謝你，(.*)。$"="Yes..! Thank you, $1."
 已經連續練習一個小時了……=Already practiced for an hour straight...
 準確度很明顯下降了……=Accuracy has dropped significantly...
 我打！=I'll hit!
@@ -6655,11 +6661,11 @@ Choice 3
 你好，我想點巧克力聖代、牛排、\n哈密瓜蘇打水、蛋包飯，還有……=Hello, I'd like to order a chocolate parfait, steak, melon soda, omelet rice, and...
 還有……！=Also...!
 嗯～！\n聖代太好吃了！=Mmm～!\nThe parfait is amazing!
-sr:"^拜託(.*)你當我的教練，\n果然是我最正確的選擇。$"="I'm glad I asked $1 to coach me."
+r:"^拜託(.*)你當我的教練，\n果然是我最正確的選擇。$"="I'm glad I asked $1 to coach me."
 要是我一個人的話，\n肯定會一直埋著頭努力的。=If I was alone, \nI would definitely have kept trying.
 當然，努力是很重要的……\n只是我沒有察覺到僅靠努力是不夠的。=Of course, hard work is important... \nBut I didn't realize that alone wasn't enough.
 ……說實話，跟{{A}}的比賽，\n看上去我完全沒有勝算對吧。=...To be honest, I don't think I have any chance of winning against {{A}}.
-sr:"^明明贏不了……\n(.*)你還……$"="And yet...\n$1 still..."
+r:"^明明贏不了……\n(.*)你還……$"="And yet...\n$1 still..."
 為什麼、你能為我做這麼多呢……？=Why, are you doing all this for me...?
 為了同伴，應該的=<size\=24>It's only right for my teammate</size>
 因為{{A}}對我來說很重要=<size\=28>{{A}} is very important to me</size>
@@ -7535,7 +7541,7 @@ Rank 17
 非常美妙的歌曲=Very beautiful song
 歌名定了嗎？=<size\=25>Decided on the song title yet?</size>
 這是一首，\n為那些默默支持我的人們而創作的歌曲。=This is a song dedicated to those who have supported me.
-sr:"^還有，最重要的是……(.*)。$"="And, most importantly... $1."
+r:"^還有，最重要的是……(.*)。$"="And, most importantly... $1."
 感覺不像還沒做完=Doesn't feel incomplete
 接下來打算怎麼加工？=What's the next step?
 我們一起編曲吧=<size\=24>Let's arrange the song together</size>
@@ -8309,7 +8315,7 @@ sr:"^(.*)！\n我一直在等你哦！那個……$"="$1! I've been waiting for 
 食材就在路上的超市買吧？\n那麼，出發，ＧｏＧｏ！=Let's buy some ingredients at a supermarket on the way? Okay then, go go!
 啊，果然太突然了……？\n也是啊，突然提出來，對不起……=Ah, it was too sudden after all...?\nRight, sorry for asking out of the blue...
 你吃了好多～\n這頓飯沒有白做！=You ate a lot～\nIt was worth making it!
-sr:"^話說(.*)，我居然會做飯，\n好意外！你有沒有這樣想過？$"="I mean, $1.\nHave you ever thought about how I could cook?"
+r:"^話說(.*)，我居然會做飯，\n好意外！你有沒有這樣想過？$"="I mean, $1.\nHave you ever thought about how I could cook?"
 老實說，想過=<size\=25>Honestly, I've thought about it</size>
 我早就覺得你會做飯=<size\=23>I've always known you can cook</size>
 對吧？這就是所謂的反差萌，\n是不是讓人有些心動？=Right? Right? This is called "gap-moe".\nDid I make your heart flutter?
@@ -8319,7 +8325,7 @@ sr:"^話說(.*)，我居然會做飯，\n好意外！你有沒有這樣想過？
 但是，突然提出要來你家，\n實在是有點可疑吧。=But, I thought it might be a bit suspicious to suddenly say that I want to go your home.
 不過你看，現在我們是那個了，對吧？\n就是那種做些什麼也可以的關係……=Look, we're not like that, right? We're in a relationship where we can do anything...
 啊，不是那個的意思！\n我是說很正當的那些事情。=Ah, I didn't mean it like that!\nI mean something that's very proper.
-sr:"^真是的，\n(.*)也說點什麼啦～！$"="Come on, $1.\nSay somthing～!"
+r:"^真是的，\n(.*)也說點什麼啦～！$"="Come on, $1.\nSay somthing～!"
 那要去房間嗎？=<size\=28>Want to go to my room?</size>
 我想再和你一起待會兒=<size\=30>I want to stay with you longer</size>
 在這個時候說這種話！？\n不就更奇怪了嗎？=Saying that at a time like this!?\nIsn't it even more strange?
@@ -9030,7 +9036,7 @@ sr:"^(.*)是你啊……\n抱歉，今天不會去巡邏。$"="$1, it's you...\n
 消防隊每天的訓練，\n我都會寫下活動日誌。=As part of the fire services' daily routine, \nI always keep an activity journal.
 只要重新看一遍日誌，或許就能想起來，\n當時的行人是在哪裡看到過。=If I reread that journal, maybe I'll remember where I saw that passerby.
 我居然連這麼簡單的事情都沒有注意到……\n果然只有我一個人是不行的。=I can't even notice something as simple as that... \nI guess I can't do this alone.
-sr:"^多虧(.*)，幫大忙了。\n這麼一來，說不定就能知道些什麼。$"="$1, you saved me. Maybe this will help me understand something."
+r:"^多虧(.*)，幫大忙了。\n這麼一來，說不定就能知道些什麼。$"="$1, you saved me. Maybe this will help me understand something."
 不過就算我發現了對應的人……\n也沒有任何確切的證據。=But even if we found the right person... \nWe would have no solid evidence.
 最糟糕的可能是……\n這些全都是我的誤會。=At worst, it's possible that I just misunderstood everything.
 如果是這樣你會怎麼做？=If so what would you do?
@@ -9132,7 +9138,7 @@ sr:"^(.*)，麻煩打119！$"="$1, please call 119!"
 只是碰巧啦=It's just a coincidence
 結果好就好=<size\=30>All's well that ends well</size>
 如果和你在一起，我的願望就能實現……=If I'm with you, my wish will come true...
-sr:"^不，我在說什麼呢？\n不能繼續連累(.*)……！$"="No, what am I saying? \nI can't keep dragging $1 into this...!"
+r:"^不，我在說什麼呢？\n不能繼續連累(.*)……！$"="No, what am I saying? \nI can't keep dragging $1 into this...!"
 你從剛才起，在說什麼呢？=<size\=30>What have you been saying?</size>
 抱歉……沒什麼。=Sorry... It's nothing.
 剛才{{A}}的樣子，看起來可不一般哦。=The way {{A}} looked earlier was quite unusual.
@@ -9523,7 +9529,7 @@ Rank 7
 想看看拍好的影片=<size\=30>Want to see the footage</size>
 還沒拍呢。\n……倒不如說，今天才是首次出鏡。=Haven't filmed yet.\n...Actually, today's my first time on camera.
 本來想在家裡拍的……\n但爸媽都在家，感覺有點不好意思。=I was gonna film at home... But with my parents around, I felt kinda awkward.
-sr:"^而且，感覺跟(.*)一起的話，\n我能更自然一些。$"="Plus, with $1 around, I feel like I can be more myself."
+r:"^而且，感覺跟(.*)一起的話，\n我能更自然一些。$"="Plus, with $1 around, I feel like I can be more myself."
 我們找個合適的地方拍影片吧，\n你覺得哪裡比較好？=Let's look for a suitable filming spot, got any locations in mind?
 和{{A}}一起尋找適合拍影片的地方……=Looked for a suitable filming spot with {{A}}...
 這附近就行吧？\n……腦袋都拍進去了嗎？=Is this spot okay?\n...Is my whole head in frame?
@@ -9602,10 +9608,10 @@ Rank 9
 我覺得分析得很好=That's a great analysis
 粉絲增加後應該就能好轉=<size\=26>It should get better with more fans</size>
 噢……{{A}}！=Oh... {{A}}!
-sr:"^銀石賽道！\n(.*)你知道嗎？$"="Silverstone circuit!\nDo you know, $1?"
+r:"^銀石賽道！\n(.*)你知道嗎？$"="Silverstone circuit!\nDo you know, $1?"
 當然知道=Of course I know
 是有名的賽道嗎？=Is it a famous track?
-sr:"^不愧是(.*)！\n這可是英國有名的賽道。$"="As expected from $1!\nIt's a famous track in the UK."
+r:"^不愧是(.*)！\n這可是英國有名的賽道。$"="As expected from $1!\nIt's a famous track in the UK."
 要拍下來嗎？=Want to film this?
 笑得真美=Such a beautiful smile
 就是這個。=That's it.
@@ -9659,7 +9665,7 @@ Rank 11
 你缺錢嗎？=<size\=30>Are you short of money?</size>
 好有行動力啊=So motivated
 要拍賽車之旅嗎？=<size\=28>Want to film a racing trip?</size>
-sr:"^如果粉絲數超10萬人的話，\n我也會帶(.*)你一起去哦。$"="If I reach 100k followers, I'll take $1 along too!"
+r:"^如果粉絲數超10萬人的話，\n我也會帶(.*)你一起去哦。$"="If I reach 100k followers, I'll take $1 along too!"
 我這可不是在開玩笑。\n……一言為定哦。=I'm not kidding.\n...It's a promise.
 拍了{{A}}玩賽車遊戲的影片。=Filmed {{A}} playing a racing game.
 和若有所思的{{A}}道別了……=Said goodbye to a thoughtful {{A}}...
@@ -9712,7 +9718,7 @@ Hangouts
 還挺喜歡的=Quite like it
 恐怖片有點……=Horror movies are...
 我就知道你會這麼說。=I knew you'd say that.
-sr:"^對了。\n喂，(.*)。$"="Right.\nHey, $1."
+r:"^對了。\n喂，(.*)。$"="Right.\nHey, $1."
 下次一起去看吧？=Let's go watch it together next time?
 和{{A}}一起去了{{B}}的電影院，\n被今年的恐怖大片嚇得瑟瑟發抖……=Went to the {{B}} movie theater with {{A}} and trembled in fear at this year's blockbuster horror...
 和{{A}}一起去了{{B}}的電影院，\n被海外恐怖片的血腥畫面震撼到……=Went to the {{B}} movie theater with {{A}} and was shocked by the gory scenes in the foreign horror film...
@@ -9774,7 +9780,7 @@ Manaka SL
 sr:"^……啊，(.*)，你好。$"="...Ah. $1, hello."
 我剛好和奶奶一起來到這裡。=I just got here with Grandma.
 我們最近常來這邊散步，\n感覺{{A}}也特別喜歡這裡呢。=We've been walking here a lot lately, I think {{A}} also likes this place very much.
-sr:"^是的……如果可以的話，\n(.*)要不要也一起呢……$"="Yes... If it's possible, \nwould $1 like to come along too..."
+r:"^是的……如果可以的話，\n(.*)要不要也一起呢……$"="Yes... If it's possible, \nwould $1 like to come along too..."
 和{{A}}她們一起度過=<size\=30>Spend time with {{A}}</size>
 
 舞臺上的演奏正在進行中……=A stage performance is in progress...
@@ -9791,16 +9797,16 @@ Choice 1
 Choice 2
 真是的，你還真不客氣呢。\n不過，我欣賞的也是你這一點哦。=Really, you are so cheeky. But, that's also what I like about you.
 Choice 3
-sr:"^要是沒有(.*)小朋友，\n我和(.*)也不會有現在這樣的改變。$"="If $1 was not there, $2 and I wouldn't have changed to what we are now."
+r:"^要是沒有(.*)小朋友，\n我和(.*)也不會有現在這樣的改變。$"="If $1 was not there, $2 and I wouldn't have changed to what we are now."
 演奏似乎結束了……=The performance ended...
 那個，奶奶……\n我，那個……嗯……=Um, Grandma...\nI, um... um...
 是想去舞臺上表演吧？=You want to perform on stage, right?
-sr:"^雖然有點不好意思……\n難得(.*)也在……$"="I feel a little embarrassed though... it's rare that $1 is here too..."
+r:"^雖然有點不好意思……\n難得(.*)也在……$"="I feel a little embarrassed though... it's rare that $1 is here too..."
 {{A}}，奶奶怎麼可能拒絕可愛孫女的請求呢？={{A}}, how could Grandma refuse the request of her adorable granddaughter?
 薩克斯風？=Saxophone?
 {{A}}要幹什麼？=<size\=25>What is {{A}} going to do?</size>
 這裡有可供租借的樂器哦。\n不過，好像沒什麼人來借。=There are instruments available for rental. But it seems not many people borrow them.
-sr:"^好！讓(.*)聽聽我們精彩的演奏吧！$"="Good! Let $1 listen to our wonderful performance!"
+r:"^好！讓(.*)聽聽我們精彩的演奏吧！$"="Good! Let $1 listen to our wonderful performance!"
 嗯，嗯……！=Y-yes...!
 兩人去做演奏準備了……=The two went to prepare...
 兩人的演奏開始了……！=The two began to perform...!
@@ -9817,7 +9823,7 @@ sr:"^好！讓(.*)聽聽我們精彩的演奏吧！$"="Good! Let $1 listen to ou
 表演太精彩了=That was amazing
 謝啦，因為是在你面前，\n所以比平時更努力了呢。=Thanks! Since you were here, I put in extra effort.
 {{A}}也一樣吧？={{A}} too?
-sr:"^我想讓(.*)\n聽到最棒的歌聲……$"="I wanted $1 to hear the best voice..."
+r:"^我想讓(.*)\n聽到最棒的歌聲……$"="I wanted $1 to hear the best voice..."
 所以，如果可以的話，下次還……=So, if possible, maybe next time...
 對，對不起……！=S-sorry...!
 有沒有受傷？\n抱歉，我沒注意到這有個臺階……=Are you hurt? Sorry, I didn't notice there was a step...
@@ -9841,13 +9847,13 @@ sr:"^我想讓(.*)\n聽到最棒的歌聲……$"="I wanted $1 to hear the best 
 晚上行動雖然比較方便……\n但和{{A}}出去的話還是太危險了。=It's easier to get around at night... but going out with {{A}} would still be too risky.
 就像剛才那樣，要是沒注意到臺階，\n把輪椅弄翻就糟了。=Like earlier, if I miss a step, the wheelchair could tip over, and that'd be bad.
 奶奶……=Grandma...
-sr:"^對了！我說啊……\n如果(.*)小朋友可以的話……$"="Right! I say...\nIf $1 is up for it..."
+r:"^對了！我說啊……\n如果(.*)小朋友可以的話……$"="Right! I say...\nIf $1 is up for it..."
 你能不能陪{{A}}去散步呀？=Would you mind going for a walk with {{A}}?
 我剛才也說了，這是醫生建議的。=As I said, this is what the doctor recommended.
 呼吸下新鮮空氣，萌生「想要走路」的念頭，\n這點也很重要呢。=It's important to want to go outside and get some fresh air.
 但我最多只能陪她在附近走走……=But the best I can do is accompany her to nearby places...
 所以，如果可以的話……=So, if you don't mind...
-sr:"^奶，奶奶……！不行啦，\n(.*)也很忙的。$"="G-grandma...! No way, $1 is busy too."
+r:"^奶，奶奶……！不行啦，\n(.*)也很忙的。$"="G-grandma...! No way, $1 is busy too."
 一起去散步吧=Let's go for a walk
 為了{{A}}的話沒問題=For {{A}}'s sake
 我喜歡散步=I like taking walks
@@ -9855,10 +9861,10 @@ sr:"^奶，奶奶……！不行啦，\n(.*)也很忙的。$"="G-grandma...! No 
 {{A}}……！？\n嗯，那個，那個……！={{A}}...!?\nOh, uh, um...!
 那正好呀。\n你就陪{{A}}一起去散步吧？=That's perfect. \nWhy don't you go for a walk with {{A}}?
 ……{{A}}，真的可以嗎……？=...{{A}}, is this really okay...?
-sr:"^好，就這麼說定了！\n那就拜託你了，(.*)小朋友！$"="Okay, it's settled! \nThen I'll leave it to you, $1!"
+r:"^好，就這麼說定了！\n那就拜託你了，(.*)小朋友！$"="Okay, it's settled! \nThen I'll leave it to you, $1!"
 既然說定了，那就趕緊去附近走走吧。\n老闆，這邊結帳！=Now that it's settled, let's go for a walk nearby. Boss, check please!
 對了，{{A}}……=Right, {{A}}...
-sr:"^難得和(.*)一起，\n得穿得漂漂亮亮的出門才對呀！$"="Since you are going out with $1, let's dress up nicely!"
+r:"^難得和(.*)一起，\n得穿得漂漂亮亮的出門才對呀！$"="Since you are going out with $1, let's dress up nicely!"
 {{A}}\n沒，沒關係的啦，這樣就好……！={{A}}\nI-it's okay, even like this...
 不行，偶爾也得給你買件可愛的衣服。=No, just let me buy you some cute clothes once in a while.
 稍微等下哦，\n來吧，我們走，{{A}}！=Just wait a bit, okay?\nCome on, let's go, {{A}}!
@@ -9868,7 +9874,7 @@ sr:"^難得和(.*)一起，\n得穿得漂漂亮亮的出門才對呀！$"="Since
 很有{{A}}的風格=<size\=26>Very much in {{A}}'s style</size>
 對吧？\n我就覺得肯定很合適！=Right? I think it's perfect!
 哎呀，奶奶真是的……=Ah, Grandma...
-sr:"^好了，現在去散步吧。\n(.*)小朋友，輪椅就交給你啦。$"="Alright, let's go for a walk. \n$1, I'll leave the wheelchair to you."
+r:"^好了，現在去散步吧。\n(.*)小朋友，輪椅就交給你啦。$"="Alright, let's go for a walk. \n$1, I'll leave the wheelchair to you."
 那邊的小姑娘！\n剛出鍋的炸肉餅，要不要來點兒啊！=That young lady! Would you like some freshly fried patties?
 哇，看起來很好吃的樣子。\n來3個……啊不，5個吧，留著當晚飯。=Wow, it looks delicious.\nLet's have 3... Ah no, 5, save them for dinner.
 謝謝……！=Thank you...!
@@ -9886,7 +9892,7 @@ sr:"^好了，現在去散步吧。\n(.*)小朋友，輪椅就交給你啦。$"=
 我好像能感覺到=Seems to feel it
 是這樣的嗎……？=Is that so...?
 嗯，你以後也會明白的。=Well, you will understand it later.
-sr:"^啊，有好多呢，\n給(.*)1袋吧，稍等哦。$"="Ah, there's so many, let's give $1 one, wait a minute."
+r:"^啊，有好多呢，\n給(.*)1袋吧，稍等哦。$"="Ah, there's so many, let's give $1 one, wait a minute."
 {{A}}，看起來很好吃……={{A}}, this looks delicious...
 {{A}}往贈品袋子裡張望，\n看起來很開心的樣子……={{A}} looked into the gift bag, she looks very happy...
 是不是就是被這份純真所吸引，\n所以很多人都想送她禮物呢……？=<size\=28>Is it her pure innocence that draws people in and makes everyone want to give her gifts...?</size>
@@ -9903,10 +9909,10 @@ sr:"^啊，有好多呢，\n給(.*)1袋吧，稍等哦。$"="Ah, there's so many
 Rank 3
 我們剛散步過來。\n這邊離我家比較近。=We just came here for a walk. \nThis place is closer to my home.
 嗯……這附近的道路比較寬闊，\n說不定我一個人也可以……=Hmm... the roads around here are quite wide, maybe I can do it alone...
-sr:"^別那麼勉強自己哦。那麼……\n(.*)，又要麻煩你推輪椅啦。$"="Don't overexert yourself, okay? Well... $1, I'll need you to push the wheelchair again."
+r:"^別那麼勉強自己哦。那麼……\n(.*)，又要麻煩你推輪椅啦。$"="Don't overexert yourself, okay? Well... $1, I'll need you to push the wheelchair again."
 腳被絆到了嗎？=Did you trip?
 啊，沒事……\n不好意思，我沒看清腳下……=Ah, it's okay...\nSorry, I didn't see where I was stepping...
-sr:"^看來眼睛的狀況不太好啊……\n抱歉啊，(.*)。$"="Looks like my eye isn't doing too well... \nSorry, $1."
+r:"^看來眼睛的狀況不太好啊……\n抱歉啊，(.*)。$"="Looks like my eye isn't doing too well... \nSorry, $1."
 奶奶，別勉強自己……=Grandma, don't force yourself...
 嗯……也是呢。\n今天就先回去吧。=Hmm... you're right.\nLet's head back for today.
 sr:"^(.*)，能不能麻煩照顧下(.*)？\n要是有什麼事就聯繫我。$"="$1, can you take care of $2? \nContact me if you need anything."
@@ -9963,19 +9969,19 @@ Choice 1
 是、是這樣的……！\n雖然年級不同，但就是會覺得安心。=Y-yes, that's right...! Even though we're in different grades, it still makes me feel at ease.
 Choice 2
 嗯嗯……是呀，沒錯呢？=Mmm... Yes, right?
-sr:"^多虧了(.*)，\n我才能堅持下去。$"="Thanks to $1, I've been able to keep going."
+r:"^多虧了(.*)，\n我才能堅持下去。$"="Thanks to $1, I've been able to keep going."
 Choice 3
 {{A}}，真的嗎……？{{B}}……={{A}}, really...? {{B}}...
 sr:"^(.*)也這麼想，我好開心。$"="I'm so happy that $1 feels the same way."
 這樣可能有點失禮，但是我……=This might sound a little rude, but...
-sr:"^能這樣和(.*)一起散步，\n我真的很開心。$"="I'm really happy to be walking together like this with $1."
+r:"^能這樣和(.*)一起散步，\n我真的很開心。$"="I'm really happy to be walking together like this with $1."
 要是我能不用坐輪椅，自己走路，\n說不定會更開心呢。=If I could walk on my own without a wheelchair, maybe I'd be even happier.
-sr:"^希望能和奶奶，還有(.*)，\n三個人一起散步……$"="I wish I could go for a walk with Grandma and $1, the three of us..."
+r:"^希望能和奶奶，還有(.*)，\n三個人一起散步……$"="I wish I could go for a walk with Grandma and $1, the three of us..."
 我會更努力地做康復訓練的……！=I'll work even harder on my rehab...!
 把{{A}}送回{{B}}家後，\n就回去了……=Left after bringing {{A}} back to the {{B}} household...
 
 Rank 5
-sr:"^下午好，(.*)。\n你這是要出門嗎？$"="Good afternoon, $1.\nAre you going out?"
+r:"^下午好，(.*)。\n你這是要出門嗎？$"="Good afternoon, $1.\nAre you going out?"
 那個……如果你有時間的話，\n我有個想去的地方，想邀請你一起……=Um... if you have time, there's a place I'd like to visit... Would you like to come with me?
 這樣啊……\n突然邀請你，真是不好意思。=I see...\nI'm so sorry to invite you suddenly.
 謝謝你願意陪我……！=Thank you for accompanying me...!
@@ -10025,7 +10031,7 @@ Choice 2
 ……結果這次又坐上輪椅，什麼都做不了。\n還是要奶奶來照顧我。=...But now I'm stuck in this wheelchair, useless. She still has to take care of me.
 明明是因為有奶奶在，\n我才能活到現在……=If it weren't for Grandma, \nI wouldn't even be alive...
 我卻自殺未遂……讓奶奶更擔心，\n還增加她的工作量……佔用她的時間……=And yet I tried to kill myself... made her worry even more, added to her workload... stole her time...
-sr:"^啊，對、對不起……！\n我又對(.*)說這些……！$"="Ah, s-sorry...!\nI'm saying all this to $1 again...!"
+r:"^啊，對、對不起……！\n我又對(.*)說這些……！$"="Ah, s-sorry...!\nI'm saying all this to $1 again...!"
 沒關係的=It's okay
 這不是你的錯=It's not your fault
 我們要向前看=<size\=30>We need to look forward</size>
@@ -10038,7 +10044,7 @@ Choice 3
 ……好的。\n我不能再想那些不好的事了。=...Alright. I can't keep dwelling on the past.
 ……明天的康復訓練，\n要不稍微增加強度吧。=...Maybe I should push myself harder during tomorrow's rehab.
 只要能快點重新走路……=If I can just walk again soon...
-sr:"^就不會再給奶奶，\n和(.*)添麻煩了。$"="I won't be a burden to Grandma or $1 anymore."
+r:"^就不會再給奶奶，\n和(.*)添麻煩了。$"="I won't be a burden to Grandma or $1 anymore."
 不僅如此……\n還能和奶奶一起去更多的地方。=Not just that... \nI could go anywhere with Grandma.
 ……其實，不用太遠也可以。\n就算只是一起去附近的超市，也很好。=...Actually, even somewhere close is fine. Just going to the supermarket together would be enough.
 因為……要是我能走路，\n就能和奶奶一起提著滿滿的購物袋逛超市了。=Because... if I could walk, \nI could carry groceries with Grandma.
@@ -10060,7 +10066,7 @@ sr:"^(.*)\n以後也(.*)哦。$"="$1, keep looking after Manaka for me, okay?"
 給{{A}}回完消息後，\n回到了車站……=Returned to the station after replying to {{A}}'s message...
 
 Rank 7
-sr:"^啊，(.*)。\n我剛做完康復訓練……$"="Ah, $1.\nI just finished my rehab..."
+r:"^啊，(.*)。\n我剛做完康復訓練……$"="Ah, $1.\nI just finished my rehab..."
 可以的話，一起散散步怎麼樣？=Would you like to take a walk together, \nif you're free?
 我明白了。\n那下次再說吧。=I understand. \nMaybe next time then.
 最近，康復訓練的時間變長了呢。=Lately, my rehab sessions have been getting longer.
@@ -10088,7 +10094,7 @@ sr:"^啊，(.*)。\n我剛做完康復訓練……$"="Ah, $1.\nI just finished m
 我想活下去。活著真好啊。\n還奇跡般地，有能重新走路的未來……真好。=I want to live. Being alive is wonderful. And miraculously, I might walk again... that's amazing.
 ……因為我還有很多想做的事。=...Because there's so much I want to do now.
 我想走路，想和奶奶一起出門，\n也想繼續演奏樂器。=I want to walk, to go out with Grandma, \nto play music again.
-sr:"^我也想向(.*)表達感謝……\n還想能正常去學校。$"="I want to properly thank $1... \nand go back to school normally."
+r:"^我也想向(.*)表達感謝……\n還想能正常去學校。$"="I want to properly thank $1... \nand go back to school normally."
 這些想法，\n都是因為活著才產生的呢。=All these thoughts, \nthey only exist because I'm alive.
 被那些惡評逼得走投無路的時候，\n我很痛苦，什麼都沒法思考……=When those cruel comments had me cornered, \nI was in too much pain to think clearly...
 ……也許只有在瀕臨死亡的時候，\n才會明白自己真正想做的事是什麼。=...Perhaps you only realize what truly matters when you're close to death.
@@ -10108,7 +10114,7 @@ sr:"^我也想向(.*)表達感謝……\n還想能正常去學校。$"="I want t
 Choice 1
 好的……！\n我會一步步努力的……！=Okay...! \nI'll work hard step by step...!
 Choice 2
-sr:"^聽到(.*)這麼說，\n我就覺得自己一定能做到……！$"="Hearing $1 say that,\nmakes me believe I can really do it...!"
+r:"^聽到(.*)這麼說，\n我就覺得自己一定能做到……！$"="Hearing $1 say that,\nmakes me believe I can really do it...!"
 Choice 3
 嗯……奶奶看的好像是，\n箱根的溫泉旅館……=Hmm... I think it was a hot spring inn in Hakone that Grandma saw...
 啊。選那種對腰有好處的溫泉，\n可能會更好……？我去查查看。=Ah. Choosing one with therapeutic springs might be better for her back...? I should research this.
@@ -10126,7 +10132,7 @@ sr:"^(.*)可以幫幫我嗎……\n我想試著走走看。$"="Could you help me
 慢慢來=Take your time
 和{{A}}一起，\n短暫地練了會兒走路……=Practiced walking briefly with {{A}}...
 嗯，果然……\n康復訓練室和外面完全不一樣呢……=Mmm, as I thought... it's completely different from the rehab center...
-sr:"^一鬆開(.*)的手，\n感覺馬上就會摔倒……$"="If I let go of $1's hand,\nI feel like I'll fall immediately..."
+r:"^一鬆開(.*)的手，\n感覺馬上就會摔倒……$"="If I let go of $1's hand,\nI feel like I'll fall immediately..."
 下次康復訓練的時候，\n去問問怎麼掌握重心吧……=Next rehab session,\nI'll ask about maintaining balance...
 康復訓練什麼時候結束？=When does rehab end?
 什麼時候能重新走路？=When can you walk again?
@@ -10134,11 +10140,11 @@ sr:"^一鬆開(.*)的手，\n感覺馬上就會摔倒……$"="If I let go of $1
 不過，付出努力就一定會有回報的。\n現在要做的就只有這一件事。=But effort always brings results.\nThis is the only thing I need to focus on now.
 別太累著自己哦=<size\=26>Don't push yourself too hard</size>
 注意安全哦=Be careful
-sr:"^好的……！\n非常感謝你，(.*)。$"="Yes...! \nThank you so much, $1."
+r:"^好的……！\n非常感謝你，(.*)。$"="Yes...! \nThank you so much, $1."
 把練到疲憊的{{A}}，\n送回{{B}}家後就回去了……=Went back after bringing the exhausted {{A}} back to the {{B}} household...
 
 Rank 9
-sr:"^你好，(.*)。\n可以的話，今天也一起出門吧？$"="Hello, $1. \nIf you are free, can we also go out today?"
+r:"^你好，(.*)。\n可以的話，今天也一起出門吧？$"="Hello, $1. \nIf you are free, can we also go out today?"
 那下次再說啦……！\n我有個很想一起去的地方呢。{{A}}。=Then maybe next time...! There's a place I really want to go. {{A}}.
 非常感謝。\n其實，我有個想一起去的地方……=Thank you so much. Actually, there is a place I want to go with you...
 之前我和奶奶一起看電視節目，\n裡面介紹了好幾個東京市內適合遊玩的景點。=Earlier, I was watching a TV program with Grandma about fun spots around Tokyo.
@@ -10168,7 +10174,7 @@ Choice 3
 但這裡光線很暗，臺階也比想像的多。\n推著輪椅走的話……感覺會很困難。=But the lighting's dim, and there are more stairs than expected. It would be difficult with a wheelchair...
 要是我能走路，就不用擔心這些了……\n看來還是得努力啊。=If only I could walk properly, this wouldn't be an issue...
 啊，但是……！\n其實我覺得自己差不多能走路了。=Ah, but...! \nI actually feel like I'm almost able to walk now.
-sr:"^可能是和(.*)一起，\n在外面練習走路起了效果。(.*)。$"="Practicing outside with $1 must be helping. $2."
+r:"^可能是和(.*)一起，\n在外面練習走路起了效果。(.*)。$"="Practicing outside with $1 must be helping. $2."
 之前一直嘴上說著，出院後做康復訓練……\n但其實真的很辛苦。=I kept saying I'd do rehab after leaving the hospital... but honestly, it's been really tough.
 說實話，我也習慣了坐輪椅，\n有時也會想就這樣也挺好的……=Sometimes I got used to the wheelchair and thought maybe this was enough...
 但還好把訓練堅持下來了。\n如果能重新走路，我……=But I'm glad I persevered. If I can walk again...
@@ -10177,7 +10183,7 @@ sr:"^可能是和(.*)一起，\n在外面練習走路起了效果。(.*)。$"="P
 ……那唱歌呢？=...What about singing?
 還有其他不想放棄的事嗎？=<size\=27>Anything else you won't give up?</size>
 sr:"^(.*)……(.*)，\n你很敏銳呢。$"="$1... $2, \nyou're very perceptive."
-sr:"^正如(.*)所說……\n我最不想放棄的，就是唱歌。$"="Just as $1 guessed... what I want to hold onto most is singing."
+r:"^正如(.*)所說……\n我最不想放棄的，就是唱歌。$"="Just as $1 guessed... what I want to hold onto most is singing."
 雖然在家裡和爵士俱樂部也會唱歌，\n但不像以前那樣在網站上上傳了。=I still sing at home and the jazz club, \nbut I stopped uploading online like before.
 不過，我想有朝一日再次挑戰一下。\n因為我不想放棄。=But someday, I want to try again properly. Because I don't want to give up.
 ……討厭我的人肯定不止那1個，\n重新上傳的話，肯定又會聽到各種惡評。=...That one hater wasn't my only critic. If I post again, I'll surely hear nasty comments.
@@ -10210,7 +10216,7 @@ Rank 11
 確實是這樣…=That's true...
 擔心的心情我能理解…=I get why you'd worry...
 是、是吧？=R-right?
-sr:"^所以我想先讓(.*)看看我走路的樣子。$"="So I wanted $1 to see me walk first."
+r:"^所以我想先讓(.*)看看我走路的樣子。$"="So I wanted $1 to see me walk first."
 決定和{{A}}一起前往公園……=Decided to accompany {{A}} to the park...
 這附近的話，就算摔倒也沒關係吧……=This area should be safe if I fall...
 ……好、好的。\n我會努力的……！=...O-okay. \nI'll do my best...!
@@ -10242,7 +10248,7 @@ sr:"^所以我想先讓(.*)看看我走路的樣子。$"="So I wanted $1 to see 
 對……是這樣的。\n嗯……奶奶的話，一定會開心的……=Yes... you're right. Grandma... will definitely be happy...
 要想走得更順暢，\n還需要繼續練習呢。=I'll need more practice to walk smoothly.
 不過已經能走到現在這樣，\n說不定也可以和奶奶一起出門了。=But now that I have come this far, maybe I can go out with Grandma...
-sr:"^哎呀，我來了！\n喔，(.*)，(.*)……！$"="Oh my, I'm here!\nOh, $1, $2...!"
+r:"^哎呀，我來了！\n喔，(.*)，(.*)……！$"="Oh my, I'm here!\nOh, $1, $2...!"
 奶奶……！=Grandma...!
 讓你們久等了，不好意思哦。\n車站人太多了……{{A}}！=Sorry to keep you waiting!\nThe station was crowded... {{A}}!
 奶奶！=Grandma!
@@ -10261,7 +10267,7 @@ sr:"^(.*)……多虧了(.*)，\n真是太好了……！$"="$1... all thanks to
 ……啊，{{A}}……！=...Ah, {{A}}...!
 雖然感覺還是有點怪怪的……\n但我能走路啦，你們看！=It still feels a little weird... but look, I'm walking!
 啊，是啊！=Ah, yes!
-sr:"^奶奶，(.*)，\n我要開始走啦……！$"="Grandma, $1, \nhere I go...!"
+r:"^奶奶，(.*)，\n我要開始走啦……！$"="Grandma, $1, \nhere I go...!"
 啊，呀……！\n……啊！=Ah...! \n...Ah!
 比練習的時候，走得更好了……！=Walked even better than practice...!
 真的很努力啊……=Really worked so hard...
@@ -10295,7 +10301,7 @@ sr:"^……啊，(.*)，\n你現在有空嗎……？$"="...Oh, $1, \ndo you hav
 我覺得挺好的=I think it's great
 你很努力呢=You're working hard
 {{A}}……謝謝你……！={{A}}... Thank you...!
-sr:"^那麼……(.*)，\n有什麼推薦的地方嗎？$"="So... $1,\ndo you have any recommendations?"
+r:"^那麼……(.*)，\n有什麼推薦的地方嗎？$"="So... $1,\ndo you have any recommendations?"
 要那種比較熱鬧，\n而且現在就能去的景點……=Somewhere lively that we can visit right now...
 哇！好多人啊……！=Wow! There are so many people...!
 啊，店鋪前面有小吃攤呢。\n有人在那邊排隊，好擁擠……=Ah, there's a food stall in front of that store. \nThe line looks really crowded...
@@ -10304,7 +10310,7 @@ sr:"^那麼……(.*)，\n有什麼推薦的地方嗎？$"="So... $1,\ndo you ha
 目標是糖果攤=Aim for the candy stall
 從人少的地方開始逛=<size\=24>Start from a less crowded area</size>
 Choice 1
-sr:"^不……難得(.*)帶我來。\n我會努力的……！$"="No... $1 went out of your way to bring me here. I'll do my best...!"
+r:"^不……難得(.*)帶我來。\n我會努力的……！$"="No... $1 went out of your way to bring me here. I'll do my best...!"
 Choice 2
 糖果……！來的路上，\n在電車上看的部落格，就是說的那個吧……！=Candy...! That must be the one from the blog I read on the train earlier...!
 我一直惦記著呢。\n那就努力走到那兒去吧……！=I've been curious about it. \nLet's try walking over there...!
@@ -10342,7 +10348,7 @@ Choice 3
 ……我覺得自己能一點點地，\n回報之前給奶奶添的麻煩了。=...I feel like I'm finally repaying her, little by little, for all the trouble I caused.
 但是……還是覺得不夠。\n我還想為奶奶再多做點什麼。=But... it still doesn't feel like enough. \nI want to do even more for her.
 雖然過夜旅行不太可能，\n但像中華街這種地方也許能一起……=An overnight trip might be impossible, \nbut maybe somewhere like Chinatown...
-sr:"^和(.*)體驗了過後，\n我覺得要不還是把難度再降低一點……$"="After experiencing it with $1, I think I should lower the difficulty a bit..."
+r:"^和(.*)體驗了過後，\n我覺得要不還是把難度再降低一點……$"="After experiencing it with $1, I think I should lower the difficulty a bit..."
 我也想差不多找份兼職試試……\n嗯……我能行嗎……=I'd also like to try finding a part-time job... Hmm... can I do it...
 {{A}}似乎很迷茫……={{A}} seems lost...
 說起讓奶奶更開心的事……=Speaking of making Grandma happier...
@@ -10369,14 +10375,14 @@ sr:"^和(.*)體驗了過後，\n我覺得要不還是把難度再降低一點…
 和重新下定決心的{{A}}一起，\n從中華街回去了……=Left Chinatown with {{A}}, her resolve renewed...
 
 Rank 15
-sr:"^啊，(.*)。\n你接下來有時間嗎……？$"="Ah, $1.\nDo you have time...?"
+r:"^啊，(.*)。\n你接下來有時間嗎……？$"="Ah, $1.\nDo you have time...?"
 那個……關於那首「歌」的事……\n我考慮了很多，有些想法……=Um... about that "song" we discussed... I've been thinking a lot, and I have some ideas...
 啊……是、是這樣啊。\n我明白了。要是你以後還有時間的話……=Ah... I-I see. I understand. If you ever have time again in the future...
 和{{A}}一起，\n來到了卡拉OK包廂……=Came to the karaoke box with {{A}}...
 之前，\n不是說到「送給奶奶一首歌作為禮物」嗎。=Earlier, didn't we talk about "giving Grandma a song as a gift"?
 然後呢……我就在想，\n送奶奶什麼樣的歌她會開心呢，所以就……=And then... I started thinking, what kind of song would make Grandma happy? So I...
 想了很多，但光靠我自己，實在拿不定主意。=I thought about it a lot, \nbut I just couldn't decide on my own.
-sr:"^所以，就想問問(.*)，\n聽聽你的意見……$"="So, I wanted to ask $1 and hear your opinion..."
+r:"^所以，就想問問(.*)，\n聽聽你的意見……$"="So, I wanted to ask $1 and hear your opinion..."
 那就恭敬不如從命了=Since you insist
 感覺像一場個人演唱會呢=It feels like a private concert
 我能給出好的意見嗎……=Can I give good advice...
@@ -10505,26 +10511,26 @@ Choice 2
 Choice 3
 sr:"^(.*)……\n我會努力挑戰一下的……！$"="$1...\nI'll give it a try...!"
 啊，那個……我知道這個請求可能有些冒昧，\n但還是想說……=Ah, um... I know this might be a bit sudden, \nbut there's something I'd like to ask...
-sr:"^唱歌的時候，能不能……\n請(.*)幫我一下呢……？$"="When I sing... \ncould $1 help me...?"
-sr:"^我想著要是能配合著(.*)的貝斯，\n把歌聲傳達給奶奶的話，那就好了……$"="I thought, if I could sing while $1 plays the bass... maybe my voice would reach Grandma even better..."
+r:"^唱歌的時候，能不能……\n請(.*)幫我一下呢……？$"="When I sing... \ncould $1 help me...?"
+r:"^我想著要是能配合著(.*)的貝斯，\n把歌聲傳達給奶奶的話，那就好了……$"="I thought, if I could sing while $1 plays the bass... maybe my voice would reach Grandma even better..."
 你覺得我行的話就交給我吧=<size\=24>If you think I can do it, leave it to me</size>
 演奏就交給我吧=I'll handle the playing
-sr:"^哇……！\n謝謝你，(.*)……！$"="Wow...! \nThank you, $1...!"
+r:"^哇……！\n謝謝你，(.*)……！$"="Wow...! \nThank you, $1...!"
 我會找好樂譜發給你。\n我自己也會努力練習的……！=I'll find the sheet music and send it to you. \nI'll practice hard too...!
 就這麼定了呢=It's settled, then
 一起努力準備這份禮物吧=Let's work together on this gift
 好的！\n我一定會把心意傳達給奶奶的！=Yes! I'll definitely convey my feelings to Grandma!
 ……還有一個想要傳達的心情……=...There is one more feeling I want to convey...
-sr:"^我……也有想對(.*)說的話。\n……可以嗎？$"="I... have something to tell $1, too. \n...Is that okay?"
+r:"^我……也有想對(.*)說的話。\n……可以嗎？$"="I... have something to tell $1, too. \n...Is that okay?"
 我能像現在這樣再次唱歌，還能思考很多事情，這一切都……=The fact that I can sing again now, that I can think about so many things... all of it...
-sr:"^都是多虧了(.*)。$"="Is all thanks to $1."
-sr:"^無論是奶奶的事，還是我的事，\n(.*)一直都在支持著我們。$"="Whether it was about Grandma, or about me, $1 was always there supporting us."
-sr:"^如果(.*)沒有遇見奶奶……$"="If $1 hadn't met Grandma..."
-sr:"^如果(.*)沒有遇見我……$"="If $1 hadn't met me..."
+r:"^都是多虧了(.*)。$"="Is all thanks to $1."
+r:"^無論是奶奶的事，還是我的事，\n(.*)一直都在支持著我們。$"="Whether it was about Grandma, or about me, $1 was always there supporting us."
+r:"^如果(.*)沒有遇見奶奶……$"="If $1 hadn't met Grandma..."
+r:"^如果(.*)沒有遇見我……$"="If $1 hadn't met me..."
 我可能就和奶奶分別了，\n就連重新向前走的想法也不會有了……=I might have been separated from Grandma, I might never have found the will to move forward again...
 ……說不定，我會再次從更高的地方跳下去。=...I might even jump from somewhere higher again.
 但是，一切都不一樣了。=But everything is different now.
-sr:"^因為有(.*)在……\n我才活了下來。$"="Because $1 was there... I'm still alive."
+r:"^因為有(.*)在……\n我才活了下來。$"="Because $1 was there... I'm still alive."
 sr:"^……我，喜歡(.*)……$"="...I, like $1..."
 sr:"^(.*)……\n你，是怎麼想的呢……？$"="$1... \nHow do you feel...?"
 雖然{{A}}對我來說很重要……=<size\=28>Although {{A}} is important to me...</size>
@@ -10543,7 +10549,7 @@ Close Friends
 是、是這樣啊。\n謝謝你願意聽我說……=I... I see.\nThank you for listening to me...
 我沒關係的哦。\n我不會自暴自棄的。=I'll be okay.\nI won't give up on myself.
 但是……我和奶奶有點像，\n在不輕易放棄這方面。=But... I'm like Grandma, \nwe both refuse to give up easily.
-sr:"^總有一天，我會努力讓(.*)，\n主動向我伸出手的。$"="One day, I'll work hard enough that $1 will reach out to me."
+r:"^總有一天，我會努力讓(.*)，\n主動向我伸出手的。$"="One day, I'll work hard enough that $1 will reach out to me."
 我會努力的！\n……總有一天，我會讓你回頭看向我。=I'll keep striving! ...One day, I'll make you look back at me.
 
 啊，對、對不起……！\n話說回來……=Ah, s-sorry...! \nAnyway...
@@ -10558,7 +10564,7 @@ sr:"^總有一天，我會努力讓(.*)，\n主動向我伸出手的。$"="One d
 一直練習到包廂時間快結束，之後把{{A}}送回了家……=We practiced until our karaoke box time was almost up, then took {{A}} home...
 
 Rank 17
-sr:"^啊，(.*)。\n你今天方便嗎……？$"="Ah, $1.\nAre you available today...?"
+r:"^啊，(.*)。\n你今天方便嗎……？$"="Ah, $1.\nAre you available today...?"
 要是有時間的話……\n我想等會兒就給奶奶唱歌，你覺得呢……！=If you have time... I'd like to sing for Grandma later. What do you think...!
 我明白了。\n那我就先去練習，等下次有機會吧……！=I understand. Then I'll go practice and wait for the next opportunity...!
 非常感謝……！=Thank you so much...!
@@ -10585,7 +10591,7 @@ sr:"^(.*)說(.*)在這兒等我，\n我就過來了……就你一個人嗎？$"
 呐，那首曲子……您還記得嗎？\n剛和奶奶一起生活時，您為我演奏的……=Say, that song... do you remember it? The one you played for me when we first started living together...
 那是我和奶奶，第一次一起演奏的曲子。=It was the first song we ever played together.
 你說的是……=You mean...
-sr:"^我和(.*)一起練了這首歌。\n就想把這份心意傳遞給您。$"="I practiced this song with $1. \nI wanted to convey these feelings to you."
+r:"^我和(.*)一起練了這首歌。\n就想把這份心意傳遞給您。$"="I practiced this song with $1. \nI wanted to convey these feelings to you."
 ……請聽我表演吧。=...Please listen.
 ……哈。=...Ha.
 {{A}}……謝、謝謝你啊……！={{A}}... Th-thank you...!
@@ -10609,7 +10615,7 @@ r:"^我疼愛的孫女，還有恩人(.*)，\n一起為我演奏……$"="My bel
 又和{{A}}一起，\n演奏了一次充滿回憶的歌曲……=Played that nostalgic song again with {{A}}...
 呼呼，真開心啊……！=Hehe, I'm so happy...!
 我發現，\n{{A}}在這兒唱歌的時候特別開心呢。=I've noticed something. {{A}} looks especially happy when she sings here.
-sr:"^啊，那個，\n今天唱的時候是(.*)伴奏……$"="Ah, um... Today, $1 was the one accompanying me..."
+r:"^啊，那個，\n今天唱的時候是(.*)伴奏……$"="Ah, um... Today, $1 was the one accompanying me..."
 下次我想和奶奶一起。\n想配合著奶奶的薩克斯唱歌。=Next time, I want to sing with you, Grandma. \nI want to sing along to your saxophone.
 儘管跟奶奶說。\n不管什麼曲子，奶奶都會去練的。=Just tell Grandma what you want. \nI'll practice any song for you.
 期待你們同台=<size\=26>Looking forward to your duet</size>
@@ -10617,7 +10623,7 @@ sr:"^啊，那個，\n今天唱的時候是(.*)伴奏……$"="Ah, um... Today, 
 Choice 1
 好的！\n我也會更加努力的……！=Yes!\nI'll work even harder...!
 Choice 2
-sr:"^希望(.*)到時候也能來聽。$"="I hope $1 can come listen too."
+r:"^希望(.*)到時候也能來聽。$"="I hope $1 can come listen too."
 Choice 3
 可、可以嗎？=R-really?
 嗯嗯……謝謝。\n那就我們3個人就一起演奏吧……！=Mmm... Thank you. \nThen let's all three perform together...!
@@ -10629,12 +10635,12 @@ Choice 3
 現在就算奶奶被絆到，\n我也能馬上扶住你啦。=Now, even if you trip, \nI can catch you right away.
 ……謝謝你呀。\n那就拜託你了！=...Thank you. \nThen I'll count on you!
 嗯，交給我吧……！=Yes, leave it to me...!
-sr:"^我先回去啦。(.*)，\n你再和(.*)散會兒步吧。$"="I'll head back now. $1, you go take a walk with $2."
+r:"^我先回去啦。(.*)，\n你再和(.*)散會兒步吧。$"="I'll head back now. $1, you go take a walk with $2."
 嗯……我想去個地方，可以嗎？=Um... There's somewhere I'd like to go. \nIs that okay?
 這裡是和{{A}}，\n第一次見面的地方……=This is where I first met {{A}}...
-sr:"^感覺和(.*)第一次見面，\n已經是很久很久以前的事了。$"="It feels like meeting $1 for the first time was so, so long ago."
+r:"^感覺和(.*)第一次見面，\n已經是很久很久以前的事了。$"="It feels like meeting $1 for the first time was so, so long ago."
 那時候，我對一切都很害怕……\n甚至希望自己能快點消失。=Back then, I was afraid of everything... \nI even wished I could disappear.
-sr:"^但是，現在不一樣了……\n因為有(.*)，我才能走到今天。$"="But now, it's different... Because of $1, I've come this far."
+r:"^但是，現在不一樣了……\n因為有(.*)，我才能走到今天。$"="But now, it's different... Because of $1, I've come this far."
 真的非常感謝。\n那天……能遇到你，真好。=Thank you so much. \nThat day... I'm so glad I met you.
 
 Close Friends
@@ -10645,7 +10651,7 @@ Close Friends
 
 Soulmates
 希望你以後也能聽我唱歌。=I hope you'll keep listening to me sing.
-sr:"^要是，\n(.*)遇到什麼不開心的事……$"="If, $1 ever feels down..."
+r:"^要是，\n(.*)遇到什麼不開心的事……$"="If, $1 ever feels down..."
 我想用我的歌聲，讓你重新露出笑容。\n……說到做到，我會努力的。=I want to use my voice to bring back your smile. \n...I promise, I'll do my best.
 已經從你這兒獲得力量了=<size\=26>You've already given me strength</size>
 Choice 1
@@ -10658,14 +10664,14 @@ Choice 2
 和{{A}}一起，\n靜靜地度過了一段時間……=Quietly spend some time together with {{A}}...
 
 Hangouts
-sr:"^那，那個……(.*)，\n待會有空嗎？$"="U-um... $1, \nare you free?"
+r:"^那，那個……(.*)，\n待會有空嗎？$"="U-um... $1, \nare you free?"
 如果可以的話，\n想和你一起去個地方……=If you don't mind, \nI want to go somewhere with you...
 真的嗎？太好啦！=Really? Great!
 
 那是當然=Of course
 相當克制了=Quite restrained
 好厲害……\n真的太厲害了！=Amazing...\nThat's really amazing!
-sr:"^那個，(.*)，\n這可能是個奇怪的請求……$"="Umm, $1, this might be a weird request..."
+r:"^那個，(.*)，\n這可能是個奇怪的請求……$"="Umm, $1, this might be a weird request..."
 我能看著你把這些都吃完嗎？=Can I watch you finish all these?
 其實我特別愛看大胃王之類的影片……！=I'm really into those competitive eating videos...!
 和{{A}}去了自助餐廳。\n那裡正和在播的動漫進行聯動。=Went to a buffet with {{A}}, they were doing a collab with an airing anime.
@@ -10696,26 +10702,26 @@ sr:"^(.*)……！？這，這是開玩笑的吧！？\n(.*)你好壞……！$"
 啊！對、對不起……\n我聲音太大了……=Ah! S-sorry...\nI'm too loud...
 我想變得更強大……=I want to be stronger...
 ……哎呀，{{A}}……\n不知不覺說得太認真了。=...Oh, {{A}}... I didn't realize I was being too serious...
-sr:"^是因為在教堂裡嗎？嗯……\n一定是因為在(.*)面前才會這樣。$"="Is it because we're in the church? Hmm... it must be because I'm in front of $1."
+r:"^是因為在教堂裡嗎？嗯……\n一定是因為在(.*)面前才會這樣。$"="Is it because we're in the church? Hmm... it must be because I'm in front of $1."
 和{{A}}一起去了教堂。\n內心湧起莊嚴肅穆的感覺……=<size\=28>Went to the church with {{A}}. A solemn and sacred feeling welled up inside me...</size>
 和{{A}}一起去了教堂。\n彩色玻璃美不勝收……=<size\=28>Went to the church with {{A}}. The stained glass windows were breathtakingly beautiful...</size>
 和{{A}}一起去了教堂。\n商量下次再來聆聽讚美詩……=<size\=28>Went to the church with {{A}}. We talked about coming back to listen to the hymns again...</size>
 和{{A}}一起去了教堂。\n有一位看起來和藹可親的神父……=<size\=28>Went to the church with {{A}}. There was a priest who looked very kind and gentle...</size>
 和{{A}}一起去了教堂。\n{{A}}凝視著婚禮宣傳手冊……=<size\=28>Went to the church with {{A}}. {{A}} was gazing intently at the wedding brochure...</size>
-sr:"^你看呀，(.*)……！\n我們都到這麼高的地方了……！$"="Look, $1...! \nWe're so high up now...!"
+r:"^你看呀，(.*)……！\n我們都到這麼高的地方了……！$"="Look, $1...! \nWe're so high up now...!"
 說不定連井之頭公園都能看到呢……？=Maybe we can even see Inokashira Park...?
 努力的話或許能看到？=<size\=30>Might be possible if you try?</size>
 應該看不到呢=Probably can't see it
 真的嗎……！\n我再找找看……！=Really...!\nI'll look for it again...!
 但是……\n我還真的做了件傻事……=But,,,\nI really did something stupid...
-sr:"^可現在卻能這樣，\n和(.*)一起待在這裡。$"="And yet... now I can be here with $1 like this."
+r:"^可現在卻能這樣，\n和(.*)一起待在這裡。$"="And yet... now I can be here with $1 like this."
 好開心呀……\n我會好好記住現在看到的景色。=I'm so happy... \nI will remember this scenery.
 和{{A}}一起乘坐了摩天輪。\n轎廂微微搖晃，發出了尖叫聲……=Rode the Ferris wheel with {{A}}. The cabin swayed slightly, making us scream...
 和{{A}}一起乘坐了摩天輪。\n似乎沒法像往常那樣順暢交談……=Rode the Ferris wheel with {{A}}. We couldn't seem to talk as smoothly as usual...
 和{{A}}一起乘坐了摩天輪。\n俯瞰的景色就像微縮模型一樣……=Rode the Ferris wheel with {{A}}. The view from above looked just like a miniature model...
 和{{A}}一起乘坐了摩天輪。\n在摩天輪頂端拍了紀念照……=Rode the Ferris wheel with {{A}}. We took a commemorative photo at the very top..
 和{{A}}一起乘坐了摩天輪。\n乘客好像全都是情侶……=Rode the Ferris wheel with {{A}}. It seemed like all the other passengers were couples...
-sr:"^收到了(.*)送的禮物……\n感覺像做夢一樣！$"="I received a gift from $1... \nIt feels like a dream!"
+r:"^收到了(.*)送的禮物……\n感覺像做夢一樣！$"="I received a gift from $1... \nIt feels like a dream!"
 好開心呀……\n我要向奶奶炫耀一下！=I'm so happy... \nI'll go show it off to Grandma!
 這話聽著可能有點誇張，\n但我真的覺得，活著真好……！=This might sound a little dramatic, but I truly feel like... it's good to be alive!
 
@@ -10983,7 +10989,7 @@ Riko Valentine's Day
 有什麼煩惱嗎？=What's troubling you?
 你討厭情人節嗎？=<size\=26>Do you hate Valentine's Day?</size>
 你不想過這個節日嗎？=<size\=22>Don't you want to celebrate this festival?</size>
-sr:"^啊，難道，\n(.*)其實很想過情人節？$"="Ah, could it be that $1 actually really wants to celebrate Valentine's Day?"
+r:"^啊，難道，\n(.*)其實很想過情人節？$"="Ah, could it be that $1 actually really wants to celebrate Valentine's Day?"
 當然很期待……！=<size\=20>Of course I'm looking forward to it...!</size>
 反正誰都不會給我送=<size\=27>No one will gift me anyway</size>
 
@@ -11341,7 +11347,7 @@ Harem Valentine's Day
 Chizuko Nagao Side Quest Part 2
 ----------
 來到了和{{A}}的碰頭地點……=Arrived at the meeting place...
-sr:"^喔唷，看來(.*)小朋友\n來得比我早呢。$"="Oh, looks like $1 arrived earlier than me."
+r:"^喔唷，看來(.*)小朋友\n來得比我早呢。$"="Oh, looks like $1 arrived earlier than me."
 {{A}}，這位是奶奶的熟人，\n就是他給奶奶出了主意哦。={{A}}, this is someone Grandma knows, \nhe's the one who gave me the idea.
 ……唔！=...Hmm!
 ……嗚、啊……男、男、人……？=...Oh, um... A, b-boy...?
@@ -11351,14 +11357,14 @@ sr:"^(.*)小朋友是個好孩子呢，\n連我這種老太婆，他都願意幫
 不用勉強自己=Don't force yourself
 ……好、的……{{C}}……\n我是……{{B}}、{{A}}…請、多……關照……=...{{C}}... Well, um... I am... \n{{A}}, {{B}}... N-nice, to... meet you...
 雖然可以理解……\n但她看起來對我很防備……=Though understandable... She seems really guarded around me...
-sr:"^我啊，想讓(.*)你能振作起來……\n所以就跟(.*)小朋友商量了一下。$"="I want to cheer up $1...\nSo I discussed with him."
+r:"^我啊，想讓(.*)你能振作起來……\n所以就跟(.*)小朋友商量了一下。$"="I want to cheer up $1...\nSo I discussed with him."
 他跟我說，\n不如讓{{A}}聽聽她最喜歡的音樂吧……=He told me, how about letting {{A}} listen to her favorite music...
 話是沒錯啦，但{{A}}害怕人多的地方吧？\n所以，奶奶就打算在這親自給你演奏。=However, {{A}} is afraid of crowds, right? \nSo, Grandma is going to play for you here.
 你願意聽嗎，{{A}}。=Will you listen, {{A}}.
 謝謝，好了，那就開始了哦。=Thank you. All right, let's get started.
 {{A}}的演奏，就算是恭維，\n好聽這種話也說不出口……！=I can't even pretend {{A}}'s performance sounds good...!
 感覺她是真心在為{{A}}著想……=I can feel she really cares about {{A}}...
-sr:"^好久沒吹了，吹得不太行啊……\n(.*)、(.*)小朋友，見笑了啊……$"="Haven't played in ages, I'm very rusty... \n$1, $2, sorry about that..."
+r:"^好久沒吹了，吹得不太行啊……\n(.*)、(.*)小朋友，見笑了啊……$"="Haven't played in ages, I'm very rusty... \n$1, $2, sorry about that..."
 噗……=Pfft…
 {{A}}……啊哈，{{B}}……\n奶奶、真的、水準好差勁啊……！={{A}}... Haha, {{B}}... \nGrandma, you are is really bad at it...!
 明、明明以前……要厲害得多……！\n{{A}}……！=Y-you used to be... way better at this...!\n{{A}}...!
@@ -11368,7 +11374,7 @@ sr:"^好久沒吹了，吹得不太行啊……\n(.*)、(.*)小朋友，見笑�
 確實=Exactly
 很微妙=Very subtle
 是不是喝太多酒了=<size\=30>Did you drink too much</size>
-sr:"^哎呀，怎麼(.*)小朋友也……！$"="Oh, even $1...!"
+r:"^哎呀，怎麼(.*)小朋友也……！$"="Oh, even $1...!"
 真是的，既然你們這麼說，\n那你們倆倒是試試呀！=Really, if that's the case, \nhow about you two try it!
 {{A}}……！不過，奶奶的演奏……很棒哦。\n要不，再吹一首吧？={{A}}...! But, Grandma's performance... was great.\nCan you, play one more song?
 ……真拿你沒辦法，但是不許再笑我了哦？=...It can't be helped, but no more laughing at me, okay?
@@ -11381,10 +11387,10 @@ sr:"^哎呀，怎麼(.*)小朋友也……！$"="Oh, even $1...!"
 {{A}}……你從奶奶那裡，\n唔……聽說了……我的、事情吧？=Um... You heard about...\nme from... Grandma, right?
 因為這個……我很害怕……\n陌生人，尤其是異性……對不起。=Because... I'm afraid of... \nstrangers, especially boys... I'm sorry.
 可、可是……！\n剛才我們一起聽了奶奶演奏之後……=B-but...! After we listened to Grandma's performance together...
-sr:"^我就、明白了……(.*)，\n就像奶奶說的，是個好人。$"="I realized that... $1 is a good person, \njust like Grandma said."
+r:"^我就、明白了……(.*)，\n就像奶奶說的，是個好人。$"="I realized that... $1 is a good person, \njust like Grandma said."
 我可以問下緣由嗎？=Can I ask why?
 你要是不想說，沒關係=<size\=26>It's fine if you don't want to say it</size>
-sr:"^不……我、我可以的，\n因為是(.*)的話就沒關係……$"="No ... it's okay,\nI think it's okay to talk to $1..."
+r:"^不……我、我可以的，\n因為是(.*)的話就沒關係……$"="No ... it's okay,\nI think it's okay to talk to $1..."
 你聽說過「唱見」這種影片嗎？=Have you ever heard of "Utaite" videos?
 經常看=Often watch
 Choice 1
@@ -11404,7 +11410,7 @@ Choice 2
 難道……之前在車站看到的……=Could it be... What I saw at the station...
 ……我不想讓奶奶擔心，\n所以沒有告訴她有這種人存在。=...I didn't want Grandma to worry, \nso I didn't tell her that such people existed.
 但結果事情就變成了這樣……\n我覺得自己讓奶奶太操心了。=In the end, it turned out like this... \nI cause Grandma too much worry.
-sr:"^啊……怎麼和你說這些了，\n我跟(.*)才第一次見面。$"="Ah... I'm sorry for telling you all this, \neven though we've just met."
+r:"^啊……怎麼和你說這些了，\n我跟(.*)才第一次見面。$"="Ah... I'm sorry for telling you all this, \neven though we've just met."
 謝謝你告訴我=<size\=30>Thank you for telling me</size>
 我沒覺得麻煩=<size\=28>I don't find it troublesome</size>
 {{A}}……謝謝你。={{A}}... Thank you.
@@ -11417,7 +11423,7 @@ sr:"^啊……怎麼和你說這些了，\n我跟(.*)才第一次見面。$"="Ah
 多謝款待=<size\=30>Thanks for the hospitality</size>
 有可樂嗎？=Got any soda?
 選自己愛喝的吧。=Choose what you like.
-sr:"^該回去嘍，(.*)小朋友也是哦，\n謝謝你今天陪我們。$"="We should get going now. You too, $1.\nThank you for spending time with us today."
+r:"^該回去嘍，(.*)小朋友也是哦，\n謝謝你今天陪我們。$"="We should get going now. You too, $1.\nThank you for spending time with us today."
 很久沒聽到奶奶的薩克斯風了，\n我很開心，也想說聲謝謝。=It made me so happy to hear Grandma's saxophone after so long. Thank you very much.
 {{A}}之前說過，\n想要在爵士樂俱樂部演奏……={{A}} mentioned before that they want to play in a jazz club...
 sr:"^(.*)小朋友？$"="$1?"
@@ -11437,7 +11443,7 @@ Choice 3
 我和奶奶的、表演……=Me and Grandma's, performance...
 ……那我、我想要……試試。=...I want to... try it.
 我、我不知道，搞不好、說不定……\n我會沒法開口……因為我還是、害怕唱歌……=I, I don't know, m-maybe... I won't be able to sing... because I'm still scared...
-sr:"^會讓奶奶和(.*)為難的，\n可……可是！$"="I think I'm going to embarrass Grandma and $1, but... but!"
+r:"^會讓奶奶和(.*)為難的，\n可……可是！$"="I think I'm going to embarrass Grandma and $1, but... but!"
 今天……奶奶為我演奏，\n我好高興，我想再多聽聽。=Today... Grandma played for me, I am so happy, I want to hear more.
 我這副樣子……我想要結束、這種狀態！\n我想要努力……！=But I'm always depressed... and I want to stop this! I want to try harder...!
 ……既然{{A}}都這麼說了，\n那奶奶就沒有不參演的理由了呢。=...Since {{A}} has said so, there is no reason for Grandma not perform.
@@ -11448,7 +11454,7 @@ sr:"^會讓奶奶和(.*)為難的，\n可……可是！$"="I think I'm going to
 和推著{{A}}的{{B}}分別了……=Left {{A}} and {{B}}...
 
 喔，這邊哦！=Hey, over here!
-sr:"^好久不見了，(.*)。$"="It's been a while, $1."
+r:"^好久不見了，(.*)。$"="It's been a while, $1."
 好久不見=Long time no see
 身體狀態沒問題嗎？=How's your health?
 {{A}}的狀態很不錯哦，\n最近在家都會唱歌了呢。={{A}} is feeling good. \nShe's even been singing at home lately.
@@ -11533,7 +11539,7 @@ Choice 2
 sr:"^(.*)……(.*)小朋友你這話，\n說得我很受用啊……不過我還差得遠呢。$"="$1... That's kind of you, $2... But I still have a long way to go."
 如果我真的做到了，\n就不會發生這種讓{{A}}流淚的事了……="If I'd actually managed it, {{A}} would never have had to shed tears like this...
 Choice 3
-sr:"^最棒、嗎。\n(.*)小朋友還真是會說話啊。$"="The best? \nYou say such nice things, $1."
+r:"^最棒、嗎。\n(.*)小朋友還真是會說話啊。$"="The best? \nYou say such nice things, $1."
 就衝你這句話……\n我也得更加努力才行啊。=I have to try even harder... \nSo I don't betray those words.
 好了，今天我們就先回去了。\n關於參演的事……下次再找你商量。=Anyway we're heading back. About the performance... Let's discuss it next time.
 
@@ -11575,16 +11581,16 @@ sr:"^最棒、嗎。\n(.*)小朋友還真是會說話啊。$"="The best? \nYou s
 都是因為我……在網路上傷害別人，\n我真是傻啊。=Trolling people online... \nWhat a stupid thing to do.
 {{B}}好像{{C}}了，\n去跟{{A}}他們聊聊吧。={{B}} seems to have a {{C}}, let's go talk to {{A}}.
 
-sr:"^又見面了呢，(.*)。$"="We meet again, $1."
-sr:"^哎呀真沒想到，\n在這能遇見(.*)小朋友你啊。$"="Oh, I never expected to run into you here, $1!"
+r:"^又見面了呢，(.*)。$"="We meet again, $1."
+r:"^哎呀真沒想到，\n在這能遇見(.*)小朋友你啊。$"="Oh, I never expected to run into you here, $1!"
 我倆剛看了場電影，散了散心\n正準備回去呢……=We just saw a movie and we're on our way back...
 啊，待會兒你有空嗎？\n想讓你來看看我和{{A}}的表演呢……=Ah, are you free later? I'd like you to come and see me and {{A}} perform...
 {{A}}……你還好嗎？\n奶奶不會勉強你的哦？={{A}}, are you sure you're okay? \nGrandma won't force you.
 ……嗯，雖然想到那個人說的話還是很害怕，\n但我知道奶奶在我身邊。=...It's okay. Even though remembering that man's words still scares me, I know Grandma's right here beside me.
 好……交給奶奶，那人要是敢出現，\n你看我怎麼好好教訓他！=Yes... Leave it to Grandma. If that guy dares to show up, I will teach him a lesson!
-sr:"^啊，(.*)小朋友也看著呢，\n這次粉絲人數更多了，儘管放心吧！$"="Plus, $1 is here too. And with even more fans this time, there's nothing to worry about!"
+r:"^啊，(.*)小朋友也看著呢，\n這次粉絲人數更多了，儘管放心吧！$"="Plus, $1 is here too. And with even more fans this time, there's nothing to worry about!"
 ……謝謝你們，\n我……雖然，還是害怕唱歌……=...Thank you.\nAlthough... I'm still scared to sing...
-sr:"^但看到奶奶和(.*)聽了我的歌，\n你們都會很開心，我不想忘記這一點。$"="But I don't want to forget how happy $1 and Grandma were with my songs."
+r:"^但看到奶奶和(.*)聽了我的歌，\n你們都會很開心，我不想忘記這一點。$"="But I don't want to forget how happy $1 and Grandma were with my songs."
 爸爸和媽媽以前就是這樣的，\n所以我才會喜歡上唱歌……=Mom and dad were like that too,\nthat's why I fell in love with singing...
 如果一直輸給那些傷害我的人，\n等於我承認了他們對我的否定……=If I let myself lose to them, it's like me denying the people who accepted me...
 這一點讓我更加害怕，\n所以我要和奶奶一起站上舞臺表演！=That scares me even more. So I'm going to perform on stage with Grandma!
@@ -11594,7 +11600,7 @@ sr:"^……嗯！那，我們走吧，(.*)！\n(.*)小朋友就在特等座上�
 呼——比預想的還要緊張啊……！=Phew- That was more nervous than I thought...!
 太棒了=That's great
 多謝啦，因為看到你在台下，\n所以想著無論如何都豁出去了。=Thank you, I was able to hang in there because you were right there.
-sr:"^我也是，我能清楚看見(.*)的臉，\n多虧有你我才唱到了最後……$"="Me too, I could see $1's face clearly, so I was able to finish singing..."
+r:"^我也是，我能清楚看見(.*)的臉，\n多虧有你我才唱到了最後……$"="Me too, I could see $1's face clearly, so I was able to finish singing..."
 男人的聲音=Man's Voice
 你是，之前的那個……離我孫女遠點，\n我這個老太婆來當你的對手？=You again... If you want to do something to my granddaughter, I'll deal with you.
 不、不是！啊、我不是來……\n我只是、想要……來道歉……=N-no! I didn't come here to...\nI just want to... apologize...
@@ -11607,12 +11613,12 @@ sr:"^我也是，我能清楚看見(.*)的臉，\n多虧有你我才唱到了最
 被演奏打動了內心=<size\=28>Moved by the performance</size>
 是音樂的力量=<size\=28>That's the power of music</size>
 {{A}}……就當作是這麼一回事吧！={{A}}... I guess I'll just leave it at that!
-sr:"^啊，要這麼說的話，\n(.*)小朋友你可真有兩下子。$"="Well, if you put it that way, you've got real talent, $1."
+r:"^啊，要這麼說的話，\n(.*)小朋友你可真有兩下子。$"="Well, if you put it that way, you've got real talent, $1."
 要是沒有遇見你，我和{{A}}都不會成長呢，\n我估計還只能依靠酒精麻痹自己……=<size\=30>Thanks to you, both {{A}} and I have changed. If I hadn't met you, I would have drowned in alcoholism...</size>
 也不會想要去和{{A}}面對面的溝通，\n更不可能像這樣一起演奏了吧。=I wouldn't have been able to face {{A}} and play with her like this.
-sr:"^謝謝你，(.*)小朋友。$"="Thank you, $1."
+r:"^謝謝你，(.*)小朋友。$"="Thank you, $1."
 這也是我想說的……真的，非常感謝。=That's exactly what I wanted to say too... \nReally, thank you so much.
-sr:"^因為有(.*)在，我才能再一次……\n萌生唱歌的念頭，奶奶才能振作起來……$"="Because of $1, I found my desire to sing again... And Grandma's gotten healthier too."
+r:"^因為有(.*)在，我才能再一次……\n萌生唱歌的念頭，奶奶才能振作起來……$"="Because of $1, I found my desire to sing again... And Grandma's gotten healthier too."
 因為你們都說了真心話=<size\=26>Because you spoke from the heart</size>
 能幫上忙，太好了=I'm glad I could help
 Choice 1
@@ -11629,7 +11635,7 @@ Choice 3
 就這麼定了啊=It's a promise
 我在最前排期待著=<size\=25>I'll be waiting in the front row</size>
 {{A}}！\n那就先跟店長打個招呼吧！={{A}}!\nI'll need to tell to the manager!
-sr:"^啊，下次(.*)小朋友也上臺吧？\n像鈴鼓這種你總會打吧！$"="That's right, why don't you join us next time, $1? You can handle a tambourine, can't you?"
+r:"^啊，下次(.*)小朋友也上臺吧？\n像鈴鼓這種你總會打吧！$"="That's right, why don't you join us next time, $1? You can handle a tambourine, can't you?"
 
 特意把你叫出來，不好意思。=Sorry for dragging you out here.
 沒事=It's fine
@@ -11654,7 +11660,7 @@ Choice 2
 希望之後我也能夠支持你。=So that I can continue to push you forward.
 Choice 3
 目標定的太遠了吧！？\n……不過感覺也不錯{{A}}！=Isn't that too far!?\n...Well, that's not a bad feeling!
-sr:"^啊，差點忘了，\n有個東西我想要給……給(.*)。$"="Oh, that's right, I meant to give this to you, $1."
+r:"^啊，差點忘了，\n有個東西我想要給……給(.*)。$"="Oh, that's right, I meant to give this to you, $1."
 這是？=This is?
 是薩克斯風的「簧片」哦。=It's a saxophone's "reed".
 是吹薩克斯風時用的……\n相當於彈吉他的撥片吧？=It's for playing the saxophone... \nKind of like a guitar pick, you know?

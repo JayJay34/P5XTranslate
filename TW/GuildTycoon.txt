@@ -135,8 +135,8 @@ sr:"^受到技能屬性：(.*)$"="Skill element: $1"
 {{A}}「疾風」={{A}} [Wind]
 {{A}}「念動」={{A}} [Psy]
 {{A}}「核熱」={{A}} [Nuke]
-{{A}}「詛咒」={{A}} [Bless]
-{{A}}「祝福」={{A}} [Curse]
+{{A}}「祝福」={{A}} [Bless]
+{{A}}「詛咒」={{A}} [Curse]
 {{A}}「萬能」={{A}} [Almighty]
 r:"^被擊敗後使怪盜(.*)傷害提升$"="Increase all Thieves' $1 DMG on death"
 
@@ -175,7 +175,8 @@ r:"^{{A}}會對所有怪盜添加「{{A}}的詛咒」：受到傷害提升(\d+%)
 r:"^受<color\=#000000>H</color> L傷害提升$"="H<color\=#000000>I</color>GHLIGHT DMG Taken Up"
 
 終結裝置=Slaughter Drive
-深紅砲台=Scarlet Turret
+鋼刃的終結裝置=Slaughter Drive
+深紅炮臺=Scarlet Turret
 
 ----------
 Modifiers
@@ -211,6 +212,7 @@ r:"^<color\=#FFFC40>支配</color>怪盜造成傷害提高(\d+(.\d+)?(%)?)$"="<s
 r:"^所有怪盜<color\=#FFFC40>射擊</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#FFFC40>Gun</color> DMG by $1</size>"
 r:"^所有怪盜<color\=#ff381d>火焰</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#ff381d>Fire</color> DMG by $1</size>"
 r:"^所有怪盜<color\=#00aeff>冰凍</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#00aeff>Ice</color> DMG by $1</size>"
+r:"^所有怪盜<color\=#fbff37>電擊</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#fbff37>Elec</color> DMG by $1</size>"
 r:"^所有怪盜<color\=#ff63ff>念動</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#ff63ff>Psy</color> DMG by $1</size>"
 r:"^所有怪盜<color\=#00fcff>核熱</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#00fcff>Nuke</color> DMG by $1</size>"
 r:"^所有怪盜<color\=#fffea0>祝福</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#fffea0>Bless</color> DMG by $1</size>"
@@ -280,6 +282,9 @@ r:"^所有角色<color\=#FFFC40>{{A}}</color>造成傷害提升(\d+%)，使用{{
 r:"^所有角色<color\=#FFFC40>{{A}}</color>造成傷害提升(\d+%)，使用{{A}}後，額外使自身造成傷害提升(\d+%)，持續(\d+)回合$"="All Thieves increase <color\=#FFFC40>{{A}}</color> DMG Dealt by $1. After using {{A}}, additionally increase own DMG Dealt by $2 for $3 turns"
 r:"^{{A}}造成傷害提升(\d+%)，使用{{A}}後額外使自身最終傷害提升(\d+%)，持續(\d+)回合$"="Increase {{A}} DMG Dealt by $1; \nAfter using {{A}}, additionally increase own Final DMG by $2 for $3 turns"
 
+倒地領域=Down Domain
+r:"^所有敵人處於<color\=#FFFC40>倒地狀態</color>時，受到傷害提升(\d+%)$"="Increase all foes' DMG Taken by $1 when they are <color\=#FFFC40>Downed</color>"
+
 sr:"^(.*)耐性$"="Resist $1"
 sr:"^所有敵人對<color\=#(.*)>(.*)</color>屬性的適應性變為耐$"="All foes change their resistance to Resist <color\=#$1>$2</color>"
 
@@ -305,7 +310,7 @@ r:"^積蓄力量，即將使用「{{A}}」，擁有(\d+)層「衰退」退出蓄
 火焰之魂=Spirit of Fire
 被怪盜擊敗後，使{{A}}進入燃燒狀態=After defeated by Thieves, \ninflict {{A}} with Burn
 疾風之魂=Spirit of Wind
-被怪盜擊敗後，使{{A}}進入風襲狀態=After defeated by Thieves, \ninflict {{A}} with Winded
+被怪盜擊敗後，使{{A}}進入風襲狀態=After defeated by Thieves, \ninflict {{A}} with Windswept
 冰凍之魂=Spirit of Ice
 被怪盜擊敗後，使{{A}}進入凍結狀態=After defeated by Thieves, \ninflict {{A}} with Freeze
 電擊之魂=Spirit of Elec

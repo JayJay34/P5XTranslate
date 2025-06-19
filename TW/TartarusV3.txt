@@ -42,7 +42,7 @@ r:"^探索{{A}}，需要確定「<color\=#FFD145>隨行隊伍</color>」，\n包
 {{A}}·橙色迷霧={{A}}·Orange Fog
 「<color\=#FFD145>橙色迷霧</color>」雖然沒有強力陰影鎮守，\n但需要消耗一定<color\=#FFD145>意志力</color>才能通過。=Although [<color\=#FFD145>Orange Fog</color>] is not guarded, you need to consume <color\=#FFD145>Will</color> to pass.
 {{A}}·樓梯={{A}}·Stairs
-找到每一層的樓梯，才能進入更高的<color\=#FFD145>樓層</color>。\n請積極地在樓層中尋找。\n一旦決定進入下一層就<color\=#FFD145>無法回頭</color>了。=You need to find the stairs to reach higher <color\=#FFD145>floors</color>.\nOnce you decide to enter the next level, there is <color\=#FFD145>no turning back</color>.
+找到每一層的樓梯，才能進入更高的<color\=#FFD145>樓層</color>。\n請積極地在樓層中尋找。\n一旦決定進入下一層就<color\=#FFD145>無法回頭</color>了。=You need to find the stairs to reach higher <color\=#FFD145>floors</color>.\nOnce you decide to enter the next floor, there is <color\=#FFD145>no turning back</color>.
 {{A}}·瞬殺={{A}}·Insta-kill
 探索時遇到的陰影，\n如果由<color\=#FFD145>紅色光焰</color>纏繞，接觸後將進入戰鬥。 \n當「瞬殺能力」強化到一定程度時，陰影的紅色光焰會消失，此時攻擊將可以<color\=#FFD145>瞬殺陰影</color>。=You can insta-kill Shadows without a <color\=#FFD145>red glow</color>.
 {{A}}·瞬殺能力={{A}}·Insta-kill Ability
@@ -107,6 +107,19 @@ r:"^九周目(\d+)層$"="NG+8 $1F"
 r:"^十周目(\d+)層$"="NG+9 $1F"
 r:"^十一周目(\d+)層$"="NG+10 $1F"
 r:"^十二周目(\d+)層$"="NG+11 $1F"
+r:"^1周目(\d+)層$"="NG $1F"
+r:"^2周目(\d+)層$"="NG+ $1F"
+r:"^3周目(\d+)層$"="NG+2 $1F"
+r:"^4周目(\d+)層$"="NG+3 $1F"
+r:"^5周目(\d+)層$"="NG+4 $1F"
+r:"^6周目(\d+)層$"="NG+5 $1F"
+r:"^7周目(\d+)層$"="NG+6 $1F"
+r:"^8周目(\d+)層$"="NG+7 $1F"
+r:"^9周目(\d+)層$"="NG+8 $1F"
+r:"^10周目(\d+)層$"="NG+9 $1F"
+r:"^11周目(\d+)層$"="NG+10 $1F"
+r:"^12周目(\d+)層$"="NG+11 $1F"
+
 周目:簡單=NG: Easy
 周目:<sprite\=1 tint\=1>=Loop:<sprite\=1 tint\=1>
 進度:<sprite\=2 tint\=1>層=Progress:<sprite\=2 tint\=1>層
@@ -150,6 +163,7 @@ r:"^基礎收集效率：x(\d+)$"="Collection Efficiency: x$1"
 基礎難度=Base Difficulty
 r:"^進入新的樓層時，所有敵人總生命值、{{A}}提升(\d+%)\n$"="When entering a new floor, increase all foes' Total HP, {{A}} by $1"
 r:"^進入新的樓層時，所有敵人總生命值提升(\d+%)、{{A}}提升(\d+%)\n$"="When entering a new floor, \nincrease all foes' Total HP by $1, {{A}} by $2"
+r:"^進入新的樓層時，所有敵人總生命值提升(\d+%)、{{A}}提升(\d+%)、最終受到傷害降低(\d+%)、最終傷害提升(\d+%)\n$"="When entering a new floor, \nincrease all foes' Total HP by $1, {{A}} by $2, Final DMG by $4, \ndecrease all foes' Final DMG Taken by $3"
 
 額外難度=Additional Difficulty
 所有角色最終傷害大幅提升，受最終傷害大幅降低\n=Heavily increase all characters' Final DMG Dealt, \nheavily decrease all characters' Final DMG Taken
@@ -164,7 +178,7 @@ r:"^初始「意志力」降低(\d+)點\n所有敵人的傷害隨著戰鬥回合
 r:"^初始「意志力」降低(\d+)點\n所有敵人的傷害隨著戰鬥回合數提升而提升\n所有戰鬥消耗「意志力」增加(\d+)點\n每次進入「大時鐘」時，最多刷新(\d+)次\n進入強敵之影、交錯之影戰鬥時，所有敵人造成最終傷害提升(\d+%)，受到最終傷害降低(\d+%)\n遊蕩陰影戰鬥消耗「意志力」增加(\d+)點\n每次使用「時鐘」時，額外消耗(\d+)個「拂曉的碎片」\n「大時鐘」具象化四星角色卡牌時，所需「時鐘的齒輪」數量提升(\d+%)\n$"="Decrease starting [Will] by $1\nAll foes increase damage based on turn number\nIncrease battle [Will] cost by $2\nWhen entering the [Great Clock], can only refresh up to $3 times\nWhen fighting Strong Shadow and Tangled Shadow, increase all foes' Final DMG Dealt by $4, decrease all foes' Final DMG Taken by $5\nIncrease battle [Will] cost for Roaming Shadow by $6\nWhen using the [Clock], additionally consume $7 [Dawn Fragments]\nWhen buying 4★ characters in the [Great Clock], increase the required [Clock Gears] by $8"
 r:"^初始「意志力」降低(\d+)點\n所有敵人的傷害隨著戰鬥回合數提升而提升\n所有戰鬥消耗「意志力」增加(\d+)點\n每次進入「大時鐘」時，最多刷新(\d+)次\n進入強敵之影、交錯之影戰鬥時，所有敵人造成最終傷害提升(\d+%)，受到最終傷害降低(\d+%)\n遊蕩陰影戰鬥消耗「意志力」增加(\d+)點\n每次使用「時鐘」時，額外消耗(\d+)個「拂曉的碎片」\n「大時鐘」具象化四星角色卡牌時，所需「時鐘的齒輪」數量提升(\d+%)\n進入首領樓層時，當前「時鐘的齒輪」數量減少(\d+%)\n$"="Decrease starting [Will] by $1\nAll foes increase damage based on turn number\nIncrease battle [Will] cost by $2\nWhen entering the [Great Clock], can only refresh up to $3 times\nWhen fighting Strong Shadow and Tangled Shadow, increase all foes' Final DMG Dealt by $4, decrease all foes' Final DMG Taken by $5\nIncrease battle [Will] cost for Roaming Shadow by $6\nWhen using the [Clock], additionally consume $7 [Dawn Fragments]\nWhen buying 4★ characters in the [Great Clock], increase the required [Clock Gears] by $8\nWhen entering a boss floor, decrease current [Clock Gears] by $9"
 r:"^初始「意志力」降低(\d+)點\n所有敵人的傷害隨著戰鬥回合數提升而提升\n所有戰鬥消耗「意志力」增加(\d+)點\n每次進入「大時鐘」時，最多刷新(\d+)次\n進入強敵之影、交錯之影戰鬥時，所有敵人造成最終傷害提升(\d+%)，受到最終傷害降低(\d+%)\n遊蕩陰影戰鬥消耗「意志力」增加(\d+)點\n每次使用「時鐘」時，額外消耗(\d+)個「拂曉的碎片」\n「大時鐘」具象化四星角色卡牌時，所需「時鐘的齒輪」數量提升(\d+%)\n進入首領樓層時，當前「時鐘的齒輪」數量減少(\d+%)\n強敵陰影戰鬥消耗「意志力」增加(\d+)點\n$"="Decrease starting [Will] by $1\nAll foes increase damage based on turn number\nIncrease battle [Will] cost by $2\nWhen entering the [Great Clock], can only refresh up to $3 times\nWhen fighting Strong Shadow and Tangled Shadow, increase all foes' Final DMG Dealt by $4, decrease all foes' Final DMG Taken by $5\nIncrease battle [Will] cost for Roaming Shadow by $6\nWhen using the [Clock], additionally consume $7 [Dawn Fragments]\nWhen buying 4★ characters in the [Great Clock], increase the required [Clock Gears] by $8\nWhen entering a boss floor, decrease current [Clock Gears] by $9\nIncrease battle [Will] cost for Strong Shadow by $10"
-r:"^初始「意志力」降低(\d+)點\n所有敵人的傷害隨著戰鬥回合數提升而提升\n所有戰鬥消耗「意志力」增加(\d+)點\n每次進入「大時鐘」時，最多刷新(\d+)次\n進入強敵之影、交錯之影戰鬥時，所有敵人造成最終傷害提升(\d+%)，受到最終傷害降低(\d+%)\n遊蕩陰影戰鬥消耗「意志力」增加(\d+)點\n每次使用「時鐘」時，額外消耗(\d+)個「拂曉的碎片」\n「大時鐘」具象化四星角色卡牌時，所需「時鐘的齒輪」數量提升(\d+%)\n進入首領樓層時，當前「時鐘的齒輪」數量減少(\d+%)\n強敵陰影戰鬥消耗「意志力」增加(\d+)點\n通過「時鐘」回復的「意志力」量減少(\d+)點\n$"="Decrease starting [Will] by $1\nAll foes increase damage based on turn number\nIncrease battle [Will] cost by $2\nWhen entering the [Great Clock], can only refresh up to $3 times\nWhen fighting Strong Shadow and Tangled Shadow, increase all foes' Final DMG Dealt by $4, decrease all foes' Final DMG Taken by $5\nIncrease battle [Will] cost for Roaming Shadow by $6\nWhen using the [Clock], additionally consume $7 [Dawn Fragments]\nWhen buying 4★ characters in the [Great Clock], increase the required [Clock Gears] by $8\nWhen entering a boss floor, decrease current [Clock Gears] by $9\nIncrease battle [Will] cost for Strong Shadow by $10\nDecrease [Will] restored by the [Clock] by $11"
+r:"^初始「意志力」降低(\d+)點\n所有敵人的傷害隨著戰鬥回合數提升而提升\n所有戰鬥消耗「意志力」增加(\d+)點\n每次進入「大時鐘」時，最多刷新(\d+)次\n進入強敵之影、交錯之影戰鬥時，所有敵人造成最終傷害提升(\d+%)，受到最終傷害降低(\d+%)\n遊蕩陰影戰鬥消耗「意志力」增加(\d+)點\n每次使用「時鐘」時，額外消耗(\d+)個「拂曉的碎片」\n「大時鐘」具象化四星角色卡牌時，所需「時鐘的齒輪」數量提升(\d+%)\n進入首領樓層時，當前「時鐘的齒輪」數量減少(\d+%)\n強敵陰影戰鬥消耗「意志力」增加(\d+)點\n透過「時鐘」回復的「意志力」量減少(\d+)點\n$"="Decrease starting [Will] by $1\nAll foes increase damage based on turn number\nIncrease battle [Will] cost by $2\nWhen entering the [Great Clock], can only refresh up to $3 times\nWhen fighting Strong Shadow and Tangled Shadow, increase all foes' Final DMG Dealt by $4, decrease all foes' Final DMG Taken by $5\nIncrease battle [Will] cost for Roaming Shadow by $6\nWhen using the [Clock], additionally consume $7 [Dawn Fragments]\nWhen buying 4★ characters in the [Great Clock], increase the required [Clock Gears] by $8\nWhen entering a boss floor, decrease current [Clock Gears] by $9\nIncrease battle [Will] cost for Strong Shadow by $10\nDecrease [Will] restored by the [Clock] by $11"
 
 收集效率=Collection Efficiency
 r:"^古老的銀幣、心靈碎片收集效率x(\d+\.\d+)\n當前周目無法獲得古老的寶石$"="Ancient Silver Coins, Heart Fragments collection efficiency x$1\nCannot obtain Ancient Gemstones in this NG"
@@ -253,6 +267,7 @@ r:"^當前位置：{{A}} (\d+)層。\n暫時離開：保存進度，回到{{A}}�
 找到本層摩納多之門=Find the Monad door
 擊敗本層稀有陰影=Defeat Rare Shadow
 擊敗強敵陰影=Defeat Strong Shadow
+擊敗巨大稀有陰影=Defeat Greedy Shadow
 擊敗交錯之影=Defeat Tangled Shadow
 
 r:"^尋找樓梯\((\d+)/(\d+)\)$"="Find the stairs ($1/$2)"
@@ -262,10 +277,39 @@ r:"^找到本層時鐘\((\d+)/(\d+)\)$"="Find the Clock ($1/$2)"
 r:"^找到本層摩納多之門\((\d+)/(\d+)\)$"="Find the Monad door ($1/$2)"
 r:"^擊敗本層稀有陰影\((\d+)/(\d+)\)$"="Defeat Rare Shadow ($1/$2)"
 r:"^擊敗強敵陰影\((\d+)/(\d+)\)$"="Defeat Strong Shadow ($1/$2)"
+r:"^擊敗巨大稀有陰影\((\d+)/(\d+)\)$"="Defeat Greedy Shadow ($1/$2)"
 r:"^擊敗交錯之影\((\d+)/(\d+)\)$"="Defeat Tangled Shadow ($1/$2)"
+生效期已結束=Effect Ended
+
+這個反應是……=This reaction...
+似乎有什麼正在靠近！=Seems like something is approaching!
+居然逃掉了……=It got away...
+應該就在這一層的某處，\n追上去吧！=It should be somewhere on this floor, hunt it down!
+
+感受到強大陰影的氣息……=Feeling the presence of a powerful Shadow...
+當前已達成探索目標，是否要選擇繼續前進呢？=Already reached the exploration goal, should we continue?
+直面挑戰=Face the challenge
+進入下一層面對強大陰影，一旦決定就<color\=#FFEC00>無法回頭</color>了。=Enter the next floor to face the powerful shadow, there is <color\=#FFEC00>no turning back</color>.
+結束探索=End exploration
+已經成功達到了探索目標，就這樣回去吧。=Reached the exploration goal, let's head back now.
+
+1周目=NG
+2周目=NG +
+3周目=NG +2
+4周目=NG +3
+5周目=NG +4
+6周目=NG +5
+7周目=NG +6
+8周目=NG +7
+9周目=NG +8
+10周目=NG +9
+11周目=NG +10
+12周目=NG +11
 
 r:"^在隊長(.*)的帶領下，歷時(.*)分(.*)秒，於(.*)到達了探索終點。完成了{{A}}的探索任務。$"="Under your leadership, completed {{A}} exploration in $2m$3s on $4."
 r:"^在隊長(.*)的帶領下，歷時(.*)小時(.*)分(.*)秒，於(.*)到達了探索終點。完成了{{A}}的探索任務。$"="Under your leadership, completed {{A}} exploration in $2h$3m$4s on $5."
+r:"^在隊長(.*)的帶領下，歷時(.*)分(.*)秒，於(.*)到達了探索終點。完成了{{A}}的探索任務。本次探索積分如下：$"="Under your leadership, completed {{A}} exploration in $2m$3s on $4. The exploration scores are as follows:"
+r:"^在隊長(.*)的帶領下，歷時(.*)小時(.*)分(.*)秒，於(.*)到達了探索終點。完成了{{A}}的探索任務。本次探索積分如下：$"="Under your leadership, completed {{A}} exploration in $2h$3m$4s on $5. The exploration scores are as follows:"
 本次試煉獲得積分詳情如下=Score Details
 r:"^攀爬的樓層數\((\d+)\)$"="Floors ($1)"
 r:"^擊敗的敵人數\((\d+)\)$"="Shadows ($1)"
@@ -416,6 +460,12 @@ r:"^進入強敵之影、交錯之影戰鬥時，所有敵人受最終傷害提�
 擊敗稀有陰影後的「洗牌時間·通常」替換為「洗牌時間·稀有」=Replace [Shuffle Time·Normal] with [Shuffle Time·Rare] after defeating Rare Shadow
 迅捷疾走=Swift Dash
 {{A}}探索中，WONDER移動速度獲得提升=During {{A}} exploration, \nincrease Wonder's movement speed
+心眼通明=Enlightened Insight
+探索過程中不再出現「橙色迷霧」=[Orange Fog] will no longer appear
+神祝御召=Divine Calling
+{{A}}探索中，稀有陰影出現機率提高=During {{A}} exploration, increase the chance of encountering Rare Shadows
+神祝天召=Heavenly Calling
+進入探索樓層時，有機率進入特殊的樓層，出現巨大稀有陰影=When entering a new floor, increase the chance to enter a special floor with Greedy Shadow
 
 ----------
 MISSION
@@ -434,6 +484,18 @@ r:"^通關(\d+)次{{A}}九周目$"="Clear {{A}} on NG+8 $1 time(s)"
 r:"^通關(\d+)次{{A}}十周目$"="Clear {{A}} on NG+9 $1 time(s)"
 r:"^通關(\d+)次{{A}}十一周目$"="Clear {{A}} on NG+10 $1 time(s)"
 r:"^通關(\d+)次{{A}}十二周目$"="Clear {{A}} on NG+11 $1 time(s)"
+r:"^通關(\d+)次{{A}}1周目$"="Clear {{A}} on NG $1 time(s)"
+r:"^通關(\d+)次{{A}}2周目$"="Clear {{A}} on NG+ $1 time(s)"
+r:"^通關(\d+)次{{A}}3周目$"="Clear {{A}} on NG+2 $1 time(s)"
+r:"^通關(\d+)次{{A}}4周目$"="Clear {{A}} on NG+3 $1 time(s)"
+r:"^通關(\d+)次{{A}}5周目$"="Clear {{A}} on NG+4 $1 time(s)"
+r:"^通關(\d+)次{{A}}6周目$"="Clear {{A}} on NG+5 $1 time(s)"
+r:"^通關(\d+)次{{A}}7周目$"="Clear {{A}} on NG+6 $1 time(s)"
+r:"^通關(\d+)次{{A}}8周目$"="Clear {{A}} on NG+7 $1 time(s)"
+r:"^通關(\d+)次{{A}}9周目$"="Clear {{A}} on NG+8 $1 time(s)"
+r:"^通關(\d+)次{{A}}10周目$"="Clear {{A}} on NG+9 $1 time(s)"
+r:"^通關(\d+)次{{A}}11周目$"="Clear {{A}} on NG+10 $1 time(s)"
+r:"^通關(\d+)次{{A}}12周目$"="Clear {{A}} on NG+11 $1 time(s)"
 r:"^解鎖(\d+)個{{A}}探索角色$"="Unlock $1 {{A}} exploration characters"
 r:"^解鎖「力量解放」基礎屬性節點(\d+)個$"="Unlock $1 Basic Stats in [Power Unleashed]"
 r:"^解鎖「力量解放」特色屬性、靈感技能或武器改造節點(\d+)個$"="Unlock $1 Thieves Instinct, Inspiration Skill or Weapon Reform in [Power Unleashed]"
@@ -443,6 +505,19 @@ r:"^通過{{A}}的總層數達到(\d+)層$"="Clear $1 Floors in {{A}}"
 r:"^通關(\d+)次任意周目的{{A}}$"="Clear {{A}} on any NG $1 time(s)"
 r:"^擊殺(\d+)個交錯之影$"="Defeat $1 Tangled Shadow"
 r:"^擊殺(\d+)個稀有陰影$"="Defeat $1 Rare Shadow"
+擊敗{{A}}1周目或以上的女教皇=Defeat Priestess on NG or higher
+擊敗{{A}}2周目或以上的女教皇=Defeat Priestess on NG+ or higher
+擊敗{{A}}3周目或以上的女教皇=Defeat Priestess on NG+2 or higher
+擊敗{{A}}4周目或以上的女教皇=Defeat Priestess on NG+3 or higher
+擊敗{{A}}5周目或以上的女教皇=Defeat Priestess on NG+4 or higher
+擊敗{{A}}6周目或以上的女教皇=Defeat Priestess on NG+5 or higher
+擊敗{{A}}7周目或以上的女教皇=Defeat Priestess on NG+6 or higher
+擊敗{{A}}8周目或以上的女教皇=Defeat Priestess on NG+7 or higher
+擊敗{{A}}9周目或以上的女教皇=Defeat Priestess on NG+8 or higher
+擊敗{{A}}10周目或以上的女教皇=Defeat Priestess on NG+9 or higher
+擊敗{{A}}11周目或以上的女教皇=Defeat Priestess on NG+10 or higher
+擊敗{{A}}12周目或以上的女教皇=Defeat Priestess on NG+11 or higher
+
 r:"^擊碎(\d+)個可破壞物$"="Break $1 breakable objects"
 r:"^擊碎(\d+)個稀有可破壞物$"="Break $1 rare breakable objects"
 r:"^完成(\d+)次摩納多之門$"="Clear $1 Monad door"
@@ -477,10 +552,14 @@ ANTIQUES SHOP
 <color\=#3DE594>強化屬性：</color>=<color\=#3DE594>Upgrade Stats:</color>
 消耗:=Consume:
 r:"^是否消耗古老的金幣×(\d+)，解鎖收藏品(.*)？$"="Consume $1 Ancient Gold Coins to unlock this Antique?"
+解鎖=Unlock
 
 選擇本次{{A}}中攜帶的收藏品。收藏品的效果將在本次探索中一直生效。=Select the Antique for this {{A}} run.
 裝備中=Equipped
 等級獎勵=Lv Rewards
+sr:"^收藏品(.*)(\d+)級$"="Antique $1 Lv $2"
+強化提升=Upgrade
+已滿級=Max Lv
 
 單次探索只能攜帶一個收藏品，請謹慎選擇=You can only equip 1 Antique, choose carefully
 珍品油畫=Rare Oil Painting
@@ -506,6 +585,10 @@ r:"^可破壞物出現更加頻繁，透過可破壞物獲取到的「時鐘的�
 r:"^{{A}}探索開始時，立刻<color\=#3DE594>獲得(\d+)個</color>「拂曉的碎片」$"="At the start of {{A}} exploration, immediately obtain <color\=#3DE594>$1</color> [Dawn Fragments]"
 有年代感的首飾=Vintage Jewelry
 出現摩納多之門更加頻繁，進入摩納多之門<color\=#3DE594>不再需要</color>「拂曉的碎片」=Monad door appear more frequently, entering them <color\=#3DE594>no longer requires</color> [Dawn Fragments]
+開運御守=Prosperity Omamori
+r:"^強敵陰影出現機率提高，透過強敵陰影獲取經驗值<color\=#3DE594>提升(\d+%)</color>$"="Strong Shadows appear more frequently, increase EXP acquired from Strong Shadows by <color\=#3DE594>$1</color>"
+幸運御守=Lucky Omamori
+r:"^稀有陰影出現機率提高，透過稀有陰影獲取到的「時鐘的齒輪」<color\=#3DE594>提升(\d+%)</color>$"="Rare Shadows appear more frequently, increase [Clock Gears] acquired from Rare Shadows by <color\=#3DE594>$1</color>"
 
 ----------
 POLICE STATION
@@ -574,7 +657,7 @@ r:"^下(\d+)次進入探索樓層時，必定出現「時鐘」$"="In the next $
 r:"^下(\d+)次進入探索樓層時，必定出現「大時鐘」$"="In the next $1 floor(s), guarantee a [Grand Clock]"
 權杖·摩納多鑰匙=Wands · Monad Key
 r:"^下(\d+)次進入探索樓層時，必定出現摩納多之門$"="In the next $1 floor(s), guarantee a Monad door"
-權杖·超大型寶魔獵人=Wands · Greedy Hunter
+權杖·超大寶魔獵人=Wands · Greedy Hunter
 r:"^下(\d+)次進入探索樓層時，必定進入特殊的樓層，出現巨大稀有陰影$"="In the next $1 floor(s), guarantee a special floor with Greedy Shadow"
 
 權杖·時鐘特惠=Wands · Special Offer
@@ -648,22 +731,29 @@ sr:"^獲得戰鬥增益「(.*)」：(.*)$"="Obtained combat buff [$1]"
 r:"^每經過(\d+)個回合，使隨機(\d+)名角色在自己回合結束時獲得(\d+)個額外回合$"="After $1 turns, randomly give $2 character $3 Extra Turn after their turn"
 寶劍·勝利法則=Swords · Triumph Law
 r:"^當局每獲得一次戰鬥勝利（包括秒殺），所有角色攻擊力提升(\d+\.\d+%)、防禦力提升(\d+\.\d+%)$"="For every victory (including insta-kill), increase ATK by $1, DEF by $2"
+r:"^當局每獲得一次戰鬥勝利（包括秒殺），所有角色攻擊力提升(\d+\.\d+%)、防禦力提升(\d+\.\d+%)\（當前計數：(\d+)\）$"="For every victory (including insta-kill), increase ATK by $1, DEF by $2 (Current count: $3)"
 寶劍·破壞法則=Swords · Shatter Law
 r:"^當局每擊碎一個可破壞物，造成傷害提升(\d+(.\d+)?(%)?)$"="For every broken breakable objects, increase DMG Dealt by $1"
 r:"^當局每擊碎一個可破壞物，使造成傷害提升(\d+(.\d+)?(%)?)$"="For every broken breakable objects, increase DMG Dealt by $1"
+r:"^當局每擊碎一個可破壞物，使造成傷害提升(.*)\（當前計數：(\d+)\）$"="For every broken breakable objects, increase DMG Dealt by $1 (Current count: $2)"
 寶劍·守望法則=Swords · Vigil Law
 r:"^當前每擁有一個未編入隊伍的角色，在場角色造成傷害提高(\d+%)$"="For every inactive characters, increase active characters' DMG Dealt by $1"
+r:"^當前每擁有一個未編入隊伍的角色，在場角色造成傷害提高(\d+%)\（當前計數：(\d+)\）$"="For every inactive characters, increase active characters' DMG Dealt by $1 (Current count: $2)"
 寶劍·探索法則=Swords · Exploration Law
 r:"^當前每(\d+)級探索等級使角色造成傷害提高(\d+%)，探索等級達到(\d+)級時，額外使最終傷害提升(\d+%)$"="For every $1 Exploration Level, increase DMG Dealt by $2, additionally increase Final DMG by $4 when reaching Exploration Level $3"
+r:"^當前每(\d+)級探索等級使角色造成傷害提高(\d+%)，探索等級達到(\d+)級時，額外使最終傷害提升(\d+%)\（當前計數：(\d+)\）$"="For every $1 Exploration Level, increase DMG Dealt by $2, additionally increase Final DMG by $4 when reaching Exploration Level $3 (Current count: $4)"
 寶劍·尋寶法則=Swords · Treasure Law
 r:"^當局每開啟一個寶箱，造成傷害提升(\d+(.\d+)?(%)?)$"="For every opened treasure chests, increase DMG Dealt by $1"
 r:"^當局每開啟一個寶箱，使造成傷害提升(\d+(.\d+)?(%)?)$"="For every opened treasure chests, increase DMG Dealt by $1"
+r:"^當局每開啟一個寶箱，使造成傷害提升(.*)\（當前計數：(\d+)\）$"="For every opened treasure chests, increase DMG Dealt by $1 (Current count: $2)"
 寶劍·元素法則=Swords · Elemental Law
 r:"^敵人每有一個元素異常狀態，受到的傷害提升(\d+%)\（最多計入(\d+)個\），同時擁有(\d+)個及以上的元素異常時，額外使受到最終傷害提升(\d+%)$"="For every 1 Elemental Ailment, increase their DMG Taken by $1 (up to $2 Elemental Ailments), additionally increase Final DMG Taken by $4 when they have $3 Elemental Ailments"
 寶劍·寶魔獵人=Swords · Treasure Hunter
 r:"^當局每擊敗1個稀有陰影，攻擊力提升(\d+(.\d+)?(%)?)$"="For every defeated Rare Shadow, increase ATK by $1"
+r:"^當局每擊敗1個稀有陰影，攻擊力提升(.*)\（當前計數：(\d+)\）$"="For every defeated Rare Shadow, increase ATK by $1 (Current count: $2)"
 寶劍·強敵刺客=Swords · Elite Assassin
 r:"^當局每擊敗1個強敵陰影，暴擊效果提升(\d+(.\d+)?(%)?)$"="For every defeated Strong Shadow, increase CRIT DMG by $1"
+r:"^當局每擊敗1個強敵陰影，暴擊效果提升(.*)\（當前計數：(\d+)\）$"="For every defeated Strong Shadow, increase CRIT DMG by $1 (Current count: $2)"
 
 寶劍·光明意志=Swords · Radiant Will
 r:"^當前「意志力」越高，所有角色造成最終傷害越高，(\d+)「意志力」時獲得最高最終傷害加成(\d+%)$"="The higher your [Will], the higher your Final DMG Dealt, up to $2 Final DMG Dealt at $1 [Will]"
@@ -700,7 +790,7 @@ r:"^WONDER的每(\d+)個非額外回合後，自身獲得一個額外回合$"="A
 寶劍·暴力美學=Swords · Violent Aesthetics
 r:"^反抗/支配角色造成傷害提升(\d+%)、暴擊率提升(\d+%)$"="Increase Assassin/Sweeper characters' DMG Dealt by $1, CRIT Rate by $2"
 寶劍·穩中求勝=Swords · Steady Triumph
-r:"^救援/防衛角色防禦力提升(\d+%)、最大生命值提升(\d+%)$"="Increase Rescue/Defend characters' DEF by $1, Max HP by $2"
+r:"^救援/防衛角色防禦力提升(\d+%)、最大生命值提升(\d+%)$"="Increase Medic/Guardian characters' DEF by $1, Max HP by $2"
 寶劍·算無遺策=Swords · Meticulous Strategy
 r:"^優越/屈從角色速度提升(\d+)、效果命中提升(\d+%)$"="Increase Strategist/Saboteur characters' SPD by $1, EHR by $2"
 寶劍·穩固後援=Swords · Steady Support
@@ -813,14 +903,17 @@ r:"^進入戰鬥時，每有一個相同屬性的角色，所有角色造成傷�
 
 寶劍·以暴制暴=Swords · Fight Fire
 r:"^進入強敵之影、交錯之影戰鬥時，所有敵人受最終傷害提升(\d+%)，造成最終傷害降低(\d+%)$"="When fighting Strong Shadow and Tangled Shadow, increase all foes' Final DMG Taken by $1, decrease all foes' Final DMG Dealt by $2"
+r:"^進入強敵陰影、交錯之影戰鬥時，所有敵人受最終傷害提升(\d+%)，造成最終傷害降低(\d+%)$"="When fighting Strong Shadow and Tangled Shadow, increase all foes' Final DMG Taken by $1, decrease all foes' Final DMG Dealt by $2"
 寶劍·獵人直覺=Swords · Hunter Instinct
 進入稀有陰影戰鬥時，使稀有陰影對所有屬性的適應性變為弱=When entering a Rare Shadow battle, change all their resistance to Weak
 
 寶劍·鋒利指針=Swords · Sharp Hand
 r:"^每在「大時鐘」具象化1張卡牌，攻擊力提升(\d+%)$"="For every card bought in the [Great Clock], increase ATK by $1"
+r:"^每在「大時鐘」具象化1張卡牌，攻擊力提升(\d+%)\（當前計數：(\d+)\）$"="For every card bought in the [Great Clock], increase ATK by $1 (Current count: $2)"
 
 寶劍·摩納多經略=Swords · Monad Strategy
 r:"^當局每通過1個摩納多之門，攻擊力提升(\d+(.\d+)?(%)?)$"="For every cleared Monad door, increase ATK by $1"
+r:"^當局每通過1個摩納多之門，攻擊力提升(\d+%)\（當前計數：(\d+)\）$"="For every cleared Monad door, increase ATK by $1 (Current count: $2)"
 寶劍·摩納多鬥士=Swords · Monad Fighter
 r:"^進入摩納多之門戰鬥時，所有敵人受最終傷害提升(\d+%)，最終傷害降低(\d+%)$"="When entering Monad door, increase all foes' Final DMG Taken by $1, decrease all foes' Final DMG by $2"
 
@@ -870,12 +963,19 @@ r:"^意識提升至(\d+)$"="Increase Awareness to $1"
 {{A}}覺醒了超越意識={{A}} awaken Beyond Awareness
 r:"^{{A}}覺醒了超越意識。超越意識效果為：[\s\S]*"="{{A}} awaken Beyond Awareness"
 
+不羈的信念=Wild Card's Faith
 r:"^已覺醒超越意識：每個回合開始時，額外恢復(\d+)點{{A}}能量。自身釋放技能造成(\d+)次以上傷害時最終傷害提升(\d+%)。$"="Awakened Beyond Awareness: At the start of turn, additionally restore $1 {{A}} Energy. Increase Final DMG by $3 when skills deal $2 or more hits of damage."
 r:"^已覺醒超越意識：每個回合開始時，額外恢復(\d+)點{{A}}能量。自身釋放技能造成(\d+)次以上傷害時最終傷害提升(\d+%)$"="Awakened Beyond Awareness: At the start of turn, additionally restore $1 {{A}} Energy. Increase Final DMG by $3 when skills deal $2 or more hits of damage"
 r:"^每個回合開始時，額外恢復(\d+)點{{A}}能量。自身釋放技能造成(\d+)次以上傷害時最終傷害提升(\d+%)。$"="At the start of turn, additionally restore $1 {{A}} Energy. Increase Final DMG by $3 when skills deal $2 or more hits of damage."
 r:"^每個回合開始時，額外恢復(\d+)點{{A}}能量。自身釋放技能造成(\d+)次以上傷害時最終傷害提升(\d+%)$"="At the start of turn, additionally restore $1 {{A}} Energy. Increase Final DMG by $3 when skills deal $2 or more hits of damage"
+
+守護的決心=Determination to Protect
 已覺醒超越意識：使用復甦之矢消耗風語觸發額外效果時，對所有同伴生效=Awakened Beyond Awareness: The additional effects when triggering [Wind Whisper] from [Arrow of Rejuvenation] now works on all allies
 使用復甦之矢消耗風語觸發額外效果時，對所有同伴生效=The additional effects when triggering [Wind Whisper] from [Arrow of Rejuvenation] now works on all allies
+
+變強的約定=Promise to Become Stronger
+r:"^已覺醒超越意識：『雷拳一閃』額外造成(\d+)次傷害，『絕殺破壞拳』額外提供(\d+)層『鬥志』。$"="Awakened Beyond Awareness: [Electric Flash] additionally deals damage $1 time, [Fatal Fist] additionally gives $2 stack of [Fighting Spirit]."
+r:"^『雷拳一閃』額外造成(\d+)次傷害，『絕殺破壞拳』額外提供(\d+)層『鬥志』。$"="[Electric Flash] additionally deals damage $1 time, [Fatal Fist] additionally gives $2 stack of [Fighting Spirit]."
 
 ----------
 ALL MAJOR ARCANA CARDS
@@ -886,18 +986,18 @@ r:"^立刻獲得(\d+)「時鐘的齒輪」、(\d+)「拂曉的碎片」、(\d+)�
 女教皇=Priestess
 r:"^所有角色造成{{A}}技能傷害時會額外降低敵方主目標(\d+)點倒地值，所有敵人受{{B}}傷害提升(\d+%)-(\d+%)（依據層數變化）$"="<size\=28>All characters additionally decrease the main target's Down Gauge by $1 when dealing {{A}} skill damage. Increase all foes' {{B}} DMG Taken by $2–$3 (change based on stacks)</size>"
 女皇=Empress
-r:"^所有女性角色{{A}}、總生命值、總防禦力提升(\d+%)，最終傷害提升(\d+%)，擁有「皇帝」時，效果翻倍$"="Increase all female characters' {{A}}, Total HP, Total DEF by $1 Final DMG by $2, when you have the Major Arcana [Emperor], double this effect"
+r:"^所有女性角色{{A}}、總生命值、總防禦力提升(\d+%)，最終傷害提升(\d+%)，擁有「皇帝」時，效果翻倍$"="Increase all female characters' {{A}}, Total HP, Total DEF by $1 Final DMG by $2, when you have [Emperor], double this effect"
 Emperor
-r:"^所有男性角色{{A}}、總生命值、總防禦力提升(\d+%)，最終傷害提升(\d+%)，擁有「女皇」時，效果翻倍$"="Increase all male characters' {{A}}, Total HP, Total DEF by $1 Final DMG by $2, when you have the Major Arcana [Empress], double this effect"
+r:"^所有男性角色{{A}}、總生命值、總防禦力提升(\d+%)，最終傷害提升(\d+%)，擁有「女皇」時，效果翻倍$"="Increase all male characters' {{A}}, Total HP, Total DEF by $1 Final DMG by $2, when you have [Empress], double this effect"
 Hierophant
-r:"^所有角色釋放單體{{A}}技能時，對主目標以外的其他目標造成相當於原傷害(\d+%)的固定傷害；釋放單體追加效果/HIGHLIGHT/{{B}}時，對主目標以外的其他目標造成相當於原傷害(\d+%)的固定傷害$"="<size\=28>When using a single target {{A}} skill, deal $1 of the original damage as fixed damage to the non main targets; When using single target Follow Up/HIGHLIGHT/{{B}}, deal $2 of the original damage as fixed damage to the non main targets</size>"
+r:"^所有角色釋放單體{{A}}技能時，對主目標以外的其他目標造成相當於原傷害(\d+%)的固定傷害；釋放單體追加效果/HIGHLIGHT/{{B}}時，對主目標以外的其他目標造成相當於原傷害(\d+%)的固定傷害$"="<size\=26>When using a single target {{A}} skill, deal $1 of the original damage as fixed damage to the non main targets; When using single target Follow Up/HIGHLIGHT/{{B}}, deal $2 of the original damage as fixed damage to the non main targets</size>"
 戀愛=Lovers
 r:"^隊伍中編入1/2/3/4個女性隊員時，WONDER攻擊力提升(\d+%)/(\d+\.\d+%)/(\d+\.\d+%)/(\d+%)；女性隊員使用{{A}}技能/HIGHLIGHT/{{B}}/解明技能後，使WONDER獲得(\d+\.\d+%)總傷害增幅，持續(\d+)回合，可疊加；WONDER使用{{A}}技能後，使女性隊員獲得(\d+\.\d+%)總傷害增幅，持續(\d+)回合$"="<size\=26>When the team has 1/2/3/4 female teammates, increase Wonder's ATK by $1/$2/$3/$4; After female teammate uses a {{A}} skill/HIGHLIGHT/{{B}}/Elucidator skill, increase Wonder's Total DMG by $5 for $6 turn, can stack; After Wonder uses a {{A}} skill, increase all female teammates' Total DMG by $7 for $8 turn</size>"
 Chariot
 r:"^所有角色的HIGHLIGHT/{{A}}可以暴擊，但是HIGHLIGHT/{{A}}能量恢復效率降低(\d+%)$"="HIGHLIGHT/{{A}} can CRIT, but decrease HIGHLIGHT/{{A}} Energy recovery rate by $1"
 所有角色的HIGHLIGHT/{{A}}可以暴擊=HIGHLIGHT/{{A}} can CRIT
 Strength
-r:"^所有角色精力值上限提升(\d+)點，精力回復提升(\d+%)，精力值消耗增加(\d+%)。釋放技能後，該技能每消耗(\d+)點精力值使其他角色最終傷害提升(\d+%)，持續(\d+)回合$"="Increase all characters' Max SP by $1, SP Recovery by $2, SP cost by $3. When using skills, increase all other characters' Final DMG by $5 for every $4 consumed SP for $6 turn"
+r:"^所有角色精力值上限提升(\d+)點，精力回復提升(\d+%)，精力值消耗增加(\d+%)。釋放技能後，該技能每消耗(\d+)點精力值使其他角色最終傷害提升(\d+%)，持續(\d+)回合$"="<size\=28>Increase all characters' Max SP by $1, SP Recovery by $2, SP cost by $3. When using skills, increase all other characters' Final DMG by $5 for every $4 consumed SP for $6 turn</size>"
 Hermit
 r:"^戰鬥中使用道具時，最終傷害提升(\d+%)；使用道具後使自身獲得(\d+)個額外回合$"="When using items in battle, increase Final DMG by $1; Gain $2 Extra Turn after using items"
 命運=Fortune
@@ -908,19 +1008,19 @@ r:"^透過「洗牌時間」獲取卡牌時，額外增加(\d+)個可選項$"="W
 倒懸者=Hanged Man
 r:"^所有角色持續效果傷害提升(\d+%)，使用{{A}}技能/追加效果/HIGHLIGHT/{{B}}造成傷害後，額外結算一次技能主目標的持續效果$"="Increase all characters' Damage Over Time DMG by $1, after dealing damage with {{A}} skill/Follow Up/HIGHLIGHT/{{B}}, additionally trigger the main target's Damage Over Time"
 Temperance
-r:"^探索樓層中，強敵陰影/稀有陰影出現機率大幅提升，強敵陰影/稀有陰影戰鬥消耗「意志力」減少(\d+)點，遊蕩陰影戰鬥消耗「意志力」增加(\d+)點$"="Heavily increase the spawn chance of Strong Shadow/Rare Shadow, decrease battle [Will] cost for Strong Shadow/Rare Shadow by $1, increase battle [Will] cost for Roaming Shadow by $2"
+r:"^探索樓層中，強敵陰影/稀有陰影出現機率大幅提升，強敵陰影/稀有陰影戰鬥消耗「意志力」減少(\d+)點，遊蕩陰影戰鬥消耗「意志力」增加(\d+)點$"="<size\=25>Heavily increase the chance of encountering Strong Shadow/Rare Shadow, decrease battle [Will] cost for Strong Shadow/Rare Shadow by $1, increase battle [Will] cost for Roaming Shadow by $2</size>"
 Devil
 r:"^探索樓層會出現更多可破壞物，透過可破壞物獲得的「時鐘的齒輪」數量提升(\d+%)$"="More breakable objects will appear, increase [Clock Gears] acquired from breakable objects by $1"
 Tower
 r:"^WONDER{{A}}、總生命值、總防禦力提升(\d+%)，最終傷害提升(\d+%)$"="Increase Wonder's {{A}}, Total HP, Total DEF by $1, Final DMG by $2"
 Star
-r:"^所有角色受治療效果提升(\d+%)，免疫精神異常及控制效果、免疫倒地、首次受到致命傷害時保留(\d+)點生命值，擁有「命運」時，「命運」的固定傷害效果改為對所有敵人生效$"="<size\=28>Increase all characters' Healing Received by $1, gain Mental Ailments immunity, Control Effects immunity, Down immunity, prevent faint and stay at $2 HP once per battle, when you have the Major Arcana [Fortune], the fixed damage from [Fortune] now work on all foes</size>"
+r:"^所有角色受治療效果提升(\d+%)，免疫精神異常及控制效果、免疫倒地、首次受到致命傷害時保留(\d+)點生命值，擁有「命運」時，「命運」的固定傷害效果改為對所有敵人生效$"="<size\=26>Increase all characters' Healing Received by $1, gain Mental Ailments immunity, Control Effects immunity, Down immunity, prevent faint once per battle, when you have [Fortune], the fixed damage from [Fortune] now work on all foes</size>"
 Moon
-r:"^戰鬥消耗「意志力」減少(\d+)點，「意志力」大於(\d+)時，額外使所有角色最終傷害提升(\d+%)$"="Decrease battle [Will] cost by $1. When [Will] is above $2, additionally increase all characters' Final DMG by $3"
+r:"^戰鬥消耗「意志力」減少(\d+)點，「意志力」大於(\d+)時，額外使所有角色最終傷害提升(\d+%)$"="<size\=26>Decrease battle [Will] cost by $1. When [Will] is above $2, additionally increase all characters' Final DMG by $3</size>"
 Sun
 r:"^戰鬥開始以及每經過(\d+)個回合，對所有敵人造成最大生命值(\d+%)的固定傷害，對所有角色造成當前生命值(\d+%)的固定傷害$"="At the start of battle and after every $1 turns, deal $2 Max HP fixed damage to all foes, deal $3 current HP fixed damage to all characters"
 Judgement
-r:"^所有角色每次使用普通攻擊/槍械攻擊時，使所有同伴獲得(\d+)層/(\d+)層「審判之力」，每層「審判之力」使普通攻擊、槍械攻擊造成傷害提升(\d+%)，可疊加(\d+)層，本場戰鬥永久生效$"="Each time when characters use Melee Attack/Gun Attack, give the party $1 stacks/$2 stack of [Judgement Power], each stack of [Judgement Power] permanently increase Melee Attack Gun Attack DMG Dealt by $3, up to $4 stacks"
+r:"^所有角色每次使用普通攻擊/槍械攻擊時，使所有同伴獲得(\d+)層/(\d+)層「審判之力」，每層「審判之力」使普通攻擊、槍械攻擊造成傷害提升(\d+%)，可疊加(\d+)層，本場戰鬥永久生效$"="<size\=28>Each time when characters use Melee Attack/Gun Attack, give the party $1 stacks/$2 stack of [Judgement Power], each stack of [Judgement Power] permanently increase Melee Attack Gun Attack DMG Dealt by $3, up to $4 stacks</size>"
 審判之力=Judgement Power
 
 ----------
@@ -984,7 +1084,7 @@ SHADOW NAMES
 r:"^黃金之手被發現了！將在(\d+)個回合後逃離$"="Found Gold Hand! \nWill escape after $1 turns"
 r:"^黃金之手感到害怕，將在(\d+)個回合後逃離$"="Found Gold Hand! \nWill escape after $1 turns"
 r:"^黃金之手躍躍欲逃，將在(\d+)個回合後逃離$"="Found Gold Hand! \nWill escape after $1 turn"
-巨大稀有陰影=Greedy Shadow
+巨型黃金之手=Giant Gold Hand
 
 遊蕩在{{A}}的陰影，會攻擊每一個闖入其領地的人類。=Roaming Shadow in {{A}}, will attack any human that enters their territory.
 
@@ -1082,7 +1182,7 @@ r:"^反<color\=#000000>擊</color>架勢$"="C<color\=#000000>o</color>unter Stan
 r:"^進入『反擊架勢』狀態時，受到攻擊時進行反擊，造成物理屬性傷害，並使宗師之武者獲得(\d+)層『殺意』，持續(\d+)回合。$"="Enters [Counter Stance], will Counter when attacked, dealing Phys damage, then gives Kaiden Musha $1 stack of [Killing Intent] for $1 turn."
 r:"^受到攻擊時進行反擊，並使(.*)獲得(\d+)層『殺意』$"="Will Counter when attacked, then give Kaiden Musha $2 stack of [Killing Intent]"
 
-r:"^1、聖靈之城/咒靈之城添加的祝福、詛咒效果持續時間均為無限回合。\n2、戰鬥開始時召喚1隻魔術之手和1隻舞動之手。聖靈之城在場時，魔術之手/舞動之手死亡時會再隨機召喚1隻魔術之手或舞動之手。\n3、聖靈之城每回合結束給所有同伴添加(\d+)層祝福，咒靈之城每回合結束給所有敵人添加(\d+)層詛咒。\n4、聖靈之城，自身回合開始時，自身擁有(\d+)層祝福時，釋放「神之審判」。咒靈之城，自身回合開始時，任意敵人擁有(\d+)層詛咒時，釋放「虛無藝術」。\n5、魔術之手被召喚時，立刻給所有怪物添加(\d+)層祝福；每回合結束，給所有怪物添加(\d+)層祝福；死亡時清除所有怪物(\d+)層祝福，給所有怪盜添加(\d+)層祝福。\n6、舞動之手被召喚時，立刻給所有角色添加(\d+)層詛咒；每回合結束，給所有角色添加(\d+)層詛咒；死亡時清除所有角色(\d+)層詛咒，給所有怪物添加(\d+)層詛咒。\n7、聖靈之城瀕死時會清除場上的怪物並進入二階段，召喚(\d+)隻魔術之手和(\d+)隻舞動之手。$"="1. The Bless and Curse effects from Spiritual Castle/Haunted Castle are permanent.\n2. At the start of battle, summon 1 Magic Hand and 1 Dancing Hand. When Spiritual Castle is present, summon 1 Magic Hand or Dancing Hand when Magic Hand/Dancing Hand dies.\n3. At the end of each turn, Spiritual Castle gives all allies $1 stacks of Bless, Haunted Castle inflicts all foes with $2 stacks of Curse.\n4. At the start of Spiritual Castle's turn, use [Divine Judgement] if it has $3 stacks of Bless; At the start of Haunted Castle's turn, use [Akasha Arts] if any foe have $4 stacks of Curse.\n5. When Magic Hand is summoned, immediately gives all Shadows $5 stacks of Bless; At the end of each turn, gives all Shadows $6 stack of Bless; Dispels $7 stacks of Bless from all Shadows and gives all Thieves $8 stack of Bless on death. \n6.When Dancing Hand is summoned, immediately inflicts all Thieves with $9 stacks of Curse; At the end of each turn, inflicts all Thieves with $10 stack of Curse; Dispels $11 stacks of Curse from all Thieves and inflicts all Shadows with $12 stack of Curse on death. \n7. Removes all Shadows when Spiritual Castle is near death, then summons $13 Magic Hand and $14 Dancing Hand."
+r:"^1、聖靈之城/咒靈之城添加的祝福、詛咒效果持續時間均為無限回合。\n2、戰鬥開始時召喚1隻魔術之手和1隻舞動之手。聖靈之城在場時，魔術之手/舞動之手死亡時會再隨機召喚1隻魔術之手或舞動之手。\n3、聖靈之城每回合結束給所有同伴添加(\d+)層祝福，咒靈之城每回合結束給所有敵人添加(\d+)層詛咒。\n4、聖靈之城，自身回合開始時，自身擁有(\d+)層祝福時，釋放「神之審判」。咒靈之城，自身回合開始時，任意敵人擁有(\d+)層詛咒時，釋放「虛無藝術」。\n5、魔術之手被召喚時，立刻給所有怪物添加(\d+)層祝福；每回合結束，給所有怪物添加(\d+)層祝福；死亡時清除所有怪物(\d+)層祝福，給所有怪盜添加(\d+)層祝福。\n6、舞動之手被召喚時，立刻給所有角色添加(\d+)層詛咒；每回合結束，給所有角色添加(\d+)層詛咒；死亡時清除所有角色(\d+)層詛咒，給所有怪物添加(\d+)層詛咒。\n7、聖靈之城瀕死時會清除場上的怪物並進入二階段，召喚(\d+)隻魔術之手和(\d+)隻舞動之手。$"="1. The Blessing and Curse effects from Spiritual Castle/Haunted Castle are permanent.\n2. At the start of battle, summon 1 Magic Hand and 1 Dancing Hand. When Spiritual Castle is present, summon 1 Magic Hand or Dancing Hand when Magic Hand/Dancing Hand dies.\n3. At the end of each turn, Spiritual Castle gives all allies $1 stacks of Bless, Haunted Castle inflicts all foes with $2 stacks of Curse.\n4. At the start of Spiritual Castle's turn, use [Divine Judgement] if it has $3 stacks of Bless; At the start of Haunted Castle's turn, use [Akasha Arts] if any foe have $4 stacks of Curse.\n5. When Magic Hand is summoned, immediately gives all Shadows $5 stacks of Bless; At the end of each turn, gives all Shadows $6 stack of Bless; Dispels $7 stacks of Bless from all Shadows and gives all Thieves $8 stack of Bless on death. \n6.When Dancing Hand is summoned, immediately inflicts all Thieves with $9 stacks of Curse; At the end of each turn, inflicts all Thieves with $10 stack of Curse; Dispels $11 stacks of Curse from all Thieves and inflicts all Shadows with $12 stack of Curse on death. \n7. Removes all Shadows when Spiritual Castle is near death, then summons $13 Magic Hand and $14 Dancing Hand."
 
 ----------
 NPC

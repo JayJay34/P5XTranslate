@@ -1,6 +1,4 @@
 Skill Level up Description //
-
-戰鬥技巧=Combat Skills
 基礎數值=Base Stats
 狀態資訊=Status Information
 當前無狀態資訊=No Status Info
@@ -40,7 +38,7 @@ Elemental Ailments Mental Ailments TECHNICAL
 <color\=#66ccff>燃燒</color>=<color\=#FF8C35>Burn</color>
 <color\=#66ccff>凍結</color>=<color\=#DFFFFF>Freeze</color>
 <color\=#66ccff>觸電</color>=<color\=#FCE54E>Shock</color>
-<color\=#66ccff>風襲</color>=<color\=#52E54E>Winded</color>
+<color\=#66ccff>風襲</color>=<color\=#52E54E>Windswept</color>
 <color\=#66ccff>輻射</color>=<color\=#01F8FD>Radiation</color>
 <color\=#66ccff>『輻射』</color>=<color\=#01F8FD>Radiation</color>
 
@@ -49,7 +47,7 @@ r:"^行動後損失生命值$"="Lose HP after action"
 凍結=Freeze
 觸電=Shock
 r:"^受到暴擊率提升(\d+%)$"="Increase CRIT Rate Taken by $1"
-風襲=Winded
+風襲=Windswept
 輻射=Radiation
 受到的傷害提升15%，被視為一種元素異常。=Increase DMG Taken by 15%; \nSeen as an Elemental Ailment
 
@@ -71,7 +69,7 @@ r:"^受到暴擊率提升(\d+%)$"="Increase CRIT Rate Taken by $1"
 洗腦=Brainwash
 
 r:"^<color\=#66ccff>詛咒</color>$"="<color\=#FF0037>Curse</color>"
-r:"^<color\=#66ccff>祝福</color>$"="<color\=#FFFF9E>Bless</color>"
+r:"^<color\=#66ccff>祝福</color>$"="<color\=#FFFF9E>Blessing</color>"
 r:"^<color\=#FF0000>(.*)</color>從倒地狀態恢復了。$"="Recovered from <color\=#FF0000>Down</color>!"
 r:"^<color\=#FF0000>(.*){{A}}</color>從倒地狀態恢復了。$"="Recovered from <color\=#FF0000>Down</color>!"
 
@@ -102,7 +100,7 @@ r:"^<color\=#FF0000>(.*){{A}}</color>從倒地狀態恢復了。$"="Recovered fr
 ----------
 Elemental Ailments Mental Ailments TECHNICAL Descriptions
 ----------
-r:"燃燒、冰凍、觸電、風襲，以上4種狀態屬於元素異常。"=<color\=#FF8C35>Burn</color>, <color\=#DFFFFF>Freeze</color>, <color\=#FCE54E>Shock</color>, <color\=#52E54E>Winded</color>.
+r:"燃燒、冰凍、觸電、風襲，以上4種狀態屬於元素異常。"=<color\=#FF8C35>Burn</color>, <color\=#DFFFFF>Freeze</color>, <color\=#FCE54E>Shock</color>, <color\=#52E54E>Windswept</color>.
 r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以上8種狀態屬於精神異常。"=<color\=#FBF6C1>Dizzy</color>, <color\=#80EEED>Forget</color>, <color\=#E59FFF>Sleep</color>, <color\=#F77F76>Rage</color>, <color\=#B69ABB>Despair</color>, <color\=#FCC6FA>Fear</color>, <color\=#C0F081>Confuse</color>, <color\=#AF4FA6>Brainwash</color>
 
 使敵人受到傷害提升15%，被視為1種元素異常。=Increase DMG Taken by 15% for 2 turns, seen as 1 Elemental Ailment.
@@ -111,11 +109,11 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 
 攻擊力大幅提高，防禦力大幅下降，強制執行普攻指令=Heavily increase ATK and decrease DEF, forced to use basic attack
 
-r:"^部分火焰屬性技能對處於某些特定狀態的敵人，會造成額外的效果。\n火焰屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『爆燃』，使技能傷害提升(\d+%)；\n火焰屬性技能對處於凍結狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合；\n火焰屬性技能對處於風襲狀態的敵人造成TECHNICAL時，觸發『颶焰』，額外造成(\d+)次基於目標最大生命值(\d+%)的火焰屬性傷害。$"="Certain Fire skills can trigger additional effects to foes in specific status.\nWhen Fire skills deal TECHNICAL to foes inflicted with Burn, trigger [Backdraft], increase skill damage by $1;\nWhen Fire skills deal TECHNICAL to foes inflicted with Freeze, trigger [Ice Burn], there is a $2 base chance to increase the target's Fire/Ice DMG Taken by $3 for $4 turns;\nWhen Fire skills deal TECHNICAL to foes inflicted with Winded, trigger [Hurricane Flame]: Deal $5 additional hit of Fire damage based on $6 of the target's Max HP."
+r:"^部分火焰屬性技能對處於某些特定狀態的敵人，會造成額外的效果。\n火焰屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『爆燃』，使技能傷害提升(\d+%)；\n火焰屬性技能對處於凍結狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合；\n火焰屬性技能對處於風襲狀態的敵人造成TECHNICAL時，觸發『颶焰』，額外造成(\d+)次基於目標最大生命值(\d+%)的火焰屬性傷害。$"="Certain Fire skills can trigger additional effects to foes in specific status.\nWhen Fire skills deal TECHNICAL to foes inflicted with Burn, trigger [Backdraft], increase skill damage by $1;\nWhen Fire skills deal TECHNICAL to foes inflicted with Freeze, trigger [Ice Burn], there is a $2 base chance to increase the target's Fire/Ice DMG Taken by $3 for $4 turns;\nWhen Fire skills deal TECHNICAL to foes inflicted with Windswept, trigger [Hurricane Flame]: Deal $5 additional hit of Fire damage based on $6 of the target's Max HP."
 r:"^火焰屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『爆燃』，使技能傷害提升(\d+%)。$"="When Fire skills deal TECHNICAL to foes inflicted with Burn, trigger [Backdraft], increase skill damage by $1"
 r:"^火焰屬性技能對處於凍結狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合。$"="When Fire skills deal TECHNICAL to foes inflicted with Freeze, trigger [Ice Burn], there is a $1 base chance to increase the target's Fire/Ice DMG Taken by $2 for $3 turns."
 r:"^火焰屬性技能對處於凍結狀態的敵人造成TECHNICAL或冰凍屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合。$"="When Fire skills deal TECHNICAL to foes inflicted with Freeze or Ice skills deal TECHNICAL to foes inflicted with Burn, trigger [Ice Burn], there is a $1 base chance to increase the target's Fire/Ice DMG Taken by $2 for $3 turns."
-r:"^火焰屬性技能對處於風襲狀態的敵人造成TECHNICAL時，觸發『颶焰』，額外造成(\d+)次基於目標最大生命值(\d+%)的火焰屬性傷害。$"="When Fire skills deal TECHNICAL to foes inflicted with Winded, trigger [Hurricane Flame]: Deal $1 additional hit of Fire damage based on $2 of the target's Max HP."
+r:"^火焰屬性技能對處於風襲狀態的敵人造成TECHNICAL時，觸發『颶焰』，額外造成(\d+)次基於目標最大生命值(\d+%)的火焰屬性傷害。$"="When Fire skills deal TECHNICAL to foes inflicted with Windswept, trigger [Hurricane Flame]: Deal $1 additional hit of Fire damage based on $2 of the target's Max HP."
 
 r:"^部分冰凍屬性技能對處於某些特定狀態的敵人，會造成額外的效果。\n冰凍屬性技能對處於觸電狀態的敵人造成TECHNICAL時，觸發『凜霆』，使技能傷害提升(\d+%)；\n冰凍屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合；\n冰凍屬性技能對處於凍結狀態的敵人造成TECHNICAL時，觸發『冰封』，有(\d+%)基礎機率使目標陷入冰封狀態，持續(\d+)回合。$"="Certain Ice skills can trigger additional effects to foes in specific status.\nWhen Ice skills deal TECHNICAL to foes inflicted with Shock, trigger [Frigid Bolt], increase skill damage by $1;\nWhen Ice skills deal TECHNICAL to foes inflicted with Burn, trigger [Ice Burn], there is a $2 base chance to increase the target's Fire/Ice DMG Taken by $3 for $4 turns;\nWhen Ice skills deal TECHNICAL to foes inflicted with Freeze, trigger [Ice Seal]: There is a $5 base chance to inflict the target with Ice Seal for $6 turn."
 r:"^冰凍屬性技能對處於觸電狀態的敵人造成TECHNICAL時，觸發『凜霆』，使技能傷害提升(\d+%)$"="When Ice skills deal TECHNICAL to foes inflicted with Shock, trigger [Frigid Bolt], increase skill damage by $1"
@@ -336,8 +334,8 @@ r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的射擊屬�
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+)次(\d+\.\d+%)攻擊力的射擊屬性傷害，暴擊率提升(\d*\.?\d+%)，命中率降低(\d*\.?\d+%).$"="Deals $2 ATK Gun damage to <color\=#FFFF00>all</color> foes $1 times with a $3 increase in CRIT Rate and $4 decrease in Hit Rate."
 
 Janosik
-r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的射擊屬性傷害，(\d+%)固定機率使敵人獲得『瞄準』。$"="Deals $1 ATK Gun damage to <color\=#FFFF00>1</color> foe with a $2 fixed chance to inflict [Aim]."
-r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+)段(\d+\.\d+%)攻擊力的射擊屬性傷害，若場上存在被瞄準的敵人則該技能攻擊力提升(\d+\.\d+%)，暴擊效果提升(\d+\.\d+%)。$"="Deals $2 ATK Gun damage to <color\=#FFFF00>all</color> foes $1 times. If there is a foe with [Aim], increase skill ATK by $3 and CRIT DMG by $4."
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的射擊屬性傷害，(\d+%)固定機率使敵人獲得『瞄準』。$"="Deals $1 ATK Gun damage to <color\=#FFFF00>1</color> foe with a $2 fixed chance to inflict [Marked]."
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+)段(\d+\.\d+%)攻擊力的射擊屬性傷害，若場上存在被瞄準的敵人則該技能攻擊力提升(\d+\.\d+%)，暴擊效果提升(\d+\.\d+%)。$"="Deals $2 ATK Gun damage to <color\=#FFFF00>all</color> foes $1 times. If there is a foe with [Marked], increase skill ATK by $3 and CRIT DMG by $4."
 
 //Seth
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的射擊屬性傷害，暴擊時額外造成1點倒地值傷害。$"="Deals $1 ATK Gun damage to <color\=#FFFF00>1</color> foe. If this skill crits, decreases an additional Down Gauge."
@@ -378,10 +376,10 @@ Magarula
 sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，持續2回合。"=Deals <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> foes, with a <color\=#FFFF00>$3</color> base chance to inflict $4 for 2 turns.
 
 Narcissus
-r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的疾風屬性傷害，有(\d+\.\d+%)基礎機率使敵人陷入風襲，持續(\d+)回合。$"="Deals $1 ATK Wind damage to <color\=#FFFF00>1</color> foe, with a $2 base chance to inflict Winded for $3 turns."
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的疾風屬性傷害，有(\d+\.\d+%)基礎機率使敵人陷入風襲，持續(\d+)回合。$"="Deals $1 ATK Wind damage to <color\=#FFFF00>1</color> foe, with a $2 base chance to inflict Windswept for $3 turns."
 
 Vishnu
-造成<color\=#FFFF00>單體</color>疾風屬性傷害，機率附著<color\=#FFFF00>風襲</color>效果。若目標處於風襲狀態則刷新持續時間並增加本次技能傷害並附加疾風傷害加深效果。=Deals Wind DMG to <color\=#FFFF00>1</color> foe, with a chance to inflict <color\=#FFFF00>Winded</color>. If the target is in Winded, refreshes its duration, increases this damage and increases their Wind DMG Taken.
+造成<color\=#FFFF00>單體</color>疾風屬性傷害，機率附著<color\=#FFFF00>風襲</color>效果。若目標處於風襲狀態則刷新持續時間並增加本次技能傷害並附加疾風傷害加深效果。=Deals Wind DMG to <color\=#FFFF00>1</color> foe, with a chance to inflict <color\=#FFFF00>Windswept</color>. If the target is in Windswept, refreshes its duration, increases this damage and increases their Wind DMG Taken.
 
 --- Psy ---
 
@@ -415,17 +413,17 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的核熱�
 r:"^祝福屬性$"="Bless"
 
 //ST Bless with varying stacks
-r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，機率賦予自身(\d+\~\d+)個祝福效果"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>1</color> foe and gains $2 stack(s) of Bless.
+r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，機率賦予自身(\d+\~\d+)個祝福效果"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>1</color> foe and gains $2 stack(s) of Blessing.
 
 //ST Bless with constant stacks
-r:"對<color\=#FFFF00>1名</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>1</color> foe and gains $2 stack(s) of Bless.
+r:"對<color\=#FFFF00>1名</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>1</color> foe and gains $2 stack(s) of Blessing.
 
-r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，賦予自身(\d+)個祝福效果$"="Deals $1 ATK Bless damage to <color\=#FFFF00>1</color> foe and gains $2 stacks of Bless."
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，賦予自身(\d+)個祝福效果$"="Deals $1 ATK Bless damage to <color\=#FFFF00>1</color> foe and gains $2 stacks of Blessing."
 
 //AoE Bless with varying stacks
-r:"對<color\=#FFFF00>所有</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+\~\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>all</color> foes and gains $2 stack(s) of Bless.
+r:"對<color\=#FFFF00>所有</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+\~\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>all</color> foes and gains $2 stack(s) of Blessing.
 
-r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，機率賦予自身(\d+\~\d+)個祝福效果$"="Deals $1 ATK Bless damage to <color\=#FFFF00>all</color> foes, with a chance to gain $2 stack(s) of Bless."
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，機率賦予自身(\d+\~\d+)個祝福效果$"="Deals $1 ATK Bless damage to <color\=#FFFF00>all</color> foes, with a chance to gain $2 stack(s) of Blessing."
 
 //ST Bless Instakill
 r:"對<color\=#FFFF00>1名</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，對50%生命值以下的敵人附加低機率祝福屬性即死效果，生命值越低機率越高。"=Deals <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>1</color> foe with a chance of insta-kill to foes under 50% HP. The lower the HP, the higher the chance.
@@ -440,7 +438,7 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福�
 r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使1名生命值最低的同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值。$"="Deals <color\=#fffc40>$1</color> ATK Bless damage to all foes, and restores <color\=#fffc40>$2</color> ATK + <color\=#fffc40>$3</color> HP to the lowest HP ally."
 
 Light of Salvation
-r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，使自身獲得(\d+)層祝福效果。自身每層祝福效果使得技能傷害提升(\d+%)，最多提升(\d+%)。$"="Deals $1 ATK Bless damage to <color\=#FFFF00>all</color> foes and gain $2 stacks of Bless. For every stack of Bless you have, increases skill damage by $3, up to $4."
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，使自身獲得(\d+)層祝福效果。自身每層祝福效果使得技能傷害提升(\d+%)，最多提升(\d+%)。$"="Deals $1 ATK Bless damage to <color\=#FFFF00>all</color> foes and gain $2 stacks of Bless. For every stack of Blessing you have, increases skill damage by $3, up to $4."
 
 Absolute Obedience
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害。使目標受到的HIGHLIGHT傷害提升(\d+\.\d+%)，持續(\d+)回合。$"="Deals $1 ATK Bless damage to <color\=#FFFF00>1</color> foe. Increases their HIGHLIGHT DMG Taken by $2 for $3 turn."
@@ -461,7 +459,7 @@ Maeiga
 r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，中機率賦予敵人(\d+)個詛咒效果"=Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> foes and inflicts $2 stack(s) of <link\=s|112><u>Curse</u></link>.
 
 Afterlife Judgement
-r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，根據自身身上的祝福層數以及目標身上的詛咒層數增傷，每層(\d+%),上限(\d+)層。$"="Deals $1 ATK Curse damage to <color\=#FFFF00>1</color> foe. When using this skill, each stack of Bless on you or each stack of Curse on the target increases DMG Dealt by $2, up to $3 stacks."
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，根據自身身上的祝福層數以及目標身上的詛咒層數增傷，每層(\d+%),上限(\d+)層。$"="Deals $1 ATK Curse damage to <color\=#FFFF00>1</color> foe. When using this skill, each stack of Blessing on you or each stack of Curse on the target increases DMG Dealt by $2, up to $3 stacks."
 
 //Brand of Malice
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，並使其獲得(\d+)(.*)(\d+)個詛咒效果。$"="Deals $1 ATK Curse damage to <color\=#FFFF00>all</color> foes and inflicts $2~$4 stack(s) of Curse."
@@ -520,7 +518,7 @@ r:"^驅散1名同伴的<link\="s\|107"><u>暈眩</u></link>、<link\="s\|109"><u
 r:"^驅散1名同伴的<link\="s\|156"><u>混亂</u></link>、<link\="s\|157"><u>恐懼</u></link>、<link\="s\|155"><u>絕望</u></link>、<link\="s\|110"><u>狂怒</u></link>、<link\="s\|158"><u>洗腦</u></link>效果。$"=Cures <link\=s|156><u>Confuse</u></link>/<link\=s|157><u>Fear</u></link>/<link\=s|155><u>Despair</u></link>/<link\=s|110><u>Rage</u></link>/<link\=s|158><u>Brainwash</u></link> for 1 ally.
 
 //Baisudi
-r:"^驅散1名同伴的<link\="s\|102"><u>燃燒</u></link>、<link\="s\|103"><u>凍結</u></link>、<link\="s\|104"><u>觸電</u></link>、<link\="s\|105"><u>風襲</u></link>效果。$"=Cures <link\=s|102><u>Burn</u></link>/<link\=s|103><u>Freeze</u></link>/<link\=s|104><u>Shock</u></link>/<link\=s|105><u>Winded</u></link> for 1 ally.
+r:"^驅散1名同伴的<link\="s\|102"><u>燃燒</u></link>、<link\="s\|103"><u>凍結</u></link>、<link\="s\|104"><u>觸電</u></link>、<link\="s\|105"><u>風襲</u></link>效果。$"=Cures <link\=s|102><u>Burn</u></link>/<link\=s|103><u>Freeze</u></link>/<link\=s|104><u>Shock</u></link>/<link\=s|105><u>Windswept</u></link> for 1 ally.
 
 //
 r:"使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(.*)的生命值，並驅散1個元素異常效果。"=Restores <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to all allies and cures 1 <link\=s|101><u>Elemental Ailment</u></link>.
@@ -586,7 +584,7 @@ r:"^使<color\=#FFFF00>所有</color>友方角色攻擊力提升(\d+\.\d+%)，�
 r:"^無<color\=#000000>限</color>演算法$"="I<color\=#000000>n</color>finite Algorithm"
 
 //norn
-r:"^使<color\=#FFFF00>所有</color>同伴獲得(\d+\.\d+%)攻擊力\+(\d+)的護盾，持續(\d+)回合，護盾受到傷害時有(\d+\.\d+%)基礎機率使傷害來源陷入風襲狀態。$"="Grants <color\=#FFFF00>all</color> allies $1 ATK + $2 Shield for $3 turns. There is a $4 base chance to inflict Winded to the foe when the Shield took damage."
+r:"^使<color\=#FFFF00>所有</color>同伴獲得(\d+\.\d+%)攻擊力\+(\d+)的護盾，持續(\d+)回合，護盾受到傷害時有(\d+\.\d+%)基礎機率使傷害來源陷入風襲狀態。$"="Grants <color\=#FFFF00>all</color> allies $1 ATK + $2 Shield for $3 turns. There is a $4 base chance to inflict Windswept to the foe when the Shield took damage."
 
 防電之壁=Elec Wall
 防風之壁=Wind Wall
@@ -780,7 +778,7 @@ sr:"^<color\=#FF0000>(.*)</color>從洗腦異常狀態恢復了。$"="<color\=#F
 
 sr:"^<color\=#FF0000>(.*)</color>從冰封異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Ice Seal!"
 
-sr:"^<color\=#FF0000>(.*)</color>被(.*)瞄準了，防禦降低……$"="<color\=#FF0000>Foe</color> aimed by $2, DEF Down!"
+sr:"^<color\=#FF0000>(.*)</color>被(.*)瞄準了，防禦降低……$"="<color\=#FF0000>Foe</color> Marked by $2, DEF Down!"
 sr:"^<color\=#FF0000>(.*)</color>將會在(\d+)個回合後逃離……$"="<color\=#FF0000>$1</color> will escape after $2 turn(s)!"
 
 ----------
@@ -789,9 +787,9 @@ Combat Pop-ups for ailments technical
 r:"^燃<color\=#000000>燒</color>$"="B<color\=#000000>u</color>rn"
 r:"^凍<color\=#000000>結</color>$"="F<color\=#000000>r</color>eeze"
 r:"^觸<color\=#000000>電</color>$"="S<color\=#000000>h</color>ock"
-r:"^風<color\=#000000>襲</color>$"="W<color\=#000000>i</color>nded"
+r:"^風<color\=#000000>襲</color>$"="W<color\=#000000>i</color>ndswept"
 r:"^輻<color\=#000000>射</color>$"="R<color\=#000000>a</color>diation"
-r:"^祝<color\=#000000>福</color>$"="B<color\=#000000>l</color>ess"
+r:"^祝<color\=#000000>福</color>$"="B<color\=#000000>l</color>essing"
 r:"^詛<color\=#000000>咒</color>$"="C<color\=#000000>u</color>rse"
 
 r:"^倒<color\=#000000>地</color>$"="D<color\=#000000>o</color>wn"
@@ -946,7 +944,7 @@ r:"^受<color\=#000000>詛</color>咒傷害提高$"="C<color\=#000000>u</color>r
 r:"^受<color\=#000000>詛</color>咒傷害提升$"="C<color\=#000000>u</color>rse DMG Taken Up"
 r:"^弱<color\=#000000>點</color>暴露$"="W<color\=#000000>e</color>akness Exposed"
 
-r:"^瞄<color\=#000000>準</color>$"="A<color\=#000000>i</color>m"
+r:"^瞄<color\=#000000>準</color>$"="M<color\=#000000>a</color>rked"
 r:"^物<color\=#000000>理</color>弱點$"="P<color\=#000000>h</color>ys Weakness"
 r:"^射<color\=#000000>擊</color>弱點$"="G<color\=#000000>u</color>n Weakness"
 r:"^火<color\=#000000>焰</color>弱點$"="F<color\=#000000>i</color>re Weakness"
@@ -1069,7 +1067,7 @@ r:"^受弱點傷害提升(\d+%)$"="Increase Weakness DMG by $1"
 
 火焰耐性消除=Negate Fire resistance
 
-瞄準=Aim
+瞄準=Marked
 瑪哈塔爾卡Ⅳ=Auto-Mataru IV
 瑪哈塔爾卡Ⅲ=Auto-Mataru III
 瑪哈塔爾卡Ⅱ=Auto-Mataru III
@@ -1093,6 +1091,7 @@ r:"^受弱點傷害提升(\d+%)$"="Increase Weakness DMG by $1"
 無法選中=Cannot Target
 倒地=Down
 被擊倒了！=Knocked Down!
+r:"^被擊倒了！倒地易傷增加(\d+%)$"="Knocked Down! \nIncrease Downed DMG Taken by $1"
 
 ----------
 Inspect Details - BUFF
