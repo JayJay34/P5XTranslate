@@ -19,10 +19,10 @@ r:"^防禦力提升(\d+\.\d+%)。自身受到的弱點傷害降低(.*)。$"="<si
 
 Janosik
 r:"^餘孽收割(.*)$"="Reaper $1"
-r:"^攻擊力提升(\d+\.\d+%)。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。$"="Increases ATK by $1. When allies attack foes with [Aim], increases ATK by $2."
-r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，使1名敵人獲得『瞄準』。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。$"="Increases ATK by $1. At the start of battle, inflicts 1 foe with [Aim]. When allies attack foes with [Aim], increases ATK by $2."
-r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，使1名敵人獲得『瞄準』。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。自身攻擊有『瞄準』的敵人時，造成1次1(\d+%)攻擊力的射擊屬性傷害。$"="Increases ATK by $1. At the start of battle, inflicts 1 foe with [Aim]. When allies attack foes with [Aim], increases ATK by $2. When you attack foes with [Aim], deal an additional $3 ATK Gun damage to them."
-r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，使1名敵人獲得『瞄準』。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。帶有『瞄準』的敵人防禦力額外降低(\d+%)。自身攻擊有『瞄準』的敵人時，造成1次(\d+%)攻擊力的射擊屬性傷害。$"="<size\=22>Increases ATK by $1. At the start of battle, inflicts 1 foe with [Aim]. When allies attack foes with [Aim], increases ATK by $2. Additionally decreases DEF by $3 for foes with [Aim]. When you attack foes with [Aim], deal an additional $4 ATK Gun damage to them.</size>"
+r:"^攻擊力提升(\d+\.\d+%)。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。$"="Increases ATK by $1. When allies attack foes with [Marked], increases ATK by $2."
+r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，使1名敵人獲得『瞄準』。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。$"="Increases ATK by $1. At the start of battle, inflicts 1 foe with [Marked]. When allies attack foes with [Marked], increases ATK by $2."
+r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，使1名敵人獲得『瞄準』。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。自身攻擊有『瞄準』的敵人時，造成1次1(\d+%)攻擊力的射擊屬性傷害。$"="Increases ATK by $1. At the start of battle, inflicts 1 foe with [Marked]. When allies attack foes with [Marked], increases ATK by $2. When you attack foes with [Marked], deal an additional $3 ATK Gun damage to them."
+r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，使1名敵人獲得『瞄準』。所有同伴攻擊帶有『瞄準』的敵人時，攻擊力提升(\d+%)。帶有『瞄準』的敵人防禦力額外降低(\d+%)。自身攻擊有『瞄準』的敵人時，造成1次(\d+%)攻擊力的射擊屬性傷害。$"="<size\=22>Increases ATK by $1. At the start of battle, inflicts 1 foe with [Marked]. When allies attack foes with [Marked], increases ATK by $2. Additionally decreases DEF by $3 for foes with [Marked]. When you attack foes with [Marked], deal an additional $4 ATK Gun damage to them.</size>"
 
 Obariyon
 r:"^靈財的射手(.*)$"="Shooter of Wealth $1"
@@ -169,12 +169,12 @@ r:"^生命值提升(\d+%)。驅散元素異常時，額外使目標回復(.*)攻
 
 Nigi Mitama
 r:"^順和的本質(.*)$"="Nature of Harmony $1"
-r:"^生命值提升(\d+\.\d+%)。釋放{{A}}技能造成治療效果後，使技能主目標獲得(\d+)層祝福效果。$"="<size\=28>Increases HP by $1. After using a {{A}} skill to heal, the main target gains $2 stack of Bless.</size>"
-r:"^生命值提升(\d+\.\d+%)。釋放{{A}}技能造成治療效果後，使技能主目標獲得(\d+)層祝福效果。有(.*)的機率使其額外獲得一層祝福效果。$"="<size\=23>Increases HP by $1. After using a {{A}} skill to heal, the main target gains $2 stack of Bless, with a $3 chance to gain 1 additional stack of Bless.</size>"
+r:"^生命值提升(\d+\.\d+%)。釋放{{A}}技能造成治療效果後，使技能主目標獲得(\d+)層祝福效果。$"="<size\=28>Increases HP by $1. After using a {{A}} skill to heal, the main target gains $2 stack of Blessing.</size>"
+r:"^生命值提升(\d+\.\d+%)。釋放{{A}}技能造成治療效果後，使技能主目標獲得(\d+)層祝福效果。有(.*)的機率使其額外獲得一層祝福效果。$"="<size\=23>Increases HP by $1. After using a {{A}} skill to heal, the main target gains $2 stack of Blessing, with a $3 chance to gain 1 additional stack of Blessing.</size>"
 
 Archangel
 r:"^崇高的光耀(.*)$"="Sublime Brilliance $1"
-r:"^效果命中提升(\d+%)。釋放{{A}}技能後，有(\d+%)固定機率使自身獲得1個祝福效果。若該技能造成了祝福屬性傷害，則額外獲得1個祝福效果。$"="<size\=24>Increases EHR by $1. After using a Persona skill, there is a $2 fixed chance to gain 1 Bless. If that skill dealt Bless damage, gains 1 additional Bless.</size>"
+r:"^效果命中提升(\d+%)。釋放{{A}}技能後，有(\d+%)固定機率使自身獲得1個祝福效果。若該技能造成了祝福屬性傷害，則額外獲得1個祝福效果。$"="<size\=24>Increases EHR by $1. After using a Persona skill, there is a $2 fixed chance to gain 1 Blessing. If that skill dealt Bless damage, gains 1 additional Blessing.</size>"
 
 Onmoraki
 r:"^餓肚子的怨氣(.*)$"="Hungry Resentment $1"
@@ -241,7 +241,7 @@ r:"^攻擊力提升(\d+\.\d+%)。擊敗敵人後，使自身造成的疾風屬�
 
 Anzu
 r:"^俯衝的獵殺(.*)$"="Swooping Hunt $1"
-r:"^攻擊力提升(\d+\.\d+%)。釋放{{A}}技能時，對技能主目標造成風襲效果時，效果命中提升(.*)。$"="Increases ATK by $1. When using a Persona skill to inflict Winded, increases EHR to the main target by $2."
+r:"^攻擊力提升(\d+\.\d+%)。釋放{{A}}技能時，對技能主目標造成風襲效果時，效果命中提升(.*)。$"="Increases ATK by $1. When using a Persona skill to inflict Windswept, increases EHR to the main target by $2."
 
 Sandman
 r:"^今夜的安眠(.*)$"="Sleep Well Tonight $1"
@@ -257,8 +257,8 @@ r:"^攻擊力提升(\d+\.\d+%)。擊敗敵人後，核熱傷害提升(.*)，效�
 
 Clotho
 r:"^福運的創造(.*)$"="Fortune Creation $1"
-r:"^效果命中提升(\d+\.\d+%)。擊敗敵人後，使自己獲得(\d+)個祝福效果，有(.*)機率額外獲得(\d+)個祝福效果。$"="<size\=29>Increases EHR by $1. After defeating a foe, gains $2 Bless, with a $3 chance to gain $4 additional Bless.</size>"
-r:"^效果命中提升(\d+\.\d+%)。擊敗敵人後，使自己獲得(\d+)個祝福效果。$"="Increases EHR by $1. After defeating a foe, gains $2 Bless."
+r:"^效果命中提升(\d+\.\d+%)。擊敗敵人後，使自己獲得(\d+)個祝福效果，有(.*)機率額外獲得(\d+)個祝福效果。$"="<size\=29>Increases EHR by $1. After defeating a foe, gains $2 Blessing, with a $3 chance to gain $4 additional Blessing.</size>"
+r:"^效果命中提升(\d+\.\d+%)。擊敗敵人後，使自己獲得(\d+)個祝福效果。$"="Increases EHR by $1. After defeating a foe, gains $2 Blessing."
 
 Principality
 r:"^統治之能(.*)$"="Power to Rule $1"
@@ -351,9 +351,9 @@ r:"^效果命中提升(\d+%)。對敵人釋放{{A}}技能後，目標敵人身�
 
 Anubis
 r:"^靈魂的判官(.*)$"="Judge of Souls $1"
-r:"^攻擊力提升(\d+\.\d+%)。造成祝福傷害時，使自身獲得1-2個祝福效果。造成詛咒傷害時，使技能主目標獲得1-2個詛咒效果。攻擊帶有詛咒效果的敵人時，攻擊力提升(\d+%)。$"="Increases ATK by $1. When dealing Bless damage, gains 1-2 stack(s) of Bless. When dealing Curse damage the main target gains 1-2 stack(s) of Curse. Increases ATK by $2 when attacking foes with Curse."
-r:"^攻擊力提升(\d+\.\d+%)。造成祝福傷害時，使自身獲得2個祝福效果。造成詛咒傷害時，使技能主目標獲得2個詛咒效果。攻擊帶有詛咒效果的敵人時，攻擊力提升(\d+\.\d+%)。$"="Increases ATK by $1. When dealing Bless damage, gains 2 stacks of Bless. When dealing Curse damage the main target gains 2 stacks of Curse. Increases ATK by $2 when attacking foes with Curse."
-r:"^攻擊力提升(\d+\.\d+%)。造成祝福傷害時，使自身獲得2個祝福效果，並有50%固定機率使技能主目標獲得1個詛咒效果。造成詛咒傷害時，使技能主目標獲得2個詛咒效果，並有50%固定機率使自身獲得1個祝福效果。攻擊帶有詛咒效果的敵人時，攻擊力提升(\d+%)。$"="<size\=24>Increases ATK by $1. When dealing Bless damage, gains 2 stacks of Bless and there is a 50% fixed chance to inflict 1 stack of Curse to the main target. When dealing Curse damage the main target gains 2 stacks of Curse and there is a 50% fixed chance for you to gain 1 stack of Bless. Increases ATK by $2 when attacking foes with Curse.</size>"
+r:"^攻擊力提升(\d+\.\d+%)。造成祝福傷害時，使自身獲得1-2個祝福效果。造成詛咒傷害時，使技能主目標獲得1-2個詛咒效果。攻擊帶有詛咒效果的敵人時，攻擊力提升(\d+%)。$"="Increases ATK by $1. When dealing Bless damage, gains 1-2 stack(s) of Blessing. When dealing Curse damage the main target gains 1-2 stack(s) of Curse. Increases ATK by $2 when attacking foes with Curse."
+r:"^攻擊力提升(\d+\.\d+%)。造成祝福傷害時，使自身獲得2個祝福效果。造成詛咒傷害時，使技能主目標獲得2個詛咒效果。攻擊帶有詛咒效果的敵人時，攻擊力提升(\d+\.\d+%)。$"="Increases ATK by $1. When dealing Bless damage, gains 2 stacks of Blessing. When dealing Curse damage the main target gains 2 stacks of Curse. Increases ATK by $2 when attacking foes with Curse."
+r:"^攻擊力提升(\d+\.\d+%)。造成祝福傷害時，使自身獲得2個祝福效果，並有50%固定機率使技能主目標獲得1個詛咒效果。造成詛咒傷害時，使技能主目標獲得2個詛咒效果，並有50%固定機率使自身獲得1個祝福效果。攻擊帶有詛咒效果的敵人時，攻擊力提升(\d+%)。$"="<size\=24>Increases ATK by $1. When dealing Bless damage, gains 2 stacks of Blessing and there is a 50% fixed chance to inflict 1 stack of Curse to the main target. When dealing Curse damage the main target gains 2 stacks of Curse and there is a 50% fixed chance for you to gain 1 stack of Blessing. Increases ATK by $2 when attacking foes with Curse.</size>"
 
 ----------
 RANK 5
@@ -406,12 +406,12 @@ r:"^眠居聖泉的長蛇(.*)$"="Holy Pond's Serpent $1"
 r:"^暴擊效果提升(\d+\.\d+%)。使場上敵人受到的暴擊效果提升(\d+%)。若其處於觸電狀態，則額外提升(\d+%)。$"="<size\=24>Increases CRIT DMG by $1. Increases all foes' CRIT DMG Taken by $2, if they are inflicted with Shock, additionally increases the effect by $3.</size>"
 
 Scathach
-r:"^風襲之魔(.*)$"="Demon of Wind $1"
-r:"^攻擊力提升(\d+\.\d+%)。對身上有任意減益效果的敵人造成的疾風屬性傷害提升(.*)，若敵人處於風襲狀態，則該效果提升(.*)。$"="<size\=24>Increases ATK by $1. Increases Wind DMG Dealt to foes with debuffs by $2, if they are inflicted with Winded, then increases this effect by $3.</size>"
+r:"^風襲之魔(.*)$"="Windswept Demon $1"
+r:"^攻擊力提升(\d+\.\d+%)。對身上有任意減益效果的敵人造成的疾風屬性傷害提升(.*)，若敵人處於風襲狀態，則該效果提升(.*)。$"="<size\=24>Increases ATK by $1. Increases Wind DMG Dealt to foes with debuffs by $2, if they are inflicted with Windswept, then increases this effect by $3.</size>"
 
 Narcissus
 r:"^花香的迷失(.*)$"="Lost Fragrance $1"
-r:"^效果命中提升(\d+\.\d+%)。造成風襲效果後，使主目標敵人受到的傷害提升(.*)，效果持續(.*)回合。並提升自身效果命中(.*)。效果持續(.*)回合。$"="<size\=24>Increases EHR by $1. After inflicting Winded, increases the main target's DMG Taken by $2 for $3 turns and increases own EHR by $4 for $5 turns.</size>"
+r:"^效果命中提升(\d+\.\d+%)。造成風襲效果後，使主目標敵人受到的傷害提升(.*)，效果持續(.*)回合。並提升自身效果命中(.*)。效果持續(.*)回合。$"="<size\=24>Increases EHR by $1. After inflicting Windswept, increases the main target's DMG Taken by $2 for $3 turns and increases own EHR by $4 for $5 turns.</size>"
 
 Okuninushi
 r:"^{{A}}的威儀(.*)$"="{{A}}'s Majesty $1"
@@ -497,9 +497,9 @@ r:"^招雷的血統(.*)$"="Electric Bloodline $1"
 r:"^暴擊效果提升(\d+\.\d+%)。使用電擊屬性技能時，消耗的精力值降低(.*)。$"="Increases CRIT DMG by $1. Decreases SP cost of Elec skills by $2."
 
 Norn
-r:"^命運的風襲(.*)$"="Wind of Fate $1"
-r:"^防禦力提升(\d+\.\d+%)。造成風襲效果後，使受到風襲效果的敵人的防禦力降低(.*)，效果持續(.*)回合。$"="Increases DEF by $1. After inflicting Winded, decreases the DEF of the inflicted foes by $2 for $3 turns."
-r:"^防禦力提升(\d+\.\d+%)。造成風襲效果後，使受到風襲效果的敵人的防禦力降低(.*)，並使自身的防禦力提升(.*)。效果持續(.*)回合。$"="<size\=24>Increases DEF by $1. After inflicting Winded, decreases the DEF of the inflicted foes by $2 and increases own DEF by $3 for $4 turns.</size>"
+r:"^命運的風襲(.*)$"="Windswept of Fate $1"
+r:"^防禦力提升(\d+\.\d+%)。造成風襲效果後，使受到風襲效果的敵人的防禦力降低(.*)，效果持續(.*)回合。$"="Increases DEF by $1. After inflicting Windswept, decreases the DEF of the inflicted foes by $2 for $3 turns."
+r:"^防禦力提升(\d+\.\d+%)。造成風襲效果後，使受到風襲效果的敵人的防禦力降低(.*)，並使自身的防禦力提升(.*)。效果持續(.*)回合。$"="<size\=24>Increases DEF by $1. After inflicting Windswept, decreases the DEF of the inflicted foes by $2 and increases own DEF by $3 for $4 turns.</size>"
 
 Garuda
 r:"^風鳥的凝視(.*)$"="Wind Bird's Gaze $1"
@@ -517,8 +517,8 @@ r:"^造成的治療效果提升(\d+%)。釋放{{A}}技能造成治療效果後�
 
 Melchizedek
 r:"^仁王的審判(.*)$"="<size\=20>King of Righteousness Judgement $1</size>"
-r:"^攻擊力提升(\d+\.\d+%)。自身釋放技能時，根據所有同伴的祝福層數提升造成的祝福傷害(\d+%)，上限(\d+)層，(\d+)回合。$"="<size\=24>Increases ATK by $1. When using a skill, increases Bless DMG by $2 for $4 turns based on the number of Bless stacks on all allies, up to $3 stack.</size>"
-r:"^攻擊力提升(\d+\.\d+%)。自身釋放技能時，根據所有同伴的祝福層數提升造成的祝福傷害(\d+%)，上限(\d+)層，(\d+)回合。釋放技能時，為祝福層數不少於(\d+)層的怪盜，提供攻擊力加成(\d+%)，(\d+)回合。$"="<size\=20>Increases ATK by $1. When a using a skill, increases Bless DMG by $2 for $4 turns based on the number of Bless stacks on all allies, up to $3 stack. When using a skill, increases ATK for allies with not less than $5 stacks of Bless by $6 for 2 turns.</size>"
+r:"^攻擊力提升(\d+\.\d+%)。自身釋放技能時，根據所有同伴的祝福層數提升造成的祝福傷害(\d+%)，上限(\d+)層，(\d+)回合。$"="<size\=24>Increases ATK by $1. When using a skill, increases Bless DMG by $2 for $4 turns based on the number of Blessing stacks on all allies, up to $3 stack.</size>"
+r:"^攻擊力提升(\d+\.\d+%)。自身釋放技能時，根據所有同伴的祝福層數提升造成的祝福傷害(\d+%)，上限(\d+)層，(\d+)回合。釋放技能時，為祝福層數不少於(\d+)層的怪盜，提供攻擊力加成(\d+%)，(\d+)回合。$"="<size\=20>Increases ATK by $1. When a using a skill, increases Bless DMG by $2 for $4 turns based on the number of Blessing stacks on all allies, up to $3 stack. When using a skill, increases ATK for allies with not less than $5 stacks of Blessing by $6 for 2 turns.</size>"
 
 Black Rider
 r:"^漆黑的審判(.*)$"="<size\=28>Pitch Black Judgement $1</size>"
@@ -657,7 +657,7 @@ r:"^釋放技能造成(\d+)次及以上傷害時，傷害提升(\d+%)$"="When de
 
 Vishnu
 r:"^恩惠於眾生(.*)$"="Blessing to All $1"
-r:"^暴擊率提升(\d+\.\d+%)。增加風襲的效果命中(\d+%)，對風襲狀態敵人造成傷害提升(\d+%)。\n添加或刷新風襲狀態時額外降低敵人防禦力(\d+%)，(\d+)回合。$"="<size\=22>Increases CRIT Rate by $1. Increases Winded EHR by $2 and increase DMG Dealt to foes with Winded by $3. \nDecreases the foes' DEF by $4 when refreshing or inflicting Winded for $5 turns.</size>"
+r:"^暴擊率提升(\d+\.\d+%)。增加風襲的效果命中(\d+%)，對風襲狀態敵人造成傷害提升(\d+%)。\n添加或刷新風襲狀態時額外降低敵人防禦力(\d+%)，(\d+)回合。$"="<size\=22>Increases CRIT Rate by $1. Increases Windswept EHR by $2 and increase DMG Dealt to foes with Windswept by $3. \nDecreases the foes' DEF by $4 when refreshing or inflicting Windswept for $5 turns.</size>"
 
 Kohryu
 r:"^祥瑞之主(.*)$"="<size\=28>Lord of Auspiciousness $1</size>"
