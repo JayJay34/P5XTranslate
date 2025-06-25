@@ -271,7 +271,7 @@ r:"^待設置$"="None"
 「<color\=#ff3b37>近戰攻擊</color>」選中的敵人=Use [<color\=#ff3b37>Melee Attack</color>]
 每個怪盜都有獨特的「<color\=#ff3b37>HIGHLIGHT</color>」技能，\n該技能釋放，需要累積對應<color\=#ff3b37>能量</color>。=Every Thief has a unique [<color\=#ff3b37>HIGHLIGHT</color>] skill.\nUnlocks after gaining enough [<color\=#ff3b37>HIGHLIGHT Energy</color>].
 釋放「<color\=#ff3b37>HIGHLIGHT</color>」終結戰鬥！=Finish the battle with [<color\=#ff3b37>HIGHLIGHT</color>]!
-每個怪盜都有一個獨特的超強技能，\n稱之為「<color\=#ff3b37>HIGHLIGHT</color>」技能。\n「HIGHLIGHT」技能無法觸發暴擊效果。=Each Thief has a unique super skill called [<color\=#ff3b37>HIGHLIGHT</color>].\n[HIGHLIGHT] cannot trigger CRIT DMG.
+每個怪盜都有一個獨特的超強技能，\n稱之為「<color\=#ff3b37>HIGHLIGHT</color>」技能。\n「HIGHLIGHT」技能無法觸發暴擊效果。=Each Thief has a unique super skill called [<color\=#ff3b37>HIGHLIGHT</color>].\n[HIGHLIGHT] cannot trigger Crit DMG.
 怪盜行動時、攻擊造成WEAK時，\n會獲得<color\=#ff3b37>HIGHLIGHT能量</color>。\n能量累積滿後，可在任意怪盜行動時釋放。=Gain <color\=#ff3b37>HIGHLIGHT Energy</color> after Thieves' action and when dealing Weak damage.\nWhen full, you can use it on any Thieves' action.
 怪盜「HIGHLIGHT」使用後，有<color\=#ff3b37>4回合</color>冷卻時間，\n冷卻後「<color\=#ff3b37>重置</color>」該怪盜的HIGHLIGHT「<color\=#ff3b37>使用機會</color>」。=After a Thief used [HIGHLIGHT], there is a <color\=#ff3b37>4 turns</color> cooldown on their [HIGHLIGHT].
 「<color\=#ff3b37>疾跑</color>」加快移動速度=[<color\=#ff3b37>Dash</color>] to move faster
@@ -344,7 +344,7 @@ r:"^西<color\=#ff0000ff>森</color> {{A}}$"="Ha<color\=#ff0000ff>ru</color>na N
 r:"^長<color\=#ff0000ff>尾</color> {{A}}$"="{{A}} N<color\=#ff0000ff>a</color>gao"
 r:"^清<color\=#ff0000ff>水</color> {{A}}$"="Ri<color\=#ff0000ff>ku</color>to Shimizu"
 r:"^小<color\=#ff0000ff>松</color> {{A}}$"="Na<color\=#ff0000ff>mie</color> Komatsu"
-r:"^<color\=#ff0000ff>茶</color>太$"="Cha<color\=#ff0000ff>t</color>ai"
+r:"^<color\=#ff0000ff>茶</color>太$"="Cha<color\=#ff0000ff>t</color>ra"
 r:"^燒<color\=#ff0000ff>鳥</color> {{A}}$"="Su<color\=#ff0000ff>mi</color>zou Yakitori"
 r:"^土<color\=#ff0000ff>佐</color>林 {{A}}$"="Fu<color\=#ff0000ff>mi</color>yo Tosabayashi"
 r:"^小<color\=#ff0000ff>出</color> {{A}}$"="Hi<color\=#ff0000ff>yo</color>ri Koide"
@@ -403,6 +403,7 @@ Character-specific Persona
 阿摩笛亞=Amalthea
 奧拉=Aura
 辛德瑞拉=Cendrillon
+灰姑娘=Cendrillon
 敏特=Minthe
 羅賓漢=Robin Hood
 洛基=Loki
@@ -474,15 +475,15 @@ r:"^{{A}}的殘識碎片$"="<size\=16>Awareness Fragment \nof {{A}}</size>"
 sr:"^(.*?)遺留在{{A}}的殘識碎片，消耗(\d+)個可以合成角色的殘識。$"="Awareness Fragment left by $1 in the {{A}}, consume $2 to fuse 1 Awareness."
 幸運之硬幣=Lucky Coin
 「{{A}}·等級獎勵」中獲得的幸運硬幣，用於在「生存遊戲專賣店」兌換「五星武器」。=<size\=25>Gained from the Phantom Pass, \ncan be used to redeem [5★ Weapon] in [Untouchable]</size>
-定製武器套件=5★ Weapon Box
+定製武器套件=5★ Weapon Case
 r:"^使用後可自選1把以下怪盜的五星武器：(.*)。$"="Can be used to choose 1 5★ Weapon for the following Thieves: $1."
-定製武器模組=4★ Weapon Box
-特供武器模組=4★ Weapon Box
+定製武器模組=4★ Weapon Case
+特供武器模組=4★ Weapon Case
 r:"^使用後可自選1把以下怪盜的四星武器：(.*)。$"="Can be used to choose 1 4★ Weapon for the following Thieves: $1."
-定製武器配裝=3★ Weapon Box
+定製武器配裝=3★ Weapon Case
 請在以下列表中點擊選擇一把4星武器=Please choose one 4★ Weapon
 請在以下物品中自選一種=Please choose one in the following items
-限定武器套件=<size\=28>Limited Weapon Box</size>
+限定武器套件=<size\=28>Limited Weapon Case</size>
 r:"^使用後可自選1把以下角色的5星專屬武器：\n(.*)。$"="Can be used to choose 1 5★ Weapon for the following Thieves: $1."
 
 ----------
@@ -567,6 +568,7 @@ r:"^生<color\=#ff0000ff>存</color>遊戲專賣店$"="Un<color\=#ff0000ff>to</c
 r:"^岩<color\=#ff0000ff>井</color>{{A}}$"="Mu<color\=#ff0000ff>ne</color>hisa Iwai"
 是你啊……今天來打算做點什麼？=It's you... What are you doing today?
 獲取補給=Get supplies
+合計：=Total:
 什麼嘛……不要隨便打擾別人生意。=What... Don't mess with other people's business.
 進入酒吧=Enter the bar
 該功能尚未開放=This feature is not available yet
@@ -958,28 +960,28 @@ sr:"^多重奏·(.*):(.*)元素怪盜技能傷害提升(.*)$"="<size\=21>$1 Poly
 
 最大生命值=Max HP
 生命值=HP
-攻擊力=ATK
-防禦力=DEF
+攻擊力=Attack
+防禦力=Defense
 精力值=SP
-速度=SPD
-速度影響進入戰鬥時的行動順序，另外技能命中率由攻擊方和被攻擊方的速度差決定。=<size\=29>SPD affects the turn order at the start of battle. \nSkill accuracy is determined by the SPD difference between the attacker and one being attacked.</size>
-暴擊率=CRIT Rate
-暴擊效果=CRIT DMG
-暴擊傷害=CRIT DMG
+速度=Speed
+速度影響進入戰鬥時的行動順序，另外技能命中率由攻擊方和被攻擊方的速度差決定。=<size\=29>Speed affects the turn order at the start of battle. \nSkill accuracy is determined by the Speed difference between the attacker and one being attacked.</size>
+暴擊率=Crit Rate
+暴擊效果=Crit DMG
+暴擊傷害=Crit DMG
 精力回復=SP Recovery
-穿透=PEN
-穿透影響對敵人造成傷害時忽視防禦的程度。=PEN affects how much foe DEF is ignored when dealing damage.
-倒地值=Down Gauge
-效果命中=EHR
-效果抵抗=Effect RES
-受到暴擊=CRIT Rate Taken
-暴擊抗性=CRIT DMG RES
+穿透=Pierce
+穿透影響對敵人造成傷害時忽視防禦的程度。=Pierce affects how much foe Defense is ignored when dealing damage.
+倒地值=Down Points
+效果命中=Ailment ACC
+效果抵抗=Ailment RES
+受到暴擊=Crit Rate Taken
+暴擊抗性=Crit DMG RES
 傷害加成=DMG Bonus
 受到傷害=DMG Taken
 傷害減免=DMG RES
 弱點傷害=Weak DMG
 弱點抗性=Weak RES
-耐性穿透=RES PEN
+耐性穿透=RES Pierce
 耐性抗性=RES Bonus
 r:"^治療效果$"="<size\=22>Healing Effect</size>"
 受治療加成=Healing Received
@@ -1004,11 +1006,11 @@ r:"^治療效果$"="<size\=22>Healing Effect</size>"
 造成傷害=DMG Dealt
 
 生命成長率=HP Growth
-攻擊成長率=ATK Growth
-防禦成長率=DEF Growth
+攻擊成長率=Attack Growth
+防禦成長率=Defense Growth
 生命值百分比=HP%
-攻擊力百分比=ATK%
-防禦力百分比=DEF%
+攻擊力百分比=Attack%
+防禦力百分比=Defense%
 上陣面具屬性會全部附加至主角=<size\=20>Wonder's stats are his \nequipped Persona stats combined</size>
 上陣{{A}}的屬性會同時附加給主角，提高<color\=#870000>主角屬性</color>。=Wonder's stats are his \n<color\=#870000>equipped Persona stats combined</color>.
 尚未佩戴面具=No equipped Mask
@@ -1031,19 +1033,19 @@ Wonder Skill Tree
 『靈感火花』\n挑戰天鵝絨試練、提升{{A}}精算機等級和提升{{B}}探索度可以獲得，用於提升靈感技能等級的高級材料。=<size\=28>[Inspiration Spark]\nObtained from Velvet Trials, {{A}} Ticket Machine and {{B}} Exploration, used to level up Inspiration skill tree.</size>
 
 r:"^提升(\d+)生命值。$"="Increase HP by $1"
-r:"^提升(\d+)攻擊力。$"="Increase ATK by $1"
-r:"^提升(\d+)防禦力。$"="Increase DEF by $1"
+r:"^提升(\d+)攻擊力。$"="Increase Attack by $1"
+r:"^提升(\d+)防禦力。$"="Increase Defense by $1"
 
-r:"^提升(\d+%)攻擊力。$"="Increase ATK% by $1"
-r:"^提升(\d+%)暴擊率。$"="Increase CRIT Rate by $1"
-r:"^提升(\d+%)暴擊效果。$"="Increase CRIT DMG by $1"
+r:"^提升(\d+%)攻擊力。$"="Increase Attack% by $1"
+r:"^提升(\d+%)暴擊率。$"="Increase Crit Rate by $1"
+r:"^提升(\d+%)暴擊效果。$"="Increase Crit DMG by $1"
 
 r:"^提升(\d+%)生命值。$"="Increase HP% by $1"
 r:"^提升(\d+%)治療效果。$"="<size\=26>Increase Healing Effect by $1</size>"
 r:"^提升(\d+\.\d%)治療效果。$"="<size\=26>Increase Healing Effect by $1</size>"
-r:"^提升(\d+%)效果命中。$"="<size\=26>Increase Effect Hit Rate by $1</size>"
+r:"^提升(\d+%)效果命中。$"="<size\=26>Increase Ailment ACC by $1</size>"
 
-r:"^提升(\d+%)防禦力。$"="Increase DEF% by $1"
+r:"^提升(\d+%)防禦力。$"="Increase Defense% by $1"
 r:"^提升(\d+%)護盾效果。$"="<size\=26>Increase Shield Effect by $1</size>"
 r:"^提升(\d+\.\d%)護盾效果。$"="<size\=26>Increase Shield Effect by $1</size>"
 r:"^提升(\d+%)效果抵抗。$"="Increase Effect RES by $1"
@@ -1066,7 +1068,7 @@ r:"^重置靈感需要(\d+)個魂石，是否確定重置？（重置後所有�
 靈感輝光=Inspiration Glow
 『靈感輝光』\n主角等級達到80級後，解鎖並提升超我等級可以獲得，用於提升靈感技能等級的高級材料。=<size\=24>[Inspiration Glow]\nObtain after Wonder reaches level 80 and unlocks Superego levels, used to level up Inspiration skill tree.</size>
 獲得靈感輝光=<size\=25>Inspiration Glow</size>
-r:"^提升(\d+)生命值。\n提升(\d+)攻擊力。\n提升(\d+)防禦力。$"="Increase HP by $1 \nIncrease ATK by $2 \nIncrease DEF by $3"
+r:"^提升(\d+)生命值。\n提升(\d+)攻擊力。\n提升(\d+)防禦力。$"="Increase HP by $1 \nIncrease Attack by $2 \nIncrease Defense by $3"
 r:"^需要<size\=46><color\=#ffffff><sprite\=2 tint\=1></size>(\d+)</color>和<size\=46><color\=#ffffff><sprite\=17 tint\=1></size>(\d+)</color>升級天賦。$"="<size\=28>Need <size\=46><color\=#ffffff><sprite\=2 tint\=1></size>$1</color> and <size\=46><color\=#ffffff><sprite\=17 tint\=1></size>$2</color> to upgrade.</size>"
 r:"^需要<size\=46><color\=#ffffff><sprite\=30 tint\=1></size>1</color>升級天賦。$"="Need <size\=46><color\=#ffffff><sprite\=30 tint\=1></size>1</color> to upgrade."
 
@@ -2047,7 +2049,7 @@ r:"^幫助{{A}}$"="<size\=24>Help out\n{{A}}</size>"
 
 {{A}}的寶物甄選=<size\=24>{{A}}'s \nTreasure Selection</size>
 {{A}}在城市的角落又藏了什麼樣的寶物呢，快去看看吧。=<size\=28>Let's go and find out what treasures did {{A}} hide in the city again</size>
-要尋找{{A}}的寶物嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to look for Chatai's treasure? (<color\=#ff0000>Spend 1 Energy Point</color>)
+要尋找{{A}}的寶物嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to look for {{A}}'s treasure? (<color\=#ff0000>Spend 1 Energy Point</color>)
 
 {{A}}的遊戲=<size\=24>{{A}}'s game</size>
 {{A}}似乎又策劃了什麼新遊戲，去找他湊湊熱鬧吧。={{A}} seems to be planning some new game, let's go find him and join in the fun
@@ -2442,9 +2444,9 @@ r:"^全體怪盜<color\=#ff0036>詛咒</color>傷害提高(\d+(.\d+)?(%)?)$"="In
 r:"^全體怪盜<color\=#ff63ff>念動</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff63ff>Psy</color> DMG by $1"
 r:"^全體怪盜<color\=#fffea0>祝福</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#fffea0>Bless</color> DMG by $1"
 r:"^全體怪盜<color\=#ff0036>HL</color>造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff0036>HIGHLIGHT</color> DMG Dealt by $1"
-r:"^全體怪盜<color\=#ff0036>追加效果</color>造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff0036>Follow Up</color> DMG Dealt by $1"
+r:"^全體怪盜<color\=#ff0036>追加效果</color>造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff0036>Follow-Up</color> DMG Dealt by $1"
 r:"^全體怪盜<color\=#E3E3E3>萬能</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#E3E3E3>Almighty</color> DMG by $1"
-r:"^全體怪盜處於<color\=#E3E3E3>額外回合</color>時造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' DMG Dealt during <color\=#E3E3E3>Extra Turn</color> by $1"
+r:"^全體怪盜處於<color\=#E3E3E3>額外回合</color>時造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' DMG Dealt during <color\=#E3E3E3>Extra Action</color> by $1"
 r:"^全體怪盜<color\=#E3E3E3>持續效果</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#E3E3E3>Damage Over Time</color> DMG by $1"
 
 此處盤踞著大量的陰影，挑戰成功可獲得怪盜潛能材料。=There are many Shadows here, gain Thief Potential materials on victory.
@@ -3052,9 +3054,10 @@ r:"^己方行動次數：(\d+)$"="Number of Actions: $1"
 戰鬥獎勵=Rewards
 屬性強化=Stats Boost
 所有怪盜造成的傷害大幅提升，受到的傷害大幅降低=<size\=23>Heavily increase all Thieves' DMG Dealt;\nHeavily decrease all Thieves' DMG Taken</size>
+所有怪盜造成的最終傷害大幅提升，受到的最終傷害大幅降低=<size\=20>Heavily increase all Thieves' Final DMG Dealt;\nHeavily decrease all Thieves' Final DMG Taken</size>
 r:"^所有敵人最大生命值提升(\d+(.\d+)?(%)?)$"="Increase all foes' Max HP by $1"
-r:"^所有敵人攻擊力提升(\d+(.\d+)?(%)?)$"="Increase all foes' ATK by $1"
-r:"^所有敵人防禦力提升(\d+(.\d+)?(%)?)$"="Increase all foes' DEF by $1"
+r:"^所有敵人攻擊力提升(\d+(.\d+)?(%)?)$"="Increase all foes' Attack by $1"
+r:"^所有敵人防禦力提升(\d+(.\d+)?(%)?)$"="Increase all foes' Defense by $1"
 r:"^所有敵人受到傷害降低(\d+(.\d+)?(%)?)$"="Decrease all foes' DMG Taken by $1"
 
 r:"^剩餘挑戰次數：(\d+)/(\d+)$"="Challenge Left: $1/$2"
@@ -3125,18 +3128,18 @@ r:"^『預言之數』\n完成「行動總結」中的目標後獲得，可投�
 普攻提升=Melee Attack Buff
 技能提升=Skill Buff
 HL提升=HIGHLIGHT Buff
-追加提升=Follow Up Buff
+追加提升=Follow-Up Buff
 持續提升=Damage Over Time Buff
 
 r:"^所有怪盜最大生命值提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' HP by $1"
-r:"^所有怪盜攻擊力提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' ATK by $1"
-r:"^所有怪盜防禦力提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' DEF by $1"
-r:"^所有怪盜暴擊率提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' CRIT Rate by $1"
-r:"^所有怪盜暴擊效果提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' CRIT DMG by $1"
-r:"^所有怪盜穿透提升(\d+(.\d+)?(%)?)"="Increase all Thieves' PEN by $1"
+r:"^所有怪盜攻擊力提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' Attack by $1"
+r:"^所有怪盜防禦力提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' Defense by $1"
+r:"^所有怪盜暴擊率提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' Crit Rate by $1"
+r:"^所有怪盜暴擊效果提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' Crit DMG by $1"
+r:"^所有怪盜穿透提升(\d+(.\d+)?(%)?)"="Increase all Thieves' Pierce by $1"
 r:"^所有怪盜弱點傷害提升(\d+(.\d+)?(%)?)"="Increase all Thieves' Weak DMG by $1"
-r:"^所有怪盜耐性穿透提升(\d+(.\d+)?(%)?)"="Increase all Thieves' RES PEN by $1"
-r:"^所有怪盜效果命中提升(\d+(.\d+)?(%)?)"="Increase all Thieves' EHR by $1"
+r:"^所有怪盜耐性穿透提升(\d+(.\d+)?(%)?)"="Increase all Thieves' RES Pierce by $1"
+r:"^所有怪盜效果命中提升(\d+(.\d+)?(%)?)"="Increase all Thieves' Ailment ACC by $1"
 r:"^所有怪盜造成傷害提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' DMG Dealt by $1"
 r:"^<color\=#FFFC40>WONDER</color>造成傷害提升(\d+(.\d+)?(%)?)$"="Increase <color\=#FFFC40>Wonder's</color> DMG Dealt by $1"
 r:"^<color\=#FFFC40>反抗</color>怪盜造成傷害提升(\d+(.\d+)?(%)?)$"="Increase all <color\=#FFFC40>Assassin</color> Thieves' DMG Dealt by $1"
@@ -3150,7 +3153,7 @@ r:"^所有怪盜<color\=#FFFC40>萬能</color>傷害提升(\d+(.\d+)?(%)?)$"="In
 r:"^所有怪盜<color\=#FFFC40>普通攻擊、槍械攻擊</color>造成傷害提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#FFFC40>Melee Attack, Gun Attack</color> DMG Dealt by $1"
 r:"^所有怪盜<color\=#FFFC40>{{A}}技能</color>造成傷害提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#FFFC40>{{A}} skill</color> DMG by $1"
 r:"^所有怪盜<color\=#FFFC40>HIGHLIGHT</color>造成傷害提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#FFFC40>HIGHLIGHT</color> DMG by $1"
-r:"^所有怪盜<color\=#FFFC40>追加效果</color>造成傷害提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#FFFC40>Follow Up</color> DMG Dealt by $1"
+r:"^所有怪盜<color\=#FFFC40>追加效果</color>造成傷害提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#FFFC40>Follow-Up</color> DMG Dealt by $1"
 r:"^所有怪盜造成<color\=#FFFC40>持續傷害</color>時傷害提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#FFFC40>Damage Over Time</color> DMG Dealt by $1"
 
 挑戰已結束=Challenge ended
@@ -3184,10 +3187,10 @@ r:"^更快更強(.*)$"="Faster Stronger $1"
 異變等級=Level
 使用推薦陣容=<size\=24>Use recommended team</size>
 r:"^<pos\=45>所有敵人的最終生命值提升(\d+(.\d+)?(%)?)$"="<pos\=45>Increase all foes' Final HP by $1"
-r:"^<pos\=45>所有敵人的最終攻擊力提升(\d+(.\d+)?(%)?)$"="<pos\=45>Increase all foes' Final ATK by $1"
+r:"^<pos\=45>所有敵人的最終攻擊力提升(\d+(.\d+)?(%)?)$"="<pos\=45>Increase all foes' Final Attack by $1"
 r:"^<pos\=45>所有怪盜最終生命值降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Final HP by $1"
-r:"^<pos\=45>所有怪盜最終攻擊力下降(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Final ATK by $1"
-r:"^<pos\=45>所有怪盜最終防禦力下降(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Final DEF by $1"
+r:"^<pos\=45>所有怪盜最終攻擊力下降(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Final Attack by $1"
+r:"^<pos\=45>所有怪盜最終防禦力下降(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Final Defense by $1"
 r:"^<pos\=45>所有怪盜治療效果降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Healing Effect by $1"
 r:"^<pos\=45>所有怪盜護盾效果降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Shield Effect by $1"
 r:"^<pos\=45>解明怪盜的技能準備時間延長(\d+(.\d+)?(%)?)次行動$"="<pos\=45>Increase all Elucidator Thieves' cooldown by $1 actions"
@@ -3199,10 +3202,10 @@ r:"^<pos\=45>HL能量回復速度降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease HIG
 r:"^<pos\=45>(\d+(.\d+)?(%)?)回合內結束戰鬥且戰鬥中無怪盜陣亡$"="<pos\=45>Win within $1 turns and no faint"
 
 r:"^所有敵人的最終生命值提升(\d+(.\d+)?(%)?)$"="Increase all foes' Final HP by $1"
-r:"^所有敵人的最終攻擊力提升(\d+(.\d+)?(%)?)$"="Increase all foes' Final ATK by $1"
+r:"^所有敵人的最終攻擊力提升(\d+(.\d+)?(%)?)$"="Increase all foes' Final Attack by $1"
 r:"^所有怪盜最終生命值降低(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Final HP by $1"
-r:"^所有怪盜最終攻擊力下降(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Final ATK by $1"
-r:"^所有怪盜最終防禦力下降(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Final DEF by $1"
+r:"^所有怪盜最終攻擊力下降(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Final Attack by $1"
+r:"^所有怪盜最終防禦力下降(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Final Defense by $1"
 r:"^所有怪盜治療效果降低(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Healing Effect by $1"
 r:"^所有怪盜護盾效果降低(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Shield Effect by $1"
 r:"^解明怪盜的技能準備時間延長(\d+(.\d+)?(%)?)次行動$"="Increase all Elucidator Thieves' cooldown by $1 actions"
@@ -3324,11 +3327,11 @@ r:"^<sprite\=0 tint> 累積<link\="chocolate\|1"><u>巧克力能量</u></link>�
 r:"^<sprite\=0 tint> 累積<link\="chocolate\|1"><u>巧克力能量</u></link>獲得強力“增益效果”，可以幫助你在boss挑戰中使用<link\="chocolate\|2"><u>「愛」的一擊</u></link>且更輕易的取勝，本關能量累積上限為(\d+)。\n<sprite\=0 tint> 本關BOSS會召喚"愛情信物"。擊殺"愛情信物"可以獲得(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>。"愛情信物"行動時會挾持怪盜並吸取我方<link\="chocolate\|1"><u>巧克力能量</u></link>。\n<sprite\=0 tint> 擊敗本關所有怪物，可以獲得(\d+)點“巧克力能量”。$"="<sprite\=0 tint>Accumulate <link\="chocolate|1"><u>Chocolate Energy</u></link> to gain powerful [Buffs] that will help you use <link\="chocolate|2"><u>Strike of Love</u></link> in the boss challenge, you can gain up to $1 this level.\n<sprite\=0 tint>Boss will summon [Love Token]. Defeat [Love Token] to gain $2 <link\="chocolate|1"><u> [Chocolate Energy]</u></link>. [Love Token] will take Thieves hostage and drain <link\="chocolate|1"><u> Chocolate Energy</u></link>.\n<sprite\=0 tint>Defeat all foes to gain $3 [Chocolate Energy]"
 r:"^<sprite\=0 tint> 本關中可以消耗(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>，釋放特殊技能<link\="chocolate\|2"><u>「愛」的一擊</u></link>。\n<sprite\=0 tint> 戰鬥開始時會獲得前(\d+)關中累積的<link\="chocolate\|1"><u>巧克力能量</u></link>。\n<sprite\=0 tint> 敵方怪物使用技能後，會偷取我方(\d+)點<link\="chocolate\|1"><u>巧克力能量</u></link>。當BOSS<link\="chocolate\|1"><u>巧克力能量</u></link>達到(\d+)點時，會消耗能量對我方釋放特殊技能。\n<sprite\=0 tint> 敵方怪物死亡時，我方獲得(\d+)點巧克力能量。$"="<sprite\=0 tint>You can consume $1 <link\="chocolate|1"><u>Chocolate Energy</u></link> to use the special skill <link\="chocolate|2"><u>Strike of Love</u></link>.\n<sprite\=0 tint> At the start of battle, gain all accumulated <link\="chocolate|1"><u>Chocolate Energy</u></link> from the previous $2 levels.\n<sprite\=0 tint>After foes use skills, steal $3 <link\="chocolate|1"><u>Chocolate Energy</u></link>. When the boss reaches $4 <link\="chocolate|1"><u>Chocolate Energy</u></link>, cosume Energy to use a special skill.\n<sprite\=0 tint>Gain $5 Chocolate Energy when you defeat a foe."
 愛情信物=Love Token
-r:"^防禦強化\（該階段需求能量(\d+)\）：防禦力提升(\d+%)\n攻擊強化\（該階段需求能量(\d+)\）：攻擊力提升(\d+%)\n生命強化\（該階段需求能量(\d+)\）：生命值提升(\d+%)\n傷害強化\（該階段需求能量(\d+)\）：最終傷害提升(\d+%)$"="Defense Boost (Require $1 Energy): \nIncrease DEF by $2\nAttack Boost (Require $3 Energy): \nIncrease ATK by $4\nHealth Boost (Require $5 Energy): \nIncrease HP by $6\nDamage Boost (Require $7 Energy): \nIncrease Final DMG by $8"
-r:"^<color\=#FFFF00>防禦強化\（該階段需求能量(\d+)\）：防禦力提升(\d+%)</color>\n攻擊強化\（該階段需求能量(\d+)\）：攻擊力提升(\d+%)\n生命強化\（該階段需求能量(\d+)\）：生命值提升(\d+%)\n傷害強化\（該階段需求能量(\d+)\）：最終傷害提升(\d+%)$"="<color\=#FFFF00>Defense Boost (Require $1 Energy): \nIncrease DEF by $2</color>\nAttack Boost (Require $3 Energy): \nIncrease ATK by $4\nHealth Boost (Require $5 Energy): \nIncrease HP by $6\nDamage Boost (Require $7 Energy): \nIncrease Final DMG by $8"
-r:"^<color\=#FFFF00>防禦強化\（該階段需求能量(\d+)\）：防禦力提升(\d+%)</color>\n<color\=#FFFF00>攻擊強化\（該階段需求能量(\d+)\）：攻擊力提升(\d+%)</color>\n生命強化\（該階段需求能量(\d+)\）：生命值提升(\d+%)\n傷害強化\（該階段需求能量(\d+)\）：最終傷害提升(\d+%)$"="<color\=#FFFF00>Defense Boost (Require $1 Energy): \nIncrease DEF by $2</color>\n<color\=#FFFF00>Attack Boost (Require $3 Energy): \nIncrease ATK by $4</color>\nHealth Boost (Require $5 Energy): \nIncrease HP by $6\nDamage Boost (Require $7 Energy): \nIncrease Final DMG by $8"
-r:"^<color\=#FFFF00>防禦強化\（該階段需求能量(\d+)\）：防禦力提升(\d+%)</color>\n<color\=#FFFF00>攻擊強化\（該階段需求能量(\d+)\）：攻擊力提升(\d+%)</color>\n<color\=#FFFF00>生命強化\（該階段需求能量(\d+)\）：生命值提升(\d+%)</color>\n傷害強化\（該階段需求能量(\d+)\）：最終傷害提升(\d+%)$"="<color\=#FFFF00>Defense Boost (Require $1 Energy): \nIncrease DEF by $2</color>\n<color\=#FFFF00>Attack Boost (Require $3 Energy): \nIncrease ATK by $4</color>\n<color\=#FFFF00>Health Boost (Require $5 Energy): \nIncrease HP by $6</color>\nDamage Boost (Require $7 Energy): \nIncrease Final DMG by $8"
-r:"^<color\=#FFFF00>防禦強化\（該階段需求能量(\d+)\）：防禦力提升(\d+%)</color>\n<color\=#FFFF00>攻擊強化\（該階段需求能量(\d+)\）：攻擊力提升(\d+%)</color>\n<color\=#FFFF00>生命強化\（該階段需求能量(\d+)\）：生命值提升(\d+%)</color>\n<color\=#FFFF00>傷害強化\（該階段需求能量(\d+)\）：最終傷害提升(\d+%)</color>$"="<color\=#FFFF00>Defense Boost (Require $1 Energy): \nIncrease DEF by $2</color>\n<color\=#FFFF00>Attack Boost (Require $3 Energy): \nIncrease ATK by $4</color>\n<color\=#FFFF00>Health Boost (Require $5 Energy): \nIncrease HP by $6</color>\n<color\=#FFFF00>Damage Boost (Require $7 Energy): \nIncrease Final DMG by $8</color>"
+r:"^防禦強化\（該階段需求能量(\d+)\）：防禦力提升(\d+%)\n攻擊強化\（該階段需求能量(\d+)\）：攻擊力提升(\d+%)\n生命強化\（該階段需求能量(\d+)\）：生命值提升(\d+%)\n傷害強化\（該階段需求能量(\d+)\）：最終傷害提升(\d+%)$"="Defense Boost (Require $1 Energy): \nIncrease Defense by $2\nAttack Boost (Require $3 Energy): \nIncrease Attack by $4\nHealth Boost (Require $5 Energy): \nIncrease HP by $6\nDamage Boost (Require $7 Energy): \nIncrease Final DMG by $8"
+r:"^<color\=#FFFF00>防禦強化\（該階段需求能量(\d+)\）：防禦力提升(\d+%)</color>\n攻擊強化\（該階段需求能量(\d+)\）：攻擊力提升(\d+%)\n生命強化\（該階段需求能量(\d+)\）：生命值提升(\d+%)\n傷害強化\（該階段需求能量(\d+)\）：最終傷害提升(\d+%)$"="<color\=#FFFF00>Defense Boost (Require $1 Energy): \nIncrease Defense by $2</color>\nAttack Boost (Require $3 Energy): \nIncrease Attack by $4\nHealth Boost (Require $5 Energy): \nIncrease HP by $6\nDamage Boost (Require $7 Energy): \nIncrease Final DMG by $8"
+r:"^<color\=#FFFF00>防禦強化\（該階段需求能量(\d+)\）：防禦力提升(\d+%)</color>\n<color\=#FFFF00>攻擊強化\（該階段需求能量(\d+)\）：攻擊力提升(\d+%)</color>\n生命強化\（該階段需求能量(\d+)\）：生命值提升(\d+%)\n傷害強化\（該階段需求能量(\d+)\）：最終傷害提升(\d+%)$"="<color\=#FFFF00>Defense Boost (Require $1 Energy): \nIncrease Defense by $2</color>\n<color\=#FFFF00>Attack Boost (Require $3 Energy): \nIncrease Attack by $4</color>\nHealth Boost (Require $5 Energy): \nIncrease HP by $6\nDamage Boost (Require $7 Energy): \nIncrease Final DMG by $8"
+r:"^<color\=#FFFF00>防禦強化\（該階段需求能量(\d+)\）：防禦力提升(\d+%)</color>\n<color\=#FFFF00>攻擊強化\（該階段需求能量(\d+)\）：攻擊力提升(\d+%)</color>\n<color\=#FFFF00>生命強化\（該階段需求能量(\d+)\）：生命值提升(\d+%)</color>\n傷害強化\（該階段需求能量(\d+)\）：最終傷害提升(\d+%)$"="<color\=#FFFF00>Defense Boost (Require $1 Energy): \nIncrease Defense by $2</color>\n<color\=#FFFF00>Attack Boost (Require $3 Energy): \nIncrease Attack by $4</color>\n<color\=#FFFF00>Health Boost (Require $5 Energy): \nIncrease HP by $6</color>\nDamage Boost (Require $7 Energy): \nIncrease Final DMG by $8"
+r:"^<color\=#FFFF00>防禦強化\（該階段需求能量(\d+)\）：防禦力提升(\d+%)</color>\n<color\=#FFFF00>攻擊強化\（該階段需求能量(\d+)\）：攻擊力提升(\d+%)</color>\n<color\=#FFFF00>生命強化\（該階段需求能量(\d+)\）：生命值提升(\d+%)</color>\n<color\=#FFFF00>傷害強化\（該階段需求能量(\d+)\）：最終傷害提升(\d+%)</color>$"="<color\=#FFFF00>Defense Boost (Require $1 Energy): \nIncrease Defense by $2</color>\n<color\=#FFFF00>Attack Boost (Require $3 Energy): \nIncrease Attack by $4</color>\n<color\=#FFFF00>Health Boost (Require $5 Energy): \nIncrease HP by $6</color>\n<color\=#FFFF00>Damage Boost (Require $7 Energy): \nIncrease Final DMG by $8</color>"
 
 「愛」的一擊:對所有敵人造成萬能屬性傷害，使目標所有適應性變為弱點，持續1回合。=Strike of Love: Deals Almighty damage to all foes, turns all foes' resistance to weak for 1 turn.
 「愛」的一擊=Strike of Love
@@ -3404,7 +3407,7 @@ Character's Story
 敵方陣容=Foes
 關卡描述=Description
 
-r:"^{{A}}擁有極高的血量，並週期性獲得狂暴。在怪盜的額外回合結束後，會召喚(\d+)隻『{{A}}的頭』，上限(\d+)次。第(\d+)次召喚時，會改為召喚(\d+)隻『{{A}}的尾』。$"="{{A}} have extreme HP, and will periodically gain Frenzy. Summon $1 [{{A}}'s Head] after Thieves ended Extra Turn, up to $2 times. Summon $4 [{{A}}'s Tail] on the $3 summon."
+r:"^{{A}}擁有極高的血量，並週期性獲得狂暴。在怪盜的額外回合結束後，會召喚(\d+)隻『{{A}}的頭』，上限(\d+)次。第(\d+)次召喚時，會改為召喚(\d+)隻『{{A}}的尾』。$"="{{A}} have extreme HP, and will periodically gain Frenzy. Summon $1 [{{A}}'s Head] after Thieves ended Extra Action, up to $2 times. Summon $4 [{{A}}'s Tail] on the $3 summon."
 r:"^{{A}}的頭存在時，使詭譎的{{A}}受到最終傷害增加(\d+%)，{{A}}的頭會在{{A}}行動後即死。$"="When {{A}}'s head is present, increase {{A}}'s Final DMG Taken by $1, {{A}}'s head will immediately die after {{A}}'s action."
 
 ----------
@@ -3469,8 +3472,8 @@ r:"^特性提升$"="<size\=25>Upgrade to</size>"
 r:"^攻擊$"="<size\=22>Attack</size>"
 r:"^防禦$"="<size\=19>Defense</size>"
 r:"^生存$"="<size\=18>Support</size>"
-r:"^命中$"="EHR"
-r:"^抵抗$"="<size\=25>Resist</size>"
+命中=ACC
+抵抗=RES
 r:"^妨害$"="<size\=27>Boost</size>"
 r:"^特殊$"="<size\=18>Special</size>"
 r:"^/定位$"="<size\=24>/Type</size>"
