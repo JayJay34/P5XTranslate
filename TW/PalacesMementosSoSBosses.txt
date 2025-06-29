@@ -17,7 +17,7 @@ UI
 怪盜培養=<size\=25>Manage Thieves</size>
 
 進入挑戰=Challenge
-r:"^在(\d+)輪內取得勝利$"="Win within $1 turns"
+r:"^在(\d+)輪內取得勝利$"="Win within $1 actions"
 r:"^(\d+)回$"="$1 turns"
 r:"^觀察模式冷卻中，(\d+)秒後可用！$"="Third Eye in cooldown"
 機制=Mechanic
@@ -516,23 +516,23 @@ PALACE 1 BOSS
 ----------
 sr:"^與(.*)決戰$"="Defeat $1"
 注意強力攻擊=Watch out for powerful attack
-截斷{{A}}的能量來源=Cut off {{A}}'s energy source
+截斷{{A}}的能量來源=Cut off {{A}}'s energy supply
 擊敗孤注一擲的{{A}}=Defeat desperate {{A}}!
 
-絕對癡心的少女=Infatuated Fan
-毫無保留的少女=Unreversed Fan
+毫無保留的少女=Devoted Girl
+絕對癡心的少女=Delusional Girl
 
-未嘗一敗=Never Known Defeat
-準備釋放強力一擊並且提升=Preparing to use a strong attack
+未嘗一敗=Undefeated
+準備釋放強力一擊並且提升=Preparing powerful attack,\nincrease damage
 王牌投手=Ace Pitcher
 準備釋放強力一擊並且傷害提升=Preparing to use a strong attack
 加油=You can do it
 正在為{{A}}加油=Cheering for {{A}}
-r:"^無法行動，受到傷害提升(\d+%)$"="Cannot act, increase DMG Taken by $1"
+r:"^無法行動，受到傷害提升(\d+%)$"="Unable to act, increase DMG Taken by $1"
 
-高速球擊=High Speed Ball
-球棒攻擊=Bat Swing
-疾風球擊=Wind Strike
+高速球擊=Hypersonic Slider
+球棒攻擊=Triple Hit Streak
+疾風球擊=Gale Force Forkball
 對1名敵人造成疾風屬性傷害，有機率使其進入風襲狀態。=Deals Wind damage to 1 foe, with a chance to inflict Windswept.
 颶風散射=Cyclone Scattershot
 對全體敵人造成疾風屬性傷害，有機率使目標進入風襲狀態。=Deals Wind damage to all foes, with a chance to inflict Windswept.
@@ -540,10 +540,10 @@ r:"^對所有敵人造成(\d+)~(\d+)次物理屬性傷害。$"="Deals Phys damag
 弧旋崇拜球=Screwball of Warship
 爆裂崇拜球=Blitzball of Warship
 
-{{A}}，未嘗一敗={{A}}, never known defeat
-{{A}}，王牌投手={{A}}, ace pitcher
+{{A}}，未嘗一敗=Undefeated
+{{A}}，王牌投手=Ace Pitcher
 
-下回合將釋放強力一擊=Use a powerful skill next turn
+下回合將釋放強力一擊=Activate 1 powerful attack next turn
 
 <color\=#FF0000>{{A}}</color>變得急躁……=<color\=#FF0000>Takeyuki Kiuchi</color> became impatient...
 <color\=#FF0000>{{A}}</color>變得更加急躁……=<color\=#FF0000>{{A}}</color> became more impatient...
@@ -555,8 +555,8 @@ r:"^<color\=#FF0000>毫無保留的少女</color>正在為{{A}}加油……$"="<
 r:"^<color\=#FF0000>{{A}}</color>虛弱了……$"="<color\=#FF0000>{{A}}</color> entered Weak!"
 r:"^<color\=#FF0000>{{A}}</color>「驚恐」了……$"="<color\=#FF0000>{{A}}</color> entered Panic!"
 
-r:"^行<color\=#000000>動</color>提前$"="A<color\=#000000>c</color>tion Up"
-r:"^木<color\=#000000>內</color>{{A}}，未嘗一敗$"="N<color\=#000000>e</color>ver Known Defeat"
+r:"^行<color\=#000000>動</color>提前$"="H<color\=#000000>a</color>sten"
+r:"^木<color\=#000000>內</color>{{A}}，未嘗一敗$"="U<color\=#000000>n</color>defeated"
 r:"^木<color\=#000000>內</color>{{A}}，王牌投手$"="A<color\=#000000>c</color>e Pitcher"
 
 ----------
@@ -940,30 +940,30 @@ PALACE 4 BOSS
 定位=Locate
 鎖定一名敵人=Locks on 1 foe
 爆裂指導=Explosion Guidance
-r:"^消耗(\d+)點能量對鎖定的敵人造成大量物理傷害，若擊倒敵人，回復(\d+)點能量值及(\d+%)的最大生命值$"="Consumes $1 Energy to deal heavy Phys damage to the locked on foe. If this downs an foe, restores $2 Energy and $3 Max HP"
+r:"^消耗(\d+)點能量對鎖定的敵人造成大量物理傷害，若擊倒敵人，回復(\d+)點能量值及(\d+%)的最大生命值$"="Spend $1 Energy to deal heavy Phys damage to the locked on foe. If this downs an foe, restores $2 Energy and $3 Max HP"
 諮詢·終止=Consult·Terminate
-r:"^能量值達到(\d+)點時釋放，消耗(\d+)點能量值對所有敵人造成特大量核熱屬性傷害$"="Use when reaching $1 Energy, consumes $2 Energy to deal severe Nuke damage to all foes"
+r:"^能量值達到(\d+)點時釋放，消耗(\d+)點能量值對所有敵人造成特大量核熱屬性傷害$"="Use when reaching $1 Energy, spend $2 Energy to deal severe Nuke damage to all foes"
 
 {{A}}·轟擊={{A}}·Bombardment
 {{A}}·掃蕩光線={{A}}·Sweeping Ray
 {{A}}·捕獵陷阱={{A}}·Hunting Trap
-r:"^使1名敵人陷入精神異常，並吸取其(\d+)點精力值將其存入能量罐$"="Inflicts 1 foe with Mental Ailment, drains $1 SP to stores them in the Energy Tank"
+r:"^使1名敵人陷入精神異常，並吸取其(\d+)點精力值將其存入能量罐$"="Inflicts 1 foe with Mental Ailment, drain $1 SP to stores them in the Energy Tank"
 {{A}}·滅絕光線={{A}}·Extinction Ray
 
 黑洞衝擊=Black Hole Impact
-消耗自身生命值對1名敵人造成核熱屬性傷害=Consumes own HP to deal Nuke damage to 1 foe
+消耗自身生命值對1名敵人造成核熱屬性傷害=Spend own HP to deal Nuke damage to 1 foe
 無差別獵殺=Indiscriminate Hunting
-消耗自身生命值對所有敵人造成核熱屬性傷害=Consumes own HP to deal Nuke damage to all foes
+消耗自身生命值對所有敵人造成核熱屬性傷害=Spend own HP to deal Nuke damage to all foes
 {{A}}·盛宴={{A}}·Feast
-r:"^對所有敵人造成萬能傷害，無視其防禦力，吸取其(\d+)點精力值並使自身恢復一定生命值。$"="Deals Almighty damage to all foes, ignores DEF, drains $1 SP and restores own HP."
+r:"^對所有敵人造成萬能傷害，無視其防禦力，吸取其(\d+)點精力值並使自身恢復一定生命值。$"="Deal Almighty damage to all foes, ignoring their DEF, drain $1 SP and restores own HP."
 {{A}}·致命打擊={{A}}·Fatal Blow
-消耗自身生命值對所有敵人造成大量核熱屬性傷害=Sacrifices own HP to deal heavy Nuke damage to all foes
+消耗自身生命值對所有敵人造成大量核熱屬性傷害=Sacrifice own HP to deal heavy Nuke damage to all foes
 
 吞噬=Devour
 消化=Digest
 犧牲自己一定生命值來充能=Sacrifices own HP to charge
 萬物吞噬=Devour All
-消耗所有能量對所有敵人造成巨量核熱屬性傷害=Consumes all Energy to deal colossal Nuke damage to all foes
+消耗所有能量對所有敵人造成巨量核熱屬性傷害=Spend all Energy to deal colossal Nuke damage to all foes
 
 能量值=Energy
 飛天狀態=Flying Form
@@ -1474,7 +1474,7 @@ r:"^1、{{A}}在戰鬥一階段中會交替召喚{{B}}或{{C}}，隨從死亡(\d
 夢幻食糧=Dream Food
 逃避慾的誘惑=Escape Temptation
 
-r:"^1.{{A}}會源源不斷的召喚分身，每次召喚分身都會損耗自身一定百分比的生命值。\n2.{{B}}分身死亡時會給{{A}}添加1層「冷靜」，{{C}}分身死亡時會給{{A}}添加1層「狂躁」，「冷靜」與「狂躁」可以相互中和抵消。\n3.{{A}}擁有超過(\d+)層「冷靜」時，自身回合結束額外釋放一次「迪亞拉翰」為自身回復一定百分比的生命值；擁有超過(\d+)層「狂躁」時，自身回合結束額外釋放一次「瑪哈亞基達因」。\n4.{{A}}會交替使用「夢慾的分散」、「遁逃的波動」。\n「夢慾的分散」：給所有分身添加「夢慾」，減少其受到的最終傷害；但是「夢慾」會在分身受到一次傷害後被移除。\n「遁逃的波動」：消耗所有分身的「夢慾」對所有敵人造成萬能屬性傷害，無視其防禦力；消耗的「夢慾」層數越多，造成的傷害越高。\n5.{{A}}在進入二階段後，每次釋放「夢慾的分散」後會釋放「變革之心」，改變分身的適應性。$"="1. {{A}} will keep summoning clones, lose a certain percentage of HP each time they summon clones. \n2. Inflict {{A}} with 1 stack of [Calm] when defeating {{B}}; Inflict {{A}} with 1 stack of [Manic] when defeating {{C}}; [Calm] and [Manic] will cancel each other out. \n3. When {{A}} have over $1 stacks of [Calm], additionally use [Diarahan] at the end of turn to restore HP to self; When {{A}} have over $2 stacks of [Manic], additionally use [Maragidyne] at the end of turn. \n4. {{A}} will alternate using [Dream Dispersion] and [Wave of Escape]. \n[Dream Dispersion]: Gives all clones [Dream Desire], decreases their Final DMG Taken; Dispels when the clone took damage.\n[Wave of Escape]: Consumes all [Dream Desire] on all clones to deal Almighty damage to all foes, ignores DEF; Increases DMG Dealt for every [Dream Desire] consumed.\n5. When {{A}} enter phase 2, use [Change of Heart] after using [Dream Dispersion], changing all clones' resistance."
+r:"^1.{{A}}會源源不斷的召喚分身，每次召喚分身都會損耗自身一定百分比的生命值。\n2.{{B}}分身死亡時會給{{A}}添加1層「冷靜」，{{C}}分身死亡時會給{{A}}添加1層「狂躁」，「冷靜」與「狂躁」可以相互中和抵消。\n3.{{A}}擁有超過(\d+)層「冷靜」時，自身回合結束額外釋放一次「迪亞拉翰」為自身回復一定百分比的生命值；擁有超過(\d+)層「狂躁」時，自身回合結束額外釋放一次「瑪哈亞基達因」。\n4.{{A}}會交替使用「夢慾的分散」、「遁逃的波動」。\n「夢慾的分散」：給所有分身添加「夢慾」，減少其受到的最終傷害；但是「夢慾」會在分身受到一次傷害後被移除。\n「遁逃的波動」：消耗所有分身的「夢慾」對所有敵人造成萬能屬性傷害，無視其防禦力；消耗的「夢慾」層數越多，造成的傷害越高。\n5.{{A}}在進入二階段後，每次釋放「夢慾的分散」後會釋放「變革之心」，改變分身的適應性。$"="1. {{A}} will keep summoning clones, lose a certain percentage of HP each time they summon clones. \n2. Inflict {{A}} with 1 stack of [Calm] when defeating {{B}}; Inflict {{A}} with 1 stack of [Manic] when defeating {{C}}; [Calm] and [Manic] will cancel each other out. \n3. When {{A}} have over $1 stacks of [Calm], additionally use [Diarahan] at the end of turn to restore HP to self; When {{A}} have over $2 stacks of [Manic], additionally use [Maragidyne] at the end of turn. \n4. {{A}} will alternate using [Dream Dispersion] and [Wave of Escape]. \n[Dream Dispersion]: Gives all clones [Dream Desire], decreases their Final DMG Taken; Dispels when the clone took damage.\n[Wave of Escape]: Consumes all [Dream Desire] on all clones to deal Almighty damage to all foes, ignoring their DEF; Increases DMG Dealt for every [Dream Desire] consumed.\n5. When {{A}} enter phase 2, use [Change of Heart] after using [Dream Dispersion], changing all clones' resistance."
 冷靜=Calm
 狂躁=Manic
 {{A}}分身={{A}} Clone
@@ -1485,7 +1485,7 @@ r:"^1.{{A}}會源源不斷的召喚分身，每次召喚分身都會損耗自身
 遁逃的波動=Wave of Escape
 改變之心=Change of Heart
 變革之心=Change of Heart
-消耗所有友方的『夢慾』對所有敵人造成萬能屬性傷害，無視其防禦力；消耗的『夢慾』層數越多，造成的傷害越高。=Consumes all [Dream Desire] on all clones to deal Almighty damage to all foes, ignores DEF; Increases DMG Dealt for every [Dream Desire] consumed.
+消耗所有友方的『夢慾』對所有敵人造成萬能屬性傷害，無視其防禦力；消耗的『夢慾』層數越多，造成的傷害越高。=Spend all [Dream Desire] on all clones to deal Almighty damage to all foes, ignoring their DEF; Increases DMG Dealt for every [Dream Desire] consumed.
 為所有分身添加1層『夢慾』。=Gives all clones 1 stack of [Dream Desire].
 回合結束時，如果自身『冷靜』層數達到4層，使自身恢復一定百分比的生命值。=<size\=27>At the end of turn, if [Calm] reaches 4 stacks, restores a certain percentage of HP to self.</size>
 r:"^為所有分身添加(\d+)層『變革之心』，使其全屬性適應性變為無。$"="Gives all clones $1 stack of [Change of Heart];\nChanges all their resistance to Null."
@@ -1689,7 +1689,7 @@ r:"^隨機使(\d+)名怪盜陷入「瘟疫」狀態：最終生命值降低(.*)�
 r:"^自身獲得持續(\d+)回合的「戰爭號角」狀態，持續時間內自己受到攻擊時會發起反擊。$"="Gains [War Horn] for $1 turn, will Counter when attacked during the duration."
 r:"^隨機使(\d+)名怪盜陷入「饑荒」狀態：技能精力消耗提升(.*)，效果持續(\d+)回合。$"="Randomly inflicts $1 Thief with [Famine]: Increase SP cost by $2 for $3 turns."
 r:"^所有怪盜{{A}}技能的治療效果降低(.*)（不可被驅散），所有友方傷害提升(.*)，持續(\d+)回合。$"="Decreases all Thieves' {{A}} skill Healing Effect by $1 (Cannot be dispelled), increases all allies' DMG Dealt by $2 for $3 turns."
-r:"^消耗所有「滅世之力」吹響「滅世號角」，對所有怪盜造成萬能傷害（四騎士的攻擊力越高，此次傷害越高），並基於消耗的「滅世之力」的層數獲得額外效果。1層：最終攻擊力提升(.*)；2層：傷害提升(.*)；3層：治療所有騎士(.*)的生命值；4層：本次傷害必定暴擊。$"="Consumes all [Apocalypse Power] and deals Almighty damage to all Thieves (The higher the Horsemen's ATK, the higher the damage), gains additional effects based on consumed [Apocalypse Power] stacks.\n1 stack: Increases Final ATK by $1;\n2 stacks: Increases DMG Dealt by $2;\n3 stacks: Restores $3 HP to all Horsemen;\n4 stacks: This will Always CRIT."
+r:"^消耗所有「滅世之力」吹響「滅世號角」，對所有怪盜造成萬能傷害（四騎士的攻擊力越高，此次傷害越高），並基於消耗的「滅世之力」的層數獲得額外效果。1層：最終攻擊力提升(.*)；2層：傷害提升(.*)；3層：治療所有騎士(.*)的生命值；4層：本次傷害必定暴擊。$"="Spend all [Apocalypse Power] and deals Almighty damage to all Thieves (The higher the Horsemen's ATK, the higher the damage), gains additional effects based on consumed [Apocalypse Power] stacks.\n1 stack: Increases Final ATK by $1;\n2 stacks: Increases DMG Dealt by $2;\n3 stacks: Restores $3 HP to all Horsemen;\n4 stacks: This will Always CRIT."
 
 sr:"^<color\=#FF0000>(.*)</color>收到了<color\=#FF0000>吹號指令</color>，自己回合開始時吹響號角……$"="<color\=#FF0000>$1</color> received <color\=#FF0000>Horn Order</color>!"
 sr:"^<color\=#FF0000>(.*)</color>感染了瘟疫，最終生命值降低……$"="<color\=#FF0000>$1</color> Final HP Down!"
