@@ -1,15 +1,15 @@
 ----------
-Guild - Paradise - Raid Boss
+Guild - Companio
 ----------
 狂歡券=Carnival Tickets
-參與樂園活動可獲得，用於樂園商店中兌換獎勵。=Gained from Paradise events.\nCan be used in Carpe Diem Shop.
-『狂歡券』\n參與樂園活動可獲得，用於樂園商店中兌換獎勵。=<size\=26>[Carnival Tickets]\nGained from Paradise events.\nCan be used in Carpe Diem Shop.</size>
+參與樂園活動可獲得，用於樂園商店中兌換獎勵。=Gained from Companio events.\nCan be used in Carpe Diem Shop.
+『狂歡券』\n參與樂園活動可獲得，用於樂園商店中兌換獎勵。=<size\=26>[Carnival Tickets]\nGained from Companio events.\nCan be used in Carpe Diem Shop.</size>
 
 個人積分=Score
 總積分=Total Score
 積分:=Score:
 本期歷史積分=Personal Best	
-歷史積分用於領取積分獎勵、參與挑戰排名\n重置挑戰不會清除歷史積分=<size\=30>Total score are used for rewards and paradise ranking. \nResetting the fight won't delete your total score.</size>
+歷史積分用於領取積分獎勵、參與挑戰排名\n重置挑戰不會清除歷史積分=<size\=30>Total score are used for rewards and Companio ranking. \nResetting the fight won't delete your total score.</size>
 積分統計進度=Boss Beaten
 r:"^積分統計進度會記錄本期分數<color\=#ef0000>最高</color>的<color\=#ef0000>(\d+)個</color>首領的積分總和$"="<size\=31>Sum of your <color\=#ef0000>$1 highest</color> scores will count towards total score.</size>"
 
@@ -17,15 +17,15 @@ r:"^第(\d+)名$"="Top $1"
 r:"^前(\d+%)$"="Top $1"
 
 當前積分=Current Pts.
-樂園排行=Paradise Rank
+樂園排行=Companio Rank
 樂園活躍度=Activity Point
 r:"今日活躍：(\d+\/\d+)"=Today's Score: $1
 r:"近7天貢獻 (\d+)"=7d Contribution: $1
 
-所屬樂園=Paradise:
+所屬樂園=Companio:
 樂園職位=Position:
 代理人等級=Level
-樂園ID=Paradise ID
+樂園ID=Companio ID
 樂園人數=Members
 樂園影響力=Influence
 本樂園排名獎勵=Rank Rewards
@@ -55,7 +55,7 @@ r:"難度係數：<color\=#0e68c9>(\d+\.\d+)</color>"=<size\=25>Multiplier: <col
 BOSS總積分：=Current Score:
 
 可用協助次數：=Assist Units\nAvailable
-樂園=Paradise
+樂園=Companio
 鎖定陣容=Lock Team
 陣容鎖定=Lock Team
 
@@ -72,16 +72,16 @@ r:"^<color\=#8F8D8D>(\d+)分鐘前線上</color>$"="<size\=20><color\=#8F8D8D>La
 r:"^<color\=#8F8D8D>(\d+)小時前線上</color>$"="<size\=20><color\=#8F8D8D>Last Seen $1h</color></size>"
 r:"^<color\=#8F8D8D>(\d+)天前線上</color>$"="<size\=20><color\=#8F8D8D>Last Seen $1d</color></size>"
 sr:"(.*?)人線上"=$1 Online
-sr:"<color\=#FF0000>(.*)</color>加入了樂園。"=<color\=#FF0000>$1</color> joined the Paradise.
-sr:"<color\=#FF0000>(.*)</color>退出了樂園。"=<color\=#FF0000>$1</color> left the Paradise.
-sr:"<color\=#FF0000>(.*)</color>將<color\=#FF0000>(.*?)</color>移出了樂園。"=<color\=#FF0000>$1</color> kicked <color\=#FF0000>$2</color> from the Paradise.
+sr:"<color\=#FF0000>(.*)</color>加入了樂園。"=<color\=#FF0000>$1</color> joined the Companio.
+sr:"<color\=#FF0000>(.*)</color>退出了樂園。"=<color\=#FF0000>$1</color> left the Companio.
+sr:"<color\=#FF0000>(.*)</color>將<color\=#FF0000>(.*?)</color>移出了樂園。"=<color\=#FF0000>$1</color> kicked <color\=#FF0000>$2</color> from the Companio.
 
 成員=Member
 代理人=Leader
 副手=Associate
 <color\=#81ea2c>線上</color>=<color\=#81ea2c>Online</color>
 
-// Paradise Tags //
+// Companio Tags //
 樂園資訊=Information
 樂園人數：=Members:
 休閒娛樂=Leisurely
@@ -163,9 +163,9 @@ r:"^1、{{A}}與邪蛇始終處於<color\=#ff3b37>「生命連結」</color>狀�
 毒素=Tonix
 r:"^毒<color\=#000000>素</color>$"="T<color\=#000000>o</color>xin"
 
-r:"^1、{{E}}會率領眾鳥一同進攻。\n2、{{A}}與{{B}}每受到1次來自怪盜的傷害，使該名怪盜造成傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層；{{C}}與{{D}}每受到1次來自怪盜的傷害，使該名怪盜穿透提升(\d+%)，持續(\d+)回合，可疊加(\d+)層。$"="<size\=24>1. {{E}} will lead all birds to attack.\n2. After {{A}} and {{B}} take a hit of damage from a Thief, increase that Thief's DMG Dealt by $1 for $2 turns, up to $3 stacks; After {{C}} and {{D}} take a hit of damage from a Thief, increase that Thief's PEN by $4 for $5 turns, up to $6 stacks.</size>"
+r:"^1、{{E}}會率領眾鳥一同進攻。\n2、{{A}}與{{B}}每受到1次來自怪盜的傷害，使該名怪盜造成傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層；{{C}}與{{D}}每受到1次來自怪盜的傷害，使該名怪盜穿透提升(\d+%)，持續(\d+)回合，可疊加(\d+)層。$"="<size\=24>1. {{E}} will lead all birds to attack.\n2. After {{A}} and {{B}} take a hit of damage from a Thief, increase that Thief's DMG Dealt by $1 for $2 turns, up to $3 stacks; After {{C}} and {{D}} take a hit of damage from a Thief, increase that Thief's Pierce by $4 for $5 turns, up to $6 stacks.</size>"
 r:"^{{A}}與{{B}}每受到1次來自怪盜的傷害，使該名怪盜造成傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層。$"="After {{A}} and {{B}} take a hit of damage from a Thief, increase that Thief's DMG Dealt by $1 for $2 turns, up to $3 stacks."
-r:"^{{A}}與{{B}}每受到1次來自怪盜的傷害，使該名怪盜穿透提升(\d+%)，持續(\d+)回合，可疊加(\d+)層。$"="After {{A}} and {{B}} take a hit of damage from a Thief, increase that Thief's PEN by $1 for $2 turns, up to $3 stacks."
+r:"^{{A}}與{{B}}每受到1次來自怪盜的傷害，使該名怪盜穿透提升(\d+%)，持續(\d+)回合，可疊加(\d+)層。$"="After {{A}} and {{B}} take a hit of damage from a Thief, increase that Thief's Pierce by $1 for $2 turns, up to $3 stacks."
 
 r:"^{{B}}每受到一次{{A}}技能/HIGHLIGHT/追加效果造成的傷害，自身後續受到對應屬性傷害提升(\d+%)，可疊加(\d+)層，持續(\d+)回合。$"="After {{B}} take 1 hit of damage from {{A}} Skill/HIGHLIGHT/Follow-Up, increase that element's DMG Taken by $1 for $3 turns, up to $2 stacks."
 
@@ -284,6 +284,7 @@ r:"^{{A}}造成傷害提升(\d+%)，使用{{A}}後額外使自身最終傷害提
 
 倒地領域=Down Domain
 r:"^所有敵人處於<color\=#FFFC40>倒地狀態</color>時，受到傷害提升(\d+%)$"="Increase all foes' DMG Taken by $1 when they are <color\=#FFFC40>Downed</color>"
+r:"^處於倒地狀態，受到傷害提升(\d+(.\d+)?(%)?)$"="Downed, increase DMG Taken by $1"
 
 sr:"^(.*)耐性$"="Resist $1"
 sr:"^所有敵人對<color\=#(.*)>(.*)</color>屬性的適應性變為耐$"="All foes change their resistance to Resist <color\=#$1>$2</color>"
@@ -294,8 +295,8 @@ sr:"^<color\=#FFFC40>(.*)</color>怪盜造成傷害降低(\d+%)$"="Decrease the 
 ----------
 Combat Menu
 ----------
-虛弱=Weak
-r:"^虛<color\=#000000>弱</color>$"="W<color\=#000000>e</color>ak"
+虛弱=Weaken
+r:"^虛<color\=#000000>弱</color>$"="W<color\=#000000>e</color>aken"
 r:"^無法暴擊，最終傷害提升(.*)"="Cannot CRIT, increase Final DMG by $1"
 
 敵方全體進入了<color\=#FF0000>虛弱</color>狀態……=All foes entered <color\=#FF0000>Weak</color>!
