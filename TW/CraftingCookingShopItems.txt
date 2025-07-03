@@ -1,7 +1,7 @@
 ----------
 CRAFTING UI
 ----------
-協同者增益=<size\=26>Confidant Bonus</size>
+協同者增益=<size\=26>Synergy Buff</size>
 潛入道具=Infiltration Tools
 戰鬥道具=Combat Items
 禮物=Gifts
@@ -22,6 +22,7 @@ INFILTRATION TOOLS
 使用效果：由於是手工製作，外形略顯粗糙。在棒球館中使用，應該能探測到不錯的寶物。=<size\=24>Effect: Handmade and rough in appearance. \nShould be able to detect treasures when used in a stadium.</size>
 使用效果：由於是手工製作，外形略顯粗糙。在影視城中使用，應該能探測到不錯的寶物。=<size\=24>Effect: Handmade and rough in appearance. \nShould be able to detect treasures when used in a studio.</size>
 使用效果：由於是手工製作，外形略顯粗糙。在水壩內使用，應該能探測到不錯的寶物。=<size\=24>Effect: Handmade and rough in appearance. \nShould be able to detect treasures when used in a dam.</size>
+使用效果：由於是手工製作，外形略顯粗糙。在蟻穴內使用，應該能探測到不錯的寶物。=<size\=24>Effect: Handmade and rough in appearance. \nShould be able to detect treasures when used in an anthill.</size>
 
 ----------
 Combat Items
@@ -48,7 +49,7 @@ sr:"^戰鬥道具，可造成一次中量的單體(.*)屬性傷害。\n在工作
 碰撞鈴=Impact Bell
 sr:"^戰鬥道具，可造成一次大量的單體(.*)屬性傷害。\n在工作臺使用(.*)製作而成。$"="Combat item. Deals heavy $1 damage once."
 彈丸鈴=Projectile Bell
-風襲鈴=Winded Bell
+風襲鈴=Windswept Bell
 燃燒鈴=Burn Bell
 冰凍鈴=Freeze Bell
 觸電鈴=Shock Bell
@@ -149,6 +150,7 @@ Online Gifts
 造型用氣球套裝=Balloon Modelling Set
 賽車雜誌=Racing Magazine
 日常燙傷用品組合=Scalding Supplies Set
+軟毛毯=Soft Blanket
 
 GOAT吸水毛巾=GOAT Absorbent Towel
 簡易化妝包=Easy Makeup Kit
@@ -170,6 +172,7 @@ GOAT吸水毛巾=GOAT Absorbent Towel
 雪花主題掛飾=<size\=24>Snowflake Decoration</size>
 古典音樂典藏合集=Classical Music Collection
 經典格鬥比賽合集=Classic Fighting Game Collection
+流行音樂集=Popular Music Collection
 
 GOAT棒球手套=GOAT Baseball Gloves
 GOAT棒球服=GOAT Baseball Jersey
@@ -250,6 +253,7 @@ AMN005首張專輯=AMN005 Debut Album
 大型水母玩偶=Large Jellyfish Doll
 {{A}}戰隊擺件套組={{A}} Decoration Set
 拼裝模型車=Assembled Model Car
+小型電子琴=Small Electronic Keyboard
 
 ----------
 Zōshigaya Supermarket
@@ -342,7 +346,7 @@ Akihabara Electronics Retail Store
 Takemi Items
 ----------
 卡加消除液=<size\=24>Kajaclear-R</size>
-消毒用液體，在戰鬥中使用，使用後立即消除1名敵人的1個狀態上升效果。=Sterilizing liquid. Removes 1 stats buff for 1 enemy.
+消毒用液體，在戰鬥中使用，使用後立即消除1名敵人的1個狀態上升效果。=Sterilizing liquid. Removes 1 stats buff for 1 foe.
 坤達消除液=<size\=24>Kundaclear-R</size>
 消毒用液體，在戰鬥中使用，使用後立即消除1名同伴的1個狀態降低效果。=Sterilizing liquid. Removes 1 stats debuff for 1 ally.
 療傷藥片·小=<size\=24>Recov-R: S
@@ -384,3 +388,30 @@ Miyu Items
 關東煮=Oden
 鮪魚飯糰=Tuna Onigiri
 鮭魚飯糰=Salmon Onigiri
+
+----------
+Vending
+----------
+P3R Iwatodai Station
+四谷汽水=Cielo Mist
+莫樂蜜G=Mad Bull
+天然礦泉水=Natural Mineral Water
+優酪乳味蘇打水=Arginade
+檸檬碳酸水=Definitely Lemonade
+剛健美茶=Muscle Tea
+後光的紅茶=Nastea
+r:"^可以直接飲用。\n在{{A}}中使用，每回合開始時，恢復(\d+%)精力值，效果持續(\d+)場戰鬥。$"="Restores $1 SP at the start of turn for $2 battles."
+
+----------
+Aohige Pharmacy
+----------
+美肌青汁=Beauty Aojiru
+活性青汁=Vitality Aojiru
+極辣青汁=Spicy Aojiru
+碳酸青汁=Carbonated Aojiru
+魚貝青汁=Seafood Aojiru
+r:"^可以直接飲用。\n飲用後可增加(\d+)點知識。$"="Drink to gain +$1 Knowledge."
+r:"^可以直接飲用。\n飲用後可增加(\d+)點魅力。$"="Drink to gain +$1 Charm."
+r:"^可以直接飲用。\n飲用後可增加(\d+)點勇氣。$"="Drink to gain +$1 Guts."
+r:"^可以直接飲用。\n飲用後可增加(\d+)點體貼。$"="Drink to gain +$1 Kindness."
+r:"^可以直接飲用。\n飲用後可增加(\d+)點靈巧。$"="Drink to gain +$1 Proficiency."
