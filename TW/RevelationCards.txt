@@ -174,6 +174,7 @@ r:"^每造成1次技能傷害，自身火焰傷害提升(\d+%)，持續(\d+)回�
 突破=Perseverance
 r:"^每有一個敵人增加自身電擊傷害<color\=#2899ff>(\d+%)</color>，最多<color\=#2899ff>(\d+%)</color>。$"="Increase Elec DMG by <color\=#2899ff>$1</color> per foe, up to <color\=#2899ff>$2</color>."
 r:"^持續效果傷害提升<color\=#2899ff>(\d+%)</color>。$"="Increase Damage Over Time DMG by <color\=#2899ff>$1</color>."
+r:"^持續傷害效果提升<color\=#2899ff>(\d+%)</color>。$"="Increase Damage Over Time Effect by <color\=#2899ff>$1</color>."
 
 ----------
 All Arcana Cards
@@ -186,125 +187,125 @@ r:"^2套裝效果$"="2-piece effect"
 愛·星=Love·Star
 愛·辰=Love·Planet
 【愛】=<size\=20>  </size>[Love]
-r:"^2套裝效果：治療效果提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase Healing Effect by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：對生命值不高於(\d+%)的怪盜治療時，治療效果提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: Increase Healing Effect by <color\=#2899ff>$2</color> when healing allies with not higher than $1 HP.</size>"
+r:"^2套裝效果：治療效果提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Healing Effect by <color\=#2899ff>$1</color>.</size>"
+r:"^4套裝效果：對生命值不高於(\d+%)的怪盜治療時，治療效果提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase Healing Effect by <color\=#2899ff>$2</color> when healing allies with not higher than $1 HP.</size>"
 
 【壓抑】=<size\=20>  </size>[Oppression]
 壓抑=Oppression
-r:"^2套裝效果：物理傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase Phys DMG by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：技能造成每次傷害使自身獲得『怨恨』：增加自身攻擊力<color\=#2899ff>(\d+%)</color>，持續(\d+)回合，最多(\d+)層。$"="<size\=23>4-piece effect: Gain [Resentment] after every hit of skill damage: Increase ATK by <color\=#2899ff>$1</color> for $2 turn up to $3 stacks.</size>"
+r:"^2套裝效果：物理傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Phys DMG by <color\=#2899ff>$1</color>.</size>"
+r:"^4套裝效果：技能造成每次傷害使自身獲得『怨恨』：增加自身攻擊力<color\=#2899ff>(\d+%)</color>，持續(\d+)回合，最多(\d+)層。$"="<size\=23>4 Set Effect: Gain [Resentment] after every hit of skill damage: Increase ATK by <color\=#2899ff>$1</color> for $2 turn up to $3 stacks.</size>"
 
-【英勇】=<size\=20>  </size>[Courage]
-英勇=Courage
-r:"^4套裝效果：暴擊效果提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；造成暴擊後再次獲得相同效果。$"="<size\=23>4-piece effect: Increase Crit DMG by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again after landing a CRITICAL.</size>"
+【英勇】=<size\=20>  </size>[Valor]
+英勇=Valor
+r:"^4套裝效果：暴擊效果提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；造成暴擊後再次獲得相同效果。$"="<size\=23>4 Set Effect: Increase Crit DMG by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again after landing a CRITICAL.</size>"
 
 【職責】=<size\=20>  </size>[Labor]
 職責=Labor
-r:"^2套裝效果：生命值提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase HP by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：解明怪盜裝備時生效：戰鬥中使所有同伴生命值、攻擊力、防禦力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: When equipped by Elucidator Thieves: Increase all allies' HP, ATK and Defense by <color\=#2899ff>$1</color>.</size>"
+r:"^2套裝效果：生命值提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase HP by <color\=#2899ff>$1</color>.</size>"
+r:"^4套裝效果：解明怪盜裝備時生效：戰鬥中使所有同伴生命值、攻擊力、防禦力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: When equipped by Elucidator Thieves: Increase all allies' HP, ATK and Defense by <color\=#2899ff>$1</color>.</size>"
 
-【主權】=<size\=20>  </size>[Control]
-主權=Control
-r:"^4套裝效果：使用技能攻擊敵人時對主目標造成自身生命值<color\=#2899ff>(\d+%)</color>的額外傷害。$"="<size\=23>4-piece effect: Deal <color\=#2899ff>$1</color> HP additional damage to the main target when attacking with a skill.</size>"
+【主權】=<size\=20>  </size>[Dominion]
+主權=Dominion
+r:"^4套裝效果：使用技能攻擊敵人時對主目標造成自身生命值<color\=#2899ff>(\d+%)</color>的額外傷害。$"="<size\=23>4 Set Effect: Deal <color\=#2899ff>$1</color> HP additional damage to the main target when attacking with a skill.</size>"
 
 【爭執】=<size\=20>  </size>[Strife]
 爭執=Strife
-r:"^2套裝效果：火焰傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase Fire DMG by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：攻擊力提升<color\=#2899ff>(\d+%)</color>，如果敵人火屬性適應性為弱，則攻擊力額外提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: Increase ATK by <color\=#2899ff>$1</color>. Additionally increase ATK by <color\=#2899ff>$2</color> if the foe is weak to Fire."
+r:"^2套裝效果：火焰傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Fire DMG by <color\=#2899ff>$1</color>.</size>"
+r:"^4套裝效果：攻擊力提升<color\=#2899ff>(\d+%)</color>，如果敵人火屬性適應性為弱，則攻擊力額外提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase ATK by <color\=#2899ff>$1</color>. Additionally increase ATK by <color\=#2899ff>$2</color> if the foe is weak to Fire."
 
-【轉變】=<size\=20>  </size>[Renewal]
-轉變=Renewal
-r:"^2套裝效果：電擊傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase Elec DMG by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：任意怪盜使用電屬性技能後提升自身電擊屬性傷害<color\=#2899ff>(\d+%)</color>，最多3層。$"="<size\=23>4-piece effect: Increase Elec DMG by <color\=#2899ff>$1</color> after any allies used Elec skill, up to 3 stacks.</size>"
+【轉變】=<size\=20>  </size>[Completion]
+轉變=Completion
+r:"^2套裝效果：電擊傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Elec DMG by <color\=#2899ff>$1</color>.</size>"
+r:"^4套裝效果：任意怪盜使用電屬性技能後提升自身電擊屬性傷害<color\=#2899ff>(\d+%)</color>，最多3層。$"="<size\=23>4 Set Effect: Increase Elec DMG by <color\=#2899ff>$1</color> after any allies used Elec skill, up to 3 stacks.</size>"
 
 【美德】=<size\=20>  </size>[Virtue]
 美德=Virtue
-r:"^2套裝效果：祝福傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase Bless DMG by <color\=#2899ff>10%</color>.</size>"
-r:"^4套裝效果：當前生命值百分比不低於(\d+%)時，祝福屬性的暴擊率提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: Increase Bless skill CRIT Rate by <color\=#2899ff>$2</color> when your HP% is not less than $1.</size>"
+r:"^2套裝效果：祝福傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Bless DMG by <color\=#2899ff>10%</color>.</size>"
+r:"^4套裝效果：當前生命值百分比不低於(\d+%)時，祝福屬性的暴擊率提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase Bless skill CRIT Rate by <color\=#2899ff>$2</color> when your HP% is not less than $1.</size>"
 
 【和平】=<size\=20>  </size>[Peace]
 和平=Peace
-r:"^2套裝效果：防禦力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase Defense by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：護盾效果提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: Increase Shield Effect by <color\=#2899ff>$1</color>.</size>"
+r:"^2套裝效果：防禦力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Defense by <color\=#2899ff>$1</color>.</size>"
+r:"^4套裝效果：護盾效果提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase Shield Effect by <color\=#2899ff>$1</color>.</size>"
 
-【奢華】=<size\=20>  </size>[Opulence]
-奢華=Opulence
-r:"^2套裝效果：冰凍傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase Ice DMG by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：追加效果造成傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: Increase Follow-Up DMG by <color\=#2899ff>$1</color>.</size>"
+【奢華】=<size\=20>  </size>[Luxury]
+奢華=Luxury
+r:"^2套裝效果：冰凍傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Ice DMG by <color\=#2899ff>$1</color>.</size>"
+r:"^4套裝效果：追加效果造成傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase Follow-Up DMG by <color\=#2899ff>$1</color>.</size>"
 
-【富足】=<size\=20>  </size>[Prosperity]
-富足=Prosperity
-r:"^2套裝效果：受到傷害減免<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Decrease DMG Taken by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：進入戰鬥立刻回復<color\=#2899ff>(\d+%) </color>HIGHLIGHT能量，回復HIGHLIGHT能量效果無法重複觸發。$"="<size\=23>4-piece effect: At the start of battle, immediately gain <color\=#2899ff>$1</color> HIGHLIGHT Energy, cannot be triggered again.</size>"
+【富足】=<size\=20>  </size>[Abundance]
+富足=Abundance
+r:"^2套裝效果：受到傷害減免<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Decrease DMG Taken by <color\=#2899ff>$1</color>.</size>"
+r:"^4套裝效果：進入戰鬥立刻回復<color\=#2899ff>(\d+%) </color>HIGHLIGHT能量，回復HIGHLIGHT能量效果無法重複觸發。$"="<size\=23>4 Set Effect: At the start of battle, immediately gain <color\=#2899ff>$1</color> HIGHLIGHT Energy, cannot be triggered again.</size>"
 
 【力量】=<size\=20>  </size>[Strength]
 力量=Strength
-r:"^2套裝效果：攻擊力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase ATK by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：進入戰鬥後，每經過(\d+)個回合提升自身攻擊力<color\=#2899ff>(\d+%)</color>，可疊加(\d+)層。$"="<size\=23>4-piece effect: At the start of battle, increase ATK by <color\=#2899ff>$2</color> after every $1 turns, up to $3 stacks.</size>"
+r:"^2套裝效果：攻擊力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase ATK by <color\=#2899ff>$1</color>.</size>"
+r:"^4套裝效果：進入戰鬥後，每經過(\d+)個回合提升自身攻擊力<color\=#2899ff>(\d+%)</color>，可疊加(\d+)層。$"="<size\=23>4 Set Effect: At the start of battle, increase ATK by <color\=#2899ff>$2</color> after every $1 turns, up to $3 stacks.</size>"
 
 【告捷】=<size\=20>  </size>[Victory]
 告捷=Victory
-r:"^2套裝效果：疾風傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase Wind DMG by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：每段攻擊有(\d+%)的固定機率額外造成自身攻擊力<color\=#2899ff>(\d+%)</color>的傷害。$"="<size\=23>4-piece effect: There's a $1 fixed chance to increase ATK by <color\=#2899ff>$2</color> after each hits of attack.</size>"
+r:"^2套裝效果：疾風傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Wind DMG by <color\=#2899ff>$1</color>.</size>"
+r:"^4套裝效果：每段攻擊有(\d+%)的固定機率額外造成自身攻擊力<color\=#2899ff>(\d+%)</color>的傷害。$"="<size\=23>4 Set Effect: There's a $1 fixed chance to increase ATK by <color\=#2899ff>$2</color> after each hits of attack.</size>"
 
-【真諦】=<size\=20>  </size>[Truth]
-真諦=Truth
-r:"^2套裝效果：核熱傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase Nuke DMG by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：使用技能攻擊敵人時，若主目標處於元素異常狀態則對其造成<color\=#2899ff>(\d+%)</color>攻擊力的傷害。$"="<size\=23>4-piece effect: Deal <color\=#2899ff>$1</color> ATK damage to the main target if the foe is inflicted with Elemental Ailment.</size>"
+【真諦】=<size\=20>  </size>[Science]
+真諦=Science
+r:"^2套裝效果：核熱傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Nuke DMG by <color\=#2899ff>$1</color>.</size>"
+r:"^4套裝效果：使用技能攻擊敵人時，若主目標處於元素異常狀態則對其造成<color\=#2899ff>(\d+%)</color>攻擊力的傷害。$"="<size\=23>4 Set Effect: Deal <color\=#2899ff>$1</color> ATK damage to the main target if the foe is inflicted with Elemental Ailment.</size>"
 
 【歡愉】=<size\=20>  </size>[Pleasure]
 歡愉=Pleasure
-r:"^2套裝效果：念動傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase Psy DMG by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：造成念動傷害時，提升攻擊(\d+%)，如果敵方人數不少於(\d+)，則攻擊力額外提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: Increase ATK by $1 when dealing Psy damage. Additionally increase ATK by <color\=#2899ff>$3</color> if there's not less than $2 foes.</size>"
+r:"^2套裝效果：念動傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Psy DMG by <color\=#2899ff>$1</color>.</size>"
+r:"^4套裝效果：造成念動傷害時，提升攻擊(\d+%)，如果敵方人數不少於(\d+)，則攻擊力額外提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase ATK by $1 when dealing Psy damage. Additionally increase ATK by <color\=#2899ff>$3</color> if there's not less than $2 foes.</size>"
 
-【干擾】=<size\=20>  </size>[Ruin]
-干擾=Ruin
-r:"^2套裝效果：詛咒傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase Curse DMG by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：對處於負面狀態下的敵人咒屬性傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: Increase Curse DMG by <color\=#2899ff>$1</color> when attacking foes with debuff.</size>"
+【干擾】=<size\=20>  </size>[Interference]
+干擾=Interference
+r:"^2套裝效果：詛咒傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Curse DMG by <color\=#2899ff>$1</color>.</size>"
+r:"^4套裝效果：對處於負面狀態下的敵人咒屬性傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase Curse DMG by <color\=#2899ff>$1</color> when attacking foes with debuff.</size>"
 
 【和解】=<size\=20>  </size>[Reconciliation]
 和解=Reconciliation
-r:"^2套裝效果：速度提升<color\=#2899ff>(\d+)</color>。$"="<size\=23>2-piece effect: Increase Speed by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：戰鬥中，自身最大生命值、攻擊力、防禦力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: In battle, increase your Max HP, ATK, and Defense by <color\=#2899ff>$1</color>."
+r:"^2套裝效果：速度提升<color\=#2899ff>(\d+)</color>。$"="<size\=23>2 Set Effect: Increase Speed by <color\=#2899ff>$1</color>.</size>"
+r:"^4套裝效果：戰鬥中，自身最大生命值、攻擊力、防禦力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: In battle, increase your Max HP, ATK, and Defense by <color\=#2899ff>$1</color>."
 
 【憂思】=<size\=20>  </size>[Worry]
 憂思=Worry
-r:"^2套裝效果：精力回復提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase SP Recovery by <color\=#2899ff>$1</color>.</size>"
+r:"^2套裝效果：精力回復提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase SP Recovery by <color\=#2899ff>$1</color>.</size>"
 
 【挫敗】=<size\=20>  </size>[Defeat]
 挫敗=Defeat
-r:"^2套裝效果：效果命中提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Increase Ailment ACC by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：對處於負面狀態下的敵人造成火焰屬性傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: Increase Fire DMG to foes with debuff by <color\=#2899ff>$1</color>."
+r:"^2套裝效果：效果命中提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Ailment ACC by <color\=#2899ff>$1</color>.</size>"
+r:"^4套裝效果：對處於負面狀態下的敵人造成火焰屬性傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase Fire DMG to foes with debuff by <color\=#2899ff>$1</color>."
 
 【凱旋】=<size\=20>  </size>[Success]
 凱旋=Success
-r:"^2套裝效果：暴擊率提升<color\=#2899ff>(\d+\.\d+%)</color>。$"="<size\=23>2-piece effect: Increase CRIT Rate by <color\=#2899ff>$1</color>.</size>"
+r:"^2套裝效果：暴擊率提升<color\=#2899ff>(\d+\.\d+%)</color>。$"="<size\=23>2 Set Effect: Increase CRIT Rate by <color\=#2899ff>$1</color>.</size>"
 
 【徒勞】=<size\=20>  </size>[Futility]
 徒勞=Futility
-r:"^4套裝效果：效果命中提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；造成TECHNICAL後再次獲得相同效果。$"="<size\=23>4-piece effect: Increase Ailment ACC by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again when you deal TECHNICAL.</size>"
+r:"^4套裝效果：效果命中提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；造成TECHNICAL後再次獲得相同效果。$"="<size\=23>4 Set Effect: Increase Ailment ACC by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again when you deal TECHNICAL.</size>"
 
 【失望】=<size\=20>  </size>[Despair]
 失望=Despair
-r:"^4套裝效果：造成{{A}}技能傷害時，若與自身上次造成{{A}}技能傷害的屬性不同，該次{{A}}技能造成傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4-piece effect: When dealing {{A}} skill damage, increase the current {{A}} skill damage by <color\=#2899ff>$1</color> if your last {{A}} skill damage was a different element."
+r:"^4套裝效果：造成{{A}}技能傷害時，若與自身上次造成{{A}}技能傷害的屬性不同，該次{{A}}技能造成傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: When dealing {{A}} skill damage, increase the current {{A}} skill damage by <color\=#2899ff>$1</color> if your last {{A}} skill damage was a different element."
 
 【謹慎】=<size\=20>  </size>[Prudence]
 謹慎=Prudence
-r:"^2套裝效果：速度降低<color\=#2899ff>(\d+)</color>，攻擊力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2-piece effect: Decrease Speed by <color\=#2899ff>$1</color>, increase ATK by <color\=#2899ff>$2</color>.</size>"
-r:"^4套裝效果：造成傷害提升(\d+%)。$"="<size\=23>4-piece effect: Increase DMG Dealt by <color\=#2899ff>$1</color>.</size>"
+r:"^2套裝效果：速度降低<color\=#2899ff>(\d+)</color>，攻擊力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Decrease Speed by <color\=#2899ff>$1</color>, increase ATK by <color\=#2899ff>$2</color>.</size>"
+r:"^4套裝效果：造成傷害提升(\d+%)。$"="<size\=23>4 Set Effect: Increase DMG Dealt by <color\=#2899ff>$1</color>.</size>"
 
 【執著】=<size\=20>  </size>[Fixation]
 執著=Fixation
-r:"^4套裝效果：攻擊力提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；使用{{A}}後再次獲得相同效果。$"="<size\=23>4-piece effect: Increase ATK by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again after using {{A}}.</size>"
+r:"^4套裝效果：攻擊力提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；使用{{A}}後再次獲得相同效果。$"="<size\=23>4 Set Effect: Increase ATK by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again after using {{A}}.</size>"
 
 【憂傷】=<size\=20>  </size>[Sorrow]
 憂傷=Sorrow
-r:"^4套裝效果：造成傷害提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；釋放HIGHLIGHT後再次獲得相同效果。$"="<size\=23>4-piece effect: Increase DMG Dealt by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again after using HIGHLIGHT.</size>"
-r:"^4套裝效果：造成傷害提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；釋放HIGHLIGHT後再次獲得相同效果$"="<size\=23>4-piece effect: Increase DMG Dealt by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again after using HIGHLIGHT.</size>"
+r:"^4套裝效果：造成傷害提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；釋放HIGHLIGHT後再次獲得相同效果。$"="<size\=23>4 Set Effect: Increase DMG Dealt by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again after using HIGHLIGHT.</size>"
+r:"^4套裝效果：造成傷害提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；釋放HIGHLIGHT後再次獲得相同效果$"="<size\=23>4 Set Effect: Increase DMG Dealt by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again after using HIGHLIGHT.</size>"
 
 【改變】=<size\=20>  </size>[Transformation]
 改變=Transformation
-r:"^4套裝效果：攻擊力提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；造成暴擊後再次獲得相同效果。$"="<size\=23>4-piece effect: Increase ATK by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again after landing a CRITICAL.</size>"
+r:"^4套裝效果：攻擊力提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；造成暴擊後再次獲得相同效果。$"="<size\=23>4 Set Effect: Increase ATK by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again after landing a CRITICAL.</size>"
 
 ----------
 Inspect Details + Combat Pop-Ups
@@ -343,6 +344,6 @@ sr:"^自由&(.*)$"="Freedom & $1"
 sr:"^希望&(.*)$"="Hope & $1"
 sr:"^突破&(.*)$"="Perseverance & $1"
 
-觸發【主權】套裝效果的額外傷害=Triggered the additional damage from [Control]
-觸發【真諦】套裝效果的額外傷害=Triggered the additional damage from [Truth]
+觸發【主權】套裝效果的額外傷害=Triggered the additional damage from [Dominion]
+觸發【真諦】套裝效果的額外傷害=Triggered the additional damage from [Science]
 觸發【告捷】套裝效果的額外傷害=Triggered the additional damage from [Victory]
