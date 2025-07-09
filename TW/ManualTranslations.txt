@@ -334,6 +334,7 @@ r:"^道<color\=#ff0000ff>玄</color>坂 {{A}}$"="Ru<color\=#ff0000ff>na</color> 
 r:"^道<color\=#ff0000ff>玄</color>坂{{A}}$"="Ru<color\=#ff0000ff>na</color> Dogenzaka"
 r:"^夏<color\=#ff0000ff>川</color> {{A}}$"="{{A}} Nat<color\=#ff0000ff>su</color>kawa"
 r:"^橋<color\=#ff0000ff>本</color> {{A}}$"="{{A}} Ha<color\=#ff0000ff>shi</color>moto"
+r:"^鹿<color\=#ff0000ff>野</color> {{A}}$"="{{A}} Shi<color\=#ff0000ff>ka</color>no"
 r:"^宮<color\=#ff0000ff>下</color> {{A}}$"="{{A}} Mi<color\=#ff0000ff>ya</color>shita"
 
 P5X Side Quest
@@ -412,6 +413,7 @@ Character-specific Persona
 俄耳甫斯=Orpheus
 伊俄=Io
 波呂狄烏刻斯=Polydeuces
+忒爾克西厄珀亞=Thelxiepeia
 
 ------------------------------------------
 Worldbuilding Terms
@@ -454,6 +456,8 @@ r:"^已購買(\d+)/(\d+)次（每日05:00重置）$"="Purchased $1/$2 times \n(R
 回溯道具不足。=Insufficient rewind item.
 時序之墨=Temporal Ink
 蘊含星辰之力的墨水，可用於定製月、星、辰位置的啟示卡。=Ink that contains the power of the stars, can be used to create a customized basic Revelation Card.
+穹謁之墨=Celestial Ink
+溯讖之墨=Retroactive Ink
 認知請願書 5星=<size\=19>5★ Cognitive Petition</size>
 認知請願書 4星=<size\=19>4★ Cognitive Petition</size>
 請在以下列表中點擊選擇一位4星怪盜。=Select one 4★ Thief from the list below.
@@ -543,7 +547,7 @@ r:"^{{A}}  娛樂街$"="<size\=30>{{A}} Entertainment District</size>"
 地鐵站=Subway
 
 r:"^壓<color\=#ff0000ff>勝</color>軒$"="V<color\=#ff0000ff>i</color>ctory Kitchen"
-r:"^渡<color\=#ff0000ff>來</color>軒$"="To<color\=#ff0000ff>rai</color>ken"
+r:"^渡<color\=#ff0000ff>來</color>軒$"="H<color\=#ff0000ff>e</color>ritage Kitchen"
 
 r:"^社<color\=#ff0000ff>團</color>佈告欄$"="Cl<color\=#ff0000ff>ub</color> Bulletin Board"
 進入學校=Enter school
@@ -902,6 +906,39 @@ r:"主角(\d+)級解鎖"=Level $1 Unlock
 升級獎勵=Rewards
 sr:"^(.*)成長至(\d+)級（(\d+)/(\d+)）$"="<size\=30>Level $1 to Lv. $2 ($3/$4)</size>"
 
+與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n可以在「怪盜」介面中，使用角色的「語音」功能\n解鎖「契約」、「陣容」部分。=<size\=24>Gain Synergy with [<color\=#FFC000>{{A}}</color>]: Unlock the [Voice] feature in the Thieves menu, unlock character voice from [Contract], [Party].</size>
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n解鎖角色語音介面的「養成」部分。$"="<size\=24><color\=#FFC000>Rank $1</color>: Unlock character voice from [Growth].</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n解鎖角色語音介面的「探索」部分。$"="<size\=24><color\=#FFC000>Rank $1</color>: Unlock character voice from [Exploration].</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n解鎖角色語音介面的「戰鬥」部分。$"="<size\=24><color\=#FFC000>Rank $1</color>: Unlock character voice from [Battle].</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n解鎖角色語音介面的「技能」部分。$"="<size\=24><color\=#FFC000>Rank $1</color>: Unlock character voice from [Skills].</size>"
+
+r:"^與「{{A}}」好感度提升至Rank(\d+)解鎖$"="Unlock at [{{A}}] Synergy Rank $1"
+陣容設置=Party Select
+r:"^陣容設置_(\d+)$"="Party Select_$1"
+r:"^怪盜展示_(\d+)$"="Thief Display_$1"
+r:"^怪盜成長_(\d+)$"="Thief Training_$1"
+怪盜武器=Thief Weapon
+怪盜啟示=Thief Revelation
+等級提升=Level Up
+潛能突破=Hidden Ability Lv Up
+更換武器=Change Weapon
+武器升級=Weapon Enhance
+詭計=Trick
+瀕死狀態=Near Death
+被恢復時=Healed
+輕鬆取勝=Easy Victory
+正常開始戰鬥=Normal Battle Start
+偷襲進入戰鬥=Ambush Battle Start
+r:"^受擊_(\d+)$"="Attacked_$1"
+閃避=Evade
+換手=Baton Pass
+被擊倒=Knocked Down
+重傷倒地=Critical Down
+進入{{A}}=Enter {{A}}
+r:"^HIGHLIGHT提示_(\d+)$"="HIGHLIGHT Tips $1"
+探索開始=Exploration Start
+快速移動=Quick Travel
+
 ----------
 Class/ Stats Screen
 ----------
@@ -917,13 +954,14 @@ Class/ Stats Screen
 稀有度由低至高=Low to High ★
 稀有度由高至低=High to Low ★
 推薦陣容=<size\=30>Recommendation</size>
-初始陣容=Starting Team
-陣容記錄=Team Record
-陣容=Team
-已設置為默認方案。=Set as default team.
-預設陣容保存成功=Saved as default team
-確認要刪除該方案嗎？=Delete this team?
-不可以刪除默認編隊喔=Can't delete the default team
+初始陣容=Starting Party
+陣容記錄=Party Record
+陣容=Party
+r:"^陣容\((\d+)\)$"="Party ($1)"
+已設置為默認方案。=Set as default party.
+預設陣容保存成功=Saved as default party
+確認要刪除該方案嗎？=Delete this party formation?
+不可以刪除默認編隊喔=Cannot delete the default setting
 已設為關注怪盜。=Added Thief to favourites.
 關注已取消。=Removed from favourites.
 
@@ -1005,14 +1043,14 @@ r:"^治療效果$"="<size\=22>Healing Effect</size>"
 總傷害加成=DMG Bonus
 造成傷害=DMG Dealt
 
-生命成長率=HP Growth
-攻擊成長率=Attack Growth
-防禦成長率=Defense Growth
+生命成長率=HP Boost
+攻擊成長率=ATK Boost
+防禦成長率=DEF Boost
 生命值百分比=HP%
 攻擊力百分比=Attack%
 防禦力百分比=Defense%
 上陣面具屬性會全部附加至主角=<size\=20>Wonder will gain the attributes of his \nequipped Persona</size>
-上陣{{A}}的屬性會同時附加給主角，提高<color\=#870000>主角屬性</color>。=Wonder will gain the attributes of his\n<color\=#870000>equipped Persona</color>.
+上陣{{A}}的屬性會同時附加給主角，提高<color\=#870000>主角屬性</color>。=Wonder will gain the attributes of his <color\=#870000>equipped Persona</color>.
 尚未佩戴面具=No equipped Mask
 
 已達到等級上限。=Reached level cap.
@@ -1050,7 +1088,7 @@ r:"^提升(\d+%)護盾效果。$"="<size\=26>Increase Shield Effect by $1</size>
 r:"^提升(\d+\.\d%)護盾效果。$"="<size\=26>Increase Shield Effect by $1</size>"
 r:"^提升(\d+%)效果抵抗。$"="Increase Effect RES by $1"
 
-r:"^ONEMORE、HIGHLIGHT、近戰攻擊、槍械效果提升。$"="<size\=26>Increase ONE MORE, HIGHLIGHT, SWORD and GUN</size>"
+r:"^ONEMORE、HIGHLIGHT、近戰攻擊、槍械效果提升。$"="<size\=26>Increase effects of ONE MORE, HIGHLIGHT, SWORD and GUN</size>"
 r:"{{A}}所有習得主動技能等級額外提升(\d+)級。"=<size\=26>All learned active Persona skills\nIncrease by $1 levels</size>
 r:"{{A}}特色主動技能等級額外提升(\d+)級。"=<size\=26>All innate signature Persona skills\nIncrease by $1 levels</size>
 需要主角超我等級達到1級。=Unlocks when Wonder \nreaches Superego level 1.
@@ -1686,11 +1724,11 @@ sr:"^(.*)遊戲廳中的娃娃機，\n本期可限時抓取超稀有娃娃\n「<
 r:"^娃<color\=#ff0000ff>娃</color>機-小型$"="Sm<color\=#ff0000ff>all</color> Crane Machine"
 r:"^娃<color\=#ff0000ff>娃</color>機-中型$"="Me<color\=#ff0000ff>di</color>um Crane Machine"
 r:"^夾娃娃機啊，要玩玩看嗎\（<color\=#ff0000>每次(\d+)現金</color>\）？$"="Want to play the crane machine?\n(<color\=#ff0000>Spend $1 Money</color>)"
-r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n增加在小型娃娃機中抓到娃娃的機率。$"="<size\=24>Increase the chance to get dolls in small crane machine after froming a relationship with [<color\=#FFC000>{{A}}</color>].</size>"
-r:"^好感度提升至<color\=#FFC000>rank3</color>後，\n增加在中型娃娃機中抓到娃娃的機率。$"="<size\=24>Increase the chance to get dolls in medium crane machine after reaching <color\=#FFC000>rank 3</color>.</size>"
-r:"^好感度提升至<color\=#FFC000>rank9</color>後，\n娃娃機商店中增加新的商品。$"="<size\=24>Add new items to the crane machine stop after reaching <color\=#FFC000>rank 9</color>.</size>"
-r:"^好感度提升至<color\=#FFC000>rank13</color>後，\n增加在小型娃娃機中抓到高級稀有度娃娃的機率。$"="<size\=24>Increase the chance to get super rare dolls in small crane machine after reaching <color\=#FFC000>rank 13</color>.</size>"
-r:"^好感度提升至<color\=#FFC000>rank17</color>後，\n增加在中型娃娃機中抓到高級稀有度娃娃的機率。$"="<size\=24>Increase the chance to get super rare dolls in medium crane machine after reaching <color\=#FFC000>rank 17</color>.</size>"
+r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n增加在小型娃娃機中抓到娃娃的機率。$"="<size\=24>Gain Synergy with [<color\=#FFC000>{{A}}</color>]: Increase the chance to get dolls in small crane machine.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n增加在中型娃娃機中抓到娃娃的機率。$"="<size\=24><color\=#FFC000>Rank $1</color>: Increase the chance to get dolls in medium crane machine.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n娃娃機商店中增加新的商品。$"="<size\=24><color\=#FFC000>Rank $1</color>: Add new items to the crane machine stop after reaching <color\=#FFC000>rank 9</color>.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n增加在小型娃娃機中抓到高級稀有度娃娃的機率。$"="<size\=24><color\=#FFC000>Rank $1</color>: Increase the chance to get super rare dolls in small crane machine.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n增加在中型娃娃機中抓到高級稀有度娃娃的機率。$"="<size\=24><color\=#FFC000>Rank $1</color>: Increase the chance to get super rare dolls in medium crane machine.</size>"
 
 玩1次=1 time
 玩5次=5 times
@@ -1758,34 +1796,34 @@ Synergy (SL) and City Activities
 消耗=Spend
 r:"^消耗：$"=" "
 
-r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n可以去「{{B}}·百萬甜品店」打工了。$"="<size\=24>Can now work at the {{B}} Crepe Shop after froming a relationship with [<color\=#FFC000>{{A}}</color>].</size>"
-r:"^好感度提升至<color\=#FFC000>rank5</color>後，打工時，可以使人格指數獲得額外的成長。$"="<size\=24>Gain more Social Stats when working after reaching <color\=#FFC000>rank 5</color>.</size>"
-r:"^好感度提升至<color\=#FFC000>rank9</color>後，\n可以去「{{A}}·藥妝店」打工了。$"="<size\=24>Can now work at the {{A}} Drug Store after reaching <color\=#FFC000>rank 9</color>.</size>"
-r:"^好感度提升至<color\=#FFC000>rank13</color>後，打工時，可以使人格指數獲得更多的額外成長。$"="<size\=24>Gain even more Social Stats when working after reaching <color\=#FFC000>rank 13</color>.</size>"
-r:"^好感度提升至<color\=#FFC000>rank17</color>後，可以去「{{A}}·日乃國屋書店」打工了。$"="<size\=24>Can now work at the Shinjuku Bookstore after reaching <color\=#FFC000>rank 17</color>.</size>"
+r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n可以去「{{B}}·百萬甜品店」打工了。$"="<size\=24>Gain Synergy with [<color\=#FFC000>{{A}}</color>]: Can now work at the {{B}} Crepe Shop.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，打工時，可以使人格指數獲得額外的成長。$"="<size\=24><color\=#FFC000>Rank $1</color>: Gain more Social Stats when working.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n可以去「{{A}}·藥妝店」打工了。$"="<size\=24><color\=#FFC000>Rank $1</color>: Can now work at the {{A}} Drug Store.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，打工時，可以使人格指數獲得更多的額外成長。$"="<size\=24><color\=#FFC000>Rank $1</color>: Gain even more Social Stats when working.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，可以去「{{A}}·日乃國屋書店」打工了。$"="<size\=24><color\=#FFC000>Rank $1</color>: Can now work at the Shinjuku Bookstore.</size>"
 
-r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n獲得書籍『高效放鬆法』。\n·閱讀後增加泡澡的獎勵$"="<size\=24>Get the book [Efficient Relaxation] which can increase the rewards from Bathe after froming a relationship with [<color\=#FFC000>{{A}}</color>].</size>"
-r:"^好感度提升至<color\=#FFC000>rank3</color>後，\n獲得書籍『關於急救的一切』。\n·獲得「{{A}}·藥妝店」打工增益$"="<size\=24>Get the book [All About First Aid] which can increase the rewards from [{{A}} Drug Store] after reaching <color\=#FFC000>rank 3</color>.</size>"
-r:"^好感度提升至<color\=#FFC000>rank11</color>後，\n獲得書籍『肌肉，GO！』。\n·閱讀後增加健身的獎勵$"="<size\=24>Get the book [Muscle, GO!] which can increase the rewards from Gym after reaching <color\=#FFC000>rank 11</color>.</size>"
-r:"^好感度提升至<color\=#FFC000>rank15</color>後，\n獲得書籍『圖書管理員秘技！』。\n·「{{A}}·日乃國屋書店」打工增益$"="<size\=24>Get the book [Librarian's Secret Skill!] which can increase the rewards from [Shinjuku Bookstore] after reaching <color\=#FFC000>rank 15</color>.</size>"
-r:"^好感度提升至<color\=#FFC000>rank20</color>後，\n獲得書籍『電影與電影評論家』。\n·閱讀後增加看電影的獎勵$"="<size\=24>Get the book [Film and Film Critics] which can increase the rewards from Movies after reaching <color\=#FFC000>rank 20</color>.</size>"
+r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n獲得書籍『高效放鬆法』。\n·閱讀後增加泡澡的獎勵$"="<size\=24>Gain Synergy with [<color\=#FFC000>{{A}}</color>]: Get the book [Efficient Relaxation] which can increase the rewards from Bathe.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n獲得書籍『關於急救的一切』。\n·獲得「{{A}}·藥妝店」打工增益$"="<size\=24><color\=#FFC000>Rank $1</color>: Get the book [All About First Aid] which can increase the rewards from [{{A}} Drug Store].</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n獲得書籍『肌肉，GO！』。\n·閱讀後增加健身的獎勵$"="<size\=24><color\=#FFC000>Rank $1</color>: Get the book [Muscle, GO!] which can increase the rewards from Gym.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n獲得書籍『圖書管理員秘技！』。\n·「{{A}}·日乃國屋書店」打工增益$"="<size\=24><color\=#FFC000>Rank $1</color>: Get the book [Librarian's Secret Skill!] which can increase the rewards from [Shinjuku Bookstore].</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n獲得書籍『電影與電影評論家』。\n·閱讀後增加看電影的獎勵$"="<size\=24><color\=#FFC000>Rank $1</color>: Get the book [Film and Film Critics] which can increase the rewards from Movies.</size>"
 
-r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n{{B}}地區，大部分街頭店鋪商品有小幅降價。$"="<size\=24>Most shop in {{B}} have a small discount after froming a relationship with [<color\=#FFC000>{{A}}</color>]</size>"
-r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n{{A}}地區，大部分街頭店鋪商品有小幅降價。$"="<size\=24>Most shop in {{A}} have a small discount after after reaching <color\=#FFC000>rank $1</color>.</size>"
-r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n{{A}}和{{B}}地區，大部分街頭店鋪商品有小幅降價。$"="<size\=24>Most shop in {{A}} and {{B}} have a small discount after after reaching <color\=#FFC000>rank $1</color>.</size>"
+r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n{{B}}地區，大部分街頭店鋪商品有小幅降價。$"="<size\=24>Gain Synergy with [<color\=#FFC000>{{A}}</color>]: Most shop in {{B}} have a small discount.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n{{A}}地區，大部分街頭店鋪商品有小幅降價。$"="<size\=24><color\=#FFC000>Rank $1</color>: Most shop in {{A}} have a small discount.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n{{A}}和{{B}}地區，大部分街頭店鋪商品有小幅降價。$"="<size\=24><color\=#FFC000>Rank $1</color>: Most shop in {{A}} and {{B}} have a small discount.</size>"
 
-r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n解鎖約會地點「{{B}}·自助餐廳」。$"="<size\=24>Unlock the Hangout Spot [{{B}} Buffet] after froming a relationship with [<color\=#FFC000>{{A}}</color>]</size>"
-r:"^與「<color\=#FFC000>{{A}}</color>」好感度提升至<color\=#FFC000>rank3</color>後，\n解鎖約會地點「元町·中華街」。$"="<size\=24>Unlock the Hangout Spot [Motomachi Chinatown] after reaching <color\=#FFC000>rank 3</color> with [<color\=#FFC000>{{A}}</color>].</size>"
-r:"^好感度提升至<color\=#FFC000>rank3</color>後，\n解鎖約會地點「元町·中華街」。$"="<size\=24>Unlock the Hangout Spot [Motomachi Chinatown] after reaching <color\=#FFC000>rank 3</color>.</size>"
-r:"^好感度提升至<color\=#FFC000>rank7</color>後，\n解鎖約會地點「品川·水族館」，並且在協同者邀約中可以獲得額外好感度。$"="<size\=24>Unlock the Hangout Spot [Shinagawa Aquarium] and gain more Fondness from Invitations after reaching <color\=#FFC000>rank 7</color>.</size>"
-r:"^好感度提升至<color\=#FFC000>rank13</color>後，\n解鎖約會地點「銀座·壽司店」。$"="<size\=24>Unlock the Hangout Spot [Ginza Sushi Restaurant] after reaching <color\=#FFC000>rank 13</color>.</size>"
-r:"^好感度提升至<color\=#FFC000>rank17</color>後，\n解鎖約會地點「{{A}}·家電量販店」，並且在協同者邀約中可以獲得更多額外好感度。$"="<size\=24>Unlock the Hangout Spot [{{A}} Electronics Store] and gain even more Fondness from Invitations after reaching <color\=#FFC000>rank 7</color>.</size>"
+r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n解鎖約會地點「{{B}}·自助餐廳」。$"="<size\=24>Gain Synergy with [<color\=#FFC000>{{A}}</color>]: Unlock the Hangout Spot [{{B}} Buffet.</size>"
+r:"^與「<color\=#FFC000>{{A}}</color>」好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n解鎖約會地點「元町·中華街」。$"="<size\=24><color\=#FFC000>Rank $1</color>: Unlock the Hangout Spot [Motomachi Chinatown].</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n解鎖約會地點「元町·中華街」。$"="<size\=24><color\=#FFC000>Rank $1</color>: Unlock the Hangout Spot [Motomachi Chinatown].</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n解鎖約會地點「品川·水族館」，並且在協同者邀約中可以獲得額外好感度。$"="<size\=24><color\=#FFC000>Rank $1</color>: Unlock the Hangout Spot [Shinagawa Aquarium] and gain more Fondness from Invitations.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n解鎖約會地點「銀座·壽司店」。$"="<size\=24><color\=#FFC000>Rank $1</color>: Unlock the Hangout Spot [Ginza Sushi Restaurant].</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n解鎖約會地點「{{A}}·家電量販店」，並且在協同者邀約中可以獲得更多額外好感度。$"="<size\=24><color\=#FFC000>Rank $1</color>: Unlock the Hangout Spot [{{A}} Electronics Store] and gain even more Fondness from Invitations.</size>"
 
-與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n都市日程中「魅力」、「體貼」的人格指數獲得量提升。=<size\=23>Gain more [Charm] and [Kindness] from City Activities after froming a relationship with [<color\=#FFC000>{{A}}</color>].</size>
-好感度提升至<color\=#FFC000>rank5</color>後，\n都市日程中「勇氣」、「靈巧」的人格指數獲得量提升。=<size\=23>Gain more [Guts] and [Proficiency] from City Activities after reaching <color\=#FFC000>rank 5</color>.</size>
-好感度提升至<color\=#FFC000>rank9</color>後，\n人格指數提升到16/18/20級時，可以獲得1個「靈感輝光」。=<size\=23>Gain 1 [Inspiration Glow] when reaching Rank 16/18/20 Social Stats after reaching <color\=#FFC000>rank 9</color>.</size>
-好感度提升至<color\=#FFC000>rank13</color>後，\n都市日程中「知識」的人格指數獲得量提升。=<size\=23>Gain more [Knowledge] from City Activities after reaching <color\=#FFC000>rank 13</color>.</size>
-好感度提升至<color\=#FFC000>rank17</color>後，\n人格指數提升到20級後，每200點超額的經驗將轉化為隨機禮物道具。。=<size\=23>After reaching Rank 10 Social Stats, convert every 200 excess experience into a random gift after reaching <color\=#FFC000>rank 17</color>.</size>
+r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n都市日程中「魅力」、「體貼」的人格指數獲得量提升。$"="<size\=24>Gain Synergy with [<color\=#FFC000>{{A}}</color>]: Gain more [Charm] and [Kindness] from City Activities.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n都市日程中「勇氣」、「靈巧」的人格指數獲得量提升。$"="<size\=24><color\=#FFC000>Rank $1</color>: Gain more [Guts] and [Proficiency] from City Activities.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n人格指數提升到16/18/20級時，可以獲得1個「靈感輝光」。$"="<size\=24><color\=#FFC000>Rank $1</color>: Gain 1 [Inspiration Glow] when reaching Rank 16/18/20 Social Stats.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n都市日程中「知識」的人格指數獲得量提升。$"="<size\=24><color\=#FFC000>Rank $1</color>: Gain more [Knowledge] from City Activities.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n人格指數提升到20級後，每200點超額的經驗將轉化為隨機禮物道具。。$"="<size\=24><color\=#FFC000>Rank $1</color>: After reaching Rank 10 Social Stats, convert every 200 excess experience into a random gift.</size>"
 
 解鎖新能力=Unlock Skill
 人格指數=Social Stats
@@ -2073,12 +2111,12 @@ r:"^幫助{{A}}$"="<size\=24>Help out\n{{A}}</size>"
 {{A}}遇到了新的謎團，去和他聊聊吧……={{A}} encountered a new puzzle, let's go talk to him...
 要和{{A}}聊天嗎(<color\=#ff0000>消耗1點行動力</color>)？=Want to chat with {{A}}?\n(<color\=#ff0000>Spend 1 Energy Point</color>)
 
-和{{A}}出去玩吧=<size\=24>Hang out with\n{{A}}</size>
-r:"^和{{A}}一起度過$"="<size\=24>Hang out with\n{{A}}</size>"
+和{{A}}出去玩吧=<size\=24>Spend time with\n{{A}}</size>
+r:"^和{{A}}一起度過$"="<size\=24>Spend time with\n{{A}}</size>"
 和{{A}}一起度過放學後的時光吧=Let's spend some time with {{A}} after school
-r:"^和清一起度過$"="<size\=24>Hang out with\nKiyoshi</size>"
+r:"^和清一起度過$"="<size\=24>Spend time with\nKiyoshi</size>"
 
-兩個人的觀影時間=<size\=24>Movie time \nfor two</size>
+兩個人的觀{{A}}=<size\=24>Movie time \nfor two</size>
 在家裡和{{A}}一起看她推薦的電影吧=<size\=26>Let's watch the movie recommended by {{A}} together at home</size>
 
 與{{A}}一起度過放學後的時間吧=Let's spend time \nwith {{A}} after school 
@@ -2462,10 +2500,10 @@ r:"^全體怪盜<color\=#E3E3E3>持續效果</color>傷害提高(\d+(.\d+)?(%)?)
 此處潛伏著厄抑之境中凝結的特殊陰影，挑戰成功可獲得面具精靈、印記與不羈紋章。=There are special Shadows here, gain Persona and Wild Card Emblem on victory.
 r:"^此處盤踞著強大的陰影，(.*)，挑戰成功可獲得神秘的啟示卡。$"="There are strong Shadows here, gain Revelation Cards on victory."
 
-r:"^保底進度：<color\=#0665ca>(\d+)/(\d+)</color>$"="Pity: <color\=#0665ca>$1/$2</color>"
-r:"^領取 <color\=#0665ca>(\d+)</color> 次必得$"="Guarantee after <color\=#0665ca>$1</color> time(s)"
-本次領取必得=Guarantee
-r:"持有印記：(\d+)"=Seal Owned: $1
+r:"^保底進度：<color\=#0665ca>(\d+)/(\d+)</color>$"="Guaranteed: <color\=#0665ca>$1/$2</color>"
+r:"^領取 <color\=#0665ca>(\d+)</color> 次必得$"="Guaranteed within <color\=#0665ca>$1</color> spins"
+本次領取必得=Guaranteed
+r:"持有印記：(\d+)"=Seals held: $1
 r:"^區域$"="Area"
 嗯？要從{{A}}撤退，返回都市嗎？=Hm? Want to retreat from Mementos\nand head back to the city?
 r:"^領獎需要消耗(\d+)點體力，\n當前體力不足，是否確認潛入？$"="You need to use $1 Stamina \nin order to claim the rewards.\nYou don't have enough Stamina, \ndo you still want to infiltrate?"
@@ -3401,6 +3439,7 @@ r:"^全服能量達到<color\=#FFF100>(.*)</color>時透過郵件發放獎勵$"=
 許願贈禮·不羈=Wish Gift·Wild
 sr:"^許下(.*)之願，可獲得(.*)\*(\d+)、(.*)\*(\d+)。$"="Can gain $2*$3, $4*$5"
 
+怪盜幻像的試煉=Phantom Trial
 完成簡單難度全部階段的戰鬥=Clear all phases on easy
 完成普通難度全部階段的戰鬥=Clear all phases on normal
 完成困難難度全部階段的戰鬥=Clear all phases on hard
@@ -3420,43 +3459,10 @@ r:"^僅展示噩夢難度前(\d+)名{{A}}資訊$"="Only the info of the top $1 {
 剩餘血量=HP Left
 試煉等級：=Trial Lv:
 前置難度通關後解鎖。=Clear prerequisite difficulty to unlock.
-請根據階段二特殊機制調整陣容=Manage team based on phase 2 mechanics
-請根據階段三特殊機制調整陣容=Manage team based on phase 2 mechanics
+請根據階段一特殊機制調整陣容=Manage party based on phase 1 mechanics
+請根據階段二特殊機制調整陣容=Manage party based on phase 2 mechanics
+請根據階段三特殊機制調整陣容=Manage party based on phase 3 mechanics
 已達最終階段=Final phase
-r:"^<color\=#FFD145>階段一</color>\n1、{{A}}受到技能傷害時，有(\d+%)固定機率進行反擊，對敵人造成冰凍屬性傷害的追加效果。\n2、友方回合結束時，HIGHLIGHT能量提升(\d+)點；{{A}}回合開始時，若自身處於可行動狀態且HIGHLIGHT能量達到(\d+)點，則會釋放HIGHLIGHT技能。\n3、{{A}}每個回合結束時，永久獲得1層<color\=#ff3b37>「彩墨潑灑」</color>，每層<color\=#ff3b37>「彩墨潑灑」</color>提供一定的防禦力提升。\n4、此階段的{{A}}的血量不會被降到(\d+%)以下，{{A}}當前血量到達(\d+%)時進入下一階段。\n<color\=#FFD145>階段二</color>\n1、{{A}}受到技能傷害時，有(\d+%)固定機率進行反擊，對敵人造成冰凍屬性傷害的追加效果。\n2、友方回合結束時，HIGHLIGHT能量提升(\d+)點；{{A}}回合開始時，若自身處於可行動狀態且HIGHLIGHT能量達到(\d+)點，則會釋放HIGHLIGHT技能。\n3、{{A}}每個回合結束時，永久獲得1層<color\=#ff3b37>「彩墨潑灑」</color>，每層<color\=#ff3b37>「彩墨潑灑」</color>提供一定的防禦力提升。\n4、場上存在其他友方單位時，{{A}}獲得大量的最終傷害減免。\n5、此階段的{{A}}的血量不會被降到(\d+%)以下，{{A}}當前血量到達(\d+%)時進入下一階段。\n6、{{C}}可以透過技能「冰晶新星」使所有敵人陷入「究極凍結」，大幅降低目標造成的最終傷害。\n7、{{C}}每個回合為所有同伴添加可抵禦一定傷害的「寒冰護甲」並為1名同伴添加1層「{{C}}之護」。\n<color\=#ff3b37>「{{C}}之護」</color>：每層提供一定百分比的防禦提升，持續(\d+)回合，最多可疊加(\d+)層；擁有<color\=#ff3b37>「{{C}}之護」</color>的單位受到TECH傷害時，會被驅散(\d+)層<color\=#ff3b37>「{{C}}之護」</color>。\n<color\=#FFD145>階段三</color>\n1、{{A}}受到技能傷害時，有(\d+%)固定機率進行反擊，對敵人造成冰凍屬性傷害的追加效果。\n2、友方回合結束時，HIGHLIGHT能量提升(\d+)點；{{A}}回合開始時，若自身處於可行動狀態且HIGHLIGHT能量達到(\d+)點，則會釋放HIGHLIGHT技能。\n3、{{A}}每個回合結束時，永久獲得1層<color\=#ff3b37>「彩墨潑灑」</color>，每層<color\=#ff3b37>「彩墨潑灑」</color>提供一定的防禦力提升。\n4、場上存在其他友方單位時，{{A}}獲得大量的最終傷害減免。\n5、{{C}}每個回合為所有同伴添加可抵禦一定傷害的「寒冰護甲」並為1名同伴添加1層「{{C}}之護」。\n<color\=#ff3b37>「{{C}}之護」</color>：每層提供一定百分比的防禦提升，持續(\d+)回合，最多可疊加(\d+)層；擁有<color\=#ff3b37>「{{C}}之護」</color>的單位受到TECH傷害時，會被驅散(\d+)層<color\=#ff3b37>「{{C}}之護」</color>。\n6、{{B}}能為敵人添加冰凍屬性弱點；當敵方被削減倒地值時，{{B}}獲得1層<color\=#ff3b37>「雲蒸龍變」</color>：造成的最終傷害提升，可疊加。$"="<color\=#FFD145>Phase 1</color>\n1. When {{A}} takes damage from a foe's skill, $1 chance to activate Resonance to Counterattack, dealing Ice damage.\n2. At the end of ally's turn, gain $2 HIGHLIGHT Energy; At the start of {{A}}'s turn, if he can act and HIGHLIGHT Energy reach $3, use HIGHLIGHT.\n3. At the end of {{A}}'s turn, permanently gain 1 <color\=#ff3b37>[Both Beauty and Vice]</color> stack, increase DEF for each <color\=#ff3b37>[Both Beauty and Vice]</color> stack.\n4. In this phase {{A}}'s HP cannot drop below $4, enter next phase when {{A}}'s current HP reach $5.\n<color\=#FFD145>Phase 2</color>\n1. When {{A}} takes damage from a foe's skill, $6 chance to activate Resonance to Counterattack, dealing Ice damage.\n2. At the end of ally's turn, gain $7 HIGHLIGHT Energy; At the start of {{A}}'s turn, if he can act and HIGHLIGHT Energy reach $8, use HIGHLIGHT.\n3. At the end of {{A}}'s turn, permanently gain 1 <color\=#ff3b37>[Both Beauty and Vice]</color> stack, increase DEF for each <color\=#ff3b37>[Both Beauty and Vice]</color> stack.\n4. When other allies are on the field, {{A}} gains heavy Final DMG RES.\n5. In this phase {{A}}'s HP cannot drop below $9, enter next phase when {{A}}'s current HP reach $10.\n6. {{C}} can use [Ice Nova] to inflict [Ultra Freeze] on all foes, heavily decrease target's Final DMG Dealt.\n7. {{C}} can give party [Ice Armor] and 1 ally a [{{A}}'s Protection] stack each turn.\n<color\=#ff3b37>[{{C}}'s Protection]</color>: Each stack increases DEF by a certain percentage for $11 turns. Stacks up to $12 times; When characters with <color\=#ff3b37>[{{C}}'s Protection]</color> take TECHNICAL damage, dispel $13 stacks of <color\=#ff3b37>[{{C}}'s Protection]</color>.\n<color\=#FFD145>Phase 3</color>\n1. When {{A}} takes damage from a foe's skill, $14 chance to activate Resonance to Counterattack, dealing Ice damage.\n2. At the end of ally's turn, gain $15 HIGHLIGHT Energy; At the start of {{A}}'s turn, if he can act and HIGHLIGHT Energy reach $16, use HIGHLIGHT.\n3. At the end of {{A}}'s turn, permanently gain 1 <color\=#ff3b37>[Both Beauty and Vice]</color> stack, increase DEF for each <color\=#ff3b37>[Both Beauty and Vice]</color> stack.\n4. When other allies are on the field, {{A}} gains heavy Final DMG RES.\n5. {{C}} can use [Ice Nova] to inflict [Ultra Freeze] on all foes, heavily decrease target's Final DMG Dealt.\n6. {{C}} can give party [Ice Armor] and 1 ally a [{{A}}'s Protection] stack each turn.\n<color\=#ff3b37>[{{C}}'s Protection]</color>: Each stack increases DEF by a certain percentage for $17 turns. Stacks up to $18 times; When characters with <color\=#ff3b37>[{{C}}'s Protection]</color> take TECHNICAL damage, dispel $19 stacks of <color\=#ff3b37>[{{C}}'s Protection]</color>.\n6、{{B}} can inflict foes with Ice weakness: When decreasing foes' Down Points, {{B}} gains 1 <color\=#ff3b37>[Dragon Soar]</color> stack: Increase DMG Dealt, can stack."
-r:"^1、{{A}}受到技能傷害時，有(\d+%)固定機率進行反擊，對敵人造成冰凍屬性傷害的追加效果。\n2、友方回合結束時，HIGHLIGHT能量提升(\d+)點；{{A}}回合開始時，若自身處於可行動狀態且HIGHLIGHT能量達到(\d+)點，則會釋放HIGHLIGHT技能。\n3、{{A}}每個回合結束時，永久獲得1層<color\=#ff3b37>「彩墨潑灑」</color>，每層<color\=#ff3b37>「彩墨潑灑」</color>提供一定的防禦力提升。\n4、此階段的{{A}}的血量不會被降到(\d+%)以下，{{A}}當前血量到達(\d+%)時進入下一階段。$"="1. When {{A}} takes damage from a foe's skill, $1 chance to activate Resonance to Counterattack, dealing Ice damage.\n2. At the end of ally's turn, gain $2 HIGHLIGHT Energy; At the start of {{A}}'s turn, if he can act and HIGHLIGHT Energy reach $3, use HIGHLIGHT.\n3. At the end of {{A}}'s turn, permanently gain 1 <color\=#ff3b37>[Both Beauty and Vice]</color> stack, increase DEF for each <color\=#ff3b37>[Both Beauty and Vice]</color> stack.\n4. In this phase {{A}}'s HP cannot drop below $4, enter next phase when {{A}}'s current HP reach $5."
-r:"^1、{{A}}可以透過技能「冰晶新星」使所有敵人陷入「究極凍結」，大幅降低目標造成的最終傷害。\n2、{{A}}每個回合為所有同伴添加可抵禦一定傷害的「寒冰護甲」並為1名同伴添加1層「{{A}}之護」。\n<color\=#ff3b37>「{{A}}之護」</color>：每層提供一定百分比的防禦提升，持續(\d+)回合，最多可疊加(\d+)層；擁有<color\=#ff3b37>「{{A}}之護」</color>的單位受到TECH傷害時，會被驅散(\d+)層<color\=#ff3b37>「{{A}}之護」</color>。$"="1. {{A}} can use [Ice Nova] to inflict [Ultra Freeze] on all foes, heavily decrease target's Final DMG Dealt.\n2. {{A}} can give party [Ice Armor] and 1 ally a [{{A}}'s Protection] stack each turn.\n<color\=#ff3b37>[{{A}}'s Protection]</color>: Each stack increases DEF by a certain percentage for $1 turns. Stacks up to $2 times; When characters with <color\=#ff3b37>[{{A}}'s Protection]</color> take TECHNICAL damage, dispel $3 stacks of <color\=#ff3b37>[{{A}}'s Protection]</color>."
-r:"^{{A}}每個回合為所有同伴添加可抵禦一定傷害的「寒冰護甲」並為1名同伴添加(\d+)層「{{A}}之護」。\n<color\=#ff3b37>「{{A}}之護」</color>：每層提供一定百分比的防禦提升，持續(\d+)回合，最多可疊加(\d+)層；擁有<color\=#ff3b37>「{{A}}之護」</color>的單位受到TECH傷害時，會被驅散(\d+)層<color\=#ff3b37>「{{A}}之護」</color>。$"="{{A}} can give party [Ice Armor] and 1 ally a [{{A}}'s Protection] stack each turn.\n<color\=#ff3b37>[{{A}}'s Protection]</color>: Each stack increases DEF by a certain percentage for $1 turns. Stacks up to $2 times; When characters with <color\=#ff3b37>[{{A}}'s Protection]</color> take TECHNICAL damage, dispel $3 stacks of <color\=#ff3b37>[{{A}}'s Protection]</color>."
-r:"^{{A}}能為敵人添加冰凍屬性弱點；當敵方被削減倒地值時，{{A}}獲得(\d+)層<color\=#ff3b37>「雲蒸龍變」</color>：造成的最終傷害提升，可疊加。$"="{{A}} can inflict foes with Ice weakness: When decreasing foes' Down Points, {{A}} gains $1 <color\=#ff3b37>[Dragon Soar]</color> stack: Increase DMG Dealt, can stack."
-r:"^{{A}}獲得護盾時傷害提升，持續(\d+)回合，可疊(\d+)層；{{A}}使用技能提供護盾時，增加自身穿透，持續(\d+)回合。$"="Each time a shield is gained, increase {{A}}'s DMG Dealt to foes for $1 turns. Stacks up to $2 times; Each time a shield is gained with {{A}}'s skills, increase {{A}}'s Pierce for $3 turn."
-r:"^1、{{A}}受到技能傷害時，有(\d+%)固定機率進行反擊，對敵人造成冰凍屬性傷害的追加效果。\n2、友方回合結束時，HIGHLIGHT能量提升(\d+)點；{{A}}回合開始時，若自身處於可行動狀態且HIGHLIGHT能量達到(\d+)點，則會釋放HIGHLIGHT技能。\n3、{{A}}每個回合結束時，永久獲得1層<color\=#ff3b37>「彩墨潑灑」</color>，每層<color\=#ff3b37>「彩墨潑灑」</color>提供一定的防禦力提升。\n4、場上存在其他友方單位時，{{A}}獲得大量的最終傷害減免。\n5、此階段的{{A}}的血量不會被降到(\d+%)以下，{{A}}當前血量到達(\d+%)時進入下一階段。\n6、{{B}}可以透過技能「冰晶新星」使所有敵人陷入「究極凍結」，大幅降低目標造成的最終傷害。\n7、{{B}}每個回合為所有同伴添加可抵禦一定傷害的「寒冰護甲」並為1名同伴添加1層「{{B}}之護」。\n<color\=#ff3b37>「{{B}}之護」</color>：每層提供一定百分比的防禦提升，持續(\d+)回合，最多可疊加(\d+)層；擁有<color\=#ff3b37>「{{B}}之護」</color>的單位受到TECH傷害時，會被驅散(\d+)層<color\=#ff3b37>「{{B}}之護」</color>。$"="1. When {{A}} takes damage from a foe's skill, $1 chance to activate Resonance to Counterattack, dealing Ice damage.\n2. At the end of ally's turn, gain $2 HIGHLIGHT Energy; At the start of {{A}}'s turn, if he can act and HIGHLIGHT Energy reach $3, use HIGHLIGHT.\n3. At the end of {{A}}'s turn, permanently gain 1 <color\=#ff3b37>[Both Beauty and Vice]</color> stack, increase DEF for each <color\=#ff3b37>[Both Beauty and Vice]</color> stack.\n4. In this phase {{A}}'s HP cannot drop below $4, enter next phase when {{A}}'s current HP reach $5. \n5. {{B}} can use [Ice Nova] to inflict [Ultra Freeze] on all foes, heavily decrease target's Final DMG Dealt.\n6. {{B}} can give party [Ice Armor] and 1 ally a [{{B}}'s Protection] stack each turn.\n<color\=#ff3b37>[{{B}}'s Protection]</color>: Each stack increases DEF by a certain percentage for $6 turns. Stacks up to $7 times; When characters with <color\=#ff3b37>[{{B}}'s Protection]</color> take TECHNICAL damage, dispel $8 stacks of <color\=#ff3b37>[{{B}}'s Protection]</color>."
-r:"^1、{{A}}受到技能傷害時，有(\d+%)固定機率進行反擊，對敵人造成冰凍屬性傷害的追加效果。\n2、友方回合結束時，HIGHLIGHT能量提升(\d+)點；{{A}}回合開始時，若自身處於可行動狀態且HIGHLIGHT能量達到(\d+)點，則會釋放HIGHLIGHT技能。\n3、{{A}}每個回合結束時，永久獲得1層<color\=#ff3b37>「彩墨潑灑」</color>，每層<color\=#ff3b37>「彩墨潑灑」</color>提供一定的防禦力提升。\n4、場上存在其他友方單位時，{{A}}獲得大量的最終傷害減免。\n5、{{C}}每個回合為所有同伴添加可抵禦一定傷害的「寒冰護甲」並為1名同伴添加1層「{{C}}之護」。\n<color\=#ff3b37>「{{C}}之護」</color>：每層提供一定百分比的防禦提升，持續(\d+)回合，最多可疊加(\d+)層；擁有<color\=#ff3b37>「{{C}}之護」</color>的單位受到TECH傷害時，會被驅散(\d+)層<color\=#ff3b37>「{{C}}之護」</color>。\n6、{{B}}能為敵人添加冰凍屬性弱點；當敵方被削減倒地值時，{{B}}獲得(\d+)層<color\=#ff3b37>「雲蒸龍變」</color>：造成的最終傷害提升，可疊加。$"="1. When {{A}} takes damage from a foe's skill, $1 chance to activate Resonance to Counterattack, dealing Ice damage.\n2. At the end of ally's turn, gain $2 HIGHLIGHT Energy; At the start of {{A}}'s turn, if he can act and HIGHLIGHT Energy reach $3, use HIGHLIGHT.\n3. At the end of {{A}}'s turn, permanently gain 1 <color\=#ff3b37>[Both Beauty and Vice]</color> stack, increase DEF for each <color\=#ff3b37>[Both Beauty and Vice]</color> stack.\n4. {{C}} can use [Ice Nova] to inflict [Ultra Freeze] on all foes, heavily decrease target's Final DMG Dealt.\n5. {{C}} can give party [Ice Armor] and 1 ally a [{{C}}'s Protection] stack each turn.\n<color\=#ff3b37>[{{C}}'s Protection]</color>: Each stack increases DEF by a certain percentage for $3 turns. Stacks up to $4 times; When characters with <color\=#ff3b37>[{{C}}'s Protection]</color> take TECHNICAL damage, dispel $5 stacks of <color\=#ff3b37>[{{C}}'s Protection]</color>.\n6. {{B}} can inflict foes with Ice weakness: When decreasing foes' Down Points, {{B}} gains $6 <color\=#ff3b37>[Dragon Soar]</color> stack: Increase DMG Dealt, can stack."
-{{A}}之力Ⅰ={{A}}'s Power Ⅰ
-r:"^『{{A}}之護』提供的防禦力大幅提升，『{{A}}之護』層數達到(\d+)層時，追加效果的最終傷害大幅提升。$"="Heavily increase DEF from [{{A}}'s Protection], when [{{A}} Protection] reaches $1 stacks, heavily increase Resonance Final DMG."
-筆落如生Ⅰ=Finishing Touches Ⅰ
-r:"^『遊龍展布』、『墨見龍吟』效果進化為『癡絕·遊龍展布』、『癡絕·墨見龍吟』——\n對敵人造成的反擊攻擊提升為連續的(\d+)次傷害，每次傷害為原本的(\d+%)，且反擊時獲得(\d+%)穿透。$"="The effects of [Inspiration] and [Imagination] change to [Vision & Emotion] and [Creation].\nEach Counterattack becomes $1 consecutive hits, each dealing $2 of the original damage. Also, increase Counterattack Pierce by $3."
-r:"^『雲蒸龍變』提供的最終傷害大幅提升，『雲蒸龍變』層數達到(\d+)層時，自身弱點傷害提升大幅提升。$"="Heavily increase Final DMG from [Dragon Soar], when reaching $1 [Dragon Soar] stacks, heavily increase Weak DMG."
-色盤調諧Ⅰ=A Breaktaking Sight Ⅰ
-r:"^『彩墨潑灑』提供的防禦力大幅提升；『彩墨潑灑』到達(\d+)層時，自身獲得擊倒免疫，並且追加效果的最終傷害大幅提升。$"="Heavily increase DEF from [Both Beauty and Vice]; When reaching $1 [Both Beauty and Vice] stacks, gain Null Down and heavily increase Resonance Final DMG."
-行動次數：=Actions:  <size\=1>.</size>
-r:"^幻像血量(\d+%)進入下階段$"="Next phase at $1 HP"
-被動技能，場上存在其他友方單位時，自身獲得大量最終傷害減免；自身每個回合結束時，永久獲得1層『彩墨潑灑』，每層『彩墨潑灑』提供一定的防禦力提升。=Passive skill, when other allies are on the field, Yusuke gains heavy Final DMG RES; At the end of Yusuke's turn, permanently gain 1 [Both Beauty and Vice] stack, increase DEF for each [Both Beauty and Vice] stack.
-r:"^受到技能傷害時，有(\d+%)固定機率進行反擊，基於防禦力對敵人造成冰凍屬性傷害的<link\="s\|100"><u>追加效果</u></link>。$"="When Yusuke takes damage from a foe's skill, $1 chance to activate <link\="s|100"><u>[Resonance]</u></link> to Counterattack, dealing Ice damage to 1 foe based on Yusuke's DEF."
-r:"^基於自身防禦力對所有敵人造成冰凍屬性傷害，有<color\=#FFFC40>(\d+%)</color>基礎機率使主目標敵人陷入<link\="s\|103"><u>凍結</u></link>狀態，效果持續(\d+)回合。$"="Deal Ice damage to all foes based on Yusuke's DEF. <color\=#FFFC40>$1</color> chance to inflict <link\="s|103"><u>Freeze</u></link> on main target for $2 turns."
-r:"^基於自身防禦力對隨機敵人造成(\d+)次冰凍屬性傷害，優先攻擊未受到該技能攻擊的敵人。若自身處於護盾狀態，則額外造成(\d+%)技能傷害。多次傷害命中同一目標傷害衰減(\d+%)，最低造成(\d+%)的傷害。$"="Deal Ice damage to random foes based on Yusuke's DEF ($1 hits). When Yusuke has a shield, increase skill damage by $2. From the second attack onwards, new targets take priority, and attacks on same foe deal $3 decreased damage each hit (minimum $4)."
-r:"^接下來1次<link\="s\|123"><u>『遊龍展布』</u></link>攻擊強化為<link\="s\|172"><u>『墨見龍吟』</u></link>。攻擊觸發機率提升至(\d+%)、基於自身防禦力以群體為目標攻擊。若1回合內未觸發<link\="s\|172"><u>『墨見龍吟』</u></link>強化反擊，則自動觸發。\n此外基於自身防禦力獲得可抵禦一定傷害的護盾，效果持續(\d+)回合。將自身弱點暫時變為默認耐性、免疫任何精神異常並使所有敵人獲得<link\="s\|143"><u>嘲諷</u></link>狀態，效果持續(\d+)回合。$"="Change the next activated <link\="s|123"><u>[Inspiration]</u></link> to <link\="s|172"><u>[Imagination]</u></link>. Imagination: Increase chance of Counterattack to $1, make damage dealt multi-target. If the effect is not activated by the start of Yusuke's next action, automatically activate it.\nGain a shield based on Yusuke's DEF, increase Fire resistance, and nullify Mental Ailments for $2 turns. Inflict <link\="s|143"><u>Taunt</u></link> on all foes for $3 turns."
-r:"^基於自身防禦力對全體敵人造成冰凍屬性傷害，並使遊龍展布觸發機率提升(\d+%)，持續(\d+)回合。$"="Deal Ice damage to all foes based on Yusuke's DEF. Increase chance of activating [Inspiration] Counterattacks by $1 for $2 turns."
-冰晶新星=Ice Nova
-r:"^對所有敵人造成冰凍屬性傷害，並使目標陷入『究極凍結』狀態。『究極凍結』：造成的最終傷害降低(\d+%)，持續(\d+)回合。$"="Deal Ice damage to all foes. Inflict [Ultra Freeze] on targets. [Ultra Freeze]: Decrease Final DMG Dealt by $1. Lasts for $2 turns."
-究極凍結=Ultra Freeze
-寒冰護甲=Ice Armor
-r:"^使所有同伴獲得可抵擋一定傷害的護盾，效果持續(\d+)回合。$"="Grant party shield for $1 turns."
-r:"^使1個同伴獲得『{{A}}之護』。『{{A}}之護』：每層提供一定百分比的防禦提升，持續(\d+)回合，最多可疊加(\d+)層；擁有『{{A}}之護』的單位受到TECH傷害時，會被驅散(\d+)層『{{A}}之護』。$"="Grant 1 ally [{{A}}'s Protection]: Each stack increases DEF by a certain percentage for $1 turns. Stacks up to $2 times; When characters with [{{A}}'s Protection] take TECHNICAL damage, dispel $3 stacks of [{{A}}'s Protection]."
-{{A}}祝福={{A}}'s Blessing
-被動技能，自身在場時，所有友方造成的弱點傷害提升。=Passive skill, when on the field, increase party's Weak DMG Dealt.
-r:"^為所有敵人添加冰屬性弱點，持續(\d+)回合。$"="Add Ice weakness to all foes for $1 turns."
-r:"^青<color\=#000000>龍</color>祝福$"="S<color\=#000000>e</color>iryu's Blessing"
-r:"^彩<color\=#000000>墨</color>潑灑$"="B<color\=#000000>o</color>th Beauty and Vice"
 
 ----------
 Character's Story
@@ -3629,7 +3635,7 @@ r:"^最多只可以選擇(\d+)個面具上陣哦～$"="You can only equip $1 Per
 不羈紋章·空=<size\=20>Wild Card Emblem·Dull</size>
 在厄抑之境中挑戰Ⅵ階、Ⅶ階{{A}}副本後獲得……應該可以用於在厄抑巡禮中兌換獎勵。=Gained from Rank VI, Rank VII Persona Farm. Can be used in Challenge Reward.
 在厄抑之境中挑戰所有{{A}}副本後均可獲得……應該可以用於在厄抑巡禮中兌換獎勵。=Gained from all Persona Farm. Can be used in Challenge Reward.
-『不羈紋章·虹』\n在心之海試煉等玩法中獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=22>[Wild Card Emblem·Rainbow]\nGained from Trials from the Sea of Souls. \nCan be used in Challenge Reward.</size>
+『不羈紋章·虹』\n在心之海試煉等玩法中獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=21>[Wild Card Emblem·Rainbow]\nGained from Trials from the Sea of Souls. \nCan be used in Challenge Reward.</size>
 在心之海試煉等玩法中獲得……應該可以用於在厄抑巡禮中兌換獎勵。=Gained from Trials from the Sea of Souls. \nCan be used in Challenge Reward.
 『不羈紋章·耀』\n在厄抑之境中挑戰Ⅵ階、Ⅶ階{{A}}副本後獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=26>[Wild Card Emblem·Shiny]\nGained from Rank VI, Rank VII Persona Farm. Can be used in Challenge Reward.</size>
 『不羈紋章·空』\n在厄抑之境中挑戰所有{{A}}副本後均可獲得……應該可以用於在厄抑巡禮中兌換獎勵。=<size\=26>[Wild Card Emblem·Dull]\nGained from all Persona Farm. \nCan be used in Challenge Reward.</size>
@@ -3641,13 +3647,9 @@ r:"^在{{A}}育成中習得輔助系技能『(.*)』的技能卡。$"="Can be us
 r:"^在{{A}}育成中習得異常系技能『(.*)』的技能卡。$"="Can be used to learn this debuff skill."
 <color\=#FFF000>面具階級</color>不符合技能卡要求。=<color\=#FFF000>Mask Rank</color> does not meet skill card requirement.
 
-r:"^與「<color\=#FFC000>{{A}}</color>」好感度提升至<color\=#FFC000>rank5</color>後，\n解鎖{{B}}的合成。$"="Unlock Fusion for {{B}}\nafter reaching <color\=#FFC000>rank 5</color> with [<color\=#FFC000>{{A}}</color>]."
-r:"^好感度提升至<color\=#FFC000>rank7</color>後，\n解鎖{{A}}的合成。$"="Unlock Fusion for Setanta\nafter reaching <color\=#FFC000>rank 7</color>."
-r:"^好感度提升至<color\=#FFC000>rank9</color>後，\n解鎖{{A}}的合成。$"="Unlock Fusion for Anubis\nafter reaching <color\=#FFC000>rank 9</color>."
-r:"^好感度提升至<color\=#FFC000>rank11</color>後，\n解鎖{{A}}的合成。$"="Unlock Fusion for Okuninushi\nafter reaching <color\=#FFC000>rank 11</color>."
-r:"^好感度提升至<color\=#FFC000>rank13</color>後，\n解鎖{{A}}的合成。$"="Unlock Fusion for Narcissus\nafter reaching <color\=#FFC000>rank 13</color>."
-r:"^好感度提升至<color\=#FFC000>rank15</color>後，\n合成Rank4及以下的2星、3星面具時，機率額外獲得一個印記。$"="<size\=21>There is a chance to get 1 additional Seal when fusing Rank 4 and below 2★ and 3★ Persona after reaching <color\=#FFC000>rank 15</color>.</size>"
-r:"^好感度提升至<color\=#FFC000>rank20</color>後，\n解鎖{{A}}的合成。$"="Unlock Fusion for Kohryu\nafter reaching <color\=#FFC000>rank 20</color>."
+r:"^與「<color\=#FFC000>{{A}}</color>」好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n解鎖{{B}}的合成。$"="<size\=24><color\=#FFC000>{{A}}</color>'s Synergy <color\=#FFC000>Rank $1</color>: You can now fuse {{B}}.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n解鎖{{A}}的合成。$"="<size\=24><color\=#FFC000>Rank $1</color>: You can now fuse {{A}}.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n合成Rank4及以下的2星、3星面具時，機率額外獲得一個印記。$"="<size\=24><color\=#FFC000>Rank $1</color>: You may receive an extra seal when fusing a 2★ or 3★ Persona of Rank 4 or lower.</size>"
 
 sr:"^(.*)印記$"="$1 Seal"
 鬼=Oni
@@ -3692,6 +3694,7 @@ sr:"^(.*)印記$"="$1 Seal"
 煩惱的{{A}}=Frustrated {{A}}
 詛咒的{{A}}=Cursed {{A}}
 豐饒的{{A}}=Abundant {{A}}
+崇高的{{A}}=Sublime {{A}}
 
 ----------
 ACHIEVEMENTS + COSMETICS + EMOTES + KEY ITEMS
