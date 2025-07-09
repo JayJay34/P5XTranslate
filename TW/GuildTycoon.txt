@@ -13,6 +13,11 @@ Guild - Companio
 積分統計進度=Boss Beaten
 r:"^積分統計進度會記錄本期分數<color\=#ef0000>最高</color>的<color\=#ef0000>(\d+)個</color>首領的積分總和$"="<size\=31>Sum of your <color\=#ef0000>$1 highest</color> scores will count towards total score.</size>"
 
+排行獎勵=Ranking Rewards
+獎勵將於本期挑戰結束後透過郵件發放=Rewards will be sent to your Inbox after this seaon's trial ends
+r:"^排名：(\d+)-(\d+)名$"="Ranking: #$1-#$2"
+r:"^排名：(\d+)名以後$"="Ranking: #200 or lower"
+
 r:"^第(\d+)名$"="Top $1"
 r:"^前(\d+%)$"="Top $1"
 
@@ -28,7 +33,7 @@ r:"近7天貢獻 (\d+)"=7d Contribution: $1
 樂園ID=Companio ID
 樂園人數=Members
 樂園影響力=Influence
-本樂園排名獎勵=Rank Rewards
+本樂園排名獎勵=Ranking Rewards
 r:"^歷史貢獻 (\d+)$"="Total Contribution $1"
 未上榜=Unranked
 
@@ -138,7 +143,7 @@ sr:"^受到技能屬性：(.*)$"="Skill element: $1"
 {{A}}「祝福」={{A}} [Bless]
 {{A}}「詛咒」={{A}} [Curse]
 {{A}}「萬能」={{A}} [Almighty]
-r:"^被擊敗後使怪盜(.*)傷害提升$"="Increase all Thieves' $1 DMG on death"
+sr:"^被擊敗後使怪盜(.*)傷害提升$"="Increase all Thieves' $1 DMG on death"
 
 r:"^1、{{B}}每回合為所有單位添加<color\=#ff3b37>「諸神黃昏」</color>。\n「諸神黃昏」：造成傷害提升(\d+%)，每回合流失一定生命值，可疊加(\d+)層。\n2、進入虛弱階段後，{{B}}為全體怪盜添加(\d+)層<color\=#ff3b37>「諸神黃昏」</color>，並召喚(\d+)隻{{A}}，對{{A}}造成的傷害會計入積分。$"="<size\=24>1. {{B}} will inflict all units with <color\=#ff3b37>[Ragnarok]</color> each turn.\n[Ragnarok]: Increase DMG Dealt by $1, lose a certain amount of HP each turn, up to $2 stacks.\n2. When entering Weak, {{B}} will inflict all Thieves with $3 stacks of <color\=#ff3b37>[Ragnarok]</color>, then summon $4 {{A}}, dealing damage to {{A}} will count for score.</size>"
 r:"^1、{{B}}每回合為所有單位添加<color\=#ff3b37>「諸神黃昏」</color>。\n「諸神黃昏」：造成傷害提升(\d+%)，每回合流失一定生命值，可疊加(\d+)層。\n2、擊敗{{C}}，會扣除{{B}}一定生命值。\n3、進入虛弱階段後，{{B}}為全體怪盜添加(\d+)層<color\=#ff3b37>「諸神黃昏」</color>，並召喚(\d+)隻{{A}}，對{{A}}造成的傷害會計入積分。$"="1. {{B}} will inflict all units with <color\=#ff3b37>[Ragnarok]</color> each turn.\n[Ragnarok]: Increase DMG Dealt by $1, lose a certain amount of HP each turn, up to $2 stacks.\n2. When defeating {{C}}, {{B}} will lose a certain amount of HP.\n3. When entering Weak, {{B}} will inflict all Thieves with $3 stacks of <color\=#ff3b37>[Ragnarok]</color>, then summon $4 {{A}}, dealing damage to {{A}} will count for score."
@@ -177,6 +182,8 @@ r:"^受<color\=#000000>H</color> L傷害提升$"="H<color\=#000000>I</color>GHLI
 終結裝置=Slaughter Drive
 鋼刃的終結裝置=Slaughter Drive
 深紅炮臺=Scarlet Turret
+
+r:"^擊敗{{A}}後，使{{B}}受到傷害提升，可疊加(\d+)層。$"="After defeating {{A}}, increase {{B}}'s DMG Taken. Stacks up to $1 times."
 
 ----------
 Modifiers
@@ -285,6 +292,9 @@ r:"^{{A}}造成傷害提升(\d+%)，使用{{A}}後額外使自身最終傷害提
 倒地領域=Down Domain
 r:"^所有敵人處於<color\=#FFFC40>倒地狀態</color>時，受到傷害提升(\d+%)$"="Increase all foes' DMG Taken by $1 when they are <color\=#FFFC40>Downed</color>"
 r:"^處於倒地狀態，受到傷害提升(\d+(.\d+)?(%)?)$"="Downed, increase DMG Taken by $1"
+
+持續領域=Damage Over Time Domain
+r:"^所有角色造成<color\=#FFFC40>持續傷害</color>時傷害提升(\d+%)$"="Increase party's DMG Dealt when dealing <color\=#FFFC40>Damage Over Time</color> by $1"
 
 sr:"^(.*)耐性$"="Resist $1"
 sr:"^所有敵人對<color\=#(.*)>(.*)</color>屬性的適應性變為耐$"="All foes change their resistance to Resist <color\=#$1>$2</color>"

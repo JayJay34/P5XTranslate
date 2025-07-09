@@ -644,21 +644,21 @@ r:"^下(\d+)次非秒殺戰鬥開始時，所有敵人對所有屬性的適應�
 r:"^下(\d+)次非秒殺戰鬥，隨機(\d+)名角色進入無法選中狀態$"="In the next $1 non insta-kill battle(s), randomly make $2 character untargetable"
 
 權杖·破壞藝術=Wands · Art Destruction
-r:"^下(\d+)次進入探索樓層時，額外出現(\d+)個可破壞物$"="In the next $1 floor(s), additional spawn $2 breakable objects"
+r:"^下(\d+)次進入探索樓層時，額外出現(\d+)個可破壞物$"="In the next $1 exploration floor(s), additional spawn $2 breakable objects"
 權杖·尋寶奇兵=Wands · Treasure Hunter
-r:"^下(\d+)個進入探索樓層時，額外出現(\d+)個寶箱$"="In the next $1 floor(s), additional spawn $2 treasure chests"
+r:"^下(\d+)個進入探索樓層時，額外出現(\d+)個寶箱$"="In the next $1 exploration floor(s), additional spawn $2 treasure chests"
 權杖·機遇挑戰者=Wands · Opportunity Challenger
-r:"^下(\d+)次進入探索樓層時，出現稀有陰影的機率提高$"="In the next $1 floor(s), increase the chance of encountering Rare Shadows"
+r:"^下(\d+)次進入探索樓層時，出現稀有陰影的機率提高$"="In the next $1 exploration floor(s), increase the chance of encountering Rare Shadows"
 權杖·危險挑戰者=Wands · Dangerous Challenger
-r:"^下(\d+)個進入探索樓層時，出現強敵陰影的機率提高$"="In the next $1 floor(s), increase the chance of encountering Strong Shadows"
+r:"^下(\d+)個進入探索樓層時，出現強敵陰影的機率提高$"="In the next $1 exploration floor(s), increase the chance of encountering Strong Shadows"
 權杖·時鐘發條=Wands · Clock Spring
-r:"^下(\d+)次進入探索樓層時，必定出現「時鐘」$"="In the next $1 floor(s), guarantee a [Clock]"
+r:"^下(\d+)次進入探索樓層時，必定出現「時鐘」$"="In the next $1 exploration floor(s), guarantee a [Clock]"
 權杖·大時鐘擺錘=Wands · Clock Pendulum
-r:"^下(\d+)次進入探索樓層時，必定出現「大時鐘」$"="In the next $1 floor(s), guarantee a [Grand Clock]"
+r:"^下(\d+)次進入探索樓層時，必定出現「大時鐘」$"="In the next $1 exploration floor(s), guarantee a [Grand Clock]"
 權杖·摩納多鑰匙=Wands · Monad Key
-r:"^下(\d+)次進入探索樓層時，必定出現摩納多之門$"="In the next $1 floor(s), guarantee a Monad door"
+r:"^下(\d+)次進入探索樓層時，必定出現摩納多之門$"="In the next $1 exploration floor(s), guarantee a Monad door"
 權杖·超大寶魔獵人=Wands · Greedy Hunter
-r:"^下(\d+)次進入探索樓層時，必定進入特殊的樓層，出現巨大稀有陰影$"="In the next $1 floor(s), guarantee a special floor with Greedy Shadow"
+r:"^下(\d+)次進入探索樓層時，必定進入特殊的樓層，出現巨大稀有陰影$"="In the next $1 exploration floor(s), guarantee a special floor with Greedy Shadow"
 
 權杖·時鐘特惠=Wands · Special Offer
 r:"^下(\d+)次進入「大時鐘」具象化卡牌時，所需「時鐘的齒輪」數量降低(\d+%)$"="The next $1 time when buying cards in the [Great Clock], decrease the required [Clock Gears] by $2"
@@ -756,15 +756,15 @@ r:"^當局每擊敗1個強敵陰影，暴擊效果提升(\d+(.\d+)?(%)?)$"="For 
 r:"^當局每擊敗1個強敵陰影，暴擊效果提升(.*)\（當前計數：(\d+)\）$"="For every defeated Strong Shadow, increase Crit DMG by $1 (Current count: $2)"
 
 寶劍·光明意志=Swords · Radiant Will
-r:"^當前「意志力」越高，所有角色造成最終傷害越高，(\d+)「意志力」時獲得最高最終傷害加成(\d+%)$"="The higher your [Will], the higher your Final DMG Dealt, up to $2 Final DMG Dealt at $1 [Will]"
+r:"^當前「意志力」越高，所有角色造成最終傷害越高，(\d+)「意志力」時獲得最高最終傷害加成(\d+%)$"="Increase Final DMG Dealt based on [Will], up to $2 Final DMG Dealt at $1 [Will]"
 寶劍·暗黑意志=Swords · Abyssal Will
-r:"^當前「意志力」越低，所有角色造成最終傷害越高，-(\d+)「意志力」時獲得最高最終傷害加成(\d+%)$"="The lower your [Will], the higher your Final DMG Dealt, up to $2 Final DMG Dealt at -$1 [Will]"
+r:"^當前「意志力」越低，所有角色造成最終傷害越高，-(\d+)「意志力」時獲得最高最終傷害加成(\d+%)$"="Increase Final DMG Dealt based on [Will], up to $2 Final DMG Dealt at -$1 [Will]"
 寶劍·全盛姿態=Swords · Prime Posture
-r:"^所有角色當前生命值越高，暴擊率越高，(\d+%)生命值時獲得最高暴擊率加成(\d+%)$"="The higher your HP, the higher your Crit Rate, up to $2 Crit Rate at $1 HP"
+r:"^所有角色當前生命值越高，暴擊率越高，(\d+%)生命值時獲得最高暴擊率加成(\d+%)$"="Increase Crit Rate based on HP, up to $2 Crit Rate at $1 HP"
 寶劍·背水一戰=Swords · Last Stand
-r:"^所有角色當前生命值越低，造成傷害越高，(\d+%)生命值時獲得最高傷害加成(\d+%)$"="The lower your HP, the higher your DMG Dealt, up to $2 DMG Dealt at $1 HP"
+r:"^所有角色當前生命值越低，造成傷害越高，(\d+%)生命值時獲得最高傷害加成(\d+%)$"="Increase DMG Dealt based on missing HP, up to $2 DMG Dealt at $1 HP"
 寶劍·緊急避險=Swords · Emergency Avoidance
-r:"^所有角色當前生命值越低，受到傷害越低，(\d+%)生命值時獲得最高傷害減免(\d+%)$"="The lower your HP, the lower your DMG Taken, up to $2 DMG RES at $1 HP"
+r:"^所有角色當前生命值越低，受到傷害越低，(\d+%)生命值時獲得最高傷害減免(\d+%)$"="Decrease DMG Taken based on missing HP, up to $2 DMG RES at $1 HP"
 寶劍·時間法則=Swords · Temporal Law
 r:"^當前每擁有(\d+)個「時鐘的齒輪」，使造成傷害提高(\d+%)$"="For every $1 [Clock Gears], increase DMG Dealt by $2"
 寶劍·拂曉光輝=Swords · Dawn Glory
@@ -843,6 +843,7 @@ r:"^所有敵人每次受到{{A}}，使後續受{{A}}傷害提升(\d+%)，可疊
 r:"^所有角色追加效果造成最終傷害提升(\d+(.\d+)?(%)?)$"="Increase all characters' Follow-Up Final DMG by $1"
 寶劍·傷口加深=Swords · Deepening Wound
 r:"^所有角色持續效果傷害提升(\d+(.\d+)?(%)?)$"="Increase all characters' Damage Over Time DMG by $1"
+r:"^所有角色持續傷害效果提升(\d+(.\d+)?(%)?)$"="Increase all characters' Damage Over Time Effect by $1"
 寶劍·雷霆一擊=Swords · Thunderous Strike
 r:"^處於額外回合時，所有角色造成傷害提升(\d+%)$"="Increase DMG Dealt during Extra Action by $1"
 寶劍·破綻追加=Swords · Additional Flaws
@@ -1007,6 +1008,7 @@ Justice
 r:"^透過「洗牌時間」獲取卡牌時，額外增加(\d+)個可選項$"="When choosing cards from [Shuffle Time], you have $1 additional card to choose from"
 倒懸者=Hanged Man
 r:"^所有角色持續效果傷害提升(\d+%)，使用{{A}}技能/追加效果/HIGHLIGHT/{{B}}造成傷害後，額外結算一次技能主目標的持續效果$"="Increase all characters' Damage Over Time DMG by $1, after dealing damage with {{A}} skill/Follow-Up/HIGHLIGHT/{{B}}, additionally trigger the main target's Damage Over Time"
+r:"^所有角色持續傷害效果提升(\d+%)，使用{{A}}技能/追加效果/HIGHLIGHT/{{B}}造成傷害後，額外結算一次技能主目標的持續效果$"="Increase all characters' Damage Over Time Effect by $1, after dealing damage with {{A}} skill/Follow-Up/HIGHLIGHT/{{B}}, additionally trigger the main target's Damage Over Time"
 Temperance
 r:"^探索樓層中，強敵陰影/稀有陰影出現機率大幅提升，強敵陰影/稀有陰影戰鬥消耗「意志力」減少(\d+)點，遊蕩陰影戰鬥消耗「意志力」增加(\d+)點$"="<size\=25>Heavily increase the chance of encountering Strong Shadow/Rare Shadow, decrease battle [Will] cost for Strong Shadow/Rare Shadow by $1, increase battle [Will] cost for Roaming Shadow by $2</size>"
 Devil

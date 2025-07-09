@@ -15,8 +15,8 @@ r:"^<color\=#FFC000>(\d+)時(\d+)分</color>後：$"="After <color\=#FFC000>$1h 
 r:"^<color\=#FFC000>(\d+)分</color>後：$"="After <color\=#FFC000>$1m</color>:"
 r:"^可用精神力將增加<color\=#FFC000>(\d+)點</color>     \(上限(\d+)\)$"="Increase Mental Energy by <color\=#FFC000>$1</color>"
 r:"^所有怪盜挑戰次數將增加<color\=#FFC000>(\d+)次</color>\(上限(\d+)\)$"="Increase Thieves Usage by <color\=#FFC000>$1</color>"
-
-r:"^試煉中挑戰「監測點」需要消耗精神力及怪盜挑戰次數。\n在每期挑戰開啟後：\n間隔(\d+)天增加，共增加(\d+)次。\n最終精力值上限：<color\=#FFC000>(\d+)</color>\n所有怪盜挑戰次數上限：<color\=#FFC000>(\d+)</color>$"="<size\=25>Each [Monitoring Points] consumes Mental Energy and Thieves Usage. \nIncrease every $1d, up to $2 times.\nMental Energy cap: <color\=#FFC000>$3</color>\nThieves Usage cap: <color\=#FFC000>$4</color></size>"
+r:"^試煉中挑戰「監測點」需要消耗精神力及怪盜挑戰次數。\n挑戰開啟後：每間隔(\d+)天增加。\n最終精力值上限：<color\=#FFC000>(\d+)</color>\n所有怪盜挑戰次數上限：<color\=#FFC000>(\d+)</color>$"="<size\=26>Each [Monitoring Points] spends Mental Energy and Thieves Usage. \nIncrease both every $1d.\nMental Energy cap: <color\=#FFC000>$2</color>\nThieves Usage cap: <color\=#FFC000>$3</color></size>"
+r:"^試煉中挑戰「監測點」需要消耗精神力及怪盜挑戰次數。\n在每期挑戰開啟後：\n間隔(\d+)天增加，共增加(\d+)次。\n最終精力值上限：<color\=#FFC000>(\d+)</color>\n所有怪盜挑戰次數上限：<color\=#FFC000>(\d+)</color>$"="<size\=25>Each [Monitoring Points] spends Mental Energy and Thieves Usage. \nIncrease every $1d, up to $2 times.\nMental Energy cap: <color\=#FFC000>$3</color>\nThieves Usage cap: <color\=#FFC000>$4</color></size>"
 
 建議：<color\=#ffc000>優先挑戰主線路</color>\n（挑戰難度較低，且獎勵更為豐厚。）\n「YES」將繼續挑戰當前支線監測點，\n是否確認？=Challenge this Monitoring Point?\nRecommendation: \n<color\=#ffc000>Prioritize the main path first</color>\n<size\=24>(Lower difficulty with more generous rewards)</size>
 
@@ -98,37 +98,37 @@ r:"^隊伍中編入(\d+)/(\d+)/(\d+)名<color\=#FFFC40>相同屬性</color>的�
 
 r:"^刀槍磁場(.*)$"="Sword Gun Magnetic Field $1"
 r:"^所有怪盜使用<color\=#FFFC40>普通攻擊/槍械攻擊</color>時，最終傷害提高(\d+(.\d+)?(%)?)$"="<size\=28>Increase all Thieves' Final DMG by $1 when dealing damage with <color\=#FFFC40>Melee Attack/Gun Attack</color></size>"
-r:"^追加磁場(.*)$"="Follow-Up Magnetic Field $1"
-r:"^所有隊員造成<color\=#FFFC40>追加效果</color>時，最終傷害提高(\d+(.\d+)?(%)?)$"="<size\=28>Increase all Thieves' Final DMG by $1 when dealing damage with <color\=#FFFC40>Follow-Up</color></size>"
+r:"^追加磁場(.*)$"="Resonance Magnetic Field $1"
+r:"^所有隊員造成<color\=#FFFC40>追加效果</color>時，最終傷害提高(\d+(.\d+)?(%)?)$"="<size\=28>Increase all Thieves' Final DMG by $1 when dealing damage with <color\=#FFFC40>Resonance</color></size>"
 r:"^持續磁場(.*)$"="<size\=20>Damage Over Time Magnetic Field $1</size>"
 r:"^所有隊員造成<color\=#FFFC40>持續傷害</color>時，最終傷害提高(\d+(.\d+)?(%)?)$"="<size\=28>Increase all Thieves' Final DMG by $1 when dealing damage with <color\=#FFFC40>Damage Over Time</color></size>"
 r:"^技巧磁場(.*)$"="TECHNICAL Magnetic Field $1"
 r:"^所有怪盜造成<color\=#FFFC40>TECHNICAL</color>時，最終傷害提高(\d+(.\d+)?(%)?)$"="<size\=28>Increase all Thieves' Final DMG by $1 when dealing damage with <color\=#FFFC40>TECHNICAL</color></size>"
 r:"^治療磁場(.*)$"="Healing Magnetic Field $1"
 r:"^治癒磁場(.*)$"="Healing Magnetic Field $1"
-r:"^所有怪盜<color\=#FFFC40>受到追加治療</color>後，最終傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="<size\=28>Increase all Thieves' Final DMG by $1 after receiving <color\=#FFFC40>Follow-Up Healing</color> for $2 turns, up to $3 stacks</size>"
+r:"^所有怪盜<color\=#FFFC40>受到追加治療</color>後，最終傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="<size\=28>Increase all Thieves' Final DMG by $1 after receiving <color\=#FFFC40>Resonance Healing</color> for $2 turns, up to $3 stacks</size>"
 r:"^護盾磁場(.*)$"="Shielding Magnetic Field $1"
-r:"^所有怪盜每次受到<color\=#FFFC40>護盾</color>後，最終傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="<size\=28>Increase all Thieves' Final DMG by $1 after receiving <color\=#FFFC40>Shield</color> for $2 turns, up to $3 stacks</size>"
+r:"^所有怪盜每次受到<color\=#FFFC40>護盾</color>後，最終傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="<size\=28>Increase all Thieves' Final DMG by $1 after gaining <color\=#FFFC40>Shield</color> for $2 turns, up to $3 stacks</size>"
 r:"^再動磁場(.*)$"="Extra Action Magnetic Field $1"
-r:"^所有怪盜處於<color\=#FFFC40>額外回合</color>時，最終傷害提高(\d+(.\d+)?(%)?)$"="<size\=28>Increase all Thieves' Final DMG by $1 during <color\=#FFFC40>Extra Action</color>"
+r:"^所有怪盜處於<color\=#FFFC40>額外回合</color>時，最終傷害提高(\d+(.\d+)?(%)?)$"="<size\=28>Increase all Thieves' Final DMG on <color\=#FFFC40>Extra Action</color> by $1"
 r:"^元素磁場(.*)$"="Elemental Magnetic Field $1"
-r:"^所有敵人每有一種<color\=#FFFC40>元素異常</color>狀態，受到最終傷害提升(\d+%)；同時擁有(\d+)種<color\=#FFFC40>元素異常</color>狀態時，額外使受到最終傷害提升(\d+%)$"="<size\=23>Increase all foes' Final DMG Taken by $1 for every <color\=#FFFC40>Elemental Ailments</color> they have; Additionally increase their Final DMG Taken by $3 when they have $2 <color\=#FFFC40>Elemental Ailments</color></size>"
+r:"^所有敵人每有一種<color\=#FFFC40>元素異常</color>狀態，受到最終傷害提升(\d+%)；同時擁有(\d+)種<color\=#FFFC40>元素異常</color>狀態時，額外使受到最終傷害提升(\d+%)$"="<size\=23>Increase foes' Final DMG Taken by $1 for every <color\=#FFFC40>Elemental Ailments</color> they have; Additionally increase their Final DMG Taken by $3 when they have $2 <color\=#FFFC40>Elemental Ailments</color></size>"
 r:"^控制磁場(.*)$"="Control Magnetic Field $1"
-r:"^敵人能受到大部分<color\=#FFFC40>精神異常</color>狀態；所有隊員造成<color\=#FFFC40>精神異常</color>狀態時，效果命中大幅提升；處於<color\=#FFFC40>精神異常</color>狀態的敵人受到最終傷害提升(\d+%)$"="foes are susceptible to most <color\=#FFFC40>Mental Ailments</color>; Heavily increase all Thieves' Ailment ACC when inflicting <color\=#FFFC40>Mental Ailments</color>; Increase the Final DMG Taken of foes with <color\=#FFFC40>Mental Ailments</color> by $1"
-r:"^效果1：敵人能受到大部分<color\=#FFFC40>精神異常/控制</color>狀態，所有隊員造成<color\=#FFFC40>精神異常/控制</color>狀態時，效果命中大幅提升\n效果2：處於<color\=#FFFC40>精神異常/控制</color>狀態的敵人受到最終傷害提升(\d+(.\d+)?(%)?)$"="<size\=24>Effect 1: foes are susceptible to most <color\=#FFFC40>Mental Ailments/Control Effects</color>; Heavily increase Ailment ACC when inflicting <color\=#FFFC40>Mental Ailments/Control Effects</color>\nEffect 2: Increase the Final DMG Taken of foes with <color\=#FFFC40>Mental Ailments/Control Effects</color> by $1</size>"
-敵人能受到大部分<color\=#FFFC40>精神異常/控制</color>狀態，所有隊員造成<color\=#FFFC40>精神異常/控制</color>狀態時，效果命中大幅提升=foes are susceptible to most <color\=#FFFC40>Mental Ailments/Control Effects</color>; Heavily increase Ailment ACC when inflicting <color\=#FFFC40>Mental Ailments/Control Effects</color>
-r:"^處於<color\=#FFFC40>精神異常/控制</color>狀態的敵人受到最終傷害提升(\d+%)$"="Increase the Final DMG Taken of foes with <color\=#FFFC40>Mental Ailments/Control Effects</color> by $1</size>"
+r:"^敵人能受到大部分<color\=#FFFC40>精神異常</color>狀態；所有隊員造成<color\=#FFFC40>精神異常</color>狀態時，效果命中大幅提升；處於<color\=#FFFC40>精神異常</color>狀態的敵人受到最終傷害提升(\d+%)$"="Foes are susceptible to most <color\=#FFFC40>Mental Ailments</color>; Heavily increase all Thieves' Ailment ACC when inflicting <color\=#FFFC40>Mental Ailments</color>; Increase Final DMG Taken for foes with <color\=#FFFC40>Mental Ailments</color> by $1"
+r:"^效果1：敵人能受到大部分<color\=#FFFC40>精神異常/控制</color>狀態，所有隊員造成<color\=#FFFC40>精神異常/控制</color>狀態時，效果命中大幅提升\n效果2：處於<color\=#FFFC40>精神異常/控制</color>狀態的敵人受到最終傷害提升(\d+(.\d+)?(%)?)$"="<size\=24>Effect 1: Foes are susceptible to most <color\=#FFFC40>Mental/Control Ailments</color>; \nHeavily increase Ailment ACC when inflicting <color\=#FFFC40>Mental/Control Ailments</color>\nEffect 2: Increase Final DMG Taken for foes with <color\=#FFFC40>Mental Ailments</color> by $1</size>"
+敵人能受到大部分<color\=#FFFC40>精神異常/控制</color>狀態，所有隊員造成<color\=#FFFC40>精神異常/控制</color>狀態時，效果命中大幅提升=Foes are susceptible to most <color\=#FFFC40>Mental/Control Ailments</color>; Heavily increase Ailment ACC when inflicting <color\=#FFFC40>Mental/Control Ailments</color>
+r:"^處於<color\=#FFFC40>精神異常/控制</color>狀態的敵人受到最終傷害提升(\d+%)$"="Increase the Final DMG Taken of foes with <color\=#FFFC40>Mental/Control Ailments</color> by $1</size>"
 r:"^倒地磁場(.*)$"="Down Magnetic Field $1"
-r:"^效果1：敵人受到<color\=#FFFC40>ONEMORE/{{A}}</color>傷害提高(\d+%)\n效果2：戰鬥開始及敵人回合開始時，敵人隨機獲得1種屬性弱點（只會存在最新獲得的弱點）$"="<size\=22>Effect 1: Increase all foes' <color\=#FFFC40>ONEMORE/{{A}}</color> DMG Taken by $1\nEffect 2: At the start of battle and start of foes' turn, all foes randomly gain 1 weakness \n(Only the newest weakness will stay).</size>"
-r:"^敵人受到<color\=#FFFC40>ONEMORE/{{A}}</color>傷害提高(\d+%)$"="Increase all foes' <color\=#FFFC40>ONEMORE/{{A}}</color> DMG Taken by $1"
-r:"^所有敵人處於<color\=#FFFC40>倒地狀態</color>時，受最終傷害提升(\d+%)$"="Increase all foes' Final DMG Taken by $1 when they are <color\=#FFFC40>Downed</color>"
-戰鬥開始及敵人回合開始時，敵人隨機獲得1種屬性弱點（只會存在最新獲得的弱點）=At the start of battle and start of foes' turn, all foes randomly gain 1 weakness (Only the newest weakness will stay).
+r:"^效果1：敵人受到<color\=#FFFC40>ONEMORE/{{A}}</color>傷害提高(\d+%)\n效果2：戰鬥開始及敵人回合開始時，敵人隨機獲得1種屬性弱點（只會存在最新獲得的弱點）$"="<size\=22>Effect 1: Increase foes' <color\=#FFFC40>ONE MORE/{{A}}</color> DMG Taken by $1\nEffect 2: At the start of battle and start of foes' turn, foes gain 1 random weakness\n(Only the newest weakness will stay)</size>"
+r:"^敵人受到<color\=#FFFC40>ONEMORE/{{A}}</color>傷害提高(\d+%)$"="Increase foes' <color\=#FFFC40>ONEM ORE/{{A}}</color> DMG Taken by $1"
+r:"^所有敵人處於<color\=#FFFC40>倒地狀態</color>時，受最終傷害提升(\d+%)$"="Increase foes' Final DMG Taken by $1 when they are <color\=#FFFC40>Downed</color>"
+戰鬥開始及敵人回合開始時，敵人隨機獲得1種屬性弱點（只會存在最新獲得的弱點）=At the start of battle and start of foes' turn, foes randomly gain 1 weakness (Only the newest weakness will stay).
 
 r:"^多重磁場(.*)$"="Mutli Magnetic Field $1"
 r:"^所有敵人每受到(\d+)次來自怪盜的傷害，使該名怪盜最終傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="<size\=25>After foes take $1 hit of damage from a Thief, increase that Thief's Final DMG by $2 for $3 turns, up to $4 stacks</size>"
 r:"^蓄力磁場(.*)$"="Charge Magnetic Field $1"
 r:"^所有隊員在某回合結束至下一回合結束期間，未造成傷害時，使自身最終傷害提升(\d+%)，持續(\d+)回合$"="<size\=28>Increase Thieves' Final DMG by $1 for $2 turn if they did not deal damage for 1 turn</size>"
-r:"^效果1：所有敵人最終生命值降低(\d+%)，每回合末回復(\d+%)最大生命值\n效果2：所有敵人當前生命值越低，受到最終傷害越高，低於(\d+%)生命值時最多使受到最終傷害提升(\d+%)$"="Modifier 1: Decrease the Final HP of all foes by $1, restore $2 Max HP at the end of each turn\nModifier 2: Increase the Final DMG of all foes the lower their HP are, up to $4 when they are below $3 HP"
+r:"^效果1：所有敵人最終生命值降低(\d+%)，每回合末回復(\d+%)最大生命值\n效果2：所有敵人當前生命值越低，受到最終傷害越高，低於(\d+%)生命值時最多使受到最終傷害提升(\d+%)$"="Modifier 1: Decrease the Final HP of foes by $1, restore $2 Max HP at the end of each turn\nModifier 2: Increase the Final DMG of foes the lower their HP are, up to $4 when they are below $3 HP"
 r:"^HL磁場(.*)$"="HIGHLIGHT Magnetic Field $1"
 r:"^HIGHLIGHT能量回復速度降低(\d+%)，所有怪盜HIGHLIGHT的最終傷害提高(\d+%)"="<size\=28>Decrease HIGHLIGHT Energy recovery rate by $1, increase all HIGHLIGHT Final DMG by $2</size>"
 r:"^HIGHLIGHT能量回復速度降低(\d+%)，所有怪盜<color\=#FFFC40>HIGHLIGHT</color>的最終傷害提高(\d+%)"="<size\=28>Increase all Thieves' <color\=#FFFC40>HIGHLIGHT</color> Final DMG by $2, decrease HIGHLIGHT Energy recovery rate by $1</size>"
@@ -136,7 +136,7 @@ r:"^神通磁場(.*)$"="Theurgy Magnetic Field $1"
 r:"^所有角色使用<color\=#FFFC40>{{A}}</color>後，最終傷害提高(\d+%)，持續(\d+)回合$"="<size\=28>Increase all Thieves' Final DMG by $1 after using <color\=#FFFC40>{{A}}</color> for $2 turns</size>"
 
 r:"^威壓磁場(.*)$"="Pressure Magnetic Field $1"
-r:"^首領每回合末使所有怪盜獲得1層<color\=#FFFC40>『威壓』</color>；『威壓』被驅散後，使所有敵人獲得1層『威壓』。\n『威壓』：受最終傷害提升(\d+%)，可疊加(\d+)層，持續(\d+)回合。$"="<size\=20>Boss will inflict all Thieves with 1 stack of <color\=#FFFC40>[Pressure]</color> at the end of each turn; When [Pressure] is dispelled, all foes gain 1 stack of [Pressure]\n[Pressure]: Increase Final DMG Taken by $1 for $3 turns, up to $2 stacks</size>"
+r:"^首領每回合末使所有怪盜獲得1層<color\=#FFFC40>『威壓』</color>；『威壓』被驅散後，使所有敵人獲得1層『威壓』。\n『威壓』：受最終傷害提升(\d+%)，可疊加(\d+)層，持續(\d+)回合。$"="<size\=20>Boss will inflict all Thieves with 1 stack of <color\=#FFFC40>[Pressure]</color> at the end of each turn; When [Pressure] is dispelled, foes gain 1 stack of [Pressure]\n[Pressure]: Increase Final DMG Taken by $1 for $3 turns, up to $2 stacks</size>"
 每回合末使所有怪盜獲得1層「威壓」=Inflict 1 [Pressure] at the end of each turn
 r:"^威<color\=#000000>壓</color>$"="P<color\=#000000>r</color>essure"
 
@@ -146,7 +146,7 @@ Combat Menu
 星盤庇護=Astrolabe Protection
 r:"^使用普通攻擊、槍械攻擊時最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1 \nwhen using Melee Attack/Gun Attack"
 r:"^造成TECHNICAL時，最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1 when dealing TECHNICAL"
-r:"^造成追加效果時，最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1 when dealing Follow-Up"
+r:"^造成追加效果時，最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1 when activating Resonance"
 r:"^HL能量回復速度降低(\d+%)，使用HL時，最終傷害提高(\d+%)$"="<size\=24>Decrease HIGHLIGHT Energy recovery rate by $1;\nIncrease Final DMG by $2 when using HIGHLIGHT</size>"
 r:"^同時擁有(\d+)種元素異常，受到最終傷害提高(\d+%)$"="Inflicted with $1 Elemental Ailments; \nIncrease Final DMG Taken by $2"
 r:"^每有(\d+)種元素異常，受到最終傷害提高(\d+%)，當前(\d+%)$"="For every $1 Elemental Ailment, \nincrease Final DMG Taken by $2; \nCurrently increase Final DMG Taken by $3"

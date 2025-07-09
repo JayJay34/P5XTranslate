@@ -242,6 +242,7 @@ No size on inherit skill names or else they won't work in the inherit menu
 瑪哈姆多翁=Mamudoon
 惡魔審判=Demonic Decree
 可以為我而死嗎=Die For Me!
+可以為我而死嗎？=Die For Me!
 惡意的烙印=Brand of Malice
 煉獄之翼=Abyssal Wings
 煉獄黑炎=Abyssal Flame
@@ -323,6 +324,7 @@ No size on inherit skill names or else they won't work in the inherit menu
 女巫詛咒=Debilitate
 音律侵擾=Temperament Disruption
 r:"^音律侵擾 Lv.(\d+)$"="<size\=23>Temperament Disruption Lv.$1</size>"
+毒絞回纏=Venomous Vortex
 
 --- Break Skills ---
 消除火焰耐性=Fire Break
@@ -354,11 +356,12 @@ r:"^音律侵擾 Lv.(\d+)$"="<size\=23>Temperament Disruption Lv.$1</size>"
 暗夜的閃光=Nocturnal Flash
 暈眩針=Dizzy Needle
 怒火加持=Anger Blessing
+深淵的波動=Abysmal Surge
 
 --- Passives ---
 
 // Skill Boosts
-r:"^攻擊強化(.*)$"="ATK Boost $1"
+r:"^攻擊強化(.*)$"="Attack Boost $1"
 r:"^物理強化(.*)$"="Phys Boost $1"
 r:"^精密射擊(.*)$"="Gun Boost $1"
 r:"^火焰強化(.*)$"="Fire Boost $1"
@@ -384,8 +387,8 @@ r:"^槍彈狂熱(.*)$"="Trigger Happy $1"
 r:"^護盾強化(.*)$"="Shield Boost $1"
 
 //Stat Boosts
-r:"^攻擊的心得(.*)$"="ATK Master $1"
-r:"^防禦的心得(.*)$"="DEF Master $1"
+r:"^攻擊的心得(.*)$"="Attack Master $1"
+r:"^防禦的心得(.*)$"="Defense Master $1"
 r:"^敏捷的心得(.*)$"="Agility Master $1"
 r:"^自動瑪哈塔爾卡(.*)$"="Auto-Mataru $1"
 r:"^自動瑪哈拉庫卡(.*)$"="Auto-Maraku $1"
@@ -848,6 +851,9 @@ r:"^(.*)耐性·防壁消除。$"="Negates $1 resistance and wall."
 
 Temperament Disruption
 r:"^使所有敵人的防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>，受到傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Decrease all foes' DEF by <color\=#fffc40>$1</color> and increase their DMG Taken by <color\=#fffc40>$2</color> for $3 turns."
+
+Venomous Vortex
+r:"^使1名敵人受到傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，並使目標獲得(\d+)層「蛇毒」，持續(\d+)回合，上限(\d+)層。「蛇毒」：每回合受到我方攻擊力最高的怪盜<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害\（最多計入WONDER攻擊力的(\d+%)\）。$"="Increase 1 foe's DMG Taken by <color\=#fffc40>$1</color>. Inflict the target with $2 [Venom] stack for $3 turns. Stacks up to $4 times. [Venom]: Take Curse damage equal to <color\=#fffc40>$5</color> of the highest ATK Thief's ATK, up to $6 of Wonder's ATK."
 
 --- Dispel ---
 驅散所有同伴的1個屬性降低效果。=Remove 1 stat debuff from all allies.
