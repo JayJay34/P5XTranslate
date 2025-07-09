@@ -636,6 +636,9 @@ Lilith
 r:"^暝夜的誘惑(.*)$"="Midnight Seduction $1"
 r:"^攻擊力提升(\d+\.\d+%)。使用冰凍、疾風或詛咒屬性的技能，使自身該屬性傷害提升(.*)，傷害減免(.*)，持續(.*)回合。{{A}}使用冰凍、疾風或詛咒屬性的技能，進化固有技能，使之附帶一段相同屬性的傷害，並且這次技能傷害大幅提升、獲得臨時穿透加成(.*)。$"="<size\=24>Increase ATK by $1. When using Ice, Wind, or Curse skill, increase that Elemental DMG by $2 and DMG RES by $3 for $4 turns. When {{A}} uses Ice, Wind, or Curse skill, evolves the signature skill, makes it deal 1 hit of that element's damage, heavily increases skill damage and gains $5 PEN.</size>"
 
+Trumpeter
+r:"^崩壞的號角(.*)$"="Horn of Ruin $1"
+
 --------
 RANK 8
 --------
@@ -644,6 +647,14 @@ r:"^連勝的宿命(.*)$"="Destined Streak $1"
 r:"^暴擊效果提升(\d+\.\d+%)。戰鬥開始，獲得「奇襲」(\d+)層。固有技能造成每段傷害有(\d+%)機率獲得「奇襲」，每段提升自身攻擊力(\d+%)，持續(\d+)回合，最多(\d+)層。達到(\d+)層，提升固有技能暴擊率(\d+%)。$"="<size\=21>Increase Crit DMG by $1. At the start of battle, gain $2 stacks of [Ambush]. When using the signature skill there is a $3 chance to gain [Ambush], each stack increases own ATK by $4 for $5 turns, up to $6 stacks. Increase the Crit Rate of the signature skill by $8 when reaching $7 stacks.</size>"
 奇襲=Ambush
 r:"^攻擊力提升(\d+%)，達到(\d+)層提升固有技能暴擊率$"="Increase ATK by $1, increase the Crit Rate of Hassou Tobi when reaching $2 stacks"
+
+Vasuki
+r:"^連接天地的絞索(.*)$"="Coiling Clasp $1"
+r:"^效果命中提升(\d+\.\d+%)。戰鬥開始時獲得(\d+)層「凝視」，友方同伴釋放技能加入負面效果時，自身獲得(\d+)層「凝視」，上限(\d+)層。\（每個同伴每回合最多增加(\d+)層「凝視」）。自身釋放{{A}}技能時，若擁有(\d+)層「凝視」，則消耗(\d+)層「凝視」，使技能主目標受到持續傷害效果提升(\d+%)。$"="Increase Ailment ACC by $1. Gain $2 [Gaze] stacks at the start of battle, when allies inflict a debuff with skills, gain $3 [Gaze] stack. Stacks up to $4 times. Each ally can give $5 [Gaze] stack per turn. When using a {{A}} skill, if user has $6 [Gaze] stacks, spend $7 [Gaze] stacks to increase the main target's Damage Over Time Taken by $8."
+r:"^效果命中提升(\d+\.\d+%)。戰鬥開始時獲得(\d+)層「凝視」，友方同伴釋放技能加入負面效果時，自身獲得(\d+)層「凝視」，上限(\d+)層。\（每個同伴每回合最多增加(\d+)層「凝視」）。自身釋放{{A}}技能時，若擁有(\d+)層「凝視」，則消耗(\d+)層「凝視」，使技能主目標受到持續傷害效果提升(\d+%)，並額外使其獲得(\d+)層「蛇毒」。$"="Increase Ailment ACC by $1. Gain $2 [Gaze] stacks at the start of battle, when allies inflict a debuff with skills, gain $3 [Gaze] stack. Stacks up to $4 times. Each ally can give $5 [Gaze] stack per turn. When using a {{A}} skill, if user has $6 [Gaze] stacks, spend $7 [Gaze] stacks to increase the main target's Damage Over Time Taken by $8. Also, inflict $9 [Venom] stack."
+凝視=Gaze
+蛇毒=Venom
+r:"^蛇<color\=#000000>毒</color>$"="V<color\=#000000>e</color>nom"
 
 Zaou-Gongen
 r:"^三世救度(.*)$"="<size\=28>Three Ages' Salvation $1</size>"
