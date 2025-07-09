@@ -11,8 +11,8 @@ Skill Level up Description //
 使用近戰武器，對1名敵人造成物理屬性的少量傷害=Deal light Phys damage to 1 foe
 使用近戰武器，對1名敵人造成物理屬性的少量傷害。=Deal light Phys damage to 1 foe.
 
-槍械射擊=Gun ATK
-槍械攻擊=Gun ATK
+槍械射擊=Gun Attack
+槍械攻擊=Gun Attack
 r:"^1層$"="<size\=18> stack</size>"
 r:"^(\d+)層$"="<size\=18>$1 stacks</size>"
 
@@ -20,12 +20,12 @@ r:"^(\d+)層$"="<size\=18>$1 stacks</size>"
 子彈數：=Ammo:
 命中率：=Accuracy:
 基礎暴擊率：=Base Crit Rate:
-使用槍械射擊1名敵人，造成小幅射擊傷害，根據子彈數量可以射擊多次。=Uses a gun to shoot 1 foe. dealing light Gun damage, can shoot multiple times based on ammo.
-使用槍械射擊1名敵人，造成少量射擊屬性傷害，根據子彈數量可以射擊多次。=Uses a gun to shoot 1 foe. dealing light Gun damage, can shoot multiple times based on ammo.
-使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。=Uses a gun to shoot 1 foe. dealing Gun damage, can shoot multiple times based on ammo.
-r:"^使用槍械射擊1名敵人，每次向1名敵人射擊(\d+)發，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="Uses a gun to shoot 1 foe. dealing $1 hits of Gun damage to 1 foe, can shoot multiple times based on ammo."
-r:"^使用槍械射擊1名敵人，每次向隨機敵人射擊(\d+)發，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="Uses a gun to shoot 1 foe. dealing $1 hits of Gun damage randomly, can shoot multiple times based on ammo."
-r:"^使用槍械射擊1名敵人，造成(\d+)次射擊屬性傷害，子彈可能會發生偏移。對同一目標造成傷害會衰減。$"="Uses a gun to shoot 1 foe. dealing $1 hits of Gun damage, the bullets can miss and deals less damage to the same target."
+使用槍械射擊1名敵人，造成小幅射擊傷害，根據子彈數量可以射擊多次。=Deal light Gun damage to 1 foe. Can fire until out of ammo.
+使用槍械射擊1名敵人，造成少量射擊屬性傷害，根據子彈數量可以射擊多次。=Deal light Gun damage to 1 foe. Can fire until out of ammo.
+使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。=Deal Gun damage to 1 foe. Can fire until out of ammo.
+r:"^使用槍械射擊1名敵人，每次向1名敵人射擊(\d+)發，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="Deal Gun damage to 1 foe $1 times. Can fire until out of ammo."
+r:"^使用槍械射擊1名敵人，每次向隨機敵人射擊(\d+)發，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="Deal Gun damage to random foes $1 times. Can fire until out of ammo."
+r:"^使用槍械射擊1名敵人，造成(\d+)次射擊屬性傷害，子彈可能會發生偏移。對同一目標造成傷害會衰減。$"="Deal Gun damage to 1 foe $1 times. Consecutive attacks against the same foe will deal decreased damage. Shots may hit foes besides the intended target."
 
 r:"^剩餘次數：(\d+)/(\d+)$"="Use Limit: $1/$2"
 
@@ -628,6 +628,9 @@ Elec Break
 Temperament Disruption
 r:"^使<color\=#FFFF00>所有</color>敵人的防禦力降低(\d+\.\d+%)，受到傷害提升(\d+\.\d+%)，持續(\d+)回合。$"="Decrease <color\=#FFFF00>all</color> foes' DEF by $1 and increase their DMG Taken by $2 for $3 turns."
 
+Venomous Vortex
+r:"^使<color\=#FFFF00>1名</color>敵人受到傷害提升(\d+\.\d+%)，並使目標獲得(\d+)層「蛇毒」，持續(\d+)回合，上限(\d+)層。「蛇毒」：每回合受到我方攻擊力最高的怪盜(\d+\.\d+%)攻擊力的詛咒屬性傷害\（最多計入WONDER攻擊力的(\d+%)\）。$"="Increase <color\=#FFFF00>1</color> foe's DMG Taken by $1. Inflict the target with $2 [Venom] stack for $3 turns. Stacks up to $4 times. [Venom]: Take Curse damage equal to $5 of the highest ATK Thief's ATK, up to $6 of Wonder's ATK."
+
 --- Dispel ---
 驅散<color\=#FFFF00>所有</color>同伴的1個屬性降低效果。=Negates 1 stat reducing effect for <color\=#FFFF00>all</color> allies.
 驅散<color\=#FFFF00>所有</color>敵人的1個屬性提升效果。=Negates 1 stat increasing effect for <color\=#FFFF00>all</color> foes.
@@ -736,8 +739,11 @@ sr:"^<color\=#FF0000>(.*)</color>失去了「(.*)」……$"="<color\=#FF0000>$1
 sr:"^成功驅散掉了(\d+)層<color\=#FF0000>『(.*)』</color>！$"="Dispelled $1 stack of <color\=#FF0000>[$2]</color>!"
 sr:"^召喚消耗(\d+)層<color\=#FF0000>『(.*)』</color>$"="Summon consumed $1 stack of <color\=#FF0000>[$2]</color>"
 
+r:"^被<color\=#FF0000>{{A}}</color>鎖定了$"="Locked on by <color\=#FF0000>{{A}}</color>!"
 sr:"^<color\=#FF0000>(.*)</color>被鎖定……$"="<color\=#FF0000>$1</color> locked on by foe..."
+sr:"^<color\=#FF0000>(.*)</color>進入了狂怒狀態！$"="<color\=#FF0000>$1</color> entered Frenzy!"
 sr:"^<color\=#FF0000>(.*)</color>進入了狂暴狀態……$"="<color\=#FF0000>$1</color> entered Frenzy..."
+sr:"^<color\=#FF0000>(.*)</color>進入了懊惱狀態……$"="<color\=#FF0000>$1</color> entered Frustration..."
 sr:"^<color\=#FF0000>(.*)</color>進入「(.*)」……$"="<color\=#FF0000>$1</color> entered [$2]..."
 sr:"^<color\=#FF0000>(.*)</color>進入「(.*)」狀態……$"="<color\=#FF0000>$1</color> entered [$2]..."
 sr:"^<color\=#FF0000>(.*)</color>進入了「(.*)」狀態……$"="<color\=#FF0000>$1</color> entered [$2]..."
@@ -918,6 +924,7 @@ r:"^受<color\=#000000>傷</color>害提升$"="D<color\=#000000>M</color>G Taken
 r:"^受<color\=#000000>到</color>傷害提升$"="D<color\=#000000>M</color>G Taken Up"
 r:"^受<color\=#000000>最</color>終傷害提高$"="F<color\=#000000>i</color>nal DMG Taken Up"
 r:"^受<color\=#000000>到</color>最終傷害提高$"="F<color\=#000000>i</color>nal DMG Taken Up"
+r:"^受<color\=#000000>到</color>最終傷害提升$"="F<color\=#000000>i</color>nal DMG Taken Up"
 r:"^傷<color\=#000000>害</color>降低$"="D<color\=#000000>M</color>G Down"
 r:"^傷<color\=#000000>害</color>弱化$"="D<color\=#000000>M</color>G Nerf"
 r:"^受<color\=#000000>物</color>理傷害提高$"="P<color\=#000000>h</color>ys DMG Taken Up"
@@ -1003,6 +1010,7 @@ HIGHLIGHT傷害提升=Increase HIGHLIGHT DMG
 受到基於自身最大生命值百分比的傷害特大幅降低=Severely decrease Percentage DMG Taken
 受到基於自身最大生命值百分比的傷害極大幅降低=Severely decrease Percentage DMG Taken
 受到最終傷害提高=Increase Final DMG Taken
+受到最終傷害降低=Dcrease Final DMG Taken
 最終傷害減免=Increase Final DMG RES
 火焰傷害提升=Increase Fire DMG
 火焰傷害提高=Increase Fire DMG
@@ -1160,10 +1168,11 @@ r:"^下一技能傷害提升(\d+(.\d+)?(%)?)$"="Increase your next Skill DMG by 
 r:"^下1個技能造成的傷害提升$"="Increase the DMG Dealt of your next skill"
 r:"^下次造成的物理傷害提升$"="Increase your next Physical ATK damage"
 r:"^下次造成的魔法傷害提升$"="Increase your next Magic ATK damage"
-r:"^普通攻擊、槍械攻擊傷害提升(\d+(.\d+)?(%)?)$"="<size\=26>Increase Melee ATK/Gun ATK DMG by $1</size>"
+r:"^普通攻擊、槍械攻擊傷害提升(\d+(.\d+)?(%)?)$"="<size\=26>Increase Melee Attack/Gun Attack DMG by $1</size>"
 r:"^追加效果暴擊效果提升(\d+%)、攻擊力提升(\d+%)$"="Increase Follow-Up Crit DMG by $1 and Follow-Up ATK by $2"
 r:"^追加效果的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow-Up Final DMG by $1"
 r:"^追加效果造成最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow-Up Final DMG by $1"
+r:"^追加效果造成的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow-Up Final DMG by $1"
 r:"^HIGHLIGHT造成的傷害提升(\d+(.\d+)?(%)?)$"="Increase HIGHLIGHT DMG Dealt by $1"
 r:"^使用HL時，造成傷害提高(\d+(.\d+)?(%)?)$"="Increase HIGHLIGHT DMG Dealt by $1"
 r:"^HIGHLIGHT技能的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase HIGHLIGHT Final DMG by $1"
@@ -1270,6 +1279,7 @@ r:"^受到的傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Taken by $1"
 r:"^詛咒反噬達到(\d+)層，受HIGHLIGHT傷害提升(\d+%)$"="Reached $1 stacks of Curse Reversal; \nIncrease HIGHLIGHT DMG Taken by $2"
 r:"^受到追擊傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow-Up DMG Taken by $1"
 r:"^受到持續傷害增加(\d+(.\d+)?(%)?)$"="Increase Damage Over Time Taken by $1"
+r:"^受到持續傷害效果提升(\d+(.\d+)?(%)?)$"="Increase Damage Over Time Effect Taken by $1"
 r:"^受到最終傷害提升(\d+%)，最終傷害降低(\d+%)$"="Increase Final DMG Taken by $1; \nDecrease Final DMG by $2"
 r:"^受到最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG Taken by $1"
 r:"^受到最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG Taken by $1"
