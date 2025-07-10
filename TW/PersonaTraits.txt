@@ -638,6 +638,7 @@ r:"^攻擊力提升(\d+\.\d+%)。使用冰凍、疾風或詛咒屬性的技能�
 
 Trumpeter
 r:"^崩壞的號角(.*)$"="Horn of Ruin $1"
+r:"^效果命中提升(\d+\.\d+%)。自身對敵方使用{{A}}技能時，若技能目標的異常效果數量≥(.*)個，則使自身效果命中提升(.*)，並使敵人受到傷害提升(.*)，持續(.*)回合。自身成功添加精神異常效果後，額外使所有敵人防禦力降低(.*)，持續(.*)回合。$"="Increase Ailment ACC by $1. When using a {{A}} skill on foes, if the target has ≥$2 debuffs, increase user's Ailment ACC by $3 and increase foes' DMG Taken by $4. Lasts for $5 turns. After inflicting a Mental Ailment, decrease foes' DEF by $6 more. Last for $7 turns."
 
 --------
 RANK 8
@@ -650,10 +651,12 @@ r:"^攻擊力提升(\d+%)，達到(\d+)層提升固有技能暴擊率$"="Increas
 
 Vasuki
 r:"^連接天地的絞索(.*)$"="Coiling Clasp $1"
-r:"^效果命中提升(\d+\.\d+%)。戰鬥開始時獲得(\d+)層「凝視」，友方同伴釋放技能加入負面效果時，自身獲得(\d+)層「凝視」，上限(\d+)層。\（每個同伴每回合最多增加(\d+)層「凝視」）。自身釋放{{A}}技能時，若擁有(\d+)層「凝視」，則消耗(\d+)層「凝視」，使技能主目標受到持續傷害效果提升(\d+%)。$"="Increase Ailment ACC by $1. Gain $2 [Gaze] stacks at the start of battle, when allies inflict a debuff with skills, gain $3 [Gaze] stack. Stacks up to $4 times. Each ally can give $5 [Gaze] stack per turn. When using a {{A}} skill, if user has $6 [Gaze] stacks, spend $7 [Gaze] stacks to increase the main target's Damage Over Time Taken by $8."
-r:"^效果命中提升(\d+\.\d+%)。戰鬥開始時獲得(\d+)層「凝視」，友方同伴釋放技能加入負面效果時，自身獲得(\d+)層「凝視」，上限(\d+)層。\（每個同伴每回合最多增加(\d+)層「凝視」）。自身釋放{{A}}技能時，若擁有(\d+)層「凝視」，則消耗(\d+)層「凝視」，使技能主目標受到持續傷害效果提升(\d+%)，並額外使其獲得(\d+)層「蛇毒」。$"="Increase Ailment ACC by $1. Gain $2 [Gaze] stacks at the start of battle, when allies inflict a debuff with skills, gain $3 [Gaze] stack. Stacks up to $4 times. Each ally can give $5 [Gaze] stack per turn. When using a {{A}} skill, if user has $6 [Gaze] stacks, spend $7 [Gaze] stacks to increase the main target's Damage Over Time Taken by $8. Also, inflict $9 [Venom] stack."
+r:"^效果命中提升(\d+\.\d+%)。戰鬥開始時獲得(\d+)層「凝視」，友方同伴釋放技能添加負面效果時，自身獲得(\d+)層「凝視」，上限(\d+)層。\（每個同伴每回合最多添加(\d+)層「凝視」\）。自身釋放{{A}}技能時，若擁有(\d+)層「凝視」，則消耗(\d+)層「凝視」，使技能主目標受到持續傷害效果提升(\d+%)。$"="<size\=22>Increase Ailment ACC by $1. Gain $2 [Gaze] stacks at the start of battle, when allies inflict a debuff with skills, gain $3 [Gaze] stack. Stacks up to $4 times. Each ally can give $5 [Gaze] stack per turn. When using a {{A}} skill, if user has $6 [Gaze] stacks, spend $7 [Gaze] stacks to increase the main target's Damage Over Time Taken by $8.</size>"
+r:"^效果命中提升(\d+\.\d+%)。戰鬥開始時獲得(\d+)層「凝視」，友方同伴釋放技能添加負面效果時，自身獲得(\d+)層「凝視」，上限(\d+)層。\（每個同伴每回合最多添加(\d+)層「凝視」\）。自身釋放{{A}}技能時，若擁有(\d+)層「凝視」，則消耗(\d+)層「凝視」，使技能主目標受到持續傷害效果提升(\d+%)，並額外使其獲得(\d+)層「蛇毒」。$"="<size\=22>Increase Ailment ACC by $1. Gain $2 [Gaze] stacks at the start of battle, when allies inflict a debuff with skills, gain $3 [Gaze] stack. Stacks up to $4 times. Each ally can give $5 [Gaze] stack per turn. When using a {{A}} skill, if user has $6 [Gaze] stacks, spend $7 [Gaze] stacks to increase the main target's Damage Over Time Taken by $8. Also, inflict $9 [Venom] stack.</size>"
 凝視=Gaze
 蛇毒=Venom
+r:"^(\d+)層時釋放技能觸發額外效果$"="Activate additional effects when using a skill at $1 stacks"
+r:"^凝<color\=#000000>視</color>$"="G<color\=#000000>a</color>ze"
 r:"^蛇<color\=#000000>毒</color>$"="V<color\=#000000>e</color>nom"
 
 Zaou-Gongen
