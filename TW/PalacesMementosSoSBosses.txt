@@ -484,17 +484,27 @@ r:"^這個設備……寫的是(\d+)號，電動機$"="This device... It's sayin
 ----------
 PALACE 5
 ----------
+蟻穴·入口=Anthill Entrance
 蟻穴入口=Anthill Entrance
 密林=Forest
 正門前=<size\=27>Main Entrance</size>
 側門=Side Entrance
 蟻穴=Anthill
+蟻穴·底層=Anthill·Bottom
 陰影聚集地=<size\=17>Shadows' Convergence</size>
 正門大廳=<size\=20>Main Entrance Hall</size>
+貧民窟=Slum
 貧民窟入口=<size\=27>Slum Entrance</size>
 貧民窟B1=Slum B1
 貧民窟B2=Slum B2
 覲見室=<size\=20>Audience Chamber</size>
+雜誌社=Magazine Office
+辦公區入口=<size\=26>Office Entrance</size>
+辦公區下層=Lower Office
+辦公區上層=Upper Office
+印刷區下層=<size\=18>Lower Printing Area</size>
+印刷區上層=<size\=18>Upper Printing Area</size>
+演唱會大廳=Concert Hall
 
 尋找覲見室=Find the Audience Chamber
 尋找螞蟻的去向=Find where the ant goes
@@ -504,12 +514,106 @@ PALACE 5
 注入費洛蒙=Infuse pheromones
 清除荊棘=Clear thorns
 變成螞蟻進入隧道=Transform into ants and enter the tunnel
+找到通往上層的路=Find a path to the upper level
+打開道路=Open the path
+找工蟻清理雜物=Find worker ants to clean up the mess
+調查上層區域=Investigate the upper area
+關閉變身噴霧=Disable the spray
+凍結並破壞牆面=Freeze then destroy the wall
+釋放凍氣=Release chill
+尋找資格證=Find the qualification certificate
+遞交資格證=Hand over the qualification certificate
+凍結地面=Freeze the floor
+前往演唱會大廳=Go to the Concert Hall
+尋找樣稿=Find the draft
+停下閘門=Stop the gate
+去印刷室製作試印本=Go to the Printing Room to make a trial print
+操作切紙機=Operate the paper cutting machine
+前往印刷間=Go to the Printing Room
+操作印刷機=Operate the printing machine
+前往裝訂間=Go to the Binding Room
+操作裝訂機=Operate the binding machine
+與和藹的兵蟻對話=Talk to the kind soldier ant
+找尋演唱會門票=Find the concert ticket
+在門後的區域尋找門票=Find the tickets in the area after the door
+遞交演唱會門票=Hand over the concert ticket
+演唱會門票=Concert Ticket
 
 「<color\=#ff3b37>鑽開</color>」前進的道路=[<color\=#ff3b37>Drill</color>] the path forward
 開啟「<color\=#ff3b37>射擊模式</color>」=Open [<color\=#ff3b37>Shooting Mode</color>]
 當前狀態無法進入射擊模式=Cannot enter Shooting Mode
 透過「鍵盤<>鍵」<color\=#ff3b37>切換子彈</color>=<color\=#ff3b37>Switch ammo</color> with [<>]
 唔~當前種類的子彈好像沒有效果。=Hmm～ The current ammo seems to have no effect.
+
+r:"^煩<color\=#ff0000ff>躁</color>的兵蟻$"="I<color\=#ff0000ff>r</color>ritable Soldier Ant"
+r:"^顏<color\=#ff0000ff>料</color>間的守衛$"="G<color\=#ff0000ff>u</color>ard Near Paint"
+r:"^盛<color\=#ff0000ff>氣</color>淩人的兵蟻$"="A<color\=#ff0000ff>r</color>rogant Soldier Ant"
+r:"^慵<color\=#ff0000ff>懶</color>的守衛$"="L<color\=#ff0000ff>a</color>zy Guard"
+r:"^和<color\=#ff0000ff>藹</color>的兵蟻$"="K<color\=#ff0000ff>i</color>nd Soldier Ant"
+r:"^目<color\=#ff0000ff>光</color>銳利的兵蟻$"="S<color\=#ff0000ff>h</color>arp Soldier Ant"
+
+連接成功=<size\=24>Connection success</size>
+未連接=<size\=24>Not connected</size>
+重置=<size\=24>Reset</size>
+紙卷=<size\=24>Paper roll</size>
+「<color\=#c51e03>紙卷</color>」為印刷工序的原材料，只能連入「<color\=#c51e03>切紙機</color>」=[<color\=#c51e03>Paper roll</color>] can only connect to [<color\=#c51e03>paper cutter</color>] for input
+紙張=Paper
+「<color\=#c51e03>紙張</color>」為完全加工好的紙，需要「<color\=#c51e03>裝訂機</color>」按照<color\=#c51e03>順序</color>連接，才能成為一本好的雜誌。=[<color\=#c51e03>Paper</color>] need to be connected <color\=#c51e03>request order</color>.
+切紙機=<size\=24>Paper cutter</size>
+「<color\=#c51e03>切紙機</color>」的職責是把紙卷加工成印刷使用的紙張，可以連入「<color\=#c51e03>油墨桶</color>」，連出「<color\=#c51e03>印表機</color>」。=[<color\=#c51e03>Paper cutter</color>] can connected to [<color\=#c51e03>ink barrel</color>] for input and [<color\=#c51e03>printer</color>] for output
+裝訂機=<size\=24>Binder machine</size>
+「<color\=#c51e03>裝訂機</color>」負責串聯各種顏色的「<color\=#c51e03>紙張</color>」，裝訂工序中，所有連線必須從「<color\=#c51e03>裝訂機</color>」出發。=During binding, all connections must start at the [<color\=#c51e03>binder machine</color>].
+[<color\=#c51e03>Paper</color>]For fully processed paper, you need "<color\=#c51e03><size\=24>Binder machine</size></color>"according to<color\=#c51e03>Sequence</color>Only by connecting can it become a good magazine.
+油墨桶=<size\=24>Ink barrel</size>
+「<color\=#c51e03>油墨桶</color>」提供「<color\=#c51e03>印表機</color>」需要的各種顏色的顏料，只能連入「<color\=#c51e03>印表機</color>」=[<color\=#c51e03>Ink barrel</color> can only connect to [<color\=#c51e03>printer</color>] for input
+印表機=Printer
+「<color\=#c51e03>印表機</color>」用來印刷{{A}}詆毀其他男性的醜聞雜誌，可以同時連入「<color\=#c51e03>油墨桶</color>」和「<color\=#c51e03>切紙機</color>」。=[<color\=#c51e03>Printer</color>] can connect to [<color\=#c51e03>ink barrel</color>] and [<color\=#c51e03>paper cutter</color>] for input
+印表機只允許連入連線，不能連出連線。=The printer only allows input, not output.
+設備無法連入更多連線=Equipment cannot connect to more connections.
+這兩個設備不符合連線規則，不能連線。=Cannot connect these two devices.
+連線必須與「<color\=#ff0000>裝訂機</color>」連接=Connection must be with the [<color\=#ff0000><size\=24>binder machine</size></color>]
+
+好複雜的操作介面啊，該從哪裡入手呢？=What a complicated operating interface. \nWhere should we start?
+中央是合成線路的「<color\=#ff3b37>操作區域</color>」=The center is the [<color\=#ff3b37>operation area</color>] of ​​the synthesis route
+這裡顯示「<color\=#ff3b37>提示訊息</color>」=[<color\=#ff3b37>Tips</color>] are shown here
+這裡顯示「<color\=#ff3b37>印刷需求</color>」=[<color\=#ff3b37>Printing Request</color>] are shown here
+「<color\=#ff3b37>重置</color>」返回初始狀態=Click here to [<color\=#ff3b37>Reset</color>]
+當前進行的是<color\=#ff0000>印刷</color>工序，\n需要將油墨桶和紙卷送入印表機。=The current <color\=#ff0000>printing</color> process requires feeding ink buckets and paper rolls into the printer.
+右側的合成線路顯示了<color\=#ff0000>連接規則</color>。=The synthesis route on the right shows the <color\=#ff0000>connection rules</color>.
+左側面板有<color\=#ff0000>提示</color>和<color\=#ff0000>印刷需求</color>。=The left panel has <color\=#ff0000>tips</color> and <color\=#ff0000>printing request</color>.
+只有按照我們的要求連接，才算完成。=You're done when the connection is made according to our requirements.
+點擊這些元件的圖示可以查看它們的功能。=Click on the icons of these components to view their functions.
+好了，趕緊試一試吧。=Alright, try it out.
+新人培訓結束了。\n你們抓緊完成任務吧，可不許偷懶！=The new employee training is over. Hurry up and complete your tasks, don't be lazy!
+{{A}}？怎麼又要來一次？={{A}}? This again?
+別抱怨了，這可是在為{{A}}工作。=Don't complain, this is working for {{A}}.
+這一次還是<color\=#ff0000>印刷</color>的工序。=This time it's the <color\=#ff0000>printing</color> process.
+不過需要注意，<color\=#ff0000>線路不能交叉</color>。=Please note that the <color\=#ff0000>routes cannot cross</color>.
+操作介面好像出現了不同的顏色？=The operating interface now has different colors?
+「<color\=#ff3b37>元件</color>」帶有不同的顏色=[<color\=#ff3b37>Component</color>] have different colors
+該油墨桶為「<color\=#19924f>綠色</color>」=This ink barrel is [<color\=#19924f>green</color>]
+注意分辨印刷<color\=#ff3b37>需求的顏色</color>=Pay attention to printing [<color\=#ff3b37>color request</color>]
+因為要連接印刷用的彩色油墨。=Because it is necessary to connect color inks for printing.
+紅色的元件和綠色的元件為<color\=#ff0000>油墨桶</color>。=Red and green components are <color\=#ff0000>ink barrels</color>.
+將它們連入印表機就算任務完成了！=Connect them to a printer and you're done!
+看來，這次是要將這些<color\=#ff0000>組合</color>起來？=Seems that this time we are going to <color\=#ff0000>combine</color> these together?
+看上去很簡單，我們試試吧，隊長。=This looks simple, let's try it, leader.
+裝訂流水線時，\n只能從「<color\=#ff3b37>裝訂機</color>」開始連線=Can only start routing from the [<color\=#ff3b37>binder machine</size></color>]
+你們當前正在操作的是<color\=#ff0000>裝訂</color>工序。=You are currently operating the <color\=#ff0000>binding</color> process.
+「<color\=#ff3b37>裝訂機</color>」需要連接「<color\=#ff3b37>紙張</color>」=[<color\=#ff3b37>Binder machine</color>] needs to connect to [<color\=#ff3b37>paper</color>]
+注意當前任務要求的「<color\=#ff0000>順序</color>」=Pay attention to the [<color\=#ff0000>request order</color>]
+需要按照<color\=#ff0000>印刷需求</color>，\n將各種顏色的紙按順序裝訂起來。=Paper of various colors needs to be bound in order according to <color\=#ff0000>printing requests</color>.
+注意啊！一定要按照要求的<color\=#ff0000>順序</color>完成。=Pay attention! Follow the <color\=#ff0000>request order</color>.
+按照<color\=#ff0000>順序</color>完成對吧？沒問題！=Just follow the <color\=#ff0000>request order</color>? No problem!
+竟然還有嗎！？=There's more!?
+這是最後一次拜託你們了。=This is the last time I'll ask you.
+
+使用拖動的方式連接，將紙卷送入切紙機，再送入印表機，=<size\=20>Drag to connect, feed the paper roll into the paper cutter, and then into the printer.</size>
+傳送帶不可交叉，小心規劃路線。=<size\=20>Conveyor belts cannot cross, plan your route carefully.</size>
+<color\=#c51e03>紅</color><color\=#19924f>綠</color>油墨桶送入印表機=<size\=20>Connect <color\=#c51e03>red</color> and <color\=#19924f>green</color> ink barrel to the printer</size>
+兩卷紙卷送入印表機，<color\=#c51e03>紅</color><color\=#19924f>綠</color>油墨桶送入印表機=<size\=20>Connect two paper rolls to the printer, connect <color\=#c51e03>red</color> and <color\=#19924f>green</color> ink barrels to the printer</size>
+按照「<color\=#c51e03>印刷需求</color>」的順序依次連入紙張。=<size\=20>Connect papers in the order of [<color\=#c51e03>printing request</color>].</size>
+順序連入:<color\=#c51e03>紅</color><color\=#19924f>綠</color><color\=#c51e03>紅</color>。=<size\=20>Connect in the order of [<color\=#c51e03>red</color> <color\=#19924f>green</color> <color\=#c51e03>red</color>.</size>
 
 ----------
 PALACE 1 BOSS
@@ -1079,10 +1183,11 @@ r:"^死<color\=#000000>神</color>凝視$"="D<color\=#000000>e</color>ath Gaze"
 PALACE 5 BOSS 2
 ----------
 死獵=Death Hunt
+對1名造成物理屬性傷害。=Deal Phys damage to 1 foe.
 縛火流星=Firebound Meteor
 r:"^對所有敵人造成詛咒屬性傷害，狂怒狀態下受到(\d+)次技能傷害後自動釋放。$"="Deal Curse damage to all foes. When Frenzy is active, automatically use this skill after taking skill damage $1 times."
 劣民的處決=Commoner's Execution
-對1名敵人造成高額的物理屬性傷害。=Deal severe Phys damage to 1 foe.
+對1命敵人造成高額的物理屬性傷害。=Deal severe Phys damage to 1 foe.
 憐憫治療=Compassionate Healing
 恢復自身的生命值。=Restore HP to self.
 困獸之鬥=Cornered Beast
@@ -1091,8 +1196,10 @@ r:"^對所有敵人造成詛咒屬性傷害，狂怒狀態下受到(\d+)次技�
 為{{A}}恢復殺意值。=Restore Killing Intent to {{A}}.
 
 狂怒狀態=Frenzy
-攻擊慾望強烈，累積殺意會釋放強力技能=Strong attack desire, \nuse a powerful skill after accumulating Killing Intent
-懊惱狀態=Frustration
+攻擊慾望強烈，累積殺意會釋放強力技能=Strong attack desire, use a powerful skill after accumulating Killing Intent
+懊惱狀態=Vexation
+陷入深深的懊惱，失去攻擊慾望=Inflicted with Vexation, lost attack desire
+將受到「劣民的處決」的攻擊=Will be attacked by [Commoner's Execution]
 
 ----------
 PALACE 5 ELITES
@@ -2017,6 +2124,8 @@ r:"^「<color\=#000000>虛</color>弱」$"="W<color\=#000000>e</color>ak"
 
 r:"^1、特殊的{{A}}會源源不斷的召喚隨從來作戰；隨從被擊殺時，{{A}}會根據死亡隨從承受的總傷害受到萬能傷害。\n2、特殊的{{A}}及它的隨從防禦力得到大幅提升，但同時受到的最終傷害也有所提升。$"="<size\=26>1. {{A}} will keep summoning minions; When minions are defeated, {{A}} takes Almighty damage equal to the total damage the defeated minions take.\n2. Heavily increases the DEF of {{A}} and its minions, but also increases their Final DMG Taken.</size>"
 
+進入戰鬥時，{{A}}會召喚隨從來作戰；隨從被擊殺時，{{A}}會根據死亡隨從承受的總傷害受到萬能傷害。=At the start of battle, {{A}} will summon minions; When defeating minions, {{A}} takes Almighty damage equal to the total damage the defeated minions take.
+
 ----------
 SEASONAL EFFECTS
 ----------
@@ -2095,7 +2204,7 @@ sr:"^每次削減敵方倒地值時，自身獲得(\d+)層『(.*)』；『(.*)�
 r:"^譫<color\=#000000>魍</color>惑語$"="D<color\=#000000>e</color>monic Delirium"
 
 乙太裂隙=Aether Rift
-sr:"^使用{{A}}技能造成弱點傷害時，自身獲得『(.*)』；『(.*)』：造成的最終傷害提升(\d+%)，持續傷害效果提升(\d+%)，持續(\d+)回合。$"="<size\=26>When dealing Weak damage with a {{A}} skill, gains [$1]; [$2]: Increase Final DMG Dealt by $3 and increase Damage Over Time Effect by $4. Lasts for $5 turns.</size>"
+sr:"^使用(.*)技能造成弱點傷害時，自身獲得『(.*)』；『(.*)』：造成的最終傷害提升(\d+%)，持續傷害效果提升(\d+%)，持續(\d+)回合。$"="<size\=26>When dealing Weak damage with a Persona skill, gains [$2]; [$3]: Increase Final DMG Dealt by $4 and increase Damage Over Time Effect by $5. Lasts for $6 turns.</size>"
 氦閃聚變=Flash Fusion
 r:"^乙<color\=#000000>太</color>裂隙$"="A<color\=#000000>e</color>ther Rift"
 r:"^造成的最終傷害提升(\d+%)，造成持續傷害時，最終傷害額外提升(\d+%)$"="Increase Final DMG Dealt by $1. When dealing Damage Over Time, increase Final DMG by $2 more"
