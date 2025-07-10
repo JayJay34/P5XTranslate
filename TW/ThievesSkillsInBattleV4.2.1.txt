@@ -372,8 +372,8 @@ r:"^救<color\=#000000>贖</color>$"="C<color\=#000000>o</color>ntagious Passion
 ----------
 Vino - Chizuko Nagao
 ----------
-r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，根據自身效果命中降低敵人防禦力，最多降低(\d+\.\d+%)。並有(\d+%)基礎機率使敵人陷入某種他身上沒有的隨機元素異常狀態。$"="Deal $1 ATK Nuke damage to <color\=#FFFF00>1</color> foe, decrease the target's DEF based on own Ailment ACC, up to $2 DEF Down. There is a $3 base chance to inflict the foe with a new random Elemental Ailment." 
-r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害，降低目標的防禦力，數值相當於自身效果命中的(\d+\.\d+%)，最多降低<color\=#FFFC40>(\d+\.\d+%)</color>防禦。並有(\d+%)基礎機率使敵人陷入某種他身上沒有的隨機元素異常狀態。$"="Deal <color\=#FFFC40>$1</color> ATK Nuke damage to 1 foe, decrease the target's DEF based on $2 own Ailment ACC, up to <color\=#FFFC40>$3</color> DEF Down. There is a $4 base chance to inflict the foe with a new random Elemental Ailment." 
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，根據自身效果命中降低敵人防禦力，最多降低(\d+\.\d+%)，持續(\d+)回合。並有(\d+%)基礎機率使敵人陷入某種他身上沒有的隨機元素異常狀態。$"="Deal $1 ATK Nuke damage to <color\=#FFFF00>1</color> foe, decrease the target's DEF based on own Ailment ACC, up to $2 DEF Down. Lasts for $3 turns. There is a $4 base chance to inflict the foe with a new random Elemental Ailment." 
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害，降低目標的防禦力，數值相當於自身效果命中的(\d+\.\d+%)，最多降低<color\=#FFFC40>(\d+\.\d+%)</color>防禦，持續(\d+)回合。並有(\d+%)基礎機率使敵人陷入某種他身上沒有的隨機元素異常狀態。$"="Deal <color\=#FFFC40>$1</color> ATK Nuke damage to 1 foe, decrease the target's DEF based on $2 own Ailment ACC, up to <color\=#FFFC40>$3</color> DEF Down. Lasts for $4 turns. There is a $5 base chance to inflict the foe with a new random Elemental Ailment." 
 
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害。有(\d+%)基礎機率使敵人陷入某種他身上沒有的隨機元素異常狀態。$"="Deal $1 ATK Nuke damage to <color\=#FFFF00>all</color> foes, with a $2 base chance to inflict foes with a new random Elemental Ailment."
 r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害。有(\d+%)基礎機率使敵人陷入某種他身上沒有的隨機元素異常狀態。$"="Deal <color\=#FFFC40>$1</color> ATK Nuke damage to all foes, with a $2 base chance to inflict foes with a new random Elemental Ailment."
@@ -1305,22 +1305,32 @@ r:"^貫<color\=#000000>徹</color>$"="U<color\=#000000>p</color>hold"
 Berry - Ichigo Shikano
 ----------
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，並對其添加(\d+)層『怨念』。當目標當前生命值高於(\d+%)時，技能傷害提升(\d+%)。若技能擊殺了目標，則額外觸發一次技能效果（可連續觸發）。$"="Deal Curse damage to <color\=#FFFF00>1</color> foe equal to $1 of ATK, inflict $2 [Resentment] stacks on the target. When the target is above $3 current HP, increase skill damage by $4. If this skill kills the target, activate this skill again (can chain activation)."
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，並對其添加(\d+)層『怨念』。當目標生命值大於(\d+%)時，技能傷害提升(\d+%)。若技能擊殺了目標，則額外觸發一次技能效果（可連續觸發）。$"="Deal Curse damage to <color\=#FFFF00>1</color> foe equal to $1 of ATK, inflict $2 [Resentment] stacks on the target. When the target is above $3 current HP, increase skill damage by $4. If this skill kills the target, activate this skill again (can chain activation)."
 r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，並對其添加(\d+)層<link\="s\|246"><u>『怨念』</u></link>。當目標當前生命值高於(\d+%)時，技能傷害提升(\d+%)。若技能擊殺了目標，則額外觸發一次技能效果（可連續觸發）。$"="Deal Curse damage to 1 foe equal to <color\=#FFFC40>$1</color> of ATK, inflict $2 <link\="s|246"><u>[Resentment]</u></link> stacks on the target. When the target is above $3 current HP, increase skill damage by $4. If this skill kills the target, activate this skill again (can chain activation)."
 
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，並對其添加(\d+)層『怨念』。$"="Deal Curse damage to <color\=#FFFF00>1</color> foe equal to $1 of ATK, inflict $2 [Resentment] stacks on the target."
 r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，並對其添加(\d+)層<link\="s\|246"><u>『怨念』</u></link>。$"="Deal Curse damage to 1 foe equal to <color\=#FFFC40>$1</color> of ATK, inflict $2 [Resentment] stacks on the target."
 
-r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)\+『怨念』層數\*(\d+\.\d+%)攻擊力的詛咒屬性傷害，『怨念』層數達到(\d+)層時，額外造成(\d+\.\d+%)攻擊力的詛咒屬性傷害；同時刷新『怨念』的持續時間。$"="Deal Curse damage to 1 foe equal to <color\=#FFFC40>$1</color> of ATK + <link\="s|246"><u>[Resentment]</u></link> stacks x <color\=#FFFC40>$2</color> of ATK, when [Resentment] stacks reach $3, deal bonus Curse damage equal to <color\=#FFFC40>$4</color> of ATK; Then refresh the duration of <link\="s|246"><u>[Resentment]</u></link>."
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)\+『怨念』層數\*(\d+\.\d+%)攻擊力的詛咒屬性傷害，『怨念』層數達到(\d+)層時，額外造成(\d+\.\d+%)攻擊力的詛咒屬性傷害；同時刷新『怨念』的持續時間。$"="Deal Curse damage to <color\=#FFFC40>1</color> foe equal to $1 of ATK + [Resentment] stacks x $2 of ATK, when [Resentment] stacks reach $3, deal bonus Curse damage equal to $4 of ATK; Then refresh the duration of [Resentment]</u></link>."
 r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>\+<link\="s\|246"><u>『怨念』</u></link>層數\*<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，<link\="s\|246"><u>『怨念』</u></link>層數達到(\d+)層時，額外造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害；同時刷新<link\="s\|246"><u>『怨念』</u></link>的持續時間。$"="Deal Curse damage to 1 foe equal to <color\=#FFFC40>$1</color> of ATK + <link\="s|246"><u>[Resentment]</u></link> stacks x <color\=#FFFC40>$2</color> of ATK, when [Resentment] stacks reach $3, deal bonus Curse damage equal to <color\=#FFFC40>$4</color> of ATK; Then refresh the duration of <link\="s|246"><u>[Resentment]</u></link>."
 
-r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，使『怨念』可觸發暴擊，持續(\d+)回合。立即結算1次目標身上所有類型的持續傷害效果並額外結算(\d+)次『怨念』效果。$"="Deal Curse damage to 1 foe equal to <color\=#FFFC40>$1</color> of ATK, and make <link\="s|246"><u>[Resentment]</u></link> can deal CRITICAL for $2 turns. Immediately deal all Damage Over Time damage on the target and deal <link\="s|246"><u>[Resentment]</u></link> damage $3 times."
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，使『怨念』可觸發暴擊，持續(\d+)回合。立即結算1次目標身上所有類型的持續傷害效果並額外結算(\d+)次『怨念』效果。$"="Deal Curse damage to <color\=#FFFF00>1</color> foe equal to $1 of ATK, and make [Resentment] can deal CRITICAL for $2 turns. Immediately deal all Damage Over Time damage on the target and deal [Resentment] damage $3 times."
 
 貪戀=Obsessive Love
-貪戀到達指定層數可獲得強化效果=Gain boost effects based on [Obsessive Love] stacks
+貪戀到達指定層數可獲得強化效果=Gain boost effects based on \n[Obsessive Love] stacks
+怨念=Resentment
+怨念暴擊=Critical Resentment
 『怨念』的結算傷害可以暴擊=[Resentment] can deal critical
+瘋狂妄想耗盡後死亡=Faint after spending all Crazed Delusion
+人格能量=Personality Energy
+可以在釋放『紅蝶斷頸』後額外對目標釋放1次『紅蝶斷頸』=After using [Butterfly Beheadment], additionally use [Butterfly Beheadment] on the target
+可以在釋放『血薔薇之吻』後額外對目標釋放1次『血薔薇之吻』=After using [Blood Rose's Kiss], additionally use [Blood Rose's Kiss] on the target
+可以在釋放『噓！行刑時間到』後額外對目標釋放1次『噓！行刑時間到』=After using [Hush! It's Execution Time], additionally use [Hush! It's Execution Time] on the target
+可以在自己回合對指定目標釋放1次『HIGHLIGHT』=Can use HIGHLIGHT on own turn once
 
 Combat Pop-ups
 r:"^貪<color\=#000000>戀</color>$"="O<color\=#000000>b</color>sessive Love"
 r:"^怨<color\=#000000>念</color>$"="R<color\=#000000>e</color>sentment"
+r:"^怨<color\=#000000>念</color>暴擊$"="C<color\=#000000>r</color>itical Resentment"
 r:"^瘋<color\=#000000>狂</color>妄想$"="C<color\=#000000>r</color>azed Delusion"
 r:"^如<color\=#000000>果</color>愛意不斷累積$"="I<color\=#000000>f</color> Love Keeps Growing"
