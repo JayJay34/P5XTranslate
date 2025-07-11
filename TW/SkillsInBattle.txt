@@ -295,10 +295,10 @@ sr:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬
 sr:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的(.*)屬性傷害，並降低敵人(\d+\.\d+%)防禦力，效果持續2回合。"=Deal $1 ATK $2 damage to <color\=#FFFF00>all</color> foes and reduce their DEF by <color\=#FFFC40>$3</color> for 2 turns.
 
 //ST Ailment
-sr:"^有(\d+\.\d+%)基礎機率使<color\=#FFFF00>1名</color>敵人在2回合間陷入(.*)$"="$1 base chance to inflict $2 on <color\=#FFFF00>1</color> foe for 2 turns."
+sr:"^有(\d+\.\d+%)基礎機率使<color\=#FFFF00>1名</color>敵人在(\d+)回合間陷入(.*)$"="$1 base chance to inflict $3 on <color\=#FFFF00>1</color> foe for $2 turns."
 
 //AoE Ailment
-sr:"^有(\d+\.\d+%)基礎機率使<color\=#FFFF00>所有</color>敵人在2回合間陷入(.*)$"="$1 base chance to inflict $2 on <color\=#FFFF00>all</color> foes for 2 turns."
+sr:"^有(\d+\.\d+%)基礎機率使<color\=#FFFF00>所有</color>敵人在(\d+)回合間陷入(.*)$"="$1 base chance to inflict $3 on <color\=#FFFF00>all</color> foes for $2 turns."
 
 --- Physical ---
 
@@ -618,6 +618,7 @@ r:"^使<color\=#FFFF00>所有</color>敵人的攻擊力降低(\d+\.\d+%)，持�
 
 Debilitate
 r:"^使<color\=#FFFF00>1名</color>敵方攻擊、防禦、效果命中、效果抵抗降低(\d+\.\d+%)，效果持續(\d+)回合。$"="Decrease <color\=#FFFF00>1</color> foe's ATK, DEF, Ailment ACC, and Ailment RES by $1 for $2 turns."
+r:"^使<color\=#FFFF00>1名</color>敵人的攻擊力、防禦力、效果命中、效果抵抗降低(\d+\.\d+%)，持續(\d+)回合。$"="Decrease <color\=#FFFF00>1</color> foe's ATK, DEF, Ailment ACC, and Ailment RES by $1 for $2 turns."
 
 Fire Break
 消除<color\=#FFFF00>1名</color>敵人的火焰耐性，效果持續2回合。=Negates Fire resistance of <color\=#FFFF00>1</color> foe for 2 turns.
@@ -630,13 +631,14 @@ r:"^使<color\=#FFFF00>所有</color>敵人的防禦力降低(\d+\.\d+%)，受�
 
 Venomous Vortex
 r:"^使<color\=#FFFF00>1名</color>敵人受到傷害提升(\d+\.\d+%)，並使目標獲得(\d+)層「蛇毒」，持續(\d+)回合，上限(\d+)層。「蛇毒」：每回合受到我方攻擊力最高的怪盜(\d+\.\d+%)攻擊力的詛咒屬性傷害\（最多計入WONDER攻擊力的(\d+%)\）。$"="Increase <color\=#FFFF00>1</color> foe's DMG Taken by $1. Inflict the target with $2 [Venom] stack for $3 turns. Stacks up to $4 times. [Venom]: Take Curse damage equal to $5 of the highest ATK Thief's ATK, up to $6 of Wonder's ATK."
+r:"^使<color\=#FFFF00>1名</color>敵人受到傷害提升(\d+\.\d+%)，並使目標獲得(\d+)層「蛇毒」，持續(\d+)回合，上限(\d+)層。「蛇毒」：每回合受到我方攻擊力最高的怪盜(\d+\.\d+%)攻擊力的詛咒屬性傷害\（最多計入wonder攻擊力的(\d+%)\）。$"="Increase <color\=#FFFF00>1</color> foe's DMG Taken by $1. Inflict the target with $2 [Venom] stack for $3 turns. Stacks up to $4 times. [Venom]: Take Curse damage equal to $5 of the highest ATK Thief's ATK, up to $6 of Wonder's ATK."
 
 --- Dispel ---
 驅散<color\=#FFFF00>所有</color>同伴的1個屬性降低效果。=Negates 1 stat reducing effect for <color\=#FFFF00>all</color> allies.
 驅散<color\=#FFFF00>所有</color>敵人的1個屬性提升效果。=Negates 1 stat increasing effect for <color\=#FFFF00>all</color> foes.
 
 --- Aliments ---
-r:"^有(\d+\.\d+%)基礎機率使<color\=#FFFF00>1名</color>敵人陷入狂怒狀態，持續(\d+)回合，並提升自身防禦力(\d+\.\d+%)，持續(\d+)回合。$"="There is a $1 base chance to inflict Rage to <color\=#FFFF00>1</color> foe for $2 turns. Increase DEF by $3 for $4 turns."
+r:"^有(\d+\.\d+%)基礎機率使<color\=#FFFF00>1名</color>敵人陷入狂怒狀態，持續(\d+)回合，並提升自身防禦力(\d+\.\d+%)，持續(\d+)回合。$"="$1 base chance to inflict Rage on <color\=#FFFF00>1</color> foe for $2 turns. Increase DEF by $3 for $4 turns."
 
 
 --- Passives ---
@@ -731,6 +733,7 @@ sr:"^<color\=#FF0000>(.*)</color>的全屬性適應性變為無……$"="<color\
 
 r:"^解除了(\d+)個狀態降低效果！$"="Dispelled $1 stats debuff!"
 
+sr:"^<color\=#FF0000>(.*)</color>的『(.*)』恢復了$"="<color\=#FF0000>$1</color> restored [$2]!"
 sr:"^<color\=#FF0000>(.*)</color>獲得了『(.*)』$"="<color\=#FF0000>$1</color> gained [$2]"
 sr:"^<color\=#FF0000>(.*)</color>獲得了「(.*)」……$"="<color\=#FF0000>$1</color> gained [$2]..."
 sr:"^<color\=#FF0000>(.*)</color>獲得了(\d+)層『(.*)』……$"="<color\=#FF0000>$1</color> gained $2 stack(s) of [$3]..."
@@ -743,7 +746,8 @@ r:"^被<color\=#FF0000>{{A}}</color>鎖定了$"="Locked on by <color\=#FF0000>{{
 sr:"^<color\=#FF0000>(.*)</color>被鎖定……$"="<color\=#FF0000>$1</color> locked on by foe..."
 sr:"^<color\=#FF0000>(.*)</color>進入了狂怒狀態！$"="<color\=#FF0000>$1</color> entered Frenzy!"
 sr:"^<color\=#FF0000>(.*)</color>進入了狂暴狀態……$"="<color\=#FF0000>$1</color> entered Frenzy..."
-sr:"^<color\=#FF0000>(.*)</color>進入了懊惱狀態……$"="<color\=#FF0000>$1</color> entered Frustration..."
+sr:"^<color\=#FF0000>(.*)</color>進入了懊惱狀態…$"="<color\=#FF0000>$1</color> entered Vexation..."
+sr:"^<color\=#FF0000>(.*)</color>進入了懊惱狀態……$"="<color\=#FF0000>$1</color> entered Vexation..."
 sr:"^<color\=#FF0000>(.*)</color>進入「(.*)」……$"="<color\=#FF0000>$1</color> entered [$2]..."
 sr:"^<color\=#FF0000>(.*)</color>進入「(.*)」狀態……$"="<color\=#FF0000>$1</color> entered [$2]..."
 sr:"^<color\=#FF0000>(.*)</color>進入了「(.*)」狀態……$"="<color\=#FF0000>$1</color> entered [$2]..."
@@ -922,6 +926,7 @@ r:"^受<color\=#000000>到</color>暴擊效果提升$"="C<color\=#000000>r</colo
 r:"^效<color\=#000000>果</color>抵抗降低$"="A<color\=#000000>i</color>lment RES Down"
 r:"^受<color\=#000000>傷</color>害提升$"="D<color\=#000000>M</color>G Taken Up"
 r:"^受<color\=#000000>到</color>傷害提升$"="D<color\=#000000>M</color>G Taken Up"
+r:"^受<color\=#000000>持</color>續傷害效果提升$"="D<color\=#000000>a</color>mage Over Time Taken Up"
 r:"^受<color\=#000000>最</color>終傷害提高$"="F<color\=#000000>i</color>nal DMG Taken Up"
 r:"^受<color\=#000000>到</color>最終傷害提高$"="F<color\=#000000>i</color>nal DMG Taken Up"
 r:"^受<color\=#000000>到</color>最終傷害提升$"="F<color\=#000000>i</color>nal DMG Taken Up"
@@ -1003,12 +1008,14 @@ HIGHLIGHT傷害提升=Increase HIGHLIGHT DMG
 受到傷害增加=Increase DMG Taken
 受到暴擊效果提升=Increase Crit DMG Taken
 受HL傷害提升=Increase HIGHLIGHT DMG Taken
+受持續傷害效果提升=<size\=22>Increase Damage Over Time Taken</size>
 受百分比傷害降低=<size\=23>Decrease Percentage DMG Taken</size>
 受到百分比傷害降低=Decrease Percentage DMG Taken
 受到基於自身最大生命值百分比的傷害降低=Decrease Percentage DMG Taken
 受到基於自身最大生命值百分比的傷害大幅降低=Heavily decrease Percentage DMG Taken
 受到基於自身最大生命值百分比的傷害特大幅降低=Severely decrease Percentage DMG Taken
 受到基於自身最大生命值百分比的傷害極大幅降低=Severely decrease Percentage DMG Taken
+受到最終傷害提升=Increase Final DMG Taken
 受到最終傷害提高=Increase Final DMG Taken
 受到最終傷害降低=Dcrease Final DMG Taken
 最終傷害減免=Increase Final DMG RES
@@ -1177,6 +1184,7 @@ r:"^HIGHLIGHT造成的傷害提升(\d+(.\d+)?(%)?)$"="Increase HIGHLIGHT DMG Dea
 r:"^使用HL時，造成傷害提高(\d+(.\d+)?(%)?)$"="Increase HIGHLIGHT DMG Dealt by $1"
 r:"^HIGHLIGHT技能的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase HIGHLIGHT Final DMG by $1"
 r:"^持續傷害效果提升(\d+(.\d+)?(%)?)$"="Increase Damage Over Time Effect by $1"
+r:"^持續傷害效果提高(\d+(.\d+)?(%)?)$"="Increase Damage Over Time Effect by $1"
 r:"^傷害減免(\d+(.\d+)?(%)?)$"="Increase DMG RES by $1"
 r:"^受到傷害降低(\d+(.\d+)?(%)?)$"="Decrease DMG Taken by $1"
 r:"^受到的傷害降低(\d+(.\d+)?(%)?)$"="Decrease DMG Taken by $1"
@@ -1256,6 +1264,7 @@ sr:"^(.*)屬性的適應性變為耐$"="Change $1 resistance to Resist"
 ----------
 Inspect Details - DEBUFF
 ----------
+r:"^攻擊力、防禦力、效果命中、效果抵抗降低(\d+(.\d+)?(%)?)$"="Decrease ATK, DEF, Ailment ACC, \nand Ailment RES by $1"
 r:"^最大生命值降低(\d+(.\d+)?(%)?)$"="Decrease Max HP by $1"
 r:"^最終生命值降低(\d+(.\d+)?(%)?)$"="Decrease Final HP by $1"
 r:"^精力消耗提高(\d+(.\d+)?(%)?)$"="Increase SP cost by $1"
@@ -1279,7 +1288,7 @@ r:"^受到的傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Taken by $1"
 r:"^詛咒反噬達到(\d+)層，受HIGHLIGHT傷害提升(\d+%)$"="Reached $1 stacks of Curse Reversal; \nIncrease HIGHLIGHT DMG Taken by $2"
 r:"^受到追擊傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow-Up DMG Taken by $1"
 r:"^受到持續傷害增加(\d+(.\d+)?(%)?)$"="Increase Damage Over Time Taken by $1"
-r:"^受到持續傷害效果提升(\d+(.\d+)?(%)?)$"="Increase Damage Over Time Effect Taken by $1"
+r:"^受到持續傷害效果提升(\d+(.\d+)?(%)?)$"="Increase Damage Over Time Taken by $1"
 r:"^受到最終傷害提升(\d+%)，最終傷害降低(\d+%)$"="Increase Final DMG Taken by $1; \nDecrease Final DMG by $2"
 r:"^受到最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG Taken by $1"
 r:"^受到最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG Taken by $1"

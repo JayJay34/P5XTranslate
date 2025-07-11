@@ -125,9 +125,11 @@ Bosses
 {{A}}會源源不斷地召喚天使援軍，擊敗天使可以回復精力值。對天使造成傷害可獲得積分。=Dominion will keep summoning Angel, defeating Angel will restore SP. Dealing damage to Angel will count for score.
 {{A}}、{{B}}、{{C}}、{{D}}處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。=<size\=24>{{A}}, {{B}}, {{C}}, {{D}} have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.</size>
 
-{{A}}的「化身」與本體處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。={{A}} and his incarnations have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.
-{{A}}會召喚四個「化身」，「化身」弱於本體。對「化身」造成的傷害會計入積分。={{A}} will summon "Incarnations", which are weaker than himself. Dealing damage to "Incarnations" will count for score.
-{{A}}的化身之一。=One of the incarnations of {{A}}.
+{{A}}的「化身」與本體處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。={{A}} and its Avatars have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: Distributes all damage received between all Shadows who shares this condition, based on the percentage of their current HP.
+r:"^{{A}}的最大生命值首次低於(\d+%)/(\d+%)時，會召喚(\d+)個「化身」，「化身」與本體處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。$"="When {{A}}'s Max HP is below $1/$2 for the first time, summon $3 [Avatars], {{A}} and its Avatars have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: Distributes all damage received between all Shadows who shares this condition, based on the percentage of their current HP."
+
+{{A}}會召喚四個「化身」，「化身」弱於本體。對「化身」造成的傷害會計入積分。={{A}} will summon "Avatar", which are weaker than himself. Dealing damage to "Avatars" will count for score.
+{{A}}的化身之一。=One of {{A}}'s avatar.
 
 r:"^{{B}}受到技能傷害時，會根據該技能的<color\=#ff3b37>屬性</color>獲得對應的「標記」，「標記」數量上限為(\d+)。\n相同屬性的「標記」數量達到(\d+)時，{{B}}會清除所有標記並召喚{{A}}，擊敗{{A}}會使所有怪盜對應屬性傷害提升。{{B}}最多召喚(\d+)次{{A}}。$"="When {{B}} takes skill damage, gains a corresponding [Mark] of the same <color\=#ff3b37>element</color>, up to $1 stacks. \nWhen {{B}} has $2 [Mark] of the same element, removes all corresponding [Mark] and summons {{A}}, defeating {{A}} will give all Thieves corresponding Elemental DMG. {{B}} can summon up to $3 {{A}}."
 標記=Mark
@@ -184,6 +186,7 @@ r:"^受<color\=#000000>H</color> L傷害提升$"="H<color\=#000000>I</color>GHLI
 深紅炮臺=Scarlet Turret
 
 r:"^擊敗{{A}}後，使{{B}}受到傷害提升，可疊加(\d+)層。$"="After defeating {{A}}, increase {{B}}'s DMG Taken. Stacks up to $1 times."
+r:"^對{{A}}造成傷害不計入積分，擊敗{{A}}後，使{{B}}受到傷害提升，可疊加(\d+)層。$"="Dealing damage to {{A}} does not count for score. After defeating {{A}}, increase {{A}}'s DMG Taken. Stacks up to $1 times."
 
 ----------
 Modifiers
@@ -214,8 +217,8 @@ r:"^猛<color\=#000000>毒</color>素$"="T<color\=#000000>o</color>xin"
 r:"^隊伍中編入(\d+)名及以上<color\=#FFFC40>反抗/支配</color>怪盜時，所有怪盜最終傷害提高(\d+%)$"="Increase Thieves' Final DMG by $2 when there are $1 or more <color\=#FFFC40>Assassin/Sweeper</color> Thieves."
 
 sr:"^(.*)特化$"="$1 Buff"
-r:"^<color\=#FFFC40>反抗</color>怪盜造成傷害提高(\d+(.\d+)?(%)?)$"="<size\=22>Increase <color\=#FFFC40>Assassin</color> Thieves' DMG Dealt by $1</size>"
-r:"^<color\=#FFFC40>支配</color>怪盜造成傷害提高(\d+(.\d+)?(%)?)$"="<size\=20>Increase <color\=#FFFC40>Sweeper</color> Thieves' DMG Dealt by $1</size>"
+r:"^<color\=#FFFC40>反抗</color>怪盜造成傷害提高(\d+(.\d+)?(%)?)$"="<size\=21>Increase <color\=#FFFC40>Assassin</color> Thieves' DMG Dealt by $1</size>"
+r:"^<color\=#FFFC40>支配</color>怪盜造成傷害提高(\d+(.\d+)?(%)?)$"="<size\=21>Increase <color\=#FFFC40>Sweeper</color> Thieves' DMG Dealt by $1</size>"
 r:"^所有怪盜<color\=#FFFC40>射擊</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#FFFC40>Gun</color> DMG by $1</size>"
 r:"^所有怪盜<color\=#ff381d>火焰</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#ff381d>Fire</color> DMG by $1</size>"
 r:"^所有怪盜<color\=#00aeff>冰凍</color>傷害提高(\d+(.\d+)?(%)?)$"="<size\=25>Increase Thieves' <color\=#00aeff>Ice</color> DMG by $1</size>"

@@ -25,9 +25,12 @@ sr:"^每消耗<color\=#FFDE00>(\d+)</color>張<color\=#FFDE00>日月星辰</colo
 r:"^獲得(\d+)張啟示卡$"="Gained $1 Revelation"
 
 請選擇主屬性=Main Stat
-r:"^持有數量:(\d+)$"="You have: $1"
+點擊添加副屬性=Click to add sub stats
+r:"^持有數量:(\d+)$"="Owned: $1"
 屬性選擇=Select
 sr:"^是否確認定製一張<color\=#f1b500>(.*)</color>位置，<color\=#f1b500>(.*)</color>套裝，主屬性為<color\=#f1b500>(.*)</color>的啟示卡？$"="Make 1 <color\=#f1b500>$2</color> <color\=#f1b500>$3</color> Revelation Card?"
+sr:"^當前定製啟示卡限定：\n套裝：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主屬性：<color\=#FFDE00>(.*)</color>\n副屬性：<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>\n是否確認生成副屬性？\n<color\=#ff3b37>生成後限定套裝、位置、屬性類型將無法更改。</color>$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\nSub Stats: <color\=#FFDE00>$4</color>, <color\=#FFDE00>$5</color>, <color\=#FFDE00>$6</color>, <color\=#FFDE00>$7</color>\nGenerate these Sub Stats?\n<color\=#ff3b37>Cannot change Main Stat and Sub Stats after generation.</color>"
+sr:"^當前定製啟示卡限定：\n套裝：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主屬性：<color\=#FFDE00>(.*)</color>\n副屬性：<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>\n<color\=#FFDE00>選定副屬性均為最大值。</color>\n是否消耗<color\=#FFDE00>時序之墨×(\d+)</color>、<color\=#FFDE00>穹謁之墨×(\d+)</color>進行定製？$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\nSub Stats: <color\=#FFDE00>$4</color>, <color\=#FFDE00>$5</color>, <color\=#FFDE00>$6</color>, <color\=#FFDE00>$7</color>\n<color\=#FFDE00>Selected Sub Stats are at max stats.</color>\nSpend <color\=#FFDE00>Temporal Ink ×$8</color>, <color\=#FFDE00>Celestial Ink ×$9</color> to customize?"
 
 推薦套裝=<size\=30>Recommendations</size>
 是否要將所有啟示卡卸下。=Unequip your cards?
@@ -139,6 +142,7 @@ r:"^使用治療技能時，自身攻擊力提升<color\=#2899ff>(\d+%)</color>�
 【真誠】=[Integrity]
 真誠=Integrity
 r:"^使用{{A}}後，使所有同伴造成傷害提升(\d+%)，持續(\d+)回合。$"="After using {{A}}, increase all allies' DMG Dealt by $1 for $2 turns."
+r:"^使用{{A}}後，使所有同伴造成傷害提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合。$"="After using {{A}}, increase all allies' DMG Dealt by <color\=#2899ff>$1</color> for $2 turns."
 r:"^戰鬥中，根據角色的治療加成的(\d+%)獲得傷害加成，透過這種方式最多提升<color\=#2899ff>(\d+%)</color>傷害加成。$"="Increase DMG Bonus up to <color\=#2899ff>$2</color> based on $1 of your Healing Bonus."
 r:"^解明怪盜裝備時生效：戰鬥開始時每有1個相同適應性屬性的同伴，使所有同伴生命值、攻擊力、防禦力額外提升<color\=#2899ff>(\d+%)</color>。$"="When equipped by Elucidator Thieves: Increase all allies' HP, ATK and Defense by <color\=#2899ff>$1</color> with each ally with the same element."
 
@@ -150,7 +154,7 @@ r:"^使用HIGHLIGHT時，攻擊力提升<color\=#2899ff>(\d+%)</color>，造成�
 
 【決心】=[Resolve]
 決心=Resolve
-r:"^戰鬥開始時，若自身處於己方行動佇列的第3/4位，則攻擊力提升(\d+%)/(\d+%)。$"="At the start of battle, if you are at 3rd/4th turn order, then increase ATK by $1/$2."
+r:"^戰鬥開始時，若自身處於己方行動佇列的第3/4位，則攻擊力提升<color\=#2899ff>(\d+%)/(\d+%)</color>。$"="At the start of battle, if you are at 3rd/4th turn order, then increase ATK by <color\=#2899ff>$1/$2</color>."
 r:"^戰鬥中，自身生命值達到(\d+)/(\d+)/(\d+)獲得傷害加成<color\=#2899ff>(\d+%)/(\d+%)/(\d+%)</color>。$"="Increase DMG Bonus by <color\=#2899ff>$4/$5/$6</color> when you reached $1/$2/$3 HP."
 r:"^解明怪盜裝備時生效：使用技能為敵人添加減益狀態，使主目標敵人防禦降低<color\=#2899ff>(\d+%)</color>，持續2回合。$"="When equipped by Elucidator Thieves: Decrease the main target's Defense by <color\=#2899ff>$1</color> for 2 turns when inflicting debuff."
 
@@ -168,7 +172,7 @@ r:"^造成萬能屬性傷害時，攻擊力提升<color\=#2899ff>(\d+%)</color>�
 【希望】=[Hope]
 希望=Hope
 r:"^解明怪盜裝備時生效：使用技能為同伴添加增益狀態，使技能目標穿透提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合。$"="When equipped by Elucidator Thieves: When using a buff skill on allies, increase the target's Pierce by <color\=#2899ff>$1</color> for $2 turn."
-r:"^每造成1次技能傷害，自身火焰傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層；疊加至(\d+)層時，額外使自身暴擊率提升(\d+%)。$"="When dealing 1 hit of skill damage, increase own Fire DMG by $1 for $2 turns, up to $3 stacks; When reaching $4 stacks, additionally increase own CRIT Rate by $5."
+r:"^每造成1次技能傷害，自身火焰傷害提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合，可疊加(\d+)層；疊加至(\d+)層時，額外使自身暴擊率提升<color\=#2899ff>(\d+%)</color>。$"="When dealing 1 hit of skill damage, increase own Fire DMG by <color\=#2899ff>$1</color> for $2 turns, up to $3 stacks; When reaching $4 stacks, additionally increase own CRIT Rate by <color\=#2899ff>$5</color>."
 
 【突破】=[Perseverance]
 突破=Perseverance
