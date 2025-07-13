@@ -187,6 +187,7 @@ r:"^受<color\=#000000>H</color> L傷害提升$"="H<color\=#000000>I</color>GHLI
 
 r:"^擊敗{{A}}後，使{{B}}受到傷害提升，可疊加(\d+)層。$"="After defeating {{A}}, increase {{B}}'s DMG Taken. Stacks up to $1 times."
 r:"^對{{A}}造成傷害不計入積分，擊敗{{A}}後，使{{B}}受到傷害提升，可疊加(\d+)層。$"="Dealing damage to {{A}} does not count for score. After defeating {{A}}, increase {{A}}'s DMG Taken. Stacks up to $1 times."
+r:"^擊敗{{A}}後，使{{B}}受到傷害提升，可疊加(\d+)層。對{{A}}造成傷害不計入積分。$"="After defeating {{A}}, increase {{B}}'s DMG Taken. Stacks up to $1 times. Dealing damage to {{A}} does not count for score"
 
 ----------
 Modifiers
@@ -195,13 +196,13 @@ Modifiers
 生存壓力和積分獲取效率隨著戰鬥回合數的增加而持續提升=  Each turn increase score gain but \n  also increase survival pressure 
 積分倍率會隨著上陣的反抗/支配怪盜數量的增加而增加=  Increase score gain for every \n  Assassin/Sweeper Thief in team
 
-閼凶夢之扉夢境更換說明：\n每週閼凶夢之扉會開啟一種夢境效果，本周所有的挑戰會根據夢境的不同發生規則變化。=<size\=26>Nightmare's Gateway rotation:\nEach season there is a unique mechanic, changing all bosses based on the mechanic.</size>
+閼凶夢之扉夢境更換說明：\n每週閼凶夢之扉會開啟一種夢境效果，本周所有的挑戰會根據夢境的不同發生規則變化。=<size\=26>Each season there is a unique mechanic, changing all bosses based on the mechanic.</size>
 首領受到一定傷害會進入虛弱狀態，處於虛弱狀態時全力輸出對其造成大量傷害，可獲取大量的戰鬥積分。=<size\=26>Increase score gain after defeating the boss.</size>
 隨著回合數的增加，首領給予的生存壓力會越來越高，但每回合的積分獲取效率也會相應提升。=<size\=26>Increase score gain but also increase foes' damage after each turn.</size>
 隨著編入反抗/支配職業怪盜數量的增加，積分獲取效率也會相應增加。=<size\=26>Increase score gain for every Assassin/Sweeper Thief in team.</size>
 
 穩定領域=Stable Domain
-所有怪盜無法暴擊，{{A}}技能/追加效果造成的<color\=#FFFC40>最終傷害</color>提高，提高值\=暴擊率*(暴擊效果-100%)。（最多計入100%暴擊率）=<size\=24>All Thieves cannot CRIT, increases the <color\=#FFFC40>Final DMG</color> of {{A}} skill/Follow-Up by Crit Rate*(Crit DMG - 100%)\n(Up to 100% Crit Rate)</size>
+所有怪盜無法暴擊，{{A}}技能/追加效果造成的<color\=#FFFC40>最終傷害</color>提高，提高值\=暴擊率*(暴擊效果-100%)。（最多計入100%暴擊率）=Allies will not deal critical hits, increase {{A}} skill/Follow-Up <color\=#FFFC40>Final DMG</color> by Crit Rate x (Crit DMG - 100%)\n(Up to 100% Crit Rate)
 
 狂暴領域=Frenzy Domain
 r:"^敵人每回合末使自身獲得(\d+)層<color\=#FFFC40>『狂暴』</color>。\n『狂暴』：最終傷害提升(\d+%)，可疊加。$"="Foes gain $1 stack of <color\=#FFFC40>[Frenzy]</color> at the end of each turn.\nFrenzy: Increase Final DMG by $2, can stack."
