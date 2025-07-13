@@ -278,6 +278,7 @@ sr:"對<color\=#FFFF00>1名</color>敵人造成(\d+\~\d+)次(\d+\.\d+%)攻擊力
 r:"^對1名敵人造成(\d+\~\d+)次物理屬性傷害。$"="Deal Phys damage to 1 foe $1 times."
 
 //ST + Ailment
+sr:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的(.*)屬性傷害，(\d+\.\d+%)基礎機率使敵人(.*)。$"="Deal $1 ATK $2 damage to <color\=#FFFF00>1</color> foe with a $3 base chance to inflict $4 for 2 turns."
 sr:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的(.*)屬性傷害，(\d+\.\d+%)基礎機率機率使敵人(.*)。$"="Deal $1 ATK $2 damage to <color\=#FFFF00>1</color> foe with a $3 base chance to inflict $4 for 2 turns."
 
 r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，賦予敵人(.*)個詛咒效果$"="Deal $1 ATK Curse damage to <color\=#FFFF00>1</color> foe and inflict $2 Curse"
@@ -285,7 +286,8 @@ r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬�
 r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，機率賦予敵人(.*)個詛咒效果$"="Deal $1 ATK Curse damage to <color\=#FFFF00>1</color> foe, there is a chance to inflict $2 Curse"
 
 //AoE + Ailment (2 turns)
-sr:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的(.*)屬性傷害，(\d+\.\d+%)基礎機率機率使敵人(.*)。"=Deal $1 ATK $2 damage to <color\=#FFFF00>all</color> foes and has a $3 chance to inflict $4 for 2 turns.
+sr:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的(.*)屬性傷害，(\d+\.\d+%)基礎機率使敵人(.*)。$"="Deal $1 ATK $2 damage to <color\=#FFFF00>all</color> foes and has a $3 chance to inflict $4 for 2 turns."
+sr:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的(.*)屬性傷害，(\d+\.\d+%)基礎機率機率使敵人(.*)。$"="Deal $1 ATK $2 damage to <color\=#FFFF00>all</color> foes and has a $3 chance to inflict $4 for 2 turns."
 
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，高機率賦予敵人(.*)個詛咒效果$"="Deal $1 ATK Curse damage to <color\=#FFFF00>all</color> foes, with a high chance to inflict $2 Curse"
 
@@ -671,6 +673,7 @@ r:"^使<color\=#FFFF00>所有</color>同伴獲得(\d+\.\d+%)攻擊力\+(\d+)的�
 r:"^使<color\=#FFFF00>所有</color>同伴造成的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Gives <color\=#FFFF00>all</color> allies $1 DMG Dealt for $2 turns."
 
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的物理屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deal $1 ATK Phys damage to <color\=#FFFF00>all</color> foes and increase their DMG Taken by $2 for $3 turns."
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的射擊屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deal $1 ATK Gun damage to <color\=#FFFF00>all</color> foes and increase their DMG Taken by $2 for $3 turns."
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的火焰屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deal $1 ATK Fire damage to <color\=#FFFF00>all</color> foes and increase their DMG Taken by $2 for $3 turns."
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deal $1 ATK Ice damage to <color\=#FFFF00>all</color> foes and increase their DMG Taken by $2 for $3 turns."
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deal $1 ATK Elec damage to <color\=#FFFF00>all</color> foes and increase their DMG Taken by $2 for $3 turns."
@@ -744,6 +747,7 @@ sr:"^召喚消耗(\d+)層<color\=#FF0000>『(.*)』</color>$"="Summon consumed $
 
 r:"^被<color\=#FF0000>{{A}}</color>鎖定了$"="Locked on by <color\=#FF0000>{{A}}</color>!"
 sr:"^<color\=#FF0000>(.*)</color>被鎖定……$"="<color\=#FF0000>$1</color> locked on by foe..."
+sr:"^<color\=#FF0000>(.*)</color>被鎖定了……$"="<color\=#FF0000>$1</color> locked on by foe..."
 sr:"^<color\=#FF0000>(.*)</color>進入了狂怒狀態！$"="<color\=#FF0000>$1</color> entered Frenzy!"
 sr:"^<color\=#FF0000>(.*)</color>進入了狂暴狀態……$"="<color\=#FF0000>$1</color> entered Frenzy..."
 sr:"^<color\=#FF0000>(.*)</color>進入了懊惱狀態…$"="<color\=#FF0000>$1</color> entered Vexation..."
@@ -752,8 +756,10 @@ sr:"^<color\=#FF0000>(.*)</color>進入「(.*)」……$"="<color\=#FF0000>$1</c
 sr:"^<color\=#FF0000>(.*)</color>進入「(.*)」狀態……$"="<color\=#FF0000>$1</color> entered [$2]..."
 sr:"^<color\=#FF0000>(.*)</color>進入了「(.*)」狀態……$"="<color\=#FF0000>$1</color> entered [$2]..."
 sr:"^<color\=#FF0000>(.*)</color>陷入了「(.*)」，受到的傷害提升……$"="<color\=#FF0000>$1</color> entered [$2]..."
+sr:"^<color\=#FF0000>(.*)</color>處於(.*)狀態，無法行動……$"="<color\=#FF0000>$1</color> cannot act!"
 sr:"^<color\=#FF0000>(.*)</color>退出了蓄力狀態……$"="<color\=#FF0000>$1</color> exited Charge..."
 sr:"^<color\=#FF0000>(.*)</color>解除「(.*)」狀態……$"="<color\=#FF0000>$1</color> removed [$2]..."
+sr:"^<color\=#FF0000>(.*)</color>恢復了……$"="<color\=#FF0000>$1</color> recovered..."
 
 sr:"^<color\=#FF0000>(.*)</color>進入了暈眩狀態……$"="<color\=#FF0000>$1</color> inflicted with Dizzy..."
 sr:"^<color\=#FF0000>(.*)</color>進入了遺忘狀態……$"="<color\=#FF0000>$1</color> inflicted with Forget..."
@@ -1154,10 +1160,13 @@ r:"^效果抵抗提升(\d+(.\d+)?(%)?)$"="Increase Ailment RES by $1"
 r:"^最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1"
 r:"^最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1"
 r:"^提升(\d+(.\d+)?(%)?)的最終傷害$"="Increase Final DMG by $1"
+r:"^最終傷害提升(\d+%)，受最終傷害提升(\d+%)$"="Increase Final DMG by $1; \nIncrease Final DMG Taken by $2"
+r:"^最終傷害降低(\d+%)，受最終傷害降低(\d+%)$"="Decrease Final DMG by $1; \nDecrease Final DMG Taken by $2"
 r:"^最終傷害提升(\d+%)，可疊加(\d+)層$"="Increase Final DMG by $1, up to $2 stacks"
 r:"^每層提供(\d+%)的最終傷害加成，最多可疊加(\d+)層$"="Increase Final DMG by $1, up to $2 stacks"
 r:"^處於額外回合時，最終傷害提高(\d+(.\d+)?(%)?)$"="<size\=26>Increase Final DMG by $1 during Extra Action</size>"
 r:"^造成的最終傷害提升(\d+%)，若自身處於額外回合，造成的最終傷害額外提升(\d+%)$"="Increase Final DMG Dealt by $1, if you are in Extra Action, additionally increase Final DMG Dealt by $2"
+r:"^造成持續傷害時，傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Dealt by $1 when dealing Damage Over Time"
 r:"^造成持續傷害時，最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1 when dealing Damage Over Time"
 獲得一定總傷害增幅=Increase Total DMG
 r:"^總傷害增幅(\d+(.\d+)?(%)?)$"="Increase Total DMG by $1"
@@ -1239,6 +1248,7 @@ r:"^萬能傷害提高(\d+(.\d+)?(%)?)$"="Increase Almighty DMG by $1"
 r:"^萬能屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase Almighty DMG by $1"
 r:"^治療效果提升(\d+(.\d+)?(%)?)$"="Increase Healing Effect by $1"
 r:"^護盾效果提升(\d+(.\d+)?(%)?)$"="Increase Shield Effect by $1"
+r:"^受到護盾效果提升(\d+(.\d+)?(%)?)$"="Increase Shield Effect Taken by $1"
 r:"^剩餘護盾值：(\d+)$"="Shield: $1"
 回合結束後回復一定生命值。=Restore HP at the end of each turn
 r:"^HL能量恢復效率提升(\d+(.\d+)?(%)?)$"="Increase HIGHLIGHT Energy recovery rate by $1"
@@ -1272,6 +1282,7 @@ r:"^攻擊降低(\d+(.\d+)?(%)?)$"="Decrease ATK by $1"
 r:"^攻擊力降低(\d+(.\d+)?(%)?)$"="Decrease ATK by $1"
 r:"^防禦降低(\d+(.\d+)?(%)?)$"="Decrease DEF by $1"
 r:"^防禦力降低(\d+(.\d+)?(%)?)$"="Decrease DEF by $1"
+r:"^總防禦力降低(\d+(.\d+)?(%)?)$"="Decrease Total DEF by $1"
 r:"^防禦力降低(\d+%)，可疊加(\d+)層$"="Decrease DEF by $1, up to $2 stacks"
 r:"^所有怪盜最終防禦力下降(\d+(.\d+)?(%)?)$"="Decrease all Thieves' DEF by $1"
 r:"^受到暴擊效果提升(\d+(.\d+)?(%)?)$"="Increase Crit DMG Taken by $1"
