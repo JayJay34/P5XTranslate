@@ -211,6 +211,7 @@ MI Skill Maxed
 sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5\n\n"
 sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)\n(.*) (.*)\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5\n$6 $7\n\n"
 sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)\n(.*) (.*)\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)\n(.*) (.*)\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5\n$6 $7\n\n<link\=thiefInnateSkill|$8|$9><u>[$10]</u></link>\n$11 $12\n$13 $14\n\n"
+sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)\n(.*) (.*)\n(.*) (.*)\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5\n$6 $7\n$8 $9\n\n<link\=thiefInnateSkill|$10|$11><u>[$12]</u></link>\n$13 $14\n\n"
 sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5\n\n<link\=thiefInnateSkill|$6|$7><u>[$8]</u></link>\n$9 $10\n\n"
 sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)\n(.*) (.*)\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5\n\n<link\=thiefInnateSkill|$6|$7><u>[$8]</u></link>\n$9 $10\n$11 $12\n\n"
 sr:"^<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)\n(.*) (.*)\n\n<link\=thiefInnateSkill\|(\d+)\|(\d+)><u>『(.*)』</u></link>\n(.*) (.*)\n\n$"="<link\=thiefInnateSkill|$1|$2><u>[$3]</u></link>\n$4 $5\n$6 $7\n\n<link\=thiefInnateSkill|$8|$9><u>[$10]</u></link>\n$11 $12\n\n"
@@ -2756,12 +2757,12 @@ Berry - Ichigo Shikano
 執念=Obsession
 依戀=Attachment
 
-r:"^紅蝶斷頸 Lv.(\d+)$"="<size\=24>Butterfly Beheadment Lv.$1</size>"
-r:"^紅蝶斷頸 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=24>Butterfly Beheadment <color\=#0F69CB>Lv.$1</color></size>"
+r:"^紅蝶斷頸 Lv.(\d+)$"="<size\=25>Butterfly Beheadment Lv.$1</size>"
+r:"^紅蝶斷頸 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=25>Butterfly Beheadment <color\=#0F69CB>Lv.$1</color></size>"
 r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，並對其添加(\d+)層<link\="s\|246"><u>『怨念』</u></link>。當目標當前生命值高於(\d+%)時，技能傷害提升(\d+%)。若技能擊殺了目標，則額外觸發一次技能效果（可連續觸發）。\n<b><size\=28><color\=#850101>鐮刃自手中掠出造成詛咒傷害，緋色的光芒劃破沉夜靜寂，別怕，這一切很快就結束了。</color></size></b>$"="Deal Curse damage to 1 foe equal to <color\=#FFFC40>$1</color> of ATK, inflict $2 <link\="s|246"><u>[Resentment]</u></link> stacks on the target. When the target is above $3 current HP, increase skill damage by $4. If this skill kills the target, activate this skill again (can chain activation).\n<b><size\=28><color\=#850101>The scythe flashes from her hand, dealing Curse damage, a crimson glow splits the silent night. Don't be afraid, it'll all be over soon.</color></size></b>"
 
-r:"^紅蝶斷頸 Lv.(\d+)$"="Blood Rose's Kiss Lv.$1"
-r:"^紅蝶斷頸 <color\=#0F69CB>Lv.(\d+)</color>$"="Blood Rose's Kiss <color\=#0F69CB>Lv.$1</color>"
+r:"^血薔薇之吻 Lv.(\d+)$"="Blood Rose's Kiss Lv.$1"
+r:"^血薔薇之吻 <color\=#0F69CB>Lv.(\d+)</color>$"="Blood Rose's Kiss <color\=#0F69CB>Lv.$1</color>"
 r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，並對其添加(\d+)層<link\="s\|246"><u>『怨念』</u></link>。\n<b><size\=28><color\=#850101>以血肉澆灌的龐大薔薇自地面綻放而出造成詛咒傷害，就算是被尖刺貫穿心臟，也不准逃走哦。</color></size></b>$"="Deal Curse damage to 1 foe equal to <color\=#FFFC40>$1</color> of ATK, inflict $2 [Resentment] stacks on the target.\n<b><size\=28><color\=#850101>A massive rose, nourished by flesh and blood, blooms from the ground to deal Curse damage. Even if thorns pierce your heart, you're not allowed to run away.</color></size></b>"
 
 r:"^噓！行刑時間到 Lv.(\d+)$"="<size\=21>Hush! It's Execution Time Lv.$1</size>"
@@ -2780,7 +2781,7 @@ r:"^{{A}}在場時，所有友方的持續傷害效果提升<color\=#0169ca>(\d+
 r:"^每回合受到{{A}}(\d+%)/(\d+%)/(\d+%)攻擊力的詛咒屬性傷害（達到1、50、70級時變化），持續(\d+)回合，可疊加(\d+)層。持有『怨念』的敵人陣亡時，其『怨念』會轉移至生命值最高的敵人（不會轉移至詛咒屬性無反吸的單位）。$"="Take Curse damage equal to {{A}}'s $1/$2/$3 ATK (effect increases at level 1/50/70) for $2 turns. Stacks up to 10 times. When a foe with [Resentment] dies, transfer its [Resentment] to the highest HP foe (cannot transfer to target with Null/Repel/Drain Curse)."
 
 如果攝入愛的毒藥=If I Take the Poison of Love
-r:"^{{A}}首次釋放『紅蝶斷頸』時可獲得(\d+)層『貪戀』。自身每次釋放HIGHLIGHT時可獲得(\d+)層『貪戀』。『貪戀』最多可獲得(\d+)層，根據『貪戀』層數獲得如下強化效果：\n1層：每層<link\="s\|246"><u>『怨念』</u></link>使敵人受到的傷害提升(\d+\.\d+%)；\n2層：暴擊率提升(\d+%)，自身釋放{{B}}技能造成的傷害均視為持續傷害效果；\n3層：持續傷害效果提升(\d+%)。$"="When Ichigo uses [Butterfly Beheadment] for the first time, gain $1 [Obsessive Love] stack. When using HIGHLIGHT, gain $2 [Obsessive Love] stack. Stacks up to $3 times. Gain the following boost effects based on [Obsessive Love] stacks:\n1 stack: For every <link\="s|246"><u>[Resentment]</u></link> stack on foes, increase their DMG Taken by $4;\n2 stacks: Increase Crit Rate by, Ichigo's Persona skill damage counts as Damage Over Time Effect;\n3 stacks: Increase Damage Over Time Effect by $5."
+r:"^{{A}}首次釋放『紅蝶斷頸』時可獲得(\d+)層『貪戀』。自身每次釋放HIGHLIGHT時可獲得(\d+)層『貪戀』。『貪戀』最多可獲得(\d+)層，根據『貪戀』層數獲得如下強化效果：\n1層：每層<link\="s\|246"><u>『怨念』</u></link>使敵人受到的傷害提升(\d+\.\d+%)；\n2層：暴擊率提升(\d+%)，自身釋放{{B}}技能造成的傷害均視為持續傷害效果；\n3層：持續傷害效果提升(\d+%)。$"="When Ichigo uses [Butterfly Beheadment] for the first time, gain $1 [Obsessive Love] stack. When using HIGHLIGHT, gain $2 [Obsessive Love] stack. Stacks up to $3 times. Gain the following boost effects based on [Obsessive Love] stacks:\n1 stack: For every <link\="s|246"><u>[Resentment]</u></link> stack on foes, increase their DMG Taken by $4;\n2 stacks: Increase Crit Rate by $5, Ichigo's Persona skill damage counts as Damage Over Time Effect;\n3 stacks: Increase Damage Over Time Effect by $6."
 
 如果壞掉的話=If I'm Broken
 r:"^每層<link\="s\|246"><u>『怨念』</u></link>使敵人防禦降低(\d+%)；每次使用{{A}}技能時，額外為目標添加(\d+)層<link\="s\|246"><u>『怨念』</u></link>。$"="Decrease foes' DEF by $1 for each <link\="s|246"><u>[Resentment]</u></link> stack; When using a Persona skill, inflict $2 <link\="s|246"><u>[Resentment]</u></link> stack on the target more."
