@@ -28,6 +28,7 @@ r:"^使用槍械射擊1名敵人，每次向隨機敵人射擊(\d+)發，造成�
 r:"^使用槍械射擊1名敵人，造成(\d+)次射擊屬性傷害，子彈可能會發生偏移。對同一目標造成傷害會衰減。$"="Deal Gun damage to 1 foe $1 times. Consecutive attacks against the same foe will deal decreased damage. Shots may hit foes besides the intended target."
 
 r:"^剩餘次數：(\d+)/(\d+)$"="Use Limit: $1/$2"
+當前已經無法使用道具了……=Cannot use more items...
 
 ----------
 Elemental Ailments Mental Ailments TECHNICAL
@@ -407,9 +408,10 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動�
 //Basic Nuke ST
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，對元素異常的敵人傷害提升(\d+%)。$"="Deal $1 ATK Nuke damage to <color\=#FFFF00>1</color> foe, increase DMG Dealt to foe infliced with Elemental Ailments by $2."
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，攻擊處於元素異常狀態的敵人該技能傷害提升(.*)。$"="Deal $1 ATK Nuke damage to <color\=#FFFF00>1</color> foe. Increase skill damage by $2 if foe is inflicted with any Elemental Ailment."
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，對元素異常的敵人傷害提升(\d+%)，造成TECHNICAL。$"="Deal $1 ATK Nuke damage to <color\=#FFFF00>1</color> foe. Deal a TECHNICAL and increase DMG Dealt to foe infliced with Elemental Ailments by $2."
 
 //Basic Nuke AoE
-r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，對元素異常的敵人傷害提升(\d+%)，造成TECHNICAL。$"="Deal <color\=#FFFF00>$1</color> ATK Nuke damage to <color\=#FFFF00>all</color> foes, increase DMG Dealt to foes with Elemental Ailments by $2, triggers TECHNICAL."
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，對元素異常的敵人傷害提升(\d+%)，造成TECHNICAL。$"="Deal $1 ATK Nuke damage to <color\=#FFFF00>all</color> foes. Deal a TECHNICAL and increase DMG Dealt to foes with Elemental Ailments by $2."
 
 --- Bless ---
 r:"^祝福屬性$"="Bless"
