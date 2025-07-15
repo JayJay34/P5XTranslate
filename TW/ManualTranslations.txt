@@ -455,14 +455,17 @@ r:"^已購買(\d+)/(\d+)次（每日05:00重置）$"="Purchased $1/$2 times \n(R
 確認要消耗<color\=#f1b500>「空白命運×1」</color>進行一次啟示回溯嗎？\n回溯後將有以下變化：\n1.啟示等級變為0級\n2.主屬性、副屬性的狀態變為初始狀態\n3.返還所有養成到當前等級消耗的經驗材料（以通用啟示材料的形式返還）=<size\=32>Use <color\=#f1b500>[Blank Fate×1]</color> to reset your card?\nAfter resetting:\n1. Set the card back to level 0\n2. Set the main stat and sub stats back to original\n3. Refund all EXP materials\n(In the form of materials)</size>
 回溯道具不足。=Insufficient rewind item.
 時序之墨=Temporal Ink
+蘊含星辰之力的墨水。定製啟示卡時，指定主屬性的，最終定製時會消耗。=Ink that contains the power of the stars, can be used to select main stat when customizing Revelation Card.
 蘊含星辰之力的墨水，可用於定製月、星、辰位置的啟示卡。=Ink that contains the power of the stars, can be used to create a customized basic Revelation Card.
 穹謁之墨=Celestial Ink
+蘊含星辰之力的墨水。定製啟示卡時，指定副屬性的，最終定製時會消耗。=Ink that contains the power of the stars, can be used to select sub stat when customizing Revelation Card.
 溯讖之墨=Retroactive Ink
+蘊含星辰之力的墨水，可用於刷新啟示卡的副屬性時消耗。=Ink that contains the power of the stars, can be used to refresh sub stats when customizing Revelation Card.
 認知請願書 5星=<size\=19>5★ Cognitive Petition</size>
 認知請願書 4星=<size\=19>4★ Cognitive Petition</size>
 請在以下列表中點擊選擇一位4星怪盜。=Select one 4★ Thief from the list below.
-宇宙的終響=Universe Echo
-來自宇宙的命運指引，打開後可自選一張橙色宙位啟示卡。=A guidance of fate from the Universe, can be used to gain 1 Orange Universe Card
+宇宙的終響=Space Echo
+來自宇宙的命運指引，打開後可自選一張橙色宙位啟示卡。=A guidance of fate from the Universe, can be used to gain 1 Orange Space Card
 殘識碎片禮包=<size\=17>Awareness Fragment Gift Bag</size>
 盲選偶像合約 ★5=5★ Random Kaidol Contract
 r:"^怪盜殘識碎片$"="<size\=22>Thief Awareness Fragment</size>"
@@ -993,6 +996,9 @@ sr:"^多重奏·(.*):(.*)元素怪盜技能傷害提升(.*)$"="<size\=21>$1 Poly
 不直接參與戰鬥，透過支援技能為隊伍提供支援效果，同時自身屬性會轉化為額外的屬性，為出戰的隊員提供加成。=Helps allies from off-field with buffs and support skills.\nBoost active allies' stats based on own stats
 不直接參與戰鬥，在場外使用支援技能為出戰隊員提供加成。=Helps allies from off-field with buffs and support skills.
 
+r:"^推薦陣容中角色均大於(\d+)級$"="Recommended Lv: $1"
+r:"^推薦編入(\d+)名<size\=(\d+)><sprite\=(\d+) tint\=1></size>角色$"="Recommend $1 <size\=$2><sprite\=$3 tint\=1></size> character"
+
 怪盜=Thief
 怪盜職業=Thief Roles
 
@@ -1197,7 +1203,7 @@ r:"^將{{A}}進化至階級(\d+)$"="Evolve {{A}} to Rank $1"
 r:"^將{{A}}進化至RANK(\d+)$"="Evolve {{A}} to Rank $1"
 r:"擁有(\d+)個(\d+)級的RANK(\d+)及以上的{{A}}"=Have $1 Rank $3 or above Lv. $2 Persona
 r:"擁有(\d+)張等級為(\d+)級的啟示卡"=Have $1 Lv. $2 Revelation Cards
-r:"擁有(\d+)張等級為(\d+)級的宙位啟示卡"=Have $1 Lv. $2 Universe Revelation Cards
+r:"擁有(\d+)張等級為(\d+)級的宙位啟示卡"=Have $1 Lv. $2 Space Revelation Cards
 
 r:"^消耗(\d+)點行動力$"="Spend $1 Action Points"
 r:"進行(\d+)次足球部活動"=Join a Soccer Club activity $1 times
@@ -1512,8 +1518,9 @@ r:"^扭<color\=#ff0000ff>蛋</color>機$"="Ga<color\=#ff0000ff>ch</color>apon Ma
 點擊{{A}}機抽取對應系列的{{A}}=Specific machine gives specific set
 閱讀《智慧之泉·{{A}}之謎》書本後扭到隱藏和限定款{{A}}機率增加!\n獎盃中可以獲取該書本。=<size\=25>After reading the book\n[Fountain of Wisdom•{{A}}], \nincrease the rate of rare {{A}}!</size>
 r:"^最多<color\=#FEFE60>再扭(\d+)次</color>必得隱藏款！$"="Guarantee the hidden Gachapon after <color\=#FEFE60>$1 pulls</color>!"
-限定款上架中=Limited edition available <size\=1>.</size>
+限定款上架中=Limited Edition Available <size\=1>.</size>
 r:"^1週年限定倒計時：(\d+)天(\d+)時$"="1st Anniversary Limited Countdown: $1d $2h"
+r:"^限定倒計時：(\d+)天(\d+)時$"="Time: $1d $2h"
 圖鑑詳情=Details
 抽1次=1 Pull
 抽5次=5 Pulls
@@ -1718,6 +1725,18 @@ r:"^怪盜的週年派對\((\d+)/(\d+)\)$"="<size\=16>Thieves Anniversary Party 
 熱情狂飆=Wild Rush
 舞會造型=Ball Style
 週年蛋糕塔=Anniversary Cake
+
+菇菇大冒險=<size\=21>Mushroom Adventure</size>
+r:"^菇菇大冒險\((\d+)/(\d+)\)$"="<size\=18>Mushroom Adventure ($1/$2)</size>"
+學者菇菇=Scholar Mushroom
+魔法菇菇=Magician Mushroom
+吟遊菇菇=Bard Mushroom
+僧侶菇菇=Monk Mushroom
+守衛菇菇=Guard Mushroom
+勇者菇菇=Hero Mushroom
+公主菇菇=Princess Mushroom
+邪惡毒菇菇=Evil Mushroom
+菇菇森林=Mushroom Forest
 
 sr:"^(.*)遊戲廳中的娃娃機，\n本期可限時抓取超稀有娃娃\n「<color\=#ffd145>(.*)</color>」、「<color\=#ffd145>(.*)</color>」。$"="<size\=23>Crane machine in the $1 arcade,\ncan obtain the limited super rare doll\n[<color\=#ffd145>$2</color>], [<color\=#ffd145>$3</color>].</size>"
 娃娃機=Crane Game
@@ -2523,22 +2542,22 @@ r:"^材料轉化\（可轉化：(\d+)個\）$"="<size\=25>Material Conversion (C
 將消耗同類型材料轉化，溢出材料自動返還=<size\=28>Consume the same type of materials. \nAutomatically return overflowed materials.</size>
 合成數量：=Convert:
 
-r:"透過契約之間·認知特賣兌換$"="Redeem from Cognition Shop"
-r:"^透過契約之間·認知精選兌換$"="<size\=23>Redeem from Premium Cognition Shop</size>"
+r:"透過契約之間·認知特賣兌換$"="Exchange from Cognition Shop"
+r:"^透過契約之間·認知精選兌換$"="<size\=23>Exchange from Premium Cognition Shop</size>"
 獲取途徑=Obtain Method:
 {{A}}合體={{A}} Fusion
 sr:"^透擊敗(.*)機率獲得$"="Chance to get after defeating $1"
 sr:"^擊敗(.*)機率獲得$"="<size\=20>Chance to get after defeating $1"
-r:"^通過厄抑巡禮·極階印記兌換$"="<size\=21>Redeem from Challenge Reward - Super</size>"
-r:"^透過厄抑巡禮·超階印記兌換$"="<size\=21>Redeem from Challenge Reward - Super</size>"
-r:"^透過厄抑巡禮·高階印記兌換$"="<size\=21>Redeem from Challenge Reward - High</size>"
-r:"^透過厄抑巡禮·中階印記兌換$"="<size\=18>Redeem from Challenge Reward - Intermediate</size>"
-r:"^透過厄抑巡禮·初階印記兌換$"="<size\=21>Redeem from Challenge Reward - Basic</size>"
+r:"^通過厄抑巡禮·極階印記兌換$"="<size\=21>Exchange from Challenge Reward - Super</size>"
+r:"^透過厄抑巡禮·超階印記兌換$"="<size\=21>Exchange from Challenge Reward - Super</size>"
+r:"^透過厄抑巡禮·高階印記兌換$"="<size\=21>Exchange from Challenge Reward - High</size>"
+r:"^透過厄抑巡禮·中階印記兌換$"="<size\=18>Exchange from Challenge Reward - Intermediate</size>"
+r:"^透過厄抑巡禮·初階印記兌換$"="<size\=21>Exchange from Challenge Reward - Basic</size>"
 r:"^角色契約簽約時機率獲得$"="Signing Contract"
 r:"^{{A}}精算機等級獎勵$"="{{A}} Ticket Machine"
 r:"^挑戰心軌擇行$"="Challenge Heart Rail"
 r:"^挑戰閼凶夢之扉$"="<size\=24>Challenge Gates of the Nightmare Catcher</size>"
-r:"^助戰回饋$"="Redeem from Assist Reward"
+r:"^助戰回饋$"="Exchange from Assist Reward"
 r:"^{{A}}探索度獎勵$"="{{A}} Exploration Reward"
 
 當前陣容額外獎勵加成：=Bonus rewards for the current team:
@@ -2682,9 +2701,9 @@ r:"^一顆承載了月光的寶珠，可用於提升啟示卡經驗，使用後�
 r:"^一顆承載了星光的寶珠，可用於提升啟示卡經驗，使用後立即增加(\d+)點。$"="A crystal that carries starlight, can be used to gain $1 Revelation Card EXP."
 
 啟示=Revelation
-未知宿命橙·宙=<size\=19>Random 4★ Universe</size>
-未知宿命紫·宙=<size\=19>Random 3★ Universe</size>
-被迷霧籠罩的命運之卡，獲取後會隨機變化為一張同品質的宙位啟示卡。=<size\=22>Card of fate shrouded in mist, transforms into a random Universe Revelation Card of the same quality after purchase.</size>
+未知宿命橙·宙=<size\=19>Random 4★ Space</size>
+未知宿命紫·宙=<size\=19>Random 3★ Space</size>
+被迷霧籠罩的命運之卡，獲取後會隨機變化為一張同品質的宙位啟示卡。=<size\=22>Card of fate shrouded in mist, transforms into a random Space Revelation Card of the same quality after purchase.</size>
 宇宙的箴言=4★ Revelation
 來自宇宙的命運指引，打開後可自選一張橙色指定套裝的基礎啟示卡。=A guidance of fate from the Universe, can be used to gain 1 Orange Revelation Card from any set
 r:"^是否確認選擇「(.*)」？\n需在對應怪盜開放後，才能裝備。$"="Get Revelation Card from this set?"
@@ -2719,20 +2738,23 @@ sr:"^未知宿命橙·(.*)"="Random 4★ $1"
 秘聞商會的專屬貨幣，可以在怪盜秘聞限時開放章節中的「秘聞商會」兌換獎勵，每期限時開放活動結束後，點券將會失效。=Exclusive currency used in [Mysteries Shop]. All tickets will expire when the event ends.
 『秘聞點券』\n秘聞商會的專屬貨幣，可以在怪盜秘聞限時開放章節中的「秘聞商會」兌換獎勵，每期限時開放活動結束後，點券將會失效。=[Mysteries Ticket]\nExclusive currency used in [Mysteries Shop]. All tickets will expire when the event ends.
 
-在{{A}}商店進行原晶兌換=<size\=25>Redeem from {{A}}'s Shop</size>
+在{{A}}商店進行原晶兌換=<size\=25>Exchange from {{A}}'s Shop</size>
 {{A}}商店購買獲得=<size\=25>Purchase from {{A}}'s Shop</size>
 透過{{A}}商店購買=<size\=25>Purchase from {{A}}'s Shop</size>
-完成{{A}}任務=Completion Phantom Pass Missions
+完成{{A}}任務=Complete {{A}} Missions
+{{A}}·典藏版獎勵=Premium {{A}}
+{{A}}·珍藏版獎勵=Premium+ {{A}}
 {{A}}·典藏版=From the Premium Phantom Pass
-輕音部徽章兌換=Redeem at the Music Club
-足球部徽章兌換=Redeem at the Soccer Club
-遊戲中心娃娃機位置兌換=Redeem at the Arcade
-透過樂園百貨兌換=<size\=25>Redeem from Carpe Diem Shop</size>
-透過心海秘所兌換=Redeem from Velvet Shop
+輕音部徽章兌換=Exchange at the Music Club
+足球部徽章兌換=Exchange at the Soccer Club
+遊戲中心娃娃機位置兌換=Exchange at the Arcade
+透過契約之間兌換=Exchange from Cognition Shop
+透過樂園百貨兌換=<size\=25>Exchange from Carpe Diem Shop</size>
+透過心海秘所兌換=Exchange from Velvet Shop
 參與心之海試煉獲得=Take on the Trials from the Sea of Souls
 參與天鵝絨試煉獲得=Take on Velvet Trials
 參與星盤試煉獲得=Take on Astrolabe Trials
-透過氣運駐場兌換=Redeem from Destiny Land
+透過氣運駐場兌換=Exchange from Destiny Land
 
 商品已售罄。=Item is sold out.
 明日領取=Claim Tomorrow
@@ -2976,6 +2998,7 @@ r:"^累計登入十二天\((\d+)/(\d+)\)$"="<size\=28>Login for 12 days ($1/$2)<
 r:"^通關(.*)難度(\d+)\((\d+)/(\d+)\)$"="Clear Difficulty $2 ($3/$4)"
 r:"^累計在(.*)開啟(\d+)個寶箱\((\d+)/(\d+)\)$"="Open $2 Treasure Chests ($3/$4)"
 sr:"^累計在(.*)收集(\d+)個(.*)\((\d+)/(\d+)\)$"="Collect $2 $3 in $1 ($4/$5)"
+r:"^關卡(\d+)-(\d+)探索進度達到(\d+%)及以上$"="Reach $3 Exploration on all Level $1-$2"
 r:"^(.*)所有關卡探索進度均到達100%\((\d+)/(\d+)\)$"="Reach 100% Exploration on all levels ($2/$3)"
 r:"^(.*)所有關卡進度均到達100%\((\d+)/(\d+)\)$"="Reach 100% Exploration on all levels ($2/$3)"
 r:"^參加(\d+)次任意都市日程\((\d+)/(\d+)\)$"="Participate in any $1 City Activities ($2/$3)"
