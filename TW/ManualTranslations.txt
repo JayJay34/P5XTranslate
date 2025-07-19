@@ -11,6 +11,7 @@ r:"^(.*)版本$"="Version $1"
 登入中……=Logging in...
 伺服器維護中，請查看遊戲公告。=Server is under maintenance.
 暫無消息=No news
+尚無消息=No news
 密  碼：=Password:
 用戶名：=Username:
 伺服器=Server
@@ -202,7 +203,9 @@ sr:"^已為(.*)點讚。$"="Liked $1."
 加好友=Add
 私聊=Private Message
 尚未輸入簽名=No Signature
+最近協助=Recent Assist
 設置協助怪盜=Select Assist Thief
+未設置協助怪盜=No Assist Thief
 只能設置兩個協助怪盜哦！=Can only select two Assist Thieves!
 置頂=Pin
 取消置頂=Cancel pin
@@ -237,6 +240,7 @@ r:"^待設置$"="None"
 點擊空白區域繼續=Click any blank space to continue
 點擊任意空白處繼續=Click any blank space to continue
 點擊任意空白處關閉=Click any blank space to close
+點擊空白處關閉=Click any blank space to close
 點任意位置關閉=Click anywhere to close
 敬請期待=Stay tuned!
 決戰篇=Finale
@@ -438,6 +442,7 @@ Important Consumables
 /體力=    /Stamina
 體力=Stamina
 體力值已滿=Stamina maxed
+（體力不足）=Insufficient Stamina
 r:"^『體力』\n探索{{A}}所需的基本能量，隨時間勻速恢復。\n下次恢復：<color\=#FFC000>(.*)</color>\n全部恢復：<color\=#FFC000>(.*)</color>$"="[Stamina]\nThe basic energy needed to explore the {{A}}, restores with time.\nNext one: <color\=#FFC000>$1</color>\nFully restored: <color\=#FFC000>$2</color>"
 r:"^已購買(\d+)/(\d+)次（每日05:00重置）$"="Purchased $1/$2 times \n(Reset at 5 am UTC+8 daily)"
 行動力補給=Energy Supply
@@ -641,8 +646,19 @@ r:"^電<color\=#ff0000ff>影</color>院$"="Th<color\=#ff0000ff>ea</color>ter"
 {{A}}診所=<size\=18>{{A}} Medical Clinic</size>
 r:"^武<color\=#ff0000ff>見</color>診所$"="Take<color\=#ff0000ff>mi</color> Medical Clinic"
 r:"^武<color\=#ff0000ff>見</color> 妙$"="T<color\=#ff0000ff>ae</color> Takemi"
+反正最近也沒有什麼客人來，\n要不要直接休息幾天呢……=Not many patients have been coming in lately...
+早啊，這麼早就出門了嗎？\n看起來你很閒嘛。=Oh, good morning. You look tired.
+晚安，這個時間還在外面閒逛嗎。\n小孩子就早點回家睡覺吧。=Good evening. Don't you think you're a bit young to be out at this time of night?
+又是個適合偷懶的大晴天呢……=Nice weather today.
+雖然和我沒什麼關係就是了。=Well, not my problem...
 所以，你今天有什麼事？=So, what are you here for today?
 那就到診療間去吧。=Then let's head into the examination room.
+請多保重。=Take care now.
+看起來要下雨了。=Looks like it's about to rain.
+要出門的話，\n還請好好確認下降雨機率哦。=Might not be a bad idea to check the weather before heading out...
+話說，今天想要什麼？=So what are you here for today?
+外面雨真大啊，\n這種天氣就早點老實回家如何？=It's pouring out there. \nYou'd better get home quick.
+下雨天還在外面遊蕩導致著涼的話，\n會給別人添麻煩的。=If you catch a cold wandering around in the rain, you could spread it to other people.
 r:"^前<color\=#ff0000ff>往</color>{{A}}$"="Go <color\=#ff0000ff>to</color> {{A}}"
 r:"^<color\=#ff0000ff>澡</color>堂$"="Ba<color\=#ff0000ff>th</color>house"
 在澡堂泡澡=<size\=28>Bathe in the bathhouse</size>
@@ -795,6 +811,7 @@ r:"^(\d+)小時(\d+)分鐘$"=" $1h $2m"
 r:"^(\d+)時(\d+)分(\d+)秒$"=" $1h $2m $3s"
 r:"^(\d+)分鐘$"=" $1m"
 r:"^(\d+)分$"=" $1m"
+r:"^剩餘(\d+)天(\d+)$"="$1d $2 left"
 
 r:"^(\d+)天(\d+)時後解鎖$"="Unlocks after $1d $2h"
 r:"^(\d+)時(\d+)分後解鎖$"="Unlocks after $1h $2m"
@@ -819,8 +836,9 @@ r:"^<sprite\=(\d+) tint\=1>時<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>分�
 擁有=Owned
 持有數=Owned
 免費=FREE
-r:"^領獎$"="Claim"
-r:"^領取$"="<size\=28>Claim</size>"
+領獎=Claim
+領取=<size\=28>Claim</size>
+點擊領取=Click to Claim
 明日\n可領=Claim\nTmr
 已領取=Claimed
 可領獎=Claim
@@ -837,6 +855,7 @@ r:"^領取$"="<size\=28>Claim</size>"
 貨幣=Currency
 怪盜等級=Thief Lv
 怪盜品質=Thief Rarity
+角色品質=Thief Rarity
 怪盜評級=Score
 意識等級=Awareness Lv
 面具品質=Rarity
@@ -1299,6 +1318,7 @@ r:"^購買後，提升至(\d+)級，可獲得以下獎勵$"="Buy to Lv. $1 and g
 禮包=Gift Bag
 成長經驗=<size\=26>Phantom Pass EXP</size>
 r:"^購買立即獲得<size\=44><sprite\=27 tint\=1></size>(\d+)$"="<size\=18>Recieve <size\=44><sprite\=27 tint\=1></size> x$1 upon purchase</size>"
+r:"^購買立即獲得<size\=(\d+)><sprite\=(\d+) tint\=(\d+)></size>%s$"="<size\=18>Recieve <size\=$1><sprite\=$2 tint\=$3></size>%s upon purchase</size>"
 本週累計「今日目標」領獎次數\n「下週一」領取對應「補給禮包」=<size\=22>Get Daily Pass rewards for the week</size>\n<size\=22>and the Supply Pack for next Monday</size>
 本週累計「今日目標」領獎次數\n「<color\=#ff3b37>後日登入</color>」領取對應「補給禮包」=<size\=22>Get Daily Pass rewards for the week</size>\n<size\=18>and the Supply Pack for <color\=#ff3b37>the day after tomorrow</color></size>
 本週累計「今日目標」領獎次數\n「<color\=#ff3b37>明日登入</color>」領取對應「補給禮包」=<size\=22>Get Daily Pass rewards for the week</size>\n<size\=22>and the Supply Pack for <color\=#ff3b37>tomorrow</color></size>
@@ -1510,6 +1530,7 @@ sr:"^「當未觸發UP或保底規則時，所有武器均分基礎獲取機率�
 月光小夜曲=The Moonlight
 復甦的弓矢=The Breeze Of Love
 鋼拳的意志=Defender's Thunder
+甜蜜的禁忌=Strawberry Magic
 
 ----------
 Gachapon + Crane (Capsule)
@@ -1876,6 +1897,7 @@ r:"^人格指數提升到(\d+)級後，每(\d+)點超額的人格指數經驗，
 用於提升與協同者的親密度。=<size\=25>Used for granting Fondness.</size>
 
 r:"^作為禮物贈與協同者，可提升(\d+)點親密度，首次贈送額外增加(\d+)點親密度，『喜愛之物』額外增加(\d+)點親密度。$"="<size\=25>\nGrants $1 Fondness. \nFirst time bonus grants $2 Fondness. \n[Favourite Items] grants $3 Fondness.</size>"
+好感度描述=Fondness
 用於提升與協同者的好感度。=<size\=25>Used for granting Fondness.</size>
 sr:"^「(.*)」可能會喜歡這件禮物。\n基礎好感度\+(\d+)，偏好禮物額外\+(\d+)，偏好禮物首次贈送額外\+(\d+)。$"="[$1] might like this gift. \nFondness +$2 \nFavourite Items +$3 \nFavourite Items First Time Bonus +$4"
 sr:"^「(.*)」可能會喜歡這件禮物。\n基礎好感度\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物額外\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物首次贈送額外\+(\d+)。$"="[$1] might like this gift. \nFondness +$2 (<size\=40><sprite\=1></size>+$3)\nFavourite Items +$4 (<size\=40><sprite\=1></size>+$5)\nFavourite Items First Time Bonus +$6"
@@ -2168,6 +2190,9 @@ r:"^{{A}}似乎有話要說，要陪她嗎？$"="{{A}} seems to have something t
 特殊的家政服務=<size\=24>Special domestic service</size>
 {{A}}似乎不太放心獨自生活的你……={{A}} is worried about you living alone...
 
+意外的甜品=<size\=24>Unexpected dessert</size>
+{{A}}想試試做甜品……={{A}} wants to try making desserts...
+
 調查迫近的「威脅」=<size\=24>Investigate the \nlooming "Threat"</size>
 清似乎認為有「邪惡力量」侵蝕了你家……=Kiyoshi seems to think "evil forces" have corrupted your home...
 清的興致很高，要陪他嗎？=Kiyoshi seems very interested. \nWant to accompany him?
@@ -2427,6 +2452,7 @@ r:"^票務等級達到 (\d+) 級 可獲得$"="Claim at Ticket Level $1"
 「{{A}}」票務等級已達上限=<size\=23>[{{A}}] Ticket Lv. maxed</size>
 可能獲得=Can get
 里程等級：=    Ticket
+里程等級達到上限，暫無更多獎勵=Ticket Lv. Maxed
 r:"^精<color\=#ff0000ff>算</color>機$"="F<color\=#ff0000ff>a</color>re Adjustment Machine"
 
 尚未發現該地區。=Did not discover area.
@@ -2566,6 +2592,7 @@ r:"^{{A}}探索度獎勵$"="{{A}} Exploration Reward"
 活動期間，成功挑戰「養成材料」中的技能升級材料、怪盜潛能材料、武器突破材料、怪盜天賦材料副本，可以獲得雙份獎勵。=During the event, gain 2x rewards after clearing [Realm of Repression] for Incense, Perfume, Ore, Bell of Stars.
 活動期間，成功挑戰「啟示套裝」中的副本，可以獲得雙份獎勵。=During the event, gain 2x rewards after clearing [Realm of Repression] for Revelation.
 今日雙份剩餘次數：=Daily 2x Rewards:
+今日雙倍剩餘次數：=Daily 2x Rewards:
 每日次數：=Attempt(s):
 限時關每日次數：=Daily Attempt(s):
 限時關今日剩餘次數：=Daily Attempt(s):
@@ -2906,7 +2933,7 @@ sr:"^當前任務目標處於<color\=#FF0000>(.*)</color>，\n是否立即前往
 傳達心意的音符·上=Melodies of the Heart·Part 1
 傳達心意的音符·下=Melodies of the Heart·Part 2
 天才的熔爐=Genius' Furnace
-風平浪靜的日子=Calm Days
+風平浪靜的日子=Peaceful Days
 
 離開賭場=Escape from the casino
 上床休息=Go to bed
