@@ -24,9 +24,17 @@ INFILTRATION TOOLS
 使用效果：由於是手工製作，外形略顯粗糙。在水壩內使用，應該能探測到不錯的寶物。=<size\=24>Effect: Handmade and rough in appearance. \nShould be able to detect treasures when used in a dam.</size>
 使用效果：由於是手工製作，外形略顯粗糙。在蟻穴內使用，應該能探測到不錯的寶物。=<size\=24>Effect: Handmade and rough in appearance. \nShould be able to detect treasures when used in an anthill.</size>
 
+與「<color\=#FFC000>{{A}}</color>」好感度提升至<color\=#FFC000>rank4</color>後，\n增加尋寶儀、潛入道具及禮物的製作。=<size\=24>Gain Synergy with [<color\=#FFC000>{{A}}</color>]: You can craft more Treasure Detectors, infiltration tools, and gifts.</size>
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，製作禮物時，有機率返還部分製作材料。$"="<size\=24><color\=#FFC000>Rank $1</color>: Some materials may be returned after crafting gifts.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n製作禮物時，有機率額外產出一個。$"="<size\=24><color\=#FFC000>Rank $1</color>: You may produce an extra item when crafting gifts.</size>"
+
 ----------
 Combat Items
 ----------
+與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n開放部分戰鬥內小道具的製作。=<size\=24>Gain Synergy with [<color\=#FFC000>{{A}}</color>]: You can craft more combat items.
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n開放更多戰鬥內道具的製作。$"="<size\=24><color\=#FFC000>Rank $1</color>: You can craft even more combat items.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n戰鬥道具製作時機率返還部分材料。$"="<size\=24><color\=#FFC000>Rank $1</color>: You may get back some materials after crafting combat items.</size>"
+
 破壞爆竹=Destruction Firecracker
 r:"^戰鬥道具，可隨機造成一次單體物理或射擊屬性傷害。\n在工作臺使用『水銀』·『白磷』製作而成。$"="Combat item. Randomly deals Phys or Gun damage once."
 元素爆竹=Elemental Firecracker
@@ -346,25 +354,25 @@ Akihabara Electronics Retail Store
 Takemi Items
 ----------
 卡加消除液=<size\=24>Kajaclear-R</size>
-消毒用液體，在戰鬥中使用，使用後立即消除1名敵人的1個狀態上升效果。=Sterilizing liquid. Removes 1 stats buff for 1 foe.
+消毒用液體，在戰鬥中使用，使用後立即消除1名敵人的1個狀態上升效果。=Removes 1 stats buff for 1 foe.
 坤達消除液=<size\=24>Kundaclear-R</size>
-消毒用液體，在戰鬥中使用，使用後立即消除1名同伴的1個狀態降低效果。=Sterilizing liquid. Removes 1 stats debuff for 1 ally.
+消毒用液體，在戰鬥中使用，使用後立即消除1名同伴的1個狀態降低效果。=Removes 1 stats debuff for 1 ally.
 療傷藥片·小=<size\=24>Recov-R: S
-r:"^醫療用品，在戰鬥中使用，使用後立即恢復1名同伴(\d+%)的生命值。$"="Medical item. Restores $1 HP to 1 ally."
+r:"^醫療用品，在戰鬥中使用，使用後立即恢復1名同伴(\d+%)的生命值。$"="Restores $1 HP to 1 ally."
 療傷藥片·中=<size\=24>Recov-R: M</size>
 療傷藥片·大=<size\=24>Recov-R: L</size>
 寧息軟膏=<size\=24>Nohar-M</size>
-醫療用品，在戰鬥中使用，使用後立即消除1名同伴的元素異常效果。=Medical ointment. Cures 1 Elemental Ailment for 1 ally.
+醫療用品，在戰鬥中使用，使用後立即消除1名同伴的元素異常效果。=Cures Elemental Ailments for 1 ally.
 舒心凝膠=<size\=24>Relax Capsule</size>
-藥品，在戰鬥中使用，能消除1名同伴的暴怒·絕望·洗腦·混亂·恐怖·嘲諷狀態。=Topical balm. Cures Rage/ Despair/ Brainwash/ Confusion/ Fear for 1 ally.
+藥品，在戰鬥中使用，能消除1名同伴的暴怒·絕望·洗腦·混亂·恐怖·嘲諷狀態。=Cures Rage, Despair, Brainwash, Confusion, Fear, and Taunt for 1 ally.
 定神膠囊=<size\=24>Alert Capsule</size>
-醫療用品，在戰鬥中使用，使用後消除1名同伴的眩暈·遺忘·睡眠狀態。=Medical capsule. Cures Dizzy/ Forget/ Sleep for 1 ally.
+醫療用品，在戰鬥中使用，使用後消除1名同伴的眩暈·遺忘·睡眠狀態。=Cures Dizzy, Forget, and Sleep for 1 ally.
 氣力補給包S=<size\=24>Stamina Kit S</size>
-r:"^補給品，在戰鬥中使用，使用後立即恢復１名同伴(\d+%)的精力值。$"="Medical kit. Restores $1 SP to 1 ally."
+r:"^補給品，在戰鬥中使用，使用後立即恢復１名同伴(\d+%)的精力值。$"="Restores $1 SP to 1 ally."
 氣力補給包M=<size\=24>Stamina Kit M</size>
 氣力補給包L=<size\=24>Stamina Kit L</size>
 {{A}}全療藥=<size\=24>Takemedic-All</size>
-r:"^醫療用品，在戰鬥中使用，使用後立即恢復全體隊友(\d+%)的生命值。$"="Medical item. Restores $1 HP to all allies."
+r:"^醫療用品，在戰鬥中使用，使用後立即恢復全體隊友(\d+%)的生命值。$"="Restores $1 HP to party."
 {{A}}全療藥V=<size\=21>Takemedic-All V</size>
 
 ----------
