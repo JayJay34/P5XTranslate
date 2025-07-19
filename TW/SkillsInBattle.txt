@@ -2,7 +2,7 @@ Skill Level up Description //
 基礎數值=Base Stats
 狀態資訊=Stats
 當前無狀態資訊=No Status Info
-技能效果=Skill Effect
+技能效果=Skill Effects
 資訊=Info
 武器效果=Weapon Effect
 啟示效果=Revelation Effect
@@ -754,11 +754,12 @@ sr:"^<color\=#FF0000>(.*)</color>進入了狂怒狀態！$"="<color\=#FF0000>$1<
 sr:"^<color\=#FF0000>(.*)</color>進入了狂暴狀態……$"="<color\=#FF0000>$1</color> entered Frenzy..."
 sr:"^<color\=#FF0000>(.*)</color>進入了懊惱狀態…$"="<color\=#FF0000>$1</color> entered Vexation..."
 sr:"^<color\=#FF0000>(.*)</color>進入了懊惱狀態……$"="<color\=#FF0000>$1</color> entered Vexation..."
+sr:"^<color\=#FF0000>(.*)</color>「(.*)」了……$"="<color\=#FF0000>$1</color> is [$2]..."
 sr:"^<color\=#FF0000>(.*)</color>進入「(.*)」……$"="<color\=#FF0000>$1</color> entered [$2]..."
 sr:"^<color\=#FF0000>(.*)</color>進入「(.*)」狀態……$"="<color\=#FF0000>$1</color> entered [$2]..."
 sr:"^<color\=#FF0000>(.*)</color>進入了「(.*)」狀態……$"="<color\=#FF0000>$1</color> entered [$2]..."
 sr:"^<color\=#FF0000>(.*)</color>陷入了「(.*)」，受到的傷害提升……$"="<color\=#FF0000>$1</color> entered [$2]..."
-sr:"^<color\=#FF0000>(.*)</color>處於(.*)狀態，無法行動……$"="<color\=#FF0000>$1</color> cannot act!"
+sr:"^<color\=#FF0000>(.*)</color>處於(.*)狀態，無法行動……$"="<color\=#FF0000>$1</color> unable to act!"
 sr:"^<color\=#FF0000>(.*)</color>退出了蓄力狀態……$"="<color\=#FF0000>$1</color> exited Charge..."
 sr:"^<color\=#FF0000>(.*)</color>解除「(.*)」狀態……$"="<color\=#FF0000>$1</color> removed [$2]..."
 sr:"^<color\=#FF0000>(.*)</color>恢復了……$"="<color\=#FF0000>$1</color> recovered..."
@@ -1399,8 +1400,8 @@ r:"^受到萬能傷害提高(\d+(.\d+)?(%)?)$"="Increase Almighty DMG Taken by $
 
 r:"^受到的治療效果降低(\d+(.\d+)?(%)?)$"="Decrease Healing Received by $1"
 
-一回合無法行動，防禦降低=Cannot act, decrease DEF
-r:"^無法行動，受到最終傷害提升(\d+(.\d+)?(%)?)$"="<size\=26>Cannot act, increase Final DMG Taken by $1</size>"
+一回合無法行動，防禦降低=Unable to act, decrease DEF
+r:"^無法行動，受到最終傷害提升(\d+(.\d+)?(%)?)$"="<size\=25>Unable to act, increase Final DMG Taken by $1</size>"
 
 r:"^回合末失去一定生命值，最終受到傷害提升(\d+%)，可疊加(\d+)層$"="<size\=24>Lose a certain amount of HP at the end of the turn; \nIncrease Final DMG Taken by $1, up to $2 stacks</size>"
 r:"^造成傷害提高(\d+%)、每回合流失一定生命值，可疊加(\d+)層，不可被驅散$"="<size\=24>Lose a certain amount of HP at the end of the turn; \nIncrease DMG Dealt by $1, up to $2 stacks; \nCannot be dispelled</size>"
