@@ -11,6 +11,9 @@ UI
 在{{A}}影視城中獲得……應該可以在工作臺與『老式遊戲機』·『紅磷粉』合成影視城探索道具。=Obtained from the Studio of Vanity, can be used with [Vintage Game Console] and [Red Phosphorus Powder] to craft studio exploration item.
 在{{A}}水壩中獲得……應該可以在工作臺與『老式遊戲機』·『珠光粉』合成水壩探索道具。=Obtained from the Dam of Wrath, can be used with [Vintage Game Console] and [Peral Powder] to craft dam exploration item.
 探索度：=<size\=19>Explored:</size>
+主線進度=Main Story Progress
+當前進度=Current Progress
+挑戰進度=Challenge Progress
 可用功能=Features
 調整陣容=Party Switch
 面具培養=Velvet Room
@@ -28,6 +31,7 @@ r:"^觀察模式冷卻中，(\d+)秒後可用！$"="Third Eye in cooldown"
 交錯之影=<size\=25>Tangled Shadow</size>
 狂化惡黨=<size\=25>Berserker Shadow</size>
 寶箱守衛=<size\=28>Treasure Guard</size>
+普通陰影=Shadow
 動態難度已開啟\n敵人等級會隨著主角等級的提升而改變=Dynamic Difficulty is on. \nfoe level will change as Wonder's level increases
 狂<color\=#ff0000ff>化</color>惡黨=Ber<color\=#ff0000ff>se</color>rk Shadow
 詭<color\=#ff0000ff>譎</color>之徒=En<color\=#ff0000ff>ig</color>ma Shadow
@@ -37,6 +41,7 @@ r:"^觀察模式冷卻中，(\d+)秒後可用！$"="Third Eye in cooldown"
 本次戰鬥無法進行養成與更換面具。=Cannot upgrade characters and change Personas.
 本次戰鬥無法進行養成。=Cannot upgrade characters.
 當前沒有可以調整的技能=Cannot change skill
+陣容無法調整=Cannot change party
 
 嗯？要從{{A}}撤退，返回都市嗎？=Hm? Want to retreat from the {{A}} \nand head back to the city?
 這個寶箱很稀有！\n吾等需要準備<color\=#ff0000>開鎖工具</color>才行。=This treasure chest is very rare!\nWe need a <color\=#ff0000>Lockpick</color> to open.
@@ -620,6 +625,12 @@ r:"^狂<color\=#ff0000ff>躁</color>的隊長蟻$"="M<color\=#ff0000ff>a</color>
 順序連入:<color\=#c51e03>紅</color><color\=#c51e03>紅</color><color\=#19924f>綠</color><color\=#19924f>綠</color><color\=#0c88e0>藍</color><color\=#0c88e0>藍</color>。=<size\=20>Connect in the order of: <color\=#c51e03>Red</color> <color\=#c51e03>red</color> <color\=#19924f>green</color> <color\=#19924f>green</color> <color\=#0c88e0>blue</color> <color\=#0c88e0>blue</color>.</size>
 順序連入:<color\=#c51e03>紅</color><color\=#19924f>綠</color><color\=#0c88e0>藍</color><color\=#0c88e0>藍</color><color\=#19924f>綠</color><color\=#c51e03>紅</color>。=<size\=20>Connect in the order of: <color\=#c51e03>Red</color> <color\=#19924f>green</color> <color\=#0c88e0>blue</color> <color\=#0c88e0>blue</color> <color\=#19924f>green</color> <color\=#c51e03>red</color>.</size>
 順序連入:<color\=#19924f>綠</color><color\=#0c88e0>藍</color><color\=#0c88e0>藍</color><color\=#19924f>綠</color><color\=#c51e03>紅</color><color\=#c51e03>紅</color>。=<size\=20>Connect in the order of: <color\=#19924f>Green</color> <color\=#0c88e0>blue</color> <color\=#0c88e0>blue</color> <color\=#19924f>green</color> <color\=#c51e03>red</color> <color\=#c51e03>red</color>.</size>
+順序連入:<color\=#19924f>綠</color><color\=#0c88e0>藍</color><color\=#c51e03>紅</color>。=<size\=20>Connect in the order of: <color\=#19924f>Green</color> <color\=#0c88e0>blue</color> <color\=#c51e03>red</color>.</size>
+順序連入:<color\=#19924f>綠</color><color\=#0c88e0>藍</color><color\=#c51e03>紅</color>=<size\=20>Connect in the order of: <color\=#19924f>Green</color> <color\=#0c88e0>blue</color> <color\=#c51e03>red</color></size>
+順序連入:<color\=#19924f>綠</color><color\=#0c88e0>藍</color><color\=#c51e03>紅</color><color\=#19924f>綠</color>。=<size\=20>Connect in the order of: <color\=#19924f>Green</color> <color\=#0c88e0>blue</color> <color\=#c51e03>red</color> <color\=#19924f>green</color>.</size>
+順序連入:<color\=#19924f>綠</color><color\=#0c88e0>藍</color><color\=#c51e03>紅</color><color\=#19924f>綠</color>=<size\=20>Connect in the order of: <color\=#19924f>Green</color> <color\=#0c88e0>blue</color> <color\=#c51e03>red</color> <color\=#19924f>green</color></size>
+順序連入:<color\=#19924f>綠</color><color\=#0c88e0>藍</color><color\=#c51e03>紅</color><color\=#0c88e0>藍</color><color\=#19924f>綠</color>。=<size\=20>Connect in the order of: <color\=#19924f>Green</color> <color\=#0c88e0>blue</color> <color\=#c51e03>red</color> <color\=#0c88e0>blue</color> <color\=#19924f>green</color>.</size>
+順序連入:<color\=#19924f>綠</color><color\=#c51e03>紅</color><color\=#0c88e0>藍</color><color\=#19924f>綠</color><color\=#0c88e0>藍</color>。=<size\=20>Connect in the order of: <color\=#19924f>Green</color> <color\=#c51e03>red</color> <color\=#0c88e0>blue</color> <color\=#19924f>green</color> <color\=#0c88e0>blue</color>.</size>
 順序連入:<color\=#c51e03>紅</color><color\=#c51e03>紅</color><color\=#19924f>綠</color><color\=#19924f>綠</color><color\=#0c88e0>藍</color>。=<size\=20>Connect in the order of: <color\=#c51e03>Red</color> <color\=#c51e03>red</color> <color\=#19924f>green</color> <color\=#19924f>green</color> <color\=#0c88e0>blue</color>.</size>
 順序連入:<color\=#c51e03>紅</color><color\=#19924f>綠</color><color\=#0c88e0>藍</color><color\=#19924f>綠</color><color\=#c51e03>紅</color>。=<size\=20>Connect in the order of: <color\=#c51e03>Red</color> <color\=#19924f>green</color> <color\=#0c88e0>blue</color> <color\=#19924f>green</color> <color\=#c51e03>red</color>.</size>
 順序連入:<color\=#c51e03>紅</color><color\=#19924f>綠</color></color><color\=#0c88e0>藍</color><color\=#19924f>綠</color><color\=#c51e03>紅</color>。=<size\=20>Connect in the order of: <color\=#c51e03>Red</color> <color\=#19924f>green</color> <color\=#0c88e0>blue</color> <color\=#19924f>green</color> <color\=#c51e03>red</color>.</size>
@@ -628,8 +639,12 @@ r:"^狂<color\=#ff0000ff>躁</color>的隊長蟻$"="M<color\=#ff0000ff>a</color>
 ----------
 PALACE 1 BOSS
 ----------
+曾經名噪一時的職業棒球手{{A}}的陰影，在{{B}}的{{C}}中化身為大滿貫投手，統領著這幢龐大且華麗的棒球館。\n哪怕是少女的攀附和球員的臣服，也難以滿足他變質的支配慾。\n他可是球場上擁有最強實力的王者，決不允許任何威脅他地位的存在！={{A}}'s form in the cognitive world. His appearance reflects his distorted desires.
+化身為「{{A}}」的惡魔，象徵著{{B}}、散發著扭曲氣息的翅膀，以及充斥著快感的投球機，是他慾望空前膨脹的表現。\n在觀眾如癡如醉的目光中，他投出的必勝絕殺球令隊友瘋狂、令對手肝膽俱裂……\n他就是球場之上唯一的焦點、不朽的傳奇。=Shadow Kiuchi completely distorted by desire. Having lost all sense of self, he can no longer maintain a human form.
+一心一意為{{A}}奉獻的啦啦隊少女，身穿明快的制服，洋溢著青春的笑容，眼神中充滿了對{{A}}的狂熱與崇拜。={{A}}'s personal cheerleader born from his cognition. She exists solely to cheer him on.
+對{{A}}絕對忠誠的啦啦隊少女，身體輕盈地舞動、活力四射地為{{A}}加油助威，成為賽場之上一道美麗的風景線。={{A}}'s personal cheerleader born from his cognition. She exists solely to cheer him on.
 sr:"^與(.*)決戰$"="Defeat $1"
-注意強力攻擊=Watch out for powerful attack
+注意強力攻擊=Brace for a powerful attack
 截斷{{A}}的能量來源=Cut off {{A}}'s energy supply
 擊敗孤注一擲的{{A}}=Defeat desperate {{A}}!
 
@@ -637,7 +652,7 @@ sr:"^與(.*)決戰$"="Defeat $1"
 絕對癡心的少女=Delusional Girl
 
 未嘗一敗=Undefeated
-準備釋放強力一擊並且提升=Preparing powerful attack,\nincrease damage
+準備釋放強力一擊並且提升=Preparing powerful attack, increase damage
 王牌投手=Ace Pitcher
 準備釋放強力一擊並且傷害提升=Preparing to use a strong attack
 加油=You can do it
@@ -651,13 +666,14 @@ r:"^無法行動，受到傷害提升(\d+%)$"="Unable to act, increase DMG Taken
 颶風散射=Cyclone Scattershot
 對全體敵人造成疾風屬性傷害，有機率使目標進入風襲狀態。=Deal Wind damage to all foes, with a chance to inflict Windswept.
 r:"^對所有敵人造成(\d+)~(\d+)次物理屬性傷害。$"="Deal Phys damage to all foes $1-$2 times."
-弧旋崇拜球=Screwball of Warship
-爆裂崇拜球=Blitzball of Warship
+弧旋崇拜球=Lustful Drive Ball
+爆裂崇拜球=Fanatic's Fastball
 
 {{A}}，未嘗一敗=Undefeated
 {{A}}，王牌投手=Ace Pitcher
 
 下回合將釋放強力一擊=Activate 1 powerful attack next turn
+下回合將受到「{{A}}」的攻擊=Take {{A}}'s attack next turn
 
 <color\=#FF0000>{{A}}</color>變得急躁……=<color\=#FF0000>Takeyuki Kiuchi</color> became impatient...
 <color\=#FF0000>{{A}}</color>變得更加急躁……=<color\=#FF0000>{{A}}</color> became more impatient...
@@ -704,42 +720,48 @@ r:"^1、{{A}}血量首次低於(\d+%)時，會釋放「真·宣戰佈告」，�
 ----------
 PALACE 2 BOSS
 ----------
-辨別{{A}}的分身=Identify {{A}}'s copy
-找到{{A}}的破綻=Find {{A}}'s vulnerability
-辨別{{A}}的魔劍並擊破之=Identify and break {{A}}'s sword
+常年活躍於電視節目中的美食藝人，{{A}}的陰影，在{{B}}的{{D}}中身穿華麗和服，化身為經典劍戟片中的劍豪，手持利劍，步履沉穩，招式兇狠凌厲。\n每一刀斬擊，都凸顯其身為故事絕對主角的魄力與風采，畢竟{{C}}的聲譽決不容許半分詆毀！={{A}}'s form in the cognitive world. His appearance reflects his distorted desires.
+化身為「{{A}}」的惡魔，身披無上尊貴的戰袍，以同胞之骨為面具，手中的巨刃是為達成目的而專門鍛造的利器。\n揮舞巨刃，每一次出手，背後都飽含對名利的渴望……\n他絕不會輸，因為主角從來不會輸！=Shadow Miyazawa completely distorted by desire. Having lost all sense of self, he can no longer maintain a human form.
+辨別{{A}}的分身=Identify {{A}}'s clones
+找到{{A}}的破綻=Find {{A}}'s opening
+辨別{{A}}的魔劍並擊破之=Identify and destroy {{A}}'s Demon Sword
 
+{{A}}（替身）={{A}} Stunt Double
 投影機=Projector
-虛妄力量之劍=Fake Sword
+電影播映中不可或缺的道具，能夠形成一個絕對安全的領域，使{{A}}可以盡情演繹自己書寫的劇情。=A projector Shadow {{A}} placed in the vicinity.
+虛妄力量之劍=Sword of Vanity
+蘊含著強大力量的劍，往往不會單獨出現，而是借由其他同類的掩護一併出現在敵人面前，企圖混淆視聽。=A sword Shadow Miyazawa summoned.
 
-主角之假動作=Protagonist's Feint
-主角之斬殺=Protagonist's Execution
-超正直懲戒=Upright Punishment
-替身時刻=Double Moment
-真身與替身交換位置=Exchange places with the doubles
-主角之逆刃=Protagonist's Counter
-替身對攻擊自己的敵人造成物理屬性傷害=Doubles deal Phys damage to foes attacking you
+主角之假動作=Vanity's Strike
+主角之斬殺=Assassin's Skirmish
+超正直懲戒=Scathing Review: Flash
+替身時刻=Time for Seconds
+真身與替身交換位置=Original and Stunt Double trade places
+主角之逆刃=Infinite Reversal
+替身對攻擊自己的敵人造成物理屬性傷害=Deal Phys damage to foe that attacked Stunt Double
 下回合造成傷害大幅提高=Heavily increase DMG Dealt next turn
-一刀流·蒙太奇=One Sword Style - Montage
-四刀流·一人成軍=<size\=24>Four Sword Style - One Man Army</size>
-未能擊殺魔劍真身時對所有敵人造成大量萬能傷害。=Deal heavy Almighty damage to all foes when foes failed to break the real sword
+一刀流·蒙太奇=Iai of Resentment
+四刀流·一人成軍=Ultimate: Clean Sweep
+未能擊殺魔劍真身時對所有敵人造成大量萬能傷害。=If True Sword Demon is not defeated, deal heavy Almighty damage to all foes.
 對所有敵人造成詛咒屬性傷害，對50%生命值以下的敵人附加低機率詛咒屬性即死效果，生命值越低機率越高。=Deal Curse damage to all foes with a chance of insta-kill to foes under 50% HP. The lower the HP, the higher the chance.
-奧義·明星亂舞=Ultimate - Star Flurry
-對所有敵人造成詛咒屬性傷害，使迷惑的敵人陷入洗腦狀態，持續2回合=Deal Curse damage to all foes, and inflicts Brainwash to foes with Bewilder for 2 turns.
-一刀流·不動如山=<size\=24>One Sword Style - Firm Stance</size>
-特寫迴旋斬=Close-Up Roundhouse Slash
-對所有敵人造成少量萬能傷害，對鎖定的敵人額外造成大量萬能傷害=Deal light Almighty damage to all foes, additionally deals heavy Almighty damage to the locked on foe
-無刀流·狂怒=No Sword Style - Rage
-成功擊殺魔劍真身時對所有敵人造成少量萬能傷害。=Deal light Almighty damage to all foes when foes broke the real sword
+奧義·明星亂舞=Secret Art: Awe of Vanity
+r:"^對所有敵人造成詛咒屬性傷害，使迷惑的敵人陷入洗腦狀態，持續(\d+)回合$"="Deal Curse damage to all foes, and inflict Brainwash to Confused foes for $1 turns."
+一刀流·不動如山=Demoness Slash
+特寫迴旋斬=Star's Cinematic Strike
+對所有敵人造成少量萬能傷害，對鎖定的敵人額外造成大量萬能傷害=Deal light Almighty damage to all foes, and bonus heavy Almighty damage to Locked On foe
+無刀流·狂怒=Muto-Ryu: Raging Fury
+成功擊殺魔劍真身時對所有敵人造成少量萬能傷害。=If True Sword Demon is defeated, deal light Almighty damage to all foes.
 
-迷惑=Bewilder
-被{{A}}的動作迷惑了，即將被洗腦！！=Bewildered by {{A}}, \nabout to be inflicted with Brainwash!!
-惱羞成怒=Anger
+迷惑=Confuse
+被{{A}}的動作迷惑了，即將被洗腦！！=Confused by {{A}}, \nabout to be inflicted with Brainwash!!
+惱羞成怒=Tantrum
 造成的傷害提升=Increase DMG Dealt
-被{{A}}盯上了=Locked on by {{A}}
+鎖定=Lock On
+被{{A}}盯上了=Targeted by {{A}}
 眩暈=Dizzy
 「驚恐」=Panic
 
-r:"^<color\=#FF0000>{{A}}</color>獲得了屏障，免疫一切傷害。$"="<color\=#FF0000>{{A}}</color> gained damage immunity!"
+r:"^<color\=#FF0000>{{A}}</color>獲得了屏障，免疫一切傷害。$"="<size\=26><color\=#FF0000>{{A}}</color> gained damage immunity!</size>"
 r:"^<color\=#FF0000>(.*)</color>進入了迷惑狀態……$"="Inflicted with Bewilder..."
 <color\=#FF0000>{{A}}</color>被{{B}}注視著=<color\=#FF0000>{{A}}</color> locked on by {{B}}
 <color\=#FF0000>{{B}}</color>被{{A}}注視著=<color\=#FF0000>{{B}}</color> locked on by {{A}}
@@ -750,8 +772,8 @@ r:"^<color\=#FF0000>(.*)</color>進入了迷惑狀態……$"="Inflicted with Be
 擊殺了<color\=#FF0000>魔劍替身</color>=Broke the <color\=#FF0000>sword double</color>...
 成功擊殺了<color\=#FF0000>魔劍真身</color>=Broke the <color\=#FF0000>real sword</color>!
 
-r:"^迷<color\=#000000>惑</color>$"="B<color\=#000000>e</color>wilder"
-r:"^惱<color\=#000000>羞</color>成怒$"="A<color\=#000000>n</color>ger"
+r:"^迷<color\=#000000>惑</color>$"="C<color\=#000000>o</color>nfuse"
+r:"^惱<color\=#000000>羞</color>成怒$"="T<color\=#000000>a</color>ntrum"
 r:"^眩<color\=#000000>暈</color>$"="D<color\=#000000>i</color>zzy"
 r:"^驚<color\=#000000>恐</color>$"="P<color\=#000000>a</color>nic"
 r:"^「<color\=#000000>驚</color>恐」$"="P<color\=#000000>a</color>nic"
@@ -1082,7 +1104,7 @@ r:"^對所有敵人造成萬能傷害，無視其防禦力，吸取其(\d+)點�
 能量值=Energy
 飛天狀態=Flying Form
 捕獵陷阱=Hunting Trap
-無法行動，狀態無法被驅散=Cannot act, cannot be dispelled
+無法行動，狀態無法被驅散=Unable to act, cannot be dispelled
 
 r:"^<color\=#FF0000>{{A}}</color>被{{B}}鎖定了$"="<size\=24><color\=#FF0000>{{A}}</color> locked on by {{B}}</size>"
 r:"^<color\=#FF0000>{{B}}</color>被{{A}}鎖定了$"="<size\=24><color\=#FF0000>{{B}}</color> locked on by {{A}}</size>"
@@ -1956,11 +1978,11 @@ sr:"^(\d+)回合後釋放「(.*)」！！$"="Use [$2] after $1 turn(s)!"
 sr:"^(\d+)回合後釋放<color\=#FF0000>「(.*)」</color>！！$"="Use <color\=#FF0000>[$2]</color> after $1 turn(s)!!"
 車輪殘影=Wheel Afterimage
 殘影衝撞=Afterimage Rampage
-一回合無法行動=Cannot act for 1 turn
+一回合無法行動=Unable to act for 1 turn
 sr:"^<color\=#FF0000>(.*)</color>正在蓄力，下一回合釋放「(.*)」……$"="<color\=#FF0000>$1</color> is charging, will use [$2] next turn..."
 sr:"^<color\=#FF0000>(.*)</color>進入「變速」狀態，獲取「動能」的效率翻倍……$"="<color\=#FF0000>$1</color> entered [Gear Shift], doubled [Kinetic Energy] gain..."
-sr:"^<color\=#FF0000>(.*)</color>處於「虛弱」狀態，無法行動……$"="<color\=#FF0000>$1</color> under [Weak], cannot act..."
-sr:"^<color\=#FF0000>(.*)</color>從「虛弱」異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from [Weak]!"
+sr:"^<color\=#FF0000>(.*)</color>處於「虛弱」狀態，無法行動……$"="<color\=#FF0000>$1</color> under [Weaken], unable to act..."
+sr:"^<color\=#FF0000>(.*)</color>從「虛弱」異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from [Weaken]!"
 
 背德的貴婦=Elegant Mother
 r:"^1、背德的貴婦會週期性釋放「情慾誘惑」為所有敵人添加「情慾」，被「情慾」影響的敵人在受到治療效果時會被移除(\d+)層「情慾」。\n2、背德的貴婦回合開始時，若有敵人身上的「情慾」首次達到5/10/15層，背德的貴婦會選擇其中1人對其釋放「慾望漩渦」，使其(\d+)回合內無法行動，狀態視為<color\=#FFFC40>精神異常</color>。\n3、背德的貴婦會週期性的為敵人添加「{{A}}凝視」，並在下一回合對其釋放「衝動歡愉」，對其造成念動屬性傷害，目標身上的「情慾」層數越高，造成的傷害越高。\n4、懦弱之魔影被擊殺時，會對所有敵人造成治療效果。$"="1. Elegant Mother can use [Lustful Temptation] to inflict all foes with [Lust], dispels $1 stack of [Lust] when foes with [Lust] received healing.\n2. At the start of Elegant Mother's turn, if there is a foe with 5/10/15 stacks of [Lust] for the first time, Elegant Mother will use [Desire Whirlpool] on one foe, makes them unable to act for $2 turns, this is seen as a <color\=#FFFC40>Mental Ailment</color>.\n3. Elegant Mother can inflicts foes with [Lust Gaze], then uses [Impulsive Pleasure] on them next turn, dealing Psy damage, the higher the [Lust] stack, the higher the damage.\n4. When defeating Cowardly Maya, restores HP to all foes."
@@ -2076,6 +2098,8 @@ Sea of Souls Trials (SoS)
 ----------
 心之海試煉=SoS
 段位狀態：=Status:
+當前段位：=Current Rank:
+當前星級：=Current Star:
 <color\=#FFFFFF>下期保級</color>=Relegation
 <color\=#FFF000>下期晉級</color>=<color\=#FFF000>Promotion!</color>
 保級條件：=Relegation:
@@ -2194,8 +2218,8 @@ r:"^1、進入戰鬥時，{{A}}和{{B}}各獲得(\d+)層「妖精之力」，每
 妖精之力=Fairy Power
 r:"^妖<color\=#000000>精</color>之力$"="F<color\=#000000>a</color>iry Power"
 r:"^每層使自身受到的最終傷害降低(\d+%)，隨從死亡時消耗(\d+)層重新召喚(\d+)名隨從$"="<size\=26>Each stack decrease Final DMG Taken by $1,\nconsume $2 stack to resummon $3 minion</size>"
-「虛弱」=Weak
-r:"^「<color\=#000000>虛</color>弱」$"="W<color\=#000000>e</color>ak"
+「虛弱」=Weaken
+r:"^「<color\=#000000>虛</color>弱」$"="W<color\=#000000>e</color>aken"
 
 r:"^1、特殊的{{A}}會源源不斷的召喚隨從來作戰；隨從被擊殺時，{{A}}會根據死亡隨從承受的總傷害受到萬能傷害。\n2、特殊的{{A}}及它的隨從防禦力得到大幅提升，但同時受到的最終傷害也有所提升。$"="<size\=26>1. {{A}} will keep summoning minions; When minions are defeated, {{A}} takes Almighty damage equal to the total damage the defeated minions take.\n2. Heavily increases the DEF of {{A}} and its minions, but also increases their Final DMG Taken.</size>"
 
