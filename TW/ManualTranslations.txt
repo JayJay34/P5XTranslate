@@ -302,6 +302,8 @@ WONDER釋放「<color\=#ff3b37>ONE MORE</color>」!=WONDER use [<color\=#ff3b37>
 「<color\=#ff3b37>怪盜團·集結</color>」\n提升主角至特定等級，即可獲得集結獎勵。=[<color\=#ff3b37>Phantoms Assemble</color>]\nGet rewards after reaching a specific Wonder level.
 「<color\=#ff3b37>返回</color>」活動主介面=Go back to [<color\=#ff3b37>Events</color>]
 查看「<color\=#ff3b37>相匯的·軌跡</color>」=View [<color\=#ff3b37>Daily Bonus</color>]
+r:"^開啟了前往「<color\=#ff3b37>(.*)</color>」的快速移動。$"="Can now quick travel to [<color\=#ff3b37>$1</color>]."
+點擊「<color\=#ff3b37>領取</color>」獎勵=Click to [<color\=#ff3b37>Claim</color>] rewards
 
 膽小鬼=Coward
 {{A}}中存在著一些特殊陰影，\n膽小的它們藏在油漆桶裡，\n嘗試用「<color\=#ff0000>撞擊</color>」的方式趕走它們，\n並奪取「<color\=#ff0000>桶內的寶物</color>」吧。=There are some special shadows in {{A}}. They are cowardly and hide in paint buckets, try [<color\=#ff0000>ramming</color>] them to force them out and take the [<color\=#ff0000>treasure inside the can</color>].
@@ -462,10 +464,13 @@ r:"^已購買(\d+)/(\d+)次（每日05:00重置）$"="Purchased $1/$2 times \n(R
 時序之墨=Temporal Ink
 蘊含星辰之力的墨水。定製啟示卡時，指定主屬性的，最終定製時會消耗。=Ink that contains the power of the stars, can be used to select main stat when customizing Revelation Card.
 蘊含星辰之力的墨水，可用於定製月、星、辰位置的啟示卡。=Ink that contains the power of the stars, can be used to create a customized basic Revelation Card.
+『時序之墨』\n蘊含星辰之力的墨水。定製啟示卡時，指定主屬性的，最終定製時會消耗。=[Temporal Ink]\nInk that contains the power of the stars, can be used to create a customized basic Revelation Card.
 穹謁之墨=Celestial Ink
 蘊含星辰之力的墨水。定製啟示卡時，指定副屬性的，最終定製時會消耗。=Ink that contains the power of the stars, can be used to select sub stat when customizing Revelation Card.
+『穹謁之墨』\n蘊含星辰之力的墨水。定製啟示卡時，指定副屬性的，最終定製時會消耗。=[Celestial Ink]\nInk that contains the power of the stars, can be used to select sub stat when customizing Revelation Card.
 溯讖之墨=Retroactive Ink
 蘊含星辰之力的墨水，可用於刷新啟示卡的副屬性時消耗。=Ink that contains the power of the stars, can be used to refresh sub stats when customizing Revelation Card.
+『溯讖之墨』\n蘊含星辰之力的墨水，可用於刷新啟示卡的副屬性時消耗。=[Retroactive Ink]\nInk that contains the power of the stars, can be used to refresh sub stats when customizing Revelation Card.
 認知請願書 5星=<size\=19>5★ Cognitive Petition</size>
 認知請願書 4星=<size\=19>4★ Cognitive Petition</size>
 請在以下列表中點擊選擇一位4星怪盜。=Select one 4★ Thief from the list below.
@@ -565,6 +570,7 @@ r:"^<color\=#ff0000ff>黑</color>板$"="Bl<color\=#ff0000ff>ac</color>kboard"
 r:"^前<color\=#ff0000ff>往</color>走廊$"="G<color\=#ff0000ff>o</color> to the hallway"
 r:"^更<color\=#ff0000ff>換</color>校外鞋$"="Ch<color\=#ff0000ff>an</color>ge Shoes"
 r:"^進<color\=#ff0000ff>入</color>教室$"="En<color\=#ff0000ff>t</color>er Classroom"
+r:"^下<color\=#ff0000ff>北</color>澤車站$"="S<color\=#ff0000ff>h</color>imo-Kitazawa Station"
 一樓走廊=1F Hallway
 一樓=First Floor
 二樓走廊=2F Hallway
@@ -869,11 +875,12 @@ r:"^<sprite\=(\d+) tint\=1>時<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>分�
 r:"^本周限定次数：(\d+)/(\d+)$"="Weekly Limit: $1/$2"
 r:"^週領獎次數：<color\=#0665ca>(\d+)/(\d+)</color>$"=Weekly Limit: <color\=#0665ca>$1/$2</color>
 r:"還可領取(\d+)天"=<size\=24>Available for $1 days</size>
-r:"角色(\d+)級可購買"=Unlock at Wonder Lv. $1
+r:"^角色(\d+)級可購買$"="Unlocks at Wonder Lv. $1"
 r:"^持有：(\d+)$"="Have: $1"
 持有：=Have:
 剩餘：=Left:
 r:"^限購：(\d+)次$"="Limit: $1"
+r:"^Lv.(\d+)解鎖購買$"="Unlocks at Lv. $1"
 購買數量:=Quantity
 花費合計：=Cost
 總計=Total
@@ -934,7 +941,7 @@ r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n解鎖角色語�
 r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n解鎖角色語音介面的「戰鬥」部分。$"="<size\=24><color\=#FFC000>Rank $1</color>: Unlock character voice from [Battle].</size>"
 r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n解鎖角色語音介面的「技能」部分。$"="<size\=24><color\=#FFC000>Rank $1</color>: Unlock character voice from [Skills].</size>"
 
-r:"^與「{{A}}」好感度提升至Rank(\d+)解鎖$"="Unlock at [{{A}}] Synergy Rank $1"
+r:"^與「{{A}}」好感度提升至Rank(\d+)解鎖$"="Unlocks at [{{A}}] Synergy Rank $1"
 陣容設置=Party Select
 r:"^陣容設置_(\d+)$"="Party Select_$1"
 r:"^怪盜展示_(\d+)$"="Thief Display_$1"
@@ -3398,23 +3405,29 @@ r:"^燃放(\d+)個煙火\((\d+)\/(\d+)\)$"="Set off $1 fireworks ($2/$3)"
 
 塑命循啟=Writing Fate
 r:"^完成「命書一覽」中的限時任務獲得道具「時諭之墨」，使用該道具可在活動期間內定製(\d+)張啟示卡。$"="Complete [Pursuing Fate] missions for [Ink of Time] to make $1 custom Revelation."
+活動期間可以定製「1張宙卡」。\n完成「命書一覽」中的任務可以獲得定製道具「時諭之墨」。=Complete [Pursuing Fate] missions for [Ink of Time] to make 1 custom Space Card.
 時諭之墨=Ink of Time
 尚未定製=Not customized
 暫無副屬性資訊，請先定製套裝=No Sub Stats info
 請確定前置選擇=Please confirm all prerequisite choices first
 前序啟示定製完成後解鎖=Unlock after customizing a card
 sr:"^是否消耗<color\=#FFDE00>時諭之墨×(\d+)</color>選擇套裝<color\=#FFDE00>(.*)</color>？$"="<size\=24>Spend <color\=#FFDE00>[Ink of Time]x$1</color> to select <color\=#FFDE00>$2</color>?</size>"
+sr:"^是否消耗：<color\=#FFDE00>時諭之墨×(\d+)</color>\n選擇塑造「<color\=#FFDE00>(.*)</color>」？$"="<size\=24>Spend: <color\=#FFDE00>[Ink of Time]x$1</color> to select <color\=#FFDE00>$2</color>?</size>"
 r:"^是否消耗<color\=#FFDE00>時諭之墨×(\d+)</color>選擇位置<color\=#FFDE00>日</color>？$"="<size\=24>Spend <color\=#FFDE00>[Ink of Time]x$1</color> to select <color\=#FFDE00>Sun</color>?</size>"
 r:"^是否消耗<color\=#FFDE00>時諭之墨×(\d+)</color>選擇位置<color\=#FFDE00>月</color>？$"="<size\=24>Spend <color\=#FFDE00>[Ink of Time]x$1</color> to select <color\=#FFDE00>Moon</color>?</size>"
 r:"^是否消耗<color\=#FFDE00>時諭之墨×(\d+)</color>選擇位置<color\=#FFDE00>星</color>？$"="<size\=24>Spend <color\=#FFDE00>[Ink of Time]x$1</color> to select <color\=#FFDE00>Star</color>?</size>"
 r:"^是否消耗<color\=#FFDE00>時諭之墨×(\d+)</color>選擇位置<color\=#FFDE00>辰</color>？$"="<size\=24>Spend <color\=#FFDE00>[Ink of Time]x$1</color> to select <color\=#FFDE00>Planet</color>?</size>"
 sr:"^是否消耗<color\=#FFDE00>時諭之墨×(\d+)</color>選擇主屬性<color\=#FFDE00>(.*)</color>？$"="<size\=24>Spend <color\=#FFDE00>[Ink of Time]x$1</color> to select <color\=#FFDE00>$2</color>?</size>"
 r:"^是否消耗<color\=#FFDE00>「時諭之墨」×(\d+)</color>刷新一次未鎖定的副屬性？$"="<size\=24>Spend <color\=#FFDE00>[Ink of Time]x$1</color> to refresh not locked Sub Stats?</size>"
+r:"^是否消耗：<color\=#FFDE00>「時諭之墨」×(\d+)</color>\n刷新一次未鎖定的副屬性？$"="<size\=24>Spend: <color\=#FFDE00>[Ink of Time]x$1</color> to refresh not locked Sub Stats?</size>"
 可鎖定=Lock
 已鎖定=Locked
 刷新=Refresh
+刷新屬性=Refresh
 啟示塑造=Custom Revelation
 啟示已完成塑造=Made Custom Revelation
+刷新時，僅會刷新未鎖定的副屬性。=When refreshing, will only refresh not locked Sub Stats.
+時諭之墨不足。=Insufficient Ink of Time.
 
 期待度過幸福的情人節，\n共同記錄有趣的「<color\=#ff3b37>節日故事</color>」。=Look forward to a happy Valentine's Day.\nShare interesting [<color\=#ff3b37>Holiday Story</color>] together.
 前置劇情觀看後解鎖=<size\=24>Unlock after watching the previous story</size>
@@ -3847,7 +3860,7 @@ r:"^在閼凶夢之扉挑戰中，樂園排名達到(\d+)~(\d+)名時獲得的�
 {{A}}意識等級達到6級={{A}} reached Awareness 6
 r:"^與協同者{{A}}好感度達到rank(\d+)\n且與{{A}}成為{{B}}$"="Reach Rank $1 with {{A}} and become {{B}}."
 
-r:"^<color\=#ff0000>{{A}}</color>協同者等級達到(\d+)級解鎖。$"="Unlock at <color\=#ff0000>{{A}}</color> Rank $1."
+r:"^<color\=#ff0000>{{A}}</color>協同者等級達到(\d+)級解鎖。$"="Unlocks at <color\=#ff0000>{{A}}</color> Rank $1."
 r:"^<color\=#ff0000>{{A}}</color>協同者等級達到(\d+)級，並達成「{{B}}」關係解鎖。$"="Reach <color\=#ff0000>{{A}}</color> Rank $1 and become [{{B}}]."
 sr:"^表情·(.*)$"="Emote·$1"
 {{A}}專屬表情包。\n與{{A}}協同者等級提升獎勵。={{A}}'s exclusive emote. \nRewards from ranking up {{A}}.
