@@ -36,7 +36,7 @@ sr:"^當前定製啟示卡限定：\n套裝：<color\=#FFDE00>(.*)</color>、位
 暫未開放宙卡定製。=Custom Space card is not yet available.
 
 推薦套裝=<size\=30>Recommendations</size>
-是否要將所有啟示卡卸下。=Unequip your cards?
+是否要將所有啟示卡卸下。=Unequip all cards?
 r:"^該武器(.*)正在穿戴，要繼續替換嗎？$"="This is being equipped by another character, want to equip it?"
 
 橙色=<size\=20>Orange</size>
@@ -96,12 +96,12 @@ sr:"^【(.*)】&【(.*)】$"="<size\=20>  [$1] & [$2]</size>"
 【覺知】=[Awareness]
 覺知=Awareness
 r:"^對處於元素異常狀態下的敵人造成傷害提升<color\=#2899ff>(\d+%)</color>，可以疊加2層。$"="Increase DMG Dealt by <color\=#2899ff>$1</color> when attacking foes inflicted with Elemental Ailment, up to 2 stacks."
-r:"^提升所有怪盜火焰傷害<color\=#2899ff>(\d+%)</color>；造成燃燒時額外提升所有怪盜火焰傷害<color\=#2899ff>(\d+%)</color>，持續2回合。$"="Increase all allies' Fire DMG by <color\=#2899ff>$1</color>; Increase all allies' Fire DMG by <color\=#2899ff>$2</color> for 2 turns when you inflict Burn."
+r:"^提升所有怪盜火焰傷害<color\=#2899ff>(\d+%)</color>；造成燃燒時額外提升所有怪盜火焰傷害<color\=#2899ff>(\d+%)</color>，持續2回合。$"="Increase all allies' Fire DMG by <color\=#2899ff>$1</color>; Increase all allies' Fire DMG by <color\=#2899ff>$2</color> for 2 turns when user inflicts Burn."
 r:"^對處於負面狀態下敵人造成每段傷害時提升自身攻擊力<color\=#2899ff>(\d+%)</color>，持續1回合，可疊加3層。$"="Increase ATK by <color\=#2899ff>$1</color> after every hit of damage to foe with debuff for 1 turn, up to 3 stacks."
 
 【啟程】=[Departure]
 啟程=Departure
-r:"^使用技能攻擊敵人時使主目標防禦降低<color\=#2899ff>(\d+%)</color>，持續2回合。$"="Decrease main target's Defense by <color\=#2899ff>$1</color> for 2 turns after attacking them with a skill."
+r:"^使用技能攻擊敵人時使主目標防禦降低<color\=#2899ff>(\d+%)</color>，持續2回合。$"="Decrease main target's DEF by <color\=#2899ff>$1</color> for 2 turns after attacking them with a skill."
 r:"^攻擊敵人時，使所有怪盜傷害提升<color\=#2899ff>(\d+%)</color>，持續1回合。$"="Increase all allies' DMG Dealt by <color\=#2899ff>$1</color> for 1 turn when attacking foes."
 r:"^擊敗敵人後使自身攻擊力提升<color\=#2899ff>(\d+%)</color>，持續3回合。$"="Increase ATK by <color\=#2899ff>$1</color> for 3 turns after defeating a foe."
 
@@ -118,7 +118,7 @@ r:"^造成暴擊時自身治療效果提升<color\=#2899ff>(\d+%)</color>，持�
 
 【信念】=[Faith]
 信念=Faith
-r:"^每次添加護盾，受到護盾效果的怪盜防禦力提升<color\=#2899ff>(\d+%)</color>，持續2回合，可疊加3層。$"="After granting Shield, increase the target's Defense by <color\=#2899ff>$1</color> for 2 turns up to 3 stacks."
+r:"^每次添加護盾，受到護盾效果的怪盜防禦力提升<color\=#2899ff>(\d+%)</color>，持續2回合，可疊加3層。$"="After granting Shield, increase the target's DEF by <color\=#2899ff>$1</color> for 2 turns up to 3 stacks."
 r:"^每有<color\=#2899ff>(\d+)</color>點生命值提升自身治療效果<color\=#2899ff>(\d+%)</color>，最多獲得治療效果提升<color\=#2899ff>(\d+%)</color>。$"="Increase Healing Effect by <color\=#2899ff>$2</color> for every <color\=#2899ff>$1</color> HP you have, up to <color\=#2899ff>$3</color>."
 r:"^所有怪盜對處於<link\="s\|232"><u>TECH異常</u></link>狀態下的敵人造成傷害提升<color\=#2899ff>(\d+%)</color>，無法重複觸發。$"="Increase all Thieves' DMG Dealt to foes with <link\="s|232"><u>TECHNICAL Ailment</u></link> by <color\=#2899ff>$1</color>, cannot be triggered again."
 <color\=#66ccff>TECH異常</color>=<color\=#66ccff>TECHNICAL Ailment</color>
@@ -138,7 +138,7 @@ r:"^每次造成一種元素異常，提升所有怪盜核熱傷害<color\=#2899
 
 【接納】=[Acceptance]
 接納=Acceptance
-r:"^每次受到攻擊，提升自身防禦力<color\=#2899ff>(\d+%)</color>，持續2回合。$"="Increase Defense by <color\=#2899ff>$1</color> for 2 turns when attacked."
+r:"^每次受到攻擊，提升自身防禦力<color\=#2899ff>(\d+%)</color>，持續2回合。$"="Increase DEF by <color\=#2899ff>$1</color> for 2 turns when attacked."
 r:"^每有一個敵人增加自身攻擊力<color\=#2899ff>(\d+%)</color>，最多<color\=#2899ff>(\d+%)</color>。$"="Increase ATK by <color\=#2899ff>$1</color> per foe, up to <color\=#2899ff>$2</color>."
 r:"^使用治療技能時，自身攻擊力提升<color\=#2899ff>(\d+%)</color>。$"="Increase ATK by <color\=#2899ff>$1</color> when using Healing skills."
 
@@ -147,23 +147,23 @@ r:"^使用治療技能時，自身攻擊力提升<color\=#2899ff>(\d+%)</color>�
 r:"^使用{{A}}後，使所有同伴造成傷害提升(\d+%)，持續(\d+)回合。$"="After using {{A}}, increase all allies' DMG Dealt by $1 for $2 turns."
 r:"^使用{{A}}後，使所有同伴造成傷害提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合。$"="After using {{A}}, increase all allies' DMG Dealt by <color\=#2899ff>$1</color> for $2 turns."
 r:"^戰鬥中，根據角色的治療加成的(\d+%)獲得傷害加成，透過這種方式最多提升<color\=#2899ff>(\d+%)</color>傷害加成。$"="Increase DMG Bonus up to <color\=#2899ff>$2</color> based on $1 of your Healing Bonus."
-r:"^解明怪盜裝備時生效：戰鬥開始時每有1個相同適應性屬性的同伴，使所有同伴生命值、攻擊力、防禦力額外提升<color\=#2899ff>(\d+%)</color>。$"="When equipped by Elucidator Thieves: Increase all allies' HP, ATK and Defense by <color\=#2899ff>$1</color> with each ally with the same element."
+r:"^解明怪盜裝備時生效：戰鬥開始時每有1個相同適應性屬性的同伴，使所有同伴生命值、攻擊力、防禦力額外提升<color\=#2899ff>(\d+%)</color>。$"="When equipped by Elucidator Thieves: Increase all allies' HP, ATK and DEF by <color\=#2899ff>$1</color> with each ally with the same element."
 
 【智慧】=[Wisdom]
 智慧=Wisdom
 r:"^『怨恨』不少於5層，則物理傷害、效果命中提升<color\=#2899ff>(\d+%)</color>。$"="Increase Phys DMG and Ailment ACC by <color\=#2899ff>$1</color> when [Resentment] is not less than 5 stacks."
-r:"^戰鬥中，根據角色的效果命中的(\d+%)獲得傷害加成，透過這種方式最多提升<color\=#2899ff>(\d+%)</color>傷害加成。$"="Increase DMG Bonus up to <color\=#2899ff>$2</color> based on $1 of your Ailment ACC."
+r:"^戰鬥中，根據角色的效果命中的(\d+%)獲得傷害加成，透過這種方式最多提升<color\=#2899ff>(\d+%)</color>傷害加成。$"="Increase DMG Bonus up to <color\=#2899ff>$2</color> based on $1 of user's Ailment ACC."
 r:"^使用HIGHLIGHT時，攻擊力提升<color\=#2899ff>(\d+%)</color>，造成傷害提升<color\=#2899ff>(\d+%)</color>。$"="When using HIGHLIGHT, increase ATK by <color\=#2899ff>$1</color> and DMG Dealt by <color\=#2899ff>$2</color>."
 
 【決心】=[Resolve]
 決心=Resolve
-r:"^戰鬥開始時，若自身處於己方行動佇列的第3/4位，則攻擊力提升<color\=#2899ff>(\d+%)/(\d+%)</color>。$"="At the start of battle, if you are at 3rd/4th turn order, then increase ATK by <color\=#2899ff>$1/$2</color>."
-r:"^戰鬥中，自身生命值達到(\d+)/(\d+)/(\d+)獲得傷害加成<color\=#2899ff>(\d+%)/(\d+%)/(\d+%)</color>。$"="Increase DMG Bonus by <color\=#2899ff>$4/$5/$6</color> when you reached $1/$2/$3 HP."
-r:"^解明怪盜裝備時生效：使用技能為敵人添加減益狀態，使主目標敵人防禦降低<color\=#2899ff>(\d+%)</color>，持續2回合。$"="When equipped by Elucidator Thieves: Decrease the main target's Defense by <color\=#2899ff>$1</color> for 2 turns when inflicting debuff."
+r:"^戰鬥開始時，若自身處於己方行動佇列的第3/4位，則攻擊力提升<color\=#2899ff>(\d+%)/(\d+%)</color>。$"="At the start of battle, if user is at 3rd/4th turn order, increase ATK by <color\=#2899ff>$1/$2</color>."
+r:"^戰鬥中，自身生命值達到(\d+)/(\d+)/(\d+)獲得傷害加成<color\=#2899ff>(\d+%)/(\d+%)/(\d+%)</color>。$"="Increase DMG Bonus by <color\=#2899ff>$4/$5/$6</color> when user reached $1/$2/$3 HP."
+r:"^解明怪盜裝備時生效：使用技能為敵人添加減益狀態，使主目標敵人防禦降低<color\=#2899ff>(\d+%)</color>，持續2回合。$"="When equipped by Elucidator Thieves: Decrease the main target's DEF by <color\=#2899ff>$1</color> for 2 turns when inflicting debuff."
 
 【創造】=[Creation]
 創造=Creation
-戰鬥中，自身精力回復達到100%/150%/200%，獲得暴擊效果提升<color\=#2899ff>15%/30%/45%</color>。=In battle, when you reached 100%/150%/200% SP Recovery, increase Crit DMG by <color\=#2899ff>15%/30%/45%</color>.
+戰鬥中，自身精力回復達到100%/150%/200%，獲得暴擊效果提升<color\=#2899ff>15%/30%/45%</color>。=In battle, when user reached 100%/150%/200% SP Recovery, increase Crit DMG by <color\=#2899ff>15%/30%/45%</color>.
 r:"^戰鬥開始時，使速度最低的怪盜造成傷害提升<color\=#2899ff>(\d+%)</color>，無法重複觸發。$"="At the start of a battle, increase the DMG Dealt for ther lowest Speed Thief by <color\=#2899ff>$1</color>, cannot be triggered again."
 
 【自由】=[Freedom]
@@ -209,7 +209,7 @@ r:"^4套裝效果：暴擊效果提升<color\=#2899ff>(\d+%)</color>，持續(\d
 【職責】=<size\=20>  </size>[Labor]
 職責=Labor
 r:"^2套裝效果：生命值提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase HP by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：解明怪盜裝備時生效：戰鬥中使所有同伴生命值、攻擊力、防禦力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: When equipped by Elucidator Thieves: Increase all allies' HP, ATK and Defense by <color\=#2899ff>$1</color>.</size>"
+r:"^4套裝效果：解明怪盜裝備時生效：戰鬥中使所有同伴生命值、攻擊力、防禦力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: When equipped by Elucidator Thieves: Increase all allies' HP, ATK and DEF by <color\=#2899ff>$1</color>.</size>"
 
 【主權】=<size\=20>  </size>[Dominion]
 主權=Dominion
@@ -228,11 +228,11 @@ r:"^4套裝效果：任意怪盜使用電屬性技能後提升自身電擊屬性
 【美德】=<size\=20>  </size>[Virtue]
 美德=Virtue
 r:"^2套裝效果：祝福傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Bless DMG by <color\=#2899ff>10%</color>.</size>"
-r:"^4套裝效果：當前生命值百分比不低於(\d+%)時，祝福屬性的暴擊率提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase Bless skill CRIT Rate by <color\=#2899ff>$2</color> when your HP% is not less than $1.</size>"
+r:"^4套裝效果：當前生命值百分比不低於(\d+%)時，祝福屬性的暴擊率提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase Bless skill CRIT Rate by <color\=#2899ff>$2</color> when user's HP% is not less than $1.</size>"
 
 【和平】=<size\=20>  </size>[Peace]
 和平=Peace
-r:"^2套裝效果：防禦力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Defense by <color\=#2899ff>$1</color>.</size>"
+r:"^2套裝效果：防禦力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase DEF by <color\=#2899ff>$1</color>.</size>"
 r:"^4套裝效果：護盾效果提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase Shield Effect by <color\=#2899ff>$1</color>.</size>"
 
 【奢華】=<size\=20>  </size>[Luxury]
@@ -273,7 +273,7 @@ r:"^4套裝效果：對處於負面狀態下的敵人咒屬性傷害提升<color
 【和解】=<size\=20>  </size>[Reconciliation]
 和解=Reconciliation
 r:"^2套裝效果：速度提升<color\=#2899ff>(\d+)</color>。$"="<size\=23>2 Set Effect: Increase Speed by <color\=#2899ff>$1</color>.</size>"
-r:"^4套裝效果：戰鬥中，自身最大生命值、攻擊力、防禦力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: In battle, increase your Max HP, ATK, and Defense by <color\=#2899ff>$1</color>."
+r:"^4套裝效果：戰鬥中，自身最大生命值、攻擊力、防禦力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: In battle, increase user's Max HP, ATK, and DEF by <color\=#2899ff>$1</color>."
 
 【憂思】=<size\=20>  </size>[Worry]
 憂思=Worry
@@ -290,11 +290,11 @@ r:"^2套裝效果：暴擊率提升<color\=#2899ff>(\d+\.\d+%)</color>。$"="<si
 
 【徒勞】=<size\=20>  </size>[Futility]
 徒勞=Futility
-r:"^4套裝效果：效果命中提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；造成TECHNICAL後再次獲得相同效果。$"="<size\=23>4 Set Effect: Increase Ailment ACC by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again when you deal TECHNICAL.</size>"
+r:"^4套裝效果：效果命中提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；造成TECHNICAL後再次獲得相同效果。$"="<size\=23>4 Set Effect: Increase Ailment ACC by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again when user deal a TECHNICAL.</size>"
 
 【失望】=<size\=20>  </size>[Despair]
 失望=Despair
-r:"^4套裝效果：造成{{A}}技能傷害時，若與自身上次造成{{A}}技能傷害的屬性不同，該次{{A}}技能造成傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: When dealing {{A}} skill damage, increase the current {{A}} skill damage by <color\=#2899ff>$1</color> if your last {{A}} skill damage was a different element."
+r:"^4套裝效果：造成{{A}}技能傷害時，若與自身上次造成{{A}}技能傷害的屬性不同，該次{{A}}技能造成傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: When dealing {{A}} skill damage, increase the current {{A}} skill damage by <color\=#2899ff>$1</color> if user's last {{A}} skill damage was a different element."
 
 【謹慎】=<size\=20>  </size>[Prudence]
 謹慎=Prudence
@@ -317,9 +317,9 @@ r:"^4套裝效果：攻擊力提升<color\=#2899ff>(\d+%)</color>，持續(\d+)�
 ----------
 Inspect Details + Combat Pop-Ups
 ---------
-r:"^生命值、攻擊力、防禦力提升(\d+%)$"="Increase HP, ATK, Defense by $1"
-生命值、攻擊力、防禦力根據相同適應性屬性怪盜數量提升=Increase HP, ATK, Defense \nwith each ally with the same element
-r:"^當前生命值百分比不低於(\d+%)時，祝福屬性的暴擊率提升(\d+%)$"="Increase Bless skill CRIT Rate by $2 \nwhen your HP% is not below $1"
+r:"^生命值、攻擊力、防禦力提升(\d+%)$"="Increase HP, ATK, DEF by $1"
+生命值、攻擊力、防禦力根據相同適應性屬性怪盜數量提升=Increase HP, ATK, DEF \nwith each ally with the same element
+r:"^當前生命值百分比不低於(\d+%)時，祝福屬性的暴擊率提升(\d+%)$"="Increase Bless skill CRIT Rate by $2 \nwhen user's HP% is not below $1"
 怨恨=Resentment
 r:"^『怨恨』不少於(\d+)層，則物理傷害、效果命中提升(\d+%)$"="Increase Phys DMG and Ailment ACC by $2 when [Resentment] is not less than $1 stacks"
 r:"^造成念動傷害時，提升攻擊(\d+%)，如果敵方人數不少於3，則攻擊力額外提升(\d+%)$"="<size\=26>Increase ATK by $1 when dealing Psy damage,\nincrease ATK by $2 if there are 3 ≥ foes</size>"

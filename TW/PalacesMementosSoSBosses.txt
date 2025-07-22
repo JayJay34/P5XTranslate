@@ -118,6 +118,12 @@ PALACE 3
 發電廠二層=<size\=26>Power Plant 2F</size>
 發電廠三層=<size\=26>Power Plant 3F</size>
 
+搭乘電梯=Take the elevator
+與{{A}}對峙=Confront {{A}}
+與{{A}}和{{B}}對峙=Confront {{A}} and {{B}}
+擊敗陰影=Defeat the Shadow
+預判敵人的預判=Anticipate foes' prediction
+
 唔~沒有反應，找個<color\=#FF0000>機器人</color>過來幫忙吧=No response. Let's find a <color\=#FF0000>robot</color> to help
 唔~提示錯誤，<color\=#FF0000>機器人</color>沒有進入認證區域範圍=No response. The <color\=#FF0000>robot</color> is not in the area
 前方已超過該機器人的工作範圍=Robot cannot go here
@@ -965,7 +971,68 @@ r:"^1、{{A}}會召喚多種土偶，土偶存在時會使{{A}}在戰鬥中獲�
 r:"^1、{{A}}會召喚多種土偶，土偶存在時會使{{A}}在戰鬥中獲得不同的增益效果。\n2、{{A}}的回合開始時，每有一個土偶，會使「進度」\+1；「進度」達到(\d+)時，{{A}}會釋放「深淵的凝視」，使所有怪盜進入<color\=#ff3b37>絕望</color>狀態。\n3、{{A}}每回合隨機召喚一種土偶，2回合後土偶會碎裂；{{A}}首次血量低於50%時，會額外召喚一隻土偶。\n「弱點土偶」：存在時保護{{A}}的弱點屬性，被擊敗後使{{A}}多屬性變為弱；\n「精力土偶」：每回合使怪盜方扣除精力值，被擊敗後恢復怪盜方精力值；\n「生命土偶」：每回合使{{A}}恢復生命值，被擊敗後恢復怪盜方生命值；\n「進度土偶」：每回合使{{A}}增加進度值，被擊敗後扣除{{A}}進度值。$"="<size\=25>1. {{A}} will summon many Figurines, when Figurines are present {{A}} gain different buffs.\n2. At the start of each turn, for each Figurines, gain 1 [Progress]; When [Progress] reached $1, {{A}} will use [Abyssal Gaze], inflicting all Thieves with <color\=#ff3b37>Despair</color>.\n3. {{A}} will randomly summon 1 Figurine each turn, destory it after 2 turns; When {{A}} drop below 50% HP, additionally summon 1 Figurine. \n[Weakness Figurine]: Protect {{A}}'s weakness, \nwhen defeated inflict {{A}} with many weaknesses;\n[SP Figurine]: Each turn drain SP from all Thieves, \nrestore SP to all Thieves when defeated;\n[HP Figurine]: Each turn restore HP to {{A}}, \nrestore HP to all Thieves when defeated;\n[Progress Figurine]: Each turn give {{A}} Progress, \ndecrease {{A}}'s Progress when defeated.</size>"
 
 ----------
-PALACE 3 BOSS
+PALACE 3 BOSS 1
+----------
+機械身軀的陰影=Mechanical Shadow
+過激指導=Excessive Guidance
+消耗能量回復自身生命值=Spend Energy to recover HP
+究極自我修復=Ultimate Self-Healing
+電力儲存=Power Storage
+
+（<color\=#FF0000>「防壁」</color>會使對應<color\=#FF0000>屬性</color>的適應性變為<color\=#FF0000>耐</color>，使用<color\=#FF0000>該屬性</color>攻擊將會使其<color\=#FF0000>恢復「能量」</color>）=(<color\=#FF0000>Wall</color> will turn the corresponding <color\=#FF0000>Attribute</color> to <color\=#FF0000>Resist</color>, using <color\=#FF0000>that Attribute's attack</color> will restore its <color\=#FF0000>Energy</color>)
+
+物理防壁=Phys Wall
+射擊防壁=Gun Wall
+火焰防壁=Fire Wall
+冰凍防壁=Ice Wall
+凍結防壁=Ice Wall
+電擊防壁=Elec Wall
+疾風防壁=Wind Wall
+念動防壁=Psy Wall
+核熱防壁=Nuke Wall
+祝福防壁=Bless Wall
+詛咒防壁=Curse Wall
+
+r:"^物<color\=#000000>理</color>防壁$"="P<color\=#000000>h</color>ys Wall"
+r:"^射<color\=#000000>擊</color>防壁$"="G<color\=#000000>u</color>n Wall"
+r:"^火<color\=#000000>焰</color>防壁$"="F<color\=#000000>i</color>re Wall"
+r:"^冰<color\=#000000>凍</color>防壁$"="I<color\=#000000>c</color>e Wall"
+r:"^凍<color\=#000000>結</color>防壁$"="I<color\=#000000>c</color>e Wall"
+r:"^冰<color\=#000000>凍</color>防壁$"="I<color\=#000000>c</color>e Wall"
+r:"^電<color\=#000000>擊</color>防壁$"="E<color\=#000000>l</color>ec Wall"
+r:"^疾<color\=#000000>風</color>防壁$"="W<color\=#000000>i</color>nd Wall"
+r:"^念<color\=#000000>動</color>防壁$"="P<color\=#000000>s</color>y Wall"
+r:"^核<color\=#000000>熱</color>防壁$"="N<color\=#000000>u</color>ke Wall"
+r:"^祝<color\=#000000>福</color>防壁$"="B<color\=#000000>l</color>ess Wall"
+r:"^詛<color\=#000000>咒</color>防壁$"="C<color\=#000000>u</color>rse Wall"
+
+r:"^<color\=#FF0000>(.*)</color>獲得了物理防壁……$"="<color\=#FF0000>$1</color> gained Phys Wall..."
+r:"^<color\=#FF0000>(.*)</color>獲得了射擊防壁……$"="<color\=#FF0000>$1</color> gained Gun Wall..."
+r:"^<color\=#FF0000>(.*)</color>獲得了火焰防壁……$"="<color\=#FF0000>$1</color> gained Fire Wall..."
+r:"^<color\=#FF0000>(.*)</color>獲得了冰凍防壁……$"="<color\=#FF0000>$1</color> gained Ice Wall..."
+r:"^<color\=#FF0000>(.*)</color>獲得了凍結防壁……$"="<color\=#FF0000>$1</color> gained Ice Wall..."
+r:"^<color\=#FF0000>(.*)</color>獲得了電擊防壁……$"="<color\=#FF0000>$1</color> gained Elec Wall..."
+r:"^<color\=#FF0000>(.*)</color>獲得了疾風防壁……$"="<color\=#FF0000>$1</color> gained Wind Wall..."
+r:"^<color\=#FF0000>(.*)</color>獲得了念動防壁……$"="<color\=#FF0000>$1</color> gained Psy Wall..."
+r:"^<color\=#FF0000>(.*)</color>獲得了核熱防壁……$"="<color\=#FF0000>$1</color> gained Nuke Wall..."
+r:"^<color\=#FF0000>(.*)</color>獲得了祝福防壁……$"="<color\=#FF0000>$1</color> gained Bless Wall..."
+r:"^<color\=#FF0000>(.*)</color>獲得了詛咒防壁……$"="<color\=#FF0000>$1</color> gained Curse Wall..."
+
+----------
+PALACE 3 BOSS 2
+----------
+r:"^對1名敵人造成大量電擊屬性傷害，有機率使敵人陷入<link\="s\|104"><u>觸電</u></link>狀態，效果持續(\d+)回合。$"="Deal heavy Elec damage to 1 foe, with a chance to inflict <link\="s|104"><u>Shock</u></link> for $1 turns."
+r:"^對所有敵人造成(\d+)~(\d+)次少量物理屬性傷害。$"="Deal light Phys damage to all foes $1-$2 times."
+扳手攻擊=Wrench Attack
+對1名敵人造成中量物理屬性傷害=Deal medium Phys damage to 1 foe
+暴躁脾氣=Bad Temper
+教育指導=Educational Guidance
+對全體敵人造成大量電擊屬性傷害=Deal heavy Elec damage to all foes
+閃光腿·改=Lightning Legs·Evolved
+{{A}}的衝動={{A}}'s Impulse
+
+----------
+PALACE 3 BOSS 3
 ----------
 r:"^拯救{{A}}$"="Rescue {{A}}"
 r:"^擊破{{A}}的護盾$"="Break {{A}}'s shield"
