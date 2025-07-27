@@ -407,8 +407,11 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動�
 
 //Basic Nuke ST
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，對元素異常的敵人傷害提升(\d+%)。$"="Deal $1 ATK Nuke damage to <color\=#FFFF00>1</color> foe, increase DMG Dealt to foe infliced with Elemental Ailments by $2."
-r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，攻擊處於元素異常狀態的敵人該技能傷害提升(.*)。$"="Deal $1 ATK Nuke damage to <color\=#FFFF00>1</color> foe. Increase skill damage by $2 if foe is inflicted with any Elemental Ailment."
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，對元素異常的敵人傷害提升(\d+%)，造成TECHNICAL。$"="Deal $1 ATK Nuke damage to <color\=#FFFF00>1</color> foe. Deal a TECHNICAL and increase DMG Dealt to foe infliced with Elemental Ailments by $2."
+
+Bishamonten
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，攻擊處於元素異常狀態的敵人該技能傷害提升(\d+%)。$"="Deal $1 ATK Nuke damage to <color\=#FFFF00>1</color> foe. Increase skill damage by $2 if foe is inflicted with any Elemental Ailment."
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，攻擊處於元素異常狀態的敵人該技能傷害提升(\d+%)，並提升友方核熱屬性同伴(\d+\.\d+%)的攻擊力，持續(\d+)回合。$"="Deal $1 ATK Nuke damage to <color\=#FFFF00>1</color> foe. Increase skill damage by $2 if foe is inflicted with any Elemental Ailment. Increase Nuke allies' ATK by $3 for $4 turns."
 
 //Basic Nuke AoE
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，對元素異常的敵人傷害提升(\d+%)，造成TECHNICAL。$"="Deal $1 ATK Nuke damage to <color\=#FFFF00>all</color> foes. Deal a TECHNICAL and increase DMG Dealt to foes with Elemental Ailments by $2."
@@ -441,8 +444,9 @@ Desire of Life Shell
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，恢復生命值最低的同伴(\d+\.\d+%)攻擊力的生命值。$"="Deal $1 ATK Bless damage to <color\=#FFFF00>all</color> foes, and restore $2 ATK HP to the lowest HP ally."
 r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使1名生命值最低的同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值。$"="Deal <color\=#fffc40>$1</color> ATK Bless damage to all foes, and restore <color\=#fffc40>$2</color> ATK + <color\=#fffc40>$3</color> HP to the lowest HP ally."
 
-Light of Salvation
-r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，使自身獲得(\d+)層祝福效果。自身每層祝福效果使得技能傷害提升(\d+%)，最多提升(\d+%)。$"="Deal $1 ATK Bless damage to <color\=#FFFF00>all</color> foes and gain $2 stacks of Bless. For every stack of Blessing you have, increase skill damage by $3, up to $4."
+Shining Salvation
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，使自身獲得(\d+)層祝福效果。自身每層祝福效果使得技能傷害提升(\d+%)，最多提升(\d+%)。$"="Deal $1 ATK Bless damage to <color\=#FFFF00>all</color> foes. Grant user $2 Blessing stacks. For each stack of Blessing on user, increase skill damage by $3, up to $4."
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，使所有友方角色獲得(\d+)層祝福效果。自身每層祝福效果使得技能傷害提升(\d+%)，最多提升(\d+%)。$"="Deal $1 ATK Bless damage to <color\=#FFFF00>all</color> foes. Grant party $2 Blessing stacks. For each stack of Blessing on user, increase skill damage by $3, up to $4."
 
 Absolute Obedience
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害。使目標受到的HIGHLIGHT傷害提升(\d+\.\d+%)，持續(\d+)回合。$"="Deal $1 ATK Bless damage to <color\=#FFFF00>1</color> foe. Increase their HIGHLIGHT DMG Taken by $2 for $3 turn."
@@ -563,7 +567,7 @@ Heat Riser
 r:"^攻擊力、防禦力、效果命中、效果抵抗提升(\d+\.\d+%)$"="Increase ATK, DEF, Ailment ACC, \nand Ailment RES by $1"
 
 //Rebellion
-r:"^使<color\=#FFFF00>1名</color>同伴的暴擊率提升(\d+\.\d+%)，自身每(\d+%)暴擊率額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續(\d+)回合。$"="Increase <color\=#FFFF00>1</color> ally's Crit Rate by $1 + $3 for every $2 Crit Rate you have, up to $4 for 3 turns."
+r:"^使<color\=#FFFF00>1名</color>同伴的暴擊率提升(\d+\.\d+%)，自身每(\d+%)暴擊率額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續(\d+)回合。$"="Increase <color\=#FFFF00>1</color> ally's Crit Rate. For every $2 of the user's Crit Rate, increase the target's Crit Rate by $3 more, up to $4. Lasts for $5 turns."
 
 //Revolution
 r:"^使<color\=#FFFF00>所有</color>同伴的暴擊率提升(\d+\.\d+%)，自身每(\d+%)暴擊率額外提升(\d+\.\d+%)，上限(\d+\.\d+%)，持續(\d+)回合。$"="Increase <color\=#FFFF00>party's</color> Crit Rate by $1. For every $2 of the user's Crit Rate, increase party's Crit Rate by $3 more, up to $4. Lasts for $5 turns."

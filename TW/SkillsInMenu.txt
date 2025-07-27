@@ -3,6 +3,7 @@ Skill Level up Description //
 r:"^提升(\d+\.\d%)+$"=$1
 r:"^該技能(\d+)級解鎖$"="Unlock this skill at Lv. $1"
 r:"^面具(.*)級時可解鎖$"="Unlocks this at Persona Lv. $1"
+該技能已強化最高級=Skill maxed
 
 sr:"^(.*) Lv.(\d+)$"="$1 Lv.$2"
 sr:"^(.*) <color\=#0F69CB>Lv.(\d+)</color>$"="$1 <color\=#0F69CB>Lv.$2</color>"
@@ -208,7 +209,8 @@ No size on inherit skill names or else they won't work in the inherit menu
 瑪哈芙雷達因=Mafreidyne
 原子火焰=Atomic Flare
 宇宙火焰=Cosmic Flare
-尊王的降伏=<size\=24>King's Surrender</size>
+尊王的降伏=Imperial Purge
+<size\=24>King's Surrender</size>
 
 --- Bless ---
 
@@ -222,10 +224,10 @@ No size on inherit skill names or else they won't work in the inherit menu
 哈瑪翁=Hamaon
 瑪翰瑪=Mahama
 瑪翰瑪翁=Mahamaon
-神之審判=<size\=23>Divine Judgement</size>
+神之審判=Divine Judgement
 黑白無界=Seize the Day
 迴轉說法=Samsara
-救贖的光輝=<size\=23>Light of Salvation</size>
+救贖的光輝=Shining Salvation
 絕對服從=<size\=20>Absolute Obedience</size>
 
 --- Curse --- 
@@ -644,6 +646,7 @@ r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的核熱�
 
 Bishamonten
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害，攻擊處於元素異常狀態的敵人該技能傷害提升(\d+%)。$"="Deal <color\=#fffc40>$1</color> ATK Nuke damage to 1 foe. Increase DMG Dealt to foe infliced with Elemental Ailments by $2."
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害，攻擊處於元素異常狀態的敵人該技能傷害提升(\d+%)，並提升友方核熱屬性同伴<color\=#fffc40>(\d+\.\d+%)</color>的攻擊力，持續(\d+)回合。$"="Deal <color\=#fffc40>$1</color> ATK Nuke damage to 1 foe. Increase DMG Dealt to foe infliced with Elemental Ailments by $2. Increase Nuke allies' ATK by <color\=#fffc40>$3</color> for $4 turns."
 
 --- Bless ---
 
@@ -671,8 +674,9 @@ r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬
 Samsara
 r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，若主目標敵人生命值低於50%則有一定機率附帶即死效果。$"="Deal <color\=#fffc40>$1</color> ATK Bless damage to all foes. If the main target is below 50% HP there is a certain chance of insta-kill."
 
-Light of Salvation
-r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自身獲得(\d+)層祝福效果。自身每層祝福效果使得技能傷害提升(\d+%)，最多提升(\d+%)。$"="Deal <color\=#fffc40>$1</color> ATK Bless damage to all foes and gain $2 stacks of Blessing. For every stack of Blessing you have, increase skill damage by $3, up to $4."
+Shining Salvation
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自身獲得(\d+)層祝福效果。自身每層祝福效果使得技能傷害提升(\d+%)，最多提升(\d+%)。$"="Deal <color\=#fffc40>$1</color> ATK Bless damage to all foes. Grant user $2 Blessing stacks. For each stack of Blessing on user, increase skill damage by $3, up to $4."
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使所有友方角色獲得(\d+)層祝福效果。自身每層祝福效果使得技能傷害提升(\d+%)，最多提升(\d+%)。$"="Deal <color\=#fffc40>$1</color> ATK Bless damage to all foes. Grant party $2 Blessing stacks. For each stack of Blessing on user, increase skill damage by $3, up to $4."
 
 Absolute Obedience
 r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害。使目標受到的HIGHLIGHT傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Deal <color\=#fffc40>$1</color> ATK Bless damage to 1 foe. Increase their HIGHLIGHT DMG Taken by <color\=#fffc40>$2</color> for $3 turn."

@@ -14,14 +14,17 @@ UI
 主線進度=Main Story Progress
 當前進度=Current Progress
 挑戰進度=Challenge Progress
-可用功能=Features
-調整陣容=Party Switch
+可用功能=Available
+調整陣容=Edit Party
 面具培養=Velvet Room
-怪盜培養=<size\=25>Manage Thieves</size>
+怪盜培養=View Stats
 
 進入挑戰=Challenge
 r:"^在(\d+)輪內取得勝利$"="Win within $1 actions"
-r:"^(\d+)回$"="$1 turns"
+r:"^(\d+)回$"="$1 Actions"
+r:"^(\d+)(\d+)回$"="$1 $2 Actions"
+r:"^(\d+) 回$"="$1 Actions"
+r:"^(\d+)(\d+) 回$"="$1 $2 Actions"
 r:"^觀察模式冷卻中，(\d+)秒後可用！$"="Third Eye in cooldown"
 機制=Mechanic
 遊蕩陰影=<size\=25>Roaming Shadow</size>
@@ -526,6 +529,7 @@ PALACE 5
 清除荊棘=Clear thorns
 變成螞蟻進入隧道=Transform into ants and enter the tunnel
 找到通往上層的路=Find a path to the upper level
+破壞阻擋物=Break the barrier
 打開道路=Open the path
 找工蟻清理雜物=Find worker ants to clean up the mess
 調查上層區域=Investigate the upper area
@@ -1360,7 +1364,7 @@ r:"^1、{{A}}的倒影受到攻擊後會驅散一層<color\=#ff3b37>「倒影」
 r:"^1、{{A}}的倒影受到攻擊後會驅散一層【倒影】，【倒影】被全部驅散時，{{A}}的倒影即死\n2、{{A}}的倒影被擊殺時，會恢復{{A}}(\d+%)的最大生命值。$"="1. Reflection of {{A}} will lose 1 stack of <color\=#ff3b37>[Reflection]</color> when attacked, die when all <color\=#ff3b37>[Reflection]</color> are dispelled.\n2. When you defeat Reflection of {{A}}, Strange {{A}} will restore $1 Max HP."
 
 詭譎的{{A}}根據場上{{A}}的倒影的數量，獲得最終傷害減免和額外釋放技能次數。=Strange {{A}} will gain Final DMG RES and skill usage based on the number of Reflection of {{A}}.
-r:"^1、回合開始時，若場上{{A}}的倒影的數量小於(\d+)個，則召喚一個{{A}}的倒影。\n2、在其回合釋放顧影，使所有怪盜每次行動損失固定(\d+%)生命值。\n3、根據場上{{A}}的倒影的數量，獲得最終傷害減免和額外釋放技能次數。$"="<size\=21>1. At the start of turn, if there are less than $1 Reflection of {{A}}, summon 1 Reflection of {{A}}.\n2. Use Narcissism during their turn, make Thieves lose $1 fixed Max HP after each action. \n3. Gain Final DMG RES and skill usage based on the number of Reflection of {{A}}.</size>"
+r:"^1、回合開始時，若場上{{A}}的倒影的數量小於(\d+)個，則召喚一個{{A}}的倒影。\n2、在其回合釋放顧影，使所有怪盜每次行動損失固定(\d+%)生命值。\n3、根據場上{{A}}的倒影的數量，獲得最終傷害減免和額外釋放技能次數。$"="<size\=21>1. At the start of turn, if there are less than $1 Reflection of {{A}}, summon 1 Reflection of {{A}}.\n2. Use Narcissism during their turn, make Thieves lose $2 fixed Max HP after each action. \n3. Gain Final DMG RES and skill usage based on the number of Reflection of {{A}}.</size>"
 r:"^1、{{B}}的倒影受到攻擊後會驅散一層【倒影】，每回合恢復三層【倒影】，【倒影】被全部驅散時，{{B}}的倒影即死。\n每存在一個倒影，就會給隊友提供一層【神隱】，受到傷害降低(\d+%)。\n3、每存在一個倒影，給予詭譎的{{B}}和{{A}}額外的技能釋放次數。$"="1. Reflection of {{B}} will lose 1 stack of [Reflection] when attacked, restore 3 stacks of [Reflection] each turn, die when all [Reflection] are dispelled.\n2. For every Reflection, give all allies [Mirage], decrease DMG Taken by $1. \n3. For every Reflection, Strange {{B}} and {{A}} additionally gain skill usage."
 r:"^1、{{B}}的倒影受到攻擊後會驅散一層<color\=#ff3b37>「倒影」</color>，<color\=#ff3b37>「倒影」</color>被全部驅散時，{{B}}的倒影即死。\n2、每存在一個{{B}}的倒影，就會給隊友提供一層<color\=#ff3b37>「幻鏡」</color>，受到傷害降低(\d+%)。\n3、每存在一個{{B}}的倒影，給予詭譎的{{B}}和{{A}}額外的<color\=#ff3b37>技能釋放次數</color>。\n4、{{A}}的回合開始時，若場上{{B}}的倒影小於(\d+)個，則召喚一個{{B}}的倒影。在其回合釋放技能<color\=#ff3b37>「顧影」</color>，使所有怪盜每次行動損失固定(\d+%)生命值。\n5、詭譎的{{B}}會對{{A}}使用<color\=#ff3b37>「神隱」</color>，將其適應性改為無。$"="1. Reflection of {{B}} will lose 1 stack of <color\=#ff3b37>[Reflection]</color> when attacked, die when all <color\=#ff3b37>[Reflection]</color> are dispelled.\n2. For every Reflection of {{B}}, give all allies <color\=#ff3b37>[Mirage]</color>, decrease DMG Taken by $1. \n3. For every Reflection of {{B}}, Strange {{B}} and {{A}} additionally gain <color\=#ff3b37>skill usage</color>. \n4. At the start of {{B}}'s turn, if there are less than $2 Reflection of {{B}}, summon 1 Reflection of {{B}}. Use <color\=#ff3b37>[Narcissism]</color> during their turn, make Thieves lose $3 fixed Max HP after each action. \n5. Strange {{B}} will use <color\=#ff3b37>[Spirited Away]</color> on {{A}}, change all resistance to Null."
 幻鏡=Mirage
@@ -1442,6 +1446,14 @@ MEMENTOS 1
 未知地帶=Unknown Area
 看樣子，這是附近最厲害的敵人呢=Looks like this is the most powerful foe nearby.
 不過不擊敗它又無法前往，要進行挑戰嗎？=But we can't continue without defeating it. \nDo you want to challenge it?
+「思想」線乘車券=Qimranut Ticket
+「和諧」線乘車券=Aiyatsbus Ticket
+「節制」線乘車券=Chemdah Ticket
+「美德」線乘車券=Kaitul Ticket
+「慈悲」線乘車券=Akzeriyyuth Ticket
+「感動」線乘車券=Adyeshach Ticket
+「寬容」線乘車券=Sheriruth Ticket
+「見識」線乘車券=Iweleth Ticket
 
 r:"^1、{{A}}會使用多種鬥牛的步伐，提高自身的閃避。\n「分身並步」：100%固定機率閃避受到的<color\=#ff3b37>普通攻擊</color>\n「反身泄步」：100%固定機率閃避受到的<color\=#ff3b37>槍械攻擊</color>\n「披風追步」：100%固定機率閃避受到的<color\=#ff3b37>技能攻擊</color>\n2、{{A}}初始獲得<color\=#ff3b37>隨機兩種步伐</color>，每次受到傷害後，{{A}}會重新獲得隨機兩種步伐。\n3、每回合末，{{A}}會獲得(\d+)層「衝擊步」，受到傷害時會驅散一層。\n4、{{A}}行動時，若自身擁有「衝擊步」，會釋放「刺牛步」，對一名怪盜造成高額傷害。$"="{{A}} can use many bullfighting steps to increase evasion.\n[Separation]: 100% fixed chance to evade <color\=#ff3b37>Melee Attack</color>\n[Fallaway Whisk]: 100% fixed chance to evade <color\=#ff3b37>Gun Attack</color>\n[Chasse Cape] 100% fixed chance to evade <color\=#ff3b37>Skill Attack</color>\n2. {{A}} starts with <color\=#ff3b37>2 random steps</color>, after taking damage, {{A}} gains 2 random steps.\n3. At the end of turn, {{A}} gains $1 [Attack Step], dispels 1 stack when taking damage.\n4. When {{A}} acts, if {{A}} has [Attack Step], uses [Appel] to deal severe damage to 1 Thief."
 分身並步=Separation
@@ -2209,7 +2221,7 @@ r:"^累計獲得（<color\=#EF0000>(\d+)</color>/(\d+)）分$"="Get (<color\=#EF
 晉級條件：=<size\=24>Requirement:</size>
 r:"累計獲得<color\=#FFF000> (\d+) </color>顆星"=<color\=#FFF000> $1 </color>Stars
 剩餘時間：=Time Left:
-r:"(\d+)回合內取得勝利"=Win in $1 turn(s)
+r:"^(\d+)回合內取得勝利$"="Win within $1 actions"
 通關前置關卡後解鎖。=Unlock after clearing the previous stage.
 
 挑戰獎勵=<size\=36>Rewards</size>
@@ -2218,8 +2230,7 @@ r:"累計獲得星數（(\d+)\/(\d+)）"=Get ($1/$2) Stars
 r:"累計獲得（(\d+)\/(\d+)）分"=Get ($1/$2) Points
 
 積分係數：=Multiplier:
-成功抵禦次數：=<size\=27>Round(s) Survived:</size>
-r:"(\d+)次行動內完成"=Win in $1 turn(s)
+成功抵禦次數：=<size\=27>Rounds Survived:</size>
 操作提示=Controls
 當前有保存的進度，是否繼續挑戰？=Do you want to continue the challenge where you left off?
 選擇「清空進度」會清除保存的記錄並重新挑戰。=Select [No] to reset progress and retry.
@@ -2248,7 +2259,7 @@ r:"^乘坐電梯$"="Take the Elevator"
 
 以下<color\=#ef0000>怪盜</color>與<color\=#ef0000>面具</color>會被鎖定到本挑戰中不可更換，是否確認出戰？=<size\=24>You cannot change the chosen <color\=#ef0000>Thieves and Personas</color> until you reset the fight</size>
 以下<color\=#ef0000>角色</color>與<color\=#ef0000>面具</color>會被鎖定到本挑戰中不可更換，是否確認出戰？=<size\=24>You cannot change the chosen <color\=#ef0000>Characters and Personas</color> until you reset the fight</size>
-r:"^<color\=#FFFFFF>首領剩餘進攻次數：</color><color\=#FFF000>(\d+)</color>$"="<color\=#FFFFFF>Boss Attack(s) Left: </color><color\=#FFF000>$1</color>"
+r:"^<color\=#FFFFFF>首領剩餘進攻次數：</color><color\=#FFF000>(\d+)</color>$"="<color\=#FFFFFF>Boss Attacks Left: </color><color\=#FFF000>$1</color>"
 主動逃離戰鬥不會獲得分數記錄。\n是否確認退出？=Cannot record score if you escape.\nAre you sure?
 
 {{A}}每隔一個回合會為所有怪盜回復精力值，但是也會對攻擊最高的怪盜釋放「惡魔的詛咒」，大幅降低其造成的傷害。={{A}} restores SP to all Thieves every other turn but inflicts the highest ATK Thief with [Demon's Curse], heavily decreasing their DMG Dealt.

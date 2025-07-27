@@ -2804,66 +2804,72 @@ r:"^<link\="s\|246"><u>『怨念』</u></link>疊加上限提升至(\d+)層。\n
 ----------
 Citrus - Minami Miyashita
 ----------
+夏日禮籃=<size\=19>Summer Gift Basket</size>
+盛夏花野=<size\=16>Midsummer Flower Field</size>
+獻給彼方的花朵=<size\=25>Faraway Flower</size>
+祈願=Pray
+愛護=Care
+
+r:"^夏日禮籃 Lv.(\d+)$"="<size\=26>Summer Gift Basket Lv.$1</size>"
+r:"^夏日禮籃 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=26>Summer Gift Basket <color\=#0F69CB>Lv.$1</color></size>"
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>最大生命值的祝福屬性傷害，並使其陷入『糖漬』狀態：受到攻擊時，該次傷害攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>\（{{A}}每有(\d+)點最大生命值，該次傷害攻擊力額外提升(\d+%)，最多計入<color\=#FFFC40>(\d+)</color>點最大生命值\），持續(\d+)回合。\n<b><size\=28><color\=#850101>裝滿點心的藤籃從天而降，小心，這是裹著糖衣的陷阱！奶油炸開四散，捲起香甜的浪潮。</color></size></b>$"="Deal Bless damage to all foes equal to <color\=#FFFC40>$1</color> of Minami's Max HP. Then inflict [Candied] on them for $6 turns: When any ally attacks a Candied foe, increase ATK by <color\=#FFFC40>$2</color> (Increase ATK by $4 more for every $3 of Minami's Max HP, up to <color\=#FFFC40>$5</color> Max HP).\n<b><size\=28><color\=#850101>A wicker basket brimming with sweets descends from above. Beware, for this is a trap cloaked in sugar! Cream bursts forth in all directions, swirling into waves of saccharine bliss.</color></size></b>"
+
+r:"^盛夏花野 Lv.(\d+)$"="<size\=22>Midsummer Flower Field Lv.$1</size>"
+r:"^盛夏花野 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=22>Midsummer Flower Field <color\=#0F69CB>Lv.$1</color></size>"
+r:"^使所有同伴的傷害提<color\=#FFFC40>(\d+\.\d+%)</color>\（{{A}}每有(\d+)點最大生命值，傷害額外提升(\d+\.\d+%)，最多計入<color\=#FFFC40>(\d+)</color>點最大生命值\），持續(\d+)回合。同時使所有同伴獲得(\d+)層<link\="s\|111"><u>祝福</u></link>效果並為其淨化(\d+)種負面狀態。\n<b><size\=28><color\=#850101>微風輕拂綠蔭，繽紛花野自足下盛開，花瓣溫柔的撫摸著同伴，獻上祝福的芳香。</color></size></b>$"="Increase party's DMG Bonus by <color\=#FFFC40>$1</color> for $7 turns (Increase DMG Bonus by $3 more for every $2 of Minami's Max HP, up to <color\=#FFFC40>$4</color> Max HP). Grant party $5 <link\="s|111"><u>Blessing</u></link> stack, and cure $6 debuff.\n<b><size\=28><color\=#850101>A gentle breeze stirs the emerald shade, as a vibrant field of flowers blooms beneath their feet. Petals caress the companions with tender grace, bestowing the fragrance of blessings.</color></size></b>"
+
+r:"^獻給彼方的花朵 Lv.(\d+)$"="Faraway Flower Lv.$1"
+r:"^獻給彼方的花朵 <color\=#0F69CB>Lv.(\d+)</color>$"="Faraway Flower <color\=#0F69CB>Lv.$1</color>"
+r:"^使除自己外的1名同伴暴擊率提升<color\=#FFFC40>(\d+\.\d+%)</color>，暴擊效果提升\（提升值相當於{{A}}暴擊效果超過(\d+%)部分的(\d+\.\d+%)，最多計入<color\=#FFFC40>(\d+\.\d+%)</color>的暴擊效果\），持續(\d+)回合。效果持續時間內，{{A}}每次對該同伴使用藥品時，額外使其暴擊效果提升\（提升值相當於{{A}}暴擊效果超過(\d+%)部分的(\d+\.\d+%)，最多計入<color\=#FFFC40>(\d+\.\d+%)</color>的暴擊效果\），持續(\d+)回合。\n<b><size\=28><color\=#850101>溫柔的暖風將潔白的花朵送去遠方，穿越時光與距離落在同伴的身側，喚醒藏於心中的鋒芒。</color></size></b>$"="Increase 1 other ally's Crit Rate by $1 and Crit DMG by $3 of Minami's Crit DMG that is over by $2, up to <color\=#FFFC40>$4</color> Crit DMG. Lasts for $5 turns. During this effect, when Minami uses an item on that ally, additionally increase their Crit DMG by $7 of Minami's Crit DMG that is over by $6, up to <color\=#FFFC40>$8</color> Crit DMG. Lasts for $9 turn.\n<b><size\=28><color\=#850101>A tender, warm wind carries white blossoms afar, transcending time and distance, they alight beside their companions, awakening the dormant edge within their hearts.</color></size></b>"
+
+r:"^『HIGHLIGHT』：使除自己外的1名同伴傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，暴擊效果提升\（提升值相當於{{A}}暴擊效果超過(\d+%)部分的(\d+\.\d+%)，最多計入<color\=#FFFC40>(\d+\.\d+%)</color>的暴擊效果\），效果持續(\d+)回合。同時使自身下一次使用藥品時，藥品效果提升<color\=#FFFC40>(\d+\.\d+%)</color>。\n『ONE MORE』：對1名敵人造成祝福屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械射擊：使用槍械射擊1名敵人，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[HIGHLIGHT]: Increase 1 other ally's DMG Bonus by <color\=#FFFC40>$1</color> and Crit DMG by $3 of Minami's Crit DMG that is over by $2, up to <color\=#FFFC40>$4</color> Crit DMG. Lasts for $5 turns. When Minami uses the next item, increase Item Effect by <color\=#FFFC40>$6</color>.\n[ONE MORE]: Deal Bless damage to 1 foe. \nMelee Attack: Uses a melee weapon to deal light Phys damage to 1 foe. \nGun Attack: Deal light Gun damage to 1 foe. Can fire until out of ammo."
+
+r:"^每次以同伴為目標釋放{{B}}技能時，為其添加(\d+)層<link\="s\|111"><u>祝福</u></link>效果。{{A}}在場時，同伴每有(\d+)層<link\="s\|111"><u>祝福</u></link>效果造成傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，最多提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="When using a Persona skill on allies, grant them $1 <link\="s|111"><u>Blessing</u></link> stack. When Minami is on the field, increase allies' DMG Dealt by <color\=#FFFC40>$3</color> for each <link\="s|111"><u>Blessing</u></link> stack they have, up to <color\=#FFFC40>$4</color>."
+r:"^每次以同伴為目標釋放{{B}}技能時，為其添加(\d+)層<link\="s\|111"><u>祝福</u></link>效果。{{A}}在場時，同伴每有(\d+)層<link\="s\|111"><u>祝福</u></link>效果造成傷害提升<color\=#0169ca>(\d+\.\d+%)</color>，最多提升<color\=#0169ca>(\d+\.\d+%)</color>。$"="When using a Persona skill on allies, grant them $1 <link\="s|111"><u>Blessing</u></link> stack. When Minami is on the field, increase allies' DMG Dealt by <color\=#0169ca>$3</color> for each <link\="s|111"><u>Blessing</u></link> stack they have, up to <color\=#0169ca>$4</color>."
+
+r:"^{{A}}在場時，同伴攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>，每有1種<link\="s\|248"><u>增益類藥品</u></link>效果，攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="When Minami is on the field, increase allies' ATK by <color\=#FFFC40>$1</color>. Increase ATK by <color\=#FFFC40>$2</color> more for each <link\="s\|248"><u>Buff Item</u></link> effect on allies."
+r:"^{{A}}在場時，同伴攻擊力提升<color\=#0169ca>(\d+\.\d+%)</color>，每有1種<link\="s\|248"><u>增益類藥品</u></link>效果，攻擊力提升<color\=#0169ca>(\d+\.\d+%)</color>。$"="When Minami is on the field, increase allies' ATK by <color\=#0169ca>$1</color>. Increase ATK by <color\=#0169ca>$2</color> more for each <link\="s\|248"><u>Buff Item</u></link> effect on allies."
+
+為你停駐的時光=Stopping Time for You
+r:"^{{A}}會隨身攜帶可無限使用的(\d+)種<link\="s\|247"><u>專屬增益類藥品</u></link>。釋放『獻給彼方的花朵』時獲得(\d+)朵『夢回之花』，最多可持有(\d+)朵。自己回合時，可消耗(\d+)朵『夢回之花』獲得『回憶的處方』。『回憶的處方』：使用藥品不佔用回合，使用的<link\="s\|248"><u>增益類藥品</u></link>效果持續時間延長(\d+)回合，使用(\d+)次藥品後失效。$"="Minami has $1 unlimited <link\="s|247"><u>Exclusive Buff Items</u></link> only she can use. When using [Faraway Flower], gain $2 [Flower of Dream] stack. Stacks up to $3 time. At the start of Minami's turn, she can spend $4 [Flower of Dream] to gain [Memory Prescription]. [Memory Prescription]: Can use item without spending an action, extend <link\="s\|248"><u>Buff Item</u></link> effect by $5 turn, lose this effect after using $6 item."
+
+彼時的回憶=Past Memories
+r:"^釋放『獻給彼方的花朵』時額外獲得(\d+)朵『夢回之花』，『夢回之花』的持有上限提升至(\d+)朵。自身藥品效果提升(\d+%)。$"="When using [Faraway Flower], gain $1 [Flower of Dream] more. Increase the maximum number of [Flower of Dream] stacks to $3. Increase Minami's Item Effect by $3."
+
+被風吹拂的花=Wind-Blown Flower
+r:"^釋放『夏日禮籃』額外使目標獲得『花之煦』。『花之煦』：防禦力降低(\d+%)、受到暴擊效果提升(\d+%)，持續3回合。$"="When using [Summer Gift Basket], inflict targets with [Flower's Embrace]: Decrease DEF by $1 and increase Crit DMG Taken by $2 for $3 turns."
+
+在煦日下熱烈盛開=Blooming Under the Sun
+
+此時的人=The Person Now
+r:"^HIGHLIGHT提供的所有增益效果延長至(\d+)回合，同時使下一次使用藥品時，藥品效果額外提升(\d+%)。$"="Extend all buffs from HIGHLIGHT by $1 turn. When using the next item, increase Item Effect by $2 more."
+
+一如往昔的溫柔=As Gentle as Ever
+
+藏著未說完的秘密=Hiding Untold Secrets
+r:"^使用任何藥品不再產生實際消耗。所有<link\="s\|248"><u>增益類藥品</u></link>效果持續時間延長一回合。『回憶的處方』狀態下對友方使用藥品後，額外使主目標獲得『煥能強化』：獲得(\d+%)的總傷害增幅，持續(\d+)回合。$"="Minami no longer spends items when using any items. Extend all <link\="s\|248"><u>Buff Item</u></link> effect by 1 turn. When Minami has [Memory Prescription] and uses an item on allies, grant the main target [Revitalization Boost]: Increase Total DMG by $1 for $2 turns."
+
+增益類藥品=Buff Item
 活元益動片=Vitality Tablet
+r:"^{{A}}專屬增益類藥品，可在戰鬥中無限使用，使用後使一名同伴攻擊力提升(.*)，持續(\d+)回合。$"="{{A}} only item, unlimited use, increase 1 ally's ATK by $1 for $2 turn."
+
 強護針劑=Ironguard Injection
+r:"^{{A}}專屬增益類藥品，可在戰鬥中無限使用，使用後使一名同伴防禦力提升(.*)，持續(\d+)回合。$"="{{A}} only item, unlimited use, increase 1 ally's DEF by $1 for $2 turn."
+
 煥能增效膏=Revitalizing Cream
-反應持效素=Sustained-Reaction Serum
+r:"^{{A}}專屬增益類藥品，可在戰鬥中無限使用，使用後使一名同伴造成傷害提升(.*)，持續(\d+)回合。$"="{{A}} only item, unlimited use, increase 1 ally's DMG Dealt by $1 for $2 turn."
+
+反應持效素=Sustained-Reaction Salve
+r:"^增益類藥品，在戰鬥中使用，使用後使一名同伴持續傷害效果提升(.*)，持續(\d+)回合。\（{{A}}使用時，藥效提升至(.*)\）$"="Increase 1 ally's Damage Over Time Effect by $1 for $2 turn. (When Minami uses this item, increase effect to $3)"
+
 強滲理療貼=Hypertonic Patch
+r:"^增益類藥品，在戰鬥中使用，使用後使一名同伴技巧精通提升(.*)點，持續(\d+)回合。\（{{A}}使用時，藥效提升至(.*)點\）$"="Increase 1 ally's Damage Over Time Effect by $1 for $2 turn. (When Minami uses this item, increase effect to $3)"
+
 快思精華=Quick-Mind Elixir
-倍效液=Doubler Solution
-感能增強液=Sensory-Energy Booster
+r:"^增益類藥品，在戰鬥中使用，使用後使一名同伴追加效果傷害增幅提升(.*)，持續(\d+)回合。\（{{A}}使用時，藥效提升至(.*)\）$"="Increase 1 ally's Follow-Up DMG by $1 for $2 turn. (When Minami uses this item, increase effect to $3)"
 
-Awareness 0 Stopping Time for You
-Minami has 3 unlimited buff items only she can use. When using [Faraway Flower], gain 1 [Flower of Dream] stack. Stacks up to 1 time. At the start of Minami's turn, she can spend 1 [Flower of Dream] to gain 1 [Memory Prescription]. [Memory Prescription]: Can use item without spending an action, extend the duration of buff items, lose this effect after using 1 item.
-Buff items:
-Vitality Tablet: Minami only item, unlimited use, increase 1 ally's ATK by X% for X turns.
-Ironguard Injection: Minami only item, unlimited use, increase 1 ally's DEF by X% for X turns.
-Revitalizing Cream: Minami only item, unlimited use, increase 1 ally's damage by X% for X turns.
-Sustained-Reaction Serum: Increase 1 ally's Damage Over Time Effect by X% for X turns. (When Minami uses this item, heavily increase Item Effect)
-Hypertonic Patch: Increase 1 ally's TECHNICAL Mastery by X% for X turns. (When Minami uses this item, heavily increase Item Effect)
-Quick-Mind Elixir: Increase 1 ally's Resonance DMG by X% for X turns. (When Minami uses this item, heavily increase Item Effect)
-Doubler Solution: Increase 1 ally's ONE MORE/All-Out Attack DMG by X% for X turns. (When Minami uses this item, heavily increase Item Effect)
-Sensory-Energy Booster: Increase 1 ally's HIGHLIGHT/Theurgy DMG by X% for X turns. (When Minami uses this item, heavily increase Item Effect)
+倍效液=Reflex-Boost Tincture
+r:"^增益類藥品，在戰鬥中使用，使用後使一名同伴ONEMORE/{{A}}傷害增幅提升(.*)，持續(\d+)回合。\（{{A}}使用時，藥效提升至(.*)\）$"="Increase 1 ally's ONE MORE/All-Out Attack DMG by $1 for $2 turn. (When Minami uses this item, increase effect to $3)"
 
-Skill 1 Summer Gift Basket
-Deal Bless damage to all foes equal to X% of Minami's Max HP. Then inflict [Candied] on them for X turns: When any ally attacks a Candied foe, increase ATK by X% (Increase ATK by X% more for every X% of Minami's Max HP, up to X%).
-
-Skill 2 Midsummer Flower Field
-Increase party's damage by X% for X turns (Increase damage by X% more for every X% of Minami's Max HP, up to X%). Grant party 1 Blessing stack, and cure 1 debuff.
-
-Skill 3 Faraway Flower
-Increase 1 other ally's Crit Rate by X% and Crit DMG by X% for X turns (Increase Crit Rate and Crit DMG by X% of Minami's Crit DMG that is over by 100%, up to X%).
-During this effect, when Minami uses an item on that ally, increase their Crit DMG by X% more for X turns (Increase Crit Rate and Crit DMG by X% of Minami's Crit DMG that is over by 100%, up to X%).
-
-HIGHLIGHT
-Increase 1 other ally's damage by X% and Crit DMG by X% for X turns (Increase Crit Rate and Crit DMG by X% of Minami's Crit DMG that is over by 100%, up to X%).
-When Minami uses the next item, increase Item Effect by X%.
-
-5 Star Weapon Eternal Grove
-Increase Item Effect;
-When using an item on allies, increase main target's Crit DMG by X% more for X turns.
-When using a Persona skill on allies, increase main target's ATK by X% more for X turns.
-
-Hidden Ability 1 Pray
-When using a Persona skill on allies, grant them 1 Blessing stack. When Minami is on the field, increase allies' damage by X% for each Blessing stack, up to X%.
-
-Hidden Ability 2 Care
-When Minami is on the field, increase ATK. Increase ATK by X% more for each buff item effect on allies.
-
-Awareness 1 Past Memories
-When using [Faraway Flower], gain 1 [Flower of Dream] more. Increase the maximum number of [Flower of Dream] stacks to 2. Increase Minami's Item Effect.
-
-Awareness 2 Wind-Blown Flower
-When using [Summer Gift Basket], inflict targets with [Lingering Flower]: Decrease DEF and increase Crit DMG Taken for X turns.
-
-Awareness 3 Blooming Under the Sun
-[Summer Gift Basket], [Faraway Flower] Skill Lv. +3, up to a maximum of Lv. 15.
-
-Awareness 4 The Person Now
-Extend all buffs from [Thief Tactics] by X turns. When using the next item, increase Item Effect by X% more.
-
-Awareness 5 As Gentle as Ever
-[Midsummer Flower Field], [Thief Tactics] Skill Lv. +3, up to a maximum of Lv. 15.
-
-Awareness 6 Hiding Untold Secrets
-Minami no longer spends items when using any items. Extend all buff item effect by X turns. When Minami has [Memory Prescription] and uses an item on allies, grant the main target [Memory Recall]: Increase Total DMG by X% for X turns.
+感能增強液=Neuro-Kinetic Serum
+r:"^增益類藥品，在戰鬥中使用，使用後使一名同伴HIGHLIGHT/{{A}}傷害增幅提升(.*)，持續(\d+)回合。\（{{A}}使用時，藥效提升至(.*)\）$"="Increase 1 ally's HIGHLIGHT/Theurgy DMG by $1 for $2 turn. (When Minami uses this item, increase effect to $3)"
