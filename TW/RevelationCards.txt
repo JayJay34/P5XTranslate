@@ -30,7 +30,7 @@ r:"^持有數量:(\d+)$"="Owned: $1"
 屬性選擇=Select
 sr:"^是否確認定製一張<color\=#f1b500>(.*)</color>位置，<color\=#f1b500>(.*)</color>套裝，主屬性為<color\=#f1b500>(.*)</color>的啟示卡？$"="Make 1 <color\=#f1b500>$2</color> <color\=#f1b500>$3</color> Revelation Card?"
 sr:"^當前定製啟示卡限定：\n套裝：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主屬性：<color\=#FFDE00>(.*)</color>\n副屬性：<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>\n是否確認生成副屬性？\n<color\=#ff3b37>生成後限定套裝、位置、屬性類型將無法更改。</color>$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\nSub Stats: <color\=#FFDE00>$4</color>, <color\=#FFDE00>$5</color>, <color\=#FFDE00>$6</color>, <color\=#FFDE00>$7</color>\nGenerate these Sub Stats?\n<color\=#ff3b37>Cannot change Main Stat and Sub Stats after generation.</color>"
-sr:"^當前定製啟示卡限定：\n套裝：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主屬性：<color\=#FFDE00>(.*)</color>\n副屬性：<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>\n<color\=#FFDE00>選定副屬性均為最大值。</color>\n是否消耗<color\=#FFDE00>時序之墨×(\d+)</color>、<color\=#FFDE00>穹謁之墨×(\d+)</color>進行定製？$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\nSub Stats: <color\=#FFDE00>$4</color>, <color\=#FFDE00>$5</color>, <color\=#FFDE00>$6</color>, <color\=#FFDE00>$7</color>\n<color\=#FFDE00>Selected Sub Stats are at max stats.</color>\nSpend <color\=#FFDE00>Temporal Ink ×$8</color>, <color\=#FFDE00>Celestial Ink ×$9</color> to customize?"
+sr:"^當前定製啟示卡限定：\n套裝：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主屬性：<color\=#FFDE00>(.*)</color>\n副屬性：<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>\n<color\=#FFDE00>選定副屬性均為最大值。</color>\n是否消耗<color\=#FFDE00>{{A}}×(\d+)</color>、<color\=#FFDE00>{{B}}×(\d+)</color>進行定製？$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\nSub Stats: <color\=#FFDE00>$4</color>, <color\=#FFDE00>$5</color>, <color\=#FFDE00>$6</color>, <color\=#FFDE00>$7</color>\n<color\=#FFDE00>Selected Sub Stats are at max stats.</color>\nSpend <color\=#FFDE00>{{A}} ×$8</color>, <color\=#FFDE00>{{B}} ×$9</color> to customize?"
 
 <color\=#FFDE00>暫未開放宙卡定製</color>=<color\=#FFDE00>Custom Space card is not yet available</color>
 暫未開放宙卡定製。=Custom Space card is not yet available.
@@ -202,8 +202,8 @@ r:"^4套裝效果：對生命值不高於(\d+%)的怪盜治療時，治療效果
 r:"^2套裝效果：物理傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Phys DMG by <color\=#2899ff>$1</color>.</size>"
 r:"^4套裝效果：技能造成每次傷害使自身獲得『怨恨』：增加自身攻擊力<color\=#2899ff>(\d+%)</color>，持續(\d+)回合，最多(\d+)層。$"="<size\=23>4 Set Effect: Gain [Resentment] after every hit of skill damage: Increase ATK by <color\=#2899ff>$1</color> for $2 turn up to $3 stacks.</size>"
 
-【英勇】=<size\=20>  </size>[Valor]
-英勇=Valor
+【英勇】=<size\=20>  </size>[Courage]
+英勇=Courage
 r:"^4套裝效果：暴擊效果提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；造成暴擊後再次獲得相同效果。$"="<size\=23>4 Set Effect: Increase Crit DMG by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again after landing a CRITICAL.</size>"
 
 【職責】=<size\=20>  </size>[Labor]
@@ -211,8 +211,8 @@ r:"^4套裝效果：暴擊效果提升<color\=#2899ff>(\d+%)</color>，持續(\d
 r:"^2套裝效果：生命值提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase HP by <color\=#2899ff>$1</color>.</size>"
 r:"^4套裝效果：解明怪盜裝備時生效：戰鬥中使所有同伴生命值、攻擊力、防禦力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: When equipped by Elucidator Thieves: Increase all allies' HP, ATK and DEF by <color\=#2899ff>$1</color>.</size>"
 
-【主權】=<size\=20>  </size>[Dominion]
-主權=Dominion
+【主權】=<size\=20>  </size>[Control]
+主權=Control
 r:"^4套裝效果：使用技能攻擊敵人時對主目標造成自身生命值<color\=#2899ff>(\d+%)</color>的額外傷害。$"="<size\=23>4 Set Effect: Deal <color\=#2899ff>$1</color> HP additional damage to the main target when attacking with a skill.</size>"
 
 【爭執】=<size\=20>  </size>[Strife]
@@ -235,13 +235,13 @@ r:"^4套裝效果：當前生命值百分比不低於(\d+%)時，祝福屬性的
 r:"^2套裝效果：防禦力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase DEF by <color\=#2899ff>$1</color>.</size>"
 r:"^4套裝效果：護盾效果提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase Shield Effect by <color\=#2899ff>$1</color>.</size>"
 
-【奢華】=<size\=20>  </size>[Luxury]
-奢華=Luxury
+【奢華】=<size\=20>  </size>[Opulence]
+奢華=Opulence
 r:"^2套裝效果：冰凍傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Ice DMG by <color\=#2899ff>$1</color>.</size>"
 r:"^4套裝效果：追加效果造成傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase Follow-Up DMG by <color\=#2899ff>$1</color>.</size>"
 
-【富足】=<size\=20>  </size>[Abundance]
-富足=Abundance
+【富足】=<size\=20>  </size>[Prosperity]
+富足=Prosperity
 r:"^2套裝效果：受到傷害減免<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Decrease DMG Taken by <color\=#2899ff>$1</color>.</size>"
 r:"^4套裝效果：進入戰鬥立刻回復<color\=#2899ff>(\d+%) </color>HIGHLIGHT能量，回復HIGHLIGHT能量效果無法重複觸發。$"="<size\=23>4 Set Effect: At the start of battle, immediately gain <color\=#2899ff>$1</color> HIGHLIGHT Energy, cannot be triggered again.</size>"
 
@@ -255,8 +255,8 @@ r:"^4套裝效果：進入戰鬥後，每經過(\d+)個回合提升自身攻擊�
 r:"^2套裝效果：疾風傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Wind DMG by <color\=#2899ff>$1</color>.</size>"
 r:"^4套裝效果：每段攻擊有(\d+%)的固定機率額外造成自身攻擊力<color\=#2899ff>(\d+%)</color>的傷害。$"="<size\=23>4 Set Effect: There's a $1 fixed chance to increase ATK by <color\=#2899ff>$2</color> after each hits of attack.</size>"
 
-【真諦】=<size\=20>  </size>[Science]
-真諦=Science
+【真諦】=<size\=20>  </size>[Truth]
+真諦=Truth
 r:"^2套裝效果：核熱傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Nuke DMG by <color\=#2899ff>$1</color>.</size>"
 r:"^4套裝效果：使用技能攻擊敵人時，若主目標處於元素異常狀態則對其造成<color\=#2899ff>(\d+%)</color>攻擊力的傷害。$"="<size\=23>4 Set Effect: Deal <color\=#2899ff>$1</color> ATK damage to the main target if the foe is inflicted with Elemental Ailment.</size>"
 
@@ -265,8 +265,8 @@ r:"^4套裝效果：使用技能攻擊敵人時，若主目標處於元素異常
 r:"^2套裝效果：念動傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Psy DMG by <color\=#2899ff>$1</color>.</size>"
 r:"^4套裝效果：造成念動傷害時，提升攻擊(\d+%)，如果敵方人數不少於(\d+)，則攻擊力額外提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase ATK by $1 when dealing Psy damage. Additionally increase ATK by <color\=#2899ff>$3</color> if there's not less than $2 foes.</size>"
 
-【干擾】=<size\=20>  </size>[Interference]
-干擾=Interference
+【干擾】=<size\=20>  </size>[Hindrance]
+干擾=Hindrance
 r:"^2套裝效果：詛咒傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Curse DMG by <color\=#2899ff>$1</color>.</size>"
 r:"^4套裝效果：對處於負面狀態下的敵人咒屬性傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase Curse DMG by <color\=#2899ff>$1</color> when attacking foes with debuff.</size>"
 
@@ -351,6 +351,6 @@ sr:"^自由&(.*)$"="Freedom & $1"
 sr:"^希望&(.*)$"="Hope & $1"
 sr:"^突破&(.*)$"="Perseverance & $1"
 
-觸發【主權】套裝效果的額外傷害=Triggered the additional damage from [Dominion]
-觸發【真諦】套裝效果的額外傷害=Triggered the additional damage from [Science]
+觸發【主權】套裝效果的額外傷害=Triggered the additional damage from [Control]
+觸發【真諦】套裝效果的額外傷害=Triggered the additional damage from [Truth]
 觸發【告捷】套裝效果的額外傷害=Triggered the additional damage from [Victory]
