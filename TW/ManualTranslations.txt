@@ -210,6 +210,7 @@ sr:"^已為(.*)點讚。$"="Liked $1."
 置頂=Pin
 取消置頂=Cancel pin
 刪除=Delete
+刪除好友=Delete Friend
 點讚=Like
 已讚=Liked
 複製=Copy
@@ -230,7 +231,10 @@ r:"^(\d+)天前$"="$1d ago"
 請輸入頻道號（0-999）=Enter the channel number (0-999)
 r:"^新消息 (\d+)條。$"="$1 new messages."
 
+生效中=Active
 未完成=Missing
+當前無技能資訊=No skill details
+暫無排名訊息=No rank details
 
 提示=Tips
 設置提示=Settings
@@ -456,21 +460,18 @@ r:"^已購買(\d+)/(\d+)次（每日05:00重置）$"="Purchased $1/$2 times \n(R
 慾望之木=Wood of Desire
 極其罕見的神奇木料，可用於提升技能等級至Lv.9·Lv.10。=<size\=28>An extremely rare magical timber, can be used to level up Skills to Lv.9-Lv.10.</size>
 極其罕見的神奇木料，可用於提升技能等級至Lv.9、Lv.10。=<size\=28>An extremely rare magical timber, can be used to level up Skills to Lv.9-Lv.10.</size>
-空白命運=Blank Fate
 承載了輪迴力量的命運之卡，可用於任意啟示卡的回溯。=Card of fate with the power of reincarnation, can be used to revert Revelation Cards.
 啟示回溯=Reset
-確認要消耗<color\=#f1b500>「空白命運×1」</color>進行一次啟示回溯嗎？\n回溯後將有以下變化：\n1.啟示等級變為0級\n2.主屬性、副屬性的狀態變為初始狀態\n3.返還所有養成到當前等級消耗的經驗材料（以通用啟示材料的形式返還）=<size\=32>Use <color\=#f1b500>[Blank Fate×1]</color> to reset your card?\nAfter resetting:\n1. Set the card back to level 0\n2. Set the main stat and sub stats back to original\n3. Refund all EXP materials\n(In the form of materials)</size>
+確認要消耗<color\=#f1b500>「{{A}}×1」</color>進行一次啟示回溯嗎？\n回溯後將有以下變化：\n1.啟示等級變為0級\n2.主屬性、副屬性的狀態變為初始狀態\n3.返還所有養成到當前等級消耗的經驗材料（以通用啟示材料的形式返還）=<size\=32>Use <color\=#f1b500>[{{A}}×1]</color> to reset your card?\nAfter resetting:\n1. Set the card back to level 0\n2. Set the main stat and sub stats back to original\n3. Refund all EXP materials\n(In the form of materials)</size>
 回溯道具不足。=Insufficient rewind item.
-時序之墨=Temporal Ink
 蘊含星辰之力的墨水。定製啟示卡時，指定主屬性的，最終定製時會消耗。=Ink that contains the power of the stars, can be used to select main stat when customizing Revelation Card.
 蘊含星辰之力的墨水，可用於定製月、星、辰位置的啟示卡。=Ink that contains the power of the stars, can be used to create a customized basic Revelation Card.
-『時序之墨』\n蘊含星辰之力的墨水。定製啟示卡時，指定主屬性的，最終定製時會消耗。=[Temporal Ink]\nInk that contains the power of the stars, can be used to create a customized basic Revelation Card.
-穹謁之墨=Celestial Ink
+『{{A}}』\n蘊含星辰之力的墨水。定製啟示卡時，指定主屬性的，最終定製時會消耗。=[{{A}}]\nInk that contains the power of the stars, can be used to create a customized basic Revelation Card.
 蘊含星辰之力的墨水。定製啟示卡時，指定副屬性的，最終定製時會消耗。=Ink that contains the power of the stars, can be used to select sub stat when customizing Revelation Card.
-『穹謁之墨』\n蘊含星辰之力的墨水。定製啟示卡時，指定副屬性的，最終定製時會消耗。=[Celestial Ink]\nInk that contains the power of the stars, can be used to select sub stat when customizing Revelation Card.
-溯讖之墨=Retroactive Ink
+『{{A}}』\n蘊含星辰之力的墨水。定製啟示卡時，指定副屬性的，最終定製時會消耗。=[{{A}}]\nInk that contains the power of the stars, can be used to select sub stat when customizing Revelation Card.
 蘊含星辰之力的墨水，可用於刷新啟示卡的副屬性時消耗。=Ink that contains the power of the stars, can be used to refresh sub stats when customizing Revelation Card.
-『溯讖之墨』\n蘊含星辰之力的墨水，可用於刷新啟示卡的副屬性時消耗。=[Retroactive Ink]\nInk that contains the power of the stars, can be used to refresh sub stats when customizing Revelation Card.
+『{{A}}』\n蘊含星辰之力的墨水，可用於刷新啟示卡的副屬性時消耗。=[{{A}}]\nInk that contains the power of the stars, can be used to refresh sub stats when customizing Revelation Card.
+r:"^消耗「<color\=#FFDE00>(.*)</color>」不足，無法刷新。$"="Insufficient <color\=#FFDE00>$1</color>, cannot refresh."
 認知請願書 5星=<size\=19>5★ Cognitive Petition</size>
 認知請願書 4星=<size\=19>4★ Cognitive Petition</size>
 請在以下列表中點擊選擇一位4星怪盜。=Select one 4★ Thief from the list below.
@@ -483,6 +484,9 @@ r:"^遺留在{{A}}的怪盜殘識碎片，消耗(\d+)個可以合成角色的殘
 r:"^{{A}}遺留在{{B}}的殘識碎片，消耗(\d+)個可以合成角色的殘識。$"="{{A}} Awareness Fragment left in the {{B}}, consume $1 to fuse 1 Awareness."
 r:"^消耗：<color\=#FFDE00>「怪盜殘識碎片」×(\d+)</color>\n兌換：<color\=#FFDE00>「{{A}}的殘識碎片」×(\d+)</color>\n是否確認？$"="<size\=25>Consume: <color\=#FFDE00>[Thief Awareness Fragment] ×$1</color>\nGet: <color\=#FFDE00>[{{A}}'s Awareness Fragment] ×$2</color>\nNeed 60 to fuse 1 Awareness, \nare you sure?</size>"
 r:"^消耗：<color\=#FFDE00>「{{A}}的殘識碎片」×(\d+)</color>\n合成：<color\=#FFDE00>「{{A}}的殘識」×(\d+)</color>\n是否確認？$"="Consume: <color\=#FFDE00>[{{A}}'s Awareness Fragment] ×$1</color>\nGet: <color\=#FFDE00>[{{A}}'s Awareness] ×$2</color>\nAre you sure?"
+星穹的墨匣=Cosmic Inkwell
+書寫命運的手稿，開啟墨匣後可自選以下任一道具：{{A}}、{{B}}、{{C}}。=The manuscript that writes fate, open the inkwell to select one of the following items: {{A}}, {{B}}, {{C}}.
+sr:"^消耗：<color\=#FFDE00>「(.*)」×(.*)</color>\n兌換：<color\=#FFDE00>「(.*)」×(.*)</color>\n是否確認？$"="Spend: <color\=#FFDE00>[$1] ×$2</color>\nExchange: <color\=#FFDE00>[$3] ×$4</color>\nAre you sure?"
 
 禮包獲取後，可選擇獎勵包括=You can choose the following rewards
 r:"^{{A}}的殘識碎片$"="<size\=16>Awareness Fragment \nof {{A}}</size>"
@@ -497,6 +501,8 @@ r:"^使用後可自選1把以下怪盜的五星武器：(.*)。$"="Can be used t
 定製武器模組=4★ Weapon Case
 特供武器模組=4★ Weapon Case
 r:"^使用後可自選1把以下怪盜的四星武器：(.*)。$"="Can be used to choose 1 4★ Weapon for the following Thieves: $1."
+4星怪盜自選=4★ Thief
+4星武器自選=4★ Weapon
 定製武器配裝=3★ Weapon Case
 請在以下列表中點擊選擇一把4星武器=Please choose one 4★ Weapon
 請在以下物品中自選一種=Please choose one in the following items
@@ -1247,7 +1253,7 @@ r:"^通關{{A}}之影(.*)（或更高難度）$"="Defeat {{A}} on Difficulty $1 
 
 r:"^{{A}}探索度達到(\d+)%$"="Reach $1% Exploration in {{A}}"
 r:"^將{{A}}精算機升至(\d+)級$"="Upgrade the {{A}} Ticket Machine to Lv. $1"
-r:"^通關天鵝絨試煉巧匠之作第(\d+)關$"="Pass Velvet Trials Artisan's Work Level $1"
+r:"^通關天鵝絨試煉巧匠之作第(\d+)關$"="Pass Velvet Trials Technician Stage $1"
 r:"^通關天鵝絨試煉任意(\d+)章的第(\d+)關$"="Pass Level $2 for $1 Velvet Trials"
 r:"^通關天鵝絨試煉任意(\d+)個章節的第(\d+)關$"="Pass Level $2 for $1 Velvet Trials"
 r:"^完成難度(\d+)及以上的心軌擇行$"="Complete Heart Rail on Difficulty $1"
@@ -2824,26 +2830,26 @@ Velvet Trials (VT)
 ----------
 天鵝絨試煉=Velvet Trials
 r:"^解明怪盜對在場怪盜的<color\=#FFFC40>屬性提升</color>效果，提升至(\d+%)$"="Increase the <color\=#FFFC40>Stats Buff</color> effect from Elucidator Thieves to $1"
-巧匠之作=<size\=19>Artisan's Work</size>
+巧匠之作=<size\=26>Technician</size>
 
 熔岩幻境=Lava Mirage
 r:"^全體怪盜<color\=#ff381d>火焰</color>/<color\=#ff63ff>念動</color>屬性傷害提高(\d+%)$"="<size\=24>Increase Thieves' <color\=#ff381d>Fire</color>/<color\=#ff63ff>Psy</color> DMG by $1</size>"
-灼熱迷域=<size\=18>Scorching Maze</size>
+灼熱迷域=<size\=15>Lair of Arcane Fire</size>
 r:"^火焰、念動屬性傷害提升(\d+%)$"="Increase Fire and Psy DMG by $1"
 
 量子冰場=Quantum Icefield
 r:"^全體怪盜<color\=#00aeff>冰凍</color>/<color\=#00fcff>核熱</color>屬性傷害提高(\d+%)$"="<size\=24>Increase Thieves' <color\=#00aeff>Ice</color>/<color\=#00fcff>Nuke</color> DMG by $1</size>"
-暑寒極地=<size\=18>Cold Polar Zone</size>
+暑寒極地=<size\=20>Nuclear Winter</size>
 r:"^冰凍、核熱屬性傷害提升(\d+%)$"="Increase Ice and Nuke DMG by $1"
 
 雷光聖所=Thunderous Sanctuary
 r:"^全體怪盜<color\=#fbff37>電擊</color>/<color\=#fffea0>祝福</color>屬性傷害提高(\d+%)$"="<size\=21>Increase Thieves' <color\=#fbff37>Elec</color>/<color\=#fffea0>Bless</color> DMG by $1</size>"
-雷霆祈境=<size\=19>Thunder Realm</size>
+雷霆祈境=<size\=14>Thunderous Blessing</size>
 r:"^電擊、祝福屬性傷害提升(\d+%)$"="Increase Elec and Bless DMG by $1"
 
 厄命風眼=Cursed Eye
 r:"^全體怪盜<color\=#81ea2c>疾風</color>/<color\=#ff0036>詛咒</color>屬性傷害提高(\d+%)$"="<size\=22>Increase Thieves' <color\=#81ea2c>Wind</color>/<color\=#ff0036>Curse</color> DMG by $1</size>"
-詛咒漩渦=<size\=22>Cursed Swirl</size>
+詛咒漩渦=<size\=26>An Ill Wind</size>
 r:"^疾風、詛咒屬性傷害提升(\d+%)$"="Increase Wind and Curse DMG by $1"
 
 造成WEAK/{{A}}時獲得分數=Weak DMG/{{A}}
@@ -2851,8 +2857,10 @@ r:"^疾風、詛咒屬性傷害提升(\d+%)$"="Increase Wind and Curse DMG by $1
 冰凍/核熱屬性隊員攻擊時獲得分數=Ice/Nuke Teammates Score
 電擊/祝福屬性隊員攻擊時獲得分數=Elec/Bless Teammates Score
 疾風/詛咒屬性隊員攻擊時獲得分數=Wind/Curse Teammates Score
-陣亡人數不超過0人=No Faint
-r:"^陣亡人數不超過0人<color\=#FF0000>\+(\d+)</color>$"="No Faint <color\=#FF0000>+$1</color>"
+r:"^(\d+)次行動內完成$"="Win within $1 ally actions"
+r:"^(\d+)次行動內完成<color\=#FF0000>\+(\d+)</color>$"="Win within $1 ally actions <color\=#FF0000>+$2</color>"
+陣亡人數不超過0人=No more than 0 KO'd allies
+r:"^陣亡人數不超過0人<color\=#FF0000>\+(\d+)</color>$"="No more than 0 KO'd allies <color\=#FF0000>+$1</color>"
 r:"^火焰/念動屬性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Fire/Psy Teammates Score <color\=#FF0000>X$1</color>"
 r:"^冰凍/核熱屬性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Ice/Nuke Teammates Score <color\=#FF0000>X$1</color>"
 r:"^電擊/祝福屬性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Elec/Bless Teammates Score <color\=#FF0000>X$1</color>"
@@ -2870,7 +2878,7 @@ sr:"^(.*)/(.*)屬性攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="$1
 ----------
 Others
 ----------
-P5X營運團隊=P5X Team
+P5X營運團隊=P5X Operations Team
 所有已讀郵件已刪除。=Deleted all read emails.
 獎勵發放管理員=System
 刪除已讀=<size\=24>Delete Read</size>
@@ -2973,7 +2981,7 @@ r:"^前往{{A}}(\d+)區$"=$"Go to {{A}} Area $1"
 尋找目標人物=Find the target
 等待一段時間=Wait for a while
 將時間推進到夜晚=Pass the time to night
-返回家中=Heading home
+返回家中=Go home
 故事告一段落=End of story
 
 如果想繼續體驗「<color\=#ffc000>娃娃機</color>」的小遊戲，可以在完成任務「抓取的樂趣」後再進一步遊玩。=<size\=26>If you want to continue to experience the "<color\=#ffc000>Crane Game</color>", you can play more after completing the mission "The Fun of Catching".</size>
@@ -3015,7 +3023,7 @@ EVENTS TAB
 活動道具=Event Item
 立刻參與限時活動，獲取大量{{A}}、契約憑證以及個性化裝飾！=Participate in limited time events and get lots of {{A}}, Contract items, and more!
 天鵝絨試煉通關=<size\=26>Clear Velvet Trials</size>
-r:"^巧匠之作第(\d+)關$"="<size\=26>Artisan's Work $1</size>"
+r:"^巧匠之作第(\d+)關$"="Technician $1"
 獲得<color\=#FFD600>支援怪盜</color>{{A}}=<size\=26>Get <color\=#FFD600>navigator</color> {{A}}</size>
 獲得怪盜{{A}}=Get {{A}}
 心之海試煉通關=<size\=22>Clear Sea of Souls Trial</size>
@@ -3192,7 +3200,7 @@ r:"^剩餘挑戰次數：(\d+)/(\d+)$"="Challenge Left: $1/$2"
 最佳陣容=Best Team
 已擊敗=Defeated
 r:"^階段(\d+) (\d+)$"="Phase $1 $2"
-剩餘行動回合：=   Turn(s) Left:   <size\=1>_</size>
+剩餘行動回合：=   Turns Left:   <size\=1>_</size>
 r:"^行動總次數：(\d+)$"="Total Actions: $1"
 重置挑戰會解除陣容鎖定、恢復挑戰次數並重置首領血量，但不會影響歷史最高分，是否確認重置？=Resetting the challenge will unlock teams, restore challenge attempts and and reset the boss' HP, but will not affect your high score, confirm?
 挑戰次數已用盡，重置次數前無法繼續挑戰。=Used all challenge attempts, reset to challenge again.
