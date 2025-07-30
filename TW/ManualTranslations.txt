@@ -61,6 +61,8 @@ r:"^顯示器-(\d+)$"="Display-$1"
 選擇配音=Dubbing
 日文配音=Japanese
 中文配音=Mandarin
+日文=Japanese
+中文=Chinese
 *設置成功後遊戲內所有配音均會生效。=*Have to restart the game to take effect.
 
 操作設置=Control
@@ -477,13 +479,14 @@ r:"^消耗「<color\=#FFDE00>(.*)</color>」不足，無法刷新。$"="Insuffic
 請在以下列表中點擊選擇一位4星怪盜。=Select one 4★ Thief from the list below.
 宇宙的終響=Space Echo
 來自宇宙的命運指引，打開後可自選一張橙色宙位啟示卡。=A guidance of fate from the Universe, can be used to gain 1 Orange Space Card
+sr:"^消耗：<color\=#FFDE00>「(.*)」×(\d+)</color>\n兌換：<color\=#FFDE00>宙位啟示「(.*)」×(\d+)</color>\n是否確認？$"="Spend: <color\=#FFDE00>[$1] ×$2</color>\nExchange: <color\=#FFDE00>Space Revelation [$3] ×$4</color>\nAre you sure?"
 殘識碎片禮包=<size\=17>Awareness Fragment Gift Bag</size>
 盲選偶像合約 ★5=5★ Random Kaidol Contract
 r:"^怪盜殘識碎片$"="<size\=22>Thief Awareness Fragment</size>"
 r:"^遺留在{{A}}的怪盜殘識碎片，消耗(\d+)個可以合成角色的殘識。$"="Thief Awareness Fragment that are left in the {{A}}, consume $1 to fuse 1 Awareness."
 r:"^{{A}}遺留在{{B}}的殘識碎片，消耗(\d+)個可以合成角色的殘識。$"="{{A}} Awareness Fragment left in the {{B}}, consume $1 to fuse 1 Awareness."
-r:"^消耗：<color\=#FFDE00>「怪盜殘識碎片」×(\d+)</color>\n兌換：<color\=#FFDE00>「{{A}}的殘識碎片」×(\d+)</color>\n是否確認？$"="<size\=25>Consume: <color\=#FFDE00>[Thief Awareness Fragment] ×$1</color>\nGet: <color\=#FFDE00>[{{A}}'s Awareness Fragment] ×$2</color>\nNeed 60 to fuse 1 Awareness, \nare you sure?</size>"
-r:"^消耗：<color\=#FFDE00>「{{A}}的殘識碎片」×(\d+)</color>\n合成：<color\=#FFDE00>「{{A}}的殘識」×(\d+)</color>\n是否確認？$"="Consume: <color\=#FFDE00>[{{A}}'s Awareness Fragment] ×$1</color>\nGet: <color\=#FFDE00>[{{A}}'s Awareness] ×$2</color>\nAre you sure?"
+r:"^消耗：<color\=#FFDE00>「怪盜殘識碎片」×(\d+)</color>\n兌換：<color\=#FFDE00>「{{A}}的殘識碎片」×(\d+)</color>\n是否確認？$"="<size\=25>Spend: <color\=#FFDE00>[Thief Awareness Fragment] ×$1</color>\nGet: <color\=#FFDE00>[{{A}}'s Awareness Fragment] ×$2</color>\nNeed 60 to fuse 1 Awareness, \nare you sure?</size>"
+r:"^消耗：<color\=#FFDE00>「{{A}}的殘識碎片」×(\d+)</color>\n合成：<color\=#FFDE00>「{{A}}的殘識」×(\d+)</color>\n是否確認？$"="Spend: <color\=#FFDE00>[{{A}}'s Awareness Fragment] ×$1</color>\nGet: <color\=#FFDE00>[{{A}}'s Awareness] ×$2</color>\nAre you sure?"
 星穹的墨匣=Cosmic Inkwell
 書寫命運的手稿，開啟墨匣後可自選以下任一道具：{{A}}、{{B}}、{{C}}。=The manuscript that writes fate, open the inkwell to select one of the following items: {{A}}, {{B}}, {{C}}.
 sr:"^消耗：<color\=#FFDE00>「(.*)」×(.*)</color>\n兌換：<color\=#FFDE00>「(.*)」×(.*)</color>\n是否確認？$"="Spend: <color\=#FFDE00>[$1] ×$2</color>\nExchange: <color\=#FFDE00>[$3] ×$4</color>\nAre you sure?"
@@ -1508,7 +1511,7 @@ Premium Standard Rules
 sr:"^<color\=#EADE10>「(.*)」</color>活動契約現已開啟。\n該契約五星角色為<color\=#EADE10>「非限定角色」</color>，活動結束後加入<color\=#EADE10>「角色普通契約」</color>。\n<color\=#EADE10>「簽約可獲得五星、四星怪盜及少數低階二星人格面具」</color>\n「以下獲得怪盜或(.*)統稱角色」$"="Event Contract <color\=#EADE10>[$1]</color> is now available.\nThe Contract 5★ Character is a <color\=#EADE10>[Standard Character]</color>, they will be available in the Standard Contract <color\=#EADE10>[Kaidol Draft X]</color> after the event ends.\n<color\=#EADE10>[Signature can obtain 5★ Thief, 4★ Thief, and few low Rank 2★ Persona]</color>\n[The following obtained Thief or Persona are collectively called Character]"
 
 100% Limited Pool Details
-sr:"^<sprite\=0 tint\=1>活動期間，玩家可以從中使用<color\=#EADE10>「(.*)」</color>進行簽約。UP五星角色<color\=#EADE10>「(.*)」</color>與四星角色<color\=#EADE10>「(.*)」</color>、<color\=#EADE10>「(.*)」</color>、<color\=#EADE10>「(.*)」</color>的簽約獲取機率將大幅提升。\n<sprite\=0 tint\=1>在本次活動契約中，每<color\=#EADE10>(\d+)</color>次簽約必定能透過保底獲取至少1名四星或以上角色。\n<sprite\=0 tint\=1>在本次活動契約中，每<color\=#EADE10>(\d+)</color>次簽約必定能透過保底獲取當期UP五星角色。\n<sprite\=0 tint\=1>本次契約屬於<color\=#EADE10>「(.*)」</color>，簽約次數將會與同類型契約共用，不會因活動結束而清零。同時因累計次數增加的五星角色獲取機率，也會繼承到後續<color\=#EADE10>「(.*)」</color>。\n<sprite\=0 tint\=1>每累計進行<color\=#EADE10>(\d+)</color>次「角色活動契約·精準」簽約，可額外獲得1個當期「盲選偶像合約 ★5」。「盲選偶像合約 ★5」內容會跟隨版本變更，領取時內容以當期版本為准。已達成「盲選偶像合約 ★5」領取條件未領取時，會在當期卡池關閉後自動領取，以郵件的形式發放。該累計次數與同類型活動契約共用，未達(\d+)次的累計次數可繼承到下個同類型活動契約。$"="<sprite\=0 tint\=1>During this event, players can use <color\=#EADE10>[$1]</color> to Sign a Contract. Heavily increase the chance to obtain the RATE UP 5★ Character <color\=#EADE10>[$2]</color> and 4★ Characters <color\=#EADE10>[$3]</color>, <color\=#EADE10>[$4]</color>, <color\=#EADE10>[$5]</color>.\n<sprite\=0 tint\=1>During this event, obtain at least 1 4★ every <color\=#EADE10>$6</color> Signature.\n<sprite\=0 tint\=1>During this event, guarantee obtain the current RATE UP 5★ Character every <color\=#EADE10>$7</color> Signature.\n<sprite\=0 tint\=1>This Contract is <color\=#EADE10>[$8]</color>, share the Signature count between the same Contract system, will not reset after this event ends. Carry the 5★ Character obtain chance with Signature count increase to future <color\=#EADE10>[$9]</color>.\n<sprite\=0 tint\=1>For every <color\=#EADE10>$10</color> Signature in [100% Contract], additionally obtain 1 current [5★ Random Kaidol Contract]. [5★ Random Kaidol Contract] content will change with the version, and the content will be based on the version when you obtained it. If you can obtain [5★ Random Kaidol Contract] but did not claim it, it will be automatically claimed after the event ends and will be sent via email. Share this number with future event Contract of the same type, the number less than $11 can be carried to future event Contract of the same type."
+sr:"^<sprite\=0 tint\=1>活動期間，玩家可以從中使用<color\=#EADE10>「(.*)」</color>進行簽約。UP五星角色<color\=#EADE10>「(.*)」</color>與四星角色<color\=#EADE10>「(.*)」</color>、<color\=#EADE10>「(.*)」</color>、<color\=#EADE10>「(.*)」</color>的簽約獲取機率將大幅提升。\n<sprite\=0 tint\=1>在本次活動契約中，每<color\=#EADE10>(\d+)</color>次簽約必定能透過保底獲取至少1名四星或以上角色。\n<sprite\=0 tint\=1>在本次活動契約中，每<color\=#EADE10>(\d+)</color>次簽約必定能透過保底獲取當期UP五星角色。\n<sprite\=0 tint\=1>本次契約屬於<color\=#EADE10>「(.*)」</color>，簽約次數將會與同類型契約共用，不會因活動結束而清零。同時因累計次數增加的五星角色獲取機率，也會繼承到後續<color\=#EADE10>「(.*)」</color>。\n<sprite\=0 tint\=1>每累計進行<color\=#EADE10>(\d+)</color>次「角色活動契約·精準」簽約，可額外獲得1個當期「盲選偶像合約 ★5」。「盲選偶像合約 ★5」內容會跟隨版本變更，領取時內容以當期版本為准。已達成「盲選偶像合約 ★5」領取條件未領取時，會在當期卡池關閉後自動領取，以郵件的形式發放。該累計次數與同類型活動契約共用，未達(\d+)次的累計次數可繼承到下個同類型活動契約。$"="<sprite\=0 tint\=1>During this event, players can use <color\=#EADE10>[$1]</color> to Sign a Contract. Heavily increase the chance to obtain the RATE UP 5★ Character <color\=#EADE10>[$2]</color> and 4★ Characters <color\=#EADE10>[$3]</color>, <color\=#EADE10>[$4]</color>, <color\=#EADE10>[$5]</color>.\n<sprite\=0 tint\=1>During this event, obtain at least 1 4★ every <color\=#EADE10>$6</color> Signature.\n<sprite\=0 tint\=1>During this event, guarantee obtain the current RATE UP 5★ Character every <color\=#EADE10>$7</color> Signature.\n<sprite\=0 tint\=1>This Contract is <color\=#EADE10>[$8]</color>, share the Signature count between the same Contract system, will not reset after this event ends. Carry the 5★ Character obtain chance with Signature count increase to future <color\=#EADE10>[$9]</color>.\n<sprite\=0 tint\=1>For every <color\=#EADE10>$10</color> Signature in [100% Contract], additionally obtain 1 current [5★ Random Kaidol Contract]. [5★ Random Kaidol Contract] content will change with the version, and the content will be based on the version when you obtained it. If you can obtain [5★ Random Kaidol Contract] but did not claim it, it will be automatically claimed after the event ends and will be sent via mail. Share this number with future event Contract of the same type, the number less than $11 can be carried to future event Contract of the same type."
 100% Limited Odds Details
 sr:"^在本次<color\=#EADE10>「(.*)」</color>契約中，獲取五星、四星機率如下：\n<sprite\=0 tint\=1>五星角色的基礎機率為<color\=#EADE10>(.*)</color>，綜合機率（含保底）為<color\=#EADE10>(.*)</color>；\n<sprite\=0 tint\=1>四星角色的基礎機率為<color\=#EADE10>(.*)</color>，綜合機率為<color\=#EADE10>(.*)</color>；\n\n<sprite\=0 tint\=1>當簽約獲取五星角色時，<color\=#EADE10>(.*)</color>的機率為本期UP五星角色<color\=#EADE10>「(.*)」</color>。\n<sprite\=0 tint\=1>當簽約獲取四星角色時，有<color\=#EADE10>(.*)</color>的機率為本期四星UP角色<color\=#EADE10>「(.*)」</color>、<color\=#EADE10>「(.*)」</color>、<color\=#EADE10>「(.*)」</color>其中之一，每個本期四星UP角色的獲取機率均等。如果本次簽約獲取的四星角色非本期四星UP角色，則下次簽約獲取的四星角色必定為本期四星UP角色。$"="In this event Contract <color\=#EADE10>[$1]</color>, the probability to obtain 5★ and 4★ are as follows:\n<sprite\=0 tint\=1>The base probability of 5★ Character is <color\=#EADE10>$2</color>; consolidated probability (incl. guarantee) is <color\=#EADE10>$3</color>；\n<sprite\=0 tint\=1>The base probability of 4★ Character is <color\=#EADE10>$4</color>; consolidated probability is <color\=#EADE10>$5</color>；\n\n<sprite\=0 tint\=1>When obtaining a 5★ Character, there is a <color\=#EADE10>$6</color> chance to obtain the current RATE UP 5★ Character <color\=#EADE10>[$7]</color>.\n<sprite\=0 tint\=1>When obtaining a 4★ Character, there is a <color\=#EADE10>$8</color> chance to obtain one of the following RATE UP 4★ Characters <color\=#EADE10>[$9]</color>, <color\=#EADE10>[$10]</color>, <color\=#EADE10>[$11]</color>, they all have equal chance. If the obtained 4★ Character is not the RATE UP Character, then the next obtained 4★ is guaranteed to be the RATE UP Character."
 
@@ -2647,9 +2650,12 @@ r:"^{{A}}\*(\d+)$"="{{A}}*$1"
 認知碎片=Cognitive Shard
 『認知碎片』\n用於在契約之間的認知特賣中兌換物品。=<size\=29>[Cognitive Shard]\nCan be used in Congition Shop.</size>
 用於在契約之間的認知特賣中兌換物品。=Can be used in Congition Shop.
-認知斷面=<size\=30>Cognition Gemstone</size>
-『認知斷面』\n用於在契約之間的認知精選中兌換物品。=<size\=29>[Cognition Gemstone]\nCan be used in Congition Shop.</size>
+認知斷面=<size\=30>Cognitive Gemstone</size>
+『認知斷面』\n用於在契約之間的認知精選中兌換物品。=<size\=29>[Cognitive Gemstone]\nCan be used in Congition Shop.</size>
 用於在契約之間的認知精選中兌換物品。=Can be used in Congition Shop.
+認知精粹=<size\=30>Cognitive Essence</size>
+『認知精粹』\n用於在契約之間的認知甄選中兌換物品。=<size\=29>[Cognitive Essence]\nCan be used in Congition Shop.</size>
+用於在契約之間的認知甄選中兌換物品。=Can be used in Congition Shop.
 sr:"^(.*)不足，無法購買。$"="Insufficient $1, cannot purchase."
 
 要購買這件商品嗎？=Do you want to purchase this item?
@@ -2683,10 +2689,12 @@ r:"^破碎的金屬零件，可用於提升武器經驗，使用後立即提升(
 金絲香=Golden Incense
 怒顏香=Wrathful Incense
 啖夢香=<size\=20>Dream Devouring Incense</size>
+縛生香=Binding Incense
 r:"^散發出魅惑氣味的香丸，可用於提升技能等級至Lv.7-Lv.10。$"="Incense with a seductive scent, can be used to level up Skills to Lv.7-Lv.10."
 r:"^散發出神秘氣味的香丸，可用於提升技能等級至Lv.7-Lv.10。$"="Incense with a mysterious scent, can be used to level up Skills to Lv.7-Lv.10."
 r:"^散發出熾烈氣味的香丸，可用於提升技能等級至Lv.7-Lv.10。$"="Incense with a fiery scent, can be used to level up Skills to Lv.7-Lv.10."
 r:"^散發出迷離氣味的香丸，可用於提升技能等級至Lv.7-Lv.10。$"="Incense with a blurred scent, can be used to level up Skills to Lv.7-Lv.10."
+r:"^散發出悲憫氣味的香丸，可用於提升技能等級至Lv.7-Lv.10。$"="Incense with a lamenting scent, can be used to level up Skills to Lv.7-Lv.10."
 
 香塔L=Skill Incense L
 香塔M=Skill Incense M
@@ -2741,8 +2749,8 @@ r:"^一顆承載了月光的寶珠，可用於提升啟示卡經驗，使用後�
 r:"^一顆承載了星光的寶珠，可用於提升啟示卡經驗，使用後立即增加(\d+)點。$"="A crystal that carries starlight, can be used to gain $1 Revelation Card EXP."
 
 啟示=Revelation
-未知宿命橙·宙=<size\=19>Random 4★ Space</size>
-未知宿命紫·宙=<size\=19>Random 3★ Space</size>
+未知宿命橙·宙=<size\=21>Random 4★ Space</size>
+未知宿命紫·宙=<size\=21>Random 3★ Space</size>
 被迷霧籠罩的命運之卡，獲取後會隨機變化為一張同品質的宙位啟示卡。=<size\=22>Card of fate shrouded in mist, transforms into a random Space Revelation Card of the same quality after purchase.</size>
 宇宙的箴言=4★ Revelation
 來自宇宙的命運指引，打開後可自選一張橙色指定套裝的基礎啟示卡。=A guidance of fate from the Universe, can be used to gain 1 Orange Revelation Card from any set
@@ -2879,13 +2887,13 @@ sr:"^(.*)/(.*)屬性攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="$1
 Others
 ----------
 P5X營運團隊=P5X Operations Team
-所有已讀郵件已刪除。=Deleted all read emails.
+所有已讀郵件已刪除。=Deleted all read mails.
 獎勵發放管理員=System
 刪除已讀=<size\=24>Delete Read</size>
 收取全部=<size\=28> Claim All</size>
-當前暫無郵件=No email
-沒有收到郵件=No email
-郵件刪除成功。=Deleted email.
+當前暫無郵件=No mail
+沒有收到郵件=No mail
+郵件刪除成功。=Deleted mail.
 
 r:"^時間：(\d+)-(\d+)-(\d+)$"="Time: $1-$2-$3"
 r:"^V(.*) 版本預告$"="V$1 Version Preview"
@@ -3193,7 +3201,7 @@ r:"^所有敵人受到傷害降低(\d+(.\d+)?(%)?)$"="Decrease all foes' DMG Tak
 r:"^剩餘挑戰次數：(\d+)/(\d+)$"="Challenge Left: $1/$2"
 無記錄=None
 階段剩餘血量=HP Left
-*排名徽章在活動結束後透過郵件發放=*Badge will be distributed via email after the event ends
+*排名徽章在活動結束後透過郵件發放=*Badge will be distributed via mail after the event ends
 排名=Rank
 首領剩餘血量=Boss HP
 行動回合=Actions
@@ -3526,7 +3534,7 @@ r:"^當前有<color\=#FF0000>(\d+)</color>位夥伴向你發出邀約，是否�
 請選擇一個你希望收到的獎勵！=Please select a reward you wish to receive!
 請選擇你後續希望推出的協同角色=Please select a character you wish to become a Synergy
 r:"^全服能量達到<color\=#FFF100>(.*)</color>時透過郵件發放獎勵$"="Gain this when the server reaches <color\=#FFF100>$1</color> energy"
-全服投票結果會在活動結束後一周透過郵件發佈=Email results one week post-event
+全服投票結果會在活動結束後一周透過郵件發佈=Mail results one week post-event
 禮物心願=Gift Wish
 羈絆心願=Bond Wish
 許願贈禮·心象=Wish Gift·Mental Image
@@ -3550,7 +3558,7 @@ sr:"^許下(.*)之願，可獲得(.*)\*(\d+)、(.*)\*(\d+)。$"="Can gain $2*$3,
 階段介紹=Phases Info
 行動次數=Actions
 通關階段=Phases
-徽章在活動結束後透過郵件發放=Badge will be distributed via email after the event ends
+徽章在活動結束後透過郵件發放=Badge will be distributed via mail after the event ends
 r:"^僅展示噩夢難度前(\d+)名{{A}}資訊$"="Only the info of the top $1 {{A}} will be shown"
 剩餘血量=HP Left
 試煉等級：=Trial Lv:
