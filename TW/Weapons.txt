@@ -12,9 +12,13 @@
 該武器已提升到滿級！=Weapon Lv. maxed!
 該武器已改造到滿級！=<size\=18>Weapon Reform maxed!</size>
 暫無可提供強化的材料=No materials
+永恆的銘記之證=Eternal Proof
 僅可消耗同名武器=Spend same name weapon
-可消耗同星級武器或永恆的銘記之證=<size\=26>Spend same rarity weapon or Eternal Proof</size>
-可消耗同星級武器或特別的存在之證=<size\=26>Spend same rarity weapon or Eternal Proof</size>
+可消耗「同名武器」=Spend [Same Name Weapon]
+可消耗「同名武器」或「永恆的銘記之證」=<size\=25>Spend [Same Name Weapon] or [Eternal Proof]</size>
+可消耗同星級武器或永恆的銘記之證=<size\=25>Spend same rarity weapon or Eternal Proof</size>
+可消耗同星級武器或特別的存在之證=<size\=25>Spend same rarity weapon or Eternal Proof</size>
+可消耗「同星級武器」或「永恆的銘記之證」=<size\=25>Spend [Same Rarity Weapon] or [Eternal Proof]</size>
 替換成功，已自動繼承強化等級及突破等級。=Changed weapon, automatically inherited Weapon Lv. and Reform Rank.
 尚未獲取=Not obtained
 已將武器鎖定。=Locked this weapon.
@@ -77,8 +81,7 @@ r:"^攻擊力提升<color\=#2899FF>(.*)</color>，\n祝福屬性傷害提升、�
 葬送之眼=<size\=22>Eye of Obsequies</size>
 【深淵凝視】=【Abyssal Gaze]
 深淵凝視=Abyssal Gaze
-r:"^攻擊力提升<color\=#2899FF>(.*)</color>,\n為敵人添加異常狀態時，使目標效果抵抗降低<color\=#2899FF>(.*)</color>並且自身攻擊力提升<color\=#2899FF>(.*)</color>，持續(.*)回合，最多可疊加(.*)層，每層獨立計算。層數到達(.*)時，使敵人受物理傷害加深<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. \nAfter inflicting a status ailment, increase user's ATK by <color\=#2899FF>$3</color> and decrease foe's Ailment RES by <color\=#2899FF>$2</color> for $4 turns. This effect stacks up to $5 times, and stacks are spent separately. With $6 stacks, increase target's Physical DMG taken by <color\=#2899FF>$7</color> for $8 turns."
-r:"^攻擊力提升<color\=#2899FF>(.*)</color>,\n為敵人添加異常狀態時，使目標效果抵抗降低<color\=#2899FF>(.*)</color>、防御力降低<color\=#2899FF>(.*)</color>並且自身攻擊力提升<color\=#2899FF>(.*)</color>，持續(.*)回合，最多可疊加(.*)層，每層獨立計算。層數到達(.*)時，使敵人受物理傷害加深<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. \nAfter inflicting a status ailment, increase user's ATK by <color\=#2899FF>$4</color>, then decrease foe's Ailment RES by <color\=#2899FF>$2</color> and DEF by <color\=#2899FF>$3</color> for $5 turns. This effect stacks up to $6 times, and stacks are spent separately. With $7 stacks, increase target's Physical DMG taken by <color\=#2899FF>$8</color> for $9 turns."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>,\n為敵人添加異常狀態時，使目標效果抵抗降低<color\=#2899FF>(.*)</color>、防禦力降低<color\=#2899FF>(.*)</color>並且自身攻擊力提升<color\=#2899FF>(.*)</color>，持續(.*)回合，最多可疊加(.*)層，每層獨立計算。層數到達(.*)時，使敵人受物理傷害加深<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. \nAfter inflicting a status ailment, increase user's ATK by <color\=#2899FF>$4</color>, then decrease foe's Ailment RES by <color\=#2899FF>$2</color> and DEF by <color\=#2899FF>$3</color> for $5 turns. This effect stacks up to $6 times, and stacks are spent separately. With $7 stacks, increase target's Physical DMG taken by <color\=#2899FF>$8</color> for $9 turns."
 葬送之眼晶石=<size\=16>Eye of Obsequies Crystal</size>
 僅可消耗葬送之眼晶石=Only use Eye of Obsequies Crystal
 
@@ -102,8 +105,7 @@ r:"^攻擊力提升<color\=#2899FF>(.*)</color>,\n使用{{A}}技能造成傷害�
 灼熱煉獄=Fiery Inferno
 【煉獄洗禮】=[Inferno Baptism]
 煉獄洗禮=Inferno Baptism
-r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n光環『煉獄洗禮』：根據WONDER的『淨化之焰』層數啟動以下效果：\n(.*)層：自身攻擊力提升<color\=#2899FF>(.*)</color>點，其他怪盜攻擊力提升<color\=#2899FF>(.*)</color>點。\n(.*)層：自身造成傷害提升<color\=#2899FF>(.*)</color>，其他怪盜造成傷害提升<color\=#2899FF>(.*)</color>。\n(.*)層：所有怪盜火焰傷害提升<color\=#2899FF>(.*)</color>。\n戰鬥開始獲得(.*)層『淨化之焰』，所有怪盜使用{{A}}技能造成火焰傷害時獲得(.*)層『淨化之焰』。WONDER回合開始時消耗(.*)層『淨化之焰』。$"="Increase ATK by <color\=#2899FF>$1</color>.\nAura [Inferno Baptism]: Gains the following effects based on how many stacks of [Purifying Flame] Wonder has:\n$2 stack: Increase user's ATK by <color\=#2899FF>$3</color> and other Thieves' Attack by <color\=#2899FF>$4</color>.\n$5 stacks: Increase own DMG Dealt by <color\=#2899FF>$6</color> and other Thieves' DMG Dealt by <color\=#2899FF>$7</color>.\n$8 stacks: Increase all Thieves' Fire DMG by <color\=#2899FF>$9</color>.\nGains $10 stacks of [Purifying Flame] at the start of battle, gain $11 stack of [Purifying Flame] when Thieves deal Fire DMG with a {{A}} skill. Spend $12 stack of [Purifying Flame] at the start of Wonder's turn."
-r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n光環『煉獄洗禮』：根據WONDER的『淨化之焰』層數啟動以下效果：\n(.*)層：自身攻擊力提升<color\=#2899FF>(.*)</color>點，其他怪盜攻擊力提升<color\=#2899FF>(.*)</color>點。\n(.*)層：自身造成傷害提升<color\=#2899FF>(.*)</color>，其他怪盜造成傷害提升<color\=#2899FF>(.*)</color>。\n(.*)層：所有怪盜火焰傷害提升<color\=#2899FF>(.*)</color>。\n戰鬥開始獲得(.*)層『淨化之焰』，所有怪盜使用{{A}}技能造成火焰傷害時獲得(.*)層『淨化之焰』，持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>.\nAura [Inferno Baptism]: Gains the following effects based on how many stacks of [Purifying Flame] Wonder has:\n$2 stack: Increase user's ATK by <color\=#2899FF>$3</color> and other Thieves' Attack by <color\=#2899FF>$4</color>.\n$5 stacks: Increase own DMG Dealt by <color\=#2899FF>$6</color> and other Thieves' DMG Dealt by <color\=#2899FF>$7</color>.\n$8 stacks: Increase all Thieves' Fire DMG by <color\=#2899FF>$9</color>.\nGains $10 stacks of [Purifying Flame] at the start of battle, gain $11 stack of [Purifying Flame] when Thieves deal Fire DMG with a {{A}} skill. Lasts for $12 turns."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n光環『煉獄洗禮』：根據WONDER的『淨化之焰』層數啟動以下效果：\n(.*)層：自身攻擊力提升<color\=#2899FF>(.*)</color>點，其他怪盜攻擊力提升<color\=#2899FF>(.*)</color>點。\n(.*)層：自身造成傷害提升<color\=#2899FF>(.*)</color>，其他怪盜造成傷害提升<color\=#2899FF>(.*)</color>。\n(.*)層：所有怪盜火焰傷害提升<color\=#2899FF>(.*)</color>。\n戰鬥開始獲得(.*)層『淨化之焰』，所有怪盜使用{{A}}技能造成火焰傷害時獲得(.*)層『淨化之焰』。『淨化之焰』持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>.\nAura [Inferno Baptism]: Gains the following effects based on how many stacks of [Purifying Flame] Wonder has:\n$2 stack: Increase user's ATK by <color\=#2899FF>$3</color> and other Thieves' Attack by <color\=#2899FF>$4</color>.\n$5 stacks: Increase own DMG Dealt by <color\=#2899FF>$6</color> and other Thieves' DMG Dealt by <color\=#2899FF>$7</color>.\n$8 stacks: Increase all Thieves' Fire DMG by <color\=#2899FF>$9</color>.\nGains $10 stacks of [Purifying Flame] at the start of battle, gain $11 stack of [Purifying Flame] when Thieves deal Fire DMG with a {{A}} skill. Lasts for $12 turns."
 淨化之焰=Purifying Flame
 灼熱煉獄晶石=Fiery Inferno Crystal
 僅可消耗灼熱煉獄晶石=Only use Fiery Inferno Crystal
@@ -590,6 +592,22 @@ r:"^自身對『怨念』層數達到(.*)層的敵人造成的詛咒屬性傷害
 鐮刃=Scythe
 【顫慄的心】=[Trembling Heart]
 顫慄的心=Trembling Heart
+
+不凋之庭=Eternal Grove
+【清風拂夏】=[Summer Breeze]
+清風拂夏=Summer Breeze
+r:"^藥品效果提升<color\=#2899FF>(.*)</color>。以友方為目標使用藥品時，額外使主目標的暴擊效果提升<color\=#2899FF>(.*)</color>，持續(\d+)回合。以友方為目標使用{{A}}技能時，額外使主目標攻擊力提升<color\=#2899FF>(.*)</color>，持續(\d+)回合。$"="Increase Item Effect by <color\=#2899FF>$1</color>. When using an item on allies, increase main target's Crit DMG by <color\=#2899FF>$2</color> more for $3 turns. When using a Persona skill on allies, increase main target's ATK by <color\=#2899FF>$4</color> more for $5 turns."
+午後茶語=Tea-Time Talk
+【甜香盛宴】=[Sweet Feast]
+甜香盛宴=Sweet Feast
+r:"^最大生命值提升<color\=#2899FF>(.*)</color>；以友方為目標使用{{A}}技能時，自身暴擊效果提升<color\=#2899FF>(.*)</color>。$"="Increase Max HP by <color\=#2899FF>$1</color>; When using a Persona skill on allies, increase user's Crit DMG by <color\=#2899FF>$2</color>."
+汽水籃=Soda Basket
+【氣泡飲】=[Sparkling Drink]
+氣泡飲=Sparkling Drink
+r:"^使用藥品後，自身獲得<color\=#2899FF>(.*)</color>的最大生命值提升效果，持續(\d+)回合。$"="After using an item, increase user's Max HP by <color\=#2899FF>$1</color> for $2 turns."
+花籃=Flower Basket
+【花語】=[Flower Language]
+花語=Flower Language
 
 ----------
 STANDARD 5 STAR UNIT WEAPONS
