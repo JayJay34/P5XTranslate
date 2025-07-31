@@ -8,6 +8,7 @@ r:"^用戶端版本號：(.*)  遊戲版本：(.*)  資源號：(.*)$"="Client V
 r:"^(.*)版本$"="Version $1"
 開始登入=Logging in...
 登入中..=Logging in...
+登入中…=Logging in...
 登入中……=Logging in...
 伺服器維護中，請查看遊戲公告。=Server is under maintenance.
 暫無消息=No news
@@ -230,7 +231,7 @@ r:"^輸入上限(\d+)個字$"="Up to $1 characters"
 我的怪盜評級\n（點擊查看）=<size\=28>Thief Rating\n(Click to view)</size> 
 r:"^(\d+)天前$"="$1d ago"
 
-請輸入頻道號（0-999）=Enter the channel number (0-999)
+r:"^請輸入頻道號\（(\d+)-(\d+)\）$"="Enter the channel number ($1-$2)"
 r:"^新消息 (\d+)條。$"="$1 new messages."
 
 生效中=Active
@@ -483,6 +484,7 @@ sr:"^消耗：<color\=#FFDE00>「(.*)」×(\d+)</color>\n兌換：<color\=#FFDE0
 殘識碎片禮包=<size\=17>Awareness Fragment Gift Bag</size>
 盲選偶像合約 ★5=5★ Random Kaidol Contract
 r:"^怪盜殘識碎片$"="<size\=22>Thief Awareness Fragment</size>"
+r:"^怪盜殘識碎片\*(\d+)$"="Thief Awareness Fragment*$1"
 r:"^遺留在{{A}}的怪盜殘識碎片，消耗(\d+)個可以合成角色的殘識。$"="Thief Awareness Fragment that are left in the {{A}}, consume $1 to fuse 1 Awareness."
 r:"^{{A}}遺留在{{B}}的殘識碎片，消耗(\d+)個可以合成角色的殘識。$"="{{A}} Awareness Fragment left in the {{B}}, consume $1 to fuse 1 Awareness."
 r:"^消耗：<color\=#FFDE00>「怪盜殘識碎片」×(\d+)</color>\n兌換：<color\=#FFDE00>「{{A}}的殘識碎片」×(\d+)</color>\n是否確認？$"="<size\=25>Spend: <color\=#FFDE00>[Thief Awareness Fragment] ×$1</color>\nGet: <color\=#FFDE00>[{{A}}'s Awareness Fragment] ×$2</color>\nNeed 60 to fuse 1 Awareness, \nare you sure?</size>"
@@ -509,7 +511,7 @@ r:"^使用後可自選1把以下怪盜的四星武器：(.*)。$"="Can be used t
 定製武器配裝=3★ Weapon Case
 請在以下列表中點擊選擇一把4星武器=Please choose one 4★ Weapon
 請在以下物品中自選一種=Please choose one in the following items
-限定武器套件=<size\=28>Limited Weapon Case</size>
+限定武器套件=<size\=26>Limited Weapon Case</size>
 r:"^使用後可自選1把以下角色的5星專屬武器：\n(.*)。$"="Can be used to choose 1 5★ Weapon for the following Thieves: $1."
 
 ----------
@@ -570,6 +572,9 @@ r:"^{{A}}  娛樂街$"="<size\=30>{{A}} Entertainment District</size>"
 
 r:"^壓<color\=#ff0000ff>勝</color>軒$"="V<color\=#ff0000ff>i</color>ctory Kitchen"
 r:"^渡<color\=#ff0000ff>來</color>軒$"="H<color\=#ff0000ff>e</color>ritage Kitchen"
+藥店=Drugstore
+{{A}}藥店={{A}} Drugstore
+r:"^<color\=#ff0000ff>藥</color>店$"="D<color\=#ff0000ff>r</color>ugstore"
 
 r:"^社<color\=#ff0000ff>團</color>佈告欄$"="Cl<color\=#ff0000ff>ub</color> Bulletin Board"
 進入學校=Enter school
@@ -795,32 +800,47 @@ Area Names
 Menu / UI Translations (Timer)
 ----------
 r:"^本物品將在(\d+)年(\d+)月(\d+)日 (\d+):(\d+)到期$"="Expires on $1/$2/$3 $4:$5"
+r:"^(\d+)天(\d+)小時後過期$"="Expires in $1d $2h"
 r:"^(\d+)天(\d+)時後過期$"="Expires in $1d $2h"
+r:"^(\d+)小時(\d+)分後過期$"="Expires in $1h $2m"
 r:"^(\d+)時(\d+)分後過期$"="Expires in $1h $2m"
 r:"^(\d+)天後過期$"="Expires in $1d"
 r:"^(\d+)天後下架$"="Expires in $1d"
 r:"^(\d+)天(\d+)時後下架$"="Expires in $1d $2h"
 r:"^(\d+)天(\d+)小時後到期$"="Expires in $1d $2h"
 
+r:"^(\d+)天(\d+)小時後刷新$"="Refreshes in $1d $2h"
 r:"^(\d+)天(\d+)時後刷新$"="Refreshes in $1d $2h"
+r:"^(\d+)小時(\d+)分後刷新$"="Refreshes in $1h $2m"
 r:"^(\d+)時(\d+)分後刷新$"="Refreshes in $1h $2m"
 r:"^(\d+)天後刷新$"="Refreshes in $1d"
 r:"^(\d+)分後刷新$"="Refreshes in $1m"
 
+r:"^(\d+)天(\d+)小時解鎖$"="Unlocks in $1d $2h"
 r:"^(\d+)天(\d+)時解鎖$"="Unlocks in $1d $2h"
+r:"^(\d+)小時(\d+)分解鎖$"="Unlocks in $1h $2m"
 r:"^(\d+)時(\d+)分解鎖$"="Unlocks in $1h $2m"
 r:"^(\d+)分解鎖$"="Unlocks in $1m"
+r:"^(\d+)天(\d+)小時後開放$"="Unlocks in $1d $2h"
+r:"^(\d+)小時(\d+)分後開放$"="Unlocks in $1h $2m"
+r:"^(\d+)天(\d+)小時後開放領取$"="Claim in $1d $2h"
 r:"^(\d+)天(\d+)時後開放領取$"="Claim in $1d $2h"
+r:"^(\d+)小時(\d+)分後開放領取$"="Claim in $1h $2m"
 r:"^(\d+)時(\d+)分後開放領取$"="Claim in $1h $2m"
 r:"^(\d+)分後開放領取$"="Claim in $1m"
 
+r:"^剩餘(\d+)天(\d+)小時(\d+)分$"="$1d $2h $3m left"
 r:"^剩餘(\d+)天(\d+)時(\d+)分$"="$1d $2h $3m left"
+r:"^(\d+)天(\d+)小時(\d+)分$"=" $1d $2h $3m"
 r:"^(\d+)天(\d+)時(\d+)分$"=" $1d $2h $3m"
 r:"^(\d+)天(\d+)小時$"=" $1d $2h"
 r:"^(\d+)天(\d+)時$"=" $1d $2h"
+r:"^(\d+)小時(\d+)分$"=" $1h $2m"
 r:"^(\d+)時(\d+)分$"=" $1h $2m"
 r:"^(\d+)天(\d+)小時後下架$"="Expires in $1d $2h"
+r:"^(\d+)小時(\d+)分後下架$"="Expires in $1h $2m"
 r:"^(\d+)時(\d+)分後下架$"="Expires in $1h $2m"
+r:"^剩餘(\d+)小時(\d+)分(\d+)秒$"=" $1h $2m $3s"
 r:"^剩餘(\d+)時(\d+)分(\d+)秒$"=" $1h $2m $3s"
 r:"^(\d+)小時(\d+)分鐘$"=" $1h $2m"
 r:"^(\d+)時(\d+)分(\d+)秒$"=" $1h $2m $3s"
@@ -828,7 +848,9 @@ r:"^(\d+)分鐘$"=" $1m"
 r:"^(\d+)分$"=" $1m"
 r:"^剩餘(\d+)天(\d+)$"="$1d $2 left"
 
+r:"^(\d+)天(\d+)小時後解鎖$"="Unlocks after $1d $2h"
 r:"^(\d+)天(\d+)時後解鎖$"="Unlocks after $1d $2h"
+r:"^(\d+)小時(\d+)分後解鎖$"="Unlocks after $1h $2m"
 r:"^(\d+)時(\d+)分後解鎖$"="Unlocks after $1h $2m"
 r:"^(\d+)分後解鎖$"="Unlocks after $1m"
 
@@ -837,9 +859,12 @@ r:"^挑戰倒計時：(\d+)天(\d+)時(\d+)分$"="Time Left: $1d $2h $3m"
 r:"^本週剩餘次數：(\d+)/(\d+)$"="Weekly Usage: $1/$2"
 限時挑戰倒計時：=Challenge Time Left:
 r:"^(\d+)天(\d+)時後結束$"="Ends in $1d $2h"
+r:"^(\d+)小時(\d+)分後結束$"="Ends in $1h $2m"
 r:"^(\d+)時(\d+)分後結束$"="Ends in $1h $2m"
 
+r:"^(\d+)天(\d+)小時後開啟$"="Unlocks after $1d $2h"
 r:"^(\d+)天(\d+)時後開啟$"="Unlocks after $1d $2h"
+r:"^(\d+)小時(\d+)分後開啟$"="Unlocks after $1h $2m"
 r:"^(\d+)時(\d+)分後開啟$"="Unlocks after $1h $2m"
 r:"^<sprite\=(\d+) tint\=1>天<sprite\=(\d+) tint\=1>時後開啟$"="Unlocks after <sprite\=$1 tint\=1>d <sprite\=$2 tint\=1>h"
 r:"^<sprite\=(\d+) tint\=1>天<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>時後開啟$"="Unlocks after <sprite\=$1 tint\=1>d <sprite\=$2 tint\=1><sprite\=$3 tint\=1>h"
@@ -1065,6 +1090,8 @@ r:"^推薦編入(\d+)名<size\=(\d+)><sprite\=(\d+) tint\=1></size>角色$"="Rec
 r:"^治療效果$"="<size\=22>Healing Effect</size>"
 受治療加成=Healing Received
 受治療效果=Healing Received
+藥品效果=Item Effect
+受藥品效果=Item Received
 護盾效果=Shield Effect
 受護盾效果=Shield Received
 治療加成=Healing Bonus
@@ -1095,6 +1122,7 @@ r:"^治療效果$"="<size\=22>Healing Effect</size>"
 尚未佩戴面具=No equipped Mask
 
 已達到等級上限。=Reached level cap.
+溢出經驗已轉化為通用素材。=Converted overflow EXP into materials.
 <color\=#FF0000>本次升級溢出經驗將轉化為傳記材料。</color>\n是否確定使用所選材料進行強化？=<color\=#FF0000>This upgrade will convert overflowed EXP into upgrade materials.</color>\nAre you sure you want to upgrade?
 已達到最大經驗，無法繼續添加材料。=Reached max level. Cannot add more upgrade materials.
 r:"^怪盜等級上限提升至<color\=#FFF000>LV.(\d+)</color>$"="Increase max level to <color\=#FFF000>Lv.$1</color>"
@@ -1480,8 +1508,9 @@ sr:"^在角色活動契約中<color\=#FE0000>與(.*)簽約</color>$"="<size\=28>
 sr:"^在武器活動補給中<color\=#FE0000>獲得武器(.*)</color>$"="<size\=28>Obtain <color\=#FE0000>$1</color> from Supply</size>"
 
 時裝煥新活動=Fashion Refresh Event
-sr:"^再抽取(\d+)次必得限定時裝<color\=#FFF900>(.*)</color>$"="Guarantee limited outfit <color\=#FFF900>$2</color> after $1 pulls"
-r:"^再抽取<color\=#FFF900>(\d+)</color>次必得限定時裝$"="Guarantee limited outfit after <color\=#FFF900>$1</color> pulls"
+sr:"^再抽取(\d+)次必得限定時裝<color\=#FFF900>(.*)</color>$"="<size\=22>Guarantee limited outfit <color\=#FFF900>$2</color> after $1 draws</size>"
+r:"^再抽取<color\=#FFF900>(\d+)</color>次必得限定時裝$"="<size\=22>Guarantee limited outfit after <color\=#FFF900>$1</color> draws</size>"
+已透過活動獲取限定時裝=<size\=22>Obtained the limited outfit</size>
 
 sr:"^已獲得限定時裝(.*)$"="Obtained limited outfit $1"
 怪盜·天地勝意=Worldly Wish
@@ -1522,6 +1551,8 @@ sr:"^在本次<color\=#EADE10>「(.*)」</color>契約中，獲取五星、四�
 
 Limited Special Details
 r:"^無論透過任何方式（簽約、商店兌換、系統兌換等）\n<sprite\=0 tint\=1>第<color\=#EADE10>(\d+)~(\d+)</color>次獲取相同的五星怪盜時，每次將轉化為<color\=#EADE10>(\d+)</color>個<color\=#EADE10>對應怪盜的「怪盜殘識」</color>，同時獲得<color\=#EADE10>(\d+)</color>個<color\=#EADE10>「認知斷面」</color>作為副產物；第<color\=#EADE10>(\d+)</color>次及之後獲取相同的五星怪盜時，會獲得<color\=#EADE10>(\d+)</color>個<color\=#EADE10>「認知斷面」</color>。\n<sprite\=0 tint\=1>第<color\=#EADE10>(\d+)~(\d+)</color>次獲取相同的四星怪盜時，每次將轉化為<color\=#EADE10>(\d+)</color>個<color\=#EADE10>對應怪盜的「怪盜殘識」</color>，同時獲得<color\=#EADE10>(\d+)</color>個<color\=#EADE10>「認知斷面」</color>作為副產物；第<color\=#EADE10>(\d+)</color>次及之後獲取相同的四星怪盜時，會獲得<color\=#EADE10>(\d+)</color>個<color\=#EADE10>「認知斷面」</color>。\n<sprite\=0 tint\=1>獲取<color\=#EADE10>(\d+)</color>次以上二星(.*)時，每次將轉化對應(.*)的<color\=#EADE10>「印記」</color>。\n\n僅透過簽約的方式\n<sprite\=0 tint\=1>獲取二星(.*)時，會獲得<color\=#EADE10>(\d+)</color>個<color\=#EADE10>「認知碎片」</color>作為副產物。$"="By any means (Signature, shop redeem, system redeem, etc)\n<sprite\=0 tint\=1>The <color\=#EADE10>$1nd~$2th</color> time you obtain the same 5★ Thief, it will be converted into <color\=#EADE10>$3</color> <color\=#EADE10>that character's [Thief Awareness]</color> and <color\=#EADE10>$4</color> <color\=#EADE10>[Cognition Gemstone]</color>; From the <color\=#EADE10>$5th</color> time onwards it will be converted into <color\=#EADE10>$6</color> <color\=#EADE10>[Cognition Gemstone]</color>. \n<sprite\=0 tint\=1>The <color\=#EADE10>$7nd~$8th</color> time you obtain the same 4★ Thief, it will be converted into <color\=#EADE10>$9</color> <color\=#EADE10>that character's [Thief Awareness]</color> and <color\=#EADE10>$10</color> <color\=#EADE10>[Cognition Gemstone]</color>; From the <color\=#EADE10>$11th</color> time onwards it will be converted into <color\=#EADE10>$12</color> <color\=#EADE10>[Cognition Gemstone]</color>.\n<sprite\=0 tint\=1>The <color\=#EADE10>$13st</color> time you obtain a 2★ Persona, it will be converted into that Persona's <color\=#EADE10>[Seal]</color>.\n\nOnly when obtaining 2★ Persona through Signature\n<sprite\=0 tint\=1>When you obtain 2★ Persona, obtain <color\=#EADE10>$17</color> <color\=#EADE10>[Cognitive Shard]</color>."
+r:"^無論透過任何方式（簽約、商店兌換、系統兌換等）\n<sprite\=0 tint\=1>第<color\=#EADE10>(\d+)~(\d+)</color>次獲取相同的五星怪盜時，每次將轉化為<color\=#EADE10>(\d+)</color>個<color\=#EADE10>對應怪盜的「怪盜殘識」</color>，同時獲得<color\=#EADE10>(\d+)</color>個<color\=#EADE10>「認知斷面」</color>作為副產物；\n<sprite\=0 tint\=1>第<color\=#EADE10>(\d+)</color>次及之後獲取相同的五星怪盜時，會獲得<color\=#EADE10>(\d+)</color>個<color\=#EADE10>「認知斷面」</color>；\n限定五星怪盜，會額外獲得<color\=#EADE10>(\d+)</color>個<color\=#EADE10>「認知精粹」</color>，\n非限定五星怪盜，會額外獲得<color\=#EADE10>(\d+)</color>個<color\=#EADE10>「認知精粹」</color>。\n<sprite\=0 tint\=1>第<color\=#EADE10>(\d+)~(\d+)</color>次獲取相同的四星怪盜時，每次將轉化為<color\=#EADE10>(\d+)</color>個<color\=#EADE10>對應怪盜的「怪盜殘識」</color>，同時獲得<color\=#EADE10>(\d+)</color>個<color\=#EADE10>「認知斷面」</color>作為副產物；第<color\=#EADE10>(\d+)</color>次及之後獲取相同的四星怪盜時，會獲得<color\=#EADE10>(\d+)</color>個<color\=#EADE10>「認知斷面」</color>。\n<sprite\=0 tint\=1>獲取<color\=#EADE10>(\d+)</color>次以上二星(.*)時，每次將轉化對應人格面具的<color\=#EADE10>「印記」</color>。\n\n僅透過簽約的方式\n<sprite\=0 tint\=1>獲取二星(.*)時，會獲得<color\=#EADE10>(\d+)</color>個<color\=#EADE10>「認知碎片」</color>作為副產物。$"="By any means (Signature, shop redeem, system redeem, etc)\n<sprite\=0 tint\=1>The <color\=#EADE10>$1nd~$2th</color> time you obtain the same 5★ Thief, it will be converted into <color\=#EADE10>$3</color> <color\=#EADE10>that character's [Thief Awareness]</color> and <color\=#EADE10>$4</color> <color\=#EADE10>[Cognition Gemstone]</color>; \nFrom the <color\=#EADE10>$5th</color> time onwards it will be converted into <color\=#EADE10>$6</color> <color\=#EADE10>[Cognition Gemstone]</color>; \nLimited 5★ Thief will be converted into <color\=#EADE10>$7</color> <color\=#EADE10>[Cognitive Essence]</color>, \nStandard 5★ Thief will be converted into <color\=#EADE10>$8</color> <color\=#EADE10>[Cognitive Essence]</color>.\n<sprite\=0 tint\=1>The <color\=#EADE10>$9nd~$10th</color> time you obtain the same 4★ Thief, it will be converted into <color\=#EADE10>$11</color> <color\=#EADE10>that character's [Thief Awareness]</color> and <color\=#EADE10>$12</color> <color\=#EADE10>[Cognition Gemstone]</color>; From the <color\=#EADE10>$13th</color> time onwards it will be converted into <color\=#EADE10>$14</color> <color\=#EADE10>[Cognition Gemstone]</color>.\n<sprite\=0 tint\=1>The <color\=#EADE10>$15st</color> time you obtain a 2★ Persona, it will be converted into that Persona's <color\=#EADE10>[Seal]</color>.\n\nOnly when obtaining 2★ Persona through Signature\n<sprite\=0 tint\=1>When you obtain 2★ Persona, obtain <color\=#EADE10>$19</color> <color\=#EADE10>[Cognitive Shard]</color>."
+
 Limited Obtain Details
 sr:"^「當未觸發UP或保底規則時，所有角色均分基礎獲取機率」\n<sprite\=0 tint\=1><color\=#EADE10>五星角色</color>\n基礎機率：(.*)\（含保底綜合簽約成功機率：(.*)\）\n(.*)\n\n<sprite\=0 tint\=1><color\=#EADE10>四星角色</color>\n基礎機率：(.*)\（含保底綜合簽約成功機率：(.*)\）\n(.*)\n\n<sprite\=0 tint\=1><color\=#EADE10>二星角色</color>\n基礎機率：(.*)\n(.*)$"="[When RATE UP or guaranteed rule is not triggered, all Characters share the same base obtain probability]\n<sprite\=0 tint\=1><color\=#EADE10>5★ Characters</color>\nBase probability: $1 (incl. guarantee: $2)\n$3\n\n<sprite\=0 tint\=1><color\=#EADE10>4★ Characters</color>\nBase probability: $4 (incl. guarantee: $5)\n$6\n\n<sprite\=0 tint\=1><color\=#EADE10>2★ Characters</color>\nBase probability: $7\n$8"
 
@@ -1547,6 +1578,7 @@ sr:"^「當未觸發UP或保底規則時，所有武器均分基礎獲取機率�
 復甦的弓矢=The Breeze Of Love
 鋼拳的意志=Defender's Thunder
 甜蜜的禁忌=Strawberry Magic
+柑橘花茶=Summer Flower Basket
 
 ----------
 Gachapon + Crane (Capsule)
@@ -1882,6 +1914,10 @@ r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n都市日程中�
 r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n人格指數提升到16/18/20級時，可以獲得1個「靈感輝光」。$"="<size\=24><color\=#FFC000>Rank $1</color>: Gain 1 [Inspiration Glow] when reaching Rank 16/18/20 Social Stats.</size>"
 r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n都市日程中「知識」的人格指數獲得量提升。$"="<size\=24><color\=#FFC000>Rank $1</color>: Gain more [Knowledge] from City Activities.</size>"
 r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n人格指數提升到20級後，每200點超額的經驗將轉化為隨機禮物道具。。$"="<size\=24><color\=#FFC000>Rank $1</color>: After reaching Rank 10 Social Stats, convert every 200 excess experience into a random gift.</size>"
+
+r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n可以在{{B}}的藥店購買豐富的特殊增益類藥品。$"="<size\=24>Gain Synergy with [<color\=#FFC000>{{A}}</color>]: Can now purchase special buff items at the {{B}} drugstore.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n所有藥品的售賣價格降低(\d+%)。$"="<size\=24><color\=#FFC000>Rank $1</color>: Decrease all medicine price by $2.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n在戰鬥中使用回復類藥品時效果提升(\d+%)。$"="<size\=24><color\=#FFC000>Rank $1</color>: Increase all recovery item effect by $2.</size>"
 
 解鎖新能力=Unlock Skill
 人格指數=Social Stats
@@ -2595,6 +2631,11 @@ r:"^透過厄抑巡禮·超階印記兌換$"="<size\=21>Exchange from Challenge 
 r:"^透過厄抑巡禮·高階印記兌換$"="<size\=21>Exchange from Challenge Reward - High</size>"
 r:"^透過厄抑巡禮·中階印記兌換$"="<size\=18>Exchange from Challenge Reward - Intermediate</size>"
 r:"^透過厄抑巡禮·初階印記兌換$"="<size\=21>Exchange from Challenge Reward - Basic</size>"
+極階=Ultimate
+超階=Super
+高階=High
+中階=Intermediate
+初階=Basic
 r:"^角色契約簽約時機率獲得$"="Signing Contract"
 r:"^{{A}}精算機等級獎勵$"="{{A}} Ticket Machine"
 r:"^挑戰心軌擇行$"="Challenge Heart Rail"
@@ -2616,7 +2657,6 @@ r:"^{{A}}探索度獎勵$"="{{A}} Exploration Reward"
 ----------
 Resources & Shop Items (Marthym's Shop)
 ----------
-
 枚{{A}}=      <size\=17>{{A}}</size>
 現金=Money
 魂石=Konpaku Gem
@@ -2638,23 +2678,30 @@ r:"^『{{A}}』\n採購近戰武器的硬幣，可在特定的『武器補給』
 r:"^獲取後可用於{{A}}商店「祈願」中進行祈願抽獎。$"="Can be used in {{A}}'s Shop to enter the Pray Lucky Draw."
 r:"^委託、消費大酬賓等獎勵或者購買<link\="mqm"><u>每日祈願納福禮袋</u></link>可獲得{{A}}$"="Get Kagura Suzu from Commissions, Spending Spree or <link\="mqm"><u>Daily Pray Gift Bag</u></link>"
 意識禮願箱=<size\=30>Awareness Gift Box</size>
-認知抽選單 ★5=<size\=28>5★ Cognitive Draw</size>
+認知抽選單 ★5=5★ Cognitive Draw
 使用後可隨機獲得一個未達到意識VI的以下怪盜：{{A}}、{{B}}。=Can be used to randomly get one of the following Thief that has not reached Awareness VI: {{A}}, {{B}}.
 {{A}}的殘識={{A}}'s Awareness
 r:"^{{A}}\*(\d+)$"="{{A}}*$1"
 『{{A}}』\n參與挑戰類活動獲得的特殊貨幣，可在「氣運駐場」商店中兌換獎勵。=<size\=26>[{{A}}]\nGained from challenge-type events. \nCan be used in [Destinyland].</size>
 參與挑戰類活動獲得的特殊貨幣，可在「氣運駐場」商店中兌換獎勵。=Gained from challenge-type events. Can be used in [Destinyland].
+認知特賣=Sale
+認知精選=Picks
+認知優選=Premium
+認知甄選=Exclusive
 認知殘影=<size\=29>Cognitive Afterimage</size>
-『認知殘影』\n用於在契約之間的認知優選中兌換物品。=<size\=29>[Cognitive Afterimage]\nCan be used in Congition Shop.</size>
+『認知殘影』\n用於在契約之間的認知優選中兌換物品。=<size\=29>[Cognitive Afterimage]\nCan be used in Congition Shop.\nObtained from Rerun Contract.</size>
 用於在契約之間的認知優選中兌換物品。=Can be used in Congition Shop.
 認知碎片=Cognitive Shard
 『認知碎片』\n用於在契約之間的認知特賣中兌換物品。=<size\=29>[Cognitive Shard]\nCan be used in Congition Shop.</size>
+『認知碎片』\n用於在契約之間的認知特賣中兌換物品。\n簽訂契約獲得{{A}}時，可以額外獲得。\n武器補給時，可以額外獲得。=<size\=29>[Cognitive Shard]\nCan be used in Congition Shop. Obtained from Contract.</size>
 用於在契約之間的認知特賣中兌換物品。=Can be used in Congition Shop.
 認知斷面=<size\=30>Cognitive Gemstone</size>
 『認知斷面』\n用於在契約之間的認知精選中兌換物品。=<size\=29>[Cognitive Gemstone]\nCan be used in Congition Shop.</size>
+『認知斷面』\n用於在契約之間的認知精選中兌換物品。\n獲得角色時，可以額外獲得。\n武器補給獲得橙色、彩色武器時，可以額外獲得。=<size\=29>[Cognitive Gemstone]\nCan be used in Congition Shop. Obtained from Contract.</size>
 用於在契約之間的認知精選中兌換物品。=Can be used in Congition Shop.
 認知精粹=<size\=30>Cognitive Essence</size>
 『認知精粹』\n用於在契約之間的認知甄選中兌換物品。=<size\=29>[Cognitive Essence]\nCan be used in Congition Shop.</size>
+『認知精粹』\n用於在契約之間的認知甄選中兌換物品。\n五星角色意識6後，再次獲取到對應角色或殘識時轉化獲得。=<size\=29>[Cognitive Essence]\nCan be used in Congition Shop. Obtained from obtaining the character again after their Awareness 6.</size>
 用於在契約之間的認知甄選中兌換物品。=Can be used in Congition Shop.
 sr:"^(.*)不足，無法購買。$"="Insufficient $1, cannot purchase."
 
@@ -2991,6 +3038,7 @@ r:"^前往{{A}}(\d+)區$"=$"Go to {{A}} Area $1"
 將時間推進到夜晚=Pass the time to night
 返回家中=Go home
 故事告一段落=End of story
+查看SNS=View SNS
 
 如果想繼續體驗「<color\=#ffc000>娃娃機</color>」的小遊戲，可以在完成任務「抓取的樂趣」後再進一步遊玩。=<size\=26>If you want to continue to experience the "<color\=#ffc000>Crane Game</color>", you can play more after completing the mission "The Fun of Catching".</size>
 r:"^與「<color\=#ffc000>{{A}}</color>」結識，\n可以期待今後與他發生更多的故事。$"="You've met "<color\=#ffc000>{{A}}</color>".\n Look forward to more stories \nwith him in the future."
@@ -3568,6 +3616,306 @@ r:"^僅展示噩夢難度前(\d+)名{{A}}資訊$"="Only the info of the top $1 {
 請根據階段三特殊機制調整陣容=Manage party based on phase 3 mechanics
 已達最終階段=Final phase
 
+海濱經營大作戰=Seaside Business Blitz
+開始經營前的<color\=#ff3b37>準備</color>工作吧！=Click on <color\=#ff3b37>Business Prepare</color>!
+r:"^營業額達到(\d+)$"="Earnings reaches $1"
+r:"^營收達到(\d+)$"="Revenue Flow reaches $1"
+r:"^客流達到(\d+)$"="Customer Flow reaches $1"
+r:"^口碑達到(\d+)$"="Reputation reaches $1"
+r:"^選擇(\d+)次角色事件$"="Select $1 Character Event"
+r:"^選擇(\d+)次藍色事件$"="Select $1 Blue Events"
+r:"^選擇(\d+)次紫色事件"="Select $1 Purple Events"
+r:"^經營資金總計達到(\d+)$"="Total Business Funds reach $1"
+
+r:"^事件增加的營收額外提升(\d+%)$"="Increase Revenue Flow gain from events by $1"
+r:"^經營日結算時，額外提升(\d+%)的營收，額外獲得的營收可以超出上限$"="When the day ends, additionally increase Revenue by $1, this can exceed the cap"
+r:"^經營日結算前，額外提升(\d+%)的營收，額外獲得的營收可以超出上限$"="Before the day ends, additionally increase Revenue by $1, this can exceed the cap"
+r:"^進入夜晚時，額外提升(\d+%)的營收$"="When entering Night, increase Revenue by $1"
+r:"^事件增加的客流額外提升(\d+%)$"="Increase Customer Flow gain from events by $1"
+r:"^經營日結算時，額外提升(\d+%)的客流，額外獲得的客流可以超出上限$"="When the day ends, additionally increase Customer Flow  by $1, this can exceed the cap"
+r:"^經營日結算前，額外提升(\d+%)的客流，額外獲得的客流可以超出上限$"="Before the day ends, additionally increase Customer Flow  by $1, this can exceed the cap"
+r:"^進入夜晚時，額外提升(\d+%)的客流$"="When entering Night, increase Customer Flow  by $1"
+r:"^事件增加的口碑額外提升(\d+%)$"="Increase Reputation gain from events by $1"
+r:"^經營日結算時，額外提升(\d+%)的口碑，額外獲得的口碑可以超出上限$"="When the day ends, additionally increase Reputation by $1, this can exceed the cap"
+r:"^經營日結算前，額外提升(\d+%)的口碑，額外獲得的口碑可以超出上限$"="Before the day ends, additionally increase Reputation by $1, this can exceed the cap"
+r:"^進入夜晚時，額外提升(\d+%)的口碑$"="When entering Night, increase Reputation by $1"
+
+r:"^進入夜晚時，額外提升(\d+%)的客流\n經營日結算前，額外提升(\d+%)的口碑，額外獲得的口碑可以超出上限$"="When entering Night, increase Customer Flow by $1\nBefore the day ends, additionally increase Reputation by $2, this can exceed the cap"
+r:"^事件增加的口碑額外提升(\d+%)\n經營日結算時，額外提升(\d+%)的營收，額外獲得的營收可以超出上限$"="Increase Reputation gain from events by $1\nWhen the day ends, additionally increase Revenue by $2, this can exceed the cap"
+
+夥伴能力=Ability
+機遇挑戰=Opportunities
+r:"^選擇(\d+)/(\d+)位夥伴開始經營$"="Select $1/$2 companions to start business"
+「<color\=#ff3b37>夥伴</color>」擁有特別的經營能力！\n選擇「<color\=#ff3b37>{{A}}</color>」，\n有機率增加可選擇的<color\=#ff3b37>經營事件</color>！=[<color\=#ff3b37>Companion</color>] has unique business abilities! \nSelect [<color\=#ff3b37>{{A}}</color>] for a chance to add <color\=#ff3b37>Business Event</color> options!
+選擇「<color\=#ff3b37>{{A}}</color>」，\n可大幅提升店鋪<color\=#ff3b37>客流</color>！=Select [<color\=#ff3b37>{{A}}</color>] to greatly increase <color\=#ff3b37>Customer Flow</color>!
+「準備」完成，\n「<color\=#ff3b37>開始營業</color>」！=[Preparation] complete.\n[<color\=#ff3b37>Start the business</color>]!
+海濱經營大作戰·店鋪屬性=Seaside Business Blitz·Store Attributes
+海之家擁有<color\=#ff3b37>五種</color>對每日營業額有著很大影響的<color\=#ff3b37>屬性</color>。\n\n<color\=#07d974>營收</color>、<color\=#18dcff>客流</color>、<color\=#e55ff2>口碑</color>：\n直接影響當前經營日的基礎營業額。=There are <color\=#ff3b37>five</color> <color\=#ff3b37>attributes</color> that significantly impact daily earnings.\n<color\=#07d974>Revenue</color>, <color\=#18dcff>Customer Flow</color>, and <color\=#e55ff2>Reputation</color>:\nThese directly influence the day's base earnings.
+r:"^<color\=#f58c24>安全</color>、<color\=#f9d40a>服務</color>，對店鋪運營有額外影響：\n(\d+%)~(\d+%)：對營業額有<color\=#ff3b37>正向收益</color>；\n(\d+%)~(\d+%)：對營業額<color\=#ff3b37>無影響</color>；\n(\d+%)~(\d+%)：對營業額有<color\=#ff3b37>負面影響</color>。$"="<color\=#f58c24>Safety</color>, and <color\=#f9d40a>Service</color> have additional effects on shop operations：\n$1~$2: <color\=#ff3b37>Positive effect</color> on earnings;\n$3~$4: <color\=#ff3b37>No effect</color> on earnings;\n$5~$6: <color\=#ff3b37>Negative effect</color> on earnings."
+本經營日「<color\=#ff3b37>事件影響</color>」提升<color\=#ff3b37>客流</color>，\n選擇<color\=#ff3b37>客流事件</color>，獲取最大收益。=This business day's <color\=#ff3b37>event effects</color> can increase <color\=#ff3b37>Customer Flow</color>,\nselect <color\=#ff3b37>Customer Flow Events</color> to maximize profits.
+店鋪管理屬性說明=Store Attributes Info
+<sprite\=4><sprite\=3><sprite\=0>\n直接影響當前經營日的基礎營業額\n<sprite\=1><sprite\=2>\n對店鋪運營有額外影響：\n90%~100%：對營業額有正向收益\n60%~90%：對營業額無影響\n0%~60%：對營業額有負面影響=<sprite\=4><sprite\=3><sprite\=0>\nThese directly influence the day's base earnings\n<sprite\=1><sprite\=2>\nThese have additional effects on shop operations: \n90%~100%: Positive effect on earnings\n60%~90%: No effect on earnings\n0%~60%: Negative effect on earnings
+海濱經營大作戰·稀有事件=Seaside Business Blitz·Rare Events
+事件有<color\=#ff3b37>稀有度</color>區分，稀有度越高，事件效果越好。\n處理帶有「<color\=#ff3b37>STORY</color>」標誌的事件時會遇到經營分歧，\n做出不同的決定會獲得不同的經營效果。=Events have different <color\=#ff3b37>rarity</color>, the higher the rarity, the better the effects. Solving events with a [<color\=#ff3b37>STORY</color>] logo will have different branches, making different decisions will lead to different business effects.
+遇到了高稀有度的「<color\=#ff3b37>特殊事件</color>」，\n快去前往處理吧！=Encountered a rare [<color\=#ff3b37>Special event</color>],\nlet's go solve it!
+遇到了經營分歧，\n不同選擇會影響後續<color\=#ff3b37>經營效果</color>，\n請謹慎做出決策！=You've encountered a business divergence.\nYour choice will impact future <color\=#ff3b37>business effects</color>, \nchoose carefully!
+海濱經營大作戰·夥伴體力=Seaside Business Blitz·Companion Stamina
+處理部分事件會消耗經營夥伴「<color\=#ff3b37>體力</color>」，\n當體力過低時，處理事件的<color\=#ff3b37>成功率</color>也會相應降低。\n未參與經營的夥伴在經營日結束後會自動恢復體力。=Certain events will cost [<color\=#ff3b37>Stamina</color>].\nWhen Stamina is too low, decrease the <color\=#ff3b37>Success Rate</color> accordingly.\nNon-active Companions will restore all Stamina at the end of business day.
+
+事件效果=Event Effects
+：多個增益效果=: Multiple Effects
+持續生效=∞
+「<color\=#ff3b37>確認</color>」前往「<color\=#ff3b37>海之家經營記錄</color>」=[<color\=#ff3b37>Confirm</color>] to head to [<color\=#ff3b37>Business Record</color>]
+
+本次經營營業額=Today's Earnings
+今日營業目標=<size\=25>Today's Target</size>
+營業額=<size\=21>Earnings</size>
+基礎營業額=Basic Earnings
+事件獲得營業額=Event Earnings
+獲得培訓手冊=Obtained Training Manual
+培訓手冊=Training Manual
+
+預計營業額=Earnings
+r:"^提升<sprite\=(\d+)>$"="Increase <sprite\=$1>"
+r:"^提升<sprite\=(\d+)><sprite\=(\d+)>$"="Increase <sprite\=$1><sprite\=$2>"
+r:"^提升<sprite\=(\d+)><sprite\=(\d+)><sprite\=(\d+)>$"="Incense <sprite\=$1><sprite\=$2><sprite\=$3>"
+r:"^提升<sprite\=(\d+)>，降低<sprite\=(\d+)>$"="Increase <sprite\=$1>, decrease <sprite\=$2>"
+r:"^提升<sprite\=(\d+)>，降低<sprite\=(\d+)><sprite\=(\d+)>$"="Increase <sprite\=$1>, decrease <sprite\=$2><sprite\=$3>"
+r:"^提升<sprite\=(\d+)><sprite\=(\d+)>，降低<sprite\=(\d+)>$"="Increase <sprite\=$1><sprite\=$2>, decrease <sprite\=$3>"
+r:"^提升<sprite\=(\d+)>\n所有角色消耗(\d+)點夥伴體力$"="Increase <sprite\=$1>\nAll characters spend $2 Stamina"
+r:"^提升<sprite\=(\d+)>\n消耗(\d+)經營資金$"="Incense <sprite\=$1>\nSpend $2 Business Funds"
+r:"^{{A}}體力值<size\=40><color\=#FFF000>(.*)</color></size>$"="{{A}} <size\=40><color\=#FFF000>$1</color></size> Stamina"
+r:"^{{A}}體力值<size\=40><color\=#00DED3>(.*)</color></size>$"="{{A}} <size\=40><color\=#00DED3>$1</color></size> Stamina"
+r:"^所有角色恢復(\d+)點夥伴體力$"="All characters restore $1 Stamina"
+r:"^獲得(\d+)經營資金$"="Obtain $1 Business Funds"
+r:"^結算時營業額額外提升(\d+%)$"="Increase Earnings at the end of the day by $1"
+r:"^<size\=20>成功率</size>(\d+%)$"="<size\=14>$1 Success Rate</size>"
+體力值=Stamina
+r:"^Lv.(\d+) 解鎖$"="Unlocks at Lv.$1"
+觸發事件=Events
+狀態一覽=Status
+
+r:"^每輪有(\d+%)的機率增加(\d+)個可處理的事件$"="Each round there is a $1 chance to add $2 solvable event"
+r:"^每輪有<color\=#007FF5>(.*)</color>的機率增加(.*)個可處理的事件$"="Each round there is a <color\=#007FF5>$1</color> chance to add $2 solvable event"
+父親的問候=Father's Greetings
+r:"^（1）下1次事件提高<color\=#007FF5>(.*)</color>成功率且增加的屬性額外提升<color\=#007FF5>(.*)</color>\n（2）下(.*)次事件成功率降低<color\=#007FF5>(.*)</color>但增加的屬性額外提升<color\=#007FF5>(.*)</color>$"="(1) Increase the next event's Success Rate by <color\=#007FF5>$1</color> and additional increase attribute gain by <color\=#007FF5>$2</color>\n(2) Decrease the next event's Success Rate by <color\=#007FF5>$1</color> but increase attribute gain by <color\=#007FF5>$2</color>"
+r:"^選項1：提升成功率，提升屬性收益\n選項2：降低成功率，大幅提升屬性收益$"="Option 1: Increase Success Rate, increase attribute gain\nOption 2: Decrease Success Rate, heavily increase attribute gain"
+r:"^<color\=#0F69CA>讓顧客滿意的訣竅</color>\n下1次事件提高(\d+%)成功率且增加的屬性額外提升(\d+%)$"="<color\=#0F69CA>Tips for customer satisfaction</color>\nIncrease the next event's Success Rate by $1 and additional increase attribute gain by $2"
+r:"^<color\=#0F69CA>如何提升店鋪口碑</color>\n下1次事件成功率降低(\d+%)但增加的屬性額外提升(\d+%)$"="<color\=#0F69CA>How to improve store reputation</color>\nDecrease the next event's Success Rate by $1 but increase attribute gain by $2"
+努力過頭可不好=Don't Overdo It
+r:"^（1）高品質事件出現機率提升\n（2）下(.*)次提升<sprite\=0>的事件<sprite\=0>額外提升<color\=#007FF5>(.*)</color>$"="(1) Increase in chance of high quality events\n(2) Increase the next <sprite\=0> increase event additionally increases <sprite\=0> by <color\=#007FF5>$1</color>"
+r:"^經營日開始時，額外提升<color\=#007FF5>(.*)</color>的<sprite\=3>$"="At the start of business day, additionally increase <sprite\=3> by <color\=#007FF5>$1</color>"
+{{A}}的心事={{A}}'s Concerns
+r:"^（1）<sprite\=2>降低時，提升<color\=#007FF5>(.*)</color>點<sprite\=4>\n（2）(.*)機率提升<color\=#007FF5>(.*)</color>點<sprite\=0>$"="（1）When <sprite\=2> decrease, increase <sprite\=4> by <color\=#007FF5>$1</color>\n(2) $2 chance to increase <sprite\=0> by <color\=#007FF5>$3</color>"
+
+r:"^經營日開始時，額外提升(\d+%)的<sprite\=3>$"="At the start of business day, additionally increase <sprite\=3> by $1"
+「臨時店長」熱潮="Temporary Manager" Trend
+r:"^（1）提升<color\=#007FF5>(.*)</color>點<sprite\=3>\n（2）(.*)機率提升<color\=#007FF5>(.*)</color>點<sprite\=3>$"="(1) Increase <sprite\=3> by <color\=#007FF5>$1</color>\n(2) $2 chance to increase <sprite\=3> by <color\=#007FF5>$3</color>"
+r:"^選項1：提升<sprite\=(\d+)>\n選項2：機率提升更多<sprite\=(\d+)>$"="Option 1: Increase<sprite\=$1>\nOption 2: Chance to increase more<sprite\=$2>"
+r:"^<color\=#0F69CA>如果是拍照的話……</color>\n提升(\d+)點客流$"="<color\=#0F69CA>If it's a photo...</color>\nIncrease Customer Flow by $1"
+r:"^<color\=#0F69CA>摸的話要收費哦……</color>\n(\d+%)機率提升(\d+)點客流$"="<color\=#0F69CA>You'll have to pay to pet...</color>\n$1 chance to increase Customer Flow by $2"
+{{A}}的野望={{A}}'s Ambition
+r:"^（1）根據當前<color\=#007FF5>(.*)</color>的<sprite\=3>提升<sprite\=0><sprite\=4>\n（2）(.*)機率提升<color\=#007FF5>(.*)</color>點<sprite\=3>$"="(1) Increase <sprite\=0><sprite\=4> based on <color\=#007FF5>$1</color> of current <sprite\=3>\n(2) $2 chance to increase <sprite\=3> by <color\=#007FF5>$3</color>"
+海底的寶藏……？=Seabed Treasure...?
+r:"^（1）提升<color\=#007FF5>(.*)</color>成功率\n（2）提升<color\=#007FF5>(.*)</color>點<sprite\=0>$"="(1) Increase Success Rate by <color\=#007FF5>$1</color>\n(2) Increase <sprite\=0> by <color\=#007FF5>$2</color>"
+
+r:"^事件增加的<sprite\=4>額外提升(.*)$"="Increase <sprite\=4> gain from events by $1"
+{{A}}的災難={{A}}'s Disaster
+r:"^（1）(.*)額外消耗(.*)點體力，當前時段事件增加的<sprite\=4>額外提升<color\=#007FF5>(.*)</color>\n（2）提升<color\=#007FF5>(.*)</color>點<sprite\=4>$"="(1) $1 spends $2 more Stamina to increase <sprite\=4> gain by <color\=#007FF5>$3</color>\n(2) Increase <sprite\=4> by <color\=#007FF5>$4</color>"
+「不速」之客="Uninvited" Guest
+r:"^（1）提升<sprite\=2>的事件額外提升<color\=#007FF5>(.*)</color>點<sprite\=0>\n（2）<sprite\=0>提升<color\=#007FF5>(.*)</color>點$"="(1) Events that increase <sprite\=2> gain also increase <sprite\=0> by <color\=#007FF5>$1</color>\n（2） Increase <sprite\=0> by <color\=#007FF5>$2</color>"
+大龍蝦的料理法=The Art of Cooking Lobster
+r:"^（1）下次增加<sprite\=4>的事件<sprite\=4>額外提升<color\=#007FF5>(.*)</color>，但<sprite\=1><sprite\=2>額外降低(.*)點\n（2）提升<color\=#007FF5>(.*)</color>點<sprite\=2>$"="(1) The next <sprite\=4> increase event increase <sprite\=4> by <color\=#007FF5>$1</color> more, but decrease <sprite\=1> and <sprite\=2> by $2 more\n(2) Increase <sprite\=2> by <color\=#007FF5>$3</color>"
+
+r:"^<sprite\=0><(.*)時，事件增加的<sprite\=0>額外提升(.*)$"="When <sprite\=0> is <$1, increase <sprite\=0> gain from events by $2"
+絕佳補貨時機=Perfect Time to Restock
+r:"^（1）當前時段事件營收減少(.*)，白天營收額外提升<color\=#007FF5>(.*)</color>\n（2）當前時段事件營收減少(.*)，傍晚營收額外提升<color\=#007FF5>(.*)</color>\n（3）當前時段事件營收減少(.*)，夜晚營收額外提升<color\=#007FF5>(.*)</color>$"="(1) Decrease Revenue for this time slot by $1, increase Revenue gain during Day by <color\=#007FF5>$2</color>\n(2) Decrease Revenue for this time slot by $3, increase Revenue gain during Evening by <color\=#007FF5>$4</color>\n(3) Decrease Revenue for this time slot by $5, increase Revenue gain during Night by <color\=#007FF5>$6</color>"
+海之家作戰計畫=Beach House Plan
+r:"^（1）下(.*)次增加<sprite\=4>的事件<sprite\=4>額外提升<color\=#007FF5>(.*)</color>\n（2）下(.*)次增加<sprite\=3>的事件<sprite\=3>額外提升<color\=#007FF5>(.*)</color>$"="(1) The next $1 <sprite\=4> increase event increase <sprite\=4> by <color\=#007FF5>$2</color>\n(2) The next $3 <sprite\=3> increase event increase <sprite\=3> by <color\=#007FF5>$4</color>"
+r:"^選項1：提升<sprite\=4>收益\n選項2：提升<sprite\=3>收益$"="Option 1: Increase <sprite\=4> gain\nOption 2: Increase <sprite\=3> gain"
+我正在把這間店過往的營業額數據化……=I'm digitizing this store's past sales data...
+感覺還有很大的改善空間呢。\n比如攬客和收益的比率之類的……=There's still significant room for improvement, like optimizing the customer-to-revenue ratio, for instance...
+我還打算和{{A}}聊聊……\n不過在此之前，我想聽聽你的意見。=I also plan to discuss this with {{A}}... But first, I'd value your input.
+這家店現在更需要提高收益率，\n還是增加客流量呢？=Should the store prioritize profit margins or foot traffic?
+r:"^<color\=#0F69CA>當然是收益率</color>\n下(.*)次提升營收的事件營收額外提升(.*)$"="<color\=#0F69CA>Profits, of course</color>\nThe next $1 Revenue increase event increase Revenue by $2"
+r:"^<color\=#0F69CA>或許是客流量吧……</color>\n下(.*)次提升客流的事件客流額外提升(.*)$"="<color\=#0F69CA>Maybe traffic...</color>\nThe next $1 Customer Flow increase event increase Customer Flow by $2"
+收益明顯在增加。\n看來{{A}}的分析奏效了……=The profits are clearly increasing. Looks like {{A}}'s analysis worked...
+拯救店鋪流水=Saving Cash Flow
+r:"^（1）減少經營資金降低值<color\=#007FF5>(.*)</color>；結算時經營額額外提升<color\=#007FF5>(.*)</color>\n（2）結算時經營額額外提升<color\=#007FF5>(.*)</color>$"="(1) Decrease Business Funds by <color\=#007FF5>$1</color>; Increase Earnings by <color\=#007FF5>$2</color>\n(2) Increase Earnings at the end of the day by <color\=#007FF5>$3</color>"
+
+r:"^<sprite\=1>降低時，降低值減少(.*)點$"="When decreasing <sprite\=1>, decrease the loss by $1"
+安全最重要=Safety is Paramount
+r:"^（1）<sprite\=1>事件可提升<color\=#007FF5>(.*)</color>點<sprite\=0>\n（2）提升<color\=#007FF5>(.*)</color>點<sprite\=2>$"="（1）<sprite\=1> events can increase <sprite\=0> by <color\=#007FF5>$1</color>\n(2) Increase <sprite\=2> by <color\=#007FF5>$2</color>"
+商會會長的饋贈=President's Gift
+r:"^（1）下(.*)次事件不降低<sprite\=1>\n（2）獲得<color\=#007FF5>(.*)</color>經營資金；結算時經營額額外提升<color\=#007FF5>(.*)</color>$"="(1) The next $1 event will not decrease <sprite\=1>\n(2) Obtain <color\=#007FF5>$2</color> Business Funds; Increase Earnings at the end of the day by <color\=#007FF5>$3</color>"
+沙灘排球賽=Beach Volleyball Tournament
+r:"^（1）提升<color\=#007FF5>(.*)</color>點<sprite\=3><sprite\=0><sprite\=4>，降低(.*)點<sprite\=1>\n（2）提升<color\=#007FF5>(.*)</color>點<sprite\=3>$"="(1) Increase <sprite\=3><sprite\=0><sprite\=4> by <color\=#007FF5>$1</color>, decrease <sprite\=1> by $2\n(2) Increase <sprite\=3> by <color\=#007FF5>$3</color>"
+
+r:"^任意角色每改變(.*)點夥伴體力，則提升<sprite\=4><sprite\=3><sprite\=0>各(.*)點$"="For every $1 Stamina that any character changes, increase <sprite\=4><sprite\=3><sprite\=0> by $2"
+忙裡偷閒=Take a Break
+r:"^（1）後續{{A}}額外消耗(.*)點體力，同時每次使結算時經營額額外提升<color\=#007FF5>(.*)</color>\n（2）所有角色恢復<color\=#007FF5>(.*)</color>點夥伴體力$"="(1) When {{A}} spends $1 Stamina, also increase Earnings at the end of the day by  <color\=#007FF5>$2</color>\n(2) All characters restores <color\=#007FF5>$2</color> Stamina"
+選項1：提升營業額\n選項2：恢復所有角色的夥伴體力=Option 1: Increase Earnings \nOption 2: Restore Stamina to call characters
+r:"^結算時經營額額外提升(\d+%)$"="Increase Earnings at the end of the day by $1"
+店鋪大改造=Store Renovation
+r:"^（1）{{A}}消耗所有體力，提升<color\=#007FF5>(.*)</color>點<sprite\=4><sprite\=3><sprite\=0>，提升<color\=#007FF5>(.*)</color>點<sprite\=1><sprite\=2>\n（2）{{A}}額外消耗(.*)點體力，提升<color\=#007FF5>(.*)</color>點<sprite\=4><sprite\=3><sprite\=0>，提升<color\=#007FF5>(.*)</color>點<sprite\=1><sprite\=2>$"="(1) {{A}} spends all Stamina, increase <sprite\=4><sprite\=3><sprite\=0> by <color\=#007FF5>$1</color>, increase <sprite\=1><sprite\=2> by <color\=#007FF5>$2</color>\n(2) {{A}} spends $3 Stamina, increase <sprite\=4><sprite\=3><sprite\=0> by <color\=#007FF5>$4</color>, increase <sprite\=1><sprite\=2> by <color\=#007FF5>$5</color>"
+為你應援=Supporting You
+r:"^（1）後續{{A}}夥伴體力改變時，額外提升<color\=#007FF5>(.*)</color>點<sprite\=4><sprite\=3><sprite\=0>\n（2）提升<color\=#007FF5>(.*)</color>點<sprite\=4><sprite\=3><sprite\=0>$"="(1) When {{A}}'s Companion Stamina changes, increase <sprite\=4><sprite\=3><sprite\=0> by <color\=#007FF5>$1</color>\n(2) Increase <sprite\=4><sprite\=3><sprite\=0> by <color\=#007FF5>$2</color>"
+
+Green
+海灘的大明星=Beach Superstar
+失物招領=Lost-and-found
+好像有顧客把貴重品落在店裡，大家都來幫忙了……=Seems that a customer left their valuables in the store, everyone came to help...
+守護安全！=Stay Safe!
+幫手來了！=Help's Here!
+有麻煩的顧客插隊，提醒並趕走了他們……=A troublesome customer cut in line, I reminded them and sent them away...
+特價食材=Special Ingredients
+需要打廣告=Need to Advertise
+休息區的潮流=Rest Area Trends
+加強休息區的舒適度，受到了遊客好評……=The improved comfort of the rest area has earned positive feedback from visitors...
+一切為了顧客=All for Customers
+大自然的異象=Nature's Anomaly
+租賃服務爆火=Booming Rental Services
+海濱租賃很有人氣，遊客排起了長隊……=The beach rentals are a huge hit, visitors are lining up in long queues...
+權衡利弊……=Weighing the Pros and Cons...
+大人氣合影！=Popular Photo Op!
+{{A}}合影超受歡迎，遊客排起了隊……={{A}}'s photo ops are a huge hit, visitors are lining up...!
+清潔區的環境整治=Cleaing Up the Cleaning Area
+為了環境整潔，對溢出的垃圾進行了分類…=To keep the environment clean, I sorted the overflowing trash...
+消暑納涼好物=Beat the Heat
+收到慰問品=Received Gifts
+漂流物的熱潮=Drifter's Fever
+
+Blue
+緊跟本地潮流=Keeping Up with Local Trends
+好像有當地居民成了海之家的熟客……=It seems like some locals have become regulars of Beach House...
+特殊的午後=A Special Afternoon
+r:"^傍晚時事件增加的屬性額外提升(\d+%)$"="Increase Evening events attributes gain by $1"
+
+令人擔憂的事態=A Worrying Situation
+晴空、潮聲與炒麵=Sun, Surf, and Stir-fry
+臨時停業=Temporary Closure
+幸運羽毛=Lucky Feather
+需要外帶服務=Need Delivery
+不停增加的人數=Increasing Customers
+電影節目的影響力=Movie's Influence
+r:"^後續事件增加的<sprite\=(\d+)>額外提升(\d+%)$"="Future events increase <sprite\=$1> by $2"
+r:"^後續事件增加的客流額外提升<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>$"="<size\=25>Future events increase Customer Flow by <sprite\=$1 tint\=1><sprite\=$2 tint\=1><sprite\=$3 tint\=1></size>"
+r:"^後續事件增加的客流額外提升(\d+%)$"="Future events increase Customer Flow by $1"
+網路紅人=Internet Celebrity
+天氣喜怒無常=Unpredictable Weather
+暢遊{{A}}=Roaming {{A}}
+發佈店鋪近況=Posting Store Update
+r:"^後續事件增加的營收額外提升<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>$"="<size\=25>Future events increase Revenue by <sprite\=$1 tint\=1><sprite\=$2 tint\=1><sprite\=$3 tint\=1></size>"
+r:"^後續事件增加的營收額外提升(\d+%)$"="Future events increase Revenue by $1"
+優質食材採購=Sourcing Quality Ingredients
+特殊的夜晚=A Special Night
+r:"^夜晚時事件增加的屬性額外提升(\d+%)$"="Increase Night events attributes gain by $1"
+r:"^夜晚時事件增加的屬性額外提升<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>$"="<size\=25>Increase Night events attributes gain by <sprite\=$1 tint\=1><sprite\=$2 tint\=1></size>"
+r:"^夜晚時，事件增加的屬性額外提升(\d+%)$"="Increase Night events attributes gain by $1"
+需要陪玩服務=Playgroup Service Needed
+煩躁的工作……=Annoying Work...
+白沙上的排球=Volleyball on Sand
+漁獲滿艙！=Full Haul
+投資新設備=Invest in New Equipment
+夏日高危預警！=Summer Danger Alert!
+幫助了因為強烈陽光身體不適的顧客……=I helped a customer who was feeling unwell due to strong sunlight...
+
+大掃除時間=Cleaning Time
+
+Purple
+新口味糖漿=New Flavor Syrup
+r:"^選項1：消耗夥伴體力，提升更多屬性\n選項2：提升屬性$"="Option 1: Spend Companion's Stamina to increase many attributes\nOption 2: Improve attributes"
+您好～\n我是本地食品公司的業務專員～=Hello～ I'm a sales representative from a local food company～
+今天特地帶來了新研發的\n刨冰糖漿試用品哦～=Today, I've brought samples of our newly developed shaved ice syrup for you to try!
+雖然外觀和一般哈密瓜糖漿沒差別～\n不過美味程度可是有著天壤之別哦～=It looks just like regular cantaloupe syrup～ But the taste is worlds apart～
+這款糖漿和其他口味混搭也很出色～\n說不定能幫您開發出新的口味……=This syrup also pairs brilliantly with other flavors～ It might even inspire you to create something new～
+您不介意的話，歡迎嘗試看看～=If you'd like, feel free to give it a try～
+r:"^<color\=#0F69CA>研發新口味試試</color>\n所有角色額外消耗(\d+)點夥伴體力，後續事件增加的屬性額外提升(\d+%)$"="<color\=#0F69CA>Develop the new flavor</color>\nAll characters spend $1 Stamina, increase attribute gain from future events by $2"
+r:"^<color\=#0F69CA>替換現有哈密瓜口味</color>\n後續事件增加的屬性額外提升(\d+%)$"="<color\=#0F69CA>Replace the cantaloupe flavor</color>\nIncrease attribute gain from future events by $1"
+雖然新品開發過程很辛苦，\n但銷量似乎還不錯……=Although the development process is difficult, sales seem to be good...
+r:"^後續事件增加的屬性額外提升(\d+%)$"="Increase attribute gain from future events by $1"
+
+Minami Summer
+遇到麻煩了=Ran into Trouble
+在{{A}}敏銳目光的幫助下，\n迅速處理了客人遇到的困難……=With {{A}}'s keen eye, we quickly resolved the issues the customers were having...
+
+Shun Summer
+廚房戰神=Kitchen God of War
+高效料理=Efficient Cuisine
+大份量炒麵=Large Fried Noodles
+花式刨冰=Flaire Shaved Ice
+{{A}}進行了糖漿花式組合，\n做出色彩繽紛的刨冰……！={{A}} used fancy syrup combinations to make a colorful shaved ice...!
+大力士？=Hercules?
+{{A}}一口氣搬走了好幾袋垃圾……！={{A}} moved several bags of trash in one fell swoop...!
+
+Riko Summer
+以服務取勝=Winning with Service
+{{A}}細緻周到的服務大受歡迎……！={{A}}'s meticulous service is very popular...!
+r:"^後續事件增加的口碑額外提升<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>$"="<size\=25>Future events increase Reputation by <sprite\=$1 tint\=1><sprite\=$2 tint\=1><sprite\=$3 tint\=1></size>"
+r:"^後續事件增加的口碑額外提升(\d+%)$"="Future events increase Reputation by $1"
+r:"^下(.*)次增加<sprite\=(.*)>的事件<sprite\=(.*)>額外提升(.*)$"="The next $1 <sprite\=$2> increase event increase <sprite\=$3> by $4"
+{{A}}的貼心關照似乎贏得了客人的好評……={{A}}'s attentive service seems to be winning rave reviews from guests...
+r:"^下<sprite\=(.*) tint\=1>次增加口碑的事件口碑額外提升<sprite\=(.*) tint\=1><sprite\=(.*) tint\=1><sprite\=(.*) tint\=1>$"="<size\=20>The next <sprite\=$1 tint\=1> Reputation increase event increase Reputation by <sprite\=$2 tint\=1><sprite\=$3 tint\=1><sprite\=$4 tint\=1>"
+需要隊伍引導=Need Team Guidance
+資料分析師=Data Analyst
+r:"^本時段事件增加的屬性額外提升(\d+%)$"="Increase the attributes gain from events for this time slot by $1"
+{{A}}的取捨={{A}}'s Trade-offs
+由於客流量太大，\n{{A}}決定暫時限制入店人數……={{A}} decides to temporary limit the number of customers due to heavy traffic...
+行銷策略=Marketing Strategy
+多虧{{A}}提出的行銷策略，\n口碑進一步提升了……！=Thanks {{A}}'s marketing strategy, our reputation has increased...!
+
+Tomoko Summer
+炒麵之神=God of Fried Noodles
+r:"^營業額額外提升(\d+%)$"="Increase Earnings by $1"
+炒麵之神·{{A}}製作的炒麵，\n已經是店裡的必點菜品了……！=The fried noodles made by the God of Fried Noodles, {{A}}, it has become a must-order dish in our store...!
+r:"^營業額額外提升<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>$"="Increase Earnings by <sprite\=$1 tint\=1><sprite\=$2 tint\=1>"
+
+休息時間=Break Time
+r:"^{{A}}恢復(\d+)點夥伴體力$"="{{A}} restores $1 Stamina"
+{{A}}經過充分休息，體力已經恢復......={{A}} has recovered after a good rest...
+
+珍貴的海螺=Precious Conch
+達成經營目標解鎖=Reach Business Target to unlock
+經營目標=Business Target
+r:"^距離「夏之{{A}}·蕭條」成就達成還需要(\d+)歷史最高經營資金$"="Need $1 Highest Business Funds to get the achievement"
+最高經營資金=Highest Funds
+r:"^經營活動結束後可提取現金<size\=40><sprite\=(\d+)></size>$"="Can obtain money after the event ends "
+r:"^\（提取比例為擁有經營資金的(\d+(.\d+)?(%)?)\）$"="(At a ratio of $1 owned Business Funds)"
+該獎勵在活動結束後透過郵件發放，同時清空經營資金=Rewards will be distributed via mail after the event ends
+升級店鋪=Upgrade Store
+海之家=Beach House
+租賃店=Rental Store
+攬客點=Visitor Hub
+炒麵攤=Noodle Stand
+休息區=Rest Area
+刨冰攤=Shaved Ice Stand
+清潔區=Cleaning Area
+瞭望台=Vantage Point
+釣魚點=Fishing Area
+排球場=Volleyball Court
+
+升級預覽=Upgrade Preview
+可選擇夥伴數量=Available Companion
+每日獲得培訓手冊=Daily Training Manual
+增加基礎營收倍率=Base Revenue Mult
+海之家特殊事件=Beach House Event
+解鎖新店鋪=New Store
+解鎖新夥伴=New Companion
+店鋪稀有事件數量=Rare Events
+
+r:"^海之家達到(\d+)級後可繼續升級$"="Can upgrade after Beach House Lv. $1"
+r:"^海之家達到(\d+)級後解鎖。$"="Unlocked after Beach House Lv. $1"
+r:"^「海之家提升至Lv.(\d+)」後解鎖。$"="Unlocked after Beach House Lv. $1"
+
+r:"^在一個經營日內達到(\d+)營業額$"="Reach $1 Earnings in one business day"
+r:"^觸發(\d+)個Story事件$"="Trigger $1 Story Events"
+r:"^觸發(\d+)個Story事件\((\d+)\/(\d+)\)$"="Trigger $1 Story Events ($2/$3)"
+r:"^完成(\d+)個經營日$"="Clear $1 business days"
+r:"^完成(\d+)個經營日\((\d+)\/(\d+)\)$"="Clear $1 business days ($2/$3)"
+r:"^見證第(\d+)章經營故事$"="Witness Business Stories Chapter $1"
+r:"^完成(\d+)個夏日回憶\((\d+)\/(\d+)\)$"="Clear $1 Summer Memories ($2/$3)"
+r:"^將店鋪「海之家」升至(\d+)級\((\d+)\/(\d+)\)$"="Upgrade Beach House to Lv. $1 ($2/$3)"
+
 ----------
 Character's Story
 ----------
@@ -3735,6 +4083,7 @@ r:"^最多只可以選擇(\d+)個面具上陣哦～$"="You can only equip $1 Per
 您有尚未保存的陣容方案，是否要進行保存？=Do you want to save your setup?
 
 不羈紋章·虹=<size\=17>Wild Card Emblem·Rainbow</size>
+r:"^不羈紋章·虹\*(\d+)$"="<size\=18>Wild Card Emblem·Rainbow*$1</size>"
 不羈紋章·耀=<size\=20>Wild Card Emblem·Shiny</size>
 不羈紋章·空=<size\=20>Wild Card Emblem·Dull</size>
 在厄抑之境中挑戰Ⅵ階、Ⅶ階{{A}}副本後獲得……應該可以用於在厄抑巡禮中兌換獎勵。=Gained from Rank VI, Rank VII Persona Farm. Can be used in Challenge Reward.
@@ -3764,6 +4113,11 @@ sr:"^(.*)印記$"="$1 Seal"
 暫無介紹=No introduction
 
 詭譎的{{A}}=Strange {{A}}
+詭譎的{{A}}·一=Strange {{A}}·1
+詭譎的{{A}}·二=Strange {{A}}·2
+詭譎的{{A}}·三=Strange {{A}}·3
+詭譎的{{A}}·四=Strange {{A}}·4
+詭譎的{{A}}·五=Strange {{A}}·5
 膽小的{{A}}=Timid {{A}}
 平凡的{{A}}=Ordinary {{A}}
 非凡的{{A}}=Extraordinary {{A}}
@@ -3967,7 +4321,7 @@ sr:"^表情·(.*)$"="Emote·$1"
 讓我聽聽=Eavesdrop
 唔，醉了=Drunk
 有事？=Something's wrong?
-好評如潮=Rave review
+好評如潮=Rave Review
 超辣=Super spicy
 
 膽怯=Timid
