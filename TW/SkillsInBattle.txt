@@ -437,8 +437,8 @@ r:"對<color\=#FFFF00>1名</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</color
 
 //AoE Bless Instakill
 r:"對<color\=#FFFF00>所有</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，對50%生命值以下的敵人附加低機率祝福屬性即死效果，生命值越低機率越高。"=Deal <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>all</color> foes with a chance of insta-kill to foes under 50% HP. The lower the HP, the higher the chance.
-
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，若主目標敵人生命值低於(\d+%)則有機率附加即死效果。$"="Deal $1 ATK Bless damage to <color\=#FFFF00>all</color> foes with a chance of insta-kill if the main target is below $2 HP."
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，對低生命敵人機率造成即死效果$"="Deal $1 ATK Bless damage to <color\=#FFFF00>all</color> foes with a chance of insta-kill if the main target is at low HP."
 
 Desire of Life Shell
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，恢復生命值最低的同伴(\d+\.\d+%)攻擊力的生命值。$"="Deal $1 ATK Bless damage to <color\=#FFFF00>all</color> foes, and restore $2 ATK HP to the lowest HP ally."
@@ -939,6 +939,7 @@ r:"^受<color\=#000000>暴</color>擊提升$"="C<color\=#000000>r</color>it Rate
 r:"^受<color\=#000000>暴</color>擊效果提升$"="C<color\=#000000>r</color>it DMG Taken Up"
 r:"^受<color\=#000000>到</color>暴擊效果提升$"="C<color\=#000000>r</color>it DMG Taken Up"
 r:"^效<color\=#000000>果</color>抵抗降低$"="A<color\=#000000>i</color>lment RES Down"
+r:"^受<color\=#000000>到</color>治療效果降低$"="H<color\=#000000>e</color>aling Received Down"
 r:"^受<color\=#000000>傷</color>害提升$"="D<color\=#000000>M</color>G Taken Up"
 r:"^受<color\=#000000>到</color>傷害提升$"="D<color\=#000000>M</color>G Taken Up"
 r:"^受<color\=#000000>持</color>續傷害效果提升$"="D<color\=#000000>a</color>mage Over Time Taken Up"
@@ -1062,6 +1063,7 @@ HIGHLIGHT傷害提升=Increase HIGHLIGHT DMG
 治療效果提升=<size\=26>Increase Healing Effect</size>
 護盾效果提升=Increase Shield Effect
 受治療降低=Decrease Healing Received
+受到治療效果降低=Decrease Healing Received
 
 r:"^受弱點傷害提升(\d+%)$"="Increase Weakness DMG by $1"
 受物理傷害提升=Increase Phys DMG Taken
@@ -1297,6 +1299,7 @@ r:"^所有怪盜最終防禦力下降(\d+(.\d+)?(%)?)$"="Decrease all Thieves' D
 r:"^受到暴擊效果提升(\d+(.\d+)?(%)?)$"="Increase Crit DMG Taken by $1"
 r:"^觸電狀態下，受到暴擊效果提升(\d+(.\d+)?(%)?)$"="When inflicted with Shock,\nincrease Crit DMG Taken by $1"
 r:"^效果抵抗降低(\d+(.\d+)?(%)?)$"="Decrease Ailment RES by $1"
+r:"^受到治療效果降低(\d+(.\d+)?(%)?)$"="Decrease Healing Received by $1"
 受到的傷害提升=Increase DMG Taken
 r:"^受傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Taken by $1"
 r:"^受到傷害提高(\d+(.\d+)?(%)?)$"="Increase DMG Taken by $1"
