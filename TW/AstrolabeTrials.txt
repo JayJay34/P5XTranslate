@@ -10,7 +10,9 @@ r:"^本期星盤持續剩餘時間：<color\=#FFC000>(\d+)時(\d+)分</color>$"=
 r:"<color\=#FFC000>(\d+)天(\d+)時</color>後：\n可用精神力將增加<color\=#FFC000>(\d+)點</color>\(上限為(\d+)\)\n所有怪盜挑戰次數將增加<color\=#FFC000>(\d+)次</color>\(上限為(\d+)\)"=After <color\=#FFC000>$1d $2h</color>:\nIncrease Mental Energy by <color\=#FFC000>$3</color>\n(Up to $4)\nIncrease Thieves Usage by <color\=#FFC000>$5</color>\n(Up to $6)
 r:"<color\=#FFC000>(\d+)時(\d+)分</color>後：\n可用精神力將增加<color\=#FFC000>(\d+)點</color>\(上限為(\d+)\)\n所有怪盜挑戰次數將增加<color\=#FFC000>(\d+)次</color>\(上限為(\d+)\)"=After <color\=#FFC000>$1d $2h</color>:\nIncrease Mental Energy by <color\=#FFC000>$3</color>\n(Up to $4)\nIncrease Thieves Usage by <color\=#FFC000>$5</color>\n(Up to $6)
 
+r:"^<color\=#FFC000>(\d+)天(\d+)小時</color>後：$"="After <color\=#FFC000>$1d $2h</color>:"
 r:"^<color\=#FFC000>(\d+)天(\d+)時</color>後：$"="After <color\=#FFC000>$1d $2h</color>:"
+r:"^<color\=#FFC000>(\d+)小時(\d+)分</color>後：$"="After <color\=#FFC000>$1h $2m</color>:"
 r:"^<color\=#FFC000>(\d+)時(\d+)分</color>後：$"="After <color\=#FFC000>$1h $2m</color>:"
 r:"^<color\=#FFC000>(\d+)分</color>後：$"="After <color\=#FFC000>$1m</color>:"
 r:"^可用精神力將增加<color\=#FFC000>(\d+)點</color>     \(上限(\d+)\)$"="Increase Mental Energy by <color\=#FFC000>$1</color>"
@@ -87,6 +89,7 @@ r:"^隊伍中編入(\d+)名及以上<color\=#FFFC40>反抗/支配</color>怪盜�
 r:"^反抗/支配怪盜暴擊率提升(\d+%)，暴擊效果降低(\d+%)，造成<color\=#FFFC40>暴擊</color>時最終傷害提升(\d+%)$"="<size\=25>Increase the Crit Rate of Assassin/Sweeper Thieves by $1 and decrease their Crit DMG by $2; Increase <color\=#FFFC40>Critical</color> Final DMG by $3</size>"
 r:"^心之磁場(.*)$"="Hearts Magnetic Field $1"
 r:"^<color\=#ff381d>『{{A}}』</color>成員最終傷害提升(\d+(.\d+)?(%)?)$"="<size\=27>Increase the Final DMG of \n<color\=#ff381d>[The Phantom Thieves of Hearts]</color> by $1</size>"
+r:"^<color\=#ff381d>『S.E.E.S.』</color>成員最終傷害提升(\d+(.\d+)?(%)?)$"="Increase the Final DMG of <color\=#ff381d>[S.E.E.S.]</color> members by $1"
 
 r:"^屬性磁場(.*)$"="Elemental Magnetic Field $1"
 r:"^<color\=#FF9C00>物理</color>/<color\=#FF9C00>射擊</color>/<color\=#E3E3E3>萬能</color>屬性隊員最終傷害提高(\d+(.\d+)?(%)?)$"="Increase the Final DMG of <color\=#FF9C00>Physical</color>/<color\=#FF9C00>Gun</color>/<color\=#E3E3E3>Almighty</color> \nThieves by $1"
@@ -140,6 +143,7 @@ r:"^威壓磁場(.*)$"="Pressure Magnetic Field $1"
 r:"^首領每回合末使所有怪盜獲得1層<color\=#FFFC40>『威壓』</color>；『威壓』被驅散後，使所有敵人獲得1層『威壓』。\n『威壓』：受最終傷害提升(\d+%)，可疊加(\d+)層，持續(\d+)回合。$"="<size\=20>Boss will inflict all Thieves with 1 stack of <color\=#FFFC40>[Pressure]</color> at the end of each turn; When [Pressure] is dispelled, foes gain 1 stack of [Pressure]\n[Pressure]: Increase Final DMG Taken by $1 for $3 turns, up to $2 stacks</size>"
 每回合末使所有怪盜獲得1層「威壓」=Inflict 1 [Pressure] at the end of each turn
 r:"^威<color\=#000000>壓</color>$"="P<color\=#000000>r</color>essure"
+r:"^所有角色<color\=#FFFC40>藥品效果</color>提升(\d+%)，使用藥品後，使除自身以外的所有同伴最終傷害提升(\d+%)，持續(\d+)回合$"="Increase Thieves' <color\=#FFFC40>Item Effect</color> by $1. After using an item, increase all other allies' Final DMG by $2 for $3 turn"
 
 ----------
 Combat Menu
