@@ -1,6 +1,7 @@
 ----------
 Guild - Companio
 ----------
+閼凶夢之扉=Gates of the Nightmare Catcher
 狂歡券=Carnival Tickets
 參與樂園活動可獲得，用於樂園商店中兌換獎勵。=Gained from Companio events.\nCan be used in Carpe Diem Shop.
 『狂歡券』\n參與樂園活動可獲得，用於樂園商店中兌換獎勵。=<size\=26>[Carnival Tickets]\nGained from Companio events.\nCan be used in Carpe Diem Shop.</size>
@@ -120,6 +121,18 @@ r:"^首領的適應性發生變化，所有怪盜造成<color\=#FFFC40>弱點傷
 ----------
 Bosses
 ----------
+血量鎖定=HP Lock
+血量鎖定切換=HP Lock Switch
+<color\=#FF0000>血量鎖定</color>=<color\=#FF0000>HP Lock</color>
+r:"^使用後可令首領進入<color\=#FF0000>「血量鎖定」</color>狀態：當前生命值不會低於最大生命值的(\d+%)；\n再次使用解除<color\=#FF0000>「血量鎖定」</color>狀態，可重複使用。$"="Use to make the boss enter <color\=#FF0000>[HP Lock]</color>: Current HP cannot drop below $1 Max HP; Use again to remove <color\=#FF0000>[HP Lock]</color>."
+生命鎖定=HP Lock
+r:"^生命值始終不會低於最大生命值的(\d+%)$"="HP cannot drop below $1 Max HP"
+r:"^生<color\=#000000>命</color>鎖定$"="H<color\=#000000>P</color> Lock"
+r:"^生<color\=#000000>命</color>鎖定解除$"="E<color\=#000000>x</color>ited HP Lock"
+sr:"^<color\=#FF0000>(.*)</color>進入生命鎖定狀態，期間不會進入虛弱階段$"="<color\=#FF0000>$1</color> entered HP Lock, \nunable to enter Weaken"
+sr:"^<color\=#FF0000>(.*)</color>退出生命鎖定狀態$"="<color\=#FF0000>$1</color> exited HP Lock"
+技能釋放過程中不可釋放。=Cannot use this mid-animation.
+
 {{A}}、{{B}}、{{C}}、{{D}}處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n{{A}}會源源不斷地召喚天使援軍，擊敗天使可以回復精力值。對處於虛弱階段時{{A}}召喚的天使造成傷害可獲得積分。=<size\=24>{{A}}, {{B}}, {{C}}, {{D}} have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.\n{{A}} will keep summoning Angel, defeating Angel will restore SP. Dealing damage to Angel during Weak will count for score.</size>
 1、{{A}}、{{B}}、{{C}}、{{D}}處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n2、{{A}}會源源不斷地召喚天使援軍，擊敗天使可以回復精力值。對處於虛弱階段時{{A}}召喚的天使造成傷害可獲得積分。=<size\=24>1. {{A}}, {{B}}, {{C}}, {{D}} have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.\n2. {{A}} will keep summoning Angel, defeating Angel will restore SP. Dealing damage to Angel during Weak will count for score.</size>
 {{A}}會源源不斷地召喚天使援軍，擊敗天使可以回復精力值。對天使造成傷害可獲得積分。=Dominion will keep summoning Angel, defeating Angel will restore SP. Dealing damage to Angel will count for score.
@@ -337,6 +350,7 @@ r:"^受到四種元素異常，防禦力降低(\d+%)$"="Inflicted with 4 Element
 ----------
 TYCOON UI
 ----------
+經典大富豪=Classic Mode
 r:"^賽季倒計時：$"="Season Reset:"
 此模式暫未開放，敬請期待。=Mode not available, stay tuned.
 富豪積分=Tycoon Points
@@ -457,6 +471,7 @@ r:"^與{{A}}對戰並成為大富豪達(\d+)局\((\d+)/(\d+)\)$"="<size\=22>Play
 ----------
 Joyful Mode
 ----------
+歡樂大富豪=Joyful Mode
 歡樂對決=Joyful Mode
 r:"^今日剩餘(\d+)/(\d+)次$"="Daily: $1/$2"
 基礎倍數：=Base Mult:
