@@ -416,7 +416,7 @@ r:"^效果命中提升(\d+\.\d+%)。造成風襲效果後，使主目標敵人�
 Okuninushi
 r:"^{{A}}的威儀(.*)$"="{{A}}'s Majesty $1"
 r:"^暴擊率提升(\d+\.\d+%)。釋放{{A}}技能對敵人造成傷害後，使敵人受到的念動屬性傷害提升(\d+\.\d+%)，效果持續(\d+)回合，可疊加(\d+)層。$"="<size\=26>Increase Crit Rate by $1. After dealing damage with a Persona skill, increase foes' Psy DMG Taken by $2 for $3 turns, up to $4 stacks.</size>"
-r:"^暴擊率提升(\d+\.\d+%)。釋放{{A}}技能對敵人造成傷害後，使敵人受到的念動屬性傷害提升(\d+\.\d+%)，效果持續(\d+)回合，可疊加(\d+)層。攻擊身上帶有該效果的敵人時，念動屬性傷害提升(\d+%)。$"="<size\=20>Increase Crit Rate by $1. After dealing damage with a Persona skill, increase foes' Psy DMG Taken by $2 for $3 turns, up to $4 stacks. Increase Psy damage by $5 when attacking foes with this debuff.</size>"
+r:"^暴擊率提升(\d+\.\d+%)。釋放{{A}}技能對敵人造成傷害後，使敵人受到的念動屬性傷害提升(\d+\.\d+%)，效果持續(\d+)回合，可疊加(\d+)層。攻擊身上帶有該效果的敵人時，念動屬性傷害提升(\d+%)。$"="<size\=22>Increase Crit Rate by $1. After dealing damage with a Persona skill, increase foes' Psy DMG Taken by $2 for $3 turns, up to $4 stacks. Increase Psy damage by $5 when attacking foes with this debuff.</size>"
 
 Hecatoncheires
 r:"^百次的阻攔(.*)$"="Hundredth Block $1"
@@ -564,6 +564,7 @@ r:"^自身使用技能使敵人陷入倒地狀態後，獲得(\d+)層「暴風�
 r:"^攻擊力提升(\d+\.\d+%)。自身使用技能使敵人陷入倒地狀態後，獲得(\d+)層「暴風雪」：攻擊力提升(\d+%)、冰凍傷害提升(\d+%)，上限(\d+)層，持續時間(\d+)回合。$"="<size\=25>Increase ATK by $1. When using skills to down foes, gain $2 stack of [Blizzard]: Increase ATK by $3 and Ice DMG by $4 for $6 turns, up to $5 stacks.</size>"
 r:"^攻擊力提升(\d+\.\d+%)。自身對敵方使用{{A}}技能造成傷害後，有(\d+%)的基礎機率削弱主目標(\d+)層倒地值。自身使用技能使敵人陷入倒地狀態後，獲得(\d+)層「暴風雪」：攻擊力提升(\d+%)、冰凍傷害提升(\d+%)，上限(\d+)層，持續時間(\d+)回合。$"="<size\=25>Increase ATK by $1. After using a {{A}} skill on foes, $2 base chance to ignore weakness and decrease main target's Down Points by $3. When using skills to down foes, gain $4 stack of [Blizzard]: Increase ATK by $5 and Ice DMG by $6 for $7 turns. Stacks up to $8 times.</size>"
 暴風雪=Blizzard
+r:"^暴<color\=#000000>風</color>雪$"="B<color\=#000000>l</color>izzard"
 
 Yamata
 r:"^祭品的悲鳴(.*)$"="<size\=28>Screams of Sacrifice $1</size>"
@@ -586,8 +587,8 @@ r:"^蓮<color\=#000000>華</color>$"="S<color\=#000000>a</color>cred Lotus"
 
 King Frost
 r:"^冰封的裁決(.*)$"="Frozen Adjudication $1"
-r:"^防禦力提升(\d+\.\d+%)。為隊友添加護盾時，主要目標獲得防禦力提升(.*)或冰凍傷害提升(.*)其中一個效果，持續(.*)回合。$"="<size\=27>Increase DEF by $1. After giving Shield to allies, increase the main target's DEF by $2 or Ice DMG Bonus by $3 for $4 turns.</size>"
-r:"^防禦力提升(\d+\.\d+%)。為隊友添加護盾時，主要目標獲得防禦力提升(.*)和冰凍傷害提升(.*)兩個效果，持續(.*)回合。$"="<size\=27>Increase DEF by $1. After giving Shield to allies, increase the main target's DEF by $2 and Ice DMG Bonus by $3 for $4 turns.</size>"
+r:"^防禦力提升(\d+\.\d+%)。為隊友添加護盾時，主要目標獲得防禦力提升(.*)或冰凍傷害提升(.*)其中一個效果，持續(.*)回合。$"="<size\=26>Increase DEF by $1. After giving Shield to allies, increase the main target's DEF by $2 or Ice DMG Bonus by $3 for $4 turns.</size>"
+r:"^防禦力提升(\d+\.\d+%)。為隊友添加護盾時，主要目標獲得防禦力提升(.*)和冰凍傷害提升(.*)兩個效果，持續(.*)回合。$"="<size\=26>Increase DEF by $1. After giving Shield to allies, increase the main target's DEF by $2 and Ice DMG Bonus by $3 for $4 turns.</size>"
 
 Oberon
 r:"^停滯歲月的雷擊(.*)$"="<size\=26>Time Stopping Lightning $1</size>"
@@ -639,7 +640,7 @@ r:"^攻擊力提升(\d+\.\d+%)。使用冰凍、疾風或詛咒屬性的技能�
 
 Trumpeter
 r:"^崩壞的號角(.*)$"="Horn of Ruin $1"
-r:"^效果命中提升(\d+\.\d+%)。自身對敵方使用{{A}}技能時，若技能目標的異常效果數量≥(.*)個，則使自身效果命中提升(.*)，並使敵人受到傷害提升(.*)，持續(.*)回合。自身成功添加精神異常效果後，額外使所有敵人防禦力降低(.*)，持續(.*)回合。$"="Increase Ailment ACC by $1. When using a {{A}} skill on foes, if the target has ≥$2 debuffs, increase user's Ailment ACC by $3 and increase foes' DMG Taken by $4. Lasts for $5 turns. After inflicting a Mental Ailment, decrease foes' DEF by $6 more. Last for $7 turns."
+r:"^效果命中提升(\d+\.\d+%)。自身對敵方使用{{A}}技能時，若技能目標的異常效果數量≥(.*)個，則使自身效果命中提升(.*)，並使敵人受到傷害提升(.*)，持續(.*)回合。自身成功添加精神異常效果後，額外使所有敵人防禦力降低(.*)，持續(.*)回合。$"="<size\=22>Increase Ailment ACC by $1. When using a {{A}} skill on foes, if the target has ≥$2 debuffs, increase user's Ailment ACC by $3 and increase foes' DMG Taken by $4. Lasts for $5 turns. After inflicting a Mental Ailment, decrease foes' DEF by $6 more. Last for $7 turns.</size>"
 
 --------
 RANK 8

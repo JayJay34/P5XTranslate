@@ -115,6 +115,8 @@ Onemore自動選擇目標=<size\=27>Automatically select \nONE MORE target</size
 簡化「解明怪盜」表現=Simplify Elucidator Animation
 簡化「HIGHLIGHT」表現=Simplify HIGHLIGHT Animation
 簡化「HIGHLIGHT/{{A}}」表現=Simplify HIGHLIGHT/{{A}} Animation
+簡化普通攻擊=Simplify Basic Attack
+簡化特寫表現=Simplify Animation
 完整=Full
 首次完整=Full Once
 簡化=Simplify
@@ -983,7 +985,7 @@ r:"^怪盜成長_(\d+)$"="Thief Training_$1"
 怪盜武器=Thief Weapon
 怪盜啟示=Thief Revelation
 等級提升=Level Up
-潛能突破=Hidden Ability Lv Up
+潛能突破=Talent Lv Up
 更換武器=Change Weapon
 武器升級=Weapon Enhance
 詭計=Trick
@@ -1295,7 +1297,7 @@ Part I Step 1
 進行10次簽約=Perform 10 Signature
 見證{{A}}的覺醒=Witness {{A}}'s Awakening
 完成主線任務「{{A}}」=Complete the main mission: "{{A}}"
-r:"^擁有(\d+)個潛能(.*)的怪盜$"="Have $1 Thieves at Hidden Ability $2"
+r:"^擁有(\d+)個潛能(.*)的怪盜$"="Have $1 Thieves at Talent $2"
 
 Part I Step 2
 與{{A}}成為協同者關係=Form a Synergy with {{A}}
@@ -2586,7 +2588,7 @@ r:"^全體怪盜<color\=#E3E3E3>萬能</color>傷害提高(\d+(.\d+)?(%)?)$"="In
 r:"^全體怪盜處於<color\=#E3E3E3>額外回合</color>時造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' DMG Dealt during <color\=#E3E3E3>Extra Action</color> by $1"
 r:"^全體怪盜<color\=#E3E3E3>持續效果</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#E3E3E3>Damage Over Time</color> DMG by $1"
 
-此處盤踞著大量的陰影，挑戰成功可獲得怪盜潛能材料。=There are many Shadows here, gain Thief Hidden Ability materials on victory.
+此處盤踞著大量的陰影，挑戰成功可獲得怪盜潛能材料。=There are many Shadows here, gain Thief Talent materials on victory.
 此處盤踞著強大的陰影，挑戰成功可獲得武器突破材料。=There are strong Shadows here, gain Weapon Enhance materials on victory.
 此處盤踞著強大的陰影，挑戰成功可獲得技能升級材料。=There are strong Shadows here, gain Skill Upgrade materials on victory.
 此處盤踞著強大的陰影，挑戰成功可獲得厄抑巡禮兌換代幣「不羈紋章·空」。=There are strong Shadows here, gain Challenge Reward exchange currency [Wild Card Emblem·Dull] on victory.
@@ -2610,7 +2612,7 @@ r:"^挑戰需要消耗(\d+)點體力，\n當前<color\=#ff3b37>體力不足</col
 領獎所需體力不足，是否兌換體力？=Insufficient Stamina to claim the rewards, want to replenish Stamina?
 挑戰所需體力不足，是否兌換體力？=Insufficient Stamina to challenge, want to replenish Stamina?
 本週「往日回溯」剩餘領獎次數已耗盡，\n<color\=#ff3b37>無法獲得挑戰獎勵</color>，是否繼續挑戰？=Reached weekly limit.\n<color\=#ff3b37>You will not gain rewards</color>, \ndo you still want to challenge?
-逃離後不會獲得本次戰鬥獎勵！\n確定要逃離戰鬥嗎？=<size\=29>You will not receive rewards from this battle after escaping!\nAre you sure you want to escape?</size>
+逃離後不會獲得本次戰鬥獎勵！\n確定要逃離戰鬥嗎？=<size\=30>You will not receive rewards from this battle after escaping! Are you sure you want to escape?</size>
 逃離戰鬥後將重置關卡。\n確定要逃離戰鬥嗎？=Escaping will reset the level.\nAre you sure you want to escape?
 
 sr:"^挑戰(.*)獲得$"="<size\=22>Complete $1</size>"
@@ -2676,7 +2678,8 @@ r:"^『{{A}}』\n採購近戰武器的硬幣，可在特定的『武器補給』
 祈願道具=Pray Item
 『{{B}}』\n獲取後可用於{{A}}商店「祈願」中進行祈願抽獎。=[Kagura Suzu]\nCan be used in {{A}}'s Shop do [Pray] Lucky Draw.
 r:"^獲取後可用於{{A}}商店「祈願」中進行祈願抽獎。$"="Can be used in {{A}}'s Shop to enter the Pray Lucky Draw."
-r:"^委託、消費大酬賓等獎勵或者購買<link\="mqm"><u>每日祈願納福禮袋</u></link>可獲得{{A}}$"="Get Kagura Suzu from Commissions, Spending Spree or <link\="mqm"><u>Daily Pray Gift Bag</u></link>"
+r:"^委託、消費大酬賓等獎勵或者購買<link\="mqm"><u>每日祈願納福禮袋</u></link>可獲得{{A}}$"="Get {{A}} from Commissions, Spending Spree or <link\="mqm"><u>Daily Pray Gift Bag</u></link>"
+r:"^委託、消費大酬賓等獎勵或者購買<link\="mqm"><u>%s</u></link>可獲得{{A}}$"="$"="Obtain {{A}} from Commissions, Spending Spree or <link\="mqm"><u>%s</u></link>"
 意識禮願箱=<size\=30>Awareness Gift Box</size>
 認知抽選單 ★5=5★ Cognitive Draw
 使用後可隨機獲得一個未達到意識VI的以下怪盜：{{A}}、{{B}}。=Can be used to randomly get one of the following Thief that has not reached Awareness VI: {{A}}, {{B}}.
@@ -2755,12 +2758,12 @@ r:"^沉香木氣味的S型香塔，可用於提升技能等級至Lv.2、Lv.3。$
 鳶尾花醇香=Essence of Iris
 鳶尾花濃香=Fragrance of Iris
 鳶尾花之香=Whiff of Iris
-r:"^鳶尾香調的頂級香水，可用於提升潛能等級至潛能(\d+)·潛能(\d+)。$"="Top iris perfume, can be used to level up Hidden Ability to Hidden Ability $1-Hidden Ability $2."
-r:"^鳶尾香調的高級香水，可用於提升潛能等級至潛能(\d+)·潛能(\d+)·潛能(\d+)。$"="Fine iris perfume, can be used to level up Hidden Ability to Hidden Ability $1-Hidden Ability $3."
-r:"^鳶尾香調的香水，可用於提升潛能等級至潛能(\d+)·潛能(\d+)。$"="Iris perfume, can be used to level up Hidden Ability to Hidden Ability $1-Hidden Ability $2."
-r:"^鳶尾香調的頂級香水，可用於提升潛能等級至潛能(\d+)、潛能(\d+)。$"="Top iris perfume, can be used to level up Hidden Ability to Hidden Ability $1-Hidden Ability $2."
-r:"^鳶尾香調的高級香水，可用於提升潛能等級至潛能(\d+)、潛能(\d+)、潛能(\d+)。$"="Fine iris perfume, can be used to level up Hidden Ability to Hidden Ability $1-Hidden Ability $3."
-r:"^鳶尾香調的香水，可用於提升潛能等級至潛能(\d+)、潛能(\d+)。$"="Iris perfume, can be used to level up Hidden Ability to Hidden Ability $1-Hidden Ability $2."
+r:"^鳶尾香調的頂級香水，可用於提升潛能等級至潛能(\d+)·潛能(\d+)。$"="Top iris perfume, can be used to level up Talent to Talent $1-Talent $2."
+r:"^鳶尾香調的高級香水，可用於提升潛能等級至潛能(\d+)·潛能(\d+)·潛能(\d+)。$"="Fine iris perfume, can be used to level up Talent to Talent $1-Talent $3."
+r:"^鳶尾香調的香水，可用於提升潛能等級至潛能(\d+)·潛能(\d+)。$"="Iris perfume, can be used to level up Talent to Talent $1-Talent $2."
+r:"^鳶尾香調的頂級香水，可用於提升潛能等級至潛能(\d+)、潛能(\d+)。$"="Top iris perfume, can be used to level up Talent to Talent $1-Talent $2."
+r:"^鳶尾香調的高級香水，可用於提升潛能等級至潛能(\d+)、潛能(\d+)、潛能(\d+)。$"="Fine iris perfume, can be used to level up Talent to Talent $1-Talent $3."
+r:"^鳶尾香調的香水，可用於提升潛能等級至潛能(\d+)、潛能(\d+)。$"="Iris perfume, can be used to level up Talent to Talent $1-Talent $2."
 
 頂尖礦石=Yellow Crystal
 優質礦石=Purple Crystal
@@ -2941,6 +2944,7 @@ P5X營運團隊=P5X Operations Team
 當前暫無郵件=No mail
 沒有收到郵件=No mail
 郵件刪除成功。=Deleted mail.
+空空如也，暫時沒有persona=Empty
 
 r:"^時間：(\d+)-(\d+)-(\d+)$"="Time: $1-$2-$3"
 r:"^V(.*) 版本預告$"="V$1 Version Preview"
@@ -3619,32 +3623,56 @@ r:"^僅展示噩夢難度前(\d+)名{{A}}資訊$"="Only the info of the top $1 {
 海濱經營大作戰=Seaside Business Blitz
 開始經營前的<color\=#ff3b37>準備</color>工作吧！=Click on <color\=#ff3b37>Business Prepare</color>!
 r:"^營業額達到(\d+)$"="Earnings reaches $1"
-r:"^營收達到(\d+)$"="Revenue Flow reaches $1"
+r:"^營收達到(\d+)$"="Revenue reaches $1"
 r:"^客流達到(\d+)$"="Customer Flow reaches $1"
 r:"^口碑達到(\d+)$"="Reputation reaches $1"
+r:"^安全達到(\d+)$"="Safety reaches $1"
+r:"^服務達到(\d+)$"="Service reaches $1"
 r:"^選擇(\d+)次角色事件$"="Select $1 Character Event"
 r:"^選擇(\d+)次藍色事件$"="Select $1 Blue Events"
 r:"^選擇(\d+)次紫色事件"="Select $1 Purple Events"
 r:"^經營資金總計達到(\d+)$"="Total Business Funds reach $1"
 
-r:"^事件增加的營收額外提升(\d+%)$"="Increase Revenue Flow gain from events by $1"
+r:"^事件增加的營收額外提升(\d+%)$"="Increase Revenue gain from events by $1"
+r:"^白天時事件增加的屬性額外提升(\d+%)$"="Increase attribute gain event during Day by $1"
+r:"^傍晚時事件增加的屬性額外提升(\d+%)$"="Increase attribute gain event during Evening by $1"
+r:"^夜晚時事件增加的屬性額外提升(\d+%)$"="Increase attribute gain event during Night by $1"
 r:"^經營日結算時，額外提升(\d+%)的營收，額外獲得的營收可以超出上限$"="When the day ends, additionally increase Revenue by $1, this can exceed the cap"
 r:"^經營日結算前，額外提升(\d+%)的營收，額外獲得的營收可以超出上限$"="Before the day ends, additionally increase Revenue by $1, this can exceed the cap"
 r:"^進入夜晚時，額外提升(\d+%)的營收$"="When entering Night, increase Revenue by $1"
 r:"^事件增加的客流額外提升(\d+%)$"="Increase Customer Flow gain from events by $1"
-r:"^經營日結算時，額外提升(\d+%)的客流，額外獲得的客流可以超出上限$"="When the day ends, additionally increase Customer Flow  by $1, this can exceed the cap"
-r:"^經營日結算前，額外提升(\d+%)的客流，額外獲得的客流可以超出上限$"="Before the day ends, additionally increase Customer Flow  by $1, this can exceed the cap"
-r:"^進入夜晚時，額外提升(\d+%)的客流$"="When entering Night, increase Customer Flow  by $1"
+r:"^經營日結算時，額外提升(\d+%)的客流，額外獲得的客流可以超出上限$"="When the day ends, additionally increase Customer Flow by $1, this can exceed the cap"
+r:"^經營日結算前，額外提升(\d+%)的客流，額外獲得的客流可以超出上限$"="Before the day ends, additionally increase Customer Flow by $1, this can exceed the cap"
+r:"^進入夜晚時，額外提升(\d+%)的客流$"="When entering Night, increase Customer Flow by $1"
 r:"^事件增加的口碑額外提升(\d+%)$"="Increase Reputation gain from events by $1"
 r:"^經營日結算時，額外提升(\d+%)的口碑，額外獲得的口碑可以超出上限$"="When the day ends, additionally increase Reputation by $1, this can exceed the cap"
 r:"^經營日結算前，額外提升(\d+%)的口碑，額外獲得的口碑可以超出上限$"="Before the day ends, additionally increase Reputation by $1, this can exceed the cap"
 r:"^進入夜晚時，額外提升(\d+%)的口碑$"="When entering Night, increase Reputation by $1"
+r:"^事件降低的服務額外降低(\d+)點$"="Decrease Service loss from events by $1"
+r:"^安全降低時，降低值減少(\d+)點$"="When decreasing Safety, decrease the loss by $1"
+r:"^服務降低時，降低值減少(\d+)點$"="When decreasing Service, decrease the loss by $1"
+r:"^夥伴體力降低時，降低值減少(\d+)點$"="When decreasing Stamina, decrease the loss by $1"
+r:"^事件增加的營收、客流、口碑額外提升(\d+%)，但這些屬性最多到(\d+)$"="Increase Revenue, Customer Flow, and Reputation gain by $1, but change their cap to $2"
+r:"^事件增加的營收減少(\d+%)$"="Decrease Revenue gain from events by $1"
+r:"^事件增加的客流減少(\d+%)$"="Decrease Customer Flow gain from events by $1"
+r:"^事件增加的口碑減少(\d+%)$"="Decrease Reputation gain from events by $1"
 
 r:"^進入夜晚時，額外提升(\d+%)的客流\n經營日結算前，額外提升(\d+%)的口碑，額外獲得的口碑可以超出上限$"="When entering Night, increase Customer Flow by $1\nBefore the day ends, additionally increase Reputation by $2, this can exceed the cap"
+r:"^事件增加的營收額外提升(\d+%)\n經營日結算時，額外提升(\d+%)的營收，額外獲得的營收可以超出上限$"="Increase Revenue gain from events by $1\nWhen the day ends, additionally increase Revenue by $2, this can exceed the cap"
 r:"^事件增加的口碑額外提升(\d+%)\n經營日結算時，額外提升(\d+%)的營收，額外獲得的營收可以超出上限$"="Increase Reputation gain from events by $1\nWhen the day ends, additionally increase Revenue by $2, this can exceed the cap"
+r:"^事件增加的口碑額外提升(\d+%)\n經營日結算前，額外提升(\d+%)的客流，額外獲得的客流可以超出上限$"="Increase Reputation gain from events by $1\nWhen the day ends, additionally increase Customer Flow by $2, this can exceed the cap"
+r:"^事件降低的服務額外降低(\d+)點\n經營日結算時，額外提升(\d+%)的營收，額外獲得的營收可以超出上限$"="Decrease Service loss from events by $1\nWhen the day ends, additionally increase Revenue by $2, this can exceed the cap"
+r:"^服務降低時，降低值減少(\d+)點\n經營日結算前，額外提升(\d+%)的客流，額外獲得的客流可以超出上限$"="When decreasing Service, decrease the loss by $1\nBefore the day ends, additionally increase Customer Flow by $2, this can exceed the cap"
+r:"^經營日結算前，額外提升(\d+%)的客流，額外獲得的客流可以超出上限\n夥伴體力降低時，降低值減少(\d+)點$"="Before the day ends, additionally increase Customer Flow by $1, this can exceed the cap\nWhen decreasing Stamina, decrease the loss by $2"
+r:"^夥伴體力降低時，降低值減少(\d+)點\n經營日結算前，額外提升(\d+%)的客流，額外獲得的客流可以超出上限$"="When decreasing Stamina, decrease the loss by $1\nBefore the day ends, additionally increase Customer Flow by $2, this can exceed the cap"
+r:"^經營日結算前，額外提升(\d+%)的口碑，額外獲得的口碑可以超出上限\n事件增加的客流額外提升(\d+%)$"="Before the day ends, additionally increase Reputation by $1, this can exceed the cap\nIncrease Customer Flow gain from events by $2"
+r:"^事件增加的營收、客流、口碑額外提升(\d+%)，但這些屬性最多到(\d+)\n經營日結算時，額外提升(\d+%)的營收，額外獲得的營收可以超出上限$"="Increase Revenue, Customer Flow, and Reputation gain by $1, but change their cap to $2\nWhen the day ends, additionally increase Revenue by $3, this can exceed the cap"
+r:"^白天時事件增加的屬性額外提升(\d+%)\n經營日結算前，額外提升(\d+%)的口碑，額外獲得的口碑可以超出上限$"="Increase attribute gain event during Day by $1\nBefore the day ends, additionally increase Reputation by $2, this can exceed the cap"
+r:"^事件增加的口碑減少(\d+%)\n經營日結算時，額外提升(\d+%)的營收，額外獲得的營收可以超出上限$"="Decrease Reputation gain from events by $1\nWhen the day ends, additionally increase Revenue by $2, this can exceed the cap"
+r:"^經營日結算時，額外提升(\d+%)的營收，額外獲得的營收可以超出上限\n服務降低時，降低值減少(\d+)點$"="When the day ends, additionally increase Revenue by $1, this can exceed the cap\nWhen decreasing Service, decrease the loss by $2"
 
 夥伴能力=Ability
-機遇挑戰=Opportunities
+機遇挑戰=Chance
 r:"^選擇(\d+)/(\d+)位夥伴開始經營$"="Select $1/$2 companions to start business"
 「<color\=#ff3b37>夥伴</color>」擁有特別的經營能力！\n選擇「<color\=#ff3b37>{{A}}</color>」，\n有機率增加可選擇的<color\=#ff3b37>經營事件</color>！=[<color\=#ff3b37>Companion</color>] has unique business abilities! \nSelect [<color\=#ff3b37>{{A}}</color>] for a chance to add <color\=#ff3b37>Business Event</color> options!
 選擇「<color\=#ff3b37>{{A}}</color>」，\n可大幅提升店鋪<color\=#ff3b37>客流</color>！=Select [<color\=#ff3b37>{{A}}</color>] to greatly increase <color\=#ff3b37>Customer Flow</color>!
@@ -3663,8 +3691,17 @@ r:"^<color\=#f58c24>安全</color>、<color\=#f9d40a>服務</color>，對店鋪�
 處理部分事件會消耗經營夥伴「<color\=#ff3b37>體力</color>」，\n當體力過低時，處理事件的<color\=#ff3b37>成功率</color>也會相應降低。\n未參與經營的夥伴在經營日結束後會自動恢復體力。=Certain events will cost [<color\=#ff3b37>Stamina</color>].\nWhen Stamina is too low, decrease the <color\=#ff3b37>Success Rate</color> accordingly.\nNon-active Companions will restore all Stamina at the end of business day.
 
 事件效果=Event Effects
-：多個增益效果=: Multiple Effects
+：多個增益效果=: Multiple Buffs
 持續生效=∞
+r:"^後續事件增加的營收額外提升(.*)$"="Future events increase Revenue by $1"
+{{A}}額外消耗夥伴體力，使經營額提升=Increase Earnings when {{A}} spends Stamina
+r:"^後續事件增加的屬性額外提升(.*)$"="Increase attribute gain from future events by $1"
+
+r:"^每次改變時段時，獲得當前(.*)營收的口碑$"="When changing time, gain Reputation by $1 of current Revenue"
+r:"^結算時營業額額外提升(.*)$"="Increase Earnings at the end of the day by $1"
+r:"^結算時經營額額外提高(.*)$"="Increase Earnings at the end of the day by $1"
+r:"^結算時經營額額外提升(.*)$"="Increase Earnings at the end of the day by $1"
+
 「<color\=#ff3b37>確認</color>」前往「<color\=#ff3b37>海之家經營記錄</color>」=[<color\=#ff3b37>Confirm</color>] to head to [<color\=#ff3b37>Business Record</color>]
 
 本次經營營業額=Today's Earnings
@@ -3678,151 +3715,299 @@ r:"^<color\=#f58c24>安全</color>、<color\=#f9d40a>服務</color>，對店鋪�
 預計營業額=Earnings
 r:"^提升<sprite\=(\d+)>$"="Increase <sprite\=$1>"
 r:"^提升<sprite\=(\d+)><sprite\=(\d+)>$"="Increase <sprite\=$1><sprite\=$2>"
-r:"^提升<sprite\=(\d+)><sprite\=(\d+)><sprite\=(\d+)>$"="Incense <sprite\=$1><sprite\=$2><sprite\=$3>"
+r:"^提升<sprite\=(\d+)><sprite\=(\d+)><sprite\=(\d+)>$"="Increase <sprite\=$1><sprite\=$2><sprite\=$3>"
 r:"^提升<sprite\=(\d+)>，降低<sprite\=(\d+)>$"="Increase <sprite\=$1>, decrease <sprite\=$2>"
 r:"^提升<sprite\=(\d+)>，降低<sprite\=(\d+)><sprite\=(\d+)>$"="Increase <sprite\=$1>, decrease <sprite\=$2><sprite\=$3>"
 r:"^提升<sprite\=(\d+)><sprite\=(\d+)>，降低<sprite\=(\d+)>$"="Increase <sprite\=$1><sprite\=$2>, decrease <sprite\=$3>"
 r:"^提升<sprite\=(\d+)>\n所有角色消耗(\d+)點夥伴體力$"="Increase <sprite\=$1>\nAll characters spend $2 Stamina"
-r:"^提升<sprite\=(\d+)>\n消耗(\d+)經營資金$"="Incense <sprite\=$1>\nSpend $2 Business Funds"
+r:"^提升<sprite\=(\d+)>\n消耗(\d+)經營資金$"="Increase <sprite\=$1>\nSpend $2 Business Funds"
 r:"^{{A}}體力值<size\=40><color\=#FFF000>(.*)</color></size>$"="{{A}} <size\=40><color\=#FFF000>$1</color></size> Stamina"
 r:"^{{A}}體力值<size\=40><color\=#00DED3>(.*)</color></size>$"="{{A}} <size\=40><color\=#00DED3>$1</color></size> Stamina"
+r:"^經營資金<size\=40><color\=#FFF000>(.*)</color></size>$"="Business Funds <size\=40><color\=#FFF000>$1</color></size>"
+r:"^經營資金<size\=40><color\=#00DED3>(.*)</color></size>$"="Business Funds <size\=40><color\=#00DED3>$1</color></size>"
 r:"^所有角色恢復(\d+)點夥伴體力$"="All characters restore $1 Stamina"
 r:"^獲得(\d+)經營資金$"="Obtain $1 Business Funds"
-r:"^結算時營業額額外提升(\d+%)$"="Increase Earnings at the end of the day by $1"
 r:"^<size\=20>成功率</size>(\d+%)$"="<size\=14>$1 Success Rate</size>"
 體力值=Stamina
 r:"^Lv.(\d+) 解鎖$"="Unlocks at Lv.$1"
 觸發事件=Events
 狀態一覽=Status
 
-r:"^每輪有(\d+%)的機率增加(\d+)個可處理的事件$"="Each round there is a $1 chance to add $2 solvable event"
-r:"^每輪有<color\=#007FF5>(.*)</color>的機率增加(.*)個可處理的事件$"="Each round there is a <color\=#007FF5>$1</color> chance to add $2 solvable event"
+r:"^每輪有(\d+%)的機率增加(\d+)個可處理的事件$"="<size\=26>Each round there is a $1 chance to add $2 solvable event"
+r:"^每輪有<color\=#007FF5>(.*)</color>的機率增加(.*)個可處理的事件$"="<size\=26>Each round there is a <color\=#007FF5>$1</color> chance to add $2 solvable event"
 父親的問候=Father's Greetings
-r:"^（1）下1次事件提高<color\=#007FF5>(.*)</color>成功率且增加的屬性額外提升<color\=#007FF5>(.*)</color>\n（2）下(.*)次事件成功率降低<color\=#007FF5>(.*)</color>但增加的屬性額外提升<color\=#007FF5>(.*)</color>$"="(1) Increase the next event's Success Rate by <color\=#007FF5>$1</color> and additional increase attribute gain by <color\=#007FF5>$2</color>\n(2) Decrease the next event's Success Rate by <color\=#007FF5>$1</color> but increase attribute gain by <color\=#007FF5>$2</color>"
+r:"^（1）下1次事件提高<color\=#007FF5>(.*)</color>成功率且增加的屬性額外提升<color\=#007FF5>(.*)</color>\n（2）下(.*)次事件成功率降低<color\=#007FF5>(.*)</color>但增加的屬性額外提升<color\=#007FF5>(.*)</color>$"="<size\=24>(1) Increase the next event's Success Rate by <color\=#007FF5>$1</color> and additional increase attribute gain by <color\=#007FF5>$2</color>\n(2) Decrease the next event's Success Rate by <color\=#007FF5>$1</color> but increase attribute gain by <color\=#007FF5>$2</color>"
 r:"^選項1：提升成功率，提升屬性收益\n選項2：降低成功率，大幅提升屬性收益$"="Option 1: Increase Success Rate, increase attribute gain\nOption 2: Decrease Success Rate, heavily increase attribute gain"
+聽說爸爸的腰傷治療要很久……\n看來整個夏天都得靠我們倆撐著了。=I heard that Dad's injury will take a long time to heal... It looks like we'll have to carry the whole summer.
+r:"^真的很抱歉，(.*)君……\n$"="I'm really sorry, $1-kun..."
+對了對了，爸爸讓我問你，\n「店裡經營有什麼困難嗎？」=By the way, Dad asked "Are we having any difficulties running the store?"
+你有沒有什麼問題想知道？\n可以問問爸爸。=Is there anything you want to know? \nWe can ask him.
 r:"^<color\=#0F69CA>讓顧客滿意的訣竅</color>\n下1次事件提高(\d+%)成功率且增加的屬性額外提升(\d+%)$"="<color\=#0F69CA>Tips for customer satisfaction</color>\nIncrease the next event's Success Rate by $1 and additional increase attribute gain by $2"
 r:"^<color\=#0F69CA>如何提升店鋪口碑</color>\n下1次事件成功率降低(\d+%)但增加的屬性額外提升(\d+%)$"="<color\=#0F69CA>How to improve store reputation</color>\nDecrease the next event's Success Rate by $1 but increase attribute gain by $2"
+{{A}}的父親\n教給了我提升店鋪口碑的方法……={{A}}'s father taught me how to improve store reputation...
 努力過頭可不好=Don't Overdo It
-r:"^（1）高品質事件出現機率提升\n（2）下(.*)次提升<sprite\=0>的事件<sprite\=0>額外提升<color\=#007FF5>(.*)</color>$"="(1) Increase in chance of high quality events\n(2) Increase the next <sprite\=0> increase event additionally increases <sprite\=0> by <color\=#007FF5>$1</color>"
-r:"^經營日開始時，額外提升<color\=#007FF5>(.*)</color>的<sprite\=3>$"="At the start of business day, additionally increase <sprite\=3> by <color\=#007FF5>$1</color>"
+r:"^（1）高品質事件出現機率提升\n（2）下(.*)次提升<sprite\=0>的事件<sprite\=0>額外提升<color\=#007FF5>(.*)</color>$"="<size\=24>(1) Increase the chance of high quality events\n(2) The next $1 <sprite\=0> increase event additionally increases <sprite\=0> by <color\=#007FF5>$1</color>"
+r:"^（1）高品質事件出現機率進一步提升\n（2）下(.*)次提升<sprite\=0>的事件<sprite\=0>額外提升<color\=#007FF5>(.*)</color>$"="<size\=24>(1) Further increase the chance of high quality events\n(2) The next $1 <sprite\=0> increase event additionally increases <sprite\=0> by <color\=#007FF5>$1</color>"
+r:"^選項1：更多高品質事件\n選項2：提升<sprite\=(\d+)>$"="Option 1: More high quality events\nOption 2: Increase <sprite\=$1>"
+真沒想到經營一家店會這麼辛苦……=I never realized running a store would be this tough...
+而且，雖然我已經習慣工作了，\n但讓別人在海之家幹活還是第一次。=Plus, I'm used to working myself, but letting others work at Beach House? That's new.
+如果我自己不振作起來的話，\n恐怕也會影響大家的積極性。=If I don't step up, \nit'll kill the team's morale
+得加油啊！=I gotta push through!
+……光我一個人努力也只是白費力氣，\n得告訴其他員工才行。=...But my effort alone is pointless, \nI need to rally the staff too.
+但光說「加油」似乎有點不負責任……\n該怎麼說才好呢……=Just saying "Hang in there!" feels irresponsible... \nHow should I phrase it...?
+<color\=#0F69CA>「悠閒地努力吧」</color>\n高品質事件出現機率進一步提升=<color\=#0F69CA>"Take it easy"</color>\nIncrease the chance of high quality events
+r:"^<color\=#0F69CA>「一起加油吧」</color>\n下(\d+)次提升口碑的事件口碑額外提升(\d+%)$"="<size\=24><color\=#0F69CA>"We're in this together"</color>\nThe next $1 Reputation increase event additionally increases Reputation by $2</size>"
+{{A}}的一翻話，\n讓人工作的心情都輕鬆了……={{A}}'s words made work feels lighter...
+高品質事件出現機率進一步提升=Increase the chance of high quality events
 {{A}}的心事={{A}}'s Concerns
-r:"^（1）<sprite\=2>降低時，提升<color\=#007FF5>(.*)</color>點<sprite\=4>\n（2）(.*)機率提升<color\=#007FF5>(.*)</color>點<sprite\=0>$"="（1）When <sprite\=2> decrease, increase <sprite\=4> by <color\=#007FF5>$1</color>\n(2) $2 chance to increase <sprite\=0> by <color\=#007FF5>$3</color>"
+r:"^（1）<sprite\=2>降低時，提升<color\=#007FF5>(.*)</color>點<sprite\=4>\n（2）(.*)機率提升<color\=#007FF5>(.*)</color>點<sprite\=0>$"="<size\=24>(1)When <sprite\=2> decrease, increase <sprite\=4> by <color\=#007FF5>$1</color>\n(2) $2 chance to increase <sprite\=0> by <color\=#007FF5>$3</color>"
+因為平常已經習慣在店裡幫忙了，\n經營海之家也還算順利……=Since I'm already used to helping out at the store, running Beach House has been going pretty smoothly...
+但租賃店和沙灘排球場，\n總感覺還有點缺乏人氣……=But the rental store and volleyball court are still not popular...
+可是……要做點什麼宣傳，\n才能有效果呢……=But... what kind of promotion should we do...
+比如沙灘排球場那邊……\n我們要不要直接在那裡打球來吸引遊客？=Like the volleyball court... Should we just play there to attract tourists?
+不過我不像{{A}}、\n{{B}}那樣擅長運動……=But I'm not as good at sports as {{A}} or {{B}}...
+{{A}}似乎有些猶豫……={{A}} seems a bit hesitant...
+r:"^<color\=#0F69CA>專業人做專業事</color>\n後續服務降低時，提升(\d+)點營收$"="<color\=#0F69CA>Leave it to the pros</color>\nWhen decreasing Service, increase Revenue by $1"
+r:"^<color\=#0F69CA>挑戰一下自我！</color>\n(\d+%)機率提升(\d+)點口碑$"="<color\=#0F69CA>Challenge yourself!</color>\n$1 chance to increase Reputation by $2"
+{{A}}和{{B}}表現的十分完美，\n成功吸引了遊客們的目光……！={{A}} and {{B}} were perfect, they attracted the attention of tourists...!
+r:"^後續服務降低時，提升(\d+)點營收$"="When decreasing Service, increase Revenue by $1"
 
-r:"^經營日開始時，額外提升(\d+%)的<sprite\=3>$"="At the start of business day, additionally increase <sprite\=3> by $1"
+r:"^經營日開始時，額外提升(\d+%)的<sprite\=3>$"="<size\=26>At the start of business day, additionally increase <sprite\=3> by $1"
+r:"^經營日開始時，額外提升<color\=#007FF5>(.*)</color>的<sprite\=3>$"="<size\=26>At the start of business day, additionally increase <sprite\=3> by <color\=#007FF5>$1</color>"
 「臨時店長」熱潮="Temporary Manager" Trend
-r:"^（1）提升<color\=#007FF5>(.*)</color>點<sprite\=3>\n（2）(.*)機率提升<color\=#007FF5>(.*)</color>點<sprite\=3>$"="(1) Increase <sprite\=3> by <color\=#007FF5>$1</color>\n(2) $2 chance to increase <sprite\=3> by <color\=#007FF5>$3</color>"
-r:"^選項1：提升<sprite\=(\d+)>\n選項2：機率提升更多<sprite\=(\d+)>$"="Option 1: Increase<sprite\=$1>\nOption 2: Chance to increase more<sprite\=$2>"
+r:"^（1）提升<color\=#007FF5>(.*)</color>點<sprite\=3>\n（2）(.*)機率提升<color\=#007FF5>(.*)</color>點<sprite\=3>$"="<size\=24>(1) Increase <sprite\=3> by <color\=#007FF5>$1</color>\n(2) $2 chance to increase <sprite\=3> by <color\=#007FF5>$3</color>"
+r:"^選項1：提升<sprite\=(\d+)>\n選項2：機率提升更多<sprite\=(\d+)>$"="Option 1: Increase <sprite\=$1>\nOption 2: Chance to increase more <sprite\=$2>"
+啊，飛走了——！=Ah, it flew away-!
+還不是因為你一直摸它腦袋，\n它估計是不喜歡才走的。=Probably because you kept petting its head, it must've left because it didn't like it.
+可它太可愛了嘛……啊，店員先生！\n那隻貓頭鷹，是你們店裡的吧？=But it's just so cute… Oh, excuse me, sir! Is that owl yours?
+能不能讓我稍微摸它兩下……\n求求你啦！好不好嘛！？=Can I pet it just a little? Please? Pretty please!?
+這哪是「稍微」啊……！\n明明是以超猛的勢頭衝過來了啊……！="A little"...?! You literally charged at it like a bulldozer!
 r:"^<color\=#0F69CA>如果是拍照的話……</color>\n提升(\d+)點客流$"="<color\=#0F69CA>If it's a photo...</color>\nIncrease Customer Flow by $1"
 r:"^<color\=#0F69CA>摸的話要收費哦……</color>\n(\d+%)機率提升(\d+)點客流$"="<color\=#0F69CA>You'll have to pay to pet...</color>\n$1 chance to increase Customer Flow by $2"
+想摸{{A}}的客人絡繹不絕。\n{{A}}的羽毛都被弄亂了……=There were so many customers who wanted to pet {{A}}. {{A}}'s feathers were all messed up...
 {{A}}的野望={{A}}'s Ambition
-r:"^（1）根據當前<color\=#007FF5>(.*)</color>的<sprite\=3>提升<sprite\=0><sprite\=4>\n（2）(.*)機率提升<color\=#007FF5>(.*)</color>點<sprite\=3>$"="(1) Increase <sprite\=0><sprite\=4> based on <color\=#007FF5>$1</color> of current <sprite\=3>\n(2) $2 chance to increase <sprite\=3> by <color\=#007FF5>$3</color>"
+r:"^（1）根據當前<color\=#007FF5>(.*)</color>的<sprite\=3>提升<sprite\=0><sprite\=4>\n（2）(.*)機率提升<color\=#007FF5>(.*)</color>點<sprite\=3>$"="<size\=24>(1) Increase <sprite\=0><sprite\=4> by <color\=#007FF5>$1</color> of current <sprite\=3>\n(2) $2 chance to increase <sprite\=3> by <color\=#007FF5>$3</color>"
+r:"^選項1：提升<sprite\=(\d+)><sprite\=(\d+)>\n選項2：機率提升更多<sprite\=(\d+)>$"="Option 1: Increase <sprite\=$1><sprite\=$2>\nOption 2: Chance to increase more <sprite\=$3>"
+如此炎熱的天氣，人類還能有這般活力，\n也算是『慾望』回歸的證據吧。=In such hot weather, humans still have such vitality. This is proof that "desires" have returned.
+但吾等絕不可僅因此感到滿足。=But we must not be satisfied with this alone.
+r:"^你也是這麼想的吧，(.*)？$"="You think so too, don't you, $1?"
+難得被任命為『臨時店長』，\n吾當然希望能招攬到更多客人！=Now that I've been appointed "Temporary Manager," I naturally want to attract more customers!
+當然，如果成功了，\n你可得請吾吃法蘭克福香腸！哦{{A}}！=Of course, if we succeed, you'll have to treat me to some Frankfurt sausages! Ohoho!
+r:"^<color\=#0F69CA>帶{{A}}去點單</color>\n提升當前(\d+%)客流的口碑、營收$"="<size\=26><color\=#0F69CA>Bring {{A}} to order</color>\nIncrease Reputation and Revenue by $1 of current Customer Flow</size>"
+r:"^<color\=#0F69CA>請{{A}}去宣傳</color>\n(\d+%)機率提升(\d+)點客流$"="<size\=26><color\=#0F69CA>Ask {{A}} to promote</color>\n$1 chance to increase Customer Flow by $2</size>"
+想近距離看{{A}}的客人，\n一直不斷地來下單……=Customers who want to see {{A}} up close kept coming back order...
 海底的寶藏……？=Seabed Treasure...?
-r:"^（1）提升<color\=#007FF5>(.*)</color>成功率\n（2）提升<color\=#007FF5>(.*)</color>點<sprite\=0>$"="(1) Increase Success Rate by <color\=#007FF5>$1</color>\n(2) Increase <sprite\=0> by <color\=#007FF5>$2</color>"
+r:"^（1）提升<color\=#007FF5>(.*)</color>成功率\n（2）提升<color\=#007FF5>(.*)</color>點<sprite\=0>$"="<size\=24>(1) Increase Success Rate by <color\=#007FF5>$1</color>\n(2) Increase <sprite\=0> by <color\=#007FF5>$2</color>"
 
-r:"^事件增加的<sprite\=4>額外提升(.*)$"="Increase <sprite\=4> gain from events by $1"
+r:"^事件增加的<sprite\=4>額外提升(.*)$"="<size\=26>Increase <sprite\=4> gain from events by $1"
 {{A}}的災難={{A}}'s Disaster
-r:"^（1）(.*)額外消耗(.*)點體力，當前時段事件增加的<sprite\=4>額外提升<color\=#007FF5>(.*)</color>\n（2）提升<color\=#007FF5>(.*)</color>點<sprite\=4>$"="(1) $1 spends $2 more Stamina to increase <sprite\=4> gain by <color\=#007FF5>$3</color>\n(2) Increase <sprite\=4> by <color\=#007FF5>$4</color>"
-「不速」之客="Uninvited" Guest
-r:"^（1）提升<sprite\=2>的事件額外提升<color\=#007FF5>(.*)</color>點<sprite\=0>\n（2）<sprite\=0>提升<color\=#007FF5>(.*)</color>點$"="(1) Events that increase <sprite\=2> gain also increase <sprite\=0> by <color\=#007FF5>$1</color>\n（2） Increase <sprite\=0> by <color\=#007FF5>$2</color>"
-大龍蝦的料理法=The Art of Cooking Lobster
-r:"^（1）下次增加<sprite\=4>的事件<sprite\=4>額外提升<color\=#007FF5>(.*)</color>，但<sprite\=1><sprite\=2>額外降低(.*)點\n（2）提升<color\=#007FF5>(.*)</color>點<sprite\=2>$"="(1) The next <sprite\=4> increase event increase <sprite\=4> by <color\=#007FF5>$1</color> more, but decrease <sprite\=1> and <sprite\=2> by $2 more\n(2) Increase <sprite\=2> by <color\=#007FF5>$3</color>"
+r:"^（1）(.*)額外消耗(.*)點體力，當前時段事件增加的<sprite\=4>額外提升<color\=#007FF5>(.*)</color>\n（2）提升<color\=#007FF5>(.*)</color>點<sprite\=4>$"="<size\=24>(1) $1 spends $2 more Stamina to increase <sprite\=4> gain by <color\=#007FF5>$3</color>\n(2) Increase <sprite\=4> by <color\=#007FF5>$4</color>"
+r:"^選項1：提升<sprite\=(\d+)>收益\n選項2：提升<sprite\=(\d+)>$"="Option 1: Increase <sprite\=$1> gain\nOption 2: Increase <sprite\=$2>"
+哼……真不像話……\n這工作明明只有我能幹啊……=Hmph... unbelievable... \nonly I can handle this work...
+看來……已經到極限了……=Looks like... I've hit my limit...
+r:"^(.*)……\n我有件事想拜託你……$"="$1... I need a favor..."
+……我得去趟廁所！\n能幫忙看著點鍋的火候嗎！？=...I gotta run to the bathroom! \nMind watching the stove for me!?
+r:"^<color\=#0F69CA>這工作只有{{B}}能……！</color>\n{{A}}額外消耗(\d+)點體力，當前時段事件增加的營收額外提升(\d+%)$"="<size\=24><color\=#0F69CA>Only {{B}} can do this...!</color>\n{{A}} spends $1 Stamina to increase Revenue gain for this time by $2</size>"
+r:"^<color\=#0F69CA>交給我，你趕緊去！</color>\n提升(\d+)點營收$"="<color\=#0F69CA>Go! Leave it to me!</color>\nIncrease Revenue by $1"
+被逼到絕境的{{A}}爆發了全力，\n在極限邊緣完成了工作……=Pushed to the limit, {{A}} exploded into full force and finished the work...
+雖然火候沒能掌握好，\n但味道勉強及格了……=I couldn't get the heat right, but the flavor was passable...
 
-r:"^<sprite\=0><(.*)時，事件增加的<sprite\=0>額外提升(.*)$"="When <sprite\=0> is <$1, increase <sprite\=0> gain from events by $2"
+「不速」之客="Uninvited" Guest
+r:"^（1）提升<sprite\=2>的事件額外提升<color\=#007FF5>(.*)</color>點<sprite\=0>\n（2）<sprite\=0>提升<color\=#007FF5>(.*)</color>點$"="<size\=24>(1) Events that increase <sprite\=2> gain also increase <sprite\=0> by <color\=#007FF5>$1</color>\n(2) Increase <sprite\=0> by <color\=#007FF5>$2</color>"
+大龍蝦的料理法=The Art of Cooking Lobster
+r:"^（1）下次增加<sprite\=4>的事件<sprite\=4>額外提升<color\=#007FF5>(.*)</color>，但<sprite\=1><sprite\=2>額外降低(.*)點\n（2）提升<color\=#007FF5>(.*)</color>點<sprite\=2>$"="<size\=24>(1) The next <sprite\=4> increase event increase <sprite\=4> by <color\=#007FF5>$1</color> more, but decrease <sprite\=1> and <sprite\=2> by $2 more\n(2) Increase <sprite\=2> by <color\=#007FF5>$3</color>"
+
+r:"^<sprite\=0><(.*)時，事件增加的<sprite\=0>額外提升(.*)$"="<size\=26>When <sprite\=0> is <$1, increase <sprite\=0> gain from events by $2"
 絕佳補貨時機=Perfect Time to Restock
-r:"^（1）當前時段事件營收減少(.*)，白天營收額外提升<color\=#007FF5>(.*)</color>\n（2）當前時段事件營收減少(.*)，傍晚營收額外提升<color\=#007FF5>(.*)</color>\n（3）當前時段事件營收減少(.*)，夜晚營收額外提升<color\=#007FF5>(.*)</color>$"="(1) Decrease Revenue for this time slot by $1, increase Revenue gain during Day by <color\=#007FF5>$2</color>\n(2) Decrease Revenue for this time slot by $3, increase Revenue gain during Evening by <color\=#007FF5>$4</color>\n(3) Decrease Revenue for this time slot by $5, increase Revenue gain during Night by <color\=#007FF5>$6</color>"
+r:"^（1）當前時段事件營收減少(.*)，白天營收額外提升<color\=#007FF5>(.*)</color>\n（2）當前時段事件營收減少(.*)，傍晚營收額外提升<color\=#007FF5>(.*)</color>\n（3）當前時段事件營收減少(.*)，夜晚營收額外提升<color\=#007FF5>(.*)</color>$"="<size\=24>(1) Decrease Revenue for this time by $1, increase Revenue gain during Day by <color\=#007FF5>$2</color>\n(2) Decrease Revenue for this time by $3, increase Revenue gain during Evening by <color\=#007FF5>$4</color>\n(3) Decrease Revenue for this time by $5, increase Revenue gain during Night by <color\=#007FF5>$6</color>"
 海之家作戰計畫=Beach House Plan
-r:"^（1）下(.*)次增加<sprite\=4>的事件<sprite\=4>額外提升<color\=#007FF5>(.*)</color>\n（2）下(.*)次增加<sprite\=3>的事件<sprite\=3>額外提升<color\=#007FF5>(.*)</color>$"="(1) The next $1 <sprite\=4> increase event increase <sprite\=4> by <color\=#007FF5>$2</color>\n(2) The next $3 <sprite\=3> increase event increase <sprite\=3> by <color\=#007FF5>$4</color>"
+r:"^（1）下(.*)次增加<sprite\=4>的事件<sprite\=4>額外提升<color\=#007FF5>(.*)</color>\n（2）下(.*)次增加<sprite\=3>的事件<sprite\=3>額外提升<color\=#007FF5>(.*)</color>$"="<size\=24>(1) The next $1 <sprite\=4> increase event increase <sprite\=4> by <color\=#007FF5>$2</color>\n(2) The next $3 <sprite\=3> increase event increase <sprite\=3> by <color\=#007FF5>$4</color>"
 r:"^選項1：提升<sprite\=4>收益\n選項2：提升<sprite\=3>收益$"="Option 1: Increase <sprite\=4> gain\nOption 2: Increase <sprite\=3> gain"
 我正在把這間店過往的營業額數據化……=I'm digitizing this store's past sales data...
 感覺還有很大的改善空間呢。\n比如攬客和收益的比率之類的……=There's still significant room for improvement, like optimizing the customer-to-revenue ratio, for instance...
-我還打算和{{A}}聊聊……\n不過在此之前，我想聽聽你的意見。=I also plan to discuss this with {{A}}... But first, I'd value your input.
+我還打算和{{A}}聊聊……\n不過在此之前，我想聽聽你的意見。=I also plan to discuss this with {{A}}... \nBut first, I'd value your input.
 這家店現在更需要提高收益率，\n還是增加客流量呢？=Should the store prioritize profit margins or foot traffic?
 r:"^<color\=#0F69CA>當然是收益率</color>\n下(.*)次提升營收的事件營收額外提升(.*)$"="<color\=#0F69CA>Profits, of course</color>\nThe next $1 Revenue increase event increase Revenue by $2"
 r:"^<color\=#0F69CA>或許是客流量吧……</color>\n下(.*)次提升客流的事件客流額外提升(.*)$"="<color\=#0F69CA>Maybe traffic...</color>\nThe next $1 Customer Flow increase event increase Customer Flow by $2"
 收益明顯在增加。\n看來{{A}}的分析奏效了……=The profits are clearly increasing. Looks like {{A}}'s analysis worked...
+客流量明顯在增加。\n看來{{A}}的分析奏效了……=The traffic is clearly increasing. Looks like {{A}}'s analysis worked...
 拯救店鋪流水=Saving Cash Flow
-r:"^（1）減少經營資金降低值<color\=#007FF5>(.*)</color>；結算時經營額額外提升<color\=#007FF5>(.*)</color>\n（2）結算時經營額額外提升<color\=#007FF5>(.*)</color>$"="(1) Decrease Business Funds by <color\=#007FF5>$1</color>; Increase Earnings by <color\=#007FF5>$2</color>\n(2) Increase Earnings at the end of the day by <color\=#007FF5>$3</color>"
+r:"^（1）減少經營資金降低值<color\=#007FF5>(.*)</color>；結算時經營額額外提升<color\=#007FF5>(.*)</color>\n（2）結算時經營額額外提升<color\=#007FF5>(.*)</color>$"="<size\=24>(1) Decrease Business Funds loss by <color\=#007FF5>$1</color>; Increase Earnings by <color\=#007FF5>$2</color>\n(2) Increase Earnings at the end of the day by <color\=#007FF5>$3</color>"
+選項1：減少經營資金消耗\n選項2：提升營業額=Option 1: Decrease Business Funds loss\nOption 2: Increase Earnings
+不是特別嚴重的問題啦……\n只是店裡流水有些低於預期。=It's not a particularly serious problem...\nIt's just that the store's earnings is lower than expected.
+雖然沒有虧損，\n但還是希望能想辦法改善一下。=Although we're not losing money, I still hope we can find a way to improve the situation.
+可是，要怎麼做才能帶來變化呢……=But how can we bring about change...
+也不能嘗試太張揚的方法，\n這畢竟是{{A}}非常珍視的海之家。=We can't try anything too flashy. \nAfter all, this is {{A}}'s beloved Beach House.
+r:"^嗯……(.*)，\n你有什麼想法嗎？$"="Hmm... $1, do you have any ideas?"
+r:"^<color\=#0F69CA>用菜單品質取勝</color>\n結算時經營額額外提升(\d+%)$"="<color\=#0F69CA>With menu quality</color>\nIncrease Earnings at the end of the day by $1"
+r:"^<color\=#0F69CA>用菜單數量取勝</color>\n後續經營資金降低時，降低值減少(\d+%)；結算時經營額額外提升(\d+%)$"="<color\=#0F69CA>With menu quantity</color>\nDecreasing Business Funds loss by $1; Increase Earnings at the end of the day by $2"
+使用高級食材的菜品大受歡迎，\n吸引了大量顧客……！=Dishes made with quality ingredients were a hit...!
 
-r:"^<sprite\=1>降低時，降低值減少(.*)點$"="When decreasing <sprite\=1>, decrease the loss by $1"
+r:"^<sprite\=1>降低時，降低值減少(.*)點$"="<size\=26>When decreasing <sprite\=1>, decrease the loss by $1"
 安全最重要=Safety is Paramount
-r:"^（1）<sprite\=1>事件可提升<color\=#007FF5>(.*)</color>點<sprite\=0>\n（2）提升<color\=#007FF5>(.*)</color>點<sprite\=2>$"="（1）<sprite\=1> events can increase <sprite\=0> by <color\=#007FF5>$1</color>\n(2) Increase <sprite\=2> by <color\=#007FF5>$2</color>"
+r:"^（1）<sprite\=1>事件可提升<color\=#007FF5>(.*)</color>點<sprite\=0>\n（2）提升<color\=#007FF5>(.*)</color>點<sprite\=2>$"="<size\=24>(1)<sprite\=1> events can increase <sprite\=0> by <color\=#007FF5>$1</color>\n(2) Increase <sprite\=2> by <color\=#007FF5>$2</color>"
+選項1：持續提升<sprite\=0>\n選項2：提升<sprite\=2>=Option 1: Keep increasing <sprite\=0>\nOption 2: Increase <sprite\=2>
 商會會長的饋贈=President's Gift
-r:"^（1）下(.*)次事件不降低<sprite\=1>\n（2）獲得<color\=#007FF5>(.*)</color>經營資金；結算時經營額額外提升<color\=#007FF5>(.*)</color>$"="(1) The next $1 event will not decrease <sprite\=1>\n(2) Obtain <color\=#007FF5>$2</color> Business Funds; Increase Earnings at the end of the day by <color\=#007FF5>$3</color>"
+r:"^（1）下(.*)次事件不降低<sprite\=1>\n（2）獲得<color\=#007FF5>(.*)</color>經營資金；結算時經營額額外提升<color\=#007FF5>(.*)</color>$"="<size\=24>(1) The next $1 event will not decrease <sprite\=1>\n(2) Obtain <color\=#007FF5>$2</color> Business Funds; Increase Earnings at the end of the day by <color\=#007FF5>$3</color>"
+選項1：減少<sprite\=1>的降低\n選項2：提升營業額=Option 1: Decrease <sprite\=1> loss\nOption 2: Increase Earnings
 沙灘排球賽=Beach Volleyball Tournament
-r:"^（1）提升<color\=#007FF5>(.*)</color>點<sprite\=3><sprite\=0><sprite\=4>，降低(.*)點<sprite\=1>\n（2）提升<color\=#007FF5>(.*)</color>點<sprite\=3>$"="(1) Increase <sprite\=3><sprite\=0><sprite\=4> by <color\=#007FF5>$1</color>, decrease <sprite\=1> by $2\n(2) Increase <sprite\=3> by <color\=#007FF5>$3</color>"
+r:"^（1）提升<color\=#007FF5>(.*)</color>點<sprite\=3><sprite\=0><sprite\=4>，降低(.*)點<sprite\=1>\n（2）提升<color\=#007FF5>(.*)</color>點<sprite\=3>$"="<size\=24>(1) Increase <sprite\=3><sprite\=0><sprite\=4> by <color\=#007FF5>$1</color>, decrease <sprite\=1> by $2\n(2) Increase <sprite\=3> by <color\=#007FF5>$3</color>"
+r:"^選項1：提升<sprite\=(\d+)><sprite\=(\d+)><sprite\=(\d+)>\n選項2：提升<sprite\=(\d+)>$"="Option 1: Increase <sprite\=$1><sprite\=$2><sprite\=$3>\nOption 2: Increase <sprite\=$4>"
 
-r:"^任意角色每改變(.*)點夥伴體力，則提升<sprite\=4><sprite\=3><sprite\=0>各(.*)點$"="For every $1 Stamina that any character changes, increase <sprite\=4><sprite\=3><sprite\=0> by $2"
+r:"^任意角色每改變(.*)點夥伴體力，則提升<sprite\=4><sprite\=3><sprite\=0>各(.*)點$"="<size\=26>For every $1 Stamina that any character changes, increase <sprite\=4><sprite\=3><sprite\=0> by $2"
 忙裡偷閒=Take a Break
-r:"^（1）後續{{A}}額外消耗(.*)點體力，同時每次使結算時經營額額外提升<color\=#007FF5>(.*)</color>\n（2）所有角色恢復<color\=#007FF5>(.*)</color>點夥伴體力$"="(1) When {{A}} spends $1 Stamina, also increase Earnings at the end of the day by  <color\=#007FF5>$2</color>\n(2) All characters restores <color\=#007FF5>$2</color> Stamina"
-選項1：提升營業額\n選項2：恢復所有角色的夥伴體力=Option 1: Increase Earnings \nOption 2: Restore Stamina to call characters
-r:"^結算時經營額額外提升(\d+%)$"="Increase Earnings at the end of the day by $1"
+r:"^（1）後續{{A}}額外消耗(.*)點體力，同時每次使結算時經營額額外提升<color\=#007FF5>(.*)</color>\n（2）所有角色恢復<color\=#007FF5>(.*)</color>點夥伴體力$"="<size\=24>(1) When {{A}} spends $1 Stamina, also increase Earnings at the end of the day by <color\=#007FF5>$2</color>\n(2) All characters restore <color\=#007FF5>$2</color> Stamina</size>"
+選項1：提升營業額\n選項2：恢復所有角色的夥伴體力=Option 1: Increase Earnings \nOption 2: Restore Stamina to all characters
+呼啊——=Yawn-
+不小心睡著了。\n在這裡休息真舒服啊。=I accidentally fell asleep. \nIt's so comfortable to rest here.
+不過就算排班再密集點，\n我也完全沒問題的……=Even if my shift is packed, I'll be totally fine...
+如果非要像這樣好好休息，\n反而覺得會失去幹勁呢。=If I have to rest like this, \nI feel like I'll lose my motivation.
+r:"^<color\=#0F69CA>好鋼用在刀刃上</color>\n後續{{A}}會額外消耗(.*)點夥伴體力，同時每次使結算時經營額額外提升(.*)$"="<size\=24><color\=#0F69CA>Using the right tool for the job</color>\nWhen {{A}} spends $1 Stamina, also increase Earnings at the end of the day by $2</size>"
+r:"^<color\=#0F69CA>休息也是工作之一</color>\n所有角色恢復(.*)點夥伴體力$"="<color\=#0F69CA>Rest is part of the job</color>\nAll characters restore $1 Stamina"
+休息過後，店裡突然忙了起來。\n托{{A}}的福總算是應付過去了……=After the break, the store suddenly became busy. We managed to get through it thanks to {{A}}...
 店鋪大改造=Store Renovation
-r:"^（1）{{A}}消耗所有體力，提升<color\=#007FF5>(.*)</color>點<sprite\=4><sprite\=3><sprite\=0>，提升<color\=#007FF5>(.*)</color>點<sprite\=1><sprite\=2>\n（2）{{A}}額外消耗(.*)點體力，提升<color\=#007FF5>(.*)</color>點<sprite\=4><sprite\=3><sprite\=0>，提升<color\=#007FF5>(.*)</color>點<sprite\=1><sprite\=2>$"="(1) {{A}} spends all Stamina, increase <sprite\=4><sprite\=3><sprite\=0> by <color\=#007FF5>$1</color>, increase <sprite\=1><sprite\=2> by <color\=#007FF5>$2</color>\n(2) {{A}} spends $3 Stamina, increase <sprite\=4><sprite\=3><sprite\=0> by <color\=#007FF5>$4</color>, increase <sprite\=1><sprite\=2> by <color\=#007FF5>$5</color>"
+r:"^（1）{{A}}消耗所有體力，提升<color\=#007FF5>(.*)</color>點<sprite\=4><sprite\=3><sprite\=0>，提升<color\=#007FF5>(.*)</color>點<sprite\=1><sprite\=2>\n（2）{{A}}額外消耗(.*)點體力，提升<color\=#007FF5>(.*)</color>點<sprite\=4><sprite\=3><sprite\=0>，提升<color\=#007FF5>(.*)</color>點<sprite\=1><sprite\=2>$"="<size\=24>(1) {{A}} spends all Stamina, increase <sprite\=4><sprite\=3><sprite\=0> by <color\=#007FF5>$1</color>, increase <sprite\=1><sprite\=2> by <color\=#007FF5>$2</color>\n(2) {{A}} spends $3 Stamina, increase <sprite\=4><sprite\=3><sprite\=0> by <color\=#007FF5>$4</color>, increase <sprite\=1><sprite\=2> by <color\=#007FF5>$5</color></size>"
+r:"^提升<sprite\=(\d+)><sprite\=(\d+)><sprite\=(\d+)><sprite\=(\d+)><sprite\=(\d+)>$"="<size\=24>Increase <sprite\=$1><sprite\=$2><sprite\=$3><sprite\=$4><sprite\=$5></size>"
+選項1：消耗大量夥伴體力，大幅提升屬性\n選項2：消耗{{A}}少量體力，提升屬性=Option 1: Spend many Stamina to heavily increase attributes\nOption 2: Spend {{A}}'s Stamina to increase attributes
+關於店裡客人的動線，\n我有個想要試試看的做法。=I've got an idea to test out for improving customer flow in the store.
+你看，我們平時不都是\n在餐桌之間穿梭去點單嘛？=See how we usually weave between tables to take orders?
+只要稍微改變一下桌椅的擺放，\n我覺得能提高不少效率呢。=If we tweak the table layout a bit, \nI bet we could boost efficiency.
+關門之後，\n能陪我稍微調整下試試嗎？=Mind sticking around after close to try rearranging things?
+如果條件允許，\n我還想試試調整桌椅以外的事……=If possible, I'd also like to experiment with changes beyond just the tables...
+r:"^<color\=#0F69CA>想做的都去做吧</color>\n{{A}}消耗所有體力，提升(\d+)點營收、客流、口碑，提升(\d+)點安全、服務$"="<size\=23><color\=#0F69CA>Let's try what you want</color>\n{{A}} spends all Stamina, increase Revenue, Customer Flow, and Reputation by $1, increase Safety and Service by $2</size>"
+r:"^<color\=#0F69CA>只調整桌椅也行</color>\n{{A}}額外消耗(\d+)點夥伴體力，提升(\d+)點營收、客流、口碑，提升(\d+)點安全、服務$"="<size\=23><color\=#0F69CA>Just tables and chairs are fine</color>\n{{A}} spends $1 Stamina, increase Revenue, Customer Flow, and Reputation by $2, increase Safety and Service by $3</size>"
+和{{A}}一起\n優化了店裡顧客的動線……=I optimized the store's customer flow with {{A}}...
 為你應援=Supporting You
-r:"^（1）後續{{A}}夥伴體力改變時，額外提升<color\=#007FF5>(.*)</color>點<sprite\=4><sprite\=3><sprite\=0>\n（2）提升<color\=#007FF5>(.*)</color>點<sprite\=4><sprite\=3><sprite\=0>$"="(1) When {{A}}'s Companion Stamina changes, increase <sprite\=4><sprite\=3><sprite\=0> by <color\=#007FF5>$1</color>\n(2) Increase <sprite\=4><sprite\=3><sprite\=0> by <color\=#007FF5>$2</color>"
+r:"^（1）後續{{A}}夥伴體力改變時，額外提升<color\=#007FF5>(.*)</color>點<sprite\=4><sprite\=3><sprite\=0>\n（2）提升<color\=#007FF5>(.*)</color>點<sprite\=4><sprite\=3><sprite\=0>$"="<size\=24>(1) When {{A}}'s Companion Stamina changes, increase <sprite\=4><sprite\=3><sprite\=0> by <color\=#007FF5>$1</color>\n(2) Increase <sprite\=4><sprite\=3><sprite\=0> by <color\=#007FF5>$2</color></size>"
+r:"^啊……(.*)，\n辛苦啦。$"="Ah... $1.\nGood work."
+{{A}}……一直在炒麵、接待客人，\n確實有點累過頭。={{A}}... I've been cooking noodles and serving customers, it's really tiring.
+剛剛也是正好在休息，\n抱歉讓你擔心了。=I was just taking a break, \nsorry to have you worry about me.
+啊，不過工作真的很開心！\n有一種這才是『夏天』的感覺！=Ah, but I really enjoy working! \nIt really feels like "summer"!
+這種體驗很難得，\n幸好你找我過來幫忙！=This is a rare experience, I'm glad you asked me to help!
+雖然{{A}}表現得很精神，\n但看起來確實累壞了……=Although {{A}} seems energetic, she looks exhausted...
+r:"^<color\=#0F69CA>幫她分擔工作</color>\n提升(\d+)點營收、客流、口碑$"="<color\=#0F69CA>Help her with work</color>\nIncrease Revenue, Customer Flow, and Reputation by $1"
+r:"^<color\=#0F69CA>做一杯飲品給她</color>\n後續{{A}}夥伴體力改變時，額外提升(\d+)點營收、客流、口碑$"="<size\=24><color\=#0F69CA>Make her a drink</color>\nWhen {{A}}'s Companion Stamina changes, increase Revenue, Customer Flow, and Reputation by $1</size>"
+補充了水份，\n{{A}}似乎恢復精神了……！=After hydrating, {{A}} seems to have regained her energy...!
+{{A}}夥伴體力改變提升營收、客流、口碑=When {{A}}'s Companion Stamina changes, increase Revenue, Customer Flow, and Reputation
 
-Green
+r:"^經營日結算時，若<sprite\=(\d+)>>(.*)，則額外提升(.*)點<sprite\=(\d+)>$"="<size\=26>When the day ends, if <sprite\=$1> is >$2, increase <sprite\=$4> by $3"
+{{A}}的口味={{A}}'s Taste
+r:"^（1）事件增加<sprite\=3>額外提升<color\=#007FF5>(.*)</color>\n（2）提升<color\=#007FF5>(.*)</color>點<sprite\=3>$"="<size\=24>(1) Increase <sprite\=3> gain from events by <color\=#007FF5>$1</color>\n(2) Increase <sprite\=3> by <color\=#007FF5>$2</color></size>"
+黑衣人騷亂=Man in Black Disturbance
+r:"^（1）{{A}}恢復<color\=#007FF5>(.*)</color>點夥伴體力\n（2）提升<color\=#007FF5>(.*)</color>點<sprite\=1>$"="<size\=24>(1) {{A}} restores <color\=#007FF5>$1</color> Stamina\n(2) Increase <sprite\=1> by <color\=#007FF5>$2</color></size>"
+r:"^選項1：{{A}}恢復夥伴體力\n選項2：提升<sprite\=(\d+)>$"="Option 1: {{A}} restores Stamina \nOption 2: Increase <sprite\=$1>"
+電影聯動=Movie Collab
+r:"^（1）下次提升<sprite\=4>或<sprite\=0>的事件<sprite\=4><sprite\=0>變為<sprite\=3>且提升<color\=#007FF5>(.*)</color>\n（2）提升<color\=#007FF5>(.*)</color>點<sprite\=3>$"="<size\=24>(1) Change the next <sprite\=4> or <sprite\=0> increase event into <sprite\=3> and increase it by <color\=#007FF5>$1</color>\n(2) Increase <sprite\=3> by <color\=#007FF5>$2</color></size>"
+r:"^選項1：轉化為<sprite\=(\d+)>\n選項2：提升<sprite\=(\d+)>$"="Option 1: Convert <sprite\=$1>\nOption 2: Increase <sprite\=$2>"
+
+Green Event
+炒麵總力戰=Yakisoba Fight
 海灘的大明星=Beach Superstar
+觀光團遊客到了，忙得連休息的時間都沒有……=The tour group has arrived, leaving no time for rest...
 失物招領=Lost-and-found
 好像有顧客把貴重品落在店裡，大家都來幫忙了……=Seems that a customer left their valuables in the store, everyone came to help...
 守護安全！=Stay Safe!
 幫手來了！=Help's Here!
 有麻煩的顧客插隊，提醒並趕走了他們……=A troublesome customer cut in line, I reminded them and sent them away...
 特價食材=Special Ingredients
+必須要拉客了=Soliciting Customers
+為了招攬顧客，員工們都在努力拉客了……=In order to attract customers, \nwe worked very hard...
 需要打廣告=Need to Advertise
+商會提議海之家打些像樣的廣告……=The Chamber of Commerce suggested that the Beach Hous should put out some decent ads...
+抵達的旅行團=Arriving Tour Group
+好像是當地的學生們來{{A}}舉辦活動……=Looks like local students came to {{A}} for an event...
+從東京來旅行的學生們，聚集在了{{A}}上……=Students from Tokyo came to {{A}}...
 休息區的潮流=Rest Area Trends
 加強休息區的舒適度，受到了遊客好評……=The improved comfort of the rest area has earned positive feedback from visitors...
+休息區拍到了絕美照片，在遊客間成了潮流……=The rest area has become a popular photo spot, it's now a trend among tourists...
 一切為了顧客=All for Customers
+在店外提供了預防中暑的免費冰水……=Provided free iced water outside the store to prevent heat stroke...
 大自然的異象=Nature's Anomaly
 租賃服務爆火=Booming Rental Services
-海濱租賃很有人氣，遊客排起了長隊……=The beach rentals are a huge hit, visitors are lining up in long queues...
+海濱租賃很有人氣，遊客排起了長隊……=The rental store is a huge hit, visitors are lining up in long queues...
+海濱租賃店生意火爆，泳圈庫存快見底了……=Business is booming at the rental store, our float stock's running low...
 權衡利弊……=Weighing the Pros and Cons...
 大人氣合影！=Popular Photo Op!
 {{A}}合影超受歡迎，遊客排起了隊……={{A}}'s photo ops are a huge hit, visitors are lining up...!
 清潔區的環境整治=Cleaing Up the Cleaning Area
 為了環境整潔，對溢出的垃圾進行了分類…=To keep the environment clean, I sorted the overflowing trash...
 消暑納涼好物=Beat the Heat
+安全第一=Safety First
+好像是當地消防隊進行了安全知識科普……=It seems that the local fire department conducted a safety awareness campaign...
 收到慰問品=Received Gifts
-漂流物的熱潮=Drifter's Fever
+漂流物的熱潮=Flotsam Fever
+聽說有人想買下海灘上那些漂流物……=I heard that someone wants to buy the flotsam on the beach...
+r:"^結算時營業額額外提升<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>$"="<size\=25>Increase Earnings at the end of the day by <sprite\=$1 tint\=1><sprite\=$2 tint\=1></size>"
 
-Blue
+Blue Event
 緊跟本地潮流=Keeping Up with Local Trends
 好像有當地居民成了海之家的熟客……=It seems like some locals have become regulars of Beach House...
+準備刊登廣告=Preparing Ads
 特殊的午後=A Special Afternoon
 r:"^傍晚時事件增加的屬性額外提升(\d+%)$"="Increase Evening events attributes gain by $1"
+據說下午之後天氣和氣溫都非常適合海水浴……=I heard the weather and temperature are perfect for swimming this afternoon...
+r:"^傍晚時事件增加的屬性額外提升<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>$"="<size\=25>Increase Evening events attributes gain by <sprite\=$1 tint\=1><sprite\=$2 tint\=1></size>"
+對當地的貢獻=Contribution to the Local Community
+參加了商會主辦的志願者活動，店裡人手有點不足……=The store was understaffed because we joined a chamber of commerce volunteer event...
+電影聯動宣傳=Movie Collab Promotion
+為了幫忙電影宣傳，店裡人手有點不足……=To help with movie promotion, the store is a bit understaffed...
+當地特產推銷=Specialties Promotion
+r:"^(\d+%)機率提升<sprite\=(\d+)>\n消耗(\d+)經營資金$"="$1 chance to increase <sprite\=$2>\nSpend $3 Business Funds"
+安全講座=Safety Lecture
+r:"^(\d+%)機率提升<sprite\=(\d+)>\n所有角色消耗(\d+)點夥伴體力$"="$1 chance to increase <sprite\=$2>\nSpend $3 Stamina"
+收到商會主辦的安全講座邀請。店裡人手有點不足……=I received an invitation to a safety lecture hosted by the Chamber of Commerce. We're a bit understaffed...
+網紅來訪=Celebrity Visit
+善有善報=Kindness Begets Kindness
+稍微改善了店的內部裝修，希望能變得舒適……=We've made some improvements to the interior, let's hope it's more comfortable now...
+購買警備服務=Purchase Alarm Service
 
 令人擔憂的事態=A Worrying Situation
+有奇裝異服的顧客引發了騷動，但願不是可疑人員……=A customer with a weird outfit caused a stir, let's hope they're not trouble...
+有人在堆巨大的沙堡，幫忙加固避免誤傷圍觀遊客……=Someone's building a massive sandcastle, I helped reinforce it to prevent accidents...
 晴空、潮聲與炒麵=Sun, Surf, and Stir-fry
 臨時停業=Temporary Closure
+為了改善垃圾處理方法，暫時停止提供部分菜單吧……=To improve waste management, let's temporarily suspend some menu items...
+調解了顧客間的糾紛，在騷亂平息前暫時停業吧……=We decided to temporarily close the store after mediating disputes between customers...
 幸運羽毛=Lucky Feather
-需要外帶服務=Need Delivery
+需要外帶服務=Need Takeout
+購買外帶食物的顧客變多，來不及烹飪了……=More customers are getting takeout, we can't keep up...
+超長的外帶顧客隊伍，等餐時間變得很慢……=The takeout line is super long and wait times are dragging...
 不停增加的人數=Increasing Customers
+一群誇張的遊客光臨，好像開始喝酒狂歡了……=A bunch of over-the-top tourists have arrived, looks like they're partying...
+大批顧客擠在了店裡，變得吵鬧起來了……=Many customers crowded into the store, causing it to become noisy...
 電影節目的影響力=Movie's Influence
 r:"^後續事件增加的<sprite\=(\d+)>額外提升(\d+%)$"="Future events increase <sprite\=$1> by $2"
 r:"^後續事件增加的客流額外提升<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>$"="<size\=25>Future events increase Customer Flow by <sprite\=$1 tint\=1><sprite\=$2 tint\=1><sprite\=$3 tint\=1></size>"
 r:"^後續事件增加的客流額外提升(\d+%)$"="Future events increase Customer Flow by $1"
-網路紅人=Internet Celebrity
 天氣喜怒無常=Unpredictable Weather
+猛烈的雷陣雨，海水浴遊客為了避雨聚集了到店裡……=A violent thunderstorm forced the tourists to seek shelter...
 暢遊{{A}}=Roaming {{A}}
+海之家在當地小有熱度，不少顧客被安利前來……=Beach House is getting popular, plenty of customers are flocking in on recommendations...
 發佈店鋪近況=Posting Store Update
 r:"^後續事件增加的營收額外提升<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>$"="<size\=25>Future events increase Revenue by <sprite\=$1 tint\=1><sprite\=$2 tint\=1><sprite\=$3 tint\=1></size>"
-r:"^後續事件增加的營收額外提升(\d+%)$"="Future events increase Revenue by $1"
 優質食材採購=Sourcing Quality Ingredients
+好像海之家的供應商送來了好食材……=It seems that the supplier of Beach House has delivered some good ingredients...
 特殊的夜晚=A Special Night
 r:"^夜晚時事件增加的屬性額外提升(\d+%)$"="Increase Night events attributes gain by $1"
 r:"^夜晚時事件增加的屬性額外提升<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>$"="<size\=25>Increase Night events attributes gain by <sprite\=$1 tint\=1><sprite\=$2 tint\=1></size>"
 r:"^夜晚時，事件增加的屬性額外提升(\d+%)$"="Increase Night events attributes gain by $1"
 需要陪玩服務=Playgroup Service Needed
+店裡的地面髒了，大家一起打掃吧……=The store floor is dirty, let's clean it with everyone...
 煩躁的工作……=Annoying Work...
 白沙上的排球=Volleyball on Sand
+沙灘排球很有意思，好奇的遊客聚集起來了……=Beach volleyball is very interesting, gathering many curious tourists...
+好像正在進行激烈的對戰，聚集的觀眾沸騰了……=An intense game is underway, the crowd is going wild...
 漁獲滿艙！=Full Haul
+{{A}}附近有大魚出沒，來釣魚的人變多了……=There are large fish in the vicinity of {{A}}, more people are coming to fish...
+垂釣碼頭似乎來了魚群，釣魚的人都圍過來了……=Seems like a school of fish moved in, the anglers are gathering at the pier...
 投資新設備=Invest in New Equipment
 夏日高危預警！=Summer Danger Alert!
 幫助了因為強烈陽光身體不適的顧客……=I helped a customer who was feeling unwell due to strong sunlight...
 
 大掃除時間=Cleaning Time
 
-Purple
+Purple Event
+特殊的清晨=A Special Morning
 新口味糖漿=New Flavor Syrup
 r:"^選項1：消耗夥伴體力，提升更多屬性\n選項2：提升屬性$"="Option 1: Spend Companion's Stamina to increase many attributes\nOption 2: Improve attributes"
 您好～\n我是本地食品公司的業務專員～=Hello～ I'm a sales representative from a local food company～
@@ -3833,42 +4018,169 @@ r:"^選項1：消耗夥伴體力，提升更多屬性\n選項2：提升屬性$"=
 r:"^<color\=#0F69CA>研發新口味試試</color>\n所有角色額外消耗(\d+)點夥伴體力，後續事件增加的屬性額外提升(\d+%)$"="<color\=#0F69CA>Develop the new flavor</color>\nAll characters spend $1 Stamina, increase attribute gain from future events by $2"
 r:"^<color\=#0F69CA>替換現有哈密瓜口味</color>\n後續事件增加的屬性額外提升(\d+%)$"="<color\=#0F69CA>Replace the cantaloupe flavor</color>\nIncrease attribute gain from future events by $1"
 雖然新品開發過程很辛苦，\n但銷量似乎還不錯……=Although the development process is difficult, sales seem to be good...
-r:"^後續事件增加的屬性額外提升(\d+%)$"="Increase attribute gain from future events by $1"
+沙裡埋的是……？=What's Buried in the Sand...?
+選項1：獲得持續效果\n選項2：恢復夥伴體力=Option 1: Gain buffs \nOption 2: Restore Stamina
+炒麵神的絕技=Yakisoba God's Technique
+選項1：消耗夥伴體力，提升更多營業額\n選項2：提升營業額=Option 1: Spend Stamina to increase Earnings \nOption 2: Increase Earnings
+話說啊，{{A}}和{{B}}都穿著泳衣在做炒麵，\n不怕油濺到身上嗎？=By the way, {{A}} and {{B}} are both wearing swimsuits while making yakisoba. Aren't you afraid of getting oil splashed on you?
+{{A}}？完全沒關係呢……={{A}}? It's totally fine...
+還好吧，多少會濺到一點。\n但做飯就這樣，也沒啥大不了的。=That's just how cooking goes, it's no big deal.
+而且……{{A}}，她那神級的顛勺功夫，\n油花根本就濺不上身好麼……！=And... {{A}}, with her god-like skills, \nthe oil splatters don't even touch her body...!
+還、還能這樣！？=Th-That's possible!?
+{{B}}，說什麼神級，也太誇張了啦。\n{{A}}你練習一下的話，肯定也能做到的！={{B}}, saying "god-like" is a bit of an exaggeration. {{A}}, if you practice a bit, you can definitely do it too!
+r:"^<color\=#0F69CA>要試試看嗎</color>\n所有角色額外消耗(\d+)點夥伴體力，結算時經營額額外提升(\d+%)$"="<color\=#0F69CA>Want to try it?</color>\nAll characters spend $1 Stamina, increase Earnings at the end of the day by $2"
+r:"^<color\=#0F69CA>請教我吧</color>\n結算時經營額額外提升(\d+%)$"="<color\=#0F69CA>Please teach me</color>\nIncrease Earnings at the end of the day by $1"
+不管怎樣油都會濺出來……\n總算明白{{A}}為何是「炒麵之神」了……=No matter what I do, oil will splatter... I finally understand why {{A}} is known as the "God of Yakisoba"...
+失蹤的婚戒=Missing Wedding Ring
+r:"^選項1：根據<sprite\=(\d+)>提升<sprite\=(\d+)><sprite\=(\d+)><sprite\=(\d+)>\n選項2：根據<sprite\=(\d+)>提升<sprite\=(\d+)><sprite\=(\d+)><sprite\=(\d+)>$"="Option 1: Increase <sprite\=$2><sprite\=$3><sprite\=$4> by <sprite\=$1>\nOption 2: Increase <sprite\=$6><sprite\=$7><sprite\=$8> based on <sprite\=$5>"
+我記得應該就在這附近的……=I'm sure it was somewhere around here...
+可惡……到底丟在哪兒了……=Dammit... where is it...?
+對不起……\n我要是再小心一點就好了……=I'm so sorry... \nI should've been more careful...
+沒事啦。\n我一定會找到的，放心吧……=It's okay. I'll find it, don't worry.
+啊、那個！\n你是海之家的店員對吧！=Hey, you! You work at Beach House, right?!
+我太太的婚戒丟在這附近了！\n大概就在這一片……=My wife's wedding ring is lost around here! \nSomewhere in this area...
+拜託您了！\n能幫忙一起找找嗎？=Please! Can you help me find?
+r:"^<color\=#0F69CA>讓周圍的人來幫忙</color>\n獲得當前(\d+%)服務的營收、客流、口碑$"="<size\=26><color\=#0F69CA>Let the people around help</color>\nGain Revenue, Customer Flow, and Reputation by $1 of Service</size>"
+r:"^<color\=#0F69CA>全部員工一起去找</color>\n獲得當前(\d+%)安全的營收、客流、口碑$"="<size\=26><color\=#0F69CA>Let's get all the staff to search</color>\nGain Revenue, Customer Flow, and Reputation by $1 of Safety</size>"
+在全體的努力下找到了戒指。\n還收到了失主的謝禮……=We found the ring thanks to everyone's efforts. We also received a gift from the owner...
+新的宣傳企劃=New Promotional Plan
+r:"^選項1：提升<sprite\=(\d+)>\n選項2：提升<sprite\=(\d+)>\n選項3：提升<sprite\=(\d+)>\n（玩法期間疊加）$"="Option 1: Increase <sprite\=$1>\nOption 2: Increase <sprite\=$2>\nOption 3: Increase <sprite\=$3>\n(Can stack during the event)"
+能在海水浴場的入口處擺放宣傳單，\n真是太幸運了。=We are very fortunate to be able to place flyers at the entrance of the beach.
+放在顯眼的位置，宣傳效果應該不錯……\n但宣傳什麼內容讓人很頭疼啊。=Putting them in a visible spot would boost publicity... But figuring out what to promote is the real headache.
+應該慎重考慮向遊客宣傳本店哪些特色，\n再根據這些進行設計。=We should consider which features of our store to promote, and then design the flyers accordingly.
+該以食物口味、設施種類、\n還是優質服務……作為宣傳重點呢？=Should we focus on the taste of the food, the variety of facilities, or the quality of service?
+r:"^<color\=#0F69CA>宣傳食物品質吧</color>\n提升(\d+)點營收。玩法期間可疊加，每次額外提升(\d+)點營收。最多額外提升(\d+)點營收$"="<size\=22><color\=#0F69CA>Let's promote the food quality</color>\nIncrease Revenue by $1. Can stack during the event, each time increases Revenue by $2 more, up to $3</size>"
+r:"^<color\=#0F69CA>宣傳設施種類吧</color>\n提升(\d+)點客流。玩法期間可疊加，每次額外提升(\d+)點客流。最多額外提升(\d+)點客流$"="<size\=21><color\=#0F69CA>Let's prmote the facilities variety</color>\nIncrease Customer Flow by $1. Can stack during the event, each time increases Customer Flow by $2 more, up to $3</size>"
+r:"^<color\=#0F69CA>宣傳舒適環境吧</color>\n提升(\d+)點口碑。玩法期間可疊加，每次額外提升(\d+)點口碑。最多額外提升(\d+)點口碑$"="<size\=22><color\=#0F69CA>Let's promote the cozy environment</color>\nIncrease Reputation by $1. Can stack during the event, each time increases Reputation by $2 more, up to $3</size>"
+剛把傳單放出去，\n來吃美食的客人就變多了……=As soon as we put up the flyers, the number of customers coming to enjoy our food increased...
 
-Minami Summer
+Gold Event
+出現老鷹強盜=Eagle Thief
+r:"^選項1：減少<sprite\=(\d+)>的降低\n選項2：減少<sprite\=(\d+)>的的降低$"="Option 1: Decrease <sprite\=$1> loss\nOption 2: Decrease <sprite\=$2> loss"
+
+Minami Event
+緊急補救措施=Emergency Aid
+r:"^下(\d+)次事件成功率提高(\d+%)且增加的屬性額外提升(\d+%)$"="Increase the next $1 event's Success Rate by $2 and increase attribute gain by $3"
+與熟悉接待工作的{{A}}一起，\n迅速補救了小失誤……=We swiftly smoothed over the minor hiccup with {{A}}'s skills...
+r:"^下<sprite\=(\d+) tint\=1>次事件成功率提升，屬性提升$"="<size\=22>Increase the next <sprite\=$1 tint\=1> event's Success Rate and attribute gain</size>"
 遇到麻煩了=Ran into Trouble
 在{{A}}敏銳目光的幫助下，\n迅速處理了客人遇到的困難……=With {{A}}'s keen eye, we quickly resolved the issues the customers were having...
+熟客捧場=Regular Support
+r:"^下1次事件增加的屬性額外提升(\d+%)$"="Increase attribute gain from the next event by $1"
+為了支持{{A}}，\n{{B}}店的熟客專門來捧場了……！=In support of {{A}}, the regulars from {{B}} came to visit...!
+r:"^下<sprite\=(\d+) tint\=1>次事件增加的屬性額外提升<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>$"="<size\=25>Increase attribute gain from the next <sprite\=$1 tint\=1> event by <sprite\=$2 tint\=1><sprite\=$3 tint\=1><sprite\=$4 tint\=1></size>"
+純白女神降臨=The White Goddess Descends
+r:"^後續<sprite\=(\d+)>提升時，提升(\d+)點<sprite\=(\d+)>$"="When increasing <sprite\=$1>, increase <sprite\=$3> by $2"
+海之家出現了「純白女神」，\n所有遊客都在熱議這件事……！=Beach House's "White Goddess" has all the tourists buzzing...!
+r:"^後續服務提升時，提升<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>點口碑$"="<size\=25>When increasing Service, increase Reputation by <sprite\=$1 tint\=1><sprite\=$2 tint\=1></size>"
+{{A}}特製員工餐={{A}}'s Special Staff Meal
+r:"^選項1：恢復員工體力，提升<sprite\=(\d+)>\n選項2：<sprite\=(\d+)>$"="Option 1: Restore Stamina, increase <sprite\=$1>\nOption 2: Increase <sprite\=$2>"
 
-Shun Summer
+Lufel Event
+探究慾望=Exploring Desire
+r:"^下(\d+)次事件成功率降低(\d+%)但增加的屬性額外提升(\d+%)$"="Decrease the next $1 event Success Rate by $2 but increase attribute gain by $3"
+{{A}}似乎對海水浴遊客的慾望產生了興趣……={{A}} seems to have become interested in the desires of sea bathers...
+下<sprite\=1 tint\=1>次事件成功率降低，屬性提升=<size\=20>Decrease the next <sprite\=1 tint\=1> event Success Rate but increase attribute gain</size>
+網路紅人=Internet Celebrity
+{{A}}吃法蘭克福香腸的影片似乎在網上爆紅了……=Video of {{A}} eating Frankfurter sausage seems to have went viral...
+人氣寵兒=Popular Pet
+r:"^下(\d+)次事件增加的<sprite\=(\d+)>額外提升(\d+%)；再下(\d+)次增加的<sprite\=(\d+)>降低(\d+%)$"="Increase <sprite\=$2> gain from the next $1 event by $3; Decrease <sprite\=$5> gain from the next $4 event by $6"
+臨時店長·{{A}}比預想中還要人氣爆棚……=Temporary manager {{A}} is even more popular than expected...
+r:"^下<sprite\=(\d+) tint\=1>次事件客流提升發生變化$"="<size\=25>Change Customer Flow gain for the next <sprite\=$1 tint\=1> events</size>"
+r:"^下(\d+)次事件客流提升發生變化$"="Change Customer Flow gain for the next $1 events"
+空中宣傳=Aerial Promotion
+r:"^傍晚時事件增加的<sprite\=(\d+)>額外提升(\d+%)$"="Increase <sprite\=$1> gain from Evening events by $2"
+根據{{A}}的提案，決定四處宣傳海之家菜單……=Based on {{A}}'s proposal, we've decided to promote our menu everywhere...
+r:"^傍晚時事件增加的客流額外提升<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>$"="<size\=22>Increase Customer Flow gain from Evening events by <sprite\=$1 tint\=1><sprite\=$2 tint\=1><sprite\=$3 tint\=1></size>"
+合影服務=Photo Op Service
+
+Shun Event
 廚房戰神=Kitchen God of War
+{{A}}製作料理的手快出殘影……！\n表情認真得令人畏懼……！={{A}}'s hands move so fast that they leave afterimages...! His looks so serious that it's intimidating...!
 高效料理=Efficient Cuisine
-大份量炒麵=Large Fried Noodles
+{{A}}用特殊方式節省了食材，\n開始高效料理……={{A}} used a special method to conserve ingredients and began cooking efficiently...
+大份量炒麵=Large Yakisoba
+{{A}}的炒麵技術越來越純熟，\n一次性製作的量也增加了……={{A}}'s yakisoba technique keeps improving, he can cook larger batches now...
 花式刨冰=Flaire Shaved Ice
 {{A}}進行了糖漿花式組合，\n做出色彩繽紛的刨冰……！={{A}} used fancy syrup combinations to make a colorful shaved ice...!
 大力士？=Hercules?
 {{A}}一口氣搬走了好幾袋垃圾……！={{A}} moved several bags of trash in one fell swoop...!
+庖丁技藝=Butcher's Art
+r:"^每次改變時段時，獲得當前(\d+%)<sprite\=4>的<sprite\=0>$"="When changing time, gain <sprite\=0> by $1 of current <sprite\=4>"
+為了應對高峰期，\n{{A}}提前備菜，處理能力提升了……=In order to cope with peak periods, {{A}} prepares ingredients in advance, increasing processing capacity...
+r:"^每次改變時段時，獲得當前<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>營收的口碑$"="<size\=19>When changing time, gain Reputation by <sprite\=$1 tint\=1> <sprite\=$2 tint\=1> of current Revenue</size>"
 
-Riko Summer
+Riko Event
 以服務取勝=Winning with Service
 {{A}}細緻周到的服務大受歡迎……！={{A}}'s meticulous service is very popular...!
 r:"^後續事件增加的口碑額外提升<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>$"="<size\=25>Future events increase Reputation by <sprite\=$1 tint\=1><sprite\=$2 tint\=1><sprite\=$3 tint\=1></size>"
 r:"^後續事件增加的口碑額外提升(\d+%)$"="Future events increase Reputation by $1"
 r:"^下(.*)次增加<sprite\=(.*)>的事件<sprite\=(.*)>額外提升(.*)$"="The next $1 <sprite\=$2> increase event increase <sprite\=$3> by $4"
 {{A}}的貼心關照似乎贏得了客人的好評……={{A}}'s attentive service seems to be winning rave reviews from guests...
-r:"^下<sprite\=(.*) tint\=1>次增加口碑的事件口碑額外提升<sprite\=(.*) tint\=1><sprite\=(.*) tint\=1><sprite\=(.*) tint\=1>$"="<size\=20>The next <sprite\=$1 tint\=1> Reputation increase event increase Reputation by <sprite\=$2 tint\=1><sprite\=$3 tint\=1><sprite\=$4 tint\=1>"
+r:"^下<sprite\=(.*) tint\=1>次增加口碑的事件口碑額外提升<sprite\=(.*) tint\=1><sprite\=(.*) tint\=1><sprite\=(.*) tint\=1>$"="<size\=20>The next <sprite\=$1 tint\=1> Reputation increase event increase Reputation by <sprite\=$2 tint\=1><sprite\=$3 tint\=1><sprite\=$4 tint\=1></size>"
 需要隊伍引導=Need Team Guidance
 資料分析師=Data Analyst
-r:"^本時段事件增加的屬性額外提升(\d+%)$"="Increase the attributes gain from events for this time slot by $1"
+r:"^本時段事件增加的屬性額外提升(\d+%)$"="Increase attributes gain from events for this time by $1"
+{{A}}準備整理銷售資料，\n分析不同時間段的熱銷品……={{A}} is organizing sales data to analyze the best items for each time slot...
+r:"^本時段事件增加的屬性額外提升<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>$"="<size\=24>Increase attributes gain from events for this time by <sprite\=$1 tint\=1><sprite\=$2 tint\=1><sprite\=$3 tint\=1></size>"
 {{A}}的取捨={{A}}'s Trade-offs
 由於客流量太大，\n{{A}}決定暫時限制入店人數……={{A}} decides to temporary limit the number of customers due to heavy traffic...
 行銷策略=Marketing Strategy
 多虧{{A}}提出的行銷策略，\n口碑進一步提升了……！=Thanks {{A}}'s marketing strategy, our reputation has increased...!
 
-Tomoko Summer
-炒麵之神=God of Fried Noodles
+Motoha Event
+安全保障=Guaranteed Safety
+{{A}}不知從哪搞到了大喇叭，安全巡邏更方便了……={{A}} got the loud speakers out of nowhere, making patrols easier...
+溺水預警=Drowning Warning
+{{A}}似乎在幫忙注意有沒有遊客溺水……={{A}} seems to be helping to watch out for tourists drowning...
+教學時間=Teaching Time
+{{A}}的「沙灘排球教學」似乎很受歡迎……={{A}}'s "Beach Volleyball Tutorial" seems to be a hit...
+救場王=Rescue King
+r:"^後續<sprite\=(\d+)>降低時，提升(\d+)點<sprite\=(\d+)>$"="When decreasing <sprite\=$1>, increase <sprite\=$3> by $2"
+客人太多了，{{A}}也來幫忙支援了……=There were too many customers, so {{A}} came to help...
+r:"^後續安全降低時，提升<sprite\=(\d+) tint\=1>點服務$"="<size\=25>When decreasing Safety, increase Service by <sprite\=$1 tint\=1></size>"
+預防暑害=Preventing Heatstroke
+r:"^獲得當前(\d+%)<sprite\=(\d+)>的<sprite\=(\d+)>$"="Gain <sprite\=$3> by $1 of <sprite\=$2>"
+為了防止中暑，{{A}}招攬客人時提供了冰飲……=To prevent heatstroke, {{A}} offers iced drinks to the customers...
+配送服務=Delivery Service
+增加了由{{A}}配送冰飲的服務……=Added iced drink delivery service from {{A}}...
+
+Tomoko Event
+炒麵之神=God of Yakisoba
 r:"^營業額額外提升(\d+%)$"="Increase Earnings by $1"
-炒麵之神·{{A}}製作的炒麵，\n已經是店裡的必點菜品了……！=The fried noodles made by the God of Fried Noodles, {{A}}, it has become a must-order dish in our store...!
+炒麵之神·{{A}}製作的炒麵，\n已經是店裡的必點菜品了……！=The yakisoba made by the God of Yakisoba, {{A}}, it has become a must-order dish in our store...!
 r:"^營業額額外提升<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>$"="Increase Earnings by <sprite\=$1 tint\=1><sprite\=$2 tint\=1>"
+上熱搜了=Trending Online
+r:"^{{A}}恢復(.*)點夥伴體力\n後續{{A}}會額外消耗(.*)點夥伴體力，同時每次提升(.*)點<sprite\=4>$"="{{A}} restores $1 Stamina\nWhen {{A}} spends $2 Stamina, increase <sprite\=4> by $3"
+{{A}}炒麵的影片在SNS上爆紅……={{A}}'s yakisoba video went viral...
+後續{{A}}會額外消耗夥伴體力，提升營收=<size\=22>When {{A}} spends Stamina, increase Revenue</size>
+需要緊急輪班=Need Urgent Shift
+r:"^{{A}}額外消耗(.*)點夥伴體力\n提升更多<sprite\=4><sprite\=3><sprite\=0>$"="{{A}} spends $1 Stamina to increase <sprite\=4><sprite\=3><sprite\=0> gain"
+{{A}}因為客人過多無法休息……\n該提議換班了……={{A}} is unable to take a break due to the number of customers... It's time to change shifts...
+{{A}}需要幫助={{A}} Needs Help
+{{A}}看起來非常忙碌……\n去後廚支援她了……={{A}} looks very busy... I went to the kitchen to help her...
+飲料新品=New Beverage
+{{A}}提案的『海之家特製薄荷水』大受歡迎……={{A}}'s proposal of "Beach House's Mint Special" was a big hit...
+特製餌料=Special Bait
+{{A}}特製的餌料讓魚爭相咬鉤……\n也許連魚的胃都抓住了……={{A}}'s special bait has fishes vying for it... maybe it's even catching their stomachs...
+上熱門推薦了=Popular Recommendation
+
+Shoki Event
+跟粉絲合影吧=Taking Pictures with Fans
+r:"^下(\d+)次提升<sprite\=(\d+)>的事件<sprite\=(\d+)>額外提升(\d+%)，<sprite\=(\d+)><sprite\=(\d+)>額外降低(\d+)點$"="The next $1 <sprite\=$2> event increase <sprite\=$3> by $4 and decrease <sprite\=$5><sprite\=$6> by $7"
+為了和{{A}}互動，\n粉絲在快把店門口擠爆了……=Fans are swarming the store entrance in order to interact with {{A}}...
+r:"^下<sprite\=(\d+) tint\=1>次提升客流的事件獲得額外效果$"="<size\=25>The next <sprite\=$1 tint\=1> Customer Flow event gain extra effects</size>"
+r:"^下(\d+)次提升客流的事件獲得額外效果$"="The next $1 Customer Flow event gain extra effects"
+近距離追星=Celebrity Chasing
+聽說{{A}}在這打工，\n疑似粉絲的客人增加了……=Word is {{A}} works here and it seems like fan-customers are piling in...
+明星推薦=Celebrity Recommendation
+{{A}}推薦的租賃用品，\n正在被飛速借出……=The rental items recommended by {{A}} are flying off the shelves...
+粉絲專屬服務=Exclusive Fan Service
+『再加上{{A}}的笑容哦！』，\n類似這樣的點單接連不斷……=Orders with "Add {{A}}'s smile too!" kept pouring in...
+偶像手作料理=Idol Handmade Cuisine
+r:"^下(\d+)次提升<sprite\=(\d+)>的事件<sprite\=(\d+)>額外提升(\d+%)$"="The next $1 <sprite\=$2> increase event increases <sprite\=$3> by $4"
+因為想吃{{A}}製作的炒麵，\n粉絲們包圍了炒麵攤……！=Fans swarmed the yakisoba stand, eager to try {{A}}'s yakisoba...!
+r:"^下<sprite\=(\d+) tint\=1>次提升客流的事件客流額外提升<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>$"="<size\=18>The next <sprite\=$1 tint\=1> Customer Flow increase event increases Customer Flow by <sprite\=$2 tint\=1><sprite\=$3 tint\=1><sprite\=$4 tint\=1></size>"
 
 休息時間=Break Time
 r:"^{{A}}恢復(\d+)點夥伴體力$"="{{A}} restores $1 Stamina"
@@ -3877,7 +4189,7 @@ r:"^{{A}}恢復(\d+)點夥伴體力$"="{{A}} restores $1 Stamina"
 珍貴的海螺=Precious Conch
 達成經營目標解鎖=Reach Business Target to unlock
 經營目標=Business Target
-r:"^距離「夏之{{A}}·蕭條」成就達成還需要(\d+)歷史最高經營資金$"="Need $1 Highest Business Funds to get the achievement"
+r:"^距離「(.*)」成就達成還需要(\d+)歷史最高經營資金$"="Need $2 Highest Business Funds to get the achievement"
 最高經營資金=Highest Funds
 r:"^經營活動結束後可提取現金<size\=40><sprite\=(\d+)></size>$"="Can obtain money after the event ends "
 r:"^\（提取比例為擁有經營資金的(\d+(.\d+)?(%)?)\）$"="(At a ratio of $1 owned Business Funds)"
@@ -3886,7 +4198,7 @@ r:"^\（提取比例為擁有經營資金的(\d+(.\d+)?(%)?)\）$"="(At a ratio 
 海之家=Beach House
 租賃店=Rental Store
 攬客點=Visitor Hub
-炒麵攤=Noodle Stand
+炒麵攤=Yakisoba Stand
 休息區=Rest Area
 刨冰攤=Shaved Ice Stand
 清潔區=Cleaning Area
@@ -3953,7 +4265,7 @@ r:"^是否快速從兌換商店，自動兌換全部【缺少印記材料】？\
 r:"^未登錄$"="<size\=19>  Not Registered</size>"
 sr:"^本次合體結果將轉化為1個<color\=#FF0000>(.*)印記</color>$"="Convert fusion result into 1 <color\=#FF0000>$1 Seal</color>"
 所需合成材料不足。=Insufficient fusion material.
-印記道具不足。=Insufficient mask item.
+印記道具不足。=Insufficient seal.
 所需貨幣不足。=Insufficient currency.
 想要做點什麼呢？=What do you want to do?
 r:"^Lv.(\d+) 解鎖新技能$"="Lv.$1 Next Skill"
@@ -3967,6 +4279,7 @@ r:"^特性提升$"="<size\=25>Upgrade to</size>"
 已達到{{A}}當前強化等級上限。=Reached current rank max level.
 <color\=#FF0000>本次強化溢出經驗將轉化為通用素材</color>\n是否確定使用所選素材進行強化？=<color\=#FF0000>This upgrade will convert overflowed EXP into upgrade materials.</color>\nAre you sure you want to upgrade?
 篩選材料=Filter Materials
+排序=Sort
 高級=High
 中級=Mid
 初級=Low
@@ -4196,6 +4509,7 @@ r:"^贈送所有喜歡的禮物給{{A}}$"="Give all Favorite Gifts to {{A}}"
 與任意協同者進行1次關係回溯<size\=30>(0/1)</size>=Backtrack 1 relationship <size\=30>(0/1)</size>
 與任意協同者進行1次關係回溯=Backtrack 1 relationship
 
+專屬時裝&頭像框&名片=Exclusive Outfit & Avatar Frame & Background
 聖殿樂園勳章=Holy Companio Medal
 
 獲得方式=Obtain Method
