@@ -112,11 +112,11 @@ Online Shopping
 品質排序=Quality
 限購：=Limit:
 不限量購買=No limit
-r:"^重置時間：(\d+)天(\d+)時$"="Resets: $1d $2h"
-r:"^重置時間：(\d+)時(\d+)分$"="Resets: $1h $2m"
+r:"^重置時間：(\d+)天(\d+)小時$"="Resets: $1d $2h"
+r:"^重置時間：(\d+)小時(\d+)分$"="Resets: $1h $2m"
 r:"^重置時間：(\d+)分$"="Resets: $1m"
-r:"^下架時間：(\d+)天(\d+)時$"="Expires: $1d $2h"
-r:"^下架時間：(\d+)時(\d+)分$"="Expires: $1h $2m"
+r:"^下架時間：(\d+)天(\d+)小時$"="Expires: $1d $2h"
+r:"^下架時間：(\d+)小時(\d+)分$"="Expires: $1h $2m"
 r:"^下架時間：(\d+)分$"="Expires: $1m"
 商品收藏成功。=Added to favorites.
 已取消收藏。=Removed from favorites.
@@ -363,6 +363,7 @@ Takemi Items
 療傷藥片·小=<size\=24>Recov-R: S
 r:"^醫療用品，在戰鬥中使用，使用後立即恢復1名同伴(\d+%)的生命值。$"="Restores $1 HP to 1 ally."
 r:"^回復類藥品，在戰鬥中使用，使用後立即恢復1名同伴(\d+%)的生命值。$"="Restores $1 HP to 1 ally."
+r:"^回復類藥品，在戰鬥中使用，使用後立即恢復1名同伴(\d+%)的生命值。\n效果額外提升(\d+%)$"="Restores $1 HP to 1 ally. Increases effect by $2."
 療傷藥片·中=<size\=24>Recov-R: M</size>
 療傷藥片·大=<size\=24>Recov-R: L</size>
 寧息軟膏=<size\=24>Nohar-M</size>
@@ -377,16 +378,20 @@ r:"^回復類藥品，在戰鬥中使用，使用後立即恢復1名同伴(\d+%)
 氣力補給包S=<size\=24>Stamina Kit S</size>
 r:"^補給品，在戰鬥中使用，使用後立即恢復１名同伴(\d+%)的精力值。$"="Restores $1 SP to 1 ally."
 r:"^回復類藥品，在戰鬥中使用，使用後立即恢復１名同伴(\d+%)的精力值。$"="Restores $1 SP to 1 ally."
+r:"^回復類藥品，在戰鬥中使用，使用後立即恢復１名同伴(\d+%)的精力值。\n效果額外提升(\d+%)$"="Restores $1 SP to 1 ally. Increases effect by $2."
 氣力補給包M=<size\=24>Stamina Kit M</size>
 氣力補給包L=<size\=24>Stamina Kit L</size>
 {{A}}全療藥=<size\=24>Takemedic-All</size>
 r:"^醫療用品，在戰鬥中使用，使用後立即恢復全體隊友(\d+%)的生命值。$"="Restores $1 HP to party."
 r:"^回復類藥品，在戰鬥中使用，使用後立即恢復全體隊友(\d+%)的生命值。$"="Restores $1 HP to party."
+r:"^回復類藥品，在戰鬥中使用，使用後立即恢復全體隊友(\d+%)的生命值。\n效果額外提升(\d+%)$"="Restores $1 HP to party. Increases effect by $2."
 {{A}}全療藥V=<size\=21>Takemedic-All V</size>
 應急傷藥=<size\=24>Emergency Medicine</size>
 回復類藥品，在戰鬥中使用，使用後立即恢復少量生命值。=Restores light HP to 1 ally.
+r:"^回復類藥品，在戰鬥中使用，使用後立即恢復少量生命值。\n效果額外提升(\d+%)$"="Restores light HP to 1 ally. Increases effect by $1."
 OK繃=Adhesive Bandage
 r:"^普通藥品，在{{A}}中使用，使用後立即恢復少量生命值。\n在{{A}}中使用，恢復(.*)最大生命值。$"="Restores $1 Max HP."
+點滴袋=Healing IV
 
 ----------
 Miyu Items
