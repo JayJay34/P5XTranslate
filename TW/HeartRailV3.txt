@@ -1027,7 +1027,7 @@ NODES
 
 請選擇一個遺失物=Select a Lost Item
 請選擇一個御守=Select an Omamori
-r:"剩餘(\d+)次"=Reroll($1)
+r:"^剩餘(\d+)次$"="$1 left"
 繼<color\=#ff0000ff>續</color>前行=Continue
 離開=Leave
 离开=Leave
@@ -1586,35 +1586,3 @@ r:"^進入一場艱難的戰鬥，\n勝利後獲得(\d+)枚鐵道硬幣。$"="En
 事件已全部完成，請繼續前行。=The event is completed, please continue.
 消耗不足，無法選擇。=You can't spend enough to select this option.
 魔羅=Mara
-
-(\d+)
-(\d+%)
-(\d+\.\d+%)
-Tier 1
-\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)/(\d+\.\d+%)\)
-(<color\=#50b50d>$1</color>/$2/$3)
-Tier2
-\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>/(\d+\.\d+%)\)
-($1/<color\=#c900e4>$2</color>/$3)
-Tier 3
-\((\d+\.\d+%)/(\d+\.\d+%)/<color\=#e9cb2f>(\d+\.\d+%)</color>\)
-($1/$2/<color\=#e9cb2f>$3</color>)
-
-Tier 1 (Purple)
-\(<color\=#50b50d>(\d+\.\d+%)</color>/(\d+\.\d+%)\)
-(<color\=#50b50d>$1</color>/$2)
-Tier 2 (Purple)
-\((\d+\.\d+%)/<color\=#c900e4>(\d+\.\d+%)</color>\)
-($1/<color\=#c900e4>$2</color>)
-
-Upgrade 1
-<color\=#50b50d>(\d+\.\d+%)</color>→<color\=#c900e4>(\d+\.\d+%)</color>
-<color\=#50b50d>$1</color>→<color\=#c900e4>$2</color>
-Upgrade 2 (Blue only)
-<color\=#c900e4>(\d+\.\d+%)</color>→<color\=#e9cb2f>(\d+\.\d+%)</color>
-<color\=#c900e4>$1</color>→<color\=#e9cb2f>$2</color>
-
-green: <color\=#c900e4>
-purple: <color\=#50b50d>
-<size\=20>
-</size>
