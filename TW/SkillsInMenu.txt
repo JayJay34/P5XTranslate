@@ -437,7 +437,10 @@ r:"^疾風率UP(.*)$"="Windswept Boost $1"
 
 //Status Resists
 r:"^燃燒耐性(.*)$"="Resist Burn $1"
-r:"^冰凍耐性(.*)$"="Resist Freeze $1"
+冰凍耐性Ⅰ=Resist Freeze I
+冰凍耐性Ⅱ=Resist Freeze Ⅱ
+冰凍耐性Ⅲ=Resist Freeze Ⅲ
+冰凍耐性Ⅳ=Resist Freeze Ⅳ
 r:"^觸電耐性(.*)$"="Resist Shock $1"
 r:"^睡眠耐性(.*)$"="Resist Sleep $1"
 r:"^遺忘耐性(.*)$"="Resist Forget $1"
@@ -481,7 +484,7 @@ sr:"『HIGHLIGHT』：使所有同伴造成的傷害提升<color\=#fffc40>(\d+\.
 sr:"『HIGHLIGHT』：使所有同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(.*)</color>的生命值。\n『ONE MORE』：對1名敵人造成(.*)屬性傷害。"=[HIGHLIGHT]: Restore <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to all allies.\n[ONE MORE]: Deal $3 damage to 1 foe.
 
 //ST ONE MORE, AoE Shield HIGHLIGHT
-sr:"『HIGHLIGHT』：使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(.*)</color>的護盾，效果持續2回合。\n『ONE MORE』：對1名敵人造成(.*)屬性傷害。"=[HIGHLIGHT]: Grants all allies <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> Shield for 2 turns.\n[ONE MORE]: Deal $3 damage to 1 foe.
+sr:"『HIGHLIGHT』：使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(.*)</color>的護盾，效果持續2回合。\n『ONE MORE』：對1名敵人造成(.*)屬性傷害。"=[HIGHLIGHT]: Grant all allies <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> Shield for 2 turns.\n[ONE MORE]: Deal $3 damage to 1 foe.
 
 --- Normal Generalized Skills ---
 
@@ -826,14 +829,14 @@ Infinite Algorithm
 r:"^使所有友方角色攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，額外使主目標傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Increase all allies' ATK by <color\=#fffc40>$1</color>, additionally increase the main target's DMG Dealt by <color\=#fffc40>$2</color> for $3 turns."
 
 //norn
-r:"使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的護盾，效果持續2回合。護盾受到傷害時，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使傷害來源陷入<link\="s\|105"><u>風襲</u></link>狀態。"=Grants all allies <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> Shield for 2 turns. There is a <color\=#fffc40>$3</color> base chance to inflict <link\=s|105><u>Windswept</u></link> to the foe when the Shield took damage.
+r:"使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的護盾，效果持續2回合。護盾受到傷害時，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使傷害來源陷入<link\="s\|105"><u>風襲</u></link>狀態。"=Grant all allies <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> Shield for 2 turns. There is a <color\=#fffc40>$3</color> base chance to inflict <link\=s|105><u>Windswept</u></link> to the foe when the Shield took damage.
 
 King Frost
-r:"^使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的護盾，護盾存在時防禦力提升(\d+%)，持續2回合。$"="Grants all allies <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> Shield for 2 turns. When the Shield is active Increase DEF by $3."
+r:"^使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的護盾，護盾存在時防禦力提升(\d+%)，持續2回合。$"="Grant all allies <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> Shield for 2 turns. When the Shield is active Increase DEF by $3."
 
 Sandalphon
-r:"^使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的護盾，主目標同伴處於該護盾下時造成的傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續2回合。$"="Grants all allies <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> Shield. Increase the main target's DMG Dealt by <color\=#fffc40>$3</color> when they have this Shield for 2 turns."
-r:"^使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的護盾，主目標同伴處於護盾下時造成的傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續2回合。$"="Grants all allies <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> Shield. Increase the main target's DMG Dealt by <color\=#fffc40>$3</color> when they have Shield for 2 turns."
+r:"^使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的護盾，主目標同伴處於該護盾下時造成的傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續2回合。$"="Grant all allies <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> Shield. Increase the main target's DMG Dealt by <color\=#fffc40>$3</color> when they have this Shield for 2 turns."
+r:"^使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的護盾，主目標同伴處於護盾下時造成的傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續2回合。$"="Grant all allies <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> Shield. Increase the main target's DMG Dealt by <color\=#fffc40>$3</color> when they have Shield for 2 turns."
 
 --- Debuffs ---
 
@@ -853,8 +856,8 @@ r:"^使所有敵人的攻擊力降低<color\=#fffc40>(\d+\.\d+%)</color>，效�
 r:"^使1名敵方攻擊、防禦、效果命中、效果抵抗降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Decrease ATK, DEF, Ailment ACC, and Ailment RES of 1 foe by <color\=#fffc40>$1</color> for $2 turns."
 
 Break Skills
-sr:"^使1名敵人的(.*)耐性消除，效果持續(\d+)回合。$"="Negates $1 resistance of 1 foe for $2 turns."
-sr:"^(.*)耐性·防壁消除。$"="Negates $1 resistance and wall."
+sr:"^使1名敵人的(.*)耐性消除，效果持續(\d+)回合。$"="Negate $1 resistance of 1 foe for $2 turns."
+sr:"^(.*)耐性·防壁消除。$"="Negate $1 resistance and wall."
 
 Temperament Disruption
 r:"^使所有敵人的防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>，受到傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Decrease all foes' DEF by <color\=#fffc40>$1</color> and increase their DMG Taken by <color\=#fffc40>$2</color> for $3 turns."
