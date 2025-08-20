@@ -187,7 +187,7 @@ r:"^1、{{E}}會率領眾鳥一同進攻。\n2、{{A}}與{{B}}每受到1次來�
 r:"^{{A}}與{{B}}每受到1次來自怪盜的傷害，使該名怪盜造成傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層。$"="After {{A}} and {{B}} take a hit of damage from a Thief, increase that Thief's DMG Dealt by $1 for $2 turns, up to $3 stacks."
 r:"^{{A}}與{{B}}每受到1次來自怪盜的傷害，使該名怪盜穿透提升(\d+%)，持續(\d+)回合，可疊加(\d+)層。$"="After {{A}} and {{B}} take a hit of damage from a Thief, increase that Thief's Pierce by $1 for $2 turns, up to $3 stacks."
 
-r:"^{{B}}每受到一次{{A}}技能/HIGHLIGHT/追加效果造成的傷害，自身後續受到對應屬性傷害提升(\d+%)，可疊加(\d+)層，持續(\d+)回合。$"="After {{B}} take 1 hit of damage from {{A}} Skill/HIGHLIGHT/Follow-Up, increase that element's DMG Taken by $1 for $3 turns, up to $2 stacks."
+r:"^{{B}}每受到一次{{A}}技能/HIGHLIGHT/追加效果造成的傷害，自身後續受到對應屬性傷害提升(\d+%)，可疊加(\d+)層，持續(\d+)回合。$"="After {{B}} take 1 hit of damage from {{A}} Skill/HIGHLIGHT/Follow Up, increase that element's DMG Taken by $1 for $3 turns, up to $2 stacks."
 
 r:"^{{A}}會對所有怪盜添加「{{A}}的詛咒」：受到傷害提升(\d+%)，怪盜釋放優越/救援/防衛類技能時可驅散「{{A}}的詛咒」，並使{{A}}獲得(\d+)層「詛咒反噬」：防禦力降低(\d+%)，可疊加(\d+)層，達到(\d+)層時額外使{{A}}受HIGHLIGHT傷害提升(\d+%)。$"="<size\=24>{{A}} will inflict all foes with [{{A}}'s Curse]: Increase DMG Taken by $1, dispel [{{A}}'s Curse] when a Thief use Strategist/Medic/Guardian type skills then inflict {{A}} with $2 stack of [Curse Reversal]: Decrease Defense by $3 up, to $4 stacks. Additionally increase HIGHLIGHT DMG Taken by $6 when reaching $5 stacks.</size>"
 {{A}}的詛咒={{A}}'s Curse
@@ -199,7 +199,7 @@ r:"^受<color\=#000000>H</color> L傷害提升$"="H<color\=#000000>I</color>GHLI
 深紅炮臺=Scarlet Turret
 
 r:"^擊敗{{A}}後，使{{B}}受到傷害提升，可疊加(\d+)層。$"="After defeating {{A}}, increase {{B}}'s DMG Taken. Stacks up to $1 times."
-r:"^對{{A}}造成傷害不計入積分，擊敗{{A}}後，使{{B}}受到傷害提升，可疊加(\d+)層。$"="Dealing damage to {{A}} does not count for score. After defeating {{A}}, increase {{A}}'s DMG Taken. Stacks up to $1 times."
+r:"^對{{A}}造成傷害不計入積分，擊敗{{A}}後，使{{B}}受到傷害提升，可疊加(\d+)層。$"="Dealing damage to {{A}} does not count for score. After defeating {{A}}, increase {{B}}'s DMG Taken. Stacks up to $1 times."
 r:"^擊敗{{A}}後，使{{B}}受到傷害提升，可疊加(\d+)層。對{{A}}造成傷害不計入積分。$"="After defeating {{A}}, increase {{B}}'s DMG Taken. Stacks up to $1 times. Dealing damage to {{A}} does not count for score"
 
 ----------
@@ -215,7 +215,7 @@ Modifiers
 隨著編入反抗/支配職業怪盜數量的增加，積分獲取效率也會相應增加。=<size\=26>Increase score gain for every Assassin/Sweeper Thief in team.</size>
 
 穩定領域=Stable Domain
-所有怪盜無法暴擊，{{A}}技能/追加效果造成的<color\=#FFFC40>最終傷害</color>提高，提高值\=暴擊率*(暴擊效果-100%)。（最多計入100%暴擊率）=Allies will not deal critical hits, increase {{A}} skill/Follow-Up <color\=#FFFC40>Final DMG</color> by Crit Rate x (Crit DMG - 100%)\n(Up to 100% Crit Rate)
+所有怪盜無法暴擊，{{A}}技能/追加效果造成的<color\=#FFFC40>最終傷害</color>提高，提高值\=暴擊率*(暴擊效果-100%)。（最多計入100%暴擊率）=Allies will not deal critical hits, increase {{A}} skill/Follow Up <color\=#FFFC40>Final DMG</color> by Crit Rate x (Crit DMG - 100%)\n(Up to 100% Crit Rate)
 
 狂暴領域=Frenzy Domain
 r:"^敵人每回合末使自身獲得(\d+)層<color\=#FFFC40>『狂暴』</color>。\n『狂暴』：最終傷害提升(\d+%)，可疊加。$"="Foes gain $1 stack of <color\=#FFFC40>[Frenzy]</color> at the end of each turn.\nFrenzy: Increase Final DMG by $2, can stack."
@@ -264,8 +264,8 @@ r:"^隊伍中編入防衛、救援職業隊員時，所有敵人造成最終傷�
 再動領域=Extra Action Domain
 r:"^所有怪盜處於<color\=#FFFC40>額外回合</color>時，暴擊率提升(\d+%)，暴擊效果提升(\d+%)$"="Increase Thieves' Crit Rate by $1 and Crit DMG by $2 during <color\=#FFFC40>Extra Action</color>"
 
-追加特化=Follow-Up Buff
-r:"^所有怪盜<color\=#FFFC40>追加效果</color>的暴擊效果提升(\d+%)、攻擊力提升(\d+%)$"="Increase Thieves' <color\=#FFFC40>Follow-Up</color> Crit DMG by $1 and Attack by $2"
+追加特化=Follow Up Buff
+r:"^所有怪盜<color\=#FFFC40>追加效果</color>的暴擊效果提升(\d+%)、攻擊力提升(\d+%)$"="Increase Thieves' <color\=#FFFC40>Follow Up</color> Crit DMG by $1 and Attack by $2"
 r:"^追<color\=#000000>加</color>特化"="F<color\=#000000>o</color>llow Up Buff"
 
 聖潔領域=Holy Domain
@@ -282,14 +282,14 @@ r:"^元<color\=#000000>素</color>領域$"="E<color\=#000000>l</color>emental Do
 治癒連攜=Heal-Link
 
 護盾連攜=Shield-Link
-r:"^所有怪盜<color\=#FFFC40>受到護盾</color>後，<color\=#FFFC40>追加效果</color>造成最終傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="After Thieves are <color\=#FFFC40>shielded</color>, increase <color\=#FFFC40>Follow-Up</color> Final DMG by $1 for $2 turns, up to $3 stacks"
+r:"^所有怪盜<color\=#FFFC40>受到護盾</color>後，<color\=#FFFC40>追加效果</color>造成最終傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="After Thieves are <color\=#FFFC40>shielded</color>, increase <color\=#FFFC40>Follow Up</color> Final DMG by $1 for $2 turns, up to $3 stacks"
 
 多重連攜=Multi-Link
 r:"^敵人每受到(\d+)次來自怪盜的傷害，使該名怪盜造成傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="Increase your DMG Dealt by $2 after dealing damage $1 time for $3 turns, up to $4 stacks"
 
-主角光環=Main Character Aura
+主角光環=Main Character Halo
 r:"^<color\=#FFFC40>WONDER</color>造成<color\=#FFFC40>最終傷害</color>提高(\d+%)，其他隊員造成最終傷害降低(\d+%)"="<size\=22>Increase <color\=#FFFC40>Wonder's Final DMG</color> by $1; \nDecrease other Thieves' Final DMG by $2</size>"
-r:"^主<color\=#000000>角</color>光環$"="M<color\=#000000>a</color>in Character Aura"
+r:"^主<color\=#000000>角</color>光環$"="M<color\=#000000>a</color>in Character Halo"
 
 豐饒領域=Abundance Domain
 r:"^豐<color\=#000000>饒</color>領域$"="A<color\=#000000>b</color>undance Domain"
@@ -475,8 +475,8 @@ Joyful Mode
 歡樂對決=Joyful Mode
 r:"^今日剩餘(\d+)/(\d+)次$"="Daily: $1/$2"
 基礎倍數：=Base Mult:
-准入擁有：=Access:
-本局消耗：=Consume: <size\=1>.</size>
+准入擁有：=Access: <size\=1>.</size>
+本局消耗：=Spend: <size\=1>.</size>
 大富豪金幣=Tycoon Coins
 『大富豪金幣』\n遊玩大富豪歡樂對決的必要貨幣。每一場對決都是財富與策略的較量！=[Tycoon Coins]\nNeeded to play Joyful Mode.
 遊玩大富豪歡樂對決的必要貨幣。每一場對決都是財富與策略的較量！=Needed to play Joyful Mode.
