@@ -368,6 +368,9 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的冰凍�
 Avalanche
 r:"^對<color\=#FFFF00>1名</color>敵人造成冰凍屬性傷害，有(\d+%)的固定機率無視弱點和倒地值，使目標陷入倒地狀態。若該技能使敵人陷入倒地狀態，則額外造成(\d+)次冰凍屬性傷害。$"="Deal Ice damage to <color\=#FFFF00>1</color> foe, with a $1 fixed chance to ignore weakness and Down Points to down the foe. If this skill downed the foe, deal $2 hit of Ice damage."
 
+Divine Fathom
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害，使敵人受到追加效果傷害增幅提升(\d+%)，受到冰凍屬性傷害提升(\d+%)，持續(\d+)回合。$"="Deal Ice damage to <color\=#FFFF00>all</color> foes equal to $1 of ATK. Increase all foes' Follow Up DMG Taken Amp by $2 and Ice DMG Taken by $3 for $4 turns."
+
 --- Electric ---
 
 Electric Surge
@@ -479,10 +482,10 @@ Fortune Devourer
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，並使所有敵人防禦力降低(\d+\.\d+%)、受到的持續傷害提升(\d+\.\d+%)，持續(\d+)回合$"="Deal $1 ATK Curse damage to <color\=#FFFF00>all</color> foes, decrease all foes' DEF by $2 and increase their Damage Over Time Taken by $3 for $4 turns."
 
 Single Target Basic Insta-kills
-r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，對低生命敵人機率造成即死效果"=<size\=24>Deals <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>1</color> foe with a chance of insta-kill to foes under 50% HP. The lower the HP, the higher the chance.</size>
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，對低生命敵人機率造成即死效果$"="Deal $1 ATK Curse damage to <color\=#FFFF00>1</color> foe with a chance of insta-kill to foes under 50% HP."
 
 AoE Curse Instakill
-r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，對低生命敵人機率造成即死效果"=Deal <color\=#FFFF00>$1</color> ATK Curse damage to <color\=#FFFF00>all</color> foes with a chance of insta-kill to foes under 50% HP. The lower the HP, the higher the chance.
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，對低生命敵人機率造成即死效果$"="Deal $1 ATK Curse damage to <color\=#FFFF00>all</color> foes with a chance of insta-kill to foes under 50% HP."
 
 Belial
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得1層『地獄火』，並使其身上的所有『地獄火』立刻結算一次，該次結算傷害提升200%。"=
@@ -976,7 +979,7 @@ r:"^受<color\=#000000>詛</color>咒傷害提高$"="C<color\=#000000>u</color>r
 r:"^受<color\=#000000>詛</color>咒傷害提升$"="C<color\=#000000>u</color>rse DMG Taken Up"
 r:"^弱<color\=#000000>點</color>暴露$"="W<color\=#000000>e</color>akness Exposed"
 
-r:"^瞄<color\=#000000>準</color>$"="M<color\=#000000>a</color>rked"
+r:"^瞄<color\=#000000>準</color>$"="M<color\=#000000>a</color>rk"
 r:"^物<color\=#000000>理</color>弱點$"="P<color\=#000000>h</color>ys Weakness"
 r:"^射<color\=#000000>擊</color>弱點$"="G<color\=#000000>u</color>n Weakness"
 r:"^火<color\=#000000>焰</color>弱點$"="F<color\=#000000>i</color>re Weakness"
@@ -1201,10 +1204,10 @@ r:"^下1個技能造成的傷害提升$"="Increase the DMG Dealt of your next sk
 r:"^下次造成的物理傷害提升$"="Increase your next Physical ATK damage"
 r:"^下次造成的魔法傷害提升$"="Increase your next Magic ATK damage"
 r:"^普通攻擊、槍械攻擊傷害提升(\d+(.\d+)?(%)?)$"="<size\=26>Increase Melee Attack/Gun Attack DMG by $1</size>"
-r:"^追加效果暴擊效果提升(\d+%)、攻擊力提升(\d+%)$"="Increase Follow-Up Crit DMG by $1 and Follow-Up ATK by $2"
-r:"^追加效果的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow-Up Final DMG by $1"
-r:"^追加效果造成最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow-Up Final DMG by $1"
-r:"^追加效果造成的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow-Up Final DMG by $1"
+r:"^追加效果暴擊效果提升(\d+%)、攻擊力提升(\d+%)$"="Increase Follow Up Crit DMG by $1 and Follow Up ATK by $2"
+r:"^追加效果的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up Final DMG by $1"
+r:"^追加效果造成最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up Final DMG by $1"
+r:"^追加效果造成的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up Final DMG by $1"
 r:"^HIGHLIGHT造成的傷害提升(\d+(.\d+)?(%)?)$"="Increase HIGHLIGHT DMG Dealt by $1"
 r:"^使用HL時，造成傷害提高(\d+(.\d+)?(%)?)$"="Increase HIGHLIGHT DMG Dealt by $1"
 r:"^HIGHLIGHT技能的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase HIGHLIGHT Final DMG by $1"
@@ -1314,7 +1317,7 @@ r:"^受到的傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Taken by $1"
 受到TECH傷害提升=Increase TECHNICAL DMG Taken
 
 r:"^詛咒反噬達到(\d+)層，受HIGHLIGHT傷害提升(\d+%)$"="Reached $1 stacks of Curse Reversal; \nIncrease HIGHLIGHT DMG Taken by $2"
-r:"^受到追擊傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow-Up DMG Taken by $1"
+r:"^受到追擊傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up DMG Taken by $1"
 r:"^受到持續傷害增加(\d+(.\d+)?(%)?)$"="Increase Damage Over Time Taken by $1"
 r:"^受到持續傷害效果提升(\d+(.\d+)?(%)?)$"="Increase Damage Over Time Taken by $1"
 r:"^受到最終傷害提升(\d+%)，最終傷害降低(\d+%)$"="Increase Final DMG Taken by $1; \nDecrease Final DMG by $2"

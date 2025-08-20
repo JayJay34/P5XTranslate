@@ -12,9 +12,9 @@ sr:"^(.*) <color\=#0F69CB>Lv.(\d+)</color>$"="$1 <color\=#0F69CB>Lv.$2</color>"
 
 <color\=#66ccff>精神異常</color>=<color\=#66ccff>Mental Ailment</color>
 <color\=#66ccff>元素異常</color>=<color\=#66ccff>Elemental Ailment</color>
-<color\=#66ccff>追加效果</color>=<color\=#66ccff>Resonance</color>
-追加效果=Resonance
-追加=Follow-Up
+<color\=#66ccff>追加效果</color>=<color\=#66ccff>Follow Up</color>
+追加效果=Follow Up
+追加=Follow Up
 滿足特定條件便可以觸發的效果。=An effect that can be triggered when certain conditions are met.
 
 <color\=#66ccff>燃燒</color>=<color\=#FF8C35>Burn</color>
@@ -157,6 +157,7 @@ No size on inherit skill names or else they won't work in the inherit menu
 狂風雪=Blizzard
 大冰河時期=Ice Age
 雪崩=Avalanche
+一尋之凜=Divine Fathom
 
 --- Electric ---
 
@@ -607,6 +608,9 @@ r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的冰凍�
 
 Avalanche
 r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，有(\d+%)的固定機率無視弱點和倒地值，使目標陷入倒地狀態。若該技能使敵人陷入倒地狀態，則額外造成1次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害。$"="Deal <color\=#fffc40>$1</color> ATK Ice damage to 1 foe, with a $2 fixed chance to ignore weakness and Down Points to down the foe. If this skill downed the foe, deal an additional <color\=#fffc40>$3</color> ATK Ice damage."
+
+Divine Fathom
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，使敵人受到追加效果傷害增幅提升<color\=#fffc40>(\d+%)</color>，受到冰凍屬性傷害提升<color\=#fffc40>(\d+%)</color>，持續(\d+)回合。$"="Deal Ice damage to all foes equal to <color\=#fffc40>$1</color> of ATK. Increase all foes' Follow Up DMG Taken Amp by <color\=#fffc40>$2</color> and Ice DMG Taken by <color\=#fffc40>$3</color> for $4 turns."
 
 --- Electric ---
 
