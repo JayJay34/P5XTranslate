@@ -10,6 +10,7 @@ Skill Level up Description //
 近戰攻擊的傷害倍率隨角色等級提升。=Increase Melee Attack damage multiplier based on Lv.
 使用近戰武器，對1名敵人造成物理屬性的少量傷害=Deal light Phys damage to 1 foe
 使用近戰武器，對1名敵人造成物理屬性的少量傷害。=Deal light Phys damage to 1 foe.
+使用近戰武器，對1名敵人造成射擊屬性的少量傷害。=Deal light Gun damage to 1 foe.
 
 槍械射擊=Gun Attack
 槍械攻擊=Gun Attack
@@ -369,7 +370,7 @@ Avalanche
 r:"^對<color\=#FFFF00>1名</color>敵人造成冰凍屬性傷害，有(\d+%)的固定機率無視弱點和倒地值，使目標陷入倒地狀態。若該技能使敵人陷入倒地狀態，則額外造成(\d+)次冰凍屬性傷害。$"="Deal Ice damage to <color\=#FFFF00>1</color> foe, with a $1 fixed chance to ignore weakness and Down Points to down the foe. If this skill downed the foe, deal $2 hit of Ice damage."
 
 Divine Fathom
-r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害，使敵人受到追加效果傷害增幅提升(\d+%)，受到冰凍屬性傷害提升(\d+%)，持續(\d+)回合。$"="Deal Ice damage to <color\=#FFFF00>all</color> foes equal to $1 of ATK. Increase all foes' Follow Up DMG Taken Amp by $2 and Ice DMG Taken by $3 for $4 turns."
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害，使敵人受到追加效果傷害增幅提升(\d+\.\d+%)，受到冰凍屬性傷害提升(\d+\.\d+%)，持續(\d+)回合。$"="Deal Ice damage to <color\=#FFFF00>all</color> foes equal to $1 of ATK. Increase all foes' Follow Up DMG Taken Amp by $2 and Ice DMG Taken by $3 for $4 turns."
 
 --- Electric ---
 
@@ -750,6 +751,7 @@ r:"^解除了(\d+)個狀態降低效果！$"="Dispelled $1 stats debuff!"
 
 sr:"^<color\=#FF0000>(.*)</color>的『(.*)』恢復了$"="<color\=#FF0000>$1</color> restored [$2]!"
 sr:"^<color\=#FF0000>(.*)</color>獲得了『(.*)』$"="<color\=#FF0000>$1</color> gained [$2]"
+sr:"^<color\=#FF0000>(.*)、(.*)、(.*)、(.*)、(.*)</color>獲得了『(.*)』……$"="<color\=#FF0000>$1, $2, $3, $4, $5</color> gained [$6]..."
 sr:"^<color\=#FF0000>(.*)</color>獲得了「(.*)」……$"="<color\=#FF0000>$1</color> gained [$2]..."
 sr:"^<color\=#FF0000>(.*)</color>獲得了(\d+)層『(.*)』……$"="<color\=#FF0000>$1</color> gained $2 stack(s) of [$3]..."
 sr:"^<color\=#FF0000>(.*)</color>獲得了『(.*)』,受到的最終傷害降低……$"="<color\=#FF0000>$1</color> gained [$2]..."
@@ -949,6 +951,7 @@ r:"^受<color\=#000000>到</color>治療效果降低$"="H<color\=#000000>e</colo
 r:"^受<color\=#000000>傷</color>害提升$"="D<color\=#000000>M</color>G Taken Up"
 r:"^受<color\=#000000>到</color>傷害提高$"="D<color\=#000000>M</color>G Taken Up"
 r:"^受<color\=#000000>到</color>傷害提升$"="D<color\=#000000>M</color>G Taken Up"
+r:"^受<color\=#000000>追</color>加效果傷害提高$"="F<color\=#000000>o</color>llow Up DMG Taken Up"
 r:"^受<color\=#000000>持</color>續傷害效果提升$"="D<color\=#000000>a</color>mage Over Time Taken Up"
 r:"^受<color\=#000000>最</color>終傷害提高$"="F<color\=#000000>i</color>nal DMG Taken Up"
 r:"^受<color\=#000000>到</color>最終傷害提高$"="F<color\=#000000>i</color>nal DMG Taken Up"
@@ -1026,12 +1029,14 @@ Inspect Details - TITLES
 HIGHLIGHT傷害提升=Increase HIGHLIGHT DMG
 造成傷害提升=Increase DMG Dealt
 造成傷害提高=Increase DMG Dealt
+造成最終傷害提升=Increase Final DMG Dealt
 受傷害提升=Increase DMG Taken
 受到傷害提高=Increase DMG Taken
 受到傷害提升=Increase DMG Taken
 受到傷害增加=Increase DMG Taken
 受到暴擊效果提升=Increase Crit DMG Taken
 受HL傷害提升=Increase HIGHLIGHT DMG Taken
+受追加效果傷害提高=Increase Follow Up DMG Taken
 受持續傷害效果提升=<size\=22>Increase Damage Over Time Taken</size>
 受百分比傷害降低=<size\=23>Decrease Percentage DMG Taken</size>
 受到百分比傷害降低=Decrease Percentage DMG Taken
@@ -1197,6 +1202,7 @@ r:"^造成傷害提升(\d+%)，可疊加(\d+)層$"="Increase DMG Dealt by $1, up
 r:"^所有同伴造成的傷害提升(\d+(.\d+)?(%)?)。$"="Increase DMG Dealt by $1"
 r:"^造成傷害提高(\d+%)，可疊加(\d+)層$"="Increase DMG Dealt by $1, up to $2 stacks"
 r:"^造成傷害提高(\d+%)、受到傷害提高(\d+%)$"="Increase DMG Dealt by $1; \nIncrease DMG Taken by $2"
+r:"^造成最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG Dealt by $1"
 r:"^造成的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG Dealt by $1"
 r:"^技能傷害提升(\d+(.\d+)?(%)?)$"="Increase Skill DMG by $1"
 r:"^下一技能傷害提升(\d+(.\d+)?(%)?)$"="Increase your next Skill DMG by $1"
@@ -1219,6 +1225,7 @@ r:"^受到的傷害降低(\d+(.\d+)?(%)?)$"="Decrease DMG Taken by $1"
 r:"^受到百分比傷害大幅降低$"="Heavily decrease DMG Taken%"
 r:"^受到百分比傷害特大幅降低$"="Severely decrease DMG Taken%"
 r:"^受到百分比傷害極大幅降低$"="Severely decrease DMG Taken%"
+r:"^每層使自身受到的傷害降低(\d+%)，受到追加效果的傷害時會損失(\d+)層$"="Decrease Final DMG Taken by $1, lose $2 stack after taking Follow Up damage"
 r:"^受到最終傷害降低(\d+(.\d+)?(%)?)$"="Decrease Final DMG Taken by $1"
 r:"^受到的最終傷害降低(\d+(.\d+)?(%)?)$"="Decrease Final DMG Taken by $1"
 r:"^最終受到傷害降低(\d+(.\d+)?(%)?)$"="Decrease Final DMG Taken by $1"
@@ -1235,10 +1242,12 @@ r:"^射擊傷害提升(\d+(.\d+)?(%)?)$"="Increase Gun DMG by $1"
 r:"^射擊傷害提高(\d+(.\d+)?(%)?)$"="Increase Gun DMG by $1"
 r:"^火焰傷害提升(\d+(.\d+)?(%)?)$"="Increase Fire DMG by $1"
 r:"^火焰傷害提高(\d+(.\d+)?(%)?)$"="Increase Fire DMG by $1"
+r:"^火焰屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase Fire DMG by $1"
 r:"^火炎傷害提升(\d+(.\d+)?(%)?)$"="Increase Fire DMG by $1"
 r:"^火炎傷害提高(\d+(.\d+)?(%)?)$"="Increase Fire DMG by $1"
 r:"^冰凍傷害提升(\d+(.\d+)?(%)?)$"="Increase Ice DMG by $1"
 r:"^冰凍傷害提高(\d+(.\d+)?(%)?)$"="Increase Ice DMG by $1"
+r:"^造成的冰凍屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase Ice DMG Dealt by $1"
 r:"^凍結傷害提升(\d+(.\d+)?(%)?)$"="Increase Ice DMG by $1"
 r:"^凍結傷害提高(\d+(.\d+)?(%)?)$"="Increase Ice DMG by $1"
 r:"^每層提升(\d+(.\d+)?(%)?)的凍結傷害$"="Increase Ice DMG by $1 per stack"
@@ -1289,6 +1298,7 @@ sr:"^(.*)屬性的適應性變為耐$"="Change $1 resistance to Resist"
 免疫倒地值傷害=Nullify Down Point damage
 免疫精神異常效果及控制效果=Nullify Mental and Control Ailments
 無法被怪盜方當作技能目標=Cannot be targeted by Thieves
+抵消一定的傷害=Can negate some damage
 
 ----------
 Inspect Details - DEBUFF
@@ -1318,6 +1328,8 @@ r:"^受到的傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Taken by $1"
 
 r:"^詛咒反噬達到(\d+)層，受HIGHLIGHT傷害提升(\d+%)$"="Reached $1 stacks of Curse Reversal; \nIncrease HIGHLIGHT DMG Taken by $2"
 r:"^受到追擊傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up DMG Taken by $1"
+r:"^受追加效果傷害提高(\d+(.\d+)?(%)?)$"="Increase Follow Up DMG Taken by $1"
+r:"^受到追加效果傷害增幅提升(\d+(.\d+)?(%)?)$"="Increase Follow Up DMG Taken Amp by $1"
 r:"^受到持續傷害增加(\d+(.\d+)?(%)?)$"="Increase Damage Over Time Taken by $1"
 r:"^受到持續傷害效果提升(\d+(.\d+)?(%)?)$"="Increase Damage Over Time Taken by $1"
 r:"^受到最終傷害提升(\d+%)，最終傷害降低(\d+%)$"="Increase Final DMG Taken by $1; \nDecrease Final DMG by $2"
