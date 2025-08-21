@@ -2206,11 +2206,45 @@ r:"^對1名敵人造成電擊屬性傷害，有機率使敵人陷入<link\="s\|1
 階段二特性=Phase 2 Mechanics
 階段三特性=Phase 3 Mechanics
 
-r:"^1、{{B}}的回合結束時，會獲得「恐懼之力」；每個一定回合，{{B}}會消耗「恐懼之力」釋放「巨鯊威懾」或「巨鯊凝視」使(\d+)名敵人受到傷害提升並陷入恐懼狀態，一定回合後逃跑。\n2、有隨從在場時，{{B}}全適應性會變為耐並獲得大幅最終傷害減免；隨從全部死亡時，{{B}}全適應性會變為弱，受到追加效果傷害大幅提升，但是自身造成的最終傷害也會提升。\n3、{{A}}會在(\d+)回合後自爆，對所有敵人造成大量傷害。\n4、{{B}}處在一階段時，無法被選中，但會在所有隊友死亡時進入二階段。$"="At the end of {{B}}'s turn, gain [Fear Power]; Every few turns, {{B}} will spend [Fear Power] to use [Shark's Intimidation] or [Shark's Gaze] to increase $1 foe's DMG Taken and inflict Fear, escape from battle after a few turns.\n2. When there is a minion, {{B}} will change all resistances to Resist and heavily increase Final DMG RES; When all minions die, change all resistance to Weak and heavily increase Follow Up Final DMG Taken, but increase Final DMG Dealt.\n3. {{A}} will Self Destruct after $2 turns, dealing heavy damage to all foes.\n4. During phase 1, {{B}} has Untargetable, but enter phase 2 when all allies die."
+首領詞綴=Boss Affix
+r:"^1、{{B}}的回合結束時，會獲得「恐懼之力」；每隔一定回合，{{B}}會消耗「恐懼之力」釋放「巨鯊威懾」或「巨鯊凝視」使(\d+)名敵人受到傷害提升並陷入恐懼狀態，一定回合後逃跑。\n2、有隨從在場時，{{B}}全適應性會變為耐並獲得大幅最終傷害減免；隨從全部死亡時，{{B}}全適應性會變為弱，受到追加效果傷害大幅提升，但是自身造成的最終傷害也會提升。\n3、{{A}}會在(\d+)回合後自爆，對所有敵人造成大量傷害。\n4、{{B}}處在一階段時，無法被選中，但會在所有隊友死亡時進入二階段。$"="1. At the end of {{B}}'s turn, gain [Fear Power]; Every few turns, {{B}} will spend [Fear Power] to use [Shark's Intimidation] or [Shark's Gaze] to increase $1 foe's DMG Taken and inflict Fear, escape from battle after a few turns.\n2. When there is a minion, {{B}} will change all resistance to Resist and heavily increase Final DMG RES; When all minions die, change all resistance to Weak and heavily increase Follow Up Final DMG Taken, but increase Final DMG Dealt.\n3. {{A}} will Self Destruct after $2 turns, dealing heavy damage to all foes.\n4. During phase 1, {{B}} has Untargetable, but enter phase 2 when all minions die."
 恐懼之力=Fear Power
+r:"^恐<color\=#000000>懼</color>之力$"="F<color\=#000000>e</color>ar Power"
+巨鮫之舞=Shark's Dance
+使所有同伴造成的傷害提升，並獲得可抵禦一定傷害的護盾。=Increase all allies' DMG Dealt and grant all allies shield.
 巨鯊威懾=Shark's Intimidation
+r:"^消耗所有『恐懼之力』使1名敵人陷入恐懼狀態，(\d+)回合後逃跑；同時使其受到的傷害提升，消耗的『恐懼之力』越多，受到傷害提升越高$"="Spend all [Fear Power] to inflict 1 foe with Fear, escape from battle after $1 turns; Increase their DMG Taken for every [Fear Power] spent."
 巨鯊凝視=Shark's Gaze
+r:"^巨<color\=#000000>鯊</color>凝視$"="S<color\=#000000>h</color>ark's Gaze"
+r:"^消耗所有『恐懼之力』使1名敵人陷入恐懼狀態，(\d+)回合後逃跑；同時使其受到的傷害提升，消耗的『恐懼之力』越多，受到傷害提升越高。並且使該單位獲得『巨鯊凝視』，被『巨鯊凝視』的單位受到攻擊的機率提升。$"="Spend all [Fear Power] to inflict 1 foe with Fear, escape from battle after $1 turns; Increase their DMG Taken for every [Fear Power] spent. Inflict the target with [Shark's Gaze], target with [Shark's Gaze] increase chance of being targeted by attacks."
 自爆=Self Destruct
+r:"^(\d+)回合後，扣除自身所有生命值對所有敵人造成大量物理屬性傷害。$"="After $1 turns, self destruct and deal heavy Phys damage to all foes."
+預備自爆=Preparing to Self Destruct
+r:"^(\d+)回合後自爆！$"="Self Destruct after $1 turn(s)!"
+對1名敵人造成萬能屬性傷害，無視其防禦力。=Deal Almighty damage to 1 foe enemy, ignoring their DEF.
+群鮫之噬=Shark's Bite
+對所有敵人造成大量冰凍屬性傷害，並基於當前敵人的生命值造成額外傷害=Deal heavy Ice damage to all foes, deal additional damage based on foe's HP
+巨鯊突襲=Shark's Assault
+對1名敵人造成冰凍屬性傷害。目標當前生命值百分比越低，傷害越高。=Deal Ice damage to 1 foe. Increase damage based on foe's missing HP
+海妖守護=Siren's Protection
+r:"^海<color\=#000000>妖</color>守護$"="S<color\=#000000>i</color>ren's Protection"
+友方單位存活時，全適應性變為耐=When a minion is on the field, \nchange all resistance to Resist
+r:"^友方單位存活時，受到的最終傷害降低(\d+%)$"="When a minion is on the field, \ndecrease Final DMG Taken by $1"
+{{A}}可以感知敵人內心深處的恐懼來強化自己={{A}} can sense foe's fear to strengthen himself.
+恃強淩弱=Brute Force
+{{A}}根據自身「恐懼之力」的層數獲得傷害提升。={{A}} increase damage based on [Fear Power] stacks.
+深度感知=Depth Perception
+{{A}}回合結束時，根據場上友方單位的數量額外獲得一定「恐懼之力」層數。=At the end of {{A}}'s turn, gain [Fear Power] stacks based on the number of minions on the field.
+睚眥必報=Eye for an Eye
+每個回合結束時，若該回合有友方單位死亡，{{A}}會額外釋放1次「群鮫之噬」。=At the end of each turn, if a minion died, {{A}} will additionally use [Shark's Bite].
+輻射變異=Radiated Mutation
+{{A}}的隨從有機率獲得「{{A}}的庇佑」，受到的最終傷害降低。={{A}}'s minions have a chance to gain [{{A}}'s Blessing], decreasing Final DMG Taken.
+{{A}}的庇佑={{A}}'s Protection
+究極恐懼=Extreme Fear
+r:"^{{A}}使敵人恐懼後，敵人(\d+)回合後逃跑；被「巨鯊凝視」的單位造成的最終傷害降低。$"="After {{A}} inflict Fear, the target will escape from battle after $1 turn; Foes with [Shark's Gaze] decrease Final DMG Dealt."
+<color\=#FF0000>{{A}}</color>的全屬性適應性變為耐……=<color\=#FF0000>{{A}}</color> changed all resistance to Resist...
+<color\=#FF0000>{{A}}</color>的全屬性適應性恢復了…=<color\=#FF0000>{{A}}</color> reverted resistance...
+r:"^<color\=#FF0000>{{A}}</color>(\d+)回合後自爆！！$"="<color\=#FF0000>{{A}}</color> will Self Destruct after $1 turn(s)!!"
 
 ----------
 Sea of Souls Trials (SoS)
@@ -2348,7 +2382,7 @@ r:"^1、特殊的{{A}}會源源不斷的召喚隨從來作戰；隨從被擊殺�
 
 進入戰鬥時，{{A}}會召喚隨從來作戰；隨從被擊殺時，{{A}}會根據死亡隨從承受的總傷害受到萬能傷害。=At the start of battle, {{A}} will summon minions; When defeating minions, {{A}} takes Almighty damage equal to the total damage the defeated minions take.
 
-r:"^1、進入戰鬥時，{{A}}會召喚(\d+)個隨從與之並肩作戰，{{A}}與所有隨從處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n2、{{A}}每個回合會為所有友方添加(\d+)層「火焰巨人的守護」，最多可疊加(\d+)層，每層可使自身受到的最終傷害減免(\d+%)。\n3、受到守護的單位受到追加效果造成的傷害後，會被驅散(\d+)層「火焰巨人的守護」。$"="<size\=22>1. At the start of battle, {{A}} will summon $1 minions, {{A}} and all minions have <color\=#ff3b37>[Lifelink]</color>.\n[Lifelink]: Distributes all damage received between all Shadows who shares this condition, based on the percentage of their current HP.\n2. {{A}} will give all allies $2 [Fire Giant's Protection] stack. Stacks up to $3 times. Each stack decreases Final DMG Taken by $4.\n3. After a protected ally takes damage from a Follow Up, dispel $5 [Fire Giant's Protection] stack.</size>"
+r:"^1、進入戰鬥時，{{A}}會召喚(\d+)個隨從與之並肩作戰，{{A}}與所有隨從處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n2、{{A}}每個回合會給所有友方添加(\d+)層「火焰巨人的守護」，最多可疊加(\d+)層，每層可使自身受到的最終傷害減免(\d+%)。\n3、受到守護的單位受到追加效果造成的傷害後，會被驅散(\d+)層「火焰巨人的守護」。$"="<size\=23>1. At the start of battle, {{A}} will summon $1 minions, {{A}} and all minions have <color\=#ff3b37>[Lifelink]</color>.\n[Lifelink]: Distributes all damage received between all Shadows who shares this condition, based on the percentage of their current HP.\n2. {{A}} will give all allies $2 [Fire Giant's Protection] stack. Stacks up to $3 times. Each stack decreases Final DMG Taken by $4.\n3. After a protected ally takes Follow Up damage, dispel $5 [Fire Giant's Protection] stack.</size>"
 火焰巨人的守護=Fire Giant's Protection
 r:"^火<color\=#000000>焰</color>巨人的守護$"="F<color\=#000000>i</color>re Giant's Protection"
 
@@ -2442,6 +2476,6 @@ sr:"^以友方為目標使用藥品後，使主目標獲得『(.*)』；『(.*)�
 r:"^遠<color\=#000000>古</color>湧泉$"="A<color\=#000000>n</color>cient Spring"
 
 磁極石脈=Magnetic Vein
-sr:"^釋放{{A}}技能、追加效果、HIGHLIGHT、{{B}}時，自身獲得(.*)層『(.*)』；『(.*)』：造成的最終傷害提升(\d+%)，持續(\d+)回合，最多可疊加(\d+)層。$"="<size\=23>When using a {{A}} skill, Follow Up, HIGHLIGHT, and {{B}}, user gains $1 [$2] stack; [$3]: Increase Final DMG Dealt by $4 for $5 turns. Stacks up to $6 times.</size>"
+sr:"^釋放(.*)技能、追加效果、HIGHLIGHT、(.*)時，自身獲得(.*)層『(.*)』；『(.*)』：造成的最終傷害提升(\d+%)，持續(\d+)回合，最多可疊加(\d+)層。$"="<size\=21>When using a $1 skill, Follow Up, HIGHLIGHT, and $2, gain $3 [$4] stack; [$5]: Increase Final DMG Dealt by $6 for $7 turns. Stacks up to $8 times.</size>"
 能量諧振=Energy Resonance
 r:"^能<color\=#000000>量</color>諧振$"="E<color\=#000000>n</color>ergy Resonance"
