@@ -352,6 +352,7 @@ r:"^夏<color\=#ff0000ff>川</color> {{A}}$"="{{A}} Nat<color\=#ff0000ff>su</col
 r:"^橋<color\=#ff0000ff>本</color> {{A}}$"="{{A}} Ha<color\=#ff0000ff>shi</color>moto"
 r:"^鹿<color\=#ff0000ff>野</color> {{A}}$"="{{A}} Shi<color\=#ff0000ff>ka</color>no"
 r:"^宮<color\=#ff0000ff>下</color> {{A}}$"="{{A}} Mi<color\=#ff0000ff>ya</color>shita"
+r:"^片<color\=#ff0000ff>山</color> {{A}}$"="{{A}} Ka<color\=#ff0000ff>ta</color>yama"
 
 P5X Side Quest
 r:"^<color\=#ff0000ff>阿</color>七$"="Shi<color\=#ff0000ff>chi</color>-kun"
@@ -925,6 +926,7 @@ r:"^Lv.(\d+)解鎖購買$"="Unlocks at Lv. $1"
 操作模式切換為鍵鼠。=Mouse & Keyboard Mode
 操作模式切換為手把。=Controller Mode
 活動倒計時：=Event Countdown:
+暫未解鎖=Not unlocked
 
 ----------
 Profile Menu
@@ -942,12 +944,12 @@ Profile Menu
 更換聊天框=Chat Box
 更換壁紙=Wallpaper
 遮罩此人=Block
-r:"^每日最多可獲取<color\=#FF0000>10</color>點<link\="s\|1002"><u>助戰積分</u></link>。$"="Up to <color\=#FF0000>10</color> <link\="s|1002"><u>Friend Points</u></link> per day."
-<color\=#66ccff>『助戰積分』</color>=<color\=#66ccff>[Friend Points]</color>
-協助其他玩家完成挑戰；\n或使用其他玩家協助怪盜，\n均可以獲得「助戰積分」。\n在「兌換·助戰回饋」中可以消耗積分兌換獎勵。=<size\=24>Gain [Friend Points] when: \nAssisting other players; \nUsing other player's Assist Thief. \nCan be used in [Assist Reward].
-『助戰積分』\n協助好友成功完成挑戰；挑戰時使用協助怪盜；均可以獲得助戰積分。=<size\=27>[Friend Points]\nGain [Friend Points] when: \nAssisting other players; \nUsing other player's Assist Thief. \nCan be used in [Assist Reward].</size>
-助戰積分=Friend Points
-未獲得更多助戰積分。=No Friend Points.
+r:"^每日最多可獲取<color\=#FF0000>10</color>點<link\="s\|1002"><u>助戰積分</u></link>。$"="Up to <color\=#FF0000>10</color> <link\="s|1002"><u>Assist Reward</u></link> per day."
+<color\=#66ccff>『助戰積分』</color>=<color\=#66ccff>[Assist Reward]</color>
+協助其他玩家完成挑戰；\n或使用其他玩家協助怪盜，\n均可以獲得「助戰積分」。\n在「兌換·助戰回饋」中可以消耗積分兌換獎勵。=<size\=24>Gain [Assist Reward] when: \nAssisting other players; \nUsing other player's Assist Thief. \nCan be used in [Assist Reward].
+『助戰積分』\n協助好友成功完成挑戰；挑戰時使用協助怪盜；均可以獲得助戰積分。=<size\=27>[Assist Reward]\nGain [Assist Reward] when: \nAssisting other players; \nUsing other player's Assist Thief. \nCan be used in [Assist Reward].</size>
+助戰積分=Assist Reward
+未獲得更多助戰積分。=No Assist Reward.
 複製成功。=Copy success.
 
 尚未加入樂園。=No Affiliation
@@ -1942,6 +1944,12 @@ r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n可以在{{B
 r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n所有藥品的售賣價格降低(\d+%)。$"="<size\=24><color\=#FFC000>Rank $1</color>: Decrease all medicine price by $2.</size>"
 r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n在戰鬥中使用回復類藥品時效果提升(\d+%)。$"="<size\=24><color\=#FFC000>Rank $1</color>: Increase all recovery item effect by $2.</size>"
 
+r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n在學校上課時，額外獲得更多「人格指數」。$"="<size\=24>Gain Synergy with [<color\=#FFC000>{{A}}</color>]: Gain more [Social Stats] when listening to lecture."
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n進行「學習」相關的都市日程時，額外獲得更多「人格指數」。$"="<size\=24><color\=#FFC000>Rank $1</color>: Gain more [Social Stats] when doing [Study] related City Activities.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n進行「社團」相關的都市日程時，額外獲得更多「人格指數」。$"="<size\=24><color\=#FFC000>Rank $1</color>: Gain more [Social Stats] when doing [Club] related City Activities.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n在學校上課時，有機率獲得「體力」或「行動力」。$"="<size\=24><color\=#FFC000>Rank $1</color>: There is a chance to gain [Stamina] or [Action Points] when when listening to lecture.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n進行「學習」相關的都市日程時，額外獲得少量「經驗材料」。$"="<size\=24><color\=#FFC000>Rank $1</color>: Gain [EXP Materials] when doing [Study] related City Activities.</size>"
+
 解鎖新能力=Unlock Skill
 人格指數=Social Stats
 都市五維=Social Stats
@@ -2231,6 +2239,7 @@ r:"^幫助{{A}}$"="<size\=24>Help out\n{{A}}</size>"
 
 和{{A}}出去玩吧=<size\=24>Spend time with\n{{A}}</size>
 r:"^和{{A}}一起度過$"="<size\=24>Spend time with\n{{A}}</size>"
+r:"^和{{A}}相處$"="<size\=24>Spend time with\n{{A}}</size>"
 和{{A}}一起度過放學後的時光吧=Let's spend some time with {{A}} after school
 r:"^和清一起度過$"="<size\=24>Spend time with\nKiyoshi</size>"
 
@@ -2686,7 +2695,9 @@ Resources & Shop Items (Marthym's Shop)
 r:"^周中補給禮(\d+)$"="Midweek Set $1"
 超惠星願禮=Newcomer Pass
 r:"^(.*)之禮$"="Ltd. Platinum Set"
+r:"^(.*)之禮·特供$"="Special Platinum Set"
 r:"^(.*)補給$"="Ltd. Milicoin Set"
+r:"^(.*)補給·特供$"="Special Milicoin Set"
 r:"^(.*)之禮(\d+)$"="Ltd. Platinum Set $2"
 r:"^(.*)補給(\d+)$"="Ltd. Milicoin Set $2"
 r:"^七日補給·(.*)$"="Seven-Day Spoils Pass"
@@ -4679,20 +4690,297 @@ r:"^見證第(\d+)章經營故事$"="Witness Business Stories Chapter $1"
 r:"^完成「經營故事」Chapter(\d+)$"="Clear [Business Stories] Chapter $1"
 r:"^完成(\d+)個夏日回憶\((\d+)\/(\d+)\)$"="Clear $1 Summer Memories ($2/$3)"
 r:"^將店鋪「海之家」升至(\d+)級\((\d+)\/(\d+)\)$"="Upgrade Beach House to Lv. $1 ($2/$3)"
-r:"^在釣場(\d+)進行一次海釣$"="Go Sea Fishing at Fishing Spot $1"
-r:"^進行(\d+)次海釣\((\d+)\/(\d+)\)$"="Go Sea Fishing $1 time(s) ($2/$3)"
+r:"^在釣場(\d+)進行一次海釣$"="Go Fishing at Fishing Spot $1"
+r:"^進行(\d+)次海釣\((\d+)\/(\d+)\)$"="Go Fishing $1 time(s) ($2/$3)"
 r:"^完成(\d+)個「海濱故事」\((\d+)\/(\d+)\)$"="Clear $1 [Waterfront Stories] ($2/$3)"
+r:"^與{{A}}完成(\d+)次出海釣魚$"="Go Fishing with {{A}} $1 time(s)"
+r:"^與{{A}}完成(\d+)次出海釣魚\((\d+)\/(\d+)\)$"="Go Fishing with {{A}} $1 time(s) ($2/$3)"
+r:"^和{{A}}完成(\d+)次出海釣魚\((\d+)\/(\d+)\)$"="Go Fishing with {{A}} $1 time(s) ($2/$3)"
+r:"^與{{A}}完成(\d+)次出海釣魚（請觀看前置故事）$"="Go Fishing with {{A}} $1 time(s)"
+r:"^和{{A}}完成(\d+)次出海釣魚（請觀看前置故事）$"="Go Fishing with {{A}} $1 time(s)"
+r:"^釣到(\d+)隻小型魚\((\d+)\/(\d+)\)$"="Catch $1 Small Fish ($2/$3)"
+r:"^釣到(\d+)隻中型魚\((\d+)\/(\d+)\)$"="Catch $1 Medium Fish ($2/$3)"
+r:"^釣到(\d+)隻大型魚\((\d+)\/(\d+)\)$"="Catch $1 Large Fish ($2/$3)"
+r:"^釣到(\d+)隻中型魚（請觀看前置故事）$"="Catch $1 Medium Fish"
+r:"^釣到(\d+)隻大型魚（請觀看前置故事）$"="Catch $1 Large Fish"
 
 r:"^(\d+)天(\d+)小時後開啟釣區$"="Unlocks after $1d $2h"
 r:"^(\d+)小時後開啟釣區$"="Unlocks after $1h"
 r:"^持續(\d+).(\d+)分鐘$"="Time: $1.$2m"
-圖鑑：=Compendium:
-最高漁分：=Highest Fishing Score:
+圖鑑：=<size\=19>Collections:</size>
+最高漁分：=<size\=19>Highest PT:</size>
 選擇出海的釣區，\n進行「<color\=#ff3b37>夏日海釣</color>」吧！=Select a <color\=#ff3b37>Fishing Spot</color> and go fishing!
 點擊「<color\=#ff3b37>確認出航</color>」\n開始海釣。=Click [<color\=#ff3b37>Set Sail</color>] to start fishing.
 r:"^獲得(\d+)PT$"="Gain $1 PT"
 r:"^釣(\d+)條魚$"="Catch $1 Fish"
 r:"^釣(\d+)條彩色魚$"="Catch $1 Rainbow Fish"
+r:"^觸發(\d+)次魚群風暴$"="Activate $1 Fish Storm"
+r:"^釣(\d+)條優質魚$"="Catch $1 Quality Fish"
+r:"^釣(\d+)條金或彩色魚$"="Catch $1 Gold or Rainbow Fish"
+r:"^以小博大釣(\d+)條魚$"="Use High Risk, High Reward to catch $1 Fish"
+r:"^釣(\d+)條小型魚$"="Catch $1 Small Fish"
+r:"^釣(\d+)條中型魚$"="Catch $1 Medium Fish"
+r:"^釣(\d+)條大型魚$"="Catch $1 Large Fish"
+r:"^釣(\d+)種不同的魚$"="Catch $1 different Fish"
+r:"^消耗(\d+)點直感$"="Spend $1 Intuition"
+r:"^消耗(\d+)點專注力$"="Spend $1 Focus"
+r:"^使用(\d+)次技能$"="Use $1 Skills"
+r:"^釣(\d+)條小丑魚$"="Catch $1 Clownfish"
+r:"^釣(\d+)條剝皮魚$"="Catch $1 Leatherjacket"
+
+海釣等級=Fishing
+r:"^海釣等級達到(\d+)級時，可獲得【(.*)】徽章$"="Obtain this badge when reaching Fishing LV.$1"
+當前海釣經驗=Fishing EXP
+沙洲淺灘=Sandy Shoal
+離岸礁群=Reef Cluster
+深海洋流=Deep Sea
+沙洲淺灘釣區=Sandy Shoal
+離岸礁群釣區=Reef Cluster
+深海洋流釣區=Deep Sea
+
+我的最高分=Personal Best
+玩家資訊=Player Info
+夥伴=Companion
+最高漁分=Highest PT
+漁分=Points
+
+釣場魚群=Fish at Fishing Spot
+已解鎖：=Unlocked:
+請選擇出行夥伴=Select Companion
+已選擇：=Selected:
+長按可查看夥伴技能詳情=<size\=24>Long press to view details</size>
+出海垂釣後是否拍照合影=<size\=24>Take photos after fishing?</size>
+
+漁人的直覺=Fisherman's Intuition
+r:"^消耗(.*)點<sprite\=1>直感，恢復(.*)點<sprite\=0>專注力。$"="<size\=24>Spend $1 <sprite\=1> Intuition to restore $2 <sprite\=0> Focus.</size>"
+
+{{A}}擅長快速釣魚，協助捕獲大量的魚。=<size\=20>{{A}} excels at fast fishing, helping to catch large numbers of fish.</size>
+出海技能=Skills
+精準拋投=Precision Casting
+r:"^達到(\d+)級後效果提升$"="Upgrades after reaching Lv.$1"
+r:"^消耗(.*)點<sprite\=0>專注力，使等待魚上鉤時間減少(.*)，提鉤範圍增加(.*)。持續(.*)次釣魚。$"="<size\=24>Spend $1 <sprite\=0> Focus to decrease bite time by $2 and increase hook range by $3. Lasts for $4 Fishing Attempts.</size>"
+中型魚專家=Medium Fish Expert
+r:"^達到(\d+)級解鎖$"="Unlocks after reaching Lv.$1"
+r:"^中型魚的優質率增加(.*)。$"="<size\=24>Increase Medium Fish quality rate by $1.</size>"
+遊艇增幅=<size\=24>Yacht Buff</size>
+精通=Mastery
+靈巧之證=Proof of Proficiency
+
+{{A}}擅長優質釣魚，協助提升魚的優質率。=<size\=20>{{A}} excels at quality fishing, helping to increase the quality rate of fish.</size>
+慧眼識魚=Keen Eye
+r:"^消耗(.*)點<sprite\=0>專注力，使釣上的魚優質率增加(.*)，持續(.*)次釣魚。$"="<size\=24>Spend $1 <sprite\=0> Focus to increase the quality rate of fish caught by $2. Lasts for $3 Fishing Attempts.</size>"
+大型魚專家=Large Fish Expert
+r:"^大型魚的優質率增加(.*)。$"="<size\=24>Increase Large Fish quality rate by $1.</size>"
+珍味之證=Proof of Taste
+
+{{A}}擅長回復魚群風暴進度，快速進入魚群風暴狀態。=<size\=20>{{A}} excels at restoring Fish Storm progress and quickly entering Fish Storm.</size>
+海洋魚暴=Ocean Fish Storm
+r:"^消耗(.*)點<sprite\=1>直感，立即增加(.*)點的魚群風暴進度。$"="<size\=24>Spend $1 <sprite\=1> Intuition to immediately increase Fish Storm progess by $2.</size>"
+r:"^立即增加(\d+)點的魚群風暴進度。$"="Immediately increase Fish Storm progess by $1."
+誘導專家=Luring Expert
+r:"^魚群風暴增長速度提高(.*)。$"="<size\=24>Increase Fish Storm growth rate by $1.</size>"
+魚信之證=Proof of Bite
+r:"^魚群風暴時間延長(.*)秒。$"="<size\=24>Extend Fish Storm by $1 seconds.</size>"
+
+{{A}}擅長回復支援，快速獲得直感。=<size\=20>{{A}} excels at recovery and gaining Intuition quickly.</size>
+援護時刻=Support Time
+r:"^消耗(.*)點<sprite\=0>專注力，每成功釣起一次魚有(.*)機率獲得(.*)點<sprite\=1>直感，持續(.*)次釣魚。$"="<size\=24>Spend $1 <sprite\=0> Focus, there is a $2 chance to gain $3 <sprite\=1> Intuition when catching a fish. Lasts for $3 Fishing Attempts.</size>"
+r:"^每成功釣起一次魚，有(\d+%)機率獲得(\d+)點<sprite\=1>直感。$"="There is a $1 chance to gain $2 <sprite\=1> Intuition when catching a fish."
+感悟專家=Perception Expert
+r:"^<sprite\=0>專注力每秒回復速度增加(.*)。$"="<size\=24>Increase <sprite\=0> Focus recovery rate per second by $1.</size>"
+直感之證=Proof of Intuition
+r:"^初始<sprite\=1>直感增加(.*)點。$"="<size\=24>Increase starting <sprite\=1> Intuition by $1.</size>"
+
+sr:"^在<color\=#ff3b37>(.*)</color>釣到(\d+)種不同的魚解鎖(.*)\((\d+)\/(\d+)\)$"="<size\=20>Catch $2 different fish at <color\=#ff3b37>$1</color> to unlock $3 ($4/$5)</size>"
+{{A}}擅長捕獲同種魚，可以再次捕獲前一次釣到的魚。=<size\=20>{{A}} excels at catching the same kind of fish, and can catch the last fish you caught.</size>
+追蹤定錨=Tracking Anchor
+r:"^消耗(.*)點<sprite\=1>直感，可以釣到和前一次同樣的魚，持續(.*)次釣魚。以小博大時無法發動技能，並且必須滿足魚的釣起條件時才能生效。$"="<size\=24>Spend $1 <sprite\=1> Intuition to catch the last fish you caught. Lasts for $2 Fishing Attempt. Cannot use this during High Risk, High Reward, will only work when the fish catching conditions are met.</size>"
+r:"^消耗(.*)點<sprite\=1>直感，可以釣到和前一次同樣的魚，並增加(.*)優質率，持續(.*)次釣魚。以小博大時無法發動技能，並且必須滿足魚的釣起條件時才能生效。$"="<size\=24>Spend $1 <sprite\=1> Intuition to catch the last fish you caught and increase quality rate by $2. Lasts for $3 Fishing Attempt. Cannot use this during High Risk, High Reward, will only work when the fish catching conditions are met.</size>"
+sr:"^可以釣到和前一次同樣的魚。會釣到的魚是：(.*)。（當前海域存在此魚時才會生效）$"="Catch the last fish you caught. The last fish caught: $1."
+sr:"^可以釣到和前一次同樣的魚，並增加(\d+%)優質率。會釣到的魚是：(.*)。（當前海域存在此魚時才會生效）$"="Catch the last fish you caugh and increase quality rate by $1. The last fish caught: $2."
+技巧專家=Technical Expert
+r:"^所有魚優質率增加(.*)。$"="<size\=24>Increase all fish quality rate by $1.</size>"
+謀略之證=Proof of Strategy
+
+{{A}}擅長優質釣魚，大幅提升優質率。=<size\=20>{{A}} excels at quality fishing, heavily increases quality rate.</size>
+匠人精神=Technician's Spirit
+r:"^消耗(.*)點<sprite\=1>直感，使釣上的魚優質率增加(.*)，持續(.*)次釣魚。$"="<size\=24>Spend $1 <sprite\=1> Intuition to increase the quality rate of fish caught by $2. Lasts for $3 Fishing Attempt.</size>"
+r:"^使釣上的魚優質率增加(\d+%)。$"="Increase the quality rate of fish caught by $1."
+小型魚專家=Small Fish Expert
+r:"^小型魚的優質率增加(.*)。$"="<size\=24>Increase Small Fish quality rate by $1.</size>"
+精準之證=Proof of Precision
+
+{{A}}擅長多重釣魚，捕獲更多數量的魚。=<size\=20>{{A}} excels at catching multiple fish, helping to catch more fish.</size>
+願者上鉤=A Willing Fish Gets Itself Caught
+r:"^消耗(.*)點<sprite\=0>專注力，提鉤必定釣到(.*)條魚，持續(.*)次釣魚。$"="<size\=24>Spend $1 <sprite\=0> Focus, you will always catch $2 fish. Lasts for $3 Fishing Attempts.</size>"
+r:"^提鉤必定釣到(\d+)條魚。$"="Will always catch $1 fish."
+釣技專家=Fishing Expert
+r:"^釣到金色以上品質魚的機率增加(.*)。$"="<size\=24>Increase the chance of catching Gold or higher quality fish by $1.</size>"
+漁者之證=Proof of Fisherman
+
+sr:"^觸發<color\=#ff3b37>(\d+)次</color>魚群風暴解鎖(.*)\((\d+)\/(\d+)\)$"="<size\=20>Activate Fish Storm <color\=#ff3b37>$1 times</color> to unlock $2 ($3/$4)</size>"
+{{A}}擅長捕獲不同種魚，可以使前一次釣到的魚暫時消失。=<size\=20>{{A}} excels at catching different kinds of fish, and can make the last fish you caught disappear.</size>
+粉絲效應=Fan Effect
+r:"^消耗(.*)點<sprite\=0>專注力，使上一竿釣到的魚暫時不再出現，持續(.*)次釣魚。$"="<size\=24>Spend $1 <sprite\=0> Focus to make the last fish you caught disappear. Lasts for $2 Fishing Attempts.</size>"
+sr:"^使上一杆釣到的魚暫時不再出現。消失的魚是：(.*)。$"="The last fish you caught disappear. The disappeared fish: $1."
+捕獲專家=Catching Expert
+r:"^所有魚提鉤範圍增加(.*)。$"="<size\=24>Increase hook range for all fish by $1.</size>"
+品質之證=Proof of Quality
+r:"^初始<sprite\=0>專注力增加(.*)點。$"="<size\=24>Increase starting <sprite\=0> Focus by $1.</size>"
+
+教學模式=Tutorial
+此處查看海釣<color\=#ff3b37>剩餘時間</color>。\n本次教學關不計時。=View <color\=#ff3b37>Remaining Time</color> here. This tutorial is not timed.
+「<color\=#00FFFF>專注力</color>」是海釣的重要資源，\n隨<color\=#ff3b37>時間流逝</color>不斷恢復=[<color\=#00FFFF>Focus</color>] will recover <color\=#ff3b37>over time</color>
+消耗「<color\=#00FFFF>專注力</color>」發動\n「<color\=#ff3b37>{{A}}</color>」的能力\n可減少上鉤的等待時間。=Spend [<color\=#00FFFF>Focus</color>] to use [<color\=#ff3b37>{{A}}</color>]'s skill and \ndecrease bite time.
+r:"^魚上鉤時間減少(\d+%)，提鉤範圍增加(\d+%)。$"="Decrease bite time by $1 and increase hook range by $2."
+點擊「<color\=#ff3b37>開始釣魚</color>」\n「<color\=#ff3b37>互動輪盤</color>」出現後，\n再點「<color\=#ff3b37>此處</color>」提鉤。=Click on [<color\=#ff3b37>Start Fishing</color>]\nAfter [<color\=#ff3b37>Interactive Wheel</color>] appears, click [<color\=#ff3b37>here</color>] again to lift the hook.
+消耗「<color\=#00FFFF>專注力</color>」使用\n「<color\=#ff3b37>{{A}}</color>」的技能。\n提高魚的<color\=#ff3b37>優質率</color>。=Spend [<color\=#00FFFF>Focus</color>] to use [<color\=#ff3b37>{{A}}</color>]'s skill and \nincrease <color\=#ff3b37>quality rate</color> of fish.
+r:"^優質率增加(\d+%)。$"="Increase quality rate by $1."
+再次「<color\=#ff3b37>開始釣魚</color>」=[<color\=#ff3b37>Start Fishing</color>] again
+r:"^「<color\=#FFFF00>直感</color>」\n釣到<color\=#ff3b37>優質魚</color>時增加(\d+)點$"="Increase [<color\=#FFFF00>Intuition</color>] by $1 \nwhen catching <color\=#ff3b37>Quality Fish</color>"
+r:"^消耗「<color\=#FFFF00>直感</color>」使用\n「<color\=#ff3b37>主角</color>」技能，\n可立即回復(\d+)點<color\=#00FFFF>專注力</color>。$"="Spend [<color\=#FFFF00>Intuition</color>] to use [<color\=#ff3b37>Wonder</color>]'s skill and \nimmediately restore <color\=#00FFFF>Focus</color> by $1."
+r:"^回復(\d+)點<sprite\=0>專注力。$"="Restore <sprite\=0> Focus by $1"
+在<color\=#ff3b37>紅色條</color>倒計時結束前，\n拋杆釣魚可以觸發「<color\=#ff3b37>以小博大</color>」。=Before the <color\=#ff3b37>Red Timer</color> ends.\nClick here to activate [<color\=#ff3b37>High Risk, High Reward</color>].
+「<color\=#ff3b37>魚餌選擇</color>」\n切換不同魚餌可吸引\n不同<color\=#ff3b37>體型</color>的魚。=Different [<color\=#ff3b37>baits</color>] can attract different <color\=#ff3b37>size</color> of fish.
+此外，每次釣到魚會累積\n「<color\=#ff3b37>魚群風暴進度</color>」。\n馬上就要滿了！=You will accumulate [<color\=#ff3b37>Fish Storm Progress</color>] \nevery time you catch a fish.
+「魚群風暴」=[Fish Storm]
+觸發「<color\=#ff3b37>魚群風暴</color>」後\n在此查看剩餘時間。=After activating [<color\=#ff3b37>Fish Storm</color>]\nyou can check the remaining time here.
+抓緊時間再次「<color\=#ff3b37>開始釣魚</color>」=Hurry up and [<color\=#ff3b37>Start Fishing</color>]
+r:"^觸發了「<color\=#ff3b37>波紋潮湧</color>」的增益，\n在(\d+)杆內可以釣到魚王。$"="Activated [<color\=#ff3b37>Ripple Tide</color>] buff,\nyou can catch the Top-Class Fish in the next $1 attempts."
+波紋潮湧=Ripple Tide
+r:"^魚王「(.*)」出沒中，接下來(\d+)杆內有機會釣起。$"="Chance to catch the Top-Class Fish [$1] in the next $2 attempts."
+r:"^每完成(\d+)個「<color\=#ff3b37>漁場任務</color>」\n獲得(\d+%)的漁分加成。$"="Every $1 completed [<color\=#ff3b37>Fishing Mission</color>] \nincrease Fishing Points Bonus by $2."
+解鎖內容=Unlocked Content
+「{{A}}」對釣魚有了新的領悟=[{{A}}] has a new understanding of fishing
+可以和「{{A}}」一起出海了=Can go out to sea with [{{A}}]
+沒有新解鎖內容=No new unlocked content
+釣場任務=Fishing Missions
+r:"^\+(\d+%)得分$"="+$1 Points"
+拖動更換夥伴位置=<size\=24>Drag to change companion position</size>
+海釣結束時與夥伴<color\=#ff3b37>拍照</color>留影，\n在此更換「<color\=#ff3b37>拍照預設</color>」=You can <color\=#ff3b37>take photos</color> with companions at the end of Fishing,\nyou can change [<color\=#ff3b37>presets</color>] here
+在此更換「<color\=#ff3b37>站位順序</color>」=Change [<color\=#ff3b37>standing order</color>] here
+決定好後，點此處「<color\=#ff3b37>拍照</color>」\n記錄下這美好的一刻吧！=After deciding, click here to [<color\=#ff3b37>take photos</color>]!
+如果忘記了玩法機制，\n可以在此「<color\=#ff3b37>回顧</color>」教程。=Click here to [<color\=#ff3b37>review</color> tutorial.
+
+類別=Category
+得分=Points
+釣起時間=Fishing Time
+r:"^(\d+).(\d+)-(\d+).(\d+)秒$"="$1.$2-$3.$4 Seconds"
+r:"^(\d+)-(\d+)秒$"="$1-$2 Seconds"
+最佳魚餌=Best Bait
+小型魚=Small Fish
+中型魚=Medium Fish
+大型魚=Large Fish
+任意魚餌=Any Bait
+
+神仙魚=Angelfish
+綠鰭魚=Bluefin Gurnard
+擬刺尾鯛=Blue Tang
+紅魚=Red Snapper
+鰹魚=Skipjack Tuna
+鯔魚=Flathead Gray Mullet
+月亮魚=Opah
+白腹鯖=Chub Mackerel
+小丑魚=Clownfish
+鈍吻黃蓋鰈=Marbled Flounder
+條石鯛=Spotted Knifejaw
+鱸魚=Sea Bass
+鮭魚=Salmon
+斑魢=Spotted Knifejaw
+剝皮魚=Leatherjacket
+竹莢魚=Japanese Jack Mackerel
+
+伊勢龍蝦=Japanese Spiny Lobster
+巨鼇蟹=Japanese Spider Crab
+旗魚=Marlin
+梭子蟹=Swimming Crab
+刺豚=Porcupinefish
+花鰭海豬魚=Saddle Wrasse
+馬頭魚=Horsehead Fish
+金目鯛=Splendid Alfonsino
+金梭魚=Barracuda
+鯛魚=Sea Bream
+帝王鮭=King Salmon
+沙鮻=Whiting
+黑鯛=Black Sea Bream
+鰤魚=Yellowtail
+
+藍鰭鮪魚=Bluefin Tuna
+冠海馬=Crowned Seahorse
+槍烏賊=Squid
+獅子魚=Lionfish
+星鰻=Spotted Garden Eel
+扁口魚=Olive Flounder
+巨石斑魚=Giant Grouper
+三線磯鱸=Threeline Grunt
+鰣魚=Reeves' Shad
+秋刀魚=Pacific Saury
+石斑魚=Grouper
+
+極其珍貴的神秘小型海洋生物，似乎需要達成特定的條件才會在海域中現身。=This super rare small sea creature will only appear after certain conditions are met.
+極其珍貴的神秘中型海洋生物，似乎需要達成特定的條件才會在海域中現身。=This super rare medium sea creature will only appear after certain conditions are met.
+極其珍貴的神秘大型海洋生物，似乎需要達成特定的條件才會在海域中現身。=This super rare large sea creature will only appear after certain conditions are met.
+sr:"^極其珍貴的神秘小型海洋生物，似乎需要達成特定的條件才會在海域中現身。\n(.*)。$"="This super rare small sea creature will only appear after certain conditions are met.\n$1."
+sr:"^極其珍貴的神秘中型海洋生物，似乎需要達成特定的條件才會在海域中現身。\n(.*)。$"="This super rare medium sea creature will only appear after certain conditions are met.\n$1."
+sr:"^極其珍貴的神秘大型海洋生物，似乎需要達成特定的條件才會在海域中現身。\n(.*)。$"="This super rare large sea creature will only appear after certain conditions are met.\n$1."
+sr:"^極其珍貴的小型海洋生物，似乎需要先釣到(\d+)條(.*)，才會在海域中現身。$"="This super rare small sea creature will only appear after catching $1 <color\=#FF9300>$2</color>."
+sr:"^極其珍貴的小型海洋生物，似乎需要先釣到(\d+)條(.*)，才會在海域中現身。\n(.*)。$"="This super rare small sea creature will only appear after catching $1 $2.\n$3."
+sr:"^極其珍貴的大型海洋生物，似乎需要先釣到(\d+)條(.*)，才會在海域中現身。\n(.*)。$"="This super rare small sea creature will only appear after catching $1 $2.\n$3."
+sr:"^極其珍貴的小型海洋生物，似乎需要先釣到(\d+)條<color\=#FF9300>(.*)</color>，才會在海域中現身。$"="This super rare small sea creature will only appear after catching $1 <color\=#FF9300>$2</color>."
+sr:"^極其珍貴的大型海洋生物，似乎需要先釣到(\d+)條<color\=#FF9300>(.*)</color>，才會在海域中現身。$"="This super rare large sea creature will only appear after catching $1 <color\=#FF9300>$2</color>."
+sr:"^極其珍貴的中型海洋生物，似乎以<color\=#FF9300>(.*)</color>為魚餌時會在海域中現身。$"="This super rare medium sea creature will only appear after using <color\=#FF9300>$1</color> as bait."
+sr:"^極其珍貴的大型海洋生物，似乎以<color\=#FF9300>(.*)</color>為魚餌時會在海域中現身。$"="This super rare large sea creature will only appear after using <color\=#FF9300>$1</color> as bait."
+sr:"^極其珍貴的中型海洋生物，似乎以(.*)為魚餌時會在海域中現身。\n(.*)。$"="This super rare medium sea creature will only appear after using $1 as bait.\n$2."
+sr:"^極其珍貴的大型海洋生物，似乎以(.*)為魚餌時會在海域中現身。\n(.*)。$"="This super rare large sea creature will only appear after using $1 as bait.\n$2."
+sr:"^平靜海面和魚群風暴中十分稀有的小型海洋生物，似乎以<color\=#FF9300>(.*)</color>為魚餌時會在海域中現身。$"="This rare small sea creature will only appear after using <color\=#FF9300>$1</color> as bait during Calm Sea and Fish Storm."
+sr:"^平靜海面和魚群風暴中十分稀有的中型海洋生物，似乎以<color\=#FF9300>(.*)</color>為魚餌時會在海域中現身。$"="This rare medium sea creature will only appear after using <color\=#FF9300>$1</color> as bait during Calm Sea and Fish Storm."
+sr:"^平靜海面和魚群風暴中十分稀有的大型海洋生物，似乎以<color\=#FF9300>(.*)</color>為魚餌時會在海域中現身。$"="This rare large sea creature will only appear after using <color\=#FF9300>$1</color> as bait during Calm Sea and Fish Storm."
+sr:"^平靜海面和魚群風暴中十分稀有的小型海洋生物。\n(.*)。$"="This rare small sea creature appears more frequently during Calm Sea and Fish Storm.\n$1."
+sr:"^平靜海面和魚群風暴中十分稀有的中型海洋生物。\n(.*)。$"="This rare medium sea creature appears more frequently during Calm Sea and Fish Storm.\n$1."
+sr:"^平靜海面和魚群風暴中十分稀有的大型海洋生物。\n(.*)。$"="This rare large sea creature appears more frequently during Calm Sea and Fish Storm.\n$1."
+魚群風暴中十分稀有的小型海洋生物。=This rare small sea creature appears more frequently during Fish Storm.
+魚群風暴中十分稀有的中型海洋生物。=This rare medium sea creature appears more frequently during Fish Storm.
+魚群風暴中十分稀有的大型海洋生物。=This rare large sea creature appears more frequently during Fish Storm.
+sr:"^魚群風暴中十分稀有的小型海洋生物。\n(.*)。$"="This rare small sea creature appears more frequently during Fish Storm.\n$1."
+sr:"^魚群風暴中十分稀有的中型海洋生物。\n(.*)。$"="This rare medium sea creature appears more frequently during Fish Storm.\n$1."
+sr:"^魚群風暴中十分稀有的大型海洋生物。\n(.*)。$"="This rare large sea creature appears more frequently during Fish Storm.\n$1."
+魚群風暴中較為常見的小型海洋生物。=This small sea creature appears more frequently during Fish Storm.
+魚群風暴中較為常見的中型海洋生物。=This medium sea creature appears more frequently during Fish Storm.
+魚群風暴中較為常見的大型海洋生物。=This large sea creature appears more frequently during Fish Storm.
+sr:"^魚群風暴中較為常見的小型海洋生物。\n(.*)。$"="This small sea creature appears more frequently during Fish Storm.\n$1."
+sr:"^魚群風暴中較為常見的中型海洋生物。\n(.*)。$"="This small sea creature appears more frequently during Fish Storm.\n$1."
+sr:"^魚群風暴中較為常見的大型海洋生物。\n(.*)。$"="This small sea creature appears more frequently during Fish Storm.\n$1."
+平靜海面和魚群風暴中較為常見的小型海洋生物。=This small sea creature appears more frequently during Calm Sea and Fish Storm.
+平靜海面和魚群風暴中較為常見的中型海洋生物。=This medium sea creature appears more frequently during Calm Sea and Fish Storm.
+平靜海面和魚群風暴中較為常見的大型海洋生物。=This large sea creature appears more frequently during Calm Sea and Fish Storm.
+sr:"^平靜海面和魚群風暴中較為常見的小型海洋生物。\n(.*)。$"="This small sea creature appears more frequently during Calm Sea and Fish Storm.\n$1."
+sr:"^平靜海面和魚群風暴中較為常見的中型海洋生物。\n(.*)。$"="This medium sea creature appears more frequently during Calm Sea and Fish Storm.\n$1."
+sr:"^平靜海面和魚群風暴中較為常見的大型海洋生物。\n(.*)。$"="This large sea creature appears more frequently during Calm Sea and Fish Storm.\n$1."
+平靜海面中隨處可見的小型海洋生物。=This common small sea creature appears during Calm Sea.
+平靜海面中隨處可見的中型海洋生物。=This common small sea creature appears during Calm Sea.
+平靜海面中隨處可見的大型海洋生物。=This common small sea creature appears during Calm Sea.
+sr:"^平靜海面中隨處可見的小型海洋生物。\n(.*)。$"="This common small sea creature appears during Calm Sea.\n$1."
+sr:"^平靜海面中隨處可見的中型海洋生物。\n(.*)。$"="This common small sea creature appears during Calm Sea.\n$1."
+sr:"^平靜海面中隨處可見的大型海洋生物。\n(.*)。$"="This common small sea creature appears during Calm Sea.\n$1."
+
+總分=<size\=20>Points</size>
+r:"^<color\=#FF8C00>小型魚餌</color>：小型魚機率增加(.*)$"="<color\=#FF8C00>Bait S</color>: Increase chance of Small Fish by $1"
+r:"^<color\=#FF8C00>中型魚餌</color>：中型魚機率增加(.*)$"="<color\=#FF8C00>Bait M</color>: Increase chance of Medium Fish by $1"
+r:"^<color\=#FF8C00>大型魚餌</color>：大型魚機率增加(.*)$"="<color\=#FF8C00>Bait L</color>: Increase chance of Large Fish by $1"
+魚暴=Fish Storm
+優質=Quality
+回復=Recovery
+雙倍=Double
+重複=Repeat
+<color\=#00FFFF>專注力</color>不足。=Insufficient <color\=#00FFFF>Focus</color>.
+<color\=#FFFF00>直感</color>不足。=Insufficient <color\=#FFFF00>Intuition</color>.
+空閒狀態才可暫停遊戲。=Can only pause during idle.
+空閒狀態下才可以切換魚餌。=Can only switch bait during idle.
+魚群風暴時無法使用。=Cannot be used during Fish Storm.
+技能冷卻中。=Skill is on cooldown.
+上一杆沒有釣到魚，無法發動【追蹤定錨】。=The last Fishing Attempt failed, unable to use [Tracking Anchor].
+上一杆是以小博大，不滿足【追蹤定錨】發動條件。=The last Fishing Attempt was High Risk, High Reward, unable to use [Tracking Anchor].
+遊戲暫停=Paused
 
 ----------
 Character's Story
