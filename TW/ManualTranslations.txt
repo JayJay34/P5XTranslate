@@ -464,7 +464,7 @@ r:"^已購買(\d+)/(\d+)次（每日05:00重置）$"="Purchased $1/$2 times \n(R
 用於提升能量的補給飲料，使用後立即恢復5行動力。=Restores 5 Action Points immediately.
 能夠迅速補充人體水分和電解質的運動能量飲料，對迅速恢復身體機能有強力效果。=A sports drink that quickly replenishes the body with water and electrolytes for a powerful recovery effect.
 您的行動值不足。=Insufficient Action Points.
-沒有足夠的行動力了，是否立即補充？=Not enough Action Points, replenish immediately?
+沒有足夠的行動力了，是否立即補充？=Not enough Action Points, \nreplenish immediately?
 慾望之木=Wood of Desire
 極其罕見的神奇木料，可用於提升技能等級至Lv.9·Lv.10。=<size\=28>An extremely rare magical timber, can be used to level up Skills to Lv.9-Lv.10.</size>
 極其罕見的神奇木料，可用於提升技能等級至Lv.9、Lv.10。=<size\=28>An extremely rare magical timber, can be used to level up Skills to Lv.9-Lv.10.</size>
@@ -1371,10 +1371,10 @@ r:"^購買後，提升至(\d+)級，可獲得以下獎勵$"="Buy to Lv. $1 and g
 成長經驗=<size\=26>Phantom Pass EXP</size>
 r:"^購買立即獲得<size\=44><sprite\=27 tint\=1></size>(\d+)$"="<size\=18>Receive <size\=44><sprite\=27 tint\=1></size> x$1 upon purchase</size>"
 r:"^購買立即獲得<size\=(\d+)><sprite\=(\d+) tint\=(\d+)></size>%s$"="<size\=18>Receive <size\=$1><sprite\=$2 tint\=$3></size>%s upon purchase</size>"
-本週累計「今日目標」領獎次數\n「下週一」領取對應「補給禮包」=<size\=22>Get Daily Pass rewards for the week</size>\n<size\=22>and the Supply Pack for next Monday</size>
-本週累計「今日目標」領獎次數\n「<color\=#ff3b37>後日登入</color>」領取對應「補給禮包」=<size\=22>Get Daily Pass rewards for the week</size>\n<size\=18>and the Supply Pack for <color\=#ff3b37>the day after tomorrow</color></size>
-本週累計「今日目標」領獎次數\n「<color\=#ff3b37>明日登入</color>」領取對應「補給禮包」=<size\=22>Get Daily Pass rewards for the week</size>\n<size\=22>and the Supply Pack for <color\=#ff3b37>tomorrow</color></size>
-距離下次領取剩餘：=Time until next Supply Pack:
+本週累計「今日目標」領獎次數\n「下週一」領取對應「補給禮包」=<size\=22>Get Daily Pass rewards for the week</size>\n<size\=22>and the Supply Set for next Monday</size>
+本週累計「今日目標」領獎次數\n「<color\=#ff3b37>後日登入</color>」領取對應「補給禮包」=<size\=22>Get Daily Pass rewards for the week</size>\n<size\=18>and the Supply Set for <color\=#ff3b37>the day after tomorrow</color></size>
+本週累計「今日目標」領獎次數\n「<color\=#ff3b37>明日登入</color>」領取對應「補給禮包」=<size\=22>Get Daily Pass rewards for the week</size>\n<size\=22>and the Supply Set for <color\=#ff3b37>tomorrow</color></size>
+距離下次領取剩餘：=Time until next Supply Set:
 r:"^(\d+)時(\d+)$"=" $1 hours $2 minutes"
 「下週一」登錄即可領取=Log in next Monday to claim!
 「下週一」登入即可領取=Log in next Monday to claim!
@@ -1416,8 +1416,8 @@ r:"^完成1次閼凶夢之扉 \((\d+)\/(\d+)\)$"="Clear 1 [Gates of the Nightmar
 r:"^完成1次「天鵝絨試煉」 \((\d+)\/(\d+)\)$"="Clear 1 [Velvet Trial] ($1/$2)"
 r:"^完成1次「心之海試煉」 \((\d+)\/(\d+)\)$"="Clear 1 [Trials from the Sea of Souls] ($1/$2)"
 r:"^在「心軌擇行」中通過1個月臺 \((\d+)\/(\d+)\)$"="Clear 1 Platform in [Heart Rail] ($1/$2)"
-r:"^完成1次「委託」派遣 \((\d+)\/(\d+)\)$"="Complete 1 [Commissions] ($1/$2)"
-r:"^累計完成(\d+)次委託派遣 \((\d+)\/(\d+)\)$"="Complete $1 [Commissions] ($2/$3)"
+r:"^完成1次「委託」派遣 \((\d+)\/(\d+)\)$"="Complete 1 [Task] ($1/$2)"
+r:"^累計完成(\d+)次委託派遣 \((\d+)\/(\d+)\)$"="Complete $1 [Task] ($2/$3)"
 
 WEEKLY
 r:"累計消耗(\d+)魂石 \((\d+)\/(\d+)\)"=Spend $1 Konpaku Gem ($2/$3)
@@ -2032,6 +2032,7 @@ sr:"人格指數「(.*)」達到(\d+)級解鎖$"="Unlock when $1 reached rank $2
 要給家裡來一次掃除嗎？=Do you want to clean your home?
 在家裡學習=<size\=24>Study at home</size>
 在盧布朗度過=<size\=24>Spend time\nin Leblanc</size>
+去盧布朗放鬆一下吧……=Let's relax in Leblanc...
 去盧布朗放鬆一會兒吧……=Let's relax in Leblanc...
 去澡堂泡澡=<size\=24>Bathe in\nan Onsen</size>
 足球部練習=<size\=24>Train at the\nSoccer Club</size>
@@ -2753,8 +2754,8 @@ r:"^『{{A}}』\n採購近戰武器的硬幣，可在特定的『武器補給』
 祈願道具=Pray Item
 『{{B}}』\n獲取後可用於{{A}}商店「祈願」中進行祈願抽獎。=[Kagura Suzu]\nCan be used in {{A}}'s Shop do [Pray] Lucky Draw.
 r:"^獲取後可用於{{A}}商店「祈願」中進行祈願抽獎。$"="Can be used in {{A}}'s Shop to enter the Pray Lucky Draw."
-r:"^委託、消費大酬賓等獎勵或者購買<link\="mqm"><u>每日祈願納福禮袋</u></link>可獲得{{A}}$"="Get {{A}} from Commissions, Spending Spree or <link\="mqm"><u>Daily Pray Gift Bag</u></link>"
-r:"^委託、消費大酬賓等獎勵或者購買<link\="mqm"><u>%s</u></link>可獲得{{A}}$"="$"="Obtain {{A}} from Commissions, Spending Spree or <link\="mqm"><u>%s</u></link>"
+r:"^委託、消費大酬賓等獎勵或者購買<link\="mqm"><u>每日祈願納福禮袋</u></link>可獲得{{A}}$"="Get {{A}} from Task, Spending Spree or <link\="mqm"><u>Daily Pray Gift Bag</u></link>"
+r:"^委託、消費大酬賓等獎勵或者購買<link\="mqm"><u>%s</u></link>可獲得{{A}}$"="$"="Obtain {{A}} from Task, Spending Spree or <link\="mqm"><u>%s</u></link>"
 意識禮願箱=<size\=30>Awareness Gift Box</size>
 認知抽選單 ★5=5★ Cognitive Draw
 使用後可隨機獲得一個未達到意識VI的以下怪盜：{{A}}、{{B}}。=Can be used to randomly get one of the following Thief that has not reached Awareness VI: {{A}}, {{B}}.
@@ -2795,9 +2796,11 @@ r:"^連續30天，每天5點贈送$"="Daily at 5 am (UTC+8) for 30 days"
 r:"^累計消費(\d+)台幣\((\d+)/(\d+)\)$"="Spend NT$ $1 ($2/$3)"
 r:"^累計消費(\d+)元\((\d+)/(\d+)\)$"="Spend NT$ $1 ($2/$3)"
 
+{{A}}的酬賓大禮={{A}}'s Appreciation Gift
+
 傳記=Compendium
 傳記全書=<size\=20>Thief Compendium Tome</size>
-傳記斷章=<size\=20>Thief Compendium Volume</size>
+傳記斷章=<size\=19>Thief Compendium Volume</size>
 傳記殘頁=<size\=20>Thief Compendium Scrap</size>
 r:"^隱約可窺見傳奇的全書，可用於提升怪盜經驗，使用後立即增加(\d+)點。$"="A tome that gives a glimpse of legends, can be used to gain $1 Thief EXP."
 r:"^隱約可窺見傳奇的斷章，可用於提升怪盜經驗，使用後立即增加(\d+)點。$"="A volume that gives a glimpse of legends, can be used to gain $1 Thief EXP."
@@ -2936,9 +2939,9 @@ sr:"^未知宿命橙·(.*)"="Random 4★ $1"
 明日領取=Claim Tomorrow
 r:"^可領取$"="Claim"
 
-{{A}}可沒在裡面放可怕的東西哦～？=I didn't put anything scary in there～
-確定買這個嗎？=Are you sure you want to buy this?
-看清楚啦～不要買錯了阿！=Look closely～\nDon't buy the wrong one!
+{{A}}可沒在裡面放可怕的東西哦～？=Hm? Nothing to worry about, right～?
+確定買這個嗎？=This one catch your eye?
+看清楚啦～不要買錯了阿！=<size\=24>Make sure you haven't gotten anything mixed up now!</size>
 r:"^加贈$"="Get            <size\=1>.</size>"
 獲得=Get
 累計簽到7日，即可獲得=7 days daily rewards
@@ -3213,9 +3216,9 @@ r:"^成功進行(\d+)次抓娃娃$"="Obtain a doll $1 times"
 每日任務於每天5:00重置=Daily missions refresh at 5 am daily
 r:"^消耗(\d+)點體力\((\d+)\/(\d+)\)$"="Use $1 Stamina ($2/$3)"
 r:"^消耗(\d+)點行動力\((\d+)\/(\d+)\)$"="Use $1 Action Points ($2/$3)"
-r:"^完成(\d+)次委託派遣$"="Complete $1 Commissions"
-r:"^完成(\d+)次委託派遣\((\d+)\/(\d+)\)$"="Complete $1 Commissions ($2/$3)"
-r:"^完成(\d+)次委託派遣 \((\d+)\/(\d+)\)$"="Complete $1 Commissions ($2/$3)"
+r:"^完成(\d+)次委託派遣$"="Complete $1 Task"
+r:"^完成(\d+)次委託派遣\((\d+)\/(\d+)\)$"="Complete $1 Task ($2/$3)"
+r:"^完成(\d+)次委託派遣 \((\d+)\/(\d+)\)$"="Complete $1 Task ($2/$3)"
 r:"^完成(\d+)次往日回溯\((\d+)\/(\d+)\)$"="Clear $1 Past Echo ($2/$3)"
 在「星盤試煉」中通過「紫色或紅色」監測點=Clear 1 [Purple or Red] Monitoring Point in Astrolabe Trials
 r:"^在「星盤試煉」中通過「紫色或紅色」監測點\((\d+)\/(\d+)\)$"="Clear 1 [Purple or Red] Monitoring Point in Astrolabe Trials ($1/$2)"
@@ -4262,8 +4265,6 @@ Green Event
 聽說有人想買下海灘上那些漂流物……=I heard that someone wants to buy the flotsam...
 大量收藏家來競拍沙灘上的漂流物……=Lots of collectors come to bid on flotsam...
 r:"^結算時營業額額外提升<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>$"="<size\=25>Increase Earnings at the end of the day by <sprite\=$1 tint\=1><sprite\=$2 tint\=1></size>"
-
-Blue Event
 緊跟本地潮流=Keeping Up with Local Trends
 好像有當地居民成了海之家的熟客……=It seems like some locals have become regulars of Beach House...
 好像當地居民在向遊客推薦海之家……=It seems like some locals are recommending Beach House...
@@ -4295,8 +4296,6 @@ r:"^(\d+%)機率提升<sprite\=(\d+)>\n所有角色消耗(\d+)點夥伴體力$"=
 稍微改善了店的內部裝修，希望能變得舒適……=We've made some improvements to the interior, let's hope it's more comfortable now...
 大幅改善店的內部裝修，希望能變得舒適……=We've made major improvements to the interior, let's hope it's more comfortable now...
 購買警備服務=Purchase Alarm Service
-
-令人擔憂的事態=A Worrying Situation
 有奇裝異服的顧客引發了騷動，但願不是可疑人員……=A customer with a weird outfit caused a stir, let's hope they're not trouble...
 有人在堆巨大的沙堡，幫忙加固避免誤傷圍觀遊客……=Someone's building a massive sandcastle, I helped reinforce it to prevent accidents...
 知名網紅來訪！湊熱鬧的人蜂擁而至……=A well-known influencer came to visit! People are flocking to join in the fun...
@@ -4363,8 +4362,6 @@ r:"^夜晚時事件增加的屬性額外提升<sprite\=(\d+) tint\=1><sprite\=(\
 有孩子在禁游區玩耍，緊急處理避免了事故發生……=Emergency measures prevented an accident when the children were playing in a restricted area...
 大掃除時間=Cleaning Time
 來店的孩子們哭著找人玩！大家一起應付吧……=Kids are in the store crying for playmates! Let's handle this together...
-
-Purple Event
 特殊的清晨=A Special Morning
 從{{A}}看到的日出美景成了熱門話題……=The sunrise view from {{A}} has become a hot topic...
 據說上午天氣和氣溫都非常適合海水浴……=I heard the weather and temperature are perfect for swimming this morning...
@@ -4450,8 +4447,6 @@ r:"^<color\=#0F69CA>宣傳舒適環境吧</color>\n提升(\d+)點口碑。玩法
 剛把傳單放出去，\n來吃美食的客人就變多了……=As soon as we put up the flyers, more customers came to enjoy our food...
 剛把傳單放出去，\n來體驗設施的客人就變多了……=As soon as we put up the flyers, more customers came to experience the facilities...
 剛把傳單放出去，\n來放鬆的客人就變多了……=As soon as we put up the flyers, more customers came to relax...
-
-Gold Event
 出現老鷹強盜=Eagle Thief
 r:"^選項1：減少<sprite\=(\d+)>的降低\n選項2：減少<sprite\=(\d+)>的降低$"="Option 1: Decrease <sprite\=$1> loss\nOption 2: Decrease <sprite\=$2> loss"
 別開玩笑了……！=You've got to be kidding...!
@@ -4727,6 +4722,10 @@ r:"^消耗(\d+)點專注力$"="Spend $1 Focus"
 r:"^使用(\d+)次技能$"="Use $1 Skills"
 r:"^釣(\d+)條小丑魚$"="Catch $1 Clownfish"
 r:"^釣(\d+)條剝皮魚$"="Catch $1 Leatherjacket"
+r:"^釣(\d+)條梭子蟹$"="Catch $1 Swimming Crab"
+r:"^釣(\d+)條帝王鮭$"="Catch $1 King Salmon"
+r:"^釣(\d+)條獅子魚$"="Catch $1 Lionfish"
+r:"^釣(\d+)條鰣魚$"="Catch $1 Reeves' Shad"
 
 海釣等級=Fishing
 r:"^海釣等級達到(\d+)級時，可獲得【(.*)】徽章$"="Obtain this badge when reaching Fishing LV.$1"
@@ -4784,7 +4783,7 @@ r:"^魚群風暴時間延長(.*)秒。$"="<size\=24>Extend Fish Storm by $1 seco
 
 {{A}}擅長回復支援，快速獲得直感。=<size\=20>{{A}} excels at recovery and gaining Intuition quickly.</size>
 援護時刻=Support Time
-r:"^消耗(.*)點<sprite\=0>專注力，每成功釣起一次魚有(.*)機率獲得(.*)點<sprite\=1>直感，持續(.*)次釣魚。$"="<size\=24>Spend $1 <sprite\=0> Focus, there is a $2 chance to gain $3 <sprite\=1> Intuition when catching a fish. Lasts for $3 Fishing Attempts.</size>"
+r:"^消耗(.*)點<sprite\=0>專注力，每成功釣起一次魚有(.*)機率獲得(.*)點<sprite\=1>直感，持續(.*)次釣魚。$"="<size\=24>Spend $1 <sprite\=0> Focus, there is a $2 chance to gain $3 <sprite\=1> Intuition when catching a fish. Lasts for $4 Fishing Attempts.</size>"
 r:"^每成功釣起一次魚，有(\d+%)機率獲得(\d+)點<sprite\=1>直感。$"="There is a $1 chance to gain $2 <sprite\=1> Intuition when catching a fish."
 感悟專家=Perception Expert
 r:"^<sprite\=0>專注力每秒回復速度增加(.*)。$"="<size\=24>Increase <sprite\=0> Focus recovery rate per second by $1.</size>"
@@ -4848,7 +4847,7 @@ r:"^回復(\d+)點<sprite\=0>專注力。$"="Restore <sprite\=0> Focus by $1"
 抓緊時間再次「<color\=#ff3b37>開始釣魚</color>」=Hurry up and [<color\=#ff3b37>Start Fishing</color>]
 r:"^觸發了「<color\=#ff3b37>波紋潮湧</color>」的增益，\n在(\d+)杆內可以釣到魚王。$"="Activated [<color\=#ff3b37>Ripple Tide</color>] buff,\nyou can catch the Top-Class Fish in the next $1 attempts."
 波紋潮湧=Ripple Tide
-r:"^魚王「(.*)」出沒中，接下來(\d+)杆內有機會釣起。$"="Chance to catch the Top-Class Fish [$1] in the next $2 attempts."
+sr:"^魚王「(.*)」出沒中，接下來(\d+)杆內有機會釣起。$"="Chance to catch the Top-Class Fish [$1] in the next $2 attempts."
 r:"^每完成(\d+)個「<color\=#ff3b37>漁場任務</color>」\n獲得(\d+%)的漁分加成。$"="Every $1 completed [<color\=#ff3b37>Fishing Mission</color>] \nincrease Fishing Points Bonus by $2."
 解鎖內容=Unlocked Content
 「{{A}}」對釣魚有了新的領悟=[{{A}}] has a new understanding of fishing
@@ -4860,7 +4859,7 @@ r:"^\+(\d+%)得分$"="+$1 Points"
 海釣結束時與夥伴<color\=#ff3b37>拍照</color>留影，\n在此更換「<color\=#ff3b37>拍照預設</color>」=You can <color\=#ff3b37>take photos</color> with companions at the end of Fishing,\nyou can change [<color\=#ff3b37>presets</color>] here
 在此更換「<color\=#ff3b37>站位順序</color>」=Change [<color\=#ff3b37>standing order</color>] here
 決定好後，點此處「<color\=#ff3b37>拍照</color>」\n記錄下這美好的一刻吧！=After deciding, click here to [<color\=#ff3b37>take photos</color>]!
-如果忘記了玩法機制，\n可以在此「<color\=#ff3b37>回顧</color>」教程。=Click here to [<color\=#ff3b37>review</color> tutorial.
+如果忘記了玩法機制，\n可以在此「<color\=#ff3b37>回顧</color>」教程。=Click here to [<color\=#ff3b37>review</color>] tutorial.
 
 類別=Category
 得分=Points
@@ -4874,8 +4873,8 @@ r:"^(\d+)-(\d+)秒$"="$1-$2 Seconds"
 任意魚餌=Any Bait
 
 神仙魚=Angelfish
-綠鰭魚=Bluefin Gurnard
 擬刺尾鯛=Blue Tang
+綠鰭魚=Bluefin Gurnard
 紅魚=Red Snapper
 鰹魚=Skipjack Tuna
 鯔魚=Flathead Gray Mullet
@@ -4925,7 +4924,7 @@ sr:"^極其珍貴的神秘中型海洋生物，似乎需要達成特定的條件
 sr:"^極其珍貴的神秘大型海洋生物，似乎需要達成特定的條件才會在海域中現身。\n(.*)。$"="This super rare large sea creature will only appear after certain conditions are met.\n$1."
 sr:"^極其珍貴的小型海洋生物，似乎需要先釣到(\d+)條(.*)，才會在海域中現身。$"="This super rare small sea creature will only appear after catching $1 <color\=#FF9300>$2</color>."
 sr:"^極其珍貴的小型海洋生物，似乎需要先釣到(\d+)條(.*)，才會在海域中現身。\n(.*)。$"="This super rare small sea creature will only appear after catching $1 $2.\n$3."
-sr:"^極其珍貴的大型海洋生物，似乎需要先釣到(\d+)條(.*)，才會在海域中現身。\n(.*)。$"="This super rare small sea creature will only appear after catching $1 $2.\n$3."
+sr:"^極其珍貴的大型海洋生物，似乎需要先釣到(\d+)條(.*)，才會在海域中現身。\n(.*)。$"="This super rare large sea creature will only appear after catching $1 $2.\n$3."
 sr:"^極其珍貴的小型海洋生物，似乎需要先釣到(\d+)條<color\=#FF9300>(.*)</color>，才會在海域中現身。$"="This super rare small sea creature will only appear after catching $1 <color\=#FF9300>$2</color>."
 sr:"^極其珍貴的大型海洋生物，似乎需要先釣到(\d+)條<color\=#FF9300>(.*)</color>，才會在海域中現身。$"="This super rare large sea creature will only appear after catching $1 <color\=#FF9300>$2</color>."
 sr:"^極其珍貴的中型海洋生物，似乎以<color\=#FF9300>(.*)</color>為魚餌時會在海域中現身。$"="This super rare medium sea creature will only appear after using <color\=#FF9300>$1</color> as bait."
@@ -4935,6 +4934,9 @@ sr:"^極其珍貴的大型海洋生物，似乎以(.*)為魚餌時會在海域�
 sr:"^平靜海面和魚群風暴中十分稀有的小型海洋生物，似乎以<color\=#FF9300>(.*)</color>為魚餌時會在海域中現身。$"="This rare small sea creature will only appear after using <color\=#FF9300>$1</color> as bait during Calm Sea and Fish Storm."
 sr:"^平靜海面和魚群風暴中十分稀有的中型海洋生物，似乎以<color\=#FF9300>(.*)</color>為魚餌時會在海域中現身。$"="This rare medium sea creature will only appear after using <color\=#FF9300>$1</color> as bait during Calm Sea and Fish Storm."
 sr:"^平靜海面和魚群風暴中十分稀有的大型海洋生物，似乎以<color\=#FF9300>(.*)</color>為魚餌時會在海域中現身。$"="This rare large sea creature will only appear after using <color\=#FF9300>$1</color> as bait during Calm Sea and Fish Storm."
+sr:"^平靜海面和魚群風暴中十分稀有的小型海洋生物，似乎以(.*)為魚餌時會在海域中現身。\n(.*)。$"="This rare small sea creature will only appear after using $1 as bait during Calm Sea and Fish Storm.\n$2."
+sr:"^平靜海面和魚群風暴中十分稀有的中型海洋生物，似乎以(.*)為魚餌時會在海域中現身。\n(.*)。$"="This rare medium sea creature will only appear after using $1 as bait during Calm Sea and Fish Storm.\n$2."
+sr:"^平靜海面和魚群風暴中十分稀有的大型海洋生物，似乎以(.*)為魚餌時會在海域中現身。\n(.*)。$"="This rare large sea creature will only appear after using $1 as bait during Calm Sea and Fish Storm.\n$2."
 sr:"^平靜海面和魚群風暴中十分稀有的小型海洋生物。\n(.*)。$"="This rare small sea creature appears more frequently during Calm Sea and Fish Storm.\n$1."
 sr:"^平靜海面和魚群風暴中十分稀有的中型海洋生物。\n(.*)。$"="This rare medium sea creature appears more frequently during Calm Sea and Fish Storm.\n$1."
 sr:"^平靜海面和魚群風暴中十分稀有的大型海洋生物。\n(.*)。$"="This rare large sea creature appears more frequently during Calm Sea and Fish Storm.\n$1."
@@ -4948,8 +4950,8 @@ sr:"^魚群風暴中十分稀有的大型海洋生物。\n(.*)。$"="This rare l
 魚群風暴中較為常見的中型海洋生物。=This medium sea creature appears more frequently during Fish Storm.
 魚群風暴中較為常見的大型海洋生物。=This large sea creature appears more frequently during Fish Storm.
 sr:"^魚群風暴中較為常見的小型海洋生物。\n(.*)。$"="This small sea creature appears more frequently during Fish Storm.\n$1."
-sr:"^魚群風暴中較為常見的中型海洋生物。\n(.*)。$"="This small sea creature appears more frequently during Fish Storm.\n$1."
-sr:"^魚群風暴中較為常見的大型海洋生物。\n(.*)。$"="This small sea creature appears more frequently during Fish Storm.\n$1."
+sr:"^魚群風暴中較為常見的中型海洋生物。\n(.*)。$"="This medium sea creature appears more frequently during Fish Storm.\n$1."
+sr:"^魚群風暴中較為常見的大型海洋生物。\n(.*)。$"="This large sea creature appears more frequently during Fish Storm.\n$1."
 平靜海面和魚群風暴中較為常見的小型海洋生物。=This small sea creature appears more frequently during Calm Sea and Fish Storm.
 平靜海面和魚群風暴中較為常見的中型海洋生物。=This medium sea creature appears more frequently during Calm Sea and Fish Storm.
 平靜海面和魚群風暴中較為常見的大型海洋生物。=This large sea creature appears more frequently during Calm Sea and Fish Storm.
@@ -4957,11 +4959,11 @@ sr:"^平靜海面和魚群風暴中較為常見的小型海洋生物。\n(.*)。
 sr:"^平靜海面和魚群風暴中較為常見的中型海洋生物。\n(.*)。$"="This medium sea creature appears more frequently during Calm Sea and Fish Storm.\n$1."
 sr:"^平靜海面和魚群風暴中較為常見的大型海洋生物。\n(.*)。$"="This large sea creature appears more frequently during Calm Sea and Fish Storm.\n$1."
 平靜海面中隨處可見的小型海洋生物。=This common small sea creature appears during Calm Sea.
-平靜海面中隨處可見的中型海洋生物。=This common small sea creature appears during Calm Sea.
-平靜海面中隨處可見的大型海洋生物。=This common small sea creature appears during Calm Sea.
+平靜海面中隨處可見的中型海洋生物。=This common medium sea creature appears during Calm Sea.
+平靜海面中隨處可見的大型海洋生物。=This common large sea creature appears during Calm Sea.
 sr:"^平靜海面中隨處可見的小型海洋生物。\n(.*)。$"="This common small sea creature appears during Calm Sea.\n$1."
-sr:"^平靜海面中隨處可見的中型海洋生物。\n(.*)。$"="This common small sea creature appears during Calm Sea.\n$1."
-sr:"^平靜海面中隨處可見的大型海洋生物。\n(.*)。$"="This common small sea creature appears during Calm Sea.\n$1."
+sr:"^平靜海面中隨處可見的中型海洋生物。\n(.*)。$"="This common medium sea creature appears during Calm Sea.\n$1."
+sr:"^平靜海面中隨處可見的大型海洋生物。\n(.*)。$"="This common large sea creature appears during Calm Sea.\n$1."
 
 總分=<size\=20>Points</size>
 r:"^<color\=#FF8C00>小型魚餌</color>：小型魚機率增加(.*)$"="<color\=#FF8C00>Bait S</color>: Increase chance of Small Fish by $1"
@@ -4981,6 +4983,9 @@ r:"^<color\=#FF8C00>大型魚餌</color>：大型魚機率增加(.*)$"="<color\=
 上一杆沒有釣到魚，無法發動【追蹤定錨】。=The last Fishing Attempt failed, unable to use [Tracking Anchor].
 上一杆是以小博大，不滿足【追蹤定錨】發動條件。=The last Fishing Attempt was High Risk, High Reward, unable to use [Tracking Anchor].
 遊戲暫停=Paused
+
+一心青魂=Blue Soul of Unity
+必勝赤魂=Red Soul of Victory
 
 ----------
 Character's Story
