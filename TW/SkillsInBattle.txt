@@ -743,7 +743,8 @@ sr:"^<color\=#FF0000>(.*)</color>復活了…$"="<color\=#FF0000>$1</color> has 
 sr:"^<color\=#FF0000>(.*)</color>的適應性變化了……$"="<color\=#FF0000>$1</color> changed resistance!"
 sr:"^<color\=#FF0000>(.*)</color>適應性還原。$"="<color\=#FF0000>$1</color> reverted resistance!"
 sr:"^<color\=#FF0000>(.*)</color>的適應性恢復了……$"="<color\=#FF0000>$1</color> reverted resistance!"
-sr:"^<color\=#FF0000>(.*)</color>的火焰耐性恢復了……$"="<color\=#FF0000>$1</color> reverted resistance!"
+sr:"^<color\=#FF0000>(.*)</color>的火焰耐性恢復了……$"="<color\=#FF0000>$1</color> reverted Fire resistance!"
+sr:"^<color\=#FF0000>(.*)</color>的電擊耐性恢復了……$"="<color\=#FF0000>$1</color> reverted Elec resistance!"
 sr:"^<color\=#FF0000>(.*)</color>適應性被改變……$"="<color\=#FF0000>$1</color> changed resistance..."
 sr:"^<color\=#FF0000>(.*)</color>獲得了(.*)耐性……$"="<color\=#FF0000>$1</color> gained Resist $2!"
 sr:"^<color\=#FF0000>(.*)</color>的全屬性適應性變為無……$"="<color\=#FF0000>$1</color> now Null all!"
@@ -1037,6 +1038,7 @@ HIGHLIGHT傷害提升=Increase HIGHLIGHT DMG
 受到傷害提升=Increase DMG Taken
 受到傷害增加=Increase DMG Taken
 受到暴擊效果提升=Increase Crit DMG Taken
+受{{A}}傷害提高=Increase {{A}} DMG Taken
 受HL傷害提升=Increase HIGHLIGHT DMG Taken
 受追加效果傷害提高=Increase Follow Up DMG Taken
 受持續傷害效果提升=<size\=22>Increase Damage Over Time Taken</size>
@@ -1331,6 +1333,8 @@ r:"^受到傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Taken by $1"
 r:"^受到傷害提升(\d+(.\d+)?(%)?)，不可被淨化$"="Increase DMG Taken by $1, \ncannot be dispelled"
 r:"^受到傷害增加(\d+(.\d+)?(%)?)$"="Increase DMG Taken by $1"
 r:"^受到的傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Taken by $1"
+r:"^倒地易傷提升(\d+(.\d+)?(%)?)$"="Increase Downed DMG Taken by $1"
+r:"^受到{{A}}傷害提高(\d+(.\d+)?(%)?)$"="Increase {{A}} DMG Taken by $1"
 受到TECH傷害提升=Increase TECHNICAL DMG Taken
 
 r:"^詛咒反噬達到(\d+)層，受HIGHLIGHT傷害提升(\d+%)$"="Reached $1 stacks of Curse Reversal; \nIncrease HIGHLIGHT DMG Taken by $2"
