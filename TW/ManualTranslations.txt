@@ -1296,7 +1296,7 @@ r:"^通關天鵝絨試煉巧匠之作第(\d+)關$"="Pass Velvet Trials Technicia
 r:"^通關天鵝絨試煉任意(\d+)章的第(\d+)關$"="Pass Level $2 for $1 Velvet Trials"
 r:"^通關天鵝絨試煉任意(\d+)個章節的第(\d+)關$"="Pass Level $2 for $1 Velvet Trials"
 r:"^完成難度(\d+)及以上的心軌擇行$"="Complete Heart Rail on Difficulty $1"
-r:"^完成(\d+)次難度(\d+)及以上的往日回溯$"="Complete $1 Past Echo on Difficulty $2 or above"
+r:"^完成(\d+)次難度(\d+)及以上的往日回溯$"="Complete $1 Recollections on Difficulty $2 or above"
 
 Part I Step 1
 完成引導任務「開啟未知之路」=Complete the main mission: "Open the Unknown Road"
@@ -1410,7 +1410,7 @@ r:"完成1次「旖旎香調」挑戰 \((\d+)\/(\d+)\)"=Clear 1 [Perfume Farm] (
 r:"完成1次「裝配冶藝」挑戰 \((\d+)\/(\d+)\)"=Clear 1 [Ore Farm] ($1/$2)
 r:"完成1次「靈之參悟」挑戰 \((\d+)\/(\d+)\)"=Clear 1 [Incense Farm] ($1/$2)
 r:"進行1次{{A}}育成 \((\d+)\/(\d+)\)"=Perfrom 1 Persona skill inheritance ($1/$2)
-r:"^完成1次「往日回溯」挑戰 \((\d+)\/(\d+)\)$"="Clear 1 [Past Echo] ($1/$2)"
+r:"^完成1次「往日回溯」挑戰 \((\d+)\/(\d+)\)$"="Clear 1 [Recollections] ($1/$2)"
 r:"^通關1次「閼凶夢之扉」 \((\d+)\/(\d+)\)$"="Clear 1 [Gates of the Nightmare Catcher] ($1/$2)"
 r:"^完成1次閼凶夢之扉 \((\d+)\/(\d+)\)$"="Clear 1 [Gates of the Nightmare Catcher] ($1/$2)"
 r:"^完成1次「天鵝絨試煉」 \((\d+)\/(\d+)\)$"="Clear 1 [Velvet Trial] ($1/$2)"
@@ -1425,7 +1425,7 @@ r:"累計消耗(\d+)日元 \((\d+)\/(\d+)\)"=Spend ¥$1 (¥$2/¥$3)
 r:"累計消耗(\d+)點體力 \((\d+)\/(\d+)\)"=Use $1 Stamina ($2/$3)
 r:"累計消耗(\d+)點行動力 \((\d+)\/(\d+)\)"=Use $1 Action Points ($2/$3)
 r:"^累計完成12次「厄抑之境」 \((\d+)\/(\d+)\)$"=Clear 12 [Realm of Repression] ($1/12)
-r:"完成1次「往日回溯」 \((\d+)\/(\d+)\)"=Clear 1 [Past Echo] ($1/$2)
+r:"完成1次「往日回溯」 \((\d+)\/(\d+)\)"=Clear 1 [Recollections] ($1/$2)
 r:"^達到「閼凶夢之扉」第4檔積分要求 \((\d+)\/(\d+)\)$"="Reach the 4th score bracket in [Gates of the Nightmare Catcher] ($1/$2)"
 r:"在「心軌擇行」中通過10個月臺 \((\d+)\/10\)"=Clear 10 Platforms in [Heart Rail] ($1/10)
 r:"在「星盤試煉」通過1個「監測點」 \((\d+)\/(\d+)\)$"="Clear 1 [Monitoring Point] in [Astrolabe Trials] ($1/$2)"
@@ -1573,9 +1573,11 @@ sr:"^在本次<color\=#EADE10>「(.*)」</color>契約中，獲取五星、四�
 {{A}}|{{B}}|{{D}}|{{C}}|{{E}}={{A}}|{{B}}|{{D}}|{{C}}|{{E}}
 {{A}}|{{B}}|{{D}}|{{C}}|{{J}}|{{I}}|{{E}}|{{F}}|{{G}}|{{H}}={{A}}|{{B}}|{{D}}|{{C}}|{{J}}|{{I}}|{{E}}|{{F}}|{{G}}|{{H}}
 {{F}}|{{A}}|{{B}}|{{D}}|{{C}}|{{K}}|{{J}}|{{E}}|{{G}}|{{H}}|{{I}}={{F}}|{{A}}|{{B}}|{{D}}|{{C}}|{{K}}|{{J}}|{{E}}|{{G}}|{{H}}|{{I}}
+{{J}}|{{A}}|{{B}}|{{D}}|{{C}}|{{K}}|{{I}}|{{E}}|{{F}}|{{G}}|{{H}}={{J}}|{{A}}|{{B}}|{{D}}|{{C}}|{{K}}|{{I}}|{{E}}|{{F}}|{{G}}|{{H}}
 {{B}}|{{A}}|{{D}}|{{C}}|{{I}}|{{H}}|{{E}}|{{J}}|{{G}}|{{M}}|{{N}}|{{L}}|{{K}}|{{O}}|{{F}}={{B}}|{{A}}|{{D}}|{{C}}|{{I}}|{{H}}|{{E}}|{{J}}|{{G}}|{{M}}|{{N}}|{{L}}|{{K}}|{{O}}|{{F}}
 {{C}}|{{J}}|{{F}}|{{B}}|{{A}}|{{D}}|{{I}}|{{H}}|{{E}}|{{G}}|{{M}}|{{N}}|{{L}}|{{K}}|{{O}}={{C}}|{{J}}|{{F}}|{{B}}|{{A}}|{{D}}|{{I}}|{{H}}|{{E}}|{{G}}|{{M}}|{{N}}|{{L}}|{{K}}|{{O}}
 {{B}}|{{A}}|{{C}}|{{I}}|{{H}}|{{E}}|{{J}}|{{G}}|{{M}}|{{N}}|{{L}}|{{K}}|{{O}}|{{D}}|{{F}}={{B}}|{{A}}|{{C}}|{{I}}|{{H}}|{{E}}|{{J}}|{{G}}|{{M}}|{{N}}|{{L}}|{{K}}|{{O}}|{{D}}|{{F}}
+{{B}}|{{D}}|{{E}}|{{A}}|{{C}}|{{I}}|{{H}}|{{J}}|{{G}}|{{M}}|{{N}}|{{L}}|{{F}}|{{K}}|{{O}}={{B}}|{{D}}|{{E}}|{{A}}|{{C}}|{{I}}|{{H}}|{{J}}|{{G}}|{{M}}|{{N}}|{{L}}|{{F}}|{{K}}|{{O}}
 {{B}}|{{F}}|{{P}}|{{H}}|{{A}}|{{Z}}|{{J}}|{{Q}}|{{K}}|{{R}}|{{I}}|{{L}}|{{M}}|{{S}}|{{G}}|{{Y}}|{{T}}|{{U}}|飛天|{{V}}|{{W}}|{{N}}|{{E}}|{{O}}|{{X}}|{{C}}|{{D}}={{B}}|{{F}}|{{P}}|{{H}}|{{A}}|{{Z}}|{{J}}|{{Q}}|{{K}}|{{R}}|{{I}}|{{L}}|{{M}}|{{S}}|{{G}}|{{Y}}|{{T}}|{{U}}|Apsaras|{{V}}|{{W}}|{{N}}|{{E}}|{{O}}|{{X}}|{{C}}|{{D}}
 
 Weapon Gacha Rules
@@ -1604,6 +1606,7 @@ sr:"^「當未觸發UP或保底規則時，所有武器均分基礎獲取機率�
 甜蜜的禁忌=Strawberry Magic
 柑橘花茶=Summer Flower Basket
 海鹽沙冰=Ocean's Coldbox
+喧嘩禁止=Study Club Time
 
 ----------
 Gachapon + Crane (Capsule)
@@ -2553,39 +2556,39 @@ r:"^<color\=#FFDe00>{{A}}</color>票務等級達到<color\=#FFDe00>(\d+)級</col
 「暗影獵域」=[Persona Farm]
 暗影獵域=Persona Farm
 厄抑之境·{{A}}=Persona Farm
-『旖旎香調』=[Perfume Farm]
-「旖旎香調」=[Perfume Farm]
-旖旎香調=Perfume Farm
-『裝配冶藝』=[Ore Farm]
-「裝配冶藝」=[Ore Farm]
-裝配冶藝=Ore Farm
-靈之參悟=Incense Farm
-「靈之參悟」=[Incense Farm]
-『靈之參悟』=[Incense Farm]
-空之寶庫=Dull Emblem Vault
-「空之寶庫」=[Dull Emblem Vault]
-『空之寶庫』=[Dull Emblem Vault]
-耀之寶庫=Persona Emblem Vault
-『耀之寶庫』=[Persona Emblem Vault]
-「耀之寶庫」=[Persona Emblem Vault]
-『榮級求索』=[Character EXP Farm]
-「榮級求索」=[Character EXP Farm]
-榮級求索=Character EXP Farm
-『輜械求索』=[Weapon EXP Farm]
-「輜械求索」=[Weapon EXP Farm]
-輜械求索=Weapon EXP Farm
-『人格求索』=[Persona EXP Farm]
-「人格求索」=[Persona EXP Farm]
-人格求索=Persona EXP Farm
-『財賂求索』=[Konpaku Gem Farm]
-「財賂求索」=[Konpaku Gem Farm]
-財賂求索=Konpaku Gem Farm
+『旖旎香調』=[Alluring Aroma]
+「旖旎香調」=[Alluring Aroma]
+旖旎香調=Alluring Aroma
+『裝配冶藝』=[Gear Forging]
+「裝配冶藝」=[Gear Forging]
+裝配冶藝=Gear Forging
+靈之參悟=Enlightenment
+「靈之參悟」=[Enlightenment]
+『靈之參悟』=[Enlightenment]
+空之寶庫=Dull Vault
+「空之寶庫」=[Dull Vault]
+『空之寶庫』=[Dull Vault]
+耀之寶庫=Shiny Vault
+『耀之寶庫』=[Shiny Vault]
+「耀之寶庫」=[Shiny Vault]
+『榮級求索』=[Pursuit of Honor]
+「榮級求索」=[Pursuit of Honor]
+榮級求索=Pursuit of Honor
+『輜械求索』=[Pursuit of Parts]
+「輜械求索」=[Pursuit of Parts]
+輜械求索=Pursuit of Parts
+『人格求索』=[Pursuit of Persona]
+「人格求索」=[Pursuit of Persona]
+人格求索=Pursuit of Persona
+『財賂求索』=[Pursuit of Treasure]
+「財賂求索」=[Pursuit of Treasure]
+財賂求索=Pursuit of Treasure
 啟示套裝=Revelation Card Farm
 厄抑之境·啟示套裝=Revelation Card Farm
-『穹星求索』=[Bell of Stars Farm]
-「穹星求索」=[Bell of Stars Farm]
-穹星求索=Bell of Stars Farm
-往日回溯=Past Echo
+『穹星求索』=[Pursuit of Stars]
+「穹星求索」=[Pursuit of Stars]
+穹星求索=Pursuit of Stars
+往日回溯=Recollections
 主線：{{A}}\n完成後開啟挑戰=<size\=20>Unlock after completing\nStory: {{A}}</size>
 
 掉落高級技能材料=Palace Boss
@@ -2602,6 +2605,46 @@ r:"^<color\=#FFDe00>{{A}}</color>票務等級達到<color\=#FFDe00>(\d+)級</col
 
 怪盜天賦材料=Mindscape
 大量魂石=Konpaku Gem
+
+『羈絆之語』=[Words of Bond]
+「羈絆之語」=[Words of Bond]
+羈絆之語=Words of Bond
+『決勝之語』=[Words of Ruling]
+「決勝之語」=[Words of Ruling]
+決勝之語=Words of Ruling
+『生機之語』=[Words of Life]
+「生機之語」=[Words of Life]
+生機之語=Words of Life
+『抗爭之語』=[Words of Feuds]
+「抗爭之語」=[Words of Feuds]
+抗爭之語=Words of Feuds
+『自然之語』=[Words of Nature]
+「自然之語」=[Words of Nature]
+自然之語=Words of Nature
+『從容之語』=[Words of Serenity]
+「從容之語」=[Words of Serenity]
+從容之語=Words of Serenity
+『和諧之語』=[Words of Harmony]
+「和諧之語」=[Words of Harmony]
+和諧之語=Words of Harmony
+『本能之語』=[Words of Instincts]
+「本能之語」=[Words of Instincts]
+本能之語=Words of Instincts
+『懈怠之語』=[Words of Sloth]
+「懈怠之語」=[Words of Sloth]
+懈怠之語=Words of Sloth
+『享樂之語』=[Words of Indulgence]
+「享樂之語」=[Words of Indulgence]
+享樂之語=Words of Indulgence
+『君王之語』=[Words of Sovereignty]
+「君王之語」=[Words of Sovereignty]
+君王之語=Words of Sovereignty
+『權衡之語』=[Words of Balance]
+「權衡之語」=[Words of Balance]
+權衡之語=Words of Balance
+『蟄伏之語』=[Words of Dormancy]
+「蟄伏之語」=[Words of Dormancy]
+蟄伏之語=Words of Dormancy
 
 r:"^陰影被擊敗後，使全體怪盜造成傷害提升(.*)，可疊加(.*)層$"="After defeating a Shadow, increase all Thieves' DMG Dealt by $1, up to $2 stacks"
 r:"^全體怪盜受治療/護盾效果提升(.*)，受治療/護盾後造成傷害提升(.*)；戰鬥開始時全體怪盜損失(.*)生命值$"="Increase all Thieves' Healing Received/Shield Effect by $1, increase DMG Dealt after Healed/Shieled by $2; All Thieves lose $3 HP at the start of battle"
@@ -2749,8 +2792,8 @@ r:"^『{{A}}』\n契約的憑證，可在特定的『怪盜契約』中使用。
 補給道具=Supply Item
 r:"^採購近戰武器的硬幣，可在特定的『武器補給』中使用。$"="Coins for purchasing melee weapons, \ncan be used in specific [Weapon Supply]."
 r:"^『{{A}}』\n採購近戰武器的硬幣，可在特定的『武器補給』中使用。$"="<size\=22>[{{A}}]\nCoins for purchasing melee weapons, \ncan be used in specific [Weapon Supply].</size>"
-『{{A}}』\n心之海試練、往日回溯和助戰回饋兌換可獲得，用於在生存遊戲專賣店製造四星武器。=<size\=24>[{{A}}]\nGained from Trials from the Sea of Souls, Past Echo, and Assist Reward, \ncan be used to make 4★ Weapons in Untouchable</size>.
-心之海試練、往日回溯和助戰回饋兌換可獲得，用於在生存遊戲專賣店製造四星武器。=Gained from Trials from the Sea of Souls, Past Echo, and Assist Reward, can be used to make 4★ Weapons in Untouchable.
+『{{A}}』\n心之海試練、往日回溯和助戰回饋兌換可獲得，用於在生存遊戲專賣店製造四星武器。=<size\=24>[{{A}}]\nGained from Trials from the Sea of Souls, Recollections, and Assist Reward, \ncan be used to make 4★ Weapons in Untouchable</size>.
+心之海試練、往日回溯和助戰回饋兌換可獲得，用於在生存遊戲專賣店製造四星武器。=Gained from Trials from the Sea of Souls, Recollections, and Assist Reward, can be used to make 4★ Weapons in Untouchable.
 祈願道具=Pray Item
 『{{B}}』\n獲取後可用於{{A}}商店「祈願」中進行祈願抽獎。=[Kagura Suzu]\nCan be used in {{A}}'s Shop do [Pray] Lucky Draw.
 r:"^獲取後可用於{{A}}商店「祈願」中進行祈願抽獎。$"="Can be used in {{A}}'s Shop to enter the Pray Lucky Draw."
@@ -3219,7 +3262,7 @@ r:"^消耗(\d+)點行動力\((\d+)\/(\d+)\)$"="Use $1 Action Points ($2/$3)"
 r:"^完成(\d+)次委託派遣$"="Complete $1 Task"
 r:"^完成(\d+)次委託派遣\((\d+)\/(\d+)\)$"="Complete $1 Task ($2/$3)"
 r:"^完成(\d+)次委託派遣 \((\d+)\/(\d+)\)$"="Complete $1 Task ($2/$3)"
-r:"^完成(\d+)次往日回溯\((\d+)\/(\d+)\)$"="Clear $1 Past Echo ($2/$3)"
+r:"^完成(\d+)次往日回溯\((\d+)\/(\d+)\)$"="Clear $1 Recollections ($2/$3)"
 在「星盤試煉」中通過「紫色或紅色」監測點=Clear 1 [Purple or Red] Monitoring Point in Astrolabe Trials
 r:"^在「星盤試煉」中通過「紫色或紅色」監測點\((\d+)\/(\d+)\)$"="Clear 1 [Purple or Red] Monitoring Point in Astrolabe Trials ($1/$2)"
 r:"^在「星盤試煉」中通過任意(\d+)個監測點\((\d+)\/(\d+)\)$"="Clear $1 Monitoring Point in Astrolabe Trials ($2/$3)"
@@ -3618,7 +3661,7 @@ r:"^<color\=#FFFF00>防禦強化\（該階段需求能量(\d+)\）：防禦力�
 r:"^(\d+)回合內通關\((\d+)\/(\d+)\)$"="Win within $1 turns ($2/$3)"
 r:"^獲得至少(\d+)點巧克力能量\((\d+)\/(\d+)\)$"="Gain at least $1 Chocolate Energy ($2/$3)"
 通關前置難度後解鎖挑戰。=Clear prerequisite to unlock.
-r:"^當前已通關難度(\d+)$"="Cleared difficulty $1"
+r:"^當前已通關難度(\d+)$"="Cleared Difficulty $1"
 r:"^消耗(\d+)點巧克力能量，\n釋放特殊技能<color\=#ff3b37>「愛」的一擊</color>，\n對敵人造成高額傷害。$"="Consume $1 Chocolate Energy\nto use the special skill <color\=#ff3b37>Strike of Love</color>,\ndealing severe damage to all foes."
 r:"^「<color\=#000000>愛</color>」的一擊$"="S<color\=#000000>t</color>rike of Love"
 該技能準備中。=Skill is in preparation.
@@ -4984,8 +5027,72 @@ r:"^<color\=#FF8C00>大型魚餌</color>：大型魚機率增加(.*)$"="<color\=
 上一杆是以小博大，不滿足【追蹤定錨】發動條件。=The last Fishing Attempt was High Risk, High Reward, unable to use [Tracking Anchor].
 遊戲暫停=Paused
 
+r:"^完成(.*)第(\d+)關所有關卡目標\((\d+)\/(\d+)\)$"="Clear all Level $2 goals ($3/$4)"
+戰鬥機制=Mechanics
+應援能量=Support Energy
+通關可得<color\=#D70100>紅色能量</color>：=<size\=23>Clear to gain <color\=#D70100>Red Energy</color>：</size>
+通關可得<color\=#2769EF>藍色能量</color>：=<size\=23>Clear to gain <color\=#2769EF>Blue Energy</color>：</size>
+r:"^<sprite\=0 tint>敵我雙方的倒地狀態持續時間延長至(\d+)回合，處於非倒地狀態時，所有敵人受最終傷害降低，處於倒地狀態時，所有敵人受最終傷害提升；\n<sprite\=0 tint>所有角色初始擁有(\d+)點倒地值，倒地後會將倒地值恢復至(\d+)點；\n<sprite\=0 tint>所有敵人釋放技能造成傷害後，額外對目標造成(\d+)點倒地值傷害。\n<sprite\=0 tint>通過本關後獲取(\d+)點<color\=#2769EF><link\="chocolate\|1"><u>藍色應援能量</u></link></color>，在獲得強力“增益效果”的同時，還可以幫助你在BOSS挑戰中使用<color\=#2769EF><link\="chocolate\|2"><u>「一心青魂」</u></link></color>，更輕易地取勝。$"="<sprite\=0 tint>Extend Downed duration to $1 turns, when not Downed, decrease foes' Final DMG Taken, when Downed, increase foes' Final DMG Taken;\n<sprite\=0 tint>All characters start with $2 Down Points, restore to $3 Down Points after recovering from Down;\n<sprite\=0 tint>After foes deal damage with a skill, additionally deal $4 Down Points damage to the target.\n<sprite\=0 tint>After clearing, gain $5 <color\=#2769EF><link\="chocolate|1"><u>Blue Energy</u></link></color>, which provide powerful [Buffs] and help you use <color\=#2769EF><link\="chocolate|2"><u>[Blue Soul of Unity]</u></link></color> in the boss challenge."
+r:"^<sprite\=0 tint>敵我雙方的倒地狀態持續時間延長至(\d+)回合，處於非倒地狀態時，所有敵人受最終傷害降低，處於倒地狀態時，所有敵人受最終傷害提升；\n<sprite\=0 tint>所有角色初始擁有(\d+)點倒地值，倒地後會將倒地值恢復至(\d+)點；\n<sprite\=0 tint>所有敵人釋放技能造成傷害後，額外對目標造成(\d+)點倒地值傷害。\n<sprite\=0 tint>通過本關後獲取(\d+)點<color\=#D70100><link\="chocolate\|1"><u>紅色應援能量</u></link></color>，在獲得強力“增益效果”的同時，還可以幫助你在BOSS挑戰中使用<color\=#D70100><link\="chocolate\|2"><u>「必勝赤魂」</u></link></color>，更輕易地取勝。$"="<sprite\=0 tint>Extend Downed duration to $1 turns, when not Downed, decrease foes' Final DMG Taken, when Downed, increase foes' Final DMG Taken;\n<sprite\=0 tint>All characters start with $2 Down Points, restore to $3 Down Points after recovering from Down;\n<sprite\=0 tint>After foes deal damage with a skill, additionally deal $4 Down Points damage to the target.\n<sprite\=0 tint>After clearing, gain $5 <color\=#D70100><link\="chocolate|1"><u>Red Energy</u></link></color>, which provide powerful [Buffs] and help you use <color\=#D70100><link\="chocolate|2"><u>[Red Soul of Victory]</u></link></color> in the boss challenge."
+r:"^<sprite\=0 tint> 本關中可以消耗(\d+)點<link\="chocolate\|3"><u><color\=#2769EF>藍色應援能量</color>與<color\=#D70100>紅色應援能量</color></u></link>，釋放特殊技能<link\="chocolate\|4"><u><color\=#2769EF>「一心青魂」</color>與<color\=#D70100>「必勝赤魂」</color></u></link>。\n<sprite\=0 tint> 戰鬥開始時會獲得前(\d+)關中累積的<link\="chocolate\|4"><u><color\=#2769EF>藍色應援能量</color>與<color\=#D70100>紅色應援能量</color></u></link>。$"="<sprite\=0 tint>You can spend $1 <link\="chocolate|3"><u><color\=#2769EF>Blue Energy</color> and <color\=#D70100>Red Energy</color></u></link> to use the speical skills <link\="chocolate|4"><u><color\=#2769EF>[Blue Soul of Unity]</color> and <color\=#D70100>[Red Soul of Victory]</color></u></link>.\n<sprite\=0 tint> At the start of battle, gain all accumulated <link\="chocolate|4"><u><color\=#2769EF>Blue Energy</color> and <color\=#D70100>Red Energy</color></u></link> from the previous $2 levels."
+r:"^應援能量·藍Ⅰ-需求能量(\d+)：防禦力提升(\d+%)\n應援能量·藍Ⅱ-需求能量(\d+)：生命值提升(\d+%)\n應援能量·藍Ⅲ-需求能量(\d+)：效果抵抗提升(\d+%)\n應援能量·藍Ⅳ-需求能量(\d+)：受到傷害降低(\d+%)$"="Support Energy·Blue I - Require $1 Energy: Increase DEF by $2\nSupport Energy·Blue II - Require $3 Energy: Increase HP by $4\nSupport Energy·Blue III - Require $5 Energy: Increase Effect RES by $6\nSupport Energy·Blue IV - Require $7 Energy: Decrease DMG Taken by $8"
+r:"^<color\=#FFFF00>應援能量·藍Ⅰ-需求能量(\d+)：防禦力提升(\d+%)</color>\n<color\=#FFFF00>應援能量·藍Ⅱ-需求能量(\d+)：生命值提升(\d+%)</color>\n<color\=#FFFF00>應援能量·藍Ⅲ-需求能量(\d+)：效果抵抗提升(\d+%)</color>\n<color\=#FFFF00>應援能量·藍Ⅳ-需求能量(\d+)：受到傷害降低(\d+%)</color>$"="<color\=#FFFF00>Support Energy·Blue I - Require $1 Energy: Increase DEF by $2\nSupport Energy·Blue II - Require $3 Energy: Increase HP by $4\nSupport Energy·Blue III - Require $5 Energy: Increase Effect RES by $6\nSupport Energy·Blue IV - Require $7 Energy: Decrease DMG Taken by $8</color>"
+r:"^一心青魂:使所有同伴攻擊力提升，獲得(\d+)點倒地值，並使所有同伴使用{{A}}技能/HIGHLIGHT/{{B}}造成傷害後，額外扣除目標(\d+)點倒地值，持續(\d+)回合。該技能有(\d+)回合冷卻時間。$"="Blue Soul of Unity: Increase party's ATK and gain $1 Down Points, after dealing damage with a {{A}} skill/HIGHLIGHT/{{B}}, additionally decrease the target's Down Points by $2. Lasts for $3 turn. Cooldown Time: $4 turn."
+r:"^應援能量·紅Ⅰ-需求能量(\d+)：攻擊力提升(\d+%)\n應援能量·紅Ⅱ-需求能量(\d+)：暴擊效果提升(\d+%)\n應援能量·紅Ⅲ-需求能量(\d+)：穿透提升(\d+%)\n應援能量·紅Ⅳ-需求能量(\d+)：造成傷害提升(\d+%)$"="Support Energy·Red I - Require $1 Energy: Increase ATK by $2\nSupport Energy·Red II - Require $3 Energy: Increase Crit DMG by $4\nSupport Energy·Red III - Require $5 Energy: Increase Pierce by $6\nSupport Energy·Red IV - Require $7 Energy: Increase DMG Dealt by $8"
+r:"^<color\=#FFFF00>應援能量·紅Ⅰ-需求能量(\d+)：攻擊力提升(\d+%)</color>\n<color\=#FFFF00>應援能量·紅Ⅱ-需求能量(\d+)：暴擊效果提升(\d+%)</color>\n<color\=#FFFF00>應援能量·紅Ⅲ-需求能量(\d+)：穿透提升(\d+%)</color>\n<color\=#FFFF00>應援能量·紅Ⅳ-需求能量(\d+)：造成傷害提升(\d+%)</color>$"="<color\=#FFFF00>Support Energy·Red I - Require $1 Energy: Increase ATK by $2\nSupport Energy·Red II - Require $3 Energy: Increase Crit DMG by $4\nSupport Energy·Red III - Require $5 Energy: Increase Pierce by $6\nSupport Energy·Red IV - Require $7 Energy: Increase DMG Dealt by $8</color>"
+r:"^必勝赤魂:對所有敵人造成一定傷害，並額外造成(\d+)點倒地值傷害。該技能有(\d+)回合冷卻時間。$"="Red Soul of Victory: Deal damage to all foes, and deal $1 Down Points damage. Cooldown Time: $2 turn."
+r:"^應援能量·藍Ⅰ-需求能量(\d+)：防禦力提升(\d+%)\n應援能量·藍Ⅱ-需求能量(\d+)：生命值提升(\d+%)\n應援能量·藍Ⅲ-需求能量(\d+)：效果抵抗提升(\d+%)\n應援能量·藍Ⅳ-需求能量(\d+)：受到傷害降低(\d+%)\n應援能量·紅Ⅰ-需求能量(\d+)：攻擊力提升(\d+%)\n應援能量·紅Ⅱ-需求能量(\d+)：暴擊效果提升(\d+%)\n應援能量·紅Ⅲ-需求能量(\d+)：穿透提升(\d+%)\n應援能量·紅Ⅳ-需求能量(\d+)：造成傷害提升(\d+%)$"="Support Energy·Blue I - Require $1 Energy: Increase DEF by $2\nSupport Energy·Blue II - Require $3 Energy: Increase HP by $4\nSupport Energy·Blue III - Require $5 Energy: Increase Effect RES by $6\nSupport Energy·Blue IV - Require $7 Energy: Decrease DMG Taken by $8\nSupport Energy·Red I - Require $9 Energy: Increase ATK by $10\nSupport Energy·Red II - Require $11 Energy: Increase Crit DMG by $12\nSupport Energy·Red III - Require $13 Energy: Increase Pierce by $14\nSupport Energy·Red IV - Require $15 Energy: Increase DMG Dealt by $16"
+r:"^<color\=#FFFF00>應援能量·藍Ⅰ-需求能量(\d+)：防禦力提升(\d+%)</color>\n<color\=#FFFF00>應援能量·藍Ⅱ-需求能量(\d+)：生命值提升(\d+%)</color>\n<color\=#FFFF00>應援能量·藍Ⅲ-需求能量(\d+)：效果抵抗提升(\d+%)</color>\n<color\=#FFFF00>應援能量·藍Ⅳ-需求能量(\d+)：受到傷害降低(\d+%)</color>\n<color\=#FFFF00>應援能量·紅Ⅰ-需求能量(\d+)：攻擊力提升(\d+%)</color>\n<color\=#FFFF00>應援能量·紅Ⅱ-需求能量(\d+)：暴擊效果提升(\d+%)</color>\n<color\=#FFFF00>應援能量·紅Ⅲ-需求能量(\d+)：穿透提升(\d+%)</color>\n<color\=#FFFF00>應援能量·紅Ⅳ-需求能量(\d+)：造成傷害提升(\d+%)</color>$"="<color\=#FFFF00>Support Energy·Blue I - Require $1 Energy: Increase DEF by $2\nSupport Energy·Blue II - Require $3 Energy: Increase HP by $4\nSupport Energy·Blue III - Require $5 Energy: Increase Effect RES by $6\nSupport Energy·Blue IV - Require $7 Energy: Decrease DMG Taken by $8\nSupport Energy·Red I - Require $9 Energy: Increase ATK by $10\nSupport Energy·Red II - Require $11 Energy: Increase Crit DMG by $12\nSupport Energy·Red III - Require $13 Energy: Increase Pierce by $14\nSupport Energy·Red IV - Require $15 Energy: Increase DMG Dealt by $16</color>"
+r:"^一心青魂:使所有同伴攻擊力提升，獲得(\d+)點倒地值，並使所有同伴使用{{A}}技能/HIGHLIGHT/{{B}}造成傷害後，額外扣除目標(\d+)點倒地值，持續(\d+)回合。該技能有(\d+)回合冷卻時間。\n必勝赤魂:對所有敵人造成一定傷害，並額外造成(\d+)點倒地值傷害。該技能有(\d+)回合冷卻時間。$"="Blue Soul of Unity: Increase party's ATK and gain $1 Down Points, after dealing damage with a {{A}} skill/HIGHLIGHT/{{B}}, additionally decrease the target's Down Points by $2. Lasts for $3 turn. Cooldown Time: $4 turn.\nRed Soul of Victory: Deal damage to all foes, and deal $5 Down Points damage. Cooldown Time: $6 turn."
+通關時無角色戰敗=No faint when clearing
+r:"^挑戰難度：LV.(\d+)$"="Challenge Difficulty: LV.$1"
 一心青魂=Blue Soul of Unity
 必勝赤魂=Red Soul of Victory
+r:"^{{B}}會在特定時機召喚其他敵人，為所有同伴添加一定倒地值，並釋放「比賽開始」：展開一個特殊的計分板，期間記錄所有單位對對手造成的倒地值傷害作為比分，下回合開始時結算雙方比分：\n我方比分>敵方比分的2倍：所有角色{{A}}大幅提升，恢復(\d+)點隨機「應援能量」；\n我方比分>敵方比分：所有角色{{A}}提升；\n我方比分<敵方比分：所有敵人{{A}}提升，{{B}}釋放「山崩地裂」：造成巨額傷害，額外造成高額倒地值傷害。$"="{{B}} will summon other Shadows to increase all allies' Down Points, then use [Game Start]: Set up a score board, record all Down Points damage dealt as score, calculate the score at the start of next turn:\nAllies Score > 2x Foes Score: Heavily increase all characters' {{A}} and restore $1 [Support Energy];\nAllies Score > Foes Score: Increase all characters' {{A}};\nAllies Score < Foes Score: Increase all foes' {{A}}, then {{B}} use [Shattered Earth]: Deal colossal damage, additonally deal severe Down Points damage."
+r:"^{{B}}會在特定時機召喚其他敵人，為所有同伴添加一定倒地值，並釋放「比賽開始」：展開一個特殊的計分板，期間記錄所有單位對對手造成的倒地值傷害作為比分，下回合開始時結算雙方比分：\n我方比分>敵方比分的2倍：所有角色{{A}}大幅提升；\n我方比分>敵方比分：所有角色{{A}}提升；\n我方比分<敵方比分：所有敵人{{A}}提升，{{B}}釋放「山崩地裂」：造成巨額傷害，額外造成高額倒地值傷害。$"="{{B}} will summon other Shadows to increase all allies' Down Points, then use [Game Start]: Set up a score board, record all Down Points damage dealt as score, calculate the score at the start of next turn:\nAllies Score > 2x Foes Score: Heavily increase all characters' {{A}};\nAllies Score > Foes Score: Increase all characters' {{A}};\nAllies Score < Foes Score: Increase all foes' {{A}}, then {{B}} use [Shattered Earth]: Deal colossal damage, additonally deal severe Down Points damage."
+r:"^{{A}}同時擁有四大天王的能力：\n「持劍護國土」：造成傷害時，使所有敵人獲得倒地值；\n「眾生均增長」：所有敵人每回合從攻擊增長、防禦增長、傷害增長中隨機獲得一種；\n「天眼觀世間」：標記一名角色，使其對所有屬性的適應性變為弱，下回合將受到所有敵人的集火；\n「混元珍珠傘」：對血量百分比最低的敵人撐開混元珍珠傘，使其免疫倒地，持續(\d+)回合。$"="{{A}} has the abilities of all 4 Kings:\n[Country Protection]: When dealing damage, all foes gain Down Points;\n[Sentient Growth]: All foes gain one of the following buff randomly each turn: ATK Growth, DEF Growth, DMG Growth;\n[Heavenly Eyes]: Mark 1 character, change all their affinites to Weak, all foes will attack them next turn;\n[Pearl Umbrella]: Open the Pearl Umbrella for the lowest HP% foe, grant them Null Down for $1 turn."
+戰鬥機制介紹=Mechanics
+r:"^1、敵我雙方的倒地狀態持續時間延長至(\d+)回合，處於非倒地狀態時，所有敵人受最終傷害降低，處於倒地狀態時，所有敵人受最終傷害提升；\n2、所有角色初始擁有(\d+)點倒地值，倒地後會將倒地值恢復至(\d+)點；\n3、所有敵人釋放技能造成傷害後，額外對目標造成(\d+)點倒地值傷害。$"="1. Extend Downed duration to $1 turns, when not Downed, decrease foes' Final DMG Taken, when Downed, increase foes' Final DMG Taken;\n2. All characters start with $2 Down Points, restore to $3 Down Points after recovering from Down;\n3. After foes deal damage with a skill, additionally deal $4 Down Points damage to the target."
+r:"^1、敵我雙方的倒地狀態持續時間延長至(\d+)回合，處於非倒地狀態時，所有敵人受最終傷害降低，處於倒地狀態時，所有敵人受最終傷害提升；\n2、所有角色初始擁有(\d+)點倒地值，倒地後會將倒地值恢復至(\d+)點；\n3、所有敵人釋放技能造成傷害後，額外對目標造成(\d+)點倒地值傷害；\n4、{{C}}會在特定時機召喚其他敵人，為所有同伴添加一定倒地值，並釋放「比賽開始」：展開一個特殊的計分板，期間記錄所有單位對對手造成的倒地值傷害作為比分，下回合開始時結算雙方比分：\n我方比分>敵方比分的2倍：所有角色{{A}}大幅提升，恢復(\d+)點隨機「應援能量」；\n我方比分>敵方比分：所有角色{{A}}提升；\n我方比分<敵方比分：所有敵人{{A}}提升，{{C}}釋放「山崩地裂」：造成巨額傷害，額外造成高額倒地值傷害；\n5、{{B}}同時擁有四大天王的能力：\n「持劍護國土」：造成傷害時，使所有敵人獲得倒地值；\n「眾生均增長」：所有敵人每回合從攻擊增長、防禦增長、傷害增長中隨機獲得一種；\n「天眼觀世間」：標記一名角色，使其對所有屬性的適應性變為弱，下回合將受到所有敵人的集火；\n「混元珍珠傘」：對血量百分比最低的敵人撐開混元珍珠傘，使其免疫倒地，持續(\d+)回合。$"="1. Extend Downed duration to $1 turns, when not Downed, decrease foes' Final DMG Taken, when Downed, increase foes' Final DMG Taken;\n2. All characters start with $2 Down Points, restore to $3 Down Points after recovering from Down;\n3. After foes deal damage with a skill, additionally deal $4 Down Points damage to the target.\n4. {{C}} will summon other Shadows to increase all allies' Down Points, then use [Game Start]: Set up a score board, record all Down Points damage dealt as score, calculate the score at the start of next turn:\nAllies Score > 2x Foes Score: Heavily increase all characters' {{A}} and restore $5 [Support Energy];\nAllies Score > Foes Score: Increase all characters' {{A}};\nAllies Score < Foes Score: Increase all foes' {{A}}, then {{C}} use [Shattered Earth]: Deal colossal damage, additonally deal severe Down Points damage;\n5. {{B}} has the abilities of all 4 Kings:\n[Country Protection]: When dealing damage, all foes gain Down Points;\n[Sentient Growth]: All foes gain one of the following buff randomly each turn: ATK Growth, DEF Growth, DMG Growth;\n[Heavenly Eyes]: Mark 1 character, change all their affinites to Weak, all foes will attack them next turn;\n[Pearl Umbrella]: Open the Pearl Umbrella for the lowest HP% foe, grant them Null Down for $6 turn."
+應援能量·藍Ⅰ=Support Energy·Blue I
+應援能量·藍Ⅱ-=Support Energy·Blue II
+應援能量·藍Ⅲ=Support Energy·Blue III
+應援能量·藍Ⅳ=Support Energy·Blue IV
+應援能量·紅Ⅰ=Support Energy·Red I
+應援能量·紅Ⅱ-=Support Energy·Red II
+應援能量·紅Ⅲ=Support Energy·Red III
+應援能量·紅Ⅳ=Support Energy·Red IV
+精力充沛=Vigorous
+r:"^未處於倒地狀態，受最終傷害降低(\d+%)$"="When not Downed, \ndecrease Final DMG Taken by $1"
+比賽開始=Game Start
+比賽開始！=Game Start!
+開啟比賽，一回合後根據敵我雙方造成的總倒地值傷害進行比分，怪盜方積分高則獲得獎勵，積分低則受到懲罰。=Start the game. After 1 turn, the side with the higher Down Points damage dealt wins. Thieves are rewarded for victory and punished for defeat.
+山崩地裂=Shattered Earth
+對所有敵人造成巨額物理屬性傷害，額外造成大量倒地值傷害。=Deal colossal Phys damage to all foes, additonally deal severe Down Points damage.
+r:"^對所有敵人造成大量火焰屬性傷害，有一定基礎機率使敵人陷入<link\="s\|102"><u>燃燒</u></link>狀態，效果持續(\d+)回合。$"="Deal heavy Fire damage to all foes, with a chance to inflict  <link\="s|102"><u>Burn</u></link> for $1 turns."
+對所有敵人造成大量核熱屬性傷害，對處於<link\="s|101"><u>元素異常</u></link>狀態的敵人造成<link\="s|211"><u>TECHNICAL</u></link>，技能傷害提升。=Deal heavy Nuke damage to all foes, deal a <link\="s|211"><u>TECHNICAL</u></link> and increase skill damage for foes with an <link\="s|101"><u>Elemental Ailment</u></link>.
+對所有敵人造成特大核熱屬性傷害，對處於<link\="s|101"><u>元素異常</u></link>狀態的敵人造成<link\="s|211"><u>TECHNICAL</u></link>，技能傷害提升。=Deal severe Nuke damage to all foes, deal a <link\="s|211"><u>TECHNICAL</u></link> and increase skill damage for foes with an <link\="s|101"><u>Elemental Ailment</u></link>.
+每次造成傷害會使所有同伴獲得倒地值。=When dealing damage, all allies gain Down Points.
+每回合使所有同伴從攻擊增長、防禦增長、傷害增長中隨機獲得一種。=All allies gain one of the following buff randomly each turn: ATK Growth, DEF Growth, DMG Growth.
+標記一名怪盜，使其對所有屬性的適應性變為弱，下回合將受到所有陰影的集火。=Mark 1 Thief, change all their affinites to Weak, all Shadows will attack them next turn.
+對血量百分比最低的同伴撐開混元珍珠傘，使其免疫倒地，持續1回合。=Open the Pearl Umbrella for the lowest HP% allies, grant them Null Down for 1 turn.
+核束之癒=Healing Tremor
+r:"^使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的生命值，倒地值恢復(\d+)點。$"="Restore 1 ally's HP by <color\=#fffc40>$1</color> of ATK, restore $2 Down Points."
+使所有同伴攻擊力提升，獲得5點倒地值，並使所有同伴使用{{A}}技能/HIGHLIGHT/{{B}}造成傷害後，額外扣除目標1點倒地值，持續1回合。該技能有1回合冷卻時間。=Boosts all companion Attacks, gains 5 Down Points, and causes all companions to deduct an additional 1 Down Point from the target for 1 turn after using {{A}} Skill/HIGHLIGHT/{{B}} to deal damage. This skill has a 1 turn cooldown.
+r:"^使所有同伴攻擊力提升，獲得(\d+)點倒地值，並使所有同伴使用{{A}}技能/HIGHLIGHT/{{B}}造成傷害後，額外扣除目標(\d+)點倒地值，持續(\d+)回合。該技能有(\d+)回合冷卻時間。$"="Increase party's ATK and gain $1 Down Points, after dealing damage with a {{A}} skill/HIGHLIGHT/{{B}}, additionally decrease the target's Down Points by $2. Lasts for $3 turn. Cooldown Time: $4 turn."
+r:"^對所有敵人造成一定傷害，並額外造成(\d+)點倒地值傷害。該技能有(\d+)回合冷卻時間。$"="Deal damage to all foes, and deal $1 Down Points damage. Cooldown Time: $2 turn."
+激進的鬼=Radical Oni
+激進的{{A}}、消極的{{B}}、消極的{{C}}=Radical {{A}}, Radical {{B}}, Radical {{C}}
+消極的{{A}}、激進的鬼、消極的{{B}}=Negative {{A}}, Radical Oni, Negative {{B}}
+比賽開始！請儘量多地<color\=#FF0000>造成倒地值傷害</color>=Game Start! Try to deal as much <color\=#FF0000>Down Points damage</color> as possible
+裁判=Judgement
+比賽勝利=Victory
+r:"^比<color\=#000000>賽</color>勝利$"="V<color\=#000000>i</color>ctory"
+敵方比分超過我方，{{A}}獲得提升=Foes scored more than allies, increase {{A}}
+比賽大勝=Landslide Victory
+r:"^比<color\=#000000>賽</color>大勝$"="L<color\=#000000>a</color>ndslide Victory"
+我方比分遠超敵方，{{A}}獲得大幅提升！=Allies scored way more than foes, heavily increase {{A}}!
+被天眼所注視，對所有屬性的適應性變為弱，將受到所有陰影的集火=Watched by Heavenly Eyes, change all affinites to Weak, all Shadows will attack them next turn
 
 ----------
 Character's Story
@@ -5208,6 +5315,7 @@ sr:"^(.*)印記$"="$1's Seal"
 狂躁的{{A}}=Manic {{A}}
 平靜的{{A}}=Calm {{A}}
 消極的{{A}}=Negative {{A}}
+激進的{{A}}=Radical {{A}}
 強大的{{A}}=Strong {{A}}
 兇惡的{{A}}=Vicious {{A}}
 創生的{{A}}=Creative {{A}}
