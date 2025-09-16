@@ -671,7 +671,7 @@ sr:"^與(.*)決戰$"="Defeat $1"
 準備釋放強力一擊並且提升=Preparing powerful attack, increase damage
 王牌投手=Ace Pitcher
 準備釋放強力一擊並且傷害提升=Preparing to use a strong attack
-加油=You can do it
+加油=Give it your all!
 正在為{{A}}加油=Cheering for {{A}}
 r:"^無法行動，受到傷害提升(\d+%)$"="Unable to act, increase DMG Taken by $1"
 
@@ -2273,29 +2273,26 @@ r:"^分數：暫無記錄$"="Score: No Record"
 分數：=Score:
 上半場= <size\=27>Pt. 1</size>
 下半場= <size\=27>Pt. 2</size>
-r:"^僅展示當前段位前(\d+)名怪盜資訊$"="Only the info of the top $1 Phantom Thieves will be shown"
-8等星=8th Star
-7等星=7th Star
-6等星=6th Star
-5等星=5th Star
-4等星=4th Star
-3等星=3rd Star
-2等星=2nd Star
-1等星=1st Star
-r:"(\d)等星(\d)階"=$1-Star Tier $2
-首次晉級至新段位後可獲得=Upon promotion to a new Star rank for the first time, you can earn the following rewards.
+r:"^僅展示當前段位前(\d+)名怪盜資訊$"="Only the currently top $1 ranked Phantom Thieves are displayed"
+8等星=8★
+7等星=7★
+6等星=6★
+5等星=5★
+4等星=4★
+3等星=3★
+2等星=2★
+1等星=1★
+r:"^(\d+)等星(\d+)階$"="$1★ Class $2"
+首次晉級至新段位後可獲得=You can get rewards the first time you rank up.
 排名獎勵=<size\=36>Ranking</size>
-本期試煉結束後郵件發放，參與一次試煉可獲得=Rewards will be given on the end of this trial
+本期試煉結束後郵件發放，參與一次試煉可獲得=Take on a trial at least once to earn rewards. Rewards will be sent to Mail after the season ends.
 僅展示當前段位前999名怪盜團資訊=Shows up to 999 players in the current trial.
+段位獎勵=Rank Rewards
 總分數：=Score:
-本期排名：=Top: 
-排名：=Top
+本期排名：=Rank:
+排名：=Rank:
 以後=^
-r:"^(\d+%)以後$"="After $1"
-段位獎勵=<size\=28>Rank Rewards</size>
-任務獎勵隨每期心之海進行重置=Rewards will reset on the end of this trial
-r:"^累計獲得星數（<color\=#EF0000>(\d+)</color>/(\d+)）$"="Get (<color\=#EF0000>$1</color>/$2）Stars"
-r:"^累計獲得（<color\=#EF0000>(\d+)</color>/(\d+)）分$"="Get (<color\=#EF0000>$1</color>/$2) Points"
+r:"^(\d+%)以後$"="$1 ^"
 
 晉級條件：=<size\=24>Requirement:</size>
 r:"累計獲得<color\=#FFF000> (\d+) </color>顆星"=<color\=#FFF000> $1 </color>Stars
@@ -2303,10 +2300,13 @@ r:"累計獲得<color\=#FFF000> (\d+) </color>顆星"=<color\=#FFF000> $1 </colo
 r:"^(\d+)回合內取得勝利$"="Win within $1 actions"
 通關前置關卡後解鎖。=Unlock after clearing the previous stage.
 
-挑戰獎勵=<size\=36>Rewards</size>
+挑戰獎勵=Challenge Rewards
 累計星級=<size\=24>Total Stars</size>
-r:"累計獲得星數（(\d+)\/(\d+)）"=Get ($1/$2) Stars
-r:"累計獲得（(\d+)\/(\d+)）分"=Get ($1/$2) Points
+任務獎勵隨每期心之海進行重置=Trials from the Sea of Souls rewards are reset each season.
+r:"^累計獲得星數（(\d+)\/(\d+)）$"="Total ★ Obtained ($1/$2)"
+r:"^累計獲得（(\d+)\/(\d+)）分$"="Total Score Obtained ($1/$2)"
+r:"^累計獲得星數（<color\=#EF0000>(\d+)</color>/(\d+)）$"="Total ★ Obtained (<color\=#EF0000>$1</color>/$2)"
+r:"^累計獲得（<color\=#EF0000>(\d+)</color>/(\d+)）分$"="Total Score Obtained (<color\=#EF0000>$1</color>/$2)"
 
 積分係數：=Score Multipler:
 成功抵禦次數：=Successful Defenses:
@@ -2327,7 +2327,7 @@ r:"累計獲得（(\d+)\/(\d+)）分"=Get ($1/$2) Points
 r:"^擊敗低階陰影（(\d+)/(\d+)）$"="Defeat low level \nShadows ($1/$2)"
 r:"^擊敗菁英陰影（(\d+)/(\d+)）$"="<size\=22>Defeat elite Shadows ($1/$2)</size>"
 r:"^擊敗首領（(\d+)/(\d+)）$"="Defeat Boss ($1/$2)"
-r:"^乘坐電梯$"="Take the Elevator"
+乘坐電梯=Take the elevator
 「<color\=#ff3b37>快速通關</color>」滿星通關的區域=[<color\=#ff3b37>Quick Clear</color>] Trials with all stars
 r:"^<color\=#FFFFFF>累計分數：</color><color\=#FFF000>(\d+)</color>$"="<color\=#FFFFFF>Score:</color><color\=#FFF000>$1</color>"
 
@@ -2341,8 +2341,8 @@ r:"^<color\=#FFFFFF>累計分數：</color><color\=#FFF000>(\d+)</color>$"="<col
 試煉分數=Score
 抵達區域=<size\=28>Last Area</size>
 
-以下<color\=#ef0000>怪盜</color>與<color\=#ef0000>面具</color>會被鎖定到本挑戰中不可更換，是否確認出戰？=<size\=24>You cannot change the chosen <color\=#ef0000>Thieves and Personas</color> until you reset the fight</size>
-以下<color\=#ef0000>角色</color>與<color\=#ef0000>面具</color>會被鎖定到本挑戰中不可更換，是否確認出戰？=<size\=24>You cannot change the chosen <color\=#ef0000>Characters and Personas</color> until you reset the fight</size>
+以下<color\=#ef0000>怪盜</color>與<color\=#ef0000>面具</color>會被鎖定到本挑戰中不可更換，是否確認出戰？=<size\=24>You won't be able to change these <color\=#ef0000>Thieves</color> and <color\=#ef0000>Personas</color>. Proceed?</size>
+以下<color\=#ef0000>角色</color>與<color\=#ef0000>面具</color>會被鎖定到本挑戰中不可更換，是否確認出戰？=<size\=24>You won't be able to change these <color\=#ef0000>Thieves</color> and <color\=#ef0000>Personas</color>. Proceed?</size>
 r:"^<color\=#FFFFFF>首領剩餘進攻次數：</color><color\=#FFF000>(\d+)</color>$"="<color\=#FFFFFF>Boss Attacks Left: </color><color\=#FFF000>$1</color>"
 主動逃離戰鬥不會獲得分數記錄。\n是否確認退出？=Cannot record score if you escape.\nAre you sure?
 
@@ -2374,7 +2374,7 @@ r:"^1、進入戰鬥時，{{A}}會召喚(\d+)個隨從與之並肩作戰，{{A}}
 被操控的鵺=Manipulated Nue
 暝夜之庇護=Midnight Protection
 r:"^暝<color\=#000000>夜</color>之庇護$"="M<color\=#000000>i</color>idnight Protection"
-r:"^1、{{B}}每隔一個回合會給自己添加(\d+)層「暝夜之庇護」，最多可疊加(\d+)層，每層可使自身受到的最終傷害減免(\d+%)。\n2、受到庇護的單位每次受到{{A}}技能傷害時，會被驅散(\d+)層「暝夜之庇護」。$"="<size\=25>1. {{B}} gains $1 stack of [Midnight Protection] every other turn, up to $2 stacks, each stack decreases own Final DMG Taken by $3.\n2. When a protected ally takes damage from a {{A}} skill, dispels $4 stack of [Midnight Protection].</size>"
+r:"^1、{{B}}每隔一個回合會給自己添加(\d+)層「暝夜之庇護」，最多可疊加(\d+)層，每層可使自身受到的最終傷害減免(\d+%)。\n2、受到庇護的單位每次受到{{A}}技能傷害時，會被驅散(\d+)層「暝夜之庇護」。$"="<size\=26>1. {{B}} gains $1 [Midnight Protection] stack every other turn. Stacks up to $2 times. Each stack decreases Final DMG Taken by $3.\n2. When a protected ally takes damage from a {{A}} skill, dispel $4 [Midnight Protection] stack.</size>"
 
 r:"^1、進入戰鬥時，{{A}}和{{B}}各獲得(\d+)層「妖精之力」，每層為其提供(\d+%)的最終傷害減免。\n2、每當隨從被擊殺時，{{A}}或{{B}}會消耗(\d+)層「妖精之力」重新召喚(\d+)個隨從。\n3、當自身「妖精之力」耗盡時，{{A}}和{{B}}會陷入虛弱狀態，受到的傷害大幅提升，持續(\d+)回合。虛弱狀態結束後會重新獲得(\d+)層「妖精之力」。$"="<size\=21>1. At the start of battle, {{A}} and {{B}} will both gain $1 stacks of [Fairy Power], each stack increases Final DMG RES by $2.\n2. When you defeat a minion, {{A}} or {{B}} will consume $3 stack of [Fairy Power] to resummon $4 minion.\n3. {{A}} and {{B}} will enter Weak when they run out of [Fairy Power], heavily increasing DMG Taken for $5 turns. Regain $6 stacks of [Fairy Power] when Weak ends.</size>"
 妖精之力=Fairy Power
