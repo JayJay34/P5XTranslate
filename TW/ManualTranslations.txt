@@ -72,6 +72,8 @@ r:"^顯示器-(\d+)$"="Display-$1"
 手把縮放靈敏=<size\=30>Controller \nZoom Sensitivity</size>
 手把視角靈敏度=Controller View Sensitivity
 手把縮放靈敏度=Controller Zoom Sensitivity
+虛擬游標模式=Virtual Cursor Mode
+虛擬游標指標移動速度=Virtual Cursor Movement Speed
 經典模式視角靈敏度=Classic Mode View Sensitivity
 經典模式縮放靈敏度=Classic Mode Zoom Sensitivity
 RPG模式視角靈敏度=RPG Mode View Sensitivity
@@ -126,6 +128,9 @@ Onemore自動選擇目標=<size\=27>Automatically select \nONE MORE target</size
 自動跳過「都市氛圍事件」演出=Skip [City Atmosphere] Animation
 簡化部分「都市劇情」演出=Simplify Certain [City Activities] Animation
 簡化都市日程「前往」表現=Simplify [Start Activities] Animation
+自動種植=Auto Plant
+自動收穫=Auto Harvest
+r:"^協同者{{A}}RANK等級到(\d+)後解鎖。$"="Unlocks after {{A}} Synergy RANK $1."
 
 音量提升=Volume Up
 音量降低=Volume Down
@@ -270,6 +275,7 @@ r:"^待設置$"="None"
 
 請根據指引提示操作=Please follow the tutorial
 操作 </color><size\=56>虋韽囻丷</size> 移動角色=WADS to move
+操作 </color><size\=56><sprite\=73 tint\=1><sprite\=68 tint\=1><sprite\=51 tint\=1><sprite\=54 tint\=1></size> 移動角色=</color><size\=56><sprite\=73 tint\=1><sprite\=68 tint\=1><sprite\=51 tint\=1><sprite\=54 tint\=1></size> to move
 「<color\=#ff3b37>跳躍</color>」至前方平臺=[<color\=#ff3b37>Jump</color>] to the next platform
 使用「<color\=#ff3b37>{{A}}</color>」戰鬥=Use [<color\=#ff3b37>{{A}}</color>]
 選擇這個「<color\=#ff3b37>技能</color>」=Select this [<color\=#ff3b37>Skill</color>]
@@ -279,6 +285,7 @@ r:"^待設置$"="None"
 按下滑鼠左鍵拖動視角=Click the left mouse botton to move the camera
 視角跟隨滑鼠移動=Camera follow cursor
 按下<color\=#ff3b37>ALT鍵</color>可喚出滑鼠=Press [<color\=#ff3b37>ALT</color>] to show cursor
+按下 <color\=#ff3b37>左側</color></color><size\=56><sprite\=27 tint\=1></size> 呼出滑鼠=Press <color\=#ff3b37>Left</color></color><size\=56><sprite\=27 tint\=1></size> to show cursor
 按下 <color\=#ff3b37>左側</color></color><size\=56>ብ</size> 呼出滑鼠=Press [<color\=#ff3b37>Left ALT</color>] to show cursor
 後續也可在【選單-設置-遊戲】中進行設置=Can edit in [Menu - Settings - Gameplay] later
 點擊<color\=#ff3b37>追蹤</color>當前任務=Click to [<color\=#ff3b37>Track</color>] current mission
@@ -805,14 +812,17 @@ Area Names
 Menu / UI Translations (Timer)
 ----------
 r:"^本物品將在(\d+)年(\d+)月(\d+)日 (\d+):(\d+)到期$"="Expires on $1/$2/$3 $4:$5"
+r:"^(\d+)天(\d+)小時後到期$"="Expires in $1d $2h"
 r:"^(\d+)天(\d+)小時後過期$"="Expires in $1d $2h"
 r:"^(\d+)天(\d+)時後過期$"="Expires in $1d $2h"
 r:"^(\d+)小時(\d+)分後過期$"="Expires in $1h $2m"
 r:"^(\d+)時(\d+)分後過期$"="Expires in $1h $2m"
 r:"^(\d+)天後過期$"="Expires in $1d"
-r:"^(\d+)天後下架$"="Expires in $1d"
-r:"^(\d+)天(\d+)時後下架$"="Expires in $1d $2h"
-r:"^(\d+)天(\d+)小時後到期$"="Expires in $1d $2h"
+r:"^(\d+)天(\d+)小時後下架$"="Ends in $1d $2h"
+r:"^(\d+)天(\d+)時後下架$"="Ends in $1d $2h"
+r:"^(\d+)天後下架$"="Ends in $1d"
+r:"^(\d+)小時(\d+)分後下架$"="Ends in $1h $2m"
+r:"^(\d+)時(\d+)分後下架$"="Ends in $1h $2m"
 
 r:"^(\d+)天(\d+)小時後刷新$"="Refreshes in $1d $2h"
 r:"^(\d+)天(\d+)時後刷新$"="Refreshes in $1d $2h"
@@ -842,9 +852,6 @@ r:"^(\d+)天(\d+)小時$"=" $1d $2h"
 r:"^(\d+)天(\d+)時$"=" $1d $2h"
 r:"^(\d+)小時(\d+)分$"=" $1h $2m"
 r:"^(\d+)時(\d+)分$"=" $1h $2m"
-r:"^(\d+)天(\d+)小時後下架$"="Expires in $1d $2h"
-r:"^(\d+)小時(\d+)分後下架$"="Expires in $1h $2m"
-r:"^(\d+)時(\d+)分後下架$"="Expires in $1h $2m"
 r:"^剩餘(\d+)小時(\d+)分(\d+)秒$"=" $1h $2m $3s"
 r:"^剩餘(\d+)時(\d+)分(\d+)秒$"=" $1h $2m $3s"
 r:"^(\d+)小時(\d+)分鐘$"=" $1h $2m"
@@ -1032,7 +1039,7 @@ r:"^陣容\((\d+)\)$"="Party ($1)"
 確認要刪除該方案嗎？=Delete this party formation?
 不可以刪除默認編隊喔=Cannot delete the default setting
 隊伍中至少攜帶一個{{A}}=Party needs to be set with at least one {{A}}.
-陣容中已有相同怪盜，是否替換？=Your party contains duplicate Thief. Would you like to swap one out?
+陣容中已有相同怪盜，是否替換？=Your party contains duplicate Thief. \nWould you like to swap one out?
 <color\=#FFF000>{{A}}</color>無法與<color\=#FFF000>{{B}}</color>同時上陣，是否替換？=Unable to bring <color\=#FFF000>{{A}}</color> with <color\=#FFF000>{{B}}</color>, change them?
 <color\=#FFF000>{{B}}</color>無法與<color\=#FFF000>{{A}}</color>同時上陣，是否替換？=Unable to bring <color\=#FFF000>{{B}}</color> with <color\=#FFF000>{{A}}</color>, change them?
 已設為關注怪盜。=Added Thief to favourites.
@@ -1197,53 +1204,53 @@ INSPIRATION TUTORIAL
 Handbook Challenges
 ----------
 
-完成目標Ⅰ第一階段所有任務=Complete all tasks in Step 1
-完成目標Ⅰ第二階段所有任務=Complete all tasks in Step 2
-完成目標Ⅰ第三階段所有任務=Complete all tasks in Step 3
-完成目標Ⅰ第四階段所有任務=Complete all tasks in Step 4
-完成目標Ⅰ第五階段所有任務=Complete all tasks in Step 5
-完成目標Ⅰ第六階段所有任務=Complete all tasks in Step 6
-完成目標Ⅰ第七階段所有任務=Complete all tasks in Step 7
+完成目標Ⅰ第一階段所有任務=Clear all missions in Step 1
+完成目標Ⅰ第二階段所有任務=Clear all missions in Step 2
+完成目標Ⅰ第三階段所有任務=Clear all missions in Step 3
+完成目標Ⅰ第四階段所有任務=Clear all missions in Step 4
+完成目標Ⅰ第五階段所有任務=Clear all missions in Step 5
+完成目標Ⅰ第六階段所有任務=Clear all missions in Step 6
+完成目標Ⅰ第七階段所有任務=Clear all missions in Step 7
 
-完成目標Ⅱ第一階段所有任務=Complete all tasks in Step 1
-完成目標Ⅱ第二階段所有任務=Complete all tasks in Step 2
-完成目標Ⅱ第三階段所有任務=Complete all tasks in Step 3
-完成目標Ⅱ第四階段所有任務=Complete all tasks in Step 4
-完成目標Ⅱ第五階段所有任務=Complete all tasks in Step 5
-完成目標Ⅱ第六階段所有任務=Complete all tasks in Step 6
-完成目標Ⅱ第七階段所有任務=Complete all tasks in Step 7
+完成目標Ⅱ第一階段所有任務=Clear all missions in Step 1
+完成目標Ⅱ第二階段所有任務=Clear all missions in Step 2
+完成目標Ⅱ第三階段所有任務=Clear all missions in Step 3
+完成目標Ⅱ第四階段所有任務=Clear all missions in Step 4
+完成目標Ⅱ第五階段所有任務=Clear all missions in Step 5
+完成目標Ⅱ第六階段所有任務=Clear all missions in Step 6
+完成目標Ⅱ第七階段所有任務=Clear all missions in Step 7
 
-r:"^完成目標Ⅰ第一階段任意(\d+)個任務$"="Complete any $1 tasks in Step 1"
-r:"^完成目標Ⅰ第二階段任意(\d+)個任務$"="Complete any $1 tasks in Step 2"
-r:"^完成目標Ⅰ第三階段任意(\d+)個任務$"="Complete any $1 tasks in Step 3"
-r:"^完成目標Ⅰ第四階段任意(\d+)個任務$"="Complete any $1 tasks in Step 4"
-r:"^完成目標Ⅰ第五階段任意(\d+)個任務$"="Complete any $1 tasks in Step 5"
-r:"^完成目標Ⅰ第六階段任意(\d+)個任務$"="Complete any $1 tasks in Step 6"
-r:"^完成目標Ⅰ第七階段任意(\d+)個任務$"="Complete any $1 tasks in Step 7"
+r:"^完成目標Ⅰ第一階段任意(\d+)個任務$"="Clear any $1 missions in Step 1"
+r:"^完成目標Ⅰ第二階段任意(\d+)個任務$"="Clear any $1 missions in Step 2"
+r:"^完成目標Ⅰ第三階段任意(\d+)個任務$"="Clear any $1 missions in Step 3"
+r:"^完成目標Ⅰ第四階段任意(\d+)個任務$"="Clear any $1 missions in Step 4"
+r:"^完成目標Ⅰ第五階段任意(\d+)個任務$"="Clear any $1 missions in Step 5"
+r:"^完成目標Ⅰ第六階段任意(\d+)個任務$"="Clear any $1 missions in Step 6"
+r:"^完成目標Ⅰ第七階段任意(\d+)個任務$"="Clear any $1 missions in Step 7"
 
-r:"^完成目標Ⅱ第一階段任意(\d+)個任務$"="Complete any $1 tasks in Step 1"
-r:"^完成目標Ⅱ第二階段任意(\d+)個任務$"="Complete any $1 tasks in Step 2"
-r:"^完成目標Ⅱ第三階段任意(\d+)個任務$"="Complete any $1 tasks in Step 3"
-r:"^完成目標Ⅱ第四階段任意(\d+)個任務$"="Complete any $1 tasks in Step 4"
-r:"^完成目標Ⅱ第五階段任意(\d+)個任務$"="Complete any $1 tasks in Step 5"
-r:"^完成目標Ⅱ第六階段任意(\d+)個任務$"="Complete any $1 tasks in Step 6"
-r:"^完成目標Ⅱ第七階段任意(\d+)個任務$"="Complete any $1 tasks in Step 7"
+r:"^完成目標Ⅱ第一階段任意(\d+)個任務$"="Clear any $1 missions in Step 1"
+r:"^完成目標Ⅱ第二階段任意(\d+)個任務$"="Clear any $1 missions in Step 2"
+r:"^完成目標Ⅱ第三階段任意(\d+)個任務$"="Clear any $1 missions in Step 3"
+r:"^完成目標Ⅱ第四階段任意(\d+)個任務$"="Clear any $1 missions in Step 4"
+r:"^完成目標Ⅱ第五階段任意(\d+)個任務$"="Clear any $1 missions in Step 5"
+r:"^完成目標Ⅱ第六階段任意(\d+)個任務$"="Clear any $1 missions in Step 6"
+r:"^完成目標Ⅱ第七階段任意(\d+)個任務$"="Clear any $1 missions in Step 7"
 
-r:"^完成目標Ⅲ第一階段任意(\d+)個任務$"="Complete any $1 tasks in Step 1"
-r:"^完成目標Ⅲ第二階段任意(\d+)個任務$"="Complete any $1 tasks in Step 2"
-r:"^完成目標Ⅲ第三階段任意(\d+)個任務$"="Complete any $1 tasks in Step 3"
-r:"^完成目標Ⅲ第四階段任意(\d+)個任務$"="Complete any $1 tasks in Step 4"
-r:"^完成目標Ⅲ第五階段任意(\d+)個任務$"="Complete any $1 tasks in Step 5"
-r:"^完成目標Ⅲ第六階段任意(\d+)個任務$"="Complete any $1 tasks in Step 6"
-r:"^完成目標Ⅲ第七階段任意(\d+)個任務$"="Complete any $1 tasks in Step 7"
+r:"^完成目標Ⅲ第一階段任意(\d+)個任務$"="Clear any $1 missions in Step 1"
+r:"^完成目標Ⅲ第二階段任意(\d+)個任務$"="Clear any $1 missions in Step 2"
+r:"^完成目標Ⅲ第三階段任意(\d+)個任務$"="Clear any $1 missions in Step 3"
+r:"^完成目標Ⅲ第四階段任意(\d+)個任務$"="Clear any $1 missions in Step 4"
+r:"^完成目標Ⅲ第五階段任意(\d+)個任務$"="Clear any $1 missions in Step 5"
+r:"^完成目標Ⅲ第六階段任意(\d+)個任務$"="Clear any $1 missions in Step 6"
+r:"^完成目標Ⅲ第七階段任意(\d+)個任務$"="Clear any $1 missions in Step 7"
 
-r:"^完成目標Ⅳ第一階段任意(\d+)個任務$"="Complete any $1 tasks in Step 1"
-r:"^完成目標Ⅳ第二階段任意(\d+)個任務$"="Complete any $1 tasks in Step 2"
-r:"^完成目標Ⅳ第三階段任意(\d+)個任務$"="Complete any $1 tasks in Step 3"
-r:"^完成目標Ⅳ第四階段任意(\d+)個任務$"="Complete any $1 tasks in Step 4"
-r:"^完成目標Ⅳ第五階段任意(\d+)個任務$"="Complete any $1 tasks in Step 5"
-r:"^完成目標Ⅳ第六階段任意(\d+)個任務$"="Complete any $1 tasks in Step 6"
-r:"^完成目標Ⅳ第七階段任意(\d+)個任務$"="Complete any $1 tasks in Step 7"
+r:"^完成目標Ⅳ第一階段任意(\d+)個任務$"="Clear any $1 missions in Step 1"
+r:"^完成目標Ⅳ第二階段任意(\d+)個任務$"="Clear any $1 missions in Step 2"
+r:"^完成目標Ⅳ第三階段任意(\d+)個任務$"="Clear any $1 missions in Step 3"
+r:"^完成目標Ⅳ第四階段任意(\d+)個任務$"="Clear any $1 missions in Step 4"
+r:"^完成目標Ⅳ第五階段任意(\d+)個任務$"="Clear any $1 missions in Step 5"
+r:"^完成目標Ⅳ第六階段任意(\d+)個任務$"="Clear any $1 missions in Step 6"
+r:"^完成目標Ⅳ第七階段任意(\d+)個任務$"="Clear any $1 missions in Step 7"
 
 完成目標=Complete All 
 所有任務=Tasks
@@ -1257,6 +1264,7 @@ r:"^完成目標Ⅳ第七階段任意(\d+)個任務$"="Complete any $1 tasks in 
 自選1把1.3.2版本前武器補給內非限定角色的5星武器=Select 1 standard 5★ Weapon before version 1.3.2
 
 完成   階段目標獲得= Step   Tasks Reward
+r:"^完成<size\=10> </size><size\=42>(\d+)</size><size\=10> </size>階段目標獲得$"="Clear Step <size\=10> </size><size\=42>$1</size><size\=10> </size> to obtain"
 獎勵全部領取後，開啟「Ⅲ期目標」=Unlock [Phase III Goals] after getting all rewards
 
 REGEX ONLY
@@ -1305,6 +1313,7 @@ Part I Step 1
 進行10次簽約=Perform 10 Signature
 見證{{A}}的覺醒=Witness {{A}}'s Awakening
 完成主線任務「{{A}}」=Complete the main mission: "{{A}}"
+完成主線任務「見證隱藏的世界」=Complete the main mission: Awakening of Desire
 r:"^擁有(\d+)個潛能(.*)的怪盜$"="Have $1 Thieves at Talent $2"
 
 Part I Step 2
@@ -3103,6 +3112,10 @@ r:"^本期閼凶夢之扉挑戰已結束，在挑戰過程中您的最高排名�
 r:"^本期心之海試煉已結束，您的排名處於(.*)，特為您頒發排名獎勵，請查收。$"="In this season of Trials from the Sea of Souls, your rank is top $1, we have issued your rank rewards, please claim."
 「大富豪」段位結算=[Tycoon] Rank Calculation
 {{A}}生日快樂！=<size\=26>Happy Birthday {{A}}!</size>
+鵝絨試煉」總星級獎勵=Velvet Trials Star Rewards
+r:"^您天鵝絨試煉當前總星級(\d+)，(\d+)天未領取的辰星獎勵，已透過郵件發放，請查收附件！$"="Your current star level in the Velvet Trials is $1.\nYour $2 days of unclaimed rewards have been delivered to you via this message!"
+
+r:"^網路環境異常，請隊長重新登入。\n\（錯誤碼：(\d+)\）$"="Network error. Please log in again. \n(Error code: $1)"
 
 Mission Screen
 全部=All
@@ -3135,7 +3148,7 @@ sr:"^當前任務目標處於<color\=#FF0000>(.*)</color>，\n是否立即前往
 見證隱藏的世界=Awakening of Desire
 負重之人的對決=Traces of Dreams
 夢想的味道之爭=Outcome of Pride
-規則破壞者的協奏曲=Rule Breakers' Concerto
+規則破壞者的協奏曲=Unconditional Love
 {{A}}的終奏曲={{A}}'s Finale
 假面役者的謝幕=Masked Actors' Curtain Call
 假面役者的憂鬱=Masked Actors' Melancholia
