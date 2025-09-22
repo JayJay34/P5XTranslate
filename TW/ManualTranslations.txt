@@ -870,6 +870,7 @@ r:"^挑戰倒計時：$"="Time Left:"
 r:"^挑戰倒計時：(\d+)天(\d+)時(\d+)分$"="Time Left: $1d $2h $3m"
 r:"^本週剩餘次數：(\d+)/(\d+)$"="Weekly Usage: $1/$2"
 限時挑戰倒計時：=Challenge Time Left:
+r:"^(\d+)天(\d+)小時後結束$"="Ends in $1d $2h"
 r:"^(\d+)天(\d+)時後結束$"="Ends in $1d $2h"
 r:"^(\d+)小時(\d+)分後結束$"="Ends in $1h $2m"
 r:"^(\d+)時(\d+)分後結束$"="Ends in $1h $2m"
@@ -3511,60 +3512,63 @@ r:"^所有怪盜造成<color\=#FFFC40>持續傷害</color>時傷害提升(\d+(.\
 可獲得限定徽章=Get badge
 r:"^最高異變等級：$"="Highest Lv:"
 完成高難度挑戰可刷新徽章最高異變等級=Complete higher difficulty to upgrade badge
-異變詳情=Details
+異變詳情=Battle Effects
 
-r:"^利刃出擊(.*)$"="Razor Strike $1"
-r:"^巨人之力(.*)$"="Titan's Might $1"
-r:"^攻擊乏力(.*)$"="Attack Fatigue $1"
-r:"^防禦漏洞(.*)$"="Defense Flaw $1"
-r:"^生命枯萎(.*)$"="Health Wither $1"
-r:"^治療弱化(.*)$"="Healing Nerf $1"
-r:"^護盾弱化(.*)$"="Shield Nerf $1"
-r:"^行動遲緩(.*)$"="Crippled Pace $1"
+選擇異變=Select Battle Effects
+sr:"^利刃出擊(.*)$"="Razor Strike $1"
+sr:"^巨人之力(.*)$"="Titan's Might $1"
+sr:"^攻擊乏力(.*)$"="Attack Fatigue $1"
+sr:"^防禦漏洞(.*)$"="Defense Flaw $1"
+sr:"^生命枯萎(.*)$"="Health Wither $1"
+sr:"^治療弱化(.*)$"="Healing Nerf $1"
+sr:"^護盾弱化(.*)$"="Shield Nerf $1"
+sr:"^行動遲緩(.*)$"="Crippled Pace $1"
 優越禁止=Strategist Ban
 屈從禁止=Saboteur Ban
-r:"^元素侵擾(.*)$"="Elemental Disruption $1"
-r:"^能量枯竭(.*)$"="Energy Depletion $1"
-r:"^更快更強(.*)$"="Faster Stronger $1"
+sr:"^元素侵擾(.*)$"="Elemental Disruption $1"
+sr:"^元素紊亂(.*)$"="Elemental Disruption $1"
+sr:"^能量枯竭(.*)$"="Energy Depletion $1"
+sr:"^更快更強(.*)$"="Faster Stronger $1"
 
-長按異變圖示可查看詳情=<size\=26>Long press to view details</size>
+長按異變圖示可查看詳情=<size\=25>Long press icon to view info</size>
 異變等級=Level
 使用推薦陣容=<size\=24>Use recommended team</size>
+均衡模式無法自行更換異變效果。=Cannot change modifiers in Balanced Mode.
 r:"^<pos\=45>所有敵人的最終生命值提升(\d+(.\d+)?(%)?)$"="<pos\=45>Increase all foes' Final HP by $1"
-r:"^<pos\=45>所有敵人的最終攻擊力提升(\d+(.\d+)?(%)?)$"="<pos\=45>Increase all foes' Final Attack by $1"
+r:"^<pos\=45>所有敵人的最終攻擊力提升(\d+(.\d+)?(%)?)$"="<pos\=45>Increase all foes' Final ATK by $1"
 r:"^<pos\=45>所有怪盜最終生命值降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Final HP by $1"
-r:"^<pos\=45>所有怪盜最終攻擊力下降(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Final Attack by $1"
-r:"^<pos\=45>所有怪盜最終防禦力下降(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Final Defense by $1"
+r:"^<pos\=45>所有怪盜最終攻擊力下降(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Final ATK by $1"
+r:"^<pos\=45>所有怪盜最終防禦力下降(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Final DEF by $1"
 r:"^<pos\=45>所有怪盜治療效果降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Healing Effect by $1"
 r:"^<pos\=45>所有怪盜護盾效果降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Shield Effect by $1"
 r:"^<pos\=45>解明怪盜的技能準備時間延長(\d+(.\d+)?(%)?)次行動$"="<pos\=45>Increase all Elucidator Thieves' cooldown by $1 actions"
 r:"^<pos\=45>禁止上陣優越職業怪盜與面具$"="<pos\=45>Ban Strategist Thieves and Personas"
 r:"^<pos\=45>禁止上陣屈從職業怪盜與面具$"="<pos\=45>Ban Saboteur Thieves and Personas"
-r:"^<pos\=45>怪盜造成的火冰電風屬性的傷害降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Fire/Ice/Elec/Wind DMG by $1"
-r:"^<pos\=45>怪盜造成的念核祝咒屬性的傷害降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Psy/Nuke/Bless/Curse DMG by $1"
+r:"^<pos\=45>怪盜造成的火冰電風屬性的傷害降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease Thieves' Fire/Ice/Elec/Wind DMG by $1"
+r:"^<pos\=45>怪盜造成的念核祝咒屬性的傷害降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease Thieves' Psy/Nuke/Bless/Curse DMG by $1"
 r:"^<pos\=45>HL能量回復速度降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease HIGHLIGHT Energy recovery rate by $1"
-r:"^<pos\=45>(\d+(.\d+)?(%)?)回合內結束戰鬥且戰鬥中無怪盜陣亡$"="<pos\=45>Win within $1 turns and no faint"
+r:"^<pos\=45>(\d+(.\d+)?(%)?)回合內結束戰鬥且戰鬥中無怪盜陣亡$"="<pos\=45>Win within $1 actions and with no faint"
 
 r:"^所有敵人的最終生命值提升(\d+(.\d+)?(%)?)$"="Increase all foes' Final HP by $1"
-r:"^所有敵人的最終攻擊力提升(\d+(.\d+)?(%)?)$"="Increase all foes' Final Attack by $1"
+r:"^所有敵人的最終攻擊力提升(\d+(.\d+)?(%)?)$"="Increase all foes' Final ATK by $1"
 r:"^所有怪盜最終生命值降低(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Final HP by $1"
-r:"^所有怪盜最終攻擊力下降(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Final Attack by $1"
-r:"^所有怪盜最終防禦力下降(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Final Defense by $1"
+r:"^所有怪盜最終攻擊力下降(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Final ATK by $1"
+r:"^所有怪盜最終防禦力下降(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Final DEF by $1"
 r:"^所有怪盜治療效果降低(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Healing Effect by $1"
 r:"^所有怪盜護盾效果降低(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Shield Effect by $1"
 r:"^解明怪盜的技能準備時間延長(\d+(.\d+)?(%)?)次行動$"="Increase all Elucidator Thieves' cooldown by $1 actions"
 r:"^禁止上陣優越職業怪盜與面具$"="Ban Strategist Thieves and Personas"
 r:"^禁止上陣屈從職業怪盜與面具$"="Ban Saboteur Thieves and Personas"
-r:"^怪盜造成的火冰電風屬性的傷害降低(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Fire/Ice/Elec/Wind DMG by $1"
-r:"^怪盜造成的念核祝咒屬性的傷害降低(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Psy/Nuke/Bless/Curse DMG by $1"
+r:"^怪盜造成的火冰電風屬性的傷害降低(\d+(.\d+)?(%)?)$"="Decrease Thieves' Fire/Ice/Elec/Wind DMG by $1"
+r:"^怪盜造成的念核祝咒屬性的傷害降低(\d+(.\d+)?(%)?)$"="Decrease Thieves' Psy/Nuke/Bless/Curse DMG by $1"
 r:"^HL能量回復速度降低(\d+(.\d+)?(%)?)$"="Decrease HIGHLIGHT Energy recovery rate by $1"
-r:"^(\d+(.\d+)?(%)?)回合內結束戰鬥且戰鬥中無怪盜陣亡$"="Win within $1 turns and no faint"
+r:"^(\d+(.\d+)?(%)?)回合內結束戰鬥且戰鬥中無怪盜陣亡$"="Win within $1 actions and with no faint"
 尚未選擇異變效果=No modifier
 是否清除已選擇的全部異變效果？=Clear all modifiers?
 尚未保存異變效果，是否保存？=Save current modifiers?
-r:"^完成「(.*)」噩夢及以上難度的挑戰$"="Clear [$1] on Nightmare or above"
-r:"^完成「(.*)」困難及以上難度的挑戰$"="Clear [$1] on Hard or above"
-r:"^完成「(.*)」普通及以上難度的挑戰$"="Clear [$1] on Normal or above"
+sr:"^完成「(.*)」噩夢及以上難度的挑戰$"="Clear [$1] on Nightmare or above"
+sr:"^完成「(.*)」困難及以上難度的挑戰$"="Clear [$1] on Hard or above"
+sr:"^完成「(.*)」普通及以上難度的挑戰$"="Clear [$1] on Normal or above"
 r:"^完成異變等級(\d+)以上的噩夢及以上難度的挑戰$"="Clear Nightmare or above at level $1 or above"
 r:"^完成異變等級(\d+)以上的噩夢難度的挑戰$"="Clear Nightmare at level $1 or above"
 r:"^完成異變等級(\d+)以上的困難及以上難度的挑戰$"="Clear Hard or above at level $1 or above"
