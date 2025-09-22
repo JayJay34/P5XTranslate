@@ -175,12 +175,12 @@ r:"^戰鬥開始時，使速度最低的怪盜造成傷害提升<color\=#2899ff>
 自由=Freedom
 r:"^使用{{A}}技能時，自身獲得(\d+)層『榮耀』，最多(\d+)層，下一次追加效果消耗所有『榮耀』，每消耗(\d+)層『榮耀』使該次追加效果穿透提升<color\=#2899ff>(\d+%)</color>。$"="When using a persona skill, gain $1 stack of [Glory], up to $2 stacks, consume all stacks of [Glory] when doing a Follow Up, each consumed stack of [Glory] increase that Follow Up's Pierce by <color\=#2899ff>$4</color>."
 r:"^所有怪盜對處於負面狀態下的敵人造成傷害提升<color\=#2899ff>(\d+%)</color>，無法重複觸發。$"="Increase all allies' DMG Dealt to foes inflicted with debuff by <color\=#2899ff>$1</color>. This effect won't activate if stacked."
-r:"^造成萬能屬性傷害時，攻擊力提升<color\=#2899ff>(\d+%)</color>，暴擊率提升<color\=#2899ff>(\d+%)</color>。$"="Increase ATK by <color\=#2899ff>$1</color> and CRIT Rate by <color\=#2899ff>$2</color> when dealing Almighty damage."
+r:"^造成萬能屬性傷害時，攻擊力提升<color\=#2899ff>(\d+%)</color>，暴擊率提升<color\=#2899ff>(\d+%)</color>。$"="Increase ATK by <color\=#2899ff>$1</color> and Crit Rate by <color\=#2899ff>$2</color> when dealing Almighty damage."
 
 【希望】=[Hope]
 希望=Hope
 r:"^解明怪盜裝備時生效：使用技能為同伴添加增益狀態，使技能目標穿透提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合。$"="When equipped by Elucidator Thieves: When using a buff skill on allies, increase the target's Pierce by <color\=#2899ff>$1</color> for $2 turn."
-r:"^每造成1次技能傷害，自身火焰傷害提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合，可疊加(\d+)層；疊加至(\d+)層時，額外使自身暴擊率提升<color\=#2899ff>(\d+%)</color>。$"="When dealing 1 hit of skill damage, increase own Fire DMG by <color\=#2899ff>$1</color> for $2 turns, up to $3 stacks; When reaching $4 stacks, additionally increase own CRIT Rate by <color\=#2899ff>$5</color>."
+r:"^每造成1次技能傷害，自身火焰傷害提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合，可疊加(\d+)層；疊加至(\d+)層時，額外使自身暴擊率提升<color\=#2899ff>(\d+%)</color>。$"="When dealing 1 hit of skill damage, increase own Fire DMG by <color\=#2899ff>$1</color> for $2 turns, up to $3 stacks; When reaching $4 stacks, additionally increase own Crit Rate by <color\=#2899ff>$5</color>."
 r:"^所有怪盜對處於倒地狀態的敵人造成傷害提升<color\=#2899ff>(\d+%)</color>，無法重複觸發。$"="Increase all allies' DMG Dealt to Downed foes by <color\=#2899ff>$1</color>. This effect won't activate if stacked."
 
 【突破】=[Perseverance]
@@ -234,7 +234,7 @@ r:"^4套裝效果：任意怪盜使用電屬性技能後提升自身電擊屬性
 【美德】=<size\=20>  </size>[Virtue]
 美德=Virtue
 r:"^2套裝效果：祝福傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Bless DMG by <color\=#2899ff>10%</color>.</size>"
-r:"^4套裝效果：當前生命值百分比不低於(\d+%)時，祝福屬性的暴擊率提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase Bless skill CRIT Rate by <color\=#2899ff>$2</color> when user's HP% is not less than $1.</size>"
+r:"^4套裝效果：當前生命值百分比不低於(\d+%)時，祝福屬性的暴擊率提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase Bless skill Crit Rate by <color\=#2899ff>$2</color> when user's HP% is not less than $1.</size>"
 
 【和平】=<size\=20>  </size>[Peace]
 和平=Peace
@@ -292,7 +292,7 @@ r:"^4套裝效果：對處於負面狀態下的敵人造成火焰屬性傷害提
 
 【凱旋】=<size\=20>  </size>[Success]
 凱旋=Success
-r:"^2套裝效果：暴擊率提升<color\=#2899ff>(\d+\.\d+%)</color>。$"="<size\=23>2 Set Effect: Increase CRIT Rate by <color\=#2899ff>$1</color>.</size>"
+r:"^2套裝效果：暴擊率提升<color\=#2899ff>(\d+\.\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Crit Rate by <color\=#2899ff>$1</color>.</size>"
 
 【徒勞】=<size\=20>  </size>[Futility]
 徒勞=Futility
@@ -325,7 +325,7 @@ Inspect Details + Combat Pop-Ups
 ---------
 r:"^生命值、攻擊力、防禦力提升(\d+%)$"="Increase HP, ATK, DEF by $1"
 生命值、攻擊力、防禦力根據相同適應性屬性怪盜數量提升=Increase HP, ATK, DEF \nwith each ally with the same element
-r:"^當前生命值百分比不低於(\d+%)時，祝福屬性的暴擊率提升(\d+%)$"="Increase Bless skill CRIT Rate by $2 \nwhen user's HP% is not below $1"
+r:"^當前生命值百分比不低於(\d+%)時，祝福屬性的暴擊率提升(\d+%)$"="When current HP% is not below $1, \nincrease Bless skill Crit Rate by $2"
 怨恨=Resentment
 r:"^『怨恨』不少於(\d+)層，則物理傷害、效果命中提升(\d+%)$"="Increase Phys DMG and Ailment ACC by $2 when [Resentment] is not less than $1 stacks"
 r:"^造成念動傷害時，提升攻擊(\d+%)，如果敵方人數不少於3，則攻擊力額外提升(\d+%)$"="<size\=26>Increase ATK by $1 when dealing Psy damage,\nincrease ATK by $2 if there are 3 ≥ foes</size>"

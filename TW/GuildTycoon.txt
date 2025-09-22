@@ -109,11 +109,11 @@ sr:"<color\=#FF0000>(.*)</color>將<color\=#FF0000>(.*?)</color>移出了樂園�
 支配/反抗職業積分倍率=Sweeper/Assassin Score Mult
 
 特殊機制生效中=Mechanics Active
-累積分數：=Total Score: <size\=1>_</size>
-虛弱剩餘回合：=   Turn(s) Left:   <size\=1>_</size>
-剩餘進攻回合：=  Attack(s) Left:  <size\=1>_</size>
-虛弱期獲得積分×=Score Multiplier x
-存活回合積分加成×=Score Multiplier x
+累積分數：=Total Score: <size\=1>.</size>
+虛弱剩餘回合：=<size\=1>.</size> <size\=23>Weaken Turns Left:</size> <size\=1>.</size>
+剩餘進攻回合：=<size\=1>.</size> <size\=23>Attack Turns Left:</size> <size\=1>.</size>
+虛弱期獲得積分×=Weaken Score Multiplier x
+存活回合積分加成×=Survival Score Multiplier x
 支配/反抗職業積分加成×=Score Multiplier x
 r:"^倍$"="<size\=10> </size>!"
 r:"^在(\d+)回合內對敵人造成更高的傷害$"="Deal damage to foes within $1 turns"
@@ -200,6 +200,8 @@ r:"^受<color\=#000000>H</color> L傷害提升$"="H<color\=#000000>I</color>GHLI
 終結裝置=Slaughter Drive
 鋼刃的終結裝置=Slaughter Drive
 深紅炮臺=Scarlet Turret
+虛弱的終結裝置=Weaken Slaughter Drive
+虛弱的深紅炮臺=Weaken Scarlet Turret
 
 r:"^擊敗{{A}}後，使{{B}}受到傷害提升，可疊加(\d+)層。$"="After defeating {{A}}, increase {{B}}'s DMG Taken. Stacks up to $1 times."
 r:"^對{{A}}造成傷害不計入積分，擊敗{{A}}後，使{{B}}受到傷害提升，可疊加(\d+)層。$"="Dealing damage to {{A}} does not count for score. After defeating {{A}}, increase {{B}}'s DMG Taken. Stacks up to $1 times."
