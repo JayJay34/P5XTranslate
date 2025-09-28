@@ -215,11 +215,10 @@ r:"^改變它對「<color\=#ff0000>敵人</color>」的看法吧，\n讓它認�
 弱小的=Weak
 強大的=Strong
 
-r:"^如果寶物不再有「<color\=#ff0000>價值</color>」，會怎樣呢？$"=What happens if the treasure no longer has "<color\=#ff0000>value</color>"?"
+r:"^如果{{A}}不再有「<color\=#ff0000>價值</color>」，會怎樣呢？$"=What happens if the treasure no longer has "<color\=#ff0000>value</color>"?"
 財富=Wealth
 珍貴的=Precious
 價值=Value
-寶物=Treasure
 普通的=Ordinary
 
 r:"^維修工的工作職責是「<color\=#ff0000>維修</color>」吧。$"="The duty of a maintenance worker is to "<color\=#ff0000>repair</color>"."
@@ -1045,7 +1044,7 @@ r:"^對所有敵人造成(\d+)~(\d+)次少量物理屬性傷害。$"="Deal light
 ----------
 PALACE 3 BOSS 3
 ----------
-r:"^拯救{{A}}$"="Rescue {{A}}"
+拯救{{A}}=Rescue {{A}}
 r:"^擊破{{A}}的護盾$"="Break {{A}}'s shield"
 r:"^注意控制{{B}}的{{A}}值$"="Note the {{A}} Gauge that controls {{B}}"
 r:"^注意控制{{A}}的{{B}}值$"="Note the {{B}} Gauge that controls {{A}}"
@@ -1310,6 +1309,48 @@ r:"^對所有敵人造成詛咒屬性傷害，狂怒狀態下受到(\d+)次技�
 懊惱狀態=Vexation
 陷入深深的懊惱，失去攻擊慾望=Inflicted with Vexation, lost attack desire
 將受到「劣民的處決」的攻擊=Will be attacked by [Commoner's Execution]
+
+----------
+PALACE 5 BOSS 3
+----------
+{{A}}之「父」={{A}}'s "Father"
+{{A}}之「母」={{A}}'s "Mother"
+
+富裕噩兆=Omen of Wealth
+偏愛之翼=Wings of Favor
+r:"^對所有敵人造成詛咒屬性傷害，並使自身獲得(\d+)層「鈔能力」，其他隊友獲得(\d+)層「鈔能力」。$"="Deal Curse damage to all foes; Grant user $1 [Money Power] stacks and other allies $2 [Money Power] stack."
+r:"^對1名敵人角色造成詛咒屬性傷害，自身每有(\d+)層 「鈔能力」，造成的傷害提升(\d+%)。$"="Deal Curse damage to $1 foe; For every $1 [Money Power] stack on user, increase DMG Dealt by $2."
+為了{{A}}不惜一切！=Anything for {{A}}!
+r:"^消耗自身所有「鈔能力」對所有敵人造成詛咒屬性傷害，消耗的「鈔能力」越多，造成的傷害越高。此傷害必定暴擊，目標每有(\d+)層「糖衣」，暴擊傷害提升(\d+%)。$"="Spend all [Money Power] and deal Curse damage to all foes, increase damage based on spent [Money Power]. This damage will Always CRIT, for every $1 [Sugar Coating] stack on the target, increase Crit DMG by $2."
+
+甜美面紗=Sweet Veil
+r:"^對隨機(\d+)名敵人造成祝福屬性傷害並為其附加(\d+)層 「糖衣」。$"="Deal Bless damage to $1 random foes then inflict $2 [Sugar Coating] stack on them."
+糖衣砲彈=Sugar Coating Cannon
+r:"^對所有敵人造成祝福屬性傷害，目標每有(\d+)層「糖衣」，所有友方回復(\d+%)的生命值。$"="Deal Bless damage to all foes; For every $1 [Sugar Coating] stack on the target, restore $2 HP to all allies."
+為了可愛的{{A}}！=For Cute {{A}}!
+r:"^為<color\=#000000>了</color>可愛的{{A}}！$"="F<color\=#000000>o</color>r Cute {{A}}!"
+r:"^消耗自身所有「鈔能力」，為所有友方施加「為了可愛的{{A}}」，接下來(\d+)次攻擊最終傷害提升，消耗的「鈔能力」越多，效果越強；並治療友方一定生命值生命，目標「祝福」層數越高，回復效果越強。$"="Spend all [Money Power] and grant [For Cute {{A}}] for all allies, increasing the next $2 attack's Final DMG, increase effect based on spent [Money Power]; Then restore HP to allies, increase healing based on target's [Blessing] stack."
+
+狂愛=Obsession
+r:"^展開永久存在的領域——「狂愛」。領域持續時間內，自身回合結束時，為所有敵人添加(\d+)層詛咒，並為所有友方附加(\d+)層「鈔能力」。$"="Open a permanent domain [Obsession]. When [Obsession] is active, at the end of user's turn, inflict $1 [Curse] stack on all foes grant all allies $2 [Money Power] stack."
+r:"^展開永久存在的領域——「狂愛」。領域持續時間內，自身回合結束時，為所有友方添加(\d+)層祝福，並為所有敵人附加(\d+)層「糖衣」。$"="Open a permanent domain [Obsession]. When [Obsession] is active, at the end of user's turn, grant all allies $1 [Blessing] stack and inflict $2 [Sugar Coating] stack on all foes"
+r:"^回合結束時，為敵人加上「詛咒」，為友方添加(\d+)層「鈔能力」$"="At the end of turn, inflict [Curse] on all foes and grant all allies $1 [Money Power] stack"
+r:"^回合結束時，為友方加上「祝福」，為敵人添加(\d+)層「糖衣」$"="At the end of turn, grant all allies [Blessing] and inflict $1 [Sugar Coating] stack on all foes"
+
+鈔能力=Money Power
+r:"^鈔<color\=#000000>能</color>力$"="M<color\=#000000>o</color>ney Power"
+r:"^造成的傷害提升(\d+%)，受到元素異常時被驅散(\d+)層$"="Increase DMG Dealt by $1; When inflicted with Elemental Ailments, dispel $2 stack"
+
+糖衣=Sugar Coating
+r:"^糖<color\=#000000>衣</color>$"="S<color\=#000000>u</color>gar Coating"
+r:"^受到治療效果降低(\d+%)，可被驅散，疊加(\d+)層後變為「糖縛」$"="Decrease Healing Received by $1, can be dispelled; After reaching $2 stacks, change into [Sugar Binding]"
+糖縛=Sugar Binding
+r:"^糖<color\=#000000>縛</color>$"="S<color\=#000000>u</color>gar Binding"
+無法行動，不可被驅散=Unable to act, cannot be dispelled
+
+sr:"^<color\=#FF0000>(.*)</color>獲得了「鈔能力」，受到元素異常時被驅散！！！$"="<color\=#FF0000>$1</color> gained [Money Power], dispel when inflicted with Elemental Ailments!!!"
+sr:"^<color\=#FF0000>(.*)</color>獲得了「糖衣」，請及時驅散！！！$"="<color\=#FF0000>$1</color> gained [Sugar Coating], please dispel in time!!!"
+sr:"^<color\=#FF0000>(.*)</color>從糖縛狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Sugar Binding!"
 
 ----------
 PALACE 5 ELITES
@@ -2252,7 +2293,7 @@ r:"^{{A}}使敵人恐懼後，敵人(\d+)回合後逃跑；被「巨鯊凝視」
 r:"^<color\=#FF0000>{{A}}</color>(\d+)回合後自爆！！$"="<color\=#FF0000>{{A}}</color> will Self Destruct after $1 turn(s)!!"
 r:"^<color\=#FF0000>{{A}}</color>下個回合自爆！！$"="<color\=#FF0000>{{A}}</color> will Self Destruct next turn!!"
 
-r:"^1、{{A}}進入戰鬥後，召喚其他三位天使長，每位天使長都有自己得專屬技能：\n「{{A}}的守護」：使全體友方獲得護盾，並使其受到的最終傷害減免(\d+%)，持續(\d+)回合。\n「{{D}}的警告」：使所有敵人受到的最終傷害提升(\d+%)，持續(\d+)回合；同時有(\d+%)的基礎機率使攻擊力最高的敵人陷入遺忘狀態，持續(\d+)回合。\n「{{C}}的療癒」：使所有同伴恢復生命值，並使其造成的最終傷害提升(\d+%)，持續(\d+)回合。\n「{{B}}的審判」：對所有敵人造成萬能屬性傷害，無視其防禦力，對陷入元素異常的單位造成的技能傷害提升(\d+%)。\n2、進入戰鬥後，{{A}}會立即釋放「{{A}}的守護」。\n3、第一階段中的所有天使長被擊殺後，會進入第二階段並重新召喚處於「生命連結」狀態的四位天使長。\n4、每隔一定回合，各位天使長會進行蓄力，並在下個回合釋放專屬技能，可透過擊倒打斷蓄力過程從而阻止其釋放專屬技能。進入第二階段後，若蓄力被打斷，則下個回合會繼續蓄力並獲得免疫擊倒的效果。\n5、第一階段中：首次擊殺天使長時，擊殺者可獲得該天使長的專屬技能，並獲得「異變」的加成效果；前兩位被擊殺的天使長進入第二階段時會額外獲得(\d+)點倒地值。$"="1. After the start of battle, {{A}} will summon 3 Archangels, each Archangel has their own special skill:\n[{{A}}'s Protection]: Grant a Shield to party, and decrease party's Final DMG Taken by $1. Lasts for $2 turns.\n[{{A}}'s Warning]: Increase all foes' Final DMG Taken by $3 for $4 turn; With a $5 base chance to inflict Forget on the highest ATK foe for $6 turns.\n[{{C}}'s Healing]: Restore HP to party and increase party's Final DMG Dealt by $7. Lasts for $8 turn. \n[{{B}}'s Judgement]: Deal Almighty damage to all foes, ignoring their DEF, increase skill damage by $9 to foes inflicted with an Elemental Ailment.\n2. At the start of battle, {{A}} will immediately use [{{A}}'s Protection]. \n3. After defeating all Archangels in Phase 1. Enter Phase 2 then resummon all Archangels with [Lifelink].\n4. Every few turns, each Archangel will charge then use their special skill next turn. You can interrupt this by knocking them down. In Phase 2, if charge is interrupted, they will continue to charge next turn and gain Null Down. \n5. In Phase 1: The first time a Thief defeat an Archangel, that Thief will gain that Archangel's special skill and its modifier effects: The first 2 defeated Archangels will gain $10 additional Down Points when entering Phase 2."
+r:"^1、{{A}}進入戰鬥後，召喚其他三位天使長，每位天使長都有自己得專屬技能：\n「{{A}}的守護」：使全體友方獲得護盾，並使其受到的最終傷害減免(\d+%)，持續(\d+)回合。\n「{{D}}的警告」：使所有敵人受到的最終傷害提升(\d+%)，持續(\d+)回合；同時有(\d+%)的基礎機率使攻擊力最高的敵人陷入遺忘狀態，持續(\d+)回合。\n「{{C}}的療癒」：使所有同伴恢復生命值，並使其造成的最終傷害提升(\d+%)，持續(\d+)回合。\n「{{B}}的審判」：對所有敵人造成萬能屬性傷害，無視其防禦力，對陷入元素異常的單位造成的技能傷害提升(\d+%)。\n2、進入戰鬥後，{{A}}會立即釋放「{{A}}的守護」。\n3、第一階段中的所有天使長被擊殺後，會進入第二階段並重新召喚處於「生命連結」狀態的四位天使長。\n4、每隔一定回合，各位天使長會進行蓄力，並在下個回合釋放專屬技能，可透過擊倒打斷蓄力過程從而阻止其釋放專屬技能。進入第二階段後，若蓄力被打斷，則下個回合會繼續蓄力並獲得免疫擊倒的效果。\n5、第一階段中：首次擊殺天使長時，擊殺者可獲得該天使長的專屬技能，並獲得「異變」的加成效果；前兩位被擊殺的天使長進入第二階段時會額外獲得(\d+)點倒地值。$"="1. At the start of battle, {{A}} will summon 3 Archangels, each Archangel has their own special skill:\n[{{A}}'s Protection]: Grant a Shield to party, and decrease party's Final DMG Taken by $1. Lasts for $2 turns.\n[{{D}}'s Warning]: Increase all foes' Final DMG Taken by $3 for $4 turn; With a $5 base chance to inflict Forget on the highest ATK foe for $6 turns.\n[{{C}}'s Healing]: Restore HP to party and increase party's Final DMG Dealt by $7. Lasts for $8 turn. \n[{{B}}'s Judgement]: Deal Almighty damage to all foes, ignoring their DEF, increase skill damage by $9 to foes inflicted with an Elemental Ailment.\n2. At the start of battle, {{A}} will immediately use [{{A}}'s Protection]. \n3. After defeating all Archangels in Phase 1. Enter Phase 2 then resummon all Archangels with [Lifelink].\n4. Every few turns, each Archangel will charge then use their special skill next turn. You can interrupt this by knocking them down. In Phase 2, if charge is interrupted, they will continue to charge next turn and gain Null Down. \n5. In Phase 1: The first time a Thief defeat an Archangel, that Thief will gain that Archangel's special skill and its modifier effects: The first 2 defeated Archangels will gain $10 additional Down Points when entering Phase 2."
 
 sr:"^生命之力(.*)$"="HP Power $1"
 sr:"^守護之力(.*)$"="Protection Power $1"
@@ -2270,7 +2311,7 @@ r:"^<pos\=45>【{{A}}的警告】造成遺忘的基礎機率提升至(\d+%)；{{
 r:"^<pos\=45>【{{A}}的警告】有(\d+%)的固定機率造成遺忘；{{A}}最終生命值提升(\d+%)，倒地值提升(\d+)點$"="<pos\=45>[{{A}}'s Warning] now has a $1 fixed chance to inflict Forget; Increase {{A}}'s Final HP by $2 and Down Points by $3"
 r:"^<pos\=45>【{{A}}的療癒】提供的最終傷害提升效果提升至(\d+%)；{{A}}最終攻擊力提升(\d+%)$"="<pos\=45>Increase [{{A}}'s Healing]'s increase Final DMG buff to $1; Increase {{A}}'s Final ATK by $2"
 r:"^<pos\=45>【{{A}}的療癒】提供的治療量提升(\d+%)；{{A}}最終生命值提升(\d+%)，倒地值提升(\d+)點$"="<pos\=45>Increase [{{A}}'s Healing]'s healing by $1; Increase {{A}}'s Final HP by $2 and Down Points by $3"
-r:"^<pos\=45>【{{A}}的審判】對陷入元素異常的單位造成的技能傷害提升至(\d+%)；{{A}}最終攻擊力提升(\d+%)$"="<pos\=45>Increase [{{A}}'s Judgment]'s damage to foes inflicted with an Elemental Ailment by $1; Increase {{A}}'s Final ATK by $2"
+r:"^<pos\=45>【{{A}}的審判】對陷入元素異常的單位造成的技能傷害提升至(\d+%)；{{A}}最終攻擊力提升(\d+%)$"="<pos\=45>Increase [{{A}}'s Judgment]'s damage to foes inflicted with an Elemental Ailment to $1; Increase {{A}}'s Final ATK by $2"
 r:"^<pos\=45>【{{A}}的審判】造成的傷害提升(\d+%)；{{A}}最終生命值提升(\d+%)，倒地值提升(\d+)點$"="<pos\=45>Increase [{{A}}'s Judgment]'s DMG Dealt by $1; Increase {{A}}'s Final HP by $2 and Down Points by $3"
 
 r:"^【{{A}}的守護】提供的最終傷害減免提升至(\d+%)；{{A}}最終生命值提升(\d+%)，倒地值提升(\d+)點$"="Increase [{{A}}'s Protection]'s decrease Final DMG Taken buff to $1; Increase {{A}}'s Final HP by $2 and Down Points by $3"
@@ -2280,7 +2321,7 @@ r:"^【{{A}}的警告】造成遺忘的基礎機率提升至(\d+%)；{{A}}最終
 r:"^【{{A}}的警告】有(\d+%)的固定機率造成遺忘；{{A}}最終生命值提升(\d+%)，倒地值提升(\d+)點$"="[{{A}}'s Warning] now has a $1 fixed chance to inflict Forget; Increase {{A}}'s Final HP by $2 and Down Points by $3"
 r:"^【{{A}}的療癒】提供的最終傷害提升效果提升至(\d+%)；{{A}}最終攻擊力提升(\d+%)$"="Increase [{{A}}'s Healing]'s increase Final DMG buff to $1; Increase {{A}}'s Final ATK by $2"
 r:"^【{{A}}的療癒】提供的治療量提升(\d+%)；{{A}}最終生命值提升(\d+%)，倒地值提升(\d+)點$"="Increase [{{A}}'s Healing]'s healing by $1; Increase {{A}}'s Final HP by $2 and Down Points by $3"
-r:"^【{{A}}的審判】對陷入元素異常的單位造成的技能傷害提升至(\d+%)；{{A}}最終攻擊力提升(\d+%)$"="Increase [{{A}}'s Judgment]'s damage to foes inflicted with an Elemental Ailment by $1; Increase {{A}}'s Final ATK by $2"
+r:"^【{{A}}的審判】對陷入元素異常的單位造成的技能傷害提升至(\d+%)；{{A}}最終攻擊力提升(\d+%)$"="Increase [{{A}}'s Judgment]'s damage to foes inflicted with an Elemental Ailment to $1; Increase {{A}}'s Final ATK by $2"
 r:"^【{{A}}的審判】造成的傷害提升(\d+%)；{{A}}最終生命值提升(\d+%)，倒地值提升(\d+)點$"="Increase [{{A}}'s Judgment]'s DMG Dealt by $1; Increase {{A}}'s Final HP by $2 and Down Points by $3"
 
 {{A}}的守護={{A}}'s Protection
@@ -2301,6 +2342,7 @@ r:"^對所有敵人造成火焰屬性傷害，有一定基礎機率使敵人陷�
 
 sr:"^蓄力中，下回合釋放「(.*)」$"="Charging, will use [$1] next turn"
 sr:"^<color\=#FF0000>(.*)</color>蓄力中，下回合釋放「(.*)」！！$"="<color\=#FF0000>$1</color> will use [$2] next turn!!"
+sr:"^<color\=#FF0000>(.*)</color>蓄力被打斷！！$"="Interrupted <color\=#FF0000>$1</color>!!"
 sr:"^<color\=#FF0000>(.*)</color>蓄力被打斷，下回合結束前免疫倒地值傷害！！$"="Interrupted <color\=#FF0000>$1</color>, they gained Null Down until the end of next turn!!"
 
 r:"^米<color\=#000000>迦</color>勒的守護$"="M<color\=#000000>i</color>chael's Protection"
@@ -2544,3 +2586,8 @@ r:"^能<color\=#000000>量</color>諧振$"="E<color\=#000000>n</color>ergy Reson
 瘴霧彌漫=Spreading Miasma
 sr:"^擊倒敵人時，使其獲得(\d+)層『(.*)』；使用(.*)攻擊敵人時，使主目標獲得(\d+)層『(.*)』；『(.*)』：受到的最終傷害提升(\d+%)，持續(\d+)回合，最多可疊加(\d+)層。$"="<size\=20>When knocking down foes, inflict the target with $1 [$2] stacks; When using a $3 on foes, inflict the main target with $4 [$5] stack; [$6]: Increase Final DMG Taken by $7 for $8 turn. Stacks up to $9 times.</size>"
 致幻侵蝕=Hallucinogenic Erosion
+
+氣穴坍塌=Acupoint Collapse
+sr:"^進入戰鬥時，使所有友方獲得(\d+)層『(.*)』，使用追加效果攻擊敵人時，自身獲得(\d+)層『(.*)』；『(.*)』：造成的最終傷害提升(\d+%)，持續(\d+)回合。$"="<size\=21>At the start of battle, all allies gain $1 [$2] stack; When using a Follow Up to attack foes, user gains $3 [$4] stack; [$5]: Increase Final DMG Dealt by $6 for $7 turn.</size>"
+厭氧反應=Anaerobic Reaction
+r:"^厭<color\=#000000>氧</color>反應$"="A<color\=#000000>n</color>aerobic Reaction"
