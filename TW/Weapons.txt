@@ -13,6 +13,7 @@
 該武器已改造到滿級！=<size\=18>Weapon Reform maxed!</size>
 暫無可提供強化的材料=No materials
 永恆的銘記之證=Eternal Proof
+用於5星武器改造的特殊材料。=Special material used for 5★ Weapon Refrom.
 僅可消耗同名武器=Spend same name weapon
 可消耗「同名武器」=Spend [Same Name Weapon]
 可消耗「同星級武器」=Spend [Same Rarity Weapon]
@@ -61,7 +62,7 @@ r:"^治療加成、護盾加成提升<color\=#2899FF>(.*)</color>。光環：主
 機械處刑者=Ex Machina
 【超頻爆發】=[Overclock Burst]
 超頻爆發=Overclock Burst
-r:"^攻擊力提升<color\=#2899FF>(.*)</color>，\n光環：WONDER在場時使所有怪盜提升<color\=#2899FF>(.*)</color>點攻擊力。\n根據進入戰鬥時的{{A}}獲得相應屬性傷害提升<color\=#2899FF>(.*)</color>，其他怪盜獲得相當於前者(.*)的效果。$"="Increase ATK by <color\=#2899FF>$1</color>. \nAura: When user is on the field, increase party's ATK by <color\=#2899FF>$2</color>. \nBased on the attribute of the {{A}} equipped at the start of battle, increase DMG of that attribute by <color\=#2899FF>$3</color>, and $4 for other allies."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>，\n光環：WONDER在場時使所有怪盜提升<color\=#2899FF>(.*)</color>點攻擊力。\n根據進入戰鬥時的{{A}}獲得相應屬性傷害提升<color\=#2899FF>(.*)</color>，其他怪盜獲得相當於前者(.*)的效果。$"="Increase ATK by <color\=#2899FF>$1</color>. \nAura: When user is on the field, increase party's ATK by <color\=#2899FF>$2</color>. \nBased on the attribute of the {{A}} equipped at the start of battle, increase that attribute's DMG Bonus by <color\=#2899FF>$3</color>, other Thieves gain $4 of this effect."
 機械處刑者晶石=Ex Machina Crystal
 僅可消耗機械處刑者晶石=Only use Ex Machina Crystal
 
@@ -136,11 +137,10 @@ r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n進入戰鬥時，自身獲�
 僅可消耗磁暴干擾者晶石=Only use Magnetic Disruptor Crystal
 
 {{A}}咒刃=Cursed Blade
-【{{A}}詛咒】=[Spectral Curse]
-{{A}}詛咒=Spectral Curse
-r:"^效果命中提升<color\=#2899FF>(.*)</color>。\n任意角色使用(.*)技能造成詛咒屬性傷害後，WONDER有(.*)的基礎機率為目標添加『(.*)詛咒』，自身攻擊擁有『(.*)詛咒』的敵人時，攻擊力提升<color\=#2899FF>(.*)</color>。\n『(.*)詛咒』：防禦降低<color\=#2899FF>(.*)</color>，受到的詛咒屬性傷害額外提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase Ailment ACC by <color\=#2899FF>$1</color>. \nAfter any character deal Curse damage with a Persona skill, Wonder has a $3 base chance to inflict [Spectral Curse] on the target. Also, when user deals damage to foes with [Spectral Curse], increase ATK by <color\=#2899FF>$6</color>.\n[Spectral Curse]: Decrease DEF by <color\=#2899FF>$8</color> and increase Curse DMG Taken by <color\=#2899FF>$9</color> for $10 turns."
+【{{A}}】=[{{A}}]
+r:"^效果命中提升<color\=#2899FF>(.*)</color>。\n任意角色使用(.*)技能造成詛咒屬性傷害後，WONDER有(.*)的基礎機率為目標添加『(.*)詛咒』，自身攻擊擁有『(.*)詛咒』的敵人時，攻擊力提升<color\=#2899FF>(.*)</color>。\n『(.*)詛咒』：防禦降低<color\=#2899FF>(.*)</color>，受到的詛咒屬性傷害額外提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase Ailment ACC by <color\=#2899FF>$1</color>. \nAfter any character deal Curse damage with a Persona skill, Wonder has a $3 base chance to inflict [Spectral Curse] on the target. Also, when user deals damage to foes with [Spectral Curse], increase ATK by <color\=#2899FF>$6</color>.\n[Spectral Curse]: Decrease DEF by <color\=#2899FF>$8</color> and increase Curse DMG Taken by <color\=#2899FF>$9</color>. Lasts for $10 turns."
 防禦降低，受到的詛咒屬性傷害額外提升=Decrease DEF, increase Curse DMG Taken
-r:"^攻擊擁有『{{A}}詛咒』的敵人時，攻擊力提升(.*)$"="When attacking foes with [Spectral Curse],\nincrease ATK by $1"
+r:"^攻擊擁有『{{A}}』的敵人時，攻擊力提升(.*)$"="When attacking foes with [{{A}}],\nincrease ATK by $1"
 r:"^惡<color\=#000000>靈</color>詛咒$"="S<color\=#000000>p</color>ectral Curse"
 {{A}}咒刃晶石=<size\=19>Cursed Blade Crystal</size>
 僅可消耗{{A}}咒刃晶石=Only use Cursed Blade Crystal
@@ -153,6 +153,10 @@ r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n進入戰鬥時為(\d+)名�
 r:"^極<color\=#000000>寒</color>刻印$"="B<color\=#000000>a</color>ltic Brand"
 冰河永寂晶石=<size\=18>Eternal Glacier Crystal</size>
 僅可消耗冰河永寂晶石=Only use Eternal Glacier Crystal
+
+熵滅·零式=Entropy Zero
+熵滅·零式晶石=Entropy Zero Crystal
+僅可消耗熵滅·零式晶石=Only use Entropy Zero Crystal
 
 極晝=Midnight Sun
 【遷移效應】=[Shift Effect]
@@ -650,6 +654,22 @@ r:"^自身擁有『超極限』時，速度提升<color\=#2899FF>(.*)</color>。
 防爆靴=Boots
 【咆哮】=[Roar]
 咆哮=Roar
+
+飛越深空之船=Deep Space Voyager
+【於深空之旅】=[A Trip to Deep Space]
+於深空之旅=A Trip to Deep Space
+r:"^暴擊率提升<color\=#2899FF>(.*)</color>。召喚蔬菜騎士時，使自身攻擊力提升<color\=#2899FF>(.*)</color>，可疊加(.*)層，本場戰鬥永久生效。釋放<link="s\|259"><u>『蔬菜騎士·總動員』</u></link>時，暴擊效果提升<color\=#2899FF>(.*)</color>。$"="Increase Crit Rate by <color\=#2899FF>$1</color>. When summoning Vegetable Knights, increase user's Attack by <color\=#2899FF>$2</color>. Stacks up to $3 times. This effect is permanent. When using <link="s|259"><u>[Vegetable Knights: Mobilize]</u></link>, increase Crit DMG by <color\=#2899FF>$4</color>."
+薯薯奇航=Potatoes of the Galaxy
+【航線以外】=[Space Trek]
+航線以外=Space Trek
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。發動追加效果後，使釋放<link="s\|259"><u>『蔬菜騎士·總動員』</u></link>時攻擊力提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. After activating a Follow Up, increase ATK by <color\=#2899FF>$2</color> when using <link="s|259"><u>[Vegetable Knights: Mobilize]</u></link>. Lasts for $3 turns."
+破次元星環=Dimension Breaker
+【次元空間】=[Dimensional Space]
+次元空間=Dimensional Space
+r:"^追加效果造成傷害提升<color\=#2899FF>(.*)</color>。$"="Increase Follow Up DMG Dealt by <color\=#2899FF>$1</color>."
+星環=Stellar Ring
+【恆星】=[Star]
+恆星=Star
 
 ----------
 STANDARD 5 STAR UNIT WEAPONS

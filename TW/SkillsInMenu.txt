@@ -107,6 +107,7 @@ No size on inherit skill names or else they won't work in the inherit menu
 神之手=God's Hand
 死亡界限=Deathbound
 巨人之戰=Gigantomachia
+神威之擊=Agneyastra
 空間殺法=Vorpal Blade
 虛無藝術=Akasha Arts
 
@@ -327,6 +328,7 @@ No size on inherit skill names or else they won't work in the inherit menu
 女巫詛咒=Debilitate
 音律侵擾=Temperament Disruption
 毒絞回纏=Venomous Vortex
+解構力場=Deconstruction Force Field
 
 --- Break Skills ---
 消除火焰耐性=Fire Break
@@ -868,10 +870,13 @@ sr:"^使1名敵人的(.*)耐性消除，效果持續(\d+)回合。$"="Negate $1 
 sr:"^(.*)耐性·防壁消除。$"="Negate $1 resistance and wall."
 
 Temperament Disruption
-r:"^使所有敵人的防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>，受到傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Decrease all foes' DEF by <color\=#fffc40>$1</color> and increase their DMG Taken by <color\=#fffc40>$2</color> for $3 turns."
+r:"^使所有敵人的防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>，受到傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Decrease all foes' DEF by <color\=#fffc40>$1</color> and increase their DMG Taken by <color\=#fffc40>$2</color>. Lasts for $3 turns."
 
 Venomous Vortex
 r:"^使1名敵人受到傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，並使目標獲得(\d+)層「蛇毒」，持續(\d+)回合，上限(\d+)層。「蛇毒」：每回合受到我方攻擊力最高的怪盜<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害\（最多計入WONDER攻擊力的(\d+%)\）。$"="Increase 1 foe's DMG Taken by <color\=#fffc40>$1</color>. Inflict the target with $2 [Venom] stack for $3 turns. Stacks up to $4 times. [Venom]: Take Curse damage equal to <color\=#fffc40>$5</color> of the highest ATK Thief's ATK, up to $6 of Wonder's ATK."
+
+Deconstruction Force Field
+r:"^使1名敵人受到傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，受到暴擊效果提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Increase 1 foes' DMG Taken by <color\=#fffc40>$1</color> and Crit DMG Taken by <color\=#fffc40>$2</color>. Lasts for $3 turns."
 
 --- Dispel ---
 驅散所有同伴的1個屬性降低效果。=Remove 1 stat debuff from all allies.

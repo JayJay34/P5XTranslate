@@ -169,7 +169,7 @@ r:"^解明怪盜裝備時生效：使用技能為敵人添加減益狀態，使�
 【創造】=[Creation]
 創造=Creation
 戰鬥中，自身精力回復達到100%/150%/200%，獲得暴擊效果提升<color\=#2899ff>15%/30%/45%</color>。=In battle, when user reached 100%/150%/200% SP Recovery, increase Crit DMG by <color\=#2899ff>15%/30%/45%</color>.
-r:"^戰鬥開始時，使速度最低的怪盜造成傷害提升<color\=#2899ff>(\d+%)</color>，無法重複觸發。$"="At the start of a battle, increase the DMG Dealt for ther lowest Speed Thief by <color\=#2899ff>$1</color>. This effect won't activate if stacked."
+r:"^戰鬥開始時，使速度最低的怪盜造成傷害提升<color\=#2899ff>(\d+%)</color>，無法重複觸發。$"="At the start of a battle, increase the DMG Dealt for the lowest SPD Thief by <color\=#2899ff>$1</color>. This effect won't activate if stacked."
 
 【自由】=[Freedom]
 自由=Freedom
@@ -188,6 +188,9 @@ r:"^所有怪盜對處於倒地狀態的敵人造成傷害提升<color\=#2899ff>
 r:"^每有一個敵人增加自身電擊傷害<color\=#2899ff>(\d+%)</color>，最多<color\=#2899ff>(\d+%)</color>。$"="Increase Elec DMG by <color\=#2899ff>$1</color> per foe, up to <color\=#2899ff>$2</color>."
 r:"^持續效果傷害提升<color\=#2899ff>(\d+%)</color>。$"="Increase Damage Over Time DMG by <color\=#2899ff>$1</color>."
 r:"^持續傷害效果提升<color\=#2899ff>(\d+%)</color>。$"="Increase Damage Over Time Effect by <color\=#2899ff>$1</color>."
+
+【敏銳】=[Acuity]
+敏銳=Acuity
 
 ----------
 All Arcana Cards
@@ -278,7 +281,7 @@ r:"^4套裝效果：對處於負面狀態下的敵人咒屬性傷害提升<color
 
 【和解】=<size\=20>  </size>[Reconciliation]
 和解=Reconciliation
-r:"^2套裝效果：速度提升<color\=#2899ff>(\d+)</color>。$"="<size\=23>2 Set Effect: Increase Speed by <color\=#2899ff>$1</color>.</size>"
+r:"^2套裝效果：速度提升<color\=#2899ff>(\d+)</color>。$"="<size\=23>2 Set Effect: Increase SPD by <color\=#2899ff>$1</color>.</size>"
 r:"^4套裝效果：戰鬥中，自身最大生命值、攻擊力、防禦力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: In battle, increase user's Max HP, ATK, and DEF by <color\=#2899ff>$1</color>."
 
 【憂思】=<size\=20>  </size>[Worry]
@@ -304,7 +307,7 @@ r:"^4套裝效果：造成{{A}}技能傷害時，若與自身上次造成{{A}}�
 
 【謹慎】=<size\=20>  </size>[Prudence]
 謹慎=Prudence
-r:"^2套裝效果：速度降低<color\=#2899ff>(\d+)</color>，攻擊力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Decrease Speed by <color\=#2899ff>$1</color>, increase ATK by <color\=#2899ff>$2</color>.</size>"
+r:"^2套裝效果：速度降低<color\=#2899ff>(\d+)</color>，攻擊力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Decrease SPD by <color\=#2899ff>$1</color>, increase ATK by <color\=#2899ff>$2</color>.</size>"
 r:"^4套裝效果：造成傷害提升(\d+%)。$"="<size\=23>4 Set Effect: Increase DMG Dealt by <color\=#2899ff>$1</color>.</size>"
 
 【執著】=<size\=20>  </size>[Fixation]
@@ -319,6 +322,14 @@ r:"^4套裝效果：造成傷害提升<color\=#2899ff>(\d+%)</color>，持續(\d
 【改變】=<size\=20>  </size>[Transformation]
 改變=Transformation
 r:"^4套裝效果：攻擊力提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；造成暴擊後再次獲得相同效果。$"="<size\=23>4 Set Effect: Increase ATK by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again after landing a CRITICAL.</size>"
+
+【豐饒】=<size\=20>  </size>[Wealth]
+豐饒=Wealth
+r:"^4套裝效果：造成傷害提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；釋放追加效果後再次獲得相同效果。$"="<size\=23>4 Set Effect: Increase DMG Dealt by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again after activating a Follow Up.</size>"
+
+【獲得】=<size\=20>  </size>[Gain]
+獲得=Gain
+r:"^4套裝效果：釋放技能使自身生命值降低時，造成傷害提升<color\=#2899ff>(\d+%)</color>，可疊加(\d+)層，持續(\d+)回合。$"="<size\=23>4 Set Effect: When losing HP from a skill, increase DMG Dealt by <color\=#2899ff>$1</color> for $3 turns. Stacks up to $2 times.</size>"
 
 ----------
 Inspect Details + Combat Pop-Ups
@@ -356,6 +367,7 @@ sr:"^創造&(.*)$"="Creation & $1"
 sr:"^自由&(.*)$"="Freedom & $1"
 sr:"^希望&(.*)$"="Hope & $1"
 sr:"^突破&(.*)$"="Perseverance & $1"
+sr:"^敏銳&(.*)$"="Acuity & $1"
 
 觸發【主權】套裝效果的額外傷害=Triggered the additional damage from [Control]
 觸發【真諦】套裝效果的額外傷害=Triggered the additional damage from [Truth]
