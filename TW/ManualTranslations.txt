@@ -323,7 +323,7 @@ r:"^開啟了前往「<color\=#ff3b37>(.*)</color>」的快速移動。$"="Can n
 點擊「<color\=#ff3b37>領取</color>」獎勵=Click to [<color\=#ff3b37>Claim</color>] rewards
 
 膽小鬼=Coward
-{{A}}中存在著一些特殊陰影，\n膽小的它們藏在油漆桶裡，\n嘗試用「<color\=#ff0000>撞擊</color>」的方式趕走它們，\n並奪取「<color\=#ff0000>桶內的寶物</color>」吧。=There are some special shadows in {{A}}. They are cowardly and hide in paint buckets, try [<color\=#ff0000>ramming</color>] them to force them out and take the [<color\=#ff0000>treasure inside the can</color>].
+{{A}}中存在著一些特殊陰影，\n膽小的它們藏在油漆桶裡，\n嘗試用「<color\=#ff0000>撞擊</color>」的方式趕走它們，\n並奪取「<color\=#ff0000>桶內的{{B}}</color>」吧。=There are some special shadows in {{A}}. They are cowardly and hide in paint buckets, try [<color\=#ff0000>ramming</color>] them to force them out and take the [<color\=#ff0000>treasure inside the can</color>].
 
 ----------
 Character Names
@@ -360,6 +360,7 @@ r:"^橋<color\=#ff0000ff>本</color> {{A}}$"="{{A}} Ha<color\=#ff0000ff>shi</col
 r:"^鹿<color\=#ff0000ff>野</color> {{A}}$"="{{A}} Shi<color\=#ff0000ff>ka</color>no"
 r:"^宮<color\=#ff0000ff>下</color> {{A}}$"="{{A}} Mi<color\=#ff0000ff>ya</color>shita"
 r:"^片<color\=#ff0000ff>山</color> {{A}}$"="{{A}} Ka<color\=#ff0000ff>ta</color>yama"
+r:"^松<color\=#ff0000ff>方</color> 結$"="Mu<color\=#ff0000ff>su</color>bi Matsukata"
 
 P5X Side Quest
 r:"^<color\=#ff0000ff>阿</color>七$"="Shi<color\=#ff0000ff>chi</color>-kun"
@@ -538,8 +539,8 @@ City UI
 工作臺=Workbench
 工<color\=#ff0000ff>作</color>臺=Wo<color\=#ff0000ff>rk</color>bench
 烹飪=Cooking
-種植=Cultivation
-<color\=#ff0000ff>種</color>植=Cu<color\=#ff0000ff>lt</color>ivation
+種植=Gardening
+<color\=#ff0000ff>種</color>植=G<color\=#ff0000ff>a</color>rdening
 展示櫃=Showcase
 展<color\=#ff0000ff>示</color>櫃=Sh<color\=#ff0000ff>ow</color>case
 擺放區·一樓=Display Area - First Floor
@@ -796,7 +797,7 @@ Area Names
 學校二樓=School 2F
 學校三樓=School 3F
 學校天臺=Rooftop
-下北澤車站=<size\=17>Shimokitazawa Station</size>
+下北澤車站=<size\=17>Shimo-Kitazawa Station</size>
 
 {{A}}  站前廣場={{A}} Station Square
 站前廣場=Station Square
@@ -948,6 +949,7 @@ Profile Menu
 名片=Profile Card
 更換相框=Change Frame
 更換頭像=Change Avatar
+頭像=Avatar
 頭像·{{A}}=Avatar·{{A}}
 更換聊天框=Change Chat Box
 更換壁紙=Change Wallpaper
@@ -2238,9 +2240,9 @@ r:"^幫助{{A}}$"="<size\=24>Help out\n{{A}}</size>"
 如果對拍攝照片感興趣，就去{{B}}找攝影師{{A}}吧。=<size\=28>If you're interested in taking photos, then let's go to Shinjuku and find the photographer {{A}}</size>
 要陪{{A}}拍攝照片嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to take photos with {{A}}? (<color\=#ff0000>Spend 1 Energy Point</color>)
 
-{{A}}的寶物甄選=<size\=24>{{A}}'s \nTreasure Selection</size>
-{{A}}在城市的角落又藏了什麼樣的寶物呢，快去看看吧。=<size\=28>Let's go and find out what treasures did {{A}} hide in the city again</size>
-要尋找{{A}}的寶物嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to look for {{A}}'s treasure? (<color\=#ff0000>Spend 1 Energy Point</color>)
+{{A}}的{{B}}甄選=<size\=24>{{A}}'s \n{{B}} Selection</size>
+{{A}}在城市的角落又藏了什麼樣的{{B}}呢，快去看看吧。=<size\=28>Let's go and find out what treasures did {{A}} hide in the city again</size>
+要尋找{{A}}的{{B}}嗎(<color\=#ff0000>消耗1點行動力</color>)？=Do you want to look for {{A}}'s treasure? (<color\=#ff0000>Spend 1 Energy Point</color>)
 
 {{A}}的遊戲=<size\=24>{{A}}'s game</size>
 {{A}}似乎又策劃了什麼新遊戲，去找他湊湊熱鬧吧。={{A}} seems to be planning some new game, let's go find him and join in the fun
@@ -2292,7 +2294,7 @@ r:"^{{A}}似乎有話要說，要陪她嗎？$"="{{A}} seems to have something t
 深入了解的方式=<size\=24>Ways to \nunderstand deeper</size>
 為了更好的了解你，{{A}}提出了一個不尋常的建議……=<size\=25>In order to get to understand you better, \n{{A}} has made an unusual suggestion...</size> 
 
-兩個人的觀影時間=<size\=24>Movie time \nfor two</size>
+兩個人的觀{{A}}=<size\=24>Movie time \nfor two</size>
 在家裡和{{A}}一起看她推薦的電影吧=<size\=26>Let's watch the movie recommended by {{A}} together at home</size>
 
 花茶之約=<size\=24>Tea date</size>
@@ -2338,7 +2340,7 @@ r:"^似乎是和{{A}}<color\=#FFC000>第一次</color>去這個地方，應該�
 
 {{A}}有著非常熱鬧的<color\=#ff0000>商業街</color>和<color\=#ff0000>電影院</color>啊，\n要前往那裡去看看嗎？=<size\=30>There are crowded <color\=#ff0000>Central Street</color> and \n<color\=#ff0000>Movie Theater</color> in {{A}}. Want to go there?</size>
 r:"^要<color\=#ff0000>回家</color>嗎？\n還是說去附近的<color\=#ff0000>餐廳</color>……$"="Are we going <color\=#ff0000>Home</color>? \nOr going to nearby <color\=#ff0000>Restaurants</color>..."
-下北澤啊……那是在<color\=#ff0000>學校</color>附近吧，要去嗎？=<size\=30>Shimokitazawa... that's near the <color\=#ff0000>School</color>. \nWant to go there?</size>
+下北澤啊……那是在<color\=#ff0000>學校</color>附近吧，要去嗎？=<size\=30>Shimo-Kitazawa... that's near the <color\=#ff0000>School</color>. \nWant to go there?</size>
 {{A}}似乎有個<color\=#ff0000>擊球場</color>，要去那裡看看嗎？=There is a <color\=#ff0000>batting cage</color> in {{A}}. Want to go there?
 {{A}}那裡似乎有條充滿慾望的<color\=#ff0000>娛樂街</color>啊，\n確定要前去那裡嗎？=<size\=30>There seems to be an <color\=#ff0000>Entertainment Street</color> full of desires in {{A}}. Want to go there?</size>
 {{A}}好像有非常著名的<color\=#ff0000>步行街</color>，\n要去隨便逛逛嗎？=<size\=29>There is a famous <color\=#ff0000>Pedestrian Street</color> in {{A}}. Want to go for a walk?</size>
@@ -2671,6 +2673,9 @@ r:"^<color\=#FFDe00>{{A}}</color>票務等級達到<color\=#FFDe00>(\d+)級</col
 『蟄伏之語』=[Words of Dormancy]
 「蟄伏之語」=[Words of Dormancy]
 蟄伏之語=Words of Dormancy
+『豐收之語』=[Words of Harvest]
+「豐收之語」=[Words of Harvest]
+豐收之語=Words of Harvest
 
 r:"^陰影被擊敗後，使全體怪盜造成傷害提升(.*)，可疊加(.*)層$"="After defeating a Shadow, increase all Thieves' DMG Dealt by $1, up to $2 stacks"
 r:"^全體怪盜受治療/護盾效果提升(.*)，受治療/護盾後造成傷害提升(.*)；戰鬥開始時全體怪盜損失(.*)生命值$"="Increase all Thieves' Healing Received/Shield Effect by $1, increase DMG Dealt after Healed/Shieled by $2; All Thieves lose $3 HP at the start of battle"
@@ -5206,6 +5211,160 @@ r:"^在障礙賽中總計獲得(\d+)星\((\d+)\/(\d+)\)$"="Obtain $1 ★ in Obst
 r:"^在「極限賽 」中獲得(\d+)分\((\d+)\/(\d+)\)$"="Obtain $1 Score in [Challenge Race] ($2/$3)"
 
 ----------
+TASKS UI
+----------
+委託派遣=Tasks
+完成{{A}}的委託任務，領取相應派遣獎勵！=Complete {{A}}'s Tasks to gain rewards!
+開啟「<color\=#ff3b37>委託</color>」=Open [<color\=#ff3b37>Task</color>]
+委託任務=Tasks
+<color\=#FFD145>{{A}}</color>正在印象空間中開展新的貿易活動，\n為了應對突發狀況，她希望拜託你來進行協助。\n根據「<color\=#ff3b37>委託</color>」所需條件<color\=#ff3b37>派遣怪盜</color>，完成後領取謝禮，\n如果滿足<color\=#ff3b37>加分</color>條件，還可以獲得額外的報酬哦。=<size\=25><color\=#FFD145>{{A}}</color> is launching a new trade in Mementos and she would like you to help her deal with unepected situations. \nBased on the <color\=#ff3b37>Dispatch Thieves</color> requirement on each <color\=#ff3b37>Tasks</color>, you'll get rewards after completion. \nIf you meet the <color\=#ff3b37>bonus</color> requirements, you'll gain extra rewards.</size>
+委託類型=Task Types
+「<color\=#ff3b37>限定</color>」委託，在滿足特定條件後出現。\n「<color\=#ff3b37>每週、每日</color>」委託，週期內僅刷新一個。\n「<color\=#ff3b37>常規</color>」委託，完成後自動刷新。=<size\=25>[<color\=#ff3b37>Limited</color>] Tasks, appear after fulfilling certain conditions. \n[<color\=#ff3b37>Weekly, Daily</color>] Tasks, with 1 refresh per week/ day. \n[<color\=#ff3b37>Standard</color>] Tasks, auto refresh on completion.</size>
+委託刷新=Tasks Refresh
+可以一次性刷新所有未派遣的「<color\=#ff3b37>非限定</color>」委託。\n刷新需要消耗「委託刷新券」。\n<color\=#ff3b37>每日首次刷新免費</color>=<size\=28>You can refresh all undispatched [<color\=#ff3b37>Non-limited</color>] Tasks. \nRefreshing requires a [Task Refresh Ticket].\n<color\=#ff3b37>The first refresh each day is free.</color></size>
+委託等級=Task Level
+完成委託後，會累計委託經驗。\n隨委託等級提升：\n增加<color\=#ff3b37>同時可接</color>委託任務數量；\n增加<color\=#ff3b37>同時刷出</color>的「常規」委託數量。=<size\=26>Gain Task EXP after completing Tasks. \nBased on your Tasks Level: \nIncrease the number of <color\=#ff3b37>active</color> Tasks: \nIncrease the number of <color\=#ff3b37>refreshes</color> on [Standard] Tasks.</size>
+<color\=#FFD145>玩法介紹</color>\n{{A}}正在印象空間中開展新的貿易活動，\n為了應對突發狀況，她希望拜託你來進行協助。\n根據「<color\=#ff3b37>委託</color>」所需條件<color\=#ff3b37>派遣怪盜</color>，完成後領取謝禮，\n如果滿足<color\=#ff3b37>加分</color>條件，還可以獲得額外的報酬哦。\n\n<color\=#FFD145>委託類型</color>\n「<color\=#ff3b37>限定</color>」委託，在滿足特定條件後出現。\n「<color\=#ff3b37>每週、每日</color>」委託，週期內僅刷新一個。\n「<color\=#ff3b37>常規</color>」委託，完成後自動刷新。\n\n<color\=#FFD145>委託刷新</color>\n可以一次性刷新所有未派遣的「<color\=#ff3b37>非限定</color>」委託。\n<color\=#ff3b37>每日首次刷新免費</color>。\n常規刷新非限定任務均需要消耗「委託刷新券」。\n每日可刷新委託任務數量上限：200。\n\n<color\=#FFD145>委託等級</color>\n完成委託後，會累計委託經驗。隨等級提升：\n增加<color\=#ff3b37>同時可接</color>委託任務數量；\n增加<color\=#ff3b37>同時刷出</color>的「常規」委託數量。=<color\=#FFD145>Tasks</color>\n<size\=25><color\=#FFD145>{{A}}</color> is launching a new trade in Mementos and she would like you to help her deal with unepected situations. \nBased on the <color\=#ff3b37>Dispatch Thieves</color> requirement on each <color\=#ff3b37>Tasks</color>, you'll get rewards after completion. \nIf you meet the <color\=#ff3b37>bonus</color> requirements, you'll gain extra rewards.</size>\n\n<color\=#FFD145>Tasks Types</color>\n<size\=25>[<color\=#ff3b37>Limited</color>] Tasks, appear after fulfilling certain conditions. \n[<color\=#ff3b37>Weekly, Daily</color>] Tasks, with 1 refresh per week/ day. \n[<color\=#ff3b37>Standard</color>] Tasks, auto refresh on completion.</size>\n\n<color\=#FFD145>The first refresh each day is free</color>\n<size\=25>Refreshing Non-limited Tasks requires [Task Refresh Ticket]. \nYou can refresh up to 200 times per day.</size> \n\n<color\=#FFD145>Task Level</color>\n<size\=25>Increase the number of <color\=#ff3b37>active</color> Tasks; \nIncrease the number of <color\=#ff3b37>refreshes</color> on [Standard] Tasks.</size>
+
+----------
+Kotone SL
+----------
+r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n派遣完成時間減少5%。$"="<size\=24>Gain Synergy with [<color\=#FFC000>{{A}}</color>]: Decrease the time needed to complete Tasks by 5%.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n刷出常規委派數量\+1。$"="<size\=24><color\=#FFC000>Rank $1</color>: +1 to the max refresh on Standard Tasks.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n派遣完成時間減少10%。$"="<size\=24><color\=#FFC000>Rank $1</color>: Decrease the time needed to complete Tasks by 10%.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n刷出藍色以上品質委託機率提升。$"="<size\=24><color\=#FFC000>Rank $1</color>: Increase the chance to get above blue quality Tasks.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n可以快速完成已經派遣的委託，\n每週限3次。本周剩餘次數：(\d+)/3$"="<size\=24><color\=#FFC000>Rank $1</color>: Can instant complete 3 dispatched Tasks per week.\nTime(s) left: $2/3</size>"
+r:"^{{A}}Rank(\d+)解鎖$"="Unlock at {{A}} Rank $1"
+r:"^{{A}}Rank(\d+)解鎖。$"="Unlock at {{A}} Rank $1."
+
+----------
+EXP PAGE
+----------
+獲得獎勵：=Rewards:
+同時可接委託數量：=Simultaneous Task:
+刷出常規委託數量：=Standard Task:
+r:"^主角(\d+)級開放$"="<size\=20>Unlocks at Wonder LV. $1</size>"
+
+----------
+MAP UI
+----------
+r:"^(\d+)小時$"="$1h"
+『委託刷新券』\n在「怪盜委託」中刷新委託任務時消耗，可以刷新尚未出發的「非限定」類型的委託事件。=<size\=28>[Task Refresh Ticket]\nCan be used to refresh non-active [Non-limited] Tasks</size>
+『委託刷新券』\n在「怪盜委託」中可以刷新尚未出發的「非限定」類型委託。\n獲取方式：\n領取商城「每日贈禮」，\n領取{{A}}「週一補給」。=[Task Refresh Ticket]\nCan be used to refresh non active [Non-limited] Tasks. Obtainable from the Daily Gift in Marthym's Shop and by claiming {{A}} Supply Set.
+在「怪盜委託」中可以刷新尚未出發的「非限定」類型委託。\n獲取方式：\n領取商城「每日贈禮」，\n領取{{A}}「週一補給」。=Can be used to refresh non active [Non-limited] Tasks. Obtainable from the Daily Gift in Marthym's Shop and by claiming {{A}} Supply Set.
+每日首次免費=<size\=20>Free Daily Refresh</size>
+是否消耗「<color\=#ff3b37>免費刷新次數</color>」，\n刷新未派遣的「<color\=#ff3b37>非限定</color>」委託？=Spend the [<color\=#ff3b37>Free Daily Refresh</color>] and refresh\nall undispatched [<color\=#ff3b37>Non-limited</color>] Tasks?
+r:"^是否刷新未派遣的「<color\=#ff3b37>非限定</color>」委託？\n消耗：\[{{A}}]\*(\d+)$"="Refresh all undispatched \n[<color\=#ff3b37>Non-limited</color>] Tasks?\nCost: $1 {{A}}"
+r:"^是否刷新未派遣的「<color\=#ff3b37>非限定</color>」委託？\n消耗：\[委託刷新券]\*(\d+)$"="Refresh all undispatched \n[<color\=#ff3b37>Non-limited</color>] Tasks?\nCost: $1 [Task Refresh Ticket]"
+可派遣任務已達上限。=Reached the limit on active Tasks
+是否中止派遣，並召回怪盜？=Cancel the Task? \n(This will not remove the Task)
+是否快速完成當前派遣任務？=Instant complete this Task?
+未設置派遣怪盜。=Did not select Dispatch Thieves.
+本週快速完成派遣次數已用完。=Used all weekly instant complete.
+
+----------
+TASKS INFO
+----------
+當前委派=Task Details
+派遣條件=Conditions
+接取=<size\=25>Req.</size>
+加分=<size\=21>Bonus</size>
+委託獎勵=Rewards
+r:"^經驗：(\d+)$"="EXP: $1"
+選擇委派=Thieves
+
+----------
+REQUIREMENTS
+----------
+r:"^需要(\d+)名怪盜$"=" $1 Thieves"
+r:"^需要(\d+)名五星怪盜$"=" $1 5★ Thieves"
+r:"^需要(\d+)名(\d+)級怪盜$"=" $1 LVL $2 Thieves"
+sr:"^需要「(.*)」$"=" $1"
+sr:"^需要(\d+)級「(.*)」$"="<size\=25> LVL $1 $2</size>"
+r:"^需要(\d+)名<size\=34><sprite\=(\d+) tint\=1></size>怪盜$"=" $1 <size\=34><sprite\=$2 tint\=1></size> Thieves"
+r:"^需要(\d+)名(\d+)級<size\=34><sprite\=(\d+) tint\=1></size>怪盜$"=" $1 LVL $2 <size\=34><sprite\=$3 tint\=1></size> Thieves"
+r:"^需要(\d+)名<size\=34><sprite\=(\d+) tint\=1></size>或<size\=34><sprite\=(\d+) tint\=1></size>怪盜$"=" $1 <size\=34><sprite\=$2 tint\=1></size> or <size\=34><sprite\=$3 tint\=1></size> Thieves"
+當前設置加分條件尚未滿足，\n是否確認立即出發？=Bonus conditions have not been met.\nDo you want to dispatch anyway?
+接取條件不滿足。=Did not meet the requirements.
+
+----------
+OTHERS
+----------
+委託刷新券=Task Refresh Ticket
+委託=Task
+在「怪盜委託」中刷新委託任務時消耗，可以刷新尚未出發的「非限定」類型的委託事件。=Used in [Tasks]. \n<size\=21>Refresh all undispatched [Non-limited] Tasks.</size>
+
+----------
+NAMES
+----------
+Setanta (ST) gives Character Lv
+B.Ooze (AoE) gives Weapon Lv
+Matador (Tank or Healer) gives Persona Lv
+Incubus/ Succubus (Buff or Debuff) gives Card Lv
+Obariyon/ Decarabia (Navi) gives Soul Gems/ Bells
+
+擋路的{{A}}={{A}} in the Way
+續·擋路的{{A}}={{A}} in the Way Pt. 2
+和{{A}}的決戰=Duel with {{A}}
+邪惡的{{A}}=Evil {{A}}
+超大的{{A}}=XL {{A}}
+極巨的{{A}}=XXL {{A}}
+超小訂單=Super Small Order
+超大訂單=Super Big Order
+交通事故？=Traffic Accident?
+{{A}}的威脅={{A}}'s Threat
+{{A}}的對決={{A}}'s Duel
+意外事件=Unexpected Event
+小心易碎物品～=Be careful with fragile items～
+{{A}}的報復={{A}}'s Revenge
+趕走{{A}}=Drive Away {{A}}
+對立的{{A}}=Opposing {{A}}
+談判專家=Negotiation Expert
+詭異的{{A}}=Weird {{A}}
+{{A}}的陷阱={{A}}'s Trap
+趕走{{A}}=Drive Away {{A}}
+商人的煩惱=Businesswoman's Trouble
+{{A}}大問答·終={{A}} Quiz - Final
+{{A}}大問答·高={{A}} Quiz - High
+{{A}}大問答·中={{A}} Quiz - Medium
+{{A}}的巢穴={{A}} Nest
+居然是{{A}}=Surprise {{A}}
+一家一台{{A}}={{A}} for Every Family
+前面在發光的是…？=What's Shining Over There?
+熱銷商品=Hot Products
+全新商機=New Business Opportunities
+
+r:"^消滅強盜陰影(\d+)$"="Eliminate robber Shadows Pt. $1"
+
+慾望的啟動=Blooming Desire
+這裡因為客人，慾望變得越發活躍啦。\n看來印象空間中也散落著意識碎片呢。\n把它們收集起來，對客人也有幫助呢。\n如果客人有興趣，可以讓同伴調查哦？=The desires have become more lively because of the customer.\nIt seems like there are some awareness fragments in Mementos.\nCollecting them will help the customer, should you invistigate there with your allies?
+
+發現珍寶·命運=Found Fate
+發現珍寶·慾望=Found Desire
+發現珍寶·迷情香=Found Charming Incense
+發現珍寶·金絲香=Found Golden Incense
+發現珍寶·怒顏香=Found Wrathful Incense
+發現珍寶·啖夢香=Found Dream Devouring Incense
+發現珍寶·縛生香=Found Binding Incense
+發現珍寶·玲瓏辰星=Found Exquisite Star
+發現·星屑之瓶·低=Found Stardust Bottle
+發現·星屑之瓶·高=Found Stardust Bottle·Premium
+發現·水晶球·低=Found Crystal Ball
+發現·水晶球·高=Found Crystal Ball·Premium
+發現珍寶·硬幣=Found Coin
+
+耐久度測試=Durability Test
+物資保障=Secure Material
+促銷計畫=Promotional Plan
+遠行的保鏢=Travel Bodyguard
+拼命尋找商業工具=Searching for Tools
+
+sr:"^協助交易·(.*)$"="Trade Assist - $1"
+
+慾望的殘餘=Remnant of Desire
+前幾天我發現了一些奇怪的東西。\n慾望的殘餘，意識的碎片……？\n感覺到了和客人夥伴相似的氣息呢～\n我告訴你地點，去確認一下怎麼樣？=A few days ago I found something strange.\nRemnants of desire, fragment of awareness...?\nI felt a similar presence from the customer's companion～\nI'll tell you the location, can you go and check it out?
+
+----------
 Character's Story
 ----------
 限時關卡中，攜帶指定怪盜可額外獲得一定比例的通關獎勵，同時攜帶多名指定怪盜時，額外比例相加。=In the limited time levels, bringing specific Thieves can increase rewards.
@@ -5719,6 +5878,8 @@ sr:"^表情·(.*)$"="Emote·$1"
 安靜=Quiet
 做得好=Good job
 閃光一腳=Lightning Kick
+加班中=Working Overtime
+升天=Ascend
 
 薩克斯風的簧片=Saxophone Reed
 劇情道具。\n{{A}}贈送的薩克斯風簧片。=Story item. \nSaxophone reed given by {{A}}.
