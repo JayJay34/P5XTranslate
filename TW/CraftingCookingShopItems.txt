@@ -2,10 +2,10 @@
 CRAFTING UI
 ----------
 協同者增益=<size\=26>Synergy Buff</size>
-潛入道具=Infiltration Tools
-戰鬥道具=Combat Items
-禮物=Gifts
-材料=Materials
+潛入道具=Infiltration Tool
+戰鬥道具=Combat Item
+禮物=Gift
+材料=Material
 增益效果=Bonus
 {{A}}好感度提升至rank5後，製作禮物時有機會省下一部分製作材料。=After {{A}} Rank 5: \nChance to refund materials when making Gifts.
 {{A}}好感度提升至rank7後，製作禮物時有機率額外產出1個。=After {{A}} Rank 7: \nChance to get an extra Gift when making Gifts.
@@ -17,12 +17,12 @@ INFILTRATION TOOLS
 ----------
 開鎖工具=Lockpick
 催眠迷霧=Hypno Mist
-鎮定精油=Stealthanol
+鎮定精油=Calming Aroma
 
-使用效果：由於是手工製作，外形略顯粗糙。在棒球館中使用，應該能探測到不錯的寶物。=<size\=24>Effect: Handmade and rough in appearance. \nShould be able to detect treasures when used in a stadium.</size>
-使用效果：由於是手工製作，外形略顯粗糙。在影視城中使用，應該能探測到不錯的寶物。=<size\=24>Effect: Handmade and rough in appearance. \nShould be able to detect treasures when used in a studio.</size>
-使用效果：由於是手工製作，外形略顯粗糙。在水壩內使用，應該能探測到不錯的寶物。=<size\=24>Effect: Handmade and rough in appearance. \nShould be able to detect treasures when used in a dam.</size>
-使用效果：由於是手工製作，外形略顯粗糙。在蟻穴內使用，應該能探測到不錯的寶物。=<size\=24>Effect: Handmade and rough in appearance. \nShould be able to detect treasures when used in an anthill.</size>
+使用效果：由於是手工製作，外形略顯粗糙。在棒球館中使用，應該能探測到不錯的{{A}}。=<size\=24>Effect: Handmade and rough in appearance. \nShould be able to detect treasures when used in a stadium.</size>
+使用效果：由於是手工製作，外形略顯粗糙。在影視城中使用，應該能探測到不錯的{{A}}。=<size\=24>Effect: Handmade and rough in appearance. \nShould be able to detect treasures when used in a studio.</size>
+使用效果：由於是手工製作，外形略顯粗糙。在水壩內使用，應該能探測到不錯的{{A}}。=<size\=24>Effect: Handmade and rough in appearance. \nShould be able to detect treasures when used in a dam.</size>
+使用效果：由於是手工製作，外形略顯粗糙。在蟻穴內使用，應該能探測到不錯的{{A}}。=<size\=24>Effect: Handmade and rough in appearance. \nShould be able to detect treasures when used in an anthill.</size>
 
 與「<color\=#FFC000>{{A}}</color>」好感度提升至<color\=#FFC000>rank4</color>後，\n增加尋寶儀、潛入道具及禮物的製作。=<size\=24>Gain Synergy with [<color\=#FFC000>{{A}}</color>]: You can craft more Treasure Detectors, infiltration tools, and gifts.</size>
 r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，製作禮物時，有機率返還部分製作材料。$"="<size\=24><color\=#FFC000>Rank $1</color>: Some materials may be returned after crafting gifts.</size>"
@@ -42,17 +42,17 @@ r:"^戰鬥道具，可隨機造成一次單體疾風、火焰、冰凍或電擊�
 奇異爆竹=Strange Firecracker
 r:"^戰鬥道具，可隨機造成一次單體念動、核熱、祝福或詛咒屬性傷害。\n在工作臺使用『乙醇』·『鐵片』製作而成。$"="Combat item. Randomly deals Psy, Nuke, Bless, or Curse damage once."
 
-天羅地網咒=Trap Spell
+天羅地網咒=Trap Charm
 sr:"^戰鬥道具，可造成一次中量的單體(.*)屬性傷害。\n在工作臺使用(.*)製作而成。$"="Combat item. Deals medium $1 damage once."
-三彈護身咒=Bullet Spell
-御風咒=Wind Spell
-炎火咒=Fire Spell
-祈雪咒=Snow Spell
-落五雷咒=Thunder Spell
-凶夢咒=Nightmare Spell
-召核咒=Nuclear Spell
-金光祈運咒=Light Spell
-鬼卒咒=Demon Spell
+三彈護身咒=Bullet Charm
+御風咒=Wind Charm
+炎火咒=Fire Charm
+祈雪咒=Snow Charm
+落五雷咒=Thunder Charm
+凶夢咒=Nightmare Charm
+召核咒=Nuclear Charm
+金光祈運咒=Light Charm
+鬼卒咒=Demon Charm
 
 碰撞鈴=Impact Bell
 sr:"^戰鬥道具，可造成一次大量的單體(.*)屬性傷害。\n在工作臺使用(.*)製作而成。$"="Combat item. Deals heavy $1 damage once."
@@ -71,28 +71,60 @@ Crafting Gifts
 ----------
 簡約的包裝=<size\=28>Simple Packaging</size>
 華麗的包裝=<size\=28>Gorgeous Packaging</size>
+sr:"^一種常見的製作材料。\n可使用工作臺製作成協同者禮物『(.*)』·『(.*)』·『(.*)』。$"="A common material. Can be used at the workbench to craft these gifts for a Synergy: [$1], [$2], [$3]."
+sr:"^一種常見的製作材料。\n可使用工作臺製作成協同者禮物『(.*)』·『(.*)』·『(.*)』·『(.*)』·『(.*)』·『(.*)』。$"="A common material. Can be used at the workbench to craft these gifts for a Synergy: [$1], [$2], [$3], [$4], [$5], [$6]."
 
-小雛菊香料=Daisy Spice
-小雛菊=Daisy
+小雛菊香料=Daisy Potpourri
+小雛菊=Daisies
 葵花籽=Sunflower Seed
-向日葵=Sunflower
+向日葵=Sunflowers
 茉莉花茶=Jasmine Tea
 茉莉=Jasmine
 
 山茶花花茶=Camellia Tea
-山茶花=Camellia
-桂花花茶=Sweet Olive Tea
-桂花=Sweet Olive
-百合永生花=Eternal Lily
-百合=Lily
+山茶花=Camellias
+桂花花茶=Osmanthus Tea
+桂花=Osmanthuses
+百合永生花=Preserved Lily
+百合=Lilies
 
-維麗特=Glamorous Violet
+維麗特=Violet Bouquet
 紫羅蘭=Violet
-風物詩=Fuubutsushi
+風物詩=Osmanthus Bouquet
 大波斯菊=Cosmos
 
+羅勒香包=Basil Sachet
+羅勒苗=Micro Basil
+鳳仙花瓣染=Balsam Dye
+鳳仙花=Balsam
+檸檬香桃茶=Lemon Myrtle Tea
+檸檬香桃=Lemon Myrtle
+
+真絲袋=Silk Bag
+白色手帕=White Handkerchief
+
 真愛永恆=Eternal Love
-紅玫瑰=Red Rose
+紅玫瑰=Red Roses
+
+----------
+Gardening
+----------
+與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n種植時間降低。=<size\=24>Gain Synergy with [<color\=#FFC000>{{A}}</color>]: You need less time to grow plants.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n解鎖更多花盆和菜盆。$"="<size\=24><color\=#FFC000>Rank $1</color>: You can use more flower pots and planters.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n種植收穫時機率獲得種子。$"="<size\=24><color\=#FFC000>Rank $1</color>: You may obtain seeds when harvesting plants.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n種植有一定機率獲得額外產出。$"="<size\=24><color\=#FFC000>Rank $1</color>: You may get extra when harvesting plants.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n種植時間大幅降低。$"="<size\=24><color\=#FFC000>Rank $1</color>: You need much less time to grow plants.</size>"
+
+sr:"^『(.*)』，(.*)，可使用工作臺製作成『(.*)』，作為禮物贈與協同者。$"="[$1]: Can be crafted at the workbench into a [$3] and gifted to a Synergy."
+sr:"^『(.*)』，(.*)，可使用工作臺製作成『(.*)』·『(.*)』，作為禮物贈與協同者。$"="[$1]: Can be crafted at the workbench into a [$3], [$4] and gifted to a Synergy."
+sr:"^『(.*)』，(.*)，可使用廚房製作成料理。$"="[$1]: Used as an ingredient when cooking in your home kitchen."
+是否要剷除植物？剷除後不會有獎勵道具。=Remove? Once removed, you will not be able to obtain item rewards.
+
+暫無種植材料，可在都市花店中獲取=You don't have any seeds. You can buy seeds from the Flower Shop.
+
+暫無植物=No plants
+
+r:"^{{A}}rank(\d+)解鎖$"="Unlocks at {{A}} Rank $1"
 
 ----------
 Online Shopping
@@ -277,7 +309,7 @@ Zōshigaya Supermarket
 高麗菜=Cabbage
 馬鈴薯=Potato
 冬瓜=Wax Gourd
-白菜=Chinese Cabbage
+白菜=Napa
 豬肉=Pork
 香菇=Shiitake
 雞肉=Chicken
@@ -339,6 +371,35 @@ Shibuya Jewelry Store
 ----------
 白銀手環=Silver Bracelet
 心型戒指=Heart Ring
+
+----------
+Shibuya Flower Shop
+----------
+白菜種子=Napa Seeds
+高麗菜種子=Cabbage Seeds
+馬鈴薯種子=Potato Seeds
+洋蔥種子=Onion Seeds
+番茄種子=Tomato Seeds
+神秘的種子=Mystical Seeds
+來源不明的種子=Unknown Seeds
+sr:"^一包品質普通的蔬菜種子，種植後可收穫『(.*)』。$"="Can be planted in your home garden to grow into [$1]."
+sr:"^一包標籤破損的蔬菜種子，種植後可收穫『(.*)』、『(.*)』、『(.*)』之一。$"="A bag of seeds for an unknown vegetable. The label is torn, but they look like [$1], [$2], or [$3] seeds."
+sr:"^一包品質優良的蔬菜種子，種植後可收穫『(.*)』。$"="Can be planted in your home garden to grow into [$1]."
+
+小雛菊種子=Daisy Seeds
+茉莉種子=Jasmine Seeds
+向日葵種子=Sunflower Seeds
+奇怪的種子=Mysterious Seeds
+sr:"^一包品質普通的鮮花種子，種植後可收穫『(.*)』。$"="Can be planted in your home garden to bloom into [$1]."
+sr:"^一包品質優良的鮮花種子，種植後可收穫『(.*)』。$"="Can be planted in your home garden to bloom into [$1]."
+sr:"^一包標籤破損的鮮花種子，種植後可能會收穫『(.*)』或『(.*)』。$"="A bag of seeds for an unknown flower. The label is torn, but they look like [$1] or [$2] seeds."
+
+初級營養劑=Garden Energy
+中級營養劑=Bio Nutrients
+高級營養劑=Natural Nutrients
+作用於種植物的營養劑，可以小幅減少收成時間。=A nutrient for use on plants. Can shortly decrease grow time.
+作用於種植物的營養劑，可以大幅減少收成時間。=A nutrient for use on plants. Can somewhat decrease grow time.
+作用於種植物的營養劑，可以巨幅減少收成時間，並增加產量。=A nutrient for use on plants. Decreases grow time by a large amount, and increases yields.
 
 ----------
 Kichijoji Stationery Shop
@@ -412,6 +473,7 @@ Miyu Items
 阿薩姆紅茶=Assam Tea
 醋=Vinegar
 蔥=Green Onion
+胡蘿蔔=Carrot
 蒜=Garlic
 味噌=Miso
 抹茶=Matcha
@@ -419,6 +481,7 @@ Miyu Items
 關東煮=Oden
 鮪魚飯糰=Tuna Onigiri
 鮭魚飯糰=Salmon Onigiri
+
 
 ----------
 Vending
