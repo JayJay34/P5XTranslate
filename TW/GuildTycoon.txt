@@ -220,6 +220,7 @@ Modifiers
 隨著編入反抗/支配職業怪盜數量的增加，積分獲取效率也會相應增加。=<size\=26>Increase score gain for every Assassin/Sweeper Thief in team.</size>
 
 穩定領域=Stable Domain
+防暴領域=Anti-Crit Domain
 所有怪盜無法暴擊，{{A}}技能/追加效果造成的<color\=#FFFC40>最終傷害</color>提高，提高值\=暴擊率*(暴擊效果-100%)。（最多計入100%暴擊率）=Allies will not deal critical hits, increase {{A}} skill/Follow Up <color\=#FFFC40>Final DMG</color> by Crit Rate x (Crit DMG - 100%)\n(Up to 100% Crit Rate)
 
 狂暴領域=Frenzy Domain
@@ -318,6 +319,9 @@ r:"^處於倒地狀態，受到傷害提升(\d+(.\d+)?(%)?)$"="Knocked downed!\n
 
 持續領域=Damage Over Time Domain
 r:"^所有角色造成<color\=#FFFC40>持續傷害</color>時傷害提升(\d+%)$"="Increase party's DMG Dealt when dealing <color\=#FFFC40>Damage Over Time</color> by $1"
+
+總攻領域=All-Out Attack Domain
+r:"^所有角色<color\=#FFFC40>{{A}}傷害</color>提升(\d+%)$"="Increase party's <color\=#FFFC40>{{A}} DMG</color> by $1"
 
 sr:"^(.*)耐性$"="Resist $1"
 sr:"^所有敵人對<color\=#(.*)>(.*)</color>屬性的適應性變為耐$"="All foes change their resistance to Resist <color\=#$1>$2</color>"

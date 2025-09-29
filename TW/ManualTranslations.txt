@@ -1588,6 +1588,8 @@ sr:"^在本次<color\=#EADE10>「(.*)」</color>契約中，獲取五星、四�
 {{A}}|{{B}}|{{D}}|{{C}}|{{J}}|{{I}}|{{E}}|{{F}}|{{G}}|{{H}}={{A}}|{{B}}|{{D}}|{{C}}|{{J}}|{{I}}|{{E}}|{{F}}|{{G}}|{{H}}
 {{F}}|{{A}}|{{B}}|{{D}}|{{C}}|{{K}}|{{J}}|{{E}}|{{G}}|{{H}}|{{I}}={{F}}|{{A}}|{{B}}|{{D}}|{{C}}|{{K}}|{{J}}|{{E}}|{{G}}|{{H}}|{{I}}
 {{J}}|{{A}}|{{B}}|{{D}}|{{C}}|{{K}}|{{I}}|{{E}}|{{F}}|{{G}}|{{H}}={{J}}|{{A}}|{{B}}|{{D}}|{{C}}|{{K}}|{{I}}|{{E}}|{{F}}|{{G}}|{{H}}
+{{E}}|{{A}}|{{B}}|{{D}}|{{C}}|{{K}}|{{J}}|{{F}}|{{G}}|{{H}}|{{I}}={{E}}|{{A}}|{{B}}|{{D}}|{{C}}|{{K}}|{{J}}|{{F}}|{{G}}|{{H}}|{{I}}
+{{I}}|{{G}}|{{K}}|{{B}}|{{A}}|{{D}}|{{C}}|{{H}}|{{E}}|{{J}}|{{M}}|{{N}}|{{L}}|{{F}}|{{O}}={{I}}|{{G}}|{{K}}|{{B}}|{{A}}|{{D}}|{{C}}|{{H}}|{{E}}|{{J}}|{{M}}|{{N}}|{{L}}|{{F}}|{{O}}
 {{B}}|{{A}}|{{D}}|{{C}}|{{I}}|{{H}}|{{E}}|{{J}}|{{G}}|{{M}}|{{N}}|{{L}}|{{K}}|{{O}}|{{F}}={{B}}|{{A}}|{{D}}|{{C}}|{{I}}|{{H}}|{{E}}|{{J}}|{{G}}|{{M}}|{{N}}|{{L}}|{{K}}|{{O}}|{{F}}
 {{C}}|{{J}}|{{F}}|{{B}}|{{A}}|{{D}}|{{I}}|{{H}}|{{E}}|{{G}}|{{M}}|{{N}}|{{L}}|{{K}}|{{O}}={{C}}|{{J}}|{{F}}|{{B}}|{{A}}|{{D}}|{{I}}|{{H}}|{{E}}|{{G}}|{{M}}|{{N}}|{{L}}|{{K}}|{{O}}
 {{B}}|{{A}}|{{C}}|{{I}}|{{H}}|{{E}}|{{J}}|{{G}}|{{M}}|{{N}}|{{L}}|{{K}}|{{O}}|{{D}}|{{F}}={{B}}|{{A}}|{{C}}|{{I}}|{{H}}|{{E}}|{{J}}|{{G}}|{{M}}|{{N}}|{{L}}|{{K}}|{{O}}|{{D}}|{{F}}
@@ -1621,6 +1623,7 @@ sr:"^「當未觸發UP或保底規則時，所有武器均分基礎獲取機率�
 柑橘花茶=Summer Flower Basket
 海鹽沙冰=Ocean's Coldbox
 喧嘩禁止=Study Club Time
+星球護衛隊=Stellar Guardians
 
 ----------
 Gachapon + Crane (Capsule)
@@ -2693,6 +2696,7 @@ r:"^全體怪盜<color\=#ff0036>追加效果</color>造成傷害提高(\d+(.\d+)
 r:"^全體怪盜<color\=#E3E3E3>萬能</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#E3E3E3>Almighty</color> DMG by $1"
 r:"^全體怪盜處於<color\=#E3E3E3>額外回合</color>時造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' DMG Dealt during <color\=#E3E3E3>Extra Action</color> by $1"
 r:"^全體怪盜<color\=#E3E3E3>持續效果</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#E3E3E3>Damage Over Time</color> DMG by $1"
+r:"^全體怪盜<color\=#ff0036>{{A}}傷害</color>提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff0036>{{A}}</color> DMG by $1"
 
 此處盤踞著大量的陰影，挑戰成功可獲得怪盜潛能材料。=There are many Shadows here, gain Thief Talent materials on victory.
 此處盤踞著強大的陰影，挑戰成功可獲得武器突破材料。=There are strong Shadows here, gain Weapon Enhance materials on victory.
@@ -2744,6 +2748,11 @@ r:"^透過厄抑巡禮·初階印記兌換$"="<size\=21>Exchange from Challenge 
 高階=High
 中階=Intermediate
 初階=Basic
+獲得音律侵擾後解鎖=Unlocks after owning this skill
+獲得無限演算法後解鎖=Unlocks after owning this skill
+獲得戰意共鳴後解鎖=Unlocks after owning this skill
+獲得解構力場後解鎖=Unlocks after owning this skill
+
 r:"^角色契約簽約時機率獲得$"="Signing Contract"
 r:"^{{A}}精算機等級獎勵$"="{{A}} Ticket Machine"
 r:"^挑戰心軌擇行$"="Challenge Heart Rail"
@@ -2867,6 +2876,7 @@ sr:"^(.*)不足，無法購買。$"="Insufficient $1, cannot purchase."
 r:"^限購$"="Limit"
 r:"^立即獲得$"="Immediately get"
 r:"^連續30天，每天5點贈送$"="Daily at 5 am (UTC+8) for 30 days"
+r:"^每日(\d+)點刷新領取$"="Daily at $1 am  (UTC+8)"
 r:"^累計消費(\d+)台幣\((\d+)/(\d+)\)$"="Spend NT$ $1 ($2/$3)"
 r:"^累計消費(\d+)元\((\d+)/(\d+)\)$"="Spend NT$ $1 ($2/$3)"
 
@@ -3017,7 +3027,6 @@ r:"^可領取$"="Claim"
 確定買這個嗎？=This one catch your eye?
 看清楚啦～不要買錯了阿！=<size\=24>Make sure you haven't gotten anything mixed up now!</size>
 r:"^加贈$"="Get            <size\=1>.</size>"
-獲得=Get
 累計簽到7日，即可獲得=7 days daily rewards
 r:"^累計簽到(\d+)日，即可獲得<size\=66><sprite\=19></size>X(\d+)$"="Log in for $1 days to get <size\=66><sprite\=19></size>X$2"
 r:"^累計簽到(\d+)日，即可獲得<size\=66><sprite\=21></size>X(\d+)$"="Log in for $1 days to get <size\=66><sprite\=21></size>X$2"
@@ -3311,7 +3320,7 @@ sr:"^已獲得(.*)：(\d+)$"="$1: $2"
 閃耀徽章=Shining Badge
 禁錮鎖環=Forbidden Lock
 主線故事=Main Story
-sr:"^完成「(.*)」任意(\d+)個任務\((\d+)\/(\d+)\)$"="Complete any $2 missions in [$1] ($3/$4)"
+sr:"^完成「(.*)」任意(\d+)個任務\((\d+)\/(\d+)\)$"="Complete any $2 [$1] missions ($3/$4)"
 r:"^擊敗{{A}}\((\d+)\/(\d+)\)$"="Defeat {{A}} ($1/$2)"
 r:"^解救{{A}}\((\d+)\/(\d+)\)$"="Rescue {{A}} ($1/$2)"
 r:"^首次參加排練\((\d+)\/(\d+)\)$"="Attend first rehearsal ($1/$2)"
@@ -3326,6 +3335,12 @@ r:"^接受{{A}}的採訪\((\d+)\/(\d+)\)$"="Accept {{A}}'s interview ($1/$2)"
 r:"^受到{{A}}的威脅\((\d+)\/(\d+)\)$"="Threatened by {{A}} ($1/$2)"
 r:"^發現{{A}}的秘密\((\d+)\/(\d+)\)$"="Discover {{A}}'s secret ($1/$2)"
 r:"^打倒意外的敵人\((\d+)\/(\d+)\)$"="Defeat an unexpected foe ($1/$2)"
+r:"^見到{{A}}的父母\((\d+)\/(\d+)\)$"="Meet {{A}}'s parents ($1/$2)"
+r:"^到達{{A}}的玩偶屋\((\d+)\/(\d+)\)$"="Reach {{A}}'s dollhouse ($1/$2)"
+r:"^讓洞口交代真相\((\d+)\/(\d+)\)$"="Let Horaguchi tell the truth ($1/$2)"
+r:"^告知IDL社長真相\((\d+)\/(\d+)\)$"="Tell IDL president the truth ($1/$2)"
+r:"^帶{{A}}前往{{B}}\((\d+)\/(\d+)\)$"="Bring {{A}} to the {{B}} ($1/$2)"
+r:"^打倒{{A}}的父母\((\d+)\/(\d+)\)$"="Defeat {{A}}'s parents ($1/$2)"
 
 {{A}}探索={{A}} Exploration
 r:"^{{A}}票務等級達到(\d+)級\((\d+)\/(\d+)\)$"="Reach {{A}} Ticket Lv. $1 ($2/$3)"
@@ -3338,6 +3353,7 @@ r:"^在{{A}}·{{B}}區域打開(\d+)個寶箱\((\d+)\/(\d+)\)$"="Open $1 Treasur
 r:"^{{A}}的探索度達到(\d+%)\((\d+)\/(\d+)\)$"="Reach $1 Exploration in {{A}}"
 r:"^在{{A}}打開(\d+)個寶箱\((\d+)\/(\d+)\)$"="Open $1 Treasure Chests in {{A}} ($2/$3)"
 r:"^雜誌社區域的探索度達到(\d+%)\((\d+)\/(\d+)\)$"="Reach $1 Exploration in the Magazine Office ($2/$3)"
+r:"^私人領域區域的探索度達到(\d+%)\((\d+)\/(\d+)\)$"="Reach $1 Exploration in the Private Area ($2/$3)"
 
 厄影異象=Shadow Distortion
 r:"^在{{A}}區域(\d+)擊敗任意詭譎之徒\((\d+)\/(\d+)\)$"="Defeat any Enigma Shadow in {{A}} Area $1 ($2/$3)"
@@ -3347,6 +3363,7 @@ r:"^在{{A}}區域(\d+)擊敗墮落狂徒\((\d+)\/(\d+)\)$"="Defeat the Fallen S
 r:"^擊敗{{A}}區域(\d+)的墮落狂徒\((\d+)\/(\d+)\)$"="Defeat the Fallen Shadow in {{A}} Area $1 ($2/$3)"
 r:"^在{{A}}擊敗任意(\d+)名狂化惡黨\((\d+)\/(\d+)\)$"="Defeat $1 Berserker Shadow in {{A}} ($2/$3)"
 r:"^在{{A}}-雜誌社擊敗任意(\d+)名狂化惡黨\((\d+)\/(\d+)\)$"="Defeat $1 Berserker Shadow in {{A}}-Magazine Office ($2/$3)"
+r:"^在{{A}}-私人領域擊敗任意(\d+)名狂化惡黨\((\d+)\/(\d+)\)$"="Defeat $1 Berserker Shadow in {{A}}-Private Area ($2/$3)"
 r:"^在{{A}}區域(\d+)擊敗(\d+)個寶魔\((\d+)\/(\d+)\)$"="Defeat $2 Treasure Demon in {{A}} Area $1 ($3/$4)"
 r:"^在{{A}}擊敗任意(\d+)個寶魔\((\d+)\/(\d+)\)$"="Defeat any $1 Treasure Demon in {{A}} ($2/$3)"
 
@@ -3355,12 +3372,17 @@ sr:"^完成都市任務「(.*)」\((\d+)\/(\d+)\)$"="Complete the city mission [
 r:"^參與(\d+)次任意都市日程\((\d+)\/(\d+)\)$"="Participate in any $1 City Activities ($2/$3)"
 r:"^與「{{A}}」締結協力者關係\((\d+)\/(\d+)\)$"="Form a Synergy with {{A}} ($1/$2)"
 r:"^與「{{A}}」的協力者等級達到(\d+)級\((\d+)\/(\d+)\)$"="Reach Synergy Rank $1 with {{A}} ($2/$3)"
-r:"^完成{{A}}coop開啟任務\((\d+)\/(\d+)\)$"="Form a relationship with {{A}} ($1/$2)"
+r:"^完成{{A}}協同者開啟任務\((\d+)\/(\d+)\)$"="Clear {{A}}'s Synergy mission ($1/$2)"
+r:"^完成{{A}}coop開啟任務\((\d+)\/(\d+)\)$"="Clear {{A}}'s Synergy mission ($1/$2)"
 r:"^將{{A}}coop推進至(\d+)級\((\d+)\/(\d+)\)$"="Reach Synergy Rank $1 with {{A}} ($2/$3)"
+r:"^將{{A}}協同者任務推進至(\d+)級\((\d+)\/(\d+)\)$"="Reach Synergy Rank $1 with {{A}} ($2/$3)"
 r:"^進行打工事件(\d+)次\((\d+)\/(\d+)\)$"="Clear $1 Part-time jobs ($2/$3)"
 r:"^在大富豪玩法中，完成(\d+)次任意模式對決\((\d+)\/(\d+)\)$"="Complete $1 Tycoon games in any mode ($2/$3)"
 sr:"^獲得(.*)“(.*)”(\d+)個\((\d+)\/(\d+)\)$"="Obtain $3 [$2] $1 ($4/$5)"
 sr:"^獲得“(.*)”任意不重複的(\d+)個(.*)\((\d+)\/(\d+)\)$"="Obtain $2 different [$1] $3 ($4/$5)"
+r:"^參與抓娃娃並累計抓到(\d+)隻娃娃\((\d+)\/(\d+)\)$"="Play the Crane Game and obtain $1 dolls ($2/$3)"
+
+傀儡玩偶=Puppet Doll
 
 r:"^截止到今日，您累積登入了(.*)天，並達到了(.*)，為您提供$"="As of today, you have logged in for $1 days and reached $2, here are your rewards"
 團長應援=Leader's Support
@@ -5883,4 +5905,3 @@ sr:"^表情·(.*)$"="Emote·$1"
 
 薩克斯風的簧片=Saxophone Reed
 劇情道具。\n{{A}}贈送的薩克斯風簧片。=Story item. \nSaxophone reed given by {{A}}.
-
