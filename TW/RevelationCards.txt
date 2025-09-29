@@ -188,9 +188,11 @@ r:"^所有怪盜對處於倒地狀態的敵人造成傷害提升<color\=#2899ff>
 r:"^每有一個敵人增加自身電擊傷害<color\=#2899ff>(\d+%)</color>，最多<color\=#2899ff>(\d+%)</color>。$"="Increase Elec DMG by <color\=#2899ff>$1</color> per foe, up to <color\=#2899ff>$2</color>."
 r:"^持續效果傷害提升<color\=#2899ff>(\d+%)</color>。$"="Increase Damage Over Time DMG by <color\=#2899ff>$1</color>."
 r:"^持續傷害效果提升<color\=#2899ff>(\d+%)</color>。$"="Increase Damage Over Time Effect by <color\=#2899ff>$1</color>."
+r:"^當前生命值越低，攻擊力越高，(\d+%)生命值時獲得最大攻擊力加成<color\=#2899ff>(\d+%)</color>。$"="Increase ATK based on missing HP, up to <color\=#2899ff>$2</color> ATK at $1 HP."
 
 【敏銳】=[Acuity]
 敏銳=Acuity
+r:"^{{A}}傷害提升<color\=#2899ff>(\d+%)</color>。$"="Increase {{A}} DMG by <color\=#2899ff>$1</color>."
 
 ----------
 All Arcana Cards
@@ -323,12 +325,16 @@ r:"^4套裝效果：造成傷害提升<color\=#2899ff>(\d+%)</color>，持續(\d
 改變=Transformation
 r:"^4套裝效果：攻擊力提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；造成暴擊後再次獲得相同效果。$"="<size\=23>4 Set Effect: Increase ATK by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again after landing a CRITICAL.</size>"
 
-【豐饒】=<size\=20>  </size>[Wealth]
-豐饒=Wealth
+【豐饒】=<size\=20>  </size>[Satiety]
+豐饒=Satiety
 r:"^4套裝效果：造成傷害提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；釋放追加效果後再次獲得相同效果。$"="<size\=23>4 Set Effect: Increase DMG Dealt by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again after activating a Follow Up.</size>"
 
 【獲得】=<size\=20>  </size>[Gain]
 獲得=Gain
+獲得·日=Gain·Sun
+獲得·月=Gain·Moon
+獲得·星=Gain·Star
+獲得·辰=Gain·Sky
 r:"^4套裝效果：釋放技能使自身生命值降低時，造成傷害提升<color\=#2899ff>(\d+%)</color>，可疊加(\d+)層，持續(\d+)回合。$"="<size\=23>4 Set Effect: When losing HP from a skill, increase DMG Dealt by <color\=#2899ff>$1</color> for $3 turns. Stacks up to $2 times.</size>"
 
 ----------
