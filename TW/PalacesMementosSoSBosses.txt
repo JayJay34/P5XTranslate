@@ -42,6 +42,7 @@ r:"^觀察模式冷卻中，(\d+)秒後可用！$"="Third Eye in cooldown"
 墮<color\=#ff0000ff>落</color>的狂徒=F<color\=#ff0000ff>a</color>llen Shadow
 強<color\=#ff0000ff>大</color>的陰影=S<color\=#ff0000ff>t</color>rong Shadow
 是否要降低難度進行挑戰(再次挑戰生效)=Do you want to lower the difficulty? \n(Take effect on next challenge)
+本次戰鬥難度已降低。=Lowered difficulty.
 本次戰鬥無法進行養成與更換面具。=Cannot upgrade characters and change Personas.
 本次戰鬥無法更換主角武器與面具。=Cannot change Wonder weapon and Personas.
 本次戰鬥無法上陣或更換怪盜。=Cannot change Thieves.
@@ -487,7 +488,7 @@ r:"^讓操作員認為其他房間出現「<color\=#ff0000>問題</color>」吧�
 
 r:"^想想平時都聽過哪些「<color\=#ff0000>發電廠</color>」吧。$"="Think about the common "<color\=#ff0000>Power Plant</color>"."
 注視=Gaze
-旋轉=Rotation
+旋轉=Rotate
 
 r:"^到周圍房間找找元件的「<color\=#ff0000>對應關係</color>」吧。$"="Look around the room to find the components' <color\=#ff0000>correlation</color>."
 r:"^(\d+)號$"="Number $1"
@@ -522,9 +523,13 @@ PALACE 5
 辦公區入口=<size\=25>Office Entrance</size>
 辦公區下層=Lower Office
 辦公區上層=Upper Office
-印刷區下層=<size\=18>Lower Printing Area</size>
-印刷區上層=<size\=18>Upper Printing Area</size>
+印刷區下層=<size\=19>Lower Printing Area</size>
+印刷區上層=<size\=19>Upper Printing Area</size>
 演唱會大廳=Concert Hall
+私人領域=Private Area
+私人領域下層=<size\=19>Lower Private Area</size>
+私人領域中層=<size\=19>Middle Private Area</size>
+私人領域上層=<size\=19>Upper Private Area</size>
 
 尋找覲見室=Find the Audience Chamber
 尋找螞蟻的去向=Find where the ant goes
@@ -559,6 +564,20 @@ PALACE 5
 在門後的區域尋找門票=Find the tickets in the area after the door
 遞交演唱會門票=Hand over the concert ticket
 演唱會門票=Concert Ticket
+前往收藏室=Go to the Collection Room
+啟動結晶=Activate the crystal
+前往收藏室深處=Go to the Inner Collection Room
+返回{{A}}=Return to {{A}}
+觀察{{A}}=Observe {{A}}
+前往{{A}}爵士酒吧=Go to the {{A}} Jazz Club
+與夥伴們交談=Talk with your teammates
+在{{A}}集合=Gather at {{A}}
+前往{{A}}站前廣場=Go to {{A}} Station Square
+尋找答案的線索=Find clues to the answer
+尋找唱片=Find the record
+調查結晶中的工蟻=Investigate the worker ants in crystals
+返回畫像處回答問題=Return to the portrait and answer the questions
+躲避{{A}}的父母=Hide from {{A}}'s parents
 
 「<color\=#ff3b37>鑽開</color>」前進的道路=[<color\=#ff3b37>Drill</color>] the path forward
 開啟「<color\=#ff3b37>射擊模式</color>」=Open [<color\=#ff3b37>Shooting Mode</color>]
@@ -573,6 +592,12 @@ r:"^慵<color\=#ff0000ff>懶</color>的守衛$"="L<color\=#ff0000ff>a</color>zy 
 r:"^和<color\=#ff0000ff>藹</color>的兵蟻$"="K<color\=#ff0000ff>i</color>nd Soldier Ant"
 r:"^目<color\=#ff0000ff>光</color>銳利的兵蟻$"="S<color\=#ff0000ff>h</color>arp Soldier Ant"
 r:"^狂<color\=#ff0000ff>躁</color>的隊長蟻$"="M<color\=#ff0000ff>a</color>nic Captain Ant"
+r:"^有<color\=#ff0000ff>禮</color>貌的男公關$"="P<color\=#ff0000ff>o</color>lite Host"
+r:"^慌<color\=#ff0000ff>張</color>的工蟻$"="N<color\=#ff0000ff>e</color>rvous Worker Ant"
+r:"^看<color\=#ff0000ff>起</color>來很開心的工蟻$"="H<color\=#ff0000ff>a</color>ppy Worker Ant"
+r:"^封<color\=#ff0000ff>面</color>是男性的書$"="B<color\=#ff0000ff>o</color>ok with male cover"
+r:"^無<color\=#ff0000ff>名</color>的書$"="N<color\=#ff0000ff>a</color>meless book"
+r:"^值<color\=#ff0000ff>班</color>的男公關$"="O<color\=#ff0000ff>n</color> Shift Host"
 
 連接成功=<size\=24>Connection success</size>
 未連接=<size\=24>Not connected</size>
@@ -651,6 +676,8 @@ r:"^狂<color\=#ff0000ff>躁</color>的隊長蟻$"="M<color\=#ff0000ff>a</color>
 順序連入:<color\=#c51e03>紅</color><color\=#19924f>綠</color><color\=#0c88e0>藍</color><color\=#19924f>綠</color><color\=#c51e03>紅</color>。=<size\=20>Connect in the order of: <color\=#c51e03>Red</color> <color\=#19924f>green</color> <color\=#0c88e0>blue</color> <color\=#19924f>green</color> <color\=#c51e03>red</color>.</size>
 順序連入:<color\=#c51e03>紅</color><color\=#19924f>綠</color></color><color\=#0c88e0>藍</color><color\=#19924f>綠</color><color\=#c51e03>紅</color>。=<size\=20>Connect in the order of: <color\=#c51e03>Red</color> <color\=#19924f>green</color> <color\=#0c88e0>blue</color> <color\=#19924f>green</color> <color\=#c51e03>red</color>.</size>
 順序連入:<color\=#c51e03>紅</color><color\=#19924f>綠</color></color><color\=#0c88e0>藍</color><color\=#19924f>綠</color><color\=#c51e03>紅</color><color\=#0c88e0>藍</color>。=<size\=20>Connect in the order of: <color\=#c51e03>Red</color> <color\=#19924f>green</color> <color\=#0c88e0>blue</color> <color\=#19924f>green</color> <color\=#c51e03>red</color> <color\=#0c88e0>blue</color>.</size>
+
+升降=Up / Down
 
 ----------
 PALACE 1 BOSS
@@ -1315,29 +1342,42 @@ PALACE 5 BOSS 3
 ----------
 {{A}}之「父」={{A}}'s "Father"
 {{A}}之「母」={{A}}'s "Mother"
+{{A}}之「父」、{{A}}之「母」={{A}}'s "Father", {{A}}'s "Mother"
+{{A}}之「母」、{{A}}之「父」={{A}}'s "Mother", {{A}}'s "Father"
 
 富裕噩兆=Omen of Wealth
+r:"^展開一個持續(\d+)回合的領域——「富裕噩兆」。領域持續時間內，自身回合結束時，為所有敵人添加(\d+)層「詛咒」，並為所有友方附加(\d+)層「鈔能力」。\n「鈔能力」：傷害提升(\d+%)，擁有「鈔能力」的單位受到元素異常時，會被驅散(\d+)層。$"="Open a domain [Omen of Wealth] for $1 turns. When [Omen of Wealth] is active, at the end of user's turn, inflict $2 [Curse] stack on all foes grant all allies $3 [Money Power] stack.\n[Money Power]: Increase DMG Dealt by $4; When inflicted with Elemental Ailments, dispel $5 stack."
+r:"^展開一個持續(\d+)回合的領域——「富裕噩兆」。領域持續時間內，自身回合結束時，為所有敵人添加(\d+)層「詛咒」，並為所有友方提供(\d+)層「鈔能力」。\n「鈔能力」：傷害提升(\d+%)，擁有「鈔能力」的單位受到元素異常時，會被驅散(\d+)層。$"="Open a domain [Omen of Wealth] for $1 turns. When [Omen of Wealth] is active, at the end of user's turn, inflict $2 [Curse] stack on all foes grant all allies $3 [Money Power] stack.\n[Money Power]: Increase DMG Dealt by $4; When inflicted with Elemental Ailments, dispel $5 stack."
+
 偏愛之翼=Wings of Favor
 r:"^對所有敵人造成詛咒屬性傷害，並使自身獲得(\d+)層「鈔能力」，其他隊友獲得(\d+)層「鈔能力」。$"="Deal Curse damage to all foes; Grant user $1 [Money Power] stacks and other allies $2 [Money Power] stack."
-r:"^對1名敵人角色造成詛咒屬性傷害，自身每有(\d+)層 「鈔能力」，造成的傷害提升(\d+%)。$"="Deal Curse damage to $1 foe; For every $1 [Money Power] stack on user, increase DMG Dealt by $2."
+r:"^對所有敵人造成詛咒屬性傷害，並使自身獲得(\d+)層「鈔能力」，其他隊友獲得(\d+)層 「鈔能力」。$"="Deal Curse damage to all foes; Grant user $1 [Money Power] stacks and other allies $2 [Money Power] stack."
+r:"^對1名敵人角色造成詛咒屬性傷害，自身每有(\d+)層「鈔能力」，造成的傷害提升(\d+%)。$"="Deal Curse damage to 1 foe, for every $1 [Money Power] stack, increase DMG Dealt by $2."
+
 為了{{A}}不惜一切！=Anything for {{A}}!
 r:"^消耗自身所有「鈔能力」對所有敵人造成詛咒屬性傷害，消耗的「鈔能力」越多，造成的傷害越高。此傷害必定暴擊，目標每有(\d+)層「糖衣」，暴擊傷害提升(\d+%)。$"="Spend all [Money Power] and deal Curse damage to all foes, increase damage based on spent [Money Power]. This damage will Always CRIT, for every $1 [Sugar Coating] stack on the target, increase Crit DMG by $2."
+r:"^消耗自身所有「鈔能力」對所有敵人造成詛咒屬性傷害，消耗的「鈔能力」越多，造成的傷害越高。該傷害必定暴擊，目標每有(\d+)層「糖衣」，暴擊傷害提升(\d+%)。$"="Spend all [Money Power] and deal Curse damage to all foes, increase damage based on spent [Money Power]. This damage will Always CRIT, for every $1 [Sugar Coating] stack on the target, increase Crit DMG by $2."
 
 甜美面紗=Sweet Veil
+r:"^展開一個持續(\d+)回合的領域——「甜美面紗」。領域持續時間內，自身回合結束時，為所有友方添加(\d+)層「祝福」，並為所有敵人附加(\d+)層「糖衣」。\n「糖衣」：受到治療效果降低，可被驅散，疊加(\d+)層後變為「糖縛」——無法行動，不可被驅散，持續(\d+)回合。$"="Open a domain [Sweet Veil] for $1 turns. When [Sweet Veil] is active, at the end of user's turn, grant all allies $2 [Blessing] stack and inflict $3 [Sugar Coating] stack on all foes.\n[Sugar Coating]: Decrease Healing Received, can be dispelled; After reaching $4 stacks, change into [Sugar Binding].\n[Sugar Binding]: Unable to act, cannot be dispelled. Lasts for $5 turn."
+
 r:"^對隨機(\d+)名敵人造成祝福屬性傷害並為其附加(\d+)層 「糖衣」。$"="Deal Bless damage to $1 random foes then inflict $2 [Sugar Coating] stack on them."
-糖衣砲彈=Sugar Coating Cannon
+r:"^對隨機(\d+)名敵人造成祝福屬性傷害並為其附加(\d+)層「糖衣」。$"="Deal Bless damage to $1 random foes then inflict $2 [Sugar Coating] stack on them."
+糖衣炮彈=Sugar Coating Cannon
 r:"^對所有敵人造成祝福屬性傷害，目標每有(\d+)層「糖衣」，所有友方回復(\d+%)的生命值。$"="Deal Bless damage to all foes; For every $1 [Sugar Coating] stack on the target, restore $2 HP to all allies."
 為了可愛的{{A}}！=For Cute {{A}}!
 r:"^為<color\=#000000>了</color>可愛的{{A}}！$"="F<color\=#000000>o</color>r Cute {{A}}!"
 r:"^消耗自身所有「鈔能力」，為所有友方施加「為了可愛的{{A}}」，接下來(\d+)次攻擊最終傷害提升，消耗的「鈔能力」越多，效果越強；並治療友方一定生命值生命，目標「祝福」層數越高，回復效果越強。$"="Spend all [Money Power] and grant [For Cute {{A}}] for all allies, increasing the next $2 attack's Final DMG, increase effect based on spent [Money Power]; Then restore HP to allies, increase healing based on target's [Blessing] stack."
+r:"^消耗自身所有「鈔能力」，為所有友方施加 「為了可愛的{{A}}」，接下來(\d+)次攻擊最終傷害提升，消耗的「鈔能力」越多，效果越強；並治療友方一定生命值生命，目標「祝福」層數越高，回復效果越強。$"="Spend all [Money Power] and grant [For Cute {{A}}] for all allies, increasing the next $2 attack's Final DMG, increase effect based on spent [Money Power]; Then restore HP to allies, increase healing based on target's [Blessing] stack."
 
 狂愛=Obsession
 r:"^展開永久存在的領域——「狂愛」。領域持續時間內，自身回合結束時，為所有敵人添加(\d+)層詛咒，並為所有友方附加(\d+)層「鈔能力」。$"="Open a permanent domain [Obsession]. When [Obsession] is active, at the end of user's turn, inflict $1 [Curse] stack on all foes grant all allies $2 [Money Power] stack."
+r:"^展開永久存在的的領域——「狂愛」。領域持續時間內，自身回合結束時，為所有敵人添加(\d+)層「詛咒」，並為所有友方提供(\d+)層「鈔能力」。$"="Open a permanent domain [Obsession]. When [Obsession] is active, at the end of user's turn, inflict $1 [Curse] stack on all foes grant all allies $2 [Money Power] stack."
 r:"^展開永久存在的領域——「狂愛」。領域持續時間內，自身回合結束時，為所有友方添加(\d+)層祝福，並為所有敵人附加(\d+)層「糖衣」。$"="Open a permanent domain [Obsession]. When [Obsession] is active, at the end of user's turn, grant all allies $1 [Blessing] stack and inflict $2 [Sugar Coating] stack on all foes"
-r:"^回合結束時，為敵人加上「詛咒」，為友方添加(\d+)層「鈔能力」$"="At the end of turn, inflict [Curse] on all foes and grant all allies $1 [Money Power] stack"
-r:"^回合結束時，為友方加上「祝福」，為敵人添加(\d+)層「糖衣」$"="At the end of turn, grant all allies [Blessing] and inflict $1 [Sugar Coating] stack on all foes"
+r:"^展開永久存在的的領域——「狂愛」。領域持續時間內，自身回合結束時，為所有友方添加(\d+)層祝福，並為所有敵人附加(\d+)層「糖衣」。$"="Open a permanent domain [Obsession]. When [Obsession] is active, at the end of user's turn, grant all allies $1 [Blessing] stack and inflict $2 [Sugar Coating] stack on all foes"
+r:"^回合結束時，為敵人添加「詛咒」，為友方添加(\d+)層「鈔能力」$"="At the end of turn, inflict [Curse] on all foes and grant all allies $1 [Money Power] stack"
+r:"^回合結束時，為友方添加「祝福」，為敵人添加(\d+)層「糖衣」$"="At the end of turn, grant all allies [Blessing] and inflict $1 [Sugar Coating] stack on all foes"
 
-鈔能力=Money Power
 r:"^鈔<color\=#000000>能</color>力$"="M<color\=#000000>o</color>ney Power"
 r:"^造成的傷害提升(\d+%)，受到元素異常時被驅散(\d+)層$"="Increase DMG Dealt by $1; When inflicted with Elemental Ailments, dispel $2 stack"
 
@@ -1717,20 +1757,23 @@ r:"^離<color\=#FF0000>火</color>$"="F<color\=#FF0000>l</color>ame"
 撕裂=Laceration
 咬痕=Bite
 雲蒸龍變=Dragon Soar
-{{A}}之力={{A}}'s Power
+{{A}}之力={{A}}'s Might
 
 {{B}}在戰鬥中，會源源不斷地召喚「{{C}}」之影、「{{D}}」之影、「{{E}}」之影、「{{F}}」之影。擊敗對應的神獸之影，可以獲得不同的能力。\n擊敗「{{C}}」之影：弱點傷害提升。\n擊敗「{{D}}」之影：{{A}}力提升。\n擊敗「{{E}}」之影：最終傷害提升。\n擊敗「{{F}}」之影：受到最終傷害降低。\n{{B}}生命值較低時，會蓄力並釋放「極·念動力」，造成超特大念動傷害。={{B}} can keep summoning [Shadow of {{C}}], [Shadow of {{D}}], [Shadow of {{E}}], [Shadow of {{F}}]. Gain the corresponding ability when you defeat the corresponding Shadow.\nDefeat [Shadow of {{C}}]: Increase Weak DMG.\nDefeat [Shadow of {{D}}]: Increase ATK.\nDefeat [Shadow of {{E}}]: Increase Final DMG.\nDefeat [Shadow of {{F}}]: Decrease Final DMG Taken.\nWhen {{B}} reach low HP, they will charge and use [Ultimate·Psycho Force], dealing colossal Psy damage.
-r:"^{{A}}在戰鬥中，會召喚「{{B}}」之影、「{{C}}」之影、「{{D}}」之影、「{{E}}」之影。擊敗對應的神獸之影，可以獲得相應的能力。\n擊敗「{{B}}」之影：怪盜每回合獲得相當於(\d+%)最大生命值的護盾。\n擊敗「{{C}}」之影：怪盜攻擊力提升(\d+%)。\n擊敗「{{D}}」之影：怪盜造成傷害提升(\d+%)。\n擊敗「{{E}}」之影：怪盜防禦力提升(\d+%)。$"="<size\=23>{{A}} will summon [Shadow of {{B}}], [Shadow of {{C}}], [Shadow of {{D}}], [Shadow of {{E}}]. Gain the corresponding ability when you defeat the corresponding Shadow.\nDefeat [Shadow of {{B}}]: Thieves gain $1 Max HP Shield each turn.\nDefeat [Shadow of {{C}}]: Increase Thieves' ATK by $2.\nDefeat [Shadow of {{D}}]: Increase Thieves' DMG Dealt by $3.\nDefeat [Shadow of {{E}}]: Increase Thieves' DEF by $4.</size>"
+r:"^{{A}}在戰鬥中，會召喚「{{B}}」之影、「{{C}}」之影、「{{D}}」之影、「{{E}}」之影。擊敗對應的神獸之影，可以獲得相應的能力。\n擊敗「{{B}}」之影：怪盜每回合獲得相當於(\d+%)最大生命值的護盾。\n擊敗「{{C}}」之影：怪盜攻擊力提升(\d+%)。\n擊敗「{{D}}」之影：怪盜造成傷害提升(\d+%)。\n擊敗「{{E}}」之影：怪盜防禦力提升(\d+%)。$"="<size\=25>During battle, {{A}} will summon Shade of {{B}}, Shade of {{C}}, Shade of {{D}}, and Shade of {{E}}. When a Shadow is defeated, its corresponding Might is granted to all Thieves.\n{{B}}'s Might: Grants a Shield equal $1 Max HP every turn.\n{{C}}'s Might: Increases ATK by $2.\n{{D}}'s Might: Increases DMG Dealt by $3.\n{{E}}'s Might: Increases DEF by $4.</size>"
+r:"^{{A}}在戰鬥中，會召喚「{{B}}」之影、「{{C}}」之影、「{{D}}」之影、「{{E}}」之影。擊敗對應的神獸之影，可以獲得相應的能力。\n擊敗「{{B}}」之影：怪盜每回合獲得相當於(\d+%)最大生命值的護盾\n擊敗「{{C}}」之影：怪盜攻擊力提升(\d+%)\n擊敗「{{D}}」之影：怪盜造成傷害提升(\d+%)\n擊敗「{{E}}」之影：怪盜防禦力提升(\d+%)$"="During battle, {{A}} will summon Shade of {{B}}, Shade of {{C}}, Shade of {{D}}, and Shade of {{E}}. When a Shadow is defeated, its corresponding Might is granted to all Thieves.\n{{B}}'s Might: Grants a Shield equal $1 Max HP every turn.\n{{C}}'s Might: Increases ATK by $2.\n{{D}}'s Might: Increases DMG Dealt by $3.\n{{E}}'s Might: Increases DEF by $4."
+
 極·念動力=Ultimate·Psycho Force
 對所有敵人造成超特大念動屬性傷害。=Deal colossal Psy damage to all foes.
 對1名敵人造成物理傷害，並給予目標『撕裂』=Deal Phys damage to 1 foe, inflicts the target with [Laceration]
 對所有敵人造成物理傷害，並給予目標『咬痕』。=Deal Phys damage to all foes, inflicts the target with [Laceration].
+r:"^每回合獲得相當於(\d+(.\d+)?(%)?)最大生命值的護盾$"="At the start of turn, \ngain Shield equal to $1 Max HP "
 
 r:"^玄<color\=#000000>武</color>之護$"="G<color\=#000000>e</color>nbu's Protection"
-r:"^玄<color\=#000000>武</color>之力$"="G<color\=#000000>e</color>nbu's Power"
-r:"^朱<color\=#000000>雀</color>之力$"="S<color\=#000000>u</color>zaku's Power"
-r:"^白<color\=#000000>虎</color>之力$"="B<color\=#000000>y</color>akko's Power"
-r:"^青<color\=#000000>龍</color>之力$"="S<color\=#000000>e</color>iryu's Power"
+r:"^玄<color\=#000000>武</color>之力$"="G<color\=#000000>e</color>nbu's Might"
+r:"^朱<color\=#000000>雀</color>之力$"="S<color\=#000000>u</color>zaku's Might"
+r:"^白<color\=#000000>虎</color>之力$"="B<color\=#000000>y</color>akko's Might"
+r:"^青<color\=#000000>龍</color>之力$"="S<color\=#000000>e</color>iryu's Might"
 
 ----------
 MEMENTOS 4
@@ -2489,7 +2532,7 @@ r:"^1、進入戰鬥時，{{A}}會召喚(\d+)個隨從與之並肩作戰，{{A}}
 火焰巨人的守護=Fire Giant's Protection
 r:"^火<color\=#000000>焰</color>巨人的守護$"="F<color\=#000000>i</color>re Giant's Protection"
 
-r:"^1、{{A}}進入戰鬥時獲得(\d+)層「真龍之力」，偶數回合結束時會恢復(\d+)層「真龍之力」，每層可以為其提供(\d+%)的最終傷害提升。\n2、{{A}}受到弱點傷害時，都會損失一層「真龍之力」。\n3、{{A}}失去所有「真龍之力」時會使所有怪盜獲得「升龍的祈禱」，提升所有怪盜造成的最終傷害。$"="1. At the start of battle, {{A}} gains $1 [True Dragon Power] stacks, restore $2 [True Dragon Power] at the end of every even turns, each stack increases Final DMG by $3.\n2. When {{A}} takes Weak damage, lose 1 [True Dragon Power] stack.\n3. When {{A}} loses all [True Dragon Power] stacks, grant all Thieves [Dragon Prayer], increase all Thieves' Final DMG Dealt."
+r:"^1、{{A}}進入戰鬥時獲得(\d+)層「真龍之力」，偶數回合結束時會恢復(\d+)層「真龍之力」，每層可以為其提供(\d+%)的最終傷害提升。\n2、{{A}}受到弱點傷害時，都會損失一層「真龍之力」。\n3、{{A}}失去所有「真龍之力」時會使所有怪盜獲得「升龍的祈禱」，提升所有怪盜造成的最終傷害。$"="1. At the start of battle, {{A}} gains $1 [True Dragon Power] stacks, restore $2 [True Dragon Power] stacks at the end of every even turns, each stack increases Final DMG by $3.\n2. When {{A}} takes Weak damage, lose 1 [True Dragon Power] stack.\n3. When {{A}} loses all [True Dragon Power] stacks, grant all Thieves [Dragon Prayer], increase all Thieves' Final DMG Dealt."
 r:"^每層使自身造成的最終傷害提升(\d+%)，受到弱點傷害會損失(\d+)層$"="<size\=26>Each stack increases Final DMG Dealt by $1; When taking Weak damage, lose $2 stack</size>"
 r:"^真<color\=#000000>龍</color>之力$"="T<color\=#000000>r</color>ue Dragon Power"
 昇龍的祈禱=Dragon Prayer
