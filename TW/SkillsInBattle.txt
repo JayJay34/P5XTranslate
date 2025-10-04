@@ -395,11 +395,11 @@ Vishnu
 --- Psy ---
 
 //ST
-r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，對精神異常的敵人傷害提升(\d+%)，造成TECHNICAL。$"="Deal $1 ATK Psy damage to <color\=#FFFF00>1</color> foe, increase DMG Dealt to foes inflicted with Mental Ailments by $2, triggers TECHNICAL."
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，對精神異常的敵人傷害提升(\d+%)，造成TECHNICAL。$"="Deal $1 ATK Psy damage to <color\=#FFFF00>1</color> foe. Deal a TECHNICAL and increase skill damage by $2 to foes inflicted with a Mental Ailment."
 
 //AoE
-r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，對精神異常的敵人傷害提升(\d+%)，造成TECHNICAL。$"="Deal $1 ATK Psy damage to <color\=#FFFF00>all</color> foes, increase DMG Dealt to foes inflicted with Mental Ailments by $2, triggers TECHNICAL."
-r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，對精神異常的敵人傷害提升(\d+%)。"=Deal <color\=#FFFF00>$1</color> ATK Psy damage to <color\=#FFFF00>all</color> foes. Increase DMG Dealt by $2 to each foe inflicted with any Mental Ailment.
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，對精神異常的敵人傷害提升(\d+%)，造成TECHNICAL。$"="Deal $1 ATK Psy damage to <color\=#FFFF00>all</color> foes. Deal a TECHNICAL and increase skill damage by $2 to foes inflicted with a Mental Ailment."
+r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，對精神異常的敵人傷害提升(\d+%)。$"="Deal $1 ATK Psy damage to <color\=#FFFF00>all</color> foes. Deal a TECHNICAL and increase skill damage by $2 to foes inflicted with a Mental Ailment."
 
 Okuninushi
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，對處於精神異常狀態的敵人造成的傷害提升(\d+%)。對弱點為念動屬性的敵人造成的傷害額外提升(\d+%)。$"="Deal $1 ATK Psy damage to <color\=#FFFF00>all</color> foes. Increase DMG Dealt by $1 if the foe is inflicted with Mental Ailments. Additionally increase DMG Dealt by $2 if the foe is weak to Psy."
@@ -956,7 +956,7 @@ r:"^受<color\=#000000>傷</color>害提升$"="D<color\=#000000>M</color>G Taken
 r:"^受<color\=#000000>到</color>傷害提高$"="D<color\=#000000>M</color>G Taken Up"
 r:"^受<color\=#000000>到</color>傷害提升$"="D<color\=#000000>M</color>G Taken Up"
 r:"^受<color\=#000000>追</color>加效果傷害提高$"="F<color\=#000000>o</color>llow Up DMG Taken Up"
-r:"^受<color\=#000000>持</color>續傷害效果提升$"="D<color\=#000000>a</color>mage Over Time Taken Up"
+r:"^受<color\=#000000>持</color>續傷害效果提升$"="D<color\=#000000>a</color>mage Over Time Effect Taken Up"
 r:"^受<color\=#000000>最</color>終傷害提高$"="F<color\=#000000>i</color>nal DMG Taken Up"
 r:"^受<color\=#000000>到</color>最終傷害提高$"="F<color\=#000000>i</color>nal DMG Taken Up"
 r:"^受<color\=#000000>到</color>最終傷害提升$"="F<color\=#000000>i</color>nal DMG Taken Up"
@@ -1045,7 +1045,7 @@ HIGHLIGHT傷害提升=Increase HIGHLIGHT DMG
 受{{A}}傷害提高=Increase {{A}} DMG Taken
 受HL傷害提升=Increase HIGHLIGHT DMG Taken
 受追加效果傷害提高=Increase Follow Up DMG Taken
-受持續傷害效果提升=<size\=22>Increase Damage Over Time Taken</size>
+受持續傷害效果提升=Increase DOT Effect Taken
 受百分比傷害降低=<size\=23>Decrease Percentage DMG Taken</size>
 受到百分比傷害降低=Decrease Percentage DMG Taken
 受到基於自身最大生命值百分比的傷害降低=Decrease Percentage DMG Taken
@@ -1165,7 +1165,7 @@ r:"^攻擊力提升(\d+%)、防禦力提升(\d+%)$"="Increase ATK by $1 and DEF 
 r:"^攻擊力、防禦力提高$"="Increase ATK and DEF"
 r:"^攻擊力、防禦力提高(\d+(.\d+)?(%)?)$"="Increase ATK and DEF by $1"
 r:"^造成TECHNICAL時攻擊力提升(\d+(.\d+)?(%)?)$"="Increase ATK by $1 when activating a TECHNICAL"
-r:"^造成TECHNICAL時，攻擊力提升(\d+%)，暴擊效果提升(\d+%)$"="<size\=24>Increase ATK by $1 and Crit DMG by $2 when activating a TECHNICAL</size>"
+r:"^造成TECHNICAL時，攻擊力提升(\d+%)，暴擊效果提升(\d+%)$"="When activating a TECHNICAL, \nincrease ATK by $1 and Crit DMG by $2"
 r:"^防禦提升(\d+(.\d+)?(%)?)$"="Increase DEF by $1"
 r:"^防禦力提升(\d+(.\d+)?(%)?)$"="Increase DEF by $1"
 r:"^防禦永久提升(\d+(.\d+)?(%)?)$"="Permanently increase DEF by $1"
@@ -1348,7 +1348,7 @@ r:"^受到追擊傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up DMG Taken by 
 r:"^受追加效果傷害提高(\d+(.\d+)?(%)?)$"="Increase Follow Up DMG Taken by $1"
 r:"^受到追加效果傷害增幅提升(\d+(.\d+)?(%)?)$"="Increase Follow Up DMG Taken Amp by $1"
 r:"^受到持續傷害增加(\d+(.\d+)?(%)?)$"="Increase Damage Over Time Taken by $1"
-r:"^受到持續傷害效果提升(\d+(.\d+)?(%)?)$"="Increase Damage Over Time Taken by $1"
+r:"^受到持續傷害效果提升(\d+(.\d+)?(%)?)$"="Increase DOT Effect Taken by $1"
 r:"^受到最終傷害提升(\d+%)，最終傷害降低(\d+%)$"="Increase Final DMG Taken by $1; \nDecrease Final DMG by $2"
 r:"^受到最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG Taken by $1"
 r:"^受到最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG Taken by $1"

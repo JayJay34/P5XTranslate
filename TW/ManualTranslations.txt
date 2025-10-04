@@ -7,6 +7,7 @@ r:"更新本地文件\((\d+)\/(\d+)\)"=<b>Applying Update ($1/$2)</b>
 r:"^用戶端版本號：(.*)  遊戲版本：(.*)  資源號：(.*)$"="Client Version: $1 Game Version: $2 Resource ID: $3"
 r:"^(.*)版本$"="Version $1"
 開始登入=Logging in...
+登入中.=Logging in...
 登入中..=Logging in...
 登入中…=Logging in...
 登入中……=Logging in...
@@ -498,8 +499,8 @@ sr:"^消耗：<color\=#FFDE00>「(.*)」×(\d+)</color>\n兌換：<color\=#FFDE0
 盲選偶像合約 ★5=5★ Random Kaidol Contract
 r:"^怪盜殘識碎片$"="<size\=22>Thief Awareness Fragment</size>"
 r:"^怪盜殘識碎片\*(\d+)$"="Thief Awareness Fragment*$1"
-r:"^遺留在{{A}}的怪盜殘識碎片，消耗(\d+)個可以合成角色的殘識。$"="Thief Awareness Fragment that are left in the {{A}}, consume $1 to fuse 1 Awareness."
-r:"^{{A}}遺留在{{B}}的殘識碎片，消耗(\d+)個可以合成角色的殘識。$"="{{A}} Awareness Fragment left in the {{B}}, consume $1 to fuse 1 Awareness."
+r:"^遺留在{{A}}的怪盜殘識碎片，消耗(\d+)個可以合成角色的殘識。$"="Thief Awareness Fragment that are left in the {{A}}, spend $1 to fuse 1 Awareness."
+r:"^{{A}}遺留在{{B}}的殘識碎片，消耗(\d+)個可以合成角色的殘識。$"="{{A}} Awareness Fragment left in the {{B}}, spend $1 to fuse 1 Awareness."
 r:"^消耗：<color\=#FFDE00>「怪盜殘識碎片」×(\d+)</color>\n兌換：<color\=#FFDE00>「{{A}}的殘識碎片」×(\d+)</color>\n是否確認？$"="<size\=25>Spend: <color\=#FFDE00>[Thief Awareness Fragment] ×$1</color>\nGet: <color\=#FFDE00>[{{A}}'s Awareness Fragment] ×$2</color>\nNeed 60 to fuse 1 Awareness, \nare you sure?</size>"
 r:"^消耗：<color\=#FFDE00>「{{A}}的殘識碎片」×(\d+)</color>\n合成：<color\=#FFDE00>「{{A}}的殘識」×(\d+)</color>\n是否確認？$"="Spend: <color\=#FFDE00>[{{A}}'s Awareness Fragment] ×$1</color>\nGet: <color\=#FFDE00>[{{A}}'s Awareness] ×$2</color>\nAre you sure?"
 星穹的墨匣=Cosmic Inkwell
@@ -511,9 +512,10 @@ r:"^{{A}}的殘識碎片$"="<size\=16>Awareness Fragment \nof {{A}}</size>"
 殘識=Awareness
 角色活動契約簽約機率獲得=Character Contract
 殘識碎片=<size\=16>Awareness Fragment</size>
-sr:"^(.*?)遺留在{{A}}的殘識碎片，消耗(\d+)個可以合成角色的殘識。$"="Awareness Fragment left by $1 in the {{A}}, consume $2 to fuse 1 Awareness."
+sr:"^(.*?)遺留在{{A}}的殘識碎片，消耗(\d+)個可以合成角色的殘識。$"="Awareness Fragment left by $1 in the {{A}}, spend $2 to fuse 1 Awareness."
 幸運之硬幣=Salamander Coin
-「{{A}}·等級獎勵」中獲得的幸運硬幣，用於在「生存遊戲專賣店」兌換「五星武器」。=<size\=25>Gained from the Phantom Pass, \ncan be used to redeem [5★ Weapon] in [Untouchable]</size>
+『幸運之硬幣』\n「{{A}}·等級獎勵」中獲得的幸運硬幣，用於在「生存遊戲專賣店」兌換「五星武器」。=[Salamander Coin]\nGained from Phantom Pass, can be exchanged for [5★ Weapon] in [Untouchable].
+「{{A}}·等級獎勵」中獲得的幸運硬幣，用於在「生存遊戲專賣店」兌換「五星武器」。=Gained from Phantom Pass, can be exchanged for  [5★ Weapon] in [Untouchable].
 定製武器套件=5★ Weapon Case
 r:"^使用後可自選1把以下怪盜的五星武器：(.*)。$"="Can be used to choose 1 5★ Weapon for the following Thieves: $1."
 定製武器模組=4★ Weapon Case
@@ -611,7 +613,7 @@ r:"^下<color\=#ff0000ff>北</color>澤車站$"="S<color\=#ff0000ff>h</color>imo
 出售模擬玩具武器的商店。\n可在此處定製「<color\=#ffd145>四星武器</color>」、\n兌換「<color\=#ff3b37>五星武器</color>」。=<size\=30>A model gun shop. \nCan get [<color\=#ffd145>4★ Weapons</color>] and\nredeem [<color\=#ff3b37>5★ Weapons</color>] here.</size>
 r:"^生<color\=#ff0000ff>存</color>遊戲專賣店$"="Un<color\=#ff0000ff>to</color>uchable"
 r:"^岩<color\=#ff0000ff>井</color>{{A}}$"="Mu<color\=#ff0000ff>ne</color>hisa Iwai"
-是你啊……今天來打算做點什麼？=It's you... What are you doing today?
+是你啊……今天來打算做點什麼？=Oh, it's you... What'll it be today?
 獲取補給=Get supplies
 合計：=Total:
 什麼嘛……不要隨便打擾別人生意。=What... Don't mess with other people's business.
@@ -1457,6 +1459,7 @@ r:"^在「{{A}}」中擊殺(\d+)次「交錯之影」 \((\d+)\/(\d+)\)$"="Defeat
 sr:"^通關「(.*)」難度(\d+) \((\d+)\/(\d+)\)$"="Clear [$1] on Difficulty $2 ($3/$4)"
 
 r:"^本期通行證期間，累計登入(\d+)天 \((\d+)/(\d+)\)$"="Log in for $1 day(s) ($2/$3)"
+r:"^累計登入(\d+)天\(<color\=#e50a06>(\d+)</color>/(\d+)\)$"="Log in for $1 day(s) (<color\=#e50a06>$2</color>/$3)"
 r:"^在「塑命循啟」中完成一張啟示卡定製 \((\d+)\/1\)$"="Make 1 custom Revelation Card in [Writing Fate] ($1/1)"
 
 ----------
@@ -1924,6 +1927,8 @@ r:"^擺<color\=#ff0000ff>放</color>區·二樓$"="Di<color\=#ff0000ff>sp</color
 是否切換到二層進行擺放？=Switch to second floor?
 
 {{A}}·迷你={{A}}·Mini
+丸得世界·{{A}}·迷你=Harvest World Online·{{A}}·Mini
+丸得世界·WONDER=Harvest World Online·Wonder
 
 ----------
 Synergy (SL) and City Activities
@@ -2722,8 +2727,8 @@ r:"^挑戰需要消耗(\d+)點體力，\n當前<color\=#ff3b37>體力不足</col
 領獎所需體力不足，是否兌換體力？=Insufficient Stamina to claim the rewards, want to replenish Stamina?
 挑戰所需體力不足，是否兌換體力？=Insufficient Stamina to challenge, want to replenish Stamina?
 本週「往日回溯」剩餘領獎次數已耗盡，\n<color\=#ff3b37>無法獲得挑戰獎勵</color>，是否繼續挑戰？=Reached weekly limit.\n<color\=#ff3b37>You will not gain rewards</color>, \ndo you still want to challenge?
-逃離後不會獲得本次戰鬥獎勵！\n確定要逃離戰鬥嗎？=<size\=30>You will not receive rewards from this battle after escaping! Are you sure you want to escape?</size>
-逃離戰鬥後將重置關卡。\n確定要逃離戰鬥嗎？=Escaping will reset the level.\nAre you sure you want to escape?
+逃離後不會獲得本次戰鬥獎勵！\n確定要逃離戰鬥嗎？=If you retreat, you will not earn rewards.\nDo you want to retreat?
+逃離戰鬥後將重置關卡。\n確定要逃離戰鬥嗎？=Retreating will reset the level.\nDo you want to retreat?
 
 sr:"^挑戰(.*)獲得$"="<size\=22>Complete $1</size>"
 工作臺合成=Workbench Crafting
@@ -3259,6 +3264,7 @@ r:"^巧匠之作第(\d+)關$"="Technician $1"
 獲得武器萬寶重擊=<size\=24>Get 4★ Weapon for Yuki</size>
 
 r:"^見證{{A}}覺醒\((\d+)/(\d+)\)$"="<size\=18>Witness {{A}}'s Awakening ($1/$2)</size>"
+r:"^累計登入(\d+)天(4/4)\((\d+)/(\d+)\)$"="Login for $1 day(s) ($2/$3)"
 r:"^累計登入兩天\((\d+)/(\d+)\)$"="<size\=28>Login for 2 days ($1/$2)</size>"
 r:"^累計登入七天\((\d+)/(\d+)\)$"="<size\=28>Login for 7 days ($1/$2)</size>"
 r:"^累計登入十二天\((\d+)/(\d+)\)$"="<size\=28>Login for 12 days ($1/$2)</size>"
@@ -3630,7 +3636,14 @@ r:"^擊倒個數：(\d+)$"="Targets: $1"
 
 r:"^通關第(\d+)關後解鎖$"="Unlock after level $1"
 r:"^完成第(\d+)關任意(\d+)個挑戰目標\((\d+)\/(\d+)\)$"="Complete any $2 goal(s) on level $1 ($3/$4)"
+r:"^完成第(\d+)關全部挑戰目標\((\d+)\/(\d+)\)$"="Complete all goals on level $1 ($2/$3)"
 r:"^累計完成(\d+)個關卡挑戰目標\((\d+)\/(\d+)\)$"="Complete all goals for $1 levels ($2/$3)"
+r:"^通過第(\d+)關後解鎖$"="Unlocks after clearing level $1"
+積分=Score
+通過該關卡=Clear this level
+r:"^{{A}}剩餘生命值≥(\d+)$"="{{A}} HP Left ≥ $1"
+剩餘生命值：=HP Left:
+通關用時：=Clear Time:
 
 完成章節劇情=Complete the chapter story
 擊敗所有敵人=Defeat all foes
@@ -5232,6 +5245,15 @@ r:"^在障礙賽中通過「中級賽 (\d+)-(\d+)」\((\d+)\/(\d+)\)$"="Clear [I
 r:"^在障礙賽中總計獲得(\d+)星\((\d+)\/(\d+)\)$"="Obtain $1 ★ in Obstacle Race ($2/$3)"
 r:"^在「極限賽 」中獲得(\d+)分\((\d+)\/(\d+)\)$"="Obtain $1 Score in [Challenge Race] ($2/$3)"
 
+今日還可搶=Can Claim
+次盲袋=Stickers Today
+r:"^<color\=#FFFFFF>可分享貼紙盲袋：</color>(\d+)$"="<color\=#FFFFFF>Can Share:</color> $1"
+每貼上一張新貼紙便可獲得小獎勵。=Get reward for each new sticker
+收集整行、整列的貼紙，獲取獎勵！=Clear full rows/columns for rewards!
+快來領取貼紙吧！=Come and claim your stickers!
+今日領取貼紙次數已耗盡，=Reached daily sticker cap
+請明日再來=Please come back tomorrow
+
 ----------
 TASKS UI
 ----------
@@ -5621,7 +5643,7 @@ sr:"^(.*)印記$"="$1's Seal"
 英勇的{{A}}=Brave {{A}}
 莊嚴的{{A}}=Solemn {{A}}
 {{A}}「化身」={{A}}'s Avatar
-「{{A}}」之影=Shadow of "{{A}}"
+「{{A}}」之影=Shade of {{A}}
 流浪的{{A}}=Wandering {{A}}
 煩惱的{{A}}=Frustrated {{A}}
 詛咒的{{A}}=Cursed {{A}}
@@ -5861,7 +5883,7 @@ sr:"^表情·(.*)$"="Emote·$1"
 玩眼球=Play with eyeballs
 送花=Send flowers
 聞花=Smell flowers
-鈔能力=Rich
+鈔能力=Money Power
 別著涼啦=Tuck
 
 暈頭轉向=Dizzy

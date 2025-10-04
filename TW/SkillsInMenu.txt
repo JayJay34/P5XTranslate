@@ -496,6 +496,7 @@ sr:"『HIGHLIGHT』：使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>�
 --- Normal Generalized Skills ---
 
 //ST
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害。$"="Deal <color\=#FFFF00>$1</color> ATK Bless damage to 1 foe."
 sr:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。$"="Deal <color\=#FFFF00>$1</color> ATK $2 damage to 1 foe."
 
 //ST Multi-Hit Constant
@@ -509,6 +510,7 @@ sr:"^對1名敵人造成(\d+\~\d+)次<color\=#fffc40>(\d+\.\d+%)</color>攻擊�
 sr:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，效果持續(\d+)回合。$"="Deal <color\=#FFFF00>$1</color> ATK $2 damage to 1 foe, with a <color\=#FFFF00>$3</color> base chance to inflict $4 for $5 turns."
 
 //AoE
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害。$"="Deal <color\=#FFFF00>$1</color> ATK Bless damage to all foes."
 sr:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。$"="Deal <color\=#FFFF00>$1</color> ATK $2 damage to all foes."
 
 //AoE Multi-Hit Random
@@ -637,11 +639,11 @@ r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的疾風屬�
 --- Psy ---
 
 //ST
-r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(\d+%)。"="Deals $1 ATK Psy damage to <color\=#FFFF00>1</color> foe. Triggers <link\="s|211"><u>TECHNICAL</u></link> to foe inflicted with any <link\=s|106><u>Mental Ailment</u></link>, increase skill damage by $2."
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(\d+%)。$"="Deal <color\=#fffc40>$1</color> ATK Psy damage to 1 foe. Deal a <link\="s|211"><u>TECHNICAL</u></link> and increase skill damage by $2 to foes inflicted with a <link\=s|106><u>Mental Ailment</u></link>."
 
 //AoE
-r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(\d+%)。"="Deals <color\=#FFFF00>$1</color> ATK Psy damage to all foes. Triggers <link\="s|211"><u>TECHNICAL</u></link> to foes inflicted with any <link\=s|106><u>Mental Ailment</u></link>, increase skill damage by $2."
-r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊點念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(\d+%)。"="Deals <color\=#FFFF00>$1</color> ATK Psy damage to all foes. Triggers <link\="s|211"><u>TECHNICAL</u></link> to foes inflicted with any <link\=s|106><u>Mental Ailment</u></link>, increase skill damage by $2."
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(\d+%)。$"="Deal <color\=#fffc40>$1</color> ATK Psy damage to all foes. Deal a <link\="s|211"><u>TECHNICAL</u></link> and increase skill damage by $2 to foes inflicted with a <link\=s|106><u>Mental Ailment</u></link>."
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊點念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(\d+%)。$"="Deal <color\=#fffc40>$1</color> ATK Psy damage to 1 foe. Deal a <link\="s|211"><u>TECHNICAL</u></link> and increase skill damage by $2 to foes inflicted with a <link\=s|106><u>Mental Ailment</u></link>."
 
 Okuninushi
 r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於精神異常的敵人增傷20%，若目標敵人的弱點是念動屬性，則額外提升15%造成的傷害。$"="Deal <color\=#fffc40>$1</color> ATK Psy damage to all foes. Increase DMG Dealt by 20% if the foe is inflicted with Mental Ailments. Additionally increase DMG Dealt by 15% if the foe is weak to Psy."
