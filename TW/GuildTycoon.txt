@@ -53,10 +53,10 @@ r:"^歷史貢獻 (\d+)$"="Total Contribution $1"
 挑戰難度·噩夢=Nightmare
 
 基礎傷害積分=Base Score
-虛弱期傷害積分=Weak DMG
-首領擊殺積分=Defeated Boss
-敵方抵禦積分=Base Score
-己方生存回合=Round(s) Survived
+虛弱期傷害積分=Weaken Damage
+首領擊殺積分=Boss Defeated
+敵方抵禦積分=Defense Score
+己方生存回合=Turns Survived
 生存回合額外分=Survival Bonus
 難度係數=Difficulty Multiplier
 r:"難度係數：<color\=#0e68c9>(\d+)</color>"=<size\=25>Multiplier: <color\=#0e68c9>$1x</color></size>
@@ -162,6 +162,7 @@ sr:"^受到技能屬性：(.*)$"="Skill element: $1"
 {{A}}「詛咒」={{A}} [Curse]
 {{A}}「萬能」={{A}} [Almighty]
 sr:"^被擊敗後使怪盜(.*)傷害提升$"="Increase all Thieves' $1 DMG on death"
+r:"^對所有敵人造成物理屬性傷害，有極低機率使敵人陷入<link\="s\|156"><u>狂怒</u></link>狀態，效果持續(\d+)回合，$"="Deal Phys damage to all foes, with a very low chance to inflict <link\="s|156"><u>Rage</u></link> on all foes for $1 turns."
 
 r:"^1、{{B}}每回合為所有單位添加<color\=#ff3b37>「諸神黃昏」</color>。\n「諸神黃昏」：造成傷害提升(\d+%)，每回合流失一定生命值，可疊加(\d+)層。\n2、進入虛弱階段後，{{B}}為全體怪盜添加(\d+)層<color\=#ff3b37>「諸神黃昏」</color>，並召喚(\d+)隻{{A}}，對{{A}}造成的傷害會計入積分。$"="<size\=24>1. {{B}} will inflict all units with <color\=#ff3b37>[Ragnarok]</color> each turn.\n[Ragnarok]: Increase DMG Dealt by $1, lose a certain amount of HP each turn, up to $2 stacks.\n2. When entering Weak, {{B}} will inflict all Thieves with $3 stacks of <color\=#ff3b37>[Ragnarok]</color>, then summon $4 {{A}}, dealing damage to {{A}} will count for score.</size>"
 r:"^1、{{B}}每回合為所有單位添加<color\=#ff3b37>「諸神黃昏」</color>。\n「諸神黃昏」：造成傷害提升(\d+%)，每回合流失一定生命值，可疊加(\d+)層。\n2、擊敗{{C}}，會扣除{{B}}一定生命值。\n3、進入虛弱階段後，{{B}}為全體怪盜添加(\d+)層<color\=#ff3b37>「諸神黃昏」</color>，並召喚(\d+)隻{{A}}，對{{A}}造成的傷害會計入積分。$"="1. {{B}} will inflict all units with <color\=#ff3b37>[Ragnarok]</color> each turn.\n[Ragnarok]: Increase DMG Dealt by $1, lose a certain amount of HP each turn, up to $2 stacks.\n2. When defeating {{C}}, {{B}} will lose a certain amount of HP.\n3. When entering Weak, {{B}} will inflict all Thieves with $3 stacks of <color\=#ff3b37>[Ragnarok]</color>, then summon $4 {{A}}, dealing damage to {{A}} will count for score."
