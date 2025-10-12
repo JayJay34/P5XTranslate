@@ -328,7 +328,7 @@ No size on inherit skill names or else they won't work in the inherit menu
 女巫詛咒=Debilitate
 音律侵擾=Temperament Disruption
 毒絞回纏=Venomous Vortex
-解構力場=Deconstruction Force Field
+解構力場=<size\=26>Deconstruction Force Field</size>
 
 --- Break Skills ---
 消除火焰耐性=Fire Break
@@ -669,16 +669,16 @@ r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的核熱屬�
 --- Bless ---
 
 //ST Bless with varying stacks
-r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+\~\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deal <color\=#FFFF00>$1</color> ATK Bless damage to 1 foe and gains $2 stack(s) of <link\=s|111><u>Blessing</u></link>.
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+\~\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deal <color\=#FFFF00>$1</color> ATK Bless damage to 1 foe and gains $2 <link\=s|111><u>Blessing</u></link> stack(s).
 
 //ST Bless with constant stacks
-r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deal <color\=#FFFF00>$1</color> ATK Bless damage to 1 foe and gains $2 stack(s) of <link\=s|111><u>Blessing</u></link>.
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deal <color\=#FFFF00>$1</color> ATK Bless damage to 1 foe and gains $2 <link\=s|111><u>Blessing</u></link> stack(s).
 
 //AoE Bless with varying stacks
-r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+\~\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deal <color\=#FFFF00>$1</color> ATK Bless damage to all foes and gains $2 stack(s) of <link\=s|111><u>Blessing</u></link>.
+r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+\~\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deal <color\=#FFFF00>$1</color> ATK Bless damage to all foes and gains $2 <link\=s|111><u>Blessing</u></link> stack(s).
 
 //AoE Bless with constant stacks
-r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+)個<link\="s\|111"><u>祝福</u></link>效果。$"="Deal <color\=#FFFF00>$1</color> ATK Bless damage to all foes and gains $2 stack(s) of <link\=s|111><u>Blessing</u></link>."
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+)個<link\="s\|111"><u>祝福</u></link>效果。$"="Deal <color\=#FFFF00>$1</color> ATK Bless damage to all foes and gains $2 <link\=s|111><u>Blessing</u></link> stack(s)."
 
 //ST Bless Instakill
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，對50%生命值以下的敵人附加低機率祝福屬性即死效果，生命值越低機率越高。"=Deal <color\=#FFFF00>$1</color> ATK Bless damage to 1 foe with a chance of insta-kill to foes under 50% HP. The lower the HP, the higher the chance.
@@ -703,16 +703,16 @@ r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬�
 --- Curse ---
 
 // Single Target Basic Curses (2 types exist to consider either flat rate of curse stacks, or chance between 2 values)
-r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得(\d+\~\d+)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deal <color\=#FFFF00>$1</color> ATK Curse damage to 1 foe and inflict $2 stack(s) of <link\=s|112><u>Curse</u></link>.
-r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得(.*)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deal <color\=#FFFF00>$1</color> ATK Curse damage to 1 foe and inflict $2 stack(s) of <link\=s|112><u>Curse</u></link>.
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得(\d+\~\d+)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deal <color\=#FFFF00>$1</color> ATK Curse damage to 1 foe and inflict $2 <link\=s|112><u>Curse</u></link> stack(s).
+r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得(.*)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deal <color\=#FFFF00>$1</color> ATK Curse damage to 1 foe and inflict $2 <link\=s|112><u>Curse</u></link> stack(s).
 
 // AoE Basic Curses
-r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，有機率使敵人獲得(\d+\~\d+)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deal <color\=#FFFF00>$1</color> ATK Curse damage to all foes and inflict $2 stack(s) of <link\=s|112><u>Curse</u></link>.
-r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得(.*)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deal <color\=#FFFF00>$1</color> ATK Curse damage to all foes and inflict $2 stack(s) of <link\=s|112><u>Curse</u></link>.
-r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，有機率為敵方附加(.*)個<link\="s\|112"><u>詛咒</u></link>效果。$"="Deal <color\=#fffc40>$1</color> ATK Curse damage to all foes, with a chance to inflict $2 stack(s) of <link\="s|112"><u>Curse</u></link>."
+r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，有機率使敵人獲得(\d+\~\d+)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deal <color\=#FFFF00>$1</color> ATK Curse damage to all foes and inflict $2 <link\=s|112><u>Curse</u></link> stack(s).
+r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使敵人獲得(.*)個<link\="s\|112"><u>詛咒</u></link>效果。"=Deal <color\=#FFFF00>$1</color> ATK Curse damage to all foes and inflict $2 <link\=s|112><u>Curse</u></link> stack(s).
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，有機率為敵方附加(.*)個<link\="s\|112"><u>詛咒</u></link>效果。$"="Deal <color\=#fffc40>$1</color> ATK Curse damage to all foes, with a chance to inflict $2 <link\="s|112"><u>Curse</u></link> stack(s)."
 
 //Brand of Malice
-r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，並使其獲得(\d+)(.*)(\d+)個詛咒效果。"=Deal <color\=#FFFF00>$1</color> ATK Curse damage to all foes and inflict $2~$4 stack(s) of <link\=s|112><u>Curse</u></link>.
+r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，並使其獲得(\d+)(.*)(\d+)個詛咒效果。"=Deal <color\=#FFFF00>$1</color> ATK Curse damage to all foes and inflict $2~$4 <link\=s|112><u>Curse</u></link> stack(s).
 
 Afterlife Judgement
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，釋放技能時，每層自己身上的祝福效果或目標身上的詛咒效果都會使該技能造成的傷害提升(\d+%)，上限4層。$"="Deal <color\=#fffc40>$1</color> ATK Curse damage to 1 foe. When using this skill, each stack of Blessing on you or each stack of Curse on the target increase DMG Dealt by $2, up to 4 stacks."
@@ -835,7 +835,7 @@ Fire of Purification
 r:"^使所有友方角色的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每(\d+)攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)，持續(\d+)回合。並使技能主目標獲得「淨世之火」，持續(\d+)回合。「淨世之火」：對敵方角色釋放{{A}}技能造成傷害後，有(\d+%)的基礎機率使隨機(\d+)名敵人陷入燃燒狀態。$"="Increase all allies' ATK by <color\=#fffc40>$1</color> + <color\=#fffc40>$3</color> for every $2 ATK you have, up to $4 for $5 turns. Gives the main target [Fire of Purification] for $6 turns. [Fire of Purification]: After dealing {{A}} skill damage to foes, there is a $7 base chance to inflict $8 random foe with Burn."
 
 Dominion Cohesion
-r:"^使所有同伴的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每(\d+)攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)，效果持續(\d+)回合。並使技能主目標造成的傷害額外提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每(\d+)攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)。效果持續(\d+)回合。$"="Increase all allies' ATK by <color\=#fffc40>$1</color> + <color\=#fffc40>$3</color> for every $2 ATK you have, up to $4 for $5 turns. Increase the main target's DMG Dealt by <color\=#fffc40>$6</color> + <color\=#fffc40>$8</color> for every $7 ATK you have, up to $9 for $10 turn."
+r:"^使所有同伴的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每(\d+)攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)，效果持續(\d+)回合。並使技能主目標造成的傷害額外提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每(\d+)攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)。效果持續(\d+)回合。$"="Increase party's ATK by <color\=#fffc40>$1</color> + <color\=#fffc40>$3</color> more for every $2 of the user's ATK, up to $4. Lasts for $5 turns. Increase main target's DMG Dealt by <color\=#fffc40>$6</color> + <color\=#fffc40>$8</color> more for every $7 of the user's ATK, up to $9. Lasts for $10 turn."
 
 Infinite Algorithm
 r:"^使所有友方角色攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，額外使主目標傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Increase all allies' ATK by <color\=#fffc40>$1</color>, additionally increase the main target's DMG Dealt by <color\=#fffc40>$2</color> for $3 turns."
