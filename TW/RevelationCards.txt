@@ -25,14 +25,25 @@ sr:"^每消耗<color\=#FFDE00>(\d+)</color>張<color\=#FFDE00>日月星辰</colo
 r:"^獲得(\d+)張啟示卡$"="Gained $1 Revelation"
 
 請選擇主屬性=Main Stat
-點擊添加副屬性=Click to add sub stats
+點擊添加副屬性=Click to add Substats
 r:"^持有數量:(\d+)$"="Owned: $1"
 屬性選擇=Select
+選定的副屬性，需要生成屬性值才能定製。=Need to generate selected Substats before customizing.
+副屬性生成=Generate Substats
+請確認是否生成副屬性=Please confirm the following Substats
+啟示卡主屬性=Main Stats
+啟示卡副屬性=Substats
+r:"^<color\=#FFDE00>{{A}}×(\d+)</color>$"="<color\=#FFDE00>{{A}}×$1</color>"
+選定內容生成後將無法更改。=Cannot change the selected contents after generation.
+定製確認=Confirm Customization
+請確認是否定製該啟示卡=Please confirm the following Revelation Card
+選定副屬性均為最大值。=Selected Substats are at max stats.
+
 sr:"^是否確認定製一張<color\=#f1b500>(.*)</color>位置，<color\=#f1b500>(.*)</color>套裝，主屬性為<color\=#f1b500>(.*)</color>的啟示卡？$"="Make 1 <color\=#f1b500>$2</color> <color\=#f1b500>$3</color> Revelation Card?"
-sr:"^當前定製啟示卡限定：\n套裝：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主屬性：<color\=#FFDE00>(.*)</color>\n<color\=#ff3b37>尚未選定副屬性。</color>\n是否消耗<color\=#FFDE00>(.*)×(\d+)</color>進行定製？$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\n<color\=#ff3b37>No selected Sub Stats.</color>\nSpend <color\=#FFDE00>$4 ×$5</color> to customize?"
-sr:"^當前定製啟示卡限定：\n套裝：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主屬性：<color\=#FFDE00>(.*)</color>\n副屬性：<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>\n是否確認生成副屬性？\n<color\=#ff3b37>生成後限定套裝、位置、屬性類型將無法更改。</color>$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\nSub Stats: <color\=#FFDE00>$4</color>, <color\=#FFDE00>$5</color>, <color\=#FFDE00>$6</color>, <color\=#FFDE00>$7</color>\nGenerate these Sub Stats?\n<color\=#ff3b37>Cannot change Main Stat and Sub Stats after generation.</color>"
-sr:"^當前定製啟示卡限定：\n套裝：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主屬性：<color\=#FFDE00>(.*)</color>\n副屬性：<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>\n<color\=#FFDE00>選定副屬性均為最大值。</color>\n是否消耗<color\=#FFDE00>(.*)×(\d+)</color>、<color\=#FFDE00>(.*)×(\d+)</color>進行定製？$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\nSub Stats: <color\=#FFDE00>$4</color>, <color\=#FFDE00>$5</color>, <color\=#FFDE00>$6</color>, <color\=#FFDE00>$7</color>\n<color\=#FFDE00>Selected Sub Stats are at max stats.</color>\nSpend <color\=#FFDE00>$8 ×$9</color>, <color\=#FFDE00>$10 ×$11</color> to customize?"
-sr:"^當前定製啟示卡限定：\n套裝：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主屬性：<color\=#FFDE00>(.*)</color>\n副屬性：<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>\n<color\=#FFDE00>選定副屬性均為最大值。</color>\n是否消耗<color\=#FFDE00>(.*)×(\d+)</color>進行定製？$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\nSub Stats: <color\=#FFDE00>$4</color>, <color\=#FFDE00>$5</color>, <color\=#FFDE00>$6</color>, <color\=#FFDE00>$7</color>\n<color\=#FFDE00>Selected Sub Stats are at max stats.</color>\nSpend <color\=#FFDE00>$8 ×$9</color> to customize?"
+sr:"^當前定製啟示卡限定：\n套裝：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主屬性：<color\=#FFDE00>(.*)</color>\n<color\=#ff3b37>尚未選定副屬性。</color>\n是否消耗<color\=#FFDE00>(.*)×(\d+)</color>進行定製？$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\n<color\=#ff3b37>No selected Substats.</color>\nSpend <color\=#FFDE00>$4 ×$5</color> to customize?"
+sr:"^當前定製啟示卡限定：\n套裝：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主屬性：<color\=#FFDE00>(.*)</color>\n副屬性：<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>\n是否確認生成副屬性？\n<color\=#ff3b37>生成後限定套裝、位置、屬性類型將無法更改。</color>$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\nSubstats: <color\=#FFDE00>$4</color>, <color\=#FFDE00>$5</color>, <color\=#FFDE00>$6</color>, <color\=#FFDE00>$7</color>\nGenerate these Substats?\n<color\=#ff3b37>Cannot change Main Stat and Substats after generation.</color>"
+sr:"^當前定製啟示卡限定：\n套裝：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主屬性：<color\=#FFDE00>(.*)</color>\n副屬性：<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>\n<color\=#FFDE00>選定副屬性均為最大值。</color>\n是否消耗<color\=#FFDE00>(.*)×(\d+)</color>、<color\=#FFDE00>(.*)×(\d+)</color>進行定製？$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\nSubstats: <color\=#FFDE00>$4</color>, <color\=#FFDE00>$5</color>, <color\=#FFDE00>$6</color>, <color\=#FFDE00>$7</color>\n<color\=#FFDE00>Selected Substats are at max stats.</color>\nSpend <color\=#FFDE00>$8 ×$9</color>, <color\=#FFDE00>$10 ×$11</color> to customize?"
+sr:"^當前定製啟示卡限定：\n套裝：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主屬性：<color\=#FFDE00>(.*)</color>\n副屬性：<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>\n<color\=#FFDE00>選定副屬性均為最大值。</color>\n是否消耗<color\=#FFDE00>(.*)×(\d+)</color>進行定製？$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\nSubstats: <color\=#FFDE00>$4</color>, <color\=#FFDE00>$5</color>, <color\=#FFDE00>$6</color>, <color\=#FFDE00>$7</color>\n<color\=#FFDE00>Selected Substats are at max stats.</color>\nSpend <color\=#FFDE00>$8 ×$9</color> to customize?"
 未選擇主屬性，無法定製。=No selected Main Stat, cannot customize.
 r:"^最多選擇(\d+)條主屬性。$"="Select up to $1 Main Stat."
 
@@ -64,14 +75,14 @@ r:"^該武器(.*)正在穿戴，要繼續替換嗎？$"="This is being equipped 
 
 暫無套裝篩選=No Set Filter
 暫無主屬性篩選=No Main Stats Filter
-暫無副屬性篩選=No Sub Stats Filter
+暫無副屬性篩選=No Substats Filter
 
 屬性篩選=Filter
 主屬性最多選擇以下任意兩項屬性進行篩選，選擇後同時生效=Filter up to 2 Main Stats
-副屬性最多選擇以下任意四項屬性進行篩選，選擇後同時生效=Filter up to 4 Sub Stats
+副屬性最多選擇以下任意四項屬性進行篩選，選擇後同時生效=Filter up to 4 Substats
 
-r:"^新增(\d+)條副屬性$"="<size\=10> </size>Add $1 new Sub Stats"
-r:"^隨機強化(\d+)條副屬性$"="<size\=10> </size>Upgrade $1 Sub Stats"
+r:"^新增(\d+)條副屬性$"="<size\=10> </size>Add $1 new Substats"
+r:"^隨機強化(\d+)條副屬性$"="<size\=10> </size>Upgrade $1 Substats"
 所選素材<color\=#FFC000>已強化過</color>、<color\=#FFC000>品質過高</color>\n是否確定使用所選素材進行升級？=<size\=30>Selected <color\=#FFC000>upgraded</color>, <color\=#FFC000>high quality</color> materials.\nUse the selected materials for upgrade?</size>
 該啟示卡已強化到滿級！=Revelation maxed!
 r:"^最多可以選擇(\d+)個材料哦～$"="Can select up to $1 materials."

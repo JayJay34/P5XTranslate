@@ -133,8 +133,8 @@ Onemore自動選擇目標=<size\=27>Automatically select \nONE MORE target</size
 自動收穫=Auto Harvest
 r:"^協同者{{A}}RANK等級到(\d+)後解鎖。$"="Unlocks after {{A}} Synergy RANK $1."
 
-音量提升=Volume Up
-音量降低=Volume Down
+音量提升=Raise Volume
+音量降低=Lower Down
 向前移動=Move Forward
 向後移動=Move Backward
 向左移動=Move Left
@@ -144,48 +144,48 @@ r:"^說明$"="Help"
 r:"^取消$"="Cancel"
 切換跑步=Toggle Run
 
-都市互動=City Interaction
+都市互動=City Life Action
 打開當前地圖=Open Current Map
 打開功能表=Open Menu
-打開{{A}}圖=Open Map
+打開{{A}}圖=Open Train Map
 打開{{A}}=Open {{A}}
-打開怪盜=Manage Thieves
-打開陣容=Team
+打開怪盜=Open Thieves
+打開陣容=Open Party
 打開雛鳥計畫=Open Fledgling Plan
-打開契約=Open Contract
+打開契約=Open Contracts
 打開目標=Open Goals
 打開活動=Open Events
-打開協同者=Open Synergies
+打開協同者=Open Synergy
 打開郵件=Open Mail
 打開任務=Open Missions
-打開都市=City Activities
+打開都市=Open City Life
 打開背包=Open Backpack
 打開通訊錄=Open Friend Lists
-打開拍照=Photo Mode
+打開拍照=Open Camera
 打開獎盃=Open Trophies
 打開聊天面板=Open Side Chat
 打開SNS=Open SNS
 返回都市主介面=Open City Menu
-追蹤任務=Track Mission
-喚起遊標=Move Cursor
+追蹤任務=Mission Tracking
+喚起遊標=Show Cursor
 打開商店=Open Shop
-探索道具=Infiltration Items
+探索道具=Exploration Items
 輪盤選單=Wheel Menu
 
-奔跑=Run
-互動=Interact
+奔跑=Dash
+互動=Action
 觀察模式=Third Eye
-打開區域進度介面=Progress Menu
-作戰基地=Metaverse Menu
+打開區域進度介面=Open Area Progress
+作戰基地=Hideout
 
 槍械=Gun
 面具/道具=Persona/Item
 切換面具=Persona Change
 近戰攻擊=Melee Attack
-設置=Set
-返回=Return
-加速=Speed Up
-自動戰鬥=Auto Mode
+設置=Settings
+返回=Cancel
+加速=Dash
+自動戰鬥=Auto-Mode
 切換選中（左）=Select (Left)
 切換選中（右）=Select (Right)
 支援=Navigator
@@ -194,8 +194,8 @@ r:"^取消$"="Cancel"
 
 棒球=Baseball
 棒球觀察模式=Third Eye
-打擊棒球=Hit Baseball
-釣魚拉杆=Reel
+打擊棒球=Swing
+釣魚拉杆=Reel In
 左移=Move Left
 右移=Move Right
 釣魚觀察模式=Third Eye
@@ -325,6 +325,8 @@ r:"^開啟了前往「<color\=#ff3b37>(.*)</color>」的快速移動。$"="Can n
 
 膽小鬼=Coward
 {{A}}中存在著一些特殊陰影，\n膽小的它們藏在油漆桶裡，\n嘗試用「<color\=#ff0000>撞擊</color>」的方式趕走它們，\n並奪取「<color\=#ff0000>桶內的{{B}}</color>」吧。=There are some special shadows in {{A}}. They are cowardly and hide in paint buckets, try [<color\=#ff0000>ramming</color>] them to force them out and take the [<color\=#ff0000>treasure inside the can</color>].
+
+受到{{A}}的干擾，應用無法正常使用=Cannot be used in the {{A}}.
 
 ----------
 Character Names
@@ -616,7 +618,8 @@ r:"^岩<color\=#ff0000ff>井</color>{{A}}$"="Mu<color\=#ff0000ff>ne</color>hisa 
 是你啊……今天來打算做點什麼？=Oh, it's you... What'll it be today?
 獲取補給=Get supplies
 合計：=Total:
-什麼嘛……不要隨便打擾別人生意。=What... Don't mess with other people's business.
+別怪我沒提醒你，在我這買的東西你可要小心使用喔。=You buy it, you look after it.
+什麼嘛……不要隨便打擾別人生意。=If you see anything that interests you, let me know.
 進入酒吧=Enter the bar
 該功能尚未開放=This feature is not available yet
 
@@ -891,13 +894,14 @@ r:"^<sprite\=(\d+) tint\=1>時<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>分�
 擁有:=Owned: 
 擁有=Owned
 持有數=Owned
-免費=FREE
+免費=Free
 領獎=Claim
 領取=<size\=28>Claim</size>
 點擊領取=Click to Claim
 明日\n可領=Claim\nTmr
 已領取=Claimed
 可領獎=Claim
+可領取次數：=Can claim:
 購買=Buy
 已購買=Purchased
 已售罄=Sold out
@@ -1459,6 +1463,7 @@ r:"^在「{{A}}」中擊殺(\d+)次「交錯之影」 \((\d+)\/(\d+)\)$"="Defeat
 sr:"^通關「(.*)」難度(\d+) \((\d+)\/(\d+)\)$"="Clear [$1] on Difficulty $2 ($3/$4)"
 
 r:"^本期通行證期間，累計登入(\d+)天 \((\d+)/(\d+)\)$"="Log in for $1 day(s) ($2/$3)"
+r:"^累計登入(\d+)天\((\d+)/(\d+)\)$"="Log in for $1 day(s) ($2/$3)"
 r:"^累計登入(\d+)天\(<color\=#e50a06>(\d+)</color>/(\d+)\)$"="Log in for $1 day(s) (<color\=#e50a06>$2</color>/$3)"
 r:"^在「塑命循啟」中完成一張啟示卡定製 \((\d+)\/1\)$"="Make 1 custom Revelation Card in [Writing Fate] ($1/1)"
 
@@ -2796,6 +2801,7 @@ r:"^啟明星禮·(.*)$"="Ltd. Mindscape Stats Set"
 r:"^永恒星禮·(.*)$"="Ltd. Mindscape Skills Set"
 {{A}}的貴賓卡={{A}}'s VIP Card
 每日祈願納福禮袋=Daily Pray Gift Bag
+r:"^「每日祈願納福禮袋」購買成功，可領取天數累計至<color\=#FF0000>(\d+)天</color>。$"="Purchased [Daily Pray Gift Bag], can claim it for <color\=#FF0000>$1 days</color>."
 r:"^超絕新人禮(.*)$"="Newcomer Pass $1"
 {{A}}每週特惠={{A}}'s Weekly Special
 洞悉願望之禮=Platinum Set
@@ -2823,6 +2829,7 @@ r:"^(\d+)級啟示補給$"="Lv. $1 Revelation Set"
 啪嘰熊·粉=Pink Mokokuma Pj's
 服飾染色噴霧=Outfit Dye Spray
 
+r:"^加贈$"="Get            <size\=1>.</size>"
 枚{{A}}=      <size\=17>{{A}}</size>
 現金=Money
 魂石=Konpaku Gem
@@ -3031,7 +3038,6 @@ r:"^可領取$"="Claim"
 {{A}}可沒在裡面放可怕的東西哦～？=Hm? Nothing to worry about, right～?
 確定買這個嗎？=This one catch your eye?
 看清楚啦～不要買錯了阿！=<size\=24>Make sure you haven't gotten anything mixed up now!</size>
-r:"^加贈$"="Get            <size\=1>.</size>"
 累計簽到7日，即可獲得=7 days daily rewards
 r:"^累計簽到(\d+)日，即可獲得<size\=66><sprite\=19></size>X(\d+)$"="Log in for $1 days to get <size\=66><sprite\=19></size>X$2"
 r:"^累計簽到(\d+)日，即可獲得<size\=66><sprite\=21></size>X(\d+)$"="Log in for $1 days to get <size\=66><sprite\=21></size>X$2"
@@ -3257,7 +3263,7 @@ EVENTS TAB
 立刻參與限時活動，獲取大量{{A}}、契約憑證以及個性化裝飾！=Participate in limited time events and get lots of {{A}}, Contract items, and more!
 天鵝絨試煉通關=<size\=26>Clear Velvet Trials</size>
 r:"^巧匠之作第(\d+)關$"="Technician $1"
-獲得<color\=#FFD600>支援怪盜</color>{{A}}=<size\=26>Get <color\=#FFD600>navigator</color> {{A}}</size>
+r:"^獲得<color\=#FFD600>支援怪盜</color>{{A}}$"="<size\=26>Get <color\=#FFD600>navigator</color> {{A}}</size>"
 獲得怪盜{{A}}=Get {{A}}
 心之海試煉通關=<size\=22>Clear Sea of Souls Trial</size>
 東部建設區=<size\=23>Eastern Area</size>
@@ -5432,6 +5438,7 @@ r:"^天<color\=#ff0000ff>鵝</color>絨房間$"="Ve<color\=#ff0000ff>lv</color>e
 rank等級：=Rank:
 面具屬性要求=Mask Element Requirement
 面具職業要求=Mask Role Requirement
+面具階級要求 <color\=#ffffff>VII級以上</color>=Mask Element Requirement <color\=#ffffff>Rank VII and above</color>
 便捷合體=<size\=38>Quick Fuse</size>
 sr:"^省略中途合體步驟獲得<color\=#FFF000>(.*)</color>所需的全部印記如下：$"="Skip fusion steps and obtain <color\=#FFF000>$1</color>:"
 r:"^是否快速從兌換商店，自動兌換全部【缺少印記材料】？\n將消耗<size\=60><sprite\=33></size>x(\d+)。$"="Automatically redeem all missing [Persona Seal]? \nThis will cost <size\=60><sprite\=33></size>x$1."
