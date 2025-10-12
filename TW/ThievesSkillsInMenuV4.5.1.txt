@@ -2696,7 +2696,7 @@ r:"^戰鬥中，自身每有(\d+)點攻擊力，最大生命值提升(\d+)點，
 r:"^戰鬥中，自身每有(\d+)點攻擊力，最大生命值提升(\d+)點，上限<color\=#0169ca>(\d+)</color>。$"="During battle, for every $1 ATK, increase Max HP by $2, up to <color\=#0169ca>$3</color> Max HP."
 
 銘刻於心的想念=Etched in Memory
-r:"^{{A}}可以為敵人添加『風蝕』，友方其他同伴對擁有『風蝕』的敵人釋放技能造成傷害時，使所有同伴恢復相當於{{A}}(\d+\.\d+%)攻擊力\+(\d+)/(\d+)/(\d+)（達到1、50、70級時變化）的生命值，並使{{A}}獲得一層『風語』，上限(\d+)層，{{A}}每回合至下一回合開始前最多觸發1次該治療效果。$"="{{A}} can inflict foes with [Wind Erosion], when other allies attack foes with [Wind Erosion], restore party's HP by $1 of Yukari's ATK + $2/$3/$4 (effect increases at level 1/50/70), then grant {{A}} 1 [Wind Whisper] stack. Stacks up to $5 times. {{A}} can activate this healing up to 1 time before the start of next turn.
+r:"^{{A}}可以為敵人添加『風蝕』，友方其他同伴對擁有『風蝕』的敵人釋放技能造成傷害時，使所有同伴恢復相當於{{A}}(\d+\.\d+%)攻擊力\+(\d+)/(\d+)/(\d+)（達到1、50、70級時變化）的生命值，並使{{A}}獲得一層『風語』，上限(\d+)層，{{A}}每回合至下一回合開始前最多觸發1次該治療效果。$"="{{A}} can inflict foes with [Wind Erosion], when other allies attack foes with [Wind Erosion], restore party's HP by $1 of Yukari's ATK + $2/$3/$4 (effect increases at level 1/50/70), then grant {{A}} 1 [Wind Whisper] stack. Stacks up to $5 times. {{A}} can activate this healing up to 1 time before the start of next turn."
 
 扣動的扳機=Pull the Trigger
 r:"^戰鬥開始時，自身獲得滿層『風語』並回復(\d+)點{{B}}能量，首回合若{{B}}能量回復量溢出，{{A}}最多緩存(\d+)點溢出的回復量。\n對友方同伴釋放技能時，額外使技能主目標穿透提升(\d+%)，持續(\d+)回合。$"="At the start of battle, Yukari gains max stacks of [Wind Whisper] then restores $1 {{B}} Energy, if {{B}} Energy overflow on turn 1, {{A}} can save up to $2 overflow Energy.\nWhen using skills on allies, increase the main target's Pierce by $3 for $4 turns."
@@ -2796,7 +2796,7 @@ r:"^{{A}}在場時，所有友方的持續傷害效果提升<color\=#FFFC40>(\d+
 r:"^{{A}}在場時，所有友方的持續傷害效果提升<color\=#0169ca>(\d+\.\d+%)</color>。$"="When {{A}} is on the field, increase party's Damage Over Time Effect by <color\=#0169ca>$1</color>."
 
 <color\=#66ccff>『怨念』</color>=<color\=#66ccff>[Resentment]</color>
-r:"^每回合受到{{A}}(\d+%)/(\d+%)/(\d+%)攻擊力的詛咒屬性傷害（達到1、50、70級時變化），持續(\d+)回合，可疊加(\d+)層。持有『怨念』的敵人陣亡時，其『怨念』會轉移至生命值最高的敵人（不會轉移至詛咒屬性無反吸的單位）。$"="Take Curse damage equal to $1/$2/$3 of {{A}}'s ATK (effect increases at level 1/50/70) for $2 turns. Stacks up to 10 times. When a foe with [Resentment] dies, transfer its [Resentment] to the highest HP foe (cannot transfer to target with Null/Repel/Drain Curse)."
+r:"^每回合受到{{A}}(\d+%)/(\d+%)/(\d+%)攻擊力的詛咒屬性傷害（達到1、50、70級時變化），持續(\d+)回合，可疊加(\d+)層。持有『怨念』的敵人陣亡時，其『怨念』會轉移至生命值最高的敵人（不會轉移至詛咒屬性無反吸的單位）。$"="Take Curse damage equal to $1/$2/$3 of {{A}}'s ATK (effect increases at level 1/50/70) for $4 turns. Stacks up to $5 times. When a foe with [Resentment] dies, transfer its [Resentment] to the highest HP foe (cannot transfer to target with Null/Repel/Drain Curse)."
 
 如果攝入愛的毒藥=If I Take the Poison of Love
 r:"^{{A}}首次釋放『紅蝶斷頸』時可獲得(\d+)層『貪戀』。自身每次釋放HIGHLIGHT時可獲得(\d+)層『貪戀』。『貪戀』最多可獲得(\d+)層，根據『貪戀』層數獲得如下強化效果：\n1層：每層<link\="s\|246"><u>『怨念』</u></link>使敵人受到的傷害提升(\d+\.\d+%)；\n2層：暴擊率提升(\d+%)，自身釋放{{B}}技能造成的傷害均視為持續傷害效果；\n3層：持續傷害效果提升(\d+%)。$"="When Ichigo uses [Butterfly Beheadment] for the first time, gain $1 [Obsessive Love] stack. When using HIGHLIGHT, gain $2 [Obsessive Love] stack. Stacks up to $3 times. Gain the following boost effects based on [Obsessive Love] stacks:\n1 stack: For every <link\="s|246"><u>[Resentment]</u></link> stack on foes, increase their DMG Taken by $4;\n2 stacks: Increase Crit Rate by $5, Ichigo's Persona skill damage counts as Damage Over Time Effect;\n3 stacks: Increase Damage Over Time Effect by $6."
@@ -3071,7 +3071,7 @@ r:"^{{A}}額外擁有(\d+)個不會消耗的馬鈴薯騎士，追加效果<link\
 
 黑暗農田法則=Dark Farm Hypothesis
 
-星系漫遊指南=<size\=22>The Traveler's Guide to the Stars</size>
+星系漫遊指南=<size\=21>The Traveler's Guide to the Stars</size>
 r:"^HIGHLIGHT效果提升：額外使自身攻擊力提升(\d+%)，持續(\d+)回合。$"="HIGHLIGHT Enchanced: Increase YUI's ATK by $1 for $2 turns."
 
 超時空艦隊=The Super Dimension Fleet
