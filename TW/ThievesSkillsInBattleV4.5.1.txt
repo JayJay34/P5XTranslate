@@ -1219,21 +1219,21 @@ r:"^千<color\=#000000>籟</color>重歌$"="M<color\=#000000>y</color>riad Song"
 ----------
 Makoto Yuki
 ----------
-r:"^對<color\=#FFFF00>(\d+)名</color>敵人造成(\d+)次(\d+\.\d+%)攻擊力的火焰屬性傷害，自身獲得(\d+)層『月相』，持續(\d+)回合，上限(\d+)層。自身使用『紅蓮·豪炎吞噬』消耗『月相』造成傷害時，技能倍率提升(\d+\.\d+%)，持續(\d+)回合。$"="Deal $3 ATK Fire damage to <color\=#FFFF00>$1</color> foe $2 times, gain $4 stacks of [Moon Phase] for $5 turns, up to $6 stacks. When spending [Moon Phase] to deal damage with [Scarlet·Devouring Blaze], increase skill multiplier by $7 for $8 turns."
-r:"^對(\d+)名敵人造成(\d+)次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，自身獲得(\d+)層『月相』，持續(\d+)回合，上限(\d+)層。自身使用『紅蓮·豪炎吞噬』消耗『月相』造成傷害時，技能倍率提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Deal <color\=#FFFC40>$3</color> ATK Fire damage to $1 foe $2 times, gain $4 stacks of [Moon Phase] for $5 turns, up to $6 stacks. When spending [Moon Phase] to deal damage with [Scarlet·Devouring Blaze], increase skill multiplier by <color\=#FFFC40>$7</color> for $8 turns."
+r:"^對<color\=#FFFF00>(\d+)名</color>敵人造成(\d+)次(\d+\.\d+%)攻擊力的火焰屬性傷害，自身獲得(\d+)層『月相』，持續(\d+)回合，上限(\d+)層。自身使用『紅蓮·豪炎吞噬』消耗『月相』造成傷害時，技能倍率提升(\d+\.\d+%)，持續(\d+)回合。$"="Deal Fire damage to <color\=#FFFF00>$1</color> foe equal to $3 of ATK ($2 hits), and gain $4 [Moon Phase] stacks for $5 turns. Stacks up to $6 times. When spending [Moon Phase] to deal damage with [Scarlet: Devouring Blaze], increase the skill multiplier by $7 for $8 turns."
+r:"^對(\d+)名敵人造成(\d+)次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，自身獲得(\d+)層『月相』，持續(\d+)回合，上限(\d+)層。自身使用『紅蓮·豪炎吞噬』消耗『月相』造成傷害時，技能倍率提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Deal Fire damage to $1 foe equal to <color\=#FFFC40>$3</color> of ATK ($2 hits), and gain $4 [Moon Phase] stacks for $5 turns. Stacks up to $6 times. When spending [Moon Phase] to deal damage with [Scarlet: Devouring Blaze], increase the skill multiplier by <color\=#FFFC40>$7</color> for $8 turns."
 
-r:"^使<color\=#FFFF00>所有</color>同伴暴擊效果提升(\d+\.\d+%)，自身攻擊力提升(\d+\.\d+%)，持續(\d+)回合。自身獲得(\d+)層『月相』，持續(\d+)回合，上限(\d+)層。$"="Increase <color\=#FFFF00>all</color> allies Crit DMG by $1 and own ATK by $2 for $3 turns. gain $4 stacks of [Moon Phase] for $5 turns, up to $6 stacks."
-r:"^使所有同伴暴擊效果提升<color\=#FFFC40>(\d+\.\d+%)</color>，自身攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。自身獲得(\d+)層『月相』，持續(\d+)回合，上限(\d+)層。$"="Increase all allies Crit DMG by <color\=#FFFC40>$1</color> and own ATK by <color\=#FFFC40>$2</color> for $3 turns. gain $4 stacks of [Moon Phase] for $5 turns, up to $6 stacks."
+r:"^使<color\=#FFFF00>所有</color>同伴暴擊效果提升(\d+\.\d+%)，自身攻擊力提升(\d+\.\d+%)，持續(\d+)回合。自身獲得(\d+)層『月相』，持續(\d+)回合，上限(\d+)層。$"="Increase <color\=#FFFF00>party's</color> Crit DMG by $1 and Makoto's ATK by $2 for $3 turns. Grant Makoto $4 [Moon Phase] stacks for $5 turns. Stacks up to $6 times."
+r:"^使所有同伴暴擊效果提升<color\=#FFFC40>(\d+\.\d+%)</color>，自身攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。自身獲得(\d+)層『月相』，持續(\d+)回合，上限(\d+)層。$"="Increase party's Crit DMG by <color\=#FFFC40>$1</color> and Makoto's ATK by <color\=#FFFC40>$2</color> for $3 turns. Grant Makoto $4 [Moon Phase] stacks for $5 turns. Stacks up to $6 times."
 
-r:"^發動條件：自身擁有至少(\d+)層『月相』\n消耗自身所有『月相』，每消耗1層『月相』，對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的火焰屬性傷害。之後，消耗自身所有『特殊月相』，每消耗1層『特殊月相』，對<color\=#FFFF00>1名</color>敵人造成的(\d+\.\d+%)攻擊力的火焰屬性傷害。若『月相』達到(\d+)層，則釋放該技能時自身穿透提升(\d+\.\d+%)、造成傷害提升(\d+\.\d+%)。$"="Use condition: When you have at least $1 stacks of [Moon Phase]. \nSpend all [Moon Phase], for each stack of [Moon Phase] spent, deal 1 hit of $2 ATK Fire damage to <color\=#FFFF00>1</color> foe. Afterwards, spend all [Special Moon Phase], for each stack of [Special Moon Phase] spent, deal 1 hit of $3 ATK Fire damage to <color\=#FFFF00>1</color> foe. If you have $4 stacks of [Moon Phase], increase own Pierce by <color\=#FFFC40>$5</color> and DMG Dealt by <color\=#FFFC40>$6</color> when using this skill."
-r:"^發動條件：自身擁有至少(\d+)層『月相』\n消耗自身所有『月相』，每消耗1層『月相』，對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害。\n之後，消耗自身所有『特殊月相』，每消耗1層『特殊月相』，對1名敵人造成的<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害。若『月相』達到(\d+)層，則釋放該技能時自身穿透提升<color\=#FFFC40>(\d+\.\d+%)</color>、造成傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Use condition: When you have at least $1 stacks of [Moon Phase]. \nSpend all [Moon Phase], for each stack of [Moon Phase] spent, deal 1 hit of <color\=#FFFC40>$2</color> ATK Fire damage to 1 foe. \nAfterwards, spend all [Special Moon Phase], for each stack of [Special Moon Phase] spent, deal 1 hit of <color\=#FFFC40>$3</color> ATK Fire damage to 1 foe. If you have $4 stacks of [Moon Phase], increase own Pierce by <color\=#FFFC40>$5</color> and DMG Dealt by <color\=#FFFC40>$6</color> when using this skill."
+r:"^發動條件：自身擁有至少(\d+)層『月相』\n消耗自身所有『月相』，每消耗1層『月相』，對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的火焰屬性傷害。之後，消耗自身所有『特殊月相』，每消耗1層『特殊月相』，對<color\=#FFFF00>1名</color>敵人造成的(\d+\.\d+%)攻擊力的火焰屬性傷害。若『月相』達到(\d+)層，則釋放該技能時自身穿透提升(\d+\.\d+%)、造成傷害提升(\d+\.\d+%)。$"="Use condition: When Makoto has at least $1 [Moon Phase] stacks. \nSpend all [Moon Phase], for each [Moon Phase] stack spent, deal Fire damage to <color\=#FFFF00>1</color> foe equal to $2 of ATK. \nAlso spend all [Special Moon Phase], for each [Special Moon Phase] stack spent, deal Fire damage to <color\=#FFFF00>1</color> foe equal to $3 of ATK. When this skill is used at $4 [Moon Phase] stacks, increase Makoto's Pierce by $5 and DMG Dealt by $6."
+r:"^發動條件：自身擁有至少(\d+)層『月相』\n消耗自身所有『月相』，每消耗1層『月相』，對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害。\n之後，消耗自身所有『特殊月相』，每消耗1層『特殊月相』，對1名敵人造成的<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害。若『月相』達到(\d+)層，則釋放該技能時自身穿透提升<color\=#FFFC40>(\d+\.\d+%)</color>、造成傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Use condition: When Makoto has at least $1 [Moon Phase] stacks. \nSpend all [Moon Phase], for each [Moon Phase] stack spent, deal Fire damage to 1 foe equal to <color\=#FFFC40>$2</color> of ATK. \nAlso spend all [Special Moon Phase], for each [Special Moon Phase] stack spent, deal Fire damage to 1 foe equal to <color\=#FFFC40>$3</color> of ATK. When this skill is used at $4 [Moon Phase] stacks, increase Makoto's Pierce by <color\=#FFFC40>$5</color> and DMG Dealt by <color\=#FFFC40>$6</color>."
 
-r:"^釋放條件：(\d+)點{{A}}能量\n對<color\=#FFFF00>1名</color>敵人造成(\d+)次(\d+\.\d+%)攻擊力的火焰屬性傷害。自身獲得(\d+)層『特殊月相』，持續(\d+)回合，上限(\d+)層。$"="Use condition: When you have $1 {{A}} Energy. \nDeal $3 ATK Fire damage to <color\=#FFFF00>1</color> foe $2 times. gain $4 stack of [Special Moon Phase] for $5 turns, up to $6 stacks."
-r:"^釋放條件：(\d+)點{{A}}能量\n使<color\=#FFFF00>所有</color>友方同伴攻擊力提升(\d+\.\d+%)、傷害提升(\d+\.\d+%)，持續(\d+)回合。自身獲得(\d+)層『特殊月相』，持續(\d+)回合，上限(\d+)層。$"="Use condition: When you have $1 {{A}} Energy. \nIncrease all allies ATK by <color\=#FFFC40>$2</color> and DMG Dealt by <color\=#FFFC40>$3</color> for $4 turns. gain $5 stack of [Special Moon Phase] for $6 turns, up to $7 stacks."
+r:"^釋放條件：(\d+)點{{A}}能量\n對<color\=#FFFF00>1名</color>敵人造成(\d+)次(\d+\.\d+%)攻擊力的火焰屬性傷害。自身獲得(\d+)層『特殊月相』，持續(\d+)回合，上限(\d+)層。$"="Use condition: When Makoto has $1 {{A}} Energy. \nDeal Fire damage to <color\=#FFFF00>1</color> foe equal to $3 of ATK ($2 hits), and gain $4 [Special Moon Phase] stack for $5 turns. Stacks up to $6 times."
+r:"^釋放條件：(\d+)點{{A}}能量\n使<color\=#FFFF00>所有</color>友方同伴攻擊力提升(\d+\.\d+%)、傷害提升(\d+\.\d+%)，持續(\d+)回合。自身獲得(\d+)層『特殊月相』，持續(\d+)回合，上限(\d+)層。$"="Use condition: When Makoto has $1 {{A}} Energy. \nIncrease <color\=#FFFF00>party's</color> ATK by $2 and DMG Dealt by $3 for $4 turns. Grant Makoto $5 [Special Moon Phase] stack for $6 turns. Stacks up to $7 times."
 
 r:"^使<color\=#FFFF00>1名</color>同伴攻擊力提升(\d+%)，持續(\d+)回合。$"="Increase <color\=#FFFF00>1</color> ally's ATK by $1 for $2 turn."
 
-r:"^釋放『紅蓮·豪炎吞噬』時，消耗(\d+)層造成(\d+)次傷害$"="When using [Scarlet·Devouring Blaze], spend $1 stack to deal $1 hit of damage"
+r:"^釋放『紅蓮·豪炎吞噬』時，消耗(\d+)層造成(\d+)次傷害$"="When using [Scarlet: Devouring Blaze], spend $1 stack to deal $1 hit of damage"
 消耗『月相』造成傷害時，技能倍率提升=When spending [Moon Phase] \nto deal damage, increase skill multipler
 
 月相=Moon Phase
@@ -1285,19 +1285,19 @@ r:"^扣<color\=#000000>動</color>的扳機$"="P<color\=#000000>u</color>ll the 
 ----------
 Akihiko Sanada
 ----------
-r:"^自身獲得(\d+)層『鬥志』，對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，自身暴擊效果提高(\d+\.\d+%)，持續(\d+)回合。$"="Gain $1 stack of [Fighting Spirit], deal $2 ATK Elec damage to <color\=#FFFF00>all</color> foes, increase own Crit DMG by $3 for $4 turns."
-r:"^自身獲得(\d+)層『鬥志』，對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，自身暴擊效果提高<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Gain $1 stack of [Fighting Spirit], deal <color\=#FFFC40>$2</color> ATK Elec damage to all foes, increase own Crit DMG by <color\=#FFFC40>$3</color> for $4 turns."
+r:"^自身獲得(\d+)層『鬥志』，對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，自身暴擊效果提高(\d+\.\d+%)，持續(\d+)回合。$"="Grant Akihiko $1 [Fighting Spirit] stack. Deal Elec damage to <color\=#FFFF00>all</color> foes equal to $2 of ATK, and increase Akihiko's Crit DMG by $3 for $4 turns."
+r:"^自身獲得(\d+)層『鬥志』，對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，自身暴擊效果提高<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Grant Akihiko $1 [Fighting Spirit] stack. Deal Elec damage to all foes equal to <color\=#FFFC40>$2</color> of ATK, and increase Akihiko's Crit DMG by <color\=#FFFC40>$3</color> for $4 turns.
 
-r:"^自身獲得(\d+)層『鬥志』，對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，自身獲得(\d+)層『執念』。$"="Gain $1 stack of [Fighting Spirit], deal $2 ATK Elec damage to <color\=#FFFF00>all</color> foes, gain $3 stacks of [Obsession]."
-r:"^自身獲得(\d+)層『鬥志』，對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，自身獲得(\d+)層『執念』。$"="Gain $1 stack of [Fighting Spirit], deal <color\=#FFFC40>$2</color> ATK Elec damage to all foes, gain $3 stacks of [Obsession]."
+r:"^自身獲得(\d+)層『鬥志』，對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，自身獲得(\d+)層『執念』。$"="Grant Akihiko $1 [Fighting Spirit] stack. Deal Elec damage to <color\=#FFFF00>all</color> foes equal to $2 of ATK, and grant Akihiko $3 [Obsession] stacks."
+r:"^自身獲得(\d+)層『鬥志』，對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，自身獲得(\d+)層『執念』。$"="Grant Akihiko $1 [Fighting Spirit] stack. Deal Elec damage to all foes equal to <color\=#FFFC40>$2</color> of ATK, and grant Akihiko $3 [Obsession] stacks."
 
-r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，若自身存在(\d+)層及以上的『鬥志』則消耗所有『鬥志』，每消耗(\d+)層『鬥志』使該技能倍率提升(\d+\.\d+%)。$"="Deal $1 ATK Elec damage to <color\=#FFFF00>all</color> foes, if you have $2 or more stacks of [Fighting Spirit] then spend all [Fighting Spirit], each stack of [Fighting Spirit] spent increase skill multiplier by $4."
-r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，若自身存在(\d+)層及以上的『鬥志』則消耗所有『鬥志』，每消耗(\d+)層『鬥志』使該技能倍率提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Deal <color\=#FFFC40>$1</color> ATK Elec damage to all foes, if you have $2 or more stacks of [Fighting Spirit] then spend all [Fighting Spirit], each stack of [Fighting Spirit] spent increase skill multiplier by <color\=#FFFC40>$4</color>."
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，若自身存在(\d+)層及以上的『鬥志』則消耗所有『鬥志』，每消耗(\d+)層『鬥志』使該技能倍率提升(\d+\.\d+%)。$"="Deal Elec damage to <color\=#FFFF00>all</color> foes equal to $1 of ATK. If Akihiko has $2 or more [Fighting Spirit] stacks, spend all [Fighting Spirit], for each [Fighting Spirit] stack spent, increase skill multiplier by <color\=#FFFC40>$4</color>."
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的電擊屬性傷害，若自身存在(\d+)層及以上的『鬥志』則消耗所有『鬥志』，每消耗(\d+)層『鬥志』使該技能倍率提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Deal Elec damage to all foes equal to <color\=#FFFC40>$1</color> of ATK. If Akihiko has $2 or more [Fighting Spirit] stacks, spend all [Fighting Spirit], for each [Fighting Spirit] stack spent, increase skill multiplier by <color\=#FFFC40>$4</color>."
 
-r:"^釋放條件：(\d+)點{{A}}能量\n對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，該技能必定暴擊，暴擊效果固定為(\d+%)。$"="Use condition: When you have $1 {{A}} Energy\nDeal $2 ATK Elec damage to <color\=#FFFF00>all</color> foes, this skill will [Always CRIT], fixed Crit DMG at $3."
-r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，該技能必定暴擊，暴擊效果固定為(\d+%)。$"="Deal $1 ATK Elec damage to <color\=#FFFF00>all</color> foes, this skill will [Always CRIT], fixed Crit DMG at $2."
+r:"^釋放條件：(\d+)點{{A}}能量\n對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，該技能必定暴擊，暴擊效果固定為(\d+%)。$"="Use condition: When Akihiko has $1 {{A}} Energy\nDeal Elec damage to <color\=#FFFF00>all</color> foes equal to $2 of ATK, this skill will [Always CRIT], and has $3 Crit DMG."
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊屬性傷害，該技能必定暴擊，暴擊效果固定為(\d+%)。$"="Deal Elec damage to <color\=#FFFF00>all</color> foes equal to $1 of ATK, this skill will [Always CRIT], and has $2 Crit DMG."
 
-r:"^消耗(\d+)層『執念』，對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的物理屬性傷害。自身獲得(\d+)層『鬥志』。$"="Spend $1 stacks of [Obsession], deal $2 ATK Phys damage to <color\=#FFFF00>all</color> foes, gain $3 stack of [Fighting Spirit]."
+r:"^消耗(\d+)層『執念』，對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的物理屬性傷害。自身獲得(\d+)層『鬥志』。$"="Spend $1 [Obsession] stacks. Deal Phys damage to <color\=#FFFF00>all</color> foes equal to $2 of ATK, and grant Akihiko $3 [Fighting Spirit] stack."
 
 r:"^使<color\=#FFFF00>1名</color>同伴暴擊效果提升(\d+%)，持續(\d+)回合。$"="Increase <color\=#FFFF00>1</color> ally's Crit DMG by $1 for $2 turn."
 
@@ -1518,3 +1518,33 @@ r:"^大<color\=#000000>亂</color>鬥$"="S<color\=#000000>m</color>ash"
 r:"^塊<color\=#000000>莖</color>之力$"="T<color\=#000000>u</color>ber Power"
 r:"^幻<color\=#000000>彩</color>之羽$"="P<color\=#000000>r</color>ismatic Wings"
 r:"^總<color\=#000000>攻</color>擊傷害提升$"="A<color\=#000000>l</color>l-Out Attack DMG Up"
+
+----------
+Mitsuru Kirijo
+----------
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害，額外為其添加(\d+)層『霜結』，並使其防禦力降低\（{{A}}每有(\d+)點攻擊力，防禦力降低(\d+\.\d+%)\*『霜結』層數，最多計入(\d+)點攻擊力\），持續(\d+)回合。$"="Deal Ice damage to <color\=#FFFF00>1</color> foe equal to $1 of ATK, and inflict $2 [Frost] stacks on target. Decrease target's Defense by $4 for every $3 ATK * [Frost] stacks (up to $5 ATK) for $6 turns."
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，額外為其添加(\d+)層『霜結』，並使其防禦力降低\（{{A}}每有(\d+)點攻擊力，防禦力降低(\d+\.\d+%)\*『霜結』層數，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\），持續(\d+)回合。$"="Deal Ice damage to 1 foe equal to <color\=#FFFC40>$1</color> of ATK, and inflict $2 [Frost] stacks on target. Decrease target's Defense by $4 for every $3 ATK * [Frost] stacks (up to <color\=#FFFC40>$5</color> ATK) for $6 turns."
+
+r:"^使<color\=#FFFF00>1名</color>敵人陷入『女王凝視』狀態，防禦力降低(\d+\.\d+%)\（{{A}}每有(\d+)點的攻擊力，防禦力額外降低(\d+\.\d+%)，最多計入(\d+)點攻擊力\），受到傷害提升\（{{A}}每有(\d+)點的攻擊力，受到傷害提升(\d+%)，最多計入(\d+)點攻擊力\），本場戰鬥永久生效。『女王凝視』全場唯一，選擇新目標釋放時，會將『女王凝視』轉移至新目標。若處於『女王凝視』狀態的敵人死亡時，『女王凝視』會自動轉移至目前場上生命值最高的敵人。『女王凝視』轉移時，會同時轉移{{A}}添加的所有異常狀態。使用該技能後本回合仍可使用其他技能，該技能不視為{{B}}技能。$"="Inflict <color\=#FFFF00>1</color> foe with [Queen's Gaze]. Decrease DEF by $1, also decrease DEF by $3 for every $2 ATK (up to $4 ATK) and increase DMG Taken by $6 for every every $5 ATK (up to $7 ATK). This effect is permanent. Only 1 [Queen's Gaze] can be active. When selecting a new target, pass [Queen's Gaze] to the new target. When the target with [Queen's Gaze] is defeated, pass [Queen's Gaze] to the highest HP foe. When passing [Queen's Gaze], pass all debuffs inflicted by Mitsuru. Mitsuru can use other skills, this doesn't count as a Persona skill."
+r:"^使1名敵人陷入『女王凝視』狀態，防禦力降低<color\=#FFFC40>(\d+\.\d+%)</color>\（{{A}}每有(\d+)點的攻擊力，防禦力額外降低(\d+\.\d+%)，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\），受到傷害提升\（{{A}}每有(\d+)點的攻擊力，受到傷害提升(\d+%)，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\），本場戰鬥永久生效。『女王凝視』全場唯一，選擇新目標釋放時，會將『女王凝視』轉移至新目標。若處於『女王凝視』狀態的敵人死亡時，『女王凝視』會自動轉移至目前場上生命值最高的敵人。『女王凝視』轉移時，會同時轉移{{A}}添加的所有異常狀態。使用該技能後本回合仍可使用其他技能，該技能不視為{{B}}技能。$"="Inflict 1 foe with [Queen's Gaze]. Decrease DEF by <color\=#FFFC40>$1</color>, also decrease DEF by $3 for every $2 ATK (up to <color\=#FFFC40>$4</color> ATK) and increase DMG Taken by $6 for every every $5 ATK (up to <color\=#FFFC40>$7</color> ATK). This effect is permanent. Only 1 [Queen's Gaze] can be active. When selecting a new target, pass [Queen's Gaze] to the new target. When the target with [Queen's Gaze] is defeated, pass [Queen's Gaze] to the highest HP foe. When passing [Queen's Gaze], pass all debuffs inflicted by Mitsuru. Mitsuru can use other skills, this doesn't count as a Persona skill."
+
+r:"^根據解明怪盜各屬性的(\d+%)，提升在場的<color\=#FFFF00>所有</color>同伴的相應屬性值，持續(\d+)回合。而後對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害，目標每有(\d+)層『霜結』，技能傷害提升(\d+%)，目標『霜結』達到(\d+)層時，技能額外獲得(\d+%)的暴擊率提升。$"="Increase <color\=#FFFF00>party's</color> stats by $1 of Elucidator's stats for $2 turns. Deal Ice damage to <color\=#FFFF00>1</color> foe equal to $3 of ATK, for every $4 [Frost] stack on target, increase skill damage by $5. When target have $6 [Frost] stacks, increase skill Crit Rate by $7."
+r:"^根據解明怪盜各屬性的(\d+%)，提升在場的所有同伴的相應屬性值，持續(\d+)回合。而後對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，目標每有(\d+)層『霜結』，技能傷害提升(\d+%)，目標『霜結』達到(\d+)層時，技能額外獲得(\d+%)的暴擊率提升。$"="Increase party's stats by $1 of Elucidator's stats for $2 turns. Deal Ice damage to 1 foe equal to <color\=#FFFC40>$3</color> of ATK, for every $4 [Frost] stack on target, increase skill damage by $5. When target have $6 [Frost] stacks, increase skill Crit Rate by $7."
+
+r:"^釋放條件：(\d+)點{{C}}能量\n對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害，在(\d+)回合內將目標的『霜結』強化為『寒霜結』。友方同伴使用{{B}}技能攻擊處於『寒霜結』狀態下的敵人時，觸發{{A}}的『冷血之刃』，對目標額外造成1次『霜結』層數\*(\d+\.\d+%)攻擊力的傷害。$"="Use condition: When Mitsuru has $1 Theurgy Energy.\nDeal Ice damage to <color\=#FFFF00>1</color> foe equal to $2 of ATK. Upgrade target's [Frost] to [Rime] for $3 turns. When allies use a Persona skill to attack foes with [Rime], activate [Cruel Edge]. [Cruel Edge]: Deal damage to 1 foe equal to [Frost] stacks * $4 of ATK."
+
+r:"^使<color\=#FFFF00>1名</color>敵人獲得持續(\d+)回合的『能量標記』。每位S.E.E.S.成員首次攻擊該名敵人時，自身回復(\d+)點{{A}}能量；每名非S.E.E.S.成員首次攻擊該名敵人時，回復(\d+%)的HIGHLIGHT能量。$"="Inflict <color\=#FFFF00>1</color> foe with [Energy Mark]. When S.E.E.S. members attack that foe for the first time, restore $1 Theurgy Energy to that member; When non S.E.E.S. members attack that foe for the first time, restore $2 HIGHLIGHT Energy."
+
+霜結=Frost
+寒霜結=Rime
+極寒霜結=Stasis
+女王凝視=Queen's Gaze
+能量標記=Energy Mark
+S.E.E.S.成員或怪盜首次攻擊此單位可回復{{A}}能量或HIGHLIGHT能量=When S.E.E.S. members or Thieves attack this unit for the first time, restore Theurgy Energy or HIGHLIGHT Energy
+
+Combat Pop-ups
+r:"^霜<color\=#000000>結</color>$"="F<color\=#000000>r</color>ost"
+r:"^寒<color\=#000000>霜</color>結$"="R<color\=#000000>i</color>me"
+r:"^極<color\=#000000>寒</color>霜結$"="S<color\=#000000>t</color>asis"
+r:"^女<color\=#000000>王</color>凝視$"="Q<color\=#000000>u</color>een's Gaze"
+r:"^能<color\=#000000>量</color>標記$"="E<color\=#000000>n</color>ergy Mark"
