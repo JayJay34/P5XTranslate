@@ -550,11 +550,11 @@ r:"^戰鬥開始時，{{A}}獲得(.*)層<link\="s\|235"><u>『聖歌』</u></lin
 【逆轉之時】=[Hour of Reversal]
 逆轉之時=Hour of Reversal
 r:"^逆<color\=#000000>轉</color>之時$"="H<color\=#000000>o</color>ur of Reversal"
-r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n自身每累計獲得(.*)層『月相』或『特殊月相』，暴擊率提升<color\=#2899FF>(.*)</color>，持續(.*)回合。自身釋放{{A}}技能/{{B}}造成(.*)次及以上傷害時，傷害提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. \nIncrease Crit Rate by <color\=#2899FF>$3</color> when user gains $2 [Moon Phase] or [Special Moon Phase] for $4 turns. Increase DMG Dealt by <color\=#2899FF>$6</color> when user deals $5 or more hits of damage with {{A}} skills/{{B}}."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n自身每累計獲得(.*)層『月相』或『特殊月相』，暴擊率提升<color\=#2899FF>(.*)</color>，持續(.*)回合。自身釋放{{A}}技能/{{B}}造成(.*)次及以上傷害時，傷害提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>. \nWhen user gains $2 [Moon Phase] stacks or [Special Moon Phase], increase Crit Rate by <color\=#2899FF>$3</color> for $4 turns. When user deals $5 or more hits of damage with a {{A}} skill/{{B}}, increase DMG Dealt by <color\=#2899FF>$6</color>."
 名刀透徹=Translucent Blade
 【靜守之志】=[Silent Resolve]
 靜守之志=Silent Resolve
-r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n自身為友方同伴添加增益效果時，所有同伴傷害提升<color\=#2899FF>(.*)</color>，自身傷害額外提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. \nWhen user buffs allies, increase all allies' DMG Dealt by <color\=#2899FF>$2</color> and additionally increase user's DMG Dealt by <color\=#2899FF>$3</color> for $4 turns."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n自身為友方同伴添加增益效果時，所有同伴傷害提升<color\=#2899FF>(.*)</color>，自身傷害額外提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. \nWhen user buffs allies, increase party's DMG Dealt by <color\=#2899FF>$2</color> and increase user's DMG Dealt by <color\=#2899FF>$3</color>. Lasts for $4 turns."
 不動正宗·改=Fudo Masamune
 【虛無之刃】=[Blade of Nothing]
 虛無之刃=Blade of Nothing
@@ -583,7 +583,7 @@ SEES制式長弓=SEES Longbow
 薩巴茲烏斯=Sabazios
 【必殺力】=[Lethality]
 必殺力=Lethality
-r:"^暴擊效果提升<color\=#2899FF>(.*)</color>。\n自身獲得『執念』時，暴擊率提升<color\=#2899FF>(.*)</color>，上限(.*)層，持續(.*)回合。自身{{A}}技能/{{B}}/追加效果造成暴擊時，傷害額外獲得提升<color\=#2899FF>(.*)</color>。$"="Increase Crit DMG by <color\=#2899FF>$1</color>.\nWhen user has [Obsession], increase Crit Rate by <color\=#2899FF>$2</color> for $4 turns. Stacks up to $3 times. When landing a CRITICAL with a {{A}} skill/{{B}}/Follow Up, additionally increase DMG Dealt by <color\=#2899FF>$5</color>."
+r:"^暴擊效果提升<color\=#2899FF>(.*)</color>。\n自身獲得『執念』時，暴擊率提升<color\=#2899FF>(.*)</color>，上限(.*)層，持續(.*)回合。自身{{A}}技能/{{B}}/追加效果造成暴擊時，傷害額外獲得提升<color\=#2899FF>(.*)</color>。$"="Increase Crit DMG by <color\=#2899FF>$1</color>.\nWhen user gains [Obsession], increase Crit Rate by <color\=#2899FF>$2</color> for $4 turns. Stacks up to $3 times. When dealing critical damage with a {{A}} skill/{{B}}/Follow Up, increase DMG Dealt by <color\=#2899FF>$5</color>."
 地獄棘拳套=Wicked Cestus
 【爆發力】=[Explosiveness]
 爆發力=Explosiveness
@@ -675,6 +675,22 @@ r:"^追加效果造成傷害提升<color\=#2899FF>(.*)</color>。$"="Increase Fo
 星環=Stellar Ring
 【恒星】=[Star]
 恒星=Star
+
+聖槍朗基努斯=Longinus
+【命運貫穿】=[Piercing Fate]
+命運貫穿=Piercing Fate
+r:"^暴擊率提升<color\=#2899FF>(.*)</color>。\n每次添加『霜結』時，所有同伴獲得<color\=#2899FF>(.*)</color>的攻擊力提升，持續(.*)回合。自身釋放(.*)後，所有同伴暴擊效果提升<color\=#2899FF>(.*)</color>，自身暴擊效果額外提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase Crit Rate by <color\=#2899FF>$1</color>. \nWhen inflicting [Frost], increase party's ATK by <color\=#2899FF>$2</color> for $3 turns. After user uses Theurgy, increase party's Crit DMG by <color\=#2899FF>$5</color> and user's Crit DMG by <color\=#2899FF>$6</color> for $7 turns."
+玫瑰焰形劍=Rose Flamberge
+【優雅纏繞】=[Elegant Presence]
+優雅纏繞=Elegant Presence
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n為敵方添加『霜結』時，自身傷害提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. \nWhen inflicting [Frost], increase user's damage by <color\=#2899FF>$2</color> for $3 turn."
+切削者=Skrep
+【斷點穿刺】=[Breakpoint Puncture]
+斷點穿刺=Breakpoint Puncture
+r:"^攻擊擁有『女王凝視』的目標時自身傷害提升<color\=#2899FF>(.*)</color>。$"="When attacking target with [Queen's Gaze], increase user's damage by <color\=#2899FF>$1</color>."
+SEES制式西洋劍=SEES Rapier
+【標準刺擊】=[Standard Stab]
+標準刺擊=Standard Stab
 
 ----------
 STANDARD 5 STAR UNIT WEAPONS

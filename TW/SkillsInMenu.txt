@@ -593,10 +593,10 @@ Riot Gun
 r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊點射擊屬性傷害，命中率降低(\d+%)$"="Deal <color\=#fffc40>$1</color> ATK Gun damage to all foes, decrease Hit Rate by $2"
 
 Janosik
-r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，有(\d+%)的固定機率使敵人獲得『瞄準』:使敵人的防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。\n<b><size\=28><color\=#024068>撞針高速撞擊子彈並引爆火藥，硝煙中射出的致命一擊造成屬性傷害。若敵方處於瞄準狀態，則傷害提升。</color></size></b>$"="Deal <color\=#fffc40>$1</color> ATK Gun damage to 1 foe, with a $2 fixed chance to inflict the foe with [Mark]: Decrease DEF by <color\=#fffc40>$3</color> for $4 turns.\n<b><size\=28><color\=#024068>The firing pin strikes the bullet at high speed and detonates the gunpowder, firing a deadly shot through the smoke that deals Gun damage. Increase damage if the enemy is Marked.</color></size></b>"
-r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，有(\d+%)的固定機率使敵人獲得『瞄準』:使敵人的防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Deal <color\=#fffc40>$1</color> ATK Gun damage to 1 foe, with a $2 fixed chance to inflict the foe with [Mark]: Decrease DEF by <color\=#fffc40>$3</color> for $4 turns."
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，有(\d+%)的固定機率使敵人獲得『瞄準』:使敵人的防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。\n<b><size\=28><color\=#024068>撞針高速撞擊子彈並引爆火藥，硝煙中射出的致命一擊造成屬性傷害。若敵方處於瞄準狀態，則傷害提升。</color></size></b>$"="Deal <color\=#fffc40>$1</color> ATK Gun damage to 1 foe, with a $2 fixed chance to inflict the foe with [Marked]: Decrease DEF by <color\=#fffc40>$3</color> for $4 turns.\n<b><size\=28><color\=#024068>The firing pin strikes the bullet at high speed and detonates the gunpowder, firing a deadly shot through the smoke that deals Gun damage. Increase damage if the enemy is Marked.</color></size></b>"
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，有(\d+%)的固定機率使敵人獲得『瞄準』:使敵人的防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Deal <color\=#fffc40>$1</color> ATK Gun damage to 1 foe, with a $2 fixed chance to inflict the foe with [Marked]: Decrease DEF by <color\=#fffc40>$3</color> for $4 turns."
 
-r:"^對所有敵人造成(\d+)段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，若場上存在具有『瞄準』的敵人，則該技能的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，暴擊效果提升<color\=#fffc40>(\d+\.\d+%)</color>。\n<b><size\=28><color\=#024068>斧槍捕捉到敵影的瞬間，時間仿佛停了半刻，魚貫而出的子彈無情地貫穿敵人，對敵方群體造成多段傷害。</color></size></b>$"="Deal <color\=#fffc40>$2</color> ATK Gun damage to all foes $1 times. If there is a foe with [Mark], increase skill ATK by <color\=#fffc40>$3</color> and Crit DMG by <color\=#fffc40>$4</color>.\n<b><size\=28><color\=#024068>The moment the Axe Gun catches the shadow of a foe, time seems to stop for a moment, and the bullets that come out of the Axe Gun mercilessly penetrate the foe, dealing multiple damage to the foe group.</color></size></b>"
+r:"^對所有敵人造成(\d+)段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，若場上存在具有『瞄準』的敵人，則該技能的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，暴擊效果提升<color\=#fffc40>(\d+\.\d+%)</color>。\n<b><size\=28><color\=#024068>斧槍捕捉到敵影的瞬間，時間仿佛停了半刻，魚貫而出的子彈無情地貫穿敵人，對敵方群體造成多段傷害。</color></size></b>$"="Deal <color\=#fffc40>$2</color> ATK Gun damage to all foes $1 times. If there is a foe with [Marked], increase skill ATK by <color\=#fffc40>$3</color> and Crit DMG by <color\=#fffc40>$4</color>.\n<b><size\=28><color\=#024068>The moment the Axe Gun catches the shadow of a foe, time seems to stop for a moment, and the bullets that come out of the Axe Gun mercilessly penetrate the foe, dealing multiple damage to the foe group.</color></size></b>"
 
 --- Fire ---
 
@@ -832,7 +832,7 @@ Heat Riser
 r:"^使1名友方攻擊、防禦、效果命中、效果抵抗提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續3回合。$"="Increase 1 ally's ATK, DEF, Ailment ACC, and Ailment RES by <color\=#fffc40>$1</color> for 3 turns."
 
 Fire of Purification
-r:"^使所有友方角色的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每(\d+)攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)，持續(\d+)回合。並使技能主目標獲得「淨世之火」，持續(\d+)回合。「淨世之火」：對敵方角色釋放{{A}}技能造成傷害後，有(\d+%)的基礎機率使隨機(\d+)名敵人陷入燃燒狀態。$"="Increase all allies' ATK by <color\=#fffc40>$1</color> + <color\=#fffc40>$3</color> for every $2 ATK you have, up to $4 for $5 turns. Gives the main target [Fire of Purification] for $6 turns. [Fire of Purification]: After dealing {{A}} skill damage to foes, there is a $7 base chance to inflict $8 random foe with Burn."
+r:"^使所有友方角色的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每(\d+)攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)，持續(\d+)回合。並使技能主目標獲得「淨世之火」，持續(\d+)回合。「淨世之火」：對敵方角色釋放{{A}}技能造成傷害後，有(\d+%)的基礎機率使隨機(\d+)名敵人陷入燃燒狀態。$"="Increase party's ATK by <color\=#fffc40>$1</color> + <color\=#fffc40>$3</color> more for every $2 of the user's ATK, up to $4. Lasts for $5 turns. Grant the main target [Fire of Purification] for $6 turns. [Fire of Purification]: After dealing {{A}} skill damage to foes, there is a $7 base chance to inflict $8 random foe with Burn."
 
 Dominion Cohesion
 r:"^使所有同伴的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每(\d+)攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)，效果持續(\d+)回合。並使技能主目標造成的傷害額外提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每(\d+)攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)。效果持續(\d+)回合。$"="Increase party's ATK by <color\=#fffc40>$1</color> + <color\=#fffc40>$3</color> more for every $2 of the user's ATK, up to $4. Lasts for $5 turns. Increase main target's DMG Dealt by <color\=#fffc40>$6</color> + <color\=#fffc40>$8</color> more for every $7 of the user's ATK, up to $9. Lasts for $10 turn."
@@ -943,7 +943,7 @@ r:"^下雨時，造成異常效果時，效果命中提升(\d*\.?\d+%)。$"="Inc
 //Other
 r:"^技能消耗的HP降低(\d+(.\d+)?(%)?)。$"="Decrease HP cost of skills by $1."
 r:"^技能消耗的SP降低(\d+(.\d+)?(%)?)。$"="Decrease SP cost of skills by $1."
-r:"^每回合開始時，回復(\d+\.\d+%)最大生命值。$"="Restore $1 Max HP at the start of your turn."
+r:"^每回合開始時，回復(\d+\.\d+%)最大生命值。$"="Restore $1 of Max HP at the start of each turn."
 r:"^先制攻擊時回復(.*)最大生命值和(.*)點精力值。$"="Restore $1 Max HP and $2 SP at the start of each preemptive turn."
 r:"^戰鬥勝利後回復(\d+(.\d+)?(%)?)最大生命值和精力值。$"="Restore $1 of Max HP and SP after winning a battle."
 r:"^下雨時受到的傷害降低(\d+(.\d+)?(%)?)。$"="Decrease DMG Taken during Rain by $1."
