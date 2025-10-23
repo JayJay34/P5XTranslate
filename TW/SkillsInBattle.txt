@@ -744,12 +744,13 @@ sr:"^<color\=#FF0000>(.*)</color>免疫一次傷害……$"="<color\=#FF0000>$1<
 sr:"^<color\=#FF0000>(.*)</color>獲得了額外回合……$"="<color\=#FF0000>$1</color> gained Extra Action!"
 sr:"^<color\=#FF0000>(.*)</color>復活了…$"="<color\=#FF0000>$1</color> has been revived!"
 
-sr:"^<color\=#FF0000>(.*)</color>的適應性變化了……$"="<color\=#FF0000>$1</color> changed resistance!"
-sr:"^<color\=#FF0000>(.*)</color>適應性還原。$"="<color\=#FF0000>$1</color> reverted resistance!"
-sr:"^<color\=#FF0000>(.*)</color>的適應性恢復了……$"="<color\=#FF0000>$1</color> reverted resistance!"
+sr:"^<color\=#FF0000>(.*)</color>的適應性變化了……$"="<color\=#FF0000>$1</color> changed affinities!"
+sr:"^<color\=#FF0000>(.*)</color>的適應性發生了變化……$"="<color\=#FF0000>$1</color> changed affinities!"
+sr:"^<color\=#FF0000>(.*)</color>適應性還原。$"="<color\=#FF0000>$1</color> reverted affinities!"
+sr:"^<color\=#FF0000>(.*)</color>的適應性恢復了……$"="<color\=#FF0000>$1</color> reverted affinities!"
 sr:"^<color\=#FF0000>(.*)</color>的火焰耐性恢復了……$"="<color\=#FF0000>$1</color> reverted Fire resistance!"
 sr:"^<color\=#FF0000>(.*)</color>的電擊耐性恢復了……$"="<color\=#FF0000>$1</color> reverted Elec resistance!"
-sr:"^<color\=#FF0000>(.*)</color>適應性被改變……$"="<color\=#FF0000>$1</color> changed resistance..."
+sr:"^<color\=#FF0000>(.*)</color>適應性被改變……$"="<color\=#FF0000>$1</color> changed affinities..."
 sr:"^<color\=#FF0000>(.*)</color>獲得了(.*)耐性……$"="<color\=#FF0000>$1</color> gained Resist $2!"
 sr:"^<color\=#FF0000>(.*)</color>的全屬性適應性變為無……$"="<color\=#FF0000>$1</color> now Null all!"
 
@@ -1186,7 +1187,7 @@ r:"^處於額外回合時，暴擊率提升(\d+%)，暴擊效果提升(\d+%)$"="
 r:"^暴擊傷害提升(\d+(.\d+)?(%)?)$"="Increase Crit DMG by $1"
 r:"^暴擊效果提升(\d+(.\d+)?(%)?)$"="Increase Crit DMG by $1"
 r:"^造成電擊屬性傷害時，暴擊效果提升(\d+(.\d+)?(%)?)$"="When dealing Elec damage,\nincrease Crit DMG by $1"
-r:"^暴擊效果額外提升(\d+(.\d+)?(%)?)$"="Additionally increase Crit DMG by $1"
+r:"^暴擊效果額外提升(\d+(.\d+)?(%)?)$"="Increase Crit DMG by $1 more"
 r:"^受到的暴擊效果降低(\d+(.\d+)?(%)?)$"="Decrease Crit DMG Taken by $1"
 r:"^精力回復提升(\d+(.\d+)?(%)?)$"="Increase SP Recovery by $1"
 r:"^技巧精通提升(\d+(.\d+)?(%)?)$"="Increase TECHNICAL Mastery by $1"
@@ -1206,7 +1207,7 @@ r:"^最終傷害降低(\d+%)，受最終傷害降低(\d+%)$"="Decrease Final DMG
 r:"^最終傷害提升(\d+%)，可疊加(\d+)層$"="Increase Final DMG by $1, up to $2 stacks"
 r:"^每層提供(\d+%)的最終傷害加成，最多可疊加(\d+)層$"="Increase Final DMG by $1, up to $2 stacks"
 r:"^處於額外回合時，最終傷害提高(\d+(.\d+)?(%)?)$"="<size\=26>Increase Final DMG by $1 during Extra Action</size>"
-r:"^造成的最終傷害提升(\d+%)，若自身處於額外回合，造成的最終傷害額外提升(\d+%)$"="Increase Final DMG Dealt by $1, if you are in Extra Action, additionally increase Final DMG Dealt by $2"
+r:"^造成的最終傷害提升(\d+%)，若自身處於額外回合，造成的最終傷害額外提升(\d+%)$"="Increase Final DMG Dealt by $1, if you are in Extra Action, increase Final DMG Dealt by $2 more"
 r:"^造成持續傷害時，傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Dealt by $1 when dealing Damage Over Time"
 r:"^造成持續傷害時，最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1 when dealing Damage Over Time"
 獲得一定總傷害增幅=Increase Total DMG Amp
@@ -1224,8 +1225,8 @@ r:"^造成的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG Dealt by $
 r:"^技能傷害提升(\d+(.\d+)?(%)?)$"="Increase Skill DMG by $1"
 r:"^下一技能傷害提升(\d+(.\d+)?(%)?)$"="Increase your next Skill DMG by $1"
 r:"^下1個技能造成的傷害提升$"="Increase the DMG Dealt of your next skill"
-r:"^下次造成的物理傷害提升$"="Increase your next Physical ATK damage"
-r:"^下次造成的魔法傷害提升$"="Increase your next Magic ATK damage"
+r:"^下次造成的物理傷害提升$"="Increase next Phys Attack damage"
+r:"^下次造成的魔法傷害提升$"="Increase next Magic Attack damage"
 r:"^{{A}}傷害提升(\d+(.\d+)?(%)?)$"="Increase {{A}} DMG by $1"
 r:"^{{A}}傷害提高(\d+(.\d+)?(%)?)$"="Increase {{A}} DMG by $1"
 r:"^普通攻擊、槍械攻擊傷害提升(\d+(.\d+)?(%)?)$"="<size\=26>Increase Melee Attack/Gun Attack DMG by $1</size>"
@@ -1303,7 +1304,7 @@ r:"^剩餘護盾值：(\d+)$"="Shield: $1"
 r:"^HL能量恢復效率提升(\d+(.\d+)?(%)?)$"="Increase HIGHLIGHT Energy recovery rate by $1"
 
 sr:"^(.*)屬性的適應性變為耐$"="Change $1 resistance to Resist"
-適應性發生了變化=Resistance change
+適應性發生了變化=Affinities have changed
 
 免疫一切傷害=Nullify all damage
 免疫一次傷害=Nullify next damage

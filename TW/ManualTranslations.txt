@@ -888,7 +888,9 @@ r:"^(\d+)小時(\d+)分後開啟$"="Unlocks after $1h $2m"
 r:"^(\d+)時(\d+)分後開啟$"="Unlocks after $1h $2m"
 r:"^<sprite\=(\d+) tint\=1>天<sprite\=(\d+) tint\=1>時後開啟$"="Unlocks after <sprite\=$1 tint\=1>d <sprite\=$2 tint\=1>h"
 r:"^<sprite\=(\d+) tint\=1>天<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>時後開啟$"="Unlocks after <sprite\=$1 tint\=1>d <sprite\=$2 tint\=1><sprite\=$3 tint\=1>h"
+r:"^<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>天<sprite\=(\d+) tint\=1>小時後開啟$"="Unlocks after <sprite\=$1 tint\=1><sprite\=$2 tint\=1>d <sprite\=$3 tint\=1>h"
 r:"^<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>天<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>時後開啟$"="Unlocks after <sprite\=$1 tint\=1><sprite\=$2 tint\=1>d <sprite\=$3 tint\=1><sprite\=$4 tint\=1>h"
+r:"^<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>天<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>小時後開啟$"="Unlocks after <sprite\=$1 tint\=1><sprite\=$2 tint\=1>d <sprite\=$3 tint\=1><sprite\=$4 tint\=1>h"
 r:"^<sprite\=(\d+) tint\=1>時<sprite\=(\d+) tint\=1>分後開啟$"="Unlocks after <sprite\=$1 tint\=1>h <sprite\=$2 tint\=1>m"
 r:"^<sprite\=(\d+) tint\=1>時<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>分後開啟$"="Unlocks after <sprite\=$1 tint\=1>h <sprite\=$2 tint\=1><sprite\=$3 tint\=1>m"
 
@@ -1167,19 +1169,19 @@ Wonder Skill Tree
 『靈感火花』\n挑戰天鵝絨試練、提升{{A}}精算機等級和提升{{B}}探索度可以獲得，用於提升靈感技能等級的高級材料。=<size\=28>[Inspiration Spark]\nObtained from Velvet Trials, {{A}} Ticket Machine and {{B}} Exploration, used to level up Inspiration skill tree.</size>
 
 r:"^提升(\d+)生命值。$"="Increase HP by $1"
-r:"^提升(\d+)攻擊力。$"="Increase Attack by $1"
-r:"^提升(\d+)防禦力。$"="Increase Defense by $1"
+r:"^提升(\d+)攻擊力。$"="Increase ATK by $1"
+r:"^提升(\d+)防禦力。$"="Increase DEF by $1"
 
-r:"^提升(\d+%)攻擊力。$"="Increase Attack% by $1"
+r:"^提升(\d+%)攻擊力。$"="Increase ATK by $1"
 r:"^提升(\d+%)暴擊率。$"="Increase Crit Rate by $1"
 r:"^提升(\d+%)暴擊效果。$"="Increase Crit DMG by $1"
 
-r:"^提升(\d+%)生命值。$"="Increase HP% by $1"
+r:"^提升(\d+%)生命值。$"="Increase HP by $1"
 r:"^提升(\d+%)治療效果。$"="<size\=26>Increase Healing Effect by $1</size>"
 r:"^提升(\d+\.\d%)治療效果。$"="<size\=26>Increase Healing Effect by $1</size>"
 r:"^提升(\d+%)效果命中。$"="<size\=26>Increase Ailment ACC by $1</size>"
 
-r:"^提升(\d+%)防禦力。$"="Increase Defense% by $1"
+r:"^提升(\d+%)防禦力。$"="Increase DEF by $1"
 r:"^提升(\d+%)護盾效果。$"="<size\=26>Increase Shield Effect by $1</size>"
 r:"^提升(\d+\.\d%)護盾效果。$"="<size\=26>Increase Shield Effect by $1</size>"
 r:"^提升(\d+%)效果抵抗。$"="Increase Effect RES by $1"
@@ -1202,7 +1204,7 @@ r:"^重置靈感需要(\d+)個魂石，是否確定重置？（重置後所有�
 靈感輝光=Inspiration Glow
 『靈感輝光』\n主角等級達到80級後，解鎖並提升超我等級可以獲得，用於提升靈感技能等級的高級材料。=<size\=24>[Inspiration Glow]\nObtain after Wonder reaches level 80 and unlocks Superego levels, used to level up Inspiration skill tree.</size>
 獲得靈感輝光=<size\=25>Inspiration Glow</size>
-r:"^提升(\d+)生命值。\n提升(\d+)攻擊力。\n提升(\d+)防禦力。$"="Increase HP by $1 \nIncrease Attack by $2 \nIncrease Defense by $3"
+r:"^提升(\d+)生命值。\n提升(\d+)攻擊力。\n提升(\d+)防禦力。$"="Increase HP by $1 \nIncrease ATK by $2 \nIncrease DEF by $3"
 r:"^需要<size\=46><color\=#ffffff><sprite\=2 tint\=1></size>(\d+)</color>和<size\=46><color\=#ffffff><sprite\=17 tint\=1></size>(\d+)</color>升級天賦。$"="<size\=28>Need <size\=46><color\=#ffffff><sprite\=2 tint\=1></size>$1</color> and <size\=46><color\=#ffffff><sprite\=17 tint\=1></size>$2</color> to upgrade.</size>"
 r:"^需要<size\=46><color\=#ffffff><sprite\=30 tint\=1></size>1</color>升級天賦。$"="Need <size\=46><color\=#ffffff><sprite\=30 tint\=1></size>1</color> to upgrade."
 
@@ -3441,8 +3443,8 @@ r:"^己方行動次數：(\d+)$"="Number of Actions: $1"
 所有怪盜造成的傷害大幅提升，受到的傷害大幅降低=<size\=23>Heavily increase all Thieves' DMG Dealt;\nHeavily decrease all Thieves' DMG Taken</size>
 所有怪盜造成的最終傷害大幅提升，受到的最終傷害大幅降低=<size\=20>Heavily increase all Thieves' Final DMG Dealt;\nHeavily decrease all Thieves' Final DMG Taken</size>
 r:"^所有敵人最大生命值提升(\d+(.\d+)?(%)?)$"="Increase all foes' Max HP by $1"
-r:"^所有敵人攻擊力提升(\d+(.\d+)?(%)?)$"="Increase all foes' Attack by $1"
-r:"^所有敵人防禦力提升(\d+(.\d+)?(%)?)$"="Increase all foes' Defense by $1"
+r:"^所有敵人攻擊力提升(\d+(.\d+)?(%)?)$"="Increase all foes' ATK by $1"
+r:"^所有敵人防禦力提升(\d+(.\d+)?(%)?)$"="Increase all foes' DEF by $1"
 r:"^所有敵人受到傷害降低(\d+(.\d+)?(%)?)$"="Decrease all foes' DMG Taken by $1"
 
 終末難度=Apocalypse Difficulty
@@ -3518,8 +3520,8 @@ HL提升=HIGHLIGHT Buff
 持續提升=Damage Over Time Buff
 
 r:"^所有怪盜最大生命值提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' HP by $1"
-r:"^所有怪盜攻擊力提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' Attack by $1"
-r:"^所有怪盜防禦力提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' Defense by $1"
+r:"^所有怪盜攻擊力提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' ATK by $1"
+r:"^所有怪盜防禦力提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' DEF by $1"
 r:"^所有怪盜暴擊率提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' Crit Rate by $1"
 r:"^所有怪盜暴擊效果提升(\d+(.\d+)?(%)?)$"="Increase all Thieves' Crit DMG by $1"
 r:"^所有怪盜穿透提升(\d+(.\d+)?(%)?)"="Increase all Thieves' Pierce by $1"
