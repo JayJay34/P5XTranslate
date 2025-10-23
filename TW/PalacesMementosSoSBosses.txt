@@ -2451,6 +2451,30 @@ r:"^米<color\=#000000>迦</color>勒的守護$"="M<color\=#000000>i</color>chae
 r:"^加<color\=#000000>百</color>列的警告$"="G<color\=#000000>a</color>briel's Warning"
 r:"^拉<color\=#000000>斐</color>爾的療癒$"="R<color\=#000000>a</color>phael's Healing"
 
+r:"^1、皇帝每(\d+)次受到技能傷害會釋放『範式轉移』，『範式轉移』會改變自身的適應性。此外，皇帝進入戰鬥時，會釋放『範式轉移』。\n2、皇帝進入二階段時，會釋放『範式轉移』。每隔一回合，會釋放『蓄力』：自身獲得(\d+)層『力量積蓄』；下次釋放物理傷害技能時，若自身擁有『力量積蓄』，則消耗所有『力量積蓄』層數使造成的技能傷害提升(\d+%)。被技能打出弱點傷害時，會丟失(\d+)層『力量積蓄』。$"="1. Emperor will use [Paradigm Shift] when taking skill damage $1 times, [Paradigm Shift] will change Emperor's affinities. At the start of battle, Emperor will use [Paradigm Shift]. \n2. When the Emperor enters phase 2, it will use [Paradigm Shift]. Emperor will use [Charge] every other turn: User gains $2 [Accumulated Power] stacks; When using the next Phys skill, if user has [Accumulated Power], spend all [Accumulated Power] to increase skill damage by $3. When taking Weak damage from skills, lose $4 [Accumulated Power] stack."
+範式轉移=Paradigm Shift
+r:"^範<color\=#000000>式</color>轉移$"="P<color\=#000000>a</color>radigm Shift"
+r:"^每受到(\d+)次技能傷害釋放1次，改變自身的適應性。$"="Change user's affinities when taking skill damage $1 times."
+力量積蓄=Accumulated Power
+殘影=Afterimage
+r:"^自身獲得(\d+)層「力量積蓄」；下次釋放物理傷害技能時，若自身擁有「力量積蓄」，則消耗所有「力量積蓄」層數使造成的技能傷害提升(\d+%)。被技能打出弱點傷害時，會丟失(\d+)層「力量積蓄」。$"="User gains $1 [Accumulated Power] stacks; When using the next Phys skill, if user has [Accumulated Power], spend all [Accumulated Power] to increase skill damage by $2. When taking Weak damage from skills, lose $3 [Accumulated Power] stack."
+
+所有怪盜造成的最終傷害大幅提升，受到的最終傷害大幅降低；所有怪盜行動前，使所有敵人的全適應性變為弱。=Heavily increase all Thieves' Final DMG Dealt; Heavily decrease all Thieves' Final DMG Taken; Before all Thieves' action, change all foes' affinities to Weak
+高頻轉移=Rapid Shift
+r:"^每受到(\d+)次技能傷害釋放一次「範式轉移」，改變自身的適應性。$"="Use [Paradigm Shift] when taking skill damage $1 times."
+緊急護駕=Urgent Escort
+釋放「範式轉移」改變自身適應性時，部分適應性會變為無。=When using [Paradigm Shift], charge some affinities to Null.
+神授皇權=Divine Right
+戰鬥中，每次釋放「範式轉移」後，獲得永久攻擊力、防禦力提升。=In battle, after using [Paradigm Shift], permanently increase ATK and DEF.
+王之蓄力=King's Charge
+r:"^蓄力時，獲得的「力量積蓄」層數提升至(\d+)層；擁有「力量積蓄」時，造成的技能傷害大幅提升。$"="When charging, increase [Accumulated Power] gain to $1 stacks; When Emperor has [Accumulated Power], heavily increase skill DMG Dealt."
+歎息之牆=Wall of Sighs
+受到非弱點傷害時，獲得高額的最終傷害減免=When taking non Weak damage, \ngain severe Final DMG RES
+受到非弱點傷害時，獲得高額的最終傷害減免。=When taking non Weak damage, gain severe Final DMG RES.
+
+r:"^直接挑戰LV.(\d+)$"="Challenge LV.$1"
+r:"^每層提升自身(\d+%)的攻擊力、防禦力。$"="Increase ATK and DEF by $1 per stack"
+
 ----------
 Sea of Souls Trials (SoS)
 ----------
@@ -2531,7 +2555,7 @@ r:"^擊敗首領（(\d+)/(\d+)）$"="Defeat Boss ($1/$2)"
 「<color\=#ff3b37>快速通關</color>」滿星通關的區域=[<color\=#ff3b37>Quick Clear</color>] Trials with all stars
 r:"^<color\=#FFFFFF>累計分數：</color><color\=#FFF000>(\d+)</color>$"="<color\=#FFFFFF>Score:</color><color\=#FFF000>$1</color>"
 
-看來您準備好鍛煉自己的慾望了。=If I may speak, you appear ready to face a trial.
+看來您準備好鍛煉自己的慾望了。=If I may speak, \nyou appear ready to face a trial.
 這是為了客人您準備的物資。=Here, you may see what I have prepared.
 
 上期回顧=Recap
@@ -2702,6 +2726,6 @@ sr:"^進入戰鬥時，使所有友方獲得(\d+)層『(.*)』；使用追加效
 r:"^厭<color\=#000000>氧</color>反應$"="A<color\=#000000>n</color>aerobic Reaction"
 
 螢光菌毯=Fluorescent Creep
-r:"^使用(.*)後自身獲得(\d+)層『(.*)』，使用HIGHLIGHT後自身獲得(\d+)層『(.*)』。『(.*)』：每層提供(\d+%)的最終傷害加成，持續(\d+)回合（每層獨立計算），最多可疊加(\d+)層。$"="<size\=21>After using Theurgy, user gains $2 [$3] stacks; After using HIGHLIGHT, user gains $4 [$5] stack. [$6]: Increase Final DMG by $7 for $8 turn. Stacks up to $9 times, and stacks are spent separately.</size>"
+sr:"^使用(.*)後自身獲得(\d+)層『(.*)』，使用HIGHLIGHT後自身獲得(\d+)層『(.*)』。『(.*)』：每層提供(\d+%)的最終傷害加成，持續(\d+)回合（每層獨立計算），最多可疊加(\d+)層。$"="<size\=22>After using Theurgy, user gains $2 [$3] stacks; After using HIGHLIGHT, user gains $4 [$5] stack. [$6]: Increase Final DMG by $7 for $8 turn. Stacks up to $9 times, and stacks are spent separately.</size>"
 熱情孢子=Passionate Spores
 r:"^熱<color\=#000000>情</color>孢子$"="P<color\=#000000>a</color>ssionate Spores"
