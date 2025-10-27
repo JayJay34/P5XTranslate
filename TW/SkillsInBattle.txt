@@ -734,8 +734,9 @@ sr:"^<color\=#FF0000>(.*)</color>造成傷害提升……$"="<color\=#FF0000>$1<
 sr:"^<color\=#FF0000>(.*)</color>造成傷害提升了……$"="<color\=#FF0000>$1</color> DMG Dealt Up!"
 sr:"^<color\=#FF0000>(.*)</color>造成的傷害提升了……$"="<color\=#FF0000>$1</color> DMG Dealt Up!"
 
-sr:"^<color\=#FF0000>(.*)</color>多種屬性略微提升了……$"="<color\=#FF0000>$1</color> Many Stats Up!"
-sr:"^<color\=#FF0000>(.*)</color>多種屬性略微降低了……$"="<color\=#FF0000>$1</color> Many Stats Down!"
+sr:"^<color\=#FF0000>(.*)</color>多種屬性略微提升了……$"="<color\=#FF0000>$1</color> many Stats Up!"
+sr:"^<color\=#FF0000>(.*)</color>多種屬性提升了……$"="<color\=#FF0000>$1</color> many Stats Up!"
+sr:"^<color\=#FF0000>(.*)</color>多種屬性略微降低了……$"="<color\=#FF0000>$1</color> many Stats Down!"
 sr:"^<color\=#FF0000>(.*)</color>暴擊率提升了……$"="<color\=#FF0000>$1</color> Crit Rate Up!"
 r:"^<color\=#FF0000>所有敵人</color>受到的傷害提升了……$"="<color\=#FF0000>All foes</color> DMG Taken Up!"
 
@@ -773,6 +774,7 @@ sr:"^<color\=#FF0000>(.*)</color>進入了狂怒狀態！$"="<color\=#FF0000>$1<
 sr:"^<color\=#FF0000>(.*)</color>進入了狂暴狀態……$"="<color\=#FF0000>$1</color> entered Frenzy..."
 sr:"^<color\=#FF0000>(.*)</color>進入了懊惱狀態…$"="<color\=#FF0000>$1</color> entered Vexation..."
 sr:"^<color\=#FF0000>(.*)</color>進入了懊惱狀態……$"="<color\=#FF0000>$1</color> entered Vexation..."
+sr:"^<color\=#FF0000>(.*)</color>進入了專心致志狀態……$"="<color\=#FF0000>$1</color> entered Concentrate..."
 sr:"^<color\=#FF0000>(.*)</color>「(.*)」了……$"="<color\=#FF0000>$1</color> is [$2]..."
 sr:"^<color\=#FF0000>(.*)</color>進入「(.*)」……$"="<color\=#FF0000>$1</color> entered [$2]..."
 sr:"^<color\=#FF0000>(.*)</color>進入「(.*)」狀態……$"="<color\=#FF0000>$1</color> entered [$2]..."
@@ -941,6 +943,9 @@ r:"^H<color\=#000000> L</color>特化$"="H<color\=#000000>L</color> Buff"
 
 r:"^戰<color\=#000000>意</color>共鳴$"="W<color\=#000000>a</color>rrior's Resonance"
 
+r:"^免<color\=#000000>疫</color>倒地$"="N<color\=#000000>u</color>ll Down"
+r:"^免<color\=#000000>疫</color>精神異常及控制$"="N<color\=#000000>u</color>ll Mental/Control Ailment"
+
 ----------
 Combat Pop-ups for debuffs
 ----------
@@ -995,6 +1000,7 @@ r:"^受<color\=#000000>詛</color>咒傷害提升$"="C<color\=#000000>u</color>r
 r:"^弱<color\=#000000>點</color>暴露$"="W<color\=#000000>e</color>akness Exposed"
 
 r:"^瞄<color\=#000000>準</color>$"="M<color\=#000000>a</color>rked"
+r:"^適<color\=#000000>應</color>性改變$"="C<color\=#000000>h</color>anged Affinities"
 r:"^物<color\=#000000>理</color>弱點$"="P<color\=#000000>h</color>ys Weakness"
 r:"^射<color\=#000000>擊</color>弱點$"="G<color\=#000000>u</color>n Weakness"
 r:"^火<color\=#000000>焰</color>弱點$"="F<color\=#000000>i</color>re Weakness"
@@ -1044,6 +1050,7 @@ HIGHLIGHT傷害提升=Increase HIGHLIGHT DMG
 最終傷害提升=Increase Final DMG
 最終傷害提高=Increase Final DMG
 造成最終傷害提升=Increase Final DMG Dealt
+免傷率提升=Increase DMG RES
 受傷害提升=Increase DMG Taken
 受到傷害提高=Increase DMG Taken
 受到傷害提升=Increase DMG Taken
@@ -1201,6 +1208,7 @@ r:"^基於效果命中提升最終傷害，當前提升(\d+(.\d+)?(%)?)$"="Incre
 r:"^效果抵抗提升(\d+(.\d+)?(%)?)$"="Increase Ailment RES by $1"
 r:"^最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1"
 r:"^最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1"
+r:"^所有角色最終傷害提升(\d+(.\d+)?(%)?)$"="Increase all character's Final DMG by $1"
 r:"^提升(\d+(.\d+)?(%)?)的最終傷害$"="Increase Final DMG by $1"
 r:"^最終傷害提升(\d+%)，受最終傷害提升(\d+%)$"="Increase Final DMG by $1; \nIncrease Final DMG Taken by $2"
 r:"^最終傷害降低(\d+%)，受最終傷害降低(\d+%)$"="Decrease Final DMG by $1; \nDecrease Final DMG Taken by $2"
@@ -1225,8 +1233,9 @@ r:"^造成的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG Dealt by $
 r:"^技能傷害提升(\d+(.\d+)?(%)?)$"="Increase Skill DMG by $1"
 r:"^下一技能傷害提升(\d+(.\d+)?(%)?)$"="Increase your next Skill DMG by $1"
 r:"^下1個技能造成的傷害提升$"="Increase the DMG Dealt of your next skill"
-r:"^下次造成的物理傷害提升$"="Increase next Phys Attack damage"
-r:"^下次造成的魔法傷害提升$"="Increase next Magic Attack damage"
+r:"^下次造成的物理傷害提升$"="Increase next Phys damage"
+r:"^下次造成的魔法傷害提升$"="Increase next Magic damage"
+r:"^免傷率提升(\d+(.\d+)?(%)?)$"="Increase DMG RES by $1"
 r:"^{{A}}傷害提升(\d+(.\d+)?(%)?)$"="Increase {{A}} DMG by $1"
 r:"^{{A}}傷害提高(\d+(.\d+)?(%)?)$"="Increase {{A}} DMG by $1"
 r:"^普通攻擊、槍械攻擊傷害提升(\d+(.\d+)?(%)?)$"="<size\=26>Increase Melee Attack/Gun Attack DMG by $1</size>"
@@ -1431,26 +1440,26 @@ r:"^受到萬能傷害提升(\d+(.\d+)?(%)?)$"="Increase Almighty DMG Taken by $
 r:"^受到萬能傷害提高(\d+(.\d+)?(%)?)$"="Increase Almighty DMG Taken by $1"
 
 物理弱點=Phys Weakness
-物理屬性的適應性變為弱=Changed Phys resistance to weak
+物理屬性的適應性變為弱=Changed Phys affinity to Weak
 射擊弱點=Gun Weakness
-射擊屬性的適應性變為弱=Changed Gun resistance to weak
+射擊屬性的適應性變為弱=Changed Gun affinity to Weak
 火焰弱點=Fire Weakness
-火焰屬性的適應性變為弱=Changed Fire resistance to weak
+火焰屬性的適應性變為弱=Changed Fire affinity to Weak
 冰凍弱點=Ice Weakness
-冰凍屬性的適應性變為弱=Changed Ice resistance to weak
+冰凍屬性的適應性變為弱=Changed Ice affinity to Weak
 電擊弱點=Elec Weakness
-電擊屬性的適應性變為弱=Changed Elec resistance to weak
+電擊屬性的適應性變為弱=Changed Elec affinity to Weak
 疾風弱點=Wind Weakness
-疾風屬性的適應性變為弱=Changed Wind resistance to weak
+疾風屬性的適應性變為弱=Changed Wind affinity to Weak
 念動弱點=Psy Weakness
-念動屬性的適應性變為弱=Changed Psy resistance to weak
+念動屬性的適應性變為弱=Changed Psy affinity to Weak
 核熱弱點=Nuke Weakness
-核熱屬性的適應性變為弱=Changed Nuke resistance to weak
+核熱屬性的適應性變為弱=Changed Nuke affinity to Weak
 祝福弱點=Bless Weakness
-祝福屬性的適應性變為弱=Changed Bless resistance to weak
+祝福屬性的適應性變為弱=Changed Bless affinity to Weak
 詛咒弱點=Curse Weakness
-詛咒屬性的適應性變為弱=Changed Curse resistance to weak
-所有適應性變為弱點=Changed all resistance to weak
+詛咒屬性的適應性變為弱=Changed Curse affinity to Weak
+所有適應性變為弱點=Changed all affinities to Weak
 
 r:"^受到的治療效果降低(\d+(.\d+)?(%)?)$"="Decrease Healing Received by $1"
 
