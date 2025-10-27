@@ -882,17 +882,21 @@ r:"^(\d+)天(\d+)時後結束$"="Ends in $1d $2h"
 r:"^(\d+)小時(\d+)分後結束$"="Ends in $1h $2m"
 r:"^(\d+)時(\d+)分後結束$"="Ends in $1h $2m"
 
-r:"^(\d+)天(\d+)小時後開啟$"="Unlocks after $1d $2h"
 r:"^(\d+)天(\d+)時後開啟$"="Unlocks after $1d $2h"
-r:"^(\d+)小時(\d+)分後開啟$"="Unlocks after $1h $2m"
+r:"^(\d+)天(\d+)小時後開啟$"="Unlocks after $1d $2h"
 r:"^(\d+)時(\d+)分後開啟$"="Unlocks after $1h $2m"
+r:"^(\d+)小時(\d+)分後開啟$"="Unlocks after $1h $2m"
 r:"^<sprite\=(\d+) tint\=1>天<sprite\=(\d+) tint\=1>時後開啟$"="Unlocks after <sprite\=$1 tint\=1>d <sprite\=$2 tint\=1>h"
+r:"^<sprite\=(\d+) tint\=1>天<sprite\=(\d+) tint\=1>小時後開啟$"="Unlocks after <sprite\=$1 tint\=1>d <sprite\=$2 tint\=1>h"
 r:"^<sprite\=(\d+) tint\=1>天<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>時後開啟$"="Unlocks after <sprite\=$1 tint\=1>d <sprite\=$2 tint\=1><sprite\=$3 tint\=1>h"
+r:"^<sprite\=(\d+) tint\=1>天<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>小時後開啟$"="Unlocks after <sprite\=$1 tint\=1>d <sprite\=$2 tint\=1><sprite\=$3 tint\=1>h"
 r:"^<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>天<sprite\=(\d+) tint\=1>小時後開啟$"="Unlocks after <sprite\=$1 tint\=1><sprite\=$2 tint\=1>d <sprite\=$3 tint\=1>h"
 r:"^<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>天<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>時後開啟$"="Unlocks after <sprite\=$1 tint\=1><sprite\=$2 tint\=1>d <sprite\=$3 tint\=1><sprite\=$4 tint\=1>h"
 r:"^<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>天<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>小時後開啟$"="Unlocks after <sprite\=$1 tint\=1><sprite\=$2 tint\=1>d <sprite\=$3 tint\=1><sprite\=$4 tint\=1>h"
 r:"^<sprite\=(\d+) tint\=1>時<sprite\=(\d+) tint\=1>分後開啟$"="Unlocks after <sprite\=$1 tint\=1>h <sprite\=$2 tint\=1>m"
+r:"^<sprite\=(\d+) tint\=1>小時<sprite\=(\d+) tint\=1>分後開啟$"="Unlocks after <sprite\=$1 tint\=1>h <sprite\=$2 tint\=1>m"
 r:"^<sprite\=(\d+) tint\=1>時<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>分後開啟$"="Unlocks after <sprite\=$1 tint\=1>h <sprite\=$2 tint\=1><sprite\=$3 tint\=1>m"
+r:"^<sprite\=(\d+) tint\=1>小時<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>分後開啟$"="Unlocks after <sprite\=$1 tint\=1>h <sprite\=$2 tint\=1><sprite\=$3 tint\=1>m"
 
 擁有:=Owned: 
 擁有=Owned
@@ -3312,6 +3316,9 @@ r:"^累計開啟(\d+)個寶箱$"="Open $1 Treasure Chests"
 開啟所有寶箱=Open All Treasure Chests
 r:"^解鎖「夢境之章」(\d+)個{{A}}的故事$"="Unlock $1 [Chapter of Dreams] for {{A}}"
 sr:"^解鎖「真宵堂」收藏品「(.*)」$"="Unlock the Antique [$1]"
+sr:"^在「(.*)·(.*)」擊敗(\d+)次交錯之影$"="Defeat $3 Tangled Shadow in [$1 · $2]"
+sr:"^在「(.*)·(.*)」解鎖(\d+)個核心古董品$"="Unlock $3 Core Antique in [$1 · $2]"
+sr:"^在「(.*)·(.*)」解鎖(\d+)次任意角色的羈絆效果$"="Unlock $3 Bond Effect in [$1 · $2]"
 r:"^成功進行(\d+)次抓娃娃$"="Obtain a doll $1 times"
 
 每天5:00刷新任務=Refresh at 5 am daily
