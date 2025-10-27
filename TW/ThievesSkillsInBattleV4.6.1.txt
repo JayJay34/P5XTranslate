@@ -686,7 +686,7 @@ r:"^當前時速：(\d+(.\d+)?(%)?)km/h$"="Current Speed: $1 km/h"
 r:"^處於額外回合時，造成的傷害提升(\d+(.\d+)?(%)?)$"="<size\=26>Increase DMG Dealt during Extra Action by $1</size>"
 r:"^對倒地的目標造成的傷害提升(\d+(.\d+)?(%)?)$"="<size\=27>Increase DMG Dealt to Downed targets by $1</size>"
 強擊=Strong Strike
-r:"^下次造成傷害時，使主目標額外降低1點倒地值$"="The next damage will additionally decrease the main target's Down Guage by 1"
+r:"^下次造成傷害時，使主目標額外降低1點倒地值$"="The next damage will additionally decrease the main target's Down Points by 1"
 
 Combat Pop-ups
 r:"^累<color\=#000000>積</color>獲得時速$"="A<color\=#000000>c</color>cumulated Speed"
@@ -918,7 +918,7 @@ r:"^當前解析進度為(\d+%)$"="Analysis Progress at $1"
 
 r:"^受到傷害提升(\d+\.\d+%)，受到傷害後{{A}}獲得(\d+%)解析進度。$"="Increase DMG Taken by $1; After taking damage, {{A}} gains $2 Analysis Progress"
 擾亂病毒=Disruption Virus
-適應性發生了改變=Changed resistance
+適應性發生了改變=Changed affinites
 r:"^受到弱點傷害提升(\d+%)$"="Increase Weak DMG Taken by $1"
 漏洞分析=Vulnerability Analysis
 使用『無聲侵襲』或『數據破解』時，技能效果提升。=Increase skill effect when using \n[Silent Hacking] or [Data Crack]
@@ -1451,13 +1451,14 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的電擊�
 超極限=Super Limit
 強化下一次技能『激情迴旋刃』=Evolve the next [Wings of Passion]
 強化下一次技能『裁決雷擊』=Evolve the next [Thunderous Judgement]
-擊倒敵人時，使敵人防禦力降低=<size\=26>When knocking down a foe, decrease foe's DEF</size>
+擊倒敵人時，使敵人防禦力降低=When knocking down a foe, \ndecrease foe's DEF
 『重創』額外使敵人防禦力降低=[Devastation] additionally decrease foe's DEF
-r:"^攻擊倒地單位時攻擊力提升(\d+(.\d+)?(%)?)$"="<size\=24>When attacking downed foes, increase ATK by $1</size>"
+r:"^攻擊倒地單位時攻擊力提升(\d+(.\d+)?(%)?)$"="When attacking Downed foes, \nincrease ATK by $1"
 
 Combat Pop-ups
 r:"^重<color\=#000000>創</color>$"="D<color\=#000000>e</color>vastation"
 r:"^擊<color\=#000000>破</color>$"="B<color\=#000000>r</color>eak"
+r:"^超<color\=#000000>極</color>限$"="S<color\=#000000>u</color>per Limit"
 r:"^高<color\=#000000>效</color>指導$"="G<color\=#000000>u</color>idance of the Efficient"
 r:"^正<color\=#000000>義</color>引導$"="G<color\=#000000>u</color>ided by Justice"
 r:"^不<color\=#000000>滅</color>教師魂$"="U<color\=#000000>n</color>dying Teacher's Soul"
@@ -1540,8 +1541,10 @@ r:"^使<color\=#FFFF00>1名</color>敵人獲得持續(\d+)回合的『能量標�
 寒霜結=Rime
 能觸發『冷血之刃』及所有技能中『霜結』相關的效果。=Can activate [Cruel Edge] and \nall [Frost] effects
 極寒霜結=Stasis
+能觸發『冷血之刃』及所有技能中『霜結』、『寒霜結』相關的效果。=Can activate [Cruel Edge] and \nall [Frost], [Rime] effects
 女王凝視=Queen's Gaze
 轉移時，可轉移{{A}}添加的所有異常狀態=When passing, \npass all debuffs inflicted by {{A}}
+轉移時，可轉移所有異常狀態=When passing, \npass all debuffs
 能量標記=Energy Mark
 S.E.E.S.成員或怪盜首次攻擊此單位可回復{{A}}能量或HIGHLIGHT能量=When S.E.E.S. members or Thieves attack this unit for the first time, restore Theurgy Energy or HIGHLIGHT Energy
 
