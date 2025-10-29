@@ -29,6 +29,7 @@ r:"^已挑戰(\d+)次$"="Attempt(s): $1"
 r:"^挑戰獎勵：$"="Rewards:"
 陣容參考=Reference
 r:"^採用比例：(\d+(.\d+)?(%)?)$"="Use Rate: $1"
+已成功採用陣容=Used Party
 r:"^需至少設置(\d+)名出戰怪盜，才能進行挑戰。$"="Need to have at least $1 Thieves in order to challenge."
 沒有更多使用次數，無法設置參戰。=No more Thieves Usage.
 
@@ -89,6 +90,7 @@ r:"^隊伍中編入(\d+)名及以上<color\=#FFFC40>反抗/支配</color>怪盜�
 r:"^反抗/支配怪盜暴擊率提升(\d+%)，暴擊效果降低(\d+%)，造成<color\=#FFFC40>暴擊</color>時最終傷害提升(\d+%)$"="<size\=25>Increase the Crit Rate of Assassin/Sweeper Thieves by $1 and decrease their Crit DMG by $2; Increase <color\=#FFFC40>Critical</color> Final DMG by $3</size>"
 r:"^心之磁場(.*)$"="Hearts Magnetic Field $1"
 r:"^<color\=#ff381d>『{{A}}』</color>成員最終傷害提升(\d+(.\d+)?(%)?)$"="<size\=27>Increase the Final DMG of \n<color\=#ff381d>[The Phantom Thieves of Hearts]</color> by $1</size>"
+r:"^月之磁場(.*)$"="Moon Magnetic Field $1"
 r:"^<color\=#ff381d>『S.E.E.S.』</color>成員最終傷害提升(\d+(.\d+)?(%)?)$"="Increase the Final DMG of <color\=#ff381d>[S.E.E.S.]</color> members by $1"
 
 r:"^屬性磁場(.*)$"="Attribute Magnetic Field $1"
@@ -137,7 +139,7 @@ r:"^HL磁場(.*)$"="HIGHLIGHT Magnetic Field $1"
 r:"^HIGHLIGHT能量回復速度降低(\d+%)，所有怪盜HIGHLIGHT的最終傷害提高(\d+%)"="<size\=28>Decrease HIGHLIGHT Energy recovery rate by $1, increase all HIGHLIGHT Final DMG by $2</size>"
 r:"^HIGHLIGHT能量回復速度降低(\d+%)，所有怪盜<color\=#FFFC40>HIGHLIGHT</color>的最終傷害提高(\d+%)"="<size\=28>Increase <color\=#FFFC40>HIGHLIGHT</color> Final DMG by $2, decrease HIGHLIGHT Energy recovery rate by $1</size>"
 r:"^神通磁場(.*)$"="Theurgy Magnetic Field $1"
-r:"^所有角色使用<color\=#FFFC40>{{A}}</color>後，最終傷害提高(\d+%)，持續(\d+)回合$"="<size\=28>Increase Final DMG by $1 after using <color\=#FFFC40>{{A}}</color> for $2 turns</size>"
+r:"^所有角色使用<color\=#FFFC40>{{A}}</color>後，最終傷害提高(\d+%)，持續(\d+)回合$"="<size\=28>After using <color\=#FFFC40>{{A}}</color>, increase user's Final DMG by $1 for $2 turns</size>"
 r:"^總攻磁場(.*)$"="All-Out Attack Magnetic Field $1"
 r:"^所有怪盜釋放<color\=#FFFC40>{{A}}</color>時，最終傷害提高(\d+%)$"="<size\=28>Increase Final DMG by $1 when using <color\=#FFFC40>{{A}}</color></size>"
 
@@ -153,9 +155,9 @@ Combat Menu
 ----------
 星盤庇護=Astrolabe Protection
 r:"^使用普通攻擊、槍械攻擊時最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1 \nwhen using Melee Attack/Gun Attack"
-r:"^造成TECHNICAL時，最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1 when dealing TECHNICAL"
-r:"^造成追加效果時，最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1 when activating Follow Up"
-r:"^釋放{{A}}時最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1 when using {{A}}"
+r:"^造成TECHNICAL時，最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1 \nwhen dealing TECHNICAL"
+r:"^造成追加效果時，最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1 \nwhen activating Follow Up"
+r:"^釋放{{A}}時最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1 \nwhen using {{A}}"
 r:"^HL能量回復速度降低(\d+%)，使用HL時，最終傷害提高(\d+%)$"="<size\=24>Decrease HIGHLIGHT Energy recovery rate by $1;\nIncrease Final DMG by $2 when using HIGHLIGHT</size>"
 r:"^同時擁有(\d+)種元素異常，受到最終傷害提高(\d+%)$"="Inflicted with $1 Elemental Ailments; \nIncrease Final DMG Taken by $2"
 r:"^每有(\d+)種元素異常，受到最終傷害提高(\d+%)，當前(\d+%)$"="For every $1 Elemental Ailment, \nincrease Final DMG Taken by $2; \nCurrently increase Final DMG Taken by $3"
