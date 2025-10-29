@@ -142,9 +142,9 @@ r:"^11周目(\d+)層$"="NG+10 $1F"
 r:"^12周目(\d+)層$"="NG+11 $1F"
 
 周目:簡單=NG: Easy
-r:"^周目:<sprite\=(\d+) tint\=1>$"="Loop: <sprite\=$1 tint\=1>"
-r:"^進度:<sprite\=(\d+) tint\=1>層$"="Progress: <sprite\=$1 tint\=1>/F"
-r:"^進度:<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>層$"="Progress: <sprite\=$1 tint\=1><sprite\=$2 tint\=1>/F"
+r:"^周目:<sprite\=(\d+) tint\=1>$"="Loop:<sprite\=$1 tint\=1>"
+r:"^進度:<sprite\=(\d+) tint\=1>層$"="Progress:<sprite\=$1 tint\=1>/F"
+r:"^進度:<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>層$"="Progress:<sprite\=$1 tint\=1><sprite\=$2 tint\=1>/F"
 
 探索專案=Exploration
 收集統計=Stats
@@ -327,7 +327,7 @@ r:"^擊敗交錯之影\((\d+)/(\d+)\)$"="Defeat Tangled Shadow ($1/$2)"
 這個反應是……=This reaction...
 似乎有什麼正在靠近！=Seems like something is approaching!
 居然逃掉了……=It got away...
-應該就在這一層的某處，\n追上去吧！=It should be somewhere on this floor, hunt it down!
+應該就在這一層的某處，\n追上去吧！=It should be somewhere on this floor, let's hunt it down!
 
 感受到強大陰影的氣息……=Feeling the presence of a powerful Shadow...
 感受到寶藏的氣息……=I'm feeling the presence of treasure...
@@ -869,7 +869,9 @@ r:"^戰鬥勝利後獲取「時鐘的齒輪」數量增加(\d+%)；戰鬥勝利�
 古董留聲機=Antique Gramophone
 恢復HIGHLIGHT/{{A}}能量並減少冷卻時間=<size\=28>Restore HIGHLIGHT/{{A}} Energy and decrease cooldown</size>
 復古風格的留聲機。\n雖顯陳舊，但仍可正常播放聲音。=A vintage gramophone. Though it shows its age, it still plays music as clearly as ever.
+HIGHLIGHT增傷=HIGHLIGHT Boost
 額外充能=Extra Charge
+额外充能=Extra Charge
 r:"^等級1：角色回合結束時，獲得一定古董品能量；釋放HIGHLIGHT/{{A}}後，額外獲得一定古董品能量。古董品能量滿時可釋放古董品技能：對所有敵人造成基於難度與當前探索等級的固定傷害，並恢復所有同伴(\d+%)HIGHLIGHT/{{A}}能量\n等級3：釋放古董品技能時，使所有角色的HIGHLIGHT冷卻時間減少(\d+)回合\n等級6：古董品技能傷害提升至原本的(\d+%)$"="Lv.1: At the end of a character's action, gain Antique Energy; After using HIGHLIGHT/{{A}}, gain Antique Energy. Can use Antique Skill at maxed Antique Energy: Deal fixed damage to all foes based on Difficulty and Exploration Level, then restore party's HIGHLIGHT/{{A}} Energy by $1\nLv. 3: When using Antique Skill, decrease party's HIGHLIGHT cooldown time by $2 turn\nLv. 6: Increase Antique Skill damage to $3 of the original damage"
 r:"^角色回合結束時，獲得一定古董品能量；釋放HIGHLIGHT/{{A}}後，額外獲得一定古董品能量。古董品能量滿時可釋放古董品技能：對所有敵人造成基於難度與當前探索等級的固定傷害，並恢復所有同伴(\d+%)HIGHLIGHT/{{A}}能量$"="At the end of a character's action, gain Antique Energy; After using HIGHLIGHT/{{A}}, gain Antique Energy. Can use Antique Skill at maxed Antique Energy: Deal fixed damage to all foes based on Difficulty and Exploration Level, then restore party's HIGHLIGHT/{{A}} Energy by $1"
 r:"^釋放古董品技能時，使所有角色的HIGHLIGHT冷卻時間減少(\d+)回合$"="When using Antique Skill, decrease party's HIGHLIGHT cooldown time by $1 turn"
@@ -886,8 +888,8 @@ r:"^所有角色治療效果提升(\d+%)$"="Increase party's Healing Effect by $
 開啟寶箱獲得額外經驗值並觸發「洗牌時間」=<size\=28>Open treasure chests to gain EXP and trigger Shuffle Time</size>
 寫著『開運御守』的護身符。\n其上的招財貓刺繡，仿佛能招來福運。=A prosperity omamori. The Maneki-neko embroidered upon it beckons prosperity to its owner.
 寶箱數量提升=Treasure Chest Number
-r:"^等級1：{{A}}探索中，陰影出現機率降低，寶箱出現機率提升，開啟寶箱可獲得一定經驗值，探索層出現額外寶箱\n等級2：開啟普通/稀有寶箱後，進入下一層時觸發一次「洗牌時間·通常」/「洗牌時間·稀有」\n等級4：開啟寶箱獲取「時鐘的齒輪」數量增加(\d+%)\n等級6：當局每開啟一個寶箱，使攻擊力提升(\d+%)$"="Lv.1: During {{A}} exploration, decrease the chance of encountering Shadow and increase the chance of encountering treasure chests, gain EXP when opening Treasure Chests, spawn more treasure chest on exploration floors\nLv. 2: After opening normal/rare treasure chests, trigger 1 [Shuffle Time·Normal]/[Shuffle Time·Rare] when entering the next floor\nLv. 4: Increase the amount of [Clock Gears] acquired from treasure chests by $1\nLv. 6: For every opened treasure chests, increase ATK by $2"
-{{A}}探索中，陰影出現機率降低，寶箱出現機率提升，開啟寶箱可獲得一定經驗值，探索層出現額外寶箱=During {{A}} exploration, decrease the chance of encountering Shadow and increase the chance of encountering treasure chests, gain EXP when opening Treasure Chests, spawn more treasure chest on exploration floors
+r:"^等級1：{{A}}探索中，陰影出現機率降低，寶箱出現機率提升，開啟寶箱可獲得一定經驗值，探索層出現額外寶箱\n等級2：開啟普通/稀有寶箱後，進入下一層時觸發一次「洗牌時間·通常」/「洗牌時間·稀有」\n等級4：開啟寶箱獲取「時鐘的齒輪」數量增加(\d+%)\n等級6：當局每開啟一個寶箱，使攻擊力提升(\d+%)$"="Lv.1: During {{A}} exploration, decrease the chance of encountering Shadows and increase the chance of encountering treasure chests, gain EXP when opening Treasure Chests, spawn more treasure chest on exploration floors\nLv. 2: After opening normal/rare treasure chests, trigger 1 [Shuffle Time·Normal]/[Shuffle Time·Rare] when entering the next floor\nLv. 4: Increase the amount of [Clock Gears] acquired from treasure chests by $1\nLv. 6: For every opened treasure chests, increase ATK by $2"
+{{A}}探索中，陰影出現機率降低，寶箱出現機率提升，開啟寶箱可獲得一定經驗值，探索層出現額外寶箱=During {{A}} exploration, decrease the chance of encountering Shadows and increase the chance of encountering treasure chests, gain EXP when opening Treasure Chests, spawn more treasure chest on exploration floors
 開啟普通/稀有寶箱後，進入下一層時觸發一次「洗牌時間·通常」/「洗牌時間·稀有」=After opening normal/rare treasure chests, trigger 1 [Shuffle Time·Normal]/[Shuffle Time·Rare] when entering the next floor
 r:"^當局每開啟一個寶箱，使攻擊力提升(\d+%)$"="For every opened treasure chests, increase ATK by $1"
 古董火槍=Antique Pistol
@@ -1050,12 +1052,13 @@ r:"^下(\d+)次非秒殺戰鬥，所有角色受最終傷害降低(\d+%)$"="In t
 權杖·HL蓄積=Wands · HL Accumulation
 r:"^下(\d+)次非秒殺戰鬥，HL能量恢復效率提升(\d+%)$"="In the next $1 non insta-kill battle(s), increase HIGHLIGHT Energy recovery rate by $2"
 r:"^權杖·無懈可擊(.*)$"="Wands · Absolutely Flawless $1"
-r:"^下(\d+)次非秒殺戰鬥開始時，所有角色對所有屬性的適應性變為無，持續(\d+)回合$"="In the next $1 non insta-kill battle(s), change all characters' resistance to Null for $2 turns"
+r:"^下(\d+)次非秒殺戰鬥開始時，所有角色對所有屬性的適應性變為無，持續(\d+)回合$"="In the next $1 non insta-kill battle(s), change all characters' affinities to Null for $2 turns"
 r:"^權杖·破綻百出(.*)$"="Wands · All Flaws $1"
-r:"^下(\d+)次非秒殺戰鬥開始時，所有敵人對所有屬性的適應性變為弱，持續(\d+)回合$"="In the next $1 non insta-kill battle(s), change all foes' resistance to Weak for $2 turns"
+r:"^下(\d+)次非秒殺戰鬥開始時，所有敵人對所有屬性的適應性變為弱，持續(\d+)回合$"="In the next $1 non insta-kill battle(s), change all foes' affinities to Weak for $2 turns"
+r:"^所有敵人對所有屬性的適應性變為弱，持續2回合=All enemies become weak to all attributes for 2 turns.
 權杖·無聲無息=Wands · Dead Silent
 r:"^下(\d+)次非秒殺戰鬥，隨機(\d+)名角色進入無法選中狀態$"="In the next $1 non insta-kill battle(s), randomly make $2 character untargetable"
-r:"^隨機(\d+)名角色進入無法選中狀態=Randomly make $1 character untargetable"
+r:"^隨機(\d+)名角色進入無法選中狀態$"="Randomly make $1 character untargetable"
 
 權杖·破壞藝術=Wands · Art Destruction
 r:"^下(\d+)次進入探索樓層時，額外出現(\d+)個可破壞物$"="In the next $1 exploration floor(s), additional spawn $2 breakable objects"
@@ -1082,7 +1085,7 @@ r:"^下(\d+)次進入「大時鐘」時，額外增加(\d+)張卡牌的可選項
 r:"^下(\d+)次進入「大時鐘」時，獲得(\d+)次免費刷新次數$"="The next $1 time(s) when entering the [Great Clock], gain $2 free refresh"
 
 權杖·獵殺者=Wands · Reaper
-r:"^<color\=#FFD145>「獵殺者減益·其三」</color>所有角色受到最終治療量降低(\d+%)，每回合開始時失去(\d+%)當前生命值<color\=#FFD145>（集齊4個「獵殺者減益」可以在挑戰最後進入隱藏樓層）</color>$"="<color\=#FFD145>[Reaper Debuff · III]</color> Decrease all character's Final Healing Received by $1; At the start of turn, lose $2 current HP <color\=#FFD145>(collect 4 [Reaper Debuff] to enter the hidden floor at the end of the run)</color>"
+r:"^<color\=#FFD145>「獵殺者減益·其三」</color>所有角色受到最終治療量降低(\d+%)，每回合開始時失去(\d+%)當前生命值<color\=#FFD145>（集齊4個「獵殺者減益」可以在挑戰最後進入隱藏樓層）</color>$"="<color\=#FFD145>[Reaper Debuff · III]</color> Decrease all characters' Final Healing Received by $1; At the start of turn, lose $2 current HP <color\=#FFD145>(collect 4 [Reaper Debuff] to enter the hidden floor at the end of the run)</color>"
 
 ----------
 ALL CUPS
@@ -1142,7 +1145,10 @@ r:"^開啟寶箱獲取「羈絆碎片·小」數量增加(\d+%)$"="Increase the 
 聖杯·好運檢測=Cups · Luck Check
 聖杯·強運檢測=Cups · Fortune Check
 r:"^開啟寶箱時，(\d+%)機率額外獲得(\d+)份獎勵$"="When opening treasure chests, there is a $1 chance to gain $2 bonus reward"
-
+聖杯·珍奇寶藏=Cups · Rare Treasures
+高品質寶箱出現機率提高=High-quality treasure chests appear more frequently
+聖杯·拂曉回饋=Cups · Dawn Giveback
+r:"^開啟帶鎖寶箱時，返還(\d+)個「拂曉的碎片」$"="When opening locked treasure chests, refund $1 [Dawn Fragments]"
 r:"^聖杯·齒輪飛濺(.*)$"="Cups · Gear Splash $1"
 r:"^擊碎可破壞物獲取「時鐘的齒輪」數量增加(\d+%)$"="Increase [Clock Gears] acquired from breakable objects by $1"
 r:"^聖杯·銀幣飛濺(.*)$"="Cups · Silver Splash $1"
@@ -1231,11 +1237,11 @@ r:"^處於第(\d+)層及之前，所有角色造成最終傷害降低(\d+%)；�
 寶劍·暴擊轉化=Swords · Critical Conversion
 r:"^所有角色造成傷害時若暴擊率超過(\d+%)，每超過(\d+%)使該傷害的暴擊效果額外提升(\d+%)$"="All characters when dealing damage for every $2 Crit Rate that is over $1, increase Crit DMG by $3"
 寶劍·多重審判=Swords · Multi-Judgement
-r:"^所有角色回合開始時，使自身造成傷害提高(\d+%)，可疊加(\d+)層，本場戰鬥永久生效$"="At the start of all character's turn, increase DMG Dealt by $1. Stacks up to $2 times. This effect is permanent"
+r:"^所有角色回合開始時，使自身造成傷害提高(\d+%)，可疊加(\d+)層，本場戰鬥永久生效$"="At the start of all characters' turn, increase DMG Dealt by $1. Stacks up to $2 times. This effect is permanent"
 寶劍·特技秀場=Swords · Stunt Show
 r:"^所有角色釋放{{A}}技能/{{B}}/追加效果/HIGHLIGHT時，使所有同伴最終傷害提升(\d+\.\d+%)，可疊加(\d+)層，本場戰鬥永久生效$"="When using a {{A}} skill/{{B}}/Follow Up/HIGHLIGHT, increase party's Final DMG by $1. Stacks up to $2 times. This effect is permanent"
 寶劍·堅韌不屈=Swords · Tenacious Stance
-r:"^所有角色倒地值上限增加(\d+)點；每擁有1點當前倒地值，受最終傷害降低(\d+%)$"="Increase all character's Down Points by $1; For every Down Points, decrease Final DMG Taken by $2"
+r:"^所有角色倒地值上限增加(\d+)點；每擁有1點當前倒地值，受最終傷害降低(\d+%)$"="Increase all characters' Down Points by $1; For every Down Points, decrease Final DMG Taken by $2"
 
 寶劍·不屈領袖=Swords · Unyielding Leader
 r:"^WONDER最大生命值提升(\d+%)，擁有大阿爾卡那「塔」時，該效果對所有角色生效$"="Increase Wonder's Max HP by $1, when you have the Major Arcana [Tower], all characters gain this effect"
@@ -1283,7 +1289,7 @@ r:"^所有角色處於護盾下時，受到傷害降低(\d+%)$"="Decrease all ch
 r:"^所有角色處於護盾下時，依據當前護盾量使穿透提升，每(\d+)點護盾量使穿透提升(\d+%)，最多(\d+%)$"="When Shielded, increase Pierce by $2 for every $1 Shield, up to $3"
 
 寶劍·戰意高漲=Swords · Battle Frenzy
-r:"^任意角色使用HIGHLIGHT/{{A}}後，使所有角色造成傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="After any character uses HIGHLIGHT/{{A}}, increase all character's DMG Dealt by $1 for $2 turns. Stacks up to $3 times"
+r:"^任意角色使用HIGHLIGHT/{{A}}後，使所有角色造成傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層$"="After any character uses HIGHLIGHT/{{A}}, increase all characters' DMG Dealt by $1 for $2 turns. Stacks up to $3 times"
 寶劍·HL預備=Swords · HL Preparation
 r:"^戰鬥開始時，恢復(\d+%)HIGHLIGHT能量$"="At the start of battle, restore $1 HIGHLIGHT Energy"
 寶劍·HL表演家=Swords · HL Performer
@@ -1310,11 +1316,11 @@ r:"^所有角色普通攻擊造成最終傷害提升(\d+(.\d+)?(%)?)$"="Increase
 寶劍·射擊高手=Swords · Firearm Master
 r:"^所有角色槍械射擊造成最終傷害提升(\d+(.\d+)?(%)?)$"="Increase all characters' Gun Attack Final DMG by $1"
 寶劍·射手之怒=Swords · Marksman's Fury
-r:"^所有角色槍械射擊暴擊率提升(\d+%)$"="Increase all character's Gun Attack Crit Rate by $1"
+r:"^所有角色槍械射擊暴擊率提升(\d+%)$"="Increase all characters' Gun Attack Crit Rate by $1"
 寶劍·暴烈射擊=Swords · Violent Shot
-r:"^所有角色槍械射擊暴擊效果提升(\d+%)$"="Increase all character's Gun Attack Crit DMG by $1"
+r:"^所有角色槍械射擊暴擊效果提升(\d+%)$"="Increase all characters' Gun Attack Crit DMG by $1"
 寶劍·彈夾擴容=Swords · Magazine Expansion
-r:"^所有角色子彈數量提升(\d+%)$"="Increase all character's Ammo by $1"
+r:"^所有角色子彈數量提升(\d+%)$"="Increase all characters' Ammo by $1"
 寶劍·狂熱射手=Swords · Fanatic Marksman
 r:"^所有角色使用槍械射擊後，有(\d+%)機率恢復(\d+%)HIGHLIGHT能量$"="After all character use Gun Attack, there is a $1 chance to restore $2 HIGHLIGHT Energy"
 寶劍·快速裝彈=Swords · Quick Reload
@@ -1322,7 +1328,7 @@ r:"^所有角色使用槍械射擊後，有(\d+%)機率恢復(\d+%)HIGHLIGHT能�
 寶劍·槍管改造=Swords · Barrel Reform
 r:"^所有角色使用槍械射擊後，使所有同伴槍械射擊時最終傷害提升(\d+\.\d+%)，可疊加(\d+)層，本場戰鬥永久生效$"="After all character use Gun Attack, increase party's Gun Attack Final DMG by $1. Stacks up to $2 times. This effect is permanent."
 寶劍·窮寇瞄準鏡=Swords · Despairing Scope
-r:"^所有角色的槍械射擊對處於倒地狀態的敵人造成傷害提升(\d+%)$"="Increase all character's Gun Attack DMG Dealt to Downed foes by $1"
+r:"^所有角色的槍械射擊對處於倒地狀態的敵人造成傷害提升(\d+%)$"="Increase all characters' Gun Attack DMG Dealt to Downed foes by $1"
 
 寶劍·總攻發動機=Swords · All-Out Attack Engine
 r:"^每個角色回合結束時，有(\d+%)機率直接發動{{A}}$"="At the end of every character's turn, there is a $1 chance to active an {{A}}"
@@ -1332,7 +1338,7 @@ r:"^所有敵人每次受到{{A}}，使後續受{{A}}傷害提升(\d+%)，可疊
 寶劍·{{A}}狂潮=Swords · All-Out Frenzy
 所有敵人受到{{A}}後，清除自身的倒地狀態=After an {{A}}, remove all foes' Down state
 寶劍·{{A}}判決=Swords · {{A}} Judgement
-r:"^所有角色{{A}}傷害提升(\d+%)$"="Increase all character's {{A}} DMG by $1"
+r:"^所有角色{{A}}傷害提升(\d+%)$"="Increase all characters' {{A}} DMG by $1"
 寶劍·{{A}}威懾=Swords · {{A}} Threat
 寶劍·乘勝追擊=Swords · Press Advantage
 r:"^所有角色對倒地狀態的敵人造成傷害提升(\d+%)$"="Increase all characters' DMG Dealt to Downed foes by $1"
@@ -1374,9 +1380,9 @@ r:"^所有角色每造成(\d+)次傷害，傷害提升(\d+%)，持續(\d+)回合
 r:"^敵人每有一個負面狀態，受到的傷害提升(\d+%)，最多使其受到的傷害提升(\d+%)"="For every debuff the foe have, increase their DMG Taken by $1, up to $2"
 
 寶劍·療癒師熱忱=Swords · Healer's Enthusiasm
-r:"^所有角色每(\d+)點當前精力值使治療效果提升(\d+%)$"="Increase all character's Healing Effect by $2 for every $1 current SP"
+r:"^所有角色每(\d+)點當前精力值使治療效果提升(\d+%)$"="Increase all characters' Healing Effect by $2 for every $1 current SP"
 寶劍·審判官熱忱=Swords · Judge's Enthusiasm
-r:"^所有角色每(\d+)點當前精力值使造成傷害提升(\d+%)$"="Increase all character's DMG Dealt by $2 for every $1 current SP"
+r:"^所有角色每(\d+)點當前精力值使造成傷害提升(\d+%)$"="Increase all characters' DMG Dealt by $2 for every $1 current SP"
 寶劍·深入病灶=Swords · Deep Lesion
 r:"^所有角色受到治療效果時，穿透提升(\d+%)，持續(\d+)回合$"="When receiving healing, increase all characters' Pierce by $1 for $2 turns"
 寶劍·硬化療癒=Swords · Harden Healing
@@ -1420,7 +1426,7 @@ r:"^進入戰鬥時，每有一個相同屬性的角色，所有角色造成傷�
 r:"^進入強敵之影、交錯之影戰鬥時，所有敵人受最終傷害提升(\d+%)，造成最終傷害降低(\d+%)$"="When fighting Strong Shadow and Tangled Shadow, increase all foes' Final DMG Taken by $1, decrease all foes' Final DMG Dealt by $2"
 r:"^進入強敵陰影、交錯之影戰鬥時，所有敵人受最終傷害提升(\d+%)，造成最終傷害降低(\d+%)$"="When fighting Strong Shadow and Tangled Shadow, increase all foes' Final DMG Taken by $1, decrease all foes' Final DMG Dealt by $2"
 寶劍·獵人直覺=Swords · Hunter Instinct
-進入稀有陰影戰鬥時，使稀有陰影對所有屬性的適應性變為弱=When entering a Rare Shadow battle, change all their resistance to Weak
+進入稀有陰影戰鬥時，使稀有陰影對所有屬性的適應性變為弱=When entering a Rare Shadow battle, change all their affinities to Weak
 
 寶劍·鋒利指針=Swords · Sharp Hand
 r:"^每在「大時鐘」具象化1張卡牌，攻擊力提升(\d+%)$"="For every card bought in the [Great Clock], increase ATK by $1"
@@ -1438,7 +1444,7 @@ r:"^古董品能量恢復效率提高(\d+%)$"="Increase Antique Energy recovery 
 r:"^古董品技能總傷害提升(\d+%)$"="Increase Antique Skill Total DMG by $1"
 
 寶劍·獵殺者=Swords · Reaper
-r:"^<color\=#FFD145>「獵殺者減益·其二」</color>所有角色{{A}}、防禦力、生命值降低(\d+%)<color\=#FFD145>（集齊4個「獵殺者減益」可以在挑戰最後進入隱藏樓層）</color>$"="<color\=#FFD145>[Reaper Debuff · II]</color> Decrease all character's {{A}}, DEF, and HP by $1 <color\=#FFD145>(collect 4 [Reaper Debuff] to enter the hidden floor at the end of the run)</color>"
+r:"^<color\=#FFD145>「獵殺者減益·其二」</color>所有角色{{A}}、防禦力、生命值降低(\d+%)<color\=#FFD145>（集齊4個「獵殺者減益」可以在挑戰最後進入隱藏樓層）</color>$"="<color\=#FFD145>[Reaper Debuff · II]</color> Decrease all characters' {{A}}, DEF, and HP by $1 <color\=#FFD145>(collect 4 [Reaper Debuff] to enter the hidden floor at the end of the run)</color>"
 
 ----------
 ALL COINS
@@ -1685,15 +1691,15 @@ r:"^靈魂連結(.*)$"="Soulink $1"
 r:"^處於靈魂連結(\d+)的單位，分攤傷害$"="Under Soulink with $1 units, divide damage"
 r:"^1、全能天秤受到傷害增加(\d+%)並與平衡之巨人存在「靈魂連結」，攻擊全能天秤時會對平衡之巨人附帶更高的傷害。\n\n2、全能天秤在奇數回合持續召喚金剛蟲。\n\n3、「劍舞協奏」引導全能天秤釋放狂暴與調和屏障。$"="1. Increase World Balance's DMG Taken by $1 then have [Soulink] with Order Giant, deal more damage to Order Giant when attacking World Balance. \n2. World Balance will summon Adamant Beetle on odd turns. \n3. [Sword Concerto] can make World Balance use [Frenzy] and [Harmonious Barrier]."
 
-r:"^1、白狼之武者使用部分技能可以獲得「殺意」，並可消耗「殺意」來強化技能「萬雷送葬」。\n「殺意」：每層提升自身(\d+%)的攻擊力、(\d+%)的暴擊率，受到最終傷害提升(\d+%)；最多可疊加(\d+)層。\n2、白狼之武者每個回合開始時，會給隨機(\d+)名敵人添加「導電印記」（場上同時只存在1名有「導電印記」的敵人），使其電擊屬性適應性變為弱。擁有「導電印記」的敵人被擊倒時，白狼之武者獲得(\d+)層「殺意」。\n3、白狼之武者進入戰鬥時，會立即召喚(\d+)隻風雷天秤。\n4、白狼之武者進入二階段時，會立即召喚(\d+)隻炎冰天秤，並使自身進入「無雙境」狀態。處在此狀態下每回合獲得(\d+)層「殺意」\（場上隊友全部死亡時，每回合獲得(\d+)層「殺意」\），但是會在「殺意」到達(\d+)層時，受到的最終傷害額外提升(\d+%)。$"="1. Hakurou Musha can gain [Killing Intent] from skills, can spend [Killing Intent] to upgrade [Thunderous Burial]. \n[Killing Intent]: Each stack increase own ATK by $1, Crit Rate by $2, Final DMG Taken by $3. Stacks up to $4 times.\n2. At the start of Hakurou Musha's turn, they will inflict $5 random foe with [Conductive Mark] (there can only be 1 foe with [Conductive Mark]), change their Elec resistance to Weak. Hakurou Musha will gain $6 stacks of [Killing Intent] when downing foes with [Conductive Mark].\n3. At the start of battle, immediately summon $7 Sky Balance.\n4. When Hakurou Musha enter phase 2, immediately summon $8 Heat Balance, then enter [Peerlessness]. Gain $9 stack of [Killing Intent] each turn (when all allies are dead, gain $10 stacks each turn), but additionally increase Final DMG Taken by $12 when they have $11 stacks of [Killing Intent]."
-r:"^1、白狼之武者使用部分技能可以獲得「殺意」，並可消耗「殺意」來強化技能「萬雷送葬」。\n「殺意」：每層提升自身(\d+%)的攻擊力、(\d+%)的暴擊率，受到最終傷害提升(\d+%)；最多可疊加(\d+)層。\n2、白狼之武者每個回合開始時，會給隨機(\d+)名敵人添加「導電印記」（場上同時只存在1名有「導電印記」的敵人），使其電擊屬性適應性變為弱。擁有「導電印記」的敵人被擊倒時，白狼之武者獲得(\d+)層「殺意」。\n3、白狼之武者進入戰鬥時，會立即召喚(\d+)隻風雷天秤。\n4、白狼之武者進入二階段時，會立即召喚(\d+)隻炎冰天秤，並使自身進入「無雙境」狀態。處在此狀態下每回合獲得(\d+)層「殺意」\（場上隊友全部死亡時，每回合獲得(\d+)層「殺意」\），但是會在「殺意」到達(\d+)層時，受到的最終傷害額外提升(\d+%)。\n5、炎冰天秤每回合在「火形態」和「冰形態」之間切換。火形態」下每次行動後給與白狼之武者(\d+)層「殺意」，被擊殺時為白狼之武者添加(\d+)層「殺意」；「冰形態」下被擊殺時驅散白狼之武者身上的所有「殺意」。$"="1. Hakurou Musha can gain [Killing Intent] from skills, can spend [Killing Intent] to upgrade [Thunderous Burial]. \n[Killing Intent]: Each stack increase own ATK by $1, Crit Rate by $2, Final DMG Taken by $3. Stacks up to $4 times.\n2. At the start of Hakurou Musha's turn, they will inflict $5 random foe with [Conductive Mark] (there can only be 1 foe with [Conductive Mark]), change their Elec resistance to Weak. Hakurou Musha will gain $6 stacks of [Killing Intent] when downing foes with [Conductive Mark].\n3. At the start of battle, immediately summon $7 Sky Balance.\n4. When Hakurou Musha enter phase 2, immediately summon $8 Heat Balance, then enter [Peerlessness]. Gain $9 stack of [Killing Intent] each turn (when all allies are dead, gain $10 stacks each turn), but additionally increase Final DMG Taken by $12 when they have $11 stacks of [Killing Intent].\n5. Heat Balance will chage between [Fire Form] and [Ice Form]. [Fire Form]: Give Hakurou Musha $13 stack of [Killing Intent] after this action, give Hakurou Musha $14 stacks of [Killing Intent] when defeated; [Ice Form]: Dispel all [Killing Intent] on Hakurou Musha when defeated."
+r:"^1、白狼之武者使用部分技能可以獲得「殺意」，並可消耗「殺意」來強化技能「萬雷送葬」。\n「殺意」：每層提升自身(\d+%)的攻擊力、(\d+%)的暴擊率，受到最終傷害提升(\d+%)；最多可疊加(\d+)層。\n2、白狼之武者每個回合開始時，會給隨機(\d+)名敵人添加「導電印記」（場上同時只存在1名有「導電印記」的敵人），使其電擊屬性適應性變為弱。擁有「導電印記」的敵人被擊倒時，白狼之武者獲得(\d+)層「殺意」。\n3、白狼之武者進入戰鬥時，會立即召喚(\d+)隻風雷天秤。\n4、白狼之武者進入二階段時，會立即召喚(\d+)隻炎冰天秤，並使自身進入「無雙境」狀態。處在此狀態下每回合獲得(\d+)層「殺意」\（場上隊友全部死亡時，每回合獲得(\d+)層「殺意」\），但是會在「殺意」到達(\d+)層時，受到的最終傷害額外提升(\d+%)。$"="1. Hakurou Musha can gain [Killing Intent] from skills, can spend [Killing Intent] to upgrade [Thunderous Burial]. \n[Killing Intent]: Each stack increase own ATK by $1, Crit Rate by $2, Final DMG Taken by $3. Stacks up to $4 times.\n2. At the start of Hakurou Musha's turn, they will inflict $5 random foe with [Conductive Mark] (there can only be 1 foe with [Conductive Mark]), change their Elec affinity to Weak. Hakurou Musha will gain $6 stacks of [Killing Intent] when downing foes with [Conductive Mark].\n3. At the start of battle, immediately summon $7 Sky Balance.\n4. When Hakurou Musha enter phase 2, immediately summon $8 Heat Balance, then enter [Peerlessness]. Gain $9 stack of [Killing Intent] each turn (when all allies are dead, gain $10 stacks each turn), but additionally increase Final DMG Taken by $12 when they have $11 stacks of [Killing Intent]."
+r:"^1、白狼之武者使用部分技能可以獲得「殺意」，並可消耗「殺意」來強化技能「萬雷送葬」。\n「殺意」：每層提升自身(\d+%)的攻擊力、(\d+%)的暴擊率，受到最終傷害提升(\d+%)；最多可疊加(\d+)層。\n2、白狼之武者每個回合開始時，會給隨機(\d+)名敵人添加「導電印記」（場上同時只存在1名有「導電印記」的敵人），使其電擊屬性適應性變為弱。擁有「導電印記」的敵人被擊倒時，白狼之武者獲得(\d+)層「殺意」。\n3、白狼之武者進入戰鬥時，會立即召喚(\d+)隻風雷天秤。\n4、白狼之武者進入二階段時，會立即召喚(\d+)隻炎冰天秤，並使自身進入「無雙境」狀態。處在此狀態下每回合獲得(\d+)層「殺意」\（場上隊友全部死亡時，每回合獲得(\d+)層「殺意」\），但是會在「殺意」到達(\d+)層時，受到的最終傷害額外提升(\d+%)。\n5、炎冰天秤每回合在「火形態」和「冰形態」之間切換。火形態」下每次行動後給與白狼之武者(\d+)層「殺意」，被擊殺時為白狼之武者添加(\d+)層「殺意」；「冰形態」下被擊殺時驅散白狼之武者身上的所有「殺意」。$"="1. Hakurou Musha can gain [Killing Intent] from skills, can spend [Killing Intent] to upgrade [Thunderous Burial]. \n[Killing Intent]: Each stack increase own ATK by $1, Crit Rate by $2, Final DMG Taken by $3. Stacks up to $4 times.\n2. At the start of Hakurou Musha's turn, they will inflict $5 random foe with [Conductive Mark] (there can only be 1 foe with [Conductive Mark]), change their Elec affinity to Weak. Hakurou Musha will gain $6 stacks of [Killing Intent] when downing foes with [Conductive Mark].\n3. At the start of battle, immediately summon $7 Sky Balance.\n4. When Hakurou Musha enter phase 2, immediately summon $8 Heat Balance, then enter [Peerlessness]. Gain $9 stack of [Killing Intent] each turn (when all allies are dead, gain $10 stacks each turn), but additionally increase Final DMG Taken by $12 when they have $11 stacks of [Killing Intent].\n5. Heat Balance will chage between [Fire Form] and [Ice Form]. [Fire Form]: Give Hakurou Musha $13 stack of [Killing Intent] after this action, give Hakurou Musha $14 stacks of [Killing Intent] when defeated; [Ice Form]: Dispel all [Killing Intent] on Hakurou Musha when defeated."
 殺意=Killing Intent
 r:"^殺<color\=#000000>意</color>$"="K<color\=#000000>i</color>lling Intent"
 r:"^每層提升自身(\d+%)攻擊力、(\d+%)暴擊率，同時受到最終傷害提升(\d+%)。$"="Each stack increase own ATK by $1,\nCrit Rate by $2, Final DMG Taken by $3"
 導電印記=Conductive Mark
 r:"^導<color\=#000000>電</color>印記$"="C<color\=#000000>o</color>nductive Mark"
-r:"^每個回合開始時，給隨機(\d+)名敵人添加『導電印記』（場上同時只存在1名有『導電印記』的敵人），使其電擊屬性適應性變為弱。擁有『導電印記』的敵人被擊倒時，BOSS自身獲得(\d+)層『殺意』。$"="At the start of turn, inflicts $1 random foe with [Conductive Mark] (there can only be 1 foe with [Conductive Mark]), changes their Elec resistance to Weak. Gains $2 stacks of [Killing Intent] when downing foes with [Conductive Mark]."
-r:"^電擊屬性適應性變為弱，被擊倒時(.*)獲得『殺意』。$"="Change Elec resistance to Weak, give Hakurou Musha [Killing Intent] when downed"
+r:"^每個回合開始時，給隨機(\d+)名敵人添加『導電印記』（場上同時只存在1名有『導電印記』的敵人），使其電擊屬性適應性變為弱。擁有『導電印記』的敵人被擊倒時，BOSS自身獲得(\d+)層『殺意』。$"="At the start of turn, inflicts $1 random foe with [Conductive Mark] (there can only be 1 foe with [Conductive Mark]), changes their Elec affinity to Weak. Gains $2 stacks of [Killing Intent] when downing foes with [Conductive Mark]."
+r:"^電擊屬性適應性變為弱，被擊倒時(.*)獲得『殺意』。$"="Change Elec affinity to Weak, give Hakurou Musha [Killing Intent] when downed"
 電磁暴域=Electromagnetic Domain
 r:"^對所有敵人造成電擊屬性傷害。若打出弱點傷害，自身獲得(\d+)層『殺意』。$"="Deals Elec damage to all foes. Gains $1 stack of [Killing Intent] when dealing weak damage."
 萬雷送葬=Thunderous Burial
@@ -1757,6 +1763,7 @@ r:"^大幅提升自身釋放技能的魔法技能的最終傷害，持續(\d+)�
 r:"^攻擊力、防禦力、效果命中、效果抵抗降低(\d+%)，每回合失去自身最大生命值的(\d+%)血量。受到(\d+)次增益技能後解除「女巫的詛咒」效果。$"="Decrease ATK, DEF, Ailment ACC and Ailment RES by $1. Lose $2 Max HP each turn; Remove [Debilitate] effects after receiving $3 buff skills"
 r:"^造成的魔法最終傷害提升(\d+%)，受到(\d+)次傷害後解除「專心致志」效果。$"="Increase Magic Final DMG Dealt by $1; Remove [Concentrate] effects after receiving $2 hits of damage"
 獵殺時刻=Reaping Hour
+r:"^獵<color\=#000000>殺</color>時刻$"="R<color\=#000000>e</color>aping Hour"
 回合開始時，消耗1層並釋放米吉多拉翁=At the start of turn, \nspend 1 stack then use Megidolaon
 獵殺衝動=Reaping Impulse
 r:"^獵<color\=#000000>殺</color>衝動$"="R<color\=#000000>e</color>aping Impulse"
