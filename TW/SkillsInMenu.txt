@@ -658,10 +658,10 @@ r:"^對全體敵人造成1段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念�
 --- Nuke ---
 
 //Basic Nuke ST
-r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害，對處於<link\="s\|101"><u>元素異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(.*)。$"="Deal <color\=#FFFF00>$1</color> ATK Nuke damage to 1 foe. Triggers <link\="s|211"><u>TECHNICAL</u></link> to foe inflicted with any <link\="s|101"><u>Elemental Ailment</u></link>, increase skill damage by $2."
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害，對處於<link\="s\|101"><u>元素異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(.*)。$"="Deal <color\=#FFFF00>$1</color> ATK Nuke damage to 1 foe. Deal a <link\="s|211"><u>TECHNICAL</u></link> and increase damage by $2 for foes with an <link\="s|101"><u>Elemental Ailment</u></link>."
 
 //Basic Nuke AoE
-r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害，對處於<link\="s\|101"><u>元素異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(.*)。$"="Deal <color\=#FFFF00>$1</color> ATK Nuke damage to all foes. Triggers <link\="s|211"><u>TECHNICAL</u></link> to foes inflicted with any <link\="s|101"><u>Elemental Ailment</u></link>, increase skill damage by $2."
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害，對處於<link\="s\|101"><u>元素異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(.*)。$"="Deal <color\=#FFFF00>$1</color> ATK Nuke damage to all foe. Deal a <link\="s|211"><u>TECHNICAL</u></link> and increase damage by $2 for foes with an <link\="s|101"><u>Elemental Ailment</u></link>."
 
 Bishamonten
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的核熱屬性傷害，攻擊處於元素異常狀態的敵人該技能傷害提升(\d+%)。$"="Deal <color\=#fffc40>$1</color> ATK Nuke damage to 1 foe. Increase DMG Dealt to foe infliced with Elemental Ailments by $2."
@@ -670,10 +670,10 @@ r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的核熱屬�
 --- Bless ---
 
 //ST Bless with varying stacks
-r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+\~\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deal <color\=#FFFF00>$1</color> ATK Bless damage to 1 foe and gains $2 <link\=s|111><u>Blessing</u></link> stack(s).
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+\~\d+)個<link\="s\|111"><u>祝福</u></link>效果。$"="Deal <color\=#FFFF00>$1</color> ATK Bless damage to 1 foe, grant user $2 <link\=s|111><u>Blessing</u></link> stack(s)."
 
 //ST Bless with constant stacks
-r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deal <color\=#FFFF00>$1</color> ATK Bless damage to 1 foe and gains $2 <link\=s|111><u>Blessing</u></link> stack(s).
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+)個<link\="s\|111"><u>祝福</u></link>效果。$"="Deal <color\=#FFFF00>$1</color> ATK Bless damage to 1 foe, grant user $2 <link\=s|111><u>Blessing</u></link> stack(s)."
 
 //AoE Bless with varying stacks
 r:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+\~\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deal <color\=#FFFF00>$1</color> ATK Bless damage to all foes and gains $2 <link\=s|111><u>Blessing</u></link> stack(s).
@@ -978,6 +978,7 @@ r:"^自身對敵方釋放{{A}}技能後，使攻擊力最高的友方同伴（�
 強化=Upgrade
 強化反擊=Enhanced Counter
 回溯=Rewind
+替換=Swap
 
 物理=Phys
 物理屬性傷害=Phys DMG
