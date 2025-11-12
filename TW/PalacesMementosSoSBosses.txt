@@ -539,7 +539,7 @@ PALACE 5
 注入費洛蒙=Infuse pheromones
 清除荊棘=Clear thorns
 變成螞蟻進入隧道=Transform into ants and enter the tunnel
-找到通往上層的路=Find a path to the upper level
+找到通往上層的路=Find a way to the upper level
 破壞阻擋物=Break the barrier
 打開道路=Open the path
 找工蟻清理雜物=Find worker ants to clean up the mess
@@ -564,6 +564,11 @@ PALACE 5
 在門後的區域尋找門票=Find the tickets in the area after the door
 遞交演唱會門票=Hand over the concert ticket
 演唱會門票=Concert Ticket
+躲開牛郎陰影=Hide from host Shadows
+尋找結晶球=Find the crystal ball
+放置結晶球=Place the crystal ball
+前往牛郎所在的房間=Go to the room where the hosts are
+進入畫中=Enter the painting
 前往收藏室=Go to the Collection Room
 啟動結晶=Activate the crystal
 前往收藏室深處=Go to the Inner Collection Room
@@ -576,6 +581,7 @@ PALACE 5
 尋找答案的線索=Find clues to the answer
 尋找唱片=Find the record
 調查結晶中的工蟻=Investigate the worker ants in crystals
+對玩偶使用唱片=Use the record on the dolls
 返回畫像處回答問題=Return to the portrait and answer the questions
 躲避{{A}}的父母=Hide from {{A}}'s parents
 
@@ -681,10 +687,12 @@ r:"^值<color\=#ff0000ff>班</color>的男公關$"="O<color\=#ff0000ff>n</color>
 平移=Pan
 橙色結晶球=Orange Crystal Ball
 青色結晶球=Green Crystal Ball
+綠色結晶球=Green Crystal Ball
 黃色唱片=Yellow Record
 藍色唱片=Blue Record
 紫色唱片=Purple Record
 青色唱片=Green Record
+綠色唱片=Green Record
 遠見畫布=Views Canvas
 傳送畫布=Teleportation Canvas
 恩賜畫布·中=Graceful Canvas: M
@@ -1544,6 +1552,8 @@ r:"^冰<color\=#000000>影</color>協同$"="S<color\=#000000>h</color>adow Syner
 凜冬怒號=Winter Fury
 對所有敵人造成攻擊力的冰凍屬性傷害，使{{A}}最終傷害提升。=Deal Ice damage to all foes, increase {{A}}'s FInal DMG.
 影刃穿刺=Shadow Puncture
+迦耶伯格標記=Gae Bulg
+r:"^迦<color\=#000000>耶</color>伯格標記$"="G<color\=#000000>a</color>e Bulg Mark"
 
 ----------
 CROSS FATE PALACE (CF) (COLLAB)
@@ -2464,7 +2474,7 @@ r:"^自身獲得(\d+)層「力量積蓄」；下次釋放物理傷害技能時�
 高頻轉移=Rapid Shift
 r:"^每受到(\d+)次技能傷害釋放一次「範式轉移」，改變自身的適應性。$"="Use [Paradigm Shift] when taking skill damage $1 times."
 緊急護駕=Urgent Escort
-釋放「範式轉移」改變自身適應性時，部分適應性會變為無。=When using [Paradigm Shift], charge some affinities to Null.
+釋放「範式轉移」改變自身適應性時，部分適應性會變為無。=When using [Paradigm Shift], change some affinities to Null.
 神授皇權=Divine Right
 戰鬥中，每次釋放「範式轉移」後，獲得永久攻擊力、防禦力提升。=In battle, after using [Paradigm Shift], permanently increase ATK and DEF.
 王之蓄力=King's Charge
@@ -2730,3 +2740,8 @@ r:"^厭<color\=#000000>氧</color>反應$"="A<color\=#000000>n</color>aerobic Re
 sr:"^使用(.*)後自身獲得(\d+)層『(.*)』，使用HIGHLIGHT後自身獲得(\d+)層『(.*)』。『(.*)』：每層提供(\d+%)的最終傷害加成，持續(\d+)回合（每層獨立計算），最多可疊加(\d+)層。$"="<size\=22>After using Theurgy, user gains $2 [$3] stacks; After using HIGHLIGHT, user gains $4 [$5] stack. [$6]: Increase Final DMG by $7 for $8 turn. Stacks up to $9 times, and stacks are spent separately.</size>"
 熱情孢子=Passionate Spores
 r:"^熱<color\=#000000>情</color>孢子$"="P<color\=#000000>a</color>ssionate Spores"
+
+礦蝕蛛網=Weathering Web
+sr:"^解明怪盜每次主動使用任意技能後使所有同伴獲得(\d+)層『(.*)』。『(.*)』：每層提供(\d+%)的最終傷害加成，持續(\d+)回合，最多可疊加(\d+)層。$"="<size\=23>After Elucidator manually uses any skill, all allies gain $1 [$2] stack. [$3]: Increase Final DMG by $4 for $5 turn. Stacks up to $6 times.</size>"
+神經絲絡=Nerve Silk
+r:"^神<color\=#000000>經</color>絲絡$"="N<color\=#000000>e</color>rve Silk"

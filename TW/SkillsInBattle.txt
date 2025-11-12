@@ -4,8 +4,8 @@ Skill Level up Description //
 當前無狀態資訊=No Status Info
 技能效果=Skill Effects
 資訊=Info
-武器效果=Weapon Effect
-啟示效果=Revelation Effect
+武器效果=Weapon Effects
+啟示效果=Revelation Effects
 
 近戰攻擊的傷害倍率隨角色等級提升。=Increase Melee Attack damage multiplier based on Lv.
 使用近戰武器，對1名敵人造成物理屬性的少量傷害=Deal light Phys damage to 1 foe
@@ -107,7 +107,8 @@ Elemental Ailments Mental Ailments TECHNICAL Descriptions
 r:"燃燒、冰凍、觸電、風襲，以上4種狀態屬於元素異常。"=<color\=#FF8C35>Burn</color>, <color\=#DFFFFF>Freeze</color>, <color\=#FCE54E>Shock</color>, <color\=#52E54E>Windswept</color>.
 r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以上8種狀態屬於精神異常。"=<color\=#FBF6C1>Dizzy</color>, <color\=#80EEED>Forget</color>, <color\=#E59FFF>Sleep</color>, <color\=#F77F76>Rage</color>, <color\=#B69ABB>Despair</color>, <color\=#FCC6FA>Fear</color>, <color\=#C0F081>Confuse</color>, <color\=#AF4FA6>Brainwash</color>
 
-使敵人受到傷害提升15%，被視為1種元素異常。=Increase DMG Taken by 15% for 2 turns, seen as 1 Elemental Ailment.
+使敵人受到傷害提升15%，被視為1種元素異常。=Increase foe's DMG Taken by 15% for 2 turns, seen as 1 Elemental Ailment.
+使敵人受到傷害提升15%，持續2回合。被視為1種元素異常。=Increase foe's DMG Taken by 15% for 2 turns, seen as 1 Elemental Ailment.
 持續恢復生命值=Restore 1% Max HP each turn for 2 turns
 持續損失生命值=Lose 1% Max HP each turn for 2 turns
 
@@ -410,7 +411,7 @@ r:"^已進化，對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊�
 r:"^已進化，對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害。有(\d+\.\d+%)基礎機率使所有敵人陷入暈眩狀態，效果持續(\d+)回合。$"="Evolved. Deal $1 ATK Psy damage to <color\=#FFFF00>all</color> foes. There is a $2 base chance to inflict all foes with Dizzy for $3 turns."
 
 Shiva
-r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，根據消耗特殊資源觸發額外效果。$"="Deal $1 ATK Psy damage to <color\=#FFFF00>all</color> foes, triggers additional effects based on the amount of Wisdom consumed."
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，根據消耗特殊資源觸發額外效果。$"="Deal $1 ATK Psy damage to <color\=#FFFF00>all</color> foes, trigger additional effects based on the amount of Wisdom consumed."
 
 --- Nuke ---
 
@@ -434,7 +435,8 @@ r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬�
 //ST Bless with constant stacks
 r:"對<color\=#FFFF00>1名</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deal <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>1</color> foe and gains $2 Blessing stack(s).
 
-r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，賦予自身(\d+)個祝福效果$"="Deal $1 ATK Bless damage to <color\=#FFFF00>1</color> foe and gains $2 stacks of Blessing."
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，賦予自身(\d+)個祝福效果$"="Deal $1 ATK Bless damage to <color\=#FFFF00>1</color> foe, grant user $2 Blessing stack(s)."
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，高機率賦予自身(\d+)個祝福效果$"="$"="Deal $1 ATK Bless damage to <color\=#FFFF00>1</color> foe, with a high chance to grant user $2 Blessing stack(s)."
 
 //AoE Bless with varying stacks
 r:"對<color\=#FFFF00>所有</color>敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，使自己獲得(\d+\~\d+)個<link\="s\|111"><u>祝福</u></link>效果。"=Deal <color\=#FFFF00>$1</color> ATK Bless damage to <color\=#FFFF00>all</color> foes and gains $2 Blessing stack(s).
@@ -707,8 +709,9 @@ SPECIAL
 ---------
 召喚隨從=Summon
 
-r:"^該技能尚未達到使用條件$"="You have not reached the condition to use this skill"
+該技能尚未達到使用條件=Skill activation conditions have not been met
 條件不足=Insufficient conditions
+技能不滿足使用條件=Insufficient conditions
 
 Battle Quotes
 當前HP不足。=Not enough HP.
@@ -1201,7 +1204,7 @@ r:"^精力回復提升(\d+(.\d+)?(%)?)$"="Increase SP Recovery by $1"
 r:"^技巧精通提升(\d+(.\d+)?(%)?)$"="Increase TECHNICAL Mastery by $1"
 r:"^技巧精通提升(\d+(.\d+)?(%)?)點$"="Increase TECHNICAL Mastery by $1"
 r:"^穿透提升(\d+(.\d+)?(%)?)$"="Increase Pierce by $1"
-r:"^穿透提升(\d+%)，可疊加(\d+)層$"="Increase Pierce by $1, up to $2 stacks"
+r:"^穿透提升(\d+%)，可疊加(\d+)層$"="Increase Pierce by $1. \nStacks up to $2 times"
 r:"^效果命中提升(\d+(.\d+)?(%)?)$"="Increase Ailment ACC by $1"
 r:"^造成元素異常/精神異常時的效果命中提升(\d+(.\d+)?(%)?)$"="Increase Ailment ACC by $1 when inflicting Elemental Ailments/Mental Ailments"
 r:"^耐性穿透提升(\d+%)$"="Increase RES Pierce by $1"
@@ -1213,8 +1216,8 @@ r:"^所有角色最終傷害提升(\d+(.\d+)?(%)?)$"="Increase all characters' F
 r:"^提升(\d+(.\d+)?(%)?)的最終傷害$"="Increase Final DMG by $1"
 r:"^最終傷害提升(\d+%)，受最終傷害提升(\d+%)$"="Increase Final DMG by $1; \nIncrease Final DMG Taken by $2"
 r:"^最終傷害降低(\d+%)，受最終傷害降低(\d+%)$"="Decrease Final DMG by $1; \nDecrease Final DMG Taken by $2"
-r:"^最終傷害提升(\d+%)，可疊加(\d+)層$"="Increase Final DMG by $1, up to $2 stacks"
-r:"^每層提供(\d+%)的最終傷害加成，最多可疊加(\d+)層$"="Increase Final DMG by $1, up to $2 stacks"
+r:"^最終傷害提升(\d+%)，可疊加(\d+)層$"="Increase Final DMG by $1. \nStacks up to $2 times"
+r:"^每層提供(\d+%)的最終傷害加成，最多可疊加(\d+)層$"="Increase Final DMG by $1. \nStacks up to $2 times"
 r:"^處於額外回合時，最終傷害提高(\d+(.\d+)?(%)?)$"="<size\=26>Increase Final DMG by $1 during Extra Action</size>"
 r:"^造成的最終傷害提升(\d+%)，若自身處於額外回合，造成的最終傷害額外提升(\d+%)$"="Increase Final DMG Dealt by $1, if you are in Extra Action, increase Final DMG Dealt by $2 more"
 r:"^造成持續傷害時，傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Dealt by $1 when dealing Damage Over Time"
@@ -1225,9 +1228,9 @@ r:"^傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Bonus by $1"
 r:"^造成傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Dealt by $1"
 r:"^造成傷害提高(\d+(.\d+)?(%)?)$"="Increase DMG Dealt by $1"
 r:"^造成的傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Dealt by $1"
-r:"^造成傷害提升(\d+%)，可疊加(\d+)層$"="Increase DMG Dealt by $1, up to $2 stacks"
+r:"^造成傷害提升(\d+%)，可疊加(\d+)層$"="Increase DMG Dealt by $1. \nStacks up to $2 times"
 r:"^所有同伴造成的傷害提升(\d+(.\d+)?(%)?)。$"="Increase DMG Dealt by $1"
-r:"^造成傷害提高(\d+%)，可疊加(\d+)層$"="Increase DMG Dealt by $1, up to $2 stacks"
+r:"^造成傷害提高(\d+%)，可疊加(\d+)層$"="Increase DMG Dealt by $1. \nStacks up to $2 times"
 r:"^造成傷害提高(\d+%)、受到傷害提高(\d+%)$"="Increase DMG Dealt by $1; \nIncrease DMG Taken by $2"
 r:"^造成最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG Dealt by $1"
 r:"^造成的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG Dealt by $1"
@@ -1344,7 +1347,7 @@ r:"^攻擊力降低(\d+(.\d+)?(%)?)$"="Decrease ATK by $1"
 r:"^防禦降低(\d+(.\d+)?(%)?)$"="Decrease DEF by $1"
 r:"^防禦力降低(\d+(.\d+)?(%)?)$"="Decrease DEF by $1"
 r:"^總防禦力降低(\d+(.\d+)?(%)?)$"="Decrease Total DEF by $1"
-r:"^防禦力降低(\d+%)，可疊加(\d+)層$"="Decrease DEF by $1, up to $2 stacks"
+r:"^防禦力降低(\d+%)，可疊加(\d+)層$"="Decrease DEF by $1. \nStacks up to $2 times"
 r:"^所有怪盜最終防禦力下降(\d+(.\d+)?(%)?)$"="Decrease all Thieves' DEF by $1"
 r:"^受到暴擊效果提升(\d+(.\d+)?(%)?)$"="Increase Crit DMG Taken by $1"
 r:"^觸電狀態下，受到暴擊效果提升(\d+(.\d+)?(%)?)$"="When inflicted with Shock,\nincrease Crit DMG Taken by $1"
@@ -1371,7 +1374,7 @@ r:"^受到最終傷害提升(\d+%)，最終傷害降低(\d+%)$"="Increase Final 
 r:"^受到最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG Taken by $1"
 r:"^受到最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG Taken by $1"
 r:"^受到的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG Taken by $1"
-r:"^受最終傷害提升(\d+%)，可疊加(\d+)層$"="Increase Final DMG Taken by $1, \nup to $2 stacks"
+r:"^受最終傷害提升(\d+%)，可疊加(\d+)層$"="Increase Final DMG Taken by $1. \nStacks up to $2 times"
 r:"^造成傷害降低(\d+(.\d+)?(%)?)$"="Decrease DMG Dealt by $1"
 r:"^造成的傷害降低(\d+(.\d+)?(%)?)$"="Decrease DMG Dealt by $1"
 造成的傷害大幅降低=Heavily decrease DMG Dealt
@@ -1467,6 +1470,6 @@ r:"^受到的治療效果降低(\d+(.\d+)?(%)?)$"="Decrease Healing Received by 
 一回合無法行動，防禦降低=Unable to act, decrease DEF
 r:"^無法行動，受到最終傷害提升(\d+(.\d+)?(%)?)$"="<size\=25>Unable to act, increase Final DMG Taken by $1</size>"
 
-r:"^回合末失去一定生命值，最終受到傷害提升(\d+%)，可疊加(\d+)層$"="<size\=24>Lose a certain amount of HP at the end of the turn; \nIncrease Final DMG Taken by $1, up to $2 stacks</size>"
-r:"^造成傷害提高(\d+%)、每回合流失一定生命值，可疊加(\d+)層，不可被驅散$"="<size\=24>Lose a certain amount of HP at the end of the turn; \nIncrease DMG Dealt by $1, up to $2 stacks; \nCannot be dispelled</size>"
-r:"^回合末失去一定生命值，攻擊力提升(\d+%)，可疊加(\d+)層$"="<size\=24>Lose a certain amount of HP at the end of the turn; \nIncrease ATK by $1, up to $2 stacks</size>"
+r:"^回合末失去一定生命值，最終受到傷害提升(\d+%)，可疊加(\d+)層$"="<size\=24>Lose a certain amount of HP at the end of the turn; \nIncrease Final DMG Taken by $1. Stacks up to $2 times</size>"
+r:"^造成傷害提高(\d+%)、每回合流失一定生命值，可疊加(\d+)層，不可被驅散$"="<size\=24>Lose a certain amount of HP at the end of the turn; \nIncrease DMG Dealt by $1. Stacks up to $2 times; \nCannot be dispelled</size>"
+r:"^回合末失去一定生命值，攻擊力提升(\d+%)，可疊加(\d+)層$"="<size\=24>Lose a certain amount of HP at the end of the turn; \nIncrease ATK by $1. Stacks up to $2 times</size>"

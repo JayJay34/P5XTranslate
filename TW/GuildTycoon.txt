@@ -106,15 +106,15 @@ sr:"<color\=#FF0000>(.*)</color>將<color\=#FF0000>(.*?)</color>移出了樂園�
 暫未挑戰=Not challenged yet
 啟示禁用=<size\=20>\nCards\nLocked</size>
 當前<color\=#FFC000>怪盜</color>已鎖定，重置挑戰前無法下陣或更換=Current <color\=#FFC000>Thief</color> is locked, can't change until resetting the fight
-支配/反抗職業積分倍率=<size\=27>Sweeper/Assassin Score Mult</size>
+支配/反抗職業積分倍率=<size\=24>Sweeper/Assassin Score Mult</size>
 
 特殊機制生效中=Mechanics Active
 累積分數：=Total Score: <size\=1>.</size>
 虛弱剩餘回合：=<size\=1>.</size> <size\=23>Weaken Turns Left:</size> <size\=1>.</size>
 剩餘進攻回合：=<size\=1>.</size> <size\=23>Attack Turns Left:</size> <size\=1>.</size>
-虛弱期獲得積分×=Weaken Score Multiplier x
-存活回合積分加成×=Survival Score Multiplier x
-支配/反抗職業積分加成×=Score Multiplier x
+虛弱期獲得積分×=Weaken Score Mult x
+存活回合積分加成×=Survival Score Mult x
+支配/反抗職業積分加成×=Sweeper/Assassin Score Mult x
 r:"^倍$"="<size\=10> </size>!"
 r:"^在(\d+)回合內對敵人造成更高的傷害$"="Deal damage to foes within $1 turns"
 逃離戰鬥不會記錄挑戰積分。\n確定要離開戰鬥嗎？=Cannot record score if you escape.\nAre you sure?
@@ -164,8 +164,8 @@ sr:"^受到技能屬性：(.*)$"="Skill element: $1"
 sr:"^被擊敗後使怪盜(.*)傷害提升$"="Increase all Thieves' $1 DMG on death"
 r:"^對所有敵人造成物理屬性傷害，有極低機率使敵人陷入<link\="s\|156"><u>狂怒</u></link>狀態，效果持續(\d+)回合，$"="Deal Phys damage to all foes, with a very low chance to inflict <link\="s|156"><u>Rage</u></link> on all foes for $1 turns."
 
-r:"^1、{{B}}每回合為所有單位添加<color\=#ff3b37>「諸神黃昏」</color>。\n「諸神黃昏」：造成傷害提升(\d+%)，每回合流失一定生命值，可疊加(\d+)層。\n2、進入虛弱階段後，{{B}}為全體怪盜添加(\d+)層<color\=#ff3b37>「諸神黃昏」</color>，並召喚(\d+)隻{{A}}，對{{A}}造成的傷害會計入積分。$"="<size\=24>1. {{B}} will inflict all units with <color\=#ff3b37>[Ragnarok]</color> each turn.\n[Ragnarok]: Increase DMG Dealt by $1, lose a certain amount of HP each turn, up to $2 stacks.\n2. When entering Weak, {{B}} will inflict all Thieves with $3 stacks of <color\=#ff3b37>[Ragnarok]</color>, then summon $4 {{A}}, dealing damage to {{A}} will count for score.</size>"
-r:"^1、{{B}}每回合為所有單位添加<color\=#ff3b37>「諸神黃昏」</color>。\n「諸神黃昏」：造成傷害提升(\d+%)，每回合流失一定生命值，可疊加(\d+)層。\n2、擊敗{{C}}，會扣除{{B}}一定生命值。\n3、進入虛弱階段後，{{B}}為全體怪盜添加(\d+)層<color\=#ff3b37>「諸神黃昏」</color>，並召喚(\d+)隻{{A}}，對{{A}}造成的傷害會計入積分。$"="1. {{B}} will inflict all units with <color\=#ff3b37>[Ragnarok]</color> each turn.\n[Ragnarok]: Increase DMG Dealt by $1, lose a certain amount of HP each turn, up to $2 stacks.\n2. When defeating {{C}}, {{B}} will lose a certain amount of HP.\n3. When entering Weak, {{B}} will inflict all Thieves with $3 stacks of <color\=#ff3b37>[Ragnarok]</color>, then summon $4 {{A}}, dealing damage to {{A}} will count for score."
+r:"^1、{{B}}每回合為所有單位添加<color\=#ff3b37>「諸神黃昏」</color>。\n「諸神黃昏」：造成傷害提升(\d+%)，每回合流失一定生命值，可疊加(\d+)層。\n2、進入虛弱階段後，{{B}}為全體怪盜添加(\d+)層<color\=#ff3b37>「諸神黃昏」</color>，並召喚(\d+)隻{{A}}，對{{A}}造成的傷害會計入積分。$"="<size\=24>1. {{B}} will inflict all units with <color\=#ff3b37>[Ragnarok]</color> each turn.\n[Ragnarok]: Increase DMG Dealt by $1, lose a certain amount of HP each turn. Stacks up to $2 times.\n2. When entering Weak, {{B}} will inflict all Thieves with $3 stacks of <color\=#ff3b37>[Ragnarok]</color>, then summon $4 {{A}}, dealing damage to {{A}} will count for score.</size>"
+r:"^1、{{B}}每回合為所有單位添加<color\=#ff3b37>「諸神黃昏」</color>。\n「諸神黃昏」：造成傷害提升(\d+%)，每回合流失一定生命值，可疊加(\d+)層。\n2、擊敗{{C}}，會扣除{{B}}一定生命值。\n3、進入虛弱階段後，{{B}}為全體怪盜添加(\d+)層<color\=#ff3b37>「諸神黃昏」</color>，並召喚(\d+)隻{{A}}，對{{A}}造成的傷害會計入積分。$"="1. {{B}} will inflict all units with <color\=#ff3b37>[Ragnarok]</color> each turn.\n[Ragnarok]: Increase DMG Dealt by $1, lose a certain amount of HP each turn. Stacks up to $2 times.\n2. When defeating {{C}}, {{B}} will lose a certain amount of HP.\n3. When entering Weak, {{B}} will inflict all Thieves with $3 stacks of <color\=#ff3b37>[Ragnarok]</color>, then summon $4 {{A}}, dealing damage to {{A}} will count for score."
 r:"^{{A}}每回合為所有單位添加(\d+)層<color\=#ff3b37>「諸神黃昏」</color>。\n「諸神黃昏」：造成傷害提升(\d+%)，每回合流失一定生命值，可疊加(\d+)層。$"="<size\=27>{{A}} will inflict all units with $1 <color\=#ff3b37>[Ragnarok]</color> stacks each turn.\n[Ragnarok]: Increase DMG Dealt by $2, lose a certain amount of HP each turn. Stacks up to $3 times.</size>"
 r:"^1、{{B}}每回合為所有單位添加(\d+)層<color\=#ff3b37>「諸神黃昏」</color>。\n「諸神黃昏」：造成傷害提升(\d+%)，每回合流失一定生命值，可疊加(\d+)層。\n2、對{{A}}造成的傷害會計入積分。$"="<size\=25>1. {{B}} will inflict all units with $1 <color\=#ff3b37>[Ragnarok]</color> stacks each turn.\n[Ragnarok]: Increase DMG Dealt by $2, lose a certain amount of HP each turn. Stacks up to $3 times.\n2. Dealing damage to {{A}} will count for score.</size>"
 諸神黃昏=Ragnarok
@@ -174,7 +174,7 @@ r:"^諸<color\=#000000>神</color>黃昏$"="R<color\=#000000>a</color>gnarok"
 對{{A}}造成的傷害會計入積分。=Dealing damage to {{A}} will count for score.
 
 r:"^1、{{A}}會釋放「八字聖玉」：使自身對全屬性的適應性變為耐，造成傷害提升、受到傷害降低，並召喚四屬性之魂。擊敗不同屬性的魂，會使{{A}}進入不同的元素異常狀態，持續(\d+)回合。\n2、{{A}}處於「八字聖玉」狀態，且同時擁有(\d+)種元素異常狀態時，會退出「八字聖玉」狀態並使自身防禦力降低。\n3、{{A}}進入虛弱階段時，會清除四屬性之魂並退出「八字聖玉」狀態。$"="<size\=24>1. {{A}} will use [Eight Virtue's Protection]: Change all affinities to Resist, increase DMG Dealt and decrease DMG Taken, and summon 4 Mitamas. When a Mitama dies, inflict {{A}} with an Elemental Ailment for $1 turns.\n2. When {{A}} has $2 Elemental Ailments, lose [Eight Virtue's Protection] and decrease Yatsufusa's DEF.\n3. When {{A}} enter Weak, defeat all Mitamas and lose [Eight Virtue's Protection].</size>"
-r:"^1、{{A}}會釋放「八字聖玉」：使自身對全屬性的適應性變為耐，造成傷害提升、受到傷害降低，並召喚四屬性之魂。擊敗不同屬性的魂，會使{{A}}進入不同的元素異常狀態，持續(\d+)回合。\n2、{{A}}處於「八字聖玉」狀態，且同時擁有(\d+)種元素異常狀態時，會退出「八字聖玉」狀態並使自身防禦力降低。$"="<size\=24>1. {{A}} will use [Eight Virtue's Protection]: Change all affinities to Resist, increase DMG Dealt and decrease DMG Taken, then summon 4 Mitamas. When a Mitama dies, inflict {{A}} with an Elemental Ailment for $1 turns.\n2. When {{A}} has $2 Elemental Ailments, lose [Eight Virtue's Protection] and decrease Yatsufusa's DEF."</size>"
+r:"^1、{{A}}會釋放「八字聖玉」：使自身對全屬性的適應性變為耐，造成傷害提升、受到傷害降低，並召喚四屬性之魂。擊敗不同屬性的魂，會使{{A}}進入不同的元素異常狀態，持續(\d+)回合。\n2、{{A}}處於「八字聖玉」狀態，且同時擁有(\d+)種元素異常狀態時，會退出「八字聖玉」狀態並使自身防禦力降低。$"="<size\=24>1. {{A}} will use [Eight Virtue's Protection]: Change all affinities to Resist, increase DMG Dealt and decrease DMG Taken, then summon 4 Mitamas. When a Mitama dies, inflict {{A}} with an Elemental Ailment for $1 turns.\n2. When {{A}} has $2 Elemental Ailments, lose [Eight Virtue's Protection] and decrease Yatsufusa's DEF.</size>"
 八字聖玉=Eight Virtue's Protection
 r:"^使自身對全屬性的適應性變為耐，造成傷害提升(\d+%)，受到傷害降低(\d+%)。自身元素異常數量大於等於(\d+)時，退出「八字聖玉」狀態且自身防禦力降低(\d+%)$"="<size\=28>Changes all affinities to Resist, increases DMG Dealt by $1 and decreases DMG Taken by $2. When Yatsufusa has ≥$3 Elemental Ailments, exit [Eight Virtue's Protection] and decrease DEF by $4</size>"
 r:"^八<color\=#000000>字</color>聖玉$"="E<color\=#000000>i</color>ght Virtue's Protection"
@@ -227,7 +227,7 @@ Modifiers
 
 狂暴領域=Frenzy Domain
 r:"^敵人每回合末使自身獲得(\d+)層<color\=#FFFC40>『狂暴』</color>。\n『狂暴』：最終傷害提升(\d+%)，可疊加。$"="Foes gain $1 stack of <color\=#FFFC40>[Frenzy]</color> at the end of each turn.\nFrenzy: Increase Final DMG by $2, can stack."
-r:"^敵人每回合末使自身獲得(\d+)層<color\=#FFFC40>『狂暴』</color>。\n『狂暴』：獲得一定總傷害增幅，最多可疊加(\d+)層$"="Foes gain $1 stack of <color\=#FFFC40>[Frenzy]</color> at the end of each turn.\nFrenzy: Increase Final DMG, up to $2 stacks."
+r:"^敵人每回合末使自身獲得(\d+)層<color\=#FFFC40>『狂暴』</color>。\n『狂暴』：獲得一定總傷害增幅，最多可疊加(\d+)層$"="Foes gain $1 stack of <color\=#FFFC40>[Frenzy]</color> at the end of each turn.\nFrenzy: Increase Final DMG. Stacks up to $2 times"
 狂暴=Frenzy
 
 猛毒領域=Toxic Domain
