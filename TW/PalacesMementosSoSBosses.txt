@@ -2486,6 +2486,18 @@ r:"^蓄力時，獲得的「力量積蓄」層數提升至(\d+)層；擁有「�
 r:"^直接挑戰LV.(\d+)$"="Challenge LV.$1"
 r:"^每層提升自身(\d+%)的攻擊力、防禦力。$"="Increase ATK and DEF by $1 per stack"
 
+女皇&皇帝= Empress & Emperor
+r:"^1、女皇和皇帝進入戰鬥或進入二階段時，會立即釋放『範式轉移』，改變自身的適應性。\n2、女皇和皇帝每受到(\d+)次技能傷害會釋放『範式轉移』，改變自身的適應性。\n3、女皇進入二階段後，每隔一回合，會釋放『拉昆達』，大幅降低敵人的防禦力。皇帝會優先攻擊處於此狀態下的敵人。\n4、皇帝進入二階段後，每隔一回合，會釋放『蓄力』：自身獲得(\d+)層『力量積蓄』；下次釋放物理傷害技能時，若自身擁有『力量積蓄』，則消耗所有『力量積蓄』層數使造成的技能傷害提升(\d+%)。被技能打出弱點傷害時，會丟失(\d+)層『力量積蓄』。\n5、女皇和皇帝其中1人死亡時，另一人獲得『{{A}}』：造成的最終傷害大幅提升、受到的最終傷害大幅降低。$"="1. At the start of battle and when entering phase 2, Empress and Emperor will use [Paradigm Shift] to change their affinities.\n2. Empress and Emperor will use [Paradigm Shift] when taking skill damage $1 times, [Paradigm Shift] will change user's affinities. \n3. After Empress enter phase 2, it will use [Rakunda] every other turn, heavily decreasing foe's DEF. Emperor will prioritize attacking the foe under this debuff.\n4. After Emperor enters phase 2, it will use [Paradigm Shift]. Emperor will use [Charge] every other turn: User gains $2 [Accumulated Power] stacks; When using the next Phys skill, if user has [Accumulated Power], spend all [Accumulated Power] to increase skill damage by $3. When taking Weak damage from skills, lose $4 [Accumulated Power] stack.\n5. When either Empress or Emperor is defeated, the other will gain [{{A}}]: Heavily increase Final DMG Dealt, and heavily decrease Final DMG Taken."
+sr:"^弱點又發生了變化。\n大家注意，當前的弱點是<color\=#FF0000>(.*)</color>、<color\=#FF0000>(.*)</color>！$"="Be careful, their current weaknesses are <color\=#FF0000>$1</color> and <color\=#FF0000>$2</color>!"
+無法行動且無法被選中=Unable to act and untargetable
+r:"^使1名敵人的防禦力降低，效果持續(\d+)回合。$"="Decrease 1 foe's DEF for $1 turns."
+r:"^憤<color\=#000000>怒</color>復仇$"="F<color\=#000000>u</color>rious Revenge"
+同伴死亡後，造成的最終傷害永久提升，受到的最終傷害永久降低。=After an ally is defeated, increase Final DMG Dealt and decrease Final DMG Taken. This effect is permanent.
+女皇威儀=Empress's Majesty
+女皇的「瑪哈塔爾卡加」及「拉坤達」效果大幅提升。=Heavily increase Empress's [Matarukaja] and [Rakunda] skill effect.
+怒髮衝冠=Blood Boil
+「{{A}}」提供的最終增傷、最終減傷效果大幅提升。=Heavily increase [{{A}}]'s Final DMG buff and Final DMG RES buff.
+
 ----------
 Sea of Souls Trials (SoS)
 ----------
@@ -2586,7 +2598,7 @@ r:"^<color\=#FFFFFF>首領剩餘進攻次數：</color><color\=#FFF000>(\d+)</co
 r:"^惡<color\=#000000>魔</color>的詛咒$"="D<color\=#000000>e</color>mon's Curse"
 <color\=#FF0000>{{A}}</color>受到了惡魔的詛咒，造成的傷害降低……=<size\=20><color\=#FF0000>{{A}}</color> inflicted with Demon's Curse, DMG Dealt Down...</size>
 
-四大天王每隔一個回合會對隨機一名怪盜釋放「死亡凝視」，四大天王會優先攻擊處於「死亡凝視」的怪盜。=The Four Heavenly Kings will use [Death Gaze] on a random foe, the Four Heavenly Kings will prioritize attacking the foe with [Death Gaze].
+四大天王每隔一個回合會對隨機一名怪盜釋放「死亡凝視」，四大天王會優先攻擊處於「死亡凝視」的怪盜。=The Four Heavenly Kings will use [Death Gaze] on a random foe, the Four Heavenly Kings will prioritize attacking the foe under [Death Gaze].
 
 r:"^1、{{A}}進入戰鬥時獲得(\d+)層「{{A}}鱗甲」，每個回合會恢復(\d+)層「{{A}}鱗甲」，每層可以為其提供(\d+%)的最終傷害減免；\n2、{{A}}受到弱點傷害時，都會損失一層「{{A}}鱗甲」；\n3、{{A}}失去所有「{{A}}鱗甲」時會使所有怪盜獲得「{{A}}之力」，提升所有怪盜造成的最終傷害。$"="<size\=24>1. {{A}} will gain $1 stacks of [Scale Armor] at the start of battle and restore $2 stack of [Scale Armor] each turn, each stack increases Final DMG RES by $3;\n2. When {{A}} took weak damage, lose 1 stack of [Scale Armor];\n3. Give all Thieves [{{A}}'s Power] when {{A}} lose all [Scale Armor], increase all Thieves' Final DMG.</size>"
 r:"^1、{{A}}進入戰鬥時獲得(\d+)層「{{A}}鱗甲」，每個回合會恢復(\d+)層「{{A}}鱗甲」，每層可以為其提供(\d+%)的最終傷害減免。\n2、{{A}}受到弱點傷害時，都會損失一層「{{A}}鱗甲」。\n3、{{A}}失去所有「{{A}}鱗甲」時會使所有怪盜獲得「{{A}}之力」，提升所有怪盜造成的最終傷害。$"="<size\=24>1. {{A}} will gain $1 stacks of [Scale Armor] at the start of battle and restore $2 stack of [Scale Armor] each turn, each stack increases Final DMG RES by $3;\n2. When {{A}} took weak damage, lose 1 stack of [Scale Armor].\n3. Give all Thieves [{{A}}'s Power] when {{A}} lose all [Scale Armor], increase all Thieves' Final DMG.</size>"
@@ -2743,5 +2755,6 @@ r:"^熱<color\=#000000>情</color>孢子$"="P<color\=#000000>a</color>ssionate S
 
 礦蝕蛛網=Weathering Web
 sr:"^解明怪盜每次主動使用任意技能後使所有同伴獲得(\d+)層『(.*)』。『(.*)』：每層提供(\d+%)的最終傷害加成，持續(\d+)回合，最多可疊加(\d+)層。$"="<size\=23>After Elucidator manually uses any skill, all allies gain $1 [$2] stack. [$3]: Increase Final DMG by $4 for $5 turn. Stacks up to $6 times.</size>"
+sr:"^解明怪盜每次主動使用任意技能後使所有同伴獲得(\d+)層『(.*)』。『(.*)』：每層提供(\d+%)的最終傷害加成，持續(\d+)回合（每層獨立計算），最多可疊加(\d+)層。$"="After Elucidator manually uses any skill, all allies gain $1 [$2] stack. [$3]: Increase Final DMG by $4 for $5 turn. Stacks up to $6 times, and stacks are spent separately."
 神經絲絡=Nerve Silk
 r:"^神<color\=#000000>經</color>絲絡$"="N<color\=#000000>e</color>rve Silk"

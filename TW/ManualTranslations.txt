@@ -1056,6 +1056,7 @@ r:"^陣容\((\d+)\)$"="Party ($1)"
 確認要刪除該方案嗎？=Delete this party formation?
 不可以刪除默認編隊喔=Cannot delete the default setting
 隊伍中至少攜帶一個{{A}}=Party needs to be set with at least one {{A}}.
+請編入三名參戰隊員。=Please deploy 3 teammates.
 陣容中已有相同怪盜，是否替換？=Your party contains duplicate Thief. \nWould you like to swap one out?
 <color\=#FFF000>{{A}}</color>無法與<color\=#FFF000>{{B}}</color>同時上陣，是否替換？=Unable to bring <color\=#FFF000>{{A}}</color> with <color\=#FFF000>{{B}}</color>, change them?
 <color\=#FFF000>{{B}}</color>無法與<color\=#FFF000>{{A}}</color>同時上陣，是否替換？=Unable to bring <color\=#FFF000>{{B}}</color> with <color\=#FFF000>{{A}}</color>, change them?
@@ -1121,7 +1122,7 @@ r:"^推薦編入(\d+)名<size\=(\d+)><sprite\=(\d+) tint\=1></size>角色$"="Rec
 弱點抗性=Weak RES
 耐性穿透=RES Pierce
 耐性抗性=RES Bonus
-r:"^治療效果$"="<size\=22>Healing Effect</size>"
+治療效果=<size\=22>Healing Effect</size>
 受治療加成=Healing Received
 受治療效果=Healing Received
 藥品效果=Item Effect
@@ -1605,11 +1606,13 @@ sr:"^在本次<color\=#EADE10>「(.*)」</color>契約中，獲取五星、四�
 {{F}}|{{A}}|{{B}}|{{D}}|{{C}}|{{K}}|{{J}}|{{E}}|{{G}}|{{H}}|{{I}}={{F}}|{{A}}|{{B}}|{{D}}|{{C}}|{{K}}|{{J}}|{{E}}|{{G}}|{{H}}|{{I}}
 {{J}}|{{A}}|{{B}}|{{D}}|{{C}}|{{K}}|{{I}}|{{E}}|{{F}}|{{G}}|{{H}}={{J}}|{{A}}|{{B}}|{{D}}|{{C}}|{{K}}|{{I}}|{{E}}|{{F}}|{{G}}|{{H}}
 {{E}}|{{A}}|{{B}}|{{D}}|{{C}}|{{K}}|{{J}}|{{F}}|{{G}}|{{H}}|{{I}}={{E}}|{{A}}|{{B}}|{{D}}|{{C}}|{{K}}|{{J}}|{{F}}|{{G}}|{{H}}|{{I}}
+{{K}}|{{A}}|{{B}}|{{D}}|{{C}}|{{J}}|{{I}}|{{E}}|{{F}}|{{G}}|{{H}}={{K}}|{{A}}|{{B}}|{{D}}|{{C}}|{{J}}|{{I}}|{{E}}|{{F}}|{{G}}|{{H}}
 {{I}}|{{G}}|{{K}}|{{B}}|{{A}}|{{D}}|{{C}}|{{H}}|{{E}}|{{J}}|{{M}}|{{N}}|{{L}}|{{F}}|{{O}}={{I}}|{{G}}|{{K}}|{{B}}|{{A}}|{{D}}|{{C}}|{{H}}|{{E}}|{{J}}|{{M}}|{{N}}|{{L}}|{{F}}|{{O}}
 {{B}}|{{A}}|{{D}}|{{C}}|{{I}}|{{H}}|{{E}}|{{J}}|{{G}}|{{M}}|{{N}}|{{L}}|{{K}}|{{O}}|{{F}}={{B}}|{{A}}|{{D}}|{{C}}|{{I}}|{{H}}|{{E}}|{{J}}|{{G}}|{{M}}|{{N}}|{{L}}|{{K}}|{{O}}|{{F}}
 {{C}}|{{J}}|{{F}}|{{B}}|{{A}}|{{D}}|{{I}}|{{H}}|{{E}}|{{G}}|{{M}}|{{N}}|{{L}}|{{K}}|{{O}}={{C}}|{{J}}|{{F}}|{{B}}|{{A}}|{{D}}|{{I}}|{{H}}|{{E}}|{{G}}|{{M}}|{{N}}|{{L}}|{{K}}|{{O}}
 {{B}}|{{A}}|{{C}}|{{I}}|{{H}}|{{E}}|{{J}}|{{G}}|{{M}}|{{N}}|{{L}}|{{K}}|{{O}}|{{D}}|{{F}}={{B}}|{{A}}|{{C}}|{{I}}|{{H}}|{{E}}|{{J}}|{{G}}|{{M}}|{{N}}|{{L}}|{{K}}|{{O}}|{{D}}|{{F}}
 {{B}}|{{D}}|{{E}}|{{A}}|{{C}}|{{I}}|{{H}}|{{J}}|{{G}}|{{M}}|{{N}}|{{L}}|{{F}}|{{K}}|{{O}}={{B}}|{{D}}|{{E}}|{{A}}|{{C}}|{{I}}|{{H}}|{{J}}|{{G}}|{{M}}|{{N}}|{{L}}|{{F}}|{{K}}|{{O}}
+{{C}}|{{N}}|{{O}}|{{B}}|{{A}}|{{D}}|{{I}}|{{H}}|{{E}}|{{J}}|{{G}}|{{M}}|{{L}}|{{F}}|{{K}}={{C}}|{{N}}|{{O}}|{{B}}|{{A}}|{{D}}|{{I}}|{{H}}|{{E}}|{{J}}|{{G}}|{{M}}|{{L}}|{{F}}|{{K}}
 {{B}}|{{F}}|{{P}}|{{H}}|{{A}}|{{Z}}|{{J}}|{{Q}}|{{K}}|{{R}}|{{I}}|{{L}}|{{M}}|{{S}}|{{G}}|{{Y}}|{{T}}|{{U}}|飛天|{{V}}|{{W}}|{{N}}|{{E}}|{{O}}|{{X}}|{{C}}|{{D}}={{B}}|{{F}}|{{P}}|{{H}}|{{A}}|{{Z}}|{{J}}|{{Q}}|{{K}}|{{R}}|{{I}}|{{L}}|{{M}}|{{S}}|{{G}}|{{Y}}|{{T}}|{{U}}|Apsaras|{{V}}|{{W}}|{{N}}|{{E}}|{{O}}|{{X}}|{{C}}|{{D}}
 
 Weapon Gacha Rules
@@ -1640,6 +1643,7 @@ sr:"^「當未觸發UP或保底規則時，所有武器均分基礎獲取機率�
 海鹽沙冰=Ocean's Coldbox
 喧嘩禁止=Study Club Time
 星球護衛隊=Stellar Guardians
+月影下的先知=I See Through All
 
 ----------
 Gachapon + Crane (Capsule)
@@ -3250,8 +3254,9 @@ Friends Screen
 推薦陣容等級：=Rec. Lv:
 推薦屬性：=<size\=22>Rec. Attributes:</size>
 嘗試調整陣容後再重新挑戰=Adjust your team and try again
-主角{{A}}的強度較低=Wonder {{A}} Lv. is low
-主角<color\=#EF0000>{{A}}</color>的強度較低=Wonder <color\=#EF0000>{{A}}</color> are not strong enough.
+主角{0}的強度較低=Wonder is not strong enough.
+主角{{A}}的強度較低=Wonder {{A}} is not strong enough.
+主角<color\=#EF0000>{{A}}</color>的強度較低=Wonder <color\=#EF0000>{{A}}</color> is not strong enough.
 怪盜角色技能的強度較低=Character Skills Lv. are not strong enough.
 怪盜角色武器、技能的強度較低=Character Weapons, Skills are not strong enough.
 怪盜角色啟示卡、技能的強度較低=Character Revelations, Skills are not strong enough.
