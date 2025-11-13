@@ -534,6 +534,7 @@ MOONLIT BOND
 側重於生存能力，額外獲得開局資源=Focus on survivability; Gain starting resources
 側重於輔助能力，額外提升探索能力=Focus on support; Increase exploration skills
 側重於暴擊能力，額外提升主角戰鬥技巧=Focus on critical; Increase Wonder's Thief Tactics
+側重於探索能力，額外解鎖導航技能=Focus on exploration; Unlock navigation skills
 羈絆詳情=Bond Details
 r:"^治療效果\+(\d+%)$"="Healing Effect +$1"
 r:"^治療效果\+(\d+%)->(\d+%)$"="Healing Effect +$1->$2"
@@ -547,6 +548,10 @@ r:"^暴擊率\+(\d+%)$"="Crit Rate +$1"
 r:"^暴擊率\+(\d+%)->(\d+%)$"="Crit Rate +$1->$2"
 r:"^暴擊效果\+(\d+%)$"="Crit DMG +$1"
 r:"^暴擊效果\+(\d+%)->(\d+%)$"="Crit DMG +$1->$2"
+戰鬥支援=Combat Support
+r:"^解鎖導航技能「戰鬥支援」：下一次進入戰鬥時，所有角色{{A}}、總生命值提升(\d+%)$"="Unlock navigation skill [Combat Support]: At the start of next battle, increase all character's {{A}} and Total HP by $1"
+{{A}}搜索={{A}} Search
+解鎖導航技能「{{A}}搜索」：下一次進入探索樓層時，進入特殊的樓層，出現巨大稀有陰影=Unlock the navigation skill [{{A}} Search]: In the next exploration floor, guarantee a special floor with Greedy Shadow
 
 敬請期待。=Stay tuned.
 所需道具不足。=Insufficient items.
@@ -836,6 +841,7 @@ CORE ANTIQUES
 查看古董品=View Antiques
 選擇核心策略=Select Core Strategy
 初始卡牌：=Initial:
+古董品能量=Antique Energy
 陳舊沙漏=Old Hourglass
 角色高頻獲得額外回合，持續造成輸出=Characters gain many Extra Actions
 飽經歲月的沙漏。\n細沙持續緩緩滑落，令人百看不厭。=An hourglass weathered by time. Its sands fall in a constant, gentle stream, a sight that never grows old.
@@ -889,8 +895,8 @@ r:"^所有角色治療效果提升(\d+%)$"="Increase party's Healing Effect by $
 開啟寶箱獲得額外經驗值並觸發「洗牌時間」=<size\=28>Open treasure chests to gain EXP and trigger Shuffle Time</size>
 寫著『開運御守』的護身符。\n其上的招財貓刺繡，仿佛能招來福運。=A prosperity omamori. The Maneki-neko embroidered upon it beckons prosperity to its owner.
 寶箱數量提升=Treasure Chest Number
-r:"^等級1：{{A}}探索中，陰影出現機率降低，寶箱出現機率提升，開啟寶箱可獲得一定經驗值，探索層出現額外寶箱\n等級2：開啟普通/稀有寶箱後，進入下一層時觸發一次「洗牌時間·通常」/「洗牌時間·稀有」\n等級4：開啟寶箱獲取「時鐘的齒輪」數量增加(\d+%)\n等級6：當局每開啟一個寶箱，使攻擊力提升(\d+%)$"="Lv.1: During {{A}} exploration, decrease the chance of encountering Shadows and increase the chance of encountering treasure chests, gain EXP when opening Treasure Chests, spawn more treasure chest on exploration floors\nLv. 2: After opening normal/rare treasure chests, trigger 1 [Shuffle Time·Normal]/[Shuffle Time·Rare] when entering the next floor\nLv. 4: Increase the amount of [Clock Gears] acquired from treasure chests by $1\nLv. 6: For every opened treasure chests, increase ATK by $2"
-{{A}}探索中，陰影出現機率降低，寶箱出現機率提升，開啟寶箱可獲得一定經驗值，探索層出現額外寶箱=During {{A}} exploration, decrease the chance of encountering Shadows and increase the chance of encountering treasure chests, gain EXP when opening Treasure Chests, spawn more treasure chest on exploration floors
+r:"^等級1：{{A}}探索中，陰影出現機率降低，寶箱出現機率提升，開啟寶箱可獲得一定經驗值，探索層出現額外寶箱\n等級2：開啟普通/稀有寶箱後，進入下一層時觸發一次「洗牌時間·通常」/「洗牌時間·稀有」\n等級4：開啟寶箱獲取「時鐘的齒輪」數量增加(\d+%)\n等級6：當局每開啟一個寶箱，使攻擊力提升(\d+%)$"="Lv.1: During {{A}} exploration, decrease the chance of encountering Shadows and increase the chance of encountering treasure chests, gain EXP when opening treasure chests, spawn more treasure chest on exploration floors\nLv. 2: After opening normal/rare treasure chests, trigger 1 [Shuffle Time·Normal]/[Shuffle Time·Rare] when entering the next floor\nLv. 4: Increase the amount of [Clock Gears] acquired from treasure chests by $1\nLv. 6: For every opened treasure chests, increase ATK by $2"
+{{A}}探索中，陰影出現機率降低，寶箱出現機率提升，開啟寶箱可獲得一定經驗值，探索層出現額外寶箱=During {{A}} exploration, decrease the chance of encountering Shadows and increase the chance of encountering treasure chests, gain EXP when opening teasure chests, spawn more treasure chest on exploration floors
 開啟普通/稀有寶箱後，進入下一層時觸發一次「洗牌時間·通常」/「洗牌時間·稀有」=After opening normal/rare treasure chests, trigger 1 [Shuffle Time·Normal]/[Shuffle Time·Rare] when entering the next floor
 r:"^當局每開啟一個寶箱，使攻擊力提升(\d+%)$"="For every opened treasure chests, increase ATK by $1"
 古董火槍=Antique Pistol
@@ -902,7 +908,36 @@ r:"^等級1：所有角色槍械子彈數量上限提升(\d+%)，使用槍械技
 r:"^所有角色槍械子彈數量上限提升(\d+%)，使用槍械技能時傷害提升(\d+%)$"="Increase party's Gun Attack Ammo by $1; When using Gun Attack, increase damage by $2"
 r:"^所有角色每累計使用(\d+)次槍械攻擊，使自身槍械攻擊獲得總傷害增幅(\d+%)，可疊加(\d+)層$"="Each time when characters use Gun Attack, increase user's Gun Attack Total DMG Amp by $1. Stacks up to $2 times"
 r:"^槍械攻擊時，可以回復造成傷害(\d+%)的生命值$"="When using Gun Attack, restore HP by $1 of damage dealt"
-古董品能量=Antique Energy
+古董胸針=Antique Brooch
+可破壞物數量提升=Increase Breakable Objects
+可破壞物數量增加，擊碎可破壞物獲得額外收益=Increase breakable object number and its rewards
+復古風的胸針。雖然小巧，卻以華麗裝飾彰顯存在感。=A vintage brooch. Though petite, its ornate design commands a striking presence.
+r:"^等級1：{{A}}探索層中，不再出現陰影、寶箱、走失人，額外出現大量可破壞物，擊碎可破壞物可獲得一定經驗值\n等級2：擊碎可破壞物後，進入下一層時有(\d+%)機率觸發一次「洗牌時間·通常」\n等級4：可破壞物有更高機率變為稀有可破壞物\n等級6：擊碎可破壞物獲取「時鐘的齒輪」數量增加(\d+%)$"="Lv.1: In {{A}} exploration floor, Shadows, treasure chests, and missing persons will no longer appear, additionally spawn many breakable objects, gain EXP when breaking breakable objects\nLv.2: After breaking breakable objects, $1 chance to trigger 1 [Shuffle Time·Normal] when entering the next floor\nLv.4: Breakable objects have a higher chance to become rare breakable objects\nLv.6:Increase [Clock Gears] acquired from breakable objects by $2"
+{{A}}探索層中，不再出現陰影、寶箱、走失人，額外出現大量可破壞物，擊碎可破壞物可獲得一定經驗值=In {{A}} exploration floor, Shadows, treasure chests, and missing persons will no longer appear, additionally spawn many breakable objects, gain EXP when breaking breakable objects
+r:"^擊碎可破壞物後，進入下一層時有(\d+%)機率觸發一次「洗牌時間·通常」$"="After breaking breakable objects, $1 chance to trigger 1 [Shuffle Time·Normal] when entering the next floor"
+可破壞物有更高機率變為稀有可破壞物=Breakable objects have a higher chance to become rare breakable objects
+陳舊陶器=Old Pottery
+持續傷害=Damage Over Time
+額外造成持續傷害效果，額外結算持續傷害。=Inflict bonus DOT and deal bonus DOT damage
+設計十分奇特的陶器。散發著難以言喻的哀愁。=A curiously designed pottery. It exudes an ineffable air of sorrow.
+r:"^等級1：角色回合結束時，獲得一定古董品能量；釋放{{A}}技能/追加效果/HIGHLIGHT/{{B}}添加持續效果時，額外獲得一定古董品能量。古董品能量滿時可釋放古董品技能：對所有敵人造成基於難度與當前探索等級的固定傷害，並為其添加(\d+)層「釉裂」：每回合結束受到基於難度與當前探索等級的固定持續傷害，可疊加(\d+)層，本場戰鬥永久生效\n等級3：角色釋放{{A}}技能/{{A}}/HIGHLIGHT/{{B}}造成傷害後，為目標添加(\d+)層『釉裂』\n等級6：釋放古董品技能時，額外結算一次技能目標的持續效果$"="Lv.1: At the end of a character's action, gain Antique Energy; When inflicting Damage Over Time with a {{A}} skill/Follow Up/HIGHLIGHT/{{B}}, gain Antique Energy. Can use Antique Skill at maxed Antique Energy: Deal fixed damage to all foes based on Difficulty and Exploration Level, then inflict them with $1 [Glaze Crazing] stacks: After each action, take fixed Damage Over Time fixed damage based on Difficulty and Exploration Level. Stacks up to $2 times. This effect is permanent\nLv.3: After dealing damage with a {{A}} skill/{{A}}/HIGHLIGHT/{{B}}, inflict the target with $3 [Glaze Crazing] stack\nLv.6: When using Antique Skill, deal all Damage Over Time damage on skill target"
+r:"^角色回合結束時，獲得一定古董品能量；釋放{{A}}技能/追加效果/HIGHLIGHT/{{B}}添加持續效果時，額外獲得一定古董品能量。古董品能量滿時可釋放古董品技能：對所有敵人造成基於難度與當前探索等級的固定傷害，並為其添加(\d+)層「釉裂」：每回合結束受到基於難度與當前探索等級的固定持續傷害，可疊加(\d+)層，本場戰鬥永久生效$"="At the end of a character's action, gain Antique Energy; When inflicting Damage Over Time with a {{A}} skill/Follow Up/HIGHLIGHT/{{B}}, gain Antique Energy. Can use Antique Skill at maxed Antique Energy: Deal fixed damage to all foes based on Difficulty and Exploration Level, then inflict them with $1 [Glaze Crazing] stacks: After each action, take fixed Damage Over Time fixed damage based on Difficulty and Exploration Level. Stacks up to $2 times. This effect is permanent"
+r:"^角色釋放{{A}}技能/{{A}}/HIGHLIGHT/{{B}}造成傷害後，為目標添加(\d+)層『釉裂』$"="After dealing damage with a {{A}} skill/{{A}}/HIGHLIGHT/{{B}}, inflict the target with $1 [Glaze Crazing] stack"
+釋放古董品技能時，額外結算一次技能目標的持續效果=When using Antique Skill, deal all Damage Over Time damage on skill target
+釉裂=Glaze Crazing
+古董剪刀=Antique Scissors
+額外觸發追加效果，造成高額輸出。=Activate bonus Follow Up
+名貴金屬製成的鋒利剪刀。有著相當華麗的造型。=A pair of sharp scissors forged from precious metal. Their form is one of breathtaking elegance.
+r:"^等級1：所有角色觸發追加效果後，額外觸發1次特殊追加效果：對所有敵人造成基於難度與當前探索等級的固定傷害，該傷害由所有敵人平均分攤\n等級3：特殊追加效果的固定傷害額外提升，提升值相當於本次追加效果總傷害的(\d+%)\n等級6：觸發特殊追加效果時，使所有同伴造成傷害提升(\d+%)，可疊加(\d+)層，本場戰鬥永久生效$"="Lv. 1: After activating a Follow Up, activate 1 special Follow Up: Deal fixed damage to all foes based on Difficulty and Exploration Level, distribute this damage between all foes\nLv.3: Increase special Follow Up fixed damage by $1 of this Follow Up's damage\nLv.6: When activating special Follow Up, increase party's DMG Dealt by $2. Stacks up to $3 times. This effect is permanent"
+所有角色觸發追加效果後，額外觸發1次特殊追加效果：對所有敵人造成基於難度與當前探索等級的固定傷害，該傷害由所有敵人平均分攤=After activating a Follow Up, activate 1 special Follow Up: Deal fixed damage to all foes based on Difficulty and Exploration Level, distribute this damage between all foes
+r:"^特殊追加效果的固定傷害額外提升，提升值相當於本次追加效果總傷害的(\d+%)$"="Increase special Follow Up fixed damage by $1 of this Follow Up's damage"
+r:"^觸發特殊追加效果時，使所有同伴造成傷害提升(\d+%)，可疊加(\d+)層，本場戰鬥永久生效$"="When activating special Follow Up, increase party's DMG Dealt by $1. Stacks up to $2 times. This effect is permanent"
+黃銅提燈=Brass Lamp
+額外提升精力值上限與精力恢復，依據消耗精力值造成傷害=<size\=25>Increase Max SP and SP Recovery, deal damage based on SP spent</size>
+外觀老舊的提燈。搖曳的燈火令人心神寧謐。=A lantern with a weathered exterior. Its gently flickering flame brings a profound sense of peace
+r:"^等級1：角色回合結束時，獲得一定古董品能量；釋放技能消耗精力值時，依據消耗的精力值額外獲得一定古董品能量。古董品能量滿時可釋放古董品技能：對所有敵人造成基於難度與當前探索等級的固定傷害\n等級3：釋放古董品技能時，額外使所有同伴恢復(\d+)點可突破上限的精力值（該效果受精力恢復屬性的影響）\n等級6：古董品技能傷害提升至原本的(\d+%)$"="Lv.1: At the end of a character's action, gain Antique Energy; When spending SP with skills, gain Antique Energy based on SP spent. Can use Antique Skill at maxed Antique Energy: Deal fixed damage to all foes based on Difficulty and Exploration Level\nLv.3: When using Antique Skill, all characters restore $1 SP that can exceed the cap (this effect is affected by SP Recovery)\nLv.6: Increase Antique Skill damage to $2 of the original damage"
+角色回合結束時，獲得一定古董品能量；釋放技能消耗精力值時，依據消耗的精力值額外獲得一定古董品能量。古董品能量滿時可釋放古董品技能：對所有敵人造成基於難度與當前探索等級的固定傷害=At the end of a character's action, gain Antique Energy; When spending SP with skills, gain Antique Energy based on SP spent. Can use Antique Skill at maxed Antique Energy: Deal fixed damage to all foes based on Difficulty and Exploration Level
+r:"^釋放古董品技能時，額外使所有同伴恢復(\d+)點可突破上限的精力值（該效果受精力恢復屬性的影響）$"="When using Antique Skill, all characters restore $1 SP that can exceed the cap (this effect is affected by SP Recovery)"
 
 r:"^等級(\d+)$"="Lv. $1"
 r:"^Lv.(\d+)解鎖$"="Unlocks at Lv.$1"
@@ -1062,9 +1097,9 @@ r:"^下(\d+)次非秒殺戰鬥，隨機(\d+)名角色進入無法選中狀態$"=
 r:"^隨機(\d+)名角色進入無法選中狀態$"="Randomly make $1 character untargetable"
 
 權杖·破壞藝術=Wands · Art Destruction
-r:"^下(\d+)次進入探索樓層時，額外出現(\d+)個可破壞物$"="In the next $1 exploration floor(s), additional spawn $2 breakable objects"
+r:"^下(\d+)次進入探索樓層時，額外出現(\d+)個可破壞物$"="In the next $1 exploration floor(s), additionally spawn $2 breakable objects"
 權杖·尋寶奇兵=Wands · Treasure Hunter
-r:"^下(\d+)個進入探索樓層時，額外出現(\d+)個寶箱$"="In the next $1 exploration floor(s), additional spawn $2 treasure chests"
+r:"^下(\d+)個進入探索樓層時，額外出現(\d+)個寶箱$"="In the next $1 exploration floor(s), additionally spawn $2 treasure chests"
 權杖·機遇挑戰者=Wands · Opportunity Challenger
 r:"^下(\d+)次進入探索樓層時，出現稀有陰影的機率提高$"="In the next $1 exploration floor(s), increase the chance of encountering Rare Shadows"
 權杖·危險挑戰者=Wands · Dangerous Challenger
