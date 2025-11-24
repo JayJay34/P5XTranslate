@@ -1258,6 +1258,11 @@ r:"^(.*)你，\n有沒有好好地休息呀？$"="$1, do you get enough rest?"
 精神緊張是理所當然的，但是切勿蠻幹。\n記得要及時找同伴分擔哦。=I understand wanting to power through things, but you can't overwork yourself. Don't forget that you can also rely on your friends.
 如果這裡對你來說是「能放鬆的容身之處」，\n那麼我們也會感覺很開心的。=I think we'd all hope this place is at least somewhere you feel you can take it easy.
 
+Leblanc Futaba
+r:"^咕{{A}}——！\n你聽我說啊，(.*)～！$"="Gaaah! \nWill you hear me out, $1?"
+我放在房間裡的模型，\n又被御狐擺出了奇怪的姿勢。=Inari messed with all the figures in my room again and now they're in all sorts of strange poses!
+但可惡的是，充滿了藝術感啊……！\n我正在苦惱要不要維持那個姿勢一段時間……=I hate that artsy feel they all have now..! What should I do? Should I just leave them like that...?
+
 Leblanc Haru
 ……啊，這個？這個呀，是{{A}}的課題。\n啊，我並不是在替他做哦！=...Ah, this? This is {{A}}'s assignment. Ah, I'm not doing it for him, though.
 他從頭到尾做了一遍，說是\n希望我幫忙對一下答案。我就是負責批改的。=He finished already, but he asked me to check his answers. I'm just marking them off.
@@ -1695,7 +1700,7 @@ Combat start
 發現敵人！\n可不能大意哦？=Enemy spotted! \nDon't let your guard down!
 發現敵人！\n可不能大意哦！=Enemy spotted! \nDon't let your guard down!
 Ambush combat start
-機會來了！\n一鼓作氣搞定它們！=Chance!\nCrush them in one go!
+機會來了！\n一鼓作氣搞定它們！=Now's our chance!\nWipe 'em out!
 Elite combat start
 這、這傢伙！\n感覺很難對付！=Th-This guy!\nThis one's gonna be tough!
 Skill ready
@@ -1714,8 +1719,8 @@ Multi-kill
 幹得漂亮！一舉擊破！=Nice work! One-hit KO!
 確認一舉擊破！\n幹的漂亮呀～=Crushed 'em in one move!\nNot bad～
 Down
-敵人倒地！\n不錯嘛，WONDER！=Enemy down!\nNot bad, Wonder!
-很好！敵人倒地！=Great! Enemy down!
+敵人倒地！\n不錯嘛，WONDER！=Enemy down!\nGood work, Wonder!
+很好！敵人倒地！=Nice! Enemy down!
 敵人倒地！\n乘勝追擊！=Enemy down!\nThat's the spirit!
 敵人倒地了，就是現在！=Enemy down!\nNow's your chance!
 AOA
@@ -1786,7 +1791,7 @@ Down
 AOA
 那麼，開始吧…！=Now, let's get started...!
 {{A}}，要來最後一擊了嗎？={{A}}, is it time for finishing move?
-請聆聽能夠燃燒鬥志的戰歌！=Please listen to the burning fight song!
+請聆聽能夠燃燒鬥志的戰歌！=Please listen to this burning fight song!
 Ally Downed
 被擊倒了嗎！？怎、怎麼辦才好…=Downed!? Wh-What to do...
 我方倒下了！別讓敵人趁機得逞！=Ally down! Don't let the enemy take advantage of this!
@@ -1806,6 +1811,7 @@ WONDER！不要失去意識！=Wonder! Stay awake!
 陷入危機了呢……但也只能堅持戰鬥了！=They are in danger... \nbut we can only fight!
 Faint
 大家一起，傾力保護WONDER吧！=Everyone, protect Wonder!
+WONDER…拜託了，請回話！=Wonder... Please, answer me!
 WONDER！不要，請不要丟下我……！=Wonder! Don't leave me...!
 沒、沒關係嗎！？=A-Are you okay!?
 緊、緊急事態！請救援！=E-Emergency! Please help!
@@ -1829,6 +1835,8 @@ Navigator - Fuuka
 ----------
 Combat Start
 大家加油啊！=Do your best, everyone!
+Elite combat start
+強敵出現……請小心應對！=It's a strong enemy... Please be careful!
 Skill Ready
 我準備好了哦！=I'm ready!
 我也和大家一起加油！=I'll also do my best with everyone!
@@ -1840,8 +1848,10 @@ Highlight，上吧！=HIGHLIGHT, let's go!
 CRIT
 是關鍵的一擊！=That was a critical hit!
 Multi-kill
+太厲害了！我也不能落後……!=That's amazing! I can't fall behind...!
 成功了！乘勝追擊吧！=You did it! Let's press the advantage!
 好厲害！敵方陣線崩潰了！=Amazing! The enemy formation has collapsed!
+哇，好厲害！一口氣擊倒了多名敵人！=Wow, that's amazing! You took down multiple enemies in one hit!
 Down
 WONDER，消滅敵人！=Wonder, you eliminated the enemy!
 敵人倒地了！=The enemy is down!
@@ -1865,6 +1875,9 @@ Missed Gun
 Debuffs
 有人狀態不對。快進行回復！=Someone's suffering from a status ailment. Recover quick!
 有人處於元素異常狀態，要治療嗎？=There's an element ailment, \ncan you cure it?
+Near Death
+糟了，這樣下去的話……=Oh no, at this rate...
+體力告急！可以進行回復嗎？=Your health is at critical! Can you heal?
 Faint
 WONDER倒下了！=Wonder is down!
 有人倒下了。能幫把手嗎！？=They're down. Can you help them!?
@@ -5201,11 +5214,36 @@ CATTLE，拜託你了。=Cattle, if you don't mind.
 是回去還是繼續探索其他地方……\n就交給你判斷了，隊長。=Whether we stay or head back to the real world is up to you, Leader.
 
 ----------
-Chapter 3 Palace 4
+Chapter 3 Part 3
 ----------
+那麼，先梳理一下現狀吧。=Let's start by reviewing the current situation.
+嗯，接下來我們的目標，\n就是那個讓人火大的教育顧問……=So, our next target is the so-called educational consultant...
+{{A}}，沒錯吧？={{A}}, right?
+對，而且所謂{{B}}，\n是與{{A}}在一起的複合型{{C}}。=Correct. What's more, {{B}} has become a hybrid with {{A}}'s.
+{{B}}榨取了{{A}}的慾望，並寄生其中……\n真是個令人不快的{{C}}。=Like a parasite sucking out every last one of {{A}}'s desires... How disgusting.
+現在，{{B}}的陰影已從{{A}}中得到解放，\n回到現實中{{B}}的身體裡了。=But fortunately, we were able to free her Shadow from the {{A}}, which has now reunited with her real self.
+嗯，不過由於吾等還未能奪取{{A}}，\n所以她還沒有徹底被「改心」……=Indeed so. As we didn't steal {{A}}, it isn't a true change of heart, but nevertheless...
+但至少她的慾望不會再被扭曲了，\n也不會再遭受{{A}}的榨取。=This ought to protect her desires from any further distortion or exploitation by {{A}}.
+可、{{A}}的停職處分還在啊，\n在學校裡也見不到她，不知道她怎麼樣了……=I'm still worried about {{A}}. They haven't lifted her suspension, and I haven't seen her around school at all...
+對啊，而且……=Yeah, also...
+{{A}}的{{C}}，還被我們留在{{B}}裡啊，\n應該不會消失吧……？=We just left {{A}}'s {{C}} back in the {{B}}... It's not going to just randomly disappear, right?
+應該不會，一般來說在發出{{B}}後，\n{{A}}只會顯現一天左右的時間……=I don't think so. Usually {{A}}s only materialize for a day or so after we send the calling card, but...
+不過{{A}}原本就想吾等奪走她的{{B}}……\n也就是說她自己強烈希望被「改心」。=It was {{A}}'s own wish for us to take her {{B}} and change her heart.
+吾認為只要她尚存「想被奪走{{A}}」的認知，\n那她的{{A}}就會一直顯現。=I would speculate that as long as she maintains her cognition of that wish, her {{A}} will remain materialized.
+啊……對哦，{{B}}的陰影還主動跟我們說……\n可以拿走她的{{A}}呢。=I see... I guess her Shadow did urge us to take it.
+要是能親眼確認一下就好了……\n但我們現在沒法去{{A}}那裡吧。=We should count ourselves lucky it's still visible, but there's no way we actually get to it now, though...
+嗯，因為{{A}}消失了，\n所以{{B}}失去了可榨取的「動力源」……=Yes, without {{A}}, {{B}} has lost his power source...
+{{A}}所在的「發電廠」區域，\n現在處於封鎖狀態，我們也無法繼續前進。=But that also means that the power plant storing {{A}} has shut down, so there's no way of us getting in.
+但凡能夠探索的區域吾都找了一遍，\n可是並沒有{{A}}的氣息。=Despite our exhaustive search of the area, there was no sign of {{A}}.
+他的{{A}}，只可能在比發電廠更深的區域……\n所以必須想方設法讓發電廠再次開放。=I have reason to speculate its location lies beyond the power plant, so we'll still need to reopen it somehow.
+要做到這一點，\n就必須讓{{A}}找到新的「動力源」。=The power plant can't be reopened unless {{A}} gets his hands on a new power source.
+是這樣吧，{{A}}？=Isn't that right, {{A}}?
+嗯啊，可是……=Yes, however...
+可是要有動力源，就會有像{{A}}那樣、\n被{{B}}榨取的「犧牲者」出現吧？=Hey, that would mean another innocent person has to be turned into a damn battery like {{A}} was, right?
 不能再有人犧牲=No more sacrifices
 不需要犧牲者=No need for sacrifices
 強行突破封鎖？=Brute force?
+
 那讓我來當誘餌=<size\=30>Then let me be the bait</size>
 太危險了=It's too dangerous
 我相信{{A}}=I believe in {{A}}
@@ -11681,7 +11719,7 @@ Aran Into Metaverse
 怎麼樣，能聽到吾的聲音了嗎？=So, can you hear my voice now?
 {{A}}這是什麼生物！？\n外星人！？={{A}} What kind of creature is this!? An alien!?
 誰是外星人！\n吾是CATTLE！=Who's an alien! \nI am Cattle!
-在現實世界裡，吾是{{A}}……\n就是WONDER背包裡的那隻貓頭鷹。=In the real world, I'm {{A}}.. \nthe owl in Wonder's bag.
+在現實世界裡，吾是{{A}}……\n就是WONDER背包裡的那隻貓頭鷹。=In the real world, I'm {{A}}... \nthe owl in Wonder's bag.
 啊、啊？\n那個……貓頭鷹先生？=Ah, ah? Um... owl-san?
 喂，你這傢伙！為什麼要畫吾！=Hey, you! Why are you drawing me!
 因為……這種造型，我還是第一次見到……=Because... I've never seen a design like this before...
@@ -13225,7 +13263,7 @@ sr:"^……總之先找(.*)的同伴吧。\n狀態很奇怪的話，不能放任
 但看這裡的內部環境，\n應該是整個{{A}}相當靠前的區域吧？=But the interior here looks like it's from the early sections of {{A}}, right?
 雖然不記得準確的數字，\n但應該爬不到10層就會遇到「守衛」才對。=I don't remember the exact numbers, but I should've hit a "Guardian" before ten floors.
 但是，我遇到剛才那個陰影的時候，\n已經爬了有兩倍以上的樓層了。=But when I encountered that Shadow earlier, \nI'd already climbed more than twice that.
-要是讓{{A}}幫忙搜索一下，\n說不定還能發現更奇怪的地方……=If Fuuka could scan the area, \nshe might find even stranger things...
+要是讓{{A}}幫忙搜索一下，\n說不定還能發現更奇怪的地方……=If {{A}} could scan the area, \nshe might find even stranger things...
 從這裡開始，說不定要爬更多層。\n你們3個可要注意分配好體力。=From here on out, we might have to climb way more. You three should pace yourselves.
 決定和{{A}}一起……\n探索{{B}}了！=Decided to explore {{B}} together with {{A}}...!
 
