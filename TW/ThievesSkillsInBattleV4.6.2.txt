@@ -1582,3 +1582,26 @@ Combat Pop-ups
 r:"^光<color\=#000000>輝</color>之力$"="R<color\=#000000>a</color>diant Power"
 r:"^神<color\=#000000>聖</color>祈禱$"="H<color\=#000000>o</color>ly Prayer"
 r:"^塔<color\=#000000>之</color>引導者$"="T<color\=#000000>o</color>wer Guide"
+
+----------
+LuceN - Shoki Ikenami
+----------
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，自身暴擊效果提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續(\d+)回合。\n獲得(\d+)層<link\="s\|281"><u>『暗夜祝福』</u></link>，釋放該技能時若自身生命值低於(\d+%)，則額外獲得(\d+)層<link\="s\|281"><u>『暗夜祝福』</u></link>。$"="Deal Bless damage to all foes equal to <color\=#FFFC40>$1</color> of ATK, and increase Shoki's Crit DMG by <color\=#FFFC40>$2</color> for $3 turns.\nGrant Shoki $4 <link\="s|281"><u>[Night's Blessing]</u></link> stacks, if he is below $5 HP, grant $6 bonus <link\="s|281"><u>[Night's Blessing]</u></link> stacks."
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，自身暴擊效果提升(\d+\.\d+%)，效果持續(\d+)回合。\n獲得(\d+)層『暗夜祝福』，釋放該技能時若自身生命值低於(\d+%)，則額外獲得(\d+)層『暗夜祝福』。$"="Deal Bless damage to <color\=#FFFF00>all</color> foes equal to $1 of ATK, and increase Shoki's Crit DMG by $2 for $3 turns.\nGrant Shoki $4 [Night's Blessing] stacks, if he is below $5 HP, grant $6 bonus [Night's Blessing] stacks."
+
+r:"^使自身獲得<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力\+<color\=#FFFC40>(\d+)</color>的護盾\（單次技能上限為自身最大生命值的(\d+%)\），效果持續(\d+)回合，並獲得(\d+)層『暗夜契約』。\n『暗夜契約』：造成傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，釋放『以吾之名刻於汝身』時，消耗所有『暗夜契約』並使技能傷害得到提升，可疊加(\d+)層。\n使用該技能後本回合仍可使用其他技能，該技能不視為{{A}}技能。$"="Gain a Shield equal to <color\=#FFFC40>$1</color> of ATK + <color\=#FFFC40>$2</color> for $4 turns (up to $3 of Shoki's Max HP per skill). Gain $5 [Night's Contract] stack. \n[Night's Contract]: Increase DMG Dealt by <color\=#FFFC40>$6</color>, when using [Ti Inciderò il Nome Mio], spend all [Night's Contract] to increase skill damage. Stacks up to $7 times. After using this skill, Shoki can use other skills, this doesn't count as a Persona skill. "
+r:"^使<color\=#FFFF00>自身</color>獲得(\d+\.\d+%)攻擊力\+(\d+)的護盾\（單次技能上限為自身最大生命值的(\d+%)\），效果持續(\d+)回合，並獲得(\d+)層『暗夜契約』。\n『暗夜契約』：造成傷害提升(\d+\.\d+%)，釋放『以吾之名刻於汝身』時，消耗所有『暗夜契約』並使技能傷害得到提升，可疊加(\d+)層。\n使用該技能後本回合仍可使用其他技能，該技能不視為{{A}}技能。$"="Gain a Shield equal to $1 of ATK + $2 for $4 turns (up to $3 of Shoki's Max HP per skill). Gain $5 [Night's Contract] stack. \n[Night's Contract]: Increase DMG Dealt by $6, when using [Ti Inciderò il Nome Mio], spend all [Night's Contract] to increase skill damage. Stacks up to $7 times. After using this skill, Shoki can use other skills, this doesn't count as a Persona skill. 
+
+r:"^對所有敵人造成1次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，若自身存在(\d+)層及以上的『暗夜祝福』則額外造成1次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，每層<link\="s\|282"><u>『暗夜契約』</u></link>使該技能傷害提升(\d+%)。\n釋放該技能後清空<link\="s\|282"><u>『暗夜契約』</u></link>，並恢復自身(\d+%)最大生命值×『暗夜祝福』層數的生命值。$"="Deal Bless damage to all foes equal to <color\=#FFFC40>$1</color> of ATK. If Shoki has $2 or more [Night's Blessing] stacks, deal bonus Bless damage to all foes equal to <color\=#FFFC40>$3</color> of ATK. Increase skill damage by $4 per <link\="s|282"><u>[Night's Contract]</u></link> stack.\nLose all <link\="s|282"><u>[Night's Contract]</u></link> after using this skill, and restore HP by $5 of Shoki's Max HP per [Night's Blessing] stack."
+r:"^對<color\=#FFFF00>所有</color>敵人造成1次(\d+\.\d+%)攻擊力的祝福屬性傷害，若自身存在(\d+)層及以上的『暗夜祝福』則額外造成1次(\d+\.\d+%)攻擊力的祝福屬性傷害，每層『暗夜契約』使該技能傷害提升(\d+%)。\n釋放該技能後清空『暗夜契約』，並恢復自身(\d+%)最大生命值×『暗夜祝福』層數的生命值。$"="Deal Bless damage to <color\=#FFFF00>all</color> foes equal to $1 of ATK. If Shoki has $2 or more [Night's Blessing] stacks, deal bonus Bless damage to all foes equal to $3 of ATK. Increase skill damage by $4 per [Night's Contract] stack.\nLose all [Night's Contract] after using this skill, and restore HP by $5 of Shoki's Max HP per [Night's Blessing] stack."
+
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，目前生命值越低，HIGHLIGHT造成傷害越高，(\d+%)生命值時獲得最大傷害加成(\d+%)。$"="Deal Bless damage to <color\=#FFFF00>all</color> foes equal to $1 of ATK, increase damage based on missing HP (up to $3 damage at $2 HP)."
+
+暗夜祝福=Night's Blessing
+暗夜契約=Night's Contract
+r:"^造成傷害提升(\d+\.\d+%)，釋放『以吾之名刻於汝身』時技能傷害提升$"="Increase DMG Dealt by $1; When using [Ti Inciderò il Nome Mio], increase skill damage"
+暗夜君王=Night's Monarch
+
+Combat Pop-ups
+r:"^暗<color\=#000000>夜</color>祝福$"="N<color\=#000000>i</color>ght's Blessing"
+r:"^暗<color\=#000000>夜</color>契約$"="N<color\=#000000>i</color>ght's Contract"
