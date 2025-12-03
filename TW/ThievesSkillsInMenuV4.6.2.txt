@@ -330,9 +330,12 @@ r:"^使場上處於<link\="s\|104"><u>觸電</u></link>狀態的敵人受到的�
 Soy - Shun Kano
 ----------
 r:"^受到敵方攻擊的機率提高，受到攻擊後會獲得『荒野救星』，回合結束消耗『荒野救星』並恢復自身部分已損生命值。$"="<size\=25>Increase the chance of being attacked by foes and gain [Desperado] when attacked. Spend it and restore HP at the end of your turn.</size>"
-冰山撼動=Icicle Hatchet
-先鋒突擊=Smash Hit
-零度治癒=Icy Defense
+冰山撼動=<size\=26>Spada dell'Alba</size>
+Icicle Hatchet
+先鋒突擊=Giuramento Incrollabile
+Smash Hit
+零度治癒=Ti Inciderò il Nome Mio
+Icy Defense
 狂野=Daunting Firepower
 勇謀=For Your Benefit
 
@@ -2568,7 +2571,7 @@ Ange - Manaka Nagao
 華光下的治癒詩=<size\=28>Poem of Radiance</size>
 貫穿時空的輪轉=Wheel of Time
 千籟重歌=Myriad Song
-翩然=Grace
+翩然=Elegance
 韌心=Resilience
 
 r:"^群鴿於聖堂和鳴 Lv.(\d+)$"="Choir of Doves Lv.$1"
@@ -3076,7 +3079,7 @@ r:"^{{A}}額外擁有(\d+)個不會消耗的馬鈴薯騎士，追加效果<link\
 黑暗農田法則=Dark Farm Hypothesis
 
 星系漫遊指南=<size\=21>The Traveler's Guide to the Stars</size>
-r:"^HIGHLIGHT效果提升：額外使自身攻擊力提升(\d+%)，持續(\d+)回合。$"="HIGHLIGHT Enchanced: Increase YUI's ATK by $1 for $2 turns."
+r:"^HIGHLIGHT效果提升：額外使自身攻擊力提升(\d+%)，持續(\d+)回合。$"="HIGHLIGHT Enchanced: Increase user's ATK by $1 for $2 turns."
 
 超時空艦隊=The Super Dimension Fleet
 
@@ -3186,3 +3189,53 @@ r:"^任意同伴釋放HIGHLIGHT或{{A}}時，使其HIGHLIGHT或{{A}}傷害傷害
 
 自我的價值=Self-Worth
 r:"^釋放<link\="s\|268"><u>『神諭轉換』</u></link>消耗的<link\="s\|267"><u>『願望聆聽』</u></link>減少至(\d+)層。\n釋放『神聖祈禱』時，額外獲得(\d+)層<link\="s\|267"><u>『願望聆聽』</u></link>。$"="Decrease <link\="s|267"><u>[Wish Listener]</u></link> cost of <link\="s|268"><u>[Oracle Shift]</u></link> to 3 stacks.\nWhen using [Holy Prayer], gain $2 bonus <link\="s|267"><u>[Wish Listener]</u></link> stacks."
+
+----------
+LuceN - Shoki Ikenami
+----------
+破曉之劍=<size\=26>Spada dell'Alba</size>
+堅守的誓言=Giuramento Incrollabile
+以吾之名刻於汝身=Ti Inciderò il Nome Mio
+恩典=Grace
+涅槃=Nirvana
+
+r:"^破曉之劍 Lv.(\d+)$"="Spada dell'Alba Lv.$1"
+r:"^破曉之劍 <color\=#0F69CB>Lv.(\d+)</color>$"="Spada dell'Alba <color\=#0F69CB>Lv.$1</color>"
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，自身暴擊效果提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續(\d+)回合。\n獲得(\d+)層<link\="s\|281"><u>『暗夜祝福』</u></link>，釋放該技能時若自身生命值低於(\d+%)，則額外獲得(\d+)層<link\="s\|281"><u>『暗夜祝福』</u></link>。\n<b><size\=28><color\=#850101>鋒利的劍刃如破曉前的微光，撕裂沉沉夜幕，同時冷酷地掠過敵人的身軀，帶去無可避免的終結，造成祝福屬性傷害。</color></size></b>$"="Deal Bless damage to all foes equal to <color\=#FFFC40>$1</color> of ATK, and increase Shoki's Crit DMG by <color\=#FFFC40>$2</color> for $3 turns.\nGrant Shoki $4 <link\="s|281"><u>[Night's Blessing]</u></link> stacks, if he is below $5 HP, grant $6 bonus <link\="s|281"><u>[Night's Blessing]</u></link> stacks.\n<b><size\=28><color\=#850101>Blade as sharp as the glimmer before dawn, tears through the deep veil of night, mercilessly sweeping across the enemy's body, delivering an inevitable end and dealing Bless damage.</color></size></b>"
+
+r:"^堅守的誓言 Lv.(\d+)$"="<size\=24>Giuramento Incrollabile Lv.$1</size>"
+r:"^堅守的誓言 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=24>Giuramento Incrollabile <color\=#0F69CB>Lv.$1</color></size>"
+r:"^使自身獲得<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力\+<color\=#FFFC40>(\d+)</color>的護盾\（單次技能上限為自身最大生命值的(\d+%)\），效果持續(\d+)回合，並獲得(\d+)層『暗夜契約』。\n『暗夜契約』：造成傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，釋放『以吾之名刻於汝身』時，消耗所有『暗夜契約』並使技能傷害得到提升，可疊加(\d+)層。\n使用該技能後本回合仍可使用其他技能，該技能不視為{{A}}技能。\n<b><size\=28><color\=#850101>虔誠地在祭禮中奉獻鮮血、汲取力量，奉獻者被賜予短暫的庇護，生命的代價被銘刻在這片光輝之中。</color></size></b>$"="Gain a Shield equal to <color\=#FFFC40>$1</color> of ATK + <color\=#FFFC40>$2</color> for $4 turns (up to $3 of Shoki's Max HP per skill). Gain $5 [Night's Contract] stack. \n[Night's Contract]: Increase DMG Dealt by <color\=#FFFC40>$6</color>, when using [Ti Inciderò il Nome Mio], spend all [Night's Contract] to increase skill damage. Stacks up to $7 times. After using this skill, Shoki can use other skills, this doesn't count as a Persona skill.\n<b><size\=28><color\=#850101>Offering blood and drawing power in a devout ritual, the devotee is granted fleeting shelter and the cost of life is etched into this very radiance.</color></size></b>"
+
+r:"^以吾之名刻於汝身 Lv.(\d+)$"="<size\=23>Ti Inciderò il Nome Mio Lv.$1</size>"
+r:"^以吾之名刻於汝身 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=23>Ti Inciderò il Nome Mio <color\=#0F69CB>Lv.$1</color></size>"
+r:"^對所有敵人造成1次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，若自身存在(\d+)層及以上的『暗夜祝福』則額外造成1次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，每層<link\="s\|282"><u>『暗夜契約』</u></link>使該技能傷害提升(\d+%)。\n釋放該技能後清空<link\="s\|282"><u>『暗夜契約』</u></link>，並恢復自身(\d+%)最大生命值×『暗夜祝福』層數的生命值。\n<b><size\=28><color\=#850101>名字被書寫下的那一刻，契約的力量隨之解鎖，無上的法則在敵人的靈魂上鐫刻下不可逆轉的印記，罪行在此時無處可藏。</color></size></b>$"="Deal Bless damage to all foes equal to <color\=#FFFC40>$1</color> of ATK. If Shoki has $2 or more [Night's Blessing] stacks, deal bonus Bless damage to all foes equal to <color\=#FFFC40>$3</color> of ATK. Increase skill damage by $4 per <link\="s|282"><u>[Night's Contract]</u></link> stack.\nLose all <link\="s|282"><u>[Night's Contract]</u></link> after using this skill, and restore HP by $5 of Shoki's Max HP per [Night's Blessing] stack.\n<b><size\=28><color\=#850101>The moment the name is inscribed, the power of the contract is unlocked. A supreme law carves an irreversible mark upon the foes' soul, leaving their sins with nowhere to hide.</color></size></b>"
+
+r:"^『HIGHLIGHT』：對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福屬性傷害，目前生命值越低，HIGHLIGHT造成傷害越高，(\d+%)生命值時獲得最大傷害加成(\d+%)。\n『ONE MORE』：對1名敵人造成祝福屬性傷害。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械攻擊：使用槍械射擊1名敵人，每次向1名敵人射擊1發，造成射擊屬性傷害，根據子彈數量可以射擊多次。$"="[HIGHLIGHT]: Deal Bless damage to all foes equal to <color\=#FFFC40>$1</color> of ATK, increase damage based on missing HP (up to $3 damage at $2 HP).\n[ONE MORE]: Deal Bless damage to 1 foe. \nMelee Attack: Uses a melee weapon to deal light Phys damage to 1 foe. \nGun Attack: Deal light Gun damage to 1 foe. Can fire until out of ammo."
+
+r:"^每擁有1層<link\="s\|281"><u>『暗夜祝福』</u></link>，{{A}}攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#FFFC40>$1</color> based on the number of <link\="s|281"><u>[Night's Blessing]</u></link> stacks."
+r:"^每擁有1層<link\="s\|281"><u>『暗夜祝福』</u></link>，{{A}}攻擊力提升<color\=#0169ca>(\d+\.\d+%)</color>。$"="Increase ATK by <color\=#0169ca>$1</color> based on the number of <link\="s|281"><u>[Night's Blessing]</u></link> stacks."
+
+r:"^目前生命值越低，{{A}}穿透越高，(\d+%)生命值時獲得最大穿透加成<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Increase Pierce based on missing HP (up to <color\=#FFFC40>$2</color> Pierce at $1 HP)."
+r:"^目前生命值越低，{{A}}穿透越高，(\d+%)生命值時獲得最大穿透加成<color\=#0169ca>(\d+\.\d+%)</color>。$"="Increase Pierce based on missing HP (up to <color\=#0169ca>$2</color> Pierce at $1 HP)."
+
+<color\=#66ccff>暗夜祝福</color>=<color\=#66ccff>Night's Blessing</color>
+r:"^{{A}}獲得祝福效果時，會將其轉化為特殊的『暗夜祝福』：視為祝福效果，每回合結束恢復一定護盾量，上限(\d+)層，持續(\d+)回合，通過這種方式獲得的護盾效果持續(\d+)回合。$"="When Shoki gains Blessing, convert it into [Night's Blessing]: This counts as Blessing, at the end of turn, gain a Shield for $1 turns. Stacks up to $2 times. Shield from this effect lasts for $3 turns."
+<color\=#66ccff>暗夜契約</color>=<color\=#66ccff>Night's Contract</color>
+{{A}}的特殊戰鬥資源，釋放技能獲取。釋放『以吾之名刻於汝身』時，會消耗所有『暗夜契約』並使技能傷害得到提升。={{A}}'s special resource, gained from using skills. When using [Ti Inciderò il Nome Mio], spend all [Night's Contract] to increase skill damage.
+
+黑夜中的星芒=Star in the Night
+{{A}}可以在戰鬥中主動消耗自身生命值獲得『暗夜契約』，提升『以吾之名刻於汝身』的技能傷害。\n{{A}}獲得<link\="s\|111"><u>祝福</u></link>效果時，會將其轉化為特殊的『暗夜祝福』：視為祝福效果，每回合結束獲得相當於最大生命值(\d+%)的護盾，上限(\d+)層，持續(\d+)回合，通過這種方式獲得的護盾效果持續(\d+)回合。$"="In battle, Shoki can spend HP to gain [Night's Contract] and increase [Ti Inciderò il Nome Mio] skill damage.\nWhen Shoki gains <link\="s|111"><u>Blessing</u></link>, convert it into [Night's Blessing]: This counts as Blessing, at the end of turn, gain a Shield equal to $1 of Shoki's Max HP for $3 turns. Stacks up to $2 times. Shield from this effect lasts for $4 turns."
+
+流星的指引=Shooting Star's Guidance
+{{A}}在戰鬥開始時獲得『{{B}}』：自身首次陷入瀕死狀態時，消耗『{{B}}』恢復自身相當於最大生命值(\d+%)的生命值（至少恢復至1點生命值），並獲得(\d+%)攻擊力加成，持續(\d+)回合。\n擁有『{{B}}』時，釋放『堅守的誓言』可將生命值減少至0以下主動陷入瀕死狀態，通過這種方式消耗『{{B}}』後，當回合獲得的後續(\d+)層<link\="s\|282"><u>『暗夜契約』</u></link>可突破上限。\n獲得<link\="s\|282"><u>『暗夜契約』</u></link>時，額外使暴擊率提高(\d+%)，持續(\d+)回合，可疊加(\d+)層。$"="At the start of battle, Shoki gains [Eternal Star Shine]: Survive fatal damage 1 time and spend [Eternal Star Shine] to recover $1 of Shoki's Max HP (at least recover to 1 HP). Also, increase ATK by $2 for $3 turn.\nWhen Shoki has [Eternal Star Shine], he can spend HP to below 0 by using [Giuramento Incrollabile], after spending [Eternal Star Shine] from this method, gain $4 <link\="s|282"><u>[Night's Contract]</u></link> stacks above the maximum limit for this turn.\nWhen Shoki gains <link\="s|282"><u>[Night's Contract]</u></link>, increase Crit Rate by $5 for $6 turns. Stacks up to $7 times."
+
+拼上血肉之軀=With My Flesh and Bone
+r:"^釋放『堅守的誓言』時，技能消耗降低(\d+%)，<link\="s\|282"><u>『暗夜契約』</u></link>的可疊加上限提升(\d+)層。$"="Decrease the HP cost of [Giuramento Incrollabile] by $1. Increase the maximum number of <link\="s|282"><u>[Night's Contract]</u></link> stacks by $2."
+
+向命運抗爭=Fight against Fate
+
+誠實的覺悟=Commitment to Honesty
+
+照亮黑夜的{{A}}=Illuminating {{A}}
+{{A}}的生命值降低為0時不會死亡，且可以繼續降低為負值，最多額外降低自身最大生命值的(\d+%)；生命值降低為負值後，{{B}}進入『暗夜君王』狀態：造成傷害提升(\d+%)，暴擊效果提升(\d+%)，<link\="s|282"><u>『暗夜契約』</u></link>對『以吾之名刻於汝身』的技能傷害提升效果提升至原本的(\d+%)。\n<link\="s\|282"><u>『暗夜契約』</u></link>的可疊加上限額外提升(\d+)層。戰鬥開始時，{{B}}獲得(\d+)層可突破上限的<link\="s\|281"><u>『暗夜祝福』</u></link>，持續時間永久。$"="Shoki will not faint when his HP is below 0 and can decrease it to negative HP \(up to $1 of Shoki's max HP); After Shoki's HP is negative, gain [Night's Monarch] state: Increase damage by $2 and Crit DMG by $3. Increase [Night's Contract]'s skill damage increase to $4 of the original effect.\nIncrease the maximum number of <link\="s|282"><u>[Night's Contract]</u></link> stacks by $5. At the start of battle, Shoki gains $6 bonus <link\="s|281"><u>[Night's Blessing]</u></link> stacks above the maximum limit. This effect is permanent."
