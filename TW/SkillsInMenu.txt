@@ -252,6 +252,7 @@ No size on inherit skill names or else they won't work in the inherit menu
 煉獄黑炎=Abyssal Flame
 往生審判=<size\=21>Afterlife Judgement</size>
 降禍吞禧=Fortune Devourer
+告死者慈悲=Death's Mercy
 
 --- Almighty ---
 
@@ -484,17 +485,20 @@ sr:"『HIGHLIGHT』：對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻�
 //ST ONE MORE, AoE HIGHLIGHT
 sr:"『HIGHLIGHT』：對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。\n『ONE MORE』：對1名敵人造成(.*)屬性傷害。"=[HIGHLIGHT]: Deal <color\=#FFFC40>$1</color> ATK $2 damage to all foes.\n[ONE MORE]: Deal $3 damage to 1 foe.
 
-//ST ONE MORE, AoE with increased damage taken HIGHLIGHT
-sr:"『HIGHLIGHT』：對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，並使其受到的傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。\n『ONE MORE』：對1名敵人造成(.*)屬性傷害。"=[HIGHLIGHT]: Deal <color\=#FFFC40>$1</color> ATK $2 damage to all foes and increase their DMG Taken by <color\=#FFFC40>$3</color> for 2 turns.\n[ONE MORE]: Deal $4 damage to 1 foe.
-
-//ST ONE MORE, Increase damage dealt by allies HIGHLIGHT
-sr:"『HIGHLIGHT』：使所有同伴造成的傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續2回合。\n『ONE MORE』：對1名敵人造成(.*)屬性傷害。"=[HIGHLIGHT]: Increase all allies' DMG Dealt by <color\=#FFFF00>$1</color> for 2 turns.\n[ONE MORE]: Deal $2 damage to 1 foe.
-
 //ST ONE MORE, AoE Restore HIGHLIGHT
 sr:"『HIGHLIGHT』：使所有同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(.*)</color>的生命值。\n『ONE MORE』：對1名敵人造成(.*)屬性傷害。"=[HIGHLIGHT]: Restore <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to all allies.\n[ONE MORE]: Deal $3 damage to 1 foe.
 
 //ST ONE MORE, AoE Shield HIGHLIGHT
 sr:"『HIGHLIGHT』：使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(.*)</color>的護盾，效果持續2回合。\n『ONE MORE』：對1名敵人造成(.*)屬性傷害。"=[HIGHLIGHT]: Grant all allies <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> Shield for 2 turns.\n[ONE MORE]: Deal $3 damage to 1 foe.
+
+//ST ONE MORE, Increase damage dealt by allies HIGHLIGHT
+sr:"『HIGHLIGHT』：使所有同伴造成的傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續2回合。\n『ONE MORE』：對1名敵人造成(.*)屬性傷害。"=[HIGHLIGHT]: Increase all allies' DMG Dealt by <color\=#FFFF00>$1</color> for 2 turns.\n[ONE MORE]: Deal $2 damage to 1 foe.
+
+//ST ONE MORE, AoE with increased damage taken HIGHLIGHT
+sr:"『HIGHLIGHT』：對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，並使其受到的傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。\n『ONE MORE』：對1名敵人造成(.*)屬性傷害。"=[HIGHLIGHT]: Deal <color\=#FFFC40>$1</color> ATK $2 damage to all foes and increase their DMG Taken by <color\=#FFFC40>$3</color> for 2 turns.\n[ONE MORE]: Deal $4 damage to 1 foe.
+
+Rank IX Saboteur HIGHLIGHT
+sr:"^『HIGHLIGHT』：對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，使所有敵人受到傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，受到暴擊效果提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。\n『ONE MORE』：對1名敵人造成(.*)屬性傷害。$"="[HIGHLIGHT]: Deal $2 damage to all foes equal to <color\=#FFFC40>$1</color> of ATK. Increase all foes' DMG Taken by <color\=#FFFC40>$3</color> and Crit DMG Taken by <color\=#FFFC40>$4</color> for $5 turns.\n[ONE MORE]: Deal $6 damage to 1 foe."
 
 --- Normal Generalized Skills ---
 
@@ -725,6 +729,9 @@ r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒�
 
 Fortune Devourer
 r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，並使所有敵人防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>、受到的持續傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Deal <color\=#fffc40>$1</color> ATK Curse damage to all foes, decrease all foes' DEF by <color\=#fffc40>$2</color> and increase their Damage Over Time Taken by <color\=#fffc40>$3</color> for $4 turns."
+
+Death's Mercy
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，使所有敵人受到傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，受到支配角色攻擊時，受到暴擊率額外提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Deal Curse damage to all foes equal to <color\=#fffc40>$1</color> of ATK. Increase all foes' DMG Taken by <color\=#fffc40>$2</color>. Also, when attacked by a Sweeper, increase Crit Taken Rate by <color\=#fffc40>$3</color>. Lasts for $4 turns."
 
 // Single Target Basic Insta-kills
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害，對50%生命值以下的敵人附加低機率詛咒屬性即死效果，生命值越低機率越高。"=Deal <color\=#FFFF00>$1</color> ATK Curse damage to 1 foe with a chance of insta-kill to foes under 50% HP. The lower the HP, the higher the chance.
