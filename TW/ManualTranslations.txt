@@ -512,6 +512,11 @@ r:"^消耗：<color\=#FFDE00>「{{A}}的殘識碎片」×(\d+)</color>\n合成�
 星穹的墨匣=Cosmic Inkwell
 書寫命運的手稿，開啟墨匣後可自選以下任一道具：{{A}}、{{B}}、{{C}}。=The manuscript that writes fate, open the inkwell to select one of the following items: {{A}}, {{B}}, {{C}}.
 sr:"^消耗：<color\=#FFDE00>「(.*)」×(.*)</color>\n兌換：<color\=#FFDE00>「(.*)」×(.*)</color>\n是否確認？$"="Spend: <color\=#FFDE00>[$1] ×$2</color>\nExchange: <color\=#FFDE00>[$3] ×$4</color>\nAre you sure?"
+速通券·日常=Insta-Clear Ticket·Daily
+『速通券·日常』\n用於「厄抑之境」非時限關卡，進行快速通關的憑證。=[Insta-Clear Ticket·Daily]\nUsed to insta-clear [Realm of Repression].
+速通券·周常=Insta-Clear Ticket·Weekly
+『速通券·周常』\n用於「往日回溯」關卡，進行快速通關的憑證。=[Insta-Clear Ticket·Weekly]\nUsed to insta-clear [Recollections].
+秘聞鑰匙=Secret Key
 
 禮包獲取後，可選擇獎勵包括=You can choose the following rewards
 r:"^{{A}}的殘識碎片$"="<size\=16>Awareness Fragment \nof {{A}}</size>"
@@ -876,6 +881,8 @@ r:"^(\d+)小時(\d+)分後解鎖$"="Unlocks after $1h $2m"
 r:"^(\d+)時(\d+)分後解鎖$"="Unlocks after $1h $2m"
 r:"^(\d+)分後解鎖$"="Unlocks after $1m"
 
+sr:"^簽約開啟時間：<color\=#FFC000>(.*)</color>$"="Contract starts on: <color\=#FFC000>$1</color>"
+
 r:"^挑戰倒計時：$"="Time Left:"
 r:"^挑戰倒計時：(\d+)天(\d+)時(\d+)分$"="Time Left: $1d $2h $3m"
 r:"^本週剩餘次數：(\d+)/(\d+)$"="Weekly Usage: $1/$2"
@@ -1016,7 +1023,7 @@ r:"^怪盜成長_(\d+)$"="Thief Training_$1"
 怪盜啟示=Thief Revelation
 等級提升=Level Up
 潛能突破=Talent Lv Up
-更換武器=Change Weapon
+更換武器=<size\=17>Change Weapon</size>
 武器升級=Weapon Enhance
 詭計=Trick
 瀕死狀態=Near Death
@@ -1157,6 +1164,7 @@ r:"^推薦編入(\d+)名<size\=(\d+)><sprite\=(\d+) tint\=1></size>角色$"="Rec
 上陣面具屬性會全部附加至主角=<size\=20>Wonder will gain the attributes of his \nequipped Persona</size>
 上陣{{A}}的屬性會同時附加給主角，提高<color\=#870000>主角屬性</color>。=Wonder will gain the attributes of his <color\=#870000>equipped Persona</color>.
 尚未佩戴面具=No equipped Mask
+食用永久屬性料理累計獲得屬性：=Permanent Food Item Stats:
 
 已達到等級上限。=Reached level cap.
 溢出經驗已轉化為通用素材。=Converted overflow EXP into materials.
@@ -1480,7 +1488,7 @@ r:"^累計登入(\d+)天\(<color\=#e50a06>(\d+)</color>/(\d+)\)$"="Log in for $1
 r:"^在「塑命循啟」中完成一張啟示卡定製 \((\d+)\/1\)$"="Make 1 custom Revelation Card in [Writing Fate] ($1/1)"
 
 ----------
-Banners / Pull Screen
+Contract / Pull Screen
 ----------
 契約=Contract
 簽訂命運的契約，與註定的夥伴在此相遇！=Sign the contract of fate and meet your destined teammates!
@@ -1503,7 +1511,7 @@ r:"^簽約$"="Pulls"
 
 每10次簽約必出四星或以上怪盜角色。具體內容查看【說明】=<size\=25>Get 1 5★ every <color\=#FFDF00>110</color> or <color\=#ff3b37>80</color> pulls;</size>\n<size\=25><color\=#FFDF00>0.2%</color> or <color\=#ff3b37>0.8%</color>; <color\=#FFDF00>No 50/50</color> or <color\=#ff3b37>50/50</color>.</size>\n<size\=25>Guarantee 1 4★ every 10 pulls.</size>\n</color><size\=15>Save Signature count between same system banners.</size>
 
-每10次補給必出四星或以上武器。具體內容查看【說明】=Choose your RATE UP weapon and two others. Every 70 pulls will guarantee a 5★ weapon. 0.8% Chance.\n\n\n\n\n\n\n<color\=#FFDF00><size\=24>The limited character's 5★ Weapon is only available in this banner.</size></color>\n<size\=21>Supply count will carry between banners.</size>
+每10次補給必出四星或以上武器。具體內容查看【說明】=Choose your RATE UP weapon and two others. Every 70 pulls will guarantee a 5★ weapon. 0.8% Chance.\n\n\n\n\n\n\n<color\=#FFDF00><size\=24>The limited character's 5★ weapon is only available in this banner.</size></color>\n<size\=21>Supply count will carry between banners.</size>
 
 sr:"^推薦自選契約共有<color\=#EF0000>(\d+)個</color>怪盜鎖定名額，確認簽約後，<color\=#EF0000>(.*)</color>將<color\=#EF0000>佔用1個鎖定名額</color>，是否確認開始簽約？\n注：該卡池生效期間，UP角色僅能從(\d+)個鎖定怪盜中選取，請謹慎選擇。$"="<size\=26>You have <color\=#EF0000>$1</color> custom slots for this banner. After pulling, <color\=#EF0000>$2</color> will <color\=#EF0000>take up 1 slot</color>, are you sure?\nNote: You can only choose the RATE UP character between the $3 locked Thieves.</size>"
 該怪盜已被鎖定，無法選擇。=Cannot select locked Thief.
@@ -1514,7 +1522,7 @@ sr:"^推薦自選契約共有<color\=#EF0000>(\d+)個</color>怪盜鎖定名額�
 自選保底武器=<size\=30>Custom Pity Weapon</size>
 自選<color\=#FFD145>UP武器</color>，占五星武器基礎成功機率的<color\=#FFD145>50%</color>=Choose <color\=#FFD145>RATE UP Weapon</color>. With a base chance of <color\=#FFD145>50%</color> to get the chosen weapon
 自選<color\=#FFD145>非UP武器</color>，未獲得UP五星武器時只會獲取自選的兩把武器=<size\=18>Choose 2 <color\=#FFD145>Non-RATE UP Weapons</color>. If you missed the RATE UP 5★ weapon, you will only get the chosen weapons</size>
-請選擇2把五星武器後再補給。=Please choose 2 5★ Weapons.
+請選擇2把五星武器後再補給。=Please choose 2 5★ weapons.
 已選擇為UP武器。=Selected the RATE UP Weapon.
 UP武器更換成功。=Changed the RATE UP Weapon.
 自選UP武器更換成功。=Changed the Custom RATE UP Weapons.
@@ -1556,6 +1564,27 @@ r:"^再抽取<color\=#FFF900>(\d+)</color>次必得限定時裝$"="<size\=22>Gua
 
 sr:"^已獲得限定時裝(.*)$"="Obtained limited outfit $1"
 怪盜·天地勝意=Worldly Wish
+
+sr:"^透過簽約獲得<color\=#FFD145>(.*)</color>可前往活動<color\=#FFD145>同行之約</color>領取<color\=#FFD145>(.*)</color>，僅限一次。$"="<size\=21>Obtain <color\=#FFD145>$1</color> through Signature to claim <color\=#FFD145>$2</color> once.</size>"
+sr:"^透過簽約獲得<color\=#FFD145>「(.*)」</color>可前往活動<color\=#FFD145>「同行之約」</color>領取\n<color\=#FFD145>「(.*)」</color>或<color\=#FFD145>「(.*)」</color>的5星怪盜自選箱，僅限一次。$"="<size\=21>Obtain <color\=#FFD145>$1</color> through Signature to claim <color\=#FFD145>$2</color> or <color\=#FFD145>$3</color> once.</size>"
+sr:"^透過抽取獲得<color\=#FFD145>「(.*)」</color>可前往活動<color\=#FFD145>「同行之約」</color>領取\n<color\=#FFD145>(.*)</color>5星武器<color\=#FFD145>「(.*)」</color>，僅限一次。$"="<size\=21>Obtain <color\=#FFD145>$1</color> through Arms Deal to claim <color\=#FFD145>$2</color>'s 5★ weapon <color\=#FFD145>$3</color> once.</size>"
+r:"^(\d+)月(\d+)日開放簽約$"="Unlock Contract on $1/$2"
+r:"^(\d+)月(\d+)日\n開放領取$"="Claim on $1/$2"
+簽約「{{A}}」\n後可領取=Sign [{{A}}]\nto claim
+r:"^(\d+)月(\d+)日\n可領取$"="Can claim on $1/$2"
+sr:"^獲得武器「(.*)」\n後可領取$"="Obtain weapon [$1] \nto claim"
+
+sr:"^是否消耗[(.*)]\×(.*)，\n購買(.*)張[(,*)]？$"="Spend [$1] x$2 to purchase $3 [$4]?"
+r:"^剩餘抽獎次數：(\d+)$"="Draws Left: $1"
+累計抽獎一定次數後可在會員返利中領取稀有獎勵呐～=Draw a certain amount to claim rare rewards～
+抽獎記錄=Draw Record
+道具類型=Item Type
+獲得時間=Obtain Time
+目標獎勵=Goal Rewards
+觀看神引搖搖屋電視節目=Watch the Divine Summon TV show
+r:"^累計抽獎(\d+)次\((\d+)\/(\d+)\)$"="Draw $1 times ($2/$3)"
+尚未解鎖，無法購買=Locked, cannot purchase
+r:"^{{A}}×(\d+)$"="{{A}}×$1"
 
 ----------
 Gacha Rules + Banner Names
@@ -2648,7 +2677,8 @@ r:"^<color\=#FFDe00>{{A}}</color>票務等級達到<color\=#FFDe00>(\d+)級</col
 「穹星求索」=[Pursuit of Stars]
 穹星求索=Pursuit of Stars
 往日回溯=Recollections
-主線：{{A}}\n完成後開啟挑戰=<size\=20>Unlock after completing\nStory: {{A}}</size>
+主線：{{A}}\n完成後開啟挑戰=<size\=20>Unlock after completing\n{{A}}</size>
+主線：假面役者的謝幕\n完成後開啟挑戰=<size\=20>Unlock after completing\nMasked Actors' Curtain Call</size>
 
 掉落高級技能材料=Palace Boss
 怪盜潛能材料=Thief Ascend
@@ -2708,7 +2738,8 @@ r:"^<color\=#FFDe00>{{A}}</color>票務等級達到<color\=#FFDe00>(\d+)級</col
 「豐收之語」=[Words of Harvest]
 豐收之語=Words of Harvest
 
-r:"^陰影被擊敗後，使全體怪盜造成傷害提升(.*)，可疊加(.*)層$"="After defeating a Shadow, increase all Thieves' DMG Dealt by $1, up to $2 stacks"
+r:"^陰影受到傷害後，使全體怪盜造成傷害提升(.*)，可疊加(.*)層$"="After a Shadow takes damage, increase all Thieves' DMG Dealt by $1. Stacks up to $2 times"
+r:"^陰影被擊敗後，使全體怪盜造成傷害提升(.*)，可疊加(.*)層$"="After defeating a Shadow, increase all Thieves' DMG Dealt by $1. Stacks up to $2 times"
 r:"^全體怪盜受治療/護盾效果提升(.*)，受治療/護盾後造成傷害提升(.*)；戰鬥開始時全體怪盜損失(.*)生命值$"="Increase all Thieves' Healing Received/Shield Effect by $1, increase DMG Dealt after Healed/Shieled by $2; All Thieves lose $3 HP at the start of battle"
 r:"^所有陰影受到{{A}}傷害提升(\d+(.\d+)?(%)?)$"="Increase all Shadows' {{A}} DMG Taken by $1"
 r:"^全體怪盜<color\=#00fcff>核熱</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#00fcff>Nuke</color> DMG by $1"
@@ -2752,6 +2783,18 @@ r:"^挑戰需要消耗(\d+)點體力，\n當前<color\=#ff3b37>體力不足</col
 本週「往日回溯」剩餘領獎次數已耗盡，\n<color\=#ff3b37>無法獲得挑戰獎勵</color>，是否繼續挑戰？=Reached weekly limit.\n<color\=#ff3b37>You will not gain rewards</color>, \ndo you still want to challenge?
 逃離後不會獲得本次戰鬥獎勵！\n確定要逃離戰鬥嗎？=If you retreat, you will not earn rewards.\nDo you want to retreat?
 逃離戰鬥後將重置關卡。\n確定要逃離戰鬥嗎？=Retreating will reset the level.\nDo you want to retreat?
+
+快速通關=Insta-clear
+sr:"^是否快速通關<color\=#EADE10>(.*)Ⅰ·LV(\d+)</color>？$"="Insta-clear <color\=#EADE10>$1 Ⅰ · LV$2</color>?"
+sr:"^是否快速通關<color\=#EADE10>(.*)Ⅱ·LV(\d+)</color>？$"="Insta-clear <color\=#EADE10>$1 Ⅱ · LV$2</color>?"
+sr:"^是否快速通關<color\=#EADE10>(.*)Ⅲ·LV(\d+)</color>？$"="Insta-clear <color\=#EADE10>$1 Ⅲ · LV$2</color>?"
+sr:"^是否快速通關<color\=#EADE10>(.*)Ⅳ·LV(\d+)</color>？$"="Insta-clear <color\=#EADE10>$1 Ⅳ · LV$2</color>?"
+sr:"^是否快速通關<color\=#EADE10>(.*)Ⅴ·LV(\d+)</color>？$"="Insta-clear <color\=#EADE10>$1 Ⅴ · LV$2</color>?"
+sr:"^是否快速通關<color\=#EADE10>(.*)Ⅵ·LV(\d+)</color>？$"="Insta-clear <color\=#EADE10>$1 Ⅵ · LV$2</color>?"
+sr:"^是否快速通關<color\=#EADE10>(.*)Ⅶ·LV(\d+)</color>？$"="Insta-clear <color\=#EADE10>$1 Ⅶ · LV$2</color>?"
+sr:"^是否快速通關<color\=#EADE10>(.*)Ⅷ·LV(\d+)</color>？$"="Insta-clear <color\=#EADE10>$1 Ⅷ · LV$2</color>?"
+請選擇快速通關的次數：=Insta-clear attempt(s):
+快速通關消耗資源：=Spend:
 
 sr:"^挑戰(.*)獲得$"="<size\=22>Complete $1</size>"
 工作臺合成=Workbench Crafting
@@ -2978,6 +3021,7 @@ r:"^神秘的精魄體，可用於提升{{A}}經驗，使用後立即增加(\d+)
 r:"^神秘的精碎體，可用於提升{{A}}經驗，使用後立即增加(\d+)點。$"="Mysterious chuck, can be used to gain $1 {{A}} EXP."
 r:"^神秘的精末體，可用於提升{{A}}經驗，使用後立即增加(\d+)點。$"="Mysterious scrap, can be used to gain $1 {{A}} EXP."
 
+心淚凝輝=Gleaming Tear
 聖潔之心=Sacred Heart
 璀璨瑰寶=Glorious Gem
 黃金冠儀=<size\=28>Golden Coronet</size>
