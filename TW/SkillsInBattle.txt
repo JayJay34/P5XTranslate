@@ -50,7 +50,7 @@ Elemental Ailments Mental Ailments TECHNICAL
 r:"^行動後損失生命值$"="Lose HP after action"
 凍結=Freeze
 觸電=Shock
-r:"^受到暴擊率提升(\d+%)$"="Increase Crit Rate Taken by $1"
+r:"^受到暴擊率提升(\d+%)$"="Increase Crit Taken Rate by $1"
 風襲=Windswept
 輻射=Radiation
 受到的傷害提升15%，被視為一種元素異常。=Increase DMG Taken by 15%; \nSeen as an Elemental Ailment
@@ -707,7 +707,8 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的核熱�
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deal $1 ATK Bless damage to <color\=#FFFF00>all</color> foes and increase their DMG Taken by $2 for $3 turns."
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deal $1 ATK Curse damage to <color\=#FFFF00>all</color> foes and increase their DMG Taken by $2 for $3 turns."
 
-r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，使所有敵人受到傷害提升(\d+\.\d+%)，受到暴擊效果提升(\d+\.\d+%)，持續(\d+)回合。$"="Deal Curse damage to all foes equal to <color\=#FFFC40>$1</color> of ATK. Increase all foes' DMG Taken by <color\=#FFFC40>$2</color> and Crit DMG Taken by <color\=#FFFC40>$3</color> for $4 turns."
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，使所有敵人受到傷害提升(\d+\.\d+%)、受到暴擊效果提升(\d+\.\d+%)，持續(\d+)回合。$"="Deal Curse damage to <color\=#FFFF00>all</color> foes equal to $1 of ATK. Increase all foes' DMG Taken by $2 and Crit DMG Taken by $3 for $4 turns."
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性攻擊力，使所有敵人受到傷害提升(\d+\.\d+%)、受到暴擊效果提升(\d+\.\d+%)，持續(\d+)回合。$"="Deal Curse damage to <color\=#FFFF00>all</color> foes equal to $1 of ATK. Increase all foes' DMG Taken by $2 and Crit DMG Taken by $3 for $4 turns."
 
 ----------
 SPECIAL
@@ -868,6 +869,7 @@ r:"^防<color\=#000000>禦</color>強化$"="D<color\=#000000>E</color>Fense Boos
 r:"^防<color\=#000000>禦</color>力提升$"="D<color\=#000000>E</color>F Up"
 r:"^防<color\=#000000>禦</color>永久提升$"="P<color\=#000000>e</color>rmanent DEF Up"
 r:"^速<color\=#000000>度</color>提升$"="S<color\=#000000>P</color>D Up"
+r:"^生<color\=#000000>命</color>提升$"="H<color\=#000000>P</color> Up"
 r:"^生<color\=#000000>命</color>強化$"="H<color\=#000000>e</color>alth Boost"
 r:"^生<color\=#000000>命</color>值提升$"="M<color\=#000000>a</color>x HP Up"
 r:"^生<color\=#000000>命</color>上限提升$"="M<color\=#000000>a</color>x HP Up"
@@ -966,7 +968,7 @@ r:"^受<color\=#000000>攻</color>擊提升$"="A<color\=#000000>T</color>K Taken
 r:"^防<color\=#000000>禦</color>降低$"="D<color\=#000000>E</color>F Down"
 r:"^防<color\=#000000>禦</color>力降低$"="D<color\=#000000>E</color>F Down"
 r:"^防<color\=#000000>禦</color>弱化$"="D<color\=#000000>E</color>Fense Nerf"
-r:"^受<color\=#000000>暴</color>擊提升$"="C<color\=#000000>r</color>it Rate Taken Up"
+r:"^受<color\=#000000>暴</color>擊提升$"="C<color\=#000000>r</color>it Taken Rate Up"
 r:"^受<color\=#000000>暴</color>擊效果提升$"="C<color\=#000000>r</color>it DMG Taken Up"
 r:"^受<color\=#000000>到</color>暴擊效果提升$"="C<color\=#000000>r</color>it DMG Taken Up"
 r:"^效<color\=#000000>果</color>抵抗降低$"="A<color\=#000000>i</color>lment RES Down"
@@ -979,6 +981,7 @@ r:"^受<color\=#000000>持</color>續傷害效果提升$"="D<color\=#000000>a</c
 r:"^受<color\=#000000>最</color>終傷害提高$"="F<color\=#000000>i</color>nal DMG Taken Up"
 r:"^受<color\=#000000>到</color>最終傷害提高$"="F<color\=#000000>i</color>nal DMG Taken Up"
 r:"^受<color\=#000000>到</color>最終傷害提升$"="F<color\=#000000>i</color>nal DMG Taken Up"
+r:"^受<color\=#000000>總</color>傷害增幅提升$"="T<color\=#000000>o</color>tal DMG Taken Up"
 r:"^傷<color\=#000000>害</color>降低$"="D<color\=#000000>M</color>G Down"
 r:"^傷<color\=#000000>害</color>弱化$"="D<color\=#000000>M</color>G Nerf"
 r:"^受<color\=#000000>物</color>理傷害提高$"="P<color\=#000000>h</color>ys DMG Taken Up"
@@ -1045,6 +1048,7 @@ Inspect Details - TITLES
 傷害弱化=Damage Nerf
 暴擊提升=Increase Crit Rate
 暴擊率提升=Increase Crit Rate
+受到暴擊率提升=Increase Crit Taken Rate
 暴擊傷害提升=Increase Crit DMG
 暴擊效果提升=Increase Crit DMG
 穿透提升=Increase Pierce
@@ -1078,6 +1082,7 @@ HIGHLIGHT傷害提升=Increase HIGHLIGHT DMG
 受到最終傷害提升=Increase Final DMG Taken
 受到最終傷害提高=Increase Final DMG Taken
 受到最終傷害降低=Dcrease Final DMG Taken
+受總傷害增幅提升=Increase Total DMG Taken
 最終傷害減免=Increase Final DMG RES
 火焰傷害提升=Increase Fire DMG
 火焰傷害提高=Increase Fire DMG
@@ -1175,6 +1180,7 @@ Inspect Details - BUFF
 r:"^{{A}}提升(\d+(.\d+)?(%)?)$"="Increase {{A}} by $1"
 r:"^所有角色{{A}}提升(\d+(.\d+)?(%)?)$"="Increase all characters' {{A}} by $1"
 r:"^護盾值：(\d+)$"="Shield: $1"
+r:"^當前總護盾值：(\d+)$"="Total Shield: $1"
 {{A}}之力添加的護盾，可吸收一定傷害=Shield from {{A}}'s Power,\ncan negate some damage
 r:"^生命值提升(\d+(.\d+)?(%)?)$"="Increase HP by $1"
 r:"^最大生命值提升(\d+(.\d+)?(%)?)$"="Increase Max HP by $1"
@@ -1354,6 +1360,7 @@ r:"^防禦力降低(\d+(.\d+)?(%)?)$"="Decrease DEF by $1"
 r:"^總防禦力降低(\d+(.\d+)?(%)?)$"="Decrease Total DEF by $1"
 r:"^防禦力降低(\d+%)，可疊加(\d+)層$"="Decrease DEF by $1. \nStacks up to $2 times"
 r:"^所有怪盜最終防禦力下降(\d+(.\d+)?(%)?)$"="Decrease all Thieves' DEF by $1"
+r:"^受到支配角色攻擊時受到暴擊率提升(\d+(.\d+)?(%)?)$"="When attacked by a Sweeper, \nincrease Crit Taken Rate by $1"
 r:"^受到暴擊效果提升(\d+(.\d+)?(%)?)$"="Increase Crit DMG Taken by $1"
 r:"^觸電狀態下，受到暴擊效果提升(\d+(.\d+)?(%)?)$"="When inflicted with Shock,\nincrease Crit DMG Taken by $1"
 r:"^效果抵抗降低(\d+(.\d+)?(%)?)$"="Decrease Ailment RES by $1"
@@ -1386,6 +1393,7 @@ r:"^造成的傷害降低(\d+(.\d+)?(%)?)$"="Decrease DMG Dealt by $1"
 r:"^最終傷害降低(\d+(.\d+)?(%)?)$"="Decrease Final DMG by $1"
 r:"^造成的最終傷害降低(\d+(.\d+)?(%)?)$"="Decrease Final DMG Dealt by $1"
 受到的下一次HIGHLIGHT傷害提升=Increase next HIGHLIGHT DMG Taken
+r:"^受總傷害增幅提升(\d+(.\d+)?(%)?)$"="Increase Total DMG Taken Amp by $1"
 
 r:"^受物理傷害提升(\d+(.\d+)?(%)?)$"="Increase Phys DMG Taken by $1"
 r:"^受物理傷害提高(\d+(.\d+)?(%)?)$"="Increase Phys DMG Taken by $1"
@@ -1427,7 +1435,7 @@ r:"^受念動傷害提高(\d+(.\d+)?(%)?)$"="Increase Psy DMG Taken by $1"
 r:"^受到念動傷害提升(\d+(.\d+)?(%)?)$"="Increase Psy DMG Taken by $1"
 r:"^受到念動傷害提高(\d+(.\d+)?(%)?)$"="Increase Psy DMG Taken by $1"
 r:"^受到的念動傷害提升(\d+(.\d+)?(%)?)$"="Increase Psy DMG Taken by $1"
-r:"^受到念動傷害暴擊率提升(\d+(.\d+)?(%)?)$"="Increase Psy DMG Crit Rate Taken by $1"
+r:"^受到念動傷害暴擊率提升(\d+(.\d+)?(%)?)$"="Increase Psy DMG Crit Taken Rate by $1"
 r:"^受核熱傷害提升(\d+(.\d+)?(%)?)$"="Increase Nuke DMG Taken by $1"
 r:"^受核熱傷害提高(\d+(.\d+)?(%)?)$"="Increase Nuke DMG Taken by $1"
 r:"^受到核熱傷害提升(\d+(.\d+)?(%)?)$"="Increase Nuke DMG Taken by $1"
