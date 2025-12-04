@@ -657,7 +657,7 @@ r:"^效果命中提升(\d+\.\d+%)。戰鬥開始時獲得(\d+)層「凝視」，
 r:"^效果命中提升(\d+\.\d+%)。戰鬥開始時獲得(\d+)層「凝視」，友方同伴釋放技能添加負面效果時，自身獲得(\d+)層「凝視」，上限(\d+)層。\（每個同伴每回合最多添加(\d+)層「凝視」\）。自身釋放{{A}}技能時，若擁有(\d+)層「凝視」，則消耗(\d+)層「凝視」，使技能主目標受到持續傷害效果提升(\d+%)，並額外使其獲得(\d+)層「蛇毒」。$"="<size\=22>Increase Ailment ACC by $1. Gain $2 [Gaze] stacks at the start of battle, when allies inflict a debuff with skills, gain $3 [Gaze] stack. Stacks up to $4 times. Each ally can give $5 [Gaze] stack per turn. When using a {{A}} skill, if user has $6 [Gaze] stacks, spend $7 [Gaze] stacks to increase the main target's Damage Over Time Effect Taken by $8. Also, inflict $9 [Venom] stack.</size>"
 凝視=Gaze
 蛇毒=Venom
-r:"^(\d+)層時釋放技能觸發額外效果$"="Activate additional effects when using a skill at $1 stacks"
+r:"^(\d+)層時釋放技能觸發額外效果$"="Activate bonus effects \nwhen using a skill at $1 stacks"
 r:"^凝<color\=#000000>視</color>$"="G<color\=#000000>a</color>ze"
 r:"^蛇<color\=#000000>毒</color>$"="V<color\=#000000>e</color>nom"
 
@@ -735,4 +735,6 @@ RANK 9
 --------
 Macabre
 r:"^勿忘人終有一死(.*)$"="Memento Mori $1"
-r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，自身獲得(\d+)層「亡靈舞步」。友方同伴釋放{{A}}技能造成傷害後，自身獲得(\d+)層「亡靈舞步」，上限(\d+)層。自身對敵人釋放{{A}}技能後，使所有敵人受到暴擊效果提升(\d+%)，持續(\d+)回合。若「亡靈舞步」達到(\d+)層，則消耗所有「亡靈舞步」，使目標受到支配角色攻擊時，受到總傷害增幅提升(.*)，持續(\d+)回合。$"="Increase ATK by $1. At the start of battle, user gains $2 [Dance of Death] stacks. After allies deal damage with a Persona skill, user gains $3 [Dance of Death] stack. Stacks up to $4 times. After user uses a Persona skill on foes, increase all foe's Crit DMG Taken by $5 for $6 turns. If user has $7 [Dance of Death] stacks, spend all [Dance of Death] stacks and increase target's Sweeper Total DMG Taken Amp by $8 for $9 turns."
+r:"^攻擊力提升(\d+\.\d+%)。\n戰鬥開始時，自身獲得(\d+)層「亡靈舞步」。友方同伴釋放{{A}}技能造成傷害後，自身獲得(\d+)層「亡靈舞步」，上限(\d+)層。\n自身對敵人釋放{{A}}技能後，使所有敵人受到暴擊效果提升(.*)，持續(\d+)回合。\n若「亡靈舞步」達到(\d+)層，則消耗所有「亡靈舞步」，使目標受到支配角色攻擊時，受到總傷害增幅提升(.*)，持續(\d+)回合。$"="Increase ATK by $1. \nAt the start of battle, user gains $2 [Dance of Death] stacks. After allies deal damage with a Persona skill, user gains $3 [Dance of Death] stack. Stacks up to $4 times. After user uses a Persona skill on foes, increase all foe's Crit DMG Taken by $5 for $6 turns. \nIf user has $7 [Dance of Death] stacks, spend all [Dance of Death] stacks and increase target's Sweeper Total DMG Taken Amp by $8 for $9 turns."
+亡靈舞步=Dance of Death
+r:"^亡<color\=#000000>靈</color>舞步$"="D<color\=#000000>a</color>nce of Death"
