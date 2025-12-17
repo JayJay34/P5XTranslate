@@ -43,6 +43,7 @@ sr:"^(.*)專屬武器。(.*)。$"="Exclusive weapon for $1. $2"
 刻印=Engrave
 刻印詳情=Engrave Detail
 未啟動=Not activated
+天命神威 未啟動=Not activated
 進階消耗=Evolve
 刻印圖章=Engrave Stamp
 光之刻印=Engrave of Light
@@ -96,6 +97,7 @@ r:"^攻擊力提升<color\=#2899FF>(.*)</color>，\n祝福屬性傷害提升、�
 僅可消耗結晶遺藏晶石=Only use Glimmer Crystal
 【天命神威】=[Heavenly Might]
 天命神威=Heavenly Might
+r:"^天命神威 (.*)階$"="Heavenly Might Rank $1"
 r:"^任意同伴消耗生命值釋放技能時，使該同伴獲得持續(\d+)回合的『神諭加護』。『神諭加護』：祝福屬性傷害提升<color\=#2899FF>(.*)</color>；造成祝福屬性傷害時，暴擊效果提升<color\=#2899FF>(.*)</color>。$"="When any ally spends HP from skills, that ally gains [Heavenly Protection] for $1 turns. [Heavenly Protection]: Increase Bless DMG by <color\=#2899FF>$2</color>; When dealing Bless damage, increase Crit DMG by <color\=#2899FF>$3</color>."
 神諭加護=Heavenly Protection
 r:"^神<color\=#000000>諭</color>加護$"="H<color\=#000000>e</color>avenly Protection"
@@ -747,7 +749,21 @@ r:"^戰鬥開始時，獲得<color\=#2899FF>(.*)</color>層<link\="s\|281"><u>�
 【夜幕】=[Nightfall]
 夜幕=Nightfall
 
-聖馬角信標=Sacred Beacon
+聖馬角信標=Unicorn Beacon
+【正午時分】=[High Noon]
+正午時分=High Noon
+r:"^最大生命值提升<color\=#2899FF>(.*)</color>。\n{{A}}獲得護盾時，使所有同伴暴擊效果提升<color\=#2899FF>(.*)</color>，持續(.*)回合。\n{{A}}造成射擊屬性傷害時，使目標防禦力降低<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase Max HP by <color\=#2899FF>$1</color>.\nWhen {{A}} gains a shield, increase party's Crit DMG by <color\=#2899FF>$2</color> for $3 turns. \nWhen {{A}} deals Gun damage, decrease target’s DEF by <color\=#2899FF>$4</color> for $5 turns."
+荒野處決=Wild Execution
+【血肉豐碑】=[Flesh Monument]
+血肉豐碑=Flesh Monument
+r:"^護盾效果提升<color\=#2899FF>(.*)</color>。\n{{A}}獲得護盾時，使自身最大生命值提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase Shield Effect by <color\=#2899FF>$1</color>.\nWhen {{A}} gains a Shield, increase user's Max HP by <color\=#2899FF>$2</color> for $3 turns."
+裂地手斧=Earthshattering Handaxe
+【碎岩擊】=[Rock Crusher]
+碎岩擊=Rock Crusher
+r:"^{{A}}處於護盾狀態下，射擊屬性傷害提升<color\=#2899FF>(.*)</color>。$"="When {{A}} has a Shield, increase Gun DMG by <color\=#2899FF>$1</color>."
+雙刃手斧=Double-Edged Handaxe
+【野性】=[Wild]
+野性=Wild
 
 ----------
 STANDARD 5 STAR UNIT WEAPONS
@@ -857,7 +873,7 @@ r:"^以友方為目標釋放技能時，使主目標每回合開始時回復<col
 月下翎=Moonlit Feather
 【酣歌醉舞】=[Moonlit Banquet]
 酣歌醉舞=Moonlit Banquet
-r:"^攻擊力提升<color\=#2899FF>(.*)</color>。{{A}}每消耗1杯『<link\="s\|182"><u>精調·DELUXE</u></link>/<link\="s\|183"><u>精調</u></link>/<link\="s\|184"><u>粗調</u></link>』會觸發120%/100%/50%強度的下述效果：使所有同伴隨機獲得攻擊力提升<color\=#2899FF>(.*)</color>/造成傷害提升<color\=#2899FF>(.*)</color>/暴擊率提升<color\=#2899FF>(.*)</color>的其中1種，效果持續2回合（優先獲得未觸發的效果，同種效果不可疊加）。{{A}}每調製出2杯<link\="s\|180"><u>『雞尾酒』</u></link>時，有<color\=#2899FF>(.*)</color>機率使解明怪盜的準備時間減少1次行動。$"="Increase ATK by <color\=#2899FF>$1</color>. For each <link\="s|180"><u>[Cocktail]</u></link> spent, randomly grant 1 of the following effects to the party:\nIncrease ATK by <color\=#2899FF>$2</color> (2 turns);\nIncrease damage by <color\=#2899FF>$3</color> (2 turns);\nIncrease Crit Rate by <color\=#2899FF>$4</color> (2 turns);\nThese effects do not stack. If the Cocktail spent was <link\="s|182"><u>[Tailor-Made]</u></link>, multiply effect by 120%. If it was <link\="s|183"><u>[Standard]</u></link>, multiply effect by 100%. If it was <link\="s|184"><u>[Basic]</u></link>, multiply effect by 50%. For every 2 <link\="s|180"><u>[Cocktail]</u></link> mixed, <color\=#2899FF>$5</color> chance to reduce Yumi's cooldown time by 1 turn."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。{{A}}每消耗1杯『<link\="s\|182"><u>精調·DELUXE</u></link>/<link\="s\|183"><u>精調</u></link>/<link\="s\|184"><u>粗調</u></link>』會觸發120%/100%/50%強度的下述效果：使所有同伴隨機獲得攻擊力提升<color\=#2899FF>(.*)</color>/造成傷害提升<color\=#2899FF>(.*)</color>/暴擊率提升<color\=#2899FF>(.*)</color>的其中1種，效果持續2回合（優先獲得未觸發的效果，同種效果不可疊加）。{{A}}每調製出2杯<link\="s\|180"><u>『雞尾酒』</u></link>時，使解明怪盜的準備時間減少(.*)次行動。$"="Increase ATK by <color\=#2899FF>$1</color>. For each <link\="s|180"><u>[Cocktail]</u></link> spent, randomly grant 1 of the following effects to the party:\nIncrease ATK by <color\=#2899FF>$2</color> (2 turns);\nIncrease damage by <color\=#2899FF>$3</color> (2 turns);\nIncrease Crit Rate by <color\=#2899FF>$4</color> (2 turns);\nThese effects do not stack. If the Cocktail spent was <link\="s|182"><u>[Tailor-Made]</u></link>, multiply effect by 120%. If it was <link\="s|183"><u>[Standard]</u></link>, multiply effect by 100%. If it was <link\="s|184"><u>[Basic]</u></link>, multiply effect by 50%. For every 2 <link\="s|180"><u>[Cocktail]</u></link> mixed, reduce Yumi's cooldown time by 1 turn."
 星夜卜者=Starrynight Soothsayer
 【魅惑之吻】=[Seductive Kiss]
 魅惑之吻=Seductive Kiss
