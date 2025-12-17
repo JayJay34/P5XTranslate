@@ -524,16 +524,16 @@ r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福�
 sr:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。$"="Deal <color\=#FFFF00>$1</color> ATK $2 damage to all foes."
 
 //AoE Multi-Hit Random
-sr:"對所有敵人造成(\d+\~\d+)次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。"=Deal <color\=#FFFF00>$2</color> ATK $3 damage to all foes $1 times.
+sr:"^對所有敵人造成(\d+\~\d+)次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。$"="Deal <color\=#FFFF00>$2</color> ATK $3 damage to all foes $1 times."
 
 //AoE + Ailment
-sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，效果持續(\d+)回合。"=Deal <color\=#FFFF00>$1</color> ATK $2 damage to all foes, with a <color\=#FFFF00>$3</color> base chance to inflict $4 for $5 turns.
+sr:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，效果持續(\d+)回合。$"="Deal <color\=#FFFF00>$1</color> ATK $2 damage to all foes, with a <color\=#FFFF00>$3</color> base chance to inflict $4 for $5 turns."
 
 //AoE + Reduce DEF
-sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，並使其防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續2回合。"=Deal <color\=#FFFC40>$1</color> ATK $2 damage to all foes and decrease their DEF by <color\=#FFFC40>$3</color> for 2 turns.
+sr:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，並使其防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Deal <color\=#FFFC40>$1</color> ATK $2 damage to all foes and decrease their DEF by <color\=#FFFC40>$3</color> for $4 turns."
 
 //AoE + Ailment on main target
-sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，並有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使主目標敵人陷入(.*)狀態，效果持續2回合。"=Deal <color\=#FFFF00>$1</color> ATK $2 damage to all foes and has a <color\=#FFFF00>$3</color> chance of inflicting $4 to the main target for 2 turns.
+sr:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，並有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使主目標敵人陷入(.*)狀態，效果持續(\d+)回合。$"="Deal <color\=#FFFF00>$1</color> ATK $2 damage to all foes and has a <color\=#FFFF00>$3</color> chance of inflicting $4 to the main target for $5 turns."
 
 //AoE + Guaranteed Ailment on main target
 sr:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有(.*)的固定機率使技能主目標陷入(.*)狀態。$"="Deal <color\=#FFFF00>$1</color> ATK $2 damage to all foes, with a $3 fixed chance to inflict the main target with $4."
