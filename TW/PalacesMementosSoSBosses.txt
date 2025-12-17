@@ -198,7 +198,7 @@ WONDER，幹得漂亮。=Wonder, well done.
 r:"^找到了「<color\=#ff0000>正確的</color>」連接方式，\n但混雜了「<color\=#ff0000>錯誤的</color>」連接。$"="Found the "<color\=#ff0000>correct</color>" connections. \nBut added "<color\=#ff0000>wrong</color>" connections."
 
 r:"^讓這個陰影認為{{A}}是「<color\=#ff0000>錯誤</color>」的吧。$"="Let this Shadow think {{A}} is "<color\=#ff0000>wrong</color>"."
-{{A}}的命令={{A}}'s orders
+{{A}}的命令={{A}}'s Orders
 正確的=Correct
 錯誤的=Wrong
 
@@ -1414,7 +1414,40 @@ sr:"^<color\=#FF0000>(.*)</color>從糖縛狀態恢復了。$"="<color\=#FF0000>
 ----------
 PALACE 5 BOSS 4
 ----------
-r:"^下<color\=#000000>津</color>名的命令$"="S<color\=#000000>h</color>imotsuna's Order"
+傲岸的干擾器=Jammer of Pride
+注意{{A}}宣佈的規則=Note the rules announced by {{A}}
+儘快清除傲岸的干擾器=Destroy all Jammers of Pride as soon as possible
+儘快擊殺{{A}}=Defeat {{A}} as soon as possible
+
+我即是規則！=I Am the Rule!
+r:"^{{A}}宣佈規則，本回合禁止釋放指定類型的技能。對違反其命令的敵人釋放『嚴厲懲處』，造成物理屬性傷害，同時使其受到的傷害提升，造成的傷害降低，持續(\d+)回合。$"="{{A}} announces the rules, prohibiting the use of specific skill types this turn. Use [Severe Punishment] on foes who violate the rule, dealing Phys damage, increasing their DMG Taken and decreasing their DMG Dealt for $1 turns."
+嚴厲懲處=Severe Punishment
+r:"^對1名敵人造成物理屬性傷害。同時使其受到的傷害提升，造成的傷害降低，持續(\d+)回合。$"="Deal Phys damage to 1 foe. Increase their DMG Taken and decrease their DMG Dealt for $1 turns."
+橫掃=Sweep
+全面追擊=Relentless Pursuit
+對1名敵人造成物理屬性傷害，並降低其受到的治療效果。=Deal Phys damage to 1 foe. Decrease their Healing Received.
+對1名敵人造成物理屬性傷害，並降低怪盜受到的治療效果。=Deal Phys damage to 1 foe. Decrease Thief's Healing Received.
+你的命，是我的！=Your Life is Mine!
+被動技能，生命值首次低於80%/50%/20%時，給自己回復生命，並提升攻擊。=Passive skill, when HP first drops below 80%/50%/20%, restore HP to self and increase ATK.
+反抗者死！=Death to Rebels!
+
+倨傲之聲=Voice of Pride
+劇毒巢穴=Poisonous Lair
+釋放毒霧，使所有敵人陷入中毒狀態，回合結束時受到大量傷害。=Release a poisonous mist, inflicting Poison on all foes and dealing heavy damage after acting.
+
+死吧死吧死吧死吧！=Die Die Die Die!
+使自身造成的最終物理屬性傷害提升，效果持續1回合。=Increase user's Phys Final DMG Dealt for 1 turn.
+
+r:"^下<color\=#000000>津</color>名的命令$"="S<color\=#000000>h</color>imotsuna's Orders"
+禁止釋放傷害類{{A}}技能=Prohibit the use of damaging {{A}} skills
+禁止釋放增益類{{A}}技能=Prohibit the use of buffing {{A}} skills
+禁止釋放治療類{{A}}技能=Prohibit the use of healing {{A}} skills
+中毒=Poison
+行動後損失生命值，無法被驅散=Lose HP after acting, cannot be dispelled
+
+sr:"^<color\=#FF0000>(.*)</color>受到了(.*)的命令，禁止使用傷害類(.*)技能……$"="<color\=#FF0000>$1</color> have been ordered by $2 not to use damaging $3 skills..."
+sr:"^<color\=#FF0000>(.*)</color>受到了(.*)的命令，禁止使用增益類(.*)技能……$"="<color\=#FF0000>$1</color> have been ordered by $2 not to use buffing $3 skills..."
+sr:"^<color\=#FF0000>(.*)</color>受到了(.*)的命令，禁止使用治療類(.*)技能……$"="<color\=#FF0000>$1</color> have been ordered by $2 not to use healing $3 skills..."
 
 ----------
 PALACE 5 ELITES
@@ -2529,7 +2562,7 @@ r:"^對所有敵人造成火焰屬性傷害，使目標受到傷害提升，受�
 r:"^對1名敵人造成火焰屬性傷害，使目標受到傷害提升，受到追加效果傷害增加，持續(\d+)回合。$"="Deal Fire damage to 1 foe, increase target's DMG Taken and Follow Up DMG Taken for $1 turns."
 r:"^根據自身擁有的『熱烈歡迎』或『窮追猛打』時，該技能會分別產生不同的效果。\n『熱烈歡迎』： 對所有敵人造成火焰屬性傷害，使目標受到傷害提升，受到火屬性傷害提升，持續(\d+)回合。\n『窮追猛打』： 對1名敵人造成火焰屬性傷害，使目標受到傷害提升，受到追加效果傷害增加，持續(\d+)回合。$"="When user has [Warm Welcome] or [Furious Pursuit], activate different skill effect.\n[Warm Welcome]: Deal Fire damage to all foes, increase target's DMG Taken and Fire DMG Taken for $1 turns.\n[Furious Pursuit]: Deal Fire damage to 1 foe, increase target's DMG Taken and Follow Up DMG Taken for $2 turns."
 r:"^對所有敵人造成火焰屬性傷害，使敵方陣營獲得(\d+)層『大壞蛋』：敵方陣營任意目標受到追擊技能或火屬性技能時消耗(\d+)層，使傷害提升，持續(\d+)回合。$"="Deal Fire damage to all foes, inflict foes with $1 [Big Bad] stacks: When foes take Follow Up damage or Fire skill damage, spend $2 stack to increase damage. Lasts for $3 turns."
-r:"^對1名敵人造成火焰屬性傷害，有一定基礎機率使敵人陷入<link\="\s|102"><u>燃燒</u></link>狀態，效果持續(\d+)回合。$"="Deal Fire damage to 1 foe, with a chance to inflict the foe with <link\="s|102"><u>Burn</u></link> for $1 turns."
+r:"^對1名敵人造成火焰屬性傷害，有一定基礎機率使敵人陷入<link\="s\|102"><u>燃燒</u></link>狀態，效果持續(\d+)回合。$"="Deal Fire damage to 1 foe, with a chance to inflict the foe with <link\="s|102"><u>Burn</u></link> for $1 turns."
 r:"^使所有同伴的攻擊力提升，效果持續(\d+)回合。{{A}}死亡後，增益效果會失效。$"="Increase party's ATK for $1 turn. After {{A}} is defeat, lose this buff."
 r:"^防禦力降低(\d+%)，可優先被驅散$"="Decrease DEF by $1; \nWill dispel this first"
 
