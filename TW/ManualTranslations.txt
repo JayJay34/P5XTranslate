@@ -502,7 +502,7 @@ r:"^消耗「<color\=#FFDE00>(.*)</color>」不足，無法刷新。$"="Insuffic
 請在以下列表中點擊選擇一位4星怪盜。=Select one 4★ Thief from the list below.
 宇宙的終響=Space Echo
 來自宇宙的命運指引，打開後可自選一張橙色宙位啟示卡。=A guidance of fate from the Universe, can be used to gain 1 Orange Space Card
-sr:"^消耗：<color\=#FFDE00>「(.*)」×(\d+)</color>\n兌換：<color\=#FFDE00>宙位啟示「(.*)」×(\d+)</color>\n是否確認？$"="Spend: <color\=#FFDE00>[$1] ×$2</color>\nExchange: <color\=#FFDE00>Space Revelation [$3] ×$4</color>\nAre you sure?"
+sr:"^消耗：<color\=#FFDE00>「(.*)」×(\d+)</color>\n兌換：<color\=#FFDE00>宙位啟示「(.*)」×(\d+)</color>\n是否確認？$"="Spend: <color\=#FFDE00>[$1] ×$2</color>\nRedeem: <color\=#FFDE00>Space Revelation [$3] ×$4</color>\nAre you sure?"
 殘識碎片禮包=<size\=17>Awareness Fragment Gift Bag</size>
 盲選偶像合約 ★5=5★ Random Kaidol Contract
 r:"^怪盜殘識碎片$"="<size\=22>Thief Awareness Fragment</size>"
@@ -513,11 +513,13 @@ r:"^消耗：<color\=#FFDE00>「怪盜殘識碎片」×(\d+)</color>\n兌換：<
 r:"^消耗：<color\=#FFDE00>「{{A}}的殘識碎片」×(\d+)</color>\n合成：<color\=#FFDE00>「{{A}}的殘識」×(\d+)</color>\n是否確認？$"="Spend: <color\=#FFDE00>[{{A}}'s Awareness Fragment] ×$1</color>\nGet: <color\=#FFDE00>[{{A}}'s Awareness] ×$2</color>\nAre you sure?"
 星穹的墨匣=Cosmic Inkwell
 書寫命運的手稿，開啟墨匣後可自選以下任一道具：{{A}}、{{B}}、{{C}}。=The manuscript that writes fate, open the inkwell to select one of the following items: {{A}}, {{B}}, {{C}}.
-sr:"^消耗：<color\=#FFDE00>「(.*)」×(.*)</color>\n兌換：<color\=#FFDE00>「(.*)」×(.*)</color>\n是否確認？$"="Spend: <color\=#FFDE00>[$1] ×$2</color>\nExchange: <color\=#FFDE00>[$3] ×$4</color>\nAre you sure?"
+sr:"^消耗：<color\=#FFDE00>「(.*)」×(.*)</color>\n兌換：<color\=#FFDE00>「(.*)」×(.*)</color>\n是否確認？$"="Spend: <color\=#FFDE00>[$1] ×$2</color>\nRedeem: <color\=#FFDE00>[$3] ×$4</color>\nAre you sure?"
 速通券·日常=Insta-Clear Ticket·Daily
 『速通券·日常』\n用於「厄抑之境」非時限關卡，進行快速通關的憑證。=[Insta-Clear Ticket·Daily]\nUsed to insta-clear [Realm of Repression].
+用於「厄抑之境」非時限關卡，進行快速通關的憑證。=Used to insta-clear [Realm of Repression].
 速通券·周常=Insta-Clear Ticket·Weekly
 『速通券·周常』\n用於「往日回溯」關卡，進行快速通關的憑證。=[Insta-Clear Ticket·Weekly]\nUsed to insta-clear [Recollections].
+用於「往日回溯」關卡，進行快速通關的憑證。=Used to insta-clear [Recollections].
 秘聞鑰匙=Secret Key
 
 禮包獲取後，可選擇獎勵包括=You can choose the following rewards
@@ -1571,6 +1573,7 @@ sr:"^已獲得限定時裝(.*)$"="Obtained limited outfit $1"
 sr:"^透過簽約獲得<color\=#FFD145>(.*)</color>可前往活動<color\=#FFD145>同行之約</color>領取<color\=#FFD145>(.*)</color>，僅限一次。$"="<size\=21>Obtain <color\=#FFD145>$1</color> through Signature to claim <color\=#FFD145>$2</color> once.</size>"
 sr:"^透過簽約獲得<color\=#FFD145>「(.*)」</color>可前往活動<color\=#FFD145>「同行之約」</color>領取\n<color\=#FFD145>「(.*)」</color>或<color\=#FFD145>「(.*)」</color>的5星怪盜自選箱，僅限一次。$"="<size\=21>Obtain <color\=#FFD145>$1</color> through Signature to claim <color\=#FFD145>$2</color> or <color\=#FFD145>$3</color> once.</size>"
 sr:"^透過抽取獲得<color\=#FFD145>「(.*)」</color>可前往活動<color\=#FFD145>「同行之約」</color>領取\n<color\=#FFD145>(.*)</color>5星武器<color\=#FFD145>「(.*)」</color>，僅限一次。$"="<size\=21>Obtain <color\=#FFD145>$1</color> through Arms Deal to claim <color\=#FFD145>$2</color>'s 5★ weapon <color\=#FFD145>$3</color> once.</size>"
+sr:"^透過抽取獲得<color\=#FFD145>「(.*)」</color>可前往活動<color\=#FFD145>「同行之約」</color>領取\n<color\=#FFD145>「(.*)」</color>或<color\=#FFD145>「(.*)」</color>5星武器自選箱，僅限一次。$"="<size\=21>Obtain <color\=#FFD145>$1</color> through Arms Deal to claim <color\=#FFD145>$2</color> or <color\=#FFD145>$3</color> once.</size>"
 r:"^(\d+)月(\d+)日開放簽約$"="Unlock Contract on $1/$2"
 r:"^(\d+)月(\d+)日\n開放領取$"="Claim on $1/$2"
 簽約「{{A}}」\n後可領取=Sign [{{A}}]\nto claim
@@ -2679,6 +2682,10 @@ r:"^<color\=#FFDe00>{{A}}</color>票務等級達到<color\=#FFDe00>(\d+)級</col
 『穹星求索』=[Pursuit of Stars]
 「穹星求索」=[Pursuit of Stars]
 穹星求索=Pursuit of Stars
+『溯香之庭』=[Incense Court]
+「溯香之庭」=[Incense Court]
+溯香之庭=Incense Court
+
 往日回溯=Recollections
 主線：{{A}}\n完成後開啟挑戰=<size\=20>Unlock after completing\n{{A}}</size>
 主線：假面役者的謝幕\n完成後開啟挑戰=<size\=20>Unlock after completing\nMasked Actors' Curtain Call</size>
@@ -2696,6 +2703,7 @@ r:"^<color\=#FFDe00>{{A}}</color>票務等級達到<color\=#FFDe00>(\d+)級</col
 面具升級材料=Persona Lv
 
 怪盜天賦材料=Mindscape
+怪盜高級潛能材料=Thief Ascend
 大量魂石=Konpaku Gem
 
 『羈絆之語』=[Words of Bond]
@@ -2997,9 +3005,11 @@ r:"^沉香木氣味的S型香塔，可用於提升技能等級至Lv.2·Lv.3。$"
 r:"^沉香木氣味的M型香塔，可用於提升技能等級至Lv.4、Lv.5、Lv.6。$"="Medium agarwood scented incense, can be used to level up Skills to Lv.4-Lv.6."
 r:"^沉香木氣味的S型香塔，可用於提升技能等級至Lv.2、Lv.3。$"="Small agarwood scented incense, can be used to level up Skills to Lv.2-Lv.3."
 
+芳香之種=Fragrance Seed
 鳶尾花醇香=Essence of Iris
 鳶尾花濃香=Fragrance of Iris
 鳶尾花之香=Whiff of Iris
+r:"^可用於提升潛能等級至潛能(\d+)·潛能(\d+)。$"="Can be used to level up Talent to Talent $1-Talent $2."
 r:"^鳶尾香調的頂級香水，可用於提升潛能等級至潛能(\d+)·潛能(\d+)。$"="Top iris perfume, can be used to level up Talent to Talent $1-Talent $2."
 r:"^鳶尾香調的高級香水，可用於提升潛能等級至潛能(\d+)·潛能(\d+)·潛能(\d+)。$"="Fine iris perfume, can be used to level up Talent to Talent $1-Talent $3."
 r:"^鳶尾香調的香水，可用於提升潛能等級至潛能(\d+)·潛能(\d+)。$"="Iris perfume, can be used to level up Talent to Talent $1-Talent $2."
@@ -3069,6 +3079,45 @@ sr:"^未知宿命橙·(.*)"="Random 4★ $1"
 可用於「怪盜心象·進階強化」養成的高階材料。=High level material used in \n[Mindscape - Stat Upgrade].
 可用於「怪盜心象·技能領悟」養成的低階材料。=Low level material used in \n[Mindscape - Skills Upgrade].
 可用於「怪盜心象·技能領悟」養成的高階材料。=High level material used in \n[Mindscape - Skills Upgrade].
+
+{{A}}的心象核心={{A}}'s Mindscape Core
+心象核心=Mindscape Core
+通用心象核心=Universal Mindscape Core
+怪盜通用心象核心，任意怪盜心象啟動時，均可以補充消耗。=Universal Mindscape Core used in [Mindscape].
+心象核心·自選=Custom Mindscape Core
+自選心象核心=Custom Mindscape Core
+可自選獲得一枚怪盜的心象核心，在其進行心象啟動時消耗。\n可自選內容將隨版本持續更新。=Used to obtain a Thief's Mindscape Core for Mindscape Activation. The content will change with future versions.
+
+心選之徽記=Custom Mindscape Emblem
+自選心象徽記=Custom Mindscape Emblem
+
+物理·徽記=Phys Emblem
+射擊·徽記=Gun Emblem
+火炎·徽記=Fire Emblem
+凍結·徽記=Ice Emblem
+電擊·徽記=Elec Emblem
+疾風·徽記=Wind Emblem
+念動·徽記=Psy Emblem
+核熱·徽記=Nuke Emblem
+祝福·徽記=Bless Emblem
+詛咒·徽記=Curse Emblem
+萬能·徽記=Almighty Emblem
+輔助·徽記=Support Emblem
+可用於「怪盜心象·屬性共鳴」啟動的材料。=Used in [Mindscape - Attribute Resonance].
+
+物理·紋章=Phys Heraldry
+射擊·紋章=Gun Heraldry
+火炎·紋章=Fire Heraldry
+凍結·紋章=Ice Heraldry
+電擊·紋章=Elec Heraldry
+疾風·紋章=Wind Heraldry
+念動·紋章=Psy Heraldry
+核熱·紋章=Nuke Heraldry
+祝福·紋章=Bless Heraldry
+詛咒·紋章=Curse Heraldry
+萬能·紋章=Almighty Heraldry
+輔助·紋章=Support Heraldry
+可用於「怪盜心象·屬性戰技」啟動的材料。=Used in [Mindscape - Attribute Tactics].
 
 星塵=Stardust
 『星塵』\n在心之海試煉中勝利後獲得，可用於和{{A}}兌換心之海試煉的獎勵。=<size\=26>[Stardust]\nGained from Trials from the Sea of Souls, can be used in Velvet Shop.</size>
@@ -3393,12 +3442,14 @@ r:"^消耗(\d+)點行動力\((\d+)\/(\d+)\)$"="Use $1 Action Points ($2/$3)"
 r:"^完成(\d+)次委託派遣$"="Clear $1 Task"
 r:"^完成(\d+)次委託派遣\((\d+)\/(\d+)\)$"="Clear $1 Task ($2/$3)"
 r:"^完成(\d+)次委託派遣 \((\d+)\/(\d+)\)$"="Clear $1 Task ($2/$3)"
+r:"^累計完成(\d+)次委託派遣\((\d+)\/(\d+)\)$"="Clear $1 Task ($2/$3)"
 r:"^完成(\d+)次往日回溯\((\d+)\/(\d+)\)$"="Clear $1 Recollections ($2/$3)"
 在「星盤試煉」中通過「紫色或紅色」監測點=Clear 1 [Purple or Red] Monitoring Point in Astrolabe Trials
 r:"^在「星盤試煉」中通過「紫色或紅色」監測點\((\d+)\/(\d+)\)$"="Clear 1 [Purple or Red] Monitoring Point in Astrolabe Trials ($1/$2)"
 r:"^在「星盤試煉」中通過任意(\d+)個監測點\((\d+)\/(\d+)\)$"="Clear $1 Monitoring Point in Astrolabe Trials ($2/$3)"
 r:"^累計消耗(\d+)點體力\((\d+)\/(\d+)\)$"="Use $1 Stamina ($2/$3)"
 r:"^累計消耗(\d+)點行動力\((\d+)\/(\d+)\)$"="Use $1 Action Points ($2/$3)"
+完成1次「心之海試煉」=Clear 1 [Trials from the Sea of Souls]
 完成1次閼凶夢之扉=Clear 1 Gates of the Nightmare Catcher
 r:"^完成1次閼凶夢之扉\((\d+)\/(\d+)\)$"="Clear 1 Gates of the Nightmare Catcher ($1/$2)"
 

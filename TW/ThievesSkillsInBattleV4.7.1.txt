@@ -1632,7 +1632,11 @@ r:"^使除自身以外的<color\=#FFFF00>1名</color>主目標同伴獲得『錫
 
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)最大生命值的射擊屬性傷害，使所有同伴造成傷害提升\（傷害提升效果基於{{A}}的最大生命值，最多計入(\d+)最大生命值，使造成傷害最多提升(\d+\.\d+%)\），持續(\d+)回合。$"="Deal Gun damage to <color\=#FFFF00>all</color> foes equal to $1 of Shun's Max HP. Increase party's damage for $4 turns (based on Shun's Max HP, up to $3 at $2 Max HP)."
 
+使用槍械射擊所有敵人，造成必定暴擊的射擊屬性傷害，若造成傷害則無視適應性削減目標1點倒地值，並使目標防禦力降低，可疊加2層，持續2回合。根據子彈數量可以射擊多次。使用槍械後本回合仍可使用其他技能。=Deal Gun damage to all foes, this will Always Crit. When dealing damage, ignore all affinites and decrease Down Points by 1. Also, decrease target's DEF for 2 turns. Stacks up to 2 times. Can fire until out of ammo. After using a Gun Attack, Shun can use other skills."
+
 錫星徽記=Sheriff Badge
+r:"^生命值減少或消耗剩餘量：(\d+)$"="HP loss or HP cost left: $1"
+免疫倒地、{{A}}代替承受生命值減少或消耗=Null Down, Shun will take HP loss or spend HP cost
 
 Combat Pop-ups
 r:"^決<color\=#000000>戰</color>的旗幟$"="H<color\=#000000>i</color>gh Noon Flag"
@@ -1640,5 +1644,6 @@ r:"^驅<color\=#000000>散</color>黑暗的槍聲$"="D<color\=#000000>a</color>y
 r:"^錫<color\=#000000>星</color>徽記$"="S<color\=#000000>h</color>eriff Badge"
 r:"^絕<color\=#000000>境</color>的獻身$"="A<color\=#000000>d</color>verse Sacrifice"
 r:"^與<color\=#000000>這</color>份榮耀同在$"="S<color\=#000000>t</color>and with Honor"
+r:"^戍<color\=#000000>衛$"="S<color\=#000000>e</color>ntry"
 r:"^驍<color\=#000000>勇</color>$"="G<color\=#000000>r</color>it"
 r:"^正<color\=#000000>午</color>時分$"="H<color\=#000000>i</color>gh Noon"
