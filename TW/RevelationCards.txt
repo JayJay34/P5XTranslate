@@ -25,14 +25,25 @@ sr:"^每消耗<color\=#FFDE00>(\d+)</color>張<color\=#FFDE00>日月星辰</colo
 r:"^獲得(\d+)張啟示卡$"="Gained $1 Revelation"
 
 請選擇主屬性=Main Stat
-點擊添加副屬性=Click to add sub stats
+點擊添加副屬性=Click to add Substats
 r:"^持有數量:(\d+)$"="Owned: $1"
 屬性選擇=Select
+選定的副屬性，需要生成屬性值才能定製。=Need to generate selected Substats before customizing.
+副屬性生成=Generate Substats
+請確認是否生成副屬性=Please confirm the following Substats
+啟示卡主屬性=Main Stats
+啟示卡副屬性=Substats
+r:"^<color\=#FFDE00>{{A}}×(\d+)</color>$"="<color\=#FFDE00>{{A}}×$1</color>"
+選定內容生成後將無法更改。=Cannot change the selected contents after generation.
+定製確認=Confirm Customization
+請確認是否定製該啟示卡=Please confirm the following Revelation Card
+選定副屬性均為最大值。=Selected Substats are at max stats.
+
 sr:"^是否確認定製一張<color\=#f1b500>(.*)</color>位置，<color\=#f1b500>(.*)</color>套裝，主屬性為<color\=#f1b500>(.*)</color>的啟示卡？$"="Make 1 <color\=#f1b500>$2</color> <color\=#f1b500>$3</color> Revelation Card?"
-sr:"^當前定製啟示卡限定：\n套裝：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主屬性：<color\=#FFDE00>(.*)</color>\n<color\=#ff3b37>尚未選定副屬性。</color>\n是否消耗<color\=#FFDE00>(.*)×(\d+)</color>進行定製？$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\n<color\=#ff3b37>No selected Sub Stats.</color>\nSpend <color\=#FFDE00>$4 ×$5</color> to customize?"
-sr:"^當前定製啟示卡限定：\n套裝：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主屬性：<color\=#FFDE00>(.*)</color>\n副屬性：<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>\n是否確認生成副屬性？\n<color\=#ff3b37>生成後限定套裝、位置、屬性類型將無法更改。</color>$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\nSub Stats: <color\=#FFDE00>$4</color>, <color\=#FFDE00>$5</color>, <color\=#FFDE00>$6</color>, <color\=#FFDE00>$7</color>\nGenerate these Sub Stats?\n<color\=#ff3b37>Cannot change Main Stat and Sub Stats after generation.</color>"
-sr:"^當前定製啟示卡限定：\n套裝：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主屬性：<color\=#FFDE00>(.*)</color>\n副屬性：<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>\n<color\=#FFDE00>選定副屬性均為最大值。</color>\n是否消耗<color\=#FFDE00>(.*)×(\d+)</color>、<color\=#FFDE00>(.*)×(\d+)</color>進行定製？$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\nSub Stats: <color\=#FFDE00>$4</color>, <color\=#FFDE00>$5</color>, <color\=#FFDE00>$6</color>, <color\=#FFDE00>$7</color>\n<color\=#FFDE00>Selected Sub Stats are at max stats.</color>\nSpend <color\=#FFDE00>$8 ×$9</color>, <color\=#FFDE00>$10 ×$11</color> to customize?"
-sr:"^當前定製啟示卡限定：\n套裝：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主屬性：<color\=#FFDE00>(.*)</color>\n副屬性：<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>\n<color\=#FFDE00>選定副屬性均為最大值。</color>\n是否消耗<color\=#FFDE00>(.*)×(\d+)</color>進行定製？$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\nSub Stats: <color\=#FFDE00>$4</color>, <color\=#FFDE00>$5</color>, <color\=#FFDE00>$6</color>, <color\=#FFDE00>$7</color>\n<color\=#FFDE00>Selected Sub Stats are at max stats.</color>\nSpend <color\=#FFDE00>$8 ×$9</color> to customize?"
+sr:"^當前定製啟示卡限定：\n套裝：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主屬性：<color\=#FFDE00>(.*)</color>\n<color\=#ff3b37>尚未選定副屬性。</color>\n是否消耗<color\=#FFDE00>(.*)×(\d+)</color>進行定製？$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\n<color\=#ff3b37>No selected Substats.</color>\nSpend <color\=#FFDE00>$4 ×$5</color> to customize?"
+sr:"^當前定製啟示卡限定：\n套裝：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主屬性：<color\=#FFDE00>(.*)</color>\n副屬性：<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>\n是否確認生成副屬性？\n<color\=#ff3b37>生成後限定套裝、位置、屬性類型將無法更改。</color>$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\nSubstats: <color\=#FFDE00>$4</color>, <color\=#FFDE00>$5</color>, <color\=#FFDE00>$6</color>, <color\=#FFDE00>$7</color>\nGenerate these Substats?\n<color\=#ff3b37>Cannot change Main Stat and Substats after generation.</color>"
+sr:"^當前定製啟示卡限定：\n套裝：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主屬性：<color\=#FFDE00>(.*)</color>\n副屬性：<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>\n<color\=#FFDE00>選定副屬性均為最大值。</color>\n是否消耗<color\=#FFDE00>(.*)×(\d+)</color>、<color\=#FFDE00>(.*)×(\d+)</color>進行定製？$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\nSubstats: <color\=#FFDE00>$4</color>, <color\=#FFDE00>$5</color>, <color\=#FFDE00>$6</color>, <color\=#FFDE00>$7</color>\n<color\=#FFDE00>Selected Substats are at max stats.</color>\nSpend <color\=#FFDE00>$8 ×$9</color>, <color\=#FFDE00>$10 ×$11</color> to customize?"
+sr:"^當前定製啟示卡限定：\n套裝：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主屬性：<color\=#FFDE00>(.*)</color>\n副屬性：<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>\n<color\=#FFDE00>選定副屬性均為最大值。</color>\n是否消耗<color\=#FFDE00>(.*)×(\d+)</color>進行定製？$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\nSubstats: <color\=#FFDE00>$4</color>, <color\=#FFDE00>$5</color>, <color\=#FFDE00>$6</color>, <color\=#FFDE00>$7</color>\n<color\=#FFDE00>Selected Substats are at max stats.</color>\nSpend <color\=#FFDE00>$8 ×$9</color> to customize?"
 未選擇主屬性，無法定製。=No selected Main Stat, cannot customize.
 r:"^最多選擇(\d+)條主屬性。$"="Select up to $1 Main Stat."
 
@@ -42,6 +53,7 @@ r:"^最多選擇(\d+)條主屬性。$"="Select up to $1 Main Stat."
 推薦套裝=<size\=30>Recommendations</size>
 是否要將所有啟示卡卸下。=Unequip all cards?
 r:"^該武器(.*)正在穿戴，要繼續替換嗎？$"="This is being equipped by another character, want to equip it?"
+r:"^該啟示(.*)·(.*)正在穿戴，要繼續替換嗎？$"="This is being equipped by another character, want to equip it?"
 
 橙色=<size\=20>Orange</size>
 紫色=<size\=20>Purple</size>
@@ -64,14 +76,14 @@ r:"^該武器(.*)正在穿戴，要繼續替換嗎？$"="This is being equipped 
 
 暫無套裝篩選=No Set Filter
 暫無主屬性篩選=No Main Stats Filter
-暫無副屬性篩選=No Sub Stats Filter
+暫無副屬性篩選=No Substats Filter
 
 屬性篩選=Filter
 主屬性最多選擇以下任意兩項屬性進行篩選，選擇後同時生效=Filter up to 2 Main Stats
-副屬性最多選擇以下任意四項屬性進行篩選，選擇後同時生效=Filter up to 4 Sub Stats
+副屬性最多選擇以下任意四項屬性進行篩選，選擇後同時生效=Filter up to 4 Substats
 
-r:"^新增(\d+)條副屬性$"="<size\=10> </size>Add $1 new Sub Stats"
-r:"^隨機強化(\d+)條副屬性$"="<size\=10> </size>Upgrade $1 Sub Stats"
+r:"^新增(\d+)條副屬性$"="<size\=10> </size>Add $1 new Substats"
+r:"^隨機強化(\d+)條副屬性$"="<size\=10> </size>Upgrade $1 Substats"
 所選素材<color\=#FFC000>已強化過</color>、<color\=#FFC000>品質過高</color>\n是否確定使用所選素材進行升級？=<size\=30>Selected <color\=#FFC000>upgraded</color>, <color\=#FFC000>high quality</color> materials.\nUse the selected materials for upgrade?</size>
 該啟示卡已強化到滿級！=Revelation maxed!
 r:"^最多可以選擇(\d+)個材料哦～$"="Can select up to $1 materials."
@@ -169,24 +181,30 @@ r:"^解明怪盜裝備時生效：使用技能為敵人添加減益狀態，使�
 【創造】=[Creation]
 創造=Creation
 戰鬥中，自身精力回復達到100%/150%/200%，獲得暴擊效果提升<color\=#2899ff>15%/30%/45%</color>。=In battle, when user reached 100%/150%/200% SP Recovery, increase Crit DMG by <color\=#2899ff>15%/30%/45%</color>.
-r:"^戰鬥開始時，使速度最低的怪盜造成傷害提升<color\=#2899ff>(\d+%)</color>，無法重複觸發。$"="At the start of a battle, increase the DMG Dealt for ther lowest Speed Thief by <color\=#2899ff>$1</color>. This effect won't activate if stacked."
+r:"^戰鬥開始時，使速度最低的怪盜造成傷害提升<color\=#2899ff>(\d+%)</color>，無法重複觸發。$"="At the start of a battle, increase the DMG Dealt for the lowest SPD Thief by <color\=#2899ff>$1</color>. This effect won't activate if stacked."
 
 【自由】=[Freedom]
 自由=Freedom
 r:"^使用{{A}}技能時，自身獲得(\d+)層『榮耀』，最多(\d+)層，下一次追加效果消耗所有『榮耀』，每消耗(\d+)層『榮耀』使該次追加效果穿透提升<color\=#2899ff>(\d+%)</color>。$"="When using a persona skill, gain $1 stack of [Glory], up to $2 stacks, consume all stacks of [Glory] when doing a Follow Up, each consumed stack of [Glory] increase that Follow Up's Pierce by <color\=#2899ff>$4</color>."
 r:"^所有怪盜對處於負面狀態下的敵人造成傷害提升<color\=#2899ff>(\d+%)</color>，無法重複觸發。$"="Increase all allies' DMG Dealt to foes inflicted with debuff by <color\=#2899ff>$1</color>. This effect won't activate if stacked."
-r:"^造成萬能屬性傷害時，攻擊力提升<color\=#2899ff>(\d+%)</color>，暴擊率提升<color\=#2899ff>(\d+%)</color>。$"="Increase ATK by <color\=#2899ff>$1</color> and CRIT Rate by <color\=#2899ff>$2</color> when dealing Almighty damage."
+r:"^造成萬能屬性傷害時，攻擊力提升<color\=#2899ff>(\d+%)</color>，暴擊率提升<color\=#2899ff>(\d+%)</color>。$"="Increase ATK by <color\=#2899ff>$1</color> and Crit Rate by <color\=#2899ff>$2</color> when dealing Almighty damage."
 
 【希望】=[Hope]
 希望=Hope
 r:"^解明怪盜裝備時生效：使用技能為同伴添加增益狀態，使技能目標穿透提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合。$"="When equipped by Elucidator Thieves: When using a buff skill on allies, increase the target's Pierce by <color\=#2899ff>$1</color> for $2 turn."
-r:"^每造成1次技能傷害，自身火焰傷害提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合，可疊加(\d+)層；疊加至(\d+)層時，額外使自身暴擊率提升<color\=#2899ff>(\d+%)</color>。$"="When dealing 1 hit of skill damage, increase own Fire DMG by <color\=#2899ff>$1</color> for $2 turns, up to $3 stacks; When reaching $4 stacks, additionally increase own CRIT Rate by <color\=#2899ff>$5</color>."
+r:"^每造成1次技能傷害，自身火焰傷害提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合，可疊加(\d+)層；疊加至(\d+)層時，額外使自身暴擊率提升<color\=#2899ff>(\d+%)</color>。$"="When dealing 1 hit of skill damage, increase own Fire DMG by <color\=#2899ff>$1</color> for $2 turns, up to $3 stacks; When reaching $4 stacks, additionally increase own Crit Rate by <color\=#2899ff>$5</color>."
+r:"^所有怪盜對處於倒地狀態的敵人造成傷害提升<color\=#2899ff>(\d+%)</color>，無法重複觸發。$"="Increase all allies' DMG Dealt to Downed foes by <color\=#2899ff>$1</color>. This effect won't activate if stacked."
 
 【突破】=[Perseverance]
 突破=Perseverance
 r:"^每有一個敵人增加自身電擊傷害<color\=#2899ff>(\d+%)</color>，最多<color\=#2899ff>(\d+%)</color>。$"="Increase Elec DMG by <color\=#2899ff>$1</color> per foe, up to <color\=#2899ff>$2</color>."
 r:"^持續效果傷害提升<color\=#2899ff>(\d+%)</color>。$"="Increase Damage Over Time DMG by <color\=#2899ff>$1</color>."
 r:"^持續傷害效果提升<color\=#2899ff>(\d+%)</color>。$"="Increase Damage Over Time Effect by <color\=#2899ff>$1</color>."
+r:"^當前生命值越低，攻擊力越高，(\d+%)生命值時獲得最大攻擊力加成<color\=#2899ff>(\d+%)</color>。$"="Increase ATK based on missing HP, up to <color\=#2899ff>$2</color> ATK at $1 HP."
+
+【敏銳】=[Acuity]
+敏銳=Acuity
+r:"^{{A}}傷害提升<color\=#2899ff>(\d+%)</color>。$"="Increase {{A}} DMG by <color\=#2899ff>$1</color>."
 
 ----------
 All Arcana Cards
@@ -233,7 +251,7 @@ r:"^4套裝效果：任意怪盜使用電屬性技能後提升自身電擊屬性
 【美德】=<size\=20>  </size>[Virtue]
 美德=Virtue
 r:"^2套裝效果：祝福傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Bless DMG by <color\=#2899ff>10%</color>.</size>"
-r:"^4套裝效果：當前生命值百分比不低於(\d+%)時，祝福屬性的暴擊率提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase Bless skill CRIT Rate by <color\=#2899ff>$2</color> when user's HP% is not less than $1.</size>"
+r:"^4套裝效果：當前生命值百分比不低於(\d+%)時，祝福屬性的暴擊率提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase Bless skill Crit Rate by <color\=#2899ff>$2</color> when user's HP% is not less than $1.</size>"
 
 【和平】=<size\=20>  </size>[Peace]
 和平=Peace
@@ -277,7 +295,7 @@ r:"^4套裝效果：對處於負面狀態下的敵人咒屬性傷害提升<color
 
 【和解】=<size\=20>  </size>[Reconciliation]
 和解=Reconciliation
-r:"^2套裝效果：速度提升<color\=#2899ff>(\d+)</color>。$"="<size\=23>2 Set Effect: Increase Speed by <color\=#2899ff>$1</color>.</size>"
+r:"^2套裝效果：速度提升<color\=#2899ff>(\d+)</color>。$"="<size\=23>2 Set Effect: Increase SPD by <color\=#2899ff>$1</color>.</size>"
 r:"^4套裝效果：戰鬥中，自身最大生命值、攻擊力、防禦力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: In battle, increase user's Max HP, ATK, and DEF by <color\=#2899ff>$1</color>."
 
 【憂思】=<size\=20>  </size>[Worry]
@@ -291,7 +309,7 @@ r:"^4套裝效果：對處於負面狀態下的敵人造成火焰屬性傷害提
 
 【凱旋】=<size\=20>  </size>[Success]
 凱旋=Success
-r:"^2套裝效果：暴擊率提升<color\=#2899ff>(\d+\.\d+%)</color>。$"="<size\=23>2 Set Effect: Increase CRIT Rate by <color\=#2899ff>$1</color>.</size>"
+r:"^2套裝效果：暴擊率提升<color\=#2899ff>(\d+\.\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Crit Rate by <color\=#2899ff>$1</color>.</size>"
 
 【徒勞】=<size\=20>  </size>[Futility]
 徒勞=Futility
@@ -303,7 +321,7 @@ r:"^4套裝效果：造成{{A}}技能傷害時，若與自身上次造成{{A}}�
 
 【謹慎】=<size\=20>  </size>[Prudence]
 謹慎=Prudence
-r:"^2套裝效果：速度降低<color\=#2899ff>(\d+)</color>，攻擊力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Decrease Speed by <color\=#2899ff>$1</color>, increase ATK by <color\=#2899ff>$2</color>.</size>"
+r:"^2套裝效果：速度降低<color\=#2899ff>(\d+)</color>，攻擊力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Decrease SPD by <color\=#2899ff>$1</color>, increase ATK by <color\=#2899ff>$2</color>.</size>"
 r:"^4套裝效果：造成傷害提升(\d+%)。$"="<size\=23>4 Set Effect: Increase DMG Dealt by <color\=#2899ff>$1</color>.</size>"
 
 【執著】=<size\=20>  </size>[Fixation]
@@ -319,12 +337,24 @@ r:"^4套裝效果：造成傷害提升<color\=#2899ff>(\d+%)</color>，持續(\d
 改變=Transformation
 r:"^4套裝效果：攻擊力提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；造成暴擊後再次獲得相同效果。$"="<size\=23>4 Set Effect: Increase ATK by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again after landing a CRITICAL.</size>"
 
+【豐饒】=<size\=20>  </size>[Satiety]
+豐饒=Satiety
+r:"^4套裝效果：造成傷害提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合；釋放追加效果後再次獲得相同效果。$"="<size\=23>4 Set Effect: Increase DMG Dealt by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again after activating a Follow Up.</size>"
+
+【獲得】=<size\=20>  </size>[Gain]
+獲得=Gain
+獲得·日=Gain·Sun
+獲得·月=Gain·Moon
+獲得·星=Gain·Star
+獲得·辰=Gain·Sky
+r:"^4套裝效果：釋放技能使自身生命值降低時，造成傷害提升<color\=#2899ff>(\d+%)</color>，可疊加(\d+)層，持續(\d+)回合。$"="<size\=23>4 Set Effect: When losing HP from a skill, increase DMG Dealt by <color\=#2899ff>$1</color> for $3 turns. Stacks up to $2 times.</size>"
+
 ----------
 Inspect Details + Combat Pop-Ups
 ---------
 r:"^生命值、攻擊力、防禦力提升(\d+%)$"="Increase HP, ATK, DEF by $1"
 生命值、攻擊力、防禦力根據相同適應性屬性怪盜數量提升=Increase HP, ATK, DEF \nwith each ally with the same element
-r:"^當前生命值百分比不低於(\d+%)時，祝福屬性的暴擊率提升(\d+%)$"="Increase Bless skill CRIT Rate by $2 \nwhen user's HP% is not below $1"
+r:"^當前生命值百分比不低於(\d+%)時，祝福屬性的暴擊率提升(\d+%)$"="When current HP% is not below $1, \nincrease Bless skill Crit Rate by $2"
 怨恨=Resentment
 r:"^『怨恨』不少於(\d+)層，則物理傷害、效果命中提升(\d+%)$"="Increase Phys DMG and Ailment ACC by $2 when [Resentment] is not less than $1 stacks"
 r:"^造成念動傷害時，提升攻擊(\d+%)，如果敵方人數不少於3，則攻擊力額外提升(\d+%)$"="<size\=26>Increase ATK by $1 when dealing Psy damage,\nincrease ATK by $2 if there are 3 ≥ foes</size>"
@@ -355,6 +385,7 @@ sr:"^創造&(.*)$"="Creation & $1"
 sr:"^自由&(.*)$"="Freedom & $1"
 sr:"^希望&(.*)$"="Hope & $1"
 sr:"^突破&(.*)$"="Perseverance & $1"
+sr:"^敏銳&(.*)$"="Acuity & $1"
 
 觸發【主權】套裝效果的額外傷害=Triggered the additional damage from [Control]
 觸發【真諦】套裝效果的額外傷害=Triggered the additional damage from [Truth]
