@@ -161,7 +161,7 @@ sr:"^受到技能屬性：(.*)$"="Skill element: $1"
 {{A}}「祝福」={{A}} [Bless]
 {{A}}「詛咒」={{A}} [Curse]
 {{A}}「萬能」={{A}} [Almighty]
-sr:"^被擊敗後使怪盜(.*)傷害提升$"="Increase all Thieves' $1 DMG on death"
+sr:"^被擊敗後使怪盜(.*)傷害提升$"="After defeat, increase Thieves' $1 DMG"
 r:"^對所有敵人造成物理屬性傷害，有極低機率使敵人陷入<link\="s\|156"><u>狂怒</u></link>狀態，效果持續(\d+)回合，$"="Deal Phys damage to all foes, with a very low chance to inflict <link\="s|156"><u>Rage</u></link> on all foes for $1 turns."
 
 r:"^1、{{B}}每回合為所有單位添加<color\=#ff3b37>「諸神黃昏」</color>。\n「諸神黃昏」：造成傷害提升(\d+%)，每回合流失一定生命值，可疊加(\d+)層。\n2、進入虛弱階段後，{{B}}為全體怪盜添加(\d+)層<color\=#ff3b37>「諸神黃昏」</color>，並召喚(\d+)隻{{A}}，對{{A}}造成的傷害會計入積分。$"="<size\=24>1. {{B}} will inflict all units with <color\=#ff3b37>[Ragnarok]</color> each turn.\n[Ragnarok]: Increase DMG Dealt by $1, lose a certain amount of HP each turn. Stacks up to $2 times.\n2. When entering Weak, {{B}} will inflict all Thieves with $3 stacks of <color\=#ff3b37>[Ragnarok]</color>, then summon $4 {{A}}, dealing damage to {{A}} will count for score.</size>"
@@ -185,8 +185,8 @@ r:"^1、{{B}}每受到(\d+)次技能傷害或負面狀態，會獲得(\d+)層<co
 
 r:"^1、{{A}}與邪蛇始終處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n2、{{A}}與邪蛇使用技能後，會為所有技能目標添加(\d+)層<color\=#ff3b37>「毒素」</color>。\n「毒素」：無法被驅散，每層使怪盜回合結束時失去一定生命值，同時攻擊力提升(\d+%)，可疊加(\d+)層。$"="<size\=24>1. {{A}} and Yurlungur have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.\n2. After foes use skills, inflict all targets with $1 stack of <color\=#ff3b37>[Toxin]</color>.\n[Toxin]: Cannot be dispelled, each stack makes Thief lose a certain amount of HP, increase ATK by $2. Stacks up to $3 times.</size>"
 r:"^1、{{A}}與邪蛇始終處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n2、{{A}}與邪蛇使用技能後，會為所有技能目標添加(\d+)層<color\=#ff3b37>「毒素」</color>。\n「毒素」：無法被驅散，每層使怪盜回合結束時失去一定生命值，同時攻擊力提升(\d+%)，可疊加(\d+)層。\n3、進入虛弱階段後，對邪蛇造成的傷害會計入積分。$"="<size\=24>1. {{A}} and Yurlungur have <color\=#ff3b37>[Lifelink]</color>.\nLifelink: The damage received by a unit with [Lifelink] will be shared by all units with [Lifelink] in proportion to their current HP%.\n2. After foes use skills, inflict all targets with $1 stack of <color\=#ff3b37>[Toxin]</color>.\n[Toxin]: Cannot be dispelled, each stack makes Thief lose a certain amount of HP, increase ATK by $2. Stacks up to $3 times.\n3. After entering Weak, dealing damage to Yurlungur will count for score.</size>"
-r:"^{{A}}與邪蛇使用技能後，會為所有技能目標添加(\d+)層<color\=#ff3b37>「毒素」</color>。\n「毒素」：無法被驅散，每層使怪盜回合結束時失去一定生命值，同時攻擊力提升(\d+%)，可疊加(\d+)層。$"="After {{A}} and Yurlungur use skills, inflict all skill targets with $1 <color\=#ff3b37>[Toxin]</color> stack. \n[Toxin]: Cannot be dispelled, Toxin: Cannot be dispelled, each stack makes Thief lose a certain amount of HP, increase ATK by $2. Stacks up to $3 times."
-毒素=Tonix
+r:"^{{A}}與邪蛇使用技能後，會為所有技能目標添加(\d+)層<color\=#ff3b37>「毒素」</color>。\n「毒素」：無法被驅散，每層使怪盜回合結束時失去一定生命值，同時攻擊力提升(\d+%)，可疊加(\d+)層。$"="After {{A}} and Yurlungur use skills, inflict all skill targets with $1 <color\=#ff3b37>[Toxin]</color> stack. \n[Toxin]: Cannot be dispelled, each stack makes Thief lose a certain amount of HP, increase ATK by $2. Stacks up to $3 times."
+毒素=Toxin
 r:"^毒<color\=#000000>素</color>$"="T<color\=#000000>o</color>xin"
 虛弱的邪蛇=Weak Yurlungur
 火焰之邪蛇=Yurlungur
