@@ -695,8 +695,8 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福�
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害。$"="Deal $1 ATK Curse damage to <color\=#FFFF00>all</color> foe."
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的萬能屬性傷害。$"="Deal $1 ATK Almighty damage to <color\=#FFFF00>all</color> foes."
 
-r:"^使<color\=#FFFF00>所有</color>同伴獲得(\d+\.\d+%)攻擊力\+(\d+)的護盾，效果持續(\d+)回合。$"="Grant <color\=#FFFF00>all</color> allies $1 + $2 ATK as Shield for $3 turns."
-r:"^使<color\=#FFFF00>所有</color>同伴造成的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Gives <color\=#FFFF00>all</color> allies $1 DMG Dealt for $2 turns."
+r:"^使<color\=#FFFF00>所有</color>同伴獲得(\d+\.\d+%)攻擊力\+(\d+)的護盾，效果持續(\d+)回合。$"="Grant <color\=#FFFF00>all</color> allies $1 + $2 ATK Shield for $3 turns."
+r:"^使<color\=#FFFF00>所有</color>同伴造成的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Increase <color\=#FFFF00>all</color> allies $1 DMG Dealt for $2 turns."
 
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的物理屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deal $1 ATK Phys damage to <color\=#FFFF00>all</color> foes and increase their DMG Taken by $2 for $3 turns."
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的射擊屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deal $1 ATK Gun damage to <color\=#FFFF00>all</color> foes and increase their DMG Taken by $2 for $3 turns."
@@ -1091,6 +1091,8 @@ HIGHLIGHT傷害提升=Increase HIGHLIGHT DMG
 火焰傷害提高=Increase Fire DMG
 凍結傷害提升=Increase Ice DMG
 凍結傷害提高=Increase Ice DMG
+冰凍傷害提升=Increase Ice DMG
+冰凍傷害提高=Increase Ice DMG
 火焰、冰凍傷害提升=Increase Fire, Ice DMG
 電擊傷害提升=Increase Elec DMG
 電擊傷害提高=Increase Elec DMG
@@ -1259,6 +1261,7 @@ r:"^免傷率提升(\d+(.\d+)?(%)?)$"="Increase DMG RES by $1"
 r:"^{{A}}傷害提升(\d+(.\d+)?(%)?)$"="Increase {{A}} DMG by $1"
 r:"^{{A}}傷害提高(\d+(.\d+)?(%)?)$"="Increase {{A}} DMG by $1"
 r:"^普通攻擊、槍械攻擊傷害提升(\d+(.\d+)?(%)?)$"="<size\=26>Increase Melee Attack/Gun Attack DMG by $1</size>"
+r:"^追加效果造成的傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up DMG Dealt by $1"
 r:"^追加效果暴擊效果提升(\d+%)、攻擊力提升(\d+%)$"="Increase Follow Up Crit DMG by $1 and ATK by $2"
 r:"^追擊效果傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up DMG by $1"
 r:"^追加效果的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up Final DMG by $1"
