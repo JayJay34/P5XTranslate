@@ -2714,10 +2714,12 @@ r:"^真<color\=#000000>龍</color>之力$"="T<color\=#000000>r</color>ue Dragon 
 r:"^昇<color\=#000000>龍</color>的祈禱$"="D<color\=#000000>r</color>agon Prayer"
 r:"^升<color\=#000000>龍</color>的祈禱$"="D<color\=#000000>r</color>agon Prayer"
 
-r:"^1、進入戰鬥時，{{A}}會召喚(\d+)個隨從與之並肩作戰，{{A}}與所有隨從處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n2、{{A}}進入戰鬥時及偶數回合開始時，會給所有友方添加(\d+)層「死神庇護」，使其受到的最終傷害減免(\d+%)。\n3、受到守護的單位受到弱點傷害後，會被驅散(\d+)層「死神庇護」。$"="<size\=22>1. At the start of battle, {{A}} will summon $1 minions, {{A}} and all minions have <color\=#ff3b37>[Lifelink]</color>.\n[Lifelink]: Distributes all damage received between all Shadows who shares this condition, based on the percentage of their current HP.\n2. At the start of battle and at the start of odd turns, {{A}} will give all allies $2 [Death's Protection] stack. Each stack decreases Final DMG Taken by $3.\n3. After a protected ally takes Weak damage, dispel $4 [Death's Protection] stack.</size>"
+r:"^1、進入戰鬥時，{{A}}會召喚(\d+)個隨從與之並肩作戰，{{A}}與所有隨從處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n2、{{A}}進入戰鬥時及偶數回合開始時，會給所有友方添加(\d+)層「死神庇護」，使其受到的最終傷害減免(\d+%)。\n3、受到守護的單位受到弱點傷害後，會被驅散(\d+)層「死神庇護」。$"="1. At the start of battle, {{A}} will summon $1 minions, {{A}} and all minions have <color\=#ff3b37>[Lifelink]</color>.\n[Lifelink]: Distributes all damage received between all Shadows who shares this condition, based on the percentage of their current HP.\n2. At the start of battle and at the start of odd turns, {{A}} will give all allies $2 [Death's Protection] stack. Each stack decreases Final DMG Taken by $3.\n3. After a protected ally takes Weak damage, dispel $4 [Death's Protection] stack."
 死神庇護=Death's Protection
 死神庇佑=Death's Protection
 r:"^死<color\=#000000>神</color>庇護$"="D<color\=#000000>e</color>ath's Protection"
+
+r:"^1、進入戰鬥時，{{A}}會召喚(\d+)個隨從與之並肩作戰，{{A}}與所有隨從處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n2、{{A}}及隨從受到<color\=#ff3b37>非持續傷害</color>後，會獲得相應屬性的「{{A}}的守護」，將該屬性的適應性變為耐，並大幅提升自身防禦力，持續(\d+)回合。$"="1. At the start of battle, {{A}} will summon $1 minions, {{A}} and all minions have <color\=#ff3b37>[Lifelink]</color>.\n[Lifelink]: Distributes all damage received between all Shadows who shares this condition, based on the percentage of their current HP.\n2. After {{A}} and their minions take <color\=#ff3b37>non Damage Over Time damage</color>, gain that attribute's [{{A}}'s Protection], turning that affinity to Resist and heavily increasing DEF. Lasts for $2 turns."
 
 ----------
 SEASONAL EFFECTS
@@ -2842,3 +2844,8 @@ r:"^熔<color\=#000000>岩</color>蒸氣$"="L<color\=#000000>a</color>va Stream"
 sr:"^使用槍械技能或追加效果造成傷害後，為目標添加(\d+)層『(.*)』。『(.*)』：受到的最終傷害提升(\d+%)，持續(\d+)回合，最多可疊加(\d+)層。$"="<size\=23>When using a Gun skill or dealing damage with a Follow Up, inflict the target with $1 [$2] stack. [$3]: Increase Final DMG Taken by $4 for $5 turns. Stacks up to $6 times.</size>"
 震頻激蕩=Resonant Surge
 r:"^震<color\=#000000>頻</color>激蕩$"="R<color\=#000000>e</color>sonant Surge"
+
+蟲潮來襲=Insect Swarm
+sr:"^每造成一種屬性的傷害，自身獲得獲得(\d+)層『(.*)』。『(.*)』：每層提供(\d+%)的最終傷害加成，持續(\d+)回合，最多可疊加(\d+)層。$"="When dealing 1 type of attribute damage, user gains $1 [$2] stack. [$3]: Increase Final DMG by $4 for $5 turn. Stacks up to $6 times."
+思維巢穴=Thought Lair
+r:"^思<color\=#000000>維</color>巢穴$"="T<color\=#000000>h</color>ought Lair"
