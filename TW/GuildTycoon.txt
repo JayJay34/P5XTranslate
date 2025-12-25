@@ -125,10 +125,13 @@ r:"^首領的適應性發生變化，所有怪盜造成<color\=#FFFC40>弱點傷
 Bosses
 ----------
 血量鎖定=HP Lock
-血量鎖定切換=HP Lock Switch
-<color\=#FF0000>血量鎖定</color>=<color\=#FF0000>HP Lock</color>
-r:"^使用後可令首領進入<color\=#FF0000>「血量鎖定」</color>狀態：當前生命值不會低於最大生命值的(\d+%)；\n再次使用解除<color\=#FF0000>「血量鎖定」</color>狀態，可重複使用。$"="Use to make the boss enter <color\=#FF0000>[HP Lock]</color>: Current HP cannot drop below $1 Max HP; Use again to remove <color\=#FF0000>[HP Lock]</color>."
 生命鎖定=HP Lock
+血量鎖定切換=HP Lock Switch
+生命鎖定切換=HP Lock Switch
+<color\=#FF0000>血量鎖定</color>=<color\=#FF0000>HP Lock</color>
+<color\=#FF0000>生命鎖定</color>=<color\=#FF0000>HP Lock</color>
+r:"^使用後可令首領進入<color\=#FF0000>「血量鎖定」</color>狀態：當前生命值不會低於最大生命值的(\d+%)；\n再次使用解除<color\=#FF0000>「血量鎖定」</color>狀態，可重複使用。$"="Use to make the boss enter <color\=#FF0000>[HP Lock]</color>: Current HP cannot drop below $1 Max HP; Use again to remove <color\=#FF0000>[HP Lock]</color>."
+r:"^使用後可令首領進入<color\=#FF0000>「生命鎖定」</color>狀態：當前生命值不會低於最大生命值的(\d+%)；\n再次使用解除<color\=#FF0000>「生命鎖定」</color>狀態，可重複使用。$"="Use to make the boss enter <color\=#FF0000>[HP Lock]</color>: Current HP cannot drop below $1 Max HP; Use again to remove <color\=#FF0000>[HP Lock]</color>."
 r:"^生命值始終不會低於最大生命值的(\d+%)$"="HP cannot drop below $1 Max HP"
 r:"^生<color\=#000000>命</color>鎖定$"="H<color\=#000000>P</color> Lock"
 r:"^生<color\=#000000>命</color>鎖定解除$"="E<color\=#000000>x</color>ited HP Lock"
@@ -228,7 +231,7 @@ Modifiers
 隨著編入反抗/支配職業怪盜數量的增加，積分獲取效率也會相應增加。=<size\=26>Increase score gain for every Assassin/Sweeper Thief in team.</size>
 
 穩定領域=Stable Domain
-防暴領域=Anti-Crit Domain
+防暴領域=No-Critical Zone
 所有怪盜無法暴擊，{{A}}技能/追加效果造成的<color\=#FFFC40>最終傷害</color>提高，提高值\=暴擊率*(暴擊效果-100%)。（最多計入100%暴擊率）=Allies will not deal critical hits, increase {{A}} skill/Follow Up <color\=#FFFC40>Final DMG</color> by Crit Rate x (Crit DMG - 100%)\n(Up to 100% Crit Rate)
 
 狂暴領域=Frenzy Domain
@@ -259,6 +262,10 @@ r:"^所有怪盜<color\=#ff0036>詛咒</color>傷害提高(\d+(.\d+)?(%)?)$"="<s
 萬能領域=Almighty Domain
 r:"^所有怪盜造成<color\=#FFFC40>萬能傷害</color>時，傷害提升(\d+%)，暴擊效果提升(\d+%)$"="Increase all Thieves' damage by $1 and Crit DMG by $2 when dealing <color\=#FFFC40>Almighty damage</color>"
 r:"^造成萬能傷害時，傷害提升(\d+%)，暴擊效果提升(\d+%)$"="<size\=25>Increase damage by $1 and Crit DMG by $2 when dealing Almighty damage</size>"
+
+萬能領域II=Almighty Domain II
+r:"^所有角色造成<color\=#FFFC40>萬能傷害</color>時，使所有同伴攻擊力提升(\d+%)，造成傷害提升(\d+%)，持續(\d+)回合$"="When dealing <color\=#FFFC40>Almighty damage</color>, increase party's ATK by $1 and DMG Dealt by $2 for $3 turns."
+r:"^攻<color\=#000000>擊</color>、傷害提升$"="A<color\=#000000>T</color>K, DMG Dealt Up"
 
 HL特化=HL Buff
 r:"^所有怪盜<color\=#FFFC40>HIGHLIGHT</color>傷害提升(\d+(.\d+)?(%)?)$"="Increase <color\=#FFFC40>HIGHLIGHT</color> DMG by $1"
