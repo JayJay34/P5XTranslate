@@ -1114,8 +1114,13 @@ r:"^場上有敵人處於元素異常狀態時，效果命中提升<color\=#2899
 ----------
 2 3 STAR WEAPONS
 ----------
-r:"^攻擊力提升<color\=#2899FF>(.*)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>."
-r:"^防禦力提升<color\=#2899FF>(.*)</color>。$"="Increase DEF by <color\=#2899FF>$1</color>."
-r:"^最大生命值提升<color\=#2899FF>(.*)</color>。$"="Increase Max HP by <color\=#2899FF>$1</color>."
-r:"^生命值提升<color\=#2899FF>(.*)</color>。$"="Increase Max HP by <color\=#2899FF>$1</color>."
-r:"^效果命中提升<color\=#2899FF>(.*)</color>。$"="Increase Ailment ACC by <color\=#2899FF>$1</color>."
+r:"^攻擊力提升<color\=#2899FF>(\d+\.\d+%)<color\=#FFD145>→(\d+\.\d+%)</color></color>。$"="Increase ATK by <color\=#2899FF>$1<color\=#FFD145>→$2</color></color>."
+r:"^防禦力提升<color\=#2899FF>(\d+\.\d+%)<color\=#FFD145>→(\d+\.\d+%)</color></color>。$"="Increase DEF by <color\=#2899FF>$1<color\=#FFD145>→$2</color></color>."
+r:"^最大生命值提升<color\=#2899FF>(\d+\.\d+%)<color\=#FFD145>→(\d+\.\d+%)</color></color>。$"="Increase Max HP by <color\=#2899FF>$1<color\=#FFD145>→$2</color></color>."
+r:"^生命值提升<color\=#2899FF>(\d+\.\d+%)<color\=#FFD145>→(\d+\.\d+%)</color></color>。$"="Increase Max HP by <color\=#2899FF>$1<color\=#FFD145>→$2</color></color>."
+r:"^效果命中提升<color\=#2899FF>(\d+\.\d+%)<color\=#FFD145>→(\d+\.\d+%)</color></color>。$"="Increase Ailment ACC by <color\=#2899FF>$1<color\=#FFD145>→$2</color></color>."
+r:"^攻擊力提升<color\=#2899FF>(\d+(.\d+)?(%)?)</color>。$"="Increase ATK by <color\=#2899FF>$1</color>."
+r:"^防禦力提升<color\=#2899FF>(\d+(.\d+)?(%)?)</color>。$"="Increase DEF by <color\=#2899FF>$1</color>."
+r:"^最大生命值提升<color\=#2899FF>(\d+(.\d+)?(%)?)</color>。$"="Increase Max HP by <color\=#2899FF>$1</color>."
+r:"^生命值提升<color\=#2899FF>(\d+(.\d+)?(%)?)</color>。$"="Increase Max HP by <color\=#2899FF>$1</color>."
+r:"^效果命中提升<color\=#2899FF>(\d+(.\d+)?(%)?)</color>。$"="Increase Ailment ACC by <color\=#2899FF>$1</color>."
