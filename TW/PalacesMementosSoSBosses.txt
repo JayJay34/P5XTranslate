@@ -2566,6 +2566,43 @@ r:"^對1名敵人造成火焰屬性傷害，有一定基礎機率使敵人陷入
 r:"^使所有同伴的攻擊力提升，效果持續(\d+)回合。{{A}}死亡後，增益效果會失效。$"="Increase party's ATK for $1 turn. After {{A}} is defeat, lose this buff."
 r:"^防禦力降低(\d+%)，可優先被驅散$"="Decrease DEF by $1; \nWill dispel this first"
 
+1、{{B}}可以透過自身的技能「至高魔彈」、「因果的流轉」及{{C}}的技能「烏瑪的啟迪」獲得「慧識」。「慧識」可以強化「{{A}}之舞」、「{{B}}之躍」的技能效果。\n2、{{B}}每受到一種屬性的傷害，損失1層『慧識』（每種屬性限1次，自身回合開始時，次數重置）。\n3、{{C}}每隔一定回合會釋放「能量屏障」，使所有友方全適應性變為無，持續1回合，受到非持續性傷害後移除。\n4、{{B}}、{{C}}初次生命值降至1點時，會陷入虛弱狀態，期間無法行動且無法被選中。{{B}}及{{C}}同時處於虛弱狀態時，會進入下一階段。\n5、{{C}}死亡時，{{B}}會立即釋放「{{A}}之舞」造成群體傷害。\n6、{{B}}死亡時，{{C}}會變身{{D}}進行復仇。=1. {{B}} can gain [Wisdom] from skill [Riot Gun], [Karma Reversal] and {{C}}'s skill [Ummah's Enlightenment]. [Wisdom] can upgrade [Dance of Destruction] and [{{B}}'s Leap]'s skill effects.\n2. When {{B}} takes 1 type of attribute damage, it loses 1 [Wisdom] stack (limited to 1 per attribute, reset at the start of {{B}}'s turn). \n3. {{C}} will use [Energy Barrier] after every certain turns, changing all allies' affinities to Null for 1 turn. Clear this effect after taking non non Damage Over Time damage. \n4. When {{B}} and {{C}} first reach 1 HP, they will enter Weaken, gain Untargetable and cannot act. When {{B}} and {{C}} are both in Weaken, enter next phase.\n5. When {{C}} is defeated, {{B}} will immediately use [Dance of Destruction], dealing damage to all Thieves.\n6. When {{B}} is defeated, {{C}} will transform into {{D}} for revenge.
+聖佑禮贊=Holy Praise
+r:"^{{A}}釋放『梅迪亞拉翰』時額外提升目標的攻擊力和防禦力，持續(\d+)回合。$"="When {{A}} uses [Mediarahan], additionally increase target's ATK and DEF for $1 turns."
+超導護壁=Superconducting Shield
+{{A}}添加『能量屏障』的頻率提升；擁有『能量屏障』的單位受到的最終傷害降低。={{A}} will apply [Energy Barrier] more frequently; characters with [Energy Barrier] take decreased Final DMG.
+靈光永續=Eternal Light
+{{A}}每個回合都會釋放『烏瑪的啟迪』。={{A}} will use [Ummah's Enlightenment] every turn.
+終焉狂舞=Dance of Demise
+{{B}}釋放『{{A}}之舞』時，每層『慧識』提供的技能傷害加成大幅提升；釋放{{A}}之舞後自身獲得1層『慧識』。=When {{B}} uses [Dance of Destruction], heavily increases the skill damage bonus from each [Wisdom] stack; After using [Dance of Destruction], {{B}} gains 1 [Wisdom] stack.
+天罰之印=Seal of Punishment
+大幅提升{{A}}技能『{{A}}之躍』造成的治療效果降低、防禦降低效果。=Heavily increase the decreased Healing Effect and decreased DEF effect from [{{A}}'s Leap].
+
+{{A}}之躍={{A}}'s Leap
+強化技能『{{A}}之舞』、『{{B}}之躍』=Upgrade [Dance of Destruction] and \n[{{B}}'s Leap]
+r:"^對所有敵人造成電擊屬性傷害，有一定基礎機率使敵人陷入觸電狀態，效果持續(\d+)回合。$"="Deal Elec damage to all foes, with a chance to inflict Shock for $1 turns."
+r:"^對所有敵人造成射擊屬性傷害，暴擊率提升(\d+%)，命中率降低(\d+%)。若成功擊倒敵人，獲得(\d+)層『慧識』。$"="Deal Gun damage to all foes, increase Crit Rate by $1 and decrease ACC by $2. When knocking down a foe, gain $3 [Wisdom] stack."
+消耗所有『慧識』對所有敵人造成念動屬性傷害，消耗『慧識』越多，技能傷害越高。=Spend all [Wisdom] stack to deal Psy damage to all foes. Increase skill damage based on the number of [Wisdom] stacks spent.
+r:"^被動技能，自身回合開始時獲得(\d+)層『慧識』,若{{A}}死亡，額外獲得(\d+)層『慧識』。每受到一種屬性的傷害，損失(\d+)層『慧識』（每種屬性限1次，自身回合開始時，次數重置）。$"="Passive: At the start of turn, gain $1 [Wisdom] stack. If {{A}} is defeated, gain $2 bonus [Wisdom] stack. When Shiva takes 1 type of attribute damage, it loses $3 [Wisdom] stack (limited to 1 per attribute, reset at the start of Shiva's turn)."
+r:"^對所有敵人造成萬能傷害，使其受到的治療效果降低，並使其防禦降低（每有1層『慧識』，額外使其防禦降低一定百分比），持續(\d+)回合，效果無法被驅散。$"="Deal Almighty damage to all foes. Decrease their Healing Received and DEF (for every [Wisdom] stack, decrease DEF by a certain percentage more). Lasts for $1 turns and cannot be dispelled."
+
+能量屏障=Energy Barrier
+r:"^能<color\=#000000>量</color>屏障$"="E<color\=#000000>n</color>ergy Barrier"
+r:"^為所有友方添加(\d+)層『能量屏障』，使其全適應性變為無，持續(\d+)回合，受到非持續性傷害後移除。$"="Grant all allies $1 [Energy Barrier] stack, and change all affinities to Null for $2 turn. Clear this after taking non Damage Over Time damage."
+全適應性變為無=Changed all affinities to Null
+烏瑪的啟迪=Ummah's Enlightenment
+r:"^為{{A}}添加(\d+)層『慧識』，自身血量低於(\d+%)時，額外添加(\d+)層『慧識』。$"="Grant {{A}} $1 [Wisdom] stack. If user's HP is below $2, grant $3 bonus [Wisdom] stack."
+r:"^聖<color\=#000000>佑</color>禮贊$"="H<color\=#000000>o</color>ly Praise"
+r:"^超<color\=#000000>導</color>護壁$"="S<color\=#000000>u</color>perconducting Shield"
+
+sr:"^<color\=#FF0000>(.*)</color>受到治療效果降低了……$"="<color\=#FF0000>$1</color> Healing Received Down!"
+sr:"^<color\=#FF0000>(.*)</color>獲得了「(.*)」，適應性發生了變化……$"="<color\=#FF0000>$1</color> gained [$2], changed affinities!"
+sr:"^<color\=#FF0000>(.*)</color>失去了「(.*)」，全適應性恢復了……$"="<color\=#FF0000>$1</color> lost [$2], reverted all affinities!"
+
+挑戰資訊=Challenge Info
+扭曲等級：=Distortion:
+通關詳情=Clear Details
+
 ----------
 Sea of Souls Trials (SoS)
 ----------
