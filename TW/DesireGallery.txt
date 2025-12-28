@@ -1,0 +1,29 @@
+慾望畫廊=Desire Gallery
+波次=Wave
+下期屬性=Next Season
+
+r:"^怪盜最終傷害加成：\n<size\=40><sprite\=(\d+)></size>\+(\d+%)  <size\=(\d+)><sprite\=(\d+)></size>\+(\d+%)$"="Thieves' Final DMG:\n<size\=40><sprite\=$1></size> +$2  <size\=$3><sprite\=$4></size> +$5"
+r:"^怪盜最終傷害加成：\n<size\=40><sprite\=(\d+)><sprite\=(\d+)></size>\+(\d+%) <size\=40><sprite\=(\d+)></size>\+(\d+%)$"="Thieves' Final DMG:\n<size\=40><sprite\=$1><sprite\=$2></size> +$3 <size\=40><sprite\=$4></size> +$5"
+r:"^已通過怪物波次：<sprite\=(\d+) tint\=1>\n通過第<sprite\=(\d+) tint\=1>波後可存檔$"="Waves cleared: <sprite\=$1 tint\=1>\nClear Wave <sprite\=$2 tint\=1> to save"
+r:"^剩餘挑戰次數：(\d+)$"="Attempts Left: $1"
+挑戰次數已用盡，無法進行挑戰。=Used all challenge attempts, unable to challenge.
+
+r:"^通過念電咒之畫作\（<color\=#FF0000>(\d+)</color>/(\d+)\）波$"="Clear Painting of Psy Elec Curse Wave <color\=#FF0000>$1</color>/$2"
+r:"^通過物冰之畫作\（<color\=#FF0000>(\d+)</color>/(\d+)\）波$"="Clear Painting of Phys Ice Wave <color\=#FF0000>$1</color>/$2"
+
+當前暫無存檔波次。=No saved Wave.
+
+r:"^累計通過(\d+)波次\((\d+)/(\d+)\)$"="Clear $1 Waves ($2/$3)"
+r:"^累計參與(\d+)次映射\((\d+)/(\d+)\)$"="Perform $1 Mappings ($2/$3)"
+
+陰影的攻擊力大幅度提升了=Heavily increase Shadows' ATK
+sr:"^<color\=#FF0000>(.*)</color>的傷害大幅度提升了……$"="<color\=#FF0000>$1</color> heavy Damage Up!"
+
+元素脈衝=Elemental Pulse
+r:"^達到(\d+)層後將大幅提升傷害$"="Heavily increase damage after reaching $1 stacks"
+r:"^最終傷害提升(\d+%)，「元素脈衝」的傷害提升$"="Increase Final DMG by $1; \nIncrease [Elemental Pulse] damage"
+
+本次作戰為演習作戰，得分不計入排名=This is a practice battle. \nScores will not affect rankings.
+r:"^1、慾望畫廊戰鬥中共有<color\=#ff3b37>(\d+)</color>波陰影，每次擊敗陰影後會有新的陰影出現。\n2、慾望畫廊的戰鬥中每當第一個陰影的回合開始時，會發動1次<color\=#ff3b37>「元素脈衝」</color>，對我方全體造成(\d+%)最大生命值的傷害。在第(\d+)波敵人之後，傷害提升至(\d+%)最大生命值。\n3、慾望畫廊的戰鬥中陰影每個回合結束時會累計(\d+)層<color\=#ff3b37>「狂暴」</color>，<color\=#ff3b37>「狂暴」</color>達到對應層數時陰影的傷害會大幅提升，並且「元素脈衝」的傷害也會提升。\n第(\d+)-(\d+)波：(\d+)層「狂暴」後大幅提升傷害。\n第(\d+)-(\d+)波：(\d+)層「狂暴」後大幅提升傷害。\n第(\d+)波：(\d+)層「狂暴」後大幅提升傷害。\n4、慾望畫廊的陰影處於生命連結狀態。第(\d+)波和第(\d+)波開始時，為所有我方角色恢復(\d+)點精力值。$"="1. Desire Gallery has a total of <color\=#ff3b37>$1</color> Waves, new Shadows will appear every time all Shadows are defeated. \n2. In Desire Gallery, activate <color\=#ff3b37>[Elemental Pulse]</color> once at the start of the first Shadow's turn, dealing $2 Max HP damage to all Thieves. After Wave $3, increase damage to $4 Max HP.\n3. In Desire Gallery, all Shadows will gain $5 <color\=#ff3b37>[Frenzy]</color> stack，heavily increase Shadows' damage when <color\=#ff3b37>[Frenzy]</color> reaches a certain stack, also increase [Elemental Pulse] damage.\nWave $6-$7: Increase damage after $8 [Frenzy] stacks.\nWave $9-$10: Increase damage after $11 [Frenzy] stacks.\nWave $12: Increase damage after $13 [Frenzy] stacks.\n4. All Shadows in Desire Gallery has Lifelink. At the start of Wave $14 and Wave $15, restore $16 SP to all Thieves."
+sr:"^戰鬥開始時，(.*)、(.*)屬性的角色和WONDER可以獲得最終傷害加成。每有一個(.*)屬性角色，最終傷害提升(.*)，每有一個(.*)屬性角色，最終傷害提升(.*)。$"="At the start of battle, $1, $2 characters and Wonder will gain Final DMG. For each $3 character, increase Final DMG by $4; for each $5 character, increase Final DMG by $6."
+sr:"^戰鬥開始時，(.*)、(.*)、(.*)屬性的角色和WONDER可以獲得最終傷害加成。每有一個(.*)、(.*)屬性角色，最終傷害提升(.*)，每有一個(.*)屬性角色，最終傷害提升(.*)。$"="At the start of battle, $1, $2, $3 characters and Wonder will gain Final DMG. For each $4 and $5 character, increase Final DMG by $6; for each $7 character, increase Final DMG by $8."
