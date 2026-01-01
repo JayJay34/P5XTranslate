@@ -505,6 +505,7 @@ r:"^這個設備……寫的是(\d+)號，電動機$"="This device... It's sayin
 ----------
 PALACE 5
 ----------
+認知·蟻穴=Cognitive Anthill
 蟻穴·入口=Anthill Entrance
 蟻穴入口=Anthill Entrance
 密林=Forest
@@ -530,6 +531,15 @@ PALACE 5
 私人領域下層=<size\=19>Lower Private Area</size>
 私人領域中層=<size\=19>Middle Private Area</size>
 私人領域上層=<size\=19>Upper Private Area</size>
+塔頂=Tower Top
+蟻穴·塔頂=Anthill Tower Top
+塔頂樞紐=<size\=24>Tower Top Hub</size>
+照片長廊=Photo Gallery
+享樂室=Fun Room
+被遺棄的空間=Abandoned Area
+荒廢的洞穴=<size\=24>Desolate Cave</size>
+廢稿檔案室=<size\=24>Draft Archives</size>
+廢棄的居所=<size\=19>Derelict Residence</size>
 
 尋找覲見室=Find the Audience Chamber
 尋找螞蟻的去向=Find where the ant goes
@@ -697,6 +707,16 @@ r:"^值<color\=#ff0000ff>班</color>的男公關$"="O<color\=#ff0000ff>n</color>
 傳送畫布=Teleportation Canvas
 恩賜畫布·中=Graceful Canvas: M
 恩賜畫布·大=Graceful Canvas: L
+
+見習員工證=Trainee Staff ID
+普通員工證=Ordinary Staff ID
+資深員工證=Senior Staff ID
+順序連入:<color\=#0c88e0>藍</color><color\=#c51e03>紅</color><color\=#0c88e0>藍</color><color\=#19924f>綠</color><color\=#19924f>綠</color><color\=#c51e03>紅</color>。=<size\=20>Connect in the order of: <color\=#0c88e0>Blue</color> <color\=#c51e03>red</color> <color\=#0c88e0>blue</color> <color\=#19924f>green</color> <color\=#19924f>green</color> <color\=#c51e03>red</color>.</size>
+順序連入:<color\=#19924f>綠</color><color\=#0c88e0>藍</color><color\=#0c88e0>藍</color><color\=#c51e03>紅</color><color\=#c51e03>紅</color><color\=#19924f>綠</color>。=<size\=20>Connect in the order of: <color\=#19924f>Green</color> <color\=#0c88e0>blue</color> <color\=#0c88e0>blue</color> <color\=#c51e03>red</color> <color\=#c51e03>red</color> <color\=#19924f>green</color>.</size>
+順序連入:<color\=#c51e03>紅</color><color\=#19924f>綠</color><color\=#19924f>綠</color><color\=#0c88e0>藍</color><color\=#c51e03>紅</color><color\=#0c88e0>藍</color>。=<size\=20>Connect in the order of: <color\=#c51e03>Red</color> <color\=#19924f>green</color> <color\=#19924f>green</color> <color\=#0c88e0>blue</color> <color\=#c51e03>red</color> <color\=#0c88e0>blue</color>.</size>
+順序連入:<color\=#0c88e0>藍</color><color\=#19924f>綠</color><color\=#c51e03>紅</color><color\=#19924f>綠</color><color\=#c51e03>紅</color><color\=#0c88e0>藍</color>。=<size\=20>Connect in the order of: <color\=#0c88e0>Blue</color> <color\=#19924f>green</color> <color\=#c51e03>red</color> <color\=#19924f>green</color> <color\=#c51e03>red</color> <color\=#0c88e0>blue</color>.</size>
+
+畫布碎片=Canvas Fragment
 
 ----------
 PALACE 1 BOSS
@@ -1414,13 +1434,37 @@ sr:"^<color\=#FF0000>(.*)</color>從糖縛狀態恢復了。$"="<color\=#FF0000>
 ----------
 PALACE 5 BOSS 4
 ----------
+獻上來吧！=Offering!
+被動技能；受到傷害時，若場上存在其他友方單位，對其他友方單位造成傷害，回復自身生命。(每個回合限1次）=Passive skill: When taking damage, if there are other allies on the field, deal damage to other allies and restore user's HP. (once per turn)
+自爆命令=Self-Destruct Order
+r:"^為癡愚的兵蟻下達『自爆命令』。接到『自爆命令』的單位(\d+)回合後自爆，對所有敵人造成念動屬性傷害，並為主目標添加念動屬性弱點，持續(\d+)回合。$"="Grant Foolish Soldier Ant [Self-Destruct Order]. Characters with [Self-Destruct Order] will self-destruct after $1 turns, dealing Psy damage to all foes. Also inflict Psy Weakness on the main target for $2 turns."
+r:"^自<color\=#000000>爆</color>命令$"="S<color\=#000000>e</color>lf-Destruct Order"
+接受懲罰吧！=Accept Your Punishment!
+{{A}}吧！={{A}}!
+對1名敵人造成念動屬性傷害，並為其添加『{{A}}符文』。擁有『{{A}}符文』的單位受到2次技能傷害後會引爆『{{A}}符文』，對所有同伴造成念動屬性傷害，並使其攻擊力降低。=Deal Psy damage to 1 foe. Inflict target with [Ruin Rune]. Characters with [{{A}} Rune] will detonate [{{A}} Rune] after taking skill damage 2 times, dealing Psy damage to all allies. Also decrease their ATK.
+{{A}}符文={{A}} Rune
+{{A}}符文Ⅰ={{A}} Rune Ⅰ
+r:"^受到(\d+)次技能傷害後爆炸$"="Detonate after taking skill damage $1 times"
+r:"^毀<color\=#000000>滅</color>符文$"="R<color\=#000000>u</color>in Rune"
+r:"^毀<color\=#000000>滅</color>符文Ⅰ$"="R<color\=#000000>u</color>in Rune Ⅰ"
+r:"^毀<color\=#000000>滅</color>符文Ⅱ$"="R<color\=#000000>u</color>in Rune Ⅱ"
+『HIGHLIGHT』：\n『ONE MORE』：對1名敵人造成念動屬性傷害。=[HIGHLIGHT]:\n[ONE MORE]: Deal Psy damage to 1 foe.
+
+癡愚的兵蟻=Foolish Soldier Ant
+癡愚的兵蟻、癡愚的兵蟻=Foolish Soldier Ant, Foolish Soldier Ant
+r:"^(\d+)回合後自爆$"="Self-destruct after $1 turn(s)"
+對1名敵人造成物理屬性傷害。自身生命值越高，造成的傷害越高。=Deal Phys damage to 1 foe. Increase damage based on HP.
+sr:"^<color\=#FF0000>(.*)</color>的(\d+)回合後自爆！！$"="<color\=#FF0000>$1</color> will self-destruct after $1 turn(s)!!"
+
+對全體敵方造成詛咒屬性傷害，有機率為敵方附加1個詛咒狀態。=Deal Curse damage to all foes, with a chance to inflict 1 Curse stack.
+
 傲岸的干擾器=Jammer of Pride
 注意{{A}}宣佈的規則=Note the rules announced by {{A}}
 儘快清除傲岸的干擾器=Destroy all Jammers of Pride as soon as possible
 儘快擊殺{{A}}=Defeat {{A}} as soon as possible
 
 我即是規則！=I Am the Rule!
-r:"^{{A}}宣佈規則，本回合禁止釋放指定類型的技能。對違反其命令的敵人釋放『嚴厲懲處』，造成物理屬性傷害，同時使其受到的傷害提升，造成的傷害降低，持續(\d+)回合。$"="{{A}} announces the rules, prohibiting the use of specific skill types this turn. Use [Severe Punishment] on foes who violate the rule, dealing Phys damage, increasing their DMG Taken and decreasing their DMG Dealt for $1 turns."
+r:"^{{A}}宣佈規則，本回合禁止釋放指定類型的技能。對違反其命令的敵人釋放『嚴厲懲處』，造成物理屬性傷害，同時使其受到的傷害提升，造成的傷害降低，持續(\d+)回合。$"="{{A}} announces the rules, prohibiting the use of specific skill types this turn. Use [Severe Punishment] on foes who violated the rule, dealing Phys damage, increasing their DMG Taken and decreasing their DMG Dealt for $1 turns."
 嚴厲懲處=Severe Punishment
 r:"^對1名敵人造成物理屬性傷害。同時使其受到的傷害提升，造成的傷害降低，持續(\d+)回合。$"="Deal Phys damage to 1 foe. Increase their DMG Taken and decrease their DMG Dealt for $1 turns."
 橫掃=Sweep
@@ -1430,6 +1474,7 @@ r:"^對1名敵人造成物理屬性傷害。同時使其受到的傷害提升，
 你的命，是我的！=Your Life is Mine!
 被動技能，生命值首次低於80%/50%/20%時，給自己回復生命，並提升攻擊。=Passive skill, when HP first drops below 80%/50%/20%, restore HP to self and increase ATK.
 反抗者死！=Death to Rebels!
+使自身回復大量生命值。=Restore heavy HP to user.
 
 倨傲之聲=Voice of Pride
 劇毒巢穴=Poisonous Lair
@@ -1592,6 +1637,46 @@ r:"^冰<color\=#000000>影</color>協同$"="S<color\=#000000>h</color>adow Syner
 影刃穿刺=Shadow Puncture
 迦耶伯格標記=Gae Bulg
 r:"^迦<color\=#000000>耶</color>伯格標記$"="G<color\=#000000>a</color>e Bulg Mark"
+
+1、{{A}}自身全屬性耐性且有著高額的傷害減免效果。\n2、{{A}}會蓄力後施放『創世之力』：對所有敵人無視其防禦力造成高額萬能屬性傷害並創造子民。造成的傷害越高，子民的生命值越高。\n3、當場上存在{{A}}的子民時，{{A}}會施放『振奮之舞』強化其子民。在{{A}}的子民陣亡時{{A}}會按照百分比損失生命值。=1. {{A}} has Resist All and severe DMG RES.\n2. {{A}} will use [Power of Creation] after charging: Deal severe Almighty damage to all foes, ignoring their DEF. Also create spawns, increase spawns' HP based on damage dealt.\n3. When a spawn from {{A}} is on the field, {{A}} will use [Invigorating Dance] to strengthen them. When a spawn is defeated, {{A}} loses HP.
+sr:"^<color\=#FF0000>(.*)</color>下次行動將汲取創世的力量！$"="<color\=#FF0000>$1</color> will draw upon the power of creation next turn!"
+蛇鱗之佑=Snake Scale's Blessing
+準備狀態，下回合將施放『創世之力』。=Charge and use [Power of Creation] next turn.
+r:"^創<color\=#000000>世</color>之血$"="S<color\=#000000>p</color>awn of Creation"
+創世之力=Power of Creation
+對所有敵人造成高額萬能屬性傷害，無視其防禦力並創造子民。造成的傷害越高，子民越強。=Deal severe Almighty damage to all foes, ignoring their DEF. Also create spawns, increase spawns' HP based on damage dealt.
+振奮之舞=Invigorating Dance
+使所有子民的最終傷害大幅提升,最終免傷中幅提升。=Heavily increase all spawns' Final DMG and increase Final DMG RES.
+蛇神的子民=Serpent God's Spawn
+創世之血=Spawn of Creation
+
+1、{{B}}自身全屬性耐性且有著高額的傷害減免效果。\n2、{{B}}會蓄力後施放『創世之力』：對所有敵人無視其防禦力造成高額萬能屬性傷害並創造子民。造成的傷害越高，子民的生命值越高、且攻擊力越強。\n3、當場上存在{{B}}的子民時，{{B}}會施放『振奮之舞』強化其子民。在{{B}}的子民陣亡時{{B}}會按照百分比損失生命值，但同時也會施放『{{A}}哀嚎』，對所有敵人造成中等萬能屬性傷害，並中幅提高自身傷害能力（回合內僅能發動1次）。=1. {{B}} has Resist All and severe DMG RES.\n2. {{B}} will use [Power of Creation] after charging: Deal severe Almighty damage to all foes, ignoring their DEF. Also create spawns, increase spawns' HP based on damage dealt.\n3. When a spawn from {{B}} is on the field, {{B}} will use [Invigorating Dance] to strengthen them. When a spawn is defeated, {{B}} loses HP and use [{{A}} Wail], dealing Almighty damage to all foes. Also increase user's damage (once per turn).
+{{A}}哀嚎={{A}} Wail
+r:"^憤<color\=#000000>怒</color>$"="W<color\=#FF0000>r</color>ath"
+sr:"^<color\=#FF0000>(.*)</color>變得(.*)了，造成傷害將會提升！$"="<color\=#FF0000>$1</color> gained $2, increase DMG Dealt!"
+
+1、{{B}}自身全屬性耐性且有著高額的傷害減免效果。\n2、{{B}}會蓄力後施放『創世之力』：對所有敵人無視其防禦力造成高額萬能屬性傷害並創造子民。造成的傷害越高，子民的生命值越高、攻擊力越強。蓄力之後會對我方一人施加『{{B}}的凝視』，使其受到傷害極大幅增加。『創世之力』會多次對隨機子民施加『{{B}}的庇護』，使其能基本完全抵擋下次受到的傷害。\n3、當場上存在{{B}}的子民時，{{B}}會施放『振奮之舞』強化其子民。在{{B}}的子民陣亡時{{B}}會按照百分比損失生命值，但同時也會施放『{{A}}哀嚎』，對所有敵人造成中等萬能屬性傷害，並中幅提高自身傷害能力（回合內僅能發動1次）。=1. {{B}} has Resist All and severe DMG RES.\n2. {{B}} will use [Power of Creation] after charging: Deal severe Almighty damage to all foes, ignoring their DEF. Also create spawns, increase spawns' HP based on damage dealt. After charging, inflict 1 foe with [{{B}}'s Gaze], heavily increase their Final DMG Taken. [Power of Creation] will grant random spawns [{{B}}'s Protection], granting colossal DMG RES once.\n3. When a spawn from {{B}} is on the field, {{B}} will use [Invigorating Dance] to strengthen them. When a spawn is defeated, {{B}} loses HP and use [{{A}} Wail], dealing Almighty damage to all foes. Also increase user's damage (once per turn).
+{{A}}的凝視={{A}}'s Gaze
+r:"^羽<color\=#000000>蛇</color>神的凝視$"="Q<color\=#000000>u</color>etzalcoatl's Gaze"
+{{A}}的庇護={{A}}'s Protection
+r:"^羽<color\=#000000>蛇</color>神的庇護$"="Q<color\=#000000>u</color>etzalcoatl's Protection"
+免傷提升至極限，受到1次攻擊後解除=Gain colossal DMG RES; \nClear after taking damage once
+sr:"^<color\=#FF0000>(.*)</color>被(.*)盯上了…$"="<color\=#FF0000>$1</color> is targeted by $2..."
+sr:"^<color\=#FF0000>(.*)</color>得到了(.*)！$"="<color\=#FF0000>$1</color> gained $2!"
+
+1、{{B}}的攻擊會附加1層『脆弱』。\n2、場上有怪盜『脆弱』層數大於等於3層時，{{A}}會立刻釋放大冰河時期，對所有怪盜造成高額屬性傷害。\n3、{{B}}被擊殺時會清除所有怪盜2層『脆弱』，並對所有怪盜造成傷害。並且會立即再召喚1隻{{B}}。=1. {{B}}'s attacks will inflict 1 [Fragility] stack.\n2. When Thieves have 3 or more [Fragility] stacks, {{A}} will immediately use Ice Age, dealing severe damage to all Thieves.\n3. After {{B}} is defeated, clear 2 [Fragility] stacks on all Thieves, then deal damage to all Thieves and resummon 1 {{B}}.
+霜魂=Frost Spirit
+被擊殺時觸發。對所有敵人造成冰凍屬性傷害，並清除2層『脆弱』。=Activate when defeated. Deal Ice damage to all foes and clear 2 [Fragility] stacks.
+對1名敵人造成冰凍屬性傷害，並附加1層『脆弱』。=Deal Ice damage to 1 foe and inflict 1 [Fragility] stack.
+脆弱=Fragility
+r:"^脆<color\=#000000>弱</color>$"="F<color\=#000000>r</color>agility"
+
+1、{{B}}的攻擊會附加1層『脆弱』；{{A}}每2回合會釋放一次『鑽石星辰』，附加1層『脆弱』。\n2、場上有怪盜『脆弱』層數大於等於3層時，{{A}}會立刻釋放大冰河時期，對所有怪盜造成高額屬性傷害。\n3、{{B}}被擊殺時會清除所有怪盜2層『脆弱』，並對所有怪盜造成傷害。並且會立即再召喚1隻{{B}}。=1. {{B}}'s attacks will inflict 1 [Fragility] stack; {{A}} will use [Diamond Dust] every 2 turns, inflicting 1 [Fragility] stack.\n2. When Thieves have 3 or more [Fragility] stacks, {{A}} will immediately use Ice Age, dealing severe damage to all Thieves.\n3. After {{B}} is defeated, clear 2 [Fragility] stacks on all Thieves, then deal damage to all Thieves and resummon 1 {{B}}.
+
+1、{{B}}的攻擊會附加1層『脆弱』；{{A}}每2回合會釋放一次『鑽石星辰』，附加1層『脆弱』。\n2、場上有怪盜『脆弱』層數大於等於3層時，{{A}}會立刻釋放大冰河時期，對所有怪盜造成高額屬性傷害。\n3、{{B}}被擊殺時會清除所有怪盜2層『脆弱』，並對所有怪盜造成傷害。並且會立即再召喚1隻{{B}}。\n4、每2回合會召喚1隻小型的{{A}}，小{{A}}擁有{{A}}一樣的傷害技能。小{{A}}被擊殺時怪盜會提升最終傷害加成，持續2回合。=1. {{B}}'s attacks will inflict 1 [Fragility] stack; {{A}} will use [Diamond Dust] every 2 turns, inflicting 1 [Fragility] stack.\n2. When Thieves have 3 or more [Fragility] stacks, {{A}} will immediately use Ice Age, dealing severe damage to all Thieves.\n3. After {{B}} is defeated, clear 2 [Fragility] stacks on all Thieves, then deal damage to all Thieves and resummon 1 {{B}}.\n4. Summon 1 small {{A}} every 2 turns, small {{A}} has the same skill damage as {{A}}. After defeating small {{A}}, increase Thieves' Final DMG for 2 turns.
+1、{{B}}的攻擊會附加1層『脆弱』；{{A}}每2回合會釋放一次『鑽石星辰』，附加1層『脆弱』。\n2、場上有怪盜『脆弱』層數大於等於3層時，{{A}}會立刻釋放大冰河時期，對所有怪盜造成高額屬性傷害。\n3、{{B}}被擊殺時會清除所有怪盜2層『脆弱』，並對所有怪盜造成傷害。並且會立即再召喚1隻{{B}}。\n4、每2回合會召喚1隻小型的{{A}}，小{{A}}擁有{{A}}一樣的傷害技能。小{{A}}被擊殺時怪盜會提升最終傷害加成，持續1回合。=1. {{B}}'s attacks will inflict 1 [Fragility] stack; {{A}} will use [Diamond Dust] every 2 turns, inflicting 1 [Fragility] stack.\n2. When Thieves have 3 or more [Fragility] stacks, {{A}} will immediately use Ice Age, dealing severe damage to all Thieves.\n3. After {{B}} is defeated, clear 2 [Fragility] stacks on all Thieves, then deal damage to all Thieves and resummon 1 {{B}}.\n4. Summon 1 small {{A}} every 2 turns, small {{A}} has the same skill damage as {{A}}. After defeating small {{A}}, increase Thieves' Final DMG for 1 turn.
+霜精援軍=Frost Reinforcement
+召喚1隻小型的{{A}}，小{{A}}擁有{{A}}一樣的傷害技能。小{{A}}被擊殺時怪盜會提升最終傷害加成，持續2回合。=Summon 1 small {{A}}, small {{A}} has the same skill damage as {{A}}. After defeating small {{A}}, increase Thieves' Final DMG for 2 turns.
 
 ----------
 CROSS FATE PALACE (CF) (COLLAB)
@@ -2402,7 +2487,7 @@ r:"^對1名敵人造成電擊屬性傷害，有機率使敵人陷入<link\="s\|1
 階段三特性=Phase 3 Mechanics
 
 首領詞綴=Boss Affix
-r:"^1、{{B}}的回合結束時，會獲得「恐懼之力」；每隔一定回合，{{B}}會消耗「恐懼之力」釋放「巨鯊威懾」或「巨鯊凝視」使(\d+)名敵人受到傷害提升並陷入恐懼狀態，一定回合後逃跑。\n2、有隨從在場時，{{B}}全適應性會變為耐並獲得大幅最終傷害減免；隨從全部死亡時，{{B}}全適應性會變為弱，受到追加效果傷害大幅提升，但是自身造成的最終傷害也會提升。\n3、{{A}}會在(\d+)回合後自爆，對所有敵人造成大量傷害。\n4、{{B}}處在一階段時，無法被選中，但會在所有隊友死亡時進入二階段。$"="1. At the end of {{B}}'s turn, gain [Fear Power]; Every few turns, {{B}} will spend [Fear Power] to use [Shark's Intimidation] or [Shark's Gaze] to increase $1 foe's DMG Taken and inflict Fear, escape from battle after a few turns.\n2. When there is a minion, {{B}} will change all resistance to Resist and heavily increase Final DMG RES; When all minions die, change all resistance to Weak and heavily increase Follow Up Final DMG Taken, but increase Final DMG Dealt.\n3. {{A}} will Self Destruct after $2 turns, dealing heavy damage to all foes.\n4. During phase 1, {{B}} has Untargetable, but enter phase 2 when all minions die."
+r:"^1、{{B}}的回合結束時，會獲得「恐懼之力」；每隔一定回合，{{B}}會消耗「恐懼之力」釋放「巨鯊威懾」或「巨鯊凝視」使(\d+)名敵人受到傷害提升並陷入恐懼狀態，一定回合後逃跑。\n2、有隨從在場時，{{B}}全適應性會變為耐並獲得大幅最終傷害減免；隨從全部死亡時，{{B}}全適應性會變為弱，受到追加效果傷害大幅提升，但是自身造成的最終傷害也會提升。\n3、{{A}}會在(\d+)回合後自爆，對所有敵人造成大量傷害。\n4、{{B}}處在一階段時，無法被選中，但會在所有隊友死亡時進入二階段。$"="1. At the end of {{B}}'s turn, gain [Fear Power]; Every few turns, {{B}} will spend [Fear Power] to use [Shark's Intimidation] or [Shark's Gaze] to increase $1 foe's DMG Taken and inflict Fear, escape from battle after a few turns.\n2. When there is a minion, {{B}} will change all resistance to Resist and heavily increase Final DMG RES; When all minions die, change all resistance to Weak and heavily increase Follow Up Final DMG Taken, but increase Final DMG Dealt.\n3. {{A}} will Self-Destruct after $2 turns, dealing heavy damage to all foes.\n4. During phase 1, {{B}} has Untargetable, but enter phase 2 when all minions die."
 恐懼之力=Fear Power
 r:"^恐<color\=#000000>懼</color>之力$"="F<color\=#000000>e</color>ar Power"
 巨鮫之舞=Shark's Dance
@@ -2412,11 +2497,11 @@ r:"^消耗所有『恐懼之力』使1名敵人陷入恐懼狀態，(\d+)回合�
 巨鯊凝視=Shark's Gaze
 r:"^巨<color\=#000000>鯊</color>凝視$"="S<color\=#000000>h</color>ark's Gaze"
 r:"^消耗所有『恐懼之力』使1名敵人陷入恐懼狀態，(\d+)回合後逃跑；同時使其受到的傷害提升，消耗的『恐懼之力』越多，受到傷害提升越高。並且使該單位獲得『巨鯊凝視』，被『巨鯊凝視』的單位受到攻擊的機率提升。$"="Spend all [Fear Power] to inflict 1 foe with Fear, escape from battle after $1 turns; Increase their DMG Taken for every [Fear Power] spent. Inflict the target with [Shark's Gaze], target with [Shark's Gaze] increase chance of being targeted by attacks."
-自爆=Self Destruct
-r:"^(\d+)回合後，扣除自身所有生命值對所有敵人造成大量物理屬性傷害。$"="After $1 turns, self destruct and deal heavy Phys damage to all foes."
-預備自爆=Preparing to Self Destruct
-r:"^(\d+)回合後自爆！$"="Self Destruct after $1 turn(s)!"
-下個回合自爆！=Will Self Destruct next turn!
+自爆=Self-Destruct
+r:"^(\d+)回合後，扣除自身所有生命值對所有敵人造成大量物理屬性傷害。$"="After $1 turns, self-destruct and deal heavy Phys damage to all foes."
+預備自爆=Preparing to Self-Destruct
+r:"^(\d+)回合後自爆！$"="Self-Destruct after $1 turn(s)!"
+下個回合自爆！=Will Self-Destruct next turn!
 對1名敵人造成萬能屬性傷害，無視其防禦力。=Deal Almighty damage to 1 foe enemy, ignoring their DEF.
 群鮫之噬=Shark's Bite
 對所有敵人造成大量冰凍屬性傷害，並基於當前敵人的生命值造成額外傷害=Deal heavy Ice damage to all foes, deal additional damage based on foe's HP
@@ -2440,8 +2525,8 @@ r:"^友方單位存活時，受到的最終傷害降低(\d+%)$"="When a minion i
 r:"^{{A}}使敵人恐懼後，敵人(\d+)回合後逃跑；被「巨鯊凝視」的單位造成的最終傷害降低。$"="After {{A}} inflict Fear, the target will escape from battle after $1 turn; Foes with [Shark's Gaze] decrease Final DMG Dealt."
 <color\=#FF0000>{{A}}</color>的全屬性適應性變為耐……=<color\=#FF0000>{{A}}</color> changed all resistance to Resist...
 <color\=#FF0000>{{A}}</color>的全屬性適應性恢復了…=<color\=#FF0000>{{A}}</color> reverted resistance...
-r:"^<color\=#FF0000>{{A}}</color>(\d+)回合後自爆！！$"="<color\=#FF0000>{{A}}</color> will Self Destruct after $1 turn(s)!!"
-r:"^<color\=#FF0000>{{A}}</color>下個回合自爆！！$"="<color\=#FF0000>{{A}}</color> will Self Destruct next turn!!"
+r:"^<color\=#FF0000>{{A}}</color>(\d+)回合後自爆！！$"="<color\=#FF0000>{{A}}</color> will Self-Destruct after $1 turn(s)!!"
+r:"^<color\=#FF0000>{{A}}</color>下個回合自爆！！$"="<color\=#FF0000>{{A}}</color> will Self-Destruct next turn!!"
 
 r:"^1、{{A}}進入戰鬥後，召喚其他三位天使長，每位天使長都有自己得專屬技能：\n「{{A}}的守護」：使全體友方獲得護盾，並使其受到的最終傷害減免(\d+%)，持續(\d+)回合。\n「{{D}}的警告」：使所有敵人受到的最終傷害提升(\d+%)，持續(\d+)回合；同時有(\d+%)的基礎機率使攻擊力最高的敵人陷入遺忘狀態，持續(\d+)回合。\n「{{C}}的療癒」：使所有同伴恢復生命值，並使其造成的最終傷害提升(\d+%)，持續(\d+)回合。\n「{{B}}的審判」：對所有敵人造成萬能屬性傷害，無視其防禦力，對陷入元素異常的單位造成的技能傷害提升(\d+%)。\n2、進入戰鬥後，{{A}}會立即釋放「{{A}}的守護」。\n3、第一階段中的所有天使長被擊殺後，會進入第二階段並重新召喚處於「生命連結」狀態的四位天使長。\n4、每隔一定回合，各位天使長會進行蓄力，並在下個回合釋放專屬技能，可透過擊倒打斷蓄力過程從而阻止其釋放專屬技能。進入第二階段後，若蓄力被打斷，則下個回合會繼續蓄力並獲得免疫擊倒的效果。\n5、第一階段中：首次擊殺天使長時，擊殺者可獲得該天使長的專屬技能，並獲得「異變」的加成效果；前兩位被擊殺的天使長進入第二階段時會額外獲得(\d+)點倒地值。$"="1. At the start of battle, {{A}} will summon 3 Archangels, each Archangel has their own special skill:\n[{{A}}'s Protection]: Grant a Shield to party, and decrease party's Final DMG Taken by $1. Lasts for $2 turns.\n[{{D}}'s Warning]: Increase all foes' Final DMG Taken by $3 for $4 turn; With a $5 base chance to inflict Forget on the highest ATK foe for $6 turns.\n[{{C}}'s Healing]: Restore HP to party and increase party's Final DMG Dealt by $7. Lasts for $8 turn. \n[{{B}}'s Judgement]: Deal Almighty damage to all foes, ignoring their DEF, increase skill damage by $9 to foes inflicted with an Elemental Ailment.\n2. At the start of battle, {{A}} will immediately use [{{A}}'s Protection]. \n3. After defeating all Archangels in Phase 1. Enter Phase 2 then resummon all Archangels with [Lifelink].\n4. Every few turns, each Archangel will charge then use their special skill next turn. You can interrupt this by knocking them down. In Phase 2, if charge is interrupted, they will continue to charge next turn and gain Null Down. \n5. In Phase 1: The first time a Thief defeat an Archangel, that Thief will gain that Archangel's special skill and its modifier effects: The first 2 defeated Archangels will gain $10 additional Down Points when entering Phase 2."
 
