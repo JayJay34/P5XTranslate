@@ -107,6 +107,159 @@ sr:"^一種常見的製作材料。\n可使用工作臺製作成協同者禮物�
 紅玫瑰=Red Roses
 
 ----------
+Cooking
+----------
+r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n增加可以製作料理的種類。$"="<size\=24>Gain Synergy with [<color\=#FFC000>{{A}}</color>]: Unlock more recipes.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，製作料理時，有一定機率返還部分製作材料。$"="<size\=24><color\=#FFC000>Rank $1</color>: Some ingredients may be returned after cooking.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n製作完美食物機率增加。$"="<size\=24><color\=#FFC000>Rank $1</color>: Your chance of cooking superb dishes increases.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，製作料理時，有一定機率會額外獲得一個。$"="<size\=24><color\=#FFC000>Rank $1</color>: You may produce an extra serving after cooking.</size>"
+r:"^好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n進一步增加可以製作料理的種類。$"="<size\=24><color\=#FFC000>Rank $1</color>: Unlock even more recipes.</size>"
+恢復類=Healing
+攻擊類=Attack
+防禦類=Defense
+永久屬性類=Permanent
+菜品=Food
+烹飪獲得=Cooking
+食材不足。=You don't have enough ingredients.
+查看「<color\=#ff3b37>菜譜</color>」=View [<color\=#ff3b37>Recipes</color>]
+查看「<color\=#ff3b37>永久屬性類</color>」菜譜=View [<color\=#ff3b37>Permanent Stats</color>] Recipes
+炸豬排=Tonkatsu
+味噌拉麵=Miso Ramen
+鮭魚刺身=Salmon Sashimi
+和菓子=Manju
+咖哩飯=Curry with Rice
+壽喜燒=Sukiyaki
+抹茶霜淇淋=Matcha Ice Cream
+可樂餅=Croquette
+鰻魚飯=Eel Rice Bowl
+三色丸子=Tricolored Dango
+天婦羅=Tempura
+杏仁豆腐=Almond Jelly
+焦糖布丁=Caramel Flan
+蛋包飯=Omelette Rice
+魚子醬沙拉=Seafood Salad
+冬瓜茶=Winter Melon Tea
+口水雞=Mouthwatering Chicken
+蔥燒海參=Chinese Stir-Fry
+年糕=Sweet Kinako Mochi
+西湖醋魚=Sweet and Sour Fish
+水煮魚=Spicy Boiled Fish
+雙皮奶=Milk Pudding
+餃子=Gyoza
+荔枝蝦球=Lychee Shrimp Balls
+湯圓=Sticky Rice Balls
+蜜汁叉燒=Cantonese Char Siu
+水煮牛肉=Beef Stew
+春捲=Spring Rolls
+泰式椒麻雞=Youlinji
+麻婆豆腐=Mapo Tofu
+紅豆沙=Shiruko
+鯽魚湯=Chinese Medicinal Soup
+龍井蝦仁=Shrimp Stir-Fry
+豆汁=Mung Bean Milk
+臭豆腐=Vinegar Tofu
+臭鱖魚=Grilled Rockfish
+燉雞=Stewed Chicken
+烤牛肉=Seared Beef
+肉餅=Meat Pie
+海灘=Beach
+黑海岸=Black Coast
+綠野=Green Field
+透明=Transparent
+綺夢冰茶=Milk Tea
+
+r:"^在{{A}}中使用，立即恢復(\d+%)最大生命值。$"="Restore $1 of Max HP to party. (When used.)"
+r:"^在{{A}}中使用，每回合開始時恢復(\d+\.\d+%)生命值，效果持續(\d+)場戰鬥。$"="For $2 battles, restores party's HP by $1 at the start of each turn. (When used.)"
+r:"^在{{A}}中使用，每回合開始時恢復(\d+\.\d+%)精力值，效果持續(\d+)場戰鬥。$"="For $2 battles, restores party's SP by $1 at the start of each turn. (When used.)"
+r:"^在{{A}}中使用，每回合開始時恢復(\d+\.\d+%)生命值、精力值，效果持續(\d+)場戰鬥。$"="For $2 battles, restores party's HP/SP by $1 at the start of each turn. (When used.)"
+r:"^在{{A}}中使用，戰鬥開始時，獲得(\d+%)HIGHLIGHT能量，效果持續(\d+)場戰鬥。$"="For $2 battles, gain $1 HIGHLIGHT Energy at the start of each battle. (When used.)"
+r:"^在{{A}}中使用，生命值提升(\d+%)，效果持續(\d+)場戰鬥。$"="For $2 battles, increase party's HP by $1. (When used.)"
+r:"^在{{A}}中使用，攻擊力提升(\d+%)，效果持續(\d+)場戰鬥。$"="For $2 battles, increase party's ATK by $1. (When used.)"
+r:"^在{{A}}中使用，防禦力提升(\d+%)，效果持續(\d+)場戰鬥。$"="For $2 battles, increase party's DEF by $1. (When used.)"
+r:"^在{{A}}中使用，暴擊率提升(\d+\.\d+%)，效果持續(\d+)場戰鬥。$"="For $2 battles, increase party's Crit Rate by $1. (When used.)"
+r:"^在{{A}}中使用，暴擊效果提升(\d+\.\d+%)，效果持續(\d+)場戰鬥。$"="For $2 battles, increase party's Crit DMG by $1. (When used.)"
+r:"^在{{A}}中使用，效果命中提升(\d+\.\d+%)，效果持續(\d+)場戰鬥。$"="For $2 battles, increase party's Ailments ACC by $1. (When used.)"
+r:"^在{{A}}中使用，效果抵抗提升(\d+\.\d+%)，效果持續(\d+)場戰鬥。$"="For $2 battles, increase party's Ailments RES by $1. (When used.)"
+r:"^在{{A}}中使用，造成的傷害提升(\d+\.\d+%)，效果持續(\d+)場戰鬥。$"="For $2 battles, increase party's DMG Dealt by $1. (When used.)"
+r:"^在{{A}}中使用，受到的傷害降低(\d+\.\d+%)，效果持續(\d+)場戰鬥。$"="For $2 battles, decrease party's DMG Taken by $1. (When used.)"
+r:"^使用後立即恢復(\d+)行動力。\n使用食材『阿薩姆紅茶』『牛奶』製作而成的飲品。$"="Immediately restores $1 Action Points when used."
+由經典雞尾酒長島冰茶改變配方而來，保留了原本的外觀和色澤，口感清涼，沒有人能夠拒絕在煩悶時來上這樣一杯飲品。=A gourmet milk tea recipe from Shiina. One sip of this, and you'll never be satisfied with regular milk tea ever again.
+
+地獄擔擔麵菜譜=Spicy Dan Dan Noodles Recipe
+極上甲殼燒菜譜=Premium Crab Grill Recipe
+松茸五目飯菜譜=Matsutake Mushroom Rice Recipe
+濃郁納豆湯菜譜=Rich Natto Soup Recipe
+名產苦瓜燒菜譜=Roasted Bitter Melon Recipe
+炭仙人燒鳥菜譜=Charcoal Yakitori Recipe
+玉露香草茶菜譜=Jade Dew Herbal Tea Recipe
+皇家可麗餅菜譜=Royal Crepe Recipe
+sr:"^寫著料理方式的紙張，使用後可學會料理『(.*)』。$"="Allows you to make [$1] when used."
+sr:"^已掌握(.*)的烹飪方法。$"="You learned the recipe for $1."
+
+地獄擔擔麵=Spicy Dan Dan Noodles
+r:"^首次食用後攻擊力永久增加(\d+)點，食用(\d+)~(\d+)次時每次增加(\d+)點，(\d+)次以後每次增加(\d+)點。$"="1st use: Permanently increase ATK by $1.\n$2nd-$3th use: Permanently increase ATK by $4.\nAfter $5th use: Permanently increase ATK by $6."
+r:"^首次食用後攻擊力永久增加(\d+)點，食用(\d+)~(\d+)次時每次增加(\d+)點，(\d+)次以後每次增加(\d+)點。\（食用次數：(\d+)\）$"="1st use: Permanently increase ATK by $1.\n$2nd-$3th use: Permanently increase ATK by $4.\nAfter $5th use: Permanently increase ATK by $6.\n(Used: $7)"
+r:"^使用食材『(.*)』製作而成的料理。\n首次食用後攻擊力永久增加(\d+)點，食用(\d+)~(\d+)次時每次增加(\d+)點，(\d+)次以後每次增加(\d+)點。$"="1st use: Permanently increase ATK by $2. $3nd-$4th use: Permanently increase ATK by $5. After $6th use: Permanently increase ATK by $7."
+r:"^本次食用後攻擊力永久增加(\d+(.\d+)?(%)?)$"="Permanently increase ATK by $1"
+極上甲殼燒=Premium Crab Grill
+r:"^首次食用後防禦力永久增加(\d+)點，食用(\d+)~(\d+)次時每次增加(\d+)點，(\d+)次以後每次增加(\d+)點。$"="1st use: Permanently increase DEF by $1.\n$2nd-$3th use: Permanently increase DEF by $4.\nAfter $5th use: Permanently increase DEF by $6."
+r:"^首次食用後防禦力永久增加(\d+)點，食用(\d+)~(\d+)次時每次增加(\d+)點，(\d+)次以後每次增加(\d+)點。\（食用次數：(\d+)\）$"="1st use: Permanently increase DEF by $1.\n$2nd-$3th use: Permanently increase DEF by $4.\nAfter $5th use: Permanently increase DEF by $6.\n(Used: $7)"
+r:"^使用食材『(.*)』製作而成的料理。\n首次食用後防禦力永久增加(\d+)點，食用(\d+)~(\d+)次時每次增加(\d+)點，(\d+)次以後每次增加(\d+)點。$"="1st use: Permanently increase DEF by $2. $3nd-$4th use: Permanently increase DEF by $5. After $6th use: Permanently increase DEF by $7."
+r:"^本次食用後防禦力永久增加(\d+(.\d+)?(%)?)$"="Permanently increase DEF by $1"
+松茸五目飯=Matsutake Mushroom Rice
+r:"^首次食用後最大生命值永久增加(\d+)點，食用(\d+)~(\d+)次時每次增加(\d+)點，(\d+)次以後每次增加(\d+)點。$"="1st use: Permanently increase Max HP by $1.\n$2nd-$3th use: Permanently increase Max HP by $4.\nAfter $5th use: Permanently increase Max HP by $6."
+r:"^首次食用後最大生命值永久增加(\d+)點，食用(\d+)~(\d+)次時每次增加(\d+)點，(\d+)次以後每次增加(\d+)點。\（食用次數：(\d+)\）$"="1st use: Permanently increase Max HP by $1.\n$2nd-$3th use: Permanently increase Max HP by $4.\nAfter $5th use: Permanently increase Max HP by $6.\n(Used: $7)"
+r:"^使用食材『(.*)』製作而成的料理。\n首次食用後最大生命值永久增加(\d+)點，食用(\d+)~(\d+)次時每次增加(\d+)點，(\d+)次以後每次增加(\d+)點。$"="1st use: Permanently increase Max HP by $2. $3nd-$4th use: Permanently increase Max HP by $5. After $6th use: Permanently increase Max HP by $7."
+r:"^本次食用後最大生命值永久增加(\d+(.\d+)?(%)?)$"="Permanently increase Max HP by $1"
+r:"^本次食用後生命值永久增加(\d+(.\d+)?(%)?)$"="Permanently increase Max HP by $1"
+濃郁納豆湯=Rich Natto Soup
+r:"^首次食用後暴擊率永久增加(\d+%)，食用(\d+)~(\d+)次時每次增加(\d+%)，(\d+)次以後每次增加(\d+\.\d+%)。$"="1st use: Permanently increase Crit Rate by $1.\n$2nd-$3th use: Permanently increase Crit Rate by $4.\nAfter $5th use: Permanently increase Crit Rate by $6."
+r:"^首次食用後暴擊率永久增加(\d+%)，食用(\d+)~(\d+)次時每次增加(\d+%)，(\d+)次以後每次增加(\d+\.\d+%)。\（食用次數：(\d+)\）$"="1st use: Permanently increase Crit Rate by $1.\n$2nd-$3th use: Permanently increase Crit Rate by $4.\nAfter $5th use: Permanently increase Crit Rate by $6.\n(Used: $7)"
+r:"^使用食材『(.*)』製作而成的料理。\n首次食用後暴擊率永久增加(\d+%)，食用(\d+)~(\d+)次時每次增加(\d+%)，(\d+)次以後每次增加(\d+\.\d+%)。$"="1st use: Permanently increase Crit Rate by $2. $3nd-$4th use: Permanently increase Crit Rate by $5. After $6th use: Permanently increase Crit Rate by $7."
+r:"^本次食用後暴擊率永久增加(\d+(.\d+)?(%)?)$"="Permanently increase Crit Rate by $1"
+名產苦瓜燒=Roasted Bitter Melon
+r:"^首次食用後暴擊效果永久增加(\d+%)，食用(\d+)~(\d+)次時每次增加(\d+%)，(\d+)次以後每次增加(\d+\.\d+%)。$"="1st use: Permanently increase Crit DMG by $1.\n$2nd-$3th use: Permanently increase Crit DMG by $4.\nAfter $5th use: Permanently increase Crit DMG by $6."
+r:"^首次食用後暴擊效果永久增加(\d+%)，食用(\d+)~(\d+)次時每次增加(\d+%)，(\d+)次以後每次增加(\d+\.\d+%)。\（食用次數：(\d+)\）$"="1st use: Permanently increase Crit DMG by $1.\n$2nd-$3th use: Permanently increase Crit DMG by $4.\nAfter $5th use: Permanently increase Crit DMG by $6.\n(Used: $7)"
+r:"^使用食材『(.*)』製作而成的料理。\n首次食用後暴擊效果永久增加(\d+%)，食用(\d+)~(\d+)次時每次增加(\d+%)，(\d+)次以後每次增加(\d+\.\d+%)。$"="1st use: Permanently increase Crit DMG by $2. $3nd-$4th use: Permanently increase Crit DMG by $5. After $6th use: Permanently increase Crit DMG by $7."
+r:"^本次食用後暴擊效果永久增加(\d+(.\d+)?(%)?)$"="Permanently increase Crit DMG by $1"
+炭仙人燒鳥=Charcoal Yakitori
+r:"^首次食用後穿透永久增加(\d+%)，食用(\d+)~(\d+)次時每次增加(\d+%)，(\d+)次以後每次增加(\d+\.\d+%)。$"="1st use: Permanently increase Pierce by $1.\n$2nd-$3th use: Permanently increase Pierce by $4.\nAfter $5th use: Permanently increase Pierce by $6."
+r:"^首次食用後穿透永久增加(\d+%)，食用(\d+)~(\d+)次時每次增加(\d+%)，(\d+)次以後每次增加(\d+\.\d+%)。\（食用次數：(\d+)\）$"="1st use: Permanently increase Pierce by $1.\n$2nd-$3th use: Permanently increase Pierce by $4.\nAfter $5th use: Permanently increase Pierce by $6.\n(Used: $7)"
+r:"^使用食材『(.*)』製作而成的料理。\n首次食用後穿透永久增加(\d+%)，食用(\d+)~(\d+)次時每次增加(\d+%)，(\d+)次以後每次增加(\d+\.\d+%)。$"="1st use: Permanently increase Pierce by $2. $3nd-$4th use: Permanently increase Pierce by $5. After $6th use: Permanently increase Pierce by $7."
+r:"^本次食用後穿透永久增加(\d+(.\d+)?(%)?)$"="Permanently increase Pierce by $1"
+玉露香草茶=Jade Dew Herbal Tea
+r:"^首次食用後治療效果永久增加(\d+\.\d+%)，食用(\d+)~(\d+)次時每次增加(\d+\.\d+%)，(\d+)次以後每次增加(\d+\.\d+%)。$"="1st use: Permanently increase Healing Effect by $1.\n$2nd-$3th use: Permanently increase Healing Effect by $4.\nAfter $5th use: Permanently increase Healing Effect by $6."
+r:"^首次食用後治療效果永久增加(\d+\.\d+%)，食用(\d+)~(\d+)次時每次增加(\d+\.\d+%)，(\d+)次以後每次增加(\d+\.\d+%)。\（食用次數：(\d+)\）$"="1st use: Permanently increase Healing Effect by $1.\n$2nd-$3th use: Permanently increase Healing Effect by $4.\nAfter $5th use: Permanently increase Healing Effect by $6.\n(Used: $7)"
+r:"^使用食材『(.*)』製作而成的料理。\n首次食用後治療效果永久增加(\d+\.\d+%)，食用(\d+)~(\d+)次時每次增加(\d+\.\d+%)，(\d+)次以後每次增加(\d+\.\d+%)。$"="1st use: Permanently increase Healing Effect by $2. $3nd-$4th use: Permanently increase Healing Effect by $5. After $6th use: Permanently increase Healing Effect by $7."
+r:"^本次食用後治療效果永久增加(\d+(.\d+)?(%)?)$"="Permanently increase Healing Effect by $1"
+皇家可麗餅=Royal Crepe
+r:"^首次食用後護盾效果永久增加(\d+\.\d+%)，食用(\d+)~(\d+)次時每次增加(\d+\.\d+%)，(\d+)次以後每次增加(\d+\.\d+%)。$"="1st use: Permanently increase Shield Effect by $1.\n$2nd-$3th use: Permanently increase Shield Effect by $4.\nAfter $5th use: Permanently increase Shield Effect by $6."
+r:"^首次食用後護盾效果永久增加(\d+\.\d+%)，食用(\d+)~(\d+)次時每次增加(\d+\.\d+%)，(\d+)次以後每次增加(\d+\.\d+%)。\（食用次數：(\d+)\）$"="1st use: Permanently increase Shield Effect by $1.\n$2nd-$3th use: Permanently increase Shield Effect by $4.\nAfter $5th use: Permanently increase Shield Effect by $6.\n(Used: $7)"
+r:"^使用食材『(.*)』製作而成的料理。\n首次食用後護盾效果永久增加(\d+\.\d+%)，食用(\d+)~(\d+)次時每次增加(\d+\.\d+%)，(\d+)次以後每次增加(\d+\.\d+%)。$"="1st use: Permanently increase Shield Effect by $2. $3nd-$4th use: Permanently increase Shield Effect by $5. After $6th use: Permanently increase Shield Effect by $7."
+r:"^本次食用後護盾效果永久增加(\d+(.\d+)?(%)?)$"="Permanently increase Shield Effect by $1"
+
+幻之幸食材特選=Mythical Lucky Special
+sr:"^使用後可隨機獲得以下食材：\n「(.*)」、「(.*)」、「(.*)」、「(.*)」、「(.*)」、「(.*)」、「(.*)」、「(.*)」、「(.*)」、「(.*)」、「(.*)」、「(.*)」、「(.*)」。$"="Randomly obtain the following ingredients after use: \n[$1], [$2], [$3], [$4], [$5], [$6], [$7], [$8], [$9], [$10], [$11], [$12], [$13]."
+購買幻之幸食材特選隨機獲得=Randomly obtained from Mythical Lucky Special
+激辛死神辣椒=Reaper Chili Pepper
+極上巨型松葉蟹=Premium Giant Snow Crab
+拍賣級超大海膽=Auction-Grade Giant Sea Urchin
+純天然A級松茸=Natural Grade-A Matsutake Mushrooms
+特供有機牛蒡=Organic Burdock Root
+超濃郁納豆=Extra-Fermented Natto
+特產山苦瓜=Local Bitter Melon
+限定版鰹魚片=Limited Edition Bonito Flakes
+大師特製醬汁=Chef’s Signature Sauce
+波本香草莢=Bourbon Vanilla Pods
+胡椒檸檬薄荷=Pepper-Lemon Mint
+金桶特濃奶油=Gold-Churn Cultured Butter
+
+雞蛋=Egg
+麵粉=Flour
+大米=Wheat
+紹興酒=Shaoxing Wine
+
+----------
 Gardening
 ----------
 r:"^與「<color\=#FFC000>{{A}}</color>」達成協同關係後，\n種植時間降低。$"="<size\=24>Gain Synergy with [<color\=#FFC000>{{A}}</color>]: You need less time to grow plants.</size>"
