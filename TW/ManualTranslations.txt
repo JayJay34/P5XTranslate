@@ -516,7 +516,9 @@ r:"^消耗：<color\=#FFDE00>「{{A}}的殘識碎片」×(\d+)</color>\n合成�
 sr:"^消耗：<color\=#FFDE00>「(.*)」×(.*)</color>\n兌換：<color\=#FFDE00>「(.*)」×(.*)</color>\n是否確認？$"="Spend: <color\=#FFDE00>[$1] ×$2</color>\nRedeem: <color\=#FFDE00>[$3] ×$4</color>\nAre you sure?"
 速通券·日常=Insta-Clear Ticket·Daily
 『速通券·日常』\n用於「厄抑之境」非時限關卡，進行快速通關的憑證。=[Insta-Clear Ticket·Daily]\nUsed to insta-clear [Realm of Repression].
+『速通券·日常』\n用於「厄抑之境」非時限關卡、部分活動關卡，進行快速通關的憑證。=[Insta-Clear Ticket·Daily]\nUsed to insta-clear [Realm of Repression] and certain event stages.
 用於「厄抑之境」非時限關卡，進行快速通關的憑證。=Used to insta-clear [Realm of Repression].
+用於「厄抑之境」非時限關卡、部分活動關卡，進行快速通關的憑證。=Used to insta-clear [Realm of Repression] and certain event stages.
 速通券·周常=Insta-Clear Ticket·Weekly
 『速通券·周常』\n用於「往日回溯」關卡，進行快速通關的憑證。=[Insta-Clear Ticket·Weekly]\nUsed to insta-clear [Recollections].
 用於「往日回溯」關卡，進行快速通關的憑證。=Used to insta-clear [Recollections].
@@ -554,13 +556,19 @@ City UI
 客廳=Living Room
 衣櫃=Wardrobe
 <color\=#ff0000ff>衣</color>櫃=Wa<color\=#ff0000ff>rd</color>robe
+精心打造的嵌入式衣櫃，\n配有全身穿衣鏡，\n可在此處更換服裝。=A well-constructed built-in closet with a full-length mirror. It's also where I change my clothes.
 工作臺=Workbench
 工<color\=#ff0000ff>作</color>臺=Wo<color\=#ff0000ff>rk</color>bench
+手工愛好者間流行的工作臺，\n做工堅實，搭配合理，\n可在此處製作道具。=A workbench popular with DIY enthusiasts. Its sturdy and practical design makes it perfect for crafting items.
 烹飪=Cooking
+r:"^<color\=#ff0000ff>烹</color>飪$"="C<color\=#ff0000ff>o</color>ok"
+設施非常齊全的廚房，\n透過珍貴的限定食材，可以烹飪出<color\=#ff3b37>永久提升屬性</color>的高檔料理 ！=A well-stocked kitchen, I could cook food that grants <color\=#ff3b37>permanent food buffs</color>!
 種植=Gardening
-<color\=#ff0000ff>種</color>植=G<color\=#ff0000ff>a</color>rdening
+r:"^<color\=#ff0000ff>種</color>植$"="G<color\=#ff0000ff>a</color>rdening"
+面積不大的小花園，\n但被打理得很好。\n可在此處種植並收穫植物。=Our home garden. It's small but well maintained. I could grow and pick plants here.
 展示櫃=Showcase
 展<color\=#ff0000ff>示</color>櫃=Sh<color\=#ff0000ff>ow</color>case
+容量很大的透明櫃，\n擁有多個隔間，\n可在此處擺放盲盒{{A}}。=A large display case with multiple shelves. I could use them to show off my {{A}} collection.
 擺放區·一樓=Display Area - First Floor
 擺放區·二樓=Display Area - Second Floor
 打<color\=#ff0000ff>遊</color>戲=Pl<color\=#ff0000ff>ay</color> Games
@@ -914,8 +922,8 @@ r:"^<sprite\=(\d+) tint\=1>小時<sprite\=(\d+) tint\=1>分後開啟$"="Unlocks 
 r:"^<sprite\=(\d+) tint\=1>時<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>分後開啟$"="Unlocks after <sprite\=$1 tint\=1>h <sprite\=$2 tint\=1><sprite\=$3 tint\=1>m"
 r:"^<sprite\=(\d+) tint\=1>小時<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>分後開啟$"="Unlocks after <sprite\=$1 tint\=1>h <sprite\=$2 tint\=1><sprite\=$3 tint\=1>m"
 
-擁有:=Owned: 
-擁有=Owned
+擁有:=Held:
+擁有=Held
 持有數=Owned
 免費=Free
 領獎=Claim
@@ -1512,7 +1520,7 @@ r:"^簽約$"="Pulls"
 
 每10次簽約必出四星或以上怪盜角色。50次簽約後可自選新手五星怪盜角色。具體內容查看【說明】=<b><color\=#FFDF00>Beginner Banner</color></b>\nGuarantee 1 4★ every 10 pulls. \nChoose 1 5★ Thief at 50 pulls.
 新手推薦契約中簽約次數達到=When Signature count reaches
-後可自選一名以下5★怪盜=you can choose one 5★ Thief
+後可自選一名以下5★怪盜=you can select one 5★ Thief
 
 次可獲得<color\=#EADE10>5★盲選偶像合約             ×1</color>，使用後隨機獲得以下怪盜=<size\=26>                       Get <color\=#EADE10>5★Random Kaidol Contract</color></size>
 長按圖示可查看詳細資訊=Long press to view details
@@ -1597,6 +1605,11 @@ r:"^剩餘抽獎次數：(\d+)$"="Draws Left: $1"
 r:"^累計抽獎(\d+)次\((\d+)\/(\d+)\)$"="Draw $1 times ($2/$3)"
 尚未解鎖，無法購買=Locked, cannot purchase
 r:"^{{A}}×(\d+)$"="{{A}}×$1"
+
+角色普通契約中簽約次數達到=When Signature count reaches
+r:"^可自選一名5★怪盜\（可選次數：(\d+)/(\d+)\）$"="you can select one 5★ Thief (Can select: $1/$2)"
+
+r:"^剩餘8折次數:(\d+)$"="20% off left: $1"
 
 ----------
 Gacha Rules + Banner Names
@@ -2911,6 +2924,7 @@ r:"^(\d+)級啟示補給$"="Lv. $1 Revelation Set"
 r:"^加贈$"="Get            <size\=1>.</size>"
 枚{{A}}=      <size\=17>{{A}}</size>
 現金=Money
+<color\=#FFC000>現金</color>=<color\=#FFC000>Money</color>
 魂石=Konpaku Gem
 『魂石』\n{{A}}探索獲得的神秘石頭，可用於角色與{{B}}養成。=[Konpaku Gem]\nMysterious gems obtained from the {{A}}, \ncan be used for character and {{B}} growth.
 {{A}}探索獲得的神秘石頭，可用於角色與{{B}}養成。=Mysterious gems obtained from the {{A}}, \ncan be used for character and {{B}} growth.
@@ -3088,6 +3102,7 @@ sr:"^未知宿命橙·(.*)"="Random 4★ $1"
 可用於「怪盜心象·技能領悟」養成的高階材料。=High level material used in \n[Mindscape - Skills Upgrade].
 
 {{A}}的心象核心={{A}}'s Mindscape Core
+{{A}}的心象核心，在其進行心象啟動時消耗。={{A}}'s Mindscape Core used for Mindscape Activation.
 心象核心=Mindscape Core
 通用心象核心=Universal Mindscape Core
 怪盜通用心象核心，任意怪盜心象啟動時，均可以補充消耗。=Universal Mindscape Core used for Mindscape Activation.
@@ -3373,9 +3388,11 @@ sr:"^當前任務目標處於<color\=#FF0000>(.*)</color>，\n是否立即前往
 回家休息=Go home and rest
 回到{{A}}=Return to {{A}}
 前往學校走廊=Go to the Hallway
+前往學校一樓=Go to first floor
 前往走廊=Go to the Hallway
 前往一樓=Go to first floor
 前往天臺=Go to the roof
+前往學校天臺=Go to the roof
 往電梯方向前進=Head to the elevator
 搭乘地鐵到{{A}}=Take the subway to {{A}}
 離開{{A}}=Leave {{A}}
@@ -3400,6 +3417,7 @@ r:"^前往{{A}}(\d+)區$"=$"Go to {{A}} Area $1"
 等待一段時間=Wait for a while
 將時間推進到夜晚=Pass the time to night
 返回家中=Go home
+對{{A}}進行改心=Change {{A}}'s heart
 故事告一段落=End of story
 查看SNS=View SNS
 
@@ -6141,3 +6159,4 @@ r:"^已收藏表情(\d+)/(\d+)$"="Favorite Emote $1/$2"
 
 薩克斯風的簧片=Saxophone Reed
 劇情道具。\n{{A}}贈送的薩克斯風簧片。=Story item. \nSaxophone reed given by {{A}}.
+粉餅盒=Makeup Compact
