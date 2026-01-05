@@ -534,15 +534,15 @@ RANK 7
 ----------
 Cu Chu
 r:"^咆哮的猛犬(.*)$"="Roaring Hound $1"
-r:"^暴擊率提升(\d+\.\d+%)。暴擊時為敵人附加「致命倒鉤」，下次使用固有技能攻擊引爆標記，使技能額外提升(\d+%)攻擊力的傷害。引爆標記時有極低機率觸發即死效果。$"="<size\=20>Increase Crit Rate by $1. Inflicts [Mortal Barb] when dealing Critical, detonates this the next time you use the signature skill, additionally increase skill damage by $1 ATK. When detonating, there is a very low chance of insta-kill.</size>"
-r:"^暴擊率提升(\d+\.\d+%)。暴擊時為敵人附加「致命倒鉤」，下次使用固有技能攻擊引爆標記，使技能額外提升(\d+%)攻擊力的傷害。引爆標記時有低機率觸發即死效果。$"="<size\=20>Increase Crit Rate by $1. Inflicts [Mortal Barb] when dealing Critical, detonates this the next time you use the signature skill, additionally increase skill damage by $1 ATK. When detonating, there is a low chance of insta-kill.</size>"
+r:"^暴擊率提升(\d+\.\d+%)。暴擊時為敵人附加「致命倒鉤」，下次使用固有技能攻擊引爆標記，使技能額外提升(\d+%)攻擊力的傷害。引爆標記時有極低機率觸發即死效果。$"="<size\=20>Increase Crit Rate by $1. Inflicts [Mortal Barb] when dealing Critical, detonates this the next time you use the unique skill, additionally increase skill damage by $1 ATK. When detonating, there is a very low chance of insta-kill.</size>"
+r:"^暴擊率提升(\d+\.\d+%)。暴擊時為敵人附加「致命倒鉤」，下次使用固有技能攻擊引爆標記，使技能額外提升(\d+%)攻擊力的傷害。引爆標記時有低機率觸發即死效果。$"="<size\=20>Increase Crit Rate by $1. Inflicts [Mortal Barb] when dealing Critical, detonates this the next time you use the unique skill, additionally increase skill damage by $1 ATK. When detonating, there is a low chance of insta-kill.</size>"
 致命倒鉤=Mortal Barb
 r:"^致<color\=#000000>命</color>倒鉤$"="M<color\=#000000>o</color>rtal Barb"
 使荊棘之槍造成額外效果=Gae Bulg triggers additional effects
 
 Siegfried
 r:"^勇者的無畏殺意(.*)$"="Fearless Hero $1"
-r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時獲得「龍血」：自身釋放物理屬性技能，攻擊力提升(\d+%)，持續(\d+)回合。使用固有技能後，會強化「龍血」狀態，釋放物理屬性技能額外提高(\d+%)傷害、(\d+%)暴擊效果。$"="<size\=21>Increase ATK by $1. At the start of battle, gain [Dragon Blood]: When using Phys skills, increase ATK by $2 for $3 turns. When using the signature skill, boosts the effect of [Dragon Blood], additionally increase damage by $4 and Crit DMG by $5 when using Phys skills.</size>"
+r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時獲得「龍血」：自身釋放物理屬性技能，攻擊力提升(\d+%)，持續(\d+)回合。使用固有技能後，會強化「龍血」狀態，釋放物理屬性技能額外提高(\d+%)傷害、(\d+%)暴擊效果。$"="<size\=21>Increase ATK by $1. At the start of battle, gain [Dragon Blood]: When using Phys skills, increase ATK by $2 for $3 turns. When using the unique skill, boosts the effect of [Dragon Blood], additionally increase damage by $4 and Crit DMG by $5 when using Phys skills.</size>"
 龍血=Dragon Blood
 r:"^龍<color\=#000000>血</color>$"="D<color\=#000000>r</color>agon Blood"
 
@@ -569,10 +569,10 @@ r:"^暴<color\=#000000>風</color>雪$"="B<color\=#000000>l</color>izzard"
 
 Yamata
 r:"^祭品的悲鳴(.*)$"="<size\=28>Screams of Sacrifice $1</size>"
-r:"^暴擊率提升(\d+\.\d+%)。戰鬥開始時獲得(\d+)層『祭品的悲鳴』。自身回合結束時獲得(\d+)層『祭品的悲鳴』。自身釋放固有技能時，若擁有(\d+)層『祭品的悲鳴』，則消耗(\d+)層『祭品的悲鳴』改為使所有敵人陷入<link\="s\|103"><u>凍結</u></link>效果，效果持續(\d+)回合，並使敵人受到的TECH傷害提升(.*)，持續(\d+)回合。$"="<size\=24>Increase Crit Rate by $1. At the start of battle, gain $2 stacks of [Screams of Sacrifice]. Gains $3 stack of [Screams of Sacrifice] at the end of your turn. When using the signature skill, if you have $4 stacks of [Screams of Sacrifice], then consumes $5 stacks of [Screams of Sacrifice] to inflict all foes with <link\="s|103"><u>Freeze</u></link> for $6 turns, and increase all foes' TECHNICAL DMG Taken by $7 for $8 turns.</size>"
+r:"^暴擊率提升(\d+\.\d+%)。戰鬥開始時獲得(\d+)層『祭品的悲鳴』。自身回合結束時獲得(\d+)層『祭品的悲鳴』。自身釋放固有技能時，若擁有(\d+)層『祭品的悲鳴』，則消耗(\d+)層『祭品的悲鳴』改為使所有敵人陷入<link\="s\|103"><u>凍結</u></link>效果，效果持續(\d+)回合，並使敵人受到的TECH傷害提升(.*)，持續(\d+)回合。$"="<size\=24>Increase Crit Rate by $1. At the start of battle, gain $2 stacks of [Screams of Sacrifice]. Gains $3 stack of [Screams of Sacrifice] at the end of your turn. When using the unique skill, if you have $4 stacks of [Screams of Sacrifice], then consumes $5 stacks of [Screams of Sacrifice] to inflict all foes with <link\="s|103"><u>Freeze</u></link> for $6 turns, and increase all foes' TECHNICAL DMG Taken by $7 for $8 turns.</size>"
 祭品的悲鳴=Screams of Sacrifice
 r:"^祭<color\=#000000>品</color>的悲鳴$"="S<color\=#000000>c</color>reams of Sacrifice"
-r:"^達到(\d+)層時，使自身固有技能產生額外效果$"="When reaching $1 stacks, \ntrigger additional effects from signature skill"
+r:"^達到(\d+)層時，使自身固有技能產生額外效果$"="When reaching $1 stacks, \ntrigger additional effects from unique skill"
 
 Seiryu
 r:"^東方神龍的庇蔭(.*)$"="<size\=28>Eastern Dragon's Shade $1</size>"
@@ -608,7 +608,7 @@ r:"^羽蛇之厲風(.*)$"="<size\=23>Feathered Serpent's Cyclone $1</size>"
 r:"^攻擊力提升(\d+\.\d+%)。對生命值高於(.*)的敵人造成的疾風屬性傷害提升(.*)。$"="<size\=28>Increase ATK by $1. Increase Wind DMG Dealt to foes above $2 HP by $3.</size>"
 
 Dionysus
-r:"^酒醉的狂歡(.*)$"="Druken Revelry $1"
+r:"^酒醉的狂歡(.*)$"="Drunken Revelry $1"
 r:"^暴擊率提升(\d+\.\d+%)。以同伴為目標釋放{{A}}技能後，使技能主目標的暴擊效果提升(.*)，效果持續2回合。$"="<size\=28>Increase Crit Rate by $1. When using a {{A}} skill on allies, increase the main target's Crit DMG by $2 for 2 turns.</size>"
 
 Bishamonten
@@ -637,7 +637,7 @@ r:"^效果命中提升(\d+\.\d+%)。敵人獲得持續傷害類效果時，使�
 
 Lilith
 r:"^暝夜的誘惑(.*)$"="Midnight Seduction $1"
-r:"^攻擊力提升(\d+\.\d+%)。使用冰凍、疾風或詛咒屬性的技能，使自身該屬性傷害提升(.*)，傷害減免(.*)，持續(.*)回合。{{A}}使用冰凍、疾風或詛咒屬性的技能，進化固有技能，使之附帶一段相同屬性的傷害，並且這次技能傷害大幅提升、獲得臨時穿透加成(.*)。$"="<size\=24>Increase ATK by $1. When using Ice, Wind, or Curse skill, increase that Elemental DMG by $2 and DMG RES by $3 for $4 turns. When {{A}} uses Ice, Wind, or Curse skill, evolves the signature skill, makes it deal 1 hit of that element's damage, heavily increase skill damage and gains $5 PEN.</size>"
+r:"^攻擊力提升(\d+\.\d+%)。使用冰凍、疾風或詛咒屬性的技能，使自身該屬性傷害提升(.*)，傷害減免(.*)，持續(.*)回合。{{A}}使用冰凍、疾風或詛咒屬性的技能，進化固有技能，使之附帶一段相同屬性的傷害，並且這次技能傷害大幅提升、獲得臨時穿透加成(.*)。$"="<size\=24>Increase ATK by $1. When using Ice, Wind, or Curse skill, increase that Elemental DMG by $2 and DMG RES by $3 for $4 turns. When {{A}} uses Ice, Wind, or Curse skill, evolves the unique skill, makes it deal 1 hit of that element's damage, heavily increase skill damage and gains $5 PEN.</size>"
 
 Trumpeter
 r:"^崩壞的號角(.*)$"="Horn of Ruin $1"
@@ -648,7 +648,7 @@ RANK 8
 --------
 Yoshitsune
 r:"^連勝的宿命(.*)$"="Victory Fortold $1"
-r:"^暴擊效果提升(\d+\.\d+%)。戰鬥開始，獲得「奇襲」(\d+)層。固有技能造成每段傷害有(\d+%)機率獲得「奇襲」，每段提升自身攻擊力(\d+%)，持續(\d+)回合，最多(\d+)層。達到(\d+)層，提升固有技能暴擊率(\d+%)。$"="<size\=21>Increase Crit DMG by $1. At the start of battle, gain $2 stacks of [Guerrilla]. When using the signature skill there is a $3 chance to gain [Guerrilla], each stack increase own ATK by $4 for $5 turns, up to $6 stacks. Increase the Crit Rate of the signature skill by $8 when reaching $7 stacks.</size>"
+r:"^暴擊效果提升(\d+\.\d+%)。戰鬥開始，獲得「奇襲」(\d+)層。固有技能造成每段傷害有(\d+%)機率獲得「奇襲」，每段提升自身攻擊力(\d+%)，持續(\d+)回合，最多(\d+)層。達到(\d+)層，提升固有技能暴擊率(\d+%)。$"="<size\=21>Increase Crit DMG by $1. At the start of battle, gain $2 stacks of [Guerrilla]. When using the unique skill there is a $3 chance to gain [Guerrilla], each stack increase own ATK by $4 for $5 turns, up to $6 stacks. Increase the Crit Rate of the unique skill by $8 when reaching $7 stacks.</size>"
 奇襲=Guerrilla
 r:"^攻擊力提升(\d+%)，達到(\d+)層提升固有技能暴擊率$"="Increase ATK by $1; \nAt $2 stacks, increase unique skill's Crit Rate"
 
@@ -689,7 +689,7 @@ r:"^暴擊率提升(\d+\.\d+%)。增加風襲的效果命中(\d+%)，對風襲�
 
 Kohryu
 r:"^祥瑞之主(.*)$"="<size\=28>Lord of Auspiciousness $1</size>"
-r:"^攻擊力提升(\d+\.\d+%)。處於後臺時也能生效：所有同伴每造成1種不同屬性的傷害，使{{A}}獲得(\d+)層『四象』，上限(\d+)層。自身回合開始時，若擁有至少(\d+)層『四象』，則清空所有『四象』獲得『四象之力』：使自身攻擊力提升(\d+%)，所有友方同伴攻擊力提升(\d+%)，並進化自身技能，持續(\d+)回合。$"="<size\=22>Increase ATK by $1. Works when not active: Gains $2 stack of [Four Symbols] when allies deal different elemental damage, up to $3 stacks. At the start of your turn, if you have at least $4 stacks of [Four Symbols], then consumes all [Four Symbols] to gain [Four Symbols' Power]: Increase own ATK by $5 and all allies' ATK by $6, then evolves your signature skill for $7 turns.</size>"
+r:"^攻擊力提升(\d+\.\d+%)。處於後臺時也能生效：所有同伴每造成1種不同屬性的傷害，使{{A}}獲得(\d+)層『四象』，上限(\d+)層。自身回合開始時，若擁有至少(\d+)層『四象』，則清空所有『四象』獲得『四象之力』：使自身攻擊力提升(\d+%)，所有友方同伴攻擊力提升(\d+%)，並進化自身技能，持續(\d+)回合。$"="<size\=22>Increase ATK by $1. Work when inactive: When allies deal different attribute damage, grant {{A}} $2 [Four Symbols] stack. Stacks up to $3 times. At the start of user's turn, if user has at least $4 [Four Symbols] stacks, spend all [Four Symbols] to gain [Four Symbols' Power]: Increase user's ATK by $5 and all allies' ATK by $6, then evolve the unique skill. Lasts for $7 turns.</size>"
 四象=Four Symbols
 四象的數量=Number of Four Symbols
 四象之力=Four Symbols' Power
@@ -698,15 +698,15 @@ r:"^四<color\=#000000>象</color>之力$"="F<color\=#000000>o</color>ur Symbols
 
 Shiva
 r:"^因果的流轉(.*)$"="Karma Reversal $1"
-r:"^攻擊力提升(\d+\.\d+%)。每回合開始時獲得『慧識』，最多疊加3層。使用固有技能消耗『慧識』，根據消耗數量獲得以下效果：\n1層：增加本次念動攻擊時的傷害(.*)。\n2層：增加敵人防禦力降低(.*)，(.*)回合。\n3層：增加目標受到念動傷害時的暴擊率(.*)，(.*)回合。$"="<size\=21>Increase ATK by $1. Gains 1 stack of [Wisdom] at the start of turn, up to 3 stacks. Consumes all [Wisdom] when using the signature skill and triggers the following effects based on the amount consumed:\n1 stack: Increase this damage by $2. \n2 stacks: Decrease all foes' DEF by $3 for $4 turn. \n3 stacks: Increase all foes' Psy DMG Crit Rate Taken by $5 for $6 turn.</size>"
+r:"^攻擊力提升(\d+\.\d+%)。每回合開始時獲得『慧識』，最多疊加3層。使用固有技能消耗『慧識』，根據消耗數量獲得以下效果：\n1層：增加本次念動攻擊時的傷害(.*)。\n2層：增加敵人防禦力降低(.*)，(.*)回合。\n3層：增加目標受到念動傷害時的暴擊率(.*)，(.*)回合。$"="<size\=21>Increase ATK by $1. Gains 1 stack of [Wisdom] at the start of turn, up to 3 stacks. Consumes all [Wisdom] when using the unique skill and triggers the following effects based on the amount consumed:\n1 stack: Increase this damage by $2. \n2 stacks: Decrease all foes' DEF by $3 for $4 turn. \n3 stacks: Increase all foes' Psy DMG Crit Rate Taken by $5 for $6 turn.</size>"
 慧識=Wisdom
 r:"^慧<color\=#000000>識</color>$"="W<color\=#000000>i</color>sdom"
 強化固有技能『{{A}}之舞』=Upgrade [Dance of Destruction]
 
 Sraosha
 r:"^罪惡的傾聽者(.*)$"="Listener of Sin $1"
-r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，獲得(\d+)層「神之耳」，持續(\d+)回合，上限(\d+)層。友方釋放HIGHLIGHT時，獲得(\d+)層「神之耳」。祝福屬性同伴釋放HIGHLIGHT時額外獲得(\d+)層「神之耳」。使用固有技能時，消耗所有「神之耳」，每層使敵人受到祝福屬性傷害提升(\d+%)，持續(\d+)回合。若「神之耳」達到(\d+)層，額外使敵人受到祝福屬性時的防禦降低(\d+%)。$"="<size\=21>Increase ATK by $1. At the start of battle, gain $2 stacks of [God's Ear] for $3 turns, up to $4 stacks. When allies use HIGHLIGHT, gain $5 stack of [God's Ear], additionally gains $6 stack of [God's Ears] when Bless allies use HIGHLIGHT. When using the signature skill, consumes all [God's Ear], each stack increase Bless DMG Taken by $7 for $8 turns. If [God's Ear] reaches $9 stacks, additionally decrease foes' DEF when taking Bless damage by $10.</size>"
-r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，獲得(\d+)層「神之耳」，持續(\d+)回合，上限(\d+)層。友方釋放HIGHLIGHT時，獲得(\d+)層「神之耳」。祝福屬性怪盜釋放HIGHLIGHT時額外獲得(\d+)層「神之耳」。使用固有技能時，消耗所有「神之耳」，每層使敵人受到祝福屬性傷害提升(\d+%)，持續(\d+)回合。若「神之耳」達到(\d+)層，額外使敵人受到祝福屬性時的防禦降低(\d+%)。$"="<size\=21>Increase ATK by $1. At the start of battle, gain $2 stacks of [God's Ear] for $3 turns, up to $4 stacks. When allies use HIGHLIGHT, gain $5 stack of [God's Ear], additionally gains $6 stack of [God's Ears] when Bless allies use HIGHLIGHT. When using the signature skill, consumes all [God's Ear], each stack increase Bless DMG Taken by $7 for $8 turns. If [God's Ear] reaches $9 stacks, additionally decrease foes' DEF when taking Bless damage by $10.</size>"
+r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，獲得(\d+)層「神之耳」，持續(\d+)回合，上限(\d+)層。友方釋放HIGHLIGHT時，獲得(\d+)層「神之耳」。祝福屬性同伴釋放HIGHLIGHT時額外獲得(\d+)層「神之耳」。使用固有技能時，消耗所有「神之耳」，每層使敵人受到祝福屬性傷害提升(\d+%)，持續(\d+)回合。若「神之耳」達到(\d+)層，額外使敵人受到祝福屬性時的防禦降低(\d+%)。$"="<size\=21>Increase ATK by $1. At the start of battle, gain $2 stacks of [God's Ear] for $3 turns, up to $4 stacks. When allies use HIGHLIGHT, gain $5 stack of [God's Ear], additionally gains $6 stack of [God's Ears] when Bless allies use HIGHLIGHT. When using the unique skill, consumes all [God's Ear], each stack increase Bless DMG Taken by $7 for $8 turns. If [God's Ear] reaches $9 stacks, additionally decrease foes' DEF when taking Bless damage by $10.</size>"
+r:"^攻擊力提升(\d+\.\d+%)。戰鬥開始時，獲得(\d+)層「神之耳」，持續(\d+)回合，上限(\d+)層。友方釋放HIGHLIGHT時，獲得(\d+)層「神之耳」。祝福屬性怪盜釋放HIGHLIGHT時額外獲得(\d+)層「神之耳」。使用固有技能時，消耗所有「神之耳」，每層使敵人受到祝福屬性傷害提升(\d+%)，持續(\d+)回合。若「神之耳」達到(\d+)層，額外使敵人受到祝福屬性時的防禦降低(\d+%)。$"="<size\=21>Increase ATK by $1. At the start of battle, gain $2 stacks of [God's Ear] for $3 turns, up to $4 stacks. When allies use HIGHLIGHT, gain $5 stack of [God's Ear], additionally gains $6 stack of [God's Ears] when Bless allies use HIGHLIGHT. When using the unique skill, consumes all [God's Ear], each stack increase Bless DMG Taken by $7 for $8 turns. If [God's Ear] reaches $9 stacks, additionally decrease foes' DEF when taking Bless damage by $10.</size>"
 r:"^罪<color\=#000000>惡</color>的傾聽者$"="L<color\=#000000>i</color>stener of Sin"
 r:"^神<color\=#000000>之</color>耳$"="G<color\=#000000>o</color>d's Ear"
 神之耳=God's Ear
@@ -730,7 +730,7 @@ r:"^驚<color\=#000000>恐</color>$"="F<color\=#000000>r</color>ightened"
 Sandalphon
 r:"^龐然的守護(.*)$"="Higher Protection $1"
 r:"^防禦力提升(\d+\.\d+%)。{{A}}在場時使處於護盾下的同伴防禦力提升(\d+%)，處於後臺時獲得(\d+%)增益效果。$"="<size\=25>Increase DEF by $1. When {{A}} is present, increase all shielded allies' DEF by $2, gain $3 of this effect when not present.</size>"
-r:"^防禦力提升(\d+\.\d+%)。{{A}}在場時使處於護盾下的同伴防禦力提升(\d+%)，處於後臺時獲得(\d+%)增益效果。釋放固有技能時，消耗的生命值降低至(\d+%)。$"="<size\=22>Increase DEF by $1. When {{A}} is present, increase all shielded allies' DEF by $2, gain $3 of this effect when not present. Decrease the HP cost to $4 when using the signature skill.</size>"
+r:"^防禦力提升(\d+\.\d+%)。{{A}}在場時使處於護盾下的同伴防禦力提升(\d+%)，處於後臺時獲得(\d+%)增益效果。釋放固有技能時，消耗的生命值降低至(\d+%)。$"="<size\=22>Increase DEF by $1. When {{A}} is present, increase all shielded allies' DEF by $2, gain $3 of this effect when not present. Decrease the HP cost to $4 when using the unique skill.</size>"
 
 --------
 RANK 9

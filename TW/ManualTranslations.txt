@@ -1189,6 +1189,7 @@ r:"^推薦編入(\d+)名<size\=(\d+)><sprite\=(\d+) tint\=1></size>角色$"="Rec
 r:"^怪盜等級上限提升至<color\=#FFF000>LV.(\d+)</color>$"="Increase max level to <color\=#FFF000>Lv.$1</color>"
 r:"^角色等級上限提升至<color\=#FFF000>LV.(\d+)</color>$"="Increase max level to <color\=#FFF000>Lv.$1</color>"
 該怪盜已進化至滿級！=Awareness maxed!
+該角色已進化至滿級！=Awareness maxed!
 
 正在使用=Using
 {{A}}煥新=<size\=18>New {{A}}</size>
@@ -2420,6 +2421,9 @@ r:"^{{A}}似乎有話要說，要陪她嗎？$"="{{A}} seems to have something t
 
 家訪通知=<size\=24>Home visit notice</size>
 {{A}}的家訪會有所不同嗎？=Will {{A}}'s home visit be different?
+
+{{A}}轉達的邀約=<size\=24>Invitation relay</size>
+{{A}}似乎想在遊戲中見面，拜託了{{B}}來轉達……={{A}} seems to want to meet in-game and has asked {{B}} to relay it...
 
 r:"^似乎是和{{A}}<color\=#FFC000>第一次</color>去這個地方，應該更能增進感情。$"="<size\=25>This is the <color\=#FFC000>first time</color> I have gone to that place with {{A}}.\nWe should be able to grow closer.</size>"
 
@@ -3797,12 +3801,16 @@ r:"^<pos\=45>所有怪盜最終生命值降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decre
 r:"^<pos\=45>所有怪盜最終攻擊力下降(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Final ATK by $1"
 r:"^<pos\=45>所有怪盜最終防禦力下降(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Final DEF by $1"
 r:"^<pos\=45>所有怪盜治療效果降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Healing Effect by $1"
+r:"^<pos\=45>所有怪盜最終治療效果降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Final Healing Effect by $1"
 r:"^<pos\=45>所有怪盜護盾效果降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Shield Effect by $1"
+r:"^<pos\=45>所有怪盜最終護盾效果降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease all Thieves' Final Shield Effect by $1"
 r:"^<pos\=45>解明怪盜的技能準備時間延長(\d+(.\d+)?(%)?)次行動$"="<pos\=45>Increase all Elucidator Thieves' cooldown by $1 actions"
 r:"^<pos\=45>禁止上陣優越職業怪盜與面具$"="<pos\=45>Ban Strategist Thieves and Personas"
 r:"^<pos\=45>禁止上陣屈從職業怪盜與面具$"="<pos\=45>Ban Saboteur Thieves and Personas"
 r:"^<pos\=45>怪盜造成的火冰電風屬性的傷害降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease Thieves' Fire/Ice/Elec/Wind DMG by $1"
+r:"^<pos\=45>怪盜造成的火冰電風屬性的最終傷害降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease Thieves' Fire/Ice/Elec/Wind Final DMG by $1"
 r:"^<pos\=45>怪盜造成的念核祝咒屬性的傷害降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease Thieves' Psy/Nuke/Bless/Curse DMG by $1"
+r:"^<pos\=45>怪盜造成的念核祝咒屬性的最終傷害降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease Thieves' Psy/Nuke/Bless/Curse Final DMG by $1"
 r:"^<pos\=45>HL能量回復速度降低(\d+(.\d+)?(%)?)$"="<pos\=45>Decrease HIGHLIGHT Energy recovery rate by $1"
 r:"^<pos\=45>(\d+(.\d+)?(%)?)回合內結束戰鬥且戰鬥中無怪盜陣亡$"="<pos\=45>Win within $1 actions and with no faint"
 
@@ -3812,12 +3820,16 @@ r:"^所有怪盜最終生命值降低(\d+(.\d+)?(%)?)$"="Decrease all Thieves' F
 r:"^所有怪盜最終攻擊力下降(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Final ATK by $1"
 r:"^所有怪盜最終防禦力下降(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Final DEF by $1"
 r:"^所有怪盜治療效果降低(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Healing Effect by $1"
+r:"^所有怪盜最終治療效果降低(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Final Healing Effect by $1"
 r:"^所有怪盜護盾效果降低(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Shield Effect by $1"
+r:"^所有怪盜最終護盾效果降低(\d+(.\d+)?(%)?)$"="Decrease all Thieves' Final Shield Effect by $1"
 r:"^解明怪盜的技能準備時間延長(\d+(.\d+)?(%)?)次行動$"="Increase all Elucidator Thieves' cooldown by $1 actions"
 r:"^禁止上陣優越職業怪盜與面具$"="Ban Strategist Thieves and Personas"
 r:"^禁止上陣屈從職業怪盜與面具$"="Ban Saboteur Thieves and Personas"
 r:"^怪盜造成的火冰電風屬性的傷害降低(\d+(.\d+)?(%)?)$"="Decrease Thieves' Fire/Ice/Elec/Wind DMG by $1"
+r:"^怪盜造成的火冰電風屬性的最終傷害降低(\d+(.\d+)?(%)?)$"="Decrease Thieves' Final Fire/Ice/Elec/Wind Final DMG by $1"
 r:"^怪盜造成的念核祝咒屬性的傷害降低(\d+(.\d+)?(%)?)$"="Decrease Thieves' Psy/Nuke/Bless/Curse DMG by $1"
+r:"^怪盜造成的念核祝咒屬性的最終傷害降低(\d+(.\d+)?(%)?)$"="Decrease Thieves' Psy/Nuke/Bless/Curse Final DMG by $1"
 r:"^HL能量回復速度降低(\d+(.\d+)?(%)?)$"="Decrease HIGHLIGHT Energy recovery rate by $1"
 r:"^(\d+(.\d+)?(%)?)回合內結束戰鬥且戰鬥中無怪盜陣亡$"="Win within $1 actions and with no faint"
 尚未選擇異變效果=No modifier
@@ -5998,7 +6010,9 @@ r:"^(.*)·覺醒之焰$"="$1·Flame of Awakening"
 r:"^(.*)·心跳之夏$"="$1·Summer of Heartbeats"
 r:"^(.*)·新春之禧$"="$1·Celebration of Spring"
 r:"^(.*)·向死之叛$"="$1·Defiance towards Death"
+J&C·雙生之棘=J&C·Thorns of Twins
 {{A}}意識等級達到6級=Raise {{A}}'s Awareness Level to 6
+{{A}}&{{B}}意識等級達到6級=Raise {{A}} & {{B}}'s Awareness Level to 6
 
 r:"^與協同者{{A}}好感度達到rank(\d+)\n且與{{A}}成為{{B}}$"="Reach Synergy Rank $1 with {{A}} and become {{B}}."
 
