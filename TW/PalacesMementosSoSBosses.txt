@@ -2693,6 +2693,51 @@ sr:"^<color\=#FF0000>(.*)</color>失去了「(.*)」，全適應性恢復了…�
 扭曲等級：=Distortion:
 通關詳情=Clear Details
 
+1、戀愛會施放『馬琳卡琳』對一位怪盜進行魅惑，還會施放『天使之箭』攻擊未被魅惑的怪盜。但魅惑可以被<color\=#FFFC40>驅散</color>且戀愛<color\=#FFFC40>倒地</color>時，我方全體的『魅惑』狀態會立即解除。\n2、戀愛進入二階段後會圍繞一位怪盜為『吐息之眼』施放『誘惑吐息』來極大幅度提高魅惑的成功率。但當該怪盜的『吐息之眼』被<color\=#FFFC40>驅散</color>，或是戀愛<color\=#FFFC40>倒地</color>時，『誘惑吐息』施加的霧氣和效果將被移除。\n3、戀愛進入二階段後施放的『性感之舞』和『{{A}}』在『誘惑吐息』存在時會對我方造成極大威脅，『碎心一擊』更是能對『魅惑』狀態的怪盜造成極大傷害，請小心應對吧！=1. Lover will use [Marin Karin] to inflict Charm on 1 Thief, and use [Holy Arrow] to attack Thieves without Charm. Thieves can <color\=#FFFC40>dispel</color> Charm; and when Lovers is <color\=#FFFC40>knocked downed</color>, clear all [Charm] on all Thieves.\n2. After Lovers enter phase 2, it will use [Seductive Mist] and inflict 1 Thief with [Source of Seduction], heavily increasing their susceptibility to Charm. If [Source of Seduction] on that Thief is <color\=#FFFC40>dispelled</color> or Lovers is <color\=#FFFC40>knocked down</color>, clear all effects from [Seductive Mist].\n3. After Lovers enter phase 2, its [Sexy Dance] and [{{A}}] will do more when [Source of Seduction] is on the field; [Heartbreaker] will deal heavy damage to Thieves with [Charm].
+馬琳卡琳=Marin Karin
+瑪琳卡琳=Marin Karin
+r:"^使1名敵人陷入【魅惑】狀態，持續(\d+)回合。$"="Inflict [Charm] on 1 foe for $1 turns."
+天使之箭=Holy Arrow
+對1名未陷入【魅惑】敵人造成大量物理屬性傷害，優先攻擊血量百分比最低的敵方單位。=Deal heavy Phys damage to 1 foe without [Charm], prioritze lowest HP% target.
+r:"^對1名敵人造成大量火焰屬性傷害，且有一定機率使敵人陷入<link\="s\|102"><u>燃燒</u></link>狀態，持續(\d+)回合。$"="Deal heavy Fire damage to 1 foe, with a chance to inflict <link\="s|102"><u>Burn</u></link> for $1 turns."
+吐息之眼=Foul Eye
+誘惑吐息=Seductive Mist
+r:"^誘<color\=#000000>惑</color>吐息$"="S<color\=#000000>e</color>ductive Mist"
+使敵方全體陷入【魅惑】的機率極大幅提高。=Heavily increase all foes' susceptibility to [Charm].
+性感之舞=Sexy Dance
+r:"^一定機率使全部敵人進入【魅惑】狀態(\d+)回合。$"="Chance to inflict [Charm] on all foes for $1 turns."
+碎心一擊=Heartbreaker
+對敵方全體造成大量物理屬性傷害，對【魅惑】的敵人造成的傷害額外提升並解除【魅惑】。=Deal heavy Phys damage to all foes, deal increased damage to foes with [Charm] then clear their [Charm].
+對1名未陷入【魅惑】敵人造成大量物理屬性傷害，優先攻擊血量百分比最低的敵方單位，並使其陷入【魅惑】。=Deal heavy Phys damage to 1 foe without [Charm], prioritze lowest HP% target and inflict them with [Charm].
+誘惑之源=Source of Seduction
+r:"^誘<color\=#000000>惑</color>之源$"="S<color\=#000000>o</color>urce of Seduction"
+誘惑吐息的源頭。驅散後可解除誘惑吐息。=The source of seduction. \nDispel this to clear Seductive Mist.
+sr:"^以<color\=#FF0000>(.*)</color>為中心生成了誘惑吐息……$"="A mist was generated around <color\=#FF0000>$1</color>!"
+魅惑=Charm
+r:"^魅<color\=#000000>惑</color>$"="C<color\=#000000>h</color>arm"
+sr:"^<color\=#FF0000>(.*)</color>被魅惑了……$"="<color\=#FF0000>$1</color> inflicted with Charm..."
+sr:"^<color\=#FF0000>(.*)</color>處於魅惑狀態，無法判斷敵我……$"="<color\=#FF0000>$1</color> cannot tell friend from foe!"
+sr:"^<color\=#FF0000>(.*)</color>恢復了理智。$"="<color\=#FF0000>$1</color> regained reason!"
+sr:"^<color\=#FF0000>(.*)</color>將會成為被優先攻擊的目標……$"="<color\=#FF0000>$1</color> is prioritized by foes..."
+天使之吻=Angel's Kiss
+r:"^天<color\=#000000>使</color>之吻$"="A<color\=#000000>n</color>gel's Kiss"
+『天使之箭』和『{{A}}』會額外使命中的目標優先受到攻擊=[Holy Arrow] and [{{A}}] will make the target prioritized by foes
+將會成為被優先攻擊的目標=Prioritized by foes
+惑心焚身=Burning Bewitchment
+r:"^陷入『魅惑』的怪盜傷害提升(\d+%)、受到傷害提升(\d+%)$"="Thieves inflicted with [Charm] increase DMG Dealt by $1 and DMG Taken by $2"
+情刃穿心=Stabbed by Love
+『碎心一擊』對陷入『魅惑』的怪盜必定暴擊=[Heartbreaker] will Always Crit to Thieves inflicted with [Charm]
+情絲蝕甲=Corroding Threads
+r:"^『誘惑吐息』進一步提升『魅惑』的成功率並使怪盜受到傷害提升(\d+%)$"="[Seductive Mist] has increased [Charm] chance and can increase Thieves' DMG Taken by $1"
+越挫越勇=What Doesn't Kill You
+r:"^越<color\=#000000>挫</color>越勇$"="W<color\=#000000>h</color>at Doesn't Kill You"
+r:"^戀愛被擊倒時最終傷害及最終傷害減免在(\d+)回合內提高(\d+%)，且倒地值上限永久增加(\d+)點，最多疊加(\d+)層。$"="When Lovers is knocked down, increase Final DMG and Final DMG RES by $2 for $1 turns. Also permanently increase Down Points by $3. Stacks up to $4 times."
+
+被敵人魅惑了！\n無法分清敵我……！=They're charmed by the enemy and can't tell friend from foe...!
+這陣霧氣……會讓人更容易被催眠。\n大家請多加小心！=This mist... it'll make people more susceptible to hypnosis. Please be careful!
+在被魅惑的狀態下受到攻擊會很危險！\n請在戰鬥時注意互相支援！=Being attacked while under Charm is dangerous! Please support each other!
+誘惑吐息消失了！=Cleared Seductive Mist!
+
 ----------
 Sea of Souls Trials (SoS)
 ----------
@@ -2755,6 +2800,7 @@ r:"^累計獲得（<color\=#EF0000>(\d+)</color>/(\d+)）分$"="Total Score Obta
 <size\=26>Successful Defenses:</size>
 <size\=27>Rounds Survived:</size>
 操作提示=Controls
+抵禦敵人進攻6回合並獲得更高的分數=Gain a higher score within 6 turns
 當前有保存的進度，是否繼續挑戰？=Do you want to continue the challenge where you left off?
 選擇「清空進度」會清除保存的記錄並重新挑戰。=Select [No] to reset progress and retry.
 關卡尚未通關，是否保存當前進度並暫時離開？=Do you want to save your progress and leave?
@@ -2976,3 +3022,12 @@ r:"^震<color\=#000000>頻</color>激蕩$"="R<color\=#000000>e</color>sonant Sur
 sr:"^每造成一種屬性的傷害，自身獲得獲得(\d+)層『(.*)』。『(.*)』：每層提供(\d+%)的最終傷害加成，持續(\d+)回合，最多可疊加(\d+)層。$"="When dealing 1 type of attribute damage, user gains $1 [$2] stack. [$3]: Increase Final DMG by $4 for $5 turn. Stacks up to $6 times."
 思維巢穴=Thought Lair
 r:"^思<color\=#000000>維</color>巢穴$"="T<color\=#000000>h</color>ought Lair"
+
+黑暗吞噬=Devouring Darkness
+sr:"^使敵人陷入嘲諷狀態時，為所有友方添加(\d+)層『(.*)』；自身造成不同屬性的傷害，為所有友方添加(\d+)層『(.*)』，若造成的為萬能傷害，額外為所有友方添加(\d+)層『(.*)』。$"="When inflicting foes with Taunt, grant all allies $1 [$2] stacks; When user deals different attribute damage, grant all allies $3 [$4] stack, if the damage dealt was Almighty, grant all allies $5 bonus [$6] stack."
+r:"^使敵人陷入嘲諷狀態時，為所有友方添加(\d+)層<link\="dc\|284"><u>『第六感知』</u></link>；自身造成不同屬性的傷害，為所有友方添加(\d+)層<link\="dc\|284"><u>『第六感知』</u></link>，若造成的為萬能傷害，額外為所有友方添加(\d+)層<link\="dc\|284"><u>『第六感知』</u></link>。$"="<size\=22>When inflicting foes with Taunt, grant all allies $1 <link\="dc|284"><u>[Sixth Sense]</u></link> stacks; When user deals different attribute damage, grant all allies $2 <link\="dc|284"><u>[Sixth Sense]</u></link> stack, if the damage dealt was Almighty, grant all allies $3 bonus <link\="dc|284"><u>[Sixth Sense]</u></link> stack.</size>"
+r:"^每層提供(\d+%)的最終傷害加成，持續(\d+)回合（每層獨立計算），最多可疊加(\d+)層；疊加至(\d+)層時，額外獲得(\d+%)的最終傷害加成。$"="Increase Final DMG by $1 for $2 turns. Stacks up to $3 times, and stacks are spent separately; At $4 stacks, increase Final DMG by $5 more"
+r:"^使敵人陷入嘲諷狀態時，為所有友方添加(\d+)層『第六感知』；自身造成不同屬性的傷害，為所有友方添加(\d+)層『第六感知』，若造成的為萬能傷害，額外為所有友方添加(\d+)層『第六感知』。『第六感知』：每層提供(\d+%)的最終傷害加成，持續(\d+)回合（每層獨立計算），最多可疊加(\d+)層；疊加至(\d+)層時，額外獲得(\d+%)的最終傷害加成。$"="When inflicting foes with Taunt, grant all allies $1 [Sixth Sense] stacks; When user deals different attribute damage, grant all allies $2 [Sixth Sense] stack, if the damage dealt was Almighty, grant all allies $3 bonus [Sixth Sense] stack. [Sixth Sense]: Increase Final DMG by $4 for $5 turns. Stacks up to $6 times, and stacks are spent separately; At $7 stacks, increase Final DMG by $8 more"
+第六感知=Sixth Sense
+r:"^第<color\=#000000>六</color>感知$"="S<color\=#000000>i</color>xth Sense"
+r:"^第六感知疊加至(\d+)層，提升(\d+%)的最終傷害$"="At $1 Sixth Sense stacks, \nincrease Final DMG by $2"
