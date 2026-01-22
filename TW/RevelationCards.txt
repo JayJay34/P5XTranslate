@@ -90,7 +90,7 @@ r:"^最多可以選擇(\d+)個材料哦～$"="Can select up to $1 materials."
 
 當前方案=Current Preset
 r:"^預設方案(\d+)$"="Preset $1"
-r:"^新增方案\（(\d+)/(\d+)\）$"="Presets ($1/$2)"
+r:"^新增方案\（(\d+)/(\d+)\）$"="Add New ($1/$2)"
 r:"^是否使用預設方案(.*)替換當前使用的啟示？$"="Switch to this preset?"
 正在使用該方案。=Already in use.
 該方案有變化，是否要直接退出？=Leave without saving?
@@ -101,6 +101,69 @@ r:"^是否使用預設方案(.*)替換當前使用的啟示？$"="Switch to this
 預設內有部分啟示正在被其他角色使用，是否確認繼續使用？=Some cards are being used by other characters, continue?
 確認後將自動卸下其他角色正在使用的啟示=Automatically unequip all used cards on other characters
 r:"^是否刪除預設方案(.*)？$"="Delete this preset?"
+
+查看「<color\=#ff3b37>啟示建議</color>」=View [<color\=#ff3b37>Recommendations</color>]
+詞條協助工具=<size\=22>Stats Assist Tool</size>
+主词条不合适\n=Wrong main
+合适的副词条数=Useful subs
+啟示建議=Recommendations
+啟示詳情=Details
+<color\=#FDD600>四件套</color>效果啟動=Active <color\=#FDD600>4 set</color> effect 
+<color\=#FDD600>協調</color>效果啟動=Active <color\=#FDD600>Space card</color> effect
+當前4件套效果<color\=#FFDE00>未啟動</color>。\n推薦調整「日月星辰」啟動套裝效果。=No <color\=#FFDE00>active</color> 4 set effect.
+當前<color\=#FFDE00>未佩戴</color>宙卡。\n宙卡協調效果未啟動。=No <color\=#FFDE00>equipped</color> Space card.
+主詞條佩戴建議：=Recommended main stats:
+推薦副詞條情況=Recommended substats
+攜帶推薦副詞條情況：=Equipped recommended substats:
+總有效副詞條數=Total useful substats
+总有效副词条数=Total useful substats
+「生命值百分比」副詞條數=[HP%] substats amount
+「生命值」副詞條數=[HP] substats amount
+「攻擊力百分比」副詞條數=[ATK%] substats amount
+「攻擊力」副詞條數=[ATK] substats amount
+「防禦力百分比」副詞條數=[DEF%] substats amount
+「防禦力」副詞條數=[DEF] substats amount
+「速度」副詞條數=[SPD] substats amount
+「暴擊率」副詞條數=[Crit Rate] substats amount
+「暴擊效果」副詞條數=[Crit DMG] substats amount
+「精力回復」副詞條數=[SP Recovery] substats amount
+「穿透」副詞條數=[Pierce] substats amount
+「效果命中」副詞條數=[Ailment ACC] substats amount
+「傷害加成」副詞條數=[DMG Bonus] substats amount
+
+sr:"^<color\=#E0DDBE>(.*)</color> 位置：宙\n推薦副詞條：<color\=#FFDE00>(.*)</color>。$"="Mark: Space\nRecommended substats: <color\=#FFDE00>$2</color>."
+sr:"^<color\=#E0DDBE>(.*)</color> 位置：日\n推薦副詞條：<color\=#FFDE00>(.*)</color>。$"="Mark: Sun\nRecommended substats: <color\=#FFDE00>$2</color>."
+sr:"^<color\=#E0DDBE>(.*)</color> 位置：月\n推薦主詞條：<color\=#FFDE00>(.*)</color>。\n推薦副詞條：<color\=#FFDE00>(.*)</color>。$"="Mark: Moon\nRecommended main stat: <color\=#FFDE00>$2</color>.\nRecommended substats: <color\=#FFDE00>$3</color>."
+sr:"^<color\=#E0DDBE>(.*)</color> 位置：星\n推薦主詞條：<color\=#FFDE00>(.*)</color>。\n推薦副詞條：<color\=#FFDE00>(.*)</color>。$"="Mark: Star\nRecommended main stat: <color\=#FFDE00>$2</color>.\nRecommended substats: <color\=#FFDE00>$3</color>."
+sr:"^<color\=#E0DDBE>(.*)</color> 位置：辰\n推薦主詞條：<color\=#FFDE00>(.*)</color>。\n推薦副詞條：<color\=#FFDE00>(.*)</color>。$"="Mark: Sky\nRecommended main stat: <color\=#FFDE00>$2</color>.\nRecommended substats: <color\=#FFDE00>$3</color>."
+
+生命值百分比/防禦力百分比=HP%/DEF%
+生命值百分比/速度/生命值=HP%/SPD/HP
+生命值百分比/速度/精力回復=HP%/SPD/SP Recovery
+生命值百分比/速度/效果命中/傷害加成=HP%/SPD/Ailment ACC/DMG Bonus
+攻擊力百分比/速度/攻擊力=ATK%/SPD/ATK
+攻擊力百分比/暴擊率/暴擊效果=ATK%/Crit Rate/Crit DMG
+攻擊力百分比/暴擊效果/暴擊率/穿透/傷害加成=ATK%/Crit DMG/Crit Rate/Pierce/DMG Bonus
+攻擊力百分比/暴擊率/暴擊效果/速度/精力回復=ATK%/Crit Rate/Crit DMG/SPD/SP Recovery
+攻擊力百分比/生命值百分比/效果命中/精力回復=ATK%/HP%/Ailment ACC/SP Recovery
+防禦力百分比/速度/防禦力=DEF%/SPD/DEF
+防禦力百分比/暴擊效果/暴擊率/穿透/傷害加成=DEF%/Crit DMG/Crit Rate/Pierce/DMG Bonus
+速度/攻擊力百分比/暴擊率/暴擊效果=SPD/ATK%/Crit Rate/Crit DMG
+速度/攻擊力百分比/暴擊率/暴擊效果/效果命中=SPD/ATK%/Crit Rate/Crit DMG/Ailment ACC
+暴擊率/攻擊力百分比/精力回復=Crit Rate/ATK%/SP Recovery
+暴擊效果/暴擊率=Crit DMG/Crit Rate
+暴擊效果/精力回復/速度=Crit DMG/SP Recovery/SPD
+暴擊效果/生命值百分比/速度=Crit DMG/HP%/SPD
+暴擊效果/攻擊力百分比/暴擊率/穿透/傷害加成=Crit DMG/ATK%/Crit Rate/Pierce/DMG Bonus
+暴擊效果/傷害加成/攻擊力百分比/穿透/暴擊率=Crit DMG/DMG Bonus/ATK%/Pierce/Crit DMG
+暴擊效果/暴擊率/穿透/傷害加成/攻擊力百分比=Crit DMG/Crit Rate/Pierce/DMG Bonus/ATK%
+暴擊效果/暴擊率/穿透/傷害加成/防禦力百分比=Crit DMG/Crit Rate/Pierce/DMG Bonus/DEF%
+暴擊效果/傷害加成/攻擊力百分比/暴擊率/速度=Crit DMG/DMG Bonus/ATK%/Crit Rate/SPD
+暴擊效果/暴擊率/穿透/傷害加成/精力回復/攻擊力百分比=Crit DMG/Crit Rate/Pierce/DMG Bonus/SP Recovery/ATK%
+穿透/攻擊力百分比/傷害加成=Pierce/ATK%/DMG Bonus
+效果命中/攻擊力百分比/速度=Ailment ACC/ATK%/SPD
+效果命中/暴擊效果/暴擊率/穿透/傷害加成/攻擊力百分比=Ailment ACC/Crit DMG/Crit Rate/Pierce/DMG Bonus/ATK%
+治療效果/生命值百分比=Healing Effect/HP%
 
 ----------
 All Space Cards
