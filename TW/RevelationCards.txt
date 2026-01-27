@@ -20,7 +20,7 @@ sr:"^(.*)·辰$"="$1·Sky"
 當前消耗數量:=Cost:
 當前可獲數量:=Claimable:
 sr:"^每消耗<color\=#FFDE00>(\d+)</color>張<color\=#FFDE00>宙</color>位置橙色啟示，可熔煉1張套裝為<color\=#FFDE00>「(.*)」</color>隨機啟示$"="Every <color\=#FFDE00>$1</color> spent <color\=#FFDE00>Space</color> cards can inscribe 1 <color\=#FFDE00>[$2]</color> card"
-sr:"^是否確定消耗<color\=#FFDE00>(.*)</color>張啟示，熔煉<color\=#FFDE00>(.*)</color>張套裝為<color\=#FFDE00>(.*)</color>的啟示？$"="Consume <color\=#FFDE00>$1</color> cards to gain <color\=#FFDE00>$2</color> <color\=#FFDE00>$3</color>?"
+sr:"^是否確定消耗<color\=#FFDE00>(.*)</color>張啟示，熔煉<color\=#FFDE00>(.*)</color>張套裝為<color\=#FFDE00>(.*)</color>的啟示？$"="Spend <color\=#FFDE00>$1</color> cards to gain <color\=#FFDE00>$2</color> <color\=#FFDE00>$3</color>?"
 sr:"^每消耗<color\=#FFDE00>(\d+)</color>張<color\=#FFDE00>日月星辰</color>位置橙色啟示，可熔煉1張套裝為<color\=#FFDE00>「(.*)」</color>隨機啟示$"="Every <color\=#FFDE00>$1</color> spent <color\=#FFDE00>Sun, Moon, Star, Planet</color> cards can inscribe 1 <color\=#FFDE00>[$2]</color> card"
 r:"^獲得(\d+)張啟示卡$"="Gained $1 Revelation"
 
@@ -98,6 +98,8 @@ r:"^是否使用預設方案(.*)替換當前使用的啟示？$"="Switch to this
 裝備成功。=Equip success.
 卸下成功。=Unequip success.
 已將啟示鎖定。=Locked Revelation.
+當前卡已鎖定。=Locked Revelation.
+已將啟示標記為「棄置」。=Marked Revelation for [Discard].
 預設內有部分啟示正在被其他角色使用，是否確認繼續使用？=Some cards are being used by other characters, continue?
 確認後將自動卸下其他角色正在使用的啟示=Automatically unequip all used cards on other characters
 r:"^是否刪除預設方案(.*)？$"="Delete this preset?"
@@ -164,6 +166,18 @@ sr:"^<color\=#E0DDBE>(.*)</color> 位置：辰\n推薦主詞條：<color\=#FFDE0
 效果命中/攻擊力百分比/速度=Ailment ACC/ATK%/SPD
 效果命中/暴擊效果/暴擊率/穿透/傷害加成/攻擊力百分比=Ailment ACC/Crit DMG/Crit Rate/Pierce/DMG Bonus/ATK%
 治療效果/生命值百分比=Healing Effect/HP%
+
+分解預覽=Dismantle preview
+在已棄置的啟示卡中選擇：=Select from discard reminder cards:
+已棄置卡牌=Discarded cards
+在未棄置的啟示卡中選擇：=Select from non-discarded reminder cards:
+分解可得=Dismantle to gain
+橙卡分解為：=Dismantle orange cards into:
+熔煉材料=Inscription Materials
+經驗材料=EXP Materials
+暫無分解可獲得的材料=No materials available
+r:"^將分解以下<color\=#FFDE00>(\d+)張</color>啟示轉化為分解材料$"="Dismantle <color\=#FFDE00>$1</color> cards into materials"
+分解的啟示卡將無法恢復！=Cannot recover dismantled cards!
 
 ----------
 All Space Cards
