@@ -143,6 +143,7 @@ r:"^12周目(\d+)層$"="NG+11 $1F"
 
 周目:簡單=NG: Easy
 r:"^周目:<sprite\=(\d+) tint\=1>$"="Loop:<sprite\=$1 tint\=1>"
+r:"^周目:<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>$"="Loop:<sprite\=$1 tint\=1><sprite\=$2 tint\=1>"
 r:"^進度:<sprite\=(\d+) tint\=1>層$"="Progress:<sprite\=$1 tint\=1>/F"
 r:"^進度:<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>層$"="Progress:<sprite\=$1 tint\=1><sprite\=$2 tint\=1>/F"
 
@@ -170,6 +171,9 @@ sr:"^設置古董品(.*)成功$"="Equipped Antique $1"
 已選擇解明角色：<sprite\=2 tint\=1><sprite\=15 tint\=1><sprite\=2 tint\=1>=Selected Elucidator:<sprite\=2 tint\=1><sprite\=15 tint\=1><sprite\=2 tint\=1>
 設置夢境碎片=Set Dream Fragments
 選擇本次{{A}}中，能夠收集到的夢境碎片=Select the Dream Fragments obtainable in this {{A}} run
+r:"^已獲得：<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>$"="Obtained: <sprite\=$1 tint\=1><sprite\=$2 tint\=1><sprite\=$3 tint\=1><sprite\=$4 tint\=1><sprite\=$5 tint\=1><sprite\=$6 tint\=1>"
+r:"^已獲得：<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>$"="Obtained: <sprite\=$1 tint\=1><sprite\=$2 tint\=1><sprite\=$3 tint\=1><sprite\=$4 tint\=1><sprite\=$5 tint\=1><sprite\=$6 tint\=1><sprite\=$7 tint\=1><sprite\=$8 tint\=1>"
+r:"^已獲得：<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>$"="Obtained: <sprite\=$1 tint\=1><sprite\=$2 tint\=1><sprite\=$3 tint\=1><sprite\=$4 tint\=1><sprite\=$5 tint\=1><sprite\=$6 tint\=1><sprite\=$7 tint\=1><sprite\=$8 tint\=1><sprite\=$9 tint\=1>"
 已自動補全空位，配置的隨行成員將透過「洗牌時間」正式加入陣容。=Companion slots auto-filled, characters will join via [Shuffle Time].
 r:"^是否花費(\d+)「心靈碎片」解鎖{{A}}角色？$"="Spend $1 [Heart Fragments] to unlock this {{A}} character?"
 已加入探索隊伍=Added to Exploration Team
@@ -209,6 +213,7 @@ r:"^初始「意志力」降低(\d+)點\n所有敵人的傷害隨著戰鬥回合
 
 所有敵人總生命值、{{A}}大幅提升，造成傷害隨著戰鬥回合數提升而提升\n=Heavily increase all foe' Total HP and {{A}}, increase DMG Dealt based on turn number
 r:"^所有敵人總生命值、{{A}}大幅提升，造成傷害隨著戰鬥回合數提升而提升\n進入強敵之影、交錯之影戰鬥時，所有敵人造成最終傷害提升(\d+%)，受到最終傷害降低(\d+%)；獵殺者獲得額外強化，在額外回合中獵殺者也會釋放機制技能\n$"="Heavily increase all foe' Total HP and {{A}}, increase DMG Dealt based on turn number\nWhen fighting Strong Shadow and Tangled Shadow, increase all foes' Final DMG Dealt by $1, decrease all foes' Final DMG Taken by $2; The Reaper gains bonus buffs and can use mechanic skills on Extra Actions\n"
+r:"^所有敵人總生命值、{{A}}大幅提升，造成傷害隨著戰鬥回合數提升而提升\n進入強敵之影、交錯之影戰鬥時，所有敵人造成最終傷害提升(\d+%)，受到最終傷害降低(\d+%)；獵殺者獲得額外強化，在額外回合中獵殺者也會釋放機制技能\n所有戰鬥消耗「意志力」增加(\d+)點\n$"="Heavily increase all foe' Total HP and {{A}}, increase DMG Dealt based on turn number\nWhen fighting Strong Shadow and Tangled Shadow, increase all foes' Final DMG Dealt by $1, decrease all foes' Final DMG Taken by $2; The Reaper gains bonus buffs and can use mechanic skills on Extra Actions\nIncrease battle [Will] cost by $3"
 
 收集效率=Collection Efficiency
 r:"^古老的銀幣、心靈碎片收集效率x(\d+\.\d+)\n當前周目無法獲得古老的寶石$"="Ancient Silver Coins, Heart Fragments collection efficiency x$1\nCannot obtain Ancient Gemstones in this NG"
@@ -274,6 +279,10 @@ r:"^消耗(\d+)個「拂曉的碎片」，定向選擇(\d+)個已擁有的角色
 導航=Navigation
 r:"^消耗(\d+)個「拂曉的碎片」，恢復(\d+)點{{A}}「導航SP」。$"="Spend $1 [Dawn Fragments] to restore $2 [Navigation SP] to {{A}}"
 道具數量不足，無法選擇。=Insufficient item, cannot select.
+轉化=Conversion
+r:"^消耗(\d+)點「意志力」，觸發一次「洗牌時間·稀有」$"="Spend $1 [Will] to trigger 1 [Shuffle Time·Rare]"
+轉化II=Conversion II
+r:"^消耗(\d+)點「意志力」，觸發一次「洗牌時間·珍貴」$"="Spend $1 [Will] to trigger 1 [Shuffle Time·Precious]"
 
 抵達新的樓層=Reached New Floor
 探索至=Reach
@@ -565,10 +574,34 @@ MOONLIT BOND
 『羈絆碎片·大』\n強化{{A}}「月下羈絆」的珍貴道具。=[Bond Fragments: L]\nRare item used to upgrade [Moonlit Bond].
 側重於輸出能力，額外提升主角技能等級=Focus on damage; Increase Wonder's skill level
 側重於生存能力，額外獲得開局資源=Focus on survivability; Gain starting resources
+側重於生存能力，額外解鎖心象能力=Focus on survivability; Unlock Mindscape abilities
 側重於輔助能力，額外提升探索能力=Focus on support; Increase exploration skills
 側重於暴擊能力，額外提升主角戰鬥技巧=Focus on critical; Increase Wonder's Thief Tactics
 側重於探索能力，額外解鎖導航技能=Focus on exploration; Unlock navigation skills
 羈絆詳情=Bond Details
+r:"^所有角色攻擊力\+(\d+%)$"="All characters' ATK +$1"
+r:"^所有角色攻擊力\+(\d+%)->(\d+%)$"="All characters' ATK +$1->$2"
+r:"^所有角色攻擊力\+(\d+)$"="All characters' ATK +$1"
+r:"^所有角色防禦力\+(\d+%)$"="All characters' DEF +$1"
+r:"^所有角色防禦力\+(\d+%)->(\d+%)$"="All characters' DEF +$1->$2"
+r:"^所有角色防禦力\+(\d+)$"="All characters' DEF +$1"
+r:"^所有角色生命值\+(\d+%)$"="All characters' HP +$1"
+r:"^所有角色生命值\+(\d+%)->(\d+%)$"="All characters' HP +$1->$2"
+r:"^所有角色生命值\+(\d+)$"="All characters' HP +$1"
+r:"^所有角色速度\+(\d+)$"="All characters' SPD +$1"
+r:"^所有角色速度\+(\d+)->(\d+)$"="All characters' SPD +$1->$2"
+r:"^所有角色精力恢復\+(\d+%)$"="All characters' SP Recovery +$1"
+r:"^所有角色精力恢復\+(\d+%)->(\d+%)$"="All characters' SP Recovery +$1->$2"
+r:"^所有角色暴擊率\+(\d+%)$"="All characters' Crit Rate +$1"
+r:"^所有角色暴擊率\+(\d+%)->(\d+%)$"="All characters' Crit Rate +$1->$2"
+r:"^所有角色暴擊效果\+(\d+%)$"="All characters' Crit DMG +$1"
+r:"^所有角色暴擊效果\+(\d+%)->(\d+%)$"="All characters' Crit DMG +$1->$2"
+r:"^所有角色傷害加成\+(\d+%)$"="All characters' DMG Bonus +$1"
+r:"^所有角色傷害加成\+(\d+%)->(\d+%)$"="All characters' DMG Bonus +$1->$2"
+r:"^所有角色治療效果\+(\d+%)$"="All characters' Healing Effect +$1"
+r:"^^所有角色治療效果\+(\d+%)->(\d+%)$"="All characters' Healing Effect +$1->$2"
+r:"^所有角色護盾效果\+(\d+%)$"="All characters' Shield Effect +$1"
+r:"^所有角色護盾效果\+(\d+%)->(\d+%)$"="All characters' Shield Effect +$1->$2"
 r:"^治療效果\+(\d+%)$"="Healing Effect +$1"
 r:"^治療效果\+(\d+%)->(\d+%)$"="Healing Effect +$1->$2"
 r:"^進入「大時鐘」時，添加(\d+)張卡牌的可選項$"="When entering the [Great Clock], you have $1 additional card to choose from"
@@ -581,6 +614,10 @@ r:"^暴擊率\+(\d+%)$"="Crit Rate +$1"
 r:"^暴擊率\+(\d+%)->(\d+%)$"="Crit Rate +$1->$2"
 r:"^暴擊效果\+(\d+%)$"="Crit DMG +$1"
 r:"^暴擊效果\+(\d+%)->(\d+%)$"="Crit DMG +$1->$2"
+心象之力=Mindscape Power
+所有開放「心象啟動」的角色解鎖心象潛能技能=Unlock all Mindscape Talent for characters with [Mindscape Activation]
+r:"^所有開放「心象啟動」的角色的心象潛能技能等級Lv.(\d+)->Lv.(\d+)$"="All Mindscape Talent for characters with [Mindscape Activation] Lv.$1->Lv.$2"
+r:"^所有開放「心象啟動」的角色的心象潛能技能等級Lv.(\d+)$"="All Mindscape Talent for characters with [Mindscape Activation] Lv.$1"
 戰鬥支援=Combat Support
 r:"^解鎖導航技能「戰鬥支援」：下一次進入戰鬥時，所有角色{{A}}、總生命值提升(\d+%)$"="Unlock navigation skill [Combat Support]: At the start of next battle, increase all character's {{A}} and Total HP by $1"
 {{A}}搜索={{A}} Search
@@ -588,7 +625,7 @@ r:"^解鎖導航技能「戰鬥支援」：下一次進入戰鬥時，所有角�
 
 敬請期待。=Stay tuned.
 所需道具不足。=Insufficient items.
-是否重置{{A}}的全部羈絆？Reset all {{A}} Bond?
+是否重置{{A}}的全部羈絆？=Reset all {{A}} Bond?
 
 ----------
 MISSION
@@ -679,6 +716,7 @@ sr:"^通過「(.*)·(.*)」的總層數達到(\d+)層$"="Clear $3 Floors in [$1 
 巨塔·漫遊=The Tower · Roaming
 巨塔·巡禮=The Tower · Touring
 爬塔愛好者=Tower Climber
+爬塔狂熱愛好者=Tower Enthusiast
 r:"^通關(\d+)次任意周目的{{A}}$"="Clear {{A}} on any NG $1 time(s)"
 sr:"^通關(\d+)次任意周目的「(.*)·(.*)」$"="Clear [$2 · $3] on any NG $1 time(s)"
 sr:"^通關(\d+)次任意難度的「(.*)·(.*)」$"="Clear [$2 · $3] on any NG $1 time(s)"
@@ -687,6 +725,8 @@ sr:"^通關(\d+)次任意難度的「(.*)·(.*)」$"="Clear [$2 · $3] on any NG
 湮滅暗影=Annihilate Shadows
 裁決暗影=Judge Shadows
 解構暗影=Deconstruct Shadows
+撕裂暗影=Tear Shadows
+誅戮暗影=Slay Shadows
 r:"^擊殺(\d+)個交錯之影$"="Defeat $1 Tangled Shadow"
 sr:"^在「(.*)·(.*)」擊殺(\d+)個交錯之影$"="Defeat $3 Tangled Shadow in [$1 · $2]"
 sr:"^在「(.*)·(.*)」擊敗(\d+)個交錯之影$"="Defeat $3 Tangled Shadow in [$1 · $2]"
@@ -722,19 +762,24 @@ sr:"^擊敗「(.*)·(.*)」12周目或以上的女教皇$"="Defeat Priestess on 
 
 碾碎一切=Crush Everything
 吾乃破壞狂=I'm a Destroyer
+所到之處寸草不生=Nothing Grows
 r:"^擊碎(\d+)個可破壞物$"="Break $1 breakable objects"
 sr:"^在「(.*)·(.*)」擊碎(\d+)個可破壞物$"="Break $3 breakable objects in [$1 · $2]"
 目光犀利=Keen Eye
 慧眼如炬=Discerning Eye
 目光犀利·稀有=Keen Eye · Rare
 慧眼如炬·稀有=Discerning Eye · Rare
+火眼金睛·稀有=Piercing Eye · Rare
+洞若觀火·稀有=Clear Eye · Rare
 r:"^擊碎(\d+)個稀有可破壞物$"="Break $1 rare breakable objects"
 sr:"^在「(.*)·(.*)」擊碎(\d+)個稀有可破壞物$"="Break $3 rare breakable objects in [$1 · $2]"
 窺探陰影罅隙=Scouting Shadows
 挑戰陰影罅隙=Challenging Shadows
 征服陰影罅隙=Conquering Shadows
-統禦陰影罅隙=Dominating Shadows
+統禦陰影罅隙=Commanding Shadows
 凌駕陰影罅隙=Overruling Shadows
+掌管陰影罅隙=Controlling Shadows
+稱霸陰影罅隙=Dominating Shadows
 r:"^完成(\d+)次摩納多之門$"="Clear $1 Monad door"
 sr:"^在「(.*)·(.*)」完成(\d+)次摩納多之門$"="Clear $3 Monad door in [$1 · $2]"
 購物發燒友=Shopping Enthusiast
@@ -742,12 +787,16 @@ sr:"^在「(.*)·(.*)」完成(\d+)次摩納多之門$"="Clear $3 Monad door in 
 超級購物狂=Super Shopaholic
 究極購物狂=Ulitmate Shopaholic
 終極購物狂=Absolute Shopaholic
+職業購物顧問=Occupational Shopping Consultant
+專業購物顧問=Professional Shopping Consultant
 r:"^累計在「大時鐘」具象化(\d+)張卡牌$"="Buy a total of $1 cards in the [Grand Clock]"
 sr:"^在「(.*)·(.*)」的大時鐘具象化(\d+)張卡牌$"="Buy a total of $3 cards in the [Grand Clock] in [$1 · $2]"
 彙聚的黃昏之力=Gathering Dawn
 滿溢的黃昏之力=Overflowing Dawn
 氾濫的黃昏之力=Flooding Dawn
 爆溢的黃昏之力=Rupturing Dawn
+決堤的黃昏之力=Bursting Dawn
+無盡的黃昏之力=Endless Dawn
 r:"^在{{A}}中獲取(\d+)個拂曉的碎片$"="Obtain $1 Dawn Fragments in {{A}}"
 sr:"^在「(.*)·(.*)」中獲取(\d+)個拂曉的碎片$"="Obtain $3 Dawn Fragments in [$1 · $2]"
 
@@ -803,11 +852,15 @@ sr:"^(.*)意識6的情況下，通關(\d+)次任意周目「(.*)·(.*)」$"="Cle
 解明的支援=Elucidator Support
 神諭的指引=Oracle Guidance
 萬象的主宰=Myriad Master
+熾火的裁決=Fiery Judgement
+烈焰的降臨=Flaming Descent
+爆炎的主宰=Pyro Master
 r:"^在陣容中有{{A}}的情況下，通關(\d+)次任意周目{{B}}$"="Clear {{B}} on any NG $1 time(s) with {{A}} in team"
 sr:"^在陣容中有(.*)的情況下，通關(\d+)次任意周目「(.*)·(.*)」$"="Clear [$3 · $4] on any NG $2 time(s) with $1 in team"
 sr:"^上陣(.*)的情況下完成(\d+)次任意難度的「(.*)·(.*)」，並抵達至少(\d+)層$"="Clear [$3 · $4] on any NG $2 time(s) with $1 on the field \nand reach Floor $5"
 sr:"^隊伍擁有(.*)時完成(\d+)次任意難度的「(.*)·(.*)」並抵達至少(\d+)層$"="Clear [$3 · $4] on any NG $2 time(s) with $1 in team \nand reach Floor $5"
 sr:"^隊伍擁有(.*)時完成(\d+)次任意難度的「(.*)·(.*)」並抵達至少第(\d+)層$"="Clear [$3 · $4] on any NG $2 time(s) with $1 in team \nand reach Floor $5"
+sr:"^在隊伍裡擁有(.*)的情況下完成(\d+)次任意難度的「(.*)·(.*)」，並抵達至少第(\d+)層$"="Clear [$3 · $4] on any NG $2 time(s) with $1 in team \nand reach Floor $5"
 r:"^在{{A}}「超越意識」的情況下，通關(\d+)次任意周目{{B}}$"="Clear {{B}} on any NG $1 time(s) with [Beyond Awareness] {{A}}"
 sr:"^在(.*)「超越意識」的情況下，通關(\d+)次任意周目「(.*)·(.*)」$"="Clear [$3 · $4] on any NG $2 time(s) with [Beyond Awareness] $1"
 
@@ -817,6 +870,12 @@ sr:"^在(.*)「超越意識」的情況下，通關(\d+)次任意周目「(.*)·
 古董胸針·學者級=Antique Brooch · Scholar
 古董胸針·顧問級=Antique Brooch · Curator
 古董胸針·{{A}}=Antique Brooch · {{A}}
+青銅鏡子·新手級=Bronze Mirror · Novice
+青銅鏡子·資深級=Bronze Mirror · Veteran
+青銅鏡子·專家級=Bronze Mirror · Expert
+青銅鏡子·學者級=Bronze Mirror · Scholar
+青銅鏡子·顧問級=Bronze Mirror · Curator
+青銅鏡子·{{A}}=Bronze Mirror · {{A}}
 sr:"^攜帶核心古董品「(.*)」通過任意難度的「(.*)·(.*)」第(\d+)層$"="Clear [$2 · $3] Floor $4 on any NG with Core Antique [$1]"
 sr:"^真品·(.*)$"="Genuine · $1"
 sr:"^攜帶核心古董品「(.*)」，通關(\d+)次任意周目「(.*)·(.*)」$"="Clear [$3 · $4] on any NG $2 time(s) with Core Antique [$1]"
@@ -827,11 +886,16 @@ sr:"^攜帶核心古董品「(.*)」通關(\d+)次任意難度的「(.*)·(.*)�
 巔峰收藏家=Apex Collector
 史詩收藏家=Epic Collector
 傳奇收藏家=Legendary Collector
+不朽收藏家=Immortal Collector
+收藏大師=Master Collector
 r:"^解鎖(\d+)個核心古董品$"="Unlock $1 Core Antique"
 r:"^羈絆共鳴·(.*)$"="Bond Resonance · $1"
+r:"^解鎖或升級羈絆(\d+)次$"="Unlock or upgrade Bond $1 time(s)"
 r:"^解鎖或升級任意羈絆(\d+)次$"="Unlock or upgrade any Bond $1 time(s)"
 女皇&皇帝·完全擊破=Empress & Emperor · Vanquished
+戀愛·完全擊破=Lovers · Vanquished
 sr:"^「(.*)·(.*)」探索時，同時面對「(.*)」，並在戰鬥中勝利。$"="Defeat [$3] in [$1 · $2]"
+sr:"^「(.*)·(.*)」探索時，在「(.*)」的戰鬥中勝利。$"="Defeat [$3] in [$1 · $2]"
 獵殺之夜·遭遇=Reaping Night · Encounter
 sr:"^在「(.*)·(.*)」遭遇獵殺者戰鬥$"="Encounter the Reaper in [$1 · $2]"
 r:"^獵殺之夜·(\d+)周目$"="Reaping Night · Loop $1"
@@ -921,6 +985,7 @@ r:"^角色回合結束時，有(\d+%)機率獲得1個額外回合$"="At the end 
 釋放古董品技能時，額外使被選中的角色獲得1個額外回合=When using Antique Skill, give the target 1 bonus Extra Action
 r:"^額<color\=#000000>外</color>回合$"="E<color\=#000000>x</color>tra Action"
 r:"^獲得(\d+)個額外回合$"="Gain $1 Extra Action"
+
 華麗香水瓶=Gorgeous Perfume Bottle
 強化倒地能力，更頻繁發動{{A}}=Buff knock down for frequent {{A}}
 設計可愛的香水瓶。\n散發著與外觀相稱的華麗香氣。=A charmingly designed perfume bottle. It is as splendid in fragrance as it is in appearance.
@@ -928,6 +993,7 @@ r:"^等級1：所有角色造成{{A}}技能傷害時會額外降低敵方主目�
 r:"^所有角色造成{{A}}技能傷害時會額外降低敵方主目標1點倒地值，{{B}}傷害提升(\d+%)$"="When dealing {{A}} skill damage, decrease main target's Down Points by 1; Increase {{B}} DMG by $1"
 r:"^所有角色釋放技能時有(\d+%)機率直接擊倒敵人$"="When using skills, there is a $1 chance to knock down foes"
 r:"^所有敵人受{{A}}傷害提升(\d+%)$"="Increase all foes' {{A}} DMG Taken by $1"
+
 銀製酒器=Silver Chalice
 增強WONDER能力打出高額傷害=Buff Wonder's ability to deal damage
 銀製酒杯。\n設計簡約卻自帶威嚴氣質。=A silver chalice. Its design is simple, yet it carries an air of innate dignity.
@@ -935,12 +1001,15 @@ r:"^等級1：角色回合結束時，獲得一定古董品能量；WONDER回合
 r:"^角色回合結束時，獲得一定古董品能量；WONDER回合結束時，額外獲得一定古董品能量。古董品能量滿時可釋放古董品技能：對所有敵人造成基於難度與當前探索等級的固定傷害，WONDER每(\d+)點攻擊力使該傷害提升(\d+%)。WONDER攻擊力提升(\d+%)$"="At the end of a character's action, gain Antique Energy; At the end of Wonder's action, gain Antique Energy. Can use Antique Skill at maxed Antique Energy: Deal fixed damage to all foes based on Difficulty and Exploration Level, increase that damage by $2 for every $1 points of Wonder's ATK. Increase Wonder's ATK by $3"
 r:"^WONDER{{A}}、總生命值、總防禦力提升(\d+%)$"="Increase Wonder's {{A}}, Total HP, and Total DEF by $1"
 r:"^對所有敵人造成基於難度與當前探索等級的固定傷害，WONDER每(\d+)點攻擊力使該傷害提升(\d+%)。WONDER攻擊力提升(\d+%)$"="Deal fixed damage to all foes based on Difficulty and Exploration Level, increase that damage by $2 for every $1 points of Wonder's ATK. Increase Wonder's ATK by $3"
+
 小巧的珠寶盒=Compact Jewelry Box
 加速金幣資源積累，商店價格降低=Speed up resource gain and decrease shop prices
+加速金幣資源累積，商店價格降低=Speed up resource gain and decrease shop prices
 飾有華麗裝飾的珠寶盒。\n雖然小巧，卻收納著各式寶石。=A jewelry box adorned with ornate decorations. It safeguards a trove of gems within its petite frame.
 時鐘的齒輪獲取提升=Clock Gears Gain
 r:"^等級1：戰鬥勝利後獲取「時鐘的齒輪」數量增加(\d+%)；戰鬥勝利時，當前「時鐘的齒輪」數量增加(\d+%)\n等級3：進入新的樓層時，當前「時鐘的齒輪」數量增加(\d+%)\n等級6：「大時鐘」具象化卡牌時，所需「時鐘的齒輪」數量降低(\d+%)$"="Lv.1: Increase [Clock Gears] acquired from battles by $1; When winning a battle, increase current [Clock Gears] by $2\nLv. 3: When entering a new floor, increase current [Clock Gears] by $3\nLv. 6: When buying cards in the [Great Clock], decrease the required [Clock Gears] by $4"
 r:"^戰鬥勝利後獲取「時鐘的齒輪」數量增加(\d+%)；戰鬥勝利時，當前「時鐘的齒輪」數量增加(\d+%)$"="Increase [Clock Gears] acquired from battles by $1; When winning a battle, increase current [Clock Gears] by $2"
+
 古董留聲機=Antique Gramophone
 恢復HIGHLIGHT/{{A}}能量並減少冷卻時間=<size\=28>Restore HIGHLIGHT/{{A}} Energy and decrease cooldown</size>
 復古風格的留聲機。\n雖顯陳舊，但仍可正常播放聲音。=A vintage gramophone. Though it shows its age, it still plays music as clearly as ever.
@@ -952,38 +1021,44 @@ r:"^角色回合結束時，獲得一定古董品能量；釋放HIGHLIGHT/{{A}}�
 r:"^釋放古董品技能時，使所有角色的HIGHLIGHT冷卻時間減少(\d+)回合$"="When using Antique Skill, decrease party's HIGHLIGHT cooldown time by $1 turn"
 r:"^古董品技能傷害提升至原本的(\d+%)$"="Increase Antique Skill damage to $1 of the original damage"
 r:"^對所有敵人造成基於難度與當前探索等級的固定傷害，並恢復所有同伴(\d+%)HIGHLIGHT/{{A}}能量$"="Deal fixed damage to all foes based on Difficulty and Exploration Level, then restore party's HIGHLIGHT/{{A}} Energy by $1"
+
 必勝御守=Victory Omamori
 增強治療能力，基於記錄的總治療量轉化傷害=Buff healing, covert healing into damage
 寫著『必勝御守』的護身符。\n必勝二字蒼勁有力，仿佛在激勵著持有者。=A victory omamori. The characters are drawn with vigorous strokes, as if to inspire its owner.
 總治療量轉傷害=Healing to Damage
-r:"^等級1：角色回合結束時，獲得一定古董品能量；釋放治療技能後，額外獲得一定古董品能量。古董品能量滿時可釋放古董品技能：對所有敵人造成基於一定時間內累計記錄的總治療量的固定傷害，該傷害受到難度與當前探索等級的影響，釋放古董品技能後清空累計記錄的總治療量\n等級3：所有角色治療效果提升(\d+%)\n等級6：古董品技能傷害提升至原本的(\d+%)$"="Lv.1: At the end of a character's action, gain Antique Energy; After using a healing skill, gain Antique Energy. Can use Antique Skill at maxed Antique Energy: Deal fixed damage to all foes based on recorded healing amount, Difficulty and Exploration Level can affect this damage. Clear recorded healing amount after using Antique Skill\nLv. 3: Increase party's Healing Effect by $1\nLv. 6: Increase Antique Skill damage to $2 of the original damage"
-角色回合結束時，獲得一定古董品能量；釋放治療技能後，額外獲得一定古董品能量。古董品能量滿時可釋放古董品技能：對所有敵人造成基於一定時間內累計記錄的總治療量的固定傷害，該傷害受到難度與當前探索等級的影響，釋放古董品技能後清空累計記錄的總治療量=At the end of a character's action, gain Antique Energy; After using a healing skill, gain Antique Energy. Can use Antique Skill at maxed Antique Energy: Deal fixed damage to all foes based on recorded healing amount, Difficulty and Exploration Level can affect this damage. Clear recorded healing amount after using Antique Skill
+r:"^等級1：角色回合結束時，獲得一定古董品能量；釋放治療技能後，額外獲得一定古董品能量。古董品能量滿時可釋放古董品技能：對所有敵人造成基於一定時間內累計記錄的總治療量的固定傷害，該傷害受到難度與當前探索等級的影響，釋放古董品技能後清空累計記錄的總治療量\n等級3：所有角色治療效果提升(\d+%)\n等級6：古董品技能傷害提升至原本的(\d+%)$"="Lv.1: At the end of a character's action, gain Antique Energy; After using a healing skill, gain Antique Energy. Can use Antique Skill at maxed Antique Energy: Deal fixed damage to all foes based on recorded healing amount, difficulty and Exploration Level can affect this damage. Clear recorded healing amount after using Antique Skill\nLv. 3: Increase party's Healing Effect by $1\nLv. 6: Increase Antique Skill damage to $2 of the original damage"
+r:"^等級1：角色回合結束時，獲得一定古董品能量；釋放治療技能後，額外獲得一定古董品能量。古董品能量滿時可釋放古董品技能：對所有敵人造成基於本場戰鬥內累計記錄的總治療量的固定傷害，該傷害受到難度與當前探索等級的影響\n等級3：所有角色治療效果提升(\d+%)\n等級6：古董品技能傷害提升至原本的(\d+%)$"="Lv.1: At the end of a character's action, gain Antique Energy; After using a healing skill, gain Antique Energy. Can use Antique Skill at maxed Antique Energy: Deal fixed damage to all foes based on recorded healing amount, difficulty and Exploration Level can affect this damage.\nLv. 3: Increase party's Healing Effect by $1\nLv. 6: Increase Antique Skill damage to $2 of the original damage"
+角色回合結束時，獲得一定古董品能量；釋放治療技能後，額外獲得一定古董品能量。古董品能量滿時可釋放古董品技能：對所有敵人造成基於一定時間內累計記錄的總治療量的固定傷害，該傷害受到難度與當前探索等級的影響=At the end of a character's action, gain Antique Energy; After using a healing skill, gain Antique Energy. Can use Antique Skill at maxed Antique Energy: Deal fixed damage to all foes based on recorded healing amount, difficulty and Exploration Level can affect this damage.
 r:"^所有角色治療效果提升(\d+%)$"="Increase party's Healing Effect by $1"
-對所有敵人造成基於一定時間內累計記錄的總治療量的固定傷害，該傷害受到難度與當前探索等級的影響，釋放古董品技能後清空累計記錄的總治療量=Deal fixed damage to all foes based on recorded healing amount, Difficulty and Exploration Level can affect this damage. Clear recorded healing amount after using Antique Skill
+對所有敵人造成基於一定時間內累計記錄的總治療量的固定傷害，該傷害受到難度與當前探索等級的影響，釋放古董品技能後清空累計記錄的總治療量=Deal fixed damage to all foes based on recorded healing amount, difficulty and Exploration Level can affect this damage. Clear recorded healing amount after using Antique Skill
 開啟寶箱獲得額外經驗值並觸發「洗牌時間」=<size\=28>Open treasure chests to gain EXP and trigger Shuffle Time</size>
+
 寫著『開運御守』的護身符。\n其上的招財貓刺繡，仿佛能招來福運。=A prosperity omamori. The Maneki-neko embroidered upon it beckons prosperity to its owner.
 寶箱數量提升=Treasure Chest Number
 r:"^等級1：{{A}}探索中，陰影出現機率降低，寶箱出現機率提升，開啟寶箱可獲得一定經驗值，探索層出現額外寶箱\n等級2：開啟普通/稀有寶箱後，進入下一層時觸發一次「洗牌時間·通常」/「洗牌時間·稀有」\n等級4：開啟寶箱獲取「時鐘的齒輪」數量增加(\d+%)\n等級6：當局每開啟一個寶箱，使攻擊力提升(\d+%)$"="Lv.1: During {{A}} exploration, decrease the chance of encountering Shadows and increase the chance of encountering treasure chests, gain EXP when opening treasure chests, spawn more treasure chest on exploration floors\nLv. 2: After opening normal/rare treasure chests, trigger 1 [Shuffle Time·Normal]/[Shuffle Time·Rare] when entering the next floor\nLv. 4: Increase the amount of [Clock Gears] acquired from treasure chests by $1\nLv. 6: For every opened treasure chests, increase ATK by $2"
 {{A}}探索中，陰影出現機率降低，寶箱出現機率提升，開啟寶箱可獲得一定經驗值，探索層出現額外寶箱=During {{A}} exploration, decrease the chance of encountering Shadows and increase the chance of encountering treasure chests, gain EXP when opening teasure chests, spawn more treasure chest on exploration floors
 開啟普通/稀有寶箱後，進入下一層時觸發一次「洗牌時間·通常」/「洗牌時間·稀有」=After opening normal/rare treasure chests, trigger 1 [Shuffle Time·Normal]/[Shuffle Time·Rare] when entering the next floor
 r:"^當局每開啟一個寶箱，使攻擊力提升(\d+%)$"="For every opened treasure chests, increase ATK by $1"
+
 古董火槍=Antique Pistol
 槍械子彈數量提升，槍械傷害大幅提升=Increase Ammo and Gun DMG
 復古風格的火槍。\n槍口隱約散發著火藥味。=A vintage pistol. The faint scent of gunpowder still lingers around its muzzle.
-子彈數提升=More Ammo
+子彈數提升=Increase Ammo
 槍械傷害提升=Gun DMG Boost
 r:"^等級1：所有角色槍械子彈數量上限提升(\d+%)，使用槍械技能時傷害提升(\d+%)\n等級3：所有角色每累計使用(\d+)次槍械攻擊，使自身槍械攻擊獲得總傷害增幅(\d+%)，可疊加(\d+)層\n等級6：槍械攻擊時，可以回復造成傷害(\d+%)的生命值$"="Lv.1: Increase party's Gun Attack Ammo by $1; When using Gun Attack, increase damage by $2\nLv. 3: Each time when characters use Gun Attack, increase user's Gun Attack Total DMG Amp by $4. Stacks up to $5 times\nLv. 6. When using Gun Attack, restore HP by $6 of damage dealt"
 r:"^所有角色槍械子彈數量上限提升(\d+%)，使用槍械技能時傷害提升(\d+%)$"="Increase party's Gun Attack Ammo by $1; When using Gun Attack, increase damage by $2"
 r:"^所有角色每累計使用(\d+)次槍械攻擊，使自身槍械攻擊獲得總傷害增幅(\d+%)，可疊加(\d+)層$"="Each time when characters use Gun Attack, increase user's Gun Attack Total DMG Amp by $1. Stacks up to $2 times"
 r:"^槍械攻擊時，可以回復造成傷害(\d+%)的生命值$"="When using Gun Attack, restore HP by $1 of damage dealt"
+
 古董胸針=Antique Brooch
 可破壞物數量提升=Increase Breakable Objects
 可破壞物數量增加，擊碎可破壞物獲得額外收益=Increase breakable object number and its rewards
 復古風的胸針。雖然小巧，卻以華麗裝飾彰顯存在感。=A vintage brooch. Though petite, its ornate design commands a striking presence.
-r:"^等級1：{{A}}探索層中，不再出現陰影、寶箱、走失人，額外出現大量可破壞物，擊碎可破壞物可獲得一定經驗值\n等級2：擊碎可破壞物後，進入下一層時有(\d+%)機率觸發一次「洗牌時間·通常」\n等級4：可破壞物有更高機率變為稀有可破壞物\n等級6：擊碎可破壞物獲取「時鐘的齒輪」數量增加(\d+%)$"="Lv.1: In {{A}} exploration floor, Shadows, treasure chests, and missing persons will no longer appear, additionally spawn many breakable objects, gain EXP when breaking breakable objects\nLv.2: After breaking breakable objects, $1 chance to trigger 1 [Shuffle Time·Normal] when entering the next floor\nLv.4: Breakable objects have a higher chance to become rare breakable objects\nLv.6:Increase [Clock Gears] acquired from breakable objects by $2"
-{{A}}探索層中，不再出現陰影、寶箱、走失人，額外出現大量可破壞物，擊碎可破壞物可獲得一定經驗值=In {{A}} exploration floor, Shadows, treasure chests, and missing persons will no longer appear, additionally spawn many breakable objects, gain EXP when breaking breakable objects
+r:"^等級1：{{A}}探索層中，不再出現陰影、寶箱、走失人，額外出現大量可破壞物，擊碎可破壞物可獲得一定經驗值\n等級2：擊碎可破壞物後，進入下一層時有(\d+%)機率觸發一次「洗牌時間·通常」\n等級4：可破壞物有更高機率變為稀有可破壞物\n等級6：擊碎可破壞物獲取「時鐘的齒輪」數量增加(\d+%)$"="Lv.1: During {{A}} exploration floor, Shadows, treasure chests, and missing persons will no longer appear, additionally spawn many breakable objects, gain EXP when breaking breakable objects\nLv.2: After breaking breakable objects, $1 chance to trigger 1 [Shuffle Time·Normal] when entering the next floor\nLv.4: Breakable objects have a higher chance to become rare breakable objects\nLv.6:Increase [Clock Gears] acquired from breakable objects by $2"
+{{A}}探索層中，不再出現陰影、寶箱、走失人，額外出現大量可破壞物，擊碎可破壞物可獲得一定經驗值=During {{A}} exploration floor, Shadows, treasure chests, and missing persons will no longer appear, additionally spawn many breakable objects, gain EXP when breaking breakable objects
 r:"^擊碎可破壞物後，進入下一層時有(\d+%)機率觸發一次「洗牌時間·通常」$"="After breaking breakable objects, $1 chance to trigger 1 [Shuffle Time·Normal] when entering the next floor"
 可破壞物有更高機率變為稀有可破壞物=Breakable objects have a higher chance to become rare breakable objects
+
 陳舊陶器=Old Pottery
 持續傷害=Damage Over Time
 額外造成持續傷害效果，額外結算持續傷害。=Inflict bonus DOT and deal bonus DOT damage
@@ -995,6 +1070,7 @@ r:"^角色釋放{{A}}技能/{{A}}/HIGHLIGHT/{{B}}造成傷害後，為目標添�
 釉裂=Glaze Crazing
 r:"^釉<color\=#000000>裂</color>$"="G<color\=#000000>l</color>aze Crazing"
 r:"^對所有敵人造成基於難度與當前探索等級的固定傷害，並為其添加(\d+)層「釉裂」：每回合結束受到基於難度與當前探索等級的固定持續傷害，可疊加(\d+)層，本場戰鬥永久生效$"="Deal fixed damage to all foes based on Difficulty and Exploration Level, then inflict them with $1 [Glaze Crazing] stacks: After each action, take fixed Damage Over Time fixed damage based on Difficulty and Exploration Level. Stacks up to $2 times. This effect is permanent"
+
 古董剪刀=Antique Scissors
 額外觸發追加效果，造成高額輸出。=Activate bonus Follow Up
 名貴金屬製成的鋒利剪刀。有著相當華麗的造型。=A pair of sharp scissors forged from precious metal. Their form is one of breathtaking elegance.
@@ -1002,12 +1078,44 @@ r:"^等級1：所有角色觸發追加效果後，額外觸發1次特殊追加�
 所有角色觸發追加效果後，額外觸發1次特殊追加效果：對所有敵人造成基於難度與當前探索等級的固定傷害，該傷害由所有敵人平均分攤=After activating a Follow Up, activate 1 special Follow Up: Deal fixed damage to all foes based on Difficulty and Exploration Level, distribute this damage between all foes
 r:"^特殊追加效果的固定傷害額外提升，提升值相當於本次追加效果總傷害的(\d+%)$"="Increase special Follow Up fixed damage by $1 of this Follow Up's damage"
 r:"^觸發特殊追加效果時，使所有同伴造成傷害提升(\d+%)，可疊加(\d+)層，本場戰鬥永久生效$"="When activating special Follow Up, increase party's DMG Dealt by $1. Stacks up to $2 times. This effect is permanent"
+
 黃銅提燈=Brass Lamp
 額外提升精力值上限與精力恢復，依據消耗精力值造成傷害=<size\=25>Increase Max SP and SP Recovery, deal damage based on SP spent</size>
+提升精力值上限與精力恢復，依據消耗精力值造成傷害=<size\=25>Increase Max SP and SP Recovery, deal damage based on SP spent</size>
 外觀老舊的提燈。搖曳的燈火令人心神寧謐。=A lantern with a weathered exterior. Its gently flickering flame brings a profound sense of peace
 r:"^等級1：角色回合結束時，獲得一定古董品能量；釋放技能消耗精力值時，依據消耗的精力值額外獲得一定古董品能量。古董品能量滿時可釋放古董品技能：對所有敵人造成基於難度與當前探索等級的固定傷害\n等級3：釋放古董品技能時，額外使所有同伴恢復(\d+)點可突破上限的精力值（該效果受精力恢復屬性的影響）\n等級6：古董品技能傷害提升至原本的(\d+%)$"="Lv.1: At the end of a character's action, gain Antique Energy; When spending SP with skills, gain Antique Energy based on SP spent. Can use Antique Skill at maxed Antique Energy: Deal fixed damage to all foes based on Difficulty and Exploration Level\nLv.3: When using Antique Skill, all characters restore $1 SP that can exceed the cap (this effect is affected by SP Recovery)\nLv.6: Increase Antique Skill damage to $2 of the original damage"
 角色回合結束時，獲得一定古董品能量；釋放技能消耗精力值時，依據消耗的精力值額外獲得一定古董品能量。古董品能量滿時可釋放古董品技能：對所有敵人造成基於難度與當前探索等級的固定傷害=At the end of a character's action, gain Antique Energy; When spending SP with skills, gain Antique Energy based on SP spent. Can use Antique Skill at maxed Antique Energy: Deal fixed damage to all foes based on Difficulty and Exploration Level
 r:"^釋放古董品技能時，額外使所有同伴恢復(\d+)點可突破上限的精力值（該效果受精力恢復屬性的影響）$"="When using Antique Skill, all characters restore $1 SP that can exceed the cap (this effect is affected by SP Recovery)"
+
+青銅鏡子=Bronze Mirror
+增強護盾能力，基於當前總護盾量造成傷害=Buff Shield, deal damage based on Shield
+青銅打造的鏡子。\n雖顯古舊，仍可正常用作鏡具。=A mirror forged from bronze. Though it shows its age, it still reflects true.
+r:"^等級1：角色回合結束時，獲得一定古董品能量；釋放技能添加護盾後，額外獲得一定古董品能量。古董品能量滿時可釋放古董品技能：對所有敵人造成基於所有角色當前總護盾量的固定傷害，該傷害受到難度與當前探索等級的影響\n等級3：釋放古董品技能時，額外使所有同伴獲得其(\d+%)攻擊力\+(\d+%)防禦力\+(\d+%)最大生命值的護盾\n等級6：古董品技能傷害提升至原本的(\d+%)$"="Lv.1: At the end of a character's action, gain Antique Energy; After granting a Shield from skills, gain Antique Energy. Can use Antique Skill at maxed Antique Energy: Deal fixed damage to all foes based on all characters' current Shield, difficulty and Exploration Level can affect this damage\nLv.3: When using Antique Skill, grant party a Shield equal to $1 ATK + $2 DEF + $3 Max HP\nLv.6: Increase Antique Skill damage to $4 of the original damage"
+角色回合結束時，獲得一定古董品能量；釋放技能添加護盾後，額外獲得一定古董品能量。古董品能量滿時可釋放古董品技能：對所有敵人造成基於所有角色當前總護盾量的固定傷害，該傷害受到難度與當前探索等級的影響=At the end of a character's action, gain Antique Energy; After granting a Shield from skills, gain  gain Antique Energy. Can use Antique Skill at maxed Antique Energy: Deal fixed damage to all foes based on all characters' current Shield, difficulty and Exploration Level can affect this damage
+r:"^釋放古董品技能時，額外使所有同伴獲得其(\d+%)攻擊力\+(\d+%)防禦力\+(\d+%)最大生命值的護盾$"="When using Antique Skill, grant party a Shield equal to $1 ATK + $2 DEF + $3 Max HP"
+對所有敵人造成基於所有角色當前總護盾量的固定傷害，該傷害受到難度與當前探索等級的影響=Deal fixed damage to all foes based on all characters' current Shield, difficulty and Exploration Level can affect this damage
+
+殘缺的棋子=Incomplete Chess Set
+戰鬥數量提升=Increase Battle
+戰鬥及摩納多之門數量增加，戰鬥獲得額外收益=<size\=28>Increase battle and Monad door number and their rewards</size>
+由陶瓷製成的國際象棋。\n除了馬與兵，其餘棋子已不知所蹤。=A ceramic chess set. Only the knight and pawn remain, with the other pieces missing.
+r:"^等級1：{{A}}探索層中，不再出現寶箱、走失人，額外出現一定數量的陰影，摩納多之門出現機率提高\n等級2：強敵陰影/稀有陰影出現機率提升\n等級4：戰鬥勝利後，進入下一層時有(\d+%)機率觸發一次「洗牌時間·通常」\n等級6：戰鬥勝利後獲取「時鐘的齒輪」數量增加(\d+%)$"="Lv.1 During {{A}} exploration floor, treasure chests and missing persons will no longer appear, additionally spawn more Shadows and increase the chance of encountering Monad doors\nLv.2: Increase the chance of encountering Strong Shadows/Rare Shadows\nLv.4: After battle, $1 chance to trigger 1 [Shuffle Time·Normal] when entering the next floor\nLv.6: Increase [Clock Gears] acquired from battles by $2"
+{{A}}探索層中，不再出現寶箱、走失人，額外出現一定數量的陰影，摩納多之門出現機率提高=During {{A}} exploration floor, treasure chests and missing persons will no longer appear, additionally spawn more Shadows and increase the chance of encountering Monad doors
+強敵陰影/稀有陰影出現機率提升=Increase the chance of encountering Strong Shadows/Rare Shadows
+r:"^戰鬥勝利後，進入下一層時有(\d+%)機率觸發一次「洗牌時間·通常」$"="After battle, $1 chance to trigger 1 [Shuffle Time·Normal] when entering the next floor"
+
+豪華時鐘=Luxury Clock
+時鐘額外收益=Increase Clock Rewards
+時鐘數量增加，時鐘出現額外選項=Increase Clock number and grant bonus options
+典雅端莊的古典座鐘。\n外觀雖顯古舊，秒針卻仍在平穩運轉。=An elegant classical mantel clock. Though aged in appearance, its second hand still sweeps steadily.
+r:"^等級1：使用「時鐘」消耗「拂曉的碎片」時，消耗量不再隨使用次數而遞增\n等級2：{{A}}探索層中，「時鐘」出現機率大幅提高\n等級4：「時鐘」出現額外選項：意志力>(\d+)點時，可消耗(\d+)點意志力觸發1次觸發一次「洗牌時間·稀有」\n等級6：「時鐘」出現額外選項：意志力>(\d+)點時，可消耗(\d+)點意志力觸發1次觸發一次「洗牌時間·珍貴」$"="Lv.1: The [Clock] will no longer increase in cost after spending [Dawn Fragments]\nLv2. During {{A}} exploration, heavily increase the chance of encountering the [Clock]\nLv.4: New [Clock] option: When Will is >$1, you can spend $2 Will to trigger 1 [Shuffle Time·Rare]\nLv.6: New [Clock] option: When Will is >$3, you can spend $4 Will to trigger 1 [Shuffle Time·Precious]"
+r:"^等級1：使用「時鐘」消耗「拂曉的碎片」時，消耗量不再隨使用次數而遞增\n等級2：{{A}}探索層中，「時鐘」出現機率大幅提高\n等級4：「時鐘」出現額外選項：意志力>(\d+)點時，可消耗(\d+)點意志力觸發一次「洗牌時間·稀有」\n等級6：「時鐘」出現額外選項：意志力>(\d+)點時，可消耗(\d+)點意志力觸發一次「洗牌時間·珍貴」$"="Lv.1: The [Clock] will no longer increase in cost after spending [Dawn Fragments]\nLv2. During {{A}} exploration, heavily increase the chance of encountering the [Clock]\nLv.4: New [Clock] option: When Will is >$1, you can spend $2 Will to trigger 1 [Shuffle Time·Rare]\nLv.6: New [Clock] option: When Will is >$3, you can spend $4 Will to trigger 1 [Shuffle Time·Precious]"
+使用「時鐘」消耗「拂曉的碎片」時，消耗量不再隨使用次數而遞增=The [Clock] will no longer increase in cost after spending [Dawn Fragments]
+{{A}}探索層中，「時鐘」出現機率大幅提高=During {{A}} exploration, heavily increase the chance of encountering the [Clock]
+r:"^「時鐘」出現額外選項：意志力>(\d+)點時，可消耗(\d+)點意志力觸發1次觸發一次「洗牌時間·稀有」$"="New [Clock] option: When Will is >$1, you can spend $2 Will to trigger 1 [Shuffle Time·Rare]"
+r:"^「時鐘」出現額外選項：意志力>(\d+)點時，可消耗(\d+)點意志力觸發一次「洗牌時間·稀有」$"="New [Clock] option: When Will is >$1, you can spend $2 Will to trigger 1 [Shuffle Time·Rare]"
+r:"^「時鐘」出現額外選項：意志力>(\d+)點時，可消耗(\d+)點意志力觸發1次觸發一次「洗牌時間·珍貴」$"="New [Clock] option: When Will is >$1, you can spend $2 Will to trigger 1 [Shuffle Time·Precious]"
+r:"^「時鐘」出現額外選項：意志力>(\d+)點時，可消耗(\d+)點意志力觸發一次「洗牌時間·珍貴」$"="New [Clock] option: When Will is >$1, you can spend $2 Will to trigger 1 [Shuffle Time·Precious]"
 
 r:"^等級(\d+)$"="Lv. $1"
 r:"^Lv.(\d+)解鎖$"="Unlocks at Lv.$1"
@@ -1110,7 +1218,13 @@ sr:"^選擇一個解明職業角色\（可能獲得：(.*)\）$"="Select 1 Eluci
 sr:"^任選一個解明職業角色\（可能獲得：(.*)\）$"="Select any 1 Elucidator (can obtain: $1)"
 選擇一個解明職業角色=Select 1 Elucidator
 任選一個解明職業角色=Select Any 1 Elucidator
+自律卡包=Virtuoso Card Pack
+sr:"^選擇一個自律職業角色\（可能獲得：(.*)\）$"="Select 1 Virtuoso (can obtain: $1)"
+sr:"^任選一個自律職業角色\（可能獲得：(.*)\）$"="Select any 1 Virtuoso (can obtain: $1)"
+選擇一個自律職業角色=Select 1 Virtuoso
+任選一個自律職業角色=Select Any 1 Virtuoso
 
+{{A}}、{{B}}&{{C}}={{A}}, {{B}} & {{C}}
 {{B}}、{{C}}、{{A}}={{B}}, {{C}}, {{A}}
 {{A}}、{{B}}、{{C}}、{{D}}={{A}}, {{B}}, {{C}}, {{D}}
 {{A}}、{{B}}、{{D}}、{{C}}={{A}}, {{B}}, {{D}}, {{C}}
@@ -1119,17 +1233,23 @@ sr:"^任選一個解明職業角色\（可能獲得：(.*)\）$"="Select any 1 E
 {{C}}、{{B}}、{{A}}、{{D}}={{C}}, {{B}}, {{A}}, {{D}}
 {{A}}、{{B}}、{{C}}、{{D}}、{{E}}={{A}}, {{B}}, {{C}}, {{D}}, {{E}}
 {{A}}、{{B}}、{{C}}、{{E}}、{{D}}={{A}}, {{B}}, {{C}}, {{E}}, {{D}}
-{{D}}、{{C}}、{{B}}、{{A}}、{{E}}={{D}}, {{C}}, {{B}}, {{A}}, {{E}}
+{{A}}、{{B}}、{{D}}、{{C}}、{{E}}={{A}}、{{B}}、{{D}}、{{C}}、{{E}}
 {{B}}、{{A}}、{{E}}、{{C}}、{{D}}={{B}}, {{A}}, {{E}}, {{C}}, {{D}}
 {{B}}、{{C}}、{{A}}、{{E}}、{{D}}={{B}}, {{C}}, {{A}}, {{E}}, {{D}}
+{{B}}、{{C}}、{{D}}、{{A}}、{{E}}={{B}}、{{C}}、{{D}}、{{A}}、{{E}}
+{{D}}、{{C}}、{{B}}、{{A}}、{{E}}={{D}}, {{C}}, {{B}}, {{A}}, {{E}}
 {{A}}、{{B}}、{{F}}、{{C}}、{{D}}、{{E}}={{A}}, {{B}}, {{F}}, {{C}}, {{D}}, {{E}}
 {{B}}、{{C}}、{{D}}、{{A}}、{{E}}、{{F}}={{B}}, {{C}}, {{D}}, {{A}}, {{E}}, {{F}}
 {{B}}、{{D}}、{{C}}、{{F}}、{{E}}、{{A}}={{B}}, {{D}}, {{C}}, {{F}}, {{E}}, {{A}}
 {{B}}、{{A}}、{{E}}、{{C}}、{{D}}、{{F}}、{{G}}={{B}}, {{A}}, {{E}}, {{C}}, {{D}}, {{F}}, {{G}}
+{{B}}、{{C}}、{{D}}、{{A}}、{{E}}、{{F}}、{{G}}={{B}}、{{C}}、{{D}}、{{A}}、{{E}}、{{F}}、{{G}}
 {{B}}、{{D}}、{{A}}、{{F}}、{{E}}、{{C}}、{{G}}={{B}}, {{D}}, {{A}}, {{F}}, {{E}}, {{C}}, {{G}}
+{{B}}、{{E}}、{{D}}、{{G}}、{{F}}、{{A}}、{{C}}={{B}}、{{E}}、{{D}}、{{G}}、{{F}}、{{A}}、{{C}}
 {{A}}、{{D}}、{{B}}、{{C}}、{{G}}、{{H}}、{{E}}、{{F}}={{A}}, {{D}}, {{B}}, {{C}}, {{G}}, {{H}}, {{E}}, {{F}}
 {{A}}、{{E}}、{{F}}、{{B}}、{{D}}、{{C}}、{{G}}、{{H}}={{A}}, {{E}}, {{F}}, {{B}}, {{D}}, {{C}}, {{G}}, {{H}}
+{{B}}、{{A}}、{{F}}、{{E}}、{{C}}、{{D}}、{{G}}、{{H}}={{B}}、{{A}}、{{F}}、{{E}}、{{C}}、{{D}}、{{G}}、{{H}}
 {{G}}、{{F}}、{{H}}、{{E}}、{{C}}、{{B}}、{{D}}、{{A}}、{{I}}、{{J}}={{G}}, {{F}}, {{H}}, {{E}}, {{C}}, {{B}}, {{D}}, {{A}}, {{I}}, {{J}}
+{{G}}、{{F}}、{{I}}、{{E}}、{{C}}、{{B}}、{{D}}、{{A}}、{{J}}、{{K}}、{{H}}={{G}}、{{F}}、{{I}}、{{E}}、{{C}}、{{B}}、{{D}}、{{A}}、{{J}}、{{K}}、{{H}}
 {{A}}、{{E}}、{{D}}、{{J}}、{{K}}、{{B}}、{{H}}、{{G}}、{{F}}、{{C}}、{{L}}、{{I}}、{{M}}={{A}}, {{E}}, {{D}}, {{J}}, {{K}}, {{B}}, {{H}}, {{G}}, {{F}}, {{C}}, {{L}}, {{I}}, {{M}}
 
 ----------
@@ -1619,6 +1739,7 @@ SHUFFLE TIME + CHARACTER AWARENESS
 洗牌時間·角色=<size\=28>Shuffle Time·Character</size>
 獲得角色：{{A}}=Obtain Character: {{A}}
 獲得角色：{{A}}。=Obtain Character: {{A}}
+獲得角色：{{A}}&{{B}}。=Obtain Character: {{A}} & {{B}}
 
 階意識補償=Compensation
 意識已滿補償=Compensation
@@ -1659,6 +1780,9 @@ r:"^協<color\=#000000>助</color>的信念$"="S<color\=#000000>u</color>pport's
 r:"^已覺醒超越意識：{{A}}的“釋放『神諭轉換』使『後備角色』登場時，立刻使其釋放1次{{B}}或HIGHLIGHT。”的效果不再有冷卻時間限制。\n自身每次釋放技能後，使友方全體最終傷害提升(\d+%)，持續(\d+)回合，上限(\d+)層。$"="Awakened Beyond Awareness: The "when using [Oracle Shift], the [Backup Character] immediately use their Theurgy or HIGHLIGHT once." effect no longer has a cooldown. After using a skill, increase party's Final DMG by $1 for $2 turns. Stacks up to $3 times."
 r:"^{{A}}的“釋放『神諭轉換』使『後備角色』登場時，立刻使其釋放1次{{B}}或HIGHLIGHT。”的效果不再有冷卻時間限制。\n自身每次釋放技能後，使友方全體最終傷害提升(\d+%)，持續(\d+)回合，上限(\d+)層。$"="The "when using [Oracle Shift], the [Backup Character] immediately use their Theurgy or HIGHLIGHT once." effect no longer has a cooldown. After using a skill, increase party's Final DMG by $1 for $2 turns. Stacks up to $3 times."
 
+r:"^已覺醒超越意識：釋放『傾力揮擊』後，額外削減敵方全體(\d+)點倒地值。$"="Awakened Beyond Awareness: After using [Power Swing], additionally decrease all foes' Down Points by $1."
+r:"^釋放『傾力揮擊』後，額外削減敵方全體(\d+)點倒地值。$"="After using [Power Swing], additionally decrease all foes' Down Points by $1."
+
 ----------
 ALL MAJOR ARCANA CARDS
 ----------
@@ -1687,6 +1811,7 @@ Strength
 r:"^所有角色精力值上限提升(\d+)點，精力回復提升(\d+%)，精力值消耗增加(\d+%)。釋放技能後，該技能每消耗(\d+)點精力值使其他角色最終傷害提升(\d+%)，持續(\d+)回合$"="<size\=28>Increase all characters' Max SP by $1, SP Recovery by $2, SP cost by $3. When using skills, increase all other characters' Final DMG by $5 for every $4 spent SP for $6 turn</size>"
 Hermit
 r:"^戰鬥中使用道具時，最終傷害提升(\d+%)；使用道具後使自身獲得(\d+)個額外回合$"="When using items in battle, increase Final DMG by $1; Gain $2 Extra Action after using items"
+r:"^所有角色受護盾效果提升(\d+%)，回合結束時獲得相當於(\d+%)生命值上限的護盾；受到技能傷害後，對攻擊者反彈相當於所有角色總護盾量(\d+%)的固定傷害$"="<size\=28>Increase all characters' Shield Received by $1. At the end of turn, gain a Shield equal to $2 Max HP; After taking skill damage, deal fixed damage equal to $3 of all characters' Shield to the attacker</size>"
 命運=Fortune
 r:"^所有角色總生命值提升(\d+%)，技能造成溢出治療時，對隨機敵人造成溢出治療量(\d+%)的固定傷害$"="Increase all character' Max HP by $1, when overhealing with a skill, deal $2 overhealed amount as fixed damage to a random foe"
 r:"^所有角色總生命值提升(\d+%)、治療效果提升(\d+%)，技能造成溢出治療時，對隨機敵人造成溢出治療量(\d+%)的固定傷害$"="Increase all character' Max HP by $1 and Healing Effect by $2, when overhealing with a skill, deal $3 overhealed amount as fixed damage to a random foe"
@@ -1914,6 +2039,7 @@ r:"^獵<color\=#000000>殺</color>時刻$"="R<color\=#000000>e</color>aping Hour
 回合開始時，消耗1層並釋放米吉多拉翁=At the start of turn, \nspend 1 stack then use Megidolaon
 獵殺衝動=Reaping Impulse
 r:"^獵<color\=#000000>殺</color>衝動$"="R<color\=#000000>e</color>aping Impulse"
+r:"^無法行動，每回合扣除若干精力值，(\d+)回合後死亡。受到(\d+)次治療技能後解除「不吉的話語」效果。$"="Unable to act, lose SP each turn, die after $1 turns. Remove [Ominous Words] effects after receiving $2 healing skills."
 
 ----------
 NPC
