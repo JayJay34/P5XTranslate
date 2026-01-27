@@ -2487,6 +2487,7 @@ r:"^對隨機敵人造成(\d+)次念動屬性傷害，優先攻擊未受到該�
 r:"^使(\d+)名同伴恢復生命值，攻擊力提升，效果命中提升，其對每名敵人造成的每段技能傷害會附著(\d+)層<link\="s\|193"><u>『火花』</u></link>，效果持續(\d+)回合，期間最多觸發(\d+)次附著<link\="s\|193"><u>『火花』</u></link>效果。$"="Restore HP to $1 ally, increase their ATK and Ailment ACC, they can now inflict $2 <link\="s|193"><u>[Sparklers]</u></link> stack after each hit of damage for $3 turns, up to inflicting $4 <link\="s|193"><u>[Sparklers]</u></link>."
 r:"^對所有敵人造成念動屬性傷害，並使其受到傷害提升，且每名敵人受到的每段技能傷害會附著(\d+)層<link\="s\|193"><u>『火花』</u></link>，效果持續(\d+)回合，{{A}}回合開始時持續回合數減(\d+)，期間最多觸發(\d+)次附著<link\="s\|193"><u>『火花』</u></link>效果（該傷害無法觸發本技能的附著<link\="s\|193"><u>『火花』</u></link>效果）。$"="Deal Psy damage to all foes and increase their DMG Taken, inflict $1 stack of <link\="s|193"><u>[Sparklers]</u></link> to each foe after each hit of damage for $2 turns, decrease the duration at the start of {{A}}'s turn. When this effect is active {{A}} can inflict up to $3 stacks of <link\="s|193"><u>[Sparklers]</u></link> (That damage cannot trigger the effect of this skill)."
 r:"^對1名敵人造成電擊屬性傷害，有機率使敵人陷入<link\="s\|104"><u>觸電</u></link>狀態，效果持續(\d+)回合。$"="Deal Elec damage to 1 foe, with a chance to inflict <link\="s|104"><u>Shock</u></link> for $1 turns."
+階段=Phase
 階段一特性=Phase 1 Mechanics
 階段二特性=Phase 2 Mechanics
 階段三特性=Phase 3 Mechanics
@@ -2734,7 +2735,7 @@ r:"^越<color\=#000000>挫</color>越勇$"="W<color\=#000000>h</color>at Doesn't
 r:"^戀愛被擊倒時最終傷害及最終傷害減免在(\d+)回合內提高(\d+%)，且倒地值上限永久增加(\d+)點，最多疊加(\d+)層。$"="When Lovers is knocked down, increase Final DMG and Final DMG RES by $2 for $1 turns. Also permanently increase Down Points by $3. Stacks up to $4 times."
 
 被敵人魅惑了！\n無法分清敵我……！=They're charmed by the enemy and can't tell friend from foe...!
-這陣霧氣……會讓人更容易被催眠。\n大家請多加小心！=This mist... it'll make people more susceptible to hypnosis. Please be careful!
+這陣霧氣……會讓人更容易被催眠。\n大家請多加小心！=This mist... it'll make you more susceptible to hypnosis. Please be careful!
 在被魅惑的狀態下受到攻擊會很危險！\n請在戰鬥時注意互相支援！=Being attacked while under Charm is dangerous! Please support each other!
 誘惑吐息消失了！=Cleared Seductive Mist!
 
@@ -2800,7 +2801,7 @@ r:"^累計獲得（<color\=#EF0000>(\d+)</color>/(\d+)）分$"="Total Score Obta
 <size\=26>Successful Defenses:</size>
 <size\=27>Rounds Survived:</size>
 操作提示=Controls
-抵禦敵人進攻6回合並獲得更高的分數=Gain a higher score within 6 turns
+r:"^抵禦敵人進攻(\d+)回合並獲得更高的分數$"="Gain a higher score within $1 turns"
 當前有保存的進度，是否繼續挑戰？=Do you want to continue the challenge where you left off?
 選擇「清空進度」會清除保存的記錄並重新挑戰。=Select [No] to reset progress and retry.
 關卡尚未通關，是否保存當前進度並暫時離開？=Do you want to save your progress and leave?
@@ -2939,8 +2940,14 @@ r:"^狂<color\=#000000>熱</color>思維$"="F<color\=#000000>a</color>natic Thin
 r:"^自身使用{{A}}技能造成不同屬性的傷害時，為所有友方添加(\d+)層『猩紅熱疫』；每次造成TECHNICAL時，為所有友方添加(\d+)層『猩紅熱疫』。『猩紅熱疫』：每層提供(\d+%)的最終傷害加成，持續(\d+)回合，最多可疊加(\d+)層。$"="<size\=24>When dealing {{A}} skill damage with a different element, give all allies $1 stacks of [Scarlet Fever]; When dealing TECHNICAL, give all allies $2 stack of [Scarlet Fever]. [Scarlet Fever]: Each stack increases Final DMG Bonus by $3 for $4 turns, up to $5 stacks.</size>"
 猩紅熱疫=Scarlet Fever
 r:"^猩<color\=#000000>紅</color>熱疫$"="S<color\=#000000>c</color>arlet Fever"
+標記：凍結=Mark: Ice
+標記：祝福=Mark: Bless
 sr:"^標記：(.*)$"="Mark: $1"
-sr:"^上次造成傷害屬性：(.*)$"="Last elemental damage: $1"
+上次造成傷害屬性：凍結=Last attribute damage: Ice
+上次造成傷害屬性：凍結=Last attribute damage: Bless
+sr:"^上次造成傷害屬性：(.*)$"="Last attribute damage: $1"
+r:"^標<color\=#000000>記</color>：凍結$"="M<color\=#000000>a</color>rk: Ice"
+r:"^標<color\=#000000>記</color>：祝福$"="M<color\=#000000>a</color>rk: Bless"
 sr:"^標<color\=#000000>記</color>：(.*)$"="M<color\=#000000>a</color>rk: $1"
 
 晶簇共振=Quartz Resonance
@@ -3027,7 +3034,7 @@ r:"^思<color\=#000000>維</color>巢穴$"="T<color\=#000000>h</color>ought Lair
 sr:"^使敵人陷入嘲諷狀態時，為所有友方添加(\d+)層『(.*)』；自身造成不同屬性的傷害，為所有友方添加(\d+)層『(.*)』，若造成的為萬能傷害，額外為所有友方添加(\d+)層『(.*)』。$"="When inflicting foes with Taunt, grant all allies $1 [$2] stacks; When user deals different attribute damage, grant all allies $3 [$4] stack, if the damage dealt was Almighty, grant all allies $5 bonus [$6] stack."
 r:"^使敵人陷入嘲諷狀態時，為所有友方添加(\d+)層<link\="dc\|284"><u>『第六感知』</u></link>；自身造成不同屬性的傷害，為所有友方添加(\d+)層<link\="dc\|284"><u>『第六感知』</u></link>，若造成的為萬能傷害，額外為所有友方添加(\d+)層<link\="dc\|284"><u>『第六感知』</u></link>。$"="<size\=22>When inflicting foes with Taunt, grant all allies $1 <link\="dc|284"><u>[Sixth Sense]</u></link> stacks; When user deals different attribute damage, grant all allies $2 <link\="dc|284"><u>[Sixth Sense]</u></link> stack, if the damage dealt was Almighty, grant all allies $3 bonus <link\="dc|284"><u>[Sixth Sense]</u></link> stack.</size>"
 r:"^每層提供(\d+%)的最終傷害加成，持續(\d+)回合（每層獨立計算），最多可疊加(\d+)層；疊加至(\d+)層時，額外獲得(\d+%)的最終傷害加成。$"="Increase Final DMG by $1 for $2 turns. Stacks up to $3 times, and stacks are spent separately; At $4 stacks, increase Final DMG by $5 more"
-r:"^使敵人陷入嘲諷狀態時，為所有友方添加(\d+)層『第六感知』；自身造成不同屬性的傷害，為所有友方添加(\d+)層『第六感知』，若造成的為萬能傷害，額外為所有友方添加(\d+)層『第六感知』。『第六感知』：每層提供(\d+%)的最終傷害加成，持續(\d+)回合（每層獨立計算），最多可疊加(\d+)層；疊加至(\d+)層時，額外獲得(\d+%)的最終傷害加成。$"="When inflicting foes with Taunt, grant all allies $1 [Sixth Sense] stacks; When user deals different attribute damage, grant all allies $2 [Sixth Sense] stack, if the damage dealt was Almighty, grant all allies $3 bonus [Sixth Sense] stack. [Sixth Sense]: Increase Final DMG by $4 for $5 turns. Stacks up to $6 times, and stacks are spent separately; At $7 stacks, increase Final DMG by $8 more"
+r:"^使敵人陷入嘲諷狀態時，為所有友方添加(\d+)層『第六感知』；自身造成不同屬性的傷害，為所有友方添加(\d+)層『第六感知』，若造成的為萬能傷害，額外為所有友方添加(\d+)層『第六感知』。『第六感知』：每層提供(\d+%)的最終傷害加成，持續(\d+)回合（每層獨立計算），最多可疊加(\d+)層；疊加至(\d+)層時，額外獲得(\d+%)的最終傷害加成。$"="<size\=24>When inflicting foes with Taunt, grant all allies $1 [Sixth Sense] stacks; When user deals different attribute damage, grant all allies $2 [Sixth Sense] stack, if the damage dealt was Almighty, grant all allies $3 bonus [Sixth Sense] stack. \n[Sixth Sense]: Increase Final DMG by $4 for $5 turns. Stacks up to $6 times, and stacks are spent separately; At $7 stacks, increase Final DMG by $8 more</size>"
 第六感知=Sixth Sense
 r:"^第<color\=#000000>六</color>感知$"="S<color\=#000000>i</color>xth Sense"
 r:"^第六感知疊加至(\d+)層，提升(\d+%)的最終傷害$"="At $1 Sixth Sense stacks, \nincrease Final DMG by $2"
