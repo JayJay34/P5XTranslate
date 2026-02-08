@@ -823,6 +823,11 @@ r:"^選擇1名同伴，立刻釋放其HIGHLIGHT技能，同時提升<color\=#FFF
 
 r:"^使<color\=#FFFF00>所有</color>同伴獲得(\d+\.\d+%)傷害加成，持續(\d+)個怪盜行動。期間我方怪盜行動後回復(\d+%)HIGHLIGHT能量，最多回復(\d+%)。$"="Increase <color\=#FFFF00>all</color> allies' DMG Dealt by $1 for $2 actions. Restore $3 HIGHLIGHT Energy after each allies' action, up to $4."
 
+r:"^釋放{{A}}時獲得(\d+\.\d+%)最終傷害增幅$"="When using {{A}}, increase Final DMG Amp by $1"
+
+Combat Pop-ups
+r:"^終<color\=#000000>曲</color>：音域全開$"="C<color\=#000000>a</color>tchy Hook"
+
 ----------
 Lemon - Motoha Arai
 ----------
@@ -1788,8 +1793,40 @@ r:"^英<color\=#000000>雄</color>聚焦$"="H<color\=#000000>e</color>ro Focus"
 r:"^傾<color\=#000000>力</color>揮擊$"="P<color\=#000000>o</color>wer Swing"
 r:"^熱<color\=#000000>力</color>提升$"="F<color\=#000000>i</color>red Up"
 r:"^真<color\=#000000>格</color>$"="S<color\=#000000>e</color>rious"
+r:"^昂<color\=#000000>揚</color>$"="H<color\=#000000>i</color>gh-Spirited"
 r:"^對<color\=#000000>英</color>雄的渴望$"="W<color\=#000000>a</color>nnabe Hero"
 r:"^自<color\=#000000>卑</color>的盡頭$"="E<color\=#000000>n</color>d of Inferiority"
 r:"^未<color\=#000000>知</color>的可能性$"="U<color\=#000000>n</color>known Possibilities"
 r:"^守<color\=#000000>護</color>之誓$"="O<color\=#000000>a</color>th of Protection"
 r:"^英<color\=#000000>雄</color>之劍$"="H<color\=#000000>e</color>ro's Sword"
+
+----------
+Pinky - Narumi Nashimoto
+----------
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，獲得(\d+)層『閃耀值』並進入『偶像營業』狀態，持續(\d+)回合。\n『偶像營業』：暴擊率提高<color\=#FFFC40>(\d+\.\d+%)</color>，傷害提高<color\=#FFFC40>(\d+\.\d+%)</color>，且回合開始時獲得(\d+)層『閃耀值』。$"="Deal Psy damage to 1 foe equal to <color\=#FFFC40>$1</color> of ATK. Gain $2 [Shiny Points] and enter [Idol Business] state for $3 turns.\n[Idol Business]: Increase Crit Rate by <color\=#FFFC40>$4</color> and DMG Bonus by <color\=#FFFC40>$5</color>. Before the start of turn, gain $6 [Shiny Points]."
+r:"^對<color\=#FFFF00>1名</color>敵人造成<color\=#FFFF00>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，獲得(\d+)層『閃耀值』並進入『偶像營業』狀態，持續(\d+)回合。\n『偶像營業』：暴擊率提高(\d+\.\d+%)，傷害提高(\d+\.\d+%)，且每次行動前都會獲得(\d+)層『閃耀值』。$"="Deal Psy damage to <color\=#FFFF00>1</color> foe equal to <color\=#FFFF00>$1</color> of ATK. Gain $2 [Shiny Points] and enter [Idol Business] state for $3 turns.\n[Idol Business]: Increase Crit Rate by $4 and DMG Bonus by $5. Before the start of turn, gain $6 [Shiny Points]."
+
+r:"^對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，該傷害由所有敵人平均分攤。\n處於『偶像營業』時施放：技能結束後使自身『閃耀值』層數翻倍。$"="Deal Psy damage to all foes equal to <color\=#FFFC40>$1</color> of ATK, distribute this damage between all foes. \nAfter using this skill in [Idol Business] mode: Double Narumi's [Shiny Points]."
+r:"^對<color\=#FFFF00>所有</color>敵人造成<color\=#FFFF00>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，該傷害由所有敵人平均分攤。\n處於『偶像營業』時施放：技能結束後使自身『閃耀值』層數翻倍。$"="Deal Psy damage to all foes equal to <color\=#FFFF00>$1</color> of ATK, distribute this damage between all foes. \nAfter using this skill in [Idol Business] mode: Double Narumi's [Shiny Points]."
+
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害。\n處於『{{A}}♪{{A}}♫』時施放：每層『閃耀值』都會額外造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害。若『閃耀值』達到(\d+)層，還會額外造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害且在施放技能期間獲得(\d+%)傷害加成。$"="Deal Psy damage to 1 foe equal to <color\=#FFFC40>$1</color> of ATK.\nWhen [Naruru ♪ Naruru ♫] is active: Deal bonus Psy damage equal to <color\=#FFFC40>$2</color> of ATK for every [Shiny Points] stacks. When [Shiny Points] stacks reach $3, deal bonus Psy damage equal to <color\=#FFFC40>$4</color> of ATK. Also gain $5 DMG Bonus when activating this skill."
+r:"^對<color\=#FFFF00>1名</color>敵人造成<color\=#FFFF00>(\d+\.\d+%)</color>攻擊力的念動屬性傷害。\n處於『{{A}}♪{{A}}♫』時施放：每層『閃耀值』都會額外造成<color\=#FFFF00>(\d+\.\d+%)</color>攻擊力的念動屬性傷害。若『閃耀值』達到(\d+)層，還會額外造成<color\=#FFFF00>(\d+\.\d+%)</color>攻擊力的念動屬性傷害且在施放技能期間獲得(\d+%)傷害加成。$"="Deal Psy damage to <color\=#FFFF00>1</color> foe equal to <color\=#FFFF00>$1</color> of ATK.\nWhen [Naruru ♪ Naruru ♫] is active: Deal bonus Psy damage equal to <color\=#FFFF00>$2</color> of ATK for every [Shiny Points] stacks. When [Shiny Points] stacks reach $3, deal bonus Psy damage equal to <color\=#FFFF00>$4</color> of ATK. Also gain $5 DMG Bonus when activating this skill."
+
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，並基於WONDER攻擊力的(\d+%)提升自身攻擊力，最高提升<color\=#FFFF00>(\d+)</color>點，持續(\d+)回合。$"="Deal Psy damage to <color\=#FFFF00>1</color> foe equal to $1 of ATK. Increase Narumi's ATK based on $2 of Wonder's ATK (up to <color\=#FFFF00>$3</color> ATK) for $4 turns."
+
+閃耀值=Shiny Points
+偶像營業=Idol Business
+
+In-Battle Quotes
+sr:"^<color\=#FF0000>(.*)</color>將在下個回合結束時獲得額外回合！$"="<color\=#FF0000>$1</color> gained Extra Action!"
+
+Combat Pop-ups
+r:"^聚<color\=#000000>光</color>燈·全開$"="S<color\=#000000>p</color>otlight Unleashed"
+r:"^約<color\=#000000>定</color>·下次再會$"="P<color\=#000000>r</color>omised Meeting"
+r:"^成<color\=#000000>瑠</color>瑠♪{{A}}♫$"="N<color\=#000000>a</color>ruru ♪ Naruru ♫"
+r:"^偶<color\=#000000>像</color>營業$"="I<color\=#000000>d</color>ol Business"
+r:"^H<color\=#000000>I</color>GHLIGHT$"="H<color\=#000000>I</color>GHLIGHT"
+r:"^熱<color\=#000000>度</color>$"="H<color\=#000000>e</color>at"
+r:"^激<color\=#000000>推</color>$"="B<color\=#000000>i</color>ggest Fan"
+r:"^我<color\=#000000>重</color>要的客人$"="M<color\=#000000>y</color> Dearest Guest"
+r:"^草<color\=#000000>{{A}}</color>糖霜之吻$"="S<color\=#000000>t</color>rawberry Frosting's Kiss"
