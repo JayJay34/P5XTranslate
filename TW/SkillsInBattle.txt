@@ -712,6 +712,7 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動�
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的核熱屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deal $1 ATK Nuke damage to <color\=#FFFF00>all</color> foes and increase their DMG Taken by $2 for $3 turns."
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deal $1 ATK Bless damage to <color\=#FFFF00>all</color> foes and increase their DMG Taken by $2 for $3 turns."
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deal $1 ATK Curse damage to <color\=#FFFF00>all</color> foes and increase their DMG Taken by $2 for $3 turns."
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的萬能屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deal $1 ATK Almighty damage to <color\=#FFFF00>all</color> foes and increase their DMG Taken by $2 for $3 turns."
 
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，使所有敵人受到傷害提升(\d+\.\d+%)、受到暴擊效果提升(\d+\.\d+%)，持續(\d+)回合。$"="Deal Curse damage to <color\=#FFFF00>all</color> foes equal to $1 of ATK. Increase all foes' DMG Taken by $2 and Crit DMG Taken by $3 for $4 turns."
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性攻擊力，使所有敵人受到傷害提升(\d+\.\d+%)、受到暴擊效果提升(\d+\.\d+%)，持續(\d+)回合。$"="Deal Curse damage to <color\=#FFFF00>all</color> foes equal to $1 of ATK. Increase all foes' DMG Taken by $2 and Crit DMG Taken by $3 for $4 turns."
@@ -780,6 +781,7 @@ sr:"^<color\=#FF0000>(.*)</color>獲得了「(.*)」……$"="<color\=#FF0000>$1
 sr:"^<color\=#FF0000>(.*)</color>獲得了(\d+)層『(.*)』……$"="<color\=#FF0000>$1</color> gained $2 [$3] stack(s)..."
 sr:"^<color\=#FF0000>(.*)</color>獲得了『(.*)』,受到的最終傷害降低……$"="<color\=#FF0000>$1</color> gained [$2]..."
 sr:"^<color\=#FF0000>(.*)</color>失去了「(.*)」……$"="<color\=#FF0000>$1</color> lost [$2]..."
+sr:"^<color\=#FF0000>(.*)</color>失去了所有<color\=#FF0000>「(.*)」</color>$"="<color\=#FF0000>$1</color> lost all [$2]!"
 sr:"^成功驅散掉了(\d+)層<color\=#FF0000>『(.*)』</color>！$"="Dispelled $1 <color\=#FF0000>[$2]</color> stack!"
 sr:"^召喚消耗(\d+)層<color\=#FF0000>『(.*)』</color>$"="Summon consumed $1 <color\=#FF0000>[$2]</color> stack"
 
@@ -959,6 +961,7 @@ r:"^H<color\=#000000>L</color>特化$"="H<color\=#000000>L</color> Buff"
 r:"^H<color\=#000000> L</color>特化$"="H<color\=#000000>L</color> Buff"
 
 r:"^戰<color\=#000000>意</color>共鳴$"="W<color\=#000000>a</color>rrior's Resonance"
+r:"^動<color\=#000000>力</color>激蕩$"="K<color\=#000000>i</color>netic Surge"
 
 r:"^免<color\=#000000>疫</color>倒地$"="N<color\=#000000>u</color>ll Down"
 r:"^免<color\=#000000>疫</color>精神異常及控制$"="N<color\=#000000>u</color>ll Mental/Control Ailment"
@@ -1123,7 +1126,7 @@ HIGHLIGHT傷害提升=Increase HIGHLIGHT DMG
 受治療降低=Decrease Healing Received
 受到治療效果降低=Decrease Healing Received
 
-r:"^受弱點傷害提升(\d+%)$"="Increase Weakness DMG by $1"
+受弱點傷害降低=Decrease Weak DMG Taken
 受物理傷害提升=Increase Phys DMG Taken
 受物理傷害提高=Increase Phys DMG Taken
 受射擊傷害提升=Increase Gun DMG Taken
@@ -1292,6 +1295,8 @@ r:"^所有角色受最終傷害降低(\d+(.\d+)?(%)?)$"="Decrease Final DMG Take
 r:"^受到最終傷害大幅降低$"="Heavily decrease Final DMG Taken"
 r:"^免疫下一次傷害的(\d+(.\d+)?(%)?)$"="<size\=24>Decrease damage when taking the next hit by $1</size>"
 r:"^所有同伴受到的傷害降低(\d+(.\d+)?(%)?)。$"="Decrease DMG Taken by $1"
+r:"^受弱點傷害提升(\d+%)$"="Increase Weak DMG Taken by $1"
+r:"^受到的弱點傷害降低(\d+%)$"="Decrease Weak DMG Taken by $1"
 r:"^受物理傷害加深(\d+(.\d+)?(%)?)$"="Increase Phys DMG Taken by $1"
 r:"^物理傷害提升(\d+(.\d+)?(%)?)$"="Increase Phys DMG by $1"
 r:"^物理傷害提高(\d+(.\d+)?(%)?)$"="Increase Phys DMG by $1"
