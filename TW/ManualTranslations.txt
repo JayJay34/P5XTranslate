@@ -1107,7 +1107,8 @@ r:"^陣容\((\d+)\)$"="Party ($1)"
 sr:"^面具協奏：(.*)/(.*)/(.*)/(.*)屬性提升(.*)傷害。$"="<size\=21>Mask Cencerto: Increase $1/$2/$3/$4 damage by $5.</size>"
 sr:"^(.*)屬性奏鳴效果一覽$"="$1 Sonata Effects"
 sr:"^二重奏·(.*):(.*)元素怪盜技能傷害提升(.*)$"="<size\=21>$1 Duet: Increase $2 Thieves' skill damage by $3</size>"
-sr:"^多重奏·(.*):(.*)元素怪盜技能傷害提升(.*)$"="<size\=21>$1 Polyphony: Increase $2 Thieves' skill damage by $3</size>"
+sr:"^多重奏·(.*):(.*)屬性角色技能傷害提升(.*)$"="<size\=21>$1 Polyphony: Increase $2 Thieves' skill damage by $3</size>"
+sr:"^多重奏·(.*):(.*)屬性角色技能傷害提升(.*)$"="<size\=21>$1 Polyphony: Increase $2 Thieves' skill damage by $3</size>"
 
 反抗=Assassin
 擅長單體攻擊，能有效針對單個敵人。=Takes down single enemies with targeted attacks.
@@ -1567,7 +1568,9 @@ r:"^查詢結果僅保留最近(\d+)天補給資訊$"="The Supply history only r
 推薦自選契約·精準=100% Contract
 角色活動契約·隨機=50% Contract
 角色活動契約·精準=100% Contract
-武器活動補給=Weapon Supply
+武器活動補給=Arms Deal
+武器活動補給·隨機=50% Arms Deal
+武器活動補給·精準=100% Arms Deal
 簽約時間=Contract Time
 補給類型=Supply Type
 補給時間=Supply Time
@@ -1594,9 +1597,11 @@ r:"^再抽取<color\=#FFF900>(\d+)</color>次必得限定時裝$"="<size\=22>Gua
 
 「時裝煥新」活動=[Outfit Renewal] Event
 sr:"^已獲得限定時裝(.*)$"="Obtained limited outfit $1"
+sr:"^(.*)·默認$"="$1 · Default"
 怪盜時裝=Thief Outfit
 怪盜·天地勝意=Thief · Worldly Wish
 怪盜·群青色服裝=Thief · Ultramarine Outfit
+PINKY·偶像Ver=Pinky · Idol Ver
 
 sr:"^透過簽約獲得<color\=#FFD145>(.*)</color>可前往活動<color\=#FFD145>同行之約</color>領取<color\=#FFD145>(.*)</color>，僅限一次。$"="<size\=21>Obtain <color\=#FFD145>$1</color> through Signature to claim <color\=#FFD145>$2</color> once.</size>"
 sr:"^透過簽約獲得<color\=#FFD145>「(.*)」</color>可前往活動<color\=#FFD145>「同行之約」</color>領取\n<color\=#FFD145>「(.*)」</color>或<color\=#FFD145>「(.*)」</color>的5星怪盜自選箱，僅限一次。$"="<size\=21>Obtain <color\=#FFD145>$1</color> through Signature to claim <color\=#FFD145>$2</color> or <color\=#FFD145>$3</color> once.</size>"
@@ -2811,25 +2816,46 @@ r:"^周可領獎次數：<color\=#0665ca>(\d+)/(\d+)</color>$"="Rewards Left: <c
 『豐收之語』=[Words of Harvest]
 「豐收之語」=[Words of Harvest]
 豐收之語=Words of Harvest
+『執著之語』=[[Words of Obsession]
+「執著之語」=[Words of Obsession]
+執著之語=Words of Obsession
 
 r:"^陰影受到傷害後，使全體怪盜造成傷害提升(.*)，可疊加(.*)層$"="After a Shadow takes damage, increase all Thieves' DMG Dealt by $1. Stacks up to $2 times"
+r:"^陰影受到傷害後，使全體角色造成傷害提升(.*)，可疊加(.*)層$"="After a Shadow takes damage, increase all characters' DMG Dealt by $1. Stacks up to $2 times"
 r:"^陰影被擊敗後，使全體怪盜造成傷害提升(.*)，可疊加(.*)層$"="After defeating a Shadow, increase all Thieves' DMG Dealt by $1. Stacks up to $2 times"
+r:"^陰影被擊敗後，使全體角色造成傷害提升(.*)，可疊加(.*)層$"="After defeating a Shadow, increase all characters' DMG Dealt by $1. Stacks up to $2 times"
 r:"^全體怪盜受治療/護盾效果提升(.*)，受治療/護盾後造成傷害提升(.*)；戰鬥開始時全體怪盜損失(.*)生命值$"="Increase all Thieves' Healing Received/Shield Effect by $1, increase DMG Dealt after Healed/Shieled by $2; All Thieves lose $3 HP at the start of battle"
+r:"^所有角色受治療/護盾效果提升(.*)，受治療/護盾後造成傷害提升(.*)；戰鬥開始時所有角色損失(.*)生命值$"="Increase all characters' Healing Received/Shield Effect by $1, increase DMG Dealt after Healed/Shieled by $2; All Thieves lose $3 HP at the start of battle"
 r:"^所有陰影受到{{A}}傷害提升(\d+(.\d+)?(%)?)$"="Increase all Shadows' {{A}} DMG Taken by $1"
 r:"^全體怪盜<color\=#00fcff>核熱</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#00fcff>Nuke</color> DMG by $1"
+r:"^全體角色<color\=#00fcff>核熱</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all characters' <color\=#00fcff>Nuke</color> DMG by $1"
 r:"^全體怪盜<color\=#81ea2c>疾風</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#81ea2c>Wind</color> DMG by $1"
+r:"^全體角色<color\=#81ea2c>疾風</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all characters' <color\=#81ea2c>Wind</color> DMG by $1"
 r:"^全體怪盜<color\=#00aeff>冰凍</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#00aeff>Ice</color> DMG by $1"
+r:"^全體角色<color\=#00aeff>冰凍</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all characters' <color\=#00aeff>Ice</color> DMG by $1"
 r:"^全體怪盜<color\=#ff381d>火焰</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff381d>Fire</color> DMG by $1"
+r:"^全體角色<color\=#ff381d>火焰</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all characters' <color\=#ff381d>Fire</color> DMG by $1"
 r:"^全體怪盜<color\=#fbff37>電擊</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#fbff37>Elec</color> DMG by $1"
+r:"^全體角色<color\=#fbff37>電擊</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all characters' <color\=#fbff37>Elec</color> DMG by $1"
 r:"^全體怪盜<color\=#ff0036>詛咒</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff0036>Curse</color> DMG by $1"
+r:"^全體角色<color\=#ff0036>詛咒</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all characters' <color\=#ff0036>Curse</color> DMG by $1"
 r:"^全體怪盜<color\=#ff63ff>念動</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff63ff>Psy</color> DMG by $1"
+r:"^全體角色<color\=#ff63ff>念動</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all characters' <color\=#ff63ff>Psy</color> DMG by $1"
 r:"^全體怪盜<color\=#fffea0>祝福</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#fffea0>Bless</color> DMG by $1"
+r:"^全體角色<color\=#fffea0>祝福</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all characters' <color\=#fffea0>Bless</color> DMG by $1"
 r:"^全體怪盜<color\=#ff0036>HL</color>造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff0036>HIGHLIGHT</color> DMG Dealt by $1"
+r:"^全體角色<color\=#ff0036>HL</color>造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all characters' <color\=#ff0036>HIGHLIGHT</color> DMG Dealt by $1"
 r:"^全體怪盜<color\=#ff0036>追加效果</color>造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff0036>Follow Up</color> DMG Dealt by $1"
+r:"^全體角色<color\=#ff0036>追加效果</color>造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all characters' <color\=#ff0036>Follow Up</color> DMG Dealt by $1"
 r:"^全體怪盜<color\=#E3E3E3>萬能</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#E3E3E3>Almighty</color> DMG by $1"
+r:"^全體角色<color\=#E3E3E3>萬能</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all characters' <color\=#E3E3E3>Almighty</color> DMG by $1"
 r:"^全體怪盜處於<color\=#E3E3E3>額外回合</color>時造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' DMG Dealt during <color\=#E3E3E3>Extra Action</color> by $1"
+r:"^全體角色處於<color\=#E3E3E3>額外回合</color>時造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all characters' DMG Dealt during <color\=#E3E3E3>Extra Action</color> by $1"
 r:"^全體怪盜<color\=#E3E3E3>持續效果</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#E3E3E3>Damage Over Time</color> DMG by $1"
+r:"^全體角色<color\=#E3E3E3>持續效果</color>傷害提高(\d+(.\d+)?(%)?)$"="Increase all characters' <color\=#E3E3E3>Damage Over Time</color> DMG by $1"
 r:"^全體怪盜<color\=#ff0036>{{A}}傷害</color>提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff0036>{{A}}</color> DMG by $1"
+r:"^全體角色<color\=#ff0036>{{A}}傷害</color>提高(\d+(.\d+)?(%)?)$"="Increase all characters' <color\=#ff0036>{{A}}</color> DMG by $1"
+r:"^所有角色<color\=#ff0036>{{A}}</color>造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all characters' <color\=#ff0036>{{A}}</color> DMG Dealt by $1"
 
 此處盤踞著大量的陰影，挑戰成功可獲得怪盜潛能材料。=There are many Shadows here, gain Thief Talent materials on victory.
 此處盤踞著強大的陰影，挑戰成功可獲得武器突破材料。=There are strong Shadows here, gain Weapon Enhance materials on victory.
@@ -2843,6 +2869,8 @@ r:"^全體怪盜<color\=#ff0036>{{A}}傷害</color>提高(\d+(.\d+)?(%)?)$"="Inc
 此處潛伏著厄抑之境中凝結的特殊陰影，挑戰成功可獲得大量魂石獎勵。=There are special Shadows here, gain Konpaku Gem on victory.
 此處潛伏著厄抑之境中凝結的特殊陰影，挑戰成功可獲得面具精靈、印記與不羈紋章。=There are special Shadows here, gain Persona and Wild Card Emblem on victory.
 r:"^此處盤踞著強大的陰影，(.*)，挑戰成功可獲得神秘的啟示卡。$"="There are strong Shadows here, gain Revelation Cards on victory."
+
+r:"^神<color\=#000000>通</color>領域$"="T<color\=#000000>h</color>eurgy Domain"
 
 r:"^保底進度：<color\=#0665ca>(\d+)/(\d+)</color>$"="Guaranteed: <color\=#0665ca>$1/$2</color>"
 r:"^領取 <color\=#0665ca>(\d+)</color> 次必得$"="Guaranteed within <color\=#0665ca>$1</color> spins"
@@ -2897,6 +2925,7 @@ r:"^透過厄抑巡禮·初階印記兌換$"="<size\=21>Exchange from Challenge 
 獲得無限演算法後解鎖=Unlocks after owning this skill
 獲得戰意共鳴後解鎖=Unlocks after owning this skill
 獲得解構力場後解鎖=Unlocks after owning this skill
+獲得動力激蕩後解鎖=Unlocks after owning this skill
 
 r:"^角色契約簽約時機率獲得$"="Signing Contract"
 r:"^{{A}}精算機等級獎勵$"="{{A}} Ticket Machine"
@@ -3146,6 +3175,7 @@ sr:"^未知宿命橙·(.*)"="Random 4★ $1"
 可用於「怪盜心象·技能領悟」養成的高階材料。=High level material used in \n[Mindscape - Skills Upgrade].
 
 {{A}}的心象核心={{A}}'s Mindscape Core
+{{A}}&{{B}}的心象核心={{A}} & {{B}}'s Mindscape Core
 {{A}}的心象核心，在其進行心象啟動時消耗。={{A}}'s Mindscape Core used for Mindscape Activation.
 心象核心=Mindscape Core
 通用心象核心=Universal Mindscape Core
@@ -3160,10 +3190,12 @@ sr:"^未知宿命橙·(.*)"="Random 4★ $1"
 可自選獲得一枚怪盜的心象核心，在其進行心象啟動時消耗。\n可自選內容將隨版本持續更新。=Used to obtain a Thief's Mindscape Core for Mindscape Activation. The content will change with future versions.
 可自選獲得一枚5★怪盜的心象核心，在其進行心象啟動時消耗。\n可自選內容將隨版本持續更新。=Used to obtain a 5★ Thief's Mindscape Core for Mindscape Activation. The content will change with future versions.
 
-心選之徽記=Custom Mindscape Emblem
+心選之徽記=Custom Emblem
+心選之徽記★5=Custom Emblem ★5
 自選心象徽記=Custom Mindscape Emblem
 可用於「怪盜心象·屬性共鳴」啟動的材料。=Used in [Mindscape - Attribute Harmony].
 可自選獲得一枚心象徽記，用於「怪盜心象·屬性共鳴」啟動的材料。=Used to obtain a Mindscape Emblem for [Mindscape - Attribute Harmony].
+可自選獲得一枚心象徽記，用於5★角色「怪盜心象·屬性共鳴」啟動的材料。=Used to obtain a Mindscape Emblem for 5★ character's [Mindscape - Attribute Harmony].
 
 物理·徽記=Phys Emblem
 射擊·徽記=Gun Emblem
@@ -3202,10 +3234,12 @@ sr:"^未知宿命橙·(.*)"="Random 4★ $1"
 萬能·徽記★4=Almighty Emblem ★4
 輔助·徽記★4=Support Emblem ★4
 
-心選之紋章=Heraldry of Choice
+心選之紋章=Custom Heraldry
+心選之紋章★5=Custom Heraldry ★5
 自選心象紋章=Choose your own mental tattoo
 可用於「怪盜心象·屬性戰技」啟動的材料。=Used in [Mindscape - Attribute Tactics].
 可自選獲得一枚心象紋章，用於「怪盜心象·屬性戰技」啟動的材料。=Used to obtain a Mindscape Heraldry for [Mindscape - Attribute Tactics].
+可自選獲得一枚心象紋章，用於5★角色「怪盜心象·屬性戰技」啟動的材料。=Used to obtain a Mindscape Heraldry for 5★ character's [Mindscape - Attribute Tactics].
 
 物理·紋章=Phys Heraldry
 射擊·紋章=Gun Heraldry
@@ -3308,21 +3342,25 @@ r:"^解明怪盜對在場怪盜的<color\=#FFFC40>屬性提升</color>效果，�
 
 熔岩幻境=Lava Mirage
 r:"^全體怪盜<color\=#ff381d>火焰</color>/<color\=#ff63ff>念動</color>屬性傷害提高(\d+%)$"="<size\=24>Increase Thieves' <color\=#ff381d>Fire</color>/<color\=#ff63ff>Psy</color> DMG by $1</size>"
+r:"^所有角色<color\=#ff381d>火焰</color>/<color\=#ff63ff>念動</color>屬性傷害提高(\d+%)$"="<size\=24>Increase Thieves' <color\=#ff381d>Fire</color>/<color\=#ff63ff>Psy</color> DMG by $1</size>"
 灼熱迷域=<size\=15>Lair of Arcane Fire</size>
 r:"^火焰、念動屬性傷害提升(\d+%)$"="Increase Fire and Psy DMG by $1"
 
 量子冰場=Quantum Icefield
 r:"^全體怪盜<color\=#00aeff>冰凍</color>/<color\=#00fcff>核熱</color>屬性傷害提高(\d+%)$"="<size\=24>Increase Thieves' <color\=#00aeff>Ice</color>/<color\=#00fcff>Nuke</color> DMG by $1</size>"
+r:"^所有角色<color\=#00aeff>冰凍</color>/<color\=#00fcff>核熱</color>屬性傷害提高(\d+%)$"="<size\=24>Increase Thieves' <color\=#00aeff>Ice</color>/<color\=#00fcff>Nuke</color> DMG by $1</size>"
 暑寒極地=<size\=20>Nuclear Winter</size>
 r:"^冰凍、核熱屬性傷害提升(\d+%)$"="Increase Ice and Nuke DMG by $1"
 
 雷光聖所=Thunderous Sanctuary
 r:"^全體怪盜<color\=#fbff37>電擊</color>/<color\=#fffea0>祝福</color>屬性傷害提高(\d+%)$"="<size\=21>Increase Thieves' <color\=#fbff37>Elec</color>/<color\=#fffea0>Bless</color> DMG by $1</size>"
+r:"^所有角色<color\=#fbff37>電擊</color>/<color\=#fffea0>祝福</color>屬性傷害提高(\d+%)$"="<size\=21>Increase Thieves' <color\=#fbff37>Elec</color>/<color\=#fffea0>Bless</color> DMG by $1</size>"
 雷霆祈境=<size\=14>Thunderous Blessing</size>
 r:"^電擊、祝福屬性傷害提升(\d+%)$"="Increase Elec and Bless DMG by $1"
 
 厄命風眼=Cursed Eye
 r:"^全體怪盜<color\=#81ea2c>疾風</color>/<color\=#ff0036>詛咒</color>屬性傷害提高(\d+%)$"="<size\=22>Increase Thieves' <color\=#81ea2c>Wind</color>/<color\=#ff0036>Curse</color> DMG by $1</size>"
+r:"^所有角色<color\=#81ea2c>疾風</color>/<color\=#ff0036>詛咒</color>屬性傷害提高(\d+%)$"="<size\=22>Increase Thieves' <color\=#81ea2c>Wind</color>/<color\=#ff0036>Curse</color> DMG by $1</size>"
 詛咒漩渦=<size\=26>An Ill Wind</size>
 r:"^疾風、詛咒屬性傷害提升(\d+%)$"="Increase Wind and Curse DMG by $1"
 
@@ -4025,13 +4063,15 @@ r:"^「<color\=#000000>愛</color>」的一擊$"="S<color\=#000000>t</color>rike
 可可騎士的祝福=Cocoa Knight's Blessing
 
 選擇心儀的角色，發起告白攻勢，\n進行一場「<color\=#ff3b37>浪漫約會</color>」。=Choose your favorite character, \nand have a [<color\=#ff3b37>Romantic Date</color>].
-請邀請心儀的角色進行約會吧！=Please invite your favorite character to a date!
+請邀請心儀的角色進行約會吧！=Invite your favorite character to dates!
 選擇「<color\=#ff3b37>約會角色</color>」=Select [<color\=#ff3b37>Date Character</color>]
 r:"^距離告白日還有(\d+)天(\d+)時$"="$1d $2h until Confession Day"
+r:"^距離告白日還有(\d+)天(\d+)小時$"="$1d $2h until Confession Day"
 r:"^距離告白日還有(\d+)時(\d+)分$"="$1h $2m until Confession Day"
 r:"^{{A}}心動指數達到(\d+)後可觀看$"="Can watch after {{A}} reaches Heartbeat Score $1"
 「<color\=#ff3b37>贈送</color>」巧克力結晶=[<color\=#ff3b37>Gift</color>] Chocolate Crystals
 完成獎勵：=Rewards:
+完成獎勵=Rewards
 任務獎勵=Rewards
 數量：=Quantity:
 達到特定「<color\=#ff3b37>心動指數</color>」即可觸發「<color\=#ff3b37>浪漫約會</color>」=Trigger [<color\=#ff3b37>Romantic Date</color>] when reaching specific [<color\=#ff3b37>Heartbeat Score</color>]
@@ -5938,6 +5978,7 @@ sr:"^(.*)印記$"="$1's Seal"
 豐饒的{{A}}=Abundant {{A}}
 崇高的{{A}}=Sublime {{A}}
 守護的{{A}}=Protective {{A}}
+嗔恨的{{A}}=Resentful {{A}}
 
 ----------
 ACHIEVEMENTS + COSMETICS + EMOTES + KEY ITEMS
