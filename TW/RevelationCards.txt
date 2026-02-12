@@ -291,6 +291,7 @@ r:"^{{A}}&{{B}}裝備時生效：<link\="s\|271"><u>面具強度</u></link>提�
 
 【純粹】=[Purity]
 純粹=Purity
+r:"^主動釋放不同{{A}}技能時，各獲得(\d+)層『皈依』：攻擊力提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合，可疊加(\d+)層；疊加至(\d+)層時，額外使自身暴擊效果提升<color\=#2899ff>(\d+%)</color>。由不同{{A}}技能產生的『皈依』獨立計算持續時間。$"="When user manually uses different Persona skills, each skill grants $1 [Refuge] stack: Increase ATK by <color\=#2899ff>$2</color> for $3 turns. Stacks up to $4 times. At $5 stacks, increase user's Crit DMG by <color\=#2899ff>$6</color>. [Refuge] stacks from each Persona skills are spent separately."
 
 ----------
 All Arcana Cards
@@ -440,6 +441,7 @@ r:"^4套裝效果：釋放技能使自身生命值降低時，造成傷害提升
 r:"^4套裝效果：造成傷害提升<color\=#2899ff>(\d+%)</color>，處於額外回合時該效果提升至<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase DMG Dealt by <color\=#2899ff>$1</color>. increase this effect to <color\=#2899ff>$2</color> on Extra Actions.</size>"
 
 【堅韌】=<size\=20>  </size>[Tenacity]
+r:"^2套裝效果：射擊傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Gun DMG by <color\=#2899ff>$1</color>.</size>"
 
 ----------
 Inspect Details + Combat Pop-Ups
@@ -461,6 +463,7 @@ r:"^造成念動傷害時，提升攻擊(\d+%)，如果敵方人數不少於3，
 上次{{A}}技能傷害屬性：祝福=Last {{A}} skill damage: Bless
 上次{{A}}技能傷害屬性：詛咒=Last {{A}} skill damage: Curse
 上次{{A}}技能傷害屬性：萬能=Last {{A}} skill damage: Almighty
+皈依=Refuge
 
 sr:"^覺知&(.*)$"="Awareness & $1"
 sr:"^啟程&(.*)$"="Departure & $1"
@@ -479,6 +482,7 @@ sr:"^希望&(.*)$"="Hope & $1"
 sr:"^突破&(.*)$"="Perseverance & $1"
 sr:"^敏銳&(.*)$"="Acuity & $1"
 sr:"^誕生&(.*)$"="Nativity & $1"
+sr:"^純粹&(.*)$"="Purity & $1"
 
 觸發【主權】套裝效果的額外傷害=Activated bonus damage from [Control]
 觸發【真諦】套裝效果的額外傷害=Activated bonus damage from [Truth]

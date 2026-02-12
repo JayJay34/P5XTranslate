@@ -2957,6 +2957,11 @@ r:"^死<color\=#000000>神</color>庇護$"="D<color\=#000000>e</color>ath's Prot
 
 r:"^1、進入戰鬥時，{{A}}會召喚(\d+)個隨從與之並肩作戰，{{A}}與所有隨從處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n2、{{A}}及隨從受到<color\=#ff3b37>非持續傷害</color>後，會獲得相應屬性的「{{A}}的守護」，將該屬性的適應性變為耐，並大幅提升自身防禦力，持續(\d+)回合。$"="1. At the start of battle, {{A}} will summon $1 minions, {{A}} and all minions have <color\=#ff3b37>[Lifelink]</color>.\n[Lifelink]: Distributes all damage received between all Shadows who shares this condition, based on the percentage of their current HP.\n2. After {{A}} and their minions take <color\=#ff3b37>non Damage Over Time damage</color>, gain that attribute's [{{A}}'s Protection], turning that affinity to Resist and heavily increasing DEF. Lasts for $2 turns."
 
+r:"^{{A}}在非額外回合受到的最終傷害降低(\d+%)，在額外回合受到的最終傷害提升(\d+%)。$"="{{A}} decrease Final DMG Taken by $1 on non-Extra Actions; increase Final DMG Taken by $2 on Extra Actions."
+智慧天秤=Scales of Wisdom
+r:"^在非額外回合受到的最終傷害降低(\d+(.\d+)?(%)?)$"="Decrease Final DMG Taken by $1 on non-Extra Actions"
+r:"^在額外回合受到的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG Taken by $1 on Extra Actions"
+
 ----------
 SEASONAL EFFECTS
 ----------
@@ -3102,6 +3107,7 @@ r:"^第<color\=#000000>六</color>感知$"="S<color\=#000000>i</color>xth Sense"
 r:"^第六感知疊加至(\d+)層，提升(\d+%)的最終傷害$"="At $1 Sixth Sense stacks, \nincrease Final DMG by $2"
 
 地殼瓦解=Crustal Collapse
-sr:"^造成弱點傷害時，自身獲得持續(\d+)回合的『(.*)』。『(.*)』：造成的最終傷害提升(\d+%)，處於額外回合時或使用普通攻擊時造成的最終傷害額外提升(\d+%)。$"="When dealing Weak damage, user gains [$2] for $1 turn. [$3]: Increase Final DMG Dealt by $4, increase Final DMG Dealt by $5 more on Extra Actions or when using Melee Attack."
+sr:"^造成弱點傷害時，自身獲得持續(\d+)回合的『(.*)』。『(.*)』：造成的最終傷害提升(\d+%)，處於額外回合時或使用普通攻擊時造成的最終傷害額外提升(\d+%)。$"="<size\=24>When dealing Weak damage, user gains [$2] for $1 turn. [$3]: Increase Final DMG Dealt by $4, increase Final DMG Dealt by $5 more on Extra Actions or when using Melee Attack.</size>"
 岩土解構=Soil Deconstruction
 r:"^岩<color\=#000000>土</color>解構$"="S<color\=#000000>o</color>il Deconstruction"
+r:"^造成的最終傷害提升(\d+%)，處於額外回合時或使用普通攻擊時造成的最終傷害額外提升(\d+%)$"="Increase Final DMG Dealt by $1, increase Final DMG Dealt by $2 more on Extra Actions or when using Melee Attack"
