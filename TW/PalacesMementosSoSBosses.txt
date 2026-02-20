@@ -1,10 +1,10 @@
 ----------
 UI
 ----------
-探索度達到=Claim at <size\=1>_</size>
-即可獲得：=<size\=15> </size>exploration:
-探索度=Claim at: <size\=1>_</size>
-可獲得= exploration
+探索度達到=Explore
+即可獲得：=Obtain:
+探索度=Explore
+可獲得=Obtain
 {{A}}晶片={{A}} Chip
 {{A}}碎片={{A}} Shard
 在{{A}}棒球場中獲得……應該可以在工作臺與『老式遊戲機』·『活性碳』合成棒球館探索道具。=Obtained from the Stadium of Lust, can be used with [Vintage Game Console] and [Activated Carbon] to craft stadium exploration item.
@@ -1946,6 +1946,7 @@ r:"^離<color\=#FF0000>火</color>$"="F<color\=#FF0000>l</color>ame"
 {{B}}在戰鬥中，會源源不斷地召喚「{{C}}」之影、「{{D}}」之影、「{{E}}」之影、「{{F}}」之影。擊敗對應的神獸之影，可以獲得不同的能力。\n擊敗「{{C}}」之影：弱點傷害提升。\n擊敗「{{D}}」之影：{{A}}力提升。\n擊敗「{{E}}」之影：最終傷害提升。\n擊敗「{{F}}」之影：受到最終傷害降低。\n{{B}}生命值較低時，會蓄力並釋放「極·念動力」，造成超特大念動傷害。={{B}} can keep summoning [Shadow of {{C}}], [Shadow of {{D}}], [Shadow of {{E}}], [Shadow of {{F}}]. Gain the corresponding ability when you defeat the corresponding Shadow.\nDefeat [Shadow of {{C}}]: Increase Weak DMG.\nDefeat [Shadow of {{D}}]: Increase ATK.\nDefeat [Shadow of {{E}}]: Increase Final DMG.\nDefeat [Shadow of {{F}}]: Decrease Final DMG Taken.\nWhen {{B}} reach low HP, they will charge and use [Ultimate·Psycho Force], dealing colossal Psy damage.
 r:"^{{A}}在戰鬥中，會召喚「{{B}}」之影、「{{C}}」之影、「{{D}}」之影、「{{E}}」之影。擊敗對應的神獸之影，可以獲得相應的能力。\n擊敗「{{B}}」之影：怪盜每回合獲得相當於(\d+%)最大生命值的護盾。\n擊敗「{{C}}」之影：怪盜攻擊力提升(\d+%)。\n擊敗「{{D}}」之影：怪盜造成傷害提升(\d+%)。\n擊敗「{{E}}」之影：怪盜防禦力提升(\d+%)。$"="<size\=25>During battle, {{A}} will summon Shade of {{B}}, Shade of {{C}}, Shade of {{D}}, and Shade of {{E}}. When a Shadow is defeated, its corresponding Might is granted to all Thieves.\n{{B}}'s Might: Grants a Shield equal $1 Max HP every turn.\n{{C}}'s Might: Increases ATK by $2.\n{{D}}'s Might: Increases DMG Dealt by $3.\n{{E}}'s Might: Increases DEF by $4.</size>"
 r:"^{{A}}在戰鬥中，會召喚「{{B}}」之影、「{{C}}」之影、「{{D}}」之影、「{{E}}」之影。擊敗對應的神獸之影，可以獲得相應的能力。\n擊敗「{{B}}」之影：怪盜每回合獲得相當於(\d+%)最大生命值的護盾\n擊敗「{{C}}」之影：怪盜攻擊力提升(\d+%)\n擊敗「{{D}}」之影：怪盜造成傷害提升(\d+%)\n擊敗「{{E}}」之影：怪盜防禦力提升(\d+%)$"="During battle, {{A}} will summon Shade of {{B}}, Shade of {{C}}, Shade of {{D}}, and Shade of {{E}}. When a Shadow is defeated, its corresponding Might is granted to all Thieves.\n{{B}}'s Might: Grants a Shield equal $1 Max HP every turn.\n{{C}}'s Might: Increases ATK by $2.\n{{D}}'s Might: Increases DMG Dealt by $3.\n{{E}}'s Might: Increases DEF by $4."
+r:"^{{A}}在戰鬥中，會召喚「{{B}}」之影、「{{C}}」之影、「{{D}}」之影、「{{E}}」之影。神獸之影會為{{A}}提供不同的能力，擊敗對應的神獸之影，可以獲得相應的能力。\n擊敗「{{B}}」之影：怪盜每回合獲得相當於(\d+%)最大生命值的護盾\n擊敗「{{C}}」之影：怪盜攻擊力提升(\d+%)\n擊敗「{{D}}」之影：怪盜造成傷害提升(\d+%)\n擊敗「{{E}}」之影：怪盜防禦力提升(\d+%)$"="During battle, {{A}} will summon Shade of {{B}}, Shade of {{C}}, Shade of {{D}}, and Shade of {{E}}. Shadows will grant {{A}} different buffs. When a Shadow is defeated, its corresponding Might is granted to all Thieves.\n{{B}}'s Might: Grants a Shield equal $1 Max HP every turn.\n{{C}}'s Might: Increases ATK by $2.\n{{D}}'s Might: Increases DMG Dealt by $3.\n{{E}}'s Might: Increases DEF by $4."
 
 極·念動力=Ultimate·Psycho Force
 對所有敵人造成超特大念動屬性傷害。=Deal colossal Psy damage to all foes.
@@ -2862,10 +2863,10 @@ sr:"^心之力(.*)$"="Power of Heart $1"
 r:"^自身回合結束後獲得(\d+)個額外回合，最多可疊加(\d+)層$"="At the end of turn, gain $1 Extra Action.\nStacks up to $2 times"
 r:"^(\d+)<color\=#000000>倍</color>傷害$"="$1<color\=#000000>x</color> DMG"
 sr:"^<color\=#FF0000>(.*)</color>當前處於第<color\=#FF0000>(\d+)</color>個額外回合，最終傷害提升至原本的<color\=#FF0000>(\d+)倍</color>$"="<color\=#FF0000>$1</color> on Extra Action, increase Final DMG to <color\=#FF0000>$3x</color>!"
-r:"^處於第1個額外回合中，最終傷害提升至原本的(\d+)倍$"="On 1st Extra Action, \nincrease Final DMG by $1 times"
-r:"^處於第2個額外回合中，最終傷害提升至原本的(\d+)倍$"="On 2nd Extra Action, \nincrease Final DMG by $1 times"
-r:"^處於第3個額外回合中，最終傷害提升至原本的(\d+)倍$"="On 3rd Extra Action, \nincrease Final DMG by $1 times"
-r:"^處於第4個額外回合中，最終傷害提升至原本的(\d+)倍$"="On 4th Extra Action, \nincrease Final DMG by $1 times"
+r:"^處於第1個額外回合中，最終傷害提升至原本的(\d+)倍$"="On 1st Extra Action, \nincrease Final DMG to $1x"
+r:"^處於第2個額外回合中，最終傷害提升至原本的(\d+)倍$"="On 2nd Extra Action, \nincrease Final DMG to $1x"
+r:"^處於第3個額外回合中，最終傷害提升至原本的(\d+)倍$"="On 3rd Extra Action, \nincrease Final DMG to $1x"
+r:"^處於第4個額外回合中，最終傷害提升至原本的(\d+)倍$"="On 4th Extra Action, \nincrease Final DMG to $1x"
 心動指數Ⅰ=Heartbeat Score I
 心動指數 II=Heartbeat Score II
 心動指數 III=Heartbeat Score III
@@ -2885,6 +2886,7 @@ r:"^對所有敵人造成一定電擊屬性傷害，有一定基礎機率使敵�
 對1名敵人造成中量物理屬性傷害。=Deal medium Phys damage to 1 foe.
 對所有敵人造成一定物理屬性傷害。=Deal a set amount of Phys damage to all foes.
 時遷之祝=Shifting Time's Blessing
+r:"^時<color\=#000000>遷</color>$"="S<color\=#000000>h</color>ifting Time"
 r:"^對{{A}}釋放技能時，{{A}}獲得(\d+)個額外回合。$"="When {{A}} use a skill, {{A}} gain $1 Extra Action."
 時序強化=Temporal Boost
 r:"^給技能主目標添加【時遷】印記$"="Grant the main target [Shifting Time's Seal]"
@@ -2899,7 +2901,8 @@ r:"^彷<color\=#000000>徨</color>掙扎$"="S<color\=#000000>t</color>ruggle"
 有同伴被擊敗，{{A}}治療效果大幅下降=Heavily decrease {{A}}'s Healing Effect
 情緒崩潰=Emotional Breakdown
 r:"^情<color\=#000000>緒</color>崩潰$"="E<color\=#000000>m</color>otional Breakdown"
-所有同伴都被擊敗，{{A}}陷入無法行動狀態=Unable to act
+所有同伴被擊敗，{{A}}陷入無法行動狀態=Defeated all allies, {{A}} is unable to act
+所有同伴都被擊敗，{{A}}陷入無法行動狀態=Defeated all allies, {{A}} is unable to act
 危險注視=Dangerous Gaze
 r:"^危<color\=#000000>險</color>注視$"="D<color\=#000000>a</color>ngerous Gaze"
 r:"^致<color\=#000000>命</color>危機$"="D<color\=#000000>e</color>adly Crisis"
@@ -2912,7 +2915,21 @@ sr:"^<color\=#FF0000>(.*)</color>受到來自(.*)的技能，獲得(\d+)個額�
 sr:"^<color\=#FF0000>(.*)</color>被(.*)鎖定……$"="<color\=#FF0000>$1</color> locked on by $2..."
 sr:"^<color\=#FF0000>(.*)</color>被(.*)鎖定，受到傷害大幅增加$"="<color\=#FF0000>$1</color> locked on by $2, heavy DMG Taken Up!"
 sr:"^<color\=#FF0000>(.*)</color>獲得了命運共縛，受到的傷害將由(.*)承擔(\d+%)……$"="<color\=#FF0000>$1</color> gained Bound by Fate, $2 will take $3 damage!"
+sr:"^(.*)受到來自<color\=#FF0000>(.*)</color>的技能，獲得(\d+)個額外回合$"="$1 gained $3 Extra Action"
 有同伴被擊敗，{{A}}的治療效果下降={{A}}'s Healing Effect Down!
+sr:"^<color\=#FF0000>(.*)</color>從無法行動狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from unable to act!"
+涅槃重生=Rebirth
+r:"^涅<color\=#000000>槃</color>重生$"="R<color\=#000000>e</color>birth"
+復活後，最終傷害大幅提升=After revive, heavily increase Final DMG
+
+r:"^所有敵人屬性提升，最大生命值額外提升(\d+(.\d+)?(%)?)。$"="Increase all foes' stats, additionally increase Max HP by $1."
+r:"^所有敵人屬性提升，攻擊力額外提升(\d+(.\d+)?(%)?)。$"="Increase all foes' stats, additionally increase ATK by $1."
+r:"^所有敵人屬性提升，造成傷害額外提升(\d+(.\d+)?(%)?)。$"="Increase all foes' stats, additionally increase DMG Dealt by $1."
+r:"^所有敵人屬性提升，受到傷害額外降低(\d+(.\d+)?(%)?)。$"="Increase all foes' stats, additionally decrease DMG Taken by $1."
+r:"^所有同伴造成火焰屬性傷害時，最終傷害提升(\d+(.\d+)?(%)?)。$"="When party deals Fire damage, increase Final DMG by $1."
+r:"^所有同伴造成冰凍屬性傷害時，最終傷害提升(\d+(.\d+)?(%)?)。$"="When party deals Ice damage, increase Final DMG by $1."
+r:"^所有同伴造成念動屬性傷害時，最終傷害提升(\d+(.\d+)?(%)?)。$"="When party deals Psy damage, increase Final DMG by $1."
+r:"^所有同伴造成核熱屬性傷害時，最終傷害提升(\d+(.\d+)?(%)?)。$"="When party deals Nuke damage, increase Final DMG by $1."
 
 ----------
 Sea of Souls Trials (SoS)
