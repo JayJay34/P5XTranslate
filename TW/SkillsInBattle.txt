@@ -312,6 +312,7 @@ sr:"^有(\d+\.\d+%)基礎機率使<color\=#FFFF00>所有</color>敵人在(\d+)�
 
 //Lucky Punch
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的物理屬性傷害，暴擊率提升(\d+%)，命中率下降(\d+%)$"="Deal $1 ATK Phys damage to <color\=#FFFF00>1</color> foe with a $2 increase in Crit Rate, and $3 decrease in Hit Rate."
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的物理屬性傷害，暴擊率提升(\d+%)，命中率下降(\d+%)。$"="Deal $1 ATK Phys damage to <color\=#FFFF00>1</color> foe with a $2 increase in Crit Rate, and $3 decrease in Hit Rate."
 
 //Mind Slice because it has a comma at the end instead of a period???
 sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，效果持續2回合，"=Deal <color\=#FFFF00>$1</color> ATK $2 damage to <color\=#FFFF00>all</color> foes, there is a <color\=#FFFF00>$3</color> base chance to inflict $4 for 2 turns.
@@ -612,8 +613,10 @@ r:"^使<color\=#FFFF00>所有</color>同伴獲得(\d+\.\d+%)攻擊力\+(\d+)的�
 
 防電之壁=Elec Wall
 防風之壁=Wind Wall
-撐起2回合電擊耐性的防壁。=Adds Elec resistance to one ally for 2 turns.
-撐起2回合疾風耐性的防壁。=Adds Wind resistance to one ally for 2 turns.
+防念之壁=Psy Wall
+撐起2回合電擊耐性的防壁。=Add Elec resistance to one ally for 2 turns.
+撐起2回合疾風耐性的防壁。=Add Wind resistance to one ally for 2 turns.
+撐起2回合念動耐性的防壁。=Add Psy resistance to one ally for 2 turns.
 
 Snow Aegis
 r:"^使<color\=#FFFF00>所有</color>同伴獲得(\d+\.\d+%)攻擊力\+(\d+)的護盾，護盾存在時防禦力提升(\d+%)，持續(\d+)回合。$"="Grant <color\=#FFFF00>all</color> allies $1 ATK + $2 Shield for 2 turns. When the Shield is active increase DEF by $3."
@@ -767,6 +770,7 @@ sr:"^<color\=#FF0000>(.*)</color>適應性還原。$"="<color\=#FF0000>$1</color
 sr:"^<color\=#FF0000>(.*)</color>的適應性恢復了……$"="<color\=#FF0000>$1</color> reverted affinities!"
 sr:"^<color\=#FF0000>(.*)</color>的火焰耐性恢復了……$"="<color\=#FF0000>$1</color> reverted Fire resistance!"
 sr:"^<color\=#FF0000>(.*)</color>的電擊耐性恢復了……$"="<color\=#FF0000>$1</color> reverted Elec resistance!"
+sr:"^<color\=#FF0000>(.*)</color>的念動耐性恢復了……$"="<color\=#FF0000>$1</color> reverted Psy resistance!"
 sr:"^<color\=#FF0000>(.*)</color>適應性被改變……$"="<color\=#FF0000>$1</color> changed affinities!"
 sr:"^<color\=#FF0000>(.*)</color>獲得了(.*)耐性……$"="<color\=#FF0000>$1</color> gained Resist $2!"
 sr:"^<color\=#FF0000>(.*)</color>的全屬性適應性變為無……$"="<color\=#FF0000>$1</color> now Null all!"
@@ -834,6 +838,7 @@ sr:"^<color\=#FF0000>(.*)</color>從混亂異常狀態恢復了。$"="<color\=#F
 sr:"^<color\=#FF0000>(.*)</color>從洗腦異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Brainwash!"
 
 sr:"^<color\=#FF0000>(.*)</color>從冰封異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Ice Seal!"
+sr:"^<color\=#FF0000>(.*)</color>從「(.*)」異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from [$2]!"
 
 sr:"^<color\=#FF0000>(.*)</color>被(.*)瞄準了，防禦降低……$"="<size\=26><color\=#FF0000>$1</color> marked by $2, DEF Down!</size>"
 sr:"^<color\=#FF0000>(.*)</color>將會在(\d+)個回合後逃離……$"="<color\=#FF0000>$1</color> will escape after $2 turn(s)!"
@@ -1035,6 +1040,7 @@ r:"^詛<color\=#000000>咒</color>弱點$"="C<color\=#000000>u</color>rse Weakne
 
 r:"^火<color\=#000000>炎</color>耐性$"="R<color\=#000000>e</color>sist Fire"
 r:"^電<color\=#000000>擊</color>耐性$"="R<color\=#000000>e</color>sist Elec"
+r:"^念<color\=#000000>動</color>耐性$"="R<color\=#000000>e</color>sist Psy"
 
 ----------
 Inspect Details - TITLES
@@ -1507,7 +1513,7 @@ r:"^受到萬能傷害提高(\d+(.\d+)?(%)?)$"="Increase Almighty DMG Taken by $
 r:"^受到的治療效果降低(\d+(.\d+)?(%)?)$"="Decrease Healing Received by $1"
 
 一回合無法行動，防禦降低=Unable to act, decrease DEF
-r:"^無法行動，受到最終傷害提升(\d+(.\d+)?(%)?)$"="<size\=25>Unable to act, increase Final DMG Taken by $1</size>"
+r:"^無法行動，受到最終傷害提升(\d+(.\d+)?(%)?)$"="Unable to act, \nincrease Final DMG Taken by $1"
 
 r:"^回合末失去一定生命值，最終受到傷害提升(\d+%)，可疊加(\d+)層$"="<size\=24>Lose a certain amount of HP at the end of the turn; \nIncrease Final DMG Taken by $1. Stacks up to $2 times</size>"
 r:"^造成傷害提高(\d+%)、每回合流失一定生命值，可疊加(\d+)層，不可被驅散$"="<size\=24>Lose a certain amount of HP at the end of the turn; \nIncrease DMG Dealt by $1. Stacks up to $2 times; \nCannot be dispelled</size>"

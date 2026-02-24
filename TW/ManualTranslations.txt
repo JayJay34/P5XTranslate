@@ -546,6 +546,7 @@ sr:"^(.*?)遺留在{{A}}的殘識碎片，消耗(\d+)個可以合成角色的殘
 「{{A}}·等級獎勵」中獲得的幸運硬幣，用於在「生存遊戲專賣店」兌換「五星武器」。=Gained from Phantom Pass, can be exchanged for  [5★ Weapon] in [Untouchable].
 定製武器套件=5★ Weapon Case
 r:"^使用後可自選1把以下怪盜的五星武器：(.*)。$"="Can be used to choose 1 5★ Weapon for the following Thieves: $1."
+半定製武器套件=Semi-Custom Weapon Case
 定製武器模組=4★ Weapon Case
 特供武器模組=4★ Weapon Case
 r:"^使用後可自選1把以下怪盜的四星武器：(.*)。$"="Can be used to choose 1 4★ Weapon for the following Thieves: $1."
@@ -1517,6 +1518,7 @@ r:"在「星盤試煉」中通過「紫色或紅色」監測點 \((\d+)\/(\d+)\)
 r:"^在「{{A}}」中擊殺(\d+)次「交錯之影」 \((\d+)\/(\d+)\)$"="Defeat $1 [Tangled Shadow] in {{A}} ($2/$3)"
 sr:"^在「(.*)·(.*)」中擊殺(\d+)次「交錯之影」 \((\d+)\/(\d+)\)$"="Defeat $3 [Tangled Shadow] in [$1 · $2] ($4/$5)"
 sr:"^通關「(.*)」難度(\d+) \((\d+)\/(\d+)\)$"="Clear [$1] on Difficulty $2 ($3/$4)"
+sr:"^完成「(.*)·(.*)」異變(\d+)以上的普通及以上難度挑戰 \((\d+)\/(\d+)\)$"="Clear Normal [$1·$2] at level $3 or higher ($4/$5)"
 
 r:"^本期通行證期間，累計登入(\d+)天 \((\d+)/(\d+)\)$"="Log in for $1 day(s) ($2/$3)"
 r:"^累計登入(\d+)天\((\d+)/(\d+)\)$"="Log in for $1 day(s) ($2/$3)"
@@ -1548,7 +1550,8 @@ r:"^簽約$"="Pulls"
 每10次簽約必出四星或以上怪盜角色。具體內容查看【說明】=<size\=25>Get 1 5★ every <color\=#FFDF00>110</color> or <color\=#ff3b37>80</color> pulls;</size>\n<size\=25><color\=#FFDF00>0.2%</color> or <color\=#ff3b37>0.8%</color>; <color\=#FFDF00>No 50/50</color> or <color\=#ff3b37>50/50</color>.</size>\n<size\=25>Guarantee 1 4★ every 10 pulls.</size>\n</color><size\=15>Save Signature count between same system banners.</size>
 每10次簽約必出四星或以上角色。具體內容查看【說明】=<size\=25>Get 1 5★ every <color\=#FFDF00>110</color> or <color\=#ff3b37>80</color> pulls;</size>\n<size\=25><color\=#FFDF00>0.2%</color> or <color\=#ff3b37>0.8%</color>; <color\=#FFDF00>No 50/50</color> or <color\=#ff3b37>50/50</color>.</size>\n<size\=25>Guarantee 1 4★ every 10 pulls.</size>\n</color><size\=15>Save Signature count between same system banners.</size>
 
-每10次補給必出四星或以上武器。具體內容查看【說明】=Choose your RATE UP weapon and two others. Every 70 pulls will guarantee a 5★ weapon. 0.8% Chance.\n\n\n\n\n\n\n<color\=#FFDF00><size\=24>The limited character's 5★ weapon is only available in this banner.</size></color>\n<size\=21>Supply count will carry between banners.</size>
+每10次補給必出四星或以上武器。具體內容查看【說明】=<size\=25>Get 1 5★ every <color\=#FFDF00>95</color> or <color\=#ff3b37>70</color> pulls;</size>\n<size\=25><color\=#FFDF00>0.2%</color> or <color\=#ff3b37>0.8%</color>; <color\=#FFDF00>No 50/50</color> or <color\=#ff3b37>50/50</color>.</size>\n<size\=25>Guarantee 1 4★ every 10 pulls.</size>\n</color><size\=15>Save Signature count between same system banners.</size>
+Choose your RATE UP weapon and two others. Every 70 pulls will guarantee a 5★ weapon. 0.8% Chance.\n\n\n\n\n\n\n<color\=#FFDF00><size\=24>The limited character's 5★ weapon is only available in this banner.</size></color>\n<size\=21>Supply count will carry between banners.</size>
 
 sr:"^推薦自選契約共有<color\=#EF0000>(\d+)個</color>怪盜鎖定名額，確認簽約後，<color\=#EF0000>(.*)</color>將<color\=#EF0000>佔用1個鎖定名額</color>，是否確認開始簽約？\n注：該卡池生效期間，UP角色僅能從(\d+)個鎖定怪盜中選取，請謹慎選擇。$"="<size\=26>You have <color\=#EF0000>$1</color> custom slots for this banner. After pulling, <color\=#EF0000>$2</color> will <color\=#EF0000>take up 1 slot</color>, are you sure?\nNote: You can only choose the RATE UP character between the $3 locked Thieves.</size>"
 該怪盜已被鎖定，無法選擇。=Cannot select locked Thief.
@@ -1557,12 +1560,17 @@ sr:"^推薦自選契約共有<color\=#EF0000>(\d+)個</color>怪盜鎖定名額�
 自選武器=Customize
 自選UP武器=Custom RATE UP Weapon
 自選保底武器=<size\=30>Custom Pity Weapon</size>
+選擇一把UP武器，獲得5星武器時必定為選中的武器。=Choose 1 RATE UP weapon, with a 100% to obtain the chosen weapon.
+自選UP武器，占五星武器基礎成功機率的50%=Choose 1 RATE UP weapon, with a 50% to obtain the chosen weapon
+自選非UP武器，未獲得UP五星武器時只會獲取自選的兩把武器=Choose 2 Non-RATE UP weapons, if you missed the RATE UP 5★ weapon, you will only obtain the chosen weapons
 自選<color\=#FFD145>UP武器</color>，占五星武器基礎成功機率的<color\=#FFD145>50%</color>=Choose <color\=#FFD145>RATE UP Weapon</color>. With a base chance of <color\=#FFD145>50%</color> to get the chosen weapon
 自選<color\=#FFD145>非UP武器</color>，未獲得UP五星武器時只會獲取自選的兩把武器=<size\=18>Choose 2 <color\=#FFD145>Non-RATE UP Weapons</color>. If you missed the RATE UP 5★ weapon, you will only get the chosen weapons</size>
 請選擇2把五星武器後再補給。=Please choose 2 5★ weapons.
 已選擇為UP武器。=Selected the RATE UP Weapon.
 UP武器更換成功。=Changed the RATE UP Weapon.
 自選UP武器更換成功。=Changed the Custom RATE UP Weapons.
+補充獎勵預覽=Arms Deal Reward Preview
+r:"^補給<color\=#FFD145>(\d+)/(\d+)</color>次可獲得半定製武器套件<size\=80><sprite\=40></size>×1，使用後可<color\=#FFD145>自選</color>兩把武器並<color\=#FFD145>隨機</color>獲得其中一把。$"="Perform <color\=#FFD145>$1/$2</color> Arms Deal to obtain <size\=80><sprite\=40></size>x 1, used to <color\=#FFD145>randomly</color> obtain 1 weapon out of 2 <color\=#FFD145>options</color>."
 
 r:"^查詢結果僅保留最近(\d+)天簽約資訊$"="The Contract history only records up to $1 days"
 r:"^查詢結果僅保留最近(\d+)天補給資訊$"="The Supply history only records up to $1 days"
@@ -1712,6 +1720,8 @@ sr:"^「當未觸發UP或保底規則時，所有武器均分基礎獲取機率�
 sr:"^「當未觸發UP或保底規則時，所有武器均分基礎獲取機率」\n<sprite\=0 tint\=1><color\=#EADE10>五星武器</color>\n基礎機率：(.*)\（含保底綜合補給成功機率：(.*)\）\n當前自選UP武器：「(.*)」\n當前自選非UP武器：「(.*)」、「(.*)」\n\n<sprite\=0 tint\=1><color\=#EADE10>四星武器</color>\n基礎機率：(.*)\（含保底綜合補給成功機率：(.*)\）\n(.*)\n\n<sprite\=0 tint\=1><color\=#EADE10>三星武器</color>\n基礎機率：(.*)\n(.*)$"="[When RATE UP or guaranteed rule is not triggered, all Weapons share the same base obtain probability]\n<sprite\=0 tint\=1><color\=#EADE10>5★ Weapons</color>\nBase probability: $1 (incl. guarantee: $2)\nCurrent Custom RATE UP Weapon: [$3]\nCurrent Custom non RATE UP: [$4], [$5]\n\n<sprite\=0 tint\=1><color\=#EADE10>4★ Weapons</color>\nBase probability: $6 (incl. guarantee: $7)\n$8\n\n<sprite\=0 tint\=1><color\=#EADE10>3★ Weapons</color>\nBase probability: $9\n$10"
 
 無聲硝煙=Silent Tension
+無聲硝煙·隨機=Silent Tension·50%
+無聲硝煙·精準=Silent Tension·100%
 緣結之契·隨機=You Are My Destiny·50%
 緣結之契·精準=You Are My Destiny·100%
 爆竹與歲除=Celebrate The New Year
@@ -1741,8 +1751,7 @@ r:"^1週年限定倒計時：(\d+)天(\d+)時$"="1st Anniversary Limited Countdo
 r:"^限定倒計時：(\d+)天(\d+)時$"="Time: $1d $2h"
 r:"^限定倒計時：(\d+)天(\d+)小時$"="Time: $1d $2h"
 圖鑑詳情=Details
-sr:"^(.*) {{A}}機獲取啟動圖鑑。$"="Added to your collection on: $1"
-sr:"^(.*) {{A}}機獲取啟動圖鑑。$"="Added to your collection on: $1"
+sr:"^(.*) (.*)機獲取啟動圖鑑。$"="Added to your collection on: $1"
 sr:"^(.*) 啟動圖鑑。$"="Added to your collection on: $1"
 r:"^(.*) 與好友(.*)交換啟動圖鑑。$"="<size\=23>Collected on $1 by exchanging with your friend $2</size>"
 r:"^抽(\d+)次$"="Draw $1"
@@ -1986,7 +1995,7 @@ r:"^愛之日限定營業中\((\d+)/(\d+)\)$"="<size\=18>Valentine's Day Offer (
 貓貓之吻=Cat's Kiss
 美味魔法=Tasty Magic
 戀愛特調=Love Special
-{{A}}應援={{A}} Support
+本命應援=Special Support
 秘密款待=Secret Hospitality
 告白舞臺=Confession Stage
 偶像營業日=Idol Business Day
@@ -2047,15 +2056,18 @@ r:"^小型\((\d+)\)$"="S ($1)"
 走廊=Hallways
 茶几=Table
 展櫃·左=<size\=20>Display Cabinet - L</size>
+展櫃·中=<size\=20>Display Cabinet - M</size>
 展櫃·右=<size\=20>Display Cabinet - R</size>
 沙發櫃=Sofa Cabinet
 床=Bed
+聖誕樹=Christmas Tree
 r:"^擺<color\=#ff0000ff>放</color>區·一樓$"="Di<color\=#ff0000ff>sp</color>lay Area - First Floor"
 r:"^擺<color\=#ff0000ff>放</color>區·二樓$"="Di<color\=#ff0000ff>sp</color>lay Area - Second Floor"
 r:"^裝<color\=#ff0000ff>飾</color>區·一樓$"="De<color\=#ff0000ff>co</color>ration Area - First Floor"
 r:"^裝<color\=#ff0000ff>飾</color>區·二樓$"="De<color\=#ff0000ff>co</color>ration Area - Second Floor"
 
 超稀有=3★
+已保存。=Saved.
 當前資料未保存，退出不會保存資料，是否繼續退出？=Did not save setup yet, \nare you sure you want to exit?
 該款式物品暫時沒有可擺放在這個位置的規格。=This size of item cannot be placed here.
 是否切換到一層進行擺放？=Switch to first floor?
@@ -2155,6 +2167,7 @@ r:"^作為禮物贈與協同者，可提升(\d+)點親密度，首次贈送額�
 用於提升與協同者的好感度。=<size\=25>Used for granting Fondness.</size>
 sr:"^「(.*)」可能會喜歡這件禮物。\n基礎好感度\+(\d+)，偏好禮物額外\+(\d+)，偏好禮物首次贈送額外\+(\d+)。$"="[$1] might like this gift. \nFondness +$2 \nFavourite Items +$3 \nFavourite Items First Time Bonus +$4"
 sr:"^「(.*)」可能會喜歡這件禮物。\n基礎好感度\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物額外\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物首次贈送額外\+(\d+)。$"="[$1] might like this gift. \nFondness +$2 (<size\=40><sprite\=1></size>+$3)\nFavourite Items +$4 (<size\=40><sprite\=1></size>+$5)\nFavourite Items First Time Bonus +$6"
+r:"^基礎好感度\+(\d+)\n偏好禮物額外\+(\d+)$"="Fondness +$1\nFavourite Items +$2"
 r:"^基礎好感度\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)），偏好禮物額外\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)），偏好禮物首次贈送額外\+(\d+)。$"="Fondness +$1 (<size\=40><sprite\=1></size>+$2)\nFavourite Items +$3 (<size\=40><sprite\=1></size>+$4)\nFavourite Items First Time Bonus +$5"
 r:"^基礎好感度\+(\d+)，偏好禮物額外\+(\d+)，偏好禮物首次贈送額外\+(\d+)。$"="Fondness +$1\nFavourite Items +$2\nFavourite Items First Time Bonus +$3"
 
@@ -3217,8 +3230,10 @@ sr:"^未知宿命橙·(.*)"="Random 4★ $1"
 自選心象徽記=Custom Mindscape Emblem
 可用於「怪盜心象·屬性共鳴」啟動的材料。=Used in [Mindscape - Attribute Harmony].
 可用於5★角色「怪盜心象·屬性共鳴」啟動的材料。=Used in 5★ character's [Mindscape - Attribute Harmony].
+可用於4★角色「怪盜心象·屬性共鳴」啟動的材料。=Used in 4★ character's [Mindscape - Attribute Harmony].
 可自選獲得一枚心象徽記，用於「怪盜心象·屬性共鳴」啟動的材料。=Used to obtain a Mindscape Emblem for [Mindscape - Attribute Harmony].
 可自選獲得一枚心象徽記，用於5★角色「怪盜心象·屬性共鳴」啟動的材料。=Used to obtain a Mindscape Emblem for 5★ character's [Mindscape - Attribute Harmony].
+可自選獲得一枚心象徽記，用於4★角色「怪盜心象·屬性共鳴」啟動的材料。=Used to obtain a Mindscape Emblem for 4★ character's [Mindscape - Attribute Harmony].
 
 物理·徽記=Phys Emblem
 射擊·徽記=Gun Emblem
@@ -3266,8 +3281,11 @@ sr:"^未知宿命橙·(.*)"="Random 4★ $1"
 心選之紋章★5=Custom Heraldry ★5
 自選心象紋章=Choose your own mental tattoo
 可用於「怪盜心象·屬性戰技」啟動的材料。=Used in [Mindscape - Attribute Tactics].
+可用於5★角色「怪盜心象·屬性戰技」啟動的材料。=Used in 5★ character's [Mindscape - Attribute Tactics].
+可用於4★角色「怪盜心象·屬性戰技」啟動的材料。=Used in 4★ character's [Mindscape - Attribute Tactics].
 可自選獲得一枚心象紋章，用於「怪盜心象·屬性戰技」啟動的材料。=Used to obtain a Mindscape Heraldry for [Mindscape - Attribute Tactics].
 可自選獲得一枚心象紋章，用於5★角色「怪盜心象·屬性戰技」啟動的材料。=Used to obtain a Mindscape Heraldry for 5★ character's [Mindscape - Attribute Tactics].
+可自選獲得一枚心象紋章，用於4★角色「怪盜心象·屬性戰技」啟動的材料。=Used to obtain a Mindscape Heraldry for 5★ character's [Mindscape - Attribute Tactics].
 
 物理·紋章=Phys Heraldry
 射擊·紋章=Gun Heraldry
@@ -3371,7 +3389,8 @@ r:"^第(\d+)天$"="Day $1"
 Velvet Trials (VT)
 ----------
 天鵝絨試煉=Velvet Trials
-r:"^解明怪盜對在場怪盜的<color\=#FFFC40>屬性提升</color>效果，提升至(\d+%)$"="Increase the <color\=#FFFC40>Stats Buff</color> effect from Elucidator Thieves to $1"
+r:"^解明怪盜對在場怪盜的<color\=#FFFC40>屬性提升</color>效果，提升至(\d+%)$"="Increase the <color\=#FFFC40>Stats Buff</color> effect from Elucidators to $1"
+r:"^解明怪盜對在場角色的<color\=#FFFC40>屬性提升</color>效果，提升至(\d+%)$"="Increase the <color\=#FFFC40>Stats Buff</color> effect from Elucidators to $1"
 巧匠之作=<size\=26>Technician</size>
 
 熔岩幻境=Lava Mirage
@@ -3420,6 +3439,7 @@ sr:"^(.*)/(.*)屬性攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="$1
 
 昨日辰星獎勵：=Daily Rewards:
 每日根據天鵝絨試煉總星級發放獎勵。=Get daily rewards based on total ★.
+再次嘗試會重置當前進度，從頭開始試煉，請確認是否繼續？=Do you want to restart the entire trial?
 
 ----------
 Others
@@ -3887,8 +3907,9 @@ r:"^所有怪盜造成<color\=#FFFC40>持續傷害</color>時傷害提升(\d+(.\
 <color\=#EADE11>【已通關】</color>=<color\=#EADE11>[Cleared]</color>
 完成挑戰目標=Complete goal
 可獲得限定徽章=Get badge
-r:"^最高異變等級：$"="Highest Lv:"
+最高異變等級：=Highest Lv:
 完成高難度挑戰可刷新徽章最高異變等級=Complete higher difficulty to upgrade badge
+r:"^完成高難度的挑戰會刷新低難度的最高異變等級，但低難度異變等級不會影響高難度的異變等級\n普通難度：(\d+)\n困難難度：(\d+)\n噩夢難度：(\d+)$"="Completing higher difficulty challenge will refresh the highest level for lower difficulties\nNormal: $1\nHard: $2\nNightmare: $3"
 異變詳情=Battle Effects
 
 選擇異變=Select Battle Effects
@@ -4085,9 +4106,14 @@ r:"^當前數量選擇為(\d+)。$"="Selected $1."
 告白日選擇與男角色度過=Spend Confession Day with a male character
 r:"^任意(\d+)位夥伴達到(\d+)好感度\((\d+)\/(\d+)\)$"="Any $1 partners reached $2 Favorability ($3/$4)"
 sr:"^(.*)第(\d+)關完成所有目標$"="Complete all goals for $1 level $2"
-<color\=#AB064A>是否確認接受來自<color\=#FF91B9>{{A}}</color>的告白？首次選擇的角色將成為心動物件，獲得對方贈送的{{B}}巧克力，該巧克力可以擺放在自宅展示區，請謹慎選擇。<color\=#FF91B9>（選擇後將無法獲得其他角色的擺放物品）</color>=<size\=24><color\=#AB064A>Accept the Confession from <color\=#FF91B9>{{A}}</color>? \nYou can display their {{B}} chocolate in the display area of your home. Choose carefully. <color\=#FF91B9>(You cannot get other character's display item after you choose one)</color></size>
-<color\=#154EAE>是否選擇與<color\=#75C6F4>{{A}}</color>度過告白日？選擇{{A}}將獲得對方贈送的友情巧克力，該巧克力可以擺放在自宅展示區，請謹慎選擇。<color\=#75C6F4>（選擇後將無法獲得其他角色的擺放物品）</color>=<size\=26><color\=#154EAE>Spend Confession Day with <color\=#75C6F4>{{A}}</color>? You can display their Giri chocolate in the display area of your home. Choose carefully. <color\=#75C6F4>(You cannot get other character's display item after you choose one)</color></size>
-r:"^當前有<color\=#FF0000>(\d+)</color>位夥伴向你發出邀約，是否確認與<color\=#FF0000>{{A}}</color>度過告白日？（選擇將影響擺放物品的獲得及接下來的特殊劇情表現）$"="<size\=25>Currently there are <color\=#FF0000>$1</color> partners inviting you, do you want to spend Confession Day with <color\=#FF0000>{{A}}</color>? (This will affect the display item and the subsequent special scene)</size>"
+<color\=#AB064A>是否確認接受來自<color\=#FF91B9>{{A}}</color>的告白？首次選擇的角色將成為心動物件，獲得對方贈送的本命巧克力，該巧克力可以擺放在自宅展示區，請謹慎選擇。<color\=#FF91B9>（選擇後將無法獲得其他角色的擺放物品）</color>=<size\=29><color\=#AB064A>Accept the Confession from <color\=#FF91B9>{{A}}</color>? \nYou will receive special chocolate from them, \nwhich you can display at home. \n<color\=#FF91B9>(You will not be able to receive the display item from other people)</color></size>
+<color\=#AB064A>是否確認接受來自<color\=#FF91B9>{{A}}</color>的告白？首次選擇的角色將成為心動對象，獲得對方贈送的本命巧克力，該巧克力可以擺放在自宅展示區，請謹慎選擇。<color\=#FF91B9>（選擇後將無法獲得其他角色的擺放物品）</color>=<size\=29><color\=#AB064A>Accept the Confession from <color\=#FF91B9>{{A}}</color>? \nYou will receive special chocolate from them, \nwhich you can display at home. \n<color\=#FF91B9>(You will not be able to receive the display item from other people)</color></size>
+<color\=#154EAE>是否選擇與<color\=#75C6F4>{{A}}</color>度過告白日？選擇{{A}}將獲得對方贈送的友情巧克力，該巧克力可以擺放在自宅展示區，請謹慎選擇。<color\=#75C6F4>（選擇後將無法獲得其他角色的擺放物品）</color>=<size\=29><color\=#154EAE>Spend Confession Day with <color\=#75C6F4>{{A}}</color>? \nYou will receive friendship chocolate from them, \nwhich you can display at home. \n<color\=#75C6F4>(You will not be able to receive the display item from other people)</color></size>
+r:"^當前有<color\=#FF0000>(\d+)</color>位夥伴向你發出邀約，是否確認與<color\=#FF0000>{{A}}</color>度過告白日？（選擇將影響擺放物品的獲得及接下來的特殊劇情表現）$"="<size\=29>Currently there are <color\=#FF0000>$1</color> partners inviting you, do you want to spend Confession Day with <color\=#FF0000>{{A}}</color>? \n(This will affect the display item and the subsequent special scene)</size>"
+r:"^當前有<color\=#FF0000>(\d+)位</color>夥伴向你發出邀約，\n是否確認與<color\=#FF0000>{{A}}</color>度過告白日？\n※告白時將會穿著家居服（含<color\=#FF0000>制服<color\=#FFD145>），請謹慎選擇著裝。\n※選擇將影響<color\=#FFD145>告白劇情</color>表現及<color\=#FFD145>本命巧克力</color>獲得。$"="<size\=29>Currently there are <color\=#FF0000>$1</color> partners inviting you, do you want to spend Confession Day with <color\=#FF0000>{{A}}</color>?\n※You will wear your loungewear (including <color\=#FF0000>uniform</color>) during the Confession.</size>"
+第一次告白期間無法關閉。=Cannot be disabled during the first Confession.
+開啟後將立即收到該角色的告白SNS，並且無法在第一次告白期間再次關閉，是否選擇開啟？=Enable this to receive their confession SNS, and you cannot disable this during the first Confession, proceed?
+告白進行中=Confession in progress
 請先開啟告白。=Please turn on Confession first.
 心動約定=<size\=24>Promise of Love</size>
 堅果厚乳生巧=Nuts and Milk Chocolate
@@ -4103,6 +4129,10 @@ r:"^當前有<color\=#FF0000>(\d+)</color>位夥伴向你發出邀約，是否�
 翻糖可可小蛋糕=Fondant Chocolate Cupcakes
 激推的巧克力=Push Chocolate
 巧克力點心餐盒=Chocolate Snack Box
+{{A}}的巧克力={{A}}'s Chocolate
+{{A}}的本命巧克力={{A}}'s Special Chocolate
+{{A}}的友情巧克力={{A}}'s Friendship Chocolate
+當前巧克力未解鎖，完成{{A}}的告白劇情後解鎖。=Unlock this chocolate after clearing {{A}}'s Confession story.
 
 拖動右側碎片，完成拼圖=Drag the pieces to complete the puzzle
 
@@ -5934,6 +5964,7 @@ r:"^天<color\=#ff0000ff>鵝</color>絨房間$"="Ve<color\=#ff0000ff>lv</color>e
 rank等級：=Rank:
 面具屬性要求=Mask Element Requirement
 面具職業要求=Mask Role Requirement
+面具階級要求 <color\=#ffffff>V級以上</color>=Mask Element Requirement <color\=#ffffff>Rank V and above</color>
 面具階級要求 <color\=#ffffff>VII級以上</color>=Mask Element Requirement <color\=#ffffff>Rank VII and above</color>
 便捷合體=<size\=38>Quick Fuse</size>
 sr:"^省略中途合體步驟獲得<color\=#FFF000>(.*)</color>所需的全部印記如下：$"="Skip fusion steps and obtain <color\=#FFF000>$1</color>:"
@@ -6078,7 +6109,10 @@ r:"是否遺忘技能「(.*)」？\n<color\=#FF0000>此操作不可撤銷！</co
 r:"已遺忘技能「(.*)」。$"="Forgotten skill."
 保存失敗，必須至少裝備一個面具。=Please equip at least 1 Persona.
 r:"^最多只可以選擇(\d+)個面具上陣哦～$"="You can only equip $1 Personas."
+只能攜帶三個{{A}}喔！=You can only equip 3 Personas.
 您有尚未保存的陣容方案，是否要進行保存？=Do you want to save your setup?
+r:"^除主角外需要上陣<color\=#FFD145>(\d+)</color>名怪盜才可進行挑戰。$"="Please deploy <color\=#FFD145>$1</color> Thieves to challenge."
+{{A}}&{{B}}當前的面具組合不符合職業要求，更換前無法繼續出戰。={{A}} & {{B}}'s Masks do not meet the role requirements.
 
 不羈紋章·虹=<size\=17>Wild Card Emblem·Rainbow</size>
 r:"^不羈紋章·虹\*(\d+)$"="<size\=18>Wild Card Emblem·Rainbow*$1</size>"
