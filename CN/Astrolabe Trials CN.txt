@@ -7,7 +7,7 @@ MODIFIERS
 ----------
 Astrolobe Trials
 ----------
-r:"^HIGHLIGHT能量回复{{A}}降低(\d+%)，所有怪盗HIGHLIGHT的最终{{B}}提高(\d+%)"="Decrease HIGHLIGHT Energy recovery rate by $1, increase all HIGHLIGHT Final DMG by $2"
+r:"^HIGHLIGHT能量回复{{A}}降低(\d+%)，所有{{A}}HIGHLIGHT的最终{{B}}提高(\d+%)"="Decrease HIGHLIGHT Energy recovery rate by $1, increase all HIGHLIGHT Final DMG by $2"
 
 r:"^敌人能受到大部分<color\=#FFFC40>精神异常</color>状态；所有队员造成<color\=#FFFC40>精神异常</color>状态时，效果命中大幅提升；处于< color\=#FFFC40>精神异常</color>状态的敌人受到最终{{A}}提升(\d+%)$"="Enemies are susceptible to most <color\=#FFFC40>Mental Ailments</color>; Heavily increase all Thieves' EHR when inflicting <color\=#FFFC40>Mental Ailments</color>; Increase the Final DMG Taken of enemies with <color\=#FFFC40>Mental Ailments</color> by $1"
 
@@ -47,14 +47,14 @@ r:"^战斗开始及敌人回合开始时，敌人随机获得1种属性弱点（
 
 
 
-r:"^<color\=#FFFC40>反抗</color>怪盗最终伤害提高(\d+%)，其他怪盗最终伤害降低(\d+%)$"="Increase the Final DMG of <color\ =#FFFC40>Rebel</color> Thieves by $1, decrease the Final DMG of other Thieves by $2"
-r:"^<color\=#FFFC40>支配</color>怪盗最终伤害提高(\d+%)，其他怪盗最终伤害降低(\d+%)$"="Increase the Final DMG of <color\ =#FFFC40>Dominate</color> Thieves by $1, decrease the Final DMG of other Thieves by $2"
+r:"^<color\=#FFFC40>反抗</color>{{A}}最终伤害提高(\d+%)，其他{{A}}最终伤害降低(\d+%)$"="Increase the Final DMG of <color\ =#FFFC40>Rebel</color> Thieves by $1, decrease the Final DMG of other Thieves by $2"
+r:"^<color\=#FFFC40>支配</color>{{A}}最终伤害提高(\d+%)，其他{{A}}最终伤害降低(\d+%)$"="Increase the Final DMG of <color\ =#FFFC40>Dominate</color> Thieves by $1, decrease the Final DMG of other Thieves by $2"
 
-r:"^<color\=#ff381d>火焰</color>/<color\=#00aeff>冰冻</color>/<color\=#fbff37>电击</color>/<color\=#81ea2c>疾风</color>属性队员最终伤害提高(\d+%)，其他怪盗最终伤害降低(\d+%)$"="Increase the Final DMG of <color\=#ff381d>Fire</color>/< color\=#00aeff>Ice</color>/<color\=#fbff37>Electric</color>/<color\=#81ea2c>Wind</color> Thieves by $1, decrease the Final DMG of other Thieves by $2 "
+r:"^<color\=#ff381d>火焰</color>/<color\=#00aeff>冰冻</color>/<color\=#fbff37>电击</color>/<color\=#81ea2c>疾风</color>属性队员最终伤害提高(\d+%)，其他{{A}}最终伤害降低(\d+%)$"="Increase the Final DMG of <color\=#ff381d>Fire</color>/< color\=#00aeff>Ice</color>/<color\=#fbff37>Electric</color>/<color\=#81ea2c>Wind</color> Thieves by $1, decrease the Final DMG of other Thieves by $2 "
 r:"^所有队员造成<color\=#FFFC40>追加效果</color>时，最终伤害提高(\d+%)$"="Increase all Thieves' Final DMG by $1 when dealing damage with <color\= #FFFC40>Follow Up</color>"
 r:"^所有队员造成<color\=#FFFC40>持续伤害</color>时，最终伤害提高(\d+%)$"="Increase all Thieves' Final DMG by $1 when dealing damage with damage over time</color>"
-r:"^所有怪盗<color\=#FFFC40>受到追加治疗</color>后，最终伤害提升(\d+%)，持续(\d+)回合，可叠加(\d+)层$"=" Increase all Thieves' Final DMG by $1 after <color\=#FFFC40>healed</color> for $2 turns, up to $3 stacks."
-r:"^所有怪盗每次受到<color\=#FFFC40>护盾</color>后，最终伤害提升(\d+%)，持续(\d+)回合，可叠加(\d+)层$" ="Increase all Thieves' Final DMG by $1 after <color\=#FFFC40>shielded</color> for $2 turns, up to $3 stacks."
+r:"^所有{{A}}<color\=#FFFC40>受到追加治疗</color>后，最终伤害提升(\d+%)，持续(\d+)回合，可叠加(\d+)层$"="After receiving <color\=#FFFC40>Follow Up Healing</color>, increase Final DMG by $1 for $2 turns. Stacks up to $3 times."
+r:"^所有{{A}}每次受到<color\=#FFFC40>护盾</color>后，最终伤害提升(\d+%)，持续(\d+)回合，可叠加(\d+)层$" ="Increase all Thieves' Final DMG by $1 after <color\=#FFFC40>shielded</color> for $2 turns, up to $3 stacks."
 
 
 
@@ -63,3 +63,7 @@ r:"^效果1：所有敌人最终生命值降低(\d+%)，每回合末回复(\d+%)
 
 
 
+r:"^队伍中编入(\d+)名及以上<color\=#FFFC40>反抗/支配</color>{{A}}时，全体{{A}}最终伤害提高(\d+%)$"="When there are $1 or more <color\=#FFFC40>Assassin/Sweeper</color> Thieves, increase Final DMG by $2."
+r:"^所有角色使用<color\=#FFFC40>{{A}}</color>后，最终伤害提高(\d+%)，持续(\d+)回合$"="After using <color\=#FFFC40>{{A}}</color>, increase user's Final DMG by $1 for $2 turns."
+r:"^所有{{A}}处于<color\=#FFFC40>额外回合</color>时，最终伤害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1 on an <color\=#FFFC40>Extra Action</color>."
+r:"^<color\=#ff381d>『{{A}}』</color>成员最终伤害提升(\d+(.\d+)?(%)?)$"="Increase <color\=#ff381d>[The Phantom Thieves of Hearts]</color>'s Final DMG by $1."
