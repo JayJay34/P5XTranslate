@@ -18,7 +18,13 @@ Generic
 想要做点什么呢？=What would you like to do?
 提示=Tips
 限购=Limit
-
+活动倒计时：=Event Ends in: 
+r:"^剩余时间：(\d+)天(\d+)时(\d+)分"="Time Left: $1 d $2 h $3 min"
+r:"^剩余时间：(\d+)天(\d+)时$"="Event Ends in: $1 d 2$ h"
+r:"^剩余(\d+)天(\d+)时(\d+)分$"="Time Left: $1 d $2 h $3 min"
+r:"^(\d+)天(\d+)小时解锁"="Unlocked in: $1 d $2 h"
+r:"^(\d+)天(\d+)小时$"="$1 d $2 h"
+r:"^(\d+)分解锁"="Unlocked in: $1 min"
 
 // P5X Char//
 r:"^梅<color\=#ff0000ff>洛</color>普$"="Me<color\=#ff0000ff>r</color>ope"
