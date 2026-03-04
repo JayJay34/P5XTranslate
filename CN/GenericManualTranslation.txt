@@ -6,11 +6,17 @@ Class
 减益=Debuff
 群疗=Multi-Target Healing
 驱散=Single-Target Healing
+单疗=Single-Target Healing
 护盾=Shield
 控制=Ailment
-支配=Multi-Target
-反抗=Single-Target 
-单疗=Single-Target Healing
+支配=Sweeper
+反抗=Assassin
+屈从=Saboteur
+自律=Virtuoso
+防卫=Guardian
+救援=Medic
+解明=Elucidator
+优越=Strategist
 
 --------------------------
 Generic 
@@ -21,10 +27,12 @@ Generic
 活动倒计时：=Event Ends in: 
 r:"^剩余时间：(\d+)天(\d+)时(\d+)分"="Time Left: $1 d $2 h $3 min"
 r:"^剩余时间：(\d+)天(\d+)时$"="Event Ends in: $1 d 2$ h"
+r:"^剩余时间：(\d+)时(\d+)分"="Time Left: $1 h $2 min"
 r:"^剩余(\d+)天(\d+)时(\d+)分$"="Time Left: $1 d $2 h $3 min"
 r:"^(\d+)天(\d+)小时解锁"="Unlocked in: $1 d $2 h"
 r:"^(\d+)天(\d+)小时$"="$1 d $2 h"
 r:"^(\d+)分解锁"="Unlocked in: $1 min"
+r:"^(\d+)时(\d+)分(\d+)秒"="$1 h $2 min $3 sec"
 
 // P5X Char//
 r:"^梅<color\=#ff0000ff>洛</color>普$"="Me<color\=#ff0000ff>r</color>ope"
