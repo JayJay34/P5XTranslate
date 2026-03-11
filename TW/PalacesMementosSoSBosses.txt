@@ -1801,7 +1801,7 @@ r:"自身血量百分比越低，造成傷害越高，當前傷害提高：(\d+%
 
 1、{{A}}血量百分比越低，造成傷害越高。\n2、{{A}}會為隊友承受90%的傷害，其受到致命傷害時會進入「不屈」狀態，血量鎖定為1點，2回合後死亡。=1. Take-Minakata deal more damage the lower HP they have. \n2. Take-Minakata will take 90% of the damage their ally takes, enter Unyielding state after taking lethal damage, locking own HP at 1, die after 2 turn.
 軍神護佑=<size\=25>God of War's Protection</size>
-受到的傷害將由建御名方承擔=Transfer damage taken to Take-Minakata.
+受到的傷害將由{{A}}承擔=Transfer damage taken to {{A}}
 
 1、{{A}}行動時，會選擇一名隨機陰影，使其獲得3層<color\=#ff381d>「妖精的祝福」</color>\n「妖精的祝福」：受到傷害時會驅散一層，擁有該增益時，造成傷害超大幅提高\n2、{{A}}行動時，若任意陰影擁有「妖精的祝福」，則會獲得1層計數，計數達到2時會釋放「妖精之舞」，對怪盜方全體造成高額傷害=1. When Leanan Sidhe act, they will choose a random ally and give them 3 stacks of <color\=#ff381d>"Fairy's Blessing"</color> \n"Fairy's Blessing": Lose one stack after taking damage, when this buff is active, massively increase DMG Dealt. \n2. When Leanan Sidhe act, if any ally has Fairy's Blessing, increase their stack by 1, when reaching 2 stacks use "Fairy Dance", dealing high damage to all foes.
 妖精的祝福=Fairy's Blessing
@@ -2065,9 +2065,9 @@ r:"^{{A}}獲得了冠冕的強化，請<color\=#FF0000>儘快擊破護盾</color
 r:"^<color\=#ff0000>打破那個護盾</color>應該就能弱化他。$"="<color\=#ff0000>Breaking the Shield</color> will weaken him."
 r:"^{{A}}進入<color\=#FF0000>狂暴</color>狀態，請小心應對$"="{{A}} enters <color\=#FF0000>Frenzy</color>!"
 
-r:"^1、{{A}}在戰鬥一階段中會交替召喚{{B}}或{{C}}，隨從死亡(\d+)回合後會被重新召喚出來。\n2、{{A}}在戰鬥二階段中會同時召喚{{B}}或{{C}}兩個隨從，兩個隨從同時在場時{{A}}獲得(\d+%)的最終傷害減免，每個隨從死亡(\d+)回合後都會被重新召喚出來。\n3、當場上有隨從時，{{A}}會對1名隨從釋放「夢幻食糧」：(\d+)個回合後獻祭該隨從，恢復自身一定百分比的生命值。\n4、{{B}}擁有技能「頭腦震撼」：對血量最低的1名敵人造成物理屬性傷害，有一定基礎機率使敵人陷入<color\=#FFFC40>洗腦</color>狀態，效果持續(\d+)回合。\n5、{{C}}擁有技能「逃避慾的誘惑」：使所有怪盜獲取HIGHLIGHT能量的速度降低(\d+%)，持續(\d+)回合。但是在{{C}}被擊殺後，我方可立即獲得(\d+%)的HIGHLIGHT能量。$"="<size\=24>1. Dancer of Death will alternate between summoning {{B}} and {{C}}, resummon them $1 rounds after their defeat.\n2. Dancer of Death will summon {{B}} or {{C}} at once in phase 2 and increase own Final DMG RES by $2 when both are present, resummon them $3 rounds after their defeat.\n3. When there is a minion, {{A}} will use [Dream Food] on them: Sacrifice them after $4 turns to restore own HP. \n4. {{B}} can use [Brain Shake]: Deals Phys damage to the lowest HP foe with a base chance to inflict <color\=#FFFC40>Brainwash</color> for $5 turns. \n5. {{C}} can use [Escape Temptation]: Decrease HIGHLIGHT Energy recovery rate by $6 for $7 turns. Restore $8 HIGHLIGHT Energy on defeat.</size>"
+r:"^1、{{B}}在戰鬥一階段中會交替召喚{{C}}或{{D}}，隨從死亡(\d+)回合後會被重新召喚出來。\n2、{{B}}在戰鬥二階段中會同時召喚{{C}}或{{D}}兩個隨從，兩個隨從同時在場時{{B}}獲得(\d+%)的最終傷害減免，每個隨從死亡(\d+)回合後都會被重新召喚出來。\n3、當場上有隨從時，{{B}}會對1名隨從釋放「夢幻食糧」：(\d+)個回合後獻祭該隨從，恢復自身一定百分比的生命值。\n4、{{C}}擁有技能「頭腦震撼」：對血量最低的1名敵人造成物理屬性傷害，有一定基礎機率使敵人陷入<color\=#FFFC40>洗腦</color>狀態，效果持續(\d+)回合。\n5、{{D}}擁有技能「{{A}}的誘惑」：使所有怪盜獲取HIGHLIGHT能量的速度降低(\d+%)，持續(\d+)回合。但是在{{D}}被擊殺後，我方可立即獲得(\d+%)的HIGHLIGHT能量。$"="<size\=24>1. Dancer of Death will alternate between summoning {{C}} and {{D}}, resummon them $1 rounds after their defeat.\n2. Dancer of Death will summon {{C}} or {{D}} at once in phase 2 and increase own Final DMG RES by $2 when both are present, resummon them $3 rounds after their defeat.\n3. When there is a minion, {{B}} will use [Dream Food] on them: Sacrifice them after $4 turns to restore own HP. \n4. {{C}} can use [Brain Shake]: Deals Phys damage to the lowest HP foe with a base chance to inflict <color\=#FFFC40>Brainwash</color> for $5 turns. \n5. {{D}} can use [Escape Temptation]: Decrease HIGHLIGHT Energy recovery rate by $6 for $7 turns. Restore $8 HIGHLIGHT Energy on defeat.</size>"
 夢幻食糧=Dream Food
-逃避慾的誘惑=Escape Temptation
+{{A}}的誘惑=Escape Temptation
 
 r:"^1.{{A}}會源源不斷的召喚分身，每次召喚分身都會損耗自身一定百分比的生命值。\n2.{{B}}分身死亡時會給{{A}}添加1層「冷靜」，{{C}}分身死亡時會給{{A}}添加1層「狂躁」，「冷靜」與「狂躁」可以相互中和抵消。\n3.{{A}}擁有超過(\d+)層「冷靜」時，自身回合結束額外釋放一次「迪亞拉翰」為自身回復一定百分比的生命值；擁有超過(\d+)層「狂躁」時，自身回合結束額外釋放一次「瑪哈亞基達因」。\n4.{{A}}會交替使用「夢慾的分散」、「遁逃的波動」。\n「夢慾的分散」：給所有分身添加「夢慾」，減少其受到的最終傷害；但是「夢慾」會在分身受到一次傷害後被移除。\n「遁逃的波動」：消耗所有分身的「夢慾」對所有敵人造成萬能屬性傷害，無視其防禦力；消耗的「夢慾」層數越多，造成的傷害越高。\n5.{{A}}在進入二階段後，每次釋放「夢慾的分散」後會釋放「變革之心」，改變分身的適應性。$"="1. {{A}} will keep summoning clones, lose a certain percentage of HP each time they summon clones. \n2. Inflict {{A}} with 1 stack of [Calm] when defeating {{B}}; Inflict {{A}} with 1 stack of [Manic] when defeating {{C}}; [Calm] and [Manic] will cancel each other out. \n3. When {{A}} have over $1 stacks of [Calm], additionally use [Diarahan] at the end of turn to restore HP to self; When {{A}} have over $2 stacks of [Manic], additionally use [Maragidyne] at the end of turn. \n4. {{A}} will alternate using [Dream Dispersion] and [Wave of Escape]. \n[Dream Dispersion]: Gives all clones [Dream Desire], decreases their Final DMG Taken; Dispels when the clone took damage.\n[Wave of Escape]: Consumes all [Dream Desire] on all clones to deal Almighty damage to all foes, ignoring their DEF; Increases DMG Dealt for every [Dream Desire] consumed.\n5. When {{A}} enter phase 2, use [Change of Heart] after using [Dream Dispersion], changing all clones' resistance."
 冷靜=Calm
@@ -3271,3 +3271,7 @@ sr:"^造成弱點傷害時，自身獲得持續(\d+)回合的『(.*)』。『(.*
 岩土解構=Soil Deconstruction
 r:"^岩<color\=#000000>土</color>解構$"="S<color\=#000000>o</color>il Deconstruction"
 r:"^造成的最終傷害提升(\d+%)，處於額外回合時或使用普通攻擊時造成的最終傷害額外提升(\d+%)$"="Increase Final DMG Dealt by $1, increase Final DMG Dealt by $2 more on Extra Actions or when using Melee Attack"
+
+岩畫殘垣=Ancient Petrograph
+sr:"^添加『適應性降級』狀態時，為所有同伴添加『(.*)』；獲得額外回合時，自身獲得『(.*)』。『(.*)』：造成的最終傷害提升(\d+%)，持續(\d+)回合。$"="When inflicting [Affinity Downgrade], grant all allies [$1]; when gaining Extra Action, user gains [$2]. [$3]: Increase Final DMG Dealt by $4. Lasts for $5 turns."
+神秘符文=Mysterious Rune
