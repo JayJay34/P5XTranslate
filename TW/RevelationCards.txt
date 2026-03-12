@@ -167,7 +167,16 @@ sr:"^<color\=#E0DDBE>(.*)</color> 位置：辰\n推薦主詞條：<color\=#FFDE0
 穿透/攻擊力百分比/傷害加成=Pierce/ATK%/DMG Bonus
 效果命中/攻擊力百分比/速度=Ailment ACC/ATK%/SPD
 效果命中/暴擊效果/暴擊率/穿透/傷害加成/攻擊力百分比=Ailment ACC/Crit DMG/Crit Rate/Pierce/DMG Bonus/ATK%
+效果命中/暴擊效果/暴擊率/攻擊力百分比/傷害加成=Ailment ACC/Crit DMG/Crit Rate/ATK%/DMG Bonus
 治療效果/生命值百分比=Healing Effect/HP%
+
+宇宙的終響·斷章=Space Echo Fragment
+熔煉數量=Inscription Amount
+熔煉消耗=Inscription Cost
+已擁有：=Owned:
+確認熔煉=Confirm Inscription
+r:"^確認消耗以下物品合成隨機屬性<color\=#FFDE00>(.*)x(\d+)</color>嗎？$"="Please confirm the following Inscription"
+當前道具不足。=Insufficient items.
 
 分解預覽=Dismantle preview
 在已棄置的啟示卡中選擇：=Select from discard reminder cards:
@@ -180,6 +189,7 @@ sr:"^<color\=#E0DDBE>(.*)</color> 位置：辰\n推薦主詞條：<color\=#FFDE0
 暫無分解可獲得的材料=No materials available
 r:"^將分解以下<color\=#FFDE00>(\d+)張</color>啟示轉化為分解材料$"="Dismantle <color\=#FFDE00>$1</color> cards into materials"
 分解的啟示卡將無法恢復！=Cannot recover dismantled cards!
+請至少選擇1張啟示卡。=Please select at least 1 Revelation Card.
 
 ----------
 All Space Cards
@@ -449,7 +459,8 @@ r:"^2套裝效果：射擊傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size
 Inspect Details + Combat Pop-Ups
 ---------
 r:"^生命值、攻擊力、防禦力提升(\d+%)$"="Increase HP, ATK, DEF by $1"
-生命值、攻擊力、防禦力根據相同適應性屬性怪盜數量提升=Increase HP, ATK, DEF \nwith each ally with the same element
+生命值、攻擊力、防禦力根據相同適應性屬性怪盜數量提升=Increase HP, ATK, DEF \nfor each ally with a matching attribute
+
 r:"^當前生命值百分比不低於(\d+%)時，祝福屬性的暴擊率提升(\d+%)$"="When current HP% is not below $1, \nincrease Bless skill Crit Rate by $2"
 怨恨=Resentment
 r:"^『怨恨』不少於(\d+)層，則物理傷害、效果命中提升(\d+%)$"="Increase Phys DMG and Ailment ACC by $2 when [Resentment] is not less than $1 stacks"
