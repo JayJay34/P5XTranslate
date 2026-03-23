@@ -312,6 +312,8 @@ No size on inherit skill names or else they won't work in the inherit menu
 淨世之火=Fire of Purification
 凝聚=Cohesion
 無限演算法=Infinite Algorithm
+
+回防盾=Warded Shield
 護風罩=Wind Barrier
 雪王的庇護=Snow Aegis
 獻身之護=Guard of Devotion
@@ -860,7 +862,9 @@ r:"^使所有同伴的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身
 Infinite Algorithm
 r:"^使所有友方角色攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，額外使主目標傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Increase all allies' ATK by <color\=#fffc40>$1</color>, additionally increase the main target's DMG Dealt by <color\=#fffc40>$2</color> for $3 turns."
 
-//norn
+r:"^使1名友方獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊點護盾。$"="Grant 1 ally <color\=#fffc40>$1</color> ATK Shield."
+
+Norn
 r:"使所有同伴獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的護盾，效果持續2回合。護盾受到傷害時，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使傷害來源陷入<link\="s\|105"><u>風襲</u></link>狀態。"=Grant all allies <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> Shield for 2 turns. There is a <color\=#fffc40>$3</color> base chance to inflict <link\=s|105><u>Windswept</u></link> to the foe when the Shield took damage.
 
 King Frost
