@@ -312,7 +312,7 @@ No size on inherit skill names or else they won't work in the inherit menu
 淨世之火=Fire of Purification
 凝聚=Cohesion
 無限演算法=Infinite Algorithm
-世界樹的衍化=Yggdrasil's Derivation
+世界樹的衍化=Yggdrasil Derivation
 
 回防盾=Warded Shield
 護風罩=Wind Barrier
@@ -862,6 +862,9 @@ r:"^使所有同伴的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身
 
 Infinite Algorithm
 r:"^使所有友方角色攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，額外使主目標傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Increase all allies' ATK by <color\=#fffc40>$1</color>, additionally increase the main target's DMG Dealt by <color\=#fffc40>$2</color> for $3 turns."
+
+Yggdrasil Derivation
+r:"^使1名同伴攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合，每經過1個回合，額外使其獲得(\d+%)暴擊效果，上限(\d+%)。\n使用該技能後，WONDER獲得(\d+)個額外回合。該技能有(\d+)回合的冷卻時間。$"="Increase 1 ally's ATK by <color\=#fffc40>$1</color> and DMG Dealt by <color\=#fffc40>$2</color> for $3 turns, after each turn, additionally increase that ally's Crit DMG by $4 (up to $5). \nAfter using this skill, Wonder gains $6 Extra Action. Cooldown Time: $7 turns."
 
 r:"^使1名友方獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊點護盾。$"="Grant 1 ally <color\=#fffc40>$1</color> ATK Shield."
 
