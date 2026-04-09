@@ -250,6 +250,10 @@ r:"^昨天 (\d+):(\d+)$"="Yesterday $1:$2"
 r:"^請輸入頻道號\（(\d+)-(\d+)\）$"="Enter the channel number ($1-$2)"
 r:"^新消息 (\d+)條。$"="$1 new messages."
 
+移到最前=Move to the front
+以上聊天訊息已過期=Chat messages have expired
+消息已過期！=Message has expired!
+
 生效中=Active
 未完成=Missing
 當前無技能資訊=No skill details
@@ -940,6 +944,7 @@ r:"^<sprite\=(\d+) tint\=1>小時<sprite\=(\d+) tint\=1>分後開啟$"="Unlocks 
 r:"^<sprite\=(\d+) tint\=1>時<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>分後開啟$"="Unlocks after <sprite\=$1 tint\=1>h <sprite\=$2 tint\=1><sprite\=$3 tint\=1>m"
 r:"^<sprite\=(\d+) tint\=1>小時<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>分後開啟$"="Unlocks after <sprite\=$1 tint\=1>h <sprite\=$2 tint\=1><sprite\=$3 tint\=1>m"
 
+r:"^擁有：(\d+)$"="Held: $1"
 擁有：=Held:
 擁有:=Held:
 擁有=Held
@@ -1558,6 +1563,10 @@ Choose your RATE UP weapon and two others. Every 70 pulls will guarantee a 5★ 
 sr:"^推薦自選契約共有<color\=#EF0000>(\d+)個</color>怪盜鎖定名額，確認簽約後，<color\=#EF0000>(.*)</color>將<color\=#EF0000>佔用1個鎖定名額</color>，是否確認開始簽約？\n注：該卡池生效期間，UP角色僅能從(\d+)個鎖定怪盜中選取，請謹慎選擇。$"="<size\=26>You have <color\=#EF0000>$1</color> custom slots for this banner. After pulling, <color\=#EF0000>$2</color> will <color\=#EF0000>take up 1 slot</color>, are you sure?\nNote: You can only choose the RATE UP character between the $3 locked Thieves.</size>"
 該怪盜已被鎖定，無法選擇。=Cannot select locked Thief.
 該怪盜已在當前選擇中。=Thief is already in selection.
+
+r:"^簽約(\d+)次內  <color\=#f7d305>必出5☆角色   (\d+%)為UP角色</color>$"="<color\=#f7d305>$2 to get the Rate UP 5★ character</color> within $1 draws"
+sr:"^下次出5☆角色  <color\=#f7d305>必出「(.*)」</color>$"="The next 5★ is guaranteed to be <color\=#f7d305>$1</color>"
+sr:"^簽約(\d+)次內  <color\=#f7d305>必出「(.*)」</color>$"="<color\=#f7d305>Guaranteed to get [$2]</color> within $1 draws"
 
 自選武器=Customize
 自選UP武器=Custom RATE UP Weapon
@@ -2963,6 +2972,7 @@ r:"^透過厄抑巡禮·初階印記兌換$"="<size\=21>Exchange from Challenge 
 獲得戰意共鳴後解鎖=Unlocks after owning this skill
 獲得解構力場後解鎖=Unlocks after owning this skill
 獲得動力激蕩後解鎖=Unlocks after owning this skill
+獲得世界樹的衍化後解鎖=Unlocks after owning this skill
 
 r:"^角色契約簽約時機率獲得$"="Signing Contract"
 r:"^{{A}}精算機等級獎勵$"="{{A}} Ticket Machine"
@@ -3714,6 +3724,12 @@ r:"^進行完美的演出\((\d+)\/(\d+)\)$"="Put on a perfect show ($1/$2)"
 r:"^調查異常的{{A}}\((\d+)\/(\d+)\)$"="Investigate the abnormal {{A}} ($1/$2)"
 r:"^觀看{{A}}的記者會\((\d+)\/(\d+)\)$"="Watch {{A}}'s press conference ($1/$2)"
 r:"^見證{{A}}的結局\((\d+)\/(\d+)\)$"="Witness {{A}}'s ending ($1/$2)"
+r:"^參加慶功宴\((\d+)\/(\d+)\)$"="Participate the celebration ($1/$2)"
+r:"^應對調查\((\d+)\/(\d+)\)$"="Respond to the investigation ($1/$2)"
+r:"^試著讓{{A}}打起精神\((\d+)\/(\d+)\)$"="Try to cheer {{A}} up ($1/$2)"
+r:"^查看{{A}}的官方認證\((\d+)\/(\d+)\)$"="View {{A}}'s condemnation ($1/$2)"
+r:"^見證{{A}}的決心\((\d+)\/(\d+)\)$"="Witness {{A}}'s resolve ($1/$2)"
+r:"^挫敗幕後黑手的陰謀\((\d+)\/(\d+)\)$"="Thwart the mastermind's plan ($1/$2)"
 
 {{A}}探索={{A}} Exploration
 r:"^{{A}}票務等級達到(\d+)級\((\d+)\/(\d+)\)$"="Reach {{A}} Ticket Lv. $1 ($2/$3)"
@@ -3728,6 +3744,8 @@ r:"^在{{A}}打開(\d+)個寶箱\((\d+)\/(\d+)\)$"="Open $1 Treasure Chests in {
 r:"^雜誌社區域的探索度達到(\d+%)\((\d+)\/(\d+)\)$"="Reach $1 Exploration in the Magazine Office ($2/$3)"
 r:"^私人領域區域的探索度達到(\d+%)\((\d+)\/(\d+)\)$"="Reach $1 Exploration in the Private Area ($2/$3)"
 r:"^被遺棄的空間區域的探索度達到(\d+%)\((\d+)\/(\d+)\)$"="Reach $1 Exploration in the Abandoned Area ($2/$3)"
+r:"^圖書館{{A}}的探索度達到(\d+%)\((\d+)\/(\d+)\)$"="Reach $1 Exploration in the Library {{A}} ($2/$3)"
+r:"^在圖書館{{A}}打開(\d+)個寶箱\((\d+)\/(\d+)\)$"="Open $1 Treasure Chests in the Library {{A}} ($2/$3)"
 
 厄影異象=Shadow Distortion
 r:"^在{{A}}區域(\d+)擊敗任意詭譎之徒\((\d+)\/(\d+)\)$"="Defeat any Enigma Shadow in {{A}} Area $1 ($2/$3)"
@@ -3741,6 +3759,7 @@ r:"^在{{A}}-私人領域擊敗任意(\d+)名狂化惡黨\((\d+)\/(\d+)\)$"="Def
 r:"^在{{A}}-被遺棄的空間擊敗任意(\d+)名狂化惡黨\((\d+)\/(\d+)\)$"="Defeat $1 Berserker Shadow in {{A}}-Abandoned Area ($2/$3)"
 r:"^在{{A}}區域(\d+)擊敗(\d+)個寶魔\((\d+)\/(\d+)\)$"="Defeat $2 Treasure Demon in {{A}} Area $1 ($3/$4)"
 r:"^在{{A}}擊敗任意(\d+)個寶魔\((\d+)\/(\d+)\)$"="Defeat any $1 Treasure Demon in {{A}} ($2/$3)"
+r:"^在圖書館{{A}}擊敗任意(\d+)名狂化惡黨\((\d+)\/(\d+)\)$"="Defeat $1 Berserker Shadow in the Library {{A}} ($2/$3)"
 
 都市巡遊=City Tour
 sr:"^完成都市任務「(.*)」\((\d+)\/(\d+)\)$"="Complete the city mission [$1] ($2/$3)"
@@ -3753,6 +3772,7 @@ r:"^將{{A}}coop推進至(\d+)級\((\d+)\/(\d+)\)$"="Reach Synergy Rank $1 with 
 r:"^將{{A}}協同者任務推進至(\d+)級\((\d+)\/(\d+)\)$"="Reach Synergy Rank $1 with {{A}} ($2/$3)"
 r:"^進行打工事件(\d+)次\((\d+)\/(\d+)\)$"="Clear $1 Part-time jobs ($2/$3)"
 r:"^在大富豪玩法中，完成(\d+)次任意模式對決\((\d+)\/(\d+)\)$"="Complete $1 Tycoon games in any mode ($2/$3)"
+r:"^在大富翁玩法中，完成(\d+)次任意模式對決\((\d+)\/(\d+)\)$"="Complete $1 Tycoon games in any mode ($2/$3)"
 sr:"^獲得(.*)“(.*)”(\d+)個\((\d+)\/(\d+)\)$"="Obtain $3 [$2] $1 ($4/$5)"
 sr:"^獲得“(.*)”任意不重複的(\d+)個(.*)\((\d+)\/(\d+)\)$"="Obtain $2 different [$1] $3 ($4/$5)"
 r:"^參與抓娃娃並累計抓到(\d+)隻娃娃\((\d+)\/(\d+)\)$"="Play the Crane Game and obtain $1 dolls ($2/$3)"
