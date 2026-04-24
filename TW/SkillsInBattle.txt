@@ -1049,9 +1049,16 @@ r:"^核<color\=#000000>熱</color>弱點$"="N<color\=#000000>u</color>ke Weaknes
 r:"^祝<color\=#000000>福</color>弱點$"="B<color\=#000000>l</color>ess Weakness"
 r:"^詛<color\=#000000>咒</color>弱點$"="C<color\=#000000>u</color>rse Weakness"
 
+r:"^物<color\=#000000>理</color>耐性$"="R<color\=#000000>e</color>sist Phys"
+r:"^射<color\=#000000>擊</color>耐性$"="R<color\=#000000>e</color>sist Gun"
 r:"^火<color\=#000000>炎</color>耐性$"="R<color\=#000000>e</color>sist Fire"
+r:"^凍<color\=#000000>結</color>耐性$"="R<color\=#000000>e</color>sist Ice"
 r:"^電<color\=#000000>擊</color>耐性$"="R<color\=#000000>e</color>sist Elec"
+r:"^疾<color\=#000000>風</color>耐性$"="R<color\=#000000>e</color>sist Wind"
 r:"^念<color\=#000000>動</color>耐性$"="R<color\=#000000>e</color>sist Psy"
+r:"^核<color\=#000000>熱</color>耐性$"="R<color\=#000000>e</color>sist Nuke"
+r:"^祝<color\=#000000>福</color>耐性$"="R<color\=#000000>e</color>sist Bless"
+r:"^詛<color\=#000000>咒</color>耐性$"="R<color\=#000000>e</color>sist Curse"
 
 ----------
 Inspect Details - TITLES
@@ -1175,6 +1182,17 @@ HIGHLIGHT傷害提升=Increase HIGHLIGHT DMG
 受到詛咒傷害提升=Increase Curse DMG Taken
 受到詛咒傷害提高=Increase Curse DMG Taken
 
+物理耐性=Resist Phys
+射擊耐性=Resist Gun
+火焰耐性=Resist Fire
+凍結耐性=Resist Ice
+電擊耐性=Resist Elec
+疾風耐性=Resist Wind
+念動耐性=Resist Psy
+核熱耐性=Resist Nuke
+祝福耐性=Resist Bless
+詛咒耐性=Resist Curse
+
 火焰耐性消除=Negate Fire resistance
 電擊耐性消除=Negate Elec resistance
 
@@ -1222,6 +1240,7 @@ r:"^所有角色總生命值提升(\d+(.\d+)?(%)?)$"="Increase all characters' T
 r:"^所有敵人的最終生命值提升(\d+(.\d+)?(%)?)$"="Increase all foes' Final HP by $1"
 r:"^攻擊提升(\d+(.\d+)?(%)?)$"="Increase ATK by $1"
 r:"^攻擊力提升(\d+(.\d+)?(%)?)$"="Increase ATK by $1"
+r:"^攻擊力提升提升(\d+(.\d+)?(%)?)$"="Increase ATK by $1"
 r:"^攻擊力提升(\d+%)\+(\d+)$"="Increase ATK by $1 + $2"
 r:"^攻擊加成提升(\d+(.\d+)?(%)?)$"="Increase ATK by $1"
 r:"^攻擊力永久提升(\d+(.\d+)?(%)?)$"="Permanently increase ATK by $1"
@@ -1295,6 +1314,8 @@ r:"^{{A}}傷害提升(\d+(.\d+)?(%)?)$"="Increase {{A}} DMG by $1"
 r:"^{{A}}傷害提高(\d+(.\d+)?(%)?)$"="Increase {{A}} DMG by $1"
 r:"^{{A}}造成的傷害提升(\d+(.\d+)?(%)?)$"="Increase {{A}}'s DMG Dealt by $1"
 r:"^普通攻擊、槍械攻擊傷害提升(\d+(.\d+)?(%)?)$"="<size\=26>Increase Melee Attack/Gun Attack DMG by $1</size>"
+槍械攻擊必定暴擊=Gun Attack has Guaranteed Critical
+r:"^槍械攻擊造成的傷害提升(\d+(.\d+)?(%)?)$"="Increase Gun Attack DMG Dealt by $1"
 r:"^追加效果造成的傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up DMG Dealt by $1"
 r:"^追加效果暴擊效果提升(\d+%)、攻擊力提升(\d+%)$"="Increase Follow Up Crit DMG by $1 and ATK by $2"
 r:"^追擊效果傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up DMG by $1"
@@ -1327,8 +1348,10 @@ r:"^物理傷害提升(\d+(.\d+)?(%)?)$"="Increase Phys DMG by $1"
 r:"^物理傷害提高(\d+(.\d+)?(%)?)$"="Increase Phys DMG by $1"
 r:"^釋放物理屬性技能時，傷害提升(\d+(.\d+)?(%)?)。$"="<size\=24>Increase damage by $1 when using Phys skills</size>"
 r:"^釋放物理屬性技能時，傷害提升、攻擊力提升、暴擊效果提升$"="Increase damage, ATK, and Crit DMG \nwhen using Phys skills"
+射擊屬性{{A}}技能必定暴擊=Gun {{A}} skill has Guaranteed Critical
 r:"^射擊傷害提升(\d+(.\d+)?(%)?)$"="Increase Gun DMG by $1"
 r:"^射擊傷害提高(\d+(.\d+)?(%)?)$"="Increase Gun DMG by $1"
+r:"^造成射擊屬性傷害時的暴擊效果提升(\d+(.\d+)?(%)?)$"="When dealing Gun damage, \nincrease Crit DMG by $1"
 r:"^火焰傷害提升(\d+(.\d+)?(%)?)$"="Increase Fire DMG by $1"
 r:"^火焰傷害提高(\d+(.\d+)?(%)?)$"="Increase Fire DMG by $1"
 r:"^火焰屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase Fire DMG by $1"
@@ -1513,6 +1536,7 @@ r:"^受到萬能傷害提高(\d+(.\d+)?(%)?)$"="Increase Almighty DMG Taken by $
 火焰弱點=Fire Weakness
 火焰屬性的適應性變為弱=Changed Fire affinity to Weak
 冰凍弱點=Ice Weakness
+冰凍屬性適應性變為弱=Changed Ice affinity to Weak
 冰凍屬性的適應性變為弱=Changed Ice affinity to Weak
 電擊弱點=Elec Weakness
 電擊屬性的適應性變為弱=Changed Elec affinity to Weak
