@@ -494,7 +494,7 @@ Important Consumables
 體力值已滿=Stamina maxed
 （體力不足）=Insufficient Stamina
 r:"^『體力』\n探索{{A}}所需的基本能量，隨時間勻速恢復。\n下次恢復：<color\=#FFC000>(.*)</color>\n全部恢復：<color\=#FFC000>(.*)</color>$"="[Stamina]\nThe basic energy needed to explore the {{A}}, restores with time.\nNext one: <color\=#FFC000>$1</color>\nFully restored: <color\=#FFC000>$2</color>"
-r:"^已購買(\d+)/(\d+)次（每日05:00重置）$"="Purchased $1/$2 times \n(Reset at 5 am UTC+8 daily)"
+r:"^已購買(\d+)/(\d+)次（每日05:00重置）$"="Purchased $1/$2 times \n(Reset at 05:00 UTC+8 daily)"
 行動力補給=Energy Supply
 能量飲料=MaraThon Energy
 用於提升能量的補給飲料，使用後立即恢復5行動力。=Restores 5 Action Points immediately.
@@ -1214,6 +1214,7 @@ r:"^推薦編入(\d+)名<size\=(\d+)><sprite\=(\d+) tint\=1></size>角色$"="Rec
 尚未佩戴面具=No equipped Mask
 食用永久屬性料理累計獲得屬性：=Permanent Food Item Stats:
 
+r:"^(\d+)年(\d+)月(\d+)日結識$"="Joined $3/$2/$1"
 已達到等級上限。=Reached level cap.
 溢出經驗已轉化為通用素材。=Converted overflow EXP into materials.
 <color\=#FF0000>本次升級溢出經驗將轉化為傳記材料。</color>\n是否確定使用所選材料進行強化？=<color\=#FF0000>This upgrade will convert overflowed EXP into upgrade materials.</color>\nAre you sure you want to upgrade?
@@ -2104,7 +2105,7 @@ Synergy (SL) and City Activities
 『現金』\n都市流通貨幣……應該可以用於都市行程中的各類支出。=<size\=28>[Money]\nCity currency. \nCan be used for various expenditures in City Activities.</size>
 都市流通貨幣……應該可以用於都市行程中的各類支出。=City currency. \nCan be used for various expenditures in City Activities.
 參與都市日程獲得=Gained from City Activities
-『行動值』\n探索都市所需的基本能量，每天會自動恢復。\n每日05:00恢復5點。=<size\=28>[Action Points] \nEnergy needed for city activities. \nAutomatically restore 5 Points \nat 5 AM (UTC+8) every day.</size>
+『行動值』\n探索都市所需的基本能量，每天會自動恢復。\n每日05:00恢復5點。=<size\=28>[Action Points] \nEnergy needed for city activities. \nAutomatically restore 5 Points \nat 05:00 (UTC+8) every day.</size>
 高額獎勵：<color\=#FFFF00>1倍</color>=<size\=24>Bonus Activities: <color\=#FFFF00>1x</color></size>
 高額獎勵：<color\=#FFFF00>3倍</color>=<size\=24>Bonus Activities: <color\=#FFFF00>3x</color></size>
 「高額獎勵」日程將消耗1點行動力，並獲得1倍獎勵。=The [Bonus Activities] will consume 1 Energy and give 1x rewards.
@@ -3110,7 +3111,7 @@ sr:"^(.*)不足，無法購買。$"="Insufficient $1, cannot purchase."
 點擊領取今日供給=Click to Claim!
 r:"^限購$"="Limit"
 r:"^立即獲得$"="Immediately get"
-r:"^連續30天，每天5點贈送$"="Daily at 5 am (UTC+8) for 30 days"
+r:"^連續30天，每天5點贈送$"="Daily at 05:00 (UTC+8) for 30 days"
 r:"^每日(\d+)點刷新領取$"="Daily at $1 am  (UTC+8)"
 r:"^累計消費(\d+)台幣\((\d+)/(\d+)\)$"="Spend NT$ $1 ($2/$3)"
 r:"^累計消費(\d+)元\((\d+)/(\d+)\)$"="Spend NT$ $1 ($2/$3)"
@@ -3659,6 +3660,18 @@ r:"^參加(\d+)次任意都市日程\((\d+)/(\d+)\)$"="Participate in any $1 Cit
 研究所篇（下）=Laboratory (Chapter 2)
 r:"^在盧布朗中與{{A}}消磨時光\((\d+)\/(\d+)\)$"="Spend time with {{A}} in Café Leblanc ($1/$2)"
 
+Send Em Flying
+動力能源=Cattlepower
+今日任務=Daily Tasks
+本期挑戰=Seasonal Tasks
+每日5:00重置任務=Tasks reset daily on 05:00 UTC+8
+r:"^消耗(\d+)點體力\(<color\=#e50a06>(\d+)</color>/(\d+)\)$"="Use $1 Stamina (<color\=#e50a06>$2</color>/$3)"
+r:"^消耗(\d+)點行動力\(<color\=#e50a06>(\d+)</color>/(\d+)\)$"="Use $1 Action Points (<color\=#e50a06>$2</color>/$3)"
+r:"^完成(\d+)次委託派遣\(<color\=#e50a06>(\d+)</color>/(\d+)\)$"="Clear $1 Task (<color\=#e50a06>$2</color>/$3)"
+r:"^完成(\d+)次往日回溯\(<color\=#e50a06>(\d+)</color>/(\d+)\)$"="Clear $1 Recollections (<color\=#e50a06>$2</color>/$3)"
+r:"^累計消耗(\d+)點體力\(<color\=#e50a06>(\d+)</color>/(\d+)\)$"="Use $1 Stamina (<color\=#e50a06>$2</color>/$3)"
+r:"^累計消耗(\d+)點行動力\(<color\=#e50a06>(\d+)</color>/(\d+)\)$"="Use $1 Action Points (<color\=#e50a06>$2</color>/$3)"
+
 P3R Collab
 新月篇=New Moon
 新月=New Moon
@@ -4029,6 +4042,9 @@ r:"^完成異變等級(\d+)以上的噩夢及以上難度的挑戰$"="Clear Nigh
 r:"^完成異變等級(\d+)以上的噩夢難度的挑戰$"="Clear Nightmare at level $1 or above"
 r:"^完成異變等級(\d+)以上的困難及以上難度的挑戰$"="Clear Hard or above at level $1 or above"
 r:"^完成異變等級(\d+)以上的普通及以上難度的挑戰$"="Clear Normal or above at level $1 or above"
+r:"^完成異變等級(\d+)或以上的噩夢難度的挑戰$"="Clear Nightmare at level $1 or above"
+r:"^完成異變等級(\d+)或以上的普通及以上難度的挑戰$"="Clear Normal or above at level $1 or above"
+r:"^完成異變等級(\d+)或以上的困難及以上難度的挑戰$"="Clear Hard or above at level $1 or above"
 r:"^戰勝普通難度異變等級(\d+)以上的{{A}}與{{B}}\((\d+)\/(\d+)\)$"="Defeat {{A}} and {{B}} on Normal at level $1 or above"
 r:"^戰勝普通難度異變等級(\d+)以上的{{B}}與{{A}}\((\d+)\/(\d+)\)$"="Defeat {{B}} and {{A}} on Normal at level $1 or above"
 
@@ -6362,6 +6378,23 @@ r:"^在一期星盤試煉中，通過至少(\d+)個「紫色監測點」。$"="C
 在一期星盤試煉中，通過全部「監測點」。=Clear all [Monitoring Points] within 1 season.
 天象衍星·超脫=Enlightening Planetarium: Super
 在一期星盤試煉中，以最低限度的精神力通過所有的「監測點」。=Clear all [Monitoring Points] using the minimum amount of Mental Energy within 1 season.
+
+荊棘之冠·傳奇=Crown of Thorns: Legend
+荊棘之冠·首席=Crown of Thorns: Elite
+荊棘之冠·高手=Crown of Thorns: Veteran
+荊棘之冠·新秀=Crown of Thorns: Rookie
+荊棘之盾·傳奇=Shield of Thorns: Legend
+荊棘之盾·首席=Shield of Thorns: Elite
+荊棘之盾·高手=Shield of Thorns: Veteran
+荊棘之盾·新秀=Shield of Thorns: Rookie
+荊棘之心·傳奇=Heart of Thorns: Legend
+荊棘之心·首席=Heart of Thorns: Elite
+荊棘之心·高手=Heart of Thorns: Veteran
+荊棘之心·新秀=Heart of Thorns: Rookie
+完成挑戰玩法「{{A}}」挑戰目標後獲得的特級獎勵。=Awarded for completing a challenge goal for the {{A}}.
+完成挑戰玩法「{{A}}」挑戰目標後獲得的高級獎勵。=Awarded for completing a challenge goal for the {{A}}.
+完成挑戰玩法「{{A}}」挑戰目標後獲得的中級獎勵。=Awarded for completing a challenge goal for the {{A}}.
+完成挑戰玩法「{{A}}」挑戰目標後獲得的初級獎勵。=Awarded for completing a challenge goal for the {{A}}.
 
 r:"^(.*)·反抗之魂$"="$1·Soul of Rebellion"
 r:"^(.*)·慾望之火$"="$1·Fire of Desire"
