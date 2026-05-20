@@ -606,12 +606,15 @@ Dominion Cohesion
 r:"^使<color\=#FFFF00>所有</color>同伴攻擊力提升(\d+\.\d+%)\+每(\d+)攻擊力額外提升(\d+\.\d+%)，持續(\d+)回合。使主目標同伴造成的傷害提升(\d+\.\d+%)\+每(\d+)攻擊力額外提升(\d+\.\d+%)，持續(\d+)回合。$"="Increase <color\=#FFFF00>party's</color> ATK by $1 + $3 more for every $2 of the user's ATK. Lasts for $4 turns. Increase main target's DMG Dealt by $5 + $7 more for every $6 of the user's ATK. Lasts for $9 turn."
 
 Infinite Algorithm
-r:"^使<color\=#FFFF00>所有</color>友方角色攻擊力提升(\d+\.\d+%)，額外使主目標傷害提升(\d+\.\d+%)，持續(\d+)回合。$"="Increase <color\=#FFFF00>all</color> allies' ATK by $1, additionally increase the main target's DMG Dealt by $2 for $3 turns."
+r:"^使<color\=#FFFF00>所有</color>友方角色攻擊力提升(\d+\.\d+%)，額外使主目標傷害提升(\d+\.\d+%)，持續(\d+)回合。$"="Increase <color\=#FFFF00>all</color> allies' ATK by $1, additionally increase the main target's DMG Dealt by $2. Lasts for $3 turns."
 r:"^無<color\=#000000>限</color>演算法$"="I<color\=#000000>n</color>finite Algorithm"
 
 Yggdrasil Derivation
-r:"^使<color\=#FFFF00>1名</color>同伴攻擊力提升(\d+\.\d+%)，傷害提升(\d+\.\d+%)，持續(\d+)回合，每經過1個回合，額外使其獲得(\d+%)暴擊效果，上限(\d+%)。\n使用該技能後，WONDER獲得(\d+)個額外回合。該技能有(\d+)回合的冷卻時間。$"="Increase <color\=#FFFF00>1</color> ally's ATK by $1 and DMG Dealt by $2 for $3 turns, after each turn, additionally increase that ally's Crit DMG by $4 (up to $5). \nAfter using this skill, Wonder gains $6 Extra Action. Cooldown Time: $7 turns."
+r:"^使<color\=#FFFF00>1名</color>同伴攻擊力提升(\d+\.\d+%)，傷害提升(\d+\.\d+%)，持續(\d+)回合，每經過1個回合，額外使其獲得(\d+%)暴擊效果，上限(\d+%)。\n使用該技能後，WONDER獲得(\d+)個額外回合。該技能有(\d+)回合的冷卻時間。$"="Increase <color\=#FFFF00>1</color> ally's ATK by $1 and DMG Dealt by $2. After each turn, additionally increase that ally's Crit DMG by $4 (up to $5). Lasts for $3 turns.\nAfter using this skill, Wonder gains $6 Extra Action. Cooldown Time: $7 turns."
 r:"^世<color\=#000000>界</color>樹的衍化$"="Y<color\=#000000>g</color>gdrasil Derivation"
+
+Soul Catalysis
+r:"^使<color\=#FFFF00>1名</color>同伴的攻擊力提升(\d+\.\d+%)，若友方觸發了任意屬性奏鳴效果，則額外使主目標暴擊率提升(\d+\.\d+%)，持續(\d+)回合。$"="Increase <color\=#FFFF00>1</color> ally's ATK by $1. If allies activated any Attribute Harmony, additionally increase the main target's Crit Rate by $2. Lasts for $3 turns."
 
 //norn
 r:"^使<color\=#FFFF00>所有</color>同伴獲得(\d+\.\d+%)攻擊力\+(\d+)的護盾，持續(\d+)回合，護盾受到傷害時有(\d+\.\d+%)基礎機率使傷害來源陷入風襲狀態。$"="Grant <color\=#FFFF00>all</color> allies $1 ATK + $2 Shield for $3 turns. There is a $4 base chance to inflict Windswept to the foe when the Shield took damage."
