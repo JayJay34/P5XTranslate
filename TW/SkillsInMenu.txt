@@ -315,6 +315,7 @@ No size on inherit skill names or else they won't work in the inherit menu
 無限演算法=Infinite Algorithm
 世界樹的衍化=Yggdrasil Derivation
 r:"^世界樹的衍化 Lv.(\d+)$"="<size\=24>Yggdrasil Derivation Lv.$1</size>"
+萬靈催化=Soul Catalysis
 
 回防盾=Warded Shield
 護風罩=Wind Barrier
@@ -503,6 +504,9 @@ sr:"『HIGHLIGHT』：使所有同伴造成的傷害提升<color\=#fffc40>(\d+\.
 
 //ST ONE MORE, AoE with increased damage taken HIGHLIGHT
 sr:"『HIGHLIGHT』：對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，並使其受到的傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。\n『ONE MORE』：對1名敵人造成(.*)屬性傷害。"=[HIGHLIGHT]: Deal <color\=#FFFC40>$1</color> ATK $2 damage to all foes and increase their DMG Taken by <color\=#FFFC40>$3</color> for 2 turns.\n[ONE MORE]: Deal $4 damage to 1 foe.
+
+Rank IX Strategist HIGHLIGHT
+sr:"^『HIGHLIGHT』：使所有同伴攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，暴擊效果提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合。\n『ONE MORE』：對1名敵人造成(.*)屬性傷害。$"="[HIGHLIGHT]: Increase all allies' ATK by <color\=#fffc40>$1</color> and Crit DMG by <color\=#fffc40>$2</color>. Lasts for $3 turns.\n[ONE MORE]: Deal $4 damage to 1 foe."
 
 Rank IX Saboteur HIGHLIGHT
 sr:"^『HIGHLIGHT』：對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，使所有敵人受到傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，受到暴擊效果提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。\n『ONE MORE』：對1名敵人造成(.*)屬性傷害。$"="[HIGHLIGHT]: Deal $2 damage to all foes equal to <color\=#FFFC40>$1</color> of ATK. Increase all foes' DMG Taken by <color\=#FFFC40>$3</color> and Crit DMG Taken by <color\=#FFFC40>$4</color> for $5 turns.\n[ONE MORE]: Deal $6 damage to 1 foe."
@@ -863,10 +867,13 @@ Dominion Cohesion
 r:"^使所有同伴的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每(\d+)攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)，效果持續(\d+)回合。並使技能主目標造成的傷害額外提升<color\=#fffc40>(\d+\.\d+%)</color>\+自身每(\d+)攻擊力額外提升<color\=#fffc40>(\d+\.\d+%)</color>，上限(\d+%)。效果持續(\d+)回合。$"="Increase party's ATK by <color\=#fffc40>$1</color> + <color\=#fffc40>$3</color> more for every $2 of the user's ATK, up to $4. Lasts for $5 turns. Increase main target's DMG Dealt by <color\=#fffc40>$6</color> + <color\=#fffc40>$8</color> more for every $7 of the user's ATK, up to $9. Lasts for $10 turn."
 
 Infinite Algorithm
-r:"^使所有友方角色攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，額外使主目標傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Increase all allies' ATK by <color\=#fffc40>$1</color>, additionally increase the main target's DMG Dealt by <color\=#fffc40>$2</color> for $3 turns."
+r:"^使所有友方角色攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，額外使主目標傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Increase all allies' ATK by <color\=#fffc40>$1</color>, additionally increase the main target's DMG Dealt by <color\=#fffc40>$2</color>. Lasts for $3 turns."
 
 Yggdrasil Derivation
 r:"^使1名同伴攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合，每經過1個回合，額外使其獲得(\d+%)暴擊效果，上限(\d+%)。\n使用該技能後，WONDER獲得(\d+)個額外回合。該技能有(\d+)回合的冷卻時間。$"="Increase 1 ally's ATK by <color\=#fffc40>$1</color> and DMG Dealt by <color\=#fffc40>$2</color> for $3 turns, after each turn, additionally increase that ally's Crit DMG by $4 (up to $5). \nAfter using this skill, Wonder gains $6 Extra Action. Cooldown Time: $7 turns."
+
+Soul Catalysis
+r:"^使1名同伴的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，若友方觸發了任意屬性奏鳴效果，則額外使主目標暴擊率提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Increase 1 ally's ATK by <color\=#fffc40>$1</color>. If allies activated any Attribute Harmony, additionally increase the main target's Crit Rate by <color\=#fffc40>$2</color>. Lasts for $3 turns."
 
 r:"^使1名友方獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊點護盾。$"="Grant 1 ally <color\=#fffc40>$1</color> ATK Shield."
 
@@ -980,11 +987,11 @@ r:"^下雨時受到的傷害降低(\d+(.\d+)?(%)?)。$"="Decrease DMG Taken duri
 r:"^物理攻擊(\d+%)機率反射，造成(\d+%)攻擊力物理屬性傷害。$"="$1 chance to repel Physical attacks, dealing Physical damage equal to $2 ATK."
 
 P2W Passive 1
-r:"^自身對敵方釋放{{A}}技能後，使攻擊力最高的友方同伴攻擊力提升(.*)、暴擊效果提升(.*)，持續(\d+)回合。該效果有(\d+)回合的冷卻時間。$"="After user uses a Persona skill on foes, increase the highest ATK ally's ATK by $1 and Crit DMG by $2 for $3 turns. \nCooldown Time: $4 turns."
-r:"^自身對敵方釋放{{A}}技能後，使攻擊力最高的友方同伴（優先選擇支配/反抗）攻擊力提升(.*)、暴擊效果提升(.*)，持續(\d+)回合。該效果有(\d+)回合的冷卻時間。$"="After user uses a Persona skill on foes, increase the highest ATK ally's (prioritizing Sweeper or Assassin) ATK by $1 and Crit DMG by $2 for $3 turns. \nCooldown Time: $4 turns."
+r:"^自身對敵方釋放{{A}}技能後，使攻擊力最高的友方同伴攻擊力提升(.*)、暴擊效果提升(.*)，持續(\d+)回合。該效果有(\d+)回合的冷卻時間。$"="After user uses a Persona skill on foes, increase the highest ATK ally's ATK by $1 and Crit DMG by $2. Lasts for $3 turns. \nCooldown Time: $4 turns."
+r:"^自身對敵方釋放{{A}}技能後，使攻擊力最高的友方同伴（優先選擇支配/反抗）攻擊力提升(.*)、暴擊效果提升(.*)，持續(\d+)回合。該效果有(\d+)回合的冷卻時間。$"="After user uses a Persona skill on foes, increase the highest ATK ally's (prioritizing Sweeper or Assassin) ATK by $1 and Crit DMG by $2. Lasts for $3 turns. \nCooldown Time: $4 turns."
 
 P2W Passive 2
-r:"^使所有同伴的傷害提升(\d+%)，暴擊效果提升(\d+%)，持續(\d+)回合。戰鬥開始時及每隔(\d+)個回合，會自動釋放該技能。$"="Increase party's DMG Dealt by $1 and Crit DMG by $2 for $3 turns. At the start of battle and every $4 turns, automatically activate this skill."
+r:"^使所有同伴的傷害提升(\d+%)，暴擊效果提升(\d+%)，持續(\d+)回合。戰鬥開始時及每隔(\d+)個回合，會自動釋放該技能。$"="Increase party's DMG Dealt by $1 and Crit DMG by $2. Lasts for $3 turns. At the start of battle and every $4 turns, automatically activate this skill."
 
 // Skill Characteristics (These are at the bottom cuz theyre used in skill descriptions too)//
 疊層=Stack
