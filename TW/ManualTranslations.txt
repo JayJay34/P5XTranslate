@@ -139,6 +139,13 @@ Onemore自動選擇目標=<size\=27>Automatically select \nONE MORE target</size
 自動收穫=Auto Harvest
 r:"^協同者{{A}}RANK等級到(\d+)後解鎖。$"="Unlocks after {{A}} Synergy RANK $1."
 
+{{A}}設置={{A}}
+同屏顯示角色數量=Character Density
+僅顯示親密關係角色=Only Show Friends/Companio Members
+角色姓名板顯示=Display Character Name
+角色稱號顯示=Display Character Title
+開啟「角色姓名板顯示」後才能設置。=Can only enable this after enabling [Display Character Name].
+
 音量提升=Raise Volume
 音量降低=Lower Down
 向前移動=Move Forward
@@ -251,6 +258,8 @@ r:"^昨天 (\d+):(\d+)$"="Yesterday $1:$2"
 
 r:"^請輸入頻道號\（(\d+)-(\d+)\）$"="Enter the channel number ($1-$2)"
 r:"^新消息 (\d+)條。$"="$1 new messages."
+r:"^切到{{A}}(\d+)頻了　　　　$"="Switched to {{A}} channel $1"
+r:"^進入新頻道：(\d+)$"="Entered channel: $1"
 
 移到最前=Move to the front
 以上聊天訊息已過期=Chat messages have expired
@@ -468,6 +477,7 @@ Character-specific Persona
 阿斯忒洛珀=Asterope
 刻耳柏洛斯=Cerberus
 智慧女神像=Palladion
+勞爾=Raoul
 
 ------------------------------------------
 Worldbuilding Terms
@@ -857,6 +867,7 @@ Area Names
 {{A}}商業街=Central Street
 十字路口=<size\=20>Scramble Crossing</size>
 中央大街=Central Street
+商業街=Central Street
 地下商場=<size\=22>Underground Mall</size>
 聯絡橋=Accessway
 
@@ -897,6 +908,8 @@ r:"^(\d+)天(\d+)時後開放領取$"="Claim in $1d $2h"
 r:"^(\d+)小時(\d+)分後開放領取$"="Claim in $1h $2m"
 r:"^(\d+)時(\d+)分後開放領取$"="Claim in $1h $2m"
 r:"^(\d+)分後開放領取$"="Claim in $1m"
+r:"^(\d+)天(\d+)小時後開放。$"="Unlocks in $1d $2h."
+r:"^(\d+)小時(\d+)分後開放。$"="Unlocks in $1h $2m."
 
 r:"^剩餘(\d+)天(\d+)小時(\d+)分$"="$1d $2h $3m left"
 r:"^剩餘(\d+)天(\d+)時(\d+)分$"="$1d $2h $3m left"
@@ -1011,6 +1024,7 @@ Profile Menu
 修改簽名=Change Signature
 複製ID=Copy ID
 更換名片=Change Profile Card
+修改稱號=Change Title
 名片=Profile Card
 更換相框=Change Frame
 更換頭像=Change Avatar
@@ -1116,10 +1130,10 @@ r:"^陣容\((\d+)\)$"="Party ($1)"
 已設為關注怪盜。=Added Thief to favourites.
 關注已取消。=Removed from favourites.
 
-慾望奏鳴=Harmony
+慾望奏鳴=Desire Sonata
 協奏=Concerto
-相同屬性怪盜和當前{{A}}出戰時，可啟動慾望奏鳴效果。=<size\=23>Activate Desire Harmony when Thieves with the same element are in battle.</size>
-相同屬性角色和當前{{A}}出戰時，可啟動慾望奏鳴效果。=<size\=20>Activate Desire Harmony when Thieves and {{A}} with the same element are in battle.</size>
+相同屬性怪盜和當前{{A}}出戰時，可啟動慾望奏鳴效果。=<size\=23>Activate Desire Sonata when Thieves with the same element are in battle.</size>
+相同屬性角色和當前{{A}}出戰時，可啟動慾望奏鳴效果。=<size\=20>Activate Desire Sonata when Thieves and {{A}} with the same element are in battle.</size>
 面具協奏效果一覽=Mask Concerto Effect
 面具協奏：增強上陣怪盜中的四種屬性傷害。=<size\=21>Mask Concerto: Increase elemental damage based on active Thieves.</size>
 面具協奏：增強上陣角色中的四種屬性傷害。=<size\=21>Mask Concerto: Increase elemental damage based on active Thieves.</size>
@@ -1202,7 +1216,6 @@ r:"^推薦編入(\d+)名<size\=(\d+)><sprite\=(\d+) tint\=1></size>角色$"="Rec
 詛咒傷害=Curse DMG
 萬能傷害=<size\=23>Almighty DMG</size>
 總傷害加成=DMG Bonus
-造成傷害=DMG Dealt
 
 生命成長率=HP Boost
 攻擊成長率=ATK Boost
@@ -1217,6 +1230,7 @@ r:"^推薦編入(\d+)名<size\=(\d+)><sprite\=(\d+) tint\=1></size>角色$"="Rec
 
 r:"^(\d+)年(\d+)月(\d+)日結識$"="Joined $3/$2/$1"
 已達到等級上限。=Reached level cap.
+沒有可添加素材。=No material can be added.
 溢出經驗已轉化為通用素材。=Converted overflow EXP into materials.
 <color\=#FF0000>本次升級溢出經驗將轉化為傳記材料。</color>\n是否確定使用所選材料進行強化？=<color\=#FF0000>This upgrade will convert overflowed EXP into upgrade materials.</color>\nAre you sure you want to upgrade?
 已達到最大經驗，無法繼續添加材料。=Reached max level. Cannot add more upgrade materials.
@@ -1550,7 +1564,7 @@ Contract / Pull Screen / Outfit
 
 r:"^是否消耗[(.*)]×(.*)，\n購買(.*)張(.*)]？$"="Consume [$1] x $2 \nto buy [$3] x $4?"
 
-r:"^簽約$"="Pulls"
+簽約=Pulls
 請簽訂命運的契約\n<size\=26>全螢幕可滑動簽字=Sign The Contract of Fate
 請簽訂命運的契約\n<size\=36><color\=#567298>滑動螢幕任意位置=Sign The Contract of Fate\n<size\=36><color\=#567298>Please write your signature on the screen
 
@@ -1611,6 +1625,7 @@ r:"^查詢結果僅保留最近(\d+)天補給資訊$"="The Supply history only r
 補給時間=Supply Time
 退出提示=Exit Tips
 r:"^剩餘時間：(\d+)天(\d+)時(\d+)分$"="Ends in $1d $2h $3m"
+r:"^剩餘時間：(\d+)天(\d+)小時$"="Ends in $1d $2h"
 r:"^剩餘時間：(\d+)天(\d+)時$"="Ends in $1d $2h"
 r:"^剩餘時間：(\d+)時(\d+)分$"="Ends in $1h $2m"
 
@@ -1663,6 +1678,7 @@ sr:"^(.*)·默認$"="$1 · Default"
 怪盜時裝=Thief Outfit
 怪盜·天地勝意=Thief · Worldly Wish
 怪盜·群青色服裝=Thief · Ultramarine Outfit
+怪盜·秀盡制服=Thief · Shujin Uniform
 PINKY·偶像Ver=Pinky · Idol Ver
 驚鴻馭春·歲華=Spring's Grace
 r:"^<size\=32><color\=#f7d305>套裝效果</color></size>\n擁有<color\=#f7d305>驚鴻馭春·歲華</color>後，在中華相關店鋪打工時獲得的現金增加(\d+)。$"="<size\=32><color\=#f7d305>Set Effect</color></size>\nAfter obtaining <color\=#f7d305>Spring's Grace</color>, gain $1 bonus Yen when working in Chinese-related shops"
@@ -2184,7 +2200,7 @@ r:"^人格指數提升到(\d+)級後，每(\d+)點超額的人格指數經驗，
 
 r:"^作為禮物贈與協同者，可提升(\d+)點親密度，首次贈送額外增加(\d+)點親密度，『喜愛之物』額外增加(\d+)點親密度。$"="<size\=25>\nGrants $1 Fondness. \nFirst time bonus grants $2 Fondness. \n[Favourite Items] grants $3 Fondness.</size>"
 好感度描述=Fondness
-用於提升與協同者的好感度。=<size\=25>Used for granting Fondness.</size>
+用於提升與協同者的好感度。=Used to increase Fondness with Synergy.
 sr:"^「(.*)」可能會喜歡這件禮物。\n基礎好感度\+(\d+)，偏好禮物額外\+(\d+)，偏好禮物首次贈送額外\+(\d+)。$"="[$1] might like this gift. \nFondness +$2 \nFavourite Items +$3 \nFavourite Items First Time Bonus +$4"
 sr:"^「(.*)」可能會喜歡這件禮物。\n基礎好感度\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物額外\+(\d+)（<size\=40><sprite\=1></size>\+(\d+)\），偏好禮物首次贈送額外\+(\d+)。$"="[$1] might like this gift. \nFondness +$2 (<size\=40><sprite\=1></size>+$3)\nFavourite Items +$4 (<size\=40><sprite\=1></size>+$5)\nFavourite Items First Time Bonus +$6"
 r:"^基礎好感度\+(\d+)\n偏好禮物額外\+(\d+)$"="Fondness +$1\nFavourite Items +$2"
@@ -2872,6 +2888,9 @@ r:"^周可領獎次數：<color\=#0665ca>(\d+)/(\d+)</color>$"="Rewards Left: <c
 『執著之語』=[[Words of Obsession]
 「執著之語」=[Words of Obsession]
 執著之語=Words of Obsession
+『煥新之語』=[[Words of Renewal]
+「煥新之語」=[Words of Renewal]
+煥新之語=Words of Renewal
 
 r:"^陰影受到傷害後，使全體怪盜造成傷害提升(.*)，可疊加(.*)層$"="After a Shadow takes damage, increase all Thieves' DMG Dealt by $1. Stacks up to $2 times"
 r:"^陰影受到傷害後，使所有角色造成傷害提升(.*)，可疊加(.*)層$"="After a Shadow takes damage, increase all characters' DMG Dealt by $1. Stacks up to $2 times"
@@ -2909,6 +2928,8 @@ r:"^所有角色<color\=#E3E3E3>持續效果</color>傷害提高(\d+(.\d+)?(%)?)
 r:"^全體怪盜<color\=#ff0036>{{A}}傷害</color>提高(\d+(.\d+)?(%)?)$"="Increase all Thieves' <color\=#ff0036>{{A}}</color> DMG by $1"
 r:"^所有角色<color\=#ff0036>{{A}}傷害</color>提高(\d+(.\d+)?(%)?)$"="Increase all characters' <color\=#ff0036>{{A}}</color> DMG by $1"
 r:"^所有角色<color\=#ff0036>{{A}}</color>造成傷害提高(\d+(.\d+)?(%)?)$"="Increase all characters' <color\=#ff0036>{{A}}</color> DMG Dealt by $1"
+勁舞領域=Dance Domain
+r:"^戰鬥開始時獲得(\d+)點<color\=#ff0036>狂想節拍</color>$"="At the start of battle, gain $1 <color\=#ff0036>Rhapsodic Beat</color>"
 
 此處盤踞著大量的陰影，挑戰成功可獲得怪盜潛能材料。=There are many Shadows here, gain Thief Talent materials on victory.
 此處盤踞著強大的陰影，挑戰成功可獲得武器突破材料。=There are strong Shadows here, gain Weapon Enhance materials on victory.
@@ -3499,6 +3520,9 @@ r:"^本期心之海試煉已結束，您的排名處於(.*)，特為您頒發排
 {{A}}生日快樂！=<size\=26>Happy Birthday {{A}}!</size>
 鵝絨試煉」總星級獎勵=Velvet Trials Star Rewards
 r:"^您天鵝絨試煉當前總星級(\d+)，(\d+)天未領取的辰星獎勵，已透過郵件發放，請查收附件！$"="Your current star level in the Velvet Trials is $1.\nYour $2 days of unclaimed rewards have been delivered to you via this message!"
+「{{A}}」獎勵結算=[{{A}}] Rewards
+疊的奇遇之地」獎勵結算=Land of Adventure Rewards
+r:"^您在「{{A}}」中，參與了{{B}}\（(\d+)星\）的挑戰，該BOSS已於(.*)被擊敗，現向您發放獎勵！$"="You have participated in the $1★ {{B}} challenge in [{{A}}], that BOSS has been defeated on $2, and you are now being rewarded!"
 
 r:"^網路環境異常，請隊長重新登入。\n\（錯誤碼：(\d+)\）$"="Network error. Please log in again. \n(Error code: $1)"
 
@@ -3868,7 +3892,6 @@ r:"^剩餘挑戰次數：(\d+)/(\d+)$"="Challenge Left: $1/$2"
 無記錄=None
 階段剩餘血量=HP Left
 *排名徽章在活動結束後透過郵件發放=*Badge will be sent to Mail after the event ends
-排名=Rank
 首領剩餘血量=Boss HP
 行動回合=Actions
 最佳陣容=Best Team
@@ -6404,6 +6427,7 @@ r:"^(.*)·心跳之夏$"="$1·Summer of Heartbeats"
 r:"^(.*)·新春之禧$"="$1·Celebration of Spring"
 r:"^(.*)·向死之叛$"="$1·Defiance towards Death"
 J&C·雙生之棘=J&C·Thorns of Twins
+r:"^(.*)·星夜之舞$"="$1·Dance of Starlight"
 {{A}}意識等級達到6級=Raise {{A}}'s Awareness Level to 6
 {{A}}&{{B}}意識等級達到6級=Raise {{A}} & {{B}}'s Awareness Level to 6
 
@@ -6412,7 +6436,8 @@ r:"^與協同者{{A}}好感度達到rank(\d+)\n且與{{A}}成為{{B}}$"="Reach S
 r:"^<color\=#ff0000>{{A}}</color>協同者等級達到(\d+)級解鎖。$"="Unlocks at <color\=#ff0000>{{A}}</color> Rank $1."
 r:"^<color\=#ff0000>{{A}}</color>協同者等級達到(\d+)級，並達成「{{B}}」關係解鎖。$"="Reach <color\=#ff0000>{{A}}</color> Rank $1 and become [{{B}}]."
 sr:"^表情·(.*)$"="Emote·$1"
-{{A}}專屬表情包。\n與{{A}}協同者等級提升獎勵。={{A}}'s exclusive emote. \nRewards from ranking up {{A}}.
+{{A}}專屬表情包。\n與{{A}}協同者等級提升獎勵。={{A}}'s exclusive emote. \nRewards from ranking up {{A}}'s Synergy.
+{{A}}專屬表情包。\n與{{A}}共敘者等級提升獎勵。={{A}}'s exclusive emote. \nRewards from ranking up {{A}}'s Sympathizer.
 {{A}}專屬表情包。\n與{{A}}達成「{{B}}」關係獎勵。={{A}}'s exclusive emote. \nRewards from becoming [{{B}}] with {{A}}.
 該表情暫未解鎖。=Emote not unlocked yet.
 r:"^已收藏表情(\d+)/(\d+)$"="Favorite Emote $1/$2"
@@ -6569,6 +6594,8 @@ r:"^已收藏表情(\d+)/(\d+)$"="Favorite Emote $1/$2"
 最愛的{{A}}=Favorite {{A}}
 噓~=Shh～
 訂閱我吧=Subscribe
+
+耍帥=Looking Cool
 
 薩克斯風的簧片=Saxophone Reed
 劇情道具。\n{{A}}贈送的薩克斯風簧片。=Story item. \nSaxophone reed given by {{A}}.
