@@ -257,6 +257,7 @@ r:"^(\d+)天前$"="$1d ago"
 r:"^昨天 (\d+):(\d+)$"="Yesterday $1:$2"
 
 r:"^請輸入頻道號\（(\d+)-(\d+)\）$"="Enter the channel number ($1-$2)"
+r:"^已加入到(\d+)號頻道，當前頻道共有(\d+)人。$"="Entered channel $1, this channel has $2 people."
 r:"^新消息 (\d+)條。$"="$1 new messages."
 r:"^切到{{A}}(\d+)頻了　　　　$"="Switched to {{A}} channel $1"
 r:"^進入新頻道：(\d+)$"="Entered channel: $1"
@@ -401,7 +402,7 @@ r:"^西<color\=#ff0000ff>森</color> {{A}}$"="Ha<color\=#ff0000ff>ru</color>na N
 r:"^長<color\=#ff0000ff>尾</color> {{A}}$"="{{A}} N<color\=#ff0000ff>a</color>gao"
 r:"^清<color\=#ff0000ff>水</color> {{A}}$"="Ri<color\=#ff0000ff>ku</color>to Shimizu"
 r:"^小<color\=#ff0000ff>松</color> {{A}}$"="Na<color\=#ff0000ff>mie</color> Komatsu"
-r:"^<color\=#ff0000ff>茶</color>太$"="Cha<color\=#ff0000ff>t</color>ra"
+r:"^<color\=#ff0000ff>茶</color>太$"="Cha<color\=#ff0000ff>t</color>ai"
 r:"^燒<color\=#ff0000ff>鳥</color> {{A}}$"="Su<color\=#ff0000ff>mi</color>zou Yakitori"
 r:"^土<color\=#ff0000ff>佐</color>林 {{A}}$"="Fu<color\=#ff0000ff>mi</color>yo Tosabayashi"
 r:"^小<color\=#ff0000ff>出</color> {{A}}$"="Hi<color\=#ff0000ff>yo</color>ri Koide"
@@ -867,7 +868,6 @@ Area Names
 {{A}}商業街=Central Street
 十字路口=<size\=20>Scramble Crossing</size>
 中央大街=Central Street
-商業街=Central Street
 地下商場=<size\=22>Underground Mall</size>
 聯絡橋=Accessway
 
@@ -1627,6 +1627,7 @@ r:"^查詢結果僅保留最近(\d+)天補給資訊$"="The Supply history only r
 r:"^剩餘時間：(\d+)天(\d+)時(\d+)分$"="Ends in $1d $2h $3m"
 r:"^剩餘時間：(\d+)天(\d+)小時$"="Ends in $1d $2h"
 r:"^剩餘時間：(\d+)天(\d+)時$"="Ends in $1d $2h"
+r:"^剩餘時間：(\d+)小時(\d+)分$"="Ends in $1h $2m"
 r:"^剩餘時間：(\d+)時(\d+)分$"="Ends in $1h $2m"
 
 r:"當前保底進度(\d+)\/(\d+)"=Current Pity: $1 / $2
@@ -1665,7 +1666,18 @@ r:"^剩餘抽獎次數：(\d+)$"="Draws Left: $1"
 觀看神引搖搖屋電視節目=Watch the Divine Summon TV show
 r:"^累計抽獎(\d+)次\((\d+)\/(\d+)\)$"="Draw $1 times ($2/$3)"
 尚未解鎖，無法購買=Locked, cannot purchase
+活動剩餘抽獎次數不足=Insufficient draws
+
+活動說明=Event Description
+獎品機率公示=Prize Odds Disclosure
 r:"^{{A}}×(\d+)$"="{{A}}×$1"
+r:"^怪盜殘識碎片×(\d+)$"="Thief Awareness Fragment×$1"
+r:"^不羈紋章·虹×(\d+)$"="Wild Card Emblem·Rainbow×$1"
+r:"^妄殊香×(\d+)$"="Delusion Incense×$1"
+r:"^縛生香×(\d+)$"="Binding Incense×$1"
+r:"^宇宙的箴言×(\d+)$"="4★ Revelation×$1"
+r:"^星辰之鈴×(\d+)$"="Bell of Stars×$1"
+r:"^不羈紋章·耀×(\d+)$"="Wild Card Emblem·Shiny×$1"
 
 角色普通契約中簽約次數達到=When Signature count reaches
 r:"^可自選一名5★怪盜\（可選次數：(\d+)/(\d+)\）$"="you can select one 5★ Thief (Can select: $1/$2)"
@@ -3499,6 +3511,8 @@ P5X營運團隊=P5X Operations Team
 當前暫無郵件=No mail
 沒有收到郵件=No mail
 郵件刪除成功。=Deleted mail.
+收件箱裡已經沒有未收取的郵件了。=No unclaimed Mail.
+關注成功，該郵件不再被一鍵刪除=Followed. This Mail will no longer be deleted by Delete Read.
 空空如也，暫時沒有persona=Empty
 
 r:"^時間：(\d+)-(\d+)-(\d+)$"="Time: $1-$2-$3"
@@ -3520,11 +3534,12 @@ r:"^本期心之海試煉已結束，您的排名處於(.*)，特為您頒發排
 {{A}}生日快樂！=<size\=26>Happy Birthday {{A}}!</size>
 鵝絨試煉」總星級獎勵=Velvet Trials Star Rewards
 r:"^您天鵝絨試煉當前總星級(\d+)，(\d+)天未領取的辰星獎勵，已透過郵件發放，請查收附件！$"="Your current star level in the Velvet Trials is $1.\nYour $2 days of unclaimed rewards have been delivered to you via this message!"
-「{{A}}」獎勵結算=[{{A}}] Rewards
+「{{A}}」獎勵結算=<size\=24>[{{A}}] Rewards</size>
 疊的奇遇之地」獎勵結算=Land of Adventure Rewards
 r:"^您在「{{A}}」中，參與了{{B}}\（(\d+)星\）的挑戰，該BOSS已於(.*)被擊敗，現向您發放獎勵！$"="You have participated in the $1★ {{B}} challenge in [{{A}}], that BOSS has been defeated on $2, and you are now being rewarded!"
 
 r:"^網路環境異常，請隊長重新登入。\n\（錯誤碼：(\d+)\）$"="Network error. Please log in again. \n(Error code: $1)"
+您的操作過於頻繁，請稍後再次嘗試。=Too many actions. Please try again later.
 
 Mission Screen
 全部=All
@@ -3738,9 +3753,9 @@ r:"^完成(\d+)次委託派遣\((\d+)\/(\d+)\)$"="Clear $1 Task ($2/$3)"
 r:"^完成(\d+)次委託派遣 \((\d+)\/(\d+)\)$"="Clear $1 Task ($2/$3)"
 r:"^累計完成(\d+)次委託派遣\((\d+)\/(\d+)\)$"="Clear $1 Task ($2/$3)"
 r:"^完成(\d+)次往日回溯\((\d+)\/(\d+)\)$"="Clear $1 Recollections ($2/$3)"
-在「星盤試煉」中通過「紫色或紅色」監測點=Clear 1 [Purple or Red] Monitoring Point in Astrolabe Trials
-r:"^在「星盤試煉」中通過「紫色或紅色」監測點\((\d+)\/(\d+)\)$"="Clear 1 [Purple or Red] Monitoring Point in Astrolabe Trials ($1/$2)"
-r:"^在「星盤試煉」中通過任意(\d+)個監測點\((\d+)\/(\d+)\)$"="Clear $1 Monitoring Point in Astrolabe Trials ($2/$3)"
+在「星盤試煉」中通過「紫色或紅色」監測點=Clear 1 [Purple or Red] Monitoring Point in [Astrolabe Trials]
+r:"^在「星盤試煉」中通過「紫色或紅色」監測點\((\d+)\/(\d+)\)$"="Clear 1 [Purple or Red] Monitoring Point in [Astrolabe Trials] ($1/$2)"
+r:"^在「星盤試煉」中通過任意(\d+)個監測點\((\d+)\/(\d+)\)$"="Clear $1 Monitoring Point in [Astrolabe Trials] ($2/$3)"
 r:"^累計消耗(\d+)點體力\((\d+)\/(\d+)\)$"="Use $1 Stamina ($2/$3)"
 r:"^累計消耗(\d+)點行動力\((\d+)\/(\d+)\)$"="Use $1 Action Points ($2/$3)"
 完成1次「心之海試煉」=Clear 1 [Trials from the Sea of Souls]
@@ -5697,6 +5712,7 @@ r:"^<color\=#FFFFFF>可分享貼紙盲袋：</color>(\d+)$"="<color\=#FFFFFF>Can
 登入1天=Log in for 1 day
 r:"^登入(\d+)天\((\d+)/(\d+)\)$"="Log in for $1 days ($2/$3)"
 r:"^完成(\d+)次往日回溯$"="Clear $1 Recollections"
+r:"^在「星盤試煉」中通過任意(\d+)個監測點$"="Clear $1 Monitoring Point in [Astrolabe Trials]"
 櫻花焙茶·露比=Sakura Hojicha Ruby
 焦糖{{A}}果·瑪麗=Caramel Strawberry Mary
 榛仁奶油·沙耶加=Hazelnut Cream Sayaka
