@@ -1,0 +1,188 @@
+----------
+TIMERS + UI
+----------
+星盘试炼=Astrolabe Trials
+精神力=Mental Energy
+
+r:"^本期星盘持续剩余时间：<color\=#FFC000>(\d+)天(\d+)时</color>$"="Time Left: <color\=#FFC000>$1d $2h</color>"
+r:"^本期星盘持续剩余时间：<color\=#FFC000>(\d+)时(\d+)分</color>$"="Time Left: <color\=#FFC000>$1h $2m</color>"
+
+r:"<color\=#FFC000>(\d+)天(\d+)时</color>后：\n可用精神力将增加<color\=#FFC000>(\d+)点</color>\(上限为(\d+)\)\n所有怪盗挑战次数将增加<color\=#FFC000>(\d+)次</color>\(上限为(\d+)\)"=After <color\=#FFC000>$1d $2h</color>:\nIncrease Mental Energy by <color\=#FFC000>$3</color>\n(Up to $4)\nIncrease Thieves Usage by <color\=#FFC000>$5</color>\n(Up to $6)
+r:"<color\=#FFC000>(\d+)时(\d+)分</color>后：\n可用精神力将增加<color\=#FFC000>(\d+)点</color>\(上限为(\d+)\)\n所有怪盗挑战次数将增加<color\=#FFC000>(\d+)次</color>\(上限为(\d+)\)"=After <color\=#FFC000>$1d $2h</color>:\nIncrease Mental Energy by <color\=#FFC000>$3</color>\n(Up to $4)\nIncrease Thieves Usage by <color\=#FFC000>$5</color>\n(Up to $6)
+
+r:"^<color\=#FFC000>(\d+)天(\d+)小时</color>后：$"="After <color\=#FFC000>$1d $2h</color>:"
+r:"^<color\=#FFC000>(\d+)天(\d+)时</color>后：$"="After <color\=#FFC000>$1d $2h</color>:"
+r:"^<color\=#FFC000>(\d+)小时(\d+)分</color>后：$"="After <color\=#FFC000>$1h $2m</color>:"
+r:"^<color\=#FFC000>(\d+)时(\d+)分</color>后：$"="After <color\=#FFC000>$1h $2m</color>:"
+r:"^<color\=#FFC000>(\d+)分</color>后：$"="After <color\=#FFC000>$1m</color>:"
+r:"^可用精神力将增加<color\=#FFC000>(\d+)点</color>     \(上限(\d+)\)$"="Increase Mental Energy by <color\=#FFC000>$1</color>"
+r:"^所有怪盗挑战次数将增加<color\=#FFC000>(\d+)次</color>\(上限(\d+)\)$"="Increase Thieves Usage by <color\=#FFC000>$1</color>"
+r:"^试炼中挑战「监测点」需要消耗精神力及怪盗挑战次数。\n挑战开启后：每间隔(\d+)天增加。\n最终精力值上限：<color\=#FFC000>(\d+)</color>\n所有怪盗挑战次数上限：<color\=#FFC000>(\d+)</color>$"="<size\=26>Each [Monitoring Points] spends Mental Energy and Thieves Usage. \nIncrease both every $1d.\nMental Energy cap: <color\=#FFC000>$2</color>\nThieves Usage cap: <color\=#FFC000>$3</color></size>"
+r:"^试炼中挑战「监测点」需要消耗精神力及怪盗挑战次数。\n在每期挑战开启后：\n间隔(\d+)天增加，共增加(\d+)次。\n最终精力值上限：<color\=#FFC000>(\d+)</color>\n所有怪盗挑战次数上限：<color\=#FFC000>(\d+)</color>$"="<size\=25>Each [Monitoring Points] spends Mental Energy and Thieves Usage. \nIncrease every $1d, up to $2 times.\nMental Energy cap: <color\=#FFC000>$3</color>\nThieves Usage cap: <color\=#FFC000>$4</color></size>"
+r:"^试炼中挑战「监测点」需要消耗精神力及怪盗挑战次数。\n挑战开启后：一次性开放。\n可消耗精力值：<color\=#FFC000>(\d+)</color>\n怪盗可挑战次数：<color\=#FFC000>(\d+)</color>$"="<size\=25>Each [Monitoring Points] spends Mental Energy and Thieves Usage.\nMental Energy cap: <color\=#FFC000>$1</color>\nThieves Usage cap: <color\=#FFC000>$2</color></size>"
+
+建议：<color\=#ffc000>优先挑战主线路</color>\n（挑战难度较低，且奖励更为丰厚。）\n「YES」将继续挑战当前支线监测点，\n是否确认？=Challenge this Monitoring Point?\nRecommendation: \n<color\=#ffc000>Prioritize the main path first</color>\n<size\=24>(Lower difficulty with more generous rewards)</size>
+
+r:"^磁场资讯：$"="Modifier:"
+r:"^阴影资讯：$"="Shadows:"
+r:"^挑战阵容：$"="Team:"
+r:"^已挑战(\d+)次$"="Attempt(s): $1"
+r:"^挑战奖励：$"="Rewards:"
+阵容参考=Reference
+r:"^采用比例：(\d+(.\d+)?(%)?)$"="Use Rate: $1"
+已成功采用阵容=Used Party
+r:"^需至少设置(\d+)名出战怪盗，才能进行挑战。$"="Need to have at least $1 Thieves in order to challenge."
+没有更多使用次数，无法设置参战。=No more Thieves Usage.
+
+In game escape
+r:"^将<color\=#ffc000>返还</color>消耗的<color\=#ffc000>精神力</color>及<color\=#ffc000>参与次数</color>；\n并<color\=#ff3b37>放弃</color>本次<color\=#ff3b37>挑战结果</color>。\n是否确认？$"="<size\=31><color\=#ffc000>Return</color> spent <color\=#ffc000>Mental Energy</color> and <color\=#ffc000>Thieves Usage</color>;\n<color\=#ff3b37>Abandon</color> this <color\=#ff3b37>challenge results</color>.\nAre you sure?</size>"
+
+In game reset
+将放弃挑战进度，并重新开启挑战。\n<color\=#ffc000>不会额外消耗</color>精神力及参与次数。\n是否确认【再次尝试】？=Retry this battle? <color\=#ffc000>This will not spend</color> Mental Energy and Thieves Usage.
+
+Reset in progress node
+r:"^将<color\=#ffc000>全部返还</color>消耗的<color\=#ffc000>精神力</color>及<color\=#ffc000>参与次数</color>；\n并<color\=#ff3b37>放弃</color>监测点<color\=#ff3b37>挑战进度</color>。是否确认？$"="<size\=28><color\=#ffc000>Return all</color> spent <color\=#ffc000>Mental Energy</color> and <color\=#ffc000>Thieves Usage</color>;\n<color\=#ff3b37>Reset this</color> Monitoring Points <color\=#ff3b37>Progress</color>. Are you sure?</size>"
+
+Reset 1 node
+r:"^将<color\=#ffc000>全部返还</color>消耗的<color\=#ffc000>精神力</color>及<color\=#ffc000>参与次数</color>；\n监测点<color\=#ff3b37>重新占据</color>后，才能挑战新监测点。\n是否确认？$"="<size\=28><color\=#ffc000>Return all</color> spent <color\=#ffc000>Mental Energy</color> and <color\=#ffc000>Thieves Usage</color>;\nYou can only challenge new Monitoring Points after <color\=#ff3b37>clearing this again</color>. Are you sure?</size>"
+
+Reset all nodes
+r:"^将<color\=#ff3b37>放弃</color>本期<color\=#ff3b37>所有监测点</color>挑战进度，\n<color\=#ffc000>全部返还</color>消耗的<color\=#ffc000>精神力</color>及<color\=#ffc000>参与次数</color>，\n监测点<color\=#ff3b37>全部重新占据</color>后，才能继续挑战，\n是否确认？$"="<size\=23><color\=#ff3b37>Reset all Monitoring Points</color>;\n<color\=#ffc000>Return all</color> spent <color\=#ffc000>Mental Energy</color> and <color\=#ffc000>Thieves Usage</color>;\nYou can only challenge new Monitoring Points after <color\=#ff3b37>clearing all again</color>.\nAre you sure?</size>"
+
+r:"^剩余回合:$"="<size\=1>.</size>  Turns Left:   <size\=1>.</size>"
+r:"^进攻时间限制为(\d+)回合，击败敌人或对敌人造成更多伤害$"="Defeat the enemies or deal higher damage within $1 turns"
+
+精神力不足，无法挑战。=Not enough Mental Energy.
+监测点重置成功。=Reset Monitoring Point.
+r:"^请<color\=#ff3b37>重新占据</color>已通过的监测点后，再来挑战吧。$"="Please <color\=#ff3b37>clear all prerequisite</color> Monitoring Points first."
+r:"^完成<color\=#ff0000>任意前置</color>监测点后解锁$"="Clear <color\=#ff0000>any prerequisite</color> \nMonitoring Point first"
+r:"^通过「<color\=#ff0000>监测点·(.*)</color>」后解锁$"="Unlock after clearing\n[<color\=#ff0000>Monitoring Point·$1</color>]"
+r:"^通过「<color\=#ff0000>监测点·(.*)、监测点·(.*)</color>」后解锁"="<size\=26>Unlock after clearing\n[<color\=#ff0000>Monitoring Point·$1,Monitoring Point·$2</color>]</size>"
+r:"^通过「<color\=#ff0000>监测点·(.*)</color>」\n通过<color\=#ff0000>(.*)个监测点</color>后解锁$"="Unlock after clearing\n[<color\=#ff0000>Monitoring Point·$1</color>]\n[<color\=#ff0000>$2 Monitoring Points</color>]"
+r:"^通过<color\=#ff0000>(\d+(.\d+)?(%)?)个监测点</color>后解锁$"="Unlock after clearing \n[<color\=#ff0000>$1 Monitoring Points</color>]"
+
+----------
+CHALLENGES
+----------
+通过监测点：=<size\=24>Monitoring Points Cleared:</size>
+消耗精神力：=<size\=24>Mental Energy Spent:</size>
+r:"^通过至少(\d+)个「监测点」\((\d)\/(\d)\)$"="Cleared at least $1 [Monitoring Points] ($2/$3)"
+r:"^通过至少(\d+)个「监测点·宫主星」\((\d)\/(\d)\)$"="Cleared at least $1 [Monitoring Point - House] ($2/$3)"
+r:"^通过至少(\d+)个「紫色·监测点」\((\d)\/(\d)\)$"="Cleared at least $1 [Monitoring Point·Purple] ($2/$3)"
+r:"^通过至少(\d+)个「紫色监测点」\((\d)\/(\d)\)$"="Cleared at least $1 [Monitoring Point·Purple] ($2/$3)"
+r:"^通过「监测点·命主星」\((\d)\/(\d)\)$"="Cleared [Monitoring Point - Chart Ruler] ($1/$2)"
+r:"^通过「红色·监测点」\((\d)\/(\d)\)$"="Cleared [Monitoring Point·Red] ($1/$2)"
+r:"^通过「红色监测点」\((\d)\/(\d)\)$"="Cleared [Monitoring Point·Red] ($1/$2)"
+sr:"^通过全部「监测点」\((.*)\/(.*)\)$"="Cleared all [Monitoring Points] ($1/$2)"
+r:"^仅消耗(\d+)点精力值，通过全部「监测点」\((\d)\/(\d)\)$"="Cleared all [Monitoring Points] by only spending $1 Mental Energy ($2/$3)"
+
+----------
+MODIFIERS
+----------
+r:"^主角磁场(.*)$"="Protagonist Magnetic Field $1"
+r:"^<color\=#FFFC40>WONDER</color>最终伤害提高(\d+(.\d+)?(%)?)$"="Increase <color\=#FFFC40>Wonder</color>'s Final DMG by $1"
+r:"^反抗磁场(.*)$"="Assassin Magnetic Field $1"
+r:"^<color\=#FFFC40>反抗</color>怪盗最终伤害提高(\d+(.\d+)?(%)?)$"="Increase <color\=#FFFC40>Assassin</color> Thieves' Final DMG by $1"
+r:"^<color\=#FFFC40>反抗</color>怪盗最终伤害提高(\d+%)，其他怪盗最终伤害降低(\d+%)$"="Increase the Final DMG of <color\=#FFFC40>Assassin</color> Thieves by $1, decrease the Final DMG of other Thieves by $2"
+r:"^支配磁场(.*)$"="Sweeper Magnetic Field $1"
+r:"^<color\=#FFFC40>支配</color>怪盗最终伤害提高(\d+(.\d+)?(%)?)$"="Increase <color\=#FFFC40>Sweeper</color> Thieves' Final DMG by $1"
+r:"^<color\=#FFFC40>支配</color>怪盗最终伤害提高(\d+%)，其他怪盗最终伤害降低(\d+%)$"="Increase the Final DMG of <color\=#FFFC40>Sweeper</color> Thieves by $1, decrease the Final DMG of other Thieves by $2"
+r:"^输出磁场(.*)$"="Damage Magnetic Field $1"
+r:"^队伍中编入(\d+)名及以上<color\=#FFFC40>反抗/支配</color>怪盗时，全体怪盗最终伤害提高(\d+%)$"="<size\=28>When there are $1 or more <color\=#FFFC40>Assassin/Sweeper</color> Thieves, increase Final DMG by $2</size>"
+r:"^反抗/支配怪盗暴击率提升(\d+%)，暴击效果降低(\d+%)，造成<color\=#FFFC40>暴击</color>时最终伤害提升(\d+%)$"="<size\=26>Increase the Crit Rate of Assassin/Sweeper Thieves by $1 and decrease their Crit DMG by $2; Increase <color\=#FFFC40>Critical</color> Final DMG by $3</size>"
+r:"^心之磁场(.*)$"="Hearts Magnetic Field $1"
+r:"^<color\=#ff381d>『{{A}}』</color>成员最终伤害提升(\d+(.\d+)?(%)?)$"="<size\=28>Increase <color\=#ff381d>[The Phantom Thieves of Hearts]</color>'s Final DMG by $1</size>"
+r:"^月之磁场(.*)$"="Moon Magnetic Field $1"
+r:"^<color\=#ff381d>『S.E.E.S.』</color>成员最终伤害提升(\d+(.\d+)?(%)?)$"="Increase <color\=#ff381d>[S.E.E.S.]</color> members' Final DMG by $1"
+
+r:"^属性磁场(.*)$"="Attribute Magnetic Field $1"
+r:"^<color\=#FF9C00>物理</color>/<color\=#FF9C00>射击</color>/<color\=#E3E3E3>万能</color>属性队员最终伤害提高(\d+(.\d+)?(%)?)$"="<size\=28>Increase <color\=#FF9C00>Physical</color>/<color\=#FF9C00>Gun</color>/<color\=#E3E3E3>Almighty</color> Thieves' Final DMG by $1</size>"
+r:"^<color\=#ff381d>火焰</color>/<color\=#00aeff>冰冻</color>/<color\=#fbff37>电击</color>/<color\=#81ea2c>疾风</color>属性队员最终伤害提高(\d+(.\d+)?(%)?)$"="Increase <color\=#ff381d>Fire</color>/<color\=#00aeff>Ice</color>/<color\=#fbff37>Elec</color>/<color\=#81ea2c>Wind</color> Thieves' Final DMG by $1"
+r:"^<color\=#ff63ff>念动</color>/<color\=#00fcff>核热</color>/<color\=#fffea0>祝福</color>/<color\=#ff0036>诅咒</color>属性队员最终伤害提高(\d+(.\d+)?(%)?)$"="<size\=28>Increase <color\=#ff63ff>Psy</color>/<color\=#00fcff>Nuke</color>/<color\=#fffea0>Bless</color>/<color\=#ff0036>Curse</color> Thieves' Final DMG by $1</size>"
+r:"^万能磁场(.*)$"="Almighty Magnetic Field $1"
+r:"^所有队员造成<color\=#FFFC40>万能伤害</color>时，使所有同伴最终伤害提升(\d+%)，持续(\d+)回合$"="<size\=28>When dealing <color\=#FFFC40>Almighty damage</color>, increase party's Final DMG by $1 for $2 turns</size>"
+r:"^同色磁场(.*)$"="Mono Magnetic Field $1"
+r:"^队伍中编入(\d+)/(\d+)/(\d+)名<color\=#FFFC40>相同属性</color>的怪盗时，全体怪盗最终伤害提高(\d+%)/(\d+%)/(\d+%)$"="When there are $1/$2/$3 Thieves with the <color\=#FFFC40>same attribute</color>, increase Final DMG by $4/$5/$6"
+
+r:"^刀枪磁场(.*)$"="Sword Gun Magnetic Field $1"
+r:"^所有怪盗使用<color\=#FFFC40>普通攻击/枪械攻击</color>时，最终伤害提高(\d+(.\d+)?(%)?)$"="<size\=28>Increase Final DMG by $1 when dealing damage with <color\=#FFFC40>Melee Attack/Gun Attack</color></size>"
+r:"^追加磁场(.*)$"="Follow Up Magnetic Field $1"
+r:"^所有队员造成<color\=#FFFC40>追加效果</color>时，最终伤害提高(\d+(.\d+)?(%)?)$"="<size\=28>Increase Final DMG by $1 when dealing damage with <color\=#FFFC40>Follow Up</color></size>"
+r:"^持续磁场(.*)$"="<size\=20>Damage Over Time Magnetic Field $1</size>"
+r:"^所有队员造成<color\=#FFFC40>持续伤害</color>时，最终伤害提高(\d+(.\d+)?(%)?)$"="<size\=28>Increase Final DMG by $1 when dealing damage with <color\=#FFFC40>Damage Over Time</color></size>"
+r:"^技巧磁场(.*)$"="TECHNICAL Magnetic Field $1"
+r:"^所有怪盗造成<color\=#FFFC40>TECHNICAL</color>时，最终伤害提高(\d+(.\d+)?(%)?)$"="<size\=28>Increase Final DMG by $1 when dealing damage with <color\=#FFFC40>TECHNICAL</color></size>"
+r:"^治疗磁场(.*)$"="Healing Magnetic Field $1"
+r:"^治愈磁场(.*)$"="Healing Magnetic Field $1"
+r:"^所有怪盗<color\=#FFFC40>受到追加治疗</color>后，最终伤害提升(\d+%)，持续(\d+)回合，可叠加(\d+)层$"="<size\=27>After receiving <color\=#FFFC40>Follow Up Healing</color>, increase Final DMG by $1 for $2 turns. Stacks up to $3 times</size>"
+r:"^护盾磁场(.*)$"="Shielding Magnetic Field $1"
+r:"^所有怪盗每次受到<color\=#FFFC40>护盾</color>后，最终伤害提升(\d+%)，持续(\d+)回合，可叠加(\d+)层$"="<size\=28>After gaining <color\=#FFFC40>Shield</color>, increase Final DMG by $1 for $2 turns. Stacks up to $3 times</size>"
+r:"^再动磁场(.*)$"="Extra Action Magnetic Field $1"
+r:"^所有怪盗处于<color\=#FFFC40>额外回合</color>时，最终伤害提高(\d+(.\d+)?(%)?)$"="<size\=28>Increase Final DMG by $1 on an <color\=#FFFC40>Extra Action</color>"
+r:"^元素磁场(.*)$"="Elemental Magnetic Field $1"
+r:"^所有敌人每有一种<color\=#FFFC40>元素异常</color>状态，受到最终伤害提升(\d+%)；同时拥有(\d+)种<color\=#FFFC40>元素异常</color>状态时，额外使受到最终伤害提升(\d+%)$"="<size\=22>Increase foes' Final DMG Taken by $1 for every <color\=#FFFC40>Elemental Ailment</color> they have; Increase their Final DMG Taken by $3 more when they have $2 <color\=#FFFC40>Elemental Ailments</color></size>"
+r:"^控制磁场(.*)$"="Control Magnetic Field $1"
+r:"^敌人能受到大部分<color\=#FFFC40>精神异常</color>状态；所有队员造成<color\=#FFFC40>精神异常</color>状态时，效果命中大幅提升；处于<color\=#FFFC40>精神异常</color>状态的敌人受到最终伤害提升(\d+%)$"="Foes are susceptible to most <color\=#FFFC40>Mental Ailments</color>; Heavily increase Ailment ACC when inflicting <color\=#FFFC40>Mental Ailments</color>; Increase Final DMG Taken for foes with <color\=#FFFC40>Mental Ailments</color> by $1"
+r:"^效果1：敌人能受到大部分<color\=#FFFC40>精神异常/控制</color>状态，所有队员造成<color\=#FFFC40>精神异常/控制</color>状态时，效果命中大幅提升\n效果2：处于<color\=#FFFC40>精神异常/控制</color>状态的敌人受到最终伤害提升(\d+(.\d+)?(%)?)$"="<size\=24>Effect 1: Foes are susceptible to most <color\=#FFFC40>Mental/Control Ailments</color>; \nHeavily increase Ailment ACC when inflicting <color\=#FFFC40>Mental/Control Ailments</color>\nEffect 2: Increase Final DMG Taken for foes with <color\=#FFFC40>Mental Ailments</color> by $1</size>"
+敌人能受到大部分<color\=#FFFC40>精神异常/控制</color>状态，所有队员造成<color\=#FFFC40>精神异常/控制</color>状态时，效果命中大幅提升=Foes are susceptible to most <color\=#FFFC40>Mental/Control Ailments</color>; Heavily increase Ailment ACC when inflicting <color\=#FFFC40>Mental/Control Ailments</color>
+r:"^处于<color\=#FFFC40>精神异常/控制</color>状态的敌人受到最终伤害提升(\d+%)$"="Increase the Final DMG Taken of foes with <color\=#FFFC40>Mental/Control Ailments</color> by $1</size>"
+r:"^倒地磁场(.*)$"="Down Magnetic Field $1"
+r:"^连携磁场(.*)$"="Link Magnetic Field $1"
+r:"^效果1：敌人受到<color\=#FFFC40>ONEMORE/{{A}}</color>伤害提高(\d+%)\n效果2：战斗开始及敌人回合开始时，敌人随机获得1种属性弱点（只会存在最新获得的弱点）$"="<size\=22>Effect 1: Increase foes' <color\=#FFFC40>ONE MORE/{{A}}</color> DMG Taken by $1\nEffect 2: At the start of battle and start of foes' turn, foes gain 1 random weakness\n(Only the newest weakness will stay)</size>"
+r:"^敌人受到<color\=#FFFC40>ONEMORE/{{A}}</color>伤害提高(\d+%)$"="Increase foes' <color\=#FFFC40>ONEM ORE/{{A}}</color> DMG Taken by $1"
+r:"^所有敌人处于<color\=#FFFC40>倒地状态</color>时，受最终伤害提升(\d+%)$"="Increase foes' Final DMG Taken by $1 when they are <color\=#FFFC40>Downed</color>"
+战斗开始及敌人回合开始时，敌人随机获得1种属性弱点（只会存在最新获得的弱点）=At the start of battle and start of foes' turn, foes randomly gain 1 weakness (Only the newest weakness will stay).
+r:"^坚忍磁场(.*)$"="Endure Magnetic Field $1"
+r:"^所有角色<color\=#FFFC40>当前生命值越低</color>，最终伤害越高，(\d+%)生命值时获得最大最终伤害加成(\d+%)$"="<size\=28>Increase Final DMG based on <color\=#FFFC40>missing HP</color>; Up to $2 Final DMG at $1 HP</size>"
+
+r:"^多重磁场(.*)$"="Multi Magnetic Field $1"
+r:"^所有敌人每受到(\d+)次来自怪盗的伤害，使该名怪盗最终伤害提升(\d+%)，持续(\d+)回合，可叠加(\d+)层$"="<size\=24>Each time a foe receives $1 hit of damage from a Thief, increase that Thief's Final DMG by $2 for $3 turns. Stacks up to $4 times.</size>"
+r:"^蓄力磁场(.*)$"="Charge Magnetic Field $1"
+r:"^所有队员在某回合结束至下一回合结束期间，未造成伤害时，使自身最终伤害提升(\d+%)，持续(\d+)回合$"="<size\=28>If a Thief did not deal damage for 1 turn, increase that Thief's Final DMG by $1 for $2 turn</size>"
+r:"^效果1：所有敌人最终生命值降低(\d+%)，每回合末回复(\d+%)最大生命值\n效果2：所有敌人当前生命值越低，受到最终伤害越高，低于(\d+%)生命值时最多使受到最终伤害提升(\d+%)$"="Modifier 1: Decrease the Final HP of foes by $1, restore $2 Max HP at the end of each turn\nModifier 2: Increase the Final DMG of foes the lower their HP are, up to $4 when they are below $3 HP"
+r:"^HL磁场(.*)$"="HIGHLIGHT Magnetic Field $1"
+r:"^HIGHLIGHT能量回复速度降低(\d+%)，所有怪盗HIGHLIGHT的最终伤害提高(\d+%)"="<size\=28>Decrease HIGHLIGHT Energy recovery rate by $1, increase all HIGHLIGHT Final DMG by $2</size>"
+r:"^HIGHLIGHT能量回复速度降低(\d+%)，所有怪盗<color\=#FFFC40>HIGHLIGHT</color>的最终伤害提高(\d+%)"="<size\=28>Increase <color\=#FFFC40>HIGHLIGHT</color> Final DMG by $2, decrease HIGHLIGHT Energy recovery rate by $1</size>"
+r:"^神通磁场(.*)$"="Theurgy Magnetic Field $1"
+r:"^所有角色使用<color\=#FFFC40>{{A}}</color>后，最终伤害提高(\d+%)，持续(\d+)回合$"="After using <color\=#FFFC40>{{A}}</color>, increase user's Final DMG by $1 for $2 turns"
+r:"^总攻磁场(.*)$"="All-Out Attack Magnetic Field $1"
+r:"^所有怪盗释放<color\=#FFFC40>{{A}}</color>时，最终伤害提高(\d+%)$"="<size\=28>Increase Final DMG by $1 when using <color\=#FFFC40>{{A}}</color></size>"
+
+r:"^威压磁场(.*)$"="Pressure Magnetic Field $1"
+r:"^首领每回合末使所有怪盗获得1层<color\=#FFFC40>『威压』</color>；『威压』被驱散后，使所有敌人获得1层『威压』。\n『威压』：受最终伤害提升(\d+%)，可叠加(\d+)层，持续(\d+)回合。$"="<size\=20>Boss will inflict Thieves with 1 <color\=#FFFC40>[Pressure]</color> stack at the end of each turn; When [Pressure] is dispelled, foes gain 1 [Pressure] stack\n[Pressure]: Increase Final DMG Taken by $1 for $3 turns. Stacks up to $2 times</size>"
+每回合末使所有怪盗获得1层「威压」=Inflict 1 [Pressure] at the end of each turn
+r:"^威<color\=#000000>压</color>$"="P<color\=#000000>r</color>essure"
+药品磁场=Item Magnetic Field
+r:"^所有角色<color\=#FFFC40>药品效果</color>提升(\d+%)，使用药品后，使除自身以外的所有同伴最终伤害提升(\d+%)，持续(\d+)回合$"="Increase <color\=#FFFC40>Item Effect</color> by $1. After using an item, increase all other allies' Final DMG by $2 for $3 turn"
+
+----------
+Combat Menu
+----------
+星盘庇护=Astrolabe Protection
+r:"^使用普通攻击、枪械攻击时最终伤害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1 \nwhen using Melee Attack/Gun Attack"
+r:"^造成TECHNICAL时，最终伤害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1 \nwhen dealing TECHNICAL"
+r:"^造成追加效果时，最终伤害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1 \nwhen activating Follow Up"
+r:"^释放{{A}}时最终伤害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG by $1 \nwhen using {{A}}"
+r:"^HL能量回复速度降低(\d+%)，使用HL时，最终伤害提高(\d+%)$"="<size\=24>Decrease HIGHLIGHT Energy recovery rate by $1;\nIncrease Final DMG by $2 when using HIGHLIGHT</size>"
+r:"^同时拥有(\d+)种元素异常，受到最终伤害提高(\d+%)$"="Inflicted with $1 Elemental Ailments; \nIncrease Final DMG Taken by $2"
+r:"^每有(\d+)种元素异常，受到最终伤害提高(\d+%)，当前(\d+%)$"="For every $1 Elemental Ailment, \nincrease Final DMG Taken by $2; \nCurrently increase Final DMG Taken by $3"
+r:"^受到ONEMORE/{{A}}伤害提升(\d+%)$"="Increase ONE MORE/{{A}} DMG Taken by $1"
+r:"^造成精神异常及控制状态时，效果命中大幅提升$"="Heavily increase Ailment ACC when inflicting\nMental Ailment and Control Effect"
+r:"^处于精神异常或控制状态，受到最终伤害提高(\d+(.\d+)?(%)?)$"="<size\=26>Increase Final DMG Taken by $1 \nwhen inflicted with Mental Ailment/Control Effect</size>"
+r:"^处于倒地状态，受到最终伤害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG Taken by $1\nwhen Downed"
+r:"^生命值越低，最终伤害加成越高，当前最终伤害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG based on missing HP; Currently increase Final DMG by $1"
+
+----------
+Pop-ups + Quote
+----------
+r:"^追<color\=#000000>加</color>磁场$"="F<color\=#000000>o</color>llow Up Magnetic Field"
+r:"^倒<color\=#000000>地</color>磁场$"="D<color\=#000000>o</color>wn Magnetic Field"
+r:"^再<color\=#000000>动</color>磁场$"="E<color\=#000000>x</color>tra Turn Magnetic Field"
+r:"^持<color\=#000000>续</color>磁场$"="D<color\=#000000>a</color>mage Over Time Magnetic Field"
+r:"^控<color\=#000000>制</color>磁场$"="C<color\=#000000>o</color>ntrol Magnetic Field"
+r:"^H<color\=#000000> L</color>磁场$"="H<color\=#000000>L</color> Magnetic Field"
+r:"^威<color\=#000000>压</color>磁场$"="P<color\=#000000>r</color>essure Magnetic Field"
+r:"^连<color\=#000000>携</color>磁场$"="L<color\=#000000>i</color>nk Magnetic Field"
+
+r:"^<color\=#FF0000>{{A}}</color>一回合内未造成伤害，下回合最终伤害提升……$"="<color\=#FF0000>{{A}}</color> dealt no damage, \nnext turn Final DMG Up!"
+sr:"^<color\=#FF0000>(.*)</color>获得了(.*)弱点……$"="<color\=#FF0000>$1</color> gained $2 Weakness!"

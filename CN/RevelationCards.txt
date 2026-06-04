@@ -1,0 +1,504 @@
+----------
+MENU UI
+----------
+启示卡=Revelation Card
+启示星位：=Mark:
+r:"^日$"="<size\=25>Sun</size>"
+r:"^月$"="<size\=25>Moon</size>"
+r:"^星$"="<size\=25>Star</size>"
+r:"^辰$"="<size\=25>Planet</size>"
+sr:"^(.*)·日$"="$1·Sun"
+sr:"^(.*)·月$"="$1·Moon"
+sr:"^(.*)·星$"="$1·Star"
+sr:"^(.*)·辰$"="$1·Sky"
+暂未启动套装效果=No effect
+暂未获得该位置启示卡=No card
+装备同类型启示卡，启动套装=Equip same set for bonus
+
+套装效果=Set Effect
+日月星辰=Basic
+当前消耗数量:=Cost:
+当前可获数量:=Claimable:
+sr:"^每消耗<color\=#FFDE00>(\d+)</color>张<color\=#FFDE00>宙</color>位置橙色启示，可熔炼1张套装为<color\=#FFDE00>「(.*)」</color>随机启示$"="Every <color\=#FFDE00>$1</color> spent <color\=#FFDE00>Space</color> cards can inscribe 1 <color\=#FFDE00>[$2]</color> card"
+sr:"^是否确定消耗<color\=#FFDE00>(.*)</color>张启示，熔炼<color\=#FFDE00>(.*)</color>张套装为<color\=#FFDE00>(.*)</color>的启示？$"="Spend <color\=#FFDE00>$1</color> cards to gain <color\=#FFDE00>$2</color> <color\=#FFDE00>$3</color>?"
+sr:"^每消耗<color\=#FFDE00>(\d+)</color>张<color\=#FFDE00>日月星辰</color>位置橙色启示，可熔炼1张套装为<color\=#FFDE00>「(.*)」</color>随机启示$"="Every <color\=#FFDE00>$1</color> spent <color\=#FFDE00>Sun, Moon, Star, Planet</color> cards can inscribe 1 <color\=#FFDE00>[$2]</color> card"
+r:"^获得(\d+)张启示卡$"="Gained $1 Revelation"
+
+请选择主属性=Main Stat
+点击添加副属性=Click to add Substats
+r:"^持有数量:(\d+)$"="Owned: $1"
+属性选择=Select
+选定的副属性，需要生成属性值才能定制。=Need to generate selected Substats before customizing.
+副属性生成=Generate Substats
+请确认是否生成副属性=Please confirm the following Substats
+启示卡主属性=Main Stats
+启示卡副属性=Substats
+r:"^<color\=#FFDE00>{{A}}×(\d+)</color>$"="<color\=#FFDE00>{{A}}×$1</color>"
+选定内容生成后将无法更改。=Cannot change the selected contents after generation.
+定制确认=Confirm Customization
+请确认是否定制该启示卡=Please confirm the following Revelation Card
+选定副属性均为最大值。=Selected Substats are at max stats.
+
+sr:"^是否确认定制一张<color\=#f1b500>(.*)</color>位置，<color\=#f1b500>(.*)</color>套装，主属性为<color\=#f1b500>(.*)</color>的启示卡？$"="Make 1 <color\=#f1b500>$2</color> <color\=#f1b500>$3</color> Revelation Card?"
+sr:"^当前定制启示卡限定：\n套装：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主属性：<color\=#FFDE00>(.*)</color>\n<color\=#ff3b37>尚未选定副属性。</color>\n是否消耗<color\=#FFDE00>(.*)×(\d+)</color>进行定制？$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\n<color\=#ff3b37>No selected Substats.</color>\nSpend <color\=#FFDE00>$4 ×$5</color> to customize?"
+sr:"^当前定制启示卡限定：\n套装：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主属性：<color\=#FFDE00>(.*)</color>\n副属性：<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>\n是否确认生成副属性？\n<color\=#ff3b37>生成后限定套装、位置、属性类型将无法更改。</color>$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\nSubstats: <color\=#FFDE00>$4</color>, <color\=#FFDE00>$5</color>, <color\=#FFDE00>$6</color>, <color\=#FFDE00>$7</color>\nGenerate these Substats?\n<color\=#ff3b37>Cannot change Main Stat and Substats after generation.</color>"
+sr:"^当前定制启示卡限定：\n套装：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主属性：<color\=#FFDE00>(.*)</color>\n副属性：<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>\n<color\=#FFDE00>选定副属性均为最大值。</color>\n是否消耗<color\=#FFDE00>(.*)×(\d+)</color>、<color\=#FFDE00>(.*)×(\d+)</color>进行定制？$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\nSubstats: <color\=#FFDE00>$4</color>, <color\=#FFDE00>$5</color>, <color\=#FFDE00>$6</color>, <color\=#FFDE00>$7</color>\n<color\=#FFDE00>Selected Substats are at max stats.</color>\nSpend <color\=#FFDE00>$8 ×$9</color>, <color\=#FFDE00>$10 ×$11</color> to customize?"
+sr:"^当前定制启示卡限定：\n套装：<color\=#FFDE00>(.*)</color>、位置：<color\=#FFDE00>(.*)</color>、主属性：<color\=#FFDE00>(.*)</color>\n副属性：<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>、<color\=#FFDE00>(.*)</color>\n<color\=#FFDE00>选定副属性均为最大值。</color>\n是否消耗<color\=#FFDE00>(.*)×(\d+)</color>进行定制？$"="Current custom Revelation:\nSet: <color\=#FFDE00>$1</color>, Main Stats: <color\=#FFDE00>$3</color>\nSubstats: <color\=#FFDE00>$4</color>, <color\=#FFDE00>$5</color>, <color\=#FFDE00>$6</color>, <color\=#FFDE00>$7</color>\n<color\=#FFDE00>Selected Substats are at max stats.</color>\nSpend <color\=#FFDE00>$8 ×$9</color> to customize?"
+未选择主属性，无法定制。=No selected Main Stat, cannot customize.
+r:"^最多选择(\d+)条主属性。$"="Select up to $1 Main Stat."
+
+<color\=#FFDE00>暂未开放宙卡定制</color>=<color\=#FFDE00>Custom Space card is not yet available</color>
+暂未开放宙卡定制。=Custom Space card is not yet available.
+
+推荐套装=<size\=30>Recommendations</size>
+是否要将所有启示卡卸下。=Unequip all cards?
+r:"^该武器(.*)正在穿戴，要继续替换吗？$"="This is being equipped by another character, want to equip it?"
+r:"^该启示(.*)·(.*)正在穿戴，要继续替换吗？$"="This is being equipped by another character, want to equip it?"
+
+橙色=<size\=20>Orange</size>
+紫色=<size\=20>Purple</size>
+蓝色=<size\=20>Blue</size>
+白色=<size\=20>White</size>
+橙色力量启示=Orange Strength Revelation
+
+绝世=4★
+罕见=3★
+稀有=2★
+寻常=1★
+
+套装=Set
+套装筛选=Filter
+获取顺序=Order Obtained
+
+点击修改启示筛选=Change Selected Filter
+最多可选择2条主属性=Up to two
+最多可选择4条副属性=Up to four
+是否重置当前选择？=Reset the current selection?
+最多勾选两条主属性=Check up to two main stats
+
+暂无套装筛选=No Set Filter
+暂无主属性筛选=No Main Stats Filter
+暂无副属性筛选=No Substats Filter
+
+属性筛选=Filter
+主属性最多选择以下任意两项属性进行筛选，选择后同时生效=Filter up to 2 Main Stats
+副属性最多选择以下任意四项属性进行筛选，选择后同时生效=Filter up to 4 Substats
+
+r:"^新增(\d+)条副属性$"="<size\=10> </size>Add $1 new Substats"
+r:"^随机强化(\d+)条副属性$"="<size\=10> </size>Upgrade $1 Substats"
+所选素材<color\=#FFC000>已强化过</color>、<color\=#FFC000>品质过高</color>\n是否确定使用所选素材进行升级？=<size\=30>Selected <color\=#FFC000>upgraded</color>, <color\=#FFC000>high quality</color> materials.\nUse the selected materials for upgrade?</size>
+该启示卡已强化到满级！=Revelation maxed!
+r:"^最多可以选择(\d+)个材料哦～$"="Can select up to $1 materials."
+
+当前方案=Current Preset
+r:"^预设方案(\d+)$"="Preset $1"
+r:"^新增方案\（(\d+)/(\d+)\）$"="Add New ($1/$2)"
+r:"^是否使用预设方案(.*)替换当前使用的启示？$"="Switch to this preset?"
+正在使用该方案。=Already in use.
+该方案有变化，是否要直接退出？=Leave without saving?
+预设名称已存在，请修改后再保存。=Name already exists.
+装备成功。=Equip success.
+卸下成功。=Unequip success.
+已将启示锁定。=Locked Revelation.
+当前卡已锁定。=Locked Revelation.
+已将启示标记为「弃置」。=Marked Revelation for [Discard].
+预设内有部分启示正在被其他角色使用，是否确认继续使用？=Some cards are being used by other characters, continue?
+确认后将自动卸下其他角色正在使用的启示=Automatically unequip all used cards on other characters
+r:"^是否删除预设方案(.*)？$"="Delete this preset?"
+
+查看「<color\=#ff3b37>启示建议</color>」=View [<color\=#ff3b37>Recommendations</color>]
+词条协助工具=<size\=22>Stats Assist Tool</size>
+主词条不合适\n=Wrong main
+主词条不合适=Wrong main
+合适的副词条数=Useful subs
+适配副词条数=Useful subs
+启示建议=Recommendations
+启示详情=Details
+<color\=#FDD600>四件套</color>效果启动=Active <color\=#FDD600>4 set</color> effect 
+<color\=#FDD600>协调</color>效果启动=Active <color\=#FDD600>Space card</color> effect
+当前4件套效果<color\=#FFDE00>未启动</color>。\n推荐调整「日月星辰」启动套装效果。=No <color\=#FFDE00>active</color> 4 set effect.
+当前<color\=#FFDE00>未佩戴</color>宙卡。\n宙卡协调效果未启动。=No <color\=#FFDE00>equipped</color> Space card.
+主词条佩戴建议：=Recommended main stats:
+推荐副词条情况=Recommended substats
+携带推荐副词条情况：=Equipped recommended substats:
+总有效副词条数=Total useful substats
+总有效副词条数=Total useful substats
+「生命值百分比」副词条数=[HP%] substats amount
+「生命值」副词条数=[HP] substats amount
+「攻击力百分比」副词条数=[ATK%] substats amount
+「攻击力」副词条数=[ATK] substats amount
+「防御力百分比」副词条数=[DEF%] substats amount
+「防御力」副词条数=[DEF] substats amount
+「速度」副词条数=[SPD] substats amount
+「暴击率」副词条数=[Crit Rate] substats amount
+「暴击效果」副词条数=[Crit DMG] substats amount
+「精力回复」副词条数=[SP Recovery] substats amount
+「穿透」副词条数=[Pierce] substats amount
+「效果命中」副词条数=[Ailment ACC] substats amount
+「伤害加成」副词条数=[DMG Bonus] substats amount
+
+sr:"^<color\=#E0DDBE>(.*)</color> 位置：宙\n推荐副词条：<color\=#FFDE00>(.*)</color>。$"="Mark: Space\nRecommended substats: <color\=#FFDE00>$2</color>."
+sr:"^<color\=#E0DDBE>(.*)</color> 位置：日\n推荐副词条：<color\=#FFDE00>(.*)</color>。$"="Mark: Sun\nRecommended substats: <color\=#FFDE00>$2</color>."
+sr:"^<color\=#E0DDBE>(.*)</color> 位置：月\n推荐主词条：<color\=#FFDE00>(.*)</color>。\n推荐副词条：<color\=#FFDE00>(.*)</color>。$"="Mark: Moon\nRecommended main stat: <color\=#FFDE00>$2</color>.\nRecommended substats: <color\=#FFDE00>$3</color>."
+sr:"^<color\=#E0DDBE>(.*)</color> 位置：星\n推荐主词条：<color\=#FFDE00>(.*)</color>。\n推荐副词条：<color\=#FFDE00>(.*)</color>。$"="Mark: Star\nRecommended main stat: <color\=#FFDE00>$2</color>.\nRecommended substats: <color\=#FFDE00>$3</color>."
+sr:"^<color\=#E0DDBE>(.*)</color> 位置：辰\n推荐主词条：<color\=#FFDE00>(.*)</color>。\n推荐副词条：<color\=#FFDE00>(.*)</color>。$"="Mark: Sky\nRecommended main stat: <color\=#FFDE00>$2</color>.\nRecommended substats: <color\=#FFDE00>$3</color>."
+
+生命值百分比/防御力百分比=HP%/DEF%
+生命值百分比/速度/生命值=HP%/SPD/HP
+生命值百分比/速度/精力回复=HP%/SPD/SP Recovery
+生命值百分比/速度/效果命中/伤害加成=HP%/SPD/Ailment ACC/DMG Bonus
+攻击力百分比/速度/攻击力=ATK%/SPD/ATK
+攻击力百分比/暴击率/暴击效果=ATK%/Crit Rate/Crit DMG
+攻击力百分比/暴击效果/暴击率/穿透/伤害加成=ATK%/Crit DMG/Crit Rate/Pierce/DMG Bonus
+攻击力百分比/暴击率/暴击效果/速度/精力回复=ATK%/Crit Rate/Crit DMG/SPD/SP Recovery
+攻击力百分比/生命值百分比/效果命中/精力回复=ATK%/HP%/Ailment ACC/SP Recovery
+防御力百分比/速度/防御力=DEF%/SPD/DEF
+防御力百分比/暴击效果/暴击率/穿透/伤害加成=DEF%/Crit DMG/Crit Rate/Pierce/DMG Bonus
+速度/攻击力百分比/暴击率/暴击效果=SPD/ATK%/Crit Rate/Crit DMG
+速度/攻击力百分比/暴击率/暴击效果/效果命中=SPD/ATK%/Crit Rate/Crit DMG/Ailment ACC
+暴击率/攻击力百分比/精力回复=Crit Rate/ATK%/SP Recovery
+暴击效果/暴击率=Crit DMG/Crit Rate
+暴击效果/精力回复/速度=Crit DMG/SP Recovery/SPD
+暴击效果/生命值百分比/速度=Crit DMG/HP%/SPD
+暴击效果/攻击力百分比/暴击率/穿透/伤害加成=Crit DMG/ATK%/Crit Rate/Pierce/DMG Bonus
+暴击效果/伤害加成/攻击力百分比/穿透/暴击率=Crit DMG/DMG Bonus/ATK%/Pierce/Crit DMG
+暴击效果/暴击率/穿透/伤害加成/攻击力百分比=Crit DMG/Crit Rate/Pierce/DMG Bonus/ATK%
+暴击效果/暴击率/穿透/伤害加成/防御力百分比=Crit DMG/Crit Rate/Pierce/DMG Bonus/DEF%
+暴击效果/伤害加成/攻击力百分比/暴击率/速度=Crit DMG/DMG Bonus/ATK%/Crit Rate/SPD
+暴击效果/暴击率/穿透/伤害加成/精力回复/攻击力百分比=Crit DMG/Crit Rate/Pierce/DMG Bonus/SP Recovery/ATK%
+穿透/攻击力百分比/伤害加成=Pierce/ATK%/DMG Bonus
+效果命中/攻击力百分比/速度=Ailment ACC/ATK%/SPD
+效果命中/暴击效果/暴击率/穿透/伤害加成/攻击力百分比=Ailment ACC/Crit DMG/Crit Rate/Pierce/DMG Bonus/ATK%
+效果命中/暴击效果/暴击率/攻击力百分比/伤害加成=Ailment ACC/Crit DMG/Crit Rate/ATK%/DMG Bonus
+治疗效果/生命值百分比=Healing Effect/HP%
+
+宇宙的终响·断章=Space Echo Fragment
+熔炼数量=Inscription Amount
+熔炼消耗=Inscription Cost
+已拥有：=Owned:
+确认熔炼=Confirm Inscription
+r:"^确认消耗以下物品合成随机属性<color\=#FFDE00>(.*)x(\d+)</color>吗？$"="Please confirm the following Inscription"
+当前道具不足。=Insufficient items.
+
+分解预览=Dismantle preview
+在已弃置的启示卡中选择：=Select from discard reminder cards:
+已弃置卡牌=<size\=20>Discarded cards</size>
+在未弃置的启示卡中选择：=Select from non-discarded reminder cards:
+分解可得=Dismantle to gain
+橙卡分解为：=Dismantle orange cards into:
+熔炼材料=Inscription Materials
+经验材料=EXP Materials
+暂无分解可获得的材料=No materials available
+r:"^将分解以下<color\=#FFDE00>(\d+)张</color>启示转化为分解材料$"="Dismantle <color\=#FFDE00>$1</color> cards into materials"
+分解的启示卡将无法恢复！=Cannot recover dismantled cards!
+请至少选择1张启示卡。=Please select at least 1 Revelation Card.
+
+----------
+All Space Cards
+----------
+sr:"^【(.*)】&【(.*)】$"="<size\=20>  [$1] & [$2]</size>"
+【专注】&【爱】=<size\=20>  [Meditation] & [Love]</size>
+【信念】&【爱】=<size\=20>  [Faith] & [Love]</size>
+【接纳】&【爱】=<size\=20>  [Acceptance] & [Love]</size>
+
+【觉知】=[Awareness]
+觉知=Awareness
+r:"^对处于元素异常状态下的敌人造成伤害提升<color\=#2899ff>(\d+%)</color>，可以叠加2层。$"="Increase DMG Dealt by <color\=#2899ff>$1</color> when attacking foes inflicted with Elemental Ailment, up to 2 stacks."
+r:"^提升所有怪盗火焰伤害<color\=#2899ff>(\d+%)</color>；造成燃烧时额外提升所有怪盗火焰伤害<color\=#2899ff>(\d+%)</color>，持续2回合。$"="Increase all allies' Fire DMG by <color\=#2899ff>$1</color>; Increase all allies' Fire DMG by <color\=#2899ff>$2</color> for 2 turns when user inflicts Burn."
+r:"^对处于负面状态下敌人造成每段伤害时提升自身攻击力<color\=#2899ff>(\d+%)</color>，持续1回合，可叠加3层。$"="Increase ATK by <color\=#2899ff>$1</color> after every hit of damage to foe with debuff for 1 turn, up to 3 stacks."
+
+【启程】=[Departure]
+启程=Departure
+r:"^使用技能攻击敌人时使主目标防御降低<color\=#2899ff>(\d+%)</color>，持续2回合。$"="Decrease main target's DEF by <color\=#2899ff>$1</color> for 2 turns after attacking them with a skill."
+r:"^攻击敌人时，使所有怪盗伤害提升<color\=#2899ff>(\d+%)</color>，持续1回合。$"="Increase all allies' DMG Dealt by <color\=#2899ff>$1</color> for 1 turn when attacking foes."
+r:"^击败敌人后使自身攻击力提升<color\=#2899ff>(\d+%)</color>，持续3回合。$"="Increase ATK by <color\=#2899ff>$1</color> for 3 turns after defeating a foe."
+
+【成长】=[Growth]
+成长=Growth
+r:"^追加效果触发时，自身获得冰冻伤害加成提升<color\=#2899ff>(\d+%)</color>，持续(\d+)回合，可叠加(\d+)层，每层独立计算。$"="When activating a Follow Up, increase user's Ice DMG Bonus by <color\=#2899ff>$1</color> for $2 turns. Stacks up to $3 times, and stacks are spent separately."
+r:"^追加效果的暴击效果提升<color\=#2899ff>(\d+%)</color>。$"="Increase Follow Up Crit DMG by <color\=#2899ff>$1</color>."
+r:"^攻击力提升效果叠加上限提升至<color\=#2899ff>(\d+)</color>层。$"="Increase the cap of the ATK buff up to <color\=#2899ff>$1</color> stacks."
+
+【专注】=[Meditation]
+专注=Meditation
+r:"^物理、电击属性伤害提升<color\=#2899ff>(\d+%)</color>，只有一个敌人时该效果提升至<color\=#2899ff>(\d+%)</color>。$"="Increase Phys and Elec DMG by <color\=#2899ff>$1</color>. Increase the effect to <color\=#2899ff>$2</color> when there's only 1 foe."
+r:"^造成暴击时自身治疗效果提升<color\=#2899ff>(\d+%)</color>，持续2回合。$"="Increase Healing Effect by <color\=#2899ff>$1</color> for 2 turns after landing a CRIT."
+
+【信念】=[Faith]
+信念=Faith
+r:"^每次添加护盾，受到护盾效果的怪盗防御力提升<color\=#2899ff>(\d+%)</color>，持续(\d+)回合，可叠加(\d+)层。$"="Each time a Shield is granted, increase target's DEF by <color\=#2899ff>$1</color> for $2 turns. Stacks up to $3 times."
+r:"^每有<color\=#2899ff>(\d+)</color>点生命值提升自身治疗效果<color\=#2899ff>(\d+%)</color>，最多获得治疗效果提升<color\=#2899ff>(\d+%)</color>。$"="For every <color\=#2899ff>$1</color> HP, increase user's Healing Effect by <color\=#2899ff>$2</color>, up to <color\=#2899ff>$3</color>."
+r:"^所有怪盗对处于<link\="s\|232"><u>TECH异常</u></link>状态下的敌人造成伤害提升<color\=#2899ff>(\d+%)</color>，无法重复触发。$"="Increase all Thieves' DMG Dealt to foes with <link\="s|232"><u>TECHNICAL Ailment</u></link> by <color\=#2899ff>$1</color>. This effect won't activate if stacked."
+<color\=#66ccff>TECH异常</color>=<color\=#66ccff>TECHNICAL Ailment</color>
+透过TECHNICAL触发的异常状态，包括『冰灼』、『冰封』等。=The status ailments from triggering TECHNICAL, include [Ice Burn], [Ice Seal], etc.
+
+【信任】=[Trust]
+信任=Trust
+r:"^电击属性伤害提升效果达到3层时，使得所有怪盗电击属性伤害提升<color\=#2899ff>(\d+%)</color>，无法重复触发。$"="Increase all allies' Elec DMG by <color\=#2899ff>$1</color> when the Elec DMG buff effect reached 3 stacks. This effect won't activate if stacked."
+r:"^战斗开始时，提升其他怪盗<color\=#2899ff>(\d+%)</color>的攻击力，无法重复触发。$"="At the start of battle, increase other allies' ATK by <color\=#2899ff>$1</color>. This effect won't activate if stacked."
+r:"^对友方释放技能时，使所有怪盗的伤害提升<color\=#2899ff>(\d+%)</color>，持续2回合。$"="Increase all allies' DMG Dealt by <color\=#2899ff>$1</color> for 2 turns when using a skill on an ally."
+
+【和谐】=[Harmony]
+和谐=Harmony
+r:"^触发启示卡套装效果的额外伤害时，使目标受到伤害提升<color\=#2899ff>(\d+%)</color>，持续2回合。$"="Increase the target's DMG Taken by <color\=#2899ff>$1</color> for 2 turns when triggering the effect of the Revelation card's buff."
+r:"^使得相同属性的怪盗获得伤害加成<color\=#2899ff>(\d+%)</color>，无法重复触发。$"="Increase DMG Bonus by <color\=#2899ff>$1</color> for all allies with the same element. This effect won't activate if stacked."
+r:"^每次造成一种元素异常，提升所有怪盗核热伤害<color\=#2899ff>(\d+%)</color>，持续2回合，每层独立计算。$"="Increase all allies' Nuke DMG by <color\=#2899ff>$1</color> for 2 turns when inflicting Elemental Ailment. Stacks are spent separately."
+
+【接纳】=[Acceptance]
+接纳=Acceptance
+r:"^每次受到攻击，提升自身防御力<color\=#2899ff>(\d+%)</color>，持续2回合。$"="Increase DEF by <color\=#2899ff>$1</color> for 2 turns when attacked."
+r:"^每有一个敌人增加自身攻击力<color\=#2899ff>(\d+%)</color>，最多<color\=#2899ff>(\d+%)</color>。$"="Increase ATK by <color\=#2899ff>$1</color> per foe, up to <color\=#2899ff>$2</color>."
+r:"^使用治疗技能时，自身攻击力提升<color\=#2899ff>(\d+%)</color>。$"="Increase ATK by <color\=#2899ff>$1</color> when using Healing skills."
+
+【真诚】=[Integrity]
+真诚=Integrity
+r:"^使用{{A}}后，使所有同伴造成伤害提升(\d+%)，持续(\d+)回合。$"="After using {{A}}, increase all allies' DMG Dealt by $1 for $2 turns."
+r:"^使用{{A}}后，使所有同伴造成伤害提升<color\=#2899ff>(\d+%)</color>，持续(\d+)回合。$"="After using {{A}}, increase all allies' DMG Dealt by <color\=#2899ff>$1</color> for $2 turns."
+r:"^战斗中，根据角色的治疗加成的(\d+%)获得伤害加成，透过这种方式最多提升<color\=#2899ff>(\d+%)</color>伤害加成。$"="Increase DMG Bonus up to <color\=#2899ff>$2</color> based on $1 of your Healing Bonus."
+r:"^解明怪盗装备时生效：战斗开始时每有1个相同适应性属性的同伴，使所有同伴生命值、攻击力、防御力额外提升<color\=#2899ff>(\d+%)</color>。$"="When equipped by Elucidator Thieves: At the start of battle, for each ally with a matching attribute, increase party's HP, ATK and DEF by <color\=#2899ff>$1</color> more."
+
+【智慧】=[Wisdom]
+智慧=Wisdom
+r:"^『怨恨』不少于5层，则物理伤害、效果命中提升<color\=#2899ff>(\d+%)</color>。$"="Increase Phys DMG and Ailment ACC by <color\=#2899ff>$1</color> when [Resentment] is not less than 5 stacks."
+r:"^战斗中，根据角色的效果命中的(\d+%)获得伤害加成，透过这种方式最多提升<color\=#2899ff>(\d+%)</color>伤害加成。$"="Increase DMG Bonus up to <color\=#2899ff>$2</color> based on $1 of user's Ailment ACC."
+r:"^使用HIGHLIGHT时，攻击力提升<color\=#2899ff>(\d+%)</color>，造成伤害提升<color\=#2899ff>(\d+%)</color>。$"="When using a HIGHLIGHT, increase ATK by <color\=#2899ff>$1</color> and DMG Dealt by <color\=#2899ff>$2</color>."
+
+【决心】=[Resolve]
+决心=Resolve
+r:"^战斗开始时，若自身处于己方行动伫列的第3/4位，则攻击力提升<color\=#2899ff>(\d+%)/(\d+%)</color>。$"="At the start of battle, if user is at 3rd/4th turn order, increase ATK by <color\=#2899ff>$1/$2</color>."
+r:"^战斗中，自身生命值达到(\d+)/(\d+)/(\d+)获得伤害加成<color\=#2899ff>(\d+%)/(\d+%)/(\d+%)</color>。$"="During battle, when user reached $1/$2/$3 HP, increase DMG Bonus by <color\=#2899ff>$4/$5/$6</color>."
+r:"^解明怪盗装备时生效：使用技能为敌人添加减益状态，使主目标敌人防御降低<color\=#2899ff>(\d+%)</color>，持续2回合。$"="When equipped by Elucidator Thieves: Decrease the main target's DEF by <color\=#2899ff>$1</color> for 2 turns when inflicting debuff."
+
+【创造】=[Creation]
+创造=Creation
+战斗中，自身精力回复达到100%/150%/200%，获得暴击效果提升<color\=#2899ff>15%/30%/45%</color>。=During battle, when user reaches 100%/150%/200% SP Recovery, increase Crit DMG by <color\=#2899ff>15%/30%/45%</color>.
+r:"^战斗开始时，使速度最低的怪盗造成伤害提升<color\=#2899ff>(\d+%)</color>，无法重复触发。$"="At the start of a battle, increase the DMG Dealt of the lowest SPD Thief by <color\=#2899ff>$1</color>. This effect won't activate if stacked."
+r:"^使用{{A}}时，攻击力提升<color\=#2899ff>(\d+%)</color>，造成伤害提升<color\=#2899ff>(\d+%)</color>。$"="When using a {{A}}, increase ATK by <color\=#2899ff>$1</color> and DMG Dealt by <color\=#2899ff>$2</color>."
+
+【自由】=[Freedom]
+自由=Freedom
+r:"^使用{{A}}技能时，自身获得(\d+)层『荣耀』，最多(\d+)层，下一次追加效果消耗所有『荣耀』，每消耗(\d+)层『荣耀』使该次追加效果穿透提升<color\=#2899ff>(\d+%)</color>。$"="When using a persona skill, gain $1 stack of [Glory], up to $2 stacks, consume all stacks of [Glory] when doing a Follow Up, each consumed stack of [Glory] increase that Follow Up's Pierce by <color\=#2899ff>$4</color>."
+r:"^所有怪盗对处于负面状态下的敌人造成伤害提升<color\=#2899ff>(\d+%)</color>，无法重复触发。$"="Increase all allies' DMG Dealt to foes inflicted with debuff by <color\=#2899ff>$1</color>. This effect won't activate if stacked."
+r:"^造成万能属性伤害时，攻击力提升<color\=#2899ff>(\d+%)</color>，暴击率提升<color\=#2899ff>(\d+%)</color>。$"="Increase ATK by <color\=#2899ff>$1</color> and Crit Rate by <color\=#2899ff>$2</color> when dealing Almighty damage."
+
+【希望】=[Hope]
+希望=Hope
+r:"^解明怪盗装备时生效：使用技能为同伴添加增益状态，使技能目标穿透提升<color\=#2899ff>(\d+%)</color>，持续(\d+)回合。$"="When equipped by Elucidator Thieves: When using a buff skill on allies, increase the target's Pierce by <color\=#2899ff>$1</color> for $2 turn."
+r:"^每造成1次技能伤害，自身火焰伤害提升<color\=#2899ff>(\d+%)</color>，持续(\d+)回合，可叠加(\d+)层；叠加至(\d+)层时，额外使自身暴击率提升<color\=#2899ff>(\d+%)</color>。$"="When dealing 1 hit of skill damage, increase own Fire DMG by <color\=#2899ff>$1</color> for $2 turns, up to $3 stacks; When reaching $4 stacks, additionally increase own Crit Rate by <color\=#2899ff>$5</color>."
+r:"^所有怪盗对处于倒地状态的敌人造成伤害提升<color\=#2899ff>(\d+%)</color>，无法重复触发。$"="Increase all allies' DMG Dealt to Downed foes by <color\=#2899ff>$1</color>. This effect won't activate if stacked."
+
+【突破】=[Perseverance]
+突破=Perseverance
+r:"^每有一个敌人增加自身电击伤害<color\=#2899ff>(\d+%)</color>，最多<color\=#2899ff>(\d+%)</color>。$"="Increase Elec DMG by <color\=#2899ff>$1</color> per foe, up to <color\=#2899ff>$2</color>."
+r:"^持续效果伤害提升<color\=#2899ff>(\d+%)</color>。$"="Increase Damage Over Time DMG by <color\=#2899ff>$1</color>."
+r:"^持续伤害效果提升<color\=#2899ff>(\d+%)</color>。$"="Increase Damage Over Time Effect by <color\=#2899ff>$1</color>."
+r:"^当前生命值越低，攻击力越高，(\d+%)生命值时获得最大攻击力加成<color\=#2899ff>(\d+%)</color>。$"="Increase ATK based on missing HP, up to <color\=#2899ff>$2</color> ATK at $1 HP."
+
+【敏锐】=[Acuity]
+敏锐=Acuity
+r:"^{{A}}伤害提升<color\=#2899ff>(\d+%)</color>。$"="Increase {{A}} DMG by <color\=#2899ff>$1</color>."
+r:"^战斗中，效果命中提升<color\=#2899ff>(\d+%)</color>，自身效果命中达到(\d+%)时所有同伴获得<color\=#2899ff>(\d+%)</color>伤害加成。$"="During battle, increase Ailment ACC by <color\=#2899ff>$1</color>, when user's Ailment ACC reaches $2, increase party's DMG Bonus by <color\=#2899ff>$3</color>."
+
+【诞生】=[Nativity]
+诞生=Nativity
+r:"^{{A}}&{{B}}装备时生效：<link\="s\|271"><u>面具强度</u></link>提升<color\=#2899ff>(\d+%)</color>。$"="When equipped by {{A}} & {{B}}: Increase <link\="s|271"><u>Desire Level</u></link> by <color\=#2899ff>$1</color>."
+
+【纯粹】=[Purity]
+纯粹=Purity
+r:"^主动释放不同{{A}}技能时，各获得(\d+)层『皈依』：攻击力提升<color\=#2899ff>(\d+%)</color>，持续(\d+)回合，可叠加(\d+)层；叠加至(\d+)层时，额外使自身暴击效果提升<color\=#2899ff>(\d+%)</color>。由不同{{A}}技能产生的『皈依』独立计算持续时间。$"="When user manually uses different Persona skills, each skill grants $1 [Refuge] stack: Increase ATK by <color\=#2899ff>$2</color> for $3 turns. Stacks up to $4 times. At $5 stacks, increase user's Crit DMG by <color\=#2899ff>$6</color>. [Refuge] stacks from each Persona skills are spent separately."
+
+----------
+All Arcana Cards
+----------
+r:"^4套装效果$"="4-piece effect"
+r:"^2套装效果$"="2-piece effect"
+
+爱·日=Love·Sun
+爱·月=Love·Moon
+爱·星=Love·Star
+爱·辰=Love·Planet
+【爱】=<size\=20>  </size>[Love]
+r:"^2套装效果：治疗效果提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Healing Effect by <color\=#2899ff>$1</color>.</size>"
+r:"^4套装效果：对生命值不高于(\d+%)的怪盗治疗时，治疗效果提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase Healing Effect by <color\=#2899ff>$2</color> when healing allies with not higher than $1 HP.</size>"
+
+【压抑】=<size\=20>  </size>[Oppression]
+压抑=Oppression
+r:"^2套装效果：物理伤害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Phys DMG by <color\=#2899ff>$1</color>.</size>"
+r:"^4套装效果：技能造成每次伤害使自身获得『怨恨』：增加自身攻击力<color\=#2899ff>(\d+%)</color>，持续(\d+)回合，最多(\d+)层。$"="<size\=23>4 Set Effect: Gain [Resentment] after every hit of skill damage: Increase ATK by <color\=#2899ff>$1</color> for $2 turn up to $3 stacks.</size>"
+
+【英勇】=<size\=20>  </size>[Courage]
+英勇=Courage
+r:"^4套装效果：暴击效果提升<color\=#2899ff>(\d+%)</color>，持续(\d+)回合；造成暴击后再次获得相同效果。$"="<size\=23>4 Set Effect: Increase Crit DMG by <color\=#2899ff>$1</color> for $2 turns; Gain this effect again after landing a Critical.</size>"
+
+【职责】=<size\=20>  </size>[Labor]
+职责=Labor
+r:"^2套装效果：生命值提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase HP by <color\=#2899ff>$1</color>.</size>"
+r:"^4套装效果：解明怪盗装备时生效：战斗中使所有同伴生命值、攻击力、防御力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: When equipped by Elucidator Thieves: Increase all allies' HP, ATK and DEF by <color\=#2899ff>$1</color>.</size>"
+
+【主权】=<size\=20>  </size>[Control]
+主权=Control
+r:"^4套装效果：使用技能攻击敌人时对主目标造成自身生命值<color\=#2899ff>(\d+%)</color>的额外伤害。$"="<size\=23>4 Set Effect: Deal <color\=#2899ff>$1</color> HP additional damage to the main target when attacking with a skill.</size>"
+
+【争执】=<size\=20>  </size>[Strife]
+争执=Strife
+r:"^2套装效果：火焰伤害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Fire DMG by <color\=#2899ff>$1</color>.</size>"
+r:"^4套装效果：攻击力提升<color\=#2899ff>(\d+%)</color>，如果敌人火属性适应性为弱，则攻击力额外提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase ATK by <color\=#2899ff>$1</color>. Additionally increase ATK by <color\=#2899ff>$2</color> if the foe is weak to Fire."
+
+【转变】=<size\=20>  </size>[Renewal]
+转变=Renewal
+r:"^2套装效果：电击伤害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Elec DMG by <color\=#2899ff>$1</color>.</size>"
+r:"^4套装效果：任意怪盗使用电属性技能后提升自身电击属性伤害<color\=#2899ff>(\d+%)</color>，最多(\d+)层。$"="<size\=23>4 Set Effect: After any ally uses an Elec skill, increase user's Elec DMG by <color\=#2899ff>$1</color>. Stacks up to $2 times.</size>"
+
+【美德】=<size\=20>  </size>[Virtue]
+美德=Virtue
+r:"^2套装效果：祝福伤害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Bless DMG by <color\=#2899ff>10%</color>.</size>"
+r:"^4套装效果：当前生命值百分比不低于(\d+%)时，祝福属性的暴击率提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase Bless skill Crit Rate by <color\=#2899ff>$2</color> when user's HP% is not less than $1.</size>"
+
+【和平】=<size\=20>  </size>[Peace]
+和平=Peace
+r:"^2套装效果：防御力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase DEF by <color\=#2899ff>$1</color>.</size>"
+r:"^4套装效果：护盾效果提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase Shield Effect by <color\=#2899ff>$1</color>.</size>"
+
+【奢华】=<size\=20>  </size>[Opulence]
+奢华=Opulence
+r:"^2套装效果：冰冻伤害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Ice DMG by <color\=#2899ff>$1</color>.</size>"
+r:"^4套装效果：追加效果造成伤害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase Follow Up DMG by <color\=#2899ff>$1</color>.</size>"
+
+【富足】=<size\=20>  </size>[Prosperity]
+富足=Prosperity
+r:"^2套装效果：受到伤害减免<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Decrease DMG Taken by <color\=#2899ff>$1</color>.</size>"
+r:"^4套装效果：进入战斗立刻回复<color\=#2899ff>(\d+%) </color>HIGHLIGHT能量，回复HIGHLIGHT能量效果无法重复触发。$"="<size\=23>4 Set Effect: At the start of battle, immediately gain <color\=#2899ff>$1</color> HIGHLIGHT Energy, This effect won't activate if stacked.</size>"
+
+【力量】=<size\=20>  </size>[Strength]
+力量=Strength
+r:"^2套装效果：攻击力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase ATK by <color\=#2899ff>$1</color>.</size>"
+r:"^4套装效果：进入战斗后，每经过(\d+)个回合提升自身攻击力<color\=#2899ff>(\d+%)</color>，可叠加(\d+)层。$"="<size\=23>4 Set Effect: At the start of battle, increase ATK by <color\=#2899ff>$2</color> after every $1 turns, up to $3 stacks.</size>"
+
+【告捷】=<size\=20>  </size>[Victory]
+告捷=Victory
+r:"^2套装效果：疾风伤害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Wind DMG by <color\=#2899ff>$1</color>.</size>"
+r:"^4套装效果：每段攻击有(\d+%)的固定机率额外造成自身攻击力<color\=#2899ff>(\d+%)</color>的伤害。$"="<size\=23>4 Set Effect: There's a $1 fixed chance to increase ATK by <color\=#2899ff>$2</color> after each hits of attack.</size>"
+
+【真谛】=<size\=20>  </size>[Truth]
+真谛=Truth
+r:"^2套装效果：核热伤害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Nuke DMG by <color\=#2899ff>$1</color>.</size>"
+r:"^4套装效果：使用技能攻击敌人时，若主目标处于元素异常状态则对其造成<color\=#2899ff>(\d+%)</color>攻击力的伤害。$"="<size\=23>4 Set Effect: Deal <color\=#2899ff>$1</color> ATK damage to the main target if the foe is inflicted with Elemental Ailment.</size>"
+
+【欢愉】=<size\=20>  </size>[Pleasure]
+欢愉=Pleasure
+r:"^2套装效果：念动伤害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Psy DMG by <color\=#2899ff>$1</color>.</size>"
+r:"^4套装效果：造成念动伤害时，提升攻击(\d+%)，如果敌方人数不少于(\d+)，则攻击力额外提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase ATK by $1 when dealing Psy damage. Additionally increase ATK by <color\=#2899ff>$3</color> if there's not less than $2 foes.</size>"
+
+【干扰】=<size\=20>  </size>[Hindrance]
+干扰=Hindrance
+r:"^2套装效果：诅咒伤害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Curse DMG by <color\=#2899ff>$1</color>.</size>"
+r:"^4套装效果：对处于负面状态下的敌人咒属性伤害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase Curse DMG by <color\=#2899ff>$1</color> when attacking foes with debuff.</size>"
+
+【和解】=<size\=20>  </size>[Reconciliation]
+和解=Reconciliation
+r:"^2套装效果：速度提升<color\=#2899ff>(\d+)</color>。$"="<size\=23>2 Set Effect: Increase SPD by <color\=#2899ff>$1</color>.</size>"
+r:"^4套装效果：战斗中，自身最大生命值、攻击力、防御力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: During battle, increase user's Max HP, ATK, and DEF by <color\=#2899ff>$1</color>."
+
+【忧思】=<size\=20>  </size>[Worry]
+忧思=Worry
+r:"^2套装效果：精力回复提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase SP Recovery by <color\=#2899ff>$1</color>.</size>"
+
+【挫败】=<size\=20>  </size>[Defeat]
+挫败=Defeat
+r:"^2套装效果：效果命中提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Ailment ACC by <color\=#2899ff>$1</color>.</size>"
+r:"^4套装效果：对处于负面状态下的敌人造成火焰属性伤害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase Fire DMG to foes with debuff by <color\=#2899ff>$1</color>."
+
+【凯旋】=<size\=20>  </size>[Success]
+凯旋=Success
+r:"^2套装效果：暴击率提升<color\=#2899ff>(\d+\.\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Crit Rate by <color\=#2899ff>$1</color>.</size>"
+
+【徒劳】=<size\=20>  </size>[Futility]
+徒劳=Futility
+r:"^4套装效果：效果命中提升<color\=#2899ff>(\d+%)</color>，持续(\d+)回合；造成TECHNICAL后再次获得相同效果。$"="<size\=23>4 Set Effect: Increase Ailment ACC by <color\=#2899ff>$1</color> for $2 turns. Gain this effect again after user deals a TECHNICAL.</size>"
+
+【失望】=<size\=20>  </size>[Despair]
+失望=Despair
+r:"^4套装效果：造成{{A}}技能伤害时，若与自身上次造成{{A}}技能伤害的属性不同，该次{{A}}技能造成伤害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: When dealing {{A}} skill damage, increase the current {{A}} skill damage by <color\=#2899ff>$1</color> if user's last {{A}} skill damage was a different element."
+
+【谨慎】=<size\=20>  </size>[Prudence]
+谨慎=Prudence
+r:"^2套装效果：速度降低<color\=#2899ff>(\d+)</color>，攻击力提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Decrease SPD by <color\=#2899ff>$1</color>, increase ATK by <color\=#2899ff>$2</color>.</size>"
+r:"^4套装效果：造成伤害提升(\d+%)。$"="<size\=23>4 Set Effect: Increase DMG Dealt by <color\=#2899ff>$1</color>.</size>"
+
+【执著】=<size\=20>  </size>[Ruin]
+执著=Ruin
+r:"^4套装效果：攻击力提升<color\=#2899ff>(\d+%)</color>，持续(\d+)回合；使用{{A}}后再次获得相同效果。$"="<size\=23>4 Set Effect: Increase ATK by <color\=#2899ff>$1</color> for $2 turns. After using a {{A}}, gain the same effect again.</size>"
+
+【忧伤】=<size\=20>  </size>[Sorrow]
+忧伤=Sorrow
+r:"^4套装效果：造成伤害提升<color\=#2899ff>(\d+%)</color>，持续(\d+)回合；释放HIGHLIGHT后再次获得相同效果。$"="<size\=23>4 Set Effect: Increase DMG Dealt by <color\=#2899ff>$1</color> for $2 turns. After using a HIGHLIGHT, gain the same effect again.</size>"
+r:"^4套装效果：造成伤害提升<color\=#2899ff>(\d+%)</color>，持续(\d+)回合；释放HIGHLIGHT后再次获得相同效果$"="<size\=23>4 Set Effect: Increase DMG Dealt by <color\=#2899ff>$1</color> for $2 turns. After using a HIGHLIGHT, gain the same effect again.</size>"
+
+【改变】=<size\=20>  </size>[Transformation]
+改变=Transformation
+r:"^4套装效果：攻击力提升<color\=#2899ff>(\d+%)</color>，持续(\d+)回合；造成暴击后再次获得相同效果。$"="<size\=23>4 Set Effect: Increase ATK by <color\=#2899ff>$1</color> for $2 turns. After dealing a Critical hit, gain the same effect again.</size>"
+
+【丰饶】=<size\=20>  </size>[Satiety]
+丰饶=Satiety
+r:"^4套装效果：造成伤害提升<color\=#2899ff>(\d+%)</color>，持续(\d+)回合；释放追加效果后再次获得相同效果。$"="<size\=23>4 Set Effect: Increase DMG Dealt by <color\=#2899ff>$1</color> for $2 turns. After activating a Follow Up, gain the same effect again.</size>"
+
+【获得】=<size\=20>  </size>[Gain]
+获得=Gain
+获得·日=Gain·Sun
+获得·月=Gain·Moon
+获得·星=Gain·Star
+获得·辰=Gain·Sky
+r:"^4套装效果：释放技能使自身生命值降低时，造成伤害提升<color\=#2899ff>(\d+%)</color>，可叠加(\d+)层，持续(\d+)回合。$"="<size\=23>4 Set Effect: When losing HP from a skill, increase DMG Dealt by <color\=#2899ff>$1</color> for $3 turns. Stacks up to $2 times.</size>"
+
+【沉沦】=<size\=20>  </size>[Debauch]
+沉沦=Debauch
+r:"^4套装效果：造成伤害提升<color\=#2899ff>(\d+%)</color>，处于额外回合时该效果提升至<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: Increase DMG Dealt by <color\=#2899ff>$1</color>. increase this effect to <color\=#2899ff>$2</color> on Extra Actions.</size>"
+
+【坚韧】=<size\=20>  </size>[Tenacity]
+r:"^2套装效果：射击伤害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>2 Set Effect: Increase Gun DMG by <color\=#2899ff>$1</color>.</size>"
+
+----------
+Inspect Details + Combat Pop-Ups
+---------
+r:"^生命值、攻击力、防御力提升(\d+%)$"="Increase HP, ATK, DEF by $1"
+生命值、攻击力、防御力根据相同适应性属性怪盗数量提升=Increase HP, ATK, DEF \nfor each ally with a matching attribute
+
+r:"^当前生命值百分比不低于(\d+%)时，祝福属性的暴击率提升(\d+%)$"="When current HP% is not below $1, \nincrease Bless skill Crit Rate by $2"
+怨恨=Resentment
+r:"^『怨恨』不少于(\d+)层，则物理伤害、效果命中提升(\d+%)$"="Increase Phys DMG and Ailment ACC by $2 when [Resentment] is not less than $1 stacks"
+r:"^造成念动伤害时，提升攻击(\d+%)，如果敌方人数不少于3，则攻击力额外提升(\d+%)$"="<size\=26>Increase ATK by $1 when dealing Psy damage,\nincrease ATK by $2 if there are 3 ≥ foes</size>"
+上次{{A}}技能伤害属性：物理=Last {{A}} skill damage: Phys
+上次{{A}}技能伤害属性：枪械=Last {{A}} skill damage: Gun
+上次{{A}}技能伤害属性：火焰=Last {{A}} skill damage: Fire
+上次{{A}}技能伤害属性：冰冻=Last {{A}} skill damage: Ice
+上次{{A}}技能伤害属性：电击=Last {{A}} skill damage: Elec
+上次{{A}}技能伤害属性：疾风=Last {{A}} skill damage: Wind
+上次{{A}}技能伤害属性：念动=Last {{A}} skill damage: Psy
+上次{{A}}技能伤害属性：核热=Last {{A}} skill damage: Nuke
+上次{{A}}技能伤害属性：祝福=Last {{A}} skill damage: Bless
+上次{{A}}技能伤害属性：诅咒=Last {{A}} skill damage: Curse
+上次{{A}}技能伤害属性：万能=Last {{A}} skill damage: Almighty
+皈依=Refuge
+
+sr:"^觉知&(.*)$"="Awareness & $1"
+sr:"^启程&(.*)$"="Departure & $1"
+sr:"^成长&(.*)$"="Growth & $1"
+sr:"^专注&(.*)$"="Meditation & $1"
+sr:"^信念&(.*)$"="Faith & $1"
+sr:"^信任&(.*)$"="Trust & $1"
+sr:"^和谐&(.*)$"="Harmony & $1"
+sr:"^接纳&(.*)$"="Acceptance & $1"
+sr:"^真诚&(.*)$"="Integrity & $1"
+sr:"^智慧&(.*)$"="Wisdom & $1"
+sr:"^决心&(.*)$"="Resolve & $1"
+sr:"^创造&(.*)$"="Creation & $1"
+sr:"^自由&(.*)$"="Freedom & $1"
+sr:"^希望&(.*)$"="Hope & $1"
+sr:"^突破&(.*)$"="Perseverance & $1"
+sr:"^敏锐&(.*)$"="Acuity & $1"
+sr:"^诞生&(.*)$"="Nativity & $1"
+sr:"^纯粹&(.*)$"="Purity & $1"
+
+触发【主权】套装效果的额外伤害=Activated bonus damage from [Control]
+触发【真谛】套装效果的额外伤害=Activated bonus damage from [Truth]
+触发【告捷】套装效果的额外伤害=Activated bonus damage from [Victory]
