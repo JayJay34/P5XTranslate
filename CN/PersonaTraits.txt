@@ -1,0 +1,749 @@
+本能=Overclock
+本能详情=Overclock Details
+r:"^{{A}}等级上限提升至<color\=#FFF000>LV.(\d+)</color>$"="<size\=28>Increase {{A}} level cap to <color\=#FFF000>Lv.$1</color></size>"
+
+----------
+RANK 1
+----------
+Mandrake
+r:"^破土而出的尖叫(.*)$"="<size\=28>Groundbreaking Scream $1</size>"
+r:"^攻击力提升(\d+\.\d+%)。战斗开始时攻击力提升(.*)，效果持续(\d+)回合。$"="Increase ATK by $1. At the start of battle, increase ATK by $2 for $3 turns."
+
+Mokoi
+r:"^崩溃的触碰(.*)$"="Collapsing Touch $1"
+r:"^效果命中提升(\d+\.\d+%)。造成晕眩效果时，效果命中提升(.*)。$"="Increase Ailment ACC by $1. Increase Ailment ACC by $2 when inflicting Dizzy."
+
+Berith
+r:"^公爵的威吓(.*)$"="Duke's Intimidation $1"
+r:"^防御力提升(\d+\.\d+%)。自身受到的弱点伤害降低(.*)。$"="<size\=28>Increase DEF by $1. Decrease own Weak DMG Taken by $2.</size>"
+
+Janosik
+r:"^余孽收割(.*)$"="Reaper $1"
+r:"^攻击力提升(\d+\.\d+%)。所有同伴攻击带有『瞄准』的敌人时，攻击力提升(\d+%)。$"="Increase ATK by $1. When allies attack foes with [Marked], increase ATK by $2."
+r:"^攻击力提升(\d+\.\d+%)。战斗开始时，使1名敌人获得『瞄准』。所有同伴攻击带有『瞄准』的敌人时，攻击力提升(\d+%)。$"="Increase ATK by $1. At the start of battle, inflicts 1 foe with [Marked]. When allies attack foes with [Marked], increase ATK by $2."
+r:"^攻击力提升(\d+\.\d+%)。战斗开始时，使1名敌人获得『瞄准』。所有同伴攻击带有『瞄准』的敌人时，攻击力提升(\d+%)。自身攻击有『瞄准』的敌人时，造成1次1(\d+%)攻击力的射击属性伤害。$"="Increase ATK by $1. At the start of battle, inflicts 1 foe with [Marked]. When allies attack foes with [Marked], increase ATK by $2. When you attack foes with [Marked], deal an additional $3 ATK Gun damage to them."
+r:"^攻击力提升(\d+\.\d+%)。战斗开始时，使1名敌人获得『瞄准』。所有同伴攻击带有『瞄准』的敌人时，攻击力提升(\d+%)。带有『瞄准』的敌人防御力额外降低(\d+%)。自身攻击有『瞄准』的敌人时，造成1次(\d+%)攻击力的射击属性伤害。$"="<size\=22>Increase ATK by $1. At the start of battle, inflict 1 foe with [Marked]. When allies attack foes with [Marked], increase ATK by $2. Additionally decrease DEF by $3 for foes with [Marked]. When user attacks a foe with [Marked], deal an additional $4 ATK Gun damage to them.</size>"
+r:"^攻击力提升(\d+\.\d+%)。战斗开始时，使1名敌人获得『瞄准』。所有同伴攻击带有『瞄准』的敌人时，攻击力提升(\d+%)，暴击率、暴击效果提升(.*)。带有『瞄准』的敌人防御力额外降低(.*)。自身攻击有『瞄准』的敌人时，造成1次(.*)攻击力的射击属性伤害。$"="<size\=22>Increase ATK by $1. At the start of battle, inflict 1 foe with [Marked]. When allies attack foes with [Marked], increase ATK by $2, increase Crit Rate and Crit DMG by $3. Additionally decrease DEF by $4 for foes with [Marked]. When user attacks a foe with [Marked], deal an additional $5 ATK Gun damage to them.</size>"
+
+Obariyon
+r:"^灵财的射手(.*)$"="Shooter of Wealth $1"
+r:"^暴击率提升(\d+\.\d+%)。造成射击属性伤害时，暴击率提升(.*)。$"="<size\=28>Increase Crit Rate by $1. When dealing Gun damage, increase Crit Rate by $2.</size>"
+
+Jack-O'-Lantern
+r:"^愚弄者的狂欢(.*)$"="Fool's Revelry $1"
+r:"^攻击力提升(\d+\.\d+%)。造成击倒后，造成的火焰属性伤害提升(.*)，效果持续(\d+)回合。$"="<size\=29>Increase ATK by $1. After knocking down a foe, increase Fire DMG Dealt by $2 for $3 turns.</size>"
+
+Hua Po
+r:"^焚枝的鞭笞(.*)$"="Burning Lash $1"
+r:"^攻击力提升(\d+\.\d+%)。攻击处于燃烧状态的敌人时，攻击力提升(.*)。$"="<size\=29>Increase ATK by $1. Increase ATK by $2 when attacking foes inflicted with Burn.</size>"
+
+Koropokkuru
+r:"^抗冻的矮人(.*)$"="<size\=28>Freeze Resistant Dwarf $1</size>"
+r:"^攻击力提升(\d+\.\d+%)。受到处于冻结状态下敌人的伤害降低(.*)。$"="<size\=28>Increase ATK by $1. Decrease DMG Taken by $2 from foes inflicted with Freeze.</size>"
+
+Andras
+r:"^释放恨意(.*)$"="Unleash Hatred $1"
+r:"^攻击力提升(\d+\.\d+%)。以敌人为目标释放{{A}}技能后，使目标受到的冰冻属性伤害提升(.*)，效果持续(\d+)回合。$"="<size\=26>Increase ATK by $1. After using a {{A}} skill on foes, increase the target's Ice DMG Taken by $2 for $3 turns.</size>"
+
+Saki Mitama
+r:"^爱的本质(.*)$"="Nature of Love $1"
+r:"^生命值提升(\d+\.\d+%)。造成治疗效果后，回复自身(\d+)点精力值。$"="Increase HP by $1. After healing, restore $2 SP to self."
+
+Silky
+r:"^怜爱的霜护(.*)$"="Tender Protection $1"
+r:"^生命值提升(\d+\.\d+%)。驱散精神异常时，恢复目标(.*)攻击力的生命值。$"="<size\=27>Increase HP by $1. After dispelling Mental Ailments, restore target's HP by $2 ATK.</size>"
+
+Pixie
+r:"^迷途的劝导(.*)$"="Lost Persuasion $1"
+r:"^攻击力提升(\d+\.\d+%)。造成击倒后，提升所有同伴(.*)攻击力，效果持续(\d+)回合。$"="<size\=29>Increase ATK by $1. After knocking down a foe, increase all allies' ATK by $2 for $3 turns.</size>"
+
+Agathion
+r:"^瓶居之恩(.*)$"="Bottled Grace $1"
+r:"^防御力提升(\d+\.\d+%)。以自身为目标时，治疗量提升(.*)。$"="Increase DEF by $1. Increase healing by $2 when targeting self."
+
+Bicorn
+r:"^风行的舞踏(.*)$"="Butoh of Wind $1"
+r:"^攻击力提升(\d+\.\d+%)。造成击倒后，造成的疾风属性伤害提升(.*)，效果持续(\d+)回合。$"="<size\=28>Increase ATK by $1. After knocking down a foe, increase Wind DMG Dealt by $2 for $3 turns.</size>"
+
+Kelpie
+r:"^迷雾的领地(.*)$"="Misty Territory $1"
+r:"^暴击效果提升(\d+\.\d+%)。场上只有1名敌人时，造成的疾风属性伤害提升(.*)。$"="<size\=27>Increase Crit DMG by $1. When there is only 1 foe, increase Wind DMG Dealt by $2.</size>"
+
+Incubus
+r:"^堕落的低语(.*)$"="Fallen Whisper $1"
+r:"^生命值提升(\d+\.\d+%)。造成诅咒属性伤害后，降低目标(.*)攻击力，效果持续(.*)回合。$"="<size\=27>Increase HP by $1. After dealing Curse damage, decrease the target's ATK by $2 for $3 turns.</size>"
+
+Succubus
+r:"^醉人的呢喃(.*)$"="Intoxicating Murmur $1"
+r:"^攻击力提升(\d+\.\d+%)。以同伴为目标释放技能后，提升其(\d+\.\d+%)暴击率，效果持续1回合。$"="Increase ATK by $1. When using a skill on an ally, increase their Crit Rate by $2 for 1 turn."
+r:"^攻击力提升(\d+\.\d+%)。以同伴为目标释放{{A}}技能后，提升其(.*)暴击率，效果持续(.*)回合。$"="Increase ATK by $1. When using a Persona skill on an ally, increase their Crit Rate by $2 for $3 turn."
+
+Slime
+r:"^流动的臭气(.*)$"="Flowing Stench $1"
+r:"^效果抵抗提升(\d+\.\d+%)。受到减益效果时，效果抵抗提升(.*)。$"="Increase Ailment RES by $1. When inflicted with debuffs, increase Ailment RES by $2."
+
+Genbu
+r:"^极北地的寒冰(.*)$"="Arctic Chill $1"
+r:"^防御力提升(\d+\.\d+%)。受到来自冻结状态下的敌人的伤害降低(.*)。对处于冻结状态的敌人攻击力提升(.*)。$"="<size\=25>Increase DEF by $1. Decrease DMG Taken by $2 from foes inflicted with Freeze. Increase ATK by $3 to foes inflicted with Freeze.</size>"
+
+----------
+RANK 2
+----------
+Eligor
+r:"^骑士的锐利目光(.*)$"="Knight's Sharp Gaze $1"
+r:"^暴击效果提升(\d+%)。以1名敌人为目标造成物理属性伤害时，攻击力提升(\d+%)，暴击率提升(\d+%)。$"="<size\=28>Increase Crit DMG by $1. When dealing Phys damage to 1 foe, increase ATK by $2 and increase Crit Rate by $3.</size>"
+
+Ippon-Datara
+r:"^只眼只足的隐士(.*)$"="<size\=22>One-Eyed One-Legged Hermit $1</size>"
+r:"^暴击效果提升(\d+%)。对处于晕眩状态的敌人暴击率提升(.*)。$"="Increase Crit DMG by $1. Increase Crit Rate by $2 when attacking foes inflicted with Dizzy."
+
+Oni
+r:"^连锁诡计(.*)$"="Chain Trick $1"
+r:"^暴击率提升(\d+\.\d+%)。换手攻击后，造成的伤害提升(.*)，效果持续(.*)回合。$"="Increase Crit Rate by $1. After Baton Pass, increase DMG Dealt by $2 for $3 turn."
+
+Inugami
+r:"^失控的乱舞者(.*)$"="Berserk Dancer $1"
+r:"^效果命中提升(\d+%)。造成精神异常后，降低目标(.*)防御力，效果持续(\d+)回合。$"="Increase Ailment ACC by $1. After inflicting Mental Ailments, decrease the target's DEF by $2 for $3 turns."
+
+Orobas
+r:"^狂热的卜者(.*)$"="Fanatic Diviner $1"
+r:"^效果命中提升(\d+%)。以敌人为目标释放{{A}}技能后，使其受到的火焰伤害提升(.*)，效果持续(\d+)回合。$"="<size\=29>Increase Ailment ACC by $1. After using a {{A}} skill on foes, increase their Fire DMG Taken by $2 for $3 turns.</size>"
+
+Yaksini
+r:"^啖鬼的不甘(.*)$"="Ghost's Resentment $1"
+r:"^攻击力提升(\d+%)。受到伤害后，攻击力提升(.*)，效果持续(.*)回合。$"="Increase ATK by $1. After taking damage, increase ATK by $2 for $3 turns."
+
+Kusi Mitama
+r:"^丰荣的本质(.*)$"="Nature of Abundance $1"
+r:"^攻击力提升(\d+\.\d+%)。释放单体{{A}}技能时，造成的冰冻属性伤害提升(.*)。$"="<size\=29>Increase ATK by $1. When using a ST {{A}} skill, increase Ice DMG Dealt by $2.</size>"
+
+Jack Frost
+r:"^来堆雪人吧(.*)$"="<size\=28>Let's Build a Snowman $1</size>"
+r:"^暴击率提升(\d+\.\d+%)。造成击倒后，造成的冰冻属性伤害提升(.*)，效果持续(.*)回合。$"="<size\=27>Increase Crit Rate by $1. After knocking down a foe, increase Ice DMG Dealt by $2 for $3 turns.</size>"
+
+Apsaras
+r:"^柔声的甜咏(.*)$"="Gentle Chant $1"
+r:"^防御力提升(\d+\.\d+%)。以同伴为目标释放技能时，提升其(\d+\.\d+%)防御力，效果持续2回合。$"="Increase DEF by $1. When using a skill on allies, increase their DEF by $2 for 2 turns."
+
+Shiisaa
+r:"^触电的瓷器(.*)$"="Shocking Porcelain $1"
+r:"^攻击力提升(\d+\.\d+%)。对生命值低于(.*)的敌人造成触电效果时，效果命中提升(.*)。$"="Increase ATK by $1. Increase Ailment ACC by $3 when inflicting Shock to foes below $2 HP."
+
+Koppa Tengu
+r:"^神隐的狂舞(.*)$"="Hidden Dance $1"
+r:"^暴击率提升(\d+\.\d+%)。攻击处于狂怒状态的敌人时，攻击力提升(.*)。$"="Increase Crit Rate by $1. Increase ATK by $2 when attacking foes with Rage."
+
+Sudama
+r:"^流浪的血统(.*)$"="Wind Bloodline $1"
+r:"^攻击力提升(\d+\.\d+%)。使用疾风属性技能时，精力值消耗降低(.*)。$"="Increase ATK by $1. Decrease SP cost of Wind skills by $2."
+
+High Pixie
+r:"^妖精领袖的恩泽(.*)$"="Fairy Leader's Grace $1"
+r:"^造成的治疗效果提升(\d+\.\d+%)。对于生命值低于(.*)的同伴，造成的治疗效果提升(.*)。$"="Increase Healing Effect by $1. Increase Healing Effect by $3 to allies below $2 HP."
+
+Nekomata
+r:"^扰乱的猫步(.*)$"="Disturbing Catwalk $1"
+r:"^效果命中提升(\d+%)。战斗开始时，造成精神异常时，效果命中提升(.*)，效果持续(.*)回合。$"="<size\=29>Increase Ailment ACC by $1. At the start of battle, increase Ailment ACC by $2 when inflicting a Mental Ailment for $3 turns.</size>"
+
+Kodama
+r:"^气刃拂于林间(.*)$"="Sweeping Air Blades $1"
+r:"^攻击力提升(\d+\.\d+%)。场上敌人数量大于等于(\d+)个时，自身的效果命中提升(.*)。$"="Increase ATK by $1. When there are $2 or more foes, increase own Ailment ACC by $3."
+
+Matador
+r:"^躁动的狂热祭品(.*)$"="Restless Sacrifice $1"
+r:"^攻击力提升(\d+%)。攻击带有精神异常的敌人时伤害提升(.*)。$"="<size\=25>Increase ATK by $1. Increase damage by $2 when attacking foes inflicted with Mental Ailments.</size>"
+
+Leanan Sidhe
+r:"^恋人的二重奏(.*)$"="Lover's Duet $1"
+r:"^攻击力提升(\d+\.\d+%)。释放{{A}}技能攻击处于防御力降低状态下的敌人时，额外造成1次(\d+%)攻击力的念动属性伤害。$"="<size\=25>Increase ATK by $1. When dealing {{A}} skill damage to foes inflicted with DEF Down, additionally deal 1 hit of $2 ATK Psy damage.</size>"
+
+Makami
+r:"^导热的追击者(.*)$"="Thermal Chasers $1"
+r:"^攻击力提升(\d+\.\d+%)。换手后，造成的核热属性伤害提升(.*)，效果持续(.*)回合。$"="<size\=29>Increase ATK by $1. After Baton Pass, increase Nuke DMG Dealt by $2 for $3 turn.</size>"
+
+Suzaku
+r:"^南方主的日照(.*)$"="Southern Lord's Sun $1"
+r:"^暴击效果提升(\d+%)。以群体为目标释放核热属性技能时，攻击力提升(.*)。$"="Increase Crit DMG by $1. When using an AoE Nuke skill, increase ATK by $2."
+
+Angel
+r:"^实习的神使(.*)$"="Trainee Angel $1"
+r:"^生命值提升(\d+%)。驱散元素异常时，额外使目标回复(.*)攻击力的生命值。$"="<size\=26>Increase HP by $1. Additionally restore target's HP by $2 ATK when dispelling Elemental Ailments.</size>"
+
+Nigi Mitama
+r:"^顺和的本质(.*)$"="Nature of Harmony $1"
+r:"^生命值提升(\d+\.\d+%)。释放{{A}}技能造成治疗效果后，使技能主目标获得(\d+)层祝福效果。$"="<size\=28>Increase HP by $1. After using a {{A}} skill to heal, the main target gains $2 stack of Blessing.</size>"
+r:"^生命值提升(\d+\.\d+%)。释放{{A}}技能造成治疗效果后，使技能主目标获得(\d+)层祝福效果。有(.*)的机率使其额外获得一层祝福效果。$"="<size\=23>Increase HP by $1. After using a {{A}} skill to heal, the main target gains $2 stack of Blessing, with a $3 chance to gain 1 additional stack of Blessing.</size>"
+
+Archangel
+r:"^崇高的光耀(.*)$"="Sublime Brilliance $1"
+r:"^效果命中提升(\d+%)。释放{{A}}技能后，有(\d+%)固定机率使自身获得1个祝福效果。若该技能造成了祝福属性伤害，则额外获得1个祝福效果。$"="<size\=24>Increase Ailment ACC by $1. After using a {{A}} skill, there is a $2 fixed chance to gain 1 Blessing. If that skill dealt Bless damage, gain 1 additional Blessing.</size>"
+
+Onmoraki
+r:"^饿肚子的怨气(.*)$"="Hungry Resentment $1"
+r:"^攻击力提升(\d+\.\d+%)。场上只有1名敌人时，使所有同伴造成的诅咒属性伤害提升(.*)。$"="<size\=27>Increase ATK by $1. When there is only 1 foe, increase all allies' Curse DMG Dealt by $2.</size>"
+
+Nue
+r:"^诅咒的啼鸣(.*)$"="Cursed Cries $1"
+r:"^暴击率提升(\d+\.\d+%)。释放技能造成诅咒属性伤害时，有(.*)的固定机率使敌人获得(.*)个诅咒效果。$"="<size\=26>Increase Crit Rate by $1. When dealing damage with a Curse skill, there is a $2 fixed chance to inflict the foe with $3 stack of Curse.</size>"
+
+----------
+RANK 3
+----------
+Setanta
+r:"^嗜血的战士(.*)$"="Bloodthirsty Warrior $1"
+r:"^暴击效果提升(\d+%)。攻击处于减益状态的敌人时攻击力提升(.*)。对处于减益状态的敌人造成伤害后，使所有同伴的攻击力提升(.*)，效果持续1回合。$"="<size\=22>Increase Crit DMG by $1. Increase ATK by $2 when attacking foes inflicted with debuffs. After dealing damage to foes inflicted with debuffs, increase all allies' ATK by $3 for 1 turn.</size>"
+
+Kin-Ki
+r:"^刀枪不入的坚固(.*)$"="<size\=28>Weapons Invulnerability $1</size>"
+r:"^防御力提升(\d+\.\d+%)。击倒敌人时，使自身回复(.*)攻击力的生命值。$"="Increase DEF by $1. When knocking down a foe, restore user's HP by $2 ATK."
+
+Rakashasa
+r:"^穷凶极恶的盛宴(.*)$"="Evil Feast $1"
+r:"^暴击效果提升(\d+\.\d+%)。对生命值低于(.*)的敌人造成的物理伤害提升(.*)。$"="Increase Crit DMG by $1. Increase Phys DMG Dealt to foes below $2 HP by $3."
+
+Flauros
+r:"^可怕的凶豹(.*)$"="Terrible Leopard $1"
+r:"^生命值提升(\d+\.\d+%)。自身生命值高于(.*)时，造成的伤害提升(.*)。$"="Increase HP by $1. When you are above $2 HP, increase DMG Dealt by $3."
+
+Jikokuten
+r:"^慧土之东(.*)$"="Wisdom of the East $1"
+r:"^防御力提升(\d+\.\d+%)。以同伴为目标释放技能时，提升主目标(.*)攻击力，目标生命值低于(.*)时，该效果提升(.*)，效果持续2回合。$"="<size\=24>Increase DEF by $1. When using a skill on allies, increase the main target's ATK by $2 for 2 turns, increase this effect to $4 when the target is below $3 HP.</size>"
+
+Shiki-Ouji
+r:"^昂扬的折纸使魔(.*)$"="Lively Shikigami $1"
+r:"^防御力提升(\d+\.\d+%)。受到伤害后，防御力提升(.*)，持续时间永久，效果上限(.*)层。$"="<size\=28>Increase DEF by $1. After taking damage, increase DEF by $2 permanently, up to $3 stacks.</size>"
+
+Orthrus
+r:"^引火之躯(.*)$"="Ignite Body $1"
+r:"^暴击效果提升(\d+\.\d+%)。造成燃烧效果后，提升自身(.*)攻击力，效果持续(.*)回合。$"="Increase Crit DMG by $1. After inflicting Burn, increase own ATK by $2 for $3 turns."
+
+Lamia
+r:"^娇艳的贪欲(.*)$"="Gorgeous Greed $1"
+r:"^效果命中提升(\d+%)。造成燃烧效果时，效果命中提升(\d+%)。造成燃烧效果后，使所有同伴攻击力提升(\d+%)，效果持续2回合。$"="<size\=28>Increase Ailment ACC by $1. Increase Ailment ACC by $2 when inflicting Burn. After inflicting Burn, increase all allies' ATK by $3 for 2 turns.</size>"
+
+Sui-Ki
+r:"^冰寒的血统(.*)$"="Frigid Bloodline $1"
+r:"^攻击力提升(\d+\.\d+%)。使用冰冻属性技能时，SP消耗降低(.*)。$"="Increase ATK by $1. Decrease SP cost of Ice skills by $2."
+
+Ame-no-Uzume
+r:"^颤栗的振奋神乐(.*)$"="Trembling Kagura $1"
+r:"^效果命中提升(\d+%)。造成触电效果后，提升所有同伴(.*)暴击率，效果持续(.*)回合。$"="<size\=27>Increase Ailment ACC by $1. After inflicting Shock, increase all allies' Crit Rate by $2 for $3 turns.</size>"
+
+Naga
+r:"^天雷的惩戒(.*)$"="<size\=30>Thunder's Punishment $1</size>"
+r:"^暴击率提升(\d+\.\d+%)。造成电击属性伤害时，暴击效果提升(.*)。$"="Increase Crit Rate by $1. When dealing Elec damage, increase Crit DMG by $2."
+
+Isis
+r:"^丰饶的安卡(.*)$"="Anka of Abundance $1"
+r:"^生命值提升(\d+\.\d+%)。造成治疗效果后，使目标接下来每回合回复(.*)攻击力的生命值，效果持续(\d+)回合。$"="Increase HP by $1. After healing, restore target's HP by $2 ATK at the end of their turn for $3 turns."
+
+Fuu-Ki
+r:"^使役的飓风(.*)$"="Servile Hurricane $1"
+r:"^攻击力提升(\d+\.\d+%)。击败敌人后，使自身造成的疾风属性伤害永久提升(.*)，可叠加(.*)层。$"="<size\=27>Increase ATK by $1. After defeating a foe, permanently increase own Wind DMG Dealt by $2, up to $3 stacks.</size>"
+
+Anzu
+r:"^俯冲的猎杀(.*)$"="Swooping Hunt $1"
+r:"^攻击力提升(\d+\.\d+%)。释放{{A}}技能时，对技能主目标造成风袭效果时，效果命中提升(.*)。$"="Increase ATK by $1. When using a {{A}} skill to inflict Windswept, increase Ailment ACC to the main target by $2."
+
+Sandman
+r:"^今夜的安眠(.*)$"="Sleep Well Tonight $1"
+r:"^效果命中提升(\d+\.\d+%)。造成睡眠效果时，效果命中提升(.*)。$"="<size\=28>Increase Ailment ACC by $1. Increase Ailment ACC by $2 when inflicting Sleep.</size>"
+
+Neko Shogun
+r:"^请你吃鱼干喵(.*)$"="Have a Dried Fish $1"
+r:"^效果命中提升(\d+%)。战斗开始时，使所有同伴的效果命中提升(.*)，并使得效果命中最高的同伴额外提升(.*)效果命中，效果持续(.*)回合。$"="<size\=24>Increase Ailment ACC by $1. At the start of battle, increase all allies' Ailment ACC by $2, increase the Ailment ACC for the ally with the highest Ailment ACC by $3 for $4 turns.</size>"
+
+Pheonix
+r:"^圣炎的尊者(.*)$"="<size\=28>Venerable Holy Flame $1</size>"
+r:"^攻击力提升(\d+\.\d+%)。击败敌人后，核热伤害提升(.*)，效果持续(.*)回合。$"="Increase ATK by $1. After defeating a foe, increase Nuke DMG by $2 for $3 turns."
+
+Clotho
+r:"^福运的创造(.*)$"="Fortune Creation $1"
+r:"^效果命中提升(\d+\.\d+%)。击败敌人后，使自己获得(\d+)个祝福效果，有(.*)机率额外获得(\d+)个祝福效果。$"="<size\=29>Increase Ailment ACC by $1. After defeating a foe, gain $2 Blessing, with a $3 chance to gain $4 additional Blessing.</size>"
+r:"^效果命中提升(\d+\.\d+%)。击败敌人后，使自己获得(\d+)个祝福效果。$"="Increase Ailment ACC by $1. After defeating a foe, gain $2 Blessing."
+
+Principality
+r:"^统治之能(.*)$"="Power to Rule $1"
+r:"^防御力提升(\d+\.\d+%)。释放{{A}}技能造成治疗效果后，使所有同伴的防御力提升(.*)，效果持续(.*)回合。$"="Increase DEF by $1. After healing with a {{A}} skill, increase all allies' DEF by $2 for $3 turns."
+
+Black Ooze
+r:"^窒恶的瘟疫(.*)$"="Suffocating Plague $1"
+r:"^效果抵抗提升(\d+\.\d+%)。受到减益效果时，效果抵抗提升(.*)。造成减益效果时，效果命中提升(.*)。$"="<size\=25>Increase Ailment RES by $1. When inflicted with debuffs, increase Ailment RES by $2. When inflicting debuffs, increase Ailment ACC by $3.</size>"
+
+----------
+RANK 4
+----------
+Arahabaki
+r:"^铁铸之身(.*)$"="Iron Body $1"
+r:"^防御力提升(\d+\.\d+%)。使所有同伴受到的弱点伤害降低(.*)。$"="Increase DEF by $1. Decrease all allies' Weak DMG Taken by $2."
+
+Hell Biker
+r:"^点燃！引爆(.*)$"="Ignite! Explode! $1"
+r:"^攻击力提升(\d+\.\d+%)。使场上处于燃烧状态的敌人受到的火焰属性伤害提升(\d+%)。$"="<size\=28>Increase ATK by $1. Increase the Fire DMG Taken for foes inflicted with Burn by $2.</size>"
+r:"^攻击力提升(\d+\.\d+%)。使场上处于燃烧状态的敌人受到的火焰属性伤害提升(\d+%)。自身释放技能时，场上每有1个处于燃烧状态的敌人，则自身攻击力提升(\d+%)，上限3层。$"="<size\=24>Increase ATK by $1. Increase the Fire DMG Taken for foes inflicted with Burn by $2. When using a skill, increase ATK by $3 for each foe inflicted with Burn.</size>"
+
+Decarabia
+r:"^燃烧的火轮(.*)$"="Burning Fire Wheel $1"
+r:"^暴击率提升(\d+%)。受到的物理伤害提升(.*)，造成的火焰伤害提升(.*)。$"="<size\=29>Increase Crit Rate by $1. Increase Phys DMG Taken by $2, increase Fire DMG Dealt by $3.</size>"
+
+Limim
+r:"^冷若冰霜的吻(.*)$"="Frosty Kiss $1"
+r:"^攻击力提升(\d+\.\d+%)。造成冻结效果后，提升自己(.*)攻击力，效果持续(.*)回合。$"="Increase ATK by $1. After inflicting Freeze, increase own ATK by $2 for $3 turns."
+
+Lachesis
+r:"^生命的裁量(.*)$"="Tailoring of Life $1"
+r:"^生命值提升(\d+\.\d+%)。造成治疗效果后，使目标同伴生命值上限提升(.*)，效果持续(.*)回合。$"="Increase HP by $1. After healing, increase the target's Max HP by $2 for $3 turns."
+
+Kikuri-Hime
+r:"^宿命的牵引线(.*)$"="Thread of Fate $1"
+r:"^造成的治疗效果提升(\d+%)。场上存在生命值低于(.*)的同伴时，造成的治疗效果提升(.*)。$"="Increase Healing Effect by $1. When there is an ally below $2 HP, increase Healing Effect by $3."
+
+Belphegor
+r:"^寒流上的怠惰(.*)$"="Cold Wave of Sloth $1"
+r:"^效果抵抗提升(\d+%)。以敌人为目标释放{{A}}技能后，使技能主目标受到的冰冻属性伤害提升(\d+\.\d+%)，效果持续(\d+)回合，若其生命值低于(\d+%)，则效果额外提升(\d+%)。"="<size\=23>Increase Ailment RES by $1. After using a {{A}} skill on foes, increase the main target's Ice DMG Taken by $2 for $3 turns. If they are under $4 HP, additionally increase effect by $5.</size>"
+
+Zouchouten
+r:"^正法之南(.*)$"="Southern Dharma $1"
+r:"^暴击效果提升(\d+%)。释放物理属性技能时，若目标生命值低于(.*)，则暴击率提升(.*)。$"="<size\=27>Increase Crit DMG by $1. When using a Phys skill, if the target is below $2 HP, then increase Crit Rate by $3.</size>"
+
+Mothman
+r:"^外星的吸血鬼(.*)$"="Alien Vampire $1"
+r:"^效果命中提升(\d+%)。造成精神异常后，使自身恢复(\d+%)攻击力的生命值。$"="Increase Ailment ACC by $1. After inflicting a Mental Ailment, restore user's HP by $2 ATK."
+
+Hariti
+r:"^暴恶的母性(.*)$"="Violent Motherhood $1"
+r:"^攻击力提升(\d+\.\d+%)。使处于触电状态下的敌人受到的电击伤害提升(.*)。$"="<size\=28>Increase ATK by $1. Increase the Elec DMG Taken for foes inflicted with Shock by $2.</size>"
+
+Atropos
+r:"^命运的绞杀(.*)$"="Garrote of Fate $1"
+r:"^效果命中提升(\d+%)。以自身为目标释放技能后，使自身攻击力提升(\d+%)，效果持续1回合。$"="<size\=25>Increase Ailment ACC by $1. After targeting yourself with a skill, increase own ATK by $2 for 1 turn.</size>"
+r:"^效果命中提升(\d+%)。以自身为目标释放{{A}}技能后，使自身攻击力提升(.*)，效果持续(.*)回合。$"="<size\=24>Increase Ailment ACC by $1. After targeting user with a Persona skill, increase user's ATK by $2 for $3 turn.</size>"
+
+Jatayu
+r:"^破空的金翅(.*)$"="<size\=28>Soaring Golden Wings $1</size>"
+r:"^效果命中提升(\d+%)。释放疾风属性{{A}}技能后，使技能目标的防御力降低(\d+%)，效果持续2回合。$"="Increase Ailment ACC by $1. After using Wind skills, decrease the target's DEF by $2 for 2 turns."
+
+Kaiwan
+r:"^念视的血统(.*)$"="Psychic Bloodline $1"
+r:"^攻击力提升(\d+\.\d+%)。使用念动属性技能时，SP消耗降低(.*)。$"="Increase ATK by $1. Decrease SP cost of Psy skills by $2."
+
+Ara Mitama
+r:"^毅勇的本质(.*)$"="Nature of Courage $1"
+r:"^攻击力提升(\d+\.\d+%)。释放核热属性技能时，消耗的精力值降低(.*)。$"="Increase ATK by $1. Decrease SP cost of Nuke skills by $2."
+
+Thoth
+r:"^热心的记录(.*)$"="Enthusiastic Records $1"
+r:"^暴击效果提升(\d+%)。对生命值低于(.*)的敌人，造成的核热伤害提升(.*)。$"="Increase Crit DMG by $1. Increase Nuke DMG Dealt to foes below $2 HP by $3."
+
+Mithras
+r:"^炎日的庇佑(.*)$"="<size\=28>Burning Sun's Blessing $1</size>"
+r:"^生命值提升(\d+\.\d+%)。以同伴为目标释放技能后，使其防御力提升(\d+\.\d+%)，若其生命值高于(\d+%)，则效果额外提升(\d+%)，效果持续2回合。$"="<size\=25>Increase HP by $1. When using a skill on allies, increase their DEF by $2 for 2 turns. If they are above $3 HP, increase the effect by $4.</size>"
+r:"^生命值提升(\d+\.\d+%)。以同伴为目标释放{{A}}技能后，使其防御力提升(.*)，若其生命值高于(.*)，则效果额外提升(.*)，效果持续(.*)回合。$"="<size\=22>Increase HP by $1. When using a Persona skill on allies, increase their DEF by $2, if they are above $3 HP, increase the effect by $4. Lasts for $5 turns.</size>"
+
+Mithra
+r:"^被祝福的血统(.*)$"="Blessed Bloodline $1"
+r:"^攻击力提升(\d+\.\d+%)。释放祝福属性技能时，消耗的精力值降低(.*)。$"="Increase ATK by $1. Decrease SP cost of Bless skills by $2."
+
+Unicorn
+r:"^仙灵的驯守(.*)$"="Fairy Taming $1"
+r:"^造成的治疗效果提升(\d+%)。使得身上没有减益效果的同伴受到伤害时防御力提升(\d+%)。$"="Increase Healing Effect by $1. Increase ally's DEF by $2 if they have no debuff."
+r:"^造成的治疗效果提升(\d+%)。使得身上没有减益效果的同伴受到伤害时防御力提升(\d+%),造成伤害时攻击力提升(\d+\.\d+%)。$"="Increase Healing Effect by $1. Increase ally's DEF by $2 and increase ally's ATK by $3 when dealing damage if they have no debuff,"
+
+White Rider
+r:"^终末之扰动(.*)$"="Doom Disturbance $1"
+r:"^效果命中提升(\d+%)。对敌人释放{{A}}技能后，目标敌人身上每有1个诅咒效果，则使其受到的诅咒属性伤害提升(.*)，上限(.*)层，效果持续1回合。$"="<size\=24>Increase Ailment ACC by $1. After using a {{A}} skill on foes, increase their Curse DMG Taken by $2 for 1 turn for every stack of Curse they have, up to $3 stacks.</size>"
+
+Anubis
+r:"^灵魂的判官(.*)$"="Judge of Souls $1"
+r:"^攻击力提升(\d+\.\d+%)。造成祝福伤害时，使自身获得1-2个祝福效果。造成诅咒伤害时，使技能主目标获得1-2个诅咒效果。攻击带有诅咒效果的敌人时，攻击力提升(\d+%)。$"="Increase ATK by $1. When dealing Bless damage, gain 1-2 stack(s) of Blessing. When dealing Curse damage the main target gains 1-2 stack(s) of Curse. Increase ATK by $2 when attacking foes with Curse."
+r:"^攻击力提升(\d+\.\d+%)。造成祝福伤害时，使自身获得2个祝福效果。造成诅咒伤害时，使技能主目标获得2个诅咒效果。攻击带有诅咒效果的敌人时，攻击力提升(\d+\.\d+%)。$"="Increase ATK by $1. When dealing Bless damage, gain 2 stacks of Blessing. When dealing Curse damage the main target gains 2 stacks of Curse. Increase ATK by $2 when attacking foes with Curse."
+r:"^攻击力提升(\d+\.\d+%)。造成祝福伤害时，使自身获得2个祝福效果，并有50%固定机率使技能主目标获得1个诅咒效果。造成诅咒伤害时，使技能主目标获得2个诅咒效果，并有50%固定机率使自身获得1个祝福效果。攻击带有诅咒效果的敌人时，攻击力提升(\d+%)。$"="<size\=24>Increase ATK by $1. When dealing Bless damage, gain 2 stacks of Blessing and there is a 50% fixed chance to inflict 1 stack of Curse to the main target. When dealing Curse damage the main target gains 2 stacks of Curse and there is a 50% fixed chance for you to gain 1 stack of Blessing. Increase ATK by $2 when attacking foes with Curse.</size>"
+
+----------
+RANK 5
+----------
+Byakko
+r:"^战意的奔涌(.*)$"="<size\=28>Surge of Fighting Spirit $1</size>"
+r:"^暴击率提升(\d+\.\d+%)。回合结束时，获得『战意』，提升(.*)攻击力，最多叠加(.*)层，击败敌人时，获得(.*)层『战意』。$"="<size\=24>Increase Crit Rate by $1. At the end of turn, gain [Fighting Spirit], increase ATK by $2, up to $3 stacks. Gains $4 stacks of [Fighting Spirit] when defeating foe.</size>"
+r:"^暴击率提升(\d+\.\d+%)。回合结束时，获得『战意』，提升(.*)攻击力，(.*)暴击率，最多叠加(.*)层，击败敌人时，获得(.*)层『战意』。$"="<size\=24>Increase Crit Rate by $1. At the end of turn, gain [Fighting Spirit], increase ATK by $2 and Crit Rate by $3, up to $4 stacks. Gains $5 stacks of [Fighting Spirit] when defeating foe.</size>"
+战意=Fighting Spirit
+
+Valkyrie
+r:"^战意的眼神(.*)$"="<size\=28>Gaze of Fighting Spirit $1</size>"
+r:"^暴击率提升(\d+\.\d+%)。以1名敌人为目标释放{{A}}技能造成伤害时，造成的物理属性伤害提升(.*)。$"="<size\=28>Increase Crit Rate by $1. When dealing {{A}} skill damage to 1 foe, increase Phys DMG Dealt by $2.</size>"
+
+Kumbhanda
+r:"^掠夺的瓮鬼(.*)$"="<size\=28>Marauding Gourd Ghost $1</size>"
+r:"^效果抵抗提升(\d+\.\d+%)。受到精神异常时，效果抵抗提升(.*)。$"="<size\=26>Increase Ailment RES by $1. When inflicted with Mental Ailments, increase Ailment RES by $2.</size>"
+
+Girimehkala
+r:"^巨象的凝视(.*)$"="Elephant's Gaze $1"
+r:"^效果抵抗提升(\d+\.\d+%)。所有同伴受到身上有任意减益效果的敌人的伤害降低(\d+%)。$"="Increase Ailment RES by $1. All allies take $2 less damage from foes with any debuffs."
+
+Koumokuten
+r:"^天王的注视(.*)$"="Heavenly Gaze $1"
+r:"^效果命中提升(\d+\.\d+%)。战斗开始时，使攻击力最高的怪盗攻击力提升(.*)，暴击率提升(.*)，效果持续(.*)回合。$"="<size\=25>Increase Ailment ACC by $1. At the start of battle, increase the ATK and Crit Rate for the ally with the highest ATK by $2 and $3 for $4 turns.</size>"
+r:"^效果命中提升(\d+\.\d+%)。战斗开始时，使攻击力最高的怪盗攻击力提升(.*)，暴击率提升(.*)，效果持续(.*)回合，优先选择反抗/支配职业。$"="<size\=25>Increase Ailment ACC by $1. At the start of battle, increase the ATK and Crit Rate for the ally with the highest ATK by $2 and $3 for $4 turns, prioritizing Assassin/Sweeper Thief.</size>"
+
+Ose
+r:"^癫狂的隐秘(.*)$"="Secret of Madness $1"
+r:"^效果命中提升(\d+\.\d+%)。对处于狂怒状态的敌人造成的伤害提升(.*)。$"="Increase Ailment ACC by $1. Increase DMG Dealt to foes with Rage by $2."
+
+Dakini
+r:"^不满的叱责(.*)$"="Dissatisfied Rebuke $1"
+r:"^攻击力提升(\d+\.\d+%)。造成精神异常后，使目标受到的物理属性伤害提升(.*)，效果持续时间无限。$"="<size\=28>Increase ATK by $1. After inflicting Mental Ailments, permanently increase the target's Phys DMG Taken by $2.</size>"
+
+Bugs
+r:"^战栗的游戏(.*)$"="Trembling Game $1"
+r:"^暴击率提升(\d+\.\d+%)。造成暴击击倒敌人后，使自身攻击力提升(.*)，效果持续(.*)回合。$"="Increase Crit Rate by $1. After knocking down foes with Critical, increase own ATK by $2 for $3 turns."
+
+Queen Mab
+r:"^愉悦的美梦(.*)$"="Pleasant Dream $1"
+r:"^攻击力提升(\d+\.\d+%)。释放技能攻击敌人时，若其处于燃烧或冻结状态，则使自身的攻击力提升(.*)，若其同时处于燃烧以及冻结状态，则该效果提升(.*)。$"="<size\=24>Increase ATK by $1. When using a skill to attack foes, increase own ATK by $2 if they have Burn or Freeze, increase the effect by $3 if they have both Burn and Freeze.</size>"
+
+Kushinada-Hime
+r:"^亲暱的爱护(.*)$"="Intimate Care $1"
+r:"^效果命中提升(\d+\.\d+%)。每释放1个增益技能，则使所有同伴攻击力永久提升(.*)（处于前台时生效），上限(.*)层。$"="<size\=26>Increase Ailment ACC by $1. After using a buff, permanently increase all allies' ATK by $2 (works when active). Stacks up to $3 times.</size>"
+
+Yurlungur
+r:"^眠居圣泉的长蛇(.*)$"="Holy Pond's Serpent $1"
+r:"^暴击效果提升(\d+\.\d+%)。使场上敌人受到的暴击效果提升(\d+%)。若其处于触电状态，则额外提升(\d+%)。$"="<size\=24>Increase Crit DMG by $1. Increase all foes' Crit DMG Taken by $2, if they are inflicted with Shock, additionally increase the effect by $3.</size>"
+
+Scathach
+r:"^风袭之魔(.*)$"="Windswept Demon $1"
+r:"^攻击力提升(\d+\.\d+%)。对身上有任意减益效果的敌人造成的疾风属性伤害提升(.*)，若敌人处于风袭状态，则该效果提升(.*)。$"="<size\=24>Increase ATK by $1. Increase Wind DMG Dealt to foes with debuffs by $2, if they are inflicted with Windswept, then increase this effect by $3.</size>"
+
+Narcissus
+r:"^花香的迷失(.*)$"="Lost Fragrance $1"
+r:"^效果命中提升(\d+\.\d+%)。造成风袭效果后，使主目标敌人受到的伤害提升(.*)，效果持续(.*)回合。并提升自身效果命中(.*)。效果持续(.*)回合。$"="<size\=24>Increase Ailment ACC by $1. After inflicting Windswept, increase the main target's DMG Taken by $2 for $3 turns and increase own Ailment ACC by $4 for $5 turns.</size>"
+
+Okuninushi
+r:"^{{A}}的威仪(.*)$"="{{A}}'s Majesty $1"
+r:"^暴击率提升(\d+\.\d+%)。释放{{A}}技能对敌人造成伤害后，使敌人受到的念动属性伤害提升(\d+\.\d+%)，效果持续(\d+)回合，可叠加(\d+)层。$"="<size\=26>Increase Crit Rate by $1. After dealing damage with a {{A}} skill, increase foes' Psy DMG Taken by $2 for $3 turns, up to $4 stacks.</size>"
+r:"^暴击率提升(\d+\.\d+%)。释放{{A}}技能对敌人造成伤害后，使敌人受到的念动属性伤害提升(\d+\.\d+%)，效果持续(\d+)回合，可叠加(\d+)层。攻击身上带有该效果的敌人时，念动属性伤害提升(\d+%)。$"="<size\=22>Increase Crit Rate by $1. After dealing damage with a {{A}} skill, increase foes' Psy DMG Taken by $2 for $3 turns, up to $4 stacks. Increase Psy damage by $5 when attacking foes with this debuff.</size>"
+
+Hecatoncheires
+r:"^百次的阻拦(.*)$"="Hundredth Block $1"
+r:"^生命值提升(\d+\.\d+%)。所有同伴生命值低于(.*)时，受到的伤害降低(.*)。$"="<size\=28>Increase HP by $1. Decrease DMG Taken by $3 when all allies are below $2 HP.</size>"
+
+Red Rider
+r:"^褫夺的力量(.*)$"="Power of Deprivation $1"
+r:"^效果命中提升(\d+\.\d+%)。场上每有1个敌人处于减益状态。则自身效果命中提升(.*)。上限(\d+)层。$"="<size\=29>Increase Ailment ACC by $1. For every foe inflicted with debuffs, increase own Ailment ACC by $2, up to $3 stacks.</size>"
+
+Power
+r:"^调和的天平(.*)$"="<size\=27>Balance of Reconciliation $1</size>"
+r:"^攻击力提升(\d+\.\d+%)。对生命值低于(.*)的敌人造成的祝福属性伤害提升(.*)。若场上只有1个敌人，则该效果额外提升(.*)。$"="<size\=24>Increase ATK by $1. Increase Bless DMG Dealt to foes below $2 HP. If there is only 1 foe, then additionally increase this effect by $3.</size>"
+
+Horus
+r:"^无序的惩治(.*)$"="<size\=28>Disorderly Punishment $1</size>"
+r:"^攻击力提升(\d+\.\d+%)。场上每有1个敌人，就使自身释放{{A}}技能时造成的祝福属性伤害提升(.*)，上限(\d+)层。$"="Increase ATK by $1. For every foe, increase own {{A}} skill Bless DMG by $2, up to $3 stacks."
+
+Daisoujou
+r:"^救赎的奇迹(.*)$"="Miracle of Salvation $1"
+r:"^攻击力提升(\d+\.\d+%)。对于生命值低于(.*)的敌人造成的祝福属性伤害提升(.*)。$"="<size\=28>Increase ATK by $1. Increase Bless DMG Dealt by $3 when dealing damage to foes below $2 HP.</size>"
+r:"^攻击力提升(\d+\.\d+%)。对于生命值低于(.*)的敌人造成的祝福属性伤害提升(.*)。对于生命值低于(.*)的敌人造成伤害后，使自身回复(.*)攻击力的生命值。$"="<size\=24>Increase ATK by $1. Increase Bless DMG Dealt by $3 when dealing damage to foes below $2 HP. After dealing damage to foes below $4 HP, restore user's HP by $5 ATK.</size>"
+
+Sarasvati
+r:"^慧音的回声(.*)$"="Echoes of Wisdom $1"
+r:"^造成的治疗效果提升(\d+%)。造成治疗效果后，使场上当前生命值百分比最低的同伴获得相当于自身(\d+%)攻击力的额外回复。$"="Increase Healing Effect by $1. After healing, restore the lowest HP% ally HP for $2 ATK."
+r:"^造成的治疗效果提升(\d+%)。造成治疗效果后，使场上当前生命值百分比最低的同伴获得相当于自身(\d+%)攻击力的额外回复。若其生命值低于50%，则该效果提升(\d+%)。$"="<size\=24>Increase Healing Effect by $1. After healing, restore the lowest HP% ally HP for $2 ATK. Increase this effect by $3 if their HP is below 50%.</size>"
+
+Pazuzu
+r:"^永劫之咒(.*)$"="Eternal Curse $1"
+r:"^攻击力提升(\d+\.\d+%)。释放{{A}}技能攻击敌人后，有(\d+%)的固定机率使主目标敌人获得(\d+)层诅咒效果。并立刻结算(\d+)次诅咒的伤害。$"="<size\=22>Increase ATK by $1. After attacking foes with a {{A}} skill, there is a $2 fixed chance to inflict $3 stack of Curse to the main taget. Immediately triggers all of the main target's Curse stacks.</size>"
+
+Rangda
+r:"^厄运的诅咒(.*)$"="Curse of Misfortune $1"
+r:"^效果命中提升(\d+\.\d+%)。释放{{A}}技能造成诅咒属性伤害后，使技能主目标的攻击力降低(.*)，效果持续(.*)回合。$"="<size\=26>Increase Ailment ACC by $1. After dealing Curse damage with a {{A}} skill, decrease the main target's ATK by $2 for $3 turns.</size>"
+
+----------
+RANK 6
+----------
+Ganesha
+r:"^福祉的庇佑(.*)$"="Well-Being Blessing $1"
+r:"^防御力提升(\d+\.\d+%)。以同伴为目标释放技能后，使其受到的治疗效果提升(.*)，效果持续(.*)回合。并使自身受到的治疗效果额外提升(.*)。$"="<size\=24>Increase DEF by $1. After using a skill on allies, increase their Healing Received by $2 for $3 turn and additionally increase own Healing Received by $4.</size>"
+r:"^防御力提升(\d+\.\d+%)。以同伴为目标释放{{A}}技能后，使其受到的治疗效果提升(.*)，效果持续(.*)回合。并使自身受到的治疗效果额外提升(.*)。$"="<size\=24>Increase DEF by $1. After using a Persona skill on allies, increase their Healing Received by $2 for $3 turn. Then increase user's Healing Received by $4.</size>"
+
+Seth
+r:"^堕落的神力(.*)$"="Fallen Divine Power $1"
+r:"^暴击效果提升(\d+\.\d+%)。造成击倒后，使自身攻击力提升(.*)，效果持续2回合，并使得所有同伴造成的伤害提升(.*),效果持续1回合。$"="<size\=25>Increase Crit DMG by $1. After knocking down a foe, increase ATK by $2 for 2 turns and increase all allies' DMG Dealt by $3 for 1 turn.</size>"
+
+Baphomet
+r:"^恶魔的熔铸(.*)$"="Demonic Melter $1"
+r:"^攻击力提升(\d+\.\d+%)。释放{{A}}技能对处于燃烧状态的敌人造成伤害后，使所有敌人受到的火焰属性伤害提升(.*)，效果持续1回合。$"="<size\=23>Increase ATK by $1. After dealing {{A}} skill damage to foes inflicted with Burn, increase all foes' Fire DMG Taken by $2 for 1 turn.</size>"
+
+Cerberus
+r:"^拜火的血统(.*)$"="Heated Bloodline $1"
+r:"^暴击率提升(\d+\.\d+%)。使用火焰属性技能时，消耗的精力值降低(.*)。$"="Increase Crit Rate by $1. Decrease SP cost of Fire skills by $2."
+
+Yatagarasu
+r:"^焰阳之怒(.*)$"="Sun's Wrath $1"
+r:"^攻击力提升(\d+\.\d+%)。自身没有减益效果时，攻击力提升(.*)，造成的火焰属性伤害提升(.*)。$"="<size\=28>Increase ATK by $1. When you don't have any debuffs, increase ATK by $2 and Fire DMG Dealt by $3.</size>"
+
+Moloch
+r:"^火焰的庇佑(.*)$"="Flame's Blessing $1"
+r:"^效果抵抗提升(\d+\.\d+%)。使所有同伴在受到异常效果时，效果抵抗提升(.*)。$"="Increase Ailment RES by $1. Increase all allies' Ailment RES by $2 when they are inflicted with debuffs."
+r:"^效果抵抗升(\d+\.\d+%)。使所有同伴在受到异常效果时，效果抵抗提升(.*)。$"="Increase Ailment RES by $1. Increase all allies' Ailment RES by $2 when they are inflicted with debuffs."
+
+Surt
+r:"^烈焰的君主(.*)$"="Inferno Monarch $1"
+r:"^效果命中提升(\d+\.\d+%)。造成燃烧效果时，效果命中提升(.*)。对生命值高于50%的敌人该效果额外提升(.*)。$"="<size\=28>Increase Ailment ACC by $1. Increase Ailment ACC by $2 when inflicting Burn. Increase the effect by $3 when the foe is above 50% HP.</size>"
+
+Skadi
+r:"^影之契约(.*)$"="Shadow Contract $1"
+r:"^效果命中提升(\d+\.\d+%)。造成异常效果后，使自身攻击力提升(.*)，暴击率提升(.*)。效果持续2回合。若该异常状态是精神异常，则效果提升(.*)。$"="<size\=24>Increase Ailment ACC by $1. After inflicting debuffs, increase ATK by $2 and Crit Rate by $3 for 2 turns. If that debuff was a Mental Ailment, increase this effect by $3.</size>"
+
+Barong
+r:"^雷霆的{{A}}(.*)$"="Thunder's {{A}} $1"
+r:"^暴击率提升(\d+\.\d+%)。以1名敌人为目标释放电击属性{{A}}技能后，对其造成(.*)攻击力的额外电击属性伤害。$"="<size\=25>Increase Crit Rate by $1. After using a {{A}} skill to deal Elec damage to 1 foe, additionally deal $2 ATK Elec damage to them.</size>"
+
+Raja Naga
+r:"^招雷的血统(.*)$"="Electric Bloodline $1"
+r:"^暴击效果提升(\d+\.\d+%)。使用电击属性技能时，消耗的精力值降低(.*)。$"="Increase Crit DMG by $1. Decrease SP cost of Elec skills by $2."
+
+Norn
+r:"^命运的风袭(.*)$"="Windswept of Fate $1"
+r:"^防御力提升(\d+\.\d+%)。造成风袭效果后，使受到风袭效果的敌人的防御力降低(.*)，效果持续(.*)回合。$"="Increase DEF by $1. After inflicting Windswept, decrease the DEF of the inflicted foes by $2 for $3 turns."
+r:"^防御力提升(\d+\.\d+%)。造成风袭效果后，使受到风袭效果的敌人的防御力降低(.*)，并使自身的防御力提升(.*)。效果持续(.*)回合。$"="<size\=24>Increase DEF by $1. After inflicting Windswept, decrease the DEF of the inflicted foes by $2 and increase own DEF by $3 for $4 turns.</size>"
+
+Garuda
+r:"^风鸟的凝视(.*)$"="Wind Bird's Gaze $1"
+r:"^攻击力提升(\d+\.\d+%)。以敌人为目标释放疾风属性{{A}}技能后，使技能主目标受到的疾风属性伤害提升(.*)，效果持续(.*)回合。$"="<size\=26>Increase ATK by $1. After using Wind {{A}} skill on foes, increase the main target's Wind DMG Taken by $2 for $3 turns.</size>"
+
+Parvati
+r:"^地母的庇护(.*)$"="<size\=26>Mother Earth's Protection $1</size>"
+r:"^生命值提升(\d+\.\d+%)。造成治疗效果后，使受到治疗效果的同伴攻击力提升(.*)，防御力提升(.*)，效果持续(.*)回合。$"="<size\=28>Increase HP by $1. After using Healing skills, increase the healed allies' ATK by $2 and DEF by $3 for $4 turns.</size>"
+
+Titania
+r:"^月妖的扰乱(.*)$"="<size\=25>Fairy Queen's Disturbance $1</size>"
+r:"^造成的治疗效果提升(\d+%)。释放{{A}}技能造成治疗效果后，有(.*)基础机率使1名随机敌人陷入一种随机元素异常状态。$"="<size\=25>Increase Healing Effect by $1. After healing with a {{A}} skill, there is a $2 base chance to inflict 1 random foe with a random Elemental Ailment.</size>"
+r:"^造成的治疗效果提升(\d+%)。释放{{A}}技能造成治疗效果后，有(.*)基础机率使1名随机敌人陷入一种随机元素异常状态，效果持续2回合。$"="<size\=24>Increase Healing Effect by $1. After healing with a {{A}} skill, there is a $2 base chance to inflict 1 random foe with a random Elemental Ailment for 2 turns.</size>"
+r:"^造成的治疗效果提升(\d+%)。释放{{A}}技能造成治疗效果后，有(.*)基础机率使1名随机敌人陷入一种随机元素异常状态，并使其防御力降低(.*)。效果持续(.*)回合。$"="<size\=22>Increase Healing Effect by $1. After healing with a {{A}} skill, there is a $2 base chance to inflict 1 random foe with a random Elemental Ailment and decrease their DEF by $3 for $4 turns.</size>"
+
+Melchizedek
+r:"^仁王的审判(.*)$"="Verdict of Justice $1"
+r:"^攻击力提升(\d+\.\d+%)。自身释放技能时，根据所有同伴的祝福层数提升造成的祝福伤害(\d+%)，所有祝福属性同伴获得(\d+%)的增益，上限(\d+)层，持续(\d+)回合。$"="<size\=24>Increase ATK by $1. When a using a skill, increase Bless DMG by $2 for $5 turns based on the number of Blessing stacks on all allies, all Bless allies gain $3 of this effect. Stacks up to $4 times.</size>"
+r:"^攻击力提升(\d+\.\d+%)。自身释放技能时，根据所有同伴的祝福层数提升造成的祝福伤害(\d+%)，所有祝福属性同伴获得(\d+%)的增益，上限(\d+)层，持续(\d+)回合。释放技能时，为祝福层数不少于(\d+)层的怪盗，提供攻击力加成(\d+%)，(\d+)回合。$"="<size\=24>Increase ATK by $1. When a using a skill, increase Bless DMG by $2 for $5 turns based on the number of Blessing stacks on all allies, all Bless allies gain $3 of this effect. Stacks up to $4 times. When using a skill, increase ATK for allies with not less than $6 stacks of Blessing by $7 for $8 turns.</size>"
+
+Black Rider
+r:"^漆黑的审判(.*)$"="<size\=28>Pitch Black Judgement $1</size>"
+r:"^攻击力提升(\d+\.\d+%)。释放{{A}}技能时，根据目标敌人身上的诅咒效果层数，提升自身的攻击力，每层(.*)，上限(.*)层。$"="<size\=27>Increase ATK by $1. When using a {{A}} skill, increase own ATK by $2 based on the target's Curse stacks, up to $3 stacks.</size>"
+
+Pale Rider
+r:"^苍白的审判(.*)$"="Pale Judgment $1"
+r:"^效果命中提升(\d+\.\d+%)。使所有同伴在造成减益效果时，效果命中提升(.*)。$"="Increase Ailment ACC by $1. Increase all allies' Ailment ACC by $2 when they are inflicting debuffs."
+
+----------
+RANK 7
+----------
+Cu Chu
+r:"^咆哮的猛犬(.*)$"="Roaring Hound $1"
+r:"^暴击率提升(\d+\.\d+%)。暴击时为敌人附加「致命倒钩」，下次使用固有技能攻击引爆标记，使技能额外提升(\d+%)攻击力的伤害。引爆标记时有极低机率触发即死效果。$"="<size\=20>Increase Crit Rate by $1. Inflicts [Mortal Barb] when dealing Critical, detonates this the next time you use the unique skill, additionally increase skill damage by $1 ATK. When detonating, there is a very low chance of insta-kill.</size>"
+r:"^暴击率提升(\d+\.\d+%)。暴击时为敌人附加「致命倒钩」，下次使用固有技能攻击引爆标记，使技能额外提升(\d+%)攻击力的伤害。引爆标记时有低机率触发即死效果。$"="<size\=20>Increase Crit Rate by $1. Inflicts [Mortal Barb] when dealing Critical, detonates this the next time you use the unique skill, additionally increase skill damage by $1 ATK. When detonating, there is a low chance of insta-kill.</size>"
+致命倒钩=Mortal Barb
+r:"^致<color\=#000000>命</color>倒钩$"="M<color\=#000000>o</color>rtal Barb"
+使荆棘之枪造成额外效果=Gae Bulg triggers additional effects
+
+Siegfried
+r:"^勇者的无畏杀意(.*)$"="Fearless Hero $1"
+r:"^攻击力提升(\d+\.\d+%)。战斗开始时获得「龙血」：自身释放物理属性技能，攻击力提升(\d+%)，持续(\d+)回合。使用固有技能后，会强化「龙血」状态，释放物理属性技能额外提高(\d+%)伤害、(\d+%)暴击效果。$"="<size\=21>Increase ATK by $1. At the start of battle, gain [Dragon Blood]: When using Phys skills, increase ATK by $2 for $3 turns. When using the unique skill, boosts the effect of [Dragon Blood], additionally increase damage by $4 and Crit DMG by $5 when using Phys skills.</size>"
+龙血=Dragon Blood
+r:"^龙<color\=#000000>血</color>$"="D<color\=#000000>r</color>agon Blood"
+
+Chernobog
+r:"^蔓延的死寂(.*)$"="Deadly Silence $1"
+r:"^效果命中提升(\d+\.\d+%)。「噩梦」使效果抵抗降低(\d+%)、防御力降低(\d+%)，持续(\d+)回合。「噩梦」状态下，敌人受到物理伤害加深(\d+%)。敌人每受到(\d+)次物理伤害，额外获得(\d+)层，可叠加(\d+)层，每层独立计算，持续(\d+)回合。$"="<size\=22>Increase Ailment ACC by $1. [Nightmare] decrease Ailment RES by $2 and DEF by $3 for $4 turns. Under [Nightmare], increase foes' Phys DMG Taken by $5 for $9 turns. Additionally increase Phys DMG Taken stacks by $7 after the foe take $6 hits of Phys damage, up to $8 stacks, each stack counts down independently.</size>"
+噩梦=<size\=21>Nightmare</size>
+
+Throne
+r:"^超越尘世的圣者(.*)$"="Otherworldly Saint $1"
+r:"^攻击力提升(\d+\.\d+%)。战斗开始时获得(\d+)层「火种」。我方角色添加元素异常时，自身获得(\d+)层「火种」，若为燃烧则额外获得(\d+)层「火种」，持续(\d+)回合，上限(\d+)层，每次技能最多提供(\d+)层「火种」。自身对友方角色释放{{A}}技能时，若「火种」在(\d+)层以上，则消耗所有「火种」，每层使我方全体伤害提高(.*)，持续(\d+)回合，并有(\d+%)机率使随机1名敌人陷入燃烧状态。$"="<size\=20>Increase ATK by $1. At the start of battle, gain $2 [Tinder] stacks. Gains $3 [Tinder] stack when allies inflict Elemental Ailments, gain $4 additional [Tinder] stack if that Elemental Ailment was Burn. Lasts for $5 turns. Stack up to $6 times. Each skill can give up to $7 [Tinder] stacks. When using a {{A}} skill on allies, if [Tinder] is at $8 stacks or above, spend all [Tinder] and increase all allies' DMG Dealt by $9. Lasts for $10 turns. With a $11 base chance to inflict 1 random foe with Burn.</size>"
+火种=Tinder
+r:"^净<color\=#000000>世</color>之火$"="F<color\=#000000>i</color>re of Purification"
+r:"^释放技能造成伤害后，有(\d+%)基础机率使随机敌人陷入燃烧状态。$"="There is a $1 base chance to inflict Burn after dealing skill damage</size>"
+r:"^(\d+)层时释放技能，可以提升伤害$"="<size\=26>Increase damage when using a skill at $1 stacks</size>"
+
+Black Frost
+r:"^得逞了吼(.*)$"="Win-ho! $1"
+r:"^自身使用技能使敌人陷入倒地状态后，获得(\d+)层「暴风雪」：攻击力提升(\d+%)、冰冻伤害提升(\d+%)，上限(\d+)层，持续时间(\d+)回合。$"="<size\=25>When using skills to down foes, gain $1 stack of [Blizzard]: Increase ATK by $2 and Ice DMG by $3 for $5 turns, up to $4 stacks.</size>"
+r:"^攻击力提升(\d+\.\d+%)。自身使用技能使敌人陷入倒地状态后，获得(\d+)层「暴风雪」：攻击力提升(\d+%)、冰冻伤害提升(\d+%)，上限(\d+)层，持续时间(\d+)回合。$"="<size\=25>Increase ATK by $1. When using skills to down foes, gain $2 stack of [Blizzard]: Increase ATK by $3 and Ice DMG by $4 for $6 turns, up to $5 stacks.</size>"
+r:"^攻击力提升(\d+\.\d+%)。自身对敌方使用{{A}}技能造成伤害后，有(\d+%)的基础机率削弱主目标(\d+)层倒地值。自身使用技能使敌人陷入倒地状态后，获得(\d+)层「暴风雪」：攻击力提升(\d+%)、冰冻伤害提升(\d+%)，上限(\d+)层，持续时间(\d+)回合。$"="<size\=25>Increase ATK by $1. After dealing damage with a {{A}} skill on foes, $2 base chance to ignore weakness and decrease main target's Down Points by $3. When using skills to down foes, gain $4 stack of [Blizzard]: Increase ATK by $5 and Ice DMG by $6. Last for $8 turns. Stacks up to $7 times.</size>"
+暴风雪=Blizzard
+r:"^暴<color\=#000000>风</color>雪$"="B<color\=#000000>l</color>izzard"
+
+Yamata
+r:"^祭品的悲鸣(.*)$"="<size\=28>Screams of Sacrifice $1</size>"
+r:"^暴击率提升(\d+\.\d+%)。战斗开始时获得(\d+)层『祭品的悲鸣』。自身回合结束时获得(\d+)层『祭品的悲鸣』。自身释放固有技能时，若拥有(\d+)层『祭品的悲鸣』，则消耗(\d+)层『祭品的悲鸣』改为使所有敌人陷入<link\="s\|103"><u>冻结</u></link>效果，效果持续(\d+)回合，并使敌人受到的TECH伤害提升(.*)，持续(\d+)回合。$"="<size\=24>Increase Crit Rate by $1. At the start of battle, gain $2 [Screams of Sacrifice] stacks. At the end of user's turn, gain $3 [Screams of Sacrifice] stack. When using the unique skill, if user has $4 [Screams of Sacrifice] stacks, spend $5 [Screams of Sacrifice] stacks to inflict all foes with <link\="s|103"><u>Freeze</u></link> for $6 turns, then and increase all foes' TECHNICAL DMG Taken by $7 for $8 turns.</size>"
+祭品的悲鸣=Screams of Sacrifice
+r:"^祭<color\=#000000>品</color>的悲鸣$"="S<color\=#000000>c</color>reams of Sacrifice"
+r:"^达到(\d+)层时，使自身固有技能产生额外效果$"="When reaching $1 stacks, \nactivate bonus effects from unique skill"
+
+Seiryu
+r:"^东方神龙的庇荫(.*)$"="<size\=28>Eastern Dragon's Shade $1</size>"
+r:"^造成的治疗效果提升(\d+\.\d+%)。释放{{A}}技能造成治疗效果后，使目标同伴的效果命中、效果抵抗提升(.*)，效果持续(.*)回合。$"="<size\=28>Increase Healing Effect by $1. After healing with a {{A}} skill, increase the target's Ailment ACC and Ailment RES by $2 for $3 turns.</size>"
+
+Lakshmi
+r:"^清莲的舞步(.*)$"="Pure Lotus Dance $1"
+r:"^造成的治疗效果提升(\d+\.\d+%)。『莲华』造成治疗后，使受到治疗的同伴生命上限提升(.*)，效果持续(.*)回合。$"="<size\=26>Increase Healing Effect by $1. After healing with [Sacred Lotus], increase Max HP of the healed target by $2 for 2 turns.</size>"
+r:"^造成的治疗效果提升(\d+\.\d+%)。『莲华』造成治疗后，使受到治疗的同伴生命上限提升(.*)，效果持续2回合。『莲华』的治疗效果提升(.*)。$"="<size\=24>Increase Healing Effect by $1. After healing with [Sacred Lotus], increase Max HP of the healed target by $2 for 2 turns. Increase Healing Effect of [Sacred Lotus] by $3.</size>"
+莲华=Sacred Lotus
+r:"^莲<color\=#000000>华</color>$"="S<color\=#000000>a</color>cred Lotus"
+恢复同伴生命值=Restore HP to ally
+
+King Frost
+r:"^冰封的裁决(.*)$"="Frozen Adjudication $1"
+r:"^防御力提升(\d+\.\d+%)。为队友添加护盾时，主要目标获得防御力提升(.*)或冰冻伤害提升(.*)其中一个效果，持续(.*)回合。$"="<size\=26>Increase DEF by $1. After giving Shield to allies, increase the main target's DEF by $2 or Ice DMG Bonus by $3 for $4 turns.</size>"
+r:"^防御力提升(\d+\.\d+%)。为队友添加护盾时，主要目标获得防御力提升(.*)和冰冻伤害提升(.*)两个效果，持续(.*)回合。$"="<size\=26>Increase DEF by $1. After giving Shield to allies, increase the main target's DEF by $2 and Ice DMG Bonus by $3 for $4 turns.</size>"
+
+Oberon
+r:"^停滞岁月的雷击(.*)$"="<size\=26>Time Stopping Lightning $1</size>"
+r:"^暴击率提升(\d+\.\d+%)。场上只有1名敌人时，造成的电击属性伤害提升(.*)，暴击率提升(.*)。若敌人处于倒地状态，则效果提升(.*)。$"="<size\=24>Increase Crit Rate by $1. When there is only 1 foe, increase Elec DMG Dealt by $2 and Crit Rate by $3. Increase this effect by $3 if the foe is downed.</size>"
+
+Thor
+r:"^雷神的威严(.*)$"="<size\=28>Thunder God's Majesty $1</size>"
+r:"^<nobr>暴击效果提升(\d+\.\d+%)。友方怪盗释放电击属性的{{A}}技能/追加效果/HIGHLIGHT/{{B}}时，自身获得(\d+)层『雷神威势』，持续(\d+)回合，上限(\d+)层。自身释放{{A}}技能造成电击属性伤害时，若自身『雷神威势』为(\d+)层，使全体敌人受到电击属性伤害提升(.*)、受到电击属性暴击效果提升(.*)，持续(\d+)回合。$"="<size\=22>Increase Crit DMG by $1. When Thieves use Elec {{A}} skill/Follow Up/HIGHLIGHT/{{B}}, gain $2 [Thunder God's Might] stack. Lasts for $3 turns. Stacks up to $4 times. When user deals Elec damage with a {{A}} skill, if user has $5 [Thunder God's Might] stacks, increase all foes' Elec DMG Taken by $6 and Elec Crit DMG Taken $7. Lasts for $8 turns.</size>"
+r:"^雷<color\=#000000>神</color>威势$"="T<color\=#000000>h</color>under God's Might"
+雷神威势=Thunder God's Might
+电击伤害提升，技能『天召雷』的段数增加=Increase Elec DMG, increase the amount of times [Heavenly Thunder] can hit
+r:"^雷<color\=#000000>神</color>的威严$"="T<color\=#000000>u</color>under God's Majesty"
+
+Quetzalcoatl
+r:"^羽蛇之厉风(.*)$"="<size\=23>Feathered Serpent's Cyclone $1</size>"
+r:"^攻击力提升(\d+\.\d+%)。对生命值高于(.*)的敌人造成的疾风属性伤害提升(.*)。$"="<size\=28>Increase ATK by $1. Increase Wind DMG Dealt to foes above $2 HP by $3.</size>"
+
+Dionysus
+r:"^酒醉的狂欢(.*)$"="Drunken Revelry $1"
+r:"^暴击率提升(\d+\.\d+%)。以同伴为目标释放{{A}}技能后，使技能主目标的暴击效果提升(.*)，效果持续2回合。$"="<size\=28>Increase Crit Rate by $1. When using a {{A}} skill on allies, increase the main target's Crit DMG by $2 for 2 turns.</size>"
+
+Bishamonten
+r:"^暴怒的慧伞(.*)$"="Furious Umbrella $1"
+r:"^暴击率提升(\d+\.\d+%)。对敌人释放技能时，主目标敌人身上每有1层元素异常，则使其受到的核热伤害提升(.*)，上限(.*)层，效果持续(.*)回合。$"="<size\=22>Increase Crit Rate by $1. After using a skill on foes, increase the main target's Nuke DMG Taken by $2 for $4 turns for every Elemental Ailment they have. Stacks up to $3 times.</size>"
+r:"^暴击率提升(\d+\.\d+%)。对敌人释放技能时，主目标敌人身上每有1层元素异常，则使其受到的核热伤害提升(.*)，上限(.*)层，效果持续(.*)回合。并使所有其他敌人获得该效果的(.*)。$"="<size\=22>Increase Crit Rate by $1. After using a skill on foes, increase the main target's Nuke DMG Taken by $2 for $4 turns for every Elemental Ailment they have. Stacks up to $3 times. All other foes gain $5 of this effect."
+
+Dominion
+r:"^天使的号令(.*)$"="Angel's Command $1"
+r:"^攻击力提升(\d+\.\d+%)。以同伴为目标释放技能后，使自身获得(.*)层『号令』，同伴释放{{A}}技能造成伤害时，消耗(.*)层『号令』使其造成的伤害提升(.*)，效果持续(.*)回合。$"="<size\=22>Increase ATK by $1. After using a skill on allies, gain $2 [Commandment] stacks. When an ally deals {{A}} skill damage, spend $3 [Commandment] stack to increase their DMG Dealt by $4. Lasts for $5 turn.</size>"
+r:"^攻击力提升(\d+\.\d+%)。以同伴为目标释放技能后，使自身获得(.*)层『号令』，同伴释放{{A}}技能造成伤害时，消耗(.*)层『号令』使其造成的伤害提升(.*)，攻击力提升(.*)，效果持续(.*)回合。$"="<size\=21>Increase ATK by $1. After using a skill on allies, gain $2 [Commandment] stacks. When an ally deals {{A}} skill damage, spend $3 [Commandment] stack to increase their DMG Dealt by $4 and ATK by $5. Lasts for $6 turn.</size>"
+r:"^攻击力提升(\d+\.\d+%)。以同伴为目标释放{{A}}技能后，使自身获得(.*)层『号令』，同伴释放{{A}}技能造成伤害时，消耗(.*)层『号令』使其造成的伤害提升(.*)，效果持续(.*)回合。$"="<size\=21>Increase ATK by $1. After using a Persona skill on allies, gain $2 [Commandment] stacks. When an ally deals {{A}} skill damage, spend $3 [Commandment] stack to increase their DMG Dealt by $4 and ATK by $5. Lasts for $6 turn."
+r:"^攻击力提升(\d+\.\d+%)。以同伴为目标释放{{A}}技能后，使自身获得(.*)层『号令』，同伴释放{{A}}技能造成伤害时，消耗(.*)层『号令』使其造成的伤害提升(.*)，攻击力提升(.*)，效果持续(.*)回合。$"="<size\=20>Increase ATK by $1. After using a Persona skill on allies, gain $2 [Commandment] stacks. When an ally deals {{A}} skill damage, spend $3 [Commandment] stack to increase their DMG Dealt by $4 and ATK by $5. Lasts for $6 turn."
+
+r:"^号<color\=#000000>令</color>$"="C<color\=#000000>o</color>mmandment"
+号令=Commandment
+使同伴释放技能的伤害提升=Increase allies' skill damage
+
+Nebiros
+r:"^被诅咒的血统(.*)$"="Cursed Bloodline $1"
+r:"^<nobr>效果抵抗提升(\d+\.\d+%)。释放诅咒属性技能时，消耗的精力值降低(.*)。$"="<nobr>Increase Ailment RES by $1. Decrease SP cost of Curse skills by $2."
+
+Belial
+r:"^堕落之焰(.*)$"="Fallen Flame $1"
+r:"^效果命中提升(\d+\.\d+%)。敌人获得持续伤害类效果时，使其获得『地狱火』状态，每回合造成(.*)攻击力的伤害，效果持续(.*)回合，可叠加(.*)层。$"="<size\=23>Increase Ailment ACC by $1. Inflicts [Hellfire] when a foe is inflicted with Damage Over Time, deals $2 ATK damage per turn for $3 turns, up to $4 stack.</size>"
+r:"^效果命中提升(\d+\.\d+%)。敌人获得持续伤害类效果时，使其获得『地狱火』状态，每回合造成(.*)攻击力的伤害。效果持续(.*)回合，可叠加(.*)层。$"="<size\=23>Increase Ailment ACC by $1. Inflicts [Hellfire] when a foe is inflicted with Damage Over Time, deals $2 ATK damage per turn for $3 turns, up to $4 stack.</size>"
+r:"^效果命中提升(\d+\.\d+%)。敌人获得持续伤害类效果时，使其获得『地狱火』状态，每回合造成(.*)攻击力的伤害，目标生命值低于(.*)时伤害提升(.*)。效果持续(.*)回合，可叠加(.*)层。$"="<size\=21>Increase Ailment ACC by $1. Inflicts [Hellfire] when a foe is inflicted with Damage Over Time, deals $2 ATK damage per turn for 2 turns, increase the damage by $4 when the target is below $3 HP, up to $5 stack.</size>"
+地狱火=Hellfire
+
+Lilith
+r:"^暝夜的诱惑(.*)$"="Midnight Seduction $1"
+r:"^攻击力提升(\d+\.\d+%)。使用冰冻、疾风或诅咒属性的技能，使自身该属性伤害提升(.*)，伤害减免(.*)，持续(.*)回合。{{A}}使用冰冻、疾风或诅咒属性的技能，进化固有技能，使之附带一段相同属性的伤害，并且这次技能伤害大幅提升、获得临时穿透加成(.*)。$"="<size\=24>Increase ATK by $1. When using Ice, Wind, or Curse skill, increase that Elemental DMG by $2 and DMG RES by $3 for $4 turns. When {{A}} uses Ice, Wind, or Curse skill, evolves the unique skill, makes it deal 1 hit of that element's damage, heavily increase skill damage and gains $5 PEN.</size>"
+
+Trumpeter
+r:"^崩坏的号角(.*)$"="Horn of Ruin $1"
+r:"^效果命中提升(\d+\.\d+%)。自身对敌方使用{{A}}技能时，若技能目标的异常效果数量≥(.*)个，则使自身效果命中提升(.*)，并使敌人受到伤害提升(.*)，持续(.*)回合。自身成功添加精神异常效果后，额外使所有敌人防御力降低(.*)，持续(.*)回合。$"="<size\=22>Increase Ailment ACC by $1. When using a {{A}} skill on foes, if the target has ≥$2 debuffs, increase user's Ailment ACC by $3 and increase foes' DMG Taken by $4. Lasts for $5 turns. After inflicting a Mental Ailment, decrease foes' DEF by $6 more. Last for $7 turns.</size>"
+
+--------
+RANK 8
+--------
+Yoshitsune
+r:"^连胜的宿命(.*)$"="Victory Fortold $1"
+r:"^暴击效果提升(\d+\.\d+%)。战斗开始，获得「奇袭」(\d+)层。固有技能造成每段伤害有(\d+%)机率获得「奇袭」，每段提升自身攻击力(\d+%)，持续(\d+)回合，最多(\d+)层。达到(\d+)层，提升固有技能暴击率(\d+%)。$"="<size\=21>Increase Crit DMG by $1. At the start of battle, gain $2 stacks of [Guerrilla]. When using the unique skill there is a $3 chance to gain [Guerrilla], each stack increase own ATK by $4 for $5 turns, up to $6 stacks. Increase the Crit Rate of the unique skill by $8 when reaching $7 stacks.</size>"
+奇袭=Guerrilla
+r:"^攻击力提升(\d+%)，达到(\d+)层提升固有技能暴击率$"="Increase ATK by $1; \nAt $2 stacks, increase unique skill's Crit Rate"
+
+Vasuki
+r:"^连接天地的绞索(.*)$"="Coiling Clasp $1"
+r:"^效果命中提升(\d+\.\d+%)。战斗开始时获得(\d+)层「凝视」，友方同伴释放技能添加负面效果时，自身获得(\d+)层「凝视」，上限(\d+)层。\（每个同伴每回合最多添加(\d+)层「凝视」\）。自身释放{{A}}技能时，若拥有(\d+)层「凝视」，则消耗(\d+)层「凝视」，使技能主目标受到持续伤害效果提升(\d+%)。$"="<size\=22>Increase Ailment ACC by $1. Gain $2 [Gaze] stacks at the start of battle, when allies inflict a debuff with skills, gain $3 [Gaze] stack. Stacks up to $4 times. Each ally can give $5 [Gaze] stack per turn. When using a {{A}} skill, if user has $6 [Gaze] stacks, spend $7 [Gaze] stacks to increase the main target's Damage Over Time Effect Taken by $8.</size>"
+r:"^效果命中提升(\d+\.\d+%)。战斗开始时获得(\d+)层「凝视」，友方同伴释放技能添加负面效果时，自身获得(\d+)层「凝视」，上限(\d+)层。\（每个同伴每回合最多添加(\d+)层「凝视」\）。自身释放{{A}}技能时，若拥有(\d+)层「凝视」，则消耗(\d+)层「凝视」，使技能主目标受到持续伤害效果提升(\d+%)，并额外使其获得(\d+)层「蛇毒」。$"="<size\=22>Increase Ailment ACC by $1. Gain $2 [Gaze] stacks at the start of battle, when allies inflict a debuff with skills, gain $3 [Gaze] stack. Stacks up to $4 times. Each ally can give $5 [Gaze] stack per turn. When using a {{A}} skill, if user has $6 [Gaze] stacks, spend $7 [Gaze] stacks to increase the main target's Damage Over Time Effect Taken by $8. Also, inflict $9 [Venom] stack.</size>"
+凝视=Gaze
+蛇毒=Venom
+r:"^(\d+)层时释放技能触发额外效果$"="Activate bonus effects \nwhen using a skill at $1 stacks"
+r:"^凝<color\=#000000>视</color>$"="G<color\=#000000>a</color>ze"
+r:"^蛇<color\=#000000>毒</color>$"="V<color\=#000000>e</color>nom"
+
+Zaou-Gongen
+r:"^三世救度(.*)$"="<size\=28>Three Ages' Salvation $1</size>"
+r:"^攻击力提升(\d+\.\d+%)。释放{{A}}技能造成伤害后，使自身以及攻击力最高的反抗/支配同伴获得「不灭真理」，持续(\d+)回合。「不灭真理」：释放技能造成(\d+)次及以上伤害时，自身攻击力提升(\d+%)、伤害提升(\d+%)。$"="<size\=20>Increase ATK by $1. After dealing damage with a {{A}} skill, gives self and the highest ATK Assassin/Sweeper ally [Undying Truth] for $2 turns. [Undying Truth]: When dealing $3 hits of damage with skills, increase own ATK by $4 and DMG Dealt by $5.</size>"
+不灭真理=Undying Truth
+r:"^不<color\=#000000>灭</color>真理$"="U<color\=#000000>n</color>dying Truth"
+r:"^释放技能造成(\d+)次及以上伤害时，攻击力提升(\d+%)$"="When dealing $1 hits of damage with skills, increase ATK by $2"
+r:"^释放技能造成(\d+)次及以上伤害时，伤害提升(\d+%)$"="When dealing $1 hits of damage with skills, increase DMG Dealt by $2"
+创伤=Trauma
+受到火焰伤害后，受到暴击效果提升=<size\=24>Increase Crit DMG Taken after taking Fire damage</size>
+
+Sahimochi-no-Kami
+r:"^迅捷的送归者(.*)$"="Swift Returner $1"
+r:"^攻击力提升(\d+\.\d+%)。友方角色释放{{A}}技能时，自身获得(\d+)层「寒鳞」，上限(\d+)层。释放追加效果时获得(\d+)层「锋利寒鳞」，上限(\d+)层。自身对敌方角色释放{{A}}技能后，若自身「寒鳞」层数达到(\d+)层，则消耗所有「寒鳞」和「锋利寒鳞」，每层使敌人受到伤害提升(.*)，持续(\d+)回合。$"="<size\=22>Increase ATK by $1. When allies use a {{A}} skill, user gains $2 [Frostscale]. Stacks up to $3 times. When activating a Follow Up, gain $4 [Razor Frostscale]. Stacks up to $5 times. After using a {{A}} skill on foes, if user has $6 [Frostscale] stacks, spend all [Frostscale] and [Razor Frostscale] to increases foes' DMG Taken by $7 for each stack spent for $8 turn.</size>"
+r:"^攻击力提升(\d+\.\d+%)。战斗开始时，获得(\d+)层「寒鳞」。友方角色释放{{A}}技能时，自身获得(\d+)层「寒鳞」，上限(\d+)层。释放追加效果时获得(\d+)层「锋利寒鳞」，上限(\d+)层。自身对敌方角色释放{{A}}技能后，若自身「寒鳞」层数达到(\d+)层，则消耗所有「寒鳞」和「锋利寒鳞」，每层使敌人受到伤害提升(.*)，持续(\d+)回合。$"="<size\=22>Increase ATK by $1. At the start of battle, gain $2 [Frostscale] stacks. When allies use a {{A}} skill, user gains $3 [Frostscale]. Stacks up to $4 times. When activating a Follow Up, gain $5 [Razor Frostscale]. Stacks up to $6 times. After using a {{A}} skill on foes, if user has $7 [Frostscale] stacks, spend all [Frostscale] and [Razor Frostscale] to increases foes' DMG Taken by $8 for each stack spent for $9 turn.</size>"
+r:"^一<color\=#000000>寻</color>之凛$"="D<color\=#000000>i</color>vine Fathom"
+寒鳞=Frostscale
+锋利寒鳞=Razor Frostscale
+消耗时额外使敌人受到伤害提升=Increase foes' DMG Taken when spent
+r:"^寒<color\=#000000>鳞</color>$"="F<color\=#000000>r</color>ostscale"
+r:"^锋<color\=#000000>利</color>寒鳞$"="R<color\=#000000>a</color>zor Frostscale"
+
+Vishnu
+r:"^恩惠于众生(.*)$"="Blessing to All $1"
+r:"^暴击率提升(\d+\.\d+%)。增加风袭的效果命中(\d+%)，对风袭状态敌人造成伤害提升(\d+%)。\n添加或刷新风袭状态时额外降低敌人防御力(\d+%)，(\d+)回合。$"="<size\=22>Increase Crit Rate by $1. Increase Windswept Ailment ACC by $2 and increase DMG Dealt to foes with Windswept by $3. \nDecrease the foes' DEF by $4 when refreshing or inflicting Windswept for $5 turns.</size>"
+
+Kohryu
+r:"^祥瑞之主(.*)$"="<size\=28>Lord of Auspiciousness $1</size>"
+r:"^攻击力提升(\d+\.\d+%)。处于后台时也能生效：所有同伴每造成1种不同属性的伤害，使{{A}}获得(\d+)层『四象』，上限(\d+)层。自身回合开始时，若拥有至少(\d+)层『四象』，则清空所有『四象』获得『四象之力』：使自身攻击力提升(\d+%)，所有友方同伴攻击力提升(\d+%)，并进化自身技能，持续(\d+)回合。$"="<size\=22>Increase ATK by $1. Work when inactive: When allies deal different attribute damage, grant {{A}} $2 [Four Symbols] stack. Stacks up to $3 times. At the start of user's turn, if user has at least $4 [Four Symbols] stacks, spend all [Four Symbols] to gain [Four Symbols' Power]: Increase user's ATK by $5 and all allies' ATK by $6, then evolve the unique skill. Lasts for $7 turns.</size>"
+四象=Four Symbols
+四象的数量=Number of Four Symbols
+四象之力=Four Symbols' Power
+r:"^四<color\=#000000>象</color>$"="F<color\=#000000>o</color>ur Symbols"
+r:"^四<color\=#000000>象</color>之力$"="F<color\=#000000>o</color>ur Symbols' Power"
+
+Shiva
+r:"^因果的流转(.*)$"="Karma Reversal $1"
+r:"^攻击力提升(\d+\.\d+%)。每回合开始时获得『慧识』（处于后台时也能生效），最多叠加(\d+)层。使用固有技能消耗『慧识』，根据消耗数量获得以下效果：\n1层：增加本次念动攻击时的伤害(.*)。\n2层：增加敌人防御力降低(.*)，(.*)回合。\n3层：增加目标受到念动伤害时的暴击率(.*)，(.*)回合。$"="<size\=21>Increase ATK by $1. At the start of each turn, gain 1 [Wisdom] stack (activate even in reserve). Stacks up to $2 times. When using the unique skill to spend [Wisdom], apply the following based on the number of stacks spent: \n1 stack: Increase this skill's damage by $3. \n2 stacks: Decrease all foes' DEF by $4 for $5 turn. \n3 stacks: Increase all foes' Psy DMG Crit Taken Rate by $6 for $7 turn.</size>"
+慧识=Wisdom
+r:"^慧<color\=#000000>识</color>$"="W<color\=#000000>i</color>sdom"
+强化固有技能『{{A}}之舞』=Upgrade [Dance of Destruction]
+
+Sraosha
+r:"^罪恶的倾听者(.*)$"="Listener of Sin $1"
+r:"^攻击力提升(\d+\.\d+%)。战斗开始时，获得(\d+)层「神之耳」，持续(\d+)回合，上限(\d+)层。友方释放HIGHLIGHT时，获得(\d+)层「神之耳」。祝福属性同伴释放HIGHLIGHT时额外获得(\d+)层「神之耳」。使用固有技能时，消耗所有「神之耳」，每层使敌人受到祝福属性伤害提升(\d+%)，持续(\d+)回合。若「神之耳」达到(\d+)层，额外使敌人受到祝福属性时的防御降低(\d+%)。$"="<size\=21>Increase ATK by $1. At the start of battle, gain $2 stacks of [God's Ear] for $3 turns, up to $4 stacks. When allies use HIGHLIGHT, gain $5 stack of [God's Ear], additionally gains $6 stack of [God's Ears] when Bless allies use HIGHLIGHT. When using the unique skill, consumes all [God's Ear], each stack increase Bless DMG Taken by $7 for $8 turns. If [God's Ear] reaches $9 stacks, additionally decrease foes' DEF when taking Bless damage by $10.</size>"
+r:"^攻击力提升(\d+\.\d+%)。战斗开始时，获得(\d+)层「神之耳」，持续(\d+)回合，上限(\d+)层。友方释放HIGHLIGHT时，获得(\d+)层「神之耳」。祝福属性怪盗释放HIGHLIGHT时额外获得(\d+)层「神之耳」。使用固有技能时，消耗所有「神之耳」，每层使敌人受到祝福属性伤害提升(\d+%)，持续(\d+)回合。若「神之耳」达到(\d+)层，额外使敌人受到祝福属性时的防御降低(\d+%)。$"="<size\=21>Increase ATK by $1. At the start of battle, gain $2 stacks of [God's Ear] for $3 turns, up to $4 stacks. When allies use HIGHLIGHT, gain $5 stack of [God's Ear], additionally gains $6 stack of [God's Ears] when Bless allies use HIGHLIGHT. When using the unique skill, consumes all [God's Ear], each stack increase Bless DMG Taken by $7 for $8 turns. If [God's Ear] reaches $9 stacks, additionally decrease foes' DEF when taking Bless damage by $10.</size>"
+r:"^罪<color\=#000000>恶</color>的倾听者$"="L<color\=#000000>i</color>stener of Sin"
+r:"^神<color\=#000000>之</color>耳$"="G<color\=#000000>o</color>d's Ear"
+神之耳=God's Ear
+发动绝对服从时获得额外效果=<size\=25>Additional effects when using Absolute Obedience</size>
+r:"^绝<color\=#000000>对</color>服从$"="A<color\=#000000>b</color>solute Obedience"
+
+Alice
+r:"^重生的诅咒(.*)$"="Curse of Rebirth $1"
+r:"^效果命中提升(\d+\.\d+%)。使所有敌人受到的诅咒属性伤害提升(.*)。所有同伴每释放1个诅咒属性的{{A}}技能，则使{{B}}的效果命中、攻击力提升(.*)，效果持续2回合，上限3层。$"="<size\=24>Increase Ailment ACC by $1. Increase all foes' Curse DMG Taken by $2. After any ally uses Curse skills, increase {{B}}'s Ailment ACC and ATK by $3 for 2 turns, up to 3 stacks.</size>"
+
+Nian
+r:"^岁暮出没的恶兽(.*)$"="Yearly Beast $1"
+r:"^攻击力提升(\d+\.\d+%)。对敌人使用{{A}}技能后，使技能目标获得「岁之灭祀」，持续(\d+)回合。拥有「岁之灭祀」的角色首次受到火焰伤害时会获得「惊恐」：受到伤害提升(\d+%)，持续(\d+)回合，并有(\d+%)的基础机率附著燃烧，持续(\d+)回合。$"="<size\=21>Increase ATK by $1. After using {{A}} skill on foes, inflicts the targets with [Yearly Sacrifice] for $2 turns. foes with [Yearly Sacrifice] will gain [Frightened] when taking Fire damage for the first time: Increase DMG Taken by $3 for $4 turns, with a $5 base chance to inflict Burn for $6 turns.</size>"
+岁之灭祀=Yearly Sacrifice
+惊恐=Frightened
+r:"^受到火焰属性伤害时，获得(\d+)层『惊恐』$"="Gain [Frightened] when taking Fire damage"
+r:"^降<color\=#000000>祸</color>吞禧$"="F<color\=#000000>o</color>rtune Devourer"
+r:"^岁<color\=#000000>之</color>灭祀$"="Y<color\=#000000>e</color>arly Sacrifice"
+r:"^惊<color\=#000000>恐</color>$"="F<color\=#000000>r</color>ightened"
+
+Sandalphon
+r:"^庞然的守护(.*)$"="Higher Protection $1"
+r:"^防御力提升(\d+\.\d+%)。{{A}}在场时使处于护盾下的同伴防御力提升(\d+%)，处于后台时获得(\d+%)增益效果。$"="<size\=25>Increase DEF by $1. When {{A}} is present, increase all shielded allies' DEF by $2, gain $3 of this effect when not present.</size>"
+r:"^防御力提升(\d+\.\d+%)。{{A}}在场时使处于护盾下的同伴防御力提升(\d+%)，处于后台时获得(\d+%)增益效果。释放固有技能时，消耗的生命值降低至(\d+%)。$"="<size\=22>Increase DEF by $1. When {{A}} is present, increase all shielded allies' DEF by $2, gain $3 of this effect when not present. Decrease the HP cost to $4 when using the unique skill.</size>"
+
+--------
+RANK 9
+--------
+Macabre
+r:"^勿忘人终有一死(.*)$"="Memento Mori $1"
+r:"^攻击力提升(\d+\.\d+%)。\n战斗开始时，自身获得(\d+)层「亡灵舞步」。友方同伴释放{{A}}技能造成伤害后，自身获得(\d+)层「亡灵舞步」，上限(\d+)层。\n自身对敌人释放{{A}}技能后，使所有敌人受到暴击效果提升(.*)，持续(\d+)回合。\n若「亡灵舞步」达到(\d+)层，则消耗所有「亡灵舞步」，使目标受到支配角色攻击时，受到总伤害增幅提升(.*)，持续(\d+)回合。$"="Increase ATK by $1. \nAt the start of battle, user gains $2 [Dance of Death] stacks. After allies deal damage with a Persona skill, user gains $3 [Dance of Death] stack. Stacks up to $4 times. After user uses a Persona skill on foes, increase all foe's Crit DMG Taken by $5 for $6 turns. \nIf user has $7 [Dance of Death] stacks, spend all [Dance of Death] stacks and increase target's Sweeper Total DMG Taken Amp by $8 for $9 turns."
+亡灵舞步=Dance of Death
+r:"^亡<color\=#000000>灵</color>舞步$"="D<color\=#000000>a</color>nce of Death"
