@@ -55,14 +55,14 @@ r:"^在「{{A}}」累計發現過(\d+)次BOSS\((\d+)/(\d+)\)"="Discover $1 BOSS 
 和{{A}}對話=Talk to {{A}}
 
 ----------
-Distorted Adventure
+Twisted Trial
 ----------
 激鬥=<size\=20>Normal</size>
 限時=<size\=18>Limited Time</size>   <size\=1>.</size>
 每日次數=<size\=18>Daily Attempts</size>
 今日剩餘次數：=Attempts Left:
 已挑戰=Challenged
-奇遇點券=Adventure Coupon
+奇遇點券=Trial Coupon
 {{A}}的躁動={{A}}'s Agitation
 根據共敘者等級提升試用角色能力：\n<color\=#FFFC40>·共敘者未解鎖-試用E</color>\n·共敘者RANK1-試用D\n·共敘者RANK3-試用C\n·共敘者RANK5-試用B\n·共敘者RANK7-試用A\n·共敘者RANK9-試用S=Upgrade trial character based on Sympathizer Rank:\n<color\=#FFFC40>·Sympathizer locked - Trial E</color>\n·Sympathizer Rank 1 - Trial D\n·Sympathizer Rank 3 - Trial C\n·Sympathizer Rank 5 - Trial B\n·Sympathizer Rank 7 - Trial A\n·Sympathizer Rank 9 - Trial S
 根據共敘者等級提升試用角色能力：\n·共敘者未解鎖-試用E\n<color\=#FFFC40>·共敘者RANK1-試用D</color>\n·共敘者RANK3-試用C\n·共敘者RANK5-試用B\n·共敘者RANK7-試用A\n·共敘者RANK9-試用S=Upgrade trial character based on Sympathizer Rank:\n·Sympathizer locked - Trial E\n<color\=#FFFC40>·Sympathizer Rank 1 - Trial D</color>\n·Sympathizer Rank 3 - Trial C\n·Sympathizer Rank 5 - Trial B\n·Sympathizer Rank 7 - Trial A\n·Sympathizer Rank 9 - Trial S
@@ -122,6 +122,7 @@ BOSS被擊敗或逃跑後透過郵件發放獎勵=Rewards will be sent to Mail a
 剛剛瀏覽=Just Viewed
 該BOSS即將逃跑，是否確認挑戰？\n若在挑戰過程中逃跑，本場戰鬥無效。=The BOSS is about to escape. If the BOSS escapes during this attempt, this battle will be invalidated. Proceed?
 r:"^當前有(\d+)名玩家正在進行該BOSS的挑戰，若在挑戰過程中BOSS被擊敗，則本場戰鬥無效。你確認要挑戰嗎？$"="There are currently $1 player(s) attempting this BOSS. If the BOSS is defeated during their attempt, this battle will be invalidated. Proceed?"
+您的可獲取獎勵次數已用盡，本次挑戰您無法獲得任何獎勵，您確定要挑戰嗎？=No reward attempts left. You will not receive any rewards from this challenge. Proceed?
 
 特殊獎勵=<size\=20>Special Rewards</size>
 <color\=#00FDFC>BOSS發現</color>獎勵=<color\=#00FDFC>Discover BOSS</color>
@@ -153,7 +154,11 @@ r:"^<color\=#FFFC40>反抗</color>怪盜最終傷害降低(\d+%)。$"="Decrease 
 r:"^<color\=#FFFC40>支配</color>怪盜最終傷害降低(\d+%)。$"="Decrease <color\=#FFFC40>Sweeper</color> Thieves' Final DMG by $1"
 
 r:"^<color\=#FFFFFF>敵人剩餘進攻次數：</color><color\=#FFF000>(\d+)</color>$"="<color\=#FFFFFF>Boss Attacks Left:</color> <color\=#FFF000>$1</color>"
+sr:"^<color\=#FF0000>(.*)</color>受到了「(.*)」的影響……$"="<color\=#FF0000>$1</color> affected by [$2]..."
+
 該BOSS已逃跑，本次作戰不會扣除挑戰次數=The BOSS has escaped, no attempt will be spent for this battle.
 確定要逃離戰鬥嗎？逃離後不會獲得獎勵，不會扣除挑戰次數。=Do you want to retreat? You will not be rewarded and no attempt will be spent.
+該BOSS已逃跑，本次作戰將不會有成績=The BOSS has escaped, this battle will not count
 主動撤退，本次作戰將不會有成績，不會扣除挑戰次數=Manual retreat, this battle will not count and no challenge attempt will be spent.
-sr:"^<color\=#FF0000>(.*)</color>受到了「(.*)」的影響……$"="<color\=#FF0000>$1</color> affected by [$2]..."
+同一BOSS僅可挑戰一次，您已挑戰過！可分享給他人協助擊殺=Each BOSS can only be challenged once! Share this with others to help defeat it.
+該BOSS已被擊敗=This BOSS has been defeated
