@@ -50,6 +50,8 @@ r:"^在「{{A}}之章 」中完成(\d+)個章節\((\d+)/(\d+)\)$"="Complete $1 [
 在「{{A}}」累計發現過1次BOSS=Discover 1 BOSS in [{{A}}]
 r:"^在「{{A}}」累計發現過(\d+)次BOSS\((\d+)/(\d+)\)"="Discover $1 BOSS in [{{A}}] ($2/$3)"
 
+劇情描述：=Description:
+獎勵預覽：=Rewards:
 劇情簡介=Synopsis
 和JOKER對話=Talk to Joker
 和{{A}}對話=Talk to {{A}}
@@ -57,13 +59,18 @@ r:"^在「{{A}}」累計發現過(\d+)次BOSS\((\d+)/(\d+)\)"="Discover $1 BOSS 
 ----------
 Twisted Trial
 ----------
+扭曲的奇遇·JOKER=Twisted Trial·Joker
+扭曲的奇遇·MONA=Twisted Trial·Mona
+當前已完成目標：=Goals:
+『奇遇鑰匙』\n用於解鎖「扭曲的奇遇」玩法中的任意挑戰章節。可在「契約之間」-「認知精選」商店中進行兌換。=[Adventure Key]\nUsed to unlock [Twisted Trial]. Can be exchanged from [Cognition Shop]
+{{A}}的躁動={{A}}'s Agitation
+{{A}}的迷幻={{A}}'s Trance
 激鬥=<size\=20>Normal</size>
 限時=<size\=18>Limited Time</size>   <size\=1>.</size>
 每日次數=<size\=18>Daily Attempts</size>
 今日剩餘次數：=Attempts Left:
 已挑戰=Challenged
 奇遇點券=Trial Coupon
-{{A}}的躁動={{A}}'s Agitation
 根據共敘者等級提升試用角色能力：\n<color\=#FFFC40>·共敘者未解鎖-試用E</color>\n·共敘者RANK1-試用D\n·共敘者RANK3-試用C\n·共敘者RANK5-試用B\n·共敘者RANK7-試用A\n·共敘者RANK9-試用S=Upgrade trial character based on Sympathizer Rank:\n<color\=#FFFC40>·Sympathizer locked - Trial E</color>\n·Sympathizer Rank 1 - Trial D\n·Sympathizer Rank 3 - Trial C\n·Sympathizer Rank 5 - Trial B\n·Sympathizer Rank 7 - Trial A\n·Sympathizer Rank 9 - Trial S
 根據共敘者等級提升試用角色能力：\n·共敘者未解鎖-試用E\n<color\=#FFFC40>·共敘者RANK1-試用D</color>\n·共敘者RANK3-試用C\n·共敘者RANK5-試用B\n·共敘者RANK7-試用A\n·共敘者RANK9-試用S=Upgrade trial character based on Sympathizer Rank:\n·Sympathizer locked - Trial E\n<color\=#FFFC40>·Sympathizer Rank 1 - Trial D</color>\n·Sympathizer Rank 3 - Trial C\n·Sympathizer Rank 5 - Trial B\n·Sympathizer Rank 7 - Trial A\n·Sympathizer Rank 9 - Trial S
 根據共敘者等級提升試用角色能力：\n·共敘者未解鎖-試用E\n·共敘者RANK1-試用D\n<color\=#FFFC40>·共敘者RANK3-試用C</color>\n·共敘者RANK5-試用B\n·共敘者RANK7-試用A\n·共敘者RANK9-試用S=Upgrade trial character based on Sympathizer Rank:\n·Sympathizer locked - Trial E\n·Sympathizer Rank 1 - Trial D\n<color\=#FFFC40>·Sympathizer Rank 3 - Trial C</color>\n·Sympathizer Rank 5 - Trial B\n·Sympathizer Rank 7 - Trial A\n·Sympathizer Rank 9 - Trial S
@@ -116,12 +123,13 @@ sr:"^(.*)於(.*)造成了(.*)的傷害$"="$1 dealt $3 damage at $2"
 貢獻占比=<size\=20>Contributions</size>
 造成傷害：=<size\=26>Damage Dealt:</size>
 貢獻占比：=<size\=26>Contributions:</size>
-BOSS被擊敗或逃跑後透過郵件發放獎勵=Rewards will be sent to Mail after the BOSS is defeated or escaped
+BOSS被擊敗或逃跑後可領取獎勵=You can claim rewards after this BOSS is defeated or escaped
+BOSS被擊敗或逃跑後透過郵件發放獎勵=Rewards will be sent to Mail after this BOSS is defeated or escaped
 是否接受挑戰=Accept and challenge
 （確認接受挑戰將無法刷新和放棄，並且當前BOSS被擊殺或逃跑前無法發現新的BOSS）=(This will prevent refreshing and resetting. You cannot discover a new BOSS until this BOSS is defeated or escapes.)
 剛剛瀏覽=Just Viewed
-該BOSS即將逃跑，是否確認挑戰？\n若在挑戰過程中逃跑，本場戰鬥無效。=The BOSS is about to escape. If the BOSS escapes during this attempt, this battle will be invalidated. Proceed?
-r:"^當前有(\d+)名玩家正在進行該BOSS的挑戰，若在挑戰過程中BOSS被擊敗，則本場戰鬥無效。你確認要挑戰嗎？$"="There are currently $1 player(s) attempting this BOSS. If the BOSS is defeated during their attempt, this battle will be invalidated. Proceed?"
+該BOSS即將逃跑，是否確認挑戰？\n若在挑戰過程中逃跑，本場戰鬥無效。=This BOSS is about to escape. If it escapes during this attempt, this battle will be invalidated. Proceed?
+r:"^當前有(\d+)名玩家正在進行該BOSS的挑戰，若在挑戰過程中BOSS被擊敗，則本場戰鬥無效。你確認要挑戰嗎？$"="There are currently $1 player(s) attempting this BOSS. If it is defeated during their attempt, this battle will be invalidated. Proceed?"
 您的可獲取獎勵次數已用盡，本次挑戰您無法獲得任何獎勵，您確定要挑戰嗎？=No reward attempts left. You will not receive any rewards from this challenge. Proceed?
 
 特殊獎勵=<size\=20>Special Rewards</size>
@@ -146,8 +154,19 @@ r:"^鋼<color\=#000000>化</color>皮膚$"="T<color\=#000000>e</color>mpered Ski
 敵人每個回合開始時獲得『鋼化皮膚』，使自己受到的最終傷害大幅降低。=Foes will gain [Tempered Skin] at the start of each turn, heavily decreasing its Final DMG Taken.
 威壓氣場=Pressure Aura
 sr:"^威壓氣場(.*)$"="Pressure Aura $1"
-r:"^威威<color\=#000000>壓</color>氣場$"="P<color\=#000000>r</color>essure Aura"
+r:"^威<color\=#000000>壓</color>氣場$"="P<color\=#000000>r</color>essure Aura"
 敵人每個回合開始時給所有怪盜添加『威壓氣場』，使其造成的最終傷害大幅降低。=Foes will inflict all Thieves with [Pressure Aura] at the start of each turn, heavily decreasing their Final DMG Dealt.
+sr:"^生命試煉(.*)$"="Health Trial $1"
+r:"^生<color\=#000000>命</color>試煉$"="H<color\=#000000>e</color>alth Trial"
+我方生命值不滿的角色攻擊時，造成的最終傷害降低。=When allies attack at not max HP, decrease Final DMG Dealt.
+sr:"^堅硬身軀(.*)$"="Harden Body $1"
+r:"^堅<color\=#000000>硬</color>身軀$"="H<color\=#000000>a</color>rden Body"
+敵人防禦力大幅提高。=Heavily increase foe's DEF.
+防禦力大幅提高=Heavily increase DEF
+sr:"^閃耀破敵(.*)$"="Shining Strike $1"
+r:"^閃<color\=#000000>耀</color>破敵$"="S<color\=#000000>h</color>ining Strike"
+敵人受到HIGHLIGHT、{{A}}、{{B}}傷害增加，受到其他類型傷害降低。=Increase foes' HIGHLIGHT, {{A}}, and {{B}} DMG Taken; decrease other damage types' DMG Taken.
+
 反抗枷鎖=Assassin Shackles
 r:"^<color\=#FFFC40>反抗</color>怪盜最終傷害降低(\d+%)。$"="Decrease <color\=#FFFC40>Assassin</color> Thieves' Final DMG by $1"
 支配枷鎖=Sweeper Shackles
@@ -156,9 +175,17 @@ r:"^<color\=#FFFC40>支配</color>怪盜最終傷害降低(\d+%)。$"="Decrease 
 r:"^<color\=#FFFFFF>敵人剩餘進攻次數：</color><color\=#FFF000>(\d+)</color>$"="<color\=#FFFFFF>Boss Attacks Left:</color> <color\=#FFF000>$1</color>"
 sr:"^<color\=#FF0000>(.*)</color>受到了「(.*)」的影響……$"="<color\=#FF0000>$1</color> affected by [$2]..."
 
-該BOSS已逃跑，本次作戰不會扣除挑戰次數=The BOSS has escaped, no attempt will be spent for this battle.
+該BOSS已逃跑，本次作戰不會扣除挑戰次數=This BOSS has escaped, no attempt will be spent for this battle.
 確定要逃離戰鬥嗎？逃離後不會獲得獎勵，不會扣除挑戰次數。=Do you want to retreat? You will not be rewarded and no attempt will be spent.
-該BOSS已逃跑，本次作戰將不會有成績=The BOSS has escaped, this battle will not count
+該BOSS已逃跑，本次作戰將不會有成績=This BOSS has escaped, this battle will not count
+該BOSS已被擊敗，本次作戰將不會有成績=This BOSS has been defeated, this battle will not count
 主動撤退，本次作戰將不會有成績，不會扣除挑戰次數=Manual retreat, this battle will not count and no challenge attempt will be spent.
 同一BOSS僅可挑戰一次，您已挑戰過！可分享給他人協助擊殺=Each BOSS can only be challenged once! Share this with others to help defeat it.
-該BOSS已被擊敗=This BOSS has been defeated
+
+已結算=Settled
+該BOSS已被擊敗=<size\=18>This BOSS has been defeated</size>
+該BOSS已被擊敗，可獲取：=You can obtain:
+r:"^{{A}} \*(\d+)$"="<size\=20>{{A}} *$1</size>"
+r:"^第(\d+)名排行獎勵$"="Top $1"
+快速擊殺獎勵=Speed Clear
+最後一擊獎勵=Last Strike
