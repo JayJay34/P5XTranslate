@@ -379,7 +379,8 @@ r:"^李<color\=#ff0000ff>瑤</color>鈴$"="Yao<color\=#ff0000ff>ling</color> Li"
 r:"^富<color\=#ff0000ff>山</color> {{A}}$"="{{A}} To<color\=#ff0000ff>mi</color>yama"
 r:"^黑<color\=#ff0000ff>谷</color> 清$"="Ki<color\=#ff0000ff>yo</color>shi Kurotani"
 r:"^椎<color\=#ff0000ff>名</color>{{A}}$"="{{A}} Sh<color\=#ff0000ff>ii</color>na"
-r:"^坂<color\=#ff0000ff>井</color>{{A}}$"="Ayaka <color\=#ff0000ff>Sa</color>kai"
+r:"^坂<color\=#ff0000ff>井</color>{{A}}$"="{{A}} <color\=#ff0000ff>Sa</color>kai"
+r:"^坂<color\=#ff0000ff>井</color> {{A}}$"="{{A}} <color\=#ff0000ff>Sa</color>kai"
 r:"^佐<color\=#ff0000ff>原</color> {{A}}$"="Mi<color\=#ff0000ff>yu</color> Sahara"
 r:"^北<color\=#ff0000ff>里</color> {{A}}$"="{{A}} Ki<color\=#ff0000ff>ta</color>zato"
 r:"^蘆<color\=#ff0000ff>谷</color> {{A}}$"="{{A}} A<color\=#ff0000ff>shi</color>ya"
@@ -2052,6 +2053,17 @@ r:"^愛之日限定營業中\((\d+)/(\d+)\)$"="<size\=18>Valentine's Day Offer (
 心跳舞臺=Heartbeat Stage
 專屬簽名=Exclusive Signature
 
+{{A}}的吉祥物=<size\=18>{{A}}' Mascots</size>
+r:"^{{A}}的吉祥物\((\d+)/(\d+)\)$"="<size\=15>{{A}}' Mascots ($1/$2)</size>"
+一時休戰=Temporary Truce
+硬派作風=Hardboiled Style
+豪華大餐=Lavish Feast
+吵架而已=Just Arguing
+作戰會議=Strategy Session
+飛車狂飆=Speedy Race
+發現寶藏=Found Treasure
+心之軌跡=Track of Heart
+
 sr:"^(.*)遊戲廳中的娃娃機，\n本期可限時抓取超稀有娃娃\n「<color\=#ffd145>(.*)</color>」、「<color\=#ffd145>(.*)</color>」。$"="<size\=23>Crane machine in the $1 arcade,\ncan obtain the limited super rare doll\n[<color\=#ffd145>$2</color>], [<color\=#ffd145>$3</color>].</size>"
 娃娃機=Crane Game
 遊戲中心兌獎券=Arcade Ticket
@@ -3081,11 +3093,28 @@ r:"^(\d+)級星空祝福$"="Lv. $1 Mindscape Stats Set"
 r:"^(\d+)級星穹祝福$"="Lv. $1 Mindscape Skills Set"
 r:"^(\d+)級啟示補給$"="Lv. $1 Revelation Set"
 
+r:"^特惠放送·命運(.*)$"="Special Offer: Ticket $1"
+
 月度生活補給禮=Monthly Gift Set
 怪盜·海之心=Ocean's Heart
 搖滾龐克=Rocker Outfit
 啪嘰熊·粉=Pink Mokokuma Pj's
 服飾染色噴霧=Outfit Dye Spray
+
+契約回饋憑證=Pull Bonus Certificate
+r:"^(.*)版本期間達成$"="<size\=22>Achieved during $1</size>"
+僅限在<size\=32><color\=#FFE400>特定版本UP契約</color></size>中簽約使用=<size\=22>Can only be used in <color\=#FFE400>specific version Rate UP Contract</color></size>
+注：如果中途簽約失敗，將無法參與後續回饋計畫=Note: Interrupting the pull chain will forfeit the subsequent Rebate Plan
+r:"^購買剩餘時間：<size\=32><color\=#FFE400>(\d+)天(\d+)小時</color></size>$"="<size\=26>Purchase time left: <color\=#FFE400>$1d $2h</color></size>"
+r:"^購買剩餘時間：<size\=32><color\=#FFE400>(\d+)小時(\d+)分</color></size>$"="<size\=26>Purchase time left: <color\=#FFE400>$1h $2m</color></size>"
+
+r:"^抽取(.*)版本UP怪盜可領取$"="Pull $1 Rate UP Character to claim"
+r:"^在(.*)版本限定UP角色契約開啟後，可用於在限定UP契約中使用。\n在該限定UP角色契約結束後，將轉化為紀念道具。\n紀念道具使用後，將轉化為「{{A}}」。$"="Can be used in $1 limited Rate UP Character Contract.\nAfter that limited Rate UP Character Contract ends, convert this into [{{A}}]."
+於命運的共振中顯現，為墜向心之海的冒險者，贈予來自時間軌跡的饋禮。=Revealed in the resonance of destiny, it bestows upon the adventurer who falls into the Sea of Souls a gift from the tapestry of time.
+
+r:"^僅用於(.*)版本限定UP角色契約$"="Can only be used in $1 limited Rate UP Character Contract"
+簽約成功可領取=Pull to claim
+r:"^(.*)版本開放$"="Available in $1"
 
 r:"^加贈$"="Get            <size\=1>.</size>"
 枚{{A}}=      <size\=17>{{A}}</size>
@@ -5381,7 +5410,6 @@ r:"^小型魚的優質率增加(.*)。$"="<size\=24>Increase Small Fish quality 
 精準之證=Proof of Precision
 
 {{A}}擅長多重釣魚，捕獲更多數量的魚。=<size\=20>{{A}} excels at catching multiple fish, helping to catch more fish.</size>
-願者上鉤=A Willing Fish Gets Itself Caught
 r:"^消耗(.*)點<sprite\=0>專注力，提鉤必定釣到(.*)條魚，持續(.*)次釣魚。$"="<size\=24>Spend $1 <sprite\=0> Focus, you will always catch $2 fish. Lasts for $3 Fishing Attempts.</size>"
 r:"^提鉤必定釣到(\d+)條魚。$"="Will always catch $1 fish."
 釣技專家=Fishing Expert
@@ -6335,7 +6363,7 @@ r:"^贈送所有喜歡的禮物給{{A}}$"="Give all Favorite Gifts to {{A}}"
 與任意協同者進行1次關係回溯=Backtrack 1 relationship
 
 頭像框=Avatar Frame
-專屬時裝&頭像框&名片=Exclusive Outfit & Avatar Frame & Background
+專屬時裝&頭像框&名片=Exclusive Outfit & Avatar Frame & Profile Card
 聖殿樂園勳章=Holy Companio Medal
 
 獲得方式=Obtain Method
