@@ -47,8 +47,8 @@ EVENT GOALS
 在「{{A}}」累計幫助他人挑戰1次BOSS=Help others to challenge 1 BOSS in [{{A}}]
 r:"^在「{{A}}」累計幫助他人挑戰(\d+)次BOSS\((\d+)/(\d+)\)"="Help others to challenge $1 BOSS in [{{A}}] ($2/$3)"
 r:"^在「{{A}}之章 」中完成(\d+)個章節\((\d+)/(\d+)\)$"="Complete $1 [{{A}} Chapter] ($2/$3)"
-在「{{A}}」累計發現過1次BOSS=Discover 1 BOSS in [{{A}}]
-r:"^在「{{A}}」累計發現過(\d+)次BOSS\((\d+)/(\d+)\)"="Discover $1 BOSS in [{{A}}] ($2/$3)"
+在「{{A}}」累計發現過1次BOSS=Find 1 BOSS in [{{A}}]
+r:"^在「{{A}}」累計發現過(\d+)次BOSS\((\d+)/(\d+)\)"="Find $1 BOSS in [{{A}}] ($2/$3)"
 
 劇情描述：=Description:
 獎勵預覽：=Rewards:
@@ -85,11 +85,11 @@ Twisted Trial
 Land of Adventure
 ----------
 再遇之券=Re-Encounter Ticket
-『再遇之券』\n獲取後可用於活動「{{A}}」中刷新已發現的BOSS。=[Re-Encounter Ticket]\nCan be used to refresh the discovered BOSS in [{{A}}].
-獲取後可用於活動「{{A}}」中刷新已發現的BOSS。=Can be used to refresh the discovered BOSS in [{{A}}].
+『再遇之券』\n獲取後可用於活動「{{A}}」中刷新已發現的BOSS。=[Re-Encounter Ticket]\nCan be used to refresh found BOSS in [{{A}}].
+獲取後可用於活動「{{A}}」中刷新已發現的BOSS。=Can be used to refresh found BOSS in [{{A}}].
 奇遇之券=Adventure Ticket
-『奇遇之券』\n獲取後可用於活動「{{A}}」中發現BOSS。=[Adventure Ticket]\nCan be used to discover BOSS in [{{A}}].
-獲取後可用於活動「{{A}}」中發現BOSS。=Can be used to discover BOSS in [{{A}}].
+『奇遇之券』\n獲取後可用於活動「{{A}}」中發現BOSS。=[Adventure Ticket]\nCan be used to find BOSS in [{{A}}].
+獲取後可用於活動「{{A}}」中發現BOSS。=Can be used to find BOSS in [{{A}}].
 星舞幣=Starlight Coin
 
 已參與=Participated
@@ -126,16 +126,17 @@ sr:"^(.*)於(.*)造成了(.*)的傷害$"="$1 dealt $3 damage at $2"
 BOSS被擊敗或逃跑後可領取獎勵=You can claim rewards after this BOSS is defeated or escaped
 BOSS被擊敗或逃跑後透過郵件發放獎勵=Rewards will be sent to Mail after this BOSS is defeated or escaped
 是否接受挑戰=Accept and challenge
-（確認接受挑戰將無法刷新和放棄，並且當前BOSS被擊殺或逃跑前無法發現新的BOSS）=(This will prevent refreshing and resetting. You cannot discover a new BOSS until this BOSS is defeated or escapes.)
+（確認接受挑戰將無法刷新和放棄，並且當前BOSS被擊殺或逃跑前無法發現新的BOSS）=(This will prevent refreshing and resetting. You cannot find a new BOSS until this BOSS is defeated or escapes.)
 剛剛瀏覽=Just Viewed
 該BOSS即將逃跑，是否確認挑戰？\n若在挑戰過程中逃跑，本場戰鬥無效。=This BOSS is about to escape. If it escapes during this attempt, this battle will be invalidated. Proceed?
 r:"^當前有(\d+)名玩家正在進行該BOSS的挑戰，若在挑戰過程中BOSS被擊敗，則本場戰鬥無效。你確認要挑戰嗎？$"="There are currently $1 player(s) attempting this BOSS. If it is defeated during their attempt, this battle will be invalidated. Proceed?"
 您的可獲取獎勵次數已用盡，本次挑戰您無法獲得任何獎勵，您確定要挑戰嗎？=No reward attempts left. You will not receive any rewards from this challenge. Proceed?
 
 特殊獎勵=<size\=20>Special Rewards</size>
-<color\=#00FDFC>BOSS發現</color>獎勵=<color\=#00FDFC>Discover BOSS</color>
+<color\=#00FDFC>BOSS發現</color>獎勵=<color\=#00FDFC>Found BOSS</color>
 <color\=#00FDFC>快速擊殺</color>獎勵=<color\=#00FDFC>Speed Clear</color>
 <color\=#00FDFC>最後擊殺</color>獎勵=<color\=#00FDFC>Last Strike</color>
+<color\=#00FDFC>最後一擊</color>獎勵=<color\=#00FDFC>Last Strike</color>
 r:"^第(\d+)-(\d+)名$"="Top $1-$2"
 
 注意：弱點和耐性與通常不同。=Shadows have different Weaknesses and Resistances than normal.
@@ -187,5 +188,6 @@ sr:"^<color\=#FF0000>(.*)</color>受到了「(.*)」的影響……$"="<color\=#
 該BOSS已被擊敗，可獲取：=You can obtain:
 r:"^{{A}} \*(\d+)$"="<size\=20>{{A}} *$1</size>"
 r:"^第(\d+)名排行獎勵$"="Top $1"
+發現獎勵=Found BOSS
 快速擊殺獎勵=Speed Clear
 最後一擊獎勵=Last Strike
