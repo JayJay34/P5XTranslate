@@ -3606,7 +3606,7 @@ r:"^對1名敵人造成(\d+)次物理屬性傷害。$"="Deal Phys damage to 1 fo
 r:"^{{B}}戰鬥開始時提升自身防禦力，之後每回合再提升一次防禦力，上限(\d+)層。\n{{A}}在戰鬥中不受傷害，有(\d+)點倒地值。\n{{A}}倒地時給我方全體怪盜施加【{{A}}的收穫】，提升怪盜傷害，上限(\d+)層。\n{{A}}蓄力後一回合會給{{B}}施加【塔爾卡加】，提升{{B}}的攻擊力，上限(\d+)層。造成倒地可以打斷。$"="At the start of battle, {{B}} will increase its DEF, it will increase its DEF again each turn. Stacks up to $1 times.\n{{A}} will take no damage and has $2 Down Points.\nWhen {{A}} is knocked down, grant all Thieves [{{A}}'s Harvest], increasing their damage. Stacks up to $3 times.\nAfter {{A}} charges for 1 turn, it will use [Tarukaja] on {{B}} to increase their ATK. Stacks up to $4 times. This effect can be interrupted by knocking down {{A}}."
 {{A}}的收穫={{A}}'s Harvest
 使自身的防禦力永久提升。=Permanently increase user's DEF.
-對1名敵人造成超特大物理屬性傷害。=Deal colossal Psy damage to 1 foe.
+對1名敵人造成超特大物理屬性傷害。=Deal colossal Phys damage to 1 foe.
 保持蓄力狀態，下回合釋放塔爾卡加。=Charge to use Tarukaja next turn.
 使同伴的攻擊力提升。=Increase 1 ally's ATK.
 
@@ -3698,6 +3698,42 @@ r:"^最終傷害提升(\d+%)，進入假死狀態會減少1層$"="Increase Final
 {{A}}釋放『王之祝福』的『賜福』最終傷害提升增加，疊加上限增加=Increase [King's Blessing]'s Final DMG buff and its maximum stack
 恐懼之眼=Eye of Fear
 {{A}}每回合均釋放『極·王之凝視』={{A}} will use [Ultimate·King's Gaze] every turn
+
+r:"^1、{{D}}的弱點·耐性與通常情況不同。\n2、擊殺{{C}}、{{B}}、{{A}}，可以一定回合內為{{D}}添加弱點，並對{{D}}造成傷害。\n擊殺{{C}}：為{{D}}添加火焰、冰凍、疾風、電擊弱點。\n擊殺{{B}}：為{{D}}添加念動、核熱、祝福、詛咒弱點。\n擊殺{{A}}：為{{D}}添加物理和射擊弱點，並使其受到萬能屬性傷害時有(\d+%)的最終傷害提升。\n3、關卡中，全體怪盜會根據總治療量獲得最終傷害提升。\n4、二階段{{D}}增加特殊能量槽，全體怪盜獲得「生命奔流」效果，怪盜回復生命值時，會為能量槽充能，充滿時會對{{D}}造成最大生命值一定比例的傷害。\n5、{{D}}釋放「鬼之吞噬」後，若不能及時透過治療效果削弱「惡食」層數，下一回合釋放「鬼人狂襲」的傷害會大幅提高。$"="1. {{D}} has different Weaknesses and Resistances than normal. \n2. Defeating {{C}}, {{B}}, and {{A}} will inflict {{D}} with specific Weaknesses for a set amount of turns and deal damage to {{D}}. \nDefeat {{C}}: Inflict {{D}} with Fire Ice Wind Elec Weaknesses.\nDefeat {{B}}: Inflict {{D}} with Psy Nuke Bless Curse Weaknesses.\nDefeat {{A}}: Inflict {{D}} with Phys Gun Weaknesses, and increase its Almighty Final DMG Taken by $1.\n3. Increase Thieves' Final DMG based on their healing. \n4. In phase 2, {{D}} will add a special energy gauge and grant Thieves [Life Surge]. When Thieves recover HP, charge the energy gauge, when it is full, deal damage to {{D}} equal to a set amount of its Max HP.\n5. After {{D}} uses [Oni Devour], if [Malignant Feast] stacks are not removed in time through healing, heavily increase next turn's [Oni Frenzy] damage."
+r:"^1、{{D}}的弱點·耐性與通常情況不同。\n2、擊殺{{C}}、{{B}}、{{A}}，可以一定回合內為{{D}}添加弱點，並對{{D}}造成傷害。\n擊殺{{C}}：為{{D}}添加火焰、冰凍、疾風、電擊弱點。\n擊殺{{B}}：為{{D}}添加念動、核熱、祝福、詛咒弱點。\n擊殺{{A}}：為{{D}}添加物理和射擊弱點，並使其受到萬能屬性傷害時有(\d+%)的最終傷害提升。\n3、關卡中，全體怪盜會根據總治療量獲得最終傷害提升。\n4、{{D}}增加特殊能量槽，全體怪盜獲得「生命奔流」效果，怪盜回復生命值時，會為能量槽充能，充滿時會對{{D}}造成最大生命值一定比例的傷害。\n5、{{D}}釋放「鬼之吞噬」後，若不能及時透過治療效果削弱「惡食」層數，下一回合釋放「鬼人狂襲」的傷害會大幅提高。$"="1. {{D}} has different Weaknesses and Resistances than normal. \n2. Defeating {{C}}, {{B}}, and {{A}} will inflict {{D}} with specific Weaknesses for a set amount of turns and deal damage to {{D}}. \nDefeat {{C}}: Inflict {{D}} with Fire Ice Wind Elec Weaknesses.\nDefeat {{B}}: Inflict {{D}} with Psy Nuke Bless Curse Weaknesses.\nDefeat {{A}}: Inflict {{D}} with Phys Gun Weaknesses, and increase its Almighty Final DMG Taken by $1.\n3. Increase Thieves' Final DMG based on their healing. \n4. {{D}} will add a special energy gauge and grant Thieves [Life Surge]. When Thieves recover HP, charge the energy gauge, when it is full, deal damage to {{D}} equal to a set amount of its Max HP.\n5. After {{D}} uses [Oni Devour], if [Malignant Feast] stacks are not removed in time through healing, heavily increase next turn's [Oni Frenzy] damage."
+1、{{A}}的弱點·耐性與通常情況不同。\n2、關卡中，全體怪盜會根據總治療量獲得最終傷害提升。\n3、二階段{{A}}增加特殊能量槽，全體怪盜獲得「生命奔流」效果，怪盜回復生命值時，會為能量槽充能，充滿時會對{{A}}造成最大生命值一定比例的傷害。\n4、{{A}}釋放「鬼之吞噬」後，若不能及時透過治療效果削弱「惡食」層數，下一回合釋放「鬼人狂襲」的傷害會大幅提高。=1. {{A}} has different Weaknesses and Resistances than normal. \n2. Increase Thieves' Final DMG based on their healing. \n3. In phase 2, {{A}} will add a special energy gauge and grant Thieves [Life Surge]. When Thieves recover HP, charge the energy gauge, when it is full, deal damage to {{A}} equal to a set amount of its Max HP.\n4. After {{A}} uses [Oni Devour], if [Malignant Feast] stacks are not removed in time through healing, heavily increase next turn's [Oni Frenzy] damage.
+生命奔流=Life Surge
+鬼之吞噬=Oni Devour
+r:"^使所有敵人的生命值變為當前的<color\=#fffc40>(\d+\.\d+%)</color>，為自身添加<color\=#fffc40>(\d+)</color>層『惡食』。$"="Set all foes' HP to <color\=#fffc40>$1</color> of their current HP, grant user <color\=#fffc40>$2</color> [Malignant Feast] stacks."
+惡食=Malignant Feast
+r:"^惡<color\=#000000>食</color>$"="M<color\=#000000>a</color>lignant Feast"
+提升鬼人狂襲的傷害，大於5層時大幅提升=Increase Oni Frenzy damage, heavily increase its damage at more than 5 stacks
+鬼人狂襲=Oni Frenzy
+對所有敵人造成超特大物理屬性傷害。根據『惡食』層數傷害提升，大於5層時傷害大幅提升。=Deal colossal Phys damage to all foes. Increase damage based on [Malignant Feast] stacks, heavily increase its damage at more than 5 stacks.
+
+治療就是力量=Healing is Power
+r:"^根據我方總治療量，提升最終傷害(.*)$"="Based on allies' total healing, \nincrease Final DMG by $1"
+r:"^使1名同伴的攻擊力提升<color\=#fffc40>(\d+)</color>。效果持續(\d+)回合。$"="Increase 1 ally's ATK by <color\=#fffc40>$1</color>. Lasts for $2 turns."
+r:"^使1名同伴的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>。效果持續(\d+)回合。$"="Increase 1 ally's ATK by <color\=#fffc40>$1</color>. Lasts for $2 turns."
+r:"^使所有同伴恢復相當於釋放者最大生命值<color\=#fffc40>(.*)</color>的生命值。$"="Restore HP to all allies equal to <color\=#FFFC40>$1</color> of user's Max HP."
+r:"^使1名同伴的防禦力提升<color\=#fffc40>(\d+)</color>。效果持續(\d+)回合。$"="Increase 1 ally's DEF by <color\=#fffc40>$1</color>. Lasts for $2 turns."
+r:"^使1名同伴的防禦力提升<color\=#fffc40>(\d+\.\d+%)</color>。效果持續(\d+)回合。$"="Increase 1 ally's DEF by <color\=#fffc40>$1</color>. Lasts for $2 turns."
+
+透過治療增加了生命奔流的充能=Charged Life Surge through healing
+添加的弱點消失了=Removed Weakness
+惡食之力大幅提升=Heavily increased Malignant Feast
+惡食的效果削弱了=Weakened Malignant Feast's effect
+
+迅疾如風=Swift as the Wind
+{{A}}釋放的塔爾卡加效果提升=Increase the buff from {{A}}'s Tarukaja
+細水長流=Little by Little
+{{A}}釋放的梅迪拉瑪恢復量提升=Increase the healing from {{A}}'s Mediarama
+{{A}}釋放的拉庫卡加效果提升=Increase the buff from {{A}}'s Rakukaja
+惡鬼吞噬=Demonic Devour
+{{A}}釋放的鬼之吞噬，降低怪盜生命值效果提升=Increase the HP Down debuff from {{A}}'s Oni Devour
+大快朵頤=Feast Away
+獲得『惡食』層數增加。{{A}}釋放鬼人狂襲時，根據剩餘的『惡食』層數，恢復生命值=Increase [Malignant Feast] stack gain. When {{A}} uses [Oni Frenzy], restore HP based on remaining [Malignant Feast] stacks
+{{A}}擁有『惡食』時，受到傷害降低。並增強『惡食』對鬼人狂襲的傷害提升效果。=When {{A}} has [Malignant Feast], decrease its DMG Taken. Increase the damage buff for [Oni Frenzy] from [Malignant Feast].
 
 ----------
 Sea of Souls Trials (SoS)
@@ -4068,6 +4104,6 @@ sr:"^怪盜每累計消耗(.*)精力或每累計消耗(.*)的HIGHLIGHT能量時�
 r:"^時<color\=#000000>空</color>碎片$"="T<color\=#000000>i</color>me Fragments"
 
 禊之川流=Purifying River
-sr:"^每次獲得治療效果或護盾時，獲得『(.*)』。『(.*)』：最終傷害提升(.*)，當前生命值低於(.*)時，最終傷害額外提升(.*)，持續(.*)回合。$"="<size\=24>When receiving healing or Shield, gain [$1]. [$2]: Increase Final DMG by $3, when current HP is below $4, additionally increase Final DMG by $5. Last for $6 turns.</size>"
+sr:"^每次獲得治療效果或護盾時，獲得『(.*)』。『(.*)』：最終傷害提升(.*)，當前生命值低於(.*)時，最終傷害額外提升(.*)，持續(.*)回合。$"="<size\=25>When receiving healing or Shield, gain [$1]. [$2]: Increase Final DMG by $3, when current HP is below $4, additionally increase Final DMG by $5. Last for $6 turns.</size>"
 言靈淨化=Words of Purification
 r:"^言<color\=#000000>靈</color>淨化$"="W<color\=#000000>o</color>rds of Purification"

@@ -543,6 +543,7 @@ r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的祝福�
 sr:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。$"="Deal $2 damage to all foes equal to <color\=#FFFF00>$1</color> of ATK."
 
 //AoE Multi-Hit Random
+r:"^對所有敵人造成<color\=#fffc40>(.*)</color>攻擊力的(\d+)~(\d+)次物理屬性傷害。$"="Deal Phys damage to all foes equal to <color\=#fffc40>$1</color> of ATK ($2-$3 hits)."
 sr:"^對所有敵人造成(\d+)~(\d+)次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害。$"="Deal $4 damage to all foes equal to <color\=#FFFF00>$3</color> of ATK ($1-$2 hits)."
 
 //AoE + Ailment
@@ -663,7 +664,7 @@ r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的電擊�
 --- Wind ---
 
 Magarula
-sr:"對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入(.*)狀態，持續2回合。"=Deal <color\=#FFFF00>$1</color> ATK $2 damage to all foes, with a <color\=#FFFF00>$3</color> base chance to inflict $4 for 2 turns.
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的疾風屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s\|105"><u>風襲</u></link>狀態，持續(\d+)回合。$"="Deal Wind damage to all foes equal to <color\=#FFFF00>$1</color> of ATK, with a <color\=#FFFF00>$2</color> base chance to inflict <link\="s|105"><u>Windswept</u></link> for $3 turns."
 
 Vishnu
 r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的疾風屬性傷害，有(\d+%)基礎機率使敵人陷入風襲狀態；\n若敵人處於風襲狀態，則刷新持續時間、提升本次技能造成傷害<color\=#fffc40>(\d+\.\d+%)</color>並使敵人受到疾風傷害加深<color\=#fffc40>(\d+\.\d+%)</color>，(\d+)回合。$"="Deal <color\=#fffc40>$1</color> ATK Wind damage to 1 foe, with a $2 base chance to inflict Windswept; \nIf they are already inflicted with Windswept, refreshes its duration, increase this damage by <color\=#fffc40>$3</color> and increase their Wind DMG Taken by <color\=#fffc40>$4</color> for $5 turns."

@@ -53,7 +53,9 @@ r:"^歷史貢獻 (\d+)$"="Total Contribution $1"
 挑戰難度·噩夢=Nightmare
 
 基礎傷害積分=Base Score
-虛弱期傷害積分=Weaken Damage
+虛弱期傷害積分=Weaken Score
+未倒地傷害積分=Not Downed Score
+倒地後傷害積分=Downed Score
 首領擊殺積分=Boss Defeated
 敵方抵禦積分=Defense Score
 己方生存回合=Turns Survived
@@ -117,8 +119,8 @@ sr:"<color\=#FF0000>(.*)</color>將<color\=#FF0000>(.*?)</color>移出了樂園�
 虛弱期獲得積分×=Weaken Score Mult x
 存活回合積分加成×=Survival Score Mult x
 支配/反抗職業積分加成×=Sweeper/Assassin Score Mult x
-未倒地積分加成=Not Downed Score Mult x
-倒地後積分加成=Downed Score Mult x
+未倒地積分加成×=Not Downed Score Mult x
+倒地後積分加成×=Downed Score Mult x
 r:"^倍$"="<size\=10> </size>!"
 r:"^在(\d+)回合內對敵人造成更高的傷害$"="Gain a higher score within $1 turns"
 r:"^抵禦敵人進攻(\d+)回合並獲得更高的得分$"="Gain a higher score within $1 turns"
@@ -281,7 +283,9 @@ r:"^所有怪盜<color\=#ff0036>詛咒</color>傷害提高(\d+(.\d+)?(%)?)$"="In
 r:"^所有怪盜造成的<color\=#FFFC40>射擊</color>最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Thieves' <color\=#FFFC40>Gun</color> Final DMG Dealt by $1"
 r:"^所有怪盜造成的<color\=#ff381d>火焰</color>最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Thieves' <color\=#ff381d>Fire</color> Final DMG Dealt by $1"
 r:"^所有怪盜造成的<color\=#00aeff>冰凍</color>最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Thieves' <color\=#00aeff>Ice</color> Final DMG Dealt by $1"
+r:"^所有怪盜造成的<color\=#fbff37>電擊</color>最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Thieves' <color\=#fbff37>Elec</color> Final DMG Dealt by $1"
 r:"^所有怪盜造成的<color\=#81ea2c>疾風</color>最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Thieves' <color\=#81ea2c>Wind</color> Final DMG Dealt by $1"
+r:"^所有怪盜造成的<color\=#ff63ff>念動</color>最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Thieves' <color\=#ff63ff>Psy</color> Final DMG Dealt by $1"
 r:"^所有怪盜造成的<color\=#00fcff>核熱</color>最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Thieves' <color\=#00fcff>Nuke</color> Final DMG Dealt by $1"
 r:"^所有怪盜造成的<color\=#fffea0>祝福</color>最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Thieves' <color\=#fffea0>Bless</color> Final DMG Dealt by $1"
 

@@ -68,6 +68,24 @@ r:"^顯示器-(\d+)$"="Display-$1"
 中文=Chinese
 *設置成功後遊戲內所有配音均會生效。=*Have to restart the game to take effect.
 
+隨身聽=Music Player
+隨身聽設置=Music Player
+懸浮式隨身聽設置=Portable Player Settings
+懸浮式隨身聽=Portable Player
+音樂循環模式=Playback Mode
+隨機播放=Shuffle
+順序播放=Play in Order
+單曲循環=Repeat
+
+已切換為「隨機播放」模式。=Switched to [Shuffle].
+已切換為「單曲循環」模式。=Switched to [Repeat].
+已切換為「順序播放」模式。=Switched to [Play in Order].
+sr:"^<color\=#FFC000>「(.*)」</color>歌單僅有一首歌。$"="<color\=#FFC000>[$1]</color> playlist only has one song."
+sr:"^<color\=#FFC000>「(.*)」</color>歌單設置成功。$"="Updated <color\=#FFC000>[$1]</color> playlist."
+放學後雨天=Rainy After School
+傍晚後雨天=Rainy Evening
+夜晚後雨天=Rainy Night
+
 操作設置=Control
 經典=Classic
 手把視角靈敏=<size\=30>Controller \nView Sensitivity</size>
@@ -922,6 +940,10 @@ r:"^(\d+)時(\d+)分後開放領取$"="Claim in $1h $2m"
 r:"^(\d+)分後開放領取$"="Claim in $1m"
 r:"^(\d+)天(\d+)小時後開放。$"="Unlocks in $1d $2h."
 r:"^(\d+)小時(\d+)分後開放。$"="Unlocks in $1h $2m."
+r:"^(\d+)天(\d+)小時後解鎖後開放。$"="Unlocks in $1d $2h."
+r:"^(\d+)天(\d+)時後解鎖後開放。$"="Unlocks in $1d $2h."
+r:"^(\d+)小時(\d+)分後解鎖後開放。$"="Unlocks in $1h $2m."
+r:"^(\d+)時(\d+)分後解鎖後開放。$"="Unlocks in $1h $2m."
 
 r:"^剩餘(\d+)天(\d+)小時(\d+)分$"="$1d $2h $3m left"
 r:"^剩餘(\d+)天(\d+)時(\d+)分$"="$1d $2h $3m left"
@@ -1180,6 +1202,14 @@ sr:"^多重奏·(.*):(.*)屬性角色技能傷害提升(.*)$"="<size\=21>$1 Poly
 不直接參與戰鬥，在場外使用支援技能為出戰隊員提供加成。=Helps allies from off-field with buffs and support skills.
 自律=Virtuoso
 擁有特殊戰鬥能力的神秘職業。=They excel at using a myriad of tactics, giving an advantage over various foes.
+
+男性=Male
+女性=Female
+虛擬=Virtual
+泳裝=Swimsuit
+暴走{{A}}=Berserk {{A}}
+星舞=Starlight
+特殊聯動=Special Collab
 
 r:"^推薦陣容中角色均大於(\d+)級$"="Recommended Lv: $1"
 r:"^推薦編入(\d+)名<size\=(\d+)><sprite\=(\d+) tint\=1></size>角色$"="Recommend $1 <size\=$2><sprite\=$3 tint\=1></size> character"
@@ -3560,6 +3590,7 @@ r:"^疾風、詛咒屬性傷害提升(\d+%)$"="Increase Wind and Curse DMG by $1
 冰凍/核熱屬性隊員攻擊時獲得分數=Ice/Nuke Teammates Score
 電擊/祝福屬性隊員攻擊時獲得分數=Elec/Bless Teammates Score
 疾風/詛咒屬性隊員攻擊時獲得分數=Wind/Curse Teammates Score
+1MORE時獲得分數=ONE MORE Score
 r:"^(\d+)次行動內完成$"="Win within $1 ally actions"
 r:"^(\d+)次行動內完成<color\=#FF0000>\+(\d+)</color>$"="Win within $1 ally actions <color\=#FF0000>+$2</color>"
 陣亡人數不超過0人=No more than 0 KO'd allies
@@ -3741,7 +3772,7 @@ sr:"^是否添加本次協戰<color\=#FFC000>(.*)</color>為好友$"="Send a fri
 
 推薦陣容等級：=Rec. Lv:
 推薦屬性：=<size\=22>Rec. Attributes:</size>
-嘗試調整陣容後再重新挑戰=Adjust your team and try again
+嘗試調整陣容後再重新挑戰=Adjust your party and try again
 主角{0}的強度較低=Wonder is not strong enough.
 主角{{A}}的強度較低=Wonder {{A}} is not strong enough.
 主角<color\=#EF0000>{{A}}</color>的強度較低=Wonder <color\=#EF0000>{{A}}</color> is not strong enough.
@@ -4010,18 +4041,19 @@ r:"^所有敵人防禦力提升(\d+(.\d+)?(%)?)$"="Increase all foes' DEF by $1"
 r:"^所有敵人受到傷害降低(\d+(.\d+)?(%)?)$"="Decrease all foes' DMG Taken by $1"
 
 終末難度=Apocalypse Difficulty
+出戰陣容=Deployed Party
 r:"^剩餘挑戰次數：(\d+)/(\d+)$"="Challenge Left: $1/$2"
 無記錄=None
 階段剩餘血量=HP Left
 *排名徽章在活動結束後透過郵件發放=*Badge will be sent to Mail after the event ends
 首領剩餘血量=Boss HP
 行動回合=Actions
-最佳陣容=Best Team
+最佳陣容=Best Party
 已擊敗=Defeated
 r:"^階段(\d+) (\d+)$"="Phase $1 $2"
 剩餘行動回合：=   Turns Left:   <size\=1>_</size>
 r:"^行動總次數：(\d+)$"="Total Actions: $1"
-重置挑戰會解除陣容鎖定、恢復挑戰次數並重置首領血量，但不會影響歷史最高分，是否確認重置？=Resetting the challenge will unlock teams, restore challenge attempts and and reset the boss' HP, but will not affect your high score, confirm?
+重置挑戰會解除陣容鎖定、恢復挑戰次數並重置首領血量，但不會影響歷史最高分，是否確認重置？=Resetting the challenge will unlock parties, restore challenge attempts and and reset the boss' HP, but will not affect your high score, confirm?
 挑戰次數已用盡，重置次數前無法繼續挑戰。=Used all challenge attempts, reset to challenge again.
 當前首領已被擊敗，無法繼續挑戰。=Defeated the boss, cannot continue challenge.
 
@@ -4138,7 +4170,7 @@ sr:"^更快更強(.*)$"="Faster Stronger $1"
 
 長按異變圖示可查看詳情=<size\=25>Long press icon to view info</size>
 異變等級=Level
-使用推薦陣容=<size\=24>Use recommended team</size>
+使用推薦陣容=<size\=24>Use recommended party</size>
 均衡模式無法自行更換異變效果。=Cannot change modifiers in Balanced Mode.
 r:"^<pos\=45>所有敵人的最終生命值提升(\d+(.\d+)?(%)?)$"="<pos\=45>Increase all foes' Final HP by $1"
 r:"^<pos\=45>所有敵人的最終攻擊力提升(\d+(.\d+)?(%)?)$"="<pos\=45>Increase all foes' Final ATK by $1"
@@ -5362,6 +5394,7 @@ r:"^完成(\d+)個夏日回憶\((\d+)\/(\d+)\)$"="Clear $1 Summer Memories ($2/$
 r:"^將店鋪「{{A}}」升至(\d+)級\((\d+)\/(\d+)\)$"="Upgrade {{A}} to Lv. $1 ($2/$3)"
 r:"^在釣場(\d+)進行一次海釣$"="Go Fishing at Fishing Spot $1"
 r:"^進行(\d+)次海釣\((\d+)\/(\d+)\)$"="Go Fishing $1 time(s) ($2/$3)"
+r:"^完成(\d+)次海釣\((\d+)\/(\d+)\)$"="Clear Fishing $1 time(s) ($2/$3)"
 r:"^完成(\d+)個「海濱故事」\((\d+)\/(\d+)\)$"="Clear $1 [Seaside Stories] ($2/$3)"
 r:"^完成(\d+)個海濱趣聞\((\d+)\/(\d+)\)$"="Clear $1 Seaside Stories ($2/$3)"
 r:"^與{{A}}完成(\d+)次出海釣魚$"="Go Fishing with {{A}} $1 time(s)"

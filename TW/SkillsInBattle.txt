@@ -956,7 +956,7 @@ r:"^祝<color\=#000000>福</color>傷害提高$"="B<color\=#000000>l</color>ess 
 r:"^詛<color\=#000000>咒</color>傷害提高$"="C<color\=#000000>u</color>rse DMG Up"
 r:"^萬<color\=#000000>能</color>傷害提高$"="A<color\=#000000>l</color>mighty DMG Up"
 
-r:"^物<color\=#000000>理</color>特化$"=P<color\=#000000>h</color>ys DMG Up"
+r:"^物<color\=#000000>理</color>特化$"="P<color\=#000000>h</color>ys DMG Up"
 r:"^射<color\=#000000>擊</color>特化$"="G<color\=#000000>u</color>n DMG Up"
 r:"^火<color\=#000000>焰</color>特化$"="F<color\=#000000>i</color>re DMG Up"
 r:"^冰<color\=#000000>凍</color>特化$"="I<color\=#000000>c</color>e DMG Up"
@@ -1232,6 +1232,7 @@ HIGHLIGHT傷害提升=Increase HIGHLIGHT DMG
 受到詛咒傷害提升=Increase Curse DMG Taken
 受到詛咒傷害提高=Increase Curse DMG Taken
 受萬能傷害提高=Increase Almighty DMG Taken
+受到萬能屬性傷害提升=Increase Almighty DMG Taken
 
 物理耐性=Resist Phys
 射擊耐性=Resist Gun
@@ -1472,6 +1473,7 @@ r:"^電擊傷害提高(\d+(.\d+)?(%)?)$"="Increase Elec DMG by $1"
 r:"^電擊屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase Elec DMG by $1"
 r:"^每層提升(\d+(.\d+)?(%)?)的電擊傷害$"="Increase Elec DMG by $1 per stack"
 r:"^造成的電擊屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase Elec DMG Dealt by $1"
+r:"^造成的電擊最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Elec Final DMG Dealt by $1"
 r:"^疾風傷害提升(\d+(.\d+)?(%)?)$"="Increase Wind DMG by $1"
 r:"^疾風傷害提高(\d+(.\d+)?(%)?)$"="Increase Wind DMG by $1"
 r:"^造成的疾風最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Wind Final DMG Dealt by $1"
@@ -1479,6 +1481,7 @@ r:"^電擊、疾風傷害提升(\d+(.\d+)?(%)?)$"="Increase Elec, Wind DMG by $1
 r:"^念動傷害提升(\d+(.\d+)?(%)?)$"="Increase Psy DMG by $1"
 r:"^念動傷害提高(\d+(.\d+)?(%)?)$"="Increase Psy DMG by $1"
 r:"^念動屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase Psy DMG by $1"
+r:"^造成的念動最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Psy Final DMG Dealt by $1"
 r:"^核熱傷害提升(\d+(.\d+)?(%)?)$"="Increase Nuke DMG by $1"
 r:"^核熱傷害提高(\d+(.\d+)?(%)?)$"="Increase Nuke DMG by $1"
 r:"^核熱屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase Nuke DMG by $1"
@@ -1496,8 +1499,9 @@ r:"^萬能傷害提升(\d+(.\d+)?(%)?)$"="Increase Almighty DMG by $1"
 r:"^萬能傷害提高(\d+(.\d+)?(%)?)$"="Increase Almighty DMG by $1"
 r:"^萬能屬性傷害提升(\d+(.\d+)?(%)?)$"="Increase Almighty DMG by $1"
 r:"^治療效果提升(\d+(.\d+)?(%)?)$"="Increase Healing Effect by $1"
+r:"^受到治療效果提升(\d+(.\d+)?(%)?)$"="Increase Healing Received by $1"
 r:"^護盾效果提升(\d+(.\d+)?(%)?)$"="Increase Shield Effect by $1"
-r:"^受到護盾效果提升(\d+(.\d+)?(%)?)$"="Increase Shield Effect Taken by $1"
+r:"^受到護盾效果提升(\d+(.\d+)?(%)?)$"="Increase Shield Received by $1"
 r:"^剩餘護盾值：(\d+)$"="Shield: $1"
 回合結束後回復一定生命值。=Restore HP at the end of each turn
 r:"^HL能量恢復效率提升(\d+(.\d+)?(%)?)$"="Increase HIGHLIGHT Energy recovery rate by $1"
@@ -1543,6 +1547,7 @@ r:"^受到暴擊效果提升(\d+(.\d+)?(%)?)$"="Increase Crit DMG Taken by $1"
 r:"^觸電狀態下，受到暴擊效果提升(\d+(.\d+)?(%)?)$"="When inflicted with Shock,\nincrease Crit DMG Taken by $1"
 r:"^效果抵抗降低(\d+(.\d+)?(%)?)$"="Decrease Ailment RES by $1"
 r:"^受到治療效果降低(\d+(.\d+)?(%)?)$"="Decrease Healing Received by $1"
+r:"^傷害降低(\d+(.\d+)?(%)?)$"="Decrease DMG Bonus by $1"
 受到的傷害提升=Increase DMG Taken
 r:"^受傷害提升(\d+(.\d+)?(%)?)$"="Increase DMG Taken by $1"
 r:"^受到傷害提高(\d+(.\d+)?(%)?)$"="Increase DMG Taken by $1"
@@ -1638,6 +1643,7 @@ r:"^受萬能傷害提升(\d+(.\d+)?(%)?)$"="Increase Almighty DMG Taken by $1"
 r:"^受萬能傷害提高(\d+(.\d+)?(%)?)$"="Increase Almighty DMG Taken by $1"
 r:"^受到萬能傷害提升(\d+(.\d+)?(%)?)$"="Increase Almighty DMG Taken by $1"
 r:"^受到萬能傷害提高(\d+(.\d+)?(%)?)$"="Increase Almighty DMG Taken by $1"
+r:"^受到萬能屬性傷害時最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Almighty Final DMG Taken by $1"
 
 物理弱點=Phys Weakness
 物理屬性的適應性變為弱=Changed Phys affinity to Weak
@@ -1662,6 +1668,10 @@ r:"^受到萬能傷害提高(\d+(.\d+)?(%)?)$"="Increase Almighty DMG Taken by $
 詛咒弱點=Curse Weakness
 詛咒屬性的適應性變為弱=Changed Curse affinity to Weak
 所有適應性變為弱點=Changed all affinities to Weak
+弱點添加=Inflict Weakness
+火焰、凍結、電擊、疾風屬性的適應性變為弱=Changed Fire Ice Elec Wind affinities to Weak
+物理、射擊屬性的適應性變為弱=Changed Phys Gun affinities to Weak
+念動、核熱、祝福、詛咒屬性的適應性變為弱=Changed Psy Nuke Bless Curse affinities to Weak
 
 r:"^受到的治療效果降低(\d+(.\d+)?(%)?)$"="Decrease Healing Received by $1"
 
