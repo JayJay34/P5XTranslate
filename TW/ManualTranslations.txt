@@ -1209,6 +1209,7 @@ sr:"^多重奏·(.*):(.*)屬性角色技能傷害提升(.*)$"="<size\=21>$1 Poly
 泳裝=Swimsuit
 暴走{{A}}=Berserk {{A}}
 星舞=Starlight
+天鵝絨住民=Velvet Room Resident
 特殊聯動=Special Collab
 
 r:"^推薦陣容中角色均大於(\d+)級$"="Recommended Lv: $1"
@@ -2476,6 +2477,7 @@ r:"^進行『中華相關店鋪』打工事件時，可以額外獲得(\d+)現�
 在主題咖啡店打工=<size\=24>Work part-time\nat the Concept Café</size>
 {{A}}的主題咖啡店似乎需要人手……=<size\=28>The Concept Café is understaffed...</size>
 今天也去主題咖啡店幫忙看看吧。=<size\=25>Let's help out at the Concept Café today</size>
+今天似乎是主題咖啡店的活動日，要去幫忙嗎？=<size\=28>It's the event day at the Concept Café today, want to help out?</size>
 要在這家主題咖啡店打工嗎？=Do you want to work part-time \nat this Concept Café?
 
 在夏卡爾打工=<size\=24>Work part-time\nat Chagall Café</size>
@@ -4229,7 +4231,7 @@ r:"^第(\d+)關$"="Level $1"
 r:"^擊倒(\d+)個靶子$"="Down $1 Targets"
 r:"^連擊數達到(\d+)$"="Reach $1 Combo"
 r:"^分數達到(\d+)以上$"="Reach $1 Score"
-r:"^(\d+)秒內獲得(\d+)分$"="Get $2 Score in $1 Sec"
+r:"^(\d+)秒內獲得(\d+)分$"="Get $2 Score in $1s"
 r:"^逃跑靶子不超過(\d+)個$"="<$1 Escape Targets"
 
 當前波次=Current Wave
@@ -4238,24 +4240,32 @@ r:"^逃跑靶子不超過(\d+)個$"="<$1 Escape Targets"
 擊倒<sprite\=6 tint\=1><sprite\=0 tint\=1>個靶子(<sprite\=0 tint\=1><sprite\=14 tint\=1><sprite\=6 tint\=1><sprite\=0 tint\=1>)=Down <sprite\=6 tint\=1><sprite\=0 tint\=1> Targets (<sprite\=0 tint\=1><sprite\=14 tint\=1><sprite\=6 tint\=1><sprite\=0 tint\=1>)
 擊倒<sprite\=4 tint\=1><sprite\=0 tint\=1>個靶子(<sprite\=7 tint\=1><sprite\=2 tint\=1><sprite\=14 tint\=1><sprite\=4 tint\=1><sprite\=0 tint\=1>)=Down <sprite\=4 tint\=1><sprite\=0 tint\=1> Targets (<sprite\=7 tint\=1><sprite\=2 tint\=1><sprite\=14 tint\=1><sprite\=4 tint\=1><sprite\=0 tint\=1>)
 擊倒<sprite\=5 tint\=1><sprite\=0 tint\=1>個靶子(<sprite\=1 tint\=1><sprite\=4 tint\=1><sprite\=7 tint\=1><sprite\=14 tint\=1><sprite\=5 tint\=1><sprite\=0 tint\=1>)=Down <sprite\=5 tint\=1><sprite\=0 tint\=1> Targets (<sprite\=1 tint\=1><sprite\=4 tint\=1><sprite\=7 tint\=1><sprite\=14 tint\=1><sprite\=5 tint\=1><sprite\=0 tint\=1>)
+r:"^擊倒(\d+)個靶子\((\d+)/(\d+)\)$"="Down $1 Targets ($2/$3)"
 r:"^連擊數達到<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>$"="Reach <sprite\=$1 tint\=1><sprite\=$2 tint\=1> Combo"
 r:"^分數達到<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>以上$"="Reach <sprite\=$1 tint\=1><sprite\=$2 tint\=1><sprite\=$3 tint\=1> Score"
 r:"^分數達到<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>以上$"="Reach <sprite\=$1 tint\=1><sprite\=$2 tint\=1><sprite\=$3 tint\=1><sprite\=$4 tint\=1> Score"
 r:"^<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>秒內獲得<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>分\(<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>\)$"="<sprite\=$3 tint\=1><sprite\=$4 tint\=1><sprite\=$5 tint\=1> Score in <sprite\=$1 tint\=1><sprite\=$2 tint\=1>s (<sprite\=$5 tint\=1><sprite\=$6 tint\=1><sprite\=$7 tint\=1><sprite\=$8 tint\=1><sprite\=$9 tint\=1>)"
 r:"^<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>秒內獲得<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>分\(<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>\)$"="<sprite\=$3 tint\=1><sprite\=$4 tint\=1><sprite\=$5 tint\=1> Score in <sprite\=$1 tint\=1><sprite\=$2 tint\=1>s (<sprite\=$6 tint\=1><sprite\=$7 tint\=1><sprite\=$8 tint\=1><sprite\=$9 tint\=1><sprite\=$10 tint\=1><sprite\=$11 tint\=1>)"
 r:"^<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>秒內獲得<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>分\(<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>\)$"="<sprite\=$3 tint\=1><sprite\=$4 tint\=1><sprite\=$5 tint\=1> Score in <sprite\=$1 tint\=1><sprite\=$2 tint\=1>s (<sprite\=$6 tint\=1><sprite\=$7 tint\=1><sprite\=$8 tint\=1><sprite\=$9 tint\=1><sprite\=$10 tint\=1><sprite\=$11 tint\=1><sprite\=$12 tint\=1>)"
+r:"^(\d+)秒內獲得(\d+)分\((\d+)/(\d+)\)$"="Get $2 Score in $1s ($2/$3)"
 r:"^逃跑靶子不超過<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>個\(<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>\)$"="<<sprite\=$1 tint\=1><sprite\=$2 tint\=1><sprite\=$3 tint\=1> Escape Targets (<sprite\=$4 tint\=1><sprite\=$5 tint\=1><sprite\=$6 tint\=1><sprite\=$7 tint\=1><sprite\=$8 tint\=1>)"
 r:"^逃跑靶子不超過<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>個\(<sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1><sprite\=(\d+) tint\=1>\)$"="<<sprite\=$1 tint\=1><sprite\=$2 tint\=1><sprite\=$3 tint\=1> Escape Targets (<sprite\=$4 tint\=1><sprite\=$5 tint\=1><sprite\=$6 tint\=1><sprite\=$7 tint\=1><sprite\=$8 tint\=1><sprite\=$9 tint\=1>)"
+r:"^逃跑靶子不超過(\d+)個\((\d+)/(\d+)\)$"="<$1 Escape Targets ($2/$3)"
+準星靈敏度=Crosshair Sensitivity
 
 r:"^最高連擊：(\d+)$"="Combo: $1"
 r:"^擊倒個數：(\d+)$"="Targets: $1"
 
-r:"^通關第(\d+)關後解鎖$"="Unlock after level $1"
-r:"^完成第(\d+)關任意(\d+)個挑戰目標\((\d+)\/(\d+)\)$"="Complete any $2 goal(s) on level $1 ($3/$4)"
-r:"^完成第(\d+)關全部挑戰目標\((\d+)\/(\d+)\)$"="Complete all goals on level $1 ($2/$3)"
-r:"^累計完成(\d+)個關卡挑戰目標\((\d+)\/(\d+)\)$"="Complete all goals for $1 levels ($2/$3)"
+r:"^通關第(\d+)關後解鎖$"="Unlocks after level $1"
+r:"^完成第(\d+)關任意(\d+)個挑戰目標\((\d+)\/(\d+)\)$"="Clear any $2 goals on level $1 ($3/$4)"
+r:"^完成第(\d+)關全部挑戰目標\((\d+)\/(\d+)\)$"="Clear all goals on level $1 ($2/$3)"
+r:"^累計完成(\d+)個關卡挑戰目標\((\d+)\/(\d+)\)$"="Clear all goals for $1 levels ($2/$3)"
+在無盡模式中獲得銀牌射手評價=Earn Silver in Endless Mode
+在無盡模式中獲得金牌射手評價=Earn Silver in Endless Mode
+在無盡模式中獲得白金射手評價=Earn Platinum in Endless Mode
 r:"^通過第(\d+)關後解鎖$"="Unlocks after clearing level $1"
 積分=Score
+r:"^積分：(\d+)$"="Score: $1"
 通過該關卡=Clear this level
 r:"^{{A}}剩餘生命值≥(\d+)$"="{{A}} HP Left ≥ $1"
 剩餘生命值：=HP Left:
@@ -5393,15 +5403,16 @@ r:"^完成「經營故事」Chapter(\d+)$"="Clear [Business Stories] Chapter $1"
 r:"^完成(\d+)個夏日回憶\((\d+)\/(\d+)\)$"="Clear $1 Summer Memories ($2/$3)"
 r:"^將店鋪「{{A}}」升至(\d+)級\((\d+)\/(\d+)\)$"="Upgrade {{A}} to Lv. $1 ($2/$3)"
 r:"^在釣場(\d+)進行一次海釣$"="Go Fishing at Fishing Spot $1"
-r:"^進行(\d+)次海釣\((\d+)\/(\d+)\)$"="Go Fishing $1 time(s) ($2/$3)"
-r:"^完成(\d+)次海釣\((\d+)\/(\d+)\)$"="Clear Fishing $1 time(s) ($2/$3)"
+r:"^進行(\d+)次海釣\((\d+)\/(\d+)\)$"="Go Fishing $1 times ($2/$3)"
+r:"^完成(\d+)次海釣\((\d+)\/(\d+)\)$"="Clear Fishing $1 times ($2/$3)"
+sr:"^在(.*)釣場完成1次海釣$"="Clear Fishing in $1 1 time"
 r:"^完成(\d+)個「海濱故事」\((\d+)\/(\d+)\)$"="Clear $1 [Seaside Stories] ($2/$3)"
 r:"^完成(\d+)個海濱趣聞\((\d+)\/(\d+)\)$"="Clear $1 Seaside Stories ($2/$3)"
-r:"^與{{A}}完成(\d+)次出海釣魚$"="Go Fishing with {{A}} $1 time(s)"
-r:"^與{{A}}完成(\d+)次出海釣魚\((\d+)\/(\d+)\)$"="Go Fishing with {{A}} $1 time(s) ($2/$3)"
-r:"^和{{A}}完成(\d+)次出海釣魚\((\d+)\/(\d+)\)$"="Go Fishing with {{A}} $1 time(s) ($2/$3)"
-r:"^與{{A}}完成(\d+)次出海釣魚（請觀看前置故事）$"="Go Fishing with {{A}} $1 time(s)"
-r:"^和{{A}}完成(\d+)次出海釣魚（請觀看前置故事）$"="Go Fishing with {{A}} $1 time(s)"
+r:"^與{{A}}完成(\d+)次出海釣魚$"="Go Fishing with {{A}} $1 times"
+r:"^與{{A}}完成(\d+)次出海釣魚\((\d+)\/(\d+)\)$"="Go Fishing with {{A}} $1 times ($2/$3)"
+r:"^和{{A}}完成(\d+)次出海釣魚\((\d+)\/(\d+)\)$"="Go Fishing with {{A}} $1 times ($2/$3)"
+r:"^與{{A}}完成(\d+)次出海釣魚（請觀看前置故事）$"="Go Fishing with {{A}} $1 times"
+r:"^和{{A}}完成(\d+)次出海釣魚（請觀看前置故事）$"="Go Fishing with {{A}} $1 times"
 r:"^釣到(\d+)隻小型魚\((\d+)\/(\d+)\)$"="Catch $1 Small Fish ($2/$3)"
 r:"^釣到(\d+)隻中型魚\((\d+)\/(\d+)\)$"="Catch $1 Medium Fish ($2/$3)"
 r:"^釣到(\d+)隻大型魚\((\d+)\/(\d+)\)$"="Catch $1 Large Fish ($2/$3)"
@@ -5421,7 +5432,7 @@ r:"^釣(\d+)條彩色魚$"="Catch $1 Rainbow Fish"
 r:"^觸發(\d+)次魚群風暴$"="Activate $1 Fish Storm"
 r:"^釣(\d+)條優質魚$"="Catch $1 Quality Fish"
 r:"^釣(\d+)條金或彩色魚$"="Catch $1 Gold or Rainbow Fish"
-r:"^以小博大釣(\d+)條魚$"="Use High Risk, High Reward to catch $1 Fish"
+r:"^以小博大釣(\d+)條魚$"="Use Live Bait to catch $1 Fish"
 r:"^釣(\d+)條小型魚$"="Catch $1 Small Fish"
 r:"^釣(\d+)條中型魚$"="Catch $1 Medium Fish"
 r:"^釣(\d+)條大型魚$"="Catch $1 Large Fish"
@@ -5445,6 +5456,12 @@ r:"^海釣等級達到(\d+)級時，可獲得【(.*)】徽章$"="Obtain this bad
 沙洲淺灘釣區=Sandy Shoal
 離岸礁群釣區=Reef Cluster
 深海洋流釣區=Deep Sea
+淺海沙灘=Shallow Beach
+近海礁群=Coastal Reef
+遠海大洋=Open Ocean
+淺海沙灘釣區=Shallow Beach
+近海礁群釣區=Coastal Reef
+遠海大洋釣區=Open Ocean
 
 我的最高分=Personal Best
 玩家資訊=Player Info
@@ -5458,15 +5475,20 @@ r:"^海釣等級達到(\d+)級時，可獲得【(.*)】徽章$"="Obtain this bad
 已選擇：=Selected:
 長按可查看夥伴技能詳情=<size\=24>Long press to view details</size>
 出海垂釣後是否拍照合影=<size\=24>Take photos after fishing?</size>
+已選滿3個夥伴。=Selected 3 Companions.
 
 漁人的直覺=Fisherman's Intuition
+直感=Intuition
 r:"^消耗(.*)點<sprite\=1>直感，恢復(.*)點<sprite\=0>專注力。$"="<size\=24>Spend $1 <sprite\=1> Intuition to restore $2 <sprite\=0> Focus.</size>"
 
+被動技能=Passive
+r:"^消耗<color\=#ff3b37>(\d+)點</color>專注力解鎖{{A}}\((\d+)/(\d+)\)$"="<size\=20>Spend <color\=#ff3b37>$1</color> Focus to unlock {{A}} ($2/$3)</size>"
 {{A}}擅長快速釣魚，協助捕獲大量的魚。=<size\=20>{{A}} excels at fast fishing, helping to catch large numbers of fish.</size>
 出海技能=Skills
 精準拋投=Precision Casting
 r:"^達到(\d+)級後效果提升$"="Upgrades after reaching Lv.$1"
 r:"^消耗(.*)點<sprite\=0>專注力，使等待魚上鉤時間減少(.*)，提鉤範圍增加(.*)。持續(.*)次釣魚。$"="<size\=24>Spend $1 <sprite\=0> Focus to decrease bite time by $2 and increase hook range by $3. Lasts for $4 Fishing Attempts.</size>"
+r:"^消耗(.*)點<sprite\=0>專注力，使等待魚上鉤時間減少(.*)，提鉤範圍增加(.*)，持續(.*)次釣魚。$"="<size\=24>Spend $1 <sprite\=0> Focus to decrease bite time by $2 and increase hook range by $3. Lasts for $4 Fishing Attempts.</size>"
 中型魚專家=Medium Fish Expert
 r:"^達到(\d+)級解鎖$"="Unlocks after reaching Lv.$1"
 r:"^中型魚的優質率增加(.*)。$"="<size\=24>Increase Medium Fish quality rate by $1.</size>"
@@ -5474,6 +5496,7 @@ r:"^中型魚的優質率增加(.*)。$"="<size\=24>Increase Medium Fish quality
 精通=Mastery
 靈巧之證=Proof of Proficiency
 
+r:"^釣到<color\=#ff3b37>(\d+)條</color>優質魚解鎖{{A}}\((\d+)/(\d+)\)$"="<size\=20>Catch <color\=#ff3b37>$1</color> quality fish to unlock {{A}} ($2/$3)</size>"
 {{A}}擅長優質釣魚，協助提升魚的優質率。=<size\=20>{{A}} excels at quality fishing, helping to increase the quality rate of fish.</size>
 慧眼識魚=Keen Eye
 r:"^消耗(.*)點<sprite\=0>專注力，使釣上的魚優質率增加(.*)，持續(.*)次釣魚。$"="<size\=24>Spend $1 <sprite\=0> Focus to increase the quality rate of fish caught by $2. Lasts for $3 Fishing Attempts.</size>"
@@ -5481,6 +5504,7 @@ r:"^消耗(.*)點<sprite\=0>專注力，使釣上的魚優質率增加(.*)，持
 r:"^大型魚的優質率增加(.*)。$"="<size\=24>Increase Large Fish quality rate by $1.</size>"
 珍味之證=Proof of Taste
 
+r:"^釣到<color\=#ff3b37>(\d+)條</color>魚王解鎖{{A}}\((\d+)/(\d+)\)$"="<size\=20>Catch <color\=#ff3b37>$1</color> Top-Class fish to unlock {{A}} ($2/$3)</size>"
 {{A}}擅長回復魚群風暴進度，快速進入魚群風暴狀態。=<size\=20>{{A}} excels at restoring Fish Storm progress and quickly entering Fish Storm.</size>
 海洋魚暴=Ocean Fish Storm
 r:"^消耗(.*)點<sprite\=1>直感，立即增加(.*)點的魚群風暴進度。$"="<size\=24>Spend $1 <sprite\=1> Intuition to immediately increase Fish Storm progess by $2.</size>"
@@ -5502,16 +5526,16 @@ r:"^初始<sprite\=1>直感增加(.*)點。$"="<size\=24>Increase starting <spri
 sr:"^在<color\=#ff3b37>(.*)</color>釣到(\d+)種不同的魚解鎖(.*)\((\d+)\/(\d+)\)$"="<size\=20>Catch $2 different fish at <color\=#ff3b37>$1</color> to unlock $3 ($4/$5)</size>"
 {{A}}擅長捕獲同種魚，可以再次捕獲前一次釣到的魚。=<size\=20>{{A}} excels at catching the same kind of fish, and can catch the last fish you caught.</size>
 追蹤定錨=Tracking Anchor
-r:"^消耗(.*)點<sprite\=1>直感，可以釣到和前一次同樣的魚，持續(.*)次釣魚。以小博大時無法發動技能，並且必須滿足魚的釣起條件時才能生效。$"="<size\=24>Spend $1 <sprite\=1> Intuition to catch the last fish you caught. Lasts for $2 Fishing Attempt. Cannot use this during High Risk, High Reward, will only work when the fish catching conditions are met.</size>"
-r:"^消耗(.*)點<sprite\=1>直感，可以釣到和前一次同樣的魚，並增加(.*)優質率，持續(.*)次釣魚。以小博大時無法發動技能，並且必須滿足魚的釣起條件時才能生效。$"="<size\=24>Spend $1 <sprite\=1> Intuition to catch the last fish you caught and increase quality rate by $2. Lasts for $3 Fishing Attempt. Cannot use this during High Risk, High Reward, will only work when the fish catching conditions are met.</size>"
+r:"^消耗(.*)點<sprite\=1>直感，可以釣到和前一次同樣的魚，持續(.*)次釣魚。以小博大時無法發動技能，並且必須滿足魚的釣起條件時才能生效。$"="<size\=24>Spend $1 <sprite\=1> Intuition to catch the last fish you caught. Lasts for $2 Fishing Attempt. Cannot use this during Live Bait, will only work when the fish catching conditions are met.</size>"
+r:"^消耗(.*)點<sprite\=1>直感，可以釣到和前一次同樣的魚，並增加(.*)優質率，持續(.*)次釣魚。以小博大時無法發動技能，並且必須滿足魚的釣起條件時才能生效。$"="<size\=24>Spend $1 <sprite\=1> Intuition to catch the last fish you caught and increase quality rate by $2. Lasts for $3 Fishing Attempt. Cannot use this during Live Bait, will only work when the fish catching conditions are met.</size>"
 sr:"^可以釣到和前一次同樣的魚。會釣到的魚是：(.*)。（當前海域存在此魚時才會生效）$"="Catch the last fish you caught. The last fish caught: $1."
 sr:"^可以釣到和前一次同樣的魚，並增加(\d+%)優質率。會釣到的魚是：(.*)。（當前海域存在此魚時才會生效）$"="Catch the last fish you caugh and increase quality rate by $1. The last fish caught: $2."
 技巧專家=Technical Expert
 r:"^所有魚優質率增加(.*)。$"="<size\=24>Increase all fish quality rate by $1.</size>"
 謀略之證=Proof of Strategy
 
-{{A}}擅長優質釣魚，大幅提升優質率。=<size\=20>{{A}} excels at quality fishing, heavily increases quality rate.</size>
-匠人精神=Technician's Spirit
+{{A}}擅長優質釣魚，大幅提升優質率。=<size\=20>{{A}} excels at quality fishing and heavily increases quality rate.</size>
+匠人精神=Artisan's Spirit
 r:"^消耗(.*)點<sprite\=1>直感，使釣上的魚優質率增加(.*)，持續(.*)次釣魚。$"="<size\=24>Spend $1 <sprite\=1> Intuition to increase the quality rate of fish caught by $2. Lasts for $3 Fishing Attempt.</size>"
 r:"^使釣上的魚優質率增加(\d+%)。$"="Increase the quality rate of fish caught by $1."
 小型魚專家=Small Fish Expert
@@ -5535,6 +5559,34 @@ r:"^所有魚提鉤範圍增加(.*)。$"="<size\=24>Increase hook range for all 
 品質之證=Proof of Quality
 r:"^初始<sprite\=0>專注力增加(.*)點。$"="<size\=24>Increase starting <sprite\=0> Focus by $1.</size>"
 
+即興演奏=Improvisation
+{{A}}擅長自動釣魚，自動在輪盤橙色區域提鉤。=<size\=20>{{A}} excels at auto fishing, automatically reeling in the wheel orange zone.</size>
+r:"^消耗(.*)點<sprite\=0>專注力，使下次魚上鉤後自動提鉤，且優質率增加(.*)，持續(.*)次釣魚。$"="<size\=24>Spend $1 <sprite\=0> Focus to automatically catch the next fish and increase quality rate by $2. Lasts for $3 Fishing Attempts.</size>"
+r:"^下次魚上鉤後自動提鉤，且優質率\+(.*)。$"="Automatically catch the next fish and increase quality rate by $1."
+奏響弦音=Resonant Strings
+r:"^等待魚上鉤時間減少(.*)。$"="<size\=24>Decrease bite time by $1.</size>"
+吉他手之證=Proof of Guitarist
+
+{{A}}擅長短時間內獲得大量直感，來施放更多技能。=<size\=20>{{A}} excels at gaining many Intuition in a short time to use more skills.</size>
+實地取材=On-Site Sketching
+r:"^立即充滿<sprite\=1>直感條。本技能每產出(.*)點<sprite\=1>直感，技能剩餘冷卻時間增加(.*)秒。$"="<size\=24>Immediately fill the <sprite\=1> Intuition bar. For every $1 <sprite\=1> Intuition gained, increase cooldown time by $2 seconds.</size>"
+r:"^獲得了(.*)點<sprite\=1>直感，該技能剩餘冷卻時間增加了(.*)秒。$"="Gain $1 <sprite\=1> Intuition, increase cooldown time by $2 seconds."
+職業畫家=Professional Painter
+r:"^每釣到(.*)條魚，獲得(.*)點<sprite\=1>直感。$"="<size\=24>For every $1 fish caught, gain $2 <sprite\=1> Intuition.</size>"
+家族之證=Proof of Family
+r:"^每釣到(.*)條優質魚，獲得(.*)點<sprite\=1>直感。$"="<size\=24>For every $1 quality fish caught, gain $2 <sprite\=1> Intuition.</size>"
+
+{{A}}擅長回復魚群風暴進度，或延長魚群風暴時間。=<size\=20>{{A}} excels at restoring Fish Storm progress or extending Fish Storm duration.</size>
+命運紅線=Red Thread of Fate
+r:"^消耗全部<sprite\=0>專注力，每點消耗的<sprite\=0>專注力增加(.*)點的魚群風暴進度。若在魚群風暴中使用該技能，則每消耗(.*)點<sprite\=0>專注力延長魚群風暴(.*)秒。$"="<size\=24>Spend all <sprite\=0> Focus, for every <sprite\=0> Focus spent, increase Fish Storm progess by $1. If used during Fish Storm, for every $2 <sprite\=0> Focus spent, extend Fish Storm by $3 seconds.</size>"
+r:"^消耗了(.*)點<sprite\=0>專注力，增加(.*)點魚群風暴進度。$"="Spend $1 <sprite\=0> Focus to increase Fish Storm progess by $2."
+r:"^消耗了(.*)點<sprite\=0>專注力，延長魚群風暴(.*)秒。$"="Spend $1 <sprite\=0> Focus to extend Fish Storm by $2 seconds."
+已透過該技能延長魚群風暴時間。=Extended Fish Storm duration via this skill.
+海釣之運=Fishing Fortune
+r:"^魚群風暴中釣上的魚優質率增加(.*)。$"="<size\=24>Increase the quality rate of fish caught during Fish Storm by $1.</size>"
+心動之證=Proof of Kyun Kyun
+r:"^初始魚群風暴點數增加(.*)點。$"="<size\=24>Increase starting Fish Storm progess by $1.</size>"
+
 教學模式=Tutorial
 此處查看海釣<color\=#ff3b37>剩餘時間</color>。\n本次教學關不計時。=View <color\=#ff3b37>Remaining Time</color> here. This tutorial is not timed.
 「<color\=#00FFFF>專注力</color>」是海釣的重要資源，\n隨<color\=#ff3b37>時間流逝</color>不斷恢復=[<color\=#00FFFF>Focus</color>] will recover <color\=#ff3b37>over time</color>
@@ -5547,7 +5599,7 @@ r:"^優質率增加(\d+%)。$"="Increase quality rate by $1."
 r:"^「<color\=#FFFF00>直感</color>」\n釣到<color\=#ff3b37>優質魚</color>時增加(\d+)點$"="Increase [<color\=#FFFF00>Intuition</color>] by $1 \nwhen catching <color\=#ff3b37>Quality Fish</color>"
 r:"^消耗「<color\=#FFFF00>直感</color>」使用\n「<color\=#ff3b37>主角</color>」技能，\n可立即回復(\d+)點<color\=#00FFFF>專注力</color>。$"="Spend [<color\=#FFFF00>Intuition</color>] to use [<color\=#ff3b37>Wonder</color>]'s skill and \nimmediately restore <color\=#00FFFF>Focus</color> by $1."
 r:"^回復(\d+)點<sprite\=0>專注力。$"="Restore <sprite\=0> Focus by $1"
-在<color\=#ff3b37>紅色條</color>倒計時結束前，\n拋杆釣魚可以觸發「<color\=#ff3b37>以小博大</color>」。=Before the <color\=#ff3b37>Red Timer</color> ends.\nClick here to activate [<color\=#ff3b37>High Risk, High Reward</color>].
+在<color\=#ff3b37>紅色條</color>倒計時結束前，\n拋杆釣魚可以觸發「<color\=#ff3b37>以小博大</color>」。=Before the <color\=#ff3b37>Red Timer</color> ends.\nClick here to activate [<color\=#ff3b37>Live Bait</color>].
 「<color\=#ff3b37>魚餌選擇</color>」\n切換不同魚餌可吸引\n不同<color\=#ff3b37>體型</color>的魚。=Different [<color\=#ff3b37>baits</color>] can attract different <color\=#ff3b37>size</color> of fish.
 此外，每次釣到魚會累積\n「<color\=#ff3b37>魚群風暴進度</color>」。\n馬上就要滿了！=You will accumulate [<color\=#ff3b37>Fish Storm Progress</color>] \nevery time you catch a fish.
 「魚群風暴」=[Fish Storm]
@@ -5555,12 +5607,13 @@ r:"^回復(\d+)點<sprite\=0>專注力。$"="Restore <sprite\=0> Focus by $1"
 抓緊時間再次「<color\=#ff3b37>開始釣魚</color>」=Hurry up and [<color\=#ff3b37>Start Fishing</color>]
 r:"^觸發了「<color\=#ff3b37>波紋潮湧</color>」的增益，\n在(\d+)杆內可以釣到魚王。$"="Activated [<color\=#ff3b37>Ripple Tide</color>] buff,\nyou can catch the Top-Class Fish in the next $1 attempts."
 波紋潮湧=Ripple Tide
-sr:"^魚王「(.*)」出沒中，接下來(\d+)杆內有機會釣起。$"="Chance to catch the Top-Class Fish [$1] in the next $2 attempts."
+sr:"^魚王「(.*)」出沒中，接下來(\d+)杆內有機會釣起。$"="There's a chance to catch the Top-Class Fish [$1] in the next $2 attempts."
 r:"^每完成(\d+)個「<color\=#ff3b37>漁場任務</color>」\n獲得(\d+%)的漁分加成。$"="Every $1 completed [<color\=#ff3b37>Fishing Mission</color>] \nincrease Fishing Points Bonus by $2."
 解鎖內容=Unlocked Content
 「{{A}}」對釣魚有了新的領悟=[{{A}}] has a new understanding of fishing
 可以和「{{A}}」一起出海了=Can go out to sea with [{{A}}]
 沒有新解鎖內容=No new unlocked content
+海釣等級達上限=Fishing Level Maxed
 釣場任務=Fishing Missions
 r:"^\+(\d+%)得分$"="+$1 Points"
 拖動更換夥伴位置=<size\=24>Drag to change companion position</size>
@@ -5583,10 +5636,14 @@ r:"^(\d+)-(\d+)秒$"="$1-$2 Seconds"
 神仙魚=Angelfish
 擬刺尾鯛=Blue Tang
 綠鰭魚=Bluefin Gurnard
+碎毛盤海蛞蝓=Sea Bunny
+飛魚=Flying Fish
 紅魚=Red Snapper
 鰹魚=Skipjack Tuna
 鯔魚=Flathead Gray Mullet
 月亮魚=Opah
+紅甘鰺=Greater Amberjack
+霓虹雀鯛=Neon Damselfish
 白腹鯖=Chub Mackerel
 小丑魚=Clownfish
 鈍吻黃蓋鰈=Marbled Flounder
@@ -5596,25 +5653,38 @@ r:"^(\d+)-(\d+)秒$"="$1-$2 Seconds"
 斑魢=Spotted Knifejaw
 剝皮魚=Leatherjacket
 竹莢魚=Japanese Jack Mackerel
+單鰭電鰩=Narkidae
+斑頭六線魚=Greenling
+海膽=Sea Urchin
+牛尾魚=Flathead
+蠑螺=Turbo Snail
 
 伊勢龍蝦=Japanese Spiny Lobster
 巨鼇蟹=Japanese Spider Crab
 旗魚=Marlin
+帶魚=Hairtail
+短尾魟=Short-Tail Stingray
 梭子蟹=Swimming Crab
 刺豚=Porcupinefish
 花鰭海豬魚=Saddle Wrasse
 馬頭魚=Horsehead Fish
 金目鯛=Splendid Alfonsino
+海燕海星=Blue Bat Star
+青點鸚嘴魚=Parrotfish
+寄居蟹=Hermit Crab
 金梭魚=Barracuda
 鯛魚=Sea Bream
 帝王鮭=King Salmon
 沙鮻=Whiting
 黑鯛=Black Sea Bream
 鰤魚=Yellowtail
+日本蟳=Japanese Crab
 
 藍鰭鮪魚=Bluefin Tuna
 冠海馬=Crowned Seahorse
 槍烏賊=Squid
+黃{{A}}鮋=Black Scorpionfish
+逍遙饅頭蟹=Spectacled Box Crab
 獅子魚=Lionfish
 星鰻=Spotted Garden Eel
 扁口魚=Olive Flounder
@@ -5623,6 +5693,13 @@ r:"^(\d+)-(\d+)秒$"="$1-$2 Seconds"
 鰣魚=Reeves' Shad
 秋刀魚=Pacific Saury
 石斑魚=Grouper
+松球魚=Pineconefish
+竹節蝦=Kuruma Prawn
+海魴=John Dory
+鬼頭刀=Mahi Mahi
+海鰻=Pike Conger
+藍點馬鮫=Japanese Spanish Mackerel
+小章魚=Small Octopus
 
 極其珍貴的神秘小型海洋生物，似乎需要達成特定的條件才會在海域中現身。=This super rare small sea creature will only appear after certain conditions are met.
 極其珍貴的神秘中型海洋生物，似乎需要達成特定的條件才會在海域中現身。=This super rare medium sea creature will only appear after certain conditions are met.
@@ -5630,21 +5707,57 @@ r:"^(\d+)-(\d+)秒$"="$1-$2 Seconds"
 sr:"^極其珍貴的神秘小型海洋生物，似乎需要達成特定的條件才會在海域中現身。\n(.*)。$"="This super rare small sea creature will only appear after certain conditions are met.\n$1."
 sr:"^極其珍貴的神秘中型海洋生物，似乎需要達成特定的條件才會在海域中現身。\n(.*)。$"="This super rare medium sea creature will only appear after certain conditions are met.\n$1."
 sr:"^極其珍貴的神秘大型海洋生物，似乎需要達成特定的條件才會在海域中現身。\n(.*)。$"="This super rare large sea creature will only appear after certain conditions are met.\n$1."
-sr:"^極其珍貴的小型海洋生物，似乎需要先釣到(\d+)條(.*)，才會在海域中現身。$"="This super rare small sea creature will only appear after catching $1 <color\=#FF9300>$2</color>."
-sr:"^極其珍貴的小型海洋生物，似乎需要先釣到(\d+)條(.*)，才會在海域中現身。\n(.*)。$"="This super rare small sea creature will only appear after catching $1 $2.\n$3."
-sr:"^極其珍貴的大型海洋生物，似乎需要先釣到(\d+)條(.*)，才會在海域中現身。\n(.*)。$"="This super rare large sea creature will only appear after catching $1 $2.\n$3."
+sr:"^極其珍貴的小型海洋生物，似乎需要先釣到(\d+)條優質的<color\=#FF9300>(.*)</color>，才會在海域中現身。$"="This super rare small sea creature will only appear after catching $1 quality <color\=#FF9300>$2</color>."
+sr:"^極其珍貴的中型海洋生物，似乎需要先釣到(\d+)條優質的<color\=#FF9300>(.*)</color>，才會在海域中現身。$"="This super rare medium sea creature will only appear after catching $1 quality <color\=#FF9300>$2</color>."
+sr:"^極其珍貴的大型海洋生物，似乎需要先釣到(\d+)條優質的<color\=#FF9300>(.*)</color>，才會在海域中現身。$"="This super rare large sea creature will only appear after catching $1 quality <color\=#FF9300>$2</color>."
+sr:"^極其珍貴的小型海洋生物，似乎需要先釣到(\d+)條優質的(.*)，才會在海域中現身。\n(.*)。$"="This super rare small sea creature will only appear after catching $1 quality $2.\n$3."
+sr:"^極其珍貴的中型海洋生物，似乎需要先釣到(\d+)條優質的(.*)，才會在海域中現身。\n(.*)。$"="This super rare medium sea creature will only appear after catching $1 quality $2.\n$3."
+sr:"^極其珍貴的大型海洋生物，似乎需要先釣到(\d+)條優質的(.*)，才會在海域中現身。\n(.*)。$"="This super rare large sea creature will only appear after catching $1 quality $2.\n$3."
 sr:"^極其珍貴的小型海洋生物，似乎需要先釣到(\d+)條<color\=#FF9300>(.*)</color>，才會在海域中現身。$"="This super rare small sea creature will only appear after catching $1 <color\=#FF9300>$2</color>."
+sr:"^極其珍貴的中型海洋生物，似乎需要先釣到(\d+)條<color\=#FF9300>(.*)</color>，才會在海域中現身。$"="This super rare medium sea creature will only appear after catching $1 <color\=#FF9300>$2</color>."
 sr:"^極其珍貴的大型海洋生物，似乎需要先釣到(\d+)條<color\=#FF9300>(.*)</color>，才會在海域中現身。$"="This super rare large sea creature will only appear after catching $1 <color\=#FF9300>$2</color>."
+sr:"^極其珍貴的小型海洋生物，似乎需要先釣到(\d+)條(.*)，才會在海域中現身。\n(.*)。$"="This super rare small sea creature will only appear after catching $1 $2.\n$3."
+sr:"^極其珍貴的中型海洋生物，似乎需要先釣到(\d+)條(.*)，才會在海域中現身。\n(.*)。$"="This super rare medium sea creature will only appear after catching $1 $2.\n$3."
+sr:"^極其珍貴的大型海洋生物，似乎需要先釣到(\d+)條(.*)，才會在海域中現身。\n(.*)。$"="This super rare large sea creature will only appear after catching $1 $2.\n$3."
+sr:"^平靜海面和魚群風暴中十分稀有的小型海洋生物，似乎需要先釣到(\d+)條<color\=#FF9300>(.*)</color>，才會在海域中現身。$"="This rare small sea creature will only appear after catching $1 <color\=#FF9300>$2</color> during Calm Sea and Fish Storm."
+sr:"^平靜海面和魚群風暴中十分稀有的中型海洋生物，似乎需要先釣到(\d+)條<color\=#FF9300>(.*)</color>，才會在海域中現身。$"="This rare medium sea creature will only appear after catching $1 <color\=#FF9300>$2</color> during Calm Sea and Fish Storm."
+sr:"^平靜海面和魚群風暴中十分稀有的大型海洋生物，似乎需要先釣到(\d+)條<color\=#FF9300>(.*)</color>，才會在海域中現身。$"="This rare large sea creature will only appear after catching $1 <color\=#FF9300>$2</color> during Calm Sea and Fish Storm."
+sr:"^平靜海面和魚群風暴中十分稀有的小型海洋生物，似乎需要先釣到(\d+)條(.*)，才會在海域中現身。\n(.*)。$"="This rare small sea creature will only appear after catching $1 $2 during Calm Sea and Fish Storm.\n$3."
+sr:"^平靜海面和魚群風暴中十分稀有的中型海洋生物，似乎需要先釣到(\d+)條(.*)，才會在海域中現身。\n(.*)。$"="This rare medium sea creature will only appear after catching $1 $2 during Calm Sea and Fish Storm.\n$3."
+sr:"^平靜海面和魚群風暴中十分稀有的大型海洋生物，似乎需要先釣到(\d+)條(.*)，才會在海域中現身。\n(.*)。$"="This rare large sea creature will only appear after catching $1 $2 during Calm Sea and Fish Storm.\n$3."
+sr:"^平靜海面和魚群風暴中十分稀有的小型海洋生物，似乎需要先釣到(\d+)條優質的<color\=#FF9300>(.*)</color>，才會在海域中現身。$"="This rare small sea creature will only appear after catching $1 quality <color\=#FF9300>$2</color> during Calm Sea and Fish Storm."
+sr:"^平靜海面和魚群風暴中十分稀有的中型海洋生物，似乎需要先釣到(\d+)條優質的<color\=#FF9300>(.*)</color>，才會在海域中現身。$"="This rare medium sea creature will only appear after catching $1 quality <color\=#FF9300>$2</color> during Calm Sea and Fish Storm."
+sr:"^平靜海面和魚群風暴中十分稀有的大型海洋生物，似乎需要先釣到(\d+)條優質的<color\=#FF9300>(.*)</color>，才會在海域中現身。$"="This rare large sea creature will only appear after catching $1 quality <color\=#FF9300>$2</color> during Calm Sea and Fish Storm."
+sr:"^平靜海面和魚群風暴中十分稀有的小型海洋生物，似乎需要先釣到(\d+)條優質的(.*)，才會在海域中現身。\n(.*)。$"="This rare small sea creature will only appear after catching $1 quality $2 during Calm Sea and Fish Storm.\n$3."
+sr:"^平靜海面和魚群風暴中十分稀有的中型海洋生物，似乎需要先釣到(\d+)條優質的(.*)，才會在海域中現身。\n(.*)。$"="This rare medium sea creature will only appear after catching $1 quality $2 during Calm Sea and Fish Storm.\n$3."
+sr:"^平靜海面和魚群風暴中十分稀有的大型海洋生物，似乎需要先釣到(\d+)條優質的(.*)，才會在海域中現身。\n(.*)。$"="This rare large sea creature will only appear after catching $1 quality $2 during Calm Sea and Fish Storm.\n$3."
+sr:"^極其珍貴的小型海洋生物，似乎以<color\=#FF9300>(.*)</color>為魚餌時會在海域中現身。$"="This super rare small sea creature will only appear after using <color\=#FF9300>$1</color> as bait."
 sr:"^極其珍貴的中型海洋生物，似乎以<color\=#FF9300>(.*)</color>為魚餌時會在海域中現身。$"="This super rare medium sea creature will only appear after using <color\=#FF9300>$1</color> as bait."
 sr:"^極其珍貴的大型海洋生物，似乎以<color\=#FF9300>(.*)</color>為魚餌時會在海域中現身。$"="This super rare large sea creature will only appear after using <color\=#FF9300>$1</color> as bait."
+sr:"^極其珍貴的小型海洋生物，似乎以(.*)為魚餌時會在海域中現身。\n(.*)。$"="This super rare small sea creature will only appear after using $1 as bait.\n$2."
 sr:"^極其珍貴的中型海洋生物，似乎以(.*)為魚餌時會在海域中現身。\n(.*)。$"="This super rare medium sea creature will only appear after using $1 as bait.\n$2."
 sr:"^極其珍貴的大型海洋生物，似乎以(.*)為魚餌時會在海域中現身。\n(.*)。$"="This super rare large sea creature will only appear after using $1 as bait.\n$2."
+sr:"^平靜海面和魚群風暴中十分稀有的小型海洋生物，似乎以<color\=#FF9300>(.*)</color>或<color\=#FF9300>(.*)</color>為魚餌時會在海域中現身。$"="This rare small sea creature will only appear after using <color\=#FF9300>$1</color> or <color\=#FF9300>$2</color> as bait during Calm Sea and Fish Storm."
+sr:"^平靜海面和魚群風暴中十分稀有的中型海洋生物，似乎以<color\=#FF9300>(.*)</color>或<color\=#FF9300>(.*)</color>為魚餌時會在海域中現身。$"="This rare medium sea creature will only appear after using <color\=#FF9300>$1</color> or <color\=#FF9300>$2</color> as bait during Calm Sea and Fish Storm."
+sr:"^平靜海面和魚群風暴中十分稀有的大型海洋生物，似乎以<color\=#FF9300>(.*)</color>或<color\=#FF9300>(.*)</color>為魚餌時會在海域中現身。$"="This rare large sea creature will only appear after using <color\=#FF9300>$1</color> or <color\=#FF9300>$2</color> as bait during Calm Sea and Fish Storm."
+平靜海面和魚群風暴中十分稀有的大型海洋生物，似乎以<color\=#FF9300>黑鯛</color>或<color\=#FF9300>海燕海星</color>為魚餌時會在海域中現身。=This rare large sea creature will only appear after using <color\=#FF9300>Black Sea Bream</color> or <color\=#FF9300>Blue Bat Star</color> as bait during Calm Sea and Fish Storm.
+sr:"^平靜海面和魚群風暴中十分稀有的小型海洋生物，似乎以(.*)或(.*)為魚餌時會在海域中現身。\n(.*)。$"="This rare small sea creature will only appear after using $1 or $2 as bait during Calm Sea and Fish Storm.\n$3."
+sr:"^平靜海面和魚群風暴中十分稀有的中型海洋生物，似乎以(.*)或(.*)為魚餌時會在海域中現身。\n(.*)。$"="This rare medium sea creature will only appear after using $1 or $2 as bait during Calm Sea and Fish Storm.\n$3."
+sr:"^平靜海面和魚群風暴中十分稀有的中型海洋生物，似乎以三線磯鱸或星鰻為魚餌時會在海域中現身。\n(.*)。$"="This rare medium sea creature will only appear after using Threeline Grunt or Spotted Garden Eel as bait during Calm Sea and Fish Storm.\n$1."
+sr:"^平靜海面和魚群風暴中十分稀有的大型海洋生物，似乎以(.*)或(.*)為魚餌時會在海域中現身。\n(.*)。$"="This rare large sea creature will only appear after using $1 or $2 as bait during Calm Sea and Fish Storm.\n$3."
+sr:"^平靜海面和魚群風暴中十分稀有的大型海洋生物，似乎以黑鯛或海燕海星為魚餌時會在海域中現身。\n(.*)。$"="This rare large sea creature will only appear after using Black Sea Bream or Blue Bat Star as bait during Calm Sea and Fish Storm.\n$1."
 sr:"^平靜海面和魚群風暴中十分稀有的小型海洋生物，似乎以<color\=#FF9300>(.*)</color>為魚餌時會在海域中現身。$"="This rare small sea creature will only appear after using <color\=#FF9300>$1</color> as bait during Calm Sea and Fish Storm."
 sr:"^平靜海面和魚群風暴中十分稀有的中型海洋生物，似乎以<color\=#FF9300>(.*)</color>為魚餌時會在海域中現身。$"="This rare medium sea creature will only appear after using <color\=#FF9300>$1</color> as bait during Calm Sea and Fish Storm."
 sr:"^平靜海面和魚群風暴中十分稀有的大型海洋生物，似乎以<color\=#FF9300>(.*)</color>為魚餌時會在海域中現身。$"="This rare large sea creature will only appear after using <color\=#FF9300>$1</color> as bait during Calm Sea and Fish Storm."
 sr:"^平靜海面和魚群風暴中十分稀有的小型海洋生物，似乎以(.*)為魚餌時會在海域中現身。\n(.*)。$"="This rare small sea creature will only appear after using $1 as bait during Calm Sea and Fish Storm.\n$2."
 sr:"^平靜海面和魚群風暴中十分稀有的中型海洋生物，似乎以(.*)為魚餌時會在海域中現身。\n(.*)。$"="This rare medium sea creature will only appear after using $1 as bait during Calm Sea and Fish Storm.\n$2."
 sr:"^平靜海面和魚群風暴中十分稀有的大型海洋生物，似乎以(.*)為魚餌時會在海域中現身。\n(.*)。$"="This rare large sea creature will only appear after using $1 as bait during Calm Sea and Fish Storm.\n$2."
+sr:"^魚群風暴中十分稀有的小型海洋生物，似乎以<color\=#FF9300>(.*)</color>為魚餌時會在海域中現身。$"="This rare small sea creature will only appear after using <color\=#FF9300>$1</color> as bait during Fish Storm."
+sr:"^魚群風暴中十分稀有的中型海洋生物，似乎以<color\=#FF9300>(.*)</color>為魚餌時會在海域中現身。$"="This rare medium sea creature will only appear after using <color\=#FF9300>$1</color> as bait during Fish Storm."
+sr:"^魚群風暴中十分稀有的大型海洋生物，似乎以<color\=#FF9300>(.*)</color>為魚餌時會在海域中現身。$"="This rare large sea creature will only appear after using <color\=#FF9300>$1</color> as bait during Fish Storm."
+sr:"^魚群風暴中十分稀有的小型海洋生物，似乎以(.*)為魚餌時會在海域中現身。\n(.*)。$"="This rare small sea creature will only appear after using $1 as bait during Fish Storm.\n$2."
+sr:"^魚群風暴中十分稀有的中型海洋生物，似乎以(.*)為魚餌時會在海域中現身。\n(.*)。$"="This rare medium sea creature will only appear after using $1 as bait during Fish Storm.\n$2."
+sr:"^魚群風暴中十分稀有的大型海洋生物，似乎以(.*)為魚餌時會在海域中現身。\n(.*)。$"="This rare large sea creature will only appear after using $1 as bait during Fish Storm.\n$2."
 sr:"^平靜海面和魚群風暴中十分稀有的小型海洋生物。\n(.*)。$"="This rare small sea creature appears more frequently during Calm Sea and Fish Storm.\n$1."
 sr:"^平靜海面和魚群風暴中十分稀有的中型海洋生物。\n(.*)。$"="This rare medium sea creature appears more frequently during Calm Sea and Fish Storm.\n$1."
 sr:"^平靜海面和魚群風暴中十分稀有的大型海洋生物。\n(.*)。$"="This rare large sea creature appears more frequently during Calm Sea and Fish Storm.\n$1."
@@ -5666,6 +5779,12 @@ sr:"^魚群風暴中較為常見的大型海洋生物。\n(.*)。$"="This large 
 sr:"^平靜海面和魚群風暴中較為常見的小型海洋生物。\n(.*)。$"="This small sea creature appears more frequently during Calm Sea and Fish Storm.\n$1."
 sr:"^平靜海面和魚群風暴中較為常見的中型海洋生物。\n(.*)。$"="This medium sea creature appears more frequently during Calm Sea and Fish Storm.\n$1."
 sr:"^平靜海面和魚群風暴中較為常見的大型海洋生物。\n(.*)。$"="This large sea creature appears more frequently during Calm Sea and Fish Storm.\n$1."
+sr:"^平靜海面中十分稀有的小型海洋生物，似乎以<color\=#FF9300>(.*)</color>為魚餌時會在海域中現身。$"="This rare small sea creature will only appear after using <color\=#FF9300>$1</color> as bait during Calm Sea."
+sr:"^平靜海面中十分稀有的中型海洋生物，似乎以<color\=#FF9300>(.*)</color>為魚餌時會在海域中現身。$"="This rare medium sea creature will only appear after using <color\=#FF9300>$1</color> as bait during Calm Sea."
+sr:"^平靜海面中十分稀有的大型海洋生物，似乎以<color\=#FF9300>(.*)</color>為魚餌時會在海域中現身。$"="This rare large sea creature will only appear after using <color\=#FF9300>$1</color> as bait during Calm Sea."
+sr:"^平靜海面中十分稀有的小型海洋生物，似乎以蠑螺為魚餌時會在海域中現身。\n(.*)。$"="This rare small sea creature will only appear after using $1 as bait during Calm Sea.\n$2."
+sr:"^平靜海面中十分稀有的中型海洋生物，似乎以蠑螺為魚餌時會在海域中現身。\n(.*)。$"="This rare medium sea creature will only appear after using $1 as bait during Calm Sea.\n$2."
+sr:"^平靜海面中十分稀有的大型海洋生物，似乎以蠑螺為魚餌時會在海域中現身。\n(.*)。$"="This rare large sea creature will only appear after using $1 as bait during Calm Sea.\n$2."
 平靜海面中隨處可見的小型海洋生物。=This common small sea creature appears during Calm Sea.
 平靜海面中隨處可見的中型海洋生物。=This common medium sea creature appears during Calm Sea.
 平靜海面中隨處可見的大型海洋生物。=This common large sea creature appears during Calm Sea.
@@ -5685,12 +5804,27 @@ r:"^<color\=#FF8C00>大型魚餌</color>：大型魚機率增加(.*)$"="<color\=
 <color\=#00FFFF>專注力</color>不足。=Insufficient <color\=#00FFFF>Focus</color>.
 <color\=#FFFF00>直感</color>不足。=Insufficient <color\=#FFFF00>Intuition</color>.
 空閒狀態才可暫停遊戲。=Can only pause during idle.
+空閒時才可以發動技能。=Can only use skills during idle.
 空閒狀態下才可以切換魚餌。=Can only switch bait during idle.
 魚群風暴時無法使用。=Cannot be used during Fish Storm.
 技能冷卻中。=Skill is on cooldown.
 上一杆沒有釣到魚，無法發動【追蹤定錨】。=The last Fishing Attempt failed, unable to use [Tracking Anchor].
-上一杆是以小博大，不滿足【追蹤定錨】發動條件。=The last Fishing Attempt was High Risk, High Reward, unable to use [Tracking Anchor].
+上一杆是以小博大，不滿足【追蹤定錨】發動條件。=The last Fishing Attempt was Live Bait, unable to use [Tracking Anchor].
 遊戲暫停=Paused
+
+r:"^第(\d+)關獲得銅牌槍手$"="Earn Bronze in Level $1"
+r:"^第(\d+)關獲得銀牌槍手$"="Earn Silver in Level $1"
+r:"^第(\d+)關獲得金牌槍手$"="Earn Gold in Level $1"
+無盡模式=Endless
+已達最大等級=Reached Max Level
+聲援夥伴位置已滿。=Support slots are full.
+r:"^(\d+)秒內水彈傷害提高(\d+)倍，準備時間(\d+)秒$"="Increase water gun damage by $2x for $1s.\nCooldown Time: $3s"
+r:"^倒計時與靶子暫停(\d+)秒，準備時間(\d+)秒$"="Pause the timer and targets for $1s.\nCooldown Time: $2s"
+r:"^每秒造成(\d+)點全螢幕傷害，持續(\d+)秒，準備時間(\d+)秒$"="Deal $1 damage to the screen every second for $2s.\nCooldown time: $3s"
+r:"^每秒造成(\d+)點全屏傷害，持續(\d+)秒，準備時間(\d+)秒$"="Deal $1 damage to the screen every second for $2s.\nCooldown time: $3s"
+r:"^(\d+)秒內射擊不消耗子彈，準備時間(\d+)秒$"="Shooting will not spend ammo for $1s.\nCooldown Time: $2s"
+r:"^(\d+)秒內造成的連擊數翻倍，準備時間(\d+)秒$"="Double combo dealt for $1s.\nCooldown Time: $2s"
+r:"^填充(\d+)發爆炸彈，對爆炸範圍內敵人造成(\d+)點傷害，準備時間(\d+)秒$"="Load $1 explosive rounds, dealing $2 damage within the radius. Cooldown Time: $3s"
 
 sr:"^完成「<color\=#ff3b37>(.*)</color>」後即可解鎖當前活動，是否立即追蹤？$"="Complete [<color\=#ff3b37>$1</color>] to unlock the current event, track it now?"
 sr:"^開啟此活動建議優先觀看<color\=#ff3b37>「(.*)」</color>活動中的劇情：<color\=#ff3b37>「(.*)」</color>，否則可能影響劇情體驗，是否繼續解鎖？$"="To ensure the best experience, it is recommended to watch the story: <color\=#ff3b37>[$2]</color> from the event <color\=#ff3b37>[$1]</color> first. Proceed?"
