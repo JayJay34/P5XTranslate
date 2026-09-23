@@ -320,6 +320,7 @@ No size on inherit skill names or else they won't work in the inherit menu
 世界樹的衍化=Yggdrasil Derivation
 r:"^世界樹的衍化 Lv.(\d+)$"="<size\=24>Yggdrasil Derivation Lv.$1</size>"
 萬靈催化=Soul Catalysis
+音律和鳴=Temperament Harmony
 
 回防盾=Warded Shield
 護風罩=Wind Barrier
@@ -510,7 +511,7 @@ sr:"『HIGHLIGHT』：使所有同伴造成的傷害提升<color\=#fffc40>(\d+\.
 sr:"『HIGHLIGHT』：對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，並使其受到的傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。\n『ONE MORE』：對1名敵人造成(.*)屬性傷害。"=[HIGHLIGHT]: Deal <color\=#FFFC40>$1</color> ATK $2 damage to all foes and increase their DMG Taken by <color\=#FFFC40>$3</color> for 2 turns.\n[ONE MORE]: Deal $4 damage to 1 foe.
 
 Rank IX Gabriel HIGHLIGHT
-r:"^『HIGHLIGHT』：對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，自身獲得「告諭」。\n「告諭」：自身透過{{B}}釋放{{A}}技能時，消耗「告諭」額外使所有同伴攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>、傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合。\n『ONE MORE』：對1名敵人造成冰凍屬性傷害。$"="[HIGHLIGHT]: Deal Ice damage to 1 foe equal to <color\=#fffc40>$1</color> of ATK. User gains [Divine Oracle].\n[Divine Oracle]: When using a {{A}} skill with {{B}}, spend [Divine Oracle] to increase all allies' ATK by <color\=#fffc40>$2</color> and damage by <color\=#fffc40>$3</color>. Lasts for $4 turns.\n[ONE MORE]: Deal Ice damage to 1 foe."
+r:"^『HIGHLIGHT』：對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，自身獲得「告諭」。\n「告諭」：自身透過{{B}}釋放{{A}}技能時，消耗「告諭」額外使所有同伴攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>、傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合。\n『ONE MORE』：對1名敵人造成冰凍屬性傷害。$"="[HIGHLIGHT]: Deal Ice damage to 1 foe equal to <color\=#fffc40>$1</color> of ATK. User gains [Divine Oracle].\n[Divine Oracle]: When using a {{A}} skill with {{B}}, spend [Divine Oracle] to increase all allies' ATK by <color\=#fffc40>$2</color> and DMG Bonus by <color\=#fffc40>$3</color>. Lasts for $4 turns.\n[ONE MORE]: Deal Ice damage to 1 foe."
 
 Rank IX Strategist HIGHLIGHT
 sr:"^『HIGHLIGHT』：使所有同伴攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，暴擊效果提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合。\n『ONE MORE』：對1名敵人造成(.*)屬性傷害。$"="[HIGHLIGHT]: Increase all allies' ATK by <color\=#fffc40>$1</color> and Crit DMG by <color\=#fffc40>$2</color>. Lasts for $3 turns.\n[ONE MORE]: Deal $4 damage to 1 foe."
@@ -631,7 +632,7 @@ r:"^對所有敵人造成(\d+)段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的
 --- Fire ---
 
 //Fire Offering
-r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s\|102"><u>燃燒</u></link>狀態，若場上沒有敵人處於<link\="s\|102"><u>燃燒</u></link>狀態，則命中機率翻倍。$"="Deal <color\=#FFFF00>$1</color> ATK Fire damage to 1 foe, with a <color\=#FFFF00>$2</color> base chance to inflict <link\=s|102><u>Burn</u></link>, double the chance if there are no foes inflicted with <link\=s|102><u>Burn</u></link>."
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使敵人陷入<link\="s\|102"><u>燃燒</u></link>狀態，若場上沒有敵人處於<link\="s\|102"><u>燃燒</u></link>狀態，則命中機率翻倍。$"="Deal <color\=#FFFF00>$1</color> ATK Fire damage to 1 foe, with a <color\=#FFFF00>$2</color> base chance to inflict <link\=s|102><u>Burn</u></link>, double the chance if there are no foes with <link\=s|102><u>Burn</u></link>."
 
 //Hell's Calamity
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，若其處於<link\="s|102"><u>燃燒</u></link>狀態，則額外造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害並使其重置其<link\="s|102"><u>燃燒</u></link>效果時間。"=Deal <color\=#FFFF00>$1</color> ATK Fire damage to 1 foe.\nIf the foe is inflicted with <link\=s|102><u>Burn</u></link>, deals an additional <color\=#FFFF00>$1</color> ATK Fire damage and reset the duration of <link\=s|102><u>Burn</u></link>.
@@ -672,17 +673,17 @@ r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的疾風屬�
 --- Psy ---
 
 //ST
-r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(\d+%)。$"="Deal <color\=#fffc40>$1</color> ATK Psy damage to 1 foe. Deal a <link\="s|211"><u>TECHNICAL</u></link> and increase skill damage by $2 to foes inflicted with a <link\=s|106><u>Mental Ailment</u></link>."
-r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，<link\="s\|285"><u>技能傷害</u></link>提升(\d+%)。$"="Deal <color\=#fffc40>$1</color> ATK Psy damage to 1 foe. Deal a <link\="s|211"><u>TECHNICAL</u></link> and increase <link\="s|285"><u>Skill Damage</u></link> by $2 to foes inflicted with a <link\=s|106><u>Mental Ailment</u></link>."
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(\d+%)。$"="Deal Psy damage to 1 foe equal to <color\=#fffc40>$1</color> of ATK. Deal a <link\="s|211"><u>TECHNICAL</u></link> and increase Skill Damage by $2 for foe with a <link\=s|106><u>Mental Ailment</u></link>."
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，<link\="s\|285"><u>技能傷害</u></link>提升(\d+%)。$"="Deal Psy damage to 1 foe equal to <color\=#fffc40>$1</color> of ATK. Deal a <link\="s|211"><u>TECHNICAL</u></link> and increase <link\="s|285"><u>Skill Damage</u></link> by $2 for foes with a <link\=s|106><u>Mental Ailment</u></link>."
 
 //AoE
-r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(\d+%)。$"="Deal <color\=#fffc40>$1</color> ATK Psy damage to all foes. Deal a <link\="s|211"><u>TECHNICAL</u></link> and increase skill damage by $2 to foes inflicted with a <link\=s|106><u>Mental Ailment</u></link>."
-r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊點念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(\d+%)。$"="Deal <color\=#fffc40>$1</color> ATK Psy damage to 1 foe. Deal a <link\="s|211"><u>TECHNICAL</u></link> and increase skill damage by $2 to foes inflicted with a <link\=s|106><u>Mental Ailment</u></link>."
-r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，<link\="s\|285"><u>技能傷害</u></link>提升(\d+%)。$"="Deal <color\=#fffc40>$1</color> ATK Psy damage to all foes. Deal a <link\="s|211"><u>TECHNICAL</u></link> and increase <link\="s|285"><u>Skill Damage</u></link> by $2 to foes inflicted with a <link\=s|106><u>Mental Ailment</u></link>."
-r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊點念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，<link\="s\|285"><u>技能傷害</u></link>提升(\d+%)。$"="Deal <color\=#fffc40>$1</color> ATK Psy damage to 1 foe. Deal a <link\="s|211"><u>TECHNICAL</u></link> and increase <link\="s|285"><u>Skill Damage</u></link> by $2 to foes inflicted with a <link\=s|106><u>Mental Ailment</u></link>."
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(\d+%)。$"="Deal Psy damage to all foes equal to <color\=#fffc40>$1</color> of ATK. Deal a <link\="s|211"><u>TECHNICAL</u></link> and increase Skill damage by $2 for foes with a <link\=s|106><u>Mental Ailment</u></link>."
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊點念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，技能傷害提升(\d+%)。$"="Deal Psy damage to all foes equal to <color\=#fffc40>$1</color> of ATK. Deal a <link\="s|211"><u>TECHNICAL</u></link> and increase Skill Damage by $2 for foes with a <link\=s|106><u>Mental Ailment</u></link>."
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，<link\="s\|285"><u>技能傷害</u></link>提升(\d+%)。$"="Deal Psy damage to all foes equal to <color\=#fffc40>$1</color> of ATK. Deal a <link\="s|211"><u>TECHNICAL</u></link> and increase <link\="s|285"><u>Skill Damage</u></link> by $2 for foes with a <link\=s|106><u>Mental Ailment</u></link>."
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊點念動屬性傷害，對處於<link\="s\|106"><u>精神異常</u></link>狀態的敵人造成<link\="s\|211"><u>TECHNICAL</u></link>，<link\="s\|285"><u>技能傷害</u></link>提升(\d+%)。$"="Deal Psy damage to all foes equal to <color\=#fffc40>$1</color> of ATK. Deal a <link\="s|211"><u>TECHNICAL</u></link> and increase <link\="s|285"><u>Skill Damage</u></link> by $2 for foes with a <link\=s|106><u>Mental Ailment</u></link>."
 
 Okuninushi
-r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於精神異常的敵人增傷20%，若目標敵人的弱點是念動屬性，則額外提升15%造成的傷害。$"="Deal <color\=#fffc40>$1</color> ATK Psy damage to all foes. Increase DMG Dealt by 20% if the foe is inflicted with Mental Ailments. Additionally increase DMG Dealt by 15% if the foe is weak to Psy."
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害，對處於精神異常的敵人增傷20%，若目標敵人的弱點是念動屬性，則額外提升15%造成的傷害。$"="Deal Psy damage to all foes equal to <color\=#fffc40>$1</color> of ATK. Increase DMG Dealt by 20% if the foe is inflicted with Mental Ailments. Additionally increase DMG Dealt by 15% if the foe is weak to Psy."
 
 Kohryu
 r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的念動屬性傷害。有<color\=#fffc40>(\d+\.\d+%)</color>基礎機率使所有敵人陷入暈眩狀態，效果持續(\d+)回合。$"="Deal <color\=#fffc40>$1</color> ATK Psy damage to all foes. There is a <color\=#fffc40>$2</color> base chance to inflict all foes with Dizzy for $3 turns."
@@ -799,10 +800,10 @@ r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的萬能�
 --- Recovery ---
 
 // ST Heal
-r:"使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值。"=Restore <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to 1 ally.
+r:"^使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值。$"="Restore 1 ally's HP equal to <color\=#fffc40>$1</color> of ATK + <color\=#fffc40>$2</color>."
 
 // AoE Heal
-r:"^使所有同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值。+$"=Restore <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to all allies.
+r:"^使所有同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值。$"="Restore all allies' HP equal to <color\=#fffc40>$1</color> of ATK + <color\=#fffc40>$2</color>."
 
 Sarasvati Divine Chant
 r:"^使所有同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，並使所有同伴受到的傷害降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。$"="Restore <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to all allies, then decrease all allies' DMG Taken by <color\=#fffc40>$3</color> for $4 turns."
@@ -810,8 +811,8 @@ r:"^使所有同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#
 // Lotus
 r:"^使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，並使自身獲得(\d+)層『蓮華』，『蓮華』存在期間，任意單位行動後，若有同伴生命值低於(\d+%)，則消耗一層『蓮華』，使其恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，『蓮華』持續(\d+)回合。$"="Restore <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to 1 ally, then gains $3 stacks of [Sacred Lotus] for $7 turn. When [Sacred Lotus] is present, if any ally is below $4 Max HP after their turn, consumes one stack of [Sacred Lotus] and restore <color\=#fffc40>$5</color> ATK + <color\=#fffc40>$6</color> HP to them."
 
-//Titania idk
-r:"使所有同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，對生命值低於50%的同伴造成的治療效果提升25%。並使所有同伴回復(\d+)點精力值。"=Restore <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to all allies.\nIncrease Healing Effect by 25% to allies under 50% HP.\nRestore $3 SP to all allies.
+//Titania
+r:"^使所有同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，對生命值低於(\d+%)的同伴造成的治療效果提升(\d+%)。並使所有同伴回復(\d+)點精力值。$"="Restore all allies' HP equal to <color\=#fffc40>$1</color> of ATK + <color\=#fffc40>$2</color>. If an ally's HP is below $3, increase Healing Effect by $4. Restore party's SP by $5."
 
 // Patra
 r:"^驅散1名同伴的<link\="s\|107"><u>暈眩</u></link>、<link\="s\|109"><u>睡眠</u></link>、<link\="s\|108"><u>遺忘</u></link>效果。$"=Cures <link\=s|107><u>Dizzy</u></link>/<link\=s|109><u>Sleep</u></link>/<link\=s|108><u>Forget</u></link> for 1 ally.
@@ -929,7 +930,7 @@ r:"^使所有敵人的防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>，受�
 Venomous Vortex
 r:"^使1名敵人受到傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，並使目標獲得(\d+)層「蛇毒」，持續(\d+)回合，上限(\d+)層。「蛇毒」：每回合受到我方攻擊力最高的怪盜<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒屬性傷害\（最多計入WONDER攻擊力的(\d+%)\）。$"="Increase 1 foe's DMG Taken by <color\=#fffc40>$1</color>. Inflict the target with $2 [Venom] stack for $3 turns. Stacks up to $4 times. [Venom]: Take Curse damage equal to <color\=#fffc40>$5</color> of the highest ATK Thief's ATK, up to $6 of Wonder's ATK."
 
-Deconstruction Force Field
+Deconstruction Field
 r:"^使1名敵人受到傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，受到暴擊效果提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Increase 1 foes' DMG Taken by <color\=#fffc40>$1</color> and Crit DMG Taken by <color\=#fffc40>$2</color>. Lasts for $3 turns."
 
 --- Dispel ---
