@@ -78,7 +78,7 @@ sr:"^<color\=#FF0000>(.*)</color>從倒地狀態恢復了。$"="<color\=#FF0000>
 
 <color\=#66ccff>火焰屬性TECHNICAL</color>=<color\=#66ccff>Fire TECHNICAL</color>
 火焰屬性TECHNICAL=Fire TECHNICAL
-爆燃=Fireburn
+爆燃=Backdraft
 冰灼=Ice Burn
 颶焰=Hurricane Flame
 
@@ -115,16 +115,16 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 
 攻擊力大幅提高，防禦力大幅下降，強制執行普攻指令=Heavily increase ATK and decrease DEF, forced to use basic ATK
 
-r:"^部分火焰屬性技能對處於某些特定狀態的敵人，會造成額外的效果。\n火焰屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『爆燃』，使技能傷害提升(\d+%)；\n火焰屬性技能對處於凍結狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合；\n火焰屬性技能對處於風襲狀態的敵人造成TECHNICAL時，觸發『颶焰』，額外造成(\d+)次基於目標最大生命值(\d+%)的火焰屬性傷害。$"="Certain Fire skills can trigger additional effects to foes in specific status.\nWhen Fire skills deal TECHNICAL to foes inflicted with Burn, trigger [Fireburn], increase skill damage by $1;\nWhen Fire skills deal TECHNICAL to foes inflicted with Freeze, trigger [Ice Burn], there is a $2 base chance to increase the target's Fire/Ice DMG Taken by $3 for $4 turns;\nWhen Fire skills deal TECHNICAL to foes inflicted with Windswept, trigger [Hurricane Flame]: Deal $5 additional hit of Fire damage based on $6 of the target's Max HP."
-r:"^火焰屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『爆燃』，使技能傷害提升(\d+%)。$"="When Fire skills deal TECHNICAL to foes inflicted with Burn, trigger [Fireburn], increase skill damage by $1"
-r:"^火焰屬性技能對處於凍結狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合。$"="When Fire skills deal TECHNICAL to foes inflicted with Freeze, trigger [Ice Burn], there is a $1 base chance to increase the target's Fire/Ice DMG Taken by $2 for $3 turns."
-r:"^火焰屬性技能對處於凍結狀態的敵人造成TECHNICAL或冰凍屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合。$"="When Fire skills deal TECHNICAL to foes inflicted with Freeze or Ice skills deal TECHNICAL to foes inflicted with Burn, trigger [Ice Burn], there is a $1 base chance to increase the target's Fire/Ice DMG Taken by $2 for $3 turns."
-r:"^火焰屬性技能對處於風襲狀態的敵人造成TECHNICAL時，觸發『颶焰』，額外造成(\d+)次基於目標最大生命值(\d+%)的火焰屬性傷害。$"="When Fire skills deal TECHNICAL to foes inflicted with Windswept, trigger [Hurricane Flame]: Deal $1 additional hit of Fire damage based on $2 of the target's Max HP."
+r:"^部分火焰屬性技能對處於某些特定狀態的敵人，會造成額外的效果。\n火焰屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『爆燃』，使技能傷害提升(\d+%)；\n火焰屬性技能對處於凍結狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合；\n火焰屬性技能對處於風襲狀態的敵人造成TECHNICAL時，觸發『颶焰』，額外造成(\d+)次基於目標最大生命值(\d+%)的火焰屬性傷害。$"="Some Fire skills have additional effects on foes with certain ailments.\nOn foes with Burn, activate [Backdraft]: Increase Skill Damage by $1.\nOn foes with Freeze, activate [Ice Burn]: $2 base chance to increase targets' Fire/Ice DMG Taken by $3 for $4 turns.\nOn foes with Windswept, activate [Hurricane Flame]: Deal bonus Fire damage equal to $6 of the target's Max HP ($5 time)."
+r:"^火焰屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『爆燃』，使技能傷害提升(\d+%)。$"="When activating Fire TECHNICAL on foes with Burn, activate [Backdraft]: Increase Skill Damage by $1."
+r:"^火焰屬性技能對處於凍結狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合。$"="When activating Fire TECHNICAL on foes with Freeze, activate [Ice Burn]: $1 base chance to increase targets' Fire/Ice DMG Taken by $2 for $3 turns."
+r:"^火焰屬性技能對處於凍結狀態的敵人造成TECHNICAL或冰凍屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合。$"="When activating Fire TECHNICAL on foes with Freeze or Ice TECHNICAL on foes with Burn, activate [Ice Burn]: $1 base chance to increase targets' Fire/Ice DMG Taken by $2 for $3 turns."
+r:"^火焰屬性技能對處於風襲狀態的敵人造成TECHNICAL時，觸發『颶焰』，額外造成(\d+)次基於目標最大生命值(\d+%)的火焰屬性傷害。$"="When activating Fire TECHNICAL on foes with Windswept, activate [Hurricane Flame]: Deal bonus Fire damage equal to $2 of the target's Max HP ($1 time)."
 
-r:"^部分冰凍屬性技能對處於某些特定狀態的敵人，會造成額外的效果。\n冰凍屬性技能對處於觸電狀態的敵人造成TECHNICAL時，觸發『凜霆』，使技能傷害提升(\d+%)；\n冰凍屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合；\n冰凍屬性技能對處於凍結狀態的敵人造成TECHNICAL時，觸發『冰封』，有(\d+%)基礎機率使目標陷入冰封狀態，持續(\d+)回合。$"="Certain Ice skills can trigger additional effects to foes in specific status.\nWhen Ice skills deal TECHNICAL to foes inflicted with Shock, trigger [Frigid Bolt], increase skill damage by $1;\nWhen Ice skills deal TECHNICAL to foes inflicted with Burn, trigger [Ice Burn], there is a $2 base chance to increase the target's Fire/Ice DMG Taken by $3 for $4 turns;\nWhen Ice skills deal TECHNICAL to foes inflicted with Freeze, trigger [Ice Seal]: There is a $5 base chance to inflict the target with Ice Seal for $6 turn."
-r:"^冰凍屬性技能對處於觸電狀態的敵人造成TECHNICAL時，觸發『凜霆』，使技能傷害提升(\d+%)$"="When Ice skills deal TECHNICAL to foes inflicted with Shock, trigger [Frigid Bolt], increase skill damage by $1"
-r:"^冰凍屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合$"="When Ice skills deal TECHNICAL to foes inflicted with Burn, trigger [Ice Burn], there is a $1 base chance to increase the target's Fire/Ice DMG Taken by $2 for $3 turns"
-r:"^冰凍屬性技能對處於凍結狀態的敵人造成TECHNICAL時，觸發『冰封』，有(\d+%)基礎機率使目標陷入冰封狀態，持續(\d+)回合。$"="When Ice skills deal TECHNICAL to foes inflicted with Freeze, trigger [Ice Seal]: There is a $1 base chance to inflict the target with Ice Seal for $2 turn."
+r:"^部分冰凍屬性技能對處於某些特定狀態的敵人，會造成額外的效果。\n冰凍屬性技能對處於觸電狀態的敵人造成TECHNICAL時，觸發『凜霆』，使技能傷害提升(\d+%)；\n冰凍屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合；\n冰凍屬性技能對處於凍結狀態的敵人造成TECHNICAL時，觸發『冰封』，有(\d+%)基礎機率使目標陷入冰封狀態，持續(\d+)回合。$"="Some Ice skills have additional effects on foes with certain ailments.\nOn foes with Shock, activate [Frigid Bold]: Increase Skill Damage by $1.\nOn foes with Burn, activate [Ice Burn]: $2 base chance to increase targets' Fire/Ice DMG Taken by $3 for $4 turns.\nOn foes with Freeze, activate [Ice Seal]: $5 base chance to inflict Ice Seal for $6 turn."
+r:"^冰凍屬性技能對處於觸電狀態的敵人造成TECHNICAL時，觸發『凜霆』，使技能傷害提升(\d+%)$"="When activating Ice TECHNICAL on foes with Shock, activate [Frigid Bolt]: Increase Skill Damage by $1."
+r:"^冰凍屬性技能對處於燃燒狀態的敵人造成TECHNICAL時，觸發『冰灼』，有(\d+%)基礎機率使目標受到火焰/冰凍屬性傷害提升(\d+%)，持續(\d+)回合$"="When activating Ice TECHNICAL on foes with Burn, activate [Ice Burn]: $1 base chance to increase targets' Fire/Ice DMG Taken by $2 for $3 turns."
+r:"^冰凍屬性技能對處於凍結狀態的敵人造成TECHNICAL時，觸發『冰封』，有(\d+%)基礎機率使目標陷入冰封狀態，持續(\d+)回合。$"="When activating Ice TECHNICAL on foes with Freeze, activate [Ice Burn]: $1 base chance to inflict Ice Seal for $2 turn."
 
 --------------------------------------------------
 WONDER's Persona Skill Details
@@ -346,7 +346,7 @@ r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊點射擊屬�
 --- Fire ---
 
 //Fire Offering
-r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的火焰屬性傷害，(\d+\.\d+%)基礎機率使敵人燃燒，持續2回合，若場上沒有敵人處於燃燒狀態則命中機率翻倍。"=<size\=21>Deals <color\=#FFFF00>$1</color> ATK Fire damage to <color\=#FFFF00>1</color> foe and has a <color\=#FFFF00>$2</color> chance of inflicting <link\=s|102><u>Burn</u></link> for 2 turns. If there are no foes inflicted with <link\=s|102><u>Burn</u></link>, then the chance of inflicting is doubled. </size>
+r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的火焰屬性傷害，(\d+\.\d+%)基礎機率使敵人燃燒，持續2回合，若場上沒有敵人處於燃燒狀態則命中機率翻倍。"=<size\=21>Deals <color\=#FFFF00>$1</color> ATK Fire damage to <color\=#FFFF00>1</color> foe and has a <color\=#FFFF00>$2</color> chance of inflicting <link\=s|102><u>Burn</u></link> for 2 turns. If there are no foes with <link\=s|102><u>Burn</u></link>, then the chance of inflicting is doubled. </size>
 
 //Hell's Calamity
 r:"對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的火焰屬性傷害，若其處於燃燒狀態，則造成(\d+\.\d+%)攻擊力的額外傷害，並重置其燃燒效果的持續時間。"=<size\=22>Deals <color\=#FFFF00>$1</color> ATK Fire damage to <color\=#FFFF00>1</color> foe. If the foe is inflicted with Burn, deals an additional <color\=#FFFF00>$1</color> ATK Fire damage and reset the duration of Burn.</size>
@@ -394,14 +394,14 @@ Vishnu
 --- Psy ---
 
 //ST
-r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，對精神異常的敵人傷害提升(\d+%)，造成TECHNICAL。$"="Deal $1 ATK Psy damage to <color\=#FFFF00>1</color> foe. Deal a TECHNICAL and increase skill damage by $2 to foes inflicted with a Mental Ailment."
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，對精神異常的敵人傷害提升(\d+%)，造成TECHNICAL。$"="Deal Psy damage to <color\=#FFFF00>1</color> foe equal to $1 of ATK. Deal a TECHNICAL and increase Skill Damage by $2 for foes with a Mental Ailment."
 
 //AoE
-r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，對精神異常的敵人傷害提升(\d+%)，造成TECHNICAL。$"="Deal $1 ATK Psy damage to <color\=#FFFF00>all</color> foes. Deal a TECHNICAL and increase skill damage by $2 to foes inflicted with a Mental Ailment."
-r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，對精神異常的敵人傷害提升(\d+%)。$"="Deal $1 ATK Psy damage to <color\=#FFFF00>all</color> foes. Deal a TECHNICAL and increase skill damage by $2 to foes inflicted with a Mental Ailment."
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，對精神異常的敵人傷害提升(\d+%)，造成TECHNICAL。$"="Deal Psy damage to <color\=#FFFF00>all</color> foes equal to $1 of ATK. Deal a TECHNICAL and increase Skill Damage by $2 for foes with a Mental Ailment."
+r:"對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，對精神異常的敵人傷害提升(\d+%)。$"="Deal Psy damage to <color\=#FFFF00>all</color> foes equal to $1 of ATK. Deal a TECHNICAL and increase Skill Damage by $2 for foes with a Mental Ailment."
 
 Okuninushi
-r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，對處於精神異常狀態的敵人造成的傷害提升(\d+%)。對弱點為念動屬性的敵人造成的傷害額外提升(\d+%)。$"="Deal $1 ATK Psy damage to <color\=#FFFF00>all</color> foes. Increase DMG Dealt by $1 if the foe is inflicted with Mental Ailments. Additionally increase DMG Dealt by $2 if the foe is weak to Psy."
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害，對處於精神異常狀態的敵人造成的傷害提升(\d+%)。對弱點為念動屬性的敵人造成的傷害額外提升(\d+%)。$"="Deal Psy damage to <color\=#FFFF00>all</color> foes equal to of $1 ATK. Increase DMG Dealt by $1 if the foe is inflicted with Mental Ailments. Additionally increase DMG Dealt by $2 if the foe is weak to Psy."
 
 Kohryu
 r:"^已進化，對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的念動屬性傷害。有(\d+\.\d+%)基礎機率使主目標敵人陷入暈眩狀態，持續(\d+)回合。$"="Evolved. Deal $1 ATK Psy damage to <color\=#FFFF00>all</color> foes. There is a $2 base chance to inflict the main target with Dizzy for $3 turns."
@@ -512,17 +512,19 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的萬能�
 --- Recovery ---
 
 ST Heal
-r:"^使<color\=#FFFF00>1名</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值。$"="Restore $1 ATK + $2 HP to <color\=#fffc40>1</color> ally."
+r:"^使<color\=#FFFF00>1名</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值。$"="Restore <color\=#FFFF00>1</color> ally's HP equal to $1 of ATK + $2."
 使1名同伴恢復一定生命值。=Restore a certain amount of HP to 1 ally.
 
 AoE Heal
-r:"^使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值。$"="Restore $1 ATK + $2 HP to <color\=#fffc40>all</color> allies."
+r:"^使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值。$"="Restore <color\=#FFFF00>all</color> allies' HP equal to $1 of ATK + $2."
 
 Lotus
 r:"使1名同伴恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，並使自身獲得2層『蓮華』，『蓮華』存在期間，任意單位行動後，若有同伴生命值低於50%，則消耗一層『蓮華』，使其恢復<color\=#fffc40>(\d+\.\d+%)</color>攻擊力\+<color\=#fffc40>(\d+)</color>的生命值，『蓮華』持續1回合。"=<size\=30>Restore <color\=#fffc40>$1</color> ATK + <color\=#fffc40>$2</color> HP to 1 ally and gain 2 stacks of [Sacred Lotus] for 1 turn. If an ally is below 50% Max HP after their turn while [Sacred Lotus] is present, consume one stack and retores <color\=#fffc40>$3</color> ATK + <color\=#fffc40>$4</color> HP to them</size>.
 
 Titania
-r:"^使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值，對生命值低於(\d+%)的同伴造成的治療效果提升(\d+%)。並恢復所有同伴(\d+)點精力值。$"="Restore $1 ATK + $2 HP to <color\=#FFFF00>all</color> allies, increase Healing Effect by $4 to allies under $3 HP. Restore $5 SP to all allies."
+r:"^使<color\=#FFFF00>所有</color>同伴恢復(\d+\.\d+%)攻擊力\+(\d+)的生命值，對生命值低於(\d+%)的同伴造成的治療效果提升(\d+%)。並恢復所有同伴(\d+)點精力值。$"="Restore <color\=#FFFF00>all</color> allies' HP equal to $1 of ATK + $2. If an ally's HP is below $3, increase Healing Effect by $4. Restore party's SP by $5."
+
+Restore $1 ATK + $2 HP to <color\=#FFFF00>all</color> allies, increase Healing Effect by $4 to allies under $3 HP. Restore $5 SP to all allies."
 
 Patra
 r:"^驅散1名同伴的<link\="s\|107"><u>暈眩</u></link>、<link\="s\|109"><u>睡眠</u></link>、<link\="s\|108"><u>遺忘</u></link>效果。$"=Cures <link\=s|107><u>Dizzy</u></link>/<link\=s|109><u>Sleep</u></link>/<link\=s|108><u>Forget</u></link> for 1 ally.
@@ -713,7 +715,7 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的祝福�
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deal $1 ATK Curse damage to <color\=#FFFF00>all</color> foes and increase their DMG Taken by $2 for $3 turns."
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的萬能屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deal $1 ATK Almighty damage to <color\=#FFFF00>all</color> foes and increase their DMG Taken by $2 for $3 turns."
 
-r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害，自身獲得「告諭」。\n「告諭」：自身透過{{B}}釋放{{A}}技能時，消耗「告諭」額外使所有同伴攻擊力提升(\d+\.\d+%)、傷害提升(\d+\.\d+%)，持續(\d+)回合。$"="Deal Ice damage to <color\=#FFFF00>1</color> foe equal to $1 of ATK. User gains [Divine Oracle].\n[Divine Oracle]: When using a {{A}} skill with {{B}}, spend [Divine Oracle] to increase all allies' ATK by <color\=#fffc40>$2</color> and damage by <color\=#fffc40>$3</color>. Lasts for $4 turns."
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害，自身獲得「告諭」。\n「告諭」：自身透過{{B}}釋放{{A}}技能時，消耗「告諭」額外使所有同伴攻擊力提升(\d+\.\d+%)、傷害提升(\d+\.\d+%)，持續(\d+)回合。$"="Deal Ice damage to <color\=#FFFF00>1</color> foe equal to $1 of ATK. User gains [Divine Oracle].\n[Divine Oracle]: When using a {{A}} skill with {{B}}, spend [Divine Oracle] to increase all allies' ATK by <color\=#fffc40>$2</color> and DMG Bonus by <color\=#fffc40>$3</color>. Lasts for $4 turns."
 
 r:"^使<color\=#FFFF00>所有</color>同伴攻擊力提升(\d+\.\d+%)，暴擊效果提升(\d+\.\d+%)，持續(\d+)回合。$"="Increase <color\=#FFFF00>all</color> allies' ATK by $1 and Crit DMG by $2. Lasts for $3 turns."
 
@@ -988,6 +990,7 @@ r:"^H<color\=#000000> L</color>特化$"="H<color\=#000000>L</color> Buff"
 
 r:"^戰<color\=#000000>意</color>共鳴$"="W<color\=#000000>a</color>rrior's Resonance"
 r:"^動<color\=#000000>力</color>激蕩$"="K<color\=#000000>i</color>netic Surge"
+r:"^音<color\=#000000>律</color>和鳴$"="T<color\=#000000>e</color>mperament Harmony"
 
 r:"^免<color\=#000000>疫</color>倒地$"="N<color\=#000000>u</color>ll Down"
 r:"^免<color\=#000000>疫</color>精神異常及控制$"="N<color\=#000000>u</color>ll Mental/Control Ailment"
