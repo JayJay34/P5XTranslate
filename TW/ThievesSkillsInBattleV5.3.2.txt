@@ -985,7 +985,7 @@ r:"^解鎖條件：我方角色擁有『駭入完成』\n使1名友方怪盜的�
 
 r:"^使<color\=#FFFF00>所有</color>友方怪盜的攻擊力提升(\d+)\+\({{A}}每有(\d+)點攻擊力額外提升其(\d+\.\d+)攻擊力，最多計入(\d+)點攻擊力\)，持續(\d+)回合。為全體敵人添加上我方所有怪盜適應性的『擾亂病毒』，持續(\d+)回合。$"="For $5 turns, increase <color\=#FFFF00>all</color> allies' ATK by $1; Increase ATK by $3 more for every $2 points of Futaba's ATK (up to $4 ATK). Inflict [Disruption Virus] on all foes for $6 turn, based on the targeted ally's attribute."
 r:"^解鎖條件：我方角色擁有『駭入完成』\n使所有名友方怪盜的攻擊力提升<color\=#FFFC40>(\d+)</color>\+\({{A}}每有(\d+)點攻擊力，額外提升其(\d+\.\d+)攻擊力，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\)，持續(\d+)回合。為全體敵人添加上該名怪盜適應性的『擾亂病毒』，持續(\d+)回合。『擾亂病毒』：使目標對應屬性的<link\="s\|286"><u>『適應性降級』</u></link>：若為無效、反彈、吸收，則變為耐性；若為耐性則變為普通；若為普通則變為弱點。若為弱點，則提升其(\d+%)受到弱點傷害。$"="Use condition: When allies have [Hack Complete]\nFor $5 turns, increase all allies's ATK by <color\=#FFFC40>$1</color>; Increase ATK by $3 more for every $2 points of Futaba's ATK (up to <color\=#FFFC40>$4</color> ATK). Inflict [Disruption Virus] on all foes for $6 turn. [Disruption Virus]: Inflict <link\="s|286"><u>[Affinity Downgrade</u></link> based on the targeted ally's attribute: Null, Repel, and Drain become Resist; Resist becomes Normal; Normal becomes Weak. Weak attributes take $7 more Weak DMG."
-r:"^解鎖條件：我方角色擁有『駭入完成』\n使所有名友方怪盜的攻擊力提升<color\=#FFFC40>(\d+)</color>\+\({{A}}每有(\d+)點攻擊力，額外提升其(\d+\.\d+)攻擊力，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力)，持續(\d+)回合。為全體敵人添加上我方所有怪盜適應性的『擾亂病毒』，持續(\d+)回合。『擾亂病毒』：使目標對應屬性的<link\="s\|286"><u>『適應性降級』</u></link>：若為無效、反彈、吸收，則變為耐性；若為耐性則變為普通；若為普通則變為弱點。若為弱點，則提升其(\d+%)受到弱點傷害。$"="Use condition: When allies have [Hack Complete]\nFor $5 turns, increase all allies's ATK by <color\=#FFFC40>$1</color>; Increase ATK by $3 more for every $2 points of Futaba's ATK (up to <color\=#FFFC40>$4</color> ATK). Inflict [Disruption Virus] on all foes for $6 turn. [Disruption Virus]: Inflict <link\="s|286"><u>[Affinity Downgrade</u></link> based on all allies' attribute: Null, Repel, and Drain become Resist; Resist becomes Normal; Normal becomes Weak. Weak attributes take $7 more Weak DMG."
+r:"^解鎖條件：我方角色擁有『駭入完成』\n使所有名友方怪盜的攻擊力提升<color\=#FFFC40>(\d+)</color>\+\({{A}}每有(\d+)點攻擊力，額外提升其(\d+\.\d+)攻擊力，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\)，持續(\d+)回合。為全體敵人添加上我方所有怪盜適應性的『擾亂病毒』，持續(\d+)回合。『擾亂病毒』：使目標對應屬性的<link\="s\|286"><u>『適應性降級』</u></link>：若為無效、反彈、吸收，則變為耐性；若為耐性則變為普通；若為普通則變為弱點。若為弱點，則提升其(\d+%)受到弱點傷害。$"="Use condition: When allies have [Hack Complete]\nFor $5 turns, increase all allies's ATK by <color\=#FFFC40>$1</color>; Increase ATK by $3 more for every $2 points of Futaba's ATK (up to <color\=#FFFC40>$4</color> ATK). Inflict [Disruption Virus] on all foes for $6 turn. [Disruption Virus]: Inflict <link\="s|286"><u>[Affinity Downgrade</u></link> based on all allies' attribute: Null, Repel, and Drain become Resist; Resist becomes Normal; Normal becomes Weak. Weak attributes take $7 more Weak DMG."
 
 r:"^當前解析進度為(\d+%)$"="Current Analysis Progress: $1"
 r:"^傷害提升(\d+(.\d+)?(%)?)，造成弱點傷害時效果增加$"="Increase damage by $1; When dealing Weak damage, increase this effect"
@@ -2078,7 +2078,7 @@ r:"^使<color\=#FFFF00>所有</color>同伴攻擊力提升<color\=#FFFC40>(\d+\.
 
 狂想節拍=Rhapsodic Beat
 下次施放的『初始樂章』或『切分音符』將得到強化=Boost the next [First Movement] or [Syncopated Notes]
-r:"^受到『幻影舞宴』時倒地值將無視適應性削減(\d+)點$"="When taking damage from [Phantom Gala], ignore all affinities and decrease Down Points by $1"
+r:"^受到『幻影舞宴』時倒地值將無視適應性削減(\d+)點$"="<size\=25>When taking damage from [Phantom Gala], decrease Down Points by $1 regardless of affinities</size>"
 幻影形態=Phantom Form
 免疫精神異常效果、控制效果以及倒地值傷害=Nullify Mental/Control Ailments \nand Down Points damage
 
@@ -2293,22 +2293,48 @@ r:"^汲<color\=#000000>魂</color>$"="S<color\=#000000>o</color>ul Drain"
 ----------
 Kotone - Kotone Shiomi
 ----------
+r:"^使1名同伴暴擊效果提升\（提升值將基於{{A}}的攻擊力,最多計入<color\=#FFFC40>(\d+)</color>攻擊力使暴擊效果提升<color\=#FFFC40>(\d+\.\d+%)</color>\），持續(\d+)回合，上限(\d+)層。\n若目標是<link\="s\|307"><u>『月下夥伴』</u></link>，則使目標獲得(\d+)層『羈絆之力』，持續(\d+)回合，上限(\d+)層。處於<link\="s\|308"><u>『命運之輪』</u></link>狀態下，該技能效果的持續時間延長(\d+)回合。\n自身在場時，根據目標身上的『羈絆之力』層數，使其獲得對應的增益效果。\n(\d+)層『羈絆之力』：攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>。\n(\d+)層『羈絆之力』：穿透提升<color\=#FFFC40>(\d+\.\d+%)</color>。\n(\d+)層『羈絆之力』：總傷害增幅提升<color\=#FFFC40>(\d+\.\d+%)</color>。$"="Based on Kotone's ATK (up to <color\=#FFFC40>$1</color>), increase 1 ally's Crit DMG by up to <color\=#FFFC40>$2</color> for $3 turns. Stacks up to $4 times.\nIf the target has <link\="s|307"><u>[Arcana Link]</u></link>, grant $5 [Powerful Bond] stack ($6 turns, stacks up to $7 times). When <link\="s|308"><u>[Fortune]</u></link> is active, extend duration by $8 turns.\nWhen Kotone is present, based on the target's [Powerful Bond] stacks, grant the following effects.\n$9 [Powerful Bond] stack: Increase ATK by <color\=#FFFC40>$10</color>.\n$11 [Powerful Bond] stacks: Increase Pierce by <color\=#FFFC40>$12</color>.\n$13 [Powerful Bond] stacks: Increase Total DMG Amp by <color\=#FFFC40>$14</color>."
+r:"^使<color\=#FFFF00>1名</color>同伴暴擊效果提升\（提升值將基於{{A}}的攻擊力,最多計入(\d+)攻擊力使暴擊效果提升(\d+\.\d+%)\），持續(\d+)回合，上限(\d+)層。\n若目標是『月下夥伴』，則使目標獲得(\d+)層『羈絆之力』，持續(\d+)回合，上限(\d+)層。處於『命運之輪』狀態下，該技能效果的持續時間延長(\d+)回合。\n自身在場時，根據目標身上的『羈絆之力』層數，使其獲得對應的增益效果。\n(\d+)層『羈絆之力』：攻擊力提升(\d+\.\d+%)。\n(\d+)層『羈絆之力』：穿透提升(\d+\.\d+%)。\n(\d+)層『羈絆之力』：總傷害增幅提升(\d+\.\d+%)。$"="Based on Kotone's ATK (up to $1), increase <color\=#FFFF00>1</color> ally's Crit DMG by up to $2 for $3 turns. Stacks up to $4 times.\nIf the target has [Arcana Link], grant $5 [Powerful Bond] stack ($6 turns, stacks up to $7 times). When [Fortune] is active, extend duration by $8 turns.\nWhen Kotone is present, based on the target's [Powerful Bond] stacks, grant the following effects.\n$9 [Powerful Bond] stack: Increase ATK by $10.\n$11 [Powerful Bond] stacks: Increase Pierce by $12.\n$13 [Powerful Bond] stacks: Increase Total DMG Amp by $14."
+
+r:"^對所有敵人造成(\d+)次<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害。敵人數量從(\d+)開始每減少1個傷害提升(\d+%)。\n若<link\="s\|307"><u>『月下夥伴』</u></link>物件的『羈絆之力』層數達到(\d+)層，則額外使敵人受到傷害提升\（提升值將基於{{A}}的攻擊力,最多計入<color\=#FFFC40>(\d+)</color>攻擊力使受到傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>\），持續(\d+)回合。\n處於<link\="s\|308"><u>『命運之輪』</u></link>狀態下，該技能傷害額外提升<color\=#FFFC40>(\d+\.\d+%)</color>，且技能效果的持續時間延長(\d+)回合，若技能造成傷害則無視適應性削減目標<color\=#FFFC40>(\d+)</color>點倒地值。$"="Deal Fire damage to all foes equal to <color\=#FFFC40>$2</color> of ATK ($1 hits). If the foe count is decreased below $3, increase damage by $4 per decreased foe.\nIf the <link\="s|307"><u>[Arcana Link]</u></link> has $5 [Powerful Bond] stacks, based on Kotone's ATK (up to <color\=#FFFC40>$6</color>), increase all foes' DMG Taken by <color\=#FFFC40>$7</color> for $8 turn.\nWhen <link\="s|308"><u>[Fortune]</u></link> is active, increase this skill's damage by <color\=#FFFC40>$9</color> and extend this skill's effect duration by $10 turns. Decrease Down Points of all targets that take damage by <color\=#FFFC40>$11</color> regardless of affinities."
+r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+)次(\d+\.\d+%)攻擊力的火焰屬性傷害。敵人數量從(\d+)開始每減少1個傷害提升(\d+%)。\n若『月下夥伴』物件的『羈絆之力』層數達到(\d+)層，則額外使敵人受到傷害提升\（提升值將基於{{A}}的攻擊力,最多計入(\d+)攻擊力使受到傷害提升(\d+\.\d+%)\），持續(\d+)回合。\n處於『命運之輪』狀態下，該技能傷害額外提升(\d+\.\d+%)，且技能效果的持續時間延長(\d+)回合，若技能造成傷害則無視適應性削減目標(\d+)點倒地值。$"="Deal Fire damage to <color\=#FFFF00>all</color> foes equal to $2 of ATK ($1 hits). If the foe count is decreased below $3, increase damage by $4 per decreased foe.\nIf the [Arcana Link] has $5 [Powerful Bond] stacks, based on Kotone's ATK (up to $6), increase all foes' DMG Taken by $7 for $8 turn.\nWhen [Fortune] is active, increase this skill's damage by $9 and extend this skill's effect duration by $10 turns. Decrease Down Points of all targets that take damage by $11 regardless of affinities."
+
+r:"^冷卻時間：(\d+)個非額外回合\n使所有同伴攻擊力提升\（提升值將基於{{A}}的攻擊力,最多計入<color\=#FFFC40>(\d+)</color>攻擊力使攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>\）。\n若技能主目標為自身和<link\="s\|307"><u>『月下夥伴』</u></link>以外的同伴，複製所有該同伴施加給<link\="s\|307"><u>『月下夥伴』</u></link>的<link\="s\|310"><u>屬性增益效果</u></link>，並添加給<link\="s\|307"><u>『月下夥伴』</u></link>，效果值為原本的<color\=#FFFC40>(\d+\.\d+%)</color>（<link\="s\|311"><u>『基礎複製比例』</u></link>），持續(\d+)回合（無法複製部分角色專屬效果）。\n處於<link\="s\|308"><u>『命運之輪』</u></link>狀態下，該技能效果的持續時間延長(\d+)回合。$"="Cooldown Time: $1 turns (does not count Extra Actions).\nBased on Kotone's ATK (up to <color\=#FFFC40>$2</color>), increase all allies' ATK by <color\=#FFFC40>$3</color>.\nIf the main target does not have <link\="s|307"><u>[Arcana Link]</u></link> (excluding {{A}}), copy <link\="s|310"><u>Certain Buffs' Effects</u></link> granted by the target to the <link\="s|307"><u>[Arcana Link]</u></link> with a <color\=#FFFC40>$4</color> <link\="s|311"><u>[Copy Multiplier]</u></link> of their original effectivness. These effects lasts for $5 turn, and certain effects cannot be copied.\nWhen <link\="s|308"><u>[Fortune]</u></link> is active, extend duration by $6 turn."
+r:"^冷卻時間：(\d+)個非額外回合\n使<color\=#FFFF00>所有</color>同伴攻擊力提升\（提升值將基於{{A}}的攻擊力,最多計入(\d+)攻擊力使攻擊力提升(\d+\.\d+%)\）。\n若技能主目標為自身和『月下夥伴』以外的同伴，複製所有該同伴施加給『月下夥伴』的屬性增益效果，並添加給『月下夥伴』，效果值為原本的(\d+\.\d+%)（『基礎複製比例』），持續(\d+)回合（無法複製部分角色專屬效果）。\n處於『命運之輪』狀態下，該技能效果的持續時間延長(\d+)回合。$"="Cooldown Time: $1 turns (does not count Extra Actions).\nBased on Kotone's ATK (up to $2), increase <color\=#FFFF00>all</color> allies' ATK by $3.\nIf the main target does not have [Arcana Link] (excluding {{A}}), copy Certain Buffs' Effects granted by the target to the [Arcana Link] with a $4 [Copy Multiplier] of their original effectivness. These effects lasts for $5 turn, and certain effects cannot be copied.\nWhen [Fortune] is active, extend duration by $6 turn."
+
+r:"^使所有同伴暴擊效果提升<color\=#FFFC40>(\d+\.\d+%)</color>，<link\="s\|307"><u>『月下夥伴』</u></link>的攻擊力額外提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。處於<link\="s\|308"><u>『命運之輪』</u></link>狀態下，該技能效果的持續時間延長(\d+)回合。$"="Increase all allies' Crit DMG by <color\=#FFFC40>$1</color>, and increase the <link\="s|307"><u>[Arcana Link]</u></link>'s ATK by <color\=#FFFC40>$2</color> for $3 turns. When <link\="s|308"><u>[Fortune]</u></link> is active, extend duration by $4 turns."
+r:"^使<color\=#FFFF00>所有</color>同伴暴擊效果提升(\d+\.\d+%)，『月下夥伴』的攻擊力額外提升(\d+\.\d+%)，持續(\d+)回合。處於『命運之輪』狀態下，該技能效果的持續時間延長(\d+)回合。$"="Increase <color\=#FFFF00>all</color> allies' Crit DMG by $1, and increase the [Arcana Link]'s ATK by $2 for $3 turns. When [Fortune] is active, extend duration by $4 turns."
+
+r:"^該技能每場戰鬥僅能使用1次。\n{{A}}進入『命運之輪』狀態，獲得(\d+)個額外回合。\n進入『命運之輪』狀態時，延長所有羈絆之力效果(\d+)回合。\n『命運之輪』期間{{A}}使用{{B}}技能/HIGHLIGHT添加的所有增益/減益效果也會有所延長。\n『命運之輪』狀態結束時，立刻使『月下夥伴』釋放1次不消耗能量的HIGHLIGHT/{{C}}，之後{{A}}陷入『感冒』狀態，持續(\d+)個回合。\n『感冒』：無法行動，精神異常，不可驅散。$"="Can only be used once per battle.\nEnter [Fortune] state, and gain $1 Extra Actions.\nWhen entering [Fortune] state, extend the duration of all Powerful Bond effects by $2 turns.\nExtend the duration of all effects granted by Kotone's Persona skills/HIGHLIGHT while in this state.\nWhen [Fortune] state ends, the [Arcana Link] immediately activates their HIGHLIGHT/Theurgy once without spending energy. Afterwards, Kotone enters [Sick] state for $3 turns.\n[Sick]: Unable to act, and can only be removed through turn progression. This state is counted as a Mental Ailment."
+
 月下夥伴=Arcana Link
-朔望月=Lunar Bond
+釋放{{C}}技能或受到{{A}}釋放的{{C}}技能後，朔{{B}}等級提升=<size\=26>After using a Persona skill, or after receiving a Persona skill from Kotone, increase Lunar Bond</size>
+朔{{A}}=Lunar Bond
+『月下夥伴』提升朔{{A}}等級可獲得增益。=Increase to grant the [Arcana Link] buffs
 羈絆之力=Powerful Bond
+{{A}}在場時，可根據羈絆之力層數提供增益效果。=When {{A}} is present, gain buffs based on number of stacks
 命運之輪=Fortune
+獲得2個額外回合，並強化自身技能狀態=Gain 2 Extra Actions and enhance Kotone's skills and HIGHLIGHT
 感冒=Sick
+sr:"^複製了來自(.*)的屬性增益效果$"="Copy buff effects granted by $1"
 
 選擇夥伴=Select Ally
 選擇<color\=#FFFF00>1名</color>同伴成為『月下夥伴』。=Select <color\=#FFFF00>1</color> ally as [Arcana Link].
-
-sr:"^<color\=#FF0000>(.*)</color>進入了感冒狀態……$"="<color\=#FF0000>$1</color> gained [Sick]..."
+sr:"^<color\=#FF0000>(.*)</color>進入了感冒狀態……$"="<color\=#FF0000>$1</color> got sick..."
+sr:"^<color\=#FF0000>(.*)</color>處於感冒狀態，無法行動……$"="<color\=#FF0000>$1</color> is too sick to move..."
+sr:"^<color\=#FF0000>(.*)</color>從感冒中恢復了。$"="<color\=#FF0000>$1</color> is no longer sick!"
 
 Combat Pop-ups
 r:"^月<color\=#000000>下</color>夥伴$"="A<color\=#000000>r</color>cana Link"
 r:"^朔<color\=#000000>望</color>月$"="L<color\=#000000>u</color>nar Bond"
 r:"^琴<color\=#000000>奏</color>之調$"="L<color\=#000000>y</color>re's Melody"
+r:"^月<color\=#000000>鳴</color>之炎$"="B<color\=#000000>u</color>rning Moon's Cry"
 r:"^焰<color\=#000000>華</color>·緋月昂揚$"="L<color\=#000000>u</color>nar Phaseshift"
+r:"^先<color\=#000000>導</color>$"="L<color\=#000000>e</color>ader's Guidance"
+r:"^聯<color\=#000000>結</color>$"="C<color\=#000000>l</color>ean Sweep"
+r:"^凝<color\=#000000>聚</color>$"="C<color\=#000000>o</color>hesion"
 r:"^羈<color\=#000000>絆</color>之力$"="P<color\=#000000>o</color>werful Bond"
 r:"^命<color\=#000000>運</color>之輪$"="F<color\=#000000>o</color>rtune"
 r:"^感<color\=#000000>冒</color>$"="S<color\=#000000>i</color>ck"
+r:"^迴<color\=#000000>響</color>的{{A}}$"="E<color\=#000000>c</color>hoing Strings"
+r:"^無<color\=#000000>窮</color>的羈絆$"="E<color\=#000000>t</color>ernal Bonds"
