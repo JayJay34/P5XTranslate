@@ -2940,7 +2940,7 @@ r:"^受到技能傷害時，有(\d+%)固定機率進行反擊，基於防禦力�
 r:"^基於自身防禦力對所有敵人造成冰凍屬性傷害，有<color\=#FFFC40>(\d+%)</color>基礎機率使主目標敵人陷入<link\="s\|103"><u>凍結</u></link>狀態，效果持續(\d+)回合。$"="Deal Ice damage to all foes based on Yusuke's DEF. <color\=#FFFC40>$1</color> base chance to inflict <link\="s|103"><u>Freeze</u></link> on main target for $2 turns."
 r:"^基於自身防禦力對隨機敵人造成(\d+)次冰凍屬性傷害，優先攻擊未受到該技能攻擊的敵人。若自身處於護盾狀態，則額外造成(\d+%)技能傷害。多次傷害命中同一目標傷害衰減(\d+%)，最低造成(\d+%)的傷害。$"="Deal Ice damage to random foes based on Yusuke's DEF ($1 hits). When Yusuke has a shield, increase skill damage by $2. From the second attack onwards, new targets take priority, and attacks on same foe deal $3 decreased damage each hit (minimum $4)."
 r:"^接下來1次<link\="s\|123"><u>『遊龍展布』</u></link>攻擊強化為<link\="s\|172"><u>『墨見龍吟』</u></link>。攻擊觸發機率提升至(\d+%)、基於自身防禦力以群體為目標攻擊。若1回合內未觸發<link\="s\|172"><u>『墨見龍吟』</u></link>強化反擊，則自動觸發。\n此外基於自身防禦力獲得可抵禦一定傷害的護盾，效果持續(\d+)回合。將自身弱點暫時變為默認耐性、免疫任何精神異常並使所有敵人獲得<link\="s\|143"><u>嘲諷</u></link>狀態，效果持續(\d+)回合。$"="Change the next activated <link\="s|123"><u>[Dragon Dance]</u></link> to <link\="s|172"><u>[Dragon Roar]</u></link>. Dragon Roar: Increase chance of Counterattack to $1, make damage dealt multi-target. If the effect is not activated by the start of Yusuke's next action, automatically activate it.\nGain a shield based on Yusuke's DEF, increase Fire resistance, and nullify Mental Ailments for $2 turns. Inflict <link\="s|143"><u>Taunt</u></link> on all foes for $3 turns."
-r:"^基於自身防禦力對全體敵人造成冰凍屬性傷害，並使遊龍展布觸發機率提升(\d+%)，持續(\d+)回合。$"="Deal Ice damage to all foes based on Yusuke's DEF. Increase chance of activating [Dragon Dance] Counterattacks by $1 for $2 turns."
+r:"^基於自身防禦力對全體敵人造成冰凍屬性傷害，並使遊龍展布觸發機率提升(\d+%)，持續(\d+)回合。$"="Deal Ice damage to all foes based on Yusuke's DEF. Increase chance of activating [Dragon Dance] by $1 for $2 turns."
 冰晶新星=Ice Nova
 r:"^對所有敵人造成冰凍屬性傷害，並使目標陷入『究極凍結』狀態。『究極凍結』：造成的最終傷害降低(\d+%)，持續(\d+)回合。$"="Deal Ice damage to all foes. Inflict [Ultra Freeze] on targets. [Ultra Freeze]: Decrease Final DMG Dealt by $1. Lasts for $2 turns."
 究極凍結=Ultra Freeze
@@ -3735,6 +3735,38 @@ r:"^使1名同伴的防禦力提升<color\=#fffc40>(\d+\.\d+%)</color>。效果�
 獲得『惡食』層數增加。{{A}}釋放鬼人狂襲時，根據剩餘的『惡食』層數，恢復生命值=Increase [Malignant Feast] stack gain. When {{A}} uses Oni Frenzy, restore HP based on remaining [Malignant Feast] stacks
 {{A}}擁有『惡食』時，受到傷害降低。並增強『惡食』對鬼人狂襲的傷害提升效果。=When {{A}} has [Malignant Feast], decrease its DMG Taken. Increase the damage buff for Oni Frenzy from [Malignant Feast].
 
+追慾的魔術師=Magician of Desire
+行刑大劍=Executive Greatsword
+1、『追慾的魔術師』在開局時將進入進攻姿態，擅長蓄力後爆發地對我方造成高額全體傷害。召喚出的『行刑大劍』還能進一步放大其對我方的威脅。\n2、『追慾的魔術師』在二階段將進入守備姿態，擅長減輕自身受到的傷害並尋覓機會對我方的攻勢進行反擊。召喚出的『鋼鐵之骰』還能進一步對其進行保護。\n3、『追慾的魔術師』在最終階段將火力全開，將前兩階段的技能交匯施放，攻守一體。請小心應對吧！=1. [Magician of Desire] will enter Offensive Stance at the start of battle, it excels at charging and dealing severe damage to all foes. Its minion [Executive Greatsword] will further threaten all Thieves.\n2. In phase 2, [Magician of Desire] will switch to Defensive Stance, it excels at decreasing damage taken and Counterattack. Its minion [Iron Dice] will further protect it.\n3. In final phase, [Magician of Desire] will go for broke, combining the skills from the first two phases.
+鋒芒畢露=Sharp Edge
+行刑大劍釋放『行刑預備』的減益效果大幅提升=Heavily increase the debuff from Executive Greatsword's [Prepare for Execution]
+玄鐵壁壘=Iron Barrier
+鋼鐵之骰釋放『鋼鐵之姿』的護盾效果大幅提升=Heavily increase the Shield from Iron Dice's [Iron Form]
+帷幕重重=Veil Upon Veil
+追慾的魔術師將根據場上鋼鐵之骰的數量降低最終受到傷害，並根據場上行刑大劍的數量提升最終造成傷害=Magician of Desire will decrease Final DMG Taken based the number of Iron Dice present and increase Final DMG Dealt based on the number of Executive Greatsword present 
+詭焰漸盛=Welling Flames
+r:"^追慾的魔術師發動反擊後將額外使自身最終造成傷害永久提升，最多疊加(\d+)層$"="After Magician of Desire activates a Counterattack, permanently increase its Final DMG Dealt. Stacks up to $1 times"
+詭舞回春=Dance of Rejuvenation
+追慾的魔術師釋放『追慾之劍舞』後將驅散自身全部負面狀態，並回復一定已損失生命值=After Magician of Desire uses [Dance of Desire], dispel all of its debuffs, and restore its missing HP
+
+
+追慾之劍舞=Dance of Desire
+r:"^使自身下次造成的物理屬性傷害大幅提升，持續(\d+)回合。$"="Heavily increase next Physical damage for $1 turn."
+r:"^對所有敵人造成(\d+)~(\d+)次中等攻擊力的物理屬性傷害。$"="Deal medium Phys damage to all foes ($1-$2 hits)."
+愚弄之威壓=Fool's Coercion
+r:"^愚<color\=#000000>弄</color>之威壓$"="F<color\=#000000>o</color>ol's Coercion"
+嘲諷所有敵人，並使自身受到的最終傷害大幅降低，持續1回合。=Taunt all foes and heavily decrease Final DMG Taken. Lasts for 1 turn.
+使自身受到傷害後反擊傷害來源，持續1回合。=After taking damage, activate a Counterattack to the source. Lasts for 1 turn.
+
+行刑預備=Prepare for Execution
+處決預備=Prepare for Execution
+r:"^處<color\=#000000>決</color>預備$"="P<color\=#000000>r</color>epare for Execution"
+r:"^對1名敵人造成中等攻擊力的物理屬性傷害，並使其受到的最終傷害大幅提升，持續(\d+)回合。$"="Deal medium Phys damage to 1 foe. Heavily increase their Final DMG Taken for $1 turn."
+鋼鐵之姿=Iron Form
+鋼鐵之護=Iron Protection
+r:"^鋼<color\=#000000>鐵</color>之護$"="I<color\=#000000>r</color>on Protection"
+為貪慾的魔術師施加一定生命上限的護盾，持續1回合。=Grant a Shield equal to a set amount of Max HP to Magician of Desire. Lasts for 1 turn.
+
 ----------
 Sea of Souls Trials (SoS)
 ----------
@@ -3896,6 +3928,7 @@ r:"^死<color\=#000000>神</color>庇護$"="D<color\=#000000>e</color>ath's Prot
 r:"^1、進入戰鬥時，{{A}}會召喚(\d+)個隨從與之並肩作戰，{{A}}與所有隨從處於<color\=#ff3b37>「生命連結」</color>狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n2、{{A}}及隨從受到<color\=#ff3b37>非持續傷害</color>後，會獲得相應屬性的「{{A}}的守護」，將該屬性的適應性變為耐，並大幅提升自身防禦力，持續(\d+)回合。$"="1. At the start of battle, {{A}} will summon $1 minions, {{A}} and all minions have <color\=#ff3b37>[Lifelink]</color>.\n[Lifelink]: Distributes all damage received between all Shadows who shares this condition, based on the percentage of their current HP.\n2. After {{A}} and their minions take <color\=#ff3b37>non Damage Over Time damage</color>, gain that attribute's [{{A}}'s Protection], turning that affinity to Resist and heavily increasing DEF. Lasts for $2 turns."
 
 r:"^{{A}}在非額外回合受到的最終傷害降低(\d+%)，在額外回合受到的最終傷害提升(\d+%)。$"="{{A}} decrease Final DMG Taken by $1 on non-Extra Actions; increase Final DMG Taken by $2 on Extra Actions."
+r:"^{{A}}在非額外回合受到的最終傷害降低(\d+%)，在額外回合受到的最終傷害提升(\d+%)。\n注意：陰影的弱點和耐性與通常不同。$"="1. {{A}} decrease Final DMG Taken by $1 on non-Extra Actions; increase Final DMG Taken by $2 on Extra Actions.\n2. Shadows have different Weaknesses and Resistances than normal."
 智慧天秤=Scales of Wisdom
 r:"^在非額外回合受到的最終傷害降低(\d+(.\d+)?(%)?)$"="Decrease Final DMG Taken by $1 \non non-Extra Actions"
 r:"^在額外回合受到的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG Taken by $1 \non Extra Actions"
@@ -4108,7 +4141,7 @@ sr:"^每次獲得治療效果或護盾時，獲得『(.*)』。『(.*)』：最�
 言靈淨化=Words of Purification
 r:"^言<color\=#000000>靈</color>淨化$"="W<color\=#000000>o</color>rds of Purification"
 
-不朽先驅=Immortal Pioneer
-sr:"^以友方為目標釋放(.*)技能時，全體同伴獲得『(.*)』。『(.*)』：造成的最終傷害提升(.*)；若施法者為S.E.E.S.成員，最終傷害額外提升(.*)，持續(.*)回合。$"="<size\=24>When using a Persona skill on allies, grant all allies [$2]. [$3]: Increase Final DMG by $4. If this was granted by a S.E.E.S member, additionally increase Final DMG by $5. Last for $6 turns.</size>"
-意志傳承=Will Inheritance
-r:"^意<color\=#000000>志</color>傳承$"="W<color\=#000000>i</color>ll Inheritance"
+不朽先驅=Unfading Trailblazer
+sr:"^以友方為目標釋放(.*)技能時，使所有同伴獲得『(.*)』。『(.*)』：造成最終傷害提升(.*)，若技能釋放者為S.E.E.S.成員，最終傷害額外提升(.*)，持續(.*)回合。$"="<size\=24>When using a Persona skill on allies, grant all allies [$2]. [$3]: Increase Final DMG by $4. If this was granted by a S.E.E.S member, additionally increase Final DMG by $5. Last for $6 turns.</size>"
+意志傳承=Inherited Will
+r:"^意<color\=#000000>志</color>傳承$"="I<color\=#000000>n</color>herited Will"

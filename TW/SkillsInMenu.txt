@@ -577,8 +577,8 @@ sr:"^受到的(.*)屬性傷害降低(\d+\.\d+%)。$"="Decrease $1 DMG Taken by $
 --- Physical ---
 
 //Lucky Punch
-r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，暴擊率提升(\d+%)，命中率降低(\d+%)。$"="Deal <color\=#FFFF00>$1</color> ATK Phys damage to 1 foe with a $2 increase in Crit Rate, and $3 decrease in Hit Rate."
-r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，暴擊率提升(\d+%)，命中率降低(\d+%)$"="Deal <color\=#FFFF00>$1</color> ATK Phys damage to 1 foe with a $2 increase in Crit Rate, and $3 decrease in Hit Rate."
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，暴擊率提升(\d+%)，命中率降低(\d+%)。$"="Deal Phys damage to 1 foe equal to <color\=#FFFF00>$1</color> of ATK. Increase Crit Rate by $2, and decrease Accuracy by $3."
+r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，暴擊率提升(\d+%)，命中率降低(\d+%)$"="Deal Phys damage to 1 foe equal to <color\=#FFFF00>$1</color> of ATK. Increase Crit Rate by $2, and decrease Accuracy by $3."
 
 Glory Impact
 r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，場上只有1名敵人時，該技能造成的傷害提升(\d+%)。$"="Deal <color\=#fffc40>$1</color> ATK Phys damage to 1 foe. If there is only 1 foe left, increase DMG Dealt by $2."
@@ -615,13 +615,13 @@ r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊點射擊屬性�
 r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，暴擊率提升(\d*\.?\d+%)。$"="Deal <color\=#FFFF00>$1</color> ATK Gun damage to 1 foe with a $2 increase in Crit Rate."
 
 //Triple Down
-r:"^對所有敵人造成(\d+)次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，暴擊率提升(\d*\.?\d+%)，命中率降低(\d*\.?\d+%)。$"="Deal <color\=#FFFF00>$2</color> ATK Gun damage to all foes $1 times with a $3 increase in Crit Rate and $4 decrease in Hit Rate."
+r:"^對所有敵人造成(\d+)次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，暴擊率提升(\d*\.?\d+%)，命中率降低(\d*\.?\d+%)。$"="Deal Gun damage to all foes equal to <color\=#FFFF00>$2</color> of ATK ($1 hits). Increase Crit Rate by $3, and decrease Accuracy by $4."
 
 Cleaving Shot
 r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，若造成了暴擊，則額外造成1點倒地值傷害。$"="Deal <color\=#fffc40>$1</color> ATK Gun damage to 1 foe. If this skill crits, decrease an additional Down Points."
 
 Riot Gun
-r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊點射擊屬性傷害，命中率降低(\d+%)$"="Deal <color\=#fffc40>$1</color> ATK Gun damage to all foes, decrease Hit Rate by $2"
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊點射擊屬性傷害，命中率降低(\d+%)$"="Deal Gun damage to all foes equal to <color\=#FFFF00>$1</color> of ATK. Decrease Accuracy by $3."
 
 Janosik
 r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的射擊屬性傷害，有(\d+%)的固定機率使敵人獲得『瞄準』:使敵人的防禦力降低<color\=#fffc40>(\d+\.\d+%)</color>，效果持續(\d+)回合。\n<b><size\=28><color\=#024068>撞針高速撞擊子彈並引爆火藥，硝煙中射出的致命一擊造成屬性傷害。若敵方處於瞄準狀態，則傷害提升。</color></size></b>$"="Deal <color\=#fffc40>$1</color> ATK Gun damage to 1 foe, with a $2 fixed chance to inflict the foe with [Marked]: Decrease DEF by <color\=#fffc40>$3</color> for $4 turns.\n<b><size\=28><color\=#024068>The firing pin strikes the bullet at high speed and detonates the gunpowder, firing a deadly shot through the smoke that deals Gun damage. Increase damage if the enemy is Marked.</color></size></b>"
@@ -891,6 +891,9 @@ r:"^使1名同伴攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，傷害提�
 Soul Catalysis
 r:"^使1名同伴的攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，若友方觸發了任意屬性奏鳴效果，則額外使主目標暴擊率提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Increase 1 ally's ATK by <color\=#fffc40>$1</color>. If allies activated any Attribute Harmony, additionally increase the main target's Crit Rate by <color\=#fffc40>$2</color>. Lasts for $3 turns."
 
+Temperament Harmony
+r:"^使1名同伴的傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合。使其獲得『和律』：每次釋放{{A}}技能，或受到同伴{{A}}技能效果時，弱點傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，上限<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合。\n若達到最大值，將『和律』升級為『和鳴』：增益效果變為永續效果。$"="Increase 1 ally's DMG Dealt by <color\=#fffc40>$1</color>. Lasts for $2 turns. Grant them [Attunement]: When using a Persona skill, or when receiving a Persona skill from allies, increase Weak DMG by <color\=#fffc40>$3</color> (up to <color\=#fffc40>$4</color>). Lasts for $5 turns.\nWhen reaching the maximum value, upgrade [Attunement] to [Harmony]: Change the buff effect to permanent."
+ 
 r:"^使1名友方獲得<color\=#fffc40>(\d+\.\d+%)</color>攻擊點護盾。$"="Grant 1 ally <color\=#fffc40>$1</color> ATK Shield."
 
 Norn
