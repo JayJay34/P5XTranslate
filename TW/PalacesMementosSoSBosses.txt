@@ -2437,7 +2437,7 @@ r:"^1、{{B}}血量低於(\d+%)時會變為多個{{C}}，並且獲得(\d+)層<co
 對所有敵人造成高額冰凍屬性傷害。=Deal severe Ice damage to all foes.
 空門大開破綻畢露=Wide Open
 狀態二，不進行行動，且受到的最終傷害提升=Form 2: Unable to act and increase Final DMG Taken
-受到傷害後反擊=<size\=21>Counterattack after taking damage</size>
+受到傷害後反擊=After taking damage, activate a Counterattack
 r:"^受<color\=#000000>到</color>傷害後反擊$"="C<color\=#000000>o</color>unterattack Form"
 
 r:"^1、{{A}}血量低於(\d+%)時會變為多個{{B}}，並且獲得(\d+)層<color\=#ff381d>『{{B}}之銳』</color>，提升最終傷害加成。多個{{B}}中有一個是真正的{{B}}；\n2、真正的{{B}}死亡後會變回{{A}}。血量變為(\d+%)並繼承<color\=#ff381d>『{{B}}之銳』</color>。$"="1. When {{A}} is below $1 HP, transform into many {{B}}s, then gain $2 <color\=#ff381d>[{{B}}'s Acuity]</color> stack, increasing Final DMG. There is only one real {{B}};\n2. After {{B}} is defeated, transform into {{A}} and change HP to $3. Then inherit <color\=#ff381d>[{{B}}'s Acuity]</color>."
@@ -2707,14 +2707,16 @@ r:"^護<color\=#000000>盾</color>魔法$"="S<color\=#000000>h</color>ield Magic
 達到一定層數後會直接死亡=Faint when reaching a certain stack
 r:"^死<color\=#000000>亡</color>詛咒$"="D<color\=#000000>e</color>ath Curse"
 
-r:"^1、進入戰鬥時，召喚天啟四騎士，而後自身進入無敵狀態；天啟四騎士處於<color\=#ff3b37>「生命連結」</color>狀態，當天啟四騎士全部陣亡時，{{F}}陷入狂躁。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n2、每三個回合，{{F}}及天啟四騎士會各自吹響他們的號角1次，但當其處於精神異常狀態時，無法吹響號角。\n3、{{C}}：得到{{F}}的指示後會在自己的回合開始時吹響<color\=#ff3b37>「瘟疫號角」</color>：隨機使1名怪盜的最終生命值降低；\n4、{{D}}：得到{{F}}的指示後會在自己的回合開始時吹響<color\=#ff3b37>「戰爭號角」</color>：自身獲得持續1回合的<color\=#ff3b37>「戰爭號角」</color>，持續時間內自己受到攻擊時會發起反擊；\n5、{{E}}：得到{{F}}的指示後會在自己的回合開始時吹響<color\=#ff3b37>「饑荒號角」</color>：隨機使1名怪盜釋放技能時的精力消耗提升；\n6、{{B}}：得到{{F}}的指示後會在自己的回合開始時吹響<color\=#ff3b37>「死亡號角」</color>：所有怪盜{{A}}技能的治療效果降低，所有友方獲得2回合的傷害提升；\n7、{{F}}：四位騎士每次吹響號角時會獲得1層<color\=#ff3b37>「滅世之力」</color>；所有騎士都接收到指示後自身會準備一回合，而後吹響<color\=#ff3b37>「滅世號角」</color>：消耗所有<color\=#ff3b37>「滅世之力」</color>對所有怪盜造成萬能傷害（四騎士的攻擊力越高，此次傷害越高），並基於消耗的<color\=#ff3b37>「滅世之力」</color>的層數獲得額外效果。\n1層：最終攻擊力提升(\d+%)；\n2層：傷害提升(\d+%)；\n3層：治療所有騎士(\d+%)的生命值；\n4層：本次傷害必定暴擊。\n8、四騎士首次被全部擊殺後，{{F}}陷入狂躁狀態，立即獻祭自身(\d+%)的生命值復活天啟四騎士，而後自身再次進入無敵狀態；天啟四騎士處於<color\=#ff3b37>「生命連結」</color>狀態，當天啟四騎士全部陣亡時，{{F}}退出無敵狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n9、狂躁狀態下，自身吹響<color\=#ff3b37>「滅世號角」</color>時，不再消耗<color\=#ff3b37>「滅世之力」</color>，但仍可以根據身上<color\=#ff3b37>「滅世之力」</color>的層數獲得額外效果；每層<color\=#ff3b37>「滅世之力」</color>額外使所有友方獲得一定傷害提升。$"="<size\=24>1. At the start of battle, summons the Four Horsemen, then enters Invincible; The Four Horsemen have <color\=#ff3b37>[Lifelink]</color>, when all Four Horsemen are defeated, {{F}} will enters Manic.\n[Lifelink]: Distributes all damage received between all Shadows who shares this condition, based on the percentage of their current HP.\n2. Every 3 turns, {{F}} and the Four Horsemen will blow their horns, cannot do so when they are inflicted with Mental Ailments.\n3. {{C}}: After receiving orders from {{F}} will use <color\=#ff3b37>[Pestilence Horn]</color>: Randomly decreases 1 Thief's Final HP;\n4. {{D}}: After receiving orders from {{F}} will use <color\=#ff3b37>[War Horn]</color>, will Counter when attacked during the duration; \n5. {{E}}: After receiving orders from {{F}} will use <color\=#ff3b37>[Famine Horn]</color>: Randomly increases 1 Thief's SP cost;\n6. {{B}}: After receiving orders from {{F}} will use <color\=#ff3b37>[Death Horn]</color>: Decreases all Thieves' {{A}} skill Healing Effect and increase all allies' DMG Dealt for 2 turns;\n7. {{F}}: Gains 1 stack of <color\=#ff3b37>[Apocalypse Power]</color> when the Four Horsemen blow their horns; All Horsemen will use <color\=#ff3b37>[Apocalypse Horn]</color> 1 turn after receiving their order: Consumes all <color\=#ff3b37>[Apocalypse Power]</color> and deals Almighty damage to all Thieves (The higher the Horsemen's ATK, the higher the damage), gains additional effects based on consumed <color\=#ff3b37>[Apocalypse Power]</color> stacks.\n1 stack: Increases Final ATK by $1;\n2 stacks: Increases DMG Dealt by $2;\n3 stacks: Restores $3 HP to all Horsemen;\n4 stacks: This will Always CRIT.\n8. When you defeat all Four Horsemen, {{F}} will enters Manic, immediately sacrifices $4 HP to revive all Four Horsemen, then enters Invincible; The Four Horsemen have <color\=#ff3b37>[Lifelink]</color>, when all Four Horsemen are defeated, {{F}} will exits Invincible.\n[Lifelink]: Distributes all damage received between all Shadows who shares this condition, based on the percentage of their current HP.\n9. Under Manic, will no longer consumes <color\=#ff3b37>[Apocalypse Power]</color> when using <color\=#ff3b37>[Apocalypse Horn]</color>, but can still gains additional effects from <color\=#ff3b37>[Apocalypse Power]</color>; Each stack of <color\=#ff3b37>[Apocalypse Power]</color> increases all allies' DMG Dealt.</size>"
-r:"^1、進入戰鬥時，召喚天啟四騎士，而後自身進入無敵狀態；天啟四騎士處於<color\=#ff3b37>「生命連結」</color>狀態，當天啟四騎士全部陣亡時，{{F}}陷入狂躁。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n2、每三個回合，{{F}}及天啟四騎士會各自吹響他們的號角1次，但當其處於精神異常狀態時，無法吹響號角。\n3、{{C}}：得到{{F}}的指示後會在自己的回合開始時吹響<color\=#ff3b37>「瘟疫號角」</color>：隨機使1名怪盜的最終生命值降低；\n4、{{D}}：得到{{F}}的指示後會在自己的回合開始時吹響<color\=#ff3b37>「戰爭號角」</color>：自身獲得持續1回合的<color\=#ff3b37>「戰爭號角」</color>，持續時間內自己受到攻擊時會發起反擊；\n5、{{E}}：得到{{F}}的指示後會在自己的回合開始時吹響<color\=#ff3b37>「饑荒號角」</color>：隨機使1名怪盜釋放技能時的精力消耗提升；\n6、{{B}}：得到{{F}}的指示後會在自己的回合開始時吹響<color\=#ff3b37>「死亡號角」</color>：所有怪盜{{A}}技能的治療效果降低，所有友方獲得2回合的傷害提升；\n7、{{F}}：四位騎士每次吹響號角時會獲得1層<color\=#ff3b37>「滅世之力」</color>；所有騎士都接收到指示後自身會準備一回合，而後吹響<color\=#ff3b37>「滅世號角」</color>：消耗所有<color\=#ff3b37>「滅世之力」</color>對所有怪盜造成萬能傷害（四騎士的攻擊力越高，此次傷害越高），並基於消耗的<color\=#ff3b37>「滅世之力」</color>的層數獲得額外效果。\n1層：最終攻擊力提升(\d+%)\n2層：傷害提升(\d+%)\n3層：治療所有騎士(\d+%)的生命值\n4層：本次傷害必定暴擊\n8、四騎士首次被全部擊殺後，{{F}}陷入狂躁狀態，立即獻祭自身(\d+%)的生命值復活天啟四騎士，而後自身再次進入無敵狀態；天啟四騎士處於<color\=#ff3b37>「生命連結」</color>狀態，當天啟四騎士全部陣亡時，{{F}}退出無敵狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n9、狂躁狀態下，自身吹響<color\=#ff3b37>「滅世號角」</color>時，不再消耗<color\=#ff3b37>「滅世之力」</color>，但仍可以根據身上<color\=#ff3b37>「滅世之力」</color>的層數獲得額外效果；每層<color\=#ff3b37>「滅世之力」</color>額外使所有友方獲得一定傷害提升。$"="<size\=24>1. At the start of battle, summons the Four Horsemen, then enters Invincible; The Four Horsemen have <color\=#ff3b37>[Lifelink]</color>, when all Four Horsemen are defeated, {{F}} will enters Manic.\n[Lifelink]: Distributes all damage received between all Shadows who shares this condition, based on the percentage of their current HP.\n2. Every 3 turns, {{F}} and the Four Horsemen will blow their horns, cannot do so when they are inflicted with Mental Ailments.\n3. {{C}}: After receiving orders from {{F}} will use <color\=#ff3b37>[Pestilence Horn]</color>: Randomly decreases 1 Thief's Final HP;\n4. {{D}}: After receiving orders from {{F}} will use <color\=#ff3b37>[War Horn]</color>, will Counter when attacked during the duration; \n5. {{E}}: After receiving orders from {{F}} will use <color\=#ff3b37>[Famine Horn]</color>: Randomly increases 1 Thief's SP cost;\n6. {{B}}: After receiving orders from {{F}} will use <color\=#ff3b37>[Death Horn]</color>: Decreases all Thieves' {{A}} skill Healing Effect and increase all allies' DMG Dealt for 2 turns;\n7. {{F}}: Gains 1 stack of <color\=#ff3b37>[Apocalypse Power]</color> when the Four Horsemen blow their horns; All Horsemen will use <color\=#ff3b37>[Apocalypse Horn]</color> 1 turn after receiving their order: Consumes all <color\=#ff3b37>[Apocalypse Power]</color> and deals Almighty damage to all Thieves (The higher the Horsemen's ATK, the higher the damage), gains additional effects based on consumed <color\=#ff3b37>[Apocalypse Power]</color> stacks.\n1 stack: Increases Final ATK by $1;\n2 stacks: Increases DMG Dealt by $2;\n3 stacks: Restores $3 HP to all Horsemen;\n4 stacks: This will Always CRIT.\n8. When you defeat all Four Horsemen, {{F}} will enters Manic, immediately sacrifices $4 HP to revive all Four Horsemen, then enters Invincible; The Four Horsemen have <color\=#ff3b37>[Lifelink]</color>, when all Four Horsemen are defeated, {{F}} will exits Invincible.\n[Lifelink]: Distributes all damage received between all Shadows who shares this condition, based on the percentage of their current HP.\n9. Under Manic, will no longer consumes <color\=#ff3b37>[Apocalypse Power]</color> when using <color\=#ff3b37>[Apocalypse Horn]</color>, but can still gains additional effects from <color\=#ff3b37>[Apocalypse Power]</color>; Each stack of <color\=#ff3b37>[Apocalypse Power]</color> increases all allies' DMG Dealt.</size>"
+r:"^1、進入戰鬥時，召喚天啟四騎士，而後自身進入無敵狀態；天啟四騎士處於<color\=#ff3b37>「生命連結」</color>狀態，當天啟四騎士全部陣亡時，{{F}}陷入狂躁。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n2、每三個回合，{{F}}及天啟四騎士會各自吹響他們的號角1次，但當其處於精神異常狀態時，無法吹響號角。\n3、{{C}}：得到{{F}}的指示後會在自己的回合開始時吹響<color\=#ff3b37>「瘟疫號角」</color>：隨機使1名怪盜的最終生命值降低；\n4、{{D}}：得到{{F}}的指示後會在自己的回合開始時吹響<color\=#ff3b37>「戰爭號角」</color>：自身獲得持續1回合的<color\=#ff3b37>「戰爭號角」</color>，持續時間內自己受到攻擊時會發起反擊；\n5、{{E}}：得到{{F}}的指示後會在自己的回合開始時吹響<color\=#ff3b37>「饑荒號角」</color>：隨機使1名怪盜釋放技能時的精力消耗提升；\n6、{{B}}：得到{{F}}的指示後會在自己的回合開始時吹響<color\=#ff3b37>「死亡號角」</color>：所有怪盜{{A}}技能的治療效果降低，所有友方獲得2回合的傷害提升；\n7、{{F}}：四位騎士每次吹響號角時會獲得1層<color\=#ff3b37>「滅世之力」</color>；所有騎士都接收到指示後自身會準備一回合，而後吹響<color\=#ff3b37>「滅世號角」</color>：消耗所有<color\=#ff3b37>「滅世之力」</color>對所有怪盜造成萬能傷害（四騎士的攻擊力越高，此次傷害越高），並基於消耗的<color\=#ff3b37>「滅世之力」</color>的層數獲得額外效果。\n1層：最終攻擊力提升(\d+%)；\n2層：傷害提升(\d+%)；\n3層：治療所有騎士(\d+%)的生命值；\n4層：本次傷害必定暴擊。\n8、四騎士首次被全部擊殺後，{{F}}陷入狂躁狀態，立即獻祭自身(\d+%)的生命值復活天啟四騎士，而後自身再次進入無敵狀態；天啟四騎士處於<color\=#ff3b37>「生命連結」</color>狀態，當天啟四騎士全部陣亡時，{{F}}退出無敵狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n9、狂躁狀態下，自身吹響<color\=#ff3b37>「滅世號角」</color>時，不再消耗<color\=#ff3b37>「滅世之力」</color>，但仍可以根據身上<color\=#ff3b37>「滅世之力」</color>的層數獲得額外效果；每層<color\=#ff3b37>「滅世之力」</color>額外使所有友方獲得一定傷害提升。$"="1. At the start of battle, {{F}} will summon the Four Horsemen, then enter Invincible; The Four Horsemen have <color\=#ff3b37>[Lifelink]</color>, when all Four Horsemen are defeated, {{F}} will enter Manic.\n[Lifelink]: Distributes all damage received between all Shadows who shares this condition, based on the percentage of their current HP.\n2. Every 3 turns, {{F}} and the Four Horsemen will blow their horns, they cannot blow their horns when inflicted with a Mental Ailment.\n3. {{C}}: Use <color\=#ff3b37>[Horn of Pestilence]</color> after receiving orders from {{F}}: Randomly decrease 1 Thief's Final HP;\n4. {{D}}: Use <color\=#ff3b37>[Horn of War]</color> after receiving orders from {{F}}: When this is active, activate a Counterattack when attacked. Lasts for 1 turn;\n5. {{E}}: Use <color\=#ff3b37>[Horn of Famine]</color> after receiving orders from {{F}}: Randomly increases 1 Thief's SP cost;\n6. {{B}}: Use <color\=#ff3b37>[Horn of Death]</color> after receiving orders from {{F}}: Decreases all Thieves' {{A}} skill Healing Effect and increase all allies' DMG Dealt for 2 turns;\n7. {{F}}: Gains 1 <color\=#ff3b37>[Apocalypse Power]</color> stack when the Four Horsemen blow their horns; All Horsemen will use <color\=#ff3b37>[Horn of Apocalypse]</color> 1 turn after receiving their order: Spend all <color\=#ff3b37>[Apocalypse Power]</color> and blow the [Horn of Apocalypse], dealing Almighty damage to all Thieves (increase damage based on the Horsemen's ATK). Grant additional effects based on <color\=#ff3b37>[Apocalypse Power]</color> stacks spent.\n1 stack: Increases Final ATK by $1;\n2 stacks: Increases DMG Dealt by $2;\n3 stacks: Restores $3 HP to all Horsemen;\n4 stacks: This has Guaranteed Critical.\n8. After all Four Horsemen are defeated for the first time, {{F}} will enters Manic, immediately sacrifice $4 HP and revive all Four Horsemen, then enter Invincible; The Four Horsemen have <color\=#ff3b37>[Lifelink]</color>, when all Four Horsemen are defeated, {{F}} will exits Invincible.\n[Lifelink]: Distributes all damage received between all Shadows who shares this condition, based on the percentage of their current HP.\n9. When Manic is active, {{F}} will no longer spend <color\=#ff3b37>[Apocalypse Power]</color> when using <color\=#ff3b37>[Horn of Apocalypse]</color>, but can still gain additional effects from <color\=#ff3b37>[Apocalypse Power]</color>; Each <color\=#ff3b37>[Apocalypse Power]</color> stack increases all allies' DMG Dealt."
+r:"^1、進入戰鬥時，召喚天啟四騎士，而後自身進入無敵狀態；天啟四騎士處於<color\=#ff3b37>「生命連結」</color>狀態，當天啟四騎士全部陣亡時，{{F}}陷入狂躁。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n2、每三個回合，{{F}}及天啟四騎士會各自吹響他們的號角1次，但當其處於精神異常狀態時，無法吹響號角。\n3、{{C}}：得到{{F}}的指示後會在自己的回合開始時吹響<color\=#ff3b37>「瘟疫號角」</color>：隨機使1名怪盜的最終生命值降低；\n4、{{D}}：得到{{F}}的指示後會在自己的回合開始時吹響<color\=#ff3b37>「戰爭號角」</color>：自身獲得持續1回合的<color\=#ff3b37>「戰爭號角」</color>，持續時間內自己受到攻擊時會發起反擊；\n5、{{E}}：得到{{F}}的指示後會在自己的回合開始時吹響<color\=#ff3b37>「饑荒號角」</color>：隨機使1名怪盜釋放技能時的精力消耗提升；\n6、{{B}}：得到{{F}}的指示後會在自己的回合開始時吹響<color\=#ff3b37>「死亡號角」</color>：所有怪盜{{A}}技能的治療效果降低，所有友方獲得2回合的傷害提升；\n7、{{F}}：四位騎士每次吹響號角時會獲得1層<color\=#ff3b37>「滅世之力」</color>；所有騎士都接收到指示後自身會準備一回合，而後吹響<color\=#ff3b37>「滅世號角」</color>：消耗所有<color\=#ff3b37>「滅世之力」</color>對所有怪盜造成萬能傷害（四騎士的攻擊力越高，此次傷害越高），並基於消耗的<color\=#ff3b37>「滅世之力」</color>的層數獲得額外效果。\n1層：最終攻擊力提升(\d+%)\n2層：傷害提升(\d+%)\n3層：治療所有騎士(\d+%)的生命值\n4層：本次傷害必定暴擊\n8、四騎士首次被全部擊殺後，{{F}}陷入狂躁狀態，立即獻祭自身(\d+%)的生命值復活天啟四騎士，而後自身再次進入無敵狀態；天啟四騎士處於<color\=#ff3b37>「生命連結」</color>狀態，當天啟四騎士全部陣亡時，{{F}}退出無敵狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n9、狂躁狀態下，自身吹響<color\=#ff3b37>「滅世號角」</color>時，不再消耗<color\=#ff3b37>「滅世之力」</color>，但仍可以根據身上<color\=#ff3b37>「滅世之力」</color>的層數獲得額外效果；每層<color\=#ff3b37>「滅世之力」</color>額外使所有友方獲得一定傷害提升。$"="1. At the start of battle, {{F}} will summon the Four Horsemen, then enter Invincible; The Four Horsemen have <color\=#ff3b37>[Lifelink]</color>, when all Four Horsemen are defeated, {{F}} will enter Manic.\n[Lifelink]: Distributes all damage received between all Shadows who shares this condition, based on the percentage of their current HP.\n2. Every 3 turns, {{F}} and the Four Horsemen will blow their horns, they cannot blow their horns when inflicted with a Mental Ailment.\n3. {{C}}: Use <color\=#ff3b37>[Horn of Pestilence]</color> after receiving orders from {{F}}: Randomly decrease 1 Thief's Final HP;\n4. {{D}}: Use <color\=#ff3b37>[Horn of War]</color> after receiving orders from {{F}}: When this is active, activate a Counterattack when attacked. Lasts for 1 turn;\n5. {{E}}: Use <color\=#ff3b37>[Horn of Famine]</color> after receiving orders from {{F}}: Randomly increases 1 Thief's SP cost;\n6. {{B}}: Use <color\=#ff3b37>[Horn of Death]</color> after receiving orders from {{F}}: Decreases all Thieves' {{A}} skill Healing Effect and increase all allies' DMG Dealt for 2 turns;\n7. {{F}}: Gains 1 <color\=#ff3b37>[Apocalypse Power]</color> stack when the Four Horsemen blow their horns; All Horsemen will use <color\=#ff3b37>[Horn of Apocalypse]</color> 1 turn after receiving their order: Spend all <color\=#ff3b37>[Apocalypse Power]</color> and blow the [Horn of Apocalypse], dealing Almighty damage to all Thieves (increase damage based on the Horsemen's ATK). Grant additional effects based on <color\=#ff3b37>[Apocalypse Power]</color> stacks spent.\n1 stack: Increases Final ATK by $1;\n2 stacks: Increases DMG Dealt by $2;\n3 stacks: Restores $3 HP to all Horsemen;\n4 stacks: This has Guaranteed Critical.\n8. After all Four Horsemen are defeated for the first time, {{F}} will enters Manic, immediately sacrifice $4 HP and revive all Four Horsemen, then enter Invincible; The Four Horsemen have <color\=#ff3b37>[Lifelink]</color>, when all Four Horsemen are defeated, {{F}} will exits Invincible.\n[Lifelink]: Distributes all damage received between all Shadows who shares this condition, based on the percentage of their current HP.\n9. When Manic is active, {{F}} will no longer spend <color\=#ff3b37>[Apocalypse Power]</color> when using <color\=#ff3b37>[Horn of Apocalypse]</color>, but can still gain additional effects from <color\=#ff3b37>[Apocalypse Power]</color>; Each <color\=#ff3b37>[Apocalypse Power]</color> stack increases all allies' DMG Dealt."
+r:"^1、進入戰鬥時，召喚天啟四騎士，而後自身進入無敵狀態；天啟四騎士處於<color\=#ff3b37>「生命連結」</color>狀態，當天啟四騎士全部陣亡時，{{F}}陷入狂躁。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n2、每三個回合，{{F}}及天啟四騎士會各自吹響他們的號角1次，但當其處於精神異常狀態時，無法吹響號角。\n3、{{C}}：得到{{F}}的指示後會在自己的回合開始時吹響<color\=#ff3b37>「瘟疫號角」</color>：隨機使1名怪盜的最終生命值降低；\n4、{{D}}：得到{{F}}的指示後會在自己的回合開始時吹響<color\=#ff3b37>「戰爭號角」</color>：自身獲得持續1回合的<color\=#ff3b37>「戰爭號角」</color>，持續時間內自己受到攻擊時會發起反擊；\n5、{{E}}：得到{{F}}的指示後會在自己的回合開始時吹響<color\=#ff3b37>「飢荒號角」</color>：隨機使1名怪盜釋放技能時的精力消耗提升；\n6、{{B}}：得到{{F}}的指示後會在自己的回合開始時吹響<color\=#ff3b37>「死亡號角」</color>：所有怪盜{{A}}技能的治療效果降低，所有友方獲得2回合的傷害提升；\n7、{{F}}：四位騎士每次吹響號角時會獲得1層<color\=#ff3b37>「滅世之力」</color>；所有騎士都接收到指示後自身會準備一回合，而後吹響<color\=#ff3b37>「滅世號角」</color>：消耗所有<color\=#ff3b37>「滅世之力」</color>對所有怪盜造成萬能傷害（四騎士的攻擊力越高，此次傷害越高），並基於消耗的<color\=#ff3b37>「滅世之力」</color>的層數獲得額外效果。\n1層：最終攻擊力提升(\d+%)；\n2層：傷害提升(\d+%)；\n3層：治療所有騎士(\d+%)的生命值；\n4層：本次傷害必定暴擊。\n8、四騎士首次被全部擊殺後，{{F}}陷入狂躁狀態，立即獻祭自身(\d+%)的生命值復活天啟四騎士，而後自身再次進入無敵狀態；天啟四騎士處於<color\=#ff3b37>「生命連結」</color>狀態，當天啟四騎士全部陣亡時，{{F}}退出無敵狀態。\n「生命連結」：擁有「生命連結」的單位，受到的傷害按當前生命比例分攤到全部擁有「生命連結」的單位上。\n9、狂躁狀態下，自身吹響<color\=#ff3b37>「滅世號角」</color>時，不再消耗<color\=#ff3b37>「滅世之力」</color>，但仍可以根據身上<color\=#ff3b37>「滅世之力」</color>的層數獲得額外效果；每層<color\=#ff3b37>「滅世之力」</color>額外使所有友方獲得一定傷害提升。$"="1. At the start of battle, {{F}} will summon the Four Horsemen, then enter Invincible; The Four Horsemen have <color\=#ff3b37>[Lifelink]</color>, when all Four Horsemen are defeated, {{F}} will enter Manic.\n[Lifelink]: Distributes all damage received between all Shadows who shares this condition, based on the percentage of their current HP.\n2. Every 3 turns, {{F}} and the Four Horsemen will blow their horns, they cannot blow their horns when inflicted with a Mental Ailment.\n3. {{C}}: Use <color\=#ff3b37>[Horn of Pestilence]</color> after receiving orders from {{F}}: Randomly decrease 1 Thief's Final HP;\n4. {{D}}: Use <color\=#ff3b37>[Horn of War]</color> after receiving orders from {{F}}: When this is active, activate a Counterattack when attacked. Lasts for 1 turn;\n5. {{E}}: Use <color\=#ff3b37>[Horn of Famine]</color> after receiving orders from {{F}}: Randomly increases 1 Thief's SP cost;\n6. {{B}}: Use <color\=#ff3b37>[Horn of Death]</color> after receiving orders from {{F}}: Decreases all Thieves' {{A}} skill Healing Effect and increase all allies' DMG Dealt for 2 turns;\n7. {{F}}: Gains 1 <color\=#ff3b37>[Apocalypse Power]</color> stack when the Four Horsemen blow their horns; All Horsemen will use <color\=#ff3b37>[Horn of Apocalypse]</color> 1 turn after receiving their order: Spend all <color\=#ff3b37>[Apocalypse Power]</color> and blow the [Horn of Apocalypse], dealing Almighty damage to all Thieves (increase damage based on the Horsemen's ATK). Grant additional effects based on <color\=#ff3b37>[Apocalypse Power]</color> stacks spent.\n1 stack: Increases Final ATK by $1;\n2 stacks: Increases DMG Dealt by $2;\n3 stacks: Restores $3 HP to all Horsemen;\n4 stacks: This has Guaranteed Critical.\n8. After all Four Horsemen are defeated for the first time, {{F}} will enters Manic, immediately sacrifice $4 HP and revive all Four Horsemen, then enter Invincible; The Four Horsemen have <color\=#ff3b37>[Lifelink]</color>, when all Four Horsemen are defeated, {{F}} will exits Invincible.\n[Lifelink]: Distributes all damage received between all Shadows who shares this condition, based on the percentage of their current HP.\n9. When Manic is active, {{F}} will no longer spend <color\=#ff3b37>[Apocalypse Power]</color> when using <color\=#ff3b37>[Horn of Apocalypse]</color>, but can still gain additional effects from <color\=#ff3b37>[Apocalypse Power]</color>; Each <color\=#ff3b37>[Apocalypse Power]</color> stack increases all allies' DMG Dealt."
 
 sr:"^瘟疫擴散(.*)$"="Spreading Pestilence $1"
 sr:"^重生強化(.*)$"="Reincarnation Buff $1"
 sr:"^瘟疫強化(.*)$"="Pestilence Buff $1"
 sr:"^力量強化(.*)$"="Strength Buff $1"
 sr:"^饑荒強化(.*)$"="Famine Buff $1"
+sr:"^飢荒強化(.*)$"="Famine Buff $1"
 sr:"^餓殍遍野(.*)$"="Famine's Reach $1"
 sr:"^死亡凋零(.*)$"="Withering Death $1"
 sr:"^死亡之力(.*)$"="Death Power $1"
@@ -2722,76 +2724,88 @@ sr:"^智慧強化(.*)$"="Wisdom Buff $1"
 sr:"^戰爭號令(.*)$"="War Order $1"
 戰爭熱忱=War Frenzy
 
-r:"^<pos\=45>「瘟疫號角」的目標變為隨機(\d+)名怪盜，{{A}}最終生命值提升(\d+%)$"="<pos\=45>[Pestilence Horn] now randomly target $1 Thieves, increase {{A}}'s Final HP by $2"
-r:"^<pos\=45>「瘟疫號角」的目標變為所有怪盜，{{A}}最終生命值提升(\d+%)$"="<pos\=45>[Pestilence Horn] now target all Thieves, increase {{A}}'s Final HP by $1"
-r:"^<pos\=45>「瘟疫號角」的最終生命值降低效果提升至(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="<pos\=45>Increase [Pestilence Horn] Final HP Down debuff to $1, increase {{A}}'s Final ATK by $2"
-r:"^<pos\=45>「饑荒號角」的技能消耗提升效果提升之(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="<pos\=45>Increase [Famine Horn] SP cost debuff to $1, increase {{A}}'s Final ATK by $2"
-r:"^<pos\=45>「饑荒號角」的技能消耗提升效果提升至(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="<pos\=45>Increase [Famine Horn] SP cost debuff to $1, increase {{A}}'s Final ATK by $2"
-r:"^<pos\=45>「饑荒號角」的目標變為隨機(\d+)名怪盜，{{A}}最終生命值提升(\d+%)$"="<pos\=45>[Famine Horn] now randomly target $1 Thieves, increase {{A}}'s Final HP by $2"
-r:"^<pos\=45>「饑荒號角」的目標變為所有怪盜，{{A}}最終生命值提升(\d+%)$"="<pos\=45>[Famine Horn] now target all Thieves, increase {{A}}'s Final HP by $1"
-r:"^<pos\=45>「死亡號角」的{{A}}技能的治療效果降低(\d+%)，{{B}}最終攻擊力提升(\d+%)$"="<pos\=45>Increase [Death Horn] {{A}} skill Healing Effect debuff to $1, increase {{B}}'s Final ATK by $2"
-r:"^<pos\=45>「死亡號角」的友方傷害提升效果提升至(\d+%)，{{A}}最終生命值提升(\d+%)$"="<pos\=45>Increase [Death Horn] DMG Dealt buff to $1, increase {{A}}'s Final HP by $2"
-r:"^<pos\=45>「戰爭號角」持續期間，反擊傷害提升(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="<pos\=45>During [War Horn], increase Counter DMG by $1, increase {{A}} Final ATK by $2"
-r:"^<pos\=45>「戰爭號角」持續期間，所有騎士受到攻擊時均會發起反擊，{{A}}反擊傷害提升(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="<pos\=45>During [War Horn], all Horsemen will Counter when attacked, increase {{A}}'s Counter DMG by $1 and Final ATK by $2"
-r:"^<pos\=45>「戰爭號角」持續時間延長一回合，{{A}}最終生命值提升(\d+%)$"="<pos\=45>Extend [War Horn] by 1 turn, increase {{A}}'s Final HP by $1"
+r:"^<pos\=45>「瘟疫號角」的目標變為隨機(\d+)名怪盜，{{A}}最終生命值提升(\d+%)$"="<pos\=45>[Horn of Pestilence] now randomly target $1 Thieves, increase {{A}}'s Final HP by $2"
+r:"^<pos\=45>「瘟疫號角」的目標變為所有怪盜，{{A}}最終生命值提升(\d+%)$"="<pos\=45>[Horn of Pestilence] now target all Thieves, increase {{A}}'s Final HP by $1"
+r:"^<pos\=45>「瘟疫號角」的最終生命值降低效果提升至(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="<pos\=45>Increase [Horn of Pestilence] Final HP Down debuff to $1, increase {{A}}'s Final ATK by $2"
+r:"^<pos\=45>「饑荒號角」的技能消耗提升效果提升之(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="<pos\=45>Increase [Horn of Famine] SP cost debuff to $1, increase {{A}}'s Final ATK by $2"
+r:"^<pos\=45>「饑荒號角」的技能消耗提升效果提升至(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="<pos\=45>Increase [Horn of Famine] SP cost debuff to $1, increase {{A}}'s Final ATK by $2"
+r:"^<pos\=45>「饑荒號角」的目標變為隨機(\d+)名怪盜，{{A}}最終生命值提升(\d+%)$"="<pos\=45>[Horn of Famine] now randomly target $1 Thieves, increase {{A}}'s Final HP by $2"
+r:"^<pos\=45>「饑荒號角」的目標變為所有怪盜，{{A}}最終生命值提升(\d+%)$"="<pos\=45>[Horn of Famine] now target all Thieves, increase {{A}}'s Final HP by $1"
+r:"^<pos\=45>「飢荒號角」的技能消耗提升效果提升之(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="<pos\=45>Increase [Horn of Famine] SP cost debuff to $1, increase {{A}}'s Final ATK by $2"
+r:"^<pos\=45>「飢荒號角」的技能消耗提升效果提升至(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="<pos\=45>Increase [Horn of Famine] SP cost debuff to $1, increase {{A}}'s Final ATK by $2"
+r:"^<pos\=45>「飢荒號角」的目標變為隨機(\d+)名怪盜，{{A}}最終生命值提升(\d+%)$"="<pos\=45>[Horn of Famine] now randomly target $1 Thieves, increase {{A}}'s Final HP by $2"
+r:"^<pos\=45>「飢荒號角」的目標變為所有怪盜，{{A}}最終生命值提升(\d+%)$"="<pos\=45>[Horn of Famine] now target all Thieves, increase {{A}}'s Final HP by $1"
+r:"^<pos\=45>「死亡號角」的{{A}}技能的治療效果降低(\d+%)，{{B}}最終攻擊力提升(\d+%)$"="<pos\=45>Increase [Horn of Death] {{A}} skill Healing Effect debuff to $1, increase {{B}}'s Final ATK by $2"
+r:"^<pos\=45>「死亡號角」的友方傷害提升效果提升至(\d+%)，{{A}}最終生命值提升(\d+%)$"="<pos\=45>Increase [Horn of Death] DMG Dealt buff to $1, increase {{A}}'s Final HP by $2"
+r:"^<pos\=45>「戰爭號角」持續期間，反擊傷害提升(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="<pos\=45>During [Horn of War], increase Counter DMG by $1, increase {{A}} Final ATK by $2"
+r:"^<pos\=45>「戰爭號角」持續期間，所有騎士受到攻擊時均會發起反擊，{{A}}反擊傷害提升(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="<pos\=45>During [Horn of War], all Horsemen will Counter when attacked, increase {{A}}'s Counter DMG by $1 and Final ATK by $2"
+r:"^<pos\=45>「戰爭號角」持續時間延長一回合，{{A}}最終生命值提升(\d+%)$"="<pos\=45>Extend [Horn of War] by 1 turn, increase {{A}}'s Final HP by $1"
 
-r:"^「瘟疫號角」的目標變為隨機(\d+)名怪盜，{{A}}最終生命值提升(\d+%)$"="[Pestilence Horn] now randomly target $1 Thieves, increase {{A}}'s Final HP by $2"
-r:"^「瘟疫號角」的目標變為所有怪盜，{{A}}最終生命值提升(\d+%)$"="[Pestilence Horn] now target all Thieves, increase {{A}}'s Final HP by $1"
-r:"^「瘟疫號角」的最終生命值降低效果提升至(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="Increase [Pestilence Horn] Final HP Down debuff to $1, increase {{A}}'s Final ATK by $2"
-r:"^「饑荒號角」的技能消耗提升效果提升之(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="Increase [Famine Horn] SP cost debuff to $1, increase {{A}}'s Final ATK by $2"
-r:"^「饑荒號角」的技能消耗提升效果提升至(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="Increase [Famine Horn] SP cost debuff to $1, increase {{A}}'s Final ATK by $2"
-r:"^「饑荒號角」的目標變為隨機(\d+)名怪盜，{{A}}最終生命值提升(\d+%)$"="[Famine Horn] now randomly target $1 Thieves, increase {{A}}'s Final HP by $2"
-r:"^「饑荒號角」的目標變為所有怪盜，{{A}}最終生命值提升(\d+%)$"="[Famine Horn] now target all Thieves, increase {{A}}'s Final HP by $1"
-r:"^「死亡號角」的{{A}}技能的治療效果降低(\d+%)，{{B}}最終攻擊力提升(\d+%)$"="Increase [Death Horn] {{A}} skill Healing Effect debuff to $1, increase {{B}}'s Final ATK by $2"
-r:"^「死亡號角」的友方傷害提升效果提升至(\d+%)，{{A}}最終生命值提升(\d+%)$"="Increase [Death Horn] DMG Dealt buff to $1, increase {{A}}'s Final HP by $2"
-r:"^「戰爭號角」持續期間，反擊傷害提升(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="During [War Horn], increase Counter DMG by $1, increase {{A}}'s Final ATK by $2"
-r:"^「戰爭號角」持續期間，所有騎士受到攻擊時均會發起反擊，{{A}}反擊傷害提升(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="During [War Horn], all Horsemen will Counter when attacked, increase {{A}}'s Counter DMG by $1 and Final ATK by $2"
-r:"^「戰爭號角」持續時間延長一回合，{{A}}最終生命值提升(\d+%)$"="Extend [War Horn] by 1 turn, increase {{A}}'s Final HP by $1"
+r:"^「瘟疫號角」的目標變為隨機(\d+)名怪盜，{{A}}最終生命值提升(\d+%)$"="[Horn of Pestilence] now randomly target $1 Thieves, increase {{A}}'s Final HP by $2"
+r:"^「瘟疫號角」的目標變為所有怪盜，{{A}}最終生命值提升(\d+%)$"="[Horn of Pestilence] now target all Thieves, increase {{A}}'s Final HP by $1"
+r:"^「瘟疫號角」的最終生命值降低效果提升至(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="Increase [Horn of Pestilence] Final HP Down debuff to $1, increase {{A}}'s Final ATK by $2"
+r:"^「饑荒號角」的技能消耗提升效果提升之(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="Increase [Horn of Famine] SP cost debuff to $1, increase {{A}}'s Final ATK by $2"
+r:"^「饑荒號角」的技能消耗提升效果提升至(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="Increase [Horn of Famine] SP cost debuff to $1, increase {{A}}'s Final ATK by $2"
+r:"^「饑荒號角」的目標變為隨機(\d+)名怪盜，{{A}}最終生命值提升(\d+%)$"="[Horn of Famine] now randomly target $1 Thieves, increase {{A}}'s Final HP by $2"
+r:"^「饑荒號角」的目標變為所有怪盜，{{A}}最終生命值提升(\d+%)$"="[Horn of Famine] now target all Thieves, increase {{A}}'s Final HP by $1"
+r:"^「飢荒號角」的技能消耗提升效果提升之(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="Increase [Horn of Famine] SP cost debuff to $1, increase {{A}}'s Final ATK by $2"
+r:"^「飢荒號角」的技能消耗提升效果提升至(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="Increase [Horn of Famine] SP cost debuff to $1, increase {{A}}'s Final ATK by $2"
+r:"^「飢荒號角」的目標變為隨機(\d+)名怪盜，{{A}}最終生命值提升(\d+%)$"="[Horn of Famine] now randomly target $1 Thieves, increase {{A}}'s Final HP by $2"
+r:"^「飢荒號角」的目標變為所有怪盜，{{A}}最終生命值提升(\d+%)$"="[Horn of Famine] now target all Thieves, increase {{A}}'s Final HP by $1"
+r:"^「死亡號角」的{{A}}技能的治療效果降低(\d+%)，{{B}}最終攻擊力提升(\d+%)$"="Increase [Horn of Death] {{A}} skill Healing Effect debuff to $1, increase {{B}}'s Final ATK by $2"
+r:"^「死亡號角」的友方傷害提升效果提升至(\d+%)，{{A}}最終生命值提升(\d+%)$"="Increase [Horn of Death] DMG Dealt buff to $1, increase {{A}}'s Final HP by $2"
+r:"^「戰爭號角」持續期間，反擊傷害提升(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="During [Horn of War], increase Counter DMG by $1, increase {{A}}'s Final ATK by $2"
+r:"^「戰爭號角」持續期間，所有騎士受到攻擊時均會發起反擊，{{A}}反擊傷害提升(\d+%)，{{A}}最終攻擊力提升(\d+%)$"="During [Horn of War], all Horsemen will Counter when attacked, increase {{A}}'s Counter DMG by $1 and Final ATK by $2"
+r:"^「戰爭號角」持續時間延長一回合，{{A}}最終生命值提升(\d+%)$"="Extend [Horn of War] by 1 turn, increase {{A}}'s Final HP by $1"
 
-瘟疫號角=Pestilence Horn
-戰爭號角=War Horn
-饑荒號角=Famine Horn
-死亡號角=Death Horn
+瘟疫號角=Horn of Pestilence
+戰爭號角=Horn of War
+饑荒號角=Horn of Famine
+飢荒號角=Horn of Famine
+死亡號角=Horn of Death
 死亡之力=Death Power
-滅世號角=Apocalypse Horn
+滅世號角=Horn of Apocalypse
 滅世之力=Apocalypse Power
-可以用來釋放滅世號角的洪荒之力=Needed for Apocalypse Horn
+可以用來釋放滅世號角的洪荒之力=Needed for Horn of Apocalypse
 終末號角=Final Horn
 
 吹號指令=Horn Order
-在自己回合開始時，吹響自己的號角=At the start of your turn, blow your horn
+在自己回合開始時，吹響自己的號角=At the start of turn, blow the horn
 吹號準備=Ready Horn
-吹號準備中，下個回合開始時吹響自己的號角=Will blow your horn next turn
+吹號準備中，下個回合開始時吹響自己的號角=This will blow the horn next turn
 瘟疫=Pestilence
-持續時間內，自身受到攻擊時會發起反擊=Will Counter when attacked during the duration
+持續時間內，自身受到攻擊時會發起反擊=This will Counterattack when attacked
 饑荒=Famine
+飢荒=Famine
 枯萎=Wither
 r:"^{{A}}技能的治療效果降低(\d+%)$"="Decrease {{A}} skill Healing Effect by $1"
 
-r:"^隨機使(\d+)名怪盜陷入「瘟疫」狀態：最終生命值降低(.*)，效果持續(\d+)回合。$"="Randomly inflicts $1 Thief with [Pestilence]: Decrease Final HP by $2 for $3 turns."
-r:"^自身獲得持續(\d+)回合的「戰爭號角」狀態，持續時間內自己受到攻擊時會發起反擊。$"="Gains [War Horn] for $1 turn, will Counter when attacked during the duration."
-r:"^隨機使(\d+)名怪盜陷入「饑荒」狀態：技能精力消耗提升(.*)，效果持續(\d+)回合。$"="Randomly inflicts $1 Thief with [Famine]: Increase SP cost by $2 for $3 turns."
-r:"^所有怪盜{{A}}技能的治療效果降低(.*)（不可被驅散），所有友方傷害提升(.*)，持續(\d+)回合。$"="Decreases all Thieves' {{A}} skill Healing Effect by $1 (Cannot be dispelled), increase all allies' DMG Dealt by $2 for $3 turns."
-r:"^消耗所有「滅世之力」吹響「滅世號角」，對所有怪盜造成萬能傷害（四騎士的攻擊力越高，此次傷害越高），並基於消耗的「滅世之力」的層數獲得額外效果。1層：最終攻擊力提升(.*)；2層：傷害提升(.*)；3層：治療所有騎士(.*)的生命值；4層：本次傷害必定暴擊。$"="Spend all [Apocalypse Power] and deals Almighty damage to all Thieves (The higher the Horsemen's ATK, the higher the damage), gains additional effects based on consumed [Apocalypse Power] stacks.\n1 stack: Increases Final ATK by $1;\n2 stacks: Increases DMG Dealt by $2;\n3 stacks: Restores $3 HP to all Horsemen;\n4 stacks: This will Always CRIT."
+r:"^隨機使(\d+)名怪盜陷入「瘟疫」狀態：最終生命值降低(.*)，效果持續(\d+)回合。$"="Randomly inflict $1 Thief with [Pestilence]: Decrease Final HP by $2 for $3 turns."
+r:"^自身獲得持續(\d+)回合的「戰爭號角」狀態，持續時間內自己受到攻擊時會發起反擊。$"="Gain [Horn of War] for $1 turn, when this is active, activate a Counterattack when attacked."
+r:"^隨機使(\d+)名怪盜陷入「饑荒」狀態：技能精力消耗提升(.*)，效果持續(\d+)回合。$"="Randomly inflict $1 Thief with [Famine]: Increase SP cost by $2 for $3 turns."
+r:"^隨機使(\d+)名怪盜陷入「飢荒」狀態：技能精力消耗提升(.*)，效果持續(\d+)回合。$"="Randomly inflict $1 Thief with [Famine]: Increase SP cost by $2 for $3 turns."
+r:"^所有怪盜{{A}}技能的治療效果降低(.*)（不可被驅散），所有友方傷害提升(.*)，持續(\d+)回合。$"="Decrease all Thieves' {{A}} skill Healing Effect by $1 (cannot be dispelled) and increase all allies' DMG Dealt by $2 for $3 turns."
+r:"^消耗所有「滅世之力」吹響「滅世號角」，對所有怪盜造成萬能傷害（四騎士的攻擊力越高，此次傷害越高），並基於消耗的「滅世之力」的層數獲得額外效果。1層：最終攻擊力提升(.*)；2層：傷害提升(.*)；3層：治療所有騎士(.*)的生命值；4層：本次傷害必定暴擊。$"="Spend all [Apocalypse Power] and blow the [Horn of Apocalypse], dealing Almighty damage to all Thieves (increase damage based on the Horsemen's ATK). Grant additional effects based on [Apocalypse Power] stacks spent.\n1 stack: Increases Final ATK by $1;\n2 stacks: Increases DMG Dealt by $2;\n3 stacks: Restores $3 HP to all Horsemen;\n4 stacks: This has Guaranteed Critical."
 
 sr:"^<color\=#FF0000>(.*)</color>收到了<color\=#FF0000>吹號指令</color>，自己回合開始時吹響號角……$"="<color\=#FF0000>$1</color> received <color\=#FF0000>Horn Order</color>!"
 sr:"^<color\=#FF0000>(.*)</color>感染了瘟疫，最終生命值降低……$"="<color\=#FF0000>$1</color> Final HP Down!"
-sr:"^<color\=#FF0000>(.*)</color>獲得了戰爭號角，受到攻擊時會發起反擊……$"="<size\=28><color\=#FF0000>$1</color> will Counter when attacked!</size>"
+sr:"^<color\=#FF0000>(.*)</color>獲得了戰爭號角，受到攻擊時會發起反擊……$"="<size\=28><color\=#FF0000>$1</color> will Counterattack when attacked!</size>"
 sr:"^<color\=#FF0000>(.*)</color>受到了饑荒的影響，精力消耗提高……$"="<color\=#FF0000>$1</color> SP cost Up!"
+sr:"^<color\=#FF0000>(.*)</color>受到了飢荒的影響，精力消耗提高……$"="<color\=#FF0000>$1</color> SP cost Up!"
 sr:"^<color\=#FF0000>(.*)</color>受到了枯萎的影響，技能治療效果降低……$"="<color\=#FF0000>$1</color> Healing Down!"
 sr:"^<color\=#FF0000>(.*)</color>正在進行<color\=#FF0000>吹號準備</color>，下個回合開始時吹響號角……$"="<size\=28><color\=#FF0000>$1</color> will <color\=#FF0000>blow their horn</color> next turn!</size>"
 
 r:"^吹<color\=#000000>號</color>指令$"="H<color\=#000000>o</color>rn Order"
 r:"^吹<color\=#000000>號</color>準備$"="R<color\=#000000>e</color>ady Horn"
 r:"^瘟<color\=#000000>疫</color>$"="P<color\=#000000>e</color>stilence"
-r:"^瘟<color\=#000000>疫</color>號角$"="P<color\=#000000>e</color>stilence Horn"
-r:"^戰<color\=#000000>爭</color>號角$"="W<color\=#000000>a</color>r Horn"
+r:"^瘟<color\=#000000>疫</color>號角$"="H<color\=#000000>o</color>rn of Pestilence"
+r:"^戰<color\=#000000>爭</color>號角$"="H<color\=#000000>o</color>rn of War"
 r:"^饑<color\=#000000>荒</color>$"="F<color\=#000000>a</color>mine"
-r:"^饑<color\=#000000>荒</color>號角$"="F<color\=#000000>a</color>mine Horn"
-r:"^死<color\=#000000>亡</color>號角$"="D<color\=#000000>e</color>ath Horn"
+r:"^饑<color\=#000000>荒</color>號角$"="H<color\=#000000>o</color>rn of Famine"
+r:"^死<color\=#000000>亡</color>號角$"="H<color\=#000000>o</color>rn of Death"
 r:"^死<color\=#000000>亡</color>之力$"="D<color\=#000000>e</color>ath Power"
 r:"^枯<color\=#000000>萎</color>$"="W<color\=#000000>i</color>ther"
-r:"^滅<color\=#000000>世</color>號角$"="A<color\=#000000>p</color>ocalypse Horn"
+r:"^滅<color\=#000000>世</color>號角$"="H<color\=#000000>o</color>rn of Apocalypse"
 r:"^滅<color\=#000000>世</color>之力$"="A<color\=#000000>p</color>ocalypse Power"
 r:"^終<color\=#000000>末</color>號角$"="F<color\=#000000>i</color>nal Horn"
 
@@ -3739,33 +3753,34 @@ r:"^使1名同伴的防禦力提升<color\=#fffc40>(\d+\.\d+%)</color>。效果�
 行刑大劍=Executive Greatsword
 1、『追慾的魔術師』在開局時將進入進攻姿態，擅長蓄力後爆發地對我方造成高額全體傷害。召喚出的『行刑大劍』還能進一步放大其對我方的威脅。\n2、『追慾的魔術師』在二階段將進入守備姿態，擅長減輕自身受到的傷害並尋覓機會對我方的攻勢進行反擊。召喚出的『鋼鐵之骰』還能進一步對其進行保護。\n3、『追慾的魔術師』在最終階段將火力全開，將前兩階段的技能交匯施放，攻守一體。請小心應對吧！=1. [Magician of Desire] will enter Offensive Stance at the start of battle, it excels at charging and dealing severe damage to all foes. Its minion [Executive Greatsword] will further threaten all Thieves.\n2. In phase 2, [Magician of Desire] will switch to Defensive Stance, it excels at decreasing damage taken and Counterattack. Its minion [Iron Dice] will further protect it.\n3. In final phase, [Magician of Desire] will go for broke, combining the skills from the first two phases.
 鋒芒畢露=Sharp Edge
-行刑大劍釋放『行刑預備』的減益效果大幅提升=Heavily increase the debuff from Executive Greatsword's [Prepare for Execution]
+行刑大劍釋放『行刑預備』的減益效果大幅提升=Heavily increase the debuffs when Executive Greatsword activates [Preparing Execution]
 玄鐵壁壘=Iron Barrier
-鋼鐵之骰釋放『鋼鐵之姿』的護盾效果大幅提升=Heavily increase the Shield from Iron Dice's [Iron Form]
+鋼鐵之骰釋放『鋼鐵之姿』的護盾效果大幅提升=Heavily increase the Shield when Iron Dice activates [Steeled Stance]
 帷幕重重=Veil Upon Veil
-追慾的魔術師將根據場上鋼鐵之骰的數量降低最終受到傷害，並根據場上行刑大劍的數量提升最終造成傷害=Magician of Desire will decrease Final DMG Taken based the number of Iron Dice present and increase Final DMG Dealt based on the number of Executive Greatsword present 
+追慾的魔術師將根據場上鋼鐵之骰的數量降低最終受到傷害，並根據場上行刑大劍的數量提升最終造成傷害=Decrease Magician of Desire's Final DMG Taken based the number of Iron Dice present, and increase its Final DMG Dealt based on the number of Executive Greatsword present 
 詭焰漸盛=Welling Flames
+r:"^詭<color\=#000000>焰</color>漸盛$"="W<color\=#000000>e</color>lling Flames"
 r:"^追慾的魔術師發動反擊後將額外使自身最終造成傷害永久提升，最多疊加(\d+)層$"="After Magician of Desire activates a Counterattack, permanently increase its Final DMG Dealt. Stacks up to $1 times"
 詭舞回春=Dance of Rejuvenation
-追慾的魔術師釋放『追慾之劍舞』後將驅散自身全部負面狀態，並回復一定已損失生命值=After Magician of Desire uses [Dance of Desire], dispel all of its debuffs, and restore its missing HP
+追慾的魔術師釋放『追慾之劍舞』後將驅散自身全部負面狀態，並回復一定已損失生命值=After Magician of Desire activates [Sword Dance of Desire], dispel all of its debuffs, and restore a set amount of missing HP
 
-
-追慾之劍舞=Dance of Desire
-r:"^使自身下次造成的物理屬性傷害大幅提升，持續(\d+)回合。$"="Heavily increase next Physical damage for $1 turn."
+追慾之劍舞=Sword Dance of Desire
+r:"^使自身下次造成的物理屬性傷害大幅提升，持續(\d+)回合。$"="Heavily increase user's next Physical damage for $1 turn."
 r:"^對所有敵人造成(\d+)~(\d+)次中等攻擊力的物理屬性傷害。$"="Deal medium Phys damage to all foes ($1-$2 hits)."
 愚弄之威壓=Fool's Coercion
 r:"^愚<color\=#000000>弄</color>之威壓$"="F<color\=#000000>o</color>ol's Coercion"
 嘲諷所有敵人，並使自身受到的最終傷害大幅降低，持續1回合。=Taunt all foes and heavily decrease Final DMG Taken. Lasts for 1 turn.
 使自身受到傷害後反擊傷害來源，持續1回合。=After taking damage, activate a Counterattack to the source. Lasts for 1 turn.
 
-行刑預備=Prepare for Execution
-處決預備=Prepare for Execution
-r:"^處<color\=#000000>決</color>預備$"="P<color\=#000000>r</color>epare for Execution"
+行刑預備=Preparing Execution
+處決預備=Preparing Execution
+r:"^處<color\=#000000>決</color>預備$"="P<color\=#000000>r</color>eparing Execution"
 r:"^對1名敵人造成中等攻擊力的物理屬性傷害，並使其受到的最終傷害大幅提升，持續(\d+)回合。$"="Deal medium Phys damage to 1 foe. Heavily increase their Final DMG Taken for $1 turn."
-鋼鐵之姿=Iron Form
-鋼鐵之護=Iron Protection
-r:"^鋼<color\=#000000>鐵</color>之護$"="I<color\=#000000>r</color>on Protection"
-為貪慾的魔術師施加一定生命上限的護盾，持續1回合。=Grant a Shield equal to a set amount of Max HP to Magician of Desire. Lasts for 1 turn.
+鋼鐵之姿=Steeled Stance
+鋼鐵之護=Steeled Protection
+r:"^鋼<color\=#000000>鐵</color>之護$"="S<color\=#000000>t</color>eeled Protection"
+為貪慾的魔術師施加一定生命上限的護盾，持續1回合。=Grant a Shield to Magician of Desire based on a set amount of its Max HP. Lasts for 1 turn.
+攻擊<color\=#FF0000>追慾的魔術師</color>時將會遭受反擊!!=<size\=26><color\=#FF0000>Magician of Desire</color> will Counterattack when attacked!</size>
 
 ----------
 Sea of Souls Trials (SoS)
