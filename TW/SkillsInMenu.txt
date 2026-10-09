@@ -273,7 +273,6 @@ No size on inherit skill names or else they won't work in the inherit menu
 冥冥低語=Dark Whisper
 深淵的凝視=Abyssal Gaze
 引誘殺戮=Carnage Allure
-萬象湮滅=Universal Annihilation
 
 --- Recovery ---
 
@@ -316,11 +315,7 @@ No size on inherit skill names or else they won't work in the inherit menu
 灼熱奮起=Heat Riser
 淨世之火=Fire of Purification
 凝聚=Cohesion
-無限演算法=Infinite Algorithm
-世界樹的衍化=Yggdrasil Derivation
-r:"^世界樹的衍化 Lv.(\d+)$"="<size\=24>Yggdrasil Derivation Lv.$1</size>"
 萬靈催化=Soul Catalysis
-音律和鳴=Temperament Harmony
 
 回防盾=Warded Shield
 護風罩=Wind Barrier
@@ -339,11 +334,7 @@ r:"^世界樹的衍化 Lv.(\d+)$"="<size\=24>Yggdrasil Derivation Lv.$1</size>"
 迪卡加=Dekaja
 迪坤達=Dekunda
 女巫詛咒=Debilitate
-音律侵擾=Temperament Disruption
-r:"^音律侵擾 Lv.(\d+)$"="<size\=23>Temperament Disruption Lv.$1</size>"
 毒絞回纏=Venomous Vortex
-解構力場=Deconstruction Field
-r:"^解構力場 Lv.(\d+)$"="<size\=24>Deconstruction Field Lv.$1</size>"
 
 --- Break Skills ---
 消除火焰耐性=Fire Break
@@ -377,6 +368,28 @@ r:"^解構力場 Lv.(\d+)$"="<size\=24>Deconstruction Field Lv.$1</size>"
 怒火加持=Anger Blessing
 不吉的話語=Ominous Words
 深淵的波動=Abysmal Surge
+
+--- P2W ---
+音律侵擾=Temperament Disruption
+r:"^音律侵擾 Lv.(\d+)$"="<size\=20>Temperament Disruption Lv.$1</size>"
+
+無限演算法=Infinite Algorithm
+
+r:"^戰意共鳴(.*)$"="Warrior's Resonance $1"
+
+解構力場=Deconstruction Field
+r:"^解構力場 Lv.(\d+)$"="<size\=24>Deconstruction Field Lv.$1</size>"
+
+r:"^動力激蕩(.*)$"="Kinetic Surge $1"
+
+世界樹的衍化=Yggdrasil Derivation
+r:"^世界樹的衍化 Lv.(\d+)$"="<size\=24>Yggdrasil Derivation Lv.$1</size>"
+
+萬象湮滅=Universal Annihilation
+r:"^萬象湮滅 Lv.(\d+)$"="<size\=23>Universal Annihilation Lv.$1</size>"
+
+音律和鳴=Temperament Harmony
+r:"^音律和鳴 Lv.(\d+)$"="<size\=21>Temperament Harmony Lv.$1</size>"
 
 --- Passives ---
 
@@ -483,8 +496,6 @@ r:"^治療促進(.*)$"="Regenerate $1"
 
 r:"^雨歌(.*)$"="Raindrop Barrier $1"
 r:"^勝利的氣息(.*)$"="Life Aid $1"
-r:"^戰意共鳴(.*)$"="Warrior's Resonance $1"
-r:"^動力激蕩(.*)$"="Kinetic Surge $1"
 
 --------------------------------------------------
 WONDER's Persona Skill Details
@@ -794,8 +805,8 @@ Carnage Allure
 r:"^對全體敵人造成一段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的萬能傷害，隨後造成一段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的詛咒傷害。\n技能可以進化為「寒冰」「暴風」「邪咒」形態：造成一段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的萬能傷害，隨後造成一段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的（冰凍、疾風或詛咒）魔法傷害。$"="Deal <color\=#fffc40>$1</color> ATK Almighty damage to all foes, then deals <color\=#fffc40>$2</color> ATK Curse damage. \nSkill can evolves into [Ice] [Wind] [Curse] form: Deal <color\=#fffc40>$3</color> ATK Almighty damage, then deals <color\=#fffc40>$4</color> ATK (Ice, Wind, Curse) damage."
 
 Universal Annihilation
-r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的萬能屬性傷害，使所有敵人的受到傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合，倒地易傷提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合。主動釋放時無視適應性削減目標(\d+)點倒地值。主動釋放冷卻時間：(\d+)個非額外回合。\n被動效果：其他同伴造成倒地時，自動釋放該技能。$"="Deal Almighty damage to all foes equal to <color\=#fffc40>$1</color> of ATK. Increase all foes' DMG Taken by <color\=#fffc40>$2</color> for $3 turns and Downed DMG Taken by <color\=#fffc40>$4</color> for $5 turn. If this skill is selected and used, ignore all affinities and decrease targets' Down Points by $6, then enter cooldown for $7 Wonder's non-Extra Actions.\nPassive: When other allies knocked down a foe, automatically activate this skill."
-r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的萬能屬性傷害，使所有敵人受到傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合，倒地易傷提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合。主動釋放時無視適應性削減目標(\d+)點倒地值。主動釋放冷卻時間：(\d+)個非額外回合。\n被動效果：其他同伴造成倒地時，自動釋放該技能。$"="Deal Almighty damage to all foes equal to <color\=#fffc40>$1</color> of ATK. Increase all foes' DMG Taken by <color\=#fffc40>$2</color> for $3 turns and Downed DMG Taken by <color\=#fffc40>$4</color> for $5 turn. If this skill is selected and used, ignore all affinities and decrease targets' Down Points by $6, then enter cooldown for $7 Wonder's non-Extra Actions.\nPassive: When other allies knocked down a foe, automatically activate this skill."
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的萬能屬性傷害，使所有敵人的受到傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合，倒地易傷提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合。主動釋放時無視適應性削減目標(\d+)點倒地值。主動釋放冷卻時間：(\d+)個非額外回合。\n被動效果：其他同伴造成倒地時，自動釋放該技能。$"="Deal Almighty damage to all foes equal to <color\=#fffc40>$1</color> of ATK. Increase all foes' DMG Taken by <color\=#fffc40>$2</color> for $3 turns and Downed DMG Taken by <color\=#fffc40>$4</color> for $5 turn. If this skill is selected and used, decrease Down Points of all targets by $6 regardless of affinities.\nCooldown Time: $7 turns (does not count Extra Actions).\nPassive: When other allies knocked down a foe, automatically activate this skill."
+r:"^對所有敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的萬能屬性傷害，使所有敵人受到傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合，倒地易傷提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合。主動釋放時無視適應性削減目標(\d+)點倒地值。主動釋放冷卻時間：(\d+)個非額外回合。\n被動效果：其他同伴造成倒地時，自動釋放該技能。$"="Deal Almighty damage to all foes equal to <color\=#fffc40>$1</color> of ATK. Increase all foes' DMG Taken by <color\=#fffc40>$2</color> for $3 turns and Downed DMG Taken by <color\=#fffc40>$4</color> for $5 turn. If this skill is selected and used, decrease Down Points of all targets by $6 regardless of affinities.\nCooldown Time: $7 turns (does not count Extra Actions).\nPassive: When other allies knocked down a foe, automatically activate this skill."
 
 --- Recovery ---
 
