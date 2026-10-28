@@ -208,7 +208,7 @@ r:"^毒<color\=#000000>素</color>$"="T<color\=#000000>o</color>xin"
 冰凍之邪蛇=Ice Yurlungur
 電擊之邪蛇=Elec Yurlungur
 
-r:"^1、{{E}}會率領眾鳥一同進攻。\n2、{{A}}與{{B}}每受到1次來自怪盜的傷害，使該名怪盜造成傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層；{{C}}與{{D}}每受到1次來自怪盜的傷害，使該名怪盜穿透提升(\d+%)，持續(\d+)回合，可疊加(\d+)層。$"="<size\=24>1. {{E}} will lead all birds to attack.\n2. After {{A}} and {{B}} take a hit of damage from a Thief, increase that Thief's DMG Dealt by $1 for $2 turns. Stacks up to $3 times. After {{C}} and {{D}} take a hit of damage from a Thief, increase that Thief's Pierce by $4 for $5 turns. Stacks up to $6 times.</size>"
+r:"^1、{{E}}會率領眾鳥一同進攻。\n2、{{A}}與{{B}}每受到1次來自怪盜的傷害，使該名怪盜造成傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層；{{C}}與{{D}}每受到1次來自怪盜的傷害，使該名怪盜穿透提升(\d+%)，持續(\d+)回合，可疊加(\d+)層。$"="<size\=27>1. {{E}} will lead all birds to attack.\n2. After {{A}} and {{B}} take a hit of damage from a Thief, increase that Thief's DMG Dealt by $1 for $2 turns. Stacks up to $3 times. After {{C}} and {{D}} take a hit of damage from a Thief, increase that Thief's Pierce by $4 for $5 turns. Stacks up to $6 times.</size>"
 r:"^{{A}}與{{B}}每受到1次來自怪盜的傷害，使該名怪盜造成傷害提升(\d+%)，持續(\d+)回合，可疊加(\d+)層。$"="After {{A}} and {{B}} take a hit of damage from a Thief, increase that Thief's DMG Dealt by $1 for $2 turns. Stacks up to $3 times."
 r:"^{{A}}與{{B}}每受到1次來自怪盜的傷害，使該名怪盜穿透提升(\d+%)，持續(\d+)回合，可疊加(\d+)層。$"="After {{A}} and {{B}} take a hit of damage from a Thief, increase that Thief's Pierce by $1 for $2 turns. Stacks up to $3 times."
 
@@ -240,13 +240,13 @@ Modifiers
 首領受到一定傷害後進入虛弱狀態，虛弱狀態積分獲取效率大幅提高=  Increase score gain after\n  defeating the boss
 生存壓力和積分獲取效率隨著戰鬥回合數的增加而持續提升=  Increase score gain and\n  survival pressure each turn
 積分倍率會隨著上陣的反抗/支配怪盜數量的增加而增加=  Increase score gain for every\n  deployed Assassin/Sweeper
-敵人倒地後的積分獲取效率會隨著擊倒所有敵人花費的回合數的縮減而提升=  Increase score gain the sooner\n  foes are knocked down
+敵人倒地後的積分獲取效率會隨著擊倒所有敵人花費的回合數的縮減而提升=  Increase score gain the sooner\n  foes are downed
 
 閼凶夢之扉夢境更換說明：\n每週閼凶夢之扉會開啟一種夢境效果，本周所有的挑戰會根據夢境的不同發生規則變化。=<size\=26>Each season there is a unique mechanic, changing all bosses based on the mechanic.</size>
 首領受到一定傷害會進入虛弱狀態，處於虛弱狀態時全力輸出對其造成大量傷害，可獲取大量的戰鬥積分。=<size\=26>Increase score gain after defeating the boss.</size>
 隨著回合數的增加，首領給予的生存壓力會越來越高，但每回合的積分獲取效率也會相應提升。=<size\=26>After each turn, increase score gain but also increase foes' damage.</size>
 隨著編入反抗/支配職業怪盜數量的增加，積分獲取效率也會相應增加。=<size\=26>Increase score gain for every deployed Assassin/Sweeper.</size>
-敵人倒地後將無法再起身且狀態的回合數將不再縮減。擊倒敵人花費的回合數越少，倒地後積分獲取效率越高。=<size\=26>After knock down, foes are unable to recover and their debuffs will not count down. Increase score gain the sooner foes are knocked down.</size>
+敵人倒地後將無法再起身且狀態的回合數將不再縮減。擊倒敵人花費的回合數越少，倒地後積分獲取效率越高。=<size\=26>After downed, foes are unable to recover and their debuffs will not count down. Increase score gain the sooner foes are downed.</size>
 
 穩定領域=Stable Domain
 防暴領域=No-Critical Zone
@@ -266,7 +266,7 @@ r:"^猛<color\=#000000>毒</color>素$"="T<color\=#000000>o</color>xin"
 r:"^隊伍中編入(\d+)名及以上<color\=#FFFC40>反抗/支配</color>怪盜時，所有怪盜最終傷害提高(\d+%)$"="Increase Thieves' Final DMG by $2 when there are $1 or more <color\=#FFFC40>Assassin/Sweeper</color> Thieves."
 
 永墜領域=Eternal Domain
-r:"^敵人的倒地值上限大幅提升，無法被直接擊倒並在回合結束時回復(\d+)點倒地值。但受弱點屬性的技能削減倒地值時額外削減(\d+)點倒地值，且倒地後受最終傷害提升(\d+%)。$"="Heavily increase foes' Down Points, they cannot be directly knocked down and will restore $1 Down Points at the end of turn. When taking Weakness damage from skills, lose $2 bonus Down Points. After knock down, increase foes' Final DMG Taken by $3."
+r:"^敵人的倒地值上限大幅提升，無法被直接擊倒並在回合結束時回復(\d+)點倒地值。但受弱點屬性的技能削減倒地值時額外削減(\d+)點倒地值，且倒地後受最終傷害提升(\d+%)。$"="Heavily increase foes' Down Points, they cannot be directly downed and will restore $1 Down Points at the end of turn. When taking Weakness damage from skills, lose $2 bonus Down Points. After downed, increase foes' Final DMG Taken by $3."
 
 sr:"^(.*)特化$"="$1 Buff"
 r:"^<color\=#FFFC40>反抗</color>怪盜造成傷害提高(\d+(.\d+)?(%)?)$"="Increase <color\=#FFFC40>Assassin</color> Thieves' DMG Dealt by $1"

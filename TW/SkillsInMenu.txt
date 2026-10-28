@@ -649,7 +649,7 @@ r:"^對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的火焰屬�
 r:"對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害，若其處於<link\="s|102"><u>燃燒</u></link>狀態，則額外造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害並使其重置其<link\="s|102"><u>燃燒</u></link>效果時間。"=Deal <color\=#FFFF00>$1</color> ATK Fire damage to 1 foe.\nIf the foe is inflicted with <link\=s|102><u>Burn</u></link>, deals an additional <color\=#FFFF00>$1</color> ATK Fire damage and reset the duration of <link\=s|102><u>Burn</u></link>.
 
 Fury Incarnate
-r:"^對1名敵人造成(\d+)次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害。使敵方受到「創傷」，持續(\d+)回合。「創傷」期間，目標每受到1次火焰屬性傷害，受到暴擊效果提升(\d+%)，持續(\d+)回合，上限(\d+)層。$"="Deal <color\=#fffc40>$2</color> ATK Fire damage to 1 foe $1 times. Inflict the foe with [Trauma] for $3 turns. During [Trauma], each time the target takes 1 hit of Fire damage, increase their Crit DMG Taken by $4 for $5 turns, up to $6 stacks."
+r:"^對1名敵人造成(\d+)次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的火焰屬性傷害。使敵方受到「創傷」，持續(\d+)回合。「創傷」期間，目標每受到1次火焰屬性傷害，受到暴擊效果提升(\d+%)，持續(\d+)回合，上限(\d+)層。$"="Deal Fire damage to 1 foe equal to <color\=#fffc40>$2</color> of ATK ($1 hits). Inflict [Trauma] for $3 turns. When [Trauma] is active, each time the target takes 1 hit of Fire damage, increase their Crit DMG Taken by $4 for $5 turns. Stacks up to $6 times."
 
 --- Ice ---
 

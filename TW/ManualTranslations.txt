@@ -426,7 +426,7 @@ r:"^長<color\=#ff0000ff>尾</color> {{A}}$"="{{A}} N<color\=#ff0000ff>a</color>
 r:"^清<color\=#ff0000ff>水</color> {{A}}$"="Ri<color\=#ff0000ff>ku</color>to Shimizu"
 r:"^小<color\=#ff0000ff>松</color> {{A}}$"="Na<color\=#ff0000ff>mie</color> Komatsu"
 r:"^<color\=#ff0000ff>茶</color>太$"="Cha<color\=#ff0000ff>t</color>ai"
-r:"^燒<color\=#ff0000ff>鳥</color> {{A}}$"="Su<color\=#ff0000ff>mi</color>zou Yakitori"
+r:"^燒<color\=#ff0000ff>鳥</color> {{A}}$"="{{A}} Ya<color\=#ff0000ff>ki</color>tori"
 r:"^土<color\=#ff0000ff>佐</color>林 {{A}}$"="Fu<color\=#ff0000ff>mi</color>yo Tosabayashi"
 r:"^小<color\=#ff0000ff>出</color> {{A}}$"="Hi<color\=#ff0000ff>yo</color>ri Koide"
 r:"^津<color\=#ff0000ff>田</color> {{A}}$"="{{A}} T<color\=#ff0000ff>su</color>da"
@@ -443,6 +443,12 @@ r:"^佐<color\=#ff0000ff>倉</color>{{A}}$"="Fu<color\=#ff0000ff>ta</color>ba Sa
 r:"^奧<color\=#ff0000ff>村</color>春$"="Ha<color\=#ff0000ff>ru</color> Okumura"
 r:"^明<color\=#ff0000ff>智</color>{{A}}$"="Go<color\=#ff0000ff>ro</color> Akechi"
 r:"^芳<color\=#ff0000ff>澤</color>霞$"="Ka<color\=#ff0000ff>su</color>mi Yoshizawa"
+
+P3P
+r:"^汐<color\=#ff0000ff>見</color>{{A}}$"="{{A}} Sh<color\=#ff0000ff>io</color>mi"
+r:"^岳<color\=#ff0000ff>羽</color>{{A}}$"="{{A}} Ta<color\=#ff0000ff>ke</color>ba"
+r:"^真<color\=#ff0000ff>田</color>{{A}}$"="{{A}} Sa<color\=#ff0000ff>na</color>da"
+r:"^荒<color\=#ff0000ff>垣</color>{{A}}$"="{{A}} Ara<color\=#ff0000ff>ga</color>ki"
 
 ----------
 Random names
@@ -530,6 +536,7 @@ Important Consumables
 體力值已滿=Stamina maxed
 （體力不足）=Insufficient Stamina
 r:"^『體力』\n探索{{A}}所需的基本能量，隨時間勻速恢復。\n下次恢復：<color\=#FFC000>(.*)</color>\n全部恢復：<color\=#FFC000>(.*)</color>$"="[Stamina]\nThe basic energy needed to explore the {{A}}, restores with time.\nNext one: <color\=#FFC000>$1</color>\nFully restored: <color\=#FFC000>$2</color>"
+『體力』\n探索{{A}}所需的基本能量，隨時間勻速恢復。\n體力充足=[Stamina]\nThe basic energy needed to explore the {{A}}, restores with time.\nMaxed Stamina
 r:"^已購買(\d+)/(\d+)次（每日05:00重置）$"="Purchased $1/$2 times \n(Reset at 05:00 UTC+8 daily)"
 行動力補給=Energy Supply
 能量飲料=MaraThon Energy
@@ -778,6 +785,7 @@ r:"^武<color\=#ff0000ff>見</color> 妙$"="T<color\=#ff0000ff>ae</color> Takemi
 所以，你今天有什麼事？=So, what are you here for today?
 所以呢，這麼晚有什麼事？=So what brings you out this late?
 那就到診療間去吧。=Then let's head into the examination room.
+要做什麼？=What should we do?
 請多保重。=Take care now.
 看起來要下雨了。=Looks like it's about to rain.
 要出門的話，\n還請好好確認下降雨機率哦。=Might not be a bad idea to check the weather before heading out...
@@ -1330,6 +1338,9 @@ r:"需要主角等級達到(\d+)級。"=Unlocks when Wonder \nreaches level $1.
 r:"需要(\d+)<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>才可以升級天賦。"=Need $1<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>to upgrade.
 r:"需要(\d+)<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>才可以啟動天賦。"=Need $1<size\=46><color\=#ffffff><sprite\=2 tint\=1></size></color>to activate.
 獲取更多靈感點=Get Inspiration Pts
+技能領悟=Skill Mastery
+人格提升=Personal Growth
+屬性進階=Stats Up
 
 r:"^重置靈感需要<color\=#FFC000>(\d+)個魂石</color>，是否確定重置？（重置後所有靈感點返還，『屬性進階』靈感技能不會被重置）$"="Spend <color\=#FFC000>$1 Konpaku Gem</color> to reset Inspiration? (Refund all spent Inspiration Points, will not reset the [Superego] skill tree)"
 r:"^重置靈感需要(\d+)個魂石，是否確定重置？（重置後所有靈感點返還，『屬性進階』靈感技能不會被重置）$"="Spend $1 Konpaku Gem to reset Inspiration? (Refund all spent Inspiration Points, will not reset the [Superego] skill tree)"
@@ -2388,7 +2399,8 @@ r:"^要在這裡度過時間嗎\(<color\=#ff0000>每次(\d+)現金</color>\)？$
 在中心噴泉許願=<size\=24>Wish at the Fountain</size>
 去{{A}}的噴泉那裡，想一想有什麼願望想要實現吧……=Let's go to the fountain at {{A}} and think about what wish I want to come true...
 在藍鬍子藥房幫忙=<size\=24>Help out Aohige Pharmacy</size>
-去{{A}}的藍鬍子藥房，嘗一嘗店主最新研發的新口味青汁吧。=Let's go to Aohige Pharmacy at {{A}} and try the owner's newest Aojiru flavor.
+{{A}}的藍鬍子藥房，今天似乎也引進了新口味的青汁……=Aohige Pharmacy seems to have introduced a new Aojiru flavor today...
+去{{A}}的藍鬍子藥房，嘗一嘗店主最新研發的新口味青汁吧。=Let's go to Aohige Pharmacy and try the owner's newest Aojiru flavor.
 在辰巳東派出所幫忙=<size\=24>Help out \nTatsumi East Police Station</size>
 {{A}}的辰巳東派出所今天似乎有很多工作……=Tatsumi East Police Station at {{A}} seems busy today...
 在鍋島拉麵吃飯=<size\=24>Eat at Hagakure Ramen</size>
@@ -3109,6 +3121,7 @@ r:"^透過厄抑巡禮·初階印記兌換$"="<size\=21>Exchange from Challenge 
 獲得動力激蕩後解鎖=Unlocks after owning this skill
 獲得世界樹的衍化後解鎖=Unlocks after owning this skill
 獲得萬象湮滅後解鎖=Unlocks after owning this skill
+獲得音律和鳴後解鎖=Unlocks after owning this skill
 
 角色契約簽約時機率獲得=Signing Contract
 {{A}}精算機等級獎勵={{A}} Ticket Machine
@@ -3601,6 +3614,9 @@ r:"^所有角色<color\=#81ea2c>疾風</color>/<color\=#ff0036>詛咒</color>屬
 詛咒漩渦=<size\=26>An Ill Wind</size>
 r:"^疾風、詛咒屬性傷害提升(\d+%)$"="Increase Wind and Curse DMG by $1"
 
+眾生之相=Myriad Visage
+千面浮光=<size\=10>Thousand-Faced Shimmer</size>
+
 造成WEAK/{{A}}時獲得分數=Weak DMG/{{A}}
 火焰/念動屬性隊員攻擊時獲得分數=Fire/Psy Teammates Score
 冰凍/核熱屬性隊員攻擊時獲得分數=Ice/Nuke Teammates Score
@@ -3771,6 +3787,12 @@ r:"^前往{{A}}(\d+)區$"=$"Go to {{A}} Area $1"
 故事告一段落=End of story
 查看SNS=View SNS
 
+似曾相識的地方=A Familiar Place
+是否要前往{{A}}？=Do you want to go to {{A}}?
+前往{{A}}提到的地點=Go to the place {{A}} mentioned
+與P3P角色進行交流的區域已解鎖。=An area where you can interact with P3P characters has been unlocked.
+每日可觸發1次特殊對話，\n每條對話於首次觀看後可獲得獎勵。=Available once per day. Earn rewards for the first time you view them.
+
 如果想繼續體驗「<color\=#ffc000>娃娃機</color>」的小遊戲，可以在完成任務「抓取的樂趣」後再進一步遊玩。=<size\=26>If you want to continue to experience the "<color\=#ffc000>Crane Game</color>", you can play more after completing the mission "The Fun of Catching".</size>
 r:"^與「<color\=#ffc000>{{A}}</color>」結識，\n可以期待今後與他發生更多的故事。$"="You've met "<color\=#ffc000>{{A}}</color>".\n Look forward to more stories \nwith him in the future."
 r:"^與「<color\=#ffc000>{{A}}</color>」結識，\n可以期待今後與她發生更多的故事。$"="You've met "<color\=#ffc000>{{A}}</color>".\n Look forward to more stories \nwith her in the future."
@@ -3858,6 +3880,22 @@ r:"^完成(\d+)次往日回溯\(<color\=#e50a06>(\d+)</color>/(\d+)\)$"="Clear $
 r:"^累計消耗(\d+)點體力\(<color\=#e50a06>(\d+)</color>/(\d+)\)$"="Use $1 Stamina (<color\=#e50a06>$2</color>/$3)"
 r:"^累計消耗(\d+)點行動力\(<color\=#e50a06>(\d+)</color>/(\d+)\)$"="Use $1 Action Points (<color\=#e50a06>$2</color>/$3)"
 
+Chatai Treasure Hunt
+完成任務，獲得更多貓罐頭=Clear missions to earn Cat Food
+貓罐頭=Cat Food
+美味的貓罐頭，{{A}}最愛的食物，沒有之一。=Delicious cat food is {{A}}'s favorite, bar none.
+美味的貓罐頭是{{A}}最愛的食物，將貓罐頭送給{{A}}，可以讓{{A}}為{{B}}尋找它藏匿起來的寶藏。=Delicious cat food is {{A}}'s favorite. When you give this to {{A}}, it will search for treasures it has hidden.
+心願玻璃珠=Glass Marbles
+任務物品=Mission Item
+彩色的玻璃珠，在陽光下呈現出耀眼的色澤，是{{A}}最喜歡的收藏品，收集齊全後，就去找它吧。=Colorful glass marbles which shine brilliantly in the sun. They are {{A}}'s favorite collectibles. Once you've collected them all, go find it.
+每次尋找寶藏，必定獲得以下獎勵中的4個=Each Treasure Hunt guarantees 4 of the following rewards
+當前已獲得心願玻璃珠：=Glass Marbles Collected:
+收集所有心願玻璃珠，即可開啟任務「貓的報恩」。=Collect all Glass Marbles to unlock the mission [Paw it Forward].
+貓的報恩=Paw it Forward
+r:"^將玻璃球交還{{A}} (\d+)/(\d+)$"="Hand the marbles to {{A}} $1/$2"
+將玻璃球交還{{A}}=Hand the marbles to {{A}}
+經過不懈努力，收集齊了所有的玻璃珠，快去找{{A}}吧。\n也許能獲得不錯的報酬呢？=After working tirelessly, I've collected all the marbles. Let's go find {{A}} now, maybe I'll get a nice reward.
+
 P3R Collab
 新月篇=New Moon
 新月=New Moon
@@ -3896,7 +3934,7 @@ P3R Collab
 櫻之際遇=Friendship Blooms
 r:"^支線故事「(.*)」中，找到碎片(\d+)$"="In Side Story, obtain fragment $2"
 r:"^支線故事「(.*)」中，成功打開大門$"="In Side Story, open the door"
-r:"^在支線故事「(.*)」中，成功打開大門\((\d+)\/(\d+)\)$"="In Side Story, open the door ($2/$3)"
+r:"^在支線故事「(.*)」中，成功打開大門 \((\d+)\/(\d+)\)$"="In Side Story, open the door ($2/$3)"
 
 世俗之庭提貝爾=Thebel
 調查未知的地點=Investigate the unknown location
@@ -3906,7 +3944,9 @@ r:"^在支線故事「(.*)」中，成功打開大門\((\d+)\/(\d+)\)$"="In Side
 穿過門後，似乎有人正要購物……=I sense someone who's going shopping beyond the door...
 穿過門後，似乎有個專注力很高的人……=I sense someone highly focused beyond the door...
 穿過門後，似乎有人正要度過休息時間……=I sense someone taking a break beyond the door...
+穿過門後，似乎有人正在用餐……=I sense someone enjoying a meal beyond the door...
 時之律=Wheel of Time·Paraselene
+拖動碎片嵌入到門上吧=Place the fragments on the door.
 
 ENEMY · 敵方陣容=ENEMY
 AWARD · 獎勵預覽=AWARD
@@ -4051,6 +4091,7 @@ r:"^查看「<color\=#ff3b37>應援獎勵規則</color>」$"="View [<color\=#ff3
 r:"^第(\d+)天可直接領取$"="Claim on day $1"
 {{A}}3張=3 {{A}}
 特供請願書·曆戰 ★5=<size\=21>5★ Special Petition</size>
+特供請願書·慶典 ★5=<size\=21>5★ Special Petition</size>
 r:"^使用後可自選1名以下怪盜：\n(.*)。$"="Can be used to choose 1 following Thief: $1."
 以下角色在活動契約中獲得=The following characters are from Event Contract
 r:"^親愛的隊長：\n自遊戲開服之日起，您已累計登入達到<color\=#0F69CA>(.*)</color>天。為了感謝您一直以來的支持與陪伴，截止(.*)年4月18日週年慶當天，我們將會根據您的總登入天數為您送上特別的週年禮物，祝您的{{A}}之旅更加精彩。$"="Dear Captain: Since the game's launch, you have logged in for a total of <color\=#0F69CA>$1</color> days. To express our gratitude for your unwavering support, we will send you a special anniversary gift based on your total login days on April 18th, $2. We wish you an even more wonderful {{A}} journey."
@@ -6706,7 +6747,7 @@ r:"^不羈紋章·虹\*(\d+)$"="<size\=18>Wild Card Emblem·Rainbow*$1</size>"
 r:"^在{{A}}育成中習得被動技能『(.*)』的技能卡。$"="Can be used to learn this passive skill."
 r:"^在{{A}}育成中習得輔助系技能『(.*)』的技能卡。$"="Can be used to learn this support skill."
 r:"^在{{A}}育成中習得異常系技能『(.*)』的技能卡。$"="Can be used to learn this debuff skill."
-r:"^在{{A}}育成中習得萬系技能『(.*)』的技能卡。$"="Can be used to learn this Almighty skill."
+r:"^在{{A}}育成中習得萬能系技能『(.*)』的技能卡。$"="Can be used to learn this Almighty skill."
 <color\=#FFF000>面具階級</color>不符合技能卡要求。=<color\=#FFF000>Mask Rank</color> does not meet skill card requirement.
 
 r:"^與「<color\=#FFC000>{{A}}</color>」好感度提升至<color\=#FFC000>rank(\d+)</color>後，\n解鎖{{B}}的合成。$"="<size\=24><color\=#FFC000>{{A}}</color>'s Synergy <color\=#FFC000>Rank $1</color>: You can now fuse {{B}}.</size>"
