@@ -410,12 +410,14 @@ r:"^受到四種元素異常，防禦力降低(\d+%)$"="Inflicted with 4 Element
 ----------
 TYCOON UI
 ----------
+大富豪=Tycoon
 經典大富豪=Classic Mode
 r:"^賽季倒計時：$"="Season Reset:"
 此模式暫未開放，敬請期待。=Mode not available, stay tuned.
 富豪積分=Tycoon Points
 『富豪積分』\n完成大富豪對局後獲得，可用於兌換大富豪專屬商店中的獎勵。=<size\=26>[Tycoon Points]\nEarned after each Tycoon game. \nCan be used in Carpe Diem Shop.</size>
 完成大富豪對局後獲得，可用於兌換大富豪專屬商店中的獎勵。=Earned after each Tycoon game. \nCan be used in Carpe Diem Shop.
+<size\=36><color\=#FFD145>賽季專屬規則</color></size>\n·階級為「大貧民」的玩家，初始手牌必定有WONDER卡牌。\n<size\=24><color\=#909090>此規則僅對本賽季“段位對決"模式生效。每個賽季將發生變化！</color></size>=<size\=36><color\=#FFD145>Season Rules</color></size>\n·Players ranked [Beggar] will always start with a Wonder card in their hand.\n<size\=24><color\=#909090>These rules only apply in Rank Mode for the current season, and change with each season.</color></size>
 
 單局模式=1 Round
 三局模式=3 Rounds
@@ -444,8 +446,8 @@ r:"^(\d+)秒後自動進入下一局$"="Start after $1 second(s)"
 本次挑戰獲得=Rewards
 r:"^富豪積分\+(\d+)$"="Tycoon Points +$1"
 富豪積分+0(已達上限)=Tycoon Points +0 (Reached cap)
-r:"^財富之章\+(\d+)$"="Badge of Wealth +$1"
-財富之章+0(已達上限)=Badge of Wealth +0 (Reached cap)
+r:"^財富之章\+(\d+)$"="Tycoon Medals +$1"
+財富之章+0(已達上限)=Tycoon Medals +0 (Reached cap)
 r:"^本次對局獲得第1名，星數\+(\d+)$"="Got 1st place in this game, +$1 Stars."
 r:"^本次對局獲得第2名，星數\+(\d+)$"="Got 2nd place in this game, +$1 Star."
 r:"^本次對局獲得第3名，星數\+(\d+)$"="Got 3rd place in this game, +$1 Star."
@@ -514,8 +516,12 @@ r:"^打出(\d+)次「最大點數3」$"="<size\=22>Play $1 [3-Spade Reversal]</s
 r:"^打出(\d+)次「最大點數3」\((\d+)/(\d+)\)$"="<size\=22>Play $1 [3-Spade Reversal] ($2/$3)</size>"
 r:"^打出(\d+)次革命或反向革命$"="<size\=22>Play $1 Revolution or Counter Revelation</size>"
 r:"^打出(\d+)次革命或反向革命\((\d+)/(\d+)\)$"="<size\=22>Play $1 Revolution or Counter Revelation ($2/$3)</size>"
+r:"^打出(\d+)次四條觸發革命或反向革命$"="<size\=22>Play $1 Revolution or Counter Revelation</size>"
+r:"^打出(\d+)次四條觸發革命或反向革命\((\d+)/(\d+)\)$"="<size\=22>Play $1 Revolution or Counter Revelation ($2/$3)</size>"
 r:"^同一局中打出(\d+)次革命或反向革命，達(\d+)局$"="<size\=22>Play $1 Revolution or Counter Revelation in 1 round, $2 times</size>"
 r:"^同一局中打出(\d+)次革命或反向革命，達(\d+)局\((\d+)/(\d+)\)$"="<size\=22>Play $1 Revolution or Counter Revelation in 1 round, $2 times ($3/$4)</size>"
+r:"^同一局中打出(\d+)次四條觸發革命或反向革命，達(\d+)局$"="<size\=22>Play $1 Revolution or Counter Revelation in 1 round, $2 times</size>"
+r:"^同一局中打出(\d+)次四條觸發革命或反向革命，達(\d+)局\((\d+)/(\d+)\)$"="<size\=22>Play $1 Revolution or Counter Revelation in 1 round, $2 times ($3/$4)</size>"
 r:"^讓牌局對手一落千丈，並成為大富豪達(\d+)次$"="<size\=22>Make 1 player Bankrupt and become Tycoon $1 time(s)</size>"
 r:"^讓牌局對手一落千丈，並成為大富豪達(\d+)次\((\d+)/(\d+)\)$"="<size\=22>Make 1 player Bankrupt and become Tycoon $1 time(s) ($2/$3)</size>"
 r:"^當前賽季達到「富豪」段位$"="<size\=22>Reach [Tycoon] in Rank Mode</size>"
@@ -532,6 +538,15 @@ r:"^與{{A}}對戰並成為大富豪達(\d+)局$"="<size\=22>Play with {{A}} and
 r:"^與{{A}}對戰並成為大富豪達(\d+)局\((\d+)/(\d+)\)$"="<size\=22>Play with {{A}} and become Tycoon in $1 game(s) ($2/$3)</size>"
 r:"^與{{A}}對戰並成為大富翁達(\d+)局$"="<size\=22>Play with {{A}} and become Tycoon in $1 game(s)</size>"
 r:"^與{{A}}對戰並成為大富翁達(\d+)局\((\d+)/(\d+)\)$"="<size\=22>Play with {{A}} and become Tycoon in $1 game(s) ($2/$3)</size>"
+r:"^與好友進行(\d+)場大富豪對戰$"="<size\=22>Play Tycoon with friends $1 times</size>"
+r:"^與好友進行(\d+)場大富豪對戰\((\d+)/(\d+)\)$"="<size\=22>Play Tycoon with friends $1 times ($2/$3)</size>"
+r:"^好友邀戰中，成為(\d+)次大富豪$"="<size\=22>Become Tycoon $1 times in Private Match</size>"
+r:"^好友邀戰中，成為(\d+)次大富豪\((\d+)/(\d+)\)$"="<size\=22>Become Tycoon $1 times in Private Match ($2/$3)</size>"
+r:"^與樂園夥伴進行(\d+)場大富豪對戰$"="<size\=22>Play Tycoon with Companio members $1 times</size>"
+r:"^與樂園夥伴進行(\d+)場大富豪對戰\((\d+)/(\d+)\)$"="<size\=22>Play Tycoon with Companio members $1 times ($2/$3)</size>"
+
+邀請好友，激情開戰！獲取限時活動道具「財富之章」，贏豐厚獎勵！=Play Tycoon to obtain event-exclusive [Tycoon Medals] and receive grand rewards!
+積分上限：=Score Cap:
 
 ----------
 Joyful Mode
@@ -592,3 +607,34 @@ r:"^<color\=#FFC000><size\=36>金幣計算明細</size></color>\n\n本局最終�
 r:"^<color\=#FFC000><size\=36>金幣計算明細</size></color>\n\n本局最終底分為(\d+)，倍數為(\d+)，乘算後本局最高收益/損失為(\d+)金幣。\n第4名，大貧民應輸<color\=#87CEEB>(\d+)金幣</color>。\n第3名，貧民應輸<color\=#87CEEB>(\d+)金幣</color>。\n第2名，富豪應贏\((\d+)\+(\d+)\)x(\d+)/(\d+)\=<color\=#ffb400>(\d+)金幣</color>。\n第1名，大富豪應贏\((\d+)\+(\d+)\)x(\d+)/(\d+)\=<color\=#ffb400>(\d+)金幣</color>。由於所贏金額超過了該玩家持有金幣，所以最終該玩家只贏<color\=#ffb400>(\d+)金幣</color>。\n由於富豪、大富豪計算金幣數有封頂情況，由此貧民和大貧民所輸金幣數有減少。最終第3名貧民輸<color\=#87CEEB>(\d+)金幣</color>，第4名大貧民輸<color\=#87CEEB>(\d+)金幣</color>。$"="<color\=#FFC000><size\=36>Coins Calculation Details</size></color>\n\nThe final Score is $1 and the Mult is $2x. \nAfter multiplying, the maximum gain/loss of this game is $3 Coins. \nBeggar loses <color\=#87CEEB>$4 Coins</color>.\nPoor loses <color\=#87CEEB>$5 Coins</color>.\nRich wins ($6+$7)x$8/$9\=<color\=#ffb400>$10 Coins</color>.\nTycoon wins ($11+$12)x$13/$14\=<color\=#ffb400>$15 Coins</color>.\nSince the winnings exceeded the Coins held by them, they will only win <color\=#ffb400>$16 Coins</color>.\nSince Tycoon and Rich have capped, decrease Coins lost for Poor and Beggar.\nFinal Poor loses <color\=#87CEEB>$17 Coins</color>.\nFinal Beggar loses <color\=#87CEEB>$18 Coins</color>."
 r:"^<color\=#FFC000><size\=36>金幣計算明細</size></color>\n\n本局最終底分為(\d+)，倍數為(\d+)，乘算後本局最高收益/損失為(\d+)金幣。\n第4名，大貧民應輸<color\=#87CEEB>(\d+)金幣</color>。由於所輸金額超過了該玩家持有金幣，所以最終該玩家只輸<color\=#87CEEB>(\d+)金幣</color>。\n第3名，貧民應輸<color\=#87CEEB>(\d+)金幣</color>。\n第2名，富豪應贏\((\d+)\+(\d+)\)x(\d+)/(\d+)\=<color\=#ffb400>(\d+)金幣</color>。\n第1名，大富豪應贏\((\d+)\+(\d+)\)x(\d+)/(\d+)\=<color\=#ffb400>(\d+)金幣</color>。\n$"="<color\=#FFC000><size\=36>Coins Calculation Details</size></color>\n\nThe final Score is $1 and the Mult is $2x. \nAfter multiplying, the maximum gain/loss of this game is $3 Coins. \nBeggar loses <color\=#87CEEB>$4 Coins</color>. \nSince that exceeded their Coins, \nthey will only lose <color\=#87CEEB>$5 Coins</color>\nPoor loses <color\=#87CEEB>$6 Coins</color>.\nRich wins ($7+$8)x$9/$10\=<color\=#ffb400>$11 Coins</color>.\nTycoon wins ($12+$13)x$14/$15\=<color\=#ffb400>$16 Coins</color>."
 r:"^<color\=#FFC000><size\=36>金幣計算明細</size></color>\n\n本局最終底分為(\d+)，倍數為(\d+)，乘算後本局最高收益/損失為(\d+)金幣。\n第4名，大貧民應輸<color\=#87CEEB>(\d+)金幣</color>。由於所輸金額超過了該玩家持有金幣，所以最終該玩家只輸<color\=#87CEEB>(\d+)金幣</color>。\n第3名，貧民應輸<color\=#87CEEB>(\d+)金幣</color>。\n第2名，富豪應贏\((\d+)\+(\d+)\)x(\d+)/(\d+)\=<color\=#ffb400>(\d+)金幣</color>。\n第1名，大富豪應贏\((\d+)\+(\d+)\)x(\d+)/(\d+)\=<color\=#ffb400>(\d+)金幣</color>。由於所贏金額超過了該玩家持有金幣，所以最終該玩家只贏<color\=#ffb400>(\d+)金幣</color>。\n由於富豪、大富豪計算金幣數有封頂情況，由此貧民和大貧民所輸金幣數有減少。最終第3名貧民輸<color\=#87CEEB>(\d+)金幣</color>，第4名大貧民輸<color\=#87CEEB>(\d+)金幣</color>。$"="<color\=#FFC000><size\=36>Coins Calculation Details</size></color>\n\nThe final Score is $1 and the Mult is $2x. \nAfter multiplying, the maximum gain/loss of this game is $3 Coins. \nBeggar loses <color\=#87CEEB>$4 Coins</color>. \nSince that exceeded their Coins, \nthey will only lose <color\=#87CEEB>$5 Coins</color>\nPoor loses <color\=#87CEEB>$6 Coins</color>.\nRich wins ($7+$8)x$9/$10\=<color\=#ffb400>$11 Coins</color>.\nTycoon wins ($12+$13)x$14/$15\=<color\=#ffb400>$16 Coins</color>. \nSince the winnings exceeded the Coins held by them, they will only win <color\=#ffb400>$17 Coins</color>.\nSince Tycoon and Rich have capped, decrease Coins lost for Poor and Beggar.\nFinal Poor loses <color\=#87CEEB>$18 Coins</color>.\nFinal Beggar loses <color\=#87CEEB>$19 Coins</color>."
+
+----------
+Private Match
+----------
+好友邀戰=Private Match
+房間設置=Lobby Settings
+僅邀請好友進房間=Friends Invite only
+基礎規則=Basic Rules
+三條革命=Triple Revolution
+隨機萬能牌=Random Wild Card
+無WONDER=No Wonder
+點擊說明查看規則詳情。後續更多規則敬請期待。=Click "Help" to view the detailed rules.
+貧民初始手牌四條=The Poor will start with a quads
+大貧民的初始手牌裡必定有WONDER=The Beggar will start with a Wonder card
+
+「大富豪-好友邀戰」=[Tycoon - Private Match]
+r:"^人數：(\d+)/(\d+)$"="People: $1/$2"
+房主=Host
+房間：=Lobby:
+邀請冷卻中，請稍後再試。=Invite on cooldown. Please try again later.
+房間設置已修改，僅房主可邀請好友加入。=The lobby settings have been updated, only the host can invite friends to join.
+三條革命 隨機萬能牌 =Triple Revolution, Random Wild Card
+三條革命 無WONDER =Triple Revolution, No Wonder
+隨機萬能牌 無WONDER =Random Wild Card, No Wonder
+三條革命 隨機萬能牌 無WONDER =Triple Revolution, Random Wild Card, No Wonder
+房間設置修改成功。=Updated lobby settings.
+退出後將解散房間，是否確認退出？=Exiting will close the lobby, proceed?
+請等待全員準備後再開始。=Please wait until everyone is ready.
+
+逃跑將由笨笨的機器人接管，是否繼續?\n<color\=#FFC000>在本局結束前無法開始新的牌局。</color>=A bot will take over, proceed?\n<color\=#FFC000>You cannot start a new game before this one ends.</color>
+已加入到未完成的牌局。=Joined an unfinished game.
