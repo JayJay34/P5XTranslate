@@ -877,6 +877,20 @@ r:"^懷<color\=#ff0000ff>舊</color>遊戲店$"="Re<color\=#ff0000ff>tr</color>o
 販賣機=Vending Machine
 要買些什麼嗎？=What do you want to buy?
 
+r:"^站<color\=#ff0000ff>前</color>地圖$"="S<color\=#ff0000ff>t</color>ation Map"
+是一張注明了\n{{A}}等地資訊的地圖……=It's a map with information about the {{A}} and other places...
+r:"^<color\=#ff0000ff>工</color>地$"="C<color\=#ff0000ff>o</color>nstruction Site"
+井裡面一片漆黑。\n不知道地下是不是正在施工……=It looks dark down there. Maybe they're doing some underground construction...
+r:"^建<color\=#ff0000ff>設</color>現場$"="C<color\=#ff0000ff>o</color>nstruction Site"
+好像是大樓的施工現場。=Looks like a construction for a building.
+r:"^<color\=#ff0000ff>圍</color>欄$"="F<color\=#ff0000ff>e</color>nce"
+這裡是在施工嗎……\n看來無法從這裡往前走……=Looks like I can't can't go any further... I wonder if it's under construction...
+r:"^車<color\=#ff0000ff>站</color>電梯$"="E<color\=#ff0000ff>l</color>evator"
+這似乎是通往\n{{A}}上層的電梯。=It's an elevator that goes to the upper floor of {{A}}.
+電話亭=Phone Booth
+r:"^電<color\=#ff0000ff>話</color>亭$"="P<color\=#ff0000ff>h</color>one Booth"
+電話亭裡貼了無數的小廣告……=Countless flyers plaster the phone booth...
+
 醫院走廊=Hospital Hallway
 
 商店=Shop
@@ -946,6 +960,8 @@ r:"^(\d+)天(\d+)時後開放領取$"="Claim in $1d $2h"
 r:"^(\d+)小時(\d+)分後開放領取$"="Claim in $1h $2m"
 r:"^(\d+)時(\d+)分後開放領取$"="Claim in $1h $2m"
 r:"^(\d+)分後開放領取$"="Claim in $1m"
+r:"^(\d+)天後開放$"="Unlocks in $1d"
+r:"^(\d+)小時後開放$"="Unlocks in $1h"
 r:"^(\d+)天(\d+)小時後開放。$"="Unlocks in $1d $2h."
 r:"^(\d+)小時(\d+)分後開放。$"="Unlocks in $1h $2m."
 r:"^(\d+)天(\d+)小時後解鎖後開放。$"="Unlocks in $1d $2h."
@@ -1167,7 +1183,7 @@ r:"^陣容\((\d+)\)$"="Party ($1)"
 已設置為默認方案。=Set as default party.
 預設陣容保存成功=Saved as default party
 確認要刪除該方案嗎？=Delete this party formation?
-不可以刪除默認編隊喔=Cannot delete the default setting
+不可以刪除默認編隊喔=Cannot delete the default party
 無法更換該怪盜。=Unable to change this Thief.
 隊伍中至少攜帶一個{{A}}=Party needs to be set with at least one {{A}}.
 請編入三名參戰隊員。=Please deploy 3 teammates.
@@ -3266,7 +3282,7 @@ sr:"^(.*)不足，無法購買。$"="Insufficient $1, cannot purchase."
 自選禮包=Customize
 點擊領取今日供給=Click to Claim!
 r:"^限購$"="Limit"
-r:"^立即獲得$"="Immediately get"
+立即獲得=Immediately get
 r:"^連續30天，每天5點贈送$"="Daily at 05:00 (UTC+8) for 30 days"
 r:"^每日(\d+)點刷新領取$"="Daily at $1 am  (UTC+8)"
 r:"^累計消費(\d+)台幣\((\d+)/(\d+)\)$"="Spend NT$ $1 ($2/$3)"
@@ -3299,12 +3315,14 @@ r:"^破碎的金屬零件，可用於提升武器經驗，使用後立即提升(
 縛生香=Binding Incense
 妄殊香=Delusion Incense
 繪顏香=Visage Incense
+萬香引=Universal Incense
 散發出魅惑氣味的香丸，可用於提升技能等級至Lv.7-Lv.10。=Incense with a seductive scent, can be used to level up Skills to Lv.7-Lv.10.
 散發出神秘氣味的香丸，可用於提升技能等級至Lv.7-Lv.10。=Incense with a mysterious scent, can be used to level up Skills to Lv.7-Lv.10.
 散發出熾烈氣味的香丸，可用於提升技能等級至Lv.7-Lv.10。=Incense with a fiery scent, can be used to level up Skills to Lv.7-Lv.10.
 散發出迷離氣味的香丸，可用於提升技能等級至Lv.7-Lv.10。=Incense with a blurred scent, can be used to level up Skills to Lv.7-Lv.10.
 散發出悲憫氣味的香丸，可用於提升技能等級至Lv.7-Lv.10。=Incense with a lamenting scent, can be used to level up Skills to Lv.7-Lv.10.
 散發出清絕氣味的香丸，可用於提升技能等級至Lv.7-Lv.10。=Incense with a pure scent, can be used to level up Skills to Lv.7-Lv.10.
+世間香氣的引子，打開後可自選一顆用於升級技能的香丸。=An incense burner that draws in the world's scent, can be used to select 1 Incense used to level up Skills.
 
 香塔L=Skill Incense L
 香塔M=Skill Incense M
@@ -3586,55 +3604,7 @@ Velvet Trials (VT)
 ----------
 天鵝絨試煉=Velvet Trials
 r:"^天<color\=#ff0000ff>鵝</color>絨試煉$"="V<color\=#ff0000ff>e</color>lvet Trials"
-r:"^解明怪盜對在場怪盜的<color\=#FFFC40>屬性提升</color>效果，提升至(\d+%)$"="Increase the <color\=#FFFC40>Stats Buff</color> effect from Elucidators to $1"
-r:"^解明怪盜對在場角色的<color\=#FFFC40>屬性提升</color>效果，提升至(\d+%)$"="Increase the <color\=#FFFC40>Stats Buff</color> effect from Elucidators to $1"
-巧匠之作=<size\=26>Technician</size>
 
-熔岩幻境=Lava Mirage
-r:"^全體怪盜<color\=#ff381d>火焰</color>/<color\=#ff63ff>念動</color>屬性傷害提高(\d+%)$"="<size\=24>Increase Thieves' <color\=#ff381d>Fire</color>/<color\=#ff63ff>Psy</color> DMG by $1</size>"
-r:"^所有角色<color\=#ff381d>火焰</color>/<color\=#ff63ff>念動</color>屬性傷害提高(\d+%)$"="<size\=24>Increase Thieves' <color\=#ff381d>Fire</color>/<color\=#ff63ff>Psy</color> DMG by $1</size>"
-灼熱迷域=<size\=15>Lair of Arcane Fire</size>
-r:"^火焰、念動屬性傷害提升(\d+%)$"="Increase Fire and Psy DMG by $1"
-
-量子冰場=Quantum Icefield
-r:"^全體怪盜<color\=#00aeff>冰凍</color>/<color\=#00fcff>核熱</color>屬性傷害提高(\d+%)$"="<size\=24>Increase Thieves' <color\=#00aeff>Ice</color>/<color\=#00fcff>Nuke</color> DMG by $1</size>"
-r:"^所有角色<color\=#00aeff>冰凍</color>/<color\=#00fcff>核熱</color>屬性傷害提高(\d+%)$"="<size\=24>Increase Thieves' <color\=#00aeff>Ice</color>/<color\=#00fcff>Nuke</color> DMG by $1</size>"
-暑寒極地=<size\=20>Nuclear Winter</size>
-r:"^冰凍、核熱屬性傷害提升(\d+%)$"="Increase Ice and Nuke DMG by $1"
-
-雷光聖所=Thunderous Sanctuary
-r:"^全體怪盜<color\=#fbff37>電擊</color>/<color\=#fffea0>祝福</color>屬性傷害提高(\d+%)$"="<size\=21>Increase Thieves' <color\=#fbff37>Elec</color>/<color\=#fffea0>Bless</color> DMG by $1</size>"
-r:"^所有角色<color\=#fbff37>電擊</color>/<color\=#fffea0>祝福</color>屬性傷害提高(\d+%)$"="<size\=21>Increase Thieves' <color\=#fbff37>Elec</color>/<color\=#fffea0>Bless</color> DMG by $1</size>"
-雷霆祈境=<size\=14>Thunderous Blessing</size>
-r:"^電擊、祝福屬性傷害提升(\d+%)$"="Increase Elec and Bless DMG by $1"
-
-厄命風眼=Cursed Eye
-r:"^全體怪盜<color\=#81ea2c>疾風</color>/<color\=#ff0036>詛咒</color>屬性傷害提高(\d+%)$"="<size\=22>Increase Thieves' <color\=#81ea2c>Wind</color>/<color\=#ff0036>Curse</color> DMG by $1</size>"
-r:"^所有角色<color\=#81ea2c>疾風</color>/<color\=#ff0036>詛咒</color>屬性傷害提高(\d+%)$"="<size\=22>Increase Thieves' <color\=#81ea2c>Wind</color>/<color\=#ff0036>Curse</color> DMG by $1</size>"
-詛咒漩渦=<size\=26>An Ill Wind</size>
-r:"^疾風、詛咒屬性傷害提升(\d+%)$"="Increase Wind and Curse DMG by $1"
-
-眾生之相=Myriad Visage
-千面浮光=<size\=10>Thousand-Faced Shimmer</size>
-
-造成WEAK/{{A}}時獲得分數=Weak DMG/{{A}}
-火焰/念動屬性隊員攻擊時獲得分數=Fire/Psy Teammates Score
-冰凍/核熱屬性隊員攻擊時獲得分數=Ice/Nuke Teammates Score
-電擊/祝福屬性隊員攻擊時獲得分數=Elec/Bless Teammates Score
-疾風/詛咒屬性隊員攻擊時獲得分數=Wind/Curse Teammates Score
-1MORE時獲得分數=ONE MORE Score
-r:"^1MORE時獲得分數<color\=#FF0000>\+(\d+)</color>$"="ONE MORE Score <color\=#FF0000>+$1</color>"
-r:"^(\d+)次行動內完成$"="Win within $1 ally actions"
-r:"^(\d+)次行動內完成<color\=#FF0000>\+(\d+)</color>$"="Win within $1 ally actions <color\=#FF0000>+$2</color>"
-陣亡人數不超過0人=No more than 0 KO'd allies
-r:"^陣亡人數不超過0人<color\=#FF0000>\+(\d+)</color>$"="No more than 0 KO'd allies <color\=#FF0000>+$1</color>"
-r:"^火焰/念動屬性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Fire/Psy Teammates Score <color\=#FF0000>X$1</color>"
-r:"^冰凍/核熱屬性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Ice/Nuke Teammates Score <color\=#FF0000>X$1</color>"
-r:"^電擊/祝福屬性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Elec/Bless Teammates Score <color\=#FF0000>X$1</color>"
-r:"^疾風/詛咒屬性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Wind/Curse Teammates Score <color\=#FF0000>X$1</color>"
-sr:"^(.*)/(.*)屬性攻擊時獲得分數$"="$1/$2 Attacks Score"
-r:"^X(\d+)倍$"="<size\=30>X$1</size>"
-sr:"^(.*)/(.*)屬性攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="$1/$2 Attacks Score <color\=#FF0000>X$3</color>"
 獎勵=<size\=24>Rewards</size>
 章節獎勵=<size\=36>Rewards</size>
 累計獲得{{A}}：=<size\=32>Total {{A}} Earned:</size>
@@ -3642,6 +3612,84 @@ sr:"^(.*)/(.*)屬性攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="$1
 昨日辰星獎勵：=Daily Rewards:
 每日根據天鵝絨試煉總星級發放獎勵。=Get daily rewards based on total ★.
 再次嘗試會重置當前進度，從頭開始試煉，請確認是否繼續？=Do you want to restart the entire trial?
+
+AB編隊互換成功。=Switched parties A and B.
+
+r:"^解明怪盜對在場怪盜的<color\=#FFFC40>屬性提升</color>效果，提升至(\d+%)$"="Increase the <color\=#FFFC40>Stats Buff</color> effect from Elucidators to $1"
+r:"^解明怪盜對在場角色的<color\=#FFFC40>屬性提升</color>效果，提升至(\d+%)$"="Increase the <color\=#FFFC40>Stats Buff</color> effect from Elucidators to $1"
+巧匠之作=<size\=26>Technician</size>
+
+熔岩幻境=Lava Mirage
+r:"^全體怪盜<color\=#ff381d>火焰</color>/<color\=#ff63ff>念動</color>屬性傷害提高(\d+%)$"="Increase Thieves' <color\=#ff381d>Fire</color>/<color\=#ff63ff>Psy</color> DMG by $1"
+r:"^所有角色<color\=#ff381d>火焰</color>/<color\=#ff63ff>念動</color>屬性傷害提高(\d+%)$"="Increase Thieves' <color\=#ff381d>Fire</color>/<color\=#ff63ff>Psy</color> DMG by $1"
+灼熱迷域=<size\=15>Lair of Arcane Fire</size>
+r:"^火焰、念動屬性傷害提升(\d+%)$"="Increase Fire and Psy DMG by $1"
+
+量子冰場=Quantum Icefield
+r:"^全體怪盜<color\=#00aeff>冰凍</color>/<color\=#00fcff>核熱</color>屬性傷害提高(\d+%)$"="Increase Thieves' <color\=#00aeff>Ice</color>/<color\=#00fcff>Nuke</color> DMG by $1"
+r:"^所有角色<color\=#00aeff>冰凍</color>/<color\=#00fcff>核熱</color>屬性傷害提高(\d+%)$"="Increase Thieves' <color\=#00aeff>Ice</color>/<color\=#00fcff>Nuke</color> DMG by $1"
+暑寒極地=<size\=20>Nuclear Winter</size>
+r:"^冰凍、核熱屬性傷害提升(\d+%)$"="Increase Ice and Nuke DMG by $1"
+
+雷光聖所=Thunderous Sanctuary
+r:"^全體怪盜<color\=#fbff37>電擊</color>/<color\=#fffea0>祝福</color>屬性傷害提高(\d+%)$"="Increase Thieves' <color\=#fbff37>Elec</color>/<color\=#fffea0>Bless</color> DMG by $1"
+r:"^所有角色<color\=#fbff37>電擊</color>/<color\=#fffea0>祝福</color>屬性傷害提高(\d+%)$"="Increase Thieves' <color\=#fbff37>Elec</color>/<color\=#fffea0>Bless</color> DMG by $1"
+雷霆祈境=<size\=14>Thunderous Blessing</size>
+r:"^電擊、祝福屬性傷害提升(\d+%)$"="Increase Elec and Bless DMG by $1"
+
+厄命風眼=Cursed Eye
+r:"^全體怪盜<color\=#81ea2c>疾風</color>/<color\=#ff0036>詛咒</color>屬性傷害提高(\d+%)$"="Increase Thieves' <color\=#81ea2c>Wind</color>/<color\=#ff0036>Curse</color> DMG by $1"
+r:"^所有角色<color\=#81ea2c>疾風</color>/<color\=#ff0036>詛咒</color>屬性傷害提高(\d+%)$"="Increase Thieves' <color\=#81ea2c>Wind</color>/<color\=#ff0036>Curse</color> DMG by $1"
+詛咒漩渦=<size\=26>An Ill Wind</size>
+r:"^疾風、詛咒屬性傷害提升(\d+%)$"="Increase Wind and Curse DMG by $1"
+
+眾生之相=Myriad Visage
+r:"^有屬於<color\=#ff3b37>相同『分類』</color>的角色同時在場時，這些角色造成的傷害增加(\d+%)（多種分類不可疊加）$"="When characters from the <color\=#ff3b37>same [Category]</color> are present, increase their DMG Dealt by $1 (does not stack across multiple categories)"
+千面浮光=<size\=12>Thousand-Faced Light</size>
+
+造成WEAK/{{A}}時獲得分數=Weak DMG/{{A}}
+火焰/念動屬性隊員攻擊時獲得分數=Fire/Psy Allies Attack Score
+冰凍/核熱屬性隊員攻擊時獲得分數=Ice/Nuke Allies Attack Score
+電擊/祝福屬性隊員攻擊時獲得分數=Elec/Bless Allies Attack Score
+疾風/詛咒屬性隊員攻擊時獲得分數=Wind/Curse Allies Attack Score
+女性隊員攻擊時獲得分數=Female Ally Attack Score
+男性/{{A}}隊員攻擊時獲得分數=Male/{{A}} Allies Attack Score
+怪盜偶像隊員攻擊時獲得分數=Phantom Idol Allies Attack Score
+{{A}}/{{B}}隊員攻擊時獲得分數={{A}}/{{B}} Allies Attack Score
+S.E.E.S./泳裝隊員攻擊時獲得分數=S.E.E.S./Swimsuit Allies Attack Score
+男性/S.E.E.S.隊員攻擊時獲得分數=Male/S.E.E.S. Allies Attack Score
+{{A}}/S.E.E.S.隊員攻擊時獲得分數={{A}}/S.E.E.S. Allies Attack Score
+{{A}}/P5R隊員攻擊時獲得分數={{A}}/P5R Allies Attack Score
+S.E.E.S./{{A}}隊員攻擊時獲得分數=S.E.E.S./{{A}} Allies Attack Score
+S.E.E.S./暴走{{A}}隊員攻擊時獲得分數=S.E.E.S./Berserk {{A}} Allies Attack Score
+男性/泳裝隊員攻擊時獲得分數=Male/Swimsuit Allies Attack Score
+{{B}}/暴走{{A}}隊員攻擊時獲得分數={{B}}/Berserk {{A}} Allies Attack Score
+1MORE時獲得分數=ONE MORE Score
+r:"^(\d+)次行動內完成$"="Win within $1 ally actions"
+陣亡人數不超過0人=No more than 0 KO'd allies
+
+r:"^火焰/念動屬性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Fire/Psy Allies Attack Score <color\=#FF0000>X$1</color>"
+r:"^冰凍/核熱屬性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Ice/Nuke Allies Attack Score <color\=#FF0000>X$1</color>"
+r:"^電擊/祝福屬性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Elec/Bless Allies Attack Score <color\=#FF0000>X$1</color>"
+r:"^疾風/詛咒屬性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Wind/Curse Allies Attack Score <color\=#FF0000>X$1</color>"
+r:"^女性隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Female Ally Attack Score <color\=#FF0000>X$1</color>"
+r:"^男性/{{A}}隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Male/{{A}} Allies Attack Score <color\=#FF0000>X$1</color>"
+r:"^怪盜偶像隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Phantom Idol Allies Attack Score <color\=#FF0000>X$1</color>"
+r:"^{{A}}/{{B}}隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="{{A}}/{{B}} Allies Attack Score <color\=#FF0000>X$1</color>"
+r:"^S.E.E.S./泳裝隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="S.E.E.S./Swimsuit Allies Attack Score <color\=#FF0000>X$1</color>"
+r:"^男性/S.E.E.S.隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Male/S.E.E.S. Allies Attack Score <color\=#FF0000>X$1</color>"
+r:"^{{A}}/S.E.E.S.隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="{{A}}/S.E.E.S. Allies Attack Score <color\=#FF0000>X$1</color>"
+r:"^{{A}}/P5R隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="{{A}}/P5R Allies Attack Score <color\=#FF0000>X$1</color>"
+r:"^S.E.E.S./{{A}}隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="S.E.E.S./{{A}} Allies Attack Score <color\=#FF0000>X$1</color>"
+r:"^S.E.E.S./暴走{{A}}隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="S.E.E.S./Berserk {{A}} Allies Attack Score <color\=#FF0000>X$1</color>"
+r:"^男性/泳裝隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="Male/Swimsuit Allies Attack Score <color\=#FF0000>X$1</color>"
+r:"^{{B}}/暴走{{A}}隊員攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="{{B}}/Berserk {{A}} Allies Attack Score <color\=#FF0000>X$1</color>"
+sr:"^(.*)/(.*)屬性攻擊時獲得分數$"="$1/$2 Attack Score"
+r:"^X(\d+)倍$"="<size\=30>X$1</size>"
+sr:"^(.*)/(.*)屬性攻擊時獲得分數<color\=#FF0000>X(\d+)倍</color>$"="$1/$2 Attack Score <color\=#FF0000>X$3</color>"
+r:"^1MORE時獲得分數<color\=#FF0000>\+(\d+)</color>$"="ONE MORE Score <color\=#FF0000>+$1</color>"
+r:"^(\d+)次行動內完成<color\=#FF0000>\+(\d+)</color>$"="Win within $1 ally actions <color\=#FF0000>+$2</color>"
+r:"^陣亡人數不超過0人<color\=#FF0000>\+(\d+)</color>$"="No more than 0 KO'd allies <color\=#FF0000>+$1</color>"
 
 ----------
 Others
@@ -3691,7 +3739,7 @@ Mission Screen
 故事尚未結束，請期待後續發展。=The story is not over yet, stay tuned!
 目標=Goal
 r:"^目標(\d+)$"="Goal $1"
-通關前置關卡後開啟=Unlock after clearing prerequisite level
+通關前置關卡後開啟=Unlocks after clearing prerequisite level
 冒險故事=Adventure Story
 都市生活=City Life
 
@@ -3895,6 +3943,87 @@ Chatai Treasure Hunt
 r:"^將玻璃球交還{{A}} (\d+)/(\d+)$"="Hand the marbles to {{A}} $1/$2"
 將玻璃球交還{{A}}=Hand the marbles to {{A}}
 經過不懈努力，收集齊了所有的玻璃珠，快去找{{A}}吧。\n也許能獲得不錯的報酬呢？=After working tirelessly, I've collected all the marbles. Let's go find {{A}} now, maybe I'll get a nice reward.
+
+Besa Robotic Challenge
+「{{B}}出品」是一檔{{A}}直播節目，挑戰者必須在規定的「行動次數」內解開舞臺上的謎題，完成闖關，最終獲得節目優勝。=Robotic Challenge now available! \nTake on the challenges to earn rewards!
+暫未到開放時間。=Not yet open.
+r:"^完成棋棋追逐秀第(\d+)關後解鎖。$"="Unlocks after clearing PuzRobo Level $1."
+
+國王達到目標點=Move the King to the goal
+r:"^拾取(\d+)枚金幣$"="Collect $1 gold coins"
+拾取所有金幣=Collect all gold coins
+r:"^(\d+)回合內到達目標點$"="Reach the goal within $1 turns"
+破壞所有暴走機器人=Destroy all Berserk Bots
+場上自爆機器人不能被破壞=No Self-Destruct Bots destroyed
+所有戰鬥無人機都不能被破壞=No Combat Drones destroyed
+
+r:"^拾取(\d+)枚金幣\（(\d+)/(\d+)\）$"="Collect $1 gold coins ($2/$3)"
+r:"^拾取所有金幣\（(\d+)/(\d+)\）$"="Collect all gold coins ($1/$2)"
+r:"^(\d+)回合內到達目標點\（(\d+)/(\d+)\）$"="Reach the goal within $1 turns ($2/$3)"
+r:"^破壞所有暴走機器人\（(\d+)/(\d+)\）$"="Destroy all Berserk Bots ($1/$2)"
+r:"^金幣\+(\d+)$"="Gold Coins +$1"
+當前位置沒有可互動的棋子。=There are no pieces you can move here.
+機器人無法移動到那個區域=The Bot cannot move to that area.
+r:"^下一枚要推動的棋子可以直接前進(\d+)格！$"="The next piece you move can move $1 spaces!"
+可行動數增加了，WONDER！=The number of moves has increased, Wonder!
+未能將國王推至目標點=Failed to move the King to the goal
+
+TIPS:攜帶棋棋大作戰中獲得的道具進入，可獲得特殊效果=TIPS: Equipping items granted from PuzRobo will grant you special effects
+通關當前選擇難度，即自動通關該難度以下的挑戰=Clear this difficulty to automatically clear lower difficulties
+r:"^通關前置關卡及棋棋追逐秀第(\d+)關後解鎖$"="Unlocks after clearing prerequisite level and PuzRobo Level $1"
+休閒·已通關=Easy Cleared
+普通·已通關=Normal Cleared
+困難·已通關=Hard Cleared
+描述=Description
+暫未獲得任何活動道具=No obtained event item
+自爆機器人=Self-Destruct Bot
+戰鬥無人機=Combat Drone
+r:"^每攜帶1台，「自爆機器人」數量\+(\d+)，「自爆機器人」造成的「萬能傷害」提升(\d+%)。$"="For each Bot equipped, +$1 [Self-Destruct Bot] and +$2 [Self-Destruct Bot] Almighty DMG."
+r:"^每攜帶1架，「戰鬥無人機」數量\+(\d+)，可驅散的「數據異常」層數\+(\d+)。$"="For each Bot equipped, +$1 [Combat Drone] and +$2 removable [Data Abnormality]."
+r:"^最多只能選擇(\d+)個棋子。$"="You can only select up to $1 pieces."
+
+電壓增強-E2型=Voltage Amp-E2
+防火牆強化-X3型=Firewall Booster-X3
+數據恢復-P1型=Data Recovery-P1
+記憶體拓展-L9型=Memory Expansion-L9
+漏洞駭入器-I0型=Bughack-I0
+破盾器-N1型=Shieldbreak-N1
+元素轉換器-T0型=Elemental Combat-T0
+元素轉換器-E2型=Elemental Combat-E2
+r:"^<color\=#FF0000>電壓增強-E2型</color>:<color\=#fffc40>「戰鬥無人機」</color>的攻擊額外使所有友方怪盜的最終攻擊力提升<color\=#fffc40>(\d+%)</color>，持續(\d+)回合$"="<color\=#FF0000>Voltage Amp-E2</color>: <color\=#fffc40>[Combat Drone]</color>'s attack additionally increase party's Final ATK by <color\=#fffc40>$1</color> for $2 turn"
+r:"^<color\=#FF0000>防火牆強化-X3型</color>:<color\=#fffc40>「戰鬥無人機」</color>的攻擊額外使所有友方怪盜的最終防禦力提升<color\=#fffc40>(\d+%)</color>，持續(\d+)回合$"="<color\=#FF0000>Firewall Booster-X3</color>: <color\=#fffc40>[Combat Drone]</color>'s attack additionally increase party's Final DEF by <color\=#fffc40>$1</color> for $2 turn"
+r:"^<color\=#FF0000>數據恢復-P1型</color>:<color\=#fffc40>「戰鬥無人機」</color>的攻擊額外使所有友方怪盜恢復<color\=#fffc40>(\d+%)</color>的生命值$"="<color\=#FF0000>Data Recovery-P1</color>: <color\=#fffc40>[Combat Drone]</color>'s attack additionally restore party's HP by <color\=#fffc40>$1</color>"
+r:"^<color\=#FF0000>記憶體拓展-L9型</color>:<color\=#fffc40>「戰鬥無人機」</color>的攻擊額外使所有友方怪盜恢復<color\=#fffc40>(\d+%)</color>的精力值$"="<color\=#FF0000>Memory Expansion-L9</color>: <color\=#fffc40>[Combat Drone]</color>'s attack additionally restore party's SP by <color\=#fffc40>$1</color>"
+r:"^<color\=#FF0000>漏洞駭入器-I0型</color>:<color\=#fffc40>「自爆機器人」</color>攻擊時有(\d+%)的固定機率為目標植入<color\=#fffc40>(\d+)</color>個被友方怪盜克制的弱點，持續(\d+)回合$"="<color\=#FF0000>Bughack-I0</color>: <color\=#fffc40>[Combat Drone]</color>'s attack have an $1 fixed chance to implant <color\=#fffc40>$2</color> Thief's Attribute as Weakness for $3 turns"
+r:"^<color\=#FF0000>破盾器-N1型</color>:<color\=#fffc40>「自爆機器人」</color>的攻擊額外使目標受到來自護盾保護下的怪盜的最終傷害提升<color\=#fffc40>(\d+%)</color>,持續(\d+)回合$"="<color\=#FF0000>Shieldbreak-N1</color>: <color\=#fffc40>[Self-Destruct Bot]</color>'s attack additionally increase target's Final DMG Taken from allies with Shield by <color\=#fffc40>$1</color> for $2 turns"
+r:"^<color\=#FF0000>破盾器-N1型</color>:<color\=#fffc40>「自爆機器人」</color>的攻擊額外使目標受到來自護盾保護下的怪盜的最終傷害提升<color\=#fffc40>(\d+%)</color>，持續(\d+)回合$"="<color\=#FF0000>Shieldbreak-N1</color>: <color\=#fffc40>[Self-Destruct Bot]</color>'s attack additionally increase target's Final DMG Taken from allies with Shield by <color\=#fffc40>$1</color> for $2 turns"
+r:"^<color\=#FF0000>元素轉換器-T0型</color>:<color\=#fffc40>「自爆機器人」</color>的攻擊額外使目標受到的基礎元素（火冰電風）傷害提升<color\=#fffc40>(\d+%)</color>持續(\d+)回合，每場戰鬥只能觸發1次$"="<color\=#FF0000>Elemental Combat-T0</color>: <color\=#fffc40>[Self-Destruct Bot]</color>'s attack additionally increase target's Fire Ice Elec Wind DMG Taken by <color\=#fffc40>$1</color> for $2 turns. Only activates once per battle"
+r:"^<color\=#FF0000>元素轉換器-T0型</color>:<color\=#fffc40>「自爆機器人」</color>的攻擊額外使目標受到的基礎元素（火冰電風）傷害提升<color\=#fffc40>(\d+%)</color>，持續(\d+)回合，每場戰鬥只能觸發1次$"="<color\=#FF0000>Elemental Combat-T0</color>: <color\=#fffc40>[Self-Destruct Bot]</color>'s attack additionally increase target's Fire Ice Elec Wind DMG Taken by <color\=#fffc40>$1</color> for $2 turns. Only activates once per battle"
+r:"^<color\=#FF0000>元素轉換器-E2型</color>:<color\=#fffc40>「自爆機器人」</color>的攻擊額外使目標受到的高級元素（念核祝咒）傷害提升<color\=#fffc40>(\d+%)</color>,持續(\d+)回合，每場戰鬥只能觸發1次$"="<color\=#FF0000>Elemental Combat-E2</color>: <color\=#fffc40>[Self-Destruct Bot]</color>'s attack additionally increase target's Psy Nuke Bless Curse DMG Taken by <color\=#fffc40>$1</color> for $2 turns. Only activates once per battle"
+r:"^<color\=#FF0000>元素轉換器-E2型</color>:<color\=#fffc40>「自爆機器人」</color>的攻擊額外使目標受到的高級元素（念核祝咒）傷害提升<color\=#fffc40>(\d+%)</color>，持續(\d+)回合，每場戰鬥只能觸發1次$"="<color\=#FF0000>Elemental Combat-E2</color>: <color\=#fffc40>[Self-Destruct Bot]</color>'s attack additionally increase target's Psy Nuke Bless Curse DMG Taken by <color\=#fffc40>$1</color> for $2 turns. Only activates once per battle"
+
+r:"^友方怪盜回合結束時，獲得(\d+)點「部署值」;「部署值」達到(\d+)時，自動消耗(\d+)點「部署值」派遣(\d+)台「自爆機器人」和(\d+)架「戰鬥無人機」（可根據攜帶情況增加數量）對敵方發動攻擊。$"="At the end of an ally's turn, gain $1 [Deployment Points]. When reaching $2, automatically spend $3 for $4 [Self-Destruct Bot] and $5 [Battle Drone] (the number can increase based on equipment) to attack foes."
+部署值=Deployment Points
+戰術晶片=Combat Chip
+節點突破=Node Breaker
+漏洞入侵=Vulnerability Cracking
+r:"^<color\=#FF0000>節點突破</color>:<color\=#fffc40>「戰術晶片」</color>，友方怪盜完成擊殺時，額外獲得<color\=#fffc40>(\d+)</color>點「部署值」；友方怪盜的最終傷害提升<color\=#fffc40>(\d+%)</color>。$"="<color\=#FF0000>Node Breaker</color>: <color\=#fffc40>[Combat Chip]</color>. When an ally defeats a foe, gain an additional <color\=#fffc40>$1</color> [Deployment Points]. Increase party's Final DMG by <color\=#fffc40>$2</color>."
+r:"^<color\=#FF0000>漏洞入侵</color>:<color\=#fffc40>「戰術晶片」</color>，友方怪盜造成弱點傷害時，額外獲得<color\=#fffc40>(\d+)</color>點「部署值」；友方怪盜造成弱點傷害提升<color\=#fffc40>(\d+\.\d+%)</color>。$"="<color\=#FF0000>Vulnerability Cracking</color>: <color\=#fffc40>[Combat Chip]</color>. When an ally deals Weakness damage, gain an additional <color\=#fffc40>$1</color> [Deployment Points]. Increase party's Weak DMG by <color\=#fffc40>$2</color>."
+
+{{A}}「異常」="Abnormal" {{A}}
+r:"^1、友方怪盜回合結束時，獲得(\d+)點<color\=#FF0000>「部署值」</color>。\n2、<color\=#FF0000>「部署值」</color>達到(\d+)點時，自動消耗(\d+)點<color\=#FF0000>「部署值」</color>派遣(\d+)台<color\=#FF0000>「自爆機器人」</color>和(\d+)架<color\=#FF0000>「戰鬥無人機」</color>（可根據攜帶情況增加數量）對敵方發動攻擊。\n3、每個<color\=#FF0000>「戰術晶片」</color>都有特定的額外效果。$"="At the end of an ally's turn, gain $1 <color\=#FF0000>[Deployment Points]</color>.\n2. When reaching $2 <color\=#FF0000>[Deployment Points]</color>, automatically spend $3 for $4 <color\=#FF0000>[Self-Destruct Bot]</color> and $5 <color\=#FF0000>[Battle Drone]</color> (the number can increase based on equipment) to attack foes.\n3. Each <color\=#FF0000>[Combat Chip]</color> has a specific special effect."
+r:"^<color\=#FF0000>「戰術晶片」</color>：\n1、友方怪盜回合結束時，獲得(\d+)點<color\=#FF0000>「部署值」</color>。\n2、<color\=#FF0000>「部署值」</color>達到(\d+)點時，自動消耗(\d+)點<color\=#FF0000>「部署值」</color>派遣(\d+)台<color\=#FF0000>「自爆機器人」</color>和(\d+)架<color\=#FF0000>「戰鬥無人機」</color>（可根據攜帶情況增加數量）對敵方發動攻擊。\n3、每個<color\=#FF0000>「戰術晶片」</color>都有特定的額外效果。\n<color\=#FF0000>「戰鬥無人機」</color>：\n1、每攜帶1架，<color\=#FF0000>「戰鬥無人機」</color>數量\+(\d+)，可驅散的<color\=#FF0000>「資料異常」</color>層數\+(\d+)。\n2、每架<color\=#FF0000>「戰鬥無人機」</color>都有特定的額外效果。\n<color\=#FF0000>「自爆機器人」</color>：\n1、每攜帶1台，<color\=#FF0000>「自爆機器人」</color>數量\+(\d+)，<color\=#FF0000>「自爆機器人」</color>造成的<color\=#FF0000>「萬能傷害」</color>提升(\d+%)。\n2、每台<color\=#FF0000>「自爆機器人」</color>都有特定的額外效果。$"="<color\=#FF0000>[Combat Chip]</color>:\n1. At the end of an ally's turn, gain $1 <color\=#FF0000>[Deployment Points]</color>. \n2. When reaching $2 <color\=#FF0000>[Deployment Points]</color>, automatically spend $3 for $4 <color\=#FF0000>[Self-Destruct Bot]</color> and $5 <color\=#FF0000>[Battle Drone]</color> (the number can increase based on equipment) to attack foes.\n3. Each <color\=#FF0000>[Combat Chip]</color> has a specific special effect.\n<color\=#FF0000>[Combat Drone]</color>:\nFor each Bot equipped, +$6 [Combat Drone] and +$7 removable <color\=#FF0000>[Data Abnormality]</color>.\n2. Each <color\=#FF0000>[Combat Drone]</color> has a specific special effect.\n<color\=#FF0000>[Self-Destruct Bot]</color>:\n1. For each Bot equipped, +$8 <color\=#FF0000>[Self-Destruct Bot]</color> and +$9 <color\=#FF0000>[Self-Destruct Bot] Almighty DMG</color>.\n2. Each <color\=#FF0000>[Self-Destruct Bot]</color> has a specific special effect."
+部署值：=Deployment Points:
+數據異常=Data Abnormality
+因數據異常無法被擊中且形態發生了變化，被驅散後可恢復原型=Due to data abnormality, it cannot be hit and its form has changed. Revert to its original form after has been dispelled
+r:"^受到基礎元素（火冰電風）傷害提升(\d+%)$"="Increase Fire Ice Elec Wind DMG Taken by $1"
+r:"^受到高級元素（念核祝咒）傷害提升(\d+%)$"="Increase Psy Nuke Bless Curse DMG Taken by $1"
+
+戰鬥無人機攻擊=Combat Drone Attack
+數據異常驅散=Data Abnormality Repair
+自爆機器人攻擊=Self-Destruct Bot Attack
+sr:"^<color\=#FF0000>(.*)</color>獲得(\d+)層數據異常$"="<color\=#FF0000>$1</color> gained $1 Data Abnormality"
+sr:"^<color\=#FF0000>(.*)</color>獲得了(\d+)個弱點$"="<color\=#FF0000>$1</color> gained $1 Weakness"
 
 P3R Collab
 新月篇=New Moon
@@ -6098,7 +6227,7 @@ r:"^在「星盤試煉」中通過任意(\d+)個監測點$"="Clear $1 Monitoring
 目標分數：=Target Score:
 歷史最高分數：=Highest Score:
 首次通關獎勵：=First Clear Rewards:
-通關前置關卡後解鎖=Unlock after clearing prerequisite level
+通關前置關卡後解鎖=Unlocks after clearing prerequisite level
 分數=Score
 請在合適的時機點擊螢幕，獲得分數吧=Tap the screen at the right time to score
 FEVER TIME!快速點擊螢幕獲得分數！=FEVER TIME! Quickly tap the screen to score!
@@ -6810,6 +6939,7 @@ sr:"^(.*)印記$"="$1's Seal"
 嗔恨的{{A}}=Resentful {{A}}
 深情的{{A}}=Affectionate {{A}}
 浪漫的{{A}}=Romantic {{A}}
+{{A}}的{{B}}={{A}}'s {{B}}
 
 ----------
 ACHIEVEMENTS + COSMETICS + EMOTES + KEY ITEMS
