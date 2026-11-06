@@ -3927,6 +3927,9 @@ r:"^完成(\d+)次委託派遣\(<color\=#e50a06>(\d+)</color>/(\d+)\)$"="Clear $
 r:"^完成(\d+)次往日回溯\(<color\=#e50a06>(\d+)</color>/(\d+)\)$"="Clear $1 Recollections (<color\=#e50a06>$2</color>/$3)"
 r:"^累計消耗(\d+)點體力\(<color\=#e50a06>(\d+)</color>/(\d+)\)$"="Use $1 Stamina (<color\=#e50a06>$2</color>/$3)"
 r:"^累計消耗(\d+)點行動力\(<color\=#e50a06>(\d+)</color>/(\d+)\)$"="Use $1 Action Points (<color\=#e50a06>$2</color>/$3)"
+r:"^在「大富豪」中完成(\d+)次任意模式的對決 \((\d+)/(\d+)\)$"="Finish $1 [Tycoon] games in any mode ($2/$3)"
+r:"^完成「{{A}}出品·棋棋追逐秀」第(\d+)關 \((\d+)/(\d+)\)$"="Clear [{{A}} Presents: PuzRobo] Level $1 ($2/$3)"
+r:"^完成「{{A}}出品·棋棋大作戰」第(\d+)關 \((\d+)/(\d+)\)$"="Clear [{{A}} Presents: BatoRobo] Level $1 ($2/$3)"
 
 Chatai Treasure Hunt
 完成任務，獲得更多貓罐頭=Clear missions to earn Cat Food
@@ -3942,88 +3945,9 @@ Chatai Treasure Hunt
 貓的報恩=Paw it Forward
 r:"^將玻璃球交還{{A}} (\d+)/(\d+)$"="Hand the marbles to {{A}} $1/$2"
 將玻璃球交還{{A}}=Hand the marbles to {{A}}
-經過不懈努力，收集齊了所有的玻璃珠，快去找{{A}}吧。\n也許能獲得不錯的報酬呢？=After working tirelessly, I've collected all the marbles. Let's go find {{A}} now, maybe I'll get a nice reward.
-
-Besa Robotic Challenge
-「{{B}}出品」是一檔{{A}}直播節目，挑戰者必須在規定的「行動次數」內解開舞臺上的謎題，完成闖關，最終獲得節目優勝。=Robotic Challenge now available! \nTake on the challenges to earn rewards!
-暫未到開放時間。=Not yet open.
-r:"^完成棋棋追逐秀第(\d+)關後解鎖。$"="Unlocks after clearing PuzRobo Level $1."
-
-國王達到目標點=Move the King to the goal
-r:"^拾取(\d+)枚金幣$"="Collect $1 gold coins"
-拾取所有金幣=Collect all gold coins
-r:"^(\d+)回合內到達目標點$"="Reach the goal within $1 turns"
-破壞所有暴走機器人=Destroy all Berserk Bots
-場上自爆機器人不能被破壞=No Self-Destruct Bots destroyed
-所有戰鬥無人機都不能被破壞=No Combat Drones destroyed
-
-r:"^拾取(\d+)枚金幣\（(\d+)/(\d+)\）$"="Collect $1 gold coins ($2/$3)"
-r:"^拾取所有金幣\（(\d+)/(\d+)\）$"="Collect all gold coins ($1/$2)"
-r:"^(\d+)回合內到達目標點\（(\d+)/(\d+)\）$"="Reach the goal within $1 turns ($2/$3)"
-r:"^破壞所有暴走機器人\（(\d+)/(\d+)\）$"="Destroy all Berserk Bots ($1/$2)"
-r:"^金幣\+(\d+)$"="Gold Coins +$1"
-當前位置沒有可互動的棋子。=There are no pieces you can move here.
-機器人無法移動到那個區域=The Bot cannot move to that area.
-r:"^下一枚要推動的棋子可以直接前進(\d+)格！$"="The next piece you move can move $1 spaces!"
-可行動數增加了，WONDER！=The number of moves has increased, Wonder!
-未能將國王推至目標點=Failed to move the King to the goal
-
-TIPS:攜帶棋棋大作戰中獲得的道具進入，可獲得特殊效果=TIPS: Equipping items granted from PuzRobo will grant you special effects
-通關當前選擇難度，即自動通關該難度以下的挑戰=Clear this difficulty to automatically clear lower difficulties
-r:"^通關前置關卡及棋棋追逐秀第(\d+)關後解鎖$"="Unlocks after clearing prerequisite level and PuzRobo Level $1"
-休閒·已通關=Easy Cleared
-普通·已通關=Normal Cleared
-困難·已通關=Hard Cleared
-描述=Description
-暫未獲得任何活動道具=No obtained event item
-自爆機器人=Self-Destruct Bot
-戰鬥無人機=Combat Drone
-r:"^每攜帶1台，「自爆機器人」數量\+(\d+)，「自爆機器人」造成的「萬能傷害」提升(\d+%)。$"="For each Bot equipped, +$1 [Self-Destruct Bot] and +$2 [Self-Destruct Bot] Almighty DMG."
-r:"^每攜帶1架，「戰鬥無人機」數量\+(\d+)，可驅散的「數據異常」層數\+(\d+)。$"="For each Bot equipped, +$1 [Combat Drone] and +$2 removable [Data Abnormality]."
-r:"^最多只能選擇(\d+)個棋子。$"="You can only select up to $1 pieces."
-
-電壓增強-E2型=Voltage Amp-E2
-防火牆強化-X3型=Firewall Booster-X3
-數據恢復-P1型=Data Recovery-P1
-記憶體拓展-L9型=Memory Expansion-L9
-漏洞駭入器-I0型=Bughack-I0
-破盾器-N1型=Shieldbreak-N1
-元素轉換器-T0型=Elemental Combat-T0
-元素轉換器-E2型=Elemental Combat-E2
-r:"^<color\=#FF0000>電壓增強-E2型</color>:<color\=#fffc40>「戰鬥無人機」</color>的攻擊額外使所有友方怪盜的最終攻擊力提升<color\=#fffc40>(\d+%)</color>，持續(\d+)回合$"="<color\=#FF0000>Voltage Amp-E2</color>: <color\=#fffc40>[Combat Drone]</color>'s attack additionally increase party's Final ATK by <color\=#fffc40>$1</color> for $2 turn"
-r:"^<color\=#FF0000>防火牆強化-X3型</color>:<color\=#fffc40>「戰鬥無人機」</color>的攻擊額外使所有友方怪盜的最終防禦力提升<color\=#fffc40>(\d+%)</color>，持續(\d+)回合$"="<color\=#FF0000>Firewall Booster-X3</color>: <color\=#fffc40>[Combat Drone]</color>'s attack additionally increase party's Final DEF by <color\=#fffc40>$1</color> for $2 turn"
-r:"^<color\=#FF0000>數據恢復-P1型</color>:<color\=#fffc40>「戰鬥無人機」</color>的攻擊額外使所有友方怪盜恢復<color\=#fffc40>(\d+%)</color>的生命值$"="<color\=#FF0000>Data Recovery-P1</color>: <color\=#fffc40>[Combat Drone]</color>'s attack additionally restore party's HP by <color\=#fffc40>$1</color>"
-r:"^<color\=#FF0000>記憶體拓展-L9型</color>:<color\=#fffc40>「戰鬥無人機」</color>的攻擊額外使所有友方怪盜恢復<color\=#fffc40>(\d+%)</color>的精力值$"="<color\=#FF0000>Memory Expansion-L9</color>: <color\=#fffc40>[Combat Drone]</color>'s attack additionally restore party's SP by <color\=#fffc40>$1</color>"
-r:"^<color\=#FF0000>漏洞駭入器-I0型</color>:<color\=#fffc40>「自爆機器人」</color>攻擊時有(\d+%)的固定機率為目標植入<color\=#fffc40>(\d+)</color>個被友方怪盜克制的弱點，持續(\d+)回合$"="<color\=#FF0000>Bughack-I0</color>: <color\=#fffc40>[Combat Drone]</color>'s attack have an $1 fixed chance to implant <color\=#fffc40>$2</color> Thief's Attribute as Weakness for $3 turns"
-r:"^<color\=#FF0000>破盾器-N1型</color>:<color\=#fffc40>「自爆機器人」</color>的攻擊額外使目標受到來自護盾保護下的怪盜的最終傷害提升<color\=#fffc40>(\d+%)</color>,持續(\d+)回合$"="<color\=#FF0000>Shieldbreak-N1</color>: <color\=#fffc40>[Self-Destruct Bot]</color>'s attack additionally increase target's Final DMG Taken from allies with Shield by <color\=#fffc40>$1</color> for $2 turns"
-r:"^<color\=#FF0000>破盾器-N1型</color>:<color\=#fffc40>「自爆機器人」</color>的攻擊額外使目標受到來自護盾保護下的怪盜的最終傷害提升<color\=#fffc40>(\d+%)</color>，持續(\d+)回合$"="<color\=#FF0000>Shieldbreak-N1</color>: <color\=#fffc40>[Self-Destruct Bot]</color>'s attack additionally increase target's Final DMG Taken from allies with Shield by <color\=#fffc40>$1</color> for $2 turns"
-r:"^<color\=#FF0000>元素轉換器-T0型</color>:<color\=#fffc40>「自爆機器人」</color>的攻擊額外使目標受到的基礎元素（火冰電風）傷害提升<color\=#fffc40>(\d+%)</color>持續(\d+)回合，每場戰鬥只能觸發1次$"="<color\=#FF0000>Elemental Combat-T0</color>: <color\=#fffc40>[Self-Destruct Bot]</color>'s attack additionally increase target's Fire Ice Elec Wind DMG Taken by <color\=#fffc40>$1</color> for $2 turns. Only activates once per battle"
-r:"^<color\=#FF0000>元素轉換器-T0型</color>:<color\=#fffc40>「自爆機器人」</color>的攻擊額外使目標受到的基礎元素（火冰電風）傷害提升<color\=#fffc40>(\d+%)</color>，持續(\d+)回合，每場戰鬥只能觸發1次$"="<color\=#FF0000>Elemental Combat-T0</color>: <color\=#fffc40>[Self-Destruct Bot]</color>'s attack additionally increase target's Fire Ice Elec Wind DMG Taken by <color\=#fffc40>$1</color> for $2 turns. Only activates once per battle"
-r:"^<color\=#FF0000>元素轉換器-E2型</color>:<color\=#fffc40>「自爆機器人」</color>的攻擊額外使目標受到的高級元素（念核祝咒）傷害提升<color\=#fffc40>(\d+%)</color>,持續(\d+)回合，每場戰鬥只能觸發1次$"="<color\=#FF0000>Elemental Combat-E2</color>: <color\=#fffc40>[Self-Destruct Bot]</color>'s attack additionally increase target's Psy Nuke Bless Curse DMG Taken by <color\=#fffc40>$1</color> for $2 turns. Only activates once per battle"
-r:"^<color\=#FF0000>元素轉換器-E2型</color>:<color\=#fffc40>「自爆機器人」</color>的攻擊額外使目標受到的高級元素（念核祝咒）傷害提升<color\=#fffc40>(\d+%)</color>，持續(\d+)回合，每場戰鬥只能觸發1次$"="<color\=#FF0000>Elemental Combat-E2</color>: <color\=#fffc40>[Self-Destruct Bot]</color>'s attack additionally increase target's Psy Nuke Bless Curse DMG Taken by <color\=#fffc40>$1</color> for $2 turns. Only activates once per battle"
-
-r:"^友方怪盜回合結束時，獲得(\d+)點「部署值」;「部署值」達到(\d+)時，自動消耗(\d+)點「部署值」派遣(\d+)台「自爆機器人」和(\d+)架「戰鬥無人機」（可根據攜帶情況增加數量）對敵方發動攻擊。$"="At the end of an ally's turn, gain $1 [Deployment Points]. When reaching $2, automatically spend $3 for $4 [Self-Destruct Bot] and $5 [Battle Drone] (the number can increase based on equipment) to attack foes."
-部署值=Deployment Points
-戰術晶片=Combat Chip
-節點突破=Node Breaker
-漏洞入侵=Vulnerability Cracking
-r:"^<color\=#FF0000>節點突破</color>:<color\=#fffc40>「戰術晶片」</color>，友方怪盜完成擊殺時，額外獲得<color\=#fffc40>(\d+)</color>點「部署值」；友方怪盜的最終傷害提升<color\=#fffc40>(\d+%)</color>。$"="<color\=#FF0000>Node Breaker</color>: <color\=#fffc40>[Combat Chip]</color>. When an ally defeats a foe, gain an additional <color\=#fffc40>$1</color> [Deployment Points]. Increase party's Final DMG by <color\=#fffc40>$2</color>."
-r:"^<color\=#FF0000>漏洞入侵</color>:<color\=#fffc40>「戰術晶片」</color>，友方怪盜造成弱點傷害時，額外獲得<color\=#fffc40>(\d+)</color>點「部署值」；友方怪盜造成弱點傷害提升<color\=#fffc40>(\d+\.\d+%)</color>。$"="<color\=#FF0000>Vulnerability Cracking</color>: <color\=#fffc40>[Combat Chip]</color>. When an ally deals Weakness damage, gain an additional <color\=#fffc40>$1</color> [Deployment Points]. Increase party's Weak DMG by <color\=#fffc40>$2</color>."
-
-{{A}}「異常」="Abnormal" {{A}}
-r:"^1、友方怪盜回合結束時，獲得(\d+)點<color\=#FF0000>「部署值」</color>。\n2、<color\=#FF0000>「部署值」</color>達到(\d+)點時，自動消耗(\d+)點<color\=#FF0000>「部署值」</color>派遣(\d+)台<color\=#FF0000>「自爆機器人」</color>和(\d+)架<color\=#FF0000>「戰鬥無人機」</color>（可根據攜帶情況增加數量）對敵方發動攻擊。\n3、每個<color\=#FF0000>「戰術晶片」</color>都有特定的額外效果。$"="At the end of an ally's turn, gain $1 <color\=#FF0000>[Deployment Points]</color>.\n2. When reaching $2 <color\=#FF0000>[Deployment Points]</color>, automatically spend $3 for $4 <color\=#FF0000>[Self-Destruct Bot]</color> and $5 <color\=#FF0000>[Battle Drone]</color> (the number can increase based on equipment) to attack foes.\n3. Each <color\=#FF0000>[Combat Chip]</color> has a specific special effect."
-r:"^<color\=#FF0000>「戰術晶片」</color>：\n1、友方怪盜回合結束時，獲得(\d+)點<color\=#FF0000>「部署值」</color>。\n2、<color\=#FF0000>「部署值」</color>達到(\d+)點時，自動消耗(\d+)點<color\=#FF0000>「部署值」</color>派遣(\d+)台<color\=#FF0000>「自爆機器人」</color>和(\d+)架<color\=#FF0000>「戰鬥無人機」</color>（可根據攜帶情況增加數量）對敵方發動攻擊。\n3、每個<color\=#FF0000>「戰術晶片」</color>都有特定的額外效果。\n<color\=#FF0000>「戰鬥無人機」</color>：\n1、每攜帶1架，<color\=#FF0000>「戰鬥無人機」</color>數量\+(\d+)，可驅散的<color\=#FF0000>「資料異常」</color>層數\+(\d+)。\n2、每架<color\=#FF0000>「戰鬥無人機」</color>都有特定的額外效果。\n<color\=#FF0000>「自爆機器人」</color>：\n1、每攜帶1台，<color\=#FF0000>「自爆機器人」</color>數量\+(\d+)，<color\=#FF0000>「自爆機器人」</color>造成的<color\=#FF0000>「萬能傷害」</color>提升(\d+%)。\n2、每台<color\=#FF0000>「自爆機器人」</color>都有特定的額外效果。$"="<color\=#FF0000>[Combat Chip]</color>:\n1. At the end of an ally's turn, gain $1 <color\=#FF0000>[Deployment Points]</color>. \n2. When reaching $2 <color\=#FF0000>[Deployment Points]</color>, automatically spend $3 for $4 <color\=#FF0000>[Self-Destruct Bot]</color> and $5 <color\=#FF0000>[Battle Drone]</color> (the number can increase based on equipment) to attack foes.\n3. Each <color\=#FF0000>[Combat Chip]</color> has a specific special effect.\n<color\=#FF0000>[Combat Drone]</color>:\nFor each Bot equipped, +$6 [Combat Drone] and +$7 removable <color\=#FF0000>[Data Abnormality]</color>.\n2. Each <color\=#FF0000>[Combat Drone]</color> has a specific special effect.\n<color\=#FF0000>[Self-Destruct Bot]</color>:\n1. For each Bot equipped, +$8 <color\=#FF0000>[Self-Destruct Bot]</color> and +$9 <color\=#FF0000>[Self-Destruct Bot] Almighty DMG</color>.\n2. Each <color\=#FF0000>[Self-Destruct Bot]</color> has a specific special effect."
-部署值：=Deployment Points:
-數據異常=Data Abnormality
-因數據異常無法被擊中且形態發生了變化，被驅散後可恢復原型=Due to data abnormality, it cannot be hit and its form has changed. Revert to its original form after has been dispelled
-r:"^受到基礎元素（火冰電風）傷害提升(\d+%)$"="Increase Fire Ice Elec Wind DMG Taken by $1"
-r:"^受到高級元素（念核祝咒）傷害提升(\d+%)$"="Increase Psy Nuke Bless Curse DMG Taken by $1"
-
-戰鬥無人機攻擊=Combat Drone Attack
-數據異常驅散=Data Abnormality Repair
-自爆機器人攻擊=Self-Destruct Bot Attack
-sr:"^<color\=#FF0000>(.*)</color>獲得(\d+)層數據異常$"="<color\=#FF0000>$1</color> gained $1 Data Abnormality"
-sr:"^<color\=#FF0000>(.*)</color>獲得了(\d+)個弱點$"="<color\=#FF0000>$1</color> gained $1 Weakness"
+經過不懈努力，收集齊了所有的玻璃珠，快去找{{A}}吧。\n也許能獲得不錯的報酬呢？=After much work, I finally collected all the marbles. Now I need to find {{A}}. I might be in for a nice reward...
+sr:"^即將提交道具\[(.*)\*(\d+)\]，是否繼續？$"="Do you want to give [$1*$2]?"
+回家看看=Go home
 
 P3R Collab
 新月篇=New Moon
@@ -6079,12 +6003,12 @@ r:"^一心青魂:使所有同伴攻擊力提升，獲得(\d+)點倒地值，並�
 r:"^挑戰難度：LV.(\d+)$"="Challenge Difficulty: LV.$1"
 一心青魂=Blue Soul of Unity
 必勝赤魂=Red Soul of Victory
-r:"^{{B}}會在特定時機召喚其他敵人，為所有同伴添加一定倒地值，並釋放「比賽開始」：展開一個特殊的計分板，期間記錄所有單位對對手造成的倒地值傷害作為比分，下回合開始時結算雙方比分：\n我方比分>敵方比分的2倍：所有角色{{A}}大幅提升，恢復(\d+)點隨機「應援能量」；\n我方比分>敵方比分：所有角色{{A}}提升；\n我方比分<敵方比分：所有敵人{{A}}提升，{{B}}釋放「山崩地裂」：造成巨額傷害，額外造成高額倒地值傷害。$"="{{B}} will summon other Shadows to increase all allies' Down Points, then use [Game Start]: Set up a score board, record all Down Points damage dealt as score, calculate the score at the start of next turn:\nAllies Score > 2x Foes Score: Heavily increase all characters' {{A}} and restore $1 [Support Energy];\nAllies Score > Foes Score: Increase all characters' {{A}};\nAllies Score < Foes Score: Increase all foes' {{A}}, then {{B}} use [Shattered Earth]: Deal colossal damage, additonally deal severe Down Points damage."
-r:"^{{B}}會在特定時機召喚其他敵人，為所有同伴添加一定倒地值，並釋放「比賽開始」：展開一個特殊的計分板，期間記錄所有單位對對手造成的倒地值傷害作為比分，下回合開始時結算雙方比分：\n我方比分>敵方比分的2倍：所有角色{{A}}大幅提升；\n我方比分>敵方比分：所有角色{{A}}提升；\n我方比分<敵方比分：所有敵人{{A}}提升，{{B}}釋放「山崩地裂」：造成巨額傷害，額外造成高額倒地值傷害。$"="{{B}} will summon other Shadows to increase all allies' Down Points, then use [Game Start]: Set up a score board, record all Down Points damage dealt as score, calculate the score at the start of next turn:\nAllies Score > 2x Foes Score: Heavily increase all characters' {{A}};\nAllies Score > Foes Score: Increase all characters' {{A}};\nAllies Score < Foes Score: Increase all foes' {{A}}, then {{B}} use [Shattered Earth]: Deal colossal damage, additonally deal severe Down Points damage."
+r:"^{{B}}會在特定時機召喚其他敵人，為所有同伴添加一定倒地值，並釋放「比賽開始」：展開一個特殊的計分板，期間記錄所有單位對對手造成的倒地值傷害作為比分，下回合開始時結算雙方比分：\n我方比分>敵方比分的2倍：所有角色{{A}}大幅提升，恢復(\d+)點隨機「應援能量」；\n我方比分>敵方比分：所有角色{{A}}提升；\n我方比分<敵方比分：所有敵人{{A}}提升，{{B}}釋放「山崩地裂」：造成巨額傷害，額外造成高額倒地值傷害。$"="{{B}} will summon other Shadows to increase all allies' Down Points, then use [Game Start]: Set up a score board, record all Down Points damage dealt as score, calculate the score at the start of next turn:\nAllies Score > 2x Foes Score: Heavily increase all characters' {{A}} and restore $1 [Support Energy];\nAllies Score > Foes Score: Increase all characters' {{A}};\nAllies Score < Foes Score: Increase all foes' {{A}}, then {{B}} use [Shattered Earth]: Deal colossal damage, additionally deal severe Down Points damage."
+r:"^{{B}}會在特定時機召喚其他敵人，為所有同伴添加一定倒地值，並釋放「比賽開始」：展開一個特殊的計分板，期間記錄所有單位對對手造成的倒地值傷害作為比分，下回合開始時結算雙方比分：\n我方比分>敵方比分的2倍：所有角色{{A}}大幅提升；\n我方比分>敵方比分：所有角色{{A}}提升；\n我方比分<敵方比分：所有敵人{{A}}提升，{{B}}釋放「山崩地裂」：造成巨額傷害，額外造成高額倒地值傷害。$"="{{B}} will summon other Shadows to increase all allies' Down Points, then use [Game Start]: Set up a score board, record all Down Points damage dealt as score, calculate the score at the start of next turn:\nAllies Score > 2x Foes Score: Heavily increase all characters' {{A}};\nAllies Score > Foes Score: Increase all characters' {{A}};\nAllies Score < Foes Score: Increase all foes' {{A}}, then {{B}} use [Shattered Earth]: Deal colossal damage, additionally deal severe Down Points damage."
 r:"^{{A}}同時擁有四大天王的能力：\n「持劍護國土」：造成傷害時，使所有敵人獲得倒地值；\n「眾生均增長」：所有敵人每回合從攻擊增長、防禦增長、傷害增長中隨機獲得一種；\n「天眼觀世間」：標記一名角色，使其對所有屬性的適應性變為弱，下回合將受到所有敵人的集火；\n「混元珍珠傘」：對血量百分比最低的敵人撐開混元珍珠傘，使其免疫倒地，持續(\d+)回合。$"="{{A}} has the abilities of all 4 Kings:\n[Country Protection]: When dealing damage, all foes gain Down Points;\n[Sentient Growth]: All foes gain one of the following buff randomly each turn: ATK Growth, DEF Growth, DMG Growth;\n[Heavenly Eyes]: Mark 1 character, change all their affinites to Weak, all foes will attack them next turn;\n[Pearl Umbrella]: Open the Pearl Umbrella for the lowest HP% foe, grant them Null Down for $1 turn."
 戰鬥機制介紹=Mechanics
 r:"^1、敵我雙方的倒地狀態持續時間延長至(\d+)回合，處於非倒地狀態時，所有敵人受最終傷害降低，處於倒地狀態時，所有敵人受最終傷害提升；\n2、所有角色初始擁有(\d+)點倒地值，倒地後會將倒地值恢復至(\d+)點；\n3、所有敵人釋放技能造成傷害後，額外對目標造成(\d+)點倒地值傷害。$"="1. Extend Downed duration to $1 turns, when not Downed, decrease foes' Final DMG Taken, when Downed, increase foes' Final DMG Taken;\n2. All characters start with $2 Down Points, restore to $3 Down Points after recovering from Down;\n3. After foes deal damage with a skill, additionally deal $4 Down Points damage to the target."
-r:"^1、敵我雙方的倒地狀態持續時間延長至(\d+)回合，處於非倒地狀態時，所有敵人受最終傷害降低，處於倒地狀態時，所有敵人受最終傷害提升；\n2、所有角色初始擁有(\d+)點倒地值，倒地後會將倒地值恢復至(\d+)點；\n3、所有敵人釋放技能造成傷害後，額外對目標造成(\d+)點倒地值傷害；\n4、{{C}}會在特定時機召喚其他敵人，為所有同伴添加一定倒地值，並釋放「比賽開始」：展開一個特殊的計分板，期間記錄所有單位對對手造成的倒地值傷害作為比分，下回合開始時結算雙方比分：\n我方比分>敵方比分的2倍：所有角色{{A}}大幅提升，恢復(\d+)點隨機「應援能量」；\n我方比分>敵方比分：所有角色{{A}}提升；\n我方比分<敵方比分：所有敵人{{A}}提升，{{C}}釋放「山崩地裂」：造成巨額傷害，額外造成高額倒地值傷害；\n5、{{B}}同時擁有四大天王的能力：\n「持劍護國土」：造成傷害時，使所有敵人獲得倒地值；\n「眾生均增長」：所有敵人每回合從攻擊增長、防禦增長、傷害增長中隨機獲得一種；\n「天眼觀世間」：標記一名角色，使其對所有屬性的適應性變為弱，下回合將受到所有敵人的集火；\n「混元珍珠傘」：對血量百分比最低的敵人撐開混元珍珠傘，使其免疫倒地，持續(\d+)回合。$"="1. Extend Downed duration to $1 turns, when not Downed, decrease foes' Final DMG Taken, when Downed, increase foes' Final DMG Taken;\n2. All characters start with $2 Down Points, restore to $3 Down Points after recovering from Down;\n3. After foes deal damage with a skill, additionally deal $4 Down Points damage to the target;\n4. {{C}} will summon other Shadows to increase all allies' Down Points, then use [Game Start]: Set up a score board, record all Down Points damage dealt as score, calculate the score at the start of next turn:\nAllies Score > 2x Foes Score: Heavily increase all characters' {{A}} and restore $5 [Support Energy];\nAllies Score > Foes Score: Increase all characters' {{A}};\nAllies Score < Foes Score: Increase all foes' {{A}}, then {{C}} use [Shattered Earth]: Deal colossal damage, additonally deal severe Down Points damage;\n5. {{B}} has the abilities of all 4 Kings:\n[Country Protection]: When dealing damage, all foes gain Down Points;\n[Sentient Growth]: All foes gain one of the following buff randomly each turn: ATK Growth, DEF Growth, DMG Growth;\n[Heavenly Eyes]: Mark 1 character, change all their affinites to Weak, all foes will attack them next turn;\n[Pearl Umbrella]: Open the Pearl Umbrella for the lowest HP% foe, grant them Null Down for $6 turn."
+r:"^1、敵我雙方的倒地狀態持續時間延長至(\d+)回合，處於非倒地狀態時，所有敵人受最終傷害降低，處於倒地狀態時，所有敵人受最終傷害提升；\n2、所有角色初始擁有(\d+)點倒地值，倒地後會將倒地值恢復至(\d+)點；\n3、所有敵人釋放技能造成傷害後，額外對目標造成(\d+)點倒地值傷害；\n4、{{C}}會在特定時機召喚其他敵人，為所有同伴添加一定倒地值，並釋放「比賽開始」：展開一個特殊的計分板，期間記錄所有單位對對手造成的倒地值傷害作為比分，下回合開始時結算雙方比分：\n我方比分>敵方比分的2倍：所有角色{{A}}大幅提升，恢復(\d+)點隨機「應援能量」；\n我方比分>敵方比分：所有角色{{A}}提升；\n我方比分<敵方比分：所有敵人{{A}}提升，{{C}}釋放「山崩地裂」：造成巨額傷害，額外造成高額倒地值傷害；\n5、{{B}}同時擁有四大天王的能力：\n「持劍護國土」：造成傷害時，使所有敵人獲得倒地值；\n「眾生均增長」：所有敵人每回合從攻擊增長、防禦增長、傷害增長中隨機獲得一種；\n「天眼觀世間」：標記一名角色，使其對所有屬性的適應性變為弱，下回合將受到所有敵人的集火；\n「混元珍珠傘」：對血量百分比最低的敵人撐開混元珍珠傘，使其免疫倒地，持續(\d+)回合。$"="1. Extend Downed duration to $1 turns, when not Downed, decrease foes' Final DMG Taken, when Downed, increase foes' Final DMG Taken;\n2. All characters start with $2 Down Points, restore to $3 Down Points after recovering from Down;\n3. After foes deal damage with a skill, additionally deal $4 Down Points damage to the target;\n4. {{C}} will summon other Shadows to increase all allies' Down Points, then use [Game Start]: Set up a score board, record all Down Points damage dealt as score, calculate the score at the start of next turn:\nAllies Score > 2x Foes Score: Heavily increase all characters' {{A}} and restore $5 [Support Energy];\nAllies Score > Foes Score: Increase all characters' {{A}};\nAllies Score < Foes Score: Increase all foes' {{A}}, then {{C}} use [Shattered Earth]: Deal colossal damage, additionally deal severe Down Points damage;\n5. {{B}} has the abilities of all 4 Kings:\n[Country Protection]: When dealing damage, all foes gain Down Points;\n[Sentient Growth]: All foes gain one of the following buff randomly each turn: ATK Growth, DEF Growth, DMG Growth;\n[Heavenly Eyes]: Mark 1 character, change all their affinites to Weak, all foes will attack them next turn;\n[Pearl Umbrella]: Open the Pearl Umbrella for the lowest HP% foe, grant them Null Down for $6 turn."
 應援能量·藍Ⅰ=Support Energy·Blue I
 應援能量·藍Ⅱ-=Support Energy·Blue II
 應援能量·藍Ⅲ=Support Energy·Blue III
@@ -6101,7 +6025,7 @@ r:"^處於倒地狀態，受最終傷害提升(\d+%)$"="When knocked down, \ninc
 比賽開始！=Game Start!
 開啟比賽，一回合後根據敵我雙方造成的總倒地值傷害進行比分，怪盜方積分高則獲得獎勵，積分低則受到懲罰。=Start the game. After 1 turn, the side with the higher Down Points damage dealt wins. Thieves are rewarded for victory and punished for defeat.
 山崩地裂=Shattered Earth
-對所有敵人造成巨額物理屬性傷害，額外造成大量倒地值傷害。=Deal colossal Phys damage to all foes, additonally deal severe Down Points damage.
+對所有敵人造成巨額物理屬性傷害，額外造成大量倒地值傷害。=Deal colossal Phys damage to all foes, additionally deal severe Down Points damage.
 r:"^對所有敵人造成大量火焰屬性傷害，有一定基礎機率使敵人陷入<link\="s\|102"><u>燃燒</u></link>狀態，效果持續(\d+)回合。$"="Deal heavy Fire damage to all foes, with a chance to inflict <link\="s|102"><u>Burn</u></link> for $1 turns."
 對所有敵人造成大量核熱屬性傷害，對處於<link\="s|101"><u>元素異常</u></link>狀態的敵人造成<link\="s|211"><u>TECHNICAL</u></link>，技能傷害提升。=Deal heavy Nuke damage to all foes, deal a <link\="s|211"><u>TECHNICAL</u></link> and increase skill damage for foes with an <link\="s|101"><u>Elemental Ailment</u></link>.
 對所有敵人造成特大核熱屬性傷害，對處於<link\="s|101"><u>元素異常</u></link>狀態的敵人造成<link\="s|211"><u>TECHNICAL</u></link>，技能傷害提升。=Deal severe Nuke damage to all foes, deal a <link\="s|211"><u>TECHNICAL</u></link> and increase skill damage for foes with an <link\="s|101"><u>Elemental Ailment</u></link>.
@@ -6765,7 +6689,7 @@ r:"^特性提升$"="<size\=25>Upgrade to</size>"
 命中=ACC
 抵抗=RES
 r:"^妨害$"="<size\=27>Boost</size>"
-特殊=Spec.
+特殊=Special
 r:"^/定位$"="<size\=24>/Type</size>"
 r:"^/屬性$"="      <size\=24>/Element</size>"
 添加印記可能獲得對應技能=Select a seal
@@ -7162,7 +7086,6 @@ r:"^已收藏表情(\d+)/(\d+)$"="Favorite Emote $1/$2"
 教教我嘛=Teach me
 感謝=Thanks
 不賴嘛=Not bad
-目標鎖定=Target lock
 不祥預感=Ominous premonition
 勝負已定=It's over
 不看看嗎=Look
