@@ -323,6 +323,9 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的物理�
 Hassou Tobi
 r:"^對<color\=#FFFF00>所有</color>敵人造成8次(\d+\.\d+%)攻擊力的物理屬性傷害，技能傷害隨敵人數量提升。$"="Deal $1 ATK Phys damage to <color\=#FFFF00>all</color> foes 8 times, increase skill damage based on the number of foes."
 
+Divine Providence
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+)次(\d+\.\d+%)攻擊力的物理屬性傷害。根據同伴累計消耗「豐禱之賜」的層數，提高本次技能的傷害，每層提高(\d+\.\d+%)，上限(\d+\.\d+%)。\n使目標陷入「枯兆」狀態：下次受到帶有「豐穰之賜」的怪盜攻擊後，{{A}}進行追加攻擊，傷害值為本次怪盜的攻擊傷害的(\d+%)。$"="Deal Phys damage to <color\=#FFFF00>1</color> foe equal to $2 of ATK ($1 hits). Increase this skill's damage by $3 based on spent [Gift of Abundance] stacks (up to $4).\nInflict [Blight Omen]: After the next attack from a Thief with [Gift of Abundance], {{A}} will deal damage equal to $5 of that Thief's attack damage."
+
 --- Gun ---
 
 Snap
@@ -674,6 +677,13 @@ Deconstruction Force Field
 r:"^使<color\=#FFFF00>1名</color>敵人受到傷害提升(\d+\.\d+%)，受到暴擊效果提升(\d+\.\d+%)，持續(\d+)回合。$"="Increase <color\=#FFFF00>1</color> foes' DMG Taken by $1 and Crit DMG Taken by $2. Lasts for $3 turns."
 r:"^解<color\=#000000>構</color>力場$"="D<color\=#000000>e</color>construction Field"
 
+Painted Cage
+r:"^使<color\=#FFFF00>1名</color>敵人受到攻擊時該次攻擊力提升(\d+\.\d+%)，受到弱點傷害時狀態轉變為『咒繪』，受非弱點傷害時轉變為『影囚』，持續(\d+)回合。\n『咒繪』：受總傷害增幅提升(\d+\.\d+%)，受弱點屬性的暴擊效果提升(\d+\.\d+%)\n『影囚』：攻擊力降低(\d+\.\d+%)，受暴擊效果提升(\d+\.\d+%)$"="Increase <color\=#FFFF00>1</color> foe's ATK Taken by $1. When taking Weakness damage, change the state to [Cursed Paint]; when taking non-Weakness damage, change the state to [Shadow Cage]. Lasts for $2 turns.\n[Cursed Paint]: Increase Total DMG Taken Amp by $3. When taking Weakness damage, increase Crit DMG Taken by $4.\n[Shadow Cage]: Decrease ATK by $5 and increase Crit DMG Taken by $6."
+咒繪=Cursed Paint
+r:"^咒<color\=#000000>繪</color>$"="C<color\=#000000>u</color>rsed Paint"
+影囚=Shadow Cage
+r:"^影<color\=#000000>囚</color>$"="S<color\=#000000>h</color>adow Cage"
+
 --- Dispel ---
 驅散<color\=#FFFF00>所有</color>同伴的1個屬性降低效果。=Negates 1 stat reducing effect for <color\=#FFFF00>all</color> allies.
 驅散<color\=#FFFF00>所有</color>敵人的1個屬性提升效果。=Negates 1 stat increasing effect for <color\=#FFFF00>all</color> foes.
@@ -724,6 +734,9 @@ r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的詛咒�
 r:"^對<color\=#FFFF00>所有</color>敵人造成(\d+\.\d+%)攻擊力的萬能屬性傷害，並使其受到的傷害提升(\d+\.\d+%)，效果持續(\d+)回合。$"="Deal $1 ATK Almighty damage to <color\=#FFFF00>all</color> foes and increase their DMG Taken by $2 for $3 turns."
 
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的冰凍屬性傷害，自身獲得「告諭」。\n「告諭」：自身透過{{B}}釋放{{A}}技能時，消耗「告諭」額外使所有同伴攻擊力提升(\d+\.\d+%)、傷害提升(\d+\.\d+%)，持續(\d+)回合。$"="Deal Ice damage to <color\=#FFFF00>1</color> foe equal to $1 of ATK. User gains [Divine Oracle].\n[Divine Oracle]: When using a {{A}} skill with {{B}}, spend [Divine Oracle] to increase all allies' ATK by <color\=#fffc40>$2</color> and DMG Bonus by <color\=#fffc40>$3</color>. Lasts for $4 turns."
+
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的疾風屬性傷害，使其受到暴擊效果提升(\d+\.\d+%)，持續(\d+)回合，並為攻擊力最高的反抗/自律同伴添加(\d+)層「豐穰之賜」$"="Deal Wind damage to <color\=#FFFF00>1</color> foe equal to $1 of ATK. Increase their Crit DMG Taken by $2 for $3 turns. Grant the Assassin/Virtuoso ally with the highest ATK $4 [Gift of Abundance] stacks."
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的疾風屬性傷害，使其受到暴擊效果提升(\d+\.\d+%)，持續(\d+)回合，並為攻擊力最高的反抗/自律同伴添加(\d+)層「豐穰之賜」。$"="Deal Wind damage to <color\=#FFFF00>1</color> foe equal to $1 of ATK. Increase their Crit DMG Taken by $2 for $3 turns. Grant the Assassin/Virtuoso ally with the highest ATK $4 [Gift of Abundance] stacks."
 
 r:"^使<color\=#FFFF00>所有</color>同伴攻擊力提升(\d+\.\d+%)，暴擊效果提升(\d+\.\d+%)，持續(\d+)回合。$"="Increase <color\=#FFFF00>all</color> allies' ATK by $1 and Crit DMG by $2. Lasts for $3 turns."
 
