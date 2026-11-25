@@ -2578,55 +2578,54 @@ r:"^<link\="s\|196"><u>『流血』</u></link>的可疊加上限提升至(\d+)�
 ----------
 Oracle - Futaba Sakura
 ----------
-友方怪盜使用{{A}}技能後獲得『解析進度』，造成弱點傷害後額外獲得『解析進度』。『駭入完成』狀態下我方傷害提升。=<size\=25>Allies gain [Analysis Progress] after using Persona skills, gain additional [Analysis Progress] after dealing Weak damage. Increase all allies' damage under [Hack Complete].</size>
-無聲侵襲=Silent Hacking
+友方怪盜使用{{A}}技能後獲得『解析進度』，造成弱點傷害後額外獲得『解析進度』。『駭入完成』狀態下我方傷害提升。=After an ally uses a Persona skill, Futaba gains [Analysis Progress]. After dealing Weakness damage, gain additional [Analysis Progress]. When [Hack Complete] is active, increase all allies' DMG Bonus.
+無聲侵襲=Silent Intrusion
 數據破解=Data Crack
 以不死鳥的名義=<size\=23>In the Name of Featherman</size>
 玩心=Playfulness
 善後=Clean Up
+超頻=Overclock
+天網=Sky Net
 
-r:"^無聲侵襲 Lv.(\d+)$"="Silent Hacking Lv.$1"
-r:"^無聲侵襲 <color\=#0F69CB>Lv.(\d+)</color>$"="Silent Hacking <color\=#0F69CB>Lv.$1</color>"
-r:"^使所有敵人防禦力降低(\d+%)\+\({{A}}每有(\d+)點攻擊力額外使防禦力降低(\d+\.\d+%)，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\)，持續(\d+)回合。效果持續期間，敵人受到弱點傷害時，使上述減防效果翻倍。若自身解析進度為100%，給予我方全體『駭入完成』，持續(\d+)回合。\n<b><size\=28><color\=#850101>螢幕中心出現異樣的扭曲，虛擬空間的界限被撕裂，形態詭異的巨物裸露著利齒兇狠地撲向敵人，使其降低防禦。</color></size></b>$"="Decrease all foes' DEF by $1 + (An additional $3 for every $2 ATK, up to <color\=#FFFC40>$4</color> ATK) for $5 turns. During this duration, double this debuff when foes take Weak damage. Give all allies [Hack Complete] for $6 turns if Futaba is at 100% Analysis Progress.\n<b><size\=28><color\=#850101>A strange distortion appears in the center of the screen, the boundaries of virtual space are torn apart, and a gigantic creature with strange shapes and exposed teeth viciously pounces on the foe, lowering its defense.</color></size></b>"
+r:"^使所有敵人防禦力降低(\d+%)\+\({{A}}每有(\d+)點攻擊力額外使防禦力降低(\d+\.\d+%)，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\)，持續(\d+)回合。效果持續期間，敵人受到弱點傷害時，使上述減防效果翻倍。若自身解析進度為100%，給予我方全體『駭入完成』，持續(\d+)回合。\n<b><size\=28><color\=#850101>螢幕中心出現異樣的扭曲，虛擬空間的界限被撕裂，形態詭異的巨物裸露著利齒兇狠地撲向敵人，使其降低防禦。</color></size></b>$"="Decrease all foes' DEF by $1. For every $2 of Futaba's ATK, additionally decrease DEF by $3 (up to <color\=#FFFC40>$4</color> ATK). Lasts for $5 turns. When this is active, when foes take Weakness damage, double this DEF Down debuff. If Futaba's Analysis Progress is at 100%, grant all allies [Hack Complete] for $6 turns.\n<b><size\=28><color\=#850101>A strange distortion appears at the center of the screen, a grotesque and colossal entity tears through the boundaries of the virtual space and pounces the foes, decreasing their Defense.</color></size></b>"
 
-r:"^數據破解 Lv.(\d+)$"="Data Crack Lv.$1"
-r:"^數據破解 <color\=#0F69CB>Lv.(\d+)</color>$"="Data Crack <color\=#0F69CB>Lv.$1</color>"
-r:"^使1名敵人受到傷害增加(\d+%)\+\({{A}}每有(\d+)點攻擊力額外使目標受到傷害增加(\d+\.\d+%)，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力），持續(\d+)回合。效果持續期間，友方怪盜使用{{B}}技能/追加效果/HIGHLIGHT/{{C}}對目標造成傷害後，{{A}}獲得(\d+%)解析進度。若自身解析進度為100%，給予我方全體『駭入完成』，持續(\d+)回合。\n<b><size\=28><color\=#850101>指尖在螢幕上輕跳，資料資訊崩塌成無數的光點消散於虛無之中，一次完美的駭入已然結束。</color></size></b>$"="Increase 1 foe's DMG Taken by $1 + (An additional $3 for every $2 ATK, up to <color\=#FFFC40>$4</color>) for $5 turns. During this duration, Futaba gains $6 Analysis Progress after allies deal damage with Persona skill/Follow Up/HIGHLIGHT/{{C}}. Give all allies [Hack Complete] for $7 turns if Futaba is at 100% Analysis Progress.\n<b><size\=28><color\=#850101>With a flick of the fingertip on the screen, the data information collapsed into countless points of light and dissipated into nothingness, and a perfect hack was over.</color></size></b>"
+r:"^使1名敵人受到傷害增加(\d+%)\+\({{A}}每有(\d+)點攻擊力額外使目標受到傷害增加(\d+\.\d+%)，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力），持續(\d+)回合。效果持續期間，友方怪盜使用{{B}}技能/追加效果/HIGHLIGHT/{{C}}對目標造成傷害後，{{A}}獲得(\d+%)解析進度。若自身解析進度為100%，給予我方全體『駭入完成』，持續(\d+)回合。\n<b><size\=28><color\=#850101>指尖在螢幕上輕跳，資料資訊崩塌成無數的光點消散於虛無之中，一次完美的駭入已然結束。</color></size></b>$"="Increase 1 foe's DMG Taken by $1. For every $2 of Futaba's ATK, additionally increase DMG Taken by $3 (up to <color\=#FFFC40>$4</color> ATK). Lasts for $5 turns. When this is active, after an ally deals damage with a {{B}} skill/Follow Up/HIGHLIGHT/{{C}}, Futaba gains $6 Analysis Progress. If Futaba's Analysis Progress is at 100%, grant all allies [Hack Complete] for $7 turns.\n<b><size\=28><color\=#850101>With a flick of the fingertip on the screen, the data information collapsed into countless points of light and dissipated into nothingness, a perfect hack was over.</color></size></b>"
 
 r:"^以不死鳥的名義 Lv.(\d+)$"="In the Name of Featherman Lv.$1</size>"
 r:"^以不死鳥的名義 <color\=#0F69CB>Lv.(\d+)</color>$"="In the Name of Featherman <color\=#0F69CB>Lv.$1</color></size>"
-r:"^解鎖條件：我方角色擁有『駭入完成』\n使1名友方怪盜的攻擊力提升<color\=#FFFC40>(\d+)</color>\+\({{A}}每有(\d+)點攻擊力，額外提升其(\d+\.\d+)攻擊力，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\)，持續(\d+)回合。為全體敵人添加上該名怪盜適應性的『擾亂病毒』，持續(\d+)回合。『擾亂病毒』：使目標對應屬性的<link\="s\|286"><u>『適應性降級』</u></link>：若為無效、反彈、吸收，則變為耐性；若為耐性則變為普通；若為普通則變為弱點。若為弱點，則提升其(\d+%)受到弱點傷害。\n<b><size\=28><color\=#850101>為解救陷入危機的人們而集結於此，讓翔羽的力量穿越時空的禁錮，甦醒，然後戰鬥吧！不死鳥戰士們！</color></size></b>$"="Use condition: When allies have [Hack Complete]\nFor $5 turns, increase 1 ally's ATK by <color\=#FFFC40>$1</color>; Increase ATK by $3 more for every $2 points of Futaba's ATK (up to <color\=#FFFC40>$4</color> ATK). Inflict [Disruption Virus] on all foes for $6 turn. [Disruption Virus]: Inflict <link\="s|286"><u>[Affinity Downgrade</u></link> based on the targeted ally's attribute: Null, Repel, and Drain become Resist; Resist becomes Normal; Normal becomes Weak. Weak attributes take $7 more Weak DMG.\n<b><size\=28><color\=#850101>In order to save the people in crisis and gathered here, let the power of Shouyu through the confinement of time and space, wake up, and then fight!</color></size></b>"
+r:"^解鎖條件：我方角色擁有『駭入完成』\n使1名友方怪盜的攻擊力提升<color\=#FFFC40>(\d+)</color>\+\({{A}}每有(\d+)點攻擊力，額外提升其(\d+\.\d+)攻擊力，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\)，持續(\d+)回合。為全體敵人添加上該名怪盜適應性的『擾亂病毒』，持續(\d+)回合。『擾亂病毒』：使目標對應屬性的<link\="s\|286"><u>『適應性降級』</u></link>：若為無效、反彈、吸收，則變為耐性；若為耐性則變為普通；若為普通則變為弱點。若為弱點，則提升其(\d+%)受到弱點傷害。\n<b><size\=28><color\=#850101>為解救陷入危機的人們而集結於此，讓翔羽的力量穿越時空的禁錮，甦醒，然後戰鬥吧！不死鳥戰士們！</color></size></b>$"="Unlock condition: When allies have [Hack Complete].\nIncrease 1 ally's ATK by <color\=#FFFC40>$1</color>. For every $2 of Futaba's ATK, additionally increase ATK by $3 (up to <color\=#FFFC40>$4</color> ATK). Lasts for $5 turns.\nInflict [Disruption Virus] on all foes for $6 turn. [Disruption Virus]: Inflict <link\="s|286"><u>[Affinity Downgrade]</u></link> based on the targeted ally's attribute: Null, Repel, and Drain become Resist; Resist becomes Normal; Normal becomes Weak. Weak attributes take $7 more Weak DMG.\n<b><size\=28><color\=#850101>Gathered here to rescue those in crisis, let the power of the Featherman break through the shackles of time and space! Awaken, and fight!</color></size></b>"
 
-r:"^玩心 Lv.(\d+)$"="Playfulness Lv.$1"
-r:"^戰鬥開始時獲得<color\=#FFFC40>(\d+)</color><color\=#FFFC40>%</color>解析進度。$"="At the start of battle, Futaba gains <color\=#FFFC40>$1</color><color\=#FFFC40>%</color> to her Analysis Progress."
-r:"^戰鬥開始時獲得<color\=#0169ca>(\d+)</color><color\=#0169ca>%</color>解析進度。$"="At the start of battle, Futaba gains <color\=#0169ca>$1<color\=#0169ca>%</color> to her Analysis Progress."
+r:"^戰鬥開始時獲得<color\=#FFFC40>(\d+)</color><color\=#FFFC40>%</color>解析進度。$"="At the start of battle, gain <color\=#FFFC40>$1</color><color\=#FFFC40>%</color> Analysis Progress."
+r:"^戰鬥開始時獲得<color\=#0169ca>(\d+)</color><color\=#0169ca>%</color>解析進度。$"="At the start of battle, gain <color\=#0169ca>$1</color><color\=#0169ca>%</color> Analysis Progress."
 
-r:"^善後 Lv.(\d+)$"="Clean Up Lv.$1"
-r:"^『駭入完成』狀態下，所有怪盜獲得{{A}}攻擊力的<color\=#FFFC40>(\d+\.\d+%)</color>的護盾，持續(\d+)回合。$"="When [Hack Complete] is active, grant all allies a Shield equal to <color\=#FFFC40>$1</color> of Futaba's ATK for 2 turns."
-r:"^『駭入完成』狀態下，所有怪盜獲得{{A}}攻擊力的<color\=#0169ca>(\d+\.\d+%)</color>的護盾，持續(\d+)回合。$"="When [Hack Complete] is active, grant all allies a Shield equal to <color\=#0169ca>$1</color> of Futaba's ATK for 2 turns."
+r:"^『駭入完成』狀態下，所有怪盜獲得{{A}}攻擊力的<color\=#FFFC40>(\d+\.\d+%)</color>的護盾，持續(\d+)回合。$"="When [Hack Complete] is active, grant all allies a Shield equal to <color\=#FFFC40>$1</color> of Futaba's ATK. Lasts for 2 turns."
+r:"^『駭入完成』狀態下，所有怪盜獲得{{A}}攻擊力的<color\=#0169ca>(\d+\.\d+%)</color>的護盾，持續(\d+)回合。$"="When [Hack Complete] is active, grant all allies a Shield equal to <color\=#0169ca>$1</color> of Futaba's ATK. Lasts for 2 turns."
 
-解析進度=Analysis Progress
-駭入完成=Hack Complete
+r:"^『以不死鳥的名義』的準備時間減少(\d+)次行動；\n『以不死鳥的名義』釋放後獲得<color\=#FFFC40>(\d+\.\d+%)</color>的『解析進度』；\n『以不死鳥的名義』額外使目標的傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，暴擊效果提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Decrease [In the Name of Featherman]'s cooldown time by $1 turns.\nAfter using [In the Name of Featherman], Futaba gains <color\=#FFFC40>$2</color> [Analysis Progress].\n[In the Name of Featherman] additionally increase target's DMG Bonus by <color\=#FFFC40>$3</color> and Crit DMG by <color\=#FFFC40>$4</color>. Lasts for $5 turns."
+r:"^『以不死鳥的名義』的準備時間減少(\d+)次行動；\n『以不死鳥的名義』釋放後獲得<color\=#0169ca>(\d+\.\d+%)</color>的『解析進度』；\n『以不死鳥的名義』額外使目標的傷害提升<color\=#0169ca>(\d+\.\d+%)</color>，暴擊效果提升<color\=#0169ca>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Decrease [In the Name of Featherman]'s cooldown time by $1 turns.\nAfter using [In the Name of Featherman], Futaba gains <color\=#0169ca>$2</color> [Analysis Progress].\n[In the Name of Featherman] additionally increase target's DMG Bonus by <color\=#0169ca>$3</color> and Crit DMG by <color\=#0169ca>$4</color>. Lasts for $5 turns."
 
-資訊收集=Information Gathering
-r:"^友方怪盜使用{{B}}技能後，{{A}}獲得(\d+%)『解析進度』。同伴使用{{B}}技能/追加效果/HIGHLIGHT/{{C}}造成弱點傷害時，{{A}}額外獲得(\d+%)『解析進度』。『駭入完成』狀態下我方傷害提升(\d+%)/(\d+%)/(\d+%)（1/50/70級時升級）,造成弱點傷害時，傷害提升效果翻倍。$"="After an ally uses a {{B}} skill, Futaba gains $1 to her [Analysis Progress]. Also when an ally deal Weak damage with a {{B}} skill/Follow Up/HIGHLIGHT/{{C}}, Futaba gains $2 more to her [Analysis Progress]. When [Hack Complete] is active, increase the party's damage by $3/$4/$5 based on Futaba's level (effect increases at Lv. 1/50/70, respectively); when dealing Weak damage, double this damage increase."
+r:"^友方的首個回合開始時，自動釋放『無聲侵襲』；\n『駭入完成』狀態下，同一個隊員使用{{A}}技能每累計造成(\d+)種屬性的傷害時，使所有同伴總傷害增幅提升<color\=#FFFC40>(\d+\.\d+%)</color>\+意識等級\*(\d+%)、攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>\+意識等級\*(\d+%)，持續(\d+)回合，最多可疊加(\d+)層。$"="At the start of allies' first turn, automatically use [Silent Intrusion].\nWhen [Hack Complete] is active, when the same ally has dealt a total of $1 attribute damage from {{A}} skills, increase all allies' Total DMG Amp by <color\=#FFFC40>$2</color> + Futaba's Awareness level * $3 and ATK by <color\=#FFFC40>$4</color> + Futaba's Awareness level * $5. Lasts for $6 turns. Stacks up to $7 times."
+r:"^友方的首個回合開始時，自動釋放『無聲侵襲』；\n『駭入完成』狀態下，同一個隊員使用{{A}}技能每累計造成(\d+)種屬性的傷害時，使所有同伴總傷害增幅提升<color\=#0169ca>(\d+\.\d+%)</color>\+意識等級\*(\d+%)、攻擊力提升<color\=#0169ca>(\d+\.\d+%)</color>\+意識等級\*(\d+%)，持續(\d+)回合，最多可疊加(\d+)層。$"="At the start of allies' first turn, automatically use [Silent Intrusion].\nWhen [Hack Complete] is active, when the same ally has dealt a total of $1 attribute damage from {{A}} skills, increase all allies' Total DMG Amp by <color\=#0169ca>$2</color> + Futaba's Awareness level * $3 and ATK by <color\=#0169ca>$4</color> + Futaba's Awareness level * $5. Lasts for $6 turns. Stacks up to $7 times."
+
+資訊收集=Intel Gathering
+r:"^友方怪盜使用{{B}}技能後，{{A}}獲得(\d+%)『解析進度』。同伴使用{{B}}技能/追加效果/HIGHLIGHT/{{C}}造成弱點傷害時，{{A}}額外獲得(\d+%)『解析進度』。『駭入完成』狀態下我方傷害提升(\d+%)/(\d+%)/(\d+%)（1/50/70級時升級）,造成弱點傷害時，傷害提升效果翻倍。$"="After an ally uses a {{B}} skill, {{A}} gains $1 [Analysis Progress]. Also when an ally deal Weakness damage with a {{B}} skill/Follow Up/HIGHLIGHT/{{C}}, {{A}} additionally gains $2 [Analysis Progress].\nWhen [Hack Complete] is active, increase all allies' DMG Bonus by $3/$4/$5 based on {{A}}'s level (effect increases at Lv. 1/50/70, respectively); when dealing Weakness damage, double this DMG Bonus buff."
 
 掃描解析=Scan Analysis
-r:"^{{A}}的『解析進度』為100%，或處於『駭入完成』狀態時，我方怪盜暴擊率提升(\d+%)。$"="Increase all allies' Crit Rate by $1 when you are at 100% [Analysis Progress] or when allies are in [Hack Complete]."
+r:"^{{A}}的『解析進度』為100%，或處於『駭入完成』狀態時，我方怪盜暴擊率提升(\d+%)。$"="When {{A}}'s [Analysis Progress] is at 100%, or when [Hack Complete] is active, increase all allies' Crit Rate by $1."
 
-破門而入=Break In
+破門而入=Forced Entry
 
 遠程協助=Remote Assistance
-r:"^友方同伴攻擊敵人時，若目標身上有來自{{A}}的負面效果，攻擊力提升(\d+%)。友方一名同伴受到致命傷害時，使其血量不會低於1點，並使所有怪盜獲得等同於{{A}}攻擊力(\d+%)的護盾，護盾持續(\d+)回合。此效果每場戰鬥僅能觸發1次。$"="When an ally attacks a foe that has been debuffed by Futaba, increase ATK by $1. Also, if any ally takes damage that would KO them, survive the attack with 1 HP and grant a shield to all allies for $3 turns equal to $2 of Futaba's ATK. This effect activates once per battle."
+r:"^友方同伴攻擊敵人時，若目標身上有來自{{A}}的負面效果，攻擊力提升(\d+%)。友方一名同伴受到致命傷害時，使其血量不會低於1點，並使所有怪盜獲得等同於{{A}}攻擊力(\d+%)的護盾，護盾持續(\d+)回合。此效果每場戰鬥僅能觸發1次。$"="When an ally attacks a foe that has been debuffed by {{A}}, increase ATK by $1.\nIf any ally takes damage that would KO them, survive the attack with 1 HP and grant a Shield to all allies equal to $2 of Futaba's ATK. Lasts for $3 turns. This effect activates once per battle."
 
-頭腦戰爭=Mind Warfare
+頭腦戰爭=Mental Warfare
 
 隱蔽攻擊=Covert Attack
-r:"^任意怪盜使用HIGHLIGHT/{{B}}後，{{A}}獲得1層『漏洞分析』，上限(\d+)層。{{A}}使用『無聲侵襲』或『數據破解』時，消耗所有『漏洞分析』，每層提升(\d+%)技能效果。$"="Gain 1 stack of [Vulnerability Analysis] after any ally uses HIGHLIGHT/{{B}}, up to $1 stacks. When using [Silent Hacking] or [Data Crack], spend all [Vulnerability Analysis] and increase skill effect by $2 per stack."
-r:"^任意怪盜使用HIGHLIGHT/{{B}}後，{{A}}獲得1層『漏洞分析』，上限(\d+)層。{{A}}使用『無聲侵襲』或『資料破解』時，消耗所有『漏洞分析』，每層提升(\d+%)技能效果。$"="Gain 1 stack of [Vulnerability Analysis] after any ally uses HIGHLIGHT/{{B}}, up to $1 stacks. When using [Silent Hacking] or [Data Crack], spend all [Vulnerability Analysis] and increase skill effect by $2 per stack."
+r:"^任意怪盜使用HIGHLIGHT/{{B}}後，{{A}}獲得(\d+)層『漏洞分析』，上限(\d+)層。{{A}}使用『無聲侵襲』或『數據破解』時，消耗所有『漏洞分析』，每層提升(\d+%)技能效果。$"="When an ally uses a HIGHLIGHT/{{B}}, {{A}} gains $1 [Loophole Analysis] stack. Stacks up to $2 times. When {{A}} uses [Silent Intrusion] or [Data Crack], spend all [Loophole Analysis] stacks to increase the effect by $3 for each stack."
+r:"^任意怪盜使用HIGHLIGHT/{{B}}後，{{A}}獲得(\d+)層『漏洞分析』，上限(\d+)層。{{A}}使用『無聲侵襲』或『資料破解』時，消耗所有『漏洞分析』，每層提升(\d+%)技能效果。$"="When an ally uses a HIGHLIGHT/{{B}}, {{A}} gains $1 [Loophole Analysis] stack. Stacks up to $2 times. When {{A}} uses [Silent Intrusion] or [Data Crack], spend all [Loophole Analysis] stacks to increase the effect by $3 for each stack."
 
 病毒入侵=Virus Invasion
-r:"^使用『以不死鳥的名義』時會對我方全體怪盜釋放，同時為所有敵人添加我方所有怪盜對應的『擾亂病毒』（同一適應性的『擾亂病毒』僅能同時存在1種）。『駭入完成』的持續時間延長至(\d+)回合，並額外提升我方(\d+%)弱點傷害、傷害提升(\d+%)。$"="[In the Name of Featherman] now targets all allies and inflicts all foes with the corresponding [Disruption Virus] (There can only be 1 [Disruption Virus] for the same element). Extend [Hacking Complete] to $1 turns, and additionally increase all allies' Weak DMG by $2 and DMG Bonus by $3."
+r:"^使用『以不死鳥的名義』時會對我方全體怪盜釋放，同時為所有敵人添加我方所有怪盜對應的『擾亂病毒』（同一適應性的『擾亂病毒』僅能同時存在1種）。『駭入完成』的持續時間延長至(\d+)回合，並額外提升我方(\d+%)弱點傷害、傷害提升(\d+%)。$"="When Futaba Sakura uses [In the Name of Featherman], target all allies, then inflict [Disruption Virus] on all foes corresponding to all allies' attribute ([Disruption Virus] of the same attribute does not stack).\nExtend the duration of [Hack Complete] to $1 turns, and additionally increase allies' Weak DMG by $2 and DMG Bonus by $3."
 
 ----------
 Noir - Haru Okumura
@@ -4508,3 +4507,49 @@ r:"^HIGHLIGHT額外使所有同伴傷害提升(\d+%)。$"="HIGHLIGHT Enhanced: I
 
 靈魂詩篇=Song of the Soul
 r:"^『全力全開』額外增加(\d+)次使用次數。\n使用『焰華·緋月昂揚』時，若技能主目標不是WONDER，則可以額外複製來自WONDER的增益效果，效果值為原本值的<link\="s\|311"><u>『基礎複製比例』</u></link>。$"="[Go for Broke] can be used $1 more time.\nWhen using [Lunar Phaseshift] on allies other than Wonder, if Wonder is not the <link\="s|307"><u>[Arcana Link]</u></link>, also copy buffs granted by Wonder to the <link\="s|307"><u>[Arcana Link]</u></link> with a <link\="s|311"><u>[Copy Multiplier]</u></link> of their original effectivness."
+
+----------
+AnriL - Aran Hirano
+----------
+聖邪鏡華=Mirror of Virtue and Sin
+救贖鏡域=Dome of Redemption
+冥天流光=Light of Dawn
+救世=Salvation
+追憶=Remembrance
+
+r:"^聖邪鏡華 Lv.(\d+)$"="<size\=23>Mirror of Virtue and Sin Lv.$1</size>"
+r:"^聖邪鏡華 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=23>Mirror of Virtue and Sin <color\=#0F69CB>Lv.$1</color></size>"
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福詛咒<link\="s\|312"><u>雙屬性傷害</u></link>，使自身暴擊效果提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合，並使自身獲得<link\="s\|314"><u>『決斷』</u></link>。\n<b><size\=28><color\=#850101>擊敗敵人……也是守護者的職責！</color></size></b>$"="Deal <link\="s|312"><u>Dual Attribute</u></link> Bless Curse damage to 1 foe equal to <color\=#FFFC40>$1</color> of ATK. Increase Aran's Crit DMG by <color\=#FFFC40>$2</color> for $3 turns, then grant Aran <link\="s|314"><u>[Resolve]</u></link>.\n<b><size\=28><color\=#850101>Defeating the enemy... is also a protector's duty!</color></size></b>"
+
+r:"^救贖鏡域 Lv.(\d+)$"="<size\=25>Dome of Redemption Lv.$1</size>"
+r:"^救贖鏡域 <color\=#0F69CB>Lv.(\d+)</color>$"="<size\=25>Dome of Redemption <color\=#0F69CB>Lv.$1</color></size>"
+r:"^為所有同伴添加<link\="s\|313"><u>『不凋帷幕』</u></link>，並使自身獲得<link\="s\|314"><u>『決斷』</u></link>。\n隨後使所有同伴的全適應性變成“吸收”，並使吸收比例由(\d+%)提升至<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合；\n該效果將在吸收1次技能的全部傷害後消失。\n『不凋帷幕』：能夠抵禦<color\=#FFFC40>(\d+)</color>傷害。\n<b><size\=28><color\=#850101>讓你們見識一下……我的決心！</color></size></b>$"="Grant all allies <link\="s|313"><u>[Everlasting Veil]</u></link> and grant Aran <link\="s|314"><u>[Resolve]</u></link>.\nChange all allies' affinities to [Drain] and increase Drain ratio from $1 to <color\=#FFFC40>$2</color> for $3 turns. Lose this effect after draining 1 skill damage.\n[Everlasting Veil]: A Shield that can negate <color\=#FFFC40>$4</color> damage.\n<b><size\=28><color\=#850101>Let me show you... my resolve!</color></size></b>"
+
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福詛咒<link\="s\|312"><u>雙屬性傷害</u></link>。\n若自身處於<link\="s\|314"><u>『決斷』</u></link>，本次技能傷害的穿透提升(\d+%)，且<link\="s\|285"><u>技能傷害</u></link>提升(\d+%)。\n<b><size\=28><color\=#850101>我即是堅盾與利刃，面對我吧，面對……制裁！</color></size></b>$"="Deal <link\="s|312"><u>Dual Attribute</u></link> Bless Curse damage to 1 foe equal to <color\=#FFFC40>$1</color> of ATK. \nWhen <link\="s|314"><u>[Resolve]</u></link> is active, increase this skill's Pierce by $2 and <link\="s|285"><u>Skill Damage</u></link> by $3.\n<b><size\=28><color\=#850101>I am both the sword and shield. Face me... face your retribution!</color></size></b>"
+
+r:"^『HIGHLIGHT』：對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福詛咒<link\="s\|312"><u>雙屬性傷害</u></link>，並使自身攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。\n隨後為我方所有同伴添加<link\="s\|313"><u>『不凋帷幕』</u></link>。\n『ONE MORE』：對1名敵人造成祝福詛咒<link\="s\|312"><u>雙屬性傷害</u></link>。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械攻擊：使用槍械射擊1名敵人，造成少量射擊屬性傷害，根據子彈數量可以射擊多次。$"="[HIGHLIGHT]: Deal <link\="s|312"><u>Dual Attribute</u></link> Bless Curse damage to 1 foe equal to <color\=#FFFC40>$1</color> of ATK. Increase Aran's ATK by <color\=#FFFC40>$2</color> for $3 turns. Then grant all allies <link\="s|313"><u>[Everlasting Veil]</u></link>.\n[ONE MORE]: Deal <link\="s|312"><u>Dual Attribute</u></link> Bless Curse damage to 1 foe. \nMelee Attack: Uses a melee weapon to deal light Phys damage to 1 foe. \nGun Attack: Deal light Gun damage to 1 foe. Can fire until out of ammo."
+
+r:"^{{A}}的祝福屬性傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，且<link\="s\|313"><u>『不凋帷幕』</u></link>能抵禦的傷害將受祝福屬性傷害加成影響。$"="Increase {{A}}'s Bless DMG by <color\=#FFFC40>$1</color>. Increase <link\="s|313"><u>[Everlasting Veil]</u></link>'s Shield based on Bless DMG.
+r:"^{{A}}的祝福屬性傷害提升<color\=#0169ca>(\d+\.\d+%)</color>，且<link\="s\|313"><u>『不凋帷幕』</u></link>能抵禦的傷害將受祝福屬性傷害加成影響。$"="Increase {{A}}'s Bless DMG by <color\=#0169ca>$1</color>. Increase <link\="s|313"><u>[Everlasting Veil]</u></link>'s Shield based on Bless DMG.
+
+r:"^{{A}}的詛咒屬性傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，且『救贖鏡域』吸收比例超過(\d+%)的部分將受詛咒屬性傷害加成影響。$"="Increase {{A}}'s Curse DMG by <color\=#FFFC40>$1</color>. Increase [Dome of Redemption]'s Drain Ratio above $2 based on Curse DMG."
+r:"^{{A}}的詛咒屬性傷害提升<color\=#0169ca>(\d+\.\d+%)</color>，且『救贖鏡域』吸收比例超過(\d+%)的部分將受詛咒屬性傷害加成影響。$"="Increase {{A}}'s Curse DMG by <color\=#0169ca>$1</color>. Increase [Dome of Redemption]'s Drain Ratio above $2 based on Curse DMG."
+
+凝望光與暗=<size\=20>Light and Darkness Gaze</size>
+{{A}}可以造成特殊的祝福詛咒<link\="s\|312"><u>雙屬性傷害</u></link>。\n{{A}}造成祝福詛咒雙屬性傷害時，視為造成弱點傷害，且必定觸發除屬性克制係數以外的全部弱點效果。\n{{A}}進入戰鬥時將立即為所有同伴添加<link\="s\|313"><u>『不凋帷幕』</u></link>。={{A}} can deal special <link\="s|312"><u>Dual Attribute</u></link> Bless Curse damage. \nWhen {{A}} deals Dual Attribute Bless Curse damage, counts as dealing Weakness damage, then activate all Weakness effects besides the Weakness coefficient. \nAt the start of battle, immediately grant all allies <link\="s|313"><u>[Everlasting Veil]</u></link>.
+
+我所描繪的=What I Depict
+r:"^{{A}}施放『救贖鏡域』將不再消耗回合且不再消耗SP。\n且<link\="s\|314"><u>『決斷』</u></link>的疊加層數上限將提升至(\d+)層。$"="[Dome of Redemption] no longer spends a turn and costs SP.\nIncrease maximum number of <link\="s|314"><u>[Resolve]</u></link> stacks to $1."
+
+在一切褪色前=Before All Color Fades
+r:"^每層<link\="s\|314"><u>『決斷』</u></link>將額外提供(\d+%)暴擊效果。\n施放『冥天流光』時每有(\d+)層<link\="s\|314"><u>『決斷』</u></link>，<link\="s\|285"><u>技能傷害</u></link>都將提升(\d+%)。$"="Increase Crit DMG by $1 for each <link\="s|314"><u>[Resolve]</u></link> stacks.\nWhen using [Light of Dawn], increase <link\="s|285"><u>Skill Damage</u></link> by $3 for each <link\="s|314"><u>[Resolve]</u></link> stack."
+
+於光影中落筆=Painting in Light and Shadow
+
+愛會跨越時光=Love Transcends Time
+r:"^HIGHLIGHT效果提升：施放HIGHLIGHT後攻擊力額外提升(\d+%)，且攻擊力提高效果將可以疊加(\d+)層。$"="HIGHLIGHT Enhanced: After using a HIGHLIGHT, additionally increase ATK by $1. Increase the maximum number of ATK buff stacks to $2."
+
+向荒誕處著色=Coloring the Absurd
+
+終將顯現的理想國=The Promised Ideal
+r:"^所有同伴的每層<link\="s\|313"><u>『不凋帷幕』</u></link>被打破或持續時間結束時，{{A}}的暴擊效果都將提升(\d+%)，最多疊加(\d+)層。\n{{A}}的HIGHLIGHT將可以暴擊且穿透提升(\d+%)。{{A}}施放『冥天流光』後將額外施放HIGHLIGHT，優先攻擊最後被『冥天流光』傷害過的敵人。$"="When an ally's <link\="s|313"><u>[Everlasting Veil]</u></link> stack breaks or the effect ends, increase {{A}}'s Crit DMG by $1. Stacks up to $2 times.\n{{A}}'s HIGHLIGHT can activate critical hits, increase HIGHLIGHT Pierce by $3. After using [Light of Dawn], activate a HIGHLIGHT (prioritize the foe attacked by [Light of Dawn])."
