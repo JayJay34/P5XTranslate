@@ -123,6 +123,7 @@ No size on inherit skill names or else they won't work in the inherit menu
 八艘飛躍=Hassou Tobi
 痛苦宣判=<size\=22>Painful Judgement</size>
 帕拉瓦尼之擊=Paravani's Strike
+神臨的恩威=Divine Providence
 
 --- Gun ---
 箭浴=Arrow Rain
@@ -391,6 +392,8 @@ r:"^萬象湮滅 Lv.(\d+)$"="<size\=23>Universal Annihilation Lv.$1</size>"
 音律和鳴=Temperament Harmony
 r:"^音律和鳴 Lv.(\d+)$"="<size\=21>Temperament Harmony Lv.$1</size>"
 
+塗影囚籠=Painted Cage
+
 --- Passives ---
 
 // Skill Boosts
@@ -521,6 +524,10 @@ sr:"『HIGHLIGHT』：使所有同伴造成的傷害提升<color\=#fffc40>(\d+\.
 //ST ONE MORE, AoE with increased damage taken HIGHLIGHT
 sr:"『HIGHLIGHT』：對所有敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的(.*)屬性傷害，並使其受到的傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，效果持續2回合。\n『ONE MORE』：對1名敵人造成(.*)屬性傷害。"=[HIGHLIGHT]: Deal <color\=#FFFC40>$1</color> ATK $2 damage to all foes and increase their DMG Taken by <color\=#FFFC40>$3</color> for 2 turns.\n[ONE MORE]: Deal $4 damage to 1 foe.
 
+Rank IX Baal HIGHLIGHT
+r:"^『HIGHLIGHT』：對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的疾風屬性傷害，使其受到暴擊效果提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合，並為攻擊力最高的反抗/自律同伴添加(\d+)層「豐穰之賜」\n『ONE MORE』：對1名敵人造成疾風屬性傷害。$"="[HIGHLIGHT]: Deal Wind damage to 1 foe equal to <color\=#fffc40>$1</color> of ATK. Increase their Crit DMG Taken by <color\=#fffc40>$2</color> for $3 turns. Grant the Assassin/Virtuoso ally with the highest ATK $4 [Gift of Abundance] stacks.\nDeal Wind damage to 1 foe."
+r:"^『HIGHLIGHT』：對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的疾風屬性傷害，使其受到暴擊效果提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合，並為攻擊力最高的反抗/自律同伴添加(\d+)層「豐穰之賜」。\n『ONE MORE』：對1名敵人造成疾風屬性傷害。$"="[HIGHLIGHT]: Deal Wind damage to 1 foe equal to <color\=#fffc40>$1</color> of ATK. Increase their Crit DMG Taken by <color\=#fffc40>$2</color> for $3 turns. Grant the Assassin/Virtuoso ally with the highest ATK $4 [Gift of Abundance] stacks.\nDeal Wind damage to 1 foe."
+
 Rank IX Gabriel HIGHLIGHT
 r:"^『HIGHLIGHT』：對1名敵人造成<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的冰凍屬性傷害，自身獲得「告諭」。\n「告諭」：自身透過{{B}}釋放{{A}}技能時，消耗「告諭」額外使所有同伴攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>、傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合。\n『ONE MORE』：對1名敵人造成冰凍屬性傷害。$"="[HIGHLIGHT]: Deal Ice damage to 1 foe equal to <color\=#fffc40>$1</color> of ATK. User gains [Divine Oracle].\n[Divine Oracle]: When using a {{A}} skill with {{B}}, spend [Divine Oracle] to increase all allies' ATK by <color\=#fffc40>$2</color> and DMG Bonus by <color\=#fffc40>$3</color>. Lasts for $4 turns.\n[ONE MORE]: Deal Ice damage to 1 foe."
 
@@ -616,6 +623,9 @@ Hassou Tobi
 r:"^對全體敵人造成8段<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害，每有1個敵人，該技能傷害提升(\d+%)，最多提升(\d+%)。$"="Deal <color\=#fffc40>$1</color> ATK Phys damage to all foes 8 times. For every 1 foe, increase skill damage by $2, up to $3."
 r:"^對所有敵人造成(\d+)次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害。$"="Deal <color\=#fffc40>$2</color> ATK Phys damage to all foes $1 times."
 r:"^(\d+)~(\d+)次物理$"="$1~$2 times Phys"
+
+Divine Providence
+r:"^對1名敵人造成(\d+)次<color\=#fffc40>(\d+\.\d+%)</color>攻擊力的物理屬性傷害。根據同伴累計消耗「豐禱之賜」的層數，提高本次技能的傷害，每層提高<color\=#fffc40>(\d+\.\d+%)</color>，上限<color\=#fffc40>(\d+\.\d+%)</color>。\n使目標陷入「枯兆」狀態：下次受到帶有「豐穰之賜」的怪盜攻擊後，{{A}}進行追加攻擊，傷害值為本次怪盜的攻擊傷害的(\d+%)。$"="Deal Phys damage to 1 foe equal to <color\=#fffc40>$2</color> of ATK ($1 hits). Increase this skill's damage by <color\=#fffc40>$3</color> based on spent [Gift of Abundance] stacks (up to <color\=#fffc40>$4</color>).\nInflict [Blight Omen]: After the next attack from a Thief with [Gift of Abundance], {{A}} will deal damage equal to $5 of that Thief's attack damage."
 
 --- Gun ---
 
@@ -946,6 +956,10 @@ r:"^使1名敵人受到傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，並使�
 
 Deconstruction Field
 r:"^使1名敵人受到傷害提升<color\=#fffc40>(\d+\.\d+%)</color>，受到暴擊效果提升<color\=#fffc40>(\d+\.\d+%)</color>，持續(\d+)回合。$"="Increase 1 foes' DMG Taken by <color\=#fffc40>$1</color> and Crit DMG Taken by <color\=#fffc40>$2</color>. Lasts for $3 turns."
+
+Painted Cage
+r:"^使1名敵人受到攻擊時該次攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，受到弱點傷害時狀態轉變為『咒繪』，受非弱點傷害時轉變為『影囚』，持續(\d+)回合。\n『咒繪』：受總傷害增幅提升<color\=#fffc40>(\d+\.\d+%)</color>，受弱點屬性的暴擊效果提升<color\=#fffc40>(\d+\.\d+%)</color>\n『影囚』：攻擊力降低<color\=#fffc40>(\d+\.\d+%)</color>，受暴擊效果提升<color\=#fffc40>(\d+\.\d+%)</color>$"="Increase 1 foe's ATK Taken by <color\=#fffc40>$1</color>. When taking Weakness damage, change the state to [Cursed Paint]; when taking non-Weakness damage, change the state to [Shadow Cage]. Lasts for $2 turns.\n[Cursed Paint]: Increase Total DMG Taken Amp by <color\=#fffc40>$3</color>. When taking Weakness damage, increase Crit DMG Taken by <color\=#fffc40>$4</color>.\n[Shadow Cage]: Decrease ATK by <color\=#fffc40>$5</color> and increase Crit DMG Taken by <color\=#fffc40>$6</color>."
+r:"^使1名敵人受到攻擊時該次攻擊力提升<color\=#fffc40>(\d+\.\d+%)</color>，受到弱點傷害時狀態轉變為『咒繪』，受非弱點傷害時轉變為『影囚』，持續(\d+)回合。\n『咒繪』：受總傷害增幅提升<color\=#fffc40>(\d+\.\d+%)</color>，受弱點屬性的暴擊效果提升<color\=#fffc40>(\d+\.\d+%)</color>。\n『影囚』：攻擊力降低<color\=#fffc40>(\d+\.\d+%)</color>，受暴擊效果提升<color\=#fffc40>(\d+\.\d+%)</color>。$"="Increase 1 foe's ATK Taken by <color\=#fffc40>$1</color>. When taking Weakness damage, change the state to [Cursed Paint]; when taking non-Weakness damage, change the state to [Shadow Cage]. Lasts for $2 turns.\n[Cursed Paint]: Increase Total DMG Taken Amp by <color\=#fffc40>$3</color>. When taking Weakness damage, increase Crit DMG Taken by <color\=#fffc40>$4</color>.\n[Shadow Cage]: Decrease ATK by <color\=#fffc40>$5</color> and increase Crit DMG Taken by <color\=#fffc40>$6</color>."
 
 --- Dispel ---
 驅散所有同伴的1個屬性降低效果。=Remove 1 stat debuff from all allies.

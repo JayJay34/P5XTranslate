@@ -55,6 +55,7 @@ sr:"^(.*)專屬武器。(.*)。$"="Exclusive weapon for $1. $2"
 閃之刻印=Engrave of Lightning
 自然刻印=Engrave of Nature
 癒之刻印=Engrave of Healing
+殤之刻印=Engrave of Sorrow
 sr:"^用於啟動進階武器「(.*)」-刻印「(.*)」的刻印圖章$"="Used to activate Engrave [$2] for [$1]"
 sr:"^用於啟動進階武器「(.*)」-刻印「(.*)」的刻印圖章。$"="Used to activate Engrave [$2] for [$1]"
 啟動成功=Activated
@@ -95,6 +96,10 @@ r:"^輝<color\=#000000>耀</color>賜福$"="R<color\=#000000>a</color>diant Bles
 r:"^攻擊力提升<color\=#2899FF>(.*)</color>，\n光環：WONDER在場時使所有怪盜提升<color\=#2899FF>(.*)</color>點攻擊力。\n根據進入戰鬥時的{{A}}獲得相應屬性傷害提升<color\=#2899FF>(.*)</color>，其他怪盜獲得相當於前者(.*)的效果。$"="Increase ATK by <color\=#2899FF>$1</color>. \nAura: When user is present, increase party's ATK by <color\=#2899FF>$2</color>. \nBased on the attribute of the {{A}} equipped at the start of battle, increase that attribute's DMG Bonus by <color\=#2899FF>$3</color>, other Thieves gain $4 of this effect."
 機械處刑者晶石=Ex Machina Crystal
 僅可消耗機械處刑者晶石=Only use Ex Machina Crystal
+【超限火力】=[Maximum Firepower]
+超限火力=Maximum Firepower
+r:"^超限火力 (.*)階$"="Maximum Firepower Rank $1"
+r:"^任意同伴回合開始時或切換{{A}}時，根據該同伴當前的{{A}}屬性，使其相應屬性的傷害提升<color\=#2899FF>(.*)</color>、造成相應屬性傷害時的暴擊效果提升<color\=#2899FF>(.*)</color>。$"="At the start of any allies' turn or when changing {{A}}s, based on their {{A}}'s attribute, increase that attribute's DMG Bonus by <color\=#2899FF>$1</color>, when dealing that attribute's damage, increase Crit DMG by <color\=#2899FF>$2</color>."
 
 遠古力場=Arc Knife
 【自然之力】=[Force of Nature]
@@ -502,15 +507,15 @@ r:"^切換至<link\="s\|199"><u>『行刑官』</u></link>狀態時，物理傷�
 HACK專業型=Professional HACK Model
 【萬能晶片】=[Almighty Chip]
 萬能晶片=Almighty Chip
-r:"^攻擊力提升<color\=#2899FF>(.*)</color>。我方怪盜造成弱點傷害時，攻擊力提高<color\=#2899FF>(.*)</color>，持續(.*)回合。{{A}}使用技能為敵人添加負面效果後，使其受暴擊效果提高<color\=#2899FF>(.*)</color>，持續(.*)回合，可疊加(.*)層。$"="Increase ATK by <color\=#2899FF>$1</color>. When allies deal Weak damage, increase ATK by <color\=#2899FF>$2</color> for $3 turns. After {{A}} inflicts a debuff with a skill, increase their Crit DMG Taken by <color\=#2899FF>$4</color> for $5 turns. Stacks up to $6 times."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。我方怪盜造成弱點傷害時，攻擊力提高<color\=#2899FF>(.*)</color>，持續(.*)回合。{{A}}使用技能為敵人添加負面效果後，使其受暴擊效果提高<color\=#2899FF>(.*)</color>，持續(.*)回合，可疊加(.*)層。$"="Increase ATK by <color\=#2899FF>$1</color>. When allies deal Weakness damage, increase ATK by <color\=#2899FF>$2</color>. Lasts for $3 turns. After {{A}} uses a skill to inflict debuffs, increase the foe's Crit DMG Taken by <color\=#2899FF>$4</color>. Lasts for $5 turns. Stacks up to $6 times."
 C型號可擕式=Portable C Type Model
 【修復代碼】=[Repair Code]
 修復代碼=Repair Code
-r:"^攻擊力提升<color\=#2899FF>(.*)</color>。添加『擾亂病毒』後，使敵人受到傷害額外提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. After inflicting [Disruption Virus], increase foes' DMG Taken by <color\=#2899FF>$2</color> for $3 turns."
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。添加『擾亂病毒』後，使敵人受到傷害額外提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="Increase ATK by <color\=#2899FF>$1</color>. After inflicting [Disruption Virus], increase foes' DMG Taken by <color\=#2899FF>$2</color>. Lasts for $3 turns."
 IDS監視電腦=IDS Monitoring Computer
 【高性能】=[High Performance]
 高性能=High Performance
-r:"^友方造成弱點傷害時，{{A}}攻擊力提升<color\=#2899FF>(.*)</color>，上限(.*)層。$"="When allies deal Weak DMG, increase user's ATK by <color\=#2899FF>$1</color>. Stacks up to $2 times."
+r:"^友方造成弱點傷害時，{{A}}攻擊力提升<color\=#2899FF>(.*)</color>，上限(.*)層。$"="When allies deal Weakness DMG, increase {{A}}'s ATK by <color\=#2899FF>$1</color>. Stacks up to $2 times."
 筆記型電腦=Laptop
 【強效】=[Strong]
 強效=Strong
@@ -562,7 +567,6 @@ r:"^攻擊力提升<color\=#2899FF>(.*)</color>。自身舞姿大於等於(.*)�
 r:"^自身發動HIGHLIGHT後，祝福屬性傷害提升<color\=#2899FF>(.*)</color>，持續(.*)回合。$"="After using own HIGHLIGHT, increase Bless DMG by <color\=#2899FF>$1</color> for $2 turns."
 西洋劍=Rapier
 【決斷】=[Resolve]
-決斷=Resolve
 
 浮香·鶴舞凌冬=Winter Crane Dance
 【驚鴻飛雪】=[Graceful Snow]
@@ -918,7 +922,7 @@ r:"^處於<link\="s\|290"><u>『決意的少女』</u></link>狀態時，造成�
 【晨光熹微】=[First Light]
 晨光熹微=First Light
 <color\=#66ccff>HIGHLIGHT傷害增幅</color>=<color\=#66ccff>HIGHLIGHT DMG Amp</color>
-釋放HIGHLIGHT時傷害的最終增幅效果。=The Final DMG Amplification effect when a HIGHLIGHT is activated.
+釋放HIGHLIGHT時傷害的最終增幅效果。=The Final DMG Amp effect when a HIGHLIGHT is activated.
 
 萬魔槍=Pandemonium
 【{{A}}指令】=[Destructive Command]
@@ -1048,6 +1052,22 @@ r:"^<link\="s\|307"><u>『月下夥伴』</u></link>的朔{{A}}達到(.*)級時�
 春秋大刀=Chun Qiu Da Dao
 【承志之刃】=[Green Dragon's Might]
 承志之刃=Green Dragon's Might
+
+千鏡的餘冕=Crown of Thousand Mirrors
+【剎那鏡華】=Instant Reflection
+剎那鏡華=Instant Reflection
+r:"^暴擊率提升<color\=#2899FF>(.*)</color>\n提供護盾後，自身的暴擊效果提升<color\=#2899FF>(.*)</color>，持續(\d+)回合。\n觸發弱點效果時，該次傷害的弱點傷害提升<color\=#2899FF>(.*)</color>。$"="Increase Crit Rate by <color\=#2899FF>$1</color>.\nAfter granting a Shield, increase user's Crit DMG by <color\=#2899FF>$2</color> for $3 turns.\nWhen activating a Weakness effect, increase that damage's Weak DMG by <color\=#2899FF>$4</color>."
+聖佑之心=Heart of Protection
+【福厄銘】=Weal and Woe
+福厄銘=Weal and Woe
+r:"^攻擊力提升<color\=#2899FF>(.*)</color>。\n獲得<link\="s\|314"><u>『決斷』</u></link>後，造成傷害永久提升<color\=#2899FF>(.*)</color>，最多疊加(\d+)層。$"="Increase ATK by <color\=#2899FF>$1</color>.\nAfter user gains <link\="s|314"><u>[Resolve]</u></link>, permanently increase DMG Dealt by <color\=#2899FF>$2</color>. Stacks up to $3 times."
+鎏羽臂盾=Gilded Armguard
+【曜金】=Radiant Gold
+曜金=Radiant Gold
+r:"^自身存在護盾時傷害提升<color\=#2899FF>(.*)</color>。$"="When user has a Shield, increase DMG Bonus by <color\=#2899FF>$1</color>."
+棘刺臂盾=Thorned Armguard
+【淬心】=Tempered Heart
+淬心=Tempered Heart
 
 ----------
 STANDARD 5 STAR UNIT WEAPONS

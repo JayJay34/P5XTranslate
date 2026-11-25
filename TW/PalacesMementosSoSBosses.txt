@@ -791,6 +791,7 @@ PALACE 6
 ----------
 PALACE 7
 ----------
+認知·樂園島=Cognitive Paradise
 愉悅樂園島=<size\=23>Paradise of Bliss</size>
 愛之樂園島=<size\=23>Paradise of Love</size>
 愛之樂園島外=<size\=16>Outer Paradise of Love</size>
@@ -810,6 +811,16 @@ PALACE 7
 崩塌的外場館=<size\=21>Collapsed Stadium</size>
 主攝影棚=Main Studio
 終極攝影棚=<size\=24>Ultimate Studio</size>
+神之塔=Divine Tower
+神之塔·外部=<size\=18>Divine Tower Exterior</size>
+神之塔·大廳=<size\=23>Divine Tower Hall</size>
+神之塔·前側=<size\=22>Divine Tower Front</size>
+神之塔·後側=<size\=23>Divine Tower Rear</size>
+神之塔·通道=<size\=14>Divine Tower Passageway</size>
+崩塌的頂層=<size\=18>Collapsed Top Floor</size>
+數據海=Data Sea
+數據海·淺層=<size\=23>Shallow Data Sea</size>
+數據海·深層=<size\=24>Shallow Data Seaz</size>
 
 探索熱情樂園島=Explore Paradise of Passion
 探索夢想樂園島=Explore Paradise of Dream
@@ -818,6 +829,7 @@ PALACE 7
 繼續探索=Keep exploring
 嘗試前往遠處的大樓=Try to go to the distant building
 返回現實世界=Return to the real world
+探索數據海=Explore Data Sea
 
 粉絲數=Fans
 拉麵Amigo=Ramen Amigos
@@ -2093,6 +2105,68 @@ sr:"^<color\=#FF0000>(.*)</color>被選為「節目嘉賓」……$"="<color\=#F
 sr:"^<color\=#FF0000>(.*)</color>被選為「惡役」……$"="<color\=#FF0000>$1</color> selected as [Villain]..."
 
 ----------
+PALACE 7 BOSS 2
+----------
+試著擊敗{{A}}=Try to defeat {{A}}
+幫助{{A}}恢復清醒=Return {{A}} to her senses
+擊敗所有{{A}}=Defeat all {{A}}
+
+因自己異於常人而「{{B}}」著正常的普羅大眾，在覺醒力量後，以{{A}}的身份肆意玩弄人心。=He envied the masses for being normal while he was not. After awakening his power, he toyed with people's hearts at will as {{A}}.
+
+冰蝕=Ice Erosion
+r:"^對所有敵人造成冰凍屬性傷害，並對其添加(\d+)層『威懾值』。『威懾值』：造成傷害降低(\d+%)，受到傷害\+(\d+%)，最多疊加(\d+)層；擁有者自身使用{{A}}技能造成傷害時可消除(\d+)層。$"="Deal Ice damage to all foes, then inflict targets with $1 [Intimidation Points]. [Intimidation Points]: Decrease DMG Dealt by $2 and increase DMG Taken by $3. Stacks up to $4 times. Clear $5 stack after dealing damage with a {{A}} skill."
+神的權柄=Divine Authority
+驅散所有敵人的一個增益效果，並使其在兩回合內攻擊力降低。若成功驅散了增益效果，使所有同伴在兩回合內獲得攻擊力提升。=Remove 1 buff from all foes, then decrease their ATK for 2 turns. If this removed a buff, increase all allies' ATK for 2 turns.
+神的掌控=Divine Control
+驅散所有同伴的一個負面效果，並使其在兩回合內防禦力提升。若成功驅散了負面效果，使敵人在兩回合內防禦力降低。=Remove 1 debuff from all allies, then decrease their ATK for 2 turns. If this removed a debuff, decrease all foes' DEF for 2 turns.
+r:"^神<color\=#000000>的</color>權柄$"="D<color\=#000000>i</color>vine Authority"
+r:"^神<color\=#000000>的</color>掌控$"="D<color\=#000000>i</color>vine Control""
+成功驅散了敵人的增益效果=Removed foes' buff
+成功驅散了同伴的負面效果,=Removed allies' debuff
+
+
+心相·濁明=Aspect of Turbidity
+心相·晦暗=Aspect of Darkness
+{{A}}刺激自己的慾望至暴走，以湧動著「{{B}}」之欲的心靈鎧甲覆蓋全身，呈現出宛若神明的形態。={{A}} stimulates his desires until they go berserk, covering his body in mental armor surging with the envious desire and taking on a form that seems almost divine.
+心靈力量的具象化，飽含著令人不安的負面慾望。=A manifestation of mental power, brimming with unsettling negative desire.
+
+{{A}}心相=Aspect of {{A}}
+r:"^製造出『心相·晦暗』。 『心相·晦暗』死亡時會轉化為『心相·濁明』。 『心相·晦暗』及『心相·濁明』會在自身回合結束時使{{A}}獲得(\d+)層 『心相能量』。$"="Create [Aspect of Darkness]. When [Aspect of Darkness] is defeated, convert into [Aspect of Turbidity]. At the end of [Aspect of Darkness] and [Aspect of Turbidity]'s turn, grant {{A}} $1 [Aspect Energy] stack."
+威嚇=Intimidate
+慾望刻印·白=Desire Engrave: White
+白之刻印=Engrave of White
+慾望刻印·黑=Desire Engrave: Black
+黑之刻印=Engrave of Black
+慾望操縱=Desire Manipulation
+心之壁壘=Mental Barrier
+妒意蔓延=Spreading Envy
+惡欲進發=Evil Eruption
+當『心相·晦暗』死亡時，立即對所有敵人造成萬能屬性傷害。自身『心相能量』層數越高，本次傷害越高。=When [Aspect of Darkness] is defeat, immediately deal Almighty damage to all foes. Increase damage based on user's [Aspect Energy] stacks.
+惡欲進發·極=Evil Eruption: Ultimate
+
+{{A}}心相·改=Aspect of {{A}}: Improved
+r:"^同時製造出『心相·濁明』及『心相·晦暗』。『心相·濁明』及『心相·晦暗』會在自身回合結束時使{{A}}獲得(\d+)層『心相能量』。$"="Create [Aspect of Turbidity] and [Aspect of Darkness]. At the end of [Aspect of Turbidity] and [Aspect of Darkness]'s turn, grant {{A}} $1 [Aspect Energy] stack."
+心相破滅=Aspect Destruction
+嘗試召喚心相，失敗後自身進入易傷虛弱狀態。=Try to summon Aspects. After a failed summon, user enters Weaken.
+怨恨噴湧=Resentment Burst
+惡欲進發·改=Evil Eruption: Improved
+r:"^自身『心相能量』達到(\d+)層時，以『心相·濁明』及『心相·晦暗』為祭品，對所有敵人造成極大的萬能屬性傷害。$"="When user has $1 [Aspect Energy] stacks. Sacrifice [Aspect of Turbidity] and [Aspect of Darkness], and deal severe Almighty damage to all foes."
+決鬥=Duel
+惡意滋長=Growing Malice
+使自己下回合造成的最終傷害提升。=Increase user next turn's Final DMG Dealt.
+
+心相能量=Aspect Energy
+r:"^心相能量充滿(\d+)層時，自動觸發『惡欲進發』$"="When Aspect Energy reaches $1 stacks, automatically activate [Evil Eruption]
+心相庇佑=Aspect Protection
+積怨=Resentment
+
+r:"^白<color\=#000000>之</color>刻印$"="E<color\=#000000>n</color>grave of White"
+r:"^黑<color\=#000000>之</color>刻印$"="E<color\=#000000>n</color>grave of Black"
+r:"^心<color\=#000000>相</color>能量$"="A<color\=#000000>s</color>pect Energy"
+
+sr:"^<color\=#FF0000>(.*)</</color>獲得了「(.*)」……$"="<color\=#FF0000>$1</color> gained [Aspect Energy]..."
+
+----------
 CROSS FATE PALACE (CF) (COLLAB)
 ----------
 以破滅開始的旅程=<size\=26>Journey that starts with destruction</size>
@@ -2264,8 +2338,8 @@ r:"SP消耗大幅提高，造成傷害提高(\d+%)"=Heavily increase SP cost, \n
 {{A}}擁有<color\=#ff3b37>「眾生均增長」</color>。\n「眾生均增長」：所有友軍每回合從攻擊增長、防禦增長、傷害增長中隨機獲得一種。={{A}} has <color\=#ff3b37>[Sentient Growth]</color>. \n[Sentient Growth]: All allies gain one of the following buff randomly each turn: ATK Growth, DEF Growth, DMG Growth.
 {{A}}擁有<color\=#ff3b37>「天眼觀世間」</color>。\n「天眼觀世間」：標記一個怪盜，使其受到傷害提高，下回合將受到所有陰影的集火。\n{{A}}使用「天眼觀世間」後，會召喚1隻「紫金花狐貂」。={{A}} has <color\=#ff3b37>[Heavenly Eyes]</color>. \n[Heavenly Eyes]: Mark an foe, increase their DMG Taken, all allies will attack them next turn. \nAfter {{A}} used [Heavenly Eyes], summon 1 [Chinese Redbud Fox].
 r:"^{{A}}擁有<color\=#ff3b37>「混元珍珠傘」</color>。\n「混元珍珠傘」：對血量百分比最低的友軍撐開混元珍珠傘，使所有屬性適應性全部變成“耐”，持續(\d+)回合。$"="{{A}} has <color\=#ff3b37>[Pearl Umbrella]</color>. \n[Pearl Umbrella]: Open the Pearl Umbrella for the lowest HP% ally, make them [Resist] all elements for $1 turns."
-r:"^{{A}}擁有<color\=#ff3b37>「混元珍珠傘」</color>。\n「混元珍珠傘」：對血量百分比最低的友軍撐開混元珍珠傘，使所有屬性適應性全部變成“吸”，持續(\d+)回合。$"="{{A}} has <color\=#ff3b37>[Pearl Umbrella]</color>. \n[Pearl Umbrella]: Open the Pearl Umbrella for the lowest HP% ally, make them [Absorb] all elements for $1 turns."
-1、{{A}}擁有<color\=#ff3b37>「持劍護國土」</color>。\n「持劍護國土」：每次造成傷害會使隨機一名友軍獲得護盾。\n2、{{B}}擁有<color\=#ff3b37>「眾生均增長」</color>。\n「眾生均增長」：所有友軍每回合從攻擊增長、防禦增長、傷害增長中隨機獲得一種。\n3、{{C}}擁有<color\=#ff3b37>「天眼觀世間」</color>。\n「天眼觀世間」：標記一個怪盜，使其受到傷害提高，下回合將受到所有陰影的集火。\n{{C}}使用「天眼觀世間」後，會召喚1只「紫金花狐貂」。\n4、{{D}}擁有<color\=#ff3b37>「混元珍珠傘」</color>。\n「混元珍珠傘」：對血量百分比最低的友軍撐開混元珍珠傘，使所有屬性適應性全部變成“吸”，持續2回合。\n5、當四大天王只剩最後一位時，他會在危急關頭臨陣突破，變身為<color\=#ff3b37>「{{E}}」</color>，並恢復30%最大生命值。\n6、<color\=#ff3b37>「{{E}}」同時擁有全部四大天王的能力</color>，請小心應對。=1. Jikokuten has <color\=#ff3b37>[Country Protection]</color>. \n[Country Protection]: Grant a random ally Shield after dealing damage. \n2. Zouchouten has <color\=#ff3b37>[Sentient Growth]</color>. \n[Sentient Growth]: All allies gain one of the following buff randomly each turn: ATK Growth, DEF Growth, DMG Growth. \n3. Koumokuten has <color\=#ff3b37>[Heavenly Eyes]</color>. \n[Heavenly Eyes]: Mark an foe, increase their DMG Taken, all allies will attack them next turn. \nAfter Koumokuten used [Heavenly Eyes], summon 1 [Chinese Redbud Fox]. \n4. Bishamonten has <color\=#ff3b37>[Pearl Umbrella]</color>. \n[Pearl Umbrella]: Open the Pearl Umbrella for the lowest HP% ally, make them [Absorb] all element for 2 turns. \n5. When there's only 1 foe left, they will transform into <color\=#ff3b37>Asura</color> and heal 30% Max HP. \n6. <color\=#ff3b37>Asura has the abilities of all 4 Kings</color>.
+r:"^{{A}}擁有<color\=#ff3b37>「混元珍珠傘」</color>。\n「混元珍珠傘」：對血量百分比最低的友軍撐開混元珍珠傘，使所有屬性適應性全部變成“吸”，持續(\d+)回合。$"="{{A}} has <color\=#ff3b37>[Pearl Umbrella]</color>. \n[Pearl Umbrella]: Open the Pearl Umbrella for the lowest HP% ally, make them [Drain] all elements for $1 turns."
+1、{{A}}擁有<color\=#ff3b37>「持劍護國土」</color>。\n「持劍護國土」：每次造成傷害會使隨機一名友軍獲得護盾。\n2、{{B}}擁有<color\=#ff3b37>「眾生均增長」</color>。\n「眾生均增長」：所有友軍每回合從攻擊增長、防禦增長、傷害增長中隨機獲得一種。\n3、{{C}}擁有<color\=#ff3b37>「天眼觀世間」</color>。\n「天眼觀世間」：標記一個怪盜，使其受到傷害提高，下回合將受到所有陰影的集火。\n{{C}}使用「天眼觀世間」後，會召喚1只「紫金花狐貂」。\n4、{{D}}擁有<color\=#ff3b37>「混元珍珠傘」</color>。\n「混元珍珠傘」：對血量百分比最低的友軍撐開混元珍珠傘，使所有屬性適應性全部變成“吸”，持續2回合。\n5、當四大天王只剩最後一位時，他會在危急關頭臨陣突破，變身為<color\=#ff3b37>「{{E}}」</color>，並恢復30%最大生命值。\n6、<color\=#ff3b37>「{{E}}」同時擁有全部四大天王的能力</color>，請小心應對。=1. Jikokuten has <color\=#ff3b37>[Country Protection]</color>. \n[Country Protection]: Grant a random ally Shield after dealing damage. \n2. Zouchouten has <color\=#ff3b37>[Sentient Growth]</color>. \n[Sentient Growth]: All allies gain one of the following buff randomly each turn: ATK Growth, DEF Growth, DMG Growth. \n3. Koumokuten has <color\=#ff3b37>[Heavenly Eyes]</color>. \n[Heavenly Eyes]: Mark an foe, increase their DMG Taken, all allies will attack them next turn. \nAfter Koumokuten used [Heavenly Eyes], summon 1 [Chinese Redbud Fox]. \n4. Bishamonten has <color\=#ff3b37>[Pearl Umbrella]</color>. \n[Pearl Umbrella]: Open the Pearl Umbrella for the lowest HP% ally, make them [Drain] all element for 2 turns. \n5. When there's only 1 foe left, they will transform into <color\=#ff3b37>Asura</color> and heal 30% Max HP. \n6. <color\=#ff3b37>Asura has the abilities of all 4 Kings</color>.
 r:"^<color\=#ff3b37>「{{A}}」同時擁有全部四大天王的能力</color>，請小心應對。$"="<color\=#ff3b37>{{A}} has the abilities of all 4 Kings</color>."
 你們的意志由我繼承，我來護持眾生。=Let me inherit your will, I will protect all.
 {{A}}添加的護盾，可抵消一定的傷害=Shield added by {{A}}, \ncan negate some damage
@@ -2278,7 +2352,7 @@ r:"來自{{A}}的增益，造成傷害提升(\d+%)"=Growth from {{A}}, \nincreas
 sr:"^<color\=#FF0000>(.*)</color>被天眼所注視……$"="<color\=#FF0000>$1</color> watched by Heavenly Eyes..."
 被天眼所注視，將受到所有陰影的集火=Watched by Heavenly Eyes, \nwill get focus fire by all foes
 混元珍珠傘=Pearl Umbrella
-處於「混元珍珠傘」的庇護之下，對所有屬性的適應性變為吸=Under the protection of [Pearl Umbrella], \nabsorb all element
+處於「混元珍珠傘」的庇護之下，對所有屬性的適應性變為吸=Under the protection of [Pearl Umbrella], \nDrain all element
 sr:"^<color\=#FF0000>(.*)</color>受到了混元珍珠傘的庇護，全部適應性變為吸……$"="<color\=#FF0000>$1</color> now Drain all!"
 sr:"^<color\=#FF0000>(.*)</color>受到了混元珍珠傘的庇護，全部適應性變為耐……$"="<color\=#FF0000>$1</color> now Resist all!"
 sr:"^<color\=#FF0000>(.*)</color>失去了混元珍珠傘的庇護……$"="<color\=#FF0000>$1</color> lost Pearl Umbrella..."
@@ -2628,7 +2702,7 @@ r:"^<pos\=45>{{A}}的「眾生均增長」額外提供(\d+\.\d+%)得傷害減免
 r:"^<pos\=45>{{A}}的「天眼觀世間」使標記的單位受到的傷害額外提升(\d+%)，{{A}}的最終攻擊力提升(\d+%)$"="<pos\=45>Increase the DMG Taken for units marked by [Heavenly Eyes] by $1, increase {{A}}'s Final ATK by $2"
 r:"^<pos\=45>{{A}}的「天眼觀世間」標記的單位數量提升至(\d+)個，{{A}}的最終生命值提升(\d+%)$"="<pos\=45>Increase [Heavenly Eyes] marked targets to $1, increase {{A}}'s Final HP by $2"
 r:"^<pos\=45>{{A}}的「混元珍珠傘」使友方的屬性適應性變成“無”，{{A}}的最終攻擊力提升(\d+%)$"="<pos\=45>[Pearl Umbrella] now changes ally's resistance to [Null], increase {{A}}'s Final ATK by $1"
-r:"^<pos\=45>{{A}}的「混元珍珠傘」使友方的屬性適應性變成“吸”，{{A}}的最終攻擊力提升(\d+%)$"="<pos\=45>[Pearl Umbrella] now changes ally's resistance to [Absorb], increase {{A}}'s Final ATK by $1"
+r:"^<pos\=45>{{A}}的「混元珍珠傘」使友方的屬性適應性變成“吸”，{{A}}的最終攻擊力提升(\d+%)$"="<pos\=45>[Pearl Umbrella] now changes ally's resistance to [Drain], increase {{A}}'s Final ATK by $1"
 r:"^<pos\=45>{{A}}的「混元珍珠傘」的保護目標改為血量最低的(\d+)個單位，{{A}}的最終生命值提升(\d+%)$"="<pos\=45>[Peral Umbrella] now protects the $1 lowest HP units, increase {{A}}'s Final HP by $2"
 
 r:"^<pos\=45>「雷霆萬鈞」的暴擊率提高效果提升至(\d+%)，{{A}}的最終攻擊力提升(\d+%)$"="<pos\=45>Increase [Unstoppable Thunder] Crit Rate buff to $1, increase {{A}}'s Final ATK by $2"
@@ -3143,12 +3217,12 @@ r:"^憤<color\=#000000>怒</color>復仇$"="F<color\=#000000>u</color>rious Reve
 怒髮衝冠=Blood Boil
 「{{A}}」提供的最終增傷、最終減傷效果大幅提升。=Heavily increase [{{A}}]'s Final DMG buff and Final DMG RES buff.
 
-r:"^<color\=#FFD145>階段一</color>\n1、{{A}}可以使用『鐵火流星迎春宵』為苗刀附著火焰，將近戰攻擊強化為『鐵火流星』，造成高額火焰屬性傷害並造成火焰屬性TECHNICAL，觸發爆燃時，TECHNICAL效果提升至(\d+%)。\n2、友方回合結束時，HIGHLIGHT能量提升(\d+)點；{{A}}回合開始時，若自身處於可行動狀態且HIGHLIGHT能量達到(\d+)點，則會釋放HIGHLIGHT技能。\n3、此階段的{{A}}的血量不會被降到(\d+%)以下，{{A}}當前血量到達(\d+%)時進入下一階段。\n<color\=#FFD145>階段二</color>\n1、{{A}}可以使用『鐵火流星迎春宵』為苗刀附著火焰，將近戰攻擊強化為『鐵火流星』，造成高額火焰屬性傷害並造成火焰屬性TECHNICAL，觸發爆燃時，TECHNICAL效果提升至(\d+%)。\n2、{{B}}可以使用『熾熱握手禮』使敵方全體防禦大幅降低，還可以為敵人添加燃燒狀態，配合{{A}}打出TECHNICAL。\n3、{{B}}可以使用『GOGO{{C}}！』使敵方全體受到的傷害提升，還可以使其受到治療效果降低，大幅降低敵人的生存能力。\n4、友方回合結束時，HIGHLIGHT能量提升(\d+)點；{{A}}或{{B}}回合開始時，若自身處於可行動狀態且HIGHLIGHT能量達到(\d+)點，則會釋放HIGHLIGHT技能。\n5、此階段的{{A}}的血量不會被降到(\d+%)以下，{{A}}當前血量到達(\d+%)時進入下一階段。\n<color\=#FFD145>階段三</color>\n1、{{A}}可以使用『鐵火流星迎春宵』為苗刀附著火焰，將近戰攻擊強化為『鐵火流星』，造成高額火焰屬性傷害並造成火焰屬性TECHNICAL，觸發爆燃時，TECHNICAL效果提升至(\d+%)。\n2、{{B}}可以使用『熾熱握手禮』使敵方全體防禦大幅降低，還可以為敵人添加燃燒狀態，配合{{A}}打出TECHNICAL。\n3、{{B}}可以使用『GOGO{{C}}！』使敵方全體受到的傷害提升，還可以使其受到治療效果降低，大幅降低敵人的生存能力。\n4、友方回合結束時，HIGHLIGHT能量提升(\d+)點；{{A}}或{{B}}回合開始時，若自身處於可行動狀態且HIGHLIGHT能量達到(\d+)點，則會釋放HIGHLIGHT技能。\n5、{{A}}會源源不斷的召喚{{D}}來協助作戰，在其回合開始時，若{{D}}的數量不足(\d+)隻，則會補足缺少的數量。\n6、{{D}}每個回合都會釋放『瑪哈塔爾卡加』大幅提升同伴的攻擊力，擊殺{{D}}後，增益效果會被移除。$"="<color\=#FFD145>Phase 1</color>\n1. {{A}} can use [Shooting Star Greetings] to apply fire to her sword and upgrade Melee Attack to [Fiery Shooting Star], dealing severe Fire damage and dealing a Fire TECHNICAL, when activating Backdraft, increase TECHNICAL Effect to $1.\n2. At the end of ally's turn, gain $2 HIGHLIGHT Energy; At the start of {{A}}'s turn, if she can act and HIGHLIGHT Energy reach $3, use HIGHLIGHT.\n3. In this phase {{A}}'s HP cannot drop below $4, enter next phase when {{A}}'s current HP reach $5.\n<color\=#FFD145>Phase 2</color>\n1. {{A}} can use [Shooting Star Greetings] to apply fire to her sword and upgrade Melee Attack to [Fiery Shooting Star], dealing severe Fire damage and dealing a Fire TECHNICAL, when activating Backdraft, increase TECHNICAL Effect to $6.\n2. {{B}} can use [Fiery Handshake] to heavily decrease all foes' DEF and inflict Burn.\n3. {{B}} can use [GO GO WOOF WOOF RU!] to increase all foes' DMG Taken and decrease their Healing Received.\n4. At the end of ally's turn, gain $7 HIGHLIGHT Energy; At the start of {{A}}'s or {{B}}'s turn, if she can act and HIGHLIGHT Energy reach $8, use HIGHLIGHT.\n5. In this phase {{A}}'s HP cannot drop below $9, enter next phase when {{A}}'s current HP reach $10.\n<color\=#FFD145>Phase 3</color>\n1. {{A}} can use [Shooting Star Greetings] to apply fire to her sword and upgrade Melee Attack to [Fiery Shooting Star], dealing severe Fire damage and dealing a Fire TECHNICAL, when activating Backdraft, increase TECHNICAL Effect to $11.\n2. {{B}} can use [Fiery Handshake] to heavily decrease all foes' DEF and inflict Burn.\n3. {{B}} can use [GO GO WOOF WOOF RU!] to increase all foes' DMG Taken and decrease their Healing Received.\n4. At the end of ally's turn, gain $12 HIGHLIGHT Energy; At the start of {{A}}'s or {{B}}'s turn, if she can act and HIGHLIGHT Energy reach $13, use HIGHLIGHT.\n5. {{A}} will keep summoning {{D}}, at the start of their turn, if the number of {{D}} is less than $14, summon up to $14 {{D}}.\n6. {{D}} will use [Matarukaja] each turn to heavily increase party's ATK, clear this buff after defeating {{D}}."
-r:"^1、{{A}}可以使用『鐵火流星迎春宵』為苗刀附著火焰，將近戰攻擊強化為『鐵火流星』，造成高額火焰屬性傷害並造成火焰屬性TECHNICAL，觸發爆燃時，TECHNICAL效果提升至(\d+%)。\n2、友方回合結束時，HIGHLIGHT能量提升(\d+)點；{{A}}回合開始時，若自身處於可行動狀態且HIGHLIGHT能量達到(\d+)點，則會釋放HIGHLIGHT技能。\n3、此階段的{{A}}的血量不會被降到(\d+%)以下，{{A}}當前血量到達(\d+%)時進入下一階段。$"="1. {{A}} can use [Shooting Star Greetings] to apply fire to her sword and upgrade Melee Attack to [Fiery Shooting Star], dealing severe Fire damage and dealing a Fire TECHNICAL, when activating Backdraft, increase TECHNICAL Effect to $1.\n2. At the end of ally's turn, gain $2 HIGHLIGHT Energy; At the start of {{A}}'s turn, if she can act and HIGHLIGHT Energy reach $3, use HIGHLIGHT.\n3. In this phase {{A}}'s HP cannot drop below $4, enter next phase when {{A}}'s current HP reach $5."
-r:"^1、{{A}}可以使用『鐵火流星迎春宵』為苗刀附著火焰，將近戰攻擊強化為『鐵火流星』，造成高額火焰屬性傷害並造成火焰屬性TECHNICAL，觸發爆燃時，TECHNICAL效果提升至(\d+%)。\n2、{{B}}可以使用『熾熱握手禮』使敵方全體防禦大幅降低，還可以為敵人添加燃燒狀態，配合{{A}}打出TECHNICAL。\n3、{{B}}可以使用『GOGO{{C}}！』使敵方全體受到的傷害提升，還可以使其受到治療效果降低，大幅降低敵人的生存能力。\n4、友方回合結束時，HIGHLIGHT能量提升(\d+)點；{{A}}或{{B}}回合開始時，若自身處於可行動狀態且HIGHLIGHT能量達到(\d+)點，則會釋放HIGHLIGHT技能。\n5、此階段的{{A}}的血量不會被降到(\d+%)以下，{{A}}當前血量到達(\d+%)時進入下一階段。$"="1. {{A}} can use [Shooting Star Greetings] to apply fire to her sword and upgrade Melee Attack to [Fiery Shooting Star], dealing severe Fire damage and dealing a Fire TECHNICAL, when activating Backdraft, increase TECHNICAL Effect to $1.\n2. {{B}} can use [Fiery Handshake] to heavily decrease all foes' DEF and inflict Burn.\n3. {{B}} can use [GO GO WOOF WOOF RU!] to increase all foes' DMG Taken and decrease their Healing Received.\n4. At the end of ally's turn, gain $2 HIGHLIGHT Energy; At the start of {{A}}'s or {{B}}'s turn, if she can act and HIGHLIGHT Energy reach $3, use HIGHLIGHT.\n5. In this phase {{A}}'s HP cannot drop below $4, enter next phase when {{A}}'s current HP reach $5."
+r:"^<color\=#FFD145>階段一</color>\n1、{{A}}可以使用『鐵火流星迎春宵』為苗刀附著火焰，將近戰攻擊強化為『鐵火流星』，造成高額火焰屬性傷害並造成火焰屬性TECHNICAL，觸發爆燃時，TECHNICAL效果提升至(\d+%)。\n2、友方回合結束時，HIGHLIGHT能量提升(\d+)點；{{A}}回合開始時，若自身處於可行動狀態且HIGHLIGHT能量達到(\d+)點，則會釋放HIGHLIGHT技能。\n3、此階段的{{A}}的血量不會被降到(\d+%)以下，{{A}}當前血量到達(\d+%)時進入下一階段。\n<color\=#FFD145>階段二</color>\n1、{{A}}可以使用『鐵火流星迎春宵』為苗刀附著火焰，將近戰攻擊強化為『鐵火流星』，造成高額火焰屬性傷害並造成火焰屬性TECHNICAL，觸發爆燃時，TECHNICAL效果提升至(\d+%)。\n2、{{B}}可以使用『熾熱握手禮』使敵方全體防禦大幅降低，還可以為敵人添加燃燒狀態，配合{{A}}打出TECHNICAL。\n3、{{B}}可以使用『GOGO{{C}}！』使敵方全體受到的傷害提升，還可以使其受到治療效果降低，大幅降低敵人的生存能力。\n4、友方回合結束時，HIGHLIGHT能量提升(\d+)點；{{A}}或{{B}}回合開始時，若自身處於可行動狀態且HIGHLIGHT能量達到(\d+)點，則會釋放HIGHLIGHT技能。\n5、此階段的{{A}}的血量不會被降到(\d+%)以下，{{A}}當前血量到達(\d+%)時進入下一階段。\n<color\=#FFD145>階段三</color>\n1、{{A}}可以使用『鐵火流星迎春宵』為苗刀附著火焰，將近戰攻擊強化為『鐵火流星』，造成高額火焰屬性傷害並造成火焰屬性TECHNICAL，觸發爆燃時，TECHNICAL效果提升至(\d+%)。\n2、{{B}}可以使用『熾熱握手禮』使敵方全體防禦大幅降低，還可以為敵人添加燃燒狀態，配合{{A}}打出TECHNICAL。\n3、{{B}}可以使用『GOGO{{C}}！』使敵方全體受到的傷害提升，還可以使其受到治療效果降低，大幅降低敵人的生存能力。\n4、友方回合結束時，HIGHLIGHT能量提升(\d+)點；{{A}}或{{B}}回合開始時，若自身處於可行動狀態且HIGHLIGHT能量達到(\d+)點，則會釋放HIGHLIGHT技能。\n5、{{A}}會源源不斷的召喚{{D}}來協助作戰，在其回合開始時，若{{D}}的數量不足(\d+)隻，則會補足缺少的數量。\n6、{{D}}每個回合都會釋放『瑪哈塔爾卡加』大幅提升同伴的攻擊力，擊殺{{D}}後，增益效果會被移除。$"="<color\=#FFD145>Phase 1</color>\n1. {{A}} can enchant her sword and evolve her Melee Attack to [Fiery Shooting Star]. When evolved, deal heavy Fire damage to targets, and can activate Fire TECHNICAL. When Backdraft is activated, increase TECHNICAL Effect to $1.\n2. At the end of ally's turn, gain $2 HIGHLIGHT Energy; At the start of {{A}}'s turn, if she can act and HIGHLIGHT Energy reach $3, use HIGHLIGHT.\n3. In this phase {{A}}'s HP cannot drop below $4, enter next phase when {{A}}'s current HP reach $5.\n<color\=#FFD145>Phase 2</color>\n1. {{A}} can enchant her sword and evolve her Melee Attack to [Fiery Shooting Star]. When evolved, deal heavy Fire damage to targets, and can activate Fire TECHNICAL. When Backdraft is activated, increase TECHNICAL Effect to $6.\n2. {{B}} can use [Fiery Handshake] to heavily decrease all foes' DEF and inflict Burn.\n3. {{B}} can use [GO GO WOOF WOOF RU!] to increase all foes' DMG Taken and decrease their Healing Received.\n4. At the end of ally's turn, gain $7 HIGHLIGHT Energy; At the start of {{A}}'s or {{B}}'s turn, if she can act and HIGHLIGHT Energy reach $8, use HIGHLIGHT.\n5. In this phase {{A}}'s HP cannot drop below $9, enter next phase when {{A}}'s current HP reach $10.\n<color\=#FFD145>Phase 3</color>\n1. {{A}} can enchant her sword and evolve her Melee Attack to [Fiery Shooting Star]. When evolved, deal heavy Fire damage to targets, and can activate Fire TECHNICAL. When Backdraft is activated, increase TECHNICAL Effect to $11.\n2. {{B}} can use [Fiery Handshake] to heavily decrease all foes' DEF and inflict Burn.\n3. {{B}} can use [GO GO WOOF WOOF RU!] to increase all foes' DMG Taken and decrease their Healing Received.\n4. At the end of ally's turn, gain $12 HIGHLIGHT Energy; At the start of {{A}}'s or {{B}}'s turn, if she can act and HIGHLIGHT Energy reach $13, use HIGHLIGHT.\n5. {{A}} will keep summoning {{D}}, at the start of their turn, if the number of {{D}} is less than $14, summon up to $14 {{D}}.\n6. {{D}} will use [Matarukaja] each turn to heavily increase party's ATK, clear this buff after defeating {{D}}."
+r:"^1、{{A}}可以使用『鐵火流星迎春宵』為苗刀附著火焰，將近戰攻擊強化為『鐵火流星』，造成高額火焰屬性傷害並造成火焰屬性TECHNICAL，觸發爆燃時，TECHNICAL效果提升至(\d+%)。\n2、友方回合結束時，HIGHLIGHT能量提升(\d+)點；{{A}}回合開始時，若自身處於可行動狀態且HIGHLIGHT能量達到(\d+)點，則會釋放HIGHLIGHT技能。\n3、此階段的{{A}}的血量不會被降到(\d+%)以下，{{A}}當前血量到達(\d+%)時進入下一階段。$"="1. {{A}} can enchant her sword and evolve her Melee Attack to [Fiery Shooting Star]. When evolved, deal heavy Fire damage to targets, and can activate Fire TECHNICAL. When Backdraft is activated, increase TECHNICAL Effect to $1.\n2. At the end of ally's turn, gain $2 HIGHLIGHT Energy; At the start of {{A}}'s turn, if she can act and HIGHLIGHT Energy reach $3, use HIGHLIGHT.\n3. In this phase {{A}}'s HP cannot drop below $4, enter next phase when {{A}}'s current HP reach $5."
+r:"^1、{{A}}可以使用『鐵火流星迎春宵』為苗刀附著火焰，將近戰攻擊強化為『鐵火流星』，造成高額火焰屬性傷害並造成火焰屬性TECHNICAL，觸發爆燃時，TECHNICAL效果提升至(\d+%)。\n2、{{B}}可以使用『熾熱握手禮』使敵方全體防禦大幅降低，還可以為敵人添加燃燒狀態，配合{{A}}打出TECHNICAL。\n3、{{B}}可以使用『GOGO{{C}}！』使敵方全體受到的傷害提升，還可以使其受到治療效果降低，大幅降低敵人的生存能力。\n4、友方回合結束時，HIGHLIGHT能量提升(\d+)點；{{A}}或{{B}}回合開始時，若自身處於可行動狀態且HIGHLIGHT能量達到(\d+)點，則會釋放HIGHLIGHT技能。\n5、此階段的{{A}}的血量不會被降到(\d+%)以下，{{A}}當前血量到達(\d+%)時進入下一階段。$"="1. {{A}} can enchant her sword and evolve her Melee Attack to [Fiery Shooting Star]. When evolved, deal heavy Fire damage to targets, and can activate Fire TECHNICAL. When Backdraft is activated, increase TECHNICAL Effect to $1.\n2. {{B}} can use [Fiery Handshake] to heavily decrease all foes' DEF and inflict Burn.\n3. {{B}} can use [GO GO WOOF WOOF RU!] to increase all foes' DMG Taken and decrease their Healing Received.\n4. At the end of ally's turn, gain $2 HIGHLIGHT Energy; At the start of {{A}}'s or {{B}}'s turn, if she can act and HIGHLIGHT Energy reach $3, use HIGHLIGHT.\n5. In this phase {{A}}'s HP cannot drop below $4, enter next phase when {{A}}'s current HP reach $5."
 出現在特殊天鵝絨試煉中的{{A}}的幻像。不僅是外表，就連戰鬥風格都極其相似。屬性/職業為火焰/支配。=A phantom of {{A}} that appears in a special Velvet Trial. Not only in appearance, but even their fighting style is extremely similar. Their attribute/role is Fire/Sweeper.
 出現在特殊天鵝絨試煉中的{{A}}的幻像。不僅是外表，就連戰鬥風格都極其相似。屬性/職業為火焰/屈從。=A phantom of {{A}} that appears in a special Velvet Trial. Not only in appearance, but even their fighting style is extremely similar. Their attribute/role is Fire/Saboteur.
-r:"^1、{{A}}可以使用『鐵火流星迎春宵』為苗刀附著火焰，將近戰攻擊強化為『鐵火流星』，造成高額火焰屬性傷害並造成火焰屬性TECHNICAL，觸發爆燃時，TECHNICAL效果提升至(\d+%)。\n2、{{B}}可以使用『熾熱握手禮』使敵方全體防禦大幅降低，還可以為敵人添加燃燒狀態，配合{{A}}打出TECHNICAL。\n3、{{B}}可以使用『GOGO{{C}}！』使敵方全體受到的傷害提升，還可以使其受到治療效果降低，大幅降低敵人的生存能力。\n4、友方回合結束時，HIGHLIGHT能量提升(\d+)點；{{A}}或{{B}}回合開始時，若自身處於可行動狀態且HIGHLIGHT能量達到(\d+)點，則會釋放HIGHLIGHT技能。\n5、{{A}}會源源不斷的召喚{{D}}來協助作戰，在其回合開始時，若{{D}}的數量不足(\d+)隻，則會補足缺少的數量。\n6、{{D}}每個回合都會釋放『瑪哈塔爾卡加』大幅提升同伴的攻擊力，擊殺{{D}}後，增益效果會被移除。$"="1. {{A}} can use [Shooting Star Greetings] to apply fire to her sword and upgrade Melee Attack to [Fiery Shooting Star], dealing severe Fire damage and dealing a Fire TECHNICAL, when activating Backdraft, increase TECHNICAL Effect to $1.\n2. {{B}} can use [Fiery Handshake] to heavily decrease all foes' DEF and inflict Burn.\n3. {{B}} can use [GO GO WOOF WOOF RU!] to increase all foes' DMG Taken and decrease their Healing Received.\n4. At the end of ally's turn, gain $2 HIGHLIGHT Energy; At the start of {{A}}'s or {{B}}'s turn, if she can act and HIGHLIGHT Energy reach $3, use HIGHLIGHT.\n5. {{A}} will keep summoning {{D}}, at the start of their turn, if the number of {{D}} is less than $4, summon up to $4 {{D}}.\n6. {{D}} will use [Matarukaja] each turn to heavily increase party's ATK, clear this buff after defeating {{D}}."
+r:"^1、{{A}}可以使用『鐵火流星迎春宵』為苗刀附著火焰，將近戰攻擊強化為『鐵火流星』，造成高額火焰屬性傷害並造成火焰屬性TECHNICAL，觸發爆燃時，TECHNICAL效果提升至(\d+%)。\n2、{{B}}可以使用『熾熱握手禮』使敵方全體防禦大幅降低，還可以為敵人添加燃燒狀態，配合{{A}}打出TECHNICAL。\n3、{{B}}可以使用『GOGO{{C}}！』使敵方全體受到的傷害提升，還可以使其受到治療效果降低，大幅降低敵人的生存能力。\n4、友方回合結束時，HIGHLIGHT能量提升(\d+)點；{{A}}或{{B}}回合開始時，若自身處於可行動狀態且HIGHLIGHT能量達到(\d+)點，則會釋放HIGHLIGHT技能。\n5、{{A}}會源源不斷的召喚{{D}}來協助作戰，在其回合開始時，若{{D}}的數量不足(\d+)隻，則會補足缺少的數量。\n6、{{D}}每個回合都會釋放『瑪哈塔爾卡加』大幅提升同伴的攻擊力，擊殺{{D}}後，增益效果會被移除。$"="1. {{A}} can enchant her sword and evolve her Melee Attack to [Fiery Shooting Star]. When evolved, deal heavy Fire damage to targets, and can activate Fire TECHNICAL. When Backdraft is activated, increase TECHNICAL Effect to $1.\n2. {{B}} can use [Fiery Handshake] to heavily decrease all foes' DEF and inflict Burn.\n3. {{B}} can use [GO GO WOOF WOOF RU!] to increase all foes' DMG Taken and decrease their Healing Received.\n4. At the end of ally's turn, gain $2 HIGHLIGHT Energy; At the start of {{A}}'s or {{B}}'s turn, if she can act and HIGHLIGHT Energy reach $3, use HIGHLIGHT.\n5. {{A}} will keep summoning {{D}}, at the start of their turn, if the number of {{D}} is less than $4, summon up to $4 {{D}}.\n6. {{D}} will use [Matarukaja] each turn to heavily increase party's ATK, clear this buff after defeating {{D}}."
 所有怪盜幻像及其召喚物對處於燃燒狀態的敵人造成傷害提升。=All phantom and their summon deal more damage to Burning foes.
 烈火燎原=Spreading Wildfire
 r:"^戰鬥中有1名處於燃燒狀態的敵人時，{{A}}的暴擊率提升(\d+%)，每多1名處於燃燒狀態的敵人，{{A}}的暴擊率額外提升(\d+%)，透過此效果最多使{{A}}的暴擊率提升(\d+%)。$"="When there is 1 foe inflicted with Burn, increase {{A}}'s Crit Rate by $1, for each foe inflicted with Burn, additionally increase {{A}}'s Crit Rate by $2, up to $3 Crit Rate."
@@ -3160,9 +3234,9 @@ r:"^使用『GOGO{{A}}！』後，使目標受治療量降低效果及防禦降�
 r:"^『鐵花舞』狀態的持續時間變為永久，『鐵火流星』強化為『焰流星火』，造成傷害提升(\d+%)。使用『焰流星火』不會退出『鐵花舞』狀態。『福滿乾坤』對『焰流星火』的強化狀態和暴擊率提升狀態的持續時間變為永久。$"="[Iron Flower Dance] is now permanent, upgrade [Fiery Shooting Star] to [Blazing Meteor], increase DMG Dealt by $1. When using [Blazing Meteor], Yaoling will not lose [Iron Flower Dance]. The buffs from [Abundant World] are now permanent."
 r:"^對所有敵人造成火焰屬性傷害，自身暴擊率提升(\d+%)，效果持續(\d+)回合。\n使『鐵火流星』獲得強化：額外造成火焰屬性傷害，強化狀態持續(\d+)回合。$"="Deal Fire damage to all foes, increase user's Crit Rate by $1 for $2 turns.\nUpgrade [Fiery Shooting Star]: Deal bonus Fire damage. This upgrade lasts for $3 turn."
 r:"^對所有敵人造成火焰屬性傷害，有(\d+%)基礎機率使目標陷入燃燒和『歲火』狀態，持續(\d+)回合。\n使『鐵火流星』獲得強化：有(\d+%)基礎機率使目標陷入『歲火』狀態，強化狀態持續(\d+)回合。\n『歲火』：每回合受到基於{{A}}攻擊力的火焰屬性傷害，持續(\d+)回合，可疊加(\d+)層。$"="Deal Fire damage to all foes, with a $1 base chance to inflict targets with Burn and [Year Fire] for $2 turns.\nUpgrade [Fiery Shooting Star]: $3 base chance to inflict targets with [Year Fire]. This upgrade lasts for $4 turn.\n[Year Fire]: Each turn, take Fire damage based on {{A}}'s ATK. This effect lasts for $5 turns and stacks up to $6 times."
-r:"^為苗刀附著火焰，自身進入『鐵花舞』狀態：造成傷害提升，期間近戰攻擊強化為『鐵火流星』，效果持續(\d+)回合或持續至釋放『鐵火流星』。\n『鐵火流星』：對所有敵人造成火焰屬性傷害並造成火焰屬性TECHNICAL，觸發爆燃時，TECHNICAL效果提升至(\d+%)。\n初始擁有(\d+)回合冷卻時間，使用該技能後本回合仍可使用其他技能，該技能不視為{{A}}技能。$"="Apply fire to user's sword and gain [Iron Flower Dance] state: Increase DMG Dealt, upgrade Melee Attack to [Fiery Shooting Star] for $1 turn or until user uses [Fiery Shooting Star].\n[Fiery Shooting Star]: Deal Fire damage to all foes and deal a Fire TECHNICAL, when activating Backdraft, increase TECHNICAL Effect to $2.\nStart with a $3 turn cooldown. After using this skill, Yaoling can use other skills, this doesn't count as a Persona skill."
+r:"^為苗刀附著火焰，自身進入『鐵花舞』狀態：造成傷害提升，期間近戰攻擊強化為『鐵火流星』，效果持續(\d+)回合或持續至釋放『鐵火流星』。\n『鐵火流星』：對所有敵人造成火焰屬性傷害並造成火焰屬性TECHNICAL，觸發爆燃時，TECHNICAL效果提升至(\d+%)。\n初始擁有(\d+)回合冷卻時間，使用該技能後本回合仍可使用其他技能，該技能不視為{{A}}技能。$"="Enchant user's sword and grant her [Iron Flower Dance]: Increase DMG Dealt, and Melee Attack evolves to [Fiery Shooting Star]. After activating [Fiery Shooting Star], or at the end of the turn, remove this effect. [Fiery Shooting Star]: Deal Fire damage to all foes, and can activate Fire TECHNICAL. When Backdraft is activated, increase TECHNICAL Effect to $2.\nThis skill has an initial cooldown time of $3 turn, and after using it, other skills can be used on the same turn (this skill is not treated as a Persona skill)."
 r:"^對所有敵人造成火焰屬性傷害，使自身的攻擊力提升，『鐵火流星』造成傷害提升，增益效果持續(\d+)回合。$"="Deal Fire damage to all foes, increase user's ATK and [Fiery Shooting Star] DMG Dealt for $1 turns."
-對所有敵人造成火焰屬性傷害，造成TECHNICAL。=Deal Fire damage to all foes, deal a TECHNICAL.
+對所有敵人造成火焰屬性傷害，造成TECHNICAL。=Deal Fire damage to all foes, activate a TECHNICAL.
 r:"^對所有敵人造成火焰屬性傷害，使目標防禦降低，持續(\d+)回合，並有(\d+%)基礎機率為目標附加燃燒狀態。自身獲得『熱烈歡迎』。$"="Deal Fire damage to all foes, decrease target's DEF for $1 turns, with a $2 base chance to inflict targets with Burn. User gains [Warm Welcome]."
 r:"^對1名敵人造成火焰屬性傷害，使目標防禦降低，持續(\d+)回合。自身獲得『窮追猛打』。$"="Deal Fire damage to 1 foe, decrease target's DEF for $1 turns. User gains [Furious Pursuit]."
 r:"^對所有敵人造成火焰屬性傷害，使目標受到傷害提升，受到火屬性傷害提升，持續(\d+)回合。$"="Deal Fire damage to all foes, increase target's DMG Taken and Fire DMG Taken for $1 turns."
@@ -4368,3 +4442,10 @@ r:"^意<color\=#000000>志</color>傳承$"="I<color\=#000000>n</color>herited Wi
 sr:"^造成弱點傷害時，自身獲得『(.*)』；『(.*)』：造成的最終傷害提升(.*)，持續(.*)回合，最多可疊加(.*)層。$"="When dealing Weak damage, user gains [$1]. [$2]: Increase Final DMG by $3 for $4 turns. Stacks up to $5 times."
 生機勃發=Vital Bloom
 r:"^生<color\=#000000>機</color>勃發$"="V<color\=#000000>i</color>tal Bloom"
+
+先民聖所=Ancestral Sanctuary
+sr:"^造成弱點傷害時，獲得『(.*)』，同時若造成的傷害為雙屬性傷害或追加傷害，增益效果強化為『(.*)』。『(.*)』：最終傷害提升(.*)，若強化為『(.*)』，最終傷害提升增加至(.*)，持續(.*)回合。$"="<size\=22>When dealing Weakness damage, user gains [$1], if the damage dealt was Dual Attribute damage or Follow Up damage, boost this effect to [$2]. [$3]: Increase Final DMG by $4, if boosted to [$5], increase Final DMG to $6. Lasts for $7 turns.</size>"
+先祖賜福=Ancestral Blessing
+r:"^先<color\=#000000>祖賜福$"="A<color\=#000000>n</color>cestral Blessing"
+先祖神佑=Ancestral Protection
+r:"^先<color\=#000000>祖神佑$"="A<color\=#000000>n</color>cestral Protection"

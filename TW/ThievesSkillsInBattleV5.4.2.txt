@@ -976,30 +976,31 @@ r:"^行<color\=#000000>刑</color>官$"="E<color\=#000000>x</color>ecutioner"
 ----------
 Oracle - Futaba Sakura
 ----------
-r:"^使<color\=#FFFF00>所有</color>敵人防禦力降低(\d+%)\+\({{A}}每有(\d+)點攻擊力額外使防禦力降低(\d+\.\d+%)，最多計入(\d+)點攻擊力\)，持續(\d+)回合。效果持續期間，敵人受到弱點傷害時，使上述減防效果翻倍。若自身解析進度為100%，給予我方全體『駭入完成』，持續(\d+)回合。$"="Decrease <color\=#FFFF00>all</color> foes' DEF by $1 + (An additional $3 for every $2 ATK, up to $4 ATK) for $5 turns. During this duration, double this debuff when foes take Weak damage. Give all allies [Hack Complete] for $6 turns if Futaba is at 100% Analysis Progress."
-r:"^使所有敵人防禦力降低(\d+%)\+\({{A}}每有(\d+)點攻擊力額外使防禦力降低(\d+\.\d+%)，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\)，持續(\d+)回合。效果持續期間，敵人受到弱點傷害時，使上述減防效果翻倍。若自身解析進度為100%，給予我方全體『駭入完成』，持續(\d+)回合。$"="Decrease all foes' DEF by $1 + (An additional $3 for every $2 ATK, up to <color\=#FFFC40>$4</color> ATK) for $5 turns. During this duration, double this debuff when foes take Weak damage. Give all allies [Hack Complete] for $6 turns if Futaba is at 100% Analysis Progress."
+r:"^使<color\=#FFFF00>所有</color>敵人防禦力降低(\d+%)\+\({{A}}每有(\d+)點攻擊力額外使防禦力降低(\d+\.\d+%)，最多計入(\d+)點攻擊力\)，持續(\d+)回合。效果持續期間，敵人受到弱點傷害時，使上述減防效果翻倍。若自身解析進度為100%，給予我方全體『駭入完成』，持續(\d+)回合。$"="Decrease <color\=#FFFF00>all</color> foes' DEF by $1. For every $2 of Futaba's ATK, additionally decrease DEF by $3 (up to $4 ATK). Lasts for $5 turns. When this is active, when foes take Weakness damage, double this DEF Down debuff. If Futaba's Analysis Progress is at 100%, grant all allies [Hack Complete] for $6 turns."
+r:"^使所有敵人防禦力降低(\d+%)\+\({{A}}每有(\d+)點攻擊力額外使防禦力降低(\d+\.\d+%)，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\)，持續(\d+)回合。效果持續期間，敵人受到弱點傷害時，使上述減防效果翻倍。若自身解析進度為100%，給予我方全體『駭入完成』，持續(\d+)回合。$"="Decrease all foes' DEF by $1. For every $2 of Futaba's ATK, additionally decrease DEF by $3 (up to <color\=#FFFC40>$4</color> ATK). Lasts for $5 turns. When this is active, when foes take Weakness damage, double this DEF Down debuff. If Futaba's Analysis Progress is at 100%, grant all allies [Hack Complete] for $6 turns."
 
-r:"^使<color\=#FFFF00>1名</color>敵人受到傷害增加(\d+%)\+\({{A}}每有(\d+)點攻擊力額外使目標受到傷害增加(\d+\.\d+%)，最多計入(\d+)點攻擊力\)，持續(\d+)回合。效果持續期間，友方怪盜使用{{B}}技能/追加效果/HIGHLIGHT/{{C}}對目標造成傷害後，{{A}}獲得(\d+%)解析進度。若自身解析進度為100%，給予我方全體『駭入完成』，持續(\d+)回合。$"="Increase <color\=#FFFC40>1</color> foe's DMG Taken by $1 + (An additional $3 for every $2 ATK, up to $4) for $5 turns. During this duration, Futaba gains $6 Analysis Progress after allies deal damage with Persona skill/Follow Up/HIGHLIGHT/{{C}}. Give all allies [Hack Complete] for $7 turns if Futaba is at 100% Analysis Progress."
-r:"^使1名敵人受到傷害增加(\d+%)\+\({{A}}每有(\d+)點攻擊力額外使目標受到傷害增加(\d+\.\d+%)，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\），持續(\d+)回合。效果持續期間，友方怪盜使用{{B}}技能/追加效果/HIGHLIGHT/{{C}}對目標造成傷害後，{{A}}獲得(\d+%)解析進度。若自身解析進度為100%，給予我方全體『駭入完成』，持續(\d+)回合。$"="Increase 1 foe's DMG Taken by $1 + (An additional $3 for every $2 ATK, up to <color\=#FFFC40>$4</color>) for $5 turns. During this duration, Futaba gains $6 Analysis Progress after allies deal damage with Persona skill/Follow Up/HIGHLIGHT/{{C}}. Give all allies [Hack Complete] for $7 turns if Futaba is at 100% Analysis Progress."
+r:"^使<color\=#FFFF00>1名</color>敵人受到傷害增加(\d+%)\+\({{A}}每有(\d+)點攻擊力額外使目標受到傷害增加(\d+\.\d+%)，最多計入(\d+)點攻擊力\)，持續(\d+)回合。效果持續期間，友方怪盜使用{{B}}技能/追加效果/HIGHLIGHT/{{C}}對目標造成傷害後，{{A}}獲得(\d+%)解析進度。若自身解析進度為100%，給予我方全體『駭入完成』，持續(\d+)回合。$"="Increase <color\=#FFFF00>1</color> foe's DMG Taken by $1. For every $2 of Futaba's ATK, additionally increase DMG Taken by $3 (up to $4 ATK). Lasts for $5 turns. When this is active, after an ally deals damage with a {{B}} skill/Follow Up/HIGHLIGHT/{{C}}, Futaba gains $6 Analysis Progress. If Futaba's Analysis Progress is at 100%, grant all allies [Hack Complete] for $7 turns."
+r:"^使1名敵人受到傷害增加(\d+%)\+\({{A}}每有(\d+)點攻擊力額外使目標受到傷害增加(\d+\.\d+%)，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\），持續(\d+)回合。效果持續期間，友方怪盜使用{{B}}技能/追加效果/HIGHLIGHT/{{C}}對目標造成傷害後，{{A}}獲得(\d+%)解析進度。若自身解析進度為100%，給予我方全體『駭入完成』，持續(\d+)回合。$"="Increase 1 foe's DMG Taken by $1. For every $2 of Futaba's ATK, additionally increase DMG Taken by $3 (up to <color\=#FFFC40>$4</color> ATK). Lasts for $5 turns. When this is active, after an ally deals damage with a {{B}} skill/Follow Up/HIGHLIGHT/{{C}}, Futaba gains $6 Analysis Progress. If Futaba's Analysis Progress is at 100%, grant all allies [Hack Complete] for $7 turns."
 
-r:"^使<color\=#FFFF00>1名</color>友方怪盜的攻擊力提升(\d+)\+\({{A}}每有(\d+)點攻擊力額外提升其(\d+\.\d+)攻擊力，最多計入(\d+)點攻擊力\)，持續(\d+)回合。為全體敵人添加上該名怪盜適應性的『擾亂病毒』，持續(\d+)回合。$"="For $5 turns, increase <color\=#FFFF00>1</color> ally's ATK by $1; Increase ATK by $3 more for every $2 points of Futaba's ATK (up to $4 ATK). Inflict [Disruption Virus] on all foes for $6 turn. based on the targeted ally's attribute."
-r:"^解鎖條件：我方角色擁有『駭入完成』\n使1名友方怪盜的攻擊力提升<color\=#FFFC40>(\d+)</color>\+\({{A}}每有(\d+)點攻擊力，額外提升其(\d+\.\d+)攻擊力，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\)，持續(\d+)回合。為全體敵人添加上該名怪盜適應性的『擾亂病毒』，持續(\d+)回合。『擾亂病毒』：改變目標的對應的適應性屬性：若為無效、反彈、吸收，則變為耐性；若為耐性則變為普通；若為普通則變為弱點。若為弱點，則提升其(\d+%)受到弱點傷害。$"="Usable when allies have [Hack Complete]\nFor $5 turns, increase 1 ally's ATK by <color\=#FFFC40>$1</color>; Increase ATK by $3 more for every $2 points of Futaba's ATK (up to <color\=#FFFC40>$4</color> ATK). Inflict [Disruption Virus] on all foes for $6 turn, based on the targeted ally's attribute. [Disruption Virus]: Change affinities of the foe this is inflicted upon: Null, Repel, and Drain become Resist; Resist becomes Normal; Normal becomes Weak. Weak attributes take $7 more Weak DMG."
-r:"^解鎖條件：我方角色擁有『駭入完成』\n使1名友方怪盜的攻擊力提升<color\=#FFFC40>(\d+)</color>\+\({{A}}每有(\d+)點攻擊力，額外提升其(\d+\.\d+)攻擊力，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\)，持續(\d+)回合。為全體敵人添加上該名怪盜適應性的『擾亂病毒』，持續(\d+)回合。『擾亂病毒』：使目標對應屬性的<link\="s\|286"><u>『適應性降級』</u></link>：若為無效、反彈、吸收，則變為耐性；若為耐性則變為普通；若為普通則變為弱點。若為弱點，則提升其(\d+%)受到弱點傷害。$"="Use condition: When allies have [Hack Complete]\nFor $5 turns, increase 1 ally's ATK by <color\=#FFFC40>$1</color>; Increase ATK by $3 more for every $2 points of Futaba's ATK (up to <color\=#FFFC40>$4</color> ATK). Inflict [Disruption Virus] on all foes for $6 turn. [Disruption Virus]: Inflict <link\="s|286"><u>[Affinity Downgrade</u></link> based on the targeted ally's attribute: Null, Repel, and Drain become Resist; Resist becomes Normal; Normal becomes Weak. Weak attributes take $7 more Weak DMG."
+r:"^使<color\=#FFFF00>1名</color>友方怪盜的攻擊力提升(\d+)\+\({{A}}每有(\d+)點攻擊力額外提升其(\d+\.\d+)攻擊力，最多計入(\d+)點攻擊力\)，持續(\d+)回合。為全體敵人添加上該名怪盜適應性的『擾亂病毒』，持續(\d+)回合。$"="Increase <color\=#FFFF00>1</color> ally's ATK by $1. For every $2 of Futaba's ATK, additionally increase ATK by $3 (up to $4 ATK). Lasts for $5 turns.\nInflict [Disruption Virus] on all foes for $6 turn."
+r:"^解鎖條件：我方角色擁有『駭入完成』\n使1名友方怪盜的攻擊力提升<color\=#FFFC40>(\d+)</color>\+\({{A}}每有(\d+)點攻擊力，額外提升其(\d+\.\d+)攻擊力，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\)，持續(\d+)回合。為全體敵人添加上該名怪盜適應性的『擾亂病毒』，持續(\d+)回合。『擾亂病毒』：使目標對應屬性的<link\="s\|286"><u>『適應性降級』</u></link>：若為無效、反彈、吸收，則變為耐性；若為耐性則變為普通；若為普通則變為弱點。若為弱點，則提升其(\d+%)受到弱點傷害。$"="Unlock condition: When allies have [Hack Complete].\nIncrease 1 ally's ATK by <color\=#FFFC40>$1</color>. For every $2 of Futaba's ATK, additionally increase ATK by $3 (up to <color\=#FFFC40>$4</color> ATK). Lasts for $5 turns.\nInflict [Disruption Virus] on all foes for $6 turn. [Disruption Virus]: Inflict <link\="s|286"><u>[Affinity Downgrade]</u></link> based on the targeted ally's attribute: Null, Repel, and Drain become Resist; Resist becomes Normal; Normal becomes Weak. Weak attributes take $7 more Weak DMG."
 
-r:"^使<color\=#FFFF00>所有</color>友方怪盜的攻擊力提升(\d+)\+\({{A}}每有(\d+)點攻擊力額外提升其(\d+\.\d+)攻擊力，最多計入(\d+)點攻擊力\)，持續(\d+)回合。為全體敵人添加上我方所有怪盜適應性的『擾亂病毒』，持續(\d+)回合。$"="For $5 turns, increase <color\=#FFFF00>all</color> allies' ATK by $1; Increase ATK by $3 more for every $2 points of Futaba's ATK (up to $4 ATK). Inflict [Disruption Virus] on all foes for $6 turn, based on the targeted ally's attribute."
-r:"^解鎖條件：我方角色擁有『駭入完成』\n使所有名友方怪盜的攻擊力提升<color\=#FFFC40>(\d+)</color>\+\({{A}}每有(\d+)點攻擊力，額外提升其(\d+\.\d+)攻擊力，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\)，持續(\d+)回合。為全體敵人添加上該名怪盜適應性的『擾亂病毒』，持續(\d+)回合。『擾亂病毒』：使目標對應屬性的<link\="s\|286"><u>『適應性降級』</u></link>：若為無效、反彈、吸收，則變為耐性；若為耐性則變為普通；若為普通則變為弱點。若為弱點，則提升其(\d+%)受到弱點傷害。$"="Use condition: When allies have [Hack Complete]\nFor $5 turns, increase all allies's ATK by <color\=#FFFC40>$1</color>; Increase ATK by $3 more for every $2 points of Futaba's ATK (up to <color\=#FFFC40>$4</color> ATK). Inflict [Disruption Virus] on all foes for $6 turn. [Disruption Virus]: Inflict <link\="s|286"><u>[Affinity Downgrade</u></link> based on the targeted ally's attribute: Null, Repel, and Drain become Resist; Resist becomes Normal; Normal becomes Weak. Weak attributes take $7 more Weak DMG."
-r:"^解鎖條件：我方角色擁有『駭入完成』\n使所有名友方怪盜的攻擊力提升<color\=#FFFC40>(\d+)</color>\+\({{A}}每有(\d+)點攻擊力，額外提升其(\d+\.\d+)攻擊力，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\)，持續(\d+)回合。為全體敵人添加上我方所有怪盜適應性的『擾亂病毒』，持續(\d+)回合。『擾亂病毒』：使目標對應屬性的<link\="s\|286"><u>『適應性降級』</u></link>：若為無效、反彈、吸收，則變為耐性；若為耐性則變為普通；若為普通則變為弱點。若為弱點，則提升其(\d+%)受到弱點傷害。$"="Use condition: When allies have [Hack Complete]\nFor $5 turns, increase all allies's ATK by <color\=#FFFC40>$1</color>; Increase ATK by $3 more for every $2 points of Futaba's ATK (up to <color\=#FFFC40>$4</color> ATK). Inflict [Disruption Virus] on all foes for $6 turn. [Disruption Virus]: Inflict <link\="s|286"><u>[Affinity Downgrade</u></link> based on all allies' attribute: Null, Repel, and Drain become Resist; Resist becomes Normal; Normal becomes Weak. Weak attributes take $7 more Weak DMG."
+r:"^使<color\=#FFFF00>所有</color>友方怪盜的攻擊力提升(\d+)\+\({{A}}每有(\d+)點攻擊力額外提升其(\d+\.\d+)攻擊力，最多計入(\d+)點攻擊力\)，持續(\d+)回合。為全體敵人添加上我方所有怪盜適應性的『擾亂病毒』，持續(\d+)回合。$"="Increase <color\=#FFFF00>all</color> allies' ATK by $1. For every $2 of Futaba's ATK, additionally increase ATK by $3 (up to $4 ATK). Lasts for $5 turns.\nInflict [Disruption Virus] on all foes for $6 turn."
+r:"^解鎖條件：我方角色擁有『駭入完成』\n使所有名友方怪盜的攻擊力提升<color\=#FFFC40>(\d+)</color>\+\({{A}}每有(\d+)點攻擊力，額外提升其(\d+\.\d+)攻擊力，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\)，持續(\d+)回合。為全體敵人添加上該名怪盜適應性的『擾亂病毒』，持續(\d+)回合。『擾亂病毒』：使目標對應屬性的<link\="s\|286"><u>『適應性降級』</u></link>：若為無效、反彈、吸收，則變為耐性；若為耐性則變為普通；若為普通則變為弱點。若為弱點，則提升其(\d+%)受到弱點傷害。$"="Unlock condition: When allies have [Hack Complete].\nIncrease all allies' ATK by <color\=#FFFC40>$1</color>. For every $2 of Futaba's ATK, additionally increase ATK by $3 (up to <color\=#FFFC40>$4</color> ATK). Lasts for $5 turns.\nInflict [Disruption Virus] on all foes for $6 turn. [Disruption Virus]: Inflict <link\="s|286"><u>[Affinity Downgrade]</u></link> based on the targeted ally's attribute: Null, Repel, and Drain become Resist; Resist becomes Normal; Normal becomes Weak. Weak attributes take $7 more Weak DMG."
+r:"^解鎖條件：我方角色擁有『駭入完成』\n使所有名友方怪盜的攻擊力提升<color\=#FFFC40>(\d+)</color>\+\({{A}}每有(\d+)點攻擊力，額外提升其(\d+\.\d+)攻擊力，最多計入<color\=#FFFC40>(\d+)</color>點攻擊力\)，持續(\d+)回合。為全體敵人添加上我方所有怪盜適應性的『擾亂病毒』，持續(\d+)回合。『擾亂病毒』：使目標對應屬性的<link\="s\|286"><u>『適應性降級』</u></link>：若為無效、反彈、吸收，則變為耐性；若為耐性則變為普通；若為普通則變為弱點。若為弱點，則提升其(\d+%)受到弱點傷害。$"="Unlock condition: When allies have [Hack Complete].\nIncrease all allies' ATK by <color\=#FFFC40>$1</color>. For every $2 of Futaba's ATK, additionally increase ATK by $3 (up to <color\=#FFFC40>$4</color> ATK). Lasts for $5 turns.\nInflict [Disruption Virus] on all foes for $6 turn. [Disruption Virus]: Inflict <link\="s|286"><u>[Affinity Downgrade]</u></link> based on all allies' attribute: Null, Repel, and Drain become Resist; Resist becomes Normal; Normal becomes Weak. Weak attributes take $7 more Weak DMG."
 
+解析進度=Analysis Progress
 r:"^當前解析進度為(\d+%)$"="Current Analysis Progress: $1"
-r:"^傷害提升(\d+(.\d+)?(%)?)，造成弱點傷害時效果增加$"="Increase damage by $1; When dealing Weak damage, increase this effect"
-r:"^受到傷害提升(\d+%)，受到傷害後{{A}}獲得(\d+%)解析進度。$"="Increase DMG Taken by $1; After taking damage, grant {{A}} $2 Analysis Progress"
-r:"^受到傷害提升(\d+\.\d+%)，受到傷害後{{A}}獲得(\d+%)解析進度。$"="Increase DMG Taken by $1; After taking damage, grant {{A}} $2 Analysis Progress"
+駭入完成=Hack Complete
+r:"^傷害提升(\d+(.\d+)?(%)?)，造成弱點傷害時效果增加$"="Increase DMG Bonus by $1. When dealing Weakness damage, increase this effect"
+受到弱點傷害時防禦力降低=Increase DEF Down\nwhen taking Weakness damage
+r:"^受到傷害提升(\d+%)，受到傷害後{{A}}獲得(\d+%)解析進度。$"="Increase DMG Taken by $1. After taking damage, {{A}} gains $2 Analysis Progress"
+r:"^受到傷害提升(\d+\.\d+%)，受到傷害後{{A}}獲得(\d+%)解析進度。$"="Increase DMG Taken by $1. After taking damage, {{A}} gains $2 Analysis Progress"
 擾亂病毒=Disruption Virus
 適應性發生了改變=Resistances changed
 r:"^受到弱點傷害提升(\d+%)$"="Increase Weak DMG Taken by $1"
-漏洞分析=Vulnerability Analysis
-使用『無聲侵襲』或『數據破解』時，技能效果提升。=Increase skill effect when using \n[Silent Hacking] or [Data Crack]
-受到弱點傷害時防禦力降低=Increase DEF decreases \nwhen taking Weak damage
+漏洞分析=Loophole Analysis
+使用『無聲侵襲』或『數據破解』時，技能效果提升。=When using [Silent Intrusion] or [Data Crack],\nincrease skill effect
 r:"^弱點傷害提升(\d+%)$"="Increase Weak DMG by $1"
 駭入時機=Hacking Time
 
@@ -1092,11 +1093,11 @@ r:"^『HIGHLIGHT』：對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻�
 可以提升仲春結界解除時追加效果的傷害=Increase Follow Up DMG \nwhen Mid-Spring Domain ends
 可以提升冬夜結界解除時追加效果的傷害=Increase Follow Up DMG \nwhen Winter Night Domain ends
 
-釋放HIGHLIGHT獲得，可以提升仲春結界解除時追加效果的傷害=Gained from HIGHLIGHT; Increase Follow Up DMG when Mid-Spring Domain ends
-釋放HIGHLIGHT獲得，可以提升冬夜結界解除時追加效果的傷害=Gained from HIGHLIGHT; Increase Follow Up DMG when Winter Night Domain ends
+釋放HIGHLIGHT獲得，可以提升仲春結界解除時追加效果的傷害=Gained from HIGHLIGHT, increase Follow Up DMG when Mid-Spring Domain ends
+釋放HIGHLIGHT獲得，可以提升冬夜結界解除時追加效果的傷害=Gained from HIGHLIGHT, increase Follow Up DMG when Winter Night Domain ends
 
-『不屈於宿命的靈魂』返還，可以提升仲春結界解除時追加效果的傷害=<size\=27>Gained from [Fate-Defying Soul]; Increase Follow Up DMG when Mid-Spring Domain ends</size>
-『不屈於宿命的靈魂』返還，可以提升冬夜結界解除時追加效果的傷害=<size\=26>Gained from [Fate-Defying Soul]; Increase Follow Up DMG when Winter Night Domain ends</size>
+『不屈於宿命的靈魂』返還，可以提升仲春結界解除時追加效果的傷害=<size\=27>Gained from [Fate-Defying Soul], increase Follow Up DMG when Mid-Spring Domain ends</size>
+『不屈於宿命的靈魂』返還，可以提升冬夜結界解除時追加效果的傷害=<size\=26>Gained from [Fate-Defying Soul], increase Follow Up DMG when Winter Night Domain ends</size>
 
 由潛能『澄淨』獲得，可以提升仲春結界解除時追加效果的傷害=<size\=27>Gained from Talent [Serene], increase \nFollow Up DMG when Mid-Spring Domain ends</size>
 由潛能『澄淨』獲得，可以提升冬夜結界解除時追加效果的傷害=<size\=26>Gained from Talent [Serene], increase \nFollow Up DMG when Winter Night Domain ends</size>
@@ -2347,3 +2348,31 @@ r:"^感<color\=#000000>冒</color>$"="S<color\=#000000>i</color>ck"
 r:"^迴<color\=#000000>響</color>的{{A}}$"="E<color\=#000000>c</color>hoing Strings"
 r:"^無<color\=#000000>窮</color>的羈絆$"="E<color\=#000000>t</color>ernal Bonds"
 r:"^華<color\=#000000>彩</color>之羽$"="O<color\=#000000>n</color> Paravani's Wings"
+
+----------
+AnriL - Aran Hirano
+----------
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福詛咒<link\="s\|312"><u>雙屬性傷害</u></link>，使自身暴擊效果提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合，並使自身獲得<link\="s\|314"><u>『決斷』</u></link>。$"="Deal <link\="s|312"><u>Dual Attribute</u></link> Bless Curse damage to 1 foe equal to <color\=#FFFC40>$1</color> of ATK. Increase Aran's Crit DMG by <color\=#FFFC40>$2</color> for $3 turns, then grant Aran <link\="s|314"><u>[Resolve]</u></link>."
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的祝福詛咒雙屬性傷害，使自身暴擊效果提升(\d+\.\d+%)，持續(\d+)回合，並使自身獲得『決斷』。\n『決斷』：攻擊力提升(\d+%)，弱點係數提升(\d+%)，持續(\d+)回合。$"="Deal Dual Attribute Bless Curse damage to <color\=#FFFF00>1</color> foe equal to $1 of ATK. Increase Aran's Crit DMG by <color\=#FFFC40>$2</color> for $3 turns, then grant Aran [Resolve].\n[Resolve]: Increase ATK by $4 and Weak DMG by $5. Lasts for $6 turns."
+
+r:"^為所有同伴添加<link\="s\|313"><u>『不凋帷幕』</u></link>，並使自身獲得<link\="s\|314"><u>『決斷』</u></link>。\n隨後使所有同伴的全適應性變成“吸收”，並使吸收比例由(\d+%)提升至<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合；\n該效果將在吸收1次技能的全部傷害後消失。\n『不凋帷幕』：能夠抵禦<color\=#FFFC40>(\d+)</color>傷害。$"="Grant all allies <link\="s|313"><u>[Everlasting Veil]</u></link> and grant Aran <link\="s|314"><u>[Resolve]</u></link>.\nChange all allies' affinities to [Drain] and increase Drain ratio from $1 to <color\=#FFFC40>$2</color> for $3 turns. Lose this effect after draining 1 skill damage.\n[Everlasting Veil]: A Shield that can negate <color\=#FFFC40>$4</color> damage."
+r:"^為<color\=#FFFF00>所有</color>同伴添加『不凋帷幕』，並使自身獲得『決斷』。\n隨後使<color\=#FFFF00>所有</color>同伴的全適應性變成“吸收”，並使吸收比例由(\d+%)提升至(\d+\.\d+%)，持續(\d+)回合；\n該效果將在吸收1次技能的全部傷害後消失。\n『不凋帷幕』：能夠抵禦(\d+)傷害。\n『決斷』：攻擊力提升(\d+%)，弱點係數提升(\d+%)，持續(\d+)回合。$"="Grant <color\=#FFFF00>all</color> allies [Everlasting Veil] and grant Aran [Resolve].\nChange <color\=#FFFF00>all</color> allies' affinities to [Drain] and increase Drain ratio from $1 to $2 for $3 turns. Lose this effect after draining 1 skill damage.\n[Everlasting Veil]: A Shield that can negate $4 damage.\n[Resolve]: Increase ATK by $5 and Weak DMG by $6. Lasts for $7 turns."
+
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福詛咒<link\="s\|312"><u>雙屬性傷害</u></link>。\n若自身處於<link\="s\|314"><u>『決斷』</u></link>，本次技能傷害的穿透提升(\d+%)，且<link\="s\|285"><u>技能傷害</u></link>提升(\d+%)。$"="Deal <link\="s|312"><u>Dual Attribute</u></link> Bless Curse damage to 1 foe equal to <color\=#FFFC40>$1</color> of ATK. \nWhen <link\="s|314"><u>[Resolve]</u></link> is active, increase this skill's Pierce by $2 and <link\="s|285"><u>Skill Damage</u></link> by $3."
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的祝福詛咒雙屬性傷害。\n若自身處於『決斷』，本次技能傷害的穿透提升(\d+%)且技能傷害提升(\d+%)。$"="Deal Dual Attribute Bless Curse damage to <color\=#FFFF00>1</color> foe equal to $1 of ATK. \nWhen [Resolve] is active, increase this skill's Pierce by $2 and Skill Damage by $3."
+
+r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的祝福詛咒雙屬性傷害，並使自身攻擊力提升(\d+\.\d+%)，持續(\d+)回合。\n隨後為我方<color\=#FFFF00>所有</color>同伴添加『不凋帷幕』。$"="Deal Dual Attribute Bless Curse damage to <color\=#FFFF00>1</color> foe equal to $1 of ATK. Increase Aran's ATK by $2 for $3 turns. Then grant <color\=#FFFF00>all</color> allies [Everlasting Veil]."
+
+不凋帷幕=Everlasting Veil
+決斷=Resolve
+適應性變為全屬性“吸收”，吸收1次傷害後解除=Change all affinities to [Drain], lose this effect after draining 1 damage
+
+Combat Pop-ups
+r:"^聖<color\=#000000>邪</color>鏡華$"="M<color\=#000000>i</color>rror of Virtue and Sin"
+r:"^救<color\=#000000>贖</color>鏡域$"="D<color\=#000000>o</color>me of Redemption"
+r:"^不<color\=#000000>凋</color>帷幕$"="E<color\=#000000>v</color>erlasting Veil"
+r:"^決<color\=#000000>斷</color>$"="R<color\=#000000>e</color>solve"
+r:"^在<color\=#000000>一</color>切褪色前$"="B<color\=#000000>e</color>fore All Color Fades"
+r:"^愛<color\=#000000>會</color>跨越時光$"="L<color\=#000000>o</color>ve Transcends Time"
+r:"^剎<color\=#000000>那</color>鏡華$"="I<color\=#000000>n</color>stant Reflection"
+r:"^福<color\=#000000>厄</color>銘$"="W<color\=#000000>e</color>al and Woe"
