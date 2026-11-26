@@ -897,14 +897,21 @@ r:"^告<color\=#000000>諭</color>$"="D<color\=#000000>i</color>vine Oracle"
 聖經中所記載的偉大的四{{A}}之一。\n名字含義為『上帝之力』、『上帝的英雄』。\n職責是將上帝的重要預言傳達給人類，她告知日後成為聖母的少女{{B}}即將受到降孕的消息，以聖告天使的身份廣為人知。=One of the four major archangels. She is also the only female angel at this rank. Her name comes from the Sumerian word for "governor." She is the angel who told Mary of her pregnancy.
 
 Baal
-r:"^重臨{{A}}的豐主(.*)$"="Fertility Lord's Return $1"
-Increase Attack by 29.1%.
-At the start of battle and when using a Persona skill, grant the Assassin/Virtuoso ally with the highest Attack 1 [Gift of Abundance] stack. After an ally spends 2 [Gift of Abundance] stacks, increase their corresponding attribute damage by 25%/37.5%. Lasts for 2 turns.
-[Gift of Abundance]: Stacks up to 4 times. When dealing damage, gain Skill Damage Bonus. Spend 1 [Gift of Abundance] stack to increase the damage dealt. Increase damage dealt by 200/300 points for every 100 of Wonder's Attack that exceeds 2000 (up to 16000/24000). When an attack hits multiple foes, spend 1 stack for each foe damaged.
+重臨{{A}}的豐主=Fertility Lord's Return
+r:"^重臨{{A}}的豐主(.*)$"="<size\=28>Fertility Lord's Return $1</size>"
+r:"^攻擊力提升(\d+\.\d+%)。\n戰鬥開始時及釋放{{A}}技能時，為攻擊力最高的反抗/自律同伴添加(\d+)層「豐穰之賜」。同伴消耗(\d+)層「豐穰之賜」後，根據其適應性屬性提升其相應屬性傷害(.*)，持續(\d+)回合。\n「豐穰之賜」：可疊加(\d+)層。造成傷害時獲得<link\="s\|315"><u>技能傷害加成</u></link>，消耗(\d+)層「豐穰之賜」提升對1名敵人造成的傷害，提升值基於WONDER的攻擊力超過(.*)點的部分，每(.*)點提升(.*)點傷害，最多提升(.*)點。同一次攻擊命中多名敵人時，每對1名敵人造成傷害就消耗(\d+)層。$"="Increase ATK by $1.\nAt the start of battle and when using a {{A}} skill, grant the Assassin/Virtuoso ally with the highest ATK $2 [Gift of Abundance] stack. (activate even in reserve) \nAfter an ally spends $3 [Gift of Abundance] stacks, increase their corresponding Attribute DMG by $4. Lasts for $5 turns.\n[Gift of Abundance]: Stacks up to $6 times. When dealing damage, gain <link\="s|315"><u>Skill Damage Bonus</u></link>, spend $7 [Gift of Abundance] stack to increase the damage dealt. Increase damage dealt by $10 points for every $9 of Wonder's Attack that exceeds $8 (up to $11). When an attack hits multiple foes, spend $12 stack for each foe damaged."
+r:"^攻擊力提升(\d+\.\d+%)。\n戰鬥開始時及釋放{{A}}技能時，為攻擊力最高的反抗/自律同伴添加(\d+)層「豐穰之賜」。（處於後臺時也能生效）同伴消耗(\d+)層「豐穰之賜」後，根據其適應性屬性提升其相應屬性傷害(.*)，持續(\d+)回合。\n「豐穰之賜」：可疊加(\d+)層。造成傷害時獲得<link\="s\|315"><u>技能傷害加成</u></link>，消耗(\d+)層「豐穰之賜」提升對1名敵人造成的傷害，提升值基於WONDER的攻擊力超過(.*)點的部分，每(.*)點提升(.*)點傷害，最多提升(.*)點。同一次攻擊命中多名敵人時，每對1名敵人造成傷害就消耗(\d+)層。$"="Increase ATK by $1.\nAt the start of battle and when using a {{A}} skill, grant the Assassin/Virtuoso ally with the highest ATK $2 [Gift of Abundance] stack. (activate even in reserve) \nAfter an ally spends $3 [Gift of Abundance] stacks, increase their corresponding Attribute DMG by $4. Lasts for $5 turns.\n[Gift of Abundance]: Stacks up to $6 times. When dealing damage, gain <link\="s|315"><u>Skill Damage Bonus</u></link>, spend $7 [Gift of Abundance] stack to increase the damage dealt. Increase damage dealt by $10 points for every $9 of Wonder's Attack that exceeds $8 (up to $11). When an attack hits multiple foes, spend $12 stack for each foe damaged."
 豐穰之賜=Gift of Abundance
 r:"^豐<color\=#000000>穰</color>之賜$"="G<color\=#000000>i</color>ft of Abundance"
+r:"^造成傷害時，消耗(\d+)層「豐穰之賜」提升造成的傷害(.*)點$"="When dealing damage, spend $1 [Gift of Abundance] stack to increase the damage dealt by $2 points"
+累計消耗「豐穰之賜」=Spent [Gift of Abundance]
+根據同伴累計消耗「豐穰之賜」的層數，提高下次釋放「神臨的恩威」的傷害=Increase the next [Divine Providence]'s damage based on spent [Gift of Abundance] stacks
 枯兆=Blight Omen
 r:"^枯<color\=#000000>兆</color>$"="B<color\=#000000>l</color>ight Omen"
+下次受到帶有「豐穰之賜」的怪盜攻擊後，{{A}}釋放追加攻擊。=After the next attack from a Thief with \n[Gift of Abundance], {{A}} will attack
+計算傷害時，在『攻擊×傷害倍率』之後，進行加法加成的增傷部分。『攻擊×傷害倍率+技能傷害加成值』後再進行增減傷、防禦力、暴擊效果等其它乘區運算。=When calculating damage, after the [ATK x Damage Multiplier] calculation, add this Skill Damage Bonus. After the [ATK x Damage Multiplier + Skill Damage Bonus] calculation, calculate the other multiplicative groups such as DMG Bonus, DEF, and Crit DMG.
+北敘利亞的西閃米特人的主神，被視為豐饒之神受到長期崇拜，其名字的含義為『{{A}}』。\n他娶了自己的妹妹女神阿納特為妻子，當他被死神{{B}}囚禁在冥界時，據說就是阿納特將他救出來的。=The chief Semitic god who governs over fertility. He is the god of Canaan and brother and consort to the goddess Anat, who saved him from Mot.
+北敘利亞的閃族人的主神，被視為豐饒之神受到長期崇拜，其名字的含義為「{{A}}」。\n祂娶了自己的妹妹女神阿納特為妻子，當祂被死神{{B}}囚禁在冥界時，據說就是阿納特將祂救出來的。=The chief Semitic god who governs over fertility. He is the god of Canaan and brother and consort to the goddess Anat, who saved him from Mot.
 
 ----------
 Not in Compendium
@@ -929,6 +936,9 @@ Mara
 
 Asura
 印度神話中與諸神敵對的魔族阿修羅的王，也是名為毗盧遮那的光明神。此神格進入波斯後，就成為了祆教的主神阿胡拉·馬茲達，進入佛教之後又成為了密宗的主神大日如來。=The Hindu king of Asuras is named Maha Vairocana, or "One Who Shines On All." In Buddhism, he is known as Dainichi Nyorai.
+
+Fafnir
+源自北歐傳說的一頭惡龍。被齊格菲所打倒。在12世紀時所撰寫的「沃爾松格傳」當中，被描述為具有毒性，行走時會動搖{{A}}，仿佛是一條長了腳的大蛇般的怪物。=An evil dragon of Norse lore, it was vanquished by the hero, Siegfried. According to the Völsunga saga, it was venomous, had legs like snakes and shook the ground with every step.
 
 Kartikeya
 印度神話中的戰神。別名室建陀、鳩摩羅。祂手拿弓箭，騎乘著名為帕拉瓦尼的孔雀。祂擔任率領眾神軍隊的將軍，打敗了敵對的阿修羅軍。=A Hindu god of war, known as Skanda or Murugan. He rides atop a peacock called Paravani, with bow and arrow drawn. He commands the army of the gods and defeated the forces of Asura.
