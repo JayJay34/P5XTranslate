@@ -5,6 +5,7 @@ UI
 即可獲得：=Obtain:
 探索度=Explore
 可獲得=Obtain
+當前區域尚未探索。=This area has not yet been explored.
 {{A}}晶片={{A}} Chip
 半成品晶片=Semi-finished Chip
 {{A}}碎片={{A}} Shard
@@ -792,6 +793,7 @@ PALACE 6
 PALACE 7
 ----------
 認知·樂園島=Cognitive Paradise
+樂園島=Paradise
 愉悅樂園島=<size\=23>Paradise of Bliss</size>
 愛之樂園島=<size\=23>Paradise of Love</size>
 愛之樂園島外=<size\=16>Outer Paradise of Love</size>
@@ -819,8 +821,8 @@ PALACE 7
 神之塔·通道=<size\=14>Divine Tower Passageway</size>
 崩塌的頂層=<size\=18>Collapsed Top Floor</size>
 數據海=Data Sea
-數據海·淺層=<size\=23>Shallow Data Sea</size>
-數據海·深層=<size\=24>Shallow Data Seaz</size>
+數據海·淺層=<size\=22>Shallow Data Sea</size>
+數據海·深層=<size\=23>Deep Data Sea</size>
 
 探索熱情樂園島=Explore Paradise of Passion
 探索夢想樂園島=Explore Paradise of Dream
@@ -2109,62 +2111,112 @@ PALACE 7 BOSS 2
 ----------
 試著擊敗{{A}}=Try to defeat {{A}}
 幫助{{A}}恢復清醒=Return {{A}} to her senses
+儘快擊殺製造出的心相=Defeat the Aspects as soon as possible
 擊敗所有{{A}}=Defeat all {{A}}
 
 因自己異於常人而「{{B}}」著正常的普羅大眾，在覺醒力量後，以{{A}}的身份肆意玩弄人心。=He envied the masses for being normal while he was not. After awakening his power, he toyed with people's hearts at will as {{A}}.
 
 冰蝕=Ice Erosion
 r:"^對所有敵人造成冰凍屬性傷害，並對其添加(\d+)層『威懾值』。『威懾值』：造成傷害降低(\d+%)，受到傷害\+(\d+%)，最多疊加(\d+)層；擁有者自身使用{{A}}技能造成傷害時可消除(\d+)層。$"="Deal Ice damage to all foes, then inflict targets with $1 [Intimidation Points]. [Intimidation Points]: Decrease DMG Dealt by $2 and increase DMG Taken by $3. Stacks up to $4 times. Clear $5 stack after dealing damage with a {{A}} skill."
+r:"^對所有怪盜造成冰屬性傷害，並對其添加(\d+)層『威懾值』。『威懾值』：造成傷害降低(\d+%)，受到傷害\+(\d+%)，最多疊加(\d+)層；擁有者自身使用{{A}}技能造成傷害時可消除(\d+)層。$"="Deal Ice damage to all foes, then inflict targets with $1 [Intimidation Points]. [Intimidation Points]: Decrease DMG Dealt by $2 and increase DMG Taken by $3. Stacks up to $4 times. Clear $5 stack after dealing damage with a {{A}} skill."
+
 神的權柄=Divine Authority
 驅散所有敵人的一個增益效果，並使其在兩回合內攻擊力降低。若成功驅散了增益效果，使所有同伴在兩回合內獲得攻擊力提升。=Remove 1 buff from all foes, then decrease their ATK for 2 turns. If this removed a buff, increase all allies' ATK for 2 turns.
 神的掌控=Divine Control
 驅散所有同伴的一個負面效果，並使其在兩回合內防禦力提升。若成功驅散了負面效果，使敵人在兩回合內防禦力降低。=Remove 1 debuff from all allies, then decrease their ATK for 2 turns. If this removed a debuff, decrease all foes' DEF for 2 turns.
 r:"^神<color\=#000000>的</color>權柄$"="D<color\=#000000>i</color>vine Authority"
-r:"^神<color\=#000000>的</color>掌控$"="D<color\=#000000>i</color>vine Control""
+r:"^神<color\=#000000>的</color>掌控$"="D<color\=#000000>i</color>vine Control"
 成功驅散了敵人的增益效果=Removed foes' buff
-成功驅散了同伴的負面效果,=Removed allies' debuff
+成功驅散了同伴的負面效果=Removed allies' debuff
 
-
-心相·濁明=Aspect of Turbidity
 心相·晦暗=Aspect of Darkness
+心相·濁明=Aspect of Turbidity
 {{A}}刺激自己的慾望至暴走，以湧動著「{{B}}」之欲的心靈鎧甲覆蓋全身，呈現出宛若神明的形態。={{A}} stimulates his desires until they go berserk, covering his body in mental armor surging with the envious desire and taking on a form that seems almost divine.
 心靈力量的具象化，飽含著令人不安的負面慾望。=A manifestation of mental power, brimming with unsettling negative desire.
+心靈力量的具象化，用明亮正常的面貌偽裝自身。=A manifestation of mental power, disguising itself with a bright and normal appearance.
 
 {{A}}心相=Aspect of {{A}}
-r:"^製造出『心相·晦暗』。 『心相·晦暗』死亡時會轉化為『心相·濁明』。 『心相·晦暗』及『心相·濁明』會在自身回合結束時使{{A}}獲得(\d+)層 『心相能量』。$"="Create [Aspect of Darkness]. When [Aspect of Darkness] is defeated, convert into [Aspect of Turbidity]. At the end of [Aspect of Darkness] and [Aspect of Turbidity]'s turn, grant {{A}} $1 [Aspect Energy] stack."
+r:"^製造出『心相·晦暗』。『心相·晦暗』死亡時會轉化為『心相·濁明』。『心相·晦暗』及『心相·濁明』會在自身回合結束時使{{A}}獲得(\d+)層『心相能量』。$"="Create [Aspect of Darkness]. When [Aspect of Darkness] is defeated, convert into [Aspect of Turbidity]. At the end of [Aspect of Darkness] and [Aspect of Turbidity]'s turn, grant {{A}} $1 [Aspect Energy] stack."
 威嚇=Intimidate
 慾望刻印·白=Desire Engrave: White
+慾望刻印 · 白=Desire Engrave: White
+為敵人行動佇列中的第一個單位添加“白之刻印”。擁有“白之刻印”的敵人會記錄其首次釋放{{A}}技能的效果類型。=Inflict [Engrave of White] to the foe at the 1st turn order. Foes with [Engrave of White] will record their first {{A}} skill type used.
 白之刻印=Engrave of White
-慾望刻印·黑=Desire Engrave: Black
-黑之刻印=Engrave of Black
-慾望操縱=Desire Manipulation
-心之壁壘=Mental Barrier
-妒意蔓延=Spreading Envy
+白之刻印：單傷=Engrave of White: Single-Target
+白之刻印：群傷=Engrave of White: Multi-Target
+白之刻印：治療=Engrave of White: Heal
+白之刻印：護盾=Engrave of White: Shield
+白之刻印：增益=Engrave of White: Buff
+白之刻印：減益=Engrave of White: Debuff
 惡欲進發=Evil Eruption
+惡慾迸發=Evil Eruption
+當『心相·濁明』死亡時，立即對所有敵人造成萬能屬性傷害。自身『心相能量』層數越高，本次傷害越高。=When [Aspect of Turbidity] is defeat, immediately deal Almighty damage to all foes. Increase damage based on user's [Aspect Energy] stacks.
 當『心相·晦暗』死亡時，立即對所有敵人造成萬能屬性傷害。自身『心相能量』層數越高，本次傷害越高。=When [Aspect of Darkness] is defeat, immediately deal Almighty damage to all foes. Increase damage based on user's [Aspect Energy] stacks.
 惡欲進發·極=Evil Eruption: Ultimate
+惡慾迸發·極=Evil Eruption: Ultimate
+r:"^自身『心相能量』達到(\d+)層時，以『心相·晦暗』或『心相·濁明』為祭品，對所有敵人造成極大的萬能屬性傷害。若祭品為『心相·晦暗』，則根據“黑之刻印”追加額外技能效果；若祭品為『心相·濁明』，則根據“白之刻印”追加額外技能效果。\n刻印追加的額外技能效果如下：\n刻印-單傷、刻印-護盾：對隨機1名敵人造成物理屬性傷害。\n刻印-群傷、刻印-治療：對所有敵人造成物理屬性傷害。\n刻印-增益、刻印-減益：使所有敵人受到的傷害提升，持續(\d+)回合。$"="When user reaches $1 [Aspect Energy] stacks. Sacrifice [Aspect of Darkness] or [Aspect of Turbidity], and deal severe Almighty damage to all foes. If the sacrifice is [Aspect of Darkness], activate bonus effects based on [Engrave of Black]; if the sacrifice is [Aspect of Turbidity], activate bonus effects based on [Engrave of White].\nEngrave bonus effects:\nSingle-Target and Shield Engrave: Deal Phys damage to 1 random foe.\nMulti-Target and Recovery Engrave: Deal Phys damage to all foes.\nBuff and Debuff Engrave: Increase all foes' DMG Taken for $2 turns."
+慾望操縱=Desire Manipulation
+鎖定1名敵人，在自身下個回合開始時使其陷入“洗腦狀態”。被鎖定的目標受到護盾效果或治療效果後可移除鎖定狀態。=Lock on 1 foe, at the start of user's next turn, inflict the target with [Brainwash]. Remove lock on after the target received a Shield/Heal.
+慾望暴走=Desire Berserk
+對處於洗腦狀態的敵人造成萬能屬性傷害。=Deal Almighty damage to foes with Brainwash.
+心之壁壘=Mental Barrier
+r:"^為心相添加可免疫一次傷害的護盾，持續(\d+)回合。$"="Grant the Aspect a Shield that can nullify next damage. Lasts for $1 turns."
+妒意蔓延=Spreading Envy
+慾望刻印·黑=Desire Engrave: Black
+慾望刻印 · 黑=Desire Engrave: Black
+為敵人行動佇列中的最後一個單位添加“黑之刻印”。擁有“黑之刻印”的敵人會記錄其最後一次釋放{{A}}技能的效果類型。=Inflict [Engrave of Black] to the foe at the 4th turn order. Foes with [Engrave of Black] will record their first {{A}} skill type used.
+黑之刻印=Engrave of Black
+黑之刻印：單傷=Engrave of Black: Single-Target
+黑之刻印：群傷=Engrave of Black: Multi-Target
+黑之刻印：治療=Engrave of Black: Heal
+黑之刻印：護盾=Engrave of Black: Shield
+黑之刻印：增益=Engrave of Black: Buff
+黑之刻印：減益=Engrave of Black: Debuff
+神罰=Divine Punishment
 
 {{A}}心相·改=Aspect of {{A}}: Improved
+r:"^同時製造出『心相·晦暗』及『心相·濁明』。『心相·晦暗』及『心相·濁明』會在自身回合結束時使{{A}}獲得(\d+)層『心相能量』。$"="Create [Aspect of Darkness] and [Aspect of Turbidity]. At the end of [Aspect of Darkness] and [Aspect of Turbidity]'s turn, grant {{A}} $1 [Aspect Energy] stack."
 r:"^同時製造出『心相·濁明』及『心相·晦暗』。『心相·濁明』及『心相·晦暗』會在自身回合結束時使{{A}}獲得(\d+)層『心相能量』。$"="Create [Aspect of Turbidity] and [Aspect of Darkness]. At the end of [Aspect of Turbidity] and [Aspect of Darkness]'s turn, grant {{A}} $1 [Aspect Energy] stack."
 心相破滅=Aspect Destruction
 嘗試召喚心相，失敗後自身進入易傷虛弱狀態。=Try to summon Aspects. After a failed summon, user enters Weaken.
 怨恨噴湧=Resentment Burst
 惡欲進發·改=Evil Eruption: Improved
+惡慾迸發·改=Evil Eruption: Improved
+r:"^自身『心相能量』達到(\d+)層時，以『心相·晦暗』及『心相·濁明』為祭品，對所有敵人造成極大的萬能屬性傷害。$"="When user has $1 [Aspect Energy] stacks. Sacrifice [Aspect of Darkness] and [Aspect of Turbidity], and deal severe Almighty damage to all foes."
 r:"^自身『心相能量』達到(\d+)層時，以『心相·濁明』及『心相·晦暗』為祭品，對所有敵人造成極大的萬能屬性傷害。$"="When user has $1 [Aspect Energy] stacks. Sacrifice [Aspect of Turbidity] and [Aspect of Darkness], and deal severe Almighty damage to all foes."
 決鬥=Duel
 惡意滋長=Growing Malice
 使自己下回合造成的最終傷害提升。=Increase user next turn's Final DMG Dealt.
+使自己下個回合造成的最終傷害提升。=Increase user next turn's Final DMG Dealt.
 
 心相能量=Aspect Energy
-r:"^心相能量充滿(\d+)層時，自動觸發『惡欲進發』$"="When Aspect Energy reaches $1 stacks, automatically activate [Evil Eruption]
+r:"^心相能量充滿(\d+)層時，自動觸發『惡欲進發』$"="When Aspect Energy reaches $1 stacks, automatically activate [Evil Eruption]"
+r:"^心相能量充滿(\d+)層時，自動觸發『惡慾迸發』$"="When Aspect Energy reaches $1 stacks, automatically activate [Evil Eruption]"
+r:"^心相能量充滿(\d+)層時，自動觸發『惡欲迸發』$"="When Aspect Energy reaches $1 stacks, automatically activate [Evil Eruption]"
 心相庇佑=Aspect Protection
 積怨=Resentment
 
 r:"^白<color\=#000000>之</color>刻印$"="E<color\=#000000>n</color>grave of White"
+r:"^白<color\=#000000>之</color>刻印：單傷$"="E<color\=#000000>n</color>grave of White: Single-Target"
+r:"^白<color\=#000000>之</color>刻印：群傷$"="E<color\=#000000>n</color>grave of White: Multi-Target"
+r:"^白<color\=#000000>之</color>刻印：治療$"="E<color\=#000000>n</color>grave of White: Heal"
+r:"^白<color\=#000000>之</color>刻印：護盾$"="E<color\=#000000>n</color>grave of White: Shield"
+r:"^白<color\=#000000>之</color>刻印：增益$"="E<color\=#000000>n</color>grave of White: Buff"
+r:"^白<color\=#000000>之</color>刻印：減益$"="E<color\=#000000>n</color>grave of White: Debuff"
 r:"^黑<color\=#000000>之</color>刻印$"="E<color\=#000000>n</color>grave of Black"
+r:"^黑<color\=#000000>之</color>刻印：單傷$"="E<color\=#000000>n</color>grave of Black: Single-Target"
+r:"^黑<color\=#000000>之</color>刻印：群傷$"="E<color\=#000000>n</color>grave of Black: Multi-Target"
+r:"^黑<color\=#000000>之</color>刻印：治療$"="E<color\=#000000>n</color>grave of Black: Heal"
+r:"^黑<color\=#000000>之</color>刻印：護盾$"="E<color\=#000000>n</color>grave of Black: Shield"
+r:"^黑<color\=#000000>之</color>刻印：增益$"="E<color\=#000000>n</color>grave of Black: Buff"
+r:"^黑<color\=#000000>之</color>刻印：減益$"="E<color\=#000000>n</color>grave of Black: Debuff"
 r:"^心<color\=#000000>相</color>能量$"="A<color\=#000000>s</color>pect Energy"
 
 sr:"^<color\=#FF0000>(.*)</</color>獲得了「(.*)」……$"="<color\=#FF0000>$1</color> gained [Aspect Energy]..."
+sr:"^<color\=#FF0000>(.*)</color>進入了虛弱狀態……$"="<color\=#FF0000>$1</color> entered Weaken!"
+sr:"^<color\=#FF0000>(.*)</color>處於虛弱狀態，無法行動……$"="<color\=#FF0000>$1</color> can't act!"
+sr:"^<color\=#FF0000>(.*)</color>從虛弱異常狀態恢復了。$"="<color\=#FF0000>$1</color> recovered from Weaken!"
+sr:"^<color\=#FF0000>(.*)</color>正在蓄力，下次回合造成的最終傷害提升……$"="<color\=#FF0000>$1</color> is charging, heavily increase next turn's Final DMG..."
 
 ----------
 CROSS FATE PALACE (CF) (COLLAB)
@@ -4239,6 +4291,12 @@ r:"^1、進入戰鬥時，{{B}}會召喚4個隨從與之並肩作戰，{{B}}與�
 國津咒鎖=Kunitsu Curse
 {{A}}逆襲=Spirit Counterattack
 
+r:"^戰鬥開始時，{{A}}給所有敵方添加(\d+)層「黑祭烙印」。「黑祭烙印」：獲得護盾後驅散並獲得「黑祭賜火」，使其造成的最終傷害提升(\d+%)。$"="At the start of battle, {{A}} will inflict all foes with $1 [Ritual Brand] stack. [Ritual Brand]: After gaining a Shield, remove this effect and grant [Ritual Fire], increasing their Final DMG Dealt by $2."
+黑祭烙印=Ritual Brand
+黑祭賜火=Ritual Fire
+r:"^黑<color\=#000000>祭</color>烙印$"="R<color\=#000000>i</color>tual Brand"
+r:"^黑<color\=#000000>祭</color>賜火$"="R<color\=#000000>i</color>tual Fire"
+
 ----------
 SEASONAL EFFECTS
 ----------
@@ -4446,6 +4504,6 @@ r:"^生<color\=#000000>機</color>勃發$"="V<color\=#000000>i</color>tal Bloom"
 先民聖所=Ancestral Sanctuary
 sr:"^造成弱點傷害時，獲得『(.*)』，同時若造成的傷害為雙屬性傷害或追加傷害，增益效果強化為『(.*)』。『(.*)』：最終傷害提升(.*)，若強化為『(.*)』，最終傷害提升增加至(.*)，持續(.*)回合。$"="<size\=22>When dealing Weakness damage, user gains [$1], if the damage dealt was Dual Attribute damage or Follow Up damage, boost this effect to [$2]. [$3]: Increase Final DMG by $4, if boosted to [$5], increase Final DMG to $6. Lasts for $7 turns.</size>"
 先祖賜福=Ancestral Blessing
-r:"^先<color\=#000000>祖賜福$"="A<color\=#000000>n</color>cestral Blessing"
+r:"^先<color\=#000000>祖</color>賜福$"="A<color\=#000000>n</color>cestral Blessing"
 先祖神佑=Ancestral Protection
-r:"^先<color\=#000000>祖神佑$"="A<color\=#000000>n</color>cestral Protection"
+r:"^先<color\=#000000>祖</color>神佑$"="A<color\=#000000>n</color>cestral Protection"
