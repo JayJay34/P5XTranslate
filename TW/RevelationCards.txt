@@ -292,6 +292,7 @@ r:"^造成萬能屬性傷害時，攻擊力提升<color\=#2899ff>(\d+%)</color>�
 r:"^解明怪盜裝備時生效：使用技能為同伴添加增益狀態，使技能目標穿透提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合。$"="When equipped by Elucidator Thieves: When using a buff skill on allies, increase the target's Pierce by <color\=#2899ff>$1</color> for $2 turn."
 r:"^每造成1次技能傷害，自身火焰傷害提升<color\=#2899ff>(\d+%)</color>，持續(\d+)回合，可疊加(\d+)層；疊加至(\d+)層時，額外使自身暴擊率提升<color\=#2899ff>(\d+%)</color>。$"="When dealing 1 hit of skill damage, increase own Fire DMG by <color\=#2899ff>$1</color> for $2 turns, up to $3 stacks; When reaching $4 stacks, additionally increase own Crit Rate by <color\=#2899ff>$5</color>."
 r:"^所有怪盜對處於倒地狀態的敵人造成傷害提升<color\=#2899ff>(\d+%)</color>，無法重複觸發。$"="Increase all allies' DMG Dealt to Downed foes by <color\=#2899ff>$1</color>. This effect won't activate if stacked."
+r:"^造成雙屬性傷害時，攻擊力提升<color\=#2899ff>(\d+%)</color>，暴擊效果提升<color\=#2899ff>(\d+%)</color>；且『失望』的四件套效果在造成HIGHLIGHT傷害時也能觸發。$"="When dealing dual attribute damage, increase ATK by <color\=#2899ff>$1</color> and Crit DMG by <color\=#2899ff>$2</color>. When dealing HIGHLIGHT damage, activate [Disappointment]'s 4 Set Effect."
 
 【突破】=[Perseverance]
 突破=Perseverance
@@ -434,6 +435,7 @@ r:"^4套裝效果：效果命中提升<color\=#2899ff>(\d+%)</color>，持續(\d
 【失望】=<size\=20>  </size>[Disappointment]
 失望=Disappointment
 r:"^4套裝效果：造成{{A}}技能傷害時，若與自身上次造成{{A}}技能傷害的屬性不同，該次{{A}}技能造成傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: When dealing {{A}} skill damage, if the attribute is different to the damage of the last used skill, increase that {{A}} skill's DMG Dealt by <color\=#2899ff>$1</color>."
+r:"^4套裝效果：造成{{A}}技能傷害時，若造成雙屬性傷害或與自身上次造成{{A}}技能傷害的屬性不同，該次{{A}}技能造成傷害提升<color\=#2899ff>(\d+%)</color>。$"="<size\=23>4 Set Effect: When dealing {{A}} skill damage, if it dealt Dual Attribute damage or the attribute is different to the damage of the last used skill, increase that {{A}} skill's DMG Dealt by <color\=#2899ff>$1</color>."
 
 【謹慎】=<size\=20>  </size>[Prudence]
 謹慎=Prudence
@@ -513,6 +515,8 @@ r:"^造成念動傷害時，提升攻擊(\d+%)，如果敵方人數不少於3，
 榮耀=Glory
 皈依=Refuge
 r:"^造成的追加傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up DMG Dealt by $1"
+r:"^造成雙屬性傷害時，攻擊力提升(\d+(.\d+)?(%)?)$"="When dealing Dual Attribute damage, \nincrease ATK by $1."
+r:"^造成雙屬性傷害時，暴擊效果提升(\d+(.\d+)?(%)?)$"="When dealing Dual Attribute damage, \nincrease Crit DMG by $1."
 
 r:"^繁<color\=#000000>榮</color>$"="W<color\=#000000>e</color>alth"
 r:"^決<color\=#000000>絕</color>$"="C<color\=#000000>r</color>uelty"

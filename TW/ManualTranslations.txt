@@ -2951,10 +2951,11 @@ r:"^<color\=#FFDe00>{{A}}</color>票務等級達到<color\=#FFDe00>(\d+)級</col
 溯香之庭=Incense Court
 
 往日回溯=Recollections
-主線：{{A}}\n完成後開啟挑戰=<size\=20>Unlock after completing\n{{A}}</size>
-主線：假面役者的謝幕\n完成後開啟挑戰=<size\=20>Unlock after completing\nMasked Actors' Curtain Call</size>
-跟隨主線任務解鎖=Unlock by clearing Main Story
-「回溯挑戰」隨主線劇情自動解鎖。\n是否立即解鎖當前挑戰？\n<color\=#FF0000>（可能影響後續劇情體驗）</color>=This [Recollection] will be unlocked automatically as you progress the Main Story. Do you want to unlock this now?\n<color\=#FF0000>(This may affect your story experience)</color>
+主線：假面役者的謝幕\n完成後開啟挑戰=<size\=20>Unlocks after clearing\nMasked Actors' Curtain Call</size>
+主線：復仇與信念\n完成後開啟挑戰=<size\=20>Unlocks after clearing\nRevenge and Belief</size>
+跟隨主線任務解鎖=Unlocks by clearing Main Story
+「回溯挑戰」隨主線劇情自動解鎖。\n是否立即解鎖當前挑戰？\n<color\=#FF0000>（可能影響後續劇情體驗）</color>=This [Recollection] will automatically unlocked as you progress the Main Story. Do you want to unlock this now?\n<color\=#FF0000>(This may affect your story experience)</color>
+sr:"^「主線：(.*)」完成後自動開啟。\n是否立即解鎖當前挑戰？\n<color\=#FF0000>（可能影響後續劇情體驗）</color>$"="This challenge will automatically unlocked after clearing [Main Story: $1]. Do you want to unlock this now?\n<color\=#FF0000>(This may affect your story experience)</color>"
 
 掉落高級技能材料=Advanced Skill
 r:"^周可領獎次數：<color\=#0665ca>(\d+)/(\d+)</color>$"="Rewards Left: <color\=#0665ca>$1/$2</color>"
@@ -3143,6 +3144,7 @@ r:"^透過厄抑巡禮·初階印記兌換$"="<size\=21>Exchange from Challenge 
 獲得世界樹的衍化後解鎖=Unlocks after owning this skill
 獲得萬象湮滅後解鎖=Unlocks after owning this skill
 獲得音律和鳴後解鎖=Unlocks after owning this skill
+獲得塗影囚籠後解鎖=Unlocks after owning this skill
 
 角色契約簽約時機率獲得=Signing Contract
 {{A}}精算機等級獎勵={{A}} Ticket Machine
@@ -3786,6 +3788,8 @@ sr:"^當前任務目標處於<color\=#FF0000>(.*)</color>，\n是否立即前往
 天才的熔爐=Genius' Furnace
 風平浪靜的日子=Peaceful Days
 
+與{{A}}的放學後=After School with {{A}}
+
 離開賭場=Escape from the casino
 上床休息=Go to bed
 回家休息=Go home and rest
@@ -4050,6 +4054,7 @@ Story Patch Event Missions
 sr:"^已獲得(.*)：(\d+)$"="$1: $2"
 閃耀徽章=Shining Badge
 禁錮鎖環=Forbidden Lock
+天才的影像=Image of Genius
 主線故事=Main Story
 sr:"^完成「(.*)」任意(\d+)個任務\((\d+)\/(\d+)\)$"="Complete any $2 [$1] missions ($3/$4)"
 r:"^擊敗{{A}}\((\d+)\/(\d+)\)$"="Defeat {{A}} ($1/$2)"
@@ -4087,7 +4092,12 @@ r:"^見證{{A}}的行動\((\d+)\/(\d+)\)$"="Witness {{A}}'s action ($1/$2)"
 r:"^完成期末考試\((\d+)\/(\d+)\)$"="Complete the final exam ($1/$2)"
 r:"^與{{A}}交談\((\d+)\/(\d+)\)$"="Talk to {{A}} ($1/$2)"
 r:"^調查{{A}}\((\d+)\/(\d+)\)$"="Investigate {{A}} ($1/$2)"
-r:"^探索夢想樂園島\((\d+)\/(\d+)\)$"="Explore Paradise Island ($1/$2)"
+r:"^探索夢想樂園島\((\d+)\/(\d+)\)$"="Explore Paradise ($1/$2)"
+r:"^與{{A}}達成交易\((\d+)\/(\d+)\)$"="Made a deal with {{A}} ($1/$2)"
+r:"^讓粕田改心\((\d+)\/(\d+)\)$"="Change Kasuda's heart ($1/$2)"
+r:"^獲得{{A}}的照片\((\d+)\/(\d+)\)$"="Get {{A}}'s photo ($1/$2)"
+r:"^抵達漆黑的房間\((\d+)\/(\d+)\)$"="Reach the pitch-black room ($1/$2)"
+r:"^順利發出{{A}}\((\d+)\/(\d+)\)$"="Send the calling card ($1/$2)"
 
 {{A}}探索={{A}} Exploration
 r:"^{{A}}票務等級達到(\d+)級\((\d+)\/(\d+)\)$"="Reach {{A}} Ticket Lv. $1 ($2/$3)"
@@ -4104,8 +4114,10 @@ r:"^私人領域區域的探索度達到(\d+%)\((\d+)\/(\d+)\)$"="Reach $1 Explo
 r:"^被遺棄的空間區域的探索度達到(\d+%)\((\d+)\/(\d+)\)$"="Reach $1 Exploration in the Abandoned Area ($2/$3)"
 r:"^圖書館{{A}}的探索度達到(\d+%)\((\d+)\/(\d+)\)$"="Reach $1 Exploration in the Library {{A}} ($2/$3)"
 r:"^在圖書館{{A}}打開(\d+)個寶箱\((\d+)\/(\d+)\)$"="Open $1 Treasure Chests in the Library {{A}} ($2/$3)"
-r:"^樂園島{{A}}的探索度達到(\d+%)\((\d+)\/(\d+)\)$"="Reach $1 Exploration in the Paradise Island {{A}} ($2/$3)"
-r:"^在樂園島{{A}}打開(\d+)個寶箱\((\d+)\/(\d+)\)$"="Open $1 Treasure Chests in the Paradise Island {{A}} ($2/$3)"
+r:"^樂園島{{A}}的探索度達到(\d+%)\((\d+)\/(\d+)\)$"="Reach $1 Exploration in the Paradise {{A}} ($2/$3)"
+r:"^在樂園島{{A}}打開(\d+)個寶箱\((\d+)\/(\d+)\)$"="Open $1 Treasure Chests in the Paradise {{A}} ($2/$3)"
+r:"^塔內區域的探索度達到(\d+%)\((\d+)\/(\d+)\)$"="Reach $1 Exploration in the Tower Area ($2/$3)"
+r:"^在塔內區域打開(\d+)個寶箱\((\d+)\/(\d+)\)$"="Open $1 Treasure Chests in the Tower Area ($2/$3)"
 
 厄影異象=Shadow Distortion
 r:"^在{{A}}區域(\d+)擊敗任意詭譎之徒\((\d+)\/(\d+)\)$"="Defeat any Enigma Shadow in {{A}} Area $1 ($2/$3)"
@@ -4120,7 +4132,8 @@ r:"^在{{A}}-被遺棄的空間擊敗任意(\d+)名狂化惡黨\((\d+)\/(\d+)\)$
 r:"^在{{A}}區域(\d+)擊敗(\d+)個寶魔\((\d+)\/(\d+)\)$"="Defeat $2 Treasure Demon in {{A}} Area $1 ($3/$4)"
 r:"^在{{A}}擊敗任意(\d+)個寶魔\((\d+)\/(\d+)\)$"="Defeat any $1 Treasure Demon in {{A}} ($2/$3)"
 r:"^在圖書館{{A}}擊敗任意(\d+)名狂化惡黨\((\d+)\/(\d+)\)$"="Defeat $1 Berserker Shadow in the Library {{A}} ($2/$3)"
-r:"^在樂園島{{A}}擊敗任意(\d+)名狂化惡黨\((\d+)\/(\d+)\)$"="Defeat $1 Berserker Shadow in the Paradise Island {{A}} ($2/$3)"
+r:"^在樂園島{{A}}擊敗任意(\d+)名狂化惡黨\((\d+)\/(\d+)\)$"="Defeat $1 Berserker Shadow in the Paradise {{A}} ($2/$3)"
+r:"^在樂園島{{A}}-塔內擊敗任意(\d+)名狂化惡黨\((\d+)\/(\d+)\)$"="Defeat $1 Berserker Shadow in the Paradise {{A}} ($2/$3)"
 
 都市巡遊=City Tour
 sr:"^完成都市任務「(.*)」\((\d+)\/(\d+)\)$"="Complete the city mission [$1] ($2/$3)"
@@ -6886,6 +6899,9 @@ ACHIEVEMENTS + COSMETICS + EMOTES + KEY ITEMS
 成為超人氣之星=<size\=20>Becoming a Superstar</size>
 怪盜的秘密基地=Thief's Hideout
 
+獲得怪盜「{{A}}」=Obtain the Phantom Thief "{{A}}"
+獲得怪盜偶像「{{A}}」=Obtain the Phantom Idol "{{A}}"
+
 解鎖{{A}}的協同關係<size\=30>(0/1)</size>=Unlock {{A}}'s Synergy <size\=30>(0/1)</size>
 解鎖{{A}}的協同關係=Unlock {{A}}'s Synergy
 解鎖{{A}}的RANK=Unlock {{A}}'s RANK
@@ -6926,6 +6942,7 @@ sr:"^參與「(.*)」活動獲得$"="Participate in the event [$1]"
 r:"^{{A}}成長至(\d+)級時解鎖$"="{{A}} reached Lv. $1"
 r:"^與協同者{{A}}好感度達到rank(\d+)$"="Reach Synergy Rank $1 with {{A}}"
 r:"^與共敘者{{A}}好感度達到rank(\d+)$"="Reach Sympathizer Rank $1 with {{A}}"
+r:"^{{A}}·第(\d+)期珍藏獎勵$"="{{A}} Phase $1 Premium+ Reward"
 r:"^獲取途徑：{{A}}·第(\d+)期珍藏獎勵$"="Obtain Method: {{A}} Phase $1 Premium+ Reward"
 r:"^在閼凶夢之扉挑戰中，樂園排名達到(\d+)~(\d+)名時獲得的頭像框。$"="Companio reach top $1~$2 in Gates of the Nightmare Catcher."
 

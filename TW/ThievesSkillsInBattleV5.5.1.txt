@@ -7,6 +7,7 @@ Character-specific Skill Details
 套裝=Set
 協助怪盜不顯示套裝內容=Cannot Show Assist Thief's Set
 r:"^(\d+)回合$"="$1 turn"
+r:"^(\d+)行動$"="$1 action"
 r:"^該技能(\d+)回合後準備就緒。$"="This skill can be activated after $1 turn(s)."
 當前未上陣支援怪盜。=You did not deploy an Elucidator.
 當前未上陣支援角色。=You did not deploy an Elucidator.
@@ -1003,9 +1004,23 @@ r:"^受到弱點傷害提升(\d+%)$"="Increase Weak DMG Taken by $1"
 使用『無聲侵襲』或『數據破解』時，技能效果提升。=When using [Silent Intrusion] or [Data Crack],\nincrease skill effect
 r:"^弱點傷害提升(\d+%)$"="Increase Weak DMG by $1"
 駭入時機=Hacking Time
+擁有兩種『天網』印記時，可為所有同伴添加增益效果=When this has 2 [Sky Net] seals,\ngrant all allies buffs
+天網：物理印記=Sky Net: Phys Seal
+天網：射擊印記=Sky Net: Gun Seal
+天網：火焰印記=Sky Net: Fire Seal
+天網：冰凍印記=Sky Net: Ice Seal
+天網：電擊印記=Sky Net: Elec Seal
+天網：疾風印記=Sky Net: Wind Seal
+天網：念動印記=Sky Net: Psy Seal
+天網：核熱印記=Sky Net: Nuke Seal
+天網：祝福印記=Sky Net: Bless Seal
+天網：詛咒印記=Sky Net: Curse Seal
+天網：萬能印記=Sky Net: Almighty Seal
 
 Combat Pop-ups
 r:"^善<color\=#000000>後</color>$"="C<color\=#000000>l</color>ean Up"
+r:"^超<color\=#000000>頻</color>$"="O<color\=#000000>v</color>erclock"
+r:"^天<color\=#000000>網</color>$"="S<color\=#000000>k</color>y Net"
 r:"^遠<color\=#000000>程</color>協助$"="R<color\=#000000>e</color>mote Assistance"
 
 ----------
@@ -1978,7 +1993,7 @@ r:"^{{A}}傷害增幅提升(\d+%)$"="Increase {{A}} DMG Amp by $1"
 r:"^對陷入元素異常的敵人造成的傷害提升(\d+(.\d+)?(%)?)$"="When attacking a foe with an Elemental Ailment, increase DMG Dealt by $1"
 
 In-Battle Quotes
-sr:"^<color\=#FF0000>(.*)</color>被選擇成為(.*)的飼主！$"="<color\=#FF0000>$1</color> selected as Koromaru's Owner!"
+sr:"^<color\=#FF0000>(.*)</color>被選擇成為(.*)的飼主！$"="<size\=26><color\=#FF0000>$1</color> selected as Koromaru's Owner!</size>"
 
 Combat Pop-ups
 r:"^飼<color\=#000000>主</color>$"="O<color\=#000000>w</color>ner"
@@ -2361,11 +2376,14 @@ r:"^為<color\=#FFFF00>所有</color>同伴添加『不凋帷幕』，並使自�
 r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福詛咒<link\="s\|312"><u>雙屬性傷害</u></link>。\n若自身處於<link\="s\|314"><u>『決斷』</u></link>，本次技能傷害的穿透提升(\d+%)，且<link\="s\|285"><u>技能傷害</u></link>提升(\d+%)。$"="Deal <link\="s|312"><u>Dual Attribute</u></link> Bless Curse damage to 1 foe equal to <color\=#FFFC40>$1</color> of ATK. \nWhen <link\="s|314"><u>[Resolve]</u></link> is active, increase this skill's Pierce by $2 and <link\="s|285"><u>Skill Damage</u></link> by $3."
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的祝福詛咒雙屬性傷害。\n若自身處於『決斷』，本次技能傷害的穿透提升(\d+%)且技能傷害提升(\d+%)。$"="Deal Dual Attribute Bless Curse damage to <color\=#FFFF00>1</color> foe equal to $1 of ATK. \nWhen [Resolve] is active, increase this skill's Pierce by $2 and Skill Damage by $3."
 
+r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福詛咒<link\="s\|312"><u>雙屬性傷害</u></link>，並使自身攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。\n隨後為我方所有同伴添加<link\="s\|313"><u>『不凋帷幕』</u></link>。$"="$"="Deal <link\="s|312"><u>Dual Attribute</u></link> Bless Curse damage to 1 foe equal to <color\=#FFFC40>$1</color> of ATK. Increase Aran's ATK by <color\=#FFFC40>$2</color> for $3 turns. Then grant all allies <link\="s|313"><u>[Everlasting Veil]</u></link>."
 r:"^對<color\=#FFFF00>1名</color>敵人造成(\d+\.\d+%)攻擊力的祝福詛咒雙屬性傷害，並使自身攻擊力提升(\d+\.\d+%)，持續(\d+)回合。\n隨後為我方<color\=#FFFF00>所有</color>同伴添加『不凋帷幕』。$"="Deal Dual Attribute Bless Curse damage to <color\=#FFFF00>1</color> foe equal to $1 of ATK. Increase Aran's ATK by $2 for $3 turns. Then grant <color\=#FFFF00>all</color> allies [Everlasting Veil]."
 
 不凋帷幕=Everlasting Veil
 決斷=Resolve
-適應性變為全屬性“吸收”，吸收1次傷害後解除=Change all affinities to [Drain], lose this effect after draining 1 damage
+r:"^弱點係數提升(\d+(.\d+)?(%)?)$"="Increase Weakness coefficient by $1"
+適應性變為全屬性“吸”，吸收1次技能的全部傷害後消失=Change all affinities to [Drain], lose this effect after draining all damage from 1 damage
+r:"^觸發弱點效果時弱點傷害提升(\d+(.\d+)?(%)?)$"="When activating a Weakness effect, \nincrease Weak DMG by $1"
 
 Combat Pop-ups
 r:"^聖<color\=#000000>邪</color>鏡華$"="M<color\=#000000>i</color>rror of Virtue and Sin"
@@ -2374,5 +2392,6 @@ r:"^不<color\=#000000>凋</color>帷幕$"="E<color\=#000000>v</color>erlasting 
 r:"^決<color\=#000000>斷</color>$"="R<color\=#000000>e</color>solve"
 r:"^在<color\=#000000>一</color>切褪色前$"="B<color\=#000000>e</color>fore All Color Fades"
 r:"^愛<color\=#000000>會</color>跨越時光$"="L<color\=#000000>o</color>ve Transcends Time"
-r:"^剎<color\=#000000>那</color>鏡華$"="I<color\=#000000>n</color>stant Reflection"
+r:"^終<color\=#000000>將</color>顯現的理想國$"="T<color\=#000000>h</color>e Promised Ideal"
+r:"^刹<color\=#000000>那</color>鏡華$"="M<color\=#000000>o</color>mentary Reflection"
 r:"^福<color\=#000000>厄</color>銘$"="W<color\=#000000>e</color>al and Woe"
