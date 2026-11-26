@@ -176,6 +176,8 @@ r:"^額外回復生命值(.*)$"="Additionally increase Healing $1"
 技能傷害額外提升=Increase Skill Damage
 基礎複製比例=Base Copy Multiplier
 削減倒地值=Down Points Damage
+吸收比例=Drain Ratio
+『不凋帷幕』能夠抵禦的傷害=[Everlasting Veil] Damage Negation
 
 ONE MORE：技能傷害=ONE MORE: Skill DMG
 HIGHLIGHT：技能倍率=HIGHLIGHT: Skill DMG
@@ -183,6 +185,7 @@ HIGHLIGHT：技能傷害倍率=HIGHLIGHT: Skill DMG
 近戰攻擊：技能傷害=Melee: Skill DMG
 槍械射擊：技能傷害=Gun: Skill DMG
 sr:"^HIGHLIGHT：(.*)技能傷害$"="HIGHLIGHT: $1 Skill DMG"
+HIGHLIGHT：攻擊力提升=HIGHLIGHT: Increase ATK
 HIGHLIGHT：傷害提升=HIGHLIGHT: Increase DMG
 HIGHLIGHT：攻擊力提升上限=HIGHLIGHT: ATK Cap
 HIGHLIGHT：效果抵抗提升=HIGHLIGHT: Ailment RES Cap
@@ -538,6 +541,7 @@ r:"^任意敵人擁有深淵詛咒時，使其受到詛咒屬性弱點傷害提�
 r:"^易<color\=#000000>傷</color>咒印$"="V<color\=#000000>u</color>lnerability Seal"
 r:"^自身攻擊擁有深淵詛咒的敵人時，總傷害增幅提升<color\=#0f69ca>(\d+\.\d+%)</color>。$"="When user attacks foes with Abyssal Curse, increase Total DMG Amp by <color\=#0f69ca>$1</color>."
 r:"^自身攻擊擁有深淵詛咒的敵人時，總傷害增幅提升(\d+\.\d+%)。$"="When user attacks foes with Abyssal Curse, increase Total DMG Amp by $1."
+r:"^攻擊擁有深淵詛咒的敵人時總傷害增幅提升(.*)$"="When attacking foes with Abyssal Curse,\nincrease Total DMG Amp by $1"
 深淵低語=Abyssal Whisper
 r:"^深<color\=#000000>淵</color>低語$"="A<color\=#000000>b</color>yssal Whisper"
 r:"^自身對敵人釋放HIGHLIGHT/{{A}}後，使其受到持續傷害效果提升<color\=#0f69ca>(\d+\.\d+%)</color>，持續(\d+)回合。（該效果不能疊加）$"="After user uses a HIGHLIGHT/{{A}} on foes, increase their DOT Effect Taken by <color\=#0f69ca>$1</color> for $2 turns. This effect does not stack."
@@ -4529,11 +4533,16 @@ r:"^對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福詛�
 
 r:"^『HIGHLIGHT』：對1名敵人造成<color\=#FFFC40>(\d+\.\d+%)</color>攻擊力的祝福詛咒<link\="s\|312"><u>雙屬性傷害</u></link>，並使自身攻擊力提升<color\=#FFFC40>(\d+\.\d+%)</color>，持續(\d+)回合。\n隨後為我方所有同伴添加<link\="s\|313"><u>『不凋帷幕』</u></link>。\n『ONE MORE』：對1名敵人造成祝福詛咒<link\="s\|312"><u>雙屬性傷害</u></link>。\n近戰攻擊：使用近戰武器，對1名敵人造成物理屬性的少量傷害。\n槍械攻擊：使用槍械射擊1名敵人，造成少量射擊屬性傷害，根據子彈數量可以射擊多次。$"="[HIGHLIGHT]: Deal <link\="s|312"><u>Dual Attribute</u></link> Bless Curse damage to 1 foe equal to <color\=#FFFC40>$1</color> of ATK. Increase Aran's ATK by <color\=#FFFC40>$2</color> for $3 turns. Then grant all allies <link\="s|313"><u>[Everlasting Veil]</u></link>.\n[ONE MORE]: Deal <link\="s|312"><u>Dual Attribute</u></link> Bless Curse damage to 1 foe. \nMelee Attack: Uses a melee weapon to deal light Phys damage to 1 foe. \nGun Attack: Deal light Gun damage to 1 foe. Can fire until out of ammo."
 
-r:"^{{A}}的祝福屬性傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，且<link\="s\|313"><u>『不凋帷幕』</u></link>能抵禦的傷害將受祝福屬性傷害加成影響。$"="Increase {{A}}'s Bless DMG by <color\=#FFFC40>$1</color>. Increase <link\="s|313"><u>[Everlasting Veil]</u></link>'s Shield based on Bless DMG.
-r:"^{{A}}的祝福屬性傷害提升<color\=#0169ca>(\d+\.\d+%)</color>，且<link\="s\|313"><u>『不凋帷幕』</u></link>能抵禦的傷害將受祝福屬性傷害加成影響。$"="Increase {{A}}'s Bless DMG by <color\=#0169ca>$1</color>. Increase <link\="s|313"><u>[Everlasting Veil]</u></link>'s Shield based on Bless DMG.
+r:"^{{A}}的祝福屬性傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，且<link\="s\|313"><u>『不凋帷幕』</u></link>能抵禦的傷害將受祝福屬性傷害加成影響。$"="Increase {{A}}'s Bless DMG by <color\=#FFFC40>$1</color>. Increase <link\="s|313"><u>[Everlasting Veil]</u></link>'s Shield based on Bless DMG."
+r:"^{{A}}的祝福屬性傷害提升<color\=#0169ca>(\d+\.\d+%)</color>，且<link\="s\|313"><u>『不凋帷幕』</u></link>能抵禦的傷害將受祝福屬性傷害加成影響。$"="Increase {{A}}'s Bless DMG by <color\=#0169ca>$1</color>. Increase <link\="s|313"><u>[Everlasting Veil]</u></link>'s Shield based on Bless DMG."
 
 r:"^{{A}}的詛咒屬性傷害提升<color\=#FFFC40>(\d+\.\d+%)</color>，且『救贖鏡域』吸收比例超過(\d+%)的部分將受詛咒屬性傷害加成影響。$"="Increase {{A}}'s Curse DMG by <color\=#FFFC40>$1</color>. Increase [Dome of Redemption]'s Drain Ratio above $2 based on Curse DMG."
 r:"^{{A}}的詛咒屬性傷害提升<color\=#0169ca>(\d+\.\d+%)</color>，且『救贖鏡域』吸收比例超過(\d+%)的部分將受詛咒屬性傷害加成影響。$"="Increase {{A}}'s Curse DMG by <color\=#0169ca>$1</color>. Increase [Dome of Redemption]'s Drain Ratio above $2 based on Curse DMG."
+
+<color\=#66ccff>『決斷』</color>=<color\=#66ccff>[Resolve]</color>
+r:"^攻擊力提升(\d+%)，弱點傷害提升(\d+%)，持續(\d+)回合。$"="Increase ATK by $1 and Weak DMG by $2. Lasts for $3 turns."
+r:"^能夠抵禦一定傷害的護盾，持續(\d+)回合。層數可以疊加。$"="A Shield that can negate some damage. Lasts for $1 turns. Can stack."
+計算傷害時，以本次技能中命中目標抗性更弱的適應性計算弱點抗性，並同時計算兩種適應性相關的全部增益、減益效果（除弱點效果及弱點抗性以外）。=When calculating damage, the Weakness coefficient will be calculated using the target's weaker affinity, then calculate all buffs and debuffs for both attributes (other than Weak DMG and Weak RES).
 
 凝望光與暗=<size\=20>Light and Darkness Gaze</size>
 {{A}}可以造成特殊的祝福詛咒<link\="s\|312"><u>雙屬性傷害</u></link>。\n{{A}}造成祝福詛咒雙屬性傷害時，視為造成弱點傷害，且必定觸發除屬性克制係數以外的全部弱點效果。\n{{A}}進入戰鬥時將立即為所有同伴添加<link\="s\|313"><u>『不凋帷幕』</u></link>。={{A}} can deal special <link\="s|312"><u>Dual Attribute</u></link> Bless Curse damage. \nWhen {{A}} deals Dual Attribute Bless Curse damage, counts as dealing Weakness damage, then activate all Weakness effects besides the Weakness coefficient. \nAt the start of battle, immediately grant all allies <link\="s|313"><u>[Everlasting Veil]</u></link>.
