@@ -110,8 +110,8 @@ r:"暈眩、遺忘、睡眠、狂怒、絕望、恐懼、混亂、洗腦，以�
 
 使敵人受到傷害提升15%，被視為1種元素異常。=Increase foe's DMG Taken by 15% for 2 turns, seen as 1 Elemental Ailment.
 使敵人受到傷害提升15%，持續2回合。被視為1種元素異常。=Increase foe's DMG Taken by 15% for 2 turns, seen as 1 Elemental Ailment.
-持續恢復生命值=Restore 1% Max HP each turn for 2 turns
-持續損失生命值=Lose 1% Max HP each turn for 2 turns
+持續恢復生命值=Continuously restore HP
+持續損失生命值=Continuously lose HP
 
 攻擊力大幅提高，防禦力大幅下降，強制執行普攻指令=Heavily increase ATK and decrease DEF, forced to use basic ATK
 
@@ -1431,6 +1431,7 @@ r:"^造成傷害提高(\d+%)、受到傷害提高(\d+%)$"="Increase DMG Dealt by
 r:"^最終造成傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG Dealt by $1"
 r:"^造成最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG Dealt by $1"
 r:"^造成的最終傷害提升(\d+(.\d+)?(%)?)$"="Increase Final DMG Dealt by $1"
+r:"^造成的最終傷害提高(\d+(.\d+)?(%)?)$"="Increase Final DMG Dealt by $1"
 r:"^造成的最終傷害額外提升(\d+(.\d+)?(%)?)$"="Increase Final DMG Dealt by $1 more"
 r:"^技能傷害提升(\d+(.\d+)?(%)?)$"="Increase Skill DMG by $1"
 r:"^下一技能傷害提升(\d+(.\d+)?(%)?)$"="Increase your next Skill DMG by $1"
@@ -1591,7 +1592,7 @@ r:"^最終生命值降低(\d+(.\d+)?(%)?)$"="Decrease Final HP by $1"
 r:"^精力消耗提高(\d+(.\d+)?(%)?)$"="Increase SP cost by $1"
 r:"^攻擊降低(\d+(.\d+)?(%)?)$"="Decrease ATK by $1"
 r:"^攻擊力降低(\d+(.\d+)?(%)?)$"="Decrease ATK by $1"
-r:"^受到攻擊時使該次傷害攻擊力提升(\d+(.\d+)?(%)?)$"="When attacked, increase that damage's ATK by $1"
+r:"^受到攻擊時使該次傷害攻擊力提升(\d+(.\d+)?(%)?)$"="When attacked, \nincrease that damage's ATK by $1"
 r:"^防禦降低(\d+(.\d+)?(%)?)$"="Decrease DEF by $1"
 r:"^防禦力降低(\d+(.\d+)?(%)?)$"="Decrease DEF by $1"
 r:"^總防禦力降低(\d+(.\d+)?(%)?)$"="Decrease Total DEF by $1"
@@ -1617,7 +1618,6 @@ r:"^倒地易傷提升(\d+(.\d+)?(%)?)$"="Increase Downed DMG Taken by $1"
 r:"^受到{{A}}傷害提高(\d+(.\d+)?(%)?)$"="Increase {{A}} DMG Taken by $1"
 受到TECH傷害提升=Increase TECHNICAL DMG Taken
 
-r:"^詛咒反噬達到(\d+)層，受HIGHLIGHT傷害提升(\d+%)$"="Reached $1 stacks of Curse Reversal; \nIncrease HIGHLIGHT DMG Taken by $2"
 r:"^受到追擊傷害提升(\d+(.\d+)?(%)?)$"="Increase Follow Up DMG Taken by $1"
 r:"^受追加效果傷害提高(\d+(.\d+)?(%)?)$"="Increase Follow Up DMG Taken by $1"
 r:"^受到追加效果傷害增幅提升(\d+(.\d+)?(%)?)$"="<size\=27>Increase Follow Up DMG Taken Amp by $1</size>"
